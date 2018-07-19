@@ -1,7 +1,6 @@
 {
   "name": "swan-docs",
   "version": "1.0.0",
-  "private": true,
   "description": "智能小程序文档",
   "hexo": {
     "version": "3.4.4"
