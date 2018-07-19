@@ -1,0 +1,29 @@
+/*
+ * homepage-footer
+ */
+ .m-hp-footer-wrapper {
+    font-size: 14px;
+    max-width: 1200px;
+    min-width: 653px;
+    margin: 0 auto;
+    color: #999;
+    text-align: center;
+    line-height: 36px;
+    
+ }
+ .m-hp-info-list li,
+ .m-hp-copyright-list li {
+    display: inline-block;
+ }
+
+.m-hp-footer {
+    height: 169px;
+    padding: 48px 0;
+}
+
+.m-hp-footer-wrapper a,
+.m-hp-copyright-list li {
+    padding: 0 20px; 
+    color: #999;
+    text-decoration: none;
+}

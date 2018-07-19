@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofllow">
+    <title>Login</title>
+    <style>
+    * {
+        margin: 0 auto;
+    }
+    body {
+        overflow: hidden;
+    }
+    .pop-mask {
+        display: none;
+    }
+    .pass-login-pop-content {
+        display: none;
+    }
+    #passport-login-pop {
+        left: -202px !important;
+        top: -130px !important;
+    }
+    #passport-login-pop-dialog > .clearfix {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+    <script src="https://passport.baidu.com/passApi/js/uni_login_wrapper.js"></script>
+</head>
+<body>
+    <div id="t"></div>
+    <script>
+    window.getSTokenFromJsonp = console.log;
+    var instance = window.passport.pop.init({
+        id: 'devtools',
+        apiOpt: {
+            loginType: 1,
+            u: window.location.protocol
+                + '//passport.baidu.com/v3/login/api/auth/?return_type=2&tpl=dev&callback=getSTokenFromJsonp',
+            safeFlag: 0,
+            product: 'dev',
+            'is_voice_sms': 1,
+            qrcode: 3,
+            'qrcode_animatin': 1,
+            overseas: 0,
+            staticPage: window.location.protocol
+                + '//smartprogram.baidu.com/static/swandocs/html/swanIDE/third_party/v3Jump.html'
+        },
+        cache: false,
+        tangram: true,
+        onLoginSuccess: function (args) {
+            window.sendRenderSuc && window.sendRenderSuc();
+        }
+    });
+    instance.show();
+    </script>
+</body>
+</html>

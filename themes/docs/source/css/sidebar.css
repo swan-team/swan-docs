@@ -1,0 +1,104 @@
+.m-doc-sidebar-nav-wrapper {
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    border-right: 1px solid #EEEEEE;
+    padding-top: 92px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    display: none;
+}
+
+.m-doc-sidebar-nav-wrapper ul {
+    max-height: 100%;
+}
+.m-doc-sidebar-nav-wrapper ul div {
+    height: 44px;
+    color: #000;
+    line-height: 44px;
+    padding-left: 40px;
+    position: relative;
+}
+.m-doc-sidebar-nav-wrapper ul div:hover,
+.m-doc-sidebar-nav-wrapper ul li ul li:hover {
+    cursor: pointer;
+}
+.m-doc-sidebar-nav-wrapper ul div span,
+.m-doc-sidebar-nav-wrapper ul div img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.m-doc-sidebar-nav-wrapper ul div img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -7px;
+    margin-bottom: -7px;
+}
+.m-doc-sidebar-nav-wrapper ul .m-doc-sidebar-nav-selected div img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.m-doc-sidebar-nav-wrapper ul li ul {
+    display: none;
+}
+.m-doc-sidebar-nav-wrapper ul .m-doc-sidebar-nav-selected ul {
+    display: block;
+}
+.m-doc-sidebar-nav-wrapper ul li ul li {
+    height: 44px;
+    line-height: 44px;
+}
+.m-doc-sidebar-nav-wrapper ul li ul .m-doc-sidebar-selected {
+    background: #eaf3ff;
+}
+.m-doc-sidebar-nav-wrapper ul li ul li a {
+    color: #666;
+    text-decoration: none;
+    height: 100%;
+    display: block;
+    padding-left: 54px;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: color;
+}
+.m-doc-sidebar-nav-wrapper ul li ul li:hover a {
+    color: #8aadff;
+}
+.m-doc-sidebar-nav-wrapper ul li ul li.m-doc-sidebar-selected a {
+    color: #3C76FF;
+}
+.m-doc-sidebar-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.10);
+    z-index: 100000;
+}
+
+/* sidebar 移动端适配 */
+@media only screen and (max-width: 768px) {
+    .m-doc-sidebar-nav-wrapper {
+        padding-top: 32px; 
+        transform: translateX(-250px);
+        -webkit-transform: translateX(-250px);
+        z-index: 100001;
+        background: #fff;
+        position: fixed;
+    }
+    .m-doc-sidebar-nav-wrapper-show {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    .m-doc-sidebar-mask-show {
+        display: block;
+    }
+}

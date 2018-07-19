@@ -1,0 +1,321 @@
+# 1
+-
+  link: /introduction/register
+  text: 介绍
+  name: introduction
+  nav:
+    -
+      link: /introduction/register
+      text: 智能小程序接入指南
+      name: book
+      sidebar:
+        -
+            link: /introduction/register
+            text: 智能小程序注册指导文档
+            name: register
+        -
+            link: /introduction/demo
+            text: 体验智能小程序
+            name: demo
+# 2
+-
+  link: /develop/tutorial/index
+  text: 开发
+  name: develop
+  nav:
+    -
+      link: /develop/tutorial/index
+      text: 简易教程
+      name: tutorial
+      sidebar:
+        -
+            link: /develop/tutorial/index
+            text: 第一个智能小程序
+            name: index
+        -
+            link: /develop/tutorial/codedir
+            text: 介绍
+            name: codedir
+        -
+            link: /develop/tutorial/process
+            text: 全局配置
+            name: process
+        -
+            link: /develop/tutorial/dev
+            text: 页面开发
+            name: dev
+        -
+            link: /develop/tutorial/swanchangelog
+            text: SWAN 历史更新日志
+            name: swanjsChangelog
+    -
+      link: /develop/framework/view
+      text: 框架
+      name: framework
+      sidebar:
+        -
+            link: /develop/framework/app-service
+            text: 逻辑层
+            name: app-service
+        -
+            link: /develop/framework/view
+            text: 视图层
+            name: view
+        -
+            link: /develop/framework/client-lib
+            text: 基础库
+            name: client-lib
+        -
+            link: /develop/framework/operating-mechanism
+            text: 运行机制
+            name: operating-mechanism
+        -
+            link: /develop/framework/performance-analysis-tool
+            text: 性能分析工具
+            name: performance-analysis-tool
+        -
+            link: /develop/framework/performance-tips
+            text: 性能优化建议
+            name: performance-tips
+    -
+      link: /develop/component/view
+      text: 组件
+      name: component
+      sidebar:
+        -
+            link: /develop/component/view
+            text: 视图容器
+            name: view
+        -
+            link: /develop/component/base
+            text:  基础内容
+            name: base
+        -
+            link: /develop/component/form
+            text: 表单组件
+            name: form
+        -
+            link: /develop/component/nav
+            text: 导航
+            name: nav
+        -
+            link: /develop/component/media
+            text: 媒体组件
+            name: media
+        -
+            link: /develop/component/map
+            text: 地图
+            name: map
+        -
+            link: /develop/component/canvas
+            text: 画布
+            name: canvas
+        -
+            link: /develop/component/open
+            text: 开放能力
+            name: open
+    -
+      link: /develop/api/net
+      text: API
+      name: api
+      sidebar:
+        -
+            link: /develop/api/net
+            text: 网络
+            name: net
+        -
+            link: /develop/api/ai
+            text: AI
+            name: ai
+        -
+            link: /develop/api/media
+            text: 媒体
+            name: media
+        -
+            link: /develop/api/file
+            text: 文件
+            name: file
+        -
+            link: /develop/api/storage
+            text: 数据存储
+            name: storage
+        -
+            link: /develop/api/location
+            text: 位置
+            name: location
+        -
+            link: /develop/api/canvas
+            text: 绘图
+            name: canvas
+        -
+            link: /develop/api/show
+            text: 界面
+            name: show
+        -
+            link: /develop/api/device
+            text: 设备
+            name: device
+        -
+            link: /develop/api/open
+            text: 开放接口
+            name: open
+    -
+      link: /develop/devtools/show
+      text: 工具
+      name: devtools
+      sidebar:
+        -
+            link: /develop/devtools/show
+            text: 界面
+            name: show
+        -
+            link: /develop/devtools/smartappdebug
+            text: 调试
+            name: smartappdebug
+        -
+            link: /develop/devtools/projectconfig
+            text: 项目配置文件
+            name: projectconfig
+        -
+            link: /develop/devtools/diff
+            text: 和真机的差异
+            name: diff
+        -
+            link: /develop/devtools/uplog
+            text: 开发者工具历史更新记录
+            name: uplog
+    -
+      link: /develop/debug/remoterelease
+      text: 调试
+      name: debug
+      sidebar:
+        -
+            link: /develop/debug/remoterelease
+            text: 真机调试安装包
+            name: remoterelease
+        -
+            link: /develop/debug/ideremotetarget
+            text: 开发者工具使用真机调试
+            name: ideremotetarget
+        -
+            link: /develop/debug/remotetargettool
+            text: 控制台使用真机调试
+            name: remotetargettool
+    -
+      link: /develop/server/oauth
+      text: 开放服务
+      name: server
+      sidebar:
+        -
+          link: /develop/server/oauth
+          text: 百度OAuth授权说明
+          name: OAuth
+        -
+          link: /develop/server/power
+          text: 开发者服务相关接口
+          name: power
+# 3
+-
+  link: /design/principle/keynote
+  text: 设计
+  name: design
+  nav:
+    -
+      link: /design/principle/keynote
+      text: 设计原则
+      name: principle
+      sidebar:
+        -
+            link: /design/principle/keynote
+            text: 重点突出，流程明确
+            name: keynote
+        -
+            link: /design/principle/clear
+            text: 导航清晰，反馈及时
+            name: clear
+        -
+            link: /design/principle/ease
+            text: 减少输入，缩短路径
+            name: ease
+    -
+      link: /design/specification/layout
+      text: 设计规范
+      name: specification
+      sidebar:
+        -
+            link: /design/specification/layout
+            text: 布局排版
+            name: layout
+        -
+            link: /design/specification/pic
+            text: 图片图标
+            name: pic
+        -
+            link: /design/specification/component
+            text: 组件
+            name: component
+        -
+            link: /design/specification/write
+            text: 措辞
+            name: write
+    -
+      link: /design/component/nav
+      text: 组件
+      name: component
+      sidebar:
+        -
+            link: /design/component/nav
+            text: 框架导航
+            name: nav
+        -
+            link: /design/component/button
+            text: 按钮
+            name: button
+        -
+            link: /design/component/choose
+            text: 选择
+            name: choose
+        -
+            link: /design/component/list
+            text: 列表
+            name: list
+        -
+            link: /design/component/input
+            text: 输入
+            name: input
+        -
+            link: /design/component/feedback
+            text: 反馈
+            name: feedback
+    -
+      link: /design/download/load
+      text: 资源下载
+      name: download
+      sidebar:
+        -
+          link: /design/download/load
+          text: 设计资源下载
+          name: load
+# 4
+-
+  link: /operations/specification
+  text: 运营
+  name: operations
+  nav:
+    -
+      link: /operations/specification
+      text: 规范及条款
+      name: book
+      sidebar:
+        -
+            link: /operations/specification
+            text: 运营规范
+            name: specification
+        -
+            link: /operations/service
+            text: 服务条款
+            name: service
+    # -
+    #   link: /operations/service
+    #   text: 服务条款
+    #   name: book

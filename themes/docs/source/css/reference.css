@@ -1,0 +1,51 @@
+header {
+    background: #fff;
+}
+.components-content {
+    padding: 60px 0 30px;
+    background: #fff;
+}
+.api-content {
+    background: #FAFAFA;
+}
+
+.title {
+    padding: 50px 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.list-title {
+    margin: 0 40px;
+    font-size: 20px;
+    line-height: 26px;
+}
+.list-title a {
+    text-decoration: none;
+    color: #000;
+}
+.lists {
+    min-width: 990px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.lists ul {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 40px 50px;
+}
+
+.lists li a {
+    /*display: block;*/
+    color: #2EA2F8;
+    text-decoration: none;
+}
+.lists li a:hover {
+    text-decoration: underline;
+}
+.lists li {
+    float: left;
+    width: 225px;
+    height: 40px;
+    line-height: 40px;
+}

@@ -1,0 +1,85 @@
+<%
+    // 取当前页面各级导航及相关数据
+    var header = site.data.nav; // 1级(头部)导航
+    var headerIndex; // 当前header索引
+    var nav; // 2级（sidebar）导航
+    var navIndex; // 当前siderbar索引
+    var h1; // 正文h1
+    var bottomPage = {}; // 底部跳转
+    var localData = {}; // 页面siderbar数据
+
+    for(var i = 0; i < header.length; i++) {
+        if (header[i].name == page.header) {
+            nav = header[i].nav;
+            headerIndex = i;
+        }
+    }
+
+    for (var j = 0; j < nav.length; j++) {
+        if (nav[j].name == page.nav) {
+            navIndex = j;
+            for (var a = 0; a < nav[j].sidebar.length; a++) {
+                if (nav[j].sidebar[a].name == page.sidebar) {
+                    h1 = nav[j].sidebar[a].text;
+
+                    if (a > 0) {
+                        bottomPage.left = nav[j].sidebar[a - 1];
+                    }
+                    
+                    if (a < nav[j].sidebar.length - 1) {
+                        bottomPage.right = nav[j].sidebar[a + 1];
+                    }
+                }
+            }
+        }
+    }
+
+    for (var n = 0; n < nav.length; n++) {
+        localData[nav[n].name] = true;
+    }
+
+%>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title><%= h1 %>- <%= header[headerIndex].text %></title>
+    <link rel="dns-prefetch" href="//smartprogram.baidu.com">
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <%- css('css/base') %>
+    <%- css('css/header') %>
+    <%- css('css/sidebar') %>
+    <%- css('css/article') %>
+    <%- css('css/code') %>
+    <%- css('css/custom') %>
+</head>
+<body>
+
+    <%- partial('_partial/header', {header: header, h1: h1}) %>
+
+    <%- partial('_partial/sidebar', {nav: nav}) %>
+    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
+    <script type="text/javascript">
+        window.localData = {
+            'headerName': '<%- header[headerIndex].name %>',
+            'localData': <%- JSON.stringify(localData) %>
+        }; 
+    </script>
+    <%- js('js/zepto.min') %>
+    <%- js('js/superstart') %>
+    <%- js('js/search') %>
+
+   <% if (config.search) { %>
+      <script type="text/javascript">
+         var search_path = "<%= config.search.path %>";
+         if (search_path.length == 0) {
+            search_path = "search.xml";
+         }
+         var path = "<%= config.root %>" + search_path;
+         searchFunc(path, 'local-search-input', 'article-search-result');
+      </script>
+   <% } %>
+
+</body>
+</html>

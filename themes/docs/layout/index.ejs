@@ -1,0 +1,219 @@
+layout: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="dns-prefetch" href="//smartprogram.baidu.com">
+<link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+<style type="text/css">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}@media only screen and (max-width: 768px) {html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;user-select:none;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color: transparent;-webkit-text-size-adjust: none;-webkit-touch-callout: none;-webkit-font-smoothing: antialiased;}}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;color:#222;font-size:14px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}</style>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><% if (page.title){ %><%= page.title %> | <% } %><%= config.title %></title>
+<%- css('css/base') %>
+<%- css('css/header') %>
+<%- css('css/index') %>
+<%- css('css/footer') %>
+<script type="application/javascript" src="<%- url_for('js/bodymovin.min.js') %>"></script>
+</head>
+
+<body id="home">
+    
+     <%- partial('_partial/header', {page:{
+         header: 'introduction'
+     },header: [
+        {link: '/introduction/register',
+            text: '介绍',
+            name: 'introduction',
+            nav: [ ] 
+        },
+        { link: '/develop/tutorial/index',
+            text: '开发',
+            name: 'develop',
+            nav: [  ] 
+        },
+        { link: '/design/principle',
+            text: '设计',
+            name: 'design',
+            nav: [ ] 
+        },
+        { link: '/operations/specification',
+            text: '运营',
+            name: 'operations',
+            nav: []
+        }], h1: "运营规范"}) %>
+    <div class = "m-hp-wrapper">
+        <div class="m-hp-header">
+            <div class= "m-hp-header-slogan m-hp-header-mid">
+            </div>
+            <div class= "m-hp-header-button m-hp-header-mid">
+                <a href="/docs/introduction/register/" class="get-start">开始</a>
+            </div>
+            
+            <img src="<%- url_for('img/homepage/home_header_cub1.png') %>" class="m-hp-header-cub1"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub2.png') %>" class="m-hp-header-cub2"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub3.png') %>" class="m-hp-header-cub3"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub4.png') %>" class="m-hp-header-cub4"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub5.png') %>" class="m-hp-header-cub5"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub6.png') %>" class="m-hp-header-cub6"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub7.png') %>" class="m-hp-header-cub7"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cub8.png') %>" class="m-hp-header-cub8"></img>
+            <img src= "<%- url_for('img/homepage/home_header_cube.png') %>" class="m-hp-header-cube"></img>
+            <img src= "<%- url_for('img/homepage/home_header_column.png') %>" class="m-hp-header-column"></img>
+            <img src= "<%- url_for('img/homepage/home_header_ball1.png') %>" class="m-hp-header-ball1"></img>
+            <img src= "<%- url_for('img/homepage/home_header_ball2.png') %>" class="m-hp-header-ball2"></img>
+            <img src= "<%- url_for('img/homepage/home_header_ai.png') %>" class="m-hp-header-ai"></img>
+        </div>
+       
+        <div class= "m-hp-document">
+            <div class="m-hp-title">
+                文档支持
+            </div>
+            <ul class="m-hp-list clearfix">
+                <li class ="m-hp-item">
+                    <a href="/docs/develop/tutorial/index/">
+                        <div class= "m-hp-document-icon m-hp-icon"></div>
+                    </a>
+                    <div class="m-hp-words">
+                        <div class="m-hp-keyword">
+                            开发文档
+                        </div>
+                        <div class="m-hp-desc">
+                            <div>
+                                在开发过程中，您需要熟悉智能小程序的结构、有哪些
+                                <a href = "/docs/develop/component/view/">组件</a> 和
+                                <a href = "/docs/develop/api/net/">API</a> 可以使用、如何使用
+                                <a href = "/docs/develop/devtools/show/">开发者工具</a>
+                                进行开发和调试等。
+                                您可以从一个 <a href="/docs/develop/tutorial/index/">简易教程</a> 开始，也可以直接浏览 <a href="/docs/develop/reference/">API和组件的聚合参考页</a>。
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li class ="m-hp-item">
+                    <a href="/docs/design/principle/">
+                        <div class= "m-hp-document-icon m-hp-icon"></div>
+                    </a>
+                    <div class="m-hp-words">
+                        <div class="m-hp-keyword">
+                            设计文档
+                        </div>
+                        <div class="m-hp-desc">
+                            <div>良好的设计与体验是对用户的尊重。我们提供了
+                                <a href = "/docs/design/principle/">设计原则</a>、
+                                <a href = "/docs/design/specification/">设计规范</a> 以及
+                                <a href = "/docs/design/component/">框架组件</a>
+                                的设计指引，以及相关的
+                                <a href = "/docs/design/download/">设计资源</a>供您下载。它们可能对您在设计用户友好的智能小程序时有所帮助。
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class ="m-hp-item">
+                    <a href="/docs/operations/specification/">
+                        <div class= "m-hp-document-icon m-hp-icon"></div>
+                    </a>
+                    <div class="m-hp-words">
+                        <div class="m-hp-keyword">
+                            运营文档
+                        </div>
+                        <div class="m-hp-desc">
+                            <div>我们对智能小程序有一些运营上的
+                                <a href = "/docs/operations/specification/">规范要求</a>，包括注册、基本信息、功能、行为、内容、商标等方面，以保证智能小程序生态的健康和繁荣。
+                                在注册和开发之前，请先了解它们。</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+        <div class="m-hp-resource">
+            <div class="m-hp-title">
+                资源
+            </div>
+            <ul class="m-hp-list clearfix">
+                <li class="m-hp-item">
+                    <a href="/docs/develop/devtools/uplog/">
+                        <div class="m-hp-icon">
+                        </div>
+                        <div class="m-hp-words">
+                            <div class="m-hp-keyword m-hp-dev-keyword">
+                                开发者工具
+                            </div>
+                        </div>
+                        <div class="m-hp-desc">   
+                            <div>
+                                <a href="http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online">
+                                    mac版
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online">
+                                    windows64版
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="m-hp-item">
+                    <a href="/docs/design/download/">
+                        <div class="m-hp-icon">
+                        </div>
+                        <div class="m-hp-words">
+                            <div class="m-hp-keyword m-hp-dev-keyword">
+                                设计资源
+                            </div>
+                        </div>
+                        <div class="m-hp-desc">   
+                            <div>
+                                <a href="http://searchbox.bj.bcebos.com/miniapp/mappdoc/viewtoolV2.zip">
+                                    Sketch 组件库
+                                </a>
+                            </div>
+                            <div>
+                                <a href="http://searchbox.bj.bcebos.com/miniapp/mappdoc/viewtoolV1.zip">
+                                    Photoshop 组件库
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="m-hp-item">
+                    <a href="https://smartprogram.baidu.com/docs/introduction/demo/">
+                        <div class="m-hp-icon">
+                        </div>
+                        <div class="m-hp-words">
+                            <div class="m-hp-keyword m-hp-dev-keyword">
+                                智能小程序DEMO代码
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="m-hp-footer">
+            <div class="m-hp-footer-wrapper">
+                <ul class="m-hp-info-list">
+                    <li>
+                        <a href="http://www.baidu.com"> 百度首页</a>
+                    </li>
+                    <li>
+                        <a href="/docs/introduction/register/"> 文档说明</a>
+                    </li>
+                    <li>
+                        <a href="mailto:smartprogram_support@baidu.com"> 问题反馈</a>
+                    </li>
+                </ul>
+                <ul class="m-hp-copyright-list">
+                    <li>京公网安备案11000002000001</li>
+                    <li>互联网新闻信息服务许可号</li>
+                    <li>©2018 Baidu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <%- js('js/zepto.min') %>
+    <%- js('js/indexInit') %>
+
+</body>
+</html>
