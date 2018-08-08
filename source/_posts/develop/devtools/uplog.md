@@ -6,7 +6,7 @@ sidebar: uplog
 ---
 
 ## 最新版本下载地址
-[windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) 、  [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
+[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) 、  [Mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 ## v1.9.0 更新日志
 [New] 调试工具支持 android 下真机调试
