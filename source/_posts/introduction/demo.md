@@ -5,6 +5,5 @@ nav: book
 sidebar: demo
 ---
 
-下载百度APP10.7及以上版本  &ensp;&ensp; [下载源码](http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip)
+请下载百度APP最新版本，扫描下图二维码体验智能小程序。  &ensp;&ensp; [下载小程序示例源码](http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip)
 ![图片](../../img/demo.png)
-![图片](../../img/preview.png)

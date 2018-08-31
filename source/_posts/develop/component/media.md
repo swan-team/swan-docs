@@ -117,6 +117,9 @@ image 组件默认宽度 300px、高度 225px。
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
+**Tips：**
+1、支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+
 **示例：**
 
 ```xml
@@ -154,7 +157,7 @@ Page({
             },
             {
                 mode: 'top',
-                text: 'top：不缩放图片，只显示图片的顶部区域' 
+                text: 'top：不缩放图片，只显示图片的顶部区域'
             },
             {     
                 mode: 'bottom',
@@ -174,7 +177,7 @@ Page({
             },
             {
                 mode: 'top left',
-                text: 'top left：不缩放图片，只显示图片的左上边区域' 
+                text: 'top left：不缩放图片，只显示图片的左上边区域'
             },
             {
                 mode: 'top right',
@@ -280,7 +283,7 @@ video
 |bindpause|EventHandle| |当暂停播放时触发 pause 事件|
 |bindended|EventHandle| |当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle| |播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle| |当视频进入和退出全屏是触发，event.detail = {fullScreen, direction}，direction 取为 vertical 或 horizontal|
+|bindfullscreenchange|EventHandle| |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
 
 `<video />` 默认宽度 300px、高度 225px
 
@@ -400,19 +403,22 @@ live-player
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|id|String||live-player 属性的唯一标志符|
-|src|String| |音视频地址。目前仅支持 m3u8 格式|
+|id|String|-|live-player 属性的唯一标志符|
+|src|String| -|音视频地址。目前仅支持 m3u8 格式|
 |autoplay|Boolean|false|自动播放|
 |muted|Boolean|false|是否静音|
+|orientation|	String|	vertical|	画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
 |object-fit|String|contain|填充模式，可选值:contain、fillCrop|
 |background-mute|Boolean|false|进入后台时是否静音|
 |min-cache|Number|1|最小缓冲区，单位s|
 |max-cache|Number|3|最大缓冲区，单位s|
-|bindstatechange|EventHandle| |播放状态变化事件，detail = {code}|
-|bindnetstatus|EventHandle| |网络状态通知，detail = {info}|
+|bindstatechange|EventHandle|- |播放状态变化事件，detail = {code}|
+|bindnetstatus|EventHandle| -|网络状态通知，detail = {info}|
+|bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
 
 <div class="notice">Tips: </div><text></text>
-live-player 默认宽度 300px、高度 225px。
+1、live-player 默认宽度 300px、高度 225px；
+2、从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 **状态码**
 
@@ -451,7 +457,7 @@ live-player 默认宽度 300px、高度 225px。
 |videoFPS|当前视频帧率|
 |videoGOP|当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s (安卓不支持该键名)|
 |netSpeed|当前的发送/接收速度|
-|netJitter|网络抖动情况，抖动越大，网络越不稳定 (安卓不支持该键名)|
+|netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
 |videoWidth|视频画面的宽度|
 |videoHeight|视频画面的高度|
 

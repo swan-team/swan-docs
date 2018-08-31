@@ -4,7 +4,24 @@ header: develop
 nav: api
 sidebar: media
 ---
+### 媒体 API 列表
 
+|API|说明|
+|----|----|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#previewImage">chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#previewImage">previewImage</a>|预览图片|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#getImageInfo">getImageInfo</a>|获取图片信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#saveImageToPhotosAlbum">saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#getRecorderManager">getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_backgroundAudioManager/#getBackgroundAudioManager">getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_createInnerAudioContext/#createInnerAudioContext">createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#chooseVideo">chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#saveVideoToPhotosAlbum">saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_videoContext/#createVideoContext">createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_livePlayerContext/#createLivePlayerContext">createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_cameraContext/#createCameraContext">createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
+
+<!--
 图片
 -----
 
@@ -48,6 +65,8 @@ sidebar: media
 ```js
 swan.chooseImage({
     count: 1,
+    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
     success: function (res) {
         // 成功则返回图片的本地文件路径列表 tempFilePaths
         console.log(res.tempFilePaths);
@@ -95,6 +114,7 @@ swan.previewImage({
 **Bug & Tip**
 
 1、bug: 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
+2、tip: 不支持预览本地文件。
 
 ### getImageInfo
 
@@ -254,7 +274,7 @@ const options = {
     duration: 10000,
     sampleRate: 44100,
     numberOfChannels: 1,
-    encodeBitRate: 192000,
+    encodeBitRate: 96000,
     format: 'aac'
 };
 
@@ -363,6 +383,16 @@ backgroundAudioManager.src = 'xxx';
 |onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 |
 |onSeeking | callback | 音频进行 seek 操作事件 |
 |onSeeked | callback | 音频完成 seek 操作事件 |
+|offCanplay | callback | 取消监听 onCanplay 事件 |
+|offPlay | callback | 取消监听 onPlay 事件 |
+|offPause | callback | 取消监听 onPause 事件 |
+|offStop | callback | 取消监听 onStop 事件 |
+|offEnded | callback | 取消监听 onEnded 事件 |
+|offTimeUpdate | callback | 取消监听 onTimeUpdate 事件 |
+|offError | callback | 取消监听 onError 事件 |
+|offWaiting | callback | 取消监听 onWaiting 事件 |
+|offSeeking | callback | 取消监听 onSeeking 事件 |
+|offSeeked | callback | 取消监听 onSeeked 事件 |
 
 **示例：**
 
@@ -467,7 +497,7 @@ Page({
 
 |参数名| 类型|  说明|
 |---- | ---- | ---- |
-|errMsg  |String | 调用结果|
+|filePath  |String | 调用结果,返回视频文件路径|
 
 
 **示例：**
@@ -596,6 +626,4 @@ myVideo.play();
 |---- | ---- | ---- |---- |
 |success |Function   | 否  | 接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }|
 |fail |   Function |   否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
+|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）| -->

@@ -14,7 +14,7 @@ sidebar: remoterelease
 下载
 -----
 
-请前往 [最新 Android 真机调试安装包](https://b.bdstatic.com/swan-debug/baidusearch_AndroidPhone_remote_target_debug_20180715.apk) 下载。通过你常用的方式将 APK 安装到目标设备中。
+请前往 [最新 Android 真机调试安装包](https://b.bdstatic.com/swan-debug/baidusearch_AndroidPhone_remote_target_debug_20180830.apk) 下载。通过你常用的方式将 APK 安装到目标设备中。
 
 
 连接
@@ -34,5 +34,3 @@ sidebar: remoterelease
 
 
 启动后，打开需要被调试的智能小程序。
-
-

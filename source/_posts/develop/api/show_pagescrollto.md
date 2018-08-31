@@ -1,0 +1,29 @@
+---
+title: 位置
+header: develop
+nav: api
+sidebar: show_pagescrollto
+---
+
+pageScrollTo
+-----
+
+**解释：**将页面滚动到目标位置（可以设置滚动动画时长）。
+
+**参数：**Object
+
+**Object 参数说明：**
+
+|参数名 |类型  |必填  |默认值  |说明|
+|---- | ---- | ---- | ----- |---- |
+|scrollTop |Number | 是|  - | 滚动到页面的目标位置（单位 px） |
+|duration |Number | 否| 300 | 滚动动画的时长，（单位 ms） |
+
+**示例：**
+
+```js
+swan.pageScrollTo({
+    scrollTop: 0,
+    duration: 300
+});
+```

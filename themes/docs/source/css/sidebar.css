@@ -51,10 +51,9 @@
     display: block;
 }
 .m-doc-sidebar-nav-wrapper ul li ul li {
-    height: 44px;
     line-height: 44px;
 }
-.m-doc-sidebar-nav-wrapper ul li ul .m-doc-sidebar-selected {
+.m-doc-sidebar-nav-wrapper ul li ul .m-doc-sidebar-selected > a {
     background: #eaf3ff;
 }
 .m-doc-sidebar-nav-wrapper ul li ul li a {
@@ -67,10 +66,13 @@
     transition-duration: .2s;
     transition-property: color;
 }
-.m-doc-sidebar-nav-wrapper ul li ul li:hover a {
+.m-doc-sidebar-nav-wrapper li a:hover {
     color: #8aadff;
 }
-.m-doc-sidebar-nav-wrapper ul li ul li.m-doc-sidebar-selected a {
+.m-doc-sidebar-children{
+    padding-left: 15px;
+}
+.m-doc-sidebar-nav-wrapper ul li ul li.m-doc-sidebar-selected > a {
     color: #3C76FF;
 }
 .m-doc-sidebar-mask {

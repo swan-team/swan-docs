@@ -4,8 +4,35 @@ header: develop
 nav: api
 sidebar: device
 ---
+### 设备 API 列表
 
-系统信息
+|API|说明|
+|----|----|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">getSystemInfo</a>|获取系统信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">getSystemInfoSync</a>|获取系统信息同步接口|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#canIUse">canIUse|判断智能小程序的API，回调，参数，组件等是否在当前版本可用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_onmemory/#onMemoryWarning">onMemoryWarning</a>|监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#getNetworkType">getNetworkType</a>|获取网络类型|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#onNetworkStatusChange">onNetworkStatusChange</a>|监听网络状态变化|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#onAccelerometerChange">onAccelerometerChange</a>|监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#startAccelerometer">startAccelerometer</a>|开始监听加速度数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#stopAccelerometer">stopAccelerometer</a>|停止监听加速度数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#onCompassChange">onCompassChange</a>|监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#startCompass">startCompass</a>|开始监听罗盘数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#stopCompass">stopCompass</a>|停止监听罗盘数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_scan/#scanCode">scanCode</a>|调起客户端扫码界面，扫码成功后返回对应的结果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#setScreenBrightness">setScreenBrightness</a>|设置屏幕亮度|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#getScreenBrightness">getScreenBrightness</a>|获取屏幕亮度|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#setKeepScreenOn">setKeepScreenOn</a>|设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_capture/#onUserCaptureScreen">onUserCaptureScreen</a>|监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_vibrate/#vibrateLong">vibrateLong</a>|使手机发生较长时间的振动（400ms）|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_vibrate/#vibrateShort">vibrateShort</a>|使手机发生较短时间的振动（15ms）|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#addPhoneContact">addPhoneContact</a>|人和联系方式的增加。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#makePhoneCall">makePhoneCall</a>|拨打电话|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#setClipboardData">setClipboardData</a>|设置系统剪贴板的内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#getClipboardData">getClipboardData</a>|获取系统剪贴板内容|
+
+<!-- 系统信息
 -----
 
 ### getSystemInfo
@@ -95,6 +122,66 @@ try {
 } catch (e) {
     // Do something when catch error
 }
+```
+### canIUse
+
+**解释：**判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
+
+**参数说明：**使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+
+|参数  |说明 |
+|---- | ---- |
+|${API}  | API 名字 |
+|${method} |  调用方式，有效值为return, success, object, callback   |
+|${param} | 参数或者返回值  |
+|${options} |参数的可选值   |
+|${component} |   组件名字 |
+|${attribute} | 组件属性 |
+|${option}  |  组件属性的可选值 |
+
+
+****示例：****
+
+```js
+
+swan.canIUse('view.hover-class')
+swan.canIUse('scroll-view.scroll-x')
+swan.canIUse('cover-view')
+swan.canIUse('button.size.default')
+swan.canIUse('button.size.default')
+swan.canIUse('request.object.success.data')
+swan.canIUse('getSavedFileList')
+swan.canIUse('getSavedFileList.object')
+swan.canIUse('getSavedFileList.object.success')
+```
+
+内存
+----
+### onMemoryWarning
+
+**解释：**监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
+
+**参数：**CALLBACK
+
+**CALLBACK返回参数：**
+
+|参数名 |类型  |说明|
+|---- | ---- | ---- |
+|level |Number |仅 Android 有该字段，对应系统内存告警等级宏定义|
+
+Android下告警等级对应系统宏：
+
+```
+TRIM_MEMORY_RUNNING_MODERATE = 5
+TRIM_MEMORY_RUNNING_LOW = 10
+TRIM_MEMORY_RUNNING_CRITICAL = 15
+```
+****示例：****
+
+```js
+swan.onMemoryWarning(function (res) {
+    console.log('onMemoryWarningReceive')
+});
 ```
 
 网络状态
@@ -370,6 +457,25 @@ swan.scanCode({
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
+用户截屏事件
+----
+
+### onUserCaptureScreen
+
+**解释：**监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
+**参数：**CALLBACK
+
+**CALLBACK返回参数：**
+无
+
+****示例：****
+
+```js
+swan.onUserCaptureScreen(function() {
+    console.log('用户截屏了')
+});
+```
+
 振动
 -----
 
@@ -417,6 +523,7 @@ swan.scanCode({
 |lastName |String | 否  | 姓氏|
 |middleName |String | 否  | 中间名|
 |firstName |String | 是  | 名字|
+|remark|String|否|备注|
 |mobilePhoneNumber |String | 否  | 手机号|
 |weChatNumber |String | 否  | 微信号|
 |addressCountry |String | 否  | 联系地址国家|
@@ -533,4 +640,4 @@ swan.getClipboardData({
         console.log(res.data);
     }
 });
-```
+``` -->

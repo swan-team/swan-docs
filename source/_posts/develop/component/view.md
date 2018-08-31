@@ -28,8 +28,9 @@ view
     </view>
 </view>
 ```
-**Bug & Tip：**
-1、tip: 如果需要使用滚动视图，请使用 scroll-view；
+**说明：**
+1、 如果需要使用滚动视图，请使用 scroll-view；
+2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 scroll-view
 ----
@@ -114,24 +115,35 @@ swiper
 
 **属性说明：**
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|indicator-dots | Boolean  |  false  |是否显示面板指示点|
-|indicator-color| Color  | rgba(0, 0, 0, .3) | 指示点颜色|
-|indicator-active-color| Color | #333 | 当前选中的指示点颜色件|
-|autoplay |Boolean  | false |是否自动切换|
-|current|Number |0 |当前所在页面的 index|
-|interval | Number | 5000 |自动切换时间间隔|
-|duration| Number |500 |滑动动画时长|
-|circular| Boolean |false |是否采用衔接滑动|
-|vertical | Boolean  | false  |滑动方向是否为纵向|
-|bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|
+|属性名 |类型  |默认值  |说明|最低版本|
+|---- | ---- | ---- |---- |---- |
+|indicator-dots | Boolean  |  false  |是否显示面板指示点| |
+|indicator-color| Color  | rgba(0, 0, 0, .3) | 指示点颜色| |
+|indicator-active-color| Color | #333 | 当前选中的指示点颜色件| |
+|autoplay |Boolean  | false |是否自动切换| |
+|current|Number |0 |当前所在页面的 index| |
+|current-item-id|String|""|当前所在滑块的 item-id ，不能与 current 被同时指定|10.11|
+|interval | Number | 5000 |自动切换时间间隔| |
+|duration| Number |500 |滑动动画时长| |
+|circular| Boolean |false |是否采用衔接滑动| |
+|vertical | Boolean  | false  |滑动方向是否为纵向| |
+|previous-margin|String|"0px"|前边距，可用于露出前一项的一小部分|10.11|
+|next-margin|String|"0px"|后边距，可用于露出后一项的一小部分|10.11|
+|display-multiple-items|Number|1|同时显示的滑块数量|10.11|
+|bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}| |
+|bindanimationfinish|EventHandle| |动画结束时会触发 animationfinish 事件，event.detail 同上|10.11|
 
 **注意：**其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
 
 ### swiper-item
 
 **注意：**仅可放置在`<swiper/>`组件中，宽高自动设置为100%。
+
+**属性说明：**
+
+|属性名 |类型  |默认值  |说明|最低版本|
+|---- | ---- | ---- |---- |---- |
+|item-id|String|""|该swiper-item的标识符|10.11|
 
 **示例：**
 
@@ -210,7 +222,6 @@ movable-area
 cover-view
 -----
 
-### cover-view
 
 **解释： **覆盖在原生组件之上的文本视图，可覆盖的原生组件包括 video 、 canvas 、 camera，只支持嵌套 cover-view 、 cover-image 。
 
@@ -224,15 +235,17 @@ cover-view
 |---- | ---- | ---- |---- |
 | src | String | |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
 
-**Tips：**
-1、cover-view 支持 overflow: scroll，但不支持动态更新 overflow。
-2、最外层 cover-view 支持 position: fixed。
-3、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity。
-4、文本建议都套上 cover-view 标签，避免排版错误。
-5、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等。
-6、建议子节点不要溢出父节点。
-7、默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block 。
-8、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常。
+**说明：**
+1、cover-view 支持 overflow: scroll，但不支持动态更新 overflow；
+2、最外层 cover-view 支持 position: fixed；
+3、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；
+4、文本建议都套上 cover-view 标签，避免排版错误；
+5、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等；
+6、建议子节点不要溢出父节点；
+7、默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block ；
+8、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；
+9、IOS端暂不支持一个页面有多个video时嵌套cover-view；
+10、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
 <!-- 9、todu: 事件模型遵循冒泡模型，但不会冒泡到原生组件。 -->
 <!-- 10、基础库 1.9.0 起支持插在 view 等标签下。在此之前只可嵌套在原生组件map、video、canvas、camera内，避免嵌套在其他组件内。 -->
 

@@ -5,20 +5,30 @@ nav: api
 sidebar: location
 ---
 
-获取位置
+### 位置 API 列表
+
+|API|说明|
+|----|----|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#getLocation">getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#chooseLocation">chooseLocation</a>|打开地图选择位置。需要用户授权 scope.userLocation。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/#openLocation">openLocation</a>|使用百度 App 内置地图查看位置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location_map/#createMapContext">createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的组件。|
+
+<!-- 获取位置
 -----
 
 ### getLocation
 
-**解释： **获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
+**解释：**获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
-**参数： **Object
+**参数：**Object
 
 **Object 参数说明：**
 
 |参数 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- |---- |
-|type   | String | 否  | 默认为 wgs84 返回 gps 坐标，可选 gcj02|
+|type   | String | 否  | 默认为 wgs84 返回 gps 坐标，可选 gcj02 |
+|altitude   | Boolean | 否  | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps ，会很耗时，默认没有用 gps|
 |success |Function  |  是 |  接口调用成功的回调函数，返回内容详见返回参数说明。|
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -36,43 +46,71 @@ sidebar: location
 |horizontalAccuracy  |水平精度，单位 m  |
 
 
-**示例： **
+**示例：**
 
 ```js
 swan.getLocation({
     type: 'gcj02',
     success: function (res) {
-        console.log("纬度：" + res.latitude);
-        console.log("经度：" + res.longitude);
+        console.log('纬度：' + res.latitude);
+        console.log('经度：' + res.longitude);
     },
     fail: function (err) {
-        console.log("错误码：" + err.errCode);
-        console.log("错误信息：" + err.errMsg);
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
     }
 });
 ```
+
+### chooseLocation
+
+**解释：**打开地图选择位置。需要用户授权 scope.userLocation
+
+**参数：**Object
+​
+**Object 参数说明：**
+
+|参数 | 类型 | 必填 | 说明 |
+|---- | ---- | ---- |---- |
+|success  | Function |否 | 接口调用成功的回调函数|
+|fail  | Function |否 | 接口调用失败的回调函数|
+|complete  | Function |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**success 返回参数说明：**
+
+|参数  |说明  |
+|---- | ---- |
+|name   | 位置名称|
+|address |  详细地址|
+|latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系|
+|longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系|
 
 查看位置
 -----
 
 ### openLocation
 
-**解释： **使用手百内置地图查看位置。
+**解释：**使用百度 App 内置地图查看位置。
 
-**参数： **Object
+**参数：**Object
 ​
-​**Object 参数说明：**
+**Object 参数说明：**
 
 |参数 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- |---- |
 |latitude   | Float |  是  | 纬度，范围为 -90~90，负数表示南纬|
 |longitude  | Float  | 是  | 经度，范围为 -180~180，负数表示西经|
 |scale  | INT |否 |  缩放比例，范围 4~21，默认为16|
+|name  | String |否 | 位置名|
+|address  | String |否 | 地址的详细说明|
+|success  | Function |否 | 接口调用成功的回调函数|
+|fail  | Function |否 | 接口调用失败的回调函数|
+|complete  | Function |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例： **
+**示例：**
 
 ```js
-swan.getLocation({  
+swan.getLocation({
     type: 'gcj02',
     success: function (res) {
         swan.openLocation({
@@ -82,8 +120,8 @@ swan.getLocation({
         })
     },
     fail: function (err) {
-        console.log("错误码：" + err.errCode);
-        console.log("错误信息：" + err.errMsg);
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
     }
 });
 ```
@@ -94,9 +132,9 @@ swan.getLocation({
 
 ### createMapContext
 
-**解释： **创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
+**解释：**创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
 
-**参数： **mapId
+**参数：**mapId
 
 **mapContext 对象的方法列表：**
 
@@ -151,7 +189,7 @@ swan.getLocation({
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例： **
+**示例：**
 
 ```html
 <view class="wrap">
@@ -221,4 +259,4 @@ Pages({
         })
     }
 });
-```
+``` -->

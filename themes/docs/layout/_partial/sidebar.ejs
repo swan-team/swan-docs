@@ -8,6 +8,16 @@
                     <% for (var j = 0; j < nav[i].sidebar.length; j++) { %>
                         <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
                             <a href="/docs<%- nav[i].sidebar[j].link %>/"><%- nav[i].sidebar[j].text %></a>
+                            <% if (nav[i].sidebar[j].sidebar) { %>
+
+                            <ul class="m-doc-sidebar-children">
+                                <% for (var k = 0; k < nav[i].sidebar[j].sidebar.length; k++) { %>
+                                <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
+                                    <a href="/docs<%- nav[i].sidebar[j].sidebar[k].link %>/"><%- nav[i].sidebar[j].sidebar[k].text %></a>
+                                </li>
+                                <% } %>
+                            </ul>
+                            <% } %>
                         </li>
                     <% } %>
                 </ul>
