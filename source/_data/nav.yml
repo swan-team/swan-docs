@@ -17,204 +17,11 @@
             link: /introduction/demo
             text: 体验智能小程序
             name: demo
+        -
+            link: /introduction/scancode
+            text: 扫码打开智能小程序
+            name: scancode             
 # 2
--
-  link: /develop/tutorial/index
-  text: 开发
-  name: develop
-  nav:
-    -
-      link: /develop/tutorial/index
-      text: 简易教程
-      name: tutorial
-      sidebar:
-        -
-            link: /develop/tutorial/index
-            text: 第一个智能小程序
-            name: index
-        -
-            link: /develop/tutorial/codedir
-            text: 介绍
-            name: codedir
-        -
-            link: /develop/tutorial/process
-            text: 全局配置
-            name: process
-        -
-            link: /develop/tutorial/dev
-            text: 页面开发
-            name: dev
-        -
-            link: /develop/tutorial/swanchangelog
-            text: SWAN 历史更新日志
-            name: swanjsChangelog
-    -
-      link: /develop/framework/view
-      text: 框架
-      name: framework
-      sidebar:
-        -
-            link: /develop/framework/app-service
-            text: 逻辑层
-            name: app-service
-        -
-            link: /develop/framework/view
-            text: 视图层
-            name: view
-        -
-            link: /develop/framework/client-lib
-            text: 基础库
-            name: client-lib
-        -
-            link: /develop/framework/operating-mechanism
-            text: 运行机制
-            name: operating-mechanism
-        -
-            link: /develop/framework/performance-analysis-tool
-            text: 性能分析工具
-            name: performance-analysis-tool
-        -
-            link: /develop/framework/performance-tips
-            text: 性能优化建议
-            name: performance-tips
-    -
-      link: /develop/component/view
-      text: 组件
-      name: component
-      sidebar:
-        -
-            link: /develop/component/view
-            text: 视图容器
-            name: view
-        -
-            link: /develop/component/base
-            text:  基础内容
-            name: base
-        -
-            link: /develop/component/form
-            text: 表单组件
-            name: form
-        -
-            link: /develop/component/nav
-            text: 导航
-            name: nav
-        -
-            link: /develop/component/media
-            text: 媒体组件
-            name: media
-        -
-            link: /develop/component/map
-            text: 地图
-            name: map
-        -
-            link: /develop/component/canvas
-            text: 画布
-            name: canvas
-        -
-            link: /develop/component/open
-            text: 开放能力
-            name: open
-    -
-      link: /develop/api/net
-      text: API
-      name: api
-      sidebar:
-        -
-            link: /develop/api/net
-            text: 网络
-            name: net
-        -
-            link: /develop/api/ai
-            text: AI
-            name: ai
-        -
-            link: /develop/api/media
-            text: 媒体
-            name: media
-        -
-            link: /develop/api/file
-            text: 文件
-            name: file
-        -
-            link: /develop/api/storage
-            text: 数据存储
-            name: storage
-        -
-            link: /develop/api/location
-            text: 位置
-            name: location
-        -
-            link: /develop/api/canvas
-            text: 绘图
-            name: canvas
-        -
-            link: /develop/api/show
-            text: 界面
-            name: show
-        -
-            link: /develop/api/device
-            text: 设备
-            name: device
-        -
-            link: /develop/api/open
-            text: 开放接口
-            name: open
-    -
-      link: /develop/devtools/show
-      text: 工具
-      name: devtools
-      sidebar:
-        -
-            link: /develop/devtools/show
-            text: 界面
-            name: show
-        -
-            link: /develop/devtools/smartappdebug
-            text: 调试
-            name: smartappdebug
-        -
-            link: /develop/devtools/projectconfig
-            text: 项目配置文件
-            name: projectconfig
-        -
-            link: /develop/devtools/diff
-            text: 和真机的差异
-            name: diff
-        -
-            link: /develop/devtools/uplog
-            text: 开发者工具历史更新记录
-            name: uplog
-    -
-      link: /develop/debug/remoterelease
-      text: 调试
-      name: debug
-      sidebar:
-        -
-            link: /develop/debug/remoterelease
-            text: 真机调试安装包
-            name: remoterelease
-        -
-            link: /develop/debug/ideremotetarget
-            text: 开发者工具使用真机调试
-            name: ideremotetarget
-        -
-            link: /develop/debug/remotetargettool
-            text: 控制台使用真机调试
-            name: remotetargettool
-    -
-      link: /develop/server/oauth
-      text: 开放服务
-      name: server
-      sidebar:
-        -
-          link: /develop/server/oauth
-          text: 百度OAuth授权说明
-          name: OAuth
-        -
-          link: /develop/server/power
-          text: 开发者服务相关接口
-          name: power
-# 3
 -
   link: /design/principle/keynote
   text: 设计
@@ -296,6 +103,546 @@
           link: /design/download/load
           text: 设计资源下载
           name: load
+# 3
+-
+  link: /develop/tutorial/index
+  text: 开发
+  name: develop
+  nav:
+    -
+      link: /develop/tutorial/index
+      text: 简易教程
+      name: tutorial
+      sidebar:
+        -
+            link: /develop/tutorial/index
+            text: 第一个智能小程序
+            name: index
+        -
+            link: /develop/tutorial/codedir
+            text: 介绍
+            name: codedir
+        -
+            link: /develop/tutorial/process
+            text: 全局配置
+            name: process
+        -
+            link: /develop/tutorial/dev
+            text: 页面开发
+            name: dev
+        -
+            link: /develop/tutorial/swanchangelog
+            text: SWAN 历史更新日志
+            name: swanjsChangelog
+    -
+      link: /develop/framework/view
+      text: 框架
+      name: framework
+      sidebar:
+        -
+            link: /develop/framework/app-service
+            text: 逻辑层
+            name: app-service
+            sidebar:
+              -
+                link: /develop/framework/app-service_register
+                text: 注册程序
+                name: app-service_register
+              -
+                link: /develop/framework/app-service_page
+                text: 注册页面
+                name: app-service_page
+              -
+                link: /develop/framework/app-service_getcurrentpages
+                text: 页面路由
+                name: app-service_getcurrentpages
+        -
+            link: /develop/framework/view
+            text: 视图层
+            name: view
+            sidebar:
+
+              -
+                link: /develop/framework/view_data
+                text: 数据绑定
+                name:  view_data
+              -
+                link: /develop/framework/view_for
+                text: 循环
+                name: view_for
+              -
+                link: /develop/framework/view_if
+                text: 条件
+                name: view_if
+              -
+                link: /develop/framework/view_template
+                text: 模板
+                name: view_template
+              -
+                link: /develop/framework/view_incident
+                text: 事件处理
+                name: view_incident
+              -
+                link: /develop/framework/view_quote
+                text: 引用
+                name: view_quote
+              -
+                link: /develop/framework/view_filter
+                text: Filter过滤器
+                name: view_filter
+              -
+                link: /develop/framework/view_css
+                text: CSS
+                name: view_css
+
+
+        -
+            link: /develop/framework/custom-component
+            text: 自定义组件
+            name: custom-component
+            sidebar:
+
+              -
+                link: /develop/framework/custom-component_temp
+                text: 组件模板和样式
+                name: custom-component_temp
+              -
+                link: /develop/framework/custom-component_comp
+                text: Component构造器
+                name: custom-component_comp
+              -
+                link: /develop/framework/custom-component_cont
+                text: 组件间通信与事件
+                name: custom-component_cont
+        -
+            link: /develop/framework/subpackages
+            text: 分包加载
+            name: subpackages
+        -
+            link: /develop/framework/client-lib
+            text: 基础库
+            name: client-lib
+        -
+            link: /develop/framework/operating-mechanism
+            text: 运行机制
+            name: operating-mechanism
+        -
+            link: /develop/framework/performance-analysis-tool
+            text: 性能分析工具
+            name: performance-analysis-tool
+        -
+            link: /develop/framework/performance-tips
+            text: 性能优化建议
+            name: performance-tips
+    -
+      link: /develop/component/view
+      text: 组件
+      name: component
+      sidebar:
+        -
+            link: /develop/component/view
+            text: 视图容器
+            name: view
+        -
+            link: /develop/component/base
+            text:  基础内容
+            name: base
+        -
+            link: /develop/component/form
+            text: 表单组件
+            name: form
+        -
+            link: /develop/component/nav
+            text: 导航
+            name: nav
+        -
+            link: /develop/component/media
+            text: 媒体组件
+            name: media
+        -
+            link: /develop/component/map
+            text: 地图
+            name: map
+        -
+            link: /develop/component/canvas
+            text: 画布
+            name: canvas
+        -
+            link: /develop/component/open
+            text: 开放能力
+            name: open
+    -
+      link: /develop/api/net
+      text: API
+      name: api
+      sidebar:
+        # -
+        #     link: /develop/api/protocol
+        #     text: H5页面调起小程序协议
+        #     name: protocol
+        #     sidebar:
+
+        -
+            link: /develop/api/net
+            text: 网络
+            name: net
+            sidebar:
+
+            -
+              link: /develop/api/net_request
+              text: 请求
+              name: net_request
+            -
+              link: /develop/api/net_uploadfile
+              text: 上传、下载
+              name: net_uploadfile
+            -
+              link: /develop/api/net_websocket
+              text: WebSocket
+              name: net_websocket
+
+        -
+            link: /develop/api/ai
+            text: AI
+            name: ai
+            sidebar:
+
+              -
+                link: /develop/api/ai_ocr
+                text: 文字识别
+                name: ai_ocr
+
+              -
+                link: /develop/api/ai_text
+                text: 文本审核
+                name: ai_text
+              -
+                link: /develop/api/ai_audio
+                text: 语音合成
+                name: ai_audio
+              -
+                link: /develop/api/ai_audit
+                text: 图像审核
+                name: ai_audit
+              -
+                link: /develop/api/ai_classify
+                text: 图像识别
+                name: ai_classify
+        -
+            link: /develop/api/media
+            text: 媒体
+            name: media
+            sidebar:
+            -
+              link: /develop/api/media_image
+              text: 图片
+              name: media_image
+            -
+              link: /develop/api/media_recorder
+              text: 录音管理
+              name: media_recorder
+            -
+              link: /develop/api/media_backgroundaudiomanager
+              text: 背景音频管理播放
+              name: media_backgroundaudiomanager
+            -
+              link: /develop/api/media_createinneraudiocontext
+              text: 音频组件控制
+              name: media_createinneraudiocontext
+            -
+              link: /develop/api/media_video
+              text: 视频
+              name: media_video
+            -
+              link: /develop/api/media_videocontext
+              text: 视频组件控制
+              name: media_videocontext
+            -
+              link: /develop/api/media_liveplayercontext
+              text: 直播组件控制
+              name: media_liveplayercontext
+            -
+              link: /develop/api/media_cameracontext
+              text: 相机组件控制
+              name: media_cameracontext
+        -
+            link: /develop/api/file
+            text: 文件
+            name: file
+            sidebar:
+              -
+                link: /develop/api/file_save
+                text: 保存、获取文件
+                name: file_save
+              -
+                link: /develop/api/file_remove
+                text: 删除文件
+                name: file_remove
+              -
+                link: /develop/api/file_open
+                text: 打开新的文件页面
+                name: file_open
+        -
+            link: /develop/api/storage
+            text: 数据存储
+            name: storage
+            sidebar:
+              -
+                link: /develop/api/storage_save
+                text: 存储数据
+                name: storage_save
+              -
+                link: /develop/api/storage_remove
+                text: 存储清理
+                name: storage_remove
+        -
+            link: /develop/api/location
+            text: 位置
+            name: location
+            sidebar:
+              -
+                link: /develop/api/location_get
+                text: 获取位置
+                name: location_get
+              -
+                link: /develop/api/location_open
+                text: 查看位置
+                name: location_open
+              -
+                link: /develop/api/location_map
+                text: 地图组件控制
+                name: location_map
+
+        # -
+        #     link: /develop/api/canvas
+        #     text: 绘图
+        #     name: canvas
+
+        -
+            link: /develop/api/show
+            text: 界面
+            name: show
+            sidebar:
+              -
+                link: /develop/api/show_canvas
+                text: 绘图
+                name: show_canvas
+              -
+                link: /develop/api/show_toast
+                text: 交互反馈
+                name: show_toast
+              -
+                link: /develop/api/show_navigationbar
+                text: 设置导航条
+                name: show_navigationbar
+              -
+                link: /develop/api/show_tabbar
+                text: 设置tabBar
+                name: show_tabbar
+              -
+                link: /develop/api/show_tab
+                text: 导航
+                name: show_tab
+              -
+                link: /develop/api/show_createanimation
+                text: 动画
+                name: show_createanimation
+              -
+                link: /develop/api/show_pagescrollto
+                text: 位置
+                name: show_pagescrollto
+              -
+                link: /develop/api/show_pull
+                text: 下拉刷新
+                name: show_pull
+              -
+                link: /develop/api/show_query
+                text: 节点信息
+                name: show_query
+
+
+
+        -
+            link: /develop/api/device
+            text: 设备
+            name: device
+            sidebar:
+              -
+                link: /develop/api/device_sys
+                text: 系统信息
+                name: device_sys
+              -
+                link: /develop/api/device_onmemory
+                text: 内存
+                name: device_onmemory
+              -
+                link: /develop/api/device_network
+                text: 网络状态
+                name: device_network
+              -
+                link: /develop/api/device_accelerometer
+                text: 加速度计
+                name: device_accelerometer
+              -
+                link: /develop/api/device_compass
+                text: 罗盘
+                name: device_compass
+              -
+                link: /develop/api/device_scan
+                text: 扫码
+                name: device_scan
+              -
+                link: /develop/api/device_screen
+                text: 屏幕亮度
+                name: device_screen
+              -
+                link: /develop/api/device_capture
+                text: 用户截屏事件
+                name: device_capture
+              -
+                link: /develop/api/device_vibrate
+                text: 振动
+                name: device_vibrate
+              -
+                link: /develop/api/device_phonecontact
+                text: 手机联系人
+                name: device_phonecontact
+              -
+                link: /develop/api/device_call
+                text: 拨打电话
+                name: device_call
+              -
+                link: /develop/api/device_clipboard
+                text: 剪贴板
+                name: device_clipboard
+        -
+            link: /develop/api/ext
+            text: 第三方平台
+            name: ext
+            sidebar:
+              -
+                link: /develop/api/getextconfig
+                text: 获取第三方平台数据
+                name: getextconfig
+        -
+            link: /develop/api/open
+            text: 开放接口
+            name: open
+            sidebar:
+
+              -
+                link: /develop/api/open_login
+                text: 登录
+                name: open_login
+
+              -
+                link: /develop/api/open_authorize
+                text: 授权
+                name: open_authorize
+
+              -
+                link: /develop/api/open_userinfo
+                text: 用户信息
+                name: open_userinfo
+
+              -
+                link: /develop/api/open_setting
+                text: 设置
+                name: open_setting
+
+              -
+                link: /develop/api/open_share
+                text: 分享
+                name: open_share
+
+              -
+                link: /develop/api/open_chooseaddress
+                text: 选择收货地址
+                name: open_chooseaddress
+
+              -
+                link: /develop/api/open_payment
+                text: 聚合收银台支付
+                name: open_payment
+
+              -
+                link: /develop/api/open_chooseinvoicetitle
+                text: 获取发票抬头
+                name: open_chooseinvoicetitle
+
+              -
+                link: /develop/api/open_smartprogram
+                text: 打开小程序
+                name: open_smartprogram
+    -
+      link: /develop/devtools/show
+      text: 工具
+      name: devtools
+      sidebar:
+        -
+            link: /develop/devtools/show
+            text: 界面
+            name: show
+        -
+            link: /develop/devtools/smartappdebug
+            text: 调试
+            name: smartappdebug
+        -
+            link: /develop/devtools/projectconfig
+            text: 项目配置文件
+            name: projectconfig
+        -
+            link: /develop/devtools/diff
+            text: 和真机的差异
+            name: diff
+        -
+            link: /develop/devtools/uplog
+            text: 工具历史更新日志
+            name: uplog
+            sidebar:
+              -
+                link: /develop/devtools/uplog_tool
+                text: 开发者工具历史更新日志
+                name: uplog_tool
+              -
+                link: /develop/devtools/uplog_compile
+                text: 编译工具历史更新日志
+                name: uplog_compile
+    -
+      link: /develop/debug/remoterelease
+      text: 调试
+      name: debug
+      sidebar:
+        -
+            link: /develop/debug/remoterelease
+            text: 真机调试安装包
+            name: remoterelease
+        -
+            link: /develop/debug/ideremotetarget
+            text: 开发者工具使用真机调试
+            name: ideremotetarget
+        -
+            link: /develop/debug/remotetargettool
+            text: 控制台使用真机调试
+            name: remotetargettool
+    -
+      link: /develop/server/oauth
+      text: 开放服务
+      name: server
+      sidebar:
+        -
+          link: /develop/server/oauth
+          text: 百度OAuth授权说明
+          name: oauth
+        -
+          link: /develop/server/power
+          text: 开发者服务相关接口
+          name: power
+        -
+          link: /develop/server/upstream
+          text: Web化反向代理搭建说明
+          name: upstream
+
 # 4
 -
   link: /operations/specification

@@ -4,15 +4,26 @@ header: develop
 nav: api
 sidebar: file
 ---
+### 文件 API 列表
 
-saveFile
+|API|说明|
+|----|----|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#saveFile">saveFile</a>|保存文件到本地|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#getFileInfo">getFileInfo</a>|获取文件信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#getSavedFileList">getSavedFileList</a>|获取本地已保存的文件列表|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#getSavedFileInfo">getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_remove/#removeSavedFile">removeSavedFile</a>|删除本地存储的文件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file_open/#openDocument">openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。|
+
+
+<!-- saveFile
 -----
 
-**解释： **保存文件到本地
+**解释：**保存文件到本地
 
-**参数： **Object
+**参数：**Object
 
-**注意： **saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用。
+**注意：**saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用。
 
 **Object参数说明：**
 
@@ -29,11 +40,11 @@ saveFile
 |---- | ---- | ---- |
 |savedFilePath  |String | 文件的保存路径|
 
-**示例： **
+**示例：**
 
 ```js
 swan.chooseImage({
-    count: '1'
+    count: 1,
     success: function (res) {
         var tempFilePaths = res.tempFilePaths;
         swan.saveFile({
@@ -46,9 +57,14 @@ swan.chooseImage({
 });
 ```
 
+**Bug & Tip**
+
+1、tip: 本地文件存储的大小限制为 10M。
+
 getFileInfo
 -----
-**解释： **获取文件信息
+
+**解释：**获取文件信息
 
 **参数：**Object
 
@@ -74,11 +90,10 @@ getFileInfo
 
 ```js
 swan.getFileInfo({
-    filePath: '/test/test.txt',
+    filePath: 'bdfile://somefile',
     success: function (res) {
         console.log(res.size);
         console.log(res.digest);
-        console.log(res.errMsg); //调用结果
     }
 });
 ```
@@ -124,9 +139,9 @@ swan.getSavedFileList({
 getSavedFileInfo
 -----
 
-**解释： **获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口
+**解释：**获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口
 
-**参数： **Object
+**参数：**Object
 
 **Object参数说明：**
 
@@ -144,7 +159,7 @@ getSavedFileInfo
 |size  |Number | 文件大小，单位B|
 |createTime  |Number | 文件保存时的时间戳，从1970/01/01 08:00:00 到该时刻的秒数|
 
-**示例： **
+**示例：**
 
 ```js
 swan.getSavedFileInfo({
@@ -163,9 +178,9 @@ swan.getSavedFileInfo({
 removeSavedFile
 -----
 
-**解释： **删除本地存储的文件
+**解释：**删除本地存储的文件
 
-**参数： **Object
+**参数：**Object
 
 **Object参数说明：**
 
@@ -176,7 +191,7 @@ removeSavedFile
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例： **
+**示例：**
 
 ```js
 swan.getSavedFileList({
@@ -196,9 +211,9 @@ swan.getSavedFileList({
 openDocument
 -----
 
-**解释： **新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx
+**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx
 
-**参数： **Object
+**参数：**Object
 
 **Object参数说明：**
 
@@ -210,11 +225,11 @@ openDocument
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例： **
+**示例：**
 
 ```js
 swan.downloadFile({
-    url: 'http://example.com/somefile.pdf',
+    url: 'https://smartprogram.baidu.com/xxx.pdf',
     success: function (res) {
         var filePath = res.tempFilePath;
         swan.openDocument({
@@ -225,6 +240,4 @@ swan.downloadFile({
         });
     }
 });
-```
-
-**Tips：** bdfile:// 开头的文件均不能预览
+``` -->

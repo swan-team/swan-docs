@@ -5,8 +5,6 @@ nav: component
 sidebar: form
 ---
 
-form
----
 
 ### button
 
@@ -17,16 +15,21 @@ form
 |---- | ---- | ---- |---- |
 |size|String | default  |大小|
 | type | String | default |类型|
-| plain | Boolean  |false |按钮是否镂空，背景色透明|
-|form-type |String  |  |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset  事件|
-|open-type | String | |手百开放能力，比如分享、获取用户信息等等|
-|hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当  hover-class="none"  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}|
-| hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态|
-|hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒|
-|hover-stay-time|Number | 70  |手指松开后点击态保留时间，单位毫秒|
-| bindgetuserinfo |Handler |  |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"|
-| bindgetphonenumber |Handler |  |获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type="getphonenumber"|
-
+| plain | Boolean  |false |按钮是否镂空，背景色透明。|
+|form-type |String  | - |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
+|open-type | String | -|手百开放能力，比如分享、获取用户信息等等。|
+|hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当  hover-class="none"  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
+| hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态。|
+|hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒。|
+|hover-stay-time|Number | 70  |手指松开后点击态保留时间，单位毫秒。|
+| bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"。|
+|disable|Boolean|false|是否禁用|
+|loading|Boolean|false|名称前是否带有loading图标|
+<!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
+|bindoppensetting|Handler|-|		在打开授权设置页后回调，使用时机：open-type="openSetting"。|
+|bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
+|binggephonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getphonenumber”。|
+-->
 
 **size有效值：**
 
@@ -51,7 +54,9 @@ form
 |share |触发用户分享，使用前建议先阅读 swan.onShareAppMessage 用法|
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息|
 | getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息|
-
+<!--|contact|打开客服会话|
+|opensetting|打开授权设置页|
+|feedback|打开“意见反馈”页面，用户可提交反馈内容并上传日志，开发者可以登录小程序管理后台后进入左侧菜单“客服反馈”页面获取到反馈内容| -->
 
 <notice>示例： </notice>
 
@@ -693,11 +698,12 @@ formSubmit: e ={
 |bindlinechange|EventHandle||输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}|
 |bindinput|EventHandle||当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
 |bindconfirm|EventHandle||点击完成时， 触发 confirm 事件，event.detail = {value: value}|
-|cursor|Number|-1|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>| 
+|cursor|Number|-1|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
+|auto-focus|Boolean|false|自动聚焦，拉起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |focus|Boolean|false|获取焦点 <font color="#4183c4">10.8.5 以上</font>|
- |fixed|Boolean|false|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
+|fixed|Boolean|false|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
 |cursor-spacing|Number|0|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 <font color="#4183c4">10.8.5 以上</font>|
-|show-confirm-bar|Boolean|true|是否显示键盘上方带有”完成“按钮那一栏（仅ios支持）  <font color="#4183c4">10.8.5 以上</font>| 
+|show-confirm-bar|Boolean|true|是否显示键盘上方带有”完成“按钮那一栏（仅ios支持）  <font color="#4183c4">10.8.5 以上</font>|
 |selection-start|Number|-1|光标起始位置，自动聚集时有效，需与selection-end搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |selection-end|Number|-1|光标结束位置，自动聚集时有效，需与selection-start搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|

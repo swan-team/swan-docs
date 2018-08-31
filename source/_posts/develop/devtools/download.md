@@ -28,7 +28,7 @@ sidebar: download
 [New] 调试工具增加 storage 和 appdata 面板
 [New] 模拟器内 useragent 增加 swan 标识
 [New] 增加清除缓存功能
-[Changes] request 请求增加 referer，格式 `https://smartprogram.baidu.com/{appkey}/devtools/page-frame.html`
+[Changes] request 请求增加 referer，格式 `https://smartapp.baidu.com/{appkey}/devtools/page-frame.html`
 [BugFix] 优化调试工具通信时序，修复 swan 面板偶现的白屏问题
 [BugFix] 修改模拟器背景色为白色，保持和百度App一致
 [BugFix] 修复历史工程排序不正确问题

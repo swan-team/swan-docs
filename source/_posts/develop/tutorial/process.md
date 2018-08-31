@@ -102,6 +102,19 @@ app.css
 	}
 }
 ```
+<br>
+### tabBar
+用于设置客户端底部的tab栏：可通过tabBar设置tab的颜色、个数、位置、背景色等内容。
+
+|属性|类型|必填|描述|
+|----|----|----|----|
+|backgroundColor|HexColor|是|tab 的背景色。|
+|borderStyle|String|否|tabBar 边框颜色。仅支持 black/white 两种边框颜色，默认值为 black 。|
+|color|HexColor|是|tab 上文字的默认颜色。|
+|position|String|否|tabBar 的位置。 仅支持 bottom/top 两种位置设置，默认值为 bottom 。|
+|list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。<br>- 当 postion 为 top 时，不显示 icon 。|
+|selectedColor|HexColor|是|tab 上的文字选中时的颜色。|
+
 配置全局数据
 -----
 app.js 中存放全局的 JS 逻辑。

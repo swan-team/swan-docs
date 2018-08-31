@@ -62,14 +62,14 @@ params:
 |type|int|false|POST|消息类型 固定值21|21|
 |content|string|false|POST|消息体|JSON格式|
 
- **content** 字段格式说明 
- 
+ **content** 字段格式说明
+
        "content": {
            "title":"积分变动通知"  //标题
            "first": { //消息体第一部分
                "value":"亲爱的用户，近期我们有如下优惠活动" //消息体第一部分文本
            },
-           "keywords":[//消息主体 
+           "keywords":[//消息主体
                {
                    "name":"服装类商品",
                    "value":"满1000减100"
@@ -84,7 +84,7 @@ params:
        　　　　　　　　　　
  **return:json**
 
-|key | 类型 | 备注 | 
+|key | 类型 | 备注 |
 |---|---|---|
 |errno|int|0|
 |msg|string|错误信息|
@@ -99,6 +99,16 @@ params:
          "msg_key":123456789
          }
 }
+```
+错误时会返回错误码信息，说明如下：
+```
+返回码	 说明
+6001     无权限
+1009     internal error/信息下发失败
+2002     参数错误
+2003     表单校验失败
+116001   发送消息次数过多
+30010002 消息下发参数错误
 ```
 ### 2.消息推送服务组播接口
 
@@ -116,14 +126,14 @@ params:
 |type|int|false|POST|消息类型 固定值21|21|
 |content|string|false|POST|消息体|JSON格式|
 
- **content** 字段格式说明 
- 
+ **content** 字段格式说明
+
        "content": {
            "title":"积分变动通知"  //标题
            "first": { //消息体第一部分
                "value":"亲爱的用户，近期我们有如下优惠活动" //消息体第一部分文本
            },
-           "keywords":[//消息主体 
+           "keywords":[//消息主体
                {
                    "name":"服装类商品",
                    "value":"满1000减100"
@@ -138,7 +148,7 @@ params:
        　　　　　　　　　　
  **return:json**
 
-|key | 类型 | 备注 | 
+|key | 类型 | 备注 |
 |---|---|---|
 |errno|int|0|
 |msg|string|错误信息|
@@ -154,6 +164,7 @@ params:
          }
 }
 ```
+
 
 ### 3.Feeds横滑卡片推广接口
 
@@ -175,7 +186,7 @@ params:
 |-path_url|string|false|智能小程序调起路径 (长度限制：500个字)|/pages/home/home/|
 
  **scard_list** 字段格式示例
- 
+
        "scard_list":[   
                {
                    "scard_title":"金牌投资人",
@@ -192,16 +203,239 @@ params:
                ...
            ]
 
-       
- return:json
- 
-|key | 类型 | 备注 | 
+
+**return:json**
+
+|key | 类型 | 备注 |
 |---|---|---|
 |errno|int|0|
 |msg|string|错误信息|
 |data|string|发送成功|
 
-返回示例
+**返回示例**
+
+```
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
+```
+
+### 4.投放服务提交素材接口
+url: 邀请制，受邀开发者可使用该服务
+method: GET&POST
+params:
+
+|key | 类型 | 是否必填 | method | 备注 | 示例 |
+|---|---|---|---|---|
+|access_token|string|true|GET| 权限校验TOKEN ||
+|app_id|string|true|POST| 智能小程序ID |1000001|
+|title|string|true|POST| 标题   |百度智能小程序|
+|body|string|true|POST| 消息体   |智能小程序，智能连接人与信息、人与服务、人与万物的开放生态。|
+|path|string|true|POST| 智能小程序内页链接 |/pages/index/index|
+|images|string|true|POST| 图片链接 |JSON格式`["https://b.bdstatic.com/miniapp/resource/image/headImg.png"]`|
+|mapp_type|string|true|POST| 类型  |	1000|
+|mapp_sub_type|string|true|POST| 子类型  |1001|
+|tags|string|false|POST| 标签，英文逗号分割  |组件,接口|
+|ext|string|false|POST| 扩展信息  | JSON格式`{"desc": "智能小程序官方示例","version": "10.7.1"}`|
+
+** mapp_type列表：**
+
+|type | id |
+|---|---|
+|内容|1000|
+|服务|2000|
+|工具|3000|
+|游戏|4000|
+
+** mapp_sub_type列表： **
+
+|type | id | pid |
+|---|---|---|
+|图文|	1001|	1000|
+|视频|	1002|	1000|
+|直播|	1003|	1000|
+|音频|	1004|	1000|
+|横滑卡主卡|	1005|	1000|
+|横滑卡子卡|	1006|	1000|
+|酒店|	2001|	2000|
+|景点|	2002|	2000|
+|商品|	2003|	2000|
+|汽车|	2004|	2000|
+|金融|	3001|	3000|
+|天气|	3002|	3000|
+|车辆|	3003|	3000|
+|娱乐|	3004|	3000|
+|对战|	4001|	4000|
+|单机|	4007|	4000|
+
+
+**return:json**
+
+|key | 类型 | 备注 |
+|---|---|---|
+|errno|int|0|
+|msg|string|错误信息|
+|data|string|返回数据|
+
+**返回示例**
+```
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
+```
+
+### 5.投放服务删除素材接口
+
+url:邀请制，受邀开发者可使用该服务
+method: GET&POST
+params:
+
+|key | 类型 | 是否必填 | method | 备注 | 示例 |
+|---|---|---|---|---|
+|access_token|	string|	true|	GET|	权限校验TOKEN|	|
+|app_id|	string|	true|	POST|	智能小程序ID|	100001|
+|path|	string|	true|	POST|	智能小程序内页链接|	/pages/index/index|
+
+**return:json**
+
+|key | 类型 | 备注 |
+|---|---|---|
+|errno|int|0|
+|msg|string|错误信息|
+|data|string|返回数据|
+
+**返回示例**
+```
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
+```
+
+### 6.投放服务提交sitemap接口
+
+url:  邀请制，受邀开发者可使用该服务
+method: GET&POST
+params:
+
+|key | 类型 | 是否必填 | method | 备注 | 示例 |
+|---|---|---|---|---|
+|access_token|	string|	true|	GET|	权限校验TOKEN|	 |
+|app_id|	string|	true|	POST|	智能小程序ID|	100001|
+|url|	string|	true|	POST|	sitemap链接|	 |
+|desc|	string|	true|	POST|	描述信息|	智能小程序示例|
+|type|	int|	true|	POST|	类型 1-增量 0-下线|	1|
+|frequency|	int| true| POST| 更新频率 1-每分钟 2-每小时 3-每天 4-每周 5-每月 6-每年| 3|
+
+** sitemap内容格式如下：**
+
+```
+{
+    "sitemapindex": [
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_01.json",
+                "lastmod": "2018-07-17"
+            }
+        },
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_02.json",
+                "lastmod": "2018-07-17"
+            }
+        },
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_03.json",
+                "lastmod": "2018-07-17"
+            }
+        }
+    ]
+}
+```
+
+** loc为小于5M的分片数据，格式如下：**
+
+```
+[
+    {
+        "app_id": "1000001",
+        "title": "百度智能小程序",
+        "body": "智能小程序，智能连接人与信息、人与服务、人与万物的开放生态。",
+        "path": "/pages/index/index",
+        "images": [
+            "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png",
+            "https://www.baidu.com/img/bd_logo1.png?qua=high%26where=super"
+        ],
+        "mapp_type": "1000",
+        "mapp_sub_type": "1001",
+        "tags": "组件,接口",
+        "ext": {
+            "desc": "智能小程序官方示例",
+            "version": "10.7.1"
+        }
+    },
+    {
+        "app_id": "1000001",
+        "title": "小程序接口",
+        "body": "百度智能小程序提供丰富的接口，为开发者赋能。",
+        "path": "/pages/api/api",
+        "images": [
+            "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png"
+        ],
+        "mapp_type": "1000",
+        "mapp_sub_type": "1001",
+        "tags": "接口",
+        "ext": {}
+    }
+]
+```
+
+**return:json**
+
+|key | 类型 | 备注 |
+|---|---|---|
+|errno|int|0|
+|msg|string|错误信息|
+|data|string|返回数据|
+
+**返回示例**
+
+```
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
+```
+
+###  7.投放服务删除sitemap接口
+
+url: 邀请制，受邀开发者可使用该服务
+method: GET&POST
+params:
+
+|key | 类型 | 是否必填 | method | 备注 | 示例 |
+|---|---|---|---|---|
+|access_token|	string|	true|	GET|	权限校验TOKEN|	 |
+|app_id|	string|	true|	POST|	智能小程序ID|	100001|
+|url|	string|	true|	POST|	sitemap链接|	||
+
+**return:json**
+
+|key | 类型 | 备注 |
+|---|---|---|
+|errno|int|0|
+|msg|string|错误信息|
+|data|string|返回数据|
+
+**返回示例**
+
 ```
 {
 　　"errno":0,

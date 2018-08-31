@@ -5,9 +5,7 @@ nav: framework
 sidebar: app-service
 ---
 
-介绍
------
-智能小程序的逻辑层由 JavaScript 编写。
+智能小程序的逻辑层使用 JavaScript 编写。
 逻辑层将数据进行处理后发送给视图层，同时接受视图层的反馈。
 在 JavaScript 的基础上，我们提供了一些框架方法。
 1、提供了 [App](#注册程序) 和 [Page](#注册页面) 方法
@@ -17,12 +15,14 @@ sidebar: app-service
 5、框架本身并非运行在浏览器中，所以 JavaScript 在 Web 中的一些能力都无法使用，如 document , window 等
 6、开发者写的所有代码，最终会被打包成一份 JavaScript ，并在智能小程序启动时运行，直到智能小程序销毁。
 
-注册程序
+详细内容请参看<a href="https://smartprogram.baidu.com/docs/develop/framework/app-service_register/">注册程序</a>、<a href="https://smartprogram.baidu.com/docs/develop/framework/app-service_page/">注册页面</a>、<a href="https://smartprogram.baidu.com/docs/develop/framework/app-service_getcurrentpages//">页面路由</a>。
+
+
+
+<!-- 注册程序
 -----
 App()
-
 <div class="notice">解释： </div>App() 函数用来注册一个智能小程序。接受一个 Object 作为参数，用以指定智能小程序的生命周期函数等。
-
 **Object参数说明：**
 
 |属性  |类型  |描述  |触发时机|
@@ -57,6 +57,12 @@ onLaunch，onShow 参数
 |字段  |类型  |说明  |
 |---- | ---- | ---- |
 |scene | Number | 打开智能小程序的场景值 |
+|path|String|打开小程序的路径|
+|query|Object|打开小程序的query|
+|shareTicket|String|标记转发对象|
+|referrerInfo|Object|当场景为由从另一个小程序或公众号或App打开时，返回此字段。|
+|referrerInfo.appId|String|来源小程序或公众号或App的 appId。|
+|referrerInfo.extraData|Objec|	来源小程序传过来的数据，scene=1037或1038时支持。|
 
 
 getApp()
@@ -140,7 +146,7 @@ Page({
     onPageScroll: function () {
         // do something when page scroll
     },
-    
+
     onTabItemTap: function (item) {
         console.log(item.index);
         console.log(item.pagePath);
@@ -274,7 +280,7 @@ Page({
         age: 0
     },
     tap: function () {
-        this.setData({'age', 1});
+        this.setData({'age': 1});
     }
 });
 ```
@@ -394,4 +400,4 @@ Page({
         utils.logName();
     }
 });
-```
+``` -->

@@ -22,9 +22,9 @@ canvas
 | bindtouchcancel | EventHandle |  | 手指触摸动作被打断，如来电提醒，弹窗 |
 | bindlongtap | EventHandle |  | 手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
 | binderror | EventHandle |  | 当发生错误时触发 error 事件，detail = {errMsg: 'something wrong'} |
-
-canvas 组件默认宽度 300px、高度 225px。
-
+**说明**
+1、 canvas 组件默认宽度 300px、高度 225px；
+2、 基础库版本1.12.0开始支持事件捕获、冒泡。
 **示例：**
 
 ```xml

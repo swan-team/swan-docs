@@ -51,6 +51,7 @@
             this.mobileAddEvent();
             this.initCrumbs();
             this.initToc();
+            this.initHiddenbar();
             this.initSidebar();
             // this.initH2();
             // this.initCustom();
@@ -66,8 +67,31 @@
                     }
                 }
             }
-
+            
             sidebar.show();
+            // 定位到当前sidebar
+            var wrapperT = sidebar.find('ul').position().top;
+            var selectedT = $('.m-doc-sidebar-selected').position().top;
+            var scrollT = selectedT - wrapperT;
+            scrollT > 44 && sidebar.scrollTop(selectedT - wrapperT)
+
+        },
+        /**
+         * 部分页面需要在侧边栏隐藏
+         * @description 配置在_config.yml中，增加sidebarIgnore:list
+         * @author jingxiangzheng@baidu.com
+         */
+        initHiddenbar: function(){
+            var sidebarIgnore = window.localData.sidebarIgnore;
+            sidebarIgnore = sidebarIgnore.split(',');
+            for (var i = 0; i < sidebarIgnore.length; i ++){
+                var href = '/docs' + sidebarIgnore[i] + '/';
+                $('.m-doc-sidebar-nav-wrapper a[href="' + href + '"]')
+                    .hide()
+                    .parent('li')
+                    .hide();
+                $('#article-main-content a[href= "'+ href +'"]').hide();
+            }
         },
         initCustom: function () {
             var wrap = $('.m-doc-custom-examples');

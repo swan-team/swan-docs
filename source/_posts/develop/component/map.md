@@ -11,21 +11,21 @@ map
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| longitude | Number | | 中心经度 |
-| latitude | Number | | 中心纬度 |
+| longitude | Number | -| 中心经度 |
+| latitude | Number | -| 中心纬度 |
 | scale |  Number | 16 | 缩放级别，取值范围为4-21 |
-| markers |  Array |  | 标记点 |
-| polyline |  Array |  | 路线 |
-| circles |  Array |  |  圆 |
-| controls |  Array |  | 控件 |
-| include-points |  Array |  | 缩放视野以包含所有给定的坐标点   |
-| show-location | Boolean |  | 显示带有方向的当前定位点 |
-| bindmarkertap | EventHandle |  | 点击标记点时触发 |
-| bindcallouttap |  EventHandle |  | 点击标记点对应的气泡时触发 |
-| bindcontroltap | EventHandle |  | 点击控件时触发 |
-| bindregionchange | EventHandle |  | 视野发生变化时触发 |
-| bindtap | EventHandle |  | 点击地图时触发 |
-| bindupdated | EventHandle |  | 在地图渲染更新完成时触发 |
+| markers |  Array | - | 标记点 |
+| polyline |  Array | - | 路线 |
+| circles |  Array |  -|  圆 |
+| controls |  Array | - | 控件 |
+| include-points |  Array | - | 缩放视野以包含所有给定的坐标点   |
+| show-location | Boolean |  -| 显示带有方向的当前定位点 |
+| bindmarkertap | EventHandle | -| 点击标记点时触发 |
+| bindcallouttap |  EventHandle | - | 点击标记点对应的气泡时触发 |
+| bindcontroltap | EventHandle |  -| 点击控件时触发 |
+| bindregionchange | EventHandle | - | 视野发生变化时触发 |
+| bindtap | EventHandle | - | 点击地图时触发 |
+| bindupdated | EventHandle | - | 在地图渲染更新完成时触发 |
 
 
 <notice>markers</notice>
@@ -236,7 +236,7 @@ Page({
         console.log('onUpdated callback::');
         console.log(e);
     }
-}
+}）
 
 ```
 
