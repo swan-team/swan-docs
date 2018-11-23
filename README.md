@@ -16,7 +16,7 @@
 
 ## 编写规范
 ### 导航配置
-这分配置相当于书的目录。
+该配置相当于书的目录。
 第一层级为header导航栏（一级导航），第二层级为左侧导航（二级导航），第三层级为左侧导航子导航（h1），第四层级为md页面（h2），第五层级为md页面内锚点（h3）。  
 第三层级是可选的，如果不配置text，则第三层级不显示。  
 
@@ -63,7 +63,7 @@ http://localhost:4000/docs/operations/example/
   <a href="{下载链接左}" class="m-doc-custom-download-left">
     <img src="{图片左}"><p>{文案左}</p></a><a href="{链接右}" class="m-doc-custom-download-right"><img src="{图片右}"><p>{文案右}</p></a></div>
 ```
-参数
+**参数**
 {链接左} 替换成下载链接
 {链接右} 替换成下载链接
 {图片左} 替换成图片地址
@@ -76,7 +76,7 @@ http://localhost:4000/docs/operations/example/
   // 待选模版
   <div><img src="{图片}"></div>
 ```
-参数
+**参数**
 {图片} 替换成图片地址
 {待选模版} 两图就复制两个待选模版进去，三图就复制三个待选模版进去，将`{图片}`替换要展示图片地址。
 ### 左图右文模版
@@ -97,12 +97,12 @@ http://localhost:4000/docs/operations/example/
   // 待选模版
   <div class="{待选样式}"><img src="{图片地址}"><p class="m-doc-custom-examples-title">{高亮文案}</p><p class="m-doc-custom-examples-text">{解释说明}</p></div>
 ```
-参数
+**参数**
 {图片} 替换成图片地址
 {待选模版} 两列就复制两个待选模版进去，三列就复制三个待选模版进去。
 {待选样式}
-  正确：m-doc-custom-examples-correct
-  错误：m-doc-custom-examples-error
-  警告：m-doc-custom-examples-warning
+ - 正确：m-doc-custom-examples-correct
+ - 错误：m-doc-custom-examples-error
+ - 警告：m-doc-custom-examples-warning
 {高亮文案} 高亮的文案
 {解释说明} 对示例的解释说明
