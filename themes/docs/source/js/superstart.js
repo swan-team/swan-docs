@@ -719,3 +719,5 @@
         docs.start();
     });
 })(window, document, window.Zepto);
+
+window.console && console.log("欢迎来到「百度智能小程序」！");
