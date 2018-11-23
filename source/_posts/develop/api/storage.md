@@ -18,7 +18,7 @@ sidebar: storage
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#removeStorage">removeStorage</a>|从本地缓存中异步移除指定 key。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#removeStorageSync">removeStorageSync</a>|从本地缓存中同步移除指定 key。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#clearStorage">clearStorage</a>|清理本地数据缓存。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#clearStorageSync">clearStorageSyn</a>|同步清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#clearStorageSync">clearStorageSync</a>|同步清理本地数据缓存。|
 
 <!-- setStorage
 -----

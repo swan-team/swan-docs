@@ -107,7 +107,7 @@ swan.getSystemInfo({
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
 
-****示例：****
+**示例：**
 
 ```js
 try {
@@ -140,7 +140,7 @@ try {
 |${option}  |  组件属性的可选值 |
 
 
-****示例：****
+**示例：**
 
 ```js
 
@@ -176,7 +176,7 @@ TRIM_MEMORY_RUNNING_MODERATE = 5
 TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
-****示例：****
+**示例：**
 
 ```js
 swan.onMemoryWarning(function (res) {
@@ -206,8 +206,7 @@ swan.onMemoryWarning(function (res) {
 |参数  |说明 |
 |---- | ---- |
 |networkType |网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)|
-
-****示例：****
+**示例：**
 
 ```js
 swan.getNetworkType({
@@ -241,7 +240,7 @@ swan.getNetworkType({
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
 
-****示例：****
+**示例：**
 
 ```js
 swan.onNetworkStatusChange(function (res) {
@@ -266,7 +265,7 @@ swan.onNetworkStatusChange(function (res) {
 |y |Number |Y 轴|
 |z |Number |Z 轴|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.onAccelerometerChange(function (res) {
@@ -288,7 +287,7 @@ swan.onAccelerometerChange(function (res) {
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.startAccelerometer();
@@ -307,7 +306,7 @@ swan.startAccelerometer();
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.stopAccelerometer();
@@ -327,7 +326,7 @@ swan.stopAccelerometer();
 |---- | ---- | ---- |
 |direction |Number |面对的方向度数|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.onCompassChange(function (res) {
@@ -348,7 +347,7 @@ swan.onCompassChange(function (res) {
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.startCompass();
@@ -367,7 +366,7 @@ swan.startCompass();
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.stopCompass();
@@ -396,7 +395,7 @@ swan.stopCompass();
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
 
-****示例：****
+**示例：**
 
 ```js
 swan.scanCode({
@@ -468,7 +467,7 @@ swan.scanCode({
 **CALLBACK返回参数：**
 无
 
-****示例：****
+**示例：**
 
 ```js
 swan.onUserCaptureScreen(function() {
@@ -571,7 +570,7 @@ swan.onUserCaptureScreen(function() {
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```js
 swan.makePhoneCall({
@@ -597,7 +596,7 @@ swan.makePhoneCall({
 |fail  | Function  |  否  | 接口调用失败的回调函数|
 |complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```js
 swan.setClipboardData({
@@ -631,8 +630,7 @@ swan.setClipboardData({
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
-
-****示例：****
+**示例：**
 
 ```js
 swan.getClipboardData({

@@ -5,18 +5,17 @@ nav: book
 sidebar: register
 ---
 
-## 智能小程序注册
-<div></div>
-### 注册登录百度账号
 
-注册地址：<a href="https://passport.baidu.com/v2/?reg&tt=1521786256298&overseas=undefined&gid=D8D45DC-FFC4-486A-BA34-B3215E98FF74&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2F" >点击注册</a>
+## 注册、登录百度账号
 
-登录地址：<a href="https://smartprogram.baidu.com/mappconsole/main/login">点击登录</a>
+注册地址(PC版)：<a href="https://passport.baidu.com/v2/?reg&tt=1521786256298&overseas=undefined&gid=D8D45DC-FFC4-486A-BA34-B3215E98FF74&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2F" >点击注册</a>
+
+登录地址(PC版)：<a href="https://smartprogram.baidu.com/mappconsole/main/login">点击登录</a>
  - 使用百度App扫码登录
  - 手机短信验证登录
  - 百度账号密码登录
 
-![图片](../../img/introduction/register/register-01.png)
+![图片](../../img/introduction/enter/p1.png)
 
 ### 选择主体类型
 <!-- 主体类型：个人、媒体、企业、政府、其他组织五种主体类型。
@@ -53,7 +52,7 @@ sidebar: register
 ### 超级管理员信息登记
 
 
-登记管理员身份证姓名、身份证号码并验证手机号。（超级管理员不支持更换）
+登记超级管理员身份证姓名、身份证号码并验证手机号。（超级管理员不支持更换）
 ![图片](../../img/introduction/register/register-03.png)
 
 ### 确认主体信息
@@ -74,59 +73,12 @@ sidebar: register
 对公打款：填写企业对公银行开户信息 → 等待系统向该账户打款 → 查询款项到账情况（预计需要1-2个工作日）→ 在验证页面填写收款金额 → 等待验证结果。
 
 ![图片](../../img/introduction/register/register-07.png)
-## 智能小程序信息完善
-<div></div>
-### 完善智能小程序基本信息
 
+### 获取用户手机号权限申请
 
-注册审核通过后，点击“创建智能小程序”完善智能小程序基本信息（填写智能小程序名称、简介，上传头像并选择服务范围）。如果选择为特殊行业，还需根据界面提示提交相应资质。
-![图片](../../img/introduction/register/register-08.png)
+审核过后，可通过如下操作获取用户手机号权限：
+1、在页面左侧导航栏，单击“设置-开发设置”；
+2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
+3、在弹出的页面填写如下信息，点击提交。
 
-
-## 开发前准备
-<div></div>
-### 智能小程序项目成员管理
-
-
-登录智能小程序平台，进入平台首页- 成员管理，添加智能小程序项目成员并配置成员权限，一个智能小程序只能添加一名管理员。
-![图片](../../img/introduction/register/register-09.png)
-
-### 小程序项目成员数量：
-<!-- <p>**·** 小程序未通过高级认证时，管理员可绑定项目成员30人；<p>**·**  小程序通过高级认证尚未发布时，管理员最多可绑定项目成员60人；<p>**·** 小程序已发布时，管理员最多可绑定项目成员90人。 -->
-|小程序状态|管理员可绑定项目成员数量|
-|----|----|
-|未通过高级认证|30人|
-|通过高级认证尚未发布|60人|
-|已发布|90人|
-<!-- |个人 | 未认证、未发布 |已认证、未发布 |已认证、已发布|
-|---|---|---|---|
-|15 | 30| 60 | 90| -->
-<!-- | 未认证未发布 |已认证未发布 |已认证已发布|
-|----|----|----|
-| 30人| 60人 | 90人| -->
-
-### 修改服务范围
-
-进入“平台首页-设置-基础设置-服务范围-修改”，点击后选择对应的行业，根据提示上传所需行业资质即可。
-
-![图片](../../img/introduction/server-range.png)
-
-### 获取AppID
-
-进入“平台首页-设置”，获取AppID（智能小程序ID）、App Key、App Secret（智能小程序密钥）。
-![图片](../../img/introduction/register/register-10.png)
-
-### 开发工具
-
-下载开发者工具（[Windows 64版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online)  |   [Mac版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
-![图片](../../img/introduction/register/register-11.png)
-
-### 配置服务器
-
-
-在开发设置页面查看AppID和AppSecret，配置服务器域名。
-![图片](../../img/introduction/register/register-13.png)
-### 版本发布
-
-需先提交代码，然后提交审核，审核（预计5个工作日左右）通过后可发布。
-![图片](../../img/introduction/register/register-12.png)
+![图片](../../img/introduction/register/register-14.png)

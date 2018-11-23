@@ -1,5 +1,5 @@
 ---
-title: 震动
+title: 振动
 header: develop
 nav: api
 sidebar: device_vibrate
@@ -8,8 +8,8 @@ sidebar: device_vibrate
 
 vibrateLong
 ---
-**解释：**使手机发生较长时间的振动（400ms）
-**参数：**Object
+**解释：** 使手机发生较长时间的振动（400ms）
+**参数：** Object
 
 **Object参数说明：**
 

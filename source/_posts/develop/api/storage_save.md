@@ -23,7 +23,7 @@ setStorage
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.setStorage({
     key: 'key',
@@ -67,7 +67,7 @@ getStorage
 |参数 | 类型 | 必填 | 说明|
 |---- | ---- | ---- | ---- |
 |key |String | 是 |  本地缓存中的指定的 key|
-|success |Function   | 是  | 接口调用成功的回调函数，res = {data: key对应的内容}|
+|success |Function   | 是  | 接口调用成功的回调函数，res = {data: key对应的内容}。|
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -78,7 +78,7 @@ getStorage
 |data   | String | key 对应的内容|
 
 **示例：**
-
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.getStorage({
     key: 'key',
@@ -126,7 +126,7 @@ getStorageInfo
 
 |参数 | 类型 | 必填 | 说明|
 |---- | ---- | ---- | ---- |
-|success |Function |   是  | 接口调用成功的回调函数，详见返回参数说明|
+|success |Function |   是  | 接口调用成功的回调函数，详见返回参数说明。|
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -135,9 +135,9 @@ getStorageInfo
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|keys  |  String Array |   当前 storage 中所有的 key|
-|currentSize | Number | 当前占用的空间大小, 单位 kB|
-|limitSize |  Number |  限制的空间大小，单位 kB|  
+|keys  |  String Array |   当前 storage 中所有的 key。|
+|currentSize | Number | 当前占用的空间大小, 单位 kB。|
+|limitSize |  Number |  限制的空间大小，单位 kB。|  
 
 
 **示例：**

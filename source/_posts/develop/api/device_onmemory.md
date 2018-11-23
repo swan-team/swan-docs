@@ -15,7 +15,7 @@ onMemoryWarning
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
-|level |Number |仅 Android 有该字段，对应系统内存告警等级宏定义|
+|level |Number |仅 Android 有该字段，对应系统内存告警等级宏定义。|
 
 Android下告警等级对应系统宏：
 
@@ -24,7 +24,7 @@ TRIM_MEMORY_RUNNING_MODERATE = 5
 TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
-****示例：****
+**示例：**
 
 ```js
 swan.onMemoryWarning(function (res) {

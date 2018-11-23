@@ -81,9 +81,92 @@ createCanvasContext
 
 **解释：**在 Page 中，推荐使用`this.createCanvasContext(canvasId)`，进行绘图上下文的创建。
 
-**Tips：**
+**说明：**
 
 也可使用`swan.createCanvasContext(canvasId)`，但使用`swan.createCanvasContext(canvasId)`进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。
+
+canvasGetImageData
+-----
+
+**解释：**返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件组件实例 this，以操作组件内 `<canvas>` 组件。
+
+**参数：** Object
+
+**Object 参数：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|canvasId	| String | 是  | 画布标识，传入 `<canvas>` 组件的 canvas-id 属性。|
+|x	| Number | 是  | 将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  | 将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  | 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  | 将要被提取的图像数据矩形区域的高度 |
+|success	| Function | 否  | 接口调用成功的回调函数 |
+|fail	| Function | 否  | 接口调用失败的回调函数 |
+|complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**success返回参数说明：**
+
+|参数  |类型|说明 |
+|---- | ---- |---- |
+|width|number|图像数据矩形的宽度|
+|height|number|图像数据矩形的高度|
+|data|Uint8ClampedArray|图像像素点数据，一维数组，每四项表示一个像素点的rgba|
+
+OBJECT this
+自定义组件实例
+
+**示例：**
+
+```js
+swan.canvasGetImageData({
+    canvasId: 'myCanvas',
+    x: 0,
+    y: 0,
+    width: 100,
+    height: 100,
+    success(res) {
+        console.log(res);
+    }
+});
+```
+
+canvasPutImageData
+-----
+
+**解释：**将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。
+
+**参数：** Object
+
+**Object 参数：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|canvasId	| String | 是  | 画布标识，传入 `<canvas> `组件的 canvas-id 属性。|
+|x	| Number | 是  | 将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  | 将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  | 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  | 将要被提取的图像数据矩形区域的高度 |
+|data	| Uint8ClampedArray | 是  | 图像像素点数据，一维数组，每四项表示一个像素点的 rgba |
+|success	| Function | 否  | 接口调用成功的回调函数 |
+|fail	| Function | 否  | 接口调用失败的回调函数 |
+|complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例：**
+
+```js
+const data = new Uint8ClampedArray([255, 0, 0, 1]);
+swan.canvasPutImageData({
+    canvasId: 'myCanvas',
+    x: 0,
+    y: 0,
+    width: 1,
+    data: data,
+    success(res) {
+        console.log('success');
+    }
+});
+```
 
 canvasToTempFilePath(OBJECT, this)
 -----
@@ -101,13 +184,13 @@ canvasToTempFilePath(OBJECT, this)
 |destWidth	| Number | 否  | 输出图片宽度（默认为 width * 屏幕像素密度）|
 |destHeight	| Number | 否  | 输出图片高度（默认为 height * 屏幕像素密度）|
 |canvasId	| String | 是  | 画布标识，传入`<canvas/>`的 canvas-id|
-|fileType	| String | 否  | 目标文件的类型，只支持 'jpg' 或 'png'。默认为 'png' |
-|quality	| Number | 否  | 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 |
+|fileType	| String | 否  | 目标文件的类型，只支持 'jpg' 或 'png'，默认为 'png' 。|
+|quality	| Number | 否  | 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 。|
 |success	| Function | 否  | 接口调用成功的回调函数 |
 |fail	| Function | 否  | 接口调用失败的回调函数 |
 |complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**Tips：**
+**说明：**
 
 在 draw 回调里调用该方法才能保证图片导出成功。
 
@@ -179,12 +262,12 @@ canvasContext.setShadow
 
 **参数：**
 
-|参数名 |类型  | 范围 |说明|
+|参数名 |类型  | 必填 |说明|
 |---- | ---- | ---- |---- |
-| offsetX | Number | | 阴影相对于形状在水平方向的偏移 |
-| offsetY | Number | | 阴影相对于形状在竖直方向的偏移 |
-| blur | Number | 0 ~ 100 | 阴影的模糊级别，数值越大越模糊 |
-| color	| Color | | 阴影的颜色 |
+| offsetX | Number | 是| 阴影相对于形状在水平方向的偏移 |
+| offsetY | Number |是 | 阴影相对于形状在竖直方向的偏移 |
+| blur | Number | 是 | 阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
+| color	| Color | 是| 阴影的颜色 |
 
 **示例：**
 
@@ -205,12 +288,12 @@ canvasContext.createLinearGradient
 
 **参数：**
 
-|参数名 |类型  |说明|
-|---- | ---- | ---- |
-| x0 | Number | 起点的 x 坐标 |
-| y0 | Number | 起点的 y 坐标 |
-| x1 | Number | 阴影的模糊级别，数值越大越模糊 |
-| y1 | Number | 阴影的颜色 |
+|参数名 |类型  |必填|说明|
+|---- | ---- | ---|---- |
+| x0 | Number | 是|起点的 x 坐标 |
+| y0 | Number | 是|起点的 y 坐标 |
+| x1 | Number | 是|阴影的模糊级别，数值越大越模糊 |
+| y1 | Number | 是|阴影的颜色 |
 
 **示例：**
 
@@ -296,8 +379,8 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/addColorStop.png)
 
-**Bug & Tip**
-1、addColorStop 目前在 Android 有bug。
+**说明：**
+addColorStop 目前在 Android 有bug。
 
 canvasContext.setLineWidth
 -----
@@ -397,7 +480,7 @@ canvasContext.setLineJoin
 
 |参数名 |类型 | 范围 | 说明 |
 |---- | ---- | ---- | ---- |
-|lineJoin|String|'bevel'、'round'、'miter'| 线条的结束交点样式 |
+|lineJoin|String|'bevel'、'round'、'miter'| 线条的结束交点样式。 |
 
 **示例：**
 
@@ -447,7 +530,7 @@ canvasContext.setLineDash
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| pattern | Array | 一组描述交替绘制线段和间距（坐标空间单位）长度的数字 |
+| pattern | Array | 一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 |
 | offset | Number | 虚线偏移量 |
 
 **示例：**
@@ -828,7 +911,7 @@ canvasContext.rotate
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| rotate | Number | 旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360) |
+| rotate | Number | 旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)。 |
 
 **示例：**
 
@@ -877,7 +960,7 @@ ctx.draw();
 canvasContext.clip
 -----
 
-**解释：**clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 restore() 方法）。
+**解释：** clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。
 
 **示例：**
 
@@ -885,7 +968,7 @@ canvasContext.clip
 const ctx = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
-    url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
+    url: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
         ctx.save()
         ctx.beginPath()
@@ -940,7 +1023,7 @@ canvasContext.fillText
 | text | String | 在画布上输出的文本 |
 | x | Number | 绘制文本的左上角 x 坐标位置 |
 | y | Number | 绘制文本的左上角 y 坐标位置 |
-| maxWidth | Number | 需要绘制的最大宽度，可选 |
+| maxWidth | Number | 需要绘制的最大宽度（可选 ）|
 
 **示例：**
 
@@ -963,7 +1046,7 @@ canvasContext.setTextAlign
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| align | String | 可选值 'left'、'center'、'right' |
+| align | String | 可选值 'left'、'center'、'right'。 |
 
 **示例：**
 
@@ -998,7 +1081,7 @@ canvasContext.setTextBaseline
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| textBaseline | String | 可选值 'top'、'bottom'、'middle'、'normal' |
+| textBaseline | String | 可选值 'top'、'bottom'、'middle'、'normal' 。|
 
 **示例：**
 
@@ -1038,12 +1121,12 @@ canvasContext.drawImage
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
 | imageResource | String | 所要绘制的图片资源 |
-| dx | Number | 图像的左上角在目标 canvas 上 X 轴的位置 |
-| dy | Number | 图像的左上角在目标 canvas 上 Y 轴的位置 |
-| dWidth | Number | 在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放 |
-| dHeight | Number | 在目标画布上绘制图像的高度，允许对绘制的图像进行缩放 |
-| sx | Number | 源图像的矩形选择框的左上角 X 坐标 |
-| sy | Number | 源图像的矩形选择框的左上角 Y 坐标 |
+| dx | Number | 图像的左上角在目标 canvas 上 X 轴的位置。 |
+| dy | Number | 图像的左上角在目标 canvas 上 Y 轴的位置 。|
+| dWidth | Number | 在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放 。|
+| dHeight | Number | 在目标画布上绘制图像的高度，允许对绘制的图像进行缩放 。|
+| sx | Number | 源图像的矩形选择框的左上角 X 坐标。 |
+| sy | Number | 源图像的矩形选择框的左上角 Y 坐标。 |
 | sWidth | Number | 源图像的矩形选择框的宽度 |
 | sHeight | Number | 源图像的矩形选择框的高度 |
 
@@ -1070,7 +1153,7 @@ canvasContext.setGlobalAlpha
 
 | 参数名 | 类型 | 范围 | 说明 |
 |---- | ---- | ---- | ---- |
-| alpha | Number | 0~1 | 透明度，0 表示完全透明，1 表示完全不透明 |
+| alpha | Number | 0~1 | 透明度，0 表示完全透明，1 表示完全不透明。 |
 
 **示例：**
 
@@ -1132,7 +1215,7 @@ canvasContext.arcTo
 | y2 | Number | 第二个控制点的 y 轴坐标 |
 | radius | Number | 圆弧的半径 |
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.arcTo(x1, y1, x2, y2, radius);
@@ -1150,9 +1233,9 @@ canvasContext.strokeText
 | text | String | 要绘制的文本 |
 | x | Number | 文本起始点的 x 轴坐标 |
 | y | Number | 文本起始点的 y 轴坐标 |
-| maxWidth | Number | 需要绘制的最大宽度，可选 |
+| maxWidth | Number | 需要绘制的最大宽度，可选。 |
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.strokeText(text, x, y, maxWidth);
@@ -1167,9 +1250,9 @@ canvasContext.setLineDashOffset
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| value | Number | 偏移量，初始值为 0 |
+| value | Number | 偏移量，初始值为 0 。|
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.setLineDashOffset = value;
@@ -1184,10 +1267,10 @@ canvasContext.createPattern
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| image | String | 重复的图像源，仅支持包内路径和临时路径 |
-| repetition | String | 指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat |
+| image | String | 重复的图像源，仅支持包内路径和临时路径 。|
+| repetition | String | 指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat。 |
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.createPattern(image, repetition);
@@ -1320,16 +1403,16 @@ canvasContext.draw
 
 **解释：**将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
 
-**参数：**
+<!-- **参数：**
 <!--
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
 |reserve|Boolean|非必填。本次绘制是否接着上一次绘制，即 reserve 参数为 false，则在本次调用 drawCanvas 绘制之前 native 层应先清空画布再继续绘制；若 reserver 参数为 true，则保留当前画布上的内容，本次调用 drawCanvas 绘制的内容覆盖在上面，默认 false
 |callback|Function|绘制完成后回调 -->
 
-| 参数名 | 类型 | 说明 |
+<!-- | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-|callback|Function|绘制完成后回调
+|callback|Function|绘制完成后回调| --> 
 
 **示例：**
 
@@ -1353,18 +1436,18 @@ canvasContext.font
 
 | 属性值 | 类型 | 说明 |
 |---- | ---- | ---- |
-| value | String | 符合 CSS font 语法的 DOMString 字符串，至少需要提供字体大小和字体族名。默认值为 10px sans-serif |
+| value | String | 符合 CSS font 示例的 DOMString 字符串，至少需要提供字体大小和字体族名，默认值为 10px sans-serif 。|
 
 **value 支持的属性有：**
 
 | 属性 | 说明 |
 |---- | ---- |
-| style | 字体样式。仅支持 italic, oblique, normal |
-| weight | 字体粗细。仅支持 normal, bold |
+| style | 字体样式，仅支持 italic, oblique, normal。 |
+| weight | 字体粗细，仅支持 normal, bold。 |
 | size | 字体大小 |
-| family | 字体族名。注意确认各平台所支持的字体 |
+| family | 字体族名，注意确认各平台所支持的字体 。|
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.font = value;
@@ -1386,7 +1469,7 @@ canvasContext.setTransform
 | translateX | Number | 水平移动 |
 | translateY | Number | 垂直移动 |
 
-**语法：**
+**示例：**
 
 ```js
 canvasContext.setTransform(scaleX, skewX, skewY, scaleY, translateX, translateY);

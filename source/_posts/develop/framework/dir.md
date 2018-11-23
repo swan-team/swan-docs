@@ -42,6 +42,7 @@ sidebar: dir
 |.css|否|当前页面的样式文件|
 |.json|否|当前页面的标题显示|
 
-<notice>Tips: </notice>请务必将 pages 文件夹下的文件，命名为与当前目录相同的名字。
+**说明**:
+请务必将 pages 文件夹下的文件，命名为与当前目录相同的名字。
 
 如： /pages/detail  下的 CSS 文件，请命名为 detail.css 。 JS 文件，请命名为 detail.js 。

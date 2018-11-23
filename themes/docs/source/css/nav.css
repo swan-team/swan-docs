@@ -35,6 +35,6 @@ nav a {
 nav a:hover {
     color: #91bfff;
 }
-nav .m-doc-nav-selected {
+nav .m-doc-nav-on {
     color: #3388FF;
 }

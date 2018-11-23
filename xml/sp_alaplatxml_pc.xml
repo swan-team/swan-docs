@@ -8,7 +8,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -22,7 +22,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->
@@ -196,7 +196,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -210,7 +210,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->
@@ -290,7 +290,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -304,7 +304,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->
@@ -384,7 +384,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -398,7 +398,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->
@@ -478,7 +478,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -492,7 +492,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->
@@ -572,7 +572,7 @@
 		<!-- key，key关键词，目前一个key标签中只支持输入一个关键词，不支持罗列关键词。当用户在百度检索此关键词时，即可检索到，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符	最大长度76个字符 -->
 		<display>
 		<!-- display，display表示盖关键词要显示的搜索结果信息，包含以下的url、title等标签。display标签中的文本长度上限为2，最少出现1次 最多出现1次 -->
-			<url>http://smartprogram.baidu.com</url>
+			<url>http://smartprogram.baidu.com/mappconsole/main/login</url>
 			<!-- url，资源的链接地址，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度256个字符	必须符合正则表达式(https?://)(.+) -->
 			<title>百度智能小程序-技术助力、流量加持、AI赋能、生态开放</title>
 			<!-- title: 阿拉丁标题，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
@@ -586,7 +586,7 @@
 			<!-- loggedin: 登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
 			<txt_login>登录/注册</txt_login>
 			<!-- txt_login: 未登录文案，，最少出现1次 最多出现1次，类型为字符串，最小长度1个字符 -->
-			<loginurl>https://smartprogram.baidu.com/mappconsole/main/login</loginurl>
+			<loginurl>https://smartprogram.baidu.com</loginurl>
 			<!-- loginurl: 登录的跳转url，，最少出现1次 最多出现1次，类型为URL地址，最小长度1个字符	最大长度512个字符 -->
 			<button>
 			<!-- button: 按钮，，最少出现1次 最多出现3次 -->

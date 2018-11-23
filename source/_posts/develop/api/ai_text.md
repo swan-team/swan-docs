@@ -5,8 +5,8 @@ nav: api
 sidebar: ai_text
 ---
 
-textReview
----
+## textReview
+
 **解释：**运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。
 
 **方法参数：**Object
@@ -15,10 +15,10 @@ textReview
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|content | String | 是  | | 待审核文本，UTF-8，不可为空，不超过20000字节。 |
-|success |Function    |否 ||      接口调用成功的回调函数|
-|fail |   Function|    否  ||     接口调用失败的回调函数|
-|complete  |  Function  |  否   ||    接口调用结束的回调函数（调用成功、失败都会执行）|
+|content | String | 是  | -| 待审核文本，UTF-8，不可为空，不超过20000字节。 |
+|success |Function    |否 |-|      接口调用成功的回调函数|
+|fail |   Function|    否  |-|     接口调用失败的回调函数|
+|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明：**
 
@@ -37,7 +37,7 @@ textReview
 |pass |  Array  | 审核通过的类别列表与详情 |
 |+label | Number | 请求中的违禁类型 |
 |+score | Number | 违禁检测分，范围 0~1，数值从低到高代表风险程度的高低 。|
-|+hit | Array | 违禁类型对应命中的违禁词集合，可能为空 |
+|+hit | Array | 违禁类型对应命中的违禁词集合，可能为空 。|
 
 **违禁labels类型说明：**
 

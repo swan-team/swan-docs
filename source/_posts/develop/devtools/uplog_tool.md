@@ -4,10 +4,41 @@ header: develop
 nav: devtools
 sidebar: uplog_tool
 ---
+
+1.14版本更新日志
+---
+|版本号|更新内容|
+|----|----|
+|v1.14.10|** Change ** <p> 支持2.5.x、2.10.x版本的基础库。 <p> ** BugFix ** <p> 修复Image组件不支持绝对路径的问题。
+|v1.14.8|** New ** <p> **·** 新增组件：live-player；<p> **·** 新增api：createLivePlayerContext。<p> ** BugFix ** <p> 修复previewImage无法切换图片的问题。
+|v1.14.7|** BugFix ** <p> 修复新建项目时清空文件夹的问题。
+|v1.14.6|** BugFix ** <p> 修复cover-image组件不支持本地图片地址问题；|
+|v1.14.5|** BugFix ** <p> 修复部分ios机型无法预览的的问题；|
+|v1.14.4|** BugFix ** <p>**·** 修复getExtConfig返回值异常问题；<p>**·** 修复input组件存在自定义id时无法输入的问题；<p>**·** 修复canvas组件drawImage异常的问题。|
+|v1.14.3|** New ** <p> showToast支持自定义图片;<p>** BugFix ** <p> **·** 修复swan.authorize失败时返回错误码与真机不一致的问题；<p> **·** 修复button的open-type为opensetting、getuserinfo、getphonenumber时，不执行回调的问题；<p> **·** 修复swan.request的响应头信息中set-cookie丢失问题；<p> **·** 修复canvasToTempFilePath不执行回调的问题；<p> **·** 修复swan.openSetting关闭后不回调onShow的问题。|
+|v1.14.2|** BugFix ** <p> **·** 修复input组件value无法动态修改的问题；<p> **·** 修复chooseVideo偶尔直接失败的问题；<p> **·** 修复onShareAppMessage接口complete会执行2次的问题；<p> **·** 修复stopAccelerometer、stopCompass不执行回调的问题。|
+|v1.14.0|** New **<p> 支持2.0.0以上版本的基础库。<p>**BugFix**<p> 修复发布体验版本偶现无法正常打开的问题。|
+
+1.13版本更新日志
+---
+|版本号|更新内容|
+|----|----|
+|v1.13.5|** New ** <p>**·**新增场景值模拟;<p>**·**新增代码片段;<p>**·**新增api：isLoginSync。<p>** BugFix ** <p> **·** 修复cover-view绑定事件不响应的问题；<p>**·**修复cover-view绑定事件不影响的问题；<p>**·** 修复storage存储带特殊符号「.%」时表现异常的问题。|
+|v1.13.4|** BugFix ** <p> **·** 修复getStorage返回值编码错误的问题；<p> **·** 修复uploadFile、downloadFile缺少header导致出错的问题；<p> **·** 修复request在content-type有多个值的情况下可能会失败的问题；<p> **·** 修复input placeholder不显示的问题。|
+|v1.13.3|** Change **<p> 优化预览、发布过程中的提示信息。|
+|v1.13.2|** Change** <p> **·** 优化map组件可进行放大缩小；<p> **·** 优化web-view组件bindmessage事件兼容到基础库1.13.x版本。<p> ** BugFix ** <p> **·** 修复getStorageSync返回值类型错误的问题；<p> **·** 修复input组件bindfocus、bindconfirm事件不回调的问题；<p> **·** 修复map组件bindcontroltap、bindmarkertap事件对象中id错误的问题；<p> **·** 修复textarea组件placeholder不显示的问题。|
+|v1.13.1|** New **<p> 支持1.13.0以上版本的基础库。|
+
+
+
 1.12版本更新日志
 ---
 |版本号|更新内容|
 |----|----|
+|v1.12.4|** BugFix **<p> 修复 getStorage 和 storage 面板中值被错误编码的问题。|
+|v1.12.3 | ** Change** <p> **·** 优化form表单组件：report-submit为true时，bindsumbit方法可获取formId;   <p> **·** 优化api接口参数校验; <p> **·** 优化编辑器tab操作。|
+|v1.12.2 | ** New**<p> **·** 支持组件：map； <p> **·** 支持API：createMapContext/chooseLocation/openLocation/chooseAddress/chooseInvoiceTitle； <p> **BugFix**<p> 修复textarea无法通过class修改高度的问题。|
+|v1.12.1 | ** New**<p>   增加编辑器功能。|
 |v1.12.0|**New**<p>**·** 工具可同时打开多个项目窗口；<p>**·** 增加AI能力api（包括 ocrIdCard, ocrBankCard, ocrDrivingLicense, ocrVehicleLicense, textReview, textToAudio, imageAudit, advancedGeneralIdentify, objectDetectIdentify, carClassify, dishClassify, logoClassify, animalClassify, plantClassify）。<p>**BugFix**<p>修复webview组件无法销毁和隐藏的问题。|
 
 1.11版本更新日志

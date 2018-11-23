@@ -23,10 +23,10 @@ getNetworkType
 
 |参数  |说明 |
 |---- | ---- |
-|networkType |网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)|
+|networkType |网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
 
-****示例：****
-
+**示例：**
+<a href="swanide://fragment/2abeffe47247755d92a8f045e661de541540397300" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.getNetworkType({
     success: function (res) {
@@ -37,7 +37,7 @@ swan.getNetworkType({
 
 onNetworkStatusChange
 ---
-**解释：**监听网络状态变化
+**解释：**监听网络状态变化。
 
 **参数：**CALLBACK
 
@@ -59,8 +59,8 @@ onNetworkStatusChange
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
 
-****示例：****
-
+**示例：**
+<a href="swanide://fragment/ff24bd28faca464062508047044cd1ca1540397640" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.onNetworkStatusChange(function (res) {
     console.log(res.isConnected);

@@ -106,16 +106,15 @@ setTabBarStyle
 
 **Object 参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- |---- |---- |
-|color |HexColor | 是 |tab 上的文字默认颜色|
-|selectedColor |HexColor | 是 | tab 上的文字选中时的颜色|
-|backgroundColor |HexColor | 是 | tab 的背景色|
-|borderStyle |String | 是 | tabbar上边框的颜色， 仅支持 black/white|
-|success| Function |   否 |  接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
+|参数名 |类型  |是否必填|说明|
+|---- | ---- |---- |----|
+|color |HexColor | 否|tab 上的文字默认颜色|
+|selectedColor |HexColor | 否|tab 上的文字选中时的颜色|
+|backgroundColor |HexColor | 否| tab 的背景色|
+|borderStyle |String |否 | tabbar上边框的颜色， 仅支持 black/white|
+|success| Function | 否 |  接口调用成功的回调函数|
+|fail   | Function  | 否 |接口调用失败的回调函数|
+|complete  |  Function  |  否|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -138,10 +137,10 @@ setTabBarItem
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
-|index |Number  |是| tabBar的哪一项，从左边算起|
-|text |String  |是| tab 上按钮文字|
-|iconPath |String |是| 图片绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片|
-|selectedIconPath |String |是| 选中时的图片的绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px ，当`position`为 top 时，此参数无效|
+|index |Number  |是| tabBar的哪一项，从左边算起。|
+|text |String  |否| tab 上按钮文字|
+|iconPath |String |否| 图片绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px，当 position 为 top 时，此参数无效，不支持网络图片。|
+|selectedIconPath |String |否| 选中时的图片的绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px ，当`position`为 top 时，此参数无效。|
 |success| Function |   否 |  接口调用成功的回调函数|
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -170,6 +169,7 @@ showTabBar
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
+|animation | Boolean | 否 | 是否需要动画效果，默认无。|
 |success| Function |   否 |  接口调用成功的回调函数|
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -199,6 +199,7 @@ hideTabBar
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
+|animation | Boolean | 否 | 是否需要动画效果，默认无。|
 |success| Function |   否 |  接口调用成功的回调函数|
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|

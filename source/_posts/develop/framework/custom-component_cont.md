@@ -9,8 +9,8 @@ sidebar: custom-component_cont
 ### 组件间通信
 
 组件间的基本通信方式有以下几种：
-1. 父组件可以通过设置子组件的properties来设置数据。
-2. 子组件可以使用dispatch方法，父组件中定义messages，对于dispatch方法进行拦截，从而达到子组件向上通讯。
+- 父组件可以通过设置子组件的properties来设置数据。
+- 子组件可以使用dispatch方法，父组件中定义messages，对于dispatch方法进行拦截，从而达到子组件向上通讯。
 
 ### 监听事件
 <div class="notice">解释： </div>
@@ -49,17 +49,13 @@ Component({
 });
 ```
 
-```js
-Page({
-    onMyEvent: function (e) {}
-})
-```
+
 
 ### 触发事件
 <div class="notice">解释： </div>
 自定义组件触发事件时，需要使用 triggerEvent 方法，指定事件名和detail对象：
 ```xml
-<button bindtap="triggerEvent">点击这个按钮将触发 myevent 事件</button>
+<button bindtap="onTap">点击这个按钮将触发 myevent 事件</button>
 ```
 
 ```js
@@ -72,4 +68,9 @@ Component({
         }
     }
 });
+```
+```js
+Page({
+    onMyEvent: function (e) {}
+})
 ```

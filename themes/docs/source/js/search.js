@@ -26,8 +26,8 @@ function searchFunc(path, searchId, contentId) {
                     $('#top-search-box').removeClass('top-search-box-focus');
                    return; 
                 }
-                $input.focus();
                 $(this).addClass('top-search-box-focus');
+                $input.focus();
             });
 
             $($input).on('blur', function () {
@@ -42,7 +42,15 @@ function searchFunc(path, searchId, contentId) {
             $input.addEventListener('compositionend', function () {
                 flag = true;
             });
-
+            //阻止回车刷新页面
+            $input.addEventListener('keydown', function(e){
+                var e = e || event;
+                if (e.keyCode === 13) {
+                    e.returnValue = false; 
+                    e.preventDefault();
+                }
+            })
+           
             $input.addEventListener('input', function () {
                 var $this = this;
                 setTimeout(function () {
@@ -96,7 +104,7 @@ function searchFunc(path, searchId, contentId) {
                         }
                         if (isMatch) {
                             matchCount++;
-                            str += '<li><h3><a href="' + data_url + '" class="search-result-title">' + data_title + '</a></h3>';
+                            str += '<li><h3><a target = "_blank" href="' + data_url + '" class="search-result-title">' + data_title + '</a></h3>';
                             var content = data.content.trim().replace(/<[^>]+>/g, '');
                             if (first_occur >= 0) {
                                 // cut out 100 characters

@@ -32,11 +32,29 @@
                 }
             ]
         },
+        scheme: 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0',
         screenWidth: win.innerWidth,
         init: function () {
             this.mobileAddEvent();
             this.initAnimation();
-            this.pcAddEvent();
+            this.pcAddEvent();            
+        },
+        caseInvoke: function(scheme) {
+            if (isPc()) {
+                return;
+            }
+            if (isBox()) {
+                // 手百
+                isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
+            } else {
+                // 非手百
+                /*eslint-disable fecs-camelcase*/
+                var openbox = window.OpenBox({
+                    url: location.href
+                });
+                /*eslint-disable fecs-camelcase*/
+                openbox.open();
+            }
         },
         // 初始化lottie的动画
         initAnimation: function(){
@@ -100,6 +118,7 @@
         },
         //头部的移动端
         mobileAddEvent: function () {
+            var _this = this;
             $('.m-mobile-doc-level1').on('click', function () {
                 $(this).hasClass('m-mobile-level1-list-show')
                 ? $(this).removeClass('m-mobile-level1-list-show')
@@ -119,6 +138,9 @@
             $('.m-mobile-doc-header-list-mask').on('click', function (e) {
                 $('.m-mobile-doc-level1').removeClass('m-mobile-level1-list-show');
                 e.stopPropagation();
+            });
+            $(document).on('touchstart', '.m-hp-demo', function(){
+                _this.caseInvoke(_this.scheme);
             });
             if (this.screenWidth <= 768) {
                 var before = $('.m-doc-content-layout').scrollTop();

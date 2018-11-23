@@ -6,15 +6,15 @@ sidebar: device_capture
 ---
 
 
-onUserCaptureScreen
----
+## onUserCaptureScreen
+
 **解释：**监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
 **参数：**CALLBACK
 
 **CALLBACK返回参数：**
 无
 
-****示例：****
+**示例：**
 
 ```js
 swan.onUserCaptureScreen(function() {

@@ -35,7 +35,7 @@
     border: 1px solid rgba(60,118,255,0);
 }
 .m-doc-custom-download a:hover p {
-    color: #3C76FF;
+    color: #3c76ff;
 }
 .m-doc-custom-download a:link:hover {
     text-decoration: none;
@@ -101,8 +101,12 @@
 .m-doc-custom-examples .m-doc-custom-examples-title {
     border-top-width: 6px;
     border-top-style: solid;
-    padding-top: 12px;
-    margin-bottom: 7px;
+    padding-top: 10px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.m-doc-custom-examples-text {
+    font-size: 12px;
 }
 .m-doc-custom-examples .m-doc-custom-examples-correct .m-doc-custom-examples-title {
     border-bottom-color: #0AAB62;
@@ -110,7 +114,7 @@
 .m-doc-custom-examples .m-doc-custom-examples-error .m-doc-custom-examples-title {
     border-bottom-color: #DF383A;
 }
-.m-doc-custom-examples .m-doc-custom-examples-wraning .m-doc-custom-examples-title {
+.m-doc-custom-examples .m-doc-custom-examples-warning .m-doc-custom-examples-title {
     border-bottom-color: #F9A825;
 }
 .m-doc-custom-examples .m-doc-custom-examples-title {
@@ -122,7 +126,7 @@
 .m-doc-custom-examples .m-doc-custom-examples-error .m-doc-custom-examples-title {
     color: #DF383A;
 }
-.m-doc-custom-examples .m-doc-custom-examples-wraning .m-doc-custom-examples-title {
+.m-doc-custom-examples .m-doc-custom-examples-warning .m-doc-custom-examples-title {
     color: #F9A825;
 }
 @media only screen and (max-width: 768px) {

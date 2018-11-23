@@ -4,23 +4,27 @@ header: design
 nav: component
 sidebar: input
 ---
-输入表单
---------------
-<notice>由一系列文本输入框组成，用户确认后，表单提交输入结果</notice>
+## 输入表单
+输入表单由一系列文本输入框组成，支持上下垂直滚动，用户输入并确认后，表单提交输入结果。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct ">
+		<img src="../../../img/design/component/input/1.png">
+	</div>
+</div>
 
-输入表单支持上下垂直滚动
-自定义配置：输入顺序，必填与否，输入项（最多不超过5个中文字符，超出截断）
-![Alt text](../../../img/3-6-1.png)
 
-文本输入框
---------------
+## 文本输入框
+针对常用的输入场景，智能小程序提供常用文本输入框：
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct ">
+		<img src="../../../img/design/component/input/2.png">
+	</div>
+</div>
 
-针对常用的输入场景，智能小程序为其优化了文本输入框
-自定义配置：输入引导文案，最大输入字符数，是否自适应高度
-![Alt text](../../../img/3-6-2.png)
-
-键盘
---------------
-
-针对不同的文本输入框，调用适合的键盘类型。
-![Alt text](../../../img/3-6-3.png)
+## 键盘
+请为不同的文本输入框，调用适合的键盘类型：
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct ">
+		<img src="../../../img/design/component/input/3.png">
+	</div>
+</div>

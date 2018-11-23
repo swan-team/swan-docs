@@ -11,35 +11,30 @@ sidebar: net
 |API | 说明 |
 |---- | ---- |
 |<a href="https://smartprogram.baidu.com/docs/develop/api/net_request/#request">request</a>  | 发起网络请求 |
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadFile/#uploadFile">uploadFile</a>| 上传 |
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadFile/#downloadFile">downloadFile</a> |下载  |  
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#connectSocket">connectSocket</a>|创建一个 WebSocket 连接|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#onSocketOpen">onSocketOpen</a>|监听 WebSocket 连接打开事件|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#onSocketError">onSocketError</a>|监听 WebSocket 错误|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#sendSocketMessage">sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#onSocketMessage">onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#clouseSocketMessage">closeSocket</a>|关闭 WebSocket 连接。必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#onSocketClose">onSocketClose</a>|监听 WebSocket 关闭|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_webSocket/#SocketTask">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#uploadFile">uploadFile</a>| 上传 |
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#downloadFile">downloadFile</a> |下载  |  
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#connectSocket">connectSocket</a>|创建一个 WebSocket 连接|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#onSocketOpen">onSocketOpen</a>|监听 WebSocket 连接打开事件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#onSocketError">onSocketError</a>|监听 WebSocket 错误|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#sendSocketMessage">sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#onSocketMessage">onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#clouseSocketMessage">closeSocket</a>|关闭 WebSocket 连接。必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#onSocketClose">onSocketClose</a>|监听 WebSocket 关闭|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#SocketTask">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
 
 
-<!-- 网络 API 使用注意事项
---- -->
-
-
-
-
-<!-- ### 服务器域名配置
+## 网络 API 使用注意事项
+### 服务器域名配置
 
 每个智能小程序需要事先设置一个通讯域名，小程序可以跟指定的域名与进行网络通信。包括普通 HTTPS 请求（request）、上传文件（uploadFile）、下载文件（downloadFile) 和 WebSocket 通信（connectSocket）。
 ### 配置流程
 
-服务器域名请在 “智能小程序后台->设置->开发设置-><a href="https://smartprogram.baidu.com/mappconsole/main/set?appId=11182003&tabCur=1">服务器域名</a>” 中进行配置，配置时需要注意：
+服务器域名请在 “智能小程序后台->设置->开发设置-><a href="https://smartprogram.baidu.com/mappconsole/main/set?tabCur=1">服务器域名</a>” 中进行配置，配置时需要注意：
 *    域名只支持 https (request、uploadFile、downloadFile) 和 wss (socket) 协议；
 *    域名不能使用 IP 地址、localhost或端口号；
 *    域名必须经过 ICP 备案；
 *    出于安全考虑，openapi.baidu.com 不能被配置为服务器域名，相关API也不能在小程序内调用。开发者应将 App Secret 保存到自有后台服务器中，通过服务器使用App Secret获取 access_token，并调用相关 API；
-*    对于每个接口，分别可以配置最多 20 个域名。 -->
+*    对于每个接口，分别可以配置最多 20 个域名。
 
 
 <!-- 请求

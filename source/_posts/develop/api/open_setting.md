@@ -6,9 +6,9 @@ sidebar: open_setting
 ---
 openSetting
 ---
-**解释：**调起客户端智能小程序设置界面，返回用户设置的操作结果。
+**解释：** 调起客户端智能小程序设置界面，返回用户设置的操作结果。
 
-**参数：**Object
+**参数：** Object
 
 **Object参数说明：**
 
@@ -23,11 +23,11 @@ openSetting
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权|
+|authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
 
-****示例：****
-
+**示例：**
+<a href="swanide://fragment/c98e352530eff43e682256b45b50d2721540396878" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.openSetting({
     success: function (res) {
@@ -39,9 +39,9 @@ swan.openSetting({
 
 getSetting
 ---
-**解释：**获取用户的当前设置
+**解释：** 获取用户的当前设置
 
-**参数：**Object
+**参数：** Object
 **Object参数说明：**
 
 |参数名 |类型  |必填  |说明|
@@ -55,10 +55,10 @@ getSetting
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权|
+|authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
 
-****示例：****
+**示例：**
 
 ```js
 swan.getSetting({

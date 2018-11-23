@@ -1,13 +1,12 @@
 ---
-title: 开放能力
+title: 开放接口
 header: develop
 nav: component
 sidebar: open
 ---
 
-open-data
------
 
+## open-data
 
 <text><text class="notice">解释:</text>用于展示手机百度 APP 开放的数据。</text><div></div><text class="notice">属性说明:</text>
 
@@ -31,17 +30,15 @@ open-data
 <open-data type="userGender"></open-data>
 ```
 
-web-view
------
-
+## web-view
 <div class="notice">解释： </div>web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 <div></div>
 <text class="notice">属性说明:</text>
 
-| 属性名 | 类型     | 默认值  | 说明              |
-| --- | ------ | ---- | --------------- |
-| src | String |- | webview 指向网页的链接 |
-|bindmessage|EventHandler|-|网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|
+| 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
+| --- | ------ | ---- | ---- |---- |
+| src | String |- | webview 指向网页的链接 ||
+|bindmessage|EventHandler|-|网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
 <div class="notice">示例： </div>
 ```xml
@@ -50,8 +47,8 @@ web-view
 <web-view src="https://m.baidu.com"></web-view>
 ```
 
-### **相关接口 **
-<web-view/>网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
+### **相关接口1 **
+web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
 | 接口名               | 说明         | 备注  |
 | ----------------- | ---------- | --- |
@@ -59,23 +56,48 @@ web-view
 | swan.webView.navigateBack | 参数与智能小程序接口一致 | |
 | swan.webView.switchTab    | 参数与智能小程序接口一致 | |
 | swan.webView.reLaunch     | 参数与智能小程序接口一致 | |
-| swan.webView.redirectTo   | 参数与智能小程序接口一致 | `` |
-| swan.webView.getEnv   | 获取当前环境 | `` |
+| swan.webView.redirectTo   | 参数与智能小程序接口一致 | |
+| swan.webView.getEnv   | 获取当前环境 |  |
+| swan.webView.postMessage   | 向小程序发送消息 | ||
+
+> 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
 <div class="notice">示例： </div>
 ```xml
 <!-- html -->
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan.js"></script>
+
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-1.6.0.js"></script>
 ```
 
 ```javascript
 // javascript
 swan.webView.navigateTo({url: '/pages/detail/index'});
+swan.webView.postMessage({ data: 'foo' })
+swan.webView.postMessage({ data: {foo: 'bar'} })
 swan.webView.getEnv(function(res) { console.log(res.smartprogram) // true })
 ```
 
-**Tips: **
 
-1.&nbsp;<text class="notice">网页内 iframe 的域名也需要配置到域名白名单。</text>
-2.&nbsp;每个页面只能有一个`<web-view/>`，`<web-view/>`会自动铺满整个页面，并覆盖其他组件。
-3.&nbsp;网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
+### **相关接口2 **
+
+web-view 网页中支持的接口有：
+
+
+| 接口模块               | 接口说明         | 具体接口  | 备注 |
+| ----------------- | ---------- | --- |
+|设备| 拨打电话| <a href="https://smartapp.baidu.com/docs/develop/api/device_call/#makePhoneCall/">swan.makePhoneCall</a> ||
+|开放接口| 打开小程序| <a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">swan.navigateToSmartProgram</a> ||
+|开放接口| 登陆| <a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#login/">swan.login</a> ||
+|剪贴板| 设置剪贴板| <a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#setClipboardData/">swan.setClipboardData</a> ||
+|设备| 获取网络类型| <a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#getNetworkType/">swan.getNetworkType</a> ||
+|媒体| 预览图片| <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#previewImage/">swan.previewImage</a> ||
+|开放接口| 分享 | <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#openShare/">swan.openShare</a> |需传入当前要分享的小程序的appkey|
+
+
+
+
+**说明: **
+
+* 网页内 iframe 的域名也需要配置到域名白名单。
+* 每个页面只能有一个`<web-view/>`，`<web-view/>`会自动铺满整个页面，并覆盖其他组件。
+* 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。

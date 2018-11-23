@@ -198,17 +198,12 @@ Page({
 	}
 })
 ```
-<notice>Tips：</notice>
-
-1、书写 SWAN App 的逻辑层请使用 JavaScript 。
-
-2、逻辑层将数据进行更新后，会触发视图更新。
-
-3、在 app.js 中使用 App 方法、在页面 JS 中使用 Page 方法，来进行页面的逻辑管理。
-
-4、可以在 SWAN 命名空间下，使用各种 API 端能力。
-
-5、框架中不可使用 window, document 等 Web 能力。<text></text>
+**说明**:
+* 书写 SWAN App 的逻辑层请使用 JavaScript 。
+* 逻辑层将数据进行更新后，会触发视图更新。
+* 在 app.js 中使用 App 方法、在页面 JS 中使用 Page 方法，来进行页面的逻辑管理。
+* 可以在 SWAN 命名空间下，使用各种 API 端能力。
+* 框架中不可使用 window, document 等 Web 能力。<text></text>
 
 ## 页面路由
 
@@ -258,12 +253,12 @@ Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A
 |D（从转发进入）|A     | D.onUnload(), A.onLoad(), A.onShow() |
 |D（从转发进入）|B     | D.onUnload(), B.onLoad(), B.onShow() |
 
-<div class="notice">Tips：</div>
-1、navigateTo, redirectTo 只能打开非 tabBar 页面。
-2、switchTab 只能打开 tabBar 页面。
-3、reLaunch 可以打开任意页面。
-4、页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
-5、调用页面路由带的参数可以在目标页面的 onLoad 中获取。
+**说明**:
+* navigateTo, redirectTo 只能打开非 tabBar 页面。
+* switchTab 只能打开 tabBar 页面。
+* reLaunch 可以打开任意页面。
+* 页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
+* 调用页面路由带的参数可以在目标页面的 onLoad 中获取。
 
 ## Page
 

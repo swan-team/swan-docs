@@ -1,6 +1,7 @@
 {
   "name": "swan-docs",
   "version": "1.0.0",
+  "private": true,
   "description": "智能小程序文档",
   "hexo": {
     "version": "3.4.4"
@@ -9,7 +10,7 @@
     "prebuild": "npm install",
     "prestart": "npm install",
     "start": "./node_modules/.bin/hexo server",
-    "build": "./node_modules/.bin/hexo generate"
+    "build": "./node_modules/.bin/hexo clean & ./node_modules/.bin/hexo generate"
   },
   "dependencies": {
     "hexo": "3.4.4",
@@ -20,6 +21,7 @@
     "hexo-generator-tag": "^0.2.0",
     "hexo-neat": "^1.0.4",
     "hexo-renderer-ejs": "^0.3.0",
+    "hexo-renderer-less": "^0.2.0",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-server": "^0.2.0"
   },

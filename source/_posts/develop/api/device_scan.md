@@ -8,7 +8,7 @@ sidebar: device_scan
 
 scanCode
 ---
-**解释：**调起客户端扫码界面，扫码成功后返回对应的结果
+**解释：**调起客户端扫码界面，扫码成功后返回对应的结果。
 **参数：**Object
 
 **Object参数说明：**
@@ -25,8 +25,9 @@ scanCode
 |---- | ---- |
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
+|charSet|所扫码的字符集|
 
-****示例：****
+**示例：**
 
 ```js
 swan.scanCode({

@@ -8,8 +8,8 @@ sidebar: ext
 
 |API|说明|
 |----|----|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/getExtConfig/#getExtConfig">getExtConfig</a>|获取第三方平台自定义的数据字段。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/getExtConfig/#getExtConfigSync">getExtConfigSync</a>|获取第三方平台自定义的数据字段的同步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/#getExtConfig">getExtConfig</a>|获取第三方平台自定义的数据字段。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/#getExtConfigSync">getExtConfigSync</a>|获取第三方平台自定义的数据字段的同步接口。|
 
 <!-- getExtConfig
 -----

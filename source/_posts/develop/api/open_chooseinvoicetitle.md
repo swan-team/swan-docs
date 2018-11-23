@@ -6,11 +6,9 @@ sidebar: open_chooseinvoicetitle
 ---
 chooseInvoiceTitle
 ---
-**解释：**选择用户的发票抬头。
+**解释：** 选择用户的发票抬头，需要用户授权 scope.invoiceTitle。
 
-需要用户授权 scope.invoiceTitle
-
-**参数：**Object
+**参数：** Object
 
 **Object参数说明：**
 
@@ -31,7 +29,7 @@ chooseInvoiceTitle
 |telephone|   String|  手机号码|
 |bankName|    String|  银行名称|
 |bankAccount| String|  银行账号|
-|errMsg|  String|  接口调用结果|
+<!-- |errMsg|  String|  接口调用结果| -->
 
 **示例：**
 ```js

@@ -15,9 +15,9 @@ createMapContext
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
-|getCenterLocation  |  OBJECT |  获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation  |
-|moveToLocation |  无  | 将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用  |
-|translateMarker  |  OBJECT   | 平移 marker，带动画  |
+|getCenterLocation  |  OBJECT |  获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation。  |
+|moveToLocation |  无  | 将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。 |
+|translateMarker  |  OBJECT   | 平移 marker，带动画 。 |
 |includePoints |  OBJECT  | 缩放视野展示所有经纬度 |
 |getRegion  | OBJECT  | 获取当前地图的视野范围  |
 |getScale | OBJECT |  获取当前地图的缩放级别 |
@@ -26,7 +26,7 @@ createMapContext
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数 ，res = { longitude: "经度", latitude: "纬度"} |
+|success   |Function  |  否  | 接口调用成功的回调函数 ，res = { longitude: "经度", latitude: "纬度"} 。|
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -38,7 +38,7 @@ createMapContext
 |destination  |Object  |  是 |  指定marker移动到的目标点|
 |autoRotate   | Boolean   | 是 |  移动过程中是否自动旋转 marker|
 |rotate  |Number  |  是  | marker 的旋转角度 |
-|duration  |duration  |  否 |  动画持续时长，默认值1000ms，平移与旋转分别计算 |
+|duration  |Number   |  否 |  动画持续时长，默认值1000ms，平移与旋转分别计算。 |
 |fail   | Function   | 否 |  接口调用失败的回调函数|
 |animationEnd|Function|否|动画结束时回调函数|
 
@@ -46,14 +46,14 @@ createMapContext
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|points  |Array  |  是  | 要显示在可视区域内的坐标点列表，[{latitude, longitude}] |
+|points  |Array  |  是  | 要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
 |padding  |Array  |  否 |  坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
 
 **getRegion 的 OBJECT 参数列表：**
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度 |
+|success   |Function  |  否  | 接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度。 |
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -61,7 +61,7 @@ createMapContext
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数，res = {scale} |
+|success   |Function  |  否  | 接口调用成功的回调函数，res = {scale} 。|
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -70,7 +70,7 @@ createMapContext
 ```html
 <view class="wrap">
     <map id="myMap"
-        style="width: 100%"
+        style="width: 100%">
     </map>
 	<button type="primary" bindtap="getCenterLocation">获取位置</button>
 	<button type="primary" bindtap="moveToLocation">移动位置</button>
@@ -81,7 +81,7 @@ createMapContext
 ```
 
 ```js
-Pages({
+Page({
     data: {
         latitude: '40.042500',
         longitude: '116.274040',
@@ -103,6 +103,7 @@ Pages({
     translateMarker: function () {
         this.mapContext.translateMarker({
             markerId: 0,
+            rotate: 90,
             autoRotate: true,
             duration: 1000,
             destination: {

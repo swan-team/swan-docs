@@ -40,7 +40,7 @@ getSystemInfo
 |SDKVersion |客户端基础库版本 |
 
 **示例：**
-
+<a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.getSystemInfo({
     success: function (res) {
@@ -78,7 +78,7 @@ getSystemInfoSync
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
 
-****示例：****
+**示例：**
 
 ```js
 try {
@@ -96,9 +96,9 @@ try {
 ```
 canIUse
 ---
-**解释：**判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
+**解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**参数说明：**使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+**参数说明：** 使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
 
 |参数  |说明 |
 |---- | ---- |
@@ -111,7 +111,7 @@ canIUse
 |${option}  |  组件属性的可选值 |
 
 
-****示例：****
+**示例：**
 
 ```js
 

@@ -1,13 +1,14 @@
 layout: false
 ---
-<!doctype html>
-<html lang="en">
+<!Doctype html>
+<html>
 <head>
 <link rel="dns-prefetch" href="//smartprogram.baidu.com">
 <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
 <style type="text/css">html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}@media only screen and (max-width: 768px) {html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;-webkit-user-select: none;user-select:none;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color: transparent;-webkit-text-size-adjust: none;-webkit-touch-callout: none;-webkit-font-smoothing: antialiased;}}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;color:#222;font-size:14px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}</style>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="google" content="notranslate" />
 <title><% if (page.title){ %><%= page.title %> | <% } %><%= config.title %></title>
 <%- css('css/base') %>
 <%- css('css/header') %>
@@ -24,17 +25,17 @@ layout: false
         {link: '/introduction/register',
             text: '介绍',
             name: 'introduction',
-            nav: [ ] 
+            nav: []
         },
-        { link: '/develop/tutorial/index',
-            text: '开发',
-            name: 'develop',
-            nav: [  ] 
-        },
-        { link: '/design/principle',
+        { link: '/design/overview/introduction',
             text: '设计',
             name: 'design',
-            nav: [ ] 
+            nav: []
+        },
+        { link: '/develop/tutorial/codedir',
+            text: '开发',
+            name: 'develop',
+            nav: []
         },
         { link: '/operations/specification',
             text: '运营',
@@ -70,7 +71,7 @@ layout: false
             </div>
             <ul class="m-hp-list clearfix">
                 <li class ="m-hp-item">
-                    <a href="/docs/develop/tutorial/index/">
+                    <a href="/docs/develop/tutorial/codedir/">
                         <div class= "m-hp-document-icon m-hp-icon"></div>
                     </a>
                     <div class="m-hp-words">
@@ -81,8 +82,8 @@ layout: false
                             <div>
                                 在开发过程中，您需要熟悉智能小程序的结构、有哪些
                                 <a href = "/docs/develop/component/view/">组件</a> 和
-                                <a href = "/docs/develop/api/net/">API</a> 可以使用、如何使用
-                                <a href = "/docs/develop/devtools/show/">开发者工具</a>
+                                <a href = "/docs/develop/api/net_rule/">API</a> 可以使用、如何使用
+                                <a href = "/docs/develop/devtools/show_sur/">开发者工具</a>
                                 进行开发和调试等。
                                 您可以从一个 <a href="/docs/develop/tutorial/index/">简易教程</a> 开始，也可以直接浏览 <a href="/docs/develop/reference/">API和组件的聚合参考页</a>。
                             </div>
@@ -90,7 +91,7 @@ layout: false
                     </div>
                 </li>
                  <li class ="m-hp-item">
-                    <a href="/docs/design/principle/">
+                    <a href="/docs/design/overview/introduction/">
                         <div class= "m-hp-document-icon m-hp-icon"></div>
                     </a>
                     <div class="m-hp-words">
@@ -99,11 +100,11 @@ layout: false
                         </div>
                         <div class="m-hp-desc">
                             <div>良好的设计与体验是对用户的尊重。我们提供了
-                                <a href = "/docs/design/principle/">设计原则</a>、
-                                <a href = "/docs/design/specification/">设计规范</a> 以及
-                                <a href = "/docs/design/component/">框架组件</a>
+                                <a href = "/docs/design/principle/easytouse/">设计原则</a>、
+                                <a href = "/docs/design/foundation/layout/">设计规范</a> 以及
+                                <a href = "/docs/design/component/topnav/">框架组件</a>
                                 的设计指引，以及相关的
-                                <a href = "/docs/design/download/">设计资源</a>供您下载。它们可能对您在设计用户友好的智能小程序时有所帮助。
+                                <a href = "/docs/design/resource/uikit/">设计资源</a>供您下载。它们可能对您在设计用户友好的智能小程序时有所帮助。
                             </div>
                         </div>
                     </div>
@@ -131,7 +132,7 @@ layout: false
             </div>
             <ul class="m-hp-list clearfix">
                 <li class="m-hp-item">
-                    <a href="/docs/develop/devtools/uplog/">
+                    <a href="/docs/develop/devtools/show_sur/">
                         <div class="m-hp-icon">
                         </div>
                         <div class="m-hp-words">
@@ -154,7 +155,7 @@ layout: false
                     </a>
                 </li>
                 <li class="m-hp-item">
-                    <a href="/docs/design/download/">
+                    <a href="/docs/design/resource/uikit/">
                         <div class="m-hp-icon">
                         </div>
                         <div class="m-hp-words">
@@ -177,7 +178,7 @@ layout: false
                     </a>
                 </li>
                 <li class="m-hp-item">
-                    <a href="https://smartprogram.baidu.com/docs/introduction/demo/">
+                    <a href="javacript:;" class="m-hp-demo">
                         <div class="m-hp-icon">
                         </div>
                         <div class="m-hp-words">
@@ -213,7 +214,29 @@ layout: false
 
 
     <%- js('js/zepto.min') %>
+    <%- js('js/fx') %>
+    <%- js('js/lib') %>
     <%- js('js/indexInit') %>
+    <script type="text/javascript" src="//b.bdstatic.com/searchbox/icms/searchbox/js/common/openjs/shareconfig.min.js?x-bs-version=1.7"></script>
+    <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
+    <script>
+        var href = window.location.href;
+        document.addEventListener('DOMContentLoaded', function (event) {
+            shareConfig.init(
+                {
+                    iconUrl: 'https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png',
+                    iconUrlDefault: 'https://po.baidu.com/act/wechattest/test_no_config.html',
+                    debug: location.href.indexOf('share_debug=1') > 0,
+                    title: '智能小程序',
+                    content: '智能连接人与信息、人与服务、人与万物的开放生态， 依托以百度App为代表的全域流量，通过百度AI开放式赋能， 精准连接用户，无需下载安装便可享受智慧超前的使用体验',
+                    // 手百分享配置（如果使用手百分享，则必填）
+                    bdbox: {
+                        source: 'feednews' // 用于统计手百分享的来源，必填
+                    }
+                }
+            );
+        });
+    </script>
 
 </body>
 </html>

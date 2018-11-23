@@ -5,9 +5,7 @@ nav: component
 sidebar: media
 ---
 
-audio
------
-
+## audio
 **解释：**音频
 
 **属性说明：**
@@ -39,7 +37,7 @@ audio
 |4|不支持音频|
 
 **示例：**
-
+<a href="swanide://fragment/091f2015538a94ccdf2a846d46e328e41540361219" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
@@ -81,10 +79,7 @@ Page({
     }
 });
 ```
-
-image
------
-
+## image
 **解释：**图片
 
 **属性说明：**
@@ -117,11 +112,11 @@ image 组件默认宽度 300px、高度 225px。
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-**Tips：**
-1、支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+**说明**:
+支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 
 **示例：**
-
+  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="wrap">
     <view>
@@ -261,9 +256,7 @@ Page({
 
 ![图片](../../../img/image-bottom-right.png)
 
-video
------
-
+## video
 **解释：**视频
 
 **属性说明：**
@@ -278,16 +271,28 @@ video
 |loop|Boolean|false|是否循环播放|
 |muted|Boolean|false|是否静音播放|
 |objectFit|String|contain|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String| |视频封面的图片网络资源地址|
-|bindplay|EventHandle| |当开始/继续播放时触发 play 事件|
+|poster|String|- |视频封面的图片网络资源地址|
+|page-gesture|	Boolean|	false|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
+|show-progress|	Boolean|	true|	若不设置，宽度大于240时才会显示。|
+|show-fullscreen-btn|	Boolean|	true|	是否显示全屏按钮|
+|enable-progress-gesture|	Boolean	|true|	是否开启使用手势控制进度|
+|danmu-list|	Object Array|	-	|弹幕列表|	
+|danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|	
+|enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
+|show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
+|show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
 |bindpause|EventHandle| |当暂停播放时触发 pause 事件|
 |bindended|EventHandle| |当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle| |播放进度变化时触发，event.detail = {currentTime, duration} 。|
 |bindfullscreenchange|EventHandle| |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindwaiting|	EventHandle|-|		视频出现缓冲时触发|
+|binderror|	EventHandle	|-|	视频播放出错时触发|
 
 `<video />` 默认宽度 300px、高度 225px
 
 **示例：**
+<a href="swanide://fragment/471076868f10271dc5a6d67c5f9dc5eb1540396026" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 
 ```xml
 <view class="section">
@@ -344,11 +349,7 @@ Page({
     }
 });
 ```
-
-
-camera
------
-
+## camera
 **解释：**相机
 
 **属性说明：**
@@ -360,11 +361,10 @@ camera
 |bindstop|EventHandle||摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle||用户不允许使用摄像头时触发|
 
-**<div class="notice">Tips: </div>**
-
-1.&nbsp;camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
-2.&nbsp;同一页面只能插入一个 camera 组件。
-3.&nbsp;请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
+**说明**:
+* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
+* 同一页面只能插入一个 camera 组件。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 
 **示例：**
 
@@ -393,11 +393,13 @@ Page({
     }
 })
 ```
-
-live-player
------
-
+## live-player
 **解释：**实时视频播放
+> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+
+|一级类目|二级类目|
+|--|--|
+|娱乐|直播、直播答题|
 
 **属性说明：**
 
@@ -416,9 +418,9 @@ live-player
 |bindnetstatus|EventHandle| -|网络状态通知，detail = {info}|
 |bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
 
-<div class="notice">Tips: </div><text></text>
-1、live-player 默认宽度 300px、高度 225px；
-2、从基础库版本1.12.0开始支持事件捕获、冒泡。
+**说明**:
+* live-player 默认宽度 300px、高度 225px；
+* 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 **状态码**
 
@@ -462,6 +464,9 @@ live-player
 |videoHeight|视频画面的高度|
 
 **示例：**
+
+<a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
 ```css
 .wrap {
     position: relative;
@@ -515,15 +520,15 @@ Page({
         backgroundMute: false
     },
     onReady(e) {
-        this.ctx = window.swan.createLivePlayerContext('myLive');
+        this.ctx = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
-            window.swan.showToast({
+            swan.showToast({
             title: '播放状态变化 statechange' + JSON.stringify(e)
         });
     },
     netstatus(e) {
-        window.swan.showToast({
+        swan.showToast({
             title: '网络状态变化 netstatus' + JSON.stringify(e)
         });
     },
@@ -550,7 +555,7 @@ Page({
         this.setData('backgroundMute', !this.getData('backgroundMute'));
     },
     oneItemClick(e) {
-        window.swan.navigateTo({
+        swan.navigateTo({
             url: 'pages/live-player-new/live-player-new'
         });
     }

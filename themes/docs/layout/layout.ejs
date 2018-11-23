@@ -3,9 +3,8 @@
     var header = site.data.nav; // 1级(头部)导航
     var headerIndex; // 当前header索引
     var nav; // 2级（sidebar）导航
-    var navIndex; // 当前siderbar索引
+    var currentPageList = [];
     var h1; // 正文h1
-    var parentH1;
     var bottomPage = {}; // 底部跳转
     var localData = {}; // 页面siderbar数据
 
@@ -15,66 +14,45 @@
             headerIndex = i;
         }
     }
-    var handleSideBarData = function (sidebar, parentTit, parentBar, parentNextBar){
 
-        for (var a = 0; a < sidebar.length; a++) {
-
-            var curSidebar = sidebar[a];
-            var beforeSidebar = sidebar[a - 1];
-            var nextSidebar = sidebar[a + 1];
-
-            //3级导航处理
-            if (curSidebar.name == page.sidebar) {
-
-                // 1.灌入article组件的h1数据
-                h1 = curSidebar.text;
-                parentH1 = parentTit;
-                if (a > 0) {
-                    bottomPage.left = beforeSidebar;
-                }
-                
-                // 2.灌入article组件的bottomPage数据
-                if (a < sidebar.length - 1) {
-                    bottomPage.right = nextSidebar;
-                }   
-
-                if (curSidebar.sidebar){
-                    bottomPage.right = curSidebar.sidebar[0];
-                }
-                if (parentBar){
-                    if (!a){
-                        bottomPage.left = parentBar;
-                    }
-                    if (a === (sidebar.length - 1)){
-                        bottomPage.right = parentNextBar;
-                    }
-                }
-            }
-
-            if (curSidebar.sidebar){
-                // 3.下一级递归
-                handleSideBarData(curSidebar.sidebar, curSidebar.text, curSidebar, nextSidebar);
-            }
-        }
-    }
     for (var j = 0; j < nav.length; j++) {
-        if (nav[j].name == page.nav) {
-            navIndex = j;
-            handleSideBarData(nav[j].sidebar, nav[j].text);
+        var h1List = nav[j].sidebar;
+        localData[nav[j].name] = true;
+        for (var k = 0; k < h1List.length; k++) {
+            var h2List = h1List[k].sidebar;
+            for (var m = 0; m < h2List.length; m++) {
+                var h2Page = h2List[m];
+                currentPageList.push(h2Page);
+                if (h2Page.name == page.sidebar) {
+                    h1 = h2Page.text;
+                }
+            }
         }
     }
+    for (var n = 0; n < currentPageList.length; n++) {
+        if (currentPageList[n].name == page.sidebar) {
+            if (n > 0) {
+                bottomPage.left = currentPageList[n-1];
+            }
 
-    for (var n = 0; n < nav.length; n++) {
-        localData[nav[n].name] = true;
+            if (n < currentPageList.length - 1) {
+                bottomPage.right = currentPageList[n+1];
+            }
+        }
     }
-
 %>
-<!doctype html>
-<html lang="en">
+<!Doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
-    <title><%= h1 %>- <%= header[headerIndex].text %></title>
+    <meta name="google" content="notranslate" />
+    <title>
+        <% if (h1) { %> 
+            <%= h1 %> - 
+        <% }%>
+        <%= header[headerIndex].text %>
+    </title>
     <link rel="dns-prefetch" href="//smartprogram.baidu.com">
     <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
     <%- css('css/base') %>
@@ -87,9 +65,8 @@
 <body>
 
     <%- partial('_partial/header', {header: header, h1: h1}) %>
-
     <%- partial('_partial/sidebar', {nav: nav}) %>
-    <%- partial('_partial/article', {index: false, post: page, h1: h1, parentH1: parentH1, bottomPage: bottomPage}) %>
+    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
     <script type="text/javascript">
         window.localData = {
             'headerName': '<%- header[headerIndex].name %>',
@@ -97,9 +74,13 @@
             'sidebarIgnore': '<%= config.sidebarIgnore.list %>'
         }; 
     </script>
+    <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
     <%- js('js/zepto.min') %>
+    <%- js('js/fx') %>
+    <%- js('js/lib') %>
     <%- js('js/superstart') %>
     <%- js('js/search') %>
+    <%- js('js/clipboard.min') %>
 
    <% if (config.search) { %>
       <script type="text/javascript">

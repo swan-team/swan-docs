@@ -11,7 +11,7 @@ onPullDownRefresh
 **参数：**Object
 
 **示例：**
-
+<a href="swanide://fragment/0399b933c880712fe3caea30f4ff3a551540397509" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 Page({
     onPullDownRefresh() {
@@ -19,9 +19,10 @@ Page({
     }
 });
 ```
-需要在 config 的 `window` 选项中开启 `enablePullDownRefresh`。
-如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`。
-当处理完数据刷新后，`swan.stopPullDownRefresh` 可以停止当前页面的下拉刷新。
+**说明**：
+* 需要在 config 的 `window` 选项中开启 `enablePullDownRefresh`；
+* 如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`；
+* 当处理完数据刷新后，`swan.stopPullDownRefresh` 可以停止当前页面的下拉刷新。
 
 startPullDownRefresh
 ---
@@ -37,11 +38,11 @@ startPullDownRefresh
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+<!-- **success返回参数说明：**
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
-|errMsg | String|  接口调用结果|
+|errMsg | String|  接口调用结果| -->
 
 **示例：**
 

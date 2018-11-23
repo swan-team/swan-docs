@@ -7,8 +7,7 @@ sidebar: custom-component_temp
 
 
 
-<div class="notice">解释： </div>
-类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
+**解释：** 类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
 
 ### 组件模版
 
@@ -186,3 +185,62 @@ Page({
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用。
 
 3. 继承样式，如 font 、 color ，会从组件外继承到组件内。
+
+### 外部样式类
+<div class="notice">解释： </div>
+当组件希望接受外部传入的样式类（类似于 view 组件的 hover-class 属性）时，可以在 Component 中用 externalClasses 定义段定义若干个外部样式类。
+> 小程序基础库版本 1.13.29 开始支持。
+
+**注意：在同一个节点上使用普通样式类和外部样式类时，请避免出现两个类的优先级是未定义的情况。**
+
+**<div class="notice">示例： </div>**
+```js
+/* 组件 custom-component.js */
+Component({
+  externalClasses: ['external-class']
+});
+
+```
+
+```xml
+<!-- 组件 custom-component.swan -->
+<view class="external-class">这段文本的颜色由组件外的 class 决定</view>
+```
+
+组件的使用者可以像使用其他属性一样，指定这个样式类对应的 class 。
+
+```xml
+<!-- 使用组件的页面或者组件 -->
+<custom-component external-class="red-text" />
+```
+```css
+.red-text {
+  color: red;
+}
+```
+
+### 全局样式类
+<div class="notice">解释： </div>
+使用外部样式类可以让组件使用指定的组件外样式类，如果希望组件外样式类能够完全影响组件内部，可以将组件构造器中的options.addGlobalClass字段置为true。
+> 小程序基础库版本 1.13.29 开始支持。
+
+```js
+/* 组件 custom-component.js */
+Component({
+  options: {
+    addGlobalClass: true,
+  }
+});
+```
+
+```xml
+<!-- 组件 custom-component.swan -->
+<text class="global-class">这段文本的颜色由组件外的 class 决定</text>
+```
+
+```css
+/* 组件外的样式定义 */
+.global-class {
+  color: red;
+}
+```

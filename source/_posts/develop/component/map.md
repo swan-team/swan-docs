@@ -1,36 +1,41 @@
 ---
-title: 地图
+title: map
 header: develop
 nav: component
 sidebar: map
 ---
-
-map
------
+## map
 <div class="notice">解释： </div>地图<div></div><text class="notice">属性说明:</text>
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| longitude | Number | -| 中心经度 |
-| latitude | Number | -| 中心纬度 |
-| scale |  Number | 16 | 缩放级别，取值范围为4-21 |
-| markers |  Array | - | 标记点 |
-| polyline |  Array | - | 路线 |
-| circles |  Array |  -|  圆 |
-| controls |  Array | - | 控件 |
-| include-points |  Array | - | 缩放视野以包含所有给定的坐标点   |
-| show-location | Boolean |  -| 显示带有方向的当前定位点 |
-| bindmarkertap | EventHandle | -| 点击标记点时触发 |
-| bindcallouttap |  EventHandle | - | 点击标记点对应的气泡时触发 |
-| bindcontroltap | EventHandle |  -| 点击控件时触发 |
-| bindregionchange | EventHandle | - | 视野发生变化时触发 |
-| bindtap | EventHandle | - | 点击地图时触发 |
-| bindupdated | EventHandle | - | 在地图渲染更新完成时触发 |
+|属性名 |类型  |默认值  |说明| 最低版本 |
+|---- | ---- | ---- |---- | --- |
+| longitude | Number | -| 中心经度 | |
+| latitude | Number | -| 中心纬度 | |
+| scale |  Number | 16 | 缩放级别，取值范围为4-21 | |
+| markers |  Array | - | 标记点 | |
+| polyline |  Array | - | 路线 | |
+| polygons |  Array | - | 多边形（工具暂不支持） | 11.0.5 |
+| circles |  Array |  -|  圆 | |
+| controls |  Array | - | 控件 | |
+| include-points |  Array | - | 缩放视野以包含所有给定的坐标点   | |
+| show-location | Boolean |  -| 显示带有方向的当前定位点 | |
+| enable-3D | Boolean |  false | 显示3D楼块（工具暂不支持） | 11.0.5 |
+| show-compass | Boolean |  false | 显示指南针（工具暂不支持） | 11.0.5 |
+| enable-overlooking | Boolean |  false | 开启俯视（工具暂不支持） | 11.0.5 |
+| enable-zoom | Boolean | true | 是否支持缩放（工具暂不支持） | 11.0.5 |
+| enable-scroll | Boolean | true | 是否支持拖动（工具暂不支持） | 11.0.5 |
+| enable-rotate | Boolean | false | 是否支持旋转（工具暂不支持） | 11.0.5 |
+| bindmarkertap | EventHandle | -| 点击标记点时触发 | |
+| bindcallouttap |  EventHandle | - | 点击标记点对应的气泡时触发 | |
+| bindcontroltap | EventHandle |  -| 点击控件时触发 | |
+| bindregionchange | EventHandle | - | 视野发生变化时触发 | |
+| bindtap | EventHandle | - | 点击地图时触发 | |
+| bindupdated | EventHandle | - | 在地图渲染更新完成时触发 | |
 
 
-<notice>markers</notice>
+### markers
 
-> 标记点用于在地图上显示标记的位置<div></div><text class="notice">属性说明:</text>
+**解释**：标记点用于在地图上显示标记的位置<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -46,8 +51,8 @@ map
 | callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | anchor | 经纬度在标注图标的锚点，默认底边中点 | Object | 否 | {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
-
-> marker 上的气泡 callout<div></div><text class="notice">属性说明:</text>
+#### callout
+<text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -59,8 +64,8 @@ map
 | padding | 文本边缘留白 | Number |
 | display | 'BYCLICK':点击显示; 'ALWAYS':常显 | String |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
-
-> marker 上的气泡 label<div></div><text class="notice">属性说明:</text>
+#### label
+</div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -76,24 +81,21 @@ map
 | padding    | 文本边缘留白 | Number |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
-polyline
------
-> 指定一系列坐标点，从数组第一项连线至最后一项<div></div><text class="notice">属性说明:</text>
+### polyline
+**解释**：指定一系列坐标点，从数组第一项连线至最后一项<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | points | 经纬度数组 | Array | 是 | [{latitude: 0, longitude: 0}] |
 | color | 线的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
-| width | 线的宽度 | Number | 否 |  |
+| width | 线的宽度 | Number | 否 | - |
 | dottedLine | 是否虚线  | Boolean | 否 | 默认false |
 | arrowLine | 带箭头的线 | Boolean | 否 | 默认false，开发者工具暂不支持该属性     |
 | arrowIconPath | 更换箭头图标 | String | 否 | 在arrowLine为true时生效 |
-| borderColor | 线的边框颜色 | String | 否 |  |
+| borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
-
-circles
------
-> 在地图上显示圆<div></div><text class="notice">属性说明:</text>
+### circles
+**解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -101,13 +103,10 @@ circles
 | longitude | 经度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
 | color | 描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
-| radius | 半径 | Number | 是 |  |
+| radius | 半径 | Number | 是 |  - |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
-
-
-controls
------
-> 在地图上显示控件，控件不随着地图移动<div></div><text class="notice">属性说明:</text>
+### controls
+**解释**：在地图上显示控件，控件不随着地图移动<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -115,10 +114,7 @@ controls
 | position | 控件在地图的位置 | Object | 是 | 控件相对地图位置 |
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | clickable | 是否可点击 | Boolean | 否 | 默认不可点击 |
-
-
-position
------
+#### position
 <text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
@@ -128,10 +124,11 @@ position
 | width | 控件宽度 | Number | 否 | 默认为图片宽度 |
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 
-<notie>地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。</notie>
+地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
 
-<notie>示例：</notie>
-
+**示例**：
+<a href="swanide://fragment/3979f647ab4d5848afc3d96d4c9ad2fc1540397393" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
 ```xml
 <!-- map.swan -->
 <map id="myMap"
@@ -241,8 +238,14 @@ Page({
 ```
 
 
-<notice>Tips:</notice>
+<notice>说明:</notice>
 
-1、map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级
-2、请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件
-3、CSS 动画对 map 组件无效
+* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级；
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件；
+* CSS 动画对 map 组件无效。
+
+
+
+
+
+

@@ -4,6 +4,122 @@ header: develop
 nav: api
 sidebar: show_query
 ---
+
+createIntersectionObserver(this, options)
+---
+**解释：** 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
+
+**options 参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|thresholds|Array|否|[0]|一个数值数组，包含所有阈值。|
+|initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|
+|selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
+
+IntersectionObserver
+---
+IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
+
+**IntersectionObserver 对象的方法列表：**
+
+|方法 |说明|
+|---- | ---- | ---- |
+|relativeTo|使用选择器指定一个节点，作为参照区域之一|
+|relativeToViewport|指定页面显示区域作为参照区域之一|
+|observe|指定目标节点并开始监听相交状态变化情况|
+|disconnect|停止监听。回调函数将不再触发|
+
+IntersectionObserver.relativeTo(selector, margins)
+---
+
+使用选择器指定一个节点，作为参照区域之一。
+
+**参数说明：**
+
+string selector
+选择器
+
+Object margins
+用来扩展（或收缩）参照节点布局区域的边界
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|left|number|否||节点布局区域的左边界|
+|right|number|否||节点布局区域的右边界|
+|top|number|否||节点布局区域的上边界|
+|bottom|number|否||节点布局区域的下边界|
+
+IntersectionObserver.relativeToViewport(margins)
+---
+指定页面显示区域作为参照区域之一
+
+**参数说明：**
+
+Object margins
+用来扩展（或收缩）参照节点布局区域的边界
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|left|number|否||节点布局区域的左边界|
+|right|number|否||节点布局区域的右边界|
+|top|number|否||节点布局区域的上边界|
+|bottom|number|否||节点布局区域的下边界|
+
+IntersectionObserver.observe(targetSelector, callback)
+---
+
+指定目标节点并开始监听相交状态变化情况
+
+**参数说明：**
+string targetSelector
+选择器
+
+function callback
+监听相交状态变化的回调函数
+
+**回调结果说明**
+
+|属性|  类型|  说明|
+|---- | ---- | ---- |
+|intersectionRatio  | number | 相交比例|
+|intersectionRect   | Object | 相交区域的边界|
+|boundingClientRect | Object |目标边界|
+|relativeRect    |Object  |参照区域的边界|
+|time  |  number | 相交检测时的时间戳|
+
+**intersectionRect、boundingClientRect、relativeRect 结构说明**
+
+|属性|  类型|  说明|
+|---- | ---- | ---- |
+|left |  number | 左边界|
+|right  | number | 右边界|
+|top| number | 上边界|
+|bottom  |number | 下边界|
+
+**示例：**
+
+```javascript
+swan.createIntersectionObserver(this, {
+    selectAll: true
+})
+.relativeTo('.container')
+.observe('.ball', res => {
+    console.log(res.intersectionRect); // 相交区域
+    console.log(res.intersectionRect.left); // 相交区域的左边界坐标
+    console.log(res.intersectionRect.top); // 相交区域的上边界坐标
+    console.log(res.intersectionRect.width); // 相交区域的宽度
+    console.log(res.intersectionRect.height); // 相交区域的高度
+});
+```
+
+IntersectionObserver.disconnect()
+---
+
+停止监听。回调函数将不再触发
+
+**注意：**与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。
+
 createSelectorQuery
 ---
 **解释：** 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
@@ -40,7 +156,7 @@ selectorQuery
 
 selectorQuery.in(component)
 ---
-**解释：** 将选择器的选取范围更改为自定义组件 component 内。（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点。）
+**解释：** 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 
 **示例：**
 
@@ -65,9 +181,8 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 2、class 选择器（可以连续指定多个）：.a-class.another-class
 3、子元素选择器：.the-parent > .the-child
 4、后代选择器：.the-ancestor .the-descendant
-5、跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant
-6、多选择器的并集：#a-node, .some-other-nodes
-
+5、多选择器的并集：#a-node, .some-other-nodes
+<!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 selectorQuery.selectAll(selector)
 ---
 **解释：** 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。

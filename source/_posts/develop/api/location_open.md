@@ -14,9 +14,9 @@ openLocation
 
 |参数 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- |---- |
-|latitude   | Float |  是  | 纬度，范围为 -90~90，负数表示南纬|
-|longitude  | Float  | 是  | 经度，范围为 -180~180，负数表示西经|
-|scale  | INT |否 |  缩放比例，范围 4~21，默认为16|
+|latitude   | Float |  是  | 纬度，范围为 -90~90，负数表示南纬。|
+|longitude  | Float  | 是  | 经度，范围为 -180~180，负数表示西经。|
+|scale  | INT |否 |  缩放比例，范围 5~18，默认为18。|
 |name  | String |否 | 位置名|
 |address  | String |否 | 地址的详细说明|
 |success  | Function |否 | 接口调用成功的回调函数|

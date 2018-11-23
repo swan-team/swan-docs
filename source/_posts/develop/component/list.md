@@ -9,7 +9,7 @@ sidebar: list
 |---- | ---- |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#view">view</a>  | 视图容器 |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view">scroll-view</a>| 可滚动视图区域 |
-|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper">swipere</a> |滑块视图容器 |  
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper">swiper</a> |滑块视图容器 |  
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper-item">swiper-item</a> |仅可放置在<swiper/>组件中，宽高自动设置为100%。 |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#movable-area">movable-area</a>|movable-view 的可移动区域|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#movable-view">movable-view</a>|可移动的视图容器，在页面中可以拖拽滑动。|
@@ -45,5 +45,5 @@ sidebar: list
 |<a href="https://smartprogram.baidu.com/docs/develop/component/map/#controls">controls</a>|在地图上显示控件，控件不随着地图移动|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/map/#position">position</a>|位置|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/canvas/#canvas">canvas</a>|画布|
-|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#open-data">open-dat</a>|用于展示手机百度 APP 开放的数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#open-data">open-data</a>|用于展示手机百度 APP 开放的数据。|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/open/#web-view">web-view</a>|web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。|

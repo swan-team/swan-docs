@@ -1,11 +1,10 @@
 ---
-title: 服务协议
+title: 智能小程序平台服务协议
 header: operations
 nav: book
 sidebar: service
 ---
 
-## 智能小程序平台服务协议
 
 欢迎您使用智能小程序平台！
 
@@ -105,9 +104,7 @@ sidebar: service
 
 ### 6、   法律责任
 
-您应同时遵守《[百度用户协议](https://passport.baidu.com/static/passpc-account/html/protocal.html)》、《[百度公司移动应用软件服务协议](https://s.bdstatic.com/common/agreement/ios.html)》、《[百度公司移动应用隐私政策](https://s.bdstatic.com/common/agreement/privacy.html)》、《[Apple Developer Program许可协议](https://developer.apple.com/terms/)》《[App Store审核指南](https://developer.apple.com/cn/app-store/review/guidelines/)》
-
-6.1  中的约定，除非该等约定与本协议存在冲突。
+6.1 您应同时遵守《[百度用户协议](https://passport.baidu.com/static/passpc-account/html/protocal.html)》、《[百度公司移动应用软件服务协议](https://s.bdstatic.com/common/agreement/ios.html)》、《[百度公司移动应用隐私政策](https://s.bdstatic.com/common/agreement/privacy.html)》、《[智能小程序平台运营规范](https://smartprogram.baidu.com/docs/operations/specification/)》、《[Apple Developer Program许可协议](https://developer.apple.com/terms/)》、《[App Store审核指南](https://developer.apple.com/cn/app-store/review/guidelines/)》中的约定，除非该等约定与本协议存在冲突。
 
 6.2  <u>**您清楚知悉并理解，百度公司在本协议项下仅向您提供智能小程序平台服务或相关中立的技术支持服务，并且百度公司有权基于百度公司以及服务平台有序运营、健康发展等因素挑选使用本平台服务的开发者。**</u>
 

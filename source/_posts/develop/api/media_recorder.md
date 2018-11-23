@@ -8,9 +8,9 @@ sidebar: media_recorder
 
 getRecorderManager
 ---
-**解释：**获取全局唯一的录音管理器`recorderManager`。
+**解释：** 获取全局唯一的录音管理器`recorderManager`。
 
-**参数：**无
+**参数：** 无
 
 **recorderManager 对象的方法列表：**
 
@@ -22,20 +22,20 @@ getRecorderManager
 |stop | | 停止录音 |
 |onStart | callback | 录音开始事件 |
 |onPause | callback | 录音暂停事件 |
-|onStop | callback | 录音停止事件，会回调文件地址 |
-|onError | callback | 录音错误事件, 会回调错误信息 |
+|onStop | callback | 录音停止事件，会回调文件地址。 |
+|onError | callback | 录音错误事件, 会回调错误信息 。|
 
 **start(options) 说明：**
 
 |属性 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- | ---- |
-|duration |Number | 否 | 指定录音的时长，（单位：ms） ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）|
-|sampleRate |Number |否 | 采样率，有效值 8000/16000/44100 |
-|numberOfChannels |Number |否 | 录音通道数，有效值 1/2 |
-|encodeBitRate |Number |否 | 编码码率，有效值见下表格 |
-|format |String |否 | 音频格式，有效值 aac/pcm |
+|duration |Number | 否 | 指定录音的时长，（单位：ms） ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）。|
+|sampleRate |Number |否 | 采样率，有效值 8000/16000/44100 。|
+|numberOfChannels |Number |否 | 录音通道数，有效值 1/2。 |
+|encodeBitRate |Number |否 | 编码码率，有效值见下表格。 |
+|format |String |否 | 音频格式，有效值 aac/pcm。 |
 
-**其中，采样率和码率有一定要求，具体有效值如下：**
+其中，采样率和码率有一定要求，具体有效值如下：
 
 |采样率 | 编码码率 |
 |---- | ---- |
@@ -56,6 +56,8 @@ getRecorderManager
 |errMsg |String | 错误信息 |
 
 **示例：**
+<a href="swanide://fragment/e58b40296c7b21d2b18f1792ffc30ae01540398986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 
 ```javascript
 const recorderManager = swan.getRecorderManager()

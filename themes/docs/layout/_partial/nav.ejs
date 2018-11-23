@@ -3,7 +3,7 @@
         <div class="m-doc-layout">
             <nav>
                 <% for(var i = 0; i < nav.length; i++) {%>
-                    <a href="/docs<%- nav[i].link %>/" <% if(nav[i].name == page.nav) { %> class="m-doc-nav-selected" <% } %>><%- nav[i].text %></a>
+                    <a href="/docs<%- nav[i].link %>/" <% if(nav[i].name == page.nav) { %> class="m-doc-nav-on" <% } %>><%- nav[i].text %></a>
                 <% } %>
             </nav>
         </div>

@@ -1,7 +1,7 @@
 ---
 title: 在开发者工具中进行真机调试
 header: develop
-nav: debug
+nav: devtools
 sidebar: ideremotetarget
 ---
 
@@ -47,4 +47,3 @@ sidebar: ideremotetarget
 -----
 
 点击“结束调试”按钮或者关闭真机调试器窗口即可结束当前智能小程序的真机调试。
-

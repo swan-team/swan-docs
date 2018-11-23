@@ -85,7 +85,7 @@ header {
     -o-transition: all .2s;
 }
 .m-hp-desc a:hover {
-    color:#3C76FF;
+    color:#3c76ff;
 }
 /*
  * homepage-header
@@ -662,7 +662,7 @@ header {
             border-radius: 100px;
     cursor: pointer;
     color: #ffffff;
-    background: #3C76FF;
+    background: #3388ff;
     line-height: 50px;
     text-align: center;
     -webkit-transition: all 1s; 

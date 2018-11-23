@@ -1,20 +1,16 @@
 ---
-title: 模板
+title: 引用
 header: develop
 nav: framework
-sidebar: view_template
+sidebar: view_quote
 ---
+SWAN 可以通过`import`和`include`来引用文件。
 
-
-
-SWAN 提供模板 template 的用法，旨在提高工程化和代码可维护性，可以在模板中定义代码片段，并被外界注入值，然后在合适的时机调用。
-
-### 定义模板
-
-name 属性，定义了模板的名字。`<template>`内定义代码片段，如：
+## import
+通过`import`和`template`配合使用，可以将代码分离以及复用。
 
 ```xml
-<!-- template-demo.swan-->
+<!-- personCard.swan-->
 <template name="person-card">
     <view>
         <text>位置: {{pos}}</text>
@@ -23,24 +19,48 @@ name 属性，定义了模板的名字。`<template>`内定义代码片段，如
 </template>
 
 ```
-
-** 注意： **
-模板之间不可嵌套。
-
-### 使用模板
-通过 is 属性，声明需要使用的模板，data 是所需要传入到模板的值，注意对象字面量的使用方法，对象字面量是两个大括号包裹。
-
+在`personCard.swan`里定义了一个模板，在`index.swan`里引用文件，并使用它的模板。
 ```xml
-<!-- template-demo.swan-->
+<!-- index.swan-->
+<import src="./person-card.swan" />
 <template is="person-card" data="{{person}}" />
 
 ```
 
-```javascript
-// template-demo.js
-Page({
-    data: {
-        person: {name: 'Lebron James', pos: 'SF', age: 33}
-    }
-});
+## include
+通过`include`可以将目标模板，整个(除了 template)引入到当前的位置，相当于`inline`。
+
+```xml
+<!-- detail.swan-->
+<include src="header.swan" />
+<view class="detail">body</view>
+
 ```
+
+```xml
+<!-- header.swan-->
+<view class="header">header</view>
+
+```
+<br />
+ 
+include 可以将目标文件除了 `<template/> `外的整个代码引入，相当于是拷贝到 include 位置，如：
+
+```xml
+<!-- index.swan -->
+<include src="header.swan"/>
+<view> body </view>
+<include src="footer.swan"/>
+```
+```xml
+<!-- header.swan -->
+<view> header </view>
+```
+```xml
+<!-- footer.swan -->
+<view> footer </view>
+```
+
+
+
+

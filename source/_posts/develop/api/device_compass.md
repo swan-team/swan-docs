@@ -17,7 +17,8 @@ onCompassChange
 |---- | ---- | ---- |
 |direction |Number |面对的方向度数|
 
-****示例：****
+**示例：**
+<a href="swanide://fragment/1e98ee9687ed0c6b0f9cb4c747af8b7c1540398490" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```javascript
 swan.onCompassChange(function (res) {
@@ -25,8 +26,8 @@ swan.onCompassChange(function (res) {
 });
 
 ```
-### startCompass
-
+startCompass
+---
 **解释：**开始监听罗盘数据。
 **参数：**Object
 
@@ -38,7 +39,7 @@ swan.onCompassChange(function (res) {
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.startCompass();
@@ -57,7 +58,7 @@ stopCompass
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-****示例：****
+**示例：**
 
 ```javascript
 swan.stopCompass();

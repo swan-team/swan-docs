@@ -5,20 +5,20 @@ nav: component
 sidebar: base
 ---
 
-icon
------
+## icon
 
-<div class="notice">解释： </div>图标<div></div><text class="notice">属性说明:</text>
+**解释**： 图标
+**属性说明**:
 
 |属性名|类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|type |String  ||生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
+|type |String  |-|生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
 |size | Number  |23 |icon 的大小，单位是 px|
-|color |  |  |icon 的颜色，同 css 的 color|
+|color | Color | - |icon 的颜色，同 css 的 color|
 
 
-<notice>示例： </notice>
-
+**示例**： 
+<a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="group">
     <view>
@@ -56,8 +56,7 @@ Page({
 ```
 ![图片](../../../img/icon-demo.png)
 
-text
------
+## text
 
 <div class="notice">解释： </div>放文本的元素<div></div><text class="notice">属性说明:</text>
 
@@ -65,8 +64,7 @@ text
 |---- | ---- | ---- |---- |
 | space | String  | false |显示连续空格|
 
-<notice>space 有效值:</notice>
-<notice>属性说明:</notice>
+**space 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -74,8 +72,8 @@ text
 | emsp | 中文字符空格大小 |
 | nbsp | 根据字体设置的空格大小 |
 
-<notice>示例： </notice>
-
+**示例**：
+<a href="swanide://fragment/960268e61f2bc58af960e813b0ae43751540395909" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="wrap">
 	<text>{{text}}</text>
@@ -111,16 +109,14 @@ Page({
 ```
 
 ![图片](../../../img/text-demo.png)
-**Tips:**
-1、`<text/>`组件内只支持`<text/>`嵌套。
-2、除了文本节点以外的其他节点都无法长按选中。
-3、各个操作系统的空格标准并不一致。
+**说明:**
+
+* 除了文本节点以外的其他节点都无法长按选中。
+* 各个操作系统的空格标准并不一致。
+* `<text/>`组件内只支持`<text/>`嵌套。
 
 
-rich-text
------
-
-
+## rich-text
 <div class="notice">解释： </div>富文本<div></div><text class="notice">属性说明:</text>
 
 |属性名 |类型  |默认值  |说明|
@@ -143,15 +139,17 @@ rich-text
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-<notice>文本节点：type = text</notice><div></div><text class="notice">属性说明:</text>
+**文本节点：type = text**
+**属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | text | 文本 | String | 是 | 支持entities |
 
 > 受信任的HTML节点及属性
+> 全局支持class和style属性，不支持id属性。
 
-> 全局支持class和style属性，不支持id属性。<div></div><text class="notice">属性说明:</text>
+属性说明:
 
 |节点 | 属性 |
 |---- | ---- |
@@ -227,17 +225,16 @@ Page({
 })
 ```
 
-**Tips：**
-1.nodes 不推荐使用 String 类型，性能会有所下降。
-2.rich-text 组件内屏蔽所有节点的事件。
-3.nattrs 属性不支持 id ，支持 class。
-4.name 属性大小写不敏感。
-5.如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
-6.img 标签仅支持网络图片。
-7.如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+**说明：**
+* nodes 不推荐使用 String 类型，性能会有所下降。
+* rich-text 组件内屏蔽所有节点的事件。
+* nattrs 属性不支持 id ，支持 class。
+* name 属性大小写不敏感。
+* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
+* img 标签仅支持网络图片。
+* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
 
-progress
------
+## progress
 
 **解释：**进度条
 
@@ -255,7 +252,7 @@ progress
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例：**
-
+<a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <!-- progress.swan -->
 <view class="section">
@@ -267,9 +264,8 @@ progress
 
 ```
 
-animation-view
------
 
+## animation-view
 **解释：**Lottie动画组件
 
 **属性说明：**
@@ -283,9 +279,9 @@ animation-view
 |hidden | Boolean  | 否 | true |是否隐藏动画|
 
 
-**Tips:**
+**说明:**
 
-animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。animation-view组件不支持原生组件嵌套
+animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准，animation-view组件不支持原生组件嵌套。
 **示例：**
 
 ```xml

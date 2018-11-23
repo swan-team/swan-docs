@@ -1,8 +1,9 @@
 .m-doc-content-layout {
+    visibility: hidden;
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 250px;
+    left: 280px;
     top: 0;
     overflow: auto;
     background-color: #fafafa;
@@ -33,10 +34,20 @@
 
 .m-doc-menu-wrapper .m-doc-menu-toc {
     background-image: url(../img/toc.png);
+    -webkit-transition: all .1s;
+       -moz-transition: all .1s;
+        -ms-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-toc-close {
     background-image: url(../img/toc_close.png);
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-top {
@@ -68,7 +79,6 @@ article * {
 
 article img {
     max-width: 100%;
-    max-height: 550px;
     margin-top: 22px;
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
@@ -130,40 +140,70 @@ article img {
 
 article h1 {
     font-size: 28px;
+    font-weight: bold;
     color: #000;
     line-height: 28px;
-    padding: 8px 0 50px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 article h2 {
     font-size: 24px;
-    margin: 40px 0 20px;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
     color: #222;
     padding-bottom: 9px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
     margin: 40px 0 20px;
 }
-
+.m-doc-content-inner{
+    overflow: hidden;
+}
+.m-doc-content-inner .multilayer {
+    font-size: 18px;
+}
 article h2 .m-doc-content-h2-toggle {
     width: 22px;
     height: 22px;
-    background-image: url(../img/h2_arrow.png);
-    background-repeat: no-repeat;
+    border: 1px solid #e6e6e6;
+    text-align: center;
     float: right;
     margin-top: 1px;
     background-size: 100%;
-    transform: rotate(180deg);
-    -webkite-transform: rotate(180deg);
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+article h2 .m-doc-content-h2-toggle img{
+    margin-top: 0;
+    border: 0;
+    width: 50%;
+    position: relative;
+    top: -8px;
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+        -ms-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .m-doc-content-hide {
     display: none !important;
 }
 
-article h2 .m-doc-content-h2-toggle-close {
+article h2 .m-doc-content-h2-toggle-close img{
     transform: rotate(0deg);
-    -webkite-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
 }
 
 article h2 .m-doc-content-h2-toggle:hover {
@@ -171,11 +211,15 @@ article h2 .m-doc-content-h2-toggle:hover {
 }
 
 article h3 {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 30px;
+    color: #333;
 }
 
 article h4 {
     font-size: 16px;
+    font-weight: bold;
 }
 
 article h5 {
@@ -190,7 +234,7 @@ article h1:first-child {
     margin-top: 0;
 }
 
-article h2:first-child {
+article .m-doc-content-item:first-child h2 {
     margin-top: 0;
 }
 
@@ -235,8 +279,18 @@ article h6:hover a.anchor {
     text-decoration: none;
 }
 
-article ul {
-    padding-left: 15px;
+article ul, ol {
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+article ol li ol {
+    list-style: none;
+    padding-left: 0;
+}
+article ol li ol li ol{
+    list-style: none;
+    padding-left: 40px;
 }
 
 article p,
@@ -252,7 +306,7 @@ article pre {
 article p {
     white-space: normal;
     word-wrap: break-word;
-    word-break: break-all;
+    word-break: normal;
 }
 
 article ul :first-child,
@@ -297,7 +351,9 @@ article dl dd > :last-child {
 }
 
 article blockquote {
-    color: #333;
+    color: #666;
+    border-left: 3px solid #e6e6e6;
+    padding: 0 15px;
 }
 
 article blockquote > :first-child {
@@ -426,12 +482,13 @@ article hr {
 
 /* 页面目录样式 */
 .toc-wrap {
+    display: none !important;
+    transition: all 1s;
     position: fixed;
-    display: none;
+    opacity: 1;
     bottom: 150px;
     right: 23px;
-    width: 230px;
-    padding-right: 10px;
+    width: 0;
     font-size: 14px;
     line-height: 14px;
     background: #fff;
@@ -441,7 +498,10 @@ article hr {
 }
 
 .toc-wrap-show {
-    display: block;
+    width: 230px;
+    height: auto;
+    padding-right: 10px;
+    display: none;
 }
 
 .toc-list-wrap {
@@ -505,6 +565,9 @@ article hr {
 article ul {
     list-style: disc;
 }
+article ol {
+    list-style: decimal;
+}
 
 article thead tr {
     background-color: #F0F1F2;
@@ -560,7 +623,13 @@ article thead tr {
     .m-doc-menu-wrapper {
         display: none;
     }
-
+    .m-doc-bottomPage-wrapper a{
+        font-size: 12px;
+    }
+    .m-doc-bottomPage-wrapper .m-doc-bottomPage-left,
+    .m-doc-bottomPage-wrapper .m-doc-bottomPage-right{
+       background-size: 6.6px 9px;
+    }
     .m-doc-content-layout {
         position: absolute;
         padding-top: 60px;
@@ -618,6 +687,8 @@ article thead tr {
         background: none;
         box-shadow: none;
         bottom: auto;
+        width: 230px;
+        transition:none !important;
     }
 
     .top-wrap-fixed {
