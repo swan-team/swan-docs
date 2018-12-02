@@ -399,6 +399,10 @@
                 text: 组件间通信与事件
                 name: custom-component_cont
               -
+                link: /develop/framework/custom-component_lifetimes
+                text: 组件生命周期
+                name: custom-component_lifetimes
+              -
                 link: /develop/framework/custom-component_behaviors
                 text: behaviors
                 name: custom-component_behaviors
@@ -1510,6 +1514,10 @@
                     link: /develop/api/device_sys/#getSystemInfoSync
                     text: getSystemInfoSync
                     name: device_sys_getSystemInfoSync
+                  -
+                    link: /develop/api/device_sys/#getEnvInfoSync
+                    text: getEnvInfoSync
+                    name: device_sys_getEnvInfoSync
                   -
                     link: /develop/api/device_sys/#canIUse
                     text: canIUse

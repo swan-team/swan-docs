@@ -10,7 +10,7 @@ sidebar: remoterelease
 1、 请前往 [最新 Android 真机调试安装包](https://b.bdstatic.com/swan-debug/baidusearch_AndroidPhone_remote_target_debug_20180903.apk) 下载。通过你常用的方式将 APK 安装到目标设备中。
 2、 将被调试的移动设备通过数据线连接到当前电脑上，确保在移动设备上已经打开 USB 调试功能，并通过授权。详情可参考：<a href="https://jingyan.baidu.com/article/948f5924ebe158d80ff5f9ab.html ">安卓手机如何开启开发者模式 </a>。
 3、 正确安装好真机调试安装包，您将会在设备中看到如下“智能小程序”的图标。
->  在调试阶段微信支付、分享、登陆等部分功能可能会出现异常，小程序在正式使用时以上功能均可正常使用。
+>  在调试阶段微信支付、分享、登录等部分功能可能会出现异常，小程序在正式使用时以上功能均可正常使用。
 ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/swan_icon.png)
 启动后，打开需要被调试的智能小程序。
 

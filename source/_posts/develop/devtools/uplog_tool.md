@@ -9,7 +9,8 @@ sidebar: uplog_tool
 ---
 |版本号|更新内容|
 |----|----|
-|v1.14.10|** Change ** <p> 支持2.5.x、2.10.x版本的基础库。 <p> ** BugFix ** <p> 修复Image组件不支持绝对路径的问题。
+|v1.14.12|** New ** <p> 添加web化预览开关，在项目信息中可打开/关闭web化预览。<p> ** BugFix ** <p> **·** 修复高版本基础库 pageScrollTo 无效的问题；<p> **·** 修复上传文件http协议中body格式问题。
+|v1.14.11|** Change ** <p> 支持2.5.x、2.10.x版本的基础库。 <p> ** BugFix ** <p> 修复Image组件不支持绝对路径的问题。
 |v1.14.8|** New ** <p> **·** 新增组件：live-player；<p> **·** 新增api：createLivePlayerContext。<p> ** BugFix ** <p> 修复previewImage无法切换图片的问题。
 |v1.14.7|** BugFix ** <p> 修复新建项目时清空文件夹的问题。
 |v1.14.6|** BugFix ** <p> 修复cover-image组件不支持本地图片地址问题；|

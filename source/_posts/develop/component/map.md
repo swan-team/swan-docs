@@ -48,7 +48,7 @@ sidebar: map
 | alpha | 标注的透明度 | Number    | 否 | 默认1，无透明 |
 | width | 标注图标宽度 | Number | 否 | 默认为图片实际宽度 |
 | height | 标注图标高度 | Number | 否 | 默认为图片实际高度 |
-| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，可识别换行符。 |
+| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，不可识别换行符。 |
 | label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | anchor | 经纬度在标注图标的锚点，默认底边中点 | Object | 否 | {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
 #### callout
@@ -243,9 +243,3 @@ Page({
 * map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级；
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件；
 * CSS 动画对 map 组件无效。
-
-
-
-
-
-
