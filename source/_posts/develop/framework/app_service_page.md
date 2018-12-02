@@ -5,10 +5,10 @@ nav: framework
 sidebar: app_service_page
 ---
 
- Page
- ---
+ ## Page
+ 
 
-<div class="notice">解释： </div>Page 函数用来注册一个页面。接受一个 object 参数，其指定页面的初始数据、生命周期函数、事件处理函数等。
+**解释**：Page 函数用来注册一个页面。接受一个 object 参数，其指定页面的初始数据、生命周期函数、事件处理函数等。
 
 **Object参数说明：**
 
@@ -27,7 +27,7 @@ sidebar: app_service_page
 |onTabItemTap | Function | 页面的事件处理函数 -- 当前是 tab 页时，点击 tab 时触发 |
 |其他 | Any | 开发者可以添加任意的函数或数据到 object 参数中 |
 
-**<div class="notice">示例： </div>**
+**示例**
 
 ```js
 Page({
@@ -80,15 +80,14 @@ Page({
 });
 ```
 
- 初始化数据
- ---
+## 初始化数据
 
-<div class="notice">解释： </div>
+**解释**：
 初始化数据将作为页面的第一次渲染。data 将会以 JSON 的形式由逻辑层传至渲染层，所以其数据必须是可以转成 JSON 的格式：字符串，数字，布尔值，对象，数组。
 
 渲染层，通过SWAN模板，对数据进行绑定。
 
-**<div class="notice">示例： </div>**
+**示例**
 
 ```js
 Page({
@@ -115,12 +114,12 @@ Page({
 5. onUnload：页面卸载
 当 redirectTo、navigateBack 或返回的时候调用。
 
-> 当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide。在新的基础库版本中，页面被卸载时仅会触发onUnload，不会再触发 onHide，请提前做好兼容性处理。
-当页面卸载时，如果需要执行某些逻辑，请将该逻辑放在 onUnload 中，而不是 放onHide 中。
 
-**说明**：
-* 在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。
-* 如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。
+<div class="m-doc-custom-examples">
+<div class="m-doc-custom-examples-warning">
+ <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide。在新的基础库版本中，页面被卸载时仅会触发onUnload，不会再触发 onHide，请提前做好兼容性处理。</li><li>当页面卸载时，如果需要执行某些逻辑，请将该逻辑放在 onUnload 中，而不是 放onHide 中。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
+</div>
+</div>
 
 ## 页面相关事件处理函数
 

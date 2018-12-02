@@ -95,19 +95,19 @@ form 组件可以识别这些自定义组件，并在 submit 事件中返回组�
 
 |属性名|类型|描述|最低版本|
 |---|---|---|---|
-|name|String|在表单中的字段名|1.13.29|
-|value|任意|在表单中的字段值|1.13.29|
+|name|String|在表单中的字段名|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.29</a>|
+|value|任意|在表单中的字段值|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.29</a>|
 
 ### swan://component-export
 
-> 从基础库版本 1.13.29 和 2.0.5 开始提供支持。
+> 从基础库版本 2.0.5 开始提供支持。
 
 **解释**：使自定义组件支持 export 定义段。这个定义段可以用于指定组件被 selectComponent 调用时的返回值。
 
 未使用这个定义段时， selectComponent 将返回自定义组件的 this 。使用这个定义段时，将以这个定义段的函数返回值代替。
 
 ```js
-// 自定义组件 my-component 内部
+// 自定义组件的js文件
 Component({
   behaviors: ['swan://component-export'],
   export() {
@@ -117,7 +117,7 @@ Component({
 ```
 
 ```xml
-<!-- 使用自定义组件时 -->
+<!-- 使用自定义组件时，对于自定义组件的引用模板 -->
 <my-component id="custom-id" />
 ```
 

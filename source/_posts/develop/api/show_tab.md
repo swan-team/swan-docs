@@ -105,7 +105,11 @@ navigateBack
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页，默认为 1。
+|delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页，默认为 1。|
+|success|	function|		否|	接口调用成功的回调函数|	
+|fail|	function|		否|	接口调用失败的回调函数|	
+|complete|	function|		否|	接口调用结束的回调函数（调用成功、失败都会执行）|
+
 
 **示例：**
 

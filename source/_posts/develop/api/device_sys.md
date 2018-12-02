@@ -94,6 +94,36 @@ try {
     // Do something when catch error
 }
 ```
+
+getEnvInfoSync
+---
+**解释：**获取运行环境信息同步接口
+> 基础库 2.0.28 版本开始支持。
+**同步返回参数说明：**
+
+|参数  |类型|说明 |最低版本|
+|---- | ---- |---|---|---|
+|appKey  |string| 智能小程序 App Key |2.0.28|
+|appName |string|  智能小程序名称   |
+|lastAppURL |string|  智能小程序最近一次打开的调起协议  |
+|sdkVersion |string|  基础库版本   |
+|scheme |string|  调起协议的协议头   |
+
+**示例：**
+
+```js
+try {
+    const envInfo = swan.getEnvInfoSync();
+    console.log(res.appKey);
+    console.log(res.appName);
+    console.log(res.lastAppURL);
+    console.log(res.sdkVersion);
+    console.log(res.scheme);
+} catch (e) {
+    // Do something when catch error
+}
+```
+
 canIUse
 ---
 **解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。

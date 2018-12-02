@@ -8,9 +8,24 @@ sidebar: custom-component
 开发者可以将页面内的功能模块抽象成自定义组件，在智能小程序的各个页面中进行使用，提升代码复用度，节省开发成本。
 
 
-<div class="notice">解释： </div>一个自定义组件由 json swan css js 4个文件组成。要编写一个自定义组件，首先需要在 json 文件中进行自定义组件声明（在 json 文件中将 component 字段设为 true 可将这一组文件设为自定义组件）：
+<div class="notice">解释： </div>一个自定义组件由4个文件 (.swan .css .js .json) 组成, 例如包含自定义组件 `custom` 的项目结构:
+```
+// 包含自定义组件custom的项目结构
+├── app.js
+├── app.json
+├── project.config.json
+└── components
+    └── custom
+        ├── custom.swan
+        ├── custom.css
+        ├── custom.js
+        └── custom.json
+```
+
+要编写一个自定义组件，首先需要在 json 文件中进行自定义组件声明（在 json 文件中将 component 字段设为 true 可将这一组文件设为自定义组件）：
 
 ```js
+// 自定义组件配置 (custom.json)
 {
   "component": true
 }
@@ -21,13 +36,13 @@ sidebar: custom-component
 **<div class="notice">示例： </div>**
 
 ```xml
-<!-- 自定义组件内部的模板 -->
+<!-- 自定义组件内部的模板 (custom.swan) -->
 <view class="name">
     {{name}}
 </view>
 ```
 ```css
-/* 自定义组件的css，样式只作用于该自定义组件 */
+/* 自定义组件的css，在该自定义组件内部生效 (custom.css) */
 .name {
     color: red;
 }
@@ -40,6 +55,7 @@ sidebar: custom-component
 **<div class="notice">示例： </div>**
 
 ```js
+// 自定义组件逻辑 (custom.js)
 Component({
     properties: {
         // 定义了name属性，可以在使用组件时，由外部传入。此变量可以直接在组件模板中使用
@@ -58,7 +74,7 @@ Component({
 ```
 
 ```xml
-<!-- 自定义组件内部的模板 -->
+<!-- 自定义组件内部的模板 (custom.swan) -->
 <view class="name" bindtap="tap">
     {{name}}{{age}}
 </view>
@@ -66,13 +82,36 @@ Component({
 
 ## 使用自定义组件
 
-使用已注册的自定义组件前，首先要在页面的 json 文件中进行引用声明。此时需要提供每个自定义组件的标签名和对应的自定义组件文件路径：
+使用已注册的自定义组件前，首先要在页面的 json 文件中进行引用声明。除了在页面使用自定义组件，你还可以在自定义组件引用自定义组件，类似于页面引用自定义组件。
+以下举例页面级（pages/home/home）的使用场景:
+
+```
+// 项目目录结构
+├── app.js
+├── app.json
+├── project.config.json
+└──  pages
+    └── home
+        ├── home.swan
+        ├── home.css
+        ├── home.js
+        └── home.json
+└── components
+    └── custom
+        ├── custom.swan
+        ├── custom.css
+        ├── custom.js
+        └── custom.json
+```
+
+首先需要提供每个自定义组件的标签名与其对应的自定义组件文件路径。
 
 **<div class="notice">示例： </div>**
 ```js
+// 页面json配置 home.json
 {
     "usingComponents": {
-        "custom-component": "path/to/the/custom/component"
+        "custom": "/components/custom/custom"
     }
 }
 ```
@@ -80,12 +119,16 @@ Component({
 
 **<div class="notice">示例： </div>**
 ```xml
+<!-- 页面模板 (home.swan) -->
 <view>
     <!-- 在页面中对自定义组件进行引用 -->
-    <custom-component name="swanapp"></custom-component>
+    <custom name="swanapp"></custom>
 </view>
 ```
 自定义组件的 swan 节点结构在与数据结合之后，将被插入到引用位置内。
 
 **说明**:
-* 自定义组件只能在`1.10.13`以上的 swan.js 中使用
+* 自定义组件只能在`1.10.13`以上的 swan.js 中使用；
+* 自定义组件名字暂时不能包含大写字母；
+* 同一页面引用的自定义组件，不同路径的自定义组件暂时不能使用相同的自定义组件名字；
+* 在页面级的配置（json文件）中不能添加 `"component": true`，因为将page当做自定义组件使用是不允许的。

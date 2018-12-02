@@ -5,8 +5,6 @@ nav: framework
 sidebar: custom-component_temp
 ---
 
-
-
 **解释：** 类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
 
 ### 组件模版

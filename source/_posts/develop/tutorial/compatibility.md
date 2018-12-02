@@ -17,7 +17,7 @@ sidebar: compatibility
 function compareVersion(v1, v2) {
   v1 = v1.split('.')
   v2 = v2.split('.')
-  var len = Math.max(v1.length, v2.length)å
+  var len = Math.max(v1.length, v2.length)
 
   while (v1.length < len) {
     v1.push('0')
@@ -43,6 +43,10 @@ function compareVersion(v1, v2) {
 compareVersion('1.11.0', '1.9.9')
 // 1
 ```
+
+**注意: **
+此方法同样适用于判断手百版本，但在不得不使用手百版本进行判断兼容的情况下，请使用 SWAN 版本进行判断兼容。
+
 ## 接口
 开发者可以用以下代码来判断新增API是否支持用户的手机机型：
 ```js
