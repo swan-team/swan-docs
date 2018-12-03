@@ -154,7 +154,7 @@ Page({
                 mode: 'top',
                 text: 'top：不缩放图片，只显示图片的顶部区域'
             },
-            {     
+            {
                 mode: 'bottom',
                 text: 'bottom：不缩放图片，只显示图片的底部区域'
             },
@@ -276,8 +276,8 @@ Page({
 |show-progress|	Boolean|	true|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|	是否显示全屏按钮|
 |enable-progress-gesture|	Boolean	|true|	是否开启使用手势控制进度|
-|danmu-list|	Object Array|	-	|弹幕列表|	
-|danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|	
+|danmu-list|	Object Array|	-	|弹幕列表|
+|danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
@@ -358,11 +358,11 @@ Page({
 |---- | ---- | ---- |---- |
 |device-position| String | back | 前置或后置，值为front, back |
 |flash|String| auto |闪光灯，值为auto, on, off|
-|bindstop|EventHandle||摄像头在非正常终止时触发，如退出后台等情况|
-|binderror|EventHandle||用户不允许使用摄像头时触发|
+|bindstop|EventHandle|-|摄像头在非正常终止时触发，如退出后台等情况|
+|binderror|EventHandle|-|用户不允许使用摄像头时触发|
 
 **说明**:
-* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
+* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库2.20.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 

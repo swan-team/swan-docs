@@ -123,13 +123,9 @@ Page({
 |---- | ---- | ---- |---- |
 | nodes | Array / String  | [] |节点列表 / HTML String|
 
-> 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap
-
-<notice>nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降</notice>
-
->nodes
-
->现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点
+* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
+* 现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点。
 
 <notice>元素节点：type = node</notice><div></div><text class="notice">属性说明:</text>
 
@@ -146,8 +142,8 @@ Page({
 |---- | ---- | ---- |---- | ---- |
 | text | 文本 | String | 是 | 支持entities |
 
-> 受信任的HTML节点及属性
-> 全局支持class和style属性，不支持id属性。
+* 受信任的HTML节点及属性。
+* 全局支持class和style属性，不支持id属性。
 
 属性说明:
 
@@ -228,7 +224,7 @@ Page({
 **说明：**
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
-* nattrs 属性不支持 id ，支持 class。
+* attrs 属性不支持 id ，支持 class。
 * name 属性大小写不敏感。
 * 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
 * img 标签仅支持网络图片。
