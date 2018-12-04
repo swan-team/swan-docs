@@ -277,7 +277,9 @@ Page({
 
 **说明:**
 
-animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准，animation-view组件不支持原生组件嵌套。
+* animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
+* animation-view组件不支持原生组件嵌套。
+* 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
 **示例：**
 
 ```xml
