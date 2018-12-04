@@ -5,7 +5,7 @@ nav: resource
 sidebar: checklist
 ---
 
-为方便小程序设计，小程序团队提供《智能小程序UE走查表》以供参考。
+为方便小程序设计，小程序团队提供《智能小程序设计走查表》以供参考。
 
 此走查表是一份综合性的移动端用户体验设计走查项目集合，内容涵盖以下三个方面：
 * 面向交互设计师的信息结构与流程设计、操作与反馈走查项；
@@ -16,10 +16,10 @@ sidebar: checklist
 
 <div class="m-doc-custom-download">
 	<a href="../../../img/design/resource/Checklist-Excel.xlsx" class="m-doc-custom-download-left">
-		<img src="../../../img/design/resource/ico-excel.png"><p>智能小程序UE走查表-Excel</p>
+		<img src="../../../img/design/resource/ico-excel.png"><p>智能小程序设计走查表-Excel</p>
 	</a>
 	<a href="../../../img/design/resource/Checklist-PDF.pdf" target="_blank" class="m-doc-custom-download-right">
-		<img src="../../../img/design/resource/ico-pdf.png"><p>智能小程序UE走查表-PDF</p>
+		<img src="../../../img/design/resource/ico-pdf.png"><p>智能小程序设计走查表-PDF</p>
 	</a>
 </div>
 
@@ -86,10 +86,12 @@ sidebar: checklist
 - [ ] 手势使用是否符合用户认知？
 
 ### 特殊情形
-- [ ] 特殊网络状态（弱网、超时、无网）是否做出应对？
+- [ ] 特殊网络状态是否做出应对？（弱网、超时、无网）
 - [ ] 各种登录状态是否作出应对？（未登录、注销后、账号切换、游客账号）
 
 ### 系统特性
+- [ ] 当小程序功能有高App版本依赖，低版本无法使用时，是否已提示低版本用户升级？
+- [ ] 当小程序功能有高App版本依赖，低版本无法达到最佳体验时，是否针对低版本做出适配？
 - [ ] 是否配置了分享回流文案？
 - [ ] 是否考虑了全面屏及iPhoneX等异形屏幕的适配？
 - [ ] 是否考虑了iOS、Android双端差异导致的区别处理？（键盘设置、手势等）
