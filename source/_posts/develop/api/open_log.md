@@ -30,7 +30,7 @@ sidebar: open_log
 2、 通过 Authorization Code 获取 <a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#Session-Key/">Session Key</a>;
 3、 调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#getUserInfo/">getUserInfo</a>获取用户信息;
 4、 当用户完成了授权，且授权会话仍处于有效期时，智能小程序不需要每次都进行前两步，而是可以直接进行第三步获取用户信息。
-要判断当前用户的授权会话是否仍处于有效期，可调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断。
+要判断当前用户的授权会话是否仍处于有效期，可调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
 ## login
 
