@@ -155,17 +155,31 @@ canvasPutImageData
 **示例：**
 
 ```js
-const data = new Uint8ClampedArray([255, 0, 0, 1]);
-swan.canvasPutImageData({
-    canvasId: 'myCanvas',
-    x: 0,
-    y: 0,
-    width: 1,
-    data: data,
-    success(res) {
-        console.log('success');
-    }
-});
+swan.canvasGetImageData({
+            canvasId: 'myCanvas',
+            x: 0,
+            y: 0,
+            width: 100,
+            height: 100,
+            success(res) {
+                swan.canvasPutImageData({
+                    canvasId: 'myCanvas',
+                    x: 0,
+                    y: 0,
+                    width: 100,
+                    data: res.data,
+                    success(res) {
+                        console.log('success');
+                    },
+                    fail(err) {
+                        console.log('err');
+                    },
+                    complete() {
+                        console.log('complete');
+                    }
+                });
+            }
+        });
 ```
 
 canvasToTempFilePath(OBJECT, this)
