@@ -1,7 +1,7 @@
 <div class="m-doc-sidebar-mask"></div>
 <div class="m-doc-sidebar-nav-wrapper">
     <ul>
-        <% for (var i = 0; i < nav.length; i++) { %>
+        <% for (var i = 0; i < nav ? nav.length : 0; i++) { %>
             <li <% if (nav[i].name == page.nav||page.header!='develop') { %> class="m-doc-nav-on" <% } %> data-name="<%- nav[i].name %>">
                 <div class="m-doc-nav-list" href="/docs<%- nav[i].link %>">
                     <img src="<%- url_for('img/level1_arrow.png') %>" />

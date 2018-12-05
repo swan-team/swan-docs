@@ -1,0 +1,186 @@
+article {
+    h1 {
+        //padding: 10px 0 10px;
+        margin-bottom: 40px;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 28px;
+        color: #333;
+    }
+
+    h2 {
+        padding-bottom: 9px;
+        padding-top: 40px;
+        margin: 40px 0 20px 0;
+        font-size: 24px;
+        color:@color-darkest;
+        border-top: 1px solid  rgb(221, 221, 221);
+
+    }
+
+    h3 {
+        padding-top: 30px;
+        margin: 40px 0 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        border-top: 1px solid  rgb(221, 221, 221);
+    }
+
+    h4 {
+        margin: 30px 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    h1+h2, h2+h3 {
+        margin-top: 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+        &:first-child {
+            margin-top: 0;
+
+        }
+
+    }
+
+    p {
+        font-weight: 400;
+        color: #5C6163;
+        margin: @padding-large 0;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-all;
+
+    }
+    strong {
+        font-weight: 600;
+    }
+
+    img {
+        max-width: 100%;
+        margin-top: 22px;
+        border: 1px solid #e6e6e6;
+        box-sizing: border-box;
+    }
+
+    ul {
+
+        margin: @padding-large;
+        color: #5C6163;
+        li {
+            margin: 0 6px;
+            list-style-type: decimal;
+            list-style-type: disc;
+        }
+    }
+
+    ol {
+        padding-left: 20px;
+        color: #5C6163;
+        li {
+            list-style-type: decimal;
+            margin: 4px 0;
+        }
+    }
+
+    table {
+        color:#5C6163;
+        font-size: 14px;
+        text-align: left;
+        overflow: scroll;
+        width: 100%;
+        padding: 0;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+
+    thead tr {
+
+        color:#8d8d8d;
+        background-color: @color-light;
+    }
+
+    th {
+        border: 1px solid @color-border;
+        margin: 0;
+        padding: 6px 13px;
+        white-space: nowrap; //规定表格顶部文本不换行，直到遇到<br>
+    }
+
+    td {
+        border: 1px solid @color-border;
+        margin: 0;
+        padding: 6px 13px;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-all;
+
+    }
+   /* tr td:first-child{
+        color:#382;
+        white-space: nowrap;
+    }*/
+
+
+    figure.highlight {
+        position: relative;
+        margin: @padding-large 0;
+        overflow: auto;
+        font-size: 0.9em;
+        line-height: 2;
+        background: #f0f1f2;
+        border-radius: 2px;
+
+        .gutter {
+            display: none;
+        }
+    }
+
+    code {
+        padding: 0 6px;
+        display: inline-block;
+        font-size: 1.1em;
+        background: @color-light;
+        border-radius: 2px;
+    }
+
+    pre code {
+        display: block;
+        padding: @padding-smaller @padding;
+        overflow: auto;
+        border: 0px solid @color-border;
+    }
+
+    blockquote {
+        border-left: 3px solid #ddd;
+        padding-left: 15px;
+        color: #777;
+    }
+}
+
+
+
+/* article 移动端适配 */
+@media only screen and (max-width: 768px) {
+
+    table {
+        overflow: scroll;
+    }
+
+    th {
+        font-size: 10px;
+        padding: 6px 13px;
+        white-space: nowrap; //规定表格顶部文本不换行，直到遇到<br>
+    }
+
+    td {
+        font-size: 10px;
+        padding: 6px 5px;
+        overflow: scroll;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}

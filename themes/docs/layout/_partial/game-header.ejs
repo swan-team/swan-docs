@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <title>
+        手百小游戏文档<%= (' - ' + (page.title || config.title)) || '' %>
+    </title>
+    <%- css('css/game/main.css') %>
+</head>
+<body>
+    <header class="p-navbar">
+        <div class="p-navbar-logo">
+            <%- image_tag('img/logo.png') %>
+            <div>百度小游戏</div>
+        </div>
+        <div class="p-navbar-header">
+        </div>
+        <nav class="p-navbar-menu">
+                <div class="mobile-navbar-selected">
+                    <span>
+                    <% switch(page.categoryName) {
+                        case 'introduction': %>
+                            介绍
+                            <% break; %>
+                        <% case 'api': %>
+                            API
+                            <% break; %>
+                        <% case 'tutorials': %>
+                            教程
+                            <% break; %>
+                        <% case 'data': %>
+                            数据
+                            <% break; %>
+                        <% case 'operations': %>
+                            运营
+                            <% break; %>
+                    <% } %>
+                    </span>
+                    <%- image_tag('img/arrow-open.png') %>
+                </div>
+
+            <ul>
+                <li class="<% if (page.categoryName === 'introduction') { %>is-active<% } %>">
+                    <%- link_to('introduction/prerare/enter_application/', '介绍') %>
+                </li>
+                <li class="<% if (page.categoryName === 'api') { %>is-active<% } %>">
+                    <%- link_to('api/openApi/authorize/', 'API') %>
+                </li>
+                <li class="<% if (page.categoryName === 'tutorials') { %>is-active<% } %>">
+                    <%- link_to('tutorials/tutorials/tutorials/', '教程') %>
+                </li>
+                <li class="<% if (page.categoryName === 'data') { %>is-active<% } %>">
+                    <%- link_to('data/feature/concept/', '数据') %>
+                </li>
+                <li class="<% if (page.categoryName === 'operations') { %>is-active<% } %>">
+                    <%- link_to('operations/service/specification/', '运营') %>
+                </li>
+            </ul>
+        </nav>
+
+        <%- partial('./game-search') -%>
+        <%- js('js/zepto.min') %>
+        <%- js('js/game/search.raw') %>
+        <%- js('js/game/marked.min')%>
+        <%- js('js/game/mobileAdapter')%>
+        <%- js('js/game/doc.raw')%>
+        <% if (config.search) { %>
+            <script>
+            var search_path = "<%= config.search.path %>";
+            if (search_path.length == 0) {
+                search_path = "search.json";
+            }
+            var path = "<%= config.root %>" + search_path;
+            searchFunc(path, 'local-search-input', 'article-search-result', marked);
+            </script>
+        <% } %>
+    </header>
+
+    <% if (locals.sidebar) { %>
+    <%- partial('./game-sidebar', {categoryName: locals.categoryName}) %>
+    <% } %>
+
+    <div class="p-content <%= locals.categoryName %>">
+        <div class="p-content-wrap">
+            <article id="article-search-result" class="article-search-result"></article>
+            <article id="article-main-content" class="p-content-wrap-article">
+                <h1><%- page.title %></h1>

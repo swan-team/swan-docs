@@ -1,0 +1,174 @@
+.p-sidebar-mask {
+    display: none;
+    position: fixed;
+    top: @navbar-height;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.1);
+    z-index: 100000;
+}
+
+.p-sidebar {
+    position: absolute;
+    width: @navbar-width;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    border-right: 1px solid #EEEEEE;
+    padding-top: 96px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    bottom: 0;
+
+
+}
+
+    .p-sidebar-list {
+
+        max-height: 100%;
+        // user-select: none;
+        // -webkit-user-select: none;
+    }
+
+        .p-sidebar-item {
+
+            a {
+
+               display: block;
+               //
+                color: @color-darkest;
+                transition-duration: 0.2s;
+            }
+        }
+
+            .p-sidebar-item-wrapper {
+                height: 44px;
+                line-height: 44px;
+                padding-left: 20px;
+                // position: relative;
+                cursor: pointer;
+                font-size: 16px;
+                color: #333;
+                //font: inherit;
+                // vertical-align: baseline;
+
+
+            }
+                .p-sidebar-toggle {
+                    width: 15px;
+                    height: 15px;
+                    opacity: 0.5;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url(../img/arrow-close.png);
+                    background-size: 100% 100%;
+                    display: inline-block;
+
+                    &.fold {
+                      background-image: url(../img/arrow-open.png);
+                    }
+                }
+
+            .p-sidebar-item-level1 {
+                font-size: 14px;
+                color: #333;
+                height: 100%;
+                display: block;
+                height: 100%;
+                padding-left: 0px;
+
+                img {
+                    left: 45px;
+                }
+                div {
+                    padding-left: 95px;
+                }
+                &>a {
+
+                    color: #333;
+                    padding: @padding 0 @padding 50px;
+                }
+
+                &.is-active>a {
+
+                    color:rgb(0, 89, 244);
+                   // box-shadow: inset 2px 0 0 #38f;
+                    background-color:rgba(51,136,255,.08);
+                }
+            }
+
+                .p-sidebar-list-level2 {
+                    padding: 0 0 @padding 50px;
+
+                }
+
+                    .p-sidebar-item-level2 {
+
+                        &.is-active>a {  //当前选中状态
+
+                            color: #38f;
+                            background-color: rgba(51,136,255,.08);
+                            border-left: 2px solid #38f
+
+                        }
+
+                        a {  //正常子层级状态
+                            padding: 7px 10px 7px 14px;
+                            line-height: 20px;
+
+                            color: @color-text-lighter;
+                            //color: rgb(51, 255, 68);
+                            //padding: @padding 0 @padding 10px;
+                            border-left: 2px solid fade(rgba(51,136,255,.2), 20);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        &:hover a {  //鼠标hover
+
+                            transition: transform .15s linear;
+                            color: #38f;
+                            box-shadow: right 40px 0 0 #38f;
+                            //background-color:rgba(51, 136, 255, 0.08);
+                        }
+
+                    }
+
+
+/* sidebar 移动端适配 */
+@media only screen and (max-width: 768px) {
+    .p-sidebar-mask-show,
+    .p-sidebar-show{
+        display: block !important;
+    }
+    .p-sidebar {
+        position: fixed;
+        z-index: 100001;
+        display: none;
+        padding-top: 32px;
+        background: #fff;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+        .p-sidebar-item-wrapper {
+            padding-left: 20px;
+        }
+
+            .p-sidebar-item-level1 {
+                padding-left: 0px;
+            }
+
+            .p-sidebar-list-level2 {
+                padding-left: 50px;
+            }
+
+            .p-sidebar-item-level2 {
+                a {
+                    padding-left: 10px;
+                }
+            }
+}
