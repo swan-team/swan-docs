@@ -77,4 +77,4 @@ Page({
 })
 ```
 **注意**：
-- 自定义组件触发事件时，需要使用 triggerEvent 方法，对于传递数据的格式，从 2.0.3 开始支持传递任意参数类型，其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。
+自定义组件触发事件时，需要使用 triggerEvent 方法，对于传递数据的格式，从 2.0.3 开始支持传递任意参数类型，其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。
