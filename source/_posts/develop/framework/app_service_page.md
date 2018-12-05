@@ -102,17 +102,15 @@ Page({
 
 ## 生命周期函数
 
-1. onLoad：页面加载
-一个页面只会调用一次，可以在 onLoad 中获取打开当前页面所调用的 query 参数。
-2. onShow：页面显示
-每次打开页面都会调用一次。
-3. onReady：页面初次渲染完成
-一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。
-对界面的设置如：swan.setNavigationBarTitle 请在onReady之后设置。
-4. onHide：页面隐藏
-当 navigateTo 或底部 tab 切换时或Home键离开智能小程序时调用。
-5. onUnload：页面卸载
-当 redirectTo、navigateBack 或返回的时候调用。
+|属性|类型|描述|触发时机|
+|----|----|----|--------|
+|onLaunch|Function|SWAN 初始化的生命周期函数|当 SWAN App 初始化完成时，会触发 onLaunch（全局只触发一次）|
+|onShow|Function| SWAN App 展示时调用的生命周期函数|SWAN App 从后台进入前台，触发 onShow|
+|onHide|Function| SWAN App 隐藏时调用的生命周期函数|SWAN App 从前台进入后台，触发 onHide|
+|onLoad|Function| 监听页面加载的生命周期函数|SWAN App 页面加载完成，触发 onLoad|
+|onReady|Function| 监听页面初次渲染完成的生命周期函数|SWAN App 页面渲染完成，触发 onReady|
+|onUnload|Function| 监听页面卸载的生命周期函数|页面卸载，触发 onUnload|
+|onError|Function|错误监听函数|当 SWAN App 发生错误时，会触发|
 
 
 <div class="m-doc-custom-examples">
@@ -123,17 +121,24 @@ Page({
 
 ## 页面相关事件处理函数
 
-1、onPullDownRefresh: 下拉刷新
+
+### onPullDownRefresh
+**解释**： 下拉刷新
+**说明**：
 监听用户下拉刷新事件。
-需要在 app.json 的 window 选项中或页面配置中开启 enablePullDownRefresh 。
-当处理完数据刷新后，swan.stopPullDownRefresh 可以停止当前页面的下拉刷新。
+* 需要在 app.json 的 window 选项中或页面配置中开启 enablePullDownRefresh 。
+* 当处理完数据刷新后，swan.stopPullDownRefresh 可以停止当前页面的下拉刷新。
 
-2、onReachBottom: 上拉触底
+### onReachBottom
+**解释**：上拉触底
+**说明**：
 监听用户上拉触底事件。
-可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBottomDistance 。
-在触发距离内滑动期间，本事件只会被触发一次。
+* 可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBottomDistance 。
+* 在触发距离内滑动期间，本事件只会被触发一次。
 
-3、onPageScroll：页面滚动
+### onPageScroll
+**解释**：页面滚动
+**说明**：
 监听用户滑动页面事件。
 参数为 Object，包含以下字段：
 
@@ -144,9 +149,11 @@ Page({
 |---- | ---- | ---- |
 |scrollTop|Number|页面在垂直方向已滚动的距离（单位px）|
 
-4、onShareAppMessage：用户点击分享
-用户点击转发按钮的时候会调用
-此事件需要 return 一个 Object，用于自定义转发内容
+### onShareAppMessage
+**解释**：用户点击分享
+**说明**：
+用户点击转发按钮的时候会调用。
+此事件需要 return 一个 Object，用于自定义转发内容。
 
 ** 自定义转发字段 **
 
@@ -187,12 +194,25 @@ Page({
 })
 ```
 
-## Page.prototype.setData()
+## Page.prototype.setData
 
-<div class="notice">解释： </div>
-setData 函数，用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化，会引起视图层的更新。
+**解释**：setData 函数，用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化，会引起视图层的更新。
+**参数说明**
 
-**<div class="notice">示例： </div>**
+|属性|类型|是否必填|描述|
+|--|--|--|--|
+|data|	Object|	是|	这次要改变的数据|	
+|callback	|Function|	否	|setData引起的界面更新渲染完毕后的回调函数|
+
+**说明**：
+* Object 以 key: value 的形式表示，将 this.data 中的 key 对应的值改变成 value。
+    key 可以以数据路径的形式给出，支持改变数组中的某一项或对象的某个属性，如 array[2].message，a.b.c.d，并且不需要在 this.data 中预先定义。
+* 直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致。
+* 仅支持设置可 JSON 化的数据。
+* 请不要把 data 中任何一项的 value 设为 undefined ，否则这一项将不被设置并可能遗留一些潜在问题。
+
+
+**示例：**
 
 ```xml
 <view>{{name}}</view>

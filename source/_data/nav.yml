@@ -310,6 +310,22 @@
                     link: /develop/framework/app_service_page/#初始化数据
                     text: 初始化数据
                     name: app_service_page_初始化数据
+                  -
+                    link: /develop/framework/app_service_page/#生命周期函数
+                    text: 生命周期函数
+                    name: app_service_page_生命周期函数
+                  -
+                    link: /develop/framework/app_service_page/#页面相关事件处理函数
+                    text: 页面相关事件处理函数
+                    name: app_service_page_页面相关事件处理函数
+                  -
+                    link: /develop/framework/app_service_page/#事件处理函数
+                    text: 事件处理函数
+                    name: app_service_page_事件处理函数
+                  -
+                    link: /develop/framework/app_service_page/#Page-prototype-setData
+                    text: Page.prototype.setData
+                    name: app_service_page_Page-prototype-setData                                                                               
               -
                 link: /develop/framework/app_service_getcurrentpages
                 text: 页面路由
