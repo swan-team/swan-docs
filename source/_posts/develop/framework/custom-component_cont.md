@@ -7,10 +7,11 @@ sidebar: custom-component_cont
 
 
 ### 组件间通信
-
 组件间的基本通信方式有以下几种：
-- 父组件可以通过设置子组件的properties来设置数据。
-- 子组件可以使用dispatch方法，父组件中定义messages，对于dispatch方法进行拦截，从而达到子组件向上通讯。
+- 父组件可以通过设置子组件的properties来设置数据；
+- 子组件可以使用dispatch方法，父组件中定义messages，对于dispatch方法进行拦截，从而达到子组件向上通讯；
+- 子组件可以通过触发父组件的自定义事件进行传参，可以传递任意数据（基础库版本 2.0.3）；
+- 如果以上几种方式不足以满足需要，父组件还可以通过 this.selectComponent 方法获取子组件实例对象，这样就可以直接访问组件的任意数据和方法。
 
 ### 监听事件
 <div class="notice">解释： </div>
@@ -20,6 +21,7 @@ sidebar: custom-component_cont
 
 **示例： **
 ```xml
+<!-- 父组件模板 -->
 <component-tag-name bindmyevent="onMyEvent" />
 ```
 
@@ -29,7 +31,7 @@ sidebar: custom-component_cont
 
 **示例： **
 ```js
-// 父组件
+/* 父组件逻辑 */
 Component({
     messages: {
         'childmessage': function (e) {
@@ -39,7 +41,7 @@ Component({
 });
 ```
 ```js
-// 子组件
+/* 子组件逻辑 */
 Component({
     created() {
         this.dispatch('childmessage', {
@@ -74,3 +76,5 @@ Page({
     onMyEvent: function (e) {}
 })
 ```
+**注意**：
+- 自定义组件触发事件时，需要使用 triggerEvent 方法，对于传递数据的格式，从 2.0.3 开始支持传递任意参数类型，其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。

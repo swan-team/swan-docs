@@ -84,7 +84,7 @@ Component({
 在 properties 定义段中，属性名应该采用驼峰写法（propsName）；在 `swan` 模板中，指定属性值时则对应使用连字符写法（ `component-tag-name props-name="props value"` ）。
 
 **说明**：
-- 使用 this.data 可以获取内部数据和属性值，但不要直接修改它们，应使用 setData 修改。
-- 属性名应避免以 data- 开头，因为在 SWAN 中， `data-xyz='xxx'` 会被作为节点 dataset 来处理。
-- 属性名应避免以 prop- 开头 在处理过程中会将该前缀删除。
+- 使用 this.data 可以获取内部数据和属性值，但不要直接修改它们，应使用 setData 修改；
+- 属性名应避免以 data- 开头，因为在 SWAN 中， `data-xyz='xxx'` 会被作为节点 dataset 来处理；
+- 属性名应避免以 prop- 开头 在处理过程中会将该前缀删除；
 - 属性名应避免包含 “ _ ” 字符, 因为在渲染过程中将会以 “ _ ” 字符进行拆分。
