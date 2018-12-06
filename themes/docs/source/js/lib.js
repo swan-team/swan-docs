@@ -1,9 +1,3 @@
-/**
- * @file 公共方法
- * @author jingxiangzheng@baidu.com
- * 1.端能力相关的公共方法
- * 2.基础环境判断
- */
 function smartAppIosInvoke(scheme) {
     var elem = document.createElement('iframe');
     var body = document.body || document.getElementsByTagName('body')[0];

@@ -128,7 +128,9 @@ function searchFunc(path, searchId, contentId) {
                                 // highlight all keywords
                                 keywords.forEach(function (keyword) {
                                     var reg = new RegExp(keyword, 'gi');
-                                    match_content = match_content.replace(reg, '<em class="search-keyword">' + keyword + '</em>');
+                                    match_content = match_content.replace(reg, function (str) {
+                                        return '<em class="search-keyword">' + str + '</em>';
+                                    })
                                 });
 
                                 str += '<p class="search-result">' + match_content + '...</p>';
