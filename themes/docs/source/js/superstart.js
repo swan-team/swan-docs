@@ -153,11 +153,6 @@
                 return false;
             });
         },
-        /**
-         * 部分页面需要在侧边栏隐藏
-         * @description 配置在_config.yml中，增加sidebarIgnore:list
-         * @author jingxiangzheng@baidu.com
-         */
         initHiddenbar: function(){
             var sidebarIgnore = window.localData.sidebarIgnore;
             sidebarIgnore = sidebarIgnore.split(',');
@@ -407,32 +402,11 @@
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (after > ctx.screenHeight) {
                         if (before < after) {
-                            // if (!$('header').hasClass('m-doc-header-hide')) {
-                            //     $('header').addClass('m-doc-header-hide');
-                            //     setTimeout(function() {
-                            //         $('header').removeClass('m-doc-header-hide');
-                            //     }, 350);
-                            // } else if (!$('header').hasClass('m-doc-header-show')) {
-                            //     $('header').addClass('m-doc-header-show');
-                            // }
-
                             $('header').addClass('m-doc-header-show-crumbs');
                         } else {
-                            // if ($('header').hasClass('m-doc-header-show')) {
-                            //     $('header').removeClass('m-doc-header-show');
-                            // } else if ($('header').hasClass('m-doc-header-hide')) {
-                            //     $('header').removeClass('m-doc-header-hide');
-                            // }
-
                             $('header').removeClass('m-doc-header-show-crumbs');
                         }
                     } else {
-                        // if ($('header').hasClass('m-doc-header-show')) {
-                        //     $('header').removeClass('m-doc-header-show');
-                        // } else if ($('header').hasClass('m-doc-header-hide')) {
-                        //     $('header').removeClass('m-doc-header-hide');
-                        // }
-
                         $('header').removeClass('m-doc-header-show-crumbs');
                     }
                     
@@ -520,7 +494,7 @@
                     ctx.initBottomPage();
                     ctx.initInvokeDemo();
                     if (callback) {
-                        callback();
+                        win.setTimeout(callback, 100);
                     }
                 },
                 error: function () {
