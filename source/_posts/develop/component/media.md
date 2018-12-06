@@ -365,6 +365,7 @@ Page({
 * camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库2.20.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
+* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>reateCameraContext</a>
 
 **示例：**
 
