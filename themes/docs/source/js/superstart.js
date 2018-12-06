@@ -187,7 +187,7 @@
             var previous = 0;
             if (!options) options = {};
             var later = function() {
-                previous = options.leading === false ? 0 : +new Date();;
+                previous = options.leading === false ? 0 : +new Date();
                 timeout = null;
                 result = func.apply(context, args);
                 if (!timeout) context = args = null;

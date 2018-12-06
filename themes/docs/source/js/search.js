@@ -154,4 +154,4 @@ function searchFunc(path, searchId, contentId) {
 
         }
     });
-};
+}
