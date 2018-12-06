@@ -17,7 +17,8 @@
     }
 
 
-    for (var j = 0; j < nav ? nav.length : 0; j++) {
+    var navLen = nav ? nav.length : 0;
+    for (var j = 0; j < navLen; j++) {
         var h1List = nav[j].sidebar;
         localData[nav[j].name] = true;
         for (var k = 0; k < h1List.length; k++) {
