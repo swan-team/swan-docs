@@ -67,9 +67,9 @@ sidebar: nav
 ```xml
 <!-- navigator.swan -->
 <view class="swan-demo">
-	<navigator url="pages/navigate/navigate" hover-class="navigator-hover">跳转到新页面</navigator>
-	<navigator url="pages/detail/detail" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
-	<navigator url="pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+	<navigator url="/pages/navigate/navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+	<navigator url="/pages/detail/detail" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+	<navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
 </view>
 
 ```
