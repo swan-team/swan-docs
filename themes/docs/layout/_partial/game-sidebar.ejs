@@ -1,11 +1,17 @@
 <div class="p-sidebar-mask"></div>
 <div class="p-sidebar">
+    <% if (locals.categoryName === 'api' || locals.categoryName === 'tutorials') { %>
+        <div class="p-sidebar-dev-link">
+            <a href="<%- config.root %>game/api/ad/bannerAd/#bannerAd-destroy">API</a>
+            <a href="<%- config.root %>game/tutorials/tutorials/tutorials/">教程</a>
+        </div>
+    <% } %>
     <ul class="p-sidebar-list">
         <%
             var categoryPosts = [];
             var rootPosts = [];
             site.posts.sort('priority path').each(function(post, i) {
-                if (post.categoryName === locals.categoryName) {
+                if (post.categoryName === locals.categoryName && !post.draft) {
                     categoryPosts.push(post);
 
                     if (post.level === 'root') {
