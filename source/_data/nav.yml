@@ -1741,7 +1741,11 @@
                 link: /develop/api/open_userinfo
                 text: 用户信息
                 name: open_userinfo
-                sidebar:
+                sidebar:                 
+                  -
+                    link: /develop/api/open_userinfo/#swanid机制说明
+                    text: swanid机制说明
+                    name: open_userinfo_swanid机制说明               
                   -
                     link: /develop/api/open_userinfo/#getSwanId
                     text: getSwanId
