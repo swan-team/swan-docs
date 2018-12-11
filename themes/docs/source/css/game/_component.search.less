@@ -33,6 +33,7 @@
 .top-search-box-focus {
     width: 220px;
     padding-left: 40px;
+    padding-right: 40px;
     background: #fff;
 }
 .top-search-box-focus #local-search-input {
@@ -103,12 +104,11 @@
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-
-        padding: 20px;
-        background-color: @color-light;
+        padding: 0 20px 0 10px;
+        background-color: #f0f1f6;
 
         p {
-            color: #aaa;
+            color: #5C6163;
         }
     }
 
@@ -128,7 +128,6 @@
 }
 
 .article-search-result h1 {
-
     text-align: center;
 }
 
@@ -164,4 +163,19 @@ article pre code {
     padding: @padding-smaller @padding;
     font-size: 0.9em;
     margin-bottom: 10px;
+}
+
+/* sidebar 移动端适配 */
+@media only screen and (max-width: 768px) {
+
+    .top-search-box {
+        margin-right: 60px;
+    }
+
+    .top-search-box-focus {
+        width: calc(100% - 30px) !important;
+        left: 80px;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
 }

@@ -1,6 +1,6 @@
 ---
 title: fileSystemManager.readdir()
-layout: doc
+layout: gamedoc
 topic: file
 ---
 

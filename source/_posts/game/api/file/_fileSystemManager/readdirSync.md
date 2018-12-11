@@ -1,6 +1,6 @@
 ---
 title: fileSystemManager.readdirSync()
-layout: doc
+layout: gamedoc
 topic: file
 ---
 

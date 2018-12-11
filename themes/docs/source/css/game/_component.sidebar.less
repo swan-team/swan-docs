@@ -17,7 +17,7 @@
     box-sizing: border-box;
     font-size: 0.9rem;
     border-right: 1px solid #EEEEEE;
-    padding-top: 86px;
+    padding-top: 96px;
     padding-bottom: 40px;
     overflow-y: auto;
     bottom: 0;
@@ -39,10 +39,7 @@
     }
 
     .p-sidebar-list {
-
         max-height: 100%;
-        // user-select: none;
-        // -webkit-user-select: none;
     }
 
         .p-sidebar-item {
@@ -50,7 +47,6 @@
             a {
 
                display: block;
-               //
                 color: @color-darkest;
                 transition-duration: 0.2s;
             }
@@ -66,9 +62,8 @@
                 color: #333;
                 //font: inherit;
                 // vertical-align: baseline;
-
-
             }
+
                 .p-sidebar-toggle {
                     width: 15px;
                     height: 15px;
@@ -120,11 +115,9 @@
                     .p-sidebar-item-level2 {
 
                         &.is-active>a {  //当前选中状态
-
                             color: #38f;
                             background-color: rgba(51,136,255,.08);
                             border-left: 2px solid #38f
-
                         }
 
                         a {  //正常子层级状态
@@ -141,11 +134,9 @@
                         }
 
                         &:hover a {  //鼠标hover
-
                             transition: transform .15s linear;
                             color: #38f;
                             box-shadow: right 40px 0 0 #38f;
-                            //background-color:rgba(51, 136, 255, 0.08);
                         }
 
                     }

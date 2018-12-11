@@ -41,7 +41,6 @@ article {
     h1, h2, h3, h4, h5 {
         &:first-child {
             margin-top: 0;
-
         }
 
     }
@@ -97,8 +96,16 @@ article {
         box-sizing: border-box;
     }
 
-    thead tr {
+    table code {
+        font-size: 14px;
+        padding: 0px 0px;
+        white-space: nowrap;
+        background: transparent;
+        word-wrap: break-word;
+        font-family:"PingFang SC", "STHeiti SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif !important;
+    }
 
+    thead tr {
         color:#8d8d8d;
         background-color: @color-light;
     }

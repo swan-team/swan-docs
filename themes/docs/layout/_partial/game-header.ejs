@@ -25,11 +25,11 @@
                         case 'introduction': %>
                             介绍
                             <% break; %>
-                        <% case 'api': %>
-                            API
+                        <% case 'design': %>
+                            设计
                             <% break; %>
-                        <% case 'tutorials': %>
-                            教程
+                        <% case 'api': %>
+                            研发
                             <% break; %>
                         <% case 'data': %>
                             数据
@@ -44,19 +44,19 @@
 
             <ul>
                 <li class="<% if (page.categoryName === 'introduction') { %>is-active<% } %>">
-                    <%- link_to('introduction/prerare/enter_application/', '介绍') %>
+                    <%- link_to('game/introduction/prerare/enter_application/', '介绍') %>
+                </li>
+                <li class="<% if (page.categoryName === 'design') { %>is-active<% } %>">
+                    <%- link_to('game/design/overview/introduction/', '设计') %>
                 </li>
                 <li class="<% if (page.categoryName === 'api') { %>is-active<% } %>">
-                    <%- link_to('api/openApi/authorize/', 'API') %>
-                </li>
-                <li class="<% if (page.categoryName === 'tutorials') { %>is-active<% } %>">
-                    <%- link_to('tutorials/tutorials/tutorials/', '教程') %>
+                    <%- link_to('game/api/file/fileSystemManager/', '研发') %>
                 </li>
                 <li class="<% if (page.categoryName === 'data') { %>is-active<% } %>">
-                    <%- link_to('data/feature/concept/', '数据') %>
+                    <%- link_to('game/data/feature/concept/', '数据') %>
                 </li>
                 <li class="<% if (page.categoryName === 'operations') { %>is-active<% } %>">
-                    <%- link_to('operations/service/specification/', '运营') %>
+                    <%- link_to('game/operations/service/specification/', '运营') %>
                 </li>
             </ul>
         </nav>
