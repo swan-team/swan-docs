@@ -1,7 +1,6 @@
 ---
 title: 选择组件
 header: design
-
 sidebar: selection
 categoryName: design
 topic: component

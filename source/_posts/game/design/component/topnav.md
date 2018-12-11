@@ -1,7 +1,6 @@
 ---
 title: 顶部导航栏
 header: design
-
 sidebar: topnav
 categoryName: design
 topic: component
