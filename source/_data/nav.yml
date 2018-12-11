@@ -53,14 +53,18 @@
                 link: /introduction/feed
                 text: 信息流投放管理   
                 name: feed  
-        - 
-            sidebar:                               
+        -
+            link: /introduction/intro
+            text: 搜索流量接入 
+            sidebar:
               -
                 link: /introduction/intro
                 text: 自然搜索管理
-                name: intro
-         
-
+                name: intro            
+              -
+                link: /introduction/rank
+                text: 接入自然搜索
+                name: rank                                              
 # 2
 -
   link: /design/overview/introduction
@@ -2201,11 +2205,11 @@
               link: /develop/third/error
               text: 通用错误码对照表
               name: error            
-    -
-      link: /develop/flow
-      text: 搜索流量接入
-      name: flow
-      sidebar:
+    # -
+    #   link: /develop/flow
+    #   text: 搜索流量接入
+    #   name: flow
+    #   sidebar:
         # -
         #   link: /develop/flow/intro
         #   text:
@@ -2215,38 +2219,38 @@
         #       link: /develop/flow/intro
         #       text: 概述
         #       name: intro
-        -
-          link: /develop/flow/rank
-          text:
-          name: rank
-          sidebar:
-            -
-              link: /develop/flow/rank
-              text: 接入自然搜索
-              name: rank
-    -
-      link: /develop/web
-      text: Web 化配置
-      name: web
-      sidebar:   
-        -
-          link: /develop/web/start
-          text:
-          name: start
-          sidebar:
-            -
-              link: /develop/web/start
-              text: 配置开启 Web化
-              name: start
-        -
-          link: /develop/web/detail
-          text:
-          name: detail
-          sidebar:
-            -
-              link: /develop/web/detail
-              text: 代理域名配置详解
-              name: detail                
+    #     -
+    #       link: /develop/flow/rank
+    #       text:
+    #       name: rank
+    #       sidebar:
+    #         -
+    #           link: /develop/flow/rank
+    #           text: 接入自然搜索
+    #           name: rank
+    # -
+    #   link: /develop/web
+    #   text: Web 化配置
+    #   name: web
+    #   sidebar:   
+    #     -
+    #       link: /develop/web/start
+    #       text:
+    #       name: start
+    #       sidebar:
+    #         -
+    #           link: /develop/web/start
+    #           text: 配置开启 Web化
+    #           name: start
+    #     -
+    #       link: /develop/web/detail
+    #       text:
+    #       name: detail
+    #       sidebar:
+    #         -
+    #           link: /develop/web/detail
+    #           text: 代理域名配置详解
+    #           name: detail                
 # 4
 -
   link: /data/concept
