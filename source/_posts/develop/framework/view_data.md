@@ -12,6 +12,12 @@ SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
 
 ### 基础数据绑定
 数据绑定和许多模板引擎一样，数据包裹在双大括号里面。
+双向绑定的数据需包裹在`{=  =}`中。
+
+**例如**：
+组件 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
+* `scroll-top="{= scrollTop =}"`
+* `scroll-left="{= scrollLeft =}"`
 
 <br />
 

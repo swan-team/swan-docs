@@ -62,21 +62,21 @@ sidebar: register
 
 ### 审核通过
 
-1. 信息审核通过后，单击“尽快完成认证”，验证主题的真实性。
+1. 信息审核通过后，单击“尽快完成认证”，验证主体的真实性。
 ![图片](../../img/introduction/register/register-06.png)
 
 2. 单击“对公验证”，进入对公打款页面。
 ![图片](../../img/introduction/register/register-07.png)
 3. 对公打款：填写企业对公银行开户信息。 
-![图片](../../img/introduction/register/register-08.png)
+![图片](../../img/introduction/register/register-15.png)
     回填金额
-![图片](../../img/introduction/register/register-09.png)
+![图片](../../img/introduction/register/register-16.png)
 4. 单击“小程序优惠通道”。
-![图片](../../img/introduction/register/register-10.png)
+![图片](../../img/introduction/register/register-17.png)
 5. 单击开通优惠通道，请于60天内完成至少一个小程序的发布
-![图片](../../img/introduction/register/register-11.png)
+![图片](../../img/introduction/register/register-18.png)
 6. 认证完成
-![图片](../../img/introduction/register/register-12.png)
+![图片](../../img/introduction/register/register-19.png)
 
 ### 获取用户手机号权限申请
 
