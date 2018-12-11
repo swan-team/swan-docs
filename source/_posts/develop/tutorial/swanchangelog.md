@@ -9,14 +9,16 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|2.15.7|2018.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
+|2.15.9|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
+|2.15.7|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.15.5|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p>修复slider backgroundColor设置transparent无效的问题。|
 
 ## 2.10版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|2.10.15|2018.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
+|2.10.16|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
+|2.10.15|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.10.14|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
 |2.10.11|2018.11.27|**New**<p>新增 API：getEnvInfoSync|
 |2.10.9|2018.11.22|**New**<p>**·** image 加载增加 catch；<p>**·** animation step方法支持链式调用；<p>**·** video 组件 ios h5占位图增加poster。<p>**Breaking Change** <p>**·** extension 路径优化，通用端能力注册；<p>**·** button组件type为primary和warn时去掉黑框描边；<p>**·** video组件使用s-if显示视频时发送两次open优化为发一次；<p>**·** video组件android去掉针对10.8.5低版本patch。<p>**BugFix**<p>**·** 修复appOnshow和pageOnload乱序bug；<p>**·** 修复onPageNotFound；<p>**·** video组件android上去掉所有手势后绑定bindpaly等非touch事件滑动视频页面不能滑动的bug。|
@@ -26,7 +28,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|2.5.24|2018.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
+|2.5.26|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
+|2.5.24|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.5.23|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
 |2.5.20|2018.11.27|**New**<p>新增 API：getEnvInfoSync|
 |2.5.17|2018.11.22|**New**<p>**·** image加载增加catch；<p>**·** animation step方法支持链式调用。<p>**Breaking Change** <p>**·** button组件type为primary和warn时去掉黑框描边；<p>**·** video组件ios h5占位图增加poster；<p>**·** android去掉针对10.8.5低版本patch。<p>**BugFix**<p>**·** 修复appOnshow和pageOnload乱序bug；<p>**·**  android上去掉所有手势后绑定bindpaly等非touch事件滑动视频页面不能滑动的bug。|
@@ -40,7 +43,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|2.0.33|2018.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
+|2.0.35|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
+|2.0.33|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.0.32|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
 |2.0.28|2018.11.27|**New**<p>新增 API：getEnvInfoSync|
 |2.0.25|2018.11.22|**New**<p>**·** image加载增加catch；<p>**·** animation step方法支持链式调用。<p>**Breaking Change** <p>**·** button组件type为primary和warn时去掉黑框描边；<p>**·** video组件ios h5占位图增加poster；<p>**·** android去掉针对10.8.5低版本patch。<p>**BugFix**<p>**·** 修复appOnshow和pageOnload乱序bug；<p>**·**  android上去掉所有手势后绑定bindpaly等非touch事件滑动视频页面不能滑动的bug。|
