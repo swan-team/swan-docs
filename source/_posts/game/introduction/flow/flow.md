@@ -2,6 +2,7 @@
 title: 什么是百度信息流
 layout: gamedoc
 categoryName: introduction
+sidebar: flow
 topic: flow
 priority: 03-01
 ---
@@ -24,6 +25,6 @@ priority: 03-01
 
 #### 投放流程
 
-![](/img/flow/fileraw.png)
+![](/images/flow/fileraw.png)
 
 蓝色为您需要进行的操作，我们将在 1~2 个工作日完成审核，尽快完成投放策略配置。

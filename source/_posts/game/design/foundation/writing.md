@@ -1,6 +1,6 @@
 ---
 title: 措辞
-header: design
+layout: gamedoc
 sidebar: writing
 categoryName: design
 topic: foundation
@@ -15,7 +15,7 @@ topic: foundation
 
 #### 用词说明
 * 考虑面向的主要是普通用户，在不影响信息传达的前提下，尽量使用中文表达。
-* 设计文案时，语气应友好、谦逊、可靠、积极，并专注聚集于用户。避免行业专用术语、缩写或生造概念，如：“Tab栏”，“Feed流”，“服务器数据异常”等。
+* 设计文案时，语气应友好、谦逊、可靠、积极，并专注聚集于用户。避免行业专用术语、缩写或生造概念，如：“Tab 栏”，“Feed 流”，“服务器数据异常”等。
 * 为保证句子简洁，可使用短语，如“收藏成功”更优于“你已将此网页成功收藏至收藏中心”。
 
 <div class="m-doc-custom-examples">

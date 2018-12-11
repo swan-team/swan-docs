@@ -1,6 +1,6 @@
 ---
 title: 层次感
-header: design
+layout: gamedoc
 nav: principle
 sidebar: hierarchical
 categoryName: design
@@ -126,8 +126,8 @@ topic: principle
 不打断用户流程，会自动消失，适用于轻量级的提示，详见[反馈提示](../../component/toast)。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="/img/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文Toast 适用于操作成功反馈。
-		2.纯文Toast 适用于情况说明和提醒。</p>
+		<img src="/img/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文 Toast 适用于操作成功反馈。
+		2.纯文 Toast 适用于情况说明和提醒。</p>
 	</div>
 </div>
 

@@ -1,11 +1,11 @@
 ---
 title: 提示框
-header: design
-
+layout: gamedoc
 sidebar: dialog
 categoryName: design
 topic: component
 ---
+
 提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，原界面加上蒙层以聚焦用户注意力，页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
 综上，请谨慎使用提示框，因为它们会分散用户的注意力，并且打断用户的任务路径。
 <div class="m-doc-custom-examples">
@@ -15,7 +15,7 @@ topic: component
 </div>
 
 ## 元素解构
-智能小程序提供统一提示框，开发者可以配置其标题、内容及操作按钮的数量（1-2个）和按钮文字颜色。
+智能小程序提供统一提示框，开发者可以配置其标题、内容及操作按钮的数量（1~2个）和按钮文字颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="/img/design/component/dialog/2.png">
@@ -28,7 +28,7 @@ topic: component
 </div>
 
 ### 标题
-提示框的标题默认存在，用于明确提示的类型或主题，建议精简表达，控制在8个中文字符内。
+提示框的标题默认存在，用于明确提示的类型或主题，建议精简表达，控制在 8 个中文字符内。
 如提示的内容简单，开发者可以选择去掉标题。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -65,7 +65,7 @@ topic: component
 		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">内容与标题重复，强迫性语气令人不适。</p>
 	</div>
 </div>
-对话框内容应精简，并控制在50汉字以内，但当内容说明不可避免需要详细说明时，提示框支持用户在内容区内上下滑动查看详细信息。此时。提示框标题、底部按钮，蒙层及背后的页面元素不会跟随滑动。
+对话框内容应精简，并控制在 50 汉字以内，但当内容说明不可避免需要详细说明时，提示框支持用户在内容区内上下滑动查看详细信息。此时。提示框标题、底部按钮，蒙层及背后的页面元素不会跟随滑动。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="/img/design/component/dialog/6.png">
@@ -75,7 +75,7 @@ topic: component
 </div>
 
 ### 操作区
-支持1-2项操作，默认情况下为双操作按钮，左侧为“取消”（可选），右侧为“确定”。
+支持 1~2 项操作，默认情况下为双操作按钮，左侧为“取消”（可选），右侧为“确定”。
 按钮文案文字颜色和内容均可配，最多支持4个中文字符。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
@@ -86,7 +86,7 @@ topic: component
 </div>
 
 #### 双操作按钮
-对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
+对话框提供 2 种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/component/dialog/8-1.png">
@@ -100,7 +100,7 @@ topic: component
 
 #### 单操作按钮
 提示框用于同步用户重要信息时并仅要求其确认知晓，其操作区通常为单操作按钮。
-根据场景不同，我们建议整体考虑按钮文案，最多可支持4个中文字符。
+根据场景不同，我们建议整体考虑按钮文案，最多可支持 4 个中文字符。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/component/dialog/9-1.png">

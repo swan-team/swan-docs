@@ -1,7 +1,8 @@
 ---
 title: 发布与审核
-layout: gamedoc
+layout: doc
 categoryName: introduction
+sidebar: release
 topic: prerare
 priority: 01-05
 ---

@@ -2,10 +2,10 @@
 title: 信息流投放管理
 layout: gamedoc
 categoryName: introduction
+sidebar: feed
 topic: flow
 priority: 03-02
 ---
-
 
 百度小游戏为开发者提供对接百度生态的能力，为小游戏导入百度信息流流量，旨在打造更加开放、互联互通的小游戏生态。
 
@@ -23,4 +23,4 @@ priority: 03-02
 
 #### 百度信息流
 百度小游戏在百度信息流投放的内容为原生内容，点击该内容将可进入小程序页面，包括大图、三图、左图右文、视频播放等样式。
-![](/img/flow/feed.png)
+![](/images/flow/feed.png)

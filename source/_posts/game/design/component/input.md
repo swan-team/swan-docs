@@ -1,6 +1,6 @@
 ---
 title: 输入组件
-header: design
+layout: gamedoc
 sidebar: input
 categoryName: design
 topic: component

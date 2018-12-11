@@ -1,6 +1,6 @@
 ---
 title: 图片图标
-header: design
+layout: gamedoc
 sidebar: pic
 categoryName: design
 topic: foundation

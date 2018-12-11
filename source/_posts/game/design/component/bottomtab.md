@@ -1,11 +1,11 @@
 ---
 title: 底部标签栏
-header: design
-
+layout: gamedoc
 sidebar: bottomtab
 categoryName: design
 topic: component
 ---
+
 底部标签栏通常用于首页横向视图导航的切换，它始终固定在屏幕底部，不随页面滚动隐藏。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
@@ -27,7 +27,7 @@ topic: component
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>
- 			标签导航栏容器可以放置2-5个标签选项，每个标签栏对应展现其相应的分类内容。
+ 			标签导航栏容器可以放置 2~5 个标签选项，每个标签栏对应展现其相应的分类内容。
 容器颜色默认显示白色，开发者也可以配置相应的颜色，配置时请注意整体页面效果，设计侧建议可以参考后文的个性定制章节。
 		</p>
  	</div>
@@ -43,7 +43,7 @@ topic: component
  		<p>标签选项由图标和选项名称组成，根据用户行为分为三个阶段状态：非选中态、点击态和选中态。其中点击态由小程序统一处理，其他由开发者自行定义。
 1. 图标
     · 需要开发者自行上传选项在选中和非选中的图标；
-    · 图标格式png，尺寸为81*81px，大小限制40kb。
+    · 图标格式png，尺寸为 81*81px，大小限制 40kb。
 2. 选项名称
     · 选项名称在选中态默认黑色，支持自定义；
     · 每个选项名称最多5个中文字符，超出截断。

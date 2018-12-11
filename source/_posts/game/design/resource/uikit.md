@@ -1,16 +1,13 @@
 ---
 title: 资源下载
-header: design
+layout: gamedoc
 nav: resource
 sidebar: uikit
 categoryName: design
 topic: resource
 ---
-
-
 <!-- ### UI Kit
 为方便小程序设计，小程序团队提供智能小程序常用的设计组件资源。 -->
-
 
 <!-- ### 视觉组件库 -->
 为方便小程序开发团队的视觉设计师进行小程序设计，小程序团队提供常用的视觉设计组件资源。

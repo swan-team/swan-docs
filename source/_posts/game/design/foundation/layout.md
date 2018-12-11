@@ -1,6 +1,6 @@
 ---
 title: 布局排版
-header: design
+layout: gamedoc
 sidebar: layout
 categoryName: design
 topic: foundation
@@ -8,7 +8,7 @@ topic: foundation
 
 ## 布局
 #### 基础布局
-基于宽度750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区留出至少左右边距34px（17pt），以限制内容宽度以获得最佳的可读性。
+基于宽度 750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区留出至少左右边距 34px（17pt），以限制内容宽度以获得最佳的可读性。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/1-1.png">
@@ -25,30 +25,30 @@ topic: foundation
 </div>
 
 #### iPhoneX 布局适配
-在竖向布局上，iPhone X需要格外关注关注底部Home指示区的配置。
-iPhone X 的Home指示区默认透明，如小程序未使用底部标签栏组件，需注意此区域不可布局可操作UI元素，避免误操作。
+在竖向布局上，iPhone X 需要格外关注关注底部 Home 指示区的配置。
+iPhone X 的 Home 指示区默认透明，如小程序未使用底部标签栏组件，需注意此区域不可布局可操作 UI 元素，避免误操作。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/2.png">
 	</div>
 </div>
 
-如开发者使用小程序底部标签栏，底部Home指示区会自动适配底部标签栏的背景颜色。
+如开发者使用小程序底部标签栏，底部 Home 指示区会自动适配底部标签栏的背景颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/3.png">
 	</div>
 </div>
 
-如开发者自主开发底部栏（如购物栏，评论栏）时，可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/">.view_css</a>适配iPhone X，把底部HOME指示区颜色适配为与底部栏一致。
+如开发者自主开发底部栏（如购物栏，评论栏）时，可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/">.view_css</a>适配 iPhone X，把底部 Home 指示区颜色适配为与底部栏一致。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/4-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">Home指示区已正确配置，颜色#FFFFFF与底部栏一致</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text"> Home 指示区已正确配置，颜色 #FFFFFF 与底部栏一致</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="/img/design/foundation/layout/4-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">Home指示区未正确配置</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text"> Home 指示区未正确配置</p>
 	</div>
 </div>
 
@@ -57,9 +57,9 @@ iPhone X 的Home指示区默认透明，如小程序未使用底部标签栏组�
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/5-1.png">
-		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z型）
+		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z 型）
 1. 从左侧开始，视线向右水平移动阅读；
-2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。</p>
+2. 视线下移至最左侧，重复第 1 步，从上往下逐行阅读。</p>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/foundation/layout/5-2.png">

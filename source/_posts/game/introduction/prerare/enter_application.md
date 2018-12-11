@@ -2,6 +2,7 @@
 title: 百度小游戏入驻申请
 layout: gamedoc
 categoryName: introduction
+sidebar: enter_application
 topic: prerare
 priority: 01-01
 ---

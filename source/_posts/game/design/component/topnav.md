@@ -1,6 +1,6 @@
 ---
 title: 顶部导航栏
-header: design
+layout: gamedoc
 sidebar: topnav
 categoryName: design
 topic: component
@@ -53,7 +53,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 ### 页面标题
 页面标题用于辅助和指示用户当前的位置，它通常描述当前页面/功能名称，或当前智能小程序的名称。
 顶部导航栏默认展现页面标题，开发者也可以选择将其隐藏。
-当标题过长时自动截断，但截断可能会导致用户误解。为保证主流机型显示，设计建议页面标题不超过8个中文字符。
+当标题过长时自动截断，但截断可能会导致用户误解。为保证主流机型显示，设计建议页面标题不超过 8 个中文字符。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/design/component/topnav/4-1.png">

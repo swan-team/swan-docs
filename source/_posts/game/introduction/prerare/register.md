@@ -2,6 +2,7 @@
 title: 注册百度小游戏
 layout: gamedoc
 categoryName: introduction
+sidebar: register
 topic: prerare
 priority: 01-02
 ---

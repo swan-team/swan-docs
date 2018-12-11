@@ -1,5 +1,6 @@
 ---
 title: 列表组件
+layout: gamedoc
 sidebar: list
 categoryName: design
 topic: component
