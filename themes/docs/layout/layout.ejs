@@ -1,4 +1,5 @@
 <%
+
     // 取当前页面各级导航及相关数据
     var header = site.data.nav; // 1级(头部)导航
     var headerIndex; // 当前header索引
@@ -15,7 +16,9 @@
         }
     }
 
-    for (var j = 0; j < nav.length; j++) {
+
+    var navLen = nav ? nav.length : 0;
+    for (var j = 0; j < navLen; j++) {
         var h1List = nav[j].sidebar;
         localData[nav[j].name] = true;
         for (var k = 0; k < h1List.length; k++) {
@@ -29,6 +32,7 @@
             }
         }
     }
+
     for (var n = 0; n < currentPageList.length; n++) {
         if (currentPageList[n].name == page.sidebar) {
             if (n > 0) {
@@ -51,7 +55,7 @@
         <% if (h1) { %> 
             <%= h1 %> - 
         <% }%>
-        <%= header[headerIndex].text %>
+        <%= headerIndex != null ? header[headerIndex].text : '' %>
     </title>
     <link rel="dns-prefetch" href="//smartprogram.baidu.com">
     <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
@@ -70,7 +74,7 @@
     <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
     <script type="text/javascript">
         window.localData = {
-            'headerName': '<%- header[headerIndex].name %>',
+            'headerName': '<%= headerIndex != null ? header[headerIndex].name : '' %>',
             'localData': '<%- JSON.stringify(localData) %>',
             'sidebarIgnore': '<%= config.sidebarIgnore.list %>'
         }; 

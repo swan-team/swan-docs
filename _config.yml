@@ -86,9 +86,14 @@ neat_css:
     - '*.min.css'
 
 neat_js:
-  enable: true
+  enable: false
   mangle: true
   output:
   compress:
   exclude:
     - '*.min.js'
+    - '*.raw.js'
+
+# Markdown Include
+include_markdown:
+  dir: source/_posts

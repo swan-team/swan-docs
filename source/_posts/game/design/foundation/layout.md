@@ -1,0 +1,121 @@
+---
+title: 布局排版
+layout: gamedoc
+sidebar: layout
+categoryName: design
+topic: foundation
+---
+
+## 布局
+#### 基础布局
+基于宽度 750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区留出至少左右边距 34px（17pt），以限制内容宽度以获得最佳的可读性。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/1-1.png">
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)</p>
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="/img/design/foundation/layout/1-2.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中</p>
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="/img/design/foundation/layout/1-3.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过窄，页面元素过于分散</p>
+	</div>
+</div>
+
+#### iPhoneX 布局适配
+在竖向布局上，iPhone X 需要格外关注关注底部 Home 指示区的配置。
+iPhone X 的 Home 指示区默认透明，如小程序未使用底部标签栏组件，需注意此区域不可布局可操作 UI 元素，避免误操作。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/2.png">
+	</div>
+</div>
+
+如开发者使用小程序底部标签栏，底部 Home 指示区会自动适配底部标签栏的背景颜色。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/3.png">
+	</div>
+</div>
+
+如开发者自主开发底部栏（如购物栏，评论栏）时，可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/">.view_css</a>适配 iPhone X，把底部 Home 指示区颜色适配为与底部栏一致。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/4-1.png">
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text"> Home 指示区已正确配置，颜色 #FFFFFF 与底部栏一致</p>
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="/img/design/foundation/layout/4-2.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text"> Home 指示区未正确配置</p>
+	</div>
+</div>
+
+#### 阅读视线流
+中国用户阅读浏览内容的习惯通常是“从左往右，从上往下”，在信息排版时，我们应该把主要的信息内容放在屏幕左上侧。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/5-1.png">
+		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z 型）
+1. 从左侧开始，视线向右水平移动阅读；
+2. 视线下移至最左侧，重复第 1 步，从上往下逐行阅读。</p>
+	</div>
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/5-2.png">
+		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
+1. 从上至下垂直扫描；
+2. 发现感兴趣的内容，视线从左向右水平移动。</p>
+	</div>
+</div>
+
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-warning">
+		<img src="/img/design/foundation/layout/6-1.png">
+		<p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text">传统中文的竖向排版，对于长文本场景阅读效率较低，请谨慎使用。</p>
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="/img/design/foundation/layout/6-2.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">内容横竖排版混用，阅读视线零碎，不建议使用。</p>
+	</div>
+</div>
+
+
+## 排版
+#### 字体
+当用户手机系统未自定义字体时，小程序遵循以下字体展现响应优先级：
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/7.png">
+	</div>
+</div>
+开发者可以在小程序默认字体库的基础上，增加自定义字体库。
+
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/8-1.png">
+		<p class="m-doc-custom-examples-text">开发者使用自定义字体“楷体”; 当用户手机有此自定义字体时，显示自定义“楷体”。</p>
+	</div>
+</div>
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples--correct">
+		<img src="/img/design/foundation/layout/8-2.png">
+		<p class="m-doc-custom-examples-text">发者使用自定义字体“楷体”;用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
+	</div>
+</div>
+
+#### 字号
+建议按场景使用适合的字号，常用场景字号建议如下：
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/9.png">
+	</div>
+</div>
+
+#### 颜色
+建议按使用场景定义文本颜色，常用场景文本颜色建议如下：
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="/img/design/foundation/layout/10.png">
+	</div>
+</div>

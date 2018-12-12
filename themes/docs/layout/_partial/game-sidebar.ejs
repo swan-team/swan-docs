@@ -1,0 +1,51 @@
+<div class="p-sidebar-mask"></div>
+<div class="p-sidebar">
+    <% if (locals.categoryName === 'api' || locals.categoryName === 'tutorials') { %>
+        <div class="p-sidebar-dev-link">
+            <a href="<%- config.root %>game/api/file/fileSystemManager/">API</a>
+            <a href="<%- config.root %>game/tutorials/tutorials/tutorials/">教程</a>
+        </div>
+    <% } %>
+    <ul class="p-sidebar-list">
+        <%
+            var categoryPosts = [];
+            var rootPosts = [];
+            site.posts.sort('priority path').each(function(post, i) {
+                if (post.categoryName === locals.categoryName && !post.draft) {
+                    categoryPosts.push(post);
+
+                    if (post.level === 'root') {
+                        rootPosts.push(post);
+                    }
+                }
+            });
+
+            rootPosts.forEach(function (rootPost) {
+        %>
+        <li class="p-sidebar-item p-sidebar-item-level0">
+            <div class="p-sidebar-item-wrapper">
+                <div class="p-sidebar-toggle"></div>
+                <%- rootPost.title %>
+            </div>
+            <ul class="p-sidebar-list-level1">
+            <%
+                categoryPosts.forEach(function (post) {
+                    if (!post.draft && post.topic === rootPost.topic && post.level != 'root') {
+            %>
+                <li class="p-sidebar-item p-sidebar-item-level1
+                    <% if (post.path == page.path) { %>is-active<% } %>">
+                    <a href="javascript:loadContent('<%- config.root + post.path %>')" data-url="<%- config.root + post.path %>">
+                        <%- post.title %>
+                    </a>
+                </li>
+            <%
+                    }
+                });
+            %>
+            </ul>
+        </li>
+        <%
+        });
+        %>
+    </ul>
+</div>
