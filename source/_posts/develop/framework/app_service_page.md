@@ -20,6 +20,7 @@ sidebar: app_service_page
 |onShow | Function | 页面的生命周期函数 -- 监听页面显示 |
 |onHide | Function | 页面的生命周期函数 -- 监听页面隐藏 |
 |onUnload | Function | 页面的生命周期函数 -- 监听页面卸载 |
+|onForceReLaunch|Function|页面的生命周期函数 -- 制定刷新逻辑|
 |onPullDownRefresh | Function | 页面的事件处理函数 -- 监听用户下拉动作 |
 |onReachBottom | Function | 页面的事件处理函数 -- 上拉触底事件的处理函数 |
 |onShareAppMessage | Function | 页面的事件处理函数 -- 用户点击右上角转发 |
@@ -54,7 +55,9 @@ Page({
     onUnload: function () {
         // do something when page unload
     },
-
+    onForceReLaunch: function () {
+        // do something when page unload
+    },    
     onPullDownRefresh: function () {
         // do something when pull down
     },

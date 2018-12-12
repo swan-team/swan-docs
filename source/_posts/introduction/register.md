@@ -40,7 +40,7 @@ sidebar: register
 
 |类型|定义|所需信息|
 |---|---|---|
-|企业 | 企业、个体工商、企业相关品牌 |1. 企业名称 <br> 2. 营业执照注册号／统一社会信用代码<br>3. 营业执照原件照片<br>4. 企业类型（企业、个人工商户）|
+|企业 | 企业、个体工商、企业相关品牌 |1. 企业名称 <br> 2. 营业执照注册号／统一社会信用代码<br>3. 营业执照原件照片|
 |政府 | 国内、各级、各类政府机构、事业单位、具有行政职能的社会组织等 | 1. 政府名称<br>2. 组织机构代码<br>3. 组织机构代码证原件照片<br>4. 确认公函 |
 |媒体 | 报纸、杂志、电视、电台、通讯社、其他等 | 1. 组织类型<br>2. 组织名称<br>3. 组织机构代码<br> 4. 组织机构代码证原件照片 |
 |其它组织 | 公共场馆、公益机构、学校、社团、民间组织等机构团体申请 | 1. 组织名称<br>2. 组织机构代码<br>3. 组织机构代码证原件照片 |
@@ -55,25 +55,28 @@ sidebar: register
 登记超级管理员身份证姓名、身份证号码并验证手机号。（超级管理员不支持更换）
 ![图片](../../img/introduction/register/register-03.png)
 
-### 确认主体信息
-
-![图片](../../img/introduction/register/register-04.png)
-
 ### 提交并等待审核通知
 
 审核预计需要2个工作日左右。
 
-![图片](../../img/introduction/register/register-05.png)
+![图片](../../img/introduction/register/register-04.png)
 
 ### 审核通过
 
 信息审核通过后，进入首页会有高级认证的链接，点击后跳转到高级认证页面，认证通过即可创建智能小程序并正常使用平台各项功能。
 ![图片](../../img/introduction/register/register-06.png)
 
-对公打款：填写企业对公银行开户信息 → 等待系统向该账户打款 → 查询款项到账情况（预计需要1-2个工作日）→ 在验证页面填写收款金额 → 等待验证结果。
-
+#### 单击对公验证
 ![图片](../../img/introduction/register/register-07.png)
-
+对公打款：填写企业对公银行开户信息 → 回填金额 
+![图片](../../img/introduction/register/register-08.png)
+![图片](../../img/introduction/register/register-09.png)
+#### 单击小程序优惠通道
+![图片](../../img/introduction/register/register-10.png)
+#### 单击开通优惠通道
+![图片](../../img/introduction/register/register-11.png)
+#### 认证完成
+![图片](../../img/introduction/register/register-12.png)
 ### 获取用户手机号权限申请
 
 审核过后，可通过如下操作获取用户手机号权限：
