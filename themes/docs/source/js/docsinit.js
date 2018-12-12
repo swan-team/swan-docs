@@ -15,7 +15,6 @@
     var localSidebar = function () {
         var noop = function () {};
         try {
-
             localStorage.setItem('_t', 1);
             localStorage.removeItem('_t');
 
@@ -55,12 +54,12 @@
     }();
 
     var docs = {
+        schema: 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0',
         screenHeight: win.innerHeight,
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
             this.addEvent();
-            this.mobileAddEvent();
             this.initCrumbs();
             this.initToc();
             this.initHiddenbar();
@@ -91,7 +90,7 @@
             var sidebarSelected = $('.m-doc-sidebar-selected');
             var sidebarFirst = $('.m-doc-nav-on .m-doc-nav-children .m-doc-sidebar-on:first-child .m-doc-h1-children li:first-child a');
             var isFirst = false;
-            sidebarFirst.forEach(function(element) {
+            sidebarFirst.each(function(element) {
                 if ($('.m-doc-sidebar-selected a')[0] && element.href == $('.m-doc-sidebar-selected a')[0].href) {
                     isFirst = true;
                 }
@@ -105,23 +104,6 @@
 
             // 页面滚动到当前h3位置
             ctx.scrollToHash();
-        },
-        caseInvoke: function(scheme) {
-            if (isPc()) {
-                return;
-            }
-            if (isBox()) {
-                // 手百
-                isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
-            } else {
-                // 非手百
-                /*eslint-disable fecs-camelcase*/
-                var openbox = window.OpenBox({
-                    url: location.href
-                });
-                /*eslint-disable fecs-camelcase*/
-                openbox.open();
-            }
         },
         initInvokeDemo: function(){
             if (isPc()){
@@ -148,8 +130,8 @@
             var html = isBox() ? html2 : html1;
             $closest.html(html);
             $('.demo-invoker').click(function() {
-                // win.location.href = 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0';
-                _this.caseInvoke('baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0');
+                // win.location.href = _this.schema;
+                caseInvoke(_this.schema);
                 return false;
             });
         },
@@ -169,59 +151,11 @@
             var wrap = $('.m-doc-custom-examples');
             wrap.html(wrap.html().replace(/<br>/g, ''));
         },
-        debounce: function (fn, delay) {
-            var timer;
-            return function () {
-                var ctx = this;
-                var args = arguments;
-                clearTimeout(timer);
-                timer = setTimeout(function () {
-                    fn.apply(ctx, args)
-                }, (delay ? delay : 300));
-            };
-        },
-        throttle: function (func, wait, options) {
-            var context, args, result;
-            var wait = wait || 1000;
-            var timeout = null;
-            var previous = 0;
-            if (!options) options = {};
-            var later = function() {
-                previous = options.leading === false ? 0 : +new Date();
-                timeout = null;
-                result = func.apply(context, args);
-                if (!timeout) context = args = null;
-            };
-            return function() {
-                var now = +new Date();
-
-                if (!previous && options.leading === false) previous = now;
-
-                var remaining = wait - (now - previous);
-                context = this;
-                args = arguments;
-                if (remaining <= 0 || remaining > wait) {
-                    if (timeout) {
-                        clearTimeout(timeout);
-                        timeout = null;
-                    }
-                    previous = now;
-                    result = func.apply(context, args);
-                    if (!timeout) context = args = null;
-
-                } else if (!timeout && options.trailing !== false) {
-                    timeout = setTimeout(later, remaining);
-                }
-                return result;
-            };        
-        },
         initCrumbs: function () {
-
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
                 crumb = $('.m-doc-sidebar-selected').parents('.m-doc-nav-on').children('.m-doc-nav-list').children('span').html();
             }
-
             $('.m-doc-crumbs-wrapper').find('span').eq(0).text(crumb);
             $('.m-doc-crumbs-wrapper').find('span').eq(1).text(doc.title.substr(0, doc.title.length - 4));
             if ($('.toc-level-2 .toc-text').length > 0) {
@@ -230,7 +164,6 @@
             } else {
                 $('.m-doc-crumbs-wrapper').find('span').eq(2).hide();
             }
-
         },
         _scrollToAnchor: function (element) {
             var href = element && element.href ? element.href : $(this)[0].href;
@@ -308,7 +241,7 @@
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
             // back to top 按钮隐藏/显示
-            $('.m-doc-content-layout').on('scroll', this.debounce(function () {
+            $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
 
                 if (ctx.screenHeight > $(this).scrollTop()) {
@@ -396,9 +329,9 @@
                     });
                 }
             });
-           
+
             if (this.screenWidth > 768) {
-                $('.m-doc-content-layout').on('scroll', this.throttle(function () {
+                $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (after > ctx.screenHeight) {
                         if (before < after) {
@@ -481,13 +414,14 @@
                 url: href,
                 dataType: 'html',
                 success: function (res) {
-                    var article = $(res).find('#article-main-content').html();
+                    var $html = $($.parseHTML(res));
+                    var article = $html.find('#article-main-content').html();
                     $('#article-main-content').html(article);
                     $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
                     if ($('header').hasClass('m-doc-header-hide')) {
                         $('header').removeClass('m-doc-header-hide');
                     }
-                    doc.title = $(res).filter('title').html();
+                    doc.title = $html.filter('title').html();
                     ctx.initCrumbs();
                     ctx.initH2();
                     ctx.initList();
@@ -498,7 +432,7 @@
                     }
                 },
                 error: function () {
-                    window.location.href = href;
+                    win.location.href = href;
                 }
             });
         },
@@ -555,42 +489,6 @@
         }(),
         animation: function (callback) {
             this.rAF.call(win, callback);
-        },
-        mobileAddEvent: function () {
-
-            $('.m-mobile-doc-level1').on('click', function () {
-                $(this).hasClass('m-mobile-level1-list-show')
-                ? $(this).removeClass('m-mobile-level1-list-show')
-                : $(this).addClass('m-mobile-level1-list-show');
-            });
-            $('.m-doc-nav-btn').on('click', function () {
-                $('.m-doc-sidebar-mask').addClass('m-doc-sidebar-mask-show');
-                $('.m-doc-sidebar-nav-wrapper').addClass('m-doc-sidebar-nav-wrapper-show');
-            });
-            $('.m-doc-sidebar-mask').on('click', function () {
-                $('.m-doc-sidebar-mask').removeClass('m-doc-sidebar-mask-show');
-                $('.m-doc-sidebar-nav-wrapper').removeClass('m-doc-sidebar-nav-wrapper-show');
-            });
-            $('.m-doc-sidebar-mask').on('touchmove', function (e) {
-                e.preventDefault();
-            });
-            $('.m-mobile-doc-header-list-mask').on('click', function (e) {
-                $('.m-mobile-doc-level1').removeClass('m-mobile-level1-list-show');
-                e.stopPropagation();
-            });
-            if (this.screenWidth <= 768) {
-                var before = $('.m-doc-content-layout').scrollTop();
-                $('.m-doc-content-layout').on('scroll', this.throttle(function() {
-                    var after = $('.m-doc-content-layout').scrollTop();
-                    if (before < after && after > 60) {
-                        $('header').addClass('m-doc-header-hide');
-                    } else {
-                        $('header').removeClass('m-doc-header-hide');
-                    }
-                    before = after;
-                }, 350));
-            }
-
         },
         /**
          * @function 改造markdown生成的所有h2
@@ -664,7 +562,7 @@
          * @function 如果嵌套的列表在三层或三层以上，第一层字号18px
          */
         initList: function () {
-            $('.article .m-doc-content-inner>ol').forEach(function (element) {
+            $('.article .m-doc-content-inner>ol').each(function (element) {
                 if ($(element).find('ol ol ol').length > 0) {
                     $(element).addClass('multilayer');
                 }
@@ -692,4 +590,4 @@
     $(doc).ready(function () {
         docs.start();
     });
-})(window, document, window.Zepto);
+})(window, document, window.$);

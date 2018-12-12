@@ -78,34 +78,6 @@ sidebar: detail
 
 <div id="webdomain-trans-tools" class="webdomain-trans-tools"><div class="webdomain-trans-box"><input type="text" class="webdomain-trans-input" placeholder="请输入要转换的appkey" /><a class="button" href="javascript:;" onClick="__webdomainTransHandler__()">转换</a></div><div class="webdomain-trans-result"></div></div>
 
-<script>
-function __webdomainTransHandler__(e) {
-    var el = document.getElementById('webdomain-trans-tools');
-    var appkey = el.querySelector('.webdomain-trans-input').value.replace(/^\s+|\s+$/g, '');
-    var ret = el.querySelector('.webdomain-trans-result');
-    var html = '<span style="color: red">你输入的appkey不合法</span>';
-    if(/^\w+$/.test(appkey) && appkey.length === 32) {
-        var prefix = appkey.replace(/[A-Z]/g, function(word){
-            return word.toLocaleLowerCase() + '-';
-        });
-        var id = 't' + ~new Date;
-        var url = 'https://' + prefix + '.smartapps.cn';
-        html = url + '<a class="copy-btn" id="' + id + '" onclick="__showToast__(\'toast-' + id + '\')" href="javascript:;" data-clipboard-text="' + url + '">复制</a> <span class="wd-toast" style="display: none" id="toast-' + id + '">已复制</span>';
-        new ClipboardJS('#' + id);
-    }
-    ret.innerHTML = '转换结果：' + html;
-}
-
-function __showToast__(id) {
-    document.getElementById(id).style.display = 'inline';
-    setTimeout(function(){
-        document.getElementById(id).style.display = 'none';  
-    }, 2000); 
-}
-</script>
-
-
-
 ### 搭建反向代理
 
 以使用nginx搭建反向代理配置为例；
