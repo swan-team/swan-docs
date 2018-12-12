@@ -1,5 +1,5 @@
 <div class="p-sidebar-mask"></div>
-<div class="p-sidebar">
+<div class="p-sidebar <% if (locals.categoryName === 'api' || locals.categoryName === 'tutorials') { %>with-dev-link<% } %>">
     <% if (locals.categoryName === 'api' || locals.categoryName === 'tutorials') { %>
         <div class="p-sidebar-dev-link">
             <a class="<% if (locals.categoryName === 'api') { %>is-active<% } %>"
