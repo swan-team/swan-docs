@@ -13,33 +13,47 @@
     position: absolute;
     width: @navbar-width;
     left: 0;
-    top: 0;
+    top: 60px;
     box-sizing: border-box;
     font-size: 0.9rem;
     border-right: 1px solid #EEEEEE;
-    padding-top: 96px;
+    //padding-top: 96px;
     padding-bottom: 40px;
     overflow-y: auto;
     bottom: 0;
-
-
 }
 
     .p-sidebar-dev-link {
-        margin-bottom: 10px;
+        width: 264px;
+        padding-top: 30px;
         text-align: center;
+        position: fixed;
+        background:#fff;
+        line-height: 30px;
+        z-index: 100;
+        //border-bottom: 1px solid  #EEE;
+        //box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
+
 
         a {
+            width: 100px;
+            background: #f0f1f6;
+            color: #333;
             display: inline-block;
-            margin: 0 5px;
-            padding: 8px 20px;
-            border-radius: 2px;
-            border: 1px solid @color-primary;
+            margin: 0px 10px 15px ;
+            padding: 3px;
+            border-radius: 4px;
+            font-size: 14px;
+            &.is-active{
+                background: #38f;
+                color: #fff;
+            }
         }
     }
 
     .p-sidebar-list {
         max-height: 100%;
+        padding-top: 80px;
     }
 
         .p-sidebar-item {
