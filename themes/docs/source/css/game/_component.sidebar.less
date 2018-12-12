@@ -17,31 +17,24 @@
     box-sizing: border-box;
     font-size: 0.9rem;
     border-right: 1px solid #EEEEEE;
-    //padding-top: 96px;
-    padding-bottom: 40px;
     overflow-y: auto;
     bottom: 0;
 }
 
     .p-sidebar-dev-link {
         width: 264px;
-        padding-top: 30px;
+        padding-top: 25px;
         text-align: center;
         position: fixed;
         background:#fff;
         line-height: 30px;
         z-index: 100;
-        //border-bottom: 1px solid  #EEE;
-        //box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
-
-
         a {
-            width: 100px;
+            width: 90px;
             background: #f0f1f6;
             color: #333;
             display: inline-block;
             margin: 0px 10px 15px ;
-            padding: 3px;
             border-radius: 4px;
             font-size: 14px;
             &.is-active{
@@ -52,8 +45,10 @@
     }
 
     .p-sidebar-list {
+        padding-top: 35px;
         max-height: 100%;
     }
+
     .p-sidebar.with-dev-link .p-sidebar-list {
         padding-top: 80px;
     }
@@ -61,7 +56,6 @@
         .p-sidebar-item {
 
             a {
-
                display: block;
                 color: @color-darkest;
                 transition-duration: 0.2s;
