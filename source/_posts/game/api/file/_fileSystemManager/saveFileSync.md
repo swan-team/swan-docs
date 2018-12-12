@@ -1,6 +1,6 @@
 ### saveFileSync()
 
-`saveFileSync()` 是 fileSystemManager 对象的方法，`saveFile()` 的同步版本，保存临时文件到本地。此接口会移动临时文件，因此调用成功后, `tempFilePath` 将不可用。
+`saveFileSync()` 是 fileSystemManager 对象的方法，[`saveFile()`](#saveFile) 的同步版本，保存临时文件到本地。此接口会移动临时文件，因此调用成功后, `tempFilePath` 将不可用。
 
 ```js
 fileSystemManager.saveFileSync(tempFilePath, filePath)

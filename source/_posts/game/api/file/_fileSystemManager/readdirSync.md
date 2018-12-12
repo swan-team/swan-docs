@@ -1,10 +1,6 @@
----
-title: fileSystemManager.readdirSync()
-layout: gamedoc
-topic: file
----
+### readdirSync()
 
-`readdirSync()` 是 fileSystemManager.readdir() 的同步方法，该方法可读取本地指定路径下的目录。
+`readdirSync()` 是 [fileSystemManager.readdir()](#readdir) 的同步方法，该方法可读取本地指定路径下的目录。
 
 ```js
 fileSystemManager.readdirSync(dirPath)

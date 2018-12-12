@@ -14,6 +14,7 @@ categoryName: api
 <!-- md game/api/file/_fileSystemManager/getFileInfo.md -->
 <!-- md game/api/file/_fileSystemManager/readdir.md -->
 <!-- md game/api/file/_fileSystemManager/readdirSync.md -->
+<!-- md game/api/file/_fileSystemManager/readFile.md -->
 <!-- md game/api/file/_fileSystemManager/rename.md -->
 <!-- md game/api/file/_fileSystemManager/renameSync.md -->
 <!-- md game/api/file/_fileSystemManager/saveFile.md -->

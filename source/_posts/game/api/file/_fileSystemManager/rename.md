@@ -1,6 +1,6 @@
 ### rename()
 
-`rename()` 是 fileSystemManager 对象的方法，该方法可根据传入的 `opts` 参数，重命名文件，可以把文件从 oldPath 移动到 newPath。
+`rename()` 是 fileSystemManager 对象的方法，该方法可根据传入的 `opts` 参数，重命名文件，可以把文件从 `oldPath` 移动到 `newPath`。
 
 ```js
 fileSystemManager.rename(opts)

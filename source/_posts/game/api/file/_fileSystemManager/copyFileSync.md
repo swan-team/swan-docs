@@ -1,6 +1,6 @@
 ### copyFileSync()
 
-`copyFileSync()` 是 fileSystemManager 对象的方法，用于实现文件拷贝，是 copyFile 的同步方法。
+`copyFileSync()` 是 fileSystemManager 对象的方法，用于实现文件拷贝，是 [`copyFile()`](#copyFile) 的同步方法。
 
 
 ```js

@@ -1,6 +1,6 @@
 ### renameSync()
 
-`renameSync()` 是 fileSystemManager 对象的方法，没有返回值，`rename()` 的同步版本，重命名文件，可以把文件从 oldPath 移动到 newPath。
+`renameSync()` 是 fileSystemManager 对象的方法，没有返回值，[`rename()`](#rename) 的同步版本，重命名文件，可以把文件从 `oldPath` 移动到 `newPath`。
 
 ```js
 fileSystemManager.renameSync(oldPath, newPath)

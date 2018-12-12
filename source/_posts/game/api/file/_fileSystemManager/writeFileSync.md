@@ -1,6 +1,6 @@
 ### writeFileSync()
 
-`fileSystemManager.writeFileSync()` 用于写文件，是 `writeFile()` 的同步版本。
+`fileSystemManager.writeFileSync()` 用于写文件，是 [`writeFile()`](#writeFile) 的同步版本。
 
 ```js
 fileSystemManager.writeFileSync(filePath, data, encoding)

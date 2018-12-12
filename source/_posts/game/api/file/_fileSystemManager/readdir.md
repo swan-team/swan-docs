@@ -1,10 +1,6 @@
----
-title: fileSystemManager.readdir()
-layout: gamedoc
-topic: file
----
+### readdir()
 
-`readdir()` 是 fileSystemManager 对象的方法，该方法可读取本地指定路径下的目录。
+`readdir()` 是 fileSystemManager 对象的方法，该方法可读取本地指定路径下的目录内文件列表。
 
 ```js
 fileSystemManager.readdir(opts)

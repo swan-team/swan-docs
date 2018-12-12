@@ -1,6 +1,6 @@
 ### readFile()
 
-`fileSystemManager.readFile()` 用于读文件，是 `readFileSync()` 的异步版本。
+`fileSystemManager.readFile()` 用于读文件，是 [`readFileSync()`](#readFileSync) 的异步版本。
 
 ```js
 fileSystemManager.readFile(opts)

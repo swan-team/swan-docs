@@ -1,6 +1,6 @@
 ### accessSync()
 
-`accessSync()` 是 fileSystemManager 对象的方法，没有返回值，`access()` 的同步版本，判断文件/目录是否存在。
+`accessSync()` 是 fileSystemManager 对象的方法，没有返回值，[`access()`](#access) 的同步版本，判断文件/目录是否存在。
 
 ```js
 fileSystemManager.accessSync(path)

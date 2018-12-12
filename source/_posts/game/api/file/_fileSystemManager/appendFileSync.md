@@ -1,6 +1,6 @@
 ### appendFileSync()
 
-`appendFileSync()` 是 fileSystemManager 对象的方法，没有返回值，`appendFile()` 的同步版本，在文件末尾追加内容。
+`appendFileSync()` 是 fileSystemManager 对象的方法，没有返回值，[`appendFile()`](#appendFile) 的同步版本，在文件末尾追加内容。
 
 ```js
 fileSystemManager.appendFileSync(path, data, encoding)

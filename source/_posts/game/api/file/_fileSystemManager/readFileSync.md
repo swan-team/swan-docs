@@ -1,6 +1,6 @@
 ### readFileSync()
 
-`fileSystemManager.readFileSync()` 用于读文件，是 `readFile()` 的同步版本。
+`fileSystemManager.readFileSync()` 用于读文件，是 [`readFile()`](#readFile) 的同步版本。
 
 ```js
 let data = fileSystemManager.readFileSync(filePath, encoding)
