@@ -241,11 +241,8 @@ function setNavbarLevel3ForApi(callback) {
                     var $childList = $('<ul class="p-sidebar-list-level2"></ul>');
                     for (var c = 0; c < children.length; ++c) {
                         var child = children[c];
-                        var $child = $(`
-                            <li class="p-sidebar-item p-sidebar-item-level2">
-                                <a href="javascript:loadContent('${parentLink}${child.href}')" data-url="${parentLink}${child.href}">${child.title}</a>
-                            </li>
-                        `);
+                        var $child = $('<li class="p-sidebar-item p-sidebar-item-level2"></li>');
+                        $child.html(`<a href="javascript:loadContent('${parentLink}${child.href}')" data-url="${parentLink}${child.href}">${child.title}</a>`);
                         $childList.append($child);
                     }
                     $(parent).append($childList);
