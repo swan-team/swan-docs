@@ -19,11 +19,11 @@ userInfoButton.onTap(callback)
 |-|-|-|
 |res|Object|回调返回对象|
 |res.swanid|string|用户使用智能小程序时的标识符，开发者可以通过 swanid 来区分用户的唯一性|
-|res.userinfo|Object|用户信息对象|
+|res.userInfo|Object|用户信息对象|
 |res.data|string|包括敏感数据在内的完整用户信息的加密数据|
 |res.iv|string|加密算法的初始向量|
 
-`res.userinfo` 对象属性说明：
+`res.userInfo` 对象属性说明：
 
 |属性|类型|描述|
 |-|-|-|
@@ -56,7 +56,7 @@ let button = swan.createUserInfoButton({
     }
 })
 button.onTap(res => {
-    let { userinfo, data, iv, swanid } = res;
-    console.log(userinfo, data, iv, swanid);
+    let { userInfo, data, iv, swanid } = res;
+    console.log(userInfo, data, iv, swanid);
 })
 ```

@@ -11,7 +11,7 @@ swan.getUserCloudStorage(opts);
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
 |opts|Object||是|调用该方法时，传入的对象参数|
-|opts.keyList|Array.<`string\`>||是|要获取的托管数据的 key 列表|
+|opts.keyList|Array.<`string`>||是|要获取的托管数据的 key 列表|
 |opts.success|function| |否|成功回调函数|
 |opts.fail|function| |否|失败回调函数|
 |opts.complete|function| |否|接口调用完成的回调函数（接口成功、失败都会执行）|

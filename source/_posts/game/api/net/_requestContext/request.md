@@ -12,7 +12,7 @@ swan.request(opts)
 |-|-|-|-|
 |url|string||是|开发者服务器接口地址|
 |data|Object<span class="vsplit"></span>string<span class="vsplit"></span>ArrayBuffer||否|请求的参数|
-|header|Object||否|HTTP 请求的 Header，Header 中不能设置 Referer|
+|header|Object||否|HTTP 请求的 Header，Header 中不能设置 Referer。`content-type` 默认为 `application/json`|
 |method|string|GET（需大写）|否|HTTP 请求方法|
 |dataType|string|json|否|返回的数据格式|
 |responseType|string|text|否|响应的数据类型|
@@ -24,7 +24,7 @@ method 合法值：
 
 |属性|描述|
 |-|-|
-|OPTIONS|HTTP 请求 OPTIONS （IOS 暂不支持）|
+|OPTIONS|HTTP 请求 OPTIONS （iOS 暂不支持）|
 |GET|HTTP 请求 GET|
 |HEAD|HTTP 请求 HEAD|
 |POST|HTTP 请求 POST|

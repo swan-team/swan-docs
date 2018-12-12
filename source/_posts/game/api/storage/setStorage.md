@@ -22,11 +22,12 @@ swan.setStorage(opts)
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
 **特别说明：**
-1. 兼容 function 数据的存储，但是 Android 和 IOS 均会将其置为 null。
-2. 对于 ArrayBuffer 的数据，Android 支持, IOS 暂不支持。
-3. 对于 undefined 的数据，Android 支持，IOS 暂不支持， IOS 会对 undefined 数据直接过滤掉。
+1. 兼容 function 数据的存储，但是 Android 和 iOS 均会将其置为 null。
+2. 对于 ArrayBuffer 的数据，Android 支持, iOS 暂不支持。
+3. 对于 undefined 的数据，Android 支持，iOS 暂不支持， iOS 会对 undefined 数据直接过滤掉。
+
 ```javascript
-    举例一： 存储数据中含有 undefined，在 IOS 中 getStorageInfo().keys.length 不包含 undefined 数据长度。
+    举例一： 存储数据中含有 undefined，在 iOS 中 getStorageInfo().keys.length 不包含 undefined 数据长度。
     举例二：
         存入数据为：
         const data = {

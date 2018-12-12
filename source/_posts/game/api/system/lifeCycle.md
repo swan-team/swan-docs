@@ -41,7 +41,7 @@ swan.exit(opts)
 
 |属性|类型|描述|
 |-|-|-|
-|appId|string|调起小游戏的小游戏 id|
+|appId|string|调起小游戏的 appId|
 |extraData|Object|额外的信息|
 
 **示例：**
@@ -79,7 +79,7 @@ swan.offHide(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 `swan.onHide` 时传入的回调函数|
+|callback|function|调用 [`swan.onHide`](#swan-onHide) 时传入的回调函数|
 
 
 ### swan.onShow()
@@ -127,4 +127,4 @@ swan.offShow(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 `swan.onShow` 时传入的回调函数|
+|callback|function|调用 [`swan.onShow`](#swan-onShow) 时传入的回调函数|

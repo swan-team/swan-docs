@@ -24,3 +24,7 @@ setTimeout(function () {
     console.log(end - start);
 }, 1000);
 ```
+
+### swan.triggerGC()
+
+触发 JavaScript 引擎进行内存回收。

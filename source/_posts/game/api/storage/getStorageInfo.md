@@ -27,7 +27,7 @@ swan.getStorageInfo(opts)
 
 |属性|类型|描述|
 |-|-|-|
-|res.keys|Array.<string\>|当前 storage 中所有的 key|
+|res.keys|Array.<`string`>|当前 storage 中所有的 key|
 |res.currentSize|number|当前占用的空间大小, 单位 KB|
 |res.limitSize|number|当前占用的空间大小, 单位 KB|
 

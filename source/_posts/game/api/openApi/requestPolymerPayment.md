@@ -22,7 +22,7 @@ swan.requestPolymerPayment(opts)
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
 |opts.orderInfo|Object|是|订单信息|
-|opts.bannedChannels|Array.<`string\`>|否| 需要隐藏的支付方式|
+|opts.bannedChannels|Array.<`string`>|否| 需要隐藏的支付方式|
 |opts.success|function|否|成功的回调函数|
 |opts.fail|function|否|失败的回调函数|
 |opts.complete|function|否|接口调用完成的回调函数（接口调用成功、失败都会执行）|
@@ -102,4 +102,4 @@ swan.requestPolymerPayment({
 
 **注意：**
 
-IOS 暂不支持使用此接口
+iOS 暂不支持使用此接口

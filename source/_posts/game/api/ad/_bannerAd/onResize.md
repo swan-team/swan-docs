@@ -35,7 +35,7 @@ let example = {
     }
 }
 const bannerAd = swan.createBannerAd(example);
-rewardedVideoAd.onResize((res) => {
+bannerAd.onResize((res) => {
     console.log(' banner 广告位宽度变化');
 })
 bannerAd.style.width = 350;

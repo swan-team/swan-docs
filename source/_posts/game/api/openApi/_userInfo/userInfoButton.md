@@ -1,16 +1,13 @@
 ### userInfoButton
 
-`swan.createUserInfoButton()` 的返回值，挂载着用户信息内容的对象。
+[`swan.createUserInfoButton()`](#swan-createUserInfoButton) 的返回值，挂载着用户信息内容的对象。
 
-**属性：**
 
 |属性|类型|描述|
 |-|-|-|
 |text|string|按钮上的文本|
 |image|string|按钮的背景图片|
 |style|Object|按钮的样式|
-
-**方法：**
 
 [userInfoButton.show()](#userInfoButton-show)
 显示用户信息按钮。

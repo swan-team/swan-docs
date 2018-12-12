@@ -11,7 +11,7 @@ swan.connectSocket(opts)
 |属性|类型|是否必填|描述|
 |-|-|-|-|
 |url|string|是|开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名|
-|protocols|Array.<string\>|否|子协议数组|
+|protocols|Array.<`string`>|否|子协议数组|
 |header|Object|否| HTTP 消息头，注意 header 中不能设置 referer|
 |success|function|否|接口调用成功的回调函数|
 |fail|function|否|接口调用失败的回调函数|

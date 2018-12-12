@@ -31,7 +31,7 @@ let onResizeFuc = function () {
 }
 
 const bannerAd = swan.createBannerAd(example);
-bannerAd.onResize(onCloseFuc);
-bannerAd.offResize(onCloseFuc); // offResize 对应的函数将取消对应的监听事件
+bannerAd.onResize(onResizeFuc);
+bannerAd.offResize(onResizeFuc); // offResize 对应的函数将取消对应的监听事件
 
 ```

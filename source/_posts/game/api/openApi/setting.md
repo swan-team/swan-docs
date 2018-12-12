@@ -4,19 +4,7 @@ layout: gamedoc
 topic: openApi
 categoryName: api
 ---
-
-### OpenSettingButton
-
-`swan.createOpenSettingButton()`的返回值，用户点击后点击按钮展示用户在该小游戏中已经授权过的权限页面
-
-`OpenSettingButton.show()`
-显示打开设置页面按钮
-
-`OpenSettingButton.hide()`
-隐藏打开设置页面按钮
-
-`OpenSettingButton.destory()`
-销毁打开设置页面按钮
+(暂时注释掉，等该 API 实现后，将以下内容添加进 setting.md 的文档内)
 
 ### swan.getSetting()
 

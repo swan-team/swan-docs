@@ -1,4 +1,4 @@
-  ### strokeRect()
+### strokeRect()
 
 
 `strokeRect()` 是使用当前绘图样式绘制矩形的方法，矩形以左上角坐标 (x, y) 为起点、宽度为 width 高度为 height。

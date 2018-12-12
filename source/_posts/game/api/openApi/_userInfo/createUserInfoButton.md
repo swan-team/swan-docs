@@ -1,6 +1,6 @@
 ### swan.createUserInfoButton()
 
-创建获取用户信息的按钮，通过绑定 [userInfoButton.onTap(callback)](#userInfoButton-onTap) 事件，点击获取挂有用户信息的对象。
+创建获取用户信息的按钮，通过绑定 [`userInfoButton.onTap(callback)`](#userInfoButton-onTap) 事件，点击获取挂有用户信息的对象。
 
 ```js
 swan.createUserInfoButton(opts)
@@ -48,7 +48,7 @@ swan.createUserInfoButton(opts)
 |right|右对齐|
 
 **返回值：**
-返回 [userInfoButton](#userInfoButton) 对象。
+返回 [`userInfoButton`](#userInfoButton) 对象。
 
 **示例：**
 

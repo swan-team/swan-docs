@@ -65,4 +65,4 @@ image.onload = function(){
     context.putImageData(imgData, 50, 50);
 }
 ```
-示例通过 `getImageData()`方法拷贝了图像的数据，将数组存储在 `ImageData` 对象的 `data` 属性中，并对数据的 color/alpha 进行反转（用 255 减去图像本身的颜色值）。最后使用 [`putImageData()`](#putImageData)  方法将反转后的图像数据拷贝回画布上即实现。还可以通过 [`putImageData()`](#putImageData)  方法设定输出的图像放在画布上的位置和尺寸。
+示例通过 `getImageData()` 方法拷贝了图像的数据，将数组存储在 `ImageData` 对象的 `data` 属性中，并对数据的 color/alpha 进行反转（用 255 减去图像本身的颜色值）。最后使用 [`putImageData()`](#putImageData) 方法将反转后的图像数据拷贝回画布上即实现。还可以通过 [`putImageData()`](#putImageData) 方法设定输出的图像放在画布上的位置和尺寸。

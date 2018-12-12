@@ -17,7 +17,7 @@ swan.showActionSheet(opts)
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
-|itemList|Array.<string\>|是|按钮的文字数组，数组长度最大为 6|
+|itemList|Array.<`string`>|是|按钮的文字数组，数组长度最大为 6|
 |itemColor|hexColor|否|按钮的文字颜色，默认颜色为 `'#3c76ff'`|
 |success|function|否|成功回调函数|
 |fail|function|否|失败回调函数|
@@ -59,7 +59,7 @@ swan.showModal(opts)
 |-|-|-|-|-|
 |title|string|是|提示的标题|
 |content|string|是|提示的内容|
-|showCancel|boolean|否|是否显示取消按钮，默认为 true|
+|showCancel|boolean|否|是否显示取消按钮，默认为 `'true'`|
 |cancelText|string|否|取消按钮的文字，最多 4 个字符，默认为 `'取消'`|
 |cancelColor|hexColor|否|取消按钮的文字颜色，默认为 `'#000000'`|
 |confirmText|string|否|确定按钮的文字，最多 4 个字符，默认为 `'确定'`|
@@ -110,9 +110,9 @@ swan.showToast(opts)
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
 |title|string|是|提示的内容|
-|icon|string|否|图标，有效值 “success”、“loading”、“none”, 默认“none”|
-|duration|number|否|提示的延迟时间，单位毫秒，默认：2000|
-|mask|boolean|否|是否显示透明蒙层，防止触摸穿透，默认：false|
+|icon|string|否|图标，有效值 `'success'`、`'loading'`、`'none'`, 默认`'none'`|
+|duration|number|否|提示的延迟时间，单位毫秒，默认：`'2000'`|
+|mask|boolean|否|是否显示透明蒙层，防止触摸穿透，默认：`'false'`|
 |success|function|否|成功回调函数|
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
@@ -149,7 +149,7 @@ swan.showLoading(opts)
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
 |title|string|是|提示的内容|
-|mask|boolean|否|是否显示透明蒙层，防止触摸穿透，默认：false|
+|mask|boolean|否|是否显示透明蒙层，防止触摸穿透，默认：`'false'`|
 |success|function|否|成功回调函数|
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|

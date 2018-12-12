@@ -29,7 +29,7 @@
                             设计
                             <% break; %>
                         <% case 'api': %>
-                            研发
+                            开发
                             <% break; %>
                         <% case 'data': %>
                             数据
@@ -50,7 +50,7 @@
                     <%- link_to('game/design/overview/introduction/', '设计') %>
                 </li>
                 <li class="<% if (page.categoryName === 'api') { %>is-active<% } %>">
-                    <%- link_to('game/api/file/fileSystemManager/', '研发') %>
+                    <%- link_to('game/api/openApi/authorize/', '开发') %>
                 </li>
                 <li class="<% if (page.categoryName === 'data') { %>is-active<% } %>">
                     <%- link_to('game/data/feature/concept/', '数据') %>
