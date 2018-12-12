@@ -53,28 +53,6 @@ function caseInvoke(scheme) {
         openbox.open();
     }
 }
-// function throttle(fn, delay, wait) {
-//     var timer = null;
-//     var start = null;
-//     return function () {
-//         var now = +new Date();
-//         var ctx = this;
-//         var args = arguments;
-//         if (!start) {
-//             start = now;
-//         }
-//         if (now - start > wait) {
-//             timer && clearTimeout(timer);
-//             start = now;
-//             fn.apply(ctx, args);
-//         } else {
-//             timer && clearTimeout(timer);
-//             timer = setTimeout(function () {
-//                 fn.apply(ctx, args);
-//             }, (delay ? delay : 300));
-//         }
-//     };
-// }
 function throttle (func, wait, options) {
     var context, args, result;
     var wait = wait || 1000;
