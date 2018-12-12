@@ -100,6 +100,7 @@ sidebar: formlist
 |checked|Boolean | false| 当前是否选中，可用来设置默认选中|
 |color| Color|- | checkbox 的颜色，同 CSS 的 color|
 
+
 示例：
 <a href="swanide://fragment/501ed4b3f30ec74cc177425610b4f4ba1540393923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
@@ -176,7 +177,7 @@ Page({
 |-----|---- |---- |----|
 | bindsubmit | EventHandle    |携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}}	`|-|
 | bindreset | EventHandle   |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean|是否返回 formId ，默认为false。|10.12|
+|report-submit|Boolean|是否返回 formId ，默认为false。|1.12|
 
 
 <notice>示例： </notice>
@@ -682,7 +683,7 @@ Page({
 |type| String| switch| 样式，有效值：switch,checkbox|
 |color| Color| \#09bb07| switch 的颜色，同 CSS 的 color|
 |disabled|	Boolean|	false|	是否禁用|
-|bindchange | EventHandle  |-|checked 改变时触发 change 事件，event.detail={ value:checked}|
+|bindchange | EventHandle  |-|checked 改变时触发 change 事件，event.detail={ checked:true}|
 
 
 **示例**：
