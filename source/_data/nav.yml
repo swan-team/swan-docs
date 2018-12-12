@@ -148,6 +148,10 @@
               link: /design/component/dialog
               text: 提示框
               name: dialog
+            -
+              link: /design/component/empty_state
+              text: 空态
+              name: empty_state              
     -
       link: /design/resource/uikit
       text: 资源下载
