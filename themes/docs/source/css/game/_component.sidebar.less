@@ -49,8 +49,11 @@
     }
 
     .p-sidebar-list {
-        margin-top: @navbar-dev-height;
         max-height: 100%;
+
+        .with-dev-link & {
+            margin-top: @navbar-dev-height;
+        }
     }
 
         .p-sidebar-item {
