@@ -113,7 +113,7 @@ function updateScroll() {
     setTimeout(function () {
         updateNavbarActive();
 
-        var padding = 60;
+        var padding = $('.p-sidebar-list').offset().top;
 
         var $panels = $('.p-sidebar');
         var panelCurrentTop = $panels.scrollTop();

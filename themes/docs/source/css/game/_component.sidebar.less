@@ -21,9 +21,13 @@
     bottom: 0;
 }
 
+@navbar-dev-height: 70px;
+
     .p-sidebar-dev-link {
-        width: 264px;
+        width: @navbar-width;
+        height: @navbar-dev-height;
         padding-top: 25px;
+        border-right: 1px solid #EEEEEE;
         text-align: center;
         position: fixed;
         background:#fff;
@@ -45,12 +49,8 @@
     }
 
     .p-sidebar-list {
-        padding-top: 35px;
+        margin-top: @navbar-dev-height;
         max-height: 100%;
-    }
-
-    .p-sidebar.with-dev-link .p-sidebar-list {
-        padding-top: 80px;
     }
 
         .p-sidebar-item {
