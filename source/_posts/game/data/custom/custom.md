@@ -6,7 +6,7 @@ topic: custom
 priority: 02-02
 ---
 
-```场景值可以通过 App() 生命周期函数中 onShow 事件中的 scene 字段获取。```
+>场景值可以通过 App() 生命周期函数中 onShow 事件中的 scene 字段获取。
 
 以下各场景和 scene 值的对应关系。
 

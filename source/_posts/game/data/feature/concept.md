@@ -6,7 +6,7 @@ topic: feature
 priority: 01-01
 ---
 
-小游戏数据为开发者提供了 **用户分析**、**使用分析**、**来源分析**、**留存分析**、**转化分析** 等模块分析功能，帮助开发者了解小游戏整体运营状况，分析小游戏的用户来源、用户构成、用户增长趋势、用户留存与转化、用户使用行为习惯等一系列问题，并实现用数据驱动商业运营与产品迭代的目标。
+小游戏数据为开发者提供了<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=1&tabCur=0">用户分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=2&tabCur=0">使用分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=3&tabCur=0">来源分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=4&tabCur=0">留存分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=5&tabCur=0">转化分析</a>等模块分析功能，帮助开发者了解小游戏整体运营状况，分析小游戏的用户来源、用户构成、用户增长趋势、用户留存与转化、用户使用行为习惯等一系列问题，并实现用数据驱动商业运营与产品迭代的目标。
 
 
 ![图片](/img/data/concept12.png)
