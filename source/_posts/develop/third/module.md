@@ -19,7 +19,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|---|
 |page|	int|	否|	页码(默认1)|
-|page_size|	int|	否|他	条数(默认10)|
+|page_size|	int|	否|	条数(默认10)|
 |access_token|	string|	是|	通过ticket换取的第三方平台自己的access_token|
 返回值说明
 
@@ -158,10 +158,10 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/addtotemplate?access_t
 参数说明
 
 |参数名|	类型 |	是否必须	|描述|
------ |-----| ------| -----
+|----- |-----| ------| -----|
 |draft_id	|long|	是|	模板id|
 |access_token|	string|	是|	第三方平台自己的接口调用凭据|
-|user_desc|	string|	否|	自定义模板名称，30字以内|
+|user_desc|	string|	是|	自定义模板名称，30字以内|
 返回值说明
 
 |字段名	|类型|	描述|
