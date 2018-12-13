@@ -4,14 +4,14 @@ header: develop
 nav: web
 sidebar: detail
 ---
-## 介绍
+<!-- ## 介绍
 
 智能小程序web化数据流如下图所示：
 ![图片](../../../img/web_upsteam.png)
 
-## 搭建方式
+## 搭建方式 -->
 
-### 获取Web化域名
+## 获取Web化域名
 根据小程序的 appkey 拼接web化域名。
 **格式**： appkey值.smartapps.cn
 **说明**： 由于域名不区分大小写，所以针对小程序域名做了转换，将大写字母改写为：小写字母加上”-“字符。如：“A”变为“a-”。
@@ -106,7 +106,7 @@ function __showToast__(id) {
 
 
 
-### 搭建反向代理
+<!-- ### 搭建反向代理
 
 以使用nginx搭建反向代理配置为例；
 1.	业务方确认自己的代理域名建议代理域名构建格式： {小程序标识}. {业务主域名}
@@ -133,4 +133,4 @@ location / {
 ![图片](../../../img/web01.png)
 ### 配置小程序域名
 参考<a href="http://smartprogram.baidu.com/docs/develop/web/start/">配置开启 Web化</a>进行操作。
-
+ -->
