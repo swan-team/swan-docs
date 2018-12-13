@@ -180,7 +180,6 @@ function updateContentScroll() {
         var $hash = $(decodeURIComponent(location.hash));
         $container.scrollTop($hash.offset().top - padding);
     }
-
 }
 
 
@@ -198,6 +197,11 @@ function loadContent(url) {
     else {
         $.get(url, function (data, status) {
             if (status === 'success') {
+                const htmlId = data.indexOf('<html');
+                if (htmlId) {
+                    data = data.substr(htmlId);
+                }
+
                 const containerName = '#article-main-content';
                 const $container = $(containerName);
                 const $content = $(data).find(containerName);
