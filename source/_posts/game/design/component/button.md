@@ -1,9 +1,10 @@
 ---
-title: 按钮组件
+title: 按钮
 layout: gamedoc
 sidebar: button
 categoryName: design
 topic: component
+priority: 03-03
 ---
 
 ## 大按钮

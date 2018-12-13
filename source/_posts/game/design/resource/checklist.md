@@ -5,6 +5,7 @@ nav: resource
 sidebar: checklist
 categoryName: design
 topic: resource
+priority: 04-03
 ---
 
 为方便小程序设计，小程序团队提供《智能小程序设计走查表》以供参考。

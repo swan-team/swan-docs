@@ -4,6 +4,7 @@ layout: gamedoc
 sidebar: bottomtab
 categoryName: design
 topic: component
+priority: 03-02
 ---
 
 底部标签栏通常用于首页横向视图导航的切换，它始终固定在屏幕底部，不随页面滚动隐藏。
@@ -23,7 +24,7 @@ topic: component
 	</div>
 </div>
 
-### 容器
+#### 容器
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>
@@ -37,7 +38,7 @@ topic: component
 	</div>
 </div>
 
-### 标签选项
+#### 标签选项
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>标签选项由图标和选项名称组成，根据用户行为分为三个阶段状态：非选中态、点击态和选中态。其中点击态由小程序统一处理，其他由开发者自行定义。
@@ -67,7 +68,7 @@ topic: component
 
 ## 个性定制
 
-### 默认样式
+#### 默认样式
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="/img/design/component/bottomtab/6.png">
@@ -86,7 +87,7 @@ topic: component
 	</div>
 </div>
 
-### 自定义样式
+#### 自定义样式
 定义标签栏样式时，请务必关注并保证其的可读性和可用性。
 标签选项的图标和名称在选中态和非选中态时，有响应颜色呼应能使其整体一致性更好。选择合适的容器颜色，保证内容显示清晰。
 <div class="m-doc-custom-examples">

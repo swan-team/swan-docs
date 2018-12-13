@@ -5,6 +5,7 @@ nav: resource
 sidebar: uikit
 categoryName: design
 topic: resource
+priority: 04-01
 ---
 <!-- ### UI Kit
 为方便小程序设计，小程序团队提供智能小程序常用的设计组件资源。 -->

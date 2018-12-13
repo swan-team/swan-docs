@@ -1,9 +1,10 @@
 ---
-title: 输入组件
+title: 输入
 layout: gamedoc
 sidebar: input
 categoryName: design
 topic: component
+priority: 03-06
 ---
 
 ## 输入表单

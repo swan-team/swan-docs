@@ -4,6 +4,7 @@ layout: gamedoc
 sidebar: pic
 categoryName: design
 topic: foundation
+priority: 02-02
 ---
 
 ## 图片

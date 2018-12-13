@@ -1,23 +1,21 @@
 ---
-title: console
+title: 智能小程序体验设计指南
 layout: gamedoc
 header: design
 draft: true
 categoryName: design
 ---
 
-# 智能小程序体验设计指南
 此指南由小程序团队提供，旨在帮助开发者们快速了解智能小程序，并在提升小程序体验方面给出相关设计建议。
 
 ## 内容构成
+
 百度智能小程序体验设计指南共分成三个部分：
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<a href="https://smartprogram.baidu.com/docs/design/principle/easytouse/" class="m-doc-custom-download-left"><img src="/img/design/overview/1-1.png">
 		</a><p class="m-doc-custom-examples-text">设计原则
 		贯穿全流程设计的考量重点</p>
-(/img/game/canvas/arcto-001.png)
-
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<a href="https://smartprogram.baidu.com/docs/design/foundation/layout/" class="m-doc-custom-download-left"><img src="/img/design/overview/1-2.png">

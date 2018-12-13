@@ -4,6 +4,7 @@ layout: gamedoc
 sidebar: layout
 categoryName: design
 topic: foundation
+priority: 02-01
 ---
 
 ## 布局

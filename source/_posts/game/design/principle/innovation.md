@@ -5,6 +5,7 @@ nav: principle
 sidebar: innovation
 categoryName: design
 topic: principle
+priority: 01-03
 ---
 
 百度小程序为开发者提供基础组件，如按钮、图片等；这些控件均已在百度 App 中使用论证，充分地考虑移动设备的特点和可用性。

@@ -5,6 +5,7 @@ nav: principle
 sidebar: easytouse
 categoryName: design
 topic: principle
+priority: 01-01
 ---
 
 用户在日常使用移动设备时，由于实际场景的多样性，注意力容易分散或暂时中断。因此为用户设计小程序的使用流程时，需要做到：用户架构清晰，流程明确简单，并为用户的每一步操作提供及时的反馈。

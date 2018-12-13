@@ -5,6 +5,7 @@ nav: resource
 sidebar: lottie
 categoryName: design
 topic: resource
+priority: 04-02
 ---
 
 为了更好地实现流畅的动画效果，智能小程序支持 Lottie 导出的 json 文件以及 json 文件与位图。

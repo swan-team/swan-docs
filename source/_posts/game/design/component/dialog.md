@@ -4,6 +4,7 @@ layout: gamedoc
 sidebar: dialog
 categoryName: design
 topic: component
+priority: 03-08
 ---
 
 提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，原界面加上蒙层以聚焦用户注意力，页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
@@ -27,7 +28,7 @@ topic: component
 	</div>
 </div>
 
-### 标题
+#### 标题
 提示框的标题默认存在，用于明确提示的类型或主题，建议精简表达，控制在 8 个中文字符内。
 如提示的内容简单，开发者可以选择去掉标题。
 <div class="m-doc-custom-examples">
@@ -53,7 +54,7 @@ topic: component
 	</div>
 </div>
 
-### 内容
+#### 内容
 内容通常作为标题的补充信息，在告知状态、信息和解决方法，表达精简。当表达为陈述词，且只有一句时，句尾不必以句号结尾；措辞时，不可使用强硬语气和标点符号“！”，减少压迫感。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -74,7 +75,7 @@ topic: component
 	</div>
 </div>
 
-### 操作区
+#### 操作区
 支持 1~2 项操作，默认情况下为双操作按钮，左侧为“取消”（可选），右侧为“确定”。
 按钮文案文字颜色和内容均可配，最多支持4个中文字符。
 <div class="m-doc-custom-examples">
@@ -85,7 +86,7 @@ topic: component
 	</div>
 </div>
 
-#### 双操作按钮
+##### 双操作按钮
 对话框提供 2 种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -98,7 +99,7 @@ topic: component
 	</div>
 </div>
 
-#### 单操作按钮
+##### 单操作按钮
 提示框用于同步用户重要信息时并仅要求其确认知晓，其操作区通常为单操作按钮。
 根据场景不同，我们建议整体考虑按钮文案，最多可支持 4 个中文字符。
 <div class="m-doc-custom-examples">

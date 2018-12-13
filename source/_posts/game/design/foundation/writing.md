@@ -4,6 +4,7 @@ layout: gamedoc
 sidebar: writing
 categoryName: design
 topic: foundation
+priority: 02-03
 ---
 
 ## 称谓说明

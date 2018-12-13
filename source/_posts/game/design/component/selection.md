@@ -1,10 +1,12 @@
 ---
-title: 选择组件
+title: 选择
 layout: gamedoc
 sidebar: selection
 categoryName: design
 topic: component
+priority: 03-04
 ---
+
 ## 选项控件
 选项控件允许用户选择某个值，这个值通常是选中/非选中，开/关。
 通常搭配列表使用，点击时组件状态在选中/非选中，开/关间切换。
