@@ -151,7 +151,18 @@
             -
               link: /design/component/empty_state
               text: 空态
-              name: empty_state              
+              name: empty_state      
+    -
+      link: /design/story/arzoo
+      text: 设计故事
+      name: story
+      sidebar:
+        -
+          sidebar:
+            -
+              link: /design/story/arzoo
+              text: 长隆AR动物园
+              name: arzoo                     
     -
       link: /design/resource/uikit
       text: 资源下载
