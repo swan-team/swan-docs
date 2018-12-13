@@ -73,6 +73,9 @@ sidebar: detail
 .webdomain-trans-tools .copy-btn {
     margin-left: 5px;
 }
+.webdomain-trans-tools {
+    min-height: 80px;
+}
 
 </style>
 
