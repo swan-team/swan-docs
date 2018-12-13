@@ -55,15 +55,12 @@ sidebar: formlist
 |contact|	打开客服会话。|
 |share |触发用户分享，使用前建议先阅读 <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/">swan.onShareAppMessage</a> 用。|
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
-| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
+| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
 
-**说明**：
-* 非个人开发者可申请；
-* 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。
-<!--
-|opensetting|打开授权设置页|
--->
+
+
+
 
 **示例**：
 <a href="swanide://fragment/7a3974d3a4cefd5f89d685adce8935b61540393782" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
