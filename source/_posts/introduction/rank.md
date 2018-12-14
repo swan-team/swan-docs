@@ -97,7 +97,7 @@ url 映射规则定义的是小程序页面到 H5 页面的映射规则，百度
         "pages/index/index",
         "pages/pb/pb",
         "pages/frs/frs"
-    ]
+    ],
     "url-mapping": {
         "pages/index/index":"/",
         "pages/pb/pb":"/p/${tid}",
@@ -119,10 +119,10 @@ https://shop.m.site.com/mshop/123
 {
     "pages": [
         "pages/shop/shop"
-     ]
+    ],
     "url-mapping": {
-        "pages/shop/ shop":[“/shop/${shopid}”,”https://shop.m.site.com/mshop/${shopid}”]
-}
+        "pages/shop/shop":["/shop/${shopid}","https://shop.m.site.com/mshop/${shopid}"]
+    }
 }
 ```
 **说明**：
