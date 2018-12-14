@@ -98,12 +98,14 @@ try {
 getEnvInfoSync
 ---
 **解释：**获取运行环境信息同步接口
+
 > 基础库 2.0.28 版本开始支持。
+
 **同步返回参数说明：**
 
-|参数  |类型|说明 |最低版本|
-|---- | ---- |---|---|---|
-|appKey  |string| 智能小程序 App Key |2.0.28|
+|参数  |类型|说明 |
+|---- | ---- |---|---|
+|appKey  |string| 智能小程序 App Key |
 |appName |string|  智能小程序名称   |
 |lastAppURL |string|  智能小程序最近一次打开的调起协议  |
 |sdkVersion |string|  基础库版本   |
