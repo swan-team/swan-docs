@@ -93,11 +93,11 @@ url 映射规则定义的是小程序页面到 H5 页面的映射规则，百度
 以百度贴吧智能小程序为例在app.json中配置url-mapping字段如下：
 ```json
 {
-    "pages": {
+    "pages": [
         "pages/index/index",
         "pages/pb/pb",
         "pages/frs/frs"
-    }
+    ]
     "url-mapping": {
         "pages/index/index":"/",
         "pages/pb/pb":"/p/${tid}",
@@ -117,9 +117,9 @@ https://m.site.com/shop/123
 https://shop.m.site.com/mshop/123
 ```json
 {
-    "pages": {
+    "pages": [
         "pages/shop/shop"
-     }
+     ]
     "url-mapping": {
         "pages/shop/ shop":[“/shop/${shopid}”,”https://shop.m.site.com/mshop/${shopid}”]
 }
