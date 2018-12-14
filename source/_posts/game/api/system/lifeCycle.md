@@ -5,24 +5,6 @@ topic: system
 categoryName: api
 ---
 
-### swan.exit()
-
-退出小游戏。
-
-```js
-swan.exit(opts)
-```
-
-**参数值：**
-
-|属性|类型|描述|
-|-|-|-|
-|opts|Object|调用该时，要传入的对象参数|
-|opts.success|function|接口调用成功的回调函数|
-|opts.fail|function|接口调用失败的回调函数|
-|opts.complete|function|接口调用完成的回调函数，无论失败成功都会调用|
-
-
 ### swan.getLaunchOptionsSync()
 
 获得小游戏启动参数。
@@ -51,36 +33,6 @@ const launchInfo = swan.getLaunchOptionsSync();
 console.log('launchOptionsSync:', launchInfo.query);
 
 ```
-
-### swan.onHide()
-
-监听小游戏退到后台。
-
-```js
-swan.onHide(callback)
-```
-
-**参数值：**
-
-|参数|类型|描述|
-|-|-|-|
-|callback|function|回调函数|
-
-
-### swan.offHide()
-
-撤销监听小游戏退到后台。
-
-```js
-swan.offHide(callback)
-```
-
-**参数值：**
-
-|参数|类型|描述|
-|-|-|-|
-|callback|function|调用 [`swan.onHide`](#swan-onHide) 时传入的回调函数|
-
 
 ### swan.onShow()
 
@@ -128,3 +80,52 @@ swan.offShow(callback)
 |参数|类型|描述|
 |-|-|-|
 |callback|function|调用 [`swan.onShow`](#swan-onShow) 时传入的回调函数|
+
+
+### swan.onHide()
+
+监听小游戏退到后台。
+
+```js
+swan.onHide(callback)
+```
+
+**参数值：**
+
+|参数|类型|描述|
+|-|-|-|
+|callback|function|回调函数|
+
+
+### swan.offHide()
+
+撤销监听小游戏退到后台。
+
+```js
+swan.offHide(callback)
+```
+
+**参数值：**
+
+|参数|类型|描述|
+|-|-|-|
+|callback|function|调用 [`swan.onHide`](#swan-onHide) 时传入的回调函数|
+
+
+### swan.exit()
+
+退出小游戏。
+
+```js
+swan.exit(opts)
+```
+
+**参数值：**
+
+|属性|类型|描述|
+|-|-|-|
+|opts|Object|调用该时，要传入的对象参数|
+|opts.success|function|接口调用成功的回调函数|
+|opts.fail|function|接口调用失败的回调函数|
+|opts.complete|function|接口调用完成的回调函数，无论失败成功都会调用|
+

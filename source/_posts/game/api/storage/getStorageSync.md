@@ -3,6 +3,7 @@ title: swan.getStorageSync()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-03
 ---
 
 从本地缓存中同步获取指定 key 对应的内容。

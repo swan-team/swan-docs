@@ -1,6 +1,6 @@
 ### socketTask.close()
 
-创建一个 WebSocket 连接。
+关闭 WebSocket 连接。
 
 ```js
 socketTask.close(opts)

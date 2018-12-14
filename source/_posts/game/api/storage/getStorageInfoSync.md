@@ -3,6 +3,7 @@ title: swan.getStorageInfoSync()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-04
 ---
 
 同步获取当前 storage 的相关信息，即 [`swan.getStorageInfo`](/api/storage/getStorageInfo/) 的同步版本。

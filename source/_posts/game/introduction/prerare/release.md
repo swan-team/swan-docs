@@ -1,6 +1,6 @@
 ---
 title: 发布与审核
-layout: doc
+layout: gamedoc
 categoryName: introduction
 sidebar: release
 topic: prerare

@@ -3,6 +3,7 @@ title: swan.createRewardedVideoAd()
 layout: gamedoc
 topic: ad
 categoryName: api
+priority: 10-03
 ---
 
 

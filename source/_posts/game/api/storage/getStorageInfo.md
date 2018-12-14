@@ -3,6 +3,7 @@ title: swan.getStorageInfo()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-02
 ---
 
 异步获取当前 storage 的相关信息。

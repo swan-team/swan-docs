@@ -4,34 +4,6 @@ layout: gamedoc
 topic: openApi
 categoryName: api
 ---
-### swan.checkSession()
-
-通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用小游戏，用户登录态越有可能失效；反之如果用户一直在使用小游戏，则用户登录态一直保持有效。具体时效逻辑由百度 App 维护，对开发者透明。开发者可以调用 `swan.checkSession()` 接口检测当前用户登录态是否有效，登录态过期后开发者可以再调用 [`swan.login()`](#swan-login) 获取新的用户登录态。
-
-```js
-swan.checkSession(opts)
-```
-
-**参数值：**
-
-|属性|类型|是否必填|描述|
-|-|-|-|-|-|
-|success|function|否|成功回调函数|
-|fail|function|否|失败回调函数|
-|complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
-
-**示例：**
-
-```js
-swan.checkSession({
-    success: res => {
-        console.log('登录态有效');
-    },
-    fail: () => {
-        console.log('登录态无效');
-    }
-});
-```
 
 ### swan.login()
 
@@ -103,13 +75,43 @@ function baiduLogin() {
 baiduLogin();
 ```
 
+
+### swan.checkSession()
+
+通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用小游戏，用户登录态越有可能失效；反之如果用户一直在使用小游戏，则用户登录态一直保持有效。具体时效逻辑由百度 App 维护，对开发者透明。开发者可以调用 `swan.checkSession()` 接口检测当前用户登录态是否有效，登录态过期后开发者可以再调用 [`swan.login()`](#swan-login) 获取新的用户登录态。
+
+```js
+swan.checkSession(opts)
+```
+
+**参数值：**
+
+|属性|类型|是否必填|描述|
+|-|-|-|-|-|
+|success|function|否|成功回调函数|
+|fail|function|否|失败回调函数|
+|complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
+
+**示例：**
+
+```js
+swan.checkSession({
+    success: res => {
+        console.log('登录态有效');
+    },
+    fail: () => {
+        console.log('登录态无效');
+    }
+});
+```
+
 ### Session Key
 
 小游戏在其服务端中发送 POST 请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到 Session Key。
 
 >更多登录授权的流程参见： [登录授权流程说明](/tutorials/open_api/open-log/)
 
-**获取Session Key的URL地址：**
+**获取 Session Key 的URL地址：**
 ```js
  https://openapi.baidu.com/nalogin/getSessionKeyByCode
 ```
@@ -128,7 +130,7 @@ baiduLogin();
 | openid | 用户身份标识 |
 | session_key | 用户的 Session Key |
 
-若请求错误，服务器将返回一段 JSON文本，包含以下参数：
+若请求错误，服务器将返回一段 JSON 文本，包含以下参数：
 
 | 属性 | 描述 |
 | -| - |

@@ -67,7 +67,7 @@ sidebar: register
 
 2. 单击“对公验证”，进入对公打款页面。
 ![图片](../../img/introduction/register/register-07.png)
-3. 对公打款：填写企业对公银行开户信息。 
+3. 对公打款：填写企业对公银行开户信息。
 ![图片](../../img/introduction/register/register-15.png)
     回填金额
 ![图片](../../img/introduction/register/register-16.png)

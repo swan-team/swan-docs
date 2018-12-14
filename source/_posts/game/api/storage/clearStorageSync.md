@@ -3,6 +3,7 @@ title: swan.clearStorageSync()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-10
 ---
 
 

@@ -3,6 +3,7 @@ title: swan.createBannerAd()
 layout: gamedoc
 topic: ad
 categoryName: api
+priority: 10-01
 ---
 
 

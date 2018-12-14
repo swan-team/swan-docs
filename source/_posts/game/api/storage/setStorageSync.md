@@ -3,6 +3,7 @@ title: swan.setStorageSync()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-06
 ---
 
 将数据同步存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。

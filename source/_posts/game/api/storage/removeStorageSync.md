@@ -3,6 +3,7 @@ title: swan.removeStorageSync()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-08
 ---
 
 从本地缓存中同步移除指定 key。

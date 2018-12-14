@@ -3,6 +3,7 @@ title: swan.removeStorage()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-07
 ---
 
 从本地缓存中异步移除指定 key。

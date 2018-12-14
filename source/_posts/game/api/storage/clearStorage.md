@@ -3,6 +3,7 @@ title: swan.clearStorage()
 layout: gamedoc
 topic: storage
 categoryName: api
+priority: 09-09
 ---
 
 

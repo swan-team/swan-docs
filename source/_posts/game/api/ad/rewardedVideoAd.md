@@ -1,13 +1,14 @@
 ---
 title: RewardedVideoAd
-layout: doc
+layout: gamedoc
 topic: ad
 categoryName: api
+priority: 10-04
 ---
 
 
-<!-- md game/api/ad/_rewardedVideoAd/load.md -->
 <!-- md game/api/ad/_rewardedVideoAd/show.md -->
+<!-- md game/api/ad/_rewardedVideoAd/load.md -->
 <!-- md game/api/ad/_rewardedVideoAd/onLoad.md -->
 <!-- md game/api/ad/_rewardedVideoAd/offLoad.md -->
 <!-- md game/api/ad/_rewardedVideoAd/onError.md -->
