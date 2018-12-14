@@ -50,15 +50,18 @@
             var params = [
                 {
                     tab: 'introduction',
-                    list: [{ 'link': '/docs/introduction/register/', 'label': '小程序介绍' }, { 'link': '/#', 'label': '小游戏介绍' }]
+                    list: [{ 'link': '/docs/introduction/register/', 'label': '小程序介绍' },
+                        { 'link': '/docs/game/introduction/prerare/enter_application/', 'label': '小游戏介绍' }]
                 },
                 {
                     tab: 'develop',
-                    list: [{ 'link': '/docs/develop/tutorial/codedir/', 'label': '小程序开发' }, { 'link': '/#', 'label': '小游戏开发' }]
+                    list: [{ 'link': '/docs/develop/tutorial/codedir/', 'label': '小程序开发' },
+                        { 'link': '/docs/game/api/openApi/authorize/', 'label': '小游戏开发' }]
                 },
                 {
                     tab: 'data',
-                    list: [{ 'link': '/docs/data/concept/', 'label': '小程序数据' }, { 'link': '/#', 'label': '小游戏数据' }]
+                    list: [{ 'link': '/docs/data/concept/', 'label': '小程序数据' },
+                        { 'link': '/docs/game/data/feature/concept/', 'label': '小游戏数据' }]
                 }
             ]
             var _this = this;
