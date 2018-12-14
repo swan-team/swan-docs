@@ -2,6 +2,7 @@
 -
   link: /introduction/enter_application
   text: 介绍
+  nickname: 小程序介绍
   name: introduction
   nav:
     -
@@ -187,6 +188,7 @@
 -
   link: /develop/tutorial/codedir
   text: 开发
+  nickname: 小程序开发
   name: develop
   nav:
     -
@@ -2270,6 +2272,7 @@
 -
   link: /data/concept
   text: 数据
+  nickname: 小程序数据
   name: data
   nav:
     -
