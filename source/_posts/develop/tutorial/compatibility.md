@@ -83,3 +83,8 @@ Page({
   <cover-view s-if="{{canIUse}}">play</cover-view>
 </video>
 ```
+## Android 与 iOS 差异
+
+|功能|Andriod|iOS|
+|--|--|--|
+|webp格式|支持|不支持|

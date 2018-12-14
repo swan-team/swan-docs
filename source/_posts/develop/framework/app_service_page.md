@@ -20,7 +20,7 @@ sidebar: app_service_page
 |onShow | Function | 页面的生命周期函数 -- 监听页面显示 |
 |onHide | Function | 页面的生命周期函数 -- 监听页面隐藏 |
 |onUnload | Function | 页面的生命周期函数 -- 监听页面卸载 |
-|onForceReLaunch|Function|页面的生命周期函数 -- 制定刷新逻辑|
+|onForceReLaunch|Function|页面的生命周期函数 -- 监听页面重启，单击重启按钮时触发|
 |onPullDownRefresh | Function | 页面的事件处理函数 -- 监听用户下拉动作 |
 |onReachBottom | Function | 页面的事件处理函数 -- 上拉触底事件的处理函数 |
 |onShareAppMessage | Function | 页面的事件处理函数 -- 用户点击右上角转发 |
@@ -108,17 +108,17 @@ Page({
 |属性|类型|描述|触发时机|
 |----|----|----|--------|
 |onLaunch|Function|SWAN 初始化的生命周期函数|当 SWAN App 初始化完成时，会触发 onLaunch（全局只触发一次）|
-|onShow|Function| SWAN App 展示时调用的生命周期函数|SWAN App 从后台进入前台，触发 onShow|
-|onHide|Function| SWAN App 隐藏时调用的生命周期函数|SWAN App 从前台进入后台，触发 onHide|
-|onLoad|Function| 监听页面加载的生命周期函数|SWAN App 页面加载完成，触发 onLoad|
-|onReady|Function| 监听页面初次渲染完成的生命周期函数|SWAN App 页面渲染完成，触发 onReady|
+|onShow|Function| SWAN App 展示时调用的生命周期函数|页面显示或切入前台时，触发 onShow|
+|onHide|Function| SWAN App 隐藏时调用的生命周期函数|页面隐藏/切入后台/页面卸载时，触发onHide|
+|onLoad|Function| 监听页面加载的生命周期函数|页面加载时，触发 onLoad|
+|onReady|Function| 监听页面初次渲染完成的生命周期函数|页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。对界面内容进行设置的 API 如<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/#setNavigationBarTitle/">setNavigationBarTitle </a>请在onReady之后进行。|
 |onUnload|Function| 监听页面卸载的生命周期函数|页面卸载，触发 onUnload|
-|onError|Function|错误监听函数|当 SWAN App 发生错误时，会触发|
+|onError|Function|错误监听函数|当 SWAN App 发生错误时，会触发onError|
 
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide。在新的基础库版本中，页面被卸载时仅会触发onUnload，不会再触发 onHide，请提前做好兼容性处理。</li><li>当页面卸载时，如果需要执行某些逻辑，请将该逻辑放在 onUnload 中，而不是 放onHide 中。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
+ <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide，onHide 共被触发2次。在新的基础库版本中，页面被卸载时会触发onUnload，同时 onHide 仍会被触发且仅被触发一次。**请提前做好兼容性处理**。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
 

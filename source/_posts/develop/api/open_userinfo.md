@@ -69,7 +69,7 @@ getUserInfo
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |userInfo  | Object  |用户信息对象|
-|data  | String  |包括敏感数据在内的完整用户信息的加密数据，加解密逻辑参考[用户数据的签名验证和加解密](https://smartprogram.baidu.com/docs/develop/api/open_login/#用户数据的签名验证和加解密)。|
+|data  | String  |包括敏感数据在内的完整用户信息的加密数据，加解密逻辑参考[用户数据的签名验证和加解密](https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密)。|
 |iv | String | 加密算法的初始向量|
 
 
