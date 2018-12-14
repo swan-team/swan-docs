@@ -17,7 +17,7 @@
     box-sizing: border-box;
     font-size: 0.9rem;
     border-right: 1px solid #EEEEEE;
-    overflow-y: auto;
+    overflow-y: hidden;
     bottom: 0;
 }
 
@@ -50,9 +50,12 @@
 
     .p-sidebar-list {
         max-height: 100%;
-        padding-top: @navbar-dev-height/2;
+        padding-top: 35px;
+        overflow: auto;
+
         .with-dev-link & {
             margin-top: @navbar-dev-height;
+            padding-top: 0;
         }
     }
 

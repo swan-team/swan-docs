@@ -1,6 +1,6 @@
 ---
 title: RewardedVideoAd
-layout: doc
+layout: gamedoc
 topic: ad
 categoryName: api
 ---

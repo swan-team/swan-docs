@@ -114,8 +114,9 @@ function updateScroll() {
         updateNavbarActive();
 
         var padding = $('.p-sidebar-list').offset().top;
+        console.log(padding);
 
-        var $panels = $('.p-sidebar');
+        var $panels = $('.p-sidebar-list');
         var panelCurrentTop = $panels.scrollTop();
         // 先滚动到最上面，用来计算位置
         $panels.scrollTop(0);
