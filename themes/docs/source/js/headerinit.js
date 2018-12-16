@@ -9,7 +9,7 @@
         addNavList: function (name, list) {
             var content = list.reduce(function (total, currentValue) {
                 return total + '<ul class="m-doc-header-nav-list-item">' +
-                    '<a class="m-doc-header-nav-list-link" href="' + currentValue.link + '">' + currentValue.label + '</a>' +
+                    '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
                     '</ul>';
             }, '');
             $('.' + name).tooltipster({
@@ -65,8 +65,10 @@
                 }
             ]
             var _this = this;
-            params.forEach(function (item) {
-                _this.addNavList(item.tab, item.list);
+            headerNavs.forEach(function (item) {
+                if (item.children) {
+                    _this.addNavList(item.name, item.children);
+                }
             });
         },
         mobileAddEvent: function () {

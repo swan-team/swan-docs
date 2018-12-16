@@ -2,6 +2,7 @@
     var navs = [
         {
             text: '介绍',
+            name: 'introduction-group',
             children: [
                 {
                     link: '/introduction/enter_application/',
@@ -22,9 +23,10 @@
         },
         {
             text: '开发',
+            name: 'develop-group',
             children: [
                 {
-                    link: '/introduction/enter_application',
+                    link: '/develop/tutorial/codedir',
                     text: '小程序开发',
                     name: 'develop'
                 },
@@ -37,6 +39,7 @@
         },
         {
             text: '数据',
+            name: 'data-group',
             children: [
                 {
                     link: '/data/concept/',
@@ -79,10 +82,11 @@
         }
     });
 %>
+<script>var headerNavs = <%-JSON.stringify(navs)%>;</script>
 <div class="m-doc-level1">
     <ul><%#
         %><% for(var i = 0; i < navs.length; i++) {%><%#
-            %><li <% if (i === index) { %> class="m-doc-header-nav-selected"<% } %>><%#
+            %><li <% if (i === index) { %> class="m-doc-header-nav-selected <%- navs[i].name %>" <% } else { %> class="<%- navs[i].name %>" <% } %>><%#
                 %><a href="/docs<%- navs[i].link %>/"><% if(i === index) { %><%- activeText %> <% } else {%><%- navs[i].text %><% } %></a><%#
             %></li><%#
         %><% } %><%#
