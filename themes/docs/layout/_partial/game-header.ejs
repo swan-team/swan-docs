@@ -9,6 +9,7 @@
         手百小游戏文档<%= (' - ' + (page.title || config.title)) || '' %>
     </title>
     <%- css('css/game/main.css') %>
+    <%- css('css/tooltipster.bundle') %>
 </head>
 <body>
     <header class="p-navbar">
@@ -43,19 +44,19 @@
                 </div>
 
             <ul>
-                <li class="<% if (page.categoryName === 'introduction') { %>is-active<% } %>">
-                    <%- link_to('game/introduction/prerare/enter_application/', '介绍') %>
+                <li class="introduction <% if (page.categoryName === 'introduction') { %>is-active<% } %>">
+                    <%- link_to('game/introduction/prerare/enter_application/', page.categoryName === 'introduction' ? '小游戏介绍' : '介绍') %>
                 </li>
-                <li class="<% if (page.categoryName === 'design') { %>is-active<% } %>">
+                <li class="design <% if (page.categoryName === 'design') { %>is-active<% } %>">
                     <%- link_to('game/design/overview/introduction/', '设计') %>
                 </li>
-                <li class="<% if (page.categoryName === 'api') { %>is-active<% } %>">
-                    <%- link_to('game/api/openApi/authorize/', '开发') %>
+                <li class="develop <% if (page.categoryName === 'api') { %>is-active<% } %>">
+                    <%- link_to('game/api/openApi/authorize/',  page.categoryName === 'api' ? '小游戏开发' : '开发') %>
                 </li>
-                <li class="<% if (page.categoryName === 'data') { %>is-active<% } %>">
-                    <%- link_to('game/data/feature/concept/', '数据') %>
+                <li class="data <% if (page.categoryName === 'data') { %>is-active<% } %>">
+                    <%- link_to('game/data/feature/concept/', page.categoryName === 'data' ? '小游戏数据' : '数据') %>
                 </li>
-                <li class="<% if (page.categoryName === 'operations') { %>is-active<% } %>">
+                <li class="operations <% if (page.categoryName === 'operations') { %>is-active<% } %>">
                     <%- link_to('game/operations/service/specification/', '运营') %>
                 </li>
             </ul>
@@ -63,10 +64,12 @@
 
         <%- partial('./game-search') -%>
         <%- js('js/jquery.min') %>
+        <%- js('js/tooltipster.bundle.min')%>
         <%- js('js/game/search.raw') %>
         <%- js('js/game/marked.min')%>
         <%- js('js/game/mobileAdapter')%>
         <%- js('js/game/doc.raw')%>
+        <%- js('js/headerinit')%>
         <% if (config.search) { %>
             <script>
             var search_path = "<%= config.search.path %>";
