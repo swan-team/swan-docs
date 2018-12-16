@@ -19,35 +19,20 @@ layout: false
 </head>
 
 <body id="home">
-    
-     <%- partial('_partial/header', {page:{
-         header: 'introduction'
-     },header: [
-        {link: '/introduction/register',
-            text: '介绍',
-            name: 'introduction',
-            nav: []
-        },
-        { link: '/design/overview/introduction',
-            text: '设计',
-            name: 'design',
-            nav: []
-        },
-        { link: '/develop/tutorial/codedir',
-            text: '开发',
-            name: 'develop',
-            nav: []
-        },
-        { link: '/data/concept/',
-            text: '数据',
-            name: 'data',
-            nav: [ ]
-        },
-        { link: '/operations/specification',
-            text: '运营',
-            name: 'operations',
-            nav: []
-        }], h1: "运营规范"}) %>
+    <%
+    // 取当前页面各级导航及相关数据
+    var headerNavs = site.data.nav; // 1级(头部)导航
+
+    // 当前headerNavs索引
+    var headerNavIndex; 
+    for(var i = 0; i < headerNavs.length; i++) {
+        if (headerNavs[i].name == page.header) {
+            nav = headerNavs[i].nav;
+            headerNavIndex = i;
+        }
+    }
+    %>
+     <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex}) %>
     <div class = "m-hp-wrapper">
         <div class="m-hp-header">
             <div class= "m-hp-header-slogan m-hp-header-mid">

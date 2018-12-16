@@ -1,0 +1,91 @@
+<%
+    var navs = [
+        {
+            text: '介绍',
+            children: [
+                {
+                    link: '/introduction/enter_application/',
+                    text: '小程序介绍',
+                    name: 'introduction'
+                },
+                {
+                    link: '/game/introduction/prerare/enter_application/',
+                    text: '小游戏介绍',
+                    name: 'game-introduction'
+                }
+            ]
+        },
+        {
+            link: '/design/overview/introduction',
+            text: '设计',
+            name: 'design'
+        },
+        {
+            text: '开发',
+            children: [
+                {
+                    link: '/introduction/enter_application',
+                    text: '小程序开发',
+                    name: 'develop'
+                },
+                {
+                    link: '/game/api/openApi/authorize/',
+                    text: '小游戏开发',
+                    name: 'game-develop'
+                }
+            ]
+        },
+        {
+            text: '数据',
+            children: [
+                {
+                    link: '/data/concept/',
+                    text: '小程序数据',
+                    name: 'data'
+                },
+                {
+                    link: '/game/data/feature/concept/',
+                    text: '小游戏数据',
+                    name: 'game-data'
+                }
+            ]
+        },
+        {
+            link: '/operations/specification',
+            text: '运营',
+            name: 'operations'
+        }
+    ];
+
+    var pageType = page.header;
+    if (!pageType) {
+
+    }
+
+    var index;
+    var activeText;
+    navs.forEach((nav, i) => {
+        if (nav.children) {
+            nav.children.forEach((subNav, j) => {
+                if (pageType === subNav.name) {
+                    index = i;
+                    activeText = subNav.text;
+                }
+            });
+        }
+        else if (pageType === nav.name) {
+            index = i;
+            activeText = nav.text;
+        }
+    });
+%>
+<div class="m-doc-level1">
+    <ul><%#
+        %><% for(var i = 0; i < navs.length; i++) {%><%#
+            %><li <% if (i === index) { %> class="m-doc-header-nav-selected"<% } %>><%#
+                %><a href="/docs<%- navs[i].link %>/"><% if(i === index) { %><%- activeText %> <% } else {%><%- navs[i].text %><% } %></a><%#
+            %></li><%#
+        %><% } %><%#
+    %></ul>
+    <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
+</div>

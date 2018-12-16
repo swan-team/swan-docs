@@ -1,20 +1,22 @@
 <%
-
     // 取当前页面各级导航及相关数据
-    var header = site.data.nav; // 1级(头部)导航
-    var headerIndex; // 当前header索引
+    var headerNavs = site.data.nav; // 1级(头部)导航
+
+    // 当前headerNavs索引
+    var headerNavIndex; 
+    for(var i = 0; i < headerNavs.length; i++) {
+        if (headerNavs[i].name == page.header) {
+            nav = headerNavs[i].nav;
+            headerNavIndex = i;
+        }
+    }
+
+    
     var nav; // 2级（sidebar）导航
     var currentPageList = [];
     var h1; // 正文h1
     var bottomPage = {}; // 底部跳转
     var localData = {}; // 页面siderbar数据
-
-    for(var i = 0; i < header.length; i++) {
-        if (header[i].name == page.header) {
-            nav = header[i].nav;
-            headerIndex = i;
-        }
-    }
 
 
     var navLen = nav ? nav.length : 0;
@@ -55,7 +57,7 @@
         <% if (h1) { %> 
             <%= h1 %> - 
         <% }%>
-        <%= headerIndex != null ? header[headerIndex].text : '' %>
+        <%= headerNavIndex != null ? headerNavs[headerNavIndex].text : '' %>
     </title>
     <link rel="dns-prefetch" href="//smartprogram.baidu.com">
     <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
@@ -69,12 +71,12 @@
 </head>
 <body>
 
-    <%- partial('_partial/header', {header: header, h1: h1}) %>
+    <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
     <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
     <script type="text/javascript">
         window.localData = {
-            'headerName': '<%= headerIndex != null ? header[headerIndex].name : '' %>',
+            'headerName': '<%= headerNavIndex != null ? headerNavs[headerNavIndex].name : '' %>',
             'localData': '<%- JSON.stringify(localData) %>',
             'sidebarIgnore': '<%= config.sidebarIgnore.list %>'
         }; 
