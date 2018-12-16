@@ -1417,16 +1417,13 @@ canvasContext.draw
 
 **解释：**将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
 
-<!-- **参数：**
-<!--
+**参数：**
+
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
 |reserve|Boolean|非必填。本次绘制是否接着上一次绘制，即 reserve 参数为 false，则在本次调用 drawCanvas 绘制之前 native 层应先清空画布再继续绘制；若 reserver 参数为 true，则保留当前画布上的内容，本次调用 drawCanvas 绘制的内容覆盖在上面，默认 false
-|callback|Function|绘制完成后回调 -->
+|callback|Function|绘制完成后回调|
 
-<!-- | 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-|callback|Function|绘制完成后回调| --> 
 
 **示例：**
 

@@ -107,7 +107,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?ac
 |参数名|	类型|	是否必须|	描述|
 |---|---|---|---|
 |page|	int|	否|	页码(默认1)|
-|page_size|	int	|否他|	条数(默认10)|
+|page_size|	int	|否|	条数(默认10)|
 |access_token|	string|	是	|第三方平台自己的接口调用凭据|
 返回值说明
 
