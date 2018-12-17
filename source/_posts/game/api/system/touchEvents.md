@@ -1,6 +1,6 @@
 ---
 title: 触摸事件
-layout: gamedoc
+layout: doc
 topic: system
 categoryName: api
 ---
@@ -27,6 +27,7 @@ swan.onTouchStart(callback)
 |touches[].identifier|number|触摸点的标识符|
 |touches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
 |touches[].clientY|number|触摸点据小游戏容器可显示区域左上角的纵向位置|
+|touches[].target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，同 `target`|
 |changedTouches|Array.<`Object`>|触发此次事件的触摸点数组，也就是新增的触摸点|
 |changedTouches[].identifier|number|触摸点的标识符|
 |changedTouches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
@@ -35,6 +36,7 @@ swan.onTouchStart(callback)
 |target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象|
 |currentTarget|HTMLCanvasElement|绑定触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象，也就是始终等于 `target`|
 
+其中的 `touches[].target`、 `target`、 `currentTarget` 都是同一个对象的引用，出于兼容性需要放在了不同的对象中。一般来说，使用 `target` 就可以。
 
 ### swan.offTouchStart()
 
@@ -73,6 +75,7 @@ swan.onTouchMove(callback)
 |touches[].identifier|number|触摸点的标识符|
 |touches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
 |touches[].clientY|number|触摸点据小游戏容器可显示区域左上角的纵向位置|
+|touches[].target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，同 `target`|
 |changedTouches|Array.<`Object`>|触发此次事件的触摸点数组，也就是移动的触摸点|
 |changedTouches[].identifier|number|触摸点的标识符|
 |changedTouches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
@@ -80,6 +83,8 @@ swan.onTouchMove(callback)
 |timestamp|number|程序开始运行的时间戳|
 |target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象|
 |currentTarget|HTMLCanvasElement|绑定触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象，也就是始终等于 `target`|
+
+其中的 `touches[].target`、 `target`、 `currentTarget` 都是同一个对象的引用，出于兼容性需要放在了不同的对象中。一般来说，使用 `target` 就可以。
 
 
 ### swan.offTouchMove()
@@ -119,6 +124,7 @@ swan.onTouchEnd(callback)
 |touches[].identifier|number|触摸点的标识符|
 |touches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
 |touches[].clientY|number|触摸点据小游戏容器可显示区域左上角的纵向位置|
+|touches[].target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，同 `target`|
 |changedTouches|Array.<`Object`>|触发此次事件的触摸点数组，也就是结束触摸的点|
 |changedTouches[].identifier|number|触摸点的标识符|
 |changedTouches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
@@ -126,6 +132,8 @@ swan.onTouchEnd(callback)
 |timestamp|number|程序开始运行的时间戳|
 |target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象|
 |currentTarget|HTMLCanvasElement|绑定触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象，也就是始终等于 `target`|
+
+其中的 `touches[].target`、 `target`、 `currentTarget` 都是同一个对象的引用，出于兼容性需要放在了不同的对象中。一般来说，使用 `target` 就可以。
 
 
 ### swan.offTouchEnd()
@@ -165,6 +173,7 @@ swan.onTouchCancel(callback)
 |touches[].identifier|number|触摸点的标识符|
 |touches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
 |touches[].clientY|number|触摸点据小游戏容器可显示区域左上角的纵向位置|
+|touches[].target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，同 `target`|
 |changedTouches|Array.<`Object`>|触发此次事件的触摸点数组，也就是触摸取消的点|
 |changedTouches[].identifier|number|触摸点的标识符|
 |changedTouches[].clientX|number|触摸点据小游戏容器可显示区域左上角的横向位置|
@@ -172,6 +181,8 @@ swan.onTouchCancel(callback)
 |timestamp|number|程序开始运行的时间戳|
 |target|HTMLCanvasElement|引起触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象|
 |currentTarget|HTMLCanvasElement|绑定触摸事件的 Canvas 对象，在小游戏中，这个对象始终是屏幕上的 Canvas 对象，也就是始终等于 `target`|
+
+其中的 `touches[].target`、 `target`、 `currentTarget` 都是同一个对象的引用，出于兼容性需要放在了不同的对象中。一般来说，使用 `target` 就可以。
 
 
 ### swan.offTouchCancel()
