@@ -114,7 +114,6 @@ function updateScroll() {
         updateNavbarActive();
 
         var padding = $('.p-sidebar-list').offset().top;
-        console.log(padding);
 
         var $panels = $('.p-sidebar-list');
         var panelCurrentTop = $panels.scrollTop();
