@@ -85,9 +85,9 @@
                     background-color: @color-primary-dark;
                 }
             }
-            &.introduction,
-            &.develop,
-            &.data {
+            &.introduction-group,
+            &.develop-group,
+            &.data-group {
                 &:after {
                     content: '';
                     position: absolute;
@@ -104,11 +104,27 @@
                     -webkit-transform: rotate(0deg);
                 }
             }
-            &.introduction-hover:after,
-            &.develop-hover:after,
-            &.data-hover:after {
+            &.introduction-group-hover:after,
+            &.develop-group-hover:after,
+            &.data-group-hover:after {
                 transform: rotate(180deg);
                 -webkit-transform: rotate(180deg);
+            }
+        }
+
+        .m-doc-header-nav-selected {
+            a {
+                color: #3388ff;
+            }
+            &:before {
+                content: '';
+                width: 80%;
+                margin-left: 10%;
+                position: absolute;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: #3388ff;
             }
         }
 
