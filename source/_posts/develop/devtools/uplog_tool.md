@@ -9,6 +9,7 @@ sidebar: uplog_tool
 ---
 |版本号|更新内容|
 |----|----|
+|v1.14.14|** New ** <p>新增web化预览白屏检测功能。<p> ** BugFix ** <p> **·** 修复getUserInfo授权拒绝没有返回临时数据；<p> **·**修复getSystemInfo返回高度与端上不一致；<p> **·**修复canvas无法绘制渐变的问题。|
 |v1.14.13|** BugFix ** <p> **·** 修复cover-image不显示绝对路径图片问题；<p> **·**修复getStroage读取不存在的key时不走fail方法的问题；<p> **·**修复request时referer地址不变一直包含testappid的问题；<p> **·**修复canvasGetImageData、canvasPutImageData接口回调不执行的问题。|
 |v1.14.12|** New ** <p> 添加web化预览开关，在项目信息中可打开/关闭web化预览。<p> ** BugFix ** <p> **·** 修复高版本基础库 pageScrollTo 无效的问题；<p> **·** 修复上传文件http协议中body格式问题。
 |v1.14.11|** Change ** <p> 支持2.5.x、2.10.x版本的基础库。 <p> ** BugFix ** <p> 修复Image组件不支持绝对路径的问题。
