@@ -2074,15 +2074,6 @@
                 link: /develop/debug/remoterelease
                 text: 真机调试
                 name: remoterelease
-                sidebar:                
-                  -
-                    link: /develop/debug/remoterelease/#使用开发者工具进行真机调试
-                    text: 使用开发者工具进行真机调试
-                    name: remoterelease_使用开发者工具进行真机调试
-                  -
-                    link: /develop/debug/remoterelease/#使用控制台进行真机调试
-                    text: 使用控制台进行真机调试
-                    name: remoterelease_使用控制台进行真机调试
               -
                 link: /develop/debug/remotedebugging
                 text: 远程调试
