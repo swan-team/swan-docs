@@ -61,8 +61,17 @@
     ];
 
     var pageType = page.header;
+    // HACK: 小游戏根据文章路径，设置pageType
     if (!pageType) {
-
+        if (page.path.indexOf('game/introduction') >= 0) {
+            pageType = 'game-introduction';
+        }
+        else if (page.path.indexOf('game/data') >= 0) {
+            pageType = 'game-data';
+        }
+        else if (/^game\/(api|tutorials)/.test(page.path)) {
+            pageType = 'game-develop';
+        }
     }
 
     var index;
