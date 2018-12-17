@@ -69,16 +69,9 @@
         else if (page.path.indexOf('game/data') === 0) {
             pageType = 'game-data';
         }
-        else if (page.path.indexOf('game/operations') === 0) {
-            pageType = 'operations';
-        }
-        else if (page.path.indexOf('game/design') === 0) {
-            pageType = 'design';
-        }
         else if (/^game\/(api|tutorials)/.test(page.path)) {
             pageType = 'game-develop';
         }
-
     }
 
     var index;
