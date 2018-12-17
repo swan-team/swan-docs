@@ -8,6 +8,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
 |3.0.2|2018.12.11|**New**<p>**·**端菜单栏新增重启小程序功能，调用onForceReLaunch生命周期；<p>**·**animation-view 组件：添加bindended回调；端上多实例支持；touch事件新增；<p>**·**canvasContext.draw 支持 callback。<p>**BugFix**<p>**·** 修复 ontabitemtap 首次点击不触发的问题；<p>**·** 修复 textarea 组件 max-height 属性不生效的问题；<p>**·** 修复 textarea 组件 粘贴/剪切后，组件高度异常的问题。|
 ## 2.15版本日志更新
 
