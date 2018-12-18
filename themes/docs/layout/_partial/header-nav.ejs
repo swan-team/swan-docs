@@ -3,6 +3,7 @@
         {
             text: '介绍',
             name: 'introduction-group',
+            link: '/introduction/enter_application/',
             children: [
                 {
                     link: '/introduction/enter_application/',
@@ -17,16 +18,17 @@
             ]
         },
         {
-            link: '/design/overview/introduction',
+            link: '/design/overview/introduction/',
             text: '设计',
             name: 'design'
         },
         {
             text: '开发',
             name: 'develop-group',
+            link: '/develop/tutorial/codedir/',
             children: [
                 {
-                    link: '/develop/tutorial/codedir',
+                    link: '/develop/tutorial/codedir/',
                     text: '小程序开发',
                     name: 'develop'
                 },
@@ -40,6 +42,7 @@
         {
             text: '数据',
             name: 'data-group',
+            link: '/data/concept/',
             children: [
                 {
                     link: '/data/concept/',
@@ -54,7 +57,7 @@
             ]
         },
         {
-            link: '/operations/specification',
+            link: '/operations/specification/',
             text: '运营',
             name: 'operations'
         }
@@ -76,18 +79,21 @@
 
     var index;
     var activeText;
+    var activeLink;
     navs.forEach((nav, i) => {
         if (nav.children) {
             nav.children.forEach((subNav, j) => {
                 if (pageType === subNav.name) {
                     index = i;
                     activeText = subNav.text;
+                    activeLink = subNav.link;
                 }
             });
         }
         else if (pageType === nav.name) {
             index = i;
             activeText = nav.text;
+            activeLink = nav.link;
         }
     });
 %>
@@ -95,8 +101,12 @@
 <div class="m-doc-level1">
     <ul><%#
         %><% for(var i = 0; i < navs.length; i++) {%><%#
-            %><li <% if (i === index) { %> class="m-doc-header-nav-selected <%- navs[i].name %>" <% } else { %> class="<%- navs[i].name %>" <% } %>><%#
-                %><a href="/docs<%- navs[i].link %>/"><% if(i === index) { %><%- activeText %> <% } else {%><%- navs[i].text %><% } %></a><%#
+            %><li class="<%- navs[i].name %><%- (i === index ? ' m-doc-header-nav-selected' : '') %>"><%#
+                %><% if(i === index) { %><%#
+                    %><a href="/docs<%- activeLink %>"><%- activeText %></a><%#
+                %><% } else { %><%#
+                    %><a href="/docs<%- navs[i].link %>"><%- navs[i].text %></a><%#
+                %><% } %><%#
             %></li><%#
         %><% } %><%#
     %></ul>
