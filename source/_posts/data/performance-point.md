@@ -10,7 +10,7 @@ sidebar: performance-point
 
 利用注册回调函数的方式，优先运行AppOnLaunch和AppOnshow的生命周期中的逻辑，再运行Page的生命周期的逻辑。
 **优点**：
-1、避免框架app级别的onShow和page级别onShow的不可控时序性问题（将在10.13修复）；
+1、避免框架app级别的onShow和page级别onShow的不可控时序性问题（将在 10.13 修复）；
 2、确保异步回调可控。
 
 在app.js中，统计UV：

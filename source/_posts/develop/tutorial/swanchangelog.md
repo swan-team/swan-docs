@@ -8,11 +8,14 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.0.12|2018.12.18|**BugFix**<p>map组件创建报错修复。|
+|3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
 |3.0.2|2018.12.11|**New**<p>**·**端菜单栏新增重启小程序功能，调用onForceReLaunch生命周期；<p>**·**animation-view 组件：添加bindended回调；端上多实例支持；touch事件新增；<p>**·**canvasContext.draw 支持 callback。<p>**BugFix**<p>**·** 修复 ontabitemtap 首次点击不触发的问题；<p>**·** 修复 textarea 组件 max-height 属性不生效的问题；<p>**·** 修复 textarea 组件 粘贴/剪切后，组件高度异常的问题。|
 ## 2.15版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.15.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.15.12|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.15.9|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.15.7|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
@@ -22,6 +25,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.10.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.10.17|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.10.16|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.10.15|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|

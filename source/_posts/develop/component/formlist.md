@@ -722,7 +722,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 |属性名|类型|默认值|说明|
 |----|----|----|----|
-|value|String|-|输入框的内容|
+|value|String|-|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|
 |placeholder|String|-|输入框为空时占位符|
 |placeholder-style|String|-|指定 placeholder 的样式|
 |placeholder-class|String|textarea-placeholder|指定 placeholder 的样式类|

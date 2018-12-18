@@ -13,6 +13,14 @@ sidebar: smartappdebug_function
 
 ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/smartapp/preview.png)
 
+## 编译
+
+
+点击工具栏中的编译按钮，可以编译当前工程代码，并自动刷新模拟器，展现最新的页面效果。
+
+![图片](../../../img/compile.png)
+
+
 自定义编译
 
 
@@ -24,12 +32,6 @@ sidebar: smartappdebug_function
 
 ![图片](../../../img/tool/工具27.png)
 
-## 编译
-
-
-点击工具栏中的编译按钮，可以编译当前工程代码，并自动刷新模拟器，展现最新的页面效果。
-
-![图片](../../../img/compile.png)
 
 ## 前后台切换
 
