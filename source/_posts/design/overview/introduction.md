@@ -25,7 +25,7 @@ sidebar: introduction
 	<div class="m-doc-custom-examples-correct">
 		<a href="https://smartprogram.baidu.com/docs/design/resource/uikit/" class="m-doc-custom-download-left"><img src="../../../img/design/overview/1-3.png">
 		</a><p class="m-doc-custom-examples-text">设计资源
-		视觉设计控件库UI Kit</p>
+		视觉设计控件库</p>
 	</div>
 </div>
 
@@ -34,5 +34,5 @@ sidebar: introduction
 
 |日期|内容|
 |--|--|
-|2018-11-08|1.设计资源 更新 [UI Kit](../../resource/uikit/) ; <p>2.设计资源 新增 [设计走查表](../../resource/checklist/) ;<p>3.设计资源 新增 [Lottie动效库](../../resource/lottie/)。|
+|2018-11-08|1.设计资源 更新 [视觉组件库](../../resource/uikit/) ; <p>2.设计资源 新增 [设计走查表](../../resource/checklist/) ;<p>3.设计资源 新增 [Lottie动效库](../../resource/lottie/)。|
 |2018-09-21|1.优化设计原则，补充大量案例 ；<br><p> 2.所有图例更为新框架 ;<p>3.增加iPhoneX适配说明;<p>4.优化部分常用组件。|

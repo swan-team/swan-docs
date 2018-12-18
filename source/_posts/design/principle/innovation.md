@@ -10,7 +10,7 @@ sidebar: innovation
 
 想要更好地了解和使用这些资源，开发者可以：
 1. 在[常用组件](../../component/topnav/)查看组件的使用细节和设计建议；
-2. 下载设计所需的<a href="https://smartprogram.baidu.com/docs/design/resource/uikit/">UI Kit</a>，我们提供Sketch版本和Photoshop版本；
+2. 下载设计所需的<a href="https://smartprogram.baidu.com/docs/design/resource/uikit/">视觉组件库</a>，我们提供Sketch版本和Photoshop版本；
 3. 使用百度App的拍照扫码功能扫描二维码，在官方示例中查看和试用这些组件和接口。
 
 	<div class="m-doc-custom-examples-correct">
