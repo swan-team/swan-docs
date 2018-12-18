@@ -2,7 +2,7 @@
 title: 开发前准备
 layout: gamedoc
 categoryName: introduction
-sidebar: register_prepare
+sidebar: before
 topic: prerare
 priority: 01-04
 ---

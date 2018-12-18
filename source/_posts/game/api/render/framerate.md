@@ -6,6 +6,23 @@ categoryName: api
 priority: 06-07
 ---
 
+### swan.setPreferredFramesPerSecond(number fps)
+
+可以修改渲染帧率。默认渲染帧率为 60 帧每秒。修改后，`requestAnimationFrame` 的回调频率会发生改变。
+
+设置帧率
+
+```js
+swan.setPreferredFramesPerSecond(fps);
+```
+
+
+**参数：**
+
+|参数|类型|描述|
+|-|-|-|
+|fps|number|帧率值，有效范围 1 ~ 60|
+
 ### requestAnimationFrame()
 
 请求执行重绘。

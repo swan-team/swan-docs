@@ -2,7 +2,7 @@
 title: 流量主开通指导文档
 layout: gamedoc
 categoryName: introduction
-sidebar: flow_open
+sidebar: guide
 topic: flow_open
 priority: 04-01
 ---

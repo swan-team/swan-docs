@@ -2,7 +2,7 @@
 title: 完善百度小游戏基本信息
 layout: gamedoc
 categoryName: introduction
-sidebar: register_consummate
+sidebar: consummate
 topic: prerare
 priority: 01-03
 ---

@@ -2,7 +2,7 @@
 title: 什么是百度信息流
 layout: gamedoc
 categoryName: introduction
-sidebar: flow
+sidebar: form
 topic: flow
 priority: 03-01
 ---
