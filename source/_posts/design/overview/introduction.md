@@ -24,7 +24,8 @@ sidebar: introduction
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<a href="https://smartprogram.baidu.com/docs/design/resource/uikit/" class="m-doc-custom-download-left"><img src="../../../img/design/overview/1-3.png">
-		</a><p class="m-doc-custom-examples-text">视觉组件库和设计走查表</p>
+		</a><p class="m-doc-custom-examples-text">设计资源
+		视觉组件库和设计走查表</p>
 	</div>
 </div>
 
