@@ -2382,6 +2382,19 @@
             link: /operations/service
             text: 服务条款
             name: service
+
+    -
+      link: /operations/game
+      text: 百度小游戏特别规范
+      name: operations_game
+      sidebar:
+        -
+          sidebar:
+          -
+            link: /operations/game
+            text: 百度小游戏特别规范
+            name: operations_game
+
           # -
           #   link: /operations/standard
           #   text: 审核标准
