@@ -106,6 +106,10 @@
               text: 图片图标
               name: pic
             -
+              link: /design/foundation/logo
+              text: 头像输出
+              name: logo            
+            -
               link: /design/foundation/writing
               text: 措辞
               name: writing
