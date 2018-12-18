@@ -9,16 +9,16 @@ priority: 01-01
 小游戏数据为开发者提供了<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=1&tabCur=0">用户分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=2&tabCur=0">使用分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=3&tabCur=0">来源分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=4&tabCur=0">留存分析</a>、<a href="https://smartprogram.baidu.com/mappconsole/main/data?appId=11182003&childTabCur=5&tabCur=0">转化分析</a>等模块分析功能，帮助开发者了解小游戏整体运营状况，分析小游戏的用户来源、用户构成、用户增长趋势、用户留存与转化、用户使用行为习惯等一系列问题，并实现用数据驱动商业运营与产品迭代的目标。
 
 
-![图片](/img/data/concept12.png)
+![图片](/img/game/data/concept12.png)
 
 ### 应用概况
 
 应用概况是产品健康的仪表盘，通过集中展现当前应用的核心数据指标（如：新用户数、启动用户数等）及主要报表的近 7 日趋势变化缩略图，帮助您快速了解应用当前的数据表现。
-![图片](/img/data/concept01.png)
+![图片](/img/game/data/concept01.png)
 
 ### 用户分析
 
-![图片](/img/data/concept02.png)
+![图片](/img/game/data/concept02.png)
 
 **用户趋势**：用于分析产品的新用户增量、新老构成比例等指标随时间的变化趋势，特别是结合自身业务重点分析趋势高、低点出现的合理性。
 **活跃用户**：从活跃用户数、活跃度、流失用户等维度分析用户的产品使用粘性。
@@ -28,7 +28,7 @@ priority: 01-01
 
 ### 使用分析
 
-![图片](/img/data/concept03.png)
+![图片](/img/game/data/concept03.png)
 
 **页面分析**：展示各个页面的访次、停留时间、退出率等指标，体现页面受欢迎的程度。
 **使用习惯**：从访问深度、使用频率、使用时长、使用间隔四个维度系统刻画用户使用习惯特征，熟悉并把握用户的产品使用习惯特征，对于有针对性的进行产品优化及运营策略制定具有重要意义。
@@ -39,15 +39,15 @@ priority: 01-01
 ### 来源分析
 
 展示进入到小游戏的不同来源数据情况，来源的启动用户数体现该来源规模，新用户数、人均启动次数、时长和跳出率则体现该来源的质量。
-![图片](/img/data/concept04.png)
+![图片](/img/game/data/concept04.png)
 
 ### 留存分析
 
 用户留存报告用以分析目标用户再次启动小游戏的情况，是体现小游戏用户粘性的核心指标。在选择了考察的新用户（或活跃用户）时段后，可以在留存表中查看目标用户的“按日”、“按周”和“按月”的留存用户数或留存率。
-![图片](/img/data/concept05.png)
+![图片](/img/game/data/concept05.png)
 
 ### 转化分析
 
 分析过程中的转化与流失情况。当前主要为漏斗分析：漏斗分析，是指将多个事件串联起来，对每个步骤中用户转化与流失进行的分析。为了让最终的转化能实现最大化，就需要去监控漏斗每个关键步骤的用户流量，分析步骤之间的流转关系，提升每个步骤的转化率。这就是漏斗分析的意义与价值。
 
-![图片](/img/data/concept13.png)
+![图片](/img/game/data/concept13.png)
