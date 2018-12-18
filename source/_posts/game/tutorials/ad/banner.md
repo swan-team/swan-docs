@@ -4,7 +4,7 @@ title: Banner 广告
 layout: gamedoc
 categoryName: tutorials
 topic: ad
-priority: 07-01
+priority: 08-01
 ---
 
 

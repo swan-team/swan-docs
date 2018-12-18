@@ -2,8 +2,8 @@
 title: 如何开发小游戏
 layout: gamedoc
 categoryName: tutorials
-topic: tutorials
-priority: 00-01
+topic: howto
+priority: 01-01
 ---
 
 ### 准备开发工具

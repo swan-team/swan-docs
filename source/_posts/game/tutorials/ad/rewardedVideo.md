@@ -4,7 +4,7 @@ layout: gamedoc
 categoryName: tutorials
 
 topic: ad
-priority: 07-02
+priority: 08-02
 ---
 
 小游戏激励视频广告组件在小游戏最上层渲染。视频的宽高比有 16：9 及 9：16 两种。

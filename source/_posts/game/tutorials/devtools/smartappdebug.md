@@ -3,7 +3,7 @@ title: 调试
 layout: gamedoc
 categoryName: tutorials
 topic: devtools
-priority: 01-03
+priority: 02-03
 ---
 
 <!-- md game/tutorials/devtools/_smartappdebug/smartappdebug.md -->

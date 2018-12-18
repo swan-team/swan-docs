@@ -4,7 +4,7 @@ layout: gamedoc
 categoryName: tutorials
 level: root
 topic: migrating
-priority: 02-00
+priority: 03-00
 ---
 
 迁移文档的首页。

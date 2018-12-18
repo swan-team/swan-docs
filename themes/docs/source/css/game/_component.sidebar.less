@@ -52,10 +52,15 @@
         max-height: 100%;
         padding-top: 35px;
         overflow: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
 
         .with-dev-link & {
-            margin-top: @navbar-dev-height;
             padding-top: 0;
+            top: @navbar-dev-height;
         }
     }
 

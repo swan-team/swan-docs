@@ -1,13 +1,10 @@
 
 ---
-title: 广告
+title: 网络
 layout: gamedoc
 categoryName: tutorials
 level: root
-topic: ad
-priority: 08-00
+topic: network
+priority: 07-00
 ---
-
-
-声音的页面
 

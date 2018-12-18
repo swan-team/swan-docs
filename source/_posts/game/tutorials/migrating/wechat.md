@@ -4,7 +4,7 @@ title: 微信小游戏
 layout: gamedoc
 categoryName: tutorials
 topic: migrating
-priority: 02-01
+priority: 03-01
 ---
 
 如果开发者想把在微信小游戏上运行的项目迁移到手百小游戏项目的话，首先我们需要准备：
