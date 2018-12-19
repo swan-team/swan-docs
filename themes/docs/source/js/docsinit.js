@@ -90,8 +90,8 @@
             var sidebarSelected = $('.m-doc-sidebar-selected');
             var sidebarFirst = $('.m-doc-nav-on .m-doc-nav-children .m-doc-sidebar-on:first-child .m-doc-h1-children li:first-child a');
             var isFirst = false;
-            sidebarFirst.each(function(element) {
-                if ($('.m-doc-sidebar-selected a')[0] && element.href == $('.m-doc-sidebar-selected a')[0].href) {
+            sidebarFirst.each(function(index) {
+                if ($('.m-doc-sidebar-selected a')[0] && sidebarFirst[index].href == $('.m-doc-sidebar-selected a')[0].href) {
                     isFirst = true;
                 }
             });
