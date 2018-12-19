@@ -28,8 +28,8 @@ priority: 01-01
 ### 目录结构
 经过一个自动的编译之后我们便得到了一个项目模版。并且，进入到开发者工具中可以看到已经为您创建好的文件的目录。
 其中两个必要的文件为：
-1. game.js 小游戏的入口文件
-2. game.json 小游戏相关配置文件，详细配置内容参见[配置](/game/tutorials/howto/dev/#配置)
+1. game.js 小游戏的入口文件。
+2. game.json 小游戏相关配置文件，详细配置内容参见[配置](/game/tutorials/howto/dev/#配置)。
 
 ![](/img/game/tutorials/project.png)
 
@@ -93,12 +93,12 @@ priority: 01-01
 
 #### 分包
 
-- 代码包大小限制：
+**代码包大小限制：**
 
- 1.整个小游戏所有分包大小不超过 10M
- 2.单个分包/主包大小不能超过 5M
+ 1. 整个小游戏所有分包大小不超过 10M。
+ 2. 单个分包/主包大小不能超过 5M。
 
-- 分包配置：
+**分包配置：**
 
 需要先在 game.json 配置分包信息。
 
@@ -164,7 +164,7 @@ console.log(res.windowHeight);
 ```
 
 #### canvas
-小游戏是需要使用 [canvas](https://www.baidu.com/s?wd=canvas%20百度百科) 绘制出来的。我们先通过调用 [swan.createCanvas()](/game/api/render/createCanvas/) 方法来创建[画布](/game/api/render/Canvas/)，相当于制作了一张`白纸`，然后通过 `canvas.getContext('2d')` 可以获取 canvas 的[上下文对象](/game/api/render/CanvasRenderingContext2D/)，相当于获得了`画笔`，再通过修改`画笔`的性质来绘制出我们的游戏界面。
+小游戏是需要使用 [canvas](https://www.baidu.com/s?wd=canvas%20百度百科) 绘制出来的。我们先通过调用 [swan.createCanvas()](/game/api/render/createCanvas/) 方法来创建**画布**，相当于制作了一张**白纸**，然后通过 [canvas.getContext('2d')](/game/api/render/CanvasRenderingContext2D/) 可以获取 canvas 的上下文对象，相当于获得了**画笔**，再通过修改**画笔**的性质来绘制出我们的游戏界面。
 
 ```js
 // 获取屏幕宽高
@@ -312,16 +312,16 @@ swan.showToast({
 
 - iOS 真机查看日志
 
-1. 手机和电脑连线
-2. 打开系统控制台，英⽂文系统是 Console.app
-3. 日志关键字 baiduboxapp JSLog
+1. 手机和电脑连线。
+2. 打开系统控制台，英⽂文系统是 Console.app。
+3. 日志关键字 baiduboxapp JSLog。
 
 ![](/img/game/tutorials/iospreview.png)
 
 - Andriod 真机查看日志
 
-1. 安卓手机(需要开启USB调试)和电脑(需要安装 adb 工具)连线
-2. 打开 Mac 的终端或 Windows 的 cmd
+1. 安卓手机(需要开启USB调试)和电脑(需要安装 adb 工具)连线。
+2. 打开 Mac 的终端或 Windows 的 cmd。
 3. 使用命令: `adb logcat V8Exception:I V8Console:V *:S` 即可实时打印日志。
 
 ![](/img/game/tutorials/andriodpreview.png)

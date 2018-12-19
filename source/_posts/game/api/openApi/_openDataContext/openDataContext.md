@@ -2,7 +2,7 @@
 
 开放数据域对象。
 
-[canvas](/api/render/Canvas/)
+[canvas](/game/api/render/Canvas/)
 其值为开放数据域和主域共享的 sharedCanvas。
 
 [openDataContext.postMessage()](#openDataContext-postMessage)

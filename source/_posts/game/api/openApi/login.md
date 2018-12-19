@@ -12,7 +12,7 @@ categoryName: api
 ```js
 swan.login(opts)
 ```
->更多登录授权的流程参见： [登录授权流程说明](/tutorials/open_api/open-log/)
+>更多登录授权的流程参见： [登录授权流程说明](/game/tutorials/open_api/log/)
 
 
 **参数值：**
@@ -109,7 +109,7 @@ swan.checkSession({
 
 小游戏在其服务端中发送 POST 请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到 Session Key。
 
->更多登录授权的流程参见： [登录授权流程说明](/tutorials/open_api/open-log/)
+>更多登录授权的流程参见： [登录授权流程说明](/game/tutorials/open_api/log/)
 
 **获取 Session Key 的URL地址：**
 ```js

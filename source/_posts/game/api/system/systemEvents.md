@@ -23,7 +23,7 @@ swan.onAudioInterruptionBegin(callback)
 
 ### swan.offAudioInterruptionBegin()
 
-撤销播放音频中断的回调函数，传入的 `callback` 即为调用 `swan.onAudioInterruptionBegin` 传入的 `callback` 对象。
+撤销播放音频中断的回调函数，传入的 `callback` 即为调用 `swan.onAudioInterruptionBegin()` 传入的 `callback` 对象。
 
 ```js
 swan.offAudioInterruptionBegin(callback)

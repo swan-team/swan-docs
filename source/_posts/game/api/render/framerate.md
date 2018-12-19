@@ -8,7 +8,7 @@ priority: 06-07
 
 ### swan.setPreferredFramesPerSecond(number fps)
 
-可以修改渲染帧率。默认渲染帧率为 60 帧每秒。修改后，`requestAnimationFrame` 的回调频率会发生改变。
+可以修改渲染帧率。默认渲染帧率为 60 帧每秒。修改后，[`requestAnimationFrame()`](#requestAnimationFrame) 的回调频率会发生改变。
 
 设置帧率
 
@@ -39,7 +39,7 @@ requestAnimationFrame(callback)
 
 **返回值：**
 
-`number` 类型的句柄，用于 `cancelAnimationFrame` 中取消。
+`number` 类型的句柄，用于 [`cancelAnimationFrame`](#cancelAnimationFrame) 中取消。
 
 
 ### cancelAnimationFrame()
@@ -54,5 +54,5 @@ cancelAnimationFrame(handler)
 
 |参数|类型|描述|
 |-|-|-|
-|handler|number|`requestAnimationFrame` 返回的句柄|
+|handler|number|[`requestAnimationFrame()`](#requestAnimationFrame) 的返回值|
 

@@ -1,7 +1,7 @@
 
 ### canvas.toTempFilePathSync()
 
-canvas.toTempFilePath() 的同步版本。在异步版本中，执行 fail 回调的，在同步版本中都会抛异常。
+`canvas.toTempFilePath()` 的同步版本。在异步版本中，执行 fail 回调的，在同步版本中都会抛异常。
 
 ```js
 canvas.toTempFilePathSync(opts);

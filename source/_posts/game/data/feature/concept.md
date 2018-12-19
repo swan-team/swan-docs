@@ -6,7 +6,7 @@ topic: feature
 priority: 01-01
 ---
 
-小游戏数据为开发者提供了<a href="https://smartprogram.baidu.com/docs/game/data/feature/concept/#%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90">用户分析</a>、<a href="https://smartprogram.baidu.com/docs/game/data/feature/concept/#%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90">使用分析</a>、<a href="https://smartprogram.baidu.com/docs/game/data/feature/concept/#%E6%9D%A5%E6%BA%90%E5%88%86%E6%9E%90">来源分析</a>、<a href="https://smartprogram.baidu.com/docs/game/data/feature/concept/#%E7%95%99%E5%AD%98%E5%88%86%E6%9E%90">留存分析</a>、<a href="https://smartprogram.baidu.com/docs/game/data/feature/concept/#%E8%BD%AC%E5%8C%96%E5%88%86%E6%9E%90">转化分析</a>等模块分析功能，帮助开发者了解小游戏整体运营状况，分析小游戏的用户来源、用户构成、用户增长趋势、用户留存与转化、用户使用行为习惯等一系列问题，并实现用数据驱动商业运营与产品迭代的目标。
+小游戏数据为开发者提供了[用户分析](/game/data/feature/concept/#用户分析)、[使用分析](/game/data/feature/concept/#使用分析)、[来源分析](/game/data/feature/concept/#来源分析)、[留存分析](/game/data/feature/concept/#留存分析)、[转化分析](/game/data/feature/concept/#转化分析)等模块分析功能，帮助开发者了解小游戏整体运营状况，分析小游戏的用户来源、用户构成、用户增长趋势、用户留存与转化、用户使用行为习惯等一系列问题，并实现用数据驱动商业运营与产品迭代的目标。
 
 
 ![图片](/img/game/data/concept12.png)

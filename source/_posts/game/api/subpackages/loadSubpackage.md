@@ -24,4 +24,4 @@ swan.loadSubpackage(opts)
 
 **返回值：**
 
-[LoadSubpackageTask](/api/subpackages/loadSubpackageTask/) 实例。
+[LoadSubpackageTask](/game/api/subpackages/loadSubpackageTask/) 实例。

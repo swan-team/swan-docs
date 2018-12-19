@@ -1,6 +1,6 @@
 ### openDataContext.postMessage()
 
-`postMessage()` 是 [openDataContext](#openDataContext) 对象上的方法，该方法是向开放数据域发送消息。
+`postMessage()` 是 [OpenDataContext](#OpenDataContext) 对象上的方法，该方法是向开放数据域发送消息。
 
 ```js
 openDataContext.postMessage(opts)

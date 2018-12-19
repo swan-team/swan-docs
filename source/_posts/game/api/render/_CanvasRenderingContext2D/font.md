@@ -5,7 +5,6 @@
 ```js
 context.font = value;
 ```
-使用符合 CSS [font](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font) 语法的 [DOMString](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString) 字符串。默认字体是 10px sans-serif。
 
 **属性值：**
 

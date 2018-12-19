@@ -1,9 +1,11 @@
 ---
 title: 触摸事件
-layout: doc
+layout: gamedoc
 topic: system
 categoryName: api
 ---
+
+
 
 ### swan.onTouchStart()
 
@@ -50,7 +52,7 @@ swan.offTouchStart(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 [`swan.onTouchStart`](#swan-onTouchStart) 时传入的回调函数|
+|callback|function|调用 [`swan.onTouchStart()`](#swan-onTouchStart) 时传入的回调函数|
 
 
 ### swan.onTouchMove()
@@ -148,7 +150,7 @@ swan.offTouchEnd(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 [`swan.onTouchEnd`](#swan-onTouchEnd) 时传入的回调函数|
+|callback|function|调用 [`swan.onTouchEnd()`](#swan-onTouchEnd) 时传入的回调函数|
 
 
 ### swan.onTouchCancel()
@@ -197,4 +199,4 @@ swan.offTouchCancel(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 [`swan.onTouchCancel`](#swan-onTouchCancel) 时传入的回调函数|
+|callback|function|调用 [`swan.onTouchCancel()`](#swan-onTouchCancel) 时传入的回调函数|

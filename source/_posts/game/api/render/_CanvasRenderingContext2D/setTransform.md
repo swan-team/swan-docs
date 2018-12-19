@@ -5,7 +5,7 @@
 ```js
 context.setTransform(a, b, c, d, e, f);
 ```
-参考 `transform()` 方法，该方法不会使用矩阵重置当前的变换，而是会多次叠加变换。
+参考 [`transform()`](#transform) 方法，该方法不会使用矩阵重置当前的变换，而是会多次叠加变换。
 
 变换矩阵的描述：
 

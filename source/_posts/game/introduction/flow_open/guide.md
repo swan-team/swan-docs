@@ -110,13 +110,15 @@ priority: 04-01
 
 #### 6.3 获取代码
 
-#### 6.3.1 小程序代码
+#### 6.3.1 banner广告
+小程序和 H5 小游戏代码获取路径：代码位新建完成后，开发者可在代码位列表中找到该代码位，点击“获取代码”按钮。
 
-小程序代码适用于小程序和 H5 小游戏，不适用于基于游戏框架的小游戏；
-
-获取路径：代码位新建完成后，开发者可在代码位列表中找到该代码位，点击“获取代码”按钮。
 ![](/img/game/introduction/flow_open/flow_open22.png)
 ![](/img/game/introduction/flow_open/flow_open022.png)
+
+基于游戏框架的小游戏不可采用上述方法，接入步骤请参加如下截图的[文档](/game/tutorials/ad/banner/)。
+
+![](/img/game/introduction/flow_open/newadd09.png)
 
 #### 6.3.2 小游戏代码
 

@@ -37,21 +37,24 @@ priority: 01-02
 注：每个帐号有 5 次提交审核机会，5 次审核仍然没通过的，将不能再提交。
 
 #### 超级管理员信息登记
-![图片](/img/game/introduction/enter/apply10.png)
-
-#### 确认主体信息
- ![图片](/img/game/introduction/enter/apply11.png)
+登记运营者身份证姓名、身份证号码并验证手机号。
+![图片](/img/game/introduction/enter/newadd11.png)
 
 #### 提交并等待审核通知
-审核预计需要 2 个工作日左右。
- ![图片](/img/game/introduction/enter/apply13.png)
+ ![图片](/img/game/introduction/enter/newadd12.png)
 
 #### 审核通过
-信息审核通过后，进入首页会有高级认证的链接，点击后跳转到高级认证页面，认证通过即可创建智能小程序并正常使用平台各项功能。
-
-#### 高级认证
-信息审核通过后，进入首页会有高级认证的链接，点击后跳转到高级认证页面，未通过高级认证的小游戏不可发布。
- ![图片](/img/game/introduction/enter/apply12.png)
-
-对公打款：填写企业对公银行开户信息 → 等待系统向该账户打款 → 查询款项到账情况（预计需要 1~2 个工作日）→ 在验证页面填写收款金额 → 等待验证结果。
- ![图片](/img/game/introduction/enter/newadd03.png)
+1.信息审核通过后，单击“尽快完成认证”，验证主体的真实性。
+ ![图片](/img/game/introduction/enter/newadd13.png)
+2.单击“对公验证”，进入对公打款页面。
+ ![图片](/img/game/introduction/enter/newadd14.png)
+3.对公打款：填写企业对公银行开户信息。
+ ![图片](/img/game/introduction/enter/newadd15.png)
+回填金额。
+ ![图片](/img/game/introduction/enter/newadd16.png)
+4.单击“小程序优惠通道”。
+ ![图片](/img/game/introduction/enter/newadd17.png)
+5.单击开通优惠通道，请于60天内完成至少一个小程序的发布。
+ ![图片](/img/game/introduction/enter/newadd18.png)
+6.认证完成。
+ ![图片](/img/game/introduction/enter/newadd19.png)

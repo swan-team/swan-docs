@@ -22,7 +22,7 @@ setTimeout(callback, delay)
 
 **返回值：**
 
-`number` 类型的 ID，用于 [`clearTimeout`](#clearTimeout) 中取消。
+`number` 类型的 ID，用于 [`clearTimeout()`](#clearTimeout) 中取消。
 
 
 
@@ -38,7 +38,7 @@ clearTimeout(handler)
 
 |参数|类型|描述|
 |-|-|-|
-|handler|number|[`setTimeout`](#setTimeout) 返回的 ID|
+|handler|number|[`setTimeout()`](#setTimeout) 返回的 ID|
 
 **示例：**
 
@@ -69,7 +69,7 @@ setInterval(callback, delay)
 
 **返回值：**
 
-`number` 类型的 ID，用于 [`clearInterval`](#clearInterval) 中取消。
+`number` 类型的 ID，用于 [`clearInterval()`](#clearInterval) 中取消。
 
 
 
@@ -85,7 +85,7 @@ clearInterval(handler)
 
 |参数|类型|描述|
 |-|-|-|
-|handler|number|[`setInterval`](#setInterval) 返回的 ID|
+|handler|number|[`setInterval()`](#setInterval) 返回的 ID|
 
 **示例：**
 
