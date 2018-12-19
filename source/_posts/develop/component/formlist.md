@@ -210,7 +210,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 value="{= value =}"|
+| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|
 | type | String  |text  |input 的类型|
 | password | Boolean  | false  |是否是密码类型|
 | placeholder | String  |-  |输入框为空时占位符|
@@ -256,7 +256,7 @@ Page({
 ```xml
 <!-- input.swan -->
 <view class="section">
-    <input  maxlength="20" placeholder="最大输入长度20" />
+    <input value="{=value=}" maxlength="20" placeholder="最大输入长度20" />
 </view>
 
 ```
