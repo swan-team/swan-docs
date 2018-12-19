@@ -7,7 +7,7 @@ topic: storage
 priority: 05-01
 ---
 
-每个百度小游戏都可以有自己的本地缓存，可以通过相关 API 对本地缓存进行读写和清理，详细的方法请参见[数据缓存 API](/api/storage/clearStorage/)。
+每个百度小游戏都可以有自己的本地缓存，可以通过相关 API 对本地缓存进行读写和清理，详细的方法请参见[数据缓存 API](/game/api/storage/getStorage/)。
 
 **说明：**
 同一个用户，同一个小游戏 storage 上限为 10MB。
@@ -67,11 +67,11 @@ swan.clearStorage({
 })
 ```
 5. 获取当前数据缓存的信息
-异步获取当前 storage 的相关信息，返回的具体信息参见相应 [API](/api/storage/getStorageInfo/)。
+异步获取当前 storage 的相关信息，返回的具体信息参见相应 [API](/game/api/storage/getStorageInfo/)。
 ```javascript
 swan.getStorageInfo({
     success: res => console.log(res.keys),
     fail: err => console.log('获取操作失败')
 });
 ```
-更多信息请参见[数据缓存 API](/api/storage/clearStorage/)。
+更多信息请参见[数据缓存 API](/game/api/storage/getStorage/)。

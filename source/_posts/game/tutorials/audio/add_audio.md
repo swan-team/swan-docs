@@ -19,14 +19,14 @@ priority: 09-01
 const ctx = swan.createInnerAudioContext();
 ```
 
-2. 修改 `ctx` 属性，详见 [API](/api/media/audio/)：
+2. 修改 `ctx` 属性，详见 [API](/game/api/media/audio/)：
 
 ```js
 ctx.loop = true;
 ctx.src = 'xxx.mp3';
 ```
 
-3. 监听事件
+3. 监听事件：
 
 ```js
 ctx.onStop(function() {
@@ -34,7 +34,7 @@ ctx.onStop(function() {
 });
 ```
 
-4. 播放音频
+4. 播放音频：
 
 如果 `ctx` 没有设置 `autoplay`，则需要调用 `ctx.play()` 播放，否则音频资源加载后将自动播放：
 
@@ -49,7 +49,7 @@ ctx.destroy();
 ctx = null;
 ```
 
-详细的方法请参见[音频 API](/api/media/audio/)。
+详细的方法请参见[音频 API](/game/api/media/audio/)。
 
 
 

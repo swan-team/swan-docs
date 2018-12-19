@@ -55,7 +55,7 @@ priority: 10-01
 
 ### 分包加载
 
-使用 [`swan.loadSubpackage`](/api/subpackages/loadSubpackage/) 下载分包，它会返回一个 [`LoadSubpackageTask`](/api/subpackages/loadSubpackageTask/) 对象，用以获得下载进度。
+使用 [`swan.loadSubpackage`](/game/api/subpackages/loadSubpackage/) 下载分包，它会返回一个 [`LoadSubpackageTask`](/game/api/subpackages/loadSubpackageTask/) 对象，用以获得下载进度。
 
 ```js
 const loadTask = swan.loadSubpackage({

@@ -22,19 +22,19 @@ priority: 04-01
 |avatarUrl|string|用户的百度账号头像 url|
 |swanId|string|用户的 swanId|
 |nickname|string|用户的百度账号昵称|
-|KVDataList|Array.<[KVData](/api/openApi/openData/#KVData)\>|用户托管的 KVData 游戏数据列表|
+|KVDataList|Array.<[KVData](/game/api/openApi/openData/#KVData)\>|用户托管的 KVData 游戏数据列表|
 
-用户托管的游戏数据是指，用户的段位、战绩等游戏业务特有的数据，通过调用 [swan.setUserCloudStorage()](/api/openApi/openData/#swan-setUserCloudStorage) 可以将当前用户的游戏数据托管在百度后台。只有被托管过游戏数据的用户，才会出现在 [swan.getFriendCloudStorage()](/api/openApi/openData/#swan-getFriendCloudStorage) 返回的对象数组中。
+用户托管的游戏数据是指，用户的段位、战绩等游戏业务特有的数据，通过调用 [swan.setUserCloudStorage()](/game/api/openApi/openData/#swan-setUserCloudStorage) 可以将当前用户的游戏数据托管在百度后台。只有被托管过游戏数据的用户，才会出现在 [swan.getFriendCloudStorage()](/game/api/openApi/openData/#swan-getFriendCloudStorage) 返回的对象数组中。
 
 除此之外，我们还提供了如下 API：
 
-+ [swan.removeUserCloudStorage()](/api/openApi/openData/#swan-removeUserCloudStorage) 删除用户托管的游戏数据中指定字段的数据。
++ [swan.removeUserCloudStorage()](/game/api/openApi/openData/#swan-removeUserCloudStorage) 删除用户托管的游戏数据中指定字段的数据。
 
-+ [swan.getUserCloudStorage()](/api/openApi/openData/#swan-getUserCloudStorage) 获取当前用户的托管数据。
++ [swan.getUserCloudStorage()](/game/api/openApi/openData/#swan-getUserCloudStorage) 获取当前用户的托管数据。
 
-[swan.getUserCloudStorage()](/api/openApi/openData/#swan-getUserCloudStorage) 和 [swan.getFriendCloudStorage()](/api/openApi/openData/#swan-getFriendCloudStorage) 只能在 `开放数据域` 使用。
+[swan.getUserCloudStorage()](/game/api/openApi/openData/#swan-getUserCloudStorage) 和 [swan.getFriendCloudStorage()](/game/api/openApi/openData/#swan-getFriendCloudStorage) 只能在 `开放数据域` 使用。
 
-[swan.setUserCloudStorage()](/api/openApi/openData/#swan-setUserCloudStorage) 和 [swan.removeUserCloudStorage()](/api/openApi/openData/#swan-removeUserCloudStorage) 可以同时在 `主域` 和 `开放数据域` 中调用。
+[swan.setUserCloudStorage()](/game/api/openApi/openData/#swan-setUserCloudStorage) 和 [swan.removeUserCloudStorage()](/game/api/openApi/openData/#swan-removeUserCloudStorage) 可以同时在 `主域` 和 `开放数据域` 中调用。
 
 ### 开放数据域
 
@@ -67,7 +67,7 @@ priority: 04-01
 
 开放数据域不能向主域发送消息，主域可以向开放数据域发送消息。
 
-在主域调用 [swan.getOpenDataContext()](/api/openApi/openDataContext/#swan-getOpenDataContext) 方法可以获取开放数据域实例，调用实例上的 [postMessage()](/api/openApi/openDataContext/#openDataContext-postMessage) 方法可以向开放数据域发送消息。
+在主域调用 [swan.getOpenDataContext()](/game/api/openApi/openDataContext/#swan-getOpenDataContext) 方法可以获取开放数据域实例，调用实例上的 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 方法可以向开放数据域发送消息。
 
 ```js
 // game.js
@@ -78,7 +78,7 @@ openDataContext.postMessage({
 });
 ```
 
-在开放数据域调用 [swan.onMessage()](/api/openApi/openDataContext/#swan-onMessage) 方法可以监听来自主域的消息。
+在开放数据域调用 [swan.onMessage()](/game/api/openApi/openDataContext/#swan-onMessage) 方法可以监听来自主域的消息。
 
 ```js
 // src/openDataContext/index.js
@@ -119,7 +119,7 @@ swan.getFriendCloudStorage({
 });
 ```
 
-sharedCanvas 是主域和开放数据域都可以访问的一个离屏 canvas。在开放数据域调用 [swan.getSharedCanvas()](/api/openApi/openData/#swan-getSharedCanvas) 将返回 sharedCanvas。
+sharedCanvas 是主域和开放数据域都可以访问的一个离屏 canvas。在开放数据域调用 [swan.getSharedCanvas()](/game/api/openApi/openData/#swan-getSharedCanvas) 将返回 sharedCanvas。
 
 ```js
 // src/openDataContext/index.js
@@ -188,49 +188,49 @@ openDataContext.onMessage(data => {
 
 <!-- **帧率**
 
-+ [requestAnimationFrame()](/api/render/framerate/#requestAnimationFrame)
-+ [cancelAnimationFrame()](/api/render/framerate/#cancelAnimationFrame) -->
++ [requestAnimationFrame()](/game/api/render/framerate/#requestAnimationFrame)
++ [cancelAnimationFrame()](/game/api/render/framerate/#cancelAnimationFrame) -->
 
 <!-- **Timer**
 
-+ [setTimeout()](/api/system/timeout/#setTimeout)
-+ [clearTimeout()](/api/system/timeout/#clearTimeout)
-+ [setInterval()](/api/system/timeout/#setInterval)
-+ [clearInterval()](/api/system/timeout/#clearInterval) -->
++ [setTimeout()](/game/api/system/timeout/#setTimeout)
++ [clearTimeout()](/game/api/system/timeout/#clearTimeout)
++ [setInterval()](/game/api/system/timeout/#setInterval)
++ [clearInterval()](/game/api/system/timeout/#clearInterval) -->
 
 <!-- **触摸事件**
 
-+ [swan.onTouchStart()](/api/system/touchEvents/#swan-onTouchStart)
-+ [swan.onTouchMove()](/api/system/touchEvents/#swan-onTouchMove)
-+ [swan.onTouchEnd()](/api/system/touchEvents/#swan-onTouchEnd)
-+ [swan.onTouchCancel()](/api/system/touchEvents/#swan-onTouchCancel)
-+ [swan.offTouchStart()](/api/system/touchEvents/#swan-offTouchStart)
-+ [swan.offTouchMove()](/api/system/touchEvents/#swan-offTouchMove)
-+ [swan.offTouchEnd()](/api/system/touchEvents/#swan-offTouchEnd)
-+ [swan.offTouchCancel()](/api/system/touchEvents/#swan-offTouchCancel) -->
++ [swan.onTouchStart()](/game/api/system/touchEvents/#swan-onTouchStart)
++ [swan.onTouchMove()](/game/api/system/touchEvents/#swan-onTouchMove)
++ [swan.onTouchEnd()](/game/api/system/touchEvents/#swan-onTouchEnd)
++ [swan.onTouchCancel()](/game/api/system/touchEvents/#swan-onTouchCancel)
++ [swan.offTouchStart()](/game/api/system/touchEvents/#swan-offTouchStart)
++ [swan.offTouchMove()](/game/api/system/touchEvents/#swan-offTouchMove)
++ [swan.offTouchEnd()](/game/api/system/touchEvents/#swan-offTouchEnd)
++ [swan.offTouchCancel()](/game/api/system/touchEvents/#swan-offTouchCancel) -->
 
 **画布**
 
-+ [swan.createCanvas()](/api/render/Canvas/#canvas-createCanvas)
-+ [swan.getSharedCanvas()](/api/openApi/openData/#swan-getSharedCanvas)
++ [swan.createCanvas()](/game/api/render/Canvas/#canvas-createCanvas)
++ [swan.getSharedCanvas()](/game/api/openApi/openData/#swan-getSharedCanvas)
 
 开放数据域的所有 canvas 只支持 `2d` 渲染模式。
 
 **图片**
 
-+ [swan.createImage()](/api/render/image/#swan-createImage)
++ [swan.createImage()](/game/api/render/image/#swan-createImage)
 
-开放数据域的 Image 对象只能使用本地或百度 CDN 的图片，不能使用开发者自己服务器上的图片。对于非本地或非百度 CDN 的图片，可以先从主域调用 [swan.downloadFile()](/api/net/downloadFile/#swan-downloadFile) 下载图片文件，再通过 [openDataContext.postMessage()](/api/openApi/openDataContext/#openDataContext-postMessage) 把文件路径传给开放数据域去使用。
+开放数据域的 Image 对象只能使用本地或百度 CDN 的图片，不能使用开发者自己服务器上的图片。对于非本地或非百度 CDN 的图片，可以先从主域调用 [swan.downloadFile()](/game/api/net/downloadFile/#swan-downloadFile) 下载图片文件，再通过 [openDataContext.postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 把文件路径传给开放数据域去使用。
 
 **开放数据**
 
-+ [swan.getFriendCloudStorage()](/api/openApi/openData/#swan-getFriendCloudStorage)
-+ [swan.getUserCloudStorage()](/api/openApi/openData/#swan-getUserCloudStorage)
-+ [swan.setUserCloudStorage()](/api/openApi/openData/#swan-setUserCloudStorage)
-+ [swan.removeUserCloudStorage()](/api/openApi/openData/#swan-removeUserCloudStorage)
-+ [swan.getUserInfo](/api/openApi/openData/#swan-getUserInfo)
++ [swan.getFriendCloudStorage()](/game/api/openApi/openData/#swan-getFriendCloudStorage)
++ [swan.getUserCloudStorage()](/game/api/openApi/openData/#swan-getUserCloudStorage)
++ [swan.setUserCloudStorage()](/game/api/openApi/openData/#swan-setUserCloudStorage)
++ [swan.removeUserCloudStorage()](/game/api/openApi/openData/#swan-removeUserCloudStorage)
++ [swan.getUserInfo](/game/api/openApi/openData/#swan-getUserInfo)
 
 **监听主域消息**
 
-+ [swan.onMessage](/api/openApi/openDataContext/#swan-onMessage)
++ [swan.onMessage](/game/api/openApi/openDataContext/#swan-onMessage)
 

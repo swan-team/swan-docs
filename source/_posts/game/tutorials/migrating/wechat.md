@@ -37,19 +37,19 @@ priority: 03-01
 
 ### 迁移过程中可能遇见的问题
 
-1. 开放数据域 API 与微信存在差异，百度小游戏开放数据域会屏蔽所有非开放数据域 API ，详细内容请看[关系链数据使用指南](/tutorials/open-api/open-api/)。
+1. 开放数据域 API 与微信存在差异，百度小游戏开放数据域会屏蔽所有非开放数据域 API ，详细内容请看[关系链数据使用指南](/game/tutorials/open_api/guide/)。
 
-2. 百度 App 没有群的概念，所以原项目中分享群的逻辑需要修改，具体查看[转发](/api/share/onShareAppMessage/)文档。
+2. 百度 App 没有群的概念，所以原项目中分享群的逻辑需要修改，具体查看[转发](/game/api/share/onShareAppMessage/)文档。
 
-3. 登录逻辑和场景跟微信小游戏有差异，详情请看 [swan.login()](/api/openApi/login/#swan-login) 文档。
+3. 登录逻辑和场景跟微信小游戏有差异，详情请看 [swan.login()](/game/api/openApi/login/#swan-login) 文档。
 
-4. 支付逻辑的修改，详情请看[百度收银台](/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment)文档。
+4. 支付逻辑的修改，详情请看[百度收银台](/game/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment)文档。
 
-5. Banner 广告和激励视频广告逻辑的修改，入驻流程文档和[ API 文档](/api/ad/bannerAd/)
+5. Banner 广告和激励视频广告逻辑的修改，入驻流程文档和[ API 文档](/game/api/ad/bannerAd/)。
 
 ### LayaAir引擎
 
-1. LayaAir 1.7.20 & 2.0 beta3 版本，在 libs/laya.wxminmi.js 文件中 `MiniAdpter.window.wx.onMessage(MiniAdpter._onMessage);` 由于百度小游戏在主域不会暴露 `onMessage` 方法，故会报错。
+1. LayaAir 1.7.20 & 2.0 beta3 版本，在 libs/laya.wxminmi.js 文件中 `MiniAdpter.window.wx.onMessage(MiniAdpter._onMessage);` 由于百度小游戏在主域不会暴露 [onMessage()](/game/api/openApi/openDataContext/#swan-onMessage) 方法，故会报错。
 **解决方法：**在引擎方没有做兼容的情况下，若项目中没使用开放数据域即可注释该行代码，如果使用开放数据域，则尽量不要使用新版 LayaAir IDE 的开放数据域组件。
 
 2. index.js 中 `loadLib` 无法引入文件。
@@ -60,8 +60,8 @@ priority: 03-01
 
 ### 白鹭引擎
 
-1. openDataContext/index.js 中调用 `swan.onTouchEnd()` 监听开放数据域中的点击事件报错，在百度小游戏的开放数据域中不能调用非开放数据域 API。
-**解决方法：**将按钮画在主域，通过在主域中绑定的点击事件中 `postMessage` 到开放数据域来实现相关操作。
+1. openDataContext/index.js 中调用 [swan.onTouchEnd()](/game/api/system/touchEvents/#swan-onTouchEnd) 监听开放数据域中的点击事件报错，在百度小游戏的开放数据域中不能调用非开放数据域 API。
+**解决方法：**将按钮画在主域，通过在主域中绑定的点击事件中 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 到开放数据域来实现相关操作。
 
-2. openDataContext/index.js 中调用 `swan.getSystemInfoSync()` 调用报错。
-**解决方法：**在主域使用 `postMessage` 将系统信息发到开放数据域中使用。
+2. openDataContext/index.js 中调用 [swan.getSystemInfoSync()](/game/api/system/systemInfo/) 调用报错。
+**解决方法：**在主域使用 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 将系统信息发到开放数据域中使用。

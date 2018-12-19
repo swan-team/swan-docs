@@ -21,7 +21,7 @@ priority: 01-01
 
 **注意：**
 - 项目路径即要存放代码的地方，要选择一个空的文件夹，否则会提示文件夹不为空，不允许创建项目。
-- AppID 是你的小游戏独有的编号，如果没有的话可以点击下方的 [注册](/join/register) 来获取，或者点击 **小游戏** 来体验无 AppID 模式，但是部分功能（关于权限的操作、预览等功能）会受限。
+- AppID 是你的小游戏独有的编号，如果没有的话可以点击下方的 **注册** 来获取，或者点击 **小游戏** 来体验无 AppID 模式，但是部分功能（关于权限的操作、预览等功能）会受限。
 
 
 
@@ -29,7 +29,7 @@ priority: 01-01
 经过一个自动的编译之后我们便得到了一个项目模版。并且，进入到开发者工具中可以看到已经为您创建好的文件的目录。
 其中两个必要的文件为：
 1. game.js 小游戏的入口文件
-2. game.json 小游戏相关配置文件，详细配置内容参见 [配置](/tutorials/tutorials/tutorials/#配置)
+2. game.json 小游戏相关配置文件，详细配置内容参见[配置](/game/tutorials/howto/dev/#配置)
 
 ![](/img/game/tutorials/project.png)
 
@@ -148,13 +148,13 @@ project.swan.json
 
 ### 使用 API
 
-不同于传统的 web 开发，在小游戏的运行环境中没有 BOM（[浏览器对象模型](https://www.w3.org/DOM/)）和 DOM（[文档对象模型](https://en.wikipedia.org/wiki/Browser_Object_Model)），我们直接通过使用的 [swan API](/api/openApi/authorize/) 就可以来完成一款游戏的开发。
+不同于传统的 web 开发，在小游戏的运行环境中没有 BOM（[浏览器对象模型](https://www.w3.org/DOM/)）和 DOM（[文档对象模型](https://en.wikipedia.org/wiki/Browser_Object_Model)），我们直接通过使用的 [swan API](/game/api/openApi/authorize/) 就可以来完成一款游戏的开发。
 
 接下来，我们通过使用百度开发者工具来实现一些 demo， 来体验一下 API 的使用。
 
 #### 系统信息
 
-我们可以通过 [swan.getSystemInfoSync](/api/system/systemInfo/#swan-getSystemInfoSync) 来获取系统信息，比如手机的品牌、型号、可使用窗口的宽高。
+我们可以通过 [swan.getSystemInfoSync()](/game/api/system/systemInfo/#swan-getSystemInfoSync) 来获取系统信息，比如手机的品牌、型号、可使用窗口的宽高。
 ```js
 const {windowWidth, windowHeight, brand, model} = swan.getSystemInfoSync();
 console.log(res.brand);
@@ -164,7 +164,7 @@ console.log(res.windowHeight);
 ```
 
 #### canvas
-小游戏是需要使用 [canvas](https://www.baidu.com/s?wd=canvas%20百度百科) 绘制出来的。我们先通过调用 `swan.createCanvas` 方法来创建[画布](/api/render/Canvas/)，相当于制作了一张`白纸`，然后通过 `canvas.getContext('2d')` 可以获取 canvas 的[上下文对象](/api/render/CanvasRenderingContext2D/)，相当于获得了`画笔`，再通过修改`画笔`的性质来绘制出我们的游戏界面。
+小游戏是需要使用 [canvas](https://www.baidu.com/s?wd=canvas%20百度百科) 绘制出来的。我们先通过调用 [swan.createCanvas()](/game/api/render/createCanvas/) 方法来创建[画布](/game/api/render/Canvas/)，相当于制作了一张`白纸`，然后通过 `canvas.getContext('2d')` 可以获取 canvas 的[上下文对象](/game/api/render/CanvasRenderingContext2D/)，相当于获得了`画笔`，再通过修改`画笔`的性质来绘制出我们的游戏界面。
 
 ```js
 // 获取屏幕宽高
@@ -187,7 +187,7 @@ context.fillText('99', 60, 150);
 我们可以先把 game.js 的代码清空，然后写入下放代码来创建一个画布并在画布中绘制数字`99`，保存代码并等待刷新。如果没有刷新，请点击`编译`按钮，此时我们便会看到绘制出来的 `99` 的字样。
 ![](/img/game/tutorials/question.png)
 
-首次调用 `swan.createCanvas`，创建的是上屏 canvas，宽高与屏幕相同。之后如果再次调用此 API，创建的都是离屏 canvas，可以想象成是另一层`画纸`，既在离屛上的绘制不会显示在屏幕上，如果想要显示，我们需要把它渲染绘制到上屏的 canvas 上。
+首次调用 [swan.createCanvas()](/game/api/render/createCanvas/)，创建的是上屏 canvas，宽高与屏幕相同。之后如果再次调用此 API，创建的都是离屏 canvas，可以想象成是另一层`画纸`，既在离屛上的绘制不会显示在屏幕上，如果想要显示，我们需要把它渲染绘制到上屏的 canvas 上。
 
 ```js
 // 创建离屏 canvas
@@ -216,7 +216,7 @@ context.drawImage(offScreenCanvas, 0, 0);
 
 ![](/img/game/tutorials/answer.png)
 
-如果想要使用清除功能，可以调用 [context.clearRect](/api/render/CanvasRenderingContext2D/#clearRect)。
+如果想要使用清除功能，可以调用 [context.clearRect()](/game/api/render/CanvasRenderingContext2D/#clearRect)。
 
 ```js
 // 使用 clearRect 清除
@@ -241,7 +241,7 @@ context.drawImage(offScreenCanvas, 0, 0);
 
 ![](/img/game/tutorials/clear_2.png)
 
-更多 canvas 的绘制操作参见 [CanvasRenderingContext2D](/api/render/CanvasRenderingContext2D/)。
+更多 canvas 的绘制操作参见 [CanvasRenderingContext2D](/game/api/render/CanvasRenderingContext2D/)。
 
 #### 触摸事件
 
@@ -270,13 +270,13 @@ swan.onTouchStart(() => {
 });
 ```
 
-现在我们滑动屏幕时便可以随着滑动进行清除。更多事件的操作参见 [触摸事件](/api/system/touchEvents/)。
+现在我们滑动屏幕时便可以随着滑动进行清除。更多事件的操作参见[触摸事件](/game/api/system/touchEvents/)。
 
 ![](/img/game/tutorials/touchclear.png)
 
 #### 交互
 
-通过调用 API 来实现显示模态对话框、显示消息提示框等，更多交互操作参见 [交互](/api/ui/interaction/)。
+通过调用 API 来实现显示模态对话框、显示消息提示框等，更多交互操作参见[交互](/game/api/ui/interaction/)。
 
 ```js
 // 模态对话框
@@ -320,8 +320,8 @@ swan.showToast({
 
 - Andriod 真机查看日志
 
-1. 安卓手机(需要开启USB调试)和电脑(需要安装adb工具)连线
-2. 打开Mac的终端或Windows的cmd
+1. 安卓手机(需要开启USB调试)和电脑(需要安装 adb 工具)连线
+2. 打开 Mac 的终端或 Windows 的 cmd
 3. 使用命令: `adb logcat V8Exception:I V8Console:V *:S` 即可实时打印日志。
 
 ![](/img/game/tutorials/andriodpreview.png)

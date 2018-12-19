@@ -16,7 +16,7 @@ priority: 01-05
  ![图片](/img/game/introduction/enter/publish02.png)
 
 #### 填写准入报告
-设置完成后，完成自测，填写测试准入报告[《小游戏准入报告模板》](/assets/report.xlsx)，以邮件形式发送：
+设置完成后，完成自测，填写测试准入报告[《小游戏准入报告模板》](/img/game/assets/report.xlsx)，以邮件形式发送：
 
 
 发送：
