@@ -5,6 +5,7 @@ nav: framework
 sidebar: custom-component_comp
 ---
 
+### 定义段与示例方法
 
 <div class="notice">解释： </div>
 Component构造器可用于定义组件，调用Component构造器时可以指定组件的属性、数据、方法等。
@@ -83,8 +84,34 @@ Component({
 **注意**：
 在 properties 定义段中，属性名应该采用驼峰写法（propsName）；在 `swan` 模板中，指定属性值时则对应使用连字符写法（ `component-tag-name props-name="props value"` ）。
 
+### 使用 Component 构造器构造页面
+
+事实上，某一个自定义组件也可以视为一个页面。因而，页面也可以使用 Component 构造器构造，拥有与普通组件一样的定义段与实例方法。必要配置项与正常自定义组件一致，即需要有`component: true`字段。
+
+此时，组件的属性可以用于接收页面的参数，如访问页面 /pages/index/index?paramA=123&paramB=xyz ，你可以在onLoad生命周期中获取传递的query字段 。
+
+页面的生命周期方法（即 on 开头的方法），应写在 methods 定义段中。
+
+```json
+{
+    "component": true,
+    "usingComponents": {}
+}
+```
+
+```js
+Component({
+  methods: {
+    onLoad: function(options) {
+      console.log(options.paramA); // 123
+      console.log(options.paramB); // xyz
+    }
+  }
+});
+```
+
 **说明**：
 - 使用 this.data 可以获取内部数据和属性值，但不要直接修改它们，应使用 setData 修改；
-- 属性名应避免以 data- 开头，因为在 SWAN 中， `data-xyz='xxx'` 会被作为节点 dataset 来处理；
+- 属性名应避免以 data- 开头，因为在 SWAN 中，`data-xyz='xxx'` 会被作为节点 dataset 来处理；
 - 属性名应避免以 prop- 开头 在处理过程中会将该前缀删除；
 - 属性名应避免包含 “ _ ” 字符, 因为在渲染过程中将会以 “ _ ” 字符进行拆分。

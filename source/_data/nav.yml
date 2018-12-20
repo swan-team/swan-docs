@@ -17,11 +17,11 @@
                 name: enter_application
               -
                 link: /introduction/register
-                text: 注册智能小程序
+                text: 智能小程序账号注册
                 name: register
               -
                 link: /introduction/register_consummate
-                text: 完善智能小程序基本信息
+                text: 创建智能小程序
                 name: register_consummate
               -
                 link: /introduction/register_prepare
@@ -42,16 +42,12 @@
       name: book
       sidebar:
         -
-            link: /introduction/access
-            text: 百度信息流  
-            sidebar:
-              -
-                link: /introduction/access
-                text: 什么是百度信息流  
-                name: access             
+            # link: /introduction/access
+            # text: 百度信息流  
+            sidebar:        
               -
                 link: /introduction/feed
-                text: 信息流投放管理   
+                text: 信息流流量说明  
                 name: feed  
         -
             link: /introduction/intro
@@ -105,6 +101,10 @@
               link: /design/foundation/pic
               text: 图片图标
               name: pic
+            -
+              link: /design/foundation/logo
+              text: 头像输出
+              name: logo            
             -
               link: /design/foundation/writing
               text: 措辞
