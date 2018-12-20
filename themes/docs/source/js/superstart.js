@@ -123,9 +123,14 @@
                 openbox.open();
             }
         },
-        initInvokeDemo: function(){
-            if (isPc()){
+        initInvokeDemo: function() {
+            if (isPc()) {
+                $('.ispc').show();
                 return;
+            } else if (isBox()) {
+                $('.isbox').show();
+            } else {
+                $('.ismobile').show();
             }
             var _this = this;
             var $demo = $('img[src= "../../img/demo/demo.png"]');
