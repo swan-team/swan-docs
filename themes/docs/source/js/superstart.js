@@ -7,6 +7,7 @@
         '/docs/develop/server/upstream/': '/docs/develop/web/detail/',
         '/docs/develop/api/open_feed/#submitresource/':'/docs/develop/api/open_feed/',
         '/docs/develop/server/power/#4-投放服务提交素材接口': '/docs/develop/server/power_exp/',
+        '/docs/introduction/rank/':'/docs/develop/flow/rank/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
