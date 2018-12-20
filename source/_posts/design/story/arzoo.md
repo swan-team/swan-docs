@@ -8,9 +8,7 @@ sidebar: arzoo
 “长隆AR动物园”是一款动物园游览与动物科普相结合的智能小程序。运用百度的AR技术还原动物模型，用户在虚拟的三维环境中给动物喂食，与动物互动，形成看、听、玩一体的科普场景。让用户通过逼真的互动体验获取多维认知，在娱乐中学习科普知识。
 
 本文将从信息架构、交互流程、色彩系统、LOGO设计、动效设计5个层面介绍这款智能小程序的设计过程。
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/showcase/arzoo-1.png">
-	</div>
+![长隆动物园](../../../img/design/showcase/arzoo-1.png)
 
 ## 信息架构
 
