@@ -637,7 +637,6 @@
                 $(Siblings).appendTo($h2Inner);
 
                 // 3.为了确保append操作已完成，加setTimeout 0ms
-                var delayTime = isPc() ? 300 : 800;
                 setTimeout(function () {
 
                     // 初始化动画前的container-inner高度
@@ -662,7 +661,7 @@
                             }, 'swing');
                         }
                     });
-                }, delayTime); 
+                }, 1000); 
             });
         },
         /**
