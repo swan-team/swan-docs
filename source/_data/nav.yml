@@ -17,11 +17,11 @@
                 name: enter_application
               -
                 link: /introduction/register
-                text: 注册智能小程序
+                text: 智能小程序账号注册
                 name: register
               -
                 link: /introduction/register_consummate
-                text: 完善智能小程序基本信息
+                text: 创建智能小程序
                 name: register_consummate
               -
                 link: /introduction/register_prepare

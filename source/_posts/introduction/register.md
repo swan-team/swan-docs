@@ -6,8 +6,6 @@ sidebar: register
 ---
 
 
-## 注册、登录百度账号
-
 注册地址(PC版)：<a href="https://passport.baidu.com/v2/?reg&tt=1521786256298&overseas=undefined&gid=D8D45DC-FFC4-486A-BA34-B3215E98FF74&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2F" >点击注册</a>
 
 登录地址(PC版)：<a href="https://smartprogram.baidu.com/mappconsole/main/login">点击登录</a>
@@ -17,6 +15,7 @@ sidebar: register
 
 ![图片](../../img/introduction/enter/p1.png)
 
+## 主体注册
 ### 选择主体类型
 <!-- 主体类型：个人、媒体、企业、政府、其他组织五种主体类型。
  主体类型说明：
@@ -60,6 +59,8 @@ sidebar: register
 
 ![图片](../../img/introduction/register/register-04.png)
 
+## 真实性认证
+
 ### 审核通过
 
 1. 信息审核通过后，单击“尽快完成认证”，验证主体的真实性。
@@ -77,12 +78,3 @@ sidebar: register
 ![图片](../../img/introduction/register/register-18.png)
 6. 认证完成
 ![图片](../../img/introduction/register/register-19.png)
-
-### 获取用户手机号权限申请
-
-审核过后，可通过如下操作获取用户手机号权限：
-1、在页面左侧导航栏，单击“设置-开发设置”；
-2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
-3、在弹出的页面填写如下信息，点击提交。
-
-![图片](../../img/introduction/register/register-14.png)
