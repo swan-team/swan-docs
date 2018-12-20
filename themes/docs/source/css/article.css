@@ -745,3 +745,9 @@ article thead tr {
     padding-top: 200px;
     text-align: center;
 }
+
+.ispc,
+.ismobile,
+.isbox {
+    display: none;
+}
