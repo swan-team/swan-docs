@@ -1,7 +1,7 @@
 /***针对失效链接的处理逻辑***/
 !function(pathname){
     var urlMap = {
-        '/docs/design/overview/introduction/':'/docs/design/principle/',
+        '/docs/design/principle/':'/docs/design/overview/introduction/',
         '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
         '/docs/design/component/topnav/':'/docs/design/component/nav/',
         '/docs/develop/web/detail/':'/docs/develop/server/upstream/',
