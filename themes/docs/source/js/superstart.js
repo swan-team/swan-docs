@@ -1,12 +1,12 @@
 /***针对失效链接的处理逻辑***/
 !function(pathname){
     var urlMap = {
-        '/docs/design/principle/': '/docs/design/overview/introduction/',
-        '/docs/develop/component/media/': '/docs/develop/component/media_live-player/',
-        '/docs/design/component/nav/': '/docs/design/component/topnav/',
-        '/docs/develop/server/upstream/': '/docs/develop/web/detail/',
-        '/docs/develop/api/open_feed/#submitresource/':'/docs/develop/api/open_feed/',
-        '/docs/develop/server/power/#4-投放服务提交素材接口': '/docs/develop/server/power_exp/',
+        '/docs/design/overview/introduction/':'/docs/design/principle/',
+        '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
+        '/docs/design/component/topnav/':'/docs/design/component/nav/',
+        '/docs/develop/web/detail/':'/docs/develop/server/upstream/',
+        '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
+        '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/introduction/rank/':'/docs/develop/flow/rank/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
