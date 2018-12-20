@@ -189,6 +189,15 @@ function updateContentScroll() {
  * @param {string} url 内容 URL
  */
 function loadContent(url) {
+    // 关闭搜索结果
+    $('#article-main-content').css({
+        display: 'block'
+    });
+    $('#article-search-result').css({
+        display: 'none'
+    });
+    $('.reset-search-btn').click();
+
     if (isSamePage(url)) {
         // 地址只改变 hash 码，直接重定向不会导致加载新网页
         location.href = url;
