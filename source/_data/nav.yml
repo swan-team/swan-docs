@@ -42,16 +42,12 @@
       name: book
       sidebar:
         -
-            link: /introduction/access
-            text: 百度信息流  
-            sidebar:
-              -
-                link: /introduction/access
-                text: 什么是百度信息流  
-                name: access             
+            # link: /introduction/access
+            # text: 百度信息流  
+            sidebar:        
               -
                 link: /introduction/feed
-                text: 信息流投放管理   
+                text: 信息流流量说明  
                 name: feed  
         -
             link: /introduction/intro
