@@ -630,40 +630,32 @@
             h2Toggle.each(function (index) {
 
                 var Siblings = H2andSiblings[index].slice(1);
+                var h2InnerH = 0;
 
                 // 2.把h2对应的内容用content-inner包裹起来
                 var $h2Item = $(this).closest('.m-doc-content-item');
                 $h2Item.append('<div class = "m-doc-content-inner"></div>');
                 var $h2Inner = $h2Item.find('.m-doc-content-inner');
                 $(Siblings).appendTo($h2Inner);
+                // 解决抖动
+                $('.m-doc-content-layout').css('visibility', 'visible');
 
-                // 3.为了确保append操作已完成，加setTimeout 0ms
-                var delayTime = isPc() ? 300 : 800;
-                setTimeout(function () {
-
-                    // 初始化动画前的container-inner高度
-                    var h2InnerH = $h2Inner.height();
-                    $h2Inner.height(h2InnerH);
-
-                    // 解决抖动
-                    $('.m-doc-content-layout').css('visibility', 'visible');
-
-                    // 4.点击按钮收起折叠content-inner
-                    h2Toggle.eq(index).on('click', function () {
-
-                        if ($(this).hasClass('m-doc-content-h2-toggle-close')) {
-                            $(this).removeClass('m-doc-content-h2-toggle-close');
-                            $h2Inner.animate({
-                                height: h2InnerH
-                            }, 'swing');
-                        } else {
-                            $(this).addClass('m-doc-content-h2-toggle-close');
-                            $h2Inner.css('display','block').animate({
-                                height: 0
-                            }, 'swing');
-                        }
-                    });
-                }, delayTime); 
+                // 3.点击按钮收起折叠content-inner
+                h2Toggle.eq(index).on('click', function () {
+                    if ($(this).hasClass('m-doc-content-h2-toggle-close')) {
+                        $(this).removeClass('m-doc-content-h2-toggle-close');
+                        $h2Inner.animate({
+                            height: h2InnerH
+                        }, 'swing');
+                    } else {
+                        h2InnerH = $h2Inner.height();
+                        $h2Inner.height(h2InnerH);
+                        $(this).addClass('m-doc-content-h2-toggle-close');
+                        $h2Inner.css('display', 'block').animate({
+                            height: 0
+                        }, 'swing');
+                    }
+                });
             });
         },
         /**
