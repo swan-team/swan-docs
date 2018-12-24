@@ -25,7 +25,7 @@ sidebar: formlist
 | bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"。|
 |disabled|Boolean|false|是否禁用|
 |loading|Boolean|false|名称前是否带有loading图标|
-|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#button/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
+|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler|-|		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
 <!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
 |bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
