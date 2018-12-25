@@ -108,6 +108,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |顶bar全局透明设置|手百版本>=11.1|手百版本>=11.1|不生效|-|
 |顶bar子页面透明设置|手百版本>=11.2|手百版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
 
+<div class="m-doc-custom-examples">
+<div class="m-doc-custom-examples-warning">
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+action高度（iOS为44px，Android为38px）</p>
+</div>
+</div>
 
 <notice>示例： </notice>
 
