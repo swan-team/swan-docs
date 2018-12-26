@@ -218,3 +218,81 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
     "msg": "success"
 }
 ```
+
+## 设置最低基础库版本
+
+**接口说明**：
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion?access_token=ACCESS_TOKEN
+```
+**参数说明**:
+
+|参数名 | 类型 | 是否必须 | 描述|
+|----- |-----| ------| -----|
+|access\_token|string | 是 | 授权小程序的接口调用凭据|
+|version |string | 是 | 最低基础库版本|
+
+**返回值示例**:
+
+```
+{
+  "errno": 0,
+  "msg": "success"
+}
+```
+
+**错误码说明**：
+
+|错误码 | 错误描述 | 
+|----- |-----|
+|470021| 版本输入错误|
+
+## 查询当前设置的最低基础库版本及各版本列表
+
+**接口说明**：
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/app/getsupportversion?access_token=ACCESS_TOKEN
+```
+**参数说明**:
+
+|参数名 | 类型 | 是否必须 | 描述|
+|----- |-----| ------| -----|
+|access\_token|string | 是 | 授权小程序的接口调用凭据|
+
+**返回值示例**:
+
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        "now_version": "2.5.15",
+        "items": [
+            {
+                "version": "1.10.15"
+            },
+            {
+                "version": "1.10.17"
+            },
+            {
+                "version": "1.10.18"
+            },
+            {
+                "version": "1.10.20"
+            },
+            {
+                "version": "1.10.21"
+            }
+            ......
+        ]
+    }
+}
+```
+**返回值说明**:
+
+|字段名  | 类型   | 描述|
+|------ | ----- | ----|
+|now\_version | string | 当前版本|
+|items | object | 版本号列表|
+|version | string | 版本号|

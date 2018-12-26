@@ -1933,8 +1933,6 @@
                     text: deletesitemap
                     name: open_feed_deletesitemap                      
 
-        -
-            sidebar:
               -
                 link: /develop/api/get
                 text: 更新
@@ -1944,8 +1942,6 @@
                     link: /develop/api/get/#getUpdateManager
                     text: getUpdateManager
                     name: get_getUpdateManager 
-        -
-            sidebar:
               -
                 link: /develop/api/debug
                 text: 调试
@@ -1954,9 +1950,7 @@
                   -
                     link: /develop/api/debug/#setEnableDebug
                     text: setEnableDebug
-                    name: debug_setEnableDebug    
-        -
-            sidebar:
+                    name: debug_setEnableDebug  
               -
                 link: /develop/api/data
                 text: 数据分析
@@ -1966,8 +1960,6 @@
                     link: /develop/api/data/#reportAnalytics
                     text: reportAnalytics
                     name: data_reportAnalytics        
-        -
-            sidebar:
               -
                 link: /develop/api/timer
                 text: 定时器
@@ -1988,7 +1980,7 @@
                   -
                     link: /develop/api/timer/#etTimeout
                     text: setTimeout
-                    name: timer_setTimeout                                                                                            
+                    name: timer_setTimeout     
     -
       link: /develop/devtools/show_sur
       text: 工具
