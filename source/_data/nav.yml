@@ -95,8 +95,12 @@
           sidebar:
             -
               link: /design/foundation/layout
-              text: 布局排版
+              text: 页面布局
               name: layout
+            -
+              link: /design/foundation/typography
+              text: 阅读排版
+              name: typography
             -
               link: /design/foundation/pic
               text: 图片图标
@@ -162,7 +166,11 @@
             -
               link: /design/story/arzoo
               text: 长隆AR动物园
-              name: arzoo                     
+              name: arzoo       
+            -
+              link: /design/story/light_up
+              text: 减减鸭
+              name: light_up                    
     -
       link: /design/resource/uikit
       text: 资源下载
