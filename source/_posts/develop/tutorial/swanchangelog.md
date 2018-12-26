@@ -8,6 +8,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.0.17|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
 |3.0.16|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |3.0.12|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
@@ -16,6 +17,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.15.23|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
 |2.15.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.15.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.15.12|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
@@ -27,6 +29,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.10.24|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
 |2.10.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.10.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.10.17|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
@@ -57,6 +60,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.0.39|2018.12.26|**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
 |2.0.38|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.0.35|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.0.33|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|

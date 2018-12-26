@@ -38,6 +38,15 @@ getSwanId
 |errno  | String  |errno|
 |data  | Object  |{swanid}|
 
+**data 返回参数说明**
+
+|参数  |类型|说明 |
+|---- | ---- |---- |
+|swanid|string|由 cuid 生成|
+|swanid_signature|string|对 swanid 进行校验|
+<!-- |swanid_old|string
+|swanid_old_signature |string        -->
+
 
 **示例：**
 
