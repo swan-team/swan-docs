@@ -13,6 +13,7 @@ sidebar: custom-component_behaviors
 * **behavior 需要使用 Behavior() 构造器定义。**
 
 **<div class="notice">示例： </div>**
+<a href="swanide://fragment/31f1513649db8443c74478888587a5081545884054821" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 // my-behavior.js
@@ -77,6 +78,7 @@ Component({
 自定义组件可以通过引用内置的 behavior 来获得内置组件的一些行为。
 
 **<div class="notice">示例： </div>**
+<a href="swanide://fragment/cfa1a5be4668bd92477696d55c1f84ba1545309188870" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 Component({
@@ -105,6 +107,9 @@ form 组件可以识别这些自定义组件，并在 submit 事件中返回组�
 **解释**：使自定义组件支持 export 定义段。这个定义段可以用于指定组件被 selectComponent 调用时的返回值。
 
 未使用这个定义段时， selectComponent 将返回自定义组件的 this 。使用这个定义段时，将以这个定义段的函数返回值代替。
+
+**<div class="notice">示例： </div>**
+<a href="swanide://fragment/693b56d555bf6f4478f6628cdd4d9e791545310017177" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 // 自定义组件的js文件
