@@ -83,3 +83,14 @@ Page({
   <cover-view s-if="{{canIUse}}">play</cover-view>
 </video>
 ```
+## Android 与 iOS 差异
+
+|功能|Andriod|iOS|
+|--|--|--|
+|webp格式|支持|不支持|
+
+
+## 基础库最低版本设置
+进入小程序主页后，单击左导航栏中的“设置 > 基本信息”，单击“设置”。
+ ![图片](../../../../img/framwork/framwork-02.png)
+ ![图片](../../../img/preview.png)

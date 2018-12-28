@@ -17,7 +17,7 @@ sidebar: compatibility
 ### 1 版本对比
 
 在组件，API的文档中，各功能都已经标明所支持的手机百度版本号。
-可以通过 swan.getSystemInfo 或者 swan.getSystemInfoSync 获取到智能小程序的基础库的信息，其中包含了基础库的版本号
+可以通过 swan.getSystemInfo 或者 swan.getSystemInfoSync 获取到智能小程序的基础库的信息，其中包含了基础库的版本号。
 <br>
 
 ### 2 能力检测
@@ -58,3 +58,6 @@ Page({
 
 更多的使用方法详见 [canIUse](https://smartprogram.baidu.com/docs/develop/api/device/#canIUse)
 
+## 基础库最低版本设置
+进入小程序主页后，单击左导航栏中的“设置 > 基本信息”，单击“设置”。
+ ![图片](../../../img/framwork/framwork-02.png)

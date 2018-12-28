@@ -11,3 +11,4 @@ package-lock.json
 .npmrc
 .vscode
 .project
+miniapp_docs_*

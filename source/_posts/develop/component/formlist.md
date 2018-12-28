@@ -25,7 +25,7 @@ sidebar: formlist
 | bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"。|
 |disabled|Boolean|false|是否禁用|
 |loading|Boolean|false|名称前是否带有loading图标|
-|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。|
+|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler|-|		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
 <!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
 |bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
@@ -52,18 +52,15 @@ sidebar: formlist
 
 |值 |说明|
 |---- |---- |
-|contact|	打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息。|
+|contact|	打开客服会话。|
 |share |触发用户分享，使用前建议先阅读 <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/">swan.onShareAppMessage</a> 用。|
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
-| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
+| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
 
-**说明**：
-* 非个人开发者可申请；
-* 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。
-<!--
-|opensetting|打开授权设置页|
--->
+
+
+
 
 **示例**：
 <a href="swanide://fragment/7a3974d3a4cefd5f89d685adce8935b61540393782" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -86,6 +83,14 @@ sidebar: formlist
 ```
 
 
+## 获取用户手机号权限申请
+
+审核过后，可通过如下操作获取用户手机号权限：
+1、在页面左侧导航栏，单击“设置-开发设置”；
+2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
+3、在弹出的页面填写如下信息，点击提交。
+
+![图片](../../../img/introduction/register/register-14.png)
 
 
 ## checkbox
@@ -99,6 +104,7 @@ sidebar: formlist
 |disabled|Boolean| false| 是否禁用|
 |checked|Boolean | false| 当前是否选中，可用来设置默认选中|
 |color| Color|- | checkbox 的颜色，同 CSS 的 color|
+
 
 示例：
 <a href="swanide://fragment/501ed4b3f30ec74cc177425610b4f4ba1540393923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -176,7 +182,7 @@ Page({
 |-----|---- |---- |----|
 | bindsubmit | EventHandle    |携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}}	`|-|
 | bindreset | EventHandle   |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean|是否返回 formId ，默认为false。|10.12|
+|report-submit|Boolean|是否返回 formId ，默认为false。|1.12|
 
 
 <notice>示例： </notice>
@@ -212,7 +218,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 value="{= value =}"|
+| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|
 | type | String  |text  |input 的类型|
 | password | Boolean  | false  |是否是密码类型|
 | placeholder | String  |-  |输入框为空时占位符|
@@ -258,7 +264,7 @@ Page({
 ```xml
 <!-- input.swan -->
 <view class="section">
-    <input  maxlength="20" placeholder="最大输入长度20" />
+    <input value="{=value=}" maxlength="20" placeholder="最大输入长度20" />
 </view>
 
 ```
@@ -682,7 +688,7 @@ Page({
 |type| String| switch| 样式，有效值：switch,checkbox|
 |color| Color| \#09bb07| switch 的颜色，同 CSS 的 color|
 |disabled|	Boolean|	false|	是否禁用|
-|bindchange | EventHandle  |-|checked 改变时触发 change 事件，event.detail={ value:checked}|
+|bindchange | EventHandle  |-|checked 改变时触发 change 事件，event.detail={ checked:true}|
 
 
 **示例**：
@@ -724,7 +730,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 |属性名|类型|默认值|说明|
 |----|----|----|----|
-|value|String|-|输入框的内容|
+|value|String|-|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|
 |placeholder|String|-|输入框为空时占位符|
 |placeholder-style|String|-|指定 placeholder 的样式|
 |placeholder-class|String|textarea-placeholder|指定 placeholder 的样式类|

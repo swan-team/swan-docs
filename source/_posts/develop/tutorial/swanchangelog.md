@@ -4,11 +4,21 @@ header: develop
 nav: tutorial
 sidebar: swanchangelog
 ---
+## 3.0版本日志更新
 
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.0.16|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
+|3.0.12|2018.12.18|**BugFix**<p>map组件创建报错修复。|
+|3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
+|3.0.2|2018.12.11|**New**<p>**·**端菜单栏新增重启小程序功能，调用onForceReLaunch生命周期；<p>**·**animation-view 组件：添加bindended回调；端上多实例支持；touch事件新增；<p>**·**canvasContext.draw 支持 callback。<p>**BugFix**<p>**·** 修复 ontabitemtap 首次点击不触发的问题；<p>**·** 修复 textarea 组件 max-height 属性不生效的问题；<p>**·** 修复 textarea 组件 粘贴/剪切后，组件高度异常的问题。|
 ## 2.15版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.15.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
+|2.15.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
+|2.15.12|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.15.9|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.15.7|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.15.5|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p>修复slider backgroundColor设置transparent无效的问题。|
@@ -17,6 +27,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.10.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
+|2.10.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
+|2.10.17|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.10.16|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.10.15|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.10.14|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
@@ -28,6 +41,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.5.27|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.5.26|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.5.24|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.5.23|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
@@ -43,6 +57,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.0.38|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.0.35|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.0.33|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.0.32|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|
@@ -54,7 +69,7 @@ sidebar: swanchangelog
 |2.0.15|2018.11.5|**New**<p> 自定义组件新增内置方法createSelectorQuery, createIntersectionObserver。<p>**BugFix** <p>**·**修复组件创建、API 调用时序问题；<p>**·**修复 input 组件修改 placeholder-class 后，样式未生效的问题。|
 |2.0.13|2018.11.2|**New**<p>**·** cover-view/cover-image 组件支持设置 fixed 属性 ；<p>**·**  cover-image 组件支持使用本地图片；<p>**·** map新增属性，scroll-view支持enable-back-to-top属性，navigator支持target、appId、exit等属性。 <p>**Breaking Change** <p>webview组件分享回传给开发者当前URL。 <p>**BugFix** <p>**·**修复 input 组件修改 placeholder-class 后，样式未生效的问题。|
 |2.0.12|2018.10.31|**Breaking Change** <p>**·**分包预下载功能优化； <p>**·**组件生命周期析构移除监听器。<p> **BugFix** <p>**·**修复自定义组件引用其他自定义组件小概率失败的问题；<p>**·** 修复生命周期onLaunch,onShow参数值path,query,scene,refereInfo等缺失的问题；<p>**·**修复配置 shareUrl 后分享到个人中心无法打开的问题； <p>**·**修复同步 API 调用导致的重复打点问题；<p>**·**修复 cover-view 组件设置 display: inline-block 不生效的问题。|
-|2.0.3|2018.10.24|**New**<p>**·**新增分包预下载;<p>**·**自定义组件triggerEvent方法新增detail字段;<p>**·**分享自定义链接白名单更新;<p>**·**button、checkbox、audio、radio、label、switch、navigator、webview、video、live-player 组件对开发者传入的字段进行校验。<p>**Breaking Change** <p>**·**自定义组件扁平化改造;<p>**·** botton组件中使用boxjs代替swan获取userinfo；<p>**·**getPhoneNumber从swan中移除；<p>**·**小程序语音API；<p>**·**更改API名称、属性名称；<p>**·**openBdboxWebview API更改属性名称；<p>**·**canvas、form、icon、image、picker-view、picker、scroll-view、view、ar-camera、camera、movable-area、movable-view、progress、slider、text 组件对开发者传入的字段进行矫正。<p> **BugFix** <p>**·**修复picker安卓中不设置默认值省市区无效问题；<p>**·**修复image组件动态改变mode属性，样式没有跟着变化的问题;<p>**·**修复自定义组件selectquery实例上下文中的component字段缺失问题;<p>**·**修复自定义组件中使用selectquery不能通过class选择dom的问题;<p>**·**修复原生组件设置边框后，hide 属性不生效的问题;<p>**·**IntersectionObserver.disconnect 工具报错;<p>**·**自定义组件中使用 IntersectionObserver 不能通过 class 选择 dom 的问题;<p>**·**修复自定义组件传参为false时，不会更改组件内该属性值问题。|
+|2.0.3|2018.10.24|**New**<p>**·**新增分包预下载;<p>**·**自定义组件triggerEvent方法新增detail字段;<p>**·**分享自定义链接白名单更新;<p>**·**button、checkbox、audio、radio、label、switch、navigator、webview、video、live-player 组件对开发者传入的字段进行校验。<p>**Breaking Change** <p>**·**自定义组件扁平化改造;<p>**·** botton组件中使用boxjs代替swan获取userinfo；<p>**·**getPhoneNumber从swan中移除；<p>**·**小程序语音API；<p>**·**更改API名称、属性名称；<p>**·**canvas、form、icon、image、picker-view、picker、scroll-view、view、ar-camera、camera、movable-area、movable-view、progress、slider、text 组件对开发者传入的字段进行矫正。<p> **BugFix** <p>**·**修复picker安卓中不设置默认值省市区无效问题；<p>**·**修复image组件动态改变mode属性，样式没有跟着变化的问题;<p>**·**修复自定义组件selectquery实例上下文中的component字段缺失问题;<p>**·**修复自定义组件中使用selectquery不能通过class选择dom的问题;<p>**·**修复原生组件设置边框后，hide 属性不生效的问题;<p>**·**IntersectionObserver.disconnect 工具报错;<p>**·**自定义组件中使用 IntersectionObserver 不能通过 class 选择 dom 的问题;<p>**·**修复自定义组件传参为false时，不会更改组件内该属性值问题。|
 |2.0.2|2018.10.22|**New**<p>**·** 分享 ICON 优化；<p>**·** button组件支持调起客服；<p>**·** getImageInfo 支持相对路径和网络图片。|
 <!-- <p>**·** 新增 API getVoiceManger； -->
 
