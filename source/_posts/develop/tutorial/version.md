@@ -4,7 +4,7 @@ header: develop
 nav: tutorial
 sidebar: version
 ---
-**更新时间**：2018年12月27日
+**更新时间**：2018年12月28日
 
 |版本号|用户占比|
 |---|---|
