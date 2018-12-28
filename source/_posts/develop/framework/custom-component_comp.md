@@ -41,7 +41,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |---|---|---|---|
 |setData|Object newData|设置data并执行视图层渲染|-|
 |hasBehavior|Object|检查组件是否具有 behavior （检查时会递归检查被直接或间接引入的所有behavior）|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
-|triggerEvent|String name, Object detail|触发事件，参见 <a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/)">组件事件</a>|-|
+|triggerEvent|String name, Object detail|触发事件，参见 <a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/">组件事件</a>|-|
 |createSelectorQuery||创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery/">SelectorQuery</a> 对象，选择器选取范围为这个组件实例内, 与 swan.createSelectorQuery().in(this) 是等效|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">2.5.3</a>|
 |createIntersectionObserver|Object options|创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#IntersectionObserver/">IntersectionObserver</a> 对象，选择器选取范围为这个组件实例内|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">2.5.3</a>|
 |selectComponent|String selector|使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象（会被 swan://component-export 影响），在生命周期 onReay 开始时生效。|-|
