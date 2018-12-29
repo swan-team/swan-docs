@@ -935,6 +935,10 @@
                   link: /develop/api/media_createinneraudiocontext/#createInnerAudioContext
                   text: createInnerAudioContext
                   name: media_createinneraudiocontext_createInnerAudioContext
+                -
+                  link: /develop/api/media_setinneraudiooption/#setInnerAudioOption
+                  text: setInnerAudioOption
+                  name: media_setinneraudiooption_setInnerAudioOption                  
             -
               link: /develop/api/media_video
               text: 视频
@@ -1452,6 +1456,19 @@
                     link: /develop/api/show_pagescrollto/#pageScrollTo
                     text: pageScrollTo
                     name: show_pagescrollto_pageScrollTo
+              -
+                link: /develop/api/show_background
+                text: 背景
+                name: show_background
+                sidebar:
+                  -
+                    link: /develop/api/show_background/#setBackgroundColor
+                    text: setBackgroundColor
+                    name: show_background_setBackgroundColor
+                  -
+                    link: /develop/api/show_background/#setBackgroundTextStyle
+                    text: setBackgroundTextStyle
+                    name: show_background_setBackgroundTextStyle                    
               -
                 link: /develop/api/show_pull
                 text: 下拉刷新
