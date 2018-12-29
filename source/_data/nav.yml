@@ -936,9 +936,9 @@
                   text: createInnerAudioContext
                   name: media_createinneraudiocontext_createInnerAudioContext
                 -
-                  link: /develop/api/media_setinneraudiooption/#setInnerAudioOption
+                  link: /develop/api/media_createinneraudiocontext/#setInnerAudioOption
                   text: setInnerAudioOption
-                  name: media_setinneraudiooption_setInnerAudioOption                  
+                  name: media_createinneraudiocontext_setInnerAudioOption                  
             -
               link: /develop/api/media_video
               text: 视频
