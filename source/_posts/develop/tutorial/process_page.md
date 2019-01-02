@@ -32,8 +32,8 @@ sidebar: process_page
 		"pagePath": "pages/index/index",
 		"text": "首页"
 	}, {
-		"pagePath": "pages/logs/logs",
-		"text": "日志"
+		"pagePath": "pages/detail/detail",
+		"text": "详情"
 		}]
   }
 }
