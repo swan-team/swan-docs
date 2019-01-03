@@ -86,7 +86,7 @@ getUserInfo
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|nickName  | String  |用户名|
+|nickName  | String  |用户昵称，用户未设置用户昵称时，将获取用户名。|
 |avatarUrl  | String  |用户头像|
 |gender | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 |isAnonymous | bool | 表示用户信息是否为匿名，若是用户未登录或者拒绝授权为true，正常流程为false。 |
@@ -94,7 +94,7 @@ getUserInfo
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|nickname  | String  |用户名|
+|nickname  | String  |用户昵称，用户未设置用户昵称时，将获取用户名。|
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
@@ -103,7 +103,7 @@ getUserInfo
 ```js
 swan.getUserInfo({
     success: function (res) {
-        console.log('用户名', res.userInfo.nickName);
+        console.log('用户昵称/用户名', res.userInfo.nickName);
     }
 });
 ```

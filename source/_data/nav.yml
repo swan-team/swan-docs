@@ -1995,7 +1995,7 @@
                     text: setInterval
                     name: timer_setInterval
                   -
-                    link: /develop/api/timer/#etTimeout
+                    link: /develop/api/timer/#setTimeout
                     text: setTimeout
                     name: timer_setTimeout     
     -
