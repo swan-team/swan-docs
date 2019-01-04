@@ -43,4 +43,4 @@ swan.ai.textToAudio({
 ```
 Bug & Tip
 
-1、bug: 重置 App Secret 会导致此功能无法使用。
+* bug: 重置 App Secret 会导致此功能无法使用。

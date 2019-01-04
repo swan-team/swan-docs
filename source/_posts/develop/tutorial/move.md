@@ -1,7 +1,7 @@
 ---
 title: 搬家工具
 header: develop
-nav: devtools
+nav: tutorial
 sidebar: move
 ---
 

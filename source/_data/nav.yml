@@ -297,6 +297,19 @@
               link: /develop/tutorial/swanchangelog
               text: 历史更新日志
               name: swanchangelog
+        -
+          link: /develop/tutorial/move
+          text: 开发解决方案
+          name: move
+          sidebar: 
+              -
+                link: /develop/tutorial/move
+                text: 搬家工具
+                name: move      
+              # -   
+              #   link: /develop/tutorial/solution
+              #   text: 三方框架
+              #   name: solution                  
             
     -
       link: /develop/framework/app_service_register
@@ -2002,13 +2015,7 @@
       link: /develop/devtools/show_sur
       text: 工具
       name: devtools
-      sidebar:
-        -
-            sidebar:
-              -
-                link: /develop/devtools/move
-                text: 搬家工具
-                name: move        
+      sidebar:      
         -
             text: 界面
             name: show

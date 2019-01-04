@@ -73,7 +73,7 @@ hideLoading
 ```js
 swan.showLoading({
     title: '加载中',
-    mask: 'true'
+    mask: true
 });
 
 setTimeout(function() {
