@@ -8,9 +8,9 @@ sidebar: custom-component_cont
 
 ### 组件间通信
 组件间的基本通信方式有以下几种：
-- 父组件可以通过设置子组件的properties来设置数据；
-- 子组件可以使用dispatch方法，父组件中定义messages，对于dispatch方法进行拦截，从而达到子组件向上通讯；
-- 子组件可以通过触发父组件的自定义事件进行传参，可以传递任意数据（基础库版本 2.0.3）；
+- 在父组件中可以通过设置子组件的properties来向子组件传递数据；
+- 在父组件中定义messages对象，对子组件dispatch方法进行拦截，从而达到子组件向上通信；
+- 子组件可以通过triggerEvent方法触发父组件的自定义事件进行传参；
 - 如果以上几种方式不足以满足需要，父组件还可以通过 this.selectComponent 方法获取子组件实例对象，这样就可以直接访问组件的任意数据和方法。
 
 ### 监听事件
@@ -25,9 +25,10 @@ sidebar: custom-component_cont
 <component-tag-name bindmyevent="onMyEvent" />
 ```
 
-### 组件的 dispatch
+### 通过dispatch方法与父组件通信
 
-通过 dispatch 方法，组件可以向组件树的上层派发消息。消息将沿着组件树向上传递，直到遇到第一个处理该消息的组件，则停止。通过 messages 可以声明组件要处理的消息。messages 是一个对象，key 是消息名称，value 是消息处理的函数，接收一个包含 target(派发消息的组件) 和 value(消息的值) 的参数对象。
+通过 dispatch 方法，子组件可以向组件树的上层派发消息。消息将沿着组件树向上传递，直到遇到第一个处理该消息的组件，则停止。
+通过 messages 可以声明组件要处理的消息，messages 是一个对象，key 是消息名称，value 是消息处理的函数，接收一个包含 target(派发消息的组件) 和 value(消息的值) 的参数对象。
 
 **<div class="notice">示例： </div>**
 <a href="swanide://fragment/6f6ac82db74aa8795dfbc27fd760dd611545889059135" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -53,9 +54,8 @@ Component({
 });
 ```
 
+### 通过triggerEvent方法与父组件通信
 
-
-### 触发事件
 <div class="notice">解释： </div>
 自定义组件触发事件时，需要使用 triggerEvent 方法，指定事件名和detail对象：
 ```xml
@@ -66,6 +66,7 @@ Component({
 <a href="swanide://fragment/e5621e1c241dd7b47f2bc844277117b81545308225206" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
+/* 组件逻辑 */
 Component({
     properties: {},
     methods: {
@@ -77,9 +78,10 @@ Component({
 });
 ```
 ```js
+/* 页面逻辑 */
 Page({
     onMyEvent: function (e) {}
 })
 ```
 **注意**：
-自定义组件触发事件时，需要使用 triggerEvent 方法，对于传递数据的格式，从 2.0.3 开始支持传递任意参数类型，其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。
+对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。
