@@ -305,11 +305,12 @@
               -
                 link: /develop/tutorial/move
                 text: 搬家工具
-                name: move      
-              # -   
-              #   link: /develop/tutorial/solution
-              #   text: 三方框架
-              #   name: solution                  
+                name: move   
+              -   
+                link: /develop/tutorial/wepy
+                text: Wepy 开发
+                name: wepy                    
+                                  
             
     -
       link: /develop/framework/app_service_register
