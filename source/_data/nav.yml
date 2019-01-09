@@ -467,6 +467,10 @@
                 link: /develop/framework/custom-component_extend
                 text: 自定义组件扩展
                 name: custom-component_extend
+              -
+                link: /develop/framework/custom-component_trdparty
+                text: 第三方自定义组件
+                name: custom-component_trdparty
         -
           link: /develop/framework/subpackages
           text: 基础性能
