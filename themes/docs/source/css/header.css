@@ -51,6 +51,7 @@ header .m-doc-level1 {
     overflow: hidden;
 }
 header .m-doc-crumbs-wrapper span{
+    color: #fff;
     margin-right: 10px;
 }
 header .m-doc-crumbs-wrapper span:not(:first-child):before {
@@ -91,12 +92,19 @@ header .m-doc-level1 ul li {
     text-align: center;
     padding: 0 30px;
 }
+
 header .m-doc-level1 ul .m-doc-header-nav-selected {
     background-color: rgba(255, 255, 255, 0.15);
 }
+header .m-doc-forum:hover,
+header .m-doc-level1 ul li:hover {
+    background: #181818;
+}
+
 header .m-doc-level1 ul .m-doc-header-nav-selected a {
     color: #fff;
 }
+header .m-doc-forum a,
 header .m-doc-level1 ul li a {
     font-size: 16px;
     color: #fff;
@@ -206,6 +214,7 @@ header .m-doc-logo-line {
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected {
         color: #000;
+        /* background-color: #181818 */
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected span,
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
