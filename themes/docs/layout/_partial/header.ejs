@@ -16,9 +16,14 @@
         <div class="m-mobile-doc-header-list-mask"></div>
     </div>
     <div class="m-doc-logo-wrapper">
-        <a href="/" class="m-doc-logo">
-            <img src="<%- url_for('img/logo.png') %>"/>
-        </a>
+        <div href="/" class="m-doc-logo">
+            <img src="<%- url_for('img/logo_new.png') %>"/>
+            <span class="m-doc-logo-line"></span>
+            <img src="<%- url_for('img/logo_docs.png') %>" class="docs-logo"/>
+        </div>
+    </div>
+    <div class="m-doc-forum">
+        <a href="https://smartprogram.baidu.com/forum/">社区</a>
     </div>
     <div class="m-doc-level1">
         <ul><%#
@@ -30,6 +35,7 @@
         %></ul>
         <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
     </div>
+    
 
     <%- partial('./search') -%>
 </header>

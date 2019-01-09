@@ -1,3 +1,4 @@
+
 header {
     position: absolute;
     top: 0px;
@@ -8,7 +9,7 @@ header {
     box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
     box-sizing: border-box;
     z-index: 9999;
-    background: #fff;
+    background: #000;
 }
 .m-doc-nav-btn {
     display: none;
@@ -21,10 +22,18 @@ header {
     margin-left: 40px;
     display: block;
 }
-.m-doc-logo img{
+.m-doc-logo img {
     width: 121px;
     height: 21px;
     vertical-align: middle;
+}
+.m-doc-logo img:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.m-doc-logo .docs-logo {
+    width: 35px;
+    height: 17px;
 }
 .m-doc-logo h2 {
     display: inline-block;
@@ -76,31 +85,48 @@ header .m-doc-level1 ul {
 
 header .m-doc-level1 ul li {
     display: inline-block;
-    width: 56px;
     position: relative;
     text-align: center;
-    margin-right: 15px;
+    padding: 0 30px;
 }
-header .m-doc-level1 ul .m-doc-header-nav-selected:after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #3388ff;
+header .m-doc-forum:hover,
+header .m-doc-level1 ul li:hover {
+    background: #181818;
 }
+
 header .m-doc-level1 ul .m-doc-header-nav-selected a {
-    color: #3388ff;
+    color: #38f;
 }
+header .m-doc-forum a,
 header .m-doc-level1 ul li a {
     font-size: 16px;
-    color: #333333;
+    color: #fff;
+    cursor: pointer;
     line-height: 16px;
     text-decoration: none;
 }
+
 .m-mobile-doc-level1 {
     display: none;
+}
+
+/**社区样式start***/
+header .m-doc-forum {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 0 30px;
+}
+
+/***社区样式end***/
+
+header .m-doc-logo-line {
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    width: 1px;
+    background: #787878;
+    margin: 0 10px;
 }
 
 /* header 移动端适配 */
@@ -149,6 +175,7 @@ header .m-doc-level1 ul li a {
         margin-left: 0;
         text-align: center;
     }
+    .m-doc-forum,
     .m-doc-level1 {
         display: none;
     }
@@ -173,6 +200,7 @@ header .m-doc-level1 ul li a {
     .m-mobile-doc-level1 .m-mobile-level1-selected {
         font-size: 14px;
         color: #000;
+        /* background-color: #181818 */
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected span,
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
@@ -219,7 +247,7 @@ header .m-doc-level1 ul li a {
         height: 100%;
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected a{
-        color: #38f;
+        color: #fff;
     }
 }
 
@@ -260,7 +288,7 @@ header .m-doc-level1 ul li a {
 
 .top-search-box {
     position: absolute;
-    right: 40px;
+    right: 100px;
     top: 13px;
     width: 40px;
     height: 36px;
