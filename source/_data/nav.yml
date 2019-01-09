@@ -2392,6 +2392,10 @@
             link: /operations/service
             text: 服务条款
             name: service
+          -
+            link: /operations/thirdparty
+            text: 第三方服务条款
+            name: thirdparty
           # -
           #   link: /operations/standard
           #   text: 审核标准
