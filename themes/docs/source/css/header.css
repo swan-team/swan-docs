@@ -115,7 +115,9 @@ header .m-doc-forum {
     position: absolute;
     right: 10px;
     top: 0px;
-    padding: 0 30px;
+    padding: 0 30px 0 32px;
+    background: #000;
+    z-index:9;
 }
 
 /***社区样式end***/
@@ -295,6 +297,7 @@ header .m-doc-logo-line {
     line-height: 1;
     outline: none;
     transition: width 0.1s;
+    background: #000;
 }
 
 .top-search-box-focus {
