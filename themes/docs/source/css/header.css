@@ -309,9 +309,9 @@ header .m-doc-logo-line {
 .top-search-box {
     position: absolute;
     right: 100px;
-    top: 13px;
+    top: 0;
     width: 40px;
-    height: 36px;
+    height: 60px;
     line-height: 1;
     outline: none;
     transition: width 0.1s;
@@ -320,8 +320,13 @@ header .m-doc-logo-line {
 
 .top-search-box-focus {
     width: 164px;
+    height: 36px;
+    top: 13px;
     padding-left: 38px;
     background: #f0f1f2;
+}
+.top-search-box-focus.top-search-box .search-btn {
+    top: 3px;
 }
 .top-search-box-focus #local-search-input {
     display: block;
@@ -345,6 +350,7 @@ header .m-doc-logo-line {
     background-color: initial;
 }
 .top-search-box .search-btn {
+    top: 16px;
     left: 3px;
     background-image: url(../img/header_search.png);
 }
