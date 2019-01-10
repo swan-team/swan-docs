@@ -8,7 +8,7 @@ sidebar: open
 
 ## open-data
 
-<text><text class="notice">解释:</text>用于展示手机百度 APP 开放的数据。</text><div></div><text class="notice">属性说明:</text>
+<text><text class="notice">解释:</text>用于展示百度 App 开放的数据。</text><div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 类型     | 默认值  | 说明              |
 | --- | ------ | ---- | --------------- |
