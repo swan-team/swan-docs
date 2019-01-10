@@ -10,12 +10,8 @@
 }
 
 .m-doc-content-wrap {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 60px;
-    left: 0;
-    padding: 0 95px;
+    margin-top: 60px;
+    padding: 0 80px;
 }
 
 /* 右下菜单样式 */
@@ -65,7 +61,6 @@
 article {
     max-width: 980px;
     padding-top: 40px;
-    padding-bottom: 40px;
     font-size: 14px;
     line-height: 26px;
     background-color: #fafafa;
@@ -583,7 +578,7 @@ article thead tr {
     color: #666 !important;
     height: 20px;
     line-height: 20px;
-    margin-top: 40px;
+    margin: 40px 0;
     background-repeat: no-repeat;
     background-size: 7px 13px;
 }
@@ -618,13 +613,34 @@ article thead tr {
     background-size: 11px 15px;
 }
 
+.m-doc-license {
+    min-height: 90px;
+    background-color: #f0f1f2;
+}
+.m-doc-license-content,
+.m-doc-license-content a {
+    color: #999;
+    font-size: 14px;
+    line-height: 28px;
+    text-decoration: none;
+}
+.m-doc-license-content {
+    padding: 31px 80px;
+}
+.m-doc-license-content a:hover {
+    color: #3388FF;
+}
+
 /* article 移动端适配 */
 @media only screen and (max-width: 768px) {
     .m-doc-menu-wrapper {
         display: none;
     }
+    .m-doc-bottomPage-wrapper,
     .m-doc-bottomPage-wrapper a{
+        display: block;
         font-size: 12px;
+        text-align: center;
     }
     .m-doc-bottomPage-wrapper .m-doc-bottomPage-left,
     .m-doc-bottomPage-wrapper .m-doc-bottomPage-right{
@@ -661,6 +677,15 @@ article thead tr {
 
     .toc-wrap {
         display: none;
+    }
+    .m-doc-license-content {
+        padding: 31px 40px;
+    }
+    .m-doc-license-content,
+    .m-doc-license-content a {
+        display: block;
+        font-size: 12px;
+        text-align: center;
     }
 }
 

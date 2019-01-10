@@ -66,6 +66,9 @@
   link: /design/overview/introduction
   text: 设计
   name: design
+  license:
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /design/principle/easytouse 
@@ -196,6 +199,9 @@
   link: /develop/tutorial/codedir
   text: 开发
   name: develop
+  license:
+    name: 创作共用-署名-相同方式共享
+    link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
   nav:
     -
       link: /develop/tutorial/codedir
