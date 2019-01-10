@@ -5,12 +5,14 @@
     var nav; // 2级（sidebar）导航
     var currentPageList = [];
     var h1; // 正文h1
+    var license = {};
     var bottomPage = {}; // 底部跳转
     var localData = {}; // 页面siderbar数据
 
     for(var i = 0; i < header.length; i++) {
         if (header[i].name == page.header) {
             nav = header[i].nav;
+            license = header[i].license;
             headerIndex = i;
         }
     }
@@ -66,7 +68,7 @@
 
     <%- partial('_partial/header', {header: header, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
-    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
+    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage, license: license}) %>
     <script type="text/javascript">
         window.localData = {
             'headerName': '<%- header[headerIndex].name %>',
