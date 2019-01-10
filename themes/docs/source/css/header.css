@@ -119,11 +119,13 @@ header .m-doc-level1 ul li a {
 
 /**社区样式start***/
 header .m-doc-forum {
+    font-size: 14px;
     position: absolute;
     right: 10px;
     top: 0px;
-    font-size: 14px;
-    padding: 0 30px;
+    padding: 0 30px 0 32px;
+    background: #000;
+    z-index:9;
 }
 header .m-doc-forum a {
     font-size: 14px;
@@ -313,6 +315,7 @@ header .m-doc-logo-line {
     line-height: 1;
     outline: none;
     transition: width 0.1s;
+    background: #000;
 }
 
 .top-search-box-focus {
