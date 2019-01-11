@@ -102,7 +102,9 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-自定义导航栏的元素建议与控制功能区对齐，且与原生顶部状态栏高度一致。
+自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏高度一致（iOS为44pt，Android为38pt）。
+技术实现请参考开发文档[全局配置](../../../develop/tutorial/process_page/#window)章节。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/topnav/9-1.png">
