@@ -697,8 +697,7 @@ article thead tr {
 
     .m-doc-content-wrap {
         max-width: 1195px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 60px auto 0 auto;
     }
 
     article {
