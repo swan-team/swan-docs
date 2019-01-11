@@ -671,6 +671,10 @@
                       text: camera
                       name: media_camera
                     -
+                      link: /develop/component/media/#ar-camera
+                      text: ar-camera
+                      name: media_ar-camera
+                    -
                       link: /develop/component/media/#live-player
                       text: live-player
                       name: media_live-player
@@ -1003,6 +1007,15 @@
                   link: /develop/api/media_cameracontext/#createCameraContext
                   text: createCameraContext
                   name: media_cameracontext_createCameraContext
+            -
+              link: /develop/api/media_arcameracontext
+              text: AR 相机组件控制
+              name: media_arcameracontext
+              sidebar:
+                -
+                  link: /develop/api/media_arcameracontext/#createARCameraContext
+                  text: createARCameraContext
+                  name: media_arcameracontext_createARCameraContext
         -
             link: /develop/api/file
             text: 文件
