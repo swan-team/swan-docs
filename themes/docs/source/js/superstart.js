@@ -375,7 +375,7 @@
                 
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
-                    if (h2Top <= 70) {
+                    if (h2Top <= 80) {
                         var hash = $(this).children('a')[0].hash;
                         sidebar.each(function (i) {
                             if (this.hash.replace('/', '') === hash) {
