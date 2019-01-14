@@ -20,13 +20,13 @@ sidebar: rank
     * 请确保 web 版小程序：页面可正常展示，页面可正常跳转，底部 tabbar 可正常点击切换。
 
 
-## 配置seo信息
+## 配置页面基础信息
 
 > 智能小程序被搜索引擎正常收录的前提是可以进行网页化的处理，能够以普通网页的形式被爬虫发现和抓取。可以理解为每一个智能小程序页面都会转码成一张网页。
 
-开发者需要为当前的小程序页面配置 seo 相关的信息，包括 title、description、keywords，这三类信息需要保持和小程序对应的 H5 站页面一致。具体接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">配置 seo</a>。
+开发者需要为当前的小程序页面配置页面基础信息，包括 title、description、keywords，这三类信息需要保持和小程序对应的 H5 站页面一致。具体接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">配置页面基础信息</a>。
 
-由于每个页面的 seo 信息和页面内容强相关，建议先通过 swan.request 请求开发者  server ，由开发者 server 返回 seo 信息，再通过 seo 接口设置到页面中。
+由于每个页面的页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。
 
 <!-- ## 申请并绑定熊掌号
 
@@ -37,7 +37,7 @@ sidebar: rank
 
 ## 配置 H5 域名
 
-> 已获取自然搜索结果的配置资格。
+> H5域名和下文提到的url映射规则配合使用，一起生成小程序和H5站点的映射关系
 
 1. 配置业务域名
 在配置 H5 域名之前，请提前在“流量配置-自然搜索结果”中将开发者 H5 站点的域名，添加到“业务域名”中。

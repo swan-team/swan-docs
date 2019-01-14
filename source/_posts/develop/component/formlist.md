@@ -17,7 +17,7 @@ sidebar: formlist
 | type | String | default |类型|
 | plain | Boolean  |false |按钮是否镂空，背景色透明。|
 |form-type |String  | - |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
-|open-type | String | -|手百开放能力，比如分享、获取用户信息等等。|
+|open-type | String | -|百度 App开放能力，比如分享、获取用户信息等等。|
 |hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当  hover-class="none"  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
 | hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态。|
 |hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒。|

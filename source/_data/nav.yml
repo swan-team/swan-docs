@@ -671,6 +671,10 @@
                       text: camera
                       name: media_camera
                     -
+                      link: /develop/component/media/#ar-camera
+                      text: ar-camera
+                      name: media_ar-camera
+                    -
                       link: /develop/component/media/#live-player
                       text: live-player
                       name: media_live-player
@@ -1003,6 +1007,15 @@
                   link: /develop/api/media_cameracontext/#createCameraContext
                   text: createCameraContext
                   name: media_cameracontext_createCameraContext
+            -
+              link: /develop/api/media_arcameracontext
+              text: AR 相机组件控制
+              name: media_arcameracontext
+              sidebar:
+                -
+                  link: /develop/api/media_arcameracontext/#createARCameraContext
+                  text: createARCameraContext
+                  name: media_arcameracontext_createARCameraContext
         -
             link: /develop/api/file
             text: 文件
@@ -1928,7 +1941,7 @@
                     name: open_infomation_sendTemplateMessage  
               -
                 link: /develop/api/seo
-                text: 配置seo
+                text: 配置页面基础信息
                 name: seo
                 sidebar:
                   - 
@@ -2402,14 +2415,17 @@
             link: /operations/service
             text: 服务条款
             name: service
+    -
+      link: /operations/thirdparty
+      text: 第三方平台范围及条款
+      name: book
+      sidebar:
+        -
+          sidebar:            
           -
             link: /operations/thirdparty
             text: 第三方服务条款
             name: thirdparty
-          # -
-          #   link: /operations/standard
-          #   text: 审核标准
-          #   name: standard 
 # #6
 # -
 #   link: ../forum

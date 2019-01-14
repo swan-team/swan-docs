@@ -93,14 +93,14 @@ innerAudioContext.onPlay(function (res) {
 
 ```javascript
 
-const innerAudioContext = swan.createInnerAudioContext();
-innerAudioContext.src = 'xxx';
-innerAudioContext.autoplay = true;
-innerAudioContext.seek({
-    position: 10
-});
-innerAudioContext.onPlay(function (res) {
-    console.log('开始播放')
-});
+    swan.setInnerAudioOption({
+        mixWithOther: true,
+        success: res => {
+            console.log('设置音频混播成功')
+        }，
+        fail: err => {
+            console.log('设置音频混播失败', err)
+        }
+    })
 
 ```

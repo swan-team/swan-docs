@@ -174,13 +174,13 @@ swan.checkSession({
 
 ## isLoginSync
 
-**解释：**获取手百登录状态。
+**解释：**获取百度 App登录状态。
 
 **返回参数说明：**
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 手百登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
 
 **示例：**
 
