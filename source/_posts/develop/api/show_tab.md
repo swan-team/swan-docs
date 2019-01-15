@@ -6,7 +6,7 @@ sidebar: show_tab
 ---
 navigateTo
 ---
-**解释：**保留当前页面，跳转到应用内的某个页面，使用 swan.navigateBack 可以返回到原页面。
+**解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
 **参数：**Object
 
