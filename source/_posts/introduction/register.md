@@ -10,7 +10,7 @@ sidebar: register
 
 登录地址(PC版)：<a href="https://smartprogram.baidu.com/mappconsole/main/login">点击登录</a>
 
-![图片](../../img/introduction/enter/p1.png)
+![图片](../../img/introduction/register/p1.png)
 
 ### 登录百度账号
 
@@ -18,7 +18,7 @@ sidebar: register
  - 手机短信验证登录
  - 百度账号密码登录
 
-![图片](../../img/introduction/enter/p2.png)
+![图片](../../img/introduction/register/p2.png)
 
 登录后单击“下一步”。
 ![图片](../../img/introduction/register/p3.png)
