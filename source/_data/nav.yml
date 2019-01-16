@@ -321,8 +321,24 @@
               -   
                 link: /develop/tutorial/frame
                 text: 框架开发
-                name: frame                   
-                                  
+                name: frame   
+                sidebar:
+                  -
+                    link: /develop/tutorial/frame/#Taro
+                    text: Taro
+                    name: frame_Taro     
+                  -
+                    link: /develop/tutorial/frame/#mpvue
+                    text: mpvue
+                    name: frame_mpvue 
+                  -
+                    link: /develop/tutorial/frame/#WePY
+                    text: WePY
+                    name: frame_WePY                                                    
+                  -   
+                    link: /develop/tutorial/frame/#Okam
+                    text: Okam 
+                    name: frame_Okam                                 
             
     -
       link: /develop/framework/app_service_register
