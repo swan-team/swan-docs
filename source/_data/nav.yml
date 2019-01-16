@@ -60,7 +60,13 @@
               -
                 link: /introduction/rank
                 text: 接入自然搜索
-                name: rank                                              
+                name: rank        
+        -
+            sidebar:
+              -
+                link: /introduction/baijiahao
+                text: 百家号流量接入  
+                name: baijiahao                                                      
 # 2
 -
   link: /design/overview/introduction
