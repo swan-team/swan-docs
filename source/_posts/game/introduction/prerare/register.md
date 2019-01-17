@@ -6,6 +6,19 @@ sidebar: register
 topic: prerare
 priority: 01-02
 ---
+
+
+注册地址(PC版)：[点击注册](https://passport.baidu.com/v2/?reg&tt=1521786256298&overseas=undefined&gid=D8D45DC-FFC4-486A-BA34-B3215E98FF74&tpl=mn&u=https%3A%2F%2Fwww.baidu.com%2F)
+
+登录地址(PC版)：[点击登录](https://smartprogram.baidu.com/mappconsole/main/login)
+
+- 使用百度 App 扫码登录
+- 手机短信验证登录
+- 百度账号密码登录
+
+
+ ![图片](/img/game/introduction/enter/newadd20.jpg)
+
 #### 主体资质审核
 
 #### 主体类型：
@@ -36,14 +49,15 @@ priority: 01-02
 
 注：每个帐号有 5 次提交审核机会，5 次审核仍然没通过的，将不能再提交。
 
-#### 超级管理员信息登记
+#### 运营者信息登记
 登记运营者身份证姓名、身份证号码并验证手机号。
-![图片](/img/game/introduction/enter/newadd11.png)
+ ![图片](/img/game/introduction/enter/newadd11.png)
 
 #### 提交并等待审核通知
  ![图片](/img/game/introduction/enter/newadd12.png)
 
-#### 审核通过
+#### 真实性认证
+
 1.信息审核通过后，单击“尽快完成认证”，验证主体的真实性。
  ![图片](/img/game/introduction/enter/newadd13.png)
 2.单击“对公验证”，进入对公打款页面。
