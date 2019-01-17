@@ -41,14 +41,15 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |---|---|---|---|
 |setData|Object newData|设置data并执行视图层渲染|-|
 |hasBehavior|Object|检查组件是否具有 behavior （检查时会递归检查被直接或间接引入的所有behavior）|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
-|triggerEvent|String name, Object detail|触发事件，参见 <a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/)">组件事件</a>|-|
+|triggerEvent|String name, Object detail|触发事件，参见 <a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/">组件事件</a>|-|
 |createSelectorQuery||创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery/">SelectorQuery</a> 对象，选择器选取范围为这个组件实例内, 与 swan.createSelectorQuery().in(this) 是等效|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">2.5.3</a>|
 |createIntersectionObserver|Object options|创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#IntersectionObserver/">IntersectionObserver</a> 对象，选择器选取范围为这个组件实例内|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">2.5.3</a>|
-|selectComponent|String selector|使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象（会被 swan://component-export 影响），在生命周期 onReay 开始时生效。|-|
-|selectAllComponents|String selector|使用选择器选择组件实例节点，返回匹配到的全部组件实例对象组成的数组。|-|
+|selectComponent|String selector|使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象（会被 swan://component-export 影响），在生命周期 onReay 开始时生效|-|
+|selectAllComponents|String selector|使用选择器选择组件实例节点，返回匹配到的全部组件实例对象组成的数组|-|
 |groupSetData|Function callback|立刻执行 callback ，其中的多个 setData 之间不会触发界面进行重复绘制|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">2.10.7</a>|
 
-**示例： **
+**<div class="notice">示例： </div>**
+<a href="swanide://fragment/0fef06c66614299980e55bdb56cf34521545277337898" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 // 自定义组件js
@@ -86,11 +87,16 @@ Component({
 
 ### 使用 Component 构造器构造页面
 
-事实上，某一个自定义组件也可以视为一个页面。因而，页面也可以使用 Component 构造器构造，拥有与普通组件一样的定义段与实例方法。必要配置项与正常自定义组件一致，即需要有`component: true`字段。
+**解释:**
+事实上，一个自定义组件也可以视为一个页面，故页面也可以使用 Component 构造器构造，拥有与普通组件一样的定义段与实例方法，其必要配置项（json）与正常自定义组件一致，即需要有`component: true`字段。
 
-此时，组件的属性可以用于接收页面的参数，如访问页面 /pages/index/index?paramA=123&paramB=xyz ，你可以在onLoad生命周期中获取传递的query字段 。
+**关于页面传参:**
+从其它页面跳转到由自定义组件构造的页面时，如跳转到页面 /components/custom/custom?paramA=123&paramB=xyz ，你可以在由custom组件构造的页面onLoad生命周期中获取传递的query字段。
 
+**注意:**
 页面的生命周期方法（即 on 开头的方法），应写在 methods 定义段中。
+
+**<div class="notice">示例： </div>**
 
 ```json
 {
@@ -100,6 +106,7 @@ Component({
 ```
 
 ```js
+/* /components/custom/custom.js */
 Component({
   methods: {
     onLoad: function(options) {
@@ -112,6 +119,6 @@ Component({
 
 **说明**：
 - 使用 this.data 可以获取内部数据和属性值，但不要直接修改它们，应使用 setData 修改；
-- 属性名应避免以 data- 开头，因为在 SWAN 中，`data-xyz='xxx'` 会被作为节点 dataset 来处理；
+- 属性名应避免以 data- 开头，因为在 SWAN 中，`data-name='swan'` 会被作为节点 dataset 来处理；
 - 属性名应避免以 prop- 开头 在处理过程中会将该前缀删除；
 - 属性名应避免包含 “ _ ” 字符, 因为在渲染过程中将会以 “ _ ” 字符进行拆分。

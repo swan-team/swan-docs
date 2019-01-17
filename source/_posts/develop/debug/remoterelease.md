@@ -10,8 +10,8 @@ sidebar: remoterelease
 ## 常见问题
 1、开启了USB调试也无法找到设备
     ``两种解决方法:``
-    ``(1) 在电脑中安装adb后再尝试连接；``
-    ``(2) 使用npm全局安装adb-devtools，并在终端执行devtools，在手机上点击确认授权后再次尝试；``
+    ``(1) 在电脑中安装 Android Debug Bridge（安卓调试桥） 后再尝试连接；``
+    ``(2) 执行如下命令，使用npm全局安装adb-devtools，并在终端执行devtools，在手机上点击确认授权后再次尝试；``
     ```shell
     npm install adb-devtools -g
     devtools

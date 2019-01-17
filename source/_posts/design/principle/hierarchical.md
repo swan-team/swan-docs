@@ -139,7 +139,7 @@ sidebar: hierarchical
 
 #### 全屏结果页
 在任务流程的最后一环，且结果反馈比较重要时，可使用全屏结果页向用户明确操作结果，并引导下一步操作。
-开发者可以根据场景需求自行开发，设计资源的[视觉组件库](https://smartprogram.baidu.com/docs/design/resource/uikit/)中也放置了基础视觉源文件，供快速开发使用。
+开发者可以根据场景需求自行开发，设计资源的[视觉组件库](../../resource/uikit/)中也放置了基础视觉源文件，供快速开发使用。
 
 
 <div class="m-doc-custom-examples">

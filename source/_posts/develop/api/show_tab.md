@@ -79,10 +79,10 @@ switchTab
 {
     "tabBar": {
         "list": [{
-            "pagePath": "index",
+            "pagePath": "pages/index/index",
             "text": "首页"
         },{
-            "pagePath": "list",
+            "pagePath": "pages/list/list",
             "text": "列表"
         }]
     }
@@ -91,7 +91,7 @@ switchTab
 
 ```js
 swan.switchTab({
-    url: '/list',
+    url: '/pages/list/list',
 });
 ```
 

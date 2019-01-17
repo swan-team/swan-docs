@@ -3,11 +3,12 @@
     var urlMap = {
         '/docs/design/principle/':'/docs/design/overview/introduction/',
         '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
-        '/docs/design/component/topnav/':'/docs/design/component/nav/',
-        '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
+        '/docs/design/component/nav/':'/docs/design/component/topnav/',
+        '/docs/develop/web/detail/':'/docs/develop/server/upstream/',
         '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
+        '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -112,10 +113,10 @@
                 return;
             }
             if (isBox()) {
-                // 手百
+                // 百度 App
                 isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
             } else {
-                // 非手百
+                // 非百度 App
                 /*eslint-disable fecs-camelcase*/
                 var openbox = window.OpenBox({
                     url: location.href
@@ -136,39 +137,38 @@
             var _this = this;
             var $demo = $('img[src= "../../img/demo/demo.png"]');
             var $closest = $demo.closest('div');
-            var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>' +
-            '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'+
-            '<br>下载小程序示例源码' +
-            '</a>' +
-            '<br>' +
-            '<img src="../../img/demo/mob.png" alt="图片">' +
-            '<img src="../../img/demo/comp.png" alt="图片">';
+            var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>'
+            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
+            + '<br>下载小程序示例源码'
+            + '</a>'
+            + '<br>'
+            + '<img src="../../img/demo/mob.png" alt="图片">'
+            + '<img src="../../img/demo/comp.png" alt="图片">';
 
-            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。' +
-            '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'+
-            '<br>下载小程序示例源码' +
-            '</a>' +
-            '<br>' +
-            '<img src="../../img/demo/box.png" alt="图片">' +
-            '<img src="../../img/demo/comp.png" alt="图片">';
+            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。' 
+            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
+            + '<br>下载小程序示例源码'
+            + '</a>'
+            + '<br>'
+            + '<img src="../../img/demo/box.png" alt="图片">'
+            + '<img src="../../img/demo/comp.png" alt="图片">';
             var html = isBox() ? html2 : html1;
             $closest.html(html);
             $('.demo-invoker').click(function() {
-                // win.location.href = 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0';
                 _this.caseInvoke('baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0');
                 return false;
             });
         },
-        initHiddenbar: function(){
+        initHiddenbar: function () {
             var sidebarIgnore = window.localData.sidebarIgnore;
             sidebarIgnore = sidebarIgnore.split(',');
-            for (var i = 0; i < sidebarIgnore.length; i ++){
+            for (var i = 0; i < sidebarIgnore.length; i ++) {
                 var href = '/docs' + sidebarIgnore[i] + '/';
                 $('.m-doc-sidebar-nav-wrapper a[href="' + href + '"]')
                     .hide()
                     .parent('li')
                     .hide();
-                $('#article-main-content a[href= "'+ href +'"]').hide();
+                $('#article-main-content a[href= "' + href + '"]').hide();
             }
         },
         initCustom: function () {
@@ -182,7 +182,7 @@
                 var args = arguments;
                 clearTimeout(timer);
                 timer = setTimeout(function () {
-                    fn.apply(ctx, args)
+                    fn.apply(ctx, args);
                 }, (delay ? delay : 300));
             };
         },
@@ -266,7 +266,6 @@
                         $('.m-doc-sidebar-nav-wrapper').scrollTop(0);
                     }
                     parent.addClass('m-doc-nav-on');
-                    // parent.find('a.m-doc-h2-list')[0].click();
                 }
 
                 var sidebarData = localSidebar.getLocal(window.localData.headerName);
@@ -306,7 +305,7 @@
                     var _this = this;
                     var href = $(_this).attr('href');
                     win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function(){
+                    ctx.getArticle(href, function() {
                         ctx._scrollToAnchor($(_this)[0]);
                     });
                 }
@@ -357,7 +356,7 @@
                         tocH3.each(function (andex) {
                             tocH3.eq(andex).removeClass('toc-level-3-on');
                         });
-                        if(!tocH2Selected){
+                        if (!tocH2Selected) {
                             var $indexTocH3 = tocH3.eq(index);
                             $indexTocH3.addClass('toc-level-3-on');
                             // 面包屑导航切换
@@ -366,18 +365,19 @@
                     }
                 });
             })
-            .on('scroll', function() {
+            .on('scroll', function () {
                 // 左侧导航栏跟随
                 var h2 = $('article').find('h2');
                 var scrollTop = $(this).scrollTop();
                 var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
                 var scrollHeight = $(this)[0].scrollHeight;
                 var clientHeight = $(this)[0].clientHeight;
+                
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
-                    if (h2Top <= 60) {
+                    if (h2Top <= 80) {
                         var hash = $(this).children('a')[0].hash;
-                        sidebar.each(function () {
+                        sidebar.each(function (i) {
                             if (this.hash.replace('/', '') === hash) {
                                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
                                 $(this).parent('li').addClass('m-doc-sidebar-selected');
@@ -392,7 +392,7 @@
                     $(selected.parent('ul.m-doc-h2-children')[0]).parent('li').addClass('m-doc-sidebar-selected');
                 }
                 // 滑动到底部时高亮最后一个h3
-                if(scrollTop + clientHeight == scrollHeight && h2.length > 0) {
+                if (scrollTop + clientHeight == scrollHeight && h2.length > 0) {
                     var hash = $(h2[h2.length - 1]).children('a')[0].hash;
                     sidebar.each(function () {
                         if (this.hash.replace('/', '') === hash) {
@@ -452,7 +452,6 @@
             });
             $(win).on('resize', function () {
                 ctx.initToc();
-                //ctx.initCrumbs();
             });
             $(win).on('popstate', function (e) {
                 if (e.state) {
