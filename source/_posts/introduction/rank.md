@@ -63,26 +63,9 @@ sidebar: rank
 url 映射规则定义的是小程序页面到 H5 页面的映射规则，百度搜索基于这一份映射规则来计算小程序的排序权重以及和 H5 页面的去重处理等等，因此配置 url 映射规则对小程序入搜索至关重要。
 ### 增加 url-mapping 字段
 在 app.json 中增加 url-mapping 字段，配置智能小程序与其对应的H5页面的 url 的映射规则，供搜索引擎在自然结果中将H5站url进行匹配和替换。
-```json
-{
-    "pages": [
-        "path/to/smartapp/page1/page1",
-        "path/to/smartapp/page2/page2",
-        "path/to/smartapp/page3/page3"
-    ],
-    "url-mapping": {
-        "path/to/smartapp/page1/page1":"/path/to/h5/page1?query1=${appquery1}&query2=${appquery2}",
-        "path/to/smartapp/page2/page2":"/path/to/h5/page2?query3=${appquery3}&query4=${appquery4}",
-        "path/to/smartapp/page3/page3":"/path/to/h5/page3?query5=${appquery5}&query6=${appquery6}"
-    }
-}
-```
 
-* url-mapping 字段为 Object，在pages 中配置的小程序路径作为 key，每一个小程序路径对应的 H5 页面作为 value; 每一对”key-value”作为一个完整的 url 映射。
-* 如果小程序路径和H5页面是一对一映射，value为一个字符串；如果是一对多映射，value为一个数组。
-    > 部分相对成熟的 Web 站点，对于同一内容的页面会泛化出不同的 url，且都被百度搜索正常收录，但是这些不同的 url 都对应同一个小程序路径，所以在这样的场景下，配置小程序路径到H5页面的映射规则，就出现了一对多的情况。
-
-* url 映射规则通过字符串模板的方式进行定义，模板变量的界定符是${}。需要将 Web 版智能小程序 url 中的 query 部分，和字符串模板进行编译，生成正式的 url 实例。
+* url-mapping 字段为 Object，在pages 中配置的小程序路径作为 key，每一个小程序路径对应的 H5 页面作为 value; 每一对”key-value”作为一个完整的url映射。如果小程序路径和H5页面是一对一映射，value为一个字符串；如果是一对多映射，value为一个数组。
+* url映射规则通过字符串模板的方式进行定义，模板变量的界定符是${}。需要将Web版智能小程序url中的query部分，和字符串模板进行编译，生成正式的url实例。
 * url 映射规则默认不包含 host 部分，具体的 host 需要开发者在上述步骤中的H5域名部分进行配置。url 映射规则也可包含 host 部分，要求 host 部分必须为在小程序平台的 H5 域名的子域。
    > * 可省略 host 的情况：小程序只需要映射到同一域名下的页面，只需要将该域名配置到上文提到的H5域名下，在 url 映射规则可省略 host。
    > * 不可省略 host 的情况：某些Web站点可能存在多个子域名，小程序的页面需要同时映射到多子域下的H5页面，这种场景下需要在上文中提到的H5域名区域出配置主域名，在url映射规则中配置H5子域。
@@ -90,47 +73,66 @@ url 映射规则定义的是小程序页面到 H5 页面的映射规则，百度
 ### 配置示例
 
 #### 一对一映射关系示例
-以百度贴吧智能小程序为例在app.json中配置url-mapping字段如下：
+
+|小程序页面链接|对应H5页面链接|
+|--|--|
+|web化主页：https://byokpg.smartapps.cn/path/to/smartapp/home|H5主页：https://m.site.com/|
+|web化列表页： https://byokpg.smartapps.cn/path/to/smartapp/list?city=bj|H5列表页：https://m.site.com/list/bj.html|
+|web化详情页：https://byokpg.smartapps.cn/path/to/smartapp/detail?city=bj&id=1024|H5详情页：https://m.site.com/detail.html?id=1024|
+
+
+app.json中配置url-mapping字段如下：
 ```json
-{
-    "pages": [
-        "pages/index/index",
-        "pages/pb/pb",
-        "pages/frs/frs"
-    ],
+
     "url-mapping": {
         "pages/index/index":"/",
         "pages/pb/pb":"/p/${tid}",
         "pages/frs/frs": "/?kw=${kw}"
     }
+
+```
+#### 参数不一致示例
+
+|小程序页面链接|对应H5页面链接|
+|--|--|
+|https://byokpg.smartapps.cn/pages/detail?id=1024|https://m.site.com/detail.html?page=2048 |
+app.json中url-mapping的对应规则为：
+```json
+"url-mapping": {
+    "pages/detail ":"/detail.html?page=${page}&id=${id}"
 }
 ```
-**说明**：
-* 百度贴吧智能小程序吧主页为 /pages/frs/frs?kw=baidu，
-* 映射到百度贴吧的H5站点域名：https://tieba.baidu.com/?kw=baidu 
-* 百度贴吧智能小程序帖子详情页为 /pages/pb/pb?tid=5413837761
-* 映射到百度贴吧的H5站点域名：https://tieba.baidu.com/p/5413837761
+
 
 #### 一对多映射关系示例
-**H5页面**：
-https://m.site.com/shop/123
-https://shop.m.site.com/mshop/123
+* 当多个H5的页面内容相同并且指向同一个小程序页面时：
+
+|小程序页面链接|对应H5页面链接|
+|--|--|
+|https://byokpg.smartapps.cn/pages/shop/shop?shopid=1024 | https://m.site.com/shop/1024<br>https://m.site.com/mshop/1024|
+app.json中url-mapping的对应规则为：
 ```json
-{
-    "pages": [
-        "pages/shop/shop"
-    ],
-    "url-mapping": {
-        "pages/shop/shop":["/shop/${shopid}","https://shop.m.site.com/mshop/${shopid}"]
-    }
+"url-mapping": {
+    "pages/shop/shop ":["/shop/${shopid}","/mshop/${shopid}"]
+}
+```
+* 当H5域名属于绑定域名的同一主域下的不同二级域名时，需要补全二级域名：
+
+|绑定 H5 域名|小程序页面链接|对应H5页面链接|
+|--|--|--|
+|https://m.site.com | https://byokpg.smartapps.cn/pages/shop/shop?shopid=1024 | https://shop.m.site.com/shop/1024 |
+app.json中url-mapping的对应规则为：
+```json
+"url-mapping": {
+    "pages/shop/shop ":"https://shop.m.site.com/shop/${shopid}"
 }
 ```
 **说明**：
-一对多的情况下，小程序路径对应一个数组。需要在智能小程序平台的H5域名配置主域名`https://m.site.com`， 在url-mapping配置规则中默认不写主域名;  `https://shop.m.site.com` 作为子域写在配置规则中。
+当多个不同的H5页面（如视频页、图集页）对应同一个小程序页面模板并且H5和小程序的path参数完全不同时，此时建议将小程序页面根据类型和参数进行拆分。
 
 ### 智能小程序平台配置url映射关系
-url映射规则不仅可以在app.json中进行配置，也可以在智能小程序平台中进行配置。
-进入智能小程序平台，单击进入小程序首页，单击“流量配置>自然搜索结果>URL Pattern”，对url映射规则进行线上配置。
+url映射规则不仅可以在app.json中进行配置，同样也可以在智能小程序平台中进行配置。进入智能小程序平台，单击进入小程序首页，单击“流量配置>自然搜索结果>URL Pattern”，对url映射规则进行线上配置。
+
 ![图片](../../img/flow/rank/rank4.png)
 
 ## 在开发者工具重新提包
@@ -141,25 +143,31 @@ url映射规则不仅可以在app.json中进行配置，也可以在智能小程
 
 ## 提交 sitemap
 
-进入智能小程序平台，在小程序首页，单击“投放管理>自然搜索管理”。在自然搜索tab里，可上传sitemap。
+进入智能小程序平台，在小程序首页，单击“投放管理>自然搜索管理”。在自然搜索 tab 里，可上传 sitemap。
 **sitemap**:
-内容为小程序页面的path+query列表。百度小程序中Sitemap协议支持txt文本格式。
+内容为小程序页面的 path+query 列表，其中 query 必须包含 url-mapping 中的 H5 链接的参数全集。
+**url-mapping规则**:
+```json
+ {
+    "path/to/smartapp/list":"/list/${city}.html",
+    "path/to/smartapp/detail":"/detail.html?id=${id}",
+    "pages/detail ":["/detail.html?page=${page}&id=${id}","/main/detail.html?detailId=${detailId}"]
+}
+```
 **sitemap 示例**:
 ```
-pages/articleDetail/articleDetail?articleId=339652
-pages/articleDetail/articleDetail?articleId=579379
-pages/articleDetail/articleDetail?articleId=600884
-pages/articleDetail/articleDetail?articleId=582423
-pages/articleDetail/articleDetail?articleId=574993
-pages/articleDetail/articleDetail?articleId=323853
-pages/articleDetail/articleDetail?articleId=482151
-pages/articleDetail/articleDetail?articleId=305078
-pages/articleDetail/articleDetail?articleId=305074
+path/to/smartapp/list?city=bj
+path/to/smartapp/list?city=sh
+path/to/smartapp/detail?id=1024
+pages/detail?page=2048&id=1024&deailId=4096
+
 ```
 目前支持存量上传和增量上传两种方式:
 * 其中存量上传并非实时生效，可提交的量较多，但是更新耗时较长；
 * 增量上传数据更新耗时低，但是日均可提交的配额较少。
-![图片](../../img/flow/rank/rank4.png)
+![图片](../../img/flow/rank/rank8.png)
+
+    ![图片](../../img/flow/rank/rank9.png)
 
 **说明**：
 当详情页面个数较多，而小程序的路径唯一时，请携带query依次提交sitemap。
