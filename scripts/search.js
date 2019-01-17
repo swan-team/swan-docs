@@ -37,6 +37,10 @@ hexo.extend.generator.register('search', function (locals) {
     [posts, pages].forEach(function (posts) {
         if (posts) {
             posts.each(function (post) {
+                if (post.draft) {
+                    return;
+                }
+
                 const tmpPost = {};
                 if (post.title) {
                     tmpPost.title = post.title;

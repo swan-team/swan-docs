@@ -18,7 +18,7 @@ fileSystemManager.appendFileSync(path, data, encoding)
 |值|描述|
 |-|-|
 |ascii| |
-|base64|对原始字符串使用 base64 编码再写入|
+|base64|对输入的字符串进行 base64 解码再写入|
 |hex|十六进制|
 |ucs2/ucs-2/utf16le/utf-16le|以小端序读取|
 |utf-8/utf8||
