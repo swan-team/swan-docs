@@ -4,7 +4,6 @@ layout: gamedoc
 topic: openApi
 categoryName: api
 ---
-(暂时注释掉，等该 API 实现后，将以下内容添加进 setting.md 的文档内)
 
 ### swan.getSetting()
 

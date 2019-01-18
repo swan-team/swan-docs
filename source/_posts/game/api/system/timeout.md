@@ -25,7 +25,6 @@ setTimeout(callback, delay)
 `number` 类型的 ID，用于 [`clearTimeout()`](#clearTimeout) 中取消。
 
 
-
 ### clearTimeout()
 
 取消定时器。

@@ -39,7 +39,7 @@ requestAnimationFrame(callback)
 
 **返回值：**
 
-`number` 类型的句柄，用于 [`cancelAnimationFrame`](#cancelAnimationFrame) 中取消。
+`number` 类型的返回值，用于 [`cancelAnimationFrame`](#cancelAnimationFrame) 中取消。
 
 
 ### cancelAnimationFrame()

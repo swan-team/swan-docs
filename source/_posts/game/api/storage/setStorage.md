@@ -52,8 +52,14 @@ const data = {
 swan.setStorage({
     key,
     data,
-    success: () => console.log('接口执行成功'),
-    fail: () => console.log('接口执行失败'),
-    complete: () => console.log('接口执行完成')
+    success: function () {
+        console.log('接口执行成功');
+    },
+    fail: function () {
+        console.log('接口执行失败');
+    },
+    complete: function () {
+        console.log('接口执行完成');
+    }
 });
 ```

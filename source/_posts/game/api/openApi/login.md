@@ -34,10 +34,10 @@ swan.login(opts)
 **示例 1：**
 ```js
 swan.login({
-    success: res => {
+    success: function (res) {
         console.log('登录成功', res.code);
     },
-    fail: () => {
+    fail: function () {
         console.log('登录失败');
     }
 });
@@ -50,15 +50,15 @@ swan.login({
 ```js
 function baiduLogin() {
     swan.login({
-        success: res => {
+        success: function () {
             // 登录成功后的业务逻辑
         },
-        fail: res => {
+        fail: function () {
             swan.showModal({
                 title: "登录失败",
                 content: "是否重新登录？",
                 cancelText: "退出游戏",
-                success: res => {
+                success: function (res) {
                     if (res.confirm) {
                         console.log("点击了确定");
                         baiduLogin();
@@ -96,10 +96,10 @@ swan.checkSession(opts)
 
 ```js
 swan.checkSession({
-    success: res => {
+    success: function () {
         console.log('登录态有效');
     },
-    fail: () => {
+    fail: function () {
         console.log('登录态无效');
     }
 });

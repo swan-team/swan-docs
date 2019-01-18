@@ -113,7 +113,7 @@ priority: 04-01
 #### 6.3 获取代码
 
 #### 6.3.1 banner广告
-代码位新建完成后，开发者可在代码位列表中找到该代码位，点击“获取代码”按钮。
+小程序和 H5 小游戏代码获取路径：代码位新建完成后，开发者可在代码位列表中找到该代码位，点击“获取代码”按钮。
 
 ![](/img/game/introduction/flow_open/flow_open22.png)
 ![](/img/game/introduction/flow_open/flow_open022.png)

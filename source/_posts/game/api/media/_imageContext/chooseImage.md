@@ -62,6 +62,8 @@ swan.chooseImage({
         console.log(res.tempFilePaths);
         console.log(res.tempFiles);
     },
-    fail: () => console.log('接口调用失败')
+    fail: function () {
+        console.log('接口调用失败');
+    }
 });
 ```

@@ -60,5 +60,5 @@ context.setTransform(1, 0.5, 0, 1, 10, 10 );
 context.fillStyle = 'yellow';
 context.fillRect(10, 10, 100, 100);
 ```
-如上示例，使用 `setTransform()` 方法在绘制第三个黄色矩形时重置了前一个变换矩阵，因此不会显示第二个橙色矩形。该方法不会覆盖当前变换矩阵，而是会多次叠加变换。需与 `transform()` 方法进行区分。
+如上示例，使用 `setTransform()` 方法在绘制第三个黄色矩形时重置了前一个变换矩阵，因此不会显示第二个橙色矩形。该方法不会覆盖当前变换矩阵，而是会多次叠加变换。需与 [`transform()`](#transform) 方法进行区分。
 

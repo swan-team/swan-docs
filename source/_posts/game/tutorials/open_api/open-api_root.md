@@ -5,8 +5,7 @@ layout: gamedoc
 categoryName: tutorials
 level: root
 topic: open_api
-priority: 04-00
+priority: 05-00
 ---
 
-开放接口的首页。
 

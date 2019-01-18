@@ -4,7 +4,7 @@ title: 小游戏的数据缓存
 layout: gamedoc
 categoryName: tutorials
 topic: storage
-priority: 05-01
+priority: 06-01
 ---
 
 每个百度小游戏都可以有自己的本地缓存，可以通过相关 API 对本地缓存进行读写和清理，详细的方法请参见[数据缓存 API](/game/api/storage/getStorage/)。

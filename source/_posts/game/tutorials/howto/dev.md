@@ -8,7 +8,7 @@ priority: 01-01
 
 ### 准备开发工具
 
-下载开发者工具（[Windows 64 版下载地址](https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-1.14.12-alpha.0-beta.exe) | [Mac 版下载地址]( https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-1.14.12-alpha.0-beta.dmg
+下载开发者工具（[Windows 64 版下载地址](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具 Setup-1.14.13-alpha.0-beta.exe) | [Mac 版下载地址](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具-1.14.13-alpha.0-beta.dmg
 )）进行代码的开发和上传。
 
 ### 小游戏项目创建
@@ -95,8 +95,8 @@ priority: 01-01
 
 **代码包大小限制：**
 
- 1. 整个小游戏所有分包大小不超过 10M。
- 2. 单个分包/主包大小不能超过 5M。
+ 1. 整个小游戏所有分包大小不超过 8M。
+ 2. 单个分包/主包大小不能超过 4M。
 
 **分包配置：**
 

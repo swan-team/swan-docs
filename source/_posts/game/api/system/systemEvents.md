@@ -53,7 +53,7 @@ swan.onAudioInterruptionEnd(callback)
 
 ### swan.offAudioInterruptionEnd()
 
-撤销播放音频中断恢复的回调函数，传入的 `callback` 即为调用 `swan.onAudioInterruptionEnd` 传入的 `callback` 对象。
+撤销播放音频中断恢复的回调函数，传入的 `callback` 即为调用 `swan.onAudioInterruptionEnd()` 传入的 `callback` 对象。
 
 ```js
 swan.offAudioInterruptionEnd(callback)
@@ -104,7 +104,7 @@ swan.getFileSystemManager().readFileSync();
 swan.offError(callback)
 ```
 
-撤销全局错误监听，传入的 `callback` 即为调用 [`swan.onError`](#swan-onError) 传入的 `callback` 对象。
+撤销全局错误监听，传入的 `callback` 即为调用 [`swan.onError()`](#swan-onError) 传入的 `callback` 对象。
 
 **参数值：**
 
