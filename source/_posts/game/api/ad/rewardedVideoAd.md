@@ -1,18 +1,8 @@
 ---
 title: RewardedVideoAd
 layout: gamedoc
-topic: ad
-categoryName: api
-priority: 10-04
+draft: true
 ---
-
-
-<!-- md game/api/ad/_rewardedVideoAd/show.md -->
-<!-- md game/api/ad/_rewardedVideoAd/load.md -->
-<!-- md game/api/ad/_rewardedVideoAd/onLoad.md -->
-<!-- md game/api/ad/_rewardedVideoAd/offLoad.md -->
-<!-- md game/api/ad/_rewardedVideoAd/onError.md -->
-<!-- md game/api/ad/_rewardedVideoAd/offError.md -->
-<!-- md game/api/ad/_rewardedVideoAd/onClose.md -->
-<!-- md game/api/ad/_rewardedVideoAd/offClose.md -->
-
+注意：
+为避免被反广告插件或浏览器误拦截，此目录文档已经迁移到 adTutorial，
+本文件仅用于重定向。
