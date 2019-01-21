@@ -148,16 +148,20 @@ swan.checkSession({
 ```
 
 
-### swanId
+### swan.getSwanId()
+
+> 基础库 swan-game.js 1.0.14 版本开始支持。
+
+获取 swanid。
 
 **机制说明：**
 
-由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用 [`swan.login()`](#swan-login) 强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个 swanId 的标识，可视作用户的设备标识。
+由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用 [`swan.login()`](#swan-login) 强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此小游戏还提供一个 swanid 的标识，可视作用户的设备标识。
 
-1. 用户在同一台设备上使用同一个开发者主体所开发的不同智能小程序，得到的是相同的 swanId。
-2. 用户在同一台设备上使用不同开发者主体所开发的不同智能小程序，得到的 swanId 是不同的。
+1. 用户在同一台设备上使用同一个开发者主体所开发的不同小游戏，得到的是相同的 swanid。
+2. 用户在同一台设备上使用不同开发者主体所开发的不同小游戏，得到的 swanid 是不同的。
 
-**swanId 校验性有以下两种方法：**
+**swanid 校验性有以下两种方法：**
 
 1. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
 2. 对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
@@ -188,6 +192,8 @@ swan.getSwanId({
 ```
 
 ### isLoginSync
+
+> 基础库 swan-game.js 1.0.14 版本开始支持。
 
 获取手百登录状态。
 

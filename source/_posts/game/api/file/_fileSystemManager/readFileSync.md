@@ -27,6 +27,7 @@ let data = fileSystemManager.readFileSync(filePath, encoding)
 **返回值：**
 
 |类型|描述|
+|-|-|
 |string/ArrayBuffer|如果 `encoding` 被指定，则返回 `string`；如果 `encoding` 没有被指定，则返回 `ArrayBuffer`。|
 
 

@@ -20,6 +20,7 @@ priority: 03-02
 <!-- md game/api/file/_fileSystemManager/readdir.md -->
 <!-- md game/api/file/_fileSystemManager/readdirSync.md -->
 <!-- md game/api/file/_fileSystemManager/readFile.md -->
+<!-- md game/api/file/_fileSystemManager/readFileSync.md -->
 <!-- md game/api/file/_fileSystemManager/rename.md -->
 <!-- md game/api/file/_fileSystemManager/renameSync.md -->
 <!-- md game/api/file/_fileSystemManager/saveFile.md -->
@@ -33,8 +34,6 @@ priority: 03-02
 <!-- md game/api/file/_fileSystemManager/unlink.md -->
 <!-- md game/api/file/_fileSystemManager/unlinkSync.md -->
 <!-- md game/api/file/_fileSystemManager/unzip.md -->
-<!-- md game/api/file/_fileSystemManager/readFile.md -->
-<!-- md game/api/file/_fileSystemManager/readFileSync.md -->
 <!-- md game/api/file/_fileSystemManager/writeFile.md -->
 <!-- md game/api/file/_fileSystemManager/writeFileSync.md -->
 
