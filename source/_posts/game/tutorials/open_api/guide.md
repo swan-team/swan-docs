@@ -186,19 +186,19 @@ openDataContext.onMessage(data => {
 
 开放数据域只能调用有限的 API，如下所示：
 
-<!-- **帧率**
+**帧率**
 
 + [requestAnimationFrame()](/game/api/render/framerate/#requestAnimationFrame)
 + [cancelAnimationFrame()](/game/api/render/framerate/#cancelAnimationFrame) -->
 
-<!-- **Timer**
+**Timer**
 
 + [setTimeout()](/game/api/system/timeout/#setTimeout)
 + [clearTimeout()](/game/api/system/timeout/#clearTimeout)
 + [setInterval()](/game/api/system/timeout/#setInterval)
 + [clearInterval()](/game/api/system/timeout/#clearInterval) -->
 
-<!-- **触摸事件**
+**触摸事件**
 
 + [swan.onTouchStart()](/game/api/system/touchEvents/#swan-onTouchStart)
 + [swan.onTouchMove()](/game/api/system/touchEvents/#swan-onTouchMove)

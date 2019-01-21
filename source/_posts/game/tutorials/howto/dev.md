@@ -8,8 +8,7 @@ priority: 01-01
 
 ### 准备开发工具
 
-下载开发者工具（[Windows 64 版下载地址](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具 Setup-1.14.13-alpha.0-beta.exe) | [Mac 版下载地址](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具-1.14.13-alpha.0-beta.dmg
-)）进行代码的开发和上传。
+下载开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
 ### 小游戏项目创建
 
@@ -187,7 +186,7 @@ context.fillText('99', 60, 150);
 我们可以先把 game.js 的代码清空，然后写入下放代码来创建一个画布并在画布中绘制数字`99`，保存代码并等待刷新。如果没有刷新，请点击`编译`按钮，此时我们便会看到绘制出来的 `99` 的字样。
 ![](/img/game/tutorials/question.png)
 
-首次调用 [swan.createCanvas()](/game/api/render/createCanvas/)，创建的是上屏 canvas，宽高与屏幕相同。之后如果再次调用此 API，创建的都是离屏 canvas，可以想象成是另一层`画纸`，既在离屛上的绘制不会显示在屏幕上，如果想要显示，我们需要把它渲染绘制到上屏的 canvas 上。
+首次调用 `swan.createCanvas`，创建的是上屏 canvas，宽高与屏幕相同。之后如果再次调用此 API，创建的都是离屏 canvas，可以想象成是另一层`画纸`，既在离屏上的绘制不会显示在屏幕上，如果想要显示，我们需要把它渲染绘制到上屏的 canvas 上。
 
 ```js
 // 创建离屏 canvas
@@ -308,19 +307,30 @@ swan.showToast({
 
 ![](/img/game/tutorials/preview.png)
 
+
+**注意：**
+
+目前真机运行的时候需要有绘制的逻辑才会取消 loading 的界面，如果您的 demo 中没有这个逻辑,会导致长时间的卡在 loading 界面，您可以在代码中加上如下代码解决这个问题：
+
+```js
+const canvas = swan.createCanvas();
+const ctx = canvas.getContext('2d');
+ctx.fillRect(0, 0, 0, 0);
+```
+
 #### 日志查看：
 
 - iOS 真机查看日志
 
 1. 手机和电脑连线。
-2. 打开系统控制台，英⽂文系统是 Console.app。
+2. 打开系统控制台，英⽂系统是 Console.app。
 3. 日志关键字 baiduboxapp JSLog。
 
 ![](/img/game/tutorials/iospreview.png)
 
 - Andriod 真机查看日志
 
-1. 安卓手机(需要开启USB调试)和电脑(需要安装 adb 工具)连线。
+1. 安卓手机(需要开启 USB 调试)和电脑(需要安装 adb 工具)连线。
 2. 打开 Mac 的终端或 Windows 的 cmd。
 3. 使用命令: `adb logcat V8Exception:I V8Console:V *:S` 即可实时打印日志。
 
