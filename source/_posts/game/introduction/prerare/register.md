@@ -17,7 +17,7 @@ priority: 01-02
 - 百度账号密码登录
 
 
- ![图片](/img/game/introduction/enter/newadd20.jpg)
+ ![图片](/img/game/introduction/prerare/newadd20.jpg)
 
 #### 主体资质审核
 
@@ -33,7 +33,7 @@ priority: 01-02
 |政府|国内、各级、各类政府机构、事业单位、具有行政职能的社会组织等|
 |其他组织|公共场馆、公益机构、学校、社团、民间组织等机构团体申请|
 
- ![图片](/img/game/introduction/enter/apply08.png)
+ ![图片](/img/game/introduction/prerare/apply08.png)
 
 #### 主体信息登记
 不同类型的开发者所需的登记信息：包括主体信息、超级管理员信息两部分。
@@ -51,24 +51,24 @@ priority: 01-02
 
 #### 运营者信息登记
 登记运营者身份证姓名、身份证号码并验证手机号。
- ![图片](/img/game/introduction/enter/newadd11.png)
+ ![图片](/img/game/introduction/prerare/newadd11.png)
 
 #### 提交并等待审核通知
- ![图片](/img/game/introduction/enter/newadd12.png)
+ ![图片](/img/game/introduction/prerare/newadd12.png)
 
 #### 真实性认证
 
 1.信息审核通过后，单击“尽快完成认证”，验证主体的真实性。
- ![图片](/img/game/introduction/enter/newadd13.png)
+ ![图片](/img/game/introduction/prerare/newadd13.png)
 2.单击“对公验证”，进入对公打款页面。
- ![图片](/img/game/introduction/enter/newadd14.png)
+ ![图片](/img/game/introduction/prerare/newadd14.png)
 3.对公打款：填写企业对公银行开户信息。
- ![图片](/img/game/introduction/enter/newadd15.png)
+ ![图片](/img/game/introduction/prerare/newadd15.png)
 回填金额。
- ![图片](/img/game/introduction/enter/newadd16.png)
+ ![图片](/img/game/introduction/prerare/newadd16.png)
 4.单击“小程序优惠通道”。
- ![图片](/img/game/introduction/enter/newadd17.png)
+ ![图片](/img/game/introduction/prerare/newadd17.png)
 5.单击开通优惠通道，请于60天内完成至少一个小程序的发布。
- ![图片](/img/game/introduction/enter/newadd18.png)
+ ![图片](/img/game/introduction/prerare/newadd18.png)
 6.认证完成。
- ![图片](/img/game/introduction/enter/newadd19.png)
+ ![图片](/img/game/introduction/prerare/newadd19.png)
