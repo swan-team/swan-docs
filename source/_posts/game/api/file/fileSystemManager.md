@@ -3,7 +3,12 @@ title: FileSystemManager
 layout: gamedoc
 topic: file
 categoryName: api
+priority: 03-02
 ---
+
+关于文件系统的更多信息，请参考：
++ [文件系统教程。](/game/tutorials/file_system/index/)
++ [如何获取 fileSystemManager 实例。](/game/api/file/getFileSystemManager/)
 
 <!-- md game/api/file/_fileSystemManager/access.md -->
 <!-- md game/api/file/_fileSystemManager/accessSync.md -->
