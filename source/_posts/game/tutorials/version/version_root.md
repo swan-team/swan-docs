@@ -1,6 +1,6 @@
 ---
 title: 基础库版本
-layout: doc
+layout: gamedoc
 level: root
 categoryName: tutorials
 topic: version

@@ -8,14 +8,15 @@ priority: 08-02
 
 小游戏激励视频广告组件在小游戏最上层渲染。视频的宽高比有 16：9 及 9：16 两种。
 
-开发者可以在百度的 mssp 平台申请广告位 id--adUnitId 和小游戏在 mssp 平台的应用 id—-appSid。 在小游戏开发中调 [swan.createRewardedVideoAd()](/game/api/ad/swan.createRewardedVideoAd/) 创建激励视频广告组件，该方法返回的激励视频广告组件对象是一个全局单例。使用方式如下：
+开发者可以在百度的 mssp 平台申请广告位 id--adUnitId 和小游戏在 mssp 平台的应用 id—-appSid。 在小游戏开发中调 [swan.createRewardedVideoAd()](/api/ad/swan.createRewardedVideoAd/) 创建激励视频广告组件，该方法返回的激励视频广告组件对象是一个全局单例。使用方式如下：
+
 
 ```js
-let videoAd1 = swan.createRewardedVideoAd({ adUnitId: '123', appSid: ‘app1’ })
-let videoAd2 = swan.createRewardedVideoAd({ adUnitId: '456', appSid: ‘app2’ })
+let videoAd1 = swan.createRewardedVideoAd({ adUnitId: '123', appSid: 'app1' })
+let videoAd2 = swan.createRewardedVideoAd({ adUnitId: '456', appSid: 'app2' })
 console.log(videoAd1 === videoAd2)
 // true
-console.log(videoAd1.adUnitId === ‘123’)
+console.log(videoAd1.adUnitId === '123')
 // true
 
 ```
@@ -35,7 +36,7 @@ show() 返回的是一个 promise 对象，会根据播放是否成功的结果�
 
 ```js
 videoAd1.show()
-.then(() => console.log(‘播放成功’))
+.then(() => console.log('播放成功'))
 .catch(err => console.log(err))
 
 ```
@@ -56,7 +57,7 @@ load 方法同样返回 promise 对象，成功返回一个 resolved Promise，�
 
 ```js
 videoAd1.load()
-.then(() => console.log(‘拉取广告成功’))
+.then(() => console.log('拉取广告成功'))
 .catch(err => console.log(err))
 
 ```
@@ -98,9 +99,9 @@ videoAd1.show()
 ```js
 Video.onClose(res => {
     if (res.isEnded) {
-        console.log(‘激励视频完整播放后关闭’)
+        console.log('激励视频完整播放后关闭')
     } else {
-        console.log(‘激励视频中途被关闭’)
+        console.log('激励视频中途被关闭')
     }
 })
 

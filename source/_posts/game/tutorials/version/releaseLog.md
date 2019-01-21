@@ -1,7 +1,7 @@
 
 ---
 title: 更新日志
-layout: doc
+layout: gamedoc
 categoryName: tutorials
 topic: version
 draft: true
