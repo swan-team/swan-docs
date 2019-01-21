@@ -1,7 +1,7 @@
 
-### 调试工具
+### 模拟器调试
 
-调试工具分为 5 大功能模块：Sources、Network、Console、Storage、Sensors。
+模拟器调试工具分为 5 大功能模块：Sources、Network、Console、Storage、Sensors。
 
 #### Sources panel
 Sources panel 用于显示当前项目的脚本代码文件，智能小程序框架会对脚本文件进行打包编译的工作，因此在 Sources panel 中开发者看到的文件是经过处理之后的脚本文件。

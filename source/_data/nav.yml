@@ -28,7 +28,7 @@
                 link: /introduction/register_prepare
                 text: 开发前准备
                 name: register_prepare
-           
+
               -
                 link: /introduction/demo
                 text: 体验智能小程序
@@ -44,28 +44,28 @@
       sidebar:
         -
             link: /introduction/access
-            text: 百度信息流  
+            text: 百度信息流
             sidebar:
               -
                 link: /introduction/access
-                text: 什么是百度信息流  
-                name: access             
+                text: 什么是百度信息流
+                name: access
               -
                 link: /introduction/feed
-                text: 信息流投放管理   
-                name: feed  
+                text: 信息流投放管理
+                name: feed
         -
             link: /introduction/intro
-            text: 搜索流量接入 
+            text: 搜索流量接入
             sidebar:
               -
                 link: /introduction/intro
                 text: 自然搜索管理
-                name: intro            
+                name: intro
               -
                 link: /introduction/rank
                 text: 接入自然搜索
-                name: rank                                              
+                name: rank
 # 2
 -
   link: /design/overview/introduction
@@ -73,7 +73,7 @@
   name: design
   nav:
     -
-      link: /design/principle/easytouse 
+      link: /design/principle/easytouse
       text: 设计原则
       name: principle
       sidebar:
@@ -82,7 +82,7 @@
             -
               link: /design/principle/easytouse
               text: 易用性
-              name: easytouse 
+              name: easytouse
             -
               link: /design/principle/hierarchical
               text: 层次感
@@ -152,7 +152,7 @@
             -
               link: /design/component/empty_state
               text: 空态
-              name: empty_state      
+              name: empty_state
     -
       link: /design/story/arzoo
       text: 设计故事
@@ -163,7 +163,7 @@
             -
               link: /design/story/arzoo
               text: 长隆AR动物园
-              name: arzoo                     
+              name: arzoo
     -
       link: /design/resource/uikit
       text: 资源下载
@@ -178,13 +178,13 @@
             -
               link: /design/resource/lottie
               text: Lottie动效库
-              name: lottie                 
+              name: lottie
             -
               link: /design/resource/checklist
               text: 设计走查表
-              name: checklist    
-                      
-#3          
+              name: checklist
+
+#3
 -
   link: /develop/tutorial/codedir
   text: 开发
@@ -286,12 +286,12 @@
             -
               link: /develop/tutorial/compatibility
               text: 兼容性说明
-              name: compatibility             
+              name: compatibility
             -
               link: /develop/tutorial/swanchangelog
               text: 历史更新日志
               name: swanchangelog
-            
+
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -346,7 +346,7 @@
                   -
                     link: /develop/framework/app_service_page/#Page-prototype-setData
                     text: Page.prototype.setData
-                    name: app_service_page_Page-prototype-setData                                                                               
+                    name: app_service_page_Page-prototype-setData
               -
                 link: /develop/framework/app_service_getcurrentpages
                 text: 页面路由
@@ -500,7 +500,7 @@
               -
                 link: /develop/component/native
                 text: 原生组件说明
-                name: native              
+                name: native
               -
                 link: /develop/component/view
                 text: 视图容器
@@ -529,7 +529,7 @@
                   -
                     link: /develop/component/view/#cover-image
                     text: cover-image
-                    name: view_cover-image                 
+                    name: view_cover-image
         -
             sidebar:
               -
@@ -571,7 +571,7 @@
                   -
                     link: /develop/component/formlist/#checkbox
                     text: checkbox
-                    name: formlist_checkbox    
+                    name: formlist_checkbox
                   -
                     link: /develop/component/formlist/#form
                     text: form
@@ -588,12 +588,12 @@
                     link: /develop/component/formlist/#picker
                     text: picker
                     name: formlist_picker
-                  
+
                   -
                     link: /develop/component/formlist/#radio
                     text: radio
                     name: formlist_radio
-                    
+
                   -
                     link: /develop/component/formlist/#slider
                     text: slider
@@ -660,7 +660,7 @@
                   #   link: /develop/component/map/#markers
                   #   text: markers
                   #   name: map_markers
-                                                 
+
                   # -
                   #   link: /develop/component/map/#polyline
                   #   text: polyline
@@ -673,8 +673,8 @@
                   #   link: /develop/component/map/#controls
                   #   text: controls
                   #   name: map_controls
-                 
-        -   
+
+        -
             sidebar:
                 -
                   link: /develop/component/canvas
@@ -684,7 +684,7 @@
                     -
                       link: /develop/component/canvas/#canvas
                       text: canvas
-                      name: canvas_canvas               
+                      name: canvas_canvas
         -
             sidebar:
               -
@@ -713,7 +713,7 @@
             -
               link: /develop/api/net_rule
               text: 使用注意事项
-              name: net_rule             
+              name: net_rule
             -
               link: /develop/api/net_request
               text: 请求
@@ -1762,11 +1762,11 @@
                 link: /develop/api/open_userinfo
                 text: 用户信息
                 name: open_userinfo
-                sidebar:                 
+                sidebar:
                   -
                     link: /develop/api/open_userinfo/#swanid机制说明
                     text: swanid机制说明
-                    name: open_userinfo_swanid机制说明               
+                    name: open_userinfo_swanid机制说明
                   -
                     link: /develop/api/open_userinfo/#getSwanId
                     text: getSwanId
@@ -1778,7 +1778,7 @@
                   -
                     link: /develop/api/open_userinfo/#verify
                     text: verify
-                    name: open_userinfo_verify                 
+                    name: open_userinfo_verify
 
               -
                 link: /develop/api/open_setting
@@ -1862,46 +1862,46 @@
                   -
                     link: /develop/api/open_infomation/#getTemplateLibraryById
                     text: getTemplateLibraryById
-                    name: open_infomation_getTemplateLibraryById  
+                    name: open_infomation_getTemplateLibraryById
                   -
                     link: /develop/api/open_infomation/#addTemplate
                     text: addTemplate
-                    name: open_infomation_addTemplate                          
+                    name: open_infomation_addTemplate
                   -
                     link: /develop/api/open_infomation/#getTemplateList
                     text: getTemplateList
-                    name: open_infomation_getTemplateList              
+                    name: open_infomation_getTemplateList
                   -
                     link: /develop/api/open_infomation/#deleteTemplate
                     text: deleteTemplate
-                    name: open_infomation_deleteTemplate   
+                    name: open_infomation_deleteTemplate
                   -
                     link: /develop/api/open_infomation/#sendTemplateMessage
                     text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage  
+                    name: open_infomation_sendTemplateMessage
               -
                 link: /develop/api/seo
                 text: 配置seo
                 name: seo
                 sidebar:
-                  - 
+                  -
                     link: /develop/api/seo/#setMetaDescription
                     text: setMetaDescription
-                    name: seo_setMetaDescription   
-                  - 
+                    name: seo_setMetaDescription
+                  -
                     link: /develop/api/seo/#setMetaKeywords
                     text: setMetaKeywords
                     name: seo_setMetaKeywords
-                  - 
+                  -
                     link: /develop/api/seo/#setDocumentTitle
                     text: setDocumentTitle
-                    name: seo_setDocumentTitle                                      
+                    name: seo_setDocumentTitle
               -
                 link: /develop/api/open_preloadsubpackage
                 text: 分包预下载
                 name: open_preloadsubpackage
                 sidebar:
-                  - 
+                  -
                     link: /develop/api/open_preloadsubpackage/#loadSubPackage
                     text: loadSubPackage
                     name: open_preloadsubpackage_preloadSubPackage
@@ -1910,22 +1910,22 @@
                 text: 信息流资源
                 name: open_feed
                 sidebar:
-                  - 
+                  -
                     link: /develop/api/open_feed/#submitresource
                     text: submitresource
-                    name: open_feed_submitresource        
-                  - 
+                    name: open_feed_submitresource
+                  -
                     link: /develop/api/open_feed/#deleteresource
                     text: deleteresource
-                    name: open_feed_deleteresource  
-                  - 
+                    name: open_feed_deleteresource
+                  -
                     link: /develop/api/open_feed/#submitsitemap
                     text: submitsitemap
-                    name: open_feed_submitsitemap                     
-                  - 
+                    name: open_feed_submitsitemap
+                  -
                     link: /develop/api/open_feed/#deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap                      
+                    name: open_feed_deletesitemap
 
         -
             sidebar:
@@ -1937,7 +1937,7 @@
                   -
                     link: /develop/api/get/#getUpdateManager
                     text: getUpdateManager
-                    name: get_getUpdateManager 
+                    name: get_getUpdateManager
         -
             sidebar:
               -
@@ -1948,7 +1948,7 @@
                   -
                     link: /develop/api/debug/#setEnableDebug
                     text: setEnableDebug
-                    name: debug_setEnableDebug    
+                    name: debug_setEnableDebug
         -
             sidebar:
               -
@@ -1959,7 +1959,7 @@
                   -
                     link: /develop/api/data/#reportAnalytics
                     text: reportAnalytics
-                    name: data_reportAnalytics        
+                    name: data_reportAnalytics
         -
             sidebar:
               -
@@ -1970,7 +1970,7 @@
                   -
                     link: /develop/api/timer/#clearInterval
                     text: clearInterval
-                    name: timer_clearInterval     
+                    name: timer_clearInterval
                   -
                     link: /develop/api/timer/#clearTimeout
                     text: clearTimeout
@@ -1982,7 +1982,7 @@
                   -
                     link: /develop/api/timer/#etTimeout
                     text: setTimeout
-                    name: timer_setTimeout                                                                                            
+                    name: timer_setTimeout
     -
       link: /develop/devtools/show_sur
       text: 工具
@@ -1993,7 +1993,7 @@
               -
                 link: /develop/devtools/move
                 text: 搬家工具
-                name: move        
+                name: move
         -
             text: 界面
             name: show
@@ -2034,7 +2034,7 @@
                   -
                     link: /develop/devtools/smartappdebug_function/#调试器
                     text: 调试器
-                    name: smartappdebug_function_调试器                  
+                    name: smartappdebug_function_调试器
               -
                 link: /develop/devtools/smartappdebug_tool
                 text: 调试工具
@@ -2079,11 +2079,11 @@
               -
                 link: /develop/debug/remotedebugging
                 text: 远程调试
-                name: remotedebugging                   
+                name: remotedebugging
         # -
         #     link: /develop/devtools/code
         #     text: 代码片段
-        #     name: code 
+        #     name: code
         #     sidebar:
         #       -
         #         link: /develop/devtools/code
@@ -2115,7 +2115,7 @@
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
-                name: uplog_compile             
+                name: uplog_compile
 
     -
       link: /develop/server/oauth_intr
@@ -2142,7 +2142,7 @@
       sidebar:
         -
           link: /develop/third/pro
-          text:  
+          text:
           name: pro
           sidebar:
             -
@@ -2151,7 +2151,7 @@
               name: pro
         -
           link: /develop/third/module
-          text:  
+          text:
           name: module
           sidebar:
             -
@@ -2161,7 +2161,7 @@
 
         -
           link: /develop/third/apppage
-          text:  
+          text:
           name: apppage
           sidebar:
             -
@@ -2170,25 +2170,25 @@
               name: apppage
         -
           link: /develop/third/info
-          text:  
+          text:
           name: info
           sidebar:
             -
               link: /develop/third/info
               text: 基础信息设置
-              name: info  
+              name: info
         -
           link: /develop/third/upload
-          text:  
+          text:
           name: upload
           sidebar:
             -
               link: /develop/third/upload
               text: 图片上传
-              name: upload               
+              name: upload
         -
           link: /develop/third/login
-          text:  
+          text:
           name: login
           sidebar:
             -
@@ -2197,22 +2197,22 @@
               name: login
         -
           link: /develop/third/address
-          text:  
+          text:
           name: address
           sidebar:
             -
               link: /develop/third/address
               text: 修改服务器地址
-              name: address              
+              name: address
         -
           link: /develop/third/error
-          text:  
+          text:
           name: error
           sidebar:
             -
               link: /develop/third/error
               text: 通用错误码对照表
-              name: error            
+              name: error
     # -
     #   link: /develop/flow
     #   text: 搜索流量接入
@@ -2240,7 +2240,7 @@
     #   link: /develop/web
     #   text: Web 化配置
     #   name: web
-    #   sidebar:   
+    #   sidebar:
     #     -
     #       link: /develop/web/start
     #       text:
@@ -2258,7 +2258,7 @@
     #         -
     #           link: /develop/web/detail
     #           text: 代理域名配置详解
-    #           name: detail                
+    #           name: detail
 # 4
 -
   link: /data/concept
@@ -2293,23 +2293,23 @@
               -
                 link: /data/concept/#来源分析
                 text: 来源分析
-                name: concept_来源分析  
+                name: concept_来源分析
               -
                 link: /data/concept/#留存分析
                 text: 留存分析
-                name: concept_留存分析  
+                name: concept_留存分析
               -
                 link: /data/concept/#转化分析
                 text: 转化分析
-                name: concept_转化分析              
+                name: concept_转化分析
           -
             link: /data/custom
             text: 自定义事件分析
-            name: custom                                                                           
+            name: custom
           -
             link: /data/guideline
             text: 指标说明
-            name: guideline 
+            name: guideline
             sidebar:
               -
                 link: /data/guideline/#用户类指标
@@ -2334,16 +2334,16 @@
               -
                 link: /data/guideline/#数据分析维度
                 text: 数据分析维度
-                name: guideline_数据分析维度   
+                name: guideline_数据分析维度
 
-                                                                                           
+
     -
       link: /data/custom
       text: 统计方法
       name: book
       sidebar:
         -
-          sidebar:                   
+          sidebar:
           -
             link: /data/performance-point
             text: 手工埋点统计
@@ -2351,7 +2351,7 @@
           -
             link: /data/scene
             text: 场景值
-            name: scene          
+            name: scene
 # 5
 -
   link: /operations/specification
@@ -2389,7 +2389,7 @@
           # -
           #   link: /operations/standard
           #   text: 审核标准
-          #   name: standard 
+          #   name: standard
 # #6
 # -
 #   link: ../forum

@@ -3,7 +3,7 @@
     var headerNavs = site.data.nav; // 1级(头部)导航
 
     // 当前headerNavs索引
-    var headerNavIndex; 
+    var headerNavIndex;
     for(var i = 0; i < headerNavs.length; i++) {
         if (headerNavs[i].name == page.header) {
             nav = headerNavs[i].nav;
@@ -11,7 +11,7 @@
         }
     }
 
-    
+
     var nav; // 2级（sidebar）导航
     var currentPageList = [];
     var h1; // 正文h1
@@ -54,8 +54,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
     <meta name="google" content="notranslate" />
     <title>
-        <% if (h1) { %> 
-            <%= h1 %> - 
+        <% if (h1) { %>
+            <%= h1 %> -
         <% }%>
         <%= headerNavIndex != null ? headerNavs[headerNavIndex].text : '' %>
     </title>
@@ -79,7 +79,7 @@
             'headerName': '<%= headerNavIndex != null ? headerNavs[headerNavIndex].name : '' %>',
             'localData': '<%- JSON.stringify(localData) %>',
             'sidebarIgnore': '<%= config.sidebarIgnore.list %>'
-        }; 
+        };
     </script>
     <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
     <%- js('js/jquery.min') %>

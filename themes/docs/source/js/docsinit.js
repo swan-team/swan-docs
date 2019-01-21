@@ -342,7 +342,7 @@
                     } else {
                         $('header').removeClass('m-doc-header-show-crumbs');
                     }
-                    
+
                     before = after;
                 }, 350));
             }
@@ -447,7 +447,7 @@
                 - 50;
             var tocWrap = $('.toc-wrap');
             tocWrap.css('maxHeight', (maxHeight + 'px'));
-            
+
             this.tocHeight = $('.toc-wrap').height();
 
             tocWrap.find('.toc-level-1').children('.toc-link').remove();
@@ -555,7 +555,7 @@
                             }, 'swing');
                         }
                     });
-                }, delayTime); 
+                }, delayTime);
             });
         },
         /**
