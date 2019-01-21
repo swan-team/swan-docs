@@ -148,3 +148,63 @@ swan.checkSession({
 ```
 
 
+### swanId
+
+**机制说明：**
+
+由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用 [`swan.login()`](#swan-login) 强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个 swanId 的标识，可视作用户的设备标识。
+
+1. 用户在同一台设备上使用同一个开发者主体所开发的不同智能小程序，得到的是相同的 swanId。
+2. 用户在同一台设备上使用不同开发者主体所开发的不同智能小程序，得到的 swanId 是不同的。
+
+**swanId 校验性有以下两种方法：**
+
+1. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
+2. 对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
+
+**参数值：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|success |Function  |  否 |  接口调用成功的回调函数|
+|fail  |  Function |   否 |  接口调用失败的回调函数|
+|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**success返回参数说明：**
+
+|参数  |类型|说明 |
+|---- | ---- |---- |
+|errno  | String  |errno|
+|data  | Object  |{swanid}|
+
+**示例：**
+
+```js
+swan.getSwanId({
+    success: function (res) {
+        console.log(res.data.swanid);
+    }
+});
+```
+
+### isLoginSync
+
+获取手百登录状态。
+
+**返回参数说明：**
+
+|参数 | 类型 | 说明|
+|---- | ---- | ---- |
+|isLogin  |  boolean | 手百登录状态 true: 已登录，false: 未登录  |
+
+**示例：**
+
+```js
+try {
+    var result = swan.isLoginSync();
+    console.log('isLoginSync', result.isLogin);
+} catch (e) {
+    console.log('error', e);
+}
+```
+
