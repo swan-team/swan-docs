@@ -63,7 +63,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/7a3974d3a4cefd5f89d685adce8935b61540393782" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -107,7 +107,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/501ed4b3f30ec74cc177425610b4f4ba1540393923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -185,7 +185,8 @@ Page({
 |report-submit|Boolean|是否返回 formId ，默认为false。|1.12|
 
 
-<notice>示例： </notice>
+示例：
+<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -259,7 +260,7 @@ Page({
 | done |右下角按钮为 “完成” |
 
 **示例**：
-<a href="swanide://fragment/7e9c7e817e7cb250e6f2b40e2089efd61540395280" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 ```xml
 <!-- input.swan -->
@@ -378,7 +379,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |day |选择器粒度为天|
 
 **示例**：
-<a href="swanide://fragment/1bc0eab03fe5a17d1a04e3239ba3a3d31540397450" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -618,7 +619,7 @@ Page({
 |bindchanging |EventHandle |-  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例：**
-<a href="swanide://fragment/39a1af938017aaaec03d63de424a35b51540396100" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 ```xml

@@ -33,7 +33,7 @@ sidebar: net_uploadfile
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
 **示例 1**
-<a href="swanide://fragment/28aecebd6992988c7ae4ed57c4c2f83a1540396205" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19dba5084395349af05e52dfbb0e65151548069330341" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.chooseImage({
     success: function (res) {
