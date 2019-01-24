@@ -36,8 +36,8 @@ swan.requestPolymerPayment(opts)
 |opts.orderInfo.totalAmount|是|订单金额，单位为人民币分|
 |opts.orderInfo.tpOrderId|是|商户平台自己记录的订单 ID，当支付状态发生变化时，会通过此订单 ID 通知商户|
 |opts.orderInfo.dealTitle|是|订单的名称|
-|opts.orderInfo.signFildsRange|是|固定值 1|
-|opts.orderInfo.rsaSign|是|对 appKey+dealId+tpOrderId+totalamount 进行 RSA 加密后的签名，防止订单被伪造。签名过程见[百度电商开发平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md) |
+|opts.orderInfo.signFieldsRange|是|固定值 1|
+|opts.orderInfo.rsaSign|是|对对 appKey，dealId，tpOrderId，totalamount RSA 加密后的签名，防止订单被伪造。签名过程见[百度电商开发平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md) |
 |opts.orderInfo.bizInfo|否|订单详细信息，需要是一个可解析为 JSON Object 的字符串。字段内容见：[百度电商开发平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
 
 `opts.bannedChannels` 的合法值：
@@ -73,31 +73,46 @@ swan.requestPolymerPayment(opts)
 **示例：**
 
 ```js
-swan.requestPolymerPayment({
-    // 订单信息具体值可根据上述说明文档查询
-    orderInfo: {
-        "dealId": "123",
-        "appKey": "AbcDeF",
-        "totalAmount": "1",
-        "tpOrderId": "456",
-        "dealTitle": "支付订单",
-        "rsaSign": "abcd",
-        "bizInfo": "{}"
+swan.request({
+    url: '', // 开发者服务器接口地址
+    method: 'GET',
+    dataType: 'json',
+    data: {},
+    header: {
+        'content-type': 'application/json' // 默认值
     },
-    bannedChannels: ['Alipay', 'WeChat'],
-    success: function (res) {
-        swan.showToast({
-            title: '支付成功',
-            icon: 'success'
+    success: res => {
+        swan.requestPolymerPayment({
+            orderInfo: {
+                dealId: res.dealId, // "470193086"
+                appKey: res.appKey, // "MMMabc"
+                totalAmount: res.totalAmount, // "800"
+                tpOrderId: res.tpOrderId, // "3028903626"
+                dealTitle: res.dealTitle, // "支付8元测试"
+                rsaSign: res.rsaSign, // "A+MJYVd5SAgZ4ouhxNavvBxY5XVCNrWSi6knlGVY/dIn0z3zd9b37/BDFa6WT....."
+                signFieldsRange: 1,
+                bizInfo: res.bizInfo // {tpData: {"appkey": "MMMabc", "dealId": "470193086", "dealTitle": "支付8元测试", "payResultUrl": "", "returnData": "111", "rsaSign": "A+MJYVd5SAgZ4ouhxNavvBxY5XVCNrWSi6knlGVY/dIn0z3zd9b37/BDFa6WT.....", "totalAmount": "800", "tpOrderId": "3028903626"}}
+            },
+            bannedChannels: ['ApplePay'],
+            success: res => {
+                swan.showToast({
+                    title: '支付成功',
+                    icon: 'success'
+                });
+            },
+            fail: res => {
+                swan.showToast({
+                    title: JSON.stringify(res)
+                });
+            }
         });
     },
     fail: function (err) {
-        swan.showToast({
-            title: JSON.stringify(err)
-        });
-        console.log('pay fail', err);
+        console.log('错误码：', err.errCode);
+        console.log('错误信息：', err.errMsg);
     }
 });
+
 ```
 
 **注意：**
