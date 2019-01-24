@@ -51,10 +51,6 @@ nav.yml 例子如下
                     name: header
 ```
 
-### 文档编写规范
-markdown语法：  
-http://localhost:4000/docs/operations/example/  
-
 ## 定制模版
 在.md文件中可以引入定制模版按参数替换即可
 ### 下载模版
@@ -116,3 +112,7 @@ http://localhost:4000/docs/operations/example/
 - {待选样式} 正确：m-doc-custom-examples-correct，错误：m-doc-custom-examples-error，警告：m-doc-custom-examples-warning
 - {高亮文案} 高亮的文案
 - {解释说明} 对示例的解释说明
+
+### 控制在不同设备中显示
+
+只在pc端显示添加 `class="ispc"` ，只在百度 App端显示添加 `class="isbox"` ，只在除百度 App外移动端显示添加 `class="ismobile"` ，参考 [设计-重创新](http://localhost:4000/docs/docs/design/principle/innovation/) 实现。  

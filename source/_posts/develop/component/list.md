@@ -45,5 +45,5 @@ sidebar: list
 |<a href="https://smartprogram.baidu.com/docs/develop/component/map/#controls">controls</a>|在地图上显示控件，控件不随着地图移动|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/map/#position">position</a>|位置|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/canvas/#canvas">canvas</a>|画布|
-|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#open-data">open-data</a>|用于展示手机百度 APP 开放的数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#open-data">open-data</a>|用于展示百度 App 开放的数据。|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/open/#web-view">web-view</a>|web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。|

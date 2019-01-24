@@ -16,12 +16,20 @@
         <div class="m-mobile-doc-header-list-mask"></div>
     </div>
     <div class="m-doc-logo-wrapper">
-        <a href="/" class="m-doc-logo">
-            <img src="<%- url_for('img/logo.png') %>"/>
-        </a>
+        <div href="/" class="m-doc-logo">
+            <a href="https://smartprogram.baidu.com/developer/index.html">
+                <img src="<%- url_for('img/logo_new.png') %>" id="developer-index"/>
+            </a>
+            <span class="m-doc-logo-line"></span>
+            <a href="">
+                <img src="<%- url_for('img/logo_docs.png') %>" class="docs-logo" id="docs-index"/>
+            </a>
+        </div>
+    </div>
+    <div class="m-doc-forum">
+        <a href="https://smartprogram.baidu.com/forum/" target="_blank">社区</a>
     </div>
 
     <%- partial('./header-nav', {}) -%>
-
     <%- partial('./search') -%>
 </header>

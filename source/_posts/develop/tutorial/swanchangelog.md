@@ -4,10 +4,21 @@ header: develop
 nav: tutorial
 sidebar: swanchangelog
 ---
+## 3.10版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.10.11|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
+|3.10.4|2018.12.29|**New**<p>新增 API: setBackgroundColor/setBackgroundTextStyle/setInnerAudioOption 。<p>**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
+
 ## 3.0版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.0.23|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
+|3.0.20|2018.12.29|**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
+|3.0.17|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
+|3.0.16|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |3.0.12|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
 |3.0.2|2018.12.11|**New**<p>**·**端菜单栏新增重启小程序功能，调用onForceReLaunch生命周期；<p>**·**animation-view 组件：添加bindended回调；端上多实例支持；touch事件新增；<p>**·**canvasContext.draw 支持 callback。<p>**BugFix**<p>**·** 修复 ontabitemtap 首次点击不触发的问题；<p>**·** 修复 textarea 组件 max-height 属性不生效的问题；<p>**·** 修复 textarea 组件 粘贴/剪切后，组件高度异常的问题。|
@@ -15,6 +26,10 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.15.28|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
+|2.15.26|2018.12.29|**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
+|2.15.23|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
+|2.15.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.15.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.15.12|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.15.9|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
@@ -25,6 +40,10 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.10.28|2019.1.04|**BugFix**<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
+|2.10.26|2018.12.29|**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
+|2.10.24|2018.12.26|**Breaking Change** <p>禁用 Function 和 eval。<p>**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
+|2.10.22|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 cover-image 组件不设置宽高时，组件无法展示的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.10.19|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |2.10.17|2018.12.11|**BugFix**<p>修复 ontabitemtap 首次点击不触发的问题。|
 |2.10.16|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复canvas不能嵌套在其它NA组件中的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
@@ -54,6 +73,10 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|2.0.46|2019.1.04|**BugFix** <p>修复 轮播图上下滑动后 autoplay 不生效的问题。|
+|2.0.41|2018.12.29|**BugFix** <p>**·** 修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件。|
+|2.0.39|2018.12.26|**BugFix**<p>**·**修复 text 嵌套组件渲染的问题；<p>**·**修复 ios 页面下拉时纵向scroll-view 偶现卡住的问题。|
+|2.0.38|2018.12.21|**BugFix**<p>**·** movable-view 组件的 x、y 属性支持双向绑定，修复键盘弹起时，tap 事件容易误触发的问题；<p>**·** 修复 scroll-view 组件bindtouchend无法触发；<p>**·** 修复 text 组件渲染频繁。|
 |2.0.35|2018.12.07|**BugFix**<p>**·**修复 iOS 端在键盘弹起时，点击组件后 bindtap 不执行的问题；<p>**·**修复image组件 mode为widthFix动态修改宽度其高度不正确，修改mode时高度不正确的问题；<p>**·**修复audio不触发binderror的问题；<p>**·**修复 form 组件的 bindsubmit 方法中 dataset 参数值不正确的问题。|
 |2.0.33|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.0.32|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p> 修复slider backgroundColor设置transparent无效的问题。|

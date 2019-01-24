@@ -70,7 +70,7 @@ recorderManager.onPause(function() {
     // 暂停录音事件
     console.log('recorder pause')
 });
-recorderManager.onStop(function() {
+recorderManager.onStop(function(res) {
     // 停止录音事件
     console.log('recorder stop', res)
     const { tempFilePath } = res

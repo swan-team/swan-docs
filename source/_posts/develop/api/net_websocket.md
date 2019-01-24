@@ -151,10 +151,11 @@ closeSocket
 
 ```js
 swan.connectSocket({
-    url: 'wss://example.baidu.com',
-    success: function (res) {
-        swan.closeSocket();
-    }
+    url: 'wss://example.baidu.com'
+});
+
+swan.onSocketOpen(function () {
+    swan.closeSocket();
 });
 ```
 

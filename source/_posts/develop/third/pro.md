@@ -198,7 +198,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 ### 7、获取（刷新）授权小程序的接口调用凭据
 
-该API用于在授权方令牌（access_token）失效时，可用刷新令牌（refresh_token）获取新的令牌。请注意，此处access_token有效期一个月，开发者需要自行进行token的缓存，避免token的获取次数达到每日的限定额度(额度限定尚未做)。当换取refresh_token后建议保存。
+该API用于在授权方令牌（access_token）失效时，可用刷新令牌（refresh_token）获取新的令牌。请注意，此处TP的access_token有效期一个月，开发者需要自行进行token的缓存，避免token的获取次数达到每日的限定额度(额度限定尚未做)。当换取refresh_token后建议保存。
 
 接口调用请求说明
 ```
@@ -217,7 +217,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 |---|---|---|
 |access_token|	string|	授权小程序的接口调用凭据|
 |refresh_token|	string	|接口调用凭据刷新令牌|
-|expires_in	|int|	Access Token的有效期，单位：秒，默认1小时|
+|expires_in	|int|	小程序的Access Token的有效期，单位：秒，默认1小时|
 返回值示例
 ```js
 {

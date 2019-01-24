@@ -17,14 +17,16 @@
                       <% } %>
                     </div>
                   </div>
-                  <div class="m-doc-bottomPage-wrapper clearfix">
-                    <% if (bottomPage.left) { %>
-                      <a href="/docs<%= bottomPage.left.link %>/" class="m-doc-bottomPage-left"><%= bottomPage.left.text %></a>
-                    <% } %>
-                    <% if (bottomPage.right) { %>
-                      <a href="/docs<%= bottomPage.right.link %>/" class="m-doc-bottomPage-right"><%= bottomPage.right.text %></a>
-                    <% } %>
-                  </div>
+                  <% if (bottomPage.left || bottomPage.right) { %>
+                    <div class="m-doc-bottomPage-wrapper clearfix">
+                      <% if (bottomPage.left) { %>
+                        <a href="/docs<%= bottomPage.left.link %>/" class="m-doc-bottomPage-left"><%= bottomPage.left.text %></a>
+                      <% } %>
+                      <% if (bottomPage.right) { %>
+                        <a href="/docs<%= bottomPage.right.link %>/" class="m-doc-bottomPage-right"><%= bottomPage.right.text %></a>
+                      <% } %>
+                    </div>
+                  <% } %>
             </article>
             <aside class="toc-wrap">
             <div class="toc-list-wrap">
@@ -34,7 +36,17 @@
         </div>
         <article id="article-search-result" class="article-search-result"></article>
     </div>
-    
+    <% if (license && license.link && license.name) { %>
+      <div class="m-doc-license">
+        <div class="m-doc-license-content">
+          <p>版权声明：
+          <a href="<%= license.link %>" target="_blank" rel="license noopener noreferrer">
+            <%= license.name %>
+          </a>
+        </p>
+        </div>
+      </div>
+    <% } %>
     <div class="m-doc-menu-wrapper">
         <a href="javascript:void(0)" class="m-doc-menu-toc"></a>
         <a href="javascript:void(0)" class="m-doc-menu-top"></a>

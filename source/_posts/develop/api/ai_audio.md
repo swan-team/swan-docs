@@ -7,7 +7,7 @@ sidebar: ai_audio
 
 ## textToAudio
 
-**解释：**将文本转换为可以播放的mp3文件。
+**解释：**将文本转换为可以播放的 mp3 文件。
 
 **方法参数：**Object
 
@@ -41,3 +41,6 @@ swan.ai.textToAudio({
     }
 });
 ```
+Bug & Tip
+
+* bug: 重置 App Secret 会导致此功能无法使用。

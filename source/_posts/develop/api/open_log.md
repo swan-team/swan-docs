@@ -54,7 +54,7 @@ sidebar: open_log
 |code|String|用户登录凭证（有效期五分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
 **示例：**
-<a href="swanide://fragment/e8d56d3878f5353a7a5fb7ef6a97e7c51540395404" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f24161cd6644de1ef912cf50f5a9d86f1544431618" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.login({
     success: function (res) {
@@ -98,7 +98,7 @@ https://openapi.baidu.com/nalogin/getSessionKeyByCode
 
 | 字段名 | 说明 |
 | -| - |
-| error | 错误码；关于错误码的详细信息请参考"错误码列表"一节。|
+| error | 错误码；关于错误码的详细信息请参考<a href=" http://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
 **请求示例：**
@@ -174,13 +174,13 @@ swan.checkSession({
 
 ## isLoginSync
 
-**解释：**获取手百登录状态。
+**解释：**获取百度 App登录状态。
 
 **返回参数说明：**
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 手百登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
 
 **示例：**
 

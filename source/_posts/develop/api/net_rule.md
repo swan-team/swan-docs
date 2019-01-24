@@ -27,10 +27,10 @@ sidebar: net_rule
 
 ### referer header
  网络请求的 referer header 不可设置。
-    * 其格式固定为 https://servicewechat.com/{appid}/{version}/page-frame.html，
-    * 其中 {appid} 为小程序的 appid，
-    * {version} 为小程序的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本，正式版本号发布前在开发者工具中设置。
-    ![图片](../../../img/api/canvas/rule.png)
+* 其格式固定为 https://smartapp.baidu.com/{appKey}/0/page-frame.html。
+* 其中 {appkey} 为小程序的 appkey。
+* {version} 为小程序的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本，正式版本号发布前在开发者工具中设置。
+![图片](../../../img/api/canvas/rule.png)
 
 <!-- * 小程序进入后台运行后（非置顶聊天），如果 5s 内网络请求没有结束，会回调错误信息 fail interrupted；在回到前台之前，网络请求接口调用都会无法调用。
 

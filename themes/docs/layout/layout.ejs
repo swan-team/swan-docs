@@ -2,21 +2,22 @@
     // 取当前页面各级导航及相关数据
     var headerNavs = site.data.nav; // 1级(头部)导航
 
+    var nav; // 2级（sidebar）导航
+    var currentPageList = [];
+    var h1; // 正文h1
+    var license = {};
+    var bottomPage = {}; // 底部跳转
+    var localData = {}; // 页面siderbar数据
+
     // 当前headerNavs索引
     var headerNavIndex;
     for(var i = 0; i < headerNavs.length; i++) {
         if (headerNavs[i].name == page.header) {
             nav = headerNavs[i].nav;
+            license = headerNavs[i].license;
             headerNavIndex = i;
         }
     }
-
-
-    var nav; // 2级（sidebar）导航
-    var currentPageList = [];
-    var h1; // 正文h1
-    var bottomPage = {}; // 底部跳转
-    var localData = {}; // 页面siderbar数据
 
 
     var navLen = nav ? nav.length : 0;
@@ -73,7 +74,7 @@
 
     <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
-    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage}) %>
+    <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage, license: license}) %>
     <script type="text/javascript">
         window.localData = {
             'headerName': '<%= headerNavIndex != null ? headerNavs[headerNavIndex].name : '' %>',

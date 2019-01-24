@@ -23,7 +23,7 @@ button:focus {
 }
 header {  
     position: fixed;
-    background: #fff;
+    background: #000;
 }
 .m-hp-wrapper {
     width: 100%;
