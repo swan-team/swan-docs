@@ -1,0 +1,246 @@
+.p-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @navbar-height;
+    z-index: 1000;
+    line-height: @navbar-height;
+    font-size: 16px;
+    background-color: @color-lightest;
+    box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
+}
+
+    .p-navbar-logo {
+        height: 65px;
+        line-height: @navbar-height;
+        width: 200px;
+        float: left;
+        display: block;
+
+        &>img {
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &>img {
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &>div {
+            margin-left: 8px;
+            font-size: 18px;
+            color:#000;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .p-navbar-logo img {
+        width: 121px;
+        height: 21px;
+        vertical-align: middle
+    }
+    .p-navbar-logo-wrapper {
+        width: auto;
+        margin: 0 50px;
+        float: none;
+        display: none
+    }
+    .p-navbar-logo-wrapper .p-navbar-logo {
+        margin-left: 0;
+        text-align: center
+    }
+    p-navbar-header {
+        display: none;
+    }
+
+    .p-navbar-menu {
+        font-size: 16px;
+        padding-left: 95px;
+        margin-left: 280px;
+        overflow: hidden;
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 0 30px;
+            text-align: center;
+            list-style-type: none;
+
+            &.is-active {
+                a {
+                    color: @color-primary-dark;
+                }
+
+                &:before {
+                    content: '';
+                    width: 80%;
+                    margin-left: 10%;
+                    position: absolute;
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: @color-primary-dark;
+                }
+            }
+            &.introduction-group,
+            &.develop-group,
+            &.data-group {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    bottom: 23px;
+                    right: 8px;
+                    background-image: url(../../img/level1_arrow.png);
+                    background-size: 15px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: transform 0.2s;
+                    transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                }
+            }
+            &.introduction-group-hover:after,
+            &.develop-group-hover:after,
+            &.data-group-hover:after {
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+            }
+        }
+
+        .m-doc-header-nav-selected {
+            a {
+                color: #3388ff;
+            }
+            &:before {
+                content: '';
+                width: 80%;
+                margin-left: 10%;
+                position: absolute;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: #3388ff;
+            }
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: @color-text-lighter;
+        }
+    }
+
+    .p-navbar-menu .mobile-navbar-selected {
+        display: none;
+    }
+
+/* navbar 移动端适配 */
+@media only screen and (max-width: 768px) {
+    .p-navbar {
+        padding: 0 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .p-navbar-header {
+        height: @navbar-height;
+        line-height: @navbar-height;
+        width: 40px;
+        float: left;
+        display: block;
+        background-image: url(../../img/header_list.png);
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .p-navbar-logo {
+        display: none;
+    }
+
+    .p-navbar-logo img {
+        display: none;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+    .p-logo-wrapper {
+        width: auto;
+        margin: 0 50px;
+        float: none;
+        display: none;
+    }
+    .p-logo-wrapper .p-logo {
+        margin-left: 0;
+        text-align: center;
+    }
+    .p-navbar-menu {
+        padding-left: 200px;
+        margin-left: 10px;
+
+        overflow: hidden;
+
+        ul{
+            z-index: 10000;
+            display: none;
+            position: absolute;
+            top: 62px;
+            right: 10px;
+
+            background: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
+            li {
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                &.is-active {
+                    background:  fade(  rgba(51,136,255,.2), 8);
+                    a {
+                        color: @color-primary-dark;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+        a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            color: @color-text-lighter;
+        }
+    }
+    .p-navbar-menu .mobile-navbar-selected-list-show {
+        display: block;
+        width: 240px;
+    }
+    .p-navbar-menu .mobile-navbar-selected {
+        display: block;
+        float: right;
+        width: 80px;
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        span {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+            width: 15px;
+            margin-left: 6px;
+        }
+        .img-arrow-close {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
+    }
+}
