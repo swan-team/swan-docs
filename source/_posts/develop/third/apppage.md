@@ -17,7 +17,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/package/upload?access_token=ACC
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
 |template_id	|long	|是	|代码库中的代码模版ID|
-|ext_json	|long|	是|	第三方自定义的配置|
+|ext_json	|string|	是|	第三方自定义的配置|
 |user_version	|string	|是|	代码版本号，开发者可自定义。|
 |user_desc	|string|	是|	代码描述，开发者可自定义。|
 返回值示例
@@ -386,6 +386,43 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/package/getdetail?access_token=A
 |---|---|---|
 |errno|	int	|错误码|
 |msg|	string|	错误描述信息，用来帮助理解和解决发生的错误|
+
+## 代码审核状态推送
+
+> 当小程序有审核结果后，第三方平台将可以通过开放平台上填写的回调地址，获得审核结果通知。
+
+* 审核通过时，接收到的推送数据示例如下：
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "PACKAGE_AUDIT_PASS"
+}
+```
+
+* 审核不通过时，接收到的推送数据示例如下：
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "PACKAGE_AUDIT_FAIL",
+    "reason": "名称过长（名称控制在10个字以内）。名称与实际打开后的名称不符。"
+}
+```
+
+
+#### 参数说明
+
+|参数名 | 类型 | 描述|
+|----- |-----|  -----|
+|appId |long | 小程序appid|
+|tpAppId | long | 第三方平台id|
+|eventTime |string | 事件发生时间|
+|event |string | PACKAGE\_AUDIT\_PASS:代码包审核成功 PACKAGE\_AUDIT\_FAIL: 代码包审核失败|
 ## 附录
 
 Ticket解密算法
@@ -707,3 +744,4 @@ public class AesEncryptUtil {
         String deData = aesEncryptUtil.decrypt(data);
     }
     ```
+    
