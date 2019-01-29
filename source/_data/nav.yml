@@ -2282,6 +2282,15 @@
               text: 通用错误码对照表
               name: error
         -
+          link: /develop/third/deciphering
+          text:
+          name: deciphering
+          sidebar:
+            -
+              link: /develop/third/deciphering
+              text: 第三方平台消息加解密
+              name: deciphering              
+        -
           link: /develop/third/log
           text:
           name: log
