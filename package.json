@@ -7,7 +7,7 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "prebuild": "npm install",
+    "prebuild": "npm install && hexo --safe",
     "prestart": "npm install && hexo --safe",
     "start": "npx hexo server",
     "build": "npx hexo clean && npx hexo generate"
