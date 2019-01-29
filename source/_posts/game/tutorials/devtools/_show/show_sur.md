@@ -1,6 +1,6 @@
 ### 界面概述
 
-为了帮助开发者简单高效地开发和调试智能小程序，我们推出了百度开发者工具。下载链接：[windows 64](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具 Setup-1.14.13-alpha.0-beta.exe) 、[mac](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具-1.14.13-alpha.0-beta.dmg)
+为了帮助开发者简单高效地开发和调试智能小程序，我们推出了百度开发者工具。（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）
 
 使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。
 

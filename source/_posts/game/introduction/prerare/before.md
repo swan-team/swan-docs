@@ -27,7 +27,7 @@ priority: 01-04
 
 #### 开发工具
 
-下载开发者工具（[Windows 64 版下载地址](https://b.bdstatic.com/miniapp/development_tool/百度开发者工具 Setup-1.14.12-alpha.5-beta.exe) | [Mac 版下载地址]( https://b.bdstatic.com/miniapp/development_tool/百度开发者工具-1.14.12-alpha.5-beta.dmg)）进行代码的开发和上传。
+下载开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
  ![图片](/img/game/introduction/prerare/newadd05.png)
 
