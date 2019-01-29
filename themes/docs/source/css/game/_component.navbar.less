@@ -3,50 +3,83 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: @navbar-height;
-    z-index: 1000;
-    line-height: @navbar-height;
-    font-size: 16px;
-    background-color: @color-lightest;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
     box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
+    box-sizing: border-box;
+    z-index: 9999;
+    background: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform 0.35s;
+    transform: translateY(0px);
+
 }
 
+
+    .p-navbar-logo-btn {
+        display: none;
+    }
+    .p-navbar-logo-wrapper {
+        width: 250px;
+        float: left;
+    }
+    .p-navbar-logo {
+        margin-left: 0px;
+        display: block;
+    }
+    .p-navbar-logo img {
+        width: 121px;
+        height: 21px;
+        vertical-align: middle;
+    }
+    .p-navbar-logo img:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
     .p-navbar-logo {
         height: 65px;
         line-height: @navbar-height;
-        width: 200px;
         float: left;
         display: block;
 
-        &>img {
+        .swan-logo>img {
             margin-left: 40px;
-            display: inline-block;
+            width: 121px;
+            height: 21px;
             vertical-align: middle;
         }
-        &>img {
-            margin-left: 40px;
-            display: inline-block;
-            vertical-align: middle;
+
+        .doc-logo>img {
+            width: 35px;
+            height: 17px;
         }
         &>div {
-            margin-left: 8px;
-            font-size: 18px;
-            color:#000;
             display: inline-block;
-            vertical-align: middle;
+            height: 35px;
+            line-height: 35px;
+            font-size: 18px;
+            color: #565656;
+
         }
     }
 
     .p-navbar-logo img {
-        width: 121px;
-        height: 21px;
+        display: inline-block;
         vertical-align: middle
     }
     .p-navbar-logo-wrapper {
-        width: auto;
-        margin: 0 50px;
-        float: none;
-        display: none
+        max-width: 1195px;
+        margin: 0 auto;
+        display: none;
+        span {
+            margin-right: 10px;
+            &:not(:first-child):before {
+                content: '>';
+                margin-right: 10px;
+            }
+        }
     }
     .p-navbar-logo-wrapper .p-navbar-logo {
         margin-left: 0;
@@ -57,18 +90,21 @@
     }
 
     .p-navbar-menu {
-        font-size: 16px;
+
         padding-left: 95px;
         margin-left: 280px;
         overflow: hidden;
 
         li {
             display: inline-block;
-            position: relative;
             padding: 0 30px;
+            position: relative;
             text-align: center;
-            list-style-type: none;
-
+            a{
+                font-size: 16px;
+                line-height: 16px;
+                text-decoration: none;
+            }
             &.is-active {
                 a {
                     color: @color-primary-dark;
@@ -113,31 +149,65 @@
         }
 
         .m-doc-header-nav-selected {
+            background-color: rgba(255, 255, 255, 0.15);
+
+            &:hover {
+                background-color:#181818;
+            }
             a {
-                color: #3388ff;
+                color:#fff;
             }
             &:before {
                 content: '';
-                width: 80%;
-                margin-left: 10%;
+                width: 100%;
                 position: absolute;
                 height: 3px;
                 bottom: 0;
                 left: 0;
-                background-color: #3388ff;
             }
+
         }
 
         a {
             display: inline-block;
             text-decoration: none;
-            color: @color-text-lighter;
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
         }
     }
 
     .p-navbar-menu .mobile-navbar-selected {
         display: none;
     }
+
+/**社区样式start***/
+header .m-doc-forum {
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 0 30px 0 32px;
+    background: #000;
+    z-index:9;
+}
+header .m-doc-forum a {
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+/***社区样式end***/
+
+header .m-doc-logo-line {
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    width: 1px;
+    background: #787878;
+    margin: 0 7px;
+}
 
 /* navbar 移动端适配 */
 @media only screen and (max-width: 768px) {
@@ -181,7 +251,6 @@
     .p-navbar-menu {
         padding-left: 200px;
         margin-left: 10px;
-
         overflow: hidden;
 
         ul{
@@ -190,7 +259,6 @@
             position: absolute;
             top: 62px;
             right: 10px;
-
             background: #fff;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
             li {
@@ -209,12 +277,11 @@
             }
         }
 
-
         a {
             display: inline-block;
             width: 100%;
             text-decoration: none;
-            color: @color-text-lighter;
+            color: #fff;
         }
     }
     .p-navbar-menu .mobile-navbar-selected-list-show {
@@ -222,6 +289,7 @@
         width: 240px;
     }
     .p-navbar-menu .mobile-navbar-selected {
+        color: #fff;
         display: block;
         float: right;
         width: 80px;
