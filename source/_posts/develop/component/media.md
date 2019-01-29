@@ -408,6 +408,7 @@ Page({
 |type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type|
 |flash|String| off |闪光灯，值为auto, on, off|
 |binderror|EventHandle|-|用户不允许使用摄像头时触发|
+|bindload|EventHandle|-|AR加载成功时触发|
 |bindmessage|EventHandle|-|开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
 
 **说明**:
