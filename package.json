@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prebuild": "npm install",
-    "prestart": "npm install",
+    "prestart": "npm install && hexo --safe",
     "start": "npx hexo server",
     "build": "npx hexo clean && npx hexo generate"
   },
