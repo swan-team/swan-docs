@@ -32,8 +32,8 @@ sidebar: process_page
 		"pagePath": "pages/index/index",
 		"text": "首页"
 	}, {
-		"pagePath": "pages/logs/logs",
-		"text": "日志"
+		"pagePath": "pages/detail/detail",
+		"text": "详情"
 		}]
   }
 }
@@ -89,7 +89,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"|-|
 |navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white|-|
 |navigationBarTitleText|String|-|导航栏标题文字内容|-|
-|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">手百版本11.1.0</a>|
+|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
 |backgroundColor|HexColor|#ffffff|背景颜色|-|
 |backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，仅支持 dark/light|-|
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新|-|
@@ -97,17 +97,22 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 
 **注意**：
-* navigationStyle 全局配置`Android`和`iOS`从手百版本11.1.0开始支持, 但子页面配置支持情况`Android`从`手百版本11.1`开始支持，`iOS`从`手百版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取手百版本号进行兼容判断，具体见下表；
+* navigationStyle 全局配置`Android`和`iOS`从百度 App版本11.1.0开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**
 
 |顶bar设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|
-|手百定义的顶bar|无版本限制|无版本限制|无版本限制|-|
-|顶bar全局透明设置|手百版本>=11.1|手百版本>=11.1|不生效|-|
-|顶bar子页面透明设置|手百版本>=11.2|手百版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
+|百度 App定义的顶bar|无版本限制|无版本限制|无版本限制|-|
+|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效|-|
+|顶bar子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
 
+<div class="m-doc-custom-examples">
+<div class="m-doc-custom-examples-warning">
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+action高度（iOS为44px，Android为38px）</p>
+</div>
+</div>
 
 <notice>示例： </notice>
 
@@ -131,6 +136,5 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |backgroundColor|HexColor|是|tab 的背景色。|
 |borderStyle|String|否|tabBar 边框颜色。仅支持 black/white 两种边框颜色，默认值为 black 。|
 |color|HexColor|是|tab 上文字的默认颜色。|
-|position|String|否|tabBar 的位置。 仅支持 bottom/top 两种位置设置，默认值为 bottom 。|
 |list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。<br>- 当 position 为 top 时，不显示 icon 。|
 |selectedColor|HexColor|是|tab 上的文字选中时的颜色。|

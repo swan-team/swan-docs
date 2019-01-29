@@ -17,7 +17,7 @@ sidebar: formlist
 | type | String | default |类型|
 | plain | Boolean  |false |按钮是否镂空，背景色透明。|
 |form-type |String  | - |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
-|open-type | String | -|手百开放能力，比如分享、获取用户信息等等。|
+|open-type | String | -|百度 App开放能力，比如分享、获取用户信息等等。|
 |hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当  hover-class="none"  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
 | hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态。|
 |hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒。|
@@ -25,7 +25,7 @@ sidebar: formlist
 | bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"。|
 |disabled|Boolean|false|是否禁用|
 |loading|Boolean|false|名称前是否带有loading图标|
-|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。|
+|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler|-|		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
 <!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
 |bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
@@ -83,6 +83,14 @@ sidebar: formlist
 ```
 
 
+## 获取用户手机号权限申请
+
+审核过后，可通过如下操作获取用户手机号权限：
+1、在页面左侧导航栏，单击“设置-开发设置”；
+2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
+3、在弹出的页面填写如下信息，点击提交。
+
+![图片](../../../img/introduction/register/register-14.png)
 
 
 ## checkbox
@@ -210,7 +218,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 value="{= value =}"|
+| value | String  |-|输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|
 | type | String  |text  |input 的类型|
 | password | Boolean  | false  |是否是密码类型|
 | placeholder | String  |-  |输入框为空时占位符|
@@ -256,7 +264,7 @@ Page({
 ```xml
 <!-- input.swan -->
 <view class="section">
-    <input  maxlength="20" placeholder="最大输入长度20" />
+    <input value="{=value=}" maxlength="20" placeholder="最大输入长度20" />
 </view>
 
 ```

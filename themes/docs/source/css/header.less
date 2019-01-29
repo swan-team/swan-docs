@@ -1,3 +1,4 @@
+
 header {
     position: absolute;
     top: 0px;
@@ -8,7 +9,9 @@ header {
     box-shadow: 0 1px 4px 0 rgba(6, 0, 1, 0.07);
     box-sizing: border-box;
     z-index: 9999;
-    background: #fff;
+    background: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     transition: transform 0.35s;
     transform: translateY(0px);
     .m-doc-crumbs-wrapper {
@@ -85,6 +88,7 @@ header {
             }
         }
     }
+    
 }
 .m-doc-nav-btn {
     display: none;
@@ -96,19 +100,50 @@ header {
 .m-doc-logo {
     margin-left: 40px;
     display: block;
-    img {
-        width: 121px;
-        height: 21px;
-        vertical-align: middle;
-    }
-    h2 {
-        display: inline-block;
-        height: 35px;
-        line-height: 35px;
-        font-size: 18px;
-        color: #565656;
-        vertical-align: middle;
-    }
+}
+.m-doc-logo img {
+    width: 121px;
+    height: 21px;
+    vertical-align: middle;
+}
+.m-doc-logo img:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.m-doc-logo .docs-logo {
+    width: 35px;
+    height: 17px;
+}
+.m-doc-logo h2 {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    color: #565656;
+    vertical-align: middle;
+}
+header .m-doc-level1 {
+    padding-left: 95px;
+    margin-left: 280px;
+    overflow: hidden;
+}
+header .m-doc-crumbs-wrapper span{
+    color: #fff;
+    margin-right: 10px;
+}
+header .m-doc-crumbs-wrapper span:not(:first-child):before {
+    content: '>';
+    margin-right: 10px;
+}
+header .m-doc-level1 ul,
+header .m-doc-crumbs-wrapper {
+    max-width: 1195px;
+    margin: 0 auto;
+    display: none;
+}
+header {
+    transition: transform 0.35s;
+    transform: translateY(0px);
 }
 .m-doc-header-hide {
     transform: translateY(-60px);
@@ -122,8 +157,72 @@ header {
 .m-doc-header-show-crumbs .m-doc-level1 ul{
     display: none;
 }
+
+
+header .m-doc-level1 ul {
+    display: block;
+}
+
+
+header .m-doc-level1 ul li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 0 30px;
+}
+
+header .m-doc-level1 ul .m-doc-header-nav-selected {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+header .m-doc-forum:hover,
+header .m-doc-level1 ul li:hover {
+    background: #181818;
+}
+
+header .m-doc-level1 ul .m-doc-header-nav-selected a {
+    color: #fff;
+}
+header .m-doc-forum a,
+header .m-doc-level1 ul li a {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+
 .m-mobile-doc-level1 {
     display: none;
+}
+
+/**社区样式start***/
+header .m-doc-forum {
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 0 30px 0 32px;
+    background: #000;
+    z-index:9;
+}
+header .m-doc-forum a {
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+/***社区样式end***/
+
+header .m-doc-logo-line {
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    width: 1px;
+    background: #787878;
+    margin: 0 7px;
 }
 
 /* header 移动端适配 */
@@ -133,7 +232,7 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        background: #fff;
+        background: #000;
     }
 
     .top-search-box {
@@ -172,6 +271,7 @@ header {
         margin-left: 0;
         text-align: center;
     }
+    .m-doc-forum,
     .m-doc-level1 {
         display: none;
     }
@@ -194,11 +294,12 @@ header {
         display: block;
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected {
-        font-size: 14px;
         color: #000;
+        /* background-color: #181818 */
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected span,
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
+        color: #fff;
         vertical-align: middle;
         display: inline-block;
     }
@@ -217,7 +318,7 @@ header {
         position: absolute;
         top: 62px;
         right: -20px;
-        background: #fff;
+        background: #000;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     }
     .m-mobile-level1-list-show ul {
@@ -228,21 +329,24 @@ header {
         text-align: center;
         display: block;
     }
+    .m-mobile-level1-list-show ul li:hover {
+        background-color: #181818;
+    }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected:after {
         display: none;
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected {
-        background: #ebf3ff;
+        background: #181818;
     }
     .m-mobile-doc-level1 ul li a {
-        color: #000;
+        color: #fff;
         text-decoration: none;
         display: block;
         width: 100%;
         height: 100%;
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected a{
-        color: #38f;
+        color: #fff;
     }
 }
 
@@ -283,19 +387,25 @@ header {
 
 .top-search-box {
     position: absolute;
-    right: 40px;
-    top: 13px;
+    right: 100px;
+    top: 0;
     width: 40px;
-    height: 36px;
+    height: 60px;
     line-height: 1;
     outline: none;
     transition: width 0.1s;
+    background: #000;
 }
 
 .top-search-box-focus {
     width: 164px;
+    height: 36px;
+    top: 13px;
     padding-left: 38px;
     background: #f0f1f2;
+}
+.top-search-box-focus.top-search-box .search-btn {
+    top: 3px;
 }
 .top-search-box-focus #local-search-input {
     display: block;
@@ -319,6 +429,7 @@ header {
     background-color: initial;
 }
 .top-search-box .search-btn {
+    top: 16px;
     left: 3px;
     background-image: url(../img/header_search.png);
 }

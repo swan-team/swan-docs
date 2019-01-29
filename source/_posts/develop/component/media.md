@@ -365,7 +365,7 @@ Page({
 * camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
-* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>reateCameraContext</a>
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
 
 **示例：**
 
@@ -394,6 +394,60 @@ Page({
     }
 })
 ```
+
+## ar-camera
+> 基础库 3.10.15 开始支持，低版本需做兼容处理。
+
+**解释：**AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后获取到AR Key、AR Type，可配置展现。
+
+**属性说明：**
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+|key| String | - | AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
+|type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type|
+|flash|String| off |闪光灯，值为auto, on, off|
+|binderror|EventHandle|-|用户不允许使用摄像头时触发|
+|bindmessage|EventHandle|-|开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
+
+**说明**:
+
+* ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
+* 同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
+* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>
+
+
+**示例：**
+
+```xml
+<ar-camera key="xx" type="x" bindmessage="message" binderror="error" style="width: 100%; height: 300px;"></ar-camera>
+<button type="primary" bind:tap="takePhoto">拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>
+```
+
+```javascript
+Page({
+    takePhoto() {
+        const ctx = swan.createARCameraContext();
+        ctx.takePhoto({
+            success: (res) => {
+                this.setData({
+                    src: res.tempImagePath
+                })
+            }
+        });
+    },
+    error(e) {
+        console.log(e.detail);
+    },
+    message(e) {
+        console.log(e.detail);
+    }
+});
+```
+
 ## live-player
 **解释：**实时视频播放
 > 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。

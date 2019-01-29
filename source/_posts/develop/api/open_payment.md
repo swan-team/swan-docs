@@ -37,7 +37,7 @@ requestPolymerPayment
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
 |rsaSign| 是|对`appKey+dealId+tpOrderId+totalAmount`进行RSA加密后的签名，防止订单被伪造。签名过程见 [百度电商开放平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。|
-|bizInfo|  否|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [百度电商开放平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。|
+|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [百度电商开放平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。|
 
 <!-- |参数|类型|必填|说明|
 |----|---|----|---|
@@ -58,7 +58,7 @@ requestPolymerPayment
 | WeChat | 微信支付|
 
 **示例：**
-<a href="swanide://fragment/7dbfd45416e5f6506f764f5aa2982f481540396475" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2fd9f0f66f3a557c70475be52e0617241544430726" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.requestPolymerPayment({
     orderInfo: {

@@ -8,7 +8,7 @@ sidebar: open
 
 ## open-data
 
-<text><text class="notice">解释:</text>用于展示手机百度 APP 开放的数据。</text><div></div><text class="notice">属性说明:</text>
+<text><text class="notice">解释:</text>用于展示百度 App 开放的数据。</text><div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 类型     | 默认值  | 说明              |
 | --- | ------ | ---- | --------------- |
@@ -66,7 +66,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-1.7.0.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.1.js"></script>
 ```
 
 ```javascript
@@ -85,7 +85,7 @@ web-view 网页中支持的接口有：
 
 | 接口模块               | 接口说明         | 具体接口  | 备注 |
 | ----------------- | ---------- | --- |
-|设备| 拨打电话| <a href="https://smartapp.baidu.com/docs/develop/api/device_call/#makePhoneCall/">swan.makePhoneCall</a> |-|
+|设备| 拨打电话| <a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#makePhoneCall/">swan.makePhoneCall</a> |-|
 |开放接口| 打开小程序| <a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">swan.navigateToSmartProgram</a> |-|
 |开放接口| 登录| <a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#login/">swan.login</a> |-|
 |剪贴板| 设置剪贴板| <a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#setClipboardData/">swan.setClipboardData</a> |-|

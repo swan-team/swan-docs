@@ -18,11 +18,11 @@
                 name: enter_application
               -
                 link: /introduction/register
-                text: 注册智能小程序
+                text: 智能小程序账号注册
                 name: register
               -
                 link: /introduction/register_consummate
-                text: 完善智能小程序基本信息
+                text: 创建智能小程序
                 name: register_consummate
               -
                 link: /introduction/register_prepare
@@ -43,17 +43,13 @@
       name: book
       sidebar:
         -
-            link: /introduction/access
-            text: 百度信息流
-            sidebar:
-              -
-                link: /introduction/access
-                text: 什么是百度信息流
-                name: access
+            # link: /introduction/access
+            # text: 百度信息流  
+            sidebar:        
               -
                 link: /introduction/feed
-                text: 信息流投放管理
-                name: feed
+                text: 信息流流量说明  
+                name: feed  
         -
             link: /introduction/intro
             text: 搜索流量接入
@@ -66,11 +62,21 @@
                 link: /introduction/rank
                 text: 接入自然搜索
                 name: rank
+        -
+            sidebar:
+              -
+                link: /introduction/baijiahao
+                text: 百家号流量接入
+                name: baijiahao
+
 # 2
 -
   link: /design/overview/introduction
   text: 设计
   name: design
+  license:
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /design/principle/easytouse
@@ -100,12 +106,20 @@
           sidebar:
             -
               link: /design/foundation/layout
-              text: 布局排版
+              text: 页面布局
               name: layout
+            -
+              link: /design/foundation/typography
+              text: 阅读排版
+              name: typography
             -
               link: /design/foundation/pic
               text: 图片图标
               name: pic
+            -
+              link: /design/foundation/logo
+              text: 头像输出
+              name: logo            
             -
               link: /design/foundation/writing
               text: 措辞
@@ -163,7 +177,11 @@
             -
               link: /design/story/arzoo
               text: 长隆AR动物园
-              name: arzoo
+              name: arzoo       
+            -
+              link: /design/story/light_up
+              text: 减减鸭
+              name: light_up                    
     -
       link: /design/resource/uikit
       text: 资源下载
@@ -190,6 +208,9 @@
   text: 开发
   nickname: 小程序开发
   name: develop
+  license:
+    name: 创作共用-署名-相同方式共享
+    link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
   nav:
     -
       link: /develop/tutorial/codedir
@@ -291,7 +312,21 @@
               link: /develop/tutorial/swanchangelog
               text: 历史更新日志
               name: swanchangelog
-
+        -
+          link: /develop/tutorial/move
+          text: 开发解决方案
+          name: move
+          sidebar: 
+              -
+                link: /develop/tutorial/move
+                text: 搬家工具
+                name: move
+              -   
+                link: /develop/tutorial/frame
+                text: 框架开发
+                name: frame
+                                  
+            
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -447,6 +482,10 @@
                 link: /develop/framework/custom-component_extend
                 text: 自定义组件扩展
                 name: custom-component_extend
+              -
+                link: /develop/framework/custom-component_trdparty
+                text: 第三方自定义组件
+                name: custom-component_trdparty
         -
           link: /develop/framework/subpackages
           text: 基础性能
@@ -640,6 +679,10 @@
                       link: /develop/component/media/#camera
                       text: camera
                       name: media_camera
+                    -
+                      link: /develop/component/media/#ar-camera
+                      text: ar-camera
+                      name: media_ar-camera
                     -
                       link: /develop/component/media/#live-player
                       text: live-player
@@ -929,6 +972,10 @@
                   link: /develop/api/media_createinneraudiocontext/#createInnerAudioContext
                   text: createInnerAudioContext
                   name: media_createinneraudiocontext_createInnerAudioContext
+                -
+                  link: /develop/api/media_createinneraudiocontext/#setInnerAudioOption
+                  text: setInnerAudioOption
+                  name: media_createinneraudiocontext_setInnerAudioOption                  
             -
               link: /develop/api/media_video
               text: 视频
@@ -969,6 +1016,15 @@
                   link: /develop/api/media_cameracontext/#createCameraContext
                   text: createCameraContext
                   name: media_cameracontext_createCameraContext
+            -
+              link: /develop/api/media_arcameracontext
+              text: AR 相机组件控制
+              name: media_arcameracontext
+              sidebar:
+                -
+                  link: /develop/api/media_arcameracontext/#createARCameraContext
+                  text: createARCameraContext
+                  name: media_arcameracontext_createARCameraContext
         -
             link: /develop/api/file
             text: 文件
@@ -1447,6 +1503,19 @@
                     text: pageScrollTo
                     name: show_pagescrollto_pageScrollTo
               -
+                link: /develop/api/show_background
+                text: 背景
+                name: show_background
+                sidebar:
+                  -
+                    link: /develop/api/show_background/#setBackgroundColor
+                    text: setBackgroundColor
+                    name: show_background_setBackgroundColor
+                  -
+                    link: /develop/api/show_background/#setBackgroundTextStyle
+                    text: setBackgroundTextStyle
+                    name: show_background_setBackgroundTextStyle                    
+              -
                 link: /develop/api/show_pull
                 text: 下拉刷新
                 name: show_pull
@@ -1881,7 +1950,7 @@
                     name: open_infomation_sendTemplateMessage
               -
                 link: /develop/api/seo
-                text: 配置seo
+                text: 配置页面基础信息
                 name: seo
                 sidebar:
                   -
@@ -1927,8 +1996,6 @@
                     text: deletesitemap
                     name: open_feed_deletesitemap
 
-        -
-            sidebar:
               -
                 link: /develop/api/get
                 text: 更新
@@ -1937,9 +2004,7 @@
                   -
                     link: /develop/api/get/#getUpdateManager
                     text: getUpdateManager
-                    name: get_getUpdateManager
-        -
-            sidebar:
+                    name: get_getUpdateManager 
               -
                 link: /develop/api/debug
                 text: 调试
@@ -1949,8 +2014,6 @@
                     link: /develop/api/debug/#setEnableDebug
                     text: setEnableDebug
                     name: debug_setEnableDebug
-        -
-            sidebar:
               -
                 link: /develop/api/data
                 text: 数据分析
@@ -1960,8 +2023,6 @@
                     link: /develop/api/data/#reportAnalytics
                     text: reportAnalytics
                     name: data_reportAnalytics
-        -
-            sidebar:
               -
                 link: /develop/api/timer
                 text: 定时器
@@ -1980,7 +2041,7 @@
                     text: setInterval
                     name: timer_setInterval
                   -
-                    link: /develop/api/timer/#etTimeout
+                    link: /develop/api/timer/#setTimeout
                     text: setTimeout
                     name: timer_setTimeout
     -
@@ -1988,12 +2049,6 @@
       text: 工具
       name: devtools
       sidebar:
-        -
-            sidebar:
-              -
-                link: /develop/devtools/move
-                text: 搬家工具
-                name: move
         -
             text: 界面
             name: show
@@ -2080,15 +2135,6 @@
                 link: /develop/debug/remotedebugging
                 text: 远程调试
                 name: remotedebugging
-        # -
-        #     link: /develop/devtools/code
-        #     text: 代码片段
-        #     name: code
-        #     sidebar:
-        #       -
-        #         link: /develop/devtools/code
-        #         text: 代码片段
-        #         name: code
         -
             link: /develop/devtools/projectconfig
             text: 配置文件及差异
@@ -2115,7 +2161,13 @@
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
-                name: uplog_compile
+                name: uplog_compile    
+        -
+            sidebar:
+              -
+                link: /develop/devtools/beta
+                text: Beta 版本公测
+                name: beta
 
     -
       link: /develop/server/oauth_intr
@@ -2373,7 +2425,6 @@
             link: /operations/service
             text: 服务条款
             name: service
-
     -
       link: /operations/game
       text: 百度小游戏特别规范
@@ -2390,6 +2441,18 @@
           #   link: /operations/standard
           #   text: 审核标准
           #   name: standard
+    -
+      link: /operations/thirdparty
+      text: 第三方平台范围及条款
+      name: book
+      sidebar:
+        -
+          sidebar:            
+          -
+            link: /operations/thirdparty
+            text: 第三方服务条款
+            name: thirdparty
+
 # #6
 # -
 #   link: ../forum

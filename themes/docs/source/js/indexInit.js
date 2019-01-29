@@ -34,6 +34,23 @@
             this.initAnimation();
             this.pcAddEvent();
         },
+        caseInvoke: function(scheme) {
+            if (isPc()) {
+                return;
+            }
+            if (isBox()) {
+                // 百度 App
+                isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
+            } else {
+                // 非百度 App
+                /*eslint-disable fecs-camelcase*/
+                var openbox = window.OpenBox({
+                    url: location.href
+                });
+                /*eslint-disable fecs-camelcase*/
+                openbox.open();
+            }
+        },
         // 初始化lottie的动画
         initAnimation: function(){
             for (var i in this.animationList){
