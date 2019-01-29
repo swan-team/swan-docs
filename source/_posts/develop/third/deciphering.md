@@ -6,8 +6,6 @@ sidebar: deciphering
 ---
 
 
-## Ticket 解密算法
-
 ### 1. php代码demo：
 ```php
 <?php
