@@ -12,6 +12,7 @@
                     '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
                     '</ul>';
             }, '');
+            var url = win.location.href;
             if (!url.includes('/docs/game/')) {
                 $('.introduction-group').removeClass('introduction-group');
                 $('.develop-group').removeClass('develop-group');
