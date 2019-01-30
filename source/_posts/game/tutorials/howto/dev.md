@@ -8,7 +8,7 @@ priority: 01-01
 
 ### 准备开发工具
 
-下载开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
 ### 小游戏项目创建
 
@@ -20,9 +20,7 @@ priority: 01-01
 
 **注意：**
 - 项目路径即要存放代码的地方，要选择一个空的文件夹，否则会提示文件夹不为空，不允许创建项目。
-- AppID 是你的小游戏独有的编号，如果没有的话可以点击下方的 **注册** 来获取，或者点击 **小游戏** 来体验无 AppID 模式，但是部分功能（关于权限的操作、预览等功能）会受限。
-
-
+- AppID 是你的小游戏独有的编号，如果没有的话可以点击下方的**注册**来获取，或者点击 **小游戏** 来体验无 AppID 模式，但是部分功能（关于权限的操作、预览等功能）会受限。
 
 ### 目录结构
 经过一个自动的编译之后我们便得到了一个项目模版。并且，进入到开发者工具中可以看到已经为您创建好的文件的目录。
@@ -31,8 +29,6 @@ priority: 01-01
 2. game.json 小游戏相关配置文件，详细配置内容参见[配置](/game/tutorials/howto/dev/#配置)。
 
 ![](/img/game/tutorials/project.png)
-
-
 
 ### 配置
 
