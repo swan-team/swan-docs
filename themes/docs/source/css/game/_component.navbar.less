@@ -43,6 +43,7 @@
         line-height: @navbar-height;
         float: left;
         display: block;
+        width: 280px;
 
         .swan-logo>img {
             margin-left: 40px;
@@ -73,6 +74,7 @@
         max-width: 1195px;
         margin: 0 auto;
         display: none;
+
         span {
             margin-right: 10px;
             &:not(:first-child):before {
@@ -90,7 +92,6 @@
     }
 
     .p-navbar-menu {
-
         padding-left: 95px;
         margin-left: 280px;
         overflow: hidden;
@@ -311,4 +312,13 @@ header .m-doc-logo-line {
             -webkit-transform: rotate(180deg);
         }
     }
+}
+
+@media only screen and (min-width: 1590px) {
+    .p-navbar-menu {
+        max-width: 1195px;
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+
 }

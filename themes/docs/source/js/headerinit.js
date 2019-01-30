@@ -12,15 +12,21 @@
                     '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
                     '</ul>';
             }, '');
-            $('.' + name).tooltipster({
-                animation: 'fade',
-                interactive: true,
-                delay: '200',
-                side: ['bottom'],
-                trigger: 'hover',
-                content: content,
-                contentAsHTML: true
-            });
+            if (!url.includes('/docs/game/')) {
+                $('.introduction-group').removeClass('introduction-group');
+                $('.develop-group').removeClass('develop-group');
+                $('.data-group').removeClass('data-group');
+            } else {
+                $('.' + name).tooltipster({
+                    animation: 'fade',
+                    interactive: true,
+                    delay: '200',
+                    side: ['bottom'],
+                    trigger: 'hover',
+                    content: content,
+                    contentAsHTML: true
+                });
+            }
             $('.' + name).on('mouseenter', function () {
                 setTimeout(function () {
                     $('.' + name).addClass(name + '-hover');
