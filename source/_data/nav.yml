@@ -1966,7 +1966,7 @@
                     name: open_infomation_sendTemplateMessage
               -
                 link: /develop/api/seo
-                text: 配置页面基础信息
+                text: 页面 meta 信息
                 name: seo
                 sidebar:
                   -

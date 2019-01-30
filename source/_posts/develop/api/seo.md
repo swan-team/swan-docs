@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: seo
 ---
-配置seo相关接口，目前仅支持Web化使用。
+配置页面 meta 相关接口，目前仅支持 Web 化使用。
 ## setMetaDescription
 
 **解释：** 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
