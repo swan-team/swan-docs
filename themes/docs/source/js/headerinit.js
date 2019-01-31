@@ -13,11 +13,11 @@
                     '</ul>';
             }, '');
             var url = win.location.href;
-            if (!url.includes('/docs/game/')) {
-                $('.introduction-group').removeClass('introduction-group');
-                $('.develop-group').removeClass('develop-group');
-                $('.data-group').removeClass('data-group');
-            } else {
+            if (url.includes('/docs/game/')) {
+                var gameListHeader = ['.introduction-group', '.develop-group', '.data-group'];
+                gameListHeader.forEach(element => {
+                    $(element).addClass('game');
+                });
                 $('.' + name).tooltipster({
                     animation: 'fade',
                     interactive: true,

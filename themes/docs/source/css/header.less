@@ -50,6 +50,7 @@ header {
                 &.data-group {
                     &:after {
                         content: '';
+                        display: none;
                         position: absolute;
                         width: 15px;
                         height: 15px;
@@ -62,6 +63,9 @@ header {
                         transition: transform 0.2s;
                         transform: rotate(0deg);
                         -webkit-transform: rotate(0deg);
+                    }
+                    &.game:after {
+                        display: block;
                     }
                 }
                 &.introduction-group-hover:after,
