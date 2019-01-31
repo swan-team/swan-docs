@@ -13,6 +13,7 @@
     "build": "npx hexo clean && npx hexo generate"
   },
   "dependencies": {
+    "@baidu/swandoc": "0.0.1",
     "cheerio": "1.0.0-rc.2",
     "hexo": "3.7.1",
     "hexo-generator-archive": "^0.1.4",

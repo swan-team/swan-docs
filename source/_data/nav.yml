@@ -2178,12 +2178,6 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile    
-        -
-            sidebar:
-              -
-                link: /develop/devtools/beta
-                text: Beta 版本公测
-                name: beta
 
     -
       link: /develop/server/oauth_intr
