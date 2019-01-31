@@ -156,8 +156,8 @@ URL 映射规则不仅可以在 app.json 中进行配置，同样也可以在智
 ## 提交 sitemap
 
 进入智能小程序平台，在小程序首页，单击“投放管理>自然搜索管理”。在自然搜索 tab 里，可上传 sitemap。
-**sitemap**:
-内容为小程序页面的 path+query 列表，其中 query 必须包含 url-mapping 中的 H5 链接的参数全集。
+#### sitemap
+sitemap 用于声明主动推送给百度自然搜索收录的页面。列表中每一行都是一个要被收录页面的“路径+参数”，格式例如 `pages/list/index?id=1`。如果某页面通过 url-mapping 中声明了对应的原始网站的 web url，参数部分要包含此页面对应的 web url 的所有参数。
 **url-mapping规则**:
 ```json
  {
