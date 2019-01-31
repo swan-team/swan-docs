@@ -116,11 +116,11 @@ getEnvInfoSync
 ```js
 try {
     const envInfo = swan.getEnvInfoSync();
-    console.log(res.appKey);
-    console.log(res.appName);
-    console.log(res.lastAppURL);
-    console.log(res.sdkVersion);
-    console.log(res.scheme);
+    console.log(envInfo.appKey);
+    console.log(envInfo.appName);
+    console.log(envInfo.lastAppURL);
+    console.log(envInfo.sdkVersion);
+    console.log(envInfo.scheme);
 } catch (e) {
     // Do something when catch error
 }

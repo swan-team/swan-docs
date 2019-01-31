@@ -296,3 +296,48 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/getsupportversion?access_tok
 |now\_version | string | 当前版本|
 |items | object | 版本号列表|
 |version | string | 版本号|
+
+
+## 基本信息审核通知
+
+当小程序基本信息有审核结果后，第三方平台将可以通过开放平台上填写的回调地址，获得审核结果通知。
+
+审核通过时，接收到的推送数据示例如下：
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APP_NAME_AUDIT_PASS"
+}
+```
+
+审核不通过时，接收到的推送数据示例如下：
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APP_NAME_AUDIT_FAIL",
+    "reason": "名称过长（名称控制在10个字以内）。"
+}
+```
+
+
+#### 参数说明
+
+|参数名 | 类型 | 描述|
+|----- |-----|  -----|
+|appId |long | 小程序appid|
+|tpAppId | long | 第三方平台id|
+|eventTime |string | 事件发生时间|
+|event |string | APP\_NAME\_AUDIT\_PASS:小程序名称审核成功<br>APP\_NAME\_AUDIT\_FAIL:小程序名称审核失败 <br>APP\_ICON\_AUDIT\_PASS:小程序头像审核成功 <br>APP\_ICON\_AUDIT\_FAIL:小程序头像审核失败<br>APP\_DESC\_AUDIT\_PASS:小程序描述审核成功 <br>APP\_DESC\_AUDIT\_FAIL:小程序描述审核失败|
+
+
+
+
+
+
+

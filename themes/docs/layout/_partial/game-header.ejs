@@ -14,11 +14,16 @@
 <body>
     <header class="p-navbar">
         <div class="p-navbar-logo">
-            <%- image_tag('img/logo.png') %>
-
+            <a href="https://smartprogram.baidu.com/developer/index.html" class="swan-logo">
+                <%- image_tag('img/logo_new.png') %>
+            </a>
+            <span class="m-doc-logo-line"></span>
+            <a href="" class="doc-logo">
+                <%- image_tag('img/logo_docs.png') %>
+            </a>
         </div>
-        <div class="p-navbar-header">
-        </div>
+    <div class="p-navbar-header">
+    </div>
         <nav class="p-navbar-menu">
             <%- partial('./header-nav', {}) -%>
         </nav>

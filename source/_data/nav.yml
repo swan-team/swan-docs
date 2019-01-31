@@ -324,8 +324,24 @@
               -   
                 link: /develop/tutorial/frame
                 text: 框架开发
-                name: frame
-                                  
+                name: frame   
+                sidebar:
+                  -
+                    link: /develop/tutorial/frame/#Taro
+                    text: Taro
+                    name: frame_Taro     
+                  -
+                    link: /develop/tutorial/frame/#mpvue
+                    text: mpvue
+                    name: frame_mpvue 
+                  -
+                    link: /develop/tutorial/frame/#WePY
+                    text: WePY
+                    name: frame_WePY                                                    
+                  -   
+                    link: /develop/tutorial/frame/#Okam
+                    text: Okam 
+                    name: frame_Okam                                 
             
     -
       link: /develop/framework/app_service_register
@@ -1284,8 +1300,8 @@
                     text: canvasContext.scale
                     name: show_canvas_canvasContext.scale
                   -
-                    link: /develop/api/show_canvas/#canvasContext-rotate
-                    text: canvasContext.rotate
+                    link: /develop/api/show_canvas/#canvasContext-rotate          
+                    text: canvasContext.rotate  
                     name: show_canvas_canvasContext.rotate
                   -
                     link: /develop/api/show_canvas/#canvasContext-translate
@@ -2265,6 +2281,15 @@
               link: /develop/third/error
               text: 通用错误码对照表
               name: error
+        -
+          link: /develop/third/log
+          text:
+          name: log
+          sidebar:
+            -
+              link: /develop/third/log
+              text: 更新日志
+              name: log            
     # -
     #   link: /develop/flow
     #   text: 搜索流量接入

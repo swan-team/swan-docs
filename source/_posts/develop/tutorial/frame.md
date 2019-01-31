@@ -122,3 +122,38 @@ sidebar: frame
 ### 第五步: 开发者工具预览
 在百度开发者工具中选择打开项目目录下的`dist`目录，就可以在开发者工具中预览项目。
 
+## Okam
+
+### 第一步：安装 CLI 工具
+
+* Node 安装（要求 `Node >=8 && NPM >= 3`），具体安装可以到[官网下载](https://nodejs.org)；
+* CLI 工具安装:
+ ```
+ npm install okam-cli -g
+ ```
+
+### 第二步：初始化项目
+
+```shell
+okam init my-project
+cd my-project
+npm i
+```
+
+### 第三步：构建目标代码
+
+|代码|说明|
+|--|--|
+| `npm run dev`| 带 watch 开发模式|
+|`npm run dev:clean`| 删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式|
+|`npm run dev:server`|带 watch && 开发 Server 开发模式|
+|`npm run build`| 删掉构建重新构建（没有 watch && 开发 Server）|
+|`npm run prod`| 生产环境构建|
+
+### 第四步：开发工具预览
+
+在百度开发者工具中选择打开项目目录下的 `dist` 目录，就可以在开发者工具中预览项目。
+
+更多关于 `Okam` 使用，可以参考 [Okam 文档](https://ecomfe.github.io/okam)。
+
+

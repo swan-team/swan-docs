@@ -34,7 +34,7 @@ showToast
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
 **示例：**
-<a href="swanide://fragment/0635c55ccaf54bdb5d2e245abf4ba48d1540396154" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.showToast({
     title: '我是标题',

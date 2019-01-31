@@ -37,7 +37,7 @@ sidebar: media
 |4|不支持音频|
 
 **示例：**
-<a href="swanide://fragment/091f2015538a94ccdf2a846d46e328e41540361219" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
@@ -291,7 +291,7 @@ Page({
 `<video />` 默认宽度 300px、高度 225px
 
 **示例：**
-<a href="swanide://fragment/471076868f10271dc5a6d67c5f9dc5eb1540396026" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 ```xml
@@ -408,6 +408,7 @@ Page({
 |type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type|
 |flash|String| off |闪光灯，值为auto, on, off|
 |binderror|EventHandle|-|用户不允许使用摄像头时触发|
+|bindload|EventHandle|-|AR加载成功时触发|
 |bindmessage|EventHandle|-|开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
 
 **说明**:

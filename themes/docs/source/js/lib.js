@@ -60,7 +60,7 @@ function throttle (func, wait, options) {
     var previous = 0;
     if (!options) options = {};
     var later = function () {
-        previous = options.leading === false ? 0 : +new Date();;
+        previous = options.leading === false ? 0 : +new Date();
         timeout = null;
         result = func.apply(context, args);
         if (!timeout) context = args = null;
@@ -111,7 +111,7 @@ function __webdomainTransHandler__(e) {
         var id = 't' + ~new Date;
         var url = 'https://' + prefix + '.smartapps.cn';
         html = url + '<a class="copy-btn" id="' + id + '" onclick="__showToast__(\'toast-' + id + '\')" href="javascript:;" data-clipboard-text="' + url + '">复制</a> <span class="wd-toast" style="display: none" id="toast-' + id + '">已复制</span>';
-        new ClipboardJS('#' + id);
+        return new ClipboardJS('#' + id);
     }
     ret.innerHTML = '转换结果：' + html;
 }

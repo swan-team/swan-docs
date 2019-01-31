@@ -108,9 +108,10 @@ Page({
 |属性|类型|描述|触发时机|
 |----|----|----|--------|
 |onLaunch|Function|SWAN 初始化的生命周期函数|当 SWAN App 初始化完成时，会触发 onLaunch（全局只触发一次）|
-|onShow|Function| SWAN App 展示时调用的生命周期函数|页面显示或切入前台时，触发 onShow|
+|onShow(App)|Function| SWAN App 展示时调用的生命周期函数|页面显示或切入前台时，触发 onShow|
 |onHide|Function| SWAN App 隐藏时调用的生命周期函数|页面隐藏/切入后台/页面卸载时，触发onHide|
 |onLoad|Function| 监听页面加载的生命周期函数|页面加载时，触发 onLoad|
+|onShow(page)|Function|page 展示时调用的生命周期函数|页面展现时触发|
 |onReady|Function| 监听页面初次渲染完成的生命周期函数|页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。对界面内容进行设置的 API 如<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/#setNavigationBarTitle/">setNavigationBarTitle </a>请在onReady之后进行。|
 |onUnload|Function| 监听页面卸载的生命周期函数|页面卸载，触发 onUnload|
 |onError|Function|错误监听函数|当 SWAN App 发生错误时，会触发onError|

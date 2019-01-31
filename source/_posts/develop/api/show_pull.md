@@ -11,7 +11,7 @@ onPullDownRefresh
 **参数：**Object
 
 **示例：**
-<a href="swanide://fragment/0399b933c880712fe3caea30f4ff3a551540397509" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 Page({
     onPullDownRefresh() {
