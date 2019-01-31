@@ -17,7 +17,7 @@ priority: 07-01
 
 **超时时间**
 
-- 网络请求默认超时时间 `30s`
+- 网络请求默认超时时间 `30s`。
 - 超时时间可以在 `game.json` 中配置。
 
 ```
@@ -41,7 +41,7 @@ priority: 07-01
 - {appkey}：客户端小游戏的appkey（aps 下发的 appkey，不含调起协议中拼接的下划线），非服务端的小游戏 appid。
 - {version}：为小游戏的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本。
 
-request、uploadFile、downloadFile 的最大并发限制是 10 个；
+request、uploadFile、downloadFile 的最大并发限制是 10 个。
 
 **返回值编码**
 
