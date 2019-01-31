@@ -12,6 +12,7 @@
 .m-doc-content-wrap {
     margin-top: 60px;
     padding: 0 80px;
+    min-height: calc(100vh - 150px);
 }
 
 /* 右下菜单样式 */
@@ -77,6 +78,10 @@ article img {
     margin-top: 22px;
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
+}
+
+.article-inner {
+    min-height: calc(100vh - 389px);
 }
 
 .article-title {
