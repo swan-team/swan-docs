@@ -1,42 +1,19 @@
 function searchFunc(path, searchId, contentId) {
     $.ajax({
         url: path,
-        dataType: 'xml',
-        success: function (xmlResponse) {
-            // get the contents from search data
-            var datas = $('entry', xmlResponse).map(function () {
-                return {
-                    title: $('title', this).text(),
-                    content: $('content', this).text(),
-                    url: $('url', this).text()
-                };
-            }).get();
-            var $resultContent = document.getElementById(contentId);
+        dataType: 'json',
+        success: function (datas) {
             var $input = document.getElementById(searchId);
-            if (!$input || !$('#local-search-input').length) {
+            if (!$input) {
                 return;
             }
-            function toggleArticleContent(isShown) {
-                var isToggle = typeof isShown === 'undefined';
-                var resultStatus, articleStatus;
-                if (isToggle) {
-                    var currentStatus = $('#article-main-content').css('display');
-                    resultStatus = currentStatus;
-                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
-                } else {
-                    articleStatus = isShown ? 'block' : 'none';
-                    resultStatus = isShown ? 'none' : 'block';
-                }
-                $('#article-main-content').css({
-                    display: articleStatus
-                });
-                $($resultContent).css({
-                    display: resultStatus
-                });
+            var $resultContent = document.getElementById(contentId);
+            if (!$('#local-search-input').length) {
+                return;
             }
             $('#top-search-box').on('click', function (e) {
                 if($(e.target).hasClass('reset-search-btn')) {
-                    toggleArticleContent(true);
+                    $($input).trigger('input');
                     $('#top-search-box').removeClass('top-search-box-focus');
                    return; 
                 }
@@ -73,12 +50,17 @@ function searchFunc(path, searchId, contentId) {
                     }
                     var str = '<ul class="search-result-list">';
                     var keywords = $this.value.trim().toLowerCase().split(/\s+/);
-                    var matchCount = 0;
                     $resultContent.innerHTML = '';
                     if ($this.value.trim().length <= 0) {
-                        toggleArticleContent(true);
+                        $('#article-main-content').css({
+                            display: 'block'
+                        });
+                        $($resultContent).css({
+                            display: 'none'
+                        });
                         return;
                     }
+                    var matchCount = 0;
                     datas.forEach(function (data) {
                         var isMatch = true;
                         if (!data.title || data.title.trim() === '') {
@@ -86,7 +68,8 @@ function searchFunc(path, searchId, contentId) {
                             return false;
                         }
                         var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var content = data.content || '';
+                        var data_content = content.trim().replace(/<[^>]+>/g, "").toLowerCase();
                         var data_url = data.url;
                         var index_title = -1;
                         var index_content = -1;
@@ -117,8 +100,21 @@ function searchFunc(path, searchId, contentId) {
                             var content = data.content.trim().replace(/<[^>]+>/g, '');
                             if (first_occur >= 0) {
                                 // cut out 100 characters
-                                var start = first_occur - 20 < 0 ? 0 : first_occur - 20;
-                                var end = start + 100 > content.length ? content.length : start + 100;
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+
+                                if (start < 0) {
+                                    start = 0;
+                                }
+
+                                if (start === 0) {
+                                    end = 100;
+                                }
+
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+
                                 var match_content = content.substr(start, end);
 
                                 // highlight all keywords
@@ -137,7 +133,13 @@ function searchFunc(path, searchId, contentId) {
                     str += '</ul>';
                     var title = matchCount ? '<h1>找到<em>' + keywords + '</em>相关内容' + matchCount + '个</h1>' : '<h1 class="empty-title">没有找到<em>' + keywords + '</em>相关内容</h1>';
                     str = title + str;
-                    toggleArticleContent(false);
+                    $('#article-main-content').css({
+                        display: 'none'
+                    });
+
+                    $($resultContent).css({
+                        display: 'block'
+                    });
                     $resultContent.innerHTML = str;
                 }, 0);
             });
