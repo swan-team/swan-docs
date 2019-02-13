@@ -704,6 +704,11 @@ article thead tr {
         max-width: 1195px;
         margin: 60px auto 0 auto;
     }
+    .m-doc-license-content {
+        max-width: 1195px;
+        margin: 0 auto;
+        padding: 31px 0;
+    }
 
     article {
         max-width: 900px;
