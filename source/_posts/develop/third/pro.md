@@ -39,7 +39,7 @@ post 数据示例：
   "MsgSignature": "ba394c04acece6c2c0edee058c5dddf82474b8ee"
 }
 ```
-其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/apppage/#附录">附录</a>部分，解密后数据如下：
+其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/deciphering/">附录</a>部分，解密后数据如下：
 ```json
 {
     "Ticket" : "ticket",  //ticket内容
@@ -70,7 +70,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|
-|client_id|	string|	是|	分配给第三方平台key id。|
+|client_id|	string|	是|	分配给第三方平台的 key 。|
 |ticket	|string	|是|	第三方平台服务器推送的 ticket，此 ticket 会定时推送，具体请见“1、 推荐 ticket协议”。|
 返回值说明
 
@@ -145,13 +145,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 将用户浏览器重定向的如下授权页面，生成授权二维码 。
 页面地址
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://cp01-xstp-otp5-4.epc.baidu.com:8220/mappconsole/main/apps&pre\_auth\_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://cp01-xstp-otp5-4.epc.baidu.com:8220/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
 ```
 参数说明
 
 |参数名称|	类型|	是否必须|	描述|
 |---|---|---|---|
-|client_id|	string|	是|	分配给第三方的 client id|
+|client_id|	string|	是|	分配给第三方平台的 key |
 |pre_auth_code	|string	|是	|预授权码|
 |redirect_uri|	string|	是	|回调URI|
 ### 5、授权回调，获取授权码 authorization_code

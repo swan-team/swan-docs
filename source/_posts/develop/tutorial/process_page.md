@@ -84,7 +84,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 用于设置 SWAN 的状态栏、导航条、标题、窗口背景色。
 
-|属性|类型|必填|描述|最低版本|
+|属性|类型|默认值|描述|最低版本|
 |----|----|----|----|----|
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"|-|
 |navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white|-|
