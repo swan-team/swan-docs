@@ -20,7 +20,7 @@ hexo.extend.filter.register('after_post_render', function (data) {
             ignoreWhitespace: false,
             xmlMode: false,
             lowerCaseTags: false,
-            decodeEntities: false
+            decodeEntities: !false
         });
 
         $('img').each(function () {
