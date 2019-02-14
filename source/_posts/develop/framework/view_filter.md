@@ -101,7 +101,7 @@ Filter 的注释与swan模版文件的注释方式相同。
 
 示例代码:
 
-```html
+```
 <!-- <filter module="swan">
     function Foo() {
         return 'programer';
