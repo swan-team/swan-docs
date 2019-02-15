@@ -1,5 +1,5 @@
 ---
-title: 常用共呢
+title: 常用功能
 header: develop
 nav: devtools
 sidebar: smartappdebug_function

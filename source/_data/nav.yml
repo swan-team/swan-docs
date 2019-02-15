@@ -341,7 +341,11 @@
                   -   
                     link: /develop/tutorial/frame/#Okam
                     text: Okam 
-                    name: frame_Okam                                 
+                    name: frame_Okam  
+              -
+                link: /html/third_party/acess-wenjuan/#/wenjuan
+                text: 调查问卷
+                name:                                                   
             
     -
       link: /develop/framework/app_service_register
