@@ -9,6 +9,7 @@ sidebar: move
 ## 介绍
 搬家工具，是基于`Abstract Syntax Tree`开发的辅助工具，可以帮助您把微信小程序的部分代码迁移到百度智能小程序上。工具可进行静态语法上的转换，根据一些规则去转换代码，抹平微信小程序语法和百度智能小程序语法上的差异，为大家减少因平台差异带来的苦恼。
 需要注意的是：工具做不到运行时diff的抹平，也做不到一个API从无到有的过程。所以，需要大家根据转换log，进行二次开发。
+> <a href="https://smartprogram.baidu.com/docs/html/third_party/acess-wenjuan/#/wenjuan/">接入调查问卷</a>
 
 ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/move-tool.gif)
 

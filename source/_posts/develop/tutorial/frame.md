@@ -7,7 +7,8 @@ sidebar: frame
 
 小程序的开发除去常见的原生小程序语法的开发模式，还可以应用层框架开发，用类现代框架 (vue/react) 的语法去开发小程序，提升开发体验和解决跨平台的问题。本文主要讲解如何用常见的小程序框架开发百度小程序。
 
-> 如果遇到相关问题，可以社区里提问或者添加客服微信咨询：`wx2swan-helper`。
+> 1. 如果遇到相关问题，可以社区里提问或者添加客服微信咨询：`wx2swan-helper`。
+> 2. <a href="https://smartprogram.baidu.com/docs/html/third_party/acess-wenjuan/#/wenjuan/">接入调查问卷</a>
 
 ## Taro
 
