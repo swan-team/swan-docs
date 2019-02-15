@@ -1,7 +1,7 @@
 ---
 title: 减减鸭
 header: design
-nav: showcase
+nav: story
 sidebar: light_up
 ---
 “减减鸭”是一款为用户分析压力情况，并帮助用户调节心情、减轻压力的工具类小程序。它运用小程序组件和小程序设计原则，创造了轻松愉悦且易于理解的体验风格。
