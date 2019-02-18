@@ -43,13 +43,17 @@
       name: book
       sidebar:
         -
-            # link: /introduction/access
-            # text: 百度信息流  
+            link: /introduction/access
+            text: 信息流流量接入  
             sidebar:        
               -
                 link: /introduction/feed
                 text: 信息流流量说明  
-                name: feed  
+                name: feed 
+              -
+                link: /introduction/auditing_info
+                text: 信息流素材审核规范
+                name: auditing_info                 
         -
             link: /introduction/intro
             text: 搜索流量接入
@@ -63,23 +67,17 @@
                 text: 接入自然搜索
                 name: rank
         -
+            link: /introduction/baijiahao
+            text: 百家号流量接入
             sidebar:
               -
                 link: /introduction/baijiahao
-                text: 百家号流量接入
+                text: 接入方法
                 name: baijiahao
-        -
-            link: /introduction/auditing
-            text: 素材审核规范
-            sidebar:
-              -
-                link: /introduction/auditing_info
-                text: 信息流素材审核规范
-                name: auditing_info
               -
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
-                name: auditing_baijiahao               
+                name: auditing_baijiahao                              
 
 # 2
 -
