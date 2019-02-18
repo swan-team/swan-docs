@@ -68,6 +68,18 @@
                 link: /introduction/baijiahao
                 text: 百家号流量接入
                 name: baijiahao
+        -
+            link: /introduction/auditing
+            text: 素材审核规范
+            sidebar:
+              -
+                link: /introduction/auditing_info
+                text: 信息流素材审核规范
+                name: auditing_info
+              -
+                link: /introduction/auditing_baijiahao
+                text: 百家号素材审核规范
+                name: auditing_baijiahao               
 
 # 2
 -

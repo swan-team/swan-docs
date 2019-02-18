@@ -276,7 +276,7 @@ Page({
 |show-progress|	Boolean|	true|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|	是否显示全屏按钮|
 |enable-progress-gesture|	Boolean	|true|	是否开启使用手势控制进度|
-|danmu-list|	Object Array|	-	|弹幕列表|
+|danmu-list|	Array.<object>|	-	|弹幕列表|
 |danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|

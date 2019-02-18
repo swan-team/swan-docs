@@ -10,11 +10,11 @@ sidebar: process_page
 
 |属性|类型|必填|描述|
 |----|----|----|----|
-|pages|String Array|是|设置页面路径|
+|pages|Array.<string>|是|设置页面路径|
 |window|Object|否|设置页面展现|
 |preloadRule |Object |否| 分包预下载规则 |
 |tabBar|Object|	否|	底部 tab 栏的表现|
-|subpackages|Object Array|	否|	分包结构配置|
+|subpackages|Array.<object>|	否|	分包结构配置|
 
 <notice>示例： </notice>
 

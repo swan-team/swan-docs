@@ -222,7 +222,7 @@ swan.showModal({
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|itemList |   String Array  |  是 |  按钮的文字数组，数组长度最大为6个|
+|itemList |   Array.<string>  |  是 |  按钮的文字数组，数组长度最大为6个|
 |itemColor |  HexColor|    否   |按钮的文字颜色，默认颜色为“#3c76ff”|
 |success| Function  |  否  | 接口调用成功的回调函数，详见返回参数说明|
 |fail  |  Function |   否  | 接口调用失败的回调函数|

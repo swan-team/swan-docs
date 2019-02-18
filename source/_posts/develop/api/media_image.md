@@ -17,8 +17,8 @@ chooseImage
 |参数 | 类型  |必填 | 说明|
 |---- | ---- | ---- | ----|
 |count  | Number | 否  | 最多可以选择的图片张数，默认 9。|
-|sizeType  |  String Array| 否  | original 原图，compressed 压缩图，默认二者都有。|
-|sourceType | String Array |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
+|sizeType  |Array.<string>| 否  | original 原图，compressed 压缩图，默认二者都有。|
+|sourceType | Array.<object> |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
 |success |Function  |  是 | 成功则返回图片的本地文件路径列表 tempFilePaths。|
 |fail  |  Function |   否  | 接口调用失败的回调函数|
 |complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -31,8 +31,8 @@ chooseImage
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | String Array |图片的本地文件路径列表 。|
-|tempFiles  | Object Array |图片的本地文件列表，每一项是一个 File 对象。|
+|tempFilePaths  | Array.<string> |图片的本地文件路径列表 。|
+|tempFiles  | Array.<object> |图片的本地文件列表，每一项是一个 File 对象。|
 
 **tempFiles 对象结构如下:**
 
@@ -74,7 +74,7 @@ previewImage
 |参数 | 类型 | 必填  |说明|
 |---- | ---- | ---- | ----|
 |current |String | 否  | 当前显示图片的链接，不填则默认为 urls 的第一张。|
-|urls   | String Array |是 |  需要预览的图片链接列表|
+|urls   | Array.<string> |是 |  需要预览的图片链接列表|
 |success| Function |   否  | 接口调用成功的回调函数|
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|

@@ -17,7 +17,7 @@ chooseVideo
 
 |参数 | 类型  |必填 | 说明|
 |---- | ---- | ---- | ----|
-|sourceType | String Array |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
+|sourceType | Array.<string> |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
 |compressed  | Boolean | 否  | 是否压缩所选的视频源文件，默认值为true，需要压缩。|
 |maxDuration  | Number | 否  | 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|
 |success |Function  |  是 | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|

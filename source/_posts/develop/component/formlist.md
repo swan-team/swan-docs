@@ -338,8 +338,8 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | Array/Object Array |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |- |当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | Array/Array.<object> |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |- |当 range 是一个 Array.<object> 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle |-|value 改变时触发 change 事件，event.detail = {value: value}|
 | disabled | Boolean  | false |是否禁用|
@@ -350,8 +350,8 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | 二维 Array/Object Array |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
-| range-key | String |- |当 range 是一个二维 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | 二维 Array/Array.<object> |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range-key | String |- |当 range 是一个二维 Array.<object> 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle |-|某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle |-|value 改变时触发 change 事件，event.detail = {value: value}|
