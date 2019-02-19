@@ -1,7 +1,13 @@
 ### 开发者工具历史更新日志
 
 #### 开发工具下载
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+
+下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.2&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.2&type=online)）进行代码的开发和上传。
+
+#### v1.15.2
+**Bug Fixed**
+- 修复了 webSocket 返回的 ArrayBuffer 被转为 Buffer 的问题。
+- 修复了发布代码时，上传失败，无法关闭弹窗的问题。
 
 #### v1.15.1
 **New Feature**
@@ -9,7 +15,7 @@
 
 **Bug Fixed**
 - 修复项目列表部分项目名不显示问题。
-- 修复了 windows 系统中，使用 unzip 无法正确将 zip 文件解压到目标文件夹的问题。
+- 修复了 Windows 系统中，使用 unzip 无法正确将 zip 文件解压到目标文件夹的问题。
 - 修复收银台样式。
 - 修复分包加载，subPackages 字段和端不一致的问题。
 
