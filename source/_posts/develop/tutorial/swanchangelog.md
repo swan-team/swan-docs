@@ -4,10 +4,18 @@ header: develop
 nav: tutorial
 sidebar: swanchangelog
 ---
+
 ## 3.10版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.105  |2019.2.19|**New**<p>**·**自定义组件中支持使用相对路径动态引用资源；<p>**·**自定义组件内支持支持 hoverclass；<p>**·**app 工程里计算基础路径时支持 http/https 开头的绝对路径。|
+|3.15.104  |2019.2.15|**New**<p>swan上新增nextTick方法。|
+## 3.10版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.10.28   |2019.2.19|**New**<p>自定义组件中支持使用相对路径动态引用资源。|
 |3.10.20|2019.1.10|**New**<p>新增 createARCameraContext。<p>**BugFix**<p>**·**修复 textarea 组件 reset 不生效的问题；<p>**·**修复 canvas 组件不传 canvas-id 则默认隐藏并不创建的问题；<p>**·**修复 scroll-view 滚动异常的问题。<p>**·**修改 swiper 组件 touchcancel 事件两次触发逻辑，调整 touch 事件监听函数命名。|
 |3.10.11|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
 |3.10.4|2018.12.29|**New**<p>新增 API: setBackgroundColor/setBackgroundTextStyle/setInnerAudioOption 。<p>**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
@@ -16,6 +24,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.0.38 |2019.2.19|**New**<p>自定义组件中支持使用相对路径动态引用资源。|
 |3.0.30|2019.1.10|**BugFix**<p>**·**修复 textarea 组件 reset 不生效的问题；<p>**·**修复 canvas 组件不传 canvas-id 则默认隐藏并不创建的问题；<p>**·**修复 scroll-view 滚动异常的问题。<p>**·**修改 swiper 组件 touchcancel 事件两次触发逻辑，调整 touch 事件监听函数命名。|
 |3.0.23|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
 |3.0.20|2018.12.29|**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
