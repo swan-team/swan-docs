@@ -221,7 +221,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel?access_tok
 ```
 ## sendTemplateMessage
 **解释**：推送模板消息
-**接口调用请求说明**：请提前开通权限并创建消息模板。
+**接口调用请求说明**：请提前创建消息模板。
 
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCESS_TOKEN
@@ -264,3 +264,17 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |4003|	表单无效|
 |4004|	场景id无效|
 |6001|	无 push 权限|
+
+## 下发条件说明
+
+### 表单类消息
+
+对于在智能小程序内发生过提交表单行为且该表单声明要发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户在 7 天内推送有限条数的模板消息。
+> 1 次提交表单可下发 1 条，多次提交下发条数独立，相互不影响。
+
+
+
+### 支付类消息
+
+对于在智能小程序内完成过支付行为的用户，可允许开发者向用户在 7 天内推送有限条数的模板消息。       
+> 1 次支付可下发 3 条，多次支付下发的条数独立，互相不影响。
