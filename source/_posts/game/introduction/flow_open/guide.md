@@ -91,6 +91,9 @@ priority: 04-01
 样式、物料类型、代码位比例在用户选择代码位类型后系统默认设置，不可修改。
 
 横幅广告在百度 APP v11.3 以下版本，显示比例为 7:3，在在百度 APP v11.3 及以上版本，显示比例为 3:1。接入横幅广告时，建议兼顾两种样式的显示效果。
+
+横幅广告建议不要在游戏过程中展现，避免影响用户的游戏体验，影响游戏体验的横幅广告可能导致游戏审核被驳回。
+
 ![](/img/game/introduction/flow_open/flow_open015.png)
 ![](/img/game/introduction/flow_open/flow_open016.png)
 ![](/img/game/introduction/flow_open/flow_open017.png)
