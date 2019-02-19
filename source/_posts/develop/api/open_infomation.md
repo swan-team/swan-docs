@@ -221,7 +221,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel?access_tok
 ```
 ## sendTemplateMessage
 **解释**：推送模板消息
-**接口调用请求说明**：请提前创建消息模板。
+**接口调用请求说明**：请提前在开发者平台创建消息模板。
 
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCESS_TOKEN
