@@ -5,13 +5,13 @@ nav: tutorial
 sidebar: swanchangelog
 ---
 
-## 3.10版本日志更新
+## 3.15 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
 |3.15.105  |2019.2.19|**New**<p>**·**自定义组件中支持使用相对路径动态引用资源；<p>**·**自定义组件内支持支持 hoverclass；<p>**·**app 工程里计算基础路径时支持 http/https 开头的绝对路径。|
 |3.15.104  |2019.2.15|**New**<p>swan上新增nextTick方法。|
-## 3.10版本日志更新
+## 3.10 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -20,7 +20,7 @@ sidebar: swanchangelog
 |3.10.11|2019.1.04|**BugFix**<p>**·**修复 v8/jsc 运行环境下 setTimeout/setInterval 多参数调用失效问题；<p>**·**修复 swiper 组件由隐藏变为展现时，autoplay 不生效的问题；<p>**·**修复 轮播图上下滑动后 autoplay 不生效的问题。|
 |3.10.4|2018.12.29|**New**<p>新增 API: setBackgroundColor/setBackgroundTextStyle/setInnerAudioOption 。<p>**BugFix**<p>**·**修复 movable-view 组件 touchend 事件不触发的问题；<p>**·**修复 外层绑定bindlongpress，内层绑定bandtap，点击一下，会同时执行这两个事件；<p>**·**修复无分包小程序首屏生命周期路由问题；<p>**·**解决小程序页面重复渲染的问题。|
 
-## 3.0版本日志更新
+## 3.0 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -33,7 +33,7 @@ sidebar: swanchangelog
 |3.0.12|2018.12.18|**BugFix**<p>map组件创建报错修复。|
 |3.0.10|2018.12.16|**New**<p>	对于使用 Component 构造器构造的页面，新增页面级生命周期，并支持页面跳转query传参。|
 |3.0.2|2018.12.11|**New**<p>**·**端菜单栏新增重启小程序功能，调用onForceReLaunch生命周期；<p>**·**animation-view 组件：添加bindended回调；端上多实例支持；touch事件新增；<p>**·**canvasContext.draw 支持 callback。<p>**BugFix**<p>**·** 修复 ontabitemtap 首次点击不触发的问题；<p>**·** 修复 textarea 组件 max-height 属性不生效的问题；<p>**·** 修复 textarea 组件 粘贴/剪切后，组件高度异常的问题。|
-## 2.15版本日志更新
+## 2.15 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -48,7 +48,7 @@ sidebar: swanchangelog
 |2.15.7|2018.12.03|**BugFix**<p>**·**修复 input 组件在失焦后，开发者设置 focus 属性不生效的问题 ；<p>**·**修复ios下scroll-view组件的弹性运动和webview的scroll事件冲突而导致组件无法滑动的问题 。|
 |2.15.5|2018.11.30|**Breaking Change** <p>button type为primary和warn去掉边框。 <p>**BugFix**<p>修复slider backgroundColor设置transparent无效的问题。|
 
-## 2.10版本日志更新
+## 2.10 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -66,7 +66,7 @@ sidebar: swanchangelog
 |2.10.9|2018.11.22|**New**<p>**·** image 加载增加 catch；<p>**·** animation step方法支持链式调用；<p>**·** video 组件 ios h5占位图增加poster。<p>**Breaking Change** <p>**·** extension 路径优化，通用端能力注册；<p>**·** button组件type为primary和warn时去掉黑框描边；<p>**·** video组件使用s-if显示视频时发送两次open优化为发一次；<p>**·** video组件android去掉针对10.8.5低版本patch。<p>**BugFix**<p>**·** 修复appOnshow和pageOnload乱序bug；<p>**·** 修复onPageNotFound；<p>**·** video组件android上去掉所有手势后绑定bindpaly等非touch事件滑动视频页面不能滑动的bug。|
 |2.10.7|2018.11.20|**New**<p>**·**自定义组件新增内置方法groupSetData；<p>**·**app onShow新增展现来源entryType及调起协议appURL。<p>**Breaking Change** <p>**·**分享自定义白名单更新；<p>**·** swiper 组件前后边距支持rpx ；<p>**·** 登录、支付相关API时长打点。<p>**BugFix**<p>**·** 自定义组件setData通知页面更新优化；<p>**·** 修复分享onShareAppMessage(e)中from参数嵌套了两层的错误；<p>**·**修复onPageNotFound兼容性问题；<p>**·** 修复setStorageSync 存入值为0时 取出结果不符的问题；<p>**·** scroll-view兼容安卓下拉刷新冲突。|
 
-## 2.5版本日志更新
+## 2.5 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -82,7 +82,7 @@ sidebar: swanchangelog
 |2.5.3|2018.11.5|**New**<p>**·** 自定义组件新增内置方法createSelectorQuery, createIntersectionObserver；<p>**·** template模版支持filter过滤器。<p>**Breaking Change** <p>getVoiceRecognizer 由单例修改为多例。<p>**BugFix** <p>**·**修复组件创建、API 调用时序问题；<p>**·**修复 input 组件修改 placeholder-class 后，样式未生效的问题。|
 |2.5.2|2018.11.2|**New**<p>增加自定义组件property的类型默认值。|
 
-## 2.0版本日志更新
+## 2.0 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -106,7 +106,7 @@ sidebar: swanchangelog
 |2.0.2|2018.10.22|**New**<p>**·** 分享 ICON 优化；<p>**·** button组件支持调起客服；<p>**·** getImageInfo 支持相对路径和网络图片。|
 <!-- <p>**·** 新增 API getVoiceManger； -->
 
-## 1.13版本日志更新
+## 1.13 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -123,7 +123,7 @@ sidebar: swanchangelog
 |1.13.7|2018.09.21|**New**<p>**·**button组件支持设置openType为openSetting；<p>**·**input 组件支持设置身份证输入键盘。<p>**Breaking Change**<p>**·**兼容cover-view，cover-image未创建成功立刻移除的场景;<p>**·**swiper兼容客户端下拉刷新；<p>**·**slider组件重构，使用computed梳理冗余代码。<p>**BugFix**<p>video传唯一id，修复视频闪动问题。|
 |1.13.4|2018.09.17|**New**<p>**·** 新增API：isLoginSync、preloadSubPackage、getUpdateManager;<p>**·** showToast新增mask、image属性;<p>**·** createLivePlayerContext新增pause、resume属性;<p>**·** 新增调起广告落地页能力。 <p>**Breaking Change**<p>**·** showToast icon默认值由none改为success;<p>**·** live-player、video、map、camera、ARCamera、webview事件参数补齐;<p>**·** iPhoneX适配。|
 
-## 1.12版本日志更新
+## 1.12 版本日志更新
 |版本号|更新日期|更新内容|
 |----|----|----|
 |1.12.43|2018.11.9|**BugFix**<p>解除低版本自定义组件循环依赖的报错。|
@@ -139,7 +139,7 @@ sidebar: swanchangelog
 |1.12.7|2018.09.1|**New**<p>**·** H5长按事件支持捕获、冒泡；<p>**·** H5 组件添加transitionend/animationstart/animationiteration/animationend 事件；<p>**·** H5 组件只绑定一个捕获事件不生效。<p>**BugFix**<p>**·** 修复分享面板调起时回调 success 的问题；<p> **·** 修复 video 切换视频从中间播放的问题；<p> **·** 修复 camera 组件 hidden 属性切换，由隐藏变展示不能再出现的问题；<p> **·** 修复了搜索结果页跳转后，调用 switchTab 的 bug；<p> **·** 修复 setData 后 audio 组件音频暂停播放的 bug；<p> **·** 修复 cover-view 组件 padding 渲染异常的 bug；<p> **·** 修复搜索二级页面，switchTab 报错的问题；<p> **·** 修复allowcrossorigin 方法没挂上的问题。|
 |1.12.2|2018.08.2|**New**<p>音频 seek 方法支持 number 参数。<p>**BugFix**<p> **·** 修复H5手势事件多手指同时点击触发多次事件问题；<p> **·** 修复rich-text组件nodes属性传字符串，不能设置class和style等属性问题。|
 
-## 1.11版本日志更新
+## 1.11 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
@@ -155,7 +155,7 @@ sidebar: swanchangelog
 |1.11.2|2018.08.09|**BugFix**<p>修复组件id不能通过变量设置为0的问题。|
 |1.11.1|2018.08.07|**New**<p>**·** setData数据流性能优化;<p>**·** video支持hidden属性；<p>**·**a d 组件打点增加滚动监控 。<p>**BugFix** <p>**·** 修复 textarea 组件在 auto-height 为 true ，且在内联样式中设置高度时，高度自适应不生效的 bug; <p>**·** 修复track-log组件不发请求bug; <p>**·** 修复image组件报错BUG; <p>**·** 修复自定义组件属性变更不触发master中变更bug; <p>**·** 修复 第一次切换tab时onTabItemTap生命周期回调回参为undefined 的bug; <p>**·** 修复swan-events文件引用bug。|
 
-## 1.10版本日志更新
+## 1.10 版本日志更新
 |版本号|更新日期|更新内容|
 |----|----|----|
 |1.10.37|2018.10.10|**BugFix**<p>修复低版本自定义组件class不生效的bug。|
