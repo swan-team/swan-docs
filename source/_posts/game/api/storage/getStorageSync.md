@@ -9,12 +9,10 @@ priority: 09-02
 从本地缓存中同步获取指定 key 对应的内容。
 
 ```js
-swan.getStorageSync(string)
+swan.getStorageSync(key)
 ```
-
 **参数值：**
-
-|属性|类型|是否必填|描述|
+|参数|类型|是否必填|描述|
 |-|-|-|-|
 |key|string|是|本地缓存中指定的 key|
 

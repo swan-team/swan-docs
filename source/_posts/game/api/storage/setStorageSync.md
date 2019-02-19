@@ -9,12 +9,12 @@ priority: 09-06
 将数据同步存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。
 
 ```js
-swan.setStorageSync(opts)
+swan.setStorageSync(key, data)
 ```
 
 **参数值：**
 
-|属性|类型|是否必填|描述|
+|参数|类型|是否必填|描述|
 |-|-|-|-|
 |key|string|是|本地缓存中指定的 key|
 |data|any ( **function** <span class="vsplit"></span> **ArrayBuffer**<span class="vsplit"></span> **undefined 请关注下方的特别说明** )|是|需要存储的内容|
