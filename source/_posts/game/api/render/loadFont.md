@@ -3,7 +3,7 @@ title: 字体
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-05
+priority: 09-05
 ---
 
 ### swan.loadFont()

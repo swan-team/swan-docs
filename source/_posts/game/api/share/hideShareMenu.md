@@ -3,7 +3,7 @@ title: swan.hideShareMenu()
 layout: gamedoc
 topic: share
 categoryName: api
-priority: 09-03
+priority: 10-03
 ---
 
 隐藏当前页面的转发按钮。

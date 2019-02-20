@@ -3,7 +3,7 @@ title: BannerAd
 layout: gamedoc
 topic: ad
 categoryName: api
-priority: 10-02
+priority: 07-02
 ---
 
 <!-- md game/api/adApi/_bannerAd/show.md -->

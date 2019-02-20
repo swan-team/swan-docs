@@ -3,7 +3,7 @@ title: RewardedVideoAd
 layout: gamedoc
 topic: ad
 categoryName: api
-priority: 10-04
+priority: 07-04
 ---
 
 

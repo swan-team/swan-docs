@@ -4,5 +4,5 @@ layout: doc
 topic: reportAnalytics
 level: root
 categoryName: api
-priority: 15-00
+priority: 17-00
 ---

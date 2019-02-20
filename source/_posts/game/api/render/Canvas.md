@@ -3,7 +3,7 @@ title: Canvas
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-02
+priority: 09-02
 ---
 
 

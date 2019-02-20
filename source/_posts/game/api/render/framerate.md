@@ -3,7 +3,7 @@ title: 帧率
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-07
+priority: 09-07
 ---
 
 ### swan.setPreferredFramesPerSecond(number fps)

@@ -3,7 +3,7 @@ title: swan.getStorage()
 layout: gamedoc
 topic: storage
 categoryName: api
-priority: 09-01
+priority: 05-01
 ---
 
 从本地缓存中异步获取指定 key 对应的内容。
