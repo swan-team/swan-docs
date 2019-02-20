@@ -12,6 +12,7 @@
 .m-doc-content-wrap {
     margin-top: 60px;
     padding: 0 80px;
+    min-height: calc(100vh - 60px - 90px) ;
 }
 
 /* 右下菜单样式 */
@@ -659,6 +660,8 @@ article thead tr {
     .m-doc-content-wrap {
         position: static;
         padding: 0 40px;
+        margin-top: 0;
+        min-height: calc(100vh - 60px - 118px) ;
     }
 
     article table th {
