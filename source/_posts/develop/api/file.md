@@ -116,7 +116,7 @@ getSavedFileList
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
-|fileList  | Array.<object> | 文件列表|
+|fileList  | ` Array.<object> ` | 文件列表|
 
 **fileList中的项目说明：**
 

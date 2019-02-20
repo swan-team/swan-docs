@@ -14,7 +14,7 @@ sidebar: process_page
 |window|Object|否|设置页面展现|
 |preloadRule |Object |否| 分包预下载规则 |
 |tabBar|Object|	否|	底部 tab 栏的表现|
-|subpackages|Array.<object>|	否|	分包结构配置|
+|subpackages|` Array.<object> `|	否|	分包结构配置|
 
 <notice>示例： </notice>
 
