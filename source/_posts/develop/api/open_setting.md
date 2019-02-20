@@ -27,7 +27,7 @@ openSetting
 
 
 **示例：**
-<a href="swanide://fragment/c98e352530eff43e682256b45b50d2721540396878" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/c98e352530eff43e682256b45b50d2721540396878" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```js
 swan.openSetting({
     success: function (res) {

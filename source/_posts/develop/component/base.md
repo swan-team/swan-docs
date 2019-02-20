@@ -18,7 +18,7 @@ sidebar: base
 
 
 **示例**： 
-<a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <view class="group">
     <view>
@@ -74,7 +74,7 @@ Page({
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <view class="wrap">
 	<text>{{text}}</text>
@@ -249,7 +249,7 @@ Page({
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例：**
-<a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <!-- progress.swan -->
 <view class="section">

@@ -52,8 +52,8 @@ sidebar: custom-component
 
 组件的属性值和内部数据将被用于组件 swan 模板的渲染，其中，属性是可以由组件外部传入的。
 
-**<div class="notice">示例： </div>**
-<a href="swanide://fragment/c851a80326f0155bc18f1461f0fabdea1545207439099" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- **<div class="notice">示例： </div>**
+<a href="swanide://fragment/c851a80326f0155bc18f1461f0fabdea1545207439099" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```js

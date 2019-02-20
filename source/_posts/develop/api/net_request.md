@@ -43,7 +43,7 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 **示例 1**
-<a href="swanide://fragment/ea0f77c0b00c111f9a4ed3f269412d861540397106" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/ea0f77c0b00c111f9a4ed3f269412d861540397106" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```js
 swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址

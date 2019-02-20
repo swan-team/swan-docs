@@ -99,7 +99,7 @@ getUserInfo
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
 **示例：**
-<a href="swanide://fragment/d12f967d05c0b93ac15d66d138658d9b1540398240" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/d12f967d05c0b93ac15d66d138658d9b1540398240" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```js
 swan.getUserInfo({
     success: function (res) {

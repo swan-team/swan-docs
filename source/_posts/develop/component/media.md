@@ -37,7 +37,7 @@ sidebar: media
 |4|不支持音频|
 
 **示例：**
-<a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<!-- <a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
@@ -116,7 +116,7 @@ image 组件默认宽度 300px、高度 225px。
 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 
 **示例：**
-  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+  <!-- <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <view class="wrap">
     <view>
@@ -291,7 +291,7 @@ Page({
 `<video />` 默认宽度 300px、高度 225px
 
 **示例：**
-<a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```xml
@@ -521,7 +521,7 @@ Page({
 
 **示例：**
 
-<a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<!-- <a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
 
 ```css
 .wrap {

@@ -18,7 +18,7 @@ onCompassChange
 |direction |Number |面对的方向度数|
 
 **示例：**
-<a href="swanide://fragment/1e98ee9687ed0c6b0f9cb4c747af8b7c1540398490" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/1e98ee9687ed0c6b0f9cb4c747af8b7c1540398490" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 ```javascript
 swan.onCompassChange(function (res) {

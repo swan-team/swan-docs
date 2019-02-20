@@ -63,7 +63,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -107,7 +107,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -186,7 +186,7 @@ Page({
 
 
 示例：
-<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -260,8 +260,8 @@ Page({
 | done |右下角按钮为 “完成” |
 
 **示例**：
-<a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-</a>
+<!-- <a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a> -->
 ```xml
 <!-- input.swan -->
 <view class="section">
@@ -288,7 +288,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |-----|--- |--- |
 |for|String|绑定控件的 id|
 **示例**：
-<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 ```
 <view class="section">
@@ -379,7 +379,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |day |选择器粒度为天|
 
 **示例**：
-<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -556,7 +556,7 @@ Page({
 | color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
 
 **示例**： 
-<a href="swanide://fragment/a6506042f44f66d158d733ceb336504e1540395739" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/a6506042f44f66d158d733ceb336504e1540395739" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```xml
 <radio-group bindchange="radioChange">
     <label s-for="item in items">
@@ -619,7 +619,7 @@ Page({
 |bindchanging |EventHandle |-  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例：**
-<a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```xml
@@ -693,7 +693,7 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/429b88b3cb4862e1392395536a2ffd941540395596" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<!-- <a href="swanide://fragment/429b88b3cb4862e1392395536a2ffd941540395596" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
 ```xml
 <!-- swith.swan -->
 <form bind:submit="formSubmit">
@@ -754,7 +754,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
 
 **示例代码**：
-<a href="swanide://fragment/ecb898c32b2c234043c55e7b67664deb1540395947" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/ecb898c32b2c234043c55e7b67664deb1540395947" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```html
 <!--textarea.swan-->
 <view class="section">

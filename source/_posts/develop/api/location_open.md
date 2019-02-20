@@ -24,7 +24,7 @@ openLocation
 |complete  | Function |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-<a href="swanide://fragment/8dfef443454866063515a1c3192982281548068706910" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/8dfef443454866063515a1c3192982281548068706910" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 ```js
 swan.getLocation({

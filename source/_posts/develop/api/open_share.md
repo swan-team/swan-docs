@@ -34,7 +34,7 @@ onShareAppMessage
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-<a href="swanide://fragment/5ade9255636e820034fd14dee1d9a1ef1540396560" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/5ade9255636e820034fd14dee1d9a1ef1540396560" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```javascript
 Page({
     onShareAppMessage() {

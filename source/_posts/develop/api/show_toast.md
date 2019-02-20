@@ -34,7 +34,7 @@ showToast
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
 **示例：**
-<a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 ```js
 swan.showToast({
     title: '我是标题',
@@ -110,8 +110,8 @@ showModal
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
 **示例：**
-<a href="swanide://fragment/553a0685c5979cfe831b1178661476001540395468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-        </a>
+<!-- <a href="swanide://fragment/553a0685c5979cfe831b1178661476001540395468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a> -->
 ```js
 swan.showModal({
     title: '提示',
@@ -152,7 +152,7 @@ showActionSheet
 
 
 **示例：**
-<a href="swanide://fragment/cb742037e729ede5fd6efe8967dfd55f1540397056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/cb742037e729ede5fd6efe8967dfd55f1540397056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```js

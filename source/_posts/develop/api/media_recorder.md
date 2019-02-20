@@ -56,7 +56,7 @@ getRecorderManager
 |errMsg |String | 错误信息 |
 
 **示例：**
-<a href="swanide://fragment/e58b40296c7b21d2b18f1792ffc30ae01540398986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/e58b40296c7b21d2b18f1792ffc30ae01540398986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```javascript

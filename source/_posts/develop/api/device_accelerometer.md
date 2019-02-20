@@ -20,7 +20,7 @@ sidebar: device_accelerometer
 |z |Number |Z 轴|
 
 **示例：**
-<a href="swanide://fragment/0408f2415879e6fda656fd9f627e2ed81540399039" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<!-- <a href="swanide://fragment/0408f2415879e6fda656fd9f627e2ed81540399039" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
 
 
 ```javascript
