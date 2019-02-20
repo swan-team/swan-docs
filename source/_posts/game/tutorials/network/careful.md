@@ -4,7 +4,7 @@ title: 网络的注意事项
 layout: gamedoc
 categoryName: tutorials
 topic: network
-priority: 07-01
+priority: 09-01
 ---
 
 在小游戏/小游戏中使用网络相关的 API 时，需要注意下列问题，请开发者提前了解。

@@ -3,7 +3,7 @@ title: 接入百度收银台常见问题
 layout: gamedoc
 categoryName: tutorials
 topic: faq
-priority: 12-01
+priority: 12-02
 ---
 1. 调起百度收银台的全参数大小写敏感；
 2. tpOrderId 不能重复；

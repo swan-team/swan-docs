@@ -4,7 +4,7 @@ title: 关系链数据使用指南
 layout: gamedoc
 categoryName: tutorials
 topic: open_api
-priority: 05-01
+priority: 07-01
 ---
 
 一个百度用户的关系链数据目前包括：

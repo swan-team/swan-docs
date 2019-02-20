@@ -5,7 +5,7 @@ layout: gamedoc
 categoryName: tutorials
 topic: version
 draft: true
-priority: 11-02
+priority: 04-02
 ---
 
 <!--  待 pm 确认后再展现给用户 -->

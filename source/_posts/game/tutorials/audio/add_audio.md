@@ -4,7 +4,7 @@ title: 如何添加音频
 layout: gamedoc
 categoryName: tutorials
 topic: audio
-priority: 09-01
+priority: 11-01
 ---
 
 音频是游戏不可或缺的一部分，合理地使用可以使游戏如虎添翼。

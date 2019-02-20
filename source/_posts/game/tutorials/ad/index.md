@@ -5,7 +5,7 @@ layout: gamedoc
 categoryName: tutorials
 level: root
 topic: ad
-priority: 08-00
+priority: 10-00
 ---
 
 

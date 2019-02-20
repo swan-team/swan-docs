@@ -5,7 +5,7 @@ layout: gamedoc
 categoryName: tutorials
 level: root
 topic: open_api
-priority: 05-00
+priority: 07-00
 ---
 
 

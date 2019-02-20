@@ -3,7 +3,7 @@ title: 小游戏版本兼容
 layout: gamedoc
 categoryName: tutorials
 topic: version
-priority: 11-03
+priority: 04-03
 ---
 
 随着小游戏不断支持更多的功能，旧版本的客户端可能会出现不支持新增功能的情况，因此在使用新增功能时需做兼容性处理。

@@ -4,7 +4,7 @@ title: 登录授权流程说明
 layout: gamedoc
 categoryName: tutorials
 topic: open_api
-priority: 05-02
+priority: 07-02
 ---
 
 
