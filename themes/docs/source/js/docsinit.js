@@ -9,6 +9,20 @@
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+
+        '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
+        '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
+        '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
+        '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
+
+        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
+        '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
+        '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
+        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/ad/',
+        '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/game/api/ad/bannerAd/': '/docs/game/api/adApi/bannerDoc/',
+        '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
+        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -145,7 +159,7 @@
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
 
-            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。' 
+            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
             + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
             + '</a>'
@@ -220,7 +234,7 @@
                     timeout = setTimeout(later, remaining);
                 }
                 return result;
-            };        
+            };
         },
 
         initCrumbs: function () {
@@ -371,7 +385,7 @@
                 var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
                 var scrollHeight = $(this)[0].scrollHeight;
                 var clientHeight = $(this)[0].clientHeight;
-                
+
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
                     if (h2Top <= 80) {
