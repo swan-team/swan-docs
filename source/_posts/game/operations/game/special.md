@@ -2,11 +2,10 @@
 title: 百度小游戏特别规范
 layout: gamedoc
 categoryName: operations
-sidebar: specification
+sidebar: special
 topic: game
 priority: 02-01
 ---
-
 
 **小游戏指选择小程序游戏类目并提供游戏服务的小程序。小游戏开发者需遵守以下小游戏特别规范内容：**
 

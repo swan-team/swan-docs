@@ -2,7 +2,7 @@
 title: 第三方平台开发者服务协议
 layout: gamedoc
 categoryName: operations
-sidebar:  thirdparty
+sidebar: agreement
 topic: thirdparty
 priority: 03-01
 ---

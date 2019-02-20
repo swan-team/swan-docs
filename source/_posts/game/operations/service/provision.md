@@ -2,7 +2,7 @@
 title: 服务条款
 layout: gamedoc
 categoryName: operations
-sidebar: service
+sidebar: provision
 topic: service
 priority: 01-02
 ---
