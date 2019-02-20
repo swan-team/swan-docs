@@ -72,3 +72,26 @@
     %></ul>
     <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
 </div>
+
+<div class="mobile-navbar-selected">
+    <span>
+    <% switch(page.categoryName) {
+        case 'introduction': %>
+            介绍
+            <% break; %>
+        <% case 'api': %>
+            API
+            <% break; %>
+        <% case 'tutorials': %>
+            教程
+            <% break; %>
+        <% case 'data': %>
+            数据
+            <% break; %>
+        <% case 'operations': %>
+            运营
+            <% break; %>
+    <% } %>
+    </span>
+    <%- image_tag('img/arrow-open.png') %>
+</div>

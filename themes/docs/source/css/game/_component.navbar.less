@@ -152,9 +152,6 @@
         .m-doc-header-nav-selected {
             background-color: rgba(255, 255, 255, 0.15);
 
-            &:hover {
-                background-color:#181818;
-            }
             a {
                 color:#fff;
             }
@@ -288,6 +285,15 @@ header .m-doc-logo-line {
     .p-navbar-menu .mobile-navbar-selected-list-show {
         display: block;
         width: 240px;
+        background-color: #000;
+
+        li:hover {
+            background-color:#181818;
+
+            a {
+                background-color: none;
+            }
+        }
     }
     .p-navbar-menu .mobile-navbar-selected {
         color: #fff;
@@ -300,6 +306,7 @@ header .m-doc-logo-line {
         span {
             vertical-align: middle;
             display: inline-block;
+
         }
         img {
             vertical-align: middle;
