@@ -2,7 +2,6 @@
 title: console
 layout: gamedoc
 topic: debug
-draft: true
 categoryName: api
 ---
 

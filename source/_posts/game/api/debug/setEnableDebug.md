@@ -2,7 +2,6 @@
 title: swan.setEnableDebug()
 layout: gamedoc
 topic: debug
-draft: true
 categoryName: api
 ---
 
