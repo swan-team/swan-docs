@@ -3,6 +3,7 @@ title: swan.loadSubpackage
 layout: gamedoc
 topic: subpackages
 categoryName: api
+priority: 03-01
 ---
 
 ### swan.loadSubpackage()

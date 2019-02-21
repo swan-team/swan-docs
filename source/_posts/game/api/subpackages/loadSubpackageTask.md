@@ -3,6 +3,7 @@ title: LoadSubpackageTask
 layout: gamedoc
 topic: subpackages
 categoryName: api
+priority: 03-02
 ---
 
 加载分包的任务，用于获取分包加载状态。
