@@ -2,7 +2,8 @@
 title: 智能小程序体验设计指南
 layout: gamedoc
 header: design
-nav: overview
+topic: overview
+categoryName: design
 sidebar: introduction
 priority: 00-01
 ---
