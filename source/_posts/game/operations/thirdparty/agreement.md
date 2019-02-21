@@ -117,7 +117,7 @@ priority: 03-01
 
     5. 5.8  您在为不同的智能小程序提供智能小程序第三方平台时，应当对您的包括但不限于组织机构内部架构、开发运营人员、信息存储机制等进行合法、合理、有效的隔离机制，不得以任何方式擅自整合、共享、编辑、使用、处理任何用户数据或开放平台运营数据。若发生或可能发生任何数据泄漏、被披露等问题，应当立即以合法、有效的方式，书面通知百度，并百度有权立即暂停、中止向您提供本服务，亦有权要求您限期采取有效的方式删除相关数据。
 
-    5. 5.9  您同意遵守[《智能小程序平台服务条款》](https://smartprogram.baidu.com/docs/operations/service/)[《百度用户协议》](https://passport.baidu.com/static/passpc-account/html/protocal.html)、[《百度公司移动应用软件服务协议》](https://s.bdstatic.com/common/agreement/ios.html)、[《百度公司移动应用隐私政策》](https://s.bdstatic.com/common/agreement/privacy.html)中关于用户数据和个人数据的规则的全部规定，并且上述规定适用于本协议。
+    5. 5.9  您同意遵守[《智能小程序平台服务条款》](https://smartprogram.baidu.com/docs/operations/service/)、[《百度用户协议》](https://passport.baidu.com/static/passpc-account/html/protocal.html)、[《百度公司移动应用软件服务协议》](https://s.bdstatic.com/common/agreement/ios.html)、[《百度公司移动应用隐私政策》](https://s.bdstatic.com/common/agreement/privacy.html)中关于用户数据和个人数据的规则的全部规定，并且上述规定适用于本协议。
 
     5. 5.10 除非百度有专门提供的官方工具、渠道、功能，否则，您不得以任何形式向用户收集、获取或要求用户以任何形式提供、填写、透露其包括但不限于帐号密码等关键敏感的参数、权限或数据。
 6.  您对智能小程序第三方平台的运营，应遵守《智能小程序平台运营规范》 中条款的约定。
