@@ -3,6 +3,7 @@ title: 层次感
 layout: gamedoc
 header: design
 topic: principle
+categoryName: design
 sidebar: hierarchical
 priority: 01-02
 ---
@@ -55,7 +56,7 @@ priority: 01-02
 
 在用户使用小程序时，会出现需要等待的场景。用户的耐心非常宝贵，为避免让用户面对一个静止的屏幕等待未知的结果，需要对当前状态及时反馈，告知用户当前小程序仍在正常运作，能降低用户使用过程中等待的焦虑感。
 <br></br>
-### 框架启动加载
+#### 框架启动加载
 <div class="m-doc-custom-text-image">
  	<div>启动小程序框架时，加载反馈动画与百度 App 通用加载动画不同，更突出小程序的品牌和特性。
 
@@ -66,7 +67,7 @@ priority: 01-02
 	</div>
 </div>
 
-### 全局加载反馈
+#### 全局加载反馈
 百度小程序提供通用加载的组件，也可以由开发者自己根据品牌定义加载样式。但此时无法明确告知具体加载位置和进度，**自行设计时请注意设计加载动画，避免页面静止从而引起用户焦虑**。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -77,7 +78,7 @@ priority: 01-02
 	</div>
 </div>
 
-### 下拉加载反馈
+#### 下拉加载反馈
 百度小程序提供通用的下拉加载组件，使用此组件后，当用户下拉页面至一定高度时，可以触发当前页面的整体刷新。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -85,7 +86,7 @@ priority: 01-02
 	</div>
 </div>
 
-### 内容选择反馈
+#### 内容选择反馈
 用于页面内某个选项或输入区做出的用户选择的状态，并在当前操作区域反馈其选择状态,详见[选择](../../component/selection)。
 
 <div class="m-doc-custom-examples">
@@ -117,20 +118,20 @@ priority: 01-02
 	</div>
 </div>
 
-### 操作结果反馈
+#### 操作结果反馈
 同一时间只显示一个反馈提示，并且应该根据不同的场景和反馈需要的强弱程度选择不同样式。
 <br>
 
-#### 反馈提示 Toast
+##### 反馈提示 Toast
 不打断用户流程，会自动消失，适用于轻量级的提示，详见[反馈提示](../../component/toast)。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="/img/game/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文Toast 适用于操作成功反馈。
-		2.纯文Toast 适用于情况说明和提醒。</p>
+		<img src="/img/game/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文 Toast 适用于操作成功反馈。
+		2.纯文 Toast 适用于情况说明和提醒。</p>
 	</div>
 </div>
 
-#### 提示框 Dialog
+##### 提示框 Dialog
 作为模态组件，会打断用户路径并分散用户的注意，请谨慎使用，详见[提示框](../../component/dialog)。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">

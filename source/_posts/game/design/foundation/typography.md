@@ -3,6 +3,7 @@ title: 阅读排版
 layout: gamedoc
 header: design
 topic: foundation
+categoryName: design
 sidebar: typography
 priority: 02-02
 ---
@@ -63,7 +64,7 @@ priority: 02-02
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/game/design/foundation/typography/9.png">
-		<p class="m-doc-custom-examples-text">注：建议阅读文本使用20px及以上，可点击文本按钮使用24px及以上。</p>
+		<p class="m-doc-custom-examples-text">注：建议阅读文本使用 20px 及以上，可点击文本按钮使用 24px 及以上。</p>
 	</div>
 </div>
 

@@ -3,6 +3,7 @@ title: 顶部导航栏
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: topnav
 priority: 03-01
 ---
@@ -28,17 +29,17 @@ priority: 03-01
 	</div>
 </div>
 
-### 1. 容器
+#### 1. 容器
 容器承载了顶部导航栏的功能，为其明确了导航区域。
 顶部导航栏容器默认背景白色，开发者也可以配置相应的颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="/img/game/design/component/topnav/3.png"><p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
-iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
+		<img src="/img/game/design/component/topnav/3.png"><p class="m-doc-custom-examples-text">普通手机（1）和 iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
+iOS 状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-### 2. 框架内部导航功能区
+#### 2. 框架内部导航功能区
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>当用户处于小程序首页时，此区域不展现任何功能。
@@ -53,7 +54,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 </div>
 
 
-### 3. 页面标题
+#### 3. 页面标题
 页面标题用于辅助和指示用户当前的位置，它通常描述当前页面/功能名称，或当前智能小程序的名称。
 顶部导航栏默认展现页面标题，开发者也可以选择将其隐藏。
 当标题过长时自动截断，但截断可能会导致用户误解。为保证主流机型显示，设计建议页面标题不超过8个中文字符。
@@ -68,7 +69,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-### 4. 框架控制功能区
+#### 4. 框架控制功能区
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>此区域为所有的小程序统一提供：
@@ -81,11 +82,11 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 </div>
 
 ## 自定义顶部导航栏
-> 百度App v11.1及以上版本的智能小程序，支持自定义顶部导航栏，使其只保留框架控制功能区。
+> 百度 App v11.1 及以上版本的智能小程序，支持自定义顶部导航栏，使其只保留框架控制功能区。
 
 使用自定义导航栏前，请了解透明框架的[页面布局](../../foundation/layout)基础，此时原生顶部导航栏中的容器、框架内部导航功能区、页面标题均不展示，开发者可自定义当前页面的顶部导航栏。
 
-我们建议，在使用自定义导航栏时，通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
+我们建议，在使用自定义导航栏时，通过系统信息接口 [getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync) 获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -104,8 +105,8 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏高度一致（iOS为44pt，Android为38pt）。
-技术实现请参考开发文档[全局配置](../../../develop/tutorial/process_page/#window)章节。
+自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏高度一致（iOS 为 44pt，Android 为 38pt）。
+技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process_page/#window)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -122,7 +123,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 
 ## 个性定制
 
-### 黑色元素
+#### 黑色元素
 默认顶部导航栏元素为黑，状态栏颜色跟随；容器背景默认为白色，但可被配置。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
@@ -142,7 +143,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-### 白色元素
+#### 白色元素
 顶部导航栏元素配置为白时，状态栏颜色跟随；容器背景可被配置。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">

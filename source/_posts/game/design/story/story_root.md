@@ -1,5 +1,5 @@
 ---
-title: 资源下载
+title: 设计故事
 layout: gamedoc
 categoryName: design
 level: root

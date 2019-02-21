@@ -1,8 +1,9 @@
 ---
-title: 选择组件
+title: 选择
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: selection
 priority: 03-04
 ---
@@ -27,7 +28,7 @@ priority: 03-04
 ## 浮层选择器
 浮层选择器用于承载选项较多的列表，通常在底部显示并固定高度展现。当列数不唯一时，用户在前列选择会对后列选项会产生约束和影响。
 自定义配置：
-1. 选项列数（1-3列），各列选项内容；
+1. 选项列数（1~3 列），各列选项内容；
 2. 用于时间选择场景时，可配置日期（年月日），时间（分秒）。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct ">

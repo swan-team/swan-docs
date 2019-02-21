@@ -1,6 +1,6 @@
 ### removeUserStorage
 
-小游戏可以通过本接口删除已经上报到微信的 key-value 数据
+小游戏可以通过本接口删除已经上报到百度的 key-value 数据
 
 **请求地址：**
 

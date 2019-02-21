@@ -3,6 +3,7 @@ title: 图片图标
 layout: gamedoc
 header: design
 topic: foundation
+categoryName: design
 sidebar: pic
 priority: 02-03
 ---

@@ -1,8 +1,9 @@
 ---
-title: 列表组件
+title: 列表
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: list
 priority: 03-05
 ---

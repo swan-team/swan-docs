@@ -1,8 +1,9 @@
 ---
-title: 输入组件
+title: 输入
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: input
 priority: 03-06
 ---

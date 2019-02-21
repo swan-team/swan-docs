@@ -3,6 +3,7 @@ title: 设计走查表
 layout: gamedoc
 header: design
 topic: resource
+categoryName: design
 sidebar: checklist
 priority: 05-03
 ---

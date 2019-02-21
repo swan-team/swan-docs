@@ -3,6 +3,7 @@ title: 视觉组件库
 layout: gamedoc
 header: design
 topic: resource
+categoryName: design
 sidebar: uikit
 priority: 05-01
 ---

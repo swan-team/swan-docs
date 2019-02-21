@@ -3,6 +3,7 @@ title: 易用性
 layout: gamedoc
 header: design
 topic: principle
+categoryName: design
 sidebar: easytouse
 priority: 01-01
 ---
@@ -44,7 +45,7 @@ priority: 01-01
 
 #### 架构横向的同级信息通常使用页内标签栏。
 * 当用户在页面标签栏切换时，可在当前视图内浏览更多同层级的内容，页面标签栏本身并不随页面滑动。
-* 底部标签导航栏通常在首页使用，常驻屏幕底部，提供小程序2-5个顶层视图的快速切换。
+* 底部标签导航栏通常在首页使用，常驻屏幕底部，提供小程序 2~5 个顶层视图的快速切换。
 * 下图为小程序首页的底部标签栏切换示意。
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/game/design/principle/1-4.png">

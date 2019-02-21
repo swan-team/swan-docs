@@ -3,6 +3,7 @@ title: 底部标签栏
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: bottomtab
 priority: 03-02
 ---
@@ -23,11 +24,11 @@ priority: 03-02
 	</div>
 </div>
 
-### 容器
+#### 容器
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>
- 			标签导航栏容器可以放置2-5个标签选项，每个标签栏对应展现其相应的分类内容。
+ 			标签导航栏容器可以放置 2~5 个标签选项，每个标签栏对应展现其相应的分类内容。
 容器颜色默认显示白色，开发者也可以配置相应的颜色，配置时请注意整体页面效果，设计侧建议可以参考后文的个性定制章节。
 		</p>
  	</div>
@@ -37,16 +38,16 @@ priority: 03-02
 	</div>
 </div>
 
-### 标签选项
+#### 标签选项
 <div class="m-doc-custom-text-image">
  	<div>
  		<p>标签选项由图标和选项名称组成，根据用户行为分为三个阶段状态：非选中态、点击态和选中态。其中点击态由小程序统一处理，其他由开发者自行定义。
 1. 图标
     · 需要开发者自行上传选项在选中和非选中的图标；
-    · 图标格式png，尺寸为81*81px，大小限制40kb。
+    · 图标格式 png，尺寸为 81*81 px，大小限制 40kb。
 2. 选项名称
     · 选项名称在选中态默认黑色，支持自定义；
-    · 每个选项名称最多5个中文字符，超出截断。
+    · 每个选项名称最多 5 个中文字符，超出截断。
 		</p>
  	</div>
  	 	<div>
@@ -67,7 +68,7 @@ priority: 03-02
 
 ## 个性定制
 
-### 默认样式
+#### 默认样式
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="/img/game/design/component/bottomtab/6.png">
@@ -86,7 +87,7 @@ priority: 03-02
 	</div>
 </div>
 
-### 自定义样式
+#### 自定义样式
 定义标签栏样式时，请务必关注并保证其的可读性和可用性。
 标签选项的图标和名称在选中态和非选中态时，有响应颜色呼应能使其整体一致性更好。选择合适的容器颜色，保证内容显示清晰。
 <div class="m-doc-custom-examples">

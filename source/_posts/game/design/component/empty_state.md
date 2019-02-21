@@ -3,6 +3,7 @@ title: 空态
 layout: gamedoc
 header: design
 topic: component
+categoryName: design
 sidebar: empty_state
 priority: 03-09
 ---
