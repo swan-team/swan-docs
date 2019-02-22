@@ -4,16 +4,31 @@ function searchFunc(path, searchId, contentId) {
         dataType: 'json',
         success: function (datas) {
             var $input = document.getElementById(searchId);
-            if (!$input) {
+            var $resultContent = document.getElementById(contentId);
+            if (!$input || !$('#local-search-input').length) {
                 return;
             }
-            var $resultContent = document.getElementById(contentId);
-            if (!$('#local-search-input').length) {
-                return;
+            function toggleArticleContent(isShown) {
+                var isToggle = typeof isShown === 'undefined';
+                var resultStatus, articleStatus;
+                if (isToggle) {
+                    var currentStatus = $('#article-main-content').css('display');
+                    resultStatus = currentStatus;
+                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
+                } else {
+                    articleStatus = isShown ? 'block' : 'none';
+                    resultStatus = isShown ? 'none' : 'block';
+                }
+                $('#article-main-content').css({
+                    display: articleStatus
+                });
+                $($resultContent).css({
+                    display: resultStatus
+                });
             }
             $('#top-search-box').on('click', function (e) {
                 if($(e.target).hasClass('reset-search-btn')) {
-                    $($input).trigger('input');
+                    toggleArticleContent(true);
                     $('#top-search-box').removeClass('top-search-box-focus');
                    return; 
                 }
@@ -52,12 +67,7 @@ function searchFunc(path, searchId, contentId) {
                     var keywords = $this.value.trim().toLowerCase().split(/\s+/);
                     $resultContent.innerHTML = '';
                     if ($this.value.trim().length <= 0) {
-                        $('#article-main-content').css({
-                            display: 'block'
-                        });
-                        $($resultContent).css({
-                            display: 'none'
-                        });
+                        toggleArticleContent(true);
                         return;
                     }
                     var matchCount = 0;
@@ -100,21 +110,8 @@ function searchFunc(path, searchId, contentId) {
                             var content = data.content.trim().replace(/<[^>]+>/g, '');
                             if (first_occur >= 0) {
                                 // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-
-                                if (start < 0) {
-                                    start = 0;
-                                }
-
-                                if (start === 0) {
-                                    end = 100;
-                                }
-
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-
+                                var start = first_occur - 20 < 0 ? 0 : first_occur - 20;
+                                var end = start + 100 > content.length ? content.length : start + 100;
                                 var match_content = content.substr(start, end);
 
                                 // highlight all keywords
@@ -133,13 +130,7 @@ function searchFunc(path, searchId, contentId) {
                     str += '</ul>';
                     var title = matchCount ? '<h1>找到<em>' + keywords + '</em>相关内容' + matchCount + '个</h1>' : '<h1 class="empty-title">没有找到<em>' + keywords + '</em>相关内容</h1>';
                     str = title + str;
-                    $('#article-main-content').css({
-                        display: 'none'
-                    });
-
-                    $($resultContent).css({
-                        display: 'block'
-                    });
+                    toggleArticleContent(false);
                     $resultContent.innerHTML = str;
                 }, 0);
             });

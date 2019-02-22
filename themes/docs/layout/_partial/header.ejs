@@ -32,7 +32,7 @@
     <div class="m-doc-level1">
         <ul><%#
             %><% for(var i = 0; i < header.length; i++) {%><%#
-                *%><li <% if(header[i].name == page.header) { %> class="m-doc-header-nav-selected" <% } %>><%#
+                *%><li <% if(header[i].name == page.header) { %> class="m-doc-header-nav-selected <%- header[i].name %>" <% } else { %> class="<%- header[i].name %>" <% } %>><%#
                     %><a href="/docs<%- header[i].link %>/"><%- header[i].text %></a><%#
                 %></li><%#
             %><% } %><%#
