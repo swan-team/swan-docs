@@ -187,11 +187,11 @@
             -
               link: /design/story/arzoo
               text: 长隆AR动物园
-              name: arzoo       
+              name: arzoo
             -
               link: /design/story/light_up
               text: 减减鸭
-              name: light_up                    
+              name: light_up
     -
       link: /design/resource/uikit
       text: 资源下载
