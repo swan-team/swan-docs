@@ -68,7 +68,7 @@ theme: docs
 
 # search
 search:
-  path: __search.json
+  path: search.xml
   field: post
 # hide sidebar
 sidebarIgnore: 

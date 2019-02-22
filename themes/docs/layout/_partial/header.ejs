@@ -1,13 +1,13 @@
 <header>
     <a href="javascript:void(0)" class="m-doc-nav-btn"></a>
     <div class="m-mobile-doc-level1"><%#
-        %><% for(var i = 0; i < header.length; i++) { %><%#
-            %><% if(header[i].name == page.header) { %><%#
-                %><div class="m-mobile-level1-selected"><span><%- header[i].text %></span><img src="<%- url_for('img/level1_arrow.png') %>"/></div><%#
+        %><% for(var i = 0; i < navs.length; i++) { %><%#
+            %><% if(i === navIndex) { %><%#
+                %><div class="m-mobile-level1-selected"><span><%- navs[i].text %></span><img src="<%- url_for('img/level1_arrow.png') %>"/></div><%#
                 %><ul><%#
-                    %><% for(var i = 0; i < header.length; i++) {%><%#
-                        *%><li <% if(header[i].name == page.header) { %> class="m-doc-header-nav-selected" <% } %>><%#
-                            %><a href="/docs<%- header[i].link %>/"><%- header[i].text %></a><%#
+                    %><% for(var i = 0; i < navs.length; i++) {%><%#
+                        *%><li <% if(i === navIndex) { %> class="m-doc-header-nav-selected" <% } %>><%#
+                            %><a href="/docs<%- navs[i].link %>/"><%- navs[i].text %></a><%#
                         %></li><%#
                     %><% } %><%#
                 %></ul><%#
@@ -27,19 +27,9 @@
         </div>
     </div>
     <div class="m-doc-forum">
-        <a href="https://smartprogram.baidu.com/forum/">社区</a>
+        <a href="https://smartprogram.baidu.com/forum/" target="_blank">社区</a>
     </div>
-    <div class="m-doc-level1">
-        <ul><%#
-            %><% for(var i = 0; i < header.length; i++) {%><%#
-                *%><li <% if(header[i].name == page.header) { %> class="m-doc-header-nav-selected" <% } %>><%#
-                    %><a href="/docs<%- header[i].link %>/"><%- header[i].text %></a><%#
-                %></li><%#
-            %><% } %><%#
-        %></ul>
-        <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
-    </div>
-    
 
+    <%- partial('./header-nav', {}) -%>
     <%- partial('./search') -%>
 </header>

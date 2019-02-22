@@ -12,6 +12,87 @@ header {
     background: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: transform 0.35s;
+    transform: translateY(0px);
+    .m-doc-crumbs-wrapper {
+        max-width: 1195px;
+        margin: 0 auto;
+        display: none;
+        span {
+            margin-right: 10px;
+            &:not(:first-child):before {
+                content: '>';
+                margin-right: 10px;
+            }
+        }
+    }
+    .m-doc-level1 {
+        padding-left: 95px;
+        margin-left: 280px;
+        overflow: hidden;
+        ul {
+            max-width: 1195px;
+            margin: 0 auto;
+            display: block;
+            li {
+                display: inline-block;
+                padding: 0 30px;
+                position: relative;
+                text-align: center;
+                a {
+                    font-size: 16px;
+                    color: #333333;
+                    line-height: 16px;
+                    text-decoration: none;
+                }
+                &.introduction-group,
+                &.develop-group,
+                &.data-group {
+                    &:after {
+                        content: '';
+                        display: none;
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        bottom: 23px;
+                        right: 8px;
+                        background-image: url(../img/level1_arrow.png);
+                        background-size: 15px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: transform 0.2s;
+                        transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                    }
+                    &.game:after {
+                        display: block;
+                    }
+                }
+                &.introduction-group-hover:after,
+                &.develop-group-hover:after,
+                &.data-group-hover:after {
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                }
+            }
+            .m-doc-header-nav-selected {
+                a {
+                    color: #3388ff;
+                }
+                &:before {
+                    content: '';
+                    width: 80%;
+                    margin-left: 10%;
+                    position: absolute;
+                    height: 3px;
+                    bottom: 0;
+                    left: 0;
+                   // background-color: #3388ff;
+                }
+            }
+        }
+    }
+
 }
 .m-doc-nav-btn {
     display: none;
@@ -81,6 +162,7 @@ header {
     display: none;
 }
 
+
 header .m-doc-level1 ul {
     display: block;
 }
@@ -112,6 +194,7 @@ header .m-doc-level1 ul li a {
     line-height: 16px;
     text-decoration: none;
 }
+
 
 .m-mobile-doc-level1 {
     display: none;
@@ -254,7 +337,7 @@ header .m-doc-logo-line {
         background-color: #181818;
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected:after {
-        display: none;  
+        display: none;
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected {
         background: #181818;
@@ -309,9 +392,9 @@ header .m-doc-logo-line {
 .top-search-box {
     position: absolute;
     right: 100px;
-    top: 13px;
+    top: 0;
     width: 40px;
-    height: 36px;
+    height: 60px;
     line-height: 1;
     outline: none;
     transition: width 0.1s;
@@ -320,8 +403,13 @@ header .m-doc-logo-line {
 
 .top-search-box-focus {
     width: 164px;
+    height: 36px;
+    top: 13px;
     padding-left: 38px;
     background: #f0f1f2;
+}
+.top-search-box-focus.top-search-box .search-btn {
+    top: 3px;
 }
 .top-search-box-focus #local-search-input {
     display: block;
@@ -345,6 +433,7 @@ header .m-doc-logo-line {
     background-color: initial;
 }
 .top-search-box .search-btn {
+    top: 16px;
     left: 3px;
     background-image: url(../img/header_search.png);
 }
