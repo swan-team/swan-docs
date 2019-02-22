@@ -77,7 +77,7 @@ swan.login({
 
 **获取Session Key的URL地址：**
 
-https://openapi.baidu.com/nalogin/getSessionKeyByCode
+https://spapi.baidu.com/oauth/jscode2sessionkey
 
 **获取Session Key需要的参数：**
 
@@ -104,7 +104,8 @@ https://openapi.baidu.com/nalogin/getSessionKeyByCode
 **请求示例：**
 
 ```
-# curl -d "code=xxx&client_id=xxx&sk=xxx" https://openapi.baidu.com/nalogin/getSessionKeyByCode
+# curl -d "code=xxx&client_id=xxx&sk=xxx" 
+https://spapi.baidu.com/oauth/jscode2sessionkey
 {
     "openid": "ABCDEFG123",
     "session_key": "xxxxxx"
