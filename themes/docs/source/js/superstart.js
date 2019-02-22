@@ -247,7 +247,7 @@
             href = tar > -1 ? href.substr(tar).replace('/', '') : href;
             var offsetTop = $(href).offset() ? $(href).offset().top : 0;
             var scrollTop = $('.m-doc-content-layout').scrollTop();
-            var tarTop = offsetTop + scrollTop - 70;
+            var tarTop = offsetTop + scrollTop - 60;
             var diffTop = Math.abs(tarTop - scrollTop);
             var time = diffTop > 1800 ? 200 : 100;
             $('.m-doc-content-layout').scrollTo({ toT: tarTop, durTime: time });
