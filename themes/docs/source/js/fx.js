@@ -153,4 +153,4 @@
       return _this;
   };
   testEl = null
-})(Zepto)
+})($)
