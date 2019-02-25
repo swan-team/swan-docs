@@ -1560,6 +1560,15 @@
                     text: stopPullDownRefresh
                     name: show_pull_stopPullDownRefresh
               -
+                link: /develop/api/custom_component
+                text: 自定义组件
+                name: custom_component
+                sidebar:
+                  -
+                    link: /develop/api/custom_component/#nextTick
+                    text: nextTick
+                    name: custom_component_nextTick                    
+              -
                 link: /develop/api/show_query
                 text: 节点信息
                 name: show_query

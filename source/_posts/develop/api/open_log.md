@@ -79,6 +79,8 @@ swan.login({
 
 https://spapi.baidu.com/oauth/jscode2sessionkey
 
+> 原地址 https://openapi.baidu.com/nalogin/getSessionKeyByCode  将于2019年03月25日失效，请您及时更新。
+
 **获取Session Key需要的参数：**
 
 | 参数名 | 是否必须 | 说明 |

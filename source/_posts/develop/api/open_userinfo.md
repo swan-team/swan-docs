@@ -14,8 +14,8 @@ sidebar: open_userinfo
 2. 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的SwanID是不同的。
 
 **swanid校验性有以下两种方法**：
-1. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
-2. 对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
+1. **推荐使用**：对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
+2. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
 
 getSwanId
 ---
