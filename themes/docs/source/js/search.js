@@ -7,7 +7,6 @@ function searchFunc(path, searchId, contentId) {
             datas = datas.filter(function(item) {
                     return item.url.indexOf('/docs/game/') === -1;
                 });
-            console.log({datas});
             var $resultContent = document.getElementById(contentId);
             var $input = document.getElementById(searchId);
             if (!$input || !$('#local-search-input').length) {
