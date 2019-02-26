@@ -1,16 +1,13 @@
 function searchFunc(path, searchId, contentId) {
     $.ajax({
         url: path,
-        dataType: 'xml',
-        success: function (xmlResponse) {
-            // get the contents from search data
-            var datas = $('entry', xmlResponse).map(function () {
-                return {
-                    title: $('title', this).text(),
-                    content: $('content', this).text(),
-                    url: $('url', this).text()
-                };
-            }).get();
+        dataType: 'json',
+        success: function (datas) {
+            // remove gamedoc
+            datas = datas.filter(function(item) {
+                    return item.url.indexOf('/docs/game/') === -1;
+                });
+            console.log({datas});
             var $resultContent = document.getElementById(contentId);
             var $input = document.getElementById(searchId);
             if (!$input || !$('#local-search-input').length) {
@@ -86,7 +83,8 @@ function searchFunc(path, searchId, contentId) {
                             return false;
                         }
                         var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var content = data.content || '';
+                        var data_content = content.trim().replace(/<[^>]+>/g, "").toLowerCase();
                         var data_url = data.url;
                         var index_title = -1;
                         var index_content = -1;
