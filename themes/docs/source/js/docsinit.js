@@ -106,13 +106,8 @@
             var sidebarSelected = $('.m-doc-sidebar-selected');
             var sidebarFirst = $('.m-doc-nav-on .m-doc-nav-children .m-doc-sidebar-on:first-child .m-doc-h1-children li:first-child a');
             var isFirst = false;
-<<<<<<< HEAD:themes/docs/source/js/docsinit.js
-            sidebarFirst.each(function(element) {
-                if ($('.m-doc-sidebar-selected a')[0] && element.href == $('.m-doc-sidebar-selected a')[0].href) {
-=======
             sidebarFirst.each(function(index) {
                 if ($('.m-doc-sidebar-selected a')[0] && sidebarFirst[index].href == $('.m-doc-sidebar-selected a')[0].href) {
->>>>>>> merge_0222:themes/docs/source/js/docsinit.js
                     isFirst = true;
                 }
             });
@@ -126,9 +121,6 @@
             // 页面滚动到当前h3位置
             ctx.scrollToHash();
         },
-<<<<<<< HEAD:themes/docs/source/js/docsinit.js
-=======
-
         caseInvoke: function(scheme) {
             if (isPc()) {
                 return;
@@ -146,7 +138,6 @@
                 openbox.open();
             }
         },
->>>>>>> merge_0222:themes/docs/source/js/docsinit.js
         initInvokeDemo: function() {
             if (isPc()) {
                 $('.ispc').show();
@@ -177,12 +168,7 @@
             var html = isBox() ? html2 : html1;
             $closest.html(html);
             $('.demo-invoker').click(function() {
-<<<<<<< HEAD:themes/docs/source/js/docsinit.js
-                // win.location.href = _this.schema;
-                caseInvoke(_this.schema);
-=======
                 _this.caseInvoke(_this.schema);
->>>>>>> merge_0222:themes/docs/source/js/docsinit.js
                 return false;
             });
         },
@@ -202,8 +188,6 @@
             var wrap = $('.m-doc-custom-examples');
             wrap.html(wrap.html().replace(/<br>/g, ''));
         },
-<<<<<<< HEAD:themes/docs/source/js/docsinit.js
-=======
 
         debounce: function (fn, delay) {
             var timer;
@@ -252,7 +236,6 @@
             };
         },
 
->>>>>>> merge_0222:themes/docs/source/js/docsinit.js
         initCrumbs: function () {
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
