@@ -1,0 +1,88 @@
+.p-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: @navbar-width;
+    top: @navbar-height;
+    overflow: auto;
+    background-color: #fafafa;
+}
+
+    .p-content-wrap {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        padding: 0 95px;
+
+        .vsplit:after {
+            content: '|';
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+
+        .p-content-wrap-article {
+            max-width: 980px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            font-size: 14px;
+            line-height: 26px;
+
+            img {
+                max-width: 100%;
+            }
+            .p-content-wrap-article em, a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+/* content 移动端适配 */
+@media only screen and (max-width: 768px) {
+    article {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        h1,
+        h2,
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        table th,
+        table td  {
+            font-size: 13px;
+            padding: 6px 5px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+    }
+    .p-content {
+        left: 0;
+        padding-top: 20px;
+        overflow-y: auto;
+    }
+        .p-content-wrap {
+            position: static;
+            padding: 0 45px;
+        }
+}
+@media only screen and (min-width: 1590px) {
+
+    .p-content-wrap {
+        max-width: 1195px;
+        margin: 0px auto 0 auto;
+        padding: 0 0;
+    }
+}
+

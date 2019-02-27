@@ -664,8 +664,6 @@ article thead tr {
     .m-doc-content-wrap {
         position: static;
         padding: 0 40px;
-        margin-top: 0;
-        min-height: calc(100vh - 60px - 118px) ;
     }
 
     article table th {
@@ -704,13 +702,7 @@ article thead tr {
 
     .m-doc-content-wrap {
         max-width: 1195px;
-        margin: 60px auto 0;
-        padding: 0;
-    }
-    .m-doc-license-content {
-        max-width: 1195px;
-        margin: 0 auto;
-        padding: 31px 0;
+        margin: 60px auto 0 auto;
     }
 
     article {

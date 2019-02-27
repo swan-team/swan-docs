@@ -19,7 +19,6 @@ layout: false
 </head>
 
 <body id="home">
-    
      <%- partial('_partial/header', {page:{
          header: 'introduction'
      },header: [
@@ -48,6 +47,7 @@ layout: false
             name: 'operations',
             nav: []
         }], h1: "运营规范"}) %>
+
     <div class = "m-hp-wrapper">
         <div class="m-hp-header">
             <div class= "m-hp-header-slogan m-hp-header-mid">
@@ -217,15 +217,12 @@ layout: false
             </div>
         </div>
     </div>
-
-
     <%- js('js/jquery.min') %>
     <%- js('js/fx') %>
     <%- js('js/lib') %>
-    <%- js('js/indexInit') %>
     <%- js('js/tooltipster.bundle.min')%>
     <%- js('js/headerinit')%>
-    <%- js('js/indexinit') %>
+    <%- js('js/index-init') %>
     <script type="text/javascript" src="//b.bdstatic.com/searchbox/icms/searchbox/js/common/openjs/shareconfig.min.js?x-bs-version=1.7"></script>
     <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
     <script>
@@ -238,9 +235,9 @@ layout: false
                     debug: location.href.indexOf('share_debug=1') > 0,
                     title: '智能小程序',
                     content: '智能连接人与信息、人与服务、人与万物的开放生态， 依托以百度App为代表的全域流量，通过百度AI开放式赋能， 精准连接用户，无需下载安装便可享受智慧超前的使用体验',
-                    // 手百分享配置（如果使用手百分享，则必填）
+                    // 百度 App分享配置（如果使用百度 App分享，则必填）
                     bdbox: {
-                        source: 'feednews' // 用于统计手百分享的来源，必填
+                        source: 'feednews' // 用于统计百度 App分享的来源，必填
                     }
                 }
             );

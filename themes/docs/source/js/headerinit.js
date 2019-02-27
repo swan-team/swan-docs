@@ -2,13 +2,18 @@
     var header = {
         screenWidth: win.innerWidth,
         scheme: 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0',
+<<<<<<< HEAD
         start: function () {
+=======
+        start: function() {
+>>>>>>> merge_0222
             this.mobileAddEvent();
             this.initTooltip();
         },
         addNavList: function (name, list) {
             var content = list.reduce(function (total, currentValue) {
                 return total + '<ul class="m-doc-header-nav-list-item">' +
+<<<<<<< HEAD
                     '<a class="m-doc-header-nav-list-link" href="' + currentValue.link + '">' + currentValue.label + '</a>' +
                     '</ul>';
             }, '');
@@ -21,6 +26,27 @@
                 content: content,
                 contentAsHTML: true
             });
+=======
+                    '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
+                    '</ul>';
+            }, '');
+            var url = win.location.href;
+            if (url.includes('/docs/game/')) {
+                var gameListHeader = ['.introduction-group', '.develop-group', '.data-group'];
+                gameListHeader.forEach(element => {
+                    $(element).addClass('game');
+                });
+                $('.' + name).tooltipster({
+                    animation: 'fade',
+                    interactive: true,
+                    delay: '200',
+                    side: ['bottom'],
+                    trigger: 'hover',
+                    content: content,
+                    contentAsHTML: true
+                });
+            }
+>>>>>>> merge_0222
             $('.' + name).on('mouseenter', function () {
                 setTimeout(function () {
                     $('.' + name).addClass(name + '-hover');
@@ -50,6 +76,7 @@
             var params = [
                 {
                     tab: 'introduction',
+<<<<<<< HEAD
                     list: [{ 'link': '/#', 'label': '小程序介绍' }, { 'link': '/#', 'label': '小游戏介绍' }]
                 },
                 {
@@ -64,6 +91,27 @@
             var _this = this;
             params.forEach(function (item) {
                 _this.addNavList(item.tab, item.list);
+=======
+                    list: [{ 'link': '/docs/introduction/register/', 'label': '小程序介绍' },
+                        { 'link': '/docs/game/introduction/prerare/enter_application/', 'label': '小游戏介绍' }]
+                },
+                {
+                    tab: 'develop',
+                    list: [{ 'link': '/docs/develop/tutorial/codedir/', 'label': '小程序开发' },
+                        { 'link': '/docs/game/api/openApi/authorize/', 'label': '小游戏开发' }]
+                },
+                {
+                    tab: 'data',
+                    list: [{ 'link': '/docs/data/concept/', 'label': '小程序数据' },
+                        { 'link': '/docs/game/data/feature/concept/', 'label': '小游戏数据' }]
+                }
+            ]
+            var _this = this;
+            headerNavs.forEach(function (item) {
+                if (item.children) {
+                    _this.addNavList(item.name, item.children);
+                }
+>>>>>>> merge_0222
             });
         },
         mobileAddEvent: function () {
@@ -108,4 +156,8 @@
     $(doc).ready(function () {
         header.start();
     });
+<<<<<<< HEAD
 })(window, document, window.$); 
+=======
+})(window, document, window.$);
+>>>>>>> merge_0222
