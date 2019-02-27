@@ -3,10 +3,32 @@ function searchFunc(path, searchId, contentId) {
         url: path,
         dataType: 'json',
         success: function (datas) {
-            var $input = document.getElementById(searchId);
+            // remove gamedoc
+            datas = datas.filter(function(item) {
+                    return item.url.indexOf('/docs/game/') === -1;
+                });
             var $resultContent = document.getElementById(contentId);
+            var $input = document.getElementById(searchId);
             if (!$input || !$('#local-search-input').length) {
                 return;
+            }
+            function toggleArticleContent(isShown) {
+                var isToggle = typeof isShown === 'undefined';
+                var resultStatus, articleStatus;
+                if (isToggle) {
+                    var currentStatus = $('#article-main-content').css('display');
+                    resultStatus = currentStatus;
+                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
+                } else {
+                    articleStatus = isShown ? 'block' : 'none';
+                    resultStatus = isShown ? 'none' : 'block';
+                }
+                $('#article-main-content').css({
+                    display: articleStatus
+                });
+                $($resultContent).css({
+                    display: resultStatus
+                });
             }
             function toggleArticleContent(isShown) {
                 var isToggle = typeof isShown === 'undefined';
@@ -65,12 +87,12 @@ function searchFunc(path, searchId, contentId) {
                     }
                     var str = '<ul class="search-result-list">';
                     var keywords = $this.value.trim().toLowerCase().split(/\s+/);
+                    var matchCount = 0;
                     $resultContent.innerHTML = '';
                     if ($this.value.trim().length <= 0) {
                         toggleArticleContent(true);
                         return;
                     }
-                    var matchCount = 0;
                     datas.forEach(function (data) {
                         var isMatch = true;
                         if (!data.title || data.title.trim() === '') {

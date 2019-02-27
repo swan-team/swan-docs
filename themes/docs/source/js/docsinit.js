@@ -4,11 +4,25 @@
         '/docs/design/principle/':'/docs/design/overview/introduction/',
         '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
         '/docs/design/component/nav/':'/docs/design/component/topnav/',
-        '/docs/develop/web/detail/':'/docs/develop/server/upstream/',
+        '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
         '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+
+        '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
+        '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
+        '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
+        '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
+
+        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
+        '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
+        '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
+        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/ad/',
+        '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/game/api/ad/bannerAd/': '/docs/game/api/adApi/bannerDoc/',
+        '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
+        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -92,8 +106,8 @@
             var sidebarSelected = $('.m-doc-sidebar-selected');
             var sidebarFirst = $('.m-doc-nav-on .m-doc-nav-children .m-doc-sidebar-on:first-child .m-doc-h1-children li:first-child a');
             var isFirst = false;
-            sidebarFirst.each(function(element) {
-                if ($('.m-doc-sidebar-selected a')[0] && element.href == $('.m-doc-sidebar-selected a')[0].href) {
+            sidebarFirst.each(function(index) {
+                if ($('.m-doc-sidebar-selected a')[0] && sidebarFirst[index].href == $('.m-doc-sidebar-selected a')[0].href) {
                     isFirst = true;
                 }
             });
@@ -107,6 +121,23 @@
             // 页面滚动到当前h3位置
             ctx.scrollToHash();
         },
+        caseInvoke: function(scheme) {
+            if (isPc()) {
+                return;
+            }
+            if (isBox()) {
+                // 百度 App
+                isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
+            } else {
+                // 非百度 App
+                /*eslint-disable fecs-camelcase*/
+                var openbox = window.OpenBox({
+                    url: location.href
+                });
+                /*eslint-disable fecs-camelcase*/
+                openbox.open();
+            }
+        },
         initInvokeDemo: function() {
             if (isPc()) {
                 $('.ispc').show();
@@ -119,45 +150,92 @@
             var _this = this;
             var $demo = $('img[src= "../../img/demo/demo.png"]');
             var $closest = $demo.closest('div');
-            var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>' +
-            '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'+
-            '<br>下载小程序示例源码' +
-            '</a>' +
-            '<br>' +
-            '<img src="../../img/demo/mob.png" alt="图片">' +
-            '<img src="../../img/demo/comp.png" alt="图片">';
+            var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>'
+            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
+            + '<br>下载小程序示例源码'
+            + '</a>'
+            + '<br>'
+            + '<img src="../../img/demo/mob.png" alt="图片">'
+            + '<img src="../../img/demo/comp.png" alt="图片">';
 
-            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。' +
-            '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'+
-            '<br>下载小程序示例源码' +
-            '</a>' +
-            '<br>' +
-            '<img src="../../img/demo/box.png" alt="图片">' +
-            '<img src="../../img/demo/comp.png" alt="图片">';
+            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
+            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
+            + '<br>下载小程序示例源码'
+            + '</a>'
+            + '<br>'
+            + '<img src="../../img/demo/box.png" alt="图片">'
+            + '<img src="../../img/demo/comp.png" alt="图片">';
             var html = isBox() ? html2 : html1;
             $closest.html(html);
             $('.demo-invoker').click(function() {
-                // win.location.href = _this.schema;
-                caseInvoke(_this.schema);
+                _this.caseInvoke(_this.schema);
                 return false;
             });
         },
-        initHiddenbar: function(){
+        initHiddenbar: function () {
             var sidebarIgnore = window.localData.sidebarIgnore;
             sidebarIgnore = sidebarIgnore.split(',');
-            for (var i = 0; i < sidebarIgnore.length; i ++){
+            for (var i = 0; i < sidebarIgnore.length; i ++) {
                 var href = '/docs' + sidebarIgnore[i] + '/';
                 $('.m-doc-sidebar-nav-wrapper a[href="' + href + '"]')
                     .hide()
                     .parent('li')
                     .hide();
-                $('#article-main-content a[href= "'+ href +'"]').hide();
+                $('#article-main-content a[href= "' + href + '"]').hide();
             }
         },
         initCustom: function () {
             var wrap = $('.m-doc-custom-examples');
             wrap.html(wrap.html().replace(/<br>/g, ''));
         },
+
+        debounce: function (fn, delay) {
+            var timer;
+            return function () {
+                var ctx = this;
+                var args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    fn.apply(ctx, args);
+                }, (delay ? delay : 300));
+            };
+        },
+        throttle: function (func, wait, options) {
+            var context, args, result;
+            var wait = wait || 1000;
+            var timeout = null;
+            var previous = 0;
+            if (!options) options = {};
+            var later = function() {
+                previous = options.leading === false ? 0 : +new Date();
+                timeout = null;
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            };
+            return function() {
+                var now = +new Date();
+
+                if (!previous && options.leading === false) previous = now;
+
+                var remaining = wait - (now - previous);
+                context = this;
+                args = arguments;
+                if (remaining <= 0 || remaining > wait) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+                    previous = now;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+
+                } else if (!timeout && options.trailing !== false) {
+                    timeout = setTimeout(later, remaining);
+                }
+                return result;
+            };
+        },
+
         initCrumbs: function () {
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
@@ -180,7 +258,7 @@
             href = tar > -1 ? href.substr(tar).replace('/', '') : href;
             var offsetTop = $(href).offset() ? $(href).offset().top : 0;
             var scrollTop = $('.m-doc-content-layout').scrollTop();
-            var tarTop = offsetTop + scrollTop - 60;
+            var tarTop = offsetTop + scrollTop - 70;
             var diffTop = Math.abs(tarTop - scrollTop);
             var time = diffTop > 1800 ? 200 : 100;
             $('.m-doc-content-layout').scrollTo({ toT: tarTop, durTime: time });
@@ -200,7 +278,6 @@
                         $('.m-doc-sidebar-nav-wrapper').scrollTop(0);
                     }
                     parent.addClass('m-doc-nav-on');
-                    // parent.find('a.m-doc-h2-list')[0].click();
                 }
 
                 var sidebarData = localSidebar.getLocal(window.localData.headerName);
@@ -240,7 +317,7 @@
                     var _this = this;
                     var href = $(_this).attr('href');
                     win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function(){
+                    ctx.getArticle(href, function() {
                         ctx._scrollToAnchor($(_this)[0]);
                     });
                 }
@@ -291,7 +368,7 @@
                         tocH3.each(function (andex) {
                             tocH3.eq(andex).removeClass('toc-level-3-on');
                         });
-                        if(!tocH2Selected){
+                        if (!tocH2Selected) {
                             var $indexTocH3 = tocH3.eq(index);
                             $indexTocH3.addClass('toc-level-3-on');
                             // 面包屑导航切换
@@ -300,18 +377,19 @@
                     }
                 });
             })
-            .on('scroll', function() {
+            .on('scroll', function () {
                 // 左侧导航栏跟随
                 var h2 = $('article').find('h2');
                 var scrollTop = $(this).scrollTop();
                 var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
                 var scrollHeight = $(this)[0].scrollHeight;
                 var clientHeight = $(this)[0].clientHeight;
+
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
-                    if (h2Top <= 60) {
+                    if (h2Top <= 80) {
                         var hash = $(this).children('a')[0].hash;
-                        sidebar.each(function () {
+                        sidebar.each(function (i) {
                             if (this.hash.replace('/', '') === hash) {
                                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
                                 $(this).parent('li').addClass('m-doc-sidebar-selected');
@@ -326,7 +404,7 @@
                     $(selected.parent('ul.m-doc-h2-children')[0]).parent('li').addClass('m-doc-sidebar-selected');
                 }
                 // 滑动到底部时高亮最后一个h3
-                if(scrollTop + clientHeight == scrollHeight && h2.length > 0) {
+                if (scrollTop + clientHeight == scrollHeight && h2.length > 0) {
                     var hash = $(h2[h2.length - 1]).children('a')[0].hash;
                     sidebar.each(function () {
                         if (this.hash.replace('/', '') === hash) {
@@ -349,7 +427,7 @@
                     } else {
                         $('header').removeClass('m-doc-header-show-crumbs');
                     }
-                    
+
                     before = after;
                 }, 350));
             }
@@ -386,7 +464,6 @@
             });
             $(win).on('resize', function () {
                 ctx.initToc();
-                //ctx.initCrumbs();
             });
             $(win).on('popstate', function (e) {
                 if (e.state) {
@@ -454,7 +531,7 @@
                 - 50;
             var tocWrap = $('.toc-wrap');
             tocWrap.css('maxHeight', (maxHeight + 'px'));
-            
+
             this.tocHeight = $('.toc-wrap').height();
 
             tocWrap.find('.toc-level-1').children('.toc-link').remove();
@@ -536,6 +613,7 @@
                 $h2Item.append('<div class = "m-doc-content-inner"></div>');
                 var $h2Inner = $h2Item.find('.m-doc-content-inner');
                 $(Siblings).appendTo($h2Inner);
+
                 // 解决抖动
                 $('.m-doc-content-layout').css('visibility', 'visible');
 
@@ -555,6 +633,7 @@
                         }, 'swing');
                     }
                 });
+
             });
         },
         /**

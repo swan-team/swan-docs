@@ -9,9 +9,10 @@
         addNavList: function (name, list) {
             var content = list.reduce(function (total, currentValue) {
                 return total + '<ul class="m-doc-header-nav-list-item">' +
-                    '<a class="m-doc-header-nav-list-link" href="' + currentValue.link + '">' + currentValue.label + '</a>' +
+                    '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
                     '</ul>';
             }, '');
+            $('.' + name).addClass('game');
             $('.' + name).tooltipster({
                 animation: 'fade',
                 interactive: true,
@@ -47,23 +48,11 @@
             });
         },
         initTooltip: function () {
-            var params = [
-                {
-                    tab: 'introduction',
-                    list: [{ 'link': '/#', 'label': '小程序介绍' }, { 'link': '/#', 'label': '小游戏介绍' }]
-                },
-                {
-                    tab: 'develop',
-                    list: [{ 'link': '/#', 'label': '小程序开发' }, { 'link': '/#', 'label': '小游戏开发' }]
-                },
-                {
-                    tab: 'data',
-                    list: [{ 'link': '/#', 'label': '小程序数据' }, { 'link': '/#', 'label': '小游戏数据' }]
-                }
-            ]
             var _this = this;
-            params.forEach(function (item) {
-                _this.addNavList(item.tab, item.list);
+            headerNavs.forEach(function (item) {
+                if (item.children) {
+                    _this.addNavList(item.name, item.children);
+                }
             });
         },
         mobileAddEvent: function () {
@@ -108,4 +97,4 @@
     $(doc).ready(function () {
         header.start();
     });
-})(window, document, window.$); 
+})(window, document, window.$);

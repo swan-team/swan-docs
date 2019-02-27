@@ -11,7 +11,7 @@
 	/* this may be overriden in JS for fixed position origins */
 	position: absolute;
 	transition: transform;
-	transform: translateY(-20px);
+	transform: translateY(-14px);
 }
 
 .tooltipster-box {
@@ -26,7 +26,7 @@
 	/* these make sure we'll be able to detect any overflow */
 	max-height: 100%;
 	max-width: 100%;
-	overflow: auto;
+	overflow: hidden;
 	width: 131px;
 	height: 84px;
 }
@@ -391,4 +391,26 @@ corresponds to the arrow we want to display */
 
 .tooltipster-sidetip.tooltipster-right .tooltipster-arrow-uncropped {
 	left: -10px;
+}
+
+.m-doc-header-nav-list-container {
+    height: 84px;
+    width: 131px;
+}
+.m-doc-header-nav-list-item {
+    height: 42px;
+    border-bottom: 1px solid #f8f8f8;
+    &:hover {
+        background-color: #f0f6fe;
+    }
+}
+.m-doc-header-nav-list-link {
+    text-decoration: none;
+    text-align: center;
+    color: #040404;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 3;
+    margin: auto;
+    padding: 14px 30px;
 }

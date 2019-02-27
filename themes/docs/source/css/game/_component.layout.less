@@ -1,0 +1,143 @@
+/* 下载模版 */
+.m-doc-custom-download {
+    display: flex;
+    margin: 8px 0 48px 0;
+}
+.m-doc-custom-download .m-doc-custom-download-left,
+.m-doc-custom-download .m-doc-custom-download-right {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.m-doc-custom-download .m-doc-custom-download-left {
+    margin-right: 24px;
+}
+.m-doc-custom-download img {
+    width: 54px;
+    height: 54px;
+    margin: 42px auto;
+    margin-bottom: 12px;
+    display: block;
+    border: none;
+}
+.m-doc-custom-download p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 41px;
+    text-decoration: none;
+}
+.m-doc-custom-download a:hover {
+    box-shadow: 0 0 15px 0 rgba(60,118,255,0.17);
+    border: 1px solid rgba(60,118,255,0);
+}
+.m-doc-custom-download a:hover p {
+    color: #3c76ff;
+}
+.m-doc-custom-download a:link:hover {
+    text-decoration: none;
+}
+/* 双图模版 */
+.m-doc-custom-img {
+    display: flex;
+    margin: 8px 0 48px 0;
+}
+.m-doc-custom-img>div {
+    flex: 1;
+    margin-right: 24px;
+}
+.m-doc-custom-img img {
+    margin-top: 0;
+}
+.m-doc-custom-img>div:last-child {
+    margin-right: 0;
+}
+/* 左文右图模版 */
+.m-doc-custom-text-image {
+    display: flex;
+    margin: 8px 0 48px 0;
+}
+.m-doc-custom-text-image>div {
+    flex: 1;
+    margin-right: 24px;
+}
+.m-doc-custom-text-image img {
+    margin-top: 0;
+}
+.m-doc-custom-text-image>div:last-child {
+    margin-right: 0;
+}
+.m-doc-custom-text-image-h2 {
+    font-size: 24px;
+    margin: 40px 0 20px;
+    color: #222;
+    padding-bottom: 9px;
+    margin-top: 0;
+}
+/* 示例模版 */
+.m-doc-custom-examples {
+    display: flex;
+    margin: 8px 0 48px 0;
+}
+.m-doc-custom-examples>div {
+    flex: 1;
+    margin-right: 24px;
+}
+.m-doc-custom-text-examples>div:last-child {
+    margin-right: 0;
+}
+.m-doc-custom-examples p {
+    line-height: 20px;
+    margin: 0;
+}
+.m-doc-custom-examples img {
+    margin-bottom: 14px;
+    margin-top: 0;
+}
+
+.m-doc-custom-examples .m-doc-custom-examples-title {
+    border-top-width: 6px;
+    border-top-style: solid;
+    padding-top: 10px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.m-doc-custom-examples-text {
+    font-size: 12px;
+}
+.m-doc-custom-examples .m-doc-custom-examples-correct .m-doc-custom-examples-title {
+    border-bottom-color: #0AAB62;
+}
+.m-doc-custom-examples .m-doc-custom-examples-error .m-doc-custom-examples-title {
+    border-bottom-color: #DF383A;
+}
+.m-doc-custom-examples .m-doc-custom-examples-warning .m-doc-custom-examples-title {
+    border-bottom-color: #F9A825;
+}
+.m-doc-custom-examples .m-doc-custom-examples-title {
+    font-weight: 600;
+}
+.m-doc-custom-examples .m-doc-custom-examples-correct .m-doc-custom-examples-title {
+    color: #0AAB62;
+}
+.m-doc-custom-examples .m-doc-custom-examples-error .m-doc-custom-examples-title {
+    color: #DF383A;
+}
+.m-doc-custom-examples .m-doc-custom-examples-warning .m-doc-custom-examples-title {
+    color: #F9A825;
+}
+@media only screen and (max-width: 768px) {
+    .m-doc-custom-img,
+    .m-doc-custom-text-image,
+    .m-doc-custom-examples {
+        display: block;
+    }
+    .m-doc-custom-img>div,
+    .m-doc-custom-text-image>div,
+    .m-doc-custom-examples>div {
+        margin-right: 0;
+    }
+}
