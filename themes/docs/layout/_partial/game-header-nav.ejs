@@ -3,18 +3,54 @@
         {
             text: '介绍',
             name: 'game-introduction-group',
-            link: '/game/introduction/prerare/enter/'
+            link: '/game/introduction/prerare/enter/',
+            children: [
+                {
+                    link: '/introduction/enter_application/',
+                    text: '小程序介绍',
+                    name: 'introduction'
+                },
+                {
+                    link: '/game/introduction/prerare/enter/',
+                    text: '小游戏介绍',
+                    name: 'game-introduction'
+                }
+            ]
         },
 
         {
             text: '开发',
             name: 'game-develop-group',
-            link: '/game/api/openApi/authorize/'
+            link: '/game/api/openApi/authorize/',
+            children: [
+                {
+                    link: '/develop/tutorial/codedir/',
+                    text: '小程序开发',
+                    name: 'develop'
+                },
+                {
+                    link: '/game/api/openApi/authorize/',
+                    text: '小游戏开发',
+                    name: 'game-develop'
+                }
+            ]
         },
         {
             text: '数据',
             name: 'game-data-group',
-            link: '/game/data/feature/concept/'
+            link: '/game/data/feature/concept/',
+            children: [
+                {
+                    link: '/data/concept/',
+                    text: '小程序数据',
+                    name: 'data'
+                },
+                {
+                    link: '/game/data/feature/concept/',
+                    text: '小游戏数据',
+                    name: 'game-data'
+                }
+            ]
         },
         {
             text: '运营',
