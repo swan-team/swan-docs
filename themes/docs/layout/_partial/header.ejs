@@ -29,16 +29,7 @@
     <div class="m-doc-forum">
         <a href="https://smartprogram.baidu.com/forum/" target="_blank">社区</a>
     </div>
-    <div class="m-doc-level1">
-        <ul><%#
-            %><% for(var i = 0; i < header.length; i++) {%><%#
-                *%><li <% if(header[i].name == page.header) { %> class="m-doc-header-nav-selected <%- header[i].name %>" <% } else { %> class="<%- header[i].name %>" <% } %>><%#
-                    %><a href="/docs<%- header[i].link %>/"><%- header[i].text %></a><%#
-                %></li><%#
-            %><% } %><%#
-        %></ul>
-        <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
-    </div>
+
     <%- partial('./header-nav', {}) -%>
     <%- partial('./search') -%>
 </header>
