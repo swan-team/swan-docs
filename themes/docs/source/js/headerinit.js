@@ -5,7 +5,8 @@
         start: function () {
             this.mobileAddEvent();
             if (location.href.indexOf('/docs/game/') === -1) {
-                this.initTooltip();
+                // 下拉菜单入口，暂时屏蔽
+                // this.initTooltip();
             }
         },
         addNavList: function (name, list) {
