@@ -27,7 +27,7 @@ priority: 01-04
 
 #### 开发工具
 
-下载开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.2&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.2&type=online)）进行代码的开发和上传。
+下载开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）进行代码的开发和上传。
 
  ![图片](/img/game/introduction/prerare/newadd05.png)
 

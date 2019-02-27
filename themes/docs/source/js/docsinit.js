@@ -18,11 +18,11 @@
         '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
         '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
         '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
-        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/ad/',
         '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',
         '/docs/game/api/ad/bannerAd/': '/docs/game/api/adApi/bannerDoc/',
         '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
-        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/'
+        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
+        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);

@@ -8,7 +8,7 @@ categoryName: api
 自定义分析数据上报接口。使用前，需要在[小游戏管理后台](https://smartprogram.baidu.com/developer/applist.html)-数据分析-使用分析-事件分析中新建事件，配置好事件名与字段(自定义名称请遵循填写时候提示的命名规范)。详情查看[自定义事件分析](/game/data/feature/custom/)。
 
 ```js
-swan.getUpdateManager(eventName, data);
+swan.reportAnalytics(eventName, data);
 ```
 
 **参数值：**
