@@ -10,7 +10,7 @@
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
 
-        '/docs/game/introduction/prerare/enter/':'/docs/game/introduction/prerare/enter_application/',
+        '/docs/game/introduction/prerare/enter_application/': '/docs/game/introduction/prerare/enter/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
         '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
         '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
