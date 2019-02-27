@@ -2,7 +2,12 @@
 
 #### 开发工具下载
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.2&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.2&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）进行代码的开发和上传。
+
+#### v1.15.3
+**Bug Fixed**
+- 修复了引用 swan-game-adapter 导致 onShow 方法使用失败问题。
+- 兼容调试基础库 1.4.1 禁用 eval 的问题。
 
 #### v1.15.2
 **Bug Fixed**
