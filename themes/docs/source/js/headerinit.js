@@ -12,22 +12,16 @@
                     '<a class="m-doc-header-nav-list-link" href="/docs' + currentValue.link + '">' + currentValue.text + '</a>' +
                     '</ul>';
             }, '');
-            var url = win.location.href;
-            if (url.includes('/docs/game/')) {
-                var gameListHeader = ['.introduction-group', '.develop-group', '.data-group'];
-                gameListHeader.forEach(element => {
-                    $(element).addClass('game');
-                });
-                $('.' + name).tooltipster({
-                    animation: 'fade',
-                    interactive: true,
-                    delay: '200',
-                    side: ['bottom'],
-                    trigger: 'hover',
-                    content: content,
-                    contentAsHTML: true
-                });
-            }
+            $('.' + name).addClass('game');
+            $('.' + name).tooltipster({
+                animation: 'fade',
+                interactive: true,
+                delay: '200',
+                side: ['bottom'],
+                trigger: 'hover',
+                content: content,
+                contentAsHTML: true
+            });
             $('.' + name).on('mouseenter', function () {
                 setTimeout(function () {
                     $('.' + name).addClass(name + '-hover');
@@ -54,23 +48,6 @@
             });
         },
         initTooltip: function () {
-            var params = [
-                {
-                    tab: 'introduction',
-                    list: [{ 'link': '/docs/introduction/register/', 'label': '小程序介绍' },
-                        { 'link': '/docs/game/introduction/prerare/enter_application/', 'label': '小游戏介绍' }]
-                },
-                {
-                    tab: 'develop',
-                    list: [{ 'link': '/docs/develop/tutorial/codedir/', 'label': '小程序开发' },
-                        { 'link': '/docs/game/api/openApi/authorize/', 'label': '小游戏开发' }]
-                },
-                {
-                    tab: 'data',
-                    list: [{ 'link': '/docs/data/concept/', 'label': '小程序数据' },
-                        { 'link': '/docs/game/data/feature/concept/', 'label': '小游戏数据' }]
-                }
-            ]
             var _this = this;
             headerNavs.forEach(function (item) {
                 if (item.children) {
