@@ -4,7 +4,9 @@
         scheme: 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0',
         start: function () {
             this.mobileAddEvent();
-            this.initTooltip();
+            if (location.href.indexOf('/docs/game/') === -1) {
+                this.initTooltip();
+            }
         },
         addNavList: function (name, list) {
             var content = list.reduce(function (total, currentValue) {
