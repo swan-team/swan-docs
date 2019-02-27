@@ -1,3 +1,32 @@
+/***针对失效链接的处理逻辑***/
+!function(pathname){
+    var urlMap = {
+        '/docs/design/principle/':'/docs/design/overview/introduction/',
+        '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
+        '/docs/design/component/nav/':'/docs/design/component/topnav/',
+        '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
+        '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
+        '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
+        '/docs/develop/flow/rank/':'/docs/introduction/rank/',
+        '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+
+        '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
+        '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
+        '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
+        '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
+
+        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
+        '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
+        '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
+        '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/game/api/ad/bannerAd/': '/docs/game/api/adApi/bannerDoc/',
+        '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
+        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
+        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
+    };
+    urlMap[pathname] && location.replace(urlMap[pathname]);
+}(location.pathname);
+
 (function (win, doc, $) {
     var header = {
         screenWidth: win.innerWidth,
