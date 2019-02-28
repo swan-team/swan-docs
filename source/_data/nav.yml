@@ -174,6 +174,10 @@
               text: 提示框
               name: dialog
             -
+              link: /design/component/guide_add
+              text: 添加到我的小程序引导
+              name: guide_add               
+            -
               link: /design/component/empty_state
               text: 空态
               name: empty_state
@@ -972,6 +976,10 @@
                   link: /develop/api/media_image/#saveImageToPhotosAlbum
                   text: saveImageToPhotosAlbum
                   name: media_image_saveImageToPhotosAlbum
+                -
+                  link: /develop/api/media_image/#recognizeImage
+                  text: recognizeImage
+                  name: media_image_recognizeImage                
             -
               link: /develop/api/media_recorder
               text: 录音管理
@@ -1637,6 +1645,15 @@
                     link: /develop/api/show_query/#selectorQuery-exec-callback
                     text: selectorQuery.exec([callback])
                     name: show_query
+              -
+                link: /develop/api/nacomponent
+                text: 收藏通用引导组件
+                name: nacomponent
+                sidebar:
+                  -
+                    link: /develop/api/nacomponent/#showFavoriteGuide
+                    text: showFavoriteGuide
+                    name: nacomponent_showFavoriteGuide              
 
         -
             link: /develop/api/device
