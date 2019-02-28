@@ -56,14 +56,14 @@ sidebar: guide_add
 	</div>
 </div>
 
-#### 1. 一直展现的浮层（默认）：仅用户点击“关闭”或“添加”后才消失。
+#### 1. 一直展现的浮层（默认）：仅用户点击“关闭”或“添加”后才消失；
 
 <video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/6.mp4"/>
 你的浏览器不支持该视频播放
 </video>
 <p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 
-#### 2. 自动消失的浮层：用户无操作，则3s后自动消失；
+#### 2. 自动消失的浮层：用户无操作，则3s后自动消失。
 
 <video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/7.mp4"/>
 你的浏览器不支持该视频播放
