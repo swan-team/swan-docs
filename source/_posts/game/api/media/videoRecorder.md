@@ -3,7 +3,6 @@ title: 录屏
 layout: gamedoc
 topic: media
 categoryName: api
-draft: true
 ---
 
 
