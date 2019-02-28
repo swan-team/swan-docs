@@ -1,5 +1,5 @@
 ---
-title: 收藏通用引导组件
+title:  添加到我的小程序引导
 header: develop
 nav: api
 sidebar: nacomponent
