@@ -1,6 +1,6 @@
 ---
 title: swan.reportAnalytics()
-layout: doc
+layout: gamedoc
 topic: reportAnalytics
 categoryName: api
 ---

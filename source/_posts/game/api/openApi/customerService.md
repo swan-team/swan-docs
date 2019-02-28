@@ -1,6 +1,6 @@
 ---
 title: 客服消息
-layout: doc
+layout: gamedoc
 topic: openApi
 categoryName: api
 ---
