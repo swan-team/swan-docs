@@ -41,8 +41,8 @@ sidebar: nacomponent
 
 ```javascript
 swan.showFavoriteGuide({
-    type： 'tip'，
-    content：'添加到我的收藏'
+    type： 'bar'，
+    content：'一键添加到我的小程序'
     success(res) {
         console.log('添加成功：'， res);
     },
