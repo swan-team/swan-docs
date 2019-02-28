@@ -5,16 +5,24 @@ nav: tutorial
 sidebar: swanchangelog
 ---
 
+## 3.20 版本日志更新
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.20.6|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复。|
+
+
 ## 3.15 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.110|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复;<p>修复dataset 大小写转化问题。|
 |3.15.105  |2019.2.19|**New**<p>**·**自定义组件中支持使用相对路径动态引用资源；<p>**·**自定义组件内支持支持 hoverclass；<p>**·**app 工程里计算基础路径时支持 http/https 开头的绝对路径。|
 |3.15.104  |2019.2.15|**New**<p>swan上新增nextTick方法。|
 ## 3.10 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.10.32|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复。|
 |3.10.29   |2019.2.22|**BugFix**<p>extension bug修复。|
 |3.10.28   |2019.2.19|**New**<p>自定义组件中支持使用相对路径动态引用资源。|
 |3.10.20|2019.1.10|**New**<p>新增 createARCameraContext。<p>**BugFix**<p>**·**修复 textarea 组件 reset 不生效的问题；<p>**·**修复 canvas 组件不传 canvas-id 则默认隐藏并不创建的问题；<p>**·**修复 scroll-view 滚动异常的问题。<p>**·**修改 swiper 组件 touchcancel 事件两次触发逻辑，调整 touch 事件监听函数命名。|
