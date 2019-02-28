@@ -1647,7 +1647,7 @@
                     name: show_query
               -
                 link: /develop/api/nacomponent
-                text: 收藏通用引导组件
+                text:  添加到我的小程序引导
                 name: nacomponent
                 sidebar:
                   -
