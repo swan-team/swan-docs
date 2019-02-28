@@ -14,6 +14,7 @@ swan.removeStorageSync(key)
 ```
 
 **参数值：**
+
 |参数|类型|是否必填|描述|
 |-|-|-|-|
 |key|string|是|本地缓存中指定的 key|
