@@ -45,7 +45,7 @@ Q：开发者工具一直显示在编译，看不到日志？
 A：点击右上角 “更多功能” -> “编译日志” ，查看是否编译错误。
 
 Q: 预览/真机调试，上传失败？
-A：请确认小游戏代码包体积是否超过[包大小限制](/tutorials/subpackages/sub/#包大小限制)。如果超出限制，一般在预览弹窗会有提示“主包超限”。
+A：请确认小游戏代码包体积是否超过[包大小限制](/game/tutorials/subpackages/sub/#包大小限制)。如果超出限制，一般在预览弹窗会有提示“主包超限”。
 如无提示，请用抓包工具抓包查看 `smartprogram.baidu.com` 的请求和返回，查看请求的包体积、或者返回错误信息。
 
 Q：在开发者工具中，新建小游戏（点击“新建”->“小游戏”），打开的是一个游戏 demo，而不是一个空项目？
@@ -65,13 +65,13 @@ A：已在开发者工具 1.15.1 版本修复，请更新开发者工具。
 
 #### 真机
 Q：如何在手机上查看调试信息？
-A：小游戏支持使用 sConsole 查看 console API 输出的日志内容，也支持真机调试，详见文档中的工具[调试章节](/tutorials/devtools/smartappdebug/)。
+A：小游戏支持使用 sConsole 查看 console API 输出的日志内容，也支持真机调试，详见文档中的工具[调试章节](/game/tutorials/devtools/smartappdebug/)。
 
 Q：真机预览时，小游戏一直停留在加载中界面，无法进入？
 A：请确认创建小游戏时选择的服务类目是否是小游戏？如果不是，请重新创建。参考上述 [自我排查指南](./#自我排查指南)第 5 点。
 
 Q：真机请求出现跨域问题？
-A: 真机会对请求的协议进行校验，会拦截 http 协议。详见[网络注意事项](/tutorials/network/careful/)
+A: 真机会对请求的协议进行校验，会拦截 http 协议。详见[网络注意事项](/game/tutorials/network/careful/)
 如果使用 https 协议，仍有跨域问题，请确认是否用了非默认值的端口号。Android 会对端口号校验，非 443 端口则会被拦截。（Android 会在 11.5 版本中去掉关于端口号的限制。）
 
 Q：分包加载失败？
@@ -88,7 +88,7 @@ A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 
 
 Q：在真机调起支付后，在点击付款的时候提示签名错误 ，验签一直不通过？
 A：确认选择的公钥是否是平台公钥。从百度电商开放平台后台能看到两个公钥，一个是开发者公钥，另一个是平台公钥，验签需要用平台公钥。参见[百度电商开发平台核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。
-此外，其他环节也可能导致验签错误，请认真阅读 [`requestPolymerPayment` API](/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment) 中涉及到的文档。
+此外，其他环节也可能导致验签错误，请认真阅读 [`requestPolymerPayment`](/game/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment) 中涉及到的文档。
 
 Q：授权用户信息，如果用户取消授权后，再次发起授权，直接进入 fail 回调？
 A：目前，小游戏的用户信息权限没有重试机制。如果用户拒绝授权，用户只能手动在“右上角菜单-关于-右上角菜单-权限管理” 重新打开。

@@ -106,6 +106,7 @@ swan.offError(callback)
 
 撤销全局错误监听，传入的 `callback` 即为调用 [`swan.onError()`](#swan-onError) 传入的 `callback` 对象。
 
+
 **参数值：**
 
 |参数|类型|描述|
