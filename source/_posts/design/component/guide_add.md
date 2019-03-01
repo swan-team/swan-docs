@@ -11,8 +11,8 @@ sidebar: guide_add
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/guide_add/1.png">
-	<p class="m-doc-custom-examples-text">1. 气泡引导
-	2. 浮层引导</p>
+	<p class="m-doc-custom-examples-text">1. 浮层引导
+	2. 气泡引导</p>
 	</div>
 </div>
 
