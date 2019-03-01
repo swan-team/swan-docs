@@ -15,4 +15,4 @@ swan.createCanvas();
 
 **返回值：**
 
-[Canvas](/api/render/Canvas/) 画布对象
+[Canvas](/game/api/render/Canvas/) 画布对象
