@@ -6,7 +6,7 @@ sidebar: guide_add
 ---
 智能小程序提供两类引导添加组件，帮助开发者提示和引导用户进行“添加到我的小程序”这一操作。
 开发文档说明详见 <a href="http://smartprogram.baidu.com/docs/develop/api/nacomponent/#showFavoriteGuide/">showFavoriteGuide</a>。
-> 百度App v11.5及以上版本的智能小程序，支持引导添加组件。
+> 百度App v11.5及以上版本的智能小程序，支持添加到我到小程序引导组件。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
