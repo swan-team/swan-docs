@@ -5,7 +5,7 @@ nav: api
 sidebar: seo
 ---
 配置页面 meta 相关接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
-> setMetaDescription/setMetaKeywords/setDocumentTitle 即将停止维护。
+> setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
 ## setPageInfo
 智能小程序可接入百度搜索和百度 App 信息流，swan.getPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。
