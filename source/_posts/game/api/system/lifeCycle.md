@@ -79,11 +79,10 @@ swan.offShow(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 [`swan.onShow`](#swan-onShow()) 时传入的回调函数|
+|callback|function|调用 [`swan.onShow()`](#swan-onShow) 时传入的回调函数|
 
 
 ### swan.onHide()
-
 监听小游戏退到后台。
 
 ```js
@@ -109,7 +108,7 @@ swan.offHide(callback)
 
 |参数|类型|描述|
 |-|-|-|
-|callback|function|调用 [`swan.onHide`](#swan-onHide()) 时传入的回调函数|
+|callback|function|调用 [`swan.onHide()`](#swan-onHide) 时传入的回调函数|
 
 
 ### swan.exit()
