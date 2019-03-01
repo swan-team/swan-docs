@@ -2007,6 +2007,10 @@
                 name: seo
                 sidebar:
                   -
+                    link: /develop/api/seo/#setPageInfo
+                    text: setPageInfo
+                    name: seo_setPageInfo                    
+                  -
                     link: /develop/api/seo/#setMetaDescription
                     text: setMetaDescription
                     name: seo_setMetaDescription
@@ -2018,10 +2022,7 @@
                     link: /develop/api/seo/#setDocumentTitle
                     text: setDocumentTitle
                     name: seo_setDocumentTitle
-                  -
-                    link: /develop/api/seo/#setPageInfo
-                    text: setPageInfo
-                    name: seo_setPageInfo       
+     
               -
                 link: /develop/api/open_preloadsubpackage
                 text: 分包预下载

@@ -4,94 +4,9 @@ header: develop
 nav: api
 sidebar: seo
 ---
-配置页面 meta 相关接口，目前仅支持 Web 化使用。
-## setMetaDescription
+配置页面 meta 相关接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
+> setMetaDescription/setMetaKeywords/setDocumentTitle 即将停止维护。
 
-**解释：** 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**参数：** Object
-
-**Object参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-| content |  String  |是  | 需要设置的 description 内容|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail  | Function  |  否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例：**
-
-```js
-swan.setMetaDescription && swan.setMetaDescription({
-    content: '当前小程序页面描述信息',
-    success: function (res) {
-        console.log('设置成功');
-    },
-    fail: function (res) {
-        console.log('设置失败');
-    },
-    complete: function (res) {
-	    console.log('设置失败');
-    }
-});
-```
-
-## setMetaKeywords
-
-**解释：** 设置 web 版小程序 keywords meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**参数：** Object
-
-**Object参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-| content |  String  |是 | 需要设置的 keywords 内容|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail  | Function  |  否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例：**
-
-```js
-swan.setMetaKeywords && swan.setMetaKeywords({
-    content: '小程序, 关键字',
-    success: function (res) {
-        console.log('设置成功');
-    },
-    fail: function (res) {
-        console.log('设置失败');
-    },
-    complete: function (res) {
-	    console.log('设置失败');
-    }
-});
-```
-
-
-## setDocumentTitle
-
-**解释：**动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**参数：** Object
-
-**Object参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|title   |String|  是 | 页面中 title 标签中的内容 |
-|success |Function |   否 |  接口调用成功的回调函数|
-|fail   | Function|    否 |  接口调用失败的回调函数|
-|complete   | Function   | 否|   接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例：**
-
-```js
-swan.setDocumentTitle && swan.setDocumentTitle({
-    title: '我是页面标题'
-});
-```
 ## setPageInfo
 智能小程序可接入百度搜索和百度 App 信息流，swan.getPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。
 
@@ -145,4 +60,94 @@ video参数说明
             console.log('页面基础信息设置完成');
         }
 	})
+```
+## setMetaDescription 
+
+> 不推荐使用。
+**解释：** 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+
+**参数：** Object
+
+**Object参数说明：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+| content |  String  |是  | 需要设置的 description 内容|
+|success |Function  |  否  | 接口调用成功的回调函数|
+|fail  | Function  |  否  | 接口调用失败的回调函数|
+|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例：**
+
+```js
+swan.setMetaDescription && swan.setMetaDescription({
+    content: '当前小程序页面描述信息',
+    success: function (res) {
+        console.log('设置成功');
+    },
+    fail: function (res) {
+        console.log('设置失败');
+    },
+    complete: function (res) {
+	    console.log('设置失败');
+    }
+});
+```
+
+## setMetaKeywords
+
+> 不推荐使用。
+**解释：** 设置 web 版小程序 keywords meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+
+**参数：** Object
+
+**Object参数说明：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+| content |  String  |是 | 需要设置的 keywords 内容|
+|success |Function  |  否  | 接口调用成功的回调函数|
+|fail  | Function  |  否  | 接口调用失败的回调函数|
+|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例：**
+
+```js
+swan.setMetaKeywords && swan.setMetaKeywords({
+    content: '小程序, 关键字',
+    success: function (res) {
+        console.log('设置成功');
+    },
+    fail: function (res) {
+        console.log('设置失败');
+    },
+    complete: function (res) {
+	    console.log('设置失败');
+    }
+});
+```
+
+
+## setDocumentTitle
+
+> 不推荐使用。
+**解释：**动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+
+**参数：** Object
+
+**Object参数说明：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|title   |String|  是 | 页面中 title 标签中的内容 |
+|success |Function |   否 |  接口调用成功的回调函数|
+|fail   | Function|    否 |  接口调用失败的回调函数|
+|complete   | Function   | 否|   接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例：**
+
+```js
+swan.setDocumentTitle && swan.setDocumentTitle({
+    title: '我是页面标题'
+});
 ```
