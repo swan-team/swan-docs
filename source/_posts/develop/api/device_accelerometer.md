@@ -31,7 +31,7 @@ swan.onAccelerometerChange(function (res) {
 });
 ```
 
-####错误码
+#### 错误码
 
 **Andriod**
 
