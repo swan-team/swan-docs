@@ -5,7 +5,7 @@ nav: book
 sidebar: rank
 ---
 
-为了开发者能更好的被搜索引擎等自然结果收录，我们提供了以下配置和物料提交入口满足开发者的搜索引擎优化诉求。
+为了使小程序能更好的被搜索引擎收录，百度智能小程序提供了以下配置方式满足开发者的搜索引擎优化诉求。
 需要完成的配置有：
 
 * 开启 web 化
@@ -37,7 +37,7 @@ sidebar: rank
 
 页面基础信息设置接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">页面基础信息</a>。
 
-由于每个页面的页面 meta 信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面 meta 信息的 API 设置到页面中。
+由于每个页面的页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。
 
 
 ## 配置 URL 映射规则
@@ -126,12 +126,12 @@ value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对
 1. 无参数情况
 
 ```json
-# 小程序路径：pages/home/index
-# 对应 H5 路径：https://example.com/
+// 小程序路径：pages/home/index
+// 对应 H5 路径：https://example.com/
 "pages/home/index": "/",
 
-# 小程序路径：pages/list/index
-# 对应 H5 路径：https://example.com/products
+// 小程序路径：pages/list/index
+// 对应 H5 路径：https://example.com/products
 "pages/list/index": "/products"
 ```
 
@@ -140,12 +140,12 @@ value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对
 当小程序页中的参数和 H5 中的参数含义一致时，value 部分参数值替换成模板变量，变量名为小程序中对应的参数名
 
 ```json
-# 小程序路径：pages/book/index?id=12
-# 对应 H5 路径：https://example.com/book/detail?id=12
+// 小程序路径：pages/book/index?id=12
+// 对应 H5 路径：https://example.com/book/detail?id=12
 "pages/book/index": "/book/detail?id=${id}",
 
-# 小程序路径：pages/book/index?id=12
-# 对应 H5 路径：https://example.com/book/detail?bookid=12
+// 小程序路径：pages/book/index?id=12
+// 对应 H5 路径：https://example.com/book/detail?bookid=12
 "pages/book/index": "/book/detail?bookid=${id}"
 ```
 
@@ -154,12 +154,12 @@ value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对
 当存在小程序页参数与 H5 中定义的参数含义不一致时，不一致参数保留。value 的参数部分包含小程序和 H5 参数的全集
 
 ```json
-# 小程序路径：pages/book/index?id=12
-# 对应 H5 路径：https://example.com/book/detail?cate=history&bookid=12
+// 小程序路径：pages/book/index?id=12
+// 对应 H5 路径：https://example.com/book/detail?cate=history&bookid=12
 "pages/book/index": "/book/detail?cate=${cate}&bookid=${id}",
 
-# 小程序路径：pages/book/index?id=12&cate=history
-# 对应 H5 路径：https://example.com/book/detail?bookid=12
+// 小程序路径：pages/book/index?id=12&cate=history
+// 对应 H5 路径：https://example.com/book/detail?bookid=12
 "pages/book/index": "/book/detail?cate=${cate}&bookid=${id}"
 ```
 
@@ -168,12 +168,12 @@ value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对
 当 H5 中的可变部分不是在 URL Query 中，同样可以通过模板变量的方式替换对应的部分
 
 ```json
-# 小程序路径：pages/book/index?id=12&cate=history
-# 对应 H5 路径：https://example.com/book/history?bookid=12
+// 小程序路径：pages/book/index?id=12&cate=history
+// 对应 H5 路径：https://example.com/book/history?bookid=12
 "pages/book/index": "/book/${cate}?bookid=${id}",
 
-# 小程序路径：pages/book/index?id=12
-# 对应 H5 路径：https://example.com/book/history/12.html
+// 小程序路径：pages/book/index?id=12
+// 对应 H5 路径：https://example.com/book/history/12.html
 "pages/book/index": "/book/${catgid}/${id}.html"
 ```
 
