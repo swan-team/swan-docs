@@ -84,7 +84,7 @@ sidebar: dialog
 </div>
 
 #### 双操作按钮
-对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
+对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见<a href="https://smartprogram.baidu.com/docs/design/foundation/writing/">措辞</a>章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/8-1.png">
