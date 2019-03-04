@@ -235,57 +235,16 @@ swan.saveImageToPhotosAlbum({
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法|
+|201|解析失败，请检查调起协议是否合法。|
 |1001|执行失败|
 
 **iOS**
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确。 |
 |1003|读取图片路径为空|
 |1003|没有读取到任何图片数据|
-|200301|相册权限，用户拒绝系统相册权限|
-|200302|相册权限，用户拒绝小程序相册|
+|200301|相册权限，用户拒绝系统相册权限。|
+|200302|相册权限，用户拒绝小程序相册。|
 
-## recognizeImage
-
-> 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)。
-
-支持在小程序内调起识图，目前支持的识图功能包含： 扫码，拍题，翻译。
-
-
-**Object参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|categoryList |String Array |  是 | 需要调起的识图垂类列表 |
-|index |Number| 否 | 对应categoryList的索引值，设定调起识图垂类功能，默认为0，即categoryList中第一项。 |
-|showTitle |Boolean | 否  |当垂类列表中仅有一项时，调起识图后是否展示垂类名称，默认为false，即单一垂类调起识图时不展示名称。  |
-|success |Function  |  是 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**categoryList有效值**
-
-|errCodegory|功能|
-|----|----|
-|BARCODE|扫码|
-|TRANSLATE|翻译|
-|QUESTION|拍题|
-
-**示例代码：**
-
-```javascript
-swan.recognizeImage({
-    categoryList: ['BARCODE'], 
-    index: 0,
-    showTitle: true,
-    success(res) {
-        console.log('调起识图成功：', res);
-    },
-    fail(err) {
-        console.log('调起识图失败：', err);
-    }
-})
-```

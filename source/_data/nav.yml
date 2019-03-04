@@ -941,6 +941,10 @@
                     link: /develop/api/ai_classify/#plantClassify
                     text: plantClassify
                     name: ai_classify_plantClassify
+                  -
+                    link: /develop/api/ai_classify/#recognizeImage
+                    text: recognizeImage
+                    name: ai_classify_recognizeImage                       
               -
                 link: /develop/api/ai_voice
                 text: 语音识别
@@ -976,10 +980,7 @@
                   link: /develop/api/media_image/#saveImageToPhotosAlbum
                   text: saveImageToPhotosAlbum
                   name: media_image_saveImageToPhotosAlbum
-                -
-                  link: /develop/api/media_image/#recognizeImage
-                  text: recognizeImage
-                  name: media_image_recognizeImage                
+             
             -
               link: /develop/api/media_recorder
               text: 录音管理
