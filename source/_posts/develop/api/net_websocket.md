@@ -35,6 +35,25 @@ swan.connectSocket({
 });
 ```
 
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明errMsg|
+|--|--|
+|4|参数有误 |
+|7|安全校验失败|
+|errorCode为1|超过设置的最大task数量|
+|errorCode为2|url/subProtocals错误|
+|errorCode为3|创建task实例失败|
+
 onSocketOpen
 ----
 **解释：**监听 WebSocket 连接打开事件。
@@ -74,6 +93,21 @@ swan.onSocketError(function (res) {
 });
 ```
 
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|0|error happen|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+||Status error,current + 当前状态|
+||Excedding max concurrency + 设置的最大并发数|
+
 sendSocketMessage
 ----
 **解释：**通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。
@@ -101,6 +135,20 @@ swan.onSocketOpen(function() {
     });
 });
 ```
+#### 错误码
+
+**Andriod**
+ 
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|4|参数有误 |
 
 onSocketMessage
 ----
@@ -129,6 +177,13 @@ swan.onSocketMessage(function (res) {
     console.log('收到服务器内容：', res.data);
 });
 ```
+#### 错误码
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|4|参数有误 |
 
 closeSocket
 ----
@@ -158,6 +213,15 @@ swan.onSocketOpen(function () {
     swan.closeSocket();
 });
 ```
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
 
 onSocketClose
 ----

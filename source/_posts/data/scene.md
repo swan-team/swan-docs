@@ -4,7 +4,7 @@ header: data
 nav: book
 sidebar: scene
 ---
-> 场景值可以通过<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/">App（）</a>生命周期函数中onShow事件中的scene字段获取。
+> 场景值可以通过<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/">App（）</a>生命周期函数中 onShow 事件中的 scene 字段获取。
 
 以下各场景和scene值的对应关系。
 
@@ -24,7 +24,7 @@ sidebar: scene
 
 |场景|	scene值|
 |---|---|
-|息流直接推荐|	10910015|
+|信息流直接推荐|	10910015|
 |落地页自动挂载	|10910016|
 
 ## 号挂载 	

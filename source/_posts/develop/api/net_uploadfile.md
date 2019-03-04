@@ -96,7 +96,22 @@ uploadTask.onProgressUpdate(res => {
 
 uploadTask.abort(); // 取消上传任务
 ```
+#### 错误码
 
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;&nbsp;&nbsp;|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|1|解析失败，请检查参数是否正确|
 ## downloadFile
 
 **解释：**下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径
@@ -190,3 +205,20 @@ downloadTask.abort(); // 取消下载任务
 **说明**：
 
 uploadFile 上传文件大小限制为 25M。
+
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|1001|执行错误|
+
+**iOS**
+
+|错误码|说明errMsg|
+|--|--|
+|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|1001|请求文件超过10M|
+|1002|无法确定下载文件大小|

@@ -54,6 +54,15 @@ swan.getSystemInfo({
     }
 });
 ```
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|202|解析失败，请检查参数是否正确。|
+|402|安全性检查：访问控制校验失败。|
 
 getSystemInfoSync
 ---
@@ -94,6 +103,13 @@ try {
     // Do something when catch error
 }
 ```
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
 
 getEnvInfoSync
 ---

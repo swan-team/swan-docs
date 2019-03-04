@@ -98,3 +98,19 @@ requestTask.abort();
 **说明**
 *  content-type 默认为 'application/json'；
 *  url 中不能有端口。
+
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查调起协议是否合法|
+|errorCode为4|URL无效
