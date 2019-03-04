@@ -25,7 +25,7 @@ fileSystemManager.saveFileSync(tempFilePath, filePath)
 | message | 描述
 |-|-|
 | fail no such file or directory ${path} | 文件/目录不存在  |
-| fail tempFilePath file not exist|指定的 tempFilePath 找不到文件|
+| fail tempFilePath file not exist|指定的 tempFilePath 无法找到文件|
 | fail permission denied, open ${filePath} | 指定的 filePath 路径没有写权限|
 
 **示例：**
