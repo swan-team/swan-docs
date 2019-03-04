@@ -16,7 +16,7 @@ sidebar: rank
 1. 单击“点击开启”，在弹出的对话框中勾选“web预览”。
 ![图片](../../img/flow/rank/rank2.png)
 2. 勾选后，开发者工具上方的按钮区域会出现“web 预览”的按钮。
-    * 为确保 web 小程序可以正常展示，建议通过这个按钮获取 Web 小程序的预览二维码，用手机浏览器扫码调试。   
+    * 为确保 web 小程序可以正常展示，建议通过这个按钮获取 Web 小程序的预览二维码，用手机浏览器扫码调试。
     * 请确保 web 版小程序：页面可正常展示，页面可正常跳转，底部 Tabbar 可正常点击切换。
 
 
@@ -24,7 +24,7 @@ sidebar: rank
 
 > 智能小程序被搜索引擎正常收录的前提是可以进行网页化的处理，能够以普通网页的形式被爬虫发现和抓取。可以理解为每一个智能小程序页面都会转码成一张网页。
 
-开发者需要为当前的小程序页面配置页面 meta 信息，包括 title、description、keywords，这三类信息需要保持和小程序对应的 H5 站页面一致。具体接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">页面 meta 信息</a>。
+开发者需要为当前的小程序页面配置页面 meta 信息，包括 title、description、keywords。这三类信息需要保持和小程序对应的 H5 站页面一致。具体接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">页面 meta 信息</a>。
 
 由于每个页面的页面 meta 信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面 meta 信息的 API 设置到页面中。
 
@@ -33,90 +33,146 @@ sidebar: rank
 ## 配置 URL 映射规则
 
 URL映射规则定义的是小程序页面到 H5 页面的映射规则，百度搜索基于这一份映射规则来计算小程序的排序权重以及和 H5 页面的去重处理等等，因此配置 URL映射规则对小程序入搜索至关重要。
-### 增加 url-mapping 字段
 
-在 app.json 中增加 url-mapping 字段，配置智能小程序与其对应的H5页面的URL的映射规则，供搜索引擎在自然结果中将H5站URL进行匹配和替换。
+### 规则提交方式
+配置 URL 映射规则的方式有两种：
+1. 在小程序源码文件 app.json 中声明
+在 app.json 中增加 `url-mapping` 字段，声明智能小程序与其对应的H5页面的URL的映射规则。
+示例：
+```json
+"url-mapping": {
+    "pages/home/index": "/",
+    "pages/list/index": "/products",
+    "pages/book/index": "/book/detail?id=${id}"
+}
+```
 
-* url-mapping 字段为 Object，在 pages 中配置的小程序路径作为 key，每一个小程序路径对应的 H5 页面作为 value; 每一对“key-value”作为一个完整的URL映射。如果小程序路径和H5页面是一对一映射，value为一个字符串；如果是一对多映射，value为一个数组。
-* URL 映射规则通过字符串模板的方式进行定义，模板变量的界定符是 ${}。需要将 Web 版智能小程序 URL 中的 query 部分，和字符串模板进行编译，生成正式的 URL 实例。
+2. 在百度智能小程序平台提交配置
+进入智能小程序平台，从管理中心进入小程序开发者平台，单击“流量配置 > 自然搜索结果> URL 映射规则”，对URL映射规则进行线上配置。
+
+![图片](../../img/flow/rank/rank4.png)
+
+### 规则格式说明
+
+* 每组小程序 path - H5 url 的映射关系由一个 `key:value` 格式声明。
+key 为小程序路径，格式与 `pages` 字段中声明路径格式一致。
+value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对一映射，value 为一个字符串；如果是一对多映射，value为一个数组。
+
+* value 中的可变参数部分通过模板变量声明，模板变量的界定符是 `${}`。如果 H5 中某个参数值与小程序对应页面中某个参数一致，参数变量名取小程序参数名称以声明参数的对应关系；如果 H5 中某个参数在对应小程序页面参数中不存在，可用任意不包含在小程序页面参数名中名称。
+
 * URL 映射规则默认不包含 host 部分，具体的 host 需要开发者在上述步骤中的 H5 域名部分进行配置。URL 映射规则也可包含 host 部分，要求 host 部分必须为在小程序平台的 H5 域名的子域。
    > * 可省略 host 的情况：小程序只需要映射到同一域名下的页面，只需要将该域名配置到上文提到的 H5 域名下，在 URL映射规则可省略 host
    > * 不可省略 host 的情况：某些 Web 站点可能存在多个子域名，小程序的页面需要同时映射到多子域下的 H5 页面，这种场景下需要在上文中提到的 H5 域名区域出配置主域名，在 URL 映射规则中配置 H5 子域。
 
 ### 配置示例
 
-#### 一对一映射关系示例
+#### 映射规则格式示例
 
-|小程序页面链接|对应H5页面链接|
-|--|--|
-|web化主页：https://byokpg.smartapps.cn/pages/home/index  |H5主页：https://m.site.com/ |
-|web化列表页：  https://byokpg.smartapps.cn/pages/list/index?city=bj |H5列表页：https://m.site.com/list/bj.html |
-|web化详情页：https://byokpg.smartapps.cn/pages/detail/index?city=bj&id=1024  |H5详情页：https://m.site.com/detail.html?id=1024 |
+1. 一对一的映射关系
 
-
-app.json中配置url-mapping字段如下：
 ```json
-
- "url-mapping": {
-    "pages/home/index":"/",
-    "pages/list/index": "/list/${city}.html",
-    "pages/detail/index": "/detail.html?city=${city}&id=${id}"
-}
-```
-#### 参数不一致示例
-
-|小程序页面链接|对应H5页面链接|
-|--|--|
-|https://byokpg.smartapps.cn/pages/detail?id=1024|https://m.site.com/detail.html?page=2048 |
-app.json中url-mapping的对应规则为：
-```json
-"url-mapping": {
-    "pages/detail ":"/detail.html?page=${page}&id=${id}"
+{
+    "pages/home/index": "/",
+    "pages/list/index": "/products",
+    "pages/book/index": "/book/detail?id=${id}"
 }
 ```
 
+2. 一对多映射关系
 
-#### 一对多映射关系示例
-* 当多个H5的页面内容相同并且指向同一个小程序页面时：
+如果一个小程序页面存在多个对应的 H5 URL，通过数组方式声明
 
-|小程序页面链接|对应H5页面链接|
-|--|--|
-|https://byokpg.smartapps.cn/pages/shop/shop?shopid=1024 | https://m.site.com/shop/1024<br>https://m.site.com/mshop/1024|
-app.json中url-mapping的对应规则为：
 ```json
-"url-mapping": {
-    "pages/shop/shop ":["/shop/${shopid}","/mshop/${shopid}"]
+{
+    "pages/home/index": "/",
+    "pages/list/index": "/products",
+    "pages/book/index": [
+        "/book/detail?id=${id}",
+        "/book/history/detail?id=${id}",
+        "/book?id=${id}"
+    ]
 }
 ```
-* 当H5域名属于绑定域名的同一主域下的不同二级域名时，需要补全二级域名：
 
-|绑定 H5 域名|小程序页面链接|对应H5页面链接|
-|--|--|--|
-|https://m.site.com | https://byokpg.smartapps.cn/pages/shop/shop?shopid=1024 | https://shop.m.site.com/shop/1024 |
-app.json中url-mapping的对应规则为：
+3. 与子域名站点映射关系
+
+如果某条映射规则的 host 是子域 host，value 前的域名不可省略
+
 ```json
-"url-mapping": {
-    "pages/shop/shop ":"https://shop.m.site.com/shop/${shopid}"
+{
+    "pages/home/index": "/",
+    "pages/list/index": "/products",
+    "pages/book/index": [
+        "/book/detail?id=${id}",
+        "/book/history/detail?id=${id}",
+        "https://my.example.com/book?id=${id}"
+    ]
 }
 ```
-**说明**：
-当多个不同的H5页面（如视频页、图集页）对应同一个小程序页面模板并且H5和小程序的path参数完全不同时，此时建议将小程序页面根据类型和参数进行拆分。
+
 
-### 智能小程序平台配置 URL 映射关系
-URL 映射规则不仅可以在 app.json 中进行配置，同样也可以在智能小程序平台中进行配置和修改。进入智能小程序平台，单击进入小程序首页，单击“流量配置 > 自然搜索结果> URL 映射规则”，对URL映射规则进行线上配置。
+#### 映射项示例
 
-![图片](../../img/flow/rank/rank4.png)
+1. 无参数情况
+
+```json
+# 小程序路径：pages/home/index
+# 对应 H5 路径：https://example.com/
+"pages/home/index": "/",
+
+# 小程序路径：pages/list/index
+# 对应 H5 路径：https://example.com/products
+"pages/list/index": "/products"
+```
+
+2. 参数一致情况
+
+当小程序页中的参数和 H5 中的参数含义一致时，value 部分参数值替换成模板变量，变量名为小程序中对应的参数名
+
+```json
+# 小程序路径：pages/book/index?id=12
+# 对应 H5 路径：https://example.com/book/detail?id=12
+"pages/book/index": "/book/detail?id=${id}",
+
+# 小程序路径：pages/book/index?id=12
+# 对应 H5 路径：https://example.com/book/detail?bookid=12
+"pages/book/index": "/book/detail?bookid=${id}"
+```
+
+3. 参数不一致情况
+
+当存在小程序页参数与 H5 中定义的参数含义不一致时，不一致参数保留。value 的参数部分包含小程序和 H5 参数的全集
+
+```json
+# 小程序路径：pages/book/index?id=12
+# 对应 H5 路径：https://example.com/book/detail?cate=history&bookid=12
+"pages/book/index": "/book/detail?cate=${cate}&bookid=${id}",
+
+# 小程序路径：pages/book/index?id=12&cate=history
+# 对应 H5 路径：https://example.com/book/detail?bookid=12
+"pages/book/index": "/book/detail?cate=${cate}&bookid=${id}"
+```
+
+3. 小程序的参数为 H5 链接中一部分的情况
+
+当 H5 中的可变部分不是在 URL Query 中，同样可以通过模板变量的方式替换对应的部分
+
+```json
+# 小程序路径：pages/book/index?id=12&cate=history
+# 对应 H5 路径：https://example.com/book/history?bookid=12
+"pages/book/index": "/book/${cate}?bookid=${id}",
+
+# 小程序路径：pages/book/index?id=12
+# 对应 H5 路径：https://example.com/book/history/12.html
+"pages/book/index": "/book/${catgid}/${id}.html"
+```
 
 ## URL 映射规则 - 校验工具
 
 在URL映射规则规则的填写弹窗中增加了“校验工具”的入口，开发者可点击“映射规则校验”进入对应的校验工具页面中，开发者可在页面中填写小程序的Path（即后续 Sitemap 中提交的内容）和 URL 映射规则，生成相应的 Web 化小程序 URL 和对应的 H5 URL 进行最终生成结果的检查，以便校验提交内容的正确性。
 
 ![图片](../../img/flow/rank/rank05.png)
-## 在开发者工具重新提包
 
-完成上述步骤之后，请在开发者工具里重新提包，在代码编译过程中可能会出现和Web化相关的报错信息，请根据报错信息进行修复。
-代码包通过审核后，开发者将会自动获得一个Web小程序的线上地址，请参见<a href="https://smartprogram.baidu.com/docs/develop/web/detail/">Web化域名获取</a>。
-> 开发者可通过该地址来确认自己的Web小程序是否已成功部署到线上, 该域名可被访问但不建议对外直接提供使用。
 
 ## 绑定熊掌号
 
