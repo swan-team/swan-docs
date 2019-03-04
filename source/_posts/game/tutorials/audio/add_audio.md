@@ -142,5 +142,5 @@ class MultishotAudio {
 }
 ```
 
-更多信息请参见[音频 API](/api/media/audio/)。
+更多信息请参见[音频 API](/game/api/media/audio/)。
 

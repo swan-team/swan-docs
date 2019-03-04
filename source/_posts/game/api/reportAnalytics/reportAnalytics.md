@@ -1,6 +1,6 @@
 ---
 title: 数据分析
-layout: doc
+layout: gamedoc
 topic: reportAnalytics
 level: root
 categoryName: api

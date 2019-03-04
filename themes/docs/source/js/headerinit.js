@@ -10,12 +10,12 @@
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
 
-        '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
+        '/docs/game/introduction/prerare/enter_application/': '/docs/game/introduction/prerare/enter/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
         '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
         '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
 
-        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
+        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/bannerDoc/',
         '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
         '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
         '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',

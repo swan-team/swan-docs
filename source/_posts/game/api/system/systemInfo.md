@@ -94,4 +94,4 @@ console.log('手机品牌信息：', data.brand);
 ```
 
 **注意：**
-`fontSizeSetting` 数据信息双端纬度不一致，iOS 1~4 共计 4 档，Android 0~3 共计 4档。
+`fontSizeSetting` 数据信息双端纬度不一致，iOS 1~4 共计 4 档，Android 0~3 共计 4 档。
