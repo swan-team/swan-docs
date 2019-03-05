@@ -45,14 +45,15 @@ showNavigationBarLoading
 **解释：** 该方法在当前页面显示导航条加载动画。
 <!-- <a href="swanide://fragment/b5154f1fd73ea50516ade71f66456ae41540397555" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a> -->
-#### 错误码
+        
+<!-- #### 错误码
 
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
-|1001|执行失败|
+|1001|执行失败| -->
 
 hideNavigationBarLoading
 ---
