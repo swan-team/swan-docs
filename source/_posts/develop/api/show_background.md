@@ -32,7 +32,7 @@ swan.setBackgroundColor({
     backgroundColorBottom: '#333333'
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -45,7 +45,7 @@ swan.setBackgroundColor({
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->
 
 setBackgroundTextStyle
 -----
