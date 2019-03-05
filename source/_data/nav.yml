@@ -44,16 +44,16 @@
       sidebar:
         -
             link: /introduction/access
-            text: 信息流流量接入  
-            sidebar:        
+            text: 信息流流量接入
+            sidebar:
               -
                 link: /introduction/feed
-                text: 信息流流量说明  
-                name: feed 
+                text: 信息流流量说明
+                name: feed
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
-                name: auditing_info                 
+                name: auditing_info
         -
             link: /introduction/intro
             text: 搜索流量接入
@@ -77,7 +77,7 @@
               -
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
-                name: auditing_baijiahao                              
+                name: auditing_baijiahao
 
 # 2
 -
@@ -129,7 +129,7 @@
             -
               link: /design/foundation/logo
               text: 头像输出
-              name: logo            
+              name: logo
             -
               link: /design/foundation/writing
               text: 措辞
@@ -176,7 +176,7 @@
             -
               link: /design/component/guide_add
               text: 添加到我的小程序引导
-              name: guide_add               
+              name: guide_add
             -
               link: /design/component/empty_state
               text: 空态
@@ -330,34 +330,34 @@
           link: /develop/tutorial/move
           text: 开发解决方案
           name: move
-          sidebar: 
+          sidebar:
               -
                 link: /develop/tutorial/move
                 text: 搬家工具
                 name: move
-              -   
+              -
                 link: /develop/tutorial/frame
                 text: 框架开发
-                name: frame   
+                name: frame
                 sidebar:
                   -
                     link: /develop/tutorial/frame/#Taro
                     text: Taro
-                    name: frame_Taro     
+                    name: frame_Taro
                   -
                     link: /develop/tutorial/frame/#mpvue
                     text: mpvue
-                    name: frame_mpvue 
+                    name: frame_mpvue
                   -
                     link: /develop/tutorial/frame/#WePY
                     text: WePY
-                    name: frame_WePY                                                    
-                  -   
+                    name: frame_WePY
+                  -
                     link: /develop/tutorial/frame/#Okam
-                    text: Okam 
-                    name: frame_Okam  
-                                                             
-            
+                    text: Okam
+                    name: frame_Okam
+
+
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -944,7 +944,7 @@
                   -
                     link: /develop/api/ai_classify/#recognizeImage
                     text: recognizeImage
-                    name: ai_classify_recognizeImage                       
+                    name: ai_classify_recognizeImage
               -
                 link: /develop/api/ai_voice
                 text: 语音识别
@@ -980,7 +980,7 @@
                   link: /develop/api/media_image/#saveImageToPhotosAlbum
                   text: saveImageToPhotosAlbum
                   name: media_image_saveImageToPhotosAlbum
-             
+
             -
               link: /develop/api/media_recorder
               text: 录音管理
@@ -1011,7 +1011,7 @@
                 -
                   link: /develop/api/media_createinneraudiocontext/#setInnerAudioOption
                   text: setInnerAudioOption
-                  name: media_createinneraudiocontext_setInnerAudioOption                  
+                  name: media_createinneraudiocontext_setInnerAudioOption
             -
               link: /develop/api/media_video
               text: 视频
@@ -1320,8 +1320,8 @@
                     text: canvasContext.scale
                     name: show_canvas_canvasContext.scale
                   -
-                    link: /develop/api/show_canvas/#canvasContext-rotate          
-                    text: canvasContext.rotate  
+                    link: /develop/api/show_canvas/#canvasContext-rotate
+                    text: canvasContext.rotate
                     name: show_canvas_canvasContext.rotate
                   -
                     link: /develop/api/show_canvas/#canvasContext-translate
@@ -1550,7 +1550,7 @@
                   -
                     link: /develop/api/show_background/#setBackgroundTextStyle
                     text: setBackgroundTextStyle
-                    name: show_background_setBackgroundTextStyle                    
+                    name: show_background_setBackgroundTextStyle
               -
                 link: /develop/api/show_pull
                 text: 下拉刷新
@@ -1576,7 +1576,7 @@
                   -
                     link: /develop/api/custom_component/#nextTick
                     text: nextTick
-                    name: custom_component_nextTick                    
+                    name: custom_component_nextTick
               -
                 link: /develop/api/show_query
                 text: 节点信息
@@ -1654,7 +1654,7 @@
                   -
                     link: /develop/api/nacomponent/#showFavoriteGuide
                     text: showFavoriteGuide
-                    name: nacomponent_showFavoriteGuide              
+                    name: nacomponent_showFavoriteGuide
 
         -
             link: /develop/api/device
@@ -2004,13 +2004,13 @@
                     name: open_infomation_sendTemplateMessage
               -
                 link: /develop/api/seo
-                text: 页面 meta 信息
+                text: 页面基础信息
                 name: seo
                 sidebar:
                   -
                     link: /develop/api/seo/#setPageInfo
                     text: setPageInfo
-                    name: seo_setPageInfo                    
+                    name: seo_setPageInfo
                   -
                     link: /develop/api/seo/#setMetaDescription
                     text: setMetaDescription
@@ -2023,7 +2023,7 @@
                     link: /develop/api/seo/#setDocumentTitle
                     text: setDocumentTitle
                     name: seo_setDocumentTitle
-     
+
               -
                 link: /develop/api/open_preloadsubpackage
                 text: 分包预下载
@@ -2063,7 +2063,7 @@
                   -
                     link: /develop/api/get/#getUpdateManager
                     text: getUpdateManager
-                    name: get_getUpdateManager 
+                    name: get_getUpdateManager
               -
                 link: /develop/api/debug
                 text: 调试
@@ -2102,7 +2102,7 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout                         
+                    name: timer_setTimeout
     -
       link: /develop/devtools/show_sur
       text: 工具
@@ -2220,7 +2220,7 @@
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
-                name: uplog_compile    
+                name: uplog_compile
 
     -
       link: /develop/server/oauth_intr
@@ -2326,7 +2326,7 @@
             -
               link: /develop/third/deciphering
               text: 第三方平台消息加解密
-              name: deciphering              
+              name: deciphering
         -
           link: /develop/third/log
           text:
@@ -2335,7 +2335,7 @@
             -
               link: /develop/third/log
               text: 更新日志
-              name: log            
+              name: log
     # -
     #   link: /develop/flow
     #   text: 搜索流量接入
@@ -2518,7 +2518,7 @@
       name: book
       sidebar:
         -
-          sidebar:            
+          sidebar:
           -
             link: /operations/thirdparty
             text: 第三方服务条款
