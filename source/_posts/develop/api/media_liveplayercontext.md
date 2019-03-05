@@ -41,7 +41,7 @@ createLivePlayerContext
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -56,7 +56,7 @@ createLivePlayerContext
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。 |
-|401|安全校验失败|
+|401|安全校验失败| -->
 
 <!-- createCameraContext
 ---

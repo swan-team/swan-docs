@@ -70,7 +70,7 @@ swan.setBackgroundTextStyle({
     textStyle: 'light'
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -83,4 +83,4 @@ swan.setBackgroundTextStyle({
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->

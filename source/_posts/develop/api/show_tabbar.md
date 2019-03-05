@@ -29,7 +29,7 @@ swan.setTabBarBadge({
     text: '文本'
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -42,7 +42,7 @@ swan.setTabBarBadge({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 removeTabBarBadge
 ---
@@ -64,7 +64,7 @@ swan.removeTabBarBadge({
     index: 0
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -77,7 +77,7 @@ swan.removeTabBarBadge({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 
 showTabBarRedDot
@@ -102,7 +102,7 @@ swan.showTabBarRedDot({
     index: 0
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -115,7 +115,7 @@ swan.showTabBarRedDot({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 hideTabBarRedDot
 ---
@@ -140,7 +140,7 @@ swan.hideTabBarRedDot({
 });
 
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -153,7 +153,7 @@ swan.hideTabBarRedDot({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 setTabBarStyle
 ---
@@ -183,7 +183,7 @@ swan.setTabBarStyle({
     borderStyle: 'white'
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -195,7 +195,7 @@ swan.setTabBarStyle({
 
 |错误码|说明|
 |--|--|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 setTabBarItem
 ---
@@ -228,7 +228,7 @@ swan.setTabBarItem({
     selectedIconPath: '/images/component_selected.png',
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -241,7 +241,7 @@ swan.setTabBarItem({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1002|超过icon文件最大值|
+|1002|超过icon文件最大值| -->
 
 
 showTabBar
@@ -273,7 +273,7 @@ swan.showTabBar({
     }
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -285,7 +285,7 @@ swan.showTabBar({
 
 |错误码|说明|
 |--|--|
-|1001|当前页面不含tabbar|
+|1001|当前页面不含tabbar| -->
 
 hideTabBar
 ---
@@ -316,7 +316,7 @@ swan.hideTabBar({
     }
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -327,4 +327,4 @@ swan.hideTabBar({
 **iOS**
 |错误码|说明|
 |--|--|
-|1001|当前页面不含tabba|
+|1001|当前页面不含tabba| -->

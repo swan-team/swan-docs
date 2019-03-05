@@ -45,7 +45,7 @@ swan.chooseAddress({
     }
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -64,4 +64,4 @@ swan.chooseAddress({
 |202|解析失败，请检查参数是否正确。|
 |10001|内部错误|
 |10002|网络请求失败|
-|10004|用户拒绝(user not login)|
+|10004|用户拒绝(user not login)| -->

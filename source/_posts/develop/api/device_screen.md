@@ -19,7 +19,7 @@ setScreenBrightness
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -33,7 +33,7 @@ setScreenBrightness
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->
 
 getScreenBrightness
 ---
@@ -54,13 +54,13 @@ getScreenBrightness
 |---- | ---- | ---- |
 |value   | Number | 屏幕亮度值，范围 0~1，0 最暗，1 最亮。|
 
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
-|1001|执行失败|
+|1001|执行失败| -->
 
 setKeepScreenOn
 ---
@@ -91,7 +91,7 @@ swan.onUserCaptureScreen(function() {
     console.log('用户截屏了')
 });
 ``` -->
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -105,4 +105,4 @@ swan.onUserCaptureScreen(function() {
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->
