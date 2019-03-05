@@ -275,6 +275,10 @@ Page({
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
 
+**BUG：**
+
+  在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+
 ## label
 
 **解释**： 使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。

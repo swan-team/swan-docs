@@ -941,6 +941,10 @@
                     link: /develop/api/ai_classify/#plantClassify
                     text: plantClassify
                     name: ai_classify_plantClassify
+                  -
+                    link: /develop/api/ai_classify/#recognizeImage
+                    text: recognizeImage
+                    name: ai_classify_recognizeImage
               -
                 link: /develop/api/ai_voice
                 text: 语音识别
@@ -1895,9 +1899,9 @@
                     text: getUserInfo
                     name: open_userinfo_getUserInfo
                   -
-                    link: /develop/api/open_userinfo/#verify
-                    text: verify
-                    name: open_userinfo_verify
+                    link: /develop/api/open_userinfo/#signature-计算方法
+                    text: signature 计算方法
+                    name: open_userinfo_signature-计算方法
 
               -
                 link: /develop/api/open_setting
