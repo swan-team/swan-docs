@@ -2102,13 +2102,7 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout
-        -
-            sidebar:     
-              -
-                link: /develop/api/errorcode
-                text: 通用错误码
-                name: errorcode                          
+                    name: timer_setTimeout                         
     -
       link: /develop/devtools/show_sur
       text: 工具

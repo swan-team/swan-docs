@@ -31,7 +31,7 @@ swan.onMemoryWarning(function (res) {
     console.log('onMemoryWarningReceive')
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -44,4 +44,4 @@ swan.onMemoryWarning(function (res) {
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->

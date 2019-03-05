@@ -87,7 +87,7 @@ const options = {
 recorderManager.start(options);
 
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -107,4 +107,4 @@ recorderManager.start(options);
 |202|解析失败，请检查参数是否正确 |
 |2001|错误的调起时机|
 |2002|录音执行错误|
-|2004|用户拒绝小程序使用麦克风|
+|2004|用户拒绝小程序使用麦克风| -->

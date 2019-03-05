@@ -35,12 +35,13 @@ swan.connectSocket({
 });
 ```
 
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
+|302|找不到调起协议对应端能力方法|
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
@@ -52,7 +53,7 @@ swan.connectSocket({
 |7|安全校验失败|
 |errorCode为1|超过设置的最大task数量|
 |errorCode为2|url/subProtocals错误|
-|errorCode为3|创建task实例失败|
+|errorCode为3|创建task实例失败| -->
 
 onSocketOpen
 ----
@@ -93,7 +94,7 @@ swan.onSocketError(function (res) {
 });
 ```
 
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -106,7 +107,7 @@ swan.onSocketError(function (res) {
 |错误码|说明|
 |--|--|
 ||Status error,current + 当前状态|
-||Excedding max concurrency + 设置的最大并发数|
+||Excedding max concurrency + 设置的最大并发数| -->
 
 sendSocketMessage
 ----
@@ -135,12 +136,13 @@ swan.onSocketOpen(function() {
     });
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
  
 |错误码|说明|
 |--|--|
+|302|找不到调起协议对应端能力方法|
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
@@ -148,7 +150,7 @@ swan.onSocketOpen(function() {
 
 |错误码|说明|
 |--|--|
-|4|参数有误 |
+|4|参数有误 | -->
 
 onSocketMessage
 ----
@@ -177,13 +179,13 @@ swan.onSocketMessage(function (res) {
     console.log('收到服务器内容：', res.data);
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **iOS**
 
 |错误码|说明|
 |--|--|
-|4|参数有误 |
+|4|参数有误 | -->
 
 closeSocket
 ----
@@ -213,14 +215,15 @@ swan.onSocketOpen(function () {
     swan.closeSocket();
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
+|302|找不到调起协议对应端能力方法|
 |202|解析失败，请检查参数是否正确 |
-|1001|执行失败|
+|1001|执行失败| -->
 
 
 onSocketClose

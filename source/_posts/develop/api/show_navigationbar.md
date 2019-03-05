@@ -26,7 +26,7 @@ swan.setNavigationBarTitle({
     title: '我是页面标题'
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -38,7 +38,7 @@ swan.setNavigationBarTitle({
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->
 
 showNavigationBarLoading
 ---
@@ -58,14 +58,14 @@ hideNavigationBarLoading
 ---
 **解释：** 隐藏导航条加载动画。
 
-#### 错误码
+<!-- #### 错误码
 
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
-|1001|执行失败|
+|1001|执行失败| -->
 
 setNavigationBarColor
 ---
@@ -114,7 +114,7 @@ swan.setNavigationBarColor({
 	}
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -126,4 +126,4 @@ swan.setNavigationBarColor({
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确。| -->

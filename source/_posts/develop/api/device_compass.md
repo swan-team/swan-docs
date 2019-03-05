@@ -26,7 +26,7 @@ swan.onCompassChange(function (res) {
 });
 
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -39,7 +39,8 @@ swan.onCompassChange(function (res) {
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|1001|设备不支持|
+|1001|设备不支持| -->
+
 startCompass
 ---
 **解释：**开始监听罗盘数据。

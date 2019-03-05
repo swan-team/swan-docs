@@ -30,7 +30,7 @@ swan.onAccelerometerChange(function (res) {
     console.log(res.z);
 });
 ```
-
+<!-- 
 #### 错误码
 
 **Andriod**
@@ -43,8 +43,8 @@ swan.onAccelerometerChange(function (res) {
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。;|
-|1001|设备不支持否正确|
+|202|解析失败，请检查参数是否正确。|
+|1001|设备不支持否正确| -->
 ## startAccelerometer
 
 **解释：**开始监听加速度数据。

@@ -49,7 +49,7 @@ startPullDownRefresh
 ```js
 swan.startPullDownRefresh();
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -61,7 +61,7 @@ swan.startPullDownRefresh();
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法。| -->
 
  
 stopPullDownRefresh
@@ -75,7 +75,7 @@ stopPullDownRefresh
 ```js
 swan.stopPullDownRefresh();
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -87,4 +87,4 @@ swan.stopPullDownRefresh();
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法。| -->

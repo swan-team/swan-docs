@@ -36,7 +36,7 @@ swan.navigateToSmartProgram({
     }
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
@@ -53,7 +53,7 @@ swan.navigateToSmartProgram({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|402|访问控制校验失败|
+|402|访问控制校验失败| -->
 
 navigateBackSmartProgram
 ---
@@ -81,11 +81,11 @@ swan.navigateBackSmartProgram({
     }
 });
 ```
-#### 错误码
+<!-- #### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
+|1001|执行失败| -->
