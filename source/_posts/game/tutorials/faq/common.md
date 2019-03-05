@@ -77,7 +77,7 @@ A: 真机会对请求的协议进行校验，会拦截 http 协议。详见[网�
 Q：分包加载失败？
 A：请确认是否在  game.json 中正确配置了 `subpackages` 字段；调用下载分包 API 时，注意单词 `loadSubpackages` 的大小写拼写，区别于小程序的该同名 API。
 
-Q：真机用 unzip 解压后，解压的文件无法找到？
+Q：真机用 unzip 解压后，解压的文件找不到？
 A：如 unzip 的 API 文档和示例所描述，传递给 unzip 的源文件和目标目录必须在用户目录（`${swan.env.USER_DATA_PATH}`）下。
 
 Q：对接广告、激励视频的参数 adUnitId 和 appSid 分别填什么？
