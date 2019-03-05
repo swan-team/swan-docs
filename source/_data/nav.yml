@@ -1899,9 +1899,9 @@
                     text: getUserInfo
                     name: open_userinfo_getUserInfo
                   -
-                    link: /develop/api/open_userinfo/#verify
-                    text: verify
-                    name: open_userinfo_verify
+                    link: /develop/api/open_userinfo/#signature-计算方法
+                    text: signature 计算方法
+                    name: open_userinfo_signature-计算方法
 
               -
                 link: /develop/api/open_setting
