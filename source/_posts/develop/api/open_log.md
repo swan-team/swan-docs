@@ -70,7 +70,24 @@ swan.login({
     }
 });
 ```
+<!-- #### 错误码
 
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败| -->
+
+<!-- **iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户未登录(user not login)|
+|10007|请求超时| -->
 ## Session Key
 
 **解释：** 智能小程序在其服务端中发送POST请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到Session Key。
@@ -167,13 +184,28 @@ swan.checkSession({
 });
 ```
 
-## 错误码列表
+<!-- #### 错误码  -->
 
-| 错误码 | 错误信息 | 详细描述 |
+<!-- | 错误码 | 错误信息 | 详细描述 |
 | - | :- | - |
 | invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
 | invalid_client | unknown client id | client_id、client_secret 参数无效。 |
-| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 |
+| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
+**Andriod**
+
+<!-- |错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户未登录(user not login)| -->
 
 ## isLoginSync
 
@@ -195,6 +227,13 @@ try {
     console.log('error', e);
 }
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败| -->
 
 ## 用户数据的签名验证和加解密
 

@@ -41,6 +41,23 @@ createLivePlayerContext
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|401|安全校验失败|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。 |
+|401|安全校验失败| -->
+
 <!-- createCameraContext
 ---
 **解释：** 相机组件控制，创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。

@@ -130,6 +130,13 @@ swan.canvasGetImageData({
     }
 });
 ```
+<!-- #### 错误码 -->
+
+
+<!-- |错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确。| -->
 
 canvasPutImageData
 -----
@@ -181,6 +188,14 @@ swan.canvasGetImageData({
             }
         });
 ```
+<!-- #### 错误码
+
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败|
+|202|解析失败，请检查参数是否正确。| -->
 
 canvasToTempFilePath(OBJECT, this)
 -----
@@ -224,6 +239,15 @@ swan.canvasToTempFilePath({
     }
 });
 ```
+<!-- #### 错误码 -->
+
+
+
+<!-- |错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败|
+|202|解析失败，请检查参数是否正确。| -->
 
 canvasContext.setFillStyle
 -----
@@ -1213,6 +1237,14 @@ ctx.font = 'italic bold 20px cursive'
 const metrics = ctx.measureText('Hello World')
 console.log(metrics.width);
 ```
+<!-- #### 错误码
+
+
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|202|解析失败，请检查参数是否正确。| -->
 
 canvasContext.arcTo
 -----
@@ -1437,6 +1469,14 @@ ctx.draw();
 ```
 
 ![图片](../../../img/api/canvas/draw1.png)
+
+<!-- #### 错误码
+
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|202|解析失败，请检查参数是否正确。| -->
 
 canvasContext.font
 -----
