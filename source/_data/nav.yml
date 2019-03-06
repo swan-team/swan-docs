@@ -954,6 +954,52 @@
                     link: /develop/api/ai_voice/#getVoiceRecognizer
                     text: getVoiceRecognizer
                     name: ai_voice_getVoiceRecognizer
+              -
+                link: /develop/api/ai_face
+                text: 人脸识别
+                name: ai_face
+                sidebar:
+                  -
+                    link: /develop/api/ai_face/#faceDetect
+                    text: faceDetect
+                    name: ai_face_faceDetect 
+                  -
+                    link: /develop/api/ai_face/#faceMatch
+                    text: faceMatch
+                    name: ai_face_faceMatch                   
+                  -
+                    link: /develop/api/ai_face/#faceSearch
+                    text: faceSearch
+                    name: ai_face_faceSearch
+                  -
+                    link: /develop/api/ai_face/#facePersonVerify
+                    text: facePersonVerify
+                    name: ai_face_facePersonVerify                   
+                  -
+                    link: /develop/api/ai_face/#facePersonIdmatch
+                    text: facePersonIdmatch
+                    name: ai_face_facePersonIdmatch                 
+                  -
+                    link: /develop/api/ai_face/#faceVerify
+                    text: faceVerify
+                    name: ai_face_faceVerify
+                  -
+                    link: /develop/api/ai_face/#faceLivenessSessioncode
+                    text: faceLivenessSessioncode
+                    name: ai_face_faceLivenessSessioncode
+                  -
+                    link: /develop/api/ai_face/#faceLivenessVerify
+                    text: faceLivenessVerify
+                    name: ai_face_faceLivenessVerify
+              -
+                link: /develop/api/ai_word
+                text: 词法识别
+                name: ai_word
+                sidebar:
+                  -
+                    link: /develop/api/ai_word/#nlpLexerCustom
+                    text: nlpLexerCustom
+                    name: ai_word_nlpLexerCustom
         -
             link: /develop/api/media
             text: 媒体
