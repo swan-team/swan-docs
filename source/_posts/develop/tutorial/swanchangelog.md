@@ -8,6 +8,7 @@ sidebar: swanchangelog
 ## 3.20 版本日志更新
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.20.11 |2019.3.5|**New**<p>支持人脸识别和词法分析AI能力的API接口。<p>**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.20.8|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
 |3.20.6|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复。|
 
@@ -16,6 +17,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15. 116  |2019.3.5|**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.15.112|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
 |3.15.110|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复;<p>修复dataset 大小写转化问题。|
 |3.15.105  |2019.2.19|**New**<p>**·**自定义组件中支持使用相对路径动态引用资源；<p>**·**自定义组件内支持支持 hoverclass；<p>**·**app 工程里计算基础路径时支持 http/https 开头的绝对路径。|
@@ -24,6 +26,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.10.36 |2019.3.5|**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.10.33|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
 |3.10.32|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复。|
 |3.10.29   |2019.2.22|**BugFix**<p>extension bug修复。|
