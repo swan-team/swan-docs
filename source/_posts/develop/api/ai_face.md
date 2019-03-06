@@ -63,7 +63,7 @@ swan.chooseImage({
 
 ### 示例代码
 ```js
-swan.swan.ai.faceMatch({
+swan.ai.faceMatch({
   data: [
     {
         "image": "https://www.downloadImage.com/xxxx.jpg",
@@ -208,7 +208,7 @@ swan.ai.facePersonIdmatch({
 
 ### 示例代码
 ```js
-swan.ChooseImage({
+swan.chooseImage({
 	success(res) {
 		swan.ai.faceVerify({
 		  data: [
@@ -265,7 +265,7 @@ swan.ai.faceLivenessSessioncode({
 
 |参数名 | 参数类型 | 是否必填 | 说明 | 
 |---|---|---|---|
-|video_base64 | string| 是 | 视频文件路径| 
+|video_base64 | string| 是 | base64 编码后的视频数据（视频限制：最佳为上传5-15s的mp4文件。视频编码方式：h264 编码；音频编码格式：aac，pcm均可。）| 
 |session_id | string| 否 | 语音校验码会话id，使用此接口的前提是已经调用了语音校验码接口。语音校验码作为辅助性质的验证条件，是一个可选项，如果应用场景比较嘈杂或方言口音比较重，可以不使用语音验证。  | 
 |success | Function | 否 | 接口调用成功后的回调函数 | 
 |fail | Function | 否 | 接口调用失败的回调函数 | 
