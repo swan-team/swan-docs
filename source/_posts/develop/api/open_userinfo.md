@@ -8,14 +8,12 @@ sidebar: open_userinfo
 
 ## swanid机制说明
 
-由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用`swan.login()`强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个SwanID的标识，可视作用户的设备标识。
+由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用`swan.login()`强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个 SwanID 的标识，可视作用户的设备标识。
+* 用户在同一台设备上使用同一个开发者所开发的不同智能小程序，得到的是相同的 SwanID 。
+* 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的 SwanID 是不同的。
+开发者通过对比接口中返回的`swanid_signature`和采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature-计算方法/">signature 计算方法</a> 的计算值是否一致来判断 swanid 是否有效。
 
-1. 用户在同一台设备上使用同一个开发者所开发的不同智能小程序，得到的是相同的SwanID。
-2. 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的SwanID是不同的。
 
-**swanid校验性有以下两种方法**：
-1. **推荐使用**：对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
-2. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
 
 getSwanId
 ---
@@ -57,6 +55,26 @@ swan.getSwanId({
     }
 });
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败|
+|10001|内部错误|
+|10002|网络无连接|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
+|10005|系统拒绝| -->
 
 getUserInfo
 ---
@@ -107,62 +125,26 @@ swan.getUserInfo({
     }
 });
 ```
+<!-- #### 错误码
+**Andriod**
 
-## verify
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败。|
+|-200|权限拒绝，仅开发者可见|
 
-**解释**：swanid有效性校验接口：true表示有效，false表示无效。
-**接口地址**：`https://openapi.baidu.com/rest/2.0/smartapp/swanid/verify`
-**请求类型**：POST
-**参数**：
+**iOS**
 
-|参数|含义|举例|
-|--|--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/server/power_exp/">access_token</a>|	小程序标识|xx.xxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx.<p>xxxxxxxxxxxxxxxxx.xxxxxxxx-xxxxxxxx|
-|swanid	|用户标识	|SSr1ngSR9kY5dGVPADtuhz4F31Q9nzpoaPwTazUVmTphieQzyqtUcaM4Kr4H5ViAp<p>kcZEvLb33S3fMMZUsoeLKbiW|
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
+|10005|系统拒绝| -->
 
-**示例**：
-校验成功：
-```json
-{
-    "data": {
-        "result": true
-    },
-    "errmsg": "",
-    "errno": "0"
-}
-```
-校验失败：
-```json
-{
-    "data": {
-        "result": false
-    },
-    "errmsg": "",
-    "errno": "0"
-}
-```
-异常：
-* 未通过参数检查：
-```json
-{
-    "error_msg": "Invalid parameter",
-    "error_code": 100
-}
-```
-* access_token无效
-```json
-{
-    "error_msg": "Access token invalid or no longer valid",
-    "error_code": 110
-}
-```
-* swanid校验失败
-```json
-{
-    "errmsg": "no swanid found, or swanid is invalid",
-    "errno": "-1"
-}
-```
+
 
 ## signature 计算方法
 

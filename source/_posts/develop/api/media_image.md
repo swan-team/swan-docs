@@ -62,6 +62,23 @@ swan.chooseImage({
 });
 
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1002|用户取消操作错误码|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1002|用户取消操作错误码|
+|1003|用户没有授权百度使用相册|
+|1003|小程序文件目录为空| -->
 
 previewImage
 ---
@@ -98,6 +115,20 @@ swan.previewImage({
 * 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
 * 不支持预览本地文件。
 
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| -->
+
 getImageInfo
 ---
 **解释：**获取图片信息
@@ -126,7 +157,6 @@ getImageInfo
 
 **示例：**
 
-
 ```js
 swan.getImageInfo({
     src: '/xxx/xxx.jpg',
@@ -143,6 +173,23 @@ swan.getImageInfo({
 });
 
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1003|小程序文件夹为空|
+|1003|读取图片失败| -->
 
 saveImageToPhotosAlbum
 ---
@@ -182,44 +229,22 @@ swan.saveImageToPhotosAlbum({
 });
 ```
 
-## recognizeImage
+<!-- #### 错误码
 
-> 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)。
+**Andriod**
 
-支持在小程序内调起识图，目前支持的识图功能包含： 扫码，拍题，翻译。
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败|
 
+**iOS**
 
-**Object参数说明：**
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。 |
+|1003|读取图片路径为空|
+|1003|没有读取到任何图片数据|
+|200301|相册权限，用户拒绝系统相册权限。|
+|200302|相册权限，用户拒绝小程序相册。| -->
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|categoryList |String Array |  是 | 需要调起的识图垂类列表 |
-|index |Number| 否 | 对应categoryList的索引值，设定调起识图垂类功能，默认为0，即categoryList中第一项。 |
-|showTitle |Boolean | 否  |当垂类列表中仅有一项时，调起识图后是否展示垂类名称，默认为false，即单一垂类调起识图时不展示名称。  |
-|success |Function  |  是 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**categoryList有效值**
-
-|errCodegory|功能|
-|----|----|
-|BARCODE|扫码|
-|TRANSLATE|翻译|
-|QUESTION|拍题|
-
-**示例代码：**
-
-```javascript
-swan.recognizeImage({
-    categoryList: ['BARCODE'], 
-    index: 0,
-    showTitle: true,
-    success(res) {
-        console.log('调起识图成功：', res);
-    },
-    fail(err) {
-        console.log('调起识图失败：', err);
-    }
-})
-```

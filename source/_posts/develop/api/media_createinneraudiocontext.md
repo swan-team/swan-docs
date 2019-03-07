@@ -73,6 +73,21 @@ innerAudioContext.onPlay(function (res) {
 
 ```
 
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 | -->
+
 ## setInnerAudioOption
 
 **解释：** 对`innerAudioContext`进行小程序内部的全局设置。
@@ -104,3 +119,11 @@ innerAudioContext.onPlay(function (res) {
     })
 
 ```
+<!-- 
+#### 错误码
+
+
+|错误码|说明|
+|--|--|
+|1001|执行失败 |
+|202|解析失败，请检查参数是否正确 | -->

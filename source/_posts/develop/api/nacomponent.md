@@ -26,6 +26,7 @@ sidebar: nacomponent
 引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
 > 引导组件有统一的疲劳度控制，若用户点击关闭引导组件或执行过添加操作，则3天内不再出现引导组件。
+> 百度App v11.5及以上版本的智能小程序，支持添加到我到小程序引导组件。
 
 **Object参数说明：**
 

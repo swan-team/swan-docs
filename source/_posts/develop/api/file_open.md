@@ -7,7 +7,7 @@ sidebar: file_open
 openDocument
 -----
 
-**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
+**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。
 
 **参数：**Object
 
@@ -37,3 +37,12 @@ swan.downloadFile({
     }
 });
 ```
+<!-- #### 错误码
+
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|1001|执行失败|
+|2001|指定文件不存在|
+|2005|文件格式不支持| -->
