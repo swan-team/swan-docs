@@ -19,7 +19,7 @@ socketTask.send(opts)
 
 ```js
 const task = swan.connectSocket({
-    url: 'wss://test.baidu.com'
+    url: 'wss://test.baidu.com' // 仅为示例，并非真实的接口地址
 });
 
 task.onOpen(() => {

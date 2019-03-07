@@ -26,7 +26,7 @@ socketTask.onError(callback)
 ```js
 const task = swan.connectSocket({
     // 错误的 url，连接失败，调用 onError 回调。
-    url: 'wss://sddfefv'
+    url: 'wss://sddfefv' // 仅为示例，并非真实的接口地址
 });
 
 task.onError(res => console.log('tast connect error.', res.errMsg));
