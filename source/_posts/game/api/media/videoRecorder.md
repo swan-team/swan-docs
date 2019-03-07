@@ -7,18 +7,18 @@ categoryName: api
 
 
 ### swan.getVideoRecorderManager()
-获取全局唯一的 VideoRecorderManager。
+获取全局唯一的 videoRecorderManager。
 ```
 swan.getVideoRecorderManager()
 ```
 
-### VideoRecorderManager
+### videoRecorderManager
 全局唯一的录屏管理器，通过 [`swan.getVideoRecorderManager()`](./#swan-getVideoRecorderManager) 创建。
 
-### VideoRecorderManager.start()
+### videoRecorderManager.start()
 开始录屏。可以通过 onStart 接口监听录屏开始事件。
 ```
-VideoRecorderManager.start(opts)
+videoRecorderManager.start(opts)
 ```
 
 
@@ -44,11 +44,11 @@ recorder.start({
 
 ```
 
-### VideoRecorderManager.onStart()
+### videoRecorderManager.onStart()
 监听录屏开始事件。
 
 ```
-VideoRecorderManager.onStart(callback)
+videoRecorderManager.onStart(callback)
 ```
 
 **参数值：**
@@ -91,10 +91,10 @@ recorder.start({
 ```
 
 
-### VideoRecorderManager.pause()
+### videoRecorderManager.pause()
 暂停录屏。在录屏开始后调用。
 ```
-VideoRecorderManager.pause()
+videoRecorderManager.pause()
 ```
 
 **示例**
@@ -110,10 +110,10 @@ recorder.pause()
 ```
 
 
-### VideoRecorderManager.onPause()
+### videoRecorderManager.onPause()
 监听录屏暂停事件。
 ```
-VideoRecorderManager.onPause(callback)
+videoRecorderManager.onPause(callback)
 ```
 
 **参数值：**
@@ -137,10 +137,10 @@ recorder.pause()
 ```
 
 
-### VideoRecorderManager.resume()
+### videoRecorderManager.resume()
 继续录屏，应在录屏被暂停后调用。
 ```
-VideoRecorderManager.resume()
+videoRecorderManager.resume()
 ```
 
 
@@ -162,11 +162,11 @@ recorder.pause()
 recorder.resume()
 ```
 
-### VideoRecorderManager.onResume()
+### videoRecorderManager.onResume()
 监听录屏继续事件。
 
 ```
- VideoRecorderManager.onResume(callback)
+ videoRecorderManager.onResume(callback)
 ```
 
 **参数值：**
@@ -196,10 +196,10 @@ recorder.resume()
 
 
 
-### VideoRecorderManager.stop()
+### videoRecorderManager.stop()
 停止录屏，应在录屏开始后调用。可以通过 onStop 接口监听录屏结束事件，获得录屏后的视频地址。
 ```
-VideoRecorderManager.stop()
+videoRecorderManager.stop()
 ```
 
 **示例**
@@ -214,10 +214,10 @@ recorder.stop();
 ```
 
 
-### VideoRecorderManager.onStop()
+### videoRecorderManager.onStop()
 监听录屏结束事件，并获得录屏地址。
 ```
-VideoRecorderManager.onStop(callback)
+videoRecorderManager.onStop(callback)
 ```
 
 **参数值：**
@@ -247,10 +247,10 @@ recorder.stop();
 
 
 
-### VideoRecorderManager.onError()
+### videoRecorderManager.onError()
 监听录屏错误事件。
 ```
-VideoRecorderManager.onError(callback)
+videoRecorderManager.onError(callback)
 ```
 
 **参数值：**
