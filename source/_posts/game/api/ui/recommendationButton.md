@@ -1,13 +1,18 @@
 ---
-title: 推荐
+title: 交叉推荐
 layout: gamedoc
 topic: ui
 categoryName: api
 ---
 
+<!--
+todo 1. 说明交叉换量策略 @PM
+todo 2. 客户端需要增加 right 和 bottom 属性 @客户端
+ -->
+
 ### swan.createRecommendationButton(opts)
 
-返回 recommendationButton 对象
+返回 recommendationButton 对象。
 
 ```js
 swan.createRecommendationButton(opts)
@@ -19,22 +24,22 @@ swan.createRecommendationButton(opts)
 |-|-|-|-|-|
 |opts|Object|`{style: {left: 30, top: 300}, type: 1}`|否|创建推荐按钮的参数|
 |opts.style|Object|`{left:30,top:300}`|否|推荐按钮的坐标|
-|opts.type|number|1|否|类型，如轮播、列表|
+|opts.type|string|'carousel'|否|类型，如轮播、列表|
 
-**opts.style 的合法值**
+**opts.style 的属性**
 
-|值|描述|
+|属性|类型|默认值|是否必填|描述|
 |-|-|
-|left|左上角横坐标|
-|top|左上角纵坐标|
+|style.left|number|30|否|左上角横坐标|
+|style.top|number|30|否|左上角纵坐标|
 
 
 **opts.type 的合法值**
 
 |值|描述|
 |-|-|
-|1|轮播|
-|2|聚合|
+|carousel|轮播|
+|list|聚合|
 
 
 ** 示例：**
@@ -52,7 +57,7 @@ const recommendationButton = swan.createRecommendationButton({
 
 
 ### recommendationButton
-[swan.createRecommendationButton(opts)](./#swan-createRecommendationButton-opts) 创建的推荐按钮对象
+[swan.createRecommendationButton(opts)](./#swan-createRecommendationButton-opts) 创建的推荐按钮对象。
 
 **属性**
 
@@ -79,7 +84,7 @@ recommendationButton.style.top = 200;
 ```
 
 ### recommendationButton.onLoad(callback)
-recommendationButton 对象上的方法，监听 RecommendationButton 加载完成后的回调函数。
+recommendationButton 对象上的方法，监听 recommendationButton 加载完成后的回调函数。
 
 **参数值：**
 
@@ -91,6 +96,9 @@ recommendationButton 对象上的方法，监听 RecommendationButton 加载完�
 ### recommendationButton.offLoad()
 recommendationButton 对象上的方法，取消监听 recommendationButton 加载事件。
 
+### recommendationButton.load()
+recommendationButton 对象上的方法，加载推荐资源。
+
 ### recommendationButton.show()
 recommendationButton 对象上的方法，用于显示推荐按钮。注意需要在 recommendationButton 加载完后调用。
 
@@ -98,7 +106,7 @@ recommendationButton 对象上的方法，用于显示推荐按钮。注意需�
 recommendationButton 对象上的方法，用于隐藏按钮。
 
 ### recommendationButton.onError(callback)
-recommendationButton 对象上的方法，监听 RecommendationButton 错误事件。
+recommendationButton 对象上的方法，监听 recommendationButton 错误事件。
 
 **参数值：**
 
@@ -108,7 +116,7 @@ recommendationButton 对象上的方法，监听 RecommendationButton 错误事�
 
 
 ### recommendationButton.offError()
-recommendationButton 对象上的方法，取消监听 RecommendationButton 错误事件。
+recommendationButton 对象上的方法，取消监听 recommendationButton 错误事件。
 
 ### recommendationButton.destroy()
 recommendationButton 对象上的方法，销毁 recommendationButton 按钮。
@@ -118,9 +126,13 @@ recommendationButton 对象上的方法，销毁 recommendationButton 按钮。
 // 获取按钮高宽、坐标
 console.log(recommendationButton.style)
 
-recommendationButton.onLoad(() => {
-    // 按钮资源加载完成
+// 监听错误信息
+recommendationButton.onError((e)=>{
+	console.error(e);
+})
 
+// 监听按钮资源加载完成
+recommendationButton.onLoad(() => {
     // 显示按钮
     recommendationButton.show();
 
@@ -132,14 +144,18 @@ recommendationButton.onLoad(() => {
     recommendationButton.style.top = 300;
 
     setTimeout(()=>{
+        // 隐藏按钮
         recommendationButton.hide();
-        recommendationButton.destroy()；
+
+        // 销毁按钮
+        recommendationButton.destroy();
+
+        // 取消监听错误事件
         recommendationButton.offError();
-    }, 3000)
+    }, 10000)
 })
 
-// 监听错误信息
-recommendationButton.onError((e)=>{
-	console.error(e);
-})
+// 触发资源加载
+recommendationButton.load();
+
 ```
