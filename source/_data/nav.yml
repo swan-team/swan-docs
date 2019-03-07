@@ -175,7 +175,7 @@
               name: dialog
             -
               link: /design/component/actionsheet
-              text: 操作面板
+              text: 操作菜单
               name: actionsheet              
             -
               link: /design/component/guide_add

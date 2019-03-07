@@ -1,10 +1,10 @@
 ---
-title: 操作面板
+title: 操作菜单
 header: design
 nav: component
 sidebar: actionsheet
 ---
-操作面板用于显示某项操作的选项列表。当用户与按钮，操作或其他控件交互时出现在页面底部。
+操作菜单用于显示某项操作的选项列表。当用户与按钮，操作或其他控件交互时出现在页面底部。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/actionsheet/1.png">
@@ -35,7 +35,7 @@ sidebar: actionsheet
 		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">文案冗余，阅读理解起来难度会加大。</p>
 	</div>
 </div>
-操作面板自带“取消”选项，点击“取消”或触碰蒙层区域自动收起面板且不执行任何操作。
+操作菜单自带“取消”选项，点击“取消”或触碰蒙层区域自动收起面板且不执行任何操作。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/actionsheet/4-1.png">
@@ -48,11 +48,11 @@ sidebar: actionsheet
 </div>
 
 ## 个性定制
-操作面板中，可个性定制样式的只有操作选项的文案颜色，且所有选项（除“取消”）统一配色。
+操作菜单中，可个性定制样式的只有操作选项的文案颜色，且所有选项（除“取消”）统一配色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/actionsheet/5-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">使用默认操作面板样式。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">使用默认操作菜单样式。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/actionsheet/5-2.png">
