@@ -191,7 +191,7 @@ swan.checkSession({
 | invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
 | invalid_client | unknown client id | client_id、client_secret 参数无效。 |
 | invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
-**Andriod**
+<!-- **Andriod** -->
 
 <!-- |错误码|说明|
 |--|--|

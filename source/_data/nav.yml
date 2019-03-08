@@ -2029,6 +2029,22 @@
                 name: open_infomation
                 sidebar:
                   -
+                    link: /develop/api/open_infomation/#使用场景
+                    text: 使用场景
+                    name: open_infomation_使用场景
+                  -
+                    link: /develop/api/open_infomation/#功能介绍
+                    text: 功能介绍
+                    name: open_infomation_功能介绍
+                  -
+                    link: /develop/api/open_infomation/#使用说明
+                    text: 使用说明
+                    name: open_infomation_使用说明
+                  -
+                    link: /develop/api/open_infomation/#下发条件说明
+                    text: 下发条件说明
+                    name: open_infomation_下发条件说明
+                  -
                     link: /develop/api/open_infomation/#getTemplateLibraryList
                     text: getTemplateLibraryList
                     name: open_infomation_getTemplateLibraryList
