@@ -31,7 +31,7 @@ swan.createRecommendationButton(opts)
 |属性|类型|默认值|是否必填|描述|
 |-|-|
 |style.left|number|30|否|左上角横坐标|
-|style.top|number|30|否|左上角纵坐标|
+|style.top|number|300|否|左上角纵坐标|
 
 
 **opts.type 的合法值**
@@ -159,3 +159,4 @@ recommendationButton.onLoad(() => {
 recommendationButton.load();
 
 ```
+
