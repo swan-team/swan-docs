@@ -96,7 +96,8 @@ swan.login({
 
 https://spapi.baidu.com/oauth/jscode2sessionkey
 
-> 原地址 https://openapi.baidu.com/nalogin/getSessionKeyByCode  将于2019年03月25日失效，请您及时更新。
+> 为了让您的智能小程序运行在联盟 App 上,我们对获取 SessionKey 的接口做了升级。新接口可以兼容获取百度内部 App 和百度外部 App 的 SessionKey。
+您只需要将原接口地址 `"https://openapi.baidu.com/nalogin/getSessionKeyByCode"` 更改为 `"https://spapi.baidu.com/oauth/jscode2sessionkey"` ,即可让您的智能小程序在其它App上自动实现账号关联。
 
 **获取Session Key需要的参数：**
 
