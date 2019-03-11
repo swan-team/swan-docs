@@ -1153,7 +1153,7 @@ canvasContext.drawImage
 -----
 
 **解释：**绘制图像到画布。
-> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight,sx, sy, sWidth, sHeight)
+> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
 **参数：**
 
