@@ -46,7 +46,7 @@ swan.createRecommendationButton(opts)
 ```javascript
 // 创建按钮
 const recommendationButton = swan.createRecommendationButton({
-    type: 2,
+    type: 'list',
     style: {
         left: 100,
         top: 300
