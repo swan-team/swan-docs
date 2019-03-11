@@ -524,9 +524,9 @@ swan.chooseImage({
   }
 });
 ```
-## recognizeImage
+<!-- ## recognizeImage
 
-> 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)。
+> 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)，在 3.20.3 版本开始支持。
 
 支持在小程序内调起识图，目前支持的识图功能包含： 扫码，拍题，翻译。
 
@@ -564,4 +564,4 @@ swan.recognizeImage({
         console.log('调起识图失败：', err);
     }
 })
-```
+``` -->

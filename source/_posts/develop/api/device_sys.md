@@ -83,7 +83,7 @@ getSystemInfoSync
 |language |百度 App 设置的语言 |
 |version |百度 App 版本号|
 |system  |操作系统版本  |
-|platform |客户端平台|
+|platform |宿主平台|
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
 
