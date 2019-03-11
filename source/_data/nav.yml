@@ -2025,7 +2025,7 @@
                     name: open_smartprogram_navigateBackSmartProgram
               -
                 link: /develop/api/open_infomation
-                text: 消息模板
+                text: 模板消息
                 name: open_infomation
                 sidebar:
                   -
