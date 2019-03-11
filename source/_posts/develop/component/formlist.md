@@ -182,7 +182,7 @@ Page({
 |-----|---- |---- |----|
 | bindsubmit | EventHandle    |携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}}	`|-|
 | bindreset | EventHandle   |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean|是否返回 formId ，默认为false。|1.12|
+|report-submit|Boolean|是否用于发送<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
 
 
 示例：

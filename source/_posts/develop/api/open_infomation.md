@@ -61,7 +61,7 @@ sidebar: open_infomation
 添加模板完成后，可以在我的模板里看到对应模板的模板ID。
 ![图片](../../../img/api/information/6.png)
 ![图片](../../../img/api/information/7.png)
-### 步骤二：通过form组件获取formId或者通过支付获取订单id
+### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过<a href="http://smartprogram.baidu.com/docs/develop/api/open_payment/#requestPolymerPayment/">支付</a>获取订单id
 
 #### formid 
 页面的`<form/>`组件，属性report-submit为true时，可以声明为需发模板消息，此时用户点击按钮提交表单可以获取formId，用于发送表单类模板消息。
