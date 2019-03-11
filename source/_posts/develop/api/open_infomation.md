@@ -331,6 +331,11 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 * 当touser_openId  和touser至少填写一个，如同时填写，仅以touser_openId  下发消息。
 * 评价服务必须填写touser_openId  以及ext字段。其中ext字段以json格式包含category_id和xzh_id。
 
+### 消息发送失败可能的原因
+* scene_id 状态需要和用户登录状态保持一致，否则 scene_id 校验会失败。 登录态scene_id最后一位是1, 未登录态最后一位是0， 登录态对应的是touser_openId，未登录态对应的是touser。 如果不匹配 scene_id 将会校验失败，导致消息无法发送。
+* 发送消息时用到的 touser/touser_openid 必须和 申请 scene_id 时的 touser/touser_openid 一一对应， 否则也会导致 scene_id 检验失败。
+* 如果通过上面的查验仍然发送消息失败， 请检查 appkey 是否异常。
+
 **返回值**:
 
 ```json
