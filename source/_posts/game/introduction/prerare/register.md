@@ -63,6 +63,6 @@ priority: 01-02
  ![图片](/img/game/introduction/prerare/newadd16.png)
 4.单击“小程序优惠通道”。
  ![图片](/img/game/introduction/prerare/newadd17.png)
-5.单击开通优惠通道，请于60天内完成至少一个小程序的发布。
+5.单击开通优惠通道，请于 60 天内完成至少一个小程序的发布。
  ![图片](/img/game/introduction/prerare/newadd18.png)
 6.认证完成。
