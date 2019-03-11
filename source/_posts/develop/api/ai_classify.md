@@ -524,7 +524,7 @@ swan.chooseImage({
   }
 });
 ```
-## recognizeImage
+<!-- ## recognizeImage
 
 > 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)，在 3.20.3 版本开始支持。
 
@@ -564,4 +564,4 @@ swan.recognizeImage({
         console.log('调起识图失败：', err);
     }
 })
-```
+``` -->
