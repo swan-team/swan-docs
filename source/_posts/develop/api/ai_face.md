@@ -38,14 +38,14 @@ sidebar: ai_face
 |location| Object | 人脸在图片中的位置|
 |face_probability| number | 人脸置信度，范围[0~1]，代表这是一张人脸的概率，0最小、1最大。|
 |angel|Object | 人脸旋转角度参数| 
-|age|number|年龄 ，当face_field 包含 age 时返回|
+|age|number|年龄 ，当 face_field 包含 age 时返回。|
 |beauty|number|美丑打分，范围 [0-100]，越大表示越美，当 face_fields 包含 beauty 时返回。|
 |expression|Object|表情，当 face_field 包含 expression 时返回。|
 |face_shape|Object|脸型，当 face_field 包含 face_shape 时返回。|
 |gender|Object|性别，face_field 包含 gender 时返回。|
 |glasses|Object|是否带眼镜，face_field 包含 glasses 时返回。|
-|eye_status|Object|双眼状态（睁开/闭合） face_field 包含 eye_status 时返回。|
-|emotion|Object|情绪， face_field 包含 emotion 时返回。|
+|eye_status|Object|双眼状态（睁开/闭合）face_field 包含 eye_status 时返回。|
+|emotion|Object|情绪，face_field 包含 emotion 时返回。|
 |race|Object|人种 face_field 包含 race 时返回。|
 |face_type|Object|真实人脸/卡通人脸 face_field 包含 face_type 时返回。|
 |landmark|Object|4 个关键点位置，左眼中心、右眼中心、鼻尖、嘴中心。face_field 包含 landmark 时返回。|
@@ -74,14 +74,14 @@ sidebar: ai_face
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string | none:不笑；smile:微笑；laugh:大笑。|
-|probability| number | 表情置信度，范围[0~1]，0最小、1最大。|
+|probability| number | 表情置信度，范围 [0~1]，0最小、1最大。|
 
 **face_shape返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|type| string |square: 正方形 triangle:三角形 oval: 椭圆 heart: 心形 round: 圆形。|
-|probability| number | 置信度，范围[0~1]，代表这是人脸形状判断正确的概率，0 最小、1 最大。|
+|type| string |square: 正方形；triangle:三角形；oval: 椭圆；heart: 心形；round: 圆形。|
+|probability| number | 置信度，范围 [0~1]，代表这是人脸形状判断正确的概率，0 最小、1 最大。|
 
 **gender返回值说明**
 
@@ -94,8 +94,8 @@ sidebar: ai_face
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|type| string |none:无眼镜，common:普通眼镜，sun:墨镜。|
-|probability| number |眼镜置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
+|type| string |none:无眼镜；common:普通眼镜；sun:墨镜。|
+|probability| number |眼镜置信度，范围 [0~1]，0 代表概率最小、1 代表最大。|
 
 **eye_status返回值说明**
 
@@ -108,15 +108,15 @@ sidebar: ai_face
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|type| string |angry:愤怒； disgust:厌恶； fear:恐惧； happy:高兴； sad:伤心； surprise:惊讶； neutral:无情绪。|
+|type| string |angry:愤怒；disgust:厌恶；fear:恐惧；happy:高兴；sad:伤心；surprise:惊讶；neutral:无情绪。|
 |probability| number |情绪置信度，范围 0~1。|
 
 **race返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|type| string |yellow: 黄种人； white: 白种人； black:黑种人； arabs: 阿拉伯人。|
-|probability| number |人种置信度，范围【0~1】，0 代表概率最小、1 代表最大。|
+|type| string |yellow: 黄种人；white: 白种人；black:黑种人；arabs: 阿拉伯人。|
+|probability| number |人种置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
 **face_type返回值说明**
 
@@ -136,9 +136,9 @@ sidebar: ai_face
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|occlusion| number |人脸各部分遮挡的概率，范围[0~1]，0 表示完整，1 表示不完整。|
+|occlusion| number |人脸各部分遮挡的概率，范围 [0~1]，0 表示完整，1 表示不完整。|
 |blur| number |人脸模糊程度，范围 [0~1]，0 表示清晰，1 表示模糊。|
-|illumination| number |取值范围在[0~255], 表示脸部区域的光照程度越大表示光照越好。|
+|illumination| number |取值范围在 [0~255], 表示脸部区域的光照程度越大表示光照越好。|
 |completeness| number |人脸完整度，0 或 1, 0 为人脸溢出图像边界，1 为人脸都在图像边界内。|
 
 **occlusion返回值说明**
@@ -146,11 +146,11 @@ sidebar: ai_face
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |left_eye| number |左眼遮挡比例，[0-1] ，1 表示完全遮挡。|
-|right_eye| number |右眼遮挡比例，[0-1] ， 1 表示完全遮挡。|
-|nose| number |鼻子遮挡比例，[0-1] ， 1 表示完全遮挡。|
-|left_cheek| number |左脸颊遮挡比例，[0-1] ， 1 表示完全遮挡。|
-|right_cheek| number |右脸颊遮挡比例，[0-1] ， 1 表示完全遮挡。|
-|chin| number |下巴遮挡比例，，[0-1] ， 1 表示完全遮挡。|
+|right_eye| number |右眼遮挡比例，[0-1] ，1 表示完全遮挡。|
+|nose| number |鼻子遮挡比例，[0-1] ，1 表示完全遮挡。|
+|left_cheek| number |左脸颊遮挡比例，[0-1] ，1 表示完全遮挡。|
+|right_cheek| number |右脸颊遮挡比例，[0-1] ，1 表示完全遮挡。|
+|chin| number |下巴遮挡比例，[0-1] ，1 表示完全遮挡。|
 
 
 ### 示例代码
@@ -266,7 +266,7 @@ swan.chooseImage({
 |image | string | 是 | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
 |image_type | string | 是 | 图片类型。<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**: 图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
 |quality_control | string | 否 | 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
-|liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**:  一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
+|liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
 |face_type | string | 否 | 人脸的类型。<br> **· LIVE** 表示生活照：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br> **· IDCARD**表示身份证芯片照：二代身份证内置芯片中的人像照片；<br> **· WATERMARK** 表示带水印证件照：一般为带水印的小图，如公安网小图；<br> **· CERT** 表示证件照片：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
 
 ### 返回值说明 
@@ -337,7 +337,7 @@ swan.ai.faceMatch({
 |image_type | string | 是 | 图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
 |group_id_list | string | 是 | 从指定的 group 中进行查找 用逗号分隔，上限 10 个。| 
 |quality_control | string | 否 | 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
-|liveness_control | string | 否 |活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**:  一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
+|liveness_control | string | 否 |活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
 |max_face_num | string | 否 | 最多处理人脸的数目，默认值为1，仅检测图片中面积最大的那个人脸；最大值10，检测图片中面积最大的几张人脸。 |
 |user_id | string | 否 | 当需要对特定用户进行比对时，指定user_id进行比对。即人脸认证功能。 | 
 |success | Function | 否 | 接口调用成功后的回调函数 | 
@@ -413,7 +413,7 @@ swan.chooseImage({
 |id_card_number | string | 是 | 身份证号码| 
 |name | string | 是 | 姓名| 
 |quality_control | string | 否 | 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
-|liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**:  一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
+|liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
 |success | Function | 否 | 接口调用成功后的回调函数 | 
 |fail | Function | 否 | 接口调用失败的回调函数 | 
 |complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
