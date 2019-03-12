@@ -81,7 +81,7 @@ Q：真机用 unzip 解压后，解压的文件找不到？
 A：如 unzip 的 API 文档和示例所描述，传递给 unzip 的源文件和目标目录必须在用户目录（`${swan.env.USER_DATA_PATH}`）下。
 
 Q：对接广告、激励视频的参数 adUnitId 和 appSid 分别填什么？
-A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文档](https://smartprogram.baidu.com/docs/game/introduction/flow_open/flow_open/)。adUnitId 和 appSid 分别对应于 Mssp 平台的代码位 ID 和所属应用 ID。
+A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文档](https://smartprogram.baidu.com/docs/game/introduction/flow_open/guide/)。adUnitId 和 appSid 分别对应于 Mssp 平台的代码位 ID 和所属应用 ID。
 
 Q：在真机无法调起百度收银台支付？
 A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 中提到的的[签名与验签文档](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。
