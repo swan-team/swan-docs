@@ -2245,6 +2245,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Sensors-panel
                     text: Sensors panel
                     name: smartappdebug_tool_Sensors-panel
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Swan-audits
+                    text: Swan audits
+                    name: smartappdebug_tool_Swan-audits
               -
                 link: /develop/devtools/smartappdebug_pre
                 text: 预览发布
@@ -2257,6 +2261,13 @@
                 link: /develop/debug/remotedebugging
                 text: 远程调试
                 name: remotedebugging
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/audits
+                text: 体验评分
+                name: audits                
         -
             link: /develop/devtools/projectconfig
             text: 配置文件及差异
