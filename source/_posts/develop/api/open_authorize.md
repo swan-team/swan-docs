@@ -38,7 +38,7 @@ authorize
 |errMsg | String | 调用结果| -->
 
 **示例：**
-<!-- <a href="swanide://fragment/1c146b06eae359ffd1d906646e32825c1540393715" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/1c146b06eae359ffd1d906646e32825c1540393715" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.authorize({
   scope: 'scope.userLocation',

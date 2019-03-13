@@ -19,7 +19,7 @@ sidebar: view
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
 **示例：**
-<!-- <a href="swanide://fragment/214a877dded08449e1c177811b34915e1548066914694" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/214a877dded08449e1c177811b34915e1548066914694" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <view class="single-text-area">
@@ -54,7 +54,7 @@ sidebar: view
 **注意：**使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
 **示例：**
-<!-- <a href="swanide://fragment/c25704bc739ef70da95b8c7b7b929aae1540395856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/c25704bc739ef70da95b8c7b7b929aae1540395856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <scroll-view scroll-y style="height: 300px;"
@@ -145,7 +145,7 @@ Page({
 |item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
 
 **示例：**
-<!-- <a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <swiper indicator-dots="true"
@@ -220,7 +220,7 @@ Page({
 * movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
 
 **示例：**
-<!-- <a href="swanide://fragment/af66f1c09b800652bd15c74df87057e21548068761674" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/af66f1c09b800652bd15c74df87057e21548068761674" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <view class="movable-view">

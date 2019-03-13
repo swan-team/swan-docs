@@ -127,8 +127,8 @@ sidebar: map
 地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
 
 **示例**：
-<!-- <a href="swanide://fragment/3979f647ab4d5848afc3d96d4c9ad2fc1540397393" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-        </a> -->
+<a href="swanide://fragment/3979f647ab4d5848afc3d96d4c9ad2fc1540397393" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
 ```xml
 <!-- map.swan -->
 <map id="myMap"

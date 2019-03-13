@@ -30,7 +30,7 @@ saveFile
 |savedFilePath  |String | 文件的保存路径|
 
 **示例：**
-<!-- <a href="swanide://fragment/205171636947a60ced2f0cdde6c7b8a31540396285" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/205171636947a60ced2f0cdde6c7b8a31540396285" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.chooseImage({
     count: 1,

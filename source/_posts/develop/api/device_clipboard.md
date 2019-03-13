@@ -21,7 +21,7 @@ sidebar: device_clipboard
 |complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-<!-- <a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.setClipboardData({
     data: 'baidu',
@@ -69,7 +69,7 @@ swan.setClipboardData({
 |data   | String | 剪贴板的内容|
 
 **示例：**
-<!-- <a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.getClipboardData({
     success: function (res) {

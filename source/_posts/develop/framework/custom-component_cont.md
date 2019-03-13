@@ -30,8 +30,8 @@ sidebar: custom-component_cont
 通过 dispatch 方法，子组件可以向组件树的上层派发消息。消息将沿着组件树向上传递，直到遇到第一个处理该消息的组件，则停止。
 通过 messages 可以声明组件要处理的消息，messages 是一个对象，key 是消息名称，value 是消息处理的函数，接收一个包含 target(派发消息的组件) 和 value(消息的值) 的参数对象。
 
-<!-- **<div class="notice">示例： </div>**
-<a href="swanide://fragment/6f6ac82db74aa8795dfbc27fd760dd611545889059135" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+**<div class="notice">示例： </div>**
+<a href="swanide://fragment/6f6ac82db74aa8795dfbc27fd760dd611545889059135" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 /* 父组件逻辑 */
@@ -62,8 +62,8 @@ Component({
 <button bindtap="onTap">点击这个按钮将触发 myevent 事件</button>
 ```
 
-<!-- **<div class="notice">示例： </div>**
-<a href="swanide://fragment/e5621e1c241dd7b47f2bc844277117b81545308225206" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+**<div class="notice">示例： </div>**
+<a href="swanide://fragment/e5621e1c241dd7b47f2bc844277117b81545308225206" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 /* 组件逻辑 */

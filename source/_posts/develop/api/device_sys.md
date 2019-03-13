@@ -40,7 +40,7 @@ getSystemInfo
 |SDKVersion |客户端基础库版本 |
 
 **示例：**
-<!-- <a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
+<a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.getSystemInfo({
     success: function (res) {

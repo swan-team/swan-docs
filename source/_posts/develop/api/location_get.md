@@ -94,7 +94,7 @@ chooseLocation
 |latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系。|
 |longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系。|
 
-<!-- <a href="swanide://fragment/bad6d7aa3fb17f9be8c8ea775d6f074b1548068569477" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/bad6d7aa3fb17f9be8c8ea775d6f074b1548068569477" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 <!-- #### 错误码
 

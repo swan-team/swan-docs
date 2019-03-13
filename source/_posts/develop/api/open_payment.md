@@ -58,7 +58,7 @@ requestPolymerPayment
 | WeChat | 微信支付|
 
 **示例：**
-<!-- <a href="swanide://fragment/2fd9f0f66f3a557c70475be52e0617241544430726" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/2fd9f0f66f3a557c70475be52e0617241544430726" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.requestPolymerPayment({
     orderInfo: {
