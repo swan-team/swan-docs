@@ -1,6 +1,6 @@
 ### socketTask.onOpen()
 
-监听 WebSocket 连接打开事件。
+监听 WebSocket 连接打开事件。连接成功才可调用发送数据或者关闭连接。
 
 ```js
 socketTask.onOpen(callback)
