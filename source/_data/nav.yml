@@ -2066,24 +2066,24 @@
                     text: sendTemplateMessage
                     name: open_infomation_sendTemplateMessage
               -
-                link: /develop/api/seo
+                link: /develop/api/pageinfo
                 text: 页面基础信息
-                name: seo
+                name: pageinfo
                 sidebar:
                   -
-                    link: /develop/api/seo/#setPageInfo
+                    link: /develop/api/pageinfo/#setPageInfo
                     text: setPageInfo
                     name: seo_setPageInfo
                   -
-                    link: /develop/api/seo/#setMetaDescription
+                    link: /develop/api/pageinfo/#setMetaDescription
                     text: setMetaDescription
                     name: seo_setMetaDescription
                   -
-                    link: /develop/api/seo/#setMetaKeywords
+                    link: /develop/api/pageinfo/#setMetaKeywords
                     text: setMetaKeywords
                     name: seo_setMetaKeywords
                   -
-                    link: /develop/api/seo/#setDocumentTitle
+                    link: /develop/api/pageinfo/#setDocumentTitle
                     text: setDocumentTitle
                     name: seo_setDocumentTitle
 

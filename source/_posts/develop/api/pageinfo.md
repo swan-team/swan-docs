@@ -2,7 +2,7 @@
 title: 配置页面基础信息
 header: develop
 nav: api
-sidebar: seo
+sidebar: pageinfo
 ---
 配置页面基础信息接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
