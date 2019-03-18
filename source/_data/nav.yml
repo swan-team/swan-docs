@@ -1701,6 +1701,15 @@
                     text: nextTick
                     name: custom_component_nextTick
               -
+                link: /develop/api/menu_info
+                text: 菜单
+                name: menu_info
+                sidebar:
+                  -
+                    link: /develop/api/menu_info/#getMenuButtonBoundingClientRect
+                    text: getMenuButtonBoundingClientRect
+                    name: menu_info_getMenuButtonBoundingClientRect                    
+              -
                 link: /develop/api/show_query
                 text: 节点信息
                 name: show_query

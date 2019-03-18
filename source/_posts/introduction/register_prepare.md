@@ -20,5 +20,5 @@ sidebar: register_prepare
 ## 配置服务器 
 在开发设置页面查看 AppID 和 AppSecret ，配置服务器域名。
 
- ![图片](http://bos.nj.bpc.baidu.com/v1/agroup/d57711a1b81b967157c085faf68d874ade514056)
+![图片](../../img/introduction/register/33.png)
 
