@@ -1482,10 +1482,10 @@
                     link: /develop/api/show_canvas/#canvasContext-measureText
                     text: canvasContext.measureText
                     name: show_canvas_canvasContext.measureText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-arcTo
-                    text: canvasContext.arcTo
-                    name: show_canvas_canvasContext.arcTo
+                  # -
+                  #   link: /develop/api/show_canvas/#canvasContext-arcTo
+                  #   text: canvasContext.arcTo
+                  #   name: show_canvas_canvasContext.arcTo
                   -
                     link: /develop/api/show_canvas/#canvasContext-strokeText
                     text: canvasContext.strokeText
