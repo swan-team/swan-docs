@@ -82,13 +82,13 @@
             name: register_prepare
             sidebar:
               -
-                link: /introduction/register_prepare/#开发前准备
+                link: /introduction/register_prepare 
                 text: 开发前准备
-                name: register_prepare_开发前准备                                
+                name: register_prepare           
               -
-                link: /introduction/register_prepare/#开发工具
+                link: /introduction/tool
                 text: 开发工具
-                name: register_prepare_开发工具
+                name: tool
         -     
             link: /introduction/online
             text: 发布上线
@@ -96,13 +96,13 @@
             sidebar:                     
                           
               -
-                link: /introduction/online/#代码包审核
+                link: /introduction/online 
                 text: 代码包审核
-                name: online_代码包审核
+                name: online 
               -
-                link: /introduction/online/#发布上线
+                link: /introduction/publish
                 text: 发布上线
-                name: online_发布上线
+                name: publish
     -
       link: /introduction/intro
       text: 百度流量接入
