@@ -18,7 +18,7 @@ sidebar: enter_application
     ![图片](../../img/introduction/enter/p1.png)
 2. 登录/注册百度账号
     目前支持手机短信、账号密码、二维码登录。
-    > 如您已有企业熊掌号，可直接使用熊掌号登录名及密码直接登陆智能小程序即可，无需重新注册。
+    > 如您已有企业熊掌 ID，可直接使用熊掌 ID登录名及密码直接登陆智能小程序即可，无需重新注册。
 
     ![图片](../../img/introduction/enter/p2.png)
 
