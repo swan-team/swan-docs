@@ -11,32 +11,98 @@
       name: book
       sidebar:
         -
+            link: /introduction/enter_application
+            text: 注册与认证
+            name: enter_application
             sidebar:
               -
                 link: /introduction/enter_application
-                text: 智能小程序入驻申请
+                text:  注册
                 name: enter_application
+                sidebar:
+                  -
+                    link: /introduction/enter_application/#登录注册
+                    text: 登录注册
+                    name: enter_application_登录注册
+                  -
+                    link: /introduction/enter_application/#入驻申请
+                    text: 入驻申请
+                    name: enter_application_入驻申请                    
               -
                 link: /introduction/register
-                text: 智能小程序账号注册
+                text: 主体认证
                 name: register
+                sidebar:
+                  -
+                    link: /introduction/register/#主体类型选择
+                    text: 主体类型选择
+                    name: enter_register_主体类型选择
+                  -
+                    link: /introduction/register/#主体信息填写
+                    text: 主体信息填写
+                    name: enter_register_主体信息填写   
+              -
+                link: /introduction/authenticity
+                text: 真实性认证
+                name: authenticity
+                sidebar:
+                  -
+                    link: /introduction/authenticity/#对公验证
+                    text: 对公验证
+                    name: authenticity_对公验证
+                  -
+                    link: /introduction/authenticity/#证照验证
+                    text: 证照验证
+                    name: authenticity_证照验证            
+                  -
+                    link: /introduction/authenticity/#法人人脸识别
+                    text: 法人人脸识别
+                    name: authenticity_法人人脸识别
+                  -
+                    link: /introduction/authenticity/#小程序优惠通道
+                    text: 小程序优惠通道
+                    name: authenticity_小程序优惠通道 
+        -    
+            link: /introduction/register_consummate
+            text: 创建小程序
+            name: register_consummate       
+            sidebar:
+                 
               -
                 link: /introduction/register_consummate
-                text: 创建智能小程序
-                name: register_consummate
+                text:  完善基本信息
+                name: register_consummate                     
               -
-                link: /introduction/register_prepare
+                link: /introduction/category
+                text: 服务类目
+                name: category
+        -           
+            link: /introduction/register_prepare
+            text: 开发小程序
+            name: register_prepare
+            sidebar:
+              -
+                link: /introduction/register_prepare/#开发前准备
                 text: 开发前准备
-                name: register_prepare
-
+                name: register_prepare_开发前准备                                
               -
-                link: /introduction/demo
-                text: 体验智能小程序
-                name: demo
+                link: /introduction/register_prepare/#开发工具
+                text: 开发工具
+                name: register_prepare_开发工具
+        -     
+            link: /introduction/online
+            text: 发布上线
+            name: online      
+            sidebar:                     
+                          
               -
-                link: /introduction/scancode
-                text: 扫码打开智能小程序
-                name: scancode
+                link: /introduction/online/#代码包审核
+                text: 代码包审核
+                name: online_代码包审核
+              -
+                link: /introduction/online/#发布上线
+                text: 发布上线
+                name: online_发布上线
     -
       link: /introduction/intro
       text: 百度流量接入
@@ -78,7 +144,17 @@
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
                 name: auditing_baijiahao
-
+    -
+      link: /introduction/scancode
+      text: 扫码打开智能小程序
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/scancode
+                text: 扫码打开智能小程序
+                name: scancode 
 # 2
 -
   link: /design/overview/introduction
