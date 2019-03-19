@@ -38,6 +38,7 @@ getSystemInfo
 |platform |客户端平台|
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
+|host|宿主平台|
 
 **示例：**
 <a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
@@ -86,6 +87,7 @@ getSystemInfoSync
 |platform |宿主平台|
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
+|host|宿主平台|
 
 **示例：**
 
