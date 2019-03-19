@@ -89,3 +89,39 @@ swan.navigateBackSmartProgram({
 |--|--|
 |201|解析失败，请检查调起协议是否合法。|
 |1001|执行失败| -->
+
+## H5页面打开小程序
+
+> 在百度 APP 中打开 H5 页面时，如需调起指定小程序，可在引入官方提供的 jssdk 后调用 Boxjs.init 进行鉴权，同时在success回调函数中使用该 API 接口调起小程序。
+
+
+**解释**：H5 页面调起百度智能小程序。
+**参数**：appkey
+**appkey 参数说明**：
+
+|参数名|类型|是否必填|说明|
+|--|--|--|--|
+|appkey|	String|是|要打开的小程序App Key|
+
+**示例**：
+```js
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/boxjs-1.0.0.js"></script>
+<script type="text/javascript">
+        Boxjs.init({
+            success: function(res){
+                Boxjs.view.open({
+                    name: 'swan',  // 这个入参是必填
+                    data: {
+                        appKey: '3cO3ddQ1ys1wrfOmDoTVPSdv3Ov5jV6p'  //小程序的appkey
+                    }
+                }).then(function(res) {
+                    alert(JSON.stringify(res))
+                }).catch(function(err) {
+                    alert(JSON.stringify(err))
+                });
+            }
+        });
+</script>
+```
+### Bug & Tip 
+只能调起智能小程序并显示首页，暂时无法指定打开到具体小程序页面。

@@ -2098,6 +2098,10 @@
                     link: /develop/api/open_smartprogram/#navigateBackSmartProgram
                     text: navigateBackSmartProgram
                     name: open_smartprogram_navigateBackSmartProgram
+                  -
+                    link: /develop/api/open_smartprogram/#H5页面打开小程序
+                    text: H5页面打开小程序
+                    name: open_smartprogram_H5页面打开小程序                  
               -
                 link: /develop/api/open_infomation
                 text: 模板消息
@@ -2243,7 +2247,7 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout
+                    name: timer_setTimeout         
     -
       link: /develop/devtools/show_sur
       text: 工具
