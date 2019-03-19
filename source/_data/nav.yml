@@ -410,26 +410,26 @@
                       text: API
                       name: dev_API                                                            
               -
-                link: /develop/tutorial/pulish
+                link: /develop/tutorial/publish
                 text: 调试与发布
                 name: pulish
                 sidebar: 
                     -
-                      link: /develop/tutorial/pulish/#调试
+                      link: /develop/tutorial/publish/#调试
                       text: 调试
-                      name: pulish_调试
+                      name: publish_调试
                     -
-                      link: /develop/tutorial/pulish/#Web-化
+                      link: /develop/tutorial/publish/#Web-化
                       text: Web 化
-                      name: pulish_Web-化                    
+                      name: publish_Web-化                    
                     -
-                      link: /develop/tutorial/pulish/#预览
+                      link: /develop/tutorial/publish/#预览
                       text: 预览 
-                      name: pulish_预览                    
+                      name: publish_预览                    
                     -
-                      link: /develop/tutorial/pulish/#发布
+                      link: /develop/tutorial/publish/#发布
                       text: 发布
-                      name: pulish_发布    
+                      name: publish_发布    
 
     -
       link: /develop/framework/app_service_register
