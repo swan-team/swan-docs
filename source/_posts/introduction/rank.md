@@ -21,9 +21,9 @@ sidebar: rank
 
 下载最新的<a href="https://smartprogram.baidu.com/docs/develop/devtools/show_sur/">开发者工具</a>，工具界面将会出现如下提示：
 ![图片](../../img/flow/rank/rank1.png)
-1. 单击“点击开启”，在弹出的对话框中勾选“web预览”。
+1. 单击“项目信息”，在弹出的对话框中勾选“接入百度搜索”。
 ![图片](../../img/flow/rank/rank2.png)
-2. 勾选后，开发者工具上方的按钮区域会出现“web 预览”的按钮。
+2. 勾选后，单击“预览”，在弹出框选择“WEB预览”。
     * 为确保 web 小程序可以正常展示，建议通过这个按钮获取 Web 小程序的预览二维码，用手机浏览器扫码调试。
     * 请确保 web 版小程序：页面可正常展示，页面可正常跳转，底部 Tabbar 可正常点击切换。
 

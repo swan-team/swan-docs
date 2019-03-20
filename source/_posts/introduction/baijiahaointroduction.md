@@ -13,4 +13,4 @@ sidebar: baijiahaointroduction
 2. 点击进入文章；
 3. 点击文中插入的小程序卡片进入小程序。
 
-![图片](../../img/introduction/scancode/baijiahao1.png)
+![图片](../../img/introduction/scancode/baijiahao.gif)

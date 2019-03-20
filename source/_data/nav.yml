@@ -134,11 +134,15 @@
                 name: rank
         -
             link: /introduction/baijiahao
-            text: 百家号流量接入
+            text: 百家号流量 
             sidebar:
               -
+                link: /introduction/baijiahaointroduction
+                text: 百家号流量说明
+                name: baijiahaointroduction            
+              -
                 link: /introduction/baijiahao
-                text: 接入方法
+                text: 接入百家号流量
                 name: baijiahao
               -
                 link: /introduction/auditing_baijiahao
