@@ -20,7 +20,7 @@ setNavigationBarTitle
 |complete   | Function   | 否|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-<!-- <a href="swanide://fragment/838b39ada87c91e7cb866a4d9e65de2e1540397160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/838b39ada87c91e7cb866a4d9e65de2e1540397160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.setNavigationBarTitle({
     title: '我是页面标题'
@@ -43,8 +43,8 @@ swan.setNavigationBarTitle({
 showNavigationBarLoading
 ---
 **解释：** 该方法在当前页面显示导航条加载动画。
-<!-- <a href="swanide://fragment/b5154f1fd73ea50516ade71f66456ae41540397555" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-        </a> -->
+<a href="swanide://fragment/b5154f1fd73ea50516ade71f66456ae41540397555" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
         
 <!-- #### 错误码
 

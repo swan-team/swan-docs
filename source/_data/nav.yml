@@ -11,32 +11,98 @@
       name: book
       sidebar:
         -
+            link: /introduction/enter_application
+            text: 注册与认证
+            name: enter_application
             sidebar:
               -
                 link: /introduction/enter_application
-                text: 智能小程序入驻申请
+                text:  注册
                 name: enter_application
+                sidebar:
+                  -
+                    link: /introduction/enter_application/#登录注册
+                    text: 登录注册
+                    name: enter_application_登录注册
+                  -
+                    link: /introduction/enter_application/#入驻申请
+                    text: 入驻申请
+                    name: enter_application_入驻申请                    
               -
                 link: /introduction/register
-                text: 智能小程序账号注册
+                text: 主体认证
                 name: register
+                sidebar:
+                  -
+                    link: /introduction/register/#主体类型选择
+                    text: 主体类型选择
+                    name: enter_register_主体类型选择
+                  -
+                    link: /introduction/register/#主体信息填写
+                    text: 主体信息填写
+                    name: enter_register_主体信息填写   
+              -
+                link: /introduction/authenticity
+                text: 真实性认证
+                name: authenticity
+                sidebar:
+                  -
+                    link: /introduction/authenticity/#对公验证
+                    text: 对公验证
+                    name: authenticity_对公验证
+                  -
+                    link: /introduction/authenticity/#证照验证
+                    text: 证照验证
+                    name: authenticity_证照验证            
+                  -
+                    link: /introduction/authenticity/#法人人脸识别
+                    text: 法人人脸识别
+                    name: authenticity_法人人脸识别
+                  -
+                    link: /introduction/authenticity/#小程序优惠通道
+                    text: 小程序优惠通道
+                    name: authenticity_小程序优惠通道 
+        -    
+            link: /introduction/register_consummate
+            text: 创建小程序
+            name: register_consummate       
+            sidebar:
+                 
               -
                 link: /introduction/register_consummate
-                text: 创建智能小程序
-                name: register_consummate
+                text:  完善基本信息
+                name: register_consummate                     
               -
-                link: /introduction/register_prepare
+                link: /introduction/category
+                text: 服务类目
+                name: category
+        -           
+            link: /introduction/register_prepare
+            text: 开发小程序
+            name: register_prepare
+            sidebar:
+              -
+                link: /introduction/register_prepare 
                 text: 开发前准备
-                name: register_prepare
-
+                name: register_prepare           
               -
-                link: /introduction/demo
-                text: 体验智能小程序
-                name: demo
+                link: /introduction/tool
+                text: 开发工具
+                name: tool
+        -     
+            link: /introduction/online
+            text: 发布上线
+            name: online      
+            sidebar:                     
+                          
               -
-                link: /introduction/scancode
-                text: 扫码打开智能小程序
-                name: scancode
+                link: /introduction/online 
+                text: 代码包审核
+                name: online 
+              -
+                link: /introduction/publish
+                text: 发布上线
+                name: publish
     -
       link: /introduction/intro
       text: 百度流量接入
@@ -44,16 +110,16 @@
       sidebar:
         -
             link: /introduction/access
-            text: 信息流流量接入  
-            sidebar:        
+            text: 信息流流量接入
+            sidebar:
               -
                 link: /introduction/feed
-                text: 信息流流量说明  
-                name: feed 
+                text: 信息流流量说明
+                name: feed
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
-                name: auditing_info                 
+                name: auditing_info
         -
             link: /introduction/intro
             text: 搜索流量接入
@@ -77,8 +143,18 @@
               -
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
-                name: auditing_baijiahao                              
-
+                name: auditing_baijiahao
+    -
+      link: /introduction/scancode
+      text: 扫码打开智能小程序
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/scancode
+                text: 扫码打开智能小程序
+                name: scancode 
 # 2
 -
   link: /design/overview/introduction
@@ -129,7 +205,7 @@
             -
               link: /design/foundation/logo
               text: 头像输出
-              name: logo            
+              name: logo
             -
               link: /design/foundation/writing
               text: 措辞
@@ -174,9 +250,13 @@
               text: 提示框
               name: dialog
             -
+              link: /design/component/actionsheet
+              text: 操作菜单
+              name: actionsheet              
+            -
               link: /design/component/guide_add
               text: 添加到我的小程序引导
-              name: guide_add               
+              name: guide_add
             -
               link: /design/component/empty_state
               text: 空态
@@ -330,34 +410,34 @@
           link: /develop/tutorial/move
           text: 开发解决方案
           name: move
-          sidebar: 
+          sidebar:
               -
                 link: /develop/tutorial/move
                 text: 搬家工具
                 name: move
-              -   
+              -
                 link: /develop/tutorial/frame
                 text: 框架开发
-                name: frame   
+                name: frame
                 sidebar:
                   -
                     link: /develop/tutorial/frame/#Taro
                     text: Taro
-                    name: frame_Taro     
+                    name: frame_Taro
                   -
                     link: /develop/tutorial/frame/#mpvue
                     text: mpvue
-                    name: frame_mpvue 
+                    name: frame_mpvue
                   -
                     link: /develop/tutorial/frame/#WePY
                     text: WePY
-                    name: frame_WePY                                                    
-                  -   
+                    name: frame_WePY
+                  -
                     link: /develop/tutorial/frame/#Okam
-                    text: Okam 
-                    name: frame_Okam  
-                                                             
-            
+                    text: Okam
+                    name: frame_Okam
+
+
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -941,10 +1021,7 @@
                     link: /develop/api/ai_classify/#plantClassify
                     text: plantClassify
                     name: ai_classify_plantClassify
-                  -
-                    link: /develop/api/ai_classify/#recognizeImage
-                    text: recognizeImage
-                    name: ai_classify_recognizeImage                       
+
               -
                 link: /develop/api/ai_voice
                 text: 语音识别
@@ -954,6 +1031,52 @@
                     link: /develop/api/ai_voice/#getVoiceRecognizer
                     text: getVoiceRecognizer
                     name: ai_voice_getVoiceRecognizer
+              -
+                link: /develop/api/ai_face
+                text: 人脸识别
+                name: ai_face
+                sidebar:
+                  -
+                    link: /develop/api/ai_face/#faceDetect
+                    text: faceDetect
+                    name: ai_face_faceDetect 
+                  -
+                    link: /develop/api/ai_face/#faceMatch
+                    text: faceMatch
+                    name: ai_face_faceMatch                   
+                  -
+                    link: /develop/api/ai_face/#faceSearch
+                    text: faceSearch
+                    name: ai_face_faceSearch
+                  -
+                    link: /develop/api/ai_face/#facePersonVerify
+                    text: facePersonVerify
+                    name: ai_face_facePersonVerify                   
+                  -
+                    link: /develop/api/ai_face/#facePersonIdmatch
+                    text: facePersonIdmatch
+                    name: ai_face_facePersonIdmatch                 
+                  -
+                    link: /develop/api/ai_face/#faceVerify
+                    text: faceVerify
+                    name: ai_face_faceVerify
+                  -
+                    link: /develop/api/ai_face/#faceLivenessSessioncode
+                    text: faceLivenessSessioncode
+                    name: ai_face_faceLivenessSessioncode
+                  -
+                    link: /develop/api/ai_face/#faceLivenessVerify
+                    text: faceLivenessVerify
+                    name: ai_face_faceLivenessVerify
+              -
+                link: /develop/api/ai_word
+                text: 词法分析
+                name: ai_word
+                sidebar:
+                  -
+                    link: /develop/api/ai_word/#nlpLexerCustom
+                    text: nlpLexerCustom
+                    name: ai_word_nlpLexerCustom
         -
             link: /develop/api/media
             text: 媒体
@@ -980,7 +1103,7 @@
                   link: /develop/api/media_image/#saveImageToPhotosAlbum
                   text: saveImageToPhotosAlbum
                   name: media_image_saveImageToPhotosAlbum
-             
+
             -
               link: /develop/api/media_recorder
               text: 录音管理
@@ -1011,7 +1134,7 @@
                 -
                   link: /develop/api/media_createinneraudiocontext/#setInnerAudioOption
                   text: setInnerAudioOption
-                  name: media_createinneraudiocontext_setInnerAudioOption                  
+                  name: media_createinneraudiocontext_setInnerAudioOption
             -
               link: /develop/api/media_video
               text: 视频
@@ -1320,8 +1443,8 @@
                     text: canvasContext.scale
                     name: show_canvas_canvasContext.scale
                   -
-                    link: /develop/api/show_canvas/#canvasContext-rotate          
-                    text: canvasContext.rotate  
+                    link: /develop/api/show_canvas/#canvasContext-rotate
+                    text: canvasContext.rotate
                     name: show_canvas_canvasContext.rotate
                   -
                     link: /develop/api/show_canvas/#canvasContext-translate
@@ -1359,10 +1482,10 @@
                     link: /develop/api/show_canvas/#canvasContext-measureText
                     text: canvasContext.measureText
                     name: show_canvas_canvasContext.measureText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-arcTo
-                    text: canvasContext.arcTo
-                    name: show_canvas_canvasContext.arcTo
+                  # -
+                  #   link: /develop/api/show_canvas/#canvasContext-arcTo
+                  #   text: canvasContext.arcTo
+                  #   name: show_canvas_canvasContext.arcTo
                   -
                     link: /develop/api/show_canvas/#canvasContext-strokeText
                     text: canvasContext.strokeText
@@ -1550,7 +1673,7 @@
                   -
                     link: /develop/api/show_background/#setBackgroundTextStyle
                     text: setBackgroundTextStyle
-                    name: show_background_setBackgroundTextStyle                    
+                    name: show_background_setBackgroundTextStyle
               -
                 link: /develop/api/show_pull
                 text: 下拉刷新
@@ -1576,7 +1699,16 @@
                   -
                     link: /develop/api/custom_component/#nextTick
                     text: nextTick
-                    name: custom_component_nextTick                    
+                    name: custom_component_nextTick
+              -
+                link: /develop/api/menu_info
+                text: 菜单
+                name: menu_info
+                sidebar:
+                  -
+                    link: /develop/api/menu_info/#getMenuButtonBoundingClientRect
+                    text: getMenuButtonBoundingClientRect
+                    name: menu_info_getMenuButtonBoundingClientRect                    
               -
                 link: /develop/api/show_query
                 text: 节点信息
@@ -1654,7 +1786,7 @@
                   -
                     link: /develop/api/nacomponent/#showFavoriteGuide
                     text: showFavoriteGuide
-                    name: nacomponent_showFavoriteGuide              
+                    name: nacomponent_showFavoriteGuide
 
         -
             link: /develop/api/device
@@ -1975,9 +2107,25 @@
                     name: open_smartprogram_navigateBackSmartProgram
               -
                 link: /develop/api/open_infomation
-                text: 消息模板
+                text: 模板消息
                 name: open_infomation
                 sidebar:
+                  -
+                    link: /develop/api/open_infomation/#使用场景
+                    text: 使用场景
+                    name: open_infomation_使用场景
+                  -
+                    link: /develop/api/open_infomation/#功能介绍
+                    text: 功能介绍
+                    name: open_infomation_功能介绍
+                  -
+                    link: /develop/api/open_infomation/#使用说明
+                    text: 使用说明
+                    name: open_infomation_使用说明
+                  -
+                    link: /develop/api/open_infomation/#下发条件说明
+                    text: 下发条件说明
+                    name: open_infomation_下发条件说明
                   -
                     link: /develop/api/open_infomation/#getTemplateLibraryList
                     text: getTemplateLibraryList
@@ -2003,27 +2151,27 @@
                     text: sendTemplateMessage
                     name: open_infomation_sendTemplateMessage
               -
-                link: /develop/api/seo
-                text: 页面 meta 信息
-                name: seo
+                link: /develop/api/pageinfo
+                text: 页面基础信息
+                name: pageinfo
                 sidebar:
                   -
-                    link: /develop/api/seo/#setPageInfo
+                    link: /develop/api/pageinfo/#setPageInfo
                     text: setPageInfo
-                    name: seo_setPageInfo                    
+                    name: seo_setPageInfo
                   -
-                    link: /develop/api/seo/#setMetaDescription
+                    link: /develop/api/pageinfo/#setMetaDescription
                     text: setMetaDescription
                     name: seo_setMetaDescription
                   -
-                    link: /develop/api/seo/#setMetaKeywords
+                    link: /develop/api/pageinfo/#setMetaKeywords
                     text: setMetaKeywords
                     name: seo_setMetaKeywords
                   -
-                    link: /develop/api/seo/#setDocumentTitle
+                    link: /develop/api/pageinfo/#setDocumentTitle
                     text: setDocumentTitle
                     name: seo_setDocumentTitle
-     
+
               -
                 link: /develop/api/open_preloadsubpackage
                 text: 分包预下载
@@ -2063,7 +2211,7 @@
                   -
                     link: /develop/api/get/#getUpdateManager
                     text: getUpdateManager
-                    name: get_getUpdateManager 
+                    name: get_getUpdateManager
               -
                 link: /develop/api/debug
                 text: 调试
@@ -2102,7 +2250,7 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout                         
+                    name: timer_setTimeout
     -
       link: /develop/devtools/show_sur
       text: 工具
@@ -2182,6 +2330,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Sensors-panel
                     text: Sensors panel
                     name: smartappdebug_tool_Sensors-panel
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Swan-audits
+                    text: Swan audits
+                    name: smartappdebug_tool_Swan-audits
               -
                 link: /develop/devtools/smartappdebug_pre
                 text: 预览发布
@@ -2194,6 +2346,13 @@
                 link: /develop/debug/remotedebugging
                 text: 远程调试
                 name: remotedebugging
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/audits
+                text: 体验评分
+                name: audits                
         -
             link: /develop/devtools/projectconfig
             text: 配置文件及差异
@@ -2220,7 +2379,7 @@
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
-                name: uplog_compile    
+                name: uplog_compile
 
     -
       link: /develop/server/oauth_intr
@@ -2326,7 +2485,7 @@
             -
               link: /develop/third/deciphering
               text: 第三方平台消息加解密
-              name: deciphering              
+              name: deciphering
         -
           link: /develop/third/log
           text:
@@ -2335,7 +2494,7 @@
             -
               link: /develop/third/log
               text: 更新日志
-              name: log            
+              name: log
     # -
     #   link: /develop/flow
     #   text: 搜索流量接入
@@ -2518,7 +2677,7 @@
       name: book
       sidebar:
         -
-          sidebar:            
+          sidebar:
           -
             link: /operations/thirdparty
             text: 第三方服务条款

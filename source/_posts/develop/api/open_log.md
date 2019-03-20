@@ -54,7 +54,7 @@ sidebar: open_log
 |code|String|用户登录凭证（有效期五分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
 **示例：**
-<!-- <a href="swanide://fragment/f24161cd6644de1ef912cf50f5a9d86f1544431618" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/f24161cd6644de1ef912cf50f5a9d86f1544431618" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.login({
     success: function (res) {
@@ -96,7 +96,8 @@ swan.login({
 
 https://spapi.baidu.com/oauth/jscode2sessionkey
 
-> 原地址 https://openapi.baidu.com/nalogin/getSessionKeyByCode  将于2019年03月25日失效，请您及时更新。
+> 为了让您的智能小程序运行在联盟 App 上,我们对获取 SessionKey 的接口做了升级。新接口可以兼容获取百度内部 App 和百度外部 App 的 SessionKey。
+您只需要将原接口地址 `"https://openapi.baidu.com/nalogin/getSessionKeyByCode"` 更改为 `"https://spapi.baidu.com/oauth/jscode2sessionkey"` ,即可让您的智能小程序在其它App上自动实现账号关联。
 
 **获取Session Key需要的参数：**
 
@@ -191,7 +192,7 @@ swan.checkSession({
 | invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
 | invalid_client | unknown client id | client_id、client_secret 参数无效。 |
 | invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
-**Andriod**
+<!-- **Andriod** -->
 
 <!-- |错误码|说明|
 |--|--|

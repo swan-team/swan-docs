@@ -23,7 +23,7 @@ setStorage
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
-<!-- <a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.setStorage({
     key: 'key',
@@ -109,7 +109,7 @@ getStorage
 |data   | String | key 对应的内容|
 
 **示例：**
-<!-- <a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.getStorage({
     key: 'key',

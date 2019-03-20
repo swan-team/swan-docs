@@ -122,9 +122,11 @@ iOS
 
 clearStorageSync
 -----
-<!-- <a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+
 
 **解释：**同步清理本地数据缓存。
+
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **示例：**
 

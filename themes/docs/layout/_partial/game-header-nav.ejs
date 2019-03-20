@@ -71,6 +71,9 @@
         else if (/^game\/(api|tutorials)/.test(page.path)) {
             pageType = 'game-develop';
         }
+        else if (page.path.indexOf('game/operations') === 0) {
+            pageType = 'game-operations-group';
+        }
     }
 
     var index;

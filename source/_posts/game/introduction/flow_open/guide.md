@@ -86,8 +86,6 @@ priority: 04-01
 
 ####  6.1 新建代码位
 
-代码位类型目前“小程序只开放横幅广告，小游戏只开放激励视频”。
-
 样式、物料类型、代码位比例在用户选择代码位类型后系统默认设置，不可修改。
 
 横幅广告在百度 APP v11.3 以下版本，显示比例为 7:3，在在百度 APP v11.3 及以上版本，显示比例为 3:1。接入横幅广告时，建议兼顾两种样式的显示效果。
@@ -125,11 +123,9 @@ banner广告具体接入步骤请参考以下[文档](/game/tutorials/ad/banner/
 
 ![](/img/game/introduction/flow_open/newadd09.png)
 
-#### 6.3.2 小游戏代码
+#### 6.3.2 激励视频广告
 
-小游戏代码适用于基于游戏框架的小游戏。
-
-接入路径：等待开发文档
+获取路径：新建激励视频代码位时，开发者可在代码位类型下，找到“激励视频接入说明文档”按钮，点击即可预览和下载该文档。
 
 ![](/img/game/introduction/flow_open/newadd10.png)
 
@@ -143,4 +139,3 @@ banner广告具体接入步骤请参考以下[文档](/game/tutorials/ad/banner/
 
 ![](/img/game/introduction/flow_open/flow_open023.png)
 ![](/img/game/introduction/flow_open/flow_open024.png)
-![](/img/game/introduction/flow_open/flow_open025.png)

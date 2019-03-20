@@ -1,6 +1,6 @@
 ### socketTask.onOpen()
 
-监听 WebSocket 连接打开事件。
+监听 WebSocket 连接打开事件。连接成功才可调用发送数据或者关闭连接。
 
 ```js
 socketTask.onOpen(callback)
@@ -25,7 +25,7 @@ socketTask.onOpen(callback)
 
 ```js
 const task = swan.connectSocket({
-    url: 'wss://test.baidu.com'
+    url: 'wss://test.baidu.com' // 仅为示例，并非真实的接口地址
 });
 
 task.onOpen(res => console.log('连接成功：', res.header));

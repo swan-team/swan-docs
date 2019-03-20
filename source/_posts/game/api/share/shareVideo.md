@@ -6,6 +6,8 @@ categoryName: api
 priority: 10-06
 ---
 
+> 基础库 swan-game.js 1.4.1 版本开始支持。
+
 主动拉起发布视频界面。
 
 ```javascript

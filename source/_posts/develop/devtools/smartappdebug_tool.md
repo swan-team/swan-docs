@@ -51,3 +51,6 @@ Storage panel 用于显示当前项目使用 swan.setStorage 或者 swan.setStor
 <video src='https://b.bdstatic.com/miniapp-docs/sensor190131.mp4' type='video/mp4' controls='controls'  width='100%' height='100%'>
 </video>
 
+## Swan audits
+
+<a href="http://smartprogram.baidu.com/docs/develop/devtools/audits/">体验评分</a>，是一项给小程序的体验打分的功能，它会在小程序运行过程中实时检查，分析出一些可能影响开发者体验的地方，并且定位问题，及时给出相应的优化建议。

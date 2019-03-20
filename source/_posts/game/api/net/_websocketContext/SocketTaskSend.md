@@ -1,6 +1,7 @@
 ### socketTask.send()
 
-通过 WebSocket 连接发送数据。
+通过 WebSocket 连接发送数据。注意需要在 webSocket.open 回调之后才能发送数据。
+
 
 ```js
 socketTask.send(opts)
@@ -19,7 +20,7 @@ socketTask.send(opts)
 
 ```js
 const task = swan.connectSocket({
-    url: 'wss://test.baidu.com'
+    url: 'wss://test.baidu.com' // 仅为示例，并非真实的接口地址
 });
 
 task.onOpen(() => {

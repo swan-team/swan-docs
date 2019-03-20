@@ -44,6 +44,7 @@ context有效值如下
 |参数值 |说明|
 |---- | ---- |
 |input| 输入法场景|
+|search|搜索场景值|
 
 **onRecognize(callback) 回调结果说明：**
 

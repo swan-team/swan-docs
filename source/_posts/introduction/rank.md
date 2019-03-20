@@ -49,19 +49,20 @@ URL映射规则定义的是小程序页面到 H5 页面的映射规则，百度�
 
 |小程序页面链接|对应H5页面链接|
 |--|--|
-|web化主页：https://byokpg.smartapps.cn/pages/home/index  |H5主页：https://m.site.com/ |
-|web化列表页：  https://byokpg.smartapps.cn/pages/list/index?city=bj |H5列表页：https://m.site.com/list/bj.html |
-|web化详情页：https://byokpg.smartapps.cn/pages/detail/index?city=bj&id=1024  |H5详情页：https://m.site.com/detail.html?id=1024 |
+|web化主页：https://byokpg.smartapps.cn/path/to/smartapp/home|H5主页：https://m.site.com/|
+|web化列表页： https://byokpg.smartapps.cn/path/to/smartapp/list?city=bj|H5列表页：https://m.site.com/list/bj.html|
+|web化详情页：https://byokpg.smartapps.cn/path/to/smartapp/detail?city=bj&id=1024|H5详情页：https://m.site.com/detail.html?id=1024|
 
 
 app.json中配置url-mapping字段如下：
 ```json
 
- "url-mapping": {
-    "pages/home/index":"/",
-    "pages/list/index": "/list/${city}.html",
-    "pages/detail/index": "/detail.html?city=${city}&id=${id}"
-}
+    "url-mapping": {
+        "pages/index/index":"/",
+        "pages/pb/pb":"/p/${tid}",
+        "pages/frs/frs": "/?kw=${kw}"
+    }
+
 ```
 #### 参数不一致示例
 

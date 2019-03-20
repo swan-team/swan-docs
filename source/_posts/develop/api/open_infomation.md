@@ -4,6 +4,93 @@ header: develop
 nav: api
 sidebar: open_infomation
 ---
+
+## 使用场景
+模板消息可以方便开发者更高效的触达用户，例如：交易状态、物流状态，订单评价等；用户在小程序内产生交互行为后，开发者可以通过用户交互行为产生的凭证配置模板消息来发送给用户。
+> 目前模板消息仅支持文本消息。
+
+## 功能介绍
+目前已经开放的模板消息主要是两类：支付类和表单类消息。
+> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">1.4下发条件说明</a>。
+
+### 消息的入口
+
+* 百度App-我的tab-消息中心
+    > 支付、表单消息均有该入口。
+
+<!-- ![图片](../../../img/api/information/1.jpg)
+![图片](../../../img/api/information/2.jpg) -->
+
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/api/information/1.jpg">
+		<!-- <p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)。</p> -->
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="../../../img/api/information/2.jpg">
+		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
+	</div>
+</div>
+* 搜索结果页菜单面板
+    > 支付、表单类消息均有该入口。
+
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/api/information/3.jpg">
+		<!-- <p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)。</p> -->
+	</div>
+	<div class="m-doc-custom-examples-error ">
+		<img src="../../../img/api/information/4.jpg">
+		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
+	</div>
+</div>
+<!-- ![图片](../../../img/api/information/3.jpg)
+![图片](../../../img/api/information/4.jpg) -->
+* 手机通知栏
+    > 仅限支付消息，部分Android厂商机型可能受限。
+
+    ![图片](../../../img/api/information/5.png)
+* 模板消息体的样式示意：
+
+    ![图片](../../../img/api/information/8.png)
+
+## 使用说明
+
+### 步骤一： 选用模板，获取模板ID
+打开开发者平台选择”消息模板”，在”模板库”列表页可选择对应的模板消息，如果没有合适的模板消息关键词，可以申请新增关键词，审核通过后即可使用。
+添加模板完成后，可以在我的模板里看到对应模板的模板ID。
+![图片](../../../img/api/information/6.png)
+![图片](../../../img/api/information/7.png)
+### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过<a href="http://smartprogram.baidu.com/docs/develop/api/open_payment/#requestPolymerPayment/">支付</a>获取订单id
+
+#### formid 
+页面的`<form/>`组件，属性report-submit为true时，可以声明为需发模板消息，此时用户点击按钮提交表单可以获取formId，用于发送表单类模板消息。
+#### 订单id 
+当用户完成支付行为时，可以获取订单id用于发送交易类模板消息。
+
+### 步骤三：调用接口下发模板消息
+
+* 获取小程序模板库标题列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
+* 获取模板库某个模板标题下的关键词库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
+* 组合模板并添加至帐号下的个人模板库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#addTemplate/">addTemplate</a>
+* 获取帐号下已存在的模板列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateList/">getTemplateList</a>
+* 删除帐号下的某个模板:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#deleteTemplate/">deleteTemplate</a>
+* 推送模板消息:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
+
+
+## 下发条件说明
+
+### 表单类消息
+
+对于在智能小程序内发生过提交表单行为且该表单声明要发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户在 7 天内推送有限条数的模板消息。
+> 1次提交表单可下发 1 条，多次提交下发条数独立，相互不影响。
+
+### 支付类消息
+对于在智能小程序内完成过支付行为的用户，可允许开发者向用户在 7 天内推送有限条数的模板消息。
+> 1次支付可下发3条，多次支付下发的条数独立，互不影响。
+
+
+
 ## getTemplateLibraryList 
 **解释**：获取小程序模板库标题列表。
 **接口调用请求说明**：
@@ -243,6 +330,14 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 * 当开发者获得用户openid，填写到touser_openid，否则获取用户swanid，填写到touser。
 * 当touser_openId  和touser至少填写一个，如同时填写，仅以touser_openId  下发消息。
 * 评价服务必须填写touser_openId  以及ext字段。其中ext字段以json格式包含category_id和xzh_id。
+
+### 消息发送失败可能的原因
+* scene_id 状态需要和用户登录状态保持一致，否则 scene_id 校验会失败。 
+    > 如：登录态scene_id最后一位是1, 未登录态最后一位是0， 登录态对应的是touser_openId，未登录态对应的是touser。 
+如果不匹配 scene_id 将会校验失败，导致消息无法发送。
+
+* 发送消息时用到的 touser/touser_openid 必须和 申请 scene_id 时的 touser/touser_openid 一一对应， 否则也会导致 scene_id 检验失败。
+* 如果通过上面的查验仍然发送消息失败， 请检查 appkey 是否异常。
 
 **返回值**:
 

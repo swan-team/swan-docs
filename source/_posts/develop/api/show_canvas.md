@@ -1153,6 +1153,7 @@ canvasContext.drawImage
 -----
 
 **解释：**绘制图像到画布。
+> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
 **参数：**
 
@@ -1246,7 +1247,7 @@ console.log(metrics.width);
 |201|解析失败，请检查调起协议是否合法。|
 |202|解析失败，请检查参数是否正确。| -->
 
-canvasContext.arcTo
+<!-- canvasContext.arcTo
 -----
 
 **解释：**根据控制点和半径绘制圆弧路径。
@@ -1265,7 +1266,7 @@ canvasContext.arcTo
 
 ```js
 canvasContext.arcTo(x1, y1, x2, y2, radius);
-```
+``` -->
 
 canvasContext.strokeText
 -----

@@ -44,6 +44,9 @@ priority: 12-01
 Q：开发者工具一直显示在编译，看不到日志？
 A：点击右上角 “更多功能” -> “编译日志” ，查看是否编译错误。
 
+Q：使用 socket 连接必须使用 wss 吗？
+A：开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。
+
 Q: 预览/真机调试，上传失败？
 A：请确认小游戏代码包体积是否超过[包大小限制](/game/tutorials/subpackages/sub/#包大小限制)。如果超出限制，一般在预览弹窗会有提示“主包超限”。
 如无提示，请用抓包工具抓包查看 `smartprogram.baidu.com` 的请求和返回，查看请求的包体积、或者返回错误信息。
@@ -67,6 +70,10 @@ A：已在开发者工具 1.15.1 版本修复，请更新开发者工具。
 Q：如何在手机上查看调试信息？
 A：小游戏支持使用 sConsole 查看 console API 输出的日志内容，也支持真机调试，详见文档中的工具[调试章节](/game/tutorials/devtools/smartappdebug/)。
 
+Q：真机调试时，小游戏一直停留在加载中界面，无法进入？
+A：真机调试默认把游戏暂停在游戏开头。在“真机调试窗口”的 Sources 面板中可以看到游戏被暂停在第一行代码。
+也可能是使用了不存在的变量，如：window、document 等，程序抛出错误，请在控制台检查。
+
 Q：真机预览时，小游戏一直停留在加载中界面，无法进入？
 A：请确认创建小游戏时选择的服务类目是否是小游戏？如果不是，请重新创建。参考上述 [自我排查指南](./#自我排查指南)第 5 点。
 
@@ -81,7 +88,7 @@ Q：真机用 unzip 解压后，解压的文件找不到？
 A：如 unzip 的 API 文档和示例所描述，传递给 unzip 的源文件和目标目录必须在用户目录（`${swan.env.USER_DATA_PATH}`）下。
 
 Q：对接广告、激励视频的参数 adUnitId 和 appSid 分别填什么？
-A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文档](https://smartprogram.baidu.com/docs/game/introduction/flow_open/flow_open/)。adUnitId 和 appSid 分别对应于 Mssp 平台的代码位 ID 和所属应用 ID。
+A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文档](https://smartprogram.baidu.com/docs/game/introduction/flow_open/guide/)。adUnitId 和 appSid 分别对应于 Mssp 平台的代码位 ID 和所属应用 ID。
 
 Q：在真机无法调起百度收银台支付？
 A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 中提到的的[签名与验签文档](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。

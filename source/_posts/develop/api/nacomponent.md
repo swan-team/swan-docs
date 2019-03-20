@@ -25,7 +25,7 @@ sidebar: nacomponent
 
 引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
-> 引导组件有统一的疲劳度控制，若用户点击关闭引导组件或执行过添加操作，则3天内不再出现引导组件。
+> 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。
 > 百度App v11.5及以上版本的智能小程序，支持添加到我到小程序引导组件。
 
 **Object参数说明：**
@@ -45,7 +45,7 @@ swan.showFavoriteGuide({
     type： 'bar'，
     content：'一键添加到我的小程序'
     success(res) {
-        console.log('添加成功：'， res);
+        console.log('添加成功：', res);
     },
     fail(err) {
         console.log('添加失败：', err);

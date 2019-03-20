@@ -37,7 +37,7 @@ sidebar: media
 |4|不支持音频|
 
 **示例：**
-<!-- <a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
+<a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
@@ -116,7 +116,7 @@ image 组件默认宽度 300px、高度 225px。
 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 
 **示例：**
-  <!-- <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="wrap">
     <view>
@@ -295,7 +295,7 @@ Page({
 视频编码android支持：mediacodec_h264,h261,h263,h263p,h263i,h264,h264_vda,mpeg1video,mpeg2video,mpeg4,mpegvideo,msmpeg4v1,msmpeg4v2,msmpeg4v3,rv10,rv20,rv30,rv40,svq1,svq3,vc1,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,wmv1,wmv2,wmv3,aac,aac_latm,ac3,ac3_fixed,eac3,amrnb,amrwb,atrac1,atrac3,atrac3p,cook,mp1float,mp2float,mp3float,mp3adufloat,mp3on4float,mp1,mp2,mp2fixed,mp3,mp3adu,mp3on4,ra_144,ra_288,sipr,wmapro,wmav1,wmav2,adts,amr,asf,avi,flv,hls,matroska,mov,mp3,mpegps,mpegts,rm,rtp,rtsp,sdp,swf,aac,aac_latm,ac3,cook,h261,h263,h264,mpeg4video,mpeg4audio,mpegvideo,rv30,rv40,vc1,vp3,vp8,vp9；ios支持h264,h265。
 
 **示例：**
-<!-- <a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 ```xml
@@ -525,7 +525,7 @@ Page({
 
 **示例：**
 
-<!-- <a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
+<a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 
 ```css
 .wrap {

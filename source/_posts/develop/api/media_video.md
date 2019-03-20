@@ -17,7 +17,7 @@ chooseVideo
 
 |参数 | 类型  |必填 | 说明|
 |---- | ---- | ---- | ----|
-|sourceType | Array.<string> |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
+|sourceType | Array.<string> |否 |  album 从相册选择视频，camera 使用相机，默认二者都有。|
 |compressed  | Boolean | 否  | 是否压缩所选的视频源文件，默认值为true，需要压缩。|
 |maxDuration  | Number | 否  | 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|
 |success |Function  |  是 | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|
@@ -39,7 +39,7 @@ chooseVideo
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 **示例：**
-<!-- <a href="swanide://fragment/1ad682d22d305ed32c33695919d358791548069205371" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a> -->
+<a href="swanide://fragment/1ad682d22d305ed32c33695919d358791548069205371" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```html
 <button bind:tap="chooseVideo" type="primary">点击选择视频</button>
 <video src="{{src}}" controls></video>
