@@ -5,6 +5,7 @@ topic: media
 categoryName: api
 ---
 
+> 基础库 swan-game.js 1.4.1 版本开始支持。
 
 ### swan.getVideoRecorderManager()
 获取全局唯一的 VideoRecorderManager。
