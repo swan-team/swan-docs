@@ -1877,7 +1877,7 @@
                     text: onDeviceMotionChange
                     name: device_direction_onDeviceMotionChange
                   -
-                    link: /develop/api/device_direction/#startDeviceMotionListenings
+                    link: /develop/api/device_direction/#startDeviceMotionListening
                     text: startDeviceMotionListening
                     name: device_direction_startDeviceMotionListening
                   -
