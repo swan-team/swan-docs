@@ -11,7 +11,7 @@ sidebar: open_infomation
 
 ## 功能介绍
 目前已经开放的模板消息主要是两类：支付类和表单类消息。
-> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">1.4下发条件说明</a>。
+> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
 
 ### 消息的入口
 
@@ -360,16 +360,3 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |4004|	场景id无效|
 |6001|	无 push 权限|
 
-## 下发条件说明
-
-### 表单类消息
-
-对于在智能小程序内发生过提交表单行为且该表单声明要发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户在 7 天内推送有限条数的模板消息。
-> 1 次提交表单可下发 1 条，多次提交下发条数独立，相互不影响。
-
-
-
-### 支付类消息
-
-对于在智能小程序内完成过支付行为的用户，可允许开发者向用户在 7 天内推送有限条数的模板消息。       
-> 1 次支付可下发 3 条，多次支付下发的条数独立，互相不影响。

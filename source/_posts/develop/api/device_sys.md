@@ -22,23 +22,23 @@ getSystemInfo
 
 **success返回参数说明：**
 
-|参数  |说明 |
+|参数  |说明 |最低版本|
 |---- | ---- |
-|brand  | 手机品牌 |
-|model |  手机型号   |
-|pixelRatio | 设备像素比  |
-|screenWidth |屏幕宽度   |
-|screenHeight |   屏幕高度 |
-|windowWidth |可使用窗口宽度 |
-|windowHeight  |  可使用窗口高度 |
-|statusBarHeight| 状态栏的高度 |
-|language |百度 App 设置的语言 |
-|version |百度 App 版本号|
-|system  |操作系统版本  |
-|platform |客户端平台|
-|fontSizeSetting |用户字体大小设置 |
-|SDKVersion |客户端基础库版本 |
-|host|宿主平台，如：baiduboxapp 。|
+|brand  | 手机品牌 |-|
+|model |  手机型号   |-|
+|pixelRatio | 设备像素比  |-|
+|screenWidth |屏幕宽度   |-|
+|screenHeight |   屏幕高度 |-|
+|windowWidth |可使用窗口宽度 |-|
+|windowHeight  |  可使用窗口高度 |-|
+|statusBarHeight| 状态栏的高度 |-|
+|language |百度 App 设置的语言 |-|
+|version |百度 App 版本号|-|
+|system  |操作系统版本  |-|
+|platform |客户端平台，如：ios。|-|
+|fontSizeSetting |用户字体大小设置 |-|
+|SDKVersion |客户端基础库版本 |-|
+|host|宿主平台，如：baiduboxapp 。|3.30.2|
 
 **示例：**
 <a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
@@ -71,23 +71,23 @@ getSystemInfoSync
 
 **同步返回参数说明：**
 
-|参数  |说明 |
-|---- | ---- |
-|brand  | 手机品牌 |
-|model |  手机型号   |
-|pixelRatio | 设备像素比  |
-|screenWidth |屏幕宽度   |
-|screenHeight |   屏幕高度 |
-|windowWidth |可使用窗口宽度 |
-|windowHeight  |  可使用窗口高度 |
-|statusBarHeight| 状态栏的高度 |
-|language |百度 App 设置的语言 |
-|version |百度 App 版本号|
-|system  |操作系统版本  |
-|platform |宿主平台|
-|fontSizeSetting |用户字体大小设置 |
-|SDKVersion |客户端基础库版本 |
-|host|宿主平台，如：baiduboxapp 。|
+|参数  |说明 |最低版本|
+|---- | ---- |----|
+|brand  | 手机品牌 |-|
+|model |  手机型号   |-|
+|pixelRatio | 设备像素比  |-|
+|screenWidth |屏幕宽度   |-|
+|screenHeight |   屏幕高度 |-|
+|windowWidth |可使用窗口宽度 |-|
+|windowHeight  |  可使用窗口高度 |-|
+|statusBarHeight| 状态栏的高度 |-|
+|language |百度 App 设置的语言 |-|
+|version |百度 App 版本号|-|
+|system  |操作系统版本  |-|
+|platform |客户端平台，如：ios。|-|
+|fontSizeSetting |用户字体大小设置 |-|
+|SDKVersion |客户端基础库版本 |-|
+|host|宿主平台，如：baiduboxapp 。|3.30.2|
 
 **示例：**
 

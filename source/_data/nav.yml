@@ -1864,6 +1864,36 @@
                     text: stopCompass
                     name: device_compass_stopCompass
               -
+                link: /develop/api/device_direction
+                text: 设备方向
+                name: device_direction
+                sidebar:
+                  -
+                    link: /develop/api/device_direction/#onDeviceMotionChange
+                    text: onDeviceMotionChange
+                    name: device_direction_onDeviceMotionChange
+                  -
+                    link: /develop/api/device_direction/#startDeviceMotionListenings
+                    text: startDeviceMotionListening
+                    name: device_direction_startDeviceMotionListening
+                  -
+                    link: /develop/api/device_direction/#stopDeviceMotionListening
+                    text: stopDeviceMotionListening
+                    name: device_direction_stopDeviceMotionListening  
+              -
+                link: /develop/api/device_battery
+                text: 获取电量信息
+                name: device_battery
+                sidebar:
+                  -
+                    link: /develop/api/device_battery/#getBatteryInfo
+                    text: getBatteryInfo
+                    name: device_battery_getBatteryInfo
+                  -
+                    link: /develop/api/device_battery/#getBatteryInfoSync
+                    text: getBatteryInfoSync
+                    name: device_battery_getBatteryInfoSync                                    
+              -
                 link: /develop/api/device_scan
                 text: 扫码
                 name: device_scan
@@ -2699,6 +2729,10 @@
             link: /operations/thirdparty
             text: 第三方服务条款
             name: thirdparty
+          -
+            link: /operations/thirdparty_law
+            text: 第三方平台授权法律条款
+            name: thirdparty_law            
 
 # #6
 # -
