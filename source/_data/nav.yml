@@ -116,10 +116,10 @@
                 link: /introduction/feed
                 text: 信息流流量说明
                 name: feed
-              # -
-              #   link: /introduction/accessfeed
-              #   text: 接入信息流流量 
-              #   name: accessfeed                
+              -
+                link: /introduction/accessfeed
+                text: 接入信息流流量 
+                name: accessfeed                
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
