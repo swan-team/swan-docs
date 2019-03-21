@@ -7,9 +7,10 @@ sidebar: custom_component
 
 ## nextTick
 
-> 基础库 3.15.104 开始支持，低版本需做兼容处理。
+
 
 **解释：**延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）
+> 基础库 3.15.104 开始支持，低版本需做兼容处理。
 
 **参数：**function callback
 
