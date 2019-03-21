@@ -1,6 +1,6 @@
 
 ---
-title: 登录资产证明
+title: 登录资产继承
 layout: gamedoc
 categoryName: tutorials
 topic: open_api
