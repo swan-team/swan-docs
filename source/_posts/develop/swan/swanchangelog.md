@@ -5,9 +5,17 @@ nav: tutorial
 sidebar: swanchangelog
 ---
 
-## 3.20 版本日志更新
+## 3.30 版本日志更新
+
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.30.7|2019.3.20|**New**<p>新增 swan 预加载(prefetch)功能。<p>**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
+
+## 3.20 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.20.21|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.20.15 |2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
 |3.20.11 |2019.3.5|**New**<p>支持人脸识别和词法分析AI能力的API接口。<p>**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.20.8|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
@@ -18,6 +26,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.125|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.15.120|2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
 |3.15. 116  |2019.3.5|**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.15.112|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
@@ -28,6 +37,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.10.45|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.10.38|2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
 |3.10.36 |2019.3.5|**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.10.33|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
