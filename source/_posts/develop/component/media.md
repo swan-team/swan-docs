@@ -409,7 +409,7 @@ Page({
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
 |key| String | - | AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
-|type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type|
+|type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
 |flash|String| off |闪光灯，值为auto, on, off|
 |binderror|EventHandle|-|用户不允许使用摄像头时触发|
 |bindload|EventHandle|-|AR加载成功时触发|
