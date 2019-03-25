@@ -1348,9 +1348,9 @@
                     text: canvasPutImageData
                     name: show_canvas_canvasPutImageData
                   -
-                    link: /develop/api/show_canvas/#canvasToTempFilePath-OBJECT-this
-                    text: canvasToTempFilePath(OBJECT, this)
-                    name: show_canvas_canvasToTempFilePath(OBJECT, this)
+                    link: /develop/api/show_canvas/#canvasToTempFilePath 
+                    text: canvasToTempFilePath 
+                    name: show_canvas_canvasToTempFilePath 
                   -
                     link: /develop/api/show_canvas/#canvasContext-setFillStyle
                     text: canvasContext.setFillStyle

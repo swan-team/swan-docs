@@ -102,23 +102,20 @@ swan.navigateBackSmartProgram({
 |参数名|类型|是否必填|说明|
 |--|--|--|--|
 |appkey|	String|是|要打开的小程序App Key|
+|path|	String|	否	|要打开的具体页面|
 
 **示例**：
 ```js
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/boxjs-1.0.0.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/boxjs-1.0.2.js"></script>
 <script type="text/javascript">
-        Boxjs.init({
+        Boxjs.openSwan({
+            appKey: '4fecoAqgCIUtzIy7774FAPg6yrc4o325c', 
+            path: 'pages/login/login',
             success: function(res){
-                Boxjs.view.open({
-                    name: 'swan',  // 这个入参是必填
-                    data: {
-                        appKey: '3cO3ddQ1ys1wrfOmDoTVPSdv3Ov5jV6p'  //小程序的appkey
-                    }
-                }).then(function(res) {
-                    alert(JSON.stringify(res))
-                }).catch(function(err) {
-                    alert(JSON.stringify(err))
-                });
+                console.log(JSON.stringify(res));
+            },
+            fail: function(err){
+                console.log(JSON.stringify(err));
             }
         });
 </script>
