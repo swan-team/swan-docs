@@ -3,7 +3,7 @@ title: 小游戏常见问题
 layout: gamedoc
 categoryName: tutorials
 topic: faq
-priority: 12-01
+priority: 13-01
 ---
 
 ### 前提
