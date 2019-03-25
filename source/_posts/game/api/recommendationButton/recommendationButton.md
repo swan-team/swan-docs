@@ -5,6 +5,8 @@ topic: recommendationButton
 categoryName: api
 ---
 
+> 从基础库 swan-game.js 1.5.2 开始支持。
+
 ### recommendationButton
 [swan.createRecommendationButton(opts)](/game/api/recommendationButton/createRecommendationButton) 创建的推荐按钮对象。
 
