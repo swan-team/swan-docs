@@ -16,11 +16,13 @@ swan.getNetworkType(opts)
 
 **返回值：**
 
-`Object` 类型的对象：
+**success 回调函数：**
 
-|属性|类型|描述|
-|-|-|-|
-|networkType|string|网络类型|
+|参数|描述|
+|-|-|
+|networkType|网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
+
+
 
 **示例：**
 
