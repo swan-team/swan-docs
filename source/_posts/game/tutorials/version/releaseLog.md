@@ -7,21 +7,24 @@ topic: version
 priority: 04-04
 ---
 
-<!--
-
-todo 11.6.0 客户端发版后再开放
-
-#### v 1.5.2
-1. `feat` 新增交叉推荐 API createRecommendationButton
-2. `feat` 新增 API 加速计、屏幕、罗盘、剪切板、saveImageToPhotosAlbum
-
--->
-
 随着小游戏不断支持更多的功能，旧版本的客户端可能会出现不支持新增功能的情况，因此在使用新增功能时需要关注基础库版本的更新日志，并根据实际情况来决定是否做兼容性处理。
 
 **说明：**
 1. 客户端和基础库的版本映射关系见 [客户端版本映射](/game/tutorials/version/clientVersion/)。
 2. 版本兼容方案见 [小游戏版本兼容](/game/tutorials/version/compatibility/)。
+
+
+<!--
+
+todo
+需要补充 api 及对应链接
+
+2. `feat` 新增 API 加速计、屏幕、罗盘、剪切板、saveImageToPhotosAlbum
+
+-->
+
+#### v 1.5.2
+1. `feat` 新增交叉推荐 API [createRecommendationButton](/game/api/recommendationButton/createRecommendationButton/)
 
 #### v 1.4.4
 无对外功能

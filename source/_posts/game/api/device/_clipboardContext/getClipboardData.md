@@ -1,9 +1,9 @@
-### swan.getNetworkType()
+### swan.getClipboardData()
 
-获取网络类型。
+获取系统剪贴板内容。
 
 ```js
-swan.getNetworkType(opts)
+swan.getClipboardData(opts)
 ```
 
 **opts 对象属性说明：**
@@ -15,22 +15,18 @@ swan.getNetworkType(opts)
 |opts.fail|function|-|否|接口调用失败的回调函数|
 |opts.complete|function|-|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
-
 **`success`**回调函数：
 
-|参数|描述|
-|-|-|
-|networkType|网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
-
-
+|属性|类型描述|描述|
+|-|-|-|
+|data|string|剪贴板的内容|
 
 **示例：**
 
 ```js
-swan.getNetworkType({
-    success: res => {
-        console.log(res.networkType);
+swan.getClipboardData({
+    success: function (res) {
+        console.log(res.data);
     }
 });
 ```
