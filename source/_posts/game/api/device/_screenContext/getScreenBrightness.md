@@ -17,7 +17,7 @@ swan.getScreenBrightness(opts)
 
 **返回值：**
 
-**`success`**
+**`success`**回调函数：
 
 |属性|类型描述|描述|
 |-|-|-|

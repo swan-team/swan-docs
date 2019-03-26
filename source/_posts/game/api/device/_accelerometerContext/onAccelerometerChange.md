@@ -6,7 +6,7 @@
 swan.onAccelerometerChange(callback)
 ```
 
-**callback 对象属性说明：**
+**callback 回调参数：**
 
 |属性|类型|描述|
 |-|-|-|

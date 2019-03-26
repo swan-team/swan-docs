@@ -17,7 +17,7 @@ swan.getNetworkType(opts)
 
 **返回值：**
 
-**success 回调函数：**
+**`success`**回调函数：
 
 |参数|描述|
 |-|-|
