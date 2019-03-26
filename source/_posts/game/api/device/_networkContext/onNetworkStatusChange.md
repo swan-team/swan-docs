@@ -6,7 +6,7 @@
 swan.onNetworkStatusChange(callback)
 ```
 
-**参数值：**
+**callback 对象属性说明：**
 
 |属性|类型|是否必填|描述|
 |-|-|-|
