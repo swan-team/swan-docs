@@ -6,11 +6,11 @@
 swan.onCompassChange(callback)
 ```
 
-**参数值：**
+**callback 对象属性说明：**
 
 |属性|类型|描述|
 |-|-|-|
-|direction|Number|面对的方向度数|
+|direction|number|面对的方向度数|
 
 **示例：**
 
