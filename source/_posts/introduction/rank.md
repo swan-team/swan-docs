@@ -197,3 +197,56 @@ H5站点url：www.msite.com/path
 支持使用当前账号完成注册绑定，也支持绑定与小程序同主体的其他熊掌号，绑定其他熊掌号时需要获取其超级管理员的手机中收到的验证码进行操作权限的验证即可。
 ![图片](../../img/flow/rank/rank07.png)
 > 开发者必须完成熊掌号的绑定后才可进行Sitemap的提交，建议使用原H5所属熊掌号进行绑定，从而使小程序继承原H5在百度搜索中的排名权重。
+## 配置 H5 域名
+
+> H5域名和下文提到的url映射规则配合使用，一起生成小程序和H5站点的映射关系，用于最终完成将原H5页面替换为小程序页面。
+
+1. 配置业务域名
+可在“流量配置>自然搜索结果页面”中配置H5域名。
+![图片](../../img/flow/rank/rank7.png)
+2. 在配置页面的“H5 域名配置”中，单击“设置域名”按钮，在弹出的对话框中，配置 “H5 域名”即可。
+![图片](../../img/flow/rank/rank3.png)
+
+#### H5 域名
+
+**举例**：https://tieba.baidu.com
+**说明**：
+* “H5 域名”是指开发者 H5 站点的域名，一经配置之后不可更改，请谨慎填写。
+* 如果开发者存在多个 H5 子域，且这些 H5子 域都有对应的小程序页面，请配置 H5 主域名。
+    举例，如果存在多个 H5 子域：
+    https://news.m.yiche.com
+    https://v.m.yiche.com
+    https://car.m.yiche.com
+    请在小程序平台配置主域名：https://m.yiche.com
+* 对于新站小程序可不填 H5 域名，此时自然搜索的内容为新站点内容的收录。
+
+## 提交 sitemap
+
+进入智能小程序平台，在小程序首页，单击“投放管理>自然搜索管理”。在自然搜索 tab 里，可上传 sitemap。
+#### sitemap
+sitemap 用于声明主动推送给百度自然搜索收录的页面。列表中每一行都是一个要被收录页面的“路径+参数”，格式例如 `pages/list/index?id=1`。如果某页面通过 url-mapping 中声明了对应的原始网站的 web url，参数部分要包含此页面对应的 web url 的所有参数。
+**url-mapping规则**:
+```json
+ {
+    "path/to/smartapp/list":"/list/${city}.html",
+    "path/to/smartapp/detail":"/detail.html?id=${id}",
+    "pages/detail ":["/detail.html?page=${page}&id=${id}","/main/detail.html?detailId=${detailId}"]
+}
+```
+**sitemap 示例**:
+```
+path/to/smartapp/list?city=bj
+path/to/smartapp/list?city=sh
+path/to/smartapp/detail?id=1024
+pages/detail?page=2048&id=1024&deailId=4096
+
+```
+目前支持存量上传和增量上传两种方式:
+* 其中存量上传并非实时生效，可提交的量较多，但是更新耗时较长；
+* 增量上传数据更新耗时低，但是日均可提交的配额较少。
+![图片](../../img/flow/rank/rank8.png)
+
+    ![图片](../../img/flow/rank/rank9.png)
+
+**说明**：
+当详情页面个数较多，而小程序的路径唯一时，请携带query依次提交sitemap。
