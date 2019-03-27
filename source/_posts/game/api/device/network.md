@@ -1,9 +1,8 @@
 ---
-title: 网络状态
+title: 网络
 layout: gamedoc
 topic: device
 categoryName: api
-priority: 12-01
 ---
 
 <!-- md game/api/device/_networkContext/getNetworkType.md -->

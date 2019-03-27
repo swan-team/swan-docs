@@ -6,7 +6,7 @@
 swan.onNetworkStatusChange(callback)
 ```
 
-**callback 回调参数：**
+**参数值：**
 
 |属性|类型|是否必填|描述|
 |-|-|-|
@@ -20,16 +20,6 @@ swan.onNetworkStatusChange(callback)
 |-|-|-|
 |isConnected|boolean|当前是否有网络链接|
 |networkType|string|网络类型|
-
-**networkType 有效值：**
-
-|值|描述|
-|-|-|
-|wifi|wifi 网络|
-|2g	|2g 网络|
-|3g	|3g 网络|
-|4g	|4g 网络|
-
 
 **示例：**
 
