@@ -4,5 +4,5 @@ layout: gamedoc
 topic: location
 level: root
 categoryName: api
-priority: 14-00
+priority: 13-00
 ---
