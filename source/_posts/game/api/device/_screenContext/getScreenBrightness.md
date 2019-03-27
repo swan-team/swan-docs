@@ -1,9 +1,9 @@
-### swan.getNetworkType()
+### swan.getScreenBrightness()
 
-获取网络类型。
+获取屏幕亮度。
 
 ```js
-swan.getNetworkType(opts)
+swan.getScreenBrightness(opts)
 ```
 
 **opts 对象属性说明：**
@@ -19,18 +19,16 @@ swan.getNetworkType(opts)
 
 **`success`**回调函数：
 
-|参数|描述|
-|-|-|
-|networkType|网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
-
-
+|属性|类型描述|描述|
+|-|-|-|
+|value|number|屏幕亮度值，范围 0~1，0 最暗，1 最亮|
 
 **示例：**
 
 ```js
-swan.getNetworkType({
-    success: res => {
-        console.log(res.networkType);
+swan.getScreenBrightness({
+    success: function (res) {
+        console.log(res);
     }
-});
+})
 ```
