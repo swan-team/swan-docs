@@ -866,6 +866,18 @@
                     link: /develop/component/open/#web-view
                     text: web-view
                     name: open_web-view
+        -
+            sidebar:
+              -
+                link: /develop/component/ad
+                text: 广告
+                name: ad
+                sidebar:
+                  -
+                    link: /develop/component/ad/#ad
+                    text: ad
+                    name: ad_ad
+                                      
     -
       link: /develop/api/net_request
       text: API
@@ -2514,6 +2526,15 @@
               link: /develop/third/address
               text: 修改服务器地址
               name: address
+        -
+          link: /develop/third/checkname
+          text:
+          name: checkname
+          sidebar:
+            -
+              link: /develop/third/checkname
+              text: 名称检测
+              name: checkname              
         -
           link: /develop/third/error
           text:
