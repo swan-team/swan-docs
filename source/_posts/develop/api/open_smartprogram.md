@@ -120,5 +120,3 @@ swan.navigateBackSmartProgram({
         });
 </script>
 ```
-### Bug & Tip 
-只能调起智能小程序并显示首页，暂时无法指定打开到具体小程序页面。
