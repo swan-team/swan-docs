@@ -8,7 +8,7 @@ sidebar: get
 ## getUpdateManager
 
 **解释：**获取全局唯一的版本更新管理器，用于管理小程序更新。
-
+> 最低支持版 1.13.4。
 **updateManager 对象的方法列表：**
 
 |方法 | 参数 | 说明 |

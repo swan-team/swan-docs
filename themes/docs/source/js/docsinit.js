@@ -9,6 +9,7 @@
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+        '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
 
         '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',

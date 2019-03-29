@@ -7,27 +7,11 @@ sidebar: nacomponent
 
 ## showFavoriteGuide
 
-支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。
+**解释**：支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
-目前添加到我的小程序引导组件支持以下三种类型，开发者可根据自身业务进行选择：
+> 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。
 
- - bar 浮层引导（一直展现）：用户点击引导组件旁边的关闭按钮才能关闭，点击添加按钮可直接添加到我的小程序。
-
-![图片](../../../img/api/nacomponent/强引导.png)
-
- - bar-autohide 浮层引导（自动消失）： 引导组件3s后自动消失，点击添加按钮可直接添加到我的小程序。
-
-![图片](../../../img/api/nacomponent/中引导.png)
-
- - tip 气泡引导：引导组件3s后自动消失，组件箭头指向小程序菜单。
-
-![图片](../../../img/api/nacomponent/弱引导.png)
-
-引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
-
-> 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。
-> 百度App v11.5及以上版本的智能小程序，支持添加到我到小程序引导组件。
-
+**方法参数**：Object
 **Object参数说明：**
 
 |参数名 |类型  |必填  |说明|
@@ -38,18 +22,68 @@ sidebar: nacomponent
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例代码：**
 
-```javascript
-swan.showFavoriteGuide({
-    type： 'bar'，
-    content：'一键添加到我的小程序'
-    success(res) {
-        console.log('添加成功：', res);
-    },
-    fail(err) {
-        console.log('添加失败：', err);
-    }
-})
-```
+**展现形式**：
+目前添加到我的小程序引导组件支持以下两种类型，开发者可根据自身业务进行选择：
+
+1. bar 浮层引导
+    * 一直展现：用户点击引导组件旁边的关闭按钮才能关闭，点击添加按钮可直接添加到我的小程序。
+
+    ![图片](../../../img/api/nacomponent/强引导.png)
+    **示例代码 1**
+
+        ```javascript
+        swan.showFavoriteGuide({
+            type： 'bar'，
+            content：'一键添加到我的小程序'
+            success(res) {
+                console.log('添加成功：', res);
+            },
+            fail(err) {
+                console.log('添加失败：', err);
+            }
+        })
+        ```
+    * 自动消失：引导组件3s后自动消失，点击添加按钮可直接添加到我的小程序。
+
+    ![图片](../../../img/api/nacomponent/中引导.png)
+    **示例代码 2**
+
+        ```javascript
+        swan.showFavoriteGuide({
+            type： 'bar-autohide'，
+            content：'一键添加到我的小程序'
+            success(res) {
+                console.log('添加成功：', res);
+            },
+            fail(err) {
+                console.log('添加失败：', err);
+            }
+        })
+        ```
+2. tip 气泡引导：引导组件3s后自动消失，组件箭头指向小程序菜单。
+
+    ![图片](../../../img/api/nacomponent/弱引导.png)
+    **示例代码 3**
+
+    ```javascript
+    swan.showFavoriteGuide({
+        type： 'tip'，
+        content：'一键添加到我的小程序'
+        success(res) {
+            console.log('添加成功：', res);
+        },
+        fail(err) {
+            console.log('添加失败：', err);
+        }
+    })
+    ```
+
+用户通过引导添加组件“添加到我的小程序”后，可以在百度APP首页的智能小程序二楼“我的小程序”中看到它。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/design/component/guide_add/2.png">
+	</div>
+</div>
+
 

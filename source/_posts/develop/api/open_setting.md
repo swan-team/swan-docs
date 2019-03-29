@@ -4,8 +4,8 @@ header: develop
 nav: api
 sidebar: open_setting
 ---
-openSetting
----
+## openSetting
+
 **解释：** 调起客户端智能小程序设置界面，返回用户设置的操作结果。
 
 **参数：** Object
@@ -45,8 +45,8 @@ swan.openSetting({
 |1001|执行失败|
 |202|解析失败，请检查参数是否正确。| -->
 
-getSetting
----
+## getSetting
+
 **解释：** 获取用户的当前设置
 
 **参数：** Object

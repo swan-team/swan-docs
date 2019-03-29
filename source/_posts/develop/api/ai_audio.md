@@ -11,7 +11,7 @@ sidebar: ai_audio
 
 **方法参数：**Object
 
-**Object参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -41,6 +41,6 @@ swan.ai.textToAudio({
     }
 });
 ```
-Bug & Tip
+### Bug & Tip
 
-* bug: 重置 App Secret 会导致此功能无法使用。
+ 重置 App Secret 会导致此功能无法使用。

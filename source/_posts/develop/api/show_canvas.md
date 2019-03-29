@@ -56,6 +56,7 @@ const ctx = swan.createCanvasContext('myCanvas');
 
 ```js
 ctx.setFillStyle('#ff0000');
+
 ctx.arc(100, 100, 50, 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -197,7 +198,7 @@ swan.canvasGetImageData({
 |1001|执行失败|
 |202|解析失败，请检查参数是否正确。| -->
 
-canvasToTempFilePath(OBJECT, this)
+canvasToTempFilePath
 -----
 
 **解释：**把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。在自定义组件下，第二个参数传入组件实例`this`，以操作组件内`<canvas/>`组件。
