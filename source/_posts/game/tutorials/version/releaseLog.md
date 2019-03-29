@@ -24,7 +24,7 @@ todo
 -->
 
 #### v 1.5.2
-1. `feat` 新增交叉推荐 API [createRecommendationButton](/game/api/recommendationButton/createRecommendationButton/)
+1. `Feature` 新增交叉推荐 API [createRecommendationButton](/game/api/recommendationButton/createRecommendationButton/)
 2. `Feature` 新增监听加速度 API [onAccelerometerChange, startAccelerometer, startAccelerometer](/game/api/device/accelerometer/)
 3. `Feature` 新增罗盘 API [onCompassChange, startCompass, stopCompass](/game/api/device/compass/)
 4. `Feature` 新增屏幕亮度 API [setScreenBrightness, getScreenBrightness, setKeepScreenOn](/game/api/device/screen/)
