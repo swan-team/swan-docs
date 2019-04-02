@@ -10,7 +10,7 @@ priority: 18-02
 
  **方法**
 
- [Worker.onMessage(cb)](/game/api/worker/worker_obj/onMessage/)
+ [Worker.onMessage(callback)](/game/api/worker/worker_obj/onMessage/)
 监听主线程/Worker 线程向当前线程发送的消息的事件。
 
  [Worker.postMessage(opts)](/game/api/worker/worker_obj/postMessage/)
@@ -39,14 +39,14 @@ const worker = swan.createWorker('workers/index.js');
 监听主线程/Worker 线程向当前线程发送的消息的事件。
 
  ```js
-Worker.onMessge(cb)
+Worker.onMessge(callback)
 ```
 
  **参数值：**
 
  |属性|类型|是否必填|描述|
 |-|-|-|-|
-|cb|function|是|主线程/Worker 线程向当前线程发送的消息的事件的回调函数|
+|callback|function|是|主线程/Worker 线程向当前线程发送的消息的事件的回调函数|
 
  **回调函数参数值：**
 
