@@ -36,8 +36,8 @@ fileSystemManager.unzip(opts)
 
 | 值                                     | 描述                                            |
 | -------------------------------------- | -----------------------------------------------|
-| fail permission denied, unzip ${zipFilePath} -> ${targetPath}  | 指定目标文件路径没有写权限                       |
-| fail no such file or directory, unzip ${zipFilePath} -> "${targetPath} | 源文件不存在，或目标文件路径的上层目录不存在                                      |
+| fail permission denied, unzip ${zipFilePath} -> ${targetPath}  | 指定目标文件路径没有写权限|
+| fail no such file or directory, unzip ${zipFilePath} -> "${targetPath} | 源文件不存在，或目标文件路径的上层目录不存在 |
 
 `complete` 回调参数：
 
