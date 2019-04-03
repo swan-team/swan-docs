@@ -6,23 +6,7 @@ sidebar: show_pull
 ---
 ## onPullDownRefresh
 
-**解释：**在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
-
-**参数：**Object
-
-**示例：**
-<a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
-```js
-Page({
-    onPullDownRefresh() {
-        // do something
-    }
-});
-```
-**说明**：
-* 需要在 config 的 `window` 选项中开启 `enablePullDownRefresh`；
-* 如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`；
-* 当处理完数据刷新后，`swan.stopPullDownRefresh` 可以停止当前页面的下拉刷新。
+详情参加<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。
 
 ## swan.startPullDownRefresh
 
