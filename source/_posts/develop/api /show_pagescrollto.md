@@ -1,0 +1,46 @@
+---
+title: 位置
+header: develop
+nav: api
+sidebar: show_pagescrollto
+---
+
+## swan.pageScrollTo
+
+
+**解释：**将页面滚动到目标位置（可以设置滚动动画时长）。
+
+**参数：**Object
+
+**Object 参数说明：**
+
+|参数名 |类型  |必填  |默认值  |说明|
+|---- | ---- | ---- | ----- |---- |
+|scrollTop |Number | 是|  - | 滚动到页面的目标位置（单位 px） |
+|duration |Number | 否| 300 | 滚动动画的时长，（单位 ms） |
+|success |Function  |  是 | 接口调用成功的回调函数 |-|
+|fail  |  Function |   否  | 接口调用失败的回调函数|-|
+|complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|-|
+
+**示例：**
+
+```js
+swan.pageScrollTo({
+    scrollTop: 0,
+    duration: 300
+});
+```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。| -->
