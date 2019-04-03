@@ -16,7 +16,7 @@ sidebar: debug
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-| enableDebug | Boolean | 是 | 是否打开调试 |
+| enableDebug | Boolean | 是 |-| 是否打开调试 |
 
 **示例代码**
 

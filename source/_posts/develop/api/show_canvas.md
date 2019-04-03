@@ -80,11 +80,12 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 ## swan.createCanvasContext
 
 
-**解释：**在 Page 中，推荐使用`this.createCanvasContext(canvasId)`，进行绘图上下文的创建。
+**解释：**在 Page 中，推荐使用`this.createCanvasContext(canvasId)`，进行绘图上下文的创建。也可使用`swan.createCanvasContext(canvasId)`，但使用`swan.createCanvasContext(canvasId)`进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。
 
-**说明：**
+**方法参数：**String canvasId
 
-也可使用`swan.createCanvasContext(canvasId)`，但使用`swan.createCanvasContext(canvasId)`进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。
+
+
 
 ## swan.canvasGetImageData
 
@@ -259,11 +260,9 @@ swan.canvasToTempFilePath({
 
 **解释：**设置填充色。
 
-**参数：**
+**方法参数：** Color color
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|color | Color | 是  | 设置的填充颜色 |
+
 
 **示例：**
 
@@ -281,11 +280,7 @@ ctx.draw();
 
 **解释：**设置边框颜色。
 
-**参数：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|color | Color | 是  | 设置的边框颜色 |
+**方法参数：** Color color
 
 **示例：**
 
@@ -330,14 +325,17 @@ ctx.draw();
 
 **解释：**创建一个线性的渐变颜色。
 
-**参数：**
+**方法参数：**Number x0，Number y0，Number x1，Number y1
 
-|参数名 |类型  |必填|说明|
-|---- | ---- | ---|---- |
-| x0 | Number | 是|起点的 x 坐标 |
-| y0 | Number | 是|起点的 y 坐标 |
-| x1 | Number | 是|阴影的模糊级别，数值越大越模糊 |
-| y1 | Number | 是|阴影的颜色 |
+**`x0`参数说明**：起点的 x 坐标
+
+**`y0`参数说明**：起点的 y 坐标
+
+**`x1`参数说明**：阴影的模糊级别，数值越大越模糊。
+
+**`y1`参数说明**：阴影的颜色
+
+
 
 **示例：**
 
@@ -361,13 +359,14 @@ ctx.draw();
 
 **解释：**创建一个圆形的渐变颜色。
 
-**参数：**
+**方法参数：**Number x，Number y，Number z
 
-|参数名 |类型 |说明|
-|---- | ---- | ---- |
-|x|Number|圆心的 x 坐标|
-|y|Number|圆心的 y 坐标|
-|r|Number|圆的半径|
+**`x`参数说明：**圆心的 x 坐标
+
+**`y`参数说明：**圆心的 y 坐标
+
+**`z`参数说明：**圆的半径
+
 
 **示例：**
 
@@ -392,12 +391,12 @@ ctx.draw();
 
 **解释：**创建一个颜色的渐变点。
 
-**参数：**
+**方法参数：**Number(0-1) stop,Color color
 
-|参数名 |类型 |说明|
-|---- | ---- | ---- |
-|stop|Number(0-1)|表示渐变点在起点和终点中的位置|
-|color|Color|渐变点的颜色|
+**`stop`参数说明：**表示渐变点在起点和终点中的位置，取值(0-1)。
+
+**`color`参数说明:**渐变点的颜色
+
 
 **示例：**
 
@@ -430,11 +429,9 @@ addColorStop 目前在 Android 有bug。
 
 **解释：**设置线条的宽度。
 
-**参数：**
+**方法参数：**Number lineWidth
 
-|参数名 |类型 |说明|
-|---- | ---- | ---- |
-|lineWidth|Number|	线条的宽度(单位是 px)|
+**`lineWidth`参数说明：**线条的宽度(单位是 px)
 
 **示例：**
 
@@ -472,11 +469,9 @@ ctx.draw();
 
 **解释：**设置线条的端点样式。
 
-**参数：**
+**方法参数：**String lineCap
 
-|参数名 |类型 | 范围 | 说明 |
-|---- | ---- | ---- | ---- |
-|lineCap|String|'butt'、'round'、'square'| 线条的结束端点样式 |
+**`lineCap`参数说明：**取值范围：'butt'、'round'、'square', 线条的结束端点样式。
 
 **示例：**
 
@@ -518,11 +513,9 @@ ctx.draw();
 
 **解释：**设置线条的交点样式。
 
-**参数：**
+**方法参数：**String lineJoin
 
-|参数名 |类型 | 范围 | 说明 |
-|---- | ---- | ---- | ---- |
-|lineJoin|String|'bevel'、'round'、'miter'| 线条的结束交点样式。 |
+**`lineJoin`参数说明：**取值范围：'bevel'、'round'、'miter'， 线条的结束交点样式。  
 
 **示例：**
 
@@ -567,12 +560,11 @@ ctx.draw();
 
 **解释：**设置线条的宽度。
 
-**参数：**
+**方法参数：**Array pattern, Number offset
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| pattern | Array | 一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 |
-| offset | Number | 虚线偏移量 |
+**`pattern`参数说明：**一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 
+
+**`offset`参数说明：**虚线偏移量。
 
 **示例：**
 
@@ -593,11 +585,9 @@ ctx.draw();
 
 **解释：**设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离，当 setLineJoin() 为 miter 时才有效，超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。
 
-**参数：**
+**方法参数：** Number miterLimit
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| miterLimit | Number | 最大斜接长度 |
+**`miterLimit`参数说明:**最大斜接长度  
 
 **示例：**
 
@@ -649,14 +639,15 @@ ctx.draw();
 
 **解释：**创建一个矩形。
 
-**参数：**
+**方法参数：**Number x, Number y,Number width, Number height
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 矩形路径左上角的 x 坐标 |
-| y | Number | 矩形路径左上角的 y 坐标 |
-| width | Number | 矩形路径的宽度 |
-| height | Number | 矩形路径的高度 |
+**`x`参数说明：**矩形路径左上角的 x 坐标。
+
+**`y`参数说明：**矩形路径左上角的 y 坐标。
+
+**`width`参数说明：**矩形路径的宽度。
+
+**`height`参数说明：**矩形路径的高度。
 
 **示例：**
 
@@ -675,14 +666,15 @@ ctx.draw();
 
 **解释：**填充一个矩形。
 
-**参数：**
+**方法参数：**Number x, Number y,Number width, Number height
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 矩形路径左上角的 x 坐标 |
-| y | Number | 矩形路径左上角的 y 坐标 |
-| width | Number | 矩形路径的宽度 |
-| height | Number | 矩形路径的高度 |
+**`x`参数说明：**矩形路径左上角的 x 坐标。
+
+**`y`参数说明：**矩形路径左上角的 y 坐标。
+
+**`width`参数说明：**矩形路径的宽度。
+
+**`height`参数说明：**矩形路径的高度。
 
 **示例：**
 
@@ -700,14 +692,15 @@ ctx.draw();
 
 **解释：**画一个矩形(非填充)。
 
-**参数：**
+**方法参数：**Number x, Number y,Number width, Number height
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 矩形路径左上角的 x 坐标 |
-| y | Number | 矩形路径左上角的 y 坐标 |
-| width | Number | 矩形路径的宽度 |
-| height | Number | 矩形路径的高度 |
+**`x`参数说明：**矩形路径左上角的 x 坐标。
+
+**`y`参数说明：**矩形路径左上角的 y 坐标。
+
+**`width`参数说明：**矩形路径的宽度。
+
+**`height`参数说明：**矩形路径的高度。
 
 **示例：**
 
@@ -725,14 +718,15 @@ ctx.draw();
 
 **解释：**清除画布上在该矩形区域内的内容。
 
-**参数：**
+**方法参数：**Number x, Number y,Number width, Number height
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 矩形路径左上角的 x 坐标 |
-| y | Number | 矩形路径左上角的 y 坐标 |
-| width | Number | 矩形路径的宽度 |
-| height | Number | 矩形路径的高度 |
+**`x`参数说明：**矩形路径左上角的 x 坐标。
+
+**`y`参数说明：**矩形路径左上角的 y 坐标。
+
+**`width`参数说明：**矩形路径的宽度。
+
+**`height`参数说明：**矩形路径的高度。
 
 **示例：**
 
@@ -774,7 +768,7 @@ ctx.draw();
 
 **解释：**画出当前路径的边框。默认颜色为黑色。
 
-**参数：**无
+**方法参数：**无
 
 **示例：**
 
@@ -794,7 +788,7 @@ ctx.draw();
 
 **解释：**开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。
 
-**参数：**无
+**方法参数：**无
 
 **示例：**
 
@@ -820,7 +814,7 @@ ctx.draw();
 
 **解释：**关闭一个路径。
 
-**参数：**无
+**方法参数：**无
 
 **示例：**
 
@@ -841,12 +835,12 @@ ctx.draw();
 
 **解释：**把路径移动到画布中的指定点，不创建线条。
 
-**参数：**
+**方法参数：**Number x, Number y
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 目标位置的 x 坐标 |
-| y | Number | 目标位置的 y 坐标 |
+**`x`参数说明：**目标位置的 x 坐标
+
+**`y`参数说明：**目标位置的 y 坐标
+
 
 **示例：**
 
@@ -867,12 +861,11 @@ ctx.draw();
 
 **解释：**lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。
 
-**参数：**
+**方法参数：**Number x, Number y
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 目标位置的 x 坐标 |
-| y | Number | 目标位置的 y 坐标 |
+**`x`参数说明：**目标位置的 x 坐标
+
+**`y`参数说明：**目标位置的 y 坐标
 
 **示例：**
 
@@ -892,16 +885,20 @@ ctx.draw();
 
 **解释：**画一条弧线。
 
-**参数：**
+**方法参数：**Number x, Number y, Number r, Number sAngle, Number eAngle, Boolean counterclockwise
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 圆的 x 坐标 |
-| y | Number | 圆的 y 坐标 |
-| r | Number | 圆的半径 |
-| sAngle | Number | 起始弧度，单位弧度（在3点钟方向）|
-| eAngle | Number | 终止弧度 |
-| counterclockwise | Boolean | 可选。指定弧度的方向是逆时针还是顺时针。默认是 false，即顺时针。 |
+**`x`参数说明：**圆的 x 坐标
+
+**`y`参数说明：**圆的 y 坐标
+
+**`r`参数说明：**圆的半径
+
+**`sAngle`参数说明：**起始弧度，单位弧度（在3点钟方向)
+
+**`eAngle`参数说明：**终止弧度
+
+**`counterclockwise`参数说明：**可选。指定弧度的方向是逆时针还是顺时针。默认是 false，即顺时针。
+
 
 **示例：**
 
@@ -920,12 +917,12 @@ ctx.draw();
 
 **解释：**在调用`scale`方法后，之后创建的路径其横纵坐标会被缩放。多次调用`scale`，倍数会相乘。
 
-**参数：**
+**方法参数：**Number scaleWidth, Number scaleHeight
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| scaleWidth | Number | 横坐标缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%) |
-| scaleHeight | Number | 纵坐标轴缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%) |
+**`scaleWidth`参数说明：**横坐标缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%) 。
+
+**`scaleHeigh`参数说明：**纵坐标轴缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%)。
+
 
 **示例：**
 
@@ -948,11 +945,10 @@ ctx.draw();
 
 **解释：**以原点为中心，原点可以用 translate 方法修改。顺时针旋转当前坐标轴。多次调用 rotate，旋转的角度会叠加。
 
-**参数：**
+**方法参数：**Number rotate 
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| rotate | Number | 旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)。 |
+**`rotate` 参数说明：**旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)。
+
 
 **示例：**
 
@@ -975,12 +971,12 @@ ctx.draw();
 
 **解释：**对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。
 
-**参数：**
+**方法参数：**Number x, Number y
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x | Number | 水平坐标平移量 |
-| y | Number | 竖直坐标平移量 |
+**`x`参数说明：**水平坐标平移量 
+
+**`y`参数说明：**竖直坐标平移量
+
 
 **示例：**
 
@@ -1002,6 +998,8 @@ ctx.draw();
 
 
 **解释：** clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。
+
+**方法参数：**无
 
 **示例：**
 
@@ -1027,11 +1025,10 @@ swan.downloadFile({
 
 **解释：**设置字体的字号。
 
-**参数：**
+**方法参数：**Number fontSize
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| fontSize | Number | 字体的字号 |
+`fontSize`参数说明：字体的字号 
+
 
 **示例：**
 
@@ -1057,14 +1054,12 @@ ctx.draw();
 
 **解释：**在画布上绘制被填充的文本。
 
-**参数：**
+**方法参数：**String text, Number x, Number y, Number maxWidth
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| text | String | 在画布上输出的文本 |
-| x | Number | 绘制文本的左上角 x 坐标位置 |
-| y | Number | 绘制文本的左上角 y 坐标位置 |
-| maxWidth | Number | 需要绘制的最大宽度（可选 ）|
+**`text`参数说明：** 在画布上输出的文本。
+**`x`参数说明： **绘制文本的左上角 x 坐标位置。
+**`y`参数说明：** 绘制文本的左上角 y 坐标位置。
+**`maxWidth` 参数说明：**| 需要绘制的最大宽度（可选 ）。
 
 **示例：**
 
@@ -1083,11 +1078,9 @@ ctx.draw();
 
 **解释：**用于设置文字的对齐。
 
-**参数：**
+**方法参数：**String align
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| align | String | 可选值 'left'、'center'、'right'。 |
+**`align `参数说明：** 可选值 'left'、'center'、'right'。 
 
 **示例：**
 
@@ -1117,11 +1110,9 @@ ctx.draw();
 
 **解释：**用于设置文字的水平对齐。
 
-**参数：**
+**方法参数：**String textBaseline
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| textBaseline | String | 可选值 'top'、'bottom'、'middle'、'normal' 。|
+**`textBaseline`参数说明：**可选值 'top'、'bottom'、'middle'、'normal' 。 
 
 **示例：**
 
@@ -1153,23 +1144,31 @@ ctx.draw();
 
 ## swan.canvasContext.drawImage
 
-
-**解释：**绘制图像到画布。
 > 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
-**参数：**
+**解释：**绘制图像到画布。
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| imageResource | String | 所要绘制的图片资源 |
-| dx | Number | 图像的左上角在目标 canvas 上 X 轴的位置。 |
-| dy | Number | 图像的左上角在目标 canvas 上 Y 轴的位置 。|
-| dWidth | Number | 在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放 。|
-| dHeight | Number | 在目标画布上绘制图像的高度，允许对绘制的图像进行缩放 。|
-| sx | Number | 源图像的矩形选择框的左上角 X 坐标。 |
-| sy | Number | 源图像的矩形选择框的左上角 Y 坐标。 |
-| sWidth | Number | 源图像的矩形选择框的宽度 |
-| sHeight | Number | 源图像的矩形选择框的高度 |
+
+**方法参数：**String imageResource, Number dx, Number dy, Number dWidth, Number dHeight, Number sx, Number sy, Number sWidth, Number sHeight
+
+
+**`imageResource`参数说明：** 所要绘制的图片资源 。
+
+**`dx`参数说明：**   图像的左上角在目标 canvas 上 X 轴的位置。
+
+**`dy `参数说明：** 图像的左上角在目标 canvas 上 Y 轴的位置 。 
+
+**`dWidth`参数说明：**  在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放 。 
+
+**`dHeight`参数说明：** 在目标画布上绘制图像的高度，允许对绘制的图像进行缩放 。 
+
+**`sx`参数说明：** 源图像的矩形选择框的左上角 X 坐标。 
+
+**`sy`参数说明：** 源图像的矩形选择框的左上角 Y 坐标。 
+
+**`sWidth`参数说明：** 源图像的矩形选择框的宽度 。
+
+**`sHeight`参数说明：**  源图像的矩形选择框的高度 。
 
 **示例：**
 
@@ -1190,11 +1189,9 @@ swan.chooseImage({
 
 **解释：**设置全局画笔透明度。
 
-**参数：**
+**方法参数：** Number alpha
 
-| 参数名 | 类型 | 范围 | 说明 |
-|---- | ---- | ---- | ---- |
-| alpha | Number | 0~1 | 透明度，0 表示完全透明，1 表示完全不透明。 |
+**`alpha` 参数说明：** 透明度取值范围： 0~1 ，0 表示完全透明，1 表示完全不透明。  
 
 **示例：**
 
@@ -1218,11 +1215,9 @@ ctx.draw();
 
 **解释：**测量文本尺寸信息，目前仅返回文本宽度。同步接口。
 
-**参数：**
+**方法参数：**String text
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| text | String | 要测量的文本 |
+**`text`参数说明：**要测量的文本  
 
 **返回：**
 
@@ -1274,14 +1269,15 @@ canvasContext.arcTo(x1, y1, x2, y2, radius);
 
 **解释：**给定的 (x, y) 位置绘制文本描边的方法。
 
-**参数：**
+**方法参数：**String text, Number x, Number y, Number maxWidt
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| text | String | 要绘制的文本 |
-| x | Number | 文本起始点的 x 轴坐标 |
-| y | Number | 文本起始点的 y 轴坐标 |
-| maxWidth | Number | 需要绘制的最大宽度，可选。 |
+**`text`参数说明：**要绘制的文本
+
+**`x`参数说明：**文本起始点的 x 轴坐标
+
+**`y`参数说明：**文本起始点的 y 轴坐标
+
+**`maxWidth`参数说明：**需要绘制的最大宽度，可选。
 
 **示例：**
 
@@ -1294,11 +1290,9 @@ canvasContext.strokeText(text, x, y, maxWidth);
 
 **解释：**设置虚线偏移量的属性。
 
-**参数：**
+**方法参数：**Number value
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| value | Number | 偏移量，初始值为 0 。|
+**`value`参数说明：** 偏移量，初始值为 0 。 
 
 **示例：**
 
@@ -1311,12 +1305,11 @@ canvasContext.setLineDashOffset = value;
 
 **解释：**对指定的图像创建模式的方法，可在指定的方向上重复元图像。
 
-**参数：**
+**方法参数：**String image, String repetitio
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| image | String | 重复的图像源，仅支持包内路径和临时路径 。|
-| repetition | String | 指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat。 |
+**`image`参数说明：**  重复的图像源，仅支持包内路径和临时路径 。 
+
+**`repetition`参数说明：**  指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat。 
 
 **示例：**
 
@@ -1339,16 +1332,19 @@ ctx.draw();
 
 **解释：**创建三次方贝塞尔曲线路径。
 
-**参数：**
+**方法参数：**Number cp1x, Numbercp1y, Number cp2, Number cp2y, Number x, Number y
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-|cp1x|Number|第一个贝塞尔控制点的 x 坐标|
-|cp1y|Number|第一个贝塞尔控制点的 y 坐标|
-|cp2x|Number|第二个贝塞尔控制点的 x 坐标|
-|cp2y|Number|第二个贝塞尔控制点的 y 坐标|
-|x|Number|结束点的 x 坐标|
-|y|Number|结束点的 y 坐标|
+**`cp1x`参数说明：**第一个贝塞尔控制点的 x 坐标 
+
+**`cp1y`参数说明：**第一个贝塞尔控制点的 y 坐标
+
+**`cp2x`参数说明：**第二个贝塞尔控制点的 x 坐标 
+
+**`cp2y`参数说明：**第二个贝塞尔控制点的 y 坐标 
+
+**`x`参数说明：**结束点的 x 坐标  
+
+**`y`参数说明：**结束点的 y 坐标 
 
 **示例：**
 
@@ -1370,14 +1366,15 @@ ctx.draw();
 
 **解释：**创建二次贝塞尔曲线路径。
 
-**参数：**
+**方法参数：**Number cpx, Number cpy, Number x, Number y
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-|cpx|Number|贝塞尔控制点的 x 坐标|
-|cpy|Number|贝塞尔控制点的 y 坐标|
-|x|Number|结束点的 x 坐标|
-|y|Number|结束点的 y 坐标|
+**`cpx`参数说明：**贝塞尔控制点的 x 坐标 
+
+**`cpy`参数说明：**贝塞尔控制点的 y 坐标 
+
+**`x`参数说明：**结束点的 x 坐标  
+
+**`y`参数说明：**结束点的 y 坐标 
 
 **示例：**
 
@@ -1400,7 +1397,7 @@ ctx.draw();
 
 **解释：**保存当前的绘图上下文。
 
-**参数：**无
+**方法参数：**无
 
 **示例：**
 
@@ -1425,7 +1422,7 @@ ctx.draw();
 
 **解释：**恢复之前保存的绘图上下文。
 
-**参数：**无
+**方法参数：**无
 
 **示例：**
 
@@ -1450,12 +1447,11 @@ ctx.draw();
 
 **解释：**将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
 
-**参数：**
+**方法参数：**Boolean reserve, Function callback
 
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-|reserve|Boolean|非必填。本次绘制是否接着上一次绘制，即 reserve 参数为 false，则在本次调用 drawCanvas 绘制之前 native 层应先清空画布再继续绘制；若 reserver 参数为 true，则保留当前画布上的内容，本次调用 drawCanvas 绘制的内容覆盖在上面，默认 false
-|callback|Function|绘制完成后回调|
+**`reserve`参数说明：** 非必填。本次绘制是否接着上一次绘制，即 reserve 参数为 false，则在本次调用 drawCanvas 绘制之前 native 层应先清空画布再继续绘制；若 reserver 参数为 true，则保留当前画布上的内容，本次调用 drawCanvas 绘制的内容覆盖在上面，默认 false。
+
+**`callback`参数说明：**绘制完成后回调 
 
 
 **示例：**
@@ -1484,11 +1480,9 @@ ctx.draw();
 
 **解释：**设置当前字体样式的属性。
 
-**参数：**
+**方法参数：**String value
 
-| 属性值 | 类型 | 说明 |
-|---- | ---- | ---- |
-| value | String | 符合 CSS font 示例的 DOMString 字符串，至少需要提供字体大小和字体族名，默认值为 10px sans-serif 。|
+**`value` 参数说明：**符合 CSS font 示例的 DOMString 字符串，至少需要提供字体大小和字体族名，默认值为 10px sans-serif 。 
 
 **value 支持的属性有：**
 
@@ -1510,16 +1504,19 @@ canvasContext.font = value;
 
 **解释：**使用矩阵重新设置（覆盖）当前变换的方法。
 
-**参数：**
+**方法参数：**Number scaleX, Number scaleY, Number skewX, Number skewY, Number translateX, Number translateY
 
-| 属性值 | 类型 | 说明 |
-|---- | ---- | ---- |
-| scaleX | Number | 水平缩放 |
-| scaleY | Number | 垂直缩放 |
-| skewX | Number | 水平倾斜 |
-| skewY | Number | 垂直倾斜 |
-| translateX | Number | 水平移动 |
-| translateY | Number | 垂直移动 |
+**`scaleX`参数说明：** 水平缩放  
+
+**`scaleY`参数说明：** 垂直缩放
+
+**`skewX`参数说明：** 水平倾斜   
+
+**`skewY`参数说明：**垂直倾斜  
+
+**`translateX`参数说明：**水平移动  
+
+**`translateY`参数说明：**垂直移动  
 
 **示例：**
 

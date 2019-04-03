@@ -5,11 +5,13 @@ nav: api
 sidebar: show_query
 ---
 
-## swan.createIntersectionObserver(this, options)
+## swan.createIntersectionObserver 
 
 **解释：** 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
 
-**options 参数说明：**
+**方法类型**：Object options
+
+**`options`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -33,14 +35,13 @@ IntersectionObserver 对象，用于推断某些节点是否可以被用户看�
 ## swan.IntersectionObserver.relativeTo(selector, margins)
 
 
-使用选择器指定一个节点，作为参照区域之一。
+**解释：**使用选择器指定一个节点，作为参照区域之一。
 
-**参数说明：**
+**参数说明：**string selector, Object margins
 
-string selector
-选择器
+**`selector`参数说明:**选择器
 
-Object margins
+**`margins`参数说明:**
 用来扩展（或收缩）参照节点布局区域的边界
 
 |参数名 |类型  |必填 | 默认值 |说明|
@@ -52,11 +53,11 @@ Object margins
 
 ## swan.IntersectionObserver.relativeToViewport(margins)
 
-指定页面显示区域作为参照区域之一
+**解释：**指定页面显示区域作为参照区域之一
 
-**参数说明：**
+**方法参数 ：**Object margins
 
-Object margins
+**`margin`参数说明:**
 用来扩展（或收缩）参照节点布局区域的边界
 
 |参数名 |类型  |必填 | 默认值 |说明|
@@ -69,14 +70,13 @@ Object margins
 ## swan.IntersectionObserver.observe(targetSelector, callback)
 
 
-指定目标节点并开始监听相交状态变化情况
+**解释：**指定目标节点并开始监听相交状态变化情况
 
-**参数说明：**
-string targetSelector
-选择器
+**方法参数 ：**string targetSelector, function callback
 
-function callback
-监听相交状态变化的回调函数
+**`targetSelector`参数说明：**选择器
+
+**`callback`参数说明：**监听相交状态变化的回调函数
 
 **回调结果说明**
 
@@ -114,17 +114,17 @@ swan.createIntersectionObserver(this, {
 ```
 
 ## swan.IntersectionObserver.disconnect()
+> 与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。
 
+**解释：**停止监听。回调函数将不再触发
+**方法参数：**无
 
-停止监听。回调函数将不再触发
-
-**注意：**与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。
 
 ## swan.createSelectorQuery
 
 **解释：** 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
 
-**参数：** Object
+**方法参数：** Object object
 
 **示例：**
 

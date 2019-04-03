@@ -17,10 +17,10 @@ sidebar: file_save
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|tempFilePath |String  |  是  | 需要保存的文件的临时路径|
-|success   |Function  |  否  | 返回文件的保存路径，res = {savedFilePath: '文件的保存路径'}。|
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|tempFilePath |String  |  是  |-| 需要保存的文件的临时路径|
+|success   |Function  |  否  |-| 返回文件的保存路径，res = {savedFilePath: '文件的保存路径'}。|
+|fail  |Function  |  否 | -| 接口调用失败的回调函数|
+|complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -82,11 +82,11 @@ swan.chooseImage({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|filePath  |String  |  是  | 本地文件路径 |
-|digestAlgorithm  |String	| 否  |计算文件摘要的算法，默认值 md5，有效值：md5，sha1。|
-|success   |Function  |  否  | 接口调用成功的回调函数 |
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|filePath  |String  |  是  |-| 本地文件路径 |
+|digestAlgorithm  |String	| 否  |-|计算文件摘要的算法，默认值 md5，有效值：md5，sha1。|
+|success   |Function  |  否  |-| 接口调用成功的回调函数 |
+|fail  |Function  |  否 | -| 接口调用失败的回调函数|
+|complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -131,15 +131,16 @@ swan.getFileInfo({
 
 
 **解释：**获取本地已保存的文件列表
+
 **方法参数：**Object object
 
 **`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success   |Function  |  否  | 接口调用成功的回调函数，返回结果见success返回参数说明。|
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success   |Function  |  否  | -|接口调用成功的回调函数，返回结果见success返回参数说明。|
+|fail  |Function  |  否 | -| 接口调用失败的回调函数|
+|complete   | Function   | 否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -185,10 +186,10 @@ swan.getSavedFileList({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|filePath   |String  |  是  | 文件路径|
-|success   |Function  |  否  | 接口调用成功的回调函数，返回结果见 success 返回参数说明。|
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|filePath   |String  |  是  |-| 文件路径|
+|success   |Function  |  否  |-| 接口调用成功的回调函数，返回结果见 success 返回参数说明。|
+|fail  |Function  |  否 |-|  接口调用失败的回调函数|
+|complete   | Function | 否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 

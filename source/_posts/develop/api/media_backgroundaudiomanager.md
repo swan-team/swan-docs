@@ -10,7 +10,7 @@ sidebar: media_backgroundaudiomanager
 
 **解释：**获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
-**参数：**无
+**方法参数：**无
 
 **backgroundAudioManager 对象的属性列表：**
 

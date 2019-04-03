@@ -15,9 +15,9 @@ sidebar: device_network
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  否  | 接口调用成功，返回网络类型 networkType|
-|fail | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否  |-| 接口调用成功，返回网络类型 networkType|
+|fail | Function  |  否  |-| 接口调用失败的回调函数|
+|complete  |  Function  |  否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -52,8 +52,8 @@ swan.getNetworkType({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|isConnected |Boolean |当前是否有网络连接|
-|networkType| String | 网络类型|
+|isConnected |Boolean |是|-|当前是否有网络连接|
+|networkType| String |是|-| 网络类型|
 
 **networkType 有效值：**
 

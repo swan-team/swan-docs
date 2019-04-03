@@ -18,8 +18,8 @@ sidebar: open_share
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|from |String  |  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
-|target |Object  |  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined 。为兼容使用了3.10.16(手百11.2)以下版本的基础库，原使用 currentTarget 的获取方式保留至2月15日下线。 |
+|from |String  |是| -|  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
+|target |Object  |是| -|  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined 。为兼容使用了3.10.16(手百11.2)以下版本的基础库，原使用 currentTarget 的获取方式保留至2月15日下线。 |
 
 **自定义分享字段：**
 
@@ -57,13 +57,13 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title |String  |  否  | 分享标题|
-|content |String  |  否  | 分享内容|
-|imageUrl |String  |  否  | 分享图标|
-|path |String  |  否  | 页面 path ，必须是以 / 开头的完整路径。|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|title |String  |  否  | -| 分享标题|
+|content |String  |  否  |  -|分享内容|
+|imageUrl |String  |  否  | -| 分享图标|
+|path |String  |  否  | -| 页面 path ，必须是以 / 开头的完整路径。|
+|success |Function  |  否  | -| 接口调用成功的回调函数|
+|fail   | Function  |  否  | -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 

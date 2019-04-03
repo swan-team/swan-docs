@@ -16,10 +16,10 @@ sidebar: show_tab
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String  |是|   需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
-|success| Function  |  否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String  |是| -|  需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
+|success| Function  |  否  |-|  接口调用成功的回调函数|
+|fail  |  Function  |  否  |-|  接口调用失败的回调函数|
+|complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 <a href="swanide://fragment/dd7e70fdad89cca08b0a8a54e12a0b9c1540396427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
@@ -51,10 +51,10 @@ swan.navigateTo({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 是  | 需要跳转的应用内非 tabBar 的页面的路径，路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String | 是  | -| 需要跳转的应用内非 tabBar 的页面的路径，路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
+|success| Function |   否  |-|  接口调用成功的回调函数|
+|fail   | Function |   否  |-|  接口调用失败的回调函数|
+|complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例：**
@@ -92,10 +92,10 @@ swan.redirectTo({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 是  | 需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String | 是  | -| 需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。|
+|success |Function  |  否  |-|  接口调用成功的回调函数|
+|fail   | Function |   否  |-|  接口调用失败的回调函数|
+|complete |   Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -145,10 +145,10 @@ swan.switchTab({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页，默认为 1。|
-|success|	function|		否|	接口调用成功的回调函数|	
-|fail|	function|		否|	接口调用失败的回调函数|	
-|complete|	function|		否|	接口调用结束的回调函数（调用成功、失败都会执行）|
+|delta  | Number | 否  |1|  返回的页面数，如果 delta 大于现有页面数，则返回到首页1。|
+|success|	function|		否|-| 	接口调用成功的回调函数|	
+|fail|	function|		否|	-| 接口调用失败的回调函数|	
+|complete|	function|		否|-| 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例：**
@@ -197,10 +197,10 @@ swan.navigateBack({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 是|   需要跳转的应用内页面路径 , 路径后可以带参数。参数与路径之间使用 ? 分隔，参数键与参数值用=相连，不同参数用 & 分隔；如 ‘path?key=value&key2=value2’，如果跳转的页面路径是 tabBar 页面则不能带参数。|
-|success| Function |   否 |  接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String | 是|  -|  需要跳转的应用内页面路径 , 路径后可以带参数。参数与路径之间使用 ? 分隔，参数键与参数值用=相连，不同参数用 & 分隔；如 ‘path?key=value&key2=value2’，如果跳转的页面路径是 tabBar 页面则不能带参数。|
+|success| Function |   否 | -|  接口调用成功的回调函数|
+|fail   | Function  |  否  | -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例：**

@@ -16,12 +16,12 @@ sidebar: media_image
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|count  | Number | 否  | 最多可以选择的图片张数，默认 9。|
-|sizeType  |Array.<string>| 否  | original 原图，compressed 压缩图，默认二者都有。|
-|sourceType | ` Array.<object> ` |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
-|success |Function  |  是 | 成功则返回图片的本地文件路径列表 tempFilePaths。|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|count  | Number | 否  |  -|最多可以选择的图片张数，默认 9。|
+|sizeType  |Array.<string>| 否  |  -|original 原图，compressed 压缩图，默认二者都有。|
+|sourceType | ` Array.<object> ` |否 | -|  album 从相册选图，camera 使用相机，默认二者都有。|
+|success |Function  |  是 |  -|成功则返回图片的本地文件路径列表 tempFilePaths。|
+|fail  |  Function |   否  | -| 接口调用失败的回调函数|
+|complete   | Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
@@ -91,11 +91,11 @@ swan.chooseImage({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|current |String | 否  | 当前显示图片的链接，不填则默认为 urls 的第一张。|
-|urls   | Array.<string> |是 |  需要预览的图片链接列表|
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|current |String | 否  |  -|当前显示图片的链接，不填则默认为 urls 的第一张。|
+|urls   | Array.<string> |是 | -|  需要预览的图片链接列表|
+|success| Function |   否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否 |  -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例：**
@@ -140,10 +140,10 @@ swan.previewImage({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|src |String | 是  | 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
-|success| Function  |  否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|src |String | 是  | -| 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
+|success| Function  |  否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -202,10 +202,10 @@ swan.getImageInfo({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|filePath  |  String  |是 |  图片文件路径，可以是临时文件路径也可以是永久文件路径，不支持网络图片路径。|
-|success |Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|filePath  |  String  |是 | -|  图片文件路径，可以是临时文件路径也可以是永久文件路径，不支持网络图片路径。|
+|success |Function |   否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 <!-- **success返回参数说明：**

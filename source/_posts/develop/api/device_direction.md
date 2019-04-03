@@ -18,11 +18,9 @@ sidebar: device_direction
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-
-
-|alpha |Number |当手机坐标 X/Y 和 地球 X/Y 重合时，绕着 Z 轴转动的夹角为 alpha，范围值为 [0, 2*PI)。逆时针转动为正。|
-|beta |Number |当手机坐标 Y/Z 和地球 Y/Z 重合时，绕着 X 轴转动的夹角为 beta。范围值为 [-1*PI, PI) 。顶部朝着地球表面转动为正。也有可能朝着用户为正。。|
-|gamma |Number |当手机 X/Z 和地球 X/Z 重合时，绕着 Y 轴转动的夹角为 gamma。范围值为 [-1*PI/2, PI/2)。右边朝着地球表面转动为正。|
+|alpha |Number |是|-|当手机坐标 X/Y 和 地球 X/Y 重合时，绕着 Z 轴转动的夹角为 alpha，范围值为 [0, 2*PI)。逆时针转动为正。|
+|beta |Number |是|-|当手机坐标 Y/Z 和地球 Y/Z 重合时，绕着 X 轴转动的夹角为 beta。范围值为 [-1*PI, PI) 。顶部朝着地球表面转动为正。也有可能朝着用户为正。|
+|gamma |Number |是|-|当手机 X/Z 和地球 X/Z 重合时，绕着 Y 轴转动的夹角为 gamma。范围值为 [-1*PI/2, PI/2)。右边朝着地球表面转动为正。|
 
 **示例：**
 
@@ -50,10 +48,10 @@ swan.onDeviceMotionChange(function (res) {
 |---- | ---- | ---- | ----|----|
 
 
-|interval |String  |normal|  否 |  监听设备方向的变化回调函数的执行频率|
-|success |Function  | | 否 |  接口调用成功的回调函数|
-|fail  |  Function | |  否 |  接口调用失败的回调函数|
-|complete |   Function |  | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|interval |String  |normal|  否 | -| 监听设备方向的变化回调函数的执行频率|
+|success |Function  | | 否 |-|  接口调用成功的回调函数|
+|fail  |  Function | |  否 |-|  接口调用失败的回调函数|
+|complete |   Function |  | 否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **interval 的合法值**
 
@@ -87,11 +85,9 @@ swan.startDeviceMotionListening({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-
-
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否 |-|  接口调用成功的回调函数|
+|fail  |  Function |   否 |-|  接口调用失败的回调函数|
+|complete |   Function |   否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 

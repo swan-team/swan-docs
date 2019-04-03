@@ -18,16 +18,16 @@ sidebar: pageinfo
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title | String | 是 | 页面标题 |
-|keywords|String|是|页面关键字|
-|description|String|是| 页面描述信息|
-|releaseDate|String|是|原始发布时间(年-月-日 时:分:秒 带有前导零）|
-|articleTitle | String | 否 | 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
-|image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）|图片线上地址，用于信息流投放后的封面显示，最多3张，单图片最大2M；封面图建议尺寸：高>=210px & 宽>=375px；最小尺寸：高>=146px & 宽>=218px。多张图时，用数组表示|
-|video|Object/Array|否（页面存在视频情况下必填）|视频信息，多个视频时，用数组表示|
-|success | Function | 否 | 接口调用成功的回调函数|
-|fail|Function|否|接口调用失败的回调函数|
-|complete|Function|否|接口调用结束的回调函数（调用成功、失败都会执行） |
+|title | String | 是 |  -|页面标题 |
+|keywords|String|是| -|页面关键字|
+|description|String|是| -| 页面描述信息|
+|releaseDate|String|是| -|原始发布时间(年-月-日 时:分:秒 带有前导零）|
+|articleTitle | String | 否 | -| 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
+|image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| -|图片线上地址，用于信息流投放后的封面显示，最多3张，单图片最大2M；封面图建议尺寸：高>=210px & 宽>=375px；最小尺寸：高>=146px & 宽>=218px。多张图时，用数组表示|
+|video|Object/Array|否（页面存在视频情况下必填）| -|视频信息，多个视频时，用数组表示|
+|success | Function | 否 | -| 接口调用成功的回调函数|
+|fail|Function|否| -|接口调用失败的回调函数|
+|complete|Function|否| -|接口调用结束的回调函数（调用成功、失败都会执行） |
 
 video参数说明
 
@@ -79,10 +79,10 @@ video参数说明
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-| content |  String  |是  | 需要设置的 description 内容|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail  | Function  |  否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+| content |  String  |是  |  -|需要设置的 description 内容|
+|success |Function  |  否  |  -|接口调用成功的回调函数|
+|fail  | Function  |  否  | -| 接口调用失败的回调函数|
+|complete   | Function   | 否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -113,10 +113,10 @@ swan.setMetaDescription && swan.setMetaDescription({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-| content |  String  |是 | 需要设置的 keywords 内容|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail  | Function  |  否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+| content |  String  |是 | -| 需要设置的 keywords 内容|
+|success |Function  |  否  | -| 接口调用成功的回调函数|
+|fail  | Function  |  否  |  -|接口调用失败的回调函数|
+|complete   | Function   | 否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -148,10 +148,10 @@ swan.setMetaKeywords && swan.setMetaKeywords({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title   |String|  是 | 页面中 title 标签中的内容 |
-|success |Function |   否 |  接口调用成功的回调函数|
-|fail   | Function|    否 |  接口调用失败的回调函数|
-|complete   | Function   | 否|   接口调用结束的回调函数（调用成功、失败都会执行）|
+|title   |String|  是 | -| 页面中 title 标签中的内容 |
+|success |Function |   否 | -|  接口调用成功的回调函数|
+|fail   | Function|    否 | -|  接口调用失败的回调函数|
+|complete   | Function   | 否|  -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
