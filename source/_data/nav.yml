@@ -822,23 +822,7 @@
                     link: /develop/component/map/#map
                     text: map
                     name: map
-                  # -
-                  #   link: /develop/component/map/#markers
-                  #   text: markers
-                  #   name: map_markers
-
-                  # -
-                  #   link: /develop/component/map/#polyline
-                  #   text: polyline
-                  #   name: map_polyline
-                  # -
-                  #   link: /develop/component/map/#circles
-                  #   text: circles
-                  #   name: map_circles
-                  # -
-                  #   link: /develop/component/map/#controls
-                  #   text: controls
-                  #   name: map_controls
+                 
 
         -
             sidebar:
@@ -879,7 +863,7 @@
                     name: ad_ad
                                       
     -
-      link: /develop/api/net_request
+      link: /develop/api/
       text: API
       name: api
       sidebar:
@@ -949,9 +933,9 @@
                   text: swan.onSocketClose
                   name: net_websocket_swan-onSocketClose
                 -
-                  link: /develop/api/net_websocket/#swan-SocketTask
-                  text: swan.SocketTask
-                  name: net_websocket_swan-SocketTask
+                  link: /develop/api/net_websocket/#SocketTask
+                  text: SocketTask
+                  name: net_websocket_SocketTask
         -
             link: /develop/api/ai
             text: AI
