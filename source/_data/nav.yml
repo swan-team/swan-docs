@@ -1363,181 +1363,182 @@
                     text: swan.canvasToTempFilePath 
                     name: show_canvas_canvasToTempFilePath 
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setFillStyle
-                    text: swan.canvasContext.setFillStyle
-                    name: show_canvas_swan-canvasContext.setFillStyle
+                    link: /develop/api/show_canvas/#canvasContext 
+                    text: canvasContext 
+                    name: show_canvas_canvasContext 
+
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setStrokeStyle
-                    text: swan.canvasContext.setStrokeStyle
-                    name: show_canvas_swan-canvasContext.setStrokeStyle
+                    link: /develop/api/show_canvas/#canvasContext-setFillStyle
+                    text: canvasContext.setFillStyle
+                    name: show_canvas_canvasContext-setFillStyle
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setShadow
-                    text: swan.canvasContext.setShadow
-                    name: show_canvas_swan-canvasContext.setShadow
+                    link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
+                    text: canvasContext.setStrokeStyle
+                    name: show_canvas_canvasContext-setStrokeStyle
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-createLinearGradient
+                    link: /develop/api/show_canvas/#canvasContext-setShadow
+                    text: canvasContext.setShadow
+                    name: show_canvas_canvasContext-setShadow
+                  -
+                    link: /develop/api/show_canvas/#canvasContext-createLinearGradient
                     text: swan.canvasContext.createLinearGradient
-                    name: show_canvas_swan-canvasContext.createLinearGradient
+                    name: show_canvas_canvasContext-createLinearGradient
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-createCircularGradient
-                    text: swan.canvasContext.createCircularGradient
-                    name: show_canvas_swan-canvasContext.createCircularGradient
+                    link: /develop/api/show_canvas/#canvasContext-createCircularGradient
+                    text: canvasContext.createCircularGradient
+                    name: show_canvas_canvasContext-createCircularGradient
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-addColorStop
-                    text: swan.canvasContext.addColorStop
-                    name: show_canvas_swan-canvasContext.addColorStop
+                    link: /develop/api/show_canvas/#canvasContext-addColorStop
+                    text: canvasContext.addColorStop
+                    name: show_canvas_canvasContext-addColorStop
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setLineWidth
-                    text: swan.canvasContext.setLineWidth
-                    name: show_canvas_swan-canvasContext.setLineWidth
+                    link: /develop/api/show_canvas/#canvasContext-setLineWidth
+                    text: canvasContext.setLineWidth
+                    name: show_canvas_canvasContext-setLineWidth
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setLineCap
-                    text: swan.canvasContext.setLineCap
-                    name: show_canvas_swan-canvasContext.setLineCap
+                    link: /develop/api/show_canvas/#canvasContext-setLineCap
+                    text: canvasContext.setLineCap
+                    name: show_canvas_canvasContext-.setLineCap
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setLineJoin
-                    text: swan.canvasContext.setLineJoin
-                    name: show_canvas_swan-canvasContext.setLineJoin
+                    link: /develop/api/show_canvas/#canvasContext-setLineJoin
+                    text: canvasContext.setLineJoin
+                    name: show_canvas_canvasContext-setLineJoin
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setLineDash
-                    text: swan.canvasContext.setLineDash
-                    name: show_canvas_swan-canvasContext.setLineDash
+                    link: /develop/api/show_canvas/#canvasContext-setLineDash
+                    text: canvasContext.setLineDash
+                    name: show_canvas_canvasContext-setLineDash
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setMiterLimit
-                    text: swan.canvasContext.setMiterLimit
-                    name: show_canvas_swan-canvasContext.setMiterLimit
+                    link: /develop/api/show_canvas/#canvasContext-setMiterLimit
+                    text: canvasContext.setMiterLimit
+                    name: show_canvas_canvasContext-setMiterLimit
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-rect
-                    text: swan.canvasContext.rect
-                    name: show_canvas_swan-canvasContext.rect
+                    link: /develop/api/show_canvas/#canvasContext-rect
+                    text: canvasContext.rect
+                    name: show_canvas_canvasContext-rect
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-fillRect
-                    text: swan.canvasContext.fillRect
-                    name: show_canvas_swan-canvasContext.fillRect
+                    link: /develop/api/show_canvas/#canvasContext-fillRect
+                    text: canvasContext.fillRect
+                    name: show_canvas_canvasContext-fillRect
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-strokeRect
-                    text: swan.canvasContext.strokeRect
-                    name: show_canvas_swan-canvasContext.strokeRect
+                    link: /develop/api/show_canvas/#canvasContext-strokeRect
+                    text: canvasContext.strokeRect
+                    name: show_canvas_canvasContext-strokeRect
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-clearRect
-                    text: swan.canvasContext.clearRect
-                    name: show_canvas_swan-canvasContext.clearRect
+                    link: /develop/api/show_canvas/#canvasContext-clearRect
+                    text: canvasContext.clearRect
+                    name: show_canvas_canvasContext-clearRect
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-fill
-                    text: swan.canvasContext.fill
-                    name: show_canvas_swan-canvasContext.fill
+                    link: /develop/api/show_canvas/#canvasContext-fill
+                    text: canvasContext.fill
+                    name: show_canvas_canvasContext-fill
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-stroke
-                    text: swan.canvasContext.stroke
-                    name: show_canvas_swan-canvasContext.stroke
+                    link: /develop/api/show_canvas/#canvasContext-stroke
+                    text: canvasContext.stroke
+                    name: show_canvas_canvasContext-stroke
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-beginPath
-                    text: swan.canvasContext.beginPath
-                    name: show_canvas_swan-canvasContext.beginPath
+                    link: /develop/api/show_canvas/#canvasContext-beginPath
+                    text: canvasContext.beginPath
+                    name: show_canvas_canvasContext-beginPath
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-closePath
-                    text: swan.canvasContext.closePath
-                    name: show_canvas_swan-canvasContext.closePath
+                    link: /develop/api/show_canvas/#canvasContext-closePath
+                    text: canvasContext.closePath
+                    name: show_canvas_canvasContext-closePath
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-moveTo
-                    text: swan.canvasContext.moveTo
-                    name: show_canvas_swan-canvasContext.moveTo
+                    link: /develop/api/show_canvas/#canvasContext-moveTo
+                    text: canvasContext.moveTo
+                    name: show_canvas_canvasContext-moveTo
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-lineTo
-                    text: swan.canvasContext.lineTo
-                    name: show_canvas_swan-canvasContext.lineTo
+                    link: /develop/api/show_canvas/#canvasContext-lineTo
+                    text: canvasContext.lineTo
+                    name: show_canvas_canvasContext-lineTo
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-arc
-                    text: swan.canvasContext.arc
-                    name: show_canvas_swan-canvasContext.arc
+                    link: /develop/api/show_canvas/#canvasContext-arc
+                    text: canvasContext.arc
+                    name: show_canvas_canvasContext-arc
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-scale
-                    text: swan.canvasContext.scale
-                    name: show_canvas_swan-canvasContext.scale
+                    link: /develop/api/show_canvas/#canvasContext-scale
+                    text: canvasContext.scale
+                    name: show_canvas_canvasContext-scale
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-rotate
-                    text: swan.canvasContext.rotate
-                    name: show_canvas_swan-canvasContext.rotate
+                    link: /develop/api/show_canvas/#canvasContext-rotate
+                    text: canvasContext.rotate
+                    name: show_canvas_canvasContext-rotate
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-translate
-                    text: swan.canvasContext.translate
-                    name: show_canvas_swan-canvasContext.translate
+                    link: /develop/api/show_canvas/#canvasContext-translate
+                    text: canvasContext.translate
+                    name: show_canvas_canvasContext-translate
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-clip
-                    text: swan.canvasContext.clip
-                    name: show_canvas_swan-canvasContext.clip
+                    link: /develop/api/show_canvas/#canvasContext-clip
+                    text: canvasContext.clip
+                    name: show_canvas_canvasContext-clip
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setFontSize
-                    text: swan.canvasContext.setFontSize
-                    name: show_canvas_swan-canvasContext.setFontSize
+                    link: /develop/api/show_canvas/#canvasContext-setFontSize
+                    text: canvasContext.setFontSize
+                    name: show_canvas_canvasContext-setFontSize
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-fillText
-                    text: swan.canvasContext.fillText
-                    name: show_canvas_swan-canvasContext.fillText
+                    link: /develop/api/show_canvas/#canvasContext-fillText
+                    text: canvasContext.fillText
+                    name: show_canvas_canvasContext-fillText
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setTextAlign
-                    text: swan.canvasContext.setTextAlign
-                    name: show_canvas_swan-canvasContext.setTextAlign
+                    link: /develop/api/show_canvas/#canvasContext-setTextAlign
+                    text: canvasContext.setTextAlign
+                    name: show_canvas_canvasContext-setTextAlign
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setTextBaseline
-                    text: swan.canvasContext.setTextBaseline
-                    name: show_canvas_swan-canvasContext.setTextBaseline
+                    link: /develop/api/show_canvas/#canvasContext-setTextBaseline
+                    text: canvasContext.setTextBaseline
+                    name: show_canvas_canvasContext-setTextBaseline
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-drawImage
-                    text: swan.canvasContext.drawImage
-                    name: show_canvas_swan-canvasContext.drawImage
+                    link: /develop/api/show_canvas/#canvasContext-drawImage
+                    text: canvasContext.drawImage
+                    name: show_canvas_canvasContext-drawImage
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setGlobalAlpha
-                    text: swan.canvasContext.setGlobalAlpha
-                    name: show_canvas_swan-canvasContext.setGlobalAlpha
+                    link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
+                    text: canvasContext.setGlobalAlpha
+                    name: show_canvas_canvasContext-setGlobalAlpha
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-measureText
-                    text: swan.canvasContext.measureText
-                    name: show_canvas_swan-canvasContext.measureText
-                  # -
-                  #   link: /develop/api/show_canvas/#canvasContext-arcTo
-                  #   text: canvasContext.arcTo
-                  #   name: show_canvas_canvasContext.arcTo
+                    link: /develop/api/show_canvas/#canvasContext-measureText
+                    text: canvasContext.measureText
+                    name: show_canvas_canvasContext-measureText
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-strokeText
-                    text: swan.canvasContext.strokeText
-                    name: show_canvas_swan-canvasContext-strokeText
+                    link: /develop/api/show_canvas/#canvasContext-strokeText
+                    text: canvasContext.strokeText
+                    name: show_canvas_canvasContext-strokeText
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setLineDashOffset
-                    text: swan.canvasContext.setLineDashOffset
-                    name: show_canvas_swan-canvasContext-setLineDashOffset
+                    link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
+                    text: canvasContext.setLineDashOffset
+                    name: show_canvas_canvasContext-setLineDashOffset
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-createPattern
-                    text: swan.canvasContext.createPattern
-                    name: show_canvas_swan-canvasContext.createPattern
+                    link: /develop/api/show_canvas/#canvasContext-createPattern
+                    text: canvasContext.createPattern
+                    name: show_canvas_canvasContext.createPattern
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-bezierCurveTo
-                    text: swan.canvasContext.bezierCurveTo
-                    name: show_canvas_swan-canvasContext.bezierCurveTo
+                    link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
+                    text: canvasContext.bezierCurveTo
+                    name: show_canvas_canvasContext-bezierCurveTo
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-quadraticCurveTo
-                    text: swan.canvasContext.quadraticCurveTo
-                    name: show_canvas_swan-canvasContext.quadraticCurveTo
+                    link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
+                    text: canvasContext.quadraticCurveTo
+                    name: show_canvas_canvasContext-quadraticCurveTo
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-save
-                    text: swan.canvasContext.save
-                    name: show_canvas_swan-canvasContext.save
+                    link: /develop/api/show_canvas/#canvasContext-save
+                    text: canvasContext.save
+                    name: show_canvas_canvasContext-save
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-restore
-                    text: swan.canvasContext.restore
-                    name: show_canvas_swan-canvasContext.restore
+                    link: /develop/api/show_canvas/#canvasContext-restore
+                    text: canvasContext.restore
+                    name: show_canvas_canvasContext-restore
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-draw
-                    text: swan.canvasContext.draw
-                    name: show_canvas_swan-canvasContext.draw
+                    link: /develop/api/show_canvas/#canvasContext-draw
+                    text: canvasContext.draw
+                    name: show_canvas_canvasContext-draw
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-font
-                    text: swan.canvasContext.font
-                    name: show_canvas_swan-canvasContext.font
+                    link: /develop/api/show_canvas/#canvasContext-font
+                    text: canvasContext.font
+                    name: show_canvas_canvasContext-font
                   -
-                    link: /develop/api/show_canvas/#swan-canvasContext-setTransform
-                    text: swan.canvasContext.setTransform
-                    name: show_canvas_swan-canvasContext.setTransform
+                    link: /develop/api/show_canvas/#canvasContext-setTransform
+                    text: canvasContext.setTransform
+                    name: show_canvas_canvasContext-setTransform
               -
                 link: /develop/api/show_toast
                 text: 交互反馈
@@ -1660,9 +1661,9 @@
                     text: swan.createAnimation
                     name: show_createanimation_swan-createAnimation
                   -
-                    link: /develop/api/show_createanimation/#swan-animation
-                    text: swan.animation
-                    name: show_createanimation_swan-animation
+                    link: /develop/api/show_createanimation/#animation
+                    text: animation
+                    name: show_createanimation_animation
 
               -
                 link: /develop/api/show_pagescrollto
@@ -1735,19 +1736,19 @@
                     text: IntersectionObserver
                     name: show_query_IntersectionObserver
                   -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeTo-selector-margins
+                    link: /develop/api/show_query/#IntersectionObserver-relativeTo 
                     text: IntersectionObserver.relativeTo
-                    name: show_query_IntersectionObserver.relativeTo(selector, margins)
+                    name: show_query_IntersectionObserver-relativeTo 
                   -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeToViewport-margins
+                    link: /develop/api/show_query/#IntersectionObserver-relativeToViewport 
                     text: IntersectionObserver.relativeToViewport
                     name: show_query_IntersectionObserver-relativeToViewport
                   -
-                    link: /develop/api/show_query/#IntersectionObserver-observe-targetSelector-callback
-                    text: IntersectionObserver.observe
-                    name: show_query_IntersectionObserver-observe
+                    link: /develop/api/show_query/#IntersectionObserver-observe 
+                    text: IntersectionObserver.observe 
+                    name: show_query_IntersectionObserver-observe 
                   -
-                    link: /develop/api/show_query/#swan-IntersectionObserver-disconnect
+                    link: /develop/api/show_query/#IntersectionObserver-disconnect
                     text: IntersectionObserver.disconnect
                     name: show_query_IntersectionObserver-disconnect
                   -
@@ -1757,23 +1758,23 @@
                   -
                     link: /develop/api/show_query/#selectorQuery-in
                     text: selectorQuery.in
-                    name: show_query_selectorQuery.in
+                    name: show_query_selectorQuery-in
                   -
                     link: /develop/api/show_query/#selectorQuery-select
                     text: selectorQuery.select
-                    name: show_query_selectorQuery.select
+                    name: show_query_selectorQuery-select
                   -
                     link: /develop/api/show_query/#selectorQuery-selectAll
                     text: selectorQuery.selectAll
-                    name: show_query_selectorQuery.selectAll
+                    name: show_query_selectorQuery-selectAll
                   -
                     link: /develop/api/show_query/#selectorQuery-selectViewport
                     text: selectorQuery.selectViewport
-                    name: show_query_selectorQuery.selectViewport
+                    name: show_query_selectorQuery-selectViewport
                   -
                     link: /develop/api/show_query/#selectorQuery-exec
                     text: selectorQuery.exec
-                    name: show_swan-query_selectorQuery.exec              
+                    name: show_swan-query_selectorQuery-exec              
                   -
                     link: /develop/api/show_query/#nodesRef 
                     text: nodesRef 
@@ -1781,15 +1782,15 @@
                   -
                     link: /develop/api/show_query/#nodesRef-boundingClientRect
                     text: nodesRef.boundingClientRect
-                    name: show_query_nodesRef.boundingClientRect
+                    name: show_query_nodesRef-boundingClientRect
                   -
                     link: /develop/api/show_query/#nodesRef-scrollOffset
                     text: nodesRef.scrollOffset
-                    name: show_query_nodesRef.scrollOffset
+                    name: show_query_nodesRef-scrollOffset
                   -
                     link: /develop/api/show_query/#nodesRef-fields
                     text: nodesRef.fields
-                    name: show_query_nodesRef.fields
+                    name: show_query_nodesRef-fields
 
               -
                 link: /develop/api/nacomponent

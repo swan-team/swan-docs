@@ -63,7 +63,7 @@ swan.connectSocket({
 
 **`callback`参数说明：**WebSocket 连接打开事件的回调函数。
 
-方法参数：Object res
+`callback`方法参数：Object res
 
 `res`参数说明：
 
@@ -144,7 +144,7 @@ swan.onSocketOpen(function() {
 |--|--|
 |4|参数有误 | -->
 
-## onSocketMessage
+## swan.onSocketMessage
 
 **解释：**监听 WebSocket 接受到服务器的消息事件
 
@@ -152,7 +152,7 @@ swan.onSocketOpen(function() {
 
 **`callback`参数说明：**WebSocket 接受到服务器的消息事件的回调函数
 
-方法参数：Object res
+`callback`方法参数：Object res
 
 `res`参数说明：
 

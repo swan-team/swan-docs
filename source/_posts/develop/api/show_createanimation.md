@@ -10,6 +10,8 @@ sidebar: show_createanimation
 
 **方法参数：**Object object
 
+**返回值：**animation
+
 **`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
@@ -41,14 +43,12 @@ var animation = swan.createAnimation({
 ```
 
 
-## swan.animation
+## animation
 
 **解释：**动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
-**方法参数：**无
 
-
-**animation方法列表**
+**`animation`对象的属性列表:**
 
 普通样式：
 

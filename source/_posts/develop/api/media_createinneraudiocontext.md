@@ -13,8 +13,7 @@ sidebar: media_createinneraudiocontext
 
 **方法参数：** 无
 
-**返回值：**innerAudioContext,innerAudioContext
-
+**返回值：**innerAudioContext 
 
 ### innerAudioContext
 

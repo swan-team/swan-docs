@@ -42,8 +42,7 @@ IntersectionObserver 对象，用于推断某些节点是否可以被用户看�
 
 **`selector`参数说明:**选择器
 
-**`margins`参数说明:**
-用来扩展（或收缩）参照节点布局区域的边界
+**`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -58,8 +57,7 @@ IntersectionObserver 对象，用于推断某些节点是否可以被用户看�
 
 **方法参数 ：**Object margins
 
-**`margin`参数说明:**
-用来扩展（或收缩）参照节点布局区域的边界
+**`margin`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -127,6 +125,8 @@ swan.createIntersectionObserver(this, {
 
 **方法参数：** 无
 
+**返回值：**selectorQuery
+
 **示例：**
 
 ```js
@@ -145,7 +145,7 @@ Page({
 
 ## selectorQuery
 
-**selectorQuery 对象的方法列表：**
+**`selectorQuery`对象的方法列表：**
 
 |方法 |参数  |说明|
 |---- | ---- | ---- |
@@ -181,6 +181,8 @@ Component({
 
 **方法参数：**String selector
 
+**返回值：**nodesRef
+
 selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 1、ID 选择器：#the-id
@@ -195,11 +197,15 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 **方法参数：**String selector
 
+**返回值：**nodesRef
+
 ## selectorQuery.selectViewport 
 
 **解释：** 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
 
 **方法参数：**String selector
+
+**返回值：**nodesRef
 
 ##  selectorQuery.exec 
 

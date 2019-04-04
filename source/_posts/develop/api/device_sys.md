@@ -154,7 +154,7 @@ try {
 **解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
 **方法参数：** String schema
-使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+使用 `${API}.${method}.${param}.${options} `或者 `${component}.${attribute}.${option}` 方式来调用。
 
 **`schema`参数说明：**
 
