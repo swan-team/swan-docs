@@ -42,6 +42,8 @@ sidebar: media_backgroundaudiomanager
 |onTimeUpdate | callback | 音频进度更新事件 |
 |onError | callback | 音频播放错误事件 |
 |onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。|
+|onSeeked| callback|监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。|
+|onSeeking| callback|监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。|
 <!-- |onPrev | callback | 用户在系统音乐播放面板点击上一曲事件（iOS only）。 |
 |onNext | callback | 用户在系统音乐播放面板点击下一曲事件（iOS only）。| -->
 **示例：**
