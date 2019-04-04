@@ -4,6 +4,10 @@ header: develop
 nav: api
 sidebar: show_tab
 ---
+
+> 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
+如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
+
 navigateTo
 ---
 **解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
@@ -22,12 +26,13 @@ navigateTo
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
+
 **示例：**
 <a href="swanide://fragment/dd7e70fdad89cca08b0a8a54e12a0b9c1540396427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.navigateTo({
      //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'  
+    url: 'example/xxx?key=value'
 });
 ```
 <!-- #### 错误码
@@ -149,8 +154,8 @@ navigateBack
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
 |delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页，默认为 1。|
-|success|	function|		否|	接口调用成功的回调函数|	
-|fail|	function|		否|	接口调用失败的回调函数|	
+|success|	function|		否|	接口调用成功的回调函数|
+|fail|	function|		否|	接口调用失败的回调函数|
 |complete|	function|		否|	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
