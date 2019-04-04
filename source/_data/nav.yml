@@ -222,6 +222,10 @@
               text: 图片图标
               name: pic
             -
+              link: /design/foundation/detailPages
+              text: 内容详情页
+              name: detailPages              
+            -
               link: /design/foundation/logo
               text: 头像输出
               name: logo
@@ -1727,65 +1731,66 @@
                     text: swan.createIntersectionObserver
                     name: show_query_swan-createIntersectionObserver
                   -
-                    link: /develop/api/show_query/#swan-IntersectionObserver
-                    text: swan.IntersectionObserver
-                    name: show_query_swan-IntersectionObserver
+                    link: /develop/api/show_query/#IntersectionObserver
+                    text: IntersectionObserver
+                    name: show_query_IntersectionObserver
                   -
-                    link: /develop/api/show_query/#swan-IntersectionObserver-relativeTo-selector-margins
-                    text: swan.IntersectionObserver.relativeTo
-                    name: show_query_swan-IntersectionObserver.relativeTo(selector, margins)
+                    link: /develop/api/show_query/#IntersectionObserver-relativeTo-selector-margins
+                    text: IntersectionObserver.relativeTo
+                    name: show_query_IntersectionObserver.relativeTo(selector, margins)
                   -
-                    link: /develop/api/show_query/#swan-IntersectionObserver-relativeToViewport-margins
-                    text: swan.IntersectionObserver.relativeToViewport
-                    name: show_query_swan-IntersectionObserver-relativeToViewport
+                    link: /develop/api/show_query/#IntersectionObserver-relativeToViewport-margins
+                    text: IntersectionObserver.relativeToViewport
+                    name: show_query_IntersectionObserver-relativeToViewport
                   -
-                    link: /develop/api/show_query/#swan-IntersectionObserver-observe-targetSelector-callback
-                    text: swan.IntersectionObserver.observe
-                    name: show_query_swan-IntersectionObserver-observe
+                    link: /develop/api/show_query/#IntersectionObserver-observe-targetSelector-callback
+                    text: IntersectionObserver.observe
+                    name: show_query_IntersectionObserver-observe
                   -
                     link: /develop/api/show_query/#swan-IntersectionObserver-disconnect
-                    text: swan.IntersectionObserver.disconnect
-                    name: show_query_swan-IntersectionObserver-disconnect
+                    text: IntersectionObserver.disconnect
+                    name: show_query_IntersectionObserver-disconnect
                   -
-                    link: /develop/api/show_query/#swan-createSelectorQuery
-                    text: swan.createSelectorQuery
-                    name: show_query_swan-createSelectorQuery
+                    link: /develop/api/show_query/#selectorQuery
+                    text: selectorQuery
+                    name: show_query_selectorQuery
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery
-                    text: swan.selectorQuery
-                    name: show_query_swan-selectorQuery
+                    link: /develop/api/show_query/#selectorQuery-in
+                    text: selectorQuery.in
+                    name: show_query_selectorQuery.in
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery-in-component
-                    text: swan.selectorQuery.in(component)
-                    name: show_query_swan-selectorQuery.in(component)
+                    link: /develop/api/show_query/#selectorQuery-select
+                    text: selectorQuery.select
+                    name: show_query_selectorQuery.select
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery-select-selector
-                    text: swan.selectorQuery.select(selector)
-                    name: show_query_swan-selectorQuery.select(selector)
+                    link: /develop/api/show_query/#selectorQuery-selectAll
+                    text: selectorQuery.selectAll
+                    name: show_query_selectorQuery.selectAll
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery-selectAll-selector
-                    text: swan.selectorQuery.selectAll(selector)
-                    name: show_query_swan-selectorQuery.selectAll(selector)
+                    link: /develop/api/show_query/#selectorQuery-selectViewport
+                    text: selectorQuery.selectViewport
+                    name: show_query_selectorQuery.selectViewport
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery-selectViewport
-                    text: swan.selectorQuery.selectViewport()
-                    name: show_query_swan-selectorQuery.selectViewport()
+                    link: /develop/api/show_query/#selectorQuery-exec
+                    text: selectorQuery.exec
+                    name: show_swan-query_selectorQuery.exec              
                   -
-                    link: /develop/api/show_query/#swan-nodesRef-boundingClientRect-callback
-                    text: swan.nodesRef.boundingClientRect([callback])
-                    name: show_query_swan-nodesRef.boundingClientRect([callback])
+                    link: /develop/api/show_query/#nodesRef 
+                    text: nodesRef 
+                    name: show_query_nodesRef                      
                   -
-                    link: /develop/api/show_query/#swan-nodesRef-scrollOffset-callback
-                    text: swan.nodesRef.scrollOffset([callback])
-                    name: show_query_swan-nodesRef.scrollOffset([callback])
+                    link: /develop/api/show_query/#nodesRef-boundingClientRect
+                    text: nodesRef.boundingClientRect
+                    name: show_query_nodesRef.boundingClientRect
                   -
-                    link: /develop/api/show_query/#swan-nodesRef-fields-fields-callback
-                    text: swan.nodesRef.fields(fields,[callback])
-                    name: show_query_swan-nodesRef.fields(fields,[callback])
+                    link: /develop/api/show_query/#nodesRef-scrollOffset
+                    text: nodesRef.scrollOffset
+                    name: show_query_nodesRef.scrollOffset
                   -
-                    link: /develop/api/show_query/#swan-selectorQuery-exec-callback
-                    text: swan.selectorQuery.exec([callback])
-                    name: show_swan-query
+                    link: /develop/api/show_query/#nodesRef-fields
+                    text: nodesRef.fields
+                    name: show_query_nodesRef.fields
+
               -
                 link: /develop/api/nacomponent
                 text:  添加到我的小程序引导

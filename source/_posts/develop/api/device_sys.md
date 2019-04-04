@@ -115,7 +115,7 @@ try {
 |--|--|
 |202|解析失败，请检查参数是否正确。| -->
 
-## getEnvInfoSync
+## swan.getEnvInfoSync
 
 > 基础库 2.0.28 版本开始支持。
 
@@ -153,7 +153,10 @@ try {
 
 **解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**参数说明：** 使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+**方法参数：** String schema
+使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+
+**`schema`参数说明：**
 
 |参数  |说明 |
 |---- | ---- |

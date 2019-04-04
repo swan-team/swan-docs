@@ -14,7 +14,11 @@ sidebar: media_arcameracontext
 <!-- docs/develop/component/media/#ar-camera/ -->
 **方法参数：**无
 
-**ARCameraContext 对象的方法列表：**
+**返回值：**ARCameraContext
+
+### ARCameraContext
+
+**`ARCameraContext`对象的方法列表：**
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |

@@ -10,9 +10,11 @@ sidebar: media_videocontext
 
 **方法参数：**String videoId
 
+**返回值：**videoContext
+
 ### videoContext
 
-**对象的方法列表：**
+**`videoContext`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |

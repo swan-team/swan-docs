@@ -12,7 +12,9 @@ sidebar: ai_voice
 
 **方法参数**：无
 
-**voiceRecognizer 对象的方法列表：**
+### voiceRecognizer
+
+**`voiceRecognizer`对象的方法列表：**
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |

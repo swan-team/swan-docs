@@ -92,22 +92,20 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 
 **解释：**返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件组件实例 this，以操作组件内 `<canvas>` 组件。
 
-**Object 参数：**
-
 **方法参数：**Object object
 
 **`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|canvasId	| String | 是  | 画布标识，传入 `<canvas>` 组件的 canvas-id 属性。|
-|x	| Number | 是  | 将要被提取的图像数据矩形区域的左上角横坐标 |
-|y	| Number | 是  | 将要被提取的图像数据矩形区域的左上角纵坐标 |
-|width	| Number | 是  | 将要被提取的图像数据矩形区域的宽度|
-|height	| Number | 是  | 将要被提取的图像数据矩形区域的高度 |
-|success	| Function | 否  | 接口调用成功的回调函数 |
-|fail	| Function | 否  | 接口调用失败的回调函数 |
-|complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|canvasId	| String | 是  |-| 画布标识，传入 `<canvas>` 组件的 canvas-id 属性。|
+|x	| Number | 是  | -|将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  |-| 将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  |-| 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  |-| 将要被提取的图像数据矩形区域的高度 |
+|success	| Function | 否  | -|接口调用成功的回调函数 |
+|fail	| Function | 否  |-| 接口调用失败的回调函数 |
+|complete	| Function | 否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -153,15 +151,15 @@ swan.canvasGetImageData({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|canvasId	| String | 是  | 画布标识，传入 `<canvas> `组件的 canvas-id 属性。|
-|x	| Number | 是  | 将要被提取的图像数据矩形区域的左上角横坐标 |
-|y	| Number | 是  | 将要被提取的图像数据矩形区域的左上角纵坐标 |
-|width	| Number | 是  | 将要被提取的图像数据矩形区域的宽度|
-|height	| Number | 是  | 将要被提取的图像数据矩形区域的高度 |
-|data	| Uint8ClampedArray | 是  | 图像像素点数据，一维数组，每四项表示一个像素点的 rgba |
-|success	| Function | 否  | 接口调用成功的回调函数 |
-|fail	| Function | 否  | 接口调用失败的回调函数 |
-|complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|canvasId	| String | 是  |-| 画布标识，传入 `<canvas> `组件的 canvas-id 属性。|
+|x	| Number | 是  | -|将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  | -|将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  |-| 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  |-| 将要被提取的图像数据矩形区域的高度 |
+|data	| Uint8ClampedArray | 是  |-| 图像像素点数据，一维数组，每四项表示一个像素点的 rgba |
+|success	| Function | 否  |-| 接口调用成功的回调函数 |
+|fail	| Function | 否  |-| 接口调用失败的回调函数 |
+|complete	| Function | 否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -212,18 +210,18 @@ swan.canvasGetImageData({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x	| Number | 否  | 画布 x 轴起点（默认 0 ）|
-|y	| Number | 否  | 画布 y 轴起点（默认 0 ）|
-|width	| Number | 否  | 画布宽度（默认为 canvas 宽度 -x）|
-|height	| Number | 否  | 画布高度（默认为 canvas 高度 -y）|
-|destWidth	| Number | 否  | 输出图片宽度（默认为 width * 屏幕像素密度）|
-|destHeight	| Number | 否  | 输出图片高度（默认为 height * 屏幕像素密度）|
-|canvasId	| String | 是  | 画布标识，传入`<canvas/>`的 canvas-id|
-|fileType	| String | 否  | 目标文件的类型，只支持 'jpg' 或 'png'，默认为 'png' 。|
-|quality	| Number | 否  | 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 。|
-|success	| Function | 否  | 接口调用成功的回调函数 |
-|fail	| Function | 否  | 接口调用失败的回调函数 |
-|complete	| Function | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|x	| Number | 否  |0| 画布 x 轴起点|
+|y	| Number | 否  | 0|画布 y 轴起点（|
+|width	| Number | 否  | -x|画布宽度 |
+|height	| Number | 否  |-y| 画布高度（）|
+|destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
+|destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
+|canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
+|fileType	| String | 否  |png| 目标文件的类型，只支持 'jpg' 或 'png' 。|
+|quality	| Number | 否  |-| 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 。|
+|success	| Function | 否  |-| 接口调用成功的回调函数 |
+|fail	| Function | 否  | -|接口调用失败的回调函数 |
+|complete	| Function | 否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明：**
 
@@ -262,7 +260,7 @@ swan.canvasToTempFilePath({
 
 **方法参数：** Color color
 
-
+**返回值：**canvasContext
 
 **示例：**
 
@@ -275,7 +273,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setFillStyle.png)
 
-## swan.canvasContext.setStrokeStyle
+###  canvasContext.setStrokeStyle
 
 
 **解释：**设置边框颜色。
@@ -293,7 +291,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-## swan.canvasContext.setShadow
+###  canvasContext.setShadow
 
 **解释：**设置阴影样式。
 
@@ -303,10 +301,10 @@ ctx.draw();
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-| offsetX | Number | 是| 阴影相对于形状在水平方向的偏移 |
-| offsetY | Number |是 | 阴影相对于形状在竖直方向的偏移 |
-| blur | Number | 是 | 阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
-| color	| Color | 是| 阴影的颜色 |
+| offsetX | Number | 是| -|阴影相对于形状在水平方向的偏移 |
+| offsetY | Number |是 | -| 阴影相对于形状在竖直方向的偏移 |
+| blur | Number | 是 |  -|阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
+| color	| Color | 是| -| 阴影的颜色 |
 
 **示例：**
 

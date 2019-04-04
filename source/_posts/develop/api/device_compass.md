@@ -16,7 +16,7 @@ sidebar: device_compass
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|direction |Number |-|面对的方向度数|
+|direction |Number |是|-|面对的方向度数|
 
 **示例：**
 <a href="swanide://fragment/1e98ee9687ed0c6b0f9cb4c747af8b7c1540398490" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>

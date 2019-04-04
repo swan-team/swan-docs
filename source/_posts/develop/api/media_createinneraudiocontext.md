@@ -13,7 +13,12 @@ sidebar: media_createinneraudiocontext
 
 **方法参数：** 无
 
-**innerAudioContext 对象的属性列表：**
+**返回值：**innerAudioContext,innerAudioContext
+
+
+### innerAudioContext
+
+**`innerAudioContext`对象的属性列表：**
 
 |方法 | 参数 | 只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -27,7 +32,9 @@ sidebar: media_createinneraudiocontext
 |paused |Boolean |是 |当前状态:true 表示暂停或停止，false 表示正在播放。 |
 |volume |Number |否 |音量，范围 0~1。 |
 
-**innerAudioContext 对象的方法列表：**
+### innerAudioContext
+
+**`innerAudioContext`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -98,7 +105,7 @@ innerAudioContext.onPlay(function (res) {
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|mixWithOther |Boolean | 否 | -|设置是否与其他音频混播，默认为false| 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
+|mixWithOther |Boolean | 否 | -|设置是否与其他音频混播，默认为false。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
 |success  | Function |否 | -| 接口调用成功的回调函数| 
 |fail  | Function |否 |  -|接口调用失败的回调函数| 
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|  

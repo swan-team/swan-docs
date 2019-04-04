@@ -97,9 +97,9 @@ swan.navigateBackSmartProgram({
 
 **`appkey`参数说明**：
 
-|参数名|类型|是否必填|说明|
-|--|--|--|--|
-|appkey|	String|是 -||要打开的小程序App Key|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|appkey|	String|是 |-|要打开的小程序App Key|
 |path|	String|	否	| -|要打开的具体页面|
 
 **示例**：

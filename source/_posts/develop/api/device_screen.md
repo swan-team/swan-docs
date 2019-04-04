@@ -64,7 +64,7 @@ sidebar: device_screen
 |--|--|
 |1001|执行失败| -->
 
-## setKeepScreenOn
+## swan.setKeepScreenOn
 
 **解释：**设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。
 

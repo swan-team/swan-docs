@@ -132,7 +132,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 ```
 
 
-## checkSession
+## swan.checkSession
 
 **解释：**通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
 
@@ -207,9 +207,11 @@ swan.checkSession({
 |10002|网络请求失败|
 |10004|用户未登录(user not login)| -->
 
-## isLoginSync
+## swan.isLoginSync
 
 **解释：**获取百度 App登录状态。
+
+**方法参数**：无
 
 **返回参数说明：**
 

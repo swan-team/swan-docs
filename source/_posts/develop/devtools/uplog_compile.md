@@ -15,8 +15,7 @@ sidebar: uplog_compile
 |v2.16.11|**Bugfixes**<p>修复2.16.09引入web化编译参数错误bug。|
 |v2.16.09|**New**<p>预览发布性能优化。|
 |v2.16.08|**Bugfixes**<p>修复自定义组件css中@keyframes中rpx的转换无效bug。|
-|v2.16.07|**Change**<p>更新swan-web版本至2.1.3。<p>**Bugfixes**<p>**·**自定义组件css加载策略调整;p>**·**自定义组件支持使用图标字体。|
-|v2.16.06|**Change**<p>更新swan-web版本至2.1.2。|
+|v2.16.07|**Bugfixes**<p>**·**自定义组件css加载策略调整;<p>**·**自定义组件支持使用图标字体。|
 |v2.16.05|**Bugfixes**<p>修正合并代码造成的run.js里工具方法名错误。|
 |v2.16.04|**Bugfixes**<p>swan编译 自定义组件css中!import的兼容修复。|
 |v2.16.03|**Bugfixes**<p>swan编译 自定义组件css中@charset, 以及样式声明中!import吞掉的bug修改。|
@@ -28,12 +27,9 @@ sidebar: uplog_compile
 
 |版本号|更新内容|
 |----|----|
-|v2.15.08|**Change**<p>更新swan-web版本至2.1.0。|
 |v2.15.07|**Change**<p>**·**web编译 manifest.json和白屏检测需要的html写进内存，不走fs；<p>**·**web编译 若有ext.json文件，copy进产出，支持tp；<p>**·**web编译 json文件内容提取后不置空module。|
 |v2.15.06|**Change**<p>web编译 限制page的css中html、body的样式不在全局生效。|
-|v2.15.05|**Change**<p>更新swan-web版本至2.0.2。|
 |v2.15.04|**Change**<p>恢复merge分支丢掉的影响编译性能的代码。|
-|v2.15.03|**Change**<p>更新swan-web版本至2.0.1。|
 |v2.15.02|**Change**<p>web框架代码拆分一期，兼容新老web化白屏检测。|
 |v2.15.01|**Change**<p>从磁盘缓存拿编译结果的增加打点字段isCache。|
 |v2.15.00|**Change**<p>编译版本号第二位加1。|
@@ -42,32 +38,26 @@ sidebar: uplog_compile
 
 |版本号|更新内容|
 |----|----|
-|v2.13.45|**Change**<p>更新swan-web版本至1.2.10。|
 |v2.13.44|**Bugfix**<p>windows平台自定义组件没有require的bug修改。|
 |v2.13.42|**Bugfix**<p>磁盘缓存时，当修改page页面的json文件时，没有在swan文件的依赖分析图中加上json的依赖，导致编译产出异常。|
 |v2.13.40|**Change**<p>增加编译的磁盘缓存。|
-|v2.13.39|**Change**<p>更新swan-web版本至1.2.9。|
 |v2.13.38|**Bugfix**<p>修复web 编译fitler中不支持标签的问题。|
-|v2.13.37|**Change**<p>更新swan-web版本至1.2.8。|
 |v2.13.36|**Change**<p>**·** 自定义组件对应的css文件是否存在不会进行强校验；<p>**·**全部异步错误信息捕获。|
 |v2.13.35|**Change**<p>**·**编译增加文件大小打点字段；<p>**·**web 编译自定义组件配置错误在非watch模式下主动退出；<p>**·**删除产出 app.js 和 filter 中增加 Function 字段。|
 |v2.13.34|**Change**<p>自定义组件路径错误、css@import的资源不存在时，在非watch模式下退出。|
 |v2.13.33|**Bugfix**<p>修复 replace.js 中写文件事件监听错误导致copy文件缺损。|
 |v2.13.32|**Bugfix**<p>修复产出 manifest.json 文件在 windows 下路径错误。|
-|v2.13.31|**Bugfix**<p>swan-web 更新至 1.2.7。|
 |v2.13.30|**Bugfix**<p>web 编译分包 css 增加 scope。|
-|v2.13.29|**Change**<p>**·**web 编译增加文件路径替换；<p>**·**swan-web 更新至 1.2.6。|
-|v2.13.28|**Bugfixes**<p>**·**web 编译修复自定义 template 内引用 template 路径查找错误；<p>**·**swan-web 更新至 1.2.5。|
+|v2.13.29|**Change**<p>web 编译增加文件路径替换 。|
+|v2.13.28|**Bugfixes**<p>**·**web 编译修复自定义 template 内引用 template 路径查找错误 。|
 |v2.13.27|**Bugfixes**<p>**·**web 编译兼容修复用户 page 中配置文件为空编译退出，对齐 swan 编译；<p>**·**web 编译兼容用户自定义组件路径配置错误编译退出问题，对齐 swan 编译。|
-|v2.13.26|**Bugfixes**<p>**·**swan-web 更新版本至 1.2.4；<p>**·**swan 编译更新静态资源文件名hash值生成规则。|
-|v2.13.25|**Change**<p>swan-web 更新版本至 1.2.2。|
+|v2.13.26|**Bugfixes**<p>swan 编译更新静态资源文件名hash值生成规则。|
 |v2.13.24|**Change**<p>非watch模式下json错误抛错。|
 |v2.13.23|**New**<p>增加音频文件的处理。|
 |v2.13.22|**Bugfixes**<p>修复错误日志在watch模式下误报。|
 |v2.13.21|**Bugfixes**<p>template标签中filter定义的js不经过babel转换的bug修改。|
 |v2.13.20|**Bugfixes**<p>媒体资源在windows平台无编译的bug修改。|
 |v2.13.19|**New**<p>**·**增加对视频的处理；<p>**·**web 编译处理非 page、component json 文件。|
-|v2.13.18|**New**<p>更新 swan-web 版本。|
 |v2.13.17|**Change**<p>编译日志优化。|
 |v2.13.16|**BugFix**<p>**·**修复编译进程主动退出未打印错误；<p>**·**去除 web 编译 css 中背景图片限制；<p>**·**产出 app.js 和 filter 中增加 Function 字段|
 |v2.13.15|**BugFix**<p>去除 unhandledRejection 事件。|
@@ -78,10 +68,10 @@ sidebar: uplog_compile
 |v2.13.10|**BugFix**<p>对绝对路径判断的bug修复。|
 |v2.13.9|**BugFix**<p>规避对src属性中变量的校验。|
 |v2.13.8|**Change**<p>资源文件找不到时报error。|
-|v2.13.7|**BugFix**<p>**·**web 编译修复 filter 多次引用解析错误；<p>**·**web 编译修复 template 中引入图片路径转换错误;<p>**·**swan-web 依赖更新至 1.0.20;<p>**·**css中找不到图片时，warning级别改为error级别。|
+|v2.13.7|**BugFix**<p>**·**web 编译修复 filter 多次引用解析错误；<p>**·**web 编译修复 template 中引入图片路径转换错误；<p>**·**css中找不到图片时，warning级别改为error级别。|
 |v2.13.6|**BugFix**<p>**·**css文件中@import资源中使用url引入的资源路径解析错误的bug修复；<p>**·**watch触发两次end的bug修复。|
 |v2.13.5|**BugFix**<p>**·**template文件没有加到依赖分析里，不触发watch的bug修复；<p>**·**项目目录下无swan文件退出编译进程的bug修复。|
-|v2.13.4|**BugFix**<p>**·**web 编译修复rpx小数替换错误修复；<p>**·**swan-web 依赖更新至 1.0.18。|
+|v2.13.4|**BugFix**<p>web 编译修复rpx小数替换错误修复。|
 |v2.13.3|**BugFix**<p>在模板中filter有前缀时会将前缀置为空的bug修改。|
 |v2.13.2|**Change**<p>更新打点字段。<p>**BugFix**<p>低版本core时，自定义组件循环引用编译直接打断。|
 |v2.13.1|**Change**<p>编译优化。<p>**BugFix**<p>在属性中用filter时，会导致模板闭合错误的bug修改。|
@@ -106,7 +96,7 @@ sidebar: uplog_compile
 |v2.12.6|**New**<p>自定义组件Page化。|
 |v2.12.5|**BugFix**<p>修复 web 编译中 filter 解析错误。|
 |v2.12.4|**BugFix**<p>解决当图标格式为svg时，没有编译到产出中的问题修改。|
-|v2.12.3|**New**<p>**·**web 编译依赖 swan-web 版本更新；<p>**·**web 编译自定义组件策略变更，模板 class 交由框架处理前缀。|
+|v2.12.3|**New**<p>web 编译自定义组件策略变更，模板 class 交由框架处理前缀。|
 |v2.12.2|**BugFix**<p>**·**增加用户css中url限制超过700条后报错；<p>**·**修复web编译css图片路径错误。|
 |v2.12.1|**BugFix**<p>自定义组件中支持filter功能在低版本的兼容。|
 |v2.12.0|**BugFix**<p>自定义组件中支持filter功能。|

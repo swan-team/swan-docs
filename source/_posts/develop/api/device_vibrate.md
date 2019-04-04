@@ -20,7 +20,7 @@ sidebar: device_vibrate
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## vibrateShort
+## swan.vibrateShort
 
 **解释：**使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。
 

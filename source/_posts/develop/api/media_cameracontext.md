@@ -13,7 +13,11 @@ sidebar: media_cameracontext
 
 **方法参数：**无
 
-**cameraContext 对象的方法列表：**
+**返回值：**cameraContext
+
+### cameraContext
+
+**`cameraContext`对象的方法列表：**
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |

@@ -12,7 +12,11 @@ sidebar: media_recorder
 
 **方法参数：** 无
 
-**recorderManager 对象的方法列表：**
+**返回值：**recorderManager
+
+### recorderManager
+
+**`recorderManager`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
