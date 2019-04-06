@@ -12,7 +12,7 @@ priority: 04-02
 **说明：**
 - Android 与 iOS 客户端版本相同。
 - 存在多个基础库版本对应一个客户端版本的情况。
-- 基础库版本的更新日志详见[基础库更新日志](/game/tutorials/version/releaseLog)。
+- 基础库版本的更新日志详见[基础库更新日志](/game/tutorials/version/releaseLog/)。
 - 目前小游戏支持的最低基础库版本为 1.0.10。在开发者平台的管理中心配置“基础库最低版本设置”时，请依据实际功能需求以及基础库的更新日志来设置最低版本基础库。此外，还有其他版本兼容性方案，请参考[小游戏版本兼容](/game/tutorials/version/compatibility/)。
 
 | 客户端版本 | game 基础库版本|
