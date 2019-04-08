@@ -535,6 +535,27 @@
                     text: 模块化
                     name: app_service_getcurrentpages_模块化
 
+              -
+                link: /develop/framework/app_service_aop
+                text: AOP机制
+                name: app_service_aop
+                sidebar:
+                  -
+                    link: /develop/framework/app_service_aop/#AOP
+                    text: AOP说明
+                    name: app_service_aop_App.aop
+                  -
+                    link: /develop/framework/app_service_aop/#App-after
+                    text: App.after
+                    name: app_service_aop_App.after
+                  -
+                    link: /develop/framework/app_service_aop/#Page-after
+                    text: Page.after
+                    name: app_service_aop_Page.after
+                  -
+                    link: /develop/framework/app_service_aop/#swan-after
+                    text: swan.after
+                    name: app_service_aop_swan.after
 
         -
             link: /develop/framework/view
