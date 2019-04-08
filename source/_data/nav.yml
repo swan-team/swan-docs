@@ -162,7 +162,18 @@
               -
                 link: /introduction/adopen
                 text: 流量主开通指引
-                name: adopen               
+                name: adopen             
+    -
+      link: /introduction/pay
+      text: 百度收银台支付开通
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/pay
+                text: 百度收银台支付开通指引
+                name: pay                               
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -2455,9 +2466,13 @@
                 name: diff
         -
             link: /develop/devtools/uplog
-            text: 工具历史更新日志
+            text: 工具版本信息
             name: uplog
             sidebar:
+              -
+                link: /develop/devtools/toolversion
+                text: 工具版本分布
+                name: toolversion             
               -
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
