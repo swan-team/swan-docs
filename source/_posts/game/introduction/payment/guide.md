@@ -27,7 +27,7 @@ priority: 03-01
 2. 输入百度电商平台账号的用户名、密码。
 ![图片](/img/game/introduction/payment/2.png)
 3. 小程序与支付服务绑定，可以选择已创建的支付服务或重新创建新的支付服务。
-   绑定支付服务入口“百度收银台-开通流程-前往设置”。
+   绑定支付服务入口“百度收银台 - 开通流程 - 前往设置”。
 ![图片](/img/game/introduction/payment/3.png)
    绑定支付服务：可以创建新服务或绑定已有服务。
 ![图片](/img/game/introduction/payment/4.png)
@@ -43,10 +43,13 @@ priority: 03-01
 ![图片](/img/game/introduction/payment/8.png)
 
 4. 资质审核通过后，可进行开发者信息设置
+
    开发者设置入口：百度收银台 - 开通流程 - 前往设置。
-![图片](/img/game/introduction/payment/9.png)
+   ![图片](/img/game/introduction/payment/9.png)
+   
    设置信息包括开发者公钥和收银台参数（线上环境）
   ![图片](/img/game/introduction/payment/10.png)
+  
 5. 创建服务，进入创建服务页，填写服务名称、录入银行卡信息、并且进行财务设置。填写服务信息后，提交平台进行服务审核，审核周期 1 个工作日，审核通过后服务即可上线。
 ![图片](/img/game/introduction/payment/11.png)
 * 目前银行卡仅支持对公账户，请务必保证目前银行卡仅支持对公账户，请务必保证开户名是对公账户名并且和银行开户证明信息一致。
