@@ -35,7 +35,7 @@ sidebar: nacomponent
 
         ```javascript
         swan.showFavoriteGuide({
-            type： 'bar'，
+            type: 'bar',
             content：'一键添加到我的小程序'
             success(res) {
                 console.log('添加成功：', res);
@@ -52,8 +52,8 @@ sidebar: nacomponent
 
         ```javascript
         swan.showFavoriteGuide({
-            type： 'bar-autohide'，
-            content：'一键添加到我的小程序'
+            type: 'bar-autohide',
+            content:：'一键添加到我的小程序'
             success(res) {
                 console.log('添加成功：', res);
             },
@@ -69,7 +69,7 @@ sidebar: nacomponent
 
     ```javascript
     swan.showFavoriteGuide({
-        type： 'tip'，
+        type: 'tip',
         content：'一键添加到我的小程序'
         success(res) {
             console.log('添加成功：', res);

@@ -675,19 +675,19 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
-        -
-          link: /develop/framework/storage
-          text: 基础能力
-          name: storage
-          sidebar:
-            -
-              link: /develop/framework/storage
-              text: 存储
-              name: storage
-            -
-              link: /develop/framework/canvas
-              text: 画布
-              name: canvas
+        # -
+        #   link: /develop/framework/storage
+        #   text: 基础能力
+        #   name: storage
+        #   sidebar:
+        #     -
+        #       link: /develop/framework/storage
+        #       text: 存储
+        #       name: storage
+        #     -
+        #       link: /develop/framework/canvas
+        #       text: 画布
+        #       name: canvas
     -
       link: /develop/component/view
       text: 组件
@@ -2464,6 +2464,13 @@
                 link: /develop/devtools/diff
                 text: 模拟器 API 与真机的实现差异
                 name: diff
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/code
+                text: 代码片段
+                name: code                 
         -
             link: /develop/devtools/uplog
             text: 工具版本信息

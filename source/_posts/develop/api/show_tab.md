@@ -8,9 +8,8 @@ sidebar: show_tab
 > 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
 如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
 
-navigateTo
----
-**解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
+## navigateTo
+
 
 **解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
