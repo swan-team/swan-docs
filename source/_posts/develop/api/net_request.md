@@ -5,13 +5,13 @@ nav: api
 sidebar: net_request
 ---
 
-## request
+## swan.request
 
 **解释：**发起网络请求
 
-**方法参数：**Object
+**方法参数：**Object object
 
-#### **Object 参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -26,7 +26,7 @@ sidebar: net_request
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）。|
 
 
-#### **success 返回参数说明：**
+**success 返回参数说明：**
 
 
 |参数 | 类型 | 说明  |
@@ -35,7 +35,7 @@ sidebar: net_request
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 |header | Object | 开发者服务器返回的 HTTP Response Header|
 
-**data 数据说明：**
+#### **data 数据说明：**
 
 最终发送给服务器的数据都是 String 类型，如果传入的 data 不是 String 类型，会被转换成 String 。转换规则如下：
 1、对于 GET 方法的数据，会将数据转换成 query string（encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）；
@@ -98,3 +98,19 @@ requestTask.abort();
 **说明**
 *  content-type 默认为 'application/json'；
 *  url 中不能有端口。
+
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查调起协议是否合法|
+|errorCode为4|URL无效| -->

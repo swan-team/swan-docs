@@ -23,7 +23,6 @@ sidebar: layout
 
 ## 透明框架布局适配
 
-### 1. 小程序框架 
 当开发者使用小程序的原生顶部导航栏时，开发者只需要在顶部导航栏下方开始布局页面即可。
 智能小程序在百度App v11.1及以上版本，可以[自定义顶部导航栏](../../component/topnav/#自定义顶部导航栏)，使其只保留框架控制功能区，后文简称为“透明框架”。
 <div class="m-doc-custom-examples">
@@ -58,28 +57,8 @@ sidebar: layout
 	</div>
 </div>
 
-### 2. 小游戏框架 
-由于小游戏框架没有系统状态栏，布局时只需要考虑避让框架控制功能区。
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/6.png"><p class="m-doc-custom-examples-text">左：竖屏小游戏框架的安全区 = 屏幕 - 框架控制功能区（1）；
-		右：横屏小游戏框架的安全区 = 屏幕 - 框架控制功能区（1）。</p>
-	</div>
-</div>
-
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/7-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">页面元素均在安全区内展现。</p>
-	</div>
-	<div class="m-doc-custom-examples-error">
-		<img src="../../../img/design/foundation/layout/7-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">页面元素超出安全区，无法正常阅读。</p>
-	</div>
-</div>
-
-## 全面屏适配
-### 1. 小程序框架 
+## 全面屏顶部导航栏适配
+### 原生顶部导航栏适配策略
 当开发者使用小程序的顶部导航栏时，我们会针对不同刘海屏机型进行适配，开发者只需要在顶部导航栏下方开始布局页面即可。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -87,7 +66,8 @@ sidebar: layout
 	</div>
 </div>
 
-但如果使用透明框架，此时开发者需要自行适配。
+### 自定义顶部导航栏适配
+但如果使用自定义顶部导航栏（透明框架），此时开发者需要自行适配。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/9.png"><p class="m-doc-custom-examples-text">左：全面屏iPhone 安全区 = 屏幕 -（系统状态栏（1） + 框架控制功能区（2）+ 底部指示区（3））
@@ -96,7 +76,7 @@ sidebar: layout
 </div>
 
 一般来说，全面屏安卓手机的刘海高度=系统状态栏高度，全面屏iPhone刘海高度为44pt。
-通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
+通过系统信息接口[getSystemInfoSync](../../../develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/10-1.png">
@@ -109,24 +89,7 @@ sidebar: layout
 </div>
 
 
-### 2. 小游戏框架
-竖屏小游戏
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/11.png"><p class="m-doc-custom-examples-text">左：全面屏iPhone 安全区 = 屏幕 -（顶部刘海区（1） + 框架控制功能区（2）+ 底部指示区（3））
-		右：全面屏安卓手机 安全区 = 屏幕 -（顶部刘海区（1） + 框架控制功能区（2））</p>
-	</div>
-</div>
-
-横屏小游戏
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/12.png"><p class="m-doc-custom-examples-text">左：全面屏iPhone 安全区 = 屏幕 -（顶部刘海区（1） + 框架控制功能区（2）+ 底部指示区（3））
-		右：全面屏安卓手机 安全区 = 屏幕 -（顶部刘海区（1） + 框架控制功能区（2））</p>
-	</div>
-</div>
-
-### 3. 注意：全面屏iPhone底部适配
+### 注意：全面屏iPhone底部适配
 在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置，其高度为34pt。
 全面屏iPhone的底部横条默认透明，如开发者使用小程序底部标签栏，底部横条会自动适配底部标签栏的背景颜色。
 <div class="m-doc-custom-examples">

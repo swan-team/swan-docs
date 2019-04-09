@@ -1,7 +1,7 @@
 ---
-title: 资源下载
+title: 长隆AR动物园
 header: design
-nav: showcase
+nav: story
 sidebar: arzoo
 ---
 

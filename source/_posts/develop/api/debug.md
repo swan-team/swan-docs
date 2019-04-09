@@ -4,17 +4,19 @@ header: develop
 nav: api
 sidebar: debug
 ---
-## setEnableDebug
+## swan.setEnableDebug
 
 > 客户端10.12，基础库1.12开始支持
 
-设置是否打开调试开关，此开关对正式版也能生效。
+**解释：**设置是否打开调试开关，此开关对正式版也能生效。
 
-**OBJECT参数说明：**
+**方法参数：**Object object
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | ---|
-| enableDebug | Boolean | 是 | 是否打开调试 |
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+| enableDebug | Boolean | 是 |-| 是否打开调试 |
 
 **示例代码**
 

@@ -6,13 +6,17 @@ sidebar: media_recorder
 ---
 
 
-getRecorderManager
----
+## swan.getRecorderManager
+
 **解释：** 获取全局唯一的录音管理器`recorderManager`。
 
-**参数：** 无
+**方法参数：** 无
 
-**recorderManager 对象的方法列表：**
+**返回值：**recorderManager
+
+### recorderManager
+
+**`recorderManager`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -87,3 +91,24 @@ const options = {
 recorderManager.start(options);
 
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查参数是否正确|
+|1001|执行失败|
+|2001|错误调起时机|
+|2002|录音执行错误|
+|2003|录音调起action错误，无需调用release|
+|2004|用户拒绝|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|2001|错误的调起时机|
+|2002|录音执行错误|
+|2004|用户拒绝小程序使用麦克风| -->

@@ -84,7 +84,7 @@ sidebar: dialog
 </div>
 
 #### 双操作按钮
-对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
+对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见[措辞](../../../design/foundation/writing)章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/8-1.png">
@@ -130,7 +130,7 @@ sidebar: dialog
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/11-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">需要用户重点关注的不可逆操作，可使用警示红。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">操作选项重要且不可逆，使用红色作为警示。</p>
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/dialog/11-2.png">
@@ -159,7 +159,7 @@ sidebar: dialog
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/dialog/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">红色系常用于表达警示，此时可能使用户紧张。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">红色常用于表达警示，此时可能使用户紧张。</p>
 	</div>
 </div>
 

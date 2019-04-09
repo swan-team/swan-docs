@@ -150,7 +150,7 @@ getStorageInfo
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|keys  |  String Array |   当前 storage 中所有的 key|
+|keys  |  Array.<string> |   当前 storage 中所有的 key|
 |currentSize | Number | 当前占用的空间大小, 单位 kB|
 |limitSize |  Number |  限制的空间大小，单位 kB|  
 

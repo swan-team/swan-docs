@@ -9,27 +9,17 @@ sidebar: projectconfig
 
 |字段名 | 类型 |说明|
 |---|---|---|
-|appid|String| 项目的 AppID，只在新建项目时读取 |
-|condition|Object|条件参数，目前包含自定义编译条件参数|
+|appid|String| 项目的 AppID，如有变更，请在项目信息中修改 |
+|compilation-args|Object|条件参数，目前包含自定义编译条件参数|
 
 以下是一个包含了所有配置选项的`project.swan.json`：
 
 ```json
 {
     "appid": "",
-    "condition": {
-        "swan": {
-            "current": 0,
-            "list": [
-                {
-                    "id": "-1",
-                    "name": "view",
-                    "pathName": "pages/view/view",
-                    "query": "name=swan&action=home"
-                }
-            ]
-        }
+    "compilation-args": {
+        "selected": 0,
+        "options": []
     }
 }
 ```
-

@@ -5,19 +5,19 @@ nav: api
 sidebar: device_network
 ---
 
-getNetworkType
----
+## swan.getNetworkType
+
 **解释：**获取网络类型
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  是  | 接口调用成功，返回网络类型 networkType|
-|fail | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否  |-| 接口调用成功，返回网络类型 networkType|
+|fail | Function  |  否  |-| 接口调用失败的回调函数|
+|complete  |  Function  |  否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -34,19 +34,26 @@ swan.getNetworkType({
     }
 });
 ```
+<!-- #### 错误码
 
-onNetworkStatusChange
----
+<!-- **Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。| -->
+
+## swan.onNetworkStatusChange
+
 **解释：**监听网络状态变化。
 
-**参数：**CALLBACK
+**方法参数：**Function callback
 
-**CALLBACK返回参数：**
+**`callback`参数说明：**
 
-|参数名 |类型  |说明|
-|---- | ---- | ---- |
-|isConnected |Boolean |当前是否有网络连接|
-|networkType| String | 网络类型|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|isConnected |Boolean |是|-|当前是否有网络连接|
+|networkType| String |是|-| 网络类型|
 
 **networkType 有效值：**
 
@@ -67,3 +74,17 @@ swan.onNetworkStatusChange(function (res) {
     console.log(res.networkType);
 });
 ```
+<!-- #### 错误码
+
+<!-- **Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|1001|执行失败| -->
+
+<!-- **iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|  -->

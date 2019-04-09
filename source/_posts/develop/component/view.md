@@ -19,7 +19,7 @@ sidebar: view
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
 **示例：**
-<a href="swanide://fragment/024d24b7832b587bcd18ce43441318d61540395635" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/214a877dded08449e1c177811b34915e1548066914694" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <view class="single-text-area">
@@ -220,6 +220,7 @@ Page({
 * movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
 
 **示例：**
+<a href="swanide://fragment/af66f1c09b800652bd15c74df87057e21548068761674" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <view class="movable-view">
