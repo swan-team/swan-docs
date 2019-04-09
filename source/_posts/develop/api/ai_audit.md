@@ -4,13 +4,13 @@ header: develop
 nav: api
 sidebar: ai_audit
 ---
-## imageAudit
+## swan.ai.imageAudit
 
 **解释**：自定义图像审核。
 
-**方法参数**：Object
+**方法参数：**Object object
 
-**Object 参数说明**：
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|

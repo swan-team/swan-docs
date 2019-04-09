@@ -5,13 +5,13 @@ nav: api
 sidebar: ai_audio
 ---
 
-## textToAudio
+## swan.ai.textToAudio
 
 **解释：**将文本转换为可以播放的 mp3 文件。
 
-**方法参数：**Object
+**方法参数：**Object data
 
-**Object 参数说明**：
+**`data` 参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|

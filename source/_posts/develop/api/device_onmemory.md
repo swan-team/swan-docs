@@ -5,17 +5,17 @@ nav: api
 sidebar: device_onmemory
 ---
 
-onMemoryWarning
----
+## swan.onMemoryWarning
+
 **解释：**监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
 
-**参数：**CALLBACK
+**方法参数：**Function callback
 
-**CALLBACK返回参数：**
+**`callback`参数说明：**
 
-|参数名 |类型  |说明|
-|---- | ---- | ---- |
-|level |Number |仅 Android 有该字段，对应系统内存告警等级宏定义。|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|level |Number |是|-|仅 Android 有该字段，对应系统内存告警等级宏定义。|
 
 Android下告警等级对应系统宏：
 

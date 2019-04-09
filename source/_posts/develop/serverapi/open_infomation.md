@@ -1,7 +1,7 @@
 ---
 title: 消息模板
 header: develop
-nav: api
+nav: serverapi
 sidebar: open_infomation
 ---
 
@@ -31,6 +31,7 @@ sidebar: open_infomation
 		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
 	</div>
 </div>
+
 * 搜索结果页菜单面板
     > 支付、表单类消息均有该入口。
 
@@ -104,6 +105,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_tok
 |---|---|---|---|
 |offset|	int|	是|	偏移数量|
 |count|	int|	是|	返回长度，取值区间（0，20]。|
+|access_token|string	|是|	<a href="hhttps://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
 
 **返回值**:
 ```json
@@ -325,6 +327,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |scene_id|	string|	是|	场景id，例如表单id和订单id。|
 |scene_type	|int|	是|	场景type，1：表单；2：百度收银台订单；3:直连订单。|
 |ext|json string|否|`{"xzh_id":111,"category_id":15}`|
+|access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
 
 **说明**：
 * 当开发者获得用户openid，填写到touser_openid，否则获取用户swanid，填写到touser。

@@ -5,22 +5,23 @@ nav: api
 sidebar: nacomponent
 ---
 
-## showFavoriteGuide
+## swan.showFavoriteGuide
 
 **解释**：支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
 > 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。
 
-**方法参数**：Object
-**Object参数说明：**
+**方法参数**：Object object
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|type |String | 否 | 引导组件类型，有效值： bar/bar-autohide/tip， 默认值为bar|
-|content |String| 否 | 引导组件文字， bar和bar-autohide类型限制少于11个字符，tip类型少于18个字符，超过长度将截断显示，默认值: <br/>bar: 一键添加到我的小程序；<br> bar-autohide: 一键添加到我的小程序；<br> tip: 添加到我的小程序，下次使用更方便。|
-|success |Function  |  否 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|type |String | 否 | bar| 引导组件类型，有效值： bar/bar-autohide/tip。 |
+|content |String| 否 |bar: 一键添加到我的小程序；<br> bar-autohide: 一键添加到我的小程序；<br> tip: 添加到我的小程序，下次使用更方便。| 引导组件文字， bar和bar-autohide类型限制少于11个字符，tip类型少于18个字符，超过长度将截断显示。|
+|success |Function  |  否 | -| 接口调用成功的回调|
+|fail   | Function |   否  |-| 接口调用失败的回调函数|
+|complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **展现形式**：

@@ -1,11 +1,11 @@
 ---
 title: Feed 资源
 header: develop
-nav: api
+nav: serverapi
 sidebar: open_feed
 ---
 
-## submitresource
+##  submitresource
 
 **解释**：投放服务提交素材接口。提交素材接口适用于少量的素材，每天有500次调用限制，如果素材量大建议使用sitemap的方式。
 **方法**: GET、POST
@@ -63,7 +63,7 @@ sidebar: open_feed
 }
 ```
 
-## submitsitemap
+##  submitsitemap
 
 **解释**：投放服务提交sitemap接口
 **方法**：GET、POST
@@ -160,7 +160,7 @@ sidebar: open_feed
 }
 ```
 
-## deletesitemap
+##  deletesitemap
 
 **解释**：投放服务删除sitemap接口，若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除。
 **方法**: GET、POST

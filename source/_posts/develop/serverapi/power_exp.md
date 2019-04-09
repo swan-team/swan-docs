@@ -1,7 +1,7 @@
 ---
 title: 开发者服务权限说明
 header: develop
-nav: server
+nav: serverapi
 sidebar: power_exp
 ---
 

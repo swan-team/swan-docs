@@ -4,21 +4,21 @@ header: develop
 nav: api
 sidebar: location_get
 ---
-getLocation
----
+## swan.getLocation
+
 **解释：** 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object 参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型 | 必填 | 说明 |
-|---- | ---- | ---- |---- |
-|type   | String | 否  | 默认为 wgs84 返回 gps 坐标，可选 gcj02 。|
-|altitude   | Boolean | 否  | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps ，会很耗时，默认没有用 gps。|
-|success |Function  |  是 |  接口调用成功的回调函数，返回内容详见返回参数说明。|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|type   | String | 否  | -| 默认为 wgs84 返回 gps 坐标，可选 gcj02 。|
+|altitude   | Boolean | 否  | -| 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps ，会很耗时，默认没有用 gps。|
+|success |Function  |  是 | -|  接口调用成功的回调函数，返回内容详见返回参数说明。|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete  |  Function |   否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明：**
 
@@ -56,7 +56,7 @@ swan.getLocation({
 ```
 <!-- #### 错误码
 
-**Andriod**
+<!-- **Andriod**
 
 |错误码|说明|
 |--|--|
@@ -69,21 +69,21 @@ swan.getLocation({
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
-|10005|系统拒绝| -->
+|10005|系统拒绝|  -->
 
-chooseLocation
----
+## swan.chooseLocation
+
 **解释：** 打开地图选择位置。需要用户授权 scope.userLocation。
 
-**参数：** Object
-​
-**Object 参数说明：**
+**方法参数：**Object object
 
-|参数 | 类型 | 必填 | 说明 |
-|---- | ---- | ---- |---- |
-|success  | Function |否 | 接口调用成功的回调函数|
-|fail  | Function |否 | 接口调用失败的回调函数|
-|complete  | Function |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success  | Function |否 | -| 接口调用成功的回调函数|
+|fail  | Function |否 | -| 接口调用失败的回调函数|
+|complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明：**
 

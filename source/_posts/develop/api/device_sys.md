@@ -6,19 +6,19 @@ sidebar: device_sys
 ---
 
 
-getSystemInfo
----
+## swan.getSystemInfo
+
 **解释：**获取系统信息
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  是 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  是 |  -|接口调用成功的回调|
+|fail   | Function |   否  | -|接口调用失败的回调函数|
+|complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -57,7 +57,7 @@ swan.getSystemInfo({
 ```
 <!-- #### 错误码
 
-**Andriod**
+<!-- **Andriod**
 
 |错误码|说明|
 |--|--|
@@ -65,9 +65,11 @@ swan.getSystemInfo({
 |202|解析失败，请检查参数是否正确。|
 |402|安全性检查：访问控制校验失败。| -->
 
-getSystemInfoSync
----
+## swan.getSystemInfoSync
+
 **解释：**获取系统信息同步接口
+
+**方法参数：**无
 
 **同步返回参数说明：**
 
@@ -113,11 +115,14 @@ try {
 |--|--|
 |202|解析失败，请检查参数是否正确。| -->
 
-getEnvInfoSync
----
-**解释：**获取运行环境信息同步接口
+## swan.getEnvInfoSync
 
 > 基础库 2.0.28 版本开始支持。
+
+**解释：**获取运行环境信息同步接口
+
+**方法参数：**无
+
 
 **同步返回参数说明：**
 
@@ -144,11 +149,14 @@ try {
 }
 ```
 
-canIUse
----
+## swan.canIUse
+
 **解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**参数说明：** 使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+**方法参数：** String schema
+使用 `${API}.${method}.${param}.${options} `或者 `${component}.${attribute}.${option}` 方式来调用。
+
+**`schema`参数说明：**
 
 |参数  |说明 |
 |---- | ---- |

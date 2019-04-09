@@ -6,13 +6,13 @@ sidebar: ai_ocr
 ---
 
 
-## ocrIdCard
+## swan.ai.ocrIdCard
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
-**方法参数**：Object
+**方法参数：**Object object
 
-**Object 参数说明**：
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -126,13 +126,13 @@ swan.chooseImage({
 });
 ```
 
-## ocrBankCard
+## swan.ai.ocrBankCard
 
 **解释**：识别银行卡并返回卡号、发卡行和卡片类型。
 
-**方法参数**：Object
+**方法参数：**Object object
 
-**Object 参数说明**：
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -178,13 +178,13 @@ swan.chooseImage({
 });
 ```
 
-## ocrDrivingLicense
+## swan.ai.ocrDrivingLicense
 
 **解释**：对机动车驾驶证所有关键字段进行识别。
 
-**方法参数**：Object
+**方法参数：**Object object
 
-**Object 参数说明**：
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -261,13 +261,13 @@ swan.chooseImage({
 });
 ```
 
-## ocrVehicleLicense
+## swan.ai.ocrVehicleLicense
 
 **解释**：对机动车行驶证正本所有关键字段进行识别。
 
-**方法参数**：Object
+**方法参数：**Object object
 
-**Object 参数说明**：
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|

@@ -12,7 +12,7 @@ sidebar: app_service_aop
 所以，智能小程序在框架层提供切面。让扩展包的开发者可以在小程序运行的生命周期/事件触发/API调用等处，注入通用逻辑。
 
 ## App.after
----
+
 <div class="notice">解释： </div>
 App.after可以增加APP级的切面，触发的时机是在所拦截的对应生命周期方法执行之后
 
@@ -60,7 +60,7 @@ App.after({
 ```
 
 ## Page.after
----
+
 <div class="notice">解释： </div>
 Page.after可以Page级的切面，触发的时机是在所拦截的对应生命周期方法执行之后，也可以拦截所有页面上发生的事件（对于要拦截的事件，在swan文件上必须显示绑定了相应事件）
 
@@ -121,7 +121,7 @@ Page.after({
 ```
 
 ## swan.after
----
+
 <div class="notice">解释： </div>
 swan.after可以拦截所有当前运行小程序对于API的调用，默认传入 `function` 时，只在API函数调用的返回阶段拦截。如果传入Object，则可以选择在返回阶段拦截，还是在回调调用阶段拦截。
 

@@ -5,14 +5,18 @@ nav: api
 sidebar: ai_voice
 ---
 
-getVoiceRecognizer
----
+## swan.ai.getVoiceRecognizer
+
 
 **解释**：获取全局唯一的语音识别器`voiceRecognizer`。
 
-**参数**：无
+**方法参数**：无
 
-**voiceRecognizer 对象的方法列表：**
+**返回值：**voiceRecognizer
+
+### voiceRecognizer
+
+**`voiceRecognizer`对象的方法列表：**
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
