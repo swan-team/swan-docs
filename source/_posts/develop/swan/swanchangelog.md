@@ -5,16 +5,25 @@ nav: tutorial
 sidebar: swanchangelog
 ---
 
+## 3.40 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.40.6|2019.4.9|**BugFix**<p>修复绑定 bindtap 事件，长按后再点击会触发两次bindtap的问题。|
+|3.40.4|2019.4.4|**BugFix**<p>修复prefetch策略中变量替换后不中缓存的问题。|
+
 ## 3.30 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.30.20|2019.4.9|**BugFix**<p>修复绑定 bindtap 事件，长按后再点击会触发两次bindtap的问题。|
 |3.30.7|2019.3.20|**New**<p>新增 swan 预加载(prefetch)功能。<p>**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 
 ## 3.20 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.20.31|2019.4.9|**BugFix**<p>修复绑定 bindtap 事件，长按后再点击会触发两次bindtap的问题。|
 |3.20.21|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.20.15 |2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
 |3.20.11 |2019.3.5|**New**<p>支持人脸识别和词法分析AI能力的API接口。<p>**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
