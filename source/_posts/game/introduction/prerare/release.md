@@ -12,7 +12,7 @@ priority: 01-05
  ![图片](/img/game/introduction/prerare/publish01.png)
 
 #### 设置最低兼容版本
-开发完成后，需要设置基础库最低兼容版，建议最低兼容版本设定为 1.0.8。
+开发完成后，需要在**开发者平台**设置基础库最低兼容版，建议最低兼容版本设定为 1.0.10。
  ![图片](/img/game/introduction/prerare/publish02.png)
 
 #### 填写准入报告
