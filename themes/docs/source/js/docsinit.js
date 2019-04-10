@@ -252,17 +252,18 @@
             }
         },
         _scrollToAnchor: function (element) {
-            var href = element && element.href ? element.href : $(this)[0].href;
-            href = decodeURIComponent(href);
-
-            var tar = href.indexOf('#');
-            href = tar > -1 ? href.substr(tar).replace('/', '') : href;
-            var offsetTop = $(href).offset() ? $(href).offset().top : 0;
-            var scrollTop = $('.m-doc-content-layout').scrollTop();
-            var tarTop = offsetTop + scrollTop - 70;
-            var diffTop = Math.abs(tarTop - scrollTop);
-            var time = diffTop > 1800 ? 200 : 100;
-            $('.m-doc-content-layout').scrollTo({ toT: tarTop, durTime: time });
+            setTimeout(function () {
+                var href = element && element.href ? element.href : $(this)[0].href;
+                href = decodeURIComponent(href);
+                var tar = href.indexOf('#');
+                href = tar > -1 ? href.substr(tar).replace('/', '') : href;
+                var offsetTop = $(href).offset() ? $(href).offset().top : 0;
+                var scrollTop = $('.m-doc-content-layout').scrollTop();
+                var tarTop = offsetTop + scrollTop - 30;
+                var diffTop = Math.abs(tarTop - scrollTop);
+                var time = diffTop > 1800 ? 200 : 100;
+                $('.m-doc-content-layout').scrollTo({toT: tarTop, durTime: time });
+            }, 0);
         },
         addEvent: function () {
             var ctx = this;
