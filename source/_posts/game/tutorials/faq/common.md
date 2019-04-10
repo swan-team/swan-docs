@@ -109,10 +109,8 @@ A：使用 Laya 引擎游戏的已知问题，将 Laya 引擎更新至 2.0.0 以
 Q：为什么 iOS 未登录状态下打开横屏游戏，调用登录、授权接口偶现画面半屏？
 A：iOS 已知问题，修复中。建议开发者先渲染游戏画面，待游戏画面出现后，提供交互按钮给用户点击，再调用登录接口。
 
-
 Q：为什么 iOS 使用 UpdateManger.applyUpdate 接口后，部分游戏的加载进度条卡住？
 A：百度App 11.3.5 版本修复了该问题，若要在低版本使用该接口，需在各机型尤其是低端机上测试通过后再使用，或在收到 UpdateManager.onUpdateReady 回调后，引导用户退出重新进入。
-
 
 Q：为什么 iOS 使用 UpdateManager.applyUpdate 后，游戏无法更新？
 A：部分游戏上会出现该问题。在新版本基础库上修复，详见[基础库更新日志](https://smartprogram.baidu.com/docs/game/tutorials/version/releaseLog/)。低版本在收到 UpdateManager.onUpdateReady 回调后，可引导用户退出重新进入。
@@ -120,13 +118,11 @@ A：部分游戏上会出现该问题。在新版本基础库上修复，详见[
 Q：为什么 iOS 无法使用支付相关 API？
 A：由于苹果政策限制，支付相关 API 在 iOS 上无法使用。
 
-
 Q：为什么 iOS 的 swan.onTouchStart 无法响应？
 A：百度 App 11.3.6 之前的版本已知问题， iPhone 屏幕左侧 1/5 概率性无法响应 swan.onTouchStart 事件，新版本修复。老版本可绕过该区域触摸或者监听其他触摸事件。
 
 Q：为什么 iOS 分包加载回调成功，但却加载失败？
 A：百度 App 11.3.6 之前版本已知问题，新版本修复，老版本可将 LoadSubpackageTask 对象挂在某个全局对象上增加引用，不让其释放，待分包加载完成后再减少引用，释放对象。
-
 
 Q：为什么 swan.request 接口，调用失败的时候，无法获取到 HTTP status code？
 A：百度 App 11.6.0 版本增加网络请求失败时的 HTTP status code，之前版本只能获取请求成功的 HTTP status code。
