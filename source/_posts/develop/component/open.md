@@ -66,7 +66,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.1.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.4.js"></script>
 ```
 
 ```javascript
@@ -103,5 +103,5 @@ web-view 网页中支持的接口有：
 **说明: **
 
 * 网页内 iframe 的域名也需要配置到域名白名单。
-* 每个页面只能有一个`<web-view/>`，`<web-view/>`会自动铺满整个页面，并覆盖其他组件。
+* 每个页面只能有一个 <`web-view/`> ，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
 * 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。

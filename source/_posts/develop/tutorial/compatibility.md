@@ -7,8 +7,8 @@ sidebar: compatibility
 
 随着小程序不断支持更多的功能，旧版本的客户端可能会出现不支持新增功能的情况，因此在使用新增功能时需做兼容性处理。
  
-* 通过 swan.getSystemInfo 或者 swan.getSystemInfoSync 获取到小程序的 SWAN 版本号。
-* 通过 swan.canIUse 详情来判断是否可以在该 SWAN 版本下直接使用对应的API或者组件。
+* 通过 <a href="http://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo/">swan.getSystemInfo </a>或者 <a href="http://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync/">swan.getSystemInfoSync</a> 获取到小程序的 SWAN 版本号。
+* 通过 <a href="http://smartprogram.baidu.com/docs/develop/api/device_sys/#canIUse/">swan.canIUse</a> 详情来判断是否可以在该 SWAN 版本下直接使用对应的API或者组件。
 
 ## 版本比较 
 智能小程序客户端和智能小程序 SWAN 版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订号）。 开发者可以根据版本号参考以下代码进行兼容性处理：

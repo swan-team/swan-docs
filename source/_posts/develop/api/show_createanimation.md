@@ -4,16 +4,18 @@ header: develop
 nav: api
 sidebar: show_createanimation
 ---
-createAnimation
----
+## swan.createAnimation
+
 **解释：**创建一个动画实例 animation
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object 参数说明：**
+**返回值：**animation
 
-|参数名 |类型  |必填  |默认值  |说明|
-|---- | ---- | ---- | ----- |---- |
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
 |duration |Integer | 否|  400 | 动画持续时间，单位 ms 。|
 |timingFunction |String | 否|  ‘linear’| 定义动画的效果 |
 |delay|Integer | 否|  0 | 动画延迟时间，单位 ms 。|
@@ -41,11 +43,12 @@ var animation = swan.createAnimation({
 ```
 
 
-animation
----
+## animation
+
 **解释：**动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
-**animation方法列表**
+
+**`animation`对象的属性列表:**
 
 普通样式：
 

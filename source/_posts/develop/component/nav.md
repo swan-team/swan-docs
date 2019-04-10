@@ -49,7 +49,7 @@ sidebar: nav
 ```
 `<navigator/>` 的子节点背景色应为透明色。
 **示例**： 
-<a href="swanide://fragment/57e55a977e6df1610e996011da073bf11540396955" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/76d030309d2763b5d1b2a03b9cc9c7be1548066522341" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```css
 /** css **/

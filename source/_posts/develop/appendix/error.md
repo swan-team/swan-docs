@@ -36,7 +36,7 @@ App 和 Page 传的参数类型必须为 bject 对象。
 创建自定义组件实例错误。
 
 * page配置json文件中不应该含有component：true字段。
-* 找不到该路径下的自定义组件。
+* 无法找到该路径下的自定义组件。
 具体配置请参考文档： <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component/ ">创建自定义组件</a>。
 
 ## CUSTOM_COMPONENT_LIFE_CYCLE_ERROR

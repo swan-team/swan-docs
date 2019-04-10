@@ -6,13 +6,15 @@ sidebar: media_backgroundaudiomanager
 ---
 
 
-getBackgroundAudioManager
----
+## swan.getBackgroundAudioManager
+
 **解释：**获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
-**参数：**无
+**方法参数：**无
 
-**backgroundAudioManager 对象的属性列表：**
+###  backgroundAudioManager
+
+**`backgroundAudioManager`对象的属性列表：**
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -42,6 +44,8 @@ getBackgroundAudioManager
 |onTimeUpdate | callback | 音频进度更新事件 |
 |onError | callback | 音频播放错误事件 |
 |onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。|
+|onSeeked| callback|监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。|
+|onSeeking| callback|监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。|
 <!-- |onPrev | callback | 用户在系统音乐播放面板点击上一曲事件（iOS only）。 |
 |onNext | callback | 用户在系统音乐播放面板点击下一曲事件（iOS only）。| -->
 **示例：**
@@ -57,3 +61,15 @@ backgroundAudioManager.coverImgUrl = 'xxx';
 backgroundAudioManager.src = 'xxx';
 
 ```
+
+<!-- #### 错误码
+
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法 |
+|202 |解析失败，请检查参数是否正确|
+|204|当前正在播放来源于其他小程序的音频，无权控制|
+|1005|播放被打断|
+|1006|加载音频失败|
+|1007|seek失败，播放器尚未缓冲| -->

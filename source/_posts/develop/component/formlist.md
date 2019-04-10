@@ -63,7 +63,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/7a3974d3a4cefd5f89d685adce8935b61540393782" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -107,7 +107,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/501ed4b3f30ec74cc177425610b4f4ba1540393923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -182,10 +182,11 @@ Page({
 |-----|---- |---- |----|
 | bindsubmit | EventHandle    |携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}}	`|-|
 | bindreset | EventHandle   |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean|是否返回 formId ，默认为false。|1.12|
+|report-submit|Boolean|是否用于发送<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
 
 
-<notice>示例： </notice>
+示例：
+<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -259,7 +260,7 @@ Page({
 | done |右下角按钮为 “完成” |
 
 **示例**：
-<a href="swanide://fragment/7e9c7e817e7cb250e6f2b40e2089efd61540395280" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 ```xml
 <!-- input.swan -->
@@ -273,6 +274,10 @@ Page({
 * input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
+
+**BUG：**
+
+  在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
 
 ## label
 
@@ -337,8 +342,8 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | Array/Object Array |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |- |当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |- |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle |-|value 改变时触发 change 事件，event.detail = {value: value}|
 | disabled | Boolean  | false |是否禁用|
@@ -349,8 +354,8 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | 二维 Array/Object Array |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
-| range-key | String |- |当 range 是一个二维 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | 二维 Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range-key | String |- |当 range 是一个二维 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle |-|某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle |-|value 改变时触发 change 事件，event.detail = {value: value}|
@@ -378,7 +383,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |day |选择器粒度为天|
 
 **示例**：
-<a href="swanide://fragment/1bc0eab03fe5a17d1a04e3239ba3a3d31540397450" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -618,7 +623,7 @@ Page({
 |bindchanging |EventHandle |-  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例：**
-<a href="swanide://fragment/39a1af938017aaaec03d63de424a35b51540396100" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 ```xml

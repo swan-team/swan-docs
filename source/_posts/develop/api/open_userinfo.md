@@ -8,28 +8,26 @@ sidebar: open_userinfo
 
 ## swanid机制说明
 
-由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用`swan.login()`强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个SwanID的标识，可视作用户的设备标识。
+由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用`swan.login()`强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个 SwanID 的标识，可视作用户的设备标识。
+* 用户在同一台设备上使用同一个开发者所开发的不同智能小程序，得到的是相同的 SwanID 。
+* 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的 SwanID 是不同的。
+开发者通过对比接口中返回的`swanid_signature`和采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature-计算方法/">signature 计算方法</a> 的计算值是否一致来判断 swanid 是否有效。
 
-1. 用户在同一台设备上使用同一个开发者所开发的不同智能小程序，得到的是相同的SwanID。
-2. 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的SwanID是不同的。
 
-**swanid校验性有以下两种方法**：
-1. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
-2. 对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
 
-getSwanId
----
+## swan.getSwanId
+
 **解释：**获取 swanid。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否 | -|  接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -57,20 +55,40 @@ swan.getSwanId({
     }
 });
 ```
+<!-- #### 错误码
 
-getUserInfo
----
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败|
+|10001|内部错误|
+|10002|网络无连接|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
+|10005|系统拒绝| -->
+
+## swan.getUserInfo
+
 **解释：**获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否 |  -| 接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **success返回参数说明：**
@@ -107,62 +125,23 @@ swan.getUserInfo({
     }
 });
 ```
+<!-- #### 错误码
+**Andriod**
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败。|
+|-200|权限拒绝，仅开发者可见|
+**iOS**
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
+|10005|系统拒绝| -->
 
-## verify
 
-**解释**：swanid有效性校验接口：true表示有效，false表示无效。
-**接口地址**：`https://openapi.baidu.com/rest/2.0/smartapp/swanid/verify`
-**请求类型**：POST
-**参数**：
-
-|参数|含义|举例|
-|--|--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/server/power_exp/">access_token</a>|	小程序标识|xx.xxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx.<p>xxxxxxxxxxxxxxxxx.xxxxxxxx-xxxxxxxx|
-|swanid	|用户标识	|SSr1ngSR9kY5dGVPADtuhz4F31Q9nzpoaPwTazUVmTphieQzyqtUcaM4Kr4H5ViAp<p>kcZEvLb33S3fMMZUsoeLKbiW|
-
-**示例**：
-校验成功：
-```json
-{
-    "data": {
-        "result": true
-    },
-    "errmsg": "",
-    "errno": "0"
-}
-```
-校验失败：
-```json
-{
-    "data": {
-        "result": false
-    },
-    "errmsg": "",
-    "errno": "0"
-}
-```
-异常：
-* 未通过参数检查：
-```json
-{
-    "error_msg": "Invalid parameter",
-    "error_code": 100
-}
-```
-* access_token无效
-```json
-{
-    "error_msg": "Access token invalid or no longer valid",
-    "error_code": 110
-}
-```
-* swanid校验失败
-```json
-{
-    "errmsg": "no swanid found, or swanid is invalid",
-    "errno": "-1"
-}
-```
 
 ## signature 计算方法
 

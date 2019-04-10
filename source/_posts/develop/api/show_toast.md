@@ -5,25 +5,25 @@ nav: api
 sidebar: show_toast
 ---
 
-showToast
------
+## swan.showToast
+
 
 **解释：**显示消息提示框
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|title  | String | 是  | 提示的内容 |
-|icon | String | 否  | 图标，有效值` "success"、"loading"、"none", 默认"success"`。 |
-|image  |  String | 否 |  自定义图标的本地路径，image 的优先级高于 icon |
-|duration  |  Number | 否 |  提示的延迟时间，单位毫秒，默认：2000 |
-|success| Function |   否 |  接口调用成功的回调函数 |
-|fail  |  Function |   否  | 接口调用失败的回调函数 |
-|complete   | Function |   否|   接口调用结束的回调函数（调用成功、失败都会执行）|
-|mask|Boolean|否|是否显示透明蒙层，防止触摸穿透，默认：false。|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|title  | String | 是  |-| 提示的内容 |
+|icon | String | 否  | success|图标，有效值` "success"、"loading"、"none"`。 |
+|image  |  String | 否 | -| 自定义图标的本地路径，image 的优先级高于 icon |
+|duration  |  Number | 否 |  2000| 提示的延迟时间，单位毫秒。 |
+|success| Function |   否 | -| 接口调用成功的回调函数 |
+|fail  |  Function |   否  |-| 接口调用失败的回调函数 |
+|complete   | Function |   否| -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
 **icon有效值：**
 
@@ -34,7 +34,7 @@ showToast
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
 **示例：**
-<a href="swanide://fragment/0635c55ccaf54bdb5d2e245abf4ba48d1540396154" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.showToast({
     title: '我是标题',
@@ -42,32 +42,61 @@ swan.showToast({
     duration: 1000,
 });
 ```
+<!-- #### 错误码
+**Andriod**
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|302|无法找到调起协议对应端能力方法|
+**iOS**
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。| -->
 
-showLoading
------
+## swan.showLoading
+
 
 **解释：**显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|title  | String | 是  | 提示的内容|
-|mask | Boolean| 否 |  是否显示透明蒙层，防止触摸穿透，默认：false。|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function   | 否 |  接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|title  | String | 是  |-| 提示的内容|
+|mask | Boolean| 否 |false|  是否显示透明蒙层，防止触摸穿透。|
+|success |Function  |  否 |-|  接口调用成功的回调函数|
+|fail  |  Function   | 否 |-|   接口调用失败的回调函数|
+|complete  |  Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-hideToast
------
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。| -->
+
+## swan.hideToast
+
 
 **解释：** 隐藏消息提示框
 
-hideLoading
----
+**方法参数：**无
+
+## swan.hideLoading
+
 **解释：**隐藏 loading 提示框
+
+**方法参数：**无
 
 **示例：**
 ```js
@@ -80,27 +109,34 @@ setTimeout(function() {
     swan.hideLoading();
 }, 2000);
 ```
+<!-- #### 错误码
 
-showModal
----
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败| -->
+
+## swan.showModal
+
 **解释：**显示模态弹窗
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|title  | String|  是 |  提示的标题|
-|content |String | 是 |  提示的内容|
-|showCancel | Boolean|否  | 是否显示取消按钮，默认为 true。|
-|cancelText  |String | 否  | 取消按钮的文字，默认为“取消”，最多 4 个字符。|
-|cancelColor |HexColor|    否  | 取消按钮的文字颜色，默认为 “#000000”。|
-|confirmText |String | 否 |  确定按钮的文字，默认为“确定”，最多 4 个字符。|
-|confirmColor |   HexColor  |  否 |  确定按钮的文字颜色，默认颜色为“#3c76ff”。|
-|success| Function|    否  | 接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete   | Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|title  | String|  是 | -| 提示的标题|
+|content |String | 是 |-|  提示的内容|
+|showCancel | Boolean|否  | true| 是否显示取消按钮 。|
+|cancelText  |String | 否  |取消|取消按钮的文字，最多 4 个字符。|
+|cancelColor |HexColor|    否  |#000000| 取消按钮的文字颜色。|
+|confirmText |String | 否 | 确定| 确定按钮的文字，最多 4 个字符。|
+|confirmColor |   HexColor  |  否 |#3c76ff|  确定按钮的文字颜色。|
+|success| Function|    否  |-| 接口调用成功的回调函数|
+|fail   | Function  |  否  |-|接口调用失败的回调函数|
+|complete   | Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -127,22 +163,36 @@ swan.showModal({
     }
 });
 ```
+<!-- #### 错误码
 
-showActionSheet
-----
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。| -->
+
+
+## swan.showActionSheet
+
 **解释：**​显示操作菜单
 
-**参数：**Object
+**方法参数：**Object object
 
-​**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|itemList |   String Array  |  是 |  按钮的文字数组，数组长度最大为6个。|
-|itemColor |  HexColor|    否   |按钮的文字颜色，默认颜色为“#3c76ff”。|
-|success| Function  |  否  | 接口调用成功的回调函数，详见返回参数说明。|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|itemList |   Array.<string>  |  是 |-|  按钮的文字数组，数组长度最大为6个。|
+|itemColor |  HexColor|    否   |#3c76ff|按钮的文字颜色。|
+|success| Function  |  否  |-| 接口调用成功的回调函数，详见返回参数说明。|
+|fail  |  Function |   否  |-|  接口调用失败的回调函数|
+|complete   | Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -163,3 +213,12 @@ swan.showActionSheet({
     }
 });
 ```
+
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|202|解析失败，请检查参数是否正确。| -->

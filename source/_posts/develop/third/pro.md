@@ -39,7 +39,7 @@ post 数据示例：
   "MsgSignature": "ba394c04acece6c2c0edee058c5dddf82474b8ee"
 }
 ```
-其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/apppage/#附录">附录</a>部分，解密后数据如下：
+其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/deciphering/">附录</a>部分，解密后数据如下：
 ```json
 {
     "Ticket" : "ticket",  //ticket内容
@@ -70,7 +70,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|
-|client_id|	string|	是|	分配给第三方平台key id。|
+|client_id|	string|	是|	分配给第三方平台的 key 。|
 |ticket	|string	|是|	第三方平台服务器推送的 ticket，此 ticket 会定时推送，具体请见“1、 推荐 ticket协议”。|
 返回值说明
 
@@ -145,13 +145,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 将用户浏览器重定向的如下授权页面，生成授权二维码 。
 页面地址
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://cp01-xstp-otp5-4.epc.baidu.com:8220/mappconsole/main/apps&pre\_auth\_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
 ```
 参数说明
 
 |参数名称|	类型|	是否必须|	描述|
 |---|---|---|---|
-|client_id|	string|	是|	分配给第三方的 client id|
+|client_id|	string|	是|	分配给第三方平台的 key |
 |pre_auth_code	|string	|是	|预授权码|
 |redirect_uri|	string|	是	|回调URI|
 ### 5、授权回调，获取授权码 authorization_code
@@ -295,3 +295,58 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
   }
 }
 ```
+
+### 9、推送授权相关通知
+当小程序对第三方平台进行授权、取消授权、更新授权后，百度服务器会向第三方平台方的授权事件接收URL（创建第三方平台时填写）推送相关通知。
+
+POST数据示例（取消授权通知）
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "UNAUTHORIZED"
+}
+```
+
+POST数据示例（授权成功通知）
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "AUTHORIZED",
+    "authorizationCode":"授权码",
+    "authorizationCodeExpiresIn":60
+}
+```
+
+POST数据示例（授权更新通知）
+
+```
+{
+    "appId": 小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "UPDATE_AUTHORIZED",
+    "authorizationCode":"授权码",
+    "authorizationCodeExpiresIn":60
+}
+```
+
+第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/develop/third/deciphering/">第三方平台消息加解密</a>。
+
+
+#### 参数说明
+
+|参数名 | 类型 | 描述|
+|----- |-----|  -----|
+|appId |long | 小程序appid|
+|tpAppId | long | 第三方平台id|
+|eventTime |string | 事件发生时间|
+|event |string | AUTHORIZED:新建授权关系<br> UNAUTHORIZED:解除授权关系<br> UPDATE_AUTHORIZED:授权关系更新|
+|authorizationCode |string | 授权码可以换取小程序的接口调用凭据|
+|authorizationCodeExpiresIn |int | 授权码过期时间（单位：秒）|
+

@@ -32,20 +32,20 @@ sidebar: open_log
 4、 当用户完成了授权，且授权会话仍处于有效期时，智能小程序不需要每次都进行前两步，而是可以直接进行第三步获取用户信息。
 要判断当前用户的授权会话是否仍处于有效期，可调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
-## login
+## swan.login
 
 **解释：** 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|timeout|	number|		否|	超时时间，单位ms|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|timeout|	number|		否| -|	超时时间，单位ms|
+|success |Function  |  否 |  -| 接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明：**
 
@@ -70,6 +70,22 @@ swan.login({
     }
 });
 ```
+<!-- #### 错误码
+**Andriod**
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+|1001|执行失败| -->
+
+<!-- **iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户未登录(user not login)|
+|10007|请求超时| -->
 
 ## Session Key
 
@@ -77,7 +93,10 @@ swan.login({
 
 **获取Session Key的URL地址：**
 
-https://openapi.baidu.com/nalogin/getSessionKeyByCode
+https://spapi.baidu.com/oauth/jscode2sessionkey
+
+> 为了让您的智能小程序运行在联盟 App 上,我们对获取 SessionKey 的接口做了升级。新接口可以兼容获取百度内部 App 和百度外部 App 的 SessionKey。
+您只需要将原接口地址 `"https://openapi.baidu.com/nalogin/getSessionKeyByCode"` 更改为 `"https://spapi.baidu.com/oauth/jscode2sessionkey"` ,即可让您的智能小程序在其它App上自动实现账号关联。
 
 **获取Session Key需要的参数：**
 
@@ -104,7 +123,8 @@ https://openapi.baidu.com/nalogin/getSessionKeyByCode
 **请求示例：**
 
 ```
-# curl -d "code=xxx&client_id=xxx&sk=xxx" https://openapi.baidu.com/nalogin/getSessionKeyByCode
+# curl -d "code=xxx&client_id=xxx&sk=xxx" 
+https://spapi.baidu.com/oauth/jscode2sessionkey
 {
     "openid": "ABCDEFG123",
     "session_key": "xxxxxx"
@@ -112,19 +132,19 @@ https://openapi.baidu.com/nalogin/getSessionKeyByCode
 ```
 
 
-## checkSession
+## swan.checkSession
 
-**解释：**通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由百度 App 维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
+**解释：**通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否 | -|  接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -164,17 +184,34 @@ swan.checkSession({
 });
 ```
 
-## 错误码列表
+<!-- #### 错误码  -->
 
-| 错误码 | 错误信息 | 详细描述 |
+<!-- | 错误码 | 错误信息 | 详细描述 |
 | - | :- | - |
 | invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
 | invalid_client | unknown client id | client_id、client_secret 参数无效。 |
-| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 |
+| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
+<!-- **Andriod** -->
 
-## isLoginSync
+<!-- |错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确|
+|10001|内部错误 |
+|10002|网络请求失败|
+|10004|用户未登录(user not login)| -->
+
+## swan.isLoginSync
 
 **解释：**获取百度 App登录状态。
+
+**方法参数**：无
 
 **返回参数说明：**
 
@@ -192,6 +229,13 @@ try {
     console.log('error', e);
 }
 ```
+<!-- #### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败| -->
 
 ## 用户数据的签名验证和加解密
 

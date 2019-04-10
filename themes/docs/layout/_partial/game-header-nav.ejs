@@ -1,0 +1,137 @@
+<%
+    var navs = [
+        {
+            text: '介绍',
+            name: 'game-introduction-group',
+            link: '/game/introduction/prerare/enter/',
+            children: [
+                {
+                    link: '/introduction/enter_application/',
+                    text: '小程序介绍',
+                    name: 'introduction'
+                },
+                {
+                    link: '/game/introduction/prerare/enter/',
+                    text: '介绍',
+                    name: 'game-introduction'
+                }
+            ]
+        },
+
+        {
+            text: '开发',
+            name: 'game-develop-group',
+            link: '/game/api/openApi/authorize/',
+            children: [
+                {
+                    link: '/develop/tutorial/codedir/',
+                    text: '小程序开发',
+                    name: 'develop'
+                },
+                {
+                    link: '/game/api/openApi/authorize/',
+                    text: '开发',
+                    name: 'game-develop'
+                }
+            ]
+        },
+        {
+            text: '数据',
+            name: 'game-data-group',
+            link: '/game/data/feature/concept/',
+            children: [
+                {
+                    link: '/data/concept/',
+                    text: '小程序数据',
+                    name: 'data'
+                },
+                {
+                    link: '/game/data/feature/concept/',
+                    text: '数据',
+                    name: 'game-data'
+                }
+            ]
+        },
+        {
+            text: '运营',
+            name: 'game-operations-group',
+            link: '/game/operations/service/specification/'
+        }
+    ];
+
+    var pageType = page.header;
+    // HACK: 小游戏根据文章路径，设置pageType
+    if (!pageType) {
+        if (page.path.indexOf('game/introduction') === 0) {
+            pageType = 'game-introduction';
+        }
+        else if (page.path.indexOf('game/data') === 0) {
+            pageType = 'game-data';
+        }
+        else if (/^game\/(api|tutorials)/.test(page.path)) {
+            pageType = 'game-develop';
+        }
+        else if (page.path.indexOf('game/operations') === 0) {
+            pageType = 'game-operations-group';
+        }
+    }
+
+    var index;
+    var activeText;
+    var activeLink;
+    navs.forEach((nav, i) => {
+        if (nav.children) {
+            nav.children.forEach((subNav, j) => {
+                if (pageType === subNav.name) {
+                    index = i;
+                    activeText = subNav.text;
+                    activeLink = subNav.link;
+                }
+            });
+        }
+        else if (pageType === nav.name) {
+            index = i;
+            activeText = nav.text;
+            activeLink = nav.link;
+        }
+    });
+%>
+<script>var headerNavs = <%-JSON.stringify(navs)%>;</script>
+<div class="m-doc-level1">
+    <ul><%#
+        %><% for(var i = 0; i < navs.length; i++) {%><%#
+            %><li class="<%- navs[i].name %><%- (i === index ? ' m-doc-header-nav-selected' : '') %>"><%#
+                %><% if(i === index) { %><%#
+                    %><a href="/docs<%- activeLink %>"><%- activeText %></a><%#
+                %><% } else { %><%#
+                    %><a href="/docs<%- navs[i].link %>"><%- navs[i].text %></a><%#
+                %><% } %><%#
+            %></li><%#
+        %><% } %><%#
+    %></ul>
+    <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
+</div>
+
+<div class="mobile-navbar-selected">
+    <span>
+    <% switch(page.categoryName) {
+        case 'introduction': %>
+            介绍
+            <% break; %>
+
+        <% case 'api': %>
+            API
+            <% break; %>
+        <% case 'tutorials': %>
+            教程
+            <% break; %>
+        <% case 'data': %>
+            数据
+            <% break; %>
+        <% case 'operations': %>
+            运营
+            <% break; %>
+    <% } %>
+    </span>
+    <%- image_tag('img/arrow-open.png') %>
+</div>

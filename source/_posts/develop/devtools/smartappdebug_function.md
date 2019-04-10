@@ -1,5 +1,5 @@
 ---
-title: 常用共呢
+title: 常用功能
 header: develop
 nav: devtools
 sidebar: smartappdebug_function
@@ -11,7 +11,29 @@ sidebar: smartappdebug_function
 
 模拟器提供了和百度App客户端一致的运行环境，对于绝大部分的 API 均能够在模拟器上呈现出与客户端一致的状态。
 
-![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/smartapp/preview.png)
+开发者可以自定义设备类型、网络类型、设备缩放比。
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/simulator_190102.gif)
+
+## 编辑器
+
+编辑器可以进行小程序开发，编辑保存文件，对项目中进行新增文件、删除文件、文件重命名、打开文件等操作。
+
+在代码编辑区域调用小程序api可以获得代码提示。
+
+
+常用快捷键（需当前焦点在编辑器中）
+
+
+|Mac OS 快捷键 | Windows 快捷键 | 说明 |
+|---|---|---|
+| ⌘ + W | ctrl + W | 关闭当前tab页 |
+| ⌘ + S | ctrl + S | 保存当前文件的改动 |
+| ⌘ + Z | ctrl + Z | 撤销当前改动 |
+| ⌘ + F | ctrl + F | 在当前页面中搜索内容 |
+| shift + option + F| shift + alt + F | 格式化当前文件 |
+
+![图片](../../../img/tool/编辑器.gif)
+
 
 ## 编译
 

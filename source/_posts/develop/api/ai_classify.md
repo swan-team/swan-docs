@@ -6,13 +6,13 @@ sidebar: ai_classify
 ---
 
 
-## advancedGeneralIdentify
+## swan.ai.advancedGeneralIdentify
 
-**解释：**通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。
+**解释**：通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。
 
-**方法参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -81,13 +81,13 @@ swan.chooseImage({
   }
 });
 ```
-## objectDetectIdentify
+## swan.ai.objectDetectIdentify
 
-**解释：**用户向服务请求检测图像中的主体位置。
+**解释**：用户向服务请求检测图像中的主体位置。
 
-**方法参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -137,13 +137,13 @@ swan.chooseImage({
 });
 ```
 
-## carClassify
+## swan.ai.carClassify
 
-**解释：**用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
+**解释**：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
 
-**方法参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -235,13 +235,13 @@ swan.chooseImage({
 });
 ```
 
-## dishClassify
+## swan.ai.dishClassify
 
-**解释：**用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
+**解释**：用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
 
-**方法参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -318,13 +318,13 @@ swan.chooseImage({
 });
 ```
 
-## logoClassify
+## swan.ai.logoClassify
 
-**解释：**用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
+**解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
 
-**方法参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -386,12 +386,12 @@ swan.chooseImage({
 });
 ```
 
-## animalClassify
+## swan.ai.animalClassify
 
-**解释：**该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
-**方法参数：**Object
+**解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -458,12 +458,12 @@ swan.chooseImage({
 });
 ```
 
-## plantClassify
+## swan.ai.plantClassify
 
-**解释：**该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
-**方法参数：**Object
+**解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -524,3 +524,44 @@ swan.chooseImage({
   }
 });
 ```
+<!-- ## recognizeImage
+
+> 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)，在 3.20.3 版本开始支持。
+
+支持在小程序内调起识图，目前支持的识图功能包含： 扫码，拍题，翻译。
+
+
+**Object参数说明：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|categoryList |String Array |  是 | 需要调起的识图垂类列表 |
+|index |Number| 否 | 对应categoryList的索引值，设定调起识图垂类功能，默认为0，即categoryList中第一项。 |
+|showTitle |Boolean | 否  |当垂类列表中仅有一项时，调起识图后是否展示垂类名称，默认为false，即单一垂类调起识图时不展示名称。  |
+|success |Function  |  是 |  接口调用成功的回调|
+|fail   | Function |   否  | 接口调用失败的回调函数|
+|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**categoryList有效值**
+
+|errCodegory|功能|
+|----|----|
+|BARCODE|扫码|
+|TRANSLATE|翻译|
+|QUESTION|拍题|
+
+**示例代码：**
+
+```javascript
+swan.recognizeImage({
+    categoryList: ['BARCODE'], 
+    index: 0,
+    showTitle: true,
+    success(res) {
+        console.log('调起识图成功：', res);
+    },
+    fail(err) {
+        console.log('调起识图失败：', err);
+    }
+})
+``` -->
