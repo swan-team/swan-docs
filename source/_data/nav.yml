@@ -647,7 +647,7 @@
                 name: custom-component_trdparty
         -
           link: /develop/framework/subpackages
-          text: 基础性能
+          text: 性能
           name: subpackages
           sidebar:
             -
@@ -655,18 +655,7 @@
               text: 分包加载
               name: subpackages
 
-            -
-              link: /develop/framework/client-lib
-              text: 基础库
-              name: client-lib
-            -
-              link: /develop/framework/operating-environment
-              text: 运行环境
-              name: operating-environment
-            -
-              link: /develop/framework/operating-mechanism
-              text: 运行机制
-              name: operating-mechanism
+
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
@@ -675,19 +664,20 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
-        # -
-        #   link: /develop/framework/storage
-        #   text: 基础能力
-        #   name: storage
-        #   sidebar:
-        #     -
-        #       link: /develop/framework/storage
-        #       text: 存储
-        #       name: storage
-        #     -
-        #       link: /develop/framework/canvas
-        #       text: 画布
-        #       name: canvas
+        -
+          link: /develop/framework/subpackages
+          text: 运行时
+          name: subpackages
+          sidebar:
+            -
+              link: /develop/framework/operating-environment
+              text: 运行环境
+              name: operating-environment
+            -
+              link: /develop/framework/operating-mechanism
+              text: 运行机制
+              name: operating-mechanism            
+
     -
       link: /develop/component/view
       text: 组件
@@ -2644,11 +2634,15 @@
 
     -
       link: /develop/swan/version
-      text: SWAN 版本信息
+      text: 基础库版本信息
       name: swan
       sidebar:
         -
           sidebar:
+            -
+              link: /develop/swan/client-lib
+              text: 基础库
+              name: client-lib            
             -
               link: /develop/swan/version
               text: 版本分布

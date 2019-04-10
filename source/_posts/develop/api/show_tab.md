@@ -86,7 +86,7 @@ swan.redirectTo({
 |202|解析失败，请检查参数是否正确。|
 |1001|下载子包失败| -->
 
-## swan.witchTab
+## swan.switchTab
 
 **解释：**跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
 
