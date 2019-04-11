@@ -6,38 +6,39 @@ sidebar: device_sys
 ---
 
 
-getSystemInfo
----
+## swan.getSystemInfo
+
 **解释：**获取系统信息
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  是 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  是 |  -|接口调用成功的回调|
+|fail   | Function |   否  | -|接口调用失败的回调函数|
+|complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
-|参数  |说明 |
+|参数  |说明 |最低版本|
 |---- | ---- |
-|brand  | 手机品牌 |
-|model |  手机型号   |
-|pixelRatio | 设备像素比  |
-|screenWidth |屏幕宽度   |
-|screenHeight |   屏幕高度 |
-|windowWidth |可使用窗口宽度 |
-|windowHeight  |  可使用窗口高度 |
-|statusBarHeight| 状态栏的高度 |
-|language |百度 App 设置的语言 |
-|version |百度 App 版本号|
-|system  |操作系统版本  |
-|platform |客户端平台|
-|fontSizeSetting |用户字体大小设置 |
-|SDKVersion |客户端基础库版本 |
+|brand  | 手机品牌 |-|
+|model |  手机型号   |-|
+|pixelRatio | 设备像素比  |-|
+|screenWidth |屏幕宽度   |-|
+|screenHeight |   屏幕高度 |-|
+|windowWidth |可使用窗口宽度 |-|
+|windowHeight  |  可使用窗口高度 |-|
+|statusBarHeight| 状态栏的高度 |-|
+|language |百度 App 设置的语言 |-|
+|version |百度 App 版本号|-|
+|system  |操作系统版本  |-|
+|platform |客户端平台，如：ios。|-|
+|fontSizeSetting |用户字体大小设置 |-|
+|SDKVersion |客户端基础库版本 |-|
+|host|宿主平台，如：baiduboxapp 。|3.30.2|
 
 **示例：**
 <a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
@@ -56,7 +57,7 @@ swan.getSystemInfo({
 ```
 <!-- #### 错误码
 
-**Andriod**
+<!-- **Andriod**
 
 |错误码|说明|
 |--|--|
@@ -64,28 +65,31 @@ swan.getSystemInfo({
 |202|解析失败，请检查参数是否正确。|
 |402|安全性检查：访问控制校验失败。| -->
 
-getSystemInfoSync
----
+## swan.getSystemInfoSync
+
 **解释：**获取系统信息同步接口
+
+**方法参数：**无
 
 **同步返回参数说明：**
 
-|参数  |说明 |
-|---- | ---- |
-|brand  | 手机品牌 |
-|model |  手机型号   |
-|pixelRatio | 设备像素比  |
-|screenWidth |屏幕宽度   |
-|screenHeight |   屏幕高度 |
-|windowWidth |可使用窗口宽度 |
-|windowHeight  |  可使用窗口高度 |
-|statusBarHeight| 状态栏的高度 |
-|language |百度 App 设置的语言 |
-|version |百度 App 版本号|
-|system  |操作系统版本  |
-|platform |宿主平台|
-|fontSizeSetting |用户字体大小设置 |
-|SDKVersion |客户端基础库版本 |
+|参数  |说明 |最低版本|
+|---- | ---- |----|
+|brand  | 手机品牌 |-|
+|model |  手机型号   |-|
+|pixelRatio | 设备像素比  |-|
+|screenWidth |屏幕宽度   |-|
+|screenHeight |   屏幕高度 |-|
+|windowWidth |可使用窗口宽度 |-|
+|windowHeight  |  可使用窗口高度 |-|
+|statusBarHeight| 状态栏的高度 |-|
+|language |百度 App 设置的语言 |-|
+|version |百度 App 版本号|-|
+|system  |操作系统版本  |-|
+|platform |客户端平台，如：ios。|-|
+|fontSizeSetting |用户字体大小设置 |-|
+|SDKVersion |客户端基础库版本 |-|
+|host|宿主平台，如：baiduboxapp 。|3.30.2|
 
 **示例：**
 
@@ -111,11 +115,14 @@ try {
 |--|--|
 |202|解析失败，请检查参数是否正确。| -->
 
-getEnvInfoSync
----
-**解释：**获取运行环境信息同步接口
+## swan.getEnvInfoSync
 
 > 基础库 2.0.28 版本开始支持。
+
+**解释：**获取运行环境信息同步接口
+
+**方法参数：**无
+
 
 **同步返回参数说明：**
 
@@ -142,11 +149,14 @@ try {
 }
 ```
 
-canIUse
----
+## swan.canIUse
+
 **解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**参数说明：** 使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+**方法参数：** String schema
+使用 `${API}.${method}.${param}.${options} `或者 `${component}.${attribute}.${option}` 方式来调用。
+
+**`schema`参数说明：**
 
 |参数  |说明 |
 |---- | ---- |

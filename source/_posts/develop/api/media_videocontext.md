@@ -4,13 +4,17 @@ header: develop
 nav: api
 sidebar: media_videocontext
 ---
-createVideoContext
----
+## swan.createVideoContext
+
 **解释：** 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
-**参数：** videoId
+**方法参数：**String videoId
 
-**videoContext 对象的方法列表：**
+**返回值：**videoContext
+
+### videoContext
+
+**`videoContext`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |

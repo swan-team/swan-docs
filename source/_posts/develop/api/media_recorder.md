@@ -6,13 +6,17 @@ sidebar: media_recorder
 ---
 
 
-getRecorderManager
----
+## swan.getRecorderManager
+
 **解释：** 获取全局唯一的录音管理器`recorderManager`。
 
-**参数：** 无
+**方法参数：** 无
 
-**recorderManager 对象的方法列表：**
+**返回值：**recorderManager
+
+### recorderManager
+
+**`recorderManager`对象的方法列表：**
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |

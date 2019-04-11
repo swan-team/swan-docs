@@ -5,32 +5,35 @@ nav: api
 sidebar: ai_face
 ---
 
-##  faceDetect
+##  swan.ai.faceDetect
 
-> 人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。
-最低支持版本 3.20.11 。
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-### Object 参数
+**解释：**人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。
 
-|参数名 | 参数类型 | 是否必填 |说明  |  
-|---|---|---|---| 
-|image | string | 是 | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
-|image_type | string | 是 | 图片类型。<br>**· BASE64:**图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**: 图片的 URL 地址(可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
-|face_field | string | 否 | 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 | 
-|max_face_num | string | 否 | 最多处理人脸的数目，默认值为 1 ，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
-|face_type | string | 否 | 人脸的类型。<br>**· LIVE 表示生活照**：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>**· IDCARD 表示身份证芯片照**：二代身份证内置芯片中的人像照片；<br>**· WATERMARK 表示带水印证件照**：一般为带水印的小图，如公安网小图；<br>**· CERT 表示证件照片**：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**方法参数：**Object object
 
-### 返回值参数说明 
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----| 
+|image | string | 是 | -| 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
+|image_type | string | 是 | -| 图片类型。<br>**· BASE64:**图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**: 图片的 URL 地址(可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
+|face_field | string | 否 | -| 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 | 
+|max_face_num | string | 否 | -| 最多处理人脸的数目，默认值为 1 ，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
+|face_type | string | 否 | -| 人脸的类型。<br>**· LIVE 表示生活照**：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>**· IDCARD 表示身份证芯片照**：二代身份证内置芯片中的人像照片；<br>**· WATERMARK 表示带水印证件照**：一般为带水印的小图，如公安网小图；<br>**· CERT 表示证件照片**：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
+|success | Function | 否 | -| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |  -|接口调用失败的回调函数 | 
+|complete|	Function|	否	| -|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |face_num | number |检测到图片中的人脸数量| 
 |face_list| Array | 人脸信息列表|
 
-**face_list参数说明**
+**face_list 参数说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -51,7 +54,7 @@ sidebar: ai_face
 |landmark|Object|4 个关键点位置，左眼中心、右眼中心、鼻尖、嘴中心。face_field 包含 landmark 时返回。|
 |quality|Object|人脸质量信息，face_field 包含 quality 时返回。|
 
-**location返回值说明**
+**location 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -61,7 +64,7 @@ sidebar: ai_face
 |height| number | 人脸区域的高度|
 |rotation| number |人脸框相对于竖直方向的顺时针旋转角，[-180,180]。|
 
-**angel返回值说明**
+**angel 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -69,70 +72,70 @@ sidebar: ai_face
 |pitch| number | 三维旋转之俯仰角度[-90(上), 90(下)]。|
 |roll| number | 平面内旋转角[-180(逆时针), 180(顺时针)]。|
 
-**expression返回值说明**
+**expression 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string | none:不笑；smile:微笑；laugh:大笑。|
 |probability| number | 表情置信度，范围 [0~1]，0最小、1最大。|
 
-**face_shape返回值说明**
+**face_shape 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |square: 正方形；triangle:三角形；oval: 椭圆；heart: 心形；round: 圆形。|
 |probability| number | 置信度，范围 [0~1]，代表这是人脸形状判断正确的概率，0 最小、1 最大。|
 
-**gender返回值说明**
+**gender 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |male:男性；female:女性。|
 |probability| number | 性别置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-**glasses返回值说明**
+**glasses 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |none:无眼镜；common:普通眼镜；sun:墨镜。|
 |probability| number |眼镜置信度，范围 [0~1]，0 代表概率最小、1 代表最大。|
 
-**eye_status返回值说明**
+**eye_status 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |left_eye| number |左眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 |right_eye| number |右眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 
-**emotion返回值说明**
+**emotion 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |angry:愤怒；disgust:厌恶；fear:恐惧；happy:高兴；sad:伤心；surprise:惊讶；neutral:无情绪。|
 |probability| number |情绪置信度，范围 0~1。|
 
-**race返回值说明**
+**race 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |yellow: 黄种人；white: 白种人；black:黑种人；arabs: 阿拉伯人。|
 |probability| number |人种置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-**face_type返回值说明**
+**face_type 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |type| string |human: 真实人脸； cartoon: 卡通人脸。|
 |probability| number |人脸类型判断正确的置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-**landmark返回值说明**
+**landmark 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |landmark72| Array |72 个特征点位置 face_field 包含 landmark72 时返回。|
 |landmark150| Array |150 个特征点位置 face_field 包含 landmark150 时返回。|
 
-**quality返回值说明**
+**quality 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -141,7 +144,7 @@ sidebar: ai_face
 |illumination| number |取值范围在 [0~255], 表示脸部区域的光照程度越大表示光照越好。|
 |completeness| number |人脸完整度，0 或 1, 0 为人脸溢出图像边界，1 为人脸都在图像边界内。|
 
-**occlusion返回值说明**
+**occlusion 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -153,7 +156,7 @@ sidebar: ai_face
 |chin| number |下巴遮挡比例，[0-1] ，1 表示完全遮挡。|
 
 
-### 示例代码
+**示例代码**
 ```
 swan.chooseImage({
   success(res) {
@@ -168,7 +171,7 @@ swan.chooseImage({
   }
 });
 ```
-### 返回值示例
+**返回值示例**
 
 ```
 {	
@@ -245,19 +248,23 @@ swan.chooseImage({
 ```
 
 
-##  faceMatch
-> 人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。
-最低支持版本 3.20.11 。
+##  swan.ai.faceMatch
+
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
+
+**解释**：人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。
 
 
-### Object 参数说明
+**方法参数：**Object object
 
-|参数名 | 参数类型 | 是否必填 | 说明 | 
-|---|---|---|---|
-|data | Array| 是 | 图片信息 | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|data | Array| 是 | -| 图片信息 | 
+|success | Function |  否 | -|接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data  参数**
 
@@ -269,7 +276,7 @@ swan.chooseImage({
 |liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
 |face_type | string | 否 | 人脸的类型。<br> **· LIVE** 表示生活照：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br> **· IDCARD**表示身份证芯片照：二代身份证内置芯片中的人像照片；<br> **· WATERMARK** 表示带水印证件照：一般为带水印的小图，如公安网小图；<br> **· CERT** 表示证件照片：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
 
-### 返回值说明 
+**返回值说明**
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -282,7 +289,7 @@ swan.chooseImage({
 |---|---|---|
 |face_token|string |人脸的唯一标志|
 
-### 示例代码
+**示例代码**
 ```js
 swan.ai.faceMatch({
   data: [
@@ -306,7 +313,7 @@ swan.ai.faceMatch({
   }
 });
 ```
-### 返回示例
+**返回示例**
 
 ```
 {
@@ -325,26 +332,30 @@ swan.ai.faceMatch({
 
 
 
-##  faceSearch
-> 人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。
-最低支持版本 3.20.11 。
+##  swan.ai.faceSearch
 
-### Object 参数说明
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-|参数名 | 参数类型 | 是否必填 |说明  | 
-|---|---|---|---|
-|image | string | 是 | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
-|image_type | string | 是 | 图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
-|group_id_list | string | 是 | 从指定的 group 中进行查找 用逗号分隔，上限 10 个。| 
-|quality_control | string | 否 | 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
-|liveness_control | string | 否 |活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
-|max_face_num | string | 否 | 最多处理人脸的数目，默认值为1，仅检测图片中面积最大的那个人脸；最大值10，检测图片中面积最大的几张人脸。 |
-|user_id | string | 否 | 当需要对特定用户进行比对时，指定user_id进行比对。即人脸认证功能。 | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**解释**：人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。
 
-### 返回值参数说明 
+**方法参数：**Object object
+
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|image | string | 是 |-| 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
+|image_type | string | 是 | -|图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
+|group_id_list | string | 是 |-| 从指定的 group 中进行查找 用逗号分隔，上限 10 个。| 
+|quality_control | string | 否 |-| 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
+|liveness_control | string | 否 |-|活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
+|max_face_num | string | 否 | -|最多处理人脸的数目，默认值为1，仅检测图片中面积最大的那个人脸；最大值10，检测图片中面积最大的几张人脸。 |
+|user_id | string | 否 |-| 当需要对特定用户进行比对时，指定user_id进行比对。即人脸认证功能。 | 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明**
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -360,7 +371,7 @@ swan.ai.faceMatch({
 |user_info | Array | 注册用户时携带的 user_info|
 |score | number | 用户的匹配得分，推荐阈值 80 分。|
 
-### 示例代码
+**示例代码**
 
 ```js
 swan.chooseImage({
@@ -384,7 +395,7 @@ swan.chooseImage({
   }
 });
 ```
-### 返回示例
+**返回示例**
 
 ```
 {
@@ -400,23 +411,27 @@ swan.chooseImage({
   }
 ```
 
-##  facePersonVerify
-> 公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。
-最低支持版本 3.20.11 。
+##  swan.ai.facePersonVerify
 
-### Object 参数说明
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-|参数名 | 参数类型 | 是否必填 |说明  | 
-|---|---|---|---|
-|image | string | 是 | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
-|image_type | string | 是 | 图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
-|id_card_number | string | 是 | 身份证号码| 
-|name | string | 是 | 姓名| 
-|quality_control | string | 否 | 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
-|liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**解释**：公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。
+
+**方法参数：**Object object
+
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|image | string | 是 |-| 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
+|image_type | string | 是 |-| 图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
+|id_card_number | string | 是 | -|身份证号码| 
+|name | string | 是 |-| 姓名| 
+|quality_control | string | 否 |-| 图片质量控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的质量要求；<br> **· NORMAL**: 一般的质量要求；<br> **· HIGH**: 较高的质量要求；默认 NONE，若图片质量不满足要求，则返回结果中会提示质量检测失败。 | 
+|liveness_control | string | 否 |-| 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
+|success | Function | 否 | -|接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **返回值说明**
 
@@ -425,7 +440,7 @@ swan.chooseImage({
 |log_id | string | 日志 ID| 
 |score | number | 与公安小图相似度可能性，用于验证生活照与公安小图是否为同一人，有正常分数时为 [0~100]，推荐阈值 80，超过即判断为同一人。| 
 
-### 示例代码
+**示例代码**
 ```js
 swan.ai.facePersonVerify({
     image: 'https://www.downloadImage.com/xxxx.jpg',
@@ -439,7 +454,7 @@ swan.ai.facePersonVerify({
     }
 });
 ```
-### 返回示例
+**返回示例**
 ```
 {
   "score": 44.3,
@@ -449,22 +464,25 @@ swan.ai.facePersonVerify({
 
 
 
-##  facePersonIdmatch
+##  swan.ai.facePersonIdmatch
 
-> 身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。
-最低支持版本 3.20.11 。
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-### object 参数说明
+**解释**：身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。
 
-|参数名 | 参数类型 | 是否必填 |说明  | 
-|---|---|---|---|
-|id_card_number | string | 是 | 身份证号 | 
-|name | string | 是 | 姓名| 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**方法参数：**Object object
 
-### 示例代码
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|id_card_number | string | 是 | -|身份证号 | 
+|name | string | 是 | -|姓名| 
+|success | Function | 否 | -|接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例代码**
 ```js
 swan.ai.facePersonIdmatch({
     id_card_number: '',
@@ -476,20 +494,22 @@ swan.ai.facePersonIdmatch({
 ```
 
 
-##  faceVerify
-> 在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。
-最低支持版本 3.20.11 。
+##  swan.ai.faceVerify
 
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
+**解释**：在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。
 
-### Object 参数
+**方法参数：**Object object
 
-|参数名 | 参数类型 | 是否必填 | 说明 | 
-|---|---|---|---|
-|data | Array| 是 | 图片信息 | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|data | Array| 是 |-| 图片信息 | 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data 参数说明**
 
@@ -499,7 +519,7 @@ swan.ai.facePersonIdmatch({
 |image_type | string | 是 | 图片类型<br> **· BASE64**:图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过2M；<br>**· URL**:图片的 URL 地址( 可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
 |face_field | string | 否 | 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 | 
 
-### 返回值参数说明 
+**返回值参数说明** 
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -629,7 +649,7 @@ swan.ai.facePersonIdmatch({
 |right_cheek| number |右脸颊遮挡比例，[0-1] ，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例 [0-1] ，1 表示完全遮挡。|
 
-### 示例代码
+**示例代码**
 ```js
 swan.chooseImage({
 	success(res) {
@@ -654,7 +674,7 @@ swan.chooseImage({
 })
 
 ```
-### 返回示例
+**返回示例**
 ```
 {
 "thresholds": {
@@ -723,27 +743,31 @@ swan.chooseImage({
 ```
 
 
-##  faceLivenessSessioncode
+##  swan.ai.faceLivenessSessioncode
 
-> H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
-最低支持版本 3.20.11 。
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-### Object 参数
+**解释**：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
 
-|参数名 | 参数类型 | 是否必填 |说明  | 
-|---|---|---|---|
-|appid | string| 是 | 百度云创建应用时的唯一标识 ID | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**方法参数：**Object object
 
-### 返回值参数说明 
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|appid | string| 是 | -|百度云创建应用时的唯一标识 ID | 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明** 
+
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
 |session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
 |code | string |语音验证码，数字形式，3~6 位数字。| 
 
-### 示例代码
+**示例代码**
 ```js
 swan.ai.faceLivenessSessioncode({
   appid: '',
@@ -752,7 +776,7 @@ swan.ai.faceLivenessSessioncode({
   }
 });
 ```
-### 返回示例
+**返回示例**
 ```
 {
 	"err_no": 0,
@@ -768,24 +792,25 @@ swan.ai.faceLivenessSessioncode({
 }
 ```
 
-## faceLivenessVerify
+## swan.ai.faceLivenessVerify
 
-> H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。
-最低支持版本 3.20.11 。
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
+**解释**：H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。
 
+**方法参数：**Object object
 
-### Object 参数
+**`object`参数说明：**
 
-|参数名 | 参数类型 | 是否必填 | 说明 | 
-|---|---|---|---|
-|video_base64 | string| 是 | base64 编码后的视频数据（视频限制：最佳为上传 5-15s 的 mp4 文件。视频编码方式：h264 编码；音频编码格式：aac，pcm 均可。）| 
-|session_id | string| 否 | 语音校验码会话 ID，使用此接口的前提是已经调用了语音校验码接口。语音校验码作为辅助性质的验证条件，是一个可选项，如果应用场景比较嘈杂或方言口音比较重，可以不使用语音验证。  | 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|video_base64 | string| 是 |-| base64 编码后的视频数据（视频限制：最佳为上传 5-15s 的 mp4 文件。视频编码方式：h264 编码；音频编码格式：aac，pcm 均可。）| 
+|session_id | string| 否 |-| 语音校验码会话 ID，使用此接口的前提是已经调用了语音校验码接口。语音校验码作为辅助性质的验证条件，是一个可选项，如果应用场景比较嘈杂或方言口音比较重，可以不使用语音验证。  | 
+|success | Function | 否 | -|接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### 返回值参数说明 
+**返回值参数说明**
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
@@ -809,7 +834,7 @@ swan.ai.faceLivenessSessioncode({
 |pic | string |base64 编码后的图片信息| 
 
 
-### 示例代码
+**示例代码**
 ```js
 swan.ai.faceLivenessVerify({
   video_base64: '',
@@ -819,7 +844,7 @@ swan.ai.faceLivenessVerify({
   }
 });
 ```
-### 返回示例
+**返回示例**
 ```
 {
 

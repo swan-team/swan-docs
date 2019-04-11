@@ -6,11 +6,13 @@ sidebar: menu_info
 ---
 
 
-## getmenuButtonBoundingClientRect
+## swan.getmenuButtonBoundingClientRect
 
 > 基础库 3.20.3 开始支持，低版本需做兼容处理。
 
 **解释：**获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
+
+**方法参数：** 无
 
 **返回参数说明：**
 

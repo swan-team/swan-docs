@@ -4,8 +4,10 @@ header: develop
 nav: api
 sidebar: open_payment
 ---
-requestPolymerPayment
----
+
+
+## swan.requestPolymerPayment
+
 **版本：** swanjs 1.8.5 版本开始支持。
 
 **解释：** 百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。
@@ -14,17 +16,17 @@ requestPolymerPayment
 
 了解更多信息，请查看 [百度电商开放平台：产品介绍](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/product_intro.md)。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|orderInfo| Object | 是 |订单信息|
-|bannedChannels| StringArray | 否 | 需要隐藏的支付方式|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|orderInfo| Object | 是 | -|订单信息|
+|bannedChannels| StringArray | 否 | -| 需要隐藏的支付方式|
+|success |Function  |  否  | -| 接口调用成功的回调函数|
+|fail   | Function  |  否  | -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **orderInfo 参数说明：**
 
@@ -85,15 +87,11 @@ swan.requestPolymerPayment({
 });
 ```
 <!-- #### 错误码
-
 **Andriod**
-
 |错误码|说明|
 |--|--|
 |1001|执行失败 |
-
 **iOS**
-
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|

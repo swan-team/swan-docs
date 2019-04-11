@@ -6,22 +6,22 @@ sidebar: media_image
 ---
 
 
-chooseImage
----
+## swan.chooseImage
+
 **解释：**从本地相册选择图片或使用相机拍照。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型  |必填 | 说明|
-|---- | ---- | ---- | ----|
-|count  | Number | 否  | 最多可以选择的图片张数，默认 9。|
-|sizeType  |Array.<string>| 否  | original 原图，compressed 压缩图，默认二者都有。|
-|sourceType | ` Array.<object> ` |否 |  album 从相册选图，camera 使用相机，默认二者都有。|
-|success |Function  |  是 | 成功则返回图片的本地文件路径列表 tempFilePaths。|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|count  | Number | 否  |  -|最多可以选择的图片张数，默认 9。|
+|sizeType  |Array.<string>| 否  |  -|original 原图，compressed 压缩图，默认二者都有。|
+|sourceType | ` Array.<object> ` |否 | -|  album 从相册选图，camera 使用相机，默认二者都有。|
+|success |Function  |  是 |  -|成功则返回图片的本地文件路径列表 tempFilePaths。|
+|fail  |  Function |   否  | -| 接口调用失败的回调函数|
+|complete   | Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
@@ -44,6 +44,7 @@ chooseImage
 
 **示例：**
 <a href="swanide://fragment/25d4a08064aa160d2986a38e3f9311921548069510198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.chooseImage({
     count: 1,
@@ -80,21 +81,21 @@ swan.chooseImage({
 |1003|用户没有授权百度使用相册|
 |1003|小程序文件目录为空| -->
 
-previewImage
----
+## swan.previewImage
+
 **解释：** 预览图片。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型 | 必填  |说明|
-|---- | ---- | ---- | ----|
-|current |String | 否  | 当前显示图片的链接，不填则默认为 urls 的第一张。|
-|urls   | Array.<string> |是 |  需要预览的图片链接列表|
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|current |String | 否  |  -|当前显示图片的链接，不填则默认为 urls 的第一张。|
+|urls   | Array.<string> |是 | -|  需要预览的图片链接列表|
+|success| Function |   否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否 |  -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例：**
@@ -129,20 +130,20 @@ swan.previewImage({
 |--|--|
 |202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| -->
 
-getImageInfo
----
+## swan.getImageInfo
+
 **解释：**获取图片信息
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数  |类型|  必填 | 说明|
-|---- | ---- | ---- | ----|
-|src |String | 是  | 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
-|success| Function  |  否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|src |String | 是  | -| 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
+|success| Function  |  否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -191,20 +192,20 @@ swan.getImageInfo({
 |1003|小程序文件夹为空|
 |1003|读取图片失败| -->
 
-saveImageToPhotosAlbum
----
+## swan.saveImageToPhotosAlbum
+
 **解释：** 保存图片到系统相册，需要用户授权。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名| 类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|filePath  |  String  |是 |  图片文件路径，可以是临时文件路径也可以是永久文件路径，不支持网络图片路径。|
-|success |Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|filePath  |  String  |是 | -|  图片文件路径，可以是临时文件路径也可以是永久文件路径，不支持网络图片路径。|
+|success |Function |   否  | -| 接口调用成功的回调函数|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 <!-- **success返回参数说明：**

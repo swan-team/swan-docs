@@ -125,13 +125,27 @@ Page({
 
 ## 页面相关事件处理函数
 
-
 ### onPullDownRefresh
-**解释**： 下拉刷新
+
+**解释：**在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
+
+**参数：**Object
+
+**示例：**
+<a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+```js
+Page({
+    onPullDownRefresh() {
+        // do something
+    }
+});
+```
 **说明**：
-监听用户下拉刷新事件。
-* 需要在 app.json 的 window 选项中或页面配置中开启 enablePullDownRefresh 。
-* 当处理完数据刷新后，swan.stopPullDownRefresh 可以停止当前页面的下拉刷新。
+* 需要在 config 的 `window` 选项中开启 `enablePullDownRefresh`；
+* 如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`；
+* 当处理完数据刷新后，`swan.stopPullDownRefresh` 可以停止当前页面的下拉刷新。
+
+
 
 ### onReachBottom
 **解释**：上拉触底
@@ -154,30 +168,48 @@ Page({
 |scrollTop|Number|页面在垂直方向已滚动的距离（单位px）|
 
 ### onShareAppMessage
-**解释**：用户点击分享
-**说明**：
-用户点击转发按钮的时候会调用。
-此事件需要 return 一个 Object，用于自定义转发内容。
 
-** 自定义转发字段 **
+**解释：** 在 Page 中定义 onShareAppMessage 函数，设置该页面的分享信息。
 
-|字段 |类型  |说明  |默认值 |
-|---- | ---- | ---- | ---- |
-|title |string | 转发标题 |当前的智能小程序的名称 |
-|path |string | 转发路径 |当前页面 path ，必须是以 / 开头的完整路径 |
+* 用户点击分享按钮的时候会调用；
+* 此事件需要 return 一个`Object`，用于自定义分享内容。
 
-**<div class="notice">示例： </div>**
+**方法参数：**Object object
 
-```js
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|from |String  |是| -|  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
+|target |Object  |是| -|  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined 。为兼容使用了3.10.16(手百11.2)以下版本的基础库，原使用 currentTarget 的获取方式保留至2月15日下线。 |
+
+**自定义分享字段：**
+
+|参数名 |类型  |必填  |说明|
+|---- | ---- | ---- |---- |
+|title |String  |  否  | 分享标题|
+|content |String  |  否  | 分享内容|
+|imageUrl |String  |  否  | 分享图标|
+|path |String  |  否  | 页面 path ，必须是以 / 开头的完整路径。|
+|success |Function  |  否  | 接口调用成功的回调函数|
+|fail   | Function  |  否  | 接口调用失败的回调函数|
+|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例：**
+<a href="swanide://fragment/5ade9255636e820034fd14dee1d9a1ef1540396560" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+```javascript
 Page({
-    onShareAppMessage: function () {
+    onShareAppMessage() {
         return {
-            title: '标题',
-            path: '/pages/path/path'
-        }
+            title: '智能小程序示例',
+            content: '世界很复杂，百度更懂你',
+            path: '/pages/openShare/openShare?key=value'
+        };
     }
 });
 ```
+
+
 
 ## 事件处理函数
 
