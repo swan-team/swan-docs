@@ -125,6 +125,18 @@
                 text: 信息流素材审核规范
                 name: auditing_info
         -
+            link: /introduction/base
+            text: 基础流量
+            sidebar:
+              -
+                link: /introduction/base
+                text: 基础入口
+                name: base
+              -
+                link: /introduction/return
+                text: 重访入口
+                name: return              
+        -
             link: /introduction/intro
             text: 搜索流量接入
             sidebar:
@@ -138,7 +150,7 @@
                 name: rank
         -
             link: /introduction/baijiahao
-            text: 百家号流量 
+            text: 百家号流量接入
             sidebar:
               -
                 link: /introduction/baijiahaointroduction
@@ -152,6 +164,18 @@
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
                 name: auditing_baijiahao
+        -
+            link: /introduction/tieba
+            text: 贴吧流量接入
+            sidebar:            
+              -
+                link: /introduction/tieba
+                text: 接入贴吧流量
+                name: tieba
+              -
+                link: /introduction/auditing_tieba
+                text: 贴吧素材审核规范
+                name: auditing_tieba               
     -
       link: /introduction/adopen
       text: 流量主开通
