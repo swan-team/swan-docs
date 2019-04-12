@@ -124,18 +124,18 @@
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
-        -
-            link: /introduction/base
-            text: 基础流量
-            sidebar:
-              -
-                link: /introduction/base
-                text: 基础入口
-                name: base
-              -
-                link: /introduction/return
-                text: 重访入口
-                name: return              
+        # -
+        #     link: /introduction/base
+        #     text: 基础流量
+        #     sidebar:
+        #       -
+        #         link: /introduction/base
+        #         text: 基础入口
+        #         name: base
+        #       -
+        #         link: /introduction/return
+        #         text: 重访入口
+        #         name: return              
         -
             link: /introduction/intro
             text: 搜索流量接入
