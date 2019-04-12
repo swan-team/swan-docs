@@ -780,3 +780,17 @@ article thead tr {
 .isbox {
     display: none;
 }
+
+
+/*反馈问题*/
+.feedback-question{
+  text-align: center;
+  line-height: 100px;
+}
+.feedback-question .question-text{
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #666;
+}
