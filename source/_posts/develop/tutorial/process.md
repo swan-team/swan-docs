@@ -113,7 +113,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">智能小程序返回按钮Y位置 = 状态栏高度（statusBarHeight，可通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a> 获取）+ 0.5 * 导航栏高度（可通过 swan.getSystemInfo 或者 swan.getSystemInfoSync 获取）</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">智能小程序返回按钮Y位置 = 状态栏高度（statusBarHeight，可通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a> 获取）+ 0.5 * 导航栏高度（navigationBarHeight，可通过  <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a>或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a> 获取）</p>
 </div>
 </div>
 

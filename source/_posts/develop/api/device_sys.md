@@ -32,6 +32,7 @@ sidebar: device_sys
 |windowWidth |可使用窗口宽度 |-|
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
+|navigationBarHeight| 导航栏的高度|-|
 |language |百度 App 设置的语言 |-|
 |version |百度 App 版本号|-|
 |system  |操作系统版本  |-|
@@ -83,6 +84,7 @@ swan.getSystemInfo({
 |windowWidth |可使用窗口宽度 |-|
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
+|navigationBarHeight| 导航栏的高度|-|
 |language |百度 App 设置的语言 |-|
 |version |百度 App 版本号|-|
 |system  |操作系统版本  |-|
