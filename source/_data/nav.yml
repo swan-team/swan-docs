@@ -104,10 +104,25 @@
                 text: 发布上线
                 name: publish
     -
+        link: /introduction/base
+        text: 基础流量     
+        sidebar:
+              -
+                sidebar:
+                  -
+                    link: /introduction/base
+                    text: 基础入口
+                    name: base
+                  -
+                    link: /introduction/return
+                    text: 重访入口
+                    name: return                 
+    -
       link: /introduction/intro
-      text: 百度流量接入
+      text: 可配置流量
       name: book
       sidebar:
+         
         -
             link: /introduction/access
             text: 信息流流量接入
@@ -124,30 +139,48 @@
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
-        # -
-        #     link: /introduction/base
-        #     text: 基础流量
-        #     sidebar:
-        #       -
-        #         link: /introduction/base
-        #         text: 基础入口
-        #         name: base
-        #       -
-        #         link: /introduction/return
-        #         text: 重访入口
-        #         name: return              
+            
         -
             link: /introduction/intro
-            text: 搜索流量接入
+            text: 自然搜索结果流量接入
             sidebar:
               -
                 link: /introduction/intro
-                text: 自然搜索管理
+                text: 自然搜索结果流量说明
                 name: intro
               -
                 link: /introduction/rank
-                text: 接入自然搜索
+                text: 接入自然搜索结果
                 name: rank
+                sidebar:
+                  -
+                    link: /introduction/rank/#开启Web化能力
+                    text: 开启Web化能力
+                    name: rank_开启Web化能力
+                  -
+                    link: /introduction/rank/#设置页面基础信息
+                    text: 设置页面基础信息
+                    name: rank_设置页面基础信息  
+                  -
+                    link: /introduction/rank/#绑定熊掌ID
+                    text: 绑定熊掌ID
+                    name: rank_绑定熊掌ID                    
+                  -
+                    link: /introduction/rank/#关联H5站点
+                    text: 关联H5站点
+                    name: rank_关联H5站点                  
+                  -
+                    link: /introduction/rank/#配置URL映射规则
+                    text: 配置URL映射规则
+                    name: rank_配置URL映射规则
+                  -
+                    link: /introduction/rank/#提交sitemap
+                    text: 提交sitemap
+                    name: rank_提交sitemap  
+                  -
+                    link: /introduction/rank/#搜索流量接入FAQ
+                    text: 搜索流量接入FAQ
+                    name: rank_搜索流量接入FAQ                              
         -
             link: /introduction/baijiahao
             text: 百家号流量接入
@@ -709,6 +742,10 @@
       sidebar:
         -
             sidebar:
+              -
+                link: /develop/component/list
+                text: 组件列表
+                name: list
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -2476,7 +2513,7 @@
                 name: projectconfig
               -
                 link: /develop/devtools/diff
-                text: 模拟器 API 与真机的实现差异
+                text: API 实现差异
                 name: diff
         -
             sidebar:

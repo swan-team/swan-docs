@@ -25,6 +25,12 @@ sidebar: pageinfo
 |articleTitle | String | 否 | -| 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
 |image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| -|图片线上地址，用于信息流投放后的封面显示，最多3张，单图片最大2M；封面图建议尺寸：高>=210px & 宽>=375px；最小尺寸：高>=146px & 宽>=218px。多张图时，用数组表示|
 |video|Object/Array|否（页面存在视频情况下必填）| -|视频信息，多个视频时，用数组表示|
+|visit|Object|否|-|浏览信息。最低支持版本3.40.6。|
+|likes|String|否|-|点赞量，若页面未统计可为空。最低支持版本3.40.6。|
+|comments|String|否|-|评论量，若页面未统计可为空。最低支持版本3.40.6。|
+|collects|String|否|-|收藏量，若页面未统计可为空。最低支持版本3.40.6。|
+|shares|String|否|-|分享量，若页面未统计可为空。最低支持版本3.40.6。|
+|followers|String|否|-|关注量，若页面未统计可为空。最低支持版本3.40.6。|
 |success | Function | 否 | -| 接口调用成功的回调函数|
 |fail|Function|否| -|接口调用失败的回调函数|
 |complete|Function|否| -|接口调用结束的回调函数（调用成功、失败都会执行） |
@@ -37,11 +43,21 @@ video参数说明
 |duration|String|是| 视频时长(单位为秒)	|
 |image|String|是|视频封面图	|
 
+visit参数说明
+
+|参数名 | 类型 | 必填 | 说明 |
+|---|---|---|---|
+|pv |String|否| 页面的浏览量(不去重用户）|
+|uv |String|否| 页面的点击量（去重用户）|
+|sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
+
+
 **说明**
-1、releaseData、articleTitle、image、video 内容用于百度 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
+1、releaseData、articleTitle、image、video 、visit 内容用于百度 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
 2、title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在百度APP信息流中的标题展示。
 3、当前页面包含视频信息时 video 为必填字段，url、duration、image为 video 的必填参数；如当前页面不包含视频信息，可不填写。
 4、当前页面包含焦点图或者正文图片 image 为必填字段。
+5、当前页面能够统计到用户分发、互动和时长等数据时，visit字段建议填写。开发者可根据页面实际统计的情况完善pv、uv、sessionDuration、likes、comments、collects、shares、followers字段，若页面不包含以上字段时，可不填写。
 
 **示例**
 
