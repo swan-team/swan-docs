@@ -16,7 +16,7 @@ swan.uploadFile(opts)
 |opts.filePath|string|是|要上传文件资源的路径|
 |opts.name|string|是|文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容|
 |opts.header|Object|否|HTTP 请求的 Header，Header 中不能设置 Referer|
-|opts.fromData|Object|否|HTTP 请求中其他额外的 form data |
+|opts.formData|Object|否|HTTP 请求中其他额外的 form data |
 |opts.success|function|否|接口调用成功的回调函数|
 |opts.fail|function|否|接口调用失败的回调函数|
 |opts.complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|

@@ -5,22 +5,22 @@ nav: api
 sidebar: storage_save
 ---
 
-setStorage
------
+## swan.setStorage
+
 
 **解释：**将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- | ---- |
-|key |String | 是  | 本地缓存中的指定的 key|
-|data  |  Object/String/Number/Array  | 是  | 需要存储的内容|
-|success| Function |   否 |  接口调用成功的回调函数|
-|fail  |  Function |   否  |接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|key |String | 是  |-| 本地缓存中的指定的 key|
+|data  |  Object/String/Number/Array  | 是  |-| 需要存储的内容|
+|success| Function |   否 |-|  接口调用成功的回调函数|
+|fail  |  Function |   否  |-|接口调用失败的回调函数|
+|complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 <a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -31,34 +31,27 @@ swan.setStorage({
 });
 ```
 <!-- #### 错误码
-
 **Andriod**
-
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法。|
 |1001|执行失败|
-
 **iOS**
-
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。|
 |1003|超过最大存储文件大小| -->
 
-setStorageSync
------
+## swan.setStorageSync
+
 
 **解释：**将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。
 
-**参数：**key, data
+**方法参数：**String key, Object/String data
 
-**参数说明：**
+**`key`参数说明**：本地缓存中的指定的 key
 
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- | ---- |
-|key |String | 是 |  本地缓存中的指定的 key|
-|data |  Object/String |  是 |  需要存储的内容|
+**`data`参数说明**：需要存储的内容
 
 **示例：**
 
@@ -86,21 +79,21 @@ try {
 
 
 
-getStorage
------
+## swan.getStorage
+
 
 **解释：**从本地缓存中异步获取指定 key 对应的内容。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- | ---- |
-|key |String | 是 |  本地缓存中的指定的 key|
-|success |Function   | 是  | 接口调用成功的回调函数，res = {data: key对应的内容}。|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|key |String | 是 | -|  本地缓存中的指定的 key|
+|success |Function   | 是  | -| 接口调用成功的回调函数，res = {data: key对应的内容}。|
+|fail  |  Function  |  否  |-|  接口调用失败的回调函数|
+|complete  |  Function   | 否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明：**
 
@@ -123,32 +116,24 @@ swan.getStorage({
 });
 ```
 <!-- #### 错误码
-
 **Andriod**
-
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
-
 **iOS**
-
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确。| -->
 
-getStorageSync
------
+## swan.getStorageSync
+
 
 **解释：**从本地缓存中同步获取指定 key 对应的内容。
 
-**参数：**key
+**方法参数：** String key
 
-**参数说明：**
-
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- | ---- |
-|key | String | 是 |  本地缓存中的指定的 key|
+**`key`参数说明：** 本地缓存中的指定的 key
 
 **示例：**
 
@@ -173,20 +158,20 @@ try {
 |--|--|
 |202|解析失败，请检查参数是否正确。| -->
 
-getStorageInfo
------
+## swan.getStorageInfo
+
 
 **解释：**异步获取当前 storage 的相关信息。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- | ---- |
-|success |Function |   是  | 接口调用成功的回调函数，详见返回参数说明。|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function |   是  | -| 接口调用成功的回调函数，详见返回参数说明。|
+|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
+|complete |   Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **success返回参数说明：**
@@ -219,10 +204,12 @@ swan.getStorageInfo({
 |--|--|
 |1001|执行失败| -->
 
-getStorageInfoSync
------
+## swan.getStorageInfoSync
+
 
 **解释：**同步获取当前 storage 的相关信息。
+
+**方法参数：** 无
 
 **示例：**
 

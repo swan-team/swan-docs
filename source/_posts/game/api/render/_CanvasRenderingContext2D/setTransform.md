@@ -17,14 +17,14 @@ context.setTransform(a, b, c, d, e, f);
 
 **参数值：**
 
-| 参数 |  类型  | 描述              |
-| ----|------  | ---------------- |
-| a   | number  | 水平缩放绘图   |
-| b   | number  | 水平倾斜绘图   |
-| c   | number  | 垂直倾斜绘图   |
-| d   | number  | 水平缩放绘图   |
-| e   | number  | 水平移动绘图   |
-| f   | number  | 垂直移动绘图   |
+| 参数 |  类型  | 描述          |
+| ----|------  | ------------ |
+| a   | number | 水平缩放绘图   |
+| b   | number | 水平倾斜绘图   |
+| c   | number | 垂直倾斜绘图   |
+| d   | number | 垂直缩放绘图   |
+| e   | number | 水平移动绘图   |
+| f   | number | 垂直移动绘图   |
 
 
 **示例：**

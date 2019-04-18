@@ -32,20 +32,20 @@ sidebar: open_log
 4、 当用户完成了授权，且授权会话仍处于有效期时，智能小程序不需要每次都进行前两步，而是可以直接进行第三步获取用户信息。
 要判断当前用户的授权会话是否仍处于有效期，可调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
-## login
+## swan.login
 
 **解释：** 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
-**参数：** Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|timeout|	number|		否|	超时时间，单位ms|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|timeout|	number|		否| -|	超时时间，单位ms|
+|success |Function  |  否 |  -| 接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明：**
 
@@ -71,9 +71,7 @@ swan.login({
 });
 ```
 <!-- #### 错误码
-
 **Andriod**
-
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法。|
@@ -88,6 +86,7 @@ swan.login({
 |10002|网络请求失败|
 |10004|用户未登录(user not login)|
 |10007|请求超时| -->
+
 ## Session Key
 
 **解释：** 智能小程序在其服务端中发送POST请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到Session Key。
@@ -133,19 +132,19 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 ```
 
 
-## checkSession
+## swan.checkSession
 
 **解释：**通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
 
-**参数：**Object
+**方法参数：**Object object
 
-**Object参数说明：**
+**`object`参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否 | -|  接口调用成功的回调函数|
+|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 
@@ -208,9 +207,11 @@ swan.checkSession({
 |10002|网络请求失败|
 |10004|用户未登录(user not login)| -->
 
-## isLoginSync
+## swan.isLoginSync
 
 **解释：**获取百度 App登录状态。
+
+**方法参数**：无
 
 **返回参数说明：**
 

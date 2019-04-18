@@ -6,18 +6,19 @@ sidebar: device_accelerometer
 ---
 
 
-## onAccelerometerChange
+## swan.onAccelerometerChange
 
 **解释：**监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
-**参数：**CALLBACK
 
-**CALLBACK返回参数：**
+**方法参数：**Function callback
 
-|参数名 |类型  |说明|
-|---- | ---- | ---- |
-|x |Number |X 轴|
-|y |Number |Y 轴|
-|z |Number |Z 轴|
+**`callback`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|x |Number |是|-|X 轴|
+|y |Number |是|-|Y 轴|
+|z |Number |是|-|Z 轴|
 
 **示例：**
 <a href="swanide://fragment/0408f2415879e6fda656fd9f627e2ed81540399039" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -45,19 +46,20 @@ swan.onAccelerometerChange(function (res) {
 |--|--|
 |202|解析失败，请检查参数是否正确。|
 |1001|设备不支持否正确| -->
-## startAccelerometer
+## swan.startAccelerometer
 
 **解释：**开始监听加速度数据。
-**参数：**Object
 
-**Object参数说明：**
+**方法参数：**Object object
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|interval|String |否 |监听加速度数据回调函数的执行频率|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|interval|String |否 |-|监听加速度数据回调函数的执行频率|
+|success |Function  |  否 |-|  接口调用成功的回调函数|
+|fail  |  Function |   否 | -| 接口调用失败的回调函数|
+|complete |   Function |   否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **interval 的合法值**
 
@@ -77,18 +79,19 @@ swan.startAccelerometer({
 });
 ```
 
-## stopAccelerometer
+## swan.stopAccelerometer
 
 **解释：**停止监听加速度数据。
-**参数：**Object
 
-**Object参数说明：**
+**方法参数：**Object object
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否 |  接口调用失败的回调函数|
-|complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明：**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success |Function  |  否 | -| 接口调用成功的回调函数|
+|fail  |  Function |   否 | -| 接口调用失败的回调函数|
+|complete |   Function |   否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
 

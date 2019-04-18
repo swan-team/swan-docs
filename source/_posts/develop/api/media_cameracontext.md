@@ -7,13 +7,17 @@ sidebar: media_cameracontext
 
 
 
-createCameraContext
----
+## swan.createCameraContext
+
 **解释：**创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
-**参数：**无
+**方法参数：**无
 
-**cameraContext 对象的方法列表：**
+**返回值：**cameraContext
+
+### cameraContext
+
+**`cameraContext`对象的方法列表：**
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
