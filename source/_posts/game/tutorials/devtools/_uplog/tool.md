@@ -2,12 +2,33 @@
 
 #### 开发工具下载
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+
+#### v2.2.1
+**Bug Fixed**
+- 修复小游戏分包加载
+- 修复小游戏开放域bug
+- 修复小游戏bdfile网络加载问题
+- 修复小游戏键盘问题
+- 修复小游戏项目切换登陆状态问题
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.1&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.1&type=online)）
+
+#### v2.2.0
+**New Feature**
+- 新版开发者工具支持小游戏功能
+- 支持 1.6.x 1.5.x 1.4.x 1.1.x 1.0.x 基础版本库调试
+- 支持 worker 功能
+- 保证交叉换量组件不报错（同广告组件）
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.0&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.0&type=online)）
 
 #### v1.15.3
 **Bug Fixed**
 - 修复了引用 swan-game-adapter 导致 onShow 方法使用失败问题。
 - 兼容调试基础库 1.4.1 禁用 eval 的问题。
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）
 
 #### v1.15.2
 **Bug Fixed**
