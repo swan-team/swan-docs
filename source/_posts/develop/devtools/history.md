@@ -9,7 +9,8 @@ sidebar: history
 
 |mac|windows|
 |--|--|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.0.17.dmg">2.0.16</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.0.17.exe">2.0.16</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.2.1.dmg">2.2.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.2.1.exe">2.2.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.2.0.dmg">2.2.0</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.2.0.exe">2.2.0</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.0.16.dmg">2.0.16</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.0.16.exe">2.0.16</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.0.15.dmg">2.0.15</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.0.15.exe">2.0.15</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.0.14.dmg">2.0.14</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.0.14.exe">2.0.14</a>|

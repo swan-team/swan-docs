@@ -5,7 +5,7 @@ nav: devtools
 sidebar: show_sur
 ---
 为了帮助开发者简单高效地开发和调试智能小程序，我们推出了百度开发者工具。
-### 最新正式版本（2.0.17）
+### 最新正式版本（2.2.1）
 下载链接：[windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 ### 最新 Beta 版本
 下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [mac-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)

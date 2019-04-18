@@ -68,20 +68,29 @@ visit参数说明
         description: '晒元宵节活动红包，爱..昨天的百度APP元宵节活动中，共发出2亿现金红包、含151万个手气现金大奖和240辆红旗轿车，谁是好运锦鲤，快来分享！马上惊喜升级~摇中红包的锦鲤们即刻晒出红包金额截图，我们将会抽取660位好运锦鲤',
         articleTitle: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！',
         releaseDate: '2019-01-02 12:01:30',
-        // 单张图时值可以是字符串
         image: [
-            'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
-            'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
+        'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
+        'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
         ],
         video: [{
             url: 'https://www.baidu.com/mx/v12.mp4',
             duration: '100',
             image: 'https://smartprogram.baidu.com/docs/img/image-scaleToFill.png'
         }],
+        visit: {
+            pv: '1000',
+            uv: '100',
+            sessionDuration: '130'
+        },
+        likes: '75',
+        comments: '13',
+        collects: '23',
+        shares: '8',
+        followers: '35',
         success: function () {
             console.log('页面基础信息设置完成');
         }
-	})
+    })
 ```
 ## swan.setMetaDescription
 
