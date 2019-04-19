@@ -74,7 +74,7 @@ subPackages 中，每个分包的配置有以下几项：
 
 **功能介绍**：开发者可以通过配置，在进入小程序某个页面时，由框架自动预下载可能需要的分包，提升进入后续分包页面时的启动速度。
 
-分包预下载目前即支持通过全局配置方式使用，也支持开发者通过调用API完成。
+分包预下载目前既支持通过全局配置方式使用，也支持开发者通过调用API完成。
 API调用方式参考：<a href="https://smartprogram.baidu.com/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">loadSubPackage</a>
 
 全局配置方法：
