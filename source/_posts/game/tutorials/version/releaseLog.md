@@ -14,18 +14,12 @@ priority: 04-04
 2. 版本兼容方案见 [小游戏版本兼容](/game/tutorials/version/compatibility/)。
 
 
-<!--
-
-todo
-需要补充 api 及对应链接
-
-2. `feat` 新增 API 加速计、屏幕、罗盘、剪切板、saveImageToPhotosAlbum
-
--->
-<!--
-#### v 1.6.2
+#### v 1.6.3
 1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
--->
+
+#### v 1.6.1
+1. `Feature` 新增 [worker 能力](/game/tutorials/worker/worker.md) 支持及 [createWorker API](/game/api/worker/createWorker.md)。
+
 #### v 1.5.3
 1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
 
