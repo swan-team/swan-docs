@@ -6,9 +6,11 @@ topic: 多线程 Worker
 priority: 12-01
 ---
 
+ > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持
+
  [Worker](/game/api/worker/workerObj/) 代表一个后台任务，它可以在主线程被创建并与主线程进行信息交互。对于游戏, 可以将异步处理的任务放入 [Worker](/game/api/worker/workerObj/) 中执行, 并将执行结果返回主线程。
 
- [Worker](/game/api/worker/workerObj/) 运行于一个单独的全局上下文与线程中，不能直接调用主线程的方法，[Worker](/game/api/worker/workerObj/) 也不具备渲染的能力。 [Worker](/game/api/worker/workerObj/) 与主线程之间的数据传输，双方使用 [Worker.postMessage()](/game/api/worker/worker_obj/postMessage/) 来发送数据，[Worker.onMessage()](/game/api/worker/worker_obj/onMessage/) 来接收数据，传输的数据并不是直接共享，而是被复制的。
+ [Worker](/game/api/worker/workerObj/) 运行于一个单独的全局上下文与线程中，不能直接调用主线程的方法，[Worker](/game/api/worker/workerObj/) 也不具备渲染的能力。 [Worker](/game/api/worker/workerObj/) 与主线程之间的数据传输，双方使用 [Worker.postMessage()](/game/api/worker/workerObj/#postMessage) 来发送数据，[Worker.onMessage()](/game/api/worker/workerObj/#onMessage) 来接收数据，传输的数据并不是直接共享，而是被复制的。
 
  ### 配置 Worker 信息
 
@@ -104,7 +106,7 @@ const a = require('./a.js');
 2. workers 目录下可以引用其它目录下的文件
 
  ### 多个 Worker
-Worker 最大并发数量限制为 1 个，创建下一个前请用 [Worker.terminate()](game/api/worker/worker_obj/terminate/) 结束当前 Worker
+Worker 最大并发数量限制为 1 个，创建下一个前请用 [Worker.terminate()](/game/api/worker/workerObj/#terminate) 结束当前 Worker
 
  在主线程的代码 game.js 中新增 Worker, 入口文件文件路径选择 worker2.js
 

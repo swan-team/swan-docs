@@ -10,13 +10,13 @@ priority: 18-02
 
  **方法**
 
- [Worker.onMessage(callback)](/game/api/worker/worker_obj/onMessage/)
+ [Worker.onMessage(callback)](/game/api/worker/workerObj/#onMessage)
 监听主线程/Worker 线程向当前线程发送的消息的事件。
 
- [Worker.postMessage(opts)](/game/api/worker/worker_obj/postMessage/)
+ [Worker.postMessage(opts)](/game/api/worker/workerObj/#postMessage)
 向主线程/Worker 线程发送的消息。
 
- [Worker.terminate()](/game/api/worker/worker_obj/terminate/)
+ [Worker.terminate()](/game/api/worker/workerObj/#terminate)
 结束当前 Worker 线程。仅限在主线程的 Worker 实例对象上调用。
 
  **示例**
