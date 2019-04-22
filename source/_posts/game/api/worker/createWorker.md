@@ -6,9 +6,9 @@ categoryName: api
 priority: 18-01
 ---
 
- **swan.createWorker()**
+ > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持
 
- 创建一个 [Worker 线程](/game/tutorials/worker/worker)。目前限制最多只能创建一个 Worker，创建下一个 Worker 前请先调用 [Worker.terminate](/game/api/worker/_workerObj/terminate/)
+ 创建一个 [Worker 线程](/game/tutorials/worker/worker)。目前限制最多只能创建一个 Worker，创建下一个 Worker 前请先调用 [Worker.terminate](/game/api/worker/workerObj/#terminate)
 
  ```js
 swan.createWorker(path)
