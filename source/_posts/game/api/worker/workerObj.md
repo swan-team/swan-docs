@@ -52,7 +52,7 @@ Worker.onMessge(callback)
 
  |属性|类型|描述|
 |-|-|-|
-|res|Object|主线程/Worker 线程向当前线程发送的消息|
+|res|Any|主线程/Worker 线程向当前线程发送的消息|
 
  **示例**
 
@@ -81,7 +81,7 @@ Worker.onMessge(opts)
 
  |属性|类型|是否必填|描述|
 |-|-|-|-|
-|opts|Object|是|需要发送的消息|
+|opts|Any|是|需要发送的消息|
 
  **示例**
 
