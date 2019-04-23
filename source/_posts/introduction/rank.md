@@ -89,11 +89,22 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 
 **2.1更多示例**
 
+| H5 地址 | 小程序路径 |
+|-|-|
+| https://example.com/ | pages/home/index |
+```
+// 如果要完全匹配到 url 结尾，例如当 url 后没有 path 时，映射小程序首页 path，url 后要加结束符
+https://example.com/$ => pages/home/index
+```
+
 |H5 地址|小程序路径|
 |--|--|
 | `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
+https://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
+
+// 只要是符合正则规则的匹配方式都可以，例如下述规则也同样正确
+https://example.com/book?id=([\w]+)&type=(.+)$ => pages/book/index?bookid=${1}&type=${2}
 ```
 
 |H5 地址 |小程序路径 |
@@ -101,14 +112,14 @@ http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&
 | `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
 ```
 // 参数部分序号根据正则匹配的顺序决定
-http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
+https://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
+https://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
@@ -116,14 +127,14 @@ http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}
 | `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
 ```
 // 两个地址中没有对应项的参数保持不变
-http://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
+https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/book/history2019.html?id=1 `| pages/book?type=history |
 ```
-http://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=history
+https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 ```
 
 
