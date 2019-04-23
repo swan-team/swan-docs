@@ -94,7 +94,7 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 |--|--|
 | `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=$1&type=$2
+http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
 ```
 
 |H5 地址 |小程序路径 |
@@ -102,14 +102,14 @@ http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=$1&ty
 | `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
 ```
 // 参数部分序号根据正则匹配的顺序决定
-http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=$2&type=$1
+http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=$2&type=$1
+http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
@@ -117,7 +117,7 @@ http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=$2&t
 | `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
 ```
 // 两个地址中没有对应项的参数保持不变
-http://example.com/book/([^\.]+).html => pages/book/index?bookid=$1&type=history
+http://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
 ```
 
 | H5 地址 | 小程序路径 |
@@ -189,14 +189,14 @@ Sitemap 示例:
 **5.如何得知 Sitemap 资源的收录索引情况**
 当前开发者平台中针对 Sitemap资源的收录索引反馈正在建设中，开发者在上传了 Sitemap 资源后可在开发者平台中点击登录“搜索资源平台”部分的引导，使用当前绑定熊掌 ID 的超级管理员账号查看对应小程序的收录索引情况
 ![Alt text](../../img/flow/rank/1555420697815.png)
- 
+
 
 ## 搜索流量接入FAQ
 Q：什么是Web化？
 A：简单来说Web化可以理解是为小程序页面转码成网页，这样就可以被爬虫发现和抓取，用于搜索引擎收录使用。
 
 Q：接入自然搜索结果前有哪些必须提前完成的？
-A：1.在开发阶段设置小程序的页面基础信息  2.小程序必须开启web化按钮，并且需要审核通过并且在线服务  2.小程序需要绑定熊掌ID  
+A：1.在开发阶段设置小程序的页面基础信息  2.小程序必须开启web化按钮，并且需要审核通过并且在线服务  2.小程序需要绑定熊掌ID
 
 Q：什么是sitemap？
 A：Sitemap（即站点地图）就是您小程序上各页面的web化url列表。创建并提交Sitemap有助于百度发现并了解您小程序上的所有页面并完成收录。
