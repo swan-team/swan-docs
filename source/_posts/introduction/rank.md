@@ -81,20 +81,34 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 规则适配方式通过正则表达式的方式声明 H5 链接地址与小程序路径间的对应关系。格式举例：
 
 > H5：`http://example.com/detail?id=1`
-> 小程序 web 化域名：xx.smartapps.cn
 > 小程序路径：/pages/detail/index?id=1
 > 这组对应关系可以用以下规则描述：
+<<<<<<< HEAD
 >`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id={$}1
+=======
+>`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id=${1}
+>>>>>>> b3fe41bdc8fe5a97d4f64c94ff4cedc26785f602
 
-如上例所示，规则左侧部分为由 H5 地址生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；规则右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由`$左侧匹配项的序号`代替。
+如上例所示，规则左侧部分为由 H5 地址生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；规则右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由`${左侧匹配项的序号}`代替。
 
 **2.1更多示例**
+
+| H5 地址 | 小程序路径 |
+|-|-|
+| https://example.com/ | pages/home/index |
+```
+// 如果要完全匹配到 url 结尾，例如当 url 后没有 path 时，映射小程序首页 path，url 后要加结束符
+https://example.com/$ => pages/home/index
+```
 
 |H5 地址|小程序路径|
 |--|--|
 | `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid={$}1&type={$}2
+https://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
+
+// 只要是符合正则规则的匹配方式都可以，例如下述规则也同样正确
+https://example.com/book?id=([\w]+)&type=(.+)$ => pages/book/index?bookid=${1}&type=${2}
 ```
 
 |H5 地址 |小程序路径 |
@@ -102,14 +116,14 @@ http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid={$}1&
 | `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
 ```
 // 参数部分序号根据正则匹配的顺序决定
-http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid={$}2&type={$}1
+https://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid={$}2&type={$}1
+https://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
 | H5 地址 | 小程序路径 |
@@ -117,14 +131,14 @@ http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid={$}2
 | `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
 ```
 // 两个地址中没有对应项的参数保持不变
-http://example.com/book/([^\.]+).html => pages/book/index?bookid={$}1&type=history
+https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/book/history2019.html?id=1 `| pages/book?type=history |
 ```
-http://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=history
+https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 ```
 
 
@@ -189,14 +203,14 @@ Sitemap 示例:
 **5.如何得知 Sitemap 资源的收录索引情况**
 当前开发者平台中针对 Sitemap资源的收录索引反馈正在建设中，开发者在上传了 Sitemap 资源后可在开发者平台中点击登录“搜索资源平台”部分的引导，使用当前绑定熊掌 ID 的超级管理员账号查看对应小程序的收录索引情况
 ![Alt text](../../img/flow/rank/1555420697815.png)
- 
+
 
 ## 搜索流量接入FAQ
 Q：什么是Web化？
 A：简单来说Web化可以理解是为小程序页面转码成网页，这样就可以被爬虫发现和抓取，用于搜索引擎收录使用。
 
 Q：接入自然搜索结果前有哪些必须提前完成的？
-A：1.在开发阶段设置小程序的页面基础信息  2.小程序必须开启web化按钮，并且需要审核通过并且在线服务  2.小程序需要绑定熊掌ID  
+A：1.在开发阶段设置小程序的页面基础信息  2.小程序必须开启web化按钮，并且需要审核通过并且在线服务  2.小程序需要绑定熊掌ID
 
 Q：什么是sitemap？
 A：Sitemap（即站点地图）就是您小程序上各页面的web化url列表。创建并提交Sitemap有助于百度发现并了解您小程序上的所有页面并完成收录。
