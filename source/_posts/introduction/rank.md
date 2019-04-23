@@ -84,7 +84,7 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 > 小程序 web 化域名：xx.smartapps.cn
 > 小程序路径：/pages/detail/index?id=1
 > 这组对应关系可以用以下规则描述：
->`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id=$1
+>`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id={$}1
 
 如上例所示，规则左侧部分为由 H5 地址生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；规则右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由`$左侧匹配项的序号`代替。
 
@@ -94,7 +94,7 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 |--|--|
 | `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=$1&type=$2
+http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid={$}1&type={$}2
 ```
 
 |H5 地址 |小程序路径 |
@@ -102,14 +102,14 @@ http://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=$1&ty
 | `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
 ```
 // 参数部分序号根据正则匹配的顺序决定
-http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=$2&type=$1
+http://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid={$}2&type={$}1
 ```
 
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
 ```
-http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=$2&type=$1
+http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid={$}2&type={$}1
 ```
 
 | H5 地址 | 小程序路径 |
@@ -117,7 +117,7 @@ http://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=$2&t
 | `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
 ```
 // 两个地址中没有对应项的参数保持不变
-http://example.com/book/([^\.]+).html => pages/book/index?bookid=$1&type=history
+http://example.com/book/([^\.]+).html => pages/book/index?bookid={$}1&type=history
 ```
 
 | H5 地址 | 小程序路径 |

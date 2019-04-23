@@ -758,55 +758,68 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
 
 **示例代码**：
-<a href="swanide://fragment/ecb898c32b2c234043c55e7b67664deb1540395947" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+ 
+
+* 在 swan 文件中
+
 ```html
 <!--textarea.swan-->
-<view class="section">
-    <textarea placeholder="自动变高"
-        auto-height
-        bindinput="bindInput"
-        bindfocus="bindFocus"
-        bindblur="bindBlur"
-        bindlinechange="bindLinechange" />
-</view>
-<view class="section">
-    <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+<view class="wrap">
+    <view class="section">
+        <view class="title">输入区高度自适应</view>
+        <textarea auto-height bindinput="bindInput"/>
+    </view>
+    <view class="section">
+        <view class="title">自动聚焦的textarea</view>
+        <textarea auto-focus="{{focus}}" style="height: 3em"/>
+    </view>
 </view>
 ```
 
+* 在 js 文件中 
+
 ```javascript
-//textarea.js
 Page({
     data: {
-        height: 20,
-        focus: false
+        height: 1,
+        focus: true
     },
     bindFocus(e) {
         console.log('focus - e:', e);
-        swan.showToast({
-            'title': `focus - ${e.detail.value}`
-        });
     },
     bindInput(e) {
         console.log('input - e:', e);
-        swan.showToast({
-            'title': `input - ${e.detail.value}`
-        });
     },
     bindLinechange(e) {
         console.log('linechange - e:', e);
-        swan.showToast({
-            'title': `linechange - ${e.detail.value}`
-        });
     },
     bindBlur(e) {
         console.log('blur - e:', e);
-        swan.showToast({
-            'title': `blur - ${e.detail.value}`
-        });
     }
 });
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    height: 100%;
+}
+.title {
+    color: #999;
+    padding: .33rem .21rem .17rem;
+}
+textarea {
+    background: #fff;
+    width: 100%;
+    padding: .17rem;
+    line-height: 40rpx;
+}
+```
+**图示**
+![图片](../../../img/component/textarea.png)
+
 **说明**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。

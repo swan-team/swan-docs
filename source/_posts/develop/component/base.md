@@ -194,34 +194,144 @@ Page({
 | tr | |
 | ul | `` |
 
+**示例**
+
+
+* 在 swan 文件中
 
 ```xml
-<!-- rich-text.swan -->
-<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过HTML String渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{htmlSnip}}</view>
+            </scroll-view>
+            <button type="primary" bind:tap="renderHtml">渲染HTML</button>
+            <block s-if="{{renderedByHtml}}">
+                <rich-text nodes="{{htmlSnip}}"></rich-text>
+            </block>
+        </view>
+    </view>
+    <view class="renders">
+        <view class="renders_title">通过节点渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{nodeSnip}}</view>
+            </scroll-view>
+            <button type="primary" bind:tap="renderNode">渲染Node</button>
+            <block s-if="{{renderedByNode}}">
+                <rich-text nodes="{{nodes}}"></rich-text>
+            </block>
+        </view>
+    </view>
+</view>
 ```
-
+* 在 js 文件中
 ```js
-// rich-text.js
+const htmlSnip
+=`<div class="div_class">
+  <h1>Title</h1>
+  <p class="p">
+    Life is&nbsp;<i>like</i>&nbsp;a box of
+    <b>&nbsp;chocolates</b>
+  </p>
+</div>`;
+const nodeSnip
+=`Page({
+  data: {
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: red;'
+      },
+      children: [{
+        type: 'text',
+        text: 'You never know what you're gonna get.'
+      }]
+    }]
+  }
+})`;
+
 Page({
     data: {
+        htmlSnip,
+        nodeSnip,
+        renderedByHtml: false,
+        renderedByNode: false,
         nodes: [{
-        name: 'div',
-        attrs: {
-            class: 'div_class',
-            style: 'line-height: 60px; color: red;'
-        },
-        children: [{
-            type: 'text',
-            text: 'Hello&nbsp;World!'
-        }]
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you\'re gonna get.'
+            }]
         }]
     },
-    tap() {
-        console.log('tap')
+    renderHtml() {
+        this.setData({
+            renderedByHtml: true
+        });
+    },
+    renderNode() {
+        this.setData({
+            renderedByNode: true
+        });
+    },
+    enterCode(e) {
+        console.log(e.detail.value);
+        this.setData({
+            htmlSnip: e.detail.value
+        });
     }
-})
+});
 ```
 
+* 在 css 文件中
+```css
+.rich-text {
+    width: 100%;
+    height: 100%;
+    font-size: .16rem;
+    padding: .16rem;
+}
+.renders {
+    width: 100%;
+    margin-top: 60rpx;
+}
+.renders_view {
+    width: 100%;
+    height: auto;
+}
+.renders_title {
+    color: darkgrey;
+}
+.p {
+    color: #4F99FB;
+    line-height: 60rpx;
+}
+scroll-view {
+    width: 100%;
+    height: 350rpx;
+    border: 1rpx solid #1AAD19;
+    box-sizing: border-box;
+    line-height: 50rpx;
+}
+.cont {
+    width: 100%;
+    height: 100%;
+    white-space: pre;
+}
+button {
+    margin: 20rpx 0;
+}
+```
+**图示**
+![图片](../../../img/component/richtext.png)
 **说明：**
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。

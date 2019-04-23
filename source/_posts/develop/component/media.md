@@ -365,40 +365,131 @@ Page({
 |bindstop|EventHandle|-|摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle|-|用户不允许使用摄像头时触发|
 
-**说明**:
-* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
-* 同一页面只能插入一个 camera 组件。
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
+
 
 **示例：**
+ 
+
+* 在 swan 文件中
 
 ```xml
-<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
-<button type="primary" bind:tap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image>
+<div class="camera">
+    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
+    <button type="primary" bind:tap="switchCamera">切换摄像头</button>
+    <button type="primary" bind:tap="takePhoto">拍照</button>
+    <button type="primary" bind:tap="startRecord">开始录像</button>
+    <button type="primary" bind:tap="stopRecord">结束录像</button>
+    <view class="preview">预览</view>
+    <image s-if="src" class="img" mode="widthFix" src="{{src}}"></image>
+    <video s-if="videoSrc" class="video" src="{{videoSrc}}"></video>
+</div>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
+    data: {
+        src: '',
+        device: 'back',
+        videoSrc: ''
+    },
+    switchCamera() {
+        const devices = this.getData('device');
+        if (devices === 'back') {
+            this.setData({
+                device: 'front'
+            });
+        } else {
+            this.setData({
+                device: 'back'
+            });
+        }
+    },
     takePhoto() {
         const ctx = swan.createCameraContext();
         ctx.takePhoto({
             quality: 'high',
-            success: (res) => {
+            success: res => {
                 this.setData({
                     src: res.tempImagePath
-                })
+                });
+            }
+        });
+    },
+    startRecord() {
+        const ctx = swan.createCameraContext();
+        ctx.startRecord({
+            success: res => {
+                swan.showToast({
+                    title: 'startRecord'
+                });
+            }
+        });
+    },
+    stopRecord() {
+        const ctx = swan.createCameraContext();
+        ctx.stopRecord({
+            success: res => {
+                swan.showModal({
+                    title: '提示',
+                    content: res.tempVideoPath
+                });
+                this.setData({
+                    videoSrc: res.tempVideoPath
+                });
             }
         });
     },
     error(e) {
         console.log(e.detail);
     }
-})
+});
 ```
 
+* 在 css 文件中
+
+```css
+.camera {
+    width: 100%;
+    padding: .16rem;
+    font-size: .16rem;
+}
+.preview {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+button {
+    margin-top: .16rem;
+}
+.img,
+video {
+    width: 100%;
+    margin-top: 50rpx;
+}
+```
+**图示**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/camera.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**说明**:
+* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
+* 同一页面只能插入一个 camera 组件。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
 ## ar-camera
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
@@ -454,7 +545,9 @@ Page({
 ```
 
 ## live-player
+
 **解释：**实时视频播放
+
 > 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 |一级类目|二级类目|
@@ -478,75 +571,93 @@ Page({
 |bindnetstatus|EventHandle| -|网络状态通知，detail = {info}|
 |bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
 
-**说明**:
-* live-player 默认宽度 300px、高度 225px；
-* 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
-**状态码**
-
-|代码  |说明   |
-| --- | --- |
-|2001|已经连接服务器|
-|2002|已经连接服务器,开始拉流|
-|2003|网络接收到首个视频数据包(IDR)|
-|2004|视频播放开始|
-|2005|视频播放进度|
-|2006|视频播放结束|
-|2007|视频播放Loading|
-|2008|解码器启动|
-|2009|视频分辨率改变|
-|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|
-|-2302|获取加速拉流地址失败|
-|2101|当前视频帧解码失败|
-|2102|当前音频帧解码失败|
-|2103|网络断连, 已启动自动重连|
-|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|
-|2105|当前视频播放出现卡顿|
-|2106|硬解启动失败，采用软解|
-|2107|当前视频帧不连续，可能丢帧|
-|2108|当前流硬解第一个I帧失败，SDK自动切软解|
-|3001|RTMP -DNS解析失败|
-|3002|RTMP服务器连接失败|
-|3003|RTMP服务器握手失败|
-|3005|RTMP 读/写失败|
-
-**网络状态数据：**
-
-|键名  | 说明 |
-| --- | --- |
-|videoBitrate|当前视频编/码器输出的比特率，单位 kbps|
-|audioBitrate|当前音频编/码器输出的比特率，单位 kbps|
-|videoFPS|当前视频帧率|
-|videoGOP|当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s (安卓不支持该键名)|
-|netSpeed|当前的发送/接收速度|
-|netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
-|videoWidth|视频画面的宽度|
-|videoHeight|视频画面的高度|
 
 **示例：**
 
-<a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+ 
 
+* 在 swan 文件中
+
+```swan
+<view class="live-play">
+    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" muted="{{muted}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus"></live-player>
+    <div class="section">
+        <button type="primary" bind:tap="livePlay">开始播放 play</button>
+        <button type="primary" bind:tap="liveStop">停止播放 stop</button>
+        <button type="primary" bind:tap="liveMute">静音</button>
+        <button type="primary" bind:tap="changeSrc">更换src</button>
+        <button type="primary" bind:tap="backgroundMute">后台静音</button>
+        <button type="primary" bind:tap="objectFit">object-fit改变</button>
+    </div>
+</view>
+```
+* 在 js 文件中
+```js
+Page({
+    data: {
+        cur: 0,
+        autoplay: false,
+        src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+        srcList: [
+            'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+            'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'
+        ],
+        objectFit: 'contain',
+        orientation: 'vertical',
+        minCache: 1,
+        maxCache: 3,
+        muted: false,
+        backgroundMute: false
+    },
+    onReady(e) {
+        this.ctx = swan.createLivePlayerContext('myLive');
+    },
+    statechange(e) {
+        swan.showToast({
+            title: '播放状态变化 statechange' + JSON.stringify(e)
+        });
+    },
+    netstatus(e) {
+        swan.showToast({
+            title: '网络状态变化 netstatus' + JSON.stringify(e)
+        });
+    },
+    livePlay(e) {
+        this.ctx.play();
+    },
+    objectFit(e) {
+        this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
+    },
+    liveStop(e) {
+        this.ctx.stop();
+    },
+    liveMute(e) {
+        this.setData({
+            muted: true
+        });
+    },
+    changeSrc(e) {
+        let srcList = this.getData('srcList');
+        let cur = (this.getData('cur') + 1) % srcList.length;
+        this.setData('src', srcList[cur]);
+        this.setData('cur', cur);
+    },
+    backgroundMute(e) {
+        this.setData({
+            'backgroundMute': true
+        });
+    },
+});
+```
+* 在 css 文件中
 ```css
-.wrap {
-    position: relative;
-    top: 10px;
+.live-play {
     width: 100%;
+    padding: .16rem;
 }
-.item {
-    display: block;
-    margin: 6px 22.67px;
-    border-radius: 4px;
-    height: 38px;
-    line-height: 38px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    box-sizing: border-box;
-    color: #333;
-    border: 1px solid #333;
-    background-color: #fff;
+button {
+    margin-top: 20rpx;
 }
 ```
 
@@ -621,3 +732,50 @@ Page({
     }
 });
 ```
+**图示**
+![图片](../../../img/component/liveplayer.png)
+
+**说明**:
+* live-player 默认宽度 300px、高度 225px；
+* 从基础库版本1.12.0开始支持事件捕获、冒泡。
+
+**状态码**
+
+|代码  |说明   |
+| --- | --- |
+|2001|已经连接服务器|
+|2002|已经连接服务器,开始拉流|
+|2003|网络接收到首个视频数据包(IDR)|
+|2004|视频播放开始|
+|2005|视频播放进度|
+|2006|视频播放结束|
+|2007|视频播放Loading|
+|2008|解码器启动|
+|2009|视频分辨率改变|
+|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|
+|-2302|获取加速拉流地址失败|
+|2101|当前视频帧解码失败|
+|2102|当前音频帧解码失败|
+|2103|网络断连, 已启动自动重连|
+|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|
+|2105|当前视频播放出现卡顿|
+|2106|硬解启动失败，采用软解|
+|2107|当前视频帧不连续，可能丢帧|
+|2108|当前流硬解第一个I帧失败，SDK自动切软解|
+|3001|RTMP -DNS解析失败|
+|3002|RTMP服务器连接失败|
+|3003|RTMP服务器握手失败|
+|3005|RTMP 读/写失败|
+
+**网络状态数据：**
+
+|键名  | 说明 |
+| --- | --- |
+|videoBitrate|当前视频编/码器输出的比特率，单位 kbps|
+|audioBitrate|当前音频编/码器输出的比特率，单位 kbps|
+|videoFPS|当前视频帧率|
+|videoGOP|当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s (安卓不支持该键名)|
+|netSpeed|当前的发送/接收速度|
+|netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
+|videoWidth|视频画面的宽度|
+|videoHeight|视频画面的高度|
