@@ -954,6 +954,12 @@
       text: API
       name: api
       sidebar:
+        # -
+        #     sidebar:
+        #     -
+        #       link: /develop/api/apilist
+        #       text: API 列表
+        #       name: apilist        
         -
             link: /develop/api/net
             text: 网络

@@ -173,3 +173,9 @@ web-view 网页中支持的接口有：
 * 网页内 iframe 的域名也需要配置到域名白名单。
 * 每个页面只能有一个 <`web-view/`> ，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
 * 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
+
+### 使用 web-view 打开限定域名内的网页
+
+进入<a href="https://smartprogram.baidu.com/developer/index.html">智能小程序开发者平台</a>，单击“设置->开发设置”，即可在业务域名中下载、配置校验文件并配置业务域名。
+
+![图片](../../../img/component/webview.png)

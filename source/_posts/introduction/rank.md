@@ -83,11 +83,7 @@ H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，
 > H5：`http://example.com/detail?id=1`
 > 小程序路径：/pages/detail/index?id=1
 > 这组对应关系可以用以下规则描述：
-<<<<<<< HEAD
->`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id={$}1
-=======
 >`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id=${1}
->>>>>>> b3fe41bdc8fe5a97d4f64c94ff4cedc26785f602
 
 如上例所示，规则左侧部分为由 H5 地址生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；规则右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由`${左侧匹配项的序号}`代替。
 
