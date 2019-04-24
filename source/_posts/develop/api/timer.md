@@ -22,7 +22,7 @@ sidebar: timer
 
 ##  setInterval
 
-**解释**：设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。
+**解释**：设定一个定时器，按照指定的周期（以毫秒计）来执行注册的回调函数。
 
 **方法参数**：Function callback, Number delay
 
@@ -38,7 +38,7 @@ sidebar: timer
 
 ##  setTimeout
 
-**解释**：设定一个定时器。在定时到期以后执行注册的回调函数
+**解释**：设定一个定时器，在定时到期以后执行注册的回调函数。
 
 **方法参数**：Function callback, Number delay
 

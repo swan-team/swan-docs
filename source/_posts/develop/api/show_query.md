@@ -21,7 +21,7 @@ sidebar: show_query
 
 ## IntersectionObserver
 
-IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
+**解释：** IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
 
 
 **`IntersectionObserver`对象的方法列表：**
@@ -145,15 +145,17 @@ Page({
 
 ## selectorQuery
 
+**解释：** 选择器
+
 **`selectorQuery`对象的方法列表：**
 
 |方法 |参数  |说明|
 |---- | ---- | ---- |
-|in| object Component | 参考下面详细介绍 |
-|select   | selector | 参考下面详细介绍 |
-|selectAll  |  selector  | 参考下面详细介绍 |
-|selectViewport  |      | 参考下面详细介绍 |
-|exec  |  callback  | 参考下面详细介绍 |
+|in| object Component | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-in/">selectorQuery.in</a>详细介绍 |
+|select   | selector | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-select/">selectorQuery.select</a>详细介绍 |
+|selectAll  |  selector  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-selectAll/">selectorQuery.selectAll</a>详细介绍 |
+|selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
+|exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
 
 ## selectorQuery.in 
 

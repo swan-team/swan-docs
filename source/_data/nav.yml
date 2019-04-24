@@ -954,12 +954,12 @@
       text: API
       name: api
       sidebar:
-        # -
-        #     sidebar:
-        #     -
-        #       link: /develop/api/apilist
-        #       text: API 列表
-        #       name: apilist        
+        -
+            sidebar:
+            -
+              link: /develop/api/apilist
+              text: API 列表
+              name: apilist        
         -
             link: /develop/api/net
             text: 网络
@@ -1242,9 +1242,9 @@
               name: media_video
               sidebar:
                 -
-                  link: /develop/api/media_video/#chooseVideo
+                  link: /develop/api/media_video/#swan-chooseVideo
                   text: swan.chooseVideo
-                  name: media_video_chooseVideo
+                  name: media_video_swan-chooseVideo
                 -
                   link: /develop/api/media_video/#swan-saveVideoToPhotosAlbum
                   text: swan.saveVideoToPhotosAlbum
@@ -1448,9 +1448,9 @@
                     text: swan.canvasPutImageData
                     name: show_canvas_swan-canvasPutImageData
                   -
-                    link: /develop/api/show_canvas/#canvasToTempFilePath 
+                    link: /develop/api/show_canvas/#swan-canvasToTempFilePath 
                     text: swan.canvasToTempFilePath 
-                    name: show_canvas_canvasToTempFilePath 
+                    name: show_canvas_swan-canvasToTempFilePath 
                   -
                     link: /develop/api/show_canvas/#canvasContext 
                     text: canvasContext 
@@ -1840,6 +1840,10 @@
                     link: /develop/api/show_query/#IntersectionObserver-disconnect
                     text: IntersectionObserver.disconnect
                     name: show_query_IntersectionObserver-disconnect
+                  -
+                    link: /develop/api/show_query/#swan-createSelectorQuery
+                    text: swan.createSelectorQuery
+                    name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery
