@@ -6,6 +6,10 @@ sidebar: dialog
 ---
 提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，原界面加上蒙层以聚焦用户注意力，页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
 综上，请谨慎使用提示框，因为它们会分散用户的注意力，并且打断用户的任务路径。
+
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showModal/" target="_blank">showModal</a>。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/dialog/1.png">

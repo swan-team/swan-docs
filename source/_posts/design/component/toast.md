@@ -5,12 +5,13 @@ nav: component
 sidebar: toast
 ---
 
-反馈提示Toast用于向用户提供其行为的简洁的结果反馈。它既不会阻塞用户后续行为，也不要求用户响应操作，在同步用户展现信息一定时间（可配，不建议超过7s）后便自动消失。
-在连续反馈场景，新的反馈提示会被优先展现。
+反馈提示Toast用于向用户提供其行为的简洁的结果反馈。它既不会阻塞用户后续行为，也不要求用户响应操作，在同步用户展现信息一定时间（可配，不建议超过7s）后便自动消失。在连续反馈场景，新的反馈提示会被优先展现。
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showToast/" target="_blank">showToast</a>。
 
 智能小程序提供图文Toast（1）和纯文Toast（2），开发者可自定义配置提示内容。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/toast/1.png">
 	</div>
 </div>
@@ -18,7 +19,7 @@ sidebar: toast
 ## 图文Toast
 图文Toast通常用于强调最终结果反馈，默认2s后自动消失。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/toast/2.png">
 		<p class="m-doc-custom-examples-text">
 			图文Toast的容器（1）由小程序统一提供，不可定制；开发者可以修改反馈图标（2，可选）和提示文案（3）。</p>
