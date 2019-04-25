@@ -6,7 +6,7 @@ sidebar: button
 ---
 按钮允许用户点击，并触发对应的操作。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#button/" target="view_window">button</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#button/" target="_blank">button</a>。
 
 ## 大按钮
 大按钮高度固定为88px（44pt），圆角大小固定8px（4pt）。

@@ -490,7 +490,9 @@ video {
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 * 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
+
 ## ar-camera
+
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
 **解释：**AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。

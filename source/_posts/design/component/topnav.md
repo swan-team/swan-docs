@@ -8,7 +8,7 @@ sidebar: topnav
 顶部导航栏始终固定在屏幕顶部，不随页面滚动隐藏。
 智能小程序会自动继承小程序首页顶部导航栏的配置，但每个页面均可配置其顶部导航栏。即同一智能小程序中，不但可同时存在原生顶部导航栏和自定义导航栏，也可为每个页面定制不同的样式。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/" target="view_window">导航栏</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/" target="_blank">导航栏</a>。
 
 
 ## 原生顶部导航栏

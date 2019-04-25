@@ -7,7 +7,7 @@ sidebar: lottie
 
 为了更好地实现流畅的动画效果，智能小程序支持Lottie导出的json文件以及json文件与位图。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/base/#animation-view/" target="view_window">animation-view</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/base/#animation-view/" target="_blank">animation-view</a>。
 
 1. Lottie使用入门，详见 [官方介绍](https://airbnb.design/lottie/) ；
 2. 设计师精彩示例及动效文件，详见 [设计社区](https://www.lottiefiles.com/) 。
