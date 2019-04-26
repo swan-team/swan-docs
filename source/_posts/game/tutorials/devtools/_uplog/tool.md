@@ -4,6 +4,18 @@
 
 下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
+#### v2.2.2
+**Bug Fixed**
+
+- 修复了预览/发布含有分包加载功能的小游戏时，使用最新版安卓打开小游戏出现分包加载失败的问题
+- 修复小游戏开放域接口 fail，报错“小程序标识不合法”的问题
+- 修复了将 Cocos 项目修改为远程加载时，IDE 会卡死的问题
+- 修复了发布小游戏 ESOCKETTIMEOUT 问题
+- 修复了打开含 node_modules 的小游戏项目，编译会卡住的问题
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.2&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.2&type=online)）
+
+
 #### v2.2.1
 **Bug Fixed**
 - 修复小游戏分包加载
