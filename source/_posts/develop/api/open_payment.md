@@ -24,6 +24,7 @@ sidebar: open_payment
 |---- | ---- | ---- | ----|----|
 |orderInfo| Object | 是 | -|订单信息|
 |bannedChannels| StringArray | 否 | -| 需要隐藏的支付方式|
+|version| string | 否 |-|指定为 '2.0' 时，返回值中会包含 payId 字段。|
 |success |Function  |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|

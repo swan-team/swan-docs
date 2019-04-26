@@ -62,12 +62,12 @@ sidebar: open_infomation
 添加模板完成后，可以在我的模板里看到对应模板的模板ID。
 ![图片](../../../img/api/information/6.png)
 ![图片](../../../img/api/information/7.png)
-### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过<a href="http://smartprogram.baidu.com/docs/develop/api/open_payment/#requestPolymerPayment/">支付</a>获取订单id
+### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过支付获取<a href="http://smartprogram.baidu.com/docs/develop/api/open_payment/#requestPolymerPayment/">payId</a>
 
 #### formid 
 页面的`<form/>`组件，属性report-submit为true时，可以声明为需发模板消息，此时用户点击按钮提交表单可以获取formId，用于发送表单类模板消息。
-#### 订单id 
-当用户完成支付行为时，可以获取订单id用于发送交易类模板消息。
+#### payId 
+当用户完成支付行为时，可以获取payId用于发送交易类模板消息。
 
 ### 步骤三：调用接口下发模板消息
 
@@ -324,7 +324,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |touser_openId|string|否|接收者open_id|
 |data|	json string|	是|`	{"keyword1": {"value": "2018-09-06"},"keyword2": {"value": "kfc"}}`。|
 |page|	string|	否|	点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数，（示例index?foo=bar），该字段不填则模板无跳转。|
-|scene_id|	string|	是|	场景id，例如表单id和订单id。|
+|scene_id|	string|	是|	场景id，例如formId和payId。|
 |scene_type	|int|	是|	场景type，1：表单；2：百度收银台订单；3:直连订单。|
 |ext|json string|否|`{"xzh_id":111,"category_id":15}`|
 |access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
