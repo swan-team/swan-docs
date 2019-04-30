@@ -369,6 +369,7 @@ Page({
 
 **示例：**
  
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -577,7 +578,7 @@ Page({
 
 **示例：**
 
- 
+<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
 
@@ -663,77 +664,7 @@ button {
 }
 ```
 
-```xml
-<live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" muted="{{muted}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus"></live-player>
-<div class="wrap">
-    <view class="item" bind:tap="livePlay">开始播放 play</view>
-    <view class="item" bind:tap="liveStop">停止播放 stop</view>
-    <view class="item" bind:tap="liveMute">静音</view>
-    <view class="item" bind:tap="changeSrc">更换src</view>
-    <view class="item" bind:tap="backgroundMute">后台静音</view>
-    <view class="item" bind:tap="objectFit">object-fit改变</view>
-    <view class="item" bind:tap="oneItemClick">点击跳转</view>
-</div>
-```
 
-```javascript
-Page({
-    data: {
-        cur: 0,
-        src: 'http://livebd.quanmin.tv/live/1931315320.m3u8',
-        srcList: [
-            'http://livebd.quanmin.tv/live/1931315320.m3u8',
-            'http://livebd.quanmin.tv/live/462099.m3u8',
-        ],
-        objectFit: 'contain',
-        orientation: 'vertical',
-        minCache: 1,
-        maxCache: 3,
-        muted: false,
-        backgroundMute: false
-    },
-    onReady(e) {
-        this.ctx = swan.createLivePlayerContext('myLive');
-    },
-    statechange(e) {
-            swan.showToast({
-            title: '播放状态变化 statechange' + JSON.stringify(e)
-        });
-    },
-    netstatus(e) {
-        swan.showToast({
-            title: '网络状态变化 netstatus' + JSON.stringify(e)
-        });
-    },
-    livePlay(e) {
-        this.ctx.play();
-    },
-    objectFit(e) {
-        this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
-    },
-    liveStop(e) {
-        this.ctx.stop();
-    },
-    liveMute(e) {
-        let muted = !this.getData('muted');
-        this.setData('muted', muted);
-    },
-    changeSrc(e) {
-        let srcList = this.getData('srcList');
-        let cur = (this.getData('cur') + 1) % srcList.length;
-        this.setData('src', srcList[cur]);
-        this.setData('cur', cur);
-    },
-    backgroundMute(e) {
-        this.setData('backgroundMute', !this.getData('backgroundMute'));
-    },
-    oneItemClick(e) {
-        swan.navigateTo({
-            url: 'pages/live-player-new/live-player-new'
-        });
-    }
-});
-```
 **图示**
 ![图片](../../../img/component/liveplayer.png)
 

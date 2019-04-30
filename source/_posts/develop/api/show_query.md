@@ -157,7 +157,7 @@ Page({
 |selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
 |exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
 
-## selectorQuery.in 
+### selectorQuery.in 
 
 **解释：** 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 

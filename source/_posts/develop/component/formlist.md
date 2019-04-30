@@ -759,6 +759,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 **示例代码**：
  
+ <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 
 * 在 swan 文件中
 
@@ -823,3 +824,4 @@ textarea {
 **说明**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
+* 请使用cover-view组件在 textarea 组件上开发遮罩层。

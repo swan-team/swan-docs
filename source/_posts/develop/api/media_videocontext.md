@@ -28,22 +28,91 @@ sidebar: media_videocontext
 |hideStatusBar | 无 |  隐藏状态栏，仅在iOS全屏下有效。|
 
 **示例：**
+<a href="swanide://fragment/2a74a56f21b40ba5bc93803d70065cf21556536372261" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 
 ```html
-<view>
-    <video id="myVideo" src="https://example.baidu.com/xxxx"></video>
+<view class="wrap">
+    <video id="myVideo" auto src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+
+    <button type="primary" bindtap="play">play</button>
+    <button type="primary" bindtap="pause">pause</button>
+    <button type="primary" bindtap="seek">seek</button>
+    <button type="primary" bindtap="sendDanmu">sendDanmu</button>
+    <button type="primary" bindtap="fullScreen">{{fullScreenText}}</button>
 </view>
 ```
+
+* 在 js 文件中
+
 ```js
-const myVideo = swan.createVideoContext('myVideo');
-myVideo.play();
+Page({
+    data: {
+        fullScreenText: 'requestFullScreen'
+    },
+    onLoad() {
+        const video = swan.createVideoContext('myVideo');
+        this.video = video;
+    },
+    play() {
+        this.video.play();
+    },
+    pause() {
+        this.video.pause();
+    },
+    seek() {
+        this.video.seek(10);
+    },
+    sendDanmu() {
+        this.video.sendDanmu({
+            text: '这是一条弹幕',
+            color: '#f60'
+        });
+    },
+    fullScreen() {
+        if (this.getData('fullScreenText') === 'requestFullScreen') {
+            this.video.requestFullScreen();
+            this.setData('fullScreenText', 'exitFullScreen');
+        } else {
+            this.video.exitFullScreen();
+            this.setData('fullScreenText', 'requestFullScreen');
+        }
+    }
+});
 ```
-<!-- 
-#### 错误码
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap video {
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 50rpx;
+}
+```
+
+**图示**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/createVideoContext.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。 |
-|1001|执行失败| -->
+
 

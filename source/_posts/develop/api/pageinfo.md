@@ -21,7 +21,7 @@ sidebar: pageinfo
 |title | String | 是 |  -|页面标题 |
 |keywords|String|是| -|页面关键字|
 |description|String|是| -| 页面描述信息|
-|releaseDate|String|否| -|原始发布时间(年-月-日 时:分:秒 带有前导零）|
+|releaseDate|String|否（入百度APP信息流为必填）| -|原始发布时间(年-月-日 时:分:秒 带有前导零）|
 |articleTitle | String | 否 | -| 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
 |image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| -|图片线上地址，用于信息流投放后的封面显示，最多3张，单图片最大2M；封面图建议尺寸：高>=210px & 宽>=375px；最小尺寸：高>=146px & 宽>=218px。多张图时，用数组表示|
 |video|Object/Array|否（页面存在视频情况下必填）| -|视频信息，多个视频时，用数组表示|

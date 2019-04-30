@@ -196,6 +196,7 @@ Page({
 
 **示例**
 
+<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -373,6 +374,7 @@ button {
 
 
 ## animation-view
+
 **解释：**Lottie动画组件
 
 **属性说明：**
@@ -391,22 +393,78 @@ button {
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * animation-view组件不支持原生组件嵌套。
 * 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
+
 **示例：**
 
-```xml
-<!-- animation-view.swan -->
-<view>
-    <animation-view id="myAnim" action="{{action}}" hidden="{{hidden}}" class="controls" autoplay="false" path="{{path}}">
-    </animation-view>
+<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="animation-content hide">
+        <view class="animation-info">
+            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" path="{{path}}">
+            </animation-view>
+        </view>
+        <view class="button-content">
+            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}动画</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
 </view>
 
 ```
+* 在 js 文件中
+
 ```javascript
 Page({
     data: {
-        path: '/anims/anim_one.json',
+        title: 'animation-view',
         action: 'play',
-        hidden: false
+        hidden: false,
+        path: '/anims/lottie_example.json',
+        loop: true,
+        autoplay: true,
+        status: '停止',
+        updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
+        textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+    },
+    playLottie() {
+        // 切换播放状态
+        let action = this.data.action;
+        action = action === 'pause' ? 'play' : 'pause';
+        let status = action === 'pause' ? '播放' : '停止';
+
+        this.setData({
+            action,
+            status
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.animation-info {
+    padding-top: .4rem;
+}
+.controls {
+    width: 88%;
+    margin: 0 auto;
+}
+.button-content {
+    position: relative;
+    top: 0;
+}
+.toggle-animation {
+    margin-top: .22rem!important;
+    border-radius: .04rem;
+}
+.toggle-animation::after {
+    border: none;
+}
 ```

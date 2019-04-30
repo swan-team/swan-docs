@@ -111,20 +111,59 @@ Page({
 
 
 **示例：**
+<a href="swanide://fragment/c7a97fa9b2fef8f2f99fb4694c018f8d1556536133280" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="saveVideoToPhotosAlbum">saveVideoToPhotosAlbum</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.saveVideoToPhotosAlbum({
-    'filePath': 'bdfile://xxx',
-    success: function (res) {
-        console.log(res);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    saveVideoToPhotosAlbum() {
+        swan.chooseVideo({
+            sourceType: ['album', 'camera'],
+            compressed: false,
+            success: function (res) {
+                swan.saveVideoToPhotosAlbum({
+                    filePath: res.tempFilePath,
+                    success: function (res) {
+                        swan.showToast({
+                            title: 'success',
+                            icon: 'none'
+                        });
+                        console.log('saveVideoToPhotosAlbum success', res);
+                    },
+                    fail: function (err) {
+                        swan.showToast({
+                            title: 'fail',
+                            icon: 'none'
+                        });
+                        console.log('saveVideoToPhotosAlbum fail', err);
+                    }
+                });
+            },
+            fail: function (err) {
+                console.log('fail', err);
+            }
+        });
     }
 });
 ```
 
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+```
 <!-- #### 错误码
 
 **Andriod**

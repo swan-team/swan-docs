@@ -97,16 +97,54 @@ swan.chooseImage({
 
 **示例：**
 
+<a href="swanide://fragment/03fb8ed0c13722acc9b06f441603988b1556536748943" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getFileInfo">getFileInfo</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getFileInfo({
-    filePath: 'bdfile://somefile',
-    success: function (res) {
-        console.log(res.size);
-        console.log(res.digest);
+Page({
+    getFileInfo() {
+        swan.chooseImage({
+            count: 1,
+            success: function (res) {
+                const tempFilePaths = res.tempFilePaths;
+                swan.getFileInfo({
+                    filePath: tempFilePaths[0],
+                    success: function (res) {
+                        swan.showToast({
+                            title: 'success',
+                            icon: 'none'
+                        });
+                        console.log('getFileInfo success', res);
+                    },
+                    fail: function (err) {
+                        swan.showToast({
+                            title: 'fail',
+                            icon: 'none'
+                        });
+                        console.log('getFileInfo success', err);
+                    }
+                });
+            }
+        });
     }
 });
 ```
+* 在 css 文件中
 
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 <!-- #### 错误码
 
 **Andriod**
@@ -158,12 +196,60 @@ swan.getFileInfo({
 
 **示例：**
 
+**示例：**
+
+<a href="swanide://fragment/3450c561cdf1ef62951d13eff25df65b1556536911397" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSavedFileList">getSavedFileList</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSavedFileList({
-    success: function (res) {
-        var fileList = res.fileList;
+Page({
+    getSavedFileList() {
+        swan.chooseImage({
+            count: 1,
+            success: function (res) {
+                const tempFilePaths = res.tempFilePaths;
+                swan.saveFile({
+                    tempFilePath: tempFilePaths[0],
+                    success: function (res) {
+                        swan.getSavedFileList({
+                            success: function (res) {
+                                swan.showToast({
+                                    title: 'success',
+                                    icon: 'none'
+                                });
+                                console.log('getSavedFileList success', res);
+                            },
+                            fail: function (err) {
+                                swan.showToast({
+                                    title: 'fail',
+                                    icon: 'none'
+                                });
+                                console.log('getSavedFileList fail', err);
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -200,18 +286,55 @@ swan.getSavedFileList({
 
 **示例：**
 
+<a href="swanide://fragment/8e9af32a9901a93711f286f0f65e2eb61556537016514" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSavedFileInfo">getSavedFileInfo</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSavedFileInfo({
-    filePath: 'bdfile://somefile',
-    success: function (res) {
-        console.log(res.size);
-        console.log(res.createTime);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    getSavedFileInfo() {
+        swan.getSavedFileList({
+            success: function (res) {
+                if (res.fileList.length > 0) {
+                    const filePath = res.fileList[0].filePath;
+                    swan.getSavedFileInfo({
+                        filePath,
+                        success: function (res) {
+                            swan.showToast({
+                                title: 'success',
+                                icon: 'none'
+                            });
+                            console.log('getSavedFileList success', res);
+                        },
+                        fail: function (err) {
+                            swan.showToast({
+                                title: 'fail',
+                                icon: 'none'
+                            });
+                            console.log('getSavedFileList fail', err);
+                        }
+                    });
+                }
+            }
+        });
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

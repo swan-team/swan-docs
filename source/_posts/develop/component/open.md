@@ -24,7 +24,8 @@ sidebar: open
 | userGender | 用户性别 |
 
 **示例**
- 
+
+<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>  
 
 * 在 swan 文件中
 
