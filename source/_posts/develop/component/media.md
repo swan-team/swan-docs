@@ -281,6 +281,7 @@ Page({
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
+|bindplay|EventHandle| |当开始播放时触发 play 事件|
 |bindpause|EventHandle| |当暂停播放时触发 pause 事件|
 |bindended|EventHandle| |当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle| |播放进度变化时触发，event.detail = {currentTime, duration} 。|
