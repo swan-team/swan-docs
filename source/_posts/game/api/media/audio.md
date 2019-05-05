@@ -7,6 +7,7 @@ categoryName: api
 
 <!-- md game/api/media/_audioContext/InnerAudioContext.md -->
 <!-- md game/api/media/_audioContext/createInnerAudioContext.md -->
+<!-- md game/api/media/_audioContext/setInnerAudioOption.md -->
 
 <!-- md game/api/media/_audioContext/play.md -->
 <!-- md game/api/media/_audioContext/onPlay.md -->
