@@ -5,8 +5,8 @@ nav: framework
 sidebar: performance-tips
 ---
 
-在您做小程序性能优化之前，建议您先了解小程序的运行原理。
-在传统的 Web 前端项目中，所有代码全部运行在浏览器中。而小程序提供的运行环境有两种，分为逻辑层和视图层。假设现在开发者的小程序项目中有两个页面 pages/index和pages/home ，那么逻辑层代码指的是 app.js 与 pages/index/index.js 还有pages/home/home.js ，视图层代码指的是 pages/index/index.swan 和 pages/home/home.swan。在小程序中想要改变视图需要逻辑层与视图层之间进行通信，这部分通信是需要客户端参与的。
+我们提供了多种方法可以为您的小程序进行性能优化，请先了解小程序的运行原理：
+在传统的 Web 前端项目中，所有代码全部运行在浏览器中。而小程序提供的运行环境有两种，分为逻辑层和视图层。假设现在开发者的小程序项目中有两个页面 pages/index和pages/home ，那么逻辑层代码指的是 app.js 与 pages/index/index.js 还有pages/home/home.js ，视图层代码指的是 pages/index/index.swan 和 pages/home/home.swan。在小程序中想要改变视图需要逻辑层与视图层之间进行通信，这部分通信是需要客户端参与的。具体方法如下：
 
 ## 控制包体积的大小
 
