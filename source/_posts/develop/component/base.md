@@ -58,7 +58,8 @@ Page({
 
 ## text
 
-<div class="notice">解释： </div>放文本的元素<div></div><text class="notice">属性说明:</text>
+**解释：**放文本的元素
+**属性说明:**
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |--|
@@ -108,8 +109,21 @@ Page({
 
 
 ```
+**图示：**
 
-![图片](../../../img/text-demo.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/text-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 **说明:**
 
 * 除了文本节点以外的其他节点都无法长按选中。
@@ -118,17 +132,22 @@ Page({
 
 
 ## rich-text
-<div class="notice">解释： </div>富文本<div></div><text class="notice">属性说明:</text>
+
+**解释：** 富文本
+**属性说明:**
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| nodes | Array / String  | [] |节点列表 / HTML String|
+| nodes | Array / String  | [] |节点列表 / HTML String。|
 
-* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+### nodes
+
 * nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
 * 现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点。
 
-<notice>元素节点：type = node</notice><div></div><text class="notice">属性说明:</text>
+#### 元素节点：type = node
+
+**属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -136,63 +155,78 @@ Page({
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-**文本节点：type = text**
+#### 文本节点：type = text 
+
 **属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | text | 文本 | String | 是 | 支持entities |
 
-* 受信任的HTML节点及属性。
-* 全局支持class和style属性，不支持id属性。
+### 受信任的HTML节点及属性。
+
+> 全局支持class和style属性，不支持id属性。
 
 属性说明:
 
 |节点 | 属性 |
 |---- | ---- |
-| a | |
-| abbr | |
-| b | |
-| blockquote | |
-| br | |
-| code | |
+| a | -|
+| abbr |- |
+| b |- |
+| blockquote | -|
+| br | -|
+| code |- |
 | col | span，width |
 | colgroup | span，width |
-| dd | |
-| del | |
-| div | |
-| dl | |
-| dt | |
-| em | |
-| fieldset | |
-| h1 | |
-| h2 | |
-| h3 | |
-| h4 | |
-| h5 | |
-| h6 | |
-| hr | |
-| i | |
+| dd | -|
+| del | -|
+| div |- |
+| dl |- |
+| dt |- |
+| em | -|
+| fieldset |- |
+| h1 |- |
+| h2 |- |
+| h3 |- |
+| h4 |- |
+| h5 |- |
+| h6 |- |
+| hr | -|
+| i |- |
 | img | alt，src，height，width |
-| ins | |
-| label | |
-| legend | |
-| li | |
+| ins |- |
+| label |- |
+| legend |- |
+| li | -|
 | ol | start，type |
-| p | |
-| q | |
-| span | |
-| strong | |
-| sub | |
-| sup | |
+| p | -|
+| q |- |
+| span |- |
+| strong | -|
+| sub |- |
+| sup |- |
 | table | width |
-| tbody | |
+| tbody |- |
 | td | colspan，height，rowspan，width |
-| tfoot | |
+| tfoot | -|
 | th | colspan，height，rowspan，width |
-| thead | |
-| tr | |
-| ul | `` |
+| thead |- |
+| tr | -|
+| ul | - |
+
+**说明：**
+
+* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
+* nodes 不推荐使用 String 类型，性能会有所下降。
+* rich-text 组件内屏蔽所有节点的事件。
+* attrs 属性不支持 id ，支持 class。
+* name 属性大小写不敏感。
+* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
+* img 标签仅支持网络图片。
+* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+
 
 **示例**
 
@@ -228,7 +262,9 @@ Page({
     </view>
 </view>
 ```
+
 * 在 js 文件中
+
 ```js
 const htmlSnip
 =`<div class="div_class">
@@ -293,6 +329,7 @@ Page({
 ```
 
 * 在 css 文件中
+
 ```css
 .rich-text {
     width: 100%;
@@ -331,16 +368,23 @@ button {
     margin: 20rpx 0;
 }
 ```
-**图示**
-![图片](../../../img/component/richtext.png)
-**说明：**
-* nodes 不推荐使用 String 类型，性能会有所下降。
-* rich-text 组件内屏蔽所有节点的事件。
-* attrs 属性不支持 id ，支持 class。
-* name 属性大小写不敏感。
-* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
-* img 标签仅支持网络图片。
-* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+
+
+**图示:**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/richtext.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 
 ## progress
 

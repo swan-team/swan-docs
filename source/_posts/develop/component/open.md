@@ -96,20 +96,32 @@ sidebar: open
     flex: 1;
 ```
 
-**图示**
-![图片](../../../img/component/opendata.png)
+**图示：**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/opendata.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 
 ## web-view
-<div class="notice">解释： </div>web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
-<div></div>
-<text class="notice">属性说明:</text>
+
+**解释：**web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
+**属性说明:**
 
 | 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
 | --- | ------ | ---- | ---- |---- |
 | src | String |- | webview 指向网页的链接 |-|
 |bindmessage|EventHandler|-|网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
-<div class="notice">示例： </div>
+**示例：**
 ```xml
 <!-- swan -->
 <!-- 首页的 web-view -->
@@ -117,6 +129,7 @@ sidebar: open
 ```
 
 ### **相关接口1 **
+
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
 | 接口名               | 说明         | 
@@ -131,7 +144,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
-<div class="notice">示例： </div>
+**示例：**
 ```xml
 <!-- html -->
 
@@ -179,4 +192,15 @@ web-view 网页中支持的接口有：
 
 进入<a href="https://smartprogram.baidu.com/developer/index.html">智能小程序开发者平台</a>，单击“设置->开发设置”，即可在业务域名中下载、配置校验文件并配置业务域名。
 
-![图片](../../../img/component/webview.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/webview.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
