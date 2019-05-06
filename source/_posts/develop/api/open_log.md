@@ -110,7 +110,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 | 字段名 | 说明 |
 | ------| --- |
-| openid | 用户身份标识，由 appid 和 uid 生成。<br>**不同开发者登录同一个小程序获取到的 openid 不同，同一个开发者使用登录不同一个小程序获取到的 openid 也不同**。 |
+| openid | 用户身份标识，由 appid 和 uid 生成。<br>**不同用户登录同一个小程序获取到的 openid 不同，同一个用户使用登录不同一个小程序获取到的 openid 也不同**。 |
 | session_key | 用户的Session Key |
 
 若请求错误，服务器将返回一段JSON文本，包含以下参数：
