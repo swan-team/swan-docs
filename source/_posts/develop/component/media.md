@@ -281,18 +281,11 @@ Page({
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
-<<<<<<< HEAD
-|bindpause|EventHandle| -|当暂停播放时触发 pause 事件|
-|bindended|EventHandle| -|当播放到末尾时触发 ended 事件|
-|bindtimeupdate|EventHandle|- |播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle| -|当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
-=======
 |bindplay|EventHandle| |当开始播放时触发 play 事件|
 |bindpause|EventHandle| |当暂停播放时触发 pause 事件|
 |bindended|EventHandle| |当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle| |播放进度变化时触发，event.detail = {currentTime, duration} 。|
 |bindfullscreenchange|EventHandle| |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
->>>>>>> 81f599d57e313dade3d1d4b015a71b2a7b2aabf4
 |bindwaiting|	EventHandle|-|		视频出现缓冲时触发|
 |binderror|	EventHandle	|-|	视频播放出错时触发|
 

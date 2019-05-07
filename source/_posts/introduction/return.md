@@ -70,13 +70,13 @@ sidebar: return
 
 •         支付消息入口：
 
-ü  我的-消息-服务消息
+    我的-消息-服务消息
 
-ü  通知栏消息
+    通知栏消息
 
 •         表单消息入口：
 
-ü  我的-消息-服务消息
+    我的-消息-服务消息
 
 开发者接入相关开发文档:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/">模板消息</a>
 
