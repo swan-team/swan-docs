@@ -105,7 +105,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_tok
 |---|---|---|---|
 |offset|	int|	是|	偏移数量|
 |count|	int|	是|	返回长度，取值区间（0，20]。|
-|access_token|string	|是|	<a href="hhttps://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
+|access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
 
 **返回值**:
 ```json
@@ -327,12 +327,13 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |scene_id|	string|	是|	场景id，例如formId和payId。|
 |scene_type	|int|	是|	场景type，1：表单；2：百度收银台订单；3:直连订单。|
 |ext|json string|否|`{"xzh_id":111,"category_id":15}`|
-|access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
+|access_token|string	|是| [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
+
 
 **说明**：
-* 当开发者获得用户openid，填写到touser_openid，否则获取用户swanid，填写到touser。
-* 当touser_openId  和touser至少填写一个，如同时填写，仅以touser_openId  下发消息。
-* 评价服务必须填写touser_openId  以及ext字段。其中ext字段以json格式包含category_id和xzh_id。
+* 当开发者获得用户 openid，填写到 touser_openid，否则获取用户 swanid，填写到 touser。
+* 当 touser_openId  和 touser 至少填写一个，如同时填写，仅以 touser_openId  下发消息。
+* 评价服务必须填写 touser_openId  以及 ext 字段。其中ext字段以 json 格式包含 category_id 和 xzh_id。
 
 ### 消息发送失败可能的原因
 * scene_id 状态需要和用户登录状态保持一致，否则 scene_id 校验会失败。 
