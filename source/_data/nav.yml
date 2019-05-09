@@ -2508,6 +2508,13 @@
             sidebar:
 
               -
+                link: /develop/devtools/setting
+                text: 设置
+                name: setting                
+        -
+            sidebar:
+
+              -
                 link: /develop/devtools/audits
                 text: 体验评分
                 name: audits                
@@ -2545,6 +2552,15 @@
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
                 name: uplog_tool
+                sidebar:
+                  -
+                    link: /develop/devtools/uplog_tool/#正式版更新日志
+                    text: 正式版更新日志
+                    name: uplog_tool_正式版更新日志
+                  -
+                    link: /develop/devtools/uplog_tool/#Beta-版更新日志
+                    text: Beta 版更新日志
+                    name: uplog_tool_Beta-版更新日志                    
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志

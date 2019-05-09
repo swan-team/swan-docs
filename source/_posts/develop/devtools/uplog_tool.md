@@ -5,14 +5,17 @@ nav: devtools
 sidebar: uplog_tool
 ---
 
-## 2.2 版本更新日志
+## 正式版更新日志
+
+### 2.2 版本 
 |版本号|更新时间|更新内容|
 |--|--|
+|2.2.3|2019.5.9|**New**<p>**·**编辑器支持新建filter文件；<p>**·**增加设置代理功能；<p>**·**增加设置快捷键功能。<p>**Change**<p>**·**通过点击“工具-工具栏管理”或右击工具栏区域可显示工具栏管理弹窗；<p>**·**通过“查看-工具栏”对工具栏区域进行展现、隐藏操作；<p>**·**优化菜单栏中“项目信息”功能。|
 |2.2.2|2019.4.25|**New**<p>**·**新增模拟器对 swan.setMenuOpacity 和 swan.confirmAppClose 的支持；<p>**·**新增全局搜索功能；<p>**·**新增清除网络缓存功能；<p>**·**新增切换账号菜单项，可通过该菜单项对当前已登录账号进行切换；<p>**·**查看菜单栏下面增加编辑器、调试器、模拟器、目录树的隐藏和展现菜单项以及快捷键。<p>**·**新增调试面板开启 Security 面板。<p>**Change**<p>**·**点击菜单关闭按钮切后台；<p>**·**通知中心等级高的消息交互优化；<p>**·**添加提示信息，升级自然搜索工具；<p>**·**首页优化，只从 app.json 中 pages 数组第一项读取信息；<p>**·**域名校验关闭时，跳过证书校验。|
 |2.2.1|2019.4.18|**New**<p>**·**编辑器api提示支持多参数、多级命名空间、宿主扩展；<p>**·**编辑器支持新建小游戏文件；<p>**·**编辑器支持新建文件保存全部功能；<p>**·**体验评分新增14个评分项；<p>**·**菜单栏调整，新增功能入口；<p>**·**新增模拟器布局位置切换。|
 |2.2.0|2019.4.12|**Change**<p>优化欢迎页面交互及样式。|
 
-## 2.0 版本更新日志
+### 2.0 版本 
 
 |版本号|更新时间|更新内容|
 |--|--|
@@ -28,8 +31,8 @@ sidebar: uplog_tool
 |2.0.4 |2019.1.15|**New**<p>新增 button 组件 bindgetphonenumber 属性的支持。<p>**BugFix**<p>**·**调整 request API 重定向时的错误提示；<p>**·**修复切换系统语言时造成的英文加载失效问题；<p>**·**修复选择编译模式时会使用未选中的编译模式的问题。|
 |2.0.0 |2019.1.07| **New**<p>**·**支持api updateManager；<p>**·**编辑器新增快捷键 cmd+w / ctrl+w ,关闭当前tab；<p>**·** 编辑器支持tab切换时回到原来位置。<p>**Change**<p>**·**保存登录状态,重启不需要重新登录；<p>**·**模拟器部分登录和工具主体登录分离,切换模拟器内账号、清除缓存不会导致开发者账号登录状态被清除了；<p>**·** 调试器中AppData、Storage、Sensor 整体重写；<p>**·**新建工程时提供空白脚手架工程；<p>**·**新建工程时不再会覆盖目录下内容；<p>**·**打开时会恢复上次界面退出时的状态；<p>**·**授权和清除授权时会同步到手机端。<p>**BugFix**<p>**·**修复刷新时websocket没有正确断开连接的问题；<p>**·**修复getSetting、openSetting返回数据格式错误的问题。|
 
-1.14版本更新日志
----
+### 1.14 版本 
+
 
 |版本号|更新内容|
 |----|----|
@@ -47,8 +50,8 @@ sidebar: uplog_tool
 |v1.14.2|** BugFix ** <p> **·** 修复input组件value无法动态修改的问题；<p> **·** 修复chooseVideo偶尔直接失败的问题；<p> **·** 修复onShareAppMessage接口complete会执行2次的问题；<p> **·** 修复stopAccelerometer、stopCompass不执行回调的问题。|
 |v1.14.0|** New **<p> 支持2.0.0以上版本的基础库。<p>**BugFix**<p> 修复发布体验版本偶现无法正常打开的问题。|
 
-1.13版本更新日志
----
+### 1.13 版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.13.5|** New ** <p>**·**新增场景值模拟;<p>**·**新增代码片段;<p>**·**新增api：isLoginSync。<p>** BugFix ** <p> **·** 修复cover-view绑定事件不响应的问题；<p>**·**修复cover-view绑定事件不影响的问题；<p>**·** 修复storage存储带特殊符号「.%」时表现异常的问题。|
@@ -59,8 +62,8 @@ sidebar: uplog_tool
 
 
 
-1.12版本更新日志
----
+### 1.12版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.12.4|** BugFix **<p> 修复 getStorage 和 storage 面板中值被错误编码的问题。|
@@ -69,8 +72,8 @@ sidebar: uplog_tool
 |v1.12.1 | ** New**<p>   增加编辑器功能。|
 |v1.12.0|**New**<p>**·** 工具可同时打开多个项目窗口；<p>**·** 增加AI能力api（包括 ocrIdCard, ocrBankCard, ocrDrivingLicense, ocrVehicleLicense, textReview, textToAudio, imageAudit, advancedGeneralIdentify, objectDetectIdentify, carClassify, dishClassify, logoClassify, animalClassify, plantClassify）。<p>**BugFix**<p>修复webview组件无法销毁和隐藏的问题。|
 
-1.11版本更新日志
----
+### 1.11版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.11.4|**New**<p>增加网络api返回值（包括 request, uploadFile, downloadFile ）。<p>**BugFix**<p>修改 getSetting 返回数据格式。|
@@ -78,36 +81,49 @@ sidebar: uplog_tool
 |v1.11.2|**BugFix**<p>**·**  修复textarea无法输入的问题；<p>**·** 修复removeStorage无法正确删除的问题;<p>**·** 修复应用配置中有单引号无法正确解析的问题;<p>**·** 修复hideToast不生效的问题;<p>**·** 修复Launch事件中无法获取path和query字段的问题。|
 |v1.11.1|**New**<p> 支持手机联系人API：addPhoneContact。<p>**BugFix**<p>**·** 修复canvas绘制完不显示的问题;<p>**·** 修复登录后未授权却不走错误回调问题;<p>**·** 修复切换基础库时客户端版本不更新的问题;<p>**·** 修复innerWebview在基础库1.10以上api无法调用的问题；<p>**·** 修复分享没有触发生share命周期事件的问题。|
 | v1.11.0 更新日志|**New**<p>**·** 升级编译工具2.0.4：新增依赖分析编译模式，支持增量编译，详情参见<a href="https://smartprogram.baidu.com/docs/develop/devtools/uplog_compile/">编译工具更新日志</a>;<p>**·** 新增API：requestPolymerPayment。<p>**Changes**<p> 优化showModal显示样式。<p>**BugFix**<p>**·** 修复自定义组件引用其它js编译出错的问题;<p>**·** 修复模板命名导致编译出错的问题;<p>**·** 修复webview组件内无法调用跳转页面能力的问题;<p>**·** 修复分包配置文件中设置模拟器样式不生效的问题。|
-1.10版本更新日志
----
+
+### 1.10版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.10.3 |**Change**<p> 分包支持多级目录作为包名。<p>**BugFix**<p> 修复模拟器渲染新增组件出错的问题。|
 |v1.10.2|**New**<p>**·** 支持组件：textarea;<p>**·** 自定义编译支持预览；<p>**·** 支持微信小程序转换成智能小程序；<p>**Change**<p>**·** 优化showToast显示样式和文字长度限制；<p>**·**  优化录音、录像功能，将音频、视频文件保存到tmp目录；<p>**·** 优化socket，增加socket task个数限制。<p>**BugFix**<p>**·** 修复模拟器切换手机型号useragent不变的问题；<p>**·** 修复模拟器在使用setData api来增加组件时渲染失败的问题。|
-1.9版本更新日志
----
+
+### 1.9版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.9.0 |**New**<p>**·** 调试工具支持 android 下真机调试；<p>**·** 编译支持自定义入口页面和参数;<p>**·** 增加清除网络缓存功能。<p>**BugFix**<p>**·** 修复执行hideTabBar方法后高度不对的问题；<p>**·** 修复设置缩放后模拟器显示异常的问题；<p>**·** 修复模拟器模拟android设置时swan api无法调用的问题。|
-1.8版本更新日志
----
+
+### 1.8版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.8.0 |**New**<p>**·** 支持组件: video/audio/backgroundAudio；<p>**·** 发布支持自定义版本号；<p>**·** 调试工具 Network 面板支持页面内图片的展示；<p>**·** 增加版本更新提示。<p>**Change**<p> **·** 优化创建、选择工程的错误提示；<p>**·** 新建工程界面增加新建文件夹的选项。<p>**BugFix**<p>**·** 修复模拟器中无法使用鼠标拖动来滚动页面的问题；<p>**·** 修复部分系统下开发者工具图标显示异常的问题；<p>**·** 修复授权缓存无法清除的问题；<p>**·** 修复配置中 backgroundColor 没有生效的问题；<p>**·** 修复打开项目后项目列表未排序的问题；<p>**·** 修复模拟器中切换设备不会刷新的问题。|
-1.7版本更新日志
----
+
+### 1.7版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.7.3|**New**<p>**·** 支持API：chooseVideo/saveVideoToPhotosAlbum/getLocation/onAccelerometerChange/startAccelerometer/stopAccelerometer/onCompassChange/startCompass/stopCompass；<p>**·** 支持组件: web-view；<p>**·** 调试工具增加 Sensors 面板，用于模拟地址、加速度计和罗盘信息；<p>**·** 增加清除授权缓存功能。<p>**Change**<p>预览增加上传人及时间信息，增加错误信息提示。<p>**BugFix**<p>**·**  修复无 AppID 时无法登录成功的问题；<p>**·** 修复切后台时没有 onHide 事件的问题；<p>**·** 修复 picker 组件在重新编译后无法隐藏的bug；<p>**·**  修复 choseImage 返回文件路径错误的问题；<p>**·** 修复 getSwanId 的返回数据不正确问题。|
 |v1.7.2 |**New**<p>**·** 更新工具栏图标；<p>**·**  支持API：recommendSimilarProducts/recommendProducts/setScreenBrightness/getScreenBrightness/setKeepScreenOn/vibrateLong/vibrateShort；<p>**·** 支持组件： open-data；<p>**·** 调试工具增加 Storages 和 App data 面板；<p>**·** 模拟器内  useragent 增加 swan 标识；<p>**·** 增加清除缓存功能。<p>**Change**<p> request 请求增加 referer，格式 `https://smartapp.baidu.com/{appkey}/devtools/page-frame.html`。<p>**BugFix**<p>**·** 优化调试工具通信时序，修复 Swan 面板偶现的白屏问题；<p>**·** 修改模拟器背景色为白色，保持和百度App一致；<p>**·** 修复历史工程排序不正确问题；<p>**·** 修复 video 无法播放问题；<p>**·** 修复切换 tab 后，进入任意页面后退无法点击问题。|
-1.6版本更新日志
----
+
+### 1.6版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.6.2 |**New**<p>video 组件增加 bind 事件支持。|
 |v1.6.1 |**BugFix**<p>**·**  修复 swan.navigateTo 回调执行两次的错误；<p>**·** 修复请求参数被字段增加&字段的错误;<p>**·** 修复退回选择工程页面后选择其他工程卡死的错误;<p>**·** 修复调试器 Network、Swan 面板不稳定的问题。|
-1.4版本更新日志
----
+
+### 1.4版本 
+
 |版本号|更新内容|
 |----|----|
 |v1.4.2 |**BugFix**<p>**·** 修复 input 组件的背景颜色和 placeholder 颜色问题；<p>**·** 修复 swan.request 回调函数的语法问题。|
+
+## Beta 版更新日志
+
+### 2.3 版本 
+|版本号|更新时间|更新内容|
+|--|--|
+|2.3.0|2019.5.8|**New**<p>模拟器支持小程序独立分包调试功能。|
