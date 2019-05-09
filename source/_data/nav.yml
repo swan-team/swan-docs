@@ -104,10 +104,25 @@
                 text: 发布上线
                 name: publish
     -
+        link: /introduction/base
+        text: 基础流量     
+        sidebar:
+              -
+                sidebar:
+                  -
+                    link: /introduction/base
+                    text: 基础入口
+                    name: base
+                  -
+                    link: /introduction/return
+                    text: 重访入口
+                    name: return                 
+    -
       link: /introduction/intro
-      text: 百度流量接入
+      text: 可配置流量
       name: book
       sidebar:
+         
         -
             link: /introduction/access
             text: 信息流流量接入
@@ -124,21 +139,51 @@
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
+            
         -
             link: /introduction/intro
-            text: 搜索流量接入
+            text: 自然搜索结果流量接入
             sidebar:
               -
                 link: /introduction/intro
-                text: 自然搜索管理
+                text: 自然搜索结果流量说明
                 name: intro
               -
                 link: /introduction/rank
-                text: 接入自然搜索
+                text: 接入自然搜索结果
                 name: rank
+                sidebar:
+                  -
+                    link: /introduction/rank/#开启Web化能力
+                    text: 开启Web化能力
+                    name: rank_开启Web化能力
+                  -
+                    link: /introduction/rank/#设置页面基础信息
+                    text: 设置页面基础信息
+                    name: rank_设置页面基础信息  
+                  -
+                    link: /introduction/rank/#绑定熊掌ID
+                    text: 绑定熊掌ID
+                    name: rank_绑定熊掌ID                    
+                  -
+                    link: /introduction/rank/#关联H5站点
+                    text: 关联H5站点
+                    name: rank_关联H5站点                  
+                  -
+                    link: /introduction/rank/#配置URL映射规则
+                    text: 配置URL映射规则
+                    name: rank_配置URL映射规则
+                  -
+                    link: /introduction/rank/#提交sitemap
+                    text: 提交sitemap
+                    name: rank_提交sitemap  
+                  -
+                    link: /introduction/rank/#搜索流量接入FAQ
+                    text: 搜索流量接入FAQ
+                    name: rank_搜索流量接入FAQ                              
         -
             link: /introduction/baijiahao
-            text: 百家号流量 
+            text: 百家号流量接入
             sidebar:
               -
                 link: /introduction/baijiahaointroduction
@@ -152,6 +197,18 @@
                 link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
                 name: auditing_baijiahao
+        -
+            link: /introduction/tieba
+            text: 贴吧流量接入
+            sidebar:            
+              -
+                link: /introduction/tieba
+                text: 接入贴吧流量
+                name: tieba
+              -
+                link: /introduction/auditing_tieba
+                text: 贴吧素材审核规范
+                name: auditing_tieba               
     -
       link: /introduction/adopen
       text: 流量主开通
@@ -332,13 +389,12 @@
 
 #3
 -
-  link: /develop/tutorial/codedir
+  link: /develop/fuctionlist/list
   text: 开发
-  nickname: 小程序开发
   name: develop
   license:
-    name: 创作共用-署名-相同方式共享
-    link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /develop/tutorial/codedir
@@ -647,7 +703,7 @@
                 name: custom-component_trdparty
         -
           link: /develop/framework/subpackages
-          text: 基础性能
+          text: 性能
           name: subpackages
           sidebar:
             -
@@ -655,18 +711,7 @@
               text: 分包加载
               name: subpackages
 
-            -
-              link: /develop/framework/client-lib
-              text: 基础库
-              name: client-lib
-            -
-              link: /develop/framework/operating-environment
-              text: 运行环境
-              name: operating-environment
-            -
-              link: /develop/framework/operating-mechanism
-              text: 运行机制
-              name: operating-mechanism
+
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
@@ -676,18 +721,19 @@
               text: 性能优化建议
               name: performance-tips
         -
-          link: /develop/framework/storage
-          text: 基础能力
-          name: storage
+          link: /develop/framework/subpackages
+          text: 运行时
+          name: subpackages
           sidebar:
             -
-              link: /develop/framework/storage
-              text: 存储
-              name: storage
+              link: /develop/framework/operating-environment
+              text: 运行环境
+              name: operating-environment
             -
-              link: /develop/framework/canvas
-              text: 画布
-              name: canvas
+              link: /develop/framework/operating-mechanism
+              text: 运行机制
+              name: operating-mechanism            
+
     -
       link: /develop/component/view
       text: 组件
@@ -695,6 +741,10 @@
       sidebar:
         -
             sidebar:
+              # -
+              #   link: /develop/component/list
+              #   text: 组件列表
+              #   name: list
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -903,6 +953,12 @@
       text: API
       name: api
       sidebar:
+        # -
+        #     sidebar:
+        #     -
+        #       link: /develop/api/apilist
+        #       text: API 列表
+        #       name: apilist        
         -
             link: /develop/api/net
             text: 网络
@@ -1185,9 +1241,9 @@
               name: media_video
               sidebar:
                 -
-                  link: /develop/api/media_video/#chooseVideo
+                  link: /develop/api/media_video/#swan-chooseVideo
                   text: swan.chooseVideo
-                  name: media_video_chooseVideo
+                  name: media_video_swan-chooseVideo
                 -
                   link: /develop/api/media_video/#swan-saveVideoToPhotosAlbum
                   text: swan.saveVideoToPhotosAlbum
@@ -1391,9 +1447,9 @@
                     text: swan.canvasPutImageData
                     name: show_canvas_swan-canvasPutImageData
                   -
-                    link: /develop/api/show_canvas/#canvasToTempFilePath 
+                    link: /develop/api/show_canvas/#swan-canvasToTempFilePath 
                     text: swan.canvasToTempFilePath 
-                    name: show_canvas_canvasToTempFilePath 
+                    name: show_canvas_swan-canvasToTempFilePath 
                   -
                     link: /develop/api/show_canvas/#canvasContext 
                     text: canvasContext 
@@ -1783,6 +1839,10 @@
                     link: /develop/api/show_query/#IntersectionObserver-disconnect
                     text: IntersectionObserver.disconnect
                     name: show_query_IntersectionObserver-disconnect
+                  -
+                    link: /develop/api/show_query/#swan-createSelectorQuery
+                    text: swan.createSelectorQuery
+                    name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery
@@ -2462,8 +2522,15 @@
                 name: projectconfig
               -
                 link: /develop/devtools/diff
-                text: 模拟器 API 与真机的实现差异
+                text: API 实现差异
                 name: diff
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/code
+                text: 代码片段
+                name: code                 
         -
             link: /develop/devtools/uplog
             text: 工具版本信息
@@ -2637,11 +2704,15 @@
 
     -
       link: /develop/swan/version
-      text: SWAN 版本信息
+      text: 基础库版本信息
       name: swan
       sidebar:
         -
           sidebar:
+            -
+              link: /develop/swan/client-lib
+              text: 基础库
+              name: client-lib            
             -
               link: /develop/swan/version
               text: 版本分布
