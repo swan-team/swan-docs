@@ -289,18 +289,38 @@ Page({
 |bindwaiting|	EventHandle|-|		视频出现缓冲时触发|
 |binderror|	EventHandle	|-|	视频播放出错时触发|
 
+**主流格式支持**：
 
+|格式|	Android|	IOS|
+|--|--|--|
+|mp4|	是	|是|
+|mov|	是	|是|
+|m4v|	是	|是|
+|3gp|	是	|是|
+|avi|	是	|是|
+|m3u8|	是	|是|
+|webm|	是|	否|
+|flv	|	是	|是|
+|mkv|	是	|是|
+|rmvb|是	|是|
+|rm|	是	|是|
+|ogg|	是	|是|
+
+**主流编码格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|H.263	|是|	是|
+|H.264	|是|是|
+|HEVC	|是|	是|
+|MPEG-4	|是|	否|
+|VP8|	是	|否|
+|VP9|	是	|否|
 
 **Tip：**
 
-* `<video />` 默认宽度 300px、高度 225px
+`<video />` 默认宽度 300px、高度 225px
 
-* 支持mp4后缀名称，支持的编码格式如下：
-
-|Android/iOS|支持的编码格式|
-|--|--|
-|Android|mediacodec_h264/h261/h263/h263p/h263i/h264/h264_vda<br>mpeg1video/mpeg2video/mpeg4/mpegvideo/msmpeg4v1/mpeg4video/mpeg4audio/mpegvideo<br>msmpeg4v2/msmpeg4v3/svq1/svq3<br>vc1/vp3/vp5/vp6/vp6a/vp6f/vp8/vp9/rv30/rv40/rv10/rv20/rv30/rv40/vc1/vp3/vp8/vp9<br>wmv1/wmv2/wmv3/aac/aac_latm/ac3/ac3_fixed/eac3<br>amrnb/amrwb/atrac1/atrac3/atrac3p/aac/aac_latm/ac3/cook<br>mp1float/mp2float/mp3float/mp3adufloat/mp3on4float/mp1/mp2<br>mp2fixed/mp3/mp3adu/mp3on4/ra_144/ra_288/sipr<br>wmapro/wmav1/wmav2/adts/amr/asf/avi/flv/hls/matroska/mov/mpegps/mpegts/rm/rtp/rtsp/sdp/swf|
-|iOS| h264/h265|
 
 **示例：**
 <a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -579,7 +599,7 @@ Page({
 |min-cache|Number|1|最小缓冲区，单位s|
 |max-cache|Number|3|最大缓冲区，单位s|
 |bindstatechange|EventHandle|- |播放状态变化事件，detail = {code}|
-|bindnetstatus|EventHandle| -|网络状态通知，detail = {info}|
+|bindnetstatus|EventHandle| -|网络状态变化通知，detail = {info}|
 |bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
 
 
@@ -679,6 +699,34 @@ button {
 **说明**:
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。
+
+**主流格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|mp4|	是	|是|
+|mov|	是	|是|
+|m4v|	是	|是|
+|3gp|	是	|是|
+|avi|	是	|是|
+|m3u8|	是	|是|
+|webm|	是|	否|
+|flv	|	是	|是|
+|mkv|	是	|是|
+|rmvb|是	|是|
+|rm|	是	|是|
+|ogg|	是	|是|
+
+**主流编码格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|H.263	|是|	是|
+|H.264	|是|是|
+|HEVC	|是|	是|
+|MPEG-4	|是|	否|
+|VP8|	是	|否|
+|VP9|	是	|否|
 
 **状态码**
 
