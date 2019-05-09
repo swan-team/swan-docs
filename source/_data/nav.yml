@@ -389,13 +389,12 @@
 
 #3
 -
-  link: /develop/tutorial/codedir
+  link: /develop/fuctionlist/list
   text: 开发
-  nickname: 小程序开发
   name: develop
   license:
-    name: 创作共用-署名-相同方式共享
-    link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /develop/tutorial/codedir
@@ -742,6 +741,10 @@
       sidebar:
         -
             sidebar:
+              # -
+              #   link: /develop/component/list
+              #   text: 组件列表
+              #   name: list
               -
                 link: /develop/component/list
                 text: 组件列表
@@ -954,6 +957,12 @@
       text: API
       name: api
       sidebar:
+        # -
+        #     sidebar:
+        #     -
+        #       link: /develop/api/apilist
+        #       text: API 列表
+        #       name: apilist        
         -
             sidebar:
             -
