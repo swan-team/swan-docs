@@ -29,7 +29,7 @@ sidebar: guide_add
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/guide_add/3.png">
-		<p class="m-doc-custom-examples-text">1. 关闭按钮：默认展现，配置去掉后展现策略变更为5秒后自动消失；
+		<p class="m-doc-custom-examples-text">1. 关闭按钮：默认展现，配置去掉后展现策略变更为3秒后自动消失；
 	2. 小程序头像：默认抓取小程序头像展现；
 3. 引导内容：默认显示“一键添加到我的小程序”，开发者可以自定义；文字单行显示，不可折行，最多显示11个中文字符；
 4. 操作区：添加按钮，点击后直接执行添加到我的小程序。</p>
@@ -64,7 +64,7 @@ sidebar: guide_add
 </video>
 <p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 
-#### 2. 自动消失的浮层：用户无操作，则 5s 后自动消失。
+#### 2. 自动消失的浮层：用户无操作，则3s后自动消失。
 
 <video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/7.mp4"/>
 你的浏览器不支持该视频播放
@@ -91,7 +91,7 @@ sidebar: guide_add
 </div>
 
 ### 2. 展现策略
-用户无操作，则 5s 后自动消失；用户点击菜单，或者切换页面，引导马上消失。
+用户无操作，则3s后自动消失；用户点击菜单，或者切换页面，引导马上消失。
 
 <video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/9.mp4"/>
 你的浏览器不支持该视频播放

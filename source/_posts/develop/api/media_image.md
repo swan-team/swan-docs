@@ -93,6 +93,7 @@ swan.chooseImage({
 |---- | ---- | ---- | ----|----|
 |current |String | 否  |  -|当前显示图片的链接，不填则默认为 urls 的第一张。|
 |urls   | `Array.<string>` |是 | -|  需要预览的图片链接列表|
+|images| `Array.<object>` | 否 | - | 支持原图的图片链接列表 |
 |success| Function |   否  | -| 接口调用成功的回调函数|
 |fail  |  Function  |  否 |  -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -107,6 +108,7 @@ swan.chooseImage({
 ```html
 <view class="wrap">
     <button type="primary" bindtap="previewImage">previewImage</button>
+    <button type="primary" bindtap="previewOriginImage">previewOriginImage</button>
 </view>
 ```
 * 在 js 文件中
@@ -126,6 +128,32 @@ Page({
             }
         });
     }
+
+    // 查看原图示例
+
+    previewOriginImage() {
+        swan.previewImage({ 
+            images: [
+                {
+                    "url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
+                    "origin_url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
+                },
+                {
+                    "url":"https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
+                    "origin_url":"hhttps://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
+                }
+            ]
+            success: function (res) {
+                console.log('previewImage success');
+            },
+            fail: function (err) {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+
+
 });
 ```
 

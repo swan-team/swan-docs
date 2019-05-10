@@ -16,13 +16,15 @@ sidebar: pic
 </div>
 
 ## 图标
-图标能辅助信息的表达，建议按场景优化选用合适的通用图标样式。
+图标能辅助信息的表达，开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/base/#icon/" target="_blank">icon</a>。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/base/#icon/" target="_blank">icon</a>。
+使用图标风格应简洁、辨识性强，建议按场景绘制或内容分类入口。使用图标：
+1. 常用功能类型图标，多应用于框架或基础页面功能；
+2. 彩色图标，多应用于页面中的重点内容分类入口。
 
-绘制图标时，请注意：
-1. 使用几何图形进行图标绘制，风格应简洁、辨识性强；
-2. 更多图标，详见设计资源的[视觉组件库](../../resource/uikit/)。
-<div class="m-doc-custom-examples-correct">
-	<img src="../../../img/design/foundation/pic/2.png">
+
+智能小程序提常用功能类型图标库和彩色图标库，详见设计资源的[视觉组件库](../../resource/uikit/)。
+
+<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/pic/2.png">
+<img src="../../../img/design/foundation/pic/3.png">
 </div>
