@@ -2887,7 +2887,10 @@
             link: /operations/thirdparty_law
             text: 第三方平台授权法律条款
             name: thirdparty_law            
-
+          -
+            link: /operations/thirdparty_agreement
+            text: 第三方平台服务商服务协议
+            name: thirdparty_agreement 
 # #6
 # -
 #   link: ../forum
