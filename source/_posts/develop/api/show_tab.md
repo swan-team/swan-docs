@@ -63,28 +63,40 @@ swan.navigateTo({
 
 **示例：**
 
+<a href="swanide://fragment/00b8b93225cfaf30de9f4329f1962ee91557729109817" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="redirectTo">redirectTo</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.redirectTo({
-    //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'
+Page({
+    redirectTo() {
+        swan.redirectTo({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('redirectTo success');
+            },
+            fail: function (err) {
+                console.log('redirectTo fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|下载子包失败| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.switchTab
 
@@ -103,39 +115,40 @@ swan.redirectTo({
 
 **示例：**
 
-```js
-{
-    "tabBar": {
-        "list": [{
-            "pagePath": "pages/index/index",
-            "text": "首页"
-        },{
-            "pagePath": "pages/list/list",
-            "text": "列表"
-        }]
-    }
-}
+<a href="swanide://fragment/b62ad6cdc0ef78061a6581fa9a1fc9ab1557729238493" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="switchTab">switchTab</button>
+</view>
 ```
 
+* 在 js 文件中
+
 ```js
-swan.switchTab({
-    url: '/pages/list/list',
+Page({
+    switchTab() {
+        swan.switchTab({
+            url: '/api/api',
+            success: function () {
+                console.log('switchTab success');
+            },
+            fail: function (err) {
+                console.log('switchTab fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.navigateBack
 
@@ -157,39 +170,68 @@ swan.switchTab({
 
 **示例：**
 
-```js
-// 注意：调用 navigateTo 跳转时，调用页面会被加入堆栈，而 redirectTo 方法则不会。见下方示例代码
+<a href="swanide://fragment/f8d91e30ca7ed70b3114add6fd1a58711557729485160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-// 当前是首页
-swan.navigateTo({
-    url: 'list?key=value'
-});
+* 在 component.swan 文件中
 
-// 当前是列表页
-swan.navigateTo({
-    url: 'detail?key=value'
-});
-
-// 在详情页内 navigateBack，将返回首页
-swan.navigateBack({
-    delta: 2
-});
-
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateTo">navigateTo</button>
+</view>
 ```
-<!-- #### 错误码
 
-**Andriod**
+* 在 api.swan 文件中
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateBack">navigateBack</button>
+</view>
+```
 
-**iOS**
+* 在 component.js 文件中
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+```js
+Page({
+    navigateTo() {
+        swan.navigateTo({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('navigateTo success');
+            },
+            fail: function (err) {
+                console.log('navigateTo fail', err);
+            }
+        });
+    }
+});
+```
+* 在 api.js 文件中
+
+```js
+Page({
+    onLoad(options) {
+        console.log('onLoad', options);
+    },
+    navigateBack() {
+        swan.navigateBack({
+            success: function () {
+                console.log('navigateBack success');
+            },
+            fail: function (err) {
+                console.log('navigateBack fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 
 ## swan.reLaunch
 
@@ -209,25 +251,37 @@ swan.navigateBack({
 
 **示例：**
 
+<a href="swanide://fragment/7a5d527292a5ff0339bc3dc24803bc7c1557729741562" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="reLaunch">reLaunch</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.reLaunch({
-  //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'
+Page({
+    reLaunch() {
+        swan.reLaunch({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('reLaunch success');
+            },
+            fail: function (err) {
+                console.log('reLaunch fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|下载子包失败| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

@@ -25,27 +25,42 @@ sidebar: show_background
 
 **示例：**
 
+<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setBackgroundColor">setBackgroundColor</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setBackgroundColor({
-    backgroundColor: '#000000',
-    backgroundColorTop: '#222222',
-    backgroundColorBottom: '#333333'
+Page({
+    setBackgroundColor() {
+        swan.setBackgroundColor({
+            backgroundColor: '#000000',
+            backgroundColorTop: '#222222',
+            backgroundColorBottom: '#333333',
+            success: function () {
+                console.log('setBackgroundColor success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundColor fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.setBackgroundTextStyle
 
@@ -65,22 +80,37 @@ swan.setBackgroundColor({
 
 **示例：**
 
+<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setBackgroundTextStyle">setBackgroundTextStyle</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setBackgroundTextStyle({
-    textStyle: 'light'
+Page({
+    setBackgroundTextStyle() {
+        swan.setBackgroundTextStyle({
+            textStyle: 'light',
+            success: function () {
+                console.log('setBackgroundTextStyle success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundTextStyle fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

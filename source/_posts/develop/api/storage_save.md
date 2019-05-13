@@ -55,12 +55,36 @@ swan.setStorage({
 
 **示例：**
 
-```js
-try {
-    swan.setStorageSync('key', 'value');
-} catch (e) {
-}
+<a href="swanide://fragment/f07013d420a6a32eab070dccc03e9b641557726296439" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setStorageSync">setStorageSync</button>
+</view>
 ```
+
+* 在 js 文件中
+
+```js
+Page({
+    setStorageSync() {
+        try {
+            swan.setStorageSync('key', 'value');
+        } catch (e) {
+        }
+    }
+});
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
+}
+ ```
 <!-- #### 错误码
 
 **Andriod**
@@ -137,27 +161,37 @@ swan.getStorage({
 
 **示例：**
 
+<a href="swanide://fragment/bd8f752a2c02005a844cd5ad556217421557726472856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setStorageSync">setStorageSync</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-try {
-    var result = swan.getStorageSync('key');
-} catch (e) {
+Page({
+    getStorageSync() {
+        try {
+            const result = swan.getStorageSync('key');
+            console.log('getStorageSync result:', result);
+        } catch (e) {
+        }
+    }
+});
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
-
 ## swan.getStorageInfo
 
 
@@ -183,18 +217,42 @@ try {
 |limitSize |  Number |  限制的空间大小，单位 kB。|  
 
 
+
 **示例：**
 
+<a href="swanide://fragment/3f94d727d054c79abf5d7ea2abeb7b761557726868852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getStorageInfo">getStorageInfo</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getStorageInfo({
-    success: function (res) {
-        console.log(res.keys);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    getStorageInfo() {
+        swan.getStorageInfo({
+            success: function (res) {
+                console.log('getStorageInfo success', res);
+            },
+            fail: function (err) {
+                console.log('getStorageInfo fail' + err);
+            }
+        });
     }
 });
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -213,17 +271,35 @@ swan.getStorageInfo({
 
 **示例：**
 
+<a href="swanide://fragment/9f944dc011c08e56e5729912272087101557726939078" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getStorageInfoSync">getStorageInfoSync</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-try {
-    var result = swan.getStorageInfoSync();
-    console.log(result);
-} catch (e) {
+Page({
+    getStorageInfoSync() {
+        try {
+            const result = swan.getStorageInfoSync();
+            console.log('getStorageInfoSync success', result);
+        } catch (err) {
+            console.log('getStorageInfoSync fail', err);
+        }
+    }
+});
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|1001|执行失败| -->

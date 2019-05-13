@@ -70,20 +70,43 @@ swan.showToast({
 |fail  |  Function   | 否 |-|   接口调用失败的回调函数|
 |complete  |  Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<!-- #### 错误码
+**示例：**
 
-**Andriod**
+<a href="swanide://fragment/57166a3f5efd17f9397b6abde17b57b61557727729286" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
+* 在 swan 文件中
 
-**iOS**
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showLoading">showLoading</button>
+</view>
+```
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+* 在 js 文件中
+
+```js
+Page({
+    showLoading() {
+        swan.showLoading({
+            title: 'loading',
+            mask: true,
+            success: function () {
+                console.log('showLoading success');
+            },
+            fail: function (err) {
+                console.log('showLoading fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.hideToast
 
@@ -92,6 +115,46 @@ swan.showToast({
 
 **方法参数：**无
 
+**示例：**
+
+<a href="swanide://fragment/a0acd2d1849d0584f88c644db70b4c1f1557727806672" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showToast">showToast</button>
+    <button type="primary" bindtap="hideToast">hideToast</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    showToast() {
+        swan.showToast({
+            title: 'toast',
+            duration: 10000
+        });
+    },
+    hideToast() {
+        swan.hideToast();
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```
+
 ## swan.hideLoading
 
 **解释：**隐藏 loading 提示框
@@ -99,15 +162,42 @@ swan.showToast({
 **方法参数：**无
 
 **示例：**
-```js
-swan.showLoading({
-    title: '加载中',
-    mask: true
-});
 
-setTimeout(function() {
-    swan.hideLoading();
-}, 2000);
+<a href="swanide://fragment/f9c9c15b36a79c338e7ff389eb3eccde1557727891494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showLoading">showLoading</button>
+    <button type="primary" bindtap="hideLoading">hideLoading</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    showLoading() {
+        swan.showLoading({
+            title: 'loading'
+        });
+    },
+    hideLoading() {
+        swan.hideLoading();
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
 ```
 <!-- #### 错误码
 

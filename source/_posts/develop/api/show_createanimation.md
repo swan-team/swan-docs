@@ -33,13 +33,40 @@ sidebar: show_createanimation
 |step-start|动画第一帧就跳至结束状态直到结束。|
 |step-end|动画一直保持开始状态，最后一帧跳到结束状态。|
 
+**示例：**
+
+<a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="createAnimation">createAnimation</button>
+</view>
 ```
-var animation = swan.createAnimation({
-  transformOrigin: "50% 50%",
-  duration: 1000,
-  timingFunction: "ease",
-  delay: 0
+
+* 在 js 文件中
+
+```js
+Page({
+    createAnimation() {
+        const animation = swan.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 1000,
+            timingFunction: "ease",
+            delay: 0
+        });
+
+        console.log('createAnimation', animation);
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 
@@ -117,17 +144,25 @@ var animation = swan.createAnimation({
 
 **示例：**
 
-```js
-<view bind:tap="starttoanimate" animation="{{animationData}}"></view>
+<a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
+</view>
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
     data: {
         animationData: {}
     },
-    starttoanimate: function () {
-        var animation = swan.createAnimation();
+    startToAnimate() {
+        const animation = swan.createAnimation();
         animation.rotate(90).translateY(10).step();
         animation.rotate(-90).translateY(-10).step();
         this.setData({
@@ -135,4 +170,17 @@ Page({
         });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.anim {
+    width: 100%;
+    height: 280rpx;
+    background: #38f;
+}
 ```

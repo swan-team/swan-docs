@@ -95,27 +95,38 @@ swan.getSystemInfo({
 
 **示例：**
 
+<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSystemInfoSync">getSystemInfoSync</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-try {
-    var res = swan.getSystemInfoSync();
-    console.log(res.model);
-    console.log(res.pixelRatio);
-    console.log(res.windowWidth);
-    console.log(res.windowHeight);
-    console.log(res.language);
-    console.log(res.version);
-    console.log(res.platform);
-} catch (e) {
-    // Do something when catch error
+
+Page({
+    getSystemInfoSync() {
+        try {
+            const result = swan.getSystemInfoSync();
+            console.log('getSystemInfoSync success', result);
+        } catch (e) {
+            console.log('getSystemInfoSync fail', e);
+        }
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
 
 ## swan.getEnvInfoSync
 
@@ -138,16 +149,35 @@ try {
 
 **示例：**
 
+<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getEnvInfoSync">getEnvInfoSync</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-try {
-    const envInfo = swan.getEnvInfoSync();
-    console.log(envInfo.appKey);
-    console.log(envInfo.appName);
-    console.log(envInfo.lastAppURL);
-    console.log(envInfo.sdkVersion);
-    console.log(envInfo.scheme);
-} catch (e) {
-    // Do something when catch error
+Page({
+    getEnvInfoSync() {
+        try {
+            const result = swan.getEnvInfoSync();
+            console.log('getEnvInfoSync success', result);
+        } catch (e) {
+            console.log('getEnvInfoSync fail', e);
+        }
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
 }
 ```
 
@@ -173,15 +203,36 @@ try {
 
 **示例：**
 
-```js
+<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-swan.canIUse('view.hover-class')
-swan.canIUse('scroll-view.scroll-x')
-swan.canIUse('cover-view')
-swan.canIUse('button.size.default')
-swan.canIUse('button.size.default')
-swan.canIUse('request.object.success.data')
-swan.canIUse('getSavedFileList')
-swan.canIUse('getSavedFileList.object')
-swan.canIUse('getSavedFileList.object.success')
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="canIUse">canIUse</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    canIUse() {
+        console.log('canIUse:view.hover-class', swan.canIUse('view.hover-class'));
+        console.log('canIUse:scroll-view.scroll-x', swan.canIUse('scroll-view.scroll-x'));
+        console.log('canIUse:cover-view', swan.canIUse('cover-view'));
+        console.log('canIUse:button.size.default', swan.canIUse('view.button.size.default'));
+        console.log('canIUse:request.object.success.data', swan.canIUse('request.object.success.data'));
+        console.log('canIUse:getSavedFileList', swan.canIUse('getSavedFileList'));
+        console.log('canIUse:getSavedFileList.object', swan.canIUse('getSavedFileList.object'));
+        console.log('canIUse:getSavedFileList.object.success', swan.canIUse('getSavedFileList.object.success'));
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

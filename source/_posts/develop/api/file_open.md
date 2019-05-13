@@ -22,26 +22,46 @@ sidebar: file_open
 
 **示例：**
 
+<a href="swanide://fragment/296ad3255e4a0a9704a411f9e70ea9801557726088382" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="openDocument">openDocument</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.downloadFile({
-    url: 'https://smartprogram.baidu.com/xxx.pdf',
-    success: function (res) {
-        var filePath = res.tempFilePath;
-        swan.openDocument({
-            filePath: filePath,
+Page({
+    openDocument() {
+        swan.downloadFile({
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
             success: function (res) {
-                console.log('打开文档成功');
+                swan.openDocument({
+                    filePath: res.tempFilePath,
+                    fileType: 'pdf',
+                    success: function (res) {
+                        console.log('openDocument success', res);
+                    },
+                    fail: function (err) {
+                        console.log('openDocument fail', err);
+                    }
+                });
+            },
+            fail: function (err) {
+                console.log('downloadFile fail', err);
             }
         });
     }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-|2001|指定文件不存在|
-|2005|文件格式不支持| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

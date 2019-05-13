@@ -24,15 +24,34 @@ sidebar: device_direction
 
 **示例：**
 
-```javascript
-swan.onDeviceMotionChange(function (res) {
-    console.log(res.alpha);
-    console.log(res.beta);
-    console.log(res.gamma);
-});
+<a href="swanide://fragment/0cbcd6927a69de03076fd28110c987e21557731615850" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    onDeviceMotionChange
+</view>
 ```
 
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        swan.onDeviceMotionChange(function (res) {
+            console.log('onDeviceMotionChange', res);
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.startDeviceMotionListening
 
@@ -63,10 +82,39 @@ swan.onDeviceMotionChange(function (res) {
 
 **示例：**
 
-```javascript
-swan.startDeviceMotionListening({
-    interval: 'ui'
+<a href="swanide://fragment/419eaaa0083d3956c3b32f632388750f1557731685135" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="startDeviceMotionListening">startDeviceMotionListening</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    startDeviceMotionListening() {
+        swan.startDeviceMotionListening({
+            interval: 'ui',
+            success: function (res) {
+                console.log('startDeviceMotionListening success', res);
+            },
+            fail: function (err) {
+                console.log('startDeviceMotionListening fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 
@@ -89,6 +137,41 @@ swan.startDeviceMotionListening({
 
 **示例：**
 
-```javascript
-swan.stopDeviceMotionListening();
+<a href="swanide://fragment/f211d7a7f1fb3b9aac48856b3fe463bb1557731761885" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="stopDeviceMotionListening">stopDeviceMotionListening</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        swan.startDeviceMotionListening({
+            interval: 'ui'
+        });
+    },
+    stopDeviceMotionListening() {
+        swan.stopDeviceMotionListening({
+            success: function (res) {
+                console.log('stopDeviceMotionListening success', res);
+            },
+            fail: function (err) {
+                console.log('stopDeviceMotionListening fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

@@ -20,6 +20,42 @@ sidebar: device_vibrate
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**示例：**
+
+<a href="swanide://fragment/68b0d89af019129d48b899052f023fbb1557732604443" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="vibrateLong">vibrateLong</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    vibrateLong() {
+        swan.vibrateLong({
+            success(res) {
+                console.log('vibrateLong success', res);
+            },
+            fail(err) {
+                console.log('vibrateLong fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 ## swan.vibrateShort
 
 **解释：**使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。
@@ -34,8 +70,38 @@ sidebar: device_vibrate
 |fail  |  Function  |  否  |-| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<!-- #### 错误码
+**示例：**
 
-|错误码|说明|
-|--|--|
-|1001|设备不支持| -->
+<a href="swanide://fragment/a6df718fa0df4ec933e432d2b81d7fc41557732661761" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="vibrateShort">vibrateShort</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    vibrateShort() {
+        swan.vibrateShort({
+            success(res) {
+                console.log('vibrateShort success', res);
+            },
+            fail(err) {
+                console.log('vibrateShort fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

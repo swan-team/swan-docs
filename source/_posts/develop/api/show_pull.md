@@ -22,30 +22,41 @@ sidebar: show_pull
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete  |  Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<!-- **success返回参数说明：**
-
-|参数名 |类型  |说明|
-|---- | ---- | ---- |
-|errMsg | String|  接口调用结果| -->
-
 **示例：**
 
-```js
-swan.startPullDownRefresh();
+<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="startPullDownRefresh">startPullDownRefresh</button>
+</view>
 ```
-<!-- #### 错误码
 
-**Andriod**
+* 在 js 文件中
 
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
+```js
+Page({
+    startPullDownRefresh() {
+        swan.startPullDownRefresh({
+            success: function () {
+                console.log('startPullDownRefresh success');
+            },
+            fail: function (err) {
+                console.log('startPullDownRefresh fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
 
-**iOS**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
  
 ## swan.stopPullDownRefresh
@@ -56,19 +67,44 @@ swan.startPullDownRefresh();
 
 **示例：**
 
-```js
-swan.stopPullDownRefresh();
+<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="startPullDownRefresh">startPullDownRefresh</button>
+    <button type="primary" bindtap="stopPullDownRefresh">stopPullDownRefresh</button>
+</view>
 ```
-<!-- #### 错误码
 
-**Andriod**
+* 在 js 文件中
 
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
+```js
+Page({
+    startPullDownRefresh() {
+        swan.startPullDownRefresh();
+    },
+    stopPullDownRefresh() {
+        swan.stopPullDownRefresh({
+            success: function () {
+                console.log('stopPullDownRefresh success');
+            },
+            fail: function (err) {
+                console.log('stopPullDownRefresh fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
 
-**iOS**
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。| -->
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```

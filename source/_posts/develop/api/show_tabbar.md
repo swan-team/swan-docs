@@ -23,11 +23,40 @@ sidebar: show_tabbar
 
 **示例：**
 
+<a href="swanide://fragment/482e7c6c58d4a14339abc8fda24074c11557728348921" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setTabBarBadge({
-    index: 0,
-    text: '文本'
+Page({
+    setTabBarBadge() {
+        swan.setTabBarBadge({
+            index: 0,
+            text: '文本',
+            success: function () {
+                console.log('setTabBarBadge success');
+            },
+            fail: function (err) {
+                console.log('setTabBarBadge fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -61,25 +90,51 @@ swan.setTabBarBadge({
 
 **示例：**
 
+<a href="swanide://fragment/284536873b4cc51e3b48942124ec4b7b1557728443718" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
+    <button type="primary" bindtap="removeTabBarBadge">removeTabBarBadge</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.removeTabBarBadge({
-    index: 0
+Page({
+    setTabBarBadge() {
+        swan.setTabBarBadge({
+            index: 0,
+            text: '文本'
+        });
+    },
+    removeTabBarBadge() {
+        swan.removeTabBarBadge({
+            index: 0,
+            success: function () {
+                console.log('removeTabBarBadge success');
+            },
+            fail: function (err) {
+                console.log('removeTabBarBadge fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar| -->
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```
 
 
 ## swan.showTabBarRedDot
@@ -99,10 +154,39 @@ swan.removeTabBarBadge({
 
 **示例：**
 
+<a href="swanide://fragment/2937f493a9bb306369b370c7126badd51557728534632" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.showTabBarRedDot({
-    index: 0
+Page({
+    showTabBarRedDot() {
+        swan.showTabBarRedDot({
+            index: 0,
+            success: function () {
+                console.log('showTabBarRedDot success');
+            },
+            fail: function (err) {
+                console.log('showTabBarRedDot fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -136,26 +220,50 @@ swan.showTabBarRedDot({
 
 **示例：**
 
-```js
-swan.hideTabBarRedDot({
-    index: 0
-});
+<a href="swanide://fragment/f7cad6e41c79acdff1f019cfe010f7261557728623673" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
+    <button type="primary" bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
+</view>
 ```
-<!-- #### 错误码
 
-**Andriod**
+* 在 js 文件中
 
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
+```js
+Page({
+    showTabBarRedDot() {
+        swan.showTabBarRedDot({
+            index: 0
+        });
+    },
+    hideTabBarRedDot() {
+        swan.hideTabBarRedDot({
+            index: 0,
+            success: function () {
+                console.log('hideTabBarRedDot success');
+            },
+            fail: function (err) {
+                console.log('hideTabBarRedDot fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
 
-**iOS**
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|当前页面不含tabbar| -->
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```
 
 ## swan.setTabBarStyle
 
@@ -177,27 +285,43 @@ swan.hideTabBarRedDot({
 
 **示例：**
 
+<a href="swanide://fragment/314390fbe5bef9e465d158b2102a9e121557728702320" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setTabBarStyle({
-    color: '#FFFFBD',
-    selectedColor: '#FFFFBD',
-    backgroundColor: '#FFFFBD',
-    borderStyle: 'white'
+Page({
+    setTabBarStyle() {
+        swan.setTabBarStyle({
+            color: '#FFFFBD',
+            selectedColor: '#FFFFBD',
+            backgroundColor: '#FFFFBD',
+            borderStyle: 'white',
+            success: function () {
+                console.log('setTabBarStyle success');
+            },
+            fail: function (err) {
+                console.log('setTabBarStyle fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|1001|当前页面不含tabbar| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.setTabBarItem
 
@@ -217,18 +341,44 @@ swan.setTabBarStyle({
 |fail   | Function  |  否  |-| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-
 **示例：**
 
+<a href="swanide://fragment/2cc5fab9e4c419ba33c2dc9857a24f811557728801013" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarItem">setTabBarItem</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setTabBarItem({
-    index: 0,
-    text: '文本',
-    // 图片路径
-    iconPath: '/images/component_normal.png',
-    // 选中图片路径
-    selectedIconPath: '/images/component_selected.png',
+Page({
+    setTabBarItem() {
+        swan.setTabBarItem({
+            index: 0,
+            text: '文本',
+            iconPath: '/images/component_normal.png',
+            selectedIconPath: '/images/component_selected.png',
+            success: function () {
+                console.log('setTabBarItem success');
+            },
+            fail: function (err) {
+                console.log('setTabBarItem fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -264,16 +414,42 @@ swan.setTabBarItem({
 
 **示例：**
 
+<a href="swanide://fragment/5942c633249ac5244cb0f565c425cc1b1557728863827" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showTabBar">showTabBar</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.showTabBar({
-    success: function (res) {
-        console.log(res);
+Page({
+    onLoad() {
+        swan.hideTabBar();
     },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+    showTabBar() {
+        swan.showTabBar({
+            animation: true,
+            success: function () {
+                console.log('showTabBar success');
+            },
+            fail: function (err) {
+                console.log('showTabBar fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -307,26 +483,37 @@ swan.showTabBar({
 
 **示例：**
 
+<a href="swanide://fragment/87d265ceed5cf64c0141fb2c200bd5eb1557728942583" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="hideTabBar">hideTabBar</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.hideTabBar({
-    success: function (res) {
-        console.log(res);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    hideTabBar() {
+        swan.hideTabBar({
+            animation: true,
+            success: function () {
+                console.log('hideTabBar success');
+            },
+            fail: function (err) {
+                console.log('hideTabBar fail', err);
+            }
+        });
     }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
-
-**iOS**
-|错误码|说明|
-|--|--|
-|1001|当前页面不含tabba| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

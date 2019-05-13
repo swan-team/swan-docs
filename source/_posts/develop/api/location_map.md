@@ -70,24 +70,91 @@ sidebar: location_map
 
 **示例：**
 
+<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```html
 <view class="wrap">
-    <map id="myMap"
-        style="width: 100%">
-    </map>
-	<button type="primary" bindtap="getCenterLocation">获取位置</button>
-	<button type="primary" bindtap="moveToLocation">移动位置</button>
-	<button type="primary" bindtap="translateMarker">移动标注</button>
-	<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
-	<button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
+    <map id="myMap" style="width: 100%"
+     scale="{{scale}}"
+     longitude="{{longitude}}"
+     latitude="{{latitude}}"
+     markers="{{markers}}"
+     position="{{position}}"
+     showLocation="{{showLocation}}"
+     polyline="{{polyline}}"
+     controls="{{controls}}"
+     circles="{{circles}}"></map>
+    <button type="primary" bindtap="getCenterLocation">获取位置</button>
+    <button type="primary" bindtap="moveToLocation">移动位置</button>
+    <button type="primary" bindtap="translateMarker">移动标注</button>
+    <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
+    <button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
 </view>
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
     data: {
-        latitude: '40.042500',
-        longitude: '116.274040',
+        scale: 16,
+        latitude: '40.048828',
+        longitude: '116.280412',
+        markers: [{
+            markerId: '1',
+            latitude: '40.052751',
+            longitude: '116.278796'
+        }, {
+            markerId: '2',
+            latitude: '40.048828',
+            longitude: '116.280412',
+            callout: {
+                display: 'ALWAYS',
+                content: '百度科技园'
+            }
+        }, {
+            markerId: '3',
+            latitude: '40.049655',
+            longitude: '116.27505',
+            callout: {
+                display: 'ALWAYS',
+                content: '西山壹号院'
+            }
+        }],
+        showLocation: '1',
+        polyline: [{
+            points: [{
+                longitude: 116.278796,
+                latitude: 40.048828
+            }, {
+                longitude: 116.27505,
+                latitude: 40.049655
+            }],
+            color: '#FF5F41FF',
+            width: 2,
+            dottedLine: true
+        }],
+        controls: [{
+            controlId: 1,
+            iconPath: '/images/group.png',
+            position: {
+                left: 0,
+                top: 100,
+                width: 50,
+                height: 50
+            },
+            clickable: true
+        }],
+        circles: [{
+            latitude: '40.052751',
+            longitude: '116.278796',
+            color: '#FF5F41FF',
+            fillColor: '#21FFFFFF',
+            radius: '200',
+            strokeWidth: '2'
+        }]
     },
     onReady() {
         this.mapContext = swan.createMapContext('myMap');
@@ -95,8 +162,8 @@ Page({
     getCenterLocation: function () {
         this.mapContext.getCenterLocation({
             success: function (res) {
-                console.log("经度" + res.longitude);
-                console.log("纬度" + res.latitude);
+                console.log("经度", res.longitude);
+                console.log("纬度", res.latitude);
             }
         })
     },
@@ -133,27 +200,25 @@ Page({
     getRegion: function () {
         this.mapContext.getRegion({
             success: function (res) {
-                console.log("西南角的经纬度" + res.southwest);
-                console.log("东北角的经纬度" + res.northeast);
+                console.log("西南角的经纬度", res.southwest);
+                console.log("东北角的经纬度", res.northeast);
             }
-        })
+        });
     }
 });
 ```
 
-<!-- #### 错误码
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 50rpx;
+}
+```
 
 
-**Andriod**
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。 |
-|1001||
-|2000|地图lib包加载失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->

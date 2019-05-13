@@ -51,20 +51,72 @@ sidebar: device_phonecontact
 |success| Function  |  否  | -|接口调用成功的回调|
 |fail  |  Function  |  否 |-|  接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
-<!-- 
-#### 错误码
 
-**Andriod**
+**示例：**
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
+<a href="swanide://fragment/8bd9b2c7500c14a85cff265bb671d1ec1557732716138" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-**iOS**
+* 在 swan 文件中
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。| -->
+```html
+<view class="wrap">
+    <button type="primary" bindtap="addPhoneContact">addPhoneContact</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    addPhoneContact() {
+        swan.addPhoneContact({
+            firstName: 'white',
+            middleName: '',
+            photoFilePath: '',
+            nickName: '',
+            lastName: '',
+            middleName: '',
+            remark: '',
+            mobilePhoneNumber: '',
+            weChatNumber: '',
+            addressCountry: '',
+            addressState: '',
+            addressCity: '',
+            addressStreet: '',
+            addressPostalCode: '',
+            organization: '',
+            title: '',
+            workFaxNumber: '',
+            workPhoneNumber: '',
+            hostNumber: '',
+            email: '',
+            url: '',
+            workAddressCountry: '',
+            workAddressState: '',
+            workAddressCity: '',
+            workAddressStreet: '',
+            workAddressPostalCode: '',
+            homeFaxNumber: '',
+            homePhoneNumber: '',
+            homeAddressCountry: '',
+            homeAddressState: '',
+            homeAddressCity: '',
+            homeAddressStreet: '',
+            homeAddressPostalCode: '',
+            success(res) {
+                console.log('vibrateLong success', res);
+            },
+            fail(err) {
+                console.log('vibrateLong fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

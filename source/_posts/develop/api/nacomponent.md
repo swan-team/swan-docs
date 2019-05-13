@@ -25,6 +25,20 @@ sidebar: nacomponent
 |fail   | Function |   否  |-| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**示例：**
+
+<a href="swanide://fragment/3140dd2436533b3006aac9d326e8faf41557730578312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showFavoriteGuide1">示例1</button>
+    <button type="primary" bindtap="showFavoriteGuide2">示例2</button>
+    <button type="primary" bindtap="showFavoriteGuide3">示例3</button>
+</view>
+```
+
 
 **展现形式**：
 目前添加到我的小程序引导组件支持以下两种类型，开发者可根据自身业务进行选择：

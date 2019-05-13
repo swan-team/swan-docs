@@ -58,8 +58,38 @@ swan.onCompassChange(function (res) {
 
 **示例：**
 
-```javascript
-swan.startCompass();
+<a href="swanide://fragment/82b6da5b4ce6509369cc848f6bdf33601557731425444" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="startCompass">startCompass</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    startCompass() {
+        swan.startCompass({
+            success: function (res) {
+                console.log('startCompass success', res);
+            },
+            fail: function (err) {
+                console.log('startCompass fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 ## swan.stopCompass
@@ -78,6 +108,39 @@ swan.startCompass();
 
 **示例：**
 
-```javascript
-swan.stopCompass();
+<a href="swanide://fragment/f63b7abb5f18b2d596d934c3213e3d8f1557731481133" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="stopCompass">stopCompass</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        swan.startCompass();
+    },
+    stopCompass() {
+        swan.stopCompass({
+            success: function (res) {
+                console.log('stopCompass success', res);
+            },
+            fail: function (err) {
+                console.log('stopCompass fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

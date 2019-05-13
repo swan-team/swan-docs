@@ -23,18 +23,40 @@ sidebar: storage_remove
 
 **示例：**
 
+<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="removeStorage">removeStorage</button>
+</view
+```
+
+* 在 js 文件中
 
 ```js
-swan.removeStorage({
-    key: 'key',
-    success: function (res) {
-        console.log(res);
-	},
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    removeStorage() {
+        swan.removeStorage({
+            key: 'key',
+            success: function (res) {
+                console.log('removeStorage success', res);
+            },
+            fail: function (err) {
+                console.log('removeStorage fail', err);
+            }
+        });
     }
 });
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -63,11 +85,36 @@ swan.removeStorage({
 
 **示例：**
 
+<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="removeStorageSync">removeStorageSync</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-try {
-    swan.removeStorageSync('key');
-} catch (e) {
+Page({
+    removeStorageSync() {
+        try {
+            swan.removeStorageSync('key');
+            console.log('removeStorageSync success');
+        } catch (err) {
+            console.log('removeStorageSync fail', err);
+        }
+    }
+});
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
 }
 ```
 
@@ -103,20 +150,40 @@ try {
 
 **示例：**
 
-```js
-swan.clearStorage();
+<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="clearStorage">clearStorage</button>
+</view>
 ```
-<!-- #### 错误码
 
-Andriod
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
+* 在 js 文件中
 
-iOS
-|错误码|说明|
-|--|--|
-|401|安全校验失败| -->
+```js
+Page({
+    clearStorage() {
+        swan.clearStorage({
+            success: function () {
+                console.log('clearStorage success');
+            },
+            fail: function (err) {
+                console.log('clearStorage fail', err);
+            }
+        });
+    }
+});
+```
+
+* 在 css 文件中 
+ 
+```css
+ .wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.clearStorageSync
 

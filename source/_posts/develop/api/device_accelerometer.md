@@ -73,10 +73,39 @@ swan.onAccelerometerChange(function (res) {
 
 **示例：**
 
-```javascript
-swan.startAccelerometer({
-    interval: 'ui'
+<a href="swanide://fragment/a501faa11f55af692129a4255d8cb4901557731276197" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="startAccelerometer">startAccelerometer</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    startAccelerometer() {
+        swan.startAccelerometer({
+            interval: 'ui',
+            success: function (res) {
+                console.log('startAccelerometer success', res);
+            },
+            fail: function (err) {
+                console.log('startAccelerometer fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 ## swan.stopAccelerometer
@@ -95,6 +124,41 @@ swan.startAccelerometer({
 
 **示例：**
 
-```javascript
-swan.stopAccelerometer();
+<a href="swanide://fragment/20b393338d791fd53cc7ec673c0b086f1557731347532" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="stopAccelerometer">stopAccelerometer</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        swan.startAccelerometer({
+            interval: 'ui'
+        });
+    },
+    stopAccelerometer() {
+        swan.stopAccelerometer({
+            success: function (res) {
+                console.log('startAccelerometer success', res);
+            },
+            fail: function (err) {
+                console.log('startAccelerometer fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

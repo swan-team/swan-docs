@@ -42,8 +42,34 @@ swan.setNavigationBarTitle({
 
 **方法参数：**无
 
-<a href="swanide://fragment/b5154f1fd73ea50516ade71f66456ae41540397555" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-        </a>
+**示例：**
+
+<a href="swanide://fragment/3d496fc2607b3bd1b8ffedef5228609d1557728152780" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showNavigationBarLoading">showNavigationBarLoading</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    showNavigationBarLoading() {
+        swan.showNavigationBarLoading();
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 
 ## swan.hideNavigationBarLoading
@@ -52,6 +78,42 @@ swan.setNavigationBarTitle({
 
 **方法参数：**无
 
+**示例：**
+
+<a href="swanide://fragment/0060abe0cf362da58c48f49c569351991557728006673" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showNavigationBarLoading">showNavigationBarLoading</button>
+    <button type="primary" bindtap="hideNavigationBarLoading">hideNavigationBarLoading</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    showNavigationBarLoading() {
+        swan.showNavigationBarLoading();
+    },
+    hideNavigationBarLoading() {
+        swan.hideNavigationBarLoading();
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```
 
 ## swan.setNavigationBarColor
 
@@ -90,26 +152,42 @@ swan.setNavigationBarTitle({
 
 **示例：**
 
+<a href="swanide://fragment/0db7b37e85705e66e6f53956f0a7e5091557728238505" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setNavigationBarColor">setNavigationBarColor</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setNavigationBarColor({
-    frontColor: '#ffffff',
-    backgroundColor: '#ff0000',
-    animation: {
-        duration: 500,
-        timingFunc: 'linear'
-	}
+Page({
+    setNavigationBarColor() {
+        swan.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: '#ff0000',
+            animation: {
+                duration: 500,
+                timingFunc: 'linear'
+            },
+            success: function () {
+                console.log('setNavigationBarColor success');
+            },
+            fail: function (err) {
+                console.log('setNavigationBarColor fail', err);
+            }
+        });
+    }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
