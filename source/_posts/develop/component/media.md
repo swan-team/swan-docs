@@ -547,13 +547,14 @@ video {
 
 **示例：**
 
-```xml
-<ar-camera key="xx" type="x" bindmessage="message" binderror="error" style="width: 100%; height: 300px;"></ar-camera>
-<button type="primary" bind:tap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image>
-```
+<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+```html
+<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
+</ar-camera>
+```
+> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>。
+<!-- 
 ```javascript
 Page({
     takePhoto() {
@@ -573,7 +574,7 @@ Page({
         console.log(e.detail);
     }
 });
-```
+``` -->
 
 ## live-player
 
