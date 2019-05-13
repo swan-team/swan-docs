@@ -17,7 +17,7 @@ sidebar: base
 |color | Color | - |icon 的颜色，同 css 的 color|
 
 
-**示例**： 
+**示例**：
 <a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="group">
@@ -78,7 +78,7 @@ Page({
 <a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <view class="wrap">
-	<text>{{text}}</text>
+	<text selectable="true">{{text}}</text>
 	<button class="btn" type="primary" bind:tap="add">add text</button>
 	<button class="btn" type="primary" bind:tap="remove">remove text</button>
 </view>
@@ -113,14 +113,14 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/text-demo.png">
+        <img src="../../../img/text-demo2.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
@@ -155,7 +155,7 @@ Page({
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-#### 文本节点：type = text 
+#### 文本节点：type = text
 
 **属性说明:**
 
@@ -381,7 +381,7 @@ button {
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
