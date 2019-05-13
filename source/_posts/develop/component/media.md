@@ -606,7 +606,7 @@ Page({
 
 **示例：**
 
-<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
 
@@ -629,10 +629,10 @@ Page({
     data: {
         cur: 0,
         autoplay: false,
-        src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+        src: 'http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8',
         srcList: [
-            'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
-            'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'
+            'http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8',
+            'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8'
         ],
         objectFit: 'contain',
         orientation: 'vertical',
