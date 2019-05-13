@@ -1,6 +1,6 @@
 ### swan.offDeviceOrientationChange()
 
-取消监听横竖屏切换事件。
+取消监听转屏事件。
 
 ```js
 swan.offDeviceOrientationChange(callback)

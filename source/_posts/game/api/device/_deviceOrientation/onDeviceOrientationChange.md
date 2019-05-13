@@ -1,6 +1,6 @@
 ### swan.onDeviceOrientationChange()
 
-监听横竖屏切换事件。
+监听转屏事件。
 
 ```js
 swan.onDeviceOrientationChange(callback)
