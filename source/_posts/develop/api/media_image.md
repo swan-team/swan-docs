@@ -17,7 +17,7 @@ sidebar: media_image
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |count  | Number | 否  |  -|最多可以选择的图片张数，默认 9。|
-|sizeType  |Array.<string>| 否  |  -|original 原图，compressed 压缩图，默认二者都有。|
+|sizeType  |`Array.<string>`| 否  |  -|original 原图，compressed 压缩图，默认二者都有。|
 |sourceType | ` Array.<object> ` |否 | -|  album 从相册选图，camera 使用相机，默认二者都有。|
 |success |Function  |  是 |  -|成功则返回图片的本地文件路径列表 tempFilePaths。|
 |fail  |  Function |   否  | -| 接口调用失败的回调函数|
@@ -31,7 +31,7 @@ sidebar: media_image
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | Array.<string> |图片的本地文件路径列表 。|
+|tempFilePaths  | `Array.<string>` |图片的本地文件路径列表 。|
 |tempFiles  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象。|
 
 **tempFiles 对象结构如下:**
@@ -92,7 +92,7 @@ swan.chooseImage({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |current |String | 否  |  -|当前显示图片的链接，不填则默认为 urls 的第一张。|
-|urls   | Array.<string> |是 | -|  需要预览的图片链接列表|
+|urls   | `Array.<string>` |是 | -|  需要预览的图片链接列表|
 |success| Function |   否  | -| 接口调用成功的回调函数|
 |fail  |  Function  |  否 |  -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -100,15 +100,41 @@ swan.chooseImage({
 
 **示例：**
 
+<a href="swanide://fragment/3279130e9d743b8c79fca8ce3682b1161556529976536" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="previewImage">previewImage</button>
+</view>
+```
+* 在 js 文件中
+
 ```js
-swan.previewImage({
-    current: '', // 当前显示图片的http链接
-    urls: [], // 需要预览的图片http链接列表
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    previewImage() {
+        swan.previewImage({
+            current: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', // 当前显示图片的http链接
+            urls: ['https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', 'https://smartprogram.baidu.com/docs/img/design/overview/1-2.png'], // 需要预览的图片http链接列表
+            success: function (res) {
+                console.log('previewImage success');
+            },
+            fail: function (err) {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 **说明**
@@ -116,19 +142,19 @@ swan.previewImage({
 * 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
 * 不支持预览本地文件。
 
-<!-- #### 错误码
+**图示**
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| -->
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/previewImage1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/previewImage2.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ## swan.getImageInfo
 
@@ -158,22 +184,43 @@ swan.previewImage({
 
 **示例：**
 
+<a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getImageInfo">getImageInfo</button>
+</view>
+
+```
+
+* 在 js 文件中
+
 ```js
-swan.getImageInfo({
-    src: '/xxx/xxx.jpg',
-    success: function (res) {
-        // 成功则返回图片高，宽，本地路径
-        console.log(res.width);
-        console.log(res.height);
-        console.log(res.path);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    getImageInfo() {
+        swan.getImageInfo({
+            src: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png',
+            success: function (res) {
+                console.log('getImageInfo success', res);
+            },
+            fail: function (err) {
+                console.log('getImageInfo fail', err);
+            }
+        });
     }
 });
 
 ```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 <!-- #### 错误码
 
 **Andriod**
@@ -217,35 +264,58 @@ swan.getImageInfo({
 
 **示例：**
 
+<a href="swanide://fragment/7cb1e99e5effc0e94231367ec821d2df1556530613528" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="saveImageToPhotosAlbum">saveImageToPhotosAlbum</button>
+</view>
+```
+* 在 js 文件中
+
 ```js
-swan.saveImageToPhotosAlbum({
-    'filePath': '/xxx/xxx.jpg',
-    success: function (res) {
-        console.log(res);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    saveImageToPhotosAlbum() {
+        swan.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
+            success: function (res) {
+                swan.saveImageToPhotosAlbum({
+                    filePath: res.tempFilePaths[0],
+                    success: function (res) {
+                        swan.showToast({
+                            title: 'success',
+                            icon: 'none'
+                        });
+                        console.log('saveImageToPhotosAlbum success', res);
+                    },
+                    fail: function (err) {
+                        swan.showToast({
+                            title: 'fail',
+                            icon: 'none'
+                        });
+                        console.log('saveImageToPhotosAlbum fail', err);
+                    }
+                });
+            },
+            fail: function (err) {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
 });
 ```
 
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
+```css
+wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。 |
-|1003|读取图片路径为空|
-|1003|没有读取到任何图片数据|
-|200301|相册权限，用户拒绝系统相册权限。|
-|200302|相册权限，用户拒绝小程序相册。| -->
 

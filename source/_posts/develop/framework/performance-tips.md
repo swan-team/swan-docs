@@ -5,7 +5,170 @@ nav: framework
 sidebar: performance-tips
 ---
 
-代码包的优化
+我们提供了多种方法可以为您的小程序进行性能优化，请先了解小程序的运行原理：
+在传统的 Web 前端项目中，所有代码全部运行在浏览器中。而小程序提供的运行环境有两种，分为逻辑层和视图层。假设现在开发者的小程序项目中有两个页面 pages/index和pages/home ，那么逻辑层代码指的是 app.js 与 pages/index/index.js 还有pages/home/home.js ，视图层代码指的是 pages/index/index.swan 和 pages/home/home.swan。在小程序中想要改变视图需要逻辑层与视图层之间进行通信，这部分通信是需要客户端参与的。具体方法如下：
+
+## 控制包体积的大小
+
+减小包的体积可以减少包的下载时间。除了体积之外，小程序包内的文件个数也直接影响到小程序包的解压速度。因此，需要减少小程序包内非必须的图片，字体，音频等资源的文件个数。同时，逻辑层与视图层的代码都需要加载到webview组件当中去，减小这部分的体积也会加快小程序的启动速度。根据已经上线的小程序包的统计分析后，我们建议开发者尽量将主包的体积限制在**1M**左右，包内的文件个数大小限制在**200**以内。
+
+### 分包加载
+
+[分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)通用策略一般来讲就是将必须的和经常访问的页面放入主包当中。建议将声明在 app.json 当中的 tabBar 配置项下的页面以及小程序经常会被访问到的页面都放入主包当中。另外，根据小程序的投放场景不同，“经常访问的页面”可能还需要做更多考虑，例如：在 Feed 和搜索分发的小程序非首页页面也建议放到主包中，避免首次打开投放页面处于分包内时需要先下载主包再下载分包导致的性能退化。
+
+```
+{
+	"pages": [
+		// 该配置项下经常要访问的页面放入主包当中，其余页面放入子包当中
+		"pages/index/index",
+	    "pages/detail/detail"
+	],
+	"tabBar": {
+		// 该配置项下面的页面建议放入主包当中
+	    "list": [
+		    {
+		        "pagePath": "pages/index/index",
+		        "text": "首页"
+		    },
+		    {
+		        "pagePath": "pages/logs/logs",
+		        "text": "日志"
+		    }
+	    ]
+	}
+}
+```
+
+### 图片的优化
+
+- 原则上除小程序 icon 以外的图片资源均应部署到 cdn 上，不建议把所有的图片都放在小程序包内，这样会增大包的体积。影响小程序包的下载速度与解压速度。
+- 过大的图片在加载时会消耗更多的系统资源。所以建议开发者尽量不使用超过**300K**的图片资源。
+- 对小程序包内的图片选择合适的格式进行存储，不需要透明格式的图片，推荐采用 jpeg 格式来存储代替 png 格式。
+- 对小程序包内的图片进行适当的压缩，对于 png 格式的图片，最常用的工具是[tinypng](https://tinypng.com/)。对于 jpeg 格式的图片，可以使用的工具是[tinyjpg](https://tinyjpg.com/)。也可以使用[http://www.exifpurge.com/](http://www.exifpurge.com/)或者其他图片编辑软件来清除图片的 exif 信息，减小图片的体积。
+- 去除小程序包内冗余和无用的图片资源，例如：重复的图片，未引用或不需要的资源文件等。
+- 安卓端支持 webp 的图片格式，webp图片格式在有损压缩的情况下，肉眼不易察觉出压缩前后的变化，但是体积却得到很大的减小。需要注意的是，iOS平台下的小程序不支持 webp 格式，如果开发者要使用webp格式的图片的话，需要注意区分平台。
+
+### 其他资源文件的优化
+
+JSON 描述文件可以通过[jsonminify](https://www.cleancss.com/json-minify/)工具对JSON文件进行压缩。
+
+## 请求数据的优化
+
+绝大多数小程序都需要请求服务端来获取渲染页面的数据，对于请求数据的优化，总结起来就是一句话，关键的早请求，不关键的晚请求。
+
+涉及到关键数据的异步请求可以尽早的发出，不需要等待页面的 onReady 生命周期之后才去发送请求。这样可以让页面所需的数据尽可能早的处于Ready状态。除了在现有的生命周期发送数据请求以外，我们还提供了**prefetch**机制，能够在小程序框架启动阶段就去请求数据，而不用等待页面生命周期触发。
+
+根据小程序被打开的场景，可以对异步请求进行优先级排序，不重要的请求放在页面的 onReady 生命周期去请求。例如，贴吧小程序最经常被访问的页面是帖子内容页，因此，除了当前帖子内容以外的数据请求都是非关键请求，可以将触发的时机延后，保证帖子内容尽可能早的被加载出来。
+
+## setData 操作的优化
+
+setData 方法是开发者通过逻辑层向视图层发送数据的方法。每一次 setData 的调用，都会触发一次通信，而每一次的通信都会消耗一定的系统资源，因此，开发者在使用 setData 需要注意以下几点：
+
+**1. 不要过于频繁调用 setData，应考虑将多次 setData 合并成一次 setData 调用。**
+**2. 不在视图层使用的数据不要通过 setData 传输。**
+**3. 不在页面不可见之后使用 setData。**
+**4. 不建议在更新数据结构当中的某一子项的时候将整个数据结构放到setData方法中，可以通过优化 setData 的 key 值来实现。**
+
+错误写法：
+```
+let person = this.getData('person');
+person.age = 30;
+this.setData('person',person);
+```
+
+正确写法:
+
+```
+this.setData('person.age', 30);
+```
+
+在更新列表中某一项内部的值时，推荐的用法为：
+
+```
+this.setData('list[0].person.name', 'Harry');
+```
+**5. 在处理无限滚动页面加载的时候，我们发现很多开发者将新的一页上的数据添加整体的数据里面再调用setData。这样做造成每次页面加载传输的数据越来越大。**
+
+未优化情况下的做法：
+```
+let pages = this.data.pages.push(page)
+this.setData({
+	list: pages
+});
+```
+
+**6. 使用 trackBy 来优化列表更新时的渲染性能。**
+
+当使用下拉刷新功能时，新的数据会被添加到当前列表的头部，这种情况下，页面中列表内所有的项都会被重新渲染一次。
+```
+// 下拉刷新更新方式举例
+let list = list.unshift(newPage);
+this.setData({
+	list
+});
+```
+如果使用trackBy，那么原先的列表内的项位置会移动，新添加的项会被渲染。这样可以省去一部分重新渲染带来的消耗。
+```
+// 使用trackBy举例
+<scroll-view>
+	<view s-for="item, index in list trackBy item.id">
+	</view>
+</scroll-view>
+```
+
+## 清理定时器
+当使用`swan.navigateTo`进行页面跳转的时候，旧页面是没有被销毁的。旧页面当中定义的定时器仍旧会运行。因此在页面跳转的时候，一定要记住清理没有用的定时器
+```
+Page({
+	onReady() {
+		this.timer = setInterval(() => {
+			// do something
+		}, 300);
+	},
+	onHide() {
+		// 在页面不在前台显示的时候，清除无用的定时器
+		this.timer && clearInterval(this.timer);
+	}
+})
+```
+
+## 合理使用自定义组件
+自定义组件与模板内的import与include功能都可以达到代码复用的效果。需要注意的是，如果自定义组件内没有逻辑层的功能的话，这时候使用自定义组件就是非必须的的了。
+```
+<import src="./person.swan" />
+<view class="container">
+	<!-- 使用import复用模板代码 -->
+	<template is="person-card" data="{{person}}" />
+</view>
+```
+
+```
+// Person相关函数
+export function play() { /* do something*/ }
+export function eat() { /* do something*/ }
+export function sing() { /* do something*/ }
+```
+
+```
+// 复用person.js中的函数
+import * as Person from './person';
+Page({
+	onReady() {
+		this.play();
+		this.eat();
+		this.sing();
+	},
+	onShow() {},
+	onLoad() {},
+	onHide() {},
+	...Person
+})
+```
+
+
+
+
+<!-- 代码包的优化
 -----
 
 ### 优化大小
@@ -77,4 +240,4 @@ setData 是用户开发中经常使用的接口，对于手机百度智能小程
 上述操作逻辑层每次均会通过客户端传递数据到视图层，消耗用户的网络流量与增加传输次数。并且，视图层也会频繁的重渲染组件，造成用户视觉卡顿等不好的体验。
 <br/>
 #### 3. 智能小程序页面不可见后进行 setData
-在页面进入到后台状态时，程序后台的 setData 会占用前台页面的执行资源，且后台页面的渲染对用户并不可见，导致资源浪费。所以在页面隐藏时，不应该继续进行 setData 。
+在页面进入到后台状态时，程序后台的 setData 会占用前台页面的执行资源，且后台页面的渲染对用户并不可见，导致资源浪费。所以在页面隐藏时，不应该继续进行 setData 。 -->

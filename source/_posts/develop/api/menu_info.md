@@ -6,7 +6,7 @@ sidebar: menu_info
 ---
 
 
-## swan.getmenuButtonBoundingClientRect
+## swan.getMenuButtonBoundingClientRect
 
 > 基础库 3.20.3 开始支持，低版本需做兼容处理。
 

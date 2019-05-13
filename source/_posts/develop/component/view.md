@@ -231,11 +231,82 @@ Page({
 </view>
 ```
 ## cover-view
-**解释： **覆盖在原生组件之上的文本视图，可覆盖的原生组件包括 video 、 canvas 、 camera，只支持嵌套 cover-view 、 cover-image 。
+**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图（支持图片、文本等）。
+
+**属性说明： **无
+
+**示例：**
+ 
+<a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+``` 
+<video id="myVideo"
+    src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
+    controls>
+    <cover-view class="controls">
+        <cover-view class="switchs" bindtap="switchs">{{switchs}}</cover-view>
+    </cover-view>
+</video>
+
+```
+* 在 js 文件中
+```
+Page({
+    data: {
+        switchs: '点击开始播放'
+    },
+    onReady() {
+        this.videoCtx = swan.createVideoContext('myVideo');
+    },
+    switchs() {
+        const switchs = this.getData('switchs');
+        console.log(switchs);
+        if (switchs === '点击开始播放') {
+            this.setData({
+                switchs: '点击暂停播放'
+            });
+            this.videoCtx.play();
+        } else {
+            this.setData({
+                switchs: '点击开始播放'
+            });
+            this.videoCtx.pause();
+        }
+    }
+});
+```
+* 在 css 文件中
+```
+controls {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.switchs {
+    width: 100%;
+    height: 100%;
+    background: #4F99FB;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}
+.pause, 
+.time {
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+}
+```
+**图示**
+
+![图片](../../../img/component/coverview.png)
 
 ## cover-image
 
-**解释： **覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view ，支持嵌套在 cover-view 里。
+**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
 
 **属性说明： **
 
@@ -245,9 +316,39 @@ Page({
 |bindload|	EventHandle|-|		图片加载成功时触发|
 |binderror|	EventHandle	|-	|图片加载失败时触发|
 
+
+
+**示例：**
+ 
+<a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<video id="myVideo"
+    src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
+    controls>
+    <cover-image class="cover-image"
+        src="https://smartprogram.baidu.com/docs/img/logo.png">
+    </cover-image>
+</video>
+```
+* 在 css 文件中
+
+```css
+.cover-image {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50px;
+}
+```
+**图示**
+
+![图片](../../../img/component/coverimage.png)
+
 **说明：**
-<!-- 1、cover-view 支持 overflow: scroll，但不支持动态更新 overflow；
-2、最外层 cover-view 支持 position: fixed； -->
+
 1、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；
 2、文本建议都套上 cover-view 标签，避免排版错误；
 3、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等；
@@ -256,59 +357,3 @@ Page({
 6、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；
 7、IOS端暂不支持一个页面有多个video时嵌套cover-view；
 8、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
-<!-- 9、todu: 事件模型遵循冒泡模型，但不会冒泡到原生组件。 -->
-<!-- 10、基础库 1.9.0 起支持插在 view 等标签下。在此之前只可嵌套在原生组件map、video、canvas、camera内，避免嵌套在其他组件内。 -->
-
-**示例：**
-```html
-<video id="myVideo"
-    src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
-    controls>
-    <cover-view class="controls">
-        <cover-image class="play"
-            bindtap="play"
-            src="https://smartprogram.baidu.com/docs/img/logo.png">
-        </cover-image>
-        <cover-view class="pause" bindtap="pause">暂停</cover-view>
-        <cover-view class="time">00:00</cover-view>
-    </cover-view>
-</video>
-```
-
-```css
-.controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 50px;
-    display: flex;
-}
-.play, .pause, .time {
-    flex: 1;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-}
-.pause, .time {
-    text-align: center;
-    color: white;
-    line-height: 50px;
-}
-cover-image {
-    width: 100%;
-    height: 100%;
-}
-```
-
-```javascript
-Page({
-    onReady() {
-        this.videoCtx = swan.createVideoContext('myVideo')
-    },
-    play() {
-        this.videoCtx.play()
-    },
-    pause() {
-        this.videoCtx.pause()
-    }
-})
-```

@@ -7,9 +7,11 @@ sidebar: nacomponent
 
 ## swan.showFavoriteGuide
 
+> 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。
+
 **解释**：支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
-> 引导组件有统一的疲劳度，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。
+
 
 **方法参数**：Object object
 
@@ -35,8 +37,8 @@ sidebar: nacomponent
 
         ```javascript
         swan.showFavoriteGuide({
-            type： 'bar'，
-            content：'一键添加到我的小程序'
+            type: 'bar',
+            content:'一键添加到我的小程序',
             success(res) {
                 console.log('添加成功：', res);
             },
@@ -45,15 +47,15 @@ sidebar: nacomponent
             }
         })
         ```
-    * 自动消失：引导组件3s后自动消失，点击添加按钮可直接添加到我的小程序。
+    * 自动消失：引导组件 5s 后自动消失，点击添加按钮可直接添加到我的小程序。
 
     ![图片](../../../img/api/nacomponent/中引导.png)
     **示例代码 2**
 
         ```javascript
         swan.showFavoriteGuide({
-            type： 'bar-autohide'，
-            content：'一键添加到我的小程序'
+            type: 'bar-autohide',
+            content:'一键添加到我的小程序',
             success(res) {
                 console.log('添加成功：', res);
             },
@@ -62,15 +64,15 @@ sidebar: nacomponent
             }
         })
         ```
-2. tip 气泡引导：引导组件3s后自动消失，组件箭头指向小程序菜单。
+2. tip 气泡引导：引导组件 5s 后自动消失，组件箭头指向小程序菜单。
 
     ![图片](../../../img/api/nacomponent/弱引导.png)
     **示例代码 3**
 
     ```javascript
     swan.showFavoriteGuide({
-        type： 'tip'，
-        content：'一键添加到我的小程序'
+        type: 'tip',
+        content:'一键添加到我的小程序',
         success(res) {
             console.log('添加成功：', res);
         },

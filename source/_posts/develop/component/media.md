@@ -263,9 +263,9 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|src|String| |视频的资源地址|
-|initial-time|Number| |指定视频初始播放位置|
-|duration|Number| |指定视频时长|
+|src|String|- |视频的资源地址|
+|initial-time|Number|- |指定视频初始播放位置|
+|duration|Number| -|指定视频时长|
 |controls|Boolean|true|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|是否自动播放|
 |loop|Boolean|false|是否循环播放|
@@ -281,18 +281,46 @@ Page({
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
-|bindpause|EventHandle| |当暂停播放时触发 pause 事件|
-|bindended|EventHandle| |当播放到末尾时触发 ended 事件|
-|bindtimeupdate|EventHandle| |播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle| |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindplay|EventHandle| -|当开始播放时触发 play 事件|
+|bindpause|EventHandle|- |当暂停播放时触发 pause 事件|
+|bindended|EventHandle|- |当播放到末尾时触发 ended 事件|
+|bindtimeupdate|EventHandle| -|播放进度变化时触发，event.detail = {currentTime, duration} 。|
+|bindfullscreenchange|EventHandle|- |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
 |bindwaiting|	EventHandle|-|		视频出现缓冲时触发|
 |binderror|	EventHandle	|-|	视频播放出错时触发|
 
-`<video />` 默认宽度 300px、高度 225px
+**主流格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|mp4|	是	|是|
+|mov|	是	|是|
+|m4v|	是	|是|
+|3gp|	是	|是|
+|avi|	是	|是|
+|m3u8|	是	|是|
+|webm|	是|	否|
+|flv	|	是	|是|
+|mkv|	是	|是|
+|rmvb|是	|是|
+|rm|	是	|是|
+|ogg|	是	|是|
+
+**主流编码格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|H.263	|是|	是|
+|H.264	|是|是|
+|HEVC	|是|	是|
+|MPEG-4	|是|	否|
+|VP8|	是	|否|
+|VP9|	是	|否|
 
 **Tip：**
-视频格式支持mp4后缀，
-视频编码android支持：mediacodec_h264,h261,h263,h263p,h263i,h264,h264_vda,mpeg1video,mpeg2video,mpeg4,mpegvideo,msmpeg4v1,msmpeg4v2,msmpeg4v3,rv10,rv20,rv30,rv40,svq1,svq3,vc1,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,wmv1,wmv2,wmv3,aac,aac_latm,ac3,ac3_fixed,eac3,amrnb,amrwb,atrac1,atrac3,atrac3p,cook,mp1float,mp2float,mp3float,mp3adufloat,mp3on4float,mp1,mp2,mp2fixed,mp3,mp3adu,mp3on4,ra_144,ra_288,sipr,wmapro,wmav1,wmav2,adts,amr,asf,avi,flv,hls,matroska,mov,mp3,mpegps,mpegts,rm,rtp,rtsp,sdp,swf,aac,aac_latm,ac3,cook,h261,h263,h264,mpeg4video,mpeg4audio,mpegvideo,rv30,rv40,vc1,vp3,vp8,vp9；ios支持h264,h265。
+
+`<video />` 默认宽度 300px、高度 225px
+
 
 **示例：**
 <a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -365,42 +393,136 @@ Page({
 |bindstop|EventHandle|-|摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle|-|用户不允许使用摄像头时触发|
 
-**说明**:
-* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
-* 同一页面只能插入一个 camera 组件。
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
+
 
 **示例：**
+ 
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 
 ```xml
-<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
-<button type="primary" bind:tap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image>
+<div class="camera">
+    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
+    <button type="primary" bind:tap="switchCamera">切换摄像头</button>
+    <button type="primary" bind:tap="takePhoto">拍照</button>
+    <button type="primary" bind:tap="startRecord">开始录像</button>
+    <button type="primary" bind:tap="stopRecord">结束录像</button>
+    <view class="preview">预览</view>
+    <image s-if="src" class="img" mode="widthFix" src="{{src}}"></image>
+    <video s-if="videoSrc" class="video" src="{{videoSrc}}"></video>
+</div>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
+    data: {
+        src: '',
+        device: 'back',
+        videoSrc: ''
+    },
+    switchCamera() {
+        const devices = this.getData('device');
+        if (devices === 'back') {
+            this.setData({
+                device: 'front'
+            });
+        } else {
+            this.setData({
+                device: 'back'
+            });
+        }
+    },
     takePhoto() {
         const ctx = swan.createCameraContext();
         ctx.takePhoto({
             quality: 'high',
-            success: (res) => {
+            success: res => {
                 this.setData({
                     src: res.tempImagePath
-                })
+                });
+            }
+        });
+    },
+    startRecord() {
+        const ctx = swan.createCameraContext();
+        ctx.startRecord({
+            success: res => {
+                swan.showToast({
+                    title: 'startRecord'
+                });
+            }
+        });
+    },
+    stopRecord() {
+        const ctx = swan.createCameraContext();
+        ctx.stopRecord({
+            success: res => {
+                swan.showModal({
+                    title: '提示',
+                    content: res.tempVideoPath
+                });
+                this.setData({
+                    videoSrc: res.tempVideoPath
+                });
             }
         });
     },
     error(e) {
         console.log(e.detail);
     }
-})
+});
 ```
 
+* 在 css 文件中
+
+```css
+.camera {
+    width: 100%;
+    padding: .16rem;
+    font-size: .16rem;
+}
+.preview {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+button {
+    margin-top: .16rem;
+}
+.img,
+video {
+    width: 100%;
+    margin-top: 50rpx;
+}
+```
+**图示**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/camera.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**说明**:
+* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
+* 同一页面只能插入一个 camera 组件。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
+
 ## ar-camera
-> 基础库 3.15.104 开始支持，低版本需做兼容处理。
+
+> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
 **解释：**AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
@@ -454,7 +576,9 @@ Page({
 ```
 
 ## live-player
+
 **解释：**实时视频播放
+
 > 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 |一级类目|二级类目|
@@ -475,12 +599,134 @@ Page({
 |min-cache|Number|1|最小缓冲区，单位s|
 |max-cache|Number|3|最大缓冲区，单位s|
 |bindstatechange|EventHandle|- |播放状态变化事件，detail = {code}|
-|bindnetstatus|EventHandle| -|网络状态通知，detail = {info}|
+|bindnetstatus|EventHandle| -|网络状态变化通知，detail = {info}|
 |bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
+
+
+
+**示例：**
+
+<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
+
+* 在 swan 文件中
+
+```swan
+<view class="live-play">
+    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" muted="{{muted}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus"></live-player>
+    <div class="section">
+        <button type="primary" bind:tap="livePlay">开始播放 play</button>
+        <button type="primary" bind:tap="liveStop">停止播放 stop</button>
+        <button type="primary" bind:tap="liveMute">静音</button>
+        <button type="primary" bind:tap="changeSrc">更换src</button>
+        <button type="primary" bind:tap="backgroundMute">后台静音</button>
+        <button type="primary" bind:tap="objectFit">object-fit改变</button>
+    </div>
+</view>
+```
+* 在 js 文件中
+```js
+Page({
+    data: {
+        cur: 0,
+        autoplay: false,
+        src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+        srcList: [
+            'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+            'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'
+        ],
+        objectFit: 'contain',
+        orientation: 'vertical',
+        minCache: 1,
+        maxCache: 3,
+        muted: false,
+        backgroundMute: false
+    },
+    onReady(e) {
+        this.ctx = swan.createLivePlayerContext('myLive');
+    },
+    statechange(e) {
+        swan.showToast({
+            title: '播放状态变化 statechange' + JSON.stringify(e)
+        });
+    },
+    netstatus(e) {
+        swan.showToast({
+            title: '网络状态变化 netstatus' + JSON.stringify(e)
+        });
+    },
+    livePlay(e) {
+        this.ctx.play();
+    },
+    objectFit(e) {
+        this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
+    },
+    liveStop(e) {
+        this.ctx.stop();
+    },
+    liveMute(e) {
+        this.setData({
+            muted: true
+        });
+    },
+    changeSrc(e) {
+        let srcList = this.getData('srcList');
+        let cur = (this.getData('cur') + 1) % srcList.length;
+        this.setData('src', srcList[cur]);
+        this.setData('cur', cur);
+    },
+    backgroundMute(e) {
+        this.setData({
+            'backgroundMute': true
+        });
+    },
+});
+```
+* 在 css 文件中
+```css
+.live-play {
+    width: 100%;
+    padding: .16rem;
+}
+button {
+    margin-top: 20rpx;
+}
+```
+
+
+**图示**
+![图片](../../../img/component/liveplayer.png)
 
 **说明**:
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。
+
+**主流格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|mp4|	是	|是|
+|mov|	是	|是|
+|m4v|	是	|是|
+|3gp|	是	|是|
+|avi|	是	|是|
+|m3u8|	是	|是|
+|webm|	是|	否|
+|flv	|	是	|是|
+|mkv|	是	|是|
+|rmvb|是	|是|
+|rm|	是	|是|
+|ogg|	是	|是|
+
+**主流编码格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|H.263	|是|	是|
+|H.264	|是|是|
+|HEVC	|是|	是|
+|MPEG-4	|是|	否|
+|VP8|	是	|否|
+|VP9|	是	|否|
 
 **状态码**
 
@@ -522,102 +768,3 @@ Page({
 |netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
 |videoWidth|视频画面的宽度|
 |videoHeight|视频画面的高度|
-
-**示例：**
-
-<a href="swanide://fragment/4d63f25ce0c6940bbde37dfe834cd4591540397353" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
-
-```css
-.wrap {
-    position: relative;
-    top: 10px;
-    width: 100%;
-}
-.item {
-    display: block;
-    margin: 6px 22.67px;
-    border-radius: 4px;
-    height: 38px;
-    line-height: 38px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    box-sizing: border-box;
-    color: #333;
-    border: 1px solid #333;
-    background-color: #fff;
-}
-```
-
-```xml
-<live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" muted="{{muted}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus"></live-player>
-<div class="wrap">
-    <view class="item" bind:tap="livePlay">开始播放 play</view>
-    <view class="item" bind:tap="liveStop">停止播放 stop</view>
-    <view class="item" bind:tap="liveMute">静音</view>
-    <view class="item" bind:tap="changeSrc">更换src</view>
-    <view class="item" bind:tap="backgroundMute">后台静音</view>
-    <view class="item" bind:tap="objectFit">object-fit改变</view>
-    <view class="item" bind:tap="oneItemClick">点击跳转</view>
-</div>
-```
-
-```javascript
-Page({
-    data: {
-        cur: 0,
-        src: 'http://livebd.quanmin.tv/live/1931315320.m3u8',
-        srcList: [
-            'http://livebd.quanmin.tv/live/1931315320.m3u8',
-            'http://livebd.quanmin.tv/live/462099.m3u8',
-        ],
-        objectFit: 'contain',
-        orientation: 'vertical',
-        minCache: 1,
-        maxCache: 3,
-        muted: false,
-        backgroundMute: false
-    },
-    onReady(e) {
-        this.ctx = swan.createLivePlayerContext('myLive');
-    },
-    statechange(e) {
-            swan.showToast({
-            title: '播放状态变化 statechange' + JSON.stringify(e)
-        });
-    },
-    netstatus(e) {
-        swan.showToast({
-            title: '网络状态变化 netstatus' + JSON.stringify(e)
-        });
-    },
-    livePlay(e) {
-        this.ctx.play();
-    },
-    objectFit(e) {
-        this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
-    },
-    liveStop(e) {
-        this.ctx.stop();
-    },
-    liveMute(e) {
-        let muted = !this.getData('muted');
-        this.setData('muted', muted);
-    },
-    changeSrc(e) {
-        let srcList = this.getData('srcList');
-        let cur = (this.getData('cur') + 1) % srcList.length;
-        this.setData('src', srcList[cur]);
-        this.setData('cur', cur);
-    },
-    backgroundMute(e) {
-        this.setData('backgroundMute', !this.getData('backgroundMute'));
-    },
-    oneItemClick(e) {
-        swan.navigateTo({
-            url: 'pages/live-player-new/live-player-new'
-        });
-    }
-});
-```

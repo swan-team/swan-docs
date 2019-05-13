@@ -5,6 +5,8 @@ nav: component
 sidebar: bottomtab
 ---
 底部标签栏通常用于首页横向视图导航的切换，它始终固定在屏幕底部，不随页面滚动隐藏。
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_tabbar/" target="_blank">设置tabBar</a>。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/bottomtab/1.png">

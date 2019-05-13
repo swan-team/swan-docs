@@ -37,7 +37,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/package/upload?access_token=ACC
 ext_json需为string类型，格式示例如下 ：
 ```json
 {
-    "extEnable":true,
+    "extEnable":true,//必填字段
     "extAppid":"100000282",
     "directCommit":false,
     "ext":{

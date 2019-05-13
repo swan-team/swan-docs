@@ -28,8 +28,8 @@ sidebar: detailPages
 图文详情页一般由标题、正文、多媒体组成。
 
 ### 1. 标题和正文
-<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/4.png"><p class="m-doc-custom-examples-text">1. 标题：字号48px，行高16px；
-			2. 正文：字号38px，字间距2，行高22px。</p>
+<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/4.png"><p class="m-doc-custom-examples-text">1. 标题：字号24pt，行高16px；
+			2. 正文：字号19pt，字间距2，行高22px。</p>
 </div>
 
 ### 2. 多媒体
@@ -42,9 +42,9 @@ sidebar: detailPages
 ## 动态详情页
 动态详情页一般由正文、多媒体组成。
 ### 1. 正文
-<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/7.png"><p class="m-doc-custom-examples-text">1. 正文：字号34px，行高22px；
-			2. 展开全文（可选）：字号34px；
-			3. 附属信息（可选）：字号24px。</p>
+<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/7.png"><p class="m-doc-custom-examples-text">1. 正文：字号17pt，行高22px；
+			2. 展开全文（可选）：字号17pt；
+			3. 附属信息（可选）：字号12pt。</p>
 </div>
 
 ### 2. 多媒体
@@ -64,7 +64,7 @@ sidebar: detailPages
 
 #### 视频
 <div class="m-doc-custom-text-image">
- 	<div><p>展现一个视频时，宽度为760px，尺寸为16：9。</p>
+ 	<div><p>展现一个视频时，宽度为760px，尺寸为16:9。</p>
  	</div>
  		<div><img src="../../../img/design/foundation/detailPages/9.png"></div>
 	</div>
@@ -89,6 +89,6 @@ sidebar: detailPages
 </div>
 
 ### 2. 标题
-<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/11.png"><p class="m-doc-custom-examples-text">1. 标题：字号48px，行高16px；
-			2. 附属信息（可选）：字号24px，行高12px。</p>
+<div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/11.png"><p class="m-doc-custom-examples-text">1. 标题：字号24pt，行高16px；
+			2. 附属信息（可选）：字号12pt，行高12px。</p>
 </div>

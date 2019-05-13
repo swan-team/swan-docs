@@ -50,26 +50,125 @@ sidebar: media_backgroundaudiomanager
 |onNext | callback | 用户在系统音乐播放面板点击下一曲事件（iOS only）。| -->
 **示例：**
 
+<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="play">play</button>
+    <button type="primary" bindtap="pause">pause</button>
+    <button type="primary" bindtap="stop">stop</button>
+    <button type="primary" bindtap="seek">seek</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```javascript
 
-const backgroundAudioManager = swan.getBackgroundAudioManager();
+Page({
+    onLoad() {
+        const backgroundAudioManager = swan.getBackgroundAudioManager();
+        backgroundAudioManager.title = '演员';
+        backgroundAudioManager.epname = '演员';
+        backgroundAudioManager.singer = '薛之谦';
+        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
-backgroundAudioManager.title = '此时此刻';
-backgroundAudioManager.epname = '此时此刻';
-backgroundAudioManager.singer = '许巍';
-backgroundAudioManager.coverImgUrl = 'xxx';
-backgroundAudioManager.src = 'xxx';
+        backgroundAudioManager.onPlay(res => {
+            swan.showToast({
+                title: 'play',
+                icon: 'none'
+            });
+            console.log('onPlay', res);
+        });
+
+        backgroundAudioManager.onPause(res => {
+            swan.showToast({
+                title: 'pause',
+                icon: 'none'
+            });
+            console.log('onPause', res);
+        });
+
+        backgroundAudioManager.onStop(res => {
+            swan.showToast({
+                title: 'stop',
+                icon: 'none'
+            });
+            console.log('onStop', res);
+        });
+
+        backgroundAudioManager.onEnded(res => {
+            swan.showToast({
+                title: 'end',
+                icon: 'none'
+            });
+            console.log('onEnded', res);
+        });
+
+        backgroundAudioManager.onTimeUpdate(res => {
+            console.log('onTimeUpdate', res);
+        });
+
+        backgroundAudioManager.onError(res => {
+            swan.showToast({
+                title: 'error',
+                icon: 'none'
+            });
+            console.log('onError', res);
+        });
+
+        backgroundAudioManager.onWaiting(res => {
+            swan.showToast({
+                title: 'waiting',
+                icon: 'none'
+            });
+            console.log('onWaiting', res);
+        });
+
+        this.backgroundAudioManager = backgroundAudioManager;
+    },
+    play() {
+        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.play();
+    },
+    pause() {
+        this.backgroundAudioManager.pause();
+    },
+    stop() {
+        this.backgroundAudioManager.stop();
+    },
+    seek() {
+        this.backgroundAudioManager.seek(10);
+    }
+});
 
 ```
 
-<!-- #### 错误码
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 50rpx;
+}
+```
 
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法 |
-|202 |解析失败，请检查参数是否正确|
-|204|当前正在播放来源于其他小程序的音频，无权控制|
-|1005|播放被打断|
-|1006|加载音频失败|
-|1007|seek失败，播放器尚未缓冲| -->
+**图示**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/getBackgroundAudioManager.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>

@@ -58,7 +58,8 @@ Page({
 
 ## text
 
-<div class="notice">解释： </div>放文本的元素<div></div><text class="notice">属性说明:</text>
+**解释：**放文本的元素
+**属性说明:**
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |--|
@@ -108,8 +109,21 @@ Page({
 
 
 ```
+**图示：**
 
-![图片](../../../img/text-demo.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/text-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 **说明:**
 
 * 除了文本节点以外的其他节点都无法长按选中。
@@ -118,17 +132,22 @@ Page({
 
 
 ## rich-text
-<div class="notice">解释： </div>富文本<div></div><text class="notice">属性说明:</text>
+
+**解释：** 富文本
+**属性说明:**
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| nodes | Array / String  | [] |节点列表 / HTML String|
+| nodes | Array / String  | [] |节点列表 / HTML String。|
 
-* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+### nodes
+
 * nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
 * 现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点。
 
-<notice>元素节点：type = node</notice><div></div><text class="notice">属性说明:</text>
+#### 元素节点：type = node
+
+**属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -136,93 +155,70 @@ Page({
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-**文本节点：type = text**
+#### 文本节点：type = text 
+
 **属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | text | 文本 | String | 是 | 支持entities |
 
-* 受信任的HTML节点及属性。
-* 全局支持class和style属性，不支持id属性。
+### 受信任的HTML节点及属性。
+
+> 全局支持class和style属性，不支持id属性。
 
 属性说明:
 
 |节点 | 属性 |
 |---- | ---- |
-| a | |
-| abbr | |
-| b | |
-| blockquote | |
-| br | |
-| code | |
+| a | -|
+| abbr |- |
+| b |- |
+| blockquote | -|
+| br | -|
+| code |- |
 | col | span，width |
 | colgroup | span，width |
-| dd | |
-| del | |
-| div | |
-| dl | |
-| dt | |
-| em | |
-| fieldset | |
-| h1 | |
-| h2 | |
-| h3 | |
-| h4 | |
-| h5 | |
-| h6 | |
-| hr | |
-| i | |
+| dd | -|
+| del | -|
+| div |- |
+| dl |- |
+| dt |- |
+| em | -|
+| fieldset |- |
+| h1 |- |
+| h2 |- |
+| h3 |- |
+| h4 |- |
+| h5 |- |
+| h6 |- |
+| hr | -|
+| i |- |
 | img | alt，src，height，width |
-| ins | |
-| label | |
-| legend | |
-| li | |
+| ins |- |
+| label |- |
+| legend |- |
+| li | -|
 | ol | start，type |
-| p | |
-| q | |
-| span | |
-| strong | |
-| sub | |
-| sup | |
+| p | -|
+| q |- |
+| span |- |
+| strong | -|
+| sub |- |
+| sup |- |
 | table | width |
-| tbody | |
+| tbody |- |
 | td | colspan，height，rowspan，width |
-| tfoot | |
+| tfoot | -|
 | th | colspan，height，rowspan，width |
-| thead | |
-| tr | |
-| ul | `` |
-
-
-```xml
-<!-- rich-text.swan -->
-<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
-```
-
-```js
-// rich-text.js
-Page({
-    data: {
-        nodes: [{
-        name: 'div',
-        attrs: {
-            class: 'div_class',
-            style: 'line-height: 60px; color: red;'
-        },
-        children: [{
-            type: 'text',
-            text: 'Hello&nbsp;World!'
-        }]
-        }]
-    },
-    tap() {
-        console.log('tap')
-    }
-})
-```
+| thead |- |
+| tr | -|
+| ul | - |
 
 **说明：**
+
+* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
 * attrs 属性不支持 id ，支持 class。
@@ -230,6 +226,165 @@ Page({
 * 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
 * img 标签仅支持网络图片。
 * 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+
+
+**示例**
+
+<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过HTML String渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{htmlSnip}}</view>
+            </scroll-view>
+            <button type="primary" bind:tap="renderHtml">渲染HTML</button>
+            <block s-if="{{renderedByHtml}}">
+                <rich-text nodes="{{htmlSnip}}"></rich-text>
+            </block>
+        </view>
+    </view>
+    <view class="renders">
+        <view class="renders_title">通过节点渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{nodeSnip}}</view>
+            </scroll-view>
+            <button type="primary" bind:tap="renderNode">渲染Node</button>
+            <block s-if="{{renderedByNode}}">
+                <rich-text nodes="{{nodes}}"></rich-text>
+            </block>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+const htmlSnip
+=`<div class="div_class">
+  <h1>Title</h1>
+  <p class="p">
+    Life is&nbsp;<i>like</i>&nbsp;a box of
+    <b>&nbsp;chocolates</b>
+  </p>
+</div>`;
+const nodeSnip
+=`Page({
+  data: {
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: red;'
+      },
+      children: [{
+        type: 'text',
+        text: 'You never know what you're gonna get.'
+      }]
+    }]
+  }
+})`;
+
+Page({
+    data: {
+        htmlSnip,
+        nodeSnip,
+        renderedByHtml: false,
+        renderedByNode: false,
+        nodes: [{
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you\'re gonna get.'
+            }]
+        }]
+    },
+    renderHtml() {
+        this.setData({
+            renderedByHtml: true
+        });
+    },
+    renderNode() {
+        this.setData({
+            renderedByNode: true
+        });
+    },
+    enterCode(e) {
+        console.log(e.detail.value);
+        this.setData({
+            htmlSnip: e.detail.value
+        });
+    }
+});
+```
+
+* 在 css 文件中
+
+```css
+.rich-text {
+    width: 100%;
+    height: 100%;
+    font-size: .16rem;
+    padding: .16rem;
+}
+.renders {
+    width: 100%;
+    margin-top: 60rpx;
+}
+.renders_view {
+    width: 100%;
+    height: auto;
+}
+.renders_title {
+    color: darkgrey;
+}
+.p {
+    color: #4F99FB;
+    line-height: 60rpx;
+}
+scroll-view {
+    width: 100%;
+    height: 350rpx;
+    border: 1rpx solid #1AAD19;
+    box-sizing: border-box;
+    line-height: 50rpx;
+}
+.cont {
+    width: 100%;
+    height: 100%;
+    white-space: pre;
+}
+button {
+    margin: 20rpx 0;
+}
+```
+
+
+**图示:**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/richtext.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 
 ## progress
 
@@ -263,6 +418,7 @@ Page({
 
 
 ## animation-view
+
 **解释：**Lottie动画组件
 
 **属性说明：**
@@ -281,22 +437,78 @@ Page({
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * animation-view组件不支持原生组件嵌套。
 * 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
+
 **示例：**
 
-```xml
-<!-- animation-view.swan -->
-<view>
-    <animation-view id="myAnim" action="{{action}}" hidden="{{hidden}}" class="controls" autoplay="false" path="{{path}}">
-    </animation-view>
+<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="animation-content hide">
+        <view class="animation-info">
+            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" path="{{path}}">
+            </animation-view>
+        </view>
+        <view class="button-content">
+            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}动画</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
 </view>
 
 ```
+* 在 js 文件中
+
 ```javascript
 Page({
     data: {
-        path: '/anims/anim_one.json',
+        title: 'animation-view',
         action: 'play',
-        hidden: false
+        hidden: false,
+        path: '/anims/lottie_example.json',
+        loop: true,
+        autoplay: true,
+        status: '停止',
+        updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
+        textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+    },
+    playLottie() {
+        // 切换播放状态
+        let action = this.data.action;
+        action = action === 'pause' ? 'play' : 'pause';
+        let status = action === 'pause' ? '播放' : '停止';
+
+        this.setData({
+            action,
+            status
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.animation-info {
+    padding-top: .4rem;
+}
+.controls {
+    width: 88%;
+    margin: 0 auto;
+}
+.button-content {
+    position: relative;
+    top: 0;
+}
+.toggle-animation {
+    margin-top: .22rem!important;
+    border-radius: .04rem;
+}
+.toggle-animation::after {
+    border: none;
+}
 ```

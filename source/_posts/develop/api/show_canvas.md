@@ -1216,7 +1216,7 @@ ctx.draw();
 ## canvasContext.measureText
 
 
-**解释：**测量文本尺寸信息，目前仅返回文本宽度。同步接口。
+**解释：**测量文本尺寸信息，目前仅返回文本宽度，同步接口。
 
 **方法参数：**String text
 
@@ -1238,35 +1238,7 @@ ctx.font = 'italic bold 20px cursive'
 const metrics = ctx.measureText('Hello World')
 console.log(metrics.width);
 ```
-<!-- #### 错误码
-
-
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。| -->
-
-<!-- canvasContext.arcTo
------
-
-**解释：**根据控制点和半径绘制圆弧路径。
-
-**参数：**
-
-| 参数名 | 类型 | 说明 |
-|---- | ---- | ---- |
-| x1 | Number | 第一个控制点的 x 轴坐标 |
-| y1 | Number | 第一个控制点的 y 轴坐标|
-| x2 | Number | 第二个控制点的 x 轴坐标 |
-| y2 | Number | 第二个控制点的 y 轴坐标 |
-| radius | Number | 圆弧的半径 |
-
-**示例：**
-
-```js
-canvasContext.arcTo(x1, y1, x2, y2, radius);
-``` -->
+ 
 
 ##  canvasContext.strokeText
 
@@ -1470,13 +1442,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/draw1.png)
 
-<!-- #### 错误码
-
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。| -->
+ 
 
 ##  canvasContext.font
 

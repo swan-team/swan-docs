@@ -105,15 +105,15 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 **navigationStyle配置**
 
-|顶bar设置|iOS|Android|WebView组件页面|备注|
+|导航栏设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|
 |百度 App定义的顶bar|无版本限制|无版本限制|无版本限制|-|
-|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效|-|
-|顶bar子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
+|导航栏全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效|-|
+|导航栏子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+action高度（iOS 为 44px，Android 为 38px）</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">智能小程序返回按钮Y位置 = 状态栏高度（statusBarHeight，可通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a> 获取）+ 0.5 * 导航栏高度（navigationBarHeight，可通过  <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a>或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a> 获取）</p>
 </div>
 </div>
 

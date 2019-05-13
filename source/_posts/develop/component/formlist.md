@@ -18,14 +18,14 @@ sidebar: formlist
 | plain | Boolean  |false |按钮是否镂空，背景色透明。|
 |form-type |String  | - |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
 |open-type | String | -|百度 App开放能力，比如分享、获取用户信息等等。|
-|hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当  hover-class="none"  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
+|hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当 ` hover-class="none"`  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
 | hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态。|
 |hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒。|
 |hover-stay-time|Number | 70  |手指松开后点击态保留时间，单位毫秒。|
-| bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： open-type="getUserInfo"。|
+| bindgetuserinfo |Handler | - |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
 |disabled|Boolean|false|是否禁用|
 |loading|Boolean|false|名称前是否带有loading图标|
-|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机： open-type=”getPhoneNumber”。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
+|bindgetphonenumber|Handler|-|获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler|-|		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
 <!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
 |bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
@@ -55,7 +55,7 @@ sidebar: formlist
 |contact|	打开客服会话。|
 |share |触发用户分享，使用前建议先阅读 <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/">swan.onShareAppMessage</a> 用。|
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
-| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
+| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
 
 
@@ -758,55 +758,70 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
 
 **示例代码**：
-<a href="swanide://fragment/ecb898c32b2c234043c55e7b67664deb1540395947" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+ 
+ <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+
 ```html
 <!--textarea.swan-->
-<view class="section">
-    <textarea placeholder="自动变高"
-        auto-height
-        bindinput="bindInput"
-        bindfocus="bindFocus"
-        bindblur="bindBlur"
-        bindlinechange="bindLinechange" />
-</view>
-<view class="section">
-    <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+<view class="wrap">
+    <view class="section">
+        <view class="title">输入区高度自适应</view>
+        <textarea auto-height bindinput="bindInput"/>
+    </view>
+    <view class="section">
+        <view class="title">自动聚焦的textarea</view>
+        <textarea auto-focus="{{focus}}" style="height: 3em"/>
+    </view>
 </view>
 ```
 
+* 在 js 文件中 
+
 ```javascript
-//textarea.js
 Page({
     data: {
-        height: 20,
-        focus: false
+        height: 1,
+        focus: true
     },
     bindFocus(e) {
         console.log('focus - e:', e);
-        swan.showToast({
-            'title': `focus - ${e.detail.value}`
-        });
     },
     bindInput(e) {
         console.log('input - e:', e);
-        swan.showToast({
-            'title': `input - ${e.detail.value}`
-        });
     },
     bindLinechange(e) {
         console.log('linechange - e:', e);
-        swan.showToast({
-            'title': `linechange - ${e.detail.value}`
-        });
     },
     bindBlur(e) {
         console.log('blur - e:', e);
-        swan.showToast({
-            'title': `blur - ${e.detail.value}`
-        });
     }
 });
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    height: 100%;
+}
+.title {
+    color: #999;
+    padding: .33rem .21rem .17rem;
+}
+textarea {
+    background: #fff;
+    width: 100%;
+    padding: .17rem;
+    line-height: 40rpx;
+}
+```
+**图示**
+![图片](../../../img/component/textarea.png)
+
 **说明**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
+* 请使用cover-view组件在 textarea 组件上开发遮罩层。
