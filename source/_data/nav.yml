@@ -396,46 +396,13 @@
     name: 创作共用-署名-禁止演绎
     link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
+
     -
       link: /develop/tutorial/codedir
-      text: 简易教程
+      text: 快速入门
       name: tutorial
-      sidebar:
+      sidebar:     
         -
-            link: /develop/tutorial/codedir
-            text: 智能小程序概述
-            name: index
-            sidebar:
-              -
-                link: /develop/tutorial/codedir
-                text: 结构介绍
-                name: codedir
-              -
-                  link: /develop/tutorial/process_life
-                  text: 生命周期介绍
-                  name: process_life  
-              -
-                link: /develop/tutorial/move
-                text: 开发解决方案
-                name: move
-                sidebar: 
-                    -
-                      link: /develop/tutorial/move/#搬家工具
-                      text: 搬家工具
-                      name: move_搬家工具
-                    -   
-                      link: /develop/tutorial/move/#框架开发
-                      text: 框架开发
-                      name: move_框架开发   
-                      
-              -
-                link: /develop/tutorial/compatibility
-                text: 兼容性说明
-                name: compatibility   
-        -
-            link: /develop/tutorial/install
-            text: 开发智能小程序
-            name: index
             sidebar: 
               -
                 link: /develop/tutorial/demo
@@ -444,11 +411,11 @@
               -
                 link: /develop/tutorial/install
                 text: 安装开发者工具
-                name: install      
+                name: install    
               # -
-              #   link: /develop/tutorial/dev_start
-              #   text: 启动智能小程序原理 
-              #   name: dev_start
+              #   link: /develop/tutorial/startdevelop 
+              #   text: 开发智能小程序
+              #   name: startdevelop                  
               -
                 link: /develop/tutorial/process
                 text: 全局配置
@@ -520,6 +487,19 @@
                       link: /develop/tutorial/publish/#发布
                       text: 发布
                       name: publish_发布  
+              -
+                link: /develop/tutorial/move
+                text: 开发解决方案
+                name: move
+                sidebar: 
+                    -
+                      link: /develop/tutorial/move/#搬家工具
+                      text: 搬家工具
+                      name: move_搬家工具
+                    -   
+                      link: /develop/tutorial/move/#框架开发
+                      text: 框架开发
+                      name: move_框架开发                       
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -731,7 +711,11 @@
             -
               link: /develop/framework/operating-mechanism
               text: 运行机制
-              name: operating-mechanism            
+              name: operating-mechanism
+            -
+              link: /develop/framework/process_life
+              text: 生命周期介绍
+              name: process_life                            
 
     -
       link: /develop/component/view
@@ -740,7 +724,10 @@
       sidebar:
         -
             sidebar:
-
+              -
+                link: /develop/component/list
+                text: 组件列表
+                name: componetlist
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -949,12 +936,12 @@
       text: API
       name: api
       sidebar:
-        # -
-        #     sidebar:
-        #     -
-        #       link: /develop/api/apilist
-        #       text: API 列表
-        #       name: apilist        
+        -
+            sidebar:
+            -
+              link: /develop/api/apilist
+              text: API 列表
+              name: apilist        
      
         -
             link: /develop/api/net
@@ -2810,7 +2797,11 @@
             -
               link: /develop/swan/swanchangelog
               text: 历史更新日志
-              name: swanchangelog    
+              name: swanchangelog  
+            -
+              link: /develop/swan/compatibility
+              text: 兼容性说明
+              name: compatibility                 
 # 4
 -
   link: /data/concept
