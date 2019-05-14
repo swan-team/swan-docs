@@ -11,7 +11,7 @@ sidebar: open_infomation
 
 ## 功能介绍
 目前已经开放的模板消息主要是两类：支付类和表单类消息。
-> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
+> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
 
 ### 消息的入口
 
@@ -71,12 +71,12 @@ sidebar: open_infomation
 
 ### 步骤三：调用接口下发模板消息
 
-* 获取小程序模板库标题列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
-* 获取模板库某个模板标题下的关键词库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
-* 组合模板并添加至帐号下的个人模板库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#addTemplate/">addTemplate</a>
-* 获取帐号下已存在的模板列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateList/">getTemplateList</a>
-* 删除帐号下的某个模板:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#deleteTemplate/">deleteTemplate</a>
-* 推送模板消息:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
+* 获取小程序模板库标题列表:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
+* 获取模板库某个模板标题下的关键词库:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
+* 组合模板并添加至帐号下的个人模板库:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#addTemplate/">addTemplate</a>
+* 获取帐号下已存在的模板列表:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateList/">getTemplateList</a>
+* 删除帐号下的某个模板:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#deleteTemplate/">deleteTemplate</a>
+* 推送模板消息:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
 
 
 ## 下发条件说明

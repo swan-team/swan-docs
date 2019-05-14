@@ -78,7 +78,7 @@ sidebar: return
 
     我的-消息-服务消息
 
-开发者接入相关开发文档:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/">模板消息</a>
+开发者接入相关开发文档:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/">模板消息</a>
 
 
 获取方式：当用户使用小程序进行了支付行为或者有其他交互行为（具体需要视小程序而定）
