@@ -1054,7 +1054,7 @@
                       text: SocketTask.onOpen
                       name: net_websocket_SocketTask-onOpen        
                   -
-                      link: /develop/api/net_websocket/SocketTask-onClose
+                      link: /develop/api/net_websocket/#SocketTask-onClose
                       text: SocketTask.onClose
                       name: net_websocket_SocketTask-onClose                       
                   -
@@ -1062,7 +1062,7 @@
                       text: SocketTask.onError
                       name: net_websocket_SocketTask-onError
                   -
-                      link: /develop/api/net_websocket/SocketTask-onMessage
+                      link: /develop/api/net_websocket/#SocketTask-onMessage
                       text: SocketTask.onMessage
                       name: net_websocket_SocketTask-onMessage                                         
 
