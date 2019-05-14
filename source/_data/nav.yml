@@ -396,7 +396,7 @@
     name: 创作共用-署名-禁止演绎
     link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
-  -
+    -
       link: /develop/tutorial/codedir
       text: 简易教程
       name: tutorial
@@ -461,7 +461,24 @@
                     -
                       link: /develop/tutorial/process/#配置-app-js-文件
                       text: 配置 app.js 文件
-                      name: process_配置-app-js-文件          
+                      name: process_配置-app-js-文件
+              -
+                link: /develop/tutorial/dev
+                text: 页面开发
+                name: dev
+                sidebar:
+                    -
+                      link: /develop/tutorial/dev/#开发-swan-文件
+                      text: 开发 .swan 文件
+                      name: dev_开发-swan-文件
+                    -
+                      link: /develop/tutorial/dev/#开发-css-文件
+                      text: 开发 .css 文件
+                      name: dev_开发-css-文件
+                    -
+                      link: /develop/tutorial/dev/#开发-js-文件
+                      text: 开发 .js 文件
+                      name: dev_开发-js-文件                     
                     -
                       link: /develop/tutorial/dev/#开发-json-文件
                       text: 开发 .json 文件
@@ -502,8 +519,7 @@
                     -
                       link: /develop/tutorial/publish/#发布
                       text: 发布
-                      name: publish_发布    
-
+                      name: publish_发布  
     -
       link: /develop/framework/app_service_register
       text: 框架
