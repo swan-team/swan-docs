@@ -325,30 +325,26 @@ Page({
 **示例：**
 <a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
 
 ```xml
-<view class="section">
-    <video id="myde" src="{{src}}" controls bindplay="play" bindpause="pause" bindfullscreenchange="fullscreen" bindended="ended" autoplay="{{autoplay}}" muted="{{muted}}"></video>
-</view>
-<view class="btn-area">
-    <button bindtap="next">切换视频地址</button>
-</view>
-<view class="btn-area">
-    <button bindtap="setmuted">设置静音</button>
-</view>
-<view class="btn-area">
-    <button bindtap="setautoplay">切换 autoplay </button>
+<view class="wrap">
+    <view class="video-wrap">
+        <video id="myde" style="width: 100%;" src="{{src}}" controls bindplay="play" bindpause="pause" bindfullscreenchange="fullscreen" bindended="ended" autoplay="{{autoplay}}"></video>
+    </view>
+    <button class="btn" bindtap="next" type="primary">切换视频地址</button>
 </view>
 ```
-<!-- <text></text> -->
+
+* 在 js 文件中
+
 ```javascript
 Page({
     data: {
         current: 0,
-        srcList: ['https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share', 'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'],
-        src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+        srcList: ['https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4', 'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'],
+        src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
         loop: false,
-        muted: false,
         autoplay: false
     },
     play: function (e) {
@@ -373,14 +369,24 @@ Page({
     setloop: function (e) {
         this.setData('loop', !this.getData('loop'));
     },
-    setmuted: function (e) {
-        this.setData('muted', !this.getData('muted'));
-    },
     setautoplay: function (e) {
-        this.setData('autoplay', !this.getData('autoplay'));
+        let autoplay = this.getData('autoplay');
+        this.setData('autoplay', !autoplay);
     }
 });
 ```
+
+* 在 css 文件中
+
+```css
+.video-wrap {
+    padding: .3rem .23rem 0;
+}
+.btn {
+    margin: .15rem .23rem 0;
+}
+```
+
 ## camera
 **解释：**相机
 
