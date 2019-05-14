@@ -398,7 +398,7 @@
   nav:
     -
       link: /develop/tutorial/codedir
-      text: 简易教程
+      text: 快速入门
       name: tutorial
       sidebar:
         -
