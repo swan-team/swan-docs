@@ -560,27 +560,7 @@ video {
 </ar-camera>
 ```
 > 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>。
-<!-- 
-```javascript
-Page({
-    takePhoto() {
-        const ctx = swan.createARCameraContext();
-        ctx.takePhoto({
-            success: (res) => {
-                this.setData({
-                    src: res.tempImagePath
-                })
-            }
-        });
-    },
-    error(e) {
-        console.log(e.detail);
-    },
-    message(e) {
-        console.log(e.detail);
-    }
-});
-``` -->
+
 
 ## live-player
 
