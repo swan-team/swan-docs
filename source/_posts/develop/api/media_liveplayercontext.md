@@ -13,7 +13,7 @@ sidebar: media_liveplayercontext
 
 **返回值：**livePlayerContext
 
-### livePlayerContext
+## livePlayerContext
 
 **livePlayerContext 对象的方法列表：**
 

@@ -249,7 +249,7 @@ swan.onSocketOpen(function () {
 
  
 
-### SocketTask.send
+## SocketTask.send
 
 通过 WebSocket 连接发送数据。
 
@@ -264,7 +264,7 @@ swan.onSocketOpen(function () {
 |fail  |Function  |  否 | -| 接口调用失败的回调函数|
 |complete   | Function   | 否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### SocketTask.close
+## SocketTask.close
 
 **方法参数：**Object object
 
@@ -278,19 +278,24 @@ swan.onSocketOpen(function () {
 |fail  |Function  |  否 |  -| 接口调用失败的回调函数|
 |complete   | Function   | 否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### SocketTask.onOpen
+
+## SocketTask.onOpen
+
 
 监听 WebSocket 连接打开事件。
 
-### SocketTask.onClose
+
+## SocketTask.onClose
 
 监听 WebSocket 连接关闭事件。
 
-### SocketTask.onError
+## SocketTask.onError
 
 监听 WebSocket 错误。
 
-### SocketTask.onMessage
+
+## SocketTask.onMessage
+
 
 监听 WebSocket 接受到服务器的消息事件。
 

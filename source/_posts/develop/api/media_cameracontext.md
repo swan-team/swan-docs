@@ -15,7 +15,7 @@ sidebar: media_cameracontext
 
 **返回值：**cameraContext
 
-### cameraContext
+## cameraContext
 
 **`cameraContext`对象的方法列表：**
 
