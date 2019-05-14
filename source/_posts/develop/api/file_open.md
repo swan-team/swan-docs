@@ -6,7 +6,7 @@ sidebar: file_open
 ---
 ## swan.openDocument
 
-**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。
+**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
 
 **方法参数：**Object object
 
