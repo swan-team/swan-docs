@@ -2332,7 +2332,7 @@
     -
       link: /develop/serverapi
       text: 服务端 API
-      name: api
+      name: serverapi
       sidebar:
         - 
           sidebar: 
