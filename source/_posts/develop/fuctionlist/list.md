@@ -6,12 +6,11 @@ sidebar: list
 ---
 # 欢迎开发智能小程序
 
-欢迎使用百度智能小程序，本文档为您提供概念介绍、快速入门及框架、组件、API、服务端 API 、工具、第三方接入等详细的文档的介绍。
+欢迎使用百度智能小程序，本文档为您提供[简易教程](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](https://smartprogram.baidu.com/docs/develop/component/native/)、[API](https://smartprogram.baidu.com/docs/develop/api/net_rule/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方接入](https://smartprogram.baidu.com/docs/develop/third/pro/)等详细的文档的介绍。
 如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
 
-## 快速入门
 
-## 组件
+## 组件列表
 
 |组件名称 | 解释 |
 |---- | ---- |
@@ -49,7 +48,7 @@ sidebar: list
 |<a href="https://smartprogram.baidu.com/docs/develop/component/open/#web-view/">web-view</a>|web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/ad/#ad/">ad</a>|广告组件|
 
-## API
+## API 列表
 
 
 ### 网络
