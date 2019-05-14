@@ -747,10 +747,7 @@
       sidebar:
         -
             sidebar:
-              -
-                link: /develop/component/list
-                text: 组件列表
-                name: list
+
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -965,12 +962,7 @@
         #       link: /develop/api/apilist
         #       text: API 列表
         #       name: apilist        
-        -
-            sidebar:
-            -
-              link: /develop/api/apilist
-              text: API 列表
-              name: apilist        
+     
         -
             link: /develop/api/net
             text: 网络
