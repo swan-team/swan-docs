@@ -120,16 +120,16 @@ Page({
 |indicator-active-color| Color | #333 | 当前选中的指示点颜色件| -|
 |autoplay |Boolean  | false |是否自动切换| -|
 |current|Number |0 |当前所在页面的 index| -|
-|current-item-id|String|""|当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
+|current-item-id|String|""|当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |interval | Number | 5000 |自动切换时间间隔|- |
 |duration| Number |500 |滑动动画时长|- |
 |circular| Boolean |false |是否采用衔接滑动| -|
 |vertical | Boolean  | false  |滑动方向是否为纵向|- |
-|previous-margin|String|"0px"|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
-|next-margin|String|"0px"|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
-|display-multiple-items|Number|1|同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
+|previous-margin|String|"0px"|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|next-margin|String|"0px"|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|display-multiple-items|Number|1|同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |bindchange | EventHandle |  -|current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
-|bindanimationfinish|EventHandle|- |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
+|bindanimationfinish|EventHandle|- |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **说明：**
 其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
@@ -142,7 +142,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
-|item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容性处理</a>|
+|item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例：**
 <a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>

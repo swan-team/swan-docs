@@ -92,7 +92,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"|-|
 |navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white|-|
 |navigationBarTitleText|String|-|导航栏标题文字内容|-|
-|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
+|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">百度 App版本11.1.0</a>|
 |backgroundColor|HexColor|#ffffff|背景颜色|-|
 |backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，仅支持 dark/light|-|
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新|-|

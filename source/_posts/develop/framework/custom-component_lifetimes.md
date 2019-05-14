@@ -45,10 +45,10 @@ Component({
 
 |生命周期|参数|描述|最低版本|
 |---|---|---|---|
-|created|无|在组件实例刚刚被创建时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|attached|无|在组件实例进入页面节点树时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|ready|无|在组件在视图层布局完成后执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|detached|无|在组件实例被从页面节点树移除时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
+|created|无|在组件实例刚刚被创建时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|attached|无|在组件实例进入页面节点树时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|ready|无|在组件在视图层布局完成后执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|detached|无|在组件实例被从页面节点树移除时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
 
 ## 组件所在页面的生命周期
 
@@ -56,8 +56,8 @@ Component({
 
 |生命周期|参数|描述|最低版本|
 |---|---|---|---|
-|show|无|组件所在的页面被展示时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
-|hide|无|组件所在的页面被隐藏时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
+|show|无|组件所在的页面被展示时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|hide|无|组件所在的页面被隐藏时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 
 **<div class="notice">示例： </div>**
 ```js
