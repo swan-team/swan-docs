@@ -1,11 +1,57 @@
 ---
-title: API 列表
+title: 欢迎开发智能小程序
 header: develop
-nav: api
-sidebar: apilist
+nav: fuctionlist
+sidebar: list
 ---
+# 欢迎开发智能小程序
 
-## 网络
+欢迎使用百度智能小程序，本文档为您提供[简易教程](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](https://smartprogram.baidu.com/docs/develop/component/native/)、[API](https://smartprogram.baidu.com/docs/develop/api/net_rule/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方接入](https://smartprogram.baidu.com/docs/develop/third/pro/)等详细的文档的介绍。
+如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
+
+
+## 组件列表
+
+|组件名称 | 解释 |
+|---- | ---- |
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#view/">view</a>  | 视图容器 |
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a>| 可滚动视图区域 |
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper/">swiper</a> |滑块视图容器 |  
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#movable-area/">movable-area</a>|movable-view 的可移动区域|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a>|监听 WebSocket 错误|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-image/">cover-image</a>|覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view ，支持嵌套在 cover-view 里。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/base/#icon/">icon</a>|图标|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/base/#text/">text</a>|放置文本的元素。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/base/#rich-text/">rich-text</a>|富文本|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/base/#progress/">progress</a>|进度条|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/base/#animation-view/">animation-view</a>|Lottie动画组件|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#button/">button</a>|按钮|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#checkbox/">checkbox</a>|多选项目|
+|<a href="hhttps://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>|表单|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#input/">input</a>|输入框|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#label/">label</a>|使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#picker/">picker</a>|选择器|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/">radio</a>|单选项目|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#slider/">slider</a>| 滑动选择器|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#switch/">switch</a>|开关选择器|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#textarea/">textarea</a>| 多行输入框|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">navigator</a>|页面链接|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#audio/">audio</a>|音频|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#image/">image</a>|图片|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#video/">video</a>|视频|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#camera/">camera</a>|相机|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#ar-camera/">ar-camera</a>|AR 相机|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/media/#live-player/">live-player</a>|实时视屏播放|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/map/#map/">map</a>|地图|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/canvas/#canvas/">canvas</a>|画布|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#open-data/">open-data</a>|用于展示百度 App 开放的数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/open/#web-view/">web-view</a>|web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/ad/#ad/">ad</a>|广告组件|
+
+## API 列表
+
+
+### 网络
 
 |API 名称|解释|
 |--|--|
@@ -23,7 +69,7 @@ sidebar: apilist
 
 
 
-## AI
+### AI
 
 |API 名称|解释|
 |--|--|
@@ -52,7 +98,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_word/#swan-ai-nlpLexerCustom/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
 
-## 媒体
+### 媒体
 
 |API 名称|解释|
 |--|--|
@@ -72,7 +118,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
 
 
-## 文件
+### 文件
 
 |API 名称|解释|
 |--|--|
@@ -84,7 +130,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file_open/#swan-openDocument/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
 
 
-## 数据存储
+### 数据存储
 
 |API 名称|解释|
 |--|--|
@@ -100,7 +146,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
 
 
-## 位置
+### 位置
 
 |API 名称|解释|
 |--|--|
@@ -110,7 +156,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location_map/#swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
 
 
-## 界面
+### 界面
 
 |API 名称|解释|
 |--|--|
@@ -214,7 +260,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-fields/">nodesRef.fields</a>|获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/">swan.showFavoriteGuide</a>|支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：添加到我的小程序引导。|
 
-## 设备
+### 设备
 
 |API 名称|解释|
 |--|--|
@@ -249,7 +295,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
 
 
-## 第三方平台
+### 第三方平台
 
 |API 名称|解释|
 |--|--|
@@ -257,7 +303,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/#swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
  
 
-## 开放接口
+### 开放接口
 
 |API 名称|解释|
 |--|--|
@@ -289,3 +335,4 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#clearTimeout/">clearTimeout</a>|取消由 setTimeout 设置的定时器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
+

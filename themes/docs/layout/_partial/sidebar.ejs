@@ -1,13 +1,20 @@
 <div class="m-doc-sidebar-mask"></div>
 <div class="m-doc-sidebar-nav-wrapper">
     <ul>
-        <% 
+        <%
             var navLen = nav ? nav.length : 0;
-            for (var i = 0; i < navLen; i++) { 
+            for (var i = 0; i < navLen; i++) {
         %>
             <li <% if (nav[i].name == page.nav||page.header!='develop') { %> class="m-doc-nav-on" <% } %> data-name="<%- nav[i].name %>">
                 <div class="m-doc-nav-list" href="/docs<%- nav[i].link %>">
-                    <img src="<%- url_for('img/level1_arrow.png') %>" />
+                    <% if(page.header!='develop') { %>
+                      <img src="<%- url_for('img/level1_arrow.png') %>"
+                      class="less_than_level4" />
+                    <%} else { %>
+                      <img src="<%- url_for('img/level1_open.png') %>"
+                      class="greater_than_level4_open"/>
+                      <img src="<%- url_for('img/level1_close.png') %>" class="greater_than_level4_close" />
+                      <% } %>
                     <span><%- nav[i].text %></span>
                 </div>
                 <ul class="m-doc-nav-children">
@@ -28,7 +35,16 @@
                                     <ul class="m-doc-h2-children">
                                         <% for (var m = 0; m < nav[i].sidebar[j].sidebar[k].sidebar.length; m++) {%>
                                             <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
-                                                <a href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].text %></a>
+                                                <a class="m-doc-h3-list" href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].text %></a>
+                                                <% if (nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar) { %>
+                                                  <ul class="m-doc-h3-children">
+                                                      <% for (var z = 0; z < nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar.length; z++) {%>
+                                                        <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
+                                                          <a href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].text %></a>
+                                                        </li>
+                                                      <% } %>
+                                                  </ul>
+                                                <% } %>
                                             </li>
                                         <% } %>
                                     </ul>

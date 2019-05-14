@@ -12,7 +12,7 @@ sidebar: media_backgroundaudiomanager
 
 **方法参数：**无
 
-###  backgroundAudioManager
+##  backgroundAudioManager
 
 **`backgroundAudioManager`对象的属性列表：**
 

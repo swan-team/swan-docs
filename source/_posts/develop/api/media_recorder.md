@@ -14,7 +14,7 @@ sidebar: media_recorder
 
 **返回值：**recorderManager
 
-### recorderManager
+## recorderManager
 
 **`recorderManager`对象的方法列表：**
 

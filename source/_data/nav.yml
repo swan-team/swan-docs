@@ -389,13 +389,12 @@
 
 #3
 -
-  link: /develop/tutorial/codedir
+  link: /develop/fuctionlist/list
   text: 开发
-  nickname: 小程序开发
   name: develop
   license:
-    name: 创作共用-署名-相同方式共享
-    link: https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /develop/tutorial/codedir
@@ -520,8 +519,7 @@
                     -
                       link: /develop/tutorial/publish/#发布
                       text: 发布
-                      name: publish_发布    
-
+                      name: publish_发布  
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -742,10 +740,7 @@
       sidebar:
         -
             sidebar:
-              -
-                link: /develop/component/list
-                text: 组件列表
-                name: list
+
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -954,12 +949,13 @@
       text: API
       name: api
       sidebar:
-        -
-            sidebar:
-            -
-              link: /develop/api/apilist
-              text: API 列表
-              name: apilist        
+        # -
+        #     sidebar:
+        #     -
+        #       link: /develop/api/apilist
+        #       text: API 列表
+        #       name: apilist        
+     
         -
             link: /develop/api/net
             text: 网络
@@ -1029,6 +1025,32 @@
                   link: /develop/api/net_websocket/#SocketTask
                   text: SocketTask
                   name: net_websocket_SocketTask
+                  sidebar:
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-send
+                      text: SocketTask.send
+                      name: net_websocket_SocketTask-send
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-close
+                      text: SocketTask.close
+                      name: net_websocket_SocketTask-close 
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onOpen
+                      text: SocketTask.onOpen
+                      name: net_websocket_SocketTask-onOpen        
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onClose
+                      text: SocketTask.onClose
+                      name: net_websocket_SocketTask-onClose                       
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onError
+                      text: SocketTask.onError
+                      name: net_websocket_SocketTask-onError
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onMessage
+                      text: SocketTask.onMessage
+                      name: net_websocket_SocketTask-onMessage                                         
+
         -
             link: /develop/api/ai
             text: AI
@@ -1214,6 +1236,11 @@
                   link: /develop/api/media_recorder/#swan-getRecorderManager
                   text: swan.getRecorderManager
                   name: media_recorder_swan-getRecorderManager
+                  sidebar:
+                    -
+                      link: /develop/api/media_recorder/#recorderManager
+                      text: recorderManager
+                      name: media_recorder_recorderManager
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
@@ -1223,6 +1250,11 @@
                   link: /develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager
                   text: swan.getBackgroundAudioManager
                   name: media_backgroundaudiomanager_swan-getBackgroundAudioManager
+                  sidebar:
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
+                      text: backgroundAudioManager
+                      name: media_backgroundaudiomanager_backgroundAudioManager
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -1232,6 +1264,11 @@
                   link: /develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext
                   text: swan.createInnerAudioContext
                   name: media_createinneraudiocontext_swan-createInnerAudioContext
+                  sidebar:
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#innerAudioContext
+                      text: innerAudioContext
+                      name: media_createinneraudiocontext_innerAudioContext
                 -
                   link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
                   text: swan.setInnerAudioOption
@@ -1258,6 +1295,11 @@
                   link: /develop/api/media_videocontext/#swan-createVideoContext
                   text: swan.createVideoContext
                   name: media_videocontext_swan-createVideoContext
+                  sidebar:
+                    -
+                      link: /develop/api/media_videocontext/#videoContext
+                      text: videoContext
+                      name: media_videocontext_videoContext
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
@@ -1267,6 +1309,11 @@
                   link: /develop/api/media_liveplayercontext/#swan-createLivePlayerContext
                   text: swan.createLivePlayerContext
                   name: media_liveplayercontext_swan-createLivePlayerContext
+                  sidebar:
+                    -
+                      link:  /develop/api/media_liveplayercontext/#livePlayerContext
+                      text: livePlayerContext
+                      name: media_liveplayercontext_livePlayerContext
             -
               link: /develop/api/media_cameracontext
               text: 相机组件控制
@@ -1276,6 +1323,13 @@
                   link: /develop/api/media_cameracontext/#swan-createCameraContext
                   text: swan.createCameraContext
                   name: media_cameracontext_swan-createCameraContext
+                  sidebar:
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext
+                      text: cameraContext
+                      name: media_cameracontext_cameraContext
+
+
             -
               link: /develop/api/media_arcameracontext
               text: AR 相机组件控制
@@ -1285,6 +1339,12 @@
                   link: /develop/api/media_arcameracontext/#swan-createARCameraContext
                   text: swan.createARCameraContext
                   name: media_arcameracontext_swan-createARCameraContext
+                  sidebar:
+                    -
+                      link: /develop/api/media_arcameracontext/#ARCameraContext
+                      text: ARCameraContext
+                      name: media_arcameracontext_ARCameraContext
+                      
         -
             link: /develop/api/file
             text: 文件
@@ -1421,6 +1481,11 @@
                     link: /develop/api/location_map/#swan-createMapContext
                     text: swan.createMapContext
                     name: location_map_swan-createMapContext
+                    sidebar:
+                      -
+                        link: /develop/api/location_map/#mapContext
+                        text: mapContext
+                        name: location_map_mapContext
         -
             link: /develop/api/show
             text: 界面
@@ -1455,179 +1520,180 @@
                     link: /develop/api/show_canvas/#canvasContext 
                     text: canvasContext 
                     name: show_canvas_canvasContext 
+                    sidebar:
 
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setFillStyle
-                    text: canvasContext.setFillStyle
-                    name: show_canvas_canvasContext-setFillStyle
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
-                    text: canvasContext.setStrokeStyle
-                    name: show_canvas_canvasContext-setStrokeStyle
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setShadow
-                    text: canvasContext.setShadow
-                    name: show_canvas_canvasContext-setShadow
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createLinearGradient
-                    text: swan.canvasContext.createLinearGradient
-                    name: show_canvas_canvasContext-createLinearGradient
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createCircularGradient
-                    text: canvasContext.createCircularGradient
-                    name: show_canvas_canvasContext-createCircularGradient
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-addColorStop
-                    text: canvasContext.addColorStop
-                    name: show_canvas_canvasContext-addColorStop
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineWidth
-                    text: canvasContext.setLineWidth
-                    name: show_canvas_canvasContext-setLineWidth
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineCap
-                    text: canvasContext.setLineCap
-                    name: show_canvas_canvasContext-.setLineCap
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineJoin
-                    text: canvasContext.setLineJoin
-                    name: show_canvas_canvasContext-setLineJoin
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineDash
-                    text: canvasContext.setLineDash
-                    name: show_canvas_canvasContext-setLineDash
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setMiterLimit
-                    text: canvasContext.setMiterLimit
-                    name: show_canvas_canvasContext-setMiterLimit
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-rect
-                    text: canvasContext.rect
-                    name: show_canvas_canvasContext-rect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fillRect
-                    text: canvasContext.fillRect
-                    name: show_canvas_canvasContext-fillRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-strokeRect
-                    text: canvasContext.strokeRect
-                    name: show_canvas_canvasContext-strokeRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-clearRect
-                    text: canvasContext.clearRect
-                    name: show_canvas_canvasContext-clearRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fill
-                    text: canvasContext.fill
-                    name: show_canvas_canvasContext-fill
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-stroke
-                    text: canvasContext.stroke
-                    name: show_canvas_canvasContext-stroke
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-beginPath
-                    text: canvasContext.beginPath
-                    name: show_canvas_canvasContext-beginPath
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-closePath
-                    text: canvasContext.closePath
-                    name: show_canvas_canvasContext-closePath
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-moveTo
-                    text: canvasContext.moveTo
-                    name: show_canvas_canvasContext-moveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-lineTo
-                    text: canvasContext.lineTo
-                    name: show_canvas_canvasContext-lineTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-arc
-                    text: canvasContext.arc
-                    name: show_canvas_canvasContext-arc
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-scale
-                    text: canvasContext.scale
-                    name: show_canvas_canvasContext-scale
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-rotate
-                    text: canvasContext.rotate
-                    name: show_canvas_canvasContext-rotate
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-translate
-                    text: canvasContext.translate
-                    name: show_canvas_canvasContext-translate
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-clip
-                    text: canvasContext.clip
-                    name: show_canvas_canvasContext-clip
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setFontSize
-                    text: canvasContext.setFontSize
-                    name: show_canvas_canvasContext-setFontSize
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fillText
-                    text: canvasContext.fillText
-                    name: show_canvas_canvasContext-fillText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTextAlign
-                    text: canvasContext.setTextAlign
-                    name: show_canvas_canvasContext-setTextAlign
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTextBaseline
-                    text: canvasContext.setTextBaseline
-                    name: show_canvas_canvasContext-setTextBaseline
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-drawImage
-                    text: canvasContext.drawImage
-                    name: show_canvas_canvasContext-drawImage
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
-                    text: canvasContext.setGlobalAlpha
-                    name: show_canvas_canvasContext-setGlobalAlpha
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-measureText
-                    text: canvasContext.measureText
-                    name: show_canvas_canvasContext-measureText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-strokeText
-                    text: canvasContext.strokeText
-                    name: show_canvas_canvasContext-strokeText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
-                    text: canvasContext.setLineDashOffset
-                    name: show_canvas_canvasContext-setLineDashOffset
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createPattern
-                    text: canvasContext.createPattern
-                    name: show_canvas_canvasContext.createPattern
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
-                    text: canvasContext.bezierCurveTo
-                    name: show_canvas_canvasContext-bezierCurveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
-                    text: canvasContext.quadraticCurveTo
-                    name: show_canvas_canvasContext-quadraticCurveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-save
-                    text: canvasContext.save
-                    name: show_canvas_canvasContext-save
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-restore
-                    text: canvasContext.restore
-                    name: show_canvas_canvasContext-restore
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-draw
-                    text: canvasContext.draw
-                    name: show_canvas_canvasContext-draw
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-font
-                    text: canvasContext.font
-                    name: show_canvas_canvasContext-font
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTransform
-                    text: canvasContext.setTransform
-                    name: show_canvas_canvasContext-setTransform
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setFillStyle
+                        text: canvasContext.setFillStyle
+                        name: show_canvas_canvasContext-setFillStyle
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
+                        text: canvasContext.setStrokeStyle
+                        name: show_canvas_canvasContext-setStrokeStyle
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setShadow
+                        text: canvasContext.setShadow
+                        name: show_canvas_canvasContext-setShadow
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createLinearGradient
+                        text: swan.canvasContext.createLinearGradient
+                        name: show_canvas_canvasContext-createLinearGradient
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createCircularGradient
+                        text: canvasContext.createCircularGradient
+                        name: show_canvas_canvasContext-createCircularGradient
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-addColorStop
+                        text: canvasContext.addColorStop
+                        name: show_canvas_canvasContext-addColorStop
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineWidth
+                        text: canvasContext.setLineWidth
+                        name: show_canvas_canvasContext-setLineWidth
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineCap
+                        text: canvasContext.setLineCap
+                        name: show_canvas_canvasContext-.setLineCap
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineJoin
+                        text: canvasContext.setLineJoin
+                        name: show_canvas_canvasContext-setLineJoin
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineDash
+                        text: canvasContext.setLineDash
+                        name: show_canvas_canvasContext-setLineDash
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setMiterLimit
+                        text: canvasContext.setMiterLimit
+                        name: show_canvas_canvasContext-setMiterLimit
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-rect
+                        text: canvasContext.rect
+                        name: show_canvas_canvasContext-rect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fillRect
+                        text: canvasContext.fillRect
+                        name: show_canvas_canvasContext-fillRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-strokeRect
+                        text: canvasContext.strokeRect
+                        name: show_canvas_canvasContext-strokeRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-clearRect
+                        text: canvasContext.clearRect
+                        name: show_canvas_canvasContext-clearRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fill
+                        text: canvasContext.fill
+                        name: show_canvas_canvasContext-fill
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-stroke
+                        text: canvasContext.stroke
+                        name: show_canvas_canvasContext-stroke
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-beginPath
+                        text: canvasContext.beginPath
+                        name: show_canvas_canvasContext-beginPath
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-closePath
+                        text: canvasContext.closePath
+                        name: show_canvas_canvasContext-closePath
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-moveTo
+                        text: canvasContext.moveTo
+                        name: show_canvas_canvasContext-moveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-lineTo
+                        text: canvasContext.lineTo
+                        name: show_canvas_canvasContext-lineTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-arc
+                        text: canvasContext.arc
+                        name: show_canvas_canvasContext-arc
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-scale
+                        text: canvasContext.scale
+                        name: show_canvas_canvasContext-scale
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-rotate
+                        text: canvasContext.rotate
+                        name: show_canvas_canvasContext-rotate
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-translate
+                        text: canvasContext.translate
+                        name: show_canvas_canvasContext-translate
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-clip
+                        text: canvasContext.clip
+                        name: show_canvas_canvasContext-clip
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setFontSize
+                        text: canvasContext.setFontSize
+                        name: show_canvas_canvasContext-setFontSize
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fillText
+                        text: canvasContext.fillText
+                        name: show_canvas_canvasContext-fillText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTextAlign
+                        text: canvasContext.setTextAlign
+                        name: show_canvas_canvasContext-setTextAlign
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTextBaseline
+                        text: canvasContext.setTextBaseline
+                        name: show_canvas_canvasContext-setTextBaseline
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-drawImage
+                        text: canvasContext.drawImage
+                        name: show_canvas_canvasContext-drawImage
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
+                        text: canvasContext.setGlobalAlpha
+                        name: show_canvas_canvasContext-setGlobalAlpha
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-measureText
+                        text: canvasContext.measureText
+                        name: show_canvas_canvasContext-measureText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-strokeText
+                        text: canvasContext.strokeText
+                        name: show_canvas_canvasContext-strokeText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
+                        text: canvasContext.setLineDashOffset
+                        name: show_canvas_canvasContext-setLineDashOffset
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createPattern
+                        text: canvasContext.createPattern
+                        name: show_canvas_canvasContext.createPattern
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
+                        text: canvasContext.bezierCurveTo
+                        name: show_canvas_canvasContext-bezierCurveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
+                        text: canvasContext.quadraticCurveTo
+                        name: show_canvas_canvasContext-quadraticCurveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-save
+                        text: canvasContext.save
+                        name: show_canvas_canvasContext-save
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-restore
+                        text: canvasContext.restore
+                        name: show_canvas_canvasContext-restore
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-draw
+                        text: canvasContext.draw
+                        name: show_canvas_canvasContext-draw
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-font
+                        text: canvasContext.font
+                        name: show_canvas_canvasContext-font
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTransform
+                        text: canvasContext.setTransform
+                        name: show_canvas_canvasContext-setTransform
               -
                 link: /develop/api/show_toast
                 text: 交互反馈
@@ -1824,66 +1890,69 @@
                     link: /develop/api/show_query/#IntersectionObserver
                     text: IntersectionObserver
                     name: show_query_IntersectionObserver
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeTo 
-                    text: IntersectionObserver.relativeTo
-                    name: show_query_IntersectionObserver-relativeTo 
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeToViewport 
-                    text: IntersectionObserver.relativeToViewport
-                    name: show_query_IntersectionObserver-relativeToViewport
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-observe 
-                    text: IntersectionObserver.observe 
-                    name: show_query_IntersectionObserver-observe 
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-disconnect
-                    text: IntersectionObserver.disconnect
-                    name: show_query_IntersectionObserver-disconnect
-                  -
-                    link: /develop/api/show_query/#swan-createSelectorQuery
-                    text: swan.createSelectorQuery
-                    name: show_query_swan-createSelectorQuery                   
+                    sidebar:
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-relativeTo 
+                        text: IntersectionObserver.relativeTo
+                        name: show_query_IntersectionObserver-relativeTo 
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-relativeToViewport 
+                        text: IntersectionObserver.relativeToViewport
+                        name: show_query_IntersectionObserver-relativeToViewport
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-observe 
+                        text: IntersectionObserver.observe 
+                        name: show_query_IntersectionObserver-observe 
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-disconnect
+                        text: IntersectionObserver.disconnect
+                        name: show_query_IntersectionObserver-disconnect
+                      -
+                        link: /develop/api/show_query/#swan-createSelectorQuery
+                        text: swan.createSelectorQuery
+                        name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery
                     name: show_query_selectorQuery
-                  -
-                    link: /develop/api/show_query/#selectorQuery-in
-                    text: selectorQuery.in
-                    name: show_query_selectorQuery-in
-                  -
-                    link: /develop/api/show_query/#selectorQuery-select
-                    text: selectorQuery.select
-                    name: show_query_selectorQuery-select
-                  -
-                    link: /develop/api/show_query/#selectorQuery-selectAll
-                    text: selectorQuery.selectAll
-                    name: show_query_selectorQuery-selectAll
-                  -
-                    link: /develop/api/show_query/#selectorQuery-selectViewport
-                    text: selectorQuery.selectViewport
-                    name: show_query_selectorQuery-selectViewport
-                  -
-                    link: /develop/api/show_query/#selectorQuery-exec
-                    text: selectorQuery.exec
-                    name: show_swan-query_selectorQuery-exec              
+                    sidebar:
+                      -
+                        link: /develop/api/show_query/#selectorQuery-in
+                        text: selectorQuery.in
+                        name: show_query_selectorQuery-in
+                      -
+                        link: /develop/api/show_query/#selectorQuery-select
+                        text: selectorQuery.select
+                        name: show_query_selectorQuery-select
+                      -
+                        link: /develop/api/show_query/#selectorQuery-selectAll
+                        text: selectorQuery.selectAll
+                        name: show_query_selectorQuery-selectAll
+                      -
+                        link: /develop/api/show_query/#selectorQuery-selectViewport
+                        text: selectorQuery.selectViewport
+                        name: show_query_selectorQuery-selectViewport
+                      -
+                        link: /develop/api/show_query/#selectorQuery-exec
+                        text: selectorQuery.exec
+                        name: show_swan-query_selectorQuery-exec              
                   -
                     link: /develop/api/show_query/#nodesRef 
                     text: nodesRef 
-                    name: show_query_nodesRef                      
-                  -
-                    link: /develop/api/show_query/#nodesRef-boundingClientRect
-                    text: nodesRef.boundingClientRect
-                    name: show_query_nodesRef-boundingClientRect
-                  -
-                    link: /develop/api/show_query/#nodesRef-scrollOffset
-                    text: nodesRef.scrollOffset
-                    name: show_query_nodesRef-scrollOffset
-                  -
-                    link: /develop/api/show_query/#nodesRef-fields
-                    text: nodesRef.fields
-                    name: show_query_nodesRef-fields
+                    name: show_query_nodesRef  
+                    sidebar:                    
+                      -
+                        link: /develop/api/show_query/#nodesRef-boundingClientRect
+                        text: nodesRef.boundingClientRect
+                        name: show_query_nodesRef-boundingClientRect
+                      -
+                        link: /develop/api/show_query/#nodesRef-scrollOffset
+                        text: nodesRef.scrollOffset
+                        name: show_query_nodesRef-scrollOffset
+                      -
+                        link: /develop/api/show_query/#nodesRef-fields
+                        text: nodesRef.fields
+                        name: show_query_nodesRef-fields
 
               -
                 link: /develop/api/nacomponent
