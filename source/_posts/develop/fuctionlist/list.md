@@ -1,9 +1,14 @@
 ---
-title: 功能列表
+title: 欢迎开发智能小程序
 header: develop
 nav: fuctionlist
 sidebar: list
 ---
+
+欢迎使用百度智能小程序，本文档为您提供概念介绍、快速入门及框架、组件、API、服务端 API 、工具、第三方接入等详细的文档的介绍。
+如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
+
+## 快速入门
 
 ## 组件
 
