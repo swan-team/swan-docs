@@ -8,7 +8,7 @@ sidebar: module
 
 ## 模板列表
 
-获取某第三方平台下的模板列表信息
+获取某第三方平台下的模板列表信息。
 
 接口调用请求说明
 ```
@@ -27,8 +27,10 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_
 |---|---|---|
 |template_id|	long|	模板id|
 |user_version|	string|	模板版本信息|
-|user_desc|	String	|模板描述名称|
-|create_time|	String|	创建时间|
+|user_desc|	string	|模板描述名称|
+|create_time|	string|	创建时间|
+|web_status | boolean  | 是否支持web化，开发者工具编译版本2.15.07以上传的模板支持web化。|
+
 错误情况下:
 
 |字段名|	类型|	描述|
@@ -47,13 +49,15 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_
         "user_version": "2.2.2.2",
         "user_desc": "",
         "create_time": "1531812276",
-        "template_id": 7
+        "template_id": 7,
+        "web_status":true
       },
       {
         "user_version": "2.2.2.2",
         "user_desc": "",
         "create_time": "1531812305",
-        "template_id": 8
+        "template_id": 8,
+        "web_status":false
       }
     ]
   }
@@ -115,8 +119,10 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?ac
 |---|---|---|
 |draft_id|	long|	草稿id|
 |user_version|	string|	模板版本信息|
-|user_desc|	String|	模板描述信息|
-|create_time|	String|	创建时间|
+|user_desc|	string|	模板描述信息|
+|create_time|	string|	创建时间|
+|web_status|  boolean|   是否支持web化，开发者工具编译版本2.15.07以上传的草稿支持web化。|
+
 错误情况下:
 
 |字段名|	类型|	描述|
@@ -135,13 +141,15 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?ac
         "user_version": "2.2.2.2",
         "user_desc": "",
         "create_time": "1531812276",
-        "draft_id": 7
+        "draft_id": 7,
+        "web_status":true
       },
       {
         "user_version": "2.2.2.2",
         "user_desc": "",
         "create_time": "1531812305",
-        "draft_id": 8
+        "draft_id": 8,
+        "web_status":false
       }
     ]
   }

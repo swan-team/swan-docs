@@ -2666,6 +2666,15 @@
               text: 基础信息设置
               name: info
         -
+          link: /develop/third/api
+          text:
+          name: api
+          sidebar:
+            -
+              link: /develop/third/api
+              text: 模版消息 
+              name: api              
+        -
           link: /develop/third/upload
           text:
           name: upload
@@ -2940,13 +2949,13 @@
         -
           sidebar:
           -
-            link: /operations/thirdparty
-            text: 第三方服务条款
-            name: thirdparty         
-          -
             link: /operations/thirdparty_agreement
+            text: 第三方服务条款
+            name: thirdparty_agreement        
+          -
+            link: /operations/thirdparty_low
             text: 第三方平台授权法律条款
-            name: thirdparty_agreement 
+            name: thirdparty_low
 # #6
 # -
 #   link: ../forum

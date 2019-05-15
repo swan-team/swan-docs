@@ -18,7 +18,7 @@ sidebar: media_image
 |---- | ---- | ---- | ----|----|
 |count  | Number | 否  |  -|最多可以选择的图片张数，默认 9。|
 |sizeType  |`Array.<string>`| 否  |  -|original 原图，compressed 压缩图，默认二者都有。|
-|sourceType | ` Array.<object> ` |否 | -|  album 从相册选图，camera 使用相机，默认二者都有。|
+|sourceType | ` Array.<string> ` |否 | -|  album 从相册选图，camera 使用相机，默认二者都有。|
 |success |Function  |  是 |  -|成功则返回图片的本地文件路径列表 tempFilePaths。|
 |fail  |  Function |   否  | -| 接口调用失败的回调函数|
 |complete   | Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
