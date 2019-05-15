@@ -48,7 +48,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_
       {
         "user_version": "2.2.2.2",
         "user_desc": "",
-        "create_time": "1531812276",
+        "create_time": 1531812276,
         "template_id": 7,
         "web_status":true
       },
@@ -140,7 +140,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?ac
       {
         "user_version": "2.2.2.2",
         "user_desc": "",
-        "create_time": "1531812276",
+        "create_time": 1531812276,
         "draft_id": 7,
         "web_status":true
       },

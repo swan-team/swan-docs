@@ -70,11 +70,7 @@ categorys示例：
         "addr": "https://b.bdstatic.com/searchbox/mappconsole/image/20180903/1535970481267095.jpg" //认证内容
     }]
 }, {
-    "sub_category_id": 2,
-    "qualis": [{
-        "id": 1,
-        "addr": "https://b.bdstatic.com/searchbox/mappconsole/image/20180903/1535970498145990.jpg"
-    }]
+    "sub_category_id": 6
 }]
 ```
 响应数据:
