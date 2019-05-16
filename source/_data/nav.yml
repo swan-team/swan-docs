@@ -468,17 +468,13 @@
                       name: dev_API                                                            
               -
                 link: /develop/tutorial/publish
-                text: 调试与发布
+                text: 调试预览发布
                 name: pulish
                 sidebar: 
                     -
                       link: /develop/tutorial/publish/#调试
                       text: 调试
-                      name: publish_调试
-                    -
-                      link: /develop/tutorial/publish/#Web-化
-                      text: Web 化
-                      name: publish_Web-化                    
+                      name: publish_调试                  
                     -
                       link: /develop/tutorial/publish/#预览
                       text: 预览 
@@ -699,6 +695,10 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
+            -
+              link: /develop/framework/whitescreen
+              text: 白屏优化建议
+              name: whitescreen             
         -
           link: /develop/framework/subpackages
           text: 运行时
