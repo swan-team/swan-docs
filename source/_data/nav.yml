@@ -412,10 +412,10 @@
                 link: /develop/tutorial/install
                 text: 安装开发者工具
                 name: install    
-              # -
-              #   link: /develop/tutorial/startdevelop 
-              #   text: 开发智能小程序
-              #   name: startdevelop                  
+              -
+                link: /develop/tutorial/startdevelop 
+                text: 开发智能小程序
+                name: startdevelop                  
               -
                 link: /develop/tutorial/process
                 text: 全局配置
@@ -450,35 +450,36 @@
                       link: /develop/tutorial/dev/#开发-json-文件
                       text: 开发 .json 文件
                       name: dev_开发-json-文件
+              -
+                link: /develop/tutorial/function
+                text: 功能开发
+                name: function
+                sidebar:                      
                     -
-                      link: /develop/tutorial/dev/#页面路由
+                      link: /develop/tutorial/function/#页面路由
                       text: 页面路由
-                      name: dev_页面路由
+                      name: function_页面路由
                     -
-                      link: /develop/tutorial/dev/#Page
+                      link: /develop/tutorial/function/#Page
                       text: Page
-                      name: dev_Page
+                      name: function_Page
                     -
-                      link: /develop/tutorial/dev/#组件
+                      link: /develop/tutorial/function/#组件
                       text: 组件
-                      name: dev_组件
+                      name: function_组件
                     -
-                      link: /develop/tutorial/dev/#API
+                      link: /develop/tutorial/function/#API
                       text: API
-                      name: dev_API                                                            
+                      name: function_API                                                            
               -
                 link: /develop/tutorial/publish
-                text: 调试与发布
+                text: 调试预览发布
                 name: pulish
                 sidebar: 
                     -
                       link: /develop/tutorial/publish/#调试
                       text: 调试
-                      name: publish_调试
-                    -
-                      link: /develop/tutorial/publish/#Web-化
-                      text: Web 化
-                      name: publish_Web-化                    
+                      name: publish_调试                   
                     -
                       link: /develop/tutorial/publish/#预览
                       text: 预览 
