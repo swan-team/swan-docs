@@ -98,10 +98,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新|-|
 |onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px|-|
 
+#### navigationStyle
 
-**注意**：
-* navigationStyle 全局配置`Android`和`iOS`从百度 App版本 11.1.0 开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App 版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
+* navigationStyle 全局配置`Android`和`iOS`从百度 App版本 11.1.0 开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App 版本号进行兼容判断，具体见下表；
+
 
 **navigationStyle配置**
 

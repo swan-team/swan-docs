@@ -528,9 +528,9 @@
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page/#Page
-                    text: Page
-                    name: app_service_page_Page
+                    link: /develop/framework/app_service_page/#参数说明
+                    text: 参数说明
+                    name: app_service_page_参数说明
                   -
                     link: /develop/framework/app_service_page/#初始化数据
                     text: 初始化数据
@@ -540,17 +540,17 @@
                     text: 生命周期函数
                     name: app_service_page_生命周期函数
                   -
-                    link: /develop/framework/app_service_page/#页面相关事件处理函数
-                    text: 页面相关事件处理函数
-                    name: app_service_page_页面相关事件处理函数
+                    link: /develop/framework/app_service_page/#通用事件
+                    text: 通用事件
+                    name: app_service_page_通用事件
                   -
-                    link: /develop/framework/app_service_page/#事件处理函数
-                    text: 事件处理函数
-                    name: app_service_page_事件处理函数
+                    link: /develop/framework/app_service_page/#用户绑定事件
+                    text: 用户绑定事件
+                    name: app_service_page_用户绑定事件
                   -
-                    link: /develop/framework/app_service_page/#Page-prototype-setData
-                    text: Page.prototype.setData
-                    name: app_service_page_Page-prototype-setData
+                    link: /develop/framework/app_service_page/#setData-机制
+                    text: setData 机制
+                    name: app_service_page_setData-机制
               -
                 link: /develop/framework/app_service_getcurrentpages
                 text: 页面路由
@@ -712,10 +712,10 @@
               link: /develop/framework/operating-mechanism
               text: 运行机制
               name: operating-mechanism
-            -
-              link: /develop/framework/process_life
-              text: 生命周期介绍
-              name: process_life                            
+            # -
+            #   link: /develop/framework/process_life
+            #   text: 生命周期介绍
+            #   name: process_life                            
 
     -
       link: /develop/component/view

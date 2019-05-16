@@ -358,6 +358,9 @@ Page({
 
 ## 组件
 
+> 更多内容详见[组件](https://smartprogram.baidu.com/docs/develop/component/list/)。
+
+
 智能小程序中提供了丰富多样的组件，开发者可以在 .swan 文件中，使用预设好的组件，拼装完成自己的智能小程序的页面。
 
 如：使用 slider 组件
@@ -383,6 +386,8 @@ Page({
 ```
 
 ## API
+
+> 更多内容详见[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)。
 
 智能小程序为开发者提供了百度 App 提供的丰富的端能力。使用方式比较简单，直接调用 SWAN 对象上的端能力方法，或者 Page 对象中 this 上挂载的方法。
 
