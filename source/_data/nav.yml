@@ -2783,7 +2783,21 @@
     #           link: /develop/web/detail
     #           text: 代理域名配置详解
     #           name: detail
-
+    -
+      link: /develop/web/webintroduction 
+      text: Web 化
+      name: web
+      sidebar:
+        -
+          sidebar:
+            -
+              link: /develop/web/webintroduction 
+              text: Web 化概述
+              name: webintroduction 
+            -
+              link: /develop/web/proposal
+              text: 开发建议
+              name: proposal             
     -
       link: /develop/swan/version
       text: 基础库版本信息
