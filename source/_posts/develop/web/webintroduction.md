@@ -19,9 +19,7 @@ Web 化是百度小程序包在后台自动转化得到的一个 H5 版本的小
 
 ### Web 化页面地址
 
-```
-https://xxx.smartapps.cn/pagesdetail/index?id=1
-```
+![图片](../../../img/web/web5.png)
 
 * 每个小程序都有唯一的子域名；
 * URL 中 path 和 query 部分和小程序页面中的 path 和 query 一致。比如：上例对应的小程序页面在百度App中的打开路径即为 `/pages/detail/index?id=1`；
