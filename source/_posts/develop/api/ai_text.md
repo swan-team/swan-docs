@@ -49,6 +49,11 @@ sidebar: ai_text
 |4 |恶意推广|
 |5 |低俗辱骂|
 
+**示例：**
+
+<a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
 **返回值示例：**
 ```json
 {

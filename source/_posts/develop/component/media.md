@@ -263,31 +263,31 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|src|String|- |视频的资源地址|
-|initial-time|Number|- |指定视频初始播放位置|
-|duration|Number| -|指定视频时长|
+|src|String|  |视频的资源地址|
+|initial-time|Number|  |指定视频初始播放位置|
+|duration|Number|  |指定视频时长|
 |controls|Boolean|true|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|是否自动播放|
 |loop|Boolean|false|是否循环播放|
 |muted|Boolean|false|是否静音播放|
 |objectFit|String|contain|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String|- |视频封面的图片网络资源地址|
+|poster|String|  |视频封面的图片网络资源地址|
 |page-gesture|	Boolean|	false|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
 |show-progress|	Boolean|	true|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|	是否显示全屏按钮|
 |enable-progress-gesture|	Boolean	|true|	是否开启使用手势控制进度|
-|danmu-list|	` Array.<object> `|	-	|弹幕列表|
+|danmu-list|	` Array.<object> `|	 	|弹幕列表|
 |danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
 |enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
-|bindplay|EventHandle| -|当开始播放时触发 play 事件|
-|bindpause|EventHandle|- |当暂停播放时触发 pause 事件|
-|bindended|EventHandle|- |当播放到末尾时触发 ended 事件|
-|bindtimeupdate|EventHandle| -|播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle|- |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
-|bindwaiting|	EventHandle|-|		视频出现缓冲时触发|
-|binderror|	EventHandle	|-|	视频播放出错时触发|
+|bindplay|EventHandle| |当开始播放时触发 play 事件|
+|bindpause|EventHandle|  |当暂停播放时触发 pause 事件|
+|bindended|EventHandle|  |当播放到末尾时触发 ended 事件|
+|bindtimeupdate|EventHandle|  |播放进度变化时触发，event.detail = {currentTime, duration} 。|
+|bindfullscreenchange|EventHandle|  |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindwaiting|	EventHandle| |		视频出现缓冲时触发|
+|binderror|	EventHandle	| |	视频播放出错时触发|
 
 **主流格式支持**：
 
@@ -396,8 +396,8 @@ Page({
 |---- | ---- | ---- |---- |
 |device-position| String | back | 前置或后置，值为front, back |
 |flash|String| auto |闪光灯，值为auto, on, off|
-|bindstop|EventHandle|-|摄像头在非正常终止时触发，如退出后台等情况|
-|binderror|EventHandle|-|用户不允许使用摄像头时触发|
+|bindstop|EventHandle|  |摄像头在非正常终止时触发，如退出后台等情况|
+|binderror|EventHandle| |用户不允许使用摄像头时触发|
 
 
 
@@ -536,12 +536,12 @@ video {
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|key| String | - | AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
-|type| String | - | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
+|key| String |   | AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
+|type| String |   | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
 |flash|String| off |闪光灯，值为auto, on, off|
-|binderror|EventHandle|-|用户不允许使用摄像头时触发|
-|bindload|EventHandle|-|AR加载成功时触发|
-|bindmessage|EventHandle|-|开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
+|binderror|EventHandle| |用户不允许使用摄像头时触发|
+|bindload|EventHandle| |AR加载成功时触发|
+|bindmessage|EventHandle| |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
 
 **说明**:
 
@@ -585,9 +585,9 @@ video {
 |background-mute|Boolean|false|进入后台时是否静音|
 |min-cache|Number|1|最小缓冲区，单位s|
 |max-cache|Number|3|最大缓冲区，单位s|
-|bindstatechange|EventHandle|- |播放状态变化事件，detail = {code}|
-|bindnetstatus|EventHandle| -|网络状态变化通知，detail = {info}|
-|bindfullscreenchange|	EventHandle	|-|	全屏变化事件，detail = {direction, fullScreen}。|
+|bindstatechange|EventHandle|  |播放状态变化事件，detail = {code}|
+|bindnetstatus|EventHandle|  |网络状态变化通知，detail = {info}|
+|bindfullscreenchange|	EventHandle	| |	全屏变化事件，detail = {direction, fullScreen}。|
 
 
 

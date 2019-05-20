@@ -15,9 +15,9 @@ sidebar: ad
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|appid|string|none|小程序应用 ID|
-|apid|string|none|小程序广告位 ID|
-|type|string|none|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
+|appid|string| |小程序应用 ID|
+|apid|string| |小程序广告位 ID|
+|type|string| |广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
 
 * banner 
 

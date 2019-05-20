@@ -29,17 +29,44 @@ sidebar: getextconfig
 
 **示例：**
 
+<a href="swanide://fragment/88f7ccb04d54d3d2cefd118040877f501558336059868" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getExtConfig">getExtConfig</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getExtConfig({
-    success: function(res) {
-      console.log(res.extConfig);
+Page({
+    getExtConfig() {
+        swan.getExtConfig({
+            success(res) {
+                console.log('自定义的数据', res.extConfig);
+            },
+            fail(err) {
+                console.log('scanCode fail', err);
+            }
+        });
     }
 });
 ```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 
 **Tip**
 
-1.`tip` : swan.getExtConfig 暂时无法通过 sawn.canIUse 判断是否兼容，开发者需要自行判断swan.getExtConfig 是否存在兼容。
+`tip` : swan.getExtConfig 暂时无法通过 sawn.canIUse 判断是否兼容，开发者需要自行判断swan.getExtConfig 是否存在兼容。
 
 
 ## swan.getExtConfigSync
@@ -57,11 +84,38 @@ swan.getExtConfig({
 
 **示例：**
 
+<a href="swanide://fragment/d5dea858ea9874504d0aea64a989ddbd1558336152471" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getExtConfigSync">getExtConfigSync</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-let data = swan.getExtConfigSync();
-console.log(data.extConfig);
+Page({
+    getExtConfigSync() {
+        try {
+            const extData = swan.getExtConfigSync();
+            console.log('getExtConfigSync success', extData);
+        } catch (err) {
+            console.log('getExtConfigSync fail', err);
+        }
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 **Tip**
 
-1.```tip```: swan.getExtConfigSync 暂时无法通过 swan.canIUse 判断是否兼容，开发者需要自行判断 swan.getExtConfigSync 是否存在兼容。
+```tip```: swan.getExtConfigSync 暂时无法通过 swan.canIUse 判断是否兼容，开发者需要自行判断 swan.getExtConfigSync 是否存在兼容。

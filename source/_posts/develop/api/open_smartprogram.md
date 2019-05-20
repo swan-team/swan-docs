@@ -22,19 +22,45 @@ sidebar: open_smartprogram
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+*示例：**
+
+<a href="swanide://fragment/52021b53b94804a9f42ee7d72c73e8d41558342104806" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateToSmartProgram">navigateToSmartProgram</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.navigateToSmartProgram({
-    appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c', // 要打开的小程序 App Key
-    path: '', // 打开的页面路径，如果为空则打开首页
-    extraData: {
-        foo: 'baidu'
-    },
-    success: function (res) {
-        // 打开成功
+Page({
+    navigateToSmartProgram() {
+        swan.navigateToSmartProgram({
+            appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c', // 要打开的小程序 App Key
+            path: '', // 打开的页面路径，如果为空则打开首页
+            extraData: {
+                foo: 'baidu'
+            },
+            success: function (res) {
+                console.log('navigateToSmartProgram success', res);
+            },
+            fail: function (err) {
+                console.log('navigateToSmartProgram fail', res);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 **Andriod**
@@ -67,15 +93,41 @@ swan.navigateToSmartProgram({
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
+<a href="swanide://fragment/c9ffd067b9e23f3d995616d1c29479081558342193584" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateBackSmartProgram">navigateBackSmartProgram</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.navigateBackSmartProgram({
-    extraData: {
-        foo: 'baidu'
-    },
-    success: function (res) {
-        // 返回成功
+Page({
+    navigateBackSmartProgram() {
+        swan.navigateBackSmartProgram({
+            extraData: {
+                foo: 'baidu'
+            },
+            success: function (res) {
+                console.log('navigateBackSmartProgram success', res);
+            },
+            fail: function (err) {
+                console.log('navigateBackSmartProgram fail', res);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

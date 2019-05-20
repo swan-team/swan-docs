@@ -67,13 +67,38 @@ swan.openSetting({
 
 **示例：**
 
+<a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSetting">getSetting</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSetting({
-    success: function (res) {
-        console.log(res.authSetting['scope.userInfo']);
-        console.log(res.authSetting['scope.userLocation']);
+Page({
+    getSetting() {
+        swan.getSetting({
+            success: function (res) {
+                console.log('getSetting success, authSetting:', res.authSetting);
+            },
+            fail: function (err) {
+                console.log('getSetting fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

@@ -18,18 +18,45 @@ sidebar: debug
 |---- | ---- | ---- | ----|----|
 | enableDebug | Boolean | 是 |-| 是否打开调试 |
 
-**示例代码**
+**示例：**
+
+<a href="swanide://fragment/6aa7bd93efb52c51cb9fc663bb5559241558343027401" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="openEnableDebug">openEnableDebug</button>
+    <button type="primary" bindtap="closeEnableDebug">closeEnableDebug</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-    // 打开调试
-    swan.setEnableDebug({
-        enableDebug: true
-    })
+Page({
+    openEnableDebug() {
+        swan.setEnableDebug({
+            enableDebug: true
+        })
+    },
+    closeEnableDebug() {
+        swan.setEnableDebug({
+            enableDebug: false
+        })
+    }
+});
+```
+* 在 css 文件中
 
-    // 关闭调试
-    swan.setEnableDebug({
-        enableDebug: false
-    })
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
 ```
 
 **说明：**

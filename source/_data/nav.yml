@@ -1894,10 +1894,10 @@
                         link: /develop/api/show_query/#IntersectionObserver-disconnect
                         text: IntersectionObserver.disconnect
                         name: show_query_IntersectionObserver-disconnect
-                      -
-                        link: /develop/api/show_query/#swan-createSelectorQuery
-                        text: swan.createSelectorQuery
-                        name: show_query_swan-createSelectorQuery                   
+                  -
+                    link: /develop/api/show_query/#swan-createSelectorQuery
+                    text: swan.createSelectorQuery
+                    name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery

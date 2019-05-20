@@ -21,29 +21,38 @@ sidebar: open_preloadsubpackage
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例：**
+
+<a href="swanide://fragment/d8fbb63bb685902efacb6d0f926025971558342728113" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="loadSubPackage">loadSubPackage</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.loadSubPackage({
-    root: 'subpackage',
-    success(res) {
-        console.log('下载成功', res);
-    },
-    fail(err) {
-        console.log('下载失败', err);
+Page({
+    loadSubPackage() {
+        swan.loadSubPackage({
+            root: 'subpackage',
+            success: function (res) {
+                console.log('loadSubPackage success', res);
+            },
+            fail: function (err) {
+                console.log('loadSubPackage fail', res);
+            }
+        });
     }
 });
 ```
-<!-- #### 错误码
+* 在 css 文件中
 
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|预加载子包失败| -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```

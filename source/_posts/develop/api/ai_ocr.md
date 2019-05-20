@@ -43,6 +43,10 @@ sidebar: ai_ocr
 |++height|	Number|	表示定位位置的长方形的高度。|
 |++words|	String|	识别结果字符串|
 
+**示例：**
+
+<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 **返回值示例：**
 ```json
 {
@@ -117,6 +121,9 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrIdCard({
+      detect_direction: true,
+      id_card_side: 'front',
+      detect_risk: true,
       image,
       success(res) {
         console.log(res.words_result);
@@ -150,6 +157,10 @@ swan.chooseImage({
 |+bank_card_number  |  String  |银行卡卡号 |
 |+bank_name |String | 银行名，不能识别时为空 。|
 |+bank_card_type | String | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
+
+**示例：**
+
+<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **返回值示例：**
 ```json
@@ -205,6 +216,10 @@ swan.chooseImage({
 |words_result |  Object  | 识别结果 |
 |+words | String | 识别结果字符串 |
 
+**示例：**
+
+<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 **返回值示例：**
 ```json
 {
@@ -253,6 +268,8 @@ swan.chooseImage({
     let image = res.tempFilePaths[0];
     swan.ai.ocrDrivingLicense({
       image,
+      detect_direction: true,
+      unified_valid_period: true,
       success(res) {
         console.log(res.words_result);
       }
@@ -286,6 +303,10 @@ swan.chooseImage({
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |
 |+words | String | 识别结果字符串 |
+
+**示例：**
+
+<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **返回值示例：**
 ```json
@@ -336,6 +357,7 @@ swan.chooseImage({
     let image = res.tempFilePaths[0];
     swan.ai.ocrVehicleLicense({
       image,
+      detect_direction: true,
       success(res) {
         console.log(res.words_result);
       }

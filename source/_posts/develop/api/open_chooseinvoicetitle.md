@@ -31,19 +31,40 @@ sidebar: open_chooseinvoicetitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-**示例：**
+*示例：**
+
+<a href="swanide://fragment/221045f8e71229f66348675cda93df511558342028259" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="chooseInvoiceTitle">chooseInvoiceTitle</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.chooseInvoiceTitle({
-    success: function (res) {
-        console.log(res.type);
-        console.log(res.title);
-        console.log(res.taxNumber);
-        console.log(res.companyAddress);
-        console.log(res.telephone);
-        console.log(res.bankName);
-        console.log(res.bankAccount);
+page({
+    chooseInvoiceTitle() {
+        swan.chooseInvoiceTitle({
+            success: function (res) {
+                console.log('chooseInvoiceTitle success', res);
+            },
+            fail: function (err) {
+                console.log('chooseInvoiceTitle fail', res);
+            }
+        });
     }
-})
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

@@ -250,6 +250,7 @@ Page({
 * 直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致。
 * 仅支持设置可 JSON 化的数据。
 * 请不要把 data 中任何一项的 value 设为 undefined ，否则这一项将不被设置并可能遗留一些潜在问题。
+* data 的键值必须遵守 camelCase (驼峰式)的命名规范，不得使用 kebab-case (短横线隔开式)规范。
 
 
 **示例：**

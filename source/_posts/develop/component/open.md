@@ -118,8 +118,8 @@ sidebar: open
 
 | 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
 | --- | ------ | ---- | ---- |---- |
-| src | String |- | webview 指向网页的链接 |-|
-|bindmessage|EventHandler|-|网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
+| src | String |  | webview 指向网页的链接 |-|
+|bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
 **示例：**
 <a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>

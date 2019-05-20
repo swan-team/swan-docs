@@ -43,13 +43,13 @@ sidebar: view
 |scroll-y| Boolean  | false | 允许纵向滚动|
 |upper-threshold| Number | 50 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
 |lower-threshold| Number |50 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
-|scroll-top | Number  |-| 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
-|scroll-left| Number  |-| 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
-|scroll-into-view | String  |-| 值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view=”{= scrollIntoView =}”`。|
+|scroll-top | Number  | | 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
+|scroll-left| Number  | | 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
+|scroll-into-view | String  | | 值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view=”{= scrollIntoView =}”`。|
 |scroll-with-animation| Boolean  | false | 在设置滚动条位置时使用动画过渡|
-|bindscrolltoupper | EventHandle  |-| 滚动到顶部/左边，会触发 scrolltoupper 事件|
-|bindscrolltolower | EventHandle | -|滚动到底部/右边，会触发 scrolltolower 事件|
-|bindscroll | EventHandle |-|滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
+|bindscrolltoupper | EventHandle  | | 滚动到顶部/左边，会触发 scrolltoupper 事件|
+|bindscrolltolower | EventHandle |  |滚动到底部/右边，会触发 scrolltolower 事件|
+|bindscroll | EventHandle | |滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
 
 **注意：**使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
@@ -128,8 +128,8 @@ Page({
 |previous-margin|String|"0px"|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |next-margin|String|"0px"|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |display-multiple-items|Number|1|同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|bindchange | EventHandle |  -|current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
-|bindanimationfinish|EventHandle|- |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
+|bindanimationfinish|EventHandle| |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **说明：**
 其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
@@ -147,28 +147,186 @@ Page({
 **示例：**
 <a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-```xml
-<swiper indicator-dots="true"
-    autoplay="true" interval="3000" duration="500">
-    <block s-for="imgUrl in imgs">
-        <swiper-item>
-            <image src="{{imgUrl}}" class="slide-image" width="355" height="150"/>
-        </swiper-item>
-    </block>
-</swiper>
-```
+* 在 swan 文件中
 
-```javascript
+```html
+<view class="wrap">
+    <view class="title">示例</view>
+    <view class="swiper-wrap">
+        <swiper 
+            indicator-color="rgba(0,0,0,0.30)"
+            indicator-active-color="#fff"
+            duration="{{switchDuration}}"
+            interval="{{autoPlayInterval}}"
+            autoplay="{{switchAutoPlayStatus}}"
+            indicator-dots="{{switchIndicateStatus}}" 
+            vertical="false"
+            circular="true"
+            current="0"
+            bind:change="swiperChange"
+        >
+            <block s-for="item in items">
+                <swiper-item class="{{item.className}}">
+                    <view class="item">{{item.value}}</view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="switch-wrap">
+        <view>
+            <text>指示器</text>
+            <switch checked="{{switchIndicateStatus}}" bind:change="switchIndicate" class="switch"></switch>
+        </view>
+        <view>
+            <text>自动播放</text>
+            <switch checked="{{switchAutoPlayStatus}}" bind:change="switchAutoPlay" class="switch"></switch>
+        </view>
+    </view>
+
+    <view class="slider-wrap">
+        <view>
+            <view class="slider-title-time">
+                <text class="slider-title">幻灯片切换时长</text>
+                <text class="slider-time">{{switchDuration}}ms</text>
+            </view>
+            <slider min="300" max="1500" value="{{switchDuration}}"  bind:change="changeSwitchDuration"></slider>
+        </view>
+
+        <view>
+            <view class="slider-title-time">
+                <text class="slider-title">自动播放间隔时长</text>
+                <text class="slider-time">{{autoPlayInterval}}ms</text>
+            </view>
+            <slider min="1000" max="5000" value="{{autoPlayInterval}}" bind:change="changeAutoPlayInterval"></slider>
+        </view>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```js
 Page({
     data: {
-        imgs: [
-            "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=955704975,2507359007&fm=173&s=32A2DC4D4E12344D4899DCB80300C013&w=218&h=146&img.JPEG",
-            "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=984374101,2617012451&fm=173&s=20A24CB176BA0D882C042D700300C092&w=218&h=146&img.JPEG",
-            "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1663594687,1286054050&fm=173&s=EAA608C484D2006B5680719A0300E0C1&w=218&h=146&img.JPEG"
-        ]
+        items: [
+            {
+                className: 'color-a',
+                value: 'A'
+            }, {
+                className: 'color-b',
+                value: 'B'
+            }, {
+                className: 'color-c',
+                value: 'C'
+            }
+        ],
+        imgUrls: [
+            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
+        ],
+        current: 0,
+        switchIndicateStatus: true,
+        switchAutoPlayStatus: false,
+        switchDuration: 500,
+        autoPlayInterval: 2000
+    },
+    
+    swiperChange(e) {
+        console.log('swiperChange:', e.detail);
+    },
+    switchIndicate() {
+        this.setData({
+            switchIndicateStatus: !this.getData('switchIndicateStatus')
+        });
+    },
+    switchAutoPlay() {
+        this.setData({
+            switchAutoPlayStatus: !this.getData('switchAutoPlayStatus')
+        });
+    },
+    changeSwitchDuration(e) {
+        this.setData({
+            switchDuration: e.detail.value
+        });
+    },
+    changeAutoPlayInterval(e) {
+        this.setData({
+            autoPlayInterval: e.detail.value
+        });
     }
-})
+});
+```
 
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.swiper-wrap {
+    width: 88%;
+    margin: .1rem auto;
+}
+.item {
+    width: 100%;
+    height: 150px;
+    font-size: .16rem;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+}
+.color-a {
+    background-color: #6895FF;
+}
+.color-b {
+    background-color: #8FB1FF;
+}
+.color-c {
+    background-color: #C3D1FF;
+}
+
+.switch-wrap {
+    padding: 0 .17rem;
+    background: #fff;
+    margin: .2rem 0;
+}
+.switch-wrap > view {
+    height: .48rem;
+    line-height: .48rem;
+    color: #000;
+    font-size: .18rem;
+    border-bottom: 1px #f5f5f5 solid;
+    position: relative;
+}
+.switch {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.slider-wrap > view {
+    height: 100%;
+    padding: 0 .17rem;
+}
+.slider-title-time {
+    overflow: hidden;
+    padding: .2rem 0 .1rem;
+}
+.slider-title,
+.slider-time {
+    font-size: .16rem;
+    color: #666;
+    line-height: .25rem;
+}
+.slider-title {
+    float: left;
+}
+.slider-time {
+    float: right;
+    margin-right: .1rem;
+}
 ```
 **说明：**
 
@@ -313,8 +471,8 @@ controls {
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
 | src | String | |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
-|bindload|	EventHandle|-|		图片加载成功时触发|
-|binderror|	EventHandle	|-	|图片加载失败时触发|
+|bindload|	EventHandle| |		图片加载成功时触发|
+|binderror|	EventHandle	| 	|图片加载失败时触发|
 
 
 
