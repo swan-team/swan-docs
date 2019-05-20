@@ -64,7 +64,7 @@ Page({
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |--|
 | space | String  | false |显示连续空格|-|
-| selectable|Boolean|false|文本是否可选|3.10.4|
+| selectable|Boolean|false|文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
 
 **space 有效值**:
 
