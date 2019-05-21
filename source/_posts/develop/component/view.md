@@ -134,7 +134,7 @@ Page({
 **说明：**
 其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
 
-### swiper-item
+## swiper-item
 
 **注意：**仅可放置在`<swiper/>`组件中，宽高自动设置为100%。
 
@@ -341,7 +341,7 @@ Page({
 |--|--|--|--|
 |scale-area	|Boolean|	false|	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
-### movable-view
+## movable-view
 **解释：**可移动的视图容器，在页面中可以拖拽滑动。
 
 **属性说明：**
@@ -351,8 +351,8 @@ Page({
 | direction | String  | none  |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
 | inertia | Boolean | false |movable-view 是否带有惯性|
 |out-of-bounds| Boolean | false |超过可移动区域后，movable-view 是否还可以移动。|
-|x	| Number | - |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
-| y | Number  |-|定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
+|x	| Number |   |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
+| y | Number  | |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
 | damping | Number |20 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
 | friction | Number |2	  |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
 | disabled | Boolean |false |是否禁用   |

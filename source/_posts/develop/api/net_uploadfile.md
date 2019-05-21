@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: net_uploadfile
 ---
-
+请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 ## swan.uploadFile
 
 **解释：**将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 `content-type` 为 `multipart/form-data`
@@ -114,7 +114,7 @@ uploadTask.abort(); // 取消上传任务
 |1|解析失败，请检查参数是否正确| -->
 ## swan.downloadFile
 
-**解释：**下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径
+**解释：**下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。
 
 **方法参数：**Object object
 

@@ -750,9 +750,17 @@
                     text: swiper
                     name: view_swiper
                   -
+                    link: /develop/component/view/#swiper-item
+                    text: swiper-item
+                    name: view_swiper-item
+                  -
                     link: /develop/component/view/#movable-area
                     text: movable-area
-                    name: view_movable-area
+                    name: view_movable-area                 
+                  -
+                    link: /develop/component/view/#movable-view
+                    text: movable-view
+                    name: view_movable-view
                   -
                     link: /develop/component/view/#cover-view
                     text: cover-view
@@ -804,6 +812,10 @@
                     text: checkbox
                     name: formlist_checkbox
                   -
+                    link: /develop/component/formlist/#checkbox-group
+                    text: checkbox-group
+                    name: formlist_checkbox-group
+                  -
                     link: /develop/component/formlist/#form
                     text: form
                     name: formlist_form
@@ -819,11 +831,24 @@
                     link: /develop/component/formlist/#picker
                     text: picker
                     name: formlist_picker
+                  -
+                    link: /develop/component/formlist/#picker-view
+                    text: picker-view
+                    name: formlist_picker-view
+                  -
+                    link: /develop/component/formlist/#picker-view-column
+                    text: picker-view-column
+                    name: formlist_picker-view-column                         
 
                   -
                     link: /develop/component/formlist/#radio
                     text: radio
                     name: formlist_radio
+                   
+                  -
+                    link: /develop/component/formlist/#radio-group
+                    text: radio-group
+                    name: formlist_radio-group
 
                   -
                     link: /develop/component/formlist/#slider

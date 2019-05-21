@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: net_websocket
 ---
-
+请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 ## swan.connectSocket
 
 **解释：**创建一个 WebSocket 连接。

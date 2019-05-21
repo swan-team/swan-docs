@@ -7,7 +7,7 @@ sidebar: net_request
 
 ## swan.request
 
-**解释：**发起网络请求
+**解释：**发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
 **方法参数：**Object object
 

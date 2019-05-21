@@ -103,7 +103,7 @@ sidebar: formlist
 |value | String  | |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
 |disabled|Boolean| false| 是否禁用|
 |checked|Boolean | false| 当前是否选中，可用来设置默认选中|
-|color| Color|- | checkbox 的颜色，同 CSS 的 color|
+|color| Color| | checkbox 的颜色，同 CSS 的 color|
 
 
 示例：
@@ -158,7 +158,7 @@ Page({
 });
 
 ```
-### checkbox-group
+## checkbox-group
 
 <div class="notice">解释： </div>多项选择器
 <div></div>
@@ -231,7 +231,7 @@ Page({
 | focus |Boolean	  | false |获取焦点	|
 |confirm-type|String  | done |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false |点击键盘右下角按钮时是否保持键盘不收起|
-|cursor	 | Number  |- |指定 focus 时的光标位置|
+|cursor	 | Number  |  |指定 focus 时的光标位置|
 |selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
@@ -616,7 +616,7 @@ Page({
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
-<notice>picker-view-column</notice>
+## picker-view-column
 
 <div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
@@ -753,7 +753,7 @@ Page({
     }
 });
 ```
-### radio-group
+## radio-group
 
 <div class="notice">解释： </div>单项选择
 <div></div>
