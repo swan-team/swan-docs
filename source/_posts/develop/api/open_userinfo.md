@@ -45,15 +45,40 @@ sidebar: open_userinfo
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
-
 **示例：**
 
+<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSwanId">getSwanId</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSwanId({
-    success: function (res) {
-        console.log(res.data.swanid);
+Page({
+    getSwanId() {
+        swan.getSwanId({
+            success: function (res) {
+                console.log('getSwanId success', res);
+            },
+            fail: function (err) {
+                console.log('getSwanId fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

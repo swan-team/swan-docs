@@ -12,9 +12,9 @@ sidebar: base
 
 |属性名|类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|type |String  |-|生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
+|type |String  | |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
 |size | Number  |23 |icon 的大小，单位是 px|
-|color | Color | - |icon 的颜色，同 css 的 color|
+|color | Color |   |icon 的颜色，同 css 的 color|
 
 
 **示例**：
@@ -64,7 +64,7 @@ Page({
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |--|
 | space | String  | false |显示连续空格|-|
-| selectable|Boolean|false|文本是否可选|3.10.4|
+| selectable|Boolean|false|文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
 
 **space 有效值**:
 
@@ -394,7 +394,7 @@ button {
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| percent | Float  |无|百分比 0~100 |
+| percent | Float  | |百分比 0~100 |
 | show-info | Boolean  | false  |在进度条右侧显示百分比|
 | stroke-width | Number | 2 |进度条线的宽度，单位 px|
 | color | Color  | #09BB07 |进度条颜色 （请使用 activeColor）	|
@@ -430,7 +430,7 @@ button {
 |autoplay | Boolean | 否 |true	  |动画是否自动播放	|-|
 |action | String  |	 否 | play |动画操作，可取值 play、pause、stop	|-|
 |hidden | Boolean  | 否 | true |是否隐藏动画|-|
-|bindended | EventHandle | 否 | - | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
+|bindended | EventHandle | 否 |   | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
 **说明:**
 

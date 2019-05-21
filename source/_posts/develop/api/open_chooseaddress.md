@@ -32,18 +32,39 @@ sidebar: open_chooseaddress
 |nationalCode|	String	|收货地址国家码|
 
 **示例：**
+
+<a href="wanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="chooseAddress">chooseAddress</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.chooseAddress({
-    success: function (res) {
-        console.log(res.userName);
-        console.log(res.postalCode);
-        console.log(res.provinceName);
-        console.log(res.cityName);
-        console.log(res.countyName);
-        console.log(res.detailInfo);
-        console.log(res.telNumber);
+Page({
+    chooseAddress() {
+        swan.chooseAddress({
+            success: function (res) {
+                console.log('chooseAddress success', res);
+            },
+            fail: function (err) {
+                console.log('chooseAddress fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 

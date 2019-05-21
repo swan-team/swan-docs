@@ -174,10 +174,10 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/previewImage1.png">
+        <img src="../../../img/api/media/previewImage2.jpg">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/previewImage2.png">
+        <img src="../../../img/api/media/previewImage1.jpg">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

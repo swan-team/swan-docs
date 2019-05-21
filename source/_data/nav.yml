@@ -533,9 +533,9 @@
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page/#Page
-                    text: Page
-                    name: app_service_page_Page
+                    link: /develop/framework/app_service_page/#参数说明
+                    text: 参数说明
+                    name: app_service_page_参数说明
                   -
                     link: /develop/framework/app_service_page/#初始化数据
                     text: 初始化数据
@@ -545,17 +545,17 @@
                     text: 生命周期函数
                     name: app_service_page_生命周期函数
                   -
-                    link: /develop/framework/app_service_page/#页面相关事件处理函数
-                    text: 页面相关事件处理函数
-                    name: app_service_page_页面相关事件处理函数
+                    link: /develop/framework/app_service_page/#通用事件
+                    text: 通用事件
+                    name: app_service_page_通用事件
                   -
-                    link: /develop/framework/app_service_page/#事件处理函数
-                    text: 事件处理函数
-                    name: app_service_page_事件处理函数
+                    link: /develop/framework/app_service_page/#用户绑定事件
+                    text: 用户绑定事件
+                    name: app_service_page_用户绑定事件
                   -
-                    link: /develop/framework/app_service_page/#Page-prototype-setData
-                    text: Page.prototype.setData
-                    name: app_service_page_Page-prototype-setData
+                    link: /develop/framework/app_service_page/#setData-机制
+                    text: setData 机制
+                    name: app_service_page_setData-机制
               -
                 link: /develop/framework/app_service_getcurrentpages
                 text: 页面路由
@@ -700,6 +700,10 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
+            -
+              link: /develop/framework/whitescreen
+              text: 白屏优化建议
+              name: whitescreen             
         -
           link: /develop/framework/subpackages
           text: 运行时
@@ -713,10 +717,10 @@
               link: /develop/framework/operating-mechanism
               text: 运行机制
               name: operating-mechanism
-            -
-              link: /develop/framework/process_life
-              text: 生命周期介绍
-              name: process_life                            
+            # -
+            #   link: /develop/framework/process_life
+            #   text: 生命周期介绍
+            #   name: process_life                            
 
     -
       link: /develop/component/view
@@ -751,9 +755,17 @@
                     text: swiper
                     name: view_swiper
                   -
+                    link: /develop/component/view/#swiper-item
+                    text: swiper-item
+                    name: view_swiper-item
+                  -
                     link: /develop/component/view/#movable-area
                     text: movable-area
-                    name: view_movable-area
+                    name: view_movable-area                 
+                  -
+                    link: /develop/component/view/#movable-view
+                    text: movable-view
+                    name: view_movable-view
                   -
                     link: /develop/component/view/#cover-view
                     text: cover-view
@@ -805,6 +817,10 @@
                     text: checkbox
                     name: formlist_checkbox
                   -
+                    link: /develop/component/formlist/#checkbox-group
+                    text: checkbox-group
+                    name: formlist_checkbox-group
+                  -
                     link: /develop/component/formlist/#form
                     text: form
                     name: formlist_form
@@ -820,11 +836,24 @@
                     link: /develop/component/formlist/#picker
                     text: picker
                     name: formlist_picker
+                  -
+                    link: /develop/component/formlist/#picker-view
+                    text: picker-view
+                    name: formlist_picker-view
+                  -
+                    link: /develop/component/formlist/#picker-view-column
+                    text: picker-view-column
+                    name: formlist_picker-view-column                         
 
                   -
                     link: /develop/component/formlist/#radio
                     text: radio
                     name: formlist_radio
+                   
+                  -
+                    link: /develop/component/formlist/#radio-group
+                    text: radio-group
+                    name: formlist_radio-group
 
                   -
                     link: /develop/component/formlist/#slider
@@ -1895,10 +1924,10 @@
                         link: /develop/api/show_query/#IntersectionObserver-disconnect
                         text: IntersectionObserver.disconnect
                         name: show_query_IntersectionObserver-disconnect
-                      -
-                        link: /develop/api/show_query/#swan-createSelectorQuery
-                        text: swan.createSelectorQuery
-                        name: show_query_swan-createSelectorQuery                   
+                  -
+                    link: /develop/api/show_query/#swan-createSelectorQuery
+                    text: swan.createSelectorQuery
+                    name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery
@@ -2784,7 +2813,21 @@
     #           link: /develop/web/detail
     #           text: 代理域名配置详解
     #           name: detail
-
+    -
+      link: /develop/web/webintroduction 
+      text: Web 化
+      name: web
+      sidebar:
+        -
+          sidebar:
+            -
+              link: /develop/web/webintroduction 
+              text: Web 化概述
+              name: webintroduction 
+            -
+              link: /develop/web/proposal
+              text: 开发建议
+              name: proposal             
     -
       link: /develop/swan/version
       text: 基础库版本信息

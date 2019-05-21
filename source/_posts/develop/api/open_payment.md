@@ -61,7 +61,9 @@ sidebar: open_payment
 | WeChat | 微信支付|
 
 **示例：**
-<a href="swanide://fragment/2fd9f0f66f3a557c70475be52e0617241544430726" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
 ```js
 swan.requestPolymerPayment({
     orderInfo: {
@@ -70,6 +72,7 @@ swan.requestPolymerPayment({
         "totalAmount": "1",
         "tpOrderId": "3028903626",
         "dealTitle": "智能小程序Demo支付测试",
+        "signFieldsRange": "1",
         "rsaSign": '',
         "bizInfo": ''
     },

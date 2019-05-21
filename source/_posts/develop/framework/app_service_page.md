@@ -5,7 +5,7 @@ nav: framework
 sidebar: app_service_page
 ---
 
- ## Page
+ ## 参数说明
  
 
 **解释**：Page 函数用来注册一个页面。接受一个 object 参数，其指定页面的初始数据、生命周期函数、事件处理函数等。
@@ -105,6 +105,8 @@ Page({
 
 ## 生命周期函数
 
+> 更多介绍参见[生命周期介绍](http://localhost:4000/docs/develop/framework/process_life/)。
+
 |属性|类型|描述|触发时机|
 |----|----|----|--------|
 |onLaunch|Function|SWAN 初始化的生命周期函数|当 SWAN App 初始化完成时，会触发 onLaunch（全局只触发一次）|
@@ -123,7 +125,9 @@ Page({
 </div>
 </div>
 
-## 页面相关事件处理函数
+
+
+## 通用事件
 
 ### onPullDownRefresh
 
@@ -211,7 +215,7 @@ Page({
 
 
 
-## 事件处理函数
+## 用户绑定事件
 
 <div class="notice">解释： </div>
 除了初始化数据和生命周期函数，Page 中还可以定义一些特殊的函数：事件处理函数。在渲染层可以在组件中加入事件绑定，当达到触发事件时，就会执行 Page 中定义的事件处理函数。
@@ -230,7 +234,7 @@ Page({
 })
 ```
 
-## Page.prototype.setData
+## setData 机制
 
 **解释**：setData 函数，用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化，会引起视图层的更新。
 **参数说明**
@@ -246,6 +250,7 @@ Page({
 * 直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致。
 * 仅支持设置可 JSON 化的数据。
 * 请不要把 data 中任何一项的 value 设为 undefined ，否则这一项将不被设置并可能遗留一些潜在问题。
+* data 的键值必须遵守 camelCase (驼峰式)的命名规范，不得使用 kebab-case (短横线隔开式)规范。
 
 
 **示例：**

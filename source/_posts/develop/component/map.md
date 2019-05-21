@@ -9,28 +9,28 @@ sidebar: map
 
 |属性名 |类型  |默认值  |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |
-| longitude | Number | -| 中心经度 |- |
-| latitude | Number | -| 中心纬度 | -|
+| longitude | Number |  | 中心经度 |- |
+| latitude | Number |  | 中心纬度 | -|
 | scale |  Number | 16 | 缩放级别，取值范围为4-21 |- |
-| markers |  Array | - | 标记点 |- |
-| polyline |  Array | - | 路线 | -|
-| polygons |  Array | - | 多边形（工具暂不支持） | 2.0.13 |
-| circles |  Array |  -|  圆 |- |
-| controls |  Array | - | 控件 | -|
-| include-points |  Array | - | 缩放视野以包含所有给定的坐标点   | -|
-| show-location | Boolean |  -| 显示带有方向的当前定位点 |- |
+| markers |  Array |   | 标记点 |- |
+| polyline |  Array |   | 路线 | -|
+| polygons |  Array |   | 多边形（工具暂不支持） | 2.0.13 |
+| circles |  Array |   |  圆 |- |
+| controls |  Array |   | 控件 | -|
+| include-points |  Array |   | 缩放视野以包含所有给定的坐标点   | -|
+| show-location | Boolean |   | 显示带有方向的当前定位点 |- |
 | enable-3D | Boolean |  false | 显示3D楼块（工具暂不支持） | 2.0.13|
 | show-compass | Boolean |  false | 显示指南针（工具暂不支持） | 2.0.13|
 | enable-overlooking | Boolean |  false | 开启俯视（工具暂不支持） | 2.0.13 |
 | enable-zoom | Boolean | true | 是否支持缩放（工具暂不支持） | 2.0.13 |
 | enable-scroll | Boolean | true | 是否支持拖动（工具暂不支持） | 2.0.13 |
 | enable-rotate | Boolean | false | 是否支持旋转（工具暂不支持） | 2.0.13|
-| bindmarkertap | EventHandle | -| 点击标记点时触发 | -|
-| bindcallouttap |  EventHandle | - | 点击标记点对应的气泡时触发 |- |
-| bindcontroltap | EventHandle |  -| 点击控件时触发 | -|
-| bindregionchange | EventHandle | - | 视野发生变化时触发 |- |
-| bindtap | EventHandle | - | 点击地图时触发 | -|
-| bindupdated | EventHandle | - | 在地图渲染更新完成时触发 |- |
+| bindmarkertap | EventHandle |  | 点击标记点时触发 | -|
+| bindcallouttap |  EventHandle |  | 点击标记点对应的气泡时触发 |- |
+| bindcontroltap | EventHandle |   | 点击控件时触发 | -|
+| bindregionchange | EventHandle |  | 视野发生变化时触发 |- |
+| bindtap | EventHandle |   | 点击地图时触发 | -|
+| bindupdated | EventHandle |   | 在地图渲染更新完成时触发 |- |
 
 
 ### markers

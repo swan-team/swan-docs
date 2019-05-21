@@ -43,6 +43,11 @@ sidebar: ai_audit
 |3 | 疑似 |
 |4 | 审核失败 |
 
+**示例：**
+
+<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
 **返回值示例：**
 ```json
 {
