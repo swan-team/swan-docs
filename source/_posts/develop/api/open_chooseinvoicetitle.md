@@ -31,7 +31,7 @@ sidebar: open_chooseinvoicetitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-*示例：**
+**示例：**
 
 <a href="swanide://fragment/221045f8e71229f66348675cda93df511558342028259" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
