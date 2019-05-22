@@ -2591,7 +2591,14 @@
               -
                 link: /develop/devtools/setting
                 text: 设置
-                name: setting                
+                name: setting   
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/cloudtext
+                text: 云测试
+                name: cloudtext                              
         -
             sidebar:
 
