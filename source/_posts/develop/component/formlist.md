@@ -246,6 +246,7 @@ Page({
 |---- | ---- |
 | text |文本输入键盘 |
 | number |数字输入键盘 |
+| idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
 **confirm-type 有效值：**
@@ -611,7 +612,7 @@ Page({
 | bindchange | EventHandle |当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
-**说明**: 
+**说明**:
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
@@ -721,7 +722,7 @@ Page({
 | disabled | Boolean | false | 是否禁用 |
 | color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
 
-**示例**： 
+**示例**：
 <a href="swanide://fragment/a6506042f44f66d158d733ceb336504e1540395739" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <radio-group bindchange="radioChange">
@@ -886,7 +887,7 @@ formSubmit: e ={
 
 ```
 
-**说明**: 
+**说明**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
 <div></div>
 
@@ -920,7 +921,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
 
 **示例代码**：
- 
+
  <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 
 * 在 swan 文件中
@@ -939,7 +940,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 </view>
 ```
 
-* 在 js 文件中 
+* 在 js 文件中
 
 ```javascript
 Page({
