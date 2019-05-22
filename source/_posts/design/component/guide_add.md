@@ -73,7 +73,7 @@ sidebar: guide_add
 </div>
 
 ### 展现策略
-用户无操作，则3s后自动消失；用户点击菜单，或者切换页面，刨光引导马上消失。
+用户无操作，则5s后自动消失；用户点击菜单，或者切换页面，气泡引导马上消失。
 <video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/7.mp4"/>
 你的浏览器不支持该视频播放
 </video>

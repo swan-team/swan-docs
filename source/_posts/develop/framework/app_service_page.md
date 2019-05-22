@@ -105,7 +105,7 @@ Page({
 
 ## 生命周期函数
 
-> 更多介绍参见[生命周期介绍](http://localhost:4000/docs/develop/framework/process_life/)。
+> 更多介绍参见[生命周期介绍](http://smartprogram.baidu.com/docs/develop/framework/process_life/)。
 
 |属性|类型|描述|触发时机|
 |----|----|----|--------|
