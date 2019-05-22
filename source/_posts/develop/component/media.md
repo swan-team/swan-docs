@@ -576,8 +576,8 @@ video {
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|id|String|-|live-player 属性的唯一标志符|
-|src|String| -|音视频地址。目前仅支持 m3u8 格式|
+|id|String| |live-player 属性的唯一标志符|
+|src|String|  |音视频地址。目前仅支持 m3u8 格式|
 |autoplay|Boolean|false|自动播放|
 |muted|Boolean|false|是否静音|
 |orientation|	String|	vertical|	画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
