@@ -17,7 +17,7 @@ sidebar: nav
 |delta | Number |  |当 open-type 为 'navigateBack' 时有效，表示回退的层数|-|
 |app-id|	String| |		当target="miniProgram"时有效，要打开的小程序 App Key (小程序后台设置-开发设置中)|	2.5.2
 |path|	String| |		当target="miniProgram"时有效，打开的页面路径，如果为空则打开首页|	2.5.2|
-|extra-data|	Object| |		当target="miniProgram"时有效，需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。详情|	2.5.2|
+|extra-data|	Object| |		当target="miniProgram"时有效，需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_register/">详情</a>|	2.5.2|
 |version|	version|	release|	当target="miniProgram"时有效，要打开的小程序版本，有效值 develop（开发版），trial（体验版），release（正式版），仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。|2.5.2|
 |hover-class | String  |navigator-hover |指定点击时的样式类，当`hover-class="none"`时，没有点击态效果||
 |hover-stop-propagation | Boolean  | false | 指定是否阻止本节点的祖先节点出现点击态|-|
@@ -48,7 +48,7 @@ sidebar: nav
 }
 ```
 `<navigator/>` 的子节点背景色应为透明色。
-**示例**： 
+**示例**：
 <a href="swanide://fragment/76d030309d2763b5d1b2a03b9cc9c7be1548066522341" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```css

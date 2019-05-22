@@ -41,9 +41,9 @@ sidebar: view
 |---- | ---- | ---- |---- |
 |scroll-x | Boolean  |  false  | 允许横向滚动|
 |scroll-y| Boolean  | false | 允许纵向滚动|
-|upper-threshold| Number | 50 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
-|lower-threshold| Number |50 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
-|scroll-top | Number  | | 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
+|upper-threshold| Number/String | 50 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
+|lower-threshold| Number/String |50 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
+|scroll-top | Number/String  | | 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
 |scroll-left| Number  | | 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
 |scroll-into-view | String  | | 值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view=”{= scrollIntoView =}”`。|
 |scroll-with-animation| Boolean  | false | 在设置滚动条位置时使用动画过渡|
@@ -120,13 +120,13 @@ Page({
 |indicator-active-color| Color | #333 | 当前选中的指示点颜色件| -|
 |autoplay |Boolean  | false |是否自动切换| -|
 |current|Number |0 |当前所在页面的 index| -|
-|current-item-id|String|""|当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|current-item-id|String|`""`|当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |interval | Number | 5000 |自动切换时间间隔|- |
 |duration| Number |500 |滑动动画时长|- |
 |circular| Boolean |false |是否采用衔接滑动| -|
 |vertical | Boolean  | false  |滑动方向是否为纵向|- |
-|previous-margin|String|"0px"|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|next-margin|String|"0px"|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|previous-margin|String|`"0px"`|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|next-margin|String|`"0px"`|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |display-multiple-items|Number|1|同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
 |bindanimationfinish|EventHandle| |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
@@ -153,13 +153,13 @@ Page({
 <view class="wrap">
     <view class="title">示例</view>
     <view class="swiper-wrap">
-        <swiper 
+        <swiper
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}" 
+            indicator-dots="{{switchIndicateStatus}}"
             vertical="false"
             circular="true"
             current="0"
@@ -232,7 +232,7 @@ Page({
         switchDuration: 500,
         autoPlayInterval: 2000
     },
-    
+
     swiperChange(e) {
         console.log('swiperChange:', e.detail);
     },
@@ -337,7 +337,7 @@ Page({
 **解释：**`movable-view` 的可移动区域。
 > `movable-area` 必须设置width和height属性，不设置默认为10px。
 
-|属性名	|类型	|默认值|	说明|	
+|属性名	|类型	|默认值|	说明|
 |--|--|--|--|
 |scale-area	|Boolean|	false|	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
@@ -394,11 +394,11 @@ Page({
 **属性说明： **无
 
 **示例：**
- 
+
 <a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
-``` 
+```
 <video id="myVideo"
     src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
     controls>
@@ -451,7 +451,7 @@ controls {
     line-height: 50px;
     text-align: center;
 }
-.pause, 
+.pause,
 .time {
     text-align: center;
     color: #fff;
@@ -477,7 +477,7 @@ controls {
 
 
 **示例：**
- 
+
 <a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
