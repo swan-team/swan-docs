@@ -6,7 +6,7 @@
 let data = fileSystemManager.readFileSync(filePath, encoding)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -24,7 +24,7 @@ let data = fileSystemManager.readFileSync(filePath, encoding)
 |utf-8/utf8| |
 |latin1/binary|ISO-8859-1 的别名|
 
-**返回值：**
+**返回值**：
 
 |类型|描述|
 |-|-|
@@ -38,7 +38,7 @@ let data = fileSystemManager.readFileSync(filePath, encoding)
 |fail no such file or directory, open ${filePath}|指定的 filePath 文件不存在|
 |fail permission denied, open ${dirPath}|指定的 filePath 路径没有写权限|
 
-**示例：**
+**示例**：
 
 ```js
 const fs = swan.getFileSystemManager();

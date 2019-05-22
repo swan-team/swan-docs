@@ -6,13 +6,13 @@
 swan.onNetworkStatusChange(callback)
 ```
 
-**callback 回调参数：**
+**callback 回调参数**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|
 |callback|function|是|监听事件的回调函数|
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象：
 
@@ -21,7 +21,7 @@ swan.onNetworkStatusChange(callback)
 |isConnected|boolean|当前是否有网络链接|
 |networkType|string|网络类型|
 
-**networkType 有效值：**
+**networkType 有效值**：
 
 |值|描述|
 |-|-|
@@ -31,7 +31,7 @@ swan.onNetworkStatusChange(callback)
 |4g	|4g 网络|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.onNetworkStatusChange(res => {

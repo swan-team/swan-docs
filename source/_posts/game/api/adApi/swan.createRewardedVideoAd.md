@@ -9,12 +9,12 @@ priority: 07-03
 
 创建小游戏激励视频广告组件，createRewardedVideoAd 成功后会自动加载第一次的广告物料。
 
-**示例：**
+**示例**：
 
 ```js
 const rewardedVideoAd = swan.createRewardedVideoAd(opts);
 ```
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -23,7 +23,7 @@ const rewardedVideoAd = swan.createRewardedVideoAd(opts);
 |opts.appSid|string| |是|应用 ID （开发者在 Mssp 平台建立的代码位所属应用的 ID 更多细节请访问[这里](/game/introduction/flow_open/guide/)）|
 
 
-**返回值：**
+**返回值**：
 
 若接口调用成功，则返回小游戏的激励视频广告组件对象。
 
@@ -32,7 +32,7 @@ RewardedVideoAd
 ```
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

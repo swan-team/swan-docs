@@ -8,13 +8,13 @@
 gl.generateMipmap(target)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |target|GLenum|绑定点（binding point），可取值：`gl.TEXTURE_2D` 表示二维纹理，`gl.TEXTURE_CUBE_MAP` 表示立方体纹理|
 
-**示例：**
+**示例**：
 
 ```js
 gl.generateMipmap(gl.TEXTURE_2D);

@@ -5,7 +5,7 @@
 ```js
 fileSystemManager.mkdir(opts)
 ```
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -45,7 +45,7 @@ fileSystemManager.mkdir(opts)
 当接口执行成功时，其返回值与 success 回调函数的返回值相同；
 当接口执行失败时，其返回值与 fail 回调函数的返回值相同。
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

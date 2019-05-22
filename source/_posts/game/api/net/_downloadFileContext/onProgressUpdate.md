@@ -6,7 +6,7 @@
 DownloadTask.onProgressUpdate(callback)
 ```
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的数据：
 

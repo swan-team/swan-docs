@@ -6,13 +6,13 @@
 gl.deleteProgram(program)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |program|WebGLProgram|待删除的程序对象|
 
-**示例：**
+**示例**：
 
 ```js
 var program = gl.createProgram();

@@ -5,7 +5,7 @@
 ```js
 context.getImageData(sx, sy, sw, sh);
 ```
-**参数值：**
+**参数值**：
 
 | 参数 |  类型  | 描述              |
 | ----|------  | ---------------- |
@@ -15,7 +15,7 @@ context.getImageData(sx, sy, sw, sh);
 | sh  | number | 要被获取图像数据的矩形区域的宽度   |
 
 
-**示例：**
+**示例**：
 
 使用 `getImageData()` 方法获取矩形数据：
 

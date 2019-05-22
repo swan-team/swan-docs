@@ -8,11 +8,11 @@ sidebar: device_sys
 
 ## swan.getSystemInfo
 
-**解释：**获取系统信息
+**解释**：获取系统信息
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +20,7 @@ sidebar: device_sys
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |说明 |最低版本|
 |---- | ---- |
@@ -41,7 +41,7 @@ sidebar: device_sys
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.getSystemInfo({
@@ -68,11 +68,11 @@ swan.getSystemInfo({
 
 ## swan.getSystemInfoSync
 
-**解释：**获取系统信息同步接口
+**解释**：获取系统信息同步接口
 
-**方法参数：**无
+**方法参数**：无
 
-**同步返回参数说明：**
+**同步返回参数说明**：
 
 |参数  |说明 |最低版本|
 |---- | ---- |----|
@@ -93,7 +93,7 @@ swan.getSystemInfo({
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -132,12 +132,12 @@ Page({
 
 > 基础库 2.0.28 版本开始支持。
 
-**解释：**获取运行环境信息同步接口
+**解释**：获取运行环境信息同步接口
 
-**方法参数：**无
+**方法参数**：无
 
 
-**同步返回参数说明：**
+**同步返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---|---|
@@ -147,7 +147,7 @@ Page({
 |sdkVersion |string|  基础库版本   |
 |scheme |string|  调起协议的协议头   |
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -183,13 +183,13 @@ Page({
 
 ## swan.canIUse
 
-**解释：** 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
+**解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**方法参数：** String schema
+**方法参数**： String schema
 
 使用 `${API}.${method}.${param}.${options} `或者 `${component}.${attribute}.${option}` 方式来调用。
 
-**`schema`参数说明：**
+**`schema`参数说明**：
 
 |参数  |说明 |
 |---- | ---- |
@@ -202,7 +202,7 @@ Page({
 |${option}  |  组件属性的可选值 |
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

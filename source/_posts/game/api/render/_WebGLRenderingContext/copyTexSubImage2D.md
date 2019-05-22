@@ -6,7 +6,7 @@
 gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -19,7 +19,7 @@ gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 |width|GLsizei|纹理宽度|
 |height|GLsizei|纹理高度|
 
-**示例：**
+**示例**：
 
 ```js
 gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0,0, 0, 0, 16, 16)

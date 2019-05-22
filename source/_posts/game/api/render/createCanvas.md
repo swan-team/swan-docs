@@ -13,6 +13,6 @@ priority: 09-01
 swan.createCanvas();
 ```
 
-**返回值：**
+**返回值**：
 
 [Canvas](/game/api/render/Canvas/) 画布对象

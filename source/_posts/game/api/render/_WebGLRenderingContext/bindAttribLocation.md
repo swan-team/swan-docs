@@ -6,7 +6,7 @@
 gl.bindAttribLocation(program, index, name)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -14,11 +14,11 @@ gl.bindAttribLocation(program, index, name)
 |index|GLuint|指定将要绑定的一般顶点属性的索引|
 |name|string|着色器属性变量名称|
 
-**注意：**
+**注意**：
 
 该方法需要在着色器对象被绑定到程序对象之前调用。
 
-**示例：**
+**示例**：
 
 ```js
 var positionLocation = 0;

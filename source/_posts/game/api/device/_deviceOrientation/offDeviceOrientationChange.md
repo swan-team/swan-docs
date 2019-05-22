@@ -6,7 +6,7 @@
 swan.offDeviceOrientationChange(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|

@@ -8,7 +8,7 @@
 swan.setInnerAudioOption(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |---|-------|---|-------|-------|
@@ -35,7 +35,7 @@ swan.setInnerAudioOption(opts)
 |res.errMsg|string|报错信息|
 
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.setInnerAudioOption({

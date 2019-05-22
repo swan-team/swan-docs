@@ -15,7 +15,7 @@ swan.login(opts)
 >更多登录授权的流程参见： [登录授权流程说明](/game/tutorials/open_api/log/)
 
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -31,7 +31,7 @@ swan.login(opts)
 |-|-|-|
 |code|string|用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息|
 
-**示例 1：**
+**示例 1**：
 ```js
 swan.login({
     success: function (res) {
@@ -43,7 +43,7 @@ swan.login({
 });
 ```
 
-**示例 2：**
+**示例 2**：
 
 **注意**：由于百度和微信的登录体系差异，建议对需要登录之后才可以玩的一些小游戏，采用**示例 2** 的编写方式强制登录。
 
@@ -84,7 +84,7 @@ baiduLogin();
 swan.checkSession(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -92,7 +92,7 @@ swan.checkSession(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.checkSession({
@@ -111,11 +111,11 @@ swan.checkSession({
 
 >更多登录授权的流程参见： [登录授权流程说明](/game/tutorials/open_api/log/)
 
-**获取 Session Key 的URL地址：**
+**获取 Session Key 的URL地址**：
 ```js
  https://openapi.baidu.com/nalogin/getSessionKeyByCode
 ```
-**获取Session Key需要的参数：**
+**获取Session Key需要的参数**：
 
 | 属性 | 是否必填 | 描述 |
 | ----- | ------ | --- |
@@ -137,7 +137,7 @@ swan.checkSession({
 | error | 错误码；关于错误码的详细信息请参考"错误码列表"一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
-**请求示例：**
+**请求示例**：
 
 ```
 # curl -d "code=xxx&client_id=xxx&sk=xxx" https://openapi.baidu.com/nalogin/getSessionKeyByCode
@@ -154,19 +154,19 @@ swan.checkSession({
 
 获取 swanid。
 
-**机制说明：**
+**机制说明**：
 
 由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用 [`swan.login()`](#swan-login) 强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此小游戏还提供一个 swanid 的标识，可视作用户的设备标识。
 
 1. 用户在同一台设备上使用同一个开发者主体所开发的不同小游戏，得到的是相同的 swanid。
 2. 用户在同一台设备上使用不同开发者主体所开发的不同小游戏，得到的 swanid 是不同的。
 
-**swanid 校验性有以下两种方法：**
+**swanid 校验性有以下两种方法**：
 
 1. 采用 <a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#verify/">verify</a> 接口请求服务端。
 2. 对比接口返回中 swanid_signature 字段的值与采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature 计算方法/">signature 计算方法</a> 的计算值是否一致。
 
-**参数值：**
+**参数值**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -174,14 +174,14 @@ swan.checkSession({
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |errno  | String  |errno|
 |data  | Object  |{swanid}|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSwanId({
@@ -197,13 +197,13 @@ swan.getSwanId({
 
 获取手百登录状态。
 
-**返回参数说明：**
+**返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |isLogin  |  boolean | 手百登录状态 true: 已登录，false: 未登录  |
 
-**示例：**
+**示例**：
 
 ```js
 try {

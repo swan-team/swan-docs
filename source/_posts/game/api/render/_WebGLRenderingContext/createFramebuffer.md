@@ -8,11 +8,11 @@
 WebGLFrameBuffer gl.createFrameBuffer()
 ```
 
-**返回值：**
+**返回值**：
 
 WebGLFrameBuffer 类型的缓冲区。
 
-**示例：**
+**示例**：
 
 ```js
 var gl = canvas.getContext('webgl');

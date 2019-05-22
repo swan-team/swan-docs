@@ -12,14 +12,14 @@ priority: 05-06
 swan.setStorageSync(key, data)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
 |key|string|是|本地缓存中指定的 key|
 |data|any ( **function** <span class="vsplit"></span> **ArrayBuffer**<span class="vsplit"></span> **undefined 请关注下方的特别说明** )|是|需要存储的内容|
 
-**特别说明：**
+**特别说明**：
 1. 兼容 function 数据的存储，但是 Android 和 iOS 均会将其置为 null。
 2. 对于 ArrayBuffer 的数据，Android 支持, iOS 暂不支持。
 3. 对于 undefined 的数据，Android 支持，iOS 暂不支持， iOS 会对 undefined 数据直接过滤掉。
@@ -37,7 +37,7 @@ swan.setStorageSync(key, data)
         }
 ```
 
-**示例：**
+**示例**：
 
 ```js
 const key = 'mockData';

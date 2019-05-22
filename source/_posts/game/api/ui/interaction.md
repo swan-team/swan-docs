@@ -13,7 +13,7 @@ categoryName: api
 swan.showActionSheet(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -23,7 +23,7 @@ swan.showActionSheet(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
+**返回值**：
 
 `success` 回调函数：
 
@@ -33,7 +33,7 @@ swan.showActionSheet(opts)
 |-|-|-|
 |res.tapIndex|number|用户点击的按钮，从上到下的顺序，从 0 开始|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showActionSheet({
@@ -53,7 +53,7 @@ swan.showActionSheet({
 swan.showToast(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -73,7 +73,7 @@ icon 合法值：
 |loading|显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none|不显示图标，此时 title 文本最多可显示两行。默认值|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showToast({
@@ -92,7 +92,7 @@ swan.showToast({
 swan.hideToast()
 ```
 
-**示例：**
+**示例**：
 
 ```js
 swan.showToast({
@@ -113,7 +113,7 @@ setTimeout(function() {
 swan.showLoading(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -123,7 +123,7 @@ swan.showLoading(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showLoading({
@@ -142,7 +142,7 @@ swan.showLoading({
 swan.hideLoading(config)
 ```
 
-**示例：**
+**示例**：
 
 ```js
 swan.showLoading({
@@ -163,7 +163,7 @@ setTimeout(function() {
 swan.showModal(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -178,7 +178,7 @@ swan.showModal(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
+**返回值**：
 
 `success` 回调函数：
 
@@ -189,7 +189,7 @@ swan.showModal(opts)
 |res.confirm|boolean|为 true 时，表示用户点击了确定按钮|
 |res.cancel|boolean|为 true 时，表示用户点击了取消按钮|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showModal({

@@ -7,9 +7,9 @@ sidebar: view
 
 ## view
 
-**解释：**视图容器。
+**解释**：视图容器。
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -18,7 +18,7 @@ sidebar: view
 |hover-start-time| Number | 50 | 按住后多久出现点击态，单位毫秒|
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/214a877dded08449e1c177811b34915e1548066914694" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
@@ -28,14 +28,14 @@ sidebar: view
     </view>
 </view>
 ```
-**说明：**
+**说明**：
 1、 如果需要使用滚动视图，请使用 scroll-view；
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 ## scroll-view
-**解释：**可滚动视图区域。
+**解释**：可滚动视图区域。
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -51,9 +51,9 @@ sidebar: view
 |bindscrolltolower | EventHandle |  |滚动到底部/右边，会触发 scrolltolower 事件|
 |bindscroll | EventHandle | |滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
 
-**注意：**使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
+**注意**：使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/c25704bc739ef70da95b8c7b7b929aae1540395856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
@@ -101,7 +101,7 @@ Page({
 });
 
 ```
-**说明：**
+**说明**：
 * 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；
 * scroll-into-view 的优先级低于 scroll-top、scroll-left；
 * 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh；
@@ -109,9 +109,9 @@ Page({
 
 ## swiper
 
-**解释：**滑块视图容器。
+**解释**：滑块视图容器。
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
@@ -131,20 +131,20 @@ Page({
 |bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
 |bindanimationfinish|EventHandle| |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-**说明：**
+**说明**：
 其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
 
 ## swiper-item
 
-**注意：**仅可放置在`<swiper/>`组件中，宽高自动设置为100%。
+**注意**：仅可放置在`<swiper/>`组件中，宽高自动设置为100%。
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
 |item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -328,13 +328,13 @@ Page({
     margin-right: .1rem;
 }
 ```
-**说明：**
+**说明**：
 
 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起。
 
 ## movable-area
 
-**解释：**`movable-view` 的可移动区域。
+**解释**：`movable-view` 的可移动区域。
 > `movable-area` 必须设置width和height属性，不设置默认为10px。
 
 |属性名	|类型	|默认值|	说明|
@@ -342,9 +342,9 @@ Page({
 |scale-area	|Boolean|	false|	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
 ## movable-view
-**解释：**可移动的视图容器，在页面中可以拖拽滑动。
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -370,14 +370,14 @@ Page({
 |htouchmove|手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
 |vtouchmove|手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
 
-**说明：**
+**说明**：
 * movable-view 必须设置 width 和 height 属性，不设置默认为 10px；
 * movable-view 默认为绝对定位，top 和 left 属性为 0px；
 * 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；
 * 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x 轴方向和 y 轴方向分开考虑）；
 * movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/af66f1c09b800652bd15c74df87057e21548068761674" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```xml
@@ -393,7 +393,7 @@ Page({
 
 **属性说明： **无
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -476,7 +476,7 @@ controls {
 
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -505,7 +505,7 @@ controls {
 
 ![图片](../../../img/component/coverimage.png)
 
-**说明：**
+**说明**：
 
 1、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；
 2、文本建议都套上 cover-view 标签，避免排版错误；

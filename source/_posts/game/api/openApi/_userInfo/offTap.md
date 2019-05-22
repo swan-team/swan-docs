@@ -5,13 +5,13 @@ userInfoButton 对象上的方法，用于取消监听用户信息按钮的点�
 ```js
 userInfoButton.offTap(callback)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |callback|function|监听事件的回调函数|
 
-**示例：**
+**示例**：
 
 ```js
 let button = swan.createUserInfoButton({

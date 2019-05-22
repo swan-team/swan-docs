@@ -6,7 +6,7 @@
 fileSystemManager.stat(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -34,7 +34,7 @@ fileSystemManager.stat(opts)
 当接口执行成功时，其返回值与 success 回调函数的返回值相同；
 当接口执行失败时，其返回值与 fail 回调函数的返回值相同。
 
-**其他方法：**
+**其他方法**：
 
 `stats.isDirectory()`
 判断当前文件是否一个目录，返回 boolean 值
@@ -42,7 +42,7 @@ fileSystemManager.stat(opts)
 `stats.isFile()`
 判断当前文件是否一个普通文件，返回 boolean 值
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

@@ -8,7 +8,7 @@
 gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -21,7 +21,7 @@ gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 |height|GLsizei|纹理高度|
 |border|GLint|编译大小，应为 0；保留该参数是为了和桌面版的 OpenGL 兼容|
 
-**示例：**
+**示例**：
 
 ```js
 gl.copyTexImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 0, 0, 512, 512, 0);

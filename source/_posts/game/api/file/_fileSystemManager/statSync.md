@@ -6,13 +6,13 @@
 fileSystemManager.statSync(path)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
 |path|string|是|目录/文件路径|
 
-**返回值：**
+**返回值**：
 
 若接口调用成功，则返回该路径对应的文件的 Stats 对象。
 
@@ -27,7 +27,7 @@ Stats stats
 |err|Object|错误对象|
 |err.message|string|错误信息，可能是：`'fail no such file or directory ${path}'` 表示指定的路径下文件不存在，或读取的是文件非目录；或 `'fail permission denied, open ${path}'` 表示指定目录不在本地路径下，没有读权限|
 
-**其他方法：**
+**其他方法**：
 
 `stats.isDirectory()`
 判断当前文件是否一个目录，返回 boolean 值
@@ -35,7 +35,7 @@ Stats stats
 `stats.isFile()`
 判断当前文件是否一个普通文件，返回 boolean 值
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

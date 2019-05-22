@@ -6,13 +6,13 @@ WebGL 程序是一个状态机，函数的调用与当前状态有关，而“�
 gl.disable(cap)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |cap|GLenum|指定开启的 WebGL 能力，包括：`gl.BLEND`（混合）、 `gl.CULL_FACE`（剔除表面）、 `gl.DEPTH_TEST`（深度测试）、 `gl.DITHER`（颜色抖动）、 `gl.POLYGON_OFFSET_FILL`（多边形偏移）、 `gl.SAMPLE_ALPHA_TO_COVERAGE`（Alpha 通道多重采用覆盖）、 `gl.SAMPLE_COVERAGE`（多重采用覆盖）、 `gl.SCISSOR_TEST`（裁剪测试）、 `gl.STENCIL_TEST`（模板测试）|
 
-**示例：**
+**示例**：
 
 ```js
 gl.enable(gl.DEPTH_TEST)

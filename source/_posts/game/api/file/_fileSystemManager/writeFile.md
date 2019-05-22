@@ -50,7 +50,7 @@ fileSystemManager.writeFile(opts)
 当接口执行失败时，其 `res` 与 `fail` 的 `res` 相同。
 
 
-**示例：**
+**示例**：
 
 ```js
 const fs = swan.getFileSystemManager();

@@ -6,7 +6,7 @@
 swan.showKeyboard(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -30,7 +30,7 @@ swan.showKeyboard(opts)
 | `'go'` |前往|
 | `'send'` |发送|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showKeyboard({

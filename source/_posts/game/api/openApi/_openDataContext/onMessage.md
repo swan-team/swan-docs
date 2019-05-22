@@ -5,7 +5,7 @@
 ```js
 swan.onMessage(callback)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -19,7 +19,7 @@ swan.onMessage(callback)
 |-|-|-|
 |res|Object|从主域发送过来的消息|
 
-**示例：**
+**示例**：
 
 ```js
 // 开放数据域中

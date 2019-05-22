@@ -6,7 +6,7 @@
 swan.request(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|
@@ -45,7 +45,7 @@ responseType 合法值：
 |text|响应的数据为文本|
 |arraybuffer|响应的数据为 ArrayBuffer|
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象：
 
@@ -64,7 +64,7 @@ responseType 合法值：
 |res.header|Object|开发者服务器返回的 HTTP Response Header|
 
 
-**注意：**
+**注意**：
 
 1、content-type 默认为 application/json。
 2、url 中不能有端口配置。

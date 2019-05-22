@@ -6,13 +6,13 @@
 fileSystemManager.readdirSync(dirPath)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
 |dirPath|string||是|想要读取的文件所在的目录|
 
-**返回值：**
+**返回值**：
 
 若接口调用成功，则返回
 
@@ -28,7 +28,7 @@ fileSystemManager.readdirSync(dirPath)
 |err|Object|错误对象|
 |err.message|string|错误信息，可能是：`'fail no such file or directory ${dirPath}'` 表示指定的路径下目录不存在，或读取的是文件非目录；或 `'fail permission denied, open ${dirPath}'` 表示指定目录不在本地路径下，没有读权限|
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

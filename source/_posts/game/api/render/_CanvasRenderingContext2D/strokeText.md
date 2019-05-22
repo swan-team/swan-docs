@@ -7,7 +7,7 @@ context.strokeText(text, x, y, maxWidth);
 ```
 `strokeText()` 方法是对文本进行描边，绘制空心的文本。[`fillText()`](#fillText) 方法是对文本填充，绘制实心的文本。
 
-**参数值：**
+**参数值**：
 
 | 参数         |  类型  | 描述              |
 | ------------|------  | ---------------- |
@@ -17,7 +17,7 @@ context.strokeText(text, x, y, maxWidth);
 | maxWidth    | number | 可选。绘制文本允许的最大宽度（以像素为单位），如超出则文本宽度会被压缩至 `maxWidth`   |
 
 
-**示例：**
+**示例**：
 
 使用 `strokeText()` 方法描边绘制文本，并限定文本的最大宽度为 100 像素：
 

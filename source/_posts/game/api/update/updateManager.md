@@ -21,7 +21,7 @@ updateManager.applyUpdate()
 updateManager.onCheckForUpdate(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -44,7 +44,7 @@ updateManager.onCheckForUpdate(callback)
 updateManager.onUpdateReady(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -58,13 +58,13 @@ updateManager.onUpdateReady(callback)
 updateManager.onUpdateFailed(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |callback|function|监听小游戏更新失败的事件的回调函数|
 
-**示例：**
+**示例**：
 
 ```js
 const updateManager = swan.getUpdateManager();

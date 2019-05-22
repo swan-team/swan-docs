@@ -10,7 +10,7 @@ categoryName: api
 <!-- md game/api/net/_requestContext/RequestTask.md -->
 
 
-**示例：**
+**示例**：
 
 ```js
 const requestTask = swan.request({

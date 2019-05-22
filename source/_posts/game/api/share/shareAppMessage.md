@@ -13,7 +13,7 @@ priority: 10-01
 swan.shareAppMessage(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|

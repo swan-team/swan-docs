@@ -10,15 +10,15 @@ sidebar: open_payment
 
 > 基础库 1.8.5 版本开始支持。
 
-**解释：** 百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。
+**解释**： 百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。
 
 为了帮助开发者调用收银台接口，我们提供了Go语言版本封装了签名&验签、HTTP接口请求等基础功能，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
 了解更多信息，请查看 [百度电商开放平台：产品介绍](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/product_intro.md)。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,7 +29,7 @@ sidebar: open_payment
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**orderInfo 参数说明：**
+**orderInfo 参数说明**：
 
 |参数| 必填|说明|
 |----|   ----|---|
@@ -52,7 +52,7 @@ sidebar: open_payment
 |rsaSign|string|是|对`appKey+dealId+tpOrderId`进行RSA加密后的密文，防止订单被伪造。签名过程见 [百度电商开放平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。|
 |bizInfo| string|是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [百度电商开放平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/beginner_v2/step3/cash.md)。| -->
 
-**bannedChannels 参数说明：**
+**bannedChannels 参数说明**：
 
 |channel|说明 |
 |----| ---- |
@@ -60,7 +60,7 @@ sidebar: open_payment
 | BDWallet | 百度钱包 |
 | WeChat | 微信支付|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 

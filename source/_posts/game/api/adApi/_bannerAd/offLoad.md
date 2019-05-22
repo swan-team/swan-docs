@@ -6,14 +6,14 @@
 bannerAd.offLoad(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|否|取消监听 banner 广告加载事件对应的回调函数(如果不传参数，则清除所有监听 banner 广告加载事件的回调函数)|
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

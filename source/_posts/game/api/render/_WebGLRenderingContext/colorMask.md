@@ -6,7 +6,7 @@
 gl.colorMask(red, green, blue, alpha)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -15,7 +15,7 @@ gl.colorMask(red, green, blue, alpha)
 |blue|boolean|蓝色通道是否可写入|
 |alpha|boolean|透明度通道是否可写入|
 
-**示例：**
+**示例**：
 
 ```js
 gl.colorMask(true, false, true, false);

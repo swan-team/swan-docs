@@ -6,13 +6,13 @@
 gl.deleteTexture(texture)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |texture|WebGLTexture|待删除的纹理|
 
-**示例：**
+**示例**：
 
 ```js
 var texture = gl.createTexture();

@@ -6,14 +6,14 @@
 bannerAd.onResize(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|是|开发者改变 banner 广告位尺寸后的回调函数|
 
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |参数|类型|描述|
 |-|-|-|-|-|-|
@@ -22,7 +22,7 @@ bannerAd.onResize(callback)
 |res.height|number|改变后 banner 广告位的高度|
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

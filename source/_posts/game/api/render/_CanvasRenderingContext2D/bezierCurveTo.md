@@ -8,7 +8,7 @@
 context.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数  |  类型| 描述                 |
 | -----|-------| -------------------|
@@ -19,7 +19,7 @@ context.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
 | x    | number| 结束点的x坐标        |
 | y    | number| 结束点的x坐标        |
 
-**示例：**
+**示例**：
 
 绘制一个三次贝塞尔曲线的示例：
 

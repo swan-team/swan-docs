@@ -6,14 +6,14 @@
 rewardedVideoAd.onError(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|是|激励视频出现错误的回调函数|
 
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |属性|类型|描述|
 |-|-|-|-|-|-|
@@ -49,7 +49,7 @@ rewardedVideoAd.onError(callback)
 |else|其余错误码均为内部错误|
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

@@ -8,14 +8,14 @@
 gl.bindBuffer(target, buffer)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |target|GLenum|可取值为 `gl.ARRAY_BUFFER` 或 `gl.ELEMENT_ARRAY_BUFFER`。前者表示顶点缓冲类型，适用于包含顶点属性（如：顶点坐标、纹理坐标、顶点颜色等）；后者表示顶点索引缓冲，适用于元素索引值相关|
 |buffer|WebGLBuffer|一个正整数值，由 `gl.createBuffer()` 生成，用以标记帧缓冲区的名字|
 
-**示例：**
+**示例**：
 
 ```js
 var gl = canvas.getContext('webgl');

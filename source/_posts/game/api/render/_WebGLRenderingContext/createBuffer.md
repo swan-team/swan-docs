@@ -6,11 +6,11 @@
 WebGLBuffer gl.createBuffer()
 ```
 
-**返回值：**
+**返回值**：
 
 WebGLBuffer 格式的缓冲区。
 
-**示例：**
+**示例**：
 
 ```js
 var gl = canvas.getContext('webgl');

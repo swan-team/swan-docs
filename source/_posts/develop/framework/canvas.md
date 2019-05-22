@@ -5,7 +5,7 @@ nav: framework
 sidebar: canvas
 ---
 
-**解释：** canvas 画布，可使用 JS 操作 canvas 上下文，发出指令，进行绘制。
+**解释**： canvas 画布，可使用 JS 操作 canvas 上下文，发出指令，进行绘制。
 
 SWAN模板写法示例：
 

@@ -6,13 +6,13 @@
 swan.onCompassChange(callback)
 ```
 
-**callback 回调参数：**
+**callback 回调参数**：
 
 |属性|类型|描述|
 |-|-|-|
 |direction|number|面对的方向度数|
 
-**示例：**
+**示例**：
 
 ```js
 swan.onCompassChange(function (res) {

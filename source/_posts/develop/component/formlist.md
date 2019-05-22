@@ -32,7 +32,7 @@ sidebar: formlist
 
 -->
 
-**size有效值：**
+**size有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -40,7 +40,7 @@ sidebar: formlist
 | mini   |小尺寸 |
 
 
-**type有效值：**
+**type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -48,7 +48,7 @@ sidebar: formlist
 | default |白色|
 | warn |红色|
 
-**open-type有效值：**
+**open-type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -240,7 +240,7 @@ Page({
 | bindconfirm |EventHandle	  |  |点击完成按钮时触发，event.detail = {value: value}|
 
 
-**type 有效值：**
+**type 有效值**：
 
 |值|说明 |
 |---- | ---- |
@@ -249,7 +249,7 @@ Page({
 | idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
-**confirm-type 有效值：**
+**confirm-type 有效值**：
 
 |值|说明 |
 |---- | ---- |
@@ -342,13 +342,13 @@ Page({
     width: 2.79rem;
 }
 ```
-**说明：**
+**说明**：
 * confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持；
 * input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
 
-**BUG：**
+**BUG**：
 
   在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
 
@@ -620,7 +620,7 @@ Page({
 
 <div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -766,9 +766,9 @@ Page({
 
 ## slider
 
-**解释：**滑动选择器
+**解释**：滑动选择器
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -785,7 +785,7 @@ Page({
 |bindchange | EventHandle  | |完成一次拖动后触发的事件，event.detail = {value: value}|
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 

@@ -7,11 +7,11 @@ sidebar: show_query
 
 ## swan.createIntersectionObserver 
 
-**解释：** 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
+**解释**： 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
 
 **方法参数**：Object options
 
-**`options`参数说明：**
+**`options`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -19,7 +19,7 @@ sidebar: show_query
 |initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|
 |selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/efd1a134de87bfcdf9b15b5156d4e0061558352337120" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -114,10 +114,10 @@ Page({
 
 ## IntersectionObserver
 
-**解释：** IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
+**解释**： IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
 
 
-**`IntersectionObserver`对象的方法列表：**
+**`IntersectionObserver`对象的方法列表**：
 
 |方法 |说明|
 |---- | ---- | ---- |
@@ -129,9 +129,9 @@ Page({
 ## IntersectionObserver.relativeTo
 
 
-**解释：**使用选择器指定一个节点，作为参照区域之一。
+**解释**：使用选择器指定一个节点，作为参照区域之一。
 
-**参数说明：**String selector, Object margins
+**参数说明**：String selector, Object margins
 
 **`selector`参数说明:**选择器
 
@@ -146,9 +146,9 @@ Page({
 
 ## IntersectionObserver.relativeToViewport 
 
-**解释：**指定页面显示区域作为参照区域之一
+**解释**：指定页面显示区域作为参照区域之一
 
-**方法参数 ：**Object margins
+**方法参数 **：Object margins
 
 **`margin`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
@@ -162,13 +162,13 @@ Page({
 ## IntersectionObserver.observe 
 
 
-**解释：**指定目标节点并开始监听相交状态变化情况
+**解释**：指定目标节点并开始监听相交状态变化情况
 
-**方法参数 ：**String targetSelector, Function callback
+**方法参数 **：String targetSelector, Function callback
 
-**`targetSelector`参数说明：**选择器
+**`targetSelector`参数说明**：选择器
 
-**`callback`参数说明：**监听相交状态变化的回调函数
+**`callback`参数说明**：监听相交状态变化的回调函数
 
 **回调结果说明**
 
@@ -189,7 +189,7 @@ Page({
 |top| number | 上边界|
 |bottom  |number | 下边界|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.createIntersectionObserver(this, {
@@ -208,19 +208,19 @@ swan.createIntersectionObserver(this, {
 ## IntersectionObserver.disconnect 
 > 与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。
 
-**解释：**停止监听。回调函数将不再触发
-**方法参数：**无
+**解释**：停止监听。回调函数将不再触发
+**方法参数**：无
 
 
 ## swan.createSelectorQuery
 
-**解释：** 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
+**解释**： 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
 
-**方法参数：** 无
+**方法参数**： 无
 
-**返回值：**selectorQuery
+**返回值**：selectorQuery
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/6444dc8c1a552c147d760e0bb95059f61558352422429" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -336,9 +336,9 @@ movable-area {
 ```
 ## selectorQuery
 
-**解释：** 选择器
+**解释**： 选择器
 
-**`selectorQuery`对象的方法列表：**
+**`selectorQuery`对象的方法列表**：
 
 |方法 |参数  |说明|
 |---- | ---- | ---- |
@@ -350,12 +350,12 @@ movable-area {
 
 ### selectorQuery.in 
 
-**解释：** 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
+**解释**： 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 
 
-**方法参数：**Component component
+**方法参数**：Component component
 
-**示例：**
+**示例**：
 
 ```js
 Component({
@@ -370,11 +370,11 @@ Component({
 
 ## selectorQuery.select 
 
-**解释：** 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
+**解释**： 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
 
-**方法参数：**String selector
+**方法参数**：String selector
 
-**返回值：**nodesRef
+**返回值**：nodesRef
 
 selector 类似于 CSS 的选择器，但仅支持下列语法。
 
@@ -386,39 +386,39 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 ## selectorQuery.selectAll 
 
-**解释：** 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
+**解释**： 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
 
-**方法参数：**String selector
+**方法参数**：String selector
 
-**返回值：**nodesRef
+**返回值**：nodesRef
 
 ## selectorQuery.selectViewport 
 
-**解释：** 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
+**解释**： 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
 
-**方法参数：**String selector
+**方法参数**：String selector
 
-**返回值：**nodesRef
+**返回值**：nodesRef
 
 ##  selectorQuery.exec 
 
-**解释：** 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。
+**解释**： 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
 ## nodesRef 
 
-**解释：** 节点信息
+**解释**： 节点信息
 
 ## nodesRef.boundingClientRect 
 
-**解释：** 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
+**解释**： 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
 返回的节点信息中，每个节点的位置用 left、right、top、bottom、width、height 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -453,13 +453,13 @@ Page({
 
 ## nodesRef.scrollOffset 
 
-**解释：** 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
+**解释**： 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
 返回的节点信息中，每个节点的滚动位置用 scrollLeft 、s crollTop 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -476,11 +476,11 @@ Page({
 
 ## nodesRef.fields
 
-**解释：** 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
+**解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 
-**方法参数：**Object fields, Function callback
+**方法参数**：Object fields, Function callback
 
-**`fields`参数说明：**
+**`fields`参数说明**：
 
 |字段名 |默认值  |说明|
 |---- | ---- | ---- |
@@ -492,7 +492,7 @@ Page({
 |properties  |  []  | 指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
 |computedStyle  |  []  | 指定样式名列表，返回节点对应样式名的当前值 |
 
-**示例：**
+**示例**：
 
 ```js
 Page({

@@ -6,7 +6,7 @@
 fileSystemManager.getFileInfo(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -30,7 +30,7 @@ fileSystemManager.getFileInfo(opts)
 |-|-|-|
 |res.errMsg|string|fail file not exist 指定的路径下该文件不存在|
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

@@ -7,7 +7,7 @@ context.lineCap = "butt";
 context.lineCap = "round";
 context.lineCap = "square";
 ```
-**属性值：**
+**属性值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -15,7 +15,7 @@ context.lineCap = "square";
 | round  | string | 向线段末端增加一个半径为线条厚度一半的半圆，线条末端为圆形|
 | square | string | 向线段末端增加一个长度为线条厚度一半，宽度与线宽一致的矩形，线段末端为方形 |
 
-**示例：**
+**示例**：
 
 使用 `lineCap` 属性设置三个线段不同的末端样式：
 

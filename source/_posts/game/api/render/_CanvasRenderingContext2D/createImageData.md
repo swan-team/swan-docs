@@ -15,7 +15,7 @@ context.createImageData(imagedata);
 <li> B - 蓝色（0-255）</li>
 <li> A - alpha通明度（0-255）</li>
 
-**参数值：**
+**参数值**：
 
 | 参数          |  类型  | 描述                                           |
 | -------------|------ | ---------------------------------------------- |
@@ -24,7 +24,7 @@ context.createImageData(imagedata);
 | imagedata    | Object | 从现有 `ImageData` 对象中，复制一个新的 `ImageData` 对象 |
 
 
-**示例：**
+**示例**：
 
 使用 `createImageData(width, height)` 方法，以指定尺寸创建新的 `imageData` 对象的示例：
 

@@ -11,11 +11,11 @@ sidebar: show_tab
 ## swan.navigateTo
 
 
-**解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
+**解释**：保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +25,7 @@ sidebar: show_tab
 |complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/dd7e70fdad89cca08b0a8a54e12a0b9c1540396427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.navigateTo({
@@ -47,11 +47,11 @@ swan.navigateTo({
 
 ## swan.redirectTo
 
-**解释：**关闭当前页面，跳转到应用内的某个页面。
+**解释**：关闭当前页面，跳转到应用内的某个页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -61,7 +61,7 @@ swan.navigateTo({
 |complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/00b8b93225cfaf30de9f4329f1962ee91557729109817" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -100,11 +100,11 @@ Page({
 
 ## swan.switchTab
 
-**解释：**跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
+**解释**：跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -113,7 +113,7 @@ Page({
 |fail   | Function |   否  |-|  接口调用失败的回调函数|
 |complete |   Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/b62ad6cdc0ef78061a6581fa9a1fc9ab1557729238493" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -152,13 +152,13 @@ Page({
 
 ## swan.navigateBack
 
-**解释：**关闭当前页面，返回上一页面或多级页面。
+**解释**：关闭当前页面，返回上一页面或多级页面。
 
-**Object 参数说明：**
+**Object 参数说明**：
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -168,7 +168,7 @@ Page({
 |complete|	function|		否|-| 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/f8d91e30ca7ed70b3114add6fd1a58711557729485160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -235,11 +235,11 @@ Page({
 
 ## swan.reLaunch
 
-**解释：**关闭所有页面，打开到应用内的某个页面。
+**解释**：关闭所有页面，打开到应用内的某个页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -249,7 +249,7 @@ Page({
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/7a5d527292a5ff0339bc3dc24803bc7c1557729741562" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

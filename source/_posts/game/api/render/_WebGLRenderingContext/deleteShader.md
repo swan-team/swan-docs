@@ -6,13 +6,13 @@
 gl.deleteShader(shader)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |shader|WebGLShader|待删除的着色器|
 
-**示例：**
+**示例**：
 
 ```js
 var shader = gl.createShader(gl.VERTEX_SHADER);

@@ -14,7 +14,7 @@ categoryName: api
 swan.onAudioInterruptionBegin(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -29,7 +29,7 @@ swan.onAudioInterruptionBegin(callback)
 swan.offAudioInterruptionBegin(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -44,7 +44,7 @@ swan.offAudioInterruptionBegin(callback)
 swan.onAudioInterruptionEnd(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -59,7 +59,7 @@ swan.onAudioInterruptionEnd(callback)
 swan.offAudioInterruptionEnd(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -75,7 +75,7 @@ swan.offAudioInterruptionEnd(callback)
 swan.onError(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -88,7 +88,7 @@ swan.onError(callback)
 |res|Object|res 对象|
 |res.message|string|错误信息并且包含错误调用栈|
 
-**示例：**
+**示例**：
 
 ```js
 swan.onError(function (res) {
@@ -107,13 +107,13 @@ swan.offError(callback)
 撤销全局错误监听，传入的 `callback` 即为调用 [`swan.onError()`](#swan-onError) 传入的 `callback` 对象。
 
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |callback|function|回调函数|
 
-**示例：**
+**示例**：
 
 ```js
 const handler = function (res) {

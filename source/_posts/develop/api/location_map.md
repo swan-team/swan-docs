@@ -7,14 +7,14 @@ sidebar: location_map
 
 ## swan.createMapContext
 
-**解释：**创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
+**解释**：创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
 
-**方法参数：**String mapId
+**方法参数**：String mapId
 
-**返回值：**mapContext
+**返回值**：mapContext
 
 ## mapContext
-**`mapContext`对象的方法列表：**
+**`mapContext`对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -25,7 +25,7 @@ sidebar: location_map
 |getRegion  | OBJECT  | 获取当前地图的视野范围  |
 |getScale | OBJECT |  获取当前地图的缩放级别 |
 
-**getCenterLocation 的 Object 参数列表：**
+**getCenterLocation 的 Object 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -33,7 +33,7 @@ sidebar: location_map
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**translateMarker 的 Object 参数列表：**
+**translateMarker 的 Object 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -45,14 +45,14 @@ sidebar: location_map
 |fail   | Function   | 否 |  接口调用失败的回调函数|
 |animationEnd|Function|否|动画结束时回调函数|
 
-**includePoints 的 OBJECT 参数列表：**
+**includePoints 的 OBJECT 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
 |points  |Array  |  是  | 要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
 |padding  |Array  |  否 |  坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
 
-**getRegion 的 OBJECT 参数列表：**
+**getRegion 的 OBJECT 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -60,7 +60,7 @@ sidebar: location_map
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**getScale 的 OBJECT 参数列表：**
+**getScale 的 OBJECT 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -68,7 +68,7 @@ sidebar: location_map
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

@@ -23,7 +23,7 @@ categoryName: api
 swan.createRecommendationButton(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -47,7 +47,7 @@ swan.createRecommendationButton(opts)
 |list|聚合|
 
 
-** 示例：**
+** 示例**：
 ```javascript
 // 创建按钮
 const recommendationButton = swan.createRecommendationButton({

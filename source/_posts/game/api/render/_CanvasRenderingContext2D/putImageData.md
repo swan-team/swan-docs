@@ -9,7 +9,7 @@ context.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 一般先使用 `getImageData()` 方法获取图片的像素数据，然后利用 `putImageData()` 方法将已获得的数据输出。
 使用该方法，可以实现图像反转、单色蒙版、黑白等效果。
 
-**参数值：**
+**参数值**：
 
 | 参数 |  类型  | 描述              |
 | ----|------  | ---------------- |
@@ -21,7 +21,7 @@ context.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
 | dirtyWidth  | number |可选。输出 ImageData 对象范围矩形的宽  |
 | dirtyHeight  | number |可选。输出 ImageData 对象范围矩形的高   |
 
-**示例：**
+**示例**：
 
 通过 `getImageData()` 方法复制画布上指定矩形区域内的像素数据，然后通过 [`putImageData()`](#putImageData) 方法将图像数据绘制到画布：
 

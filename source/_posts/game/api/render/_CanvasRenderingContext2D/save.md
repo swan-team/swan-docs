@@ -7,7 +7,7 @@ context.save();
 ```
 `save()` 方法可保存用于描述画布绘图状态的全部属性：当前的变换矩阵、当前的裁剪的区域、以下属性的当前值：`strokeStyle`、 `fillStyle`、 `lineWidth`、` lineCap`、 `lineJoin`、 `miterLimit`、 `shadowOffsetX`、 `shadowOffsetY`、 `shadowBlur`、 `shadowColor`、`globalAlpha`、`globalCompositeOperation`、`font`、`textAlign`、 `textBaseline`。
 
-**示例：**
+**示例**：
 
 使用 `save()` 方法保存初始状态，设置和绘制第一个红色矩形，使用 [`restore()`](#restore) 方法方法恢复到 [`save()`](#save) 保存的初始状态再绘制一个矩形路径。此时，第二个矩形将不再受第一个红色矩形设置样式的影响，而会以默认的样式绘制一个黑色的矩形 ：
 

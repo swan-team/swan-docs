@@ -25,7 +25,7 @@ categoryName: api
 |width|宽度（固定值，不支持修改）|
 |height|高度（固定值，不支持修改）|
 
-** 示例：**
+** 示例**：
 ```javascript
 // 获取按钮高宽、坐标
 console.log(recommendationButton.style);
@@ -37,7 +37,7 @@ recommendationButton.style.top = 200;
 ### recommendationButton.onLoad(callback)
 recommendationButton 对象上的方法，监听 recommendationButton 加载完成后的回调函数。
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |--|--|--|--|
@@ -59,7 +59,7 @@ recommendationButton 对象上的方法，用于隐藏按钮。
 ### recommendationButton.onError(callback)
 recommendationButton 对象上的方法，监听 recommendationButton 错误事件。
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |--|--|--|--|
@@ -72,7 +72,7 @@ recommendationButton 对象上的方法，取消监听 recommendationButton 错�
 ### recommendationButton.destroy()
 recommendationButton 对象上的方法，销毁 recommendationButton 按钮。
 
-**示例：**
+**示例**：
 ``` javascript
 // 获取按钮高宽、坐标
 console.log(recommendationButton.style)

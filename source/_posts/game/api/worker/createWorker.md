@@ -14,12 +14,12 @@ priority: 18-01
 swan.createWorker(path)
 ```
 
- **参数值：**
+ **参数值**：
 
  |属性|类型|是否必填|描述|
 |-|-|-|-|
 |path|string|是|入口文件绝对路径|
 
- **返回值：**
+ **返回值**：
 
  [Worker 对象](/game/api/worker/workerObj/)

@@ -17,11 +17,11 @@ sidebar: open_userinfo
 
 ## swan.getSwanId
 
-**解释：**获取 swanid。
+**解释**：获取 swanid。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,7 +29,7 @@ sidebar: open_userinfo
 |fail  |  Function |   否 | -|  接口调用失败的回调函数|
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -45,7 +45,7 @@ sidebar: open_userinfo
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -103,11 +103,11 @@ Page({
 
 ## swan.getUserInfo
 
-**解释：**获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
+**解释**：获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -116,7 +116,7 @@ Page({
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -125,7 +125,7 @@ Page({
 |iv | String | 加密算法的初始向量|
 
 
-**userInfo参数说明：**
+**userInfo参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -133,7 +133,7 @@ Page({
 |avatarUrl  | String  |用户头像|
 |gender | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**用户数据解密后字段说明：**
+**用户数据解密后字段说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -141,7 +141,7 @@ Page({
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/d12f967d05c0b93ac15d66d138658d9b1540398240" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.getUserInfo({

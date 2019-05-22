@@ -6,7 +6,7 @@
 rewardedVideoAd.show()
 ```
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

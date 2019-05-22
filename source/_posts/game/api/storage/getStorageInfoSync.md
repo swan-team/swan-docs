@@ -12,11 +12,11 @@ priority: 05-04
 swan.getStorageInfoSync()
 ```
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象
 
-**返回对象属性说明：**
+**返回对象属性说明**：
 
 |属性|类型|描述|
 |-|-|-|
@@ -25,7 +25,7 @@ swan.getStorageInfoSync()
 |res.currentSize|number|当前占用的空间大小, 单位 KB|
 |res.limitSize|number|当前占用的空间大小, 单位 KB|
 
-**示例：**
+**示例**：
 
 ```js
 try {

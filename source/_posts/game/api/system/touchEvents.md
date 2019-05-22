@@ -15,7 +15,7 @@ categoryName: api
 swan.onTouchStart(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -48,7 +48,7 @@ swan.onTouchStart(callback)
 swan.offTouchStart(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -63,7 +63,7 @@ swan.offTouchStart(callback)
 swan.onTouchMove(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -97,7 +97,7 @@ swan.onTouchMove(callback)
 swan.offTouchMove(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -112,7 +112,7 @@ swan.offTouchMove(callback)
 swan.onTouchEnd(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -146,7 +146,7 @@ swan.onTouchEnd(callback)
 swan.offTouchEnd(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -161,7 +161,7 @@ swan.offTouchEnd(callback)
 swan.onTouchCancel(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -195,7 +195,7 @@ swan.onTouchCancel(callback)
 swan.offTouchCancel(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|

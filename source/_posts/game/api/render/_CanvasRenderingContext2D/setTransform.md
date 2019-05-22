@@ -15,7 +15,7 @@ context.setTransform(a, b, c, d, e, f);
    0   0   1
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数 |  类型  | 描述          |
 | ----|------  | ------------ |
@@ -27,7 +27,7 @@ context.setTransform(a, b, c, d, e, f);
 | f   | number | 垂直移动绘图   |
 
 
-**示例：**
+**示例**：
 
 使用 `setTransform()` 方法变换矩形的示例：
 

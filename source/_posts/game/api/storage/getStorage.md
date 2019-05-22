@@ -12,7 +12,7 @@ priority: 05-01
 swan.getStorage(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -22,7 +22,7 @@ swan.getStorage(opts)
 |opts.fail|function|否|接口调用失败的回调函数|
 |opts.complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
+**返回值**：
 
 `success` 回调函数：
 
@@ -32,7 +32,7 @@ swan.getStorage(opts)
 |-|-|-|
 |res.data|Object<span class="vsplit"></span>string|key 对应的内容|
 
-**示例：**
+**示例**：
 
 ```js
 const key = 'mockData';

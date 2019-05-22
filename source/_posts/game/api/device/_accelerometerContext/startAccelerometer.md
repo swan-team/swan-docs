@@ -6,7 +6,7 @@
 swan.startAcclerometer(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -27,7 +27,7 @@ swan.startAcclerometer(opts)
 |normal|普通的回调频率，在 200 ms/次左右|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.startAccelerometer({

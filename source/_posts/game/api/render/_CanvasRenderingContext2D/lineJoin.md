@@ -7,7 +7,7 @@ context.lineJoin = "bevel";
 context.lineJoin = "round";
 context.lineJoin = "miter";
 ```
-**属性值：**
+**属性值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -16,7 +16,7 @@ context.lineJoin = "miter";
 | bevel  | string | 以线段交接末端填充一个斜角，斜角所在正方形的对角线长度等于线段宽度，两线段连接处显示为矩形拐角 |
 
 
-**示例：**
+**示例**：
 使用 `lineJoin` 属性设定三个线段连接处的不同样式：
 
 ![图片](/img/game/canvas/lineJoin-001.png)

@@ -6,13 +6,13 @@
 gl.clearDepth(depth)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |depth|GLclampf|深度值，0 到 1，默认值为 0|
 
-**示例：**
+**示例**：
 
 ```js
 gl.clearDepth(0.5);

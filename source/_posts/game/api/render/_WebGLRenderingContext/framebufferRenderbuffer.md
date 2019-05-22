@@ -6,7 +6,7 @@
 gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -15,7 +15,7 @@ gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
 |renderbuffertarget|GLenum|渲染缓冲区的绑定点，可取值：`gl.RENDERBUFFER`|
 |renderbuffer|WebGLRenderbuffer|待绑定的渲染缓冲区对象|
 
-**示例：**
+**示例**：
 
 ```js
 gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.RENDERBUFFER, renderbuffer);

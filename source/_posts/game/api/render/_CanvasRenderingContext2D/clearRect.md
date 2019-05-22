@@ -6,7 +6,7 @@
 context.clearRect(x, y, width, height);
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数         |  类型 | 描述                              |
 | ------------|------  | ---------------------------------|
@@ -16,7 +16,7 @@ context.clearRect(x, y, width, height);
 | height      | number | 矩形的高度                         |
 
 
-**示例：**
+**示例**：
 
 绘制一个圆形，再使用 `clearRect()` 方法清除一个矩形区域内的像素内容：
 

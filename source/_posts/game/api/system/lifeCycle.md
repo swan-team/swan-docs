@@ -9,7 +9,7 @@ categoryName: api
 
 获得小游戏启动参数。
 
-**返回值：**
+**返回值**：
 
 `Object`：
 
@@ -26,7 +26,7 @@ categoryName: api
 |appId|string|调起小游戏的 appId|
 |extraData|Object|额外的信息|
 
-**示例：**
+**示例**：
 
 ```js
 const launchInfo = swan.getLaunchOptionsSync();
@@ -42,7 +42,7 @@ console.log('launchOptionsSync:', launchInfo.query);
 swan.onShow(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -75,7 +75,7 @@ swan.onShow(callback)
 swan.offShow(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -89,7 +89,7 @@ swan.offShow(callback)
 swan.onHide(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -104,7 +104,7 @@ swan.onHide(callback)
 swan.offHide(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -118,7 +118,7 @@ swan.offHide(callback)
 swan.reload(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -139,7 +139,7 @@ swan.reload(opts)
 `fail` 回调函数：reload弹窗未被调起，详情可打印`res.errMsg`。
 
 
-**示例：**
+**示例**：
 
 ```
 swan.reload({
@@ -160,7 +160,7 @@ swan.reload({
 swan.exit(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|描述|
 |-|-|-|

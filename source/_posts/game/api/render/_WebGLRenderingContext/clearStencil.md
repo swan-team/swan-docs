@@ -6,7 +6,7 @@
 gl.clearStencil(s)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -14,7 +14,7 @@ gl.clearStencil(s)
 
 `s` 由 2<sup>m</sup> - 1 进行遮罩，其中 m 是模板缓冲区中的位数。
 
-**示例：**
+**示例**：
 
 ```js
 gl.clearStencil(1);

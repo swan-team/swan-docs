@@ -7,7 +7,7 @@ context.fillStyle = color;
 context.fillStyle = gradient;
 context.fillStyle = pattern;
 ```
-**属性值：**
+**属性值**：
 
 | 值         |  类型  | 描述              |
 | ---------- |------  | ---------------- |
@@ -15,7 +15,7 @@ context.fillStyle = pattern;
 | gradient   | Object | 用于填充图形的线性或放射性渐变  |
 | pattern    | Object | 用于填充图形的可重复图像  |
 
-**示例：**
+**示例**：
 
 使用 `fillStyle` 属性的 CSS 颜色值填充第一个矩形，使用线性渐变填充第二个矩形的示例：
 

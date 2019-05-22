@@ -48,18 +48,18 @@ priority: 03-01
 ### LayaAir引擎
 
 1. LayaAir 1.7.20 & 2.0 beta3 版本，在 libs/laya.wxminmi.js 文件中 `MiniAdpter.window.wx.onMessage(MiniAdpter._onMessage);` 由于百度小游戏在主域不会暴露 [onMessage()](/game/api/openApi/openDataContext/#swan-onMessage) 方法，故会报错。
-**解决方法：**在引擎方没有做兼容的情况下，若项目中没使用开放数据域即可注释该行代码，如果使用开放数据域，则尽量不要使用新版 LayaAir IDE 的开放数据域组件。
+**解决方法**：在引擎方没有做兼容的情况下，若项目中没使用开放数据域即可注释该行代码，如果使用开放数据域，则尽量不要使用新版 LayaAir IDE 的开放数据域组件。
 
 2. index.js 中 `loadLib` 无法引入文件。
-**解决方法：** 使用 `require` 替换 `loadLib` 方法。
+**解决方法**： 使用 `require` 替换 `loadLib` 方法。
 
 3. 如果使用物理引擎的话，会报 `Can not find box2d libs`。
-**解决方法：**将 libs/laya.physics.js 文件中的 `var box2d={b2Settings:{}}` 替换成 ` box2d={b2Settings:{}}`。
+**解决方法**：将 libs/laya.physics.js 文件中的 `var box2d={b2Settings:{}}` 替换成 ` box2d={b2Settings:{}}`。
 
 ### 白鹭引擎
 
 1. openDataContext/index.js 中调用 [swan.onTouchEnd()](/game/api/system/touchEvents/#swan-onTouchEnd) 监听开放数据域中的点击事件报错，在百度小游戏的开放数据域中不能调用非开放数据域 API。
-**解决方法：**将按钮画在主域，通过在主域中绑定的点击事件中 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 到开放数据域来实现相关操作。
+**解决方法**：将按钮画在主域，通过在主域中绑定的点击事件中 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 到开放数据域来实现相关操作。
 
 2. openDataContext/index.js 中调用 [swan.getSystemInfoSync()](/game/api/system/systemInfo/) 调用报错。
-**解决方法：**在主域使用 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 将系统信息发到开放数据域中使用。
+**解决方法**：在主域使用 [postMessage()](/game/api/openApi/openDataContext/#openDataContext-postMessage) 将系统信息发到开放数据域中使用。

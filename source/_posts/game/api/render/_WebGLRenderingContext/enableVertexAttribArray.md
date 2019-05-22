@@ -6,13 +6,13 @@
 gl.enableVertexAttribArray(index)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |index|GLuint|指定一般顶点属性的索引|
 
-**示例：**
+**示例**：
 
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);

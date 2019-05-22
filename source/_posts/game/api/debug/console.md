@@ -46,7 +46,7 @@ console.error()
 | args | any |是|日志内容，可以有任意多个|
 
 
-**注意：**
+**注意**：
 * 由于 sConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小游戏中只使用本文档中提供的方法。
 * 部分内容展示的限制请参见 [sConsole](/game/tutorials/devtools/smartappdebug/#sConsole)。
 

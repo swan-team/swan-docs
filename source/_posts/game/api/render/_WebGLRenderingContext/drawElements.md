@@ -6,7 +6,7 @@
 gl.drawElements(mode, count, type, offset)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -15,7 +15,7 @@ gl.drawElements(mode, count, type, offset)
 |type|GLenum|数组元素类型，可取值：`gl.UNSIGNED_BYTE`、 `gl.UNSIGNED_SHORT`|
 |offset|GLintptr|偏移值，应是 `type` 对应长度的整数倍|
 
-**示例：**
+**示例**：
 
 ```js
 gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_BYTE, 0);

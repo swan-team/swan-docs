@@ -6,14 +6,14 @@
 gl.bindRenderbuffer(target, rendererbuffer)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |target|GLenum|可取值为 `gl.RENDERBUFFER`|
 |renderbuffer|WebGLRenderbuffer|一个正整数值，由 `gl.createRenderbuffer()` 生成，用以标记渲染缓冲区的名字|
 
-**示例：**
+**示例**：
 
 ```js
 var gl = canvas.getContext('webgl');

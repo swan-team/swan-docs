@@ -9,15 +9,15 @@ sidebar: media_cameracontext
 
 ## swan.createCameraContext
 
-**解释：**创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
+**解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
-**方法参数：**无
+**方法参数**：无
 
-**返回值：**cameraContext
+**返回值**：cameraContext
 
 ## cameraContext
 
-**`cameraContext`对象的方法列表：**
+**`cameraContext`对象的方法列表**：
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
@@ -26,7 +26,7 @@ sidebar: media_cameracontext
 |stopRecord | Object | 结束录像，成功则返回封面与视频。|
 
 
-**takePhoto 的 Object 参数列表：**
+**takePhoto 的 Object 参数列表**：
 
 |参数  |类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -36,7 +36,7 @@ sidebar: media_cameracontext
 |complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**startRecord 的 Object 参数列表：**
+**startRecord 的 Object 参数列表**：
 
 |参数 | 类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -45,7 +45,7 @@ sidebar: media_cameracontext
 |complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**stopRecord 的 Object 参数列表：**
+**stopRecord 的 Object 参数列表**：
 
 |参数 | 类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -53,7 +53,7 @@ sidebar: media_cameracontext
 |fail |   Function |   否  | 接口调用失败的回调函数|
 |complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
  
 <a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

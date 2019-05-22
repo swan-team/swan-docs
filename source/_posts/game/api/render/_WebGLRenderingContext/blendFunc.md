@@ -6,14 +6,14 @@
 gl.blendFunc(sfactor, dfactor)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |sfactor|GLenum|源的缩放因子，默认值为 `gl.ONE`，也就是完全使用接下来绘制的颜色作为最终的颜色|
 |dfactor|GLenum|目标（帧缓冲区）的缩放因子，默认值为 `gl.ZERO`，也就是完全使用接下来绘制的颜色作为最终的颜色|
 
-**示例：**
+**示例**：
 
 ```js
 gl.enable(gl.BLEND);

@@ -8,15 +8,15 @@ sidebar: media_recorder
 
 ## swan.getRecorderManager
 
-**解释：** 获取全局唯一的录音管理器`recorderManager`。
+**解释**： 获取全局唯一的录音管理器`recorderManager`。
 
-**方法参数：** 无
+**方法参数**： 无
 
-**返回值：**recorderManager
+**返回值**：recorderManager
 
 ## recorderManager
 
-**`recorderManager`对象的方法列表：**
+**`recorderManager`对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -29,7 +29,7 @@ sidebar: media_recorder
 |onStop | callback | 录音停止事件，会回调文件地址。 |
 |onError | callback | 录音错误事件, 会回调错误信息 。|
 
-**start(options) 说明：**
+**start(options) 说明**：
 
 |属性 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- | ---- |
@@ -47,19 +47,19 @@ sidebar: media_recorder
 |16000| 24000 ~ 96000|
 |44100| 64000 ~ 320000|
 
-**onStop(callback) 回调结果说明：**
+**onStop(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |tempFilePath |String | 录音文件的临时路径 |
 
-**onError(callback) 回调结果说明：**
+**onError(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |errMsg |String | 错误信息 |
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/e58b40296c7b21d2b18f1792ffc30ae01540398986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 

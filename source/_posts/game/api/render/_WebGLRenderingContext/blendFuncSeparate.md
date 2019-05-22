@@ -6,7 +6,7 @@
 gl.blendFunc(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -15,7 +15,7 @@ gl.blendFunc(srcRGB, dstRGB, srcAlpha, dstAlpha)
 |srcAlpha|GLenum|源 Alpha 的缩放因子，默认值为 `gl.ONE`，也就是完全使用接下来绘制的颜色作为最终的颜色|
 |dstAlpha|GLenum|目标（帧缓冲区）Alpha 的缩放因子，默认值为 `gl.ZERO`，也就是完全使用接下来绘制的颜色作为最终的颜色|
 
-**示例：**
+**示例**：
 
 ```js
 gl.enable(gl.BLEND);

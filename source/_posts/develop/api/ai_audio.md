@@ -7,9 +7,9 @@ sidebar: ai_audio
 
 ## swan.ai.textToAudio
 
-**解释：**将文本转换为可以播放的 mp3 文件。
+**解释**：将文本转换为可以播放的 mp3 文件。
 
-**方法参数：**Object data
+**方法参数**：Object data
 
 **`data` 参数说明**：
 
@@ -26,13 +26,13 @@ sidebar: ai_audio
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
 |filePath | String | 合成的音频文件的路径。|
 
-**示例：**
+**示例**：
 ```js
 swan.ai.textToAudio({
     tex: '这是一段测试文字',

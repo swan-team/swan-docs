@@ -6,14 +6,14 @@
 gl.swanBindCanvasTexture(texture, canvas)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |texture|GLenum|只能取值为 `gl.TEXTURE_2D`（二维纹理）|
 |canvas|Canvas|被绑定的 canvas|
 
-**示例：**
+**示例**：
 
 使用 swanBindCanvasTexture
 

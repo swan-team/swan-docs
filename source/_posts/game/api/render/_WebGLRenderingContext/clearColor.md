@@ -6,7 +6,7 @@
 gl.clearColor(red, green, blue, alpha)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -15,7 +15,7 @@ gl.clearColor(red, green, blue, alpha)
 |blue|GLclampf|蓝色通道颜色值，0 到 1，默认值为 0|
 |alpha|GLclampf|透明度通道颜色值，0 到 1，默认值为 0|
 
-**示例：**
+**示例**：
 
 ```js
 gl.clearColor(1, 0, 0, 1);

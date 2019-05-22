@@ -6,7 +6,7 @@
 swan.getUserInfo(opts);
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -34,7 +34,7 @@ swan.getUserInfo(opts);
 |gender|string|性别|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.getUserInfo({

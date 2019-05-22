@@ -12,7 +12,7 @@ priority: 05-05
 swan.setStorage(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -23,7 +23,7 @@ swan.setStorage(opts)
 |opts.fail|function|否|接口调用失败的回调函数|
 |opts.complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**特别说明：**
+**特别说明**：
 1. 兼容 function 数据的存储，但是 Android 和 iOS 均会将其置为 null。
 2. 对于 ArrayBuffer 的数据，Android 支持, iOS 暂不支持。
 3. 对于 undefined 的数据，Android 支持，iOS 暂不支持， iOS 会对 undefined 数据直接过滤掉。
@@ -42,7 +42,7 @@ swan.setStorage(opts)
         }
 ```
 
-**示例：**
+**示例**：
 
 ```js
 const key = 'mockData';

@@ -10,7 +10,7 @@ categoryName: api
 <!-- md game/api/net/_downloadFileContext/onProgressUpdate.md -->
 <!-- md game/api/net/_downloadFileContext/abort.md -->
 
-**示例：**
+**示例**：
 
 ```js
 const downloadUrl = 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf';

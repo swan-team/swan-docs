@@ -10,7 +10,7 @@ priority: 09-06
 
 创建一个图片对象。
 
-**返回值：**
+**返回值**：
 
 `Object`：
 
@@ -22,7 +22,7 @@ priority: 09-06
 |onload|function|图片加载完的回调函数|
 |onerror|function|图片加载错误的回调函数|
 
-**示例：**
+**示例**：
 
 ```js
 var img = swan.createImage();

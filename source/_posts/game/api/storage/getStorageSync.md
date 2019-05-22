@@ -12,13 +12,13 @@ priority: 05-02
 swan.getStorageSync(key)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
 |key|string|是|本地缓存中指定的 key|
 
-**返回值：**
+**返回值**：
 
 `Object|string`：
 

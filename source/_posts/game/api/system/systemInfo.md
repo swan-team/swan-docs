@@ -13,7 +13,7 @@ categoryName: api
 swan.getSystemInfo(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -21,7 +21,7 @@ swan.getSystemInfo(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
+**返回值**：
 
 `success` 回调函数：
 
@@ -43,7 +43,7 @@ swan.getSystemInfo(opts)
 |res.fontSizeSetting|number|用户字体大小设置|
 |res.SDKVersion|string|客户端基础库版本|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSystemInfo({
@@ -65,7 +65,7 @@ swan.getSystemInfo({
 swan.getSystemInfoSync()
 ```
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象：
 
@@ -85,7 +85,7 @@ swan.getSystemInfoSync()
 |fontSizeSetting|number|用户字体大小设置|
 |SDKVersion|string|客户端基础库版本|
 
-**示例：**
+**示例**：
 
 ```js
 let data = swan.getSystemInfoSync();
@@ -93,5 +93,5 @@ console.log('手机品牌信息：', data.brand);
 
 ```
 
-**注意：**
+**注意**：
 `fontSizeSetting` 数据信息双端纬度不一致，iOS 1~4 共计 4 档，Android 0~3 共计 4 档。

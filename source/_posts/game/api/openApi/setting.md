@@ -13,7 +13,7 @@ categoryName: api
 swan.getSetting(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -32,7 +32,7 @@ swan.getSetting(opts)
 |res.authSetting| [Object.<[AuthSetting](#AuthSetting)>] |{}|用户已经授权过的权限|
 |res.errMsg| string | |调用结果|
 
-**示例：**
+**示例**：
 
 ```js
   swan.authorize({
@@ -59,7 +59,7 @@ swan.getSetting(opts)
 swan.openSetting(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -77,7 +77,7 @@ swan.openSetting(opts)
 |res| Object | | success 回调返回对象|
 |res.authSetting| [Object.<[AuthSetting](#AuthSetting)>] |{}|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
-**示例：**
+**示例**：
 
 ```js
     swan.openSetting({

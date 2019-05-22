@@ -6,7 +6,7 @@
 swan.getClipboardData(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -21,7 +21,7 @@ swan.getClipboardData(opts)
 |-|-|-|
 |data|string|剪贴板的内容|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getClipboardData({

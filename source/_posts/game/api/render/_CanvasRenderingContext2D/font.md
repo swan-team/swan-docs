@@ -6,7 +6,7 @@
 context.font = value;
 ```
 
-**属性值：**
+**属性值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -17,7 +17,7 @@ context.font = value;
 | font-height  | string |设置字体行高  |
 | font-family | string |设置字体系列  |
 
-**示例：**
+**示例**：
 
 使用 `font` 定义文本的尺寸和字体样式：
 

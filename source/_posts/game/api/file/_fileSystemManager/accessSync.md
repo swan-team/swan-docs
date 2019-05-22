@@ -5,7 +5,7 @@
 ```js
 fileSystemManager.accessSync(path)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -17,7 +17,7 @@ fileSystemManager.accessSync(path)
 |-|-|
 | fail no such file or directory ${path} | 文件/目录不存在
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

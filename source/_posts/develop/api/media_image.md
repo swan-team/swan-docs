@@ -8,11 +8,11 @@ sidebar: media_image
 
 ## swan.chooseImage
 
-**解释：**从本地相册选择图片或使用相机拍照。
+**解释**：从本地相册选择图片或使用相机拍照。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,7 +27,7 @@ sidebar: media_image
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
@@ -42,7 +42,7 @@ sidebar: media_image
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/25d4a08064aa160d2986a38e3f9311921548069510198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
@@ -83,11 +83,11 @@ swan.chooseImage({
 
 ## swan.previewImage
 
-**解释：** 预览图片。
+**解释**： 预览图片。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -99,7 +99,7 @@ swan.chooseImage({
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/3279130e9d743b8c79fca8ce3682b1161556529976536" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -186,11 +186,11 @@ Page({
 
 ## swan.getImageInfo
 
-**解释：**获取图片信息
+**解释**：获取图片信息
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -199,7 +199,7 @@ Page({
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型 | 说明|
 |---- | ---- | ---- |
@@ -210,7 +210,7 @@ Page({
 |type|String|返回图片的格式 |
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -269,11 +269,11 @@ Page({
 
 ## swan.saveImageToPhotosAlbum
 
-**解释：** 保存图片到系统相册，需要用户授权。
+**解释**： 保存图片到系统相册，需要用户授权。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -283,14 +283,14 @@ Page({
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-<!-- **success返回参数说明：**
+<!-- **success返回参数说明**：
 
 |参数名| 类型|  说明|
 |---- | ---- | ---- |
 |errMsg  |String | 调用结果| -->
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/7cb1e99e5effc0e94231367ec821d2df1556530613528" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

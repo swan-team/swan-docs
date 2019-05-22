@@ -7,7 +7,7 @@ context.fillStyle = color;
 context.fillStyle = gradient;
 context.fillStyle = pattern;
 ```
-**属性值：**
+**属性值**：
 
 | 值         |  类型  | 描述              |
 | ---------- |------  | ---------------- |
@@ -15,7 +15,7 @@ context.fillStyle = pattern;
 | gradient   | Object | 用于绘制图形的线性或放射性渐变  |
 | pattern    | Object | 用于绘制图形的可重复图像  |
 
-**示例：**
+**示例**：
 
 使用 `strokeStyle()` 属性设置绘制矩形的颜色：
 

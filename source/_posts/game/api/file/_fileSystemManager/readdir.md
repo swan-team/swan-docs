@@ -6,7 +6,7 @@
 fileSystemManager.readdir(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -32,7 +32,7 @@ fileSystemManager.readdir(opts)
 |res.errMsg|string|fail no such file or directory ${dirPath} 指定的路径下目录不存在，或读取的是文件非目录|
 |||fail permission denied, open ${dirPath} 指定目录不在本地路径下，没有读权限|
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

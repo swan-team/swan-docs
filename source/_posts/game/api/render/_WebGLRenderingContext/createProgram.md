@@ -6,11 +6,11 @@
 WebGLProgram gl.createProgram()
 ```
 
-**返回值：**
+**返回值**：
 
 WebGLProgram 类型的程序对象。
 
-**示例：**
+**示例**：
 
 ```js
 var program = gl.createProgram();

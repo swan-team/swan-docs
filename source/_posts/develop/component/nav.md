@@ -27,7 +27,7 @@ sidebar: nav
 |bindfail|	String| |		当target="miniProgram"时有效，跳转小程序失败 （android暂无法给出失败回调）|	2.5.2|
 |bindcomplete|	String|  |		当target="miniProgram"时有效，跳转小程序完成|	2.5.2|
 
-**open-type 有效值：**
+**open-type 有效值**：
 
 |值 |说明 |最低版本|
 |--- |--- |--- |

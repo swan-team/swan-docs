@@ -6,7 +6,7 @@
 fileSystemManager.writeFileSync(filePath, data, encoding)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -32,7 +32,7 @@ fileSystemManager.writeFileSync(filePath, data, encoding)
 |fail no such file or directory, open ${filePath}|指定的 filePath 文件不存在|
 |fail permission denied, open ${dirPath}|指定的 filePath 路径没有写权限|
 
-**示例：**
+**示例**：
 
 ```js
 const fs = swan.getFileSystemManager();

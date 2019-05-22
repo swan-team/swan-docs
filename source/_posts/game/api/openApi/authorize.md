@@ -14,7 +14,7 @@ categoryName: api
 swan.authorize(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|-|
@@ -35,7 +35,7 @@ scope 列表：
 |scope.record|swan.getRecorderManager|录音功能|
 |scope.camera|<camera/>|摄像头|
 
-**示例：**
+**示例**：
 
 ```js
 swan.authorize({

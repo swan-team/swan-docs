@@ -7,11 +7,11 @@ sidebar: device_screen
 
 ## swan.setScreenBrightness
 
-**解释：**设置屏幕亮度。
+**解释**：设置屏幕亮度。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +20,7 @@ sidebar: device_screen
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/e5d47d57648d468eccaaace41cdc98581557732266048" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -59,11 +59,11 @@ Page({
 
 ## swan.getScreenBrightness
 
-**解释：**获取屏幕亮度。
+**解释**：获取屏幕亮度。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -71,13 +71,13 @@ Page({
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |value   | Number | 屏幕亮度值，范围 0~1，0 最暗，1 最亮。|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/243a71bee8db9c47e577113676a7cb871557732358188" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -115,11 +115,11 @@ Page({
 
 ## swan.setKeepScreenOn
 
-**解释：**设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。
+**解释**：设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -128,7 +128,7 @@ Page({
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/67ec77169a612cba1709271e950f35fb1557732443741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -166,12 +166,12 @@ Page({
 ```
 <!-- onUserCaptureScreen
 ---
-**解释：**监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
-**参数：**CALLBACK
+**解释**：监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 无
-**示例：**
+**示例**：
 
 ```js
 swan.onUserCaptureScreen(function() {

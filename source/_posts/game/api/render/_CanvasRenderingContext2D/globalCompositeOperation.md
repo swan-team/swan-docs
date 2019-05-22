@@ -6,7 +6,7 @@ context.globalCompositeOperation = type;
 ```
 `globalCompositeOperation` 属性必须在绘制图形之前定义才有效，作为全局属性对之后的图形都起作用，直到 `globalCompositeOperation` 被重新定义为其他属性值为止。
 
-**属性值：**
+**属性值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -27,7 +27,7 @@ context.globalCompositeOperation = type;
 ![图片](/img/game/canvas/globalCompositeO-001.png)
 
 
-**示例：**
+**示例**：
 
 使用 `globalCompositeOperation` 设置两个有重叠的矩形的合成操作：
 

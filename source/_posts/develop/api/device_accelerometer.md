@@ -8,11 +8,11 @@ sidebar: device_accelerometer
 
 ## swan.onAccelerometerChange
 
-**解释：**监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
+**解释**：监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
-**`callback`参数说明：**
+**`callback`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +20,7 @@ sidebar: device_accelerometer
 |y |Number |是|-|Y 轴|
 |z |Number |是|-|Z 轴|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/0408f2415879e6fda656fd9f627e2ed81540399039" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
@@ -48,11 +48,11 @@ swan.onAccelerometerChange(function (res) {
 |1001|设备不支持否正确| -->
 ## swan.startAccelerometer
 
-**解释：**开始监听加速度数据。
+**解释**：开始监听加速度数据。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -71,7 +71,7 @@ swan.onAccelerometerChange(function (res) {
 |ui |适用于更新 UI 的回调频率，在 60ms/次 左右|
 |normal |普通的回调频率，在 200ms/次 左右|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/a501faa11f55af692129a4255d8cb4901557731276197" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -110,11 +110,11 @@ Page({
 
 ## swan.stopAccelerometer
 
-**解释：**停止监听加速度数据。
+**解释**：停止监听加速度数据。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -122,7 +122,7 @@ Page({
 |fail  |  Function |   否 | -| 接口调用失败的回调函数|
 |complete |   Function |   否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/20b393338d791fd53cc7ec673c0b086f1557731347532" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

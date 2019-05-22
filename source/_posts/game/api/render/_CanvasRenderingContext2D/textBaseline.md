@@ -5,7 +5,7 @@
 ```js
 context.textBaseLine = value;
 ```
-**有效值：**
+**有效值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -17,7 +17,7 @@ context.textBaseLine = value;
 | ideographic  | string |文本基线是表意基线。暂未支持 |
 
 
-**示例：**
+**示例**：
 
 创建一条横向参考线，使用 `textBaseline` 属性设置文本垂直方向不同对齐方式：
 

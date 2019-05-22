@@ -6,7 +6,7 @@
 gl.activeTexture(texture)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -14,7 +14,7 @@ gl.activeTexture(texture)
 
 `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS` 是支持的纹理个数。
 
-**示例：**
+**示例**：
 
 ```js
 activeTexture(gl.TEXTURE0);

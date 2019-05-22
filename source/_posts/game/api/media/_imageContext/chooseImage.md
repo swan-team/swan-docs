@@ -6,7 +6,7 @@
 swan.chooseImage(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -33,7 +33,7 @@ object.sourceType 的合法值：
 |['camera']|使用相机拍照|
 |['album', 'camera']|可从本地相册选择图片或使用相机拍照|
 
-**返回值：**
+**返回值**：
 
 `success` 回调函数：
 
@@ -51,7 +51,7 @@ tempFiles 对象结构：
 |tempFiles.path|string|本地文件路径|
 |tempFiles.size|number|本地文件大小（单位：B）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.chooseImage({

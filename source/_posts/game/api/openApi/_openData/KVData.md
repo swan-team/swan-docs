@@ -5,7 +5,7 @@
 |key|string|数据的 key|
 |value|string|数据的 value|
 
-**示例：**
+**示例**：
 
 ```js
 [

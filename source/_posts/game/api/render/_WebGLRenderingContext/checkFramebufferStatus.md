@@ -6,13 +6,13 @@
 GLenum gl.checkFramebufferStatus(target)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |target|GLenum|绑定点（binding point），可取值：`gl.FRAMEBUFFER`|
 
-**返回值：**
+**返回值**：
 
 `GLenum` 类型的状态值，可取值为：
 

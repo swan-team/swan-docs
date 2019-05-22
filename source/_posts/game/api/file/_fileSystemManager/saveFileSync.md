@@ -5,13 +5,13 @@
 ```js
 fileSystemManager.saveFileSync(tempFilePath, filePath)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
 |tempFilePath|string||是|临时存储文件路径|
 |filePath|string||否|要存储的文件路径|
-**返回值：**
+**返回值**：
 
 `string` 类型的值：
 
@@ -28,7 +28,7 @@ fileSystemManager.saveFileSync(tempFilePath, filePath)
 | fail tempFilePath file not exist|指定的 tempFilePath 找不到文件|
 | fail permission denied, open ${filePath} | 指定的 filePath 路径没有写权限|
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

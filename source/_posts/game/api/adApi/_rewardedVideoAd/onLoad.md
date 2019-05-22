@@ -5,14 +5,14 @@
 ```js
 rewardedVideoAd.onLoad(callback)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|是|激励视频加载完成后的回调函数|
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

@@ -2,13 +2,13 @@
 
 删除用户数据的后台**接口**，小游戏可以通过本接口删除已经上报到百度的 key-value 数据。
 
-**请求地址：**
+**请求地址**：
 
 ```js
 POST http://inner.openapi.baidu.com
 ```
 
-**参数：**
+**参数**：
 
 |参数|类型|默认值|是否必填|说明|
 |-|-|-|-|-|
@@ -16,14 +16,14 @@ POST http://inner.openapi.baidu.com
 |swanId|string||是|用户唯一标识符|
 |key|Object||是|要删除的数据 key 列表|
 
-**返回值：**
+**返回值**：
 
 |属性|类型|说明|
 |-|-|-|
 |errno|number|错误码|
 |errmsg|string|错误信息|
 
-**errno 的合法值：**
+**errno 的合法值**：
 
 |值|说明|
 |-|-|
@@ -36,7 +36,7 @@ POST http://inner.openapi.baidu.com
 |87020|内部请求失败|
 
 
-**示例代码：**
+**示例代码**：
 
 ```js
 // 仅为示例，请使用自己真实有效的 access_token 等 query 参数

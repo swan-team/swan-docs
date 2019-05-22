@@ -6,14 +6,14 @@
 context.createPattern(image, repetition);
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数   | 类型  | 描述                 |
 | ------|------ | ------------------- |
 | image | Object |  要绘制的图像，可使用 Image 、 Video 、 Canvas   |
 | repetition | string / null | 默认为 `repeat` (在水平和垂直方向重复)，可设为 `repeat-x`（只在水平方向重复）、`repeat-y` （只在垂直方向重复）、`no-repeat`（不重复）。若字符串为空或 null 则默认为 `repeat` |
 
-**示例：**
+**示例**：
 所使用的图像：
 ![图片](/img/game/canvas/createPattern-001.png)
 

@@ -6,7 +6,7 @@
 gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, ArrayBufferView? pixels)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -19,7 +19,7 @@ gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, forma
 |format|GLenum|压缩图片的格式，详见：[MDN 文档](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D)|
 |pixels|ArrayBufferView|纹理像素的数据|
 
-**示例：**
+**示例**：
 
 ```js
 var ext = (

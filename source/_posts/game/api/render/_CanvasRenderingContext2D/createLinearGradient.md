@@ -7,7 +7,7 @@ context.createLinearGradient(x0, y0, x1, y1);
 ```
 
 
-**参数值：**
+**参数值**：
 
 | 参数   | 类型  | 描述                 |
 | ------|------ | --------------------|
@@ -19,7 +19,7 @@ context.createLinearGradient(x0, y0, x1, y1);
 
 使用 `createLinearGradient()` 方法会返回一个 CanvasGradient 对象，可以使用该对象本身的 `addColorStop()` 方法指定渐变的颜色。 `addColorStop()` 方法有两个参数: 颜色偏移值（ 0 表示起点，1 表示终点）、使用的颜色值。
 
-**示例：**
+**示例**：
 
 使用从红色到白色的线性渐变，填充矩形：
 

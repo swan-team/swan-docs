@@ -15,7 +15,7 @@ context.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 最后一个参数 `anticlockwise` 用于定义绘制弧线的方向，默认为 false 即按照顺时针绘制，如果设为 true，则会按照逆时针绘制。
 
 
-**参数值：**
+**参数值**：
 
 | 参数         |  类型 | 描述                                           |
 | ------------|--------| -------------------------------------------- |
@@ -26,7 +26,7 @@ context.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 | endAngle    | number | 圆弧的结束点。以弧度为单位                       |
 | anticlockwise | boolean  | 可选。绘制弧线的方向，默认为 false 沿逆时针绘制，若为 true 则沿顺时针绘制 |
 
-**示例：**
+**示例**：
 
 绘制一个圆弧的代码：
 

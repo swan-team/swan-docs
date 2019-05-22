@@ -58,7 +58,7 @@ Page({
 
 ## text
 
-**解释：**放文本的元素
+**解释**：放文本的元素
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|最低版本|
@@ -109,7 +109,7 @@ Page({
 
 
 ```
-**图示：**
+**图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -133,7 +133,7 @@ Page({
 
 ## rich-text
 
-**解释：** 富文本
+**解释**： 富文本
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|
@@ -215,7 +215,7 @@ Page({
 | tr | -|
 | ul | - |
 
-**说明：**
+**说明**：
 
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
 * 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
@@ -388,9 +388,9 @@ button {
 
 ## progress
 
-**解释：**进度条
+**解释**：进度条
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -403,7 +403,7 @@ button {
 | active | Boolean  | false  |进度条从左往右的动画	|
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <!-- progress.swan -->
@@ -419,9 +419,9 @@ button {
 
 ## animation-view
 
-**解释：**Lottie动画组件
+**解释**：Lottie动画组件
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |必填 |默认值  |说明|最低版本|
 |---- | ---- | --- | ---- |---- |--|
@@ -438,7 +438,7 @@ button {
 * animation-view组件不支持原生组件嵌套。
 * 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

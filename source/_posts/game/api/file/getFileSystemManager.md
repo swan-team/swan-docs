@@ -8,7 +8,7 @@ priority: 04-01
 
 获取全局唯一的文件管理器对象
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

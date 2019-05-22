@@ -17,7 +17,7 @@ swan.setPreferredFramesPerSecond(fps);
 ```
 
 
-**参数：**
+**参数**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -31,13 +31,13 @@ swan.setPreferredFramesPerSecond(fps);
 requestAnimationFrame(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |callback|function|回调函数|
 
-**返回值：**
+**返回值**：
 
 `number` 类型的返回值，用于 [`cancelAnimationFrame`](#cancelAnimationFrame) 中取消。
 
@@ -50,7 +50,7 @@ requestAnimationFrame(callback)
 cancelAnimationFrame(handler)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|

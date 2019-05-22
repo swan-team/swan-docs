@@ -14,7 +14,7 @@ priority: 03-01
 swan.loadSubpackage(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -23,6 +23,6 @@ swan.loadSubpackage(opts)
 |fail|function|否|接口调用失败的回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**返回值：**
+**返回值**：
 
 [LoadSubpackageTask](/game/api/subpackages/loadSubpackageTask/) 实例。

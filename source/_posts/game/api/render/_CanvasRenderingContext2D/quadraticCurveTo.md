@@ -8,7 +8,7 @@
 context.bezierCurveTo(cpx, cpy, x, y);
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数   |  类型| 描述             |
 | ------|-------| ---------------|
@@ -17,7 +17,7 @@ context.bezierCurveTo(cpx, cpy, x, y);
 | x     | number| 结束点的 x 坐标    |
 | y     | number| 结束点的 y 坐标    |
 
-**示例：**
+**示例**：
 
 绘制一个二次贝塞尔曲线的示例：
 

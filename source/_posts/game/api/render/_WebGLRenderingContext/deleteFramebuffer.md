@@ -6,13 +6,13 @@
 gl.deleteFramebuffer(buffer)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |buffer|WebGLFramebuffer|待删除的帧缓冲区|
 
-**示例：**
+**示例**：
 
 ```js
 var framebuffer = gl.createFramebuffer();

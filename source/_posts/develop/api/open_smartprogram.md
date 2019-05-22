@@ -7,11 +7,11 @@ sidebar: open_smartprogram
 
 ## swan.navigateToSmartProgram
 
-**解释：** 打开另一个小程序。
+**解释**： 打开另一个小程序。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -22,7 +22,7 @@ sidebar: open_smartprogram
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/52021b53b94804a9f42ee7d72c73e8d41558342104806" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -79,11 +79,11 @@ Page({
 
 ## swan.navigateBackSmartProgram
 
-**解释：** 返回到上一个小程序。
+**解释**： 返回到上一个小程序。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -92,7 +92,7 @@ Page({
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/c9ffd067b9e23f3d995616d1c29479081558342193584" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

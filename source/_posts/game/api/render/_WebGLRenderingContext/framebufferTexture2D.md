@@ -6,7 +6,7 @@
 gl.framebufferTexture2D(target, attachment, textarget, texture, level)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -16,7 +16,7 @@ gl.framebufferTexture2D(target, attachment, textarget, texture, level)
 |texture|WebGLTexture|待绑定的纹理|
 |level|GLint|纹理层次，必须为 0|
 
-**示例：**
+**示例**：
 
 ```js
 gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);

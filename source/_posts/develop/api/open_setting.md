@@ -6,11 +6,11 @@ sidebar: open_setting
 ---
 ## swan.openSetting
 
-**解释：** 调起客户端智能小程序设置界面，返回用户设置的操作结果。
+**解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -19,14 +19,14 @@ sidebar: open_setting
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/c98e352530eff43e682256b45b50d2721540396878" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.openSetting({
@@ -45,11 +45,11 @@ swan.openSetting({
 
 ## swan.getSetting
 
-**解释：** 获取用户的当前设置
+**解释**： 获取用户的当前设置
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -58,14 +58,14 @@ swan.openSetting({
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

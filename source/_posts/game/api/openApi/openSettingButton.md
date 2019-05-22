@@ -14,7 +14,7 @@ categoryName: api
 swan.createOpenSettingButton(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -63,7 +63,7 @@ swan.createOpenSettingButton(opts)
 
 [OpenSettingButton](#OpenSettingButton)
 
-**示例：**
+**示例**：
 
 ```js
 let button = swan.createOpenSettingButton({

@@ -8,7 +8,7 @@
 gl.compressedTexImage2D(target, level, internalformat, width, height, border, ArrayBufferView? pixels)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -20,7 +20,7 @@ gl.compressedTexImage2D(target, level, internalformat, width, height, border, Ar
 |border|GLint|编译大小，应为 0；保留该参数是为了和桌面版的 OpenGL 兼容|
 |pixels|ArrayBufferView|纹理像素的数据|
 
-**示例：**
+**示例**：
 
 ```js
 var ext = (

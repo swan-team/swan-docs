@@ -23,7 +23,7 @@ videoRecorderManager.start(opts)
 ```
 
 
-**参数值：**
+**参数值**：
 
 |属性 |类型 |默认值 |是否必填 |描述 |
 |---|-------|---|-------|-------|
@@ -31,7 +31,7 @@ videoRecorderManager.start(opts)
 |opts.duration|number|10 | 否 |录屏的时长，单位 s，最大值 120（2 分钟）|
 |opts.microphoneEnabled|boolean|false|否|是否启用麦克风录音|
 
-**示例：**
+**示例**：
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
@@ -52,13 +52,13 @@ recorder.start({
 videoRecorderManager.onStart(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |---|-----|-------|-------|
 |callback|function|是|监听录屏开始事件的回调函数|
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 | 属性|类型|描述|
 |-|-|-|
@@ -76,7 +76,7 @@ res.microphoneStatus 的合法值：
 |2|麦克风被小游戏禁用|
 
 
-**示例：**
+**示例**：
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -117,7 +117,7 @@ recorder.pause()
 videoRecorderManager.onPause(callback)
 ```
 
-**参数值：**
+**参数值**：
 监听事件的回调函数
 
 |属性|类型|是否必填|描述|
@@ -170,7 +170,7 @@ recorder.resume()
  videoRecorderManager.onResume(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |---|-------|---|-------|-------|
@@ -221,14 +221,14 @@ recorder.stop();
 videoRecorderManager.onStop(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |---|-------|---|-------|-------|
 |callback|function|是|监听录屏结束事件的回调函数|
 
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |属性|类型|描述|
 |---|-------|---|
@@ -254,13 +254,13 @@ recorder.stop();
 videoRecorderManager.onError(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |---|-------|---|-------|-------|
 |callback|function|是|监听录屏错误事件的回调函数|
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |属性|类型|描述|
 |---|-------|---|

@@ -6,17 +6,17 @@
 WebGLShader[] gl.getAttachedShaders(program)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |program|WebGLProgram|绑定着色器的程序对象|
 
-**返回值：**
+**返回值**：
 
 `WebGLShader[]` 类型的着色器数组。
 
-**示例：**
+**示例**：
 
 ```js
 var program = gl.createProgram();

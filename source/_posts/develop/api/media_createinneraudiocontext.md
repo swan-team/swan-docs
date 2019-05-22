@@ -9,15 +9,15 @@ sidebar: media_createinneraudiocontext
 
 ## swan.createInnerAudioContext
 
-**解释：** 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
+**解释**： 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
 
-**方法参数：** 无
+**方法参数**： 无
 
-**返回值：**innerAudioContext 
+**返回值**：innerAudioContext 
 
 ## innerAudioContext
 
-**`innerAudioContext`对象的属性列表：**
+**`innerAudioContext`对象的属性列表**：
 
 |方法 | 参数 | 只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -33,7 +33,7 @@ sidebar: media_createinneraudiocontext
 
 ### innerAudioContext
 
-**`innerAudioContext`对象的方法列表：**
+**`innerAudioContext`对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -63,7 +63,7 @@ sidebar: media_createinneraudiocontext
 |offSeeking | callback | 取消监听 onSeeking 事件 |
 |offSeeked | callback | 取消监听 onSeeked 事件 |
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/3f02bf553d26adb2adc3dcc248b892bf1556535805834" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -201,11 +201,11 @@ Page({
 
 ## swan.setInnerAudioOption
 
-**解释：** 对`innerAudioContext`进行小程序内部的全局设置。
+**解释**： 对`innerAudioContext`进行小程序内部的全局设置。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -217,7 +217,7 @@ Page({
 
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

@@ -13,7 +13,7 @@ priority: 05-08
 swan.removeStorageSync(key)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|

@@ -6,15 +6,15 @@ sidebar: media_videocontext
 ---
 ## swan.createVideoContext
 
-**解释：** 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
+**解释**： 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
-**方法参数：**String videoId
+**方法参数**：String videoId
 
-**返回值：**videoContext
+**返回值**：videoContext
 
 ## videoContext
 
-**`videoContext`对象的方法列表：**
+**`videoContext`对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -27,7 +27,7 @@ sidebar: media_videocontext
 |showStatusBar | 无 |  显示状态栏，仅在iOS全屏下有效。|
 |hideStatusBar | 无 |  隐藏状态栏，仅在iOS全屏下有效。|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/2a74a56f21b40ba5bc93803d70065cf21556536372261" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

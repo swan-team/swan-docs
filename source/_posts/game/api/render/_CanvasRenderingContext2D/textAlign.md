@@ -5,7 +5,7 @@
 ```js
 context.textAlign = value;
 ```
-**有效值：**
+**有效值**：
 
 | 值     |  类型   | 描述              |
 |------- |------  | ---------------- |
@@ -17,7 +17,7 @@ context.textAlign = value;
 
 `start` 和 `end` 与文字的 `direction`（显示方向）有关，如果 `direction` 属性设置为 `ltr`（从左到右），文本 `left` 和 `start` 的效果相同，`right` 和 `end` 的效果相同，如果 `direction` 属性设置为 `rtl`（从右到左），则 `left` 和 `end` 的效果相同，`right` 和 `start` 的效果相同。
 
-**示例：**
+**示例**：
 
 创建一条纵向参考线，使用 `textAlign` 属性设置文本水平方向不同对齐方式：
 

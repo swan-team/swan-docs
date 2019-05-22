@@ -6,7 +6,7 @@
 swan.onAccelerometerChange(callback)
 ```
 
-**callback 回调参数：**
+**callback 回调参数**：
 
 |属性|类型|描述|
 |-|-|-|
@@ -14,7 +14,7 @@ swan.onAccelerometerChange(callback)
 |y|number|Y 轴|
 |z|number|Z 轴|
 
-**示例：**
+**示例**：
 
 ```js
 swan.onAccelerometerChange(function (res) {

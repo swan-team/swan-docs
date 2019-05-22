@@ -19,13 +19,13 @@ sidebar: file
 <!-- saveFile
 -----
 
-**解释：**保存文件到本地
+**解释**：保存文件到本地
 
-**参数：**Object
+**参数**：Object
 
-**注意：**saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用。
+**注意**：saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用。
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -34,13 +34,13 @@ sidebar: file
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
 |savedFilePath  |String | 文件的保存路径|
 
-**示例：**
+**示例**：
 
 ```js
 swan.chooseImage({
@@ -64,11 +64,11 @@ swan.chooseImage({
 getFileInfo
 -----
 
-**解释：**获取文件信息
+**解释**：获取文件信息
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -78,7 +78,7 @@ getFileInfo
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -86,7 +86,7 @@ getFileInfo
 |digest  | String | 按照传入的 digestAlgorithm 计算得出的的文件摘要|
 |errMsg  | Number | 调用结果|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getFileInfo({
@@ -101,10 +101,10 @@ swan.getFileInfo({
 getSavedFileList
 -----
 
-**解释：**获取本地已保存的文件列表
-**参数：**Object
+**解释**：获取本地已保存的文件列表
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -112,13 +112,13 @@ getSavedFileList
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
 |fileList  | ` Array.<object> ` | 文件列表|
 
-**fileList中的项目说明：**
+**fileList中的项目说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -126,7 +126,7 @@ getSavedFileList
 |createTime  |Number | 文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数|
 |size  |Number | 文件大小，单位 B|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSavedFileList({
@@ -139,11 +139,11 @@ swan.getSavedFileList({
 getSavedFileInfo
 -----
 
-**解释：**获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口
+**解释**：获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -152,14 +152,14 @@ getSavedFileInfo
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
 |size  |Number | 文件大小，单位B|
 |createTime  |Number | 文件保存时的时间戳，从1970/01/01 08:00:00 到该时刻的秒数|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSavedFileInfo({
@@ -178,11 +178,11 @@ swan.getSavedFileInfo({
 removeSavedFile
 -----
 
-**解释：**删除本地存储的文件
+**解释**：删除本地存储的文件
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -191,7 +191,7 @@ removeSavedFile
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSavedFileList({
@@ -211,11 +211,11 @@ swan.getSavedFileList({
 openDocument
 -----
 
-**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx
+**解释**：新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -225,7 +225,7 @@ openDocument
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.downloadFile({

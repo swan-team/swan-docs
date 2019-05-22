@@ -6,13 +6,13 @@ sidebar: show_createanimation
 ---
 ## swan.createAnimation
 
-**解释：**创建一个动画实例 animation
+**解释**：创建一个动画实例 animation
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**返回值：**animation
+**返回值**：animation
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -21,7 +21,7 @@ sidebar: show_createanimation
 |delay|Integer | 否|  0 | 动画延迟时间，单位 ms 。|
 |transformOrigin|String | 否|  ‘50% 50% 0’ | 动画 |
 
-**timingFunction 有效值：**
+**timingFunction 有效值**：
 
 |值   |说明  |
 |---- | ---- |
@@ -33,7 +33,7 @@ sidebar: show_createanimation
 |step-start|动画第一帧就跳至结束状态直到结束。|
 |step-end|动画一直保持开始状态，最后一帧跳到结束状态。|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -72,7 +72,7 @@ Page({
 
 ## animation
 
-**解释：**动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
+**解释**：动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
 
 **`animation`对象的属性列表:**
@@ -142,7 +142,7 @@ Page({
 调用动画操作方法后要调用 step() 来表示一组动画完成，可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。
 
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

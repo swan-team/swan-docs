@@ -6,7 +6,7 @@
 gl.drawArrays(mode, first, count)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -14,7 +14,7 @@ gl.drawArrays(mode, first, count)
 |first|GLint|从数组中第几个元素开始绘制|
 |count|GLsizei|绘制多少个数组元素|
 
-**示例：**
+**示例**：
 
 ```js
 gl.drawArrays(gl.POINTS, 0, 8);

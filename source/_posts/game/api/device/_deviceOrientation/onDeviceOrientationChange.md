@@ -6,7 +6,7 @@
 swan.onDeviceOrientationChange(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -28,7 +28,7 @@ swan.onDeviceOrientationChange(callback)
 |landscape|横屏正方向，以 HOME 键在屏幕右侧为正方向|
 |landscapeReverse|横屏反方向，以 HOME 键在屏幕左侧为反方向|
 
-**示例：**
+**示例**：
 
 ```js
 swan.onDeviceOrientationChange(function (res) {

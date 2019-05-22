@@ -6,7 +6,7 @@
 socketTask.onMessage(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -21,7 +21,7 @@ socketTask.onMessage(callback)
 |res|Object|回调函数参数对象|
 |res.data|ArrayBuffer<span class="vsplit"></span>string|服务器返回的消息|
 
-**示例：**
+**示例**：
 
 ```js
 const task = swan.connectSocket({

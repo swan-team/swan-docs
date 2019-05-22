@@ -11,14 +11,14 @@ categoryName: api
 swan.reportAnalytics(eventName, data);
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
 |eventName|string||是|事件名|
 |data|Object| |否|上报的自定义数据，key 为配置中的字段名，value 为上报的数据|
 
-**示例：**
+**示例**：
 
 ```js
 swan.reportAnalytics('purchase', {

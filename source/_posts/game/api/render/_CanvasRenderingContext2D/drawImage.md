@@ -17,7 +17,7 @@ context.drawImage(image, dx, dy, dWidth, dHeight);
 context.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
-**参数值：**
+**参数值**：
 
 | 参数          | 类型   | 描述                                         |
 | -------------|------- | --------------------------------------------|
@@ -32,7 +32,7 @@ context.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 | dHeight      | number | 可选。要绘制的图像的宽度                        |
 
 
-**示例：**
+**示例**：
 使用的图像：
 ![图片](/img/game/canvas/drawImage-005.jpg)
 

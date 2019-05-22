@@ -6,11 +6,11 @@ sidebar: location_get
 ---
 ## swan.getLocation
 
-**解释：** 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
+**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +20,7 @@ sidebar: location_get
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数  |说明  |
 |---- | ---- |
@@ -39,7 +39,7 @@ sidebar: location_get
 |streetNumber|街道号码|
 |district|区|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/96bf59fa67b5aff2dd83e37224fdbae91540395079" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
@@ -74,11 +74,11 @@ swan.getLocation({
 
 ## swan.chooseLocation
 
-**解释：** 打开地图选择位置。需要用户授权 scope.userLocation。
+**解释**： 打开地图选择位置。需要用户授权 scope.userLocation。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -86,7 +86,7 @@ swan.getLocation({
 |fail  | Function |否 | -| 接口调用失败的回调函数|
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数  |说明  |
 |---- | ---- |
@@ -95,7 +95,7 @@ swan.getLocation({
 |latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系。|
 |longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系。|
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

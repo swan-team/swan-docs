@@ -9,7 +9,7 @@ categoryName: api
 
 发起百度收银台支付。
 
-**解释：**
+**解释**：
 
 支付接口调用前需要用户进行百度帐号登录，未登录的用户系统会强行先调用登录操作，再调起支付。
 
@@ -17,7 +17,7 @@ categoryName: api
 swan.requestPolymerPayment(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -69,7 +69,7 @@ swan.requestPolymerPayment(opts)
 当接口调用成功时，其返回值与 `success` 回调函数的返回值相同；
 当接口调用失败时，其返回值与 `fail` 回调函数的返回值相同。
 
-**示例：**
+**示例**：
 
 ```js
 swan.request({
@@ -114,6 +114,6 @@ swan.request({
 
 ```
 
-**注意：**
+**注意**：
 
 iOS 暂不支持使用此接口

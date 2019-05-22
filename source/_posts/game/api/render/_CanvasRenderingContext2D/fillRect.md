@@ -7,7 +7,7 @@ context.fillRect(x, y, width, height);
 ```
 可配合使用 [`fillStyle`](#fillStyle) 属性设置所填充路径的颜色和样式。
 
-**参数值：**
+**参数值**：
 
 | 参数    |  类型 | 描述                    |
 | -------|------  | ----------------------|
@@ -16,7 +16,7 @@ context.fillRect(x, y, width, height);
 | width  | number | 矩形的宽度             |
 | height | number | 矩形的高度             |
 
-**示例：**
+**示例**：
 
 使用 `fillRect()` 方法填充一个矩形：
 

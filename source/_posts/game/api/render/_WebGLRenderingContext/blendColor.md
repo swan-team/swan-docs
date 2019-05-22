@@ -8,7 +8,7 @@
 gl.blendColor(red, green, blue, alpha)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -17,7 +17,7 @@ gl.blendColor(red, green, blue, alpha)
 |blue|GLclampf|颜色的蓝色通道，值在 `0` 到 `1` 之间|
 |alpha|GLclampf|颜色的透明通道，值在 `0` 到 `1` 之间|
 
-**示例：**
+**示例**：
 
 下面的例子展示了如何使用混合颜色作为最终的颜色。
 

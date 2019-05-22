@@ -6,7 +6,7 @@
 swan.createInnerAudioContext()
 ```
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象：
 

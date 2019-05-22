@@ -6,14 +6,14 @@
 rewardedVideoAd.onClose(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|是|用户点击关闭广告按钮后的回调函数|
 
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |参数|类型|描述|
 |-|-|-|-|-|-|
@@ -21,7 +21,7 @@ rewardedVideoAd.onClose(callback)
 |res.isEnded|boolean|用户是否在视频播放完成后关闭广告|
 
 
-**示例：**
+**示例**：
 
 ```js
 let example = {

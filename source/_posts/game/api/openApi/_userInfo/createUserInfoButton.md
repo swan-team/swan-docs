@@ -6,7 +6,7 @@
 swan.createUserInfoButton(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|
@@ -47,10 +47,10 @@ swan.createUserInfoButton(opts)
 |center|居中对齐|
 |right|右对齐|
 
-**返回值：**
+**返回值**：
 返回 [`userInfoButton`](#userInfoButton) 对象。
 
-**示例：**
+**示例**：
 
 ```js
 let button = swan.createUserInfoButton({

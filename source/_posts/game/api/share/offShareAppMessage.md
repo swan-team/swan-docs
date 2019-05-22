@@ -12,7 +12,7 @@ priority: 10-05
 swan.offShareAppMessage(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|

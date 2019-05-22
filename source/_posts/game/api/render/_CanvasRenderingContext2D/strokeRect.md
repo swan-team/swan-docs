@@ -8,7 +8,7 @@ context.strokeRect(x, y, width, height);
 ```
 可配合使用 [`strokeStyle`](#strokeStyle) 属性设置所绘制路径的颜色和样式。
 
-**参数值：**
+**参数值**：
 
 | 参数    |  类型 | 描述                   |
 | -------|------  | ---------------------|
@@ -17,7 +17,7 @@ context.strokeRect(x, y, width, height);
 | width  | number | 矩形的宽度            |
 | height | number | 矩形的高度            |
 
-**示例：**
+**示例**：
 
 使用 `strokeRect()` 方法创建一个矩形路径的示例：
 

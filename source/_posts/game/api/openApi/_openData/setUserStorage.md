@@ -2,13 +2,13 @@
 
 上报用户数据的后台**接口**，小游戏可以通过本接口上报 key-value 数据到用户的 CloudStorage。
 
-**请求地址：**
+**请求地址**：
 
 ```js
 POST http://inner.openapi.baidu.com
 ```
 
-**参数：**
+**参数**：
 
 |属性|类型|默认值|是否必填|说明|
 |-|-|-|-|-|
@@ -16,14 +16,14 @@ POST http://inner.openapi.baidu.com
 |swanId|string||是|用户唯一标识符|
 |kv_list|Object||是|要上报的数据|
 
-**返回值：**
+**返回值**：
 
 |参数|类型|说明|
 |-|-|-|
 |errno|number|错误码|
 |errmsg|string|错误信息|
 
-**errno 的合法值：**
+**errno 的合法值**：
 
 |值|说明|
 |-|-|
@@ -39,14 +39,14 @@ POST http://inner.openapi.baidu.com
 |87018|由于用户存储的 key-value 对数量超过限制而上报失败|
 |87019|由于某个 key 长度超过限制而上报失败|
 
-**示例代码：**
+**示例代码**：
 
 ```js
 // 仅为示例，请使用自己真实有效的 access_token 等 query 参数
 http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/setuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
 ```
 
-**托管数据的限制：**
+**托管数据的限制**：
 
 如果在上报数据时触发这些限制，设置数据会失败并且会收到带错误码的返回包。
 

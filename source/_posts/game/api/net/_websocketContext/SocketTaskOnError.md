@@ -6,7 +6,7 @@
 socketTask.onError(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -21,7 +21,7 @@ socketTask.onError(callback)
 |res|Object|回调函数参数对象|
 |res.errMsg|string|错误信息|
 
-**示例：**
+**示例**：
 
 ```js
 const task = swan.connectSocket({

@@ -37,11 +37,11 @@ sidebar: device
 
 ### getSystemInfo
 
-**解释：**获取系统信息
+**解释**：获取系统信息
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -49,7 +49,7 @@ sidebar: device
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |说明 |
 |---- | ---- |
@@ -68,7 +68,7 @@ sidebar: device
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
 
-**示例：**
+**示例**：
 
 ```js
 swan.getSystemInfo({
@@ -86,9 +86,9 @@ swan.getSystemInfo({
 
 ### getSystemInfoSync
 
-**解释：**获取系统信息同步接口
+**解释**：获取系统信息同步接口
 
-**同步返回参数说明：**
+**同步返回参数说明**：
 
 |参数  |说明 |
 |---- | ---- |
@@ -107,7 +107,7 @@ swan.getSystemInfo({
 |fontSizeSetting |用户字体大小设置 |
 |SDKVersion |客户端基础库版本 |
 
-**示例：**
+**示例**：
 
 ```js
 try {
@@ -125,9 +125,9 @@ try {
 ```
 ### canIUse
 
-**解释：**判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
+**解释**：判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
 
-**参数说明：**使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
+**参数说明**：使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用。
 
 |参数  |说明 |
 |---- | ---- |
@@ -140,7 +140,7 @@ try {
 |${option}  |  组件属性的可选值 |
 
 
-**示例：**
+**示例**：
 
 ```js
 
@@ -159,11 +159,11 @@ swan.canIUse('getSavedFileList.object.success')
 ----
 ### onMemoryWarning
 
-**解释：**监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
+**解释**：监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
 
-**参数：**CALLBACK
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
@@ -176,7 +176,7 @@ TRIM_MEMORY_RUNNING_MODERATE = 5
 TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
-**示例：**
+**示例**：
 
 ```js
 swan.onMemoryWarning(function (res) {
@@ -189,11 +189,11 @@ swan.onMemoryWarning(function (res) {
 
 ### getNetworkType
 
-**解释：**获取网络类型
+**解释**：获取网络类型
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -201,12 +201,12 @@ swan.onMemoryWarning(function (res) {
 |fail | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |说明 |
 |---- | ---- |
 |networkType |网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)|
-**示例：**
+**示例**：
 
 ```js
 swan.getNetworkType({
@@ -218,18 +218,18 @@ swan.getNetworkType({
 
 ### onNetworkStatusChange
 
-**解释：**监听网络状态变化
+**解释**：监听网络状态变化
 
-**参数：**CALLBACK
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |isConnected |Boolean |当前是否有网络连接|
 |networkType| String | 网络类型|
 
-**networkType 有效值：**
+**networkType 有效值**：
 
 |值   |说明|
 |---- | ---- |
@@ -240,7 +240,7 @@ swan.getNetworkType({
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
 
-**示例：**
+**示例**：
 
 ```js
 swan.onNetworkStatusChange(function (res) {
@@ -254,10 +254,10 @@ swan.onNetworkStatusChange(function (res) {
 
 ### onAccelerometerChange
 
-**解释：**监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
-**参数：**CALLBACK
+**解释**：监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
@@ -265,7 +265,7 @@ swan.onNetworkStatusChange(function (res) {
 |y |Number |Y 轴|
 |z |Number |Z 轴|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.onAccelerometerChange(function (res) {
@@ -276,10 +276,10 @@ swan.onAccelerometerChange(function (res) {
 ```
 ### startAccelerometer
 
-**解释：**开始监听加速度数据。
-**参数：**Object
+**解释**：开始监听加速度数据。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -287,7 +287,7 @@ swan.onAccelerometerChange(function (res) {
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.startAccelerometer();
@@ -295,10 +295,10 @@ swan.startAccelerometer();
 
 ### stopAccelerometer
 
-**解释：**停止监听加速度数据。
-**参数：**Object
+**解释**：停止监听加速度数据。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -306,7 +306,7 @@ swan.startAccelerometer();
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.stopAccelerometer();
@@ -317,16 +317,16 @@ swan.stopAccelerometer();
 
 ### onCompassChange
 
-**解释：**监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。
-**参数：**CALLBACK
+**解释**：监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |direction |Number |面对的方向度数|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.onCompassChange(function (res) {
@@ -336,10 +336,10 @@ swan.onCompassChange(function (res) {
 ```
 ### startCompass
 
-**解释：**开始监听罗盘数据。
-**参数：**Object
+**解释**：开始监听罗盘数据。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -347,7 +347,7 @@ swan.onCompassChange(function (res) {
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.startCompass();
@@ -355,10 +355,10 @@ swan.startCompass();
 
 ### stopCompass
 
-**解释：**停止监听罗盘数据。
-**参数：**Object
+**解释**：停止监听罗盘数据。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -366,7 +366,7 @@ swan.startCompass();
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```javascript
 swan.stopCompass();
@@ -377,10 +377,10 @@ swan.stopCompass();
 
 ### scanCode
 
-**解释：**调起客户端扫码界面，扫码成功后返回对应的结果
-**参数：**Object
+**解释**：调起客户端扫码界面，扫码成功后返回对应的结果
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -388,14 +388,14 @@ swan.stopCompass();
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |说明|
 |---- | ---- |
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
 
-**示例：**
+**示例**：
 
 ```js
 swan.scanCode({
@@ -411,10 +411,10 @@ swan.scanCode({
 
 ### setScreenBrightness
 
-**解释：**设置屏幕亮度。
-**参数：**Object
+**解释**：设置屏幕亮度。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -425,10 +425,10 @@ swan.scanCode({
 
 ### getScreenBrightness
 
-**解释：**获取屏幕亮度。
-**参数：**Object
+**解释**：获取屏幕亮度。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -436,7 +436,7 @@ swan.scanCode({
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
@@ -444,10 +444,10 @@ swan.scanCode({
 
 ### setKeepScreenOn
 
-**解释：**设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。
-**参数：**Object
+**解释**：设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -461,13 +461,13 @@ swan.scanCode({
 
 ### onUserCaptureScreen
 
-**解释：**监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
-**参数：**CALLBACK
+**解释**：监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
+**参数**：CALLBACK
 
-**CALLBACK返回参数：**
+**CALLBACK返回参数**：
 无
 
-**示例：**
+**示例**：
 
 ```js
 swan.onUserCaptureScreen(function() {
@@ -480,10 +480,10 @@ swan.onUserCaptureScreen(function() {
 
 ### vibrateLong
 
-**解释：**使手机发生较长时间的振动（400ms）
-**参数：**Object
+**解释**：使手机发生较长时间的振动（400ms）
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -493,11 +493,11 @@ swan.onUserCaptureScreen(function() {
 
 ### vibrateShort
 
-**解释：**使手机发生较短时间的振动（15ms）
+**解释**：使手机发生较短时间的振动（15ms）
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -510,10 +510,10 @@ swan.onUserCaptureScreen(function() {
 
 ### addPhoneContact
 
-**解释：**调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
-**参数：**Object
+**解释**：调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -558,10 +558,10 @@ swan.onUserCaptureScreen(function() {
 
 ### makePhoneCall
 
-**解释：**拨打电话
-**参数：**Object
+**解释**：拨打电话
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -570,7 +570,7 @@ swan.onUserCaptureScreen(function() {
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.makePhoneCall({
@@ -583,11 +583,11 @@ swan.makePhoneCall({
 
 ### setClipboardData
 
-**解释：**设置系统剪贴板的内容
+**解释**：设置系统剪贴板的内容
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -596,7 +596,7 @@ swan.makePhoneCall({
 |fail  | Function  |  否  | 接口调用失败的回调函数|
 |complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.setClipboardData({
@@ -613,11 +613,11 @@ swan.setClipboardData({
 
 ### getClipboardData
 
-**解释：**获取系统剪贴板内容
+**解释**：获取系统剪贴板内容
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -625,12 +625,12 @@ swan.setClipboardData({
 |fail  |  Function |   否 |  接口调用失败的回调函数|
 |complete  |  Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
-**示例：**
+**示例**：
 
 ```js
 swan.getClipboardData({

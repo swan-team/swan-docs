@@ -6,13 +6,13 @@
 innerAudioContext.onTimeUpdate(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|
 |callback|function|是|监听事件的回调函数|
 
-**返回值：**
+**返回值**：
 
 `Object` 类型的对象：
 
@@ -21,7 +21,7 @@ innerAudioContext.onTimeUpdate(callback)
 |currentTime|number|当前音频的播放位置，单位 s。只有在当前有合法的 src 时返回，时间不取整，结果保留不超过 6 位小数的浮点数或者整数|
 |duration|number|当前音频的长度，单位 s。只有在当前有合法的 src 时返回|
 
-**示例：**
+**示例**：
 
 ```js
 const audioCtx = swan.createInnerAudioContext();

@@ -5,7 +5,7 @@ userInfoButton 对象上的方法，用于监听用户信息按钮的点击事�
 ```js
 userInfoButton.onTap(callback)
 ```
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -35,7 +35,7 @@ userInfoButton.onTap(callback)
 |province|string|用户所在省份|
 |language|string|展示用户信息所用的语言|
 
-**示例：**
+**示例**：
 
 ```js
 let button = swan.createUserInfoButton({

@@ -19,7 +19,7 @@ fileSystemManager.renameSync(oldPath, newPath)
 | fail permission denied, rename ${oldPath} -> ${newPath}| 指定源文件或目标文件没有写权限
 |fail no such file or directory, rename ${oldPath} -> ${newPath}|源文件不存在，或目标文件路径的上层目录不存在
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

@@ -6,14 +6,14 @@
 WebGLActiveInfo gl.getActiveAttrib(program, index)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |program|WebGLProgram|包含顶点属性的程序对象|
 |index|GLuint|要获取的顶点属性的偏移值，使用 `gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES)` 可以获取当前活动顶点属性的数量 `N`，这里 `index` 可取 0 到 `N - 1`|
 
-**示例：**
+**示例**：
 
 ```js
 const numAttribs = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);

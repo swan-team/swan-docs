@@ -16,13 +16,13 @@ priority: 03-02
 loadSubpackageTask.onProgressUpdate(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|-|-|
 |callback|function|是|进度变化的回调函数。|
 
-**回调函数参数值：**
+**回调函数参数值**：
 
 |属性|类型|描述|
 |-|-|-|-|-|-|

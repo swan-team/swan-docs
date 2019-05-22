@@ -6,13 +6,13 @@
 ```js
 context.setLineDash(segments);
 ```
-**参数值：**
+**参数值**：
 
 | 参数      |  类型  | 描述              |
 | ---------|------  | ---------------- |
 | segments |Array.<number\>|一组描述交替绘制线段和间距长度的数字|
 
-**示例：**
+**示例**：
 使用 `setLineDash()` 方法绘制四条不同样式的虚线：
 
 ![](/img/game/canvas/setLineDash-001.png)

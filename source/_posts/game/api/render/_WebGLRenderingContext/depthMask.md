@@ -6,13 +6,13 @@
 gl.depthMask(flag)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |flag|GLboolean|是否允许写入|
 
-**示例：**
+**示例**：
 
 ```js
 gl.depthMask(false);

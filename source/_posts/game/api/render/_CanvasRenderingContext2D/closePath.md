@@ -8,7 +8,7 @@ context.closePath();
 ```
 `closePath()` 方法是闭合路径，而  [`beginPath()`](#beginPath) 方法是结束路径并开始新的路径，二者是不同的。
 
-**示例：**
+**示例**：
 
 绘制一个圆弧，使用 `closePath()` 方法将圆弧路径闭合：
 

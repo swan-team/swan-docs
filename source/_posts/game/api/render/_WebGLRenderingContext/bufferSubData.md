@@ -6,7 +6,7 @@
 gl.bufferSubData(target, offset, ArrayBuffer|ArrayBufferView srcData)
 ```
 
-**参数：**
+**参数**：
 
 |参数|类型|描述|
 |-|-|-|
@@ -14,7 +14,7 @@ gl.bufferSubData(target, offset, ArrayBuffer|ArrayBufferView srcData)
 |offset|GLintptr|开始替换的数据存储中的偏移，以 Byte 为单位|
 |srcData|ArrayBuffer &#124; SharedArrayBuffer &#124; ArrayBufferView|指定将要被复制到数据存储以进行初始化的数据|
 
-**示例：**
+**示例**：
 
 ```js
 var buffer = gl.createBuffer();

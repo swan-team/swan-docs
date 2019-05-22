@@ -6,7 +6,7 @@
 context.beginPath();
 ```
 
-**示例：**
+**示例**：
 
 使用 `beginPath()` 方法绘制蓝色、红色两个路径：
 

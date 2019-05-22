@@ -6,13 +6,13 @@
 innerAudioContext.onError(callback)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|
 |callback|function|是|监听事件的回调函数|
 
-**回调函数参数值：**
+**回调函数参数值**：
 **Object res**
 
 |属性|类型|描述|支持版本|

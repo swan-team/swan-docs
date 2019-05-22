@@ -24,7 +24,7 @@ fileSystemManager.copyFileSync(srcPath, destPath)
 | The argument must be string | 参数类型错误，`destPath` 参数应该是 string 类型|
 
 
-**示例：**
+**示例**：
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

@@ -6,14 +6,14 @@
 gl.blendEquationSeparate(modeRGB, modeAlpha)
 ```
 
-**参数值：**
+**参数值**：
 
 |参数|类型|描述|
 |-|-|-|
 |modeRGB|GLenum|混合模式，可取值：`gl.FUNC_ADD`、 `gl.FUNC_SUBTRACT`、 `gl.FUNC_REVERSE_SUBTRACT`，分别表示源 + 目标、源 - 目标、目标 - 源|
 |modeAlpha|GLenum|混合模式，可取值：`gl.FUNC_ADD`、 `gl.FUNC_SUBTRACT`、 `gl.FUNC_REVERSE_SUBTRACT`，分别表示源 + 目标、源 - 目标、目标 - 源|
 
-**示例：**
+**示例**：
 
 ```js
 gl.blendEquationSeparate(gl.FUNC_ADD, gl.FUNC_SUBTRACT);

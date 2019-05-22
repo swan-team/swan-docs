@@ -15,7 +15,7 @@ categoryName: api
 swan.openCustomerServiceConversation(opts)
 ```
 
-**参数值：**
+**参数值**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
@@ -47,7 +47,7 @@ swan.openCustomerServiceConversation(opts)
 当接口调用成功时，其返回值与 `success` 回调函数的返回值相同；
 当接口调用失败时，其返回值与 `fail` 回调函数的返回值相同。
 
-**示例：**
+**示例**：
 
 ```js
 swan.onTouchStart(res => {

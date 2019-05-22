@@ -12,7 +12,7 @@ priority: 05-07
 swan.removeStorage(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**：
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
