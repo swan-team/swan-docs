@@ -44,7 +44,7 @@ sidebar: view
 |upper-threshold| Number/String | 50 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
 |lower-threshold| Number/String |50 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
 |scroll-top | Number/String  | | 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
-|scroll-left| Number  | | 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
+|scroll-left| Number/String  | | 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
 |scroll-into-view | String  | | 值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view=”{= scrollIntoView =}”`。|
 |scroll-with-animation| Boolean  | false | 在设置滚动条位置时使用动画过渡|
 |bindscrolltoupper | EventHandle  | | 滚动到顶部/左边，会触发 scrolltoupper 事件|
