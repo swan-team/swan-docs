@@ -47,7 +47,7 @@ sidebar: return
 
 •         我的-智能小程序-我的小程序
 
-开发者接入相关开发文档：<a href="https://smartprogram.baidu.com/docs/design/component/guide_add/)[/](https://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>
+开发者接入相关开发文档：<a href="https://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>
 
 
 获取方式：该入口不需要开发者进行配置，小程序上线后有用户使用即自动获取。
