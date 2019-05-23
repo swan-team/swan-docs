@@ -1,7 +1,7 @@
 ---
 title: 与客户端版本映射关系
 header: develop
-nav: tutorial
+nav: swan
 sidebar: shine
 ---
 

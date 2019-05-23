@@ -1,7 +1,7 @@
 ---
 title: 历史更新日志
 header: develop
-nav: tutorial
+nav: swan
 sidebar: swanchangelog
 ---
 

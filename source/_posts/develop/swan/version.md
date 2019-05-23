@@ -1,7 +1,7 @@
 ---
 title: 版本分布
 header: develop
-nav: tutorial
+nav: swan
 sidebar: version
 ---
 **更新时间**：2019年5月23日
