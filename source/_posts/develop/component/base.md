@@ -18,32 +18,41 @@ sidebar: base
 
 
 **示例**：
-<a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
-<view class="group">
-    <view>
-        <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="group">
+        <view>
+            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+        </view>
     </view>
-</view>
 
-<view class="group choose">
-    <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
-</view>
+    <view class="title">尺寸选择</view>
+    <view class="group choose">
+        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
+    </view>
 
-<view class="group choose">
-    <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
-</view>
-
+    <view class="title">颜色选择</view>
+    <view class="group choose">
+        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
+    </view>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
     data: {
         types: {
-           smallDefault: ['success', 'info', 'warn', 'waiting',
-           'success_no_circle', 'clear', 'search', 'personal',
-           'setting', 'top', 'close', 'cancel', 'download',
-           'checkboxSelected', 'radioSelected', 'radioUnselect']
+            smallDefault: ['success', 'info', 'warn', 'waiting',
+            'success_no_circle', 'clear', 'search', 'personal',
+            'setting', 'top', 'close', 'cancel', 'download',
+            'checkboxSelected', 'radioSelected', 'radioUnselect']
         },
         colors: [
             '#333', '#666', '#999', '#3C76FF', '#F7534F'
@@ -52,8 +61,47 @@ Page({
             40, 35, 30, 25
         ]
     }
-});
+}); 
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.group {
+    background: #fff;
+    padding: .17rem .4rem;
+}
+icon:last-child {
+    margin-right: 0;
+}
+.big-default {
+    margin-right: .19rem;
+}
+.small-default {
+    margin: .2rem .2rem .1rem 0;
+    display: inline-block;
+}
+.small-primary {
+    margin: .15rem .2rem .1rem 0;
+    display: inline-block;
+}
+.default {
+    height: 1.8rem;
+}
+.choose {
+    height: .8367rem;
+    line-height: .8rem;
+}
+.icon-color,
+.icon-size {
+    margin-right: .15rem;
+    line-height: 1;
+} 
+```
+
 ![图片](../../../img/icon-demo.png)
 
 ## text
@@ -75,21 +123,29 @@ Page({
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
+<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
 <view class="wrap">
-	<text selectable="true">{{text}}</text>
-	<button class="btn" type="primary" bind:tap="add">add text</button>
-	<button class="btn" type="primary" bind:tap="remove">remove text</button>
-</view>
+    <text selectable="true">{{text}}</text>
+    <button class="btn" type="primary" bind:tap="add">add text</button>
+    <button class="btn" type="primary" bind:tap="remove">remove text</button>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 let initData = '这是一段文字.';
-let extraLine = [];
+let extraLine;
 Page({
     data: {
         text: initData
+    },
+    onShow(e) {
+        extraLine = [];
     },
     add(e) {
         extraLine.push('其他文字');
@@ -105,9 +161,22 @@ Page({
             });
         }
     }
-});
+}); 
+```
 
+* 在 css 文件中
 
+```css
+.wrap {
+    font-size: 29rpx;
+    padding: 30rpx;
+}
+
+.wrap button {
+    margin-top: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
 ```
 **图示**：
 
@@ -404,19 +473,33 @@ button {
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例**：
-<a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
-<!-- progress.swan -->
-<view class="section">
-    <progress percent="20" show-info />
-    <progress percent="40" stroke-width="12" />
-    <progress percent="60" color="pink" />
-    <progress percent="80" active />
+
+<view class="wrap">
+    <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
+    <progress class="progress" percent="40" activeColor="#3c76ff" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" active />
+    <progress class="progress" percent="80" activeColor="#74fa7d" active />
 </view>
 
+``` 
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    padding: .3rem .15rem;
+}
+.progress {
+    margin-bottom: .35rem;
+    border-radius: 3px;
+}
 ```
-
-
 ## animation-view
 
 **解释**：Lottie动画组件

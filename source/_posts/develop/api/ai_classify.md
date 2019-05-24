@@ -389,6 +389,7 @@ swan.chooseImage({
 ## swan.ai.animalClassify
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -461,6 +462,7 @@ swan.chooseImage({
 ## swan.ai.plantClassify
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
+
 **方法参数**：Object object
 
 **`object`参数说明**：

@@ -2856,7 +2856,26 @@
             -
               link: /develop/swan/compatibility
               text: 兼容性说明
-              name: compatibility                 
+              name: compatibility 
+    # -
+    #   link: /develop/faq/web-view
+    #   text: FAQ
+    #   name: faq
+    #   sidebar:
+    #     -
+    #       sidebar:            
+    #         -
+    #           link: /develop/faq/web-view
+    #           text: web-view
+    #           name: web-view
+    #         -
+    #           link: /develop/faq/web 
+    #           text: web 化
+    #           name: web    
+    #         -
+    #           link: /develop/faq/frameworkfaq 
+    #           text: 框架
+    #           name: frameworkfaq                         
 # 4
 -
   link: /data/concept

@@ -51,7 +51,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -130,7 +130,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -180,7 +180,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -248,7 +248,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -327,7 +327,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -402,7 +402,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -465,7 +465,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -517,7 +517,7 @@ Page({
         });
 
         ws.onClose(function (res) {
-            console.log('WebSocket连接已关闭！', err);
+            console.log('WebSocket连接已关闭！', res);
         });
 
         this.ws = ws;

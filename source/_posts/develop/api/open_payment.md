@@ -8,7 +8,7 @@ sidebar: open_payment
 
 ## swan.requestPolymerPayment
 
-> 基础库 1.8.5 版本开始支持。
+> 基础库 1.8.5 版本开始支持。使用工具调试时为模拟支付，使用真机调试时可查看真实支付结果。
 
 **解释**： 百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。
 
@@ -24,7 +24,6 @@ sidebar: open_payment
 |---- | ---- | ---- | ----|----|
 |orderInfo| Object | 是 | -|订单信息|
 |bannedChannels| StringArray | 否 | -| 需要隐藏的支付方式|
-|version| string | 否 |-|指定为 '2.0' 时，返回值中会包含 payId 字段。|
 |success |Function  |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|

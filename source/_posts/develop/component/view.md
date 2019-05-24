@@ -19,15 +19,95 @@ sidebar: view
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
 **示例**：
-<a href="swanide://fragment/214a877dded08449e1c177811b34915e1548066914694" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8dc160060d39fc11f07c82c73cb308431558613505857" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-```xml
-<view class="single-text-area">
-    <view class="view-more">
-        <text>点击加载更多</text>
+* 在 swan 文件中
+
+```html
+<view>
+    <view class="title">横向布局</view>
+    <view class="rowlike">
+        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200">
+            <text>A</text>
+        </view>
+        <view class="color-b">
+            <text>B</text>
+        </view>
+        <view class="color-c">
+            <text>C</text>
+        </view>
     </view>
 </view>
+
+<view class="bottom-block">
+    <view class="title">纵向布局</view>
+    <view class="collike">
+        <view class="color-a">
+            <text>A</text>
+        </view>
+        <view class="color-b">
+            <text>B</text>
+        </view>
+        <view class="color-c">
+            <text>C</text>
+        </view>
+    </view>
+</view>
+
 ```
+
+* 在 css 文件中
+
+```css
+.rowlike {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.view-title {
+    display: block;
+    margin: .25rem .18rem .18rem;
+    color: #666;
+}
+.rowlike view {
+    flex: 1;
+    text-align: center;
+    font-size: .16rem;
+    color: #FFF;
+}
+.bottom-block {
+    padding-bottom: .6rem;
+}
+
+.collike {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 2.4rem;
+}
+.collike view {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    flex: 1;
+    text-align: center;
+    font-size: .16rem;
+    color: #FFF;
+}
+.color-a {
+    background-color: #6895FF;
+}
+.color-b {
+    background-color: #8FB1FF;
+}
+.color-c {
+    background-color: #C3D1FF;
+}
+.hover {
+    opacity: .2;
+}
+```
+
 **说明**：
 1、 如果需要使用滚动视图，请使用 scroll-view；
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
@@ -54,53 +134,120 @@ sidebar: view
 **注意**：使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
 **示例**：
-<a href="swanide://fragment/c25704bc739ef70da95b8c7b7b929aae1540395856" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/401c9a44528a80b39a848baf565888641558613903593" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-```xml
-<scroll-view scroll-y style="height: 300px;"
-    bind:scrolltoupper="upper" bind:scrolltolower="lower" scroll-into-view="four"
-    upper-threshold="10"  lower-threshold="10" scroll-top="150" bind:scroll="myscroll">
-    <view id="one" class="bg-red">view1</view>
-    <view id="two" class="bg-green">view2</view>
-    <view id="three" class="bg-yellow">view3</view>
-    <view id="four" class="bg-blue">view4</view>
-</scroll-view>
+* 在 swan 文件中
+
+```html
+<view>
+    <view class="title">横向布局</view>
+    <view class="rowlike">
+        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200">
+            <text>A</text>
+        </view>
+        <view class="color-b">
+            <text>B</text>
+        </view>
+        <view class="color-c">
+            <text>C</text>
+        </view>
+    </view>
+</view>
+
+<view class="bottom-block">
+    <view class="title">纵向布局</view>
+    <view class="collike">
+        <view class="color-a">
+            <text>A</text>
+        </view>
+        <view class="color-b">
+            <text>B</text>
+        </view>
+        <view class="color-c">
+            <text>C</text>
+        </view>
+    </view>
+</view>
 ```
+* 在 js 文件中
 
-```css
-.bg-red, .bg-yellow, .bg-blue, .bg-green {
-    height: 150px;
-    text-align: center;
-}
-.bg-red {
-    background: #FFB6C1;
-}
-.bg-yellow {
-    background: #FFD700;
-}
-.bg-blue {
-    background: #87CEFA;
-}
-.bg-green {
-    background: #98FB98;
-}
-
-```
-
-```javascript
+```js
 Page({
-    upper: e => {
-        console.log('upper', e);
+    data: {
+        data: {
+            toView: 'view4',
+            scrollTop: 100
+        },
     },
-    lower: e => {
-        console.log('lower', e);
+    toLeft() {
+        swan.showToast({
+            duration: 1000,
+            title: '到最左边了'
+        });
     },
-    myscroll: e => {
-        console.log('scroll', e);
+    toRight() {
+        swan.showToast({
+            duration: 1000,
+            title: '到最右边了'
+        });
+    },
+    upper() {
+        swan.showToast({
+            duration: 1000,
+            title: '到顶了'
+        });
+    },
+    lower() {
+        swan.showToast({
+            duration: 1000,
+            title: '到底了'
+        });
+    },
+    myscroll(e) {
+        console.log('获取滚动事件的详细信息e.detail：', e.detail);
     }
 });
-
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.scroll-view {
+    height: 1.66rem;
+    white-space: nowrap;
+    padding: 0 .25rem;
+    font-size: 0;
+}
+.color-a,
+.color-b,
+.color-c {
+    height: 1.66rem;
+    line-height: 1.66rem;
+    text-align: center;
+    font-size: .16rem;
+    color: #fff;
+}
+.color-a {
+    background-color: #6895FF;
+}
+.color-b {
+    background-color: #8FB1FF;
+}
+.color-c {
+    background-color: #C3D1FF;
+}
+.row-view {
+    display: inline-block !important;
+    width: 100%;
+    height: 1.66rem;
+    line-height: 1.66rem;
+    font-size: 20px;
+}
+
+``` 
 **说明**：
 * 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；
 * scroll-into-view 的优先级低于 scroll-top、scroll-left；
@@ -145,7 +292,7 @@ Page({
 |item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例**：
-<a href="swanide://fragment/7213a7a66d2e02cf5a59ad07d810761b1540395545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -153,18 +300,17 @@ Page({
 <view class="wrap">
     <view class="title">示例</view>
     <view class="swiper-wrap">
-        <swiper
+        <swiper 
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}"
+            indicator-dots="{{switchIndicateStatus}}" 
             vertical="false"
             circular="true"
             current="0"
-            bind:change="swiperChange"
-        >
+            bind:change="swiperChange">
             <block s-for="item in items">
                 <swiper-item class="{{item.className}}">
                     <view class="item">{{item.value}}</view>
@@ -203,6 +349,7 @@ Page({
     </view>
 </view>
 ```
+
 * 在 js 文件中
 
 ```js
@@ -220,41 +367,26 @@ Page({
                 value: 'C'
             }
         ],
-        imgUrls: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-        ],
         current: 0,
         switchIndicateStatus: true,
         switchAutoPlayStatus: false,
         switchDuration: 500,
         autoPlayInterval: 2000
     },
-
     swiperChange(e) {
-        console.log('swiperChange:', e.detail);
+        console.log('swiperChange:', e);
     },
     switchIndicate() {
-        this.setData({
-            switchIndicateStatus: !this.getData('switchIndicateStatus')
-        });
+        this.setData({switchIndicateStatus: !this.getData('switchIndicateStatus')});
     },
     switchAutoPlay() {
-        this.setData({
-            switchAutoPlayStatus: !this.getData('switchAutoPlayStatus')
-        });
+        this.setData({switchAutoPlayStatus: !this.getData('switchAutoPlayStatus')});
     },
     changeSwitchDuration(e) {
-        this.setData({
-            switchDuration: e.detail.value
-        });
+        this.setData({switchDuration: e.detail.value});
     },
     changeAutoPlayInterval(e) {
-        this.setData({
-            autoPlayInterval: e.detail.value
-        });
+        this.setData({autoPlayInterval: e.detail.value});
     }
 });
 ```
@@ -327,6 +459,7 @@ Page({
     float: right;
     margin-right: .1rem;
 }
+
 ```
 **说明**：
 
@@ -378,15 +511,142 @@ Page({
 * movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
-<a href="swanide://fragment/af66f1c09b800652bd15c74df87057e21548068761674" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-```xml
-<view class="movable-view">
-    <movable-area style="height: 300px;width: 300px;background: green;">
-        <movable-view style="height: 40px; width: 40px; background: black;" x="30" y="30" direction="all">
-        </movable-view>
-    </movable-area>
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="content">
+        <view class="section">
+            <view class="content-title">
+                movable-view区域小于movable-area
+            </view>
+            <movable-area>
+                <movable-view x="{{x}}" y="{{y}}" direction="all">text</movable-view>
+            </movable-area>
+            <button bind:tap="move" class="move-button" type="primary">点击移动到 (30px, 30px)</button>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                movable-view区域大于movable-area
+            </view>
+            <movable-area>
+                <movable-view class="bigger-area" direction="all">text</movable-view>
+            </movable-area>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                只可以横向移动
+            </view>
+            <movable-area>
+                <movable-view direction="horizontal">text</movable-view>
+            </movable-area>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                只可以纵向移动
+            </view>
+            <movable-area>
+                <movable-view direction="vertical">text</movable-view>
+            </movable-area>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                可超出边界
+            </view>
+            <movable-area>
+                <movable-view direction="all" out-of-bounds>text</movable-view>
+            </movable-area>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                带有惯性
+            </view>
+            <movable-area>
+                <movable-view direction="all" inertia>text</movable-view>
+            </movable-area>
+        </view>
+        <view class="section">
+            <view class="content-title">
+                可放缩
+            </view>
+            <movable-area>
+                <movable-view direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
+                    text
+                </movable-view>
+            </movable-area>
+            <button bind:tap="scale" class="scale-button" type="primary">点击放大3倍</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
 </view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        title: 'movable-view',
+        x: 0,
+        y: 0,
+        scale: 2
+    },
+    move() {
+        this.setData({
+            x: 30,
+            y: 30
+        })
+    },
+    scale() {
+        this.setData({
+            scale: 3
+        })
+    },
+    onChange(e) {
+        console.log(e.detail)
+    },
+    onScale(e) {
+        console.log(e.detail)
+    }
+}); 
+```
+
+* 在 css 文件中
+
+```css
+.content-title {
+    color: #999;
+    padding: 0 .3rem;
+    margin: .5rem 0 .1rem;
+}
+
+movable-area {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #ccc;
+    overflow: hidden;
+    margin: 0 0 .2rem .3rem;
+}
+
+movable-view {
+    width: .6rem;
+    height: .6rem;
+    background-color: #6895FF;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigger-area {
+    width: 3rem;
+    height: 3rem;
+}
 ```
 ## cover-view
 **解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图（支持图片、文本等）。
@@ -398,7 +658,7 @@ Page({
 <a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
-```
+```html
 <video id="myVideo"
     src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
     controls>
@@ -409,7 +669,7 @@ Page({
 
 ```
 * 在 js 文件中
-```
+```js
 Page({
     data: {
         switchs: '点击开始播放'
@@ -434,8 +694,9 @@ Page({
     }
 });
 ```
+
 * 在 css 文件中
-```
+```css
 controls {
     width: 100%;
     height: 50px;
@@ -515,3 +776,5 @@ controls {
 6、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；
 7、IOS端暂不支持一个页面有多个video时嵌套cover-view；
 8、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
+
+

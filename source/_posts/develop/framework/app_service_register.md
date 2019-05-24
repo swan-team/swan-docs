@@ -47,7 +47,7 @@ onLaunch 参数
 |---- | ---- | ---- |
 |scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/">场景值</a> ，scene 值统一由百度小程序场景值管理中心在B端平台统一配置后下发到手机百度App，调起协议中会携带相应入口的scene值。|
 |path|String|打开小程序的路径|
-|query|Object|打开小程序的query|
+|query|Object|打开当前页面路径中的参数|
 |shareTicket|String|标记转发对象|
 |referrerInfo|Object|当场景为由从另一个小程序打开时，返回此字段。|
 |referrerInfo.appId|String|来源小程序的 appKey。|
