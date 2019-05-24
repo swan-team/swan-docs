@@ -92,7 +92,7 @@ swan.chooseImage({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|with_face|Number	|否|	-|如果检测主体是人，主体区域是否带上人脸部分，0-不带人脸区域，其他-带人脸区域，裁剪类需求推荐带人脸，检索/识别类需求推荐不带人脸。默认取1，带人脸。|
+|with_face|Number	|否|	1|如果检测主体是人，主体区域是否带上人脸部分，0-不带人脸区域，其他-带人脸区域，裁剪类需求推荐带人脸，检索/识别类需求推荐不带人脸。默认取1，带人脸。|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -148,7 +148,7 @@ swan.chooseImage({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|top_num	|Number	|否|	-|返回结果top n，默认5。|
+|top_num	|Number	|否|5|返回结果top n，默认5。|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -246,7 +246,7 @@ swan.chooseImage({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|top_num	|Number	|否|-	|返回结果top n,默认值为5。|
+|top_num	|Number	|否|5	|返回结果top n,默认值为5。|
 |filter_threshold|Number|	是|-	|默认0.95，可以通过该参数调节识别效果，降低非菜品识别率.|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|

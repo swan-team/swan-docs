@@ -17,9 +17,8 @@ sidebar: innovation
 <div class="m-doc-custom-examples-correct ismobile"><img src="../../../img/design/principle/innovation/1-2.png"></div>
 <div class="m-doc-custom-examples-correct isbox"><img src="../../../img/design/principle/innovation/1-3.png"></div>
 
-我们期待开发者们能灵活运用这些组件和接口工具，结合具体的场景需求和奇思妙想，一起碰撞创造出更多有趣的小程序。
-在小程序前期，我们内部也做了一些创新尝试，有些已在AI开发者大会上亮相，有些还有研发设计中。
-它们的设计思考等背后的故事，我们还在继续记录和书写，将陆续在“设计故事”一栏中与大家见面。
+我们期待开发者们能灵活运用这些组件和接口工具，结合具体的场景需求和奇思妙想，一起创造出更多有趣的小程序。
+在小程序前期，我们设计团队也为不同行业打造了精品case，为其他智能小程序的接入提供参考借鉴，关于设计的思考与沉淀，将陆续在“设计故事”一栏中与大家见面。
 
 ### 爱说唱
 <div class="m-doc-custom-examples-correct ispc"><img src="../../../img/design/principle/innovation/2-1.png"></div>

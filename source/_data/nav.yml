@@ -369,7 +369,7 @@
               name: light_up
     -
       link: /design/resource/uikit
-      text: 资源下载
+      text: 设计资源
       name: resource
       sidebar:
         -
@@ -379,13 +379,13 @@
               text: 视觉组件库
               name: uikit
             -
-              link: /design/resource/lottie
-              text: Lottie动效库
-              name: lottie
-            -
               link: /design/resource/checklist
               text: 设计走查表
               name: checklist
+            -
+              link: /design/resource/lottie
+              text: Lottie动效开源库
+              name: lottie
 
 #3
 -
@@ -2704,7 +2704,7 @@
           sidebar:
             -
               link: /develop/third/api
-              text: 模版消息 
+              text: 模板消息 
               name: api              
         -
           link: /develop/third/upload

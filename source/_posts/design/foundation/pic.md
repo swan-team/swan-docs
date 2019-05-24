@@ -6,11 +6,11 @@ sidebar: pic
 ---
 
 ## 图片
-图片比文字更吸引用户，能大大丰富页面内容。
+图片比文字更吸引用户，能丰富页面内容。
 
 开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/media/#image/" target="_blank">image</a>。
 
-请使用清晰的图片，模糊像素感的图片会降低页面的整体质感。
+请使用清晰的图片，像素低的图片会降低页面的整体质感。
 <div class="m-doc-custom-examples-correct">
 	<img src="../../../img/design/foundation/pic/1.png">
 </div>

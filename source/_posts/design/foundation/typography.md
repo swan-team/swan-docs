@@ -52,7 +52,7 @@ sidebar: typography
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples--correct">
 		<img src="../../../img/design/foundation/typography/5.png">
-		<p class="m-doc-custom-examples-text">发者使用自定义字体“楷体”;用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
+		<p class="m-doc-custom-examples-text">开发者使用自定义字体“楷体”；用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
 	</div>
 </div>
 

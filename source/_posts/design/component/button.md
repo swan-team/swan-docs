@@ -10,7 +10,7 @@ sidebar: button
 
 ## 大按钮
 大按钮高度固定为88px，圆角大小固定8px。
-自定义配置：按钮文案（不建议超过8个中文字符）。
+自定义配置：按钮文案（建议不超过8个中文字符）。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct ">
 		<img src="../../../img/design/component/button/1.png">
@@ -20,7 +20,7 @@ sidebar: button
 
 ## 小按钮
 小按钮高度固定为56px，宽度最小114px，圆角大小固定6px。
-按钮内距离文字最小15pt，文字较长时，按钮可按所需宽度拉伸适配。
+按钮内边距最小30px，文字较长时，按钮可按所需宽度拉伸适配。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct ">
 		<img src="../../../img/design/component/button/2.png">

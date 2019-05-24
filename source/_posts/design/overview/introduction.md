@@ -4,8 +4,6 @@ header: design
 nav: overview
 sidebar: introduction
 ---
-
-
 # 智能小程序体验设计指南
 此指南由小程序团队提供，旨在帮助开发者们快速了解智能小程序，并在提升小程序体验方面给出相关设计建议。
 
@@ -25,7 +23,7 @@ sidebar: introduction
 	<div class="m-doc-custom-examples-correct">
 		<a href="https://smartprogram.baidu.com/docs/design/resource/uikit/" class="m-doc-custom-download-left"><img src="../../../img/design/overview/1-3.png">
 		</a><p class="m-doc-custom-examples-text">设计资源
-		视觉组件库和设计走查表</p>
+		视觉组件库、设计走查表和动效库</p>
 	</div>
 </div>
 

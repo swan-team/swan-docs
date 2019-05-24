@@ -34,7 +34,7 @@ sidebar: selection
 开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#picker/" target="_blank">picker</a>。
 
 自定义配置：
-1. 选项列数（1-3列），各列选项内容；
+1. 选项列数及各列内容；
 2. 用于时间选择场景时，可配置日期（年月日），时间（分秒）。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct ">
@@ -43,8 +43,8 @@ sidebar: selection
 </div>
 
 ## 全屏选择器
-用于承载选项特别多的列表，以下场景更适合全屏选择器：
-1. 选项特别多时，筛选成本高；
+用于承载选项较多的列表，以下场景更适合全屏选择器：
+1. 选项较多时，筛选成本高；
 2. 列表选项较长；
 3. 列表选项信息量较多；
 4. 带交互操作（如搜索、编辑等）。
