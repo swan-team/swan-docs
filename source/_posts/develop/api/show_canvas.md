@@ -776,7 +776,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setFillStyle.png)
 
-###  canvasContext.setStrokeStyle
+##  canvasContext.setStrokeStyle
 
 
 **解释**：设置边框颜色。
@@ -794,7 +794,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-###  canvasContext.setShadow
+##  canvasContext.setShadow
 
 **解释**：设置阴影样式。
 

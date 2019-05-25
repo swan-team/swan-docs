@@ -209,50 +209,16 @@ Page({
 });
 ```
 
-* 在 css 文件中
 
-```css
-.wrap {
-    font-size: .16rem;
-}
-.scroll-view {
-    height: 1.66rem;
-    white-space: nowrap;
-    padding: 0 .25rem;
-    font-size: 0;
-}
-.color-a,
-.color-b,
-.color-c {
-    height: 1.66rem;
-    line-height: 1.66rem;
-    text-align: center;
-    font-size: .16rem;
-    color: #fff;
-}
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
-.row-view {
-    display: inline-block !important;
-    width: 100%;
-    height: 1.66rem;
-    line-height: 1.66rem;
-    font-size: 20px;
-}
 
-``` 
+
 **说明**：
+
 * 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；
 * scroll-into-view 的优先级低于 scroll-top、scroll-left；
 * 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh；
 * 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view。
+
 
 ## swiper
 
