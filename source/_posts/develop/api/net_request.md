@@ -7,11 +7,11 @@ sidebar: net_request
 
 ## swan.request
 
-**解释：**发起网络请求
+**解释**：发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -26,7 +26,7 @@ sidebar: net_request
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）。|
 
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 
 |参数 | 类型 | 说明  |
@@ -35,7 +35,7 @@ sidebar: net_request
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 |header | Object | 开发者服务器返回的 HTTP Response Header|
 
-#### **data 数据说明：**
+#### **data 数据说明**：
 
 最终发送给服务器的数据都是 String 类型，如果传入的 data 不是 String 类型，会被转换成 String 。转换规则如下：
 1、对于 GET 方法的数据，会将数据转换成 query string（encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）；
@@ -65,11 +65,11 @@ swan.request({
 });
 ```
 
-**返回值：**
+**返回值**：
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
 
-**requestTask 对象的方法列表：**
+**requestTask 对象的方法列表**：
 
 |方法 | 参数 | 说明  |
 |---- | ---- | ---- |

@@ -7,9 +7,9 @@ sidebar: custom-component_lifetimes
 
 ## 组件的主要生命周期
 
-**解释：**自定义组件的生命周期，指的是组件自身的一些可自执行的方法，这些方法会在特殊的时间点或遇到一些特殊页面行为时被自动触发而执行。
+**解释**：自定义组件的生命周期，指的是组件自身的一些可自执行的方法，这些方法会在特殊的时间点或遇到一些特殊页面行为时被自动触发而执行。
 
-**组件的生命周期：**created、 attached、 ready 、detached, 这些方法包含了一个组件实例生命流程的主要时间点，具体的使用场景如下:
+**组件的生命周期**：created、 attached、 ready 、detached, 这些方法包含了一个组件实例生命流程的主要时间点，具体的使用场景如下:
 
 - **created**：组件实例刚刚被创建好时， created 生命周期被触发，通常情况下，这个生命周期只应该用于给组件 this 添加一些自定义属性字段；
 - **attached**：在组件完全初始化完毕、进入页面节点树后， attached 生命周期被触发。此时， this.data 已被初始化为组件的当前值。这个生命周期很有用，绝大多数初始化工作可以在这个时机进行；
@@ -45,10 +45,10 @@ Component({
 
 |生命周期|参数|描述|最低版本|
 |---|---|---|---|
-|created|无|在组件实例刚刚被创建时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|attached|无|在组件实例进入页面节点树时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|ready|无|在组件在视图层布局完成后执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
-|detached|无|在组件实例被从页面节点树移除时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.10.13</a>|
+|created|无|在组件实例刚刚被创建时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|attached|无|在组件实例进入页面节点树时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|ready|无|在组件在视图层布局完成后执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
+|detached|无|在组件实例被从页面节点树移除时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.10.13</a>|
 
 ## 组件所在页面的生命周期
 
@@ -56,8 +56,8 @@ Component({
 
 |生命周期|参数|描述|最低版本|
 |---|---|---|---|
-|show|无|组件所在的页面被展示时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
-|hide|无|组件所在的页面被隐藏时执行|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.27</a>|
+|show|无|组件所在的页面被展示时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|hide|无|组件所在的页面被隐藏时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 
 **<div class="notice">示例： </div>**
 ```js

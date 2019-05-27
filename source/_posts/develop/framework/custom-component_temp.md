@@ -5,7 +5,7 @@ nav: framework
 sidebar: custom-component_temp
 ---
 
-**解释：** 类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
+**解释**： 类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
 
 ### 组件模版
 
@@ -31,8 +31,7 @@ sidebar: custom-component_temp
     </custom-component>
 </view>
 ```
-**注意**：
-在自定义组件内部引用资源，暂不支持使用相对路径的形式，因为该相对路径是相对于宿主页面（page级）的，需要使用绝对路径进行资源引入，使用相对路径引用src资源的支持预计会在12月底提供，对于其它类型形式的资源引入，请使用绝对路径。
+
 ### 模版数据绑定
 
 与普通的 SWAN 模版类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。
@@ -262,3 +261,26 @@ Component({
   color: red;
 }
 ```
+
+### 覆盖样式：
+自定义组件会给每个样式前面加上前缀，前缀的类型为:用户定义的自定组件名字 + "__"。
+例如：
+
+```json
+// JSON 文件里引用
+{
+    "usingComponents": {
+        "custom": "/components/custom/custom"
+    }
+}
+// /components/custom/custom的样式
+.cus { color: red; }
+
+```
+
+那么 custom的样式会转变为
+
+```
+.custom__cus { color: red; }
+```
+所以当新样式的优先级高于加了前缀的样式时，才能覆盖。

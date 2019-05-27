@@ -72,7 +72,7 @@ Component({
 });
 ```
 
-**说明：**
+**说明**：
 
 上述代码中声明了1个自定义组件和3个 behavior，每个 behavior 都使用了 definitionFilter 定义段。按照声明的顺序会有如下事情发生：
 

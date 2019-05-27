@@ -13,7 +13,7 @@ sidebar: detailPages
 
 ## 基础布局
 ### 间距
-布局时，为信息内容区留出至少适当边距，以获得最佳的可读性。
+布局时，为信息内容区留出适当边距，以获得最佳的可读性。
 <div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/2.png"><p class="m-doc-custom-examples-text">1. 页面边距：信息内容离顶部、屏幕左右边距34px；
 2. 内容模块间距：标题与正文区间距60px，文字与多媒体间距40px；文字段落与段落间距72px。</p>
 </div>
@@ -35,7 +35,7 @@ sidebar: detailPages
 ### 2. 多媒体
 图片和视频能丰富页面，请根据资源选择合适尺寸：
 <div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/6.png"><p class="m-doc-custom-examples-text">1. 图片：尺寸最宽为760px，当图片不满足最宽尺寸时，不进行拉伸显示，避免图片不清晰；
-2. 视频：宽度为760px，尺寸为16:9。</p>
+2. 视频：宽度为760px，宽高比16:9。</p>
 </div>
 
 
@@ -53,8 +53,8 @@ sidebar: detailPages
 #### 图片
 1. 展示一张图片时，图片尺寸最宽为760px，当图片不满足最宽尺寸时，请不要拉伸显示，避免图片不清晰；
 2. 当需要同时展示多张图片时，请根据不同图片数量使用不同的排版布局，以能获得更佳效果。
-- 图片尺寸为1:1；
-- 图片间距为8px。
+- 图片宽高比1:1；
+- 图片与图片的间距为8px。
 
 <div class="m-doc-custom-examples-correct"><img src="../../../img/design/foundation/detailPages/8.png">
 		<p class="m-doc-custom-examples-text">1. 图片数量 = 1；
@@ -64,7 +64,7 @@ sidebar: detailPages
 
 #### 视频
 <div class="m-doc-custom-text-image">
- 	<div><p>展现一个视频时，宽度为760px，尺寸为16:9。</p>
+ 	<div><p>展现一个视频时，宽度为760px，宽高比16:9。</p>
  	</div>
  		<div><img src="../../../img/design/foundation/detailPages/9.png"></div>
 	</div>
@@ -76,7 +76,7 @@ sidebar: detailPages
 视频详情页一般由视频播放器、标题组成。
 
 ### 1. 视频播放器
-使用智能小程序的视频播放器插件，使其固定在页面顶部。
+使用智能小程序的视频播放器插件，使其固定在页面顶部。建议配置视频封面，建立用户对信息内容的预期。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/detailPages/10-1.png">

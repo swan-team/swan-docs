@@ -12,38 +12,47 @@ sidebar: base
 
 |属性名|类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-|type |String  |-|生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
+|type |String  | |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
 |size | Number  |23 |icon 的大小，单位是 px|
-|color | Color | - |icon 的颜色，同 css 的 color|
+|color | Color |   |icon 的颜色，同 css 的 color|
 
 
-**示例**： 
-<a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
-<view class="group">
-    <view>
-        <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+**示例**：
+<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="group">
+        <view>
+            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+        </view>
     </view>
-</view>
 
-<view class="group choose">
-    <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
-</view>
+    <view class="title">尺寸选择</view>
+    <view class="group choose">
+        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
+    </view>
 
-<view class="group choose">
-    <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
-</view>
-
+    <view class="title">颜色选择</view>
+    <view class="group choose">
+        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
+    </view>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
     data: {
         types: {
-           smallDefault: ['success', 'info', 'warn', 'waiting',
-           'success_no_circle', 'clear', 'search', 'personal',
-           'setting', 'top', 'close', 'cancel', 'download',
-           'checkboxSelected', 'radioSelected', 'radioUnselect']
+            smallDefault: ['success', 'info', 'warn', 'waiting',
+            'success_no_circle', 'clear', 'search', 'personal',
+            'setting', 'top', 'close', 'cancel', 'download',
+            'checkboxSelected', 'radioSelected', 'radioUnselect']
         },
         colors: [
             '#333', '#666', '#999', '#3C76FF', '#F7534F'
@@ -52,19 +61,58 @@ Page({
             40, 35, 30, 25
         ]
     }
-});
+}); 
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.group {
+    background: #fff;
+    padding: .17rem .4rem;
+}
+icon:last-child {
+    margin-right: 0;
+}
+.big-default {
+    margin-right: .19rem;
+}
+.small-default {
+    margin: .2rem .2rem .1rem 0;
+    display: inline-block;
+}
+.small-primary {
+    margin: .15rem .2rem .1rem 0;
+    display: inline-block;
+}
+.default {
+    height: 1.8rem;
+}
+.choose {
+    height: .8367rem;
+    line-height: .8rem;
+}
+.icon-color,
+.icon-size {
+    margin-right: .15rem;
+    line-height: 1;
+} 
+```
+
 ![图片](../../../img/icon-demo.png)
 
 ## text
 
-**解释：**放文本的元素
+**解释**：放文本的元素
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|最低版本|
 |---- | ---- | ---- |---- |--|
 | space | String  | false |显示连续空格|-|
-| selectable|Boolean|false|文本是否可选|3.10.4|
+| selectable|Boolean|false|文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
 
 **space 有效值**:
 
@@ -75,21 +123,29 @@ Page({
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
+<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
 <view class="wrap">
-	<text>{{text}}</text>
-	<button class="btn" type="primary" bind:tap="add">add text</button>
-	<button class="btn" type="primary" bind:tap="remove">remove text</button>
-</view>
+    <text selectable="true">{{text}}</text>
+    <button class="btn" type="primary" bind:tap="add">add text</button>
+    <button class="btn" type="primary" bind:tap="remove">remove text</button>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 let initData = '这是一段文字.';
-let extraLine = [];
+let extraLine;
 Page({
     data: {
         text: initData
+    },
+    onShow(e) {
+        extraLine = [];
     },
     add(e) {
         extraLine.push('其他文字');
@@ -105,22 +161,35 @@ Page({
             });
         }
     }
-});
-
-
+}); 
 ```
-**图示：**
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: 29rpx;
+    padding: 30rpx;
+}
+
+.wrap button {
+    margin-top: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+```
+**图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/text-demo.png">
+        <img src="../../../img/text-demo2.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
@@ -133,7 +202,7 @@ Page({
 
 ## rich-text
 
-**解释：** 富文本
+**解释**： 富文本
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|
@@ -155,7 +224,7 @@ Page({
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-#### 文本节点：type = text 
+#### 文本节点：type = text
 
 **属性说明:**
 
@@ -215,7 +284,7 @@ Page({
 | tr | -|
 | ul | - |
 
-**说明：**
+**说明**：
 
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
 * 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
@@ -381,47 +450,61 @@ button {
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
 
 ## progress
 
-**解释：**进度条
+**解释**：进度条
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| percent | Float  |无|百分比 0~100 |
+| percent | Float  | |百分比 0~100 |
 | show-info | Boolean  | false  |在进度条右侧显示百分比|
-| stroke-width | Number | 2 |进度条线的宽度，单位 px|
+| stroke-width | Number/String | 2 |进度条线的宽度，单位 px|
 | color | Color  | #09BB07 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  |  | 已选择的进度条的颜色	|
-| backgroundColor |  Color ||未选择的进度条的颜色	|
+| activeColor | Color  | #09BB07 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 |未选择的进度条的颜色	|
 | active | Boolean  | false  |进度条从左往右的动画	|
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
-**示例：**
-<a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
-<!-- progress.swan -->
-<view class="section">
-    <progress percent="20" show-info />
-    <progress percent="40" stroke-width="12" />
-    <progress percent="60" color="pink" />
-    <progress percent="80" active />
+
+<view class="wrap">
+    <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
+    <progress class="progress" percent="40" activeColor="#3c76ff" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" active />
+    <progress class="progress" percent="80" activeColor="#74fa7d" active />
 </view>
 
+``` 
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    padding: .3rem .15rem;
+}
+.progress {
+    margin-bottom: .35rem;
+    border-radius: 3px;
+}
 ```
-
-
 ## animation-view
 
-**解释：**Lottie动画组件
+**解释**：Lottie动画组件
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |必填 |默认值  |说明|最低版本|
 |---- | ---- | --- | ---- |---- |--|
@@ -430,7 +513,7 @@ button {
 |autoplay | Boolean | 否 |true	  |动画是否自动播放	|-|
 |action | String  |	 否 | play |动画操作，可取值 play、pause、stop	|-|
 |hidden | Boolean  | 否 | true |是否隐藏动画|-|
-|bindended | EventHandle | 否 | - | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
+|bindended | EventHandle | 否 |   | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
 **说明:**
 
@@ -438,7 +521,7 @@ button {
 * animation-view组件不支持原生组件嵌套。
 * 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
 
-**示例：**
+**示例**：
 
 <a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

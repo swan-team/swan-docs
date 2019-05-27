@@ -6,11 +6,11 @@ sidebar: location_open
 ---
 ## swan.openLocation
 
-**解释：**使用百度 App 内置地图查看位置。
+**解释**：使用百度 App 内置地图查看位置。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,7 +23,7 @@ sidebar: location_open
 |fail  | Function |否 | -| 接口调用失败的回调函数|
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/8dfef443454866063515a1c3192982281548068706910" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js

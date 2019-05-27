@@ -2,8 +2,10 @@
 title: 组件列表
 header: develop
 nav: component
-sidebar: list
+sidebar:  componetlist
 ---
+
+
 
 |组件名称 | 解释 |
 |---- | ---- |

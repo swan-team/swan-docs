@@ -1,20 +1,29 @@
 ---
 title: 历史更新日志
 header: develop
-nav: tutorial
+nav: swan
 sidebar: swanchangelog
 ---
+
+## 3.60 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.60.2|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
+
 
 ## 3.50 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.50.12|2019.5.18|**BugFix**<p>修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.50.3|2019.4.26|**BugFix**<p>**·**修复修复多个map使用一个markers时引用问题，map iconPath 支持相对路径；<p>**·**修复 cover-image 销毁后 update 的问题；<p>**·**修复宿主不传 components 时，报错的问题。|
 
 ## 3.40 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.40.19|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.40.15|2019.4.22|**BugFix**<p>**·**修复bindlongtap事件长按并移动后不能触发的问题；<p>**·**修复 cover-image 销毁后 update 的问题。|
 |3.40.9|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|
 |3.40.6|2019.4.9|**BugFix**<p>修复绑定 bindtap 事件，长按后再点击会触发两次bindtap的问题。|
@@ -24,6 +33,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.30.34|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.30.32|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.30.31|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
 |3.30.28|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|
@@ -34,6 +44,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.20.36|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.20.35|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.20.34|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
 |3.20.32|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|

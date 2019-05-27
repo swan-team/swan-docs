@@ -1,22 +1,23 @@
 ---
-title: 代码构成
+title: 欢迎开发智能小程序
 header: develop
-nav: tutorial
-sidebar: codedir
+nav: fuctionlist
+sidebar: list
 ---
+# 欢迎开发智能小程序
 
+欢迎使用百度智能小程序，本文档为您提供[快速入门](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](http://smartprogram.baidu.com/docs/develop/component/componetlist/)、[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方接入](https://smartprogram.baidu.com/docs/develop/third/pro/)等详细的文档的介绍。
+如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
 
-智能小程序是一种新的开放能力，开发者可以快速地开发一个智能小程序。通过搜索，用户可以在百度 App 内被便捷地获取和传播。
+> 对于有其它小程序开发经验的开发者，我们还提供了其它[开发解决方案](https://smartprogram.baidu.com/docs/develop/tutorial/move/)。
 
-框架概述
------
+## 架构概述
 
 SWAN App 基本开发思路类似于前端开发，并增强调用大量端能力，性能体验优于普通 Web 。上层架构基于 JS 开发，可以辅助开发者进行良好的开发。
 
 SWAN App 为开发者提供了 MVVM 的开发方式。JS 状态的变更引起视图的变化，视图的变更也可以反馈到逻辑层的状态中，开发者开发更加方便。
 
-目录结构
------
+## 目录结构
 
 工程的工作目录中包含以下文件：
 
@@ -41,3 +42,7 @@ SWAN App 为开发者提供了 MVVM 的开发方式。JS 状态的变更引起�
 2、 .swan 结尾的 SWAN 模板文件，这个文件是用来描述当前这个页面的文件结构，类似于网页中的 HTML 文件；
 3、 .css 结尾的 CSS 样式文件，描述页面样式；
 4、 .js 结尾的 JS 文件，处理这个页面和用户的交互。
+
+
+
+

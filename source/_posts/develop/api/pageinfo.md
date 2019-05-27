@@ -10,11 +10,11 @@ sidebar: pageinfo
 ## swan.setPageInfo
 >建议在 Page 的 onShow 生命周期中使用。
 
-**解释：**智能小程序可接入百度搜索和百度 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
+**解释**：智能小程序可接入百度搜索和百度 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -59,48 +59,75 @@ visit参数说明
 4、当前页面包含焦点图或者正文图片 image 为必填字段。
 5、当前页面能够统计到用户分发、互动和时长等数据时，visit字段建议填写。开发者可根据页面实际统计的情况完善pv、uv、sessionDuration、likes、comments、collects、shares、followers字段，若页面不包含以上字段时，可不填写。
 
-**示例**
 
-``` js
-    swan.setPageInfo && swan.setPageInfo({
-        title: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！-百度贴吧',
-        keywords: '百度,百度贴吧,好运中国年,60,晒元,宵节',
-        description: '晒元宵节活动红包，爱..昨天的百度APP元宵节活动中，共发出2亿现金红包、含151万个手气现金大奖和240辆红旗轿车，谁是好运锦鲤，快来分享！马上惊喜升级~摇中红包的锦鲤们即刻晒出红包金额截图，我们将会抽取660位好运锦鲤',
-        articleTitle: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！',
-        releaseDate: '2019-01-02 12:01:30',
-        image: [
-        'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
-        'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
-        ],
-        video: [{
-            url: 'https://www.baidu.com/mx/v12.mp4',
-            duration: '100',
-            image: 'https://smartprogram.baidu.com/docs/img/image-scaleToFill.png'
-        }],
-        visit: {
-            pv: '1000',
-            uv: '100',
-            sessionDuration: '130'
-        },
-        likes: '75',
-        comments: '13',
-        collects: '23',
-        shares: '8',
-        followers: '35',
-        success: function () {
-            console.log('页面基础信息设置完成');
-        }
-    })
+**示例**：
+
+<a href="sswanide://fragment/69956fd63658247bcc26cb90264521931558342368386" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setPageInfo">setPageInfo</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    setPageInfo() {
+        swan.setPageInfo({
+            title: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！-百度贴吧',
+            keywords: '百度,百度贴吧,好运中国年,60,晒元,宵节',
+            description: '晒元宵节活动红包，爱..昨天的百度APP元宵节活动中，共发出2亿现金红包、含151万个手气现金大奖和240辆红旗轿车，谁是好运锦鲤，快来分享！马上惊喜升级~摇中红包的锦鲤们即刻晒出红包金额截图，我们将会抽取660位好运锦鲤',
+            articleTitle: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！',
+            releaseDate: '2019-01-02 12:01:30',
+            image: [
+                'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
+                'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
+            ],
+            video: [{
+                url: 'https://www.baidu.com/mx/v12.mp4',
+                duration: '100',
+                image: 'https://smartprogram.baidu.com/docs/img/image-scaleToFill.png'
+            }],
+            visit: {
+                pv: '1000',
+                uv: '100',
+                sessionDuration: '130'
+            },
+            likes: '75',
+            comments: '13',
+            collects: '23',
+            shares: '8',
+            followers: '35',
+            success: function () {
+                console.log('setPageInfo success');
+            },
+            fail: function (err) {
+                console.log('setPageInfo fail', err);
+            }
+        })
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 ## swan.setMetaDescription
 
 > 不推荐使用。
 
-**解释：** 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+**解释**： 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -109,32 +136,52 @@ visit参数说明
 |fail  | Function  |  否  | -| 接口调用失败的回调函数|
 |complete   | Function   | 否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/37be049b858a8ea229718bbcb9766dc11558342455427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setMetaDescription">setMetaDescription</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.setMetaDescription && swan.setMetaDescription({
-    content: '当前小程序页面描述信息',
-    success: function (res) {
-        console.log('设置成功');
-    },
-    fail: function (res) {
-        console.log('设置失败');
-    },
-    complete: function (res) {
-	    console.log('设置失败');
+Page({
+    setMetaDescription() {
+        swan.setMetaDescription({
+            content: '当前小程序页面描述信息',
+            success: function (res) {
+                console.log('setMetaDescription success', res);
+            },
+            fail: function (err) {
+                console.log('setMetaDescription fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 ## swan.setMetaKeywords
 
 > 不推荐使用。
 
-**解释：** 设置 web 版小程序 keywords meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+**解释**： 设置 web 版小程序 keywords meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -143,21 +190,41 @@ swan.setMetaDescription && swan.setMetaDescription({
 |fail  | Function  |  否  |  -|接口调用失败的回调函数|
 |complete   | Function   | 否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/59d7a9c8342689acc0e655ddb63b05931558342520027" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setMetaKeywords">setMetaKeywords</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.setMetaKeywords && swan.setMetaKeywords({
-    content: '小程序, 关键字',
-    success: function (res) {
-        console.log('设置成功');
-    },
-    fail: function (res) {
-        console.log('设置失败');
-    },
-    complete: function (res) {
-	    console.log('设置失败');
+Page({
+    setMetaKeywords() {
+        swan.setMetaKeywords({
+            content: '小程序, 关键字',
+            success: function (res) {
+                console.log('setMetaKeywords success', res);
+            },
+            fail: function (err) {
+                console.log('setMetaKeywords fail', res);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 
@@ -165,11 +232,11 @@ swan.setMetaKeywords && swan.setMetaKeywords({
 
 > 不推荐使用。
 
-**解释：**动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
+**解释**：动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -178,10 +245,39 @@ swan.setMetaKeywords && swan.setMetaKeywords({
 |fail   | Function|    否 | -|  接口调用失败的回调函数|
 |complete   | Function   | 否|  -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setDocumentTitle">setDocumentTitle</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.setDocumentTitle && swan.setDocumentTitle({
-    title: '我是页面标题'
+Page({
+    setDocumentTitle() {
+        swan.setDocumentTitle({
+            title: '我是页面标题',
+            success: function (res) {
+                console.log('setDocumentTitle success', res);
+            },
+            fail: function (err) {
+                console.log('setDocumentTitle fail', res);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

@@ -28,7 +28,7 @@ sidebar: move
 * 在 windows 下，由于`node.js`环境兼容性较差，建议使用开发者工具中的入口。
 
 #### NPM
-执行一下操作，在[NPM官网](https://www.npmjs.com/package/wx2swan)获取工具：
+执行以下操作，在[NPM官网](https://www.npmjs.com/package/wx2swan)获取工具：
 1. 全局按照个命令行工具： `npm install -g wx2swan`;
 2. 执行命令： `wx2swan wxmp`  wxmp 是微信小程序的目录;
 3. 查看生成目录的 log；

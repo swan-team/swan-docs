@@ -10,9 +10,9 @@ sidebar: ai_classify
 
 **解释**：通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -21,7 +21,7 @@ sidebar: ai_classify
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -32,7 +32,7 @@ sidebar: ai_classify
 |+score|Number	|置信度，0-1|
 |+root|	String|	识别结果的上层标签，有部分钱币、动漫、烟酒等tag无上层标签。|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -67,7 +67,7 @@ sidebar: ai_classify
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -85,19 +85,19 @@ swan.chooseImage({
 
 **解释**：用户向服务请求检测图像中的主体位置。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|with_face|Number	|否|	-|如果检测主体是人，主体区域是否带上人脸部分，0-不带人脸区域，其他-带人脸区域，裁剪类需求推荐带人脸，检索/识别类需求推荐不带人脸。默认取1，带人脸。|
+|with_face|Number	|否|	1|如果检测主体是人，主体区域是否带上人脸部分，0-不带人脸区域，其他-带人脸区域，裁剪类需求推荐带人脸，检索/识别类需求推荐不带人脸。默认取1，带人脸。|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -109,7 +109,7 @@ swan.chooseImage({
 |+height|  Number| 表示定位位置的长方形的高度。|
 
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -122,7 +122,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -141,19 +141,19 @@ swan.chooseImage({
 
 **解释**：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|top_num	|Number	|否|	-|返回结果top n，默认5。|
+|top_num	|Number	|否|5|返回结果top n，默认5。|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -169,7 +169,7 @@ swan.chooseImage({
 |+width|   Number| 像素宽|
 |+height|  Number| 像素高|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -220,7 +220,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -239,20 +239,20 @@ swan.chooseImage({
 
 **解释**：用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|top_num	|Number	|否|-	|返回结果top n,默认值为5。|
+|top_num	|Number	|否|5	|返回结果top n,默认值为5。|
 |filter_threshold|Number|	是|-	|默认0.95，可以通过该参数调节识别效果，降低非菜品识别率.|
 |success |Function    |否 |-|      接口调用成功的回调函数|
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -263,7 +263,7 @@ swan.chooseImage({
 |+calorie|	Number|	卡路里，每100g的卡路里含量。|
 |+probability|	Number	|识别结果中每一行的置信度值，0-1。|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -303,7 +303,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -322,9 +322,9 @@ swan.chooseImage({
 
 **解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -334,7 +334,7 @@ swan.chooseImage({
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -350,7 +350,7 @@ swan.chooseImage({
 |++width|	Number|	像素宽|
 |++height|	Number|	像素高|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -371,7 +371,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -389,9 +389,10 @@ swan.chooseImage({
 ## swan.ai.animalClassify
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
-**方法参数：**Object object
 
-**`object`参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -401,7 +402,7 @@ swan.chooseImage({
 |fail |   Function|    否  | -|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 |说明  |
 |---- | ---- | ---- |
@@ -410,7 +411,7 @@ swan.chooseImage({
 |+name|	string|	动物名称，示例：蒙古马。|
 |+score|	Number|		置信度，示例：0.5321。|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -443,7 +444,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -461,9 +462,10 @@ swan.chooseImage({
 ## swan.ai.plantClassify
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
-**方法参数：**Object object
 
-**`object`参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -472,7 +474,7 @@ swan.chooseImage({
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -481,7 +483,7 @@ swan.chooseImage({
 |+name| String|	植物名称，示例：吉娃莲。|
 |+score	|Number|	置信度，示例：0.5321。|
 
-**返回值示例：**
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -510,7 +512,7 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
+**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -531,7 +533,7 @@ swan.chooseImage({
 支持在小程序内调起识图，目前支持的识图功能包含： 扫码，拍题，翻译。
 
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -550,7 +552,7 @@ swan.chooseImage({
 |TRANSLATE|翻译|
 |QUESTION|拍题|
 
-**示例代码：**
+**示例代码**：
 
 ```javascript
 swan.recognizeImage({

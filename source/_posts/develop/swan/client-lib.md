@@ -1,7 +1,7 @@
 ---
 title: 基础库
 header: develop
-nav: framework
+nav: swan
 sidebar: client-lib
 ---
 

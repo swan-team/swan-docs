@@ -5,6 +5,8 @@ nav: api
 sidebar: apilist
 ---
 
+
+
 ## 网络
 
 |API 名称|解释|
@@ -56,7 +58,7 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://localhost:4000/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
@@ -289,3 +291,4 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#clearTimeout/">clearTimeout</a>|取消由 setTimeout 设置的定时器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/timer/#setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
+

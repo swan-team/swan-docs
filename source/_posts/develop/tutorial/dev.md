@@ -221,6 +221,7 @@ Page({
 |backgroundTextStyle|String|dark|下拉 loading 的样式，仅支持 dark / light|-|
 |enablePullDownRefresh|Boolean|false|是否全局开启下拉刷新。详见 <a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE/">Page.onPullDownRefresh</a>。|-|
 |onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为px。详见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE/">Page.onReachBottom</a>。|-|
+|disableSwipeBack|Boolean|false|禁止页面右滑手势返回|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App11.8</a>|
 |disableScroll|Boolean|false|设置为 true 则页面整体不能上下滚动。只在页面配置中有效，无法在 app.json 中设置|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">iOS 百度 App10.8，Android暂不支持</a>|
 
 
@@ -241,9 +242,10 @@ Page({
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">百度 App原生顶bar高度 = 状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+ action高度（iOS为44px，Android为38px）</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
+
 
 
 ## 页面路由
@@ -358,6 +360,9 @@ Page({
 
 ## 组件
 
+> 更多内容详见[组件](https://smartprogram.baidu.com/docs/develop/component/list/)。
+
+
 智能小程序中提供了丰富多样的组件，开发者可以在 .swan 文件中，使用预设好的组件，拼装完成自己的智能小程序的页面。
 
 如：使用 slider 组件
@@ -383,6 +388,8 @@ Page({
 ```
 
 ## API
+
+> 更多内容详见[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)。
 
 智能小程序为开发者提供了百度 App 提供的丰富的端能力。使用方式比较简单，直接调用 SWAN 对象上的端能力方法，或者 Page 对象中 this 上挂载的方法。
 

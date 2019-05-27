@@ -8,11 +8,11 @@ sidebar: show_toast
 ## swan.showToast
 
 
-**解释：**显示消息提示框
+**解释**：显示消息提示框
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +25,7 @@ sidebar: show_toast
 |complete   | Function |   否| -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
-**icon有效值：**
+**icon有效值**：
 
 |有效值 |说明  |
 |---- | ---- |
@@ -33,7 +33,7 @@ sidebar: show_toast
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.showToast({
@@ -56,11 +56,11 @@ swan.showToast({
 ## swan.showLoading
 
 
-**解释：**显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
+**解释**：显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -70,44 +70,134 @@ swan.showToast({
 |fail  |  Function   | 否 |-|   接口调用失败的回调函数|
 |complete  |  Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<!-- #### 错误码
+**示例**：
 
-**Andriod**
+<a href="swanide://fragment/57166a3f5efd17f9397b6abde17b57b61557727729286" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|执行失败|
+* 在 swan 文件中
 
-**iOS**
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showLoading">showLoading</button>
+</view>
+```
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+* 在 js 文件中
+
+```js
+Page({
+    showLoading() {
+        swan.showLoading({
+            title: 'loading',
+            mask: true,
+            success: function () {
+                console.log('showLoading success');
+            },
+            fail: function (err) {
+                console.log('showLoading fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
 
 ## swan.hideToast
 
 
-**解释：** 隐藏消息提示框
+**解释**： 隐藏消息提示框
 
-**方法参数：**无
+**方法参数**：无
+
+**示例**：
+
+<a href="swanide://fragment/a0acd2d1849d0584f88c644db70b4c1f1557727806672" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showToast">showToast</button>
+    <button type="primary" bindtap="hideToast">hideToast</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    showToast() {
+        swan.showToast({
+            title: 'toast',
+            duration: 10000
+        });
+    },
+    hideToast() {
+        swan.hideToast();
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
+```
 
 ## swan.hideLoading
 
-**解释：**隐藏 loading 提示框
+**解释**：隐藏 loading 提示框
 
-**方法参数：**无
+**方法参数**：无
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/f9c9c15b36a79c338e7ff389eb3eccde1557727891494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showLoading">showLoading</button>
+    <button type="primary" bindtap="hideLoading">hideLoading</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.showLoading({
-    title: '加载中',
-    mask: true
+Page({
+    showLoading() {
+        swan.showLoading({
+            title: 'loading'
+        });
+    },
+    hideLoading() {
+        swan.hideLoading();
+    }
 });
+```
+* 在 css 文件中
 
-setTimeout(function() {
-    swan.hideLoading();
-}, 2000);
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -119,11 +209,11 @@ setTimeout(function() {
 
 ## swan.showModal
 
-**解释：**显示模态弹窗
+**解释**：显示模态弹窗
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -138,14 +228,14 @@ setTimeout(function() {
 |fail   | Function  |  否  |-|接口调用失败的回调函数|
 |complete   | Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |confirm |Boolean |为 true 时，表示用户点击了确定按钮 。 |
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/553a0685c5979cfe831b1178661476001540395468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 ```js
@@ -180,11 +270,11 @@ swan.showModal({
 
 ## swan.showActionSheet
 
-**解释：**​显示操作菜单
+**解释**：​显示操作菜单
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -194,14 +284,14 @@ swan.showModal({
 |fail  |  Function |   否  |-|  接口调用失败的回调函数|
 |complete   | Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始。|
 
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/cb742037e729ede5fd6efe8967dfd55f1540397056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 

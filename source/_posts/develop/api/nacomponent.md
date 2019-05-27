@@ -15,22 +15,35 @@ sidebar: nacomponent
 
 **方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|type |String | 否 | bar| 引导组件类型，有效值： bar/bar-autohide/tip。 |
-|content |String| 否 |bar: 一键添加到我的小程序；<br> bar-autohide: 一键添加到我的小程序；<br> tip: 添加到我的小程序，下次使用更方便。| 引导组件文字， bar和bar-autohide类型限制少于11个字符，tip类型少于18个字符，超过长度将截断显示。|
+|type |String | 否 | bar| 引导组件类型，有效值： bar/tip。 |
+|content |String| 否 |bar: 一键添加到我的小程序；<br> tip: 添加到我的小程序，下次使用更方便。| 引导组件文字， bar类型限制少于11个字符，tip类型少于18个字符，超过长度将截断显示。|
 |success |Function  |  否 | -| 接口调用成功的回调|
 |fail   | Function |   否  |-| 接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+
+<a href="swanide://fragment/3140dd2436533b3006aac9d326e8faf41557730578312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showFavoriteGuide1">示例1</button>
+    <button type="primary" bindtap="showFavoriteGuide2">示例2</button>
+</view>
+```
 
 
 **展现形式**：
 目前添加到我的小程序引导组件支持以下两种类型，开发者可根据自身业务进行选择：
 
-1. bar 浮层引导
-    * 一直展现：用户点击引导组件旁边的关闭按钮才能关闭，点击添加按钮可直接添加到我的小程序。
+1. 浮层引导(type=bar)
+    一直展现：用户点击关闭，浮层引导消失；点击添加按钮可直接添加到我的小程序。
 
     ![图片](../../../img/api/nacomponent/强引导.png)
     **示例代码 1**
@@ -47,27 +60,12 @@ sidebar: nacomponent
             }
         })
         ```
-    * 自动消失：引导组件 5s 后自动消失，点击添加按钮可直接添加到我的小程序。
 
-    ![图片](../../../img/api/nacomponent/中引导.png)
-    **示例代码 2**
-
-        ```javascript
-        swan.showFavoriteGuide({
-            type: 'bar-autohide',
-            content:'一键添加到我的小程序',
-            success(res) {
-                console.log('添加成功：', res);
-            },
-            fail(err) {
-                console.log('添加失败：', err);
-            }
-        })
-        ```
-2. tip 气泡引导：引导组件 5s 后自动消失，组件箭头指向小程序菜单。
+2. 气泡引导(type=tip)
+    引导组件 5s 后自动消失，组件箭头指向小程序菜单。
 
     ![图片](../../../img/api/nacomponent/弱引导.png)
-    **示例代码 3**
+    **示例代码 2**
 
     ```javascript
     swan.showFavoriteGuide({

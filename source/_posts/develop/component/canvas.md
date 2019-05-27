@@ -6,9 +6,9 @@ sidebar: canvas
 ---
 
 ## canvas
-**解释：**画布
+**解释**：画布
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -23,7 +23,7 @@ sidebar: canvas
 **说明**
 1、 canvas 组件默认宽度 300px、高度 225px；
 2、 基础库版本1.12.0开始支持事件捕获、冒泡。
-**示例：**
+**示例**：
 <a href="swanide://fragment/f4aaaf96ed4d561c8366ccaaefb8038f1540393864" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```xml
 <canvas canvas-id="myCanvas" class="canvas-testing" bindtouchend="canvas" bindtouchmove="mvcan">
@@ -75,6 +75,6 @@ Page({
 });
 ```
 
-**Bug & Tip：**
+**Bug & Tip**：
 1、canvas 组件是原生组件；
 2、canvas 组件不能使用动画进行控制；

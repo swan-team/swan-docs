@@ -4,7 +4,7 @@ header: introduction
 nav: book
 sidebar: authenticity
 ---
-特别说明：该环节主要用于验证主体真实性，为不影响到开发进展，可暂时跳过此步骤直接<a href="http://http://smartprogram.baidu.com/docs/introduction/register_consummate/#%E5%AE%8C%E5%96%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/">创建</a>小程序，并在小程序的开发过程中任意时间完成真实性认证即可，真实性认证状态将影响提交代码包及发布上线。
+特别说明：该环节主要用于验证主体真实性，为不影响到开发进展，可暂时跳过此步骤直接<a href="/introduction/register_consummate/#%E5%AE%8C%E5%96%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/">创建</a>小程序，并在小程序的开发过程中任意时间完成真实性认证即可，真实性认证状态将影响提交代码包及发布上线。
 
 ![图片](../../img/introduction/register/1.7.png)
 

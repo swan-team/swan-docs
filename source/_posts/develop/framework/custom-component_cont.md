@@ -84,4 +84,4 @@ Page({
 })
 ```
 **注意**：
-对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">兼容</a>。
+对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容</a>。
