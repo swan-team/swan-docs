@@ -136,7 +136,7 @@ Page({
 ## swan.clearStorage
 
 
-**解释： **清理本地数据缓存。  
+**解释**:清理本地数据缓存。  
 
 **方法参数**：Object object
 

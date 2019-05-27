@@ -18,50 +18,8 @@ sidebar: media_arcameracontext
 
 ## ARCameraContext
 
-**`ARCameraContext`对象的方法列表**：
-
-|方法 | 参数  |说明|
-|---- | ---- | ---- |
-|takePhoto |  Object|  拍照，成功则返回图片。|
-|reset | Object |重置相机|
-|startRecord |Object  |开始录像|
-|stopRecord | Object | 结束录像，成功则返回视频。|
-
-**takePhoto 的 Object 参数列表**：
-
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success| Function |   否  | 接口调用成功的回调函数，res = { tempImagePath }|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**reset 的 Object 参数列表**：
-
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**startRecord 的 Object 参数列表**：
-
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|progress|Function|否|录制进度更新的回调函数，res = { progress }|
-|timeout|Function|否|超过 10s 或页面 onHide 时会结束录像，res = { tempVideoPath }|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**stopRecord 的 Object 参数列表**：
-
-|参数 | 类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function   | 否  | 接口调用成功的回调函数 ，res = { tempVideoPath }。|
-|fail |   Function |   否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
+**解释**：swan.createARCameraContext 的返回值。
+ 
 **示例代码**：
 
 ```js
@@ -78,6 +36,68 @@ ctx.startRecord({
     }
 });
 ```
+
+##  ARCameraContext.takePhoto
+
+**解释**：拍照，成功则返回图片。
+
+
+**方法参数**：Object object
+
+**Object 参数列表**：
+
+|参数  |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success| Function |   否  | |接口调用成功的回调函数，res = { tempImagePath }|
+|fail  |  Function  |  否 |  |接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+##  ARCameraContext.reset
+
+**解释**：重置相机
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数  |类型 | 必填 |默认值 |说明|
+|---- | ---- | ---- |---- |--|
+|success| Function |   否  || 接口调用成功的回调函数|
+|fail  |  Function  |  否 | | 接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+##  ARCameraContext.startRecord
+
+**解释**：开始录像
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数 | 类型 | 必填 |默认值| 说明|
+|---- | ---- | ---- |---- |---|
+|progress|Function|否||录制进度更新的回调函数，res = { progress }|
+|timeout|Function|否||超过 10s 或页面 onHide 时会结束录像，res = { tempVideoPath }|
+|success |Function  |  否 | | 接口调用成功的回调函数|
+|fail  |  Function |   否  | |接口调用失败的回调函数|
+|complete   | Function |   否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+##  ARCameraContext.stopRecord
+
+**解释**：结束录像，成功则返回视频。
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数 | 类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---|---- |
+|success |Function   | 否  | |接口调用成功的回调函数 ，res = { tempVideoPath }。|
+|fail |   Function |   否  | |接口调用失败的回调函数|
+|complete   | Function   | 否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
 
 <!-- #### 错误码
 

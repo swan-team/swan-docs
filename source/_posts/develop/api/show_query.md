@@ -131,7 +131,7 @@ Page({
 
 **解释**：使用选择器指定一个节点，作为参照区域之一。
 
-**参数说明**：String selector, Object margins
+**方法参数**：String selector, Object margins
 
 **`selector`参数说明:**选择器
 
@@ -148,9 +148,9 @@ Page({
 
 **解释**：指定页面显示区域作为参照区域之一
 
-**方法参数 **：Object margins
+**方法参数**：Object margins
 
-**`margin`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
+**`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -164,7 +164,7 @@ Page({
 
 **解释**：指定目标节点并开始监听相交状态变化情况
 
-**方法参数 **：String targetSelector, Function callback
+**方法参数**：String targetSelector, Function callback
 
 **`targetSelector`参数说明**：选择器
 
@@ -208,7 +208,8 @@ swan.createIntersectionObserver(this, {
 ## IntersectionObserver.disconnect 
 > 与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。
 
-**解释**：停止监听。回调函数将不再触发
+**解释**：停止监听，回调函数将不再触发。
+
 **方法参数**：无
 
 
@@ -348,7 +349,7 @@ movable-area {
 |selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
 |exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
 
-### selectorQuery.in 
+## selectorQuery.in 
 
 **解释**： 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 
@@ -482,15 +483,15 @@ Page({
 
 **`fields`参数说明**：
 
-|字段名 |默认值  |说明|
-|---- | ---- | ---- |
-|id| 否 | 是否返回节点 id |
-|dataset  | 否 | 是否返回节点 dataset |
-|rect  |  否  | 是否返回节点布局位置（left right top bottom） |
-|size  |  否  | 是否返回节点尺寸（width height） |
-|scrollOffset  |  否  | 是否返回节点的 scrollLeft scrollTop ，节点必须是 scroll-view 或者 viewport |
-|properties  |  []  | 指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
-|computedStyle  |  []  | 指定样式名列表，返回节点对应样式名的当前值 |
+|参数名| 类型 |必填 |默认值| 说明|
+|---- | ---- | ---- |---|---|
+|id|boolean |否 || 是否返回节点 id |
+|dataset |boolean | 否 | |是否返回节点 dataset |
+|rect  | boolean| 否  | |是否返回节点布局位置（left right top bottom） |
+|size  | boolean |否  | |是否返回节点尺寸（width height） |
+|scrollOffset |boolean |  否  | |是否返回节点的 scrollLeft scrollTop ，节点必须是 scroll-view 或者 viewport |
+|properties  | `Array.<string>`| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
+|computedStyle  |`Array.<string>` | []  | |指定样式名列表，返回节点对应样式名的当前值 |
 
 **示例**：
 

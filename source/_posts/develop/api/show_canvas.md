@@ -1805,7 +1805,7 @@ ctx.draw();
 
 **解释**：创建三次方贝塞尔曲线路径。
 
-**方法参数**：Number cp1x, Numbercp1y, Number cp2, Number cp2y, Number x, Number y
+**方法参数**：Number cp1x, Number cp1y, Number cp2, Number cp2y, Number x, Number y
 
 **`cp1x`参数说明**：第一个贝塞尔控制点的 x 坐标 
 

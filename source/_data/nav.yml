@@ -1351,11 +1351,27 @@
                   link: /develop/api/media_arcameracontext/#swan-createARCameraContext
                   text: swan.createARCameraContext
                   name: media_arcameracontext_swan-createARCameraContext
+                -
+                  link: /develop/api/media_arcameracontext/#ARCameraContext
+                  text: ARCameraContext
+                  name: media_arcameracontext_ARCameraContext   
                   sidebar:
-                    -
-                      link: /develop/api/media_arcameracontext/#ARCameraContext
-                      text: ARCameraContext
-                      name: media_arcameracontext_ARCameraContext
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-takePhoto
+                      text: ARCameraContext.takePhoto
+                      name: ARCameraContext-takePhoto
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-reset
+                      text: ARCameraContext.reset
+                      name: ARCameraContext-reset
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-startRecord
+                      text: ARCameraContext.startRecord
+                      name: ARCameraContext-startRecord                     
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-stopRecord
+                      text: ARCameraContext.stopRecord
+                      name: ARCameraContext-stopRecord                  
                       
         -
             link: /develop/api/file
@@ -1493,11 +1509,35 @@
                     link: /develop/api/location_map/#swan-createMapContext
                     text: swan.createMapContext
                     name: location_map_swan-createMapContext
+                  -
+                    link: /develop/api/location_map/#mapContext
+                    text: mapContext
+                    name: location_map_mapContext
                     sidebar:
                       -
-                        link: /develop/api/location_map/#mapContext
-                        text: mapContext
-                        name: location_map_mapContext
+                        link: /develop/api/location_map/#mapContext-getCenterLocation
+                        text: mapContext.getCenterLocation
+                        name: mapContext-getCenterLocation
+                      -
+                        link: /develop/api/location_map/#mapContext-moveToLocation
+                        text: mapContext.moveToLocation
+                        name: mapContext-moveToLocation
+                      -
+                        link: /develop/api/location_map/#mapContext-translateMarker
+                        text: mapContext.translateMarker
+                        name: mapContext-translateMarker
+                      -
+                        link: /develop/api/location_map/#mapContext-includePoints
+                        text: mapContext.includePoints
+                        name: mapContext-includePoints
+                      -
+                        link: /develop/api/location_map/#mapContext-getRegion
+                        text: mapContext.getRegion
+                        name: mapContext-.getRegion
+                      -
+                        link: /develop/api/location_map/#mapContext-getScale
+                        text: mapContext.getScale
+                        name: mapContext-getScale                       
         -
             link: /develop/api/show
             text: 界面
@@ -1548,7 +1588,7 @@
                         name: show_canvas_canvasContext-setShadow
                       -
                         link: /develop/api/show_canvas/#canvasContext-createLinearGradient
-                        text: swan.canvasContext.createLinearGradient
+                        text: canvasContext.createLinearGradient
                         name: show_canvas_canvasContext-createLinearGradient
                       -
                         link: /develop/api/show_canvas/#canvasContext-createCircularGradient

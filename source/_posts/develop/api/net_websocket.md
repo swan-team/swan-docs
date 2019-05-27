@@ -5,6 +5,8 @@ nav: api
 sidebar: net_websocket
 ---
 请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+
+
 ## swan.connectSocket
 
 **解释**：创建一个 WebSocket 连接。
@@ -354,6 +356,7 @@ Page({
 必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
 
 **方法参数**：Object object
+
 **`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
@@ -562,7 +565,7 @@ Page({
 
 ## SocketTask.send
 
-通过 WebSocket 连接发送数据。
+**解释**：通过 WebSocket 连接发送数据。
 
 **方法参数**：Object object
 
@@ -576,6 +579,8 @@ Page({
 |complete   | Function   | 否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 ## SocketTask.close
+
+**解释**：关闭 WebSocket 连接
 
 **方法参数**：Object object
 
@@ -593,22 +598,28 @@ Page({
 ## SocketTask.onOpen
 
 
-监听 WebSocket 连接打开事件。
+**解释**：监听 WebSocket 连接打开事件。
 
+**方法参数**：无
 
 ## SocketTask.onClose
 
-监听 WebSocket 连接关闭事件。
+**解释**：监听 WebSocket 连接关闭事件。
+
+**方法参数**：无
 
 ## SocketTask.onError
 
-监听 WebSocket 错误。
+**解释**：监听 WebSocket 错误。
+
+**方法参数**：无
 
 
 ## SocketTask.onMessage
 
 
-监听 WebSocket 接受到服务器的消息事件。
+**解释**：监听 WebSocket 接受到服务器的消息事件。
+
 
 **方法参数**：Function callback
 
@@ -617,3 +628,7 @@ Page({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer |是| -| 服务器返回的消息|
+
+### bug&tips:
+
+iOS 系统中当 websocket 链接后，重新连接时，可能一直处于 connecting 状态，将在11.10版本修复。
