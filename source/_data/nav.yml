@@ -1248,11 +1248,39 @@
                   link: /develop/api/media_recorder/#swan-getRecorderManager
                   text: swan.getRecorderManager
                   name: media_recorder_swan-getRecorderManager
+                -
+                  link: /develop/api/media_recorder/#recorderManager
+                  text: recorderManager
+                  name: media_recorder_recorderManager  
                   sidebar:
                     -
-                      link: /develop/api/media_recorder/#recorderManager
-                      text: recorderManager
-                      name: media_recorder_recorderManager
+                      link: /develop/api/media_recorder/#recorderManager-start
+                      text: recorderManager.start
+                      name: media_recorder_recorderManager-start 
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-pause
+                      text: recorderManager.pause
+                      name: media_recorder_recorderManager-pause                  
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-resume
+                      text: recorderManager.resume
+                      name: media_recorder_recorderManager-resume
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-stop
+                      text: recorderManager.stop
+                      name: media_recorder_recorderManager-stop   
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onStart
+                      text: recorderManager.onStart
+                      name: media_recorder_recorderManager-onStart                       
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onPause
+                      text: recorderManager.onPause
+                      name: media_recorder_recorderManager-onPause                       
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onStop
+                      text: recorderManager.onStop
+                      name: media_recorder_recorderManager-onStop 
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
@@ -1262,11 +1290,68 @@
                   link: /develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager
                   text: swan.getBackgroundAudioManager
                   name: media_backgroundaudiomanager_swan-getBackgroundAudioManager
+                -
+                  link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
+                  text: backgroundAudioManager
+                  name: media_backgroundaudiomanager_backgroundAudioManager
                   sidebar:
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
-                      text: backgroundAudioManager
-                      name: media_backgroundaudiomanager_backgroundAudioManager
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-play
+                      text: backgroundAudioManager.play
+                      name: media_backgroundaudiomanager_backgroundAudioManager-play
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-pause
+                      text: backgroundAudioManager.pause
+                      name: media_backgroundaudiomanager_backgroundAudioManager-pause
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-stop
+                      text: backgroundAudioManager.stop
+                      name: media_backgroundaudiomanager_backgroundAudioManager-stop   
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-seek
+                      text: backgroundAudioManager.seek
+                      name: media_backgroundaudiomanager_backgroundAudioManager-seek                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onCanplay
+                      text: backgroundAudioManager.onCanplay
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onCanplay                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPlay
+                      text: backgroundAudioManager.onPlay
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPlay
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPause
+                      text: backgroundAudioManager.onPause
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPause
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onStop
+                      text: backgroundAudioManager.onStop
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onStop
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onEnded
+                      text: backgroundAudioManager.onEnded
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onEnded
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onTimeUpdate
+                      text: backgroundAudioManager.onTimeUpdate
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onTimeUpdate
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onError
+                      text: backgroundAudioManager.onError
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onError
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onWaiting
+                      text: backgroundAudioManager.onWaiting
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onWaiting                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeked
+                      text: backgroundAudioManager.onSeeked
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeked                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
+                      text: backgroundAudioManager.onSeeking
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
+
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -1307,11 +1392,43 @@
                   link: /develop/api/media_videocontext/#swan-createVideoContext
                   text: swan.createVideoContext
                   name: media_videocontext_swan-createVideoContext
+                -
+                  link: /develop/api/media_videocontext/#videoContext
+                  text: videoContext
+                  name: media_videocontext_videoContext   
                   sidebar:
                     -
-                      link: /develop/api/media_videocontext/#videoContext
-                      text: videoContext
-                      name: media_videocontext_videoContext
+                      link: /develop/api/media_videocontext/#videoContext-play
+                      text: videoContext.play
+                      name: media_videocontext_videoContext-play 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-pause
+                      text: videoContext.pause
+                      name: media_videocontext_videoContext-pause
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-seek
+                      text: videoContext.seek
+                      name: media_videocontext_videoContext-seek                                           
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-sendDanmu
+                      text: videoContext.sendDanmu
+                      name: media_videocontext_videoContext-sendDanmu                      
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-requestFullScreen
+                      text: videoContext.requestFullScreen
+                      name: media_videocontext_videoContext-requestFullScreen 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-exitFullScreen
+                      text: videoContext.exitFullScreen
+                      name: media_videocontext_videoContext-exitFullScreen 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-showStatusBar
+                      text: videoContext.showStatusBar
+                      name: media_videocontext_videoContext-showStatusBar  
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-hideStatusBar
+                      text: videoContext.hideStatusBar
+                      name: media_videocontext_videoContext-hideStatusBar                                                                  
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
@@ -1321,11 +1438,36 @@
                   link: /develop/api/media_liveplayercontext/#swan-createLivePlayerContext
                   text: swan.createLivePlayerContext
                   name: media_liveplayercontext_swan-createLivePlayerContext
+                -
+                  link:  /develop/api/media_liveplayercontext/#livePlayerContext
+                  text: livePlayerContext
+                  name: media_liveplayercontext_livePlayerContext  
                   sidebar:
                     -
-                      link:  /develop/api/media_liveplayercontext/#livePlayerContext
-                      text: livePlayerContext
-                      name: media_liveplayercontext_livePlayerContext
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-play
+                      text: livePlayerContext.play
+                      name: media_liveplayercontext_livePlayerContext-play  
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-stop
+                      text: livePlayerContext.stop
+                      name: media_liveplayercontext_livePlayerContext-stop 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-mute
+                      text: livePlayerContext.mute
+                      name: media_liveplayercontext_livePlayerContext-mute 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-pause
+                      text: livePlayerContext.pause
+                      name: media_liveplayercontext_livePlayerContext-pause 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-requestFullScreen
+                      text: livePlayerContext.requestFullScreen
+                      name: media_liveplayercontext_livePlayerContext-requestFullScreen 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-exitFullScreen
+                      text: livePlayerContext.exitFullScreen
+                      name: media_liveplayercontext_livePlayerContext-exitFullScreen                       
+                      
             -
               link: /develop/api/media_cameracontext
               text: 相机组件控制
@@ -1335,12 +1477,23 @@
                   link: /develop/api/media_cameracontext/#swan-createCameraContext
                   text: swan.createCameraContext
                   name: media_cameracontext_swan-createCameraContext
+                -
+                  link: /develop/api/media_cameracontext/#cameraContext
+                  text: cameraContext
+                  name: media_cameracontext_cameraContext  
                   sidebar:
                     -
-                      link: /develop/api/media_cameracontext/#cameraContext
-                      text: cameraContext
-                      name: media_cameracontext_cameraContext
-
+                      link: /develop/api/media_cameracontext/#cameraContext-takePhoto
+                      text: cameraContext.takePhoto
+                      name: media_cameracontext_cameraContext-takePhoto 
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext-startRecord
+                      text: cameraContext.startRecord
+                      name: media_cameracontext_cameraContext-startRecord                     
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext-stopRecord
+                      text: cameraContext.stopRecord
+                      name: media_cameracontext_cameraContext-stopRecord
 
             -
               link: /develop/api/media_arcameracontext
@@ -1871,6 +2024,87 @@
                     link: /develop/api/show_createanimation/#animation
                     text: animation
                     name: show_createanimation_animation
+                    sidebar:
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotate
+                        text: animation.rotate
+                        name: show_createanimation_animation-rotate
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateX
+                        text: animation.rotateX
+                        name: show_createanimation_animation-rotateX
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateY
+                        text: animation.rotateY
+                        name: show_createanimation_animation-rotateY
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateZ
+                        text: animation.rotateZ
+                        name: show_createanimation_animation-rotateZ
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotate3d
+                        text: animation.rotate3d
+                        name: show_createanimation_animation-rotate3d
+                      -
+                        link: /develop/api/show_createanimation/#animation-scale
+                        text: animation.scale
+                        name: show_createanimation_animation-scale
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleX
+                        text: animation.scaleX
+                        name: show_createanimation_animation-scaleX
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleY
+                        text: animation.scaleY
+                        name: show_createanimation_animation-scaleY
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleZ
+                        text: animation.scaleZ
+                        name: show_createanimation_animation-scaleZ
+                      -
+                        link: /develop/api/show_createanimation/#animation-scale3d
+                        text: animation.scale3d
+                        name: show_createanimation_animation-scale3d
+                      -
+                        link: /develop/api/show_createanimation/#animation-translate
+                        text: animation.translate
+                        name: show_createanimation_animation-translate
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateX
+                        text: animation.translateX
+                        name: show_createanimation_animation-translateX     
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateY
+                        text: animation.translateY
+                        name: show_createanimation_animation-translateY                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateZ
+                        text: animation.translateZ
+                        name: show_createanimation_animation-translateZ                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-translate3d
+                        text: animation.translate3d
+                        name: show_createanimation_animation-translate3d 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skew
+                        text: animation.skew
+                        name: show_createanimation_animation-skew 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skewX
+                        text: animation.skewX
+                        name: show_createanimation_animation-skewX 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skewY
+                        text: animation.skewY
+                        name: show_createanimation_animation-skewY                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-matrix
+                        text: animation.matrix
+                        name: show_createanimation_animation-matrix                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-matrix3d
+                        text: animation.matrix3d
+                        name: show_createanimation_animation-matrix3d 
 
               -
                 link: /develop/api/show_pagescrollto

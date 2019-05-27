@@ -17,41 +17,7 @@ sidebar: media_cameracontext
 
 ## cameraContext
 
-**`cameraContext`对象的方法列表**：
-
-|方法 | 参数  |说明|
-|---- | ---- | ---- |
-|takePhoto |  Object|  拍照，可指定质量，成功则返回图片。|
-|startRecord |Object  |开始录像|
-|stopRecord | Object | 结束录像，成功则返回封面与视频。|
-
-
-**takePhoto 的 Object 参数列表**：
-
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|quality |String  |否  | 成像质量，值为high, normal, low，默认normal。|
-|success| Function |   否  | 接口调用成功的回调函数 ，res = { tempImagePath }。|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**startRecord 的 Object 参数列表**：
-
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**stopRecord 的 Object 参数列表**：
-
-|参数 | 类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function   | 否  | 接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }。|
-|fail |   Function |   否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+**解释**：swan.createCameraContext 的返回值。
 
 **示例**：
  
@@ -170,3 +136,49 @@ video {
         <img src=" ">
     </div>     
 </div>
+
+
+
+## cameraContext.takePhoto
+
+**解释**：拍照，可指定质量，成功则返回图片。
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|quality |String  |否  | |成像质量，值为high, normal, low，默认normal。|
+|success| Function |   否  | |接口调用成功的回调函数 ，res = { tempImagePath }。|
+|fail  |  Function  |  否 |  |接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+## cameraContext.startRecord
+
+**解释**：开始录像
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success |Function  |  否 |  |接口调用成功的回调函数|
+|fail  |  Function |   否  | |接口调用失败的回调函数|
+|complete   | Function |   否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+## cameraContext.stopRecord
+
+**解释**：结束录像，成功则返回封面与视频。
+
+**方法参数**：Object object
+
+**object 参数列表**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success |Function   | 否  || 接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }。|
+|fail |   Function |   否  | |接口调用失败的回调函数|
+|complete   | Function   | 否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+

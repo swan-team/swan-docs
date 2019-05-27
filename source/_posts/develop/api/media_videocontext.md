@@ -14,18 +14,9 @@ sidebar: media_videocontext
 
 ## videoContext
 
-**`videoContext`对象的方法列表**：
+**解释**： swan.createVideoContext 的返回值
 
-|方法 | 参数 | 说明 |
-|---- | ---- | ---- |
-|play  |  无 |  播放  |
-|pause |  无  | 暂停  |
-|seek  |  position   | 跳转到指定位置（单位：s）    |
-|sendDanmu |  danmu  | 发送弹幕，danmu 包含两个属性 text、color。  |
-|requestFullScreen  | 无  | 进入全屏  |
-|exitFullScreen | 无 |  退出全屏|
-|showStatusBar | 无 |  显示状态栏，仅在iOS全屏下有效。|
-|hideStatusBar | 无 |  隐藏状态栏，仅在iOS全屏下有效。|
+
 
 **示例**：
 <a href="swanide://fragment/2a74a56f21b40ba5bc93803d70065cf21556536372261" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -114,5 +105,56 @@ Page({
 </div>
 
 
+
+
+## videoContext.play
+
+**解释**：播放
+
+**方法参数**：无
+ 
+
+## videoContext.pause
+ 
+**解释**： 暂停
+
+**方法参数**：无
+
+## videoContext.seek 
+ 
+**解释**：跳转到指定位置（单位：s）
+
+**方法参数**：Number position
+
+## videoContext.sendDanmu 
+ 
+**解释**：发送弹幕，danmu 包含两个属性 text、color。
+
+**方法参数**：Object danmu
+
+## videoContext.requestFullScreen
+ 
+**解释**：进入全屏
+
+**方法参数**：无
+
+## videoContext.exitFullScreen 
+ 
+**解释**：退出全屏
+
+**方法参数**：无
+
+## videoContext.showStatusBar
+ 
+**解释**：显示状态栏，仅在iOS全屏下有效。
+
+**方法参数**：无
+
+## videoContext.hideStatusBar
+
+ 
+**解释**：隐藏状态栏，仅在iOS全屏下有效。
+
+**方法参数**：无
 
 
