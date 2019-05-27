@@ -16,10 +16,10 @@ sidebar: show_createanimation
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|duration |Integer | 否|  400 | 动画持续时间，单位 ms 。|
-|timingFunction |String | 否|  ‘linear’| 定义动画的效果 |
-|delay|Integer | 否|  0 | 动画延迟时间，单位 ms 。|
-|transformOrigin|String | 否|  ‘50% 50% 0’ | 动画 |
+|duration |Number | 否|  400 | 动画持续时间，单位 ms 。|
+|timingFunction |String | 否|  `‘linear’`| 定义动画的效果 |
+|delay|Number| 否|  0 | 动画延迟时间，单位 ms 。|
+|transformOrigin|String | 否|  `‘50% 50% 0’` | 动画 |
 
 **timingFunction 有效值**：
 

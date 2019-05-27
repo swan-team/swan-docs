@@ -128,11 +128,16 @@ Page({
 |frontColor | String|  是  |-| 前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000。|
 |backgroundColor| String | 是  |-| 背景颜色值，有效值为十六进制颜色。|
 |animation  | Object  |否  |-| 动画效果|
-|animation.duration|  Number | 否  |0|动画变化时间，单位：毫秒。|
-|animation.timingFunc |   String | 否  |linear| 动画变化方式  |
 |success |Function  |  否 |-|  接口调用成功的回调函数|
 |fail|    Function |   否  |-| 接口调用失败的回调函数|
 |complete|    Function |   否   |-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**animation**
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+| duration|Number | 否  |0|动画变化时间，单位：毫秒。|
+|timingFunc|String | 否  |linear| 动画变化方式  |
 
 **animation.timingFunc 有效值**：
 
