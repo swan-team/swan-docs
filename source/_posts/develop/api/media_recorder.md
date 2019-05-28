@@ -58,7 +58,7 @@ recorderManager.start(options);
 
 **方法参数**：Object options 
 
-**object 参数说明**：
+**options 参数说明**：
 
 |属性 | 类型 | 必填 | 默认值|说明 |
 |---- | ---- | ---- | ---|---- |

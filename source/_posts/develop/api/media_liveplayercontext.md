@@ -117,7 +117,7 @@ button {
 
 **解释**：播放 
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -132,7 +132,7 @@ button {
  
 **解释**：停止 
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -146,7 +146,7 @@ button {
 
 **解释**：静音
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -160,7 +160,7 @@ button {
 
 **解释**：暂停
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -174,7 +174,7 @@ button {
 
 **解释**：恢复
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -188,7 +188,7 @@ button {
 
 **解释**：进入全屏
 
-**参数说明**：Object object
+**方法参数**：Object object
 
 **`object`参数说明**：
 
@@ -203,7 +203,7 @@ button {
 
 **解释**：退出全屏
 
-**参数说明**：Object object
+**方法参数**：Object object
  
 
 
