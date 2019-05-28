@@ -220,7 +220,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/3f94d727d054c79abf5d7ea2abeb7b761557726868852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dc05ce95db3e8fe09126a85b95ee42d11559043750363" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -240,7 +240,7 @@ Page({
                 console.log('getStorageInfo success', res);
             },
             fail: function (err) {
-                console.log('getStorageInfo fail' + err);
+                console.log('getStorageInfo fail', err);
             }
         });
     }

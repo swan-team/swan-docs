@@ -101,7 +101,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/3279130e9d743b8c79fca8ce3682b1161556529976536" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0853b6b5ebfae073d92923f6bc305c411559044720278" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -120,40 +120,34 @@ Page({
             current: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', // 当前显示图片的http链接
             urls: ['https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', 'https://smartprogram.baidu.com/docs/img/design/overview/1-2.png'], // 需要预览的图片http链接列表
             success: function (res) {
-                console.log('previewImage success');
+                console.log('previewImage success', res);
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('previewImage fail', err);
             }
         });
-    }
-
-    // 查看原图示例
-
+    },
     previewOriginImage() {
-        swan.previewImage({ 
+        swan.previewImage({
+            urls: ['https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png'], // 需要预览的图片http链接列表
             images: [
                 {
-                    "url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
-                    "origin_url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
+                    "url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
+                    "origin_url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
                 },
                 {
-                    "url":"https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
-                    "origin_url":"hhttps://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
+                    "url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
+                    "origin_url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
                 }
-            ]
+            ],
             success: function (res) {
-                console.log('previewImage success');
+                console.log('previewImage success', res);
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('previewImage fail', err);
             }
         });
     }
-
-
 });
 ```
 
@@ -282,17 +276,9 @@ Page({
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-
-<!-- **success返回参数说明**：
-
-|参数名| 类型|  说明|
-|---- | ---- | ---- |
-|errMsg  |String | 调用结果| -->
-
-
 **示例**：
 
-<a href="swanide://fragment/7cb1e99e5effc0e94231367ec821d2df1556530613528" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b773d94033175e28f71a369cd6563fd71559044847609" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -330,8 +316,7 @@ Page({
                 });
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('chooseImage fail', err);
             }
         });
     }

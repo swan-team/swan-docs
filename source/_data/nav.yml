@@ -2765,10 +2765,18 @@
 
           
     -
-      link: /develop/devtools/show_sur
+      link: /develop/devtools/history
       text: 工具
       name: devtools
       sidebar:
+        -
+            text: 下载
+            name: history
+            sidebar:  
+              -
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history              
         -
             text: 界面
             name: show

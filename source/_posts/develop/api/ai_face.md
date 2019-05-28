@@ -155,9 +155,11 @@ sidebar: ai_face
 |right_cheek| number |右脸颊遮挡比例，[0-1] ，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1] ，1 表示完全遮挡。|
 
-
 **示例代码**
-```
+
+<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
@@ -171,9 +173,10 @@ swan.chooseImage({
   }
 });
 ```
+
 **返回值示例**
 
-```
+```js
 {	
   "face_num": 1,
   "face_list": [
@@ -248,6 +251,7 @@ swan.chooseImage({
 ```
 
 
+
 ##  swan.ai.faceMatch
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
@@ -290,6 +294,9 @@ swan.chooseImage({
 |face_token|string |人脸的唯一标志|
 
 **示例代码**
+
+<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceMatch({
   data: [
@@ -313,9 +320,10 @@ swan.ai.faceMatch({
   }
 });
 ```
+
 **返回示例**
 
-```
+```js
 {
     "score": 44.3,
     "face_list": [  //返回的顺序与传入的顺序保持一致
@@ -329,6 +337,7 @@ swan.ai.faceMatch({
 }
 
 ```
+
 
 
 
@@ -371,7 +380,11 @@ swan.ai.faceMatch({
 |user_info | Array | 注册用户时携带的 user_info|
 |score | number | 用户的匹配得分，推荐阈值 80 分。|
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -395,6 +408,7 @@ swan.chooseImage({
   }
 });
 ```
+
 **返回示例**
 
 ```
@@ -440,7 +454,12 @@ swan.chooseImage({
 |log_id | string | 日志 ID| 
 |score | number | 与公安小图相似度可能性，用于验证生活照与公安小图是否为同一人，有正常分数时为 [0~100]，推荐阈值 80，超过即判断为同一人。| 
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.facePersonVerify({
     image: 'https://www.downloadImage.com/xxxx.jpg',
@@ -454,14 +473,13 @@ swan.ai.facePersonVerify({
     }
 });
 ```
+
 **返回示例**
 ```
 {
   "score": 44.3,
 }
 ```
-
-
 
 
 ##  swan.ai.facePersonIdmatch
@@ -483,6 +501,9 @@ swan.ai.facePersonVerify({
 |complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例代码**
+
+<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.facePersonIdmatch({
     id_card_number: '',
@@ -650,32 +671,40 @@ swan.ai.facePersonIdmatch({
 |chin| number |下巴遮挡比例 [0-1] ，1 表示完全遮挡。|
 
 **示例代码**
+
+<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.chooseImage({
-	success(res) {
-		swan.ai.faceVerify({
-		  data: [
-		    {
-		        "image": res.tempFilePaths[0],
-		        "image_type": "BASE64",
-		        "face_field": "age,beauty,expression"
-		    },
-		    {
-		        "image": res.tempFilePaths[1],
-		        "image_type": "BASE64",
-		        "face_field": "age,beauty,expression"
-		    }
-		  ],
-		  success(res) {
-		    console.log('res');
-		  }
+    count: 2,
+    success(res) {
+        swan.ai.faceVerify({
+            data: [
+                {
+                    "image": res.tempFilePaths[0],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                },
+                {
+                    "image": res.tempFilePaths[1],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                }
+            ],
+            success(res) {
+                console.log('ai.faceVerify success', res);
+            },
+            fail(err) {
+                console.log('ai.faceVerify fail', err);
+            }
+        });
+    }
 });
-	}
-})
 
 ```
 **返回示例**
-```
+
+```js
 {
 "thresholds": {
     "frr_1e-4": 0.05,  //万分之一误拒率的阈值
@@ -767,7 +796,12 @@ swan.chooseImage({
 |session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
 |code | string |语音验证码，数字形式，3~6 位数字。| 
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceLivenessSessioncode({
   appid: '',
@@ -776,8 +810,9 @@ swan.ai.faceLivenessSessioncode({
   }
 });
 ```
+
 **返回示例**
-```
+```js
 {
 	"err_no": 0,
 	"err_msg": "SUCCESS",
@@ -788,7 +823,6 @@ swan.ai.faceLivenessSessioncode({
 	"timestamp": 1509617387,
 	"cached": 0,
 	"serverlogid": "0587756642"
-}
 }
 ```
 
@@ -835,6 +869,9 @@ swan.ai.faceLivenessSessioncode({
 
 
 **示例代码**
+
+<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceLivenessVerify({
   video_base64: '',
@@ -844,8 +881,9 @@ swan.ai.faceLivenessVerify({
   }
 });
 ```
+
 **返回示例**
-```
+```js
 {
 
 	err_no:0,

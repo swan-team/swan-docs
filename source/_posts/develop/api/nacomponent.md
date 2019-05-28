@@ -27,7 +27,7 @@ sidebar: nacomponent
 
 **示例**：
 
-<a href="swanide://fragment/3140dd2436533b3006aac9d326e8faf41557730578312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

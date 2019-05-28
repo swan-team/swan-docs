@@ -53,6 +53,14 @@ sidebar: ai_text
 
 <a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+```js
+swan.ai.textReview({
+  content: '',
+  success(res) {
+    console.log(res.result.spam); // 0 表示审核通过
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -73,12 +81,4 @@ sidebar: ai_text
 }
 ```
 
-**示例**：
-```js
-swan.ai.textReview({
-  content: '',
-  success(res) {
-    console.log(res.result.spam); // 0 表示审核通过
-  }
-});
-```
+

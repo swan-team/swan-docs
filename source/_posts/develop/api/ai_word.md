@@ -47,8 +47,10 @@ sidebar: ai_word
 |loc_details | Array| 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。| 
 
 
-
 **示例代码**
+
+<a href="swanide://fragment/90590b9b20bc84912e4eb3a96aa3a0e01559043393195" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.nlpLexerCustom({
     text: '百度是一家高科技公司',
@@ -60,7 +62,7 @@ swan.ai.nlpLexerCustom({
 
 **返回示例**
 
-```
+```js
 {
       "text":"百度是一家高科技公司",
       "items":[
