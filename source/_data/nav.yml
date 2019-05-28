@@ -3138,18 +3138,31 @@
     #   sidebar:
     #     -
     #       sidebar:            
-    #         -
-    #           link: /develop/faq/web-view
-    #           text: web-view
-    #           name: web-view
-    #         -
-    #           link: /develop/faq/web 
-    #           text: web 化
-    #           name: web    
+  
     #         -
     #           link: /develop/faq/frameworkfaq 
-    #           text: 框架
-    #           name: frameworkfaq                         
+    #           text: 框架常见问题
+    #           name: frameworkfaq  
+    #         -
+    #           link: /develop/faq/confaq 
+    #           text: 组件常见问题
+    #           name: confaq               
+    #         -
+    #           link: /develop/faq/apifaq 
+    #           text: API 常见问题
+    #           name: apifaq  
+    #         -
+    #           link: /develop/faq/toolfaq 
+    #           text: 工具常见问题
+    #           name: toolfaq        
+    #         -
+    #           link: /develop/faq/web 
+    #           text: web 化常见问题
+    #           name: web    
+    #         -
+    #           link: /develop/faq/web-view
+    #           text: web-view常见问题
+    #           name: web-view                                                                    
 # 4
 -
   link: /data/concept

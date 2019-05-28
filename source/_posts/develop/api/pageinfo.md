@@ -62,13 +62,13 @@ visit参数说明
 
 **示例**：
 
-<a href="sswanide://fragment/69956fd63658247bcc26cb90264521931558342368386" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e16aaf768ee1ecf3e24018f9201497b11558955776620" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <button type="primary" bindtap="setPageInfo">setPageInfo</button>
+    setPageInfo
 </view>
 ```
 
@@ -76,7 +76,7 @@ visit参数说明
 
 ```js
 Page({
-    setPageInfo() {
+    onShow() {
         swan.setPageInfo({
             title: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！-百度贴吧',
             keywords: '百度,百度贴吧,好运中国年,60,晒元,宵节',

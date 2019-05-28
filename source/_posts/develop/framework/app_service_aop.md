@@ -128,10 +128,12 @@ swan.after可以拦截所有当前运行小程序对于API的调用，默认传�
 
 **方法参数**：Object
 
-#### **Object 参数说明**：
+ **Object 参数说明**：
 
-|[key] | String | 要拦截的API的名称 |
-|[value] | Object / Function | 拦截之后的处理器(如果为function，则默认在returning阶段调用) |
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|[key] | String |否 ||要拦截的API的名称 |
+|[value] | Object / Function |否 ||拦截之后的处理器(如果为function，则默认在returning阶段调用) |
 
 ** 可拦截的所有方法 **
 
