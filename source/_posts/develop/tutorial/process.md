@@ -18,7 +18,7 @@ sidebar: process
 |preloadRule |Object |否| 分包预下载规则 |
 |tabBar|Object|	否|	底部 tab 栏的表现|
 |requiredBackgroundModes|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|subpackages|` Array.<object> `|否|	分包结构配置|
+|subPackages|` Array.<object> `|否|	分包结构配置|
 |prefetches|Object Array|	否| 预请求的配置列表|
 
 <notice>示例： </notice>

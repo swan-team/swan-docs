@@ -49,19 +49,29 @@ sidebar: nav
 ```
 `<navigator/>` 的子节点背景色应为透明色。
 **示例**：
-<a href="swanide://fragment/76d030309d2763b5d1b2a03b9cc9c7be1548066522341" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button type="primary" class="btn">
+    <navigator class="nav" url="/pages/detail/detail?id=新页面">跳转到新页面</navigator>
+</button>
+<button type="primary" class="btn">
+    <navigator class="nav" url="/pages/detail/detail?id=当前页" open-type="redirect" >在当前页打开</navigator>
+</button>
+```
+
+
+* 在 css 文件中
 
 ```css
-/** css **/
-/** 修改默认的navigator点击态 **/
-.navigator-hover {
-	color:red;
+.btn {
+    margin: .15rem .23rem 0;
 }
-/** 自定义其他点击态样式类 **/
-.other-navigator-hover {
-	color:green;
+.nav {
+    display: block;
 }
-
 ```
 
 ```xml

@@ -38,10 +38,16 @@ sidebar: media
 |4|不支持音频|
 
 **示例**：
-<a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
@@ -120,6 +126,9 @@ image 组件默认宽度 300px、高度 225px。
 
 **示例**：
   <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <view>
@@ -137,7 +146,10 @@ image 组件默认宽度 300px、高度 225px。
 </view>
 
 ```
-```xml
+
+* 在 js 文件中
+
+```js
 Page({
     data: {
         test: [
@@ -322,7 +334,7 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
