@@ -3015,7 +3015,14 @@
             -
               link: /develop/third/checkname
               text: 名称检测
-              name: checkname              
+              name: checkname
+        - link: /develop/third/datastatistics
+          text:
+          name: datastatistics
+          sidebar:
+            - link: /develop/third/datastatistics
+              text: 数据统计分析
+              name: datastatistics
         -
           link: /develop/third/error
           text:

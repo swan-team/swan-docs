@@ -360,7 +360,44 @@ msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
 }
 ```
 
-### 9、推送授权相关通知
+### 9、找回授权码
+为了防止refresh_token丢失后失去小程序的操作权限，增加补充机制，通过原有授权关系直接找回authorization\_code可以再换取access\_token
+
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/auth/retrieve/authorizationcode?access_token=ACCESS_TOKEN
+```
+
+##### 参数说明:
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token	|string |是 | 第三方平台访问凭证
+app_id | int | 是 | 小程序app_id
+
+##### 返回值说明:
+
+| 参数名              | 类型   | 描述           |
+| ------------------- | ------ | -------------- |
+| authorization\_code | string | 授权码         |
+| expires\_in         | int    | 授权码有效时间 |
+
+##### 返回值示例:
+```
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        "authorization_code": "f5a09b58eb2dc01c728182d097808145",
+        "expires_in": 18000
+    }
+}
+```
+
+##### 错误码表
+错误码 | 错误描述 | 
+----- |-----
+50032| 没有授权关系，请检查
+
+### 10、推送授权相关通知
 当小程序对第三方平台进行授权、取消授权、更新授权后，百度服务器会向第三方平台方的授权事件接收URL（创建第三方平台时填写）推送相关通知。
 
 POST数据示例（取消授权通知）
