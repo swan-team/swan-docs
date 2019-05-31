@@ -25,9 +25,21 @@ sidebar: subpackages
 ├── subpackage
 │   └── pages
 │       ├── subpageone
+│       │   ├── subpageone.swan
+│       │   ├── subpageone.css
+│       │   ├── subpageone.json
+│       │   └── subpageone.js
 │       └── suboagetwo
+│           ├── suboagetwo.swan
+│           ├── suboagetwo.css
+│           ├── suboagetwo.json
+│           └── suboagetwo.js
 ├── pages
 │   └── index
+        ├── index.swan
+│       ├── index.css
+│       ├── index.json
+│       └── index.js
 └── utils
 ```
 开发者通过在 app.json subPackages 字段声明项目分包结构：
@@ -35,14 +47,14 @@ sidebar: subpackages
 ```js
 {
     "pages": [
-        "page/index"
+        "page/index/index"
     ],
     "subPackages": [
         {
             "root": "subpackage",
             "pages": [
-                "pages/subpageone",
-                "pages/subpagetwo"
+                "pages/subpageone/subpageone",
+                "pages/subpagetwo/subpagetwo"
             ]
         }
     ]

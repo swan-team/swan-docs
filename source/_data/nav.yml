@@ -2765,10 +2765,18 @@
 
           
     -
-      link: /develop/devtools/show_sur
+      link: /develop/devtools/history
       text: 工具
       name: devtools
       sidebar:
+        -
+            text: 下载
+            name: history
+            sidebar:  
+              -
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history              
         -
             text: 界面
             name: show
@@ -3015,7 +3023,14 @@
             -
               link: /develop/third/checkname
               text: 名称检测
-              name: checkname              
+              name: checkname
+        - link: /develop/third/datastatistics
+          text:
+          name: datastatistics
+          sidebar:
+            - link: /develop/third/datastatistics
+              text: 数据统计分析
+              name: datastatistics
         -
           link: /develop/third/error
           text:
@@ -3138,18 +3153,31 @@
     #   sidebar:
     #     -
     #       sidebar:            
-    #         -
-    #           link: /develop/faq/web-view
-    #           text: web-view
-    #           name: web-view
-    #         -
-    #           link: /develop/faq/web 
-    #           text: web 化
-    #           name: web    
+  
     #         -
     #           link: /develop/faq/frameworkfaq 
-    #           text: 框架
-    #           name: frameworkfaq                         
+    #           text: 框架常见问题
+    #           name: frameworkfaq  
+    #         -
+    #           link: /develop/faq/confaq 
+    #           text: 组件常见问题
+    #           name: confaq               
+    #         -
+    #           link: /develop/faq/apifaq 
+    #           text: API 常见问题
+    #           name: apifaq  
+    #         -
+    #           link: /develop/faq/toolfaq 
+    #           text: 工具常见问题
+    #           name: toolfaq        
+    #         -
+    #           link: /develop/faq/web 
+    #           text: web 化常见问题
+    #           name: web    
+    #         -
+    #           link: /develop/faq/web-view
+    #           text: web-view常见问题
+    #           name: web-view                                                                    
 # 4
 -
   link: /data/concept

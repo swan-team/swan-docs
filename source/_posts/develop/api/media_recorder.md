@@ -19,8 +19,9 @@ sidebar: media_recorder
 **解释**：swan.getRecorderManager 的返回值。
 
 **示例**：
-<a href="swanide://fragment/e58b40296c7b21d2b18f1792ffc30ae01540398986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9594161131c27e789538f1e4bb99f4b51559049882382" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+**在 js 文件中**
 
 ```javascript
 const recorderManager = swan.getRecorderManager()
@@ -58,9 +59,9 @@ recorderManager.start(options);
 
 **方法参数**：Object options 
 
-**object 参数说明**：
+**options 参数说明**：
 
-|属性 | 类型 | 必填 | 默认值|说明 |
+|参数名 | 类型 | 必填 | 默认值|说明 |
 |---- | ---- | ---- | ---|---- |
 |duration |Number | 否 |60000| 指定录音的时长，（单位：ms） ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）。|
 |sampleRate |Number |否 | |采样率，有效值 8000/16000/44100 。|

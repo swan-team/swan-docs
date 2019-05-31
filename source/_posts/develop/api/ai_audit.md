@@ -47,6 +47,19 @@ sidebar: ai_audit
 
 <a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.imageAudit({
+      image,
+      success(res) {
+        console.log(res.conclusionType); // 1 为合规
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -114,17 +127,3 @@ sidebar: ai_audit
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.imageAudit({
-      image,
-      success(res) {
-        console.log(res.conclusionType); // 1 为合规
-      }
-    });
-  }
-});
-```

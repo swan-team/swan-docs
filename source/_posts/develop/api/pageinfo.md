@@ -35,7 +35,7 @@ sidebar: pageinfo
 |fail|Function|否| -|接口调用失败的回调函数|
 |complete|Function|否| -|接口调用结束的回调函数（调用成功、失败都会执行） |
 
-video参数说明
+**video 参数说明**
 
 |参数名 | 类型 | 必填 | 说明 |
 |---|---|---|---|
@@ -43,7 +43,7 @@ video参数说明
 |duration|String|是| 视频时长(单位为秒)	|
 |image|String|是|视频封面图	|
 
-visit参数说明
+**visit 参数说明**
 
 |参数名 | 类型 | 必填 | 说明 |
 |---|---|---|---|
@@ -62,21 +62,13 @@ visit参数说明
 
 **示例**：
 
-<a href="sswanide://fragment/69956fd63658247bcc26cb90264521931558342368386" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setPageInfo">setPageInfo</button>
-</view>
-```
-
-* 在 js 文件中
+**在 js 文件中**
 
 ```js
 Page({
-    setPageInfo() {
+    onShow() {
         swan.setPageInfo({
             title: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！-百度贴吧',
             keywords: '百度,百度贴吧,好运中国年,60,晒元,宵节',
@@ -112,13 +104,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 
 ## swan.setMetaDescription
 
 > 不推荐使用。
@@ -138,21 +124,14 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/37be049b858a8ea229718bbcb9766dc11558342455427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
 
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setMetaDescription">setMetaDescription</button>
-</view>
-```
-
-* 在 js 文件中
+**在 js 文件中**
 
 ```js
 Page({
-    setMetaDescription() {
+    onShow() {
         swan.setMetaDescription({
             content: '当前小程序页面描述信息',
             success: function (res) {
@@ -165,13 +144,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 
 
 ## swan.setMetaKeywords
 
@@ -192,7 +165,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/59d7a9c8342689acc0e655ddb63b05931558342520027" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -206,14 +179,14 @@ Page({
 
 ```js
 Page({
-    setMetaKeywords() {
+    onShow() {
         swan.setMetaKeywords({
             content: '小程序, 关键字',
             success: function (res) {
                 console.log('setMetaKeywords success', res);
             },
             fail: function (err) {
-                console.log('setMetaKeywords fail', res);
+                console.log('setMetaKeywords fail', err);
             }
         });
     }
@@ -249,35 +222,22 @@ Page({
 
 <a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
 
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setDocumentTitle">setDocumentTitle</button>
-</view>
-```
-
-* 在 js 文件中
+**在 js 文件中**
 
 ```js
 Page({
-    setDocumentTitle() {
+    onShow() {
         swan.setDocumentTitle({
             title: '我是页面标题',
             success: function (res) {
                 console.log('setDocumentTitle success', res);
             },
             fail: function (err) {
-                console.log('setDocumentTitle fail', res);
+                console.log('setDocumentTitle fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 

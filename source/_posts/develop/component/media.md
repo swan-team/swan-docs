@@ -6,6 +6,7 @@ sidebar: media
 ---
 
 ## audio
+
 **解释**：音频
 
 **属性说明**：
@@ -37,10 +38,16 @@ sidebar: media
 |4|不支持音频|
 
 **示例**：
-<a href="swanide://fragment/440dd61608484921b1cf26a99e6912ab1548068998649" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+
 ```html
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
@@ -79,7 +86,9 @@ Page({
     }
 });
 ```
+
 ## image
+
 **解释**：图片
 
 **属性说明**：
@@ -117,6 +126,9 @@ image 组件默认宽度 300px、高度 225px。
 
 **示例**：
   <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <view>
@@ -134,7 +146,10 @@ image 组件默认宽度 300px、高度 225px。
 </view>
 
 ```
-```xml
+
+* 在 js 文件中
+
+```js
 Page({
     data: {
         test: [
@@ -257,6 +272,7 @@ Page({
 ![图片](../../../img/image-bottom-right.png)
 
 ## video
+
 **解释**：视频
 
 **属性说明**：
@@ -317,13 +333,8 @@ Page({
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-**Tip**：
-
-`<video />` 默认宽度 300px、高度 225px
-
-
 **示例**：
-<a href="swanide://fragment/737ddbcaf3eb0f9915965a7a265baa2e1548067067236" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -387,6 +398,10 @@ Page({
 }
 ```
 
+**说明**:
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/'>createVideoContext</a>
+* `<video />` 默认宽度 300px、高度 225px
+
 ## camera
 **解释**：相机
 
@@ -402,7 +417,7 @@ Page({
 
 
 **示例**：
- 
+
 <a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -516,7 +531,7 @@ video {
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
@@ -585,15 +600,15 @@ video {
 |background-mute|Boolean|false|进入后台时是否静音|
 |min-cache|Number|1|最小缓冲区，单位s|
 |max-cache|Number|3|最大缓冲区，单位s|
-|bindstatechange|EventHandle|  |播放状态变化事件，detail = {code}|
-|bindnetstatus|EventHandle|  |网络状态变化通知，detail = {info}|
+|bindstatechange|EventHandle|  |播放状态变化事件，参考下方状态码表格，detail = {code}|
+|bindnetstatus|EventHandle|  |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
 |bindfullscreenchange|	EventHandle	| |	全屏变化事件，detail = {direction, fullScreen}。|
 
 
 
 **示例**：
 
-<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -715,7 +730,7 @@ button {
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-**状态码**
+**状态码**：
 
 |代码  |说明   |
 | --- | --- |

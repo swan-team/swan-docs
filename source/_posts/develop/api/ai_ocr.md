@@ -47,6 +47,23 @@ sidebar: ai_ocr
 
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrIdCard({
+      detect_direction: true,
+      id_card_side: 'front',
+      detect_risk: true,
+      image,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
+
 **返回值示例**：
 ```json
 {
@@ -115,23 +132,7 @@ sidebar: ai_ocr
 }
 ```
 
-**示例代码**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrIdCard({
-      detect_direction: true,
-      id_card_side: 'front',
-      detect_risk: true,
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.ocrBankCard
 
@@ -162,19 +163,7 @@ swan.chooseImage({
 
 <a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-**返回值示例**：
-```json
-{
-    "log_id": $log_id,
-    "result": {
-        "bank_card_number": "622500000000000",
-        "bank_name": "招商银行",
-        "bank_card_type": 1
-    }
-}
-```
 
-**示例**：
 ```js
 swan.chooseImage({
   success(res) {
@@ -187,6 +176,18 @@ swan.chooseImage({
     });
   }
 });
+```
+
+**返回值示例**：
+```json
+{
+    "log_id": $log_id,
+    "result": {
+        "bank_card_number": "622500000000000",
+        "bank_name": "招商银行",
+        "bank_card_type": 1
+    }
+}
 ```
 
 ## swan.ai.ocrDrivingLicense
@@ -219,6 +220,22 @@ swan.chooseImage({
 **示例**：
 
 <a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrDrivingLicense({
+      image,
+      detect_direction: true,
+      unified_valid_period: true,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -261,22 +278,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrDrivingLicense({
-      image,
-      detect_direction: true,
-      unified_valid_period: true,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.ocrVehicleLicense
 
@@ -307,6 +309,21 @@ swan.chooseImage({
 **示例**：
 
 <a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrVehicleLicense({
+      image,
+      detect_direction: true,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -350,18 +367,4 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrVehicleLicense({
-      image,
-      detect_direction: true,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
+

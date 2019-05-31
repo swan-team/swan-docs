@@ -32,15 +32,46 @@ sidebar: ai_audio
 |---- | ---- | ---- |
 |filePath | String | 合成的音频文件的路径。|
 
+
 **示例**：
+
+<a href="swanide://fragment/506b61732036a40590ea79c33f1541311559033551164" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="textToAudio">textToAudio</button>
+</view>
+```
+
+* 在 js 文件中 
+
 ```js
-swan.ai.textToAudio({
-    tex: '这是一段测试文字',
-    success(res) {
-        console.log(res.filePath);
+
+Page({
+    textToAudio() {
+        swan.ai.textToAudio({
+            tex: '这是一段测试文字',
+            success(res) {
+                console.log('ai.textToAudio success', res);
+            },
+            fail(err) {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```
+
+* 在 css 文件中 
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 ### Bug & Tip
 
  重置 App Secret 会导致此功能无法使用。
