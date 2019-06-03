@@ -2645,6 +2645,28 @@
                     link: /develop/api/get/#swan-getUpdateManager
                     text: swan.getUpdateManager
                     name: get_swan-getUpdateManager
+                  -
+                    link: /develop/api/get/#updateManager
+                    text: updateManager
+                    name: updateManager
+                    sidebar:                    
+                      -
+                        link: /develop/api/get/#updateManager-onCheckForUpdate
+                        text: updateManager.onCheckForUpdate
+                        name: get_updateManager-onCheckForUpdate
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateReady
+                        text: updateManager.onUpdateReady
+                        name: get_updateManager-onUpdateReady
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateFailed
+                        text: updateManager.onUpdateFailed
+                        name: get_updateManager-onUpdateFailed
+                      -
+                        link: /develop/api/get/#updateManager-applyUpdate
+                        text: updateManager.applyUpdate
+                        name: get_updateManager-applyUpdate
+
               -
                 link: /develop/api/debug
                 text: 调试
@@ -3146,18 +3168,18 @@
               link: /develop/swan/compatibility
               text: 兼容性说明
               name: compatibility 
-    # -
-    #   link: /develop/faq/web-view
-    #   text: FAQ
-    #   name: faq
-    #   sidebar:
-    #     -
-    #       sidebar:            
+    -
+      link: /develop/faq/frequently
+      text: FAQ
+      name: faq
+      sidebar:
+        -
+          sidebar:            
   
-    #         -
-    #           link: /develop/faq/frameworkfaq 
-    #           text: 框架常见问题
-    #           name: frameworkfaq  
+            -
+              link: /develop/faq/frequently
+              text: 常见问题
+              name: frequently 
     #         -
     #           link: /develop/faq/confaq 
     #           text: 组件常见问题

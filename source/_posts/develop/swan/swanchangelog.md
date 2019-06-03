@@ -16,6 +16,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.50.16|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.50.12|2019.5.18|**BugFix**<p>修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.50.3|2019.4.26|**BugFix**<p>**·**修复修复多个map使用一个markers时引用问题，map iconPath 支持相对路径；<p>**·**修复 cover-image 销毁后 update 的问题；<p>**·**修复宿主不传 components 时，报错的问题。|
 
@@ -23,6 +24,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.40.19|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.40.15|2019.4.22|**BugFix**<p>**·**修复bindlongtap事件长按并移动后不能触发的问题；<p>**·**修复 cover-image 销毁后 update 的问题。|
 |3.40.9|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|
@@ -33,6 +35,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.30.37|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.30.34|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.30.32|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.30.31|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -44,6 +47,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.20.44|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.20.36|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.20.35|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.20.34|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -60,6 +64,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.141|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.15.132|2019.4.11|**New**<p>增加AOP机制。|
 |3.15.125|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.15.120|2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
