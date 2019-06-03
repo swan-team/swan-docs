@@ -725,7 +725,7 @@
         -
             sidebar:
               -
-                link: /develop/component/list
+                link: /develop/component/componetlist
                 text: 组件列表
                 name: componetlist
               -
@@ -2162,7 +2162,31 @@
                   -
                     link: /develop/api/menu_info/#swan-getMenuButtonBoundingClientRect
                     text: swan.getMenuButtonBoundingClientRect
-                    name: menu_info_swan-getMenuButtonBoundingClientRect                    
+                    name: menu_info_swan-getMenuButtonBoundingClientRect   
+                  -
+                    link: /develop/api/menu_info/#width
+                    text: width
+                    name: menu_info_width                    
+                  -
+                    link: /develop/api/menu_info/#height
+                    text: height
+                    name: menu_info_height                     
+                  -
+                    link: /develop/api/menu_info/#top
+                    text: top
+                    name: menu_info_top 
+                  -
+                    link: /develop/api/menu_info/#right
+                    text: right
+                    name: menu_info_right
+                  -
+                    link: /develop/api/menu_info/#bottom
+                    text: bottom
+                    name: menu_info_bottom     
+                  -
+                    link: /develop/api/menu_info/#left
+                    text: left
+                    name: menu_info_left                                    
               -
                 link: /develop/api/show_query
                 text: 节点信息
