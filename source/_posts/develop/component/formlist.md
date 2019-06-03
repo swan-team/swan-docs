@@ -977,7 +977,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |selection-start|Number|-1|光标起始位置，自动聚集时有效，需与selection-end搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |selection-end|Number|-1|光标结束位置，自动聚集时有效，需与selection-start搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
-|confirm-type|String|default|设置键盘右下角按钮的文字及键盘行为。输入状态右下角按钮为 “确认”，会将正在输入的文字填充到输入框；未输入状态下的表现见下方“confirm-type 有效值”的说明 <font color="#4183c4">11.10 及以上</font>|
+|confirm-type|String|default|设置键盘右下角按钮的文字及键盘行为。输入状态右下角按钮为 “确认”，会将正在输入的文字填充到输入框；未输入状态的表现见下方“confirm-type 有效值”的说明 <font color="#4183c4">11.10 及以上</font>|
 |bindfocus|EventHandle| |输入框聚焦时触发，event.detail = { value, height }，height|
 |bindblur|EventHandle| |输入框失去焦点时触发，event.detail = {value, cursor}|
 |bindlinechange|EventHandle| |输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}|
@@ -986,14 +986,17 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 **confirm-type 有效值**：
 
+输入状态键盘右下角按钮为 “确认”，会将正在输入的文字填充到输入框；
+未输入状态当confirm-type为default时，键盘右下角按钮为“换行”，点击会换行。当confirm-type不为default时，点击按钮会触发bindconfirm但不会换行。
+
 |值|说明 |
 |---- | ---- |
 | default |未输入状态右下角按钮为 “换行 ”，点击会换行|
-| send |未输入状态右下角按钮为 “发送”，点击触发bindconfirm|
-| search |未输入状态右下角按钮为 “搜索” ，点击触发bindconfirm|
-| next |未输入状态右下角按钮为 “下一个”，点击触发bindconfirm|
-| go |未输入状态右下角按钮为 “前往” ，点击触发bindconfirm|
-| done |未输入状态右下角按钮为 “完成” ，点击触发bindconfirm|
+| send |未输入状态右下角按钮为 “发送”，点击不换行直接触发bindconfirm|
+| search |未输入状态右下角按钮为 “搜索” ，点击不换行直接触发bindconfirm|
+| next |未输入状态右下角按钮为 “下一个”，点击不换行直接触发bindconfirm|
+| go |未输入状态右下角按钮为 “前往” ，点击不换行直接触发bindconfirm|
+| done |未输入状态右下角按钮为 “完成” ，点击不换行直接触发bindconfirm|
 
 **示例代码**：
 
