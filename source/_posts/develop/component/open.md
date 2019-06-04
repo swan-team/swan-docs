@@ -25,7 +25,7 @@ sidebar: open
 
 **示例**
 
-<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>  
+<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -107,7 +107,7 @@ sidebar: open
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
@@ -178,15 +178,15 @@ Page({
 
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
-| 接口名               | 说明         | 
-| ----------------- | ---------- | 
-| swan.webView.navigateTo   | 参数与智能小程序接口一致 | 
-| swan.webView.navigateBack | 参数与智能小程序接口一致 | 
+| 接口名               | 说明         |
+| ----------------- | ---------- |
+| swan.webView.navigateTo   | 参数与智能小程序接口一致 |
+| swan.webView.navigateBack | 参数与智能小程序接口一致 |
 | swan.webView.switchTab    | 参数与智能小程序接口一致 |
-| swan.webView.reLaunch     | 参数与智能小程序接口一致 | 
-| swan.webView.redirectTo   | 参数与智能小程序接口一致 | 
-| swan.webView.getEnv   | 获取当前环境 | 
-| swan.webView.postMessage   | 向小程序发送消息 | 
+| swan.webView.reLaunch     | 参数与智能小程序接口一致 |
+| swan.webView.redirectTo   | 参数与智能小程序接口一致 |
+| swan.webView.getEnv   | 获取当前环境 |
+| swan.webView.postMessage   | 向小程序发送消息 |
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
@@ -225,8 +225,19 @@ web-view 网页中支持的接口有：
 |地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#getLocation/">swan.getLocation<a>|-|
 |图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#chooseImage/">swan.chooseImage</a>| -|
 
+### **相关接口3 **
 
+用户分享时可获取当前web-view的URL，即在onShareAppMessage回调中返回webViewUrl参数。
 
+示例代码：
+
+```javascript
+Page({
+  onShareAppMessage(options) {
+    console.log(options.webViewUrl)
+  }
+})
+```
 
 
 **说明: **
@@ -249,5 +260,5 @@ web-view 网页中支持的接口有：
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
