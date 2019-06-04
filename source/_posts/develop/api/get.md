@@ -13,6 +13,8 @@ sidebar: get
 
 **方法参数**：无
 
+**返回值**：updateManager
+
 ## updateManager
 
 **解释**：管理更新，[swan.getUpdateManager](https://smartapp.baidu.com/docs/develop/api/get/)返回值。

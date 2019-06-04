@@ -9,7 +9,7 @@ sidebar: frequently
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？ 
 
-A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://localhost:4000/docs/develop/api/net_request/)。
+A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://smartprogram.baidu.com/docs/develop/api/net_request/)。
 
 
 #### Q: 在webview 中使用了 cookie，导致存储信息与小程序不能共享的原因是什么？
@@ -20,7 +20,12 @@ A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的�
 
 
 #### Q:webview 中参入含有中文使用三方自己的约定方式进行编码 iOS 打开后出现白屏的情况该如何处理？
-A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://localhost:4000/docs/develop/api/net_request/)。
+A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://smartprogram.baidu.com/docs/develop/api/net_request/)。
+
+#### Q：如何在web-view中使用拨打电话的功能？
+A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/) 包，如下示例：
+
+![](../../../img/faq/webview.png)
 
 
 ## Web 化

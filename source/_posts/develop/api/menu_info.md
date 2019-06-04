@@ -14,6 +14,17 @@ sidebar: menu_info
 
 **方法参数**： 无
 
+**返回参数说明**：
+
+|参数	|类型	|说明|
+|--|--|--|
+|width|	number|	宽度，单位：px|
+|height|	number	|高度，单位：px|
+|top	|number|	上边界坐标，单位：px|
+|right|	number|	右边界坐标，单位：px|
+|bottom|	number	|下边界坐标，单位：px|
+|left	|number|	左边界坐标，单位：px|
+ 
 
 
 **示例**：
@@ -49,39 +60,3 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-
-## width
-
-**解释**：宽度，单位：px 
-
-**参数说明**：Number number
- 
-## height
-
-**解释**：高度，单位：px
-
-**参数说明**：Number number
-
-## top
-
-**解释**： 上边界坐标，单位：px
-
-**参数说明**：Number number
- 
-## right 
-
-**解释**：右边界坐标，单位：px
-
-**参数说明**：Number number
- 
-## bottom 
-
-**解释**：下边界坐标，单位：px 
-
-**参数说明**：Number number
- 
-## left 
-
-**解释**：左边界坐标，单位：px
-
-**参数说明**：Number number
