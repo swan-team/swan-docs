@@ -1,7 +1,7 @@
 ---
 title: 开发简易
 header: develop
-nav: web
+nav: function
 sidebar: proposal
 ---
 ### 页面基础信息
