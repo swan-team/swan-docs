@@ -478,17 +478,16 @@ button {
 * 在 swan 文件中
 
 ```xml
-
 <view class="wrap">
     <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
     <progress class="progress" percent="40" activeColor="#3c76ff" active />
     <progress class="progress" percent="60" activeColor="#3c76ff" active />
     <progress class="progress" percent="80" activeColor="#74fa7d" active />
 </view>
-
 ``` 
 
 * 在 css 文件中
+
 
 ```css
 .wrap {
@@ -500,6 +499,8 @@ button {
     border-radius: 3px;
 }
 ```
+
+
 ## animation-view
 
 **解释**：支持 Lottie 动画
