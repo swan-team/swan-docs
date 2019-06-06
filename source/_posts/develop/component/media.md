@@ -103,7 +103,7 @@ Page({
 
 image 组件默认宽度 300px、高度 225px。
 
-** mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
+**mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |
@@ -305,6 +305,14 @@ Page({
 |bindwaiting|	EventHandle| |		视频出现缓冲时触发|
 |binderror|	EventHandle	| |	视频播放出错时触发|
 
+**objectFit 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| contain | 包含 |
+| fill | 填充 |
+| cover | 覆盖 |
+
 **主流格式支持**：
 
 |格式|	Android|	IOS|
@@ -414,7 +422,20 @@ Page({
 |bindstop|EventHandle|  |摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle| |用户不允许使用摄像头时触发|
 
+**device-position 有效值**:
 
+| 值 | 说明 |
+| ---- | ---- |
+| front | 前置摄像头 |
+| back | 后置摄像头 |
+
+**flash 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
 
 **示例**：
 
@@ -558,6 +579,22 @@ video {
 |bindload|EventHandle| |AR加载成功时触发|
 |bindmessage|EventHandle| |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| 0 | 2D 跟踪类型 |
+| 5 | SLAM 类型 |
+| 8 | IMU 类型 |
+
+**flash 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
+
 **说明**:
 
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
@@ -604,7 +641,19 @@ video {
 |bindnetstatus|EventHandle|  |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
 |bindfullscreenchange|	EventHandle	| |	全屏变化事件，detail = {direction, fullScreen}。|
 
+**orientation 有效值**:
 
+| 值 | 说明 |
+| ---- | ---- |
+| vertical | 垂直方向 |
+| horizontal | 水平方向 |
+
+**object-fit 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| contain | 包含 |
+| fillCrop | 填充 |
 
 **示例**：
 

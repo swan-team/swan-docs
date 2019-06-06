@@ -14,8 +14,7 @@ sidebar: open
 | --- | ------ | ---- | --------------- |
 | type | String | | 开放数据类型 |
 
-<div class="notice">type 有效值:</div>
-
+**type 有效值:**:
 
 | 值 | 说明 |
 |--- |----- |

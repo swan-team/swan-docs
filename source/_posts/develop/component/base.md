@@ -16,6 +16,26 @@ sidebar: base
 |size | Number  |23 |icon 的大小，单位是 px|
 |color | Color |   |icon 的颜色，同 css 的 color|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| success | 成功图标 |
+| info | 消息图标 |
+| warn | 警告图标 |
+| waiting | 等待图标 |
+| success_no_circle | 无圆形边框成功图标 |
+| clear | 删除图标 |
+| search | 搜索图标 |
+| personal | 人物图标 |
+| setting | 设置图标 |
+| top | 回到顶部图标 |
+| close | 关闭图标 |
+| cancel | 取消图标 |
+| download | 下载图标 |
+| checkboxSelected | 复选框选中图标 |
+| radioSelected | 单选框选中图标 |
+| radioUnselect | 单选框未选中图标 |
 
 **示例**：
 <a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -514,6 +534,14 @@ button {
 |action | String  |	 否 | play |动画操作，可取值 play、pause、stop	|-|
 |hidden | Boolean  | 否 | true |是否隐藏动画|-|
 |bindended | EventHandle | 否 |   | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
+
+**action 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| play | 播放 |
+| pause | 暂停 |
+| stop | 停止 |
 
 **说明:**
 
