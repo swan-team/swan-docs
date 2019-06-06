@@ -28,11 +28,23 @@ sidebar: ai_audit
 |conclusion|	String|	审核结果描述，成功才返回，失败不返回。|
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|
-|+type|	Number|		审核类型，1：色情、2：性感、3：暴恐、4：恶心、5：水印码、6：二维码、7：条形码、8：政治人物、9：敏感词、10：自定义敏感词、11: 存在公众人物。|
-|+msg|	String|	不合规项描述信息|
-|+probability|	Number|	不合规项置信度|
-|+stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
-|+words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
+
+**data 返回值说明**
+
+|参数 | 类型 | 说明  |
+|---- | ---- | ---- |
+|type|	Number|		审核类型，1：色情、2：性感、3：暴恐、4：恶心、5：水印码、6：二维码、7：条形码、8：政治人物、9：敏感词、10：自定义敏感词、11: 存在公众人物。|
+|msg|	String|	不合规项描述信息|
+|probability|	Number|	不合规项置信度|
+|words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
+|stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
+
+**stars 返回值说明**
+
+|参数 | 类型 | 说明  |
+|---- | ---- | ---- |
+|probability|	Number|	不合规项置信度|
+| name |	String|	姓名|
 
 **conclusion、conclusionType参数说明**：
 
