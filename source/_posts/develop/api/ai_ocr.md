@@ -6,13 +6,13 @@ sidebar: ai_ocr
 ---
 
 
-## ocrIdCard
+## swan.ai.ocrIdCard
 
-**解释：**用户向服务请求识别身份证，身份证识别包括正面和背面。
+**解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
-**方法参数：**Object
+**方法参数**：Object object
 
-**Object参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +25,7 @@ sidebar: ai_ocr
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 说明  |
 |---- | ---- |---- |
@@ -43,7 +43,28 @@ sidebar: ai_ocr
 |++height|	Number|	表示定位位置的长方形的高度。|
 |++words|	String|	识别结果字符串|
 
-**返回值示例：**
+**示例**：
+
+<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrIdCard({
+      detect_direction: true,
+      id_card_side: 'front',
+      detect_risk: true,
+      image,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
+
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -111,28 +132,15 @@ sidebar: ai_ocr
 }
 ```
 
-**示例代码：**
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrIdCard({
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
 
-## ocrBankCard
 
-**解释：**识别银行卡并返回卡号、发卡行和卡片类型。
+## swan.ai.ocrBankCard
 
-**方法参数：**Object
+**解释**：识别银行卡并返回卡号、发卡行和卡片类型。
 
-**Object参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -141,7 +149,7 @@ swan.chooseImage({
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
@@ -151,19 +159,11 @@ swan.chooseImage({
 |+bank_name |String | 银行名，不能识别时为空 。|
 |+bank_card_type | String | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
 
-**返回值示例：**
-```json
-{
-    "log_id": $log_id,
-    "result": {
-        "bank_card_number": "622500000000000",
-        "bank_name": "招商银行",
-        "bank_card_type": 1
-    }
-}
-```
+**示例**：
 
-**示例：**
+<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
 ```js
 swan.chooseImage({
   success(res) {
@@ -178,13 +178,25 @@ swan.chooseImage({
 });
 ```
 
-## ocrDrivingLicense
+**返回值示例**：
+```json
+{
+    "log_id": $log_id,
+    "result": {
+        "bank_card_number": "622500000000000",
+        "bank_name": "招商银行",
+        "bank_card_type": 1
+    }
+}
+```
 
-**解释：**对机动车驾驶证所有关键字段进行识别。
+## swan.ai.ocrDrivingLicense
 
-**方法参数：**Object
+**解释**：对机动车驾驶证所有关键字段进行识别。
 
-**Object参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -196,7 +208,7 @@ swan.chooseImage({
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
@@ -205,7 +217,27 @@ swan.chooseImage({
 |words_result |  Object  | 识别结果 |
 |+words | String | 识别结果字符串 |
 
-**返回值示例：**
+**示例**：
+
+<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrDrivingLicense({
+      image,
+      detect_direction: true,
+      unified_valid_period: true,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
+
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -246,28 +278,15 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrDrivingLicense({
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
 
-## ocrVehicleLicense
 
-**解释：**对机动车行驶证正本所有关键字段进行识别。
+## swan.ai.ocrVehicleLicense
 
-**方法参数：**Object
+**解释**：对机动车行驶证正本所有关键字段进行识别。
 
-**Object参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -278,7 +297,7 @@ swan.chooseImage({
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
@@ -287,7 +306,26 @@ swan.chooseImage({
 |words_result |  Object  | 识别结果 |
 |+words | String | 识别结果字符串 |
 
-**返回值示例：**
+**示例**：
+
+<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.ocrVehicleLicense({
+      image,
+      detect_direction: true,
+      success(res) {
+        console.log(res.words_result);
+      }
+    });
+  }
+});
+```
+
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -329,17 +367,4 @@ swan.chooseImage({
 }
 ```
 
-**示例：**
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrVehicleLicense({
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
-});
-```
+

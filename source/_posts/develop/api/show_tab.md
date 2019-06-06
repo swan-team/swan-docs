@@ -4,156 +4,282 @@ header: develop
 nav: api
 sidebar: show_tab
 ---
-navigateTo
----
-**解释：**保留当前页面，跳转到应用内的某个页面，使用 swan.navigateBack 可以返回到原页面。
 
-**参数：**Object
+> 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
+如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
 
-**说明：**
-为了减少用户在使用智能小程序时的困扰，我们规定页面路径为十层，请尽量避免多层级的交互方式。
+## swan.navigateTo
 
-**Object 参数说明：**
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|url |String  |是|   需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
-|success| Function  |  否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+**解释**：保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
-**示例：**
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|url |String  |是| -|  需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
+|success| Function  |  否  |-|  接口调用成功的回调函数|
+|fail  |  Function  |  否  |-|  接口调用失败的回调函数|
+|complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+**示例**：
 <a href="swanide://fragment/dd7e70fdad89cca08b0a8a54e12a0b9c1540396427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 swan.navigateTo({
      //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'  
-});
-```
-
-
-
-redirectTo
----
-**解释：**关闭当前页面，跳转到应用内的某个页面。
-
-**参数：**Object
-
-**Object 参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|url |String | 是  | 需要跳转的应用内非 tabBar 的页面的路径，路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**示例：**
-
-```js
-swan.redirectTo({
-    //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
     url: 'example/xxx?key=value'
 });
 ```
+<!-- #### 错误码
+**Andriod**
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法。|
+**iOS**
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确。|
+|1001|下载子包失败| -->
 
-switchTab
----
-**解释：**跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
 
-**参数：**Object
+## swan.redirectTo
 
-**Object 参数说明：**
+**解释**：关闭当前页面，跳转到应用内的某个页面。
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|url |String | 是  | 需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。|
-|success |Function  |  否  | 接口调用成功的回调函数|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+**方法参数**：Object object
 
-**示例：**
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|url |String | 是  | -| 需要跳转的应用内非 tabBar 的页面的路径，路径后可以带参数。参数与路径之间使用?分隔，参数键与参数值用=相连，不同参数用&分隔；如 ‘path?key=value&key2=value2’。|
+|success| Function |   否  |-|  接口调用成功的回调函数|
+|fail   | Function |   否  |-|  接口调用失败的回调函数|
+|complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+**示例**：
+
+<a href="swanide://fragment/00b8b93225cfaf30de9f4329f1962ee91557729109817" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="redirectTo">redirectTo</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-{
-    "tabBar": {
-        "list": [{
-            "pagePath": "pages/index/index",
-            "text": "首页"
-        },{
-            "pagePath": "pages/list/list",
-            "text": "列表"
-        }]
+Page({
+    redirectTo() {
+        swan.redirectTo({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('redirectTo success');
+            },
+            fail: function (err) {
+                console.log('redirectTo fail', err);
+            }
+        });
     }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
 }
 ```
 
-```js
-swan.switchTab({
-    url: '/pages/list/list',
-});
+## swan.switchTab
+
+**解释**：跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|url |String | 是  | -| 需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。|
+|success |Function  |  否  |-|  接口调用成功的回调函数|
+|fail   | Function |   否  |-|  接口调用失败的回调函数|
+|complete |   Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+
+<a href="swanide://fragment/b62ad6cdc0ef78061a6581fa9a1fc9ab1557729238493" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="switchTab">switchTab</button>
+</view>
 ```
 
-navigateBack
----
-**解释：**关闭当前页面，返回上一页面或多级页面。
-
-**参数：**Object
-
-**Object 参数说明：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页，默认为 1。|
-|success|	function|		否|	接口调用成功的回调函数|	
-|fail|	function|		否|	接口调用失败的回调函数|	
-|complete|	function|		否|	接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**示例：**
+* 在 js 文件中
 
 ```js
-// 注意：调用 navigateTo 跳转时，调用页面会被加入堆栈，而 redirectTo 方法则不会。见下方示例代码
-
-// 当前是首页
-swan.navigateTo({
-    url: 'list?key=value'
+Page({
+    switchTab() {
+        swan.switchTab({
+            url: '/api/api',
+            success: function () {
+                console.log('switchTab success');
+            },
+            fail: function (err) {
+                console.log('switchTab fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
 
-// 当前是列表页
-swan.navigateTo({
-    url: 'detail?key=value'
-});
-
-// 在详情页内 navigateBack，将返回首页
-swan.navigateBack({
-    delta: 2
-});
-
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
-reLaunch
----
-**解释：**关闭所有页面，打开到应用内的某个页面。
+## swan.navigateBack
 
-**参数：**Object
+**解释**：关闭当前页面，返回上一页面或多级页面。
 
-**Object 参数说明：**
+**方法参数**：Object object
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|url |String | 是|   需要跳转的应用内页面路径 , 路径后可以带参数。参数与路径之间使用 ? 分隔，参数键与参数值用=相连，不同参数用 & 分隔；如 ‘path?key=value&key2=value2’，如果跳转的页面路径是 tabBar 页面则不能带参数。|
-|success| Function |   否 |  接口调用成功的回调函数|
-|fail   | Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|delta  | Number | 否  |1|  返回的页面数，如果 delta 大于现有页面数，则返回到首页1。|
+|success|	function|		否|-| 	接口调用成功的回调函数|	
+|fail|	function|		否|	-| 接口调用失败的回调函数|	
+|complete|	function|		否|-| 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/f8d91e30ca7ed70b3114add6fd1a58711557729485160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 component.swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateTo">navigateTo</button>
+</view>
+```
+
+* 在 api.swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateBack">navigateBack</button>
+</view>
+```
+
+* 在 component.js 文件中
 
 ```js
-swan.reLaunch({
-  //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'
+Page({
+    navigateTo() {
+        swan.navigateTo({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('navigateTo success');
+            },
+            fail: function (err) {
+                console.log('navigateTo fail', err);
+            }
+        });
+    }
 });
+```
+* 在 api.js 文件中
+
+```js
+Page({
+    onLoad(options) {
+        console.log('onLoad', options);
+    },
+    navigateBack() {
+        swan.navigateBack({
+            success: function () {
+                console.log('navigateBack success');
+            },
+            fail: function (err) {
+                console.log('navigateBack fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
+
+## swan.reLaunch
+
+**解释**：关闭所有页面，打开到应用内的某个页面。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|url |String | 是|  -|  需要跳转的应用内页面路径 , 路径后可以带参数。参数与路径之间使用 ? 分隔，参数键与参数值用=相连，不同参数用 & 分隔；如 ‘path?key=value&key2=value2’，如果跳转的页面路径是 tabBar 页面则不能带参数。|
+|success| Function |   否 | -|  接口调用成功的回调函数|
+|fail   | Function  |  否  | -| 接口调用失败的回调函数|
+|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+**示例**：
+
+<a href="swanide://fragment/7a5d527292a5ff0339bc3dc24803bc7c1557729741562" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="reLaunch">reLaunch</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    reLaunch() {
+        swan.reLaunch({
+            url: '/api/api?key=value',
+            success: function () {
+                console.log('reLaunch success');
+            },
+            fail: function (err) {
+                console.log('reLaunch fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```

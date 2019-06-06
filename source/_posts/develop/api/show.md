@@ -96,11 +96,11 @@ sidebar: show
 
 ### showToast
 
-**解释：**显示消息提示框
+**解释**：显示消息提示框
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -112,7 +112,7 @@ sidebar: show
 |complete   | Function |   否|   接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|是否显示透明蒙层，防止触摸穿透，默认：false|
 
-**icon有效值：**
+**icon有效值**：
 
 |有效值 |说明  |
 |---- | ---- |
@@ -120,7 +120,7 @@ sidebar: show
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。默认值  |
 
-**示例：**
+**示例**：
 
 ```js
 swan.showToast({
@@ -132,11 +132,11 @@ swan.showToast({
 
 ### showLoading
 
-**解释：**显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框
+**解释**：显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -148,13 +148,13 @@ swan.showToast({
 
 ### hideToast
 
-**解释：**隐藏消息提示框
+**解释**：隐藏消息提示框
 
 ### hideLoading
 
-**解释：**隐藏 loading 提示框
+**解释**：隐藏 loading 提示框
 
-**示例：**
+**示例**：
 ```js
 swan.showLoading({
     title: '加载中',
@@ -168,11 +168,11 @@ setTimeout(function() {
 
 ### showModal
 
-**解释：**显示模态弹窗
+**解释**：显示模态弹窗
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -187,14 +187,14 @@ setTimeout(function() {
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete   | Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |confirm |Boolean |为 true 时，表示用户点击了确定按钮  |
 |cancel | Boolean |为 true 时，表示用户点击了取消|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showModal({
@@ -214,28 +214,28 @@ swan.showModal({
 
 ### showActionSheet
 
-**解释：**​显示操作菜单
+**解释**：​显示操作菜单
 
-**参数：**Object
+**参数**：Object
 
-​**Object参数说明：**
+​**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
-|itemList |   String Array  |  是 |  按钮的文字数组，数组长度最大为6个|
+|itemList |   Array.<string>  |  是 |  按钮的文字数组，数组长度最大为6个|
 |itemColor |  HexColor|    否   |按钮的文字颜色，默认颜色为“#3c76ff”|
 |success| Function  |  否  | 接口调用成功的回调函数，详见返回参数说明|
 |fail  |  Function |   否  | 接口调用失败的回调函数|
 |complete   | Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.showActionSheet({
@@ -250,11 +250,11 @@ swan.showActionSheet({
 
 ### setNavigationBarTitle
 
-**解释：**动态设置当前页面的标题。
+**解释**：动态设置当前页面的标题。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -263,7 +263,7 @@ swan.showActionSheet({
 |fail   | Function|    否 |  接口调用失败的回调函数|
 |complete   | Function   | 否|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.setNavigationBarTitle({
@@ -273,19 +273,19 @@ swan.setNavigationBarTitle({
 
 ### showNavigationBarLoading
 
-**解释：**该方法在当前页面显示导航条加载动画
+**解释**：该方法在当前页面显示导航条加载动画
 
 ### hideNavigationBarLoading
 
-**解释：**隐藏导航条加载动画。
+**解释**：隐藏导航条加载动画。
 
 ### setNavigationBarColor
 
-**解释：**动态设置当前页面导航条的颜色。
+**解释**：动态设置当前页面导航条的颜色。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -298,7 +298,7 @@ swan.setNavigationBarTitle({
 |fail|    Function |   否  | 接口调用失败的回调函数|
 |complete|    Function |   否   |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**animation.timingFunc 有效值：**
+**animation.timingFunc 有效值**：
 
 |值  | 说明|
 | ---- |---- |
@@ -307,14 +307,14 @@ swan.setNavigationBarTitle({
 |easeOut |动画以低速结束。|
 |easeInOut  | 动画以低速开始和结束。|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- |---- |
 |errMsg | String  |调用结果|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.setNavigationBarColor({
@@ -332,11 +332,11 @@ swan.setNavigationBarColor({
 
 ### setTabBarBadge
 
-**解释：**为 tabBar 某一项的右上角添加文本
+**解释**：为 tabBar 某一项的右上角添加文本
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -346,7 +346,7 @@ swan.setNavigationBarColor({
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.setTabBarBadge({
@@ -357,9 +357,9 @@ swan.setTabBarBadge({
 
 ### removeTabBarBadge
 
-**解释：**移除tabBar某一项右上角的文本。
+**解释**：移除tabBar某一项右上角的文本。
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -368,7 +368,7 @@ swan.setTabBarBadge({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.removeTabBarBadge({
@@ -378,11 +378,11 @@ swan.removeTabBarBadge({
 
 ### showTabBarRedDot
 
-**解释：**显示 tabBar 某一项的右上角的红点
+**解释**：显示 tabBar 某一项的右上角的红点
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -391,7 +391,7 @@ swan.removeTabBarBadge({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.showTabBarRedDot({
@@ -401,11 +401,11 @@ swan.showTabBarRedDot({
 
 ### hideTabBarRedDot
 
-**解释：**隐藏 tabBar 某一项的右上角的红点
+**解释**：隐藏 tabBar 某一项的右上角的红点
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -414,7 +414,7 @@ swan.showTabBarRedDot({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.hideTabBarRedDot({
@@ -425,11 +425,11 @@ swan.hideTabBarRedDot({
 
 ### setTabBarStyle
 
-**解释：**动态设置 tabBar 的整体样式
+**解释**：动态设置 tabBar 的整体样式
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
@@ -442,7 +442,7 @@ swan.hideTabBarRedDot({
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.setTabBarStyle({
@@ -455,11 +455,11 @@ swan.setTabBarStyle({
 
 ### setTabBarItem
 
-**解释：**动态设置 tabBar 某一项的内容
+**解释**：动态设置 tabBar 某一项的内容
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
@@ -472,7 +472,7 @@ swan.setTabBarStyle({
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.setTabBarItem({
@@ -487,11 +487,11 @@ swan.setTabBarItem({
 
 ### showTabBar
 
-**解释：**显示 tabBar
+**解释**：显示 tabBar
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
@@ -500,7 +500,7 @@ swan.setTabBarItem({
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.showTabBar({
@@ -516,11 +516,11 @@ swan.showTabBar({
 
 ### hideTabBar
 
-**解释：**隐藏 tabBar
+**解释**：隐藏 tabBar
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- |---- |---- |
@@ -529,7 +529,7 @@ swan.showTabBar({
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.hideTabBar({
@@ -548,13 +548,13 @@ swan.hideTabBar({
 
 ### navigateTo
 
-**解释：**保留当前页面，跳转到应用内的某个页面，使用 swan.navigateBack 可以返回到原页面。
+**解释**：保留当前页面，跳转到应用内的某个页面，使用 swan.navigateBack 可以返回到原页面。
 
-**参数：**Object
+**参数**：Object
 
-**注意：**为了不让用户在使用智能小程序时造成困扰，我们规定页面路径只能是五层，请尽量避免多层级的交互方式。
+**注意**：为了不让用户在使用智能小程序时造成困扰，我们规定页面路径只能是五层，请尽量避免多层级的交互方式。
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -563,7 +563,7 @@ swan.hideTabBar({
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.navigateTo({
@@ -574,11 +574,11 @@ swan.navigateTo({
 
 ### redirectTo
 
-**解释：**关闭当前页面，跳转到应用内的某个页面
+**解释**：关闭当前页面，跳转到应用内的某个页面
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -587,7 +587,7 @@ swan.navigateTo({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 swan.redirectTo({
@@ -597,11 +597,11 @@ swan.redirectTo({
 
 ### switchTab
 
-**解释：**跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+**解释**：跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -610,7 +610,7 @@ swan.redirectTo({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete |   Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
 ```js
 {
@@ -634,17 +634,17 @@ swan.switchTab({
 
 ### navigateBack
 
-**解释：**关闭当前页面，返回上一页面或多级页面。
+**解释**：关闭当前页面，返回上一页面或多级页面。
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
 |delta  | Number | 否  | 返回的页面数，如果 delta 大于现有页面数，则返回到首页。默认为 1|
 
-**示例：**
+**示例**：
 
 ```js
 // 注意：调用 navigateTo 跳转时，调用页面会被加入堆栈，而 redirectTo 方法则不会。见下方示例代码
@@ -668,11 +668,11 @@ swan.navigateBack({
 
 ### reLaunch
 
-**解释：**关闭所有页面，打开到应用内的某个页面。
+**解释**：关闭所有页面，打开到应用内的某个页面。
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -682,7 +682,7 @@ swan.navigateBack({
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.reLaunch({
@@ -695,11 +695,11 @@ swan.reLaunch({
 
 ### createAnimation
 
-**解释：**创建一个动画实例 animation
+**解释**：创建一个动画实例 animation
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |默认值  |说明|
 |---- | ---- | ---- | ----- |---- |
@@ -708,7 +708,7 @@ swan.reLaunch({
 |delay|Integer | 否|  0 | 动画延迟时间，单位 ms |
 |transformOrigin|String | 否|  ‘50% 50% 0’ | 动画 |
 
-**timingFunction 有效值：**
+**timingFunction 有效值**：
 
 |值   |说明  |
 |---- | ---- |
@@ -732,7 +732,7 @@ var animation = swan.createAnimation({
 
 #### animation
 
-**解释：**动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
+**解释**：动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
 **animation方法列表**
 
@@ -801,7 +801,7 @@ var animation = swan.createAnimation({
 调用动画操作方法后要调用 step() 来表示一组动画完成，可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。
 
 
-**示例：**
+**示例**：
 
 ```js
 <view bind:tap="starttoanimate" animation="{{animationData}}"></view>
@@ -828,18 +828,18 @@ Page({
 
 ### pageScrollTo
 
-**解释：**将页面滚动到目标位置（可以设置滚动动画时长）。
+**解释**：将页面滚动到目标位置（可以设置滚动动画时长）。
 
-**参数：**Object
+**参数**：Object
 
-**Object 参数说明：**
+**Object 参数说明**：
 
 |参数名 |类型  |必填  |默认值  |说明|
 |---- | ---- | ---- | ----- |---- |
 |scrollTop |Number | 是|  - | 滚动到页面的目标位置（单位 px） |
 |duration |Number | 否| 300 | 滚动动画的时长，（单位 ms） |
 
-**示例：**
+**示例**：
 
 ```js
 swan.pageScrollTo({
@@ -853,11 +853,11 @@ swan.pageScrollTo({
 
 ### onPullDownRefresh
 
-**解释：**在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
+**解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
 
-**参数：**Object
+**参数**：Object
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -872,11 +872,11 @@ Page({
 
 ### startPullDownRefresh
 
-**解释：**开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
+**解释**：开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -884,13 +884,13 @@ Page({
 |fail   | Function |   否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |errMsg | String|  接口调用结果|
 
-**示例：**
+**示例**：
 
 ```js
 swan.startPullDownRefresh();
@@ -898,11 +898,11 @@ swan.startPullDownRefresh();
 
 ### stopPullDownRefresh
 
-**解释：** 停止当前页面下拉刷新。
+**解释**： 停止当前页面下拉刷新。
 
-**参数：** 无
+**参数**： 无
 
-**示例：**
+**示例**：
 
 ```js
 swan.stopPullDownRefresh();
@@ -913,11 +913,11 @@ swan.stopPullDownRefresh();
 
 ### createSelectorQuery
 
-**解释：** 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
+**解释**： 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
 
-**参数：** Object
+**参数**： Object
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -935,7 +935,7 @@ Page({
 
 ### selectorQuery
 
-**selectorQuery 对象的方法列表：**
+**selectorQuery 对象的方法列表**：
 
 |方法 |参数  |说明|
 |---- | ---- | ---- |
@@ -947,9 +947,9 @@ Page({
 
 ### selectorQuery.in(component)
 
-**解释：** 将选择器的选取范围更改为自定义组件 component 内。（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点。）
+**解释**： 将选择器的选取范围更改为自定义组件 component 内。（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点。）
 
-**示例：**
+**示例**：
 
 ```js
 Component({
@@ -964,7 +964,7 @@ Component({
 
 ### selectorQuery.select(selector)
 
-**解释：** 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
+**解释**： 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
 
 selector 类似于 CSS 的选择器，但仅支持下列语法。
 
@@ -977,19 +977,19 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 ### selectorQuery.selectAll(selector)
 
-**解释：** 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
+**解释**： 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
 
 ### selectorQuery.selectViewport()
 
-**解释：** 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
+**解释**： 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
 
 ### nodesRef.boundingClientRect([callback])
 
-**解释：** 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
+**解释**： 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
 
 返回的节点信息中，每个节点的位置用 left、right、top、bottom、width、height 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -1024,11 +1024,11 @@ Page({
 
 ### nodesRef.scrollOffset([callback])
 
-**解释：** 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
+**解释**： 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
 
 返回的节点信息中，每个节点的滚动位置用 scrollLeft 、s crollTop 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -1045,7 +1045,7 @@ Page({
 
 ### nodesRef.fields(fields,[callback])
 
-**解释：** 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
+**解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 
 |字段名 |默认值  |说明|
 |---- | ---- | ---- |
@@ -1057,7 +1057,7 @@ Page({
 |properties  |  []  | 指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
 |computedStyle  |  []  | 指定样式名列表，返回节点对应样式名的当前值 |
 
-**示例：**
+**示例**：
 
 ```js
 Page({
@@ -1086,4 +1086,4 @@ Page({
 
 ### selectorQuery.exec([callback])
 
-**解释：** 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。 -->
+**解释**： 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。 -->

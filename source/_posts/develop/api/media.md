@@ -27,17 +27,17 @@ sidebar: media
 
 ### chooseImage
 
-**解释：**从本地相册选择图片或使用相机拍照。
+**解释**：从本地相册选择图片或使用相机拍照。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数 | 类型  |必填 | 说明|
 |---- | ---- | ---- | ----|
 |count  | Number | 否  | 最多可以选择的图片张数，默认 9|
-|sizeType  |  String Array| 否  | original 原图，compressed 压缩图，默认二者都有|
-|sourceType | String Array |否 |  album 从相册选图，camera 使用相机，默认二者都有|
+|sizeType  |  Array.<string>| 否  | original 原图，compressed 压缩图，默认二者都有|
+|sourceType | Array.<string> |否 |  album 从相册选图，camera 使用相机，默认二者都有|
 |success |Function  |  是 | 成功则返回图片的本地文件路径列表 tempFilePaths|
 |fail  |  Function |   否  | 接口调用失败的回调函数|
 |complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -45,12 +45,12 @@ sidebar: media
 **注意：文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。**
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | String Array |图片的本地文件路径列表 |
-|tempFiles  | Object Array |图片的本地文件列表，每一项是一个 File 对象|
+|tempFilePaths  | Array.<string> |图片的本地文件路径列表 |
+|tempFiles  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象|
 
 **tempFiles 对象结构如下:**
 
@@ -60,7 +60,7 @@ sidebar: media
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.chooseImage({
@@ -83,22 +83,22 @@ swan.chooseImage({
 
 ### previewImage
 
-**解释：**预览图片。
+**解释**：预览图片。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数 | 类型 | 必填  |说明|
 |---- | ---- | ---- | ----|
 |current |String | 否  | 当前显示图片的链接，不填则默认为 urls 的第一张|
-|urls   | String Array |是 |  需要预览的图片链接列表|
+|urls   | Array.<string> |是 |  需要预览的图片链接列表|
 |success| Function |   否  | 接口调用成功的回调函数|
 |fail  |  Function  |  否 |  接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.previewImage({
@@ -118,11 +118,11 @@ swan.previewImage({
 
 ### getImageInfo
 
-**解释：**获取图片信息。
+**解释**：获取图片信息。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数  |类型|  必填 | 说明|
 |---- | ---- | ---- | ----|
@@ -131,7 +131,7 @@ swan.previewImage({
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型 | 说明|
 |---- | ---- | ---- |
@@ -140,7 +140,7 @@ swan.previewImage({
 |path  |  String | 返回图片的本地路径|
 
 
-**示例：**
+**示例**：
 
 
 ```js
@@ -162,11 +162,11 @@ swan.getImageInfo({
 
 ### saveImageToPhotosAlbum
 
-**解释：**保存图片到系统相册。需要用户授权
+**解释**：保存图片到系统相册。需要用户授权
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名| 类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -176,14 +176,14 @@ swan.getImageInfo({
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名| 类型|  说明|
 |---- | ---- | ---- |
 |errMsg  |String | 调用结果|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.saveImageToPhotosAlbum({
@@ -204,11 +204,11 @@ swan.saveImageToPhotosAlbum({
 
 ### getRecorderManager
 
-**解释：**获取全局唯一的录音管理器`recorderManager`。
+**解释**：获取全局唯一的录音管理器`recorderManager`。
 
-**参数：**无
+**参数**：无
 
-**recorderManager 对象的方法列表：**
+**recorderManager 对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -221,7 +221,7 @@ swan.saveImageToPhotosAlbum({
 |onStop | callback | 录音停止事件，会回调文件地址 |
 |onError | callback | 录音错误事件, 会回调错误信息 |
 
-**start(options) 说明：**
+**start(options) 说明**：
 
 |属性 | 类型 | 必填 | 说明 |
 |---- | ---- | ---- | ---- |
@@ -231,7 +231,7 @@ swan.saveImageToPhotosAlbum({
 |encodeBitRate |Number |否 | 编码码率，有效值见下表格 |
 |format |String |否 | 音频格式，有效值 aac/pcm |
 
-**其中，采样率和码率有一定要求，具体有效值如下：**
+**其中，采样率和码率有一定要求，具体有效值如下**：
 
 |采样率 | 编码码率 |
 |---- | ---- |
@@ -239,19 +239,19 @@ swan.saveImageToPhotosAlbum({
 |16000| 24000 ~ 96000|
 |44100| 64000 ~ 320000|
 
-**onStop(callback) 回调结果说明：**
+**onStop(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |tempFilePath |String | 录音文件的临时路径 |
 
-**onError(callback) 回调结果说明：**
+**onError(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |errMsg |String | 错误信息 |
 
-**示例：**
+**示例**：
 
 ```javascript
 const recorderManager = swan.getRecorderManager()
@@ -287,11 +287,11 @@ recorderManager.start(options);
 
 ### getBackgroundAudioManager
 
-**解释：**获取全局唯一的背景音频管理器 `backgroundAudioManager`。
+**解释**：获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
-**参数：**无
+**参数**：无
 
-**backgroundAudioManager 对象的属性列表：**
+**backgroundAudioManager 对象的属性列表**：
 
 |属性 | 类型 | 说明 | 只读 |
 |---- | ---- | ---- | ---- |
@@ -308,7 +308,7 @@ recorderManager.start(options);
 |singer |String |歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 | 否 |
 |coverImgUrl |String |封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 | 否 |
 
-**backgroundAudioManager 对象的方法列表：**
+**backgroundAudioManager 对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -327,7 +327,7 @@ recorderManager.start(options);
 |onNext | callback | 用户在系统音乐播放面板点击下一曲事件（iOS only）|
 |onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 |
 
-**示例：**
+**示例**：
 
 ```javascript
 
@@ -346,11 +346,11 @@ backgroundAudioManager.src = 'xxx';
 
 ### createInnerAudioContext
 
-**解释：**创建并返回内部 audio 上下文 `innerAudioContext` 对象。
+**解释**：创建并返回内部 audio 上下文 `innerAudioContext` 对象。
 
-**参数：**无
+**参数**：无
 
-**innerAudioContext 对象的属性列表：**
+**innerAudioContext 对象的属性列表**：
 
 |方法 | 参数 | 说明 | 只读 |
 |---- | ---- | ---- | ---- |
@@ -364,7 +364,7 @@ backgroundAudioManager.src = 'xxx';
 |buffered |Number |音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲。 | 是 |
 |volume |Number |音量。范围 0~1。 | 否 |
 
-**innerAudioContext 对象的方法列表：**
+**innerAudioContext 对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -394,7 +394,7 @@ backgroundAudioManager.src = 'xxx';
 |offSeeking | callback | 取消监听 onSeeking 事件 |
 |offSeeked | callback | 取消监听 onSeeked 事件 |
 
-**示例：**
+**示例**：
 
 ```javascript
 
@@ -415,22 +415,22 @@ innerAudioContext.onPlay(function (res) {
 
 ### chooseVideo
 
-**解释：**拍摄视频或从手机相册中选视频，返回视频的临时文件路径。
+**解释**：拍摄视频或从手机相册中选视频，返回视频的临时文件路径。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数 | 类型  |必填 | 说明|
 |---- | ---- | ---- | ----|
-|sourceType | String Array |否 |  album 从相册选图，camera 使用相机，默认二者都有|
+|sourceType | Array.<string> |否 |  album 从相册选图，camera 使用相机，默认二者都有|
 |compressed  | Boolean | 否  | 是否压缩所选的视频源文件，默认值为true，需要压缩|
 |maxDuration  | Number | 否  | 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒|
 |success |Function  |  是 | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明|
 |fail  |  Function |   否  | 接口调用失败的回调函数|
 |complete   | Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 
 |参数  |  说明 |
@@ -443,7 +443,7 @@ innerAudioContext.onPlay(function (res) {
 
 **注：文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。**
 
-**示例：**
+**示例**：
 
 ```html
 <button bind:tap="chooseVideo" type="primary">点击选择视频</button>
@@ -480,11 +480,11 @@ Page({
 
 ### saveVideoToPhotosAlbum
 
-**解释：**保存视频到系统相册。需要用户授权。
+**解释**：保存视频到系统相册。需要用户授权。
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名| 类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -493,14 +493,14 @@ Page({
 |fail  |  Function  |  否  | 接口调用失败的回调函数|
 |complete |   Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名| 类型|  说明|
 |---- | ---- | ---- |
 |filePath  |String | 调用结果,返回视频文件路径|
 
 
-**示例：**
+**示例**：
 
 ```js
 swan.saveVideoToPhotosAlbum({
@@ -521,11 +521,11 @@ swan.saveVideoToPhotosAlbum({
 
 ### createVideoContext
 
-**解释：**创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
+**解释**：创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
-**参数：**videoId
+**参数**：videoId
 
-**videoContext 对象的方法列表：**
+**videoContext 对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -536,7 +536,7 @@ swan.saveVideoToPhotosAlbum({
 |requestFullScreen  | 无  | 进入全屏  |
 |exitFullScreen | 无 |  退出全屏|
 
-**示例：**
+**示例**：
 
 ```html
 <view>
@@ -552,11 +552,11 @@ myVideo.play();
 
 ### createLivePlayerContext
 
-**解释：**操作对应的 `<live-player/>` 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。
+**解释**：操作对应的 `<live-player/>` 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。
 
-**参数：**domId
+**参数**：domId
 
-**livePlayerContext 对象的方法列表：**
+**livePlayerContext 对象的方法列表**：
 
 |方法 | 参数 | 说明|
 |---- | ---- | ---- |
@@ -566,7 +566,7 @@ myVideo.play();
 |requestFullScreen | Object |进入全屏|
 |exitFullScreen| Object | 退出全屏|
 
-**requestFullScreen 的 Object 参数列表：**
+**requestFullScreen 的 Object 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -575,7 +575,7 @@ myVideo.play();
 |fail  |Function  |  否 |  接口调用失败的回调函数|
 |complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**其他方法的 Object 参数列表：**
+**其他方法的 Object 参数列表**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -588,11 +588,11 @@ myVideo.play();
 
 ### createCameraContext
 
-**解释：**创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件
+**解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件
 
-**参数：**无
+**参数**：无
 
-**cameraContext 对象的方法列表：**
+**cameraContext 对象的方法列表**：
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
@@ -601,7 +601,7 @@ myVideo.play();
 |stopRecord | Object | 结束录像，成功则返回封面与视频|
 
 
-**takePhoto 的 Object 参数列表：**
+**takePhoto 的 Object 参数列表**：
 
 |参数  |类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -611,7 +611,7 @@ myVideo.play();
 |complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**startRecord 的 Object 参数列表：**
+**startRecord 的 Object 参数列表**：
 
 |参数 | 类型 | 必填 | 说明|
 |---- | ---- | ---- |---- |
@@ -620,7 +620,7 @@ myVideo.play();
 |complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**stopRecord 的 Object 参数列表：**
+**stopRecord 的 Object 参数列表**：
 
 |参数 | 类型  |必填  |说明|
 |---- | ---- | ---- |---- |

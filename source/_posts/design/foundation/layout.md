@@ -1,120 +1,112 @@
 ---
-title: 布局排版规范
+title: 页面布局
 header: design
 nav: foundation
 sidebar: layout
 ---
-
-## 布局
-### 基础布局
-基于宽度750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区留出至少左右边距34px（17pt），以限制内容宽度以获得最佳的可读性。
+## 基础布局
+基于宽度750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区至少留出左右边距34px（17pt），限制内容宽度以获得最佳的可读性。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/1-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少留出34px。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/foundation/layout/1-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/foundation/layout/1-3.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过窄，页面元素过于分散</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过窄，页面元素过于分散。</p>
 	</div>
 </div>
 
-### iPhoneX 布局适配
-在竖向布局上，iPhone X需要格外关注关注底部Home指示区的配置。
-iPhone X 的Home指示区默认透明，如小程序未使用底部标签栏组件，需注意此区域不可布局可操作UI元素，避免误操作。
+## 透明框架布局适配
+当开发者使用小程序的原生顶部导航栏时，开发者只需要在顶部导航栏下方开始布局页面即可。
+智能小程序在百度App v11.1及以上版本，可以[自定义顶部导航栏](../../component/topnav/#自定义顶部导航栏)，使其只保留框架控制功能区，后文简称为“透明框架”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/2.png">
+		<img src="../../../img/design/foundation/layout/2.png"><p class="m-doc-custom-examples-text">1. 默认框架，使用小程序顶部导航栏；
+		2. 透明框架。</p>
 	</div>
 </div>
 
-如开发者使用小程序底部标签栏，底部Home指示区会自动适配底部标签栏的背景颜色。
+透明框架下，页面布局从屏幕顶部开始，请注意页面内容应布局在安全区内，否则会导致信息阅读体验差，或可点击元素功能不可用。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/3.png">
+		<img src="../../../img/design/foundation/layout/3.png"><p class="m-doc-custom-examples-text">小程序透明框架的安全区 = 屏幕 -（系统状态栏（1） + 框架控制功能区（2））</p>
 	</div>
 </div>
 
-如开发者自主开发底部栏（如购物栏，评论栏）时，可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/">.view_css</a>适配iPhone X，把底部HOME指示区颜色适配为与底部栏一致。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/4-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">Home指示区已正确配置，颜色#FFFFFF与底部栏一致</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">页面元素和功能均在安全区内展现。</p>
 	</div>
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/foundation/layout/4-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">Home指示区未正确配置</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">页面元素和功能超出安全区，无法正常使用。</p>
 	</div>
 </div>
 
-### 阅读视线流
-中国用户阅读浏览内容的习惯通常是“从左往右，从上往下”，在信息排版时，我们应该把主要的信息内容放在屏幕左上侧。
+上滑页面时，为保证元素正常显示，可以为系统状态栏区域单独赋予背景颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/5-1.png">
-		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z型）
-1. 从左侧开始，视线向右水平移动阅读；
-2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。</p>
-	</div>
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/5-2.png">
-		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
-1. 从上至下垂直扫描；
-2. 发现感兴趣的内容，视线从左向右水平移动。</p>
+		<img src="../../../img/design/foundation/layout/5.png"><p class="m-doc-custom-examples-text">页面上滑时，内容可能与系统状态栏上的内容交叠，建议此时为系统状态栏加上背景色。</p>
 	</div>
 </div>
 
+## 全面屏顶部导航栏适配
+### 原生顶部导航栏适配策略
+当开发者使用小程序的顶部导航栏时，我们会针对不同刘海屏机型进行适配，开发者只需要在顶部导航栏下方开始布局页面即可。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-warning">
-		<img src="../../../img/design/foundation/layout/6-1.png">
-		<p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text">传统中文的竖向排版，对于长文本场景阅读效率较低，请谨慎使用。</p>
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/design/foundation/layout/8.png">
+	</div>
+</div>
+
+### 自定义顶部导航栏适配
+但如果使用自定义顶部导航栏（透明框架），此时开发者需要自行适配。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/design/foundation/layout/9.png"><p class="m-doc-custom-examples-text">左：全面屏iPhone 安全区 = 屏幕 -（系统状态栏（1） + 框架控制功能区（2）+ 底部指示区（3））
+		右：全面屏安卓手机 安全区 = 屏幕 -（系统状态栏（1） + 框架控制功能区（2））</p>
+	</div>
+</div>
+
+一般来说，全面屏安卓手机的刘海高度=系统状态栏高度，全面屏iPhone刘海高度为44pt。
+通过系统信息接口[getSystemInfoSync](../../../develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
+<div class="m-doc-custom-examples">
+	<div class="m-doc-custom-examples-correct">
+		<img src="../../../img/design/foundation/layout/10-1.png">
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">正确考虑状态栏高度</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
-		<img src="../../../img/design/foundation/layout/6-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">内容横竖排版混用，阅读视线零碎，不建议使用。</p>
+		<img src="../../../img/design/foundation/layout/10-2.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">元素被遮挡，显示不全。</p>
 	</div>
 </div>
 
 
-## 排版
-### 字体
-当用户手机系统未自定义字体时，小程序遵循以下字体展现响应优先级：
+### 注意：全面屏iPhone底部适配
+在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置，其高度为34pt。
+全面屏iPhone的底部横条默认透明，如开发者使用小程序底部标签栏，底部横条会自动适配底部标签栏的背景颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/7.png">
-	</div>
-</div>
-开发者可以在小程序默认字体库的基础上，增加自定义字体库。
-
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/8-1.png">
-		<p class="m-doc-custom-examples-text">开发者使用自定义字体“楷体”; 当用户手机有此自定义字体时，显示自定义“楷体”。</p>
-	</div>
-</div>
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples--correct">
-		<img src="../../../img/design/foundation/layout/8-2.png">
-		<p class="m-doc-custom-examples-text">发者使用自定义字体“楷体”;用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
+		<img src="../../../img/design/foundation/layout/13.png"><p class="m-doc-custom-examples-text">1. 默认底部横条透明；
+		2. 使用底部标签栏，自动适配底部横条。</p>
 	</div>
 </div>
 
-### 字号
-建议按场景使用适合的字号，常用场景字号建议如下：
+当开发者未使用底部标签栏组件，而是自主开发底部栏（如购物栏，评论栏），需注意此区域不可布局可操作元素，避免误操作。
+可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/#适配样式">.view_css</a>适配全面屏iPhone，把底部横条颜色适配为与底部栏一致。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/9.png">
+		<img src="../../../img/design/foundation/layout/14-1.png">
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">底部横条已正确配置，颜色与底部栏一致。</p>
 	</div>
-</div>
-
-### 颜色
-建议按使用场景定义文本颜色，常用场景文本颜色建议如下：
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/layout/10.png">
+	<div class="m-doc-custom-examples-error ">
+		<img src="../../../img/design/foundation/layout/14-2.png">
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">底部横条未正确配置。</p>
 	</div>
 </div>

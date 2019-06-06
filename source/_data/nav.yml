@@ -2,6 +2,7 @@
 -
   link: /introduction/enter_application
   text: 介绍
+  nickname: 小程序介绍
   name: introduction
   nav:
     -
@@ -10,65 +11,248 @@
       name: book
       sidebar:
         -
+            link: /introduction/enter_application
+            text: 注册与认证
+            name: enter_application
             sidebar:
               -
                 link: /introduction/enter_application
-                text: 智能小程序入驻申请
+                text:  注册
                 name: enter_application
+                sidebar:
+                  -
+                    link: /introduction/enter_application/#登录注册
+                    text: 登录注册
+                    name: enter_application_登录注册
+                  -
+                    link: /introduction/enter_application/#入驻申请
+                    text: 入驻申请
+                    name: enter_application_入驻申请                    
               -
                 link: /introduction/register
-                text: 智能小程序账号注册
+                text: 主体认证
                 name: register
+                sidebar:
+                  -
+                    link: /introduction/register/#主体类型选择
+                    text: 主体类型选择
+                    name: enter_register_主体类型选择
+                  -
+                    link: /introduction/register/#主体信息填写
+                    text: 主体信息填写
+                    name: enter_register_主体信息填写   
+              -
+                link: /introduction/authenticity
+                text: 真实性认证
+                name: authenticity
+                sidebar:
+                  -
+                    link: /introduction/authenticity/#对公验证
+                    text: 对公验证
+                    name: authenticity_对公验证
+                  -
+                    link: /introduction/authenticity/#证照验证
+                    text: 证照验证
+                    name: authenticity_证照验证            
+                  -
+                    link: /introduction/authenticity/#法人人脸识别
+                    text: 法人人脸识别
+                    name: authenticity_法人人脸识别
+                  -
+                    link: /introduction/authenticity/#小程序优惠通道
+                    text: 小程序优惠通道
+                    name: authenticity_小程序优惠通道 
+        -    
+            link: /introduction/register_consummate
+            text: 创建小程序
+            name: register_consummate       
+            sidebar:
+                 
               -
                 link: /introduction/register_consummate
-                text: 创建智能小程序
-                name: register_consummate
+                text:  完善基本信息
+                name: register_consummate                     
               -
-                link: /introduction/register_prepare
+                link: /introduction/category
+                text: 服务类目
+                name: category
+        -           
+            link: /introduction/register_prepare
+            text: 开发小程序
+            name: register_prepare
+            sidebar:
+              -
+                link: /introduction/register_prepare 
                 text: 开发前准备
-                name: register_prepare
-           
+                name: register_prepare           
               -
-                link: /introduction/demo
-                text: 体验智能小程序
-                name: demo
+                link: /introduction/tool
+                text: 开发工具
+                name: tool
+        -     
+            link: /introduction/online
+            text: 发布上线
+            name: online      
+            sidebar:                     
+                          
               -
-                link: /introduction/scancode
-                text: 扫码打开智能小程序
-                name: scancode
+                link: /introduction/online 
+                text: 代码包审核
+                name: online 
+              -
+                link: /introduction/publish
+                text: 发布上线
+                name: publish
+    -
+        link: /introduction/base
+        text: 基础流量     
+        sidebar:
+              -
+                sidebar:
+                  -
+                    link: /introduction/base
+                    text: 基础入口
+                    name: base
+                  -
+                    link: /introduction/return
+                    text: 重访入口
+                    name: return                 
     -
       link: /introduction/intro
-      text: 百度流量接入
+      text: 可配置流量
       name: book
       sidebar:
+         
         -
-            # link: /introduction/access
-            # text: 百度信息流  
-            sidebar:        
+            link: /introduction/access
+            text: 信息流流量接入
+            sidebar:
               -
                 link: /introduction/feed
-                text: 信息流流量说明  
-                name: feed  
+                text: 信息流流量说明
+                name: feed
+              -
+                link: /introduction/accessfeed
+                text: 接入信息流流量 
+                name: accessfeed                
+              -
+                link: /introduction/auditing_info
+                text: 信息流素材审核规范
+                name: auditing_info
+            
         -
             link: /introduction/intro
-            text: 搜索流量接入 
+            text: 自然搜索结果流量接入
             sidebar:
               -
                 link: /introduction/intro
-                text: 自然搜索管理
-                name: intro            
+                text: 自然搜索结果流量说明
+                name: intro
               -
                 link: /introduction/rank
-                text: 接入自然搜索
-                name: rank                                              
+                text: 接入自然搜索结果
+                name: rank
+                sidebar:
+                  -
+                    link: /introduction/rank/#开启Web化能力
+                    text: 开启Web化能力
+                    name: rank_开启Web化能力
+                  -
+                    link: /introduction/rank/#设置页面基础信息
+                    text: 设置页面基础信息
+                    name: rank_设置页面基础信息  
+                  -
+                    link: /introduction/rank/#绑定熊掌ID
+                    text: 绑定熊掌ID
+                    name: rank_绑定熊掌ID                    
+                  -
+                    link: /introduction/rank/#关联H5站点
+                    text: 关联H5站点
+                    name: rank_关联H5站点                  
+                  -
+                    link: /introduction/rank/#配置URL映射规则
+                    text: 配置URL映射规则
+                    name: rank_配置URL映射规则
+                  -
+                    link: /introduction/rank/#提交sitemap
+                    text: 提交sitemap
+                    name: rank_提交sitemap  
+                  -
+                    link: /introduction/rank/#搜索流量接入FAQ
+                    text: 搜索流量接入FAQ
+                    name: rank_搜索流量接入FAQ                              
+        -
+            link: /introduction/baijiahao
+            text: 百家号流量接入
+            sidebar:
+              -
+                link: /introduction/baijiahaointroduction
+                text: 百家号流量说明
+                name: baijiahaointroduction            
+              -
+                link: /introduction/baijiahao
+                text: 接入百家号流量
+                name: baijiahao
+              -
+                link: /introduction/auditing_baijiahao
+                text: 百家号素材审核规范
+                name: auditing_baijiahao
+        -
+            link: /introduction/tieba
+            text: 贴吧流量接入
+            sidebar:            
+              -
+                link: /introduction/tieba
+                text: 接入贴吧流量
+                name: tieba
+              -
+                link: /introduction/auditing_tieba
+                text: 贴吧素材审核规范
+                name: auditing_tieba               
+    -
+      link: /introduction/adopen
+      text: 流量主开通
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/adopen
+                text: 流量主开通指引
+                name: adopen             
+    -
+      link: /introduction/pay
+      text: 百度收银台支付开通
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/pay
+                text: 百度收银台支付开通指引
+                name: pay                               
+    -
+      link: /introduction/scancode
+      text: 扫码打开智能小程序
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/scancode
+                text: 扫码打开智能小程序
+                name: scancode 
 # 2
 -
   link: /design/overview/introduction
   text: 设计
   name: design
+  license:
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
-      link: /design/principle/easytouse 
+      link: /design/principle/easytouse
       text: 设计原则
       name: principle
       sidebar:
@@ -77,7 +261,7 @@
             -
               link: /design/principle/easytouse
               text: 易用性
-              name: easytouse 
+              name: easytouse
             -
               link: /design/principle/hierarchical
               text: 层次感
@@ -95,16 +279,24 @@
           sidebar:
             -
               link: /design/foundation/layout
-              text: 布局排版
+              text: 页面布局
               name: layout
+            -
+              link: /design/foundation/typography
+              text: 阅读排版
+              name: typography
             -
               link: /design/foundation/pic
               text: 图片图标
               name: pic
             -
+              link: /design/foundation/detailPages
+              text: 内容详情页
+              name: detailPages              
+            -
               link: /design/foundation/logo
               text: 头像输出
-              name: logo            
+              name: logo
             -
               link: /design/foundation/writing
               text: 措辞
@@ -149,9 +341,17 @@
               text: 提示框
               name: dialog
             -
+              link: /design/component/actionsheet
+              text: 操作菜单
+              name: actionsheet              
+            -
+              link: /design/component/guide_add
+              text: 添加到我的小程序引导
+              name: guide_add
+            -
               link: /design/component/empty_state
               text: 空态
-              name: empty_state      
+              name: empty_state
     -
       link: /design/story/arzoo
       text: 设计故事
@@ -162,10 +362,14 @@
             -
               link: /design/story/arzoo
               text: 长隆AR动物园
-              name: arzoo                     
+              name: arzoo
+            -
+              link: /design/story/light_up
+              text: 减减鸭
+              name: light_up
     -
       link: /design/resource/uikit
-      text: 资源下载
+      text: 设计资源
       name: resource
       sidebar:
         -
@@ -175,121 +379,123 @@
               text: 视觉组件库
               name: uikit
             -
-              link: /design/resource/lottie
-              text: Lottie动效库
-              name: lottie                 
-            -
               link: /design/resource/checklist
               text: 设计走查表
-              name: checklist    
-                      
-#3          
+              name: checklist
+            -
+              link: /design/resource/lottie
+              text: Lottie动效开源库
+              name: lottie
+
+#3
 -
-  link: /develop/tutorial/codedir
+  link: /develop/fuctionlist/list
   text: 开发
   name: develop
+  license:
+    name: 创作共用-署名-禁止演绎
+    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
+
     -
       link: /develop/tutorial/codedir
-      text: 简易教程
+      text: 快速入门
       name: tutorial
-      sidebar:
+      sidebar:     
         -
-            link: /develop/tutorial/codedir
-            text: 第一个智能小程序
-            name: index
-            sidebar:
+            sidebar: 
               -
-                link: /develop/tutorial/codedir
-                text: 智能小程序介绍
-                name: codedir
+                link: /develop/tutorial/demo
+                text: 体验智能小程序
+                name: demo              
               -
-                link: /develop/tutorial/index
-                text: 申请帐号
-                name: index
+                link: /develop/tutorial/install
+                text: 安装开发者工具
+                name: install    
+              # -
+              #   link: /develop/tutorial/startdevelop 
+              #   text: 开发智能小程序
+              #   name: startdevelop                  
               -
-                link: /develop/tutorial/index_first
-                text: 你的第一个智能小程序
-                name: index_first
-
-
-        -
-            link: /develop/tutorial/process
-            text: 全局配置
-            name: process
-            sidebar:
+                link: /develop/tutorial/process
+                text: 全局配置
+                name: process
+                sidebar:
+                    -
+                      link: /develop/tutorial/process/#配置-app-json-文件
+                      text: 配置 app.json 文件
+                      name: process_配置-app-json-文件
+                    -
+                      link: /develop/tutorial/process/#配置-app-js-文件
+                      text: 配置 app.js 文件
+                      name: process_配置-app-js-文件
               -
-                link: /develop/tutorial/process_page
-                text: 配置界面、路径
-                name: process_page
+                link: /develop/tutorial/dev
+                text: 页面开发
+                name: dev
+                sidebar:
+                    -
+                      link: /develop/tutorial/dev/#开发-swan-文件
+                      text: 开发 .swan 文件
+                      name: dev_开发-swan-文件
+                    -
+                      link: /develop/tutorial/dev/#开发-css-文件
+                      text: 开发 .css 文件
+                      name: dev_开发-css-文件
+                    -
+                      link: /develop/tutorial/dev/#开发-js-文件
+                      text: 开发 .js 文件
+                      name: dev_开发-js-文件                     
+                    -
+                      link: /develop/tutorial/dev/#开发-json-文件
+                      text: 开发 .json 文件
+                      name: dev_开发-json-文件
+                    -
+                      link: /develop/tutorial/dev/#页面路由
+                      text: 页面路由
+                      name: dev_页面路由
+                    -
+                      link: /develop/tutorial/dev/#Page
+                      text: Page
+                      name: dev_Page
+                    -
+                      link: /develop/tutorial/dev/#组件
+                      text: 组件
+                      name: dev_组件
+                    -
+                      link: /develop/tutorial/dev/#API
+                      text: API
+                      name: dev_API                                                            
               -
-                link: /develop/tutorial/process_data
-                text: 配置全局数据
-                name: process_data
+                link: /develop/tutorial/publish
+                text: 调试预览发布
+                name: pulish
+                sidebar: 
+                    -
+                      link: /develop/tutorial/publish/#调试
+                      text: 调试
+                      name: publish_调试                  
+                    -
+                      link: /develop/tutorial/publish/#预览
+                      text: 预览 
+                      name: publish_预览                    
+                    -
+                      link: /develop/tutorial/publish/#发布
+                      text: 发布
+                      name: publish_发布  
               -
-                link: /develop/tutorial/process_life
-                text: SWAN 生命周期
-                name: process_life
-        -
-          link: /develop/tutorial/dev
-          text: 页面开发
-          name: dev
-          sidebar:
-
-              -
-                link: /develop/tutorial/dev_start
-                text: 智能小程序的启动
-                name: dev_start
-              -
-                link: /develop/tutorial/dev_swan
-                text: SWAN 视图
-                name: dev_swan
-              -
-                link: /develop/tutorial/dev_css
-                text: CSS 与 JS
-                name: dev_css
-              -
-                link: /develop/tutorial/page_conf
-                text: 页面配置
-                name: page_conf
-              -
-                link: /develop/tutorial/dev_route
-                text: 页面路由
-                name: dev_route
-              -
-                link: /develop/tutorial/dev_page
-                text: Page
-                name: dev_page
-              -
-                link: /develop/tutorial/dev_con
-                text: 组件
-                name: dev_con
-              -
-                link: /develop/tutorial/dev_api
-                text: API
-                name: dev_api
-        -
-          link: /develop/tutorial/version
-          text: SWAN 版本信息
-          name: version
-          sidebar:
-            -
-              link: /develop/tutorial/version
-              text: 版本分布
-              name: version
-            -
-              link: /develop/tutorial/shine
-              text: 与客户端版本映射关系
-              name: shine
-            -
-              link: /develop/tutorial/compatibility
-              text: 兼容性说明
-              name: compatibility             
-            -
-              link: /develop/tutorial/swanchangelog
-              text: 历史更新日志
-              name: swanchangelog
-            
+                link: /develop/tutorial/move
+                text: 开发解决方案
+                name: move
+                sidebar: 
+                    -
+                      link: /develop/tutorial/move/#搬家工具
+                      text: 搬家工具
+                      name: move_搬家工具
+                    -   
+                      link: /develop/tutorial/move/#框架开发
+                      text: 框架开发
+                      name: move_框架开发                       
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -322,9 +528,9 @@
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page/#Page
-                    text: Page
-                    name: app_service_page_Page
+                    link: /develop/framework/app_service_page/#参数说明
+                    text: 参数说明
+                    name: app_service_page_参数说明
                   -
                     link: /develop/framework/app_service_page/#初始化数据
                     text: 初始化数据
@@ -334,17 +540,17 @@
                     text: 生命周期函数
                     name: app_service_page_生命周期函数
                   -
-                    link: /develop/framework/app_service_page/#页面相关事件处理函数
-                    text: 页面相关事件处理函数
-                    name: app_service_page_页面相关事件处理函数
+                    link: /develop/framework/app_service_page/#通用事件
+                    text: 通用事件
+                    name: app_service_page_通用事件
                   -
-                    link: /develop/framework/app_service_page/#事件处理函数
-                    text: 事件处理函数
-                    name: app_service_page_事件处理函数
+                    link: /develop/framework/app_service_page/#用户绑定事件
+                    text: 用户绑定事件
+                    name: app_service_page_用户绑定事件
                   -
-                    link: /develop/framework/app_service_page/#Page-prototype-setData
-                    text: Page.prototype.setData
-                    name: app_service_page_Page-prototype-setData                                                                               
+                    link: /develop/framework/app_service_page/#setData-机制
+                    text: setData 机制
+                    name: app_service_page_setData-机制
               -
                 link: /develop/framework/app_service_getcurrentpages
                 text: 页面路由
@@ -371,6 +577,27 @@
                     text: 模块化
                     name: app_service_getcurrentpages_模块化
 
+              -
+                link: /develop/framework/app_service_aop
+                text: AOP机制
+                name: app_service_aop
+                sidebar:
+                  -
+                    link: /develop/framework/app_service_aop/#AOP
+                    text: AOP说明
+                    name: app_service_aop_App.aop
+                  -
+                    link: /develop/framework/app_service_aop/#App-after
+                    text: App.after
+                    name: app_service_aop_App.after
+                  -
+                    link: /develop/framework/app_service_aop/#Page-after
+                    text: Page.after
+                    name: app_service_aop_Page.after
+                  -
+                    link: /develop/framework/app_service_aop/#swan-after
+                    text: swan.after
+                    name: app_service_aop_swan.after
 
         -
             link: /develop/framework/view
@@ -445,9 +672,13 @@
                 link: /develop/framework/custom-component_extend
                 text: 自定义组件扩展
                 name: custom-component_extend
+              -
+                link: /develop/framework/custom-component_trdparty
+                text: 第三方自定义组件
+                name: custom-component_trdparty
         -
           link: /develop/framework/subpackages
-          text: 基础性能
+          text: 性能
           name: subpackages
           sidebar:
             -
@@ -455,18 +686,7 @@
               text: 分包加载
               name: subpackages
 
-            -
-              link: /develop/framework/client-lib
-              text: 基础库
-              name: client-lib
-            -
-              link: /develop/framework/operating-environment
-              text: 运行环境
-              name: operating-environment
-            -
-              link: /develop/framework/operating-mechanism
-              text: 运行机制
-              name: operating-mechanism
+
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
@@ -475,19 +695,28 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
+            -
+              link: /develop/framework/whitescreen
+              text: 白屏优化建议
+              name: whitescreen             
         -
-          link: /develop/framework/storage
-          text: 基础能力
-          name: storage
+          link: /develop/framework/subpackages
+          text: 运行时
+          name: subpackages
           sidebar:
             -
-              link: /develop/framework/storage
-              text: 存储
-              name: storage
+              link: /develop/framework/operating-environment
+              text: 运行环境
+              name: operating-environment
             -
-              link: /develop/framework/canvas
-              text: 画布
-              name: canvas
+              link: /develop/framework/operating-mechanism
+              text: 运行机制
+              name: operating-mechanism
+            # -
+            #   link: /develop/framework/process_life
+            #   text: 生命周期介绍
+            #   name: process_life                            
+
     -
       link: /develop/component/view
       text: 组件
@@ -496,9 +725,13 @@
         -
             sidebar:
               -
+                link: /develop/component/componetlist
+                text: 组件列表
+                name: componetlist
+              -
                 link: /develop/component/native
                 text: 原生组件说明
-                name: native              
+                name: native
               -
                 link: /develop/component/view
                 text: 视图容器
@@ -517,9 +750,17 @@
                     text: swiper
                     name: view_swiper
                   -
+                    link: /develop/component/view/#swiper-item
+                    text: swiper-item
+                    name: view_swiper-item
+                  -
                     link: /develop/component/view/#movable-area
                     text: movable-area
-                    name: view_movable-area
+                    name: view_movable-area                 
+                  -
+                    link: /develop/component/view/#movable-view
+                    text: movable-view
+                    name: view_movable-view
                   -
                     link: /develop/component/view/#cover-view
                     text: cover-view
@@ -527,7 +768,7 @@
                   -
                     link: /develop/component/view/#cover-image
                     text: cover-image
-                    name: view_cover-image                 
+                    name: view_cover-image
         -
             sidebar:
               -
@@ -569,7 +810,11 @@
                   -
                     link: /develop/component/formlist/#checkbox
                     text: checkbox
-                    name: formlist_checkbox    
+                    name: formlist_checkbox
+                  -
+                    link: /develop/component/formlist/#checkbox-group
+                    text: checkbox-group
+                    name: formlist_checkbox-group
                   -
                     link: /develop/component/formlist/#form
                     text: form
@@ -586,12 +831,25 @@
                     link: /develop/component/formlist/#picker
                     text: picker
                     name: formlist_picker
-                  
+                  -
+                    link: /develop/component/formlist/#picker-view
+                    text: picker-view
+                    name: formlist_picker-view
+                  -
+                    link: /develop/component/formlist/#picker-view-column
+                    text: picker-view-column
+                    name: formlist_picker-view-column                         
+
                   -
                     link: /develop/component/formlist/#radio
                     text: radio
                     name: formlist_radio
-                    
+                   
+                  -
+                    link: /develop/component/formlist/#radio-group
+                    text: radio-group
+                    name: formlist_radio-group
+
                   -
                     link: /develop/component/formlist/#slider
                     text: slider
@@ -658,25 +916,9 @@
                     link: /develop/component/map/#map
                     text: map
                     name: map
-                  # -
-                  #   link: /develop/component/map/#markers
-                  #   text: markers
-                  #   name: map_markers
-                                                 
-                  # -
-                  #   link: /develop/component/map/#polyline
-                  #   text: polyline
-                  #   name: map_polyline
-                  # -
-                  #   link: /develop/component/map/#circles
-                  #   text: circles
-                  #   name: map_circles
-                  # -
-                  #   link: /develop/component/map/#controls
-                  #   text: controls
-                  #   name: map_controls
                  
-        -   
+
+        -
             sidebar:
                 -
                   link: /develop/component/canvas
@@ -686,7 +928,7 @@
                     -
                       link: /develop/component/canvas/#canvas
                       text: canvas
-                      name: canvas_canvas               
+                      name: canvas_canvas
         -
             sidebar:
               -
@@ -702,11 +944,30 @@
                     link: /develop/component/open/#web-view
                     text: web-view
                     name: open_web-view
+        -
+            sidebar:
+              -
+                link: /develop/component/ad
+                text: 广告
+                name: ad
+                sidebar:
+                  -
+                    link: /develop/component/ad/#ad
+                    text: ad
+                    name: ad_ad
+                                      
     -
-      link: /develop/api/net_request
+      link: /develop/api/
       text: API
       name: api
       sidebar:
+        -
+            sidebar:
+            -
+              link: /develop/api/apilist
+              text: API 列表
+              name: apilist        
+     
         -
             link: /develop/api/net
             text: 网络
@@ -715,29 +976,29 @@
             -
               link: /develop/api/net_rule
               text: 使用注意事项
-              name: net_rule             
+              name: net_rule
             -
               link: /develop/api/net_request
               text: 请求
               name: net_request
               sidebar:
                 -
-                  link: /develop/api/net_request/#request
-                  text: request
-                  name: net_request_request
+                  link: /develop/api/net_request/#swan-request
+                  text: swan.request
+                  name: net_request_swan-request
             -
               link: /develop/api/net_uploadfile
               text: 上传、下载
               name: net_uploadfile
               sidebar:
                 -
-                  link: /develop/api/net_uploadfile/#uploadFile
-                  text: uploadFile
-                  name: net_uploadfile_uploadFile
+                  link: /develop/api/net_uploadfile/#swan-uploadFile
+                  text: swan.uploadFile
+                  name: net_uploadfile_swan-uploadFile
                 -
-                  link: /develop/api/net_uploadfile/#downloadFile
-                  text: downloadFile
-                  name: net_uploadfile_downloadFile
+                  link: /develop/api/net_uploadfile/#swan-downloadFile
+                  text: swan.downloadFile
+                  name: net_uploadfile_swan-downloadFile
 
             -
               link: /develop/api/net_websocket
@@ -745,37 +1006,63 @@
               name: net_websocket
               sidebar:
                 -
-                  link: /develop/api/net_websocket/#connectSocket
-                  text: connectSocket
-                  name: net_websocket_connectSocket
+                  link: /develop/api/net_websocket/#swan-connectSocket
+                  text: swan.connectSocket
+                  name: net_websocket_swan-connectSocket
                 -
-                  link: /develop/api/net_websocket/#onSocketOpen
-                  text: onSocketOpen
-                  name: net_websocket_onSocketOpen
+                  link: /develop/api/net_websocket/#swan-onSocketOpen
+                  text: swan.onSocketOpen
+                  name: net_websocket_swan-onSocketOpen
                 -
-                  link: /develop/api/net_websocket/#onSocketError
-                  text: onSocketError
-                  name: net_websocket_onSocketError
+                  link: /develop/api/net_websocket/#swan-onSocketError
+                  text: swan.onSocketError
+                  name: net_websocket_swan-onSocketError
                 -
-                  link: /develop/api/net_websocket/#sendSocketMessage
-                  text: sendSocketMessage
-                  name: net_websocket_sendSocketMessage
+                  link: /develop/api/net_websocket/#swan-sendSocketMessage
+                  text: swan.sendSocketMessage
+                  name: net_websocket_swan-sendSocketMessage
                 -
-                  link: /develop/api/net_websocket/#onSocketMessage
-                  text: onSocketMessage
-                  name: net_websocket_onSocketMessage
+                  link: /develop/api/net_websocket/#swan-onSocketMessage
+                  text: swan.onSocketMessage
+                  name: net_websocket_swan-onSocketMessage
                 -
-                  link: /develop/api/net_websocket/#closeSocket
-                  text: closeSocket
-                  name: net_websocket_closeSocket
+                  link: /develop/api/net_websocket/#swan-closeSocket
+                  text: swan.closeSocket
+                  name: net_websocket_swan-closeSocket
                 -
-                  link: /develop/api/net_websocket/#onSocketClose
-                  text: onSocketClose
-                  name: net_websocket_onSocketClose
+                  link: /develop/api/net_websocket/#swan-onSocketClose
+                  text: swan.onSocketClose
+                  name: net_websocket_swan-onSocketClose
                 -
                   link: /develop/api/net_websocket/#SocketTask
                   text: SocketTask
                   name: net_websocket_SocketTask
+                  sidebar:
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-send
+                      text: SocketTask.send
+                      name: net_websocket_SocketTask-send
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-close
+                      text: SocketTask.close
+                      name: net_websocket_SocketTask-close 
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onOpen
+                      text: SocketTask.onOpen
+                      name: net_websocket_SocketTask-onOpen        
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onClose
+                      text: SocketTask.onClose
+                      name: net_websocket_SocketTask-onClose                       
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onError
+                      text: SocketTask.onError
+                      name: net_websocket_SocketTask-onError
+                  -
+                      link: /develop/api/net_websocket/#SocketTask-onMessage
+                      text: SocketTask.onMessage
+                      name: net_websocket_SocketTask-onMessage                                         
+
         -
             link: /develop/api/ai
             text: AI
@@ -792,21 +1079,21 @@
                 name: ai_ocr
                 sidebar:
                   -
-                    link: /develop/api/ai_ocr/#ocrIdCard
-                    text: ocrIdCard
-                    name: ai_ocr_ocrIdCard
+                    link: /develop/api/ai_ocr/#swan-ai-ocrIdCard
+                    text: swan.ai.ocrIdCard
+                    name: ai_ocr_swan-ai-ocrIdCard
                   -
-                    link: /develop/api/ai_ocr/#ocrBankCard
-                    text: ocrBankCard
-                    name: ai_ocr_ocrBankCard
+                    link: /develop/api/ai_ocr/#swan-ai-ocrBankCard
+                    text: swan.ai.ocrBankCard
+                    name: ai_ocr_swan-ai-ocrBankCard
                   -
-                    link: /develop/api/ai_ocr/#ocrDrivingLicense
-                    text: ocrDrivingLicense
-                    name: ai_ocr_ocrDrivingLicense
+                    link: /develop/api/ai_ocr/#swan-ai-ocrDrivingLicense
+                    text: swan.ai.ocrDrivingLicense
+                    name: ai_ocr_swan-ai-ocrDrivingLicense
                   -
-                    link: /develop/api/ai_ocr/#ocrVehicleLicense
-                    text: ocrVehicleLicense
-                    name: ai_ocr_ocrVehicleLicense
+                    link: /develop/api/ai_ocr/#swan-ai-ocrVehicleLicense
+                    text: swan.ai.ocrVehicleLicense
+                    name: ai_ocr_swan-ai-ocrVehicleLicense
 
 
               -
@@ -815,69 +1102,116 @@
                 name: ai_text
                 sidebar:
                   -
-                    link: /develop/api/ai_text/#textReview
-                    text: textReview
-                    name: ai_text_textReview
+                    link: /develop/api/ai_text/#swan-ai-textReview
+                    text: swan.ai.textReview
+                    name: ai_text_swan-ai-textReview
               -
                 link: /develop/api/ai_audio
                 text: 语音合成
                 name: ai_audio
                 sidebar:
                   -
-                    link: /develop/api/ai_audio/#textToAudio
-                    text: textToAudio
-                    name: ai_audio_textToAudio
+                    link: /develop/api/ai_audio/#swan-ai-textToAudio
+                    text: swan.ai.textToAudio
+                    name: ai_audio_swan-ai-textToAudio
               -
                 link: /develop/api/ai_audit
                 text: 图像审核
                 name: ai_audit
                 sidebar:
                   -
-                    link: /develop/api/ai_audit/#imageAudit
-                    text: imageAudit
-                    name: ai_audit_imageAudit
+                    link: /develop/api/ai_audit/#swan-ai-imageAudit
+                    text: swan.ai.imageAudit
+                    name: ai_audit_swan-ai-imageAudit
               -
                 link: /develop/api/ai_classify
                 text: 图像识别
                 name: ai_classify
                 sidebar:
                   -
-                    link: /develop/api/ai_classify/#advancedGeneralIdentify
-                    text: advancedGeneralIdentify
-                    name: ai_classify_advancedGeneralIdentify
+                    link: /develop/api/ai_classify/#swan-ai-advancedGeneralIdentify
+                    text: swan.ai.advancedGeneralIdentify
+                    name: ai_classify_swan-ai-advancedGeneralIdentify
                   -
-                    link: /develop/api/ai_classify/#objectDetectIdentify
-                    text: objectDetectIdentify
-                    name: ai_classify_objectDetectIdentify
+                    link: /develop/api/ai_classify/#swan-ai-objectDetectIdentify
+                    text: swan.ai.objectDetectIdentify
+                    name: ai_classify_swan-ai-objectDetectIdentify
                   -
-                    link: /develop/api/ai_classify/#carClassify
-                    text: carClassify
-                    name: ai_classify_carClassify
+                    link: /develop/api/ai_classify/#swan-ai-carClassify
+                    text: swan.ai.carClassify
+                    name: ai_classify_swan-ai-carClassify
                   -
-                    link: /develop/api/ai_classify/#dishClassify
-                    text: dishClassify
-                    name: ai_classify_dishClassify
+                    link: /develop/api/ai_classify/#swan-ai-dishClassify
+                    text: swan.ai.dishClassify
+                    name: ai_classify_swan-ai-dishClassify
                   -
-                    link: /develop/api/ai_classify/#logoClassify
-                    text: logoClassify
-                    name: ai_classify_logoClassify
+                    link: /develop/api/ai_classify/#swan-ai-logoClassify
+                    text: swan.ai.logoClassify
+                    name: ai_classify_swan-ai-logoClassify
                   -
-                    link: /develop/api/ai_classify/#animalClassify
-                    text: animalClassify
-                    name: ai_classify_animalClassify
+                    link: /develop/api/ai_classify/#swan-ai-animalClassify
+                    text: swan.ai.animalClassify
+                    name: ai_classify_swan-ai-animalClassify
                   -
-                    link: /develop/api/ai_classify/#plantClassify
-                    text: plantClassify
-                    name: ai_classify_plantClassify
+                    link: /develop/api/ai_classify/#swan-ai-plantClassify
+                    text: swan.ai.plantClassify
+                    name: ai_classify_swan-ai-plantClassify
+
               -
                 link: /develop/api/ai_voice
                 text: 语音识别
                 name: ai_voice
                 sidebar:
                   -
-                    link: /develop/api/ai_voice/#getVoiceRecognizer
-                    text: getVoiceRecognizer
-                    name: ai_voice_getVoiceRecognizer
+                    link: /develop/api/ai_voice/#swan-ai-getVoiceRecognizer
+                    text: swan.ai.getVoiceRecognizer
+                    name: ai_voice_swan-ai-getVoiceRecognizer
+              -
+                link: /develop/api/ai_face
+                text: 人脸识别
+                name: ai_face
+                sidebar:
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceDetect
+                    text: swan.ai.faceDetect
+                    name: ai_face_swan-ai-faceDetect 
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceMatch
+                    text: swan.ai.faceMatch
+                    name: ai_face_swan-ai-faceMatch                   
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceSearch
+                    text: swan.ai.faceSearch
+                    name: ai_face_swan-ai-faceSearch
+                  -
+                    link: /develop/api/ai_face/#swan-ai-facePersonVerify
+                    text: swan.ai.facePersonVerify
+                    name: ai_face_swan-ai-facePersonVerify                   
+                  -
+                    link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
+                    text: swan.ai.facePersonIdmatch
+                    name: ai_face_swan-ai-facePersonIdmatch                 
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceVerify
+                    text: swan.ai.faceVerify
+                    name: ai_face_swan-ai-faceVerify
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceLivenessSessioncode
+                    text: swan.ai.faceLivenessSessioncode
+                    name: ai_face_swan-ai-faceLivenessSessioncode
+                  -
+                    link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
+                    text: swan.ai.faceLivenessVerify
+                    name: ai_face_swan-ai-faceLivenessVerify
+              -
+                link: /develop/api/ai_word
+                text: 词法分析
+                name: ai_word
+                sidebar:
+                  -
+                    link: /develop/api/ai_word/#swan-ai-nlpLexerCustom
+                    text: swan.ai.nlpLexerCustom
+                    name: ai_word_swan-ai-nlpLexerCustom
         -
             link: /develop/api/media
             text: 媒体
@@ -889,97 +1223,309 @@
               name: media_image
               sidebar:
                 -
-                  link: /develop/api/media_image/#chooseImage
-                  text: chooseImage
-                  name: media_image_chooseImage
+                  link: /develop/api/media_image/#swan-chooseImage
+                  text: swan.chooseImage
+                  name: media_image_swan-chooseImage
                 -
-                  link: /develop/api/media_image/#previewImage
-                  text: previewImage
-                  name: media_image_previewImage
+                  link: /develop/api/media_image/#swan-previewImage
+                  text: swan.previewImage
+                  name: media_image_swan-previewImage
                 -
-                  link: /develop/api/media_image/#getImageInfo
-                  text: getImageInfo
-                  name: media_image_getImageInfo
+                  link: /develop/api/media_image/#swan-getImageInfo
+                  text: swan.getImageInfo
+                  name: media_image_swan-getImageInfo
                 -
-                  link: /develop/api/media_image/#saveImageToPhotosAlbum
-                  text: saveImageToPhotosAlbum
-                  name: media_image_saveImageToPhotosAlbum
+                  link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
+                  text: swan.saveImageToPhotosAlbum
+                  name: media_image_swan-saveImageToPhotosAlbum
+
             -
               link: /develop/api/media_recorder
               text: 录音管理
               name: media_recorder
               sidebar:
                 -
-                  link: /develop/api/media_recorder/#getRecorderManager
-                  text: getRecorderManager
-                  name: media_recorder_getRecorderManager
+                  link: /develop/api/media_recorder/#swan-getRecorderManager
+                  text: swan.getRecorderManager
+                  name: media_recorder_swan-getRecorderManager
+                -
+                  link: /develop/api/media_recorder/#recorderManager
+                  text: recorderManager
+                  name: media_recorder_recorderManager  
+                  sidebar:
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-start
+                      text: recorderManager.start
+                      name: media_recorder_recorderManager-start 
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-pause
+                      text: recorderManager.pause
+                      name: media_recorder_recorderManager-pause                  
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-resume
+                      text: recorderManager.resume
+                      name: media_recorder_recorderManager-resume
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-stop
+                      text: recorderManager.stop
+                      name: media_recorder_recorderManager-stop   
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onStart
+                      text: recorderManager.onStart
+                      name: media_recorder_recorderManager-onStart                       
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onPause
+                      text: recorderManager.onPause
+                      name: media_recorder_recorderManager-onPause                       
+                    -
+                      link: /develop/api/media_recorder/#recorderManager-onStop
+                      text: recorderManager.onStop
+                      name: media_recorder_recorderManager-onStop 
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
               name: media_backgroundaudiomanager
               sidebar:
                 -
-                  link: /develop/api/media_backgroundaudiomanager/#getBackgroundAudioManager
-                  text: getBackgroundAudioManager
-                  name: media_backgroundaudiomanager_getBackgroundAudioManager
+                  link: /develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager
+                  text: swan.getBackgroundAudioManager
+                  name: media_backgroundaudiomanager_swan-getBackgroundAudioManager
+                -
+                  link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
+                  text: backgroundAudioManager
+                  name: media_backgroundaudiomanager_backgroundAudioManager
+                  sidebar:
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-play
+                      text: backgroundAudioManager.play
+                      name: media_backgroundaudiomanager_backgroundAudioManager-play
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-pause
+                      text: backgroundAudioManager.pause
+                      name: media_backgroundaudiomanager_backgroundAudioManager-pause
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-stop
+                      text: backgroundAudioManager.stop
+                      name: media_backgroundaudiomanager_backgroundAudioManager-stop   
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-seek
+                      text: backgroundAudioManager.seek
+                      name: media_backgroundaudiomanager_backgroundAudioManager-seek                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onCanplay
+                      text: backgroundAudioManager.onCanplay
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onCanplay                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPlay
+                      text: backgroundAudioManager.onPlay
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPlay
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPause
+                      text: backgroundAudioManager.onPause
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPause
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onStop
+                      text: backgroundAudioManager.onStop
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onStop
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onEnded
+                      text: backgroundAudioManager.onEnded
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onEnded
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onTimeUpdate
+                      text: backgroundAudioManager.onTimeUpdate
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onTimeUpdate
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onError
+                      text: backgroundAudioManager.onError
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onError
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onWaiting
+                      text: backgroundAudioManager.onWaiting
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onWaiting                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeked
+                      text: backgroundAudioManager.onSeeked
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeked                      
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
+                      text: backgroundAudioManager.onSeeking
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
+
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
               name: media_createinneraudiocontext
               sidebar:
                 -
-                  link: /develop/api/media_createinneraudiocontext/#createInnerAudioContext
-                  text: createInnerAudioContext
-                  name: media_createinneraudiocontext_createInnerAudioContext
+                  link: /develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext
+                  text: swan.createInnerAudioContext
+                  name: media_createinneraudiocontext_swan-createInnerAudioContext
+                  sidebar:
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#innerAudioContext
+                      text: innerAudioContext
+                      name: media_createinneraudiocontext_innerAudioContext
+                -
+                  link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
+                  text: swan.setInnerAudioOption
+                  name: media_createinneraudiocontext_swan-setInnerAudioOption
             -
               link: /develop/api/media_video
               text: 视频
               name: media_video
               sidebar:
                 -
-                  link: /develop/api/media_video/#chooseVideo
-                  text: chooseVideo
-                  name: media_video_chooseVideo
+                  link: /develop/api/media_video/#swan-chooseVideo
+                  text: swan.chooseVideo
+                  name: media_video_swan-chooseVideo
                 -
-                  link: /develop/api/media_video/#saveVideoToPhotosAlbum
-                  text: saveVideoToPhotosAlbum
-                  name: media_video_saveVideoToPhotosAlbum
+                  link: /develop/api/media_video/#swan-saveVideoToPhotosAlbum
+                  text: swan.saveVideoToPhotosAlbum
+                  name: media_video_swan-saveVideoToPhotosAlbum
             -
               link: /develop/api/media_videocontext
               text: 视频组件控制
               name: media_videocontext
               sidebar:
                 -
-                  link: /develop/api/media_videocontext/#createVideoContext
-                  text: createVideoContext
-                  name: media_videocontext_createVideoContext
+                  link: /develop/api/media_videocontext/#swan-createVideoContext
+                  text: swan.createVideoContext
+                  name: media_videocontext_swan-createVideoContext
+                -
+                  link: /develop/api/media_videocontext/#videoContext
+                  text: videoContext
+                  name: media_videocontext_videoContext   
+                  sidebar:
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-play
+                      text: videoContext.play
+                      name: media_videocontext_videoContext-play 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-pause
+                      text: videoContext.pause
+                      name: media_videocontext_videoContext-pause
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-seek
+                      text: videoContext.seek
+                      name: media_videocontext_videoContext-seek                                           
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-sendDanmu
+                      text: videoContext.sendDanmu
+                      name: media_videocontext_videoContext-sendDanmu                      
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-requestFullScreen
+                      text: videoContext.requestFullScreen
+                      name: media_videocontext_videoContext-requestFullScreen 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-exitFullScreen
+                      text: videoContext.exitFullScreen
+                      name: media_videocontext_videoContext-exitFullScreen 
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-showStatusBar
+                      text: videoContext.showStatusBar
+                      name: media_videocontext_videoContext-showStatusBar  
+                    -
+                      link: /develop/api/media_videocontext/#videoContext-hideStatusBar
+                      text: videoContext.hideStatusBar
+                      name: media_videocontext_videoContext-hideStatusBar                                                                  
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
               name: media_liveplayercontext
               sidebar:
                 -
-                  link: /develop/api/media_liveplayercontext/#createLivePlayerContext
-                  text: createLivePlayerContext
-                  name: media_liveplayercontext_createLivePlayerContext
+                  link: /develop/api/media_liveplayercontext/#swan-createLivePlayerContext
+                  text: swan.createLivePlayerContext
+                  name: media_liveplayercontext_swan-createLivePlayerContext
+                -
+                  link:  /develop/api/media_liveplayercontext/#livePlayerContext
+                  text: livePlayerContext
+                  name: media_liveplayercontext_livePlayerContext  
+                  sidebar:
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-play
+                      text: livePlayerContext.play
+                      name: media_liveplayercontext_livePlayerContext-play  
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-stop
+                      text: livePlayerContext.stop
+                      name: media_liveplayercontext_livePlayerContext-stop 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-mute
+                      text: livePlayerContext.mute
+                      name: media_liveplayercontext_livePlayerContext-mute 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-pause
+                      text: livePlayerContext.pause
+                      name: media_liveplayercontext_livePlayerContext-pause 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-requestFullScreen
+                      text: livePlayerContext.requestFullScreen
+                      name: media_liveplayercontext_livePlayerContext-requestFullScreen 
+                    -
+                      link: /develop/api/media_liveplayercontext/#livePlayerContext-exitFullScreen
+                      text: livePlayerContext.exitFullScreen
+                      name: media_liveplayercontext_livePlayerContext-exitFullScreen                       
+                      
             -
               link: /develop/api/media_cameracontext
               text: 相机组件控制
               name: media_cameracontext
               sidebar:
                 -
-                  link: /develop/api/media_cameracontext/#createCameraContext
-                  text: createCameraContext
-                  name: media_cameracontext_createCameraContext
+                  link: /develop/api/media_cameracontext/#swan-createCameraContext
+                  text: swan.createCameraContext
+                  name: media_cameracontext_swan-createCameraContext
+                -
+                  link: /develop/api/media_cameracontext/#cameraContext
+                  text: cameraContext
+                  name: media_cameracontext_cameraContext  
+                  sidebar:
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext-takePhoto
+                      text: cameraContext.takePhoto
+                      name: media_cameracontext_cameraContext-takePhoto 
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext-startRecord
+                      text: cameraContext.startRecord
+                      name: media_cameracontext_cameraContext-startRecord                     
+                    -
+                      link: /develop/api/media_cameracontext/#cameraContext-stopRecord
+                      text: cameraContext.stopRecord
+                      name: media_cameracontext_cameraContext-stopRecord
+
             -
               link: /develop/api/media_arcameracontext
               text: AR 相机组件控制
               name: media_arcameracontext
               sidebar:
                 -
-                  link: /develop/api/media_arcameracontext/#createARCameraContext
-                  text: createARCameraContext
-                  name: media_arcameracontext_createARCameraContext
+                  link: /develop/api/media_arcameracontext/#swan-createARCameraContext
+                  text: swan.createARCameraContext
+                  name: media_arcameracontext_swan-createARCameraContext
+                -
+                  link: /develop/api/media_arcameracontext/#ARCameraContext
+                  text: ARCameraContext
+                  name: media_arcameracontext_ARCameraContext   
+                  sidebar:
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-takePhoto
+                      text: ARCameraContext.takePhoto
+                      name: ARCameraContext-takePhoto
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-reset
+                      text: ARCameraContext.reset
+                      name: ARCameraContext-reset
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-startRecord
+                      text: ARCameraContext.startRecord
+                      name: ARCameraContext-startRecord                     
+                    - 
+                      link: /develop/api/media_arcameracontext/#ARCameraContext-stopRecord
+                      text: ARCameraContext.stopRecord
+                      name: ARCameraContext-stopRecord                  
+                      
         -
             link: /develop/api/file
             text: 文件
@@ -991,39 +1537,39 @@
                 name: file_save
                 sidebar:
                   -
-                    link: /develop/api/file_save/#saveFile
-                    text: saveFile
-                    name: file_save_saveFile
+                    link: /develop/api/file_save/#swan-saveFile
+                    text: swan.saveFile
+                    name: file_save_swan-saveFile
                   -
-                    link: /develop/api/file_save/#getFileInfo
-                    text: getFileInfo
-                    name: file_save_getFileInfo
+                    link: /develop/api/file_save/#swan-getFileInfo
+                    text: swan.getFileInfo
+                    name: file_save_swan-getFileInfo
                   -
-                    link: /develop/api/file_save/#getSavedFileList
-                    text: getSavedFileList
-                    name: file_save_getSavedFileList
+                    link: /develop/api/file_save/#swan-getSavedFileList
+                    text: swan.getSavedFileList
+                    name: file_save_swan-getSavedFileList
                   -
-                    link: /develop/api/file_save/#getSavedFileInfo
-                    text: getSavedFileInfo
-                    name: file_save_getSavedFileInfo
+                    link: /develop/api/file_save/#swan-getSavedFileInfo
+                    text: swan.getSavedFileInfo
+                    name: file_save_swan-getSavedFileInfo
               -
                 link: /develop/api/file_remove
                 text: 删除文件
                 name: file_remove
                 sidebar:
                   -
-                    link: /develop/api/file_remove/#removeSavedFile
-                    text: removeSavedFile
-                    name: file_remove_removeSavedFile
+                    link: /develop/api/file_remove/#swan-removeSavedFile
+                    text: swan.removeSavedFile
+                    name: file_remove_swan-removeSavedFile
               -
                 link: /develop/api/file_open
                 text: 打开新的文件页面
                 name: file_open
                 sidebar:
                   -
-                    link: /develop/api/file_open/#openDocument
-                    text: openDocument
-                    name: file_open_openDocument
+                    link: /develop/api/file_open/#swan-openDocument
+                    text: swan.openDocument
+                    name: file_open_swan-openDocument
         -
             link: /develop/api/storage
             text: 数据存储
@@ -1035,50 +1581,50 @@
                 name: storage_save
                 sidebar:
                   -
-                    link: /develop/api/storage_save/#setStorage
-                    text: setStorage
-                    name: storage_save_setStorage
+                    link: /develop/api/storage_save/#swan-setStorage
+                    text: swan.setStorage
+                    name: storage_save_swan-setStorage
                   -
-                    link: /develop/api/storage_save/#setStorageSync
-                    text: setStorageSync
-                    name: storage_save_setStorageSync
+                    link: /develop/api/storage_save/#swan-setStorageSync
+                    text: swan.setStorageSync
+                    name: storage_save_swan-setStorageSync
                   -
-                    link: /develop/api/storage_save/#getStorage
-                    text: getStorage
-                    name: storage_save_getStorage
+                    link: /develop/api/storage_save/#swan-getStorage
+                    text: swan.getStorage
+                    name: storage_save_swan-getStorage
                   -
-                    link: /develop/api/storage_save/#getStorageSync
-                    text: getStorageSync
-                    name: storage_save_getStorageSync
+                    link: /develop/api/storage_save/#swan-getStorageSync
+                    text: swan.getStorageSync
+                    name: storage_save_swan-getStorageSync
                   -
-                    link: /develop/api/storage_save/#getStorageInfo
-                    text: getStorageInfo
-                    name: storage_save_getStorageInfo
+                    link: /develop/api/storage_save/#swan-getStorageInfo
+                    text: swan.getStorageInfo
+                    name: storage_save_swan-getStorageInfo
                   -
-                    link: /develop/api/storage_save/#getStorageInfoSync
-                    text: getStorageInfoSync
-                    name: storage_save_getStorageInfoSync
+                    link: /develop/api/storage_save/#swan-getStorageInfoSync
+                    text: swan.getStorageInfoSync
+                    name: storage_save_swan-getStorageInfoSync
               -
                 link: /develop/api/storage_remove
                 text: 存储清理
                 name: storage_remove
                 sidebar:
                   -
-                    link: /develop/api/storage_remove/#removeStorage
-                    text: removeStorage
-                    name: storage_remove_removeStorage
+                    link: /develop/api/storage_remove/#swan-removeStorage
+                    text: swan.removeStorage
+                    name: storage_remove_swan-removeStorage
                   -
-                    link: /develop/api/storage_remove/#removeStorageSync
-                    text: removeStorageSync
-                    name: storage_remove_removeStorageSync
+                    link: /develop/api/storage_remove/#swan-removeStorageSync
+                    text: swan.removeStorageSync
+                    name: storage_remove_swan-removeStorageSync
                   -
-                    link: /develop/api/storage_remove/#clearStorage
-                    text: clearStorage
-                    name: storage_remove_clearStorage
+                    link: /develop/api/storage_remove/#swan-clearStorage
+                    text: swan.clearStorage
+                    name: storage_remove_swan-clearStorage
                   -
-                    link: /develop/api/storage_remove/#clearStorageSync
-                    text: clearStorageSync
-                    name: storage_remove_clearStorageSync
+                    link: /develop/api/storage_remove/#swan-clearStorageSync
+                    text: swan.clearStorageSync
+                    name: storage_remove_swan-clearStorageSync
         -
             link: /develop/api/location
             text: 位置
@@ -1090,13 +1636,13 @@
                 name: location_get
                 sidebar:
                   -
-                    link: /develop/api/location_get/#getLocation
-                    text: getLocation
-                    name: location_get_getLocation
+                    link: /develop/api/location_get/#swan-getLocation
+                    text: swan.getLocation
+                    name: location_get_swan-getLocation
                   -
-                    link: /develop/api/location_get/#chooseLocation
-                    text: chooseLocation
-                    name: location_get_chooseLocation
+                    link: /develop/api/location_get/#swan-chooseLocation
+                    text: swan.chooseLocation
+                    name: location_get_swan-chooseLocation
 
               -
                 link: /develop/api/location_open
@@ -1104,18 +1650,47 @@
                 name: location_open
                 sidebar:
                   -
-                    link: /develop/api/location_open/#openLocation
-                    text: openLocation
-                    name: location_open_openLocation
+                    link: /develop/api/location_open/#swan-openLocation
+                    text: swan.openLocation
+                    name: location_open_swan-openLocation
               -
                 link: /develop/api/location_map
                 text: 地图组件控制
                 name: location_map
                 sidebar:
                   -
-                    link: /develop/api/location_map/#createMapContext
-                    text: createMapContext
-                    name: location_map_createMapContext
+                    link: /develop/api/location_map/#swan-createMapContext
+                    text: swan.createMapContext
+                    name: location_map_swan-createMapContext
+                  -
+                    link: /develop/api/location_map/#mapContext
+                    text: mapContext
+                    name: location_map_mapContext
+                    sidebar:
+                      -
+                        link: /develop/api/location_map/#mapContext-getCenterLocation
+                        text: mapContext.getCenterLocation
+                        name: mapContext-getCenterLocation
+                      -
+                        link: /develop/api/location_map/#mapContext-moveToLocation
+                        text: mapContext.moveToLocation
+                        name: mapContext-moveToLocation
+                      -
+                        link: /develop/api/location_map/#mapContext-translateMarker
+                        text: mapContext.translateMarker
+                        name: mapContext-translateMarker
+                      -
+                        link: /develop/api/location_map/#mapContext-includePoints
+                        text: mapContext.includePoints
+                        name: mapContext-includePoints
+                      -
+                        link: /develop/api/location_map/#mapContext-getRegion
+                        text: mapContext.getRegion
+                        name: mapContext-.getRegion
+                      -
+                        link: /develop/api/location_map/#mapContext-getScale
+                        text: mapContext.getScale
+                        name: mapContext-getScale                       
         -
             link: /develop/api/show
             text: 界面
@@ -1131,322 +1706,405 @@
                     text: 坐标系
                     name: show_canvas_坐标系
                   -
-                    link: /develop/api/show_canvas/#createCanvasContext
-                    text: createCanvasContext
-                    name: show_canvas_createCanvasContext
+                    link: /develop/api/show_canvas/#swan-createCanvasContext
+                    text: swan.createCanvasContext
+                    name: show_canvas_swan-createCanvasContext
                   -
-                    link: /develop/api/show_canvas/#canvasGetImageData
-                    text: canvasGetImageData
-                    name: show_canvas_canvasGetImageData
+                    link: /develop/api/show_canvas/#swan-canvasGetImageData
+                    text: swan.canvasGetImageData
+                    name: show_canvas_swan-canvasGetImageData
                   -
-                    link: /develop/api/show_canvas/#canvasPutImageData
-                    text: canvasPutImageData
-                    name: show_canvas_canvasPutImageData
+                    link: /develop/api/show_canvas/#swan-canvasPutImageData
+                    text: swan.canvasPutImageData
+                    name: show_canvas_swan-canvasPutImageData
                   -
-                    link: /develop/api/show_canvas/#canvasToTempFilePath-OBJECT-this
-                    text: canvasToTempFilePath(OBJECT, this)
-                    name: show_canvas_canvasToTempFilePath(OBJECT, this)
+                    link: /develop/api/show_canvas/#swan-canvasToTempFilePath 
+                    text: swan.canvasToTempFilePath 
+                    name: show_canvas_swan-canvasToTempFilePath 
                   -
-                    link: /develop/api/show_canvas/#canvasContext-setFillStyle
-                    text: canvasContext.setFillStyle
-                    name: show_canvas_canvasContext.setFillStyle
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
-                    text: canvasContext.setStrokeStyle
-                    name: show_canvas_canvasContext.setStrokeStyle
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setShadow
-                    text: canvasContext.setShadow
-                    name: show_canvas_canvasContext.setShadow
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createLinearGradient
-                    text: canvasContext.createLinearGradient
-                    name: show_canvas_canvasContext.createLinearGradient
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createCircularGradient
-                    text: canvasContext.createCircularGradient
-                    name: show_canvas_canvasContext.createCircularGradient
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-addColorStop
-                    text: canvasContext.addColorStop
-                    name: show_canvas_canvasContext.addColorStop
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineWidth
-                    text: canvasContext.setLineWidth
-                    name: show_canvas_canvasContext.setLineWidth
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineCap
-                    text: canvasContext.setLineCap
-                    name: show_canvas_canvasContext.setLineCap
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineJoin
-                    text: canvasContext.setLineJoin
-                    name: show_canvas_canvasContext.setLineJoin
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineDash
-                    text: canvasContext.setLineDash
-                    name: show_canvas_canvasContext.setLineDash
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setMiterLimit
-                    text: canvasContext.setMiterLimit
-                    name: show_canvas_canvasContext.setMiterLimit
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-rect
-                    text: canvasContext.rect
-                    name: show_canvas_canvasContext.rect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fillRect
-                    text: canvasContext.fillRect
-                    name: show_canvas_canvasContext.fillRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-strokeRect
-                    text: canvasContext.strokeRect
-                    name: show_canvas_canvasContext.strokeRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-clearRect
-                    text: canvasContext.clearRect
-                    name: show_canvas_canvasContext.clearRect
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fill
-                    text: canvasContext.fill
-                    name: show_canvas_canvasContext.fill
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-stroke
-                    text: canvasContext.stroke
-                    name: show_canvas_canvasContext.stroke
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-beginPath
-                    text: canvasContext.beginPath
-                    name: show_canvas_canvasContext.beginPath
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-closePath
-                    text: canvasContext.closePath
-                    name: show_canvas_canvasContext.closePath
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-moveTo
-                    text: canvasContext.moveTo
-                    name: show_canvas_canvasContext.moveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-lineTo
-                    text: canvasContext.lineTo
-                    name: show_canvas_canvasContext.lineTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-arc
-                    text: canvasContext.arc
-                    name: show_canvas_canvasContext.arc
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-scale
-                    text: canvasContext.scale
-                    name: show_canvas_canvasContext.scale
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-rotate
-                    text: canvasContext.rotate
-                    name: show_canvas_canvasContext.rotate
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-translate
-                    text: canvasContext.translate
-                    name: show_canvas_canvasContext.translate
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-clip
-                    text: canvasContext.clip
-                    name: show_canvas_canvasContext.clip
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setFontSize
-                    text: canvasContext.setFontSize
-                    name: show_canvas_canvasContext.setFontSize
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-fillText
-                    text: canvasContext.fillText
-                    name: show_canvas_canvasContext.fillText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTextAlign
-                    text: canvasContext.setTextAlign
-                    name: show_canvas_canvasContext.setTextAlign
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTextBaseline
-                    text: canvasContext.setTextBaseline
-                    name: show_canvas_canvasContext.setTextBaseline
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-drawImage
-                    text: canvasContext.drawImage
-                    name: show_canvas_canvasContext.drawImage
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
-                    text: canvasContext.setGlobalAlpha
-                    name: show_canvas_canvasContext.setGlobalAlpha
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-measureText
-                    text: canvasContext.measureText
-                    name: show_canvas_canvasContext.measureText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-arcTo
-                    text: canvasContext.arcTo
-                    name: show_canvas_canvasContext.arcTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-strokeText
-                    text: canvasContext.strokeText
-                    name: show_canvas_canvasContext.strokeText
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
-                    text: canvasContext.setLineDashOffset
-                    name: show_canvas_canvasContext.setLineDashOffset
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-createPattern
-                    text: canvasContext.createPattern
-                    name: show_canvas_canvasContext.createPattern
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
-                    text: canvasContext.bezierCurveTo
-                    name: show_canvas_canvasContext.bezierCurveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
-                    text: canvasContext.quadraticCurveTo
-                    name: show_canvas_canvasContext.quadraticCurveTo
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-save
-                    text: canvasContext.save
-                    name: show_canvas_canvasContext.save
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-restore
-                    text: canvasContext.restore
-                    name: show_canvas_canvasContext.restore
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-draw
-                    text: canvasContext.draw
-                    name: show_canvas_canvasContext.draw
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-font
-                    text: canvasContext.font
-                    name: show_canvas_canvasContext.font
-                  -
-                    link: /develop/api/show_canvas/#canvasContext-setTransform
-                    text: canvasContext.setTransform
-                    name: show_canvas_canvasContext.setTransform
+                    link: /develop/api/show_canvas/#canvasContext 
+                    text: canvasContext 
+                    name: show_canvas_canvasContext 
+                    sidebar:
+
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setFillStyle
+                        text: canvasContext.setFillStyle
+                        name: show_canvas_canvasContext-setFillStyle
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
+                        text: canvasContext.setStrokeStyle
+                        name: show_canvas_canvasContext-setStrokeStyle
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setShadow
+                        text: canvasContext.setShadow
+                        name: show_canvas_canvasContext-setShadow
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createLinearGradient
+                        text: canvasContext.createLinearGradient
+                        name: show_canvas_canvasContext-createLinearGradient
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createCircularGradient
+                        text: canvasContext.createCircularGradient
+                        name: show_canvas_canvasContext-createCircularGradient
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-addColorStop
+                        text: canvasContext.addColorStop
+                        name: show_canvas_canvasContext-addColorStop
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineWidth
+                        text: canvasContext.setLineWidth
+                        name: show_canvas_canvasContext-setLineWidth
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineCap
+                        text: canvasContext.setLineCap
+                        name: show_canvas_canvasContext-.setLineCap
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineJoin
+                        text: canvasContext.setLineJoin
+                        name: show_canvas_canvasContext-setLineJoin
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineDash
+                        text: canvasContext.setLineDash
+                        name: show_canvas_canvasContext-setLineDash
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setMiterLimit
+                        text: canvasContext.setMiterLimit
+                        name: show_canvas_canvasContext-setMiterLimit
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-rect
+                        text: canvasContext.rect
+                        name: show_canvas_canvasContext-rect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fillRect
+                        text: canvasContext.fillRect
+                        name: show_canvas_canvasContext-fillRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-strokeRect
+                        text: canvasContext.strokeRect
+                        name: show_canvas_canvasContext-strokeRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-clearRect
+                        text: canvasContext.clearRect
+                        name: show_canvas_canvasContext-clearRect
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fill
+                        text: canvasContext.fill
+                        name: show_canvas_canvasContext-fill
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-stroke
+                        text: canvasContext.stroke
+                        name: show_canvas_canvasContext-stroke
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-beginPath
+                        text: canvasContext.beginPath
+                        name: show_canvas_canvasContext-beginPath
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-closePath
+                        text: canvasContext.closePath
+                        name: show_canvas_canvasContext-closePath
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-moveTo
+                        text: canvasContext.moveTo
+                        name: show_canvas_canvasContext-moveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-lineTo
+                        text: canvasContext.lineTo
+                        name: show_canvas_canvasContext-lineTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-arc
+                        text: canvasContext.arc
+                        name: show_canvas_canvasContext-arc
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-scale
+                        text: canvasContext.scale
+                        name: show_canvas_canvasContext-scale
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-rotate
+                        text: canvasContext.rotate
+                        name: show_canvas_canvasContext-rotate
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-translate
+                        text: canvasContext.translate
+                        name: show_canvas_canvasContext-translate
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-clip
+                        text: canvasContext.clip
+                        name: show_canvas_canvasContext-clip
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setFontSize
+                        text: canvasContext.setFontSize
+                        name: show_canvas_canvasContext-setFontSize
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-fillText
+                        text: canvasContext.fillText
+                        name: show_canvas_canvasContext-fillText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTextAlign
+                        text: canvasContext.setTextAlign
+                        name: show_canvas_canvasContext-setTextAlign
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTextBaseline
+                        text: canvasContext.setTextBaseline
+                        name: show_canvas_canvasContext-setTextBaseline
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-drawImage
+                        text: canvasContext.drawImage
+                        name: show_canvas_canvasContext-drawImage
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
+                        text: canvasContext.setGlobalAlpha
+                        name: show_canvas_canvasContext-setGlobalAlpha
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-measureText
+                        text: canvasContext.measureText
+                        name: show_canvas_canvasContext-measureText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-strokeText
+                        text: canvasContext.strokeText
+                        name: show_canvas_canvasContext-strokeText
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
+                        text: canvasContext.setLineDashOffset
+                        name: show_canvas_canvasContext-setLineDashOffset
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-createPattern
+                        text: canvasContext.createPattern
+                        name: show_canvas_canvasContext.createPattern
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
+                        text: canvasContext.bezierCurveTo
+                        name: show_canvas_canvasContext-bezierCurveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
+                        text: canvasContext.quadraticCurveTo
+                        name: show_canvas_canvasContext-quadraticCurveTo
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-save
+                        text: canvasContext.save
+                        name: show_canvas_canvasContext-save
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-restore
+                        text: canvasContext.restore
+                        name: show_canvas_canvasContext-restore
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-draw
+                        text: canvasContext.draw
+                        name: show_canvas_canvasContext-draw
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-font
+                        text: canvasContext.font
+                        name: show_canvas_canvasContext-font
+                      -
+                        link: /develop/api/show_canvas/#canvasContext-setTransform
+                        text: canvasContext.setTransform
+                        name: show_canvas_canvasContext-setTransform
               -
                 link: /develop/api/show_toast
                 text: 交互反馈
                 name: show_toast
                 sidebar:
                   -
-                    link: /develop/api/show_toast/#showToast
-                    text: showToast
-                    name: show_toast_showToast
+                    link: /develop/api/show_toast/#swan-showToast
+                    text: swan.showToast
+                    name: show_toast_swan-showToast
                   -
-                    link: /develop/api/show_toast/#showLoading
-                    text: showLoading
-                    name: show_toast_showLoading
+                    link: /develop/api/show_toast/#swan-showLoading
+                    text: swan.showLoading
+                    name: show_toast_swan-showLoading
                   -
-                    link: /develop/api/show_toast/#hideToast
-                    text: hideToast
-                    name: show_toast_hideToast
+                    link: /develop/api/show_toast/#swan-hideToast
+                    text: swan.hideToast
+                    name: show_toast_swan-hideToast
                   -
-                    link: /develop/api/show_toast/#hideLoading
-                    text: hideLoading
-                    name: show_toast_hideLoading
+                    link: /develop/api/show_toast/#swan-hideLoading
+                    text: swan.hideLoading
+                    name: show_toast_swan-hideLoading
                   -
-                    link: /develop/api/show_toast/#showModal
-                    text: showModal
-                    name: show_toast_showModal
+                    link: /develop/api/show_toast/#swan-showModal
+                    text: swan.showModal
+                    name: show_toast_swan-showModal
                   -
-                    link: /develop/api/show_toast/#showActionSheet
-                    text: showActionSheet
-                    name: show_toast_showActionSheet
+                    link: /develop/api/show_toast/#swan-showActionSheet
+                    text: swan.showActionSheet
+                    name: show_toast_swan-showActionSheet
               -
                 link: /develop/api/show_navigationbar
                 text: 导航栏
                 name: show_navigationbar
                 sidebar:
                   -
-                    link: /develop/api/show_navigationbar/#setNavigationBarTitle
-                    text: setNavigationBarTitle
-                    name: show_navigationbar_setNavigationBarTitle
+                    link: /develop/api/show_navigationbar/#swan-setNavigationBarTitle
+                    text: swan.setNavigationBarTitle
+                    name: show_navigationbar_swan-setNavigationBarTitle
                   -
-                    link: /develop/api/show_navigationbar/#showNavigationBarLoading
-                    text: showNavigationBarLoading
-                    name: show_navigationbar_showNavigationBarLoading
+                    link: /develop/api/show_navigationbar/#swan-showNavigationBarLoading
+                    text: swan.showNavigationBarLoading
+                    name: show_navigationbar_swan-showNavigationBarLoading
                   -
-                    link: /develop/api/show_navigationbar/#hideNavigationBarLoading
-                    text: hideNavigationBarLoading
-                    name: show_navigationbar_hideNavigationBarLoading
+                    link: /develop/api/show_navigationbar/#swan-hideNavigationBarLoading
+                    text: swan.hideNavigationBarLoading
+                    name: show_navigationbar_swan-hideNavigationBarLoading
                   -
-                    link: /develop/api/show_navigationbar/#setNavigationBarColor
-                    text: setNavigationBarColor
-                    name: show_navigationbar_setNavigationBarColor
+                    link: /develop/api/show_navigationbar/#swan-setNavigationBarColor
+                    text: swan.setNavigationBarColor
+                    name: show_navigationbar_swan-setNavigationBarColor
               -
                 link: /develop/api/show_tabbar
                 text: 设置tabBar
                 name: show_tabbar
                 sidebar:
                   -
-                    link: /develop/api/show_tabbar/#setTabBarBadge
-                    text: setTabBarBadge
-                    name: show_tabbar_setTabBarBadge
+                    link: /develop/api/show_tabbar/#swan-setTabBarBadge
+                    text: swan.setTabBarBadge
+                    name: show_tabbar_swan-setTabBarBadge
                   -
-                    link: /develop/api/show_tabbar/#removeTabBarBadge
-                    text: removeTabBarBadge
-                    name: show_tabbar_removeTabBarBadge
+                    link: /develop/api/show_tabbar/#swan-removeTabBarBadge
+                    text: swan.removeTabBarBadge
+                    name: show_tabbar_swan-removeTabBarBadge
                   -
-                    link: /develop/api/show_tabbar/#showTabBarRedDot
-                    text: showTabBarRedDot
-                    name: show_tabbar_showTabBarRedDot
+                    link: /develop/api/show_tabbar/#swan-showTabBarRedDot
+                    text: swan.showTabBarRedDot
+                    name: show_tabbar_swan-showTabBarRedDot
                   -
-                    link: /develop/api/show_tabbar/#hideTabBarRedDot
-                    text: hideTabBarRedDot
-                    name: show_tabbar_hideTabBarRedDot
+                    link: /develop/api/show_tabbar/#swan-hideTabBarRedDot
+                    text: swan.hideTabBarRedDot
+                    name: show_tabbar_swan-hideTabBarRedDot
                   -
-                    link: /develop/api/show_tabbar/#setTabBarStyle
-                    text: setTabBarStyle
-                    name: show_tabbar_setTabBarStyle
+                    link: /develop/api/show_tabbar/#swan-setTabBarStyle
+                    text: swan.setTabBarStyle
+                    name: show_tabbar_swan-setTabBarStyle
                   -
-                    link: /develop/api/show_tabbar/#setTabBarItem
-                    text: setTabBarItem
-                    name: show_tabbar_setTabBarItem
+                    link: /develop/api/show_tabbar/#swan-setTabBarItem
+                    text: swan.setTabBarItem
+                    name: show_tabbar_swan-setTabBarItem
                   -
-                    link: /develop/api/show_tabbar/#showTabBar
-                    text: showTabBar
-                    name: show_tabbar_showTabBar
+                    link: /develop/api/show_tabbar/#swan-showTabBar
+                    text: swan.showTabBar
+                    name: show_tabbar_swan-showTabBar
                   -
-                    link: /develop/api/show_tabbar/#hideTabBar
-                    text: hideTabBar
-                    name: show_tabbar_hideTabBar
+                    link: /develop/api/show_tabbar/#swan-hideTabBar
+                    text: swan.hideTabBar
+                    name: show_tabbar_swan-hideTabBar
               -
                 link: /develop/api/show_tab
                 text: 导航
                 name: show_tab
                 sidebar:
                   -
-                    link: /develop/api/show_tab/#navigateTo
-                    text: navigateTo
-                    name: show_tab_navigateTo
+                    link: /develop/api/show_tab/#swan-navigateTo
+                    text: swan.navigateTo
+                    name: show_tab_swan-navigateTo
                   -
-                    link: /develop/api/show_tab/#redirectTo
-                    text: redirectTo
-                    name: show_tab_redirectTo
+                    link: /develop/api/show_tab/#swan-redirectTo
+                    text: swan.redirectTo
+                    name: show_tab_swan-redirectTo
                   -
-                    link: /develop/api/show_tab/#switchTab
-                    text: switchTab
-                    name: show_tab_switchTab
+                    link: /develop/api/show_tab/#swan-switchTab
+                    text: swan.switchTab
+                    name: show_tab_swan-switchTab
                   -
-                    link: /develop/api/show_tab/#navigateBack
-                    text: navigateBack
-                    name: show_tab_navigateBack
+                    link: /develop/api/show_tab/#swan-navigateBack
+                    text: swan.navigateBack
+                    name: show_tab_swan-navigateBack
                   -
-                    link: /develop/api/show_tab/#reLaunch
-                    text: reLaunch
-                    name: show_tab_reLaunch
+                    link: /develop/api/show_tab/#swan-reLaunch
+                    text: swan.reLaunch
+                    name: show_tab_swan-reLaunch
               -
                 link: /develop/api/show_createanimation
                 text: 动画
                 name: show_createanimation
                 sidebar:
                   -
-                    link: /develop/api/show_createanimation/#createAnimation
-                    text: createAnimation
-                    name: show_createanimation_createAnimation
+                    link: /develop/api/show_createanimation/#swan-createAnimation
+                    text: swan.createAnimation
+                    name: show_createanimation_swan-createAnimation
                   -
                     link: /develop/api/show_createanimation/#animation
                     text: animation
                     name: show_createanimation_animation
+                    sidebar:
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotate
+                        text: animation.rotate
+                        name: show_createanimation_animation-rotate
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateX
+                        text: animation.rotateX
+                        name: show_createanimation_animation-rotateX
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateY
+                        text: animation.rotateY
+                        name: show_createanimation_animation-rotateY
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotateZ
+                        text: animation.rotateZ
+                        name: show_createanimation_animation-rotateZ
+                      -
+                        link: /develop/api/show_createanimation/#animation-rotate3d
+                        text: animation.rotate3d
+                        name: show_createanimation_animation-rotate3d
+                      -
+                        link: /develop/api/show_createanimation/#animation-scale
+                        text: animation.scale
+                        name: show_createanimation_animation-scale
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleX
+                        text: animation.scaleX
+                        name: show_createanimation_animation-scaleX
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleY
+                        text: animation.scaleY
+                        name: show_createanimation_animation-scaleY
+                      -
+                        link: /develop/api/show_createanimation/#animation-scaleZ
+                        text: animation.scaleZ
+                        name: show_createanimation_animation-scaleZ
+                      -
+                        link: /develop/api/show_createanimation/#animation-scale3d
+                        text: animation.scale3d
+                        name: show_createanimation_animation-scale3d
+                      -
+                        link: /develop/api/show_createanimation/#animation-translate
+                        text: animation.translate
+                        name: show_createanimation_animation-translate
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateX
+                        text: animation.translateX
+                        name: show_createanimation_animation-translateX     
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateY
+                        text: animation.translateY
+                        name: show_createanimation_animation-translateY                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-translateZ
+                        text: animation.translateZ
+                        name: show_createanimation_animation-translateZ                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-translate3d
+                        text: animation.translate3d
+                        name: show_createanimation_animation-translate3d 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skew
+                        text: animation.skew
+                        name: show_createanimation_animation-skew 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skewX
+                        text: animation.skewX
+                        name: show_createanimation_animation-skewX 
+                      -
+                        link: /develop/api/show_createanimation/#animation-skewY
+                        text: animation.skewY
+                        name: show_createanimation_animation-skewY                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-matrix
+                        text: animation.matrix
+                        name: show_createanimation_animation-matrix                         
+                      -
+                        link: /develop/api/show_createanimation/#animation-matrix3d
+                        text: animation.matrix3d
+                        name: show_createanimation_animation-matrix3d 
 
               -
                 link: /develop/api/show_pagescrollto
@@ -1454,9 +2112,22 @@
                 name: show_pagescrollto
                 sidebar:
                   -
-                    link: /develop/api/show_pagescrollto/#pageScrollTo
-                    text: pageScrollTo
-                    name: show_pagescrollto_pageScrollTo
+                    link: /develop/api/show_pagescrollto/#swan-pageScrollTo
+                    text: swan.pageScrollTo
+                    name: show_pagescrollto_swan-pageScrollTo
+              -
+                link: /develop/api/show_background
+                text: 背景
+                name: show_background
+                sidebar:
+                  -
+                    link: /develop/api/show_background/#swan-setBackgroundColor
+                    text: swan.setBackgroundColor
+                    name: show_background_swan-setBackgroundColor
+                  -
+                    link: /develop/api/show_background/#swan-setBackgroundTextStyle
+                    text: swan.setBackgroundTextStyle
+                    name: show_background_swan-setBackgroundTextStyle
               -
                 link: /develop/api/show_pull
                 text: 下拉刷新
@@ -1467,82 +2138,117 @@
                     text: onPullDownRefresh
                     name: show_pull_onPullDownRefresh
                   -
-                    link: /develop/api/show_pull/#startPullDownRefresh
-                    text: startPullDownRefresh
-                    name: show_pull_startPullDownRefresh
+                    link: /develop/api/show_pull/#swan-startPullDownRefresh
+                    text: swan.startPullDownRefresh
+                    name: show_pull_swan-startPullDownRefresh
                   -
-                    link: /develop/api/show_pull/#stopPullDownRefresh
-                    text: stopPullDownRefresh
-                    name: show_pull_stopPullDownRefresh
+                    link: /develop/api/show_pull/#swan-stopPullDownRefresh
+                    text: swan.stopPullDownRefresh
+                    name: show_pull_swan-stopPullDownRefresh
+              -
+                link: /develop/api/custom_component
+                text: 自定义组件
+                name: custom_component
+                sidebar:
+                  -
+                    link: /develop/api/custom_component/#swan-nextTick
+                    text: swan.nextTick
+                    name: custom_component_swan-nextTick
+              -
+                link: /develop/api/menu_info
+                text: 菜单
+                name: menu_info
+                sidebar:
+                  -
+                    link: /develop/api/menu_info/#swan-getMenuButtonBoundingClientRect
+                    text: swan.getMenuButtonBoundingClientRect
+                    name: menu_info_swan-getMenuButtonBoundingClientRect                                     
               -
                 link: /develop/api/show_query
                 text: 节点信息
                 name: show_query
                 sidebar:
                   -
-                    link: /develop/api/show_query/#createIntersectionObserver-this-options
-                    text: createIntersectionObserver
-                    name: show_query_createIntersectionObserver
+                    link: /develop/api/show_query/#swan-createIntersectionObserver 
+                    text: swan.createIntersectionObserver
+                    name: show_query_swan-createIntersectionObserver
                   -
                     link: /develop/api/show_query/#IntersectionObserver
                     text: IntersectionObserver
                     name: show_query_IntersectionObserver
+                    sidebar:
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-relativeTo 
+                        text: IntersectionObserver.relativeTo
+                        name: show_query_IntersectionObserver-relativeTo 
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-relativeToViewport 
+                        text: IntersectionObserver.relativeToViewport
+                        name: show_query_IntersectionObserver-relativeToViewport
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-observe 
+                        text: IntersectionObserver.observe 
+                        name: show_query_IntersectionObserver-observe 
+                      -
+                        link: /develop/api/show_query/#IntersectionObserver-disconnect
+                        text: IntersectionObserver.disconnect
+                        name: show_query_IntersectionObserver-disconnect
                   -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeTo-selector-margins
-                    text: IntersectionObserver.relativeTo
-                    name: show_query_IntersectionObserver.relativeTo(selector, margins)
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-relativeToViewport-margins
-                    text: IntersectionObserver.relativeToViewport
-                    name: show_query_IntersectionObserver_relativeToViewport
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-observe-targetSelector-callback
-                    text: IntersectionObserver.observe
-                    name: show_query_IntersectionObserver_observe
-                  -
-                    link: /develop/api/show_query/#IntersectionObserver-disconnect
-                    text: IntersectionObserver.disconnect
-                    name: show_query_IntersectionObserver_disconnect
-                  -
-                    link: /develop/api/show_query/#createSelectorQuery
-                    text: createSelectorQuery
-                    name: show_query_createSelectorQuery
+                    link: /develop/api/show_query/#swan-createSelectorQuery
+                    text: swan.createSelectorQuery
+                    name: show_query_swan-createSelectorQuery                   
                   -
                     link: /develop/api/show_query/#selectorQuery
                     text: selectorQuery
                     name: show_query_selectorQuery
+                    sidebar:
+                      -
+                        link: /develop/api/show_query/#selectorQuery-in
+                        text: selectorQuery.in
+                        name: show_query_selectorQuery-in
+                      -
+                        link: /develop/api/show_query/#selectorQuery-select
+                        text: selectorQuery.select
+                        name: show_query_selectorQuery-select
+                      -
+                        link: /develop/api/show_query/#selectorQuery-selectAll
+                        text: selectorQuery.selectAll
+                        name: show_query_selectorQuery-selectAll
+                      -
+                        link: /develop/api/show_query/#selectorQuery-selectViewport
+                        text: selectorQuery.selectViewport
+                        name: show_query_selectorQuery-selectViewport
+                      -
+                        link: /develop/api/show_query/#selectorQuery-exec
+                        text: selectorQuery.exec
+                        name: show_swan-query_selectorQuery-exec              
                   -
-                    link: /develop/api/show_query/#selectorQuery-in-component
-                    text: selectorQuery.in(component)
-                    name: show_query_selectorQuery.in(component)
+                    link: /develop/api/show_query/#nodesRef 
+                    text: nodesRef 
+                    name: show_query_nodesRef  
+                    sidebar:                    
+                      -
+                        link: /develop/api/show_query/#nodesRef-boundingClientRect
+                        text: nodesRef.boundingClientRect
+                        name: show_query_nodesRef-boundingClientRect
+                      -
+                        link: /develop/api/show_query/#nodesRef-scrollOffset
+                        text: nodesRef.scrollOffset
+                        name: show_query_nodesRef-scrollOffset
+                      -
+                        link: /develop/api/show_query/#nodesRef-fields
+                        text: nodesRef.fields
+                        name: show_query_nodesRef-fields
+
+              -
+                link: /develop/api/nacomponent
+                text:  添加到我的小程序引导
+                name: nacomponent
+                sidebar:
                   -
-                    link: /develop/api/show_query/#selectorQuery-select-selector
-                    text: selectorQuery.select(selector)
-                    name: show_query_selectorQuery.select(selector)
-                  -
-                    link: /develop/api/show_query/#selectorQuery-selectAll-selector
-                    text: selectorQuery.selectAll(selector)
-                    name: show_query_selectorQuery.selectAll(selector)
-                  -
-                    link: /develop/api/show_query/#selectorQuery-selectViewport
-                    text: selectorQuery.selectViewport()
-                    name: show_query_selectorQuery.selectViewport()
-                  -
-                    link: /develop/api/show_query/#nodesRef-boundingClientRect-callback
-                    text: nodesRef.boundingClientRect([callback])
-                    name: show_query_nodesRef.boundingClientRect([callback])
-                  -
-                    link: /develop/api/show_query/#nodesRef-scrollOffset-callback
-                    text: nodesRef.scrollOffset([callback])
-                    name: show_query_nodesRef.scrollOffset([callback])
-                  -
-                    link: /develop/api/show_query/#nodesRef-fields-fields-callback
-                    text: nodesRef.fields(fields,[callback])
-                    name: show_query_nodesRef.fields(fields,[callback])
-                  -
-                    link: /develop/api/show_query/#selectorQuery-exec-callback
-                    text: selectorQuery.exec([callback])
-                    name: show_query
+                    link: /develop/api/nacomponent/#swan-showFavoriteGuide
+                    text: swan.showFavoriteGuide
+                    name: nacomponent_swan-showFavoriteGuide
 
         -
             link: /develop/api/device
@@ -1555,156 +2261,187 @@
                 name: device_sys
                 sidebar:
                   -
-                    link: /develop/api/device_sys/#getSystemInfo
-                    text: getSystemInfo
-                    name: device_sys_getSystemInfo
+                    link: /develop/api/device_sys/#swan-getSystemInfo
+                    text: swan.getSystemInfo
+                    name: device_sys_swan-getSystemInfo
                   -
-                    link: /develop/api/device_sys/#getSystemInfoSync
-                    text: getSystemInfoSync
-                    name: device_sys_getSystemInfoSync
+                    link: /develop/api/device_sys/#swan-getSystemInfoSync
+                    text: swan.getSystemInfoSync
+                    name: device_sys_swan-getSystemInfoSync
                   -
-                    link: /develop/api/device_sys/#getEnvInfoSync
-                    text: getEnvInfoSync
-                    name: device_sys_getEnvInfoSync
+                    link: /develop/api/device_sys/#swan-getEnvInfoSync
+                    text: swan.getEnvInfoSync
+                    name: device_sys_swan-getEnvInfoSync
                   -
-                    link: /develop/api/device_sys/#canIUse
-                    text: canIUse
-                    name: device_sys_canIUse
+                    link: /develop/api/device_sys/#swan-canIUse
+                    text: swan.canIUse
+                    name: device_sys_swan-canIUse
               -
                 link: /develop/api/device_onmemory
                 text: 内存
                 name: device_onmemory
                 sidebar:
                   -
-                    link: /develop/api/device_onmemory/#onMemoryWarning
-                    text: onMemoryWarning
-                    name: device_onmemory_onMemoryWarning
+                    link: /develop/api/device_onmemory/#swan-onMemoryWarning
+                    text: swan.onMemoryWarning
+                    name: device_onmemory_swan-onMemoryWarning
               -
                 link: /develop/api/device_network
                 text: 网络状态
                 name: device_network
                 sidebar:
                   -
-                    link: /develop/api/device_network/#getNetworkType
-                    text: getNetworkType
-                    name: device_network_getNetworkType
+                    link: /develop/api/device_network/#swan-getNetworkType
+                    text: swan.getNetworkType
+                    name: device_network_swan-getNetworkType
                   -
-                    link: /develop/api/device_network/#onNetworkStatusChange
-                    text: onNetworkStatusChange
-                    name: device_network_onNetworkStatusChange
+                    link: /develop/api/device_network/#swan-onNetworkStatusChange
+                    text: swan.onNetworkStatusChange
+                    name: device_network_swan-onNetworkStatusChange
               -
                 link: /develop/api/device_accelerometer
                 text: 加速度计
                 name: device_accelerometer
                 sidebar:
                   -
-                    link: /develop/api/device_accelerometer/#onAccelerometerChange
-                    text: onAccelerometerChange
-                    name: device_accelerometer_onAccelerometerChange
+                    link: /develop/api/device_accelerometer/#swan-onAccelerometerChange
+                    text: swan.onAccelerometerChange
+                    name: device_accelerometer_swan-onAccelerometerChange
                   -
-                    link: /develop/api/device_accelerometer/#startAccelerometer
-                    text: startAccelerometer
-                    name: device_accelerometer_startAccelerometer
+                    link: /develop/api/device_accelerometer/#swan-startAccelerometer
+                    text: swan.startAccelerometer
+                    name: device_accelerometer_swan-startAccelerometer
                   -
-                    link: /develop/api/device_accelerometer/#stopAccelerometer
-                    text: stopAccelerometer
-                    name: device_accelerometer_stopAccelerometer
+                    link: /develop/api/device_accelerometer/#swan-stopAccelerometer
+                    text: swan.stopAccelerometer
+                    name: device_accelerometer_swan-stopAccelerometer
               -
                 link: /develop/api/device_compass
                 text: 罗盘
                 name: device_compass
                 sidebar:
                   -
-                    link: /develop/api/device_compass/#onCompassChange
-                    text: onCompassChange
-                    name: device_compass_onCompassChange
+                    link: /develop/api/device_compass/#swan-onCompassChange
+                    text: swan.onCompassChange
+                    name: device_compass_swan-onCompassChange
                   -
-                    link: /develop/api/device_compass/#startCompass
-                    text: startCompass
-                    name: device_compass_startCompass
+                    link: /develop/api/device_compass/#swan-startCompass
+                    text: swan.startCompass
+                    name: device_compass_swan-startCompass
                   -
-                    link: /develop/api/device_compass/#stopCompass
-                    text: stopCompass
-                    name: device_compass_stopCompass
+                    link: /develop/api/device_compass/#swan-stopCompass
+                    text: swan.stopCompass
+                    name: device_compass_swan-stopCompass
+              -
+                link: /develop/api/device_direction
+                text: 设备方向
+                name: device_direction
+                sidebar:
+                  -
+                    link: /develop/api/device_direction/#swan-onDeviceMotionChange
+                    text: swan.onDeviceMotionChange
+                    name: device_direction_swan-onDeviceMotionChange
+                  -
+                    link: /develop/api/device_direction/#swan-startDeviceMotionListening
+                    text: swan.startDeviceMotionListening
+                    name: device_direction_swan-startDeviceMotionListening
+                  -
+                    link: /develop/api/device_direction/#swan-stopDeviceMotionListening
+                    text: swan.stopDeviceMotionListening
+                    name: device_direction_swan-stopDeviceMotionListening  
+              -
+                link: /develop/api/device_battery
+                text: 获取电量信息
+                name: device_battery
+                sidebar:
+                  -
+                    link: /develop/api/device_battery/#swan-getBatteryInfo
+                    text: swan.getBatteryInfo
+                    name: device_battery_swan-getBatteryInfo
+                  -
+                    link: /develop/api/device_battery/#swan-getBatteryInfoSync
+                    text: swan.getBatteryInfoSync
+                    name: device_battery_swan-getBatteryInfoSync                                    
               -
                 link: /develop/api/device_scan
                 text: 扫码
                 name: device_scan
                 sidebar:
                   -
-                    link: /develop/api/device_scan/#scanCode
-                    text: scanCode
-                    name: device_scan_scanCode
+                    link: /develop/api/device_scan/#swan-scanCode
+                    text: swan.scanCode
+                    name: device_scan_swan-scanCode
               -
                 link: /develop/api/device_screen
                 text: 屏幕亮度
                 name: device_screen
                 sidebar:
                   -
-                    link: /develop/api/device_screen/#setScreenBrightness
-                    text: setScreenBrightness
-                    name: device_screen_setScreenBrightness
+                    link: /develop/api/device_screen/#swan-setScreenBrightness
+                    text: swan.setScreenBrightness
+                    name: device_screen_swan-setScreenBrightness
                   -
-                    link: /develop/api/device_screen/#getScreenBrightness
-                    text: getScreenBrightness
-                    name: device_screen_getScreenBrightness
+                    link: /develop/api/device_screen/#swan-getScreenBrightness
+                    text: swan.getScreenBrightness
+                    name: device_screen_swan-getScreenBrightness
                   -
-                    link: /develop/api/device_screen/#setKeepScreenOn
-                    text: setKeepScreenOn
-                    name: device_screen_setKeepScreenOn
+                    link: /develop/api/device_screen/#swan-setKeepScreenOn
+                    text: swan.setKeepScreenOn
+                    name: device_screen_swan-setKeepScreenOn
               -
                 link: /develop/api/device_capture
                 text: 用户截屏事件
                 name: device_capture
                 sidebar:
                   -
-                    link: /develop/api/device_capture/#onUserCaptureScreen
-                    text: onUserCaptureScreen
-                    name: device_capture_onUserCaptureScreen
+                    link: /develop/api/device_capture/#swan-onUserCaptureScreen
+                    text: swan.onUserCaptureScreen
+                    name: device_capture_swan-onUserCaptureScreen
               -
                 link: /develop/api/device_vibrate
                 text: 振动
                 name: device_vibrate
                 sidebar:
                   -
-                    link: /develop/api/device_vibrate/#vibrateLong
-                    text: vibrateLong
-                    name: device_vibrate_vibrateLong
+                    link: /develop/api/device_vibrate/#swan-vibrateLong
+                    text: swan.vibrateLong
+                    name: device_vibrate_swan-vibrateLong
                   -
-                    link: /develop/api/device_vibrate/#vibrateShort
-                    text: vibrateShort
-                    name: device_vibrate_vibrateShort
+                    link: /develop/api/device_vibrate/#swan-vibrateShort
+                    text: swan.vibrateShort
+                    name: device_vibrate_swan-vibrateShort
               -
                 link: /develop/api/device_phonecontact
                 text: 手机联系人
                 name: device_phonecontact
                 sidebar:
                   -
-                    link: /develop/api/device_phonecontact/#addPhoneContact
-                    text: addPhoneContact
-                    name: device_phonecontact_addPhoneContact
+                    link: /develop/api/device_phonecontact/#swan-addPhoneContact
+                    text: swan.addPhoneContact
+                    name: device_phonecontact_swan-addPhoneContact
               -
                 link: /develop/api/device_call
                 text: 拨打电话
                 name: device_call
                 sidebar:
                   -
-                    link: /develop/api/device_call/#makePhoneCall
-                    text: makePhoneCall
-                    name: device_call_makePhoneCall
+                    link: /develop/api/device_call/#swan-makePhoneCall
+                    text: swan.makePhoneCall
+                    name: device_call_swan-makePhoneCall
               -
                 link: /develop/api/device_clipboard
                 text: 剪贴板
                 name: device_clipboard
                 sidebar:
                   -
-                    link: /develop/api/device_clipboard/#setClipboardData
-                    text: setClipboardData
-                    name: device_clipboard_setClipboardData
+                    link: /develop/api/device_clipboard/#swan-setClipboardData
+                    text: swan.setClipboardData
+                    name: device_clipboard_swan-setClipboardData
                   -
-                    link: /develop/api/device_clipboard/#getClipboardData
-                    text: getClipboardData
-                    name: device_clipboard_getClipboardData
+                    link: /develop/api/device_clipboard/#swan-getClipboardData
+                    text: swan.getClipboardData
+                    name: device_clipboard_swan-getClipboardData
+                   
         -
             link: /develop/api/ext
             text: 第三方平台
@@ -1716,13 +2453,13 @@
                 name: getextconfig
                 sidebar:
                   -
-                    link: /develop/api/getextconfig/#getExtConfig
-                    text: getExtConfig
-                    name: getextconfig_getExtConfig
+                    link: /develop/api/getextconfig/#swan-getExtConfig
+                    text: swan.getExtConfig
+                    name: getextconfig_swan-getExtConfig
                   -
-                    link: /develop/api/getextconfig/#getExtConfigSync
-                    text: getExtConfigSync
-                    name: getextconfig_getExtConfigSync
+                    link: /develop/api/getextconfig/#swan-getExtConfigSync
+                    text: swan.getExtConfigSync
+                    name: getextconfig_swan-getExtConfigSync
         -
             link: /develop/api/open
             text: 开放接口
@@ -1739,21 +2476,21 @@
                     text: 授权流程说明
                     name: open_log_授权流程说明
                   -
-                    link: /develop/api/open_log/#login
-                    text: login
-                    name: open_log_login
+                    link: /develop/api/open_log/#swan-login
+                    text: swan.login
+                    name: open_log_swan-login
                   -
                     link: /develop/api/open_log/#Session-Key
                     text: Session Key
                     name: open_log_Session-Key
                   -
-                    link: /develop/api/open_log/#checkSession
-                    text: checkSession
-                    name: open_log_checkSession
+                    link: /develop/api/open_log/#swan-checkSession
+                    text: swan.checkSession
+                    name: open_log_swan-checkSession
                   -
-                    link: /develop/api/open_log/#isLoginSync
-                    text: isLoginSync
-                    name: open_log_isLoginSync
+                    link: /develop/api/open_log/#swan-isLoginSync
+                    text: swan.isLoginSync
+                    name: open_log_swan-isLoginSync
                   -
                     link: /develop/api/open_log/#用户数据的签名验证和加解密
                     text: 用户数据的签名验证和加解密
@@ -1765,31 +2502,31 @@
                 name: open_authorize
                 sidebar:
                   -
-                    link: /develop/api/open_authorize/#authorize
-                    text: authorize
-                    name: open_authorize_authorize
+                    link: /develop/api/open_authorize/#swan-authorize
+                    text: swan.authorize
+                    name: open_authorize_swan-authorize
 
               -
                 link: /develop/api/open_userinfo
                 text: 用户信息
                 name: open_userinfo
-                sidebar:                 
+                sidebar:
                   -
                     link: /develop/api/open_userinfo/#swanid机制说明
                     text: swanid机制说明
-                    name: open_userinfo_swanid机制说明               
+                    name: open_userinfo_swanid机制说明
                   -
-                    link: /develop/api/open_userinfo/#getSwanId
-                    text: getSwanId
-                    name: open_userinfo_getSwanId
+                    link: /develop/api/open_userinfo/#swan-getSwanId
+                    text: swan.getSwanId
+                    name: open_userinfo_swan-getSwanId
                   -
-                    link: /develop/api/open_userinfo/#getUserInfo
-                    text: getUserInfo
-                    name: open_userinfo_getUserInfo
+                    link: /develop/api/open_userinfo/#swan-getUserInfo
+                    text: swan.getUserInfo
+                    name: open_userinfo_swan-getUserInfo
                   -
-                    link: /develop/api/open_userinfo/#verify
-                    text: verify
-                    name: open_userinfo_verify                 
+                    link: /develop/api/open_userinfo/#signature-计算方法
+                    text: signature 计算方法
+                    name: open_userinfo_signature-计算方法
 
               -
                 link: /develop/api/open_setting
@@ -1797,13 +2534,13 @@
                 name: open_setting
                 sidebar:
                   -
-                    link: /develop/api/open_setting/#openSetting
-                    text: openSetting
-                    name: open_setting_openSetting
+                    link: /develop/api/open_setting/#swan-openSetting
+                    text: swan.openSetting
+                    name: open_setting_swan-openSetting
                   -
-                    link: /develop/api/open_setting/#getSetting
-                    text: getSetting
-                    name: open_setting_getSetting
+                    link: /develop/api/open_setting/#swan-getSetting
+                    text: swan.getSetting
+                    name: open_setting_swan-getSetting
 
               -
                 link: /develop/api/open_share
@@ -1815,9 +2552,9 @@
                     text: onShareAppMessage
                     name: open_share_onShareAppMessage
                   -
-                    link: /develop/api/open_share/#openShare
-                    text: openShare
-                    name: open_share_openShare
+                    link: /develop/api/open_share/#swan-openShare
+                    text: swan.openShare
+                    name: open_share_swan-openShare
 
               -
                 link: /develop/api/open_chooseaddress
@@ -1825,9 +2562,9 @@
                 name: open_chooseaddress
                 sidebar:
                   -
-                    link: /develop/api/open_chooseaddress/#chooseAddress
-                    text: chooseAddress
-                    name: open_chooseaddress_chooseAddress
+                    link: /develop/api/open_chooseaddress/#swan-chooseAddress
+                    text: swan.chooseAddress
+                    name: open_chooseaddress_swan-chooseAddress
 
               -
                 link: /develop/api/open_payment
@@ -1835,9 +2572,9 @@
                 name: open_payment
                 sidebar:
                   -
-                    link: /develop/api/open_payment/#requestPolymerPayment
-                    text: requestPolymerPayment
-                    name: open_payment_requestPolymerPayment
+                    link: /develop/api/open_payment/#swan-requestPolymerPayment
+                    text: swan.requestPolymerPayment
+                    name: open_payment_swan-requestPolymerPayment
 
               -
                 link: /develop/api/open_chooseinvoicetitle
@@ -1845,134 +2582,109 @@
                 name: open_chooseinvoicetitle
                 sidebar:
                   -
-                    link: /develop/api/open_chooseinvoicetitle/#chooseInvoiceTitle
-                    text: chooseInvoiceTitle
-                    name: open_chooseinvoicetitle_chooseInvoiceTitle
+                    link: /develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle
+                    text: swan.chooseInvoiceTitle
+                    name: open_chooseinvoicetitle_swan-chooseInvoiceTitle
               -
                 link: /develop/api/open_smartprogram
                 text: 打开小程序
                 name: open_smartprogram
                 sidebar:
                   -
-                    link: /develop/api/open_smartprogram/#navigateToSmartProgram
-                    text: navigateToSmartProgram
-                    name: open_smartprogram_navigateToSmartProgram
+                    link: /develop/api/open_smartprogram/#swan-navigateToSmartProgram
+                    text: swan.navigateToSmartProgram
+                    name: open_smartprogram_swan-navigateToSmartProgram
                   -
-                    link: /develop/api/open_smartprogram/#navigateBackSmartProgram
-                    text: navigateBackSmartProgram
-                    name: open_smartprogram_navigateBackSmartProgram
+                    link: /develop/api/open_smartprogram/#swan-navigateBackSmartProgram
+                    text: swan.navigateBackSmartProgram
+                    name: open_smartprogram_swan-navigateBackSmartProgram
+                  -
+                    link: /develop/api/open_smartprogram/#H5页面打开小程序
+                    text: H5页面打开小程序
+                    name: open_smartprogram_H5页面打开小程序                  
+
               -
-                link: /develop/api/open_infomation
-                text: 消息模板
-                name: open_infomation
+                link: /develop/api/pageinfo
+                text: 页面基础信息
+                name: pageinfo
                 sidebar:
                   -
-                    link: /develop/api/open_infomation/#getTemplateLibraryList
-                    text: getTemplateLibraryList
-                    name: open_infomation_getTemplateLibraryList
+                    link: /develop/api/pageinfo/#swan-setPageInfo
+                    text: swan.setPageInfo
+                    name: seo_swan-setPageInfo
                   -
-                    link: /develop/api/open_infomation/#getTemplateLibraryById
-                    text: getTemplateLibraryById
-                    name: open_infomation_getTemplateLibraryById  
+                    link: /develop/api/pageinfo/#swan-setMetaDescription
+                    text: swan.setMetaDescription
+                    name: seo_swan-setMetaDescription
                   -
-                    link: /develop/api/open_infomation/#addTemplate
-                    text: addTemplate
-                    name: open_infomation_addTemplate                          
+                    link: /develop/api/pageinfo/#swan-setMetaKeywords
+                    text: swan.setMetaKeywords
+                    name: seo_swan-setMetaKeywords
                   -
-                    link: /develop/api/open_infomation/#getTemplateList
-                    text: getTemplateList
-                    name: open_infomation_getTemplateList              
-                  -
-                    link: /develop/api/open_infomation/#deleteTemplate
-                    text: deleteTemplate
-                    name: open_infomation_deleteTemplate   
-                  -
-                    link: /develop/api/open_infomation/#sendTemplateMessage
-                    text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage  
-              -
-                link: /develop/api/seo
-                text: 配置seo
-                name: seo
-                sidebar:
-                  - 
-                    link: /develop/api/seo/#setMetaDescription
-                    text: setMetaDescription
-                    name: seo_setMetaDescription   
-                  - 
-                    link: /develop/api/seo/#setMetaKeywords
-                    text: setMetaKeywords
-                    name: seo_setMetaKeywords
-                  - 
-                    link: /develop/api/seo/#setDocumentTitle
-                    text: setDocumentTitle
-                    name: seo_setDocumentTitle                                      
+                    link: /develop/api/pageinfo/#swan-setDocumentTitle
+                    text: swan.setDocumentTitle
+                    name: seo_swan-setDocumentTitle
+
               -
                 link: /develop/api/open_preloadsubpackage
                 text: 分包预下载
                 name: open_preloadsubpackage
                 sidebar:
-                  - 
-                    link: /develop/api/open_preloadsubpackage/#loadSubPackage
-                    text: loadSubPackage
-                    name: open_preloadsubpackage_preloadSubPackage
-              -
-                link: /develop/api/open_feed
-                text: 信息流资源
-                name: open_feed
-                sidebar:
-                  - 
-                    link: /develop/api/open_feed/#submitresource
-                    text: submitresource
-                    name: open_feed_submitresource        
-                  - 
-                    link: /develop/api/open_feed/#deleteresource
-                    text: deleteresource
-                    name: open_feed_deleteresource  
-                  - 
-                    link: /develop/api/open_feed/#submitsitemap
-                    text: submitsitemap
-                    name: open_feed_submitsitemap                     
-                  - 
-                    link: /develop/api/open_feed/#deletesitemap
-                    text: deletesitemap
-                    name: open_feed_deletesitemap                      
+                  -
+                    link: /develop/api/open_preloadsubpackage/#swan-loadSubPackage
+                    text: swan.loadSubPackage
+                    name: open_preloadsubpackage_swan-preloadSubPackage
+              
 
-        -
-            sidebar:
               -
                 link: /develop/api/get
                 text: 更新
                 name: get
                 sidebar:
                   -
-                    link: /develop/api/get/#getUpdateManager
-                    text: getUpdateManager
-                    name: get_getUpdateManager 
-        -
-            sidebar:
+                    link: /develop/api/get/#swan-getUpdateManager
+                    text: swan.getUpdateManager
+                    name: get_swan-getUpdateManager
+                  -
+                    link: /develop/api/get/#updateManager
+                    text: updateManager
+                    name: updateManager
+                    sidebar:                    
+                      -
+                        link: /develop/api/get/#updateManager-onCheckForUpdate
+                        text: updateManager.onCheckForUpdate
+                        name: get_updateManager-onCheckForUpdate
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateReady
+                        text: updateManager.onUpdateReady
+                        name: get_updateManager-onUpdateReady
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateFailed
+                        text: updateManager.onUpdateFailed
+                        name: get_updateManager-onUpdateFailed
+                      -
+                        link: /develop/api/get/#updateManager-applyUpdate
+                        text: updateManager.applyUpdate
+                        name: get_updateManager-applyUpdate
+
               -
                 link: /develop/api/debug
                 text: 调试
                 name: debug
                 sidebar:
                   -
-                    link: /develop/api/debug/#setEnableDebug
-                    text: setEnableDebug
-                    name: debug_setEnableDebug    
-        -
-            sidebar:
+                    link: /develop/api/debug/#swan-setEnableDebug
+                    text: swan.setEnableDebug
+                    name: debug_swan-setEnableDebug
               -
                 link: /develop/api/data
                 text: 数据分析
                 name: data
                 sidebar:
                   -
-                    link: /develop/api/data/#reportAnalytics
-                    text: reportAnalytics
-                    name: data_reportAnalytics        
-        -
-            sidebar:
+                    link: /develop/api/data/#swan-reportAnalytics
+                    text: swan.reportAnalytics
+                    name: data_swan-reportAnalytics
               -
                 link: /develop/api/timer
                 text: 定时器
@@ -1981,7 +2693,7 @@
                   -
                     link: /develop/api/timer/#clearInterval
                     text: clearInterval
-                    name: timer_clearInterval     
+                    name: timer_clearInterval
                   -
                     link: /develop/api/timer/#clearTimeout
                     text: clearTimeout
@@ -1991,20 +2703,102 @@
                     text: setInterval
                     name: timer_setInterval
                   -
-                    link: /develop/api/timer/#etTimeout
+                    link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout                                                                                            
+                    name: timer_setTimeout   
     -
-      link: /develop/devtools/show_sur
+      link: /develop/serverapi
+      text: 服务端 API
+      name: serverapi
+      sidebar:
+        - 
+          sidebar: 
+            
+              -
+                link: /develop/serverapi/open_feed
+                text: 信息流资源
+                name: open_feed
+                sidebar:
+                  -
+                    link: /develop/serverapi/open_feed/#submitresource
+                    text: submitresource
+                    name: open_feed_submitresource
+                  -
+                    link: /develop/serverapi/open_feed/#deleteresource
+                    text: deleteresource
+                    name: open_feed_deleteresource
+                  -
+                    link: /develop/serverapi/open_feed/#submitsitemap
+                    text: submitsitemap
+                    name: open_feed_submitsitemap
+                  -
+                    link: /develop/serverapi/open_feed/#deletesitemap
+                    text: deletesitemap
+                    name: open_feed_deletesitemap          
+              -
+                link: /develop/serverapi/open_infomation
+                text: 模板消息
+                name: open_infomation
+                sidebar:
+                  -
+                    link: /develop/serverapi/open_infomation/#使用场景
+                    text: 使用场景
+                    name: open_infomation_使用场景
+                  -
+                    link: /develop/serverapi/open_infomation/#功能介绍
+                    text: 功能介绍
+                    name: open_infomation_功能介绍
+                  -
+                    link: /develop/serverapi/open_infomation/#使用说明
+                    text: 使用说明
+                    name: open_infomation_使用说明
+                  -
+                    link: /develop/serverapi/open_infomation/#下发条件说明
+                    text: 下发条件说明
+                    name: open_infomation_下发条件说明
+                  -
+                    link: /develop/serverapi/open_infomation/#getTemplateLibraryList
+                    text: getTemplateLibraryList
+                    name: open_infomation_getTemplateLibraryList
+                  -
+                    link: /develop/serverapi/open_infomation/#getTemplateLibraryById
+                    text: getTemplateLibraryById
+                    name: open_infomation_getTemplateLibraryById
+                  -
+                    link: /develop/serverapi/open_infomation/#addTemplate
+                    text: addTemplate
+                    name: open_infomation_addTemplate
+                  -
+                    link: /develop/serverapi/open_infomation/#getTemplateList
+                    text: getTemplateList
+                    name: open_infomation_getTemplateList
+                  -
+                    link: /develop/serverapi/open_infomation/#deleteTemplate
+                    text: deleteTemplate
+                    name: open_infomation_deleteTemplate
+                  -
+                    link: /develop/serverapi/open_infomation/#sendTemplateMessage
+                    text: sendTemplateMessage
+                    name: open_infomation_sendTemplateMessage   
+              -
+                link: /develop/serverapi/power_exp
+                text: 开发者服务权限说明
+                name: power_exp                   
+
+          
+    -
+      link: /develop/devtools/history
       text: 工具
       name: devtools
       sidebar:
         -
-            sidebar:
+            text: 下载
+            name: history
+            sidebar:  
               -
-                link: /develop/devtools/move
-                text: 搬家工具
-                name: move        
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history              
         -
             text: 界面
             name: show
@@ -2045,7 +2839,7 @@
                   -
                     link: /develop/devtools/smartappdebug_function/#调试器
                     text: 调试器
-                    name: smartappdebug_function_调试器                  
+                    name: smartappdebug_function_调试器
               -
                 link: /develop/devtools/smartappdebug_tool
                 text: 调试工具
@@ -2079,6 +2873,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Sensors-panel
                     text: Sensors panel
                     name: smartappdebug_tool_Sensors-panel
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Swan-audits
+                    text: Swan audits
+                    name: smartappdebug_tool_Swan-audits
               -
                 link: /develop/devtools/smartappdebug_pre
                 text: 预览发布
@@ -2090,16 +2888,28 @@
               -
                 link: /develop/debug/remotedebugging
                 text: 远程调试
-                name: remotedebugging                   
-        # -
-        #     link: /develop/devtools/code
-        #     text: 代码片段
-        #     name: code 
-        #     sidebar:
-        #       -
-        #         link: /develop/devtools/code
-        #         text: 代码片段
-        #         name: code
+                name: remotedebugging
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/setting
+                text: 设置
+                name: setting   
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/cloudtext
+                text: 云测试
+                name: cloudtext                              
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/audits
+                text: 体验评分
+                name: audits                
         -
             link: /develop/devtools/projectconfig
             text: 配置文件及差异
@@ -2112,40 +2922,50 @@
                 name: projectconfig
               -
                 link: /develop/devtools/diff
-                text: 模拟器 API 与真机的实现差异
+                text: API 实现差异
                 name: diff
         -
+            sidebar:
+
+              -
+                link: /develop/devtools/code
+                text: 代码片段
+                name: code      
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/complation
+                text: 代码编译
+                name: complation                            
+        -
             link: /develop/devtools/uplog
-            text: 工具历史更新日志
+            text: 工具版本信息
             name: uplog
             sidebar:
+              -
+                link: /develop/devtools/toolversion
+                text: 工具版本分布
+                name: toolversion             
               -
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
                 name: uplog_tool
+                sidebar:
+                  -
+                    link: /develop/devtools/uplog_tool/#正式版更新日志
+                    text: 正式版更新日志
+                    name: uplog_tool_正式版更新日志
+                  -
+                    link: /develop/devtools/uplog_tool/#Beta-版更新日志
+                    text: Beta 版更新日志
+                    name: uplog_tool_Beta-版更新日志                    
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
-                name: uplog_compile             
+                name: uplog_compile
 
-    -
-      link: /develop/server/oauth_intr
-      text: 开放服务
-      name: server
-      sidebar:
-        -
-          link: /develop/server/power
-          text: 开发者服务相关接口
-          name: power
-          sidebar:
-            -
-              link: /develop/server/power_exp
-              text: 开发者服务权限说明
-              name: power_exp
-            # -
-            #   link: /develop/server/power_api
-            #   text: 各服务接口
-            #   name: power_api
+    
     -
       link: /develop/server/oauth_intr
       text: 第三方接入
@@ -2153,7 +2973,7 @@
       sidebar:
         -
           link: /develop/third/pro
-          text:  
+          text:
           name: pro
           sidebar:
             -
@@ -2162,7 +2982,7 @@
               name: pro
         -
           link: /develop/third/module
-          text:  
+          text:
           name: module
           sidebar:
             -
@@ -2172,7 +2992,7 @@
 
         -
           link: /develop/third/apppage
-          text:  
+          text:
           name: apppage
           sidebar:
             -
@@ -2181,25 +3001,34 @@
               name: apppage
         -
           link: /develop/third/info
-          text:  
+          text:
           name: info
           sidebar:
             -
               link: /develop/third/info
               text: 基础信息设置
-              name: info  
+              name: info
+        -
+          link: /develop/third/api
+          text:
+          name: api
+          sidebar:
+            -
+              link: /develop/third/api
+              text: 模板消息 
+              name: api              
         -
           link: /develop/third/upload
-          text:  
+          text:
           name: upload
           sidebar:
             -
               link: /develop/third/upload
               text: 图片上传
-              name: upload               
+              name: upload
         -
           link: /develop/third/login
-          text:  
+          text:
           name: login
           sidebar:
             -
@@ -2208,22 +3037,56 @@
               name: login
         -
           link: /develop/third/address
-          text:  
+          text:
           name: address
           sidebar:
             -
               link: /develop/third/address
               text: 修改服务器地址
-              name: address              
+              name: address
+        -
+          link: /develop/third/checkname
+          text:
+          name: checkname
+          sidebar:
+            -
+              link: /develop/third/checkname
+              text: 名称检测
+              name: checkname
+        - link: /develop/third/datastatistics
+          text:
+          name: datastatistics
+          sidebar:
+            - link: /develop/third/datastatistics
+              text: 数据统计分析
+              name: datastatistics
         -
           link: /develop/third/error
-          text:  
+          text:
           name: error
           sidebar:
             -
               link: /develop/third/error
               text: 通用错误码对照表
-              name: error            
+              name: error
+        -
+          link: /develop/third/deciphering
+          text:
+          name: deciphering
+          sidebar:
+            -
+              link: /develop/third/deciphering
+              text: 第三方平台消息加解密
+              name: deciphering
+        -
+          link: /develop/third/log
+          text:
+          name: log
+          sidebar:
+            -
+              link: /develop/third/log
+              text: 更新日志
+              name: log
     # -
     #   link: /develop/flow
     #   text: 搜索流量接入
@@ -2251,7 +3114,7 @@
     #   link: /develop/web
     #   text: Web 化配置
     #   name: web
-    #   sidebar:   
+    #   sidebar:
     #     -
     #       link: /develop/web/start
     #       text:
@@ -2269,11 +3132,161 @@
     #         -
     #           link: /develop/web/detail
     #           text: 代理域名配置详解
-    #           name: detail                
+    #           name: detail
+    -
+      link: /develop/function/webintroduction 
+      text: 功能开发
+      name: function
+      sidebar:
+        -
+          link: /develop/function/webintroduction 
+          text: Web 化开发
+          sidebar:       
+          -
+            link: /develop/function/webintroduction 
+            text: Web 化概述
+            name: webintroduction 
+          -
+            link: /develop/function/proposal 
+            text: Web 化开发建议
+            name: proposal            
+        -
+          link: /develop/function/invoke_process
+          text: 支付功能开发
+          sidebar:  
+          -
+            link: /introduction/pay
+            text: 百度收银台支付开通指引
+            name: pay                      
+          -
+            link: /develop/function/invoke_process 
+            text: 调用流程
+            name: invoke_process 
+          -
+            link: /develop/function/parameter
+            text: 核心参数获取与组装
+            name: parameter 
+          -
+            link: /develop/function/sign_v2
+            text: 签名与验签
+            name: sign_v2  
+          -
+            link: /develop/function/keygen_v2
+            text: 密钥生成
+            name: keygen_v2               
+          -
+            link: /develop/function/tune_up
+            text: 百度收银台接口
+            name: tune_up
+            sidebar: 
+                   
+              -
+                link: /develop/function/tune_up/#调起百度收银台
+                text: 调起百度收银台
+                name: tune_up_调起百度收银台
+              -
+                link: /develop/function/tune_up/#通知支付状态
+                text: 通知支付状态
+                name: tune_up_通知支付状态                       
+              -
+                link: /develop/function/tune_up/#支付状态查询
+                text: 支付状态查询
+                name: tune_up_支付状态查询
+              -
+                link: /develop/function/tune_up/#取消核销
+                text: 取消核销
+                name: tune_up_取消核销
+              -
+                link: /develop/function/tune_up/#申请退款
+                text: 申请退款
+                name: tune_up_申请退款
+              -
+                link: /develop/function/tune_up/#请求业务方退款审核
+                text: 请求业务方退款审核
+                name: tune_up_请求业务方退款审核
+              -
+                link: /develop/function/tune_up/#通知退款状态
+                text: 通知退款状态
+                name: tune_up_通知退款状态 
+
+          -
+            link: /develop/function/error_code
+            text: 错误码
+            name: error_code             
+          # -
+          #   link: /develop/function/faq_v2 
+          #   text: 支付 FAQ
+          #   name: faq_v2 
+       
+
+    -
+      link: /develop/swan/version
+      text: 基础库版本信息
+      name: swan
+      sidebar:
+        -
+          sidebar:
+            -
+              link: /develop/swan/client-lib
+              text: 基础库
+              name: client-lib            
+            -
+              link: /develop/swan/version
+              text: 版本分布
+              name: version
+            -
+              link: /develop/swan/shine
+              text: 与客户端版本映射关系
+              name: shine
+            -
+              link: /develop/swan/swanchangelog
+              text: 历史更新日志
+              name: swanchangelog  
+            -
+              link: /develop/swan/compatibility
+              text: 兼容性说明
+              name: compatibility 
+    -
+      link: /develop/faq/frequently
+      text: FAQ
+      name: faq
+      sidebar:
+        -
+          sidebar:            
+  
+            -
+              link: /develop/faq/frequently
+              text: 基础功能常见问题
+              name: frequently 
+            # -
+            #   link: /develop/function/faq_v2 
+            #   text: 支付常见问题
+            #   name: faq_v2               
+    #         -
+    #           link: /develop/faq/confaq 
+    #           text: 组件常见问题
+    #           name: confaq               
+    #         -
+    #           link: /develop/faq/apifaq 
+    #           text: API 常见问题
+    #           name: apifaq  
+    #         -
+    #           link: /develop/faq/toolfaq 
+    #           text: 工具常见问题
+    #           name: toolfaq        
+    #         -
+    #           link: /develop/faq/web 
+    #           text: web 化常见问题
+    #           name: web    
+    #         -
+    #           link: /develop/faq/web-view
+    #           text: web-view常见问题
+    #           name: web-view                                                                    
 # 4
 -
   link: /data/concept
   text: 数据
+  nickname: 小程序数据
   name: data
   nav:
     -
@@ -2303,23 +3316,23 @@
               -
                 link: /data/concept/#来源分析
                 text: 来源分析
-                name: concept_来源分析  
+                name: concept_来源分析
               -
                 link: /data/concept/#留存分析
                 text: 留存分析
-                name: concept_留存分析  
+                name: concept_留存分析
               -
                 link: /data/concept/#转化分析
                 text: 转化分析
-                name: concept_转化分析              
+                name: concept_转化分析
           -
             link: /data/custom
             text: 自定义事件分析
-            name: custom                                                                           
+            name: custom
           -
             link: /data/guideline
             text: 指标说明
-            name: guideline 
+            name: guideline
             sidebar:
               -
                 link: /data/guideline/#用户类指标
@@ -2344,16 +3357,16 @@
               -
                 link: /data/guideline/#数据分析维度
                 text: 数据分析维度
-                name: guideline_数据分析维度   
+                name: guideline_数据分析维度
 
-                                                                                           
+
     -
       link: /data/custom
       text: 统计方法
       name: book
       sidebar:
         -
-          sidebar:                   
+          sidebar:
           -
             link: /data/performance-point
             text: 手工埋点统计
@@ -2361,7 +3374,7 @@
           -
             link: /data/scene
             text: 场景值
-            name: scene          
+            name: scene
 # 5
 -
   link: /operations/specification
@@ -2383,10 +3396,37 @@
             link: /operations/service
             text: 服务条款
             name: service
+    -
+      link: /operations/game
+      text: 百度小游戏特别规范
+      name: operations_game
+      sidebar:
+        -
+          sidebar:
+          -
+            link: /operations/game
+            text: 百度小游戏特别规范
+            name: operations_game
+
           # -
           #   link: /operations/standard
           #   text: 审核标准
-          #   name: standard 
+          #   name: standard
+    -
+      link: /operations/thirdparty
+      text: 第三方平台范围及条款
+      name: book
+      sidebar:
+        -
+          sidebar:
+          -
+            link: /operations/thirdparty_agreement
+            text: 第三方服务条款
+            name: thirdparty_agreement        
+          -
+            link: /operations/thirdparty_low
+            text: 第三方平台授权法律条款
+            name: thirdparty_low
 # #6
 # -
 #   link: ../forum

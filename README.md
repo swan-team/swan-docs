@@ -115,4 +115,4 @@ nav.yml 例子如下
 
 ### 控制在不同设备中显示
 
-只在pc端显示添加 `class="ispc"` ，只在手百端显示添加 `class="isbox"` ，只在除手百外移动端显示添加 `class="ismobile"` ，参考 [设计-重创新](http://localhost:4000/docs/docs/design/principle/innovation/) 实现。  
+只在pc端显示添加 `class="ispc"` ，只在百度 App端显示添加 `class="isbox"` ，只在除百度 App外移动端显示添加 `class="ismobile"` ，参考 [设计-重创新](http://localhost:4000/docs/docs/design/principle/innovation/) 实现。  

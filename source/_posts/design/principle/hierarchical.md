@@ -8,35 +8,34 @@ sidebar: hierarchical
 
 ## 信息设计重点明确
 
-设计界面信息时，请注意根据内容的重要程度设计其层级主次，以帮助用户更简单地获取所需要的信息和做出判断。可以通过更大的字体、更强的文字体量、更明显的颜色等为内容赋予更强的展现，详见[布局排版](../../foundation/layout)。
+设计界面信息时，请注意根据内容的重要程度设计其层级主次，以帮助用户更简单地获取所需要的信息和做出判断。可以通过更大的字体、更重的文字体量、更明显的颜色等为内容赋予更强的展现，详见[布局排版](../../foundation/layout)。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/principle/2-1-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">字体大号加粗的标题最突出，正文字体小颜色浅的辅助信息展现能力较弱。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">标题文字使用较大字号、加粗，正文文字使用较小字体，有利于信息的阅读。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/principle/2-1-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">所有信息都强，分散阅读时的注意力，影响信息传递。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">所有文字都使用较大字号且加粗，阅读时容易分散注意力，影响信息传递。</p>
 	</div>
 </div>
 
-适当地省略重复信息，合理的排版，使浏览更加轻松。
+提炼内容，精简表达，通过合理的排版突出主次。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/principle/2-2-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">除了字体大小不同，上下排版也使需要使的重点信息更突出。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">通过不同的字体大小和排版，使重点信息更突出。</p>
 	</div>
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/principle/2-2-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">对主次信息的混排、冗余的文案穿插均让找关键信息变得困难。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">主次信息的混排、冗余的文案穿插，让找关键信息变得困难。</p>
 	</div>
 </div>
 
 ## 功能操作主次分明
-
-当希望对用户的下一步功能操作进行引导时，应为推荐的主操作按钮设计更显眼的样式。详见[按钮](../../component/button)。
+当希望对用户的下一步功能操作进行引导时，应为推荐的主操作按钮设计更明显的样式。详见[按钮](../../component/button)。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -45,13 +44,13 @@ sidebar: hierarchical
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/principle/2-3-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">多平行操作，用户难以选择。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">按钮没有主次之分，增加用户选择判断成本。</p>
 	</div>
 </div>
 
 ## 反馈力度强弱适度
 
-在用户使用小程序时，会出现需要等待的场景。用户的耐心非常宝贵，为避免让用户面对一个静止的屏幕等待未知的结果，需要对当前状态及时反馈，告知用户当前小程序仍在正常运作，能降低用户使用过程中等待的焦虑感。
+在用户使用小程序时，会出现需要等待的场景。用户的耐心有限，为避免让用户面对一个静止的屏幕等待未知的结果，需要对当前状态及时反馈，告知用户当前小程序仍在正常运作，以此降低用户使用过程中等待的焦虑感。
 <br></br>
 ### 框架启动加载
 <div class="m-doc-custom-text-image">
@@ -83,8 +82,8 @@ sidebar: hierarchical
 	</div>
 </div>
 
-### 内容选择反馈
-用于页面内某个选项或输入区做出的用户选择的状态，并在当前操作区域反馈其选择状态,详见[选择](../../component/selection)。
+### 用户选项反馈
+用于反馈用户操作页面内选项的状态，详见[选择](../../component/selection)。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -105,7 +104,7 @@ sidebar: hierarchical
 	</div>
 </div>
 
-当选择项较多，或选项间有前向依赖时，可以使用浮层选择器承载内容。
+当选择项较多时，可以使用浮层选择器承载内容。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
  		<img src="../../../img/design/principle/2-8.png">
@@ -139,7 +138,7 @@ sidebar: hierarchical
 
 #### 全屏结果页
 在任务流程的最后一环，且结果反馈比较重要时，可使用全屏结果页向用户明确操作结果，并引导下一步操作。
-开发者可以根据场景需求自行开发，设计资源的[视觉组件库](https://smartprogram.baidu.com/docs/design/resource/uikit/)中也放置了基础视觉源文件，供快速开发使用。
+开发者可以根据场景需求自行开发，设计资源的[视觉组件库](../../resource/uikit/)中也放置了基础视觉源文件，供快速开发使用。
 
 
 <div class="m-doc-custom-examples">

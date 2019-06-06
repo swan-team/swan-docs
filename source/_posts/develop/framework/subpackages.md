@@ -11,7 +11,7 @@ sidebar: subpackages
 某些情况下，开发者需要将智能小程序划分成不同的子包，在构建时打包成不同的分包，用户在使用时按需进行加载。
 
 在智能小程序的打包中，默认会有一个主包，主包中包含了启动页面，和所有分包都会用到的公共资源/JS脚本。而分包则是根据开发者的配置划分的。
-> 整个小程序所有分包大小不超过 8M，单个分包大小不能超过 4M。
+> 整个小程序所有分包大小不超过 8M，单个分包/主包大小不能超过 2M。
 在小程序启动时，默认会下载主包并启动主包内页面，如果用户需要打开分包内某个页面，客户端会把对应分包下载下来，下载完成后再进行展示。
 
 将智能小程序按照业务特点合理的分包，可以提升智能小程序的加载速度，优化用户体验。
@@ -25,9 +25,21 @@ sidebar: subpackages
 ├── subpackage
 │   └── pages
 │       ├── subpageone
+│       │   ├── subpageone.swan
+│       │   ├── subpageone.css
+│       │   ├── subpageone.json
+│       │   └── subpageone.js
 │       └── suboagetwo
+│           ├── suboagetwo.swan
+│           ├── suboagetwo.css
+│           ├── suboagetwo.json
+│           └── suboagetwo.js
 ├── pages
 │   └── index
+        ├── index.swan
+│       ├── index.css
+│       ├── index.json
+│       └── index.js
 └── utils
 ```
 开发者通过在 app.json subPackages 字段声明项目分包结构：
@@ -35,14 +47,14 @@ sidebar: subpackages
 ```js
 {
     "pages": [
-        "page/index"
+        "page/index/index"
     ],
     "subPackages": [
         {
             "root": "subpackage",
             "pages": [
-                "pages/subpageone",
-                "pages/subpagetwo"
+                "pages/subpageone/subpageone",
+                "pages/subpagetwo/subpagetwo"
             ]
         }
     ]
@@ -74,7 +86,7 @@ subPackages 中，每个分包的配置有以下几项：
 
 **功能介绍**：开发者可以通过配置，在进入小程序某个页面时，由框架自动预下载可能需要的分包，提升进入后续分包页面时的启动速度。
 
-分包预下载目前即支持通过全局配置方式使用，也支持开发者通过调用API完成。
+分包预下载目前既支持通过全局配置方式使用，也支持开发者通过调用API完成。
 API调用方式参考：<a href="https://smartprogram.baidu.com/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">loadSubPackage</a>
 
 全局配置方法：

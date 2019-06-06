@@ -6,12 +6,12 @@ sidebar: empty_state
 ---
 
 ## 基础说明
-空态用于指示页面无法显示内容时的情况，如网络错误、无内容数据等场景等。
+空态用于指示页面无法显示内容时的情况，如网络错误、无内容数据等场景。
 
 基于页面整体样式的差异，应选择不同的空态展现形式：
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/component/empty_state/1.png">
-		<p class="m-doc-custom-examples-text">注意图标颜色在不同背景上的有效展示</p>
+		<p class="m-doc-custom-examples-text">注意图标颜色在不同背景上的有效展示。</p>
 	</div>
 </div>
 
@@ -35,9 +35,10 @@ sidebar: empty_state
 
 
 ## 图标
-一般使用功能型静态图标，根据页面功能，最直接传达场景语义。可参考以下示例：
+一般使用功能型静态图标，根据页面功能，直接传达场景语义。
+可参考以下示例：
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/component/empty_state/4-1.png">
+	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/component/empty_state/4.png">
 	</div>
 </div>
 

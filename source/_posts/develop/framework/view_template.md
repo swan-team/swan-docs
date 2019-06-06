@@ -29,7 +29,7 @@ name 属性，定义了模板的名字。`<template>`内定义代码片段，如
 
 ```xml
 <!-- template-demo.swan-->
-<template is="person-card" data="{{{person}}}" />
+<template is="person-card" data="{{{...person}}}" />
 
 ```
 

@@ -4,20 +4,20 @@ header: develop
 nav: api
 sidebar: open_authorize
 ---
-authorize
----
-**解释：** 提前向用户发起授权请求。调用后会立刻弹窗询问用户是否同意授权智能小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口。如果用户之前已经同意授权，则不会出现弹窗，直接返回成功。
+## swan.authorize
 
-**参数：**Object
+**解释**： 提前向用户发起授权请求。调用后会立刻弹出窗口，询问用户是否同意授权智能小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口。如果用户之前已经同意授权，则不会出现弹窗，直接返回成功。如果用户之前已经拒绝，则再次调用也不会弹窗，会执行 fail 回调，此时，可以通过 [openSetting](https://smartprogram.baidu.com/docs/develop/api/open_setting/#swan-openSetting/)  引导用户打开授权。
 
-**Object参数说明：**
+**方法参数**：Object object
 
-|参数名  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|scope  | String| 是  | 需要获取权限的 scope，详见 scope 列表。|
-|success |Function|    否  | 接口调用成功的回调函数|
-|fail |   Function  |  否  | 接口调用失败的回调函数|
-|complete  |  Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|scope  | String| 是  | -| 需要获取权限的 scope，详见 scope 列表。|
+|success |Function|    否  | -| 接口调用成功的回调函数|
+|fail |   Function  |  否  |  -|接口调用失败的回调函数|
+|complete  |  Function   | 否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **scope 列表**
 
@@ -31,13 +31,13 @@ authorize
 |scope.record | swan.getRecorderManager | 录音功能 |
 |scope.camera  | `<camera/>` | 摄像头|
 
-<!-- **success返回参数说明：**
+<!-- **success返回参数说明**：
 
 |参数名  |类型 | 说明|
 |---- | ---- | ---- |
 |errMsg | String | 调用结果| -->
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/1c146b06eae359ffd1d906646e32825c1540393715" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.authorize({
