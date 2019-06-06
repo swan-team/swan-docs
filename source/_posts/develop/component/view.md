@@ -139,34 +139,39 @@ sidebar: view
 * 在 swan 文件中
 
 ```html
-<view>
-    <view class="title">横向布局</view>
-    <view class="rowlike">
-        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200">
-            <text>A</text>
-        </view>
-        <view class="color-b">
-            <text>B</text>
-        </view>
-        <view class="color-c">
-            <text>C</text>
-        </view>
-    </view>
-</view>
+<view class="wrap">
+    <view class="title">横向滚动</view>
+    <scroll-view
+        scroll-x
+        class="scroll-view"
+        bind:scrolltoupper="toLeft"
+        bind:scrolltolower="toRight"
+        scroll-into-view="one"
+        upper-threshold="1"
+        lower-threshold="1"
+        bind:scroll="myscroll"
+    >
+        <view id="one"   class="color-a row-view">A</view>
+        <view id="two"   class="color-b row-view">B</view>
+        <view id="three" class="color-c row-view">C</view>
+    </scroll-view>
 
-<view class="bottom-block">
-    <view class="title">纵向布局</view>
-    <view class="collike">
-        <view class="color-a">
-            <text>A</text>
-        </view>
-        <view class="color-b">
-            <text>B</text>
-        </view>
-        <view class="color-c">
-            <text>C</text>
-        </view>
-    </view>
+    <view class="title">纵向滚动</view>
+    <scroll-view
+        scroll-y
+        class="scroll-view"
+        bind:scrolltoupper="upper"
+        bind:scrolltolower="lower"
+        scroll-into-view="four"
+        upper-threshold="10"
+        lower-threshold="10"
+        bind:scroll="myscroll"
+        enable-back-to-top="true"
+    >
+        <view id="four" class="color-a">A</view>
+        <view id="five" class="color-b">B</view>
+        <view id="six"  class="color-c">C</view>
+    </scroll-view>
 </view>
 ```
 * 在 js 文件中
@@ -209,6 +214,46 @@ Page({
 });
 ```
 
+* 在 css 文件中：
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.scroll-view {
+    height: 1.66rem;
+    white-space: nowrap;
+    padding: 0 .25rem;
+    font-size: 0;
+}
+.color-a,
+.color-b,
+.color-c {
+    height: 1.66rem;
+    line-height: 1.66rem;
+    text-align: center;
+    font-size: .16rem;
+    color: #fff;
+}
+
+.color-a {
+    background-color: #6895FF;
+}
+.color-b {
+    background-color: #8FB1FF;
+}
+.color-c {
+    background-color: #C3D1FF;
+}
+
+.row-view {
+    display: inline-block;
+    width: 100%;
+    height: 1.66rem;
+    line-height: 1.66rem;
+    font-size: 20px;
+}
+```
 
 
 

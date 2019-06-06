@@ -725,7 +725,7 @@
         -
             sidebar:
               -
-                link: /develop/component/list
+                link: /develop/component/componetlist
                 text: 组件列表
                 name: componetlist
               -
@@ -2162,7 +2162,7 @@
                   -
                     link: /develop/api/menu_info/#swan-getMenuButtonBoundingClientRect
                     text: swan.getMenuButtonBoundingClientRect
-                    name: menu_info_swan-getMenuButtonBoundingClientRect                    
+                    name: menu_info_swan-getMenuButtonBoundingClientRect                                     
               -
                 link: /develop/api/show_query
                 text: 节点信息
@@ -2645,6 +2645,28 @@
                     link: /develop/api/get/#swan-getUpdateManager
                     text: swan.getUpdateManager
                     name: get_swan-getUpdateManager
+                  -
+                    link: /develop/api/get/#updateManager
+                    text: updateManager
+                    name: updateManager
+                    sidebar:                    
+                      -
+                        link: /develop/api/get/#updateManager-onCheckForUpdate
+                        text: updateManager.onCheckForUpdate
+                        name: get_updateManager-onCheckForUpdate
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateReady
+                        text: updateManager.onUpdateReady
+                        name: get_updateManager-onUpdateReady
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateFailed
+                        text: updateManager.onUpdateFailed
+                        name: get_updateManager-onUpdateFailed
+                      -
+                        link: /develop/api/get/#updateManager-applyUpdate
+                        text: updateManager.applyUpdate
+                        name: get_updateManager-applyUpdate
+
               -
                 link: /develop/api/debug
                 text: 调试
@@ -2765,10 +2787,18 @@
 
           
     -
-      link: /develop/devtools/show_sur
+      link: /develop/devtools/history
       text: 工具
       name: devtools
       sidebar:
+        -
+            text: 下载
+            name: history
+            sidebar:  
+              -
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history              
         -
             text: 界面
             name: show
@@ -2900,7 +2930,14 @@
               -
                 link: /develop/devtools/code
                 text: 代码片段
-                name: code                 
+                name: code      
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/complation
+                text: 代码编译
+                name: complation                            
         -
             link: /develop/devtools/uplog
             text: 工具版本信息
@@ -3015,7 +3052,14 @@
             -
               link: /develop/third/checkname
               text: 名称检测
-              name: checkname              
+              name: checkname
+        - link: /develop/third/datastatistics
+          text:
+          name: datastatistics
+          sidebar:
+            - link: /develop/third/datastatistics
+              text: 数据统计分析
+              name: datastatistics
         -
           link: /develop/third/error
           text:
@@ -3090,20 +3134,91 @@
     #           text: 代理域名配置详解
     #           name: detail
     -
-      link: /develop/web/webintroduction 
-      text: Web 化
-      name: web
+      link: /develop/function/webintroduction 
+      text: 功能开发
+      name: function
       sidebar:
         -
-          sidebar:
-            -
-              link: /develop/web/webintroduction 
-              text: Web 化概述
-              name: webintroduction 
-            -
-              link: /develop/web/proposal
-              text: 开发建议
-              name: proposal             
+          link: /develop/function/webintroduction 
+          text: Web 化开发
+          sidebar:       
+          -
+            link: /develop/function/webintroduction 
+            text: Web 化概述
+            name: webintroduction 
+          -
+            link: /develop/function/proposal 
+            text: Web 化开发建议
+            name: proposal            
+        -
+          link: /develop/function/invoke_process
+          text: 支付功能开发
+          sidebar:  
+          -
+            link: /introduction/pay
+            text: 百度收银台支付开通指引
+            name: pay                      
+          -
+            link: /develop/function/invoke_process 
+            text: 调用流程
+            name: invoke_process 
+          -
+            link: /develop/function/parameter
+            text: 核心参数获取与组装
+            name: parameter 
+          -
+            link: /develop/function/sign_v2
+            text: 签名与验签
+            name: sign_v2  
+          -
+            link: /develop/function/keygen_v2
+            text: 密钥生成
+            name: keygen_v2               
+          -
+            link: /develop/function/tune_up
+            text: 百度收银台接口
+            name: tune_up
+            sidebar: 
+                   
+              -
+                link: /develop/function/tune_up/#调起百度收银台
+                text: 调起百度收银台
+                name: tune_up_调起百度收银台
+              -
+                link: /develop/function/tune_up/#通知支付状态
+                text: 通知支付状态
+                name: tune_up_通知支付状态                       
+              -
+                link: /develop/function/tune_up/#支付状态查询
+                text: 支付状态查询
+                name: tune_up_支付状态查询
+              -
+                link: /develop/function/tune_up/#取消核销
+                text: 取消核销
+                name: tune_up_取消核销
+              -
+                link: /develop/function/tune_up/#申请退款
+                text: 申请退款
+                name: tune_up_申请退款
+              -
+                link: /develop/function/tune_up/#请求业务方退款审核
+                text: 请求业务方退款审核
+                name: tune_up_请求业务方退款审核
+              -
+                link: /develop/function/tune_up/#通知退款状态
+                text: 通知退款状态
+                name: tune_up_通知退款状态 
+
+          -
+            link: /develop/function/error_code
+            text: 错误码
+            name: error_code             
+          # -
+          #   link: /develop/function/faq_v2 
+          #   text: 支付 FAQ
+          #   name: faq_v2 
+       
+
     -
       link: /develop/swan/version
       text: 基础库版本信息
@@ -3131,18 +3246,22 @@
               link: /develop/swan/compatibility
               text: 兼容性说明
               name: compatibility 
-    # -
-    #   link: /develop/faq/web-view
-    #   text: FAQ
-    #   name: faq
-    #   sidebar:
-    #     -
-    #       sidebar:            
+    -
+      link: /develop/faq/frequently
+      text: FAQ
+      name: faq
+      sidebar:
+        -
+          sidebar:            
   
-    #         -
-    #           link: /develop/faq/frameworkfaq 
-    #           text: 框架常见问题
-    #           name: frameworkfaq  
+            -
+              link: /develop/faq/frequently
+              text: 基础功能常见问题
+              name: frequently 
+            # -
+            #   link: /develop/function/faq_v2 
+            #   text: 支付常见问题
+            #   name: faq_v2               
     #         -
     #           link: /develop/faq/confaq 
     #           text: 组件常见问题

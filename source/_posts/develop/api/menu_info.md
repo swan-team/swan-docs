@@ -16,14 +16,16 @@ sidebar: menu_info
 
 **返回参数说明**：
 
-|参数 | 类型 | 说明|
-|---- | ---- | ---- |
-|width  |  number | 宽度，单位：px  |
-|height  |  number | 高度，单位：px |
-|top  |  number | 上边界坐标，单位：px  |
-|right  |  number | 右边界坐标，单位：px  |
-|bottom  |  number | 下边界坐标，单位：px  |
-|left  |  number | 左边界坐标，单位：px  |
+|参数	|类型	|说明|
+|--|--|--|
+|width|	number|	宽度，单位：px|
+|height|	number	|高度，单位：px|
+|top	|number|	上边界坐标，单位：px|
+|right|	number|	右边界坐标，单位：px|
+|bottom|	number	|下边界坐标，单位：px|
+|left	|number|	左边界坐标，单位：px|
+ 
+
 
 **示例**：
 

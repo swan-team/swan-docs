@@ -723,35 +723,90 @@ Page({
 | color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
 
 **示例**：
-<a href="swanide://fragment/a6506042f44f66d158d733ceb336504e1540395739" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
-<radio-group bindchange="radioChange">
-    <label s-for="item in items">
-        <radio value="{{item.name}}"
-            checked="{{item.checked}}"
-            disabled="{{item.disabled}}"
-            color="#ff0000" />
-        {{item.value}}
-    </label>
-</radio-group>
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <radio-group bindchange="radioChange" class="radio-group">
+        <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
+        <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
+    </radio-group>
+
+    <view class="title">推荐示例</view>
+    <view class="item-wrap">
+        <radio-group bindchange="radioChange">
+            <label s-for="item in items" class="radio-background-active" for="{{item.id}}">
+                <view class="item">
+                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">&nbsp;&nbsp;{{item.text}}</radio>
+                </view>
+            </label>
+        </radio-group>
+    </view>
+</view>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
     data: {
         items: [
-            {name: 'USA', value: '美国'},
-            {name: 'CHN', value: '中国', checked: true},
-            {name: 'BRA', value: '巴西'},
-            {name: 'JPN', value: '日本'},
-            {name: 'ENG', value: '英国', disabled: true},
-            {name: 'TUR', value: '法国'}
-        ]
+            {
+                value: 'have',
+                text: '选中选项',
+                checked: true,
+                id: 1
+            },
+            {
+                value: 'have',
+                text: '未选中选项',
+                id: 2
+            },
+            {
+                value: 'none',
+                text: '未选中选项',
+                id: 3
+            }
+        ],
+        result: []
     },
-    radioChange: function(e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+    radioChange: e => {
+        console.log(e);
+    },
+    formSubmit: e => {
+        console.log(e);
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+
+.radio {
+    margin: 0 .25rem;
+}
+.item-wrap {
+    background: #fff;
+}
+.item {
+    padding: .15rem 0;
+    border-bottom: 1px #f5f5f5 solid;
+    margin-left: .25rem;
+}
+.radio-background-active:active {
+    display: block;
+    background-color: #f2f2f2;
+}
+.switch {
+    float: right;
+}
 ```
 ## radio-group
 
@@ -763,6 +818,12 @@ Page({
 | 属性名 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | bindchange | EventHandle | &nbsp; | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
+
+**示例**：
+
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
 ## slider
 
@@ -786,66 +847,39 @@ Page({
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
 
 ```xml
-<!--- slider.swan --->
-<p>default</p>
-<slider></slider>
-<br/>
-<slider value="50"></slider>
-<br/>
-
-<p>disabled</p>
-<slider disabled></slider>
-<slider disabled value="50" step="20" showValue></slider>
-<br/>
-
-<p>swan-slider-demo</p>
-<slider showValue></slider>
-<br/>
-
-<slider showValue max="2000" min="200" step="50"></slider>
-<br/>
-<p>value=100 小于 min: 200</p>
-<slider showValue max="2000" min="200" step="50" value="100"></slider>
-<p>value=3000 大于于 max: 2000</p>
-<slider showValue max="2000" min="200" step="50" value="3000"></slider>
-<br/>
-
-
-<p>step: 20</p>
-<slider step="20" showValue></slider>
-<br/>
-<slider step="20" showValue value="20"></slider>
-
-<p>color</p>
-<slider step="20" showValue value="20" backgroundColor="red"></slider>
-<slider step="20" showValue value="20" backgroundColor="red" activeColor="green"></slider>
-
-<p>event</p>
-<slider bind:change="sliderChange" bind:changing="sliderChanging" showValue></slider>
+<view class="wrap">
+    <view class="title">设置step</view>
+    <slider min="0" max="1500" value="200" step="30" show-value bind:change="sliderChange"></slider>
+    <view class="title">显示当前value</view>
+    <slider min="0" max="1500" value="421" show-value bind:change="sliderChange"></slider>
+    <view class="title">设置最小最大值</view>
+    <slider min="200" max="1500" value="330" show-value bind:change="sliderChange"></slider>
+</view>
 
 ```
-
+* 在 js 文件中
 
 ```javascript
-// slider.js
 Page({
-    data: {
-        zztest: 'hzz780'
-    },
-    sliderChange: e ={
-        console.log('sliderChange', e, e.detail);
-    },
-    sliderChanging: e ={
-        console.log('sliderChanging', e, e.detail);
+    sliderChange(e) {
+        console.log(e);
     }
 });
-
 ```
 
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    padding: 0 .3rem;
+}
+```
 ## switch
 
 **解释**： 开关选择器
@@ -860,31 +894,60 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/429b88b3cb4862e1392395536a2ffd941540395596" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
 ```xml
-<!-- swith.swan -->
-<form bind:submit="formSubmit">
-    <switch name="switch1" type="checkbox" checked="false"></switch>
-    <switch name="switch2" color="red"></switch>
-    <switch name="switch3" checked></switch>
-    <switch name="switch4" checked="true"></switch>
-    <switch name="switch5" bind:change="changeEvent"></switch>
-    <button formType="submit">提交</button>
-    <button formType="reset">重置</button>
-</form>
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view>
+        <switch class="init-switch" checked></switch><text class="switch-text">开启</text>
+        <switch class="init-switch"></switch><text class="switch-text">关闭</text>
+    </view>
+
+    <view class="title">推荐示例</view>
+    <view class="item-wrap">
+        <view class="item">
+            <text>开启选项</text>
+            <switch checked class="switch"></switch>
+        </view>
+        <view class="item">
+            <text>关闭选项</text>
+            <switch class="switch"></switch>
+        </view>
+    </view>
+</view>
 
 ```
 
+* 在 css 文件中
 
-```javascript
-// switch.js
-changeEvent: e ={
-    console.log('change', e);
-},
-formSubmit: e ={
-    console.log('submit', e);
+```css
+.wrap {
+    font-size: .16rem;
 }
-
+.init-switch {
+    margin: 0 .05rem 0 .25rem;
+    vertical-align: middle;
+}
+.switch-text {
+    vertical-align: -.02rem;
+}
+.item-wrap {
+    background: #fff;
+}
+.item {
+    padding: .15rem 0;
+    border-bottom: 1px #f5f5f5 solid;
+    margin-left: .2rem;
+    position: relative;
+}
+.switch {
+    position: absolute;
+    top: 50%;
+    right: .2rem;
+    transform: translateY(-50%); 
+}
 ```
 
 **说明**:

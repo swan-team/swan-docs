@@ -42,8 +42,14 @@ sidebar: net_request
 2、对于 POST 方法且 header['content-type'] 为 application/json 的数据，会对数据进行 JSON 序列化；
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
+
+<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 **示例 1**
-<a href="swanide://fragment/ea0f77c0b00c111f9a4ed3f269412d861540397106" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
+**在 js 文件中**
+
 ```js
 swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
@@ -79,18 +85,18 @@ swan.request({
 
 ```js
 const requestTask = swan.request({
-    url: 'test.php', //仅为示例，并非真实的接口地址
+    url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
     data: {
-        x: '' ,
-        y: ''
+        tabname: '美食酒水'
     },
     header: {
         'content-type': 'application/json'
     },
-    success: function(res) {
+    success: function (res) {
         console.log(res.data)
     }
 });
+
 //取消请求任务
 requestTask.abort();
 ```

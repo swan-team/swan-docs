@@ -28,9 +28,32 @@ sidebar: ai_classify
 |log_id|	Number|	唯一的log id，用于问题定位。|
 |result_num|	Number|	返回结果数目，及result数组中的元素个数。|
 |result|	Array|	标签结果数组|
-|+keyword|	String|	图片中的物体或场景名称|
-|+score|Number	|置信度，0-1|
-|+root|	String|	识别结果的上层标签，有部分钱币、动漫、烟酒等tag无上层标签。|
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|keyword|	String|	图片中的物体或场景名称|
+|score|Number	|置信度，0-1|
+|root|	String|	识别结果的上层标签，有部分钱币、动漫、烟酒等tag无上层标签。|
+
+**示例**：
+
+<a href="swanide://fragment/f0f5c38f725ffc2be62f96eb4be8c3421559033876094" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.advancedGeneralIdentify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -67,20 +90,7 @@ sidebar: ai_classify
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.advancedGeneralIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 ## swan.ai.objectDetectIdentify
 
 **解释**：用户向服务请求检测图像中的主体位置。
@@ -103,11 +113,34 @@ swan.chooseImage({
 |---- | ---- | ---- |
 |log_id|Number|	唯一的log id，用于问题定位。|
 |result|	Object|	裁剪结果|
-|+left|    Number| 表示定位位置的长方形左上顶点的水平坐标。|
-|+top|     Number| 表示定位位置的长方形左上顶点的垂直坐标。|
-|+width|   Number| 表示定位位置的长方形的宽度。|
-|+height|  Number| 表示定位位置的长方形的高度。|
 
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|left|    Number| 表示定位位置的长方形左上顶点的水平坐标。|
+|top|     Number| 表示定位位置的长方形左上顶点的垂直坐标。|
+|width|   Number| 表示定位位置的长方形的宽度。|
+|height|  Number| 表示定位位置的长方形的高度。|
+
+
+**示例**：
+
+<a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.objectDetectIdentify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -122,20 +155,6 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.objectDetectIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
 
 ## swan.ai.carClassify
 
@@ -160,14 +179,43 @@ swan.chooseImage({
 |log_id|	Number|	唯一的log id，用于问题定位|
 |color_result|	string|	颜色|
 |result|	Array|	车型识别结果数组|
-|+name|	String|	车型名称，示例：宝马x6|
-|+score|	Number|	置信度，示例：0.5321|
-|+year|	String|	年份|
 |location_result|	Object|	车在图片中的位置信息|
-|+left|    Number| 左起像素位置|
-|+top|     Number| 上起像素位置|
-|+width|   Number| 像素宽|
-|+height|  Number| 像素高|
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|name|	String|	车型名称，示例：宝马x6|
+|score|	Number|	置信度，示例：0.5321|
+|year|	String|	年份|
+
+**location_result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|left|    Number| 左起像素位置|
+|top|     Number| 上起像素位置|
+|width|   Number| 像素宽|
+|height|  Number| 像素高|
+
+
+**示例**：
+
+<a href="swanide://fragment/84f5b4c3a32407d7bc015ad52ca892da1559034220848" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.carClassify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -220,20 +268,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.carClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.dishClassify
 
@@ -259,9 +294,34 @@ swan.chooseImage({
 |log_id|	Number|	唯一的log id，用于问题定位。|
 |result_num|	Number|	返回结果数目，及result数组中的元素个数。|
 |result|	Array|	菜品识别结果数组|
-|+name|	String|	菜名，示例：鱼香肉丝。|
-|+calorie|	Number|	卡路里，每100g的卡路里含量。|
-|+probability|	Number	|识别结果中每一行的置信度值，0-1。|
+
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|name|	String|	菜名，示例：鱼香肉丝。|
+|calorie|	Number|	卡路里，每100g的卡路里含量。|
+|probability|	Number	|识别结果中每一行的置信度值，0-1。|
+
+
+**示例**：
+
+<a href="swanide://fragment/cb45e8b18d6c3a029794d92983c61b8e1559034320412" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.dishClassify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -303,20 +363,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.dishClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.logoClassify
 
@@ -341,14 +388,45 @@ swan.chooseImage({
 |log_id|	Number|	唯一的log id，用于问题定位。|
 |result_num|	Number|	识别结果数，标识返回结果数目。|
 |result|	Array|	返回结果数组，每一项为一个识别出的logo。|
-|+type|     Number| type=0 为1千种高优商标识别结果；type=1 为2万类logo库的结果；其它type为自定义logo库结果。|
-|+name|     String| 识别的品牌名称|
-|+probability|     Number| 分类结果置信度（0--1.0）|
-|+location|	Object|	位置信息（左起像素位置、上起像素位置、像素宽、像素高）|
-|++left|	Number|	左起像素位置|
-|++top|		Number|	上起像素位置|
-|++width|	Number|	像素宽|
-|++height|	Number|	像素高|
+
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|type|     Number| type=0 为1千种高优商标识别结果；type=1 为2万类logo库的结果；其它type为自定义logo库结果。|
+|name|     String| 识别的品牌名称|
+|probability|     Number| 分类结果置信度（0--1.0）|
+|location|	Object|	位置信息（左起像素位置、上起像素位置、像素宽、像素高）|
+
+**location 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|left|	Number|	左起像素位置|
+|top|		Number|	上起像素位置|
+|width|	Number|	像素宽|
+|height|	Number|	像素高|
+
+
+**示例**：
+
+<a href="swanide://fragment/c318343cd552374941c434da1ffa9b611559034387688" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.logoClassify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -371,20 +449,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.logoClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.animalClassify
 
@@ -402,14 +467,38 @@ swan.chooseImage({
 |fail |   Function|    否  | -|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+**success 返回参数说明**
 
 |参数 |类型 |说明  |
 |---- | ---- | ---- |
 |log_id| Number|	唯一的log id，用于问题定位|
 |result| Array|	识别结果数组|
-|+name|	string|	动物名称，示例：蒙古马。|
-|+score|	Number|		置信度，示例：0.5321。|
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|name|	string|	动物名称，示例：蒙古马。|
+|score|	Number|		置信度，示例：0.5321。|
+
+
+**示例**：
+
+<a href="swanide://fragment/5f8c77146dce77806c690234f2e2d8161559034590812" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.animalClassify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -444,20 +533,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.animalClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 
 ## swan.ai.plantClassify
 
@@ -474,14 +550,37 @@ swan.chooseImage({
 |fail |   Function|    否  |-|     接口调用失败的回调函数|
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+**success 返回参数说明**
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
 |log_id|	Number|	唯一的log id，用于问题定位。|
 |result| Array|	识别结果数组|
-|+name| String|	植物名称，示例：吉娃莲。|
-|+score	|Number|	置信度，示例：0.5321。|
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|name| String|	植物名称，示例：吉娃莲。|
+|score	|Number|	置信度，示例：0.5321。|
+
+**示例**：
+
+<a href="swanide://fragment/d1c86b7451424a0fc11257035438df4e1559034681121" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
+swan.chooseImage({
+  success(res) {
+    let image = res.tempFilePaths[0];
+    swan.ai.plantClassify({
+      image,
+      success(res) {
+        console.log(res.result);
+      }
+    });
+  }
+});
+```
 
 **返回值示例**：
 ```json
@@ -512,20 +611,7 @@ swan.chooseImage({
 }
 ```
 
-**示例**：
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.plantClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
-});
-```
+
 <!-- ## recognizeImage
 
 > 需要[申请鉴权](http://wiki.baidu.com/pages/viewpage.action?pageId=597877755)，在 3.20.3 版本开始支持。
@@ -556,7 +642,7 @@ swan.chooseImage({
 
 ```javascript
 swan.recognizeImage({
-    categoryList: ['BARCODE'], 
+    categoryList: ['BARCODE'],
     index: 0,
     showTitle: true,
     success(res) {

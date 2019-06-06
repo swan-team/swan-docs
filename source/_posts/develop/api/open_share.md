@@ -29,7 +29,7 @@ sidebar: open_share
 
 **示例**：
 
-<a href="swanide://fragment/4f49285949da6c4da88c604eab59fd221558336632057" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -56,7 +56,7 @@ Page({
                 console.log('openShare success', res);
             },
             fail: function (err) {
-                console.log('openShare fail', res);
+                console.log('openShare fail', err);
             }
         });
     }

@@ -502,7 +502,7 @@ button {
 ```
 ## animation-view
 
-**解释**：Lottie动画组件
+**解释**：支持 Lottie 动画
 
 **属性说明**：
 

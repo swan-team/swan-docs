@@ -33,7 +33,7 @@ sidebar: open_chooseinvoicetitle
 
 **示例**：
 
-<a href="swanide://fragment/221045f8e71229f66348675cda93df511558342028259" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -53,7 +53,7 @@ page({
                 console.log('chooseInvoiceTitle success', res);
             },
             fail: function (err) {
-                console.log('chooseInvoiceTitle fail', res);
+                console.log('chooseInvoiceTitle fail', err);
             }
         });
     }

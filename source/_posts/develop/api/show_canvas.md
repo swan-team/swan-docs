@@ -1742,7 +1742,7 @@ console.log(metrics.width);
 
 **解释**：给定的 (x, y) 位置绘制文本描边的方法。
 
-**方法参数**：String text, Number x, Number y, Number maxWidt
+**方法参数**：String text, Number x, Number y, Number maxWidth
 
 **`text`参数说明**：要绘制的文本
 

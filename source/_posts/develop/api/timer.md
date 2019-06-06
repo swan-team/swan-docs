@@ -64,7 +64,7 @@ Page({
 
 **解释**：取消由 setInterval 设置的定时器。
 
-**方法参数**：Number ntervalID
+**方法参数**：Number intervalID
 
 **`intervalID`参数说明**：要取消的定时器的 ID。
 
