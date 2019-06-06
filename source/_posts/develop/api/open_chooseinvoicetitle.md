@@ -6,6 +6,8 @@ sidebar: open_chooseinvoicetitle
 ---
 ## swan.chooseInvoiceTitle
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
 **解释**： 选择用户的发票抬头，需要用户授权 scope.invoiceTitle。
 
 **方法参数**：Object object

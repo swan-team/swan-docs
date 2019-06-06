@@ -7,6 +7,8 @@ sidebar: open_smartprogram
 
 ## swan.navigateToSmartProgram
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
 **解释**： 打开另一个小程序。
 
 **方法参数**：Object object
@@ -78,6 +80,8 @@ Page({
 |402|访问控制校验失败| -->
 
 ## swan.navigateBackSmartProgram
+
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 返回到上一个小程序。
 

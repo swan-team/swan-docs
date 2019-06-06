@@ -8,6 +8,9 @@ sidebar: device_compass
 
 ## swan.onCompassChange
 
+> 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
+
+
 **解释**：监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。
 
 **方法参数**：Function callback
