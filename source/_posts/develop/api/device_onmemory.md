@@ -7,6 +7,8 @@ sidebar: device_onmemory
 
 ## swan.onMemoryWarning
 
+> 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
+
 **解释**：监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
 
 **方法参数**：Function callback
