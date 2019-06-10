@@ -447,13 +447,13 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 |bindcancel|	EventHandle| |		取消选择时触发|
 
-<notice>fields 有效值</notice>
+**fields 有效值**:
 
-|值 |说明 |
-|---- | ---- |
-|year |选择器粒度为年 |
-|month |选择器粒度为月份|
-|day |选择器粒度为天|
+| 值 | 说明 |
+| ---- | ---- |
+| year | 选择器粒度为年 |
+| month | 选择器粒度为月份 |
+| day | 选择器粒度为天 |
 
 **示例**：
 <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
@@ -892,6 +892,12 @@ Page({
 |disabled|	Boolean|	false|	是否禁用|
 |bindchange | EventHandle  | |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| switch | 切换样式 |
+| checkbox | 复选框样式 |
 
 **示例**：
 <a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
