@@ -87,3 +87,5 @@ sidebar: operating-environment
 * es6.reflect.set-prototype-of
 * es7.promise.finally
 * es6.array.iterato
+
+其他不在列表中说明的新特性，例如 await async等，目前暂不支持。
