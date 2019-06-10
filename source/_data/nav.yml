@@ -3393,6 +3393,10 @@
             text: 平台运营规范
             name: specification
           -
+            link: /operations/catagory
+            text: 服务类目
+            name: catagory            
+          -
             link: /operations/service
             text: 服务条款
             name: service
