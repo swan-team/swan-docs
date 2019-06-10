@@ -64,7 +64,7 @@ sidebar: nav
 ```
 `<navigator/>` 的子节点背景色应为透明色。
 **示例**：
-<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

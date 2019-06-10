@@ -49,7 +49,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |groupSetData|Function callback|立刻执行 callback ，其中的多个 setData 之间不会触发界面进行重复绘制|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">2.10.7</a>|
 
 **<div class="notice">示例： </div>**
-<a href="swanide://fragment/0fef06c66614299980e55bdb56cf34521545277337898" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0fef06c66614299980e55bdb56cf34521545277337898" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // 自定义组件js

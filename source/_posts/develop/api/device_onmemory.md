@@ -28,7 +28,7 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
 **示例**：
 
-<a href="swanide://fragment/fa0e47771625a386cdcb9b076efc0cf71557731171800" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fa0e47771625a386cdcb9b076efc0cf71557731171800" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -27,21 +27,36 @@ sidebar: open_setting
 
 
 **示例**：
-<a href="swanide://fragment/c98e352530eff43e682256b45b50d2721540396878" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1b12263b2caf52db8d7fce9f5420bf121560170167235" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <button bind:tap="openSetting" type="primary" hover-stop-propagation="true">打开设置</button>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.openSetting({
-    success: function (res) {
-        console.log(res.authSetting['scope.userInfo']);
-        console.log(res.authSetting['scope.userLocation']);
+Page({
+    data: {
+        title: 'openSetting'
+    },
+
+    openSetting() {
+        swan.openSetting({});
     }
 });
 ```
-<!-- #### 错误码
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
-|202|解析失败，请检查参数是否正确。| -->
+
 
 ## swan.getSetting
 
@@ -67,7 +82,7 @@ swan.openSetting({
 
 **示例**：
 
-<a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -100,19 +115,4 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确|
-|10001|内部错误|
-|10002|网络请求失败| -->
+ 

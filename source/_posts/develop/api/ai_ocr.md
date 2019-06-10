@@ -66,7 +66,7 @@ sidebar: ai_ocr
 
 **示例**：
 
-<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -187,7 +187,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -265,7 +265,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -374,7 +374,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

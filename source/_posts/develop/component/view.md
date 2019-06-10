@@ -19,7 +19,7 @@ sidebar: view
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
 **示例**：
-<a href="swanide://fragment/8dc160060d39fc11f07c82c73cb308431558613505857" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8dc160060d39fc11f07c82c73cb308431558613505857" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -134,7 +134,7 @@ sidebar: view
 **注意**：使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
 **示例**：
-<a href="swanide://fragment/401c9a44528a80b39a848baf565888641558613903593" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/401c9a44528a80b39a848baf565888641558613903593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -303,7 +303,7 @@ Page({
 |item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例**：
-<a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -532,7 +532,7 @@ Page({
 * movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
-<a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -676,7 +676,7 @@ movable-view {
 
 **示例**：
 
-<a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```html
@@ -760,7 +760,7 @@ controls {
 
 **示例**：
 
-<a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -27,7 +27,7 @@ sidebar: ad
 | feed | 流式类型 |
 
 **示例**：
-<a href="swanide://fragment/887f2bc9c844abf188eeefc57d2aa0b21559048217250" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/887f2bc9c844abf188eeefc57d2aa0b21559048217250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * banner 
 

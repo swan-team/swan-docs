@@ -62,7 +62,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -106,7 +106,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -185,7 +185,7 @@ Page({
 
 
 示例：
-<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -365,7 +365,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |-----|--- |--- |
 |for|String|绑定控件的 id|
 **示例**：
-<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```
 <view class="section">
@@ -456,7 +456,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | day | 选择器粒度为天 |
 
 **示例**：
-<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -621,7 +621,7 @@ Page({
 <div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
-<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -723,7 +723,7 @@ Page({
 | color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
 
 **示例**：
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -821,7 +821,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 > 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
@@ -847,7 +847,7 @@ Page({
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -900,7 +900,7 @@ Page({
 | checkbox | 复选框样式 |
 
 **示例**：
-<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```xml
@@ -991,7 +991,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 **示例代码**：
 
- <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+ <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

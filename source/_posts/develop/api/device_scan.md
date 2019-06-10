@@ -32,7 +32,7 @@ sidebar: device_scan
 
 **示例**：
 
-<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

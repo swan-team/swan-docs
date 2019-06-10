@@ -21,31 +21,194 @@ sidebar: device_accelerometer
 |z |Number |是|-|Z 轴|
 
 **示例**：
-<a href="swanide://fragment/0408f2415879e6fda656fd9f627e2ed81540399039" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8bdfb91cf02e7f883aeb075ad6029b6f1560168666817" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="page-top">
+        <view class="page-top-text">{{title}}</view>
+        <view class="page-top-line"></view>
+    </view>
+    <view class="page-body-canvas">
+        <image src="../images/gravity.png" class="page-body-ball"></image>
+        <canvas class="page-body-ball" show="{{true}}" canvas-id="small-ball"></canvas>
+    </view>
+    <view class="page-body-xyz">
+        <text class="page-body-title">X: {{x}}</text>
+        <text class="page-body-title">Y: {{y}}</text>
+        <text class="page-body-title">Z: {{z}}</text>
+    </view>
+    <view class="page-body-btn">
+        <view class="middle-btn {{!iswatch ? '' : 'disabled'}}" bind:tap="startWatch">开始监听</view>
+        <view class="middle-btn {{!iswatch ? 'disabled' : ''}}" bind:tap="stopWatch">停止监听</view >
+    </view>
+</view>
+```
+* 在 js 文件中
 
 ```javascript
-swan.onAccelerometerChange(function (res) {
-    console.log(res.x);
-    console.log(res.y);
-    console.log(res.z);
+Page({
+    data: {
+        title: '倾斜手机即可移动下方小球',
+        iswatch: true,
+        x: 0,
+        y: 0,
+        z: 0
+    },
+    onReady() {
+        this.position = {
+            x: 151,
+            y: 151,
+            vx: 0,
+            vy: 0,
+            ax: 0,
+            ay: 0
+        };
+        let self = this;
+        swan.onAccelerometerChange(function (res) {
+            self.setData({
+                x: res.x.toFixed(2),
+                y: res.y.toFixed(2),
+                z: res.z.toFixed(2)
+            });
+            self.position.ax = Math.sin(res.x * Math.PI / 2);
+            self.position.ay = -Math.sin(res.y * Math.PI / 2);
+
+        });
+        this.interval = setInterval(function () {
+            self.drawSmallBall();
+        }, 20);
+
+    },
+    onShow() {
+        let watch = this.getData('iswatch');
+        if (watch) {
+            swan.startAccelerometer();
+        } else {
+            swan.stopAccelerometer();
+        }
+    },
+    drawSmallBall() {
+        let p = this.position;
+        p.x = p.x + p.vx;
+        p.y = p.y + p.vy;
+        p.vx = p.vx + p.ax;
+        p.vy = p.vy + p.ay;
+
+        if (Math.sqrt(Math.pow(Math.abs(p.x) - 151, 2) + Math.pow(Math.abs(p.y) - 151, 2)) >= 115) {
+            if (p.x > 151 && p.vx > 0) {
+                p.vx = 0;
+            }
+            if (p.x < 151 && p.vx < 0) {
+                p.vx = 0;
+            }
+            if (p.y > 151 && p.vy > 0) {
+                p.vy = 0;
+            }
+            if (p.y < 151 && p.vy < 0) {
+                p.vy = 0;
+            }
+        }
+        let stx = this.createCanvasContext('small-ball');
+        stx.beginPath(0);
+        stx.arc(p.x, p.y, 15, 0, Math.PI * 2);
+        stx.setFillStyle('#3388FF');
+        stx.fill();
+        stx.draw();
+    },
+    startWatch() {
+        let self = this;
+        self.setData('iswatch', true);
+        swan.startAccelerometer();
+    },
+    stopWatch() {
+        this.setData('iswatch', false);
+        swan.stopAccelerometer();
+
+    },
+    onUnload() {
+        clearInterval(this.interval);
+    }
+
 });
 ```
-<!-- 
-#### 错误码
 
-**Andriod**
+* 在 css 文件中
 
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
+```css
+html,
+body {
+    background-color: #fff;
+}
+.wrap {
+    font-size: .15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-body-xyz {
+    display: flex;
+    justify-content: space-between;
+    width: 3rem;
+    text-align: center;
+    padding-top: .56rem;
+    color: #333;
+}
+.page-body-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 2.4rem;
+    text-align: center;
+    padding-top: .51rem;
+}
+.middle-btn {
+    margin: 0 auto .15rem;
+    width: 1.07rem;
+    height: .44rem;
+    line-height: .44rem;
+    font-size: .15rem;
+    color: #333;
+    position: relative;
+    border-radius: .1rem;
+}
+.middle-btn:before {
+    content: "";
+    pointer-events: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    border: 1px solid #333;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    border-radius: .1rem;
+}
+.disabled {
+    opacity: .3 !important;
+}
+/*canvas 端上支持渲染为px*/
+.page-body-canvas {
+    margin-top: .59rem;
+    width: 302px;
+    height: 302px;
+    position: relative;
 
-**iOS**
+}
+.page-body-ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 302px;
+    height: 302px;
+}
+```
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|设备不支持否正确| -->
 ## swan.startAccelerometer
 
 **解释**：开始监听加速度数据。
@@ -73,7 +236,7 @@ swan.onAccelerometerChange(function (res) {
 
 **示例**：
 
-<a href="swanide://fragment/a501faa11f55af692129a4255d8cb4901557731276197" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a501faa11f55af692129a4255d8cb4901557731276197" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -124,7 +287,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/20b393338d791fd53cc7ec673c0b086f1557731347532" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/20b393338d791fd53cc7ec673c0b086f1557731347532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
