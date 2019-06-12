@@ -8,6 +8,8 @@ sidebar: device_scan
 
 ## swan.scanCode
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
 **解释**：调起客户端扫码界面，扫码成功后返回对应的结果。
 
 **方法参数**：Object object
@@ -30,7 +32,7 @@ sidebar: device_scan
 
 **示例**：
 
-<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

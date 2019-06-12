@@ -42,29 +42,96 @@ sidebar: device_sys
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
 
 **示例**：
-<a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <view class="info-ctn">
+            <view class="info-item" s-for="item in infoList">
+                <text class="info-label">{{item.label}}：</text>
+                <text class="info-value">{{item.value}}</text>
+            </view>
+        </view>
+        <view class="btn-ctn">
+            <button bind:tap="getSystemInfo" type="primary" hover-stop-propagation="true">点击获取系统信息</button>
+            <button bind:tap="clearClick" hover-stop-propagation="true">清空</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSystemInfo({
-    success: function (res) {
-        console.log(res.model);
-        console.log(res.pixelRatio);
-        console.log(res.windowWidth);
-        console.log(res.windowHeight);
-        console.log(res.language);
-        console.log(res.version);
-        console.log(res.platform);
+Page({
+    data: {
+        title: 'getSystemInfo',
+        infoList: [{
+            label: '手机品牌',
+            key: 'brand',
+            value: ''
+        }, {
+            label: '手机型号',
+            key: 'model',
+            value: ''
+        }, {
+            label: '当前版本',
+            key: 'version',
+            value: ''
+        }, {
+            label: '屏幕宽度',
+            key: 'screenWidth',
+            value: ''
+        }, {
+            label: '屏幕高度',
+            key: 'screenHeight',
+            value: ''
+        }, {
+            label: 'DPI',
+            key: 'pixelRatio',
+            value: ''
+        }, {
+            label: '语言',
+            key: 'language',
+            value: ''
+        }]
+    },
+
+    getSystemInfo(e) {
+        swan.getSystemInfo({
+            success: res => {
+                // 更新数据
+                this.updateInfoList(res);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    },
+
+    clearClick() {
+        this.updateInfoList({});
+    },
+
+    updateInfoList(res) {
+        let infoList = this.getData('infoList');
+        for (let i = 0; i < infoList.length; ++i) {
+            infoList[i].value = res[infoList[i].key];
+        }
+        this.setData('infoList', infoList);
     }
 });
 ```
-<!-- #### 错误码
 
-<!-- **Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|402|安全性检查：访问控制校验失败。| -->
 
 ## swan.getSystemInfoSync
 
@@ -95,7 +162,7 @@ swan.getSystemInfo({
 
 **示例**：
 
-<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -149,7 +216,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -204,7 +271,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

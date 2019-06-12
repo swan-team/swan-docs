@@ -8,7 +8,7 @@ sidebar: device_direction
 
 ## swan.onDeviceMotionChange
 
-> 基础库 3.30.2 开始支持，低版本需做兼容处理。
+> 基础库 3.30.2 开始支持，低版本需做兼容处理。在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听设备方向变化事件。频率根据 swan.startDeviceMotionListening() 的 interval 参数。可以使用 swan.stopDeviceMotionListening() 停止监听。
 
@@ -24,7 +24,7 @@ sidebar: device_direction
 
 **示例**：
 
-<a href="swanide://fragment/0cbcd6927a69de03076fd28110c987e21557731615850" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0cbcd6927a69de03076fd28110c987e21557731615850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -82,7 +82,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/419eaaa0083d3956c3b32f632388750f1557731685135" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/419eaaa0083d3956c3b32f632388750f1557731685135" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -137,7 +137,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f211d7a7f1fb3b9aac48856b3fe463bb1557731761885" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f211d7a7f1fb3b9aac48856b3fe463bb1557731761885" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

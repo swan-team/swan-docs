@@ -15,6 +15,7 @@ sidebar: list
 
 * [web 化开发](http://smartprogram.baidu.com/docs/develop/function/webintroduction/)
 * [支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)
+* [数据缓存](http://smartprogram.baidu.com/docs/develop/function/storage/)
 
 ## 架构概述
 

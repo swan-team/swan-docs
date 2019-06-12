@@ -16,9 +16,29 @@ sidebar: base
 |size | Number  |23 |icon 的大小，单位是 px|
 |color | Color |   |icon 的颜色，同 css 的 color|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| success | 成功图标 |
+| info | 消息图标 |
+| warn | 警告图标 |
+| waiting | 等待图标 |
+| success_no_circle | 无圆形边框成功图标 |
+| clear | 删除图标 |
+| search | 搜索图标 |
+| personal | 人物图标 |
+| setting | 设置图标 |
+| top | 回到顶部图标 |
+| close | 关闭图标 |
+| cancel | 取消图标 |
+| download | 下载图标 |
+| checkboxSelected | 复选框选中图标 |
+| radioSelected | 单选框选中图标 |
+| radioUnselect | 单选框未选中图标 |
 
 **示例**：
-<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -123,7 +143,7 @@ icon:last-child {
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -286,8 +306,8 @@ Page({
 
 **说明**：
 
+* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
-* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
 * attrs 属性不支持 id ，支持 class。
@@ -299,7 +319,7 @@ Page({
 
 **示例**
 
-<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -473,22 +493,21 @@ button {
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例**：
-<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
-```xml
-
+```html
 <view class="wrap">
     <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
     <progress class="progress" percent="40" activeColor="#3c76ff" active />
     <progress class="progress" percent="60" activeColor="#3c76ff" active />
     <progress class="progress" percent="80" activeColor="#74fa7d" active />
 </view>
-
-``` 
+```
 
 * 在 css 文件中
+
 
 ```css
 .wrap {
@@ -500,7 +519,12 @@ button {
     border-radius: 3px;
 }
 ```
+
+
 ## animation-view
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 
 **解释**：支持 Lottie 动画
 
@@ -515,6 +539,14 @@ button {
 |hidden | Boolean  | 否 | true |是否隐藏动画|-|
 |bindended | EventHandle | 否 |   | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
+**action 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| play | 播放 |
+| pause | 暂停 |
+| stop | 停止 |
+
 **说明:**
 
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
@@ -523,7 +555,7 @@ button {
 
 **示例**：
 
-<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

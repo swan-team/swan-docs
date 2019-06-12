@@ -27,6 +27,21 @@ sidebar: nav
 |bindfail|	String| |		当target="miniProgram"时有效，跳转小程序失败 （android暂无法给出失败回调）|	2.5.2|
 |bindcomplete|	String|  |		当target="miniProgram"时有效，跳转小程序完成|	2.5.2|
 
+**target 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| self | 当前小程序 |
+| miniProgram | 跳转到另一个小程序 |
+
+**version 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| develop | 开发版 |
+| trial | 体验版 |
+| release | 正式版 |
+
 **open-type 有效值**：
 
 |值 |说明 |最低版本|
@@ -49,7 +64,7 @@ sidebar: nav
 ```
 `<navigator/>` 的子节点背景色应为透明色。
 **示例**：
-<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

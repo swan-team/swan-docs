@@ -2502,6 +2502,14 @@
                 name: open_authorize
                 sidebar:
                   -
+                    link: /develop/api/open_authorize/#需授权接口列表
+                    text: 需授权接口列表
+                    name: open_authorize_需授权接口列表
+                  -
+                    link: /develop/api/open_authorize/#获取用户授权设置
+                    text: 获取用户授权设置
+                    name: open_authorize_获取用户授权设置                                      
+                  -
                     link: /develop/api/open_authorize/#swan-authorize
                     text: swan.authorize
                     name: open_authorize_swan-authorize
@@ -3217,8 +3225,14 @@
           #   link: /develop/function/faq_v2 
           #   text: 支付 FAQ
           #   name: faq_v2 
-       
-
+        -
+          link: /develop/function/storage
+          text: 数据缓存
+          sidebar:       
+          -
+            link: /develop/function/storage
+            text: 数据缓存流程
+            name: storage       
     -
       link: /develop/swan/version
       text: 基础库版本信息
@@ -3256,7 +3270,7 @@
   
             -
               link: /develop/faq/frequently
-              text: 基础功能常见问题
+              text: 常见问题
               name: frequently 
             # -
             #   link: /develop/function/faq_v2 
@@ -3392,6 +3406,10 @@
             link: /operations/specification
             text: 平台运营规范
             name: specification
+          -
+            link: /operations/catagory
+            text: 服务类目
+            name: catagory            
           -
             link: /operations/service
             text: 服务条款

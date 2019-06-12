@@ -16,7 +16,7 @@ sidebar: data
 
 **示例**：
 
-<a href="swanide://fragment/18e398f43cf58a399f549916c7b9c9201558343090267" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/18e398f43cf58a399f549916c7b9c9201558343090267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
