@@ -33,7 +33,7 @@ sidebar: media
 |返回错误码|描述|
 |---- |---- |
 |1|获取资源过程被用户终止|
-|2|当下载时发生错误|
+|2|网络错误|
 |3|当解码时发生错误|
 |4|不支持音频|
 
@@ -272,6 +272,10 @@ Page({
 ![图片](../../../img/image-bottom-right.png)
 
 ## video
+
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 
 **解释**：视频
 
@@ -615,6 +619,9 @@ video {
 
 
 ## live-player
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 
 **解释**：实时视频播放
 

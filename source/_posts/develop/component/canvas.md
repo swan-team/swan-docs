@@ -6,6 +6,9 @@ sidebar: canvas
 ---
 
 ## canvas
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 **解释**：画布
 
 **属性说明**：
@@ -81,5 +84,5 @@ Page({
 ```
 
 **Bug & Tip**：
-1、canvas 组件是原生组件；
-2、canvas 组件不能使用动画进行控制；
+
+canvas 组件不能使用动画进行控制；

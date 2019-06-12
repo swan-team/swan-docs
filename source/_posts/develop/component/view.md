@@ -529,7 +529,7 @@ Page({
 * movable-view 默认为绝对定位，top 和 left 属性为 0px；
 * 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；
 * 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x 轴方向和 y 轴方向分开考虑）；
-* movable-view必须在<movable-area/>组件中，并且必须是直接子节点，否则不能移动。
+* movable-view必须在`<movable-area/>`组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
 <a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -670,6 +670,9 @@ movable-view {
 }
 ```
 ## cover-view
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 **解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图（支持图片、文本等）。
 
 **属性说明： **无
@@ -746,7 +749,9 @@ controls {
 
 ## cover-image
 
-**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
+
+**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
 
 **属性说明： **
 

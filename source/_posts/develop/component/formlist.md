@@ -159,8 +159,7 @@ Page({
 ```
 ## checkbox-group
 
-<div class="notice">解释： </div>多项选择器
-<div></div>
+**解释**：多项选择器
 
 **内部由多个 checkbox 组成**
 
@@ -170,10 +169,7 @@ Page({
 
 ## form
 
-<div class="notice">解释： </div>表单
-<div></div>
-
-将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
+**解释**：表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
 
 当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
 
@@ -213,6 +209,8 @@ Page({
 ```
 
 ## input
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 **解释**：输入框
 
@@ -720,7 +718,7 @@ Page({
 | value | String | &nbsp; | &lt;radio/&gt; 标识。当该 &lt;radio/&gt; 选中时，&lt;radio-group/&gt; 的 change 事件会携带 &lt;radio/&gt; 的 value |
 | checked | Boolean | false | 当前是否选中 |
 | disabled | Boolean | false | 是否禁用 |
-| color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
+| color | Color | #3c76ff| radio 的颜色，同 CSS 的 color |
 
 **示例**：
 <a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -888,7 +886,7 @@ Page({
 |---- | ---- | ---- |---- |
 |checked| Boolean| false| 是否选中|
 |type| String| switch| 样式，有效值：switch,checkbox|
-|color| Color| \#09bb07| switch 的颜色，同 CSS 的 color|
+|color| Color| #3388ff| switch 的颜色，同 CSS 的 color|
 |disabled|	Boolean|	false|	是否禁用|
 |bindchange | EventHandle  | |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
@@ -962,6 +960,9 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 
 ## textarea
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 
 **解释**：多行输入框。
 
