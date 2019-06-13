@@ -698,7 +698,11 @@
             -
               link: /develop/framework/whitescreen
               text: 白屏优化建议
-              name: whitescreen             
+              name: whitescreen      
+            -
+              link: /develop/framework/case
+              text: 案例介绍
+              name: case                     
         -
           link: /develop/framework/subpackages
           text: 运行时
