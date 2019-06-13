@@ -15,7 +15,7 @@ priority: 07-04
 常用的交互类开放接口 ：
 - [swan.login()](/game/api/openApi/login/#swan-login)
 - [swan.authorize()](/game/api/openApi/authorize/#swan-authorize)
-- [swan.getUserInfo()](http://localhost:4000/docs/game/api/openApi/openData/#swan-getUserInfo)
+- [swan.getUserInfo()](/game/api/openApi/openData/#swan-getUserInfo)
 
 ### 典型使用场景
 
