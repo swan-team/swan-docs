@@ -2567,7 +2567,10 @@
                     link: /develop/api/open_share/#swan-openShare
                     text: swan.openShare
                     name: open_share_swan-openShare
-
+                  -
+                    link: /develop/api/open_share/#页面分享跳转
+                    text: 页面分享跳转
+                    name: open_share_页面分享跳转
               -
                 link: /develop/api/open_chooseaddress
                 text: 选择收货地址
