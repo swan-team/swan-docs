@@ -10,10 +10,7 @@ sidebar: publish
 
 > 具体调试方法请参考<a href="https://smartprogram.baidu.com/docs/develop/devtools/smartappdebug_function/">调试</a>章节。
 
-## Web 化
-在工具菜单栏单击“项目信息”，在弹出框中勾选“web化能力”，即可接入自然搜索。
 
-![图片](../../../img/framwork/web.png)
 
 ## 预览
 

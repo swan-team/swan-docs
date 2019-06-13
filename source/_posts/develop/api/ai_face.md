@@ -9,19 +9,19 @@ sidebar: ai_face
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-**解释：**人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。
+**解释**：人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----| 
 |image | string | 是 | -| 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
 |image_type | string | 是 | -| 图片类型。<br>**· BASE64:**图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>**· URL**: 图片的 URL 地址(可能由于网络等原因导致下载图片时间过长)；<br>**· FACE_TOKEN**: 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
 |face_field | string | 否 | -| 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 | 
-|max_face_num | string | 否 | -| 最多处理人脸的数目，默认值为 1 ，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
-|face_type | string | 否 | -| 人脸的类型。<br>**· LIVE 表示生活照**：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>**· IDCARD 表示身份证芯片照**：二代身份证内置芯片中的人像照片；<br>**· WATERMARK 表示带水印证件照**：一般为带水印的小图，如公安网小图；<br>**· CERT 表示证件照片**：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
+|max_face_num | string | 否 | 1| 最多处理人脸的数目，默认值为 1 ，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
+|face_type | string | 否 |LIVE| 人脸的类型。<br>**· LIVE 表示生活照**：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>**· IDCARD 表示身份证芯片照**：二代身份证内置芯片中的人像照片；<br>**· WATERMARK 表示带水印证件照**：一般为带水印的小图，如公安网小图；<br>**· CERT 表示证件照片**：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
 |success | Function | 否 | -| 接口调用成功后的回调函数 | 
 |fail | Function | 否 |  -|接口调用失败的回调函数 | 
 |complete|	Function|	否	| -|接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -155,9 +155,11 @@ sidebar: ai_face
 |right_cheek| number |右脸颊遮挡比例，[0-1] ，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1] ，1 表示完全遮挡。|
 
-
 **示例代码**
-```
+
+<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
@@ -171,9 +173,10 @@ swan.chooseImage({
   }
 });
 ```
+
 **返回值示例**
 
-```
+```js
 {	
   "face_num": 1,
   "face_list": [
@@ -248,6 +251,7 @@ swan.chooseImage({
 ```
 
 
+
 ##  swan.ai.faceMatch
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
@@ -255,9 +259,9 @@ swan.chooseImage({
 **解释**：人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。
 
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -290,6 +294,9 @@ swan.chooseImage({
 |face_token|string |人脸的唯一标志|
 
 **示例代码**
+
+<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceMatch({
   data: [
@@ -313,9 +320,10 @@ swan.ai.faceMatch({
   }
 });
 ```
+
 **返回示例**
 
-```
+```js
 {
     "score": 44.3,
     "face_list": [  //返回的顺序与传入的顺序保持一致
@@ -332,15 +340,16 @@ swan.ai.faceMatch({
 
 
 
+
 ##  swan.ai.faceSearch
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
 **解释**：人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -371,7 +380,11 @@ swan.ai.faceMatch({
 |user_info | Array | 注册用户时携带的 user_info|
 |score | number | 用户的匹配得分，推荐阈值 80 分。|
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -395,6 +408,7 @@ swan.chooseImage({
   }
 });
 ```
+
 **返回示例**
 
 ```
@@ -417,9 +431,9 @@ swan.chooseImage({
 
 **解释**：公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -440,7 +454,12 @@ swan.chooseImage({
 |log_id | string | 日志 ID| 
 |score | number | 与公安小图相似度可能性，用于验证生活照与公安小图是否为同一人，有正常分数时为 [0~100]，推荐阈值 80，超过即判断为同一人。| 
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.facePersonVerify({
     image: 'https://www.downloadImage.com/xxxx.jpg',
@@ -454,6 +473,7 @@ swan.ai.facePersonVerify({
     }
 });
 ```
+
 **返回示例**
 ```
 {
@@ -462,17 +482,15 @@ swan.ai.facePersonVerify({
 ```
 
 
-
-
 ##  swan.ai.facePersonIdmatch
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
 **解释**：身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -483,6 +501,9 @@ swan.ai.facePersonVerify({
 |complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例代码**
+
+<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.facePersonIdmatch({
     id_card_number: '',
@@ -500,9 +521,9 @@ swan.ai.facePersonIdmatch({
 
 **解释**：在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -650,32 +671,40 @@ swan.ai.facePersonIdmatch({
 |chin| number |下巴遮挡比例 [0-1] ，1 表示完全遮挡。|
 
 **示例代码**
+
+<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.chooseImage({
-	success(res) {
-		swan.ai.faceVerify({
-		  data: [
-		    {
-		        "image": res.tempFilePaths[0],
-		        "image_type": "BASE64",
-		        "face_field": "age,beauty,expression"
-		    },
-		    {
-		        "image": res.tempFilePaths[1],
-		        "image_type": "BASE64",
-		        "face_field": "age,beauty,expression"
-		    }
-		  ],
-		  success(res) {
-		    console.log('res');
-		  }
+    count: 2,
+    success(res) {
+        swan.ai.faceVerify({
+            data: [
+                {
+                    "image": res.tempFilePaths[0],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                },
+                {
+                    "image": res.tempFilePaths[1],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                }
+            ],
+            success(res) {
+                console.log('ai.faceVerify success', res);
+            },
+            fail(err) {
+                console.log('ai.faceVerify fail', err);
+            }
+        });
+    }
 });
-	}
-})
 
 ```
 **返回示例**
-```
+
+```js
 {
 "thresholds": {
     "frr_1e-4": 0.05,  //万分之一误拒率的阈值
@@ -749,9 +778,9 @@ swan.chooseImage({
 
 **解释**：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -767,7 +796,12 @@ swan.chooseImage({
 |session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
 |code | string |语音验证码，数字形式，3~6 位数字。| 
 
+
+
 **示例代码**
+
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceLivenessSessioncode({
   appid: '',
@@ -776,8 +810,9 @@ swan.ai.faceLivenessSessioncode({
   }
 });
 ```
+
 **返回示例**
-```
+```js
 {
 	"err_no": 0,
 	"err_msg": "SUCCESS",
@@ -789,7 +824,6 @@ swan.ai.faceLivenessSessioncode({
 	"cached": 0,
 	"serverlogid": "0587756642"
 }
-}
 ```
 
 ## swan.ai.faceLivenessVerify
@@ -798,9 +832,9 @@ swan.ai.faceLivenessSessioncode({
 
 **解释**：H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -835,6 +869,9 @@ swan.ai.faceLivenessSessioncode({
 
 
 **示例代码**
+
+<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.ai.faceLivenessVerify({
   video_base64: '',
@@ -844,8 +881,9 @@ swan.ai.faceLivenessVerify({
   }
 });
 ```
+
 **返回示例**
-```
+```js
 {
 
 	err_no:0,

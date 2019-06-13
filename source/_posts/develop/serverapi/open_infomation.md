@@ -11,7 +11,7 @@ sidebar: open_infomation
 
 ## 功能介绍
 目前已经开放的模板消息主要是两类：支付类和表单类消息。
-> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/api/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
+> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
 
 ### 消息的入口
 
@@ -62,21 +62,27 @@ sidebar: open_infomation
 添加模板完成后，可以在我的模板里看到对应模板的模板ID。
 ![图片](../../../img/api/information/6.png)
 ![图片](../../../img/api/information/7.png)
-### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过支付获取<a href="http://smartprogram.baidu.com/docs/develop/api/open_payment/#requestPolymerPayment/">payId</a>
+
+### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过支付获取 <a href="http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/standard_interface/push_notice.md">orderId</a> 或者 payId。
+
 
 #### formid 
 页面的`<form/>`组件，属性report-submit为true时，可以声明为需发模板消息，此时用户点击按钮提交表单可以获取formId，用于发送表单类模板消息。
+
+#### orderId
+当用户通过百度收银台支付后，开发者可以在收银台接口通知支付状态通知参数中获取到orderId 用于发送交易类模板消息。
+
 #### payId 
-当用户完成支付行为时，可以获取payId用于发送交易类模板消息。
+当用户通过直连（微信、支付宝）支付等完成支付行为时，可以获取payId用于发送交易类模板消息。
 
 ### 步骤三：调用接口下发模板消息
 
-* 获取小程序模板库标题列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
-* 获取模板库某个模板标题下的关键词库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
-* 组合模板并添加至帐号下的个人模板库:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#addTemplate/">addTemplate</a>
-* 获取帐号下已存在的模板列表:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#getTemplateList/">getTemplateList</a>
-* 删除帐号下的某个模板:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#deleteTemplate/">deleteTemplate</a>
-* 推送模板消息:<a href="https://smartprogram.baidu.com/docs/develop/api/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
+* 获取小程序模板库标题列表:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>
+* 获取模板库某个模板标题下的关键词库:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateLibraryById/">getTemplateLibraryById</a>
+* 组合模板并添加至帐号下的个人模板库:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#addTemplate/">addTemplate</a>
+* 获取帐号下已存在的模板列表:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateList/">getTemplateList</a>
+* 删除帐号下的某个模板:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#deleteTemplate/">deleteTemplate</a>
+* 推送模板消息:<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#sendTemplateMessage/">sendTemplateMessage</a>
 
 
 ## 下发条件说明
@@ -105,7 +111,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_tok
 |---|---|---|---|
 |offset|	int|	是|	偏移数量|
 |count|	int|	是|	返回长度，取值区间（0，20]。|
-|access_token|string	|是|	<a href="hhttps://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
+|access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
 
 **返回值**:
 ```json
@@ -324,15 +330,16 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 |touser_openId|string|否|接收者open_id|
 |data|	json string|	是|`	{"keyword1": {"value": "2018-09-06"},"keyword2": {"value": "kfc"}}`。|
 |page|	string|	否|	点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数，（示例index?foo=bar），该字段不填则模板无跳转。|
-|scene_id|	string|	是|	场景id，例如formId和payId。|
+|scene_id|	string|	是|	场景id，例如formId、orderId、payId。|
 |scene_type	|int|	是|	场景type，1：表单；2：百度收银台订单；3:直连订单。|
 |ext|json string|否|`{"xzh_id":111,"category_id":15}`|
-|access_token|string	|是|	<a href="https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/">接口调用凭证</a>|
+|access_token|string	|是| [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
+
 
 **说明**：
-* 当开发者获得用户openid，填写到touser_openid，否则获取用户swanid，填写到touser。
-* 当touser_openId  和touser至少填写一个，如同时填写，仅以touser_openId  下发消息。
-* 评价服务必须填写touser_openId  以及ext字段。其中ext字段以json格式包含category_id和xzh_id。
+* 当开发者获得用户 openid，填写到 touser_openid，否则获取用户 swanid，填写到 touser。
+* 当 touser_openId  和 touser 至少填写一个，如同时填写，仅以 touser_openId  下发消息。
+* 评价服务必须填写 touser_openId  以及 ext 字段。其中ext字段以 json 格式包含 category_id 和 xzh_id。
 
 ### 消息发送失败可能的原因
 * scene_id 状态需要和用户登录状态保持一致，否则 scene_id 校验会失败。 

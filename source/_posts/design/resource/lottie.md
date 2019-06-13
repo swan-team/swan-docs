@@ -5,7 +5,7 @@ nav: resource
 sidebar: lottie
 ---
 
-为了更好地实现流畅的动画效果，智能小程序支持Lottie导出的json文件以及json文件与位图。
+为了更好地实现流畅的动画效果，智能小程序支持Lottie导出的json文件以及位图。
 
 开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/base/#animation-view/" target="_blank">animation-view</a>。
 

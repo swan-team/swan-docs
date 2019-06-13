@@ -14,8 +14,7 @@ sidebar: open
 | --- | ------ | ---- | --------------- |
 | type | String | | 开放数据类型 |
 
-<div class="notice">type 有效值:</div>
-
+**type 有效值:**:
 
 | 值 | 说明 |
 |--- |----- |
@@ -24,7 +23,8 @@ sidebar: open
 | userGender | 用户性别 |
 
 **示例**
- 
+
+<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>  
 
 * 在 swan 文件中
 
@@ -95,27 +95,86 @@ sidebar: open
     flex: 1;
 ```
 
-**图示**
-![图片](../../../img/component/opendata.png)
+**图示**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/opendata.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 
 ## web-view
-<div class="notice">解释： </div>web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
-<div></div>
-<text class="notice">属性说明:</text>
+
+**解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
+**属性说明:**
 
 | 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
 | --- | ------ | ---- | ---- |---- |
-| src | String |- | webview 指向网页的链接 |-|
-|bindmessage|EventHandler|-|网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
+| src | String |  | webview 指向网页的链接 |-|
+|bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
-<div class="notice">示例： </div>
+**示例**：
+<a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中：
+
 ```xml
-<!-- swan -->
-<!-- 首页的 web-view -->
-<web-view src="https://m.baidu.com"></web-view>
+<view>
+    <web-view s-if="src" src="{{src}}"></web-view>
+    <view class="tip">web-view是承载网页的容器</view>
+    <button type="primary" class="btn" bindtap="openWebViewInNewPage">新页面打开web-view</button>
+    <button type="primary" class="btn" bindtap="openWebViewCurrent">当前页打开web-view</button>
+</view>
+```
+* 在 js 文件中：
+
+```js
+const webviewUrl = 'https://smartprogram.baidu.com';
+Page({
+    data: {
+        src: ''
+    },
+    onLoad(options) {
+        if (options.webview) {
+            this.setData('src', webviewUrl);
+        }
+    },
+    openWebViewCurrent() {
+        this.setData('src', webviewUrl);
+    },
+    openWebViewInNewPage() {
+        swan.navigateTo({
+            url: '/pages/webview/webview?webview=1'
+        });
+    }
+});
+```
+* 在 css 文件中：
+
+```css
+.tip {
+    text-align: center;
+    padding: .3rem 0 .35rem 0;
+    font-size: .15rem;
+    color: #333;
+}
+
+.btn {
+    line-height: .44rem;
+    font-size: .18rem;
+    margin: 0 .23rem .15rem .23rem;
+}
 ```
 
 ### **相关接口1 **
+
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
 | 接口名               | 说明         | 
@@ -130,11 +189,12 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
-<div class="notice">示例： </div>
+**示例**：
+
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.4.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
 ```
 
 ```javascript
@@ -178,4 +238,15 @@ web-view 网页中支持的接口有：
 
 进入<a href="https://smartprogram.baidu.com/developer/index.html">智能小程序开发者平台</a>，单击“设置->开发设置”，即可在业务域名中下载、配置校验文件并配置业务域名。
 
-![图片](../../../img/component/webview.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/webview.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>

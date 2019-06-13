@@ -4,15 +4,16 @@ header: develop
 nav: api
 sidebar: net_uploadfile
 ---
+请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
 ## swan.uploadFile
 
-**解释：**将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 `content-type` 为 `multipart/form-data`
+**解释**：将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 `content-type` 为 `multipart/form-data`
 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,15 +26,17 @@ sidebar: net_uploadfile
 |fail   | Function |   否  |  -|接口调用失败的回调函数|
 |complete  |  Function  |  否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
+<a href="swanide://fragment/9aa7bb960bd9eebce07522b7b058379d1559048969876" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 **示例 1**
-<a href="swanide://fragment/19dba5084395349af05e52dfbb0e65151548069330341" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 ```js
 swan.chooseImage({
     success: function (res) {
@@ -53,18 +56,18 @@ swan.chooseImage({
 });
 ```
 
-**返回值：**
+**返回值**：
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
-**uploadTask 对象的方法列表：**
+**uploadTask 对象的方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |
 |onProgressUpdate   | callback  |监听上传进度变化|
 |abort | - | 中断上传任务|
 
-**onProgressUpdate 返回参数说明：**
+**onProgressUpdate 返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -96,29 +99,14 @@ uploadTask.onProgressUpdate(res => {
 
 uploadTask.abort(); // 取消上传任务
 ```
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;&nbsp;&nbsp;|
-|202|解析失败，请检查参数是否正确|
-|1001|执行失败|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|1|解析失败，请检查参数是否正确| -->
+ 
 ## swan.downloadFile
 
-**解释：**下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径
+**解释**：下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -133,15 +121,21 @@ uploadTask.abort(); // 取消上传任务
 * 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。
 * 下载最大限制10MB。
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |tempFilePath  |  String  |临时文件路径，下载后的文件会存储到一个临时文件|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 
+
+<a href="swanide://fragment/3ac15397aa60af4d3a84bbee534df38a1559049176281" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 **示例 1**
-<a href="swanide://fragment/9aa4b9055e989b1ae9807de7dad483711540394814" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+
+
+* 在 js 文件中
 
 ```js
 swan.downloadFile({
@@ -159,18 +153,18 @@ swan.downloadFile({
 });
 ```
 
-**返回值：**
+**返回值**：
 
 返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
 
-**downloadTask 对象的方法列表：**
+**downloadTask 对象的方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |
 |onProgressUpdate   | callback  |监听上传进度变化|
 |abort | - | 中断下载任务|
 
-#### **onProgressUpdate 返回参数说明：**
+#### **onProgressUpdate 返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -180,6 +174,7 @@ swan.downloadFile({
 
 **示例 2**
 
+* 在 js 文件中
 
 ```js
 const downloadTask = swan.downloadFile({
@@ -206,19 +201,4 @@ downloadTask.abort(); // 取消下载任务
 
 uploadFile 上传文件大小限制为 25M。
 
-<!-- #### 错误码
-
-**Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|1001|执行错误|
-
-**iOS**
-
-|错误码|说明errMsg|
-|--|--|
-|202|解析失败，请检查参数是否正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|1001|请求文件超过10M|
-|1002|无法确定下载文件大小| -->
+ 

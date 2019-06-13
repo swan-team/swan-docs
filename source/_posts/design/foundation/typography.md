@@ -52,21 +52,17 @@ sidebar: typography
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples--correct">
 		<img src="../../../img/design/foundation/typography/5.png">
-		<p class="m-doc-custom-examples-text">发者使用自定义字体“楷体”;用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
+		<p class="m-doc-custom-examples-text">开发者使用自定义字体“楷体”；用户手机无楷体时，按下一优先级字体显示，保底情况为显示系统默认字体：iOS-苹方-简（1）；安卓-Droid Sans（2）。 </p>
 	</div>
 </div>
 
 ## 字号
 请合理使用不同字号来区分页面的主次信息，与为了达到整体页面信息最佳可读性，单个模块字号选择不建议超过3种。
-提供以下几档基础字号用于页面布局：
-建议按场景使用适合的字号，常用场景字号建议如下：
+智能小程序提供以下几档基础字号用于页面布局,建议按场景使用适合的字号，常用场景字号建议如下：
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/foundation/typography/6.png"></div>
+		<img src="../../../img/design/foundation/typography/6.png"><p class="m-doc-custom-examples-text">注：建议阅读文本使用17pt及以上，可点击文本按钮使用12pt及以上。</p></div>
 </div>
-
-
-<p class="m-doc-custom-examples-text">注：建议阅读文本使用20px及以上，可点击文本按钮使用24px及以上。</p>
 
 
 ## 颜色

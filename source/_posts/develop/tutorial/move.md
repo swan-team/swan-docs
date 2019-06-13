@@ -6,10 +6,9 @@ sidebar: move
 ---
 
 
-## 介绍
 对于有其它小程序开发经验的开发者，我们还提供了如下开发解决方案：
 * 搬家工具：针对曾经开发过微信小程序的开发者，帮助您把微信小程序的部分代码迁移到百度智能小程序上。
-* 框架开发：支持 Taro、Mpvue、Okam 三种不同的框架，只写一套代码，通过编译即可生成在不同端（微信/百度/支付宝/字节跳动小程序、H5、React-Native 等）运行的代码。
+* 框架开发：支持 Taro、Mpvue、WePY、Okam 四种不同的框架，只写一套代码，通过编译即可生成在不同端（微信/百度/支付宝/字节跳动小程序、H5、React-Native 等）运行的代码。
 
 > 为了更好的了解开发者的需求，帮助您减少不必要的工作量，我们邀请您填写<a href="https://smartprogram.baidu.com/docs/html/third_party/acess-wenjuan/#/wenjuan/">智能小程序接入技术问卷调查</a>。
 
@@ -20,7 +19,7 @@ sidebar: move
 搬家工具，是基于`Abstract Syntax Tree`开发的辅助工具，可以帮助您把微信小程序的部分代码迁移到百度智能小程序上。工具可进行静态语法上的转换，根据一些规则去转换代码，抹平微信小程序语法和百度智能小程序语法上的差异，为大家减少因平台差异带来的苦恼。
 需要注意的是：工具做不到运行时 diff 的抹平，也做不到一个 API 从无到有的过程。所以，需要大家根据转换 log，进行二次开发。
 
-![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/move-tool.gif)
+![图片](../../../img/tool/move_demo.gif)
 
 ### 获取途径
 当前支持NPM和百度开发者工具入口两种方式，请您根据需求进行选择：
@@ -29,16 +28,24 @@ sidebar: move
 * 在 windows 下，由于`node.js`环境兼容性较差，建议使用开发者工具中的入口。
 
 #### NPM
-执行一下操作，在[NPM官网](https://www.npmjs.com/package/wx2swan)获取工具：
+执行以下操作，在[NPM官网](https://www.npmjs.com/package/wx2swan)获取工具：
 1. 全局按照个命令行工具： `npm install -g wx2swan`;
 2. 执行命令： `wx2swan wxmp`  wxmp 是微信小程序的目录;
-3. 查看生成目录的 log;
+3. 查看生成目录的 log；
+
+```
+log
+├── error.json   （没法转换过来的，目前不支持的，比如百度暂未支持的API，二次开发时需要修改的）
+├── info.json    （搬家工具转换操作的log）
+└── warning.json （根据经验，有可能引起报错的，二次开发时候需要重点注意的）
+
+```
 4. 根据开发者工具报错以及转换 log 进行二次开发。
  
 #### 百度开发者工具入口
 除了上面 NPM 的方式使用搬家工具，您还可以在在百度开发者工具里进入搬家工具：
 1. **登录开发者工具。**
-2. 单击“工具 > 转换”，即可使用搬家工具，进行转换。
+2. 在欢迎页中选择“搬家”，进行转换。
 ![图片](../../../img/tool/move.png)
 如果遇到相关问题，可以添加客服微信咨询：`wx2swan-helper`。
 

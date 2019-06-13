@@ -7,11 +7,13 @@ sidebar: device_call
 
 ## swan.makePhoneCall
 
-**解释：**拨打电话
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
-**方法参数：**Object object
+**解释**：拨打电话
 
-**`object`参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +22,7 @@ sidebar: device_call
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/655ca4184419f620e6fbfe9b140407f81540396334" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.makePhoneCall({

@@ -11,11 +11,11 @@ sidebar: open_share
 
 ## swan.openShare
 
-**解释：** 调起分享面板。
+**解释**： 调起分享面板。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,14 +27,47 @@ sidebar: open_share
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-```javascript
-swan.openShare({
-  title: '智能小程序示例',
-  content: '世界很复杂，百度更懂你',
-  path: '/pages/openShare/openShare?key=value'
+<a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="openShare">openShare</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    openShare() {
+        swan.openShare({
+            title: '智能小程序示例',
+            content: '世界很复杂，百度更懂你',
+            path: '/pages/openShare/openShare?key=value',
+            imageUrl: 'https://smartprogram.baidu.com/docs/img/logo_new.png',
+            success: function (res) {
+                swan.showToast({
+                    title: '分享成功'
+                });
+                console.log('openShare success', res);
+            },
+            fail: function (err) {
+                console.log('openShare fail', err);
+            }
+        });
+    }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 
 **Bug & Tip**

@@ -5,12 +5,12 @@ nav: framework
 sidebar: app_service_page
 ---
 
- ## Page
+ ## 参数说明
  
 
 **解释**：Page 函数用来注册一个页面。接受一个 object 参数，其指定页面的初始数据、生命周期函数、事件处理函数等。
 
-**Object参数说明：**
+**Object参数说明**：
 
 |属性  |类型  |描述  |
 |---- | ---- | ---- |
@@ -105,6 +105,8 @@ Page({
 
 ## 生命周期函数
 
+> 更多介绍参见[生命周期介绍](http://smartprogram.baidu.com/docs/develop/framework/process_life/)。
+
 |属性|类型|描述|触发时机|
 |----|----|----|--------|
 |onLaunch|Function|SWAN 初始化的生命周期函数|当 SWAN App 初始化完成时，会触发 onLaunch（全局只触发一次）|
@@ -123,15 +125,17 @@ Page({
 </div>
 </div>
 
-## 页面相关事件处理函数
+
+
+## 通用事件
 
 ### onPullDownRefresh
 
-**解释：**在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
+**解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
 
-**参数：**Object
+**参数**：Object
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
 ```js
 Page({
@@ -161,7 +165,7 @@ Page({
 参数为 Object，包含以下字段：
 
 
-**Object参数说明：**
+**Object参数说明**：
 
 |字段 |类型  |说明 |
 |---- | ---- | ---- |
@@ -169,21 +173,21 @@ Page({
 
 ### onShareAppMessage
 
-**解释：** 在 Page 中定义 onShareAppMessage 函数，设置该页面的分享信息。
+**解释**： 在 Page 中定义 onShareAppMessage 函数，设置该页面的分享信息。
 
 * 用户点击分享按钮的时候会调用；
 * 此事件需要 return 一个`Object`，用于自定义分享内容。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |from |String  |是| -|  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
 |target |Object  |是| -|  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined 。为兼容使用了3.10.16(手百11.2)以下版本的基础库，原使用 currentTarget 的获取方式保留至2月15日下线。 |
 
-**自定义分享字段：**
+**自定义分享字段**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -195,7 +199,7 @@ Page({
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/5ade9255636e820034fd14dee1d9a1ef1540396560" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```javascript
 Page({
@@ -211,7 +215,7 @@ Page({
 
 
 
-## 事件处理函数
+## 用户绑定事件
 
 <div class="notice">解释： </div>
 除了初始化数据和生命周期函数，Page 中还可以定义一些特殊的函数：事件处理函数。在渲染层可以在组件中加入事件绑定，当达到触发事件时，就会执行 Page 中定义的事件处理函数。
@@ -230,7 +234,7 @@ Page({
 })
 ```
 
-## Page.prototype.setData
+## setData 机制
 
 **解释**：setData 函数，用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化，会引起视图层的更新。
 **参数说明**
@@ -246,9 +250,10 @@ Page({
 * 直接修改 this.data 而不调用 this.setData 是无法改变页面的状态的，还会造成数据不一致。
 * 仅支持设置可 JSON 化的数据。
 * 请不要把 data 中任何一项的 value 设为 undefined ，否则这一项将不被设置并可能遗留一些潜在问题。
+* data 的键值必须遵守 camelCase (驼峰式)的命名规范，不得使用 kebab-case (短横线隔开式)规范。
 
 
-**示例：**
+**示例**：
 
 ```xml
 <view>{{name}}</view>

@@ -96,8 +96,8 @@ form 组件可以识别这些自定义组件，并在 submit 事件中返回组�
 
 |属性名|类型|描述|最低版本|
 |---|---|---|---|
-|name|String|在表单中的字段名|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.29</a>|
-|value|任意|在表单中的字段值|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">1.13.29</a>|
+|name|String|在表单中的字段名|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.29</a>|
+|value|任意|在表单中的字段值|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.29</a>|
 
 ### swan://component-export
 

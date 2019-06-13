@@ -11,17 +11,17 @@ sidebar: open_userinfo
 由于宿主应用并不一定强制用户登录，因此用户也有可能处于未登录状态。此时开发者可能不希望通过调用`swan.login()`强制用户登录，而是希望直接使用用户的设备标识来关联用户，存储一些非敏感的数据。因此智能小程序还提供一个 SwanID 的标识，可视作用户的设备标识。
 * 用户在同一台设备上使用同一个开发者所开发的不同智能小程序，得到的是相同的 SwanID 。
 * 用户在同一台设备上使用不同开发者所开发的不同智能小程序，得到的 SwanID 是不同的。
-开发者通过对比接口中返回的`swanid_signature`和采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature-%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">signature 计算方法</a> 的计算值是否一致来判断 swanid 是否有效。
+开发者通过对比接口中返回的`swanid_signature`和采用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#signature-计算方法/">signature 计算方法</a> 的计算值是否一致来判断 swanid 是否有效。
 
 
 
 ## swan.getSwanId
 
-**解释：**获取 swanid。
+**解释**：获取 swanid。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,7 +29,7 @@ sidebar: open_userinfo
 |fail  |  Function |   否 | -|  接口调用失败的回调函数|
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -45,15 +45,40 @@ sidebar: open_userinfo
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
+**示例**：
 
-**示例：**
+<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="getSwanId">getSwanId</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.getSwanId({
-    success: function (res) {
-        console.log(res.data.swanid);
+Page({
+    getSwanId() {
+        swan.getSwanId({
+            success: function (res) {
+                console.log('getSwanId success', res);
+            },
+            fail: function (err) {
+                console.log('getSwanId fail', err);
+            }
+        });
     }
 });
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
 ```
 <!-- #### 错误码
 
@@ -78,11 +103,11 @@ swan.getSwanId({
 
 ## swan.getUserInfo
 
-**解释：**获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
+**解释**：获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -91,7 +116,7 @@ swan.getSwanId({
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -100,15 +125,15 @@ swan.getSwanId({
 |iv | String | 加密算法的初始向量|
 
 
-**userInfo参数说明：**
+**userInfo参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |nickName  | String  |用户昵称，用户未设置用户昵称时，将获取用户名。|
 |avatarUrl  | String  |用户头像|
-|gender | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
-|isAnonymous | bool | 表示用户信息是否为匿名，若是用户未登录或者拒绝授权为true，正常流程为false。 |
-**用户数据解密后字段说明：**
+|gender | Number | 性别:值为0时是未知，为1时是男性，为2时是女性。|
+
+**用户数据解密后字段说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -116,7 +141,7 @@ swan.getSwanId({
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**示例：**
+**示例**：
 <a href="swanide://fragment/d12f967d05c0b93ac15d66d138658d9b1540398240" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 ```js
 swan.getUserInfo({
