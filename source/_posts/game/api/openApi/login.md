@@ -7,6 +7,8 @@ categoryName: api
 
 ### swan.login()
 
+>注意：请不要将游戏的首帧（首屏）渲染操作放在回调函数中，详情参考： [交互类开放接口使用规则](/game/tutorials/open_api/first-frame-rule/)
+
 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid）及本次登录的 会话密钥（session_key）等。用户数据的加解密通讯需要依赖会话密钥完成。
 
 ```js
