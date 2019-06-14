@@ -232,7 +232,7 @@ Page({
 |selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
-| bindinput | EventHandle  |   |当键盘输入时，触发 input 事件，event.detail = {value, cursor}，处理函数可以直接 return 一个字符串，将替换输入框的内容。|
+| bindinput | EventHandle  |   |当键盘输入时，触发 input 事件，event.detail = {value, cursor} 。|
 | bindfocus | EventHandle  |  |输入框聚焦时触发，event.detail = {value: value}|
 |bindblur	|EventHandle	  | |输入框失去焦点时触发，event.detail = {value: value}|
 | bindconfirm |EventHandle	  |  |点击完成按钮时触发，event.detail = {value: value}|
