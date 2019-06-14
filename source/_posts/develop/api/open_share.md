@@ -27,6 +27,10 @@ sidebar: open_share
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
+
+**函数返回值**：Boolean result
+**返回值说明**：反馈分享结果，成功或失败。
+
 **示例**：
 
 <a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -73,7 +77,7 @@ Page({
 **Bug & Tip**
 bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
 
-## 页面分享跳转 
+## web-view中的分享 
 
 当使用 web-view 组件时，用户从 A(h5) 页面跳转到了 B(h5) 页面。此时，用户在 B 页面发起分享，更可能的预期是分享 B 页面。但是，默认行为将打开 A 页面。此时，开发者可以做以下处理，让分享后打开 B 页面。
 
