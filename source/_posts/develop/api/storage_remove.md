@@ -8,11 +8,11 @@ sidebar: storage_remove
 ## swan.removeStorage
 
 
-**解释：**从本地缓存中异步移除指定 key。
+**解释**：从本地缓存中异步移除指定 key。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -21,9 +21,9 @@ sidebar: storage_remove
 |fail |   Function  |  否  |-|  接口调用失败的回调函数|
 |complete  |  Function  |  否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -76,16 +76,16 @@ Page({
 ## swan.removeStorageSync
 
 
-**解释：**从本地缓存中同步移除指定 key。
+**解释**：从本地缓存中同步移除指定 key。
 
-**方法参数：**String key
+**方法参数**：String key
 
-**`key`参数说明：**本地缓存中的指定的 key。
+**`key`参数说明**：本地缓存中的指定的 key。
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -136,11 +136,11 @@ Page({
 ## swan.clearStorage
 
 
-**解释： **清理本地数据缓存。  
+**解释**:清理本地数据缓存。  
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -148,9 +148,9 @@ Page({
 |fail |   Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否  |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -187,13 +187,13 @@ Page({
 
 ## swan.clearStorageSync
 
-**解释：**同步清理本地数据缓存。
+**解释**：同步清理本地数据缓存。
 
-**方法参数：**无
+**方法参数**：无
 
-<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例：**
+**示例**：
 
 ```js
 try {

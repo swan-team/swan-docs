@@ -1,7 +1,7 @@
 ---
 title: 兼容性说明
 header: develop
-nav: tutorial
+nav: swan
 sidebar: compatibility
 ---
 

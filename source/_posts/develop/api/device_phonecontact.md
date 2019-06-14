@@ -8,11 +8,11 @@ sidebar: device_phonecontact
 
 ## swan.addPhoneContact
 
-**解释：**调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
+**解释**：调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -52,9 +52,9 @@ sidebar: device_phonecontact
 |fail  |  Function  |  否 |-|  接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/8bd9b2c7500c14a85cff265bb671d1ec1557732716138" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8bd9b2c7500c14a85cff265bb671d1ec1557732716138" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

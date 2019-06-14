@@ -10,15 +10,17 @@ sidebar: enter_application
 
 ## 登录注册
 
-- **入驻申请：**
+- **入驻申请**：
 1. 登录注册
    
    打开智能小程序[首页](https://smartprogram.baidu.com/mappconsole/main/login)，点击智能小程序首页右上方“入驻申请”按钮 。
 
     ![图片](../../img/introduction/enter/p1.png)
 2. 登录/注册百度账号
-    目前支持手机短信、账号密码、二维码登录。
-    > 如您已有企业熊掌 ID，可直接使用熊掌 ID登录名及密码直接登陆智能小程序即可，无需重新注册。
+目前支持百度账号及百度商业账号登陆
+
+* 百度账号：您可以使用百家号、熊掌ID非个人类型的账号快速入驻
+* 百度商业账号：您可以使用百度推广、百青藤、百度电商账号直接登录
 
     ![图片](../../img/introduction/enter/p2.png)
 
@@ -35,10 +37,10 @@ sidebar: enter_application
     ![图片](../../img/introduction/enter/p4.png)
 
 
-* **选填内容：**请根据实际情况如实填写，资料丰富度有助于提升您的入驻申请审核通过率。
+* **选填内容**：请根据实际情况如实填写，资料丰富度有助于提升您的入驻申请审核通过率。
     ![图片](../../img/introduction/enter/p5.png)
 
-* **入驻申请提交审核：**申请信息填写完毕后请等待审核结果，您将在24小时内收到审核结果。
+* **入驻申请提交审核**：申请信息填写完毕后请等待审核结果，您将在24小时内收到审核结果。
     ![图片](../../img/introduction/enter/p6.jpg)
 
 * **申请被驳回**：信息不完整，可再次完善资料后进行提交。
@@ -49,5 +51,5 @@ sidebar: enter_application
 
     > 如对入驻申请审核结果存在异议，请您与<a href="https://zhiqiu.baidu.com/imcswebchat/roulette/in?id=754&token=fd41n2l8t7eetr2lfnql4c5hv59pc45i&domainID=smartapp&type=2">客服</a>取得联系。
 
-* **审核通过：**入驻申请审核通过后，点击“注册智能小程序”按钮进入下一步。
+* **审核通过**：入驻申请审核通过后，点击“注册智能小程序”按钮进入下一步。
     ![图片](../../img/introduction/enter/1.png)

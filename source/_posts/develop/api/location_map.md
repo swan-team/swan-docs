@@ -7,70 +7,19 @@ sidebar: location_map
 
 ## swan.createMapContext
 
-**解释：**创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
+**解释**：创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
 
-**方法参数：**String mapId
+**方法参数**：String mapId
 
-**返回值：**mapContext
+**返回值**：mapContext
 
 ## mapContext
-**`mapContext`对象的方法列表：**
 
-|方法 | 参数 | 说明 |
-|---- | ---- | ---- |
-|getCenterLocation  |  OBJECT |  获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation。  |
-|moveToLocation |  无  | 将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。 |
-|translateMarker  |  OBJECT   | 平移 marker，带动画 。 |
-|includePoints |  OBJECT  | 缩放视野展示所有经纬度 |
-|getRegion  | OBJECT  | 获取当前地图的视野范围  |
-|getScale | OBJECT |  获取当前地图的缩放级别 |
+**解释**：map 返回值。
 
-**getCenterLocation 的 Object 参数列表：**
+**示例**：
 
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数 ，res = { longitude: "经度", latitude: "纬度"} 。|
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**translateMarker 的 Object 参数列表：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|markerId  |Number  |  是  | 指定 marker |
-|destination  |Object  |  是 |  指定marker移动到的目标点|
-|autoRotate   | Boolean   | 是 |  移动过程中是否自动旋转 marker|
-|rotate  |Number  |  是  | marker 的旋转角度 |
-|duration  |Number   |  否 |  动画持续时长，默认值1000ms，平移与旋转分别计算。 |
-|fail   | Function   | 否 |  接口调用失败的回调函数|
-|animationEnd|Function|否|动画结束时回调函数|
-
-**includePoints 的 OBJECT 参数列表：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|points  |Array  |  是  | 要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
-|padding  |Array  |  否 |  坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
-
-**getRegion 的 OBJECT 参数列表：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度。 |
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**getScale 的 OBJECT 参数列表：**
-
-|参数名 |类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success   |Function  |  否  | 接口调用成功的回调函数，res = {scale} 。|
-|fail  |Function  |  否 |  接口调用失败的回调函数|
-|complete   | Function   | 否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例：**
-
-<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -234,3 +183,88 @@ Page({
         <img src=" ">
     </div>     
 </div>
+
+
+
+
+## mapContext.getCenterLocation
+
+**解释**：获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---- |--|
+|success   |Function  |  否  | |接口调用成功的回调函数 ，res = { longitude: "经度", latitude: "纬度"} 。|
+|fail  |Function  |  否 |  |接口调用失败的回调函数|
+|complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+## mapContext.moveToLocation
+
+**解释**：将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。
+
+**方法参数**：无
+
+
+## mapContext.translateMarker
+
+**解释**：平移 marker，带动画 。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---- |---|
+|markerId  |Number  |  是  | |指定 marker |
+|destination  |Object  |  是 | | 指定marker移动到的目标点|
+|autoRotate   | Boolean   | 是 |  |移动过程中是否自动旋转 marker|
+|rotate  |Number  |  是  | |marker 的旋转角度 |
+|duration  |Number   |  否 |  |动画持续时长，默认值1000ms，平移与旋转分别计算。 |
+|fail   | Function   | 否 |  |接口调用失败的回调函数|
+|animationEnd|Function|否||动画结束时回调函数|
+
+## mapContext.includePoints
+
+**解释**：缩放视野展示所有经纬度。
+
+**方法参数**：Object object
+
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---- |---|
+|points  |Array  |  是  | |要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
+|padding  |Array  |  否 |  |坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
+
+## mapContext.getRegion
+
+**解释**：获取当前地图的视野范围。
+
+**方法参数**：Object object
+
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success   |Function  |  否  | |接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度。 |
+|fail  |Function  |  否 |  |接口调用失败的回调函数|
+|complete   | Function   | 否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
+## mapContext.getScale	
+
+**解释**：获取当前地图的缩放级别。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success   |Function  |  否  | |接口调用成功的回调函数，res = {scale} 。|
+|fail  |Function  |  否 | | 接口调用失败的回调函数|
+|complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
+

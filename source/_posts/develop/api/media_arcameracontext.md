@@ -9,75 +9,88 @@ sidebar: media_arcameracontext
 
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。**目前只针对百度 APP 开放使用。**
 
-**解释：**创建并返回 ar-camera 上下文 `ARCameraContext`对象，ARCameraContext 与页面的 <a href='https://smartprogram.baidu.com/docs/develop/component/media/#ar-camera/'>ar-camera</a> 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。
+**解释**：创建并返回 ar-camera 上下文 `ARCameraContext`对象，ARCameraContext 与页面的 <a href='https://smartprogram.baidu.com/docs/develop/component/media/#ar-camera/'>ar-camera</a> 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。
 
 <!-- docs/develop/component/media/#ar-camera/ -->
-**方法参数：**无
+**方法参数**：无
 
-**返回值：**ARCameraContext
+**返回值**：ARCameraContext
 
 ## ARCameraContext
 
-**`ARCameraContext`对象的方法列表：**
+**解释**：swan.createARCameraContext 的返回值。
+ 
+**示例**：
 
-|方法 | 参数  |说明|
-|---- | ---- | ---- |
-|takePhoto |  Object|  拍照，成功则返回图片。|
-|reset | Object |重置相机|
-|startRecord |Object  |开始录像|
-|stopRecord | Object | 结束录像，成功则返回视频。|
+<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**takePhoto 的 Object 参数列表：**
-
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success| Function |   否  | 接口调用成功的回调函数，res = { tempImagePath }|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**reset 的 Object 参数列表：**
-
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success| Function |   否  | 接口调用成功的回调函数|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**startRecord 的 Object 参数列表：**
-
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|progress|Function|否|录制进度更新的回调函数，res = { progress }|
-|timeout|Function|否|超过 10s 或页面 onHide 时会结束录像，res = { tempVideoPath }|
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**stopRecord 的 Object 参数列表：**
-
-|参数 | 类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function   | 否  | 接口调用成功的回调函数 ，res = { tempVideoPath }。|
-|fail |   Function |   否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例代码：**
-
-```js
-const ctx = swan.createARCameraContext();
-
-ctx.takePhoto();
-
-ctx.startRecord({
-    progress(res) {
-        console.log('进度更新了', res.progress);
-    },
-    timeout(res) {
-        console.log('超时/onHide', res.tempVideoPath);
-    }
-});
+```html
+<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
+</ar-camera>
 ```
+> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
+
+##  ARCameraContext.takePhoto
+
+**解释**：拍照，成功则返回图片。
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数  |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success| Function |   否  | |接口调用成功的回调函数，res = { tempImagePath }|
+|fail  |  Function  |  否 |  |接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+##  ARCameraContext.reset
+
+**解释**：重置相机
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数  |类型 | 必填 |默认值 |说明|
+|---- | ---- | ---- |---- |--|
+|success| Function |   否  || 接口调用成功的回调函数|
+|fail  |  Function  |  否 | | 接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+##  ARCameraContext.startRecord
+
+**解释**：开始录像
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数 | 类型 | 必填 |默认值| 说明|
+|---- | ---- | ---- |---- |---|
+|progress|Function|否||录制进度更新的回调函数，res = { progress }|
+|timeout|Function|否||超过 10s 或页面 onHide 时会结束录像，res = { tempVideoPath }|
+|success |Function  |  否 | | 接口调用成功的回调函数|
+|fail  |  Function |   否  | |接口调用失败的回调函数|
+|complete   | Function |   否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+##  ARCameraContext.stopRecord
+
+**解释**：结束录像，成功则返回视频。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数 | 类型  |必填  |默认值|说明|
+|---- | ---- | ---- |---|---- |
+|success |Function   | 否  | |接口调用成功的回调函数 ，res = { tempVideoPath }。|
+|fail |   Function |   否  | |接口调用失败的回调函数|
+|complete   | Function   | 否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
 
 <!-- #### 错误码
 

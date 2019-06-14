@@ -14,8 +14,7 @@ sidebar: open
 | --- | ------ | ---- | --------------- |
 | type | String | | 开放数据类型 |
 
-<div class="notice">type 有效值:</div>
-
+**type 有效值:**:
 
 | 值 | 说明 |
 |--- |----- |
@@ -25,7 +24,7 @@ sidebar: open
 
 **示例**
 
-<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>  
+<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>  
 
 * 在 swan 文件中
 
@@ -96,7 +95,7 @@ sidebar: open
     flex: 1;
 ```
 
-**图示：**
+**图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -113,7 +112,7 @@ sidebar: open
 
 ## web-view
 
-**解释：**web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
+**解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 **属性说明:**
 
 | 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
@@ -121,8 +120,8 @@ sidebar: open
 | src | String |  | webview 指向网页的链接 |-|
 |bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
-**示例：**
-<a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 
@@ -190,12 +189,12 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
-**示例：**
+**示例**：
 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.4.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
 ```
 
 ```javascript

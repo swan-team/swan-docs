@@ -6,11 +6,11 @@ sidebar: file_open
 ---
 ## swan.openDocument
 
-**解释：**新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
+**解释**：新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,9 +20,9 @@ sidebar: file_open
 |fail  |Function  |  否 | -| 接口调用失败的回调函数|
 |complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/296ad3255e4a0a9704a411f9e70ea9801557726088382" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/296ad3255e4a0a9704a411f9e70ea9801557726088382" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

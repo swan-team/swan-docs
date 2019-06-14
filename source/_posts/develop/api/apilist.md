@@ -58,7 +58,7 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://localhost:4000/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
@@ -182,7 +182,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tabbar/#swan-setTabBarItem/">swan.setTabBarItem</a>|动态设置 tabBar 某一项的内容|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tabbar/#swan-showTabBar/">swan.showTabBar</a>|显示 tabBar|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tabbar/#swan-hideTabBar/">swan.hideTabBar</a>|隐藏 tabBar|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/">swan.navigateT</a>|保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/">swan.navigateTo</a>|保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/">swan.redirectTo</a>|关闭当前页面，跳转到应用内的某个页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-switchTab/">swan.switchTab</a>|跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/">swan.navigateBack</a>|关闭当前页面，返回上一页面或多级页面。|

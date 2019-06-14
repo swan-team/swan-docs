@@ -9,9 +9,10 @@ sidebar: install
 Beta 版本下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [mac-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
 查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/history/">历史版本</a>信息。
 
-> <a href="https://smartapp.baidu.com/docs/develop/tutorial/faq/">安装过程中碰到的问题</a>。
+> <a href="https://smartapp.baidu.com/docs/develop/faq/frequently/#工具">安装过程中碰到的问题</a>。
 
 使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。
+
 ## 开发者工具登录
 
 开发者工具安装完成后，请按如下操作进行登录：
@@ -31,5 +32,4 @@ Beta 版本下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconso
 
 单击“获取头像昵称”区域，扫面界面弹出的二维码，即可完成模拟器登录。
  ![图片](../../../img/tool/模拟器.png)
-
 

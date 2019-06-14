@@ -8,11 +8,11 @@ sidebar: media_image
 
 ## swan.chooseImage
 
-**解释：**从本地相册选择图片或使用相机拍照。
+**解释**：从本地相册选择图片或使用相机拍照。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,7 +27,7 @@ sidebar: media_image
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
@@ -42,8 +42,10 @@ sidebar: media_image
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**示例：**
-<a href="swanide://fragment/25d4a08064aa160d2986a38e3f9311921548069510198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="sswanide://fragment/5739ca862a06d44ad662d8edd9c6bbd31559049434270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
 
 ```js
 swan.chooseImage({
@@ -83,11 +85,11 @@ swan.chooseImage({
 
 ## swan.previewImage
 
-**解释：** 预览图片。
+**解释**： 预览图片。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -99,9 +101,9 @@ swan.chooseImage({
 |complete  |  Function  |  否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/3279130e9d743b8c79fca8ce3682b1161556529976536" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0853b6b5ebfae073d92923f6bc305c411559044720278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -120,40 +122,34 @@ Page({
             current: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', // 当前显示图片的http链接
             urls: ['https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', 'https://smartprogram.baidu.com/docs/img/design/overview/1-2.png'], // 需要预览的图片http链接列表
             success: function (res) {
-                console.log('previewImage success');
+                console.log('previewImage success', res);
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('previewImage fail', err);
             }
         });
-    }
-
-    // 查看原图示例
-
+    },
     previewOriginImage() {
-        swan.previewImage({ 
+        swan.previewImage({
+            urls: ['https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png'], // 需要预览的图片http链接列表
             images: [
                 {
-                    "url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
-                    "origin_url":'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
+                    "url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
+                    "origin_url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
                 },
                 {
-                    "url":"https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
-                    "origin_url":"hhttps://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
+                    "url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
+                    "origin_url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
                 }
-            ]
+            ],
             success: function (res) {
-                console.log('previewImage success');
+                console.log('previewImage success', res);
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('previewImage fail', err);
             }
         });
     }
-
-
 });
 ```
 
@@ -186,11 +182,11 @@ Page({
 
 ## swan.getImageInfo
 
-**解释：**获取图片信息
+**解释**：获取图片信息
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -199,7 +195,7 @@ Page({
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数  |类型 | 说明|
 |---- | ---- | ---- |
@@ -210,9 +206,9 @@ Page({
 |type|String|返回图片的格式 |
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -269,11 +265,11 @@ Page({
 
 ## swan.saveImageToPhotosAlbum
 
-**解释：** 保存图片到系统相册，需要用户授权。
+**解释**： 保存图片到系统相册，需要用户授权。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -282,17 +278,9 @@ Page({
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**示例**：
 
-<!-- **success返回参数说明：**
-
-|参数名| 类型|  说明|
-|---- | ---- | ---- |
-|errMsg  |String | 调用结果| -->
-
-
-**示例：**
-
-<a href="swanide://fragment/7cb1e99e5effc0e94231367ec821d2df1556530613528" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b773d94033175e28f71a369cd6563fd71559044847609" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -330,8 +318,7 @@ Page({
                 });
             },
             fail: function (err) {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                console.log('chooseImage fail', err);
             }
         });
     }

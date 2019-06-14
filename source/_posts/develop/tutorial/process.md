@@ -18,7 +18,8 @@ sidebar: process
 |preloadRule |Object |否| 分包预下载规则 |
 |tabBar|Object|	否|	底部 tab 栏的表现|
 |requiredBackgroundModes|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|subpackages|` Array.<object> `|否|	分包结构配置|
+|subPackages|` Array.<object> `|否|	分包结构配置|
+|prefetches|Object Array|	否| 预请求的配置列表|
 
 <notice>示例： </notice>
 
@@ -118,7 +119,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+action高度（iOS为44px，Android为38px）</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 
@@ -162,6 +163,45 @@ audio: 后台音乐播放
 }
 ```
 注：在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。
+
+### prefetches
+
+用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
+
+<notice>示例： </notice>
+```json
+// app.json
+{
+    prefetches: [
+        'https://m.baidu.com'
+    ]
+}
+```
+```javascript
+swan.request({
+    url: 'https://m.baidu.com',
+    usePrefetchCache: true,
+    success: function (res) {
+        console.log('缓存结果:', res);
+    }
+});
+```
+<notice>注意： </notice>
+配置项中可以增加变量，且该变量只能来自于打开小程序的调起协议中的query。如：
+```json
+// app.json
+{
+    prefetches: [
+        'https://m.baidu.com'
+    ]
+}
+```
+打开小程序的协议中，也需要携带此参数：
+```javascript
+pages/index/index?id=123
+```
+这样，再次使用request发起请求时，就可以利用上prefetches中的配置。
+
 
 ## 配置 app.js 文件
 

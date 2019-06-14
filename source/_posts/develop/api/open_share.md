@@ -11,11 +11,11 @@ sidebar: open_share
 
 ## swan.openShare
 
-**解释：** 调起分享面板。
+**解释**： 调起分享面板。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,9 +27,13 @@ sidebar: open_share
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
 
-<a href="swanide://fragment/4f49285949da6c4da88c604eab59fd221558336632057" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**函数返回值**：Boolean result
+**返回值说明**：反馈分享结果，成功或失败。
+
+**示例**：
+
+<a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -56,7 +60,7 @@ Page({
                 console.log('openShare success', res);
             },
             fail: function (err) {
-                console.log('openShare fail', res);
+                console.log('openShare fail', err);
             }
         });
     }
@@ -71,4 +75,47 @@ Page({
 ```
 
 **Bug & Tip**
-1、bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
+bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
+
+## web-view中的分享 
+
+当使用 web-view 组件时，用户从 A(h5) 页面跳转到了 B(h5) 页面。此时，用户在 B 页面发起分享，更可能的预期是分享 B 页面。但是，默认行为将打开 A 页面。此时，开发者可以做以下处理，让分享后打开 B 页面。
+
+* 针对小程序框架调起的分享
+
+```xml
+// swan 文件
+<web-view s-if="webViewUrl" src="{{webViewUrl}}"></web-view>
+```
+```js
+// js 文件
+Page({
+    data: {
+        webViewUrl: ''
+    },
+    
+    onLoad({webViewUrl}) {
+        webViewUrl && this.setData({webViewUrl});
+    },
+
+    onShareAppMessage({webViewUrl}) {
+        return {
+            title: '分享回流示例',
+            content: '默认会回到分享时的 url',
+            path: `/pages/openShare/openShare?webViewUrl=${encodeURIComponent(webViewUrl)}`
+        };
+    }
+});
+```
+
+* 针对 H5 页面通过 openShare API 调起的分享
+
+```js
+const webViewUrl = location.href;
+swan.openShare({
+    title: '智能小程序示例',
+	content: '世界很复杂，百度更懂你',
+    appKey: 'y3dTfnWfkx2OXttMEMWlGHoB1KzMogm7', // 可通过 开发者平台 -> 设置 -> 开发设置 中查看
+    path: `/pages/openShare/openShare?webViewUrl=${encodeURIComponent(webViewUrl)}`
+});
+```

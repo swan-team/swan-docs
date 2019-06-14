@@ -10,11 +10,11 @@ sidebar: show_pull
 
 ## swan.startPullDownRefresh
 
-**解释：**开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
+**解释**：开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -22,9 +22,9 @@ sidebar: show_pull
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete  |  Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -61,13 +61,13 @@ Page({
  
 ## swan.stopPullDownRefresh
 
-**解释：** 停止当前页面下拉刷新。
+**解释**： 停止当前页面下拉刷新。
 
-**方法参数：** 无
+**方法参数**： 无
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

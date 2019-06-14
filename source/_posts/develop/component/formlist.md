@@ -32,7 +32,7 @@ sidebar: formlist
 
 -->
 
-**size有效值：**
+**size有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -40,7 +40,7 @@ sidebar: formlist
 | mini   |小尺寸 |
 
 
-**type有效值：**
+**type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -48,11 +48,10 @@ sidebar: formlist
 | default |白色|
 | warn |红色|
 
-**open-type有效值：**
+**open-type有效值**：
 
 |值 |说明|
 |---- |---- |
-|contact|	打开客服会话。|
 |share |触发用户分享，使用前建议先阅读 <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/">swan.onShareAppMessage</a> 用。|
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
 | getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
@@ -63,7 +62,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -107,7 +106,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -160,8 +159,7 @@ Page({
 ```
 ## checkbox-group
 
-<div class="notice">解释： </div>多项选择器
-<div></div>
+**解释**：多项选择器
 
 **内部由多个 checkbox 组成**
 
@@ -171,10 +169,7 @@ Page({
 
 ## form
 
-<div class="notice">解释： </div>表单
-<div></div>
-
-将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
+**解释**：表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
 
 当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
 
@@ -186,7 +181,7 @@ Page({
 
 
 示例：
-<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -215,6 +210,8 @@ Page({
 
 ## input
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 **解释**：输入框
 
 |属性名 |类型  |默认值  |说明|
@@ -241,15 +238,16 @@ Page({
 | bindconfirm |EventHandle	  |  |点击完成按钮时触发，event.detail = {value: value}|
 
 
-**type 有效值：**
+**type 有效值**：
 
 |值|说明 |
 |---- | ---- |
 | text |文本输入键盘 |
 | number |数字输入键盘 |
+| idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
-**confirm-type 有效值：**
+**confirm-type 有效值**：
 
 |值|说明 |
 |---- | ---- |
@@ -342,13 +340,13 @@ Page({
     width: 2.79rem;
 }
 ```
-**说明：**
+**说明**：
 * confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持；
 * input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
 
-**BUG：**
+**BUG**：
 
   在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
 
@@ -365,7 +363,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |-----|--- |--- |
 |for|String|绑定控件的 id|
 **示例**：
-<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```
 <view class="section">
@@ -447,16 +445,16 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 |bindcancel|	EventHandle| |		取消选择时触发|
 
-<notice>fields 有效值</notice>
+**fields 有效值**:
 
-|值 |说明 |
-|---- | ---- |
-|year |选择器粒度为年 |
-|month |选择器粒度为月份|
-|day |选择器粒度为天|
+| 值 | 说明 |
+| ---- | ---- |
+| year | 选择器粒度为年 |
+| month | 选择器粒度为月份 |
+| day | 选择器粒度为天 |
 
 **示例**：
-<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -612,7 +610,7 @@ Page({
 | bindchange | EventHandle |当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
-**说明**: 
+**说明**:
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
@@ -620,8 +618,8 @@ Page({
 
 <div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
-**示例：**
-<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -720,38 +718,93 @@ Page({
 | value | String | &nbsp; | &lt;radio/&gt; 标识。当该 &lt;radio/&gt; 选中时，&lt;radio-group/&gt; 的 change 事件会携带 &lt;radio/&gt; 的 value |
 | checked | Boolean | false | 当前是否选中 |
 | disabled | Boolean | false | 是否禁用 |
-| color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
+| color | Color | #3c76ff| radio 的颜色，同 CSS 的 color |
 
-**示例**： 
-<a href="swanide://fragment/a6506042f44f66d158d733ceb336504e1540395739" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
-<radio-group bindchange="radioChange">
-    <label s-for="item in items">
-        <radio value="{{item.name}}"
-            checked="{{item.checked}}"
-            disabled="{{item.disabled}}"
-            color="#ff0000" />
-        {{item.value}}
-    </label>
-</radio-group>
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <radio-group bindchange="radioChange" class="radio-group">
+        <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
+        <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
+    </radio-group>
+
+    <view class="title">推荐示例</view>
+    <view class="item-wrap">
+        <radio-group bindchange="radioChange">
+            <label s-for="item in items" class="radio-background-active" for="{{item.id}}">
+                <view class="item">
+                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">&nbsp;&nbsp;{{item.text}}</radio>
+                </view>
+            </label>
+        </radio-group>
+    </view>
+</view>
 ```
+
+* 在 js 文件中
 
 ```javascript
 Page({
     data: {
         items: [
-            {name: 'USA', value: '美国'},
-            {name: 'CHN', value: '中国', checked: true},
-            {name: 'BRA', value: '巴西'},
-            {name: 'JPN', value: '日本'},
-            {name: 'ENG', value: '英国', disabled: true},
-            {name: 'TUR', value: '法国'}
-        ]
+            {
+                value: 'have',
+                text: '选中选项',
+                checked: true,
+                id: 1
+            },
+            {
+                value: 'have',
+                text: '未选中选项',
+                id: 2
+            },
+            {
+                value: 'none',
+                text: '未选中选项',
+                id: 3
+            }
+        ],
+        result: []
     },
-    radioChange: function(e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+    radioChange: e => {
+        console.log(e);
+    },
+    formSubmit: e => {
+        console.log(e);
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+
+.radio {
+    margin: 0 .25rem;
+}
+.item-wrap {
+    background: #fff;
+}
+.item {
+    padding: .15rem 0;
+    border-bottom: 1px #f5f5f5 solid;
+    margin-left: .25rem;
+}
+.radio-background-active:active {
+    display: block;
+    background-color: #f2f2f2;
+}
+.switch {
+    float: right;
+}
 ```
 ## radio-group
 
@@ -764,11 +817,17 @@ Page({
 | ---- | ---- | ---- | ---- |
 | bindchange | EventHandle | &nbsp; | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
 
+**示例**：
+
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
+
 ## slider
 
-**解释：**滑动选择器
+**解释**：滑动选择器
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -785,67 +844,40 @@ Page({
 |bindchange | EventHandle  | |完成一次拖动后触发的事件，event.detail = {value: value}|
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
-**示例：**
-<a href="swanide://fragment/5236c0d2b60c7f3fa5ba5434388248671548066651713" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
 
 ```xml
-<!--- slider.swan --->
-<p>default</p>
-<slider></slider>
-<br/>
-<slider value="50"></slider>
-<br/>
-
-<p>disabled</p>
-<slider disabled></slider>
-<slider disabled value="50" step="20" showValue></slider>
-<br/>
-
-<p>swan-slider-demo</p>
-<slider showValue></slider>
-<br/>
-
-<slider showValue max="2000" min="200" step="50"></slider>
-<br/>
-<p>value=100 小于 min: 200</p>
-<slider showValue max="2000" min="200" step="50" value="100"></slider>
-<p>value=3000 大于于 max: 2000</p>
-<slider showValue max="2000" min="200" step="50" value="3000"></slider>
-<br/>
-
-
-<p>step: 20</p>
-<slider step="20" showValue></slider>
-<br/>
-<slider step="20" showValue value="20"></slider>
-
-<p>color</p>
-<slider step="20" showValue value="20" backgroundColor="red"></slider>
-<slider step="20" showValue value="20" backgroundColor="red" activeColor="green"></slider>
-
-<p>event</p>
-<slider bind:change="sliderChange" bind:changing="sliderChanging" showValue></slider>
+<view class="wrap">
+    <view class="title">设置step</view>
+    <slider min="0" max="1500" value="200" step="30" show-value bind:change="sliderChange"></slider>
+    <view class="title">显示当前value</view>
+    <slider min="0" max="1500" value="421" show-value bind:change="sliderChange"></slider>
+    <view class="title">设置最小最大值</view>
+    <slider min="200" max="1500" value="330" show-value bind:change="sliderChange"></slider>
+</view>
 
 ```
-
+* 在 js 文件中
 
 ```javascript
-// slider.js
 Page({
-    data: {
-        zztest: 'hzz780'
-    },
-    sliderChange: e ={
-        console.log('sliderChange', e, e.detail);
-    },
-    sliderChanging: e ={
-        console.log('sliderChanging', e, e.detail);
+    sliderChange(e) {
+        console.log(e);
     }
 });
-
 ```
 
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+    padding: 0 .3rem;
+}
+```
 ## switch
 
 **解释**： 开关选择器
@@ -854,45 +886,83 @@ Page({
 |---- | ---- | ---- |---- |
 |checked| Boolean| false| 是否选中|
 |type| String| switch| 样式，有效值：switch,checkbox|
-|color| Color| \#09bb07| switch 的颜色，同 CSS 的 color|
+|color| Color| #3388ff| switch 的颜色，同 CSS 的 color|
 |disabled|	Boolean|	false|	是否禁用|
 |bindchange | EventHandle  | |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| switch | 切换样式 |
+| checkbox | 复选框样式 |
 
 **示例**：
-<a href="swanide://fragment/429b88b3cb4862e1392395536a2ffd941540395596" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 ```xml
-<!-- swith.swan -->
-<form bind:submit="formSubmit">
-    <switch name="switch1" type="checkbox" checked="false"></switch>
-    <switch name="switch2" color="red"></switch>
-    <switch name="switch3" checked></switch>
-    <switch name="switch4" checked="true"></switch>
-    <switch name="switch5" bind:change="changeEvent"></switch>
-    <button formType="submit">提交</button>
-    <button formType="reset">重置</button>
-</form>
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view>
+        <switch class="init-switch" checked></switch><text class="switch-text">开启</text>
+        <switch class="init-switch"></switch><text class="switch-text">关闭</text>
+    </view>
+
+    <view class="title">推荐示例</view>
+    <view class="item-wrap">
+        <view class="item">
+            <text>开启选项</text>
+            <switch checked class="switch"></switch>
+        </view>
+        <view class="item">
+            <text>关闭选项</text>
+            <switch class="switch"></switch>
+        </view>
+    </view>
+</view>
 
 ```
 
+* 在 css 文件中
 
-```javascript
-// switch.js
-changeEvent: e ={
-    console.log('change', e);
-},
-formSubmit: e ={
-    console.log('submit', e);
+```css
+.wrap {
+    font-size: .16rem;
 }
-
+.init-switch {
+    margin: 0 .05rem 0 .25rem;
+    vertical-align: middle;
+}
+.switch-text {
+    vertical-align: -.02rem;
+}
+.item-wrap {
+    background: #fff;
+}
+.item {
+    padding: .15rem 0;
+    border-bottom: 1px #f5f5f5 solid;
+    margin-left: .2rem;
+    position: relative;
+}
+.switch {
+    position: absolute;
+    top: 50%;
+    right: .2rem;
+    transform: translateY(-50%); 
+}
 ```
 
-**说明**: 
+**说明**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
 <div></div>
 
 
 ## textarea
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 
 **解释**：多行输入框。
 
@@ -921,8 +991,8 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
 
 **示例代码**：
- 
- <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+
+ <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -940,7 +1010,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 </view>
 ```
 
-* 在 js 文件中 
+* 在 js 文件中
 
 ```javascript
 Page({

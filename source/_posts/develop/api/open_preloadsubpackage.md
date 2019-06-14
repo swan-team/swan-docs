@@ -7,11 +7,11 @@ sidebar: open_preloadsubpackage
 
 ## swan.loadSubPackage
 
-**解释：**提前下载好子包的资源，目录结构配置参考[分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)。
+**解释**：提前下载好子包的资源，目录结构配置参考[分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,9 +20,9 @@ sidebar: open_preloadsubpackage
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/d8fbb63bb685902efacb6d0f926025971558342728113" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/29d0cdeccb7b4dcb8614e6a64cdf59fb1559043962845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -43,7 +43,7 @@ Page({
                 console.log('loadSubPackage success', res);
             },
             fail: function (err) {
-                console.log('loadSubPackage fail', res);
+                console.log('loadSubPackage fail', err);
             }
         });
     }

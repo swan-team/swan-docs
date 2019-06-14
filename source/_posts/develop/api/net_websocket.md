@@ -5,13 +5,15 @@ nav: api
 sidebar: net_websocket
 ---
 请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+
+
 ## swan.connectSocket
 
-**解释：**创建一个 WebSocket 连接。
+**解释**：创建一个 WebSocket 连接。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -26,9 +28,9 @@ sidebar: net_websocket
 * 基础库 1.9.4 之前，一个智能小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接。
 * 基础库版本 1.9.4 及以后，支持存在多个 WebSokcet 连接，每次成功调用 swan.connectSocket 会返回一个新的 [SocketTask](https://smartprogram.baidu.com/docs/develop/api/net_websocket/#SocketTask) 。
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/a4e694f87d52c0c7a434848e52ade8f21558351180477" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/66d08f4a9aadda42620f3005242695721559043634442" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -51,7 +53,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -87,11 +89,11 @@ Page({
 
 ## swan.onSocketOpen
 
-**解释：**监听 WebSocket 连接打开事件。
+**解释**：监听 WebSocket 连接打开事件。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
-**`callback`参数说明：**WebSocket 连接打开事件的回调函数。
+**`callback`参数说明**：WebSocket 连接打开事件的回调函数。
 
 `callback`方法参数：Object res
 
@@ -101,9 +103,9 @@ Page({
 |---- | ---- | ---- | ----|----|
 |header| object | 是|-|连接成功的 HTTP 响应 Header。|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/f6afa6c9b169cd40ca280bd46584db301558351417080" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cb33316c7dc0aeaa07ed957ec74229c81559044468276" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -130,7 +132,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -146,14 +148,14 @@ Page({
 
 ## swan.onSocketError
 
-**解释：**监听 WebSocket 错误
+**解释**：监听 WebSocket 错误
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/43ec419abe18e3c12c3cd5bcf098e1011558351499689" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8697b85081dbaebafa4207562a7a9f3e1559044367812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -180,7 +182,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -198,11 +200,11 @@ Page({
 
 ## swan.sendSocketMessage
 
-**解释：**通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。
+**解释**：通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -211,9 +213,9 @@ Page({
 |fail  |Function  |  否 | -| 接口调用失败的回调函数|
 |complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/df5b575a62fc9de4c2ec59a870456d261558351575213" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1e3a78fa7771b02cd58902a750b502201559045140980" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -248,7 +250,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -279,11 +281,11 @@ Page({
 
 ## swan.onSocketMessage
 
-**解释：**监听 WebSocket 接受到服务器的消息事件
+**解释**：监听 WebSocket 接受到服务器的消息事件
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
-**`callback`参数说明：**WebSocket 接受到服务器的消息事件的回调函数
+**`callback`参数说明**：WebSocket 接受到服务器的消息事件的回调函数
 
 `callback`方法参数：Object res
 
@@ -293,9 +295,9 @@ Page({
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer | 是|-|服务器返回的消息|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/e2584eb786a8b5e2e84b3002890e983f1558351690651" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a861668fb7883a1fbcc483540ef2b3e51559044408858" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -327,7 +329,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -350,11 +352,12 @@ Page({
 
 ## swan.closeSocket
 
-**解释：**关闭 WebSocket 连接。
+**解释**：关闭 WebSocket 连接。
 必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
 
-**方法参数：**Object object
-**`object`参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -364,9 +367,9 @@ Page({
 |fail  |Function  |  否 |  -|接口调用失败的回调函数|
 |complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/bfbdac97d84dde1ce5fa1bcc7146a2531558351761999" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1dd4f099f6066c0b3edc86b77987ec521559043567840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -402,7 +405,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -428,13 +431,13 @@ Page({
 
 ## swan.onSocketClose
 
-**解释：**监听 WebSocket 关闭。
+**解释**：监听 WebSocket 关闭。
 
-**方法参数：**Function callback
+**方法参数**：Function callback
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/6195eccaf23112669bf73748fbb54c531558351833641" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f13c9d8eb241c61a61c3a175111891d81559044298681" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -465,7 +468,7 @@ Page({
                 console.log('connectSocket success', res);
             },
             fail: function (err) {
-                console.log('connectSocket fail', res);
+                console.log('connectSocket fail', err);
             }
         });
     }
@@ -481,10 +484,10 @@ Page({
 
 ##  SocketTask
 
-**解释：**WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。
-**示例：**
+**解释**：WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。
+**示例**：
 
-<a href="swanide://fragment/c6efce1bdfff3af1667c86e9e414a9a31558351921926" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fb3d04261e78d1d4c08b3aafe5a11a9d1559046188876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -517,7 +520,7 @@ Page({
         });
 
         ws.onClose(function (res) {
-            console.log('WebSocket连接已关闭！', err);
+            console.log('WebSocket连接已关闭！', res);
         });
 
         this.ws = ws;
@@ -562,11 +565,11 @@ Page({
 
 ## SocketTask.send
 
-通过 WebSocket 连接发送数据。
+**解释**：通过 WebSocket 连接发送数据。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -577,9 +580,11 @@ Page({
 
 ## SocketTask.close
 
-**方法参数：**Object object
+**解释**：关闭 WebSocket 连接
 
-**`object`参数说明：**
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -593,27 +598,37 @@ Page({
 ## SocketTask.onOpen
 
 
-监听 WebSocket 连接打开事件。
+**解释**：监听 WebSocket 连接打开事件。
 
+**方法参数**：无
 
 ## SocketTask.onClose
 
-监听 WebSocket 连接关闭事件。
+**解释**：监听 WebSocket 连接关闭事件。
+
+**方法参数**：无
 
 ## SocketTask.onError
 
-监听 WebSocket 错误。
+**解释**：监听 WebSocket 错误。
+
+**方法参数**：无
 
 
 ## SocketTask.onMessage
 
 
-监听 WebSocket 接受到服务器的消息事件。
+**解释**：监听 WebSocket 接受到服务器的消息事件。
 
-**方法参数：**Function callback
 
-**`callback`参数说明：**
+**方法参数**：Function callback
+
+**`callback`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer |是| -| 服务器返回的消息|
+
+### bug&tips:
+
+iOS 系统中当 websocket 链接后，重新连接时，可能一直处于 connecting 状态，将在11.10版本修复。

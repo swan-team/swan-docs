@@ -8,11 +8,11 @@ sidebar: show_background
 ## swan.setBackgroundColor
 
 
-**解释：**设置窗口的背景颜色。
+**解释**：设置窗口的背景颜色。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,9 +23,9 @@ sidebar: show_background
 |fail  |  Function |   否  |-| 接口调用失败的回调函数| 
 |complete   | Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|  
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -65,11 +65,11 @@ Page({
 ## swan.setBackgroundTextStyle
 
 
-**解释：**设置窗口下拉背景loading样式。
+**解释**：设置窗口下拉背景loading样式。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -78,9 +78,9 @@ Page({
 |fail  |  Function |   否  | - | 接口调用失败的回调函数| 
 |complete   | Function  |  否 | - |  接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

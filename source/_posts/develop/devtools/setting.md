@@ -23,3 +23,9 @@ sidebar: setting
 可对菜单中“编辑”、“查看”、“开发”相关的快捷键进行设置。
 
 ![](../../../img/tool/shortcut.png)
+
+## 编辑设置
+
+可对编辑时“文件保存”、“编辑器”、“Tab大小”相关的规则进行设置。
+
+![](../../../img/tool/editorSetting.png)

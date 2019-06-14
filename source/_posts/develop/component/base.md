@@ -16,34 +16,63 @@ sidebar: base
 |size | Number  |23 |icon 的大小，单位是 px|
 |color | Color |   |icon 的颜色，同 css 的 color|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| success | 成功图标 |
+| info | 消息图标 |
+| warn | 警告图标 |
+| waiting | 等待图标 |
+| success_no_circle | 无圆形边框成功图标 |
+| clear | 删除图标 |
+| search | 搜索图标 |
+| personal | 人物图标 |
+| setting | 设置图标 |
+| top | 回到顶部图标 |
+| close | 关闭图标 |
+| cancel | 取消图标 |
+| download | 下载图标 |
+| checkboxSelected | 复选框选中图标 |
+| radioSelected | 单选框选中图标 |
+| radioUnselect | 单选框未选中图标 |
 
 **示例**：
-<a href="swanide://fragment/e4ad20aa04f31f0e785575e828ee15f01540395172" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
-<view class="group">
-    <view>
-        <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="group">
+        <view>
+            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+        </view>
     </view>
-</view>
 
-<view class="group choose">
-    <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
-</view>
+    <view class="title">尺寸选择</view>
+    <view class="group choose">
+        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
+    </view>
 
-<view class="group choose">
-    <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
-</view>
-
+    <view class="title">颜色选择</view>
+    <view class="group choose">
+        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
+    </view>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
     data: {
         types: {
-           smallDefault: ['success', 'info', 'warn', 'waiting',
-           'success_no_circle', 'clear', 'search', 'personal',
-           'setting', 'top', 'close', 'cancel', 'download',
-           'checkboxSelected', 'radioSelected', 'radioUnselect']
+            smallDefault: ['success', 'info', 'warn', 'waiting',
+            'success_no_circle', 'clear', 'search', 'personal',
+            'setting', 'top', 'close', 'cancel', 'download',
+            'checkboxSelected', 'radioSelected', 'radioUnselect']
         },
         colors: [
             '#333', '#666', '#999', '#3C76FF', '#F7534F'
@@ -52,13 +81,52 @@ Page({
             40, 35, 30, 25
         ]
     }
-});
+}); 
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: .16rem;
+}
+.group {
+    background: #fff;
+    padding: .17rem .4rem;
+}
+icon:last-child {
+    margin-right: 0;
+}
+.big-default {
+    margin-right: .19rem;
+}
+.small-default {
+    margin: .2rem .2rem .1rem 0;
+    display: inline-block;
+}
+.small-primary {
+    margin: .15rem .2rem .1rem 0;
+    display: inline-block;
+}
+.default {
+    height: 1.8rem;
+}
+.choose {
+    height: .8367rem;
+    line-height: .8rem;
+}
+.icon-color,
+.icon-size {
+    margin-right: .15rem;
+    line-height: 1;
+} 
+```
+
 ![图片](../../../img/icon-demo.png)
 
 ## text
 
-**解释：**放文本的元素
+**解释**：放文本的元素
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|最低版本|
@@ -75,21 +143,29 @@ Page({
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/24164a23bc5b36e15464ac2c518143131548067007795" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
+<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
 <view class="wrap">
-	<text selectable="true">{{text}}</text>
-	<button class="btn" type="primary" bind:tap="add">add text</button>
-	<button class="btn" type="primary" bind:tap="remove">remove text</button>
-</view>
+    <text selectable="true">{{text}}</text>
+    <button class="btn" type="primary" bind:tap="add">add text</button>
+    <button class="btn" type="primary" bind:tap="remove">remove text</button>
+</view> 
 ```
+
+* 在 js 文件中
 
 ```js
 let initData = '这是一段文字.';
-let extraLine = [];
+let extraLine;
 Page({
     data: {
         text: initData
+    },
+    onShow(e) {
+        extraLine = [];
     },
     add(e) {
         extraLine.push('其他文字');
@@ -105,11 +181,24 @@ Page({
             });
         }
     }
-});
-
-
+}); 
 ```
-**图示：**
+
+* 在 css 文件中
+
+```css
+.wrap {
+    font-size: 29rpx;
+    padding: 30rpx;
+}
+
+.wrap button {
+    margin-top: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+```
+**图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -133,7 +222,7 @@ Page({
 
 ## rich-text
 
-**解释：** 富文本
+**解释**： 富文本
 **属性说明:**
 
 |属性名 |类型  |默认值  |说明|
@@ -215,10 +304,10 @@ Page({
 | tr | -|
 | ul | - |
 
-**说明：**
+**说明**：
 
+* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
-* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse ">富文本字符串转成 json 格式</a>的具体方法。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
 * attrs 属性不支持 id ，支持 class。
@@ -230,7 +319,7 @@ Page({
 
 **示例**
 
-<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -388,40 +477,58 @@ button {
 
 ## progress
 
-**解释：**进度条
+**解释**：进度条
 
-**属性说明：**
+**属性说明**：
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
 | percent | Float  | |百分比 0~100 |
 | show-info | Boolean  | false  |在进度条右侧显示百分比|
-| stroke-width | Number | 2 |进度条线的宽度，单位 px|
+| stroke-width | Number/String | 2 |进度条线的宽度，单位 px|
 | color | Color  | #09BB07 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  |  | 已选择的进度条的颜色	|
-| backgroundColor |  Color ||未选择的进度条的颜色	|
+| activeColor | Color  | #09BB07 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 |未选择的进度条的颜色	|
 | active | Boolean  | false  |进度条从左往右的动画	|
 | active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
-**示例：**
-<a href="swanide://fragment/b6ee78360b1e54b8365a49b98cf09e811540395700" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```xml
-<!-- progress.swan -->
-<view class="section">
-    <progress percent="20" show-info />
-    <progress percent="40" stroke-width="12" />
-    <progress percent="60" color="pink" />
-    <progress percent="80" active />
-</view>
+**示例**：
+<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
+    <progress class="progress" percent="40" activeColor="#3c76ff" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" active />
+    <progress class="progress" percent="80" activeColor="#74fa7d" active />
+</view>
+```
+
+* 在 css 文件中
+
+
+```css
+.wrap {
+    font-size: .16rem;
+    padding: .3rem .15rem;
+}
+.progress {
+    margin-bottom: .35rem;
+    border-radius: 3px;
+}
 ```
 
 
 ## animation-view
 
-**解释：**Lottie动画组件
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
-**属性说明：**
+
+**解释**：支持 Lottie 动画
+
+**属性说明**：
 
 |属性名 |类型  |必填 |默认值  |说明|最低版本|
 |---- | ---- | --- | ---- |---- |--|
@@ -432,15 +539,23 @@ button {
 |hidden | Boolean  | 否 | true |是否隐藏动画|-|
 |bindended | EventHandle | 否 |   | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
+**action 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| play | 播放 |
+| pause | 暂停 |
+| stop | 停止 |
+
 **说明:**
 
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * animation-view组件不支持原生组件嵌套。
 * 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

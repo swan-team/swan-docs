@@ -11,6 +11,12 @@ sidebar: list
 
 > 对于有其它小程序开发经验的开发者，我们还提供了其它[开发解决方案](https://smartprogram.baidu.com/docs/develop/tutorial/move/)。
 
+### 具体功能开发介绍
+
+* [web 化开发](http://smartprogram.baidu.com/docs/develop/function/webintroduction/)
+* [支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)
+* [数据缓存](http://smartprogram.baidu.com/docs/develop/function/storage/)
+
 ## 架构概述
 
 SWAN App 基本开发思路类似于前端开发，并增强调用大量端能力，性能体验优于普通 Web 。上层架构基于 JS 开发，可以辅助开发者进行良好的开发。

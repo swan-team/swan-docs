@@ -7,11 +7,11 @@ sidebar: show_tabbar
 
 ## swan.setTabBarBadge
 
-**解释：**为 tabBar 某一项的右上角添加文本
+**解释**：为 tabBar 某一项的右上角添加文本
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -21,9 +21,9 @@ sidebar: show_tabbar
 |fail  |  Function  |  否  | -|接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/482e7c6c58d4a14339abc8fda24074c11557728348921" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/482e7c6c58d4a14339abc8fda24074c11557728348921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -75,11 +75,11 @@ Page({
 
 ## swan.removeTabBarBadge
 
-**解释：**移除tabBar某一项右上角的文本。
+**解释**：移除tabBar某一项右上角的文本。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -88,9 +88,9 @@ Page({
 |fail   | Function |   否  |-| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/284536873b4cc51e3b48942124ec4b7b1557728443718" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/284536873b4cc51e3b48942124ec4b7b1557728443718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -139,11 +139,11 @@ Page({
 
 ## swan.showTabBarRedDot
 
-**解释：**显示 tabBar 某一项的右上角的红点
+**解释**：显示 tabBar 某一项的右上角的红点
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -152,9 +152,9 @@ Page({
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete |   Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/2937f493a9bb306369b370c7126badd51557728534632" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2937f493a9bb306369b370c7126badd51557728534632" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -205,11 +205,11 @@ Page({
 
 ## swan.hideTabBarRedDot
 
-**解释：**隐藏 tabBar 某一项的右上角的红点
+**解释**：隐藏 tabBar 某一项的右上角的红点
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -218,9 +218,9 @@ Page({
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete |   Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/f7cad6e41c79acdff1f019cfe010f7261557728623673" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f7cad6e41c79acdff1f019cfe010f7261557728623673" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -267,11 +267,11 @@ Page({
 
 ## swan.setTabBarStyle
 
-**解释：**动态设置 tabBar 的整体样式
+**解释**：动态设置 tabBar 的整体样式
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -283,9 +283,9 @@ Page({
 |fail   | Function  | 否 |-|接口调用失败的回调函数|
 |complete  |  Function  |  否|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/314390fbe5bef9e465d158b2102a9e121557728702320" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/314390fbe5bef9e465d158b2102a9e121557728702320" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -325,11 +325,11 @@ Page({
 
 ## swan.setTabBarItem
 
-**解释：**动态设置 tabBar 某一项的内容
+**解释**：动态设置 tabBar 某一项的内容
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -341,9 +341,9 @@ Page({
 |fail   | Function  |  否  |-| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/2cc5fab9e4c419ba33c2dc9857a24f811557728801013" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2cc5fab9e4c419ba33c2dc9857a24f811557728801013" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -398,11 +398,11 @@ Page({
 
 ## swan.showTabBar
 
-**解释：**显示 tabBar
+**解释**：显示 tabBar
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -412,9 +412,9 @@ Page({
 |complete  |  Function  |  否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/5942c633249ac5244cb0f565c425cc1b1557728863827" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5942c633249ac5244cb0f565c425cc1b1557728863827" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -467,11 +467,11 @@ Page({
 
 ## swan.hideTabBar
 
-**解释：**隐藏 tabBar
+**解释**：隐藏 tabBar
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -481,9 +481,9 @@ Page({
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/87d265ceed5cf64c0141fb2c200bd5eb1557728942583" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/87d265ceed5cf64c0141fb2c200bd5eb1557728942583" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

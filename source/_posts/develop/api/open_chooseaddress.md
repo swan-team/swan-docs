@@ -6,11 +6,11 @@ sidebar: open_chooseaddress
 ---
 ## swan.chooseAddress
 
-**解释：** 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。
+**解释**： 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -18,7 +18,7 @@ sidebar: open_chooseaddress
 |fail   | Function  |  否  |  -|接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -31,9 +31,9 @@ sidebar: open_chooseaddress
 |telNumber|   String|  收货人手机号码|
 |nationalCode|	String	|收货地址国家码|
 
-**示例：**
+**示例**：
 
-<a href="wanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -6,11 +6,11 @@ sidebar: location_get
 ---
 ## swan.getLocation
 
-**解释：** 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
+**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,7 +20,7 @@ sidebar: location_get
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数  |说明  |
 |---- | ---- |
@@ -38,47 +38,85 @@ sidebar: location_get
 |province|省份|
 |streetNumber|街道号码|
 |district|区|
+|countryCode|区号|
 
-**示例：**
-<a href="swanide://fragment/96bf59fa67b5aff2dd83e37224fdbae91540395079" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/775dce89a25a95becbe8cb12562c5b581560166773963" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <view class="title">当前位置经纬度</view>
+        <view s-if="location" class="info">E: {{location.longitude[0]}}°{{location.longitude[1]}}′ N: {{location.latitude[0]}}°{{location.latitude[1]}}′</view>
+        <view s-else class="info">未获取</view>
+        <button bind:tap="getLocation" type="primary" loading="{{loading}}" hover-stop-propagation="true">点击获取位置信息</button>
+        <button bind:tap="clearLocation" hover-stop-propagation="true">清空</button>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+* 在 js 文件中
 
 ```js
-swan.getLocation({
-    type: 'gcj02',
-    success: function (res) {
-        console.log('纬度：' + res.latitude);
-        console.log('经度：' + res.longitude);
+Page({
+    data: {
+        title: 'getLocation',
+        loading: false
     },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+
+    getLocation(e) {
+        this.setData('loading', true);
+        swan.getLocation({
+            type: 'wgs84',
+            altitude: true,
+            success: res => {
+                this.setData('location', this.formatLocation(res.longitude, res.latitude));
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            },
+            complete: () => {
+                this.setData('loading', false);
+            }
+        });
+    },
+
+    clearLocation(e) {
+        this.setData('location', '');
+    },
+
+    formatLocation(longitude, latitude) {
+        if (typeof longitude === 'string' && typeof latitude === 'string') {
+            longitude = parseFloat(longitude);
+            latitude = parseFloat(latitude);
+        }
+
+        longitude = longitude.toFixed(2);
+        latitude = latitude.toFixed(2);
+
+        return {
+            longitude: longitude.toString().split('.'),
+            latitude: latitude.toString().split('.')
+        };
     }
 });
 ```
-<!-- #### 错误码
 
-<!-- **Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|401|安全校验失败|
-|1001|文件不存在|
-
-**iOS**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|10005|系统拒绝|  -->
 
 ## swan.chooseLocation
 
-**解释：** 打开地图选择位置。需要用户授权 scope.userLocation。
+**解释**： 打开地图选择位置。需要用户授权 scope.userLocation。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -86,7 +124,7 @@ swan.getLocation({
 |fail  | Function |否 | -| 接口调用失败的回调函数|
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数  |说明  |
 |---- | ---- |
@@ -95,9 +133,9 @@ swan.getLocation({
 |latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系。|
 |longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系。|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

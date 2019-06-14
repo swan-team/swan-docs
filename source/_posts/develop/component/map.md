@@ -5,7 +5,11 @@ nav: component
 sidebar: map
 ---
 ## map
-<div class="notice">解释： </div>地图<div></div><text class="notice">属性说明:</text>
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
+**解释**：地图
+**属性说明**: 
 
 |属性名 |类型  |默认值  |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |
@@ -31,7 +35,7 @@ sidebar: map
 | bindregionchange | EventHandle |  | 视野发生变化时触发 |- |
 | bindtap | EventHandle |   | 点击地图时触发 | -|
 | bindupdated | EventHandle |   | 在地图渲染更新完成时触发 |- |
-
+| bindpoitap | EventHandle |   | 点击地图poi点时触发 |- |
 
 ### markers
 
@@ -43,6 +47,7 @@ sidebar: map
 | latitude | 纬度 | Number | 是 | 浮点数，范围 -90 ~ 90 |
 | longitude | 经度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
 | title  | 标注点名  | String | 否    |  |
+| zIndex  | 显示层级  | Number | 否    |  |
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | rotate | 旋转角度 | Number | 否 | 顺时针旋转的角度，范围 0 ~ 360，默认为 0 |
 | alpha | 标注的透明度 | Number    | 否 | 默认1，无透明 |
@@ -94,6 +99,18 @@ sidebar: map
 | arrowIconPath | 更换箭头图标 | String | 否 | 在arrowLine为true时生效 |
 | borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
+
+### polygon
+**解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<div></div><text class="notice">属性说明:</text>
+
+| 属性名 | 说明 | 类型  | 必填  | 备注 |
+|---- | ---- | ---- |---- | ---- |
+| points | 经纬度数组 | Array |	是 | [{latitude: 0, longitude: 0}]|
+| strokeWidth |	描边的宽度 | Number | 否 ||
+| strokeColor |	描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
+| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
+| zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
+
 ### circles
 **解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
 
@@ -127,8 +144,11 @@ sidebar: map
 地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
 
 **示例**：
-<a href="swanide://fragment/3979f647ab4d5848afc3d96d4c9ad2fc1540397393" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/8d637f6a9f61064eeee857a2bb94f6fd1559047949918" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
+
+* 在 swan 文件中
+
 ```xml
 <!-- map.swan -->
 <map id="myMap"
@@ -144,6 +164,8 @@ sidebar: map
      circles="{{circles}}"
      bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated"></map>
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
