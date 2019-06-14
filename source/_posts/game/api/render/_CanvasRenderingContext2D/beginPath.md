@@ -35,7 +35,6 @@ context.stroke();
 ![图片](/img/game/canvas/beginPath-002.png)
 
 ```js
-var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
 
 context.beginPath();
