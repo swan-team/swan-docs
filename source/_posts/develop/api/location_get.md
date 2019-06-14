@@ -38,7 +38,7 @@ sidebar: location_get
 |province|省份|
 |streetNumber|街道号码|
 |district|区|
-|countryCode|区号|
+
 
 **示例**：
 <a href="swanide://fragment/775dce89a25a95becbe8cb12562c5b581560166773963" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
