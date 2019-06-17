@@ -12,7 +12,7 @@ POST http://inner.openapi.baidu.com
 
 |属性|类型|默认值|是否必填|说明|
 |-|-|-|-|-|
-|access_token|string||是|接口调用凭证|
+|access_token|string||是|接口调用凭证，[获取 access_token 方法](/develop/serverapi/power_exp/)|
 |swanId|string||是|用户唯一标识符|
 |kv_list|Object||是|要上报的数据|
 
