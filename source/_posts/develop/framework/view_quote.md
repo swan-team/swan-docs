@@ -4,7 +4,7 @@ header: develop
 nav: framework
 sidebar: view_quote
 ---
-SWAN 可以通过`import`和`include`来引用文件。
+SWAN 可以通过`import`和`include`来引用模板文件。
 
 ## import
 通过`import`和`template`配合使用，可以将代码分离以及复用。
