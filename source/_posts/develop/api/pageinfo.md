@@ -62,7 +62,7 @@ sidebar: pageinfo
 
 **示例**：
 
-<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -124,7 +124,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **在 js 文件中**
@@ -165,7 +165,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -220,7 +220,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **在 js 文件中**

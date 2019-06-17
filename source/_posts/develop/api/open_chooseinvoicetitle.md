@@ -35,7 +35,7 @@ sidebar: open_chooseinvoicetitle
 
 **示例**：
 
-<a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

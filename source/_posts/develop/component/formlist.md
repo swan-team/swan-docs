@@ -62,7 +62,7 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```css
 /** button.css **/
 /** 修改 button 点击态样式**/
@@ -106,7 +106,7 @@ sidebar: formlist
 
 
 示例：
-<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <!-- checkbox.swan -->
 <form bind:submit="formSubmit">
@@ -159,8 +159,7 @@ Page({
 ```
 ## checkbox-group
 
-<div class="notice">解释： </div>多项选择器
-<div></div>
+**解释**：多项选择器
 
 **内部由多个 checkbox 组成**
 
@@ -170,10 +169,7 @@ Page({
 
 ## form
 
-<div class="notice">解释： </div>表单
-<div></div>
-
-将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
+**解释**：表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
 
 当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
 
@@ -185,7 +181,7 @@ Page({
 
 
 示例：
-<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
@@ -213,6 +209,8 @@ Page({
 ```
 
 ## input
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 **解释**：输入框
 
@@ -365,7 +363,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |-----|--- |--- |
 |for|String|绑定控件的 id|
 **示例**：
-<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```
 <view class="section">
@@ -456,7 +454,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | day | 选择器粒度为天 |
 
 **示例**：
-<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
 <view class="section">
     <view class="section-title">时间选择器</view>
@@ -621,7 +619,7 @@ Page({
 <div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
-<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -720,10 +718,10 @@ Page({
 | value | String | &nbsp; | &lt;radio/&gt; 标识。当该 &lt;radio/&gt; 选中时，&lt;radio-group/&gt; 的 change 事件会携带 &lt;radio/&gt; 的 value |
 | checked | Boolean | false | 当前是否选中 |
 | disabled | Boolean | false | 是否禁用 |
-| color | Color | &nbsp; | radio 的颜色，同 CSS 的 color |
+| color | Color | #3c76ff| radio 的颜色，同 CSS 的 color |
 
 **示例**：
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -821,7 +819,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 > 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
@@ -847,7 +845,7 @@ Page({
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -888,7 +886,7 @@ Page({
 |---- | ---- | ---- |---- |
 |checked| Boolean| false| 是否选中|
 |type| String| switch| 样式，有效值：switch,checkbox|
-|color| Color| \#09bb07| switch 的颜色，同 CSS 的 color|
+|color| Color| #3388ff| switch 的颜色，同 CSS 的 color|
 |disabled|	Boolean|	false|	是否禁用|
 |bindchange | EventHandle  | |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
@@ -900,7 +898,7 @@ Page({
 | checkbox | 复选框样式 |
 
 **示例**：
-<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```xml
@@ -963,6 +961,9 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 ## textarea
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+
 **解释**：多行输入框。
 
 |属性名|类型|默认值|说明|
@@ -991,7 +992,7 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 
 **示例代码**：
 
- <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+ <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

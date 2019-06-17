@@ -33,13 +33,13 @@ sidebar: media
 |返回错误码|描述|
 |---- |---- |
 |1|获取资源过程被用户终止|
-|2|当下载时发生错误|
+|2|网络错误|
 |3|当解码时发生错误|
 |4|不支持音频|
 
 **示例**：
 
-<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -125,7 +125,7 @@ image 组件默认宽度 300px、高度 225px。
 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 
 **示例**：
-  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -273,6 +273,10 @@ Page({
 
 ## video
 
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+
 **解释**：视频
 
 **属性说明**：
@@ -342,7 +346,7 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -439,7 +443,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -605,16 +609,19 @@ video {
 
 **示例**：
 
-<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```html
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
 </ar-camera>
 ```
-> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>。
+> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
 
 
 ## live-player
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 
 **解释**：实时视频播放
 
@@ -657,7 +664,7 @@ video {
 
 **示例**：
 
-<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

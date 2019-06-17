@@ -43,7 +43,7 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 

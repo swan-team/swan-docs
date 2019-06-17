@@ -25,7 +25,7 @@ sidebar: show_background
 
 **示例**：
 
-<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -80,7 +80,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

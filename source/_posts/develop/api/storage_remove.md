@@ -23,7 +23,7 @@ sidebar: storage_remove
 
 **示例**：
 
-<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -85,7 +85,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -150,7 +150,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -191,7 +191,7 @@ Page({
 
 **方法参数**：无
 
-<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**：
 
