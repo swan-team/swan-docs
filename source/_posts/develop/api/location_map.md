@@ -11,6 +11,8 @@ sidebar: location_map
 
 **方法参数**：String mapId
 
+**`mapId`参数说明**：要获取 map 组件的 id。
+
 **返回值**：mapContext
 
 ## mapContext
