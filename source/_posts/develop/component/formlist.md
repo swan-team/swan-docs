@@ -11,24 +11,25 @@ sidebar: formlist
 
 **解释**： 按钮
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|size|String | default  |大小|
-| type | String | default |类型|
-| plain | Boolean  |false |按钮是否镂空，背景色透明。|
-|form-type |String  |   |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
-|open-type | String |  |百度 App开放能力，比如分享、获取用户信息等等。|
-|hover-class |String  |button-hover |点击态。指定按钮按下去的样式类。当 ` hover-class="none"`  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
-| hover-stop-propagation|Boolean|false |指定是否阻止本节点的祖先节点出现点击态。|
-|hover-start-time | Number |20  |按住后多久出现点击态，单位毫秒。|
-|hover-stay-time|Number | 70  |手指松开后点击态保留时间，单位毫秒。|
-| bindgetuserinfo |Handler |   |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
-|disabled|Boolean|false|是否禁用|
-|loading|Boolean|false|名称前是否带有loading图标|
-|bindgetphonenumber|Handler| |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
-|bindopensetting|Handler| |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|size|String | default  | 否 |大小|
+| type | String | default | 否 |类型|
+| plain | Boolean  |false | 否 |按钮是否镂空，背景色透明。|
+|form-type |String  | buttonclick | 否 |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
+|open-type | String |  | 否 |百度 App开放能力，比如分享、获取用户信息等等。|
+|hover-class |String  |button-hover | 否 |点击态。指定按钮按下去的样式类。当 ` hover-class="none"`  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
+| hover-stop-propagation|Boolean|false | 否 |指定是否阻止本节点的祖先节点出现点击态。|
+|hover-start-time | Number |20  | 否 |按住后多久出现点击态，单位毫秒。|
+|hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|
+| bindgetuserinfo |Handler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
+|disabled|Boolean|false| 否 |是否禁用|
+|loading|Boolean|false| 否 |名称前是否带有loading图标|
+|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
+|bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
+<!-- | bindcontact | Handler |-| 否 |		客服消息回调，使用时机：open-type="contact"。| -->
+<!-- | bindfaceverify | Handler | | 否 | 人脸核验回调，使用时机：open-type="faceVerify" | -->
 <!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
-|bindcontact|Handler|-|		客服消息回调，使用时机：open-type="contact"。|
 
 -->
 
@@ -44,9 +45,17 @@ sidebar: formlist
 
 |值 |说明|
 |---- |---- |
-|primary	|蓝色|
+| primary	|蓝色|
 | default |白色|
 | warn |红色|
+
+**form-type有效值**：
+
+|值|说明|
+| ---- | ---- |
+| buttonclick | 普通按钮点击 |
+| submit | 提交表单 |
+| reset | 重置表单 |
 
 **open-type有效值**：
 
@@ -56,7 +65,7 @@ sidebar: formlist
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
 | getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
-
+<!-- |contact|获取客服消息| -->
 
 
 
@@ -97,12 +106,12 @@ sidebar: formlist
 **解释**： 多选项目
 
 
-|属性名 |类型  |默认值  |说明|
+|属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |
-|value | String  | |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
-|disabled|Boolean| false| 是否禁用|
-|checked|Boolean | false| 当前是否选中，可用来设置默认选中|
-|color| Color| | checkbox 的颜色，同 CSS 的 color|
+|value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
+|disabled|Boolean| false| 否 | 是否禁用|
+|checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
+|color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
 
 
 示例：
@@ -159,25 +168,25 @@ Page({
 ```
 ## checkbox-group
 
-**解释**：多项选择器
+**解释**：多项选择器，内部由多个 checkbox 组成
 
-**内部由多个 checkbox 组成**
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|bindchange | EventHandle  | |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
 
 ## form
 
-**解释**：表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
+**解释**：
+表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
 
 当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
 
-|属性名 |类型 |说明|最低版本|
-|-----|---- |---- |----|
-| bindsubmit | EventHandle    |携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}}	`|-|
-| bindreset | EventHandle   |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean|是否用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
+|属性名 |类型 | 默认值 | 必填 |说明|最低版本|
+|-----|---- |---- |----|----|----|
+| bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: ''}	`|-|
+| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|-|
+|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
 
 
 示例：
@@ -214,28 +223,28 @@ Page({
 
 **解释**：输入框
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | String  | |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|
-| type | String  |text  |input 的类型|
-| password | Boolean  | false  |是否是密码类型|
-| placeholder | String  |   |输入框为空时占位符|
-|placeholder-style| String  |  | placeholder 的样式|
-|placeholder-class |  String |input-placeholder  |placeholder 的样式类|
-| disabled | Boolean  | false  |是否禁用|
-| maxlength | Number  | 140 |最大输入长度，设置为 -1 的时候不限制最大长度|
-|cursor-spacing |Number	  |0  |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
-| focus |Boolean	  | false |获取焦点	|
-|confirm-type|String  | done |设置键盘右下角按钮的文字|
-|confirm-hold | Boolean  | false |点击键盘右下角按钮时是否保持键盘不收起|
-|cursor	 | Number  |  |指定 focus 时的光标位置|
-|selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
-|selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
-|adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
-| bindinput | EventHandle  |   |当键盘输入时，触发 input 事件，event.detail = {value, cursor}，处理函数可以直接 return 一个字符串，将替换输入框的内容。|
-| bindfocus | EventHandle  |  |输入框聚焦时触发，event.detail = {value: value}|
-|bindblur	|EventHandle	  | |输入框失去焦点时触发，event.detail = {value: value}|
-| bindconfirm |EventHandle	  |  |点击完成按钮时触发，event.detail = {value: value}|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|
+| type | String  |text  | 否 |input 的类型|
+| password | Boolean  | false  | 否 |是否是密码类型|
+| placeholder | String  |   | 否 |输入框为空时占位符|
+|placeholder-style| String  |  | 否 | placeholder 的样式|
+|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|
+| disabled | Boolean  | false  | 否 |是否禁用|
+| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
+| focus |Boolean	  | false | 否 |获取焦点	|
+|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
+|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
+|cursor	 | Number  |  | 否 |指定 focus 时的光标位置|
+|selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
+|selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
+|adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。处理函数可以直接 return 一个字符串，将替换输入框的内容。|
+| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|
+|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|
+| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|
 
 
 **type 有效值**：
@@ -352,16 +361,13 @@ Page({
 
 ## label
 
-**解释**： 使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。
+**解释：** 为鼠标用户改进表单的可用性。
+使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。目前可以绑定的控件有：`'<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
 
-for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。
 
-目前可以绑定的控件有：`'<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
-<div></div>
-
-|属性名|类型|说明|
-|-----|--- |--- |
-|for|String|绑定控件的 id|
+|属性名|类型|默认值|必填|说明|
+|-----|--- |--- |--- |--- |
+|for|String| | 否 |绑定控件的 id|
 **示例**：
 <a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -381,10 +387,36 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 
 ## picker
 
-<div class="notice">解释： </div>选择器
-<div></div>
+**解释：** 从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
 
-从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
+|属性|类型|默认值|必填|说明|
+|--- |---|---|---|---|
+|mode|String|selector|否|选择器类型|
+|disabled|Boolean|false|否|是否禁用|
+|bindcancel|EventHandle||否|取消选择或点击遮罩层收起 picker 时触发|
+
+> 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
+
+**mode的有效值**
+
+|值|说明|
+|---|---|
+|selector|普通选择器|
+|time|时间选择器|
+|date|日期选择器|
+|multiSelector|多列选择器|
+|region|省市区选择器|
+
+<notice>普通选择器：mode = selector</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| range | Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
+
 
 <notice>时间选择器：mode = time</notice>
 
@@ -394,8 +426,6 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | start | String  |   |表示有效时间范围的开始，字符串格式为 "hh:mm"|
 | end | String  | |表示有效时间范围的结束，字符串格式为 "hh:mm"|
 |bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| disabled | Boolean | false |是否禁用|
-|bindcancel|	EventHandle| |		取消选择或点遮罩层收起 picker 时触发|
 
 <notice>日期选择器：mode = date</notice>
 
@@ -406,20 +436,14 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | end | String |  |表示有效日期范围的结束，字符串格式为 "YYYY-MM-DD"|
 | fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
-| disabled | Boolean  | false |是否禁用|
-|bindcancel	|EventHandle| |		取消选择时触发|
 
-<notice>普通选择器：mode = selector</notice>
+<div style="font-style: italic">* fields有效值：</div>
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| range | Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
-| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| disabled | Boolean  | false |是否禁用|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
-|bindcancel|EventHandle | |取消选择或点击遮罩层收起 picker 时触发。|
+| 值 | 说明 |
+| ---- | ---- |
+| year | 选择器粒度为年 |
+| month | 选择器粒度为月份 |
+| day | 选择器粒度为天 |
 
 <notice>多列选择器：mode = multiSelector</notice>
 
@@ -430,9 +454,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| disabled | Boolean  | false |是否禁用|
 | title | String | | 选择器标题（仅安卓有效）默认值为 "设置" |
-|bindcancel|	EventHandle| |		取消选择时触发|
 
 <notice>省市区选择器：mode = region</notice>
 
@@ -440,18 +462,9 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |---- | ---- | ---- |---- |
 | value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
 | custom-item | String | |可为每一列的顶部添加一个自定义的项|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| disabled | Boolean  | false |是否禁用|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value, code, postcode}， 其中code为统计用区划代码，postcode为邮政编码|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
-|bindcancel|	EventHandle| |		取消选择时触发|
 
-**fields 有效值**:
-
-| 值 | 说明 |
-| ---- | ---- |
-| year | 选择器粒度为年 |
-| month | 选择器粒度为月份 |
-| day | 选择器粒度为天 |
 
 **示例**：
 <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -600,14 +613,14 @@ Page({
 <div class="notice">解释： </div>嵌入页面的滚动选择器
 <div></div>
 
-|属性名 |类型  |说明|
-|---- | ---- |---- |
-| value |NumberArray  |数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。|
-|indicator-style | String |设置选择器中间选中框的样式|
-|indicator-class | String |设置选择器中间选中框的类名|
-|mask-style | String |设置蒙层的样式 |
-|mask-class | String |设置蒙层的类名|
-| bindchange | EventHandle |当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
+|属性名 |类型  |默认值|必填|说明|
+|---- | ---- |---- |---- |---- |
+| value |NumberArray  |[]|否|数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。|
+|indicator-style | String ||否|设置选择器中间选中框的样式|
+|indicator-class | String ||否|设置选择器中间选中框的类名|
+|mask-style | String ||否|设置蒙层的样式 |
+|mask-class | String ||否|设置蒙层的类名|
+| bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
 **说明**:
@@ -616,7 +629,7 @@ Page({
 
 ## picker-view-column
 
-<div class="notice">解释： </div>仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
+<div class="notice">解释： </div>滚动选择器的子节点。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
 <a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
