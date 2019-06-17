@@ -84,6 +84,8 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 
 **方法参数**：String canvasId
 
+**`canvasId`参数说明**：要获取 canvas 组件的 id。
+
 **返回值**：canvasContext
 
 
@@ -796,18 +798,19 @@ ctx.draw();
 
 ##  canvasContext.setShadow
 
+> 使用顺序：setShadow(offsetX, offsetY, blur, color)
+
 **解释**：设置阴影样式。
 
-**方法参数**：Object object
+**方法参数**：Number offsetX, Number offsetY, Number blur, Color color
 
-**`object`参数说明**：
+**`offsetX`参数说明**：阴影相对于形状在水平方向的偏移。
 
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-| offsetX | Number | 是| -|阴影相对于形状在水平方向的偏移 |
-| offsetY | Number |是 | -| 阴影相对于形状在竖直方向的偏移 |
-| blur | Number | 是 |  -|阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
-| color	| Color | 是| -| 阴影的颜色 |
+**`offsetY`参数说明**：阴影相对于形状在竖直方向的偏移。
+
+**`blur `参数说明**：阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 
+
+**`color`参数说明**：阴影的颜色。 
 
 **示例**：
 
@@ -1059,7 +1062,7 @@ ctx.draw();
 
 ##  canvasContext.setLineDash
 
-**解释**：设置线条的宽度。
+**解释**：设置线条虚线样式的间距和长度。
 
 **方法参数**：Array pattern, Number offset
 
@@ -1645,7 +1648,7 @@ ctx.draw();
 
 ## canvasContext.drawImage
 
-> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
+> 使用顺序：drawImage(imageResource, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
 **解释**：绘制图像到画布。
 
