@@ -129,7 +129,7 @@ sidebar: base_app_event
 
 取消监听小程序切前台事件。
 
-参数
+
 
 **参数**
 
@@ -137,12 +137,13 @@ sidebar: base_app_event
 小程序切前台事件的回调函数。
 
 
-## swan.offAppShow
+## swan.offAppHide
+
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
 取消监听小程序切后台事件。
 
-参数
+
 
 **参数**
 
