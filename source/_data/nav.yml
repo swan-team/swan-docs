@@ -1585,6 +1585,10 @@
                 name: storage_save
                 sidebar:
                   -
+                    link: /develop/api/storage_save/#数据缓存流程
+                    text: 数据缓存流程
+                    name: storage_save_数据缓存流程                
+                  -
                     link: /develop/api/storage_save/#swan-setStorage
                     text: swan.setStorage
                     name: storage_save_swan-setStorage
@@ -3108,6 +3112,12 @@
       name: function
       sidebar:
         -
+          sidebar:              
+          -
+            link: /develop/function/opensmartprogram
+            text: 打开小程序
+            name: opensmartprogram            
+        -
           link: /develop/function/webintroduction 
           text: Web 化开发
           sidebar:       
@@ -3118,11 +3128,8 @@
           -
             link: /develop/function/proposal 
             text: Web 化开发建议
-            name: proposal   
-          -
-            link: /develop/function/opensmartprogram
-            text: 打开小程序
-            name: opensmartprogram                     
+            name: proposal  
+                 
         -
           link: /develop/function/invoke_process
           text: 支付功能开发
@@ -3186,18 +3193,7 @@
             link: /develop/function/error_code
             text: 错误码
             name: error_code             
-          # -
-          #   link: /develop/function/faq_v2 
-          #   text: 支付 FAQ
-          #   name: faq_v2 
-        -
-          link: /develop/function/storage
-          text: 数据缓存
-          sidebar:       
-          -
-            link: /develop/function/storage
-            text: 数据缓存流程
-            name: storage       
+      
     -
       link: /develop/swan/version
       text: 基础库版本信息
