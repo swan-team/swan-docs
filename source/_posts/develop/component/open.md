@@ -121,7 +121,7 @@ sidebar: open
 |bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
 **示例**：
-<a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ac090bcb0bfd8aca1b9d47c7c854c6271560838933592" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 

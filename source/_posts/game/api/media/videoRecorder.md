@@ -29,18 +29,18 @@ videoRecorderManager.start(opts)
 |---|-------|---|-------|-------|
 |opts|Object|-|是|调用该方法时，要传入的对象参数|
 |opts.duration|number|10 | 否 |录屏的时长，单位 s，最大值 120（2 分钟）|
-|opts.microphoneEnabled|boolean|false|否|是否启用麦克风录音|
 
 **示例：**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
 recorder.onStart(res => {
-  console.log(res.microphoneStatus);
+  // 录屏开始
+  console.log(res);
 })
 
 recorder.start({
-  microphoneEnabled: true,
+  duration: 60,
 })
 
 ```
@@ -58,23 +58,6 @@ videoRecorderManager.onStart(callback)
 |---|-----|-------|-------|
 |callback|function|是|监听录屏开始事件的回调函数|
 
-**回调函数参数值：**
-
-| 属性|类型|描述|
-|-|-|-|
-|res|object|回调函数的参数|
-|res.microphoneStatus|number|麦克风状态|
-
-只有在 microphoneEnabled 为 true 时，onStart 回调才会有 microphoneStatus 返回。
-
-res.microphoneStatus 的合法值：
-
-|值|描述|
-|---|-------|
-|0|麦克风可用|
-|1|麦克风被系统禁用|
-|2|麦克风被小游戏禁用|
-
 
 **示例：**
 
@@ -83,11 +66,11 @@ const recorder = swan.getVideoRecorderManager();
 
 recorder.onStart(res => {
   // 录屏开始
-  console.log(res.microphoneStatus);
+  console.log(res);
 })
 
 recorder.start({
-  microphoneEnabled: true,
+  duration: 60,
 })
 ```
 

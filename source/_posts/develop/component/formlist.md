@@ -466,6 +466,16 @@ Page({
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 
 
+**mode 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| selector | 普通选择器 |
+| time | 时间选择器 |
+| date | 日期选择器 |
+| multiSelector | 多列选择器 |
+| region | 省市区选择器 |
+
 **示例**：
 <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```xml
@@ -858,7 +868,7 @@ Page({
 |bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/52972cf5e70224467ab100257f8f7b031560838826410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

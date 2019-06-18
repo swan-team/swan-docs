@@ -1632,6 +1632,10 @@
                 name: storage_save
                 sidebar:
                   -
+                    link: /develop/api/storage_save/#数据缓存流程
+                    text: 数据缓存流程
+                    name: storage_save_数据缓存流程                
+                  -
                     link: /develop/api/storage_save/#swan-setStorage
                     text: swan.setStorage
                     name: storage_save_swan-setStorage
@@ -3149,57 +3153,17 @@
               link: /develop/third/log
               text: 更新日志
               name: log
-    # -
-    #   link: /develop/flow
-    #   text: 搜索流量接入
-    #   name: flow
-    #   sidebar:
-        # -
-        #   link: /develop/flow/intro
-        #   text:
-        #   name: intro
-        #   sidebar:
-        #     -
-        #       link: /develop/flow/intro
-        #       text: 概述
-        #       name: intro
-    #     -
-    #       link: /develop/flow/rank
-    #       text:
-    #       name: rank
-    #       sidebar:
-    #         -
-    #           link: /develop/flow/rank
-    #           text: 接入自然搜索
-    #           name: rank
-    # -
-    #   link: /develop/web
-    #   text: Web 化配置
-    #   name: web
-    #   sidebar:
-    #     -
-    #       link: /develop/web/start
-    #       text:
-    #       name: start
-    #       sidebar:
-    #         -
-    #           link: /develop/web/start
-    #           text: 配置开启 Web化
-    #           name: start
-    #     -
-    #       link: /develop/web/detail
-    #       text:
-    #       name: detail
-    #       sidebar:
-    #         -
-    #           link: /develop/web/detail
-    #           text: 代理域名配置详解
-    #           name: detail
     -
       link: /develop/function/webintroduction 
       text: 功能开发
       name: function
       sidebar:
+        -
+          sidebar:              
+          -
+            link: /develop/function/opensmartprogram
+            text: 打开小程序
+            name: opensmartprogram            
         -
           link: /develop/function/webintroduction 
           text: Web 化开发
@@ -3211,7 +3175,8 @@
           -
             link: /develop/function/proposal 
             text: Web 化开发建议
-            name: proposal            
+            name: proposal  
+                 
         -
           link: /develop/function/invoke_process
           text: 支付功能开发
@@ -3275,18 +3240,7 @@
             link: /develop/function/error_code
             text: 错误码
             name: error_code             
-          # -
-          #   link: /develop/function/faq_v2 
-          #   text: 支付 FAQ
-          #   name: faq_v2 
-        -
-          link: /develop/function/storage
-          text: 数据缓存
-          sidebar:       
-          -
-            link: /develop/function/storage
-            text: 数据缓存流程
-            name: storage       
+      
     -
       link: /develop/swan/version
       text: 基础库版本信息
