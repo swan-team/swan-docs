@@ -3,6 +3,7 @@ title: recommendationButton
 layout: gamedoc
 topic: recommendationButton
 categoryName: api
+priority: 13-02
 ---
 
 > 从基础库 swan-game.js 1.5.2 开始支持。

@@ -4,5 +4,5 @@ layout: gamedoc
 level: root
 topic: recommendationButton
 categoryName: api
-priority: 08-00
+priority: 13-00
 ---

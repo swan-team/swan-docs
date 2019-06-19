@@ -3,7 +3,7 @@ title: 屏幕亮度
 layout: gamedoc
 topic: device
 categoryName: api
-priority: 12-04
+priority: 14-04
 ---
 
 > 基础库 swan-game.js 1.5.2 版本开始支持。

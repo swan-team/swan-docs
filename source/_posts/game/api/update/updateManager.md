@@ -3,6 +3,7 @@ title: UpdateManager
 layout: gamedoc
 topic: update
 categoryName: api
+priority: 16-02
 ---
 
 ### applyUpdate()

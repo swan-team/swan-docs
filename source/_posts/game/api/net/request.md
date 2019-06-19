@@ -3,6 +3,7 @@ title: 发起请求
 layout: gamedoc
 topic: net
 categoryName: api
+priority: 06-01
 ---
 
 <!-- md game/api/net/_requestContext/abort.md -->

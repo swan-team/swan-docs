@@ -3,6 +3,7 @@ title: 下载
 layout: gamedoc
 topic: net
 categoryName: api
+priority: 06-03
 ---
 
 <!-- md game/api/net/_downloadFileContext/downloadFile.md -->
