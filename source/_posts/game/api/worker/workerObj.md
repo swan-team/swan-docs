@@ -3,7 +3,7 @@ title: Worker
 layout: gamedoc
 topic: worker
 categoryName: api
-priority: 18-02
+priority: 20-02
 ---
 
  Worker 实例对象。在主线程中可通过 [swan.createWorker()](/game/api/worker/createWorker/) 接口获取；在 Worker 线程中可通过全局变量 `worker` 获取

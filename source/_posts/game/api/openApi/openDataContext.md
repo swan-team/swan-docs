@@ -3,6 +3,7 @@ title: 开放数据域
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-07
 ---
 
 <!-- md game/api/openApi/_openDataContext/openDataContext.md -->
