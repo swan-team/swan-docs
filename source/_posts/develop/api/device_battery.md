@@ -31,7 +31,7 @@ success回调函数参数：
 
 **示例**：
 
-<a href="swanide://fragment/cb6297a52344d70cb6550b4b64b6bf641557731832995" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cb6297a52344d70cb6550b4b64b6bf641557731832995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -81,7 +81,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9e460b922c49f43567359b50f84488b21557732035056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9e460b922c49f43567359b50f84488b21557732035056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

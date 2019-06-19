@@ -5,7 +5,11 @@ nav: component
 sidebar: map
 ---
 ## map
-<div class="notice">解释： </div>地图<div></div><text class="notice">属性说明:</text>
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
+**解释**：地图
+**属性说明**: 
 
 |属性名 |类型  |默认值  |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |

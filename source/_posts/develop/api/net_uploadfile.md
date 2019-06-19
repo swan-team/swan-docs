@@ -33,7 +33,7 @@ sidebar: net_uploadfile
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
-<a href="swanide://fragment/9aa7bb960bd9eebce07522b7b058379d1559048969876" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9aa7bb960bd9eebce07522b7b058379d1559048969876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 
@@ -129,7 +129,7 @@ uploadTask.abort(); // 取消上传任务
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 
 
-<a href="swanide://fragment/3ac15397aa60af4d3a84bbee534df38a1559049176281" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3ac15397aa60af4d3a84bbee534df38a1559049176281" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 

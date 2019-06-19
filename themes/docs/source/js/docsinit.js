@@ -10,6 +10,7 @@
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
         '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
+        '/docs/develop/tutorial/shine/':'/docs/develop/swan/shine/',
 
         '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',

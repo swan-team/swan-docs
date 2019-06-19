@@ -1,7 +1,7 @@
 ---
-title: web 化概述
+title: web 化开发
 header: develop
-nav: web
+nav: function
 sidebar: webintroduction
 ---
 
@@ -38,6 +38,5 @@ Web 化是百度小程序包在后台自动转化得到的一个 H5 版本的小
 浏览器中打开的 URL 域名即是该小程序的 Web化真实域名。预览环境的 URL 后有 appKey 参数，正式环境下没有该参数。
 
    ![图片](../../../img/web/web2.png)
-
 
 

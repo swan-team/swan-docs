@@ -412,10 +412,10 @@
                 link: /develop/tutorial/install
                 text: 安装开发者工具
                 name: install    
-              # -
-              #   link: /develop/tutorial/startdevelop 
-              #   text: 开发智能小程序
-              #   name: startdevelop                  
+              -
+                link: /develop/tutorial/startdevelop 
+                text: 开发智能小程序
+                name: startdevelop                  
               -
                 link: /develop/tutorial/process
                 text: 全局配置
@@ -450,22 +450,27 @@
                       link: /develop/tutorial/dev/#开发-json-文件
                       text: 开发 .json 文件
                       name: dev_开发-json-文件
+              -
+                link: /develop/tutorial/function
+                text: 功能开发
+                name: function
+                sidebar:                      
                     -
-                      link: /develop/tutorial/dev/#页面路由
+                      link: /develop/tutorial/function/#页面路由
                       text: 页面路由
-                      name: dev_页面路由
+                      name: function_页面路由
                     -
-                      link: /develop/tutorial/dev/#Page
+                      link: /develop/tutorial/function/#Page
                       text: Page
-                      name: dev_Page
+                      name: function_Page
                     -
-                      link: /develop/tutorial/dev/#组件
+                      link: /develop/tutorial/function/#组件
                       text: 组件
-                      name: dev_组件
+                      name: function_组件
                     -
-                      link: /develop/tutorial/dev/#API
+                      link: /develop/tutorial/function/#API
                       text: API
-                      name: dev_API                                                            
+                      name: function_API                                                            
               -
                 link: /develop/tutorial/publish
                 text: 调试预览发布
@@ -474,7 +479,7 @@
                     -
                       link: /develop/tutorial/publish/#调试
                       text: 调试
-                      name: publish_调试                  
+                      name: publish_调试                   
                     -
                       link: /develop/tutorial/publish/#预览
                       text: 预览 
@@ -511,7 +516,7 @@
                 name: app_service
               -
                 link: /develop/framework/app_service_register
-                text: 注册程序
+                text: 注册 App
                 name: app_service_register
                 sidebar:
                   -
@@ -540,42 +545,42 @@
                     text: 生命周期函数
                     name: app_service_page_生命周期函数
                   -
-                    link: /develop/framework/app_service_page/#通用事件
-                    text: 通用事件
-                    name: app_service_page_通用事件
+                    link: /develop/framework/app_service_page/#页面事件处理函数
+                    text: 页面事件处理函数
+                    name: app_service_page_页面事件处理函数
                   -
-                    link: /develop/framework/app_service_page/#用户绑定事件
-                    text: 用户绑定事件
-                    name: app_service_page_用户绑定事件
+                    link: /develop/framework/app_service_page/#组件事件处理函数
+                    text: 组件事件处理函数
+                    name: app_service_page_组件事件处理函数
                   -
                     link: /develop/framework/app_service_page/#setData-机制
                     text: setData 机制
                     name: app_service_page_setData-机制
               -
-                link: /develop/framework/app_service_getcurrentpages
+                link: /develop/framework/app_service_route
                 text: 页面路由
-                name: app_service_getcurrentpages
+                name: app_service_route
                 sidebar:
                   -
-                    link: /develop/framework/app_service_getcurrentpages/#页面栈
+                    link: /develop/framework/app_service_route/#页面栈
                     text: 页面栈
-                    name: app_service_getcurrentpages_页面栈
+                    name: app_service_route_页面栈
                   -
-                    link: /develop/framework/app_service_getcurrentpages/#getCurrentPages
+                    link: /develop/framework/app_service_route/#getCurrentPages
                     text: getCurrentPages
-                    name: app_service_getcurrentpages_getCurrentPages
+                    name: app_service_route_getCurrentPages
                   -
-                    link: /develop/framework/app_service_getcurrentpages/#路由方式
+                    link: /develop/framework/app_service_route/#路由方式
                     text: 路由方式
-                    name: app_service_getcurrentpages_路由方式
+                    name: app_service_route_路由方式
                   -
-                    link: /develop/framework/app_service_getcurrentpages/#文件作用域
+                    link: /develop/framework/app_service_route/#文件作用域
                     text: 文件作用域
-                    name: app_service_getcurrentpages_文件作用域
+                    name: app_service_route_文件作用域
                   -
-                    link: /develop/framework/app_service_getcurrentpages/#模块化
+                    link: /develop/framework/app_service_route/#模块化
                     text: 模块化
-                    name: app_service_getcurrentpages_模块化
+                    name: app_service_route_模块化
 
               -
                 link: /develop/framework/app_service_aop
@@ -698,7 +703,11 @@
             -
               link: /develop/framework/whitescreen
               text: 白屏优化建议
-              name: whitescreen             
+              name: whitescreen      
+            -
+              link: /develop/framework/case
+              text: 案例介绍
+              name: case                     
         -
           link: /develop/framework/subpackages
           text: 运行时
@@ -725,7 +734,7 @@
         -
             sidebar:
               -
-                link: /develop/component/list
+                link: /develop/component/componetlist
                 text: 组件列表
                 name: componetlist
               -
@@ -966,7 +975,49 @@
             -
               link: /develop/api/apilist
               text: API 列表
-              name: apilist        
+              name: apilist
+        -
+            link: /develop/api/base
+            text: 基础
+            name: base
+            sidebar:
+            -
+              link: /develop/api/base_app_event
+              text: 应用级事件
+              name: base_app_event
+              sidebar:
+                -
+                  link: /develop/api/base_app_event/#swan-onPageNotFound
+                  text: swan.onPageNotFound
+                  name: base_app_event_swan-onPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-onError
+                  text: swan.onError
+                  name: base_app_event_swan-onError
+                -
+                  link: /develop/api/base_app_event/#swan-onAppShow
+                  text: swan.onAppShow
+                  name: base_app_event_swan-onAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-onAppHide
+                  text: swan.onAppHide
+                  name: base_app_event_swan-onAppHide
+                -
+                  link: /develop/api/base_app_event/#swan-offPageNotFound
+                  text: swan.offPageNotFound
+                  name: base_app_event_swan-offPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-offError
+                  text: swan.offError
+                  name: base_app_event_swan-offError
+                -
+                  link: /develop/api/base_app_event/#swan-offAppShow
+                  text: swan.offAppShow
+                  name: base_app_event_swan-offAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-offAppHide
+                  text: swan.offAppHide
+                  name: base_app_event_swan-offAppHide      
      
         -
             link: /develop/api/net
@@ -1581,6 +1632,10 @@
                 name: storage_save
                 sidebar:
                   -
+                    link: /develop/api/storage_save/#数据缓存流程
+                    text: 数据缓存流程
+                    name: storage_save_数据缓存流程                
+                  -
                     link: /develop/api/storage_save/#swan-setStorage
                     text: swan.setStorage
                     name: storage_save_swan-setStorage
@@ -2162,7 +2217,7 @@
                   -
                     link: /develop/api/menu_info/#swan-getMenuButtonBoundingClientRect
                     text: swan.getMenuButtonBoundingClientRect
-                    name: menu_info_swan-getMenuButtonBoundingClientRect                    
+                    name: menu_info_swan-getMenuButtonBoundingClientRect                                     
               -
                 link: /develop/api/show_query
                 text: 节点信息
@@ -2502,6 +2557,14 @@
                 name: open_authorize
                 sidebar:
                   -
+                    link: /develop/api/open_authorize/#需授权接口列表
+                    text: 需授权接口列表
+                    name: open_authorize_需授权接口列表
+                  -
+                    link: /develop/api/open_authorize/#获取用户授权设置
+                    text: 获取用户授权设置
+                    name: open_authorize_获取用户授权设置                                      
+                  -
                     link: /develop/api/open_authorize/#swan-authorize
                     text: swan.authorize
                     name: open_authorize_swan-authorize
@@ -2555,7 +2618,10 @@
                     link: /develop/api/open_share/#swan-openShare
                     text: swan.openShare
                     name: open_share_swan-openShare
-
+                  -
+                    link: /develop/api/open_share/#web-view中的分享
+                    text: web-view中的分享
+                    name: open_share_web-view中的分享
               -
                 link: /develop/api/open_chooseaddress
                 text: 选择收货地址
@@ -2645,6 +2711,28 @@
                     link: /develop/api/get/#swan-getUpdateManager
                     text: swan.getUpdateManager
                     name: get_swan-getUpdateManager
+                  -
+                    link: /develop/api/get/#updateManager
+                    text: updateManager
+                    name: updateManager
+                    sidebar:                    
+                      -
+                        link: /develop/api/get/#updateManager-onCheckForUpdate
+                        text: updateManager.onCheckForUpdate
+                        name: get_updateManager-onCheckForUpdate
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateReady
+                        text: updateManager.onUpdateReady
+                        name: get_updateManager-onUpdateReady
+                      -
+                        link: /develop/api/get/#updateManager-onUpdateFailed
+                        text: updateManager.onUpdateFailed
+                        name: get_updateManager-onUpdateFailed
+                      -
+                        link: /develop/api/get/#updateManager-applyUpdate
+                        text: updateManager.applyUpdate
+                        name: get_updateManager-applyUpdate
+
               -
                 link: /develop/api/debug
                 text: 调试
@@ -2908,7 +2996,14 @@
               -
                 link: /develop/devtools/code
                 text: 代码片段
-                name: code                 
+                name: code      
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/complation
+                text: 代码编译
+                name: complation                            
         -
             link: /develop/devtools/uplog
             text: 工具版本信息
@@ -3058,67 +3153,94 @@
               link: /develop/third/log
               text: 更新日志
               name: log
-    # -
-    #   link: /develop/flow
-    #   text: 搜索流量接入
-    #   name: flow
-    #   sidebar:
-        # -
-        #   link: /develop/flow/intro
-        #   text:
-        #   name: intro
-        #   sidebar:
-        #     -
-        #       link: /develop/flow/intro
-        #       text: 概述
-        #       name: intro
-    #     -
-    #       link: /develop/flow/rank
-    #       text:
-    #       name: rank
-    #       sidebar:
-    #         -
-    #           link: /develop/flow/rank
-    #           text: 接入自然搜索
-    #           name: rank
-    # -
-    #   link: /develop/web
-    #   text: Web 化配置
-    #   name: web
-    #   sidebar:
-    #     -
-    #       link: /develop/web/start
-    #       text:
-    #       name: start
-    #       sidebar:
-    #         -
-    #           link: /develop/web/start
-    #           text: 配置开启 Web化
-    #           name: start
-    #     -
-    #       link: /develop/web/detail
-    #       text:
-    #       name: detail
-    #       sidebar:
-    #         -
-    #           link: /develop/web/detail
-    #           text: 代理域名配置详解
-    #           name: detail
     -
-      link: /develop/web/webintroduction 
-      text: Web 化
-      name: web
+      link: /develop/function/webintroduction 
+      text: 功能开发
+      name: function
       sidebar:
         -
-          sidebar:
-            -
-              link: /develop/web/webintroduction 
-              text: Web 化概述
-              name: webintroduction 
-            -
-              link: /develop/web/proposal
-              text: 开发建议
-              name: proposal             
+          sidebar:              
+          -
+            link: /develop/function/opensmartprogram
+            text: 打开小程序
+            name: opensmartprogram            
+        -
+          link: /develop/function/webintroduction 
+          text: Web 化开发
+          sidebar:       
+          -
+            link: /develop/function/webintroduction 
+            text: Web 化概述
+            name: webintroduction 
+          -
+            link: /develop/function/proposal 
+            text: Web 化开发建议
+            name: proposal  
+                 
+        -
+          link: /develop/function/invoke_process
+          text: 支付功能开发
+          sidebar:  
+          -
+            link: /introduction/pay
+            text: 百度收银台支付开通指引
+            name: pay                      
+          -
+            link: /develop/function/invoke_process 
+            text: 调用流程
+            name: invoke_process 
+          -
+            link: /develop/function/parameter
+            text: 核心参数获取与组装
+            name: parameter 
+          -
+            link: /develop/function/sign_v2
+            text: 签名与验签
+            name: sign_v2  
+          -
+            link: /develop/function/keygen_v2
+            text: 密钥生成
+            name: keygen_v2               
+          -
+            link: /develop/function/tune_up
+            text: 百度收银台接口
+            name: tune_up
+            sidebar: 
+                   
+              -
+                link: /develop/function/tune_up/#调起百度收银台
+                text: 调起百度收银台
+                name: tune_up_调起百度收银台
+              -
+                link: /develop/function/tune_up/#通知支付状态
+                text: 通知支付状态
+                name: tune_up_通知支付状态                       
+              -
+                link: /develop/function/tune_up/#支付状态查询
+                text: 支付状态查询
+                name: tune_up_支付状态查询
+              -
+                link: /develop/function/tune_up/#取消核销
+                text: 取消核销
+                name: tune_up_取消核销
+              -
+                link: /develop/function/tune_up/#申请退款
+                text: 申请退款
+                name: tune_up_申请退款
+              -
+                link: /develop/function/tune_up/#请求业务方退款审核
+                text: 请求业务方退款审核
+                name: tune_up_请求业务方退款审核
+              -
+                link: /develop/function/tune_up/#通知退款状态
+                text: 通知退款状态
+                name: tune_up_通知退款状态 
+
+          -
+            link: /develop/function/error_code
+            text: 错误码
+            name: error_code             
+      
     -
       link: /develop/swan/version
       text: 基础库版本信息
@@ -3146,18 +3268,22 @@
               link: /develop/swan/compatibility
               text: 兼容性说明
               name: compatibility 
-    # -
-    #   link: /develop/faq/web-view
-    #   text: FAQ
-    #   name: faq
-    #   sidebar:
-    #     -
-    #       sidebar:            
+    -
+      link: /develop/faq/frequently
+      text: FAQ
+      name: faq
+      sidebar:
+        -
+          sidebar:            
   
-    #         -
-    #           link: /develop/faq/frameworkfaq 
-    #           text: 框架常见问题
-    #           name: frameworkfaq  
+            -
+              link: /develop/faq/frequently
+              text: 常见问题
+              name: frequently 
+            # -
+            #   link: /develop/function/faq_v2 
+            #   text: 支付常见问题
+            #   name: faq_v2               
     #         -
     #           link: /develop/faq/confaq 
     #           text: 组件常见问题
@@ -3288,6 +3414,10 @@
             link: /operations/specification
             text: 平台运营规范
             name: specification
+          -
+            link: /operations/catagory
+            text: 服务类目
+            name: catagory            
           -
             link: /operations/service
             text: 服务条款

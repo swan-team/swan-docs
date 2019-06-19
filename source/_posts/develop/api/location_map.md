@@ -11,6 +11,8 @@ sidebar: location_map
 
 **方法参数**：String mapId
 
+**`mapId`参数说明**：要获取 map 组件的 id。
+
 **返回值**：mapContext
 
 ## mapContext
@@ -19,7 +21,7 @@ sidebar: location_map
 
 **示例**：
 
-<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -36,16 +36,37 @@ sidebar: ai_ocr
 |log_id | String | 唯一的log id，用于问题定位。|
 |words_result_num|  Number  |识别结果数，表示words_result的元素个数。|
 |words_result|	Object	|定位和识别结果|
-|+location|	Object	|位置数组（坐标0点为左上角）|
-|++left|	Number|	表示定位位置的长方形左上顶点的水平坐标。|
-|++top|	Number	|表示定位位置的长方形左上顶点的垂直坐标。|
-|++width|	Number|	表示定位位置的长方形的宽度。|
-|++height|	Number|	表示定位位置的长方形的高度。|
-|++words|	String|	识别结果字符串|
+
+**words_result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+| 住址 | Object | 住址|
+| 公民身份号码 | Object | 公民身份号码|
+| 出生 | Object | 出生|
+| 姓名 | Object | 姓名|
+| 性别 | Object | 性别|
+| 民族 | Object | 民族|
+
+**住址/公民身份号码/出生/姓名/性别/民族 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|location| Object | 位置信息（坐标0点为左上角）|
+|words| String | 识别结果字符串|
+
+**location 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|left| Number | 表示识别结果的定位位置的长方形左上顶点的水平坐标。|
+|top| Number | 表示识别结果的定位位置的长方形左上顶点的垂直坐标。|
+|width| Number | 表示识别结果的定位位置的长方形的宽度。|
+|height| Number | 表示识别结果的定位位置的长方形的高度。|
 
 **示例**：
 
-<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -155,13 +176,18 @@ swan.chooseImage({
 |---- | ---- | ---- |
 |log_id | String |请求标识码，随机数，唯一。|
 |result | Object |返回结果|
-|+bank_card_number  |  String  |银行卡卡号 |
-|+bank_name |String | 银行名，不能识别时为空 。|
-|+bank_card_type | String | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
+
+**result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|bank_card_number  |  String  |银行卡卡号 |
+|bank_name |String | 银行名，不能识别时为空 。|
+|bank_card_type | String | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
 
 **示例**：
 
-<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -208,18 +234,38 @@ swan.chooseImage({
 |complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success 返回参数说明**：
+**success 返回参数说明**
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
 |log_id | String |唯一的log id，用于问题定位。|
 | words_result_num  |  Number  |识别结果数，表示 words_result 的元素个数。 |
 |words_result |  Object  | 识别结果 |
-|+words | String | 识别结果字符串 |
+
+**words_result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+| 证号 | Object | 证号（持证人的身份证号）|
+| 有效期限 | Object | 有效期限|
+| 准驾车型 | Object | 准驾车型|
+| 有效起始日期 | Object | 有效起始日期|
+| 住址 | Object | 住址|
+| 姓名 | Object | 姓名|
+| 国籍 | Object | 国籍|
+| 出生日期 | Object | 出生日期|
+| 性别 | Object | 性别|
+| 初次领证日期 | Object | 初次领证日期|
+
+**证号/有效期限/准驾车型/有效起始日期/住址/姓名/国籍/出生日期/性别/初次领证日期 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|words | String | 识别结果字符串 |
 
 **示例**：
 
-<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -304,11 +350,31 @@ swan.chooseImage({
 |log_id | String |唯一的log id，用于问题定位。|
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |
-|+words | String | 识别结果字符串 |
+
+**words_result 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+| 品牌型号 | Object | 品牌型号|
+| 发证日期 | Object | 发证日期|
+| 使用性质 | Object | 使用性质|
+| 发动机号码 | Object | 发动机号码|
+| 号牌号码 | Object | 号牌号码|
+| 所有人 | Object | 所有人|
+| 住址 | Object | 住址|
+| 注册日期 | Object | 注册日期|
+| 车辆识别代号 | Object | 车辆识别代号|
+| 车辆类型 | Object | 车辆类型|
+
+**品牌型号、发证日期、使用性质、发动机号码、号牌号码、所有人、住址、注册日期、车辆识别代号、车辆类型 返回值说明**
+
+|参数名 | 参数类型 |说明  |
+|---|---|---|---|
+|words | String | 识别结果字符串 |
 
 **示例**：
 
-<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

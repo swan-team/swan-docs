@@ -19,8 +19,15 @@ sidebar: ad
 |apid|string| |是|小程序广告位 ID|
 |type|string|feed|否|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
 
+**type 有效值:**:
+
+| 值 | 说明 |
+|--- |----- |
+| banner | 横幅类型 |
+| feed | 流式类型 |
+
 **示例**：
-<a href="swanide://fragment/887f2bc9c844abf188eeefc57d2aa0b21559048217250" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/887f2bc9c844abf188eeefc57d2aa0b21559048217250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * banner
 

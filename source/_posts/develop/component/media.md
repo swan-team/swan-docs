@@ -33,13 +33,13 @@ sidebar: media
 |返回错误码|描述|
 |---- |---- |
 |1|获取资源过程被用户终止|
-|2|当下载时发生错误|
+|2|网络错误|
 |3|当解码时发生错误|
 |4|不支持音频|
 
 **示例**：
 
-<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -103,7 +103,7 @@ Page({
 
 image 组件默认宽度 300px、高度 225px。
 
-** mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
+**mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |
@@ -125,7 +125,7 @@ image 组件默认宽度 300px、高度 225px。
 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 
 **示例**：
-  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -273,6 +273,10 @@ Page({
 
 ## video
 
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+
 **解释**：视频
 
 **属性说明**：
@@ -305,6 +309,14 @@ Page({
 |bindwaiting|	EventHandle| |		视频出现缓冲时触发|
 |binderror|	EventHandle	| |	视频播放出错时触发|
 
+**objectFit 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| contain | 包含 |
+| fill | 填充 |
+| cover | 覆盖 |
+
 **主流格式支持**：
 
 |格式|	Android|	IOS|
@@ -334,7 +346,7 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -414,11 +426,24 @@ Page({
 |bindstop|EventHandle|  |摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle| |用户不允许使用摄像头时触发|
 
+**device-position 有效值**:
 
+| 值 | 说明 |
+| ---- | ---- |
+| front | 前置摄像头 |
+| back | 后置摄像头 |
+
+**flash 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
 
 **示例**：
 
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -558,6 +583,22 @@ video {
 |bindload|EventHandle| |AR加载成功时触发|
 |bindmessage|EventHandle| |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
 
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| 0 | 2D 跟踪类型 |
+| 5 | SLAM 类型 |
+| 8 | IMU 类型 |
+
+**flash 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
+
 **说明**:
 
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
@@ -568,16 +609,19 @@ video {
 
 **示例**：
 
-<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```html
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
 </ar-camera>
 ```
-> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>。
+> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
 
 
 ## live-player
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 
 **解释**：实时视频播放
 
@@ -604,11 +648,23 @@ video {
 |bindnetstatus|EventHandle|  |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
 |bindfullscreenchange|	EventHandle	| |	全屏变化事件，detail = {direction, fullScreen}。|
 
+**orientation 有效值**:
 
+| 值 | 说明 |
+| ---- | ---- |
+| vertical | 垂直方向 |
+| horizontal | 水平方向 |
+
+**object-fit 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| contain | 包含 |
+| fillCrop | 填充 |
 
 **示例**：
 
-<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

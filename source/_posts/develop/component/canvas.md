@@ -6,6 +6,9 @@ sidebar: canvas
 ---
 
 ## canvas
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
 **解释**：画布
 
 **属性说明**：
@@ -24,7 +27,7 @@ sidebar: canvas
 1、 canvas 组件默认宽度 300px、高度 225px；
 2、 基础库版本1.12.0开始支持事件捕获、冒泡。
 **示例**：
-<a href="swanide://fragment/1cea7b0bb322dced02e9aaf6c29fb0021559048011432" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1cea7b0bb322dced02e9aaf6c29fb0021559048011432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -81,5 +84,5 @@ Page({
 ```
 
 **Bug & Tip**：
-1、canvas 组件是原生组件；
-2、canvas 组件不能使用动画进行控制；
+
+canvas 组件不能使用动画进行控制；
