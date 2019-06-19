@@ -277,7 +277,7 @@ Page({
 |---- | ---- | ---- |---- |---- |
 |indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
 |indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| -|
-|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色件| -|
+|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| -|
 |autoplay |Boolean  | false | 否 |是否自动切换| -|
 |current|Number |0 | 否 |当前所在页面的 index| -|
 |current-item-id|String|`""`| 否 |当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
@@ -324,13 +324,13 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 <view class="wrap">
     <view class="title">示例</view>
     <view class="swiper-wrap">
-        <swiper 
+        <swiper
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}" 
+            indicator-dots="{{switchIndicateStatus}}"
             vertical="false"
             circular="true"
             current="0"
@@ -640,7 +640,7 @@ Page({
     onScale(e) {
         console.log(e.detail)
     }
-}); 
+});
 ```
 
 * 在 css 文件中

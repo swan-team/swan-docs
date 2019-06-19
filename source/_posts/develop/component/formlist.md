@@ -260,11 +260,11 @@ Page({
 
 |值|说明 |
 |---- | ---- |
-| send |右下角按钮为 “发送”|
-|search |右下角按钮为 “搜索” |
-| next |右下角按钮为 “下一个”|
-| go |右下角按钮为 “前往” |
-| done |右下角按钮为 “完成” |
+| send |键盘右下角按钮为 “发送”|
+|search |键盘右下角按钮为 “搜索” |
+| next |键盘右下角按钮为 “下一个”|
+| go |键盘右下角按钮为 “前往” |
+| done |键盘右下角按钮为 “完成” |
 
 **示例**：
 <a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
@@ -973,7 +973,7 @@ Page({
     position: absolute;
     top: 50%;
     right: .2rem;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
 }
 ```
 
@@ -998,11 +998,6 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |disabled|Boolean|false|是否禁用|
 |maxlength|Number|140|最大输入长度，设置为 -1 的时候不限制最大长度|
 |auto-height|Boolean|false|是否自动增高，设置auto-height时，style.height不生效|
-|bindfocus|EventHandle| |输入框聚焦时触发，event.detail = { value, height }，height|
-|bindblur|EventHandle| |输入框失去焦点时触发，event.detail = {value, cursor}|
-|bindlinechange|EventHandle| |输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}|
-|bindinput|EventHandle| |当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
-|bindconfirm|EventHandle| |点击完成时， 触发 confirm 事件，event.detail = {value: value}|
 |cursor|Number|-1|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
 |auto-focus|Boolean|false|自动聚焦，拉起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |focus|Boolean|false|获取焦点 <font color="#4183c4">10.8.5 以上</font>|
@@ -1012,6 +1007,27 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |selection-start|Number|-1|光标起始位置，自动聚集时有效，需与selection-end搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |selection-end|Number|-1|光标结束位置，自动聚集时有效，需与selection-start搭配使用 <font color="#4183c4">10.8.5 以上</font>|
 |adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
+|confirm-type|String|default|设置手机软键盘右下角按钮的文字及键盘行为。输入状态键盘右下角按钮为 “确认”，会将正在输入的文字填充到输入框；非输入状态时的表现见下方“confirm-type 有效值”的说明 <font color="#4183c4">11.10 及以上</font>|
+|bindfocus|EventHandle| |输入框聚焦时触发，event.detail = { value, height }，height|
+|bindblur|EventHandle| |输入框失去焦点时触发，event.detail = {value, cursor}|
+|bindlinechange|EventHandle| |输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}|
+|bindinput|EventHandle| |当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
+|bindconfirm|EventHandle| |点击完成时， 触发 confirm 事件，event.detail = {value: value}|
+
+**confirm-type 有效值**：
+
+用户正在输入时手机软键盘处于输入状态。
+输入状态时键盘右下角按钮为 “确认”，会将正在输入的文字填充到输入框；
+非输入状态时见下表:
+
+|值|说明 |
+|---- | ---- |
+| default |非输入状态时键盘右下角按钮为 “换行 ”，点击会换行。|
+| send |非输入状态时键盘右下角按钮为 “发送”，点击不换行直接触发bindconfirm。|
+| search |非输入状态时键盘右下角按钮为 “搜索” ，点击不换行直接触发bindconfirm。|
+| next |非输入状态时键盘右下角按钮为 “下一个”，点击不换行直接触发bindconfirm。|
+| go |非输入状态时键盘右下角按钮为 “前往” ，点击不换行直接触发bindconfirm。|
+| done |非输入状态时键盘右下角按钮为 “完成” ，点击不换行直接触发bindconfirm。|
 
 **示例代码**：
 
