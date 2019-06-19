@@ -3161,6 +3161,12 @@
         -
           sidebar:              
           -
+            link: /develop/function/navigation
+            text: 小程序导航
+            name: onavigation         
+        -
+          sidebar:              
+          -
             link: /develop/function/opensmartprogram
             text: 打开小程序
             name: opensmartprogram            
