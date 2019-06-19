@@ -4,7 +4,7 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-01
-
+draft: true
 ---
 
   <!-- > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持 -->
