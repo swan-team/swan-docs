@@ -64,16 +64,22 @@ sidebar: nav
 ```
 `<navigator/>` 的子节点背景色应为透明色。
 **示例**：
-<a href="swanide://fragment/621e786c36ec50803219f93b9dfca7511559047236429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/497f08f7f358abef70289b1c0b2193951560859565473" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <button type="primary" class="btn">
-    <navigator class="nav" url="/pages/detail/detail?id=新页面">跳转到新页面</navigator>
+	<navigator class="nav" url="/pages/navigate/navigate" hover-class="navigator-hover">跳转到新页面</navigator>
 </button>
 <button type="primary" class="btn">
-    <navigator class="nav" url="/pages/detail/detail?id=当前页" open-type="redirect" >在当前页打开</navigator>
+	<navigator class="nav" url="/pages/detail/detail" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+</button>
+<button type="primary" class="btn">
+	<navigator class="nav" url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+</button>
+<button type="primary" class="btn">
+  	<navigator class="nav" target="miniProgram" open-type="navigate" app-id="79RKhZ2BTvyyHitg4W3Xle4kkFgwwXyp" path="" extra-data="" version="release" bindsuccess="successHandler" bindfail="failHandler">打开绑定的小程序</navigator>
 </button>
 ```
 
@@ -89,12 +95,16 @@ sidebar: nav
 }
 ```
 
-```xml
-<!-- navigator.swan -->
-<view class="swan-demo">
-	<navigator url="/pages/navigate/navigate" hover-class="navigator-hover">跳转到新页面</navigator>
-	<navigator url="/pages/detail/detail" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
-	<navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
-</view>
+* 在 js 文件中
 
+```js
+Page({
+    data: {},
+    successHandler: function (e) {
+        console.log('success');
+    },
+    failHandler: function (e) {
+        console.log('success');
+    }
+});
 ```
