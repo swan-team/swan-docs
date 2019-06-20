@@ -208,7 +208,15 @@
               -
                 link: /introduction/auditing_tieba
                 text: 贴吧素材审核规范
-                name: auditing_tieba               
+                name: auditing_tieba      
+        # -
+        #     link: /introduction/single
+        #     text: 小程序单卡接入
+        #     sidebar:
+        #       -
+        #         link: /introduction/single
+        #         text: 小程序单卡接入
+        #         name: single                      
     -
       link: /introduction/adopen
       text: 流量主开通
@@ -242,6 +250,31 @@
                 link: /introduction/scancode
                 text: 扫码打开智能小程序
                 name: scancode 
+    -
+      link: /introduction/productlaboratory
+      text: 产品实验室
+      name: book
+      sidebar:
+        -
+            link: /introduction/productlaboratory
+            text: Discuz 论坛解决方案
+            sidebar:
+              -
+                link: /introduction/productlaboratory
+                text: 开通指引
+                name: productlaboratory    
+              # -
+              #   link: /introduction/instead
+              #   text: 搜索结果替换
+              #   name: instead                
+              # -
+              #   link: /introduction/adaccess
+              #   text: 广告接入
+              #   name: adaccess                
+              # -
+              #   link: /introduction/feedput
+              #   text: 信息流投放
+              #   name: feedput 
 # 2
 -
   link: /design/overview/introduction

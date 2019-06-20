@@ -101,7 +101,7 @@ Page({
 | binderror |HandleEvent | |当错误发生时，发布到 AppService 的事件名，事件对象 event.detail = {errMsg: 'something wrong'}|
 | bindload | HandleEvent  | |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
-image 组件默认宽度 300px、高度 225px。
+
 
 **mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
@@ -121,8 +121,10 @@ image 组件默认宽度 300px、高度 225px。
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-**说明**:
-支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+**Bug & Tip**：
+
+* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+* image 组件默认宽度 300px、高度 225px。
 
 **示例**：
   <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -410,9 +412,9 @@ Page({
 }
 ```
 
-**说明**:
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/'>createVideoContext</a>
-* `<video />` 默认宽度 300px、高度 225px
+**Bug & Tip**：
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/'>createVideoContext</a>。
+* `<video />` 默认宽度 300px、高度 225px。
 
 ## camera
 **解释**：相机
@@ -560,11 +562,11 @@ video {
 </div>
 
 
-**说明**:
+**Bug & Tip**：
 * camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>。
 
 ## ar-camera
 
@@ -599,12 +601,12 @@ video {
 | on | 闪光灯开 |
 | off | 闪光灯关 |
 
-**说明**:
+**Bug & Tip**：
 
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
 * 同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
-* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>
+* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
 
 
 **示例**：
@@ -754,7 +756,7 @@ button {
 **图示**
 ![图片](../../../img/component/liveplayer.png)
 
-**说明**:
+**Bug & Tip**：
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。
 

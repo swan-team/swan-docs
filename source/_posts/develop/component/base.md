@@ -214,11 +214,11 @@ Page({
 </div>
 
 
-**说明:**
+**Bug & Tip**：
 
-* 除了文本节点以外的其他节点都无法长按选中。
+* 除了文本节点以外的其他节点都无法长按选中，支持复制，但不支持剪切。
 * 各个操作系统的空格标准并不一致。
-* `<text/>`组件内只支持`<text/>`嵌套。
+* `<text/>`组件内只支持`<text/>`嵌套，注意被嵌套的text绑定事件无法触发。
 
 
 ## rich-text
@@ -463,7 +463,7 @@ button {
     </div>
 </div>
 
-**说明**：
+**Bug & Tip**：
 
 * 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
@@ -626,7 +626,7 @@ Page({
 }
 ```
 
-**说明:**
+**Bug & Tip**：
 
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * animation-view组件不支持原生组件嵌套。

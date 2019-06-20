@@ -27,11 +27,7 @@ sidebar: formlist
 |loading|Boolean|false| 否 |名称前是否带有loading图标|
 |bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
-<!-- | bindcontact | Handler |-| 否 |		客服消息回调，使用时机：open-type="contact"。| -->
-<!-- | bindfaceverify | Handler | | 否 | 人脸核验回调，使用时机：open-type="faceVerify" | -->
-<!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
-
--->
+ 
 
 **size有效值**：
 
@@ -349,15 +345,15 @@ Page({
     width: 2.79rem;
 }
 ```
-**说明**：
-* confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持；
-* input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；
+
+**Bug & Tip**：
+
+* confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。
+* input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family。
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
-
-**BUG**：
-
-  在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+* 在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+* 暂不支持 bindinput 处理函数直接 return 一个字符串。
 
 ## label
 
