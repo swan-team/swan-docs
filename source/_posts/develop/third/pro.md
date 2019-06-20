@@ -289,6 +289,10 @@ modify\_count.image\_modify\_used | int | 小程序头像已修改总次数
 modify\_count.image\_modify\_quota | int | 小程序头像总共的可修改次数
 modify\_count.category\_modify\_used | int | 小程序类目已修改次数
 modify\_count.category\_modify\_quota | int | 小程序类目总共的可修改次数
+auth_info|array|小程序权限集合信息
+auth_info.scope_name|string|权限名称
+auth_info.type|int|权限类型(0:小程序纬度权限 1:账号纬度权限)
+min\_swan\_version	|string	|开发者工具最低版本
 min\_swan\_version	|string	|开发者工具最低版本
 status	|int	| 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务
 web\_status |int | 小程序的web化开关状态 <br> 0:未开启 <br>1:开启 <br>2:关闭
@@ -353,12 +357,28 @@ msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
 			"audit_photo_addr": "xxx",
 			"audit_photo_addr_reason": "头像审核失败原因"
 		},
+		 "auth_info":[
+                    {
+                        "scope_name":"数据权限",
+                        "type":0
+                    },
+                    {
+                        "scope_name":"账号管理权限",
+                        "type":0
+                    },
+                    {
+                        "scope_name":"推广权限",
+                        "type":0
+                    }
+                ],
 		"min_swan_version": "1.6.17",
 		"status": 1,
 		"web_status":1
 	}
 }
 ```
+
+
 
 ### 9、找回授权码
 为了防止refresh_token丢失后失去小程序的操作权限，增加补充机制，通过原有授权关系直接找回authorization\_code可以再换取access\_token
