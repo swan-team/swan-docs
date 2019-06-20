@@ -3193,10 +3193,10 @@
       sidebar:
         -
           sidebar:              
-          -
-            link: /develop/function/navigation
-            text: 小程序导航
-            name: onavigation         
+          # -
+          #   link: /develop/function/navigation
+          #   text: 小程序导航
+          #   name: onavigation         
         -
           sidebar:              
           -
