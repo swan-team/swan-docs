@@ -3183,12 +3183,12 @@
       text: 功能开发
       name: function
       sidebar:
-        # -
-        #   sidebar:              
-        #   -
-        #     link: /develop/function/navigation
-        #     text: 小程序导航
-        #     name: navigation         
+        -
+          sidebar:              
+          -
+            link: /develop/function/navigation
+            text: 小程序导航
+            name: navigation         
         -
           sidebar:              
           -
