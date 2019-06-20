@@ -3,7 +3,7 @@ title: swan.shareAppMessage()
 layout: gamedoc
 topic: share
 categoryName: api
-priority: 10-01
+priority: 11-01
 ---
 
 

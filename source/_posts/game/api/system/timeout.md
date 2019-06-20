@@ -3,6 +3,7 @@ title: 定时器
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-05
 ---
 
 ### setTimeout()

@@ -3,6 +3,7 @@ title: 录屏
 layout: gamedoc
 topic: media
 categoryName: api
+priority: 08-03
 ---
 
 > 基础库 swan-game.js 1.4.1 版本开始支持。

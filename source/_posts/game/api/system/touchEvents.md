@@ -3,6 +3,7 @@ title: 触摸事件
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-04
 ---
 
 

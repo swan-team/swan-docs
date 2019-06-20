@@ -3,6 +3,7 @@ title: 开放数据
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-06
 ---
 
 <!-- md game/api/openApi/_openData/getFriendCloudStorage.md -->
