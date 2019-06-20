@@ -7,7 +7,7 @@ sidebar: nav
 
 ## navigator
 
-**解释**： 页面链接，更多内容参见[小程序导航](http:/smartprogram.baidu.com/docs/develop/function/navigation/)。
+**解释**： 页面链接。
 
 
 
