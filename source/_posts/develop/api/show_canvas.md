@@ -763,7 +763,7 @@ module.exports = canvas;
 
 **解释**：设置填充色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 
 
@@ -783,7 +783,7 @@ ctx.draw();
 
 **解释**：设置边框颜色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 **示例**：
 
@@ -802,7 +802,7 @@ ctx.draw();
 
 **解释**：设置阴影样式。
 
-**方法参数**：Number offsetX, Number offsetY, Number blur, Color color
+**方法参数**：Number offsetX, Number offsetY, Number blur, [Color](/develop/api/canvas_color/) color
 
 **`offsetX`参数说明**：阴影相对于形状在水平方向的偏移。
 
@@ -895,7 +895,7 @@ ctx.draw();
 
 **解释**：创建一个颜色的渐变点。
 
-**方法参数**：Number stop, Color color
+**方法参数**：Number stop, [Color](/develop/api/canvas_color/) color
 
 **`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。
 
