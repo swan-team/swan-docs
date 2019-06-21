@@ -1,5 +1,5 @@
 ---
-title: 接入贴吧流量
+title: 小程序单卡
 header: introduction
 nav: book
 sidebar: single
