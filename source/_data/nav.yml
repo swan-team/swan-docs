@@ -991,9 +991,9 @@
                     name: ad_ad
                                       
     -
-      link: /develop/api/
+      link: /develop/api/apilist
       text: API
-      name: api
+      name: apilist
       sidebar:
         -
             sidebar:
@@ -2798,9 +2798,9 @@
                     text: setTimeout
                     name: timer_setTimeout   
     -
-      link: /develop/serverapi
+      link: /develop/serverapi/open_feed
       text: 服务端 API
-      name: serverapi
+      name: open_feed
       sidebar:
         - 
           sidebar: 

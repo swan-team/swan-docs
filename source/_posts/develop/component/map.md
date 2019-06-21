@@ -267,3 +267,4 @@ Page({
 * CSS 动画对 map 组件无效。
 * cover-view、cover-image 组件可覆盖在map组件之上。
 * map组件的 markers 的 label 暂不支持换行。
+* Android 与 iOS 定位精度不同，双端定位存在差异。
