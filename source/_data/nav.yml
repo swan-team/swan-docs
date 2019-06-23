@@ -2796,7 +2796,16 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout   
+                    name: timer_setTimeout
+              -
+                link: /develop/api/open_riskInfo
+                text: 风控
+                name: open_riskInfo
+                sidebar:
+                  -
+                    link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
+                    text: swan.getSystemRiskInfo
+                    name: open_userinfo_swan-getSystemRiskInfo   
     -
       link: /develop/serverapi/open_feed
       text: 服务端 API
