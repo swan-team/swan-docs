@@ -1,5 +1,5 @@
 ---
-title: 接入贴吧流量
+title: 小程序单卡
 header: introduction
 nav: book
 sidebar: single
@@ -13,7 +13,7 @@ sidebar: single
 * 基础流量：该入口不需要开发者进行配置，小程序上线后自动获取
 
 
-![图片](../../img/introduction/single/1.jpeg)
+![图片](../../../img/introduction/single/1.jpeg)
 
 
 * 需配置流量：根据小程序质量及体验分配对应权益
