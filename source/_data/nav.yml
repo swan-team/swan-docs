@@ -208,7 +208,7 @@
               -
                 link: /introduction/auditing_tieba
                 text: 贴吧素材审核规范
-                name: auditing_tieba               
+                name: auditing_tieba                           
     -
       link: /introduction/adopen
       text: 流量主开通
@@ -242,6 +242,31 @@
                 link: /introduction/scancode
                 text: 扫码打开智能小程序
                 name: scancode 
+    -
+      link: /introduction/productlaboratory
+      text: 产品实验室
+      name: book
+      sidebar:
+        -
+            link: /introduction/productlaboratory
+            text: Discuz 论坛解决方案
+            sidebar:
+              -
+                link: /introduction/productlaboratory
+                text: 开通指引
+                name: productlaboratory    
+              # -
+              #   link: /introduction/instead
+              #   text: 搜索结果替换
+              #   name: instead                
+              # -
+              #   link: /introduction/adaccess
+              #   text: 广告接入
+              #   name: adaccess                
+              # -
+              #   link: /introduction/feedput
+              #   text: 信息流投放
+              #   name: feedput 
 # 2
 -
   link: /design/overview/introduction
@@ -966,9 +991,9 @@
                     name: ad_ad
                                       
     -
-      link: /develop/api/
+      link: /develop/api/apilist
       text: API
-      name: api
+      name: apilist
       sidebar:
         -
             sidebar:
@@ -976,48 +1001,48 @@
               link: /develop/api/apilist
               text: API 列表
               name: apilist
-        -
-            link: /develop/api/base
-            text: 基础
-            name: base
-            sidebar:
-            -
-              link: /develop/api/base_app_event
-              text: 应用级事件
-              name: base_app_event
-              sidebar:
-                -
-                  link: /develop/api/base_app_event/#swan-onPageNotFound
-                  text: swan.onPageNotFound
-                  name: base_app_event_swan-onPageNotFound
-                -
-                  link: /develop/api/base_app_event/#swan-onError
-                  text: swan.onError
-                  name: base_app_event_swan-onError
-                -
-                  link: /develop/api/base_app_event/#swan-onAppShow
-                  text: swan.onAppShow
-                  name: base_app_event_swan-onAppShow
-                -
-                  link: /develop/api/base_app_event/#swan-onAppHide
-                  text: swan.onAppHide
-                  name: base_app_event_swan-onAppHide
-                -
-                  link: /develop/api/base_app_event/#swan-offPageNotFound
-                  text: swan.offPageNotFound
-                  name: base_app_event_swan-offPageNotFound
-                -
-                  link: /develop/api/base_app_event/#swan-offError
-                  text: swan.offError
-                  name: base_app_event_swan-offError
-                -
-                  link: /develop/api/base_app_event/#swan-offAppShow
-                  text: swan.offAppShow
-                  name: base_app_event_swan-offAppShow
-                -
-                  link: /develop/api/base_app_event/#swan-offAppHide
-                  text: swan.offAppHide
-                  name: base_app_event_swan-offAppHide      
+        # -
+        #     link: /develop/api/base
+        #     text: 基础
+        #     name: base
+        #     sidebar:
+        #     -
+        #       link: /develop/api/base_app_event
+        #       text: 应用级事件
+        #       name: base_app_event
+        #       sidebar:
+        #         -
+        #           link: /develop/api/base_app_event/#swan-onPageNotFound
+        #           text: swan.onPageNotFound
+        #           name: base_app_event_swan-onPageNotFound
+        #         -
+        #           link: /develop/api/base_app_event/#swan-onError
+        #           text: swan.onError
+        #           name: base_app_event_swan-onError
+        #         -
+        #           link: /develop/api/base_app_event/#swan-onAppShow
+        #           text: swan.onAppShow
+        #           name: base_app_event_swan-onAppShow
+        #         -
+        #           link: /develop/api/base_app_event/#swan-onAppHide
+        #           text: swan.onAppHide
+        #           name: base_app_event_swan-onAppHide
+        #         -
+        #           link: /develop/api/base_app_event/#swan-offPageNotFound
+        #           text: swan.offPageNotFound
+        #           name: base_app_event_swan-offPageNotFound
+        #         -
+        #           link: /develop/api/base_app_event/#swan-offError
+        #           text: swan.offError
+        #           name: base_app_event_swan-offError
+        #         -
+        #           link: /develop/api/base_app_event/#swan-offAppShow
+        #           text: swan.offAppShow
+        #           name: base_app_event_swan-offAppShow
+        #         -
+        #           link: /develop/api/base_app_event/#swan-offAppHide
+        #           text: swan.offAppHide
+        #           name: base_app_event_swan-offAppHide      
      
         -
             link: /develop/api/net
@@ -1631,6 +1656,10 @@
                 text: 存储数据
                 name: storage_save
                 sidebar:
+                  -
+                    link: /develop/api/storage_save/#数据缓存流程
+                    text: 数据缓存流程
+                    name: storage_save_数据缓存流程                
                   -
                     link: /develop/api/storage_save/#swan-setStorage
                     text: swan.setStorage
@@ -2769,9 +2798,9 @@
                     text: setTimeout
                     name: timer_setTimeout   
     -
-      link: /develop/serverapi
+      link: /develop/serverapi/open_feed
       text: 服务端 API
-      name: serverapi
+      name: open_feed
       sidebar:
         - 
           sidebar: 
@@ -3149,57 +3178,23 @@
               link: /develop/third/log
               text: 更新日志
               name: log
-    # -
-    #   link: /develop/flow
-    #   text: 搜索流量接入
-    #   name: flow
-    #   sidebar:
-        # -
-        #   link: /develop/flow/intro
-        #   text:
-        #   name: intro
-        #   sidebar:
-        #     -
-        #       link: /develop/flow/intro
-        #       text: 概述
-        #       name: intro
-    #     -
-    #       link: /develop/flow/rank
-    #       text:
-    #       name: rank
-    #       sidebar:
-    #         -
-    #           link: /develop/flow/rank
-    #           text: 接入自然搜索
-    #           name: rank
-    # -
-    #   link: /develop/web
-    #   text: Web 化配置
-    #   name: web
-    #   sidebar:
-    #     -
-    #       link: /develop/web/start
-    #       text:
-    #       name: start
-    #       sidebar:
-    #         -
-    #           link: /develop/web/start
-    #           text: 配置开启 Web化
-    #           name: start
-    #     -
-    #       link: /develop/web/detail
-    #       text:
-    #       name: detail
-    #       sidebar:
-    #         -
-    #           link: /develop/web/detail
-    #           text: 代理域名配置详解
-    #           name: detail
     -
       link: /develop/function/webintroduction 
       text: 功能开发
       name: function
       sidebar:
+        # -
+        #   sidebar:              
+        #   -
+        #     link: /develop/function/navigation
+        #     text: 小程序导航
+        #     name: navigation         
+        -
+          sidebar:              
+          -
+            link: /develop/function/opensmartprogram
+            text: 打开小程序
+            name: opensmartprogram            
         -
           link: /develop/function/webintroduction 
           text: Web 化开发
@@ -3211,7 +3206,8 @@
           -
             link: /develop/function/proposal 
             text: Web 化开发建议
-            name: proposal            
+            name: proposal  
+                 
         -
           link: /develop/function/invoke_process
           text: 支付功能开发
@@ -3275,18 +3271,7 @@
             link: /develop/function/error_code
             text: 错误码
             name: error_code             
-          # -
-          #   link: /develop/function/faq_v2 
-          #   text: 支付 FAQ
-          #   name: faq_v2 
-        -
-          link: /develop/function/storage
-          text: 数据缓存
-          sidebar:       
-          -
-            link: /develop/function/storage
-            text: 数据缓存流程
-            name: storage       
+      
     -
       link: /develop/swan/version
       text: 基础库版本信息

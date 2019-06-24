@@ -16,7 +16,7 @@ sidebar: show_tabbar
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |index |Number  |是| -|tabBar的哪一项，从左边算起|
-|text |String  |是|-| 显示的文本，超过 4 个字符则显示成“…”|
+|text |String  |是|-| 显示的文本，超过 3 个字符则显示成“…”|
 |success| Function  |  否  |-| 接口调用成功的回调函数|
 |fail  |  Function  |  否  | -|接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|

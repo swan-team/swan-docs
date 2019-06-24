@@ -10,12 +10,14 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.70.2|2019.6.5|**New**<p>**·**textarea 支持 confirm-type 的功能；<p>**·**textarea 增加 confirmType。<p>**BugFix**<p>修复s-if自定义组件扩展样式失效的问题。|
 
 ## 3.60 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.60.25|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.60.16|2019.6.5|**BugFix**<p>**·**修复s-if自定义组件扩展样式失效的问题；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复data 里不能包含 function的问题；<p>**·**修复模块化循环引用的报错；<p>**·**修复 data 里不能包含 function 问题。|
 |3.60.2|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 
@@ -33,6 +35,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.40.29|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.40.28|2019.6.5|**BugFix**<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复模块化循环引用的报错。|
 |3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.40.19|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
@@ -77,6 +80,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.144|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.15.143|2019.6.5|**BugFix**<p>**修复模块化循环引用的报错。|
 |3.15.141|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.15.132|2019.4.11|**New**<p>增加AOP机制。|

@@ -3,6 +3,7 @@ title: 登录
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-01
 ---
 
 ### swan.login()

@@ -3,6 +3,7 @@ title: 添加到桌面引导
 layout: gamedoc
 topic: ui
 categoryName: api
+priority: 12-03
 ---
 
 ### swan.showAddToDesktopGuide()

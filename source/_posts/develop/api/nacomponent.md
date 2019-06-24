@@ -80,7 +80,7 @@ sidebar: nacomponent
     })
     ```
 
-用户通过引导添加组件“添加到我的小程序”后，可以在百度APP首页的智能小程序二楼“我的小程序”中看到它。
+用户通过引导添加组件“添加到我的小程序”后，可以在宿主APP首页的智能小程序二楼“我的小程序”中看到它。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/guide_add/2.png">
