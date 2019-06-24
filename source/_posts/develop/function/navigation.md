@@ -99,7 +99,10 @@ Page({
 // pages/webview/webview.swan
 <web-view src="{{url}}"></web-view>
 ```
- 
+#### 不推荐使用的解决方案
+* 客户端上可以通过侧滑可以返回到webview组件的上一个个网页内容。缺点：一方面没有原生导航栈返回的动画效果，另一个方面作为用户来说，这个操作隐藏的比较深，难以发现。
+* 在每个H5页面都加上一个带返回按钮的导航栏。缺点：因为小程序页面的头部已经有个导航栏了，再加一个的话就显得非常的不协调，影响用户体验。
+* 使用自定义导航栏样式，新增导航栏,在app.json或者对应page.json增加配置（`navigationStyle: custom`）（[app配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#配置-app-js-文件/)）缺点：webview组件页面不支持自定义导航栏样式。
 
 ### web-view 组件的返回 
 
