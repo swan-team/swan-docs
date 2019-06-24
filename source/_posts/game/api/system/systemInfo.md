@@ -3,6 +3,7 @@ title: 系统信息
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-03
 ---
 
 ### swan.getSystemInfo()

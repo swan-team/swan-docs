@@ -9,6 +9,8 @@ sidebar: uplog_compile
 
 |版本号|更新内容|
 |----|----|
+|v2.16.17|**Bugfixes**<p>**·**web编译 修复filter和引用的swan文件不在一个目录下找不到资源的问题；<p>**·**修复css文件中@keyframes中的from to选择器动画不生效的问题。|
+|v2.16.15|**Change**<p>**·**css文件中的html、body选择器将会被编译为swan-html、swan-body，从而在渲染时无效；<p>**·**project.swan.json 文件的改动将不会触发编译。|
 |v2.16.14|**Bugfixes**<p>修复因app.json语法错误，而导致点击编译按钮无反应的bug。|
 |v2.16.13|**Bugfixes**<p>修复 json 改动 watch 失效 bug 。|
 |v2.16.12|**Bugfixes**<p>**·**web编译 app.css中样式前加.web-swan-app加权重；<p>**·**web编译 自定义组件css中给标签样式前加自定义标签，限制css有效域。|

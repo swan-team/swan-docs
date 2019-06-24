@@ -8,6 +8,7 @@ sidebar: open_feed
 ##  submitresource
 
 **解释**：投放服务提交素材接口。提交素材接口适用于少量的素材，每天有500次调用限制，如果素材量大建议使用sitemap的方式。
+**接口 URL**：`https://openapi.baidu.com/rest/2.0/smartapp/access/submitresource`
 **方法**: GET、POST
 **参数说明**:
 
@@ -37,6 +38,7 @@ sidebar: open_feed
 ## deleteresource
 
 **解释**：投放服务删除素材接口，若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除。
+**接口 URL**：`https://openapi.baidu.com/rest/2.0/smartapp/access/deleteresource`
 **方法**: GET、POST
 **参数说明**:
 
@@ -66,6 +68,7 @@ sidebar: open_feed
 ##  submitsitemap
 
 **解释**：投放服务提交sitemap接口
+**接口 URL**：`https://openapi.baidu.com/rest/2.0/smartapp/access/submitsitemap`
 **方法**：GET、POST
 **参数说明**:
 
@@ -163,6 +166,7 @@ sidebar: open_feed
 ##  deletesitemap
 
 **解释**：投放服务删除sitemap接口，若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除。
+**接口 URL**：`https://openapi.baidu.com/rest/2.0/smartapp/access/deletesitemap`
 **方法**: GET、POST
 **参数说明**：
 
@@ -217,7 +221,7 @@ sidebar: open_feed
 |金融|	3001|	3000|
 |天气|	3002|	3000|
 |车辆|	3003|	3000|
-|娱乐|	3004|	3000|
+|智能|	3004|	3000|
 |交通|	3005|	3000|
 |生活|3006|	3000|
 |社交|	3007|	3000|

@@ -9,6 +9,7 @@ sidebar: projectconfig
 
 |字段名 | 类型 |说明|
 |---|---|---|
+|smartProgramRoot|String|小程序源码的目录(需为相对路径)|
 |appid|String| 项目的 AppID，如有变更，请在项目信息中修改 |
 |compilation-args|Object|条件参数，目前包含自定义编译条件参数|
 

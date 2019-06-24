@@ -8,6 +8,8 @@ priority: 03-01
 
 ### swan.loadSubpackage()
 
+> IOS 在客户端 11.3.6 基础库 swan-game.js 1.1.3 版本开始支持。安卓客户端在 11.5 基础库 swan-game.js 1.4.x 版本开始支持
+
 加载一个分包。
 
 ```js

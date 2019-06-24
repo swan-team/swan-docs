@@ -4,6 +4,19 @@
 
 下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
+#### v2.2.3
+**New Feature**
+- 小游戏支持本地广告调试
+- 小游戏 API downloadFile & uploadFile 新增 offprogressUpdate (基础版本库需要 >= 1.7.2)
+
+
+**Bug Fixed**
+
+- 修复了发布小游戏 ESOCKETTIMEOUT 问题
+- 修复小游戏欢迎页的项目 icon 不展示
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.3&type=online)）
+
 #### v2.2.2
 **Bug Fixed**
 
@@ -19,8 +32,8 @@
 #### v2.2.1
 **Bug Fixed**
 - 修复小游戏分包加载
-- 修复小游戏开放域bug
-- 修复小游戏bdfile网络加载问题
+- 修复小游戏开放域 bug
+- 修复小游戏 bdfile 网络加载问题
 - 修复小游戏键盘问题
 - 修复小游戏项目切换登陆状态问题
 

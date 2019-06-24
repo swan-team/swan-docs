@@ -18,15 +18,20 @@
 /* 右下菜单样式 */
 .m-doc-menu-wrapper {
     position: fixed;
-    right: 20px;
-    bottom: 30px;
+    right: 22px;
+    bottom: 136px;
 }
 
 .m-doc-menu-wrapper a {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 40px;
     background-size: 100%;
+    text-decoration: none;
+    color: #666;
+    padding: 5px 9px;
+    line-height: 20px;
+    letter-spacing: -1px;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-toc {
@@ -36,6 +41,24 @@
         -ms-transition: all .1s;
          -o-transition: all .1s;
             transition: all .1s;
+}
+.m-doc-menu-wrapper .m-doc-menu-item{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px #ddd;
+    cursor: pointer;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item span {
+  display: none;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item:hover{
+  background: #fff;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item:hover span {
+  display: block;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-toc-close {
@@ -48,9 +71,17 @@
 }
 
 .m-doc-menu-wrapper .m-doc-menu-top {
-    pointer-events: none;
+
     visibility: hidden;
-    background-image: url(../img/back_top.png);
+    background:#fff center center url(../img/back_top.png) no-repeat;
+    background-size: 24px;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-feedback {
+  /* visibility: hidden; */
+  background:#fff center center url(../img/feedback-question.png) no-repeat;
+  background-size: 24px;
+  margin-bottom: 12px;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-top-show {
@@ -352,8 +383,9 @@ article dl dd > :last-child {
 
 article blockquote {
     color: #666;
-    border-left: 3px solid #e6e6e6;
-    padding: 0 15px;
+    border-left: 2px solid #38f;
+    padding: 10px 15px;
+    background: rgba(51, 136, 255, .08);
 }
 
 article blockquote > :first-child {

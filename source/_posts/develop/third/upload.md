@@ -16,8 +16,8 @@ POST https://openapi.baidu.com/file/2.0/smartapp/upload/image
 
 |参数名 | 类型 | 是否必须 | 描述|
 |----- |-----| ------| -----|
-|access\_token|string | 是 | 授权小程序的接口调用凭据|
-|multipartFile | multipartFile | 是 | 文件 |
+|access\_token|string | 是 | 授权小程序的接口调用凭证/第三方调用凭证|
+|multipartFile | File | 是 | 文件|
 |type|int | 否 | 图片用途|
 
 **type 说明**：
@@ -35,3 +35,13 @@ POST https://openapi.baidu.com/file/2.0/smartapp/upload/image
 |----- |-----|
 |47003 | 图片尺寸超过限制|
 |47000|图片格式无效|
+
+**返回值示例:**
+
+```json
+{   
+    "errno": 0,
+    "msg": "success",
+    "data" : "图片url" 
+}
+```

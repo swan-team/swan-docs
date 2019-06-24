@@ -219,8 +219,9 @@ Page({
 |navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮，在页面级配置优先级高于全局配置|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">iOS 百度 App11.2, Android 百度 App版本11.1</a>|
 |backgroundColor|HexColor|#ffffff|窗口的背景色|-|
 |backgroundTextStyle|String|dark|下拉 loading 的样式，仅支持 dark / light|-|
-|enablePullDownRefresh|Boolean|false|是否全局开启下拉刷新。详见 <a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE/">Page.onPullDownRefresh</a>。|-|
-|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为px。详见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE/">Page.onReachBottom</a>。|-|
+|enablePullDownRefresh|Boolean|false|是否全局开启下拉刷新。详见 <a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%80%9A%E7%94%A8%E4%BA%8B%E4%BB%B6/">Page.onPullDownRefresh</a>。|-|
+|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为px。详见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%80%9A%E7%94%A8%E4%BA%8B%E4%BB%B6/">Page.onReachBottom</a>。|-|
+|disableSwipeBack|Boolean|false|禁止页面右滑手势返回|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App11.8</a>|
 |disableScroll|Boolean|false|设置为 true 则页面整体不能上下滚动。只在页面配置中有效，无法在 app.json 中设置|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">iOS 百度 App10.8，Android暂不支持</a>|
 
 
@@ -241,9 +242,10 @@ Page({
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">百度 App原生顶bar高度 = 状态栏高度（通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取）+ action高度（iOS为44px，Android为38px）</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
+
 
 
 ## 页面路由
@@ -257,9 +259,9 @@ Page({
 |----|----|
 |初始化|新页面入栈|
 |打开新页面|新页面入栈|
-|页面重定向|当前页面出栈，新页面入栈|
-|页面返回|页面不断出栈，直到目标返回页，新页面入栈|
-|Tab 切换|页面全部出栈，只留下新的 Tab 页面|
+|页面重定向|当前页面出栈，新页面入栈。|
+|页面返回|页面不断出栈，直到目标返回页，新页面入栈。|
+|Tab 切换|页面全部出栈，只留下新的 Tab 页面。|
 
 ### getCurrentPages()
 
@@ -275,11 +277,11 @@ getCurrentPages() 函数用于获取当前页面栈的实例，以数组形式�
 |路由方式|触发时机|路由前页面|路由后页面|
 |----|----|----|----|
 |初始化|智能小程序打开的第一个页面|   | onLoad, onShow |
-|打开新页面|调用 API swan.navigateTo 或使用组件 <navigator open-type="navigateTo"/> | onHide | onLoad, onShow |
-|页面重定向|调用 API swan.redirectTo 或使用组件 <navigator open-type="redirectTo"/> | onUnload | onLoad, onShow |
-|页面返回	|调用 API swan.navigateBack 或使用组件 <navigator open-type="navigateBack"> 或用户按左上角返回按钮 | onUnload | onShow |
-|Tab 切换	|调用 API swan.switchTab 或使用组件 <navigator open-type="switchTab"/> 或用户切换 Tab |    | 各种情况请参考下表 |
-|重启动	|调用 API swan.reLaunch 或使用组件 <navigator open-type="reLaunch"/> | onUnload | onLoad, onShow |
+|打开新页面|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/">swan.navigateTo</a> 或使用<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">组件</a> < navigator open-type="navigateTo"/ > | onHide | onLoad, onShow |
+|页面重定向|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/">swan.redirectTo</a> 或使用<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">组件</a> < navigator open-type="redirectTo"/ > | onUnload | onLoad, onShow |
+|Tab 切换	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-switchTab/">swan.switchTab</a> 或使用<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">组件</a> < navigator open-type="switchTab"/ > 或用户切换 Tab |    | 各种情况请参考下表 |
+|页面返回	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/">swan.navigateBack</a> 或使用<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">组件</a> < navigator open-type="navigateBack"/ > 或用户按左上角返回按钮 | onUnload | onShow |
+|重启动	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-reLaunch/">swan.reLaunch</a> 或使用<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">组件</a> < navigator open-type="reLaunch"/ > | onUnload | onLoad, onShow |
 
 Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）：
 
@@ -358,6 +360,9 @@ Page({
 
 ## 组件
 
+> 更多内容详见[组件](https://smartprogram.baidu.com/docs/develop/component/list/)。
+
+
 智能小程序中提供了丰富多样的组件，开发者可以在 .swan 文件中，使用预设好的组件，拼装完成自己的智能小程序的页面。
 
 如：使用 slider 组件
@@ -383,6 +388,8 @@ Page({
 ```
 
 ## API
+
+> 更多内容详见[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)。
 
 智能小程序为开发者提供了百度 App 提供的丰富的端能力。使用方式比较简单，直接调用 SWAN 对象上的端能力方法，或者 Page 对象中 this 上挂载的方法。
 

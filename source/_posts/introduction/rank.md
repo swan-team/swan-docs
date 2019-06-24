@@ -4,249 +4,238 @@ header: introduction
 nav: book
 sidebar: rank
 ---
+## 什么是小程序自然搜索？
+**对开发者**：智能小程序为开发者提供对接百度搜索生态的能力，为智能小程序导入搜索流量，旨在打造更加开放、互联互通的小程序生态。
 
-为了使智能小程序更好的被搜索引擎收录，智能小程序提供了一套完整的接入搜索的通路方案，开发者只需要按照下述方式进行操作配置和物料提交，就可以优化搜索引擎对小程序的抓取和收录，使得智能小程序获得在搜索引擎中更高效的分发。
-具体配置方式包括：
+**对百度用户**：在百度搜索结果页中，当智能小程序某页面被正常检索到，其展现形式和普通网页相同，用户在百度App（10.10或以上版本）点击该条搜索结果，即可打开智能小程序。
 
-* 开启 web 化
-* 熊掌号绑定
-* H5域名配置
-* 页面基础信息设置
-* URL映射规则设置
-* Sitemap 提交
+**自然搜索结果示例**
+![Alt text](../../img/flow/rank/1555413108354.png)
 
-## 开启 web 化
-
-> 请确认已具备小程序开发权限。
-
-下载最新的<a href="https://smartprogram.baidu.com/docs/develop/devtools/show_sur/">开发者工具</a>，工具界面将会出现如下提示：
-![图片](../../img/flow/rank/rank1.png)
-1. 单击“项目信息”，在弹出的对话框中勾选“接入百度搜索”。
-![图片](../../img/flow/rank/rank2.png)
-2. 勾选后，单击“预览”，在弹出框选择“WEB预览”。
-    * 为确保 web 小程序可以正常展示，建议通过这个按钮获取 Web 小程序的预览二维码，用手机浏览器扫码调试。
-    * 请确保 web 版小程序：页面可正常展示，页面可正常跳转，底部 Tabbar 可正常点击切换。
+**搜索流量接入流程图**
+ ![Alt text](../../img/flow/rank/1555413083846.png)
 
 
-## 页面基础信息
 
-> 智能小程序被搜索引擎正常收录的前提是可以进行网页化的处理，能够以普通网页的形式被爬虫发现和抓取。可以理解为每一个智能小程序页面都会转码成一张网页。
+## 开启Web化能力
 
-页面基础信息的设置有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
-页面基础信息包括 title、description、keywords，以及用与描述页面内容信息（文章标题、发布时间等）、图片信息（地址，尺寸等）、视频信息（地址、时长、封面图等）等的字段。
+>工具从 [2.2.4](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/) 版本开始，默认开启 web 化能力，更多内容详见[开发建议](http://smartprogram.baidu.com/docs/develop/web/proposal/)。
 
-页面基础信息设置接口详见<a href="http://smartprogram.baidu.com/docs/develop/api/seo/">页面基础信息</a>。
+**1.为什么要开启Web化？**
+开启Web化是为了让智能小程序被搜索引擎收录，收录的前提是可被爬虫发现和抓取，由于智能小程序运行在宿主 app 中，无法被爬虫感知，所以需要对智能小程序进行 Web 化的处理（在开发工具中开启 Web 化功能后发布小程序即可完成 Web 化小程序版本的生成），Web化可以理解为每一个智能小程序页面都会转码成一张网页。
 
-由于每个页面的页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。
+**2.如何开启Web化？**
+确认账号具有小程序开发权限（在成员管理中可进行对应权限设置）
+打开“开发者工具”，点击“项目信息”点击“开启 Web 化能力(原接入百度搜索)”开关
+![Alt text](../../img/flow/rank/1555469899233.png)
 
 
-## 配置 URL 映射规则
 
-URL映射规则定义的是小程序页面到 H5 页面的映射规则，百度搜索基于这一份映射规则来计算小程序的排序权重以及和 H5 页面的去重处理等等，因此配置 URL映射规则对小程序入搜索至关重要。
 
-### 规则提交方式
-配置 URL 映射规则的方式有两种：
-1. 在小程序源码文件 app.json 中声明
-在 app.json 中增加 `url-mapping` 字段，声明智能小程序与其对应的H5页面的URL的映射规则。
-示例：
-```json
-"url-mapping": {
-    "pages/home/index": "/",
-    "pages/list/index": "/products",
-    "pages/book/index": "/book/detail?id=${id}"
-}
+## 设置页面基础信息
+**1.为什么要进行页面基础信息设置？**
+智能小程序被搜索引擎正常收录的前提是Web化，Web化后小程序将以普通网页的形式被爬虫发现和抓取，因此需要进行页面基础信息的设置用于提升搜索引擎优化。
+
+**2.页面基础信息都包含什么？**
+页面基础信息包括标题、摘要、Keywords等信息。这些页面基础信息内容，会影响到小程序在搜索结果页中的呈现方式，需要开发者进行符合搜索要求的设置。
+（1）**标题**：能够更加快速洞察页面内容，了解该结果与需求的相关性，通常是用来决定用户点击哪个结果的主要信息。所以，使用高质量的页面标题对小程序来说至关重要。
+（2）**摘要**：小程序首页、栏目页、分类页的摘要非常重要，因为有可能在搜索结果中直接被用户看到，影响到用户是否选择点击查看详情：
+（3）**Keywords**：小程序开发者给网站某个页面设定的词汇，以便让搜索引擎更好地理解页面价值。keywords代表了小程序主题内容，无论是首页、内页还是栏目页，关键词一般都代表的是当前页面或者栏目内容的主体。开发者根据实际情况设置即可。
+
+开发者可点击并了解[页面基础信息配置方法](https://smartprogram.baidu.com/docs/develop/api/seo/#setPageInfo/ )
+
+注：由于每个页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。
+
+## 绑定熊掌ID
+**1.为什么要绑定熊掌ID？**
+绑定熊掌ID是为了开发者提交Sitemap使用，如果是老站替换的开发者，建议使用目标替换站点所属的熊掌ID进行绑定，从而使小程序继承原H5在百度搜索中的排名权重。
+
+**2.如何绑定熊掌ID？**
+在Web化版本小程序上线后，可在“流量配置>自然搜索结果页面”完成熊掌ID的绑定，点击“绑定”按钮即可唤起绑定操作的弹窗 。
+![Alt text](../../img/flow/rank/1555416217092.png)
+
+支持使用`当前账号完成注册绑定`，也支持`绑定与小程序同主体的其他熊掌ID`，绑定其他熊掌ID时需要获取其超级管理员的手机中收到的验证码进行操作权限的验证即可，开发者必须完成熊掌ID的绑定后才可进行H5站点的关联和Sitemap的提交。
+![Alt text](../../img/flow/rank/1555416683658.png)
+
+## 关联H5站点
+**1.为何要做H5站点关联？**
+H5站点关联的内容为小程序最终希望替换的已有 H5站点资源，因此关联是为了校验开发者是否对该站点拥有操作权限，且后续可在小程序平台中对该站点下的 top 流量资源进行替换并查看最终的替换结果。
+
+**2.如何配置H5域名？**
+可在“流量配置>自然搜索结果页面”中关联H5站点。一个小程序可设置关联多个 H5站点，但关联的站点必须属于相同主域，且已经关联的站点不支持解除关联的操作，开发者可点击“设置”按钮进行关联操作
+![Alt text](../../img/flow/rank/1555416822524.png)
+
+若开发者当前绑定的熊掌 ID 在搜索资源平台已经有关联的站点，在这里即可直接选择并进行关联操作，无须进行站点验证。在编辑弹窗中同时将会展示站点关联的状态，可关联多个但不能解除关联。
+![Alt text](../../img/flow/rank/1555416900322.png)
+
+若开发者当前绑定的熊掌 ID 在搜索资源平台没有已关联的站点，或者需要增加关联其他站点时，可在弹窗中点击“新建”按钮，并在“站点权限校验”的页面中完成H5站点的新建绑定。新建站点时需要在 H5站点的根目录下放置校验文件，并验证当前绑定熊掌 ID 超级管理员的手机号验证码，从而进行最终站点的新增和关联操作。
+![Alt text](../../img/flow/rank/1555417028092.png)
+
+**3.H5站点关联说明**：
+- “H5 站点”是指开发者 H5 站点的域名，一经配置之后不可更改，请谨慎填写。
+- 如果开发者存在多个 H5子域，且这些 H5子域都有对应的小程序页面，请在这里关联所有希望进行替换的 H5站点。
+- 对于新站小程序可不用关联 H5站点，直接提交 sitemap内容作为新资源供百度收录即可。
+
+## 配置URL映射规则
+**1.为什么要配置URL映射规则？**
+该操作主要是为了进行老站替换，同时小程序在搜索排序上也会得到相应优待，URL映射规则是为了使小程序页面到 H5 页面之间产生映射关系，百度搜索基于这一份映射规则来计算小程序的排序权重以及和 H5 页面的去重处理等等，因此配置 URL映射规则对小程序入搜索至关重要。
+
+**2.URL映射规则该怎么填写？**
+规则适配方式通过正则表达式的方式声明 H5 链接地址与小程序路径间的对应关系。格式举例：
+
+> H5：`http://example.com/detail?id=1`
+> 小程序路径：/pages/detail/index?id=1
+> 这组对应关系可以用以下规则描述：
+>`http://example.com/detail?id=([^&]+) `=> pages/detail/index?id=${1}
+
+如上例所示，规则左侧部分为由 H5 地址生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；规则右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由`${左侧匹配项的序号}`代替。
+
+**2.1更多示例**
+
+| H5 地址 | 小程序路径 |
+|-|-|
+| https://example.com/ | pages/home/index |
+```
+// 如果要完全匹配到 url 结尾，例如当 url 后没有 path 时，映射小程序首页 path，url 后要加结束符
+https://example.com/$ => pages/home/index
 ```
 
-2. 在百度智能小程序平台提交配置
-进入智能小程序平台，从管理中心进入小程序开发者平台，单击“流量配置 > 自然搜索结果> URL 映射规则”，对URL映射规则进行线上配置。
+|H5 地址|小程序路径|
+|--|--|
+| `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
+```
+https://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
 
-![图片](../../img/flow/rank/rank4.png)
-
-### 规则格式说明
-
-* 每组小程序 path - H5 url 的映射关系由一个 `key:value` 格式声明。
-key 为小程序路径，格式与 `pages` 字段中声明路径格式一致。
-value 为对应的 H5 页面路径。如果小程序路径和 H5 页面是一对一映射，value 为一个字符串；如果是一对多映射，value为一个数组。
-
-* value 中的可变参数部分通过模板变量声明，模板变量的界定符是 `${}`。如果 H5 中某个参数值与小程序对应页面中某个参数一致，参数变量名取小程序参数名称以声明参数的对应关系；如果 H5 中某个参数在对应小程序页面参数中不存在，可用任意不包含在小程序页面参数名中名称。
-
-* URL 映射规则默认不包含 host 部分，具体的 host 需要开发者在上述步骤中的 H5 域名部分进行配置。URL 映射规则也可包含 host 部分，要求 host 部分必须为在小程序平台的 H5 域名的子域。
-   > * 可省略 host 的情况：小程序只需要映射到同一域名下的页面，只需要将该域名配置到上文提到的 H5 域名下，在 URL映射规则可省略 host
-   > * 不可省略 host 的情况：某些 Web 站点可能存在多个子域名，小程序的页面需要同时映射到多子域下的 H5 页面，这种场景下需要在上文中提到的 H5 域名区域出配置主域名，在 URL 映射规则中配置 H5 子域。
-
-### 配置示例
-
-#### 映射规则格式示例
-
-1. 一对一的映射关系
-
-```json
-{
-    "pages/home/index": "/",
-    "pages/list/index": "/products",
-    "pages/book/index": "/book/detail?id=${id}"
-}
+// 只要是符合正则规则的匹配方式都可以，例如下述规则也同样正确
+https://example.com/book?id=([\w]+)&type=(.+)$ => pages/book/index?bookid=${1}&type=${2}
 ```
 
-2. 一对多映射关系
-
-如果一个小程序页面存在多个对应的 H5 URL，通过数组方式声明
-
-```json
-{
-    "pages/home/index": "/",
-    "pages/list/index": "/products",
-    "pages/book/index": [
-        "/book/detail?id=${id}",
-        "/book/history/detail?id=${id}",
-        "/book?id=${id}"
-    ]
-}
+|H5 地址 |小程序路径 |
+|-|-|
+| `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
+```
+// 参数部分序号根据正则匹配的顺序决定
+https://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
-3. 与子域名站点映射关系
-
-如果某条映射规则的 host 是子域 host，value 前的域名不可省略
-
-```json
-{
-    "pages/home/index": "/",
-    "pages/list/index": "/products",
-    "pages/book/index": [
-        "/book/detail?id=${id}",
-        "/book/history/detail?id=${id}",
-        "https://my.example.com/book?id=${id}"
-    ]
-}
+| H5 地址 | 小程序路径 |
+|-|-|
+| `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
+```
+https://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
 
-
-#### 映射项示例
-
-1. 无参数情况
-
-```json
-// 小程序路径：pages/home/index
-// 对应 H5 路径：https://example.com/
-"pages/home/index": "/",
-
-// 小程序路径：pages/list/index
-// 对应 H5 路径：https://example.com/products
-"pages/list/index": "/products"
+| H5 地址 | 小程序路径 |
+|-|-|
+| `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
+```
+// 两个地址中没有对应项的参数保持不变
+https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
 ```
 
-2. 参数一致情况
-
-当小程序页中的参数和 H5 中的参数含义一致时，value 部分参数值替换成模板变量，变量名为小程序中对应的参数名
-
-```json
-// 小程序路径：pages/book/index?id=12
-// 对应 H5 路径：https://example.com/book/detail?id=12
-"pages/book/index": "/book/detail?id=${id}",
-
-// 小程序路径：pages/book/index?id=12
-// 对应 H5 路径：https://example.com/book/detail?bookid=12
-"pages/book/index": "/book/detail?bookid=${id}"
+| H5 地址 | 小程序路径 |
+|-|-|
+| `https://example.com/book/history2019.html?id=1 `| pages/book?type=history |
 ```
-
-
-3. 小程序的参数为 H5 链接中一部分的情况
-
-当 H5 中的可变部分不是在 URL Query 中，同样可以通过模板变量的方式替换对应的部分
-
-```json
-// 小程序路径：pages/book/index?id=12&cate=history
-// 对应 H5 路径：https://example.com/book/history?bookid=12
-"pages/book/index": "/book/${cate}?bookid=${id}",
-
-// 小程序路径：pages/book/index?id=12
-// 对应 H5 路径：https://example.com/book/history/12.html
-"pages/book/index": "/book/${catgid}/${id}.html"
+https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 ```
+**3.URL 替换失败错误原因详解**
 
-4. 映射 mip 流量
+开发者在小程序接入搜索的过程中，如遇到URL替换失败的错误反馈，可以根据页面反馈及参照本文引导进行自查，通过本文列举的6种错误原因及处理方式，能够帮助开发者更快速准确的完成修改。
 
-如果有 H5 站点基于 mip 技术进行了页面改造，且希望将 mip 页的流量置换为小程序，可在 url-mapping 中直接配置 mip 页的 url。
+ - **页面白屏**：页面打开为空白页，请提交有具体内容的页面。
 
-**举例**：
-```json
-H5站点url：www.msite.com/path
-对应mip页url：www.msite.com/mip/path
+ - **页面404**：页面返回码为404，请及时查看并修复死链。
 
-在url-mapping中，建议基于一对多的配置规则，将小程序路径同时映射为H5和mip的url
+ - **页面存在第三方跳转**：请查看页面是否存在跳转H5、嵌套H5情况，不建议提交webview模式小程序，建议开发原生小程序。
 
-{
-    "pages/path/path": [
-        "/path",
-        "/mip/path"
-    ]
-}
-```
-## URL 映射规则 - 校验工具
+ - **缺少SEO信息**：页面缺少标题、关键词、摘要等基础信息，请填写正确的基础信息字段，以便搜索准确识别，详见小程序文档[《设置页面基础信息》](https://smartprogram.baidu.com/docs/introduction/rank/#%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/%20%E3%80%82)。
+ - **资源未收录**：适配关系对应的H5资源未收录，请查看H5资源是否收录，未收录则可通过sitemap提交小程序资源。
+ - **主体内容不一致**：请确认提交的web化页面与H5页是否为同一内容；可重点查看页面基础信息如title、正文主体、页面版块是否基本一致。修改一致后，需在小程序平台重新提交规则。
 
-在URL映射规则规则的填写弹窗中增加了“校验工具”的入口，开发者可点击“映射规则校验”进入对应的校验工具页面中，开发者可在页面中填写小程序的Path（即后续 Sitemap 中提交的内容）和 URL 映射规则，生成相应的 Web 化小程序 URL 和对应的 H5 URL 进行最终生成结果的检查，以便校验提交内容的正确性。
+以上就是URL替换失败错误的6种问题反馈的详解，参照对应反馈的处理方式即可解决问题。
 
-![图片](../../img/flow/rank/rank05.png)
+**4.智能小程序平台配置 URL 映射关系**
+在开发者平台>自然搜索结果中，当开发者需要对已有 H5资源配置时，可在 URL 映射规则的配置模块完成相应内容的设置
+![Alt text](../../img/flow/rank/1555419211055.png)
+
+点击页面中的“编辑”按钮可选择 直接配置 URL映射规则，或使用相应的生成工具来进行辅助配置
+
+![Alt text](../../img/flow/rank/1555419244430.png)
+
+在 URL 映射规则的设置页面中，开发者需要填写具体H5 url 表达式和对应的小程序 path 表达式，并至少提供一对示例用于规则正确性的验证，开发者可添加多组规则
+
+![Alt text](../../img/flow/rank/1555419356415.png)
+
+当完成验证并提交后，系统将自动为开发者对该规则覆盖的 H5资源进行替换处理（优先对 TOP 流量的 H5资源进行替换处理），开发者需要保证对应的小程序页面已完成“页面基础信息”的设置，并可在当前编辑页面中查看替换的进度和结果。
+![Alt text](../../img/flow/rank/1555419405221.png)
+
+**5. URL 映射规则 – 生成工具**
+开发者可在URL 映射规则的配置页面和编辑时的选择弹窗中均可点击相应入口引导，进入生成工具的页面中，开发者只需要按照生成工具的引导，提供 H5 URL 示例和小程序 Path 示例，并做简单的校验后即可生成对应的 URL 映射规则表达式。
+![Alt text](../../img/flow/rank/1555419466184.png)
+![Alt text](../../img/flow/rank/1555419483013.png)
+为了方便开发者的操作，可点击“一键复制”能力并返回开发者平台中按照提示完成已生成规则的新建和提交
+
+## 提交sitemap
+**1.什么是Sitemap？为何要提交Sitemap？**
+Sitemap（即站点地图）就是您⽹站上各⽹⻚的列表。创建并提交 Sitemap 有助于百度发现并了解您⽹站上的所有⽹⻚。您还可以使⽤ Sitemap 提供有关您⽹站的其他信息，如上次更新⽇期、Sitemap ⽂件的更新频率等，供百度 Spider 参考。
+百度对已提交的数据，不保证⼀定会抓取及索引所有⽹址。但是，我们会使⽤ Sitemap 中的数据来了解⽹站的结构等信息，这样可以帮助我们改进抓取策略，并在⽇后能更好地对⽹站进⾏抓取。
+此外，Sitemap 与搜索排名没有关系，`提交的 Sitemap 内容为⼩程序⻚⾯的 Path路径列表`，以便百度 spider 按照其规则尽可能多的抓取和收录⼩程序的⻚⾯。
+
+**2.Sitemap的内容**
+Sitemap 用于声明主动推送给百度自然搜索收录的页面。列表中每一行都是一个要被收录页面的“路径+参数”，格式例如 pages/list/index?id=1。
+Sitemap 示例:
+>path/to/smartapp/list?city=bj
+>path/to/smartapp/list?city=sh
+>path/to/smartapp/detail?id=1024
+>pages/detail?page=2048&id=1024&deailId=4096
+
+**3. Sitemap ⽀持哪些提交格式？**
+百度⼩程序中 Sitemap 协议⽀持⼀种格式：txt ⽂本格式，开发者需要在⼀个 txt ⽂本中列明向百度⼩程序提交的⼩程序⻚⾯ Path 地址，并将 txt ⽂本⽂件通过开发者平台-流量配置-⾃然搜索结果-sitemap 提交入口进⾏提交
+格式示例如下：
+>pages/articleDetail/articleDetail?articleId=579379
+>pages/articleDetail/articleDetail?articleId=600884
+>pages/articleDetail/articleDetail?articleId=582423
+>pages/articleDetail/articleDetail?articleId=574993
+
+此⽂本⽂件需要遵循以下指南：
+- ⽂本⽂件每⾏都必须有⼀个 Path 路径地址，每个路径中不能有换⾏。
+- 不应包含 Path 路径列表以外的任何信息。
+- 您必须书写完整的⽹址⼩程序路径，包括⻚⾯ path 内的参数
+- ⽂本⽂件需使⽤ UTF-8 编码或 GBK 编码。
+
+**4.如何提交Sitemap？**
+进入智能小程序平台，在小程序首页，单击“流量配置>自然搜索结果”。在自然搜索 tab 里可提交上传 Sitemap资源。
+![Alt text](../../img/flow/rank/1555420124952.png)
+平台目前支持**天级别收录**和**周级别收录**两种时效的提交方式:
+- 天级别收录预计2-3天完成收录，但每日数量配额少（每个熊掌 ID 限制每日可提交3000条）
+- 周级别收录预计2-3周完成收录，当前每日可提交5W 条，后续将放宽数量限制。
+![Alt text](../../img/flow/rank/1555420436346.png)
+
+**5.如何得知 Sitemap 资源的收录索引情况**
+当前开发者平台中针对 Sitemap资源的收录索引反馈正在建设中，开发者在上传了 Sitemap 资源后可在开发者平台中点击登录“搜索资源平台”部分的引导，使用当前绑定熊掌 ID 的超级管理员账号查看对应小程序的收录索引情况
+![Alt text](../../img/flow/rank/1555420697815.png)
 
 
-## 绑定熊掌号
+## 搜索流量接入FAQ
+Q：什么是Web化？
+A：简单来说Web化可以理解是为小程序页面转码成网页，这样就可以被爬虫发现和抓取，用于搜索引擎收录使用。
 
-在Web化版本小程序上线后，可在“流量配置>自然搜索结果页面”完成熊掌号的绑定，点击“绑定”按钮即可唤起绑定操作的弹窗 。
-![图片](../../img/flow/rank/rank06.png)
+Q：接入自然搜索结果前有哪些必须提前完成的？
+A：1.在开发阶段设置小程序的页面基础信息  2.小程序必须开启web化按钮，并且需要审核通过并且在线服务  2.小程序需要绑定熊掌ID
 
-支持使用当前账号完成注册绑定，也支持绑定与小程序同主体的其他熊掌号，绑定其他熊掌号时需要获取其超级管理员的手机中收到的验证码进行操作权限的验证即可。
-![图片](../../img/flow/rank/rank07.png)
-> 开发者必须完成熊掌号的绑定后才可进行Sitemap的提交，建议使用原H5所属熊掌号进行绑定，从而使小程序继承原H5在百度搜索中的排名权重。
-## 配置 H5 域名
+Q：什么是sitemap？
+A：Sitemap（即站点地图）就是您小程序上各页面的web化url列表。创建并提交Sitemap有助于百度发现并了解您小程序上的所有页面并完成收录。
 
-> H5域名和下文提到的url映射规则配合使用，一起生成小程序和H5站点的映射关系，用于最终完成将原H5页面替换为小程序页面。
+Q：为什么要配置URL映射规则？
+A：该操作主要是为了进行老站替换，同时小程序在搜索排序上也会得到相应优待。URL映射规则是为了使小程序页面到 H5 页面之间产生映射关系，百度搜索基于这一份映射规则来计算小程序的排序权重以及和 H5 页面的去重处理等等，因此配置 URL映射规则对小程序入搜索至关重要。
 
-1. 配置业务域名
-可在“流量配置>自然搜索结果页面”中配置H5域名。
-![图片](../../img/flow/rank/rank7.png)
-2. 在配置页面的“H5 域名配置”中，单击“设置域名”按钮，在弹出的对话框中，配置 “H5 域名”即可。
-![图片](../../img/flow/rank/rank3.png)
+Q：为什么要绑定熊掌ID？
+A：绑定熊掌ID是为了开发者提交Sitemap使用，如果是老站替换的开发者，建议使用原H5所属熊掌ID进行绑定，从而使小程序继承原H5在百度搜索中的排名权重。
 
-#### H5 域名
+Q：为何要做H5站点关联？
+A：H5域名和上文提到的URL映射规则配合使用，一起生成小程序和H5站点的映射关系，用于最终完成将原H5页面替换为小程序页面的操作。
 
-**举例**：https://tieba.baidu.com
-**说明**：
-* “H5 域名”是指开发者 H5 站点的域名，一经配置之后不可更改，请谨慎填写。
-* 如果开发者存在多个 H5 子域，且这些 H5子 域都有对应的小程序页面，请配置 H5 主域名。
-    举例，如果存在多个 H5 子域：
-    https://news.m.yiche.com
-    https://v.m.yiche.com
-    https://car.m.yiche.com
-    请在小程序平台配置主域名：https://m.yiche.com
-* 对于新站小程序可不填 H5 域名，此时自然搜索的内容为新站点内容的收录。
+Q：开发者有几百万甚至几千万的url资源量，是否要全部提交？以及目前是否有全部提交的快速通道？
+A：对于小程序新资源，需要开发者尽量全的提交 Sitemap，以便被百度发现和收录，对于已有 H5资源的替换，开发者仅需完成 H5站点的关联和 URL 映射规则的提交即可，无需再提交大量的 Sitemap 资源，小程序平台将优先对 H5站点下的 TOP 流量 URL进行替换处理。
 
-## 提交 sitemap
-
-进入智能小程序平台，在小程序首页，单击“投放管理>自然搜索管理”。在自然搜索 tab 里，可上传 sitemap。
-#### sitemap
-sitemap 用于声明主动推送给百度自然搜索收录的页面。列表中每一行都是一个要被收录页面的“路径+参数”，格式例如 `pages/list/index?id=1`。如果某页面通过 url-mapping 中声明了对应的原始网站的 web url，参数部分要包含此页面对应的 web url 的所有参数。
-**url-mapping规则**:
-```json
- {
-    "path/to/smartapp/list":"/list/${city}.html",
-    "path/to/smartapp/detail":"/detail.html?id=${id}",
-    "pages/detail ":["/detail.html?page=${page}&id=${id}","/main/detail.html?detailId=${detailId}"]
-}
-```
-**sitemap 示例**:
-```
-path/to/smartapp/list?city=bj
-path/to/smartapp/list?city=sh
-path/to/smartapp/detail?id=1024
-pages/detail?page=2048&id=1024&deailId=4096
-
-```
-目前支持存量上传和增量上传两种方式:
-* 其中存量上传并非实时生效，可提交的量较多，但是更新耗时较长；
-* 增量上传数据更新耗时低，但是日均可提交的配额较少。
-![图片](../../img/flow/rank/rank8.png)
-
-    ![图片](../../img/flow/rank/rank9.png)
-
-**说明**：
-当详情页面个数较多，而小程序的路径唯一时，请携带query依次提交sitemap。

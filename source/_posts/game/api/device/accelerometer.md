@@ -3,7 +3,7 @@ title: 加速度计
 layout: gamedoc
 topic: device
 categoryName: api
-priority: 12-02
+priority: 14-02
 ---
 
 > 基础库 swan-game.js 1.5.2 版本开始支持。
