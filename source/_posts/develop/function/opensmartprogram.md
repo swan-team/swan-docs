@@ -62,27 +62,6 @@ URL Scheme是一种 App 间的调起协议。App 内部注册协议后，当用�
 
 ![图片](../../../img/web/opensmartprogram2.png)
 
-### 统计
-
-开发者可以在小程序运行时 [App()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 生命周期函数的`onLaunch`和`onShow`中取得 Scheme 中小程序的相关参数。开发者可以利用这些参数，进行小程序调起来源的相关统计。
-
-在 onShow 中获取调起相关参数的代码示例：
-
-```
-App({
-    onShow: function (e) {
-        console.log('path:', e.path); // 小程序path
-        console.log('query:', e.query); // 小程序query
-        console.log('scene:', e.scene); // 场景值
-    },
-})
-```
-其中：
-* path 和 query 对应 scheme 中的 path 和 query。
-* 场景值由百度各流量入口自动添加，标识小程序打开来源。
-* 各流量入口的来源统计可以在开发者平台——数据统计——来源统计中查看。如果想手工统计场景值，请参考[场景值](https://smartprogram.baidu.com/docs/data/scene/)文档了解场景值对应的入口场景。
-* 如有其他手工统计需求，如：UV、PV等，可以参考[手工埋点统计](https://smartprogram.baidu.com/docs/data/performance-point/)。
-
 ##  scheme生成工具
 
 开发者在商业投放、上线前验证等场景下可能需要获取小程序调起协议（scheme），这时可以通过[调起协议生成工具](https://smartprogram.baidu.com/docs/html/qr-code/index.html#/)快速生成小程序scheme和二维码。
@@ -189,15 +168,42 @@ swanInvoke功能：
 
 * API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/)
 
-### 小程序来源统计
+## 小程序来源统计
+> 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。
 
-使用H5调起小程序或在小程序中打开另一个小程序，都能将参数带入小程序的生命周期。
-开发者想要进行自定义场景下的来源统计，可以在 query 中添加自定义参数，并在小程序生命周期中手工埋点统计。
-在不同能力中，参数名称略有区分：
+如果需要统计自行开发的小程序入口，或当开发者平台不能满足统计需求时，可以使用下面的方法，在小程序中手工打点统计。
 
-| H5打开小程序配置参数  | 小程序打开小程序配置参数 | 传入onShow的参数|
-|---|---|---|
-| appKey | app-id | - |
-|  path  | path | path |
-|  query | extra-data | query |
-如何在生命周期```onLaunch```和```onShow```中取得参数，参考[统计](#统计)。
+1. 开发调起功能时，配置对应的调起参数。
+
+2. 在小程序 [App()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 生命周期函数的`onLaunch`和`onShow`中取得 Scheme 中小程序的相关参数。
+
+   ```
+   App({
+       onShow: function (options) {
+           swan.requrest({
+               path: options.path, // 小程序路径
+               query: options.query，// 小程序传入的参数
+               scene: options.scene // 场景值
+           })
+       },
+   })
+   ```
+   两种调起能力的配置参数，与onShow中获取的参数名称不完全相同，参数对应关系如下表所示。
+
+|参数| H5打开小程序配置参数名  | 小程序打开小程序配置参数名 | onShow中获取的参数名|
+|---|---|---|---|
+| 小程序appKey | appKey | app-id | - |
+| 小程序页面路径 | path  | path | path |
+| 小程序路径的参数 | query | extra-data | query |
+| 入口场景值 | - | - |scene|
+
+   场景值说明
+   * 百度各流量入口自动添加了场景值，标识小程序入口。想了解场景值对应的小程序入口，请参考[场景值](https://smartprogram.baidu.com/docs/data/scene/)文档。
+   * 为防止污染已有的入口场景数据，调起能力的场景值固定，不可配置。使用调起能力开发时，如需区分开发的多个入口，可以在query中添加自定义参数作以区分。
+
+3. 对获取的参数值进行埋点数据上报。具体实现方式与其他统计需求，如UV、PV等，可以参考[手工埋点统计](https://smartprogram.baidu.com/docs/data/performance-point/)。
+
+
+
+
+
