@@ -301,6 +301,7 @@ swan.chooseImage({
 |参数名 | 参数类型 |说明  |
 |---|---|---|---|
 |name|	String|	菜名，示例：鱼香肉丝。|
+|has_calorie|   Boolean|菜品是否含有卡路里。 |
 |calorie|	Number|	卡路里，每100g的卡路里含量。|
 |probability|	Number	|识别结果中每一行的置信度值，0-1。|
 

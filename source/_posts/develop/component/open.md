@@ -24,7 +24,7 @@ sidebar: open
 
 **示例**
 
-<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>  
+<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -106,8 +106,10 @@ sidebar: open
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
+
+
 
 
 ## web-view
@@ -121,7 +123,7 @@ sidebar: open
 |bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
 **示例**：
-<a href="swanide://fragment/efb2bba30d3b98963baf092b4e3970e51557734057923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ac090bcb0bfd8aca1b9d47c7c854c6271560838933592" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 
@@ -177,15 +179,15 @@ Page({
 
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
-| 接口名               | 说明         | 
-| ----------------- | ---------- | 
-| swan.webView.navigateTo   | 参数与智能小程序接口一致 | 
-| swan.webView.navigateBack | 参数与智能小程序接口一致 | 
+| 接口名               | 说明         |
+| ----------------- | ---------- |
+| swan.webView.navigateTo   | 参数与智能小程序接口一致 |
+| swan.webView.navigateBack | 参数与智能小程序接口一致 |
 | swan.webView.switchTab    | 参数与智能小程序接口一致 |
-| swan.webView.reLaunch     | 参数与智能小程序接口一致 | 
-| swan.webView.redirectTo   | 参数与智能小程序接口一致 | 
-| swan.webView.getEnv   | 获取当前环境 | 
-| swan.webView.postMessage   | 向小程序发送消息 | 
+| swan.webView.reLaunch     | 参数与智能小程序接口一致 |
+| swan.webView.redirectTo   | 参数与智能小程序接口一致 |
+| swan.webView.getEnv   | 获取当前环境 |
+| swan.webView.postMessage   | 向小程序发送消息 |
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
@@ -194,7 +196,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.8.js"></script>
 ```
 
 ```javascript
@@ -224,15 +226,28 @@ web-view 网页中支持的接口有：
 |地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#getLocation/">swan.getLocation<a>|-|
 |图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#chooseImage/">swan.chooseImage</a>| -|
 
+### **相关接口3 **
+
+用户分享时可获取当前web-view的URL，即在onShareAppMessage回调中返回webViewUrl参数。
+
+示例代码：
+
+```javascript
+Page({
+  onShareAppMessage(options) {
+    console.log(options.webViewUrl)
+  }
+})
+```
 
 
-
-
-**说明: **
+**Bug & Tip**：
 
 * 网页内 iframe 的域名也需要配置到域名白名单。
 * 每个页面只能有一个 <`web-view/`> ，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
 * 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
+* 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
+* 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
 
 ### 使用 web-view 打开限定域名内的网页
 
@@ -248,5 +263,5 @@ web-view 网页中支持的接口有：
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>

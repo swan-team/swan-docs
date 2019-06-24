@@ -22,7 +22,7 @@ sidebar: custom-component_lifetimes
 
 除了以上声明方式，还可以在 lifetimes 字段内进行声明（推荐使用这种方式进行管理，其优先级最高）。
 
-**<div class="notice">示例： </div>**
+**示例代码**
 ```js
 // 自定义组件js文件
 Component({
@@ -59,7 +59,7 @@ Component({
 |show|无|组件所在的页面被展示时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 |hide|无|组件所在的页面被隐藏时执行|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 
-**<div class="notice">示例： </div>**
+**示例代码**
 ```js
 // 自定义组件js文件
 Component({

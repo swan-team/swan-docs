@@ -4,6 +4,23 @@ header: develop
 nav: faq
 sidebar: frequently
 ---
+## 框架
+
+#### Q：filter是否支持三目运算？
+
+A：不支持。
+
+#### Q：如何避免横屏播放时，icon 变大的问题？
+
+A：请使用px单位来书写css，不建议使用rpx等其他单位。
+
+#### Q：使用touchstart、touchend、touchemove旋转切换图片安卓卡顿，该如何处理？
+
+A：建议使用 webview 组件实现相关功能，请勿频繁使用setData操作。
+
+#### Q：小程序可以调用echarts.js 或者 highchart.js 画图嘛？
+
+A：暂不支持。
 
 ## API & 组件
 
@@ -26,6 +43,87 @@ A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问�
 A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/) 包，如下示例：
 
 ![](../../../img/faq/webview.png)
+
+#### Q：小程序页面头部可否支持渐变色？
+
+A：使用 navigationBarBackgroundColor 无法做到渐变色的效果，可以选择使用透明框，新增返回按钮，然后进行设置。或将navigationStyle 设置成 custom，在全屏页面中制作导航栏，自定义背景色。
+
+#### Q：请问下有关闭小程序这样的 api 吗？ 
+
+A: 暂时没有。
+
+#### Q：tabBar 下按钮是否可以直接拨打电话？
+
+A: 不可以。
+
+
+#### Q：cover-view可以使用border吗？ 
+
+A: cover-view 为原生组件，原生组件为系统提供的控件不支持单边设置；对于 cover-view 只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等。
+
+#### Q：video的原生video控件enable-progress-gesture属性支持动态更新吗？ 
+
+A：支持。
+
+#### Q： scroll-view 的scroll-top。设置是否是无效的?
+
+A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 CSS 设置 height。
+
+#### Q：使用两个text组件，组件之间有间隙，在不同手机端偶现，影响部分用户体验的问题该如何解决？
+
+A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0 ，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
+
+#### Q：swan.request 成功后如何刷新页面？
+
+A：当刷新页面指的是想更新部分模块的数据时，可以在接口请求成功后，使用 setData 将获取到的数据进行重置。
+
+#### Q：如何在百度小程序里可以同时播放两个音频？
+
+A：可以多次创建 createInnerAudioContext，然后使用 setInnerAudioOption，将设置 mixWithOther 为 true。
+
+#### Q：这个分包预加载只能加载一个分包吗
+
+A：端能力的 root 参数为 string 类型，只能配置一个。但是可以通过 app.json 中的 preloadRule 配置多个子包。
+
+####  Q：video自动播放的流量提醒出现策略是什么？
+
+A：非 Wi-Fi 情况播放视频会出现流量弹窗，继续播放后，小程序生命周期里再次播放video，不会出现弹窗。如果杀进程，再次进入，会继续提醒弹窗，目前不支持开发者控制。
+
+#### Q：video全屏后的手势引导出现策略是什么？
+
+A：全屏手势引导点击一次后不在出现，目前也不支持开发者控制。
+
+####  Q：web-view页面里如何使用拨打电话接口
+
+A：请参考如下示例
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>call phone</title>
+        <script  src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
+    </head>
+    <body>
+        <button onclick="callMobile()">clickMe</button>
+    </body>
+    <script type="text/javascript">
+        function callMobile() {
+            swan.makePhoneCall({
+                phoneNumber: '10086' 
+            });
+        }
+    </script>
+</html>
+```
+
+#### Q：我现在有个需求下载app的时候，同时写口令，也就是剪切板。打开app的时候，端上会读剪切板。请问小程序支持写口令吗？
+
+A：不支持
+
+#### Q：小程序组件提供的弹窗能插图片内容吗？
+
+A：不支持，小程序API提供的弹窗暂时都不支持插入图片，可自行写弹层逻辑，注意，自己写的弹层底部的的蒙层是盖不住顶bar(标题栏)。
 
 
 ## Web 化
@@ -73,20 +171,52 @@ A：
 
 
 #### Q: 小程序支持使用 npm 吗？
+
 A：支持，把开发工具的编译模式更改为“依赖分析“模式就可以使用npm安装依赖包了。
 
 
 #### Q: 转换工具转换完使用依赖分析报错时该如何处理？
+
 A:切换成普通编译
 
 
 #### Q: 点击预览或调试按钮提示当前版本的开发者工具无法发布小程序时，该如何处理？
+
 A: 确认为最新开发者工具，考虑appid填写错误，如：小游戏填写小程序的appid
 
 #### Q: 开发者工具一直提示编译中，无法结束时该如何处理？
+
 A: 请尝试下述解决方案：
 * Windows 可尝试 `C:\Users\你的用户名\.swan-cli` 这个目录，重启工具。
 * Mac 下 删除 `~/.swan-cli` 目录，重启工具
 
 #### Q：预览时显示“编译进程异常退出”怎么办？
+
 A：请尝试升级最新版开发者工具，并使用菜单栏中的一键修复功能（菜单栏 -> 帮助 -> 一键修复）。
+
+#### Q：开发者工具上已经用开发账户登录了，为什么还是没有调试权限（模拟器、编辑器、调试器、预览、发布）呢？
+
+A：请确认您在"项目信息"中填写了appid，并且您当前的登录账号具备appid的操作权限。
+
+#### Q：最新版开发者工具App预览码和远程调试的二维码扫出来的内容不一致是为什么？
+
+A：远程调试的基础库版本是内置的，跟App内置的基础库版本可能有差异，如果出现不一致的情况以预览效果为准。
+
+#### Q：百度小程序IDE支持git代码仓库管理吗？
+
+A：不支持
+
+<!-- ## 其它
+
+#### Q：手百从哪个版本支持小程序？
+
+A：
+
+#### Q：如何设置基础库最低版本？
+
+A：
+
+
+#### Q：小程序版本设置过高的表现是什么？
+
+A：兼容性，升级提示 -->

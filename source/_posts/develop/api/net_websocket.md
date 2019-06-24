@@ -600,19 +600,19 @@ Page({
 
 **解释**：监听 WebSocket 连接打开事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onClose
 
 **解释**：监听 WebSocket 连接关闭事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onError
 
 **解释**：监听 WebSocket 错误。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 
 ## SocketTask.onMessage
