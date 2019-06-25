@@ -12,20 +12,20 @@ sidebar: media
 **属性说明**：
 
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|id|String||audio 组件的唯一标识符|
-|src|String||要播放音频的资源地址|
-|loop|Boolean|false|是否循环播放|
-|controls|Boolean|false|是否显示默认控件|
-|poster|String||默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
-|name|String|未知音频|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
-|author|String|未知作者|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
-|binderror|EventHandle||当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
-|bindplay|EventHandle||当开始/继续播放时触发play事件|
-|bindpause|EventHandle||当暂停播放时触发 pause 事件|
-|bindtimeupdate|EventHandle|| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
-|bindended|EventHandle||当播放到末尾时触发 ended 事件|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|id|String||否|audio 组件的唯一标识符|
+|src|String||否|要播放音频的资源地址|
+|loop|Boolean|false|否|是否循环播放|
+|controls|Boolean|false|否|是否显示默认控件|
+|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
+|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
+|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
+|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
+|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
+|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
+|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
+|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
 
 
 **MediaError.code**
@@ -91,26 +91,27 @@ Page({
 
 **解释**：图片
 
+> image 组件默认宽度 300px、高度 225px。
+
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| src | String  |  |图片资源地址|
-| mode | String  | scaleToFill |图片裁剪、缩放的模式|
-|lazy-load | Boolean  |false |图片懒加载。只针对 scroll-view 下的 image 有效 |
-| binderror |HandleEvent | |当错误发生时，发布到 AppService 的事件名，事件对象 event.detail = {errMsg: 'something wrong'}|
-| bindload | HandleEvent  | |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+| src | String  |  | 否 |图片资源地址|
+| mode | String  | scaleToFill | 否 |图片裁剪、缩放的模式|
+|lazy-load | Boolean  |false | 否 |图片懒加载，在图片即将进入一定范围（距离当前屏50px）时才开始进行加载。只针对 scroll-view 下的 image 有效 |
+| binderror |HandleEvent | | 否 |当错误发生时，发布到 AppService 的事件名，事件对象 event.detail = {errMsg: 'something wrong'}|
+| bindload | HandleEvent  | | 否 |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
-image 组件默认宽度 300px、高度 225px。
 
 **mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |
-|缩放 | scaleToFill  |不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素|
-|缩放 |aspectFit  |保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。|
-|缩放 | aspectFill  |保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。|
-|缩放 | widthFix |宽度不变，高度自动变化，保持原图宽高比不变|
+| 缩放 | scaleToFill  |不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素|
+| 缩放 |aspectFit  |保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。|
+| 缩放 | aspectFill  |保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。|
+| 缩放 | widthFix |宽度不变，高度自动变化，保持原图宽高比不变|
 | 裁剪 | top |不缩放图片，只显示图片的顶部区域|
 | 裁剪 | bottom |不缩放图片，只显示图片的底部区域|
 | 裁剪 | center |不缩放图片，只显示图片的中间区域|
@@ -273,41 +274,40 @@ Page({
 
 ## video
 
+**解释**：视频
 
 > 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
 
-**解释**：视频
-
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|src|String|  |视频的资源地址|
-|initial-time|Number|  |指定视频初始播放位置|
-|duration|Number|  |指定视频时长|
-|controls|Boolean|true|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
-|autoplay|Boolean|false|是否自动播放|
-|loop|Boolean|false|是否循环播放|
-|muted|Boolean|false|是否静音播放|
-|objectFit|String|contain|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String|  |视频封面的图片网络资源地址|
-|page-gesture|	Boolean|	false|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
-|show-progress|	Boolean|	true|	若不设置，宽度大于240时才会显示。|
-|show-fullscreen-btn|	Boolean|	true|	是否显示全屏按钮|
-|enable-progress-gesture|	Boolean	|true|	是否开启使用手势控制进度|
-|danmu-list|	` Array.<object> `|	 	|弹幕列表|
-|danmu-btn|	Boolean|	false|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
-|enable-danmu	|Boolean	|false	|是否展示弹幕，只在初始化时有效，不能动态变更。|
-|show-play-btn|	Boolean	|true|	是否显示视频底部控制栏的播放按钮|
-|show-center-play-btn|	Boolean	|true	|是否显示视频中间的播放按钮|
-|bindplay|EventHandle| |当开始播放时触发 play 事件|
-|bindpause|EventHandle|  |当暂停播放时触发 pause 事件|
-|bindended|EventHandle|  |当播放到末尾时触发 ended 事件|
-|bindtimeupdate|EventHandle|  |播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle|  |当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
-|bindwaiting|	EventHandle| |		视频出现缓冲时触发|
-|binderror|	EventHandle	| |	视频播放出错时触发|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|src|String|  | 是 |视频的资源地址|
+|initial-time|Number|  | 否 |指定视频初始播放位置|
+|duration|Number|  | 否 |指定视频时长|
+|controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
+|autoplay|Boolean|false|否|是否自动播放|
+|loop|Boolean|false|否|是否循环播放|
+|muted|Boolean|false|否|是否静音播放|
+|objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
+|poster|String|  |否|视频封面的图片网络资源地址|
+|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
+|show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
+|show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
+|enable-progress-gesture|	Boolean	|true|否|	是否开启使用手势控制进度|
+|danmu-list|	` Array.<object> `|	 	|否|弹幕列表|
+|danmu-btn|	Boolean|	false|否|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
+|enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
+|show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
+|show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
+|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
+|bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
+|bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
+|bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
+|bindfullscreenchange|EventHandle|  |否|当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindwaiting|	EventHandle| |否|		视频出现缓冲时触发|
+|binderror|	EventHandle	| | 否 |视频播放出错时触发|
 
 **objectFit 有效值**:
 
@@ -415,16 +415,16 @@ Page({
 * `<video />` 默认宽度 300px、高度 225px
 
 ## camera
-**解释**：相机
+**解释**：系统相机
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|device-position| String | back | 前置或后置，值为front, back |
-|flash|String| auto |闪光灯，值为auto, on, off|
-|bindstop|EventHandle|  |摄像头在非正常终止时触发，如退出后台等情况|
-|binderror|EventHandle| |用户不允许使用摄像头时触发|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|device-position| String | back | 否 | 前置或后置，值为front, back |
+|flash|String| auto | 否 |闪光灯，值为auto, on, off|
+|bindstop|EventHandle|  | 否 |摄像头在非正常终止时触发，如退出后台等情况|
+|binderror|EventHandle| | 否 |用户不允许使用摄像头时触发|
 
 **device-position 有效值**:
 
@@ -561,27 +561,29 @@ video {
 
 
 **说明**:
-* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
+* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view 或 cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过 `s-if="{ {true} }"`的方式可在camera上创建NA组件）。
 * 同一页面只能插入一个 camera 组件。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 * 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>
 
 ## ar-camera
 
+**解释**：AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
+
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
-**解释**：AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|key| String |   | AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
-|type| String |   | AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
-|flash|String| off |闪光灯，值为auto, on, off|
-|binderror|EventHandle| |用户不允许使用摄像头时触发|
-|bindload|EventHandle| |AR加载成功时触发|
-|bindmessage|EventHandle| |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|key| String |   | 是 |AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
+|type| String |   | 是 |AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
+|flash|String| off | 否 |闪光灯，值为auto, on, off|
+|binderror|EventHandle| | 否 |用户不允许使用摄像头或扫码失败时触发|
+|bindload|EventHandle| | 否 |AR加载成功时触发|
+|bindmessage|EventHandle| | 否 |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
+|bindscancode|EventHandle| | 否 | 扫描识图结束后触发 |
 
 **type 有效值**:
 
@@ -620,12 +622,9 @@ video {
 
 ## live-player
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
-
-
 **解释**：实时视频播放
 
-> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。<br> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 |一级类目|二级类目|
 |--|--|
@@ -633,20 +632,20 @@ video {
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|id|String| |live-player 属性的唯一标志符|
-|src|String|  |音视频地址。目前仅支持 m3u8 格式|
-|autoplay|Boolean|false|自动播放|
-|muted|Boolean|false|是否静音|
-|orientation|	String|	vertical|	画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
-|object-fit|String|contain|填充模式，可选值:contain、fillCrop|
-|background-mute|Boolean|false|进入后台时是否静音|
-|min-cache|Number|1|最小缓冲区，单位s|
-|max-cache|Number|3|最大缓冲区，单位s|
-|bindstatechange|EventHandle|  |播放状态变化事件，参考下方状态码表格，detail = {code}|
-|bindnetstatus|EventHandle|  |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
-|bindfullscreenchange|	EventHandle	| |	全屏变化事件，detail = {direction, fullScreen}。|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|id|String| | 是 |live-player 属性的唯一标志符|
+|src|String|  | 是 |音视频地址。目前仅支持 m3u8 格式|
+|autoplay|Boolean|false| 否 |自动播放|
+|muted|Boolean|false| 否 |是否静音|
+|orientation|	String|	vertical| 否 |画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
+|object-fit|String|contain| 否 |填充模式，可选值:contain、fillCrop|
+|background-mute|Boolean|false| 否 |进入后台时是否静音|
+|min-cache|Number|1| 否 |最小缓冲区，单位s|
+|max-cache|Number|3| 否 |最大缓冲区，单位s|
+|bindstatechange|EventHandle|  | 否 |播放状态变化事件，参考下方状态码表格，detail = {code}|
+|bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
+|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullScreen}。|
 
 **orientation 有效值**:
 
@@ -661,6 +660,76 @@ video {
 | ---- | ---- |
 | contain | 包含 |
 | fillCrop | 填充 |
+
+**主流格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|mp4|	是	|是|
+|mov|	是	|是|
+|m4v|	是	|是|
+|3gp|	是	|是|
+|avi|	是	|是|
+|m3u8|	是	|是|
+|webm|	是|	否|
+|flv	|	是	|是|
+|mkv|	是	|是|
+|rmvb|是	|是|
+|rm|	是	|是|
+|ogg|	是	|是|
+
+**主流编码格式支持**：
+
+|格式|	Android|	IOS|
+|--|--|--|
+|H.263	|是|	是|
+|H.264	|是|是|
+|HEVC	|是|	是|
+|MPEG-4	|是|	否|
+|VP8|	是	|否|
+|VP9|	是	|否|
+
+**状态码**：
+
+|代码  |说明   |
+| --- | --- |
+|2001|已经连接服务器|
+|2002|已经连接服务器,开始拉流|
+|2003|网络接收到首个视频数据包(IDR)|
+|2004|视频播放开始|
+|2005|视频播放进度|
+|2006|视频播放结束|
+|2007|视频播放Loading|
+|2008|解码器启动|
+|2009|视频分辨率改变|
+|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|
+|-2302|获取加速拉流地址失败|
+|2101|当前视频帧解码失败|
+|2102|当前音频帧解码失败|
+|2103|网络断连, 已启动自动重连|
+|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|
+|2105|当前视频播放出现卡顿|
+|2106|硬解启动失败，采用软解|
+|2107|当前视频帧不连续，可能丢帧|
+|2108|当前流硬解第一个I帧失败，SDK自动切软解|
+|3001|RTMP -DNS解析失败|
+|3002|RTMP服务器连接失败|
+|3003|RTMP服务器握手失败|
+|3005|RTMP 读/写失败|
+
+
+**网络状态数据**：
+
+|键名  | 说明 |
+| --- | --- |
+|videoBitrate|当前视频编/码器输出的比特率，单位 kbps|
+|audioBitrate|当前音频编/码器输出的比特率，单位 kbps|
+|videoFPS|当前视频帧率|
+|videoGOP|当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s (安卓不支持该键名)|
+|netSpeed|当前的发送/接收速度|
+|netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
+|videoWidth|视频画面的宽度|
+|videoHeight|视频画面的高度|
 
 **示例**：
 
@@ -757,72 +826,3 @@ button {
 **说明**:
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。
-
-**主流格式支持**：
-
-|格式|	Android|	IOS|
-|--|--|--|
-|mp4|	是	|是|
-|mov|	是	|是|
-|m4v|	是	|是|
-|3gp|	是	|是|
-|avi|	是	|是|
-|m3u8|	是	|是|
-|webm|	是|	否|
-|flv	|	是	|是|
-|mkv|	是	|是|
-|rmvb|是	|是|
-|rm|	是	|是|
-|ogg|	是	|是|
-
-**主流编码格式支持**：
-
-|格式|	Android|	IOS|
-|--|--|--|
-|H.263	|是|	是|
-|H.264	|是|是|
-|HEVC	|是|	是|
-|MPEG-4	|是|	否|
-|VP8|	是	|否|
-|VP9|	是	|否|
-
-**状态码**：
-
-|代码  |说明   |
-| --- | --- |
-|2001|已经连接服务器|
-|2002|已经连接服务器,开始拉流|
-|2003|网络接收到首个视频数据包(IDR)|
-|2004|视频播放开始|
-|2005|视频播放进度|
-|2006|视频播放结束|
-|2007|视频播放Loading|
-|2008|解码器启动|
-|2009|视频分辨率改变|
-|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|
-|-2302|获取加速拉流地址失败|
-|2101|当前视频帧解码失败|
-|2102|当前音频帧解码失败|
-|2103|网络断连, 已启动自动重连|
-|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|
-|2105|当前视频播放出现卡顿|
-|2106|硬解启动失败，采用软解|
-|2107|当前视频帧不连续，可能丢帧|
-|2108|当前流硬解第一个I帧失败，SDK自动切软解|
-|3001|RTMP -DNS解析失败|
-|3002|RTMP服务器连接失败|
-|3003|RTMP服务器握手失败|
-|3005|RTMP 读/写失败|
-
-**网络状态数据**：
-
-|键名  | 说明 |
-| --- | --- |
-|videoBitrate|当前视频编/码器输出的比特率，单位 kbps|
-|audioBitrate|当前音频编/码器输出的比特率，单位 kbps|
-|videoFPS|当前视频帧率|
-|videoGOP|当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s (安卓不支持该键名)|
-|netSpeed|当前的发送/接收速度|
-|netStatus|网络状态：-1为未知;0为网络不可用;1为无线广域网连接;2为WiFi连接 。(安卓不支持该键名)|
-|videoWidth|视频画面的宽度|
-|videoHeight|视频画面的高度|
