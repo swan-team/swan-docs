@@ -7,7 +7,7 @@ priority: 10-01
 draft: true
 ---
 
-  <!-- > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持 -->
+   <!-- > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持 -->
 
 百度小游戏提供了 XR 系列接口用于开发 AR 游戏，目前该接口只支持人脸模式 `'du_face'` 的 AR 效果。之后百度小游戏会加入更多的 AR 模式用于开发效果更丰富的 AR 游戏。
 
@@ -91,6 +91,7 @@ swan.requestXRSession(opts)
 1. 创建人脸 AR 的会话并且每一帧绘制检测到的人脸特征点。
 
 ```js
+const ctx = swan.createCanvas().getContext('2d');
 swan.requestXRSession({
     mode: 'du_face', // 必须指定模式为 'du_face'
     success(xrSession) {
@@ -105,6 +106,7 @@ swan.requestXRSession({
                 const landmarks = face.landmarks;
                 const width = ctx.canvas.width;
                 const height = ctx.canvas.height;
+                ctx.clearRect(0, 0, width, height);
                 // 绘制成绿色
                 ctx.fillStyle = '#00ff00';
                 for (let i = 0; i < landmarks.length; i += 3) {
