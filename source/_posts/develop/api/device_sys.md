@@ -40,9 +40,9 @@ sidebar: device_sys
 |fontSizeSetting |用户字体大小设置 |-|
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
-|cacheLocation|屏幕密度|安卓最低支持swanjs版本3.40.4； ios最低支持版本3.70.2|
-|swanNativeVersion|上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
-|devicePixelRatio|宿主平台版本号|最低支持版本1.13.18|
+|cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
+|swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
+|devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
 
 **示例**：
 <a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
