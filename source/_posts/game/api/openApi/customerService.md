@@ -3,6 +3,7 @@ title: 客服消息
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-10
 ---
 
 ### swan.openCustomerServiceConversation()

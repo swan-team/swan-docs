@@ -33,8 +33,8 @@ sidebar: device_sys
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|
@@ -155,8 +155,8 @@ Page({
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|

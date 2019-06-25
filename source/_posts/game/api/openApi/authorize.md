@@ -3,6 +3,7 @@ title: 授权
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-02
 ---
 
 

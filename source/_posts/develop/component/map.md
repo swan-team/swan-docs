@@ -262,9 +262,12 @@ Page({
 ```
 
 
-<notice>说明:</notice>
+**Bug & Tip**：
 
 * 地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
-* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级；
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件；
+* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件。
 * CSS 动画对 map 组件无效。
+* cover-view、cover-image 组件可覆盖在map组件之上。
+* map组件的 markers 的 label 暂不支持换行。
+* Android 与 iOS 定位精度不同，双端定位存在差异。

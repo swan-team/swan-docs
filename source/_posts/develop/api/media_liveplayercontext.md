@@ -11,6 +11,8 @@ sidebar: media_liveplayercontext
 
 **方法参数**： String domId
 
+**`domId`参数说明**：要获取 live-player 组件的 id。
+
 **返回值**：livePlayerContext
 
 ## livePlayerContext

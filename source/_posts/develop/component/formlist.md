@@ -189,7 +189,7 @@ Page({
 |report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
 
 
-示例：
+**示例：**
 <a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
@@ -260,11 +260,11 @@ Page({
 
 |值|说明 |
 |---- | ---- |
-| send |右下角按钮为 “发送”|
-|search |右下角按钮为 “搜索” |
-| next |右下角按钮为 “下一个”|
-| go |右下角按钮为 “前往” |
-| done |右下角按钮为 “完成” |
+| send |键盘右下角按钮为 “发送”|
+|search |键盘右下角按钮为 “搜索” |
+| next |键盘右下角按钮为 “下一个”|
+| go |键盘右下角按钮为 “前往” |
+| done |键盘右下角按钮为 “完成” |
 
 **示例**：
 <a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
@@ -349,15 +349,15 @@ Page({
     width: 2.79rem;
 }
 ```
-**说明**：
-* confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持；
-* input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family；
+
+**Bug & Tip**：
+
+* confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。
+* input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family。
 * 在 input 聚焦期间，避免使用 css 动画。
 * placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
-
-**BUG**：
-
-  在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+* 在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+* 暂不支持 bindinput 处理函数直接 return 一个字符串。
 
 ## label
 
@@ -465,6 +465,16 @@ Page({
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value, code, postcode}， 其中code为统计用区划代码，postcode为邮政编码|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 
+
+**mode 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| selector | 普通选择器 |
+| time | 时间选择器 |
+| date | 日期选择器 |
+| multiSelector | 多列选择器 |
+| region | 省市区选择器 |
 
 **示例**：
 <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -623,7 +633,7 @@ Page({
 | bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
-**说明**:
+**Bug & Tip**:
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
@@ -861,7 +871,7 @@ Page({
 |bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/49aa53977557322f4e576b3f413ed32715590467981433" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/52972cf5e70224467ab100257f8f7b031560838826410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -966,11 +976,11 @@ Page({
     position: absolute;
     top: 50%;
     right: .2rem;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
 }
 ```
 
-**说明**:
+**Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
 <div></div>
 
@@ -1081,7 +1091,7 @@ textarea {
 **图示**
 ![图片](../../../img/component/textarea.png)
 
-**说明**：
+**Bug & Tip**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
 * 请使用cover-view组件在 textarea 组件上开发遮罩层。

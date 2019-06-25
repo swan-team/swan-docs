@@ -3,7 +3,7 @@ title: 罗盘
 layout: gamedoc
 topic: device
 categoryName: api
-priority: 12-03
+priority: 14-03
 ---
 
 > 基础库 swan-game.js 1.5.2 版本开始支持。

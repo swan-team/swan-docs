@@ -108,8 +108,9 @@ sidebar: view
 }
 ```
 
-**说明**：
-1、 如果需要使用滚动视图，请使用 scroll-view；
+**Bug & Tip**：
+
+1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 ## scroll-view
@@ -258,12 +259,13 @@ Page({
 
 
 
-**说明**：
+**Bug & Tip**：
 
-* 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；
-* scroll-into-view 的优先级低于 scroll-top、scroll-left；
-* 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh；
+* 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
+* scroll-into-view 的优先级低于 scroll-top、scroll-left。
+* 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh。
 * 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view。
+* scroll-into-view、scroll-top、scroll-left 需要在页面数据高度（或宽度）撑开时生效，若有异步加载数据，请在数据渲染完成时，重新动态赋值，才可生效。
 
 
 ## swiper
@@ -277,7 +279,7 @@ Page({
 |---- | ---- | ---- |---- |---- |
 |indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
 |indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| -|
-|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色件| -|
+|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| -|
 |autoplay |Boolean  | false | 否 |是否自动切换| -|
 |current|Number |0 | 否 |当前所在页面的 index| -|
 |current-item-id|String|`""`| 否 |当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
@@ -301,9 +303,10 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 | touch | 用户划动导致的swiper切换 |
 | "" | 其他原因将返回空字符串 |
 
-**说明**：
+**Bug & Tip**：
 
-如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起。
+* 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
+* 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
 
 ## swiper-item
 
@@ -324,13 +327,13 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 <view class="wrap">
     <view class="title">示例</view>
     <view class="swiper-wrap">
-        <swiper 
+        <swiper
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}" 
+            indicator-dots="{{switchIndicateStatus}}"
             vertical="false"
             circular="true"
             current="0"
@@ -531,11 +534,13 @@ Page({
 | none | 不可移动 |
 
 
-**说明**：
-* movable-view 必须设置 width 和 height 属性，不设置默认为 10px；
-* movable-view 默认为绝对定位，top 和 left 属性为 0px；
-* 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；
-* 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x 轴方向和 y 轴方向分开考虑）；
+**Bug & Tip**：
+
+* movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
+* movable-view 默认为绝对定位，top 和 left 属性为 0px。
+* 当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
+* 当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
+* movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
 <a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -640,7 +645,7 @@ Page({
     onScale(e) {
         console.log(e.detail)
     }
-}); 
+});
 ```
 
 * 在 css 文件中
@@ -802,15 +807,15 @@ controls {
 
 ![图片](../../../img/component/coverimage.png)
 
-**说明**：
+**Bug & Tip**：
 
-1、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；
-2、文本建议都套上 cover-view 标签，避免排版错误；
-3、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等；
-4、建议子节点不要溢出父节点；
-5、默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block ；
-6、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；
-7、IOS端暂不支持一个页面有多个video时嵌套cover-view；
-8、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
+* 支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity。
+* 文本建议都套上 cover-view 标签，避免排版错误。
+* 只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等。
+* 建议子节点不要溢出父节点。
+* 默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block。
+* 建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常。
+* IOS端暂不支持一个页面有多个video时嵌套cover-view。
+* cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 

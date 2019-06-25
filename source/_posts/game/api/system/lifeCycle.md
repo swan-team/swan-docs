@@ -3,6 +3,7 @@ title: 生命周期
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-01
 ---
 
 ### swan.getLaunchOptionsSync()

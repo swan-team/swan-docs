@@ -136,7 +136,7 @@ Page({
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide，onHide 共被触发2次。在新的基础库版本中，页面被卸载时会触发onUnload，同时 onHide 仍会被触发且仅被触发一次。**请提前做好兼容性处理**。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
+ <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide，onHide 共被触发2次。暂不支持页面被卸载时会触发onUnload，同时 onHide 仍会被触发且仅被触发一次。**请提前做好兼容性处理**。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
 

@@ -3,6 +3,7 @@ title: console
 layout: gamedoc
 topic: debug
 categoryName: api
+priority: 17-01
 ---
 
 向 sConsole 调试面板中打印日志。

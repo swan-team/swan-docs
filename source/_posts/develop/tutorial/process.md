@@ -44,7 +44,7 @@ sidebar: process
             }
         ]
     },
-    "prefetches" ["https://m.baidu.com", "https://m.baidu.com?query=${query}"]
+    "prefetches": ["https://m.baidu.com", "https://m.baidu.com?query=${query}"]
 }
 ```
 
