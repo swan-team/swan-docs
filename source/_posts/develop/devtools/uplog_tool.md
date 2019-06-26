@@ -5,7 +5,7 @@ nav: devtools
 sidebar: uplog_tool
 ---
 
-## 稳定版更新日志
+## 正式版更新日志
 
 ### 2.4 版本 
 
@@ -133,7 +133,7 @@ sidebar: uplog_tool
 |----|----|
 |v1.4.2 |**BugFix**<p>**·** 修复 input 组件的背景颜色和 placeholder 颜色问题；<p>**·** 修复 swan.request 回调函数的语法问题。|
 
-## 抢先版更新日志
+## Beta版更新日志
 
 ### 2.3 版本 
 |版本号|更新时间|更新内容|

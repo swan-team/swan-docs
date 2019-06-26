@@ -2,7 +2,7 @@
 title: 设置
 header: develop
 nav: devtools
-sidebar: set   
+sidebar: setting   
 ---
 ## 快捷键设置
 ### 项目

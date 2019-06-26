@@ -2881,12 +2881,11 @@
       name: devtools
       sidebar:       
         -
-            text: 界面
-            name: page
             sidebar:
               -
                 link: /develop/devtools/page
                 name: page
+                text: 界面
                 sidebar:
                   -
                     link: /develop/devtools/page/#启动页
@@ -2913,12 +2912,11 @@
                     text: 调试器
                     name: page_调试器
         -
-            text: 设置
-            name: setting
             sidebar:
               -
                 link: /develop/devtools/setting
                 name: setting
+                text: 设置
                 sidebar:
                   -
                     link: /develop/devtools/setting/#快捷键设置
@@ -2933,12 +2931,11 @@
                     text: 代理设置
                     name: setting_代理设置
         -
-            text: 代码编辑
-            name: editor
             sidebar:
               -
                 link: /develop/devtools/editor
                 name: editor
+                text: 代码编辑
                 sidebar:
                   -
                     link: /develop/devtools/editor/#文件支持
@@ -2967,6 +2964,7 @@
               -
                 link: /develop/devtools/smartappdebug_function
                 name: smartappdebug_function
+                text: 调试常用功能
                 sidebar:
                   -
                     link: /develop/devtools/smartappdebug_function/#模拟器
@@ -3085,13 +3083,13 @@
                 name: uplog_tool
                 sidebar:
                   -
-                    link: /develop/devtools/uplog_tool/#稳定版更新日志
-                    text: 稳定版更新日志
-                    name: uplog_tool_稳定版更新日志
+                    link: /develop/devtools/uplog_tool/#正式版更新日志
+                    text: 正式版更新日志
+                    name: uplog_tool_正式版更新日志
                   -
-                    link: /develop/devtools/uplog_tool/#抢先版更新日志
-                    text: 抢先版更新日志
-                    name: uplog_tool_抢先版更新日志             
+                    link: /develop/devtools/uplog_tool/#Beta版更新日志
+                    text: Beta版更新日志
+                    name: uplog_tool_Beta版更新日志             
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
