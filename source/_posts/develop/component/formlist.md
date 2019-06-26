@@ -241,7 +241,7 @@ Page({
 |selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
-| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。处理函数可以直接 return 一个字符串，将替换输入框的内容。|
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |
 | bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|
 |bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|
 | bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|
@@ -437,7 +437,7 @@ Page({
 | fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
 
-<div style="font-style: italic">* fields有效值：</div>
+<div style="font-style: italic"> fields有效值：</div>
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -462,7 +462,7 @@ Page({
 |---- | ---- | ---- |---- |
 | value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
 | custom-item | String | |可为每一列的顶部添加一个自定义的项|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value, code, postcode}， 其中code为统计用区划代码，postcode为邮政编码|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 
 
