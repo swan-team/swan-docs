@@ -207,6 +207,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
 |nick_name|	string|	是|	小程序名字|
+|app_name_material| String | 否 | 品牌资质链接。要求图片链接来自于我们的图片上传服务生成的链接，多个图片链接以逗号 , 分隔 |
 响应数据:
 ```js
 {

@@ -16,7 +16,7 @@ sidebar: device_sys
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  是 |  -|接口调用成功的回调|
+|success |Function  |  否 |  -|接口调用成功的回调|
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -33,16 +33,16 @@ sidebar: device_sys
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
-|cacheLocation|屏幕密度|安卓最低支持swanjs版本3.40.4； ios最低支持版本3.70.2|
-|swanNativeVersion|上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
-|devicePixelRatio|宿主平台版本号|最低支持版本1.13.18|
+|cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
+|swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
+|devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
 
 **示例**：
 <a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
@@ -155,8 +155,8 @@ Page({
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|
