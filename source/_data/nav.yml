@@ -1238,6 +1238,11 @@
                   link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
                   text: swan.saveImageToPhotosAlbum
                   name: media_image_swan-saveImageToPhotosAlbum
+                -
+                  link: /develop/api/media_image/#swan-chooseAlbum
+                  text: swan.chooseAlbum
+                  name: media_image_swan-chooseAlbum
+
 
             -
               link: /develop/api/media_recorder
