@@ -6,20 +6,23 @@ sidebar: commandtool
 ---
 
 ## 安装与更新
+
+> [npm工具包下载地址](https://www.npmjs.com/package/swan-toolkit)
+
 ### 安装
 
 ```shell
 npm i swan-toolkit -g
 ```
 
-- 环境依赖：node
+- 环境依赖：[Node.js](https://nodejs.org)
 - 亦可局部安装，通过`npx`或`node_modules/.bin/swan`执行。
 - 本工具跨平台，可以部署在windows/mac/Linux，可用于产品集成流水线部署。
 - （全局）安装后即可使用全局shell命令`swan`。
 
 ### 更新
 
-当该npm包有更新时，将会在使用过程中提示，建议请按照提示使用安装命令更新npm包；另为了不干扰集成流水线功能，更新提示不会在使用`--json`参数时展示，对于此种情况建议定期检查并手动更新。
+当该npm包有更新时，将会在使用过程中以命令行输出形式提示，建议请按照提示使用安装命令更新npm包；另为了不干扰集成流水线功能，更新提示不会在使用`--json`参数时展示，对于此种情况建议定期检查并手动更新。
 
 ## 功能
 

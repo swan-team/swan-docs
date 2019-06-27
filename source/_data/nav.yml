@@ -523,6 +523,7 @@
       name: framework
       sidebar:
         -
+            link: /develop/framework/app_service
             text: 逻辑层
             name: app_service
             sidebar:
