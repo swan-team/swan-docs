@@ -8,7 +8,7 @@ priority: 02-03
 
 ### swan.getSystemInfo()
 
-显示消息提示框。
+获取系统信息。
 
 ```js
 swan.getSystemInfo(opts)
@@ -60,7 +60,7 @@ swan.getSystemInfo({
 
 ### swan.getSystemInfoSync()
 
-显示消息提示框。
+获取系统信息同步版本。
 
 ```js
 swan.getSystemInfoSync()
