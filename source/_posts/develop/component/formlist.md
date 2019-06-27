@@ -232,7 +232,7 @@ Page({
 |selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
-| bindinput | EventHandle  |   |当键盘输入时，触发 input 事件，event.detail = {value, cursor}，处理函数可以直接 return 一个字符串，将替换输入框的内容。|
+| bindinput | EventHandle  |   |当键盘输入时，触发 input 事件，event.detail = {value, cursor} 。|
 | bindfocus | EventHandle  |  |输入框聚焦时触发，event.detail = {value: value}|
 |bindblur	|EventHandle	  | |输入框失去焦点时触发，event.detail = {value: value}|
 | bindconfirm |EventHandle	  |  |点击完成按钮时触发，event.detail = {value: value}|
@@ -396,6 +396,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 |bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
 | disabled | Boolean | false |是否禁用|
 |bindcancel|	EventHandle| |		取消选择或点遮罩层收起 picker 时触发|
+|mode|	String| selector | 选择器类型 |
 
 <notice>日期选择器：mode = date</notice>
 
@@ -408,6 +409,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
 | disabled | Boolean  | false |是否禁用|
 |bindcancel	|EventHandle| |		取消选择时触发|
+|mode|	String| selector | 选择器类型 |
 
 <notice>普通选择器：mode = selector</notice>
 
@@ -420,6 +422,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | disabled | Boolean  | false |是否禁用|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 |bindcancel|EventHandle | |取消选择或点击遮罩层收起 picker 时触发。|
+|mode|	String| selector | 选择器类型 |
 
 <notice>多列选择器：mode = multiSelector</notice>
 
@@ -433,6 +436,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | disabled | Boolean  | false |是否禁用|
 | title | String | | 选择器标题（仅安卓有效）默认值为 "设置" |
 |bindcancel|	EventHandle| |		取消选择时触发|
+|mode|	String| selector | 选择器类型 |
 
 <notice>省市区选择器：mode = region</notice>
 
@@ -444,6 +448,7 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | disabled | Boolean  | false |是否禁用|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 |bindcancel|	EventHandle| |		取消选择时触发|
+|mode|	String| selector | 选择器类型 |
 
 **fields 有效值**:
 
@@ -452,6 +457,16 @@ for 优先级高于内部控件，内部有多个控件的时候默认触发第�
 | year | 选择器粒度为年 |
 | month | 选择器粒度为月份 |
 | day | 选择器粒度为天 |
+
+**mode 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| selector | 普通选择器 |
+| time | 时间选择器 |
+| date | 日期选择器 |
+| multiSelector | 多列选择器 |
+| region | 省市区选择器 |
 
 **示例**：
 <a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

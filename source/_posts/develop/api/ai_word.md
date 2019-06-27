@@ -29,6 +29,7 @@ sidebar: ai_word
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
+|log_id| Number|唯一的log id，用于问题定位。|
 |text | string| 原始单条请求文本| 
 |items | Array| 词汇数组，每个元素对应结果中的一个词。| 
 
