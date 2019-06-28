@@ -3083,10 +3083,10 @@
             text: 工具版本信息
             name: uplog
             sidebar:
-              -
-                link: /develop/devtools/toolversion
-                text: 版本分布
-                name: toolversion   
+              # -
+              #   link: /develop/devtools/toolversion
+              #   text: 版本分布
+              #   name: toolversion   
               -
                 link: /develop/devtools/history
                 text: 版本下载
