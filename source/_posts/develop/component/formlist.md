@@ -186,7 +186,7 @@ Page({
 |-----|---- |---- |----|----|----|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: ''}	`|-|
 | bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
+|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
 
 
 **示例：**
@@ -234,7 +234,7 @@ Page({
 | disabled | Boolean  | false  | 否 |是否禁用|
 | maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
 |cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
-| focus |Boolean	  | false | 否 |获取焦点	|
+| focus |Boolean	  | false | 否 |获取焦点，调起键盘|
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
 |cursor	 | Number  |  | 否 |指定 focus 时的光标位置|
@@ -1001,9 +1001,9 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 |placeholder-class|String||否|指定 placeholder 的样式类|
 |auto-height|Boolean|false|否|是否自动增高，设置auto-height时，style.height不生效|
 |cursor|Number|-1|否|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
-|auto-focus|Boolean|false|否|自动聚焦，拉起键盘 <font color="#4183c4">10.8.5 以上</font>|
+|auto-focus|Boolean|false|否|自动聚焦，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |confirm-type|String|default|否|设置键盘右下角按钮的文字。<font color="#4183c4">11.10.0 以上</font>|
-|focus|Boolean|false|否|获取焦点 <font color="#4183c4">10.8.5 以上</font>|
+|focus|Boolean|false|否|获取焦点，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
 |cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 <font color="#4183c4">10.8.5 以上</font>|
 |show-confirm-bar|Boolean|true|否|是否显示键盘上方带有”完成“按钮那一栏。  <font color="#4183c4">10.8.5 以上</font>|
