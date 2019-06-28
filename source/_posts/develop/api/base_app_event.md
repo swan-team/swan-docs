@@ -5,28 +5,22 @@ nav: api
 sidebar: base_app_event
 ---
 
+
 ## swan.onPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
 
-**方法参数**
+**方法参数：** Function callback
+小程序要打开的页面不存在的事件回调函数。
 
-**function callback**
-小程序要打开的页面不存在事件的回调函数。
-
-**回调方法参数**
-
-**Object res**
+**callback返回参数说明**：
 
 |属性|类型|说明|
 |----|----|----|
 |path|string|不存在页面的路径|
 |query|Object|打开不存在页面的 query 参数|
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
-
-**注意:**
-- 开发者可以在回调中进行页面重定向。
 
 **示例代码**
 ```js
@@ -43,17 +37,18 @@ App({
 });
 ```
 
+**说明:**
+- 开发者可以在回调中进行页面重定向。
+
 ## swan.onError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-监听小程序错误事件。如脚本错误或 API 调用报错等。该事件与 [App.onError](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机与参数一致。
+**解释：** 监听小程序错误事件。如脚本错误或`API`调用报错等。该事件与 [App.onError](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机与参数一致。
 
-**方法参数**
-
-**function callback**
+**方法参数：** Function callback
 小程序错误事件的回调函数。
 
-**回调方法参数**
+**callback返回参数说明**：
 
 **Object error**
 错误信息，包含堆栈。
@@ -73,16 +68,15 @@ App({
 ## swan.onAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-监听小程序切前台事件。该事件与 [App.onShow](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调参数一致。
+**解释：** 监听小程序切前台事件。该事件与 [App.onShow](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调参数一致。
 
-**方法参数**
-
-**function callback**
+**方法参数：** function callback
 小程序切前台事件的回调函数。
 
-**回调方法参数**
+**callback返回参数说明**：
 
 **Object res**
+返回的对象信息。
 
 |属性  |类型  |说明  |最低版本|
 |---- | ---- | ---- |---|
@@ -115,7 +109,9 @@ App({
 App({
     onLaunch() {
         swan.onAppShow(function(res) {
-            console.log(res);
+            console.log(res.scene);
+            console.log(res.path);
+            console.log(res.query);
         });
     }
 });
@@ -124,18 +120,16 @@ App({
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
-    <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在未来的基础库版本下线，并通知开发者下线的基础库版本号</li><li>如在打开或跳转小程序时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
+    <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在未来的基础库版本下线，并提前通知开发者下线的基础库版本号；</li><li>如在打开或跳转小程序时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
 
 ## swan.onAppHide
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-监听小程序切后台事件。该事件与 [App.onHide](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序切后台事件。该事件与 [App.onHide](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
 
-**参数**
-
-**function callback**
+**方法参数：** Function callback
 小程序切后台事件的回调函数。
 
 **示例代码**
@@ -143,8 +137,8 @@ App({
 // app.js
 App({
     onLaunch() {
-        swan.onAppHide(function(res) {
-            console.log(res);
+        swan.onAppHide(function() {
+            // Do other things
         });
     }
 });
@@ -154,12 +148,10 @@ App({
 ## swan.offPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-取消监听小程序要打开的页面不存在事件。
+**解释：** 取消监听小程序要打开的页面不存在事件。
 
-**参数**
-
-**function callback**
-小程序要打开的页面不存在事件的回调函数。
+**方法参数：** Function callback | 无
+小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 **示例代码**
 ```js
@@ -182,12 +174,10 @@ App({
 ## swan.offError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-取消监听小程序错误事件。
+**解释：** 取消监听小程序错误事件。
 
-**参数**
-
-**function callback**
-小程序错误事件的回调函数。
+**方法参数：** Function callback | 无
+小程序错误事件的回调函数（swan.onError的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 **示例代码**
 ```js
@@ -210,12 +200,10 @@ App({
 ## swan.offAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-取消监听小程序切前台事件。
+**解释：** 取消监听小程序切前台事件。
 
-**参数**
-
-**function callback**
-小程序切前台事件的回调函数。
+**方法参数：** Function callback | 无
+小程序切前台事件的回调函数（swan.onAppShow的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 **示例代码**
 ```js
@@ -235,16 +223,13 @@ App({
 });
 ```
 
-
 ## swan.offAppHide
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-取消监听小程序切后台事件。
+**解释：** 取消监听小程序切后台事件。
 
-**参数**
-
-**function callback**
-小程序切后台事件的回调函数。
+**方法参数：** Function callback | 无
+小程序切后台事件的回调函数（swan.onAppHide的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 ```js
 // app.js
@@ -262,4 +247,3 @@ App({
     }
 });
 ```
-
