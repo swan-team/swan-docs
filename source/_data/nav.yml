@@ -707,6 +707,19 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
+            link: /develop/framework/dynamiclib
+            text: 动态库
+            name: dynamiclib
+            sidebar:
+              -
+                link: /develop/framework/dynamiclib_use
+                text: 使用动态库
+                name: dynamiclib_use
+              -
+                link: /develop/framework/dynamiclib_topone
+                text: topOne动态库
+                name: dynamiclib_topone
+        -
           link: /develop/framework/subpackages
           text: 性能
           name: subpackages
