@@ -2932,6 +2932,10 @@
                     link: /develop/devtools/setting/#代理设置
                     text: 代理设置
                     name: setting_代理设置
+                  -
+                    link: /develop/devtools/setting/#外观设置
+                    text: 外观设置
+                    name: setting_外观设置
         -
             text: 代码编辑
             name: editor
@@ -2980,10 +2984,10 @@
                     link: /develop/devtools/smartappdebug_function/#前后台切换
                     text: 前后台切换
                     name: smartappdebug_function_前后台切换
-                  -
-                    link: /develop/devtools/smartappdebug_function/#调试器
-                    text: 调试器
-                    name: smartappdebug_function_调试器
+                  # -
+                  #   link: /develop/devtools/smartappdebug_function/#调试器
+                  #   text: 调试器
+                  #   name: smartappdebug_function_调试器
               -
                 link: /develop/devtools/smartappdebug_tool
                 text: 调试工具
@@ -3021,10 +3025,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Swan-audits
                     text: Swan audits
                     name: smartappdebug_tool_Swan-audits
-              # -
-              #   link: /develop/devtools/smartappdebug_pre
-              #   text: 预览发布
-              #   name: smartappdebug_pre
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Security-panel
+                    text: Security panel
+                    name: smartappdebug_tool_Security-panel
               -
                 link: /develop/debug/remoterelease
                 text: 真机调试
@@ -3033,6 +3037,10 @@
                 link: /develop/debug/remotedebugging
                 text: 远程调试
                 name: remotedebugging 
+              -
+                link: /develop/devtools/smartappdebug_pre
+                text: 预览发布
+                name: smartappdebug_pre
         -
             text: 开发辅助
             name: help
@@ -3062,6 +3070,10 @@
                 text: 白屏检测
                 name: plain
               -
+                link: /develop/devtools/commandtool
+                text: 命令行工具
+                name: commandtool
+              -
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff
@@ -3089,9 +3101,9 @@
                     text: 稳定版更新日志
                     name: uplog_tool_稳定版更新日志
                   -
-                    link: /develop/devtools/uplog_tool/#抢先版更新日志
-                    text: 抢先版更新日志
-                    name: uplog_tool_抢先版更新日志             
+                    link: /develop/devtools/uplog_tool/#预发布版更新日志
+                    text: 预发布版更新日志
+                    name: uplog_tool_预发布版更新日志             
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
