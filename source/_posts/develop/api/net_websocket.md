@@ -101,7 +101,7 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|header| object | 是|-|连接成功的 HTTP 响应 Header。|
+|header| Object | 是|-|连接成功的 HTTP 响应 Header。|
 
 **示例**：
 
