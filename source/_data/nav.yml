@@ -2560,6 +2560,10 @@
                     link: /develop/api/open_share/#swan-openShare
                     text: swan.openShare
                     name: open_share_swan-openShare
+                  -
+                    link: /develop/api/open_share_file
+                    text: 分享文件
+                    name: open_share_file
 
               -
                 link: /develop/api/open_chooseaddress
