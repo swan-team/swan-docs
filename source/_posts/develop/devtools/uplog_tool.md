@@ -134,7 +134,7 @@ sidebar: uplog_tool
 |----|----|
 |v1.4.2 |**BugFix**<p>**·** 修复 input 组件的背景颜色和 placeholder 颜色问题；<p>**·** 修复 swan.request 回调函数的语法问题。|
 
-## Beta 版更新日志
+## Beta版更新日志
 
 ### 2.3 版本 
 |版本号|更新时间|更新内容|
