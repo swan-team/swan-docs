@@ -246,18 +246,7 @@
                 link: /introduction/productlaboratory
                 text: 开通指引
                 name: productlaboratory    
-              # -
-              #   link: /introduction/instead
-              #   text: 搜索结果替换
-              #   name: instead                
-              # -
-              #   link: /introduction/adaccess
-              #   text: 广告接入
-              #   name: adaccess                
-              # -
-              #   link: /introduction/feedput
-              #   text: 信息流投放
-              #   name: feedput 
+
 # 2
 -
   link: /design/overview/introduction
@@ -699,9 +688,9 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
-            link: /develop/framework/dynamiclib
+            link: /develop/framework/dynamiclib_use
             text: 动态库
-            name: dynamiclib
+            name: dynamiclib_use
             sidebar:
               -
                 link: /develop/framework/dynamiclib_use
@@ -720,8 +709,6 @@
               link: /develop/framework/subpackages
               text: 分包加载
               name: subpackages
-
-
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
@@ -739,9 +726,9 @@
               text: 案例介绍
               name: case                     
         -
-          link: /develop/framework/subpackages
+          link: /develop/framework/operating-environment
           text: 运行时
-          name: subpackages
+          name: operating-environment
           sidebar:
             -
               link: /develop/framework/operating-environment
@@ -757,9 +744,9 @@
             #   name: process_life                            
 
     -
-      link: /develop/component/view
+      link: /develop/component/componetlist
       text: 组件
-      name: component
+      name: componetlist
       sidebar:
         -
             sidebar:
@@ -968,30 +955,30 @@
                       name: canvas_canvas
         -
             sidebar:
-              -
-                link: /develop/component/open
-                text: 开放能力
-                name: open
-                sidebar:
-                  -
-                    link: /develop/component/open/#open-data
-                    text: open-data
-                    name: open_open-data
-                  -
-                    link: /develop/component/open/#web-view
-                    text: web-view
-                    name: open_web-view
+                -
+                  link: /develop/component/open
+                  text: 开放能力
+                  name: open
+                  sidebar:
+                    -
+                      link: /develop/component/open/#open-data
+                      text: open-data
+                      name: open_open-data
+                    -
+                      link: /develop/component/open/#web-view
+                      text: web-view
+                      name: open_web-view
         -
             sidebar:
-              -
-                link: /develop/component/ad
-                text: 广告
-                name: ad
-                sidebar:
-                  -
-                    link: /develop/component/ad/#ad
-                    text: ad
-                    name: ad_ad
+                -
+                  link: /develop/component/ad
+                  text: 广告
+                  name: ad
+                  sidebar:
+                    -
+                      link: /develop/component/ad/#ad
+                      text: ad
+                      name: ad_ad
                                       
     -
       link: /develop/api/apilist
@@ -1005,9 +992,9 @@
               text: API 列表
               name: apilist
         -
-            link: /develop/api/base
+            link: /develop/api/base_app_event
             text: 基础
-            name: base
+            name: base_app_event
             sidebar:
             -
               link: /develop/api/base_app_event
@@ -1048,9 +1035,9 @@
                   name: base_app_event_swan-offAppHide      
      
         -
-            link: /develop/api/net
+            link: /develop/api/net_rule
             text: 网络
-            name: net
+            name: net_rule
             sidebar:
             -
               link: /develop/api/net_rule
@@ -1292,9 +1279,9 @@
                     text: swan.ai.nlpLexerCustom
                     name: ai_word_swan-ai-nlpLexerCustom
         -
-            link: /develop/api/media
+            link: /develop/api/media_image
             text: 媒体
-            name: media
+            name: media_image
             sidebar:
             -
               link: /develop/api/media_image
@@ -1606,9 +1593,9 @@
                       name: ARCameraContext-stopRecord                  
                       
         -
-            link: /develop/api/file
+            link: /develop/api/file_save
             text: 文件
-            name: file
+            name: file_save
             sidebar:
               -
                 link: /develop/api/file_save
@@ -1650,9 +1637,9 @@
                     text: swan.openDocument
                     name: file_open_swan-openDocument
         -
-            link: /develop/api/storage
+            link: /develop/api/storage_save
             text: 数据存储
-            name: storage
+            name: storage_save
             sidebar:
               -
                 link: /develop/api/storage_save
@@ -1709,9 +1696,9 @@
                     text: swan.clearStorageSync
                     name: storage_remove_swan-clearStorageSync
         -
-            link: /develop/api/location
+            link: /develop/api/location_get
             text: 位置
-            name: location
+            name: location_get
             sidebar:
               -
                 link: /develop/api/location_get
@@ -1775,9 +1762,9 @@
                         text: mapContext.getScale
                         name: mapContext-getScale                       
         -
-            link: /develop/api/show
+            link: /develop/api/show_canvas
             text: 界面
-            name: show
+            name: show_canvas
             sidebar:
               -
                 link: /develop/api/show_canvas
@@ -1809,7 +1796,6 @@
                     text: canvasContext 
                     name: show_canvas_canvasContext 
                     sidebar:
-
                       -
                         link: /develop/api/show_canvas/#canvasContext-setFillStyle
                         text: canvasContext.setFillStyle
@@ -2334,9 +2320,9 @@
                     name: nacomponent_swan-showFavoriteGuide
 
         -
-            link: /develop/api/device
+            link: /develop/api/device_sys
             text: 设备
-            name: device
+            name: device_sys
             sidebar:
               -
                 link: /develop/api/device_sys
@@ -2526,9 +2512,9 @@
                     name: device_clipboard_swan-getClipboardData
                    
         -
-            link: /develop/api/ext
+            link: /develop/api/getextconfig
             text: 第三方平台
-            name: ext
+            name: getextconfig
             sidebar:
               -
                 link: /develop/api/getextconfig
@@ -2544,9 +2530,9 @@
                     text: swan.getExtConfigSync
                     name: getextconfig_swan-getExtConfigSync
         -
-            link: /develop/api/open
+            link: /develop/api/open_log
             text: 开放接口
-            name: open
+            name: open_log
             sidebar:
 
               -
@@ -2727,9 +2713,7 @@
                   -
                     link: /develop/api/open_preloadsubpackage/#swan-loadSubPackage
                     text: swan.loadSubPackage
-                    name: open_preloadsubpackage_swan-preloadSubPackage
-              
-
+                    name: open_preloadsubpackage_swan-preloadSubPackage              
               -
                 link: /develop/api/get
                 text: 更新
@@ -2806,8 +2790,7 @@
       name: open_feed
       sidebar:
         - 
-          sidebar: 
-            
+          sidebar:             
               -
                 link: /develop/serverapi/open_feed
                 text: 信息流资源
@@ -2877,13 +2860,11 @@
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
-                name: power_exp                   
-
-          
+                name: power_exp                             
     -
-      link: /develop/devtools/history
+      link: /develop/devtools/page
       text: 工具
-      name: devtools
+      name: page
       sidebar:       
         -
             sidebar:
@@ -2967,8 +2948,9 @@
                     text: 项目配置文件
                     name: editor_项目配置文件
         -
+            link: /develop/devtools/smartappdebug_function
             text: 小程序调试
-            name: smartappdebug
+            name: smartappdebug_function
             sidebar:
               -
                 link: /develop/devtools/smartappdebug_function
@@ -3045,8 +3027,9 @@
                 text: 预览发布
                 name: smartappdebug_pre
         -
+            link: /develop/devtools/code
             text: 开发辅助
-            name: help
+            name: code
             sidebar:
               -
                 link: /develop/devtools/code
@@ -3082,14 +3065,10 @@
                 name: diff
                         
         -
-            link: /develop/devtools/uplog
+            link: /develop/devtools/history
             text: 工具版本信息
-            name: uplog
+            name: history
             sidebar:
-              # -
-              #   link: /develop/devtools/toolversion
-              #   text: 版本分布
-              #   name: toolversion   
               -
                 link: /develop/devtools/history
                 text: 版本下载
@@ -3114,23 +3093,17 @@
 
     
     -
-      link: /develop/server/oauth_intr
+      link: /develop/third/pro
       text: 第三方接入
-      name: third
+      name: pro
       sidebar:
         -
-          link: /develop/third/pro
-          text:
-          name: pro
           sidebar:
             -
               link: /develop/third/pro
               text: 授权流程
               name: pro
         -
-          link: /develop/third/module
-          text:
-          name: module
           sidebar:
             -
               link: /develop/third/module
@@ -3138,106 +3111,75 @@
               name: module
 
         -
-          link: /develop/third/apppage
-          text:
-          name: apppage
           sidebar:
             -
               link: /develop/third/apppage
               text: 小程序包管理
               name: apppage
         -
-          link: /develop/third/info
-          text:
-          name: info
           sidebar:
             -
               link: /develop/third/info
               text: 基础信息设置
               name: info
         -
-          link: /develop/third/api
-          text:
-          name: api
           sidebar:
             -
               link: /develop/third/api
               text: 模板消息 
               name: api              
         -
-          link: /develop/third/upload
-          text:
-          name: upload
           sidebar:
             -
               link: /develop/third/upload
               text: 图片上传
               name: upload
         -
-          link: /develop/third/login
-          text:
-          name: login
           sidebar:
             -
               link: /develop/third/login
               text: TP代授权小程序登录
               name: login
         -
-          link: /develop/third/address
-          text:
-          name: address
           sidebar:
             -
               link: /develop/third/address
               text: 修改服务器地址
               name: address
         -
-          link: /develop/third/checkname
-          text:
-          name: checkname
           sidebar:
             -
               link: /develop/third/checkname
               text: 名称检测
               name: checkname
-        - link: /develop/third/datastatistics
-          text:
-          name: datastatistics
+        - 
           sidebar:
             - link: /develop/third/datastatistics
               text: 数据统计分析
               name: datastatistics
         -
-          link: /develop/third/error
-          text:
-          name: error
+
           sidebar:
             -
               link: /develop/third/error
               text: 通用错误码对照表
               name: error
         -
-          link: /develop/third/deciphering
-          text:
-          name: deciphering
           sidebar:
             -
               link: /develop/third/deciphering
               text: 第三方平台消息加解密
               name: deciphering
         -
-          link: /develop/third/log
-          text:
-          name: log
           sidebar:
             -
               link: /develop/third/log
               text: 更新日志
               name: log
     -
-      link: /develop/function/webintroduction 
+      link: /develop/function/navigation
       text: 功能开发
-      name: function
+      name: navigation
       sidebar:
         -
           sidebar:              
@@ -3265,8 +3207,9 @@
             name: proposal  
                  
         -
-          link: /develop/function/invoke_process
+          link: /develop/function/pay
           text: 支付功能开发
+          name: pay
           sidebar:  
           -
             link: /introduction/pay
@@ -3329,9 +3272,9 @@
             name: error_code             
       
     -
-      link: /develop/swan/version
+      link: /develop/swan/client-lib
       text: 基础库版本信息
-      name: swan
+      name: client-lib
       sidebar:
         -
           sidebar:
@@ -3358,7 +3301,7 @@
     -
       link: /develop/faq/frequently
       text: FAQ
-      name: faq
+      name: frequently
       sidebar:
         -
           sidebar:            
@@ -3467,12 +3410,10 @@
                 link: /data/guideline/#数据分析维度
                 text: 数据分析维度
                 name: guideline_数据分析维度
-
-
     -
-      link: /data/custom
+      link: /data/performance-poin
       text: 统计方法
-      name: book
+      name: performance-poin
       sidebar:
         -
           sidebar:
@@ -3526,9 +3467,9 @@
           #   text: 审核标准
           #   name: standard
     -
-      link: /operations/thirdparty
+      link: /operations/thirdparty_agreement
       text: 第三方平台范围及条款
-      name: book
+      name: thirdparty_agreement
       sidebar:
         -
           sidebar:
@@ -3539,10 +3480,5 @@
           -
             link: /operations/thirdparty_low
             text: 第三方平台授权法律条款
-            name: thirdparty_low
-# #6
-# -
-#   link: ../forum
-#   text: 社区
-#  name: forum
+            name: thirdparty_low 
 
