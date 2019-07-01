@@ -282,7 +282,7 @@ Page({
 |indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| -|
 |autoplay |Boolean  | false | 否 |是否自动切换| -|
 |current|Number |0 | 否 |当前所在页面的 index| -|
-|current-item-id|String|`""`| 否 |当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|current-item-id|String|| 否 |当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |interval | Number | 5000 | 否 |自动切换时间间隔，单位ms|- |
 |duration| Number |500 | 否 |滑动动画时长，单位ms|- |
 |circular| Boolean |false | 否 |是否采用衔接滑动| -|
@@ -316,7 +316,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
-|item-id|String|""| 否 |该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|item-id|String| | 否 |该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例**：
 <a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

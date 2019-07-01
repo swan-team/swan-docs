@@ -2958,9 +2958,9 @@
                 text: 调试常用功能
                 sidebar:
                   -
-                    link: /develop/devtools/smartappdebug_function/#模拟器
-                    text: 模拟器
-                    name: smartappdebug_function_模拟器
+                    link: /develop/devtools/smartappdebug_function/#模拟器功能
+                    text: 模拟器功能
+                    name: smartappdebug_function_模拟器功能
                   -
                     link: /develop/devtools/smartappdebug_function/#自定义编译
                     text: 自定义编译

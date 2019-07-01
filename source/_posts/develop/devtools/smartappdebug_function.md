@@ -5,7 +5,7 @@ nav: devtools
 sidebar: smartappdebug_function
 ---
 
-## 模拟器
+## 模拟器功能
 
 
 模拟器提供了和百度App客户端一致的运行环境，对于绝大部分的 API 均能够在模拟器上呈现出与客户端一致的状态。
