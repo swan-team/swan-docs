@@ -707,6 +707,19 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
+            link: /develop/framework/dynamiclib
+            text: 动态库
+            name: dynamiclib
+            sidebar:
+              -
+                link: /develop/framework/dynamiclib_use
+                text: 使用动态库
+                name: dynamiclib_use
+              -
+                link: /develop/framework/dynamiclib_topone
+                text: topOne动态库
+                name: dynamiclib_topone
+        -
           link: /develop/framework/subpackages
           text: 性能
           name: subpackages
@@ -999,48 +1012,48 @@
               link: /develop/api/apilist
               text: API 列表
               name: apilist
-        # -
-        #     link: /develop/api/base
-        #     text: 基础
-        #     name: base
-        #     sidebar:
-        #     -
-        #       link: /develop/api/base_app_event
-        #       text: 应用级事件
-        #       name: base_app_event
-        #       sidebar:
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onPageNotFound
-        #           text: swan.onPageNotFound
-        #           name: base_app_event_swan-onPageNotFound
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onError
-        #           text: swan.onError
-        #           name: base_app_event_swan-onError
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onAppShow
-        #           text: swan.onAppShow
-        #           name: base_app_event_swan-onAppShow
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onAppHide
-        #           text: swan.onAppHide
-        #           name: base_app_event_swan-onAppHide
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offPageNotFound
-        #           text: swan.offPageNotFound
-        #           name: base_app_event_swan-offPageNotFound
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offError
-        #           text: swan.offError
-        #           name: base_app_event_swan-offError
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offAppShow
-        #           text: swan.offAppShow
-        #           name: base_app_event_swan-offAppShow
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offAppHide
-        #           text: swan.offAppHide
-        #           name: base_app_event_swan-offAppHide      
+        -
+            link: /develop/api/base
+            text: 基础
+            name: base
+            sidebar:
+            -
+              link: /develop/api/base_app_event
+              text: 应用级事件
+              name: base_app_event
+              sidebar:
+                -
+                  link: /develop/api/base_app_event/#swan-onPageNotFound
+                  text: swan.onPageNotFound
+                  name: base_app_event_swan-onPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-onError
+                  text: swan.onError
+                  name: base_app_event_swan-onError
+                -
+                  link: /develop/api/base_app_event/#swan-onAppShow
+                  text: swan.onAppShow
+                  name: base_app_event_swan-onAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-onAppHide
+                  text: swan.onAppHide
+                  name: base_app_event_swan-onAppHide
+                -
+                  link: /develop/api/base_app_event/#swan-offPageNotFound
+                  text: swan.offPageNotFound
+                  name: base_app_event_swan-offPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-offError
+                  text: swan.offError
+                  name: base_app_event_swan-offError
+                -
+                  link: /develop/api/base_app_event/#swan-offAppShow
+                  text: swan.offAppShow
+                  name: base_app_event_swan-offAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-offAppHide
+                  text: swan.offAppHide
+                  name: base_app_event_swan-offAppHide      
      
         -
             link: /develop/api/net
@@ -2930,6 +2943,10 @@
                     link: /develop/devtools/setting/#代理设置
                     text: 代理设置
                     name: setting_代理设置
+                  -
+                    link: /develop/devtools/setting/#外观设置
+                    text: 外观设置
+                    name: setting_外观设置
         -
             sidebar:
               -
@@ -2978,10 +2995,10 @@
                     link: /develop/devtools/smartappdebug_function/#前后台切换
                     text: 前后台切换
                     name: smartappdebug_function_前后台切换
-                  -
-                    link: /develop/devtools/smartappdebug_function/#调试器
-                    text: 调试器
-                    name: smartappdebug_function_调试器
+                  # -
+                  #   link: /develop/devtools/smartappdebug_function/#调试器
+                  #   text: 调试器
+                  #   name: smartappdebug_function_调试器
               -
                 link: /develop/devtools/smartappdebug_tool
                 text: 调试工具
@@ -3019,10 +3036,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Swan-audits
                     text: Swan audits
                     name: smartappdebug_tool_Swan-audits
-              # -
-              #   link: /develop/devtools/smartappdebug_pre
-              #   text: 预览发布
-              #   name: smartappdebug_pre
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Security-panel
+                    text: Security panel
+                    name: smartappdebug_tool_Security-panel
               -
                 link: /develop/debug/remoterelease
                 text: 真机调试
@@ -3031,6 +3048,10 @@
                 link: /develop/debug/remotedebugging
                 text: 远程调试
                 name: remotedebugging 
+              -
+                link: /develop/devtools/smartappdebug_pre
+                text: 预览发布
+                name: smartappdebug_pre
         -
             text: 开发辅助
             name: help
@@ -3059,6 +3080,10 @@
                 link: /develop/devtools/plain
                 text: 白屏检测
                 name: plain
+              -
+                link: /develop/devtools/commandtool
+                text: 命令行工具
+                name: commandtool
               -
                 link: /develop/devtools/diff
                 text: API 实现差异
