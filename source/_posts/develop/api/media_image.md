@@ -372,29 +372,53 @@ wrap {
 |type|文件类型|photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)|
 
+**示例**
+<a href="swanide://fragment/ede0ca93153cd6f1b6f4b83198b0d8c91561972369610" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
+**示例 1-打开相册只选择图片或视频**
+* 在 js 文件中
 
+```js
+ swan.chooseAlbum({
+    count: 2,
+    mode: 'single',
+    compressed: true,
+    success: function (res) {
+        // 成功则返回图片的本地文件路径列表 tempFilePaths
+        console.log(res.tempFilePaths);
+        // 文件列表对象
+        console.log(res.tempFiles);
+    },
+    fail: function (err) {
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
+    }
+});
+
+```
+
+**示例 2-打开相册只选择图片和视频**
 * 在 js 文件中
 
 ```js
 swan.chooseAlbum({
-	    count: 9,
-	    mode: 'single',  // 选择模式：single/both 默认one；single：只能选择一种图片或视频模式；both可同时选择图片和视频模式
-	    compressed: true,  // 可以指定是原图还是压缩图，默认二者都有
-	    success: function (res) {
-	        // 成功则返回图片的本地文件路径列表 tempFilePaths
-	        console.log(res.tempFilePaths);
-	        // 文件列表对象
-	        console.log(res.tempFiles);
-	    },
-	    fail: function (err) {
-	        console.log('错误码：' + err.errCode);
-	        console.log('错误信息：' + err.errMsg);
-	    }
-	});
+    count: 3,
+    mode: 'both',
+    compressed: false,
+    success: function (res) {
 
+        console.log(res.tempFilePaths);
+
+        console.log(res.tempFiles);
+    },
+    fail: function (err) {
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
+    }
+});
 
 ```
+
 
 
 
