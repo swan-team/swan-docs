@@ -176,8 +176,8 @@ App({
             console.log(res);
         });
     },
+    // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机）
     onShow() {
-        // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机）
         setTimeout(function() {
             swan.offPageNotFound();
         }, 3000);
