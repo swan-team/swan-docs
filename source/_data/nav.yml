@@ -17,17 +17,8 @@
             sidebar:
               -
                 link: /introduction/enter_application
-                text:  注册
-                name: enter_application
-                sidebar:
-                  -
-                    link: /introduction/enter_application/#登录注册
-                    text: 登录注册
-                    name: enter_application_登录注册
-                  -
-                    link: /introduction/enter_application/#入驻申请
-                    text: 入驻申请
-                    name: enter_application_入驻申请                    
+                text:   登录注册
+                name: enter_application                   
               -
                 link: /introduction/register
                 text: 主体认证
@@ -532,6 +523,7 @@
       name: framework
       sidebar:
         -
+            link: /develop/framework/app_service
             text: 逻辑层
             name: app_service
             sidebar:
@@ -950,8 +942,6 @@
                     link: /develop/component/map/#map
                     text: map
                     name: map
-                 
-
         -
             sidebar:
                 -
@@ -3009,7 +2999,14 @@
               -
                 link: /develop/devtools/audits
                 text: 体验评分
-                name: audits                
+                name: audits    
+        -
+            sidebar:
+
+              -
+                link: /develop/devtools/commandtool
+                text: 命令行工具
+                name: commandtool                              
         -
             link: /develop/devtools/projectconfig
             text: 配置文件及差异
@@ -3192,12 +3189,12 @@
       text: 功能开发
       name: function
       sidebar:
-        # -
-        #   sidebar:              
-        #   -
-        #     link: /develop/function/navigation
-        #     text: 小程序导航
-        #     name: navigation         
+        -
+          sidebar:              
+          -
+            link: /develop/function/navigation
+            text: 导航
+            name: navigation         
         -
           sidebar:              
           -

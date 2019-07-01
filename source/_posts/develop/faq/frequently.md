@@ -18,6 +18,10 @@ A：请使用px单位来书写css，不建议使用rpx等其他单位。
 
 A：建议使用 webview 组件实现相关功能，请勿频繁使用setData操作。
 
+#### Q：小程序可以调用echarts.js 或者 highchart.js 画图嘛？
+
+A：暂不支持。
+
 ## API & 组件
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？
@@ -68,6 +72,59 @@ A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 
 #### Q：使用两个text组件，组件之间有间隙，在不同手机端偶现，影响部分用户体验的问题该如何解决？
 
 A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0 ，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
+
+#### Q：swan.request 成功后如何刷新页面？
+
+A：当刷新页面指的是想更新部分模块的数据时，可以在接口请求成功后，使用 setData 将获取到的数据进行重置。
+
+#### Q：如何在百度小程序里可以同时播放两个音频？
+
+A：可以多次创建 createInnerAudioContext，然后使用 setInnerAudioOption，将设置 mixWithOther 为 true。
+
+#### Q：这个分包预加载只能加载一个分包吗
+
+A：端能力的 root 参数为 string 类型，只能配置一个。但是可以通过 app.json 中的 preloadRule 配置多个子包。
+
+####  Q：video自动播放的流量提醒出现策略是什么？
+
+A：非 Wi-Fi 情况播放视频会出现流量弹窗，继续播放后，小程序生命周期里再次播放video，不会出现弹窗。如果杀进程，再次进入，会继续提醒弹窗，目前不支持开发者控制。
+
+#### Q：video全屏后的手势引导出现策略是什么？
+
+A：全屏手势引导点击一次后不在出现，目前也不支持开发者控制。
+
+####  Q：web-view页面里如何使用拨打电话接口
+
+A：请参考如下示例
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>call phone</title>
+        <script  src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
+    </head>
+    <body>
+        <button onclick="callMobile()">clickMe</button>
+    </body>
+    <script type="text/javascript">
+        function callMobile() {
+            swan.makePhoneCall({
+                phoneNumber: '10086' 
+            });
+        }
+    </script>
+</html>
+```
+
+#### Q：我现在有个需求下载app的时候，同时写口令，也就是剪切板。打开app的时候，端上会读剪切板。请问小程序支持写口令吗？
+
+A：不支持
+
+#### Q：小程序组件提供的弹窗能插图片内容吗？
+
+A：不支持，小程序API提供的弹窗暂时都不支持插入图片，可自行写弹层逻辑，注意，自己写的弹层底部的的蒙层是盖不住顶bar(标题栏)。
+
 
 ## Web 化
 
@@ -148,6 +205,10 @@ A：远程调试的基础库版本是内置的，跟App内置的基础库版本�
 #### Q：百度小程序IDE支持git代码仓库管理吗？
 
 A：不支持
+
+#### Q：小程序开发工具点预览生成的二维码，反解的链接，想问下这个链接如何携带query？
+
+A：打开开发者工具，选择"添加编译"，可以自定义"页面路径"、"页面参数"等编译参数，用自定义的编译模式来预览，就可以带上特定的query了。
 
 <!-- ## 其它
 

@@ -71,8 +71,9 @@ Page({
     }
 });
 ```
-
-
+**Bug & Tip**：
+jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
+ 
 ## swan.redirectTo
 
 **解释**：关闭当前页面，跳转到应用内的某个页面。

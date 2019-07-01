@@ -48,6 +48,8 @@ swan.requestXRSession(opts)
 |res|Object|回调函数参数对象|
 |res.errMsg|string|报错信息|
 
+在碰到错误时，推荐通过弹窗的形式引导开发者是否重新进入 AR 模式，如果用户确定才去再次调用 reuqestXRSession.
+
 `errMsg` 错误信息包括：
 
 + `fail system permission denied`
@@ -58,8 +60,10 @@ swan.requestXRSession(opts)
     已经存在一个运行中的 XRSession
 + `fail network error`
     网络错误，网络错误在`'du_face'`等需要网络下发模型的模式中可能会出现
-+ `fail unkown mode`
++ `fail unknown mode`
     不支持的 XR 模式
++ `fail unknown error`
+    未知错误
 
 
 `complete` 回调函数：
@@ -87,20 +91,23 @@ swan.requestXRSession(opts)
 1. 创建人脸 AR 的会话并且每一帧绘制检测到的人脸特征点。
 
 ```js
+const ctx = swan.createCanvas().getContext('2d');
 swan.requestXRSession({
     mode: 'du_face', // 必须指定模式为 'du_face'
     success(xrSession) {
         // 会话创建成功，开始每帧的渲染
         function update() {
             const frame = xrSession.getFrame();
+            // 清除画布
+            const width = ctx.canvas.width;
+            const height = ctx.canvas.height;
+            ctx.clearRect(0, 0, width, height);
             // 获取当前帧检测到的人脸
             const face = frame.getUpdatedTrackableFaces()[0];
             if (face) { // 如果检测到有人脸
                 // 获取人脸特征点数据，特征点线性存放在一个 Float32Array 中
                 // 每个特征点都有 x, y, score 三个值，在使用的时候需要留意不要忘记处理 score
                 const landmarks = face.landmarks;
-                const width = ctx.canvas.width;
-                const height = ctx.canvas.height;
                 // 绘制成绿色
                 ctx.fillStyle = '#00ff00';
                 for (let i = 0; i < landmarks.length; i += 3) {
@@ -149,7 +156,7 @@ swan.requestXRSession({
             //小程序无权限，可以显示错误页，调用openSetting引导用户开启授权
             displayAppAuthorizeError();
         }
-        else if (error.errMsg.match('fail: system permission denied')) {
+        else if (error.errMsg.match('system permission denied')) {
             //百度App无权限,无法引导，直接显示错误页
             displaySystemAuthorizeError();
         }

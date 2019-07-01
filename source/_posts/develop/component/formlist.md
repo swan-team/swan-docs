@@ -27,7 +27,11 @@ sidebar: formlist
 |loading|Boolean|false| 否 |名称前是否带有loading图标|
 |bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
- 
+| bindcontact | Handler |-| 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
+<!-- | bindfaceverify | Handler | | 否 | 人脸核验回调，使用时机：open-type="faceVerify" | -->
+<!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
+
+-->
 
 **size有效值**：
 
@@ -182,10 +186,10 @@ Page({
 |-----|---- |---- |----|----|----|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: ''}	`|-|
 | bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a>。|1.12|
+|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
 
 
-示例：
+**示例：**
 <a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
@@ -230,14 +234,14 @@ Page({
 | disabled | Boolean  | false  | 否 |是否禁用|
 | maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
 |cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
-| focus |Boolean	  | false | 否 |获取焦点	|
+| focus |Boolean	  | false | 否 |获取焦点，调起键盘|
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
 |cursor	 | Number  |  | 否 |指定 focus 时的光标位置|
 |selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 <font color="#4183c4">百度 APP 10.10 以上</font>|
 |adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 <font color="#4183c4">百度 APP 10.10 以上</font>|
-| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。处理函数可以直接 return 一个字符串，将替换输入框的内容。|
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |
 | bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|
 |bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|
 | bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|
@@ -433,7 +437,7 @@ Page({
 | fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
 
-<div style="font-style: italic">* fields有效值：</div>
+<div style="font-style: italic"> fields有效值：</div>
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -458,7 +462,7 @@ Page({
 |---- | ---- | ---- |---- |
 | value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
 | custom-item | String | |可为每一列的顶部添加一个自定义的项|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value, code, postcode}， 其中code为统计用区划代码，postcode为邮政编码|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 
 
@@ -629,7 +633,7 @@ Page({
 | bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
-**说明**:
+**Bug & Tip**:
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
@@ -732,12 +736,12 @@ Page({
 
 **解释**： 单选项目
 
-| 属性名 | 类型 | 默认值 | 说明 |
-| ---- | ---- | ---- | ---- |
-| value | String | &nbsp; | &lt;radio/&gt; 标识。当该 &lt;radio/&gt; 选中时，&lt;radio-group/&gt; 的 change 事件会携带 &lt;radio/&gt; 的 value |
-| checked | Boolean | false | 当前是否选中 |
-| disabled | Boolean | false | 是否禁用 |
-| color | Color | #3c76ff| radio 的颜色，同 CSS 的 color |
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| ---- | ---- | ---- | ---- | ---- |
+| value | String | &nbsp; | 否 | &lt;radio/&gt; 标识。当该 &lt;radio/&gt; 选中时，&lt;radio-group/&gt; 的 change 事件会携带 &lt;radio/&gt; 的 value |
+| checked | Boolean | false | 否 |当前是否选中 |
+| disabled | Boolean | false | 否 |是否禁用 |
+| color | Color | #3c76ff| 否 | radio 的颜色，同 CSS 的 color |
 
 **示例**：
 <a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -827,20 +831,23 @@ Page({
 ```
 ## radio-group
 
-<div class="notice">解释： </div>单项选择
-<div></div>
 
-<notice>内部由多个 &lt;radio/&gt; 组成</notice>
+**解释**：单项选择器，内部由多个radio组成
 
-| 属性名 | 类型 | 默认值 | 说明 |
-| ---- | ---- | ---- | ---- |
-| bindchange | EventHandle | &nbsp; | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
+
+> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
+
+
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| ---- | ---- | ---- | ---- | ---- |
+| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
+
+
 
 **示例**：
 
 <a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
 ## slider
 
@@ -848,20 +855,20 @@ Page({
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| min | Number  | 0  |最小值|
-| max | Number  |100  |最大值|
-| step |Number  |1 |步长，取值必须大于 0，并且可被 (max - min) 整除|
-| disabled | Boolean |false  |是否禁用|
-| value | Number  |0 |当前取值|
-| backgroundColor | Color  |#cccccc  |背景条的颜色|
-| block-size | Number  |24 |滑块的大小，取值范围为 12 - 28|
-| block-color | Color  |#ffffff |滑块的颜色|
-| activeColor | Color  |#3c76ff |已选择的颜色|
-|show-value |Boolean  |false |是否显示当前 value|
-|bindchange | EventHandle  | |完成一次拖动后触发的事件，event.detail = {value: value}|
-|bindchanging |EventHandle |  |拖动过程中触发的事件，event.detail = {value: value}|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+| min | Number  | 0  | 否 |最小值|
+| max | Number  |100  | 否 |最大值|
+| step |Number  |1 | 否 |步长，取值必须大于 0，并且可被 (max - min) 整除|
+| disabled | Boolean |false  | 否 |是否禁用|
+| value | Number  |0 | 否 |当前取值|
+| backgroundColor | Color  |#cccccc  | 否 |背景条的颜色|
+| block-size | Number  |24 | 否 |滑块的大小，取值范围为 12 - 28|
+| block-color | Color  |#ffffff | 否 |滑块的颜色|
+| activeColor | Color  |#3c76ff | 否 |已选择的颜色|
+|show-value |Boolean  |false | 否 |是否显示当前 value|
+|bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
+|bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
 <a href="swanide://fragment/52972cf5e70224467ab100257f8f7b031560838826410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -901,13 +908,13 @@ Page({
 
 **解释**： 开关选择器
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|checked| Boolean| false| 是否选中|
-|type| String| switch| 样式，有效值：switch,checkbox|
-|color| Color| #3388ff| switch 的颜色，同 CSS 的 color|
-|disabled|	Boolean|	false|	是否禁用|
-|bindchange | EventHandle  | |checked 改变时触发 change 事件，event.detail={ checked:true}|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|checked| Boolean| false| 否 |是否选中|
+|type| String| switch| 否 |样式，有效值：switch,checkbox|
+|color| Color| #3388ff| 否 |switch 的颜色，同 CSS 的 color|
+|disabled|	Boolean|	false| 否 |	是否禁用|
+|bindchange | EventHandle  | | 否 |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
 **type 有效值**:
 
@@ -973,57 +980,52 @@ Page({
 }
 ```
 
-**说明**:
+**Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
 <div></div>
 
 
 ## textarea
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
-
-
 **解释**：多行输入框。
 
-|属性名|类型|默认值|说明|
-|----|----|----|----|
-|value|String| |输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|
-|placeholder|String| |输入框为空时占位符|
-|placeholder-style|String| |指定 placeholder 的样式|
-|placeholder-class|String|textarea-placeholder|指定 placeholder 的样式类|
-|disabled|Boolean|false|是否禁用|
-|maxlength|Number|140|最大输入长度，设置为 -1 的时候不限制最大长度|
-|auto-height|Boolean|false|是否自动增高，设置auto-height时，style.height不生效|
-|cursor|Number|-1|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
-|auto-focus|Boolean|false|自动聚焦，拉起键盘 <font color="#4183c4">10.8.5 以上</font>|
-|focus|Boolean|false|获取焦点 <font color="#4183c4">10.8.5 以上</font>|
-|fixed|Boolean|false|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
-|cursor-spacing|Number|0|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 <font color="#4183c4">10.8.5 以上</font>|
-|show-confirm-bar|Boolean|true|是否显示键盘上方带有”完成“按钮那一栏。  <font color="#4183c4">10.8.5 以上</font>|
-|selection-start|Number|-1|光标起始位置，自动聚集时有效，需与selection-end搭配使用 <font color="#4183c4">10.8.5 以上</font>|
-|selection-end|Number|-1|光标结束位置，自动聚集时有效，需与selection-start搭配使用 <font color="#4183c4">10.8.5 以上</font>|
-|adjust-position|Boolean|true|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
-|confirm-type|String|default|设置手机软键盘右下角按钮的文字及键盘行为。输入状态键盘右下角按钮为 “确认”，会将正在输入的文字填充到输入框；非输入状态时的表现见下方“confirm-type 有效值”的说明 <font color="#4183c4">11.10 及以上</font>|
-|bindfocus|EventHandle| |输入框聚焦时触发，event.detail = { value, height }，height|
-|bindblur|EventHandle| |输入框失去焦点时触发，event.detail = {value, cursor}|
-|bindlinechange|EventHandle| |输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}|
-|bindinput|EventHandle| |当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
-|bindconfirm|EventHandle| |点击完成时， 触发 confirm 事件，event.detail = {value: value}|
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+|属性名|类型|默认值|必填|说明|
+|----|----|----|----|----|
+|value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|
+|disabled|Boolean|false|否|是否禁用|
+|maxlength|Number|140|否|最大输入长度，设置为 -1 的时候不限制最大长度|
+|placeholder|String| |否|输入框为空时占位符|
+|placeholder-style|String| |否|指定 placeholder 的样式|
+|placeholder-class|String||否|指定 placeholder 的样式类|
+|auto-height|Boolean|false|否|是否自动增高，设置auto-height时，style.height不生效|
+|cursor|Number|-1|否|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
+|auto-focus|Boolean|false|否|自动聚焦，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
+|confirm-type|String|default|否|设置键盘右下角按钮的文字。<font color="#4183c4">11.10.0 以上</font>|
+|focus|Boolean|false|否|获取焦点，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
+|fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
+|cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 <font color="#4183c4">10.8.5 以上</font>|
+|show-confirm-bar|Boolean|true|否|是否显示键盘上方带有”完成“按钮那一栏。  <font color="#4183c4">10.8.5 以上</font>|
+|selection-start|Number|-1|否|光标起始位置，自动聚集时有效，需与selection-end搭配使用 <font color="#4183c4">10.8.5 以上</font>|
+|selection-end|Number|-1|否|光标结束位置，自动聚集时有效，需与selection-start搭配使用 <font color="#4183c4">10.8.5 以上</font>|
+|adjust-position|Boolean|true|否|键盘弹起时，是否自动上推页面 <font color="#4183c4">10.8.5 以上</font>|
+|bindfocus|EventHandle| |否|输入框聚焦时触发，event.detail = { value, height }，height为键盘高度|
+|bindblur|EventHandle| |否|输入框失去焦点时触发，event.detail = {value, cursor}|
+|bindlinechange|EventHandle| |否|输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0, lineHeight: 0}|
+|bindinput|EventHandle| |否|当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
+|bindconfirm|EventHandle| |否|点击完成时， 触发 confirm 事件，event.detail = {value: value}|
 
 **confirm-type 有效值**：
 
-用户正在输入时手机软键盘处于输入状态。
-输入状态时键盘右下角按钮为 “确认”，会将正在输入的文字填充到输入框；
-非输入状态时见下表:
-
-|值|说明 |
-|---- | ---- |
-| default |非输入状态时键盘右下角按钮为 “换行 ”，点击会换行。|
-| send |非输入状态时键盘右下角按钮为 “发送”，点击不换行直接触发bindconfirm。|
-| search |非输入状态时键盘右下角按钮为 “搜索” ，点击不换行直接触发bindconfirm。|
-| next |非输入状态时键盘右下角按钮为 “下一个”，点击不换行直接触发bindconfirm。|
-| go |非输入状态时键盘右下角按钮为 “前往” ，点击不换行直接触发bindconfirm。|
-| done |非输入状态时键盘右下角按钮为 “完成” ，点击不换行直接触发bindconfirm。|
+| 值 | 说明 |
+|--- |--- |
+| default | 原生键盘状态，输入状态下右下角按钮为“确认”，可将用户正在输入的文字填充至输入框，未输入状态下右下角按钮为“换行”，用户点击后可手动换行 |
+| done | 右下角按钮为“完成”，点击会触发bindconfirm事件 |
+| send | 右下角按钮为“发送”，点击会触发bindconfirm事件 |
+| search | 右下角按钮为“搜索”，点击会触发bindconfirm事件 |
+| next | 右下角按钮为“下一步”，点击会触发bindconfirm事件 |
+| go | 右下角按钮为“前往”，点击会触发bindconfirm事件 |
 
 **示例代码**：
 
@@ -1089,7 +1091,7 @@ textarea {
 **图示**
 ![图片](../../../img/component/textarea.png)
 
-**说明**：
+**Bug & Tip**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
 * 请使用cover-view组件在 textarea 组件上开发遮罩层。

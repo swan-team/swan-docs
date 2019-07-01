@@ -35,6 +35,7 @@ sidebar: location_get
 |cityCode|城市编码|
 |city|城市名称|
 |country|国家|
+|countryCode|国家代码|
 |province|省份|
 |streetNumber|街道号码|
 |district|区|
