@@ -13,6 +13,16 @@ hexo.extend.generator.register('search', function (locals) {
 
     let posts;
     let pages;
+    let navs = locals.data.nav;
+    // 递归生成搜索结果面包屑
+    let resBreadCrumbs = [];
+
+    // 将侧边栏数据加入搜索结果
+    navs.forEach(function (nav) {
+        nav.nav.forEach(function (nav) {
+            generateNavItem(nav);
+        });
+    });
 
     if (searchfield.trim() !== '') {
         searchfield = searchfield.trim();
@@ -72,13 +82,51 @@ hexo.extend.generator.register('search', function (locals) {
                     post.categories.each(setName);
                     tmpPost.categories = categories;
                 }
+                tmpPost.breadCrumbs = [tmpPost.title + ',' + tmpPost.url.slice(5)];
                 res[index] = tmpPost;
                 index += 1;
             });
         }
     });
 
-    const json = JSON.stringify(res);
+    function generateNavItem(navItem) {
+        if (navItem.sidebar) {
+            generateNav(navItem.sidebar, [navItem.text + ',' + navItem.link], 0);
+        }
+        else {
+            navItem.breadCrumbs = [navItem.text + ',' + navItem.link];
+            resBreadCrumbs.push(navItem);
+        }
+    }
+    
+    function generateNav(nav, breadCrumbs, index) {
+        index++;
+        nav.forEach(function (na) {
+            if (na.sidebar) {
+                const temp = breadCrumbs.slice(0, index);
+                temp.push(na.text + ',' + na.link);
+                generateNav(na.sidebar, temp, index);
+            }
+            else {
+                na.breadCrumbs = breadCrumbs.slice(0);
+                resBreadCrumbs.push(na);
+            }
+        });
+    }
+    resBreadCrumbs = resBreadCrumbs.map(function (item) {
+        item.breadCrumbs = item.breadCrumbs.filter(function (item) {
+            return item !== 'undefined,undefined';
+        });
+        item.breadCrumbs.push(item.text + ',' + item.link);
+        return {
+            breadCrumbs: item.breadCrumbs,
+            title: item.text,
+            url: '/docs' + item.link,
+            isNav: true
+        };
+    });
+    
+    const json = JSON.stringify([...resBreadCrumbs, ...res]);
 
     return {
         path: searchConfig.path,

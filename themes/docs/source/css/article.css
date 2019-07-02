@@ -807,6 +807,27 @@ article thead tr {
     text-align: center;
 }
 
+.search-result-bread-crumb .breadcrumb_item:last-child .arrow-right {
+    display: none;
+}
+.breadcrumb_item a {
+    color: #b2b2b2 !important;
+    text-decoration: none;
+}
+.breadcrumb_item .arrow-right {
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url(/docs/img/level1_arrow.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: -2px;
+    transform: rotate(-90deg);
+    opacity: .2;
+}
+
 .ispc,
 .ismobile,
 .isbox {
