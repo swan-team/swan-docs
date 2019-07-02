@@ -2638,9 +2638,9 @@
                     text: swan.openShare
                     name: open_share_swan-openShare
                   -
-                    link: /develop/api/open_share_file
-                    text: 分享文件
-                    name: open_share_file
+                    link: /develop/api/open_share/#swan-shareFile
+                    text: swan.shareFile
+                    name: open_share_swan-shareFile
                   -
                     link: /develop/api/open_share/#web-view中的分享
                     text: web-view中的分享
