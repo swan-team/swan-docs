@@ -279,7 +279,7 @@ Page({
 
 |参数 | 类型 |说明|
 |---- | ---- | ---- |
-|data   | String | key 对应的内容|
+|data   | Object/String/Number/Array | key 对应的内容|
 
 **示例**：
 <a href="swanide://fragment/a7b2504b71ca436426b0ae155f622b8a1560166561702" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -1422,7 +1422,14 @@
                       link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
                       text: backgroundAudioManager.onSeeking
                       name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
-
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onNext
+                      text: backgroundAudioManager.onNext
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onNext
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
+                      text: backgroundAudioManager.onPrev
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev                      
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制

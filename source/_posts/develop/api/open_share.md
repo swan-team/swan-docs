@@ -89,10 +89,10 @@ bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取�
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
-|filePath| string | 是 | - |需要分享的文档的地址|
-|success |Function  |  否 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|filePath| string | 是 |   |需要分享的文档的地址|
+|success |Function  |  否 | | 接口调用成功的回调|
+|fail   | Function |   否  | |接口调用失败的回调函数|
+|complete  |  Function |   否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 <a href="swanide://fragment/6c244bf3c5956ed06e526e3e886cfbde1561984657908" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>

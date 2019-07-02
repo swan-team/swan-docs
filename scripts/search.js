@@ -123,7 +123,7 @@ hexo.extend.generator.register('search', function (locals) {
             url: '/docs' + item.link,
             isNav: true
         };
-    });   
+    });
     const json = JSON.stringify([...resBreadCrumbs, ...res]);
 
     return {
