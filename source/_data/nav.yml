@@ -1304,6 +1304,11 @@
                   link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
                   text: swan.saveImageToPhotosAlbum
                   name: media_image_swan-saveImageToPhotosAlbum
+                -
+                  link: /develop/api/media_image/#swan-chooseAlbum
+                  text: swan.chooseAlbum
+                  name: media_image_swan-chooseAlbum
+
 
             -
               link: /develop/api/media_recorder
@@ -2633,9 +2638,14 @@
                     text: swan.openShare
                     name: open_share_swan-openShare
                   -
+                    link: /develop/api/open_share_file
+                    text: 分享文件
+                    name: open_share_file
+                  -
                     link: /develop/api/open_share/#web-view中的分享
                     text: web-view中的分享
                     name: open_share_web-view中的分享
+                    
               -
                 link: /develop/api/open_chooseaddress
                 text: 选择收货地址
