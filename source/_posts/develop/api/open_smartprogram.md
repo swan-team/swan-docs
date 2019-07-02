@@ -18,7 +18,7 @@ sidebar: open_smartprogram
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |appKey | String | 是 | -| 要打开的小程序App Key 。|
-|path | String | 否 | -| 打开的页面路径，如果为空则打开首页 。|
+|path | String | 否 | -| 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
 |extraData | Object | 否 | -| 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|
 |success | Function |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
@@ -26,7 +26,7 @@ sidebar: open_smartprogram
 
 **示例**：
 
-<a href="swanide://fragment/08bcf5aff52ed378f39c8112eb3d4a051559044193460" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/08bcf5aff52ed378f39c8112eb3d4a051559044193460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -43,7 +43,7 @@ Page({
     navigateToSmartProgram() {
         swan.navigateToSmartProgram({
             appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c', // 要打开的小程序 App Key
-            path: '', // 打开的页面路径，如果为空则打开首页
+            path: 'pages/openShare/openShare?k=v', // 打开的页面路径，如果为空则打开首页
             extraData: {
                 foo: 'baidu'
             },
@@ -97,7 +97,7 @@ Page({
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/df2bcb7ca1229b466e859bc1a40c21091559044133015" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/df2bcb7ca1229b466e859bc1a40c21091559044133015" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -144,7 +144,7 @@ Page({
 
 ## H5页面打开小程序
 
-> 在百度 APP 中打开 H5 页面时，如需调起指定小程序，可在引入官方提供的 jssdk 后调用 Boxjs.init 进行鉴权，同时在success回调函数中使用该 API 接口调起小程序。
+> 在宿主 APP 中打开 H5 页面时，如需调起指定小程序，可在引入官方提供的 jssdk 后调用 Boxjs.init 进行鉴权，同时在success回调函数中使用该 API 接口调起小程序。
 
 
 **解释**：H5 页面调起百度智能小程序。
@@ -163,7 +163,7 @@ Page({
 <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/boxjs-1.0.2.js"></script>
 <script type="text/javascript">
         Boxjs.openSwan({
-            appKey: '4fecoAqgCIUtzIy7774FAPg6yrc4o325c', 
+            appKey: '4fecoAqgCIUtzIy7774FAPg6yrc4o325c',
             path: 'pages/login/login',
             success: function(res){
                 console.log(JSON.stringify(res));
@@ -174,4 +174,3 @@ Page({
         });
 </script>
 ```
- 

@@ -3,7 +3,7 @@ title: swan.createWorker
 layout: gamedoc
 topic: worker
 categoryName: api
-priority: 18-01
+priority: 20-01
 ---
 
  > 从 [基础库 1.6.1](/game/tutorials/version/releaseLog) 开始支持

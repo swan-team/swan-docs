@@ -27,7 +27,7 @@ sidebar: nacomponent
 
 **示例**：
 
-<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -80,7 +80,7 @@ sidebar: nacomponent
     })
     ```
 
-用户通过引导添加组件“添加到我的小程序”后，可以在百度APP首页的智能小程序二楼“我的小程序”中看到它。
+用户通过引导添加组件“添加到我的小程序”后，可以在宿主APP首页的智能小程序二楼“我的小程序”中看到它。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/guide_add/2.png">

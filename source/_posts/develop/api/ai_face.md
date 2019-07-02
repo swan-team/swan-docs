@@ -160,7 +160,7 @@ sidebar: ai_face
 
 **示例代码**
 
-<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -298,7 +298,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceMatch({
@@ -387,7 +387,7 @@ swan.ai.faceMatch({
 
 **示例代码**
 
-<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -461,7 +461,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonVerify({
@@ -505,7 +505,7 @@ swan.ai.facePersonVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonIdmatch({
@@ -678,7 +678,7 @@ swan.ai.facePersonIdmatch({
 
 **示例代码**
 
-<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -809,7 +809,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceLivenessSessioncode({
@@ -879,7 +879,7 @@ swan.ai.faceLivenessSessioncode({
 
 **示例代码**
 
-<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceLivenessVerify({

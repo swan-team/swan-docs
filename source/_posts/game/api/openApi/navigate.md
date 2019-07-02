@@ -3,6 +3,7 @@ title: 小游戏跳转
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-09
 ---
 
 ### swan.navigateToMiniProgram()

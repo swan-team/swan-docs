@@ -33,7 +33,7 @@ sidebar: open_chooseaddress
 
 **示例**：
 
-<a href="wanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

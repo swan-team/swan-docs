@@ -10,7 +10,7 @@ sidebar: pageinfo
 ## swan.setPageInfo
 >建议在 Page 的 onShow 生命周期中使用。
 
-**解释**：智能小程序可接入百度搜索和百度 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
+**解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
 
 **方法参数**：Object object
 
@@ -21,7 +21,7 @@ sidebar: pageinfo
 |title | String | 是 |  -|页面标题 |
 |keywords|String|是| -|页面关键词，多个关键词之间使用英文逗号“,”隔开|
 |description|String|是| -| 页面描述信息|
-|releaseDate|String|否（入百度APP信息流为必填）| -|原始发布时间(年-月-日 时:分:秒 带有前导零）|
+|releaseDate|String|否（入宿主APP信息流为必填）| -|原始发布时间(年-月-日 时:分:秒 带有前导零）|
 |articleTitle | String | 否 | -| 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
 |image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| -|图片线上地址，用于信息流/搜索等流量场景分发、用户收藏后的页面封面显示，展现时有图片可提升用户点击率。开发者可针对一个页面设置最多3张，图片必须为页面内图片。单图片最大2M；封面图尺寸：宽>=375px，高>=250px，图片宽高比例3：2为佳。多张图时，用数组表示。|
 |video|Object/Array|否（页面存在视频情况下必填）| -|视频信息，多个视频时，用数组表示|
@@ -53,8 +53,8 @@ sidebar: pageinfo
 
 
 **说明**
-1、releaseData、articleTitle、image、video 、visit 内容用于百度 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
-2、title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在百度APP信息流中的标题展示。
+1、releaseData、articleTitle、image、video 、visit 内容用于宿主 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
+2、title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在宿主APP信息流中的标题展示。
 3、当前页面包含视频信息时 video 为必填字段，url、duration、image为 video 的必填参数；如当前页面不包含视频信息，可不填写。
 4、当前页面包含焦点图或者正文图片 image 为必填字段。
 5、当前页面能够统计到用户分发、互动和时长等数据时，visit字段建议填写。开发者可根据页面实际统计的情况完善pv、uv、sessionDuration、likes、comments、collects、shares、followers字段，若页面不包含以上字段时，可不填写。
@@ -62,7 +62,7 @@ sidebar: pageinfo
 
 **示例**：
 
-<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -124,7 +124,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **在 js 文件中**
@@ -165,7 +165,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -220,7 +220,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **在 js 文件中**

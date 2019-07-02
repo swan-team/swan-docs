@@ -22,7 +22,7 @@ sidebar: device_screen
 
 **示例**：
 
-<a href="swanide://fragment/e5d47d57648d468eccaaace41cdc98581557732266048" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e5d47d57648d468eccaaace41cdc98581557732266048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -79,7 +79,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/243a71bee8db9c47e577113676a7cb871557732358188" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/243a71bee8db9c47e577113676a7cb871557732358188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -130,7 +130,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/67ec77169a612cba1709271e950f35fb1557732443741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/67ec77169a612cba1709271e950f35fb1557732443741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

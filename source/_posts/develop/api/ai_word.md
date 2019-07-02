@@ -50,7 +50,7 @@ sidebar: ai_word
 
 **示例代码**
 
-<a href="swanide://fragment/90590b9b20bc84912e4eb3a96aa3a0e01559043393195" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/90590b9b20bc84912e4eb3a96aa3a0e01559043393195" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.nlpLexerCustom({

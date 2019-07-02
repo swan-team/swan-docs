@@ -21,7 +21,7 @@ sidebar: media_cameracontext
 
 **示例**：
  
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -149,7 +149,7 @@ video {
 
 |参数名 |类型 | 必填 | 默认值|说明|
 |---- | ---- | ---- |---- |---|
-|quality |String  |否  | |成像质量，值为high, normal, low，默认normal。|
+|quality |String  |否  | normal|成像质量，值为high, normal, low。|
 |success| Function |   否  | |接口调用成功的回调函数 ，res = { tempImagePath }。|
 |fail  |  Function  |  否 |  |接口调用失败的回调函数|
 |complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|

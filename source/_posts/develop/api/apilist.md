@@ -108,7 +108,7 @@ sidebar: apilist
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/#swan-openLocation/">swan.openLocation</a>|使用百度 App 内置地图查看位置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/#swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location_map/#swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
 
 
@@ -265,7 +265,7 @@ sidebar: apilist
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-login/">swan.login</a>|调用接口 swan.login 获取 Authorization Code，智能小程序可以使用swan.login()接口获取Authorization Code。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-checkSession/">swan.checkSession</a>|通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 检测当前用户登录态是否有效，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/">swan.isLoginSync</a>|获取百度 App登录状态|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/">swan.isLoginSync</a>|宿主 App登录状态|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_authorize/#swan-authorize/">swan.authorize</a>|提前向用户发起授权请求。调用后会立刻弹窗询问用户是否同意授权智能小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口。如果用户之前已经同意授权，则不会出现弹窗，直接返回成功。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/">swan.getSwanId</a>|获取 swanid|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getUserInfo/">swan.getUserInfo</a>|获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。|
@@ -279,7 +279,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#H5%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80%E5%B0%8F%E7%A8%8B%E5%BA%8F/">H5页面打开小程序</a>|H5 页面调起百度智能小程序。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setPageInfo/">swan.setPageInfo</a>|智能小程序可接入百度搜索和百度 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setPageInfo/">swan.setPageInfo</a>|智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setMetaDescription/">swan.setMetaDescription</a>|不推荐使用|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setMetaKeywords/">swan.setMetaKeywords</a>|不推荐使用|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setDocumentTitle/">swan.setDocumentTitle</a>|不推荐使用|

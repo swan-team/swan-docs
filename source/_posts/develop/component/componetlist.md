@@ -6,6 +6,8 @@ sidebar:  componetlist
 ---
 
 
+> 小程序中禁止使用script/link/iframe标签。
+
 
 |组件名称 | 解释 |
 |---- | ---- |

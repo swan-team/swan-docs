@@ -39,7 +39,7 @@ sidebar: ai_classify
 
 **示例**：
 
-<a href="swanide://fragment/f0f5c38f725ffc2be62f96eb4be8c3421559033876094" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f0f5c38f725ffc2be62f96eb4be8c3421559033876094" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -126,7 +126,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -201,7 +201,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/84f5b4c3a32407d7bc015ad52ca892da1559034220848" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/84f5b4c3a32407d7bc015ad52ca892da1559034220848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -308,7 +308,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/cb45e8b18d6c3a029794d92983c61b8e1559034320412" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cb45e8b18d6c3a029794d92983c61b8e1559034320412" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -412,7 +412,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/c318343cd552374941c434da1ffa9b611559034387688" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c318343cd552374941c434da1ffa9b611559034387688" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -485,7 +485,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/5f8c77146dce77806c690234f2e2d8161559034590812" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5f8c77146dce77806c690234f2e2d8161559034590812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -567,7 +567,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/d1c86b7451424a0fc11257035438df4e1559034681121" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d1c86b7451424a0fc11257035438df4e1559034681121" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

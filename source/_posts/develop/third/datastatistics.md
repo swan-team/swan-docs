@@ -777,7 +777,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitpage?acces
 **请求地址**:
 
 ``` 
-POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisterminal?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitcharacter?access_token=ACCESS_TOKEN
 ```
 
 **参数说明**：

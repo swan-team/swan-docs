@@ -3,6 +3,7 @@ title: 百度收银台支付
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-11
 ---
 
 ### swan.requestPolymerPayment()
