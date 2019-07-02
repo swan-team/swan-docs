@@ -157,6 +157,22 @@ A：不支持导航，可以使用openLocation 打开宿主app内置的地图导
 
 A：暂时不支持。
 
+#### Q：dataset数据为空时，返回布尔值true？
+
+A：[已知情况](https://github.com/baidu/san/commit/b4b044cfa27782e524995278809b3d8a9fb3b193)，小程序底层框架是基础 `san`, `san` 里面有个为开发者提供便利性的处理：对没有 `value` 声明的 `attr`，默认为`true`。
+```
+<!-- child 组件中，data strong为true -->
+<child strong>text</child>
+```
+不过，这个处理并不区分空串声明和无value声明。因为：
+
+- 基本，组件的数据绑定都是表达式
+- 空串一般做为组件某数据项的默认值，通过initData达到。除非必须区分null、undefined和空串，否则基本不会这么用。
+所以，如果非要传空串，可以采用如下方法：
+```
+attr1="{{''}}"
+```
+
 ## Web 化
 
 #### Q：小程序后台审核的 Web 化地址多了一个appkey的参数，有什么影响吗？
