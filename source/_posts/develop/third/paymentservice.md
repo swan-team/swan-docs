@@ -5,7 +5,7 @@ nav: third
 sidebar: paymentservice
 ---
 
-本接口是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。小程序自己开通支付服务的参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。第三方平台帮助小程序开通支付功能需要经历三个步骤，并且需要小程序授予第三方平台**支付服务权限**（唯一性权限）：
+本章功能是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。小程序自己开通支付服务的参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。第三方平台帮助小程序开通支付功能需要经历三个步骤，并且需要小程序授予第三方平台**支付服务权限**（唯一性权限）：
 
 1. 代创建支付账号。
 2. 提交开发者信息设置。
@@ -827,7 +827,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | opt_type       | String | 操作类型。包括：成交、使用、取消使用、退款                   |
 | order_id       | Long   | 平台订单号。百度平台订单ID                                   |
 | operate_time   | String | 操作时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
-| ref_money      | String | 计算依据价格。                                               |
+| ref_money      | String | 金额（元）。                                               |
 | third_order_id | String | 第三方订单号。                                               |
 
 **返回值示例**
