@@ -5,7 +5,7 @@ nav: third
 sidebar: paymentservice
 ---
 
-本接口是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。小程序自己开通支付服务的参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。第三方平台帮助小程序开通支付功能需要经历三个步骤，并且需要小程序授予开发者**支付服务权限**（唯一性权限）：
+本接口是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。小程序自己开通支付服务的参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。第三方平台帮助小程序开通支付功能需要经历三个步骤，并且需要小程序授予第三方平台**支付服务权限**（唯一性权限）：
 
 1. 代创建支付账号。
 2. 提交开发者信息设置。
@@ -509,6 +509,8 @@ POST数据示例 （审核失败）：
 
 ###  4.1 支付订单流水列表
 
+获取当前用户绑定的支付服务，所有的订单流水数据。
+
 **请求地址**
 
 ```
@@ -524,7 +526,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 | start_time   | Long   | true     | 起始时间戳，10位时间戳                                       |
 | end_time     | Long   | true     | 起始时间戳，10位时间戳                                       |
 | current_page | Long   | true     | 当前页数。起始为 1                                           |
-| page_size    | Long   | true     | 分页每页数量                                                 |
+| page_size    | Long   | true     | 分页。每页数量                                               |
 
 **返回值说明**
 
@@ -536,13 +538,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 | order_id               | string | 平台订单号。百度平台订单ID                                   |
 | tp_order_id            | string | 第三方订单号。业务方唯一订单号                               |
 | phone                  | string | 用户手机号。                                                 |
-| create_time            | string | 订单创建时间。                                               |
-| update_time            | string | 订单完成时间。                                               |
+| create_time            | string | 订单创建时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-06-07 00:00:00 |
+| update_time            | string | 订单完成时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-06-07 00:00:00 |
 | sub_status             | string | 订单状态 1:待付款 2:已付款 3:已消费 4:退款中 5:已退款 6:退款失败 7:已取消 |
 | total_money            | string | 订单金额(分)。订单的实际金额                                 |
 | pay_money              | string | 支付金额(分)。扣除各种优惠后用户还需要支付的金额             |
 | segment_refunded_money | string | 退款金额(分)。                                               |
-| channel                | string | 支付渠道。                                                   |
+| channel                | string | 支付渠道。如：网银支付、微信支付                             |
 
 **返回值示例**
 
@@ -594,6 +596,8 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 
 ###  4.2 支付收入列表
 
+获取用户绑定的支付服务，支付收入列表。
+
 **请求地址**
 
 ```
@@ -612,24 +616,24 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值说明**
 
-| 参数名称     | 类型   | 说明                 |
-| ------------ | ------ | -------------------- |
-| income       | String | 货款（元）。         |
-| period       | Long   | 当前付款周期（天）。 |
-| data         | List   | 收入列表详情数据。   |
-| adjustment   | String | 调整款（元）。       |
-| free_balance | String | 账户余额（元）。     |
-| payment_due  | String | 支付时间。           |
-| others       | String | 其它款项（元）。     |
+| 参数名称     | 类型   | 说明                                                         |
+| ------------ | ------ | ------------------------------------------------------------ |
+| income       | String | 货款总金额（元）。                                           |
+| period       | Long   | 当前付款周期（天）。                                         |
+| data         | List   | 收入列表详情数据。                                           |
+| adjustment   | String | 调整款（元）。如：商家作弊，交易会扣钱，会以调整款的形式。   |
+| free_balance | String | 账户余额（元）。                                             |
+| payment_due  | String | 支付时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
+| others       | String | 其它款项（元）。一般为佣金、返点与营销费用等                 |
 
 列表List数据说明：
 
-| 参数名称      | 类型   | 说明           |
-| ------------- | ------ | -------------- |
-| income        | String | 货款（元）。   |
-| operate_time  | String | 日期。         |
-| adjust_amount | String | 调整款（元）。 |
-| others        | String | 其他款项。     |
+| 参数名称      | 类型   | 说明                                                       |
+| ------------- | ------ | ---------------------------------------------------------- |
+| income        | String | 货款金额（元）。                                           |
+| operate_time  | String | 日期。格式为 yyyy-MM-dd，如：2019-06-07                    |
+| adjust_amount | String | 调整款（元）。如：商家作弊，交易会扣钱，会以调整款的形式。 |
+| others        | String | 其他款项。佣金、返点与营销费用等金额                       |
 
 **返回值示例**
 
@@ -689,7 +693,9 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 }
 ```
 
-###  4.3 支付收入贷款列表
+###  4.3 支付收入货款列表
+
+获取用户绑定的支付服务，支付收入货款列表。
 
 **请求地址**
 
@@ -699,36 +705,33 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **参数说明**
 
-| 参数名       | 类型   | 是否必须 | 描述                                   |
-| ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
-| current_page | Long   | true     | 当前页数。起始为 1。                   |
-| page_size    | Long   | true     | 分页每页数量。                         |
-| start_time   | String | true     | 开始日期。格式如：2019-01-02。         |
-| end_time     | String | true     | 结束日期。格式如： 2019-01-02。        |
+| 参数名       | 类型   | 是否必须 | 描述                                                     |
+| ------------ | ------ | -------- | -------------------------------------------------------- |
+| access_token | string | true     | access_token，授权小程序的接口调用凭据                   |
+| current_page | Long   | true     | 当前页数。起始为 1。                                     |
+| page_size    | Long   | true     | 分页每页数量。                                           |
+| start_time   | String | true     | 开始日期。格式如：2019-01-02（该接口只查询某一天的数据） |
 
 **返回值说明**
 
-**返回值说明**
-
-| 参数名称      | 类型   | 说明                   |
-| ------------- | ------ | ---------------------- |
-| income        | String | 货款（元）。           |
-| quantity      | Long   | 验证（成交）数量。     |
-| data          | List   | 列表详情数据。         |
-| operate_time  | String | 操作日期。             |
-| income_amount | String | 验证(成交)总额（元）。 |
-| refund_amount | String | 退款总额（元）。       |
+| 参数名称      | 类型   | 说明                                                         |
+| ------------- | ------ | ------------------------------------------------------------ |
+| income        | String | 货款（元）。                                                 |
+| quantity      | Long   | 验证（成交）数量。                                           |
+| data          | List   | 列表详情数据。                                               |
+| operate_time  | String | 操作日期。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
+| income_amount | String | 验证(成交)总额（元）。                                       |
+| refund_amount | String | 退款总额（元）。                                             |
 
 列表数据说明：
 
-| 参数名称       | 类型   | 说明                       |
-| -------------- | ------ | -------------------------- |
-| opt_type       | String | 操作类型。                 |
-| money          | String | 计算依据价格。             |
-| order_id       | Long   | 平台订单号。百度平台订单ID |
-| operate_time   | String | 操作时间。                 |
-| third_order_id | String | 第三方订单号。             |
+| 参数名称       | 类型   | 说明                                        |
+| -------------- | ------ | ------------------------------------------- |
+| opt_type       | String | 操作类型。包括：成交、使用、取消使用、退款  |
+| money          | String | 金额（元）。                                |
+| order_id       | Long   | 平台订单号。百度平台订单ID                  |
+| operate_time   | String | 操作时间。格式为 yyyy-MM-dd，如：2019-06-07 |
+| third_order_id | String | 第三方订单号。                              |
 
 **返回值示例**
 
@@ -737,58 +740,58 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
     "errno":0,
     "msg":"success",
     "data":{
-        "income":"0.32",
-        "period":1,
+        "income":"0.05",
+        "quantity":5,
         "data":[
             {
-                "income":"0.02",
-                "operate_time":"2019-06-11",
-                "adjust_amount":"0.00",
-                "others":"0.00"
+                "opt_type":"使用",
+                "money":"0.01",
+                "order_id":26986351846447,
+                "operate_time":"2019-03-21 19:07:41",
+                "third_order_id":"ZD1553166089343111661"
             },
             {
-                "income":"0.01",
-                "operate_time":"2019-06-10",
-                "adjust_amount":"0.00",
-                "others":"0.00"
+                "opt_type":"使用",
+                "money":"0.01",
+                "order_id":26986326076447,
+                "operate_time":"2019-03-21 14:45:49",
+                "third_order_id":"ZD1553150687585921121"
             },
             {
-                "income":"0.01",
-                "operate_time":"2019-06-06",
-                "adjust_amount":"0.00",
-                "others":"0.00"
+                "opt_type":"使用",
+                "money":"0.01",
+                "order_id":26987272727237,
+                "operate_time":"2019-03-21 14:34:29",
+                "third_order_id":"ZD1553149969815396359"
             },
             {
-                "income":"0.01",
-                "operate_time":"2019-06-04",
-                "adjust_amount":"0.00",
-                "others":"0.00"
+                "opt_type":"使用",
+                "money":"0.01",
+                "order_id":26985809346447,
+                "operate_time":"2019-03-21 14:25:32",
+                "third_order_id":"ZD1553149437651250048"
             },
             {
-                "income":"0.18",
-                "operate_time":"2019-05-21",
-                "adjust_amount":"0.00",
-                "others":"-0.01"
-            },
-            {
-                "income":"0.09",
-                "operate_time":"2019-05-20",
-                "adjust_amount":"0.00",
-                "others":"-0.01"
+                "opt_type":"使用",
+                "money":"0.01",
+                "order_id":26992975796447,
+                "operate_time":"2019-03-21 14:23:20",
+                "third_order_id":"ZD1553149181991333186"
             }
         ],
-        "adjustment":"0.00",
-        "free_balance":"1.00",
-        "payment_due":"2019-06-13 00:00:00",
-        "others":"-0.02",
+        "operate_time":"2019-03-21 00:00:00",
+        "income_amount":"0.05",
         "page_size":10,
-        "total_count":6,
-        "current_page":1
+        "total_count":5,
+        "current_page":1,
+        "refund_amount":"0.00"
     }
 }
 ```
 
 ### 4.4 支付收入其他款项列表
+
+获取用户绑定的支付服务，支付收入其他款项列表，其他款项一般为佣金、返点与营销费用等。
 
 **请求地址**
 
@@ -808,24 +811,24 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值说明**
 
-| 参数名称              | 类型   | 说明               |
-| --------------------- | ------ | ------------------ |
-| data                  | List   | 收入列表详情数据。 |
-| order_amount          | String | 贷款总额（元）。   |
-| rule_type             | String | 规则类型。         |
-| settlement_end_time   | String | 账单周期结束时间。 |
-| settlement_start_time | String | 账单周期开始时间。 |
-| total_amount          | String | 入账金额（元）。   |
+| 参数名称              | 类型   | 说明                                                         |
+| --------------------- | ------ | ------------------------------------------------------------ |
+| data                  | List   | 收入列表详情数据。                                           |
+| order_amount          | String | 贷款总额（元）。                                             |
+| rule_type             | String | 规则类型。收费规则，目前只有佣金模式。                       |
+| settlement_end_time   | String | 账单周期结束时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
+| settlement_start_time | String | 账单周期开始时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
+| total_amount          | String | 入账金额（元）。                                             |
 
 列表数据说明：
 
-| 参数名称       | 类型   | 说明                       |
-| -------------- | ------ | -------------------------- |
-| opt_type       | String | 操作类型。                 |
-| order_id       | Long   | 平台订单号。百度平台订单ID |
-| operate_time   | String | 操作时间。                 |
-| ref_money      | String | 计算依据价格。             |
-| third_order_id | String | 第三方订单号。             |
+| 参数名称       | 类型   | 说明                                                         |
+| -------------- | ------ | ------------------------------------------------------------ |
+| opt_type       | String | 操作类型。包括：成交、使用、取消使用、退款                   |
+| order_id       | Long   | 平台订单号。百度平台订单ID                                   |
+| operate_time   | String | 操作时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
+| ref_money      | String | 计算依据价格。                                               |
+| third_order_id | String | 第三方订单号。                                               |
 
 **返回值示例**
 
@@ -860,6 +863,8 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 ### 4.5 支出列表
 
+获取用户绑定的支付服务，支出列表。
+
 **请求地址**
 
 ```
@@ -878,24 +883,24 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值说明**
 
-| 参数名称      | 类型   | 说明             |
-| ------------- | ------ | ---------------- |
-| expense_count | Long   | 支出次数。       |
-| data          | List   | 支出列表详情。   |
-| expense_money | String | 支出金额（元）。 |
-| total_count   | Long   | 数据总条数。     |
+| 参数名称      | 类型   | 说明                                   |
+| ------------- | ------ | -------------------------------------- |
+| expense_count | Long   | 支出次数总和。                         |
+| data          | List   | 支出列表详情。                         |
+| expense_money | String | 支出金额（元）。所有支出次数金额的汇总 |
+| total_count   | Long   | 数据总条数。                           |
 
 列表数据说明：
 
-| 参数名称     | 类型   | 说明           |
-| ------------ | ------ | -------------- |
-| money        | String | 金额（元）。   |
-| operate_time | String | 日期。         |
-| start_time   | String | 账期开始时间。 |
-| type_id      | String | 类型。         |
-| end_time     | String | 账期结束时间。 |
-| pay_status   | String | 状态。         |
-| task_id      | Long   | 支付凭证 id。  |
+| 参数名称     | 类型   | 说明                                                         |
+| ------------ | ------ | ------------------------------------------------------------ |
+| money        | String | 金额（元）。当前交易的金额                                   |
+| operate_time | String | 日期。格式为 yyyy-MM-dd HH:mm:ss，如：2019-06-07 00:00:00    |
+| start_time   | String | 账期开始时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-06-07 00:00:00 |
+| type_id      | String | 类型。如：收入货款、调整款、自动打款等                       |
+| end_time     | String | 账期结束时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-06-07 00:00:00 |
+| pay_status   | String | 支出打款状态。状态包含：待出纳支付、打款中、成功、失败       |
+| task_id      | Long   | 支付凭证 id。用于查询支出打款详情                            |
 
 **返回值示例**
 
@@ -960,6 +965,8 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 ### 4.6 支出打款详情
 
+根据支出列表中的 Id，获取它的支出详情。
+
 **请求地址**
 
 ```
@@ -975,13 +982,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值说明**
 
-| 参数名称       | 类型   | 说明             |
-| -------------- | ------ | ---------------- |
-| paid_money     | String | 收款金额（元）。 |
-| paid_account   | String | 收款账号。       |
-| remark         | String | 备注。           |
-| receive_user   | String | 收款人。         |
-| payment_status | String | 收款状态。       |
+| 参数名称       | 类型   | 说明                                               |
+| -------------- | ------ | -------------------------------------------------- |
+| paid_money     | String | 交易收款金额（元）。                               |
+| paid_account   | String | 收款账号。收款的银行卡号                           |
+| remark         | String | 备注信息。交易支出备注信息                         |
+| receive_user   | String | 收款人姓名。                                       |
+| payment_status | String | 收款状态。状态包含：待出纳支付、打款中、成功、失败 |
 
 **返回值示例**
 
