@@ -103,20 +103,20 @@ recorderManager.start(options);
 
 **解释**： 录音开始事件
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 
 ## recorderManager.onPause
 
 **解释**： 监听录音暂停事件
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 ## recorderManager.onStop
 
 **解释**： 录音停止事件，会回调文件地址。
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 **callback 回调结果说明**：
 
@@ -129,7 +129,7 @@ recorderManager.start(options);
 
 **解释**： 录音错误事件, 会回调错误信息 。
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 
 **callback 回调结果说明**：
