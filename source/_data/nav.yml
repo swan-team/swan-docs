@@ -423,96 +423,588 @@
   nav:
 
     -
-      link: /develop/tutorial/codedir
-      text: 快速入门
-      name: tutorial
+      link: /develop/tutorial/start
+      text: 起步
+      name: start
+      sidebar:     
+        -
+            link: /develop/tutorial/start
+            text: 小程序简介
+            name: start 
+            sidebar: 
+              -
+                link: /develop/tutorial/start
+                text: 技术发展史
+                name: start    
+              -
+                link: /develop/tutorial/different
+                text: 小程序与网页区别
+                name: different                
+              -
+                link: /develop/tutorial/demo
+                text: 体验智能小程序
+                name: demo   
+        -
+            link: /develop/tutorial/start
+            text: 开始
+            name: start
+            sidebar: 
+              -
+                link: /develop/tutorial/apply
+                text: 申请账号
+                name: apply
+              -
+                link: /develop/tutorial/start/#安装开发者工具
+                text: 安装开发者工具
+                name: start/#安装开发者工具
+              -
+                link: /develop/tutorial/start/#你的第一个小程序
+                text: 你的第一个小程序
+                name: start/#你的第一个小程序
+              -
+                link: /develop/tutorial/start/#编译预览
+                text: 编译预览
+                name: start/#编译预览
+        -
+            link: /develop/tutorial/json
+            text: 小程序代码构成
+            name: json
+            sidebar: 
+              -
+                link: /develop/tutorial/json
+                text: JSON 配置模式
+                name: json   
+              -
+                link: /develop/tutorial/swan
+                text: SWAN 模板
+                name: swan                
+              -
+                link: /develop/tutorial/css
+                text: CSS 样式
+                name: css
+              -
+                link: /develop/tutorial/js
+                text: JS 逻辑交互
+                name: js
+        -
+            link: /develop/tutorial/render
+            text: 小程序宿主环境
+            name: render
+            sidebar: 
+              -
+                link: /develop/tutorial/render
+                text: 渲染层和逻辑层
+                name: render   
+              -
+                link: /develop/tutorial/page
+                text: 程序与页面
+                name: page  
+              -
+                link: /develop/tutorial/component
+                text: 组件
+                name: component                 
+              -
+                link: /develop/tutorial/api
+                text: API
+                name: api
+        -
+            link: /develop/tutorial/render
+            text: 小程序协同工作和发布
+            name: render
+            sidebar: 
+              -
+                link: /develop/tutorial/orchestrator
+                text: 协同工作
+                name: orchestrator  
+              -
+                link: /develop/tutorial/version
+                text: 小程序的版本
+                name: version 
+              -
+                link: /develop/tutorial/publish 
+                text: 发布上线
+                name: publish 
+              -
+                link: /develop/tutorial/data
+                text: 运营数据
+                name: data
+        -
+            link: /develop/tutorial/guide
+            text: 小程序开发指南
+            name: guide
+            sidebar: 
+              -
+                link: /develop/tutorial/guide
+                text: 指南
+                name: guide
+    -
+      link: /develop/tutorial/structure
+      text: 目录结构
+      name: structure
+      sidebar:     
+        -
+            sidebar:
+              -
+                link: /develop/tutorial/structure
+                text: 目录结构
+                name: structure
+    -
+      link: /develop/tutorial/configure
+      text: 配置小程序
+      name: configure
+      sidebar:     
+        -
+            sidebar:      
+              -
+                  link: /develop/tutorial/configure
+                  text: 全局配置
+                  name: configure
+              -
+                  link: /develop/tutorial/pageconfigure
+                  text: 页面配置
+                  name: pageconfigure
+              -
+                  link: /develop/tutorial/sitemap
+                  text: sitemap 配置
+                  name: sitemap
+    -
+      link: /develop/tutorial/scene
+      text: 小程序框架
+      name: scene
       sidebar:     
         -
             sidebar: 
               -
-                link: /develop/tutorial/demo
-                text: 体验智能小程序
-                name: demo              
+                link: /develop/tutorial/scene
+                text: 场景值
+                name: scene
+        -
+            link: /develop/tutorial/register
+            text: 逻辑层
+            name: register
+            sidebar: 
               -
-                link: /develop/tutorial/install
-                text: 安装开发者工具
-                name: install    
+                link: /develop/tutorial/register
+                text: 注册小程序
+                name: register
               -
-                link: /develop/tutorial/startdevelop 
-                text: 开发智能小程序
-                name: startdevelop                  
+                link: /develop/tutorial/registerpage
+                text: 注册页面
+                name: registerpage
               -
-                link: /develop/tutorial/process
-                text: 全局配置
-                name: process
-                sidebar:
-                    -
-                      link: /develop/tutorial/process/#配置-app-json-文件
-                      text: 配置 app.json 文件
-                      name: process_配置-app-json-文件
-                    -
-                      link: /develop/tutorial/process/#配置-app-js-文件
-                      text: 配置 app.js 文件
-                      name: process_配置-app-js-文件
+                link: /develop/tutorial/page-lifecycle
+                text: 页面生命周期
+                name: page-lifecycle
               -
-                link: /develop/tutorial/dev
-                text: 页面开发
-                name: dev
-                sidebar:
-                    -
-                      link: /develop/tutorial/dev/#开发-swan-文件
-                      text: 开发 .swan 文件
-                      name: dev_开发-swan-文件
-                    -
-                      link: /develop/tutorial/dev/#开发-css-文件
-                      text: 开发 .css 文件
-                      name: dev_开发-css-文件
-                    -
-                      link: /develop/tutorial/dev/#开发-js-文件
-                      text: 开发 .js 文件
-                      name: dev_开发-js-文件                     
-                    -
-                      link: /develop/tutorial/dev/#开发-json-文件
-                      text: 开发 .json 文件
-                      name: dev_开发-json-文件
+                link: /develop/tutorial/route
+                text: 页面路由
+                name: route
               -
-                link: /develop/tutorial/function
-                text: 功能开发
-                name: function
-                sidebar:                      
-                    -
-                      link: /develop/tutorial/function/#页面路由
-                      text: 页面路由
-                      name: function_页面路由
-                    -
-                      link: /develop/tutorial/function/#Page
-                      text: Page
-                      name: function_Page
-                    -
-                      link: /develop/tutorial/function/#组件
-                      text: 组件
-                      name: function_组件
-                    -
-                      link: /develop/tutorial/function/#API
-                      text: API
-                      name: function_API                                                            
+                link: /develop/tutorial/modularization
+                text: 模块化
+                name: modularization
               -
-                link: /develop/tutorial/publish
-                text: 调试预览发布
-                name: pulish
-                sidebar: 
-                    -
-                      link: /develop/tutorial/publish/#调试
-                      text: 调试
-                      name: publish_调试                   
-                    -
-                      link: /develop/tutorial/publish/#预览
-                      text: 预览 
-                      name: publish_预览                    
-                    -
-                      link: /develop/tutorial/publish/#发布
-                      text: 发布
-                      name: publish_发布  
+                link: /develop/tutorial/logicapi
+                text: API
+                name: logicapi               
+        -
+            link: /develop/tutorial/swanview
+            text: 视图层
+            name: swanview
+            sidebar: 
+              -
+                link: /develop/tutorial/swanview
+                text: SWAN
+                name: swanview
+              -
+                link: /develop/tutorial/jsview
+                text: JS
+                name: jsview
+              -
+                link: /develop/tutorial/cssview
+                text: CSS
+                name: cssview
+              -
+                link: /develop/tutorial/eventsys
+                text: 事件系统
+                name: eventsys
+              -
+                link: /develop/tutorial/response_events
+                text: 响应事件
+                name: response_events
+              -
+                link: /develop/tutorial/base_component
+                text: 基础组件
+                name: base_component
+              -
+                link: /develop/tutorial/node_info
+                text: 获取界面上的节点信息
+                name: node_info
+              -
+                link: /develop/tutorial/response_change
+                text: 响应显示区域变化
+                name: response_change
+              -
+                link: /develop/tutorial/animation
+                text: 动画
+                name: animation
+    -
+      link: /develop/tutorial/environment
+      text: 小程序运行时
+      name: environment
+      sidebar:     
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/environment
+                text: 运行环境
+                name: environment 
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/operating-environment
+                text: JavaScript 支持情况
+                name: operating-environment
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/operating-mechanism
+                text: 运行机制
+                name: operating-mechanism
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/update-mechanism
+                text: 更新机制
+                name: update-mechanism
+    -
+      link: /develop/tutorial/template_style
+      text: 自定义组件
+      name: template_style
+      sidebar:     
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/template_style
+                text: 组件模板和样式
+                name: template_style 
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/constructors
+                text: component 构造器
+                name: constructors
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/communitcation_event
+                text: 组件间通信与事件
+                name: communitcation_event
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/component_life
+                text: 组件生命周期
+                name: component_life
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/behavior
+                text: behavior
+                name: behavior
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/extend
+                text: 自定义组件扩展
+                name: extend
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/third
+                text: 开发第三方自定义组件
+                name: third
+    -
+      link: /develop/tutorial/introduction
+      text: 基础能力
+      name: introduction
+      sidebar:     
+        -
+            link: /develop/tutorial/introduction
+            text: 网络
+            name: introduction 
+            sidebar: 
+              -
+                link: /develop/tutorial/introduction
+                text: 使用说明
+                name: introduction
+              -
+                link: /develop/tutorial/lan
+                text: 局域网通信
+                name: lan
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/storage
+                text: 存储
+                name: storage
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/file
+                text: 文件系统
+                name: file
+        -
+            link: /develop/tutorial/subpackages
+            text: 分包加载
+            name: subpackages           
+            sidebar: 
+              -
+                link: /develop/tutorial/basic_subpackages
+                text: 普通分包
+                name: basic_subpackages
+              -
+                link: /develop/tutorial/independent_subpackages
+                text: 独立分包
+                name: independent_subpackages
+              -
+                link: /develop/tutorial/preload_subpackages
+                text: 分包预下载
+                name: preload_subpackages
+        -
+            link: /develop/tutorial/server_api
+            text: 服务端能力
+            name: server_api           
+            sidebar: 
+              -
+                link: /develop/tutorial/server_api
+                text: 服务端 API
+                name: server_api
+              -
+                link: /develop/tutorial/info_push
+                text: 消息推送
+                name: info_push
+    -
+      link: /develop/tutorial/nfc
+      text: 硬件能力
+      name: nfc
+      sidebar:  
+                                                                            
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/nfc
+                text: NFC
+                name: nfc
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/wifi
+                text: Wi-Fi
+                name: wifi
+    -
+      link: /develop/tutorial/login
+      text: 开放能力
+      name: login
+      sidebar:  
+        -
+            link: /develop/tutorial/login
+            text: 用户信息
+            name: login          
+            sidebar: 
+              -
+                link: /develop/tutorial/login
+                text: 小程序登录
+                name: login
+              -
+                link: /develop/tutorial/unionid
+                text: UnionID 机制说明
+                name: unionid   
+              -
+                link: /develop/tutorial/autorization
+                text: 授权
+                name: autorization
+              -
+                link: /develop/tutorial/get_phone
+                text: 获取手机号
+                name: get_phone  
+              -
+                link: /develop/tutorial/biometric
+                text: 生物认证
+                name: biometric    
+        -
+            link: /develop/tutorial/retransmission
+            text: 转发
+            name: retransmission          
+            sidebar: 
+              -
+                link: /develop/tutorial/retransmission
+                text: 转发
+                name: retransmission
+              -
+                link: /develop/tutorial/dynamic_info
+                text: 动态消息
+                name: dynamic_info  
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/app
+                text: 打开 App
+                name: app
+        -
+            link: /develop/tutorial/template
+            text: 消息
+            name: template           
+            sidebar: 
+              -
+                link: /develop/tutorial/template
+                text: 模板消息
+                name: template
+              -
+                link: /develop/tutorial/unified
+                text: 统一服务消息
+                name: unified  
+              -
+                link: /develop/tutorial/service
+                text: 客服消息
+                name: service
+              -
+                link: /develop/tutorial/info_summary
+                text: 概述
+                name: info_summary               
+              -
+                link: /develop/tutorial/receive
+                text: 接收消息和事件
+                name: receive
+              -
+                link: /develop/tutorial/send
+                text: 发送消息
+                name: send
+              -
+                link: /develop/tutorial/retransmission_info
+                text: 转发消息
+                name: retransmission_info
+              -
+                link: /develop/tutorial/customer_service
+                text: 下发客服输入状态
+                name: customer_service                
+              -
+                link: /develop/tutorial/temporary_material
+                text: 临时素材
+                name: temporary_material               
+        -
+            link: /develop/tutorial/summary
+            text: 卡券
+            name: summary           
+            sidebar: 
+              -
+                link: /develop/tutorial/summary
+                text: 概述
+                name: summary
+              -
+                link: /develop/tutorial/card
+                text: 会员卡组件
+                name: card          
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/digit
+                text: 获取小程序码
+                name: digit
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/analysis
+                text: 数据分析
+                name: analysis               
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/nearby
+                text: 附近的小程序
+                name: nearby                
+        -
+            link: /develop/tutorial/business
+            text: 物流助手
+            name: business          
+            sidebar: 
+              -
+                link: /develop/tutorial/business
+                text: 商户侧接入说明
+                name: business
+              -
+                link: /develop/tutorial/express
+                text: 快递侧接入说明
+                name: express                 
+              -
+                link: /develop/tutorial/software
+                text: 打单软件
+                name: software
+        -
+            link: /develop/tutorial/server_api
+            text: 广告
+            name: server_api           
+            sidebar: 
+              -
+                link: /develop/tutorial/banner
+                text: Banner 广告
+                name: banner
+              -
+                link: /develop/tutorial/encourage_video 
+                text: 激励视频广告
+                name: encourage_video                 
+              -
+                link: /develop/tutorial/interstitial
+                text: 插屏广告
+                name: interstitial              
+    -
+      link: /develop/tutorial/debug
+      text: 调试
+      name: debug
+      sidebar:     
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/debug
+                text: 调试
+                name: debug
+              
+    -
+      link: /develop/tutorial/proposal
+      text: 性能
+      name: proposal
+      sidebar:     
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/performance-analysis-tool
+                text: 性能分析工具
+                name: performance-analysis-tool 
+        -
+            sidebar: 
+              -
+                link: /develop/tutorial/performance-tips
+                text: 性能优化建议
+                name: performance-tips
+        -       
+            sidebar: 
+            -
+                link: /develop/tutorial/whitescreen
+                text: 白屏优化建议
+                name: whitescreen      
+        -
+            sidebar: 
+            -
+                link: /develop/tutorial/case
+                text: 案例介绍
+                name: case   
+    -
+      link: /develop/tutorial/move
+      text: 开发解决方案
+      name: move
+      sidebar:     
+        -
+            sidebar:                                 
               -
                 link: /develop/tutorial/move
                 text: 开发解决方案
@@ -715,8 +1207,6 @@
               link: /develop/framework/subpackages
               text: 分包加载
               name: subpackages
-
-
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
