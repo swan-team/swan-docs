@@ -47,7 +47,7 @@ sidebar: open_userinfo
 
 **示例**：
 
-<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -142,57 +142,121 @@ Page({
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
 **示例**：
-<a href="swanide://fragment/d12f967d05c0b93ac15d66d138658d9b1540398240" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6de8312d15371a1d3d686a4cd92b637f1560170029351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="user-content">
+        <view class="user-info">
+            <image class="avator" src="{{imageSrc}}"></image>
+            <view class="nickname {{nameColor}}">{{nickname}}</view>
+        </view>
+        <view class="button-content">
+            <button bind:tap="getUserInfo" class="get-info" type="primary" hover-stop-propagation="true">获取用户信息</button>
+            <button bind:tap="clearUserInfo" class="clear-info" type="default" hover-stop-propagation="true">清空</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+* 在 js 文件中
+
 ```js
-swan.getUserInfo({
-    success: function (res) {
-        console.log('用户昵称/用户名', res.userInfo.nickName);
+Page({
+    data: {
+        nickname: '百度网友',
+        imageSrc: '../images/avator.png',
+        nameColor: 'default',
+        title: 'getUserInfo'
+    },
+    getUserInfo(e) {
+        swan.getUserInfo({
+            success: res => {
+                let userInfo = res.userInfo;
+                this.setData({
+                    nickname: userInfo.nickName || '百度网友',
+                    imageSrc: userInfo.avatarUrl || '../../images/avator.png',
+                    nameColor: 'active'
+                });
+            },
+            fail: err => {
+                console.log(err);
+                swan.showToast({
+                    title: '请先授权'
+                });
+            }
+        });
+    },
+    clearUserInfo(e) {
+        this.setData({
+            nickname: '百度网友',
+            imageSrc: '../../images/avator.png',
+            nameColor: 'default'
+        });
     }
 });
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败。|
-|-200|权限拒绝，仅开发者可见|
-**iOS**
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确|
-|10001|内部错误 |
-|10002|网络请求失败|
-|10004|用户拒绝(user not login)|
-|10005|系统拒绝| -->
 
+* 在 css 文件中
 
+```css
+.user-info {
+    padding-top: 1rem;
+}
+.avator {
+    width: .95rem;
+    height: .95rem;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+}
+.nickname {
+    font-size: .18rem;
+    text-align: center;
+    height: .58rem;
+    line-height: .58rem;
+    padding: 0 .15rem;
+}
+.nickname.default {
+    color: #999;
+}
+.nickname.active {
+    color: #333;
+}
+.button-content {
+    position: relative;
+    top: 0;
+}
+.button-content button {
+    margin-top: .15rem;
+    border-radius: .04rem;
+}
+.get-info {
+    margin-top: .39rem!important;
+}
+.get-info::after {
+    border: none;
+}
+.clear-info::after {
+    border-color: #999;
+}
+```
 
 ## signature 计算方法
 
 ```js
-params := map[string]string{
-        "appkey":     "appkey", // 小程序标识
-        "secret_key": "secret_key",  // 小程序私钥
-        "swanid":     "swanid",   // 用户swanid
-    }
-signature := "signature"  // 常量，
-// 计算签名
-swanid_signature :=generageSignature(params, signature)
-func generageSignature(params map[string]string, signature string) string {
-    keys := []string{}
-    for k := range params {
-        keys = append(keys, k)
-    }
-    sort.Strings(keys)
-    material := ""
-    for _, k := range keys {
-        if k == signature {
-            continue
-        }
-        material += fmt.Sprintf("%s=%v", k, params[k])
-    }
-    md5Sum := md5.Sum([]byte(material))
+// 生成签名
+// appkey 小程序标识
+// secret_key 小程序私钥
+// swanid 用户swanid
+func generageSignature(appKey, secrectKey, swanID string) string {
+    plainText := fmt.Sprintf("appkey=%ssecret_key=%sswanid=%s", appKey, secrectKey, swanID)
+    md5Sum := md5.Sum([]byte(plainText))
     return hex.EncodeToString(md5Sum[:])
 }
 ```

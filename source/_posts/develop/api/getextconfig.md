@@ -29,7 +29,7 @@ sidebar: getextconfig
 
 **示例**：
 
-<a href="swanide://fragment/88f7ccb04d54d3d2cefd118040877f501558336059868" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/88f7ccb04d54d3d2cefd118040877f501558336059868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -84,7 +84,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d5dea858ea9874504d0aea64a989ddbd1558336152471" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d5dea858ea9874504d0aea64a989ddbd1558336152471" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

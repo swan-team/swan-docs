@@ -1,5 +1,7 @@
 ### swan.getUserInfo()
 
+>注意：请不要将游戏的首帧（首屏）渲染操作放在回调函数中，详情参考： [登录、授权、获取用户信息接口使用规范](/game/tutorials/open_api/first-frame-rule/)
+
 该接口只能在开放数据域下调用，通过 swanId 批量获取用户信息，无需用户授权。
 
 ```js

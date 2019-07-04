@@ -3,7 +3,7 @@ title: swan.onShareAppMessage()
 layout: gamedoc
 topic: share
 categoryName: api
-priority: 10-04
+priority: 11-04
 ---
 
 监听用户点击右上角菜单的“转发”按钮时触发的事件。

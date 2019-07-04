@@ -20,21 +20,50 @@ sidebar: show_navigationbar
 |complete   | Function   | 否| -|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/838b39ada87c91e7cb866a4d9e65de2e1540397160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3ff8ec46ea66f6affc018216e83a03701560167567749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <input bind:input="titleInput" class="input" type="text" placeholder="请输入页面标题并点击设置即可"/>
+        <button bind:tap="setNavigationBarTitle" type="primary" hover-stop-propagation="true">设置</button>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.setNavigationBarTitle({
-    title: '我是页面标题'
+Page({
+    data: {
+        title: 'setNavigationBarTitle',
+        newTitle: ''
+    },
+
+    titleInput(e) {
+        this.setData('newTitle', e.detail.value);
+    },
+
+    setNavigationBarTitle(e) {
+        let newTitle = this.getData('newTitle');
+        if (!newTitle) {
+            swan.showToast({
+                title: '请输入标题'
+            });
+            return;
+        }
+        swan.setNavigationBarTitle({
+            title: this.getData('newTitle')
+        });
+    }
 });
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|1001|执行失败 |
-**iOS**
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
 
 ## swan.showNavigationBarLoading
 
@@ -44,7 +73,7 @@ swan.setNavigationBarTitle({
 
 **示例**：
 
-<a href="swanide://fragment/3d496fc2607b3bd1b8ffedef5228609d1557728152780" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3d496fc2607b3bd1b8ffedef5228609d1557728152780" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -80,7 +109,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/0060abe0cf362da58c48f49c569351991557728006673" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0060abe0cf362da58c48f49c569351991557728006673" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -157,7 +186,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/0db7b37e85705e66e6f53956f0a7e5091557728238505" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0db7b37e85705e66e6f53956f0a7e5091557728238505" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

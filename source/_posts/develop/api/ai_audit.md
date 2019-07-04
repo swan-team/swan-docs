@@ -57,7 +57,7 @@ sidebar: ai_audit
 
 **示例**：
 
-<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

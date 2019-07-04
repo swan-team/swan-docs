@@ -84,6 +84,8 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 
 **方法参数**：String canvasId
 
+**`canvasId`参数说明**：要获取 canvas 组件的 id。
+
 **返回值**：canvasContext
 
 
@@ -121,7 +123,7 @@ OBJECT this
 
 **示例**：
 
-<a href="swanide://fragment/eea85b4841ebe6025de5ce03bfa495a71558353193641" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/eea85b4841ebe6025de5ce03bfa495a71558353193641" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -226,7 +228,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -383,7 +385,7 @@ swan.canvasToTempFilePath({
 
 **示例**：
 
-<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -761,7 +763,7 @@ module.exports = canvas;
 
 **解释**：设置填充色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 
 
@@ -781,7 +783,7 @@ ctx.draw();
 
 **解释**：设置边框颜色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 **示例**：
 
@@ -796,18 +798,19 @@ ctx.draw();
 
 ##  canvasContext.setShadow
 
+> 使用顺序：setShadow(offsetX, offsetY, blur, color)
+
 **解释**：设置阴影样式。
 
-**方法参数**：Object object
+**方法参数**：Number offsetX, Number offsetY, Number blur, [Color](/develop/api/canvas_color/) color
 
-**`object`参数说明**：
+**`offsetX`参数说明**：阴影相对于形状在水平方向的偏移。
 
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-| offsetX | Number | 是| -|阴影相对于形状在水平方向的偏移 |
-| offsetY | Number |是 | -| 阴影相对于形状在竖直方向的偏移 |
-| blur | Number | 是 |  -|阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
-| color	| Color | 是| -| 阴影的颜色 |
+**`offsetY`参数说明**：阴影相对于形状在竖直方向的偏移。
+
+**`blur `参数说明**：阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 
+
+**`color`参数说明**：阴影的颜色。 
 
 **示例**：
 
@@ -892,7 +895,7 @@ ctx.draw();
 
 **解释**：创建一个颜色的渐变点。
 
-**方法参数**：Number stop, Color color
+**方法参数**：Number stop, [Color](/develop/api/canvas_color/) color
 
 **`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。
 
@@ -1059,7 +1062,7 @@ ctx.draw();
 
 ##  canvasContext.setLineDash
 
-**解释**：设置线条的宽度。
+**解释**：设置线条虚线样式的间距和长度。
 
 **方法参数**：Array pattern, Number offset
 
@@ -1645,7 +1648,7 @@ ctx.draw();
 
 ## canvasContext.drawImage
 
-> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
+> 使用顺序：drawImage(imageResource, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
 **解释**：绘制图像到画布。
 
@@ -1726,7 +1729,7 @@ ctx.draw();
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| width | String | 文本的宽度 |
+| width | Number | 文本的宽度 |
 
 **示例**：
 
