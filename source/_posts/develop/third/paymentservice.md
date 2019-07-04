@@ -240,7 +240,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit?access
 **请求地址**
 
 ```
-https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?access_token=ACCESS_TOKEN
 ```
 
 **参数说明**
