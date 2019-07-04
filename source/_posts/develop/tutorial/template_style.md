@@ -1,0 +1,1 @@
+**这个直接从框架自定义组件迁移，暂不重复编写，[传送门](https://smartprogram.baidu.com/docs/develop/framework/custom-component/)**

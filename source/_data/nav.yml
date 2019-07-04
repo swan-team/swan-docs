@@ -445,26 +445,26 @@
                 text: 体验智能小程序
                 name: demo   
         -
-            link: /develop/tutorial/apply
+            link: /develop/tutorial/start
             text: 开始
-            name: apply
+            name: start
             sidebar: 
               -
                 link: /develop/tutorial/apply
                 text: 申请账号
-                name: apply    
+                name: apply
               -
-                link: /develop/tutorial/install
+                link: /develop/tutorial/start/#安装开发者工具
                 text: 安装开发者工具
-                name: install                
+                name: start/#安装开发者工具
               -
-                link: /develop/tutorial/first
+                link: /develop/tutorial/start/#你的第一个小程序
                 text: 你的第一个小程序
-                name: first   
+                name: start/#你的第一个小程序
               -
-                link: /develop/tutorial/compile
+                link: /develop/tutorial/start/#编译预览
                 text: 编译预览
-                name: compile                 
+                name: start/#编译预览
         -
             link: /develop/tutorial/json
             text: 小程序代码构成
@@ -472,16 +472,20 @@
             sidebar: 
               -
                 link: /develop/tutorial/json
-                text: json 配置模式
+                text: JSON 配置模式
                 name: json   
               -
                 link: /develop/tutorial/swan
-                text: swan 模板
+                text: SWAN 模板
                 name: swan                
               -
                 link: /develop/tutorial/css
-                text: css 样式
-                name: css                                               
+                text: CSS 样式
+                name: css
+              -
+                link: /develop/tutorial/js
+                text: JS 逻辑交互
+                name: js
         -
             link: /develop/tutorial/render
             text: 小程序宿主环境
@@ -588,9 +592,9 @@
                 text: 注册页面
                 name: registerpage
               -
-                link: /develop/tutorial/life
+                link: /develop/tutorial/page-lifecycle
                 text: 页面生命周期
-                name: life
+                name: page-lifecycle
               -
                 link: /develop/tutorial/route
                 text: 页面路由
@@ -610,15 +614,15 @@
             sidebar: 
               -
                 link: /develop/tutorial/swanview
-                text: swan
+                text: SWAN
                 name: swanview
               -
                 link: /develop/tutorial/jsview
-                text: js
+                text: JS
                 name: jsview
               -
                 link: /develop/tutorial/cssview
-                text: css
+                text: CSS
                 name: cssview
               -
                 link: /develop/tutorial/eventsys
@@ -658,21 +662,21 @@
         -
             sidebar: 
               -
-                link: /develop/tutorial/javascript
+                link: /develop/tutorial/operating-environment
                 text: JavaScript 支持情况
-                name: javascript
+                name: operating-environment
         -
             sidebar: 
               -
-                link: /develop/tutorial/run
+                link: /develop/tutorial/operating-mechanism
                 text: 运行机制
-                name: run
+                name: operating-mechanism
         -
             sidebar: 
               -
-                link: /develop/tutorial/update
+                link: /develop/tutorial/update-mechanism
                 text: 更新机制
-                name: update
+                name: update-mechanism
     -
       link: /develop/tutorial/template_style
       text: 自定义组件
@@ -751,22 +755,22 @@
                 text: 文件系统
                 name: file
         -
-            link: /develop/tutorial/use_page
+            link: /develop/tutorial/subpackages
             text: 分包加载
-            name: use_page           
+            name: subpackages           
             sidebar: 
               -
-                link: /develop/tutorial/use_page
-                text: 使用分包
-                name: use_page
+                link: /develop/tutorial/basic_subpackages
+                text: 普通分包
+                name: basic_subpackages
               -
-                link: /develop/tutorial/independent_subcontracting
+                link: /develop/tutorial/independent_subpackages
                 text: 独立分包
-                name: independent_subcontracting
+                name: independent_subpackages
               -
-                link: /develop/tutorial/presubcontracting
+                link: /develop/tutorial/preload_subpackages
                 text: 分包预下载
-                name: presubcontracting
+                name: preload_subpackages
         -
             link: /develop/tutorial/server_api
             text: 服务端能力
@@ -973,16 +977,27 @@
         -
             sidebar: 
               -
-                link: /develop/tutorial/proposal
-                text: 优化建议
-                name: proposal 
+                link: /develop/tutorial/performance-analysis-tool
+                text: 性能分析工具
+                name: performance-analysis-tool 
         -
             sidebar: 
               -
-                link: /develop/tutorial/analysis_tool 
-                text: 分析工具
-                name: analysis_tool 
-
+                link: /develop/tutorial/performance-tips
+                text: 性能优化建议
+                name: performance-tips
+        -       
+            sidebar: 
+            -
+                link: /develop/tutorial/whitescreen
+                text: 白屏优化建议
+                name: whitescreen      
+        -
+            sidebar: 
+            -
+                link: /develop/tutorial/case
+                text: 案例介绍
+                name: case   
     -
       link: /develop/tutorial/move
       text: 开发解决方案
@@ -1192,8 +1207,6 @@
               link: /develop/framework/subpackages
               text: 分包加载
               name: subpackages
-
-
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
