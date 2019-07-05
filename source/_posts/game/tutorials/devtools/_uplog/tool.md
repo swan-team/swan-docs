@@ -6,7 +6,7 @@
 
 #### v2.4.2
 **New Feature**
-- swan.login、swan.authorize、swan.getUserInfo三个API调用时，在调试器中展示**接口使用规范**提示以及相关文档链接
+- 调用swan.login、swan.authorize、swan.getUserInfo三个API时，会在工具调试器中展示**接口使用规范**提示以及相关文档链接，方便用户查看这些接口最新的使用规范。
 
 下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）
 
