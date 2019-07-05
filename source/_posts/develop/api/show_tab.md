@@ -5,8 +5,9 @@ nav: api
 sidebar: show_tab
 ---
 
-> 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
-如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
+> * 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
+* 如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
+
 
 ## swan.navigateTo
 
@@ -70,8 +71,9 @@ Page({
     }
 });
 ```
-
-
+**Bug & Tip**：
+jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
+ 
 ## swan.redirectTo
 
 **解释**：关闭当前页面，跳转到应用内的某个页面。

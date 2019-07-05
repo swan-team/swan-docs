@@ -5,7 +5,7 @@
 **请求地址：**
 
 ```js
-POST http://inner.openapi.baidu.com
+POST https://openapi.baidu.com
 ```
 
 **参数：**
@@ -40,5 +40,5 @@ POST http://inner.openapi.baidu.com
 
 ```js
 // 仅为示例，请使用自己真实有效的 access_token 等 query 参数
-http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
+https://openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
 ```

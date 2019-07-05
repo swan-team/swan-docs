@@ -219,7 +219,7 @@ Page({
 
 ## swan.isLoginSync
 
-**解释**：获取百度 App登录状态。
+**解释**：获取宿主 App登录状态。
 
 **方法参数**：无
 
@@ -227,7 +227,7 @@ Page({
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
 **示例**：
 

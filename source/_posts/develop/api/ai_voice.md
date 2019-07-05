@@ -8,7 +8,7 @@ sidebar: ai_voice
 ## swan.ai.getVoiceRecognizer
 
 
-**解释**：获取全局唯一的语音识别器`voiceRecognizer`。
+**解释**：获取全局唯一的语音识别器`voiceRecognizer`。详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
 **方法参数**：无
 

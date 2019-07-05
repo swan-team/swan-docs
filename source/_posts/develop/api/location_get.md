@@ -16,7 +16,7 @@ sidebar: location_get
 |---- | ---- | ---- | ----|----|
 |type   | String | 否  | -| 默认为 wgs84 返回 gps 坐标，可选 gcj02 。|
 |altitude   | Boolean | 否  | -| 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps ，会很耗时，默认没有用 gps。|
-|success |Function  |  是 | -|  接口调用成功的回调函数，返回内容详见返回参数说明。|
+|success |Function  |  否 | -|  接口调用成功的回调函数，返回内容详见返回参数说明。|
 |fail  |  Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -35,6 +35,7 @@ sidebar: location_get
 |cityCode|城市编码|
 |city|城市名称|
 |country|国家|
+|countryCode|国家代码|
 |province|省份|
 |streetNumber|街道号码|
 |district|区|
