@@ -1,4 +1,4 @@
-### removeUserStorage
+<!-- ### removeUserStorage
 
 删除用户数据的后台**接口**，小游戏可以通过本接口删除已经上报到百度的 key-value 数据。
 
@@ -41,4 +41,5 @@ POST https://openapi.baidu.com
 ```js
 // 仅为示例，请使用自己真实有效的 access_token 等 query 参数
 https://openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
-```
+``` -->
+
