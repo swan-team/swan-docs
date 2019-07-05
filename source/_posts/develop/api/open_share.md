@@ -77,6 +77,71 @@ Page({
 **Bug & Tip**
 bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
 
+##  swan.shareFile
+
+>  基础库3.80.2开始支持，低版本需做兼容处理
+
+**解释**：支持调起系统分享面板将文件分享到其他App。
+
+
+**方法参数**：Object data
+**`data` 参数说明**：
+
+|参数名 |类型  |是否必填  |默认值|说明|
+|---- | ---- | ---- |--|---- |
+|filePath| string | 是 |   |需要分享的文档的地址|
+|success |Function  |  否 | | 接口调用成功的回调|
+|fail   | Function |   否  | |接口调用失败的回调函数|
+|complete  |  Function |   否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+<a href="swanide://fragment/6c244bf3c5956ed06e526e3e886cfbde1561984657908" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+```
+<view class="wrap">
+    <button type="primary" bindtap="shareFile">点击分享文件</button>
+</view>
+```
+
+* 在 js 文件中
+```
+Page({
+    shareFile() {
+        swan.chooseImage({
+            count: 1,
+            success: function (res) {
+                swan.shareFile({
+                    filePath: res.tempFilePaths[0],
+                    success: res => {
+                        swan.showModal({
+                            title: '分享成功',
+                            content: JSON.stringify(res)
+                        });
+                    },
+                    fail: err => {
+                        swan.showModal({
+                            title: '分享失败',
+                            content: JSON.stringify(err)
+                        });
+                    }
+                });
+            },
+            fail: function (err) {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+```
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
 ## web-view中的分享 
 
 当使用 web-view 组件时，用户从 A(h5) 页面跳转到了 B(h5) 页面。此时，用户在 B 页面发起分享，更可能的预期是分享 B 页面。但是，默认行为将打开 A 页面。此时，开发者可以做以下处理，让分享后打开 B 页面。

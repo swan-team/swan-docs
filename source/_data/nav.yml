@@ -246,18 +246,7 @@
                 link: /introduction/productlaboratory
                 text: 开通指引
                 name: productlaboratory    
-              # -
-              #   link: /introduction/instead
-              #   text: 搜索结果替换
-              #   name: instead                
-              # -
-              #   link: /introduction/adaccess
-              #   text: 广告接入
-              #   name: adaccess                
-              # -
-              #   link: /introduction/feedput
-              #   text: 信息流投放
-              #   name: feedput 
+
 # 2
 -
   link: /design/overview/introduction
@@ -699,6 +688,19 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
+            link: /develop/framework/dynamiclib_use
+            text: 动态库
+            name: dynamiclib_use
+            sidebar:
+              -
+                link: /develop/framework/dynamiclib_use
+                text: 使用动态库
+                name: dynamiclib_use
+              -
+                link: /develop/framework/dynamiclib_topone
+                text: topOne动态库
+                name: dynamiclib_topone
+        -
           link: /develop/framework/subpackages
           text: 性能
           name: subpackages
@@ -707,8 +709,6 @@
               link: /develop/framework/subpackages
               text: 分包加载
               name: subpackages
-
-
             -
               link: /develop/framework/performance-analysis-tool
               text: 性能分析工具
@@ -726,9 +726,9 @@
               text: 案例介绍
               name: case                     
         -
-          link: /develop/framework/subpackages
+          link: /develop/framework/operating-environment
           text: 运行时
-          name: subpackages
+          name: operating-environment
           sidebar:
             -
               link: /develop/framework/operating-environment
@@ -744,9 +744,9 @@
             #   name: process_life                            
 
     -
-      link: /develop/component/view
+      link: /develop/component/componetlist
       text: 组件
-      name: component
+      name: componetlist
       sidebar:
         -
             sidebar:
@@ -955,30 +955,30 @@
                       name: canvas_canvas
         -
             sidebar:
-              -
-                link: /develop/component/open
-                text: 开放能力
-                name: open
-                sidebar:
-                  -
-                    link: /develop/component/open/#open-data
-                    text: open-data
-                    name: open_open-data
-                  -
-                    link: /develop/component/open/#web-view
-                    text: web-view
-                    name: open_web-view
+                -
+                  link: /develop/component/open
+                  text: 开放能力
+                  name: open
+                  sidebar:
+                    -
+                      link: /develop/component/open/#open-data
+                      text: open-data
+                      name: open_open-data
+                    -
+                      link: /develop/component/open/#web-view
+                      text: web-view
+                      name: open_web-view
         -
             sidebar:
-              -
-                link: /develop/component/ad
-                text: 广告
-                name: ad
-                sidebar:
-                  -
-                    link: /develop/component/ad/#ad
-                    text: ad
-                    name: ad_ad
+                -
+                  link: /develop/component/ad
+                  text: 广告
+                  name: ad
+                  sidebar:
+                    -
+                      link: /develop/component/ad/#ad
+                      text: ad
+                      name: ad_ad
                                       
     -
       link: /develop/api/apilist
@@ -991,53 +991,53 @@
               link: /develop/api/apilist
               text: API 列表
               name: apilist
-        # -
-        #     link: /develop/api/base
-        #     text: 基础
-        #     name: base
-        #     sidebar:
-        #     -
-        #       link: /develop/api/base_app_event
-        #       text: 应用级事件
-        #       name: base_app_event
-        #       sidebar:
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onPageNotFound
-        #           text: swan.onPageNotFound
-        #           name: base_app_event_swan-onPageNotFound
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onError
-        #           text: swan.onError
-        #           name: base_app_event_swan-onError
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onAppShow
-        #           text: swan.onAppShow
-        #           name: base_app_event_swan-onAppShow
-        #         -
-        #           link: /develop/api/base_app_event/#swan-onAppHide
-        #           text: swan.onAppHide
-        #           name: base_app_event_swan-onAppHide
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offPageNotFound
-        #           text: swan.offPageNotFound
-        #           name: base_app_event_swan-offPageNotFound
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offError
-        #           text: swan.offError
-        #           name: base_app_event_swan-offError
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offAppShow
-        #           text: swan.offAppShow
-        #           name: base_app_event_swan-offAppShow
-        #         -
-        #           link: /develop/api/base_app_event/#swan-offAppHide
-        #           text: swan.offAppHide
-        #           name: base_app_event_swan-offAppHide      
+        -
+            link: /develop/api/base_app_event
+            text: 基础
+            name: base_app_event
+            sidebar:
+            -
+              link: /develop/api/base_app_event
+              text: 应用级事件
+              name: base_app_event
+              sidebar:
+                -
+                  link: /develop/api/base_app_event/#swan-onPageNotFound
+                  text: swan.onPageNotFound
+                  name: base_app_event_swan-onPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-onError
+                  text: swan.onError
+                  name: base_app_event_swan-onError
+                -
+                  link: /develop/api/base_app_event/#swan-onAppShow
+                  text: swan.onAppShow
+                  name: base_app_event_swan-onAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-onAppHide
+                  text: swan.onAppHide
+                  name: base_app_event_swan-onAppHide
+                -
+                  link: /develop/api/base_app_event/#swan-offPageNotFound
+                  text: swan.offPageNotFound
+                  name: base_app_event_swan-offPageNotFound
+                -
+                  link: /develop/api/base_app_event/#swan-offError
+                  text: swan.offError
+                  name: base_app_event_swan-offError
+                -
+                  link: /develop/api/base_app_event/#swan-offAppShow
+                  text: swan.offAppShow
+                  name: base_app_event_swan-offAppShow
+                -
+                  link: /develop/api/base_app_event/#swan-offAppHide
+                  text: swan.offAppHide
+                  name: base_app_event_swan-offAppHide      
      
         -
-            link: /develop/api/net
+            link: /develop/api/net_rule
             text: 网络
-            name: net
+            name: net_rule
             sidebar:
             -
               link: /develop/api/net_rule
@@ -1279,9 +1279,9 @@
                     text: swan.ai.nlpLexerCustom
                     name: ai_word_swan-ai-nlpLexerCustom
         -
-            link: /develop/api/media
+            link: /develop/api/media_image
             text: 媒体
-            name: media
+            name: media_image
             sidebar:
             -
               link: /develop/api/media_image
@@ -1304,6 +1304,11 @@
                   link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
                   text: swan.saveImageToPhotosAlbum
                   name: media_image_swan-saveImageToPhotosAlbum
+                -
+                  link: /develop/api/media_image/#swan-chooseAlbum
+                  text: swan.chooseAlbum
+                  name: media_image_swan-chooseAlbum
+
 
             -
               link: /develop/api/media_recorder
@@ -1417,7 +1422,14 @@
                       link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
                       text: backgroundAudioManager.onSeeking
                       name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
-
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onNext
+                      text: backgroundAudioManager.onNext
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onNext
+                    -
+                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
+                      text: backgroundAudioManager.onPrev
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev                      
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -1593,9 +1605,9 @@
                       name: ARCameraContext-stopRecord                  
                       
         -
-            link: /develop/api/file
+            link: /develop/api/file_save
             text: 文件
-            name: file
+            name: file_save
             sidebar:
               -
                 link: /develop/api/file_save
@@ -1637,9 +1649,9 @@
                     text: swan.openDocument
                     name: file_open_swan-openDocument
         -
-            link: /develop/api/storage
+            link: /develop/api/storage_save
             text: 数据存储
-            name: storage
+            name: storage_save
             sidebar:
               -
                 link: /develop/api/storage_save
@@ -1696,9 +1708,9 @@
                     text: swan.clearStorageSync
                     name: storage_remove_swan-clearStorageSync
         -
-            link: /develop/api/location
+            link: /develop/api/location_get
             text: 位置
-            name: location
+            name: location_get
             sidebar:
               -
                 link: /develop/api/location_get
@@ -1762,9 +1774,9 @@
                         text: mapContext.getScale
                         name: mapContext-getScale                       
         -
-            link: /develop/api/show
+            link: /develop/api/show_canvas
             text: 界面
-            name: show
+            name: show_canvas
             sidebar:
               -
                 link: /develop/api/show_canvas
@@ -1796,7 +1808,6 @@
                     text: canvasContext 
                     name: show_canvas_canvasContext 
                     sidebar:
-
                       -
                         link: /develop/api/show_canvas/#canvasContext-setFillStyle
                         text: canvasContext.setFillStyle
@@ -2321,9 +2332,9 @@
                     name: nacomponent_swan-showFavoriteGuide
 
         -
-            link: /develop/api/device
+            link: /develop/api/device_sys
             text: 设备
-            name: device
+            name: device_sys
             sidebar:
               -
                 link: /develop/api/device_sys
@@ -2513,9 +2524,9 @@
                     name: device_clipboard_swan-getClipboardData
                    
         -
-            link: /develop/api/ext
+            link: /develop/api/getextconfig
             text: 第三方平台
-            name: ext
+            name: getextconfig
             sidebar:
               -
                 link: /develop/api/getextconfig
@@ -2531,9 +2542,9 @@
                     text: swan.getExtConfigSync
                     name: getextconfig_swan-getExtConfigSync
         -
-            link: /develop/api/open
+            link: /develop/api/open_log
             text: 开放接口
-            name: open
+            name: open_log
             sidebar:
 
               -
@@ -2634,9 +2645,14 @@
                     text: swan.openShare
                     name: open_share_swan-openShare
                   -
+                    link: /develop/api/open_share/#swan-shareFile
+                    text: swan.shareFile
+                    name: open_share_swan-shareFile
+                  -
                     link: /develop/api/open_share/#web-view中的分享
                     text: web-view中的分享
                     name: open_share_web-view中的分享
+                    
               -
                 link: /develop/api/open_chooseaddress
                 text: 选择收货地址
@@ -2714,9 +2730,7 @@
                   -
                     link: /develop/api/open_preloadsubpackage/#swan-loadSubPackage
                     text: swan.loadSubPackage
-                    name: open_preloadsubpackage_swan-preloadSubPackage
-              
-
+                    name: open_preloadsubpackage_swan-preloadSubPackage              
               -
                 link: /develop/api/get
                 text: 更新
@@ -2793,8 +2807,7 @@
       name: open_feed
       sidebar:
         - 
-          sidebar: 
-            
+          sidebar:             
               -
                 link: /develop/serverapi/open_feed
                 text: 信息流资源
@@ -2864,63 +2877,119 @@
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
-                name: power_exp                   
-
-          
+                name: power_exp                             
     -
-      link: /develop/devtools/history
+      link: /develop/devtools/page
       text: 工具
-      name: devtools
-      sidebar:
+      name: page
+      sidebar:       
         -
-            text: 下载
-            name: history
-            sidebar:  
-              -
-                link: /develop/devtools/history
-                text: 版本下载
-                name: history              
-        -
-            text: 界面
-            name: show
             sidebar:
               -
-                link: /develop/devtools/show_sur
-                text: 界面概述
-                name: show_sur
-              -
-                link: /develop/devtools/show_dev
-                text: 智能小程序开发调试主页
-                name: show_dev
-              -
-                link: /develop/devtools/show_short
-                text: 快捷键
-                name: show_short
+                link: /develop/devtools/page
+                name: page
+                text: 界面
+                sidebar:
+                  -
+                    link: /develop/devtools/page/#启动页
+                    text: 启动页
+                    name: page_启动页
+                  -
+                    link: /develop/devtools/page/#菜单栏
+                    text: 菜单栏
+                    name: page_菜单栏
+                  -
+                    link: /develop/devtools/page/#工具栏
+                    text: 工具栏
+                    name: page_工具栏
+                  -
+                    link: /develop/devtools/page/#模拟器
+                    text: 模拟器
+                    name: page_模拟器
+                  -
+                    link: /develop/devtools/page/#编辑器
+                    text: 编辑器
+                    name: page_编辑器
+                  -
+                    link: /develop/devtools/page/#调试器
+                    text: 调试器
+                    name: page_调试器
         -
-            text: 调试
-            name: smartappdebug
+            sidebar:
+              -
+                link: /develop/devtools/setting
+                name: setting
+                text: 设置
+                sidebar:
+                  -
+                    link: /develop/devtools/setting/#快捷键设置
+                    text: 快捷键设置
+                    name: setting_快捷键设置
+                  -
+                    link: /develop/devtools/setting/#编辑设置
+                    text: 编辑设置
+                    name: setting_编辑设置
+                  -
+                    link: /develop/devtools/setting/#代理设置
+                    text: 代理设置
+                    name: setting_代理设置
+                  -
+                    link: /develop/devtools/setting/#外观设置
+                    text: 外观设置
+                    name: setting_外观设置
+        -
+            sidebar:
+              -
+                link: /develop/devtools/editor
+                name: editor
+                text: 代码编辑
+                sidebar:
+                  -
+                    link: /develop/devtools/editor/#文件支持
+                    text: 文件支持
+                    name: editor_文件支持
+                  -
+                    link: /develop/devtools/editor/#文件操作
+                    text: 文件操作
+                    name: editor_文件操作
+                  -
+                    link: /develop/devtools/editor/#自动保存
+                    text: 自动保存
+                    name: editor_自动保存
+                  -
+                    link: /develop/devtools/editor/#自动补全
+                    text: 自动补全
+                    name: editor_自动补全
+                  -
+                    link: /develop/devtools/editor/#项目配置文件
+                    text: 项目配置文件
+                    name: editor_项目配置文件
+        -
+            link: /develop/devtools/smartappdebug_function
+            text: 小程序调试
+            name: smartappdebug_function
             sidebar:
               -
                 link: /develop/devtools/smartappdebug_function
-                text: 常用功能
                 name: smartappdebug_function
+                text: 调试常用功能
                 sidebar:
                   -
-                    link: /develop/devtools/smartappdebug_function/#模拟器
-                    text: 模拟器
-                    name: smartappdebug_function_模拟器
+                    link: /develop/devtools/smartappdebug_function/#模拟器功能
+                    text: 模拟器功能
+                    name: smartappdebug_function_模拟器功能
                   -
-                    link: /develop/devtools/smartappdebug_function/#编译
-                    text: 编译
-                    name: smartappdebug_function_编译
+                    link: /develop/devtools/smartappdebug_function/#自定义编译
+                    text: 自定义编译
+                    name: smartappdebug_function_自定义编译
                   -
                     link: /develop/devtools/smartappdebug_function/#前后台切换
                     text: 前后台切换
                     name: smartappdebug_function_前后台切换
-                  -
-                    link: /develop/devtools/smartappdebug_function/#调试器
-                    text: 调试器
-                    name: smartappdebug_function_调试器
+                  # -
+                  #   link: /develop/devtools/smartappdebug_function/#调试器
+                  #   text: 调试器
+                  #   name: smartappdebug_function_调试器
               -
                 link: /develop/devtools/smartappdebug_tool
                 text: 调试工具
@@ -2958,10 +3027,10 @@
                     link: /develop/devtools/smartappdebug_tool/#Swan-audits
                     text: Swan audits
                     name: smartappdebug_tool_Swan-audits
-              -
-                link: /develop/devtools/smartappdebug_pre
-                text: 预览发布
-                name: smartappdebug_pre
+                  -
+                    link: /develop/devtools/smartappdebug_tool/#Security-panel
+                    text: Security panel
+                    name: smartappdebug_tool_Security-panel
               -
                 link: /develop/debug/remoterelease
                 text: 真机调试
@@ -2969,72 +3038,58 @@
               -
                 link: /develop/debug/remotedebugging
                 text: 远程调试
-                name: remotedebugging
-        -
-            sidebar:
-
+                name: remotedebugging 
               -
-                link: /develop/devtools/setting
-                text: 设置
-                name: setting   
+                link: /develop/devtools/smartappdebug_pre
+                text: 预览发布
+                name: smartappdebug_pre
         -
+            link: /develop/devtools/code
+            text: 开发辅助
+            name: code
             sidebar:
-
+              -
+                link: /develop/devtools/code
+                text: 代码片段
+                name: code
+              -
+                link: /develop/devtools/complation
+                text: 代码编译
+                name: complation
               -
                 link: /develop/devtools/cloudtext
                 text: 云测试
-                name: cloudtext                              
-        -
-            sidebar:
-
+                name: cloudtext 
               -
                 link: /develop/devtools/audits
                 text: 体验评分
-                name: audits    
-        -
-            sidebar:
-
+                name: audits
+              -
+                link: /develop/devtools/question
+                text: 问题反馈
+                name: question
+              -
+                link: /develop/devtools/plain
+                text: 白屏检测
+                name: plain
               -
                 link: /develop/devtools/commandtool
                 text: 命令行工具
-                name: commandtool                              
-        -
-            link: /develop/devtools/projectconfig
-            text: 配置文件及差异
-            name: projectconfig
-            sidebar:
-
-              -
-                link: /develop/devtools/projectconfig
-                text: 项目配置文件
-                name: projectconfig
+                name: commandtool
               -
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff
+                        
         -
-            sidebar:
-
-              -
-                link: /develop/devtools/code
-                text: 代码片段
-                name: code      
-        -
-            sidebar:
-
-              -
-                link: /develop/devtools/complation
-                text: 代码编译
-                name: complation                            
-        -
-            link: /develop/devtools/uplog
+            link: /develop/devtools/history
             text: 工具版本信息
-            name: uplog
+            name: history
             sidebar:
               -
-                link: /develop/devtools/toolversion
-                text: 工具版本分布
-                name: toolversion             
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history          
               -
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
@@ -3045,9 +3100,9 @@
                     text: 正式版更新日志
                     name: uplog_tool_正式版更新日志
                   -
-                    link: /develop/devtools/uplog_tool/#Beta-版更新日志
-                    text: Beta 版更新日志
-                    name: uplog_tool_Beta-版更新日志                    
+                    link: /develop/devtools/uplog_tool/#Beta版更新日志
+                    text: Beta版更新日志
+                    name: uplog_tool_Beta版更新日志             
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
@@ -3055,23 +3110,17 @@
 
     
     -
-      link: /develop/server/oauth_intr
+      link: /develop/third/pro
       text: 第三方接入
-      name: third
+      name: pro
       sidebar:
         -
-          link: /develop/third/pro
-          text:
-          name: pro
           sidebar:
             -
               link: /develop/third/pro
               text: 授权流程
               name: pro
         -
-          link: /develop/third/module
-          text:
-          name: module
           sidebar:
             -
               link: /develop/third/module
@@ -3079,106 +3128,75 @@
               name: module
 
         -
-          link: /develop/third/apppage
-          text:
-          name: apppage
           sidebar:
             -
               link: /develop/third/apppage
               text: 小程序包管理
               name: apppage
         -
-          link: /develop/third/info
-          text:
-          name: info
           sidebar:
             -
               link: /develop/third/info
               text: 基础信息设置
               name: info
         -
-          link: /develop/third/api
-          text:
-          name: api
           sidebar:
             -
               link: /develop/third/api
               text: 模板消息 
               name: api              
         -
-          link: /develop/third/upload
-          text:
-          name: upload
           sidebar:
             -
               link: /develop/third/upload
               text: 图片上传
               name: upload
         -
-          link: /develop/third/login
-          text:
-          name: login
           sidebar:
             -
               link: /develop/third/login
               text: TP代授权小程序登录
               name: login
         -
-          link: /develop/third/address
-          text:
-          name: address
           sidebar:
             -
               link: /develop/third/address
               text: 修改服务器地址
               name: address
         -
-          link: /develop/third/checkname
-          text:
-          name: checkname
           sidebar:
             -
               link: /develop/third/checkname
               text: 名称检测
               name: checkname
-        - link: /develop/third/datastatistics
-          text:
-          name: datastatistics
+        - 
           sidebar:
             - link: /develop/third/datastatistics
               text: 数据统计分析
               name: datastatistics
         -
-          link: /develop/third/error
-          text:
-          name: error
+
           sidebar:
             -
               link: /develop/third/error
               text: 通用错误码对照表
               name: error
         -
-          link: /develop/third/deciphering
-          text:
-          name: deciphering
           sidebar:
             -
               link: /develop/third/deciphering
               text: 第三方平台消息加解密
               name: deciphering
         -
-          link: /develop/third/log
-          text:
-          name: log
           sidebar:
             -
               link: /develop/third/log
               text: 更新日志
               name: log
     -
-      link: /develop/function/webintroduction 
+      link: /develop/function/navigation
       text: 功能开发
-      name: function
+      name: navigation
       sidebar:
         -
           sidebar:              
@@ -3206,8 +3224,9 @@
             name: proposal  
                  
         -
-          link: /develop/function/invoke_process
+          link: /develop/function/pay
           text: 支付功能开发
+          name: pay
           sidebar:  
           -
             link: /introduction/pay
@@ -3270,9 +3289,9 @@
             name: error_code             
       
     -
-      link: /develop/swan/version
+      link: /develop/swan/client-lib
       text: 基础库版本信息
-      name: swan
+      name: client-lib
       sidebar:
         -
           sidebar:
@@ -3299,7 +3318,7 @@
     -
       link: /develop/faq/frequently
       text: FAQ
-      name: faq
+      name: frequently
       sidebar:
         -
           sidebar:            
@@ -3408,12 +3427,10 @@
                 link: /data/guideline/#数据分析维度
                 text: 数据分析维度
                 name: guideline_数据分析维度
-
-
     -
-      link: /data/custom
+      link: /data/performance-poin
       text: 统计方法
-      name: book
+      name: performance-poin
       sidebar:
         -
           sidebar:
@@ -3467,9 +3484,9 @@
           #   text: 审核标准
           #   name: standard
     -
-      link: /operations/thirdparty
+      link: /operations/thirdparty_agreement
       text: 第三方平台范围及条款
-      name: book
+      name: thirdparty_agreement
       sidebar:
         -
           sidebar:
@@ -3480,10 +3497,5 @@
           -
             link: /operations/thirdparty_low
             text: 第三方平台授权法律条款
-            name: thirdparty_low
-# #6
-# -
-#   link: ../forum
-#   text: 社区
-#  name: forum
+            name: thirdparty_low 
 
