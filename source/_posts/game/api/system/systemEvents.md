@@ -3,6 +3,7 @@ title: 系统事件
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-02
 ---
 
 
@@ -105,6 +106,7 @@ swan.offError(callback)
 ```
 
 撤销全局错误监听，传入的 `callback` 即为调用 [`swan.onError()`](#swan-onError) 传入的 `callback` 对象。
+
 
 **参数值：**
 

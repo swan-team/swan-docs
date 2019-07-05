@@ -3,23 +3,24 @@ title: 录屏
 layout: gamedoc
 topic: media
 categoryName: api
-draft: true
+priority: 08-03
 ---
 
+> 基础库 swan-game.js 1.4.1 版本开始支持。
 
 ### swan.getVideoRecorderManager()
-获取全局唯一的 VideoRecorderManager。
+获取全局唯一的 videoRecorderManager。
 ```
 swan.getVideoRecorderManager()
 ```
 
-### VideoRecorderManager
+### videoRecorderManager
 全局唯一的录屏管理器，通过 [`swan.getVideoRecorderManager()`](./#swan-getVideoRecorderManager) 创建。
 
-### VideoRecorderManager.start()
+### videoRecorderManager.start()
 开始录屏。可以通过 onStart 接口监听录屏开始事件。
 ```
-VideoRecorderManager.start(opts)
+videoRecorderManager.start(opts)
 ```
 
 
@@ -29,27 +30,27 @@ VideoRecorderManager.start(opts)
 |---|-------|---|-------|-------|
 |opts|Object|-|是|调用该方法时，要传入的对象参数|
 |opts.duration|number|10 | 否 |录屏的时长，单位 s，最大值 120（2 分钟）|
-|opts.microphoneEnabled|boolean|false|否|是否启用麦克风录音|
 
 **示例：**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
 recorder.onStart(res => {
-  console.log(res.microphoneStatus);
+  // 录屏开始
+  console.log(res);
 })
 
 recorder.start({
-  microphoneEnabled: true,
+  duration: 60,
 })
 
 ```
 
-### VideoRecorderManager.onStart()
+### videoRecorderManager.onStart()
 监听录屏开始事件。
 
 ```
-VideoRecorderManager.onStart(callback)
+videoRecorderManager.onStart(callback)
 ```
 
 **参数值：**
@@ -57,23 +58,6 @@ VideoRecorderManager.onStart(callback)
 |属性|类型|是否必填|描述|
 |---|-----|-------|-------|
 |callback|function|是|监听录屏开始事件的回调函数|
-
-**回调函数参数值：**
-
-| 属性|类型|描述|
-|-|-|-|
-|res|object|回调函数的参数|
-|res.microphoneStatus|number|麦克风状态|
-
-只有在 microphoneEnabled 为 true 时，onStart 回调才会有 microphoneStatus 返回。
-
-res.microphoneStatus 的合法值：
-
-|值|描述|
-|---|-------|
-|0|麦克风可用|
-|1|麦克风被系统禁用|
-|2|麦克风被小游戏禁用|
 
 
 **示例：**
@@ -83,19 +67,19 @@ const recorder = swan.getVideoRecorderManager();
 
 recorder.onStart(res => {
   // 录屏开始
-  console.log(res.microphoneStatus);
+  console.log(res);
 })
 
 recorder.start({
-  microphoneEnabled: true,
+  duration: 60,
 })
 ```
 
 
-### VideoRecorderManager.pause()
+### videoRecorderManager.pause()
 暂停录屏。在录屏开始后调用。
 ```
-VideoRecorderManager.pause()
+videoRecorderManager.pause()
 ```
 
 **示例**
@@ -111,10 +95,10 @@ recorder.pause()
 ```
 
 
-### VideoRecorderManager.onPause()
+### videoRecorderManager.onPause()
 监听录屏暂停事件。
 ```
-VideoRecorderManager.onPause(callback)
+videoRecorderManager.onPause(callback)
 ```
 
 **参数值：**
@@ -138,10 +122,10 @@ recorder.pause()
 ```
 
 
-### VideoRecorderManager.resume()
+### videoRecorderManager.resume()
 继续录屏，应在录屏被暂停后调用。
 ```
-VideoRecorderManager.resume()
+videoRecorderManager.resume()
 ```
 
 
@@ -163,11 +147,11 @@ recorder.pause()
 recorder.resume()
 ```
 
-### VideoRecorderManager.onResume()
+### videoRecorderManager.onResume()
 监听录屏继续事件。
 
 ```
- VideoRecorderManager.onResume(callback)
+ videoRecorderManager.onResume(callback)
 ```
 
 **参数值：**
@@ -197,10 +181,10 @@ recorder.resume()
 
 
 
-### VideoRecorderManager.stop()
+### videoRecorderManager.stop()
 停止录屏，应在录屏开始后调用。可以通过 onStop 接口监听录屏结束事件，获得录屏后的视频地址。
 ```
-VideoRecorderManager.stop()
+videoRecorderManager.stop()
 ```
 
 **示例**
@@ -215,10 +199,10 @@ recorder.stop();
 ```
 
 
-### VideoRecorderManager.onStop()
+### videoRecorderManager.onStop()
 监听录屏结束事件，并获得录屏地址。
 ```
-VideoRecorderManager.onStop(callback)
+videoRecorderManager.onStop(callback)
 ```
 
 **参数值：**
@@ -248,10 +232,10 @@ recorder.stop();
 
 
 
-### VideoRecorderManager.onError()
+### videoRecorderManager.onError()
 监听录屏错误事件。
 ```
-VideoRecorderManager.onError(callback)
+videoRecorderManager.onError(callback)
 ```
 
 **参数值：**

@@ -3,7 +3,7 @@ title: swan.createCanvas()
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-01
+priority: 09-01
 ---
 
 创建一个画布对象。
@@ -15,4 +15,4 @@ swan.createCanvas();
 
 **返回值：**
 
-[Canvas](/api/render/Canvas/) 画布对象
+[Canvas](/game/api/render/Canvas/) 画布对象

@@ -3,7 +3,7 @@ title: swan.offShareAppMessage()
 layout: gamedoc
 topic: share
 categoryName: api
-priority: 09-05
+priority: 11-05
 ---
 
 取消监听用户点击右上角菜单的“转发”按钮时触发的事件。

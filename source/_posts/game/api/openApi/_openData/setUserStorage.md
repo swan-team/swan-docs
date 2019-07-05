@@ -1,18 +1,18 @@
 <!-- ### setUserStorage
 
-上报用户数据后台接口。小游戏可以通过本接口上报 key-value 数据到用户的 CloudStorage。
+上报用户数据的后台**接口**，小游戏可以通过本接口上报 key-value 数据到用户的 CloudStorage。
 
 **请求地址：**
 
 ```js
-POST http://inner.openapi.baidu.com
+POST https://openapi.baidu.com
 ```
 
 **参数：**
 
 |属性|类型|默认值|是否必填|说明|
 |-|-|-|-|-|
-|access_token|string||是|接口调用凭证|
+|access_token|string||是|接口调用凭证，[获取 access_token 方法](/develop/serverapi/power_exp/)|
 |swanId|string||是|用户唯一标识符|
 |kv_list|Object||是|要上报的数据|
 
@@ -42,7 +42,8 @@ POST http://inner.openapi.baidu.com
 **示例代码：**
 
 ```js
-http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
+// 仅为示例，请使用自己真实有效的 access_token 等 query 参数
+https://openapi.baidu.com/rpc/2.0/smartapp/game/setuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
 ```
 
 **托管数据的限制：**

@@ -3,7 +3,7 @@ title: 图片
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-06
+priority: 09-06
 ---
 
 ### swan.createImage()

@@ -12,13 +12,14 @@ sidebar: operating-environment
 
 三端的脚本执行环境以及用于渲染非原生组件的环境是各不相同的：
 
- ### iOS
- 小程序逻辑层的 javascript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS8、iOS9、iOS10。
+### iOS
+* 旧版本，小程序的逻辑层、视图层，均运行在 webview 中，并进行渲染。
+* 新版本，小程序的逻辑层的 js 代码运行在 jscore 中，视图层在 webview 中渲染。
 
 ### Android 
 
-* 旧版本，小程序逻辑层的 javascript 代码运行中 X5 JSCore 中，视图层是由 X5 基于 Mobile Chrome 53/57 内核来渲染的；
-* 新版本，小程序逻辑层的 javascript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 53 内核来渲染的；
+* 旧版本，小程序的逻辑层、视图层，均运行在 webview 中，并进行渲染。
+* 新版本，小程序的逻辑层的 js 代码运行在 V8 中，视图层基于自研的 T7 内核在 webview 渲染。
 
 ### 开发工具
 小程序逻辑层的 javascript 代码是运行在 electron 中，视图层是由 Chromium 59.0.3071.115 Webview 来渲染的。
@@ -87,3 +88,5 @@ sidebar: operating-environment
 * es6.reflect.set-prototype-of
 * es7.promise.finally
 * es6.array.iterato
+
+其他不在列表中说明的新特性，例如 await async等，目前暂不支持。

@@ -3,7 +3,7 @@ title: swan.getFileSystemManager()
 layout: gamedoc
 topic: file
 categoryName: api
-priority: 03-01
+priority: 04-01
 ---
 
 获取全局唯一的文件管理器对象

@@ -1,20 +1,34 @@
 function searchFunc(path, searchId, contentId) {
     $.ajax({
         url: path,
-        dataType: 'xml',
-        success: function (xmlResponse) {
-            // get the contents from search data
-            var datas = $('entry', xmlResponse).map(function () {
-                return {
-                    title: $('title', this).text(),
-                    content: $('content', this).text(),
-                    url: $('url', this).text()
-                };
-            }).get();
+        dataType: 'json',
+        success: function (datas) {
+            // remove gamedoc
+            datas = datas.filter(function(item) {
+                    return item.url.indexOf('/docs/game/') === -1;
+                });
             var $resultContent = document.getElementById(contentId);
             var $input = document.getElementById(searchId);
             if (!$input || !$('#local-search-input').length) {
                 return;
+            }
+            function toggleArticleContent(isShown) {
+                var isToggle = typeof isShown === 'undefined';
+                var resultStatus, articleStatus;
+                if (isToggle) {
+                    var currentStatus = $('#article-main-content').css('display');
+                    resultStatus = currentStatus;
+                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
+                } else {
+                    articleStatus = isShown ? 'block' : 'none';
+                    resultStatus = isShown ? 'none' : 'block';
+                }
+                $('#article-main-content').css({
+                    display: articleStatus
+                });
+                $($resultContent).css({
+                    display: resultStatus
+                });
             }
             function toggleArticleContent(isShown) {
                 var isToggle = typeof isShown === 'undefined';
@@ -86,13 +100,31 @@ function searchFunc(path, searchId, contentId) {
                             return false;
                         }
                         var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var content = data.content || '';
+                        var data_content = content.trim().replace(/<[^>]+>/g, "").toLowerCase();
                         var data_url = data.url;
                         var index_title = -1;
                         var index_content = -1;
                         var first_occur = -1;
                         // only match artiles with not empty contents
-                        if (data_content !== '') {
+                        if (data.isNav) {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                if (index_title < 0) {
+                                    isMatch = false;
+                                }
+                                else {
+                                    // isMatch = true;
+                                    if (index_title < 0) {
+                                        index_title = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_title;
+                                    }
+                                }
+                            });
+                        }
+                        else if (data_content !== '') {
                             keywords.forEach(function (keyword, i) {
                                 index_title = data_title.indexOf(keyword);
                                 index_content = data_content.indexOf(keyword);
@@ -113,14 +145,15 @@ function searchFunc(path, searchId, contentId) {
                         }
                         if (isMatch) {
                             matchCount++;
-                            str += '<li><h3><a target = "_blank" href="' + data_url + '" class="search-result-title">' + data_title + '</a></h3>';
-                            var content = data.content.trim().replace(/<[^>]+>/g, '');
+                            str += '<li><h3><a href="javascript:void(0);" onclick=handleResultAClick("' + data_url + '","' + keywords + '") class="search-result-title">' + data_title + '</a></h3>';
+                            var content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
+                            // 面包屑数据
+                            var data_breadcrumb = data.breadCrumbs.map(item => {
+                                let [title, url] = item.split(',');
+                                return '<span class="breadcrumb_item"><a href="/docs' + url + '" target="_blank">' + title + '</a><span class="arrow-right">&gt;</span></span>';
+                            }).join('');
                             if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20 < 0 ? 0 : first_occur - 20;
-                                var end = start + 100 > content.length ? content.length : start + 100;
-                                var match_content = content.substr(start, end);
-
+                                var match_content = content && this.replaceMarkdown(content);
                                 // highlight all keywords
                                 keywords.forEach(function (keyword) {
                                     var reg = new RegExp(keyword, 'gi');
@@ -129,7 +162,8 @@ function searchFunc(path, searchId, contentId) {
                                     })
                                 });
 
-                                str += '<p class="search-result">' + match_content + '...</p>';
+                                str += '<p class="search-result">' + match_content + '</p>';
+                                str += '<div class="search-result-bread-crumb">' + data_breadcrumb + '</div>';
                             }
                             str += '</li>';
                         }
@@ -144,4 +178,31 @@ function searchFunc(path, searchId, contentId) {
 
         }
     });
+}
+// 处理点击结果，keywords高亮展示
+function handleResultAClick (url, keywords) {
+    if (!keywords.length) {
+        return;
+    }
+    window.localStorage.setItem('keywords', keywords);
+    window.open(url);
+}
+// 替换当前匹配的markdown内容，取第一句话
+function replaceMarkdown(str) {
+    str = str.replace(/(\r\n|\n)/g, '')                          // 全局匹配换行                                               //全局匹配换行
+    .replace(/\s/g, '')                                          // 全局匹配空字符
+    .replace(/(<\w+?)\s(?:\s*\w*?\s*=\s*'.+?')*?\s*?(>)/g, '$1$2') // 去除标签属性
+    .replace(/\!\[[\s\S]*?\]\([\s\S]*?\)/g, '')                  // 全局匹配图片
+    .replace(/\[[\s\S]*?\]\([\s\S]*?\)/g, '')                    // 全局匹配连接
+    .replace(/(\*)(.*?)(\*)/g, '')                               // 全局匹配强调
+    .replace(/`{1,2}[^`](.*?)`{1,2}/g, '')                       // 全局匹配内联代码块
+    .replace(/```([\s\S]*?)```[\s]*/g, '')                       // 全局匹配代码块
+    .replace(/[\s]*[-\*\+]+(.*)/g, '')                           // 全局匹配无序列表
+    .replace(/[\s]*[0-9]+\.(.*)/g, '')                           // 全局匹配有序列表
+    .replace(/(\|-{1,})+\|/g, '')                                // 全局匹配表格内容
+    .replace(/(\|.*?)+/g, '')                                    // 全局匹配表头内容
+    .replace(/(#+)/g, '')                                        // 全局匹配标题
+    .replace(/(>+)/g, '');                                        // 全局匹配摘要
+    const firstPeriodIndex = str.indexOf('。') + 1;
+    return str.slice(0, firstPeriodIndex ? firstPeriodIndex : str.length);
 }

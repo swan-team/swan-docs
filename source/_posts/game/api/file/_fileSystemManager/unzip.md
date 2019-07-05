@@ -10,8 +10,8 @@ fileSystemManager.unzip(opts)
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
 |opts|Object|{}|是|调用该方法时，要传入的对象参数|
-|opts.zipFilePath|string| |是|源文件路径，必须是zip压缩文件|
-|opts.targetPath|string| |是|解压目标路径|
+|opts.zipFilePath|string| |是|源文件路径，必须是 zip 压缩文件。文件必须位于用户目录下，参考示例|
+|opts.targetPath|string| |是|解压目标路径，目标目录必须位于用户目录下，参考示例|
 |opts.success|function| |否|成功回调函数|
 |opts.fail|function| |否|失败回调函数|
 |opts.complete|function| |否|接口调用完成的回调函数（接口成功、失败都会执行）|
@@ -36,8 +36,8 @@ fileSystemManager.unzip(opts)
 
 | 值                                     | 描述                                            |
 | -------------------------------------- | -----------------------------------------------|
-| fail permission denied, unzip ${zipFilePath} -> ${targetPath}  | 指定目标文件路径没有写权限                       |
-| fail no such file or directory, unzip ${zipFilePath} -> "${targetPath} | 源文件不存在，或目标文件路径的上层目录不存在                                      |
+| fail permission denied, unzip ${zipFilePath} -> ${targetPath}  | 指定目标文件路径没有写权限|
+| fail no such file or directory, unzip ${zipFilePath} -> "${targetPath} | 源文件不存在，或目标文件路径的上层目录不存在 |
 
 `complete` 回调参数：
 

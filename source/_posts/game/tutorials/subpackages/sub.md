@@ -3,7 +3,7 @@ title: 如何进行分包加载
 layout: gamedoc
 categoryName: tutorials
 topic: subpackages
-priority: 10-01
+priority: 05-01
 ---
 
 

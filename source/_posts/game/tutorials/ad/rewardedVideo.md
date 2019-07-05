@@ -1,14 +1,18 @@
 ---
 title: 激励视频
 layout: gamedoc
-categoryName: tutorials
-topic: ad
-priority: 08-02
+draft: true
 ---
+
+注意：
+
+为避免被反广告插件或浏览器误拦截，此目录文档已经迁移到 adTutorial，
+
+本文件仅用于重定向。
 
 小游戏激励视频广告组件在小游戏最上层渲染。视频的宽高比有 16：9 及 9：16 两种。
 
-开发者可以在百度的 mssp 平台申请广告位 id--adUnitId 和小游戏在 mssp 平台的应用 id—-appSid。 在小游戏开发中调 [swan.createRewardedVideoAd()](/api/ad/swan.createRewardedVideoAd/) 创建激励视频广告组件，该方法返回的激励视频广告组件对象是一个全局单例。使用方式如下：
+开发者可以在百度的 mssp 平台申请广告位 id--adUnitId 和小游戏在 mssp 平台的应用 id—-appSid。 在小游戏开发中调 [swan.createRewardedVideoAd()](game/api/ad/swan.createRewardedVideoAd/) 创建激励视频广告组件，该方法返回的激励视频广告组件对象是一个全局单例。使用方式如下：
 
 
 ```js

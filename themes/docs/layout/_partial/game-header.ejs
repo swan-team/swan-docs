@@ -15,7 +15,7 @@
     <header class="p-navbar">
         <div class="p-navbar-logo">
             <a href="https://smartprogram.baidu.com/developer/index.html" class="swan-logo">
-                <%- image_tag('img/logo_new.png') %>
+                <%- image_tag('img/logo_new_game.png') %>
             </a>
             <span class="m-doc-logo-line"></span>
             <a href="" class="doc-logo">
@@ -25,7 +25,7 @@
     <div class="p-navbar-header">
     </div>
         <nav class="p-navbar-menu">
-            <%- partial('./header-nav', {}) -%>
+            <%- partial('./game-header-nav', {}) -%>
         </nav>
 
         <%- partial('./game-search') -%>
@@ -35,6 +35,7 @@
         <%- js('js/game/marked.min')%>
         <%- js('js/game/mobileAdapter')%>
         <%- js('js/game/doc.raw')%>
+        <%- js('js/lib')%>
         <%- js('js/headerinit')%>
         <% if (config.search) { %>
             <script>

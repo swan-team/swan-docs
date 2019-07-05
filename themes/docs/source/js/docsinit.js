@@ -9,6 +9,22 @@
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+        '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
+        '/docs/develop/tutorial/shine/':'/docs/develop/swan/shine/',
+
+        '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
+        '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
+        '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
+        '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
+
+        '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
+        '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
+        '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
+        '/docs/game/api/ad/swan.createBannerAd/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/game/api/ad/bannerAd/': '/docs/game/api/adApi/bannerDoc/',
+        '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
+        '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
+        '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -61,6 +77,7 @@
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
+            this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -72,11 +89,24 @@
             this.initInvokeDemo();
             // this.initCustom();
         },
+        initHighlight() {
+            let keywords = window.localStorage.getItem('keywords');
+            window.localStorage.removeItem('keywords');
+            if (!keywords || !keywords.length) {
+                return;
+            }
+            keywords = Array.isArray(keywords) ? keywords : [keywords];
+            let content = $('.m-doc-content-layout').html();
+            keywords.forEach(function (keyword, index) {
+                var regExp = new RegExp(keyword, 'g');
+                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
+            });
+            $('.m-doc-content-layout').html(content);
+        },
         initSidebar: function () {
             var ctx = this;
             var sidebarData = localSidebar.getLocal(window.localData.headerName);
             var sidebar = $('.m-doc-sidebar-nav-wrapper');
-
             if (sidebarData) {
                 for (var name in sidebarData) {
                     if (sidebarData.hasOwnProperty(name)) {
@@ -107,7 +137,6 @@
             // 页面滚动到当前h3位置
             ctx.scrollToHash();
         },
-
         caseInvoke: function(scheme) {
             if (isPc()) {
                 return;
@@ -145,7 +174,7 @@
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
 
-            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。' 
+            var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
             + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
             + '</a>'
@@ -220,10 +249,11 @@
                     timeout = setTimeout(later, remaining);
                 }
                 return result;
-            };        
+            };
         },
 
         initCrumbs: function () {
+          console.log(1);
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
                 crumb = $('.m-doc-sidebar-selected').parents('.m-doc-nav-on').children('.m-doc-nav-list').children('span').html();
@@ -238,17 +268,18 @@
             }
         },
         _scrollToAnchor: function (element) {
-            var href = element && element.href ? element.href : $(this)[0].href;
-            href = decodeURIComponent(href);
-
-            var tar = href.indexOf('#');
-            href = tar > -1 ? href.substr(tar).replace('/', '') : href;
-            var offsetTop = $(href).offset() ? $(href).offset().top : 0;
-            var scrollTop = $('.m-doc-content-layout').scrollTop();
-            var tarTop = offsetTop + scrollTop - 70;
-            var diffTop = Math.abs(tarTop - scrollTop);
-            var time = diffTop > 1800 ? 200 : 100;
-            $('.m-doc-content-layout').scrollTo({ toT: tarTop, durTime: time });
+            setTimeout(function () {
+                var href = element && element.href ? element.href : $(this)[0].href;
+                href = decodeURIComponent(href);
+                var tar = href.indexOf('#');
+                href = tar > -1 ? href.substr(tar).replace('/', '') : href;
+                var offsetTop = $(href).offset() ? $(href).offset().top : 0;
+                var scrollTop = $('.m-doc-content-layout').scrollTop();
+                var tarTop = offsetTop + scrollTop - 30;
+                var diffTop = Math.abs(tarTop - scrollTop);
+                var time = diffTop > 1800 ? 200 : 100;
+                $('.m-doc-content-layout').scrollTo({toT: tarTop, durTime: time });
+            }, 0);
         },
         addEvent: function () {
             var ctx = this;
@@ -296,8 +327,22 @@
                 ctx.getArticle(href);
             });
             // 点击h3 滚动到锚点
-            $('.m-doc-h2-children a').on('click', function (e) {
+            $('.m-doc-h2-children .m-doc-h3-list').on('click', function (e) {
                 if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h2-children').children('.m-doc-sidebar-selected').length > 0) {
+                    ctx._scrollToAnchor($(this)[0]);
+                } else {
+                    e.preventDefault();
+                    var _this = this;
+                    var href = $(_this).attr('href');
+                    win.history.pushState(href, '', href);
+                    ctx.getArticle(href, function() {
+                        ctx._scrollToAnchor($(_this)[0]);
+                    });
+                }
+            });
+            // 点击h4 滚动到锚点
+            $('.m-doc-h3-children a').on('click', function (e) {
+                if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h3-children').children('.m-doc-sidebar-selected').length > 0) {
                     ctx._scrollToAnchor($(this)[0]);
                 } else {
                     e.preventDefault();
@@ -371,7 +416,7 @@
                 var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
                 var scrollHeight = $(this)[0].scrollHeight;
                 var clientHeight = $(this)[0].clientHeight;
-                
+
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
                     if (h2Top <= 80) {
@@ -434,7 +479,6 @@
                 ctx.animation(animat);
             });
             $('.m-doc-menu-toc').on('click', function () {
-
                 if ($(this).hasClass('m-doc-menu-toc-close')) {
                     $(this).removeClass('m-doc-menu-toc-close');
                     $('.toc-wrap').animate({
@@ -488,7 +532,7 @@
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
                     $('#article-main-content').html(article);
-                    $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
+                    // $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
                     if ($('header').hasClass('m-doc-header-hide')) {
                         $('header').removeClass('m-doc-header-hide');
                     }

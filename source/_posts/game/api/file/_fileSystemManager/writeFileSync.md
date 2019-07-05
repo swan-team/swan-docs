@@ -10,9 +10,9 @@ fileSystemManager.writeFileSync(filePath, data, encoding)
 
 |参数|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
-|filePath|string| |是|文件/目录路径。须以 `swan.env.USER_DATA_PATH` 开头（如 `'swan.env.USER_DATA_PATH' + '/demo.txt'`）。|
-|data|string/ArrayBuffer| |是|要写入的文本或二进制数据。|
-|encoding|string| |否|指定写入文件的字符编码。如果 `data` 为 `ArrayBuffer`，就不要传入 `encoding`。如果 `data` 为 `string`，`encoding` 默认为 `utf8`。|
+|filePath|string| |是|文件/目录路径。须以 `swan.env.USER_DATA_PATH` 开头（如 `'swan.env.USER_DATA_PATH' + '/demo.txt'`）|
+|data|string/ArrayBuffer| |是|要写入的文本或二进制数据|
+|encoding|string| |否|指定写入文件的字符编码。如果 `data` 为 `ArrayBuffer`，就不要传入 `encoding`。如果 `data` 为 `string`，`encoding` 默认为 `utf8`|
 
 `encoding` 的合法值：
 
@@ -29,8 +29,8 @@ fileSystemManager.writeFileSync(filePath, data, encoding)
 
 |error.message|描述|
 |-|-|
-|fail no such file or directory, open ${filePath}|指定的 filePath 文件不存在。|
-|fail permission denied, open ${dirPath}|指定的 filePath 路径没有写权限。|
+|fail no such file or directory, open ${filePath}|指定的 filePath 文件不存在|
+|fail permission denied, open ${dirPath}|指定的 filePath 路径没有写权限|
 
 **示例：**
 

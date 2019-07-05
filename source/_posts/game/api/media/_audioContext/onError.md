@@ -31,4 +31,4 @@ innerAudioContext.onError(callback)
 |10004|格式错误|
 |-1|未知错误|
 
-**注意：android的返回值不包含errMsg**
+**注意：Android 的返回值不包含 errMsg**

@@ -2,8 +2,8 @@
 title: swan.setEnableDebug()
 layout: gamedoc
 topic: debug
-draft: true
 categoryName: api
+priority: 17-02
 ---
 
 > 百度 APP 客户端 11.2，基础库 1.0.9 开始支持

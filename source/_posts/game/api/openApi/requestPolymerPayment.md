@@ -3,6 +3,7 @@ title: 百度收银台支付
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-11
 ---
 
 ### swan.requestPolymerPayment()
@@ -52,18 +53,17 @@ swan.requestPolymerPayment(opts)
 
 形如 `function (res) {...}`, 其中:
 
-|属性|类型|描述|
-|-|-|-|
-|res|Object|回调函数参数对象|
-|res.result|boolean|支付成功信息|
+|属性|描述|
+|-|-|
+|res|成功信息描述（每种支付渠道返回值类型与信息会有差异，具体需开发者用真机自行检验）|
 
 `fail` 回调函数：
 
 形如 `function (res) {...}`, 其中:
 
-|属性|类型|描述|
-|-|-|-|
-|res|string|回调函数参数返回|
+|属性|描述|
+|-|-|
+|res|失败信息描述（每种支付渠道返回值类型与信息会有差异，具体需开发者用真机自行检验）|
 
 `complete` 回调函数：
 

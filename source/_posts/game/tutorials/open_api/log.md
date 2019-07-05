@@ -4,7 +4,7 @@ title: 登录授权流程说明
 layout: gamedoc
 categoryName: tutorials
 topic: open_api
-priority: 05-02
+priority: 07-02
 ---
 
 
@@ -28,7 +28,7 @@ priority: 05-02
 * Code：用户授权的标识。在用户完成对应用的授权后，会生成一个很短时间（十分钟）内有效的授权标识，开发者通过服务端请求，将 code 以及智能小程序的 client\_id 和 secret\_key 传到开放平台接口，可以获取到 SessionKey。
 
 以下是智能小程序使用 OAuth 2.0 进行授权及获取用户信息的示意图：
-![](/img/game/tutorial/oauth.png)
+![](/img/game/tutorials/oauth.png)
 
 1. 智能小程序在 App 内部运行时使用 [`swan.login()`](/game/api/openApi/login/#swan-login) 接口获取 Authorization Code;
 2. 通过 Authorization Code 获取 [`Session Key`](/game/api/openApi/login/#Session-Key);

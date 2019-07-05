@@ -4,5 +4,6 @@ layout: gamedoc
 topic: device
 level: root
 categoryName: api
-priority: 11-00
+priority: 14-00
 ---
+

@@ -314,20 +314,6 @@ const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, 0, 0);
 ```
 
-#### 日志查看：
+### 日志查看
 
-- iOS 真机查看日志
-
-1. 手机和电脑连线。
-2. 打开系统控制台，英⽂系统是 Console.app。
-3. 日志关键字 baiduboxapp JSLog。
-
-![](/img/game/tutorials/iospreview.png)
-
-- Andriod 真机查看日志
-
-1. 安卓手机(需要开启 USB 调试)和电脑(需要安装 adb 工具)连线。
-2. 打开 Mac 的终端或 Windows 的 cmd。
-3. 使用命令: `adb logcat V8Exception:I V8Console:V *:S` 即可实时打印日志。
-
-![](/img/game/tutorials/andriodpreview.png)
+iOS 和 Android 的日志查看均可使用 sConsole 调试工具查看，详见[ sConsole 教程 ](/game/tutorials/devtools/smartappdebug/#sConsole)。

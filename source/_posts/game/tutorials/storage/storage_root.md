@@ -4,7 +4,7 @@ layout: gamedoc
 categoryName: tutorials
 level: root
 topic: storage
-priority: 06-00
+priority: 08-00
 ---
 
 

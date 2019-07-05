@@ -1,7 +1,7 @@
 ---
-title: 资源下载
+title: 长隆AR动物园
 header: design
-nav: showcase
+nav: story
 sidebar: arzoo
 ---
 
@@ -35,7 +35,7 @@ sidebar: arzoo
 2. [找]  园区AR地图，查看地图属于用户主动触发需求，放在第二tab；
 3. [逛]  AR智能相机，作为小程序特色功能放置在TAB中间位置以强化展示。
 
-小程序要同时满足不同维度的用户诉求，功能入口需为并列关系。因此小程序信息架构采用“底TAB + 流式布局”的T字型结构，方便用户能够在不同诉求间切换，快速体验智能小程序的AR能力。
+小程序要同时满足不同维度的用户诉求，功能入口需为并列关系。因此小程序信息架构采用“底TAB + 流式布局”的倒T型结构，方便用户能够在不同诉求间切换，快速体验智能小程序的AR能力。
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/story/arzoo/4.png"><p class="m-doc-custom-examples-text">1.T字形架构；
 2.长隆AR动物园。</p>
@@ -70,7 +70,7 @@ AR科普（动物详情）页使用 scroll-view 组件的横向滑动属性，�
 
 ## 颜色系统
 ### 视觉风格定位
-长隆AR动物园是一款寓教于乐的小程序，目标用户是低龄的K12人群 & 亲子人群，在设计中需要遵循用户的思维，参考真实动物园世界中用户的行为和需求。设计风格上能让用户有亲近自然，得到科普，放松身心的感受。
+长隆AR动物园是一款寓教于乐的小程序，目标用户是低龄的儿童人群 & 亲子人群，在设计中需要遵循用户的思维，参考真实动物园世界中用户的行为和需求。设计风格上能让用户有亲近自然，得到科普，放松身心的感受。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/story/arzoo/8.jpg"><p class="m-doc-custom-examples-text">长隆动物园实景图</p>
@@ -85,14 +85,14 @@ AR科普（动物详情）页使用 scroll-view 组件的横向滑动属性，�
 </div>
 
 ### 色彩系统运用
-长隆动物园首页共有30张动物卡片，设计师希望每张卡片代表一种动物，有其独特的性格色彩。考虑到页面色彩的统一性，我们建立了色环，选取同一色彩明度、饱和的色环范围。运用了视觉设计中的对比、亲密性原则，使用丰富但有规律的色彩，让页面更加生动有趣。
+长隆动物园首页共有30张动物卡片，设计师希望每张卡片代表一种动物，让每个动物有其独特的性格色彩。同时，考虑到页面色彩的统一性，我们建立了色环，选取同一色彩明度、饱和度的色环范围。运用了视觉设计中的对比、亲密性原则，使用丰富且规律的色彩，让页面更加生动有趣。
 	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/story/arzoo/10.png">
 	</div>
 	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/story/arzoo/11.png"><p class="m-doc-custom-examples-text">AR动物的色彩运用</p>
 	</div>
 
 ## 打造有识别度的LOGO
-小程序设计Logo时，注意长隆动物园LOGO需要在智能小程序圆形轮廓展现，设计切图时按钮圆形参考线，预留固定的出血量以确保LOGO的可识别性。
+小程序设计Logo时，注意长隆动物园LOGO需要在智能小程序圆形轮廓展现，设计切图时按照圆形参考线，预留固定的出血量以确保LOGO的可识别性。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/story/arzoo/12.png">

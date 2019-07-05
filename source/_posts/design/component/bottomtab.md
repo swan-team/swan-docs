@@ -5,6 +5,8 @@ nav: component
 sidebar: bottomtab
 ---
 底部标签栏通常用于首页横向视图导航的切换，它始终固定在屏幕底部，不随页面滚动隐藏。
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_tabbar/" target="_blank">设置tabBar</a>。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/bottomtab/1.png">
@@ -80,13 +82,13 @@ sidebar: bottomtab
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/bottomtab/7-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">所有标签图标都一样强，只能通过文字颜色判断当前位置。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">图标在选中态和非选中态无明显区别，只能通过文字颜色判断当前位置。</p>
 	</div>
 </div>
 
 ### 自定义样式
-定义标签栏样式时，请务必关注并保证其的可读性和可用性。
-标签选项的图标和名称在选中态和非选中态时，有响应颜色呼应能使其整体一致性更好。选择合适的容器颜色，保证内容显示清晰。
+定义标签栏样式时，请务必关注并保证可读性和可用性。
+标签选项的图标和名称在选中态和非选中态时，用合适的的颜色区分选中态和非选中态，并且为容器设计适当的背景色，可保证内容显示清晰。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/bottomtab/8-1.png">
@@ -94,7 +96,7 @@ sidebar: bottomtab
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/bottomtab/8-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">图标和选项颜色差别过大，容器与内容样式搭配不当，过多使用高饱和度颜色均会降低阅读舒适度。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">图标与选项名称颜色不统一，容器与元素配色不协调，过多使用高饱和度颜色等，均会降低阅读的舒适度。</p>
 	</div>
 </div>
 
@@ -106,6 +108,6 @@ sidebar: bottomtab
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/bottomtab/9-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">底部标签栏阅读清晰度尚可，但过份抢占注意力，页面头轻脚重。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">底部标签栏颜色过强，造成页面整体头重脚轻的浏览体验。</p>
 	</div>
 </div>

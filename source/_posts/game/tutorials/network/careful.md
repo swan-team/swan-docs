@@ -4,7 +4,7 @@ title: 网络的注意事项
 layout: gamedoc
 categoryName: tutorials
 topic: network
-priority: 07-01
+priority: 09-01
 ---
 
 在小游戏/小游戏中使用网络相关的 API 时，需要注意下列问题，请开发者提前了解。
@@ -17,7 +17,8 @@ priority: 07-01
 
 **超时时间**
 
-- 网络请求默认超时时间 `30s`
+<!--  todo 目前11.8以前双端 game.json 超时时间设置无效，是否应该先把这个描述去掉？-->
+- 网络请求默认超时时间 `60s`。
 - 超时时间可以在 `game.json` 中配置。
 
 ```
@@ -41,7 +42,8 @@ priority: 07-01
 - {appkey}：客户端小游戏的appkey（aps 下发的 appkey，不含调起协议中拼接的下划线），非服务端的小游戏 appid。
 - {version}：为小游戏的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本。
 
-request、uploadFile、downloadFile 的最大并发限制是 10 个；
+<!--  todo 目前request无并发限制，是否应该先把这个描述去掉？-->
+request、uploadFile、downloadFile 的最大并发限制是 10 个。
 
 **返回值编码**
 

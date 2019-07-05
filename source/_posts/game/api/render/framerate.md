@@ -3,7 +3,7 @@ title: 帧率
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-07
+priority: 09-07
 ---
 
 ### swan.setPreferredFramesPerSecond(number fps)
@@ -21,7 +21,7 @@ swan.setPreferredFramesPerSecond(fps);
 
 |参数|类型|描述|
 |-|-|-|
-|fps|number|帧率值，有效范围 1 ~ 60|
+|fps|number|帧率值，有效范围 1~60|
 
 ### requestAnimationFrame()
 

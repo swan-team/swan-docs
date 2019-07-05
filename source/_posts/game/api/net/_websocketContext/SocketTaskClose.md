@@ -1,6 +1,6 @@
 ### socketTask.close()
 
-关闭 WebSocket 连接。
+关闭 WebSocket 连接。注意需要在 webSocket.open 回调之后才能关闭 webSocket 连接。
 
 ```js
 socketTask.close(opts)
@@ -22,9 +22,12 @@ socketTask.close(opts)
 const task = swan.connectSocket({
     url: 'wss://example.baidu.com'
 });
-task.close({
-    code: 1001,
-    reason: 'close reason',
-    success: () => console.log('task 关闭成功')
-});
+
+task.onOpen(() =>{
+    task.close({
+        code: 1001,
+        reason: 'close reason',
+        success: () => console.log('task 关闭成功')
+    });
+}
 ```

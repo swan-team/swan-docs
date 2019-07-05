@@ -3,7 +3,7 @@ title: CanvasRenderingContext2D
 layout: gamedoc
 topic: render
 categoryName: api
-priority: 06-03
+priority: 09-03
 ---
 
 Canvas 的渲染上下文，通过 `canvas.getContext('2d')` 接口可以获取 CanvasRenderingContext2D 对象。CanvasRenderingContext2D 实现了 HTML Canvas 2D Context 定义的大部分属性、方法。

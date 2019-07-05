@@ -17,21 +17,16 @@ priority: 01-02
 - 百度账号密码登录
 
 
- ![图片](/img/game/introduction/prerare/newadd20.jpg)
+ ![图片](/img/game/introduction/prerare/p2.png)
+
+登录后单击“下一步”。
+
+ ![图片](/img/game/introduction/prerare/newadd22.jpg)
 
 #### 主体资质审核
 
 #### 主体类型：
 **媒体**、**企业**、**政府**、**其他组织** 四种主体类型。
-
-**主体类型说明：**
-
-|类型|说明|
-|-|-|
-|媒体|报纸、杂志、电视、电台、通讯社、其他等|
-|企业|企业、个体工商户、企业相关品牌|
-|政府|国内、各级、各类政府机构、事业单位、具有行政职能的社会组织等|
-|其他组织|公共场馆、公益机构、学校、社团、民间组织等机构团体申请|
 
  ![图片](/img/game/introduction/prerare/apply08.png)
 
@@ -68,7 +63,6 @@ priority: 01-02
  ![图片](/img/game/introduction/prerare/newadd16.png)
 4.单击“小程序优惠通道”。
  ![图片](/img/game/introduction/prerare/newadd17.png)
-5.单击开通优惠通道，请于60天内完成至少一个小程序的发布。
+5.单击开通优惠通道，请于 60 天内完成至少一个小程序的发布。
  ![图片](/img/game/introduction/prerare/newadd18.png)
 6.认证完成。
- ![图片](/img/game/introduction/prerare/newadd19.png)

@@ -4,8 +4,12 @@ header: design
 nav: component
 sidebar: dialog
 ---
-提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，原界面加上蒙层以聚焦用户注意力，页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
+提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，蒙层覆盖原界面，以聚焦用户注意力于提示框上，原页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
 综上，请谨慎使用提示框，因为它们会分散用户的注意力，并且打断用户的任务路径。
+
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showModal/" target="_blank">showModal</a>。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/dialog/1.png">
@@ -52,7 +56,7 @@ sidebar: dialog
 </div>
 
 ### 内容
-内容通常作为标题的补充信息，在告知状态、信息和解决方法，表达精简。当表达为陈述词，且只有一句时，句尾不必以句号结尾；措辞时，不可使用强硬语气和标点符号“！”，减少压迫感。
+内容通常作为标题的补充信息，旨在告知状态、信息和解决方法，表达精简。当表达为陈述词，且只有一句时，句尾不必以句号结尾；措辞时，不可使用强硬语气和标点符号“！”，减少压迫感。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/5-1.png">
@@ -84,7 +88,7 @@ sidebar: dialog
 </div>
 
 #### 双操作按钮
-对话框提供2种操作按钮时，必须一个是确定操作，另一个是取消操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见措辞章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“权限暂未开启”，确认按钮为“前往开启”。
+对话框提供2种操作按钮时，必须一个是确定性操作，另一个是取消性或关闭性操作。要关闭对话框，需选择其中一个操作。操作文案使用规范请参见[措辞](../../../design/foundation/writing)章节。用户应该通过标题和按钮就能大致明白提示框的含义，最好在用词上有所呼应，如标题为“新版内测邀请”，确认按钮为“立即体验”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/8-1.png">
@@ -92,7 +96,7 @@ sidebar: dialog
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/dialog/8-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">文案表达模糊，操作区有歧义，“我知道了”应该仅用于关闭对话框。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">文案表达模糊，操作区有歧义。</p>
 	</div>
 </div>
 
@@ -113,7 +117,7 @@ sidebar: dialog
 
 ## 个性定制
 提示框中，可个性定制样式的只有操作区的按钮文案颜色。
-如默认样式所示，我们将“确认”按钮使用更高调显眼的蓝色，“取消”按钮使用低调的黑色，以在视觉展现上有主次之分，引导用户操作。若两个按钮都同等重要，也可以使用同一颜色，此时没有主次之分。
+如默认样式所示，我们将“确认”按钮使用更高调的蓝色，“取消”按钮使用黑色，以在视觉展现上有主次之分，引导用户操作。若两个按钮都同等重要，也可以使用同一颜色，此时没有主次之分。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/10-1.png">
@@ -130,7 +134,7 @@ sidebar: dialog
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/dialog/11-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">需要用户重点关注的不可逆操作，可使用警示红。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">操作选项重要且不可逆，使用红色作为警示。</p>
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/dialog/11-2.png">
@@ -159,7 +163,7 @@ sidebar: dialog
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/dialog/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">红色系常用于表达警示，此时可能使用户紧张。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">红色常用于表达警示，此时可能使用户紧张。</p>
 	</div>
 </div>
 

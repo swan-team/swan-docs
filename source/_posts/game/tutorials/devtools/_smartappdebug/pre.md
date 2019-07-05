@@ -2,9 +2,9 @@
 ### 预览发布
 
 ** 前提条件**
-- 开发者已登录，且在项目成员中。添加项目成员请见：<a href="https://smartprogram.baidu.com/docs/introduction/register_prepare/">开发前准备</a>。
+- 开发者已登录，且在项目成员中。添加项目成员请见：[开发前准备](/game/introduction/prerare/before/)。
 - 填写项目信息时的 AppID 正确。
-此时工具栏会显示预览和发布按钮
+此时工具栏会显示预览和发布按钮。
 
 ![图片](/img/game/tutorials/tool/工具13.png)
 

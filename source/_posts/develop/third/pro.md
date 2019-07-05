@@ -39,7 +39,7 @@ post 数据示例：
   "MsgSignature": "ba394c04acece6c2c0edee058c5dddf82474b8ee"
 }
 ```
-其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/apppage/#附录">附录</a>部分，解密后数据如下：
+其中 Encrypt 参数需要使用 AES 秘钥解密，解密算法见文档最后<a href="https://smartprogram.baidu.com/docs/develop/third/deciphering/">附录</a>部分，解密后数据如下：
 ```json
 {
     "Ticket" : "ticket",  //ticket内容
@@ -70,7 +70,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|
-|client_id|	string|	是|	分配给第三方平台key id。|
+|client_id|	string|	是|	分配给第三方平台的 key 。|
 |ticket	|string	|是|	第三方平台服务器推送的 ticket，此 ticket 会定时推送，具体请见“1、 推荐 ticket协议”。|
 返回值说明
 
@@ -145,13 +145,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 将用户浏览器重定向的如下授权页面，生成授权二维码 。
 页面地址
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://cp01-xstp-otp5-4.epc.baidu.com:8220/mappconsole/main/apps&pre\_auth\_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
 ```
 参数说明
 
 |参数名称|	类型|	是否必须|	描述|
 |---|---|---|---|
-|client_id|	string|	是|	分配给第三方的 client id|
+|client_id|	string|	是|	分配给第三方平台的 key |
 |pre_auth_code	|string	|是	|预授权码|
 |redirect_uri|	string|	是	|回调URI|
 ### 5、授权回调，获取授权码 authorization_code
@@ -232,71 +232,192 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 |---|---|---|
 |error	|string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
-### 8、获取小程序基础信息
 
+### 8、获取小程序基础信息
 接口调用请求说明
+
 ```
 GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOKEN
 ```
-参数说明
 
-|参数名	|类型|	是否必须|	描述|
-|---|---|---|---|
-|access_token|	string|	是|	授权小程序的接口调用凭据|
-返回值说明
+#### 参数说明:
 
-|字段名|	类型|	描述|
-|---|---|---|
-|app_id|	long|	小程序的appid|
-|app_name|	string|	小程序的名称|
-|app_desc|	string|	小程序的介绍内容|
-|photo_addr|	string|	小程序logo|
-|qualification|	object|	小程序账号对应的主体信息|
-|category|	array|	小程序的行业信息|
-|min_swan_version|	string	|开发者工具最低版本|
-|status|	int|	小程序的状态|
-错误情况下:
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token	|string|	是	|授权小程序的接口调用凭据
 
-|字段名	|类型|	描述|
-|---|---|---|
-|errno	|int|	错误码|
-|msg|	string|	错误描述信息，用来帮助理解和解决发生的错误|
-返回值示例
-```js
+
+#### 返回值说明:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+app\_id |int |	小程序的appid
+app\_name |	string |	小程序的名称
+app\_desc |	string |	小程序的介绍内容
+photo\_addr |	string	| 小程序图标
+qualification	 | object	| 小程序账号对应的主体信息
+qualification.name	 | string	| 主体名称
+qualification.type	 | int	| 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放
+qualification.satus	 | int	| 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败
+qualification.ad\_type	 | int	| 高级认证类型 <br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证
+qualification.ad_status	 | int	| 高级认证状态 <br>1：通过 <br>3：失败
+category	| array	| 小程序类目信息
+category.category\_id	|int	| 类目id
+category.category\_name	|string	| 类目名称
+category.reason	|string	| 审核失败原因
+category.audit\_status	|int	| 类目审核状态 <br>1：审核中 <br>2：审核成功 <br>3：审核失败
+category.parent |object	| 父类目
+category.category\_id |int	| 父类目id
+category.category\_name |int	| 父类目名称
+category.category\_desc |int	| 父类目描述
+audit_info| object|基本信息审核状态 包括名称，图标，介绍内容的审核状态 只有审核中和审核失败会展示
+audit\_info.audit\_app\_name\_status | int |小程序名称审核状态 <br>1：审核中 <br>3：审核失败
+audit\_info.audit\_app\_name | int |小程序名称审核值
+audit\_info.audit\_app\_name\_reason | int |小程序名称审核失败原因
+audit\_info.audit\_app\_desc\_status | int |小程序介绍内容审核状态
+audit\_info.audit\_app\_desc | int |小程序介绍内容审核值
+audit\_info.audit\_app\_desc\_reason | int |小程序介绍内容失败原因
+audit\_info.audit\_photo\_addr\_status | int |小程序头像审核状态
+audit\_info.audit\_photo\_addr | int |小程序头像审核值
+audit\_info.audit\_photo\_addr\_reason | int |小程序头像审核失败原因
+modify\_count |object | 小程序基本信息修改次数信息
+modify\_count.name\_modify\_used |int | 小程序名称已修改次数
+modify\_count.name\_modify\_quota | int | 小程序名称总共的可修改次数
+modify\_count.signature\_modify\_used | int | 小程序简介已修改次数
+modify\_count.signature\_modify\_quota | int | 小程序简介总共的可修改次数
+modify\_count.image\_modify\_used | int | 小程序头像已修改总次数
+modify\_count.image\_modify\_quota | int | 小程序头像总共的可修改次数
+modify\_count.category\_modify\_used | int | 小程序类目已修改次数
+modify\_count.category\_modify\_quota | int | 小程序类目总共的可修改次数
+auth_info|array|小程序权限集合信息
+auth_info.scope_name|string|权限名称
+auth_info.type|int|权限类型(0:小程序纬度权限 1:账号纬度权限)
+min\_swan\_version	|string	|开发者工具最低版本
+min\_swan\_version	|string	|开发者工具最低版本
+status	|int	| 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务
+web\_status |int | 小程序的web化开关状态 <br> 0:未开启 <br>1:开启 <br>2:关闭
+ 
+
+
+#### 错误情况下:
+
+字段名 | 类型 | 描述 
+----- |-----| ------
+errno |	int |	错误码
+msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
+
+#### 返回值示例:
+
+```json
 {
-  "errno": 0,
-  "msg": "success",
-  "data": {
-        "app_id": 111111,
-        "app_name": "小程序",
-        "app_desc": "1531812276", //描述
-        "photo_addr": "[{\"cover\":\"https:\\/\\/b.bdstatic.com\\/searchbox\\/mappconsole\\/image\\/20180416\\/1523870283-34303.jpg\"}]",
-        "qualification": {   //主体信息
-            "name": "",  // 主体名称
-            "type": 1, //  主体类型： 1：个人 2 企业 3： 政府 4：媒体  5：其他， 个人暂不开放
-            "satus": 1,  // 0:未操作 1：通过 2：审核中 3：审核失败 4：推送失败
-            "ad_type":  1, // 高级认证类型,0:未做高级认证、1:对公验证、2:活体验证
-            "ad_status": 1  // 高级认证状态,1:通过、3:失败
+	"errno": 0,
+	"msg": "success",
+	"data": {
+		"app_id": 111111,
+		"app_name": "小程序",
+		"app_desc": "1531812276",
+		"photo_addr": "[{\"cover\":\"https:\\/\\/b.bdstatic.com\\/searchbox\\/mappconsole\\/image\\/20180416\\/1523870283-34303.jpg\"}]",
+		"qualification": {
+			"name": "",
+			"type": 1,
+			"satus": 1,
+			"ad_type": 1,
+			"ad_status": 1
+		},
+		 "modify_count": {
+            "name_modify_used": 4,
+            "name_modify_quota": 5,
+            "signature_modify_used": 0,
+            "signature_modify_quota": 5,
+            "image_modify_used": 0,
+            "image_modify_quota": 5,
+            "category_modify_used": 0,
+            "category_modify_quota": 3
         },
-        "category": [   // 行业息息
-            {
-                "category_id": ,   // 二级行业id
-                "category_name": ,   // 二级行业名称
-                "category_desc":,    // 二级行业说明
-                "parent": {     // 一级行业
-                    "category_id": ,  // 一级行业id
-                    "category_name": , // 一级行业名称
-                    "category_desc": // 一级行业说明
-                }
-            }
-        ],
-        "min_swan_version": ,  // 开发者工具最低版本
-        "status":  // -1代表封禁，1代表正常，2代表审核中，4代表暂停服务
-  }
+		"category": [{
+			"category_id": 1,
+			"category_name": "电商",
+			"category_desc": "电商",
+			"reason": "失败原因",
+			"audit_status": 1,
+			"parent": {
+				"category_id": 2,
+				"category_name": "电商",
+				"category_desc": "电商"
+			}
+		}],
+		"audit_info": {
+			"audit_app_name_status": 1,
+			"audit_app_name": "测试中名称",
+			"audit_app_name_reason": "名称审核审核失败原因",
+			"audit_app_desc_status": 3,
+			"audit_app_desc": "测试中描述",
+			"audit_app_desc_reason": "审核审核失败原因",
+			"audit_photo_addr_status": 1,
+			"audit_photo_addr": "xxx",
+			"audit_photo_addr_reason": "头像审核失败原因"
+		},
+		 "auth_info":[
+                    {
+                        "scope_name":"数据权限",
+                        "type":0
+                    },
+                    {
+                        "scope_name":"账号管理权限",
+                        "type":0
+                    },
+                    {
+                        "scope_name":"推广权限",
+                        "type":0
+                    }
+                ],
+		"min_swan_version": "1.6.17",
+		"status": 1,
+		"web_status":1
+	}
 }
 ```
 
-### 9、推送授权相关通知
+
+
+### 9、找回授权码
+为了防止refresh_token丢失后失去小程序的操作权限，增加补充机制，通过原有授权关系直接找回authorization\_code可以再换取access\_token
+
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/auth/retrieve/authorizationcode?access_token=ACCESS_TOKEN
+```
+
+##### 参数说明:
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token	|string |是 | 第三方平台访问凭证
+app_id | int | 是 | 小程序app_id
+
+##### 返回值说明:
+
+| 参数名              | 类型   | 描述           |
+| ------------------- | ------ | -------------- |
+| authorization\_code | string | 授权码         |
+| expires\_in         | int    | 授权码有效时间 |
+
+##### 返回值示例:
+```
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        "authorization_code": "f5a09b58eb2dc01c728182d097808145",
+        "expires_in": 18000
+    }
+}
+```
+
+##### 错误码表
+错误码 | 错误描述 | 
+----- |-----
+50032| 没有授权关系，请检查
+
+### 10、推送授权相关通知
 当小程序对第三方平台进行授权、取消授权、更新授权后，百度服务器会向第三方平台方的授权事件接收URL（创建第三方平台时填写）推送相关通知。
 
 POST数据示例（取消授权通知）
@@ -336,7 +457,7 @@ POST数据示例（授权更新通知）
 }
 ```
 
-第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见【第三方平台的加密解密技术方案】
+第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/develop/third/deciphering/">第三方平台消息加解密</a>。
 
 
 #### 参数说明
