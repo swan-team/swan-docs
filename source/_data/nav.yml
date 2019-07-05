@@ -3169,6 +3169,10 @@
               link: /develop/third/checkname
               text: 名称检测
               name: checkname
+        - sidebar:
+            - link: /develop/third/paymentservice
+              text: 支付服务能力
+              name: paymentservice
         - 
           sidebar:
             - link: /develop/third/datastatistics
