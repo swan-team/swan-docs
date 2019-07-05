@@ -1,9 +1,8 @@
 ---
-title: 常用组件
+title: 创造卓越
 layout: gamedoc
 categoryName: design
 level: root
-draft: true
-topic: component
+topic: guide
 priority: 03-00
 ---

@@ -4,9 +4,8 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-04
+draft: true
 ---
-
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog) 开始支持。
 
 每一帧检测获取到的人脸对象。调用 [DuXRFrameFaceMode#getUpdatedTrackableFaces](/game/api/xr/DuXRFrameFaceMode#getUpdatedTrackableFaces) 返回。通过对象下你可以获取到所有可以用到的人脸部分的数据。
 

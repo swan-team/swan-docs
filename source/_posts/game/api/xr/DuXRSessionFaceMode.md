@@ -4,9 +4,8 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-02
+draft: true
 ---
-
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog) 开始支持。
 
 人脸模式的 XR 会话实例。在 [swan.requestXRSession](/game/api/xr/requestXRSession) 的 `mode` 传入 `'du_face'` 的时候创建。
 
