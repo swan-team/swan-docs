@@ -4,6 +4,12 @@
 
 下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
+#### v2.4.2
+**New Feature**
+- swan.login、swan.authorize、swan.getUserInfo三个API调用时，在调试器中展示**接口使用规范**提示以及相关文档链接
+
+下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）
+
 #### v2.2.3
 **New Feature**
 - 小游戏支持本地广告调试
