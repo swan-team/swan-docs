@@ -39,5 +39,5 @@ POST http://inner.openapi.baidu.com
 **示例代码：**
 
 ```js
-http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
+https://openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
 ``` -->
