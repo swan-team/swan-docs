@@ -1,4 +1,4 @@
-### setUserStorage
+<!-- ### setUserStorage
 
 上报用户数据后台接口。小游戏可以通过本接口上报 key-value 数据到用户的 CloudStorage。
 
@@ -51,4 +51,4 @@ http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_to
 
 1. 每个 swanId 所标识的百度用户，在游戏当中的托管的数据不能超过 128 个 key-value 对。
 2. 上报的 key-value 列表当中每一项的 key+value 长度都不能超过 1024 个字节。
-3. 上报的 key-value 列表当中每一个 key 长度都不能超过 128 字节。
+3. 上报的 key-value 列表当中每一个 key 长度都不能超过 128 字节。 -->

@@ -1,4 +1,4 @@
-### removeUserStorage
+<!-- ### removeUserStorage
 
 小游戏可以通过本接口删除已经上报到微信的 key-value 数据
 
@@ -40,4 +40,4 @@ POST http://inner.openapi.baidu.com
 
 ```js
 http://inner.openapi.baidu.com/rpc/2.0/smartapp/game/removeuserstorage?access_token=24.9d857e2cb7d136933e9a55e49c73e299.2592000.1538053013.282335-11423799
-```
+``` -->
