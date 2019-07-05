@@ -5,8 +5,6 @@ nav: api
 sidebar: base_app_event
 ---
 
-
-
 ## swan.onPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
@@ -30,6 +28,20 @@ sidebar: base_app_event
 **注意:**
 - 开发者可以在回调中进行页面重定向。
 
+**示例代码**
+```js
+// app.js
+App({
+    onLaunch() {
+        swan.onPageNotFound(function(res) {
+            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
+            swan.redirectTo({
+                url: 'path/to/otherPage'
+            });
+        });
+    };
+});
+```
 
 ## swan.onError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
@@ -45,6 +57,18 @@ sidebar: base_app_event
 
 **Object error**
 错误信息，包含堆栈。
+
+**示例代码**
+```js
+// app.js
+App({
+    onLaunch() {
+        swan.onError(function(errMsg) {
+            console.log(errMsg);
+        });
+    };
+});
+```
 
 ## swan.onAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
@@ -85,6 +109,18 @@ sidebar: base_app_event
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|
 
+**示例代码**
+```js
+// app.js
+App({
+    onLaunch() {
+        swan.onAppShow(function(res) {
+            console.log(res);
+        });
+    }
+});
+```
+
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
@@ -102,8 +138,20 @@ sidebar: base_app_event
 **function callback**
 小程序切后台事件的回调函数。
 
+**示例代码**
+```js
+// app.js
+App({
+    onLaunch() {
+        swan.onAppHide(function(res) {
+            console.log(res);
+        });
+    }
+});
+```
 
-## swan.onAppoffPageNotFoundHide
+
+## swan.offPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
 取消监听小程序要打开的页面不存在事件。
@@ -112,6 +160,24 @@ sidebar: base_app_event
 
 **function callback**
 小程序要打开的页面不存在事件的回调函数。
+
+**示例代码**
+```js
+// app.js
+var pageNotFoundCb = function(res) {
+    console.log(res);
+};
+
+App({
+    onLaunch() {
+        swan.onPageNotFound(pageNotFoundCb);
+    },
+    // 例如在appHide时取消监听，可根据业务逻辑选择取消监听时机
+    offHide() {
+        swan.offPageNotFound(pageNotFoundCb);
+    }
+});
+```
 
 ## swan.offError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
@@ -123,32 +189,77 @@ sidebar: base_app_event
 **function callback**
 小程序错误事件的回调函数。
 
+**示例代码**
+```js
+// app.js
+var errorCb = function(res) {
+    console.log(res);
+};
+
+App({
+    onLaunch() {
+        swan.onError(errorCb);
+    },
+    // 例如在appHide时取消监听，可根据业务逻辑选择取消监听时机
+    onHide() {
+        swan.offError(errorCb);
+    }
+});
+```
 
 ## swan.offAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
 取消监听小程序切前台事件。
 
-
-
 **参数**
 
 **function callback**
 小程序切前台事件的回调函数。
 
+**示例代码**
+```js
+// app.js
+var appShowCb = function(res) {
+    console.log(res);
+};
+
+App({
+    onLaunch() {
+        swan.onAppShow(appShowCb);
+    },
+    // 例如在appHide时取消监听，可根据业务逻辑选择取消监听时机
+    onHide() {
+        swan.offAppShow(appShowCb);
+    }
+});
+```
+
 
 ## swan.offAppHide
-
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
 取消监听小程序切后台事件。
-
-
 
 **参数**
 
 **function callback**
 小程序切后台事件的回调函数。
 
+```js
+// app.js
+var appHideCb = function(res) {
+    console.log(res);
+};
 
+App({
+    onLaunch() {
+        swan.onAppHide(appHideCb);
+    },
+    // 例如在appHide时取消监听，可根据业务逻辑选择取消监听时机
+    onHide() {
+        swan.offAppHide(appHideCb);
+    }
+});
+```
 

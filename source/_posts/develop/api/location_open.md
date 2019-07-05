@@ -6,7 +6,7 @@ sidebar: location_open
 ---
 ## swan.openLocation
 
-**解释**：使用百度 App 内置地图查看位置。
+**解释**：使用宿主 App 内置地图查看位置。
 
 **方法参数**：Object object
 

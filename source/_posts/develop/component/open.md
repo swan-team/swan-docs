@@ -8,13 +8,16 @@ sidebar: open
 
 ## open-data
 
-<text><text class="notice">解释:</text>用于展示百度 App 开放的数据。</text><div></div><text class="notice">属性说明:</text>
+**解释：**用于展示百度 App 开放的数据。
 
-| 属性名 | 类型     | 默认值  | 说明              |
-| --- | ------ | ---- | --------------- |
-| type | String | | 开放数据类型 |
+**属性说明：**
 
-**type 有效值:**:
+
+| 属性名 | 类型     | 默认值  | 必填 |说明              |
+| --- | ------ | ---- | --------------- |---- |
+| type | String | | 是 |开放数据类型 |
+
+**type 有效值:**
 
 | 值 | 说明 |
 |--- |----- |
@@ -115,12 +118,15 @@ sidebar: open
 ## web-view
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
+
+
 **属性说明:**
 
-| 属性名 | 类型     | 默认值  | 说明              | 最低版本              |
-| --- | ------ | ---- | ---- |---- |
-| src | String |  | webview 指向网页的链接 |-|
-|bindmessage|EventHandler| |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
+| 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
+| --- | ------ | ---- | ---- |---- |---- |
+| src | String |  | 是 |webview 指向网页的链接 |-|
+|bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
+
 
 **示例**：
 <a href="swanide://fragment/ac090bcb0bfd8aca1b9d47c7c854c6271560838933592" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -179,24 +185,24 @@ Page({
 
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
 
-| 接口名               | 说明         |
-| ----------------- | ---------- |
-| swan.webView.navigateTo   | 参数与智能小程序接口一致 |
-| swan.webView.navigateBack | 参数与智能小程序接口一致 |
+> 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
+
+| 接口名               | 说明         | 
+| ----------------- | ---------- | 
+| swan.webView.navigateTo   | 参数与智能小程序接口一致 | 
+| swan.webView.navigateBack | 参数与智能小程序接口一致 | 
 | swan.webView.switchTab    | 参数与智能小程序接口一致 |
 | swan.webView.reLaunch     | 参数与智能小程序接口一致 |
 | swan.webView.redirectTo   | 参数与智能小程序接口一致 |
 | swan.webView.getEnv   | 获取当前环境 |
 | swan.webView.postMessage   | 向小程序发送消息 |
 
-> 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
-
 **示例**：
 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.8.js"></script>
 ```
 
 ```javascript
@@ -241,13 +247,6 @@ Page({
 ```
 
 
-**Bug & Tip**：
-
-* 网页内 iframe 的域名也需要配置到域名白名单。
-* 每个页面只能有一个 <`web-view/`> ，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
-* 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
-* 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
-* 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
 
 ### 使用 web-view 打开限定域名内的网页
 
@@ -265,3 +264,11 @@ Page({
         <img src=" ">
     </div>
 </div>
+
+**Bug & Tip:**
+
+* 网页内 iframe 的域名也需要配置到域名白名单。
+* 每个页面只能有一个 <`web-view/`> ，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
+* 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
+* 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
+* 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。

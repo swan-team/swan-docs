@@ -205,7 +205,6 @@ function update() {
 |属性|类型|描述|
 |-|-|-|
 |res|Object|回调函数参数对象|
-|res.systemAuthorized|boolean|是否有系统相机权限|
 |res.appAuthorized|boolean|是否有小游戏相机权限|
 
 ### offAuthorizationChange()
