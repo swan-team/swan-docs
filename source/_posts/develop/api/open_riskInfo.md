@@ -17,13 +17,13 @@ sidebar: open_riskInfo
 |----|----|----|----|----|
 |success|Function|否|-|接口调用成功的回调函数|
 |fail|Function|否|-|接口调用失败的回调函数|
-|complete|Function|否|-|接口调用结束的回调函数（调用成功、失败都会执行|
+|complete|Function|否|-|接口调用结束的回调函数（调用成功、失败都会执行)|
 
 **success返回参数说明**：
 
 |参数|类型|说明|
 |----|----|----|
-|content|Object|用于获取风控信息的加密信息对象|
+|content|Object|用于获取风控信息的加密信息对象，content 使用方式详见 [风控检测说明](/develop/serverapi/open_risk_power/#detectrisk/)|
 
 **示例**：
 
