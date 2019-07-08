@@ -98,7 +98,6 @@ hexo.extend.generator.register('search', function (locals) {
             resBreadCrumbs.push(navItem);
         }
     }
-    
     function generateNav(nav, breadCrumbs, index) {
         index++;
         nav.forEach(function (na) {
@@ -125,7 +124,6 @@ hexo.extend.generator.register('search', function (locals) {
             isNav: true
         };
     });
-    
     const json = JSON.stringify([...resBreadCrumbs, ...res]);
 
     return {
