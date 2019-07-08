@@ -2828,7 +2828,7 @@
                   -
                     link: /develop/serverapi/open_feed/#deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap          
+                    name: open_feed_deletesitemap        
               -
                 link: /develop/serverapi/open_infomation
                 text: 模板消息
@@ -2877,7 +2877,11 @@
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
-                name: power_exp                             
+                name: power_exp     
+              -
+                link: /develop/serverapi/open_risk_power/#detectrisk
+                text: 风控能力
+                name: open_risk_power                           
     -
       link: /develop/devtools/page
       text: 工具
