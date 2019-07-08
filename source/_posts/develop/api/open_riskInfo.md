@@ -23,7 +23,7 @@ sidebar: open_riskInfo
 
 |参数|类型|说明|
 |----|----|----|
-|content|Object|用于获取风控信息的加密信息对象，content 使用方式详见 [风控检测说明](/develop/serverapi/open_risk_power/#detectrisk/)|
+|content|Object|用于获取风控信息的加密信息对象。要获取风控信息，需要和[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口联合使用，并作为[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口的 xtoken 参数传入。|
 
 **示例**：
 
