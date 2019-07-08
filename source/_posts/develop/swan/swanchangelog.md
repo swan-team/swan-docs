@@ -17,7 +17,7 @@ sidebar: swanchangelog
 |----|----|----|
 |3.70.20|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
-|3.70.2|2019.6.5|**New**<p>**·**textarea 支持 confirm-type 的功能；<p>**·**textarea 增加 confirmType。<p>**BugFix**<p>修复s-if自定义组件扩展样式失效的问题。|
+|3.70.2|2019.6.5|**New**<p>textarea 支持 confirm-type 的功能。<p>**BugFix**<p>修复s-if自定义组件扩展样式失效的问题。|
 
 ## 3.60 版本日志更新
 
