@@ -22,6 +22,30 @@ A：建议使用 webview 组件实现相关功能，请勿频繁使用setData操
 
 A：暂不支持。
 
+####  Q：百度小程序里面可以和微信小程序一样使用rpx嘛？
+
+A：支持的。
+
+####  Q：请问如何设置首页背景图刚好铺满屏幕？
+
+A：可以按照以下设置方式进行尝试：
+	给body标签指定背景图，这样背景图就可以填充整个浏览器viewport了
+
+代码片段：
+```
+body{
+	margin: 0; 
+	background: url("xxx图片地址") no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+}
+```
+>注意：
+1.为了使背景图片的宽高不小于容器的宽高，需设置background-size: cover;进行填充，如果背景图小于body标签的尺寸，浏览器会拉伸图片。当把一个图片拉伸时，图片会变模糊，所以在选择背景图片时，宽高要大一些。
+2.为了让背景图始终相对于viewport居中，需设置background-position: center center;
+3.当内容的高度大于viewport的高度时，会出现滚动条。希望背景图始终相对于viewport固定，即使用户滚动时也是一样，解决方案：background-attachment: fixed;
+
 ## API & 组件
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？
@@ -125,6 +149,29 @@ A：不支持
 
 A：不支持，小程序API提供的弹窗暂时都不支持插入图片，可自行写弹层逻辑，注意，自己写的弹层底部的的蒙层是盖不住顶bar(标题栏)。
 
+####  Q：百度小程序支持导航吗？或是支持调起其它导航APP?
+
+A：不支持导航，可以使用openLocation 打开宿主app内置的地图导航。
+
+#### Q：百度小程序如何获取用户IP地址？
+
+A：暂时不支持。
+
+#### Q：dataset数据为空时，返回布尔值true？
+
+A：[已知情况](https://github.com/baidu/san/commit/b4b044cfa27782e524995278809b3d8a9fb3b193)，小程序底层框架是基础 `san`, `san` 里面有个为开发者提供便利性的处理：对没有 `value` 声明的 `attr`，默认为`true`。
+```
+<!-- child 组件中，data strong为true -->
+<child strong>text</child>
+```
+不过，这个处理并不区分空串声明和无value声明。因为：
+
+- 基本，组件的数据绑定都是表达式
+- 空串一般做为组件某数据项的默认值，通过initData达到。除非必须区分null、undefined和空串，否则基本不会这么用。
+所以，如果非要传空串，可以采用如下方法：
+```
+attr1="{{''}}"
+```
 
 ## Web 化
 
@@ -210,17 +257,11 @@ A：不支持
 
 A：打开开发者工具，选择"添加编译"，可以自定义"页面路径"、"页面参数"等编译参数，用自定义的编译模式来预览，就可以带上特定的query了。
 
-<!-- ## 其它
+####  Q：工具上调试查看h5数据的方法是什么？
 
-#### Q：手百从哪个版本支持小程序？
+A：在chrome中打开web化地址，使用chrome自带开发者工具查看。
 
-A：
+####  Q：什么情况下会提示 捕捉到白屏case？
 
-#### Q：如何设置基础库最低版本？
+A：白屏检测检测当小程序大面积白屏的时候会捕捉到。
 
-A：
-
-
-#### Q：小程序版本设置过高的表现是什么？
-
-A：兼容性，升级提示 -->

@@ -23,6 +23,7 @@ sidebar: open_smartprogram
 |success | Function |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|envVersion	|String	|否|release|	要打开的小程序版本。|
 
 **示例**：
 
@@ -91,7 +92,7 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|extraData | Object | 否 | -| 需要返回给上一个小程序的数据，上一个小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|
+|extraData | Object | 否 | -| 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](http://smartapp.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
 |success | Function |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|

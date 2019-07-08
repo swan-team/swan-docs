@@ -62,6 +62,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
@@ -273,6 +274,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_setting/#swan-getSetting/">swan.getSetting</a>|获取用户的当前设置|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#onShareAppMessage/">onShareAppMessage</a>|详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#swan-openShare/">swan.openShare</a>|调起分享面板|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#swan-shareFile/">swan.shareFile</a>|支持调起系统分享面板将文件分享到其他App。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/">swan.chooseAddress</a>|调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_payment/#swan-requestPolymerPayment/">swan.requestPolymerPayment</a>|百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|

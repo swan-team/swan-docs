@@ -21,9 +21,9 @@ sidebar: device_network
 
 **success返回参数说明**：
 
-|参数  |说明 |
-|---- | ---- |
-|networkType |网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
+|参数  |类型|说明 |
+|---- | ---- |---|
+|networkType |String|网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
 
 **示例**：
 <a href="swanide://fragment/33d64ae36aaded38bb0fe1d67da68a831560168350301" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

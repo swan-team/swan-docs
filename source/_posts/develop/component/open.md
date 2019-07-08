@@ -202,7 +202,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 ```xml
 <!-- html -->
 
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.8.js"></script>
+<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.12.js"></script>
 ```
 
 ```javascript
