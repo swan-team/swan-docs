@@ -2674,6 +2674,16 @@
                     name: open_payment_swan-requestPolymerPayment
 
               -
+                link: /develop/api/open_community
+                text: 社区发布器
+                name: open_community
+                sidebar:
+                  -
+                    link: /develop/api/open_community/#swan-requestPolymerPayment
+                    text: swan.openCommunityEditor
+                    name: open_community_swan-openCommunityEditor
+
+              -
                 link: /develop/api/open_chooseinvoicetitle
                 text: 获取发票抬头
                 name: open_chooseinvoicetitle
