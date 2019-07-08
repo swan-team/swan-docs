@@ -2880,7 +2880,7 @@
                 name: power_exp     
               -
                 link: /develop/serverapi/open_risk_power/#detectrisk
-                text: 风控能力
+                text: 风控检测说明
                 name: open_risk_power                           
     -
       link: /develop/devtools/page

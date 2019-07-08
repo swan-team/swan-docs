@@ -1,5 +1,5 @@
 ---
-title: 风控监控
+title: 风控检测说明
 header: develop
 nav: serverapi
 sidebar: open_risk_power
