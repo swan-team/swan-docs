@@ -139,7 +139,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create?access_token
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -214,7 +214,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit?access
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -268,7 +268,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?acces
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -336,7 +336,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update?acces
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -384,7 +384,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -429,7 +429,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -471,7 +471,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 
 POST数据示例（审核成功）：
 
-```
+```json
 {
     "appId": 小程序appid,
     "tpAppId": 第三方平台appid,
@@ -482,7 +482,7 @@ POST数据示例（审核成功）：
 
 POST数据示例 （审核失败）：
 
-```
+```json
 {
     "appId": 小程序appid,
     "tpAppId": 第三方平台appid,
@@ -537,7 +537,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -626,7 +626,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -724,7 +724,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -821,7 +821,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -844,10 +844,11 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
                 "third_order_id":"ZD1558452482151801759"
             }
             ],
-     "rule_type":"{"commisionLadder":"0.00-9,223,372,036,854,775.00,0.60%;","marketing":"营销模式","marketingLadder":"","fixedCostLadder":"","fixedCost":"固定费用","commision":"分佣模式"}",
+     "rule_type":"{\"commisionLadder\":\"0.00-9,223,372,036,854,775.00,0.60%;\",\"marketing\":\"营销模式\",\"marketingLadder\":\"\",\"fixedCostLadder\":\"\",\"fixedCost\":\"固定费用\",\"commision\":\"分佣模式\"}",
      "settlement_start_time":"2019-05-03 00:00:00",
      "settlement_end_time":"2019-06-28 00:00:00"
      }
+}
 ```
 
 ### 4.5 支出列表
@@ -893,7 +894,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -981,7 +982,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
