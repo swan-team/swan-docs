@@ -125,12 +125,37 @@
               -
                 link: /introduction/accessfeed
                 text: 接入信息流流量 
-                name: accessfeed                
+                name: accessfeed
+                sidebar:
+                  -
+                    link: /introduction/accessfeed/#小程序发布上线
+                    text: 小程序发布上线
+                    name: accessfeed_小程序发布上线
+                  -
+                    link: /introduction/accessfeed/#素材上传
+                    text: 素材上传 
+                    name: accessfeed_素材上传
+                  -
+                    link: /introduction/accessfeed/#素材审核
+                    text: 素材审核 
+                    name: accessfeed_素材审核
+                  -
+                    link: /introduction/accessfeed/#素材优化建议
+                    text: 素材优化建议 
+                    name: accessfeed_素材优化建议
+                  -
+                    link: /introduction/accessfeed/#流量效果监控
+                    text: 流量效果监控
+                    name: accessfeed_流量效果监控
+
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
-            
+              -
+                link: /introduction/auditing_faq
+                text: 信息流流量接入FAQ
+                name: auditing_faq            
         -
             link: /introduction/intro
             text: 自然搜索结果流量接入
@@ -2813,6 +2838,11 @@
                 text: 信息流资源
                 name: open_feed
                 sidebar:
+                  
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料提交简介
+                    text: 信息流物料提交简介
+                    name: open_feed_信息流物料提交简介
                   -
                     link: /develop/serverapi/open_feed/#submitresource
                     text: submitresource
@@ -2828,7 +2858,19 @@
                   -
                     link: /develop/serverapi/open_feed/#deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap          
+                    name: open_feed_deletesitemap                          
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料投放具体字段
+                    text: 信息流物料投放具体字段
+                    name: open_feed_信息流物料投放具体字段    
+                  -
+                    link: /develop/serverapi/open_feed/#信息流字段附录
+                    text: 信息流字段附录
+                    name: open_feed_信息流字段附录 
+                  -
+                    link: /develop/serverapi/open_feed/#常见问题
+                    text: 常见问题
+                    name: open_feed_常见问题                                                             
               -
                 link: /develop/serverapi/open_infomation
                 text: 模板消息
