@@ -76,16 +76,25 @@ swan.openCommunityEditor({
     contentPlaceholder: '在这里编辑正文',
     titlePlaceholder: '在这里编辑标题',
     moduleList: ['image', 'title', 'emoji'],
-    imgUploadUrl: 'https://xxx.xx/upload?userinfo=xxxx',
     imgParame: {
         maxNum: 3,
         ratio: 0.5
     },
-    conUploadUrl: 'https://xxx.xx/uploadcon?userinfo=xxxx',
     navBarTitleText: '社区文章发布器',
-    emojiPath: '../../emojidata'
+    emojiPath: '../../emojidata',
     success: function (res) {
-
+        swan.uploadFile({
+            url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+            filePath: res.tempFilePaths[0], // 要上传文件资源的路径
+            name: 'myfile',
+            success: function (res) {
+                console.log(res.statusCode);
+            },
+            fail: function (err) {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     },
     fail: function (err) {
 
@@ -93,3 +102,41 @@ swan.openCommunityEditor({
 })
 ```
 
+## swan.closeCommunityEditor
+
+**解释**： 关闭社区发布器
+
+**方法参数**：Object object
+
+**emojiPath 参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success  |  Function  | 否 | -|发布成功的回调函数|
+|fail  |  Function  | 否 | -|发布失败的回调函数|
+|complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+```js
+swan.openCommunityEditor({
+    contentPlaceholder: '在这里编辑正文',
+    titlePlaceholder: '在这里编辑标题',
+    moduleList: ['image', 'title', 'emoji'],
+    imgParame: {
+        maxNum: 3,
+        ratio: 0.5
+    },
+    navBarTitleText: '社区文章发布器',
+    emojiPath: '../../emojidata'
+    success: function (res) {
+        swan.closeCommunityEditor({
+            success: function (res) {
+                console.log('发布成功，关闭发布器');
+            }
+        });
+    },
+    fail: function (err) {
+
+    }
+})
+```

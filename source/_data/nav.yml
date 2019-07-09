@@ -2679,10 +2679,14 @@
                 name: open_community
                 sidebar:
                   -
-                    link: /develop/api/open_community/#swan-requestPolymerPayment
+                    link: /develop/api/open_community/#swan-openCommunityEditor
                     text: swan.openCommunityEditor
                     name: open_community_swan-openCommunityEditor
-
+                  -
+                    link: /develop/api/open_community/#swan-closeCommunityEditor
+                    text: swan.closeCommunityEditor
+                    name: open_community_swan-closeCommunityEditor
+                    
               -
                 link: /develop/api/open_chooseinvoicetitle
                 text: 获取发票抬头
