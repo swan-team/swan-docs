@@ -35,6 +35,15 @@ sidebar: open_editor
 |fail  |  Function  | 否 | -|发布失败的回调函数|
 |complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**success返回参数说明**：
+
+|参数名 |类型 | 说明|
+|---- | ---- | ---- |
+| tempFiles|Array | 图片临时地址 |
+| title | String | 标题 |
+| content | String | 正文 |
+
+
 **moduleList 列表**：
 若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
 如：`moduleList: ['image']` 则只展示图片模块。
