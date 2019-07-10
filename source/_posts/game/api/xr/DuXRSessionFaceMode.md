@@ -74,7 +74,6 @@ function update() {
 |videoHeight|number|同 height|
 
 
-
 ### getFrame()
 
 返回当前帧的 [DuXRFrameFaceMode](/game/api/xr/DuXRFrameFaceMode/) 对象。通过该对象你可以获取到当前帧检测到的人脸以及特征点，骨骼的变换矩阵等所有人脸相关的数据。
@@ -99,7 +98,7 @@ function update() {
 
 小游戏底层的人脸算法在特征点的基础上会计算出面部骨骼的变换，这个骨骼是三维渲染中的蒙皮动画的概念，这些骨骼的变换会驱动三维模型中顶点的变换，从而实现模型的动画效果。
 
-这个方法可以获取骨骼父子关系和节点名字的描述信息。配合 [DuXRFace#skeleton.jointPoseMatrices](game/api/xr/DuXRFace/#skeleton) 更新在骨骼的矩阵数据的时候使用。
+这个方法可以获取骨骼父子关系和节点名字的描述信息。配合 [DuXRFace#skeleton.jointPoseMatrices](/game/api/xr/DuXRFace/#skeleton) 更新在骨骼的矩阵数据的时候使用。
 
 
 **注：**
