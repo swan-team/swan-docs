@@ -12,40 +12,36 @@ sidebar: contact
 
 ## 客服消息入口
 
-1.   开发者在小程序内添加客服组件（超链跳转至开发文档-"在页面中使用客服消息"处）后，用户可在小程序内唤起客服会话页面，给小程序发消息；
+1.   开发者在小程序内添加客服功能（参考[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#在页面中使用客服消息/)）后，用户可在小程序内唤起客服会话页面，给小程序发消息；
 
 2.  已使用过的小程序客服消息会聚合显示在手机百度消息中心 “小程序客服消息”文件夹内，用户可以在此处查看历史客服消息，并给小程序客服发消息。
 
-
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/contact/1.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/contact/2.gif">
+        <img src="../../img/introduction/contact/1.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>    
 </div>
 
-
+![图片](../../img/introduction/contact/2.png)
 
    
 
-## **消息下发条件**
+## 消息下发条件
 
 当用户向小程序客服发送消息后，48小时内，小程序客服最多可以向开发者发送5调消息，可发送客服消息条数不累加，上述用户动作会触发可下发条数及可下发时限的更新，可下发消息条数更新为当前可下发条数限制的最大值，有效下发时间限制也更新为最长有效时间。
 
  
 
-## **消息支持的类型**
+## 消息支持的类型
 
 目前支持文本及图片类型消息
 
 
 
-## **客服支持的接入类型**
+## 客服支持的接入类型
 
 目前仅支持消息转发：通过配置消息推送及调用发送客服消息接口进行消息上下行联通。我们将不断优化，支持更多类型的接入。
 

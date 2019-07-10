@@ -158,7 +158,7 @@ sidebar: contact_api
 
 本接口应在服务器端调用。
 
-发送客服消息给用户。详细规则见 [消息下发条件](www.baidu.com)
+发送客服消息给用户。详细规则见 [消息下发条件](http://smartprogram.baidu.com/docs/introduction/contact/#消息下发条件)
 
 ```
 post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/send
