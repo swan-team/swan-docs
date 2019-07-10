@@ -69,7 +69,6 @@ imageConf: {
 }
 ```
 
-
 **emojiPath 参数说明**：
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
@@ -79,7 +78,12 @@ imageConf: {
 ![图片](../../../img/api/community_editor/emoji_path.jpg)
 `emoji.json` 格式：
 ![图片](../../../img/api/community_editor/emoji_json.jpg)
+
+
 **示例**：
+
+<a href="swanide://fragment/31604f4bbfc86a85e3fa313ec8c451461562738957458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 swan.openCommunityEditor({
     contentPlaceholder: '在这里编辑正文',
@@ -92,12 +96,15 @@ swan.openCommunityEditor({
     navBarTitleText: '社区文章发布器',
     emojiPath: '../../emojidata',
     success: function (res) {
+        console.log('openCommunityEditor success', res);
         swan.uploadFile({
             url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
             filePath: res.tempFilePaths[0], // 要上传文件资源的路径
             name: 'myfile',
             success: function (res) {
                 console.log(res.statusCode);
+                // 上传成功关闭发布器
+                swan.closeCommunityEditor();
             },
             fail: function (err) {
                 console.log('错误码：' + err.errCode);
@@ -106,7 +113,7 @@ swan.openCommunityEditor({
         });
     },
     fail: function (err) {
-
+        console.log('openCommunityEditor fail', err);
     }
 })
 ```
@@ -138,6 +145,7 @@ swan.openCommunityEditor({
     navBarTitleText: '社区文章发布器',
     emojiPath: '../../emojidata'
     success: function (res) {
+        console.log('openCommunityEditor success', res);
         swan.closeCommunityEditor({
             success: function (res) {
                 console.log('发布成功，关闭发布器');
@@ -145,7 +153,7 @@ swan.openCommunityEditor({
         });
     },
     fail: function (err) {
-
+        console.log('openCommunityEditor fail', err);
     }
 })
 ```
