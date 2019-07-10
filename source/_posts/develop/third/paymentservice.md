@@ -19,7 +19,7 @@ sidebar: paymentservice
 |获取创建支付服务的数据字典|数据字典返回的内容包含了四部分的内容：开户省市信息、开户银行信息、佣金比例、结算周期。后续一些接口的调用需要传递的值，需要来源于这个数据字典。|
 |创建支付账号|创建支付账号是开通支付服务的第一步。完成该步的标志是支付账号创建成功并且状态为审核通过。包括创建支付账号及支付账号创建状态查询两个接口。|
 |提交开发者信息|开发者信息设置是创建支付服务的第二步，创建支付服务要求开发者设置必须存在。|
-|创建支付服务|创建支付服务是开通支付服务的最后一步，要求进行该步之前，开通支付账号、开发者信息设置必须完成。包括创建并绑定支付服务、支付服务创建状态查询、更新支付服务部分信息（不需要审核）、更新支付服务全部信息（需要审核、获取绑定的支付服务信息五个接口。|
+|创建支付服务|创建支付服务是开通支付服务的最后一步，要求进行该步之前，开通支付账号、开发者信息设置必须完成。相关接口包括创建并绑定支付服务、支付服务创建状态查询、更新支付服务部分信息（不需要审核）、更新支付服务全部信息（需要审核）、获取绑定的支付服务信息五个接口。|
 |审核消息推送|本功能的消息推送，推送目标为已被小程序授予支付服务权限的TP平台，推送地址为授权后的消息与事件接收URL。|
 
 当完成上述的步骤，开发者就可以调用以下接口获取支付信息数据了。目前提供以下信息接口数据：
@@ -28,7 +28,7 @@ sidebar: paymentservice
 
 |接口功能|接口说明|
 |--|--|
-|支付数据|包括支付订单流水列表、支付收入列表、支付收入贷款列表、支付收入其他款项列表、支出列表、支付打款详情六个接口。|
+|支付数据|包括支付订单流水列表、支付收入列表、支付收入货款列表、支付收入其他款项列表、支出列表、支付打款详情六个接口。|
 
 **5. 错误码列表**
 
@@ -139,7 +139,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create?access_token
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -214,7 +214,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit?access
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -268,7 +268,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?acces
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -336,7 +336,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update?acces
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -384,7 +384,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 
 **返回值示例**
 
-```
+```json
 {"errno":0,"msg":"success"}
 ```
 
@@ -429,7 +429,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -471,7 +471,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 
 POST数据示例（审核成功）：
 
-```
+```json
 {
     "appId": 小程序appid,
     "tpAppId": 第三方平台appid,
@@ -482,7 +482,7 @@ POST数据示例（审核成功）：
 
 POST数据示例 （审核失败）：
 
-```
+```json
 {
     "appId": 小程序appid,
     "tpAppId": 第三方平台appid,
@@ -537,7 +537,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -626,7 +626,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -724,7 +724,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -803,7 +803,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | 参数名称              | 类型   | 说明                                                         |
 | --------------------- | ------ | ------------------------------------------------------------ |
 | data                  | List   | 收入列表详情数据。                                           |
-| order_amount          | String | 贷款总额（元）。                                             |
+| order_amount          | String | 货款总额（元）。                                             |
 | rule_type             | String | 规则类型。收费规则，目前只有佣金模式。                       |
 | settlement_end_time   | String | 账单周期结束时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
 | settlement_start_time | String | 账单周期开始时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
@@ -821,7 +821,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -844,10 +844,11 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
                 "third_order_id":"ZD1558452482151801759"
             }
             ],
-     "rule_type":"{"commisionLadder":"0.00-9,223,372,036,854,775.00,0.60%;","marketing":"营销模式","marketingLadder":"","fixedCostLadder":"","fixedCost":"固定费用","commision":"分佣模式"}",
+     "rule_type":"{\"commisionLadder\":\"0.00-9,223,372,036,854,775.00,0.60%;\",\"marketing\":\"营销模式\",\"marketingLadder\":\"\",\"fixedCostLadder\":\"\",\"fixedCost\":\"固定费用\",\"commision\":\"分佣模式\"}",
      "settlement_start_time":"2019-05-03 00:00:00",
      "settlement_end_time":"2019-06-28 00:00:00"
      }
+}
 ```
 
 ### 4.5 支出列表
@@ -893,7 +894,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",
@@ -981,7 +982,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 **返回值示例**
 
-```
+```json
 {
     "errno":0,
     "msg":"success",

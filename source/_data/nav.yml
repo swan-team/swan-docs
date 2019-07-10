@@ -1429,7 +1429,7 @@
                     -
                       link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
                       text: backgroundAudioManager.onPrev
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev                      
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -3131,6 +3131,18 @@
         -
           sidebar:
             -
+              link: /develop/third/create
+              text: 第三方平台创建指南
+              name: create
+        -
+          sidebar:
+            -
+              link: /develop/third/develop
+              text: 第三方平台开发指南
+              name: develop
+        -
+          sidebar:
+            -
               link: /develop/third/pro
               text: 授权流程
               name: pro
@@ -3140,7 +3152,6 @@
               link: /develop/third/module
               text: 模板管理
               name: module
-
         -
           sidebar:
             -
@@ -3169,36 +3180,34 @@
           sidebar:
             -
               link: /develop/third/login
-              text: TP代授权小程序登录
+              text: 授权小程序登录
               name: login
-        -
-          sidebar:
-            -
-              link: /develop/third/address
-              text: 修改服务器地址
-              name: address
-        -
-          sidebar:
-            -
-              link: /develop/third/checkname
-              text: 名称检测
-              name: checkname
+
         - sidebar:
-            - link: /develop/third/paymentservice
+            -
+              link: /develop/third/paymentservice
               text: 支付服务能力
               name: paymentservice
-        - 
-          sidebar:
+
+        - sidebar:
             - link: /develop/third/datastatistics
               text: 数据统计分析
               name: datastatistics
-        -
 
-          sidebar:
-            -
-              link: /develop/third/error
-              text: 通用错误码对照表
-              name: error
+        - sidebar:
+            - link: /develop/third/domain
+              text: 设置第三方服务/业务域名
+              name: domain
+
+        - sidebar:
+            - link: /develop/third/sitemap
+              text: 流量配置
+              name: sitemap
+
+        - sidebar:
+            - link: /develop/third/customer
+              text: 高级认证
+              name: customer
         -
           sidebar:
             -
