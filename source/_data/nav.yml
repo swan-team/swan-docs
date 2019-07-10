@@ -246,7 +246,18 @@
               -
                 link: /introduction/pay
                 text: 百度收银台支付开通指引
-                name: pay                               
+                name: pay  
+    -
+      link: /introduction/contact
+      text: 客服功能接入
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/contact
+                text: 客服功能接入说明
+                name: contact                                             
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -2915,7 +2926,28 @@
                   -
                     link: /develop/serverapi/open_infomation/#sendTemplateMessage
                     text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage   
+                    name: open_infomation_sendTemplateMessage  
+              -
+                link: /develop/serverapi/contact_api
+                text: 客服消息
+                name: contact_api
+                sidebar:
+                  -
+                    link: /develop/serverapi/contact_api/#消息推送介绍
+                    text: 消息推送介绍
+                    name: contact_api_消息推送介绍
+                  -
+                    link: /develop/serverapi/contact_api/#在页面中使用客服消息
+                    text: 在页面中使用客服消息
+                    name: contact_api_在页面中使用客服消息                 
+                  -
+                    link: /develop/serverapi/contact_api/#后台接入消息服务
+                    text: 后台接入消息服务
+                    name: contact_api_后台接入消息服务                    
+                  -
+                    link: /develop/serverapi/contact_api/#发送客服消息接口
+                    text: 发送客服消息接口
+                    name: contact_api_发送客服消息接口
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
