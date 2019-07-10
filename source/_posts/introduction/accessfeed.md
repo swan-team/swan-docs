@@ -30,7 +30,7 @@ sidebar: accessfeed
 
 ![图片](../../img/introduction/auditing/图4.png) 
 
-在您的小程序尚未发布前，您也可以提前通过阅读“[开发者文档](http://baidu.com/)”以及“[信息流投放说明](http://baidu.com/)”全面了解信息流流量的玩法及素材提交管理流程。
+在您的小程序尚未发布前，您也可以提前通过阅读“[信息流资源](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/#信息流物料提交简介/)”以及“[信息流流量说明](https://smartprogram.baidu.com/docs/introduction/feed/)”全面了解信息流流量的玩法及素材提交管理流程。
 
  
 
@@ -72,13 +72,13 @@ sidebar: accessfeed
 
 **方式1-链接文件提交（sitemap提交）**
 
-提交原理说明：资源Sitemap是小程序结构化资源url列表。开发者需要将小程序落地页信息按[规范](111)整理成标题、正文 、图片等结构化信息；百度Spider会根据上次更新时间、更新频率等信息对资源数据进行提取，经过审核最终投放到feed中进行分发，为小程序带来巨大的流量。 
+提交原理说明：资源Sitemap是小程序结构化资源url列表。开发者需要将小程序落地页信息按[信息流素材审核规范](https://smartprogram.baidu.com/docs/introduction/auditing_info/)整理成标题、正文 、图片等结构化信息；百度Spider会根据上次更新时间、更新频率等信息对资源数据进行提取，经过审核最终投放到feed中进行分发，为小程序带来巨大的流量。 
 
  
 
-方法1：接口提交，详见[开发者文档](111)；
+方法1：接口提交，详见[开发者文档](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/)；
 
-方法2：B端连接文件提交，如下图；
+方法2：B端链接文件提交，如下图；
 
  
 

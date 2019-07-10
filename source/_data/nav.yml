@@ -193,10 +193,10 @@
                     link: /introduction/rank/#提交sitemap
                     text: 提交sitemap
                     name: rank_提交sitemap  
-                  # -
-                  #   link: /introduction/rank/#robots协议介绍
-                  #   text: robots协议介绍
-                  #   name: rank_robots协议介绍                    
+                  -
+                    link: /introduction/rank/#robots协议介绍
+                    text: robots协议介绍
+                    name: rank_robots协议介绍                    
                   -
                     link: /introduction/rank/#搜索流量接入FAQ
                     text: 搜索流量接入FAQ
