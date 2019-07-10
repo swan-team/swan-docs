@@ -57,13 +57,13 @@ sidebar: contact
 
 ## **消息推送配置流程**
 
-使用超级管理员或管理员权限登录开发者后台，点击“客服功能”，按照页面提示进行配置，详细操作如下描述：
+使用超级管理员或管理员权限登录开发者后台，点击“客服功能”，按照页面提示进行配置。
 
-![image-20190701164326912](/Users/wuxiaoying03/Library/Application Support/typora-user-images/image-20190701164326912.png
+![图片](../../img/introduction/contact/3.jpg)
 
 ## **接口调用**
 
-小程序[客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E4%BB%8B%E7%BB%8D/)API文档。
+小程序[客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)API文档。
 
  
 
