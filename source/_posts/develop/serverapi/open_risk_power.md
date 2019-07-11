@@ -12,7 +12,7 @@ sidebar: open_risk_power
 POST https://openapi.baidu.com/rest/2.0/smartapp/detectrisk?access_token=ACCESS_TOKEN
 ```
 
-**参数说明**:
+#### 参数说明
 
 **query参数**:
 
