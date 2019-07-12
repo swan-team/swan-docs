@@ -3426,35 +3426,35 @@
       sidebar:
         -
           sidebar:            
-  
-            -
-              link: /develop/faq/frequently
-              text: 常见问题
-              name: frequently 
             # -
             #   link: /develop/function/faq_v2 
             #   text: 支付常见问题
-            #   name: faq_v2               
-    #         -
-    #           link: /develop/faq/confaq 
-    #           text: 组件常见问题
-    #           name: confaq               
-    #         -
-    #           link: /develop/faq/apifaq 
-    #           text: API 常见问题
-    #           name: apifaq  
-    #         -
-    #           link: /develop/faq/toolfaq 
-    #           text: 工具常见问题
-    #           name: toolfaq        
-    #         -
-    #           link: /develop/faq/web 
-    #           text: web 化常见问题
-    #           name: web    
-    #         -
-    #           link: /develop/faq/web-view
-    #           text: web-view常见问题
-    #           name: web-view                                                                    
+            #   name: faq_v2 
+            -
+              link: /develop/faq/framworkfaq
+              text: 框架常见问题
+              name: framworkfaq                           
+            -
+              link: /develop/faq/confaq 
+              text: 组件常见问题
+              name: confaq               
+            -
+              link: /develop/faq/apifaq 
+              text: API 常见问题
+              name: apifaq  
+            -
+              link: /develop/faq/toolfaq 
+              text: 工具常见问题
+              name: toolfaq        
+            -
+              link: /develop/faq/webfaq 
+              text: web 化常见问题
+              name: webfaq 
+            -
+              link: /develop/faq/frequently
+              text: 其它常见问题
+              name: frequently                  
+                                                                   
 # 4
 -
   link: /data/concept
@@ -3532,9 +3532,9 @@
                 text: 数据分析维度
                 name: guideline_数据分析维度
     -
-      link: /data/performance-poin
+      link: /data/performance-point
       text: 统计方法
-      name: performance-poin
+      name: performance-point
       sidebar:
         -
           sidebar:

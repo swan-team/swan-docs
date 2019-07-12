@@ -13,7 +13,7 @@ sidebar: custom-component
 // 包含自定义组件custom的项目结构
 ├── app.js
 ├── app.json
-├── project.config.json
+├── project.swan.json
 └── components
     └── custom
         ├── custom.swan

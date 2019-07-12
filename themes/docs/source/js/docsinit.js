@@ -77,6 +77,7 @@
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
+            this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -87,6 +88,20 @@
             this.initBottomPage();
             this.initInvokeDemo();
             // this.initCustom();
+        },
+        initHighlight() {
+            let keywords = window.localStorage.getItem('keywords');
+            window.localStorage.removeItem('keywords');
+            if (!keywords || !keywords.length) {
+                return;
+            }
+            keywords = Array.isArray(keywords) ? keywords : [keywords];
+            let content = $('.m-doc-content-layout').html();
+            keywords.forEach(function (keyword, index) {
+                var regExp = new RegExp(keyword, 'g');
+                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
+            });
+            $('.m-doc-content-layout').html(content);
         },
         initSidebar: function () {
             var ctx = this;
@@ -238,6 +253,7 @@
         },
 
         initCrumbs: function () {
+          console.log(1);
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
                 crumb = $('.m-doc-sidebar-selected').parents('.m-doc-nav-on').children('.m-doc-nav-list').children('span').html();
@@ -660,18 +676,6 @@
                     $(element).addClass('multilayer');
                 }
             });
-
-            // 场景值查看控制图片显示隐藏
-            $('.show-scene-btn').on('click', function (e) {
-                // console.log($(e.currentTarget).next(), $(this).attr('data-id'));
-                $(e.currentTarget).next().css({
-                    display: 'flex'
-                });
-            });
-            $('.img-container').on('click', function (e) {
-                e.stopPropagation();
-                $(e.currentTarget).hide();
-            });
         },
         /**
          * @function 监听点击上一页/下一页事件
@@ -682,17 +686,3 @@
             $('.m-doc-bottomPage-wrapper a').on('click', function (e) {
                 e.preventDefault();
                 var href = $(this).attr('href');
-                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $('.m-doc-h2-list').filter(function () {
-                    return $(this).attr('href') === href;
-                }).parent('li').addClass('m-doc-sidebar-selected');
-                win.history.pushState(href, '', href);
-                ctx.getArticle(href);
-            });
-        }
-    };
-
-    $(doc).ready(function () {
-        docs.start();
-    });
-})(window, document, window.$);

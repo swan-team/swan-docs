@@ -231,7 +231,7 @@ Page({
 |placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|
 | disabled | Boolean  | false  | 否 |是否禁用|
 | maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
-|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|
 | focus |Boolean	  | false | 否 |获取焦点，调起键盘|
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
