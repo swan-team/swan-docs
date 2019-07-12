@@ -125,12 +125,37 @@
               -
                 link: /introduction/accessfeed
                 text: 接入信息流流量 
-                name: accessfeed                
+                name: accessfeed
+                sidebar:
+                  -
+                    link: /introduction/accessfeed/#小程序发布上线
+                    text: 小程序发布上线
+                    name: accessfeed_小程序发布上线
+                  -
+                    link: /introduction/accessfeed/#素材上传
+                    text: 素材上传 
+                    name: accessfeed_素材上传
+                  -
+                    link: /introduction/accessfeed/#素材审核
+                    text: 素材审核 
+                    name: accessfeed_素材审核
+                  -
+                    link: /introduction/accessfeed/#素材优化建议
+                    text: 素材优化建议 
+                    name: accessfeed_素材优化建议
+                  -
+                    link: /introduction/accessfeed/#流量效果监控
+                    text: 流量效果监控
+                    name: accessfeed_流量效果监控
+
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
-            
+              -
+                link: /introduction/auditing_faq
+                text: 信息流流量接入FAQ
+                name: auditing_faq            
         -
             link: /introduction/intro
             text: 自然搜索结果流量接入
@@ -168,6 +193,10 @@
                     link: /introduction/rank/#提交sitemap
                     text: 提交sitemap
                     name: rank_提交sitemap  
+                  -
+                    link: /introduction/rank/#robots协议介绍
+                    text: robots协议介绍
+                    name: rank_robots协议介绍                    
                   -
                     link: /introduction/rank/#搜索流量接入FAQ
                     text: 搜索流量接入FAQ
@@ -221,7 +250,18 @@
               -
                 link: /introduction/pay
                 text: 百度收银台支付开通指引
-                name: pay                               
+                name: pay  
+    -
+      link: /introduction/contact
+      text: 客服功能接入
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/contact
+                text: 客服功能接入说明
+                name: contact                                             
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -1429,7 +1469,7 @@
                     -
                       link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
                       text: backgroundAudioManager.onPrev
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev                      
+                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -2800,7 +2840,16 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout   
+                    name: timer_setTimeout
+              -
+                link: /develop/api/open_riskInfo
+                text: 风控
+                name: open_riskInfo
+                sidebar:
+                  -
+                    link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
+                    text: swan.getSystemRiskInfo
+                    name: open_userinfo_swan-getSystemRiskInfo   
     -
       link: /develop/serverapi/open_feed
       text: 服务端 API
@@ -2813,6 +2862,11 @@
                 text: 信息流资源
                 name: open_feed
                 sidebar:
+                  
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料提交简介
+                    text: 信息流物料提交简介
+                    name: open_feed_信息流物料提交简介
                   -
                     link: /develop/serverapi/open_feed/#submitresource
                     text: submitresource
@@ -2828,7 +2882,19 @@
                   -
                     link: /develop/serverapi/open_feed/#deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap          
+                    name: open_feed_deletesitemap                          
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料投放具体字段
+                    text: 信息流物料投放具体字段
+                    name: open_feed_信息流物料投放具体字段    
+                  -
+                    link: /develop/serverapi/open_feed/#信息流字段附录
+                    text: 信息流字段附录
+                    name: open_feed_信息流字段附录 
+                  -
+                    link: /develop/serverapi/open_feed/#常见问题
+                    text: 常见问题
+                    name: open_feed_常见问题                                                             
               -
                 link: /develop/serverapi/open_infomation
                 text: 模板消息
@@ -2873,11 +2939,36 @@
                   -
                     link: /develop/serverapi/open_infomation/#sendTemplateMessage
                     text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage   
+                    name: open_infomation_sendTemplateMessage  
+              -
+                link: /develop/serverapi/contact_api
+                text: 客服消息
+                name: contact_api
+                sidebar:
+                  -
+                    link: /develop/serverapi/contact_api/#消息推送介绍
+                    text: 消息推送介绍
+                    name: contact_api_消息推送介绍
+                  -
+                    link: /develop/serverapi/contact_api/#在页面中使用客服消息
+                    text: 在页面中使用客服消息
+                    name: contact_api_在页面中使用客服消息                 
+                  -
+                    link: /develop/serverapi/contact_api/#后台接入消息服务
+                    text: 后台接入消息服务
+                    name: contact_api_后台接入消息服务                    
+                  -
+                    link: /develop/serverapi/contact_api/#发送客服消息接口
+                    text: 发送客服消息接口
+                    name: contact_api_发送客服消息接口
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
-                name: power_exp                             
+                name: power_exp     
+              -
+                link: /develop/serverapi/open_risk_power/#detectrisk
+                text: 风控检测说明
+                name: open_risk_power                           
     -
       link: /develop/devtools/page
       text: 工具
@@ -3117,6 +3208,18 @@
         -
           sidebar:
             -
+              link: /develop/third/create
+              text: 第三方平台创建指南
+              name: create
+        -
+          sidebar:
+            -
+              link: /develop/third/develop
+              text: 第三方平台开发指南
+              name: develop
+        -
+          sidebar:
+            -
               link: /develop/third/pro
               text: 授权流程
               name: pro
@@ -3126,7 +3229,6 @@
               link: /develop/third/module
               text: 模板管理
               name: module
-
         -
           sidebar:
             -
@@ -3155,36 +3257,34 @@
           sidebar:
             -
               link: /develop/third/login
-              text: TP代授权小程序登录
+              text: 授权小程序登录
               name: login
-        -
-          sidebar:
-            -
-              link: /develop/third/address
-              text: 修改服务器地址
-              name: address
-        -
-          sidebar:
-            -
-              link: /develop/third/checkname
-              text: 名称检测
-              name: checkname
+
         - sidebar:
-            - link: /develop/third/paymentservice
+            -
+              link: /develop/third/paymentservice
               text: 支付服务能力
               name: paymentservice
-        - 
-          sidebar:
+
+        - sidebar:
             - link: /develop/third/datastatistics
               text: 数据统计分析
               name: datastatistics
-        -
 
-          sidebar:
-            -
-              link: /develop/third/error
-              text: 通用错误码对照表
-              name: error
+        - sidebar:
+            - link: /develop/third/domain
+              text: 设置第三方服务/业务域名
+              name: domain
+
+        - sidebar:
+            - link: /develop/third/sitemap
+              text: 流量配置
+              name: sitemap
+
+        - sidebar:
+            - link: /develop/third/customer
+              text: 高级认证
+              name: customer
         -
           sidebar:
             -

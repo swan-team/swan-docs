@@ -145,11 +145,13 @@ function searchFunc(path, searchId, contentId) {
                         }
                         if (isMatch) {
                             matchCount++;
+                            data_url = data_url.endsWith('/') ? data_url : (data_url + '/');
                             str += '<li><h3><a href="javascript:void(0);" onclick=handleResultAClick("' + data_url + '","' + keywords + '") class="search-result-title">' + data_title + '</a></h3>';
                             var content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
                             // 面包屑数据
                             var data_breadcrumb = data.breadCrumbs.map(item => {
                                 let [title, url] = item.split(',');
+                                url = url.endsWith('/') ? url : (url + '/');
                                 return '<span class="breadcrumb_item"><a href="/docs' + url + '" target="_blank">' + title + '</a><span class="arrow-right">&gt;</span></span>';
                             }).join('');
                             if (first_occur >= 0) {

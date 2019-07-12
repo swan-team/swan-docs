@@ -13,9 +13,6 @@ priority: 04-04
 1. 客户端和基础库的版本映射关系见 [客户端版本映射](/game/tutorials/version/clientVersion/)。
 2. 版本兼容方案见 [小游戏版本兼容](/game/tutorials/version/compatibility/)。
 
-#### v 1.10.3
-1. `Feature` 新增 AR 能力接口 [requestXRSession](/game/api/xr/requestXRSession)。
-
 
 #### v 1.6.3
 1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。

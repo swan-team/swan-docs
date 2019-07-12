@@ -253,8 +253,7 @@ template_id |string |是| 模板id,发送小程序模板消息时所需
 ```json
 {
     "errno": 0,
-    "msg": "success",
-    "data": []
+    "msg": "success"
 }
 ```
 

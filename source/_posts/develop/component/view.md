@@ -343,7 +343,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
                     <view class="item">{{item.value}}</view>
                 </swiper-item>
             </block>
-        </swiper-item>
+        </swiper>
     </view>
 
     <view class="switch-wrap">
