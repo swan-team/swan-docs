@@ -11,12 +11,10 @@
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
         '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
         '/docs/develop/tutorial/shine/':'/docs/develop/swan/shine/',
-
         '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
         '/docs/game/operations/game/game/':'/docs/game/operations/game/special/',
         '/docs/game/tutorials/tutorials/tutorials/':'/docs/game/tutorials/howto/dev/',
-
         '/docs/game/tutorials/ad/index/': '/docs/game/tutorials/adTutorial/index/',
         '/docs/game/tutorials/ad/banner/': '/docs/game/tutorials/adTutorial/bannerDoc/',
         '/docs/game/tutorials/ad/rewardedVideo/': '/docs/game/tutorials/adTutorial/rewardedVideo/',
@@ -28,38 +26,31 @@
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
-
 (function(win, doc, $) {
     var localSidebar = function () {
         var noop = function () {};
         try {
             localStorage.setItem('_t', 1);
             localStorage.removeItem('_t');
-
             var _init = function () {
                 if (localStorage.getItem('sidebar') === null) {
                     localStorage.setItem('sidebar', JSON.stringify({}));
                 }
             };
-
             return {
                 setLocal: function (key, value) {
                     _init();
-
                     var sidebar = JSON.parse(localStorage.getItem('sidebar'));
                     sidebar[key] = value;
                     localStorage.setItem('sidebar', JSON.stringify(sidebar));
                 },
                 getLocal: function (key) {
                     _init();
-
                     var sidebar = JSON.parse(localStorage.getItem('sidebar'));
-
                     if (!sidebar[key]) {
                         this.setLocal(key, window.localData.localData);
                         return window.localData.localData;
                     }
-
                     return sidebar[key];
                 }
             };
@@ -70,14 +61,12 @@
             };
         }
     }();
-
     var docs = {
         schema: 'baiduboxapp://swan/4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c/?_baiduboxapp=%7B%22from%22%3A%22%22%2C%22ext%22%3A%7B%7D%7D&callback=_bdbox_js_275&upgrade=0',
         screenHeight: win.innerHeight,
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
-            this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -88,20 +77,6 @@
             this.initBottomPage();
             this.initInvokeDemo();
             // this.initCustom();
-        },
-        initHighlight() {
-            let keywords = window.localStorage.getItem('keywords');
-            window.localStorage.removeItem('keywords');
-            if (!keywords || !keywords.length) {
-                return;
-            }
-            keywords = Array.isArray(keywords) ? keywords : [keywords];
-            let content = $('.m-doc-content-layout').html();
-            keywords.forEach(function (keyword, index) {
-                var regExp = new RegExp(keyword, 'g');
-                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
-            });
-            $('.m-doc-content-layout').html(content);
         },
         initSidebar: function () {
             var ctx = this;
@@ -114,9 +89,7 @@
                     }
                 }
             }
-
             sidebar.show();
-
             // sidebar定位到当前页面，二级导航下的第一个页面sidebar不滚动
             var wrapperT = sidebar.find('ul').position().top;
             var sidebarSelected = $('.m-doc-sidebar-selected');
@@ -133,7 +106,6 @@
                 var scrollT = selectedT - wrapperT;
                 scrollT > 44 && sidebar.scrollTop(selectedT - wrapperT);
             }
-
             // 页面滚动到当前h3位置
             ctx.scrollToHash();
         },
@@ -173,7 +145,6 @@
             + '<br>'
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
-
             var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
             + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
@@ -204,7 +175,6 @@
             var wrap = $('.m-doc-custom-examples');
             wrap.html(wrap.html().replace(/<br>/g, ''));
         },
-
         debounce: function (fn, delay) {
             var timer;
             return function () {
@@ -230,9 +200,7 @@
             };
             return function() {
                 var now = +new Date();
-
                 if (!previous && options.leading === false) previous = now;
-
                 var remaining = wait - (now - previous);
                 context = this;
                 args = arguments;
@@ -244,16 +212,13 @@
                     previous = now;
                     result = func.apply(context, args);
                     if (!timeout) context = args = null;
-
                 } else if (!timeout && options.trailing !== false) {
                     timeout = setTimeout(later, remaining);
                 }
                 return result;
             };
         },
-
         initCrumbs: function () {
-          console.log(1);
             var crumb = $('.m-doc-sidebar-selected').parents('.m-doc-sidebar-on').children('.m-doc-h1-list').children('div').html();
             if (!crumb) {
                 crumb = $('.m-doc-sidebar-selected').parents('.m-doc-nav-on').children('.m-doc-nav-list').children('span').html();
@@ -284,7 +249,6 @@
         addEvent: function () {
             var ctx = this;
             var before = $('.m-doc-content-layout').scrollTop();
-
             // 点击 二级导航折叠/展开/跳转
             $('.m-doc-nav-list').on('click', function () {
                 var parent = $(this).parent('li');
@@ -297,14 +261,12 @@
                     }
                     parent.addClass('m-doc-nav-on');
                 }
-
                 var sidebarData = localSidebar.getLocal(window.localData.headerName);
                 if (sidebarData) {
                     sidebarData[parent.data('name')] = parent.hasClass('m-doc-sidebar-nav-selected');
                     localSidebar.setLocal(window.localData.headerName, sidebarData);
                 }
             });
-
             // 点击h1 折叠/展开
             $('.m-doc-h1-list').on('click', function () {
                 var parent = $(this).parent('li');
@@ -359,7 +321,6 @@
             // back to top 按钮隐藏/显示
             $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
-
                 if (ctx.screenHeight > $(this).scrollTop()) {
                     backTop.removeClass('m-doc-menu-top-show');
                 } else {
@@ -375,13 +336,11 @@
                 var tocH3 = $('.toc-wrap').find('.toc-level-3');
                 h2.each(function (index) {
                     var h2Top = $(this)[0].offsetTop - scrollTop;
-
                     if (h2Top <= 60) {
                         tocH2.each(function (andex) {
                             tocH2.eq(andex).removeClass('toc-level-2-on');
                             tocH2.eq(andex).removeClass('toc-level-2-select');
                         });
-
                         tocH2.eq(index).addClass('toc-level-2-select');
                         if (tocH2.eq(index).find('.toc-level-3').length === 0) {
                             tocH2.eq(index).addClass('toc-level-2-on');
@@ -391,7 +350,6 @@
                         // 面包屑导航切换
                         $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-2-select .toc-text').eq(0).text());
                     }
-
                 });
                 h3.each(function (index) {
                     var h3Top = $(this)[0].offsetTop - scrollTop;
@@ -416,7 +374,6 @@
                 var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
                 var scrollHeight = $(this)[0].scrollHeight;
                 var clientHeight = $(this)[0].clientHeight;
-
                 h2.each(function (index) {
                     var h2Top = this.offsetTop - scrollTop;
                     if (h2Top <= 80) {
@@ -446,7 +403,6 @@
                     });
                 }
             });
-
             if (this.screenWidth > 768) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
@@ -459,7 +415,6 @@
                     } else {
                         $('header').removeClass('m-doc-header-show-crumbs');
                     }
-
                     before = after;
                 }, 350));
             }
@@ -468,10 +423,8 @@
                 var scrollWrap = $('.m-doc-content-layout');
                 var scrollTop = scrollWrap.scrollTop();
                 var everyLength = scrollTop / TIME * ctx.frame;
-
                 function animat () {
                     scrollWrap.scrollTop(scrollWrap.scrollTop() - everyLength);
-
                     if (scrollWrap.scrollTop() !== 0) {
                         ctx.animation(animat);
                     }
@@ -562,9 +515,7 @@
                 - 50;
             var tocWrap = $('.toc-wrap');
             tocWrap.css('maxHeight', (maxHeight + 'px'));
-
             this.tocHeight = $('.toc-wrap').height();
-
             tocWrap.find('.toc-level-1').children('.toc-link').remove();
             tocWrap.find('.toc-level-4').remove();
             tocWrap.find('.toc-level-5').remove();
@@ -575,7 +526,6 @@
             } else {
                 tocWrap.find('.toc-level-2').eq(0).addClass('toc-level-2-on');
             }
-
             if (win.innerWidth > 1590) {
                 tocWrap
                 .css('right', $('.m-doc-content-wrap')
@@ -589,7 +539,6 @@
                     $('.toc-wrap').removeClass('toc-wrap-show');
                 }
             }
-
         },
         rAF: function() {
             return (
@@ -617,11 +566,9 @@
             var H2 = articleEntey.find('h2');
             H2.length || $('.m-doc-content-layout').css('visibility', 'visible');
             var articleElems = articleEntey.contents();
-
             // 1.为h2增加收起折叠内容的按钮，以及包裹的容器
             H2.append('<span class="m-doc-content-h2-toggle"><img src = "/docs/img/h2_arrow.png"/></span>')
               .wrap('<div class= "m-doc-content-item"></div>');
-
             var H2andSiblings = [];
             for (var i = 0; i < articleElems.length; i++) {
                 if (articleElems[i].tagName === 'H2') {
@@ -635,19 +582,15 @@
             window.H2andSiblings = H2andSiblings;
             var h2Toggle = $('.m-doc-content-h2-toggle');
             h2Toggle.each(function (index) {
-
                 var Siblings = H2andSiblings[index].slice(1);
                 var h2InnerH = 0;
-
                 // 2.把h2对应的内容用content-inner包裹起来
                 var $h2Item = $(this).closest('.m-doc-content-item');
                 $h2Item.append('<div class = "m-doc-content-inner"></div>');
                 var $h2Inner = $h2Item.find('.m-doc-content-inner');
                 $(Siblings).appendTo($h2Inner);
-
                 // 解决抖动
                 $('.m-doc-content-layout').css('visibility', 'visible');
-
                 // 3.点击按钮收起折叠content-inner
                 h2Toggle.eq(index).on('click', function () {
                     if ($(this).hasClass('m-doc-content-h2-toggle-close')) {
@@ -664,7 +607,6 @@
                         }, 'swing');
                     }
                 });
-
             });
         },
         /**
@@ -676,6 +618,17 @@
                     $(element).addClass('multilayer');
                 }
             });
+            // 场景值查看控制图片显示隐藏
+            $('.show-scene-btn').on('click', function (e) {
+                // console.log($(e.currentTarget).next(), $(this).attr('data-id'));
+                $(e.currentTarget).next().css({
+                    display: 'flex'
+                });
+            });
+            $('.img-container').on('click', function (e) {
+                e.stopPropagation();
+                $(e.currentTarget).hide();
+            });
         },
         /**
          * @function 监听点击上一页/下一页事件
@@ -686,3 +639,16 @@
             $('.m-doc-bottomPage-wrapper a').on('click', function (e) {
                 e.preventDefault();
                 var href = $(this).attr('href');
+                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                $('.m-doc-h2-list').filter(function () {
+                    return $(this).attr('href') === href;
+                }).parent('li').addClass('m-doc-sidebar-selected');
+                win.history.pushState(href, '', href);
+                ctx.getArticle(href);
+            });
+        }
+    };
+    $(doc).ready(function () {
+        docs.start();
+    });
+})(window, document, window.$);
