@@ -3450,10 +3450,10 @@
               link: /develop/faq/webfaq 
               text: web 化常见问题
               name: webfaq 
-            # -
-            #   link: /develop/faq/frequently
-            #   text: 其它常见问题
-            #   name: frequently                  
+            -
+              link: /develop/faq/frequently
+              text: 其它常见问题
+              name: frequently                  
                                                                    
 # 4
 -
