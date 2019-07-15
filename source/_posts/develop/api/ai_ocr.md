@@ -33,7 +33,7 @@ sidebar: ai_ocr
 |image_status  |  String  |normal-识别正常；reversed_side-身份证正反面颠倒；non_idcard-上传的图片中不包含身份证；blurred-身份证模糊；other_type_card-其他类型证照；over_exposure-身份证关键字段反光或过曝；unknown-未知状态。|
 |risk_type |String | 输入参数 detect_risk = true 时，则返回该字段识别身份证类型: normal-正常身份证；copy-复印件；temporary-临时身份证；screen-翻拍；unknown-其他未知情况。|
 |edit_tool | String | 如果参数 detect_risk = true 时，则返回此字段。如果检测身份证被编辑过，该字段指定编辑软件名称，如:Adobe Photoshop CC 2014 (Macintosh),如果没有被编辑过则返回值无此参数。|
-|log_id | String | 唯一的log id，用于问题定位。|
+|log_id | Number | 唯一的log id，用于问题定位。|
 |words_result_num|  Number  |识别结果数，表示words_result的元素个数。|
 |words_result|	Object	|定位和识别结果|
 
@@ -174,7 +174,7 @@ swan.chooseImage({
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|log_id | String |请求标识码，随机数，唯一。|
+|log_id | Number |请求标识码，随机数，唯一。|
 |result | Object |返回结果|
 
 **result 返回值说明**
@@ -183,7 +183,7 @@ swan.chooseImage({
 |---|---|---|---|
 |bank_card_number  |  String  |银行卡卡号 |
 |bank_name |String | 银行名，不能识别时为空 。|
-|bank_card_type | String | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
+|bank_card_type | Number | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
 
 **示例**：
 
@@ -238,7 +238,7 @@ swan.chooseImage({
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|log_id | String |唯一的log id，用于问题定位。|
+|log_id | Number |唯一的log id，用于问题定位。|
 | words_result_num  |  Number  |识别结果数，表示 words_result 的元素个数。 |
 |words_result |  Object  | 识别结果 |
 
@@ -347,7 +347,7 @@ swan.chooseImage({
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|log_id | String |唯一的log id，用于问题定位。|
+|log_id | Number |唯一的log id，用于问题定位。|
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |
 
