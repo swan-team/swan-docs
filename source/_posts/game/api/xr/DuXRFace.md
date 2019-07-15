@@ -3,12 +3,12 @@ title: DuXRFace
 layout: gamedoc
 topic: xr
 categoryName: api
-priority: 10-04
+priority: 10-03
 ---
 
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog) 开始支持。
+> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
 
-每一帧检测获取到的人脸对象。调用 [DuXRFrameFaceMode#getUpdatedTrackableFaces](/game/api/xr/DuXRFrameFaceMode#getUpdatedTrackableFaces) 返回。通过对象下你可以获取到所有可以用到的人脸部分的数据。
+每一帧检测获取到的人脸对象。调用 [DuXRFrameFaceMode#getUpdatedTrackableFaces](/game/api/xr/DuXRFrameFaceMode/#getUpdatedTrackableFaces) 返回。通过对象下你可以获取到所有可以用到的人脸部分的数据。
 
 下面是所有 DuXRFace 的属性：
 
@@ -59,7 +59,7 @@ for (let i = 0; i < landmarks.length; i += 3) {
 
 ### skeleton
 
-相关接口 [DuXRSessionFaceMode#getSkeletonDefinition](/game/api/xr/DuXRSessionFaceMode#getSkeletonDefinition)。
+相关接口 [DuXRSessionFaceMode#getSkeletonDefinition](/game/api/xr/DuXRSessionFaceMode/#getSkeletonDefinition)。
 
 `skeleton` 对象包含了骨骼节点的变换矩阵数据。
 

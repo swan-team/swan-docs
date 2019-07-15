@@ -3,14 +3,14 @@ title: DuXRFrameFaceMode
 layout: gamedoc
 topic: xr
 categoryName: api
-priority: 10-03
+priority: 10-04
 ---
 
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog) 开始支持。
+> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
 
-人脸模式的帧对象。调用 [DuXRSessionFrameMode#getFrame](/game/api/xr/DuXRSessionFaceMode#getFrame) 返回。
+人脸模式的帧对象。调用 [DuXRSessionFrameMode#getFrame](/game/api/xr/DuXRSessionFaceMode/#getFrame) 返回。
 
-通过该对象你可以获取到相机的变换矩阵以及当前画面中帧检测到的人脸对象（[DuXRFace](/game/api/xr/DuXRFace)）
+通过该对象你可以获取到相机的变换矩阵以及当前画面中帧检测到的人脸对象（[DuXRFace](/game/api/xr/DuXRFace/)）
 
 
 **代码示例：**
@@ -64,8 +64,8 @@ camera.projectionMatrixInverse.getInverse(camera.projectionMatrix);
 
 ### getUpdatedTrackableFaces()
 
-返回当前相机中检测到的人脸对象（[DuXRFace](/game/api/xr/DuXRFace)）数组。
+返回当前相机中检测到的人脸对象（[DuXRFace](/game/api/xr/DuXRFace/)）数组。
 
 目前等的人脸算法只支持单人脸的检测，因此你只需要取数组的第一项就可以了，参考上面的示例代码。如果数组长度为 0 的话则是无法检测到人脸。
 
-具体所有人脸相关的数据见 [DuXRFace](/game/api/xr/DuXRFace) 的接口文档。
+具体所有人脸相关的数据见 [DuXRFace](/game/api/xr/DuXRFace/) 的接口文档。

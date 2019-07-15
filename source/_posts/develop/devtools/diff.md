@@ -28,3 +28,4 @@ API 在模拟器与真机中的实现差异如下：
 |[swan.showFavoriteGuide](https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/)| 为方便开发者开发和调试，该api在开发工具中并未使用引导组件的统一[策略](https://smartapp.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/)。|
 |[swan.setInnerAudioOption](https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption/)|开发者工具暂不支持| 
 |[swan.ai.getVoiceRecognizer](https://smartprogram.baidu.com/docs/develop/api/ai_voice/#swan-ai-getVoiceRecognizer/)|开发者工具暂不支持| 
+|[swan.shareFile](https://smartprogram.baidu.com/docs/develop/api/open_share/#swan-shareFile)|开发者工具暂不支持| 
