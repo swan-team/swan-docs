@@ -18,6 +18,7 @@ A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问�
 
 #### Q: 如何在web-view中使用拨打电话的功能？
 A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/) 包，如下示例：
+> 图中 “2.0.6.js”版本为举例，开发时请参考[swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/)文档中的最新版本好进行填写。
 
 ![](../../../img/faq/webview.png)
 
