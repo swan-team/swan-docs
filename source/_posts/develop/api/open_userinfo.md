@@ -250,28 +250,13 @@ Page({
 ## signature 计算方法
 
 ```js
-params := map[string]string{
-        "appkey":     "appkey", // 小程序标识
-        "secret_key": "secret_key",  // 小程序私钥
-        "swanid":     "swanid",   // 用户swanid
-    }
-signature := "signature"  // 常量，
-// 计算签名
-swanid_signature :=generageSignature(params, signature)
-func generageSignature(params map[string]string, signature string) string {
-    keys := []string{}
-    for k := range params {
-        keys = append(keys, k)
-    }
-    sort.Strings(keys)
-    material := ""
-    for _, k := range keys {
-        if k == signature {
-            continue
-        }
-        material += fmt.Sprintf("%s=%v", k, params[k])
-    }
-    md5Sum := md5.Sum([]byte(material))
+// 生成签名
+// appkey 小程序标识
+// secret_key 小程序私钥
+// swanid 用户swanid
+func generageSignature(appKey, secrectKey, swanID string) string {
+    plainText := fmt.Sprintf("appkey=%ssecret_key=%sswanid=%s", appKey, secrectKey, swanID)
+    md5Sum := md5.Sum([]byte(plainText))
     return hex.EncodeToString(md5Sum[:])
 }
 ```

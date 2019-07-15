@@ -3,8 +3,8 @@ title: swan.getLocation()
 layout: gamedoc
 topic: location
 categoryName: api
+priority: 15-01
 ---
-
 
 获取当前的地理位置、速度。当用户离开小游戏后，此接口无法调用。
 

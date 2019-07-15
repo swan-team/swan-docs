@@ -13,13 +13,14 @@ sidebar: process
 
 |属性|类型|必填|描述|
 |----|----|----|----|
-|pages|`Array.<string>`|是|设置页面路径|
-|window|Object|否|设置页面展现|
-|preloadRule |Object |否| 分包预下载规则 |
-|tabBar|Object|	否|	底部 tab 栏的表现|
-|requiredBackgroundModes|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|subPackages|` Array.<object> `|否|	分包结构配置|
-|prefetches|Object Array|	否| 预请求的配置列表|
+|[pages](#pages)|`Array.<string>`|是|设置页面路径|
+|[window](#window)|Object|否|设置页面展现|
+|[preloadRule](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
+|[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
+|[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
+|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)|` Array.<object> `|否|	分包结构配置|
+|[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
+
 
 <notice>示例： </notice>
 
@@ -44,7 +45,7 @@ sidebar: process
             }
         ]
     },
-    "prefetches" ["https://m.baidu.com", "https://m.baidu.com?query=${query}"]
+    "prefetches": ["https://m.baidu.com", "https://m.baidu.com?query=${query}"]
 }
 ```
 
@@ -110,6 +111,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**
+
 
 |顶bar设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|

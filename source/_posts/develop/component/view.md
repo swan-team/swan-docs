@@ -108,30 +108,32 @@ sidebar: view
 }
 ```
 
-**说明**：
-1、 如果需要使用滚动视图，请使用 scroll-view；
+**Bug & Tip**：
+
+1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 ## scroll-view
 **解释**：可滚动视图区域。
+> 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
+|属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |
-|scroll-x | Boolean  |  false  | 允许横向滚动|
-|scroll-y| Boolean  | false | 允许纵向滚动|
-|upper-threshold| Number/String | 50 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
-|lower-threshold| Number/String |50 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
-|scroll-top | Number/String  | | 设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
-|scroll-left| Number/String  | | 设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
-|scroll-into-view | String  | | 值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view=”{= scrollIntoView =}”`。|
-|scroll-with-animation| Boolean  | false | 在设置滚动条位置时使用动画过渡|
-|bindscrolltoupper | EventHandle  | | 滚动到顶部/左边，会触发 scrolltoupper 事件|
-|bindscrolltolower | EventHandle |  |滚动到底部/右边，会触发 scrolltolower 事件|
-|bindscroll | EventHandle | |滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
+|scroll-x | Boolean  |  false  | 否 | 允许横向滚动|
+|scroll-y| Boolean  | false | 否 |允许纵向滚动|
+|upper-threshold| Number/String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
+|lower-threshold| Number/String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
+|scroll-top | Number/String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
+|scroll-left| Number/String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
+|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|
+|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|
+|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |
+|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件|
+|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件|
+|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
 
-**注意**：使用竖向滚动时，需要给 `<scroll-view/>` 一个固定高度，通过 CSS 设置 height。
 
 **示例**：
 <a href="swanide://fragment/401c9a44528a80b39a848baf565888641558613903593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -257,50 +259,64 @@ Page({
 
 
 
-**说明**：
+**Bug & Tip**：
 
-* 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；
-* scroll-into-view 的优先级低于 scroll-top、scroll-left；
-* 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh；
+* 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
+* scroll-into-view 的优先级低于 scroll-top、scroll-left。
+* 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh。
 * 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view。
+* scroll-into-view、scroll-top、scroll-left 需要在页面数据高度（或宽度）撑开时生效，若有异步加载数据，请在数据渲染完成时，重新动态赋值，才可生效。
 
 
 ## swiper
 
 **解释**：滑块视图容器。
+> 内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|最低版本|
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
-|indicator-dots | Boolean  |  false  |是否显示面板指示点|- |
-|indicator-color| Color  | rgba(0, 0, 0, .3) | 指示点颜色| -|
-|indicator-active-color| Color | #333 | 当前选中的指示点颜色件| -|
-|autoplay |Boolean  | false |是否自动切换| -|
-|current|Number |0 |当前所在页面的 index| -|
-|current-item-id|String|`""`|当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|interval | Number | 5000 |自动切换时间间隔|- |
-|duration| Number |500 |滑动动画时长|- |
-|circular| Boolean |false |是否采用衔接滑动| -|
-|vertical | Boolean  | false  |滑动方向是否为纵向|- |
-|previous-margin|String|`"0px"`|前边距，可用于露出前一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|next-margin|String|`"0px"`|后边距，可用于露出后一项的一小部分|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|display-multiple-items|Number|1|同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|bindchange | EventHandle |  |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
-|bindanimationfinish|EventHandle| |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
+|indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| -|
+|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| -|
+|autoplay |Boolean  | false | 否 |是否自动切换| -|
+|current|Number |0 | 否 |当前所在页面的 index| -|
+|current-item-id|String|| 否 |当前所在滑块的 item-id ，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|interval | Number | 5000 | 否 |自动切换时间间隔，单位ms|- |
+|duration| Number |500 | 否 |滑动动画时长，单位ms|- |
+|circular| Boolean |false | 否 |是否采用衔接滑动| -|
+|vertical | Boolean  | false  | 否 |滑动方向是否为纵向|- |
+|previous-margin|String|`"0px"`| 否 |前边距，可用于露出前一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|next-margin|String|`"0px"`| 否 |后边距，可用于露出后一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|display-multiple-items|Number|1| 否 |同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|bindchange | EventHandle |  | 否 |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
+|bindanimationfinish|EventHandle| | 否 |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-**说明**：
-其中只可放置`<swiper-item/>`组件，否则会导致未定义的行为。
+**change 事件 source 返回值**
+
+change事件中的source字段，表示触发change事件的原因，可能值如下：
+
+|值 |说明|
+|---- | ---- |
+| autoplay | 自动播放导致的swiper切换 |
+| touch | 用户划动导致的swiper切换 |
+| "" | 其他原因将返回空字符串 |
+
+**Bug & Tip**：
+
+* 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
+* 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
 
 ## swiper-item
 
-**注意**：仅可放置在`<swiper/>`组件中，宽高自动设置为100%。
+> 仅可放置在`<swiper>`组件中，宽高自动设置为100%。
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|最低版本|
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
-|item-id|String|""|该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|item-id|String| | 否 |该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例**：
 <a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -311,13 +327,13 @@ Page({
 <view class="wrap">
     <view class="title">示例</view>
     <view class="swiper-wrap">
-        <swiper 
+        <swiper
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}" 
+            indicator-dots="{{switchIndicateStatus}}"
             vertical="false"
             circular="true"
             current="0"
@@ -472,41 +488,41 @@ Page({
 }
 
 ```
-**说明**：
-
-如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起。
 
 ## movable-area
 
 **解释**：`movable-view` 的可移动区域。
 > `movable-area` 必须设置width和height属性，不设置默认为10px。
 
-|属性名	|类型	|默认值|	说明|
+|属性名	|类型	|默认值| 必填 |	说明|
 |--|--|--|--|
-|scale-area	|Boolean|	false|	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
 ## movable-view
 **解释**：可移动的视图容器，在页面中可以拖拽滑动。
+> movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
+|属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |
-| direction | String  | none  |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
-| inertia | Boolean | false |movable-view 是否带有惯性|
-|out-of-bounds| Boolean | false |超过可移动区域后，movable-view 是否还可以移动。|
-|x	| Number |   |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
-| y | Number  | |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
-| damping | Number |20 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
-| friction | Number |2	  |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
-| disabled | Boolean |false |是否禁用   |
-| scale | Boolean |false |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
-| scale-min | Number |0.5 |定义缩放倍数最小值   |
-| scale-max | Number |10 |定义缩放倍数最大值   |
-| scale-value | Number |1 |定义缩放倍数，取值范围为 0.5 - 10  。 |
-|animation|Boolean|true|是否使用动画|
-| bindchange | EventHandle | |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）、out-of-bounds（超出移动范围后的回弹）、inertia（惯性）和空字符串（setData）。|
-| bindscale | EventHandle ||缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
+| direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
+| inertia | Boolean | false | 否 |movable-view 是否带有惯性|
+|out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|
+|x	| Number |   | 否 |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
+| y | Number  | | 否 |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
+| damping | Number |20 | 否 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
+| friction | Number |2	  | 否 |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
+| disabled | Boolean |false | 否 |是否禁用   |
+| scale | Boolean |false | 否 |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
+| scale-min | Number |0.5 | 否 |定义缩放倍数最小值   |
+| scale-max | Number |10 | 否 |定义缩放倍数最大值   |
+| scale-value | Number |1 | 否 |定义缩放倍数，取值范围为 0.5 - 10  。 |
+|animation|Boolean|true| 否 |是否使用动画|
+| bindchange | EventHandle | | 否 |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）。|
+| bindscale | EventHandle | | 否 |缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
+| htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
+|vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
 
 **direction 有效值**:
 
@@ -517,19 +533,14 @@ Page({
 | horizontal | 水平方向 |
 | none | 不可移动 |
 
-除了基本事件外，movable-view提供了两个特殊事件。
 
-|类型 |触发条件|
-|---- | ---- |
-|htouchmove|手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
-|vtouchmove|手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
+**Bug & Tip**：
 
-**说明**：
-* movable-view 必须设置 width 和 height 属性，不设置默认为 10px；
-* movable-view 默认为绝对定位，top 和 left 属性为 0px；
-* 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；
-* 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x 轴方向和 y 轴方向分开考虑）；
-* movable-view必须在`<movable-area/>`组件中，并且必须是直接子节点，否则不能移动。
+* movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
+* movable-view 默认为绝对定位，top 和 left 属性为 0px。
+* 当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
+* 当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
+* movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
 <a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -634,7 +645,7 @@ Page({
     onScale(e) {
         console.log(e.detail)
     }
-}); 
+});
 ```
 
 * 在 css 文件中
@@ -671,11 +682,15 @@ movable-view {
 ```
 ## cover-view
 
+**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。
+
 > 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图（支持图片、文本等）。
+**属性说明： **
 
-**属性说明： **无
+| 属性 | 类型 | 默认值 | 必填 | 说明 |
+|------ |------ |------ |------ |------ |
+| scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
 
 **示例**：
 
@@ -749,17 +764,17 @@ controls {
 
 ## cover-image
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
-
 **解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
+
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
 
 **属性说明： **
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| src | String | |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
-|bindload|	EventHandle| |		图片加载成功时触发|
-|binderror|	EventHandle	| 	|图片加载失败时触发|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- | ---- |---- |
+| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
+|bindload|	EventHandle| | 否 |图片加载成功时触发|
+|binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
 
@@ -792,15 +807,15 @@ controls {
 
 ![图片](../../../img/component/coverimage.png)
 
-**说明**：
+**Bug & Tip**：
 
-1、支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity；
-2、文本建议都套上 cover-view 标签，避免排版错误；
-3、只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等；
-4、建议子节点不要溢出父节点；
-5、默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block ；
-6、建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常；
-7、IOS端暂不支持一个页面有多个video时嵌套cover-view；
-8、cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
+* 支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity。
+* 文本建议都套上 cover-view 标签，避免排版错误。
+* 只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等。
+* 建议子节点不要溢出父节点。
+* 默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block。
+* 建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常。
+* IOS端暂不支持一个页面有多个video时嵌套cover-view。
+* cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 

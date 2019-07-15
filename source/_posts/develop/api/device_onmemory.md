@@ -22,7 +22,6 @@ sidebar: device_onmemory
 Android下告警等级对应系统宏：
 
 ```
-TRIM_MEMORY_RUNNING_MODERATE = 5
 TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
