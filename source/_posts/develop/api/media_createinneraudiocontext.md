@@ -9,6 +9,9 @@ sidebar: media_createinneraudiocontext
 
 ## swan.createInnerAudioContext
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
+
 **解释**： 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
 
 **方法参数**： 无
@@ -65,7 +68,7 @@ sidebar: media_createinneraudiocontext
 
 **示例**：
 
-<a href="swanide://fragment/3f02bf553d26adb2adc3dcc248b892bf1556535805834" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3f02bf553d26adb2adc3dcc248b892bf1556535805834" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -209,7 +212,7 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|mixWithOther |Boolean | 否 | -|设置是否与其他音频混播，默认为false。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|mixWithOther |Boolean | 否 | false |设置是否与其他音频混播。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |success  | Function |否 | -| 接口调用成功的回调函数| 
 |fail  | Function |否 |  -|接口调用失败的回调函数| 
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|  
@@ -219,7 +222,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

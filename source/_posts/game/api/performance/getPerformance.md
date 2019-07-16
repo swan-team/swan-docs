@@ -3,6 +3,7 @@ title: 性能
 layout: gamedoc
 topic: performance
 categoryName: api
+priority: 18-02
 ---
 
 ### swan.getPerformance()

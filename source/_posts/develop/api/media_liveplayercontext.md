@@ -11,6 +11,8 @@ sidebar: media_liveplayercontext
 
 **方法参数**： String domId
 
+**`domId`参数说明**：要获取 live-player 组件的 id。
+
 **返回值**：livePlayerContext
 
 ## livePlayerContext
@@ -19,7 +21,7 @@ sidebar: media_liveplayercontext
 
 **示例**：
 
-<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
 

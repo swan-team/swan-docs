@@ -8,6 +8,8 @@ sidebar: device_vibrate
 
 ## swan.vibrateLong
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
 **解释**： 使手机发生较长时间的振动（400ms）
 
 **方法参数**：Object object
@@ -22,7 +24,7 @@ sidebar: device_vibrate
 
 **示例**：
 
-<a href="swanide://fragment/68b0d89af019129d48b899052f023fbb1557732604443" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/68b0d89af019129d48b899052f023fbb1557732604443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -58,6 +60,8 @@ Page({
 
 ## swan.vibrateShort
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+
 **解释**：使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。
 
 **方法参数**：Object object
@@ -72,7 +76,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/a6df718fa0df4ec933e432d2b81d7fc41557732661761" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a6df718fa0df4ec933e432d2b81d7fc41557732661761" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
