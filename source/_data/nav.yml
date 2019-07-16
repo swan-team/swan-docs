@@ -2977,6 +2977,10 @@
         -
             sidebar:
               -
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history               
+              -
                 link: /develop/devtools/page
                 name: page
                 text: 界面
@@ -3176,11 +3180,7 @@
             link: /develop/devtools/history
             text: 工具版本信息
             name: history
-            sidebar:
-              -
-                link: /develop/devtools/history
-                text: 版本下载
-                name: history          
+            sidebar:         
               -
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
@@ -3558,11 +3558,64 @@
       name: book
       sidebar:
         -
-          sidebar:
+          sidebar:       
           -
             link: /operations/specification
             text: 平台运营规范
             name: specification
+            sidebar:
+              - 
+                link: /operations/specification/#1-注册名称规范
+                text: 1.注册名称规范
+                name: specification_1-注册名称规范    
+              - 
+                link: /operations/specification/#2-注册信息提交规范
+                text: 2.注册信息提交规范
+                name: specification_2-注册信息提交规范
+              - 
+                link: /operations/specification/#3-基本信息规范
+                text: 3.基本信息规范
+                name: specification_3-基本信息规范
+              - 
+                link: /operations/specification/#4-功能体验规范
+                text: 4.功能体验规范
+                name: specification_4-功能体验规范
+              - 
+                link: /operations/specification/#5-行为规范
+                text: 5.行为规范
+                name: specification_5-行为规范                                      
+              - 
+                link: /operations/specification/#6-信息内容规范
+                text: 6.信息内容规范
+                name: specification_6-信息内容规范          
+              - 
+                link: /operations/specification/#7-智能小程序内嵌网页规范
+                text: 7.智能小程序内嵌网页规范
+                name: specification_7-智能小程序内嵌网页规范
+              - 
+                link: /operations/specification/#8-商标与商业外观
+                text: 8.商标与商业外观
+                name: specification_8-商标与商业外观         
+              - 
+                link: /operations/specification/#9-可用性和完整性规范
+                text: 9.可用性和完整性规范
+                name: specification_9-可用性和完整性规范
+              - 
+                link: /operations/specification/#10-用户隐私和数据规范
+                text: 10.用户隐私和数据规范
+                name: specification_10-用户隐私和数据规范   
+              - 
+                link: /operations/specification/#11-智能小程序支付规范
+                text: 11.智能小程序支付规范
+                name: specification_11-智能小程序支付规范
+              - 
+                link: /operations/specification/#12-技术实现规范
+                text: 12.技术实现规范
+                name: specification_12-技术实现规范
+              - 
+                link: /operations/specification/#13-智能小程序UI规范
+                text: 13.智能小程序UI规范
+                name: specification_13-智能小程序UI规范                                                                      
           -
             link: /operations/catagory
             text: 服务类目
