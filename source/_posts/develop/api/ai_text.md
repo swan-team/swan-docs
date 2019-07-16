@@ -24,7 +24,7 @@ sidebar: ai_text
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|log_id | String |唯一的log id，用于问题定位。|
+|log_id | Number |唯一的log id，用于问题定位。|
 |result| Object| 审核结果详情 |
 
 **result 返回参数说明**
