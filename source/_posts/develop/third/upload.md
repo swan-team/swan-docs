@@ -6,7 +6,7 @@ sidebar: upload
 ---
 
 **接口说明**:
-目前只支持bmp、jpeg、jpg、png格式
+百度第三方服务所有的api中只要涉及图片url的字段，都需要使用这个图片上传接口返回的图片地址，否则会提示图片来源非法，目前只支持bmp、jpeg、jpg、png格式。
 
 ```
 POST https://openapi.baidu.com/file/2.0/smartapp/upload/image
@@ -16,8 +16,8 @@ POST https://openapi.baidu.com/file/2.0/smartapp/upload/image
 
 |参数名 | 类型 | 是否必须 | 描述|
 |----- |-----| ------| -----|
-|access\_token|string | 是 | 授权小程序的接口调用凭据|
-|multipartFile | multipartFile | 是 | 文件 |
+|access\_token|string | 是 | 授权小程序的接口调用凭证/第三方调用凭证|
+|multipartFile | File | 是 | 文件|
 |type|int | 否 | 图片用途|
 
 **type 说明**：
@@ -35,3 +35,13 @@ POST https://openapi.baidu.com/file/2.0/smartapp/upload/image
 |----- |-----|
 |47003 | 图片尺寸超过限制|
 |47000|图片格式无效|
+
+**返回值示例:**
+
+```json
+{   
+    "errno": 0,
+    "msg": "success",
+    "data" : "https://b.bdstatic.com/searchbox/mappconsole/image/20181011/1539257247123193.png" 
+}
+```

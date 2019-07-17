@@ -3,6 +3,7 @@ title: 设置
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-03
 ---
 
 ### swan.getSetting()

@@ -6,27 +6,34 @@ sidebar: ai_word
 ---
 
 
-##  nlpLexerCustom
+##  swan.ai.nlpLexerCustom
 
-> 词法分析，提供分词、词性标注、专名识别三大功能。最低支持版本 3.20.11 。
 
-### Object 参数说明
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
 
-|参数名 | 参数类型 | 是否必填 | 说明 | 
-|---|---|---|---|
-|text | string| 是 | 待分析文本| 
-|success | Function | 否 | 接口调用成功后的回调函数 | 
-|fail | Function | 否 | 接口调用失败的回调函数 | 
-|complete|	Function|	否	|接口调用结束的回调函数（调用成功、失败都会执行）|
+**解释**：词法分析，提供分词、词性标注、专名识别三大功能。
 
-### 返回参数说明
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|text | string| 是 |-| 待分析文本| 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回参数说明**
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
+|log_id| Number|唯一的log id，用于问题定位。|
 |text | string| 原始单条请求文本| 
 |items | Array| 词汇数组，每个元素对应结果中的一个词。| 
 
-**items参数说明**
+**items 参数说明**
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -41,9 +48,10 @@ sidebar: ai_word
 |loc_details | Array| 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。| 
 
 
+**示例代码**
 
+<a href="swanide://fragment/90590b9b20bc84912e4eb3a96aa3a0e01559043393195" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-### 示例代码
 ```js
 swan.ai.nlpLexerCustom({
     text: '百度是一家高科技公司',
@@ -53,9 +61,9 @@ swan.ai.nlpLexerCustom({
 });
 ```
 
-### 返回示例
+**返回示例**
 
-```
+```js
 {
       "text":"百度是一家高科技公司",
       "items":[
