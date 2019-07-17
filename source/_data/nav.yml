@@ -2042,6 +2042,7 @@
                     text: setTimeout
                     name: timer_setTimeout     
     -
+
       link: /develop/devtools/show_sur
       text: 工具
       name: devtools
@@ -2165,6 +2166,33 @@
                 link: /develop/devtools/beta
                 text: Beta 版本公测
                 name: beta                        
+    -
+      text: 插件
+      name: plugins
+      sidebar:
+        -
+          sidebar:
+            -
+              link: /develop/plugins/survey
+              text: 插件概述
+              name: survey
+            -
+              link: /develop/plugins/develop
+              text: 开发插件
+              name: develop
+            -
+              link: /develop/plugins/use
+              text: 使用插件
+              name: use
+            -
+              link: /develop/plugins/limit-api
+              text: 插件中api的限制
+              name: limit-api
+            -
+              link: /develop/plugins/limit-components
+              text: 插件中组件的限制
+              name: subpackages
+
 
     -
       link: /develop/server/oauth_intr
@@ -2184,7 +2212,7 @@
             #   link: /develop/server/power_api
             #   text: 各服务接口
             #   name: power_api
-    -
+    - 
       link: /develop/server/oauth_intr
       text: 第三方接入
       name: third
