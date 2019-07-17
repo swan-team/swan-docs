@@ -213,6 +213,9 @@ article h2 {
     max-width: 80%;
     margin-top: 0px;
 }
+.m-doc-content-inner .show-scene-container .show-scene-btn{
+    color: #38f;
+}
 article h2 .m-doc-content-h2-toggle {
     width: 22px;
     height: 22px;
