@@ -3418,7 +3418,29 @@
             -
               link: /develop/swan/compatibility
               text: 兼容性说明
-              name: compatibility 
+              name: compatibility
+              sidebar:
+              -
+                link: /develop/swan/compatibility/#版本号比较
+                text: 版本号比较
+                name: concept_版本号比较
+              -
+                link: /develop/swan/compatibility/#API存在判断
+                text: API存在判断
+                name: concept_API存在判断
+              -
+                link: /develop/swan/compatibility/#canIUse
+                text: canIUse
+                name: concept_canIUse
+              -
+                link: /develop/swan/compatibility/#Android-与-iOS-差异
+                text: Android 与 iOS 差异
+                name: concept_Android-与-iOS-差异
+              -
+                link: /develop/swan/compatibility/#基础库最低版本设置
+                text: 基础库最低版本设置
+                name: concept_基础库最低版本设置
+
     -
       link: /develop/faq/frequently
       text: FAQ
