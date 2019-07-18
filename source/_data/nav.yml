@@ -184,11 +184,15 @@
                   -
                     link: /introduction/rank/#关联H5站点
                     text: 关联H5站点
-                    name: rank_关联H5站点                  
+                    name: rank_关联H5站点   
                   -
-                    link: /introduction/rank/#配置URL映射规则
-                    text: 配置URL映射规则
-                    name: rank_配置URL映射规则
+                    link: /introduction/rank/#数据提交如何选择  
+                    text: 数据提交如何选择  
+                    name: rank_数据提交如何选择                                   
+                  -
+                    link: /introduction/rank/#配置URL适配规则
+                    text: 配置URL适配规则
+                    name: rank_配置URL适配规则
                   -
                     link: /introduction/rank/#提交sitemap
                     text: 提交sitemap
