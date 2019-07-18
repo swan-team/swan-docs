@@ -27,8 +27,8 @@ sidebar: formlist
 |loading|Boolean|false| 否 |名称前是否带有loading图标|
 |bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
-| bindcontact | Handler |-| 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
-|contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
+| bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
+|contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
 
 **size有效值**：
@@ -640,7 +640,7 @@ Page({
 <div class="notice">解释： </div>滚动选择器的子节点。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
-<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fa9cbcb83033ca080069da8f72d266771563433863796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -656,7 +656,7 @@ Page({
         <view s-for="item in months" style="line-height: 50px; text-align: center;">{{item}}月</view>
       </picker-view-column>
       <picker-view-column>
-        <view s-for="item in days" wx:key="days" style="line-height: 50px; text-align: center;">{{item}}日</view>
+        <view s-for="item in days" style="line-height: 50px; text-align: center;">{{item}}日</view>
       </picker-view-column>
     </picker-view>
   </view>

@@ -146,7 +146,7 @@ sidebar: map
 
 
 **示例**：
-<a href="swanide://fragment/8d637f6a9f61064eeee857a2bb94f6fd1559047949918" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/8365c966bc3ceac343aae7a1a239021a1562933737180" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
 * 在 swan 文件中
@@ -159,7 +159,6 @@ sidebar: map
      longitude="{{longitude}}"
      latitude="{{latitude}}"
      markers="{{markers}}"
-     position="{{position}}"
      showLocation="{{showLocation}}"
      polyline="{{polyline}}"
      controls="{{controls}}"
