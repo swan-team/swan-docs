@@ -19,7 +19,7 @@ sidebar: media_recorder
 **解释**：swan.getRecorderManager 的返回值。
 
 **示例**：
-<a href="swanide://fragment/9594161131c27e789538f1e4bb99f4b51559049882382" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9594161131c27e789538f1e4bb99f4b51559049882382" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -63,7 +63,7 @@ recorderManager.start(options);
 
 |参数名 | 类型 | 必填 | 默认值|说明 |
 |---- | ---- | ---- | ---|---- |
-|duration |Number | 否 |60000| 指定录音的时长，（单位：ms） ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）。|
+|duration |Number | 否 |60000| 指定录音的时长（单位：ms），如果传入了合法的 duration，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟），默认值 60000（1 分钟）。|
 |sampleRate |Number |否 | |采样率，有效值 8000/16000/44100 。|
 |numberOfChannels |Number |否 | |录音通道数，有效值 1/2。 |
 |encodeBitRate |Number |否 | |编码码率，有效值见下表格。 |
@@ -103,20 +103,20 @@ recorderManager.start(options);
 
 **解释**： 录音开始事件
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 
 ## recorderManager.onPause
 
-**解释**： 录音暂停事件
+**解释**： 监听录音暂停事件
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 ## recorderManager.onStop
 
 **解释**： 录音停止事件，会回调文件地址。
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 **callback 回调结果说明**：
 
@@ -129,7 +129,7 @@ recorderManager.start(options);
 
 **解释**： 录音错误事件, 会回调错误信息 。
 
-**方法参数**：Fiction callback
+**方法参数**：Function callback
 
 
 **callback 回调结果说明**：
@@ -137,4 +137,5 @@ recorderManager.start(options);
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |errMsg |String | 错误信息 |
+|errCode|Number|错误码信息|
 

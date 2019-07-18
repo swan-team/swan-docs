@@ -32,7 +32,7 @@ sidebar: media_backgroundaudiomanager
  
 **示例**：
 
-<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -247,7 +247,18 @@ Page({
 
 ## backgroundAudioManager.onSeeking
 
-**解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数
+**解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。
 
 **方法参数**：Function callback
 
+## backgroundAudioManager.onNext
+
+**解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback
+
+## backgroundAudioManager.onPrev
+
+**解释**：监听用户在系统音乐播放面板点击上一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback

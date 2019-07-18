@@ -29,16 +29,79 @@ sidebar: file_save
 |savedFilePath  |String | 文件的保存路径|
 
 **示例**：
-<a href="swanide://fragment/205171636947a60ced2f0cdde6c7b8a31540396285" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4816f991cc6234fb35caa7f93d2e55621560166064722" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <button bind:tap="saveFile" type="primary" hover-stop-propagation="true">下载并保存文件</button>
+        <button bind:tap="openDocument" type="primary" hover-stop-propagation="true">打开文件</button>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.chooseImage({
-    count: 1,
-    success: function (res) {
-        var tempFilePaths = res.tempFilePaths;
-        swan.saveFile({
-            tempFilePath: tempFilePaths[0],
-            success: function (res) {
-                var savedFilePath = res.savedFilePath;
+Page({
+    data: {
+        title: 'saveFile/openDocument',
+        filePath: ''
+    },
+
+    saveFile() {
+        swan.showToast({
+            title: '开始下载'
+        });
+        swan.downloadFile({
+            header: {
+                'Cache-Control': 'no-cache'
+            },
+            url: 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf',
+            success: res => {
+                swan.saveFile({
+                    tempFilePath: res.tempFilePath,
+                    success: res => {
+                        swan.showToast({
+                            title: '保存成功'
+                        });
+                        this.setData('filePath', res.savedFilePath);
+                    },
+                    fail: err => {
+                        swan.showToast({
+                            title: '保存失败'
+                        });
+                    }
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '下载失败'
+                });
+            }
+        });
+    },
+
+    openDocument() {
+        swan.openDocument({
+            filePath: this.getData('filePath'),
+            fileType: 'pdf',
+            fail: err => {
+                if (!this.getData('filePath')) {
+                    swan.showToast({
+                        title: '请先点击保存文件'
+                    });
+                    return;
+                }
+                swan.showToast({
+                    title: '打开失败'
+                });
             }
         });
     }
@@ -83,7 +146,7 @@ swan.chooseImage({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |filePath  |String  |  是  |-| 本地文件路径 |
-|digestAlgorithm  |String	| 否  |-|计算文件摘要的算法，默认值 md5，有效值：md5，sha1。|
+|digestAlgorithm  |String	| 否  |md5|计算文件摘要的算法，有效值：md5，sha1。|
 |success   |Function  |  否  |-| 接口调用成功的回调函数 |
 |fail  |Function  |  否 | -| 接口调用失败的回调函数|
 |complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -97,7 +160,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/03fb8ed0c13722acc9b06f441603988b1556536748943" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/03fb8ed0c13722acc9b06f441603988b1556536748943" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -198,7 +261,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/3450c561cdf1ef62951d13eff25df65b1556536911397" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3450c561cdf1ef62951d13eff25df65b1556536911397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -286,7 +349,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/8e9af32a9901a93711f286f0f65e2eb61556537016514" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8e9af32a9901a93711f286f0f65e2eb61556537016514" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

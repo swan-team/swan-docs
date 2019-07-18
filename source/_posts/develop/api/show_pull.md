@@ -24,7 +24,7 @@ sidebar: show_pull
 
 **示例**：
 
-<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -67,7 +67,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

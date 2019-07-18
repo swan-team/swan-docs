@@ -1,5 +1,5 @@
 ---
-title: TP代授权小程序登录
+title: 授权小程序登录
 header: develop
 nav: third
 sidebar: login
@@ -7,6 +7,12 @@ sidebar: login
 
     
 ## 登录接口
+
+第三方平台代替小程序实现登录功能请参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-login"> 小程序登陆 </a> 。除了下述部分以外，其他接口的功能与小程序实现方式一致。
+
+code换取session_key
+
+第三方平台开发者的服务器使用登录凭证 code 以及授权小程序 access_token 获取 session_key 和 openid。其中session_key 是对用户数据进行加密签名的密钥。
 
 **接口说明**:
 

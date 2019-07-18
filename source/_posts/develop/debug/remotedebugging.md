@@ -20,8 +20,9 @@ sidebar: remotedebugging
     3.1 页面视图：远程调试工具的页面视图和客户端中的页面视图保持同步，展示了小程序页面的运行情况。
     > * 刷新按钮：修改代码后，点击刷新按钮使百度 App 客户端获得最新的开发代码，无需重新扫码打开远程调试窗口，实现静默刷新;
     > * 结束调试按钮：点击顶部的结束调试按钮，结束远程调试.
-
+    
     ![图片](../../../img/tool/远程调试02.png)
+    
     3.2 调试器：调试器在小程序的调试中起到了非常重要的作用：
     > * 在调试器的console面板中，开发者可以调试代码、查看小程序输出信息;
     > * 在调试器的source面板中，可以查看源代码，进行断点调试;
@@ -33,7 +34,21 @@ sidebar: remotedebugging
     > * 信息球的延迟越小，远程调试窗口和百度 App 客户端的通信越流畅：当延时小于50时，信息球的颜色为绿色;当延时大于50小于100时，信息球的颜色变成橙色;当延时大于100时，信息球的颜色变为红色。 
 
     * 信息球的位置可以拖拽变化：
-    ![图片](../../../img/tool/远程调试04.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/tool/远程调试04.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+</div>    
     * 手机端显示：
-    ![图片](../../../img/tool/远程调试05.png)
-    
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/tool/远程调试05.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+</div>

@@ -163,4 +163,4 @@ Page({
 组件
 ----
 SWAN 框架为开发者提供了一系列组件，可以让开发者基于这些基础组件快速开发。
-详情请见[组件文档](../../component/view)
+详情请见[组件文档](../../component/componentlist)

@@ -5,10 +5,31 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.80 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.80.8|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。<p>**BugFix**<p>修复setData(data, callback)callback回调里无法获取新增的组件实例的问题。|
+|3.80.6|2019.7.05|**BugFix**<p>修复 cover-view/cover-iamge transition 动画不生效的问题。|
+|3.80.2|2019.6.26|**New**<p>支持获取风控信息。<p>**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
+
+## 3.70 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.70.25|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
+|3.70.20|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
+|3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
+|3.70.2|2019.6.5|**New**<p>textarea 支持 confirm-type 的功能。<p>**BugFix**<p>修复s-if自定义组件扩展样式失效的问题。|
+
 ## 3.60 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.60.32|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
+|3.60.27|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
+|3.60.25|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
+|3.60.16|2019.6.5|**BugFix**<p>**·**修复s-if自定义组件扩展样式失效的问题；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复data 里不能包含 function的问题；<p>**·**修复模块化循环引用的报错；<p>**·**修复 data 里不能包含 function 问题。|
 |3.60.2|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 
 
@@ -16,6 +37,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.50.29|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
+|3.50.18|2019.6.5|**BugFix**<p>**·**修复模块化循环引用的报错；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题。|
+|3.50.16|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.50.12|2019.5.18|**BugFix**<p>修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.50.3|2019.4.26|**BugFix**<p>**·**修复修复多个map使用一个markers时引用问题，map iconPath 支持相对路径；<p>**·**修复 cover-image 销毁后 update 的问题；<p>**·**修复宿主不传 components 时，报错的问题。|
 
@@ -23,6 +47,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.40.29|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
+|3.40.28|2019.6.5|**BugFix**<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复模块化循环引用的报错。|
+|3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.40.19|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.40.15|2019.4.22|**BugFix**<p>**·**修复bindlongtap事件长按并移动后不能触发的问题；<p>**·**修复 cover-image 销毁后 update 的问题。|
 |3.40.9|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|
@@ -33,6 +60,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.30.39|2019.6.5|**BugFix**<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复模块化循环引用的报错。|
+|3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
+|3.30.37|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.30.34|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.30.32|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.30.31|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -44,6 +74,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.20.46|2019.6.5|**BugFix**<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复模块化循环引用的报错。|
+|3.20.44|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.20.36|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.20.35|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.20.34|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -60,6 +92,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.15.144|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
+|3.15.143|2019.6.5|**BugFix**<p>**修复模块化循环引用的报错。|
+|3.15.141|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
 |3.15.132|2019.4.11|**New**<p>增加AOP机制。|
 |3.15.125|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.15.120|2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|

@@ -3,6 +3,7 @@ title: 防沉迷
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-08
 ---
 
 ### swan.checkIsUserAdvisedToRest()

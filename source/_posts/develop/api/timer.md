@@ -8,7 +8,7 @@ sidebar: timer
 
 **示例**：
 
-<a href="swanide://fragment/283a511a5f8ef18ab6b2b90c8c6e44441558350989738" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/283a511a5f8ef18ab6b2b90c8c6e44441558350989738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -64,7 +64,7 @@ Page({
 
 **解释**：取消由 setInterval 设置的定时器。
 
-**方法参数**：Number ntervalID
+**方法参数**：Number intervalID
 
 **`intervalID`参数说明**：要取消的定时器的 ID。
 

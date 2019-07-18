@@ -30,7 +30,10 @@ sidebar: ai_face
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
-|face_num | number |检测到图片中的人脸数量| 
+|log_id| Number|	唯一的log id，用于问题定位。|
+|error_no| Number|	错误码，错误码为0时，人脸检测成功。|
+|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
+|face_num | Number |检测到图片中的人脸数量|
 |face_list| Array | 人脸信息列表|
 
 **face_list 参数说明**
@@ -157,7 +160,7 @@ sidebar: ai_face
 
 **示例代码**
 
-<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -295,7 +298,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceMatch({
@@ -384,7 +387,7 @@ swan.ai.faceMatch({
 
 **示例代码**
 
-<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -458,7 +461,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonVerify({
@@ -502,7 +505,7 @@ swan.ai.facePersonVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonIdmatch({
@@ -544,6 +547,9 @@ swan.ai.facePersonIdmatch({
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
+|log_id| Number|	唯一的log id，用于问题定位。|
+|error_no| Number|	错误码，错误码为0时，检测成功。|
+|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
 |face_liveness | number |活体分数值| 
 |thresholds | Object |由服务端返回最新的阈值数据（随着模型的优化，阈值可能会变化），将此参数与返回的 face_liveness 进行比较，可以作为活体判断的依据。 frr_1e-4：万分之一误识率的阈值；frr_1e-3：千分之一误识率的阈值；frr_1e-2：百分之一误识率的阈值。误识率越低，准确率越高，相应的拒绝率也越高。| 
 |face_list| Array | 人脸信息列表|
@@ -672,7 +678,7 @@ swan.ai.facePersonIdmatch({
 
 **示例代码**
 
-<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -793,6 +799,9 @@ swan.chooseImage({
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|
+|log_id| Number|	唯一的log id，用于问题定位。|
+|error_no| Number|	错误码，错误码为0时，活体检测成功。|
+|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
 |session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
 |code | string |语音验证码，数字形式，3~6 位数字。| 
 
@@ -800,7 +809,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceLivenessSessioncode({
@@ -870,7 +879,7 @@ swan.ai.faceLivenessSessioncode({
 
 **示例代码**
 
-<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceLivenessVerify({
