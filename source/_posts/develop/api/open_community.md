@@ -25,9 +25,9 @@ sidebar: open_editor
 |navBarTitleText  |  String  | 否 | 发布帖子|导航栏标题文案|
 |navBarTextStyle  |  String  | 否 | black  |导航栏标题文字颜色，仅支持 black / white|
 |navBarBackgroundColor  |  HexColor  | 否 | #ffffff|导航栏背景颜色|
-|confirmText  |  String  | 否 | 发布|发布按钮的文字，最多 4 个字符|
+|confirmText  |  String  | 否 | 发布|发布按钮的文字，最多 2 个字符，超出长度会被截断|
 |confirmColor  |  HexColor  | 否 | #3388ff|发布按钮的文字颜色|
-|cancelText  |  String  | 否 | 取消|取消按钮的文字，最多 4 个字符|
+|cancelText  |  String  | 否 | 取消|取消按钮的文字，最多 2 个字符，超出长度会被截断|
 |cancelColor  |  HexColor  | 否 | #666666|取消按钮的文字颜色|
 |targetText  |  String  | 否 | -|设置发布范围文案，若配置发布范围模块，则必填|
 |emojiPath  |  String  | 否 | -|设置自定义表情配置路径|
