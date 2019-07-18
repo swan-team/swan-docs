@@ -194,9 +194,13 @@
                     text: 配置URL适配规则
                     name: rank_配置URL适配规则
                   -
-                    link: /introduction/rank/#提交sitemap
-                    text: 提交sitemap
-                    name: rank_提交sitemap  
+                    link: /introduction/rank/#提交Sitemap
+                    text: 提交Sitemap
+                    name: rank_提交Sitemap  
+                  # -
+                  #   link: /introduction/rank/#小程序API提交
+                  #   text: 小程序API提交
+                  #   name: rank_小程序API提交                 
                   -
                     link: /introduction/rank/#robots协议介绍
                     text: robots协议介绍

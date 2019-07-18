@@ -278,7 +278,9 @@ Sitemap 示例:
 开发者在上传了 Sitemap 资源后可在开发者平台中点击登录“搜索资源平台”，使用当前绑定熊掌 ID 的超级管理员账号查看对应小程序的收录索引情况。
  ![Alt text](../../img/introduction/rank/21.png)
  ![Alt text](../../img/introduction/rank/22.png)
+
  
+
 ## robots协议介绍
 
 开发者可通过robots文件声明小程序中不想被搜索引擎收录的部分或者指定搜索引擎只收录特定的部分。仅当您的小程序中包含不希望被视频搜索引擎收录的内容时，才需要使用robots.txt文件。
