@@ -2185,13 +2185,13 @@
               text: 使用插件
               name: use
             -
-              link: /develop/plugins/limit-api
+              link: /develop/plugins/limit_api
               text: 插件中api的限制
-              name: limit-api
+              name: limit_api
             -
-              link: /develop/plugins/limit-components
+              link: /develop/plugins/limit_components
               text: 插件中组件的限制
-              name: subpackages
+              name: limit_components
 
 
     -
