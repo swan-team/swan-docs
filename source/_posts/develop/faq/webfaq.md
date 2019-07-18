@@ -32,3 +32,6 @@ A：提交完成一周之后即可生效。
 
 #### Q: Web 化的展示形式是怎样的？
 A：请阅读[流量接入说明](https://smartprogram.baidu.com/docs/introduction/intro/)了解。
+
+#### Q: web化后，setClipboardData和onReachBottom失效怎么办？
+A：setClipboardData为浏览器兼容性问题，在部分内核上无法支持该API，onReachBottom已修复，开发者需要更新开发者工具编译热更新到3.50.0以上后发包
