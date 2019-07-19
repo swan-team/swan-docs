@@ -27,11 +27,9 @@ sidebar: formlist
 |loading|Boolean|false| 否 |名称前是否带有loading图标|
 |bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
-| bindcontact | Handler |-| 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
-<!-- | bindfaceverify | Handler | | 否 | 人脸核验回调，使用时机：open-type="faceVerify" | -->
-<!-- |lang|String	|en	|指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	open-type="getUserInfo"。|
+| bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
+|contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
--->
 
 **size有效值**：
 
@@ -65,7 +63,7 @@ sidebar: formlist
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
 | getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
-<!-- |contact|获取客服消息| -->
+|contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
 
 
@@ -233,7 +231,7 @@ Page({
 |placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|
 | disabled | Boolean  | false  | 否 |是否禁用|
 | maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
-|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px 。取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离|
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|
 | focus |Boolean	  | false | 否 |获取焦点，调起键盘|
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
@@ -642,7 +640,7 @@ Page({
 <div class="notice">解释： </div>滚动选择器的子节点。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
-<a href="swanide://fragment/29488c89ce7e264ab001e2301dfb8ab41558352596895" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fa9cbcb83033ca080069da8f72d266771563433863796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -658,7 +656,7 @@ Page({
         <view s-for="item in months" style="line-height: 50px; text-align: center;">{{item}}月</view>
       </picker-view-column>
       <picker-view-column>
-        <view s-for="item in days" wx:key="days" style="line-height: 50px; text-align: center;">{{item}}日</view>
+        <view s-for="item in days" style="line-height: 50px; text-align: center;">{{item}}日</view>
       </picker-view-column>
     </picker-view>
   </view>

@@ -72,7 +72,7 @@ sidebar: scene
 ## 小程序	
 |场景|	scene值| 图例|
 |---|---|---|
-|小程序打开小程序|11700000|
+|小程序打开小程序|11700000|<div>/</div>|
 
 ## 扫码	
 |场景|	scene值| 图例|
@@ -82,20 +82,20 @@ sidebar: scene
 ## 贴吧小程序	
 |场景|	scene值| 图例|
 |---|---|---|
-|各吧内挂载|	11910037|
-|贴吧内搜索结果|	11910038|
-|贴吧吧内分享|	11910039|
-|首页信息流|11910086|
+|各吧内挂载|	11910037|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11910037.png"/></div></div>|
+|贴吧内搜索结果|	11910038|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11910038.png"/></div></div>|
+|贴吧吧内分享|	11910039|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11910039.jpg"/></div></div>|
+|首页信息流|11910086|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11910086.png"/></div></div>|
 
 ## 游戏中心	
 |场景|	scene值| 图例|
 |---|---|---|
-|小程序游戏中心|12410094|
-|NA游戏中心|12410095|
-|好看内游戏中心|12410103|
-|全民内游戏中心|12410104|
-|Lite内游戏中心|12410004|
-|贴吧内游戏中心|12410005|
+|小程序游戏中心|12410094|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410094.jpg"/></div></div>|
+|NA游戏中心|12410095|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410095.jpg"/></div></div>|
+|好看内游戏中心|12410103|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410103.jpg"/></div></div>|
+|全民内游戏中心|12410104|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410104.jpg"/></div></div>|
+|Lite内游戏中心|12410004|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410004.jpg"/></div></div>|
+|贴吧内游戏中心|12410005|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-12410005.jpg"/></div></div>|
 
 ## 游戏社区广场  
 |场景|	scene值| 图例|
@@ -107,8 +107,8 @@ sidebar: scene
 ## 其它	
 |场景|scene值| 图例|
 |---|---|---|
-|百度爬虫抓取|WEB|
-|默认|NA|
+|百度爬虫抓取|WEB|<div>/</div>|
+|默认|NA|<div>/</div>|
 
 **说明**：
 * 智能小程序会被百度爬虫自动抓取，这部分流量的场景值为 WEB 。

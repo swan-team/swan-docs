@@ -19,9 +19,6 @@ sidebar: register
 
 ## 主体信息填写
 
-* 填写 ID 信息：
-
-    ![图片](../../img/introduction/register/1.3.png)
 
 * 填写企业信息
 

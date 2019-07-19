@@ -125,12 +125,37 @@
               -
                 link: /introduction/accessfeed
                 text: 接入信息流流量 
-                name: accessfeed                
+                name: accessfeed
+                sidebar:
+                  -
+                    link: /introduction/accessfeed/#小程序发布上线
+                    text: 小程序发布上线
+                    name: accessfeed_小程序发布上线
+                  -
+                    link: /introduction/accessfeed/#素材上传
+                    text: 素材上传 
+                    name: accessfeed_素材上传
+                  -
+                    link: /introduction/accessfeed/#素材审核
+                    text: 素材审核 
+                    name: accessfeed_素材审核
+                  -
+                    link: /introduction/accessfeed/#素材优化建议
+                    text: 素材优化建议 
+                    name: accessfeed_素材优化建议
+                  -
+                    link: /introduction/accessfeed/#流量效果监控
+                    text: 流量效果监控
+                    name: accessfeed_流量效果监控
+
               -
                 link: /introduction/auditing_info
                 text: 信息流素材审核规范
                 name: auditing_info
-            
+              -
+                link: /introduction/auditing_faq
+                text: 信息流流量接入FAQ
+                name: auditing_faq            
         -
             link: /introduction/intro
             text: 自然搜索结果流量接入
@@ -159,15 +184,27 @@
                   -
                     link: /introduction/rank/#关联H5站点
                     text: 关联H5站点
-                    name: rank_关联H5站点                  
+                    name: rank_关联H5站点   
                   -
-                    link: /introduction/rank/#配置URL映射规则
-                    text: 配置URL映射规则
-                    name: rank_配置URL映射规则
+                    link: /introduction/rank/#数据提交如何选择  
+                    text: 数据提交如何选择  
+                    name: rank_数据提交如何选择                                   
                   -
-                    link: /introduction/rank/#提交sitemap
-                    text: 提交sitemap
-                    name: rank_提交sitemap  
+                    link: /introduction/rank/#配置URL适配规则
+                    text: 配置URL适配规则
+                    name: rank_配置URL适配规则
+                  -
+                    link: /introduction/rank/#提交Sitemap
+                    text: 提交Sitemap
+                    name: rank_提交Sitemap  
+                  # -
+                  #   link: /introduction/rank/#小程序API提交
+                  #   text: 小程序API提交
+                  #   name: rank_小程序API提交                 
+                  -
+                    link: /introduction/rank/#robots协议介绍
+                    text: robots协议介绍
+                    name: rank_robots协议介绍                    
                   -
                     link: /introduction/rank/#搜索流量接入FAQ
                     text: 搜索流量接入FAQ
@@ -221,7 +258,18 @@
               -
                 link: /introduction/pay
                 text: 百度收银台支付开通指引
-                name: pay                               
+                name: pay  
+    -
+      link: /introduction/contact
+      text: 客服功能接入
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/contact
+                text: 客服功能接入说明
+                name: contact                                             
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -2814,7 +2862,16 @@
                   -
                     link: /develop/api/timer/#setTimeout
                     text: setTimeout
-                    name: timer_setTimeout   
+                    name: timer_setTimeout
+              -
+                link: /develop/api/open_riskInfo
+                text: 风控
+                name: open_riskInfo
+                sidebar:
+                  -
+                    link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
+                    text: swan.getSystemRiskInfo
+                    name: open_userinfo_swan-getSystemRiskInfo   
     -
       link: /develop/serverapi/open_feed
       text: 服务端 API
@@ -2827,6 +2884,11 @@
                 text: 信息流资源
                 name: open_feed
                 sidebar:
+                  
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料提交简介
+                    text: 信息流物料提交简介
+                    name: open_feed_信息流物料提交简介
                   -
                     link: /develop/serverapi/open_feed/#submitresource
                     text: submitresource
@@ -2842,7 +2904,19 @@
                   -
                     link: /develop/serverapi/open_feed/#deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap          
+                    name: open_feed_deletesitemap                          
+                  -
+                    link: /develop/serverapi/open_feed/#信息流物料投放具体字段
+                    text: 信息流物料投放具体字段
+                    name: open_feed_信息流物料投放具体字段    
+                  -
+                    link: /develop/serverapi/open_feed/#信息流字段附录
+                    text: 信息流字段附录
+                    name: open_feed_信息流字段附录 
+                  -
+                    link: /develop/serverapi/open_feed/#常见问题
+                    text: 常见问题
+                    name: open_feed_常见问题                                                             
               -
                 link: /develop/serverapi/open_infomation
                 text: 模板消息
@@ -2887,11 +2961,36 @@
                   -
                     link: /develop/serverapi/open_infomation/#sendTemplateMessage
                     text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage   
+                    name: open_infomation_sendTemplateMessage  
+              -
+                link: /develop/serverapi/contact_api
+                text: 客服消息
+                name: contact_api
+                sidebar:
+                  -
+                    link: /develop/serverapi/contact_api/#消息推送介绍
+                    text: 消息推送介绍
+                    name: contact_api_消息推送介绍
+                  -
+                    link: /develop/serverapi/contact_api/#在页面中使用客服消息
+                    text: 在页面中使用客服消息
+                    name: contact_api_在页面中使用客服消息                 
+                  -
+                    link: /develop/serverapi/contact_api/#后台接入消息服务
+                    text: 后台接入消息服务
+                    name: contact_api_后台接入消息服务                    
+                  -
+                    link: /develop/serverapi/contact_api/#发送客服消息接口
+                    text: 发送客服消息接口
+                    name: contact_api_发送客服消息接口
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
-                name: power_exp                             
+                name: power_exp     
+              -
+                link: /develop/serverapi/open_risk_power/#detectrisk
+                text: 风控检测说明
+                name: open_risk_power                           
     -
       link: /develop/devtools/page
       text: 工具
@@ -2899,6 +2998,10 @@
       sidebar:       
         -
             sidebar:
+              -
+                link: /develop/devtools/history
+                text: 版本下载
+                name: history               
               -
                 link: /develop/devtools/page
                 name: page
@@ -3099,11 +3202,7 @@
             link: /develop/devtools/history
             text: 工具版本信息
             name: history
-            sidebar:
-              -
-                link: /develop/devtools/history
-                text: 版本下载
-                name: history          
+            sidebar:         
               -
                 link: /develop/devtools/uplog_tool
                 text: 开发者工具历史更新日志
@@ -3341,7 +3440,29 @@
             -
               link: /develop/swan/compatibility
               text: 兼容性说明
-              name: compatibility 
+              name: compatibility
+              sidebar:
+              -
+                link: /develop/swan/compatibility/#版本号比较
+                text: 版本号比较
+                name: concept_版本号比较
+              -
+                link: /develop/swan/compatibility/#API存在判断
+                text: API存在判断
+                name: concept_API存在判断
+              -
+                link: /develop/swan/compatibility/#canIUse
+                text: canIUse
+                name: concept_canIUse
+              -
+                link: /develop/swan/compatibility/#Android-与-iOS-差异
+                text: Android 与 iOS 差异
+                name: concept_Android-与-iOS-差异
+              -
+                link: /develop/swan/compatibility/#基础库最低版本设置
+                text: 基础库最低版本设置
+                name: concept_基础库最低版本设置
+
     -
       link: /develop/faq/frequently
       text: FAQ
@@ -3349,35 +3470,35 @@
       sidebar:
         -
           sidebar:            
-  
-            -
-              link: /develop/faq/frequently
-              text: 常见问题
-              name: frequently 
             # -
             #   link: /develop/function/faq_v2 
             #   text: 支付常见问题
-            #   name: faq_v2               
-    #         -
-    #           link: /develop/faq/confaq 
-    #           text: 组件常见问题
-    #           name: confaq               
-    #         -
-    #           link: /develop/faq/apifaq 
-    #           text: API 常见问题
-    #           name: apifaq  
-    #         -
-    #           link: /develop/faq/toolfaq 
-    #           text: 工具常见问题
-    #           name: toolfaq        
-    #         -
-    #           link: /develop/faq/web 
-    #           text: web 化常见问题
-    #           name: web    
-    #         -
-    #           link: /develop/faq/web-view
-    #           text: web-view常见问题
-    #           name: web-view                                                                    
+            #   name: faq_v2 
+            -
+              link: /develop/faq/framworkfaq
+              text: 框架常见问题
+              name: framworkfaq                           
+            -
+              link: /develop/faq/confaq 
+              text: 组件常见问题
+              name: confaq               
+            -
+              link: /develop/faq/apifaq 
+              text: API 常见问题
+              name: apifaq  
+            -
+              link: /develop/faq/toolfaq 
+              text: 工具常见问题
+              name: toolfaq        
+            -
+              link: /develop/faq/webfaq 
+              text: web 化常见问题
+              name: webfaq 
+            -
+              link: /develop/faq/frequently
+              text: 其它常见问题
+              name: frequently                  
+                                                                   
 # 4
 -
   link: /data/concept
@@ -3455,9 +3576,9 @@
                 text: 数据分析维度
                 name: guideline_数据分析维度
     -
-      link: /data/performance-poin
+      link: /data/performance-point
       text: 统计方法
-      name: performance-poin
+      name: performance-point
       sidebar:
         -
           sidebar:
@@ -3481,11 +3602,64 @@
       name: book
       sidebar:
         -
-          sidebar:
+          sidebar:       
           -
             link: /operations/specification
             text: 平台运营规范
             name: specification
+            sidebar:
+              - 
+                link: /operations/specification/#1-注册名称规范
+                text: 1.注册名称规范
+                name: specification_1-注册名称规范    
+              - 
+                link: /operations/specification/#2-注册信息提交规范
+                text: 2.注册信息提交规范
+                name: specification_2-注册信息提交规范
+              - 
+                link: /operations/specification/#3-基本信息规范
+                text: 3.基本信息规范
+                name: specification_3-基本信息规范
+              - 
+                link: /operations/specification/#4-功能体验规范
+                text: 4.功能体验规范
+                name: specification_4-功能体验规范
+              - 
+                link: /operations/specification/#5-行为规范
+                text: 5.行为规范
+                name: specification_5-行为规范                                      
+              - 
+                link: /operations/specification/#6-信息内容规范
+                text: 6.信息内容规范
+                name: specification_6-信息内容规范          
+              - 
+                link: /operations/specification/#7-智能小程序内嵌网页规范
+                text: 7.智能小程序内嵌网页规范
+                name: specification_7-智能小程序内嵌网页规范
+              - 
+                link: /operations/specification/#8-商标与商业外观
+                text: 8.商标与商业外观
+                name: specification_8-商标与商业外观         
+              - 
+                link: /operations/specification/#9-可用性和完整性规范
+                text: 9.可用性和完整性规范
+                name: specification_9-可用性和完整性规范
+              - 
+                link: /operations/specification/#10-用户隐私和数据规范
+                text: 10.用户隐私和数据规范
+                name: specification_10-用户隐私和数据规范   
+              - 
+                link: /operations/specification/#11-智能小程序支付规范
+                text: 11.智能小程序支付规范
+                name: specification_11-智能小程序支付规范
+              - 
+                link: /operations/specification/#12-技术实现规范
+                text: 12.技术实现规范
+                name: specification_12-技术实现规范
+              - 
+                link: /operations/specification/#13-智能小程序UI规范
+                text: 13.智能小程序UI规范
+                name: specification_13-智能小程序UI规范                                                                      
           -
             link: /operations/catagory
             text: 服务类目

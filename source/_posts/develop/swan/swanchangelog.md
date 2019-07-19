@@ -9,12 +9,15 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.80.8|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。<p>**BugFix**<p>修复setData(data, callback)callback回调里无法获取新增的组件实例的问题。|
+|3.80.6|2019.7.05|**BugFix**<p>修复 cover-view/cover-iamge transition 动画不生效的问题。|
 |3.80.2|2019.6.26|**New**<p>支持获取风控信息。<p>**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 
 ## 3.70 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.25|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.70.20|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.70.2|2019.6.5|**New**<p>textarea 支持 confirm-type 的功能。<p>**BugFix**<p>修复s-if自定义组件扩展样式失效的问题。|
@@ -23,6 +26,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.60.32|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.60.27|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.60.25|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.60.16|2019.6.5|**BugFix**<p>**·**修复s-if自定义组件扩展样式失效的问题；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复data 里不能包含 function的问题；<p>**·**修复模块化循环引用的报错；<p>**·**修复 data 里不能包含 function 问题。|
