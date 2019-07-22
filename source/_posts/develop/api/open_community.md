@@ -1,10 +1,9 @@
 ---
-title: 调起社区发布器
+title: 社区发布器
 header: develop
 nav: api
 sidebar: open_editor
 ---
-
 
 ## swan.openCommunityEditor
 
