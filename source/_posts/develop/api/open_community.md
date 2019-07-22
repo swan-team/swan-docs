@@ -85,21 +85,29 @@ imageConf: {
 
 **示例**：
 
-<a href="swanide://fragment/c065348c9ce42caa6628225b9fafefc01563775472118" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2ad65127412c25e036d6c360f082f0c41563779186331" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({
-    contentPlaceholder: '在这里编辑正文',
-    titlePlaceholder: '在这里编辑标题',
-    moduleList: ['image', 'title', 'emoji'],
-    imgParame: {
+    contentPlaceholder: '请输入帖子正文',
+    titlePlaceholder: '请输入标题',
+    moduleList: ['title', 'image', 'emoji', 'target'],
+    imageConf: {
         maxNum: 3,
         ratio: 0.5
     },
-    navBarTitleText: '社区文章发布器',
-    emojiPath: '../../emojidata',
+    navBarTitleText: '发布器',
+    navBarTextStyle: 'white',
+    navBarBackgroundColor: '#ffffff',
+    confirmText: '发布',
+    confirmColor: '#3388ff',
+    cancelText: '取消',
+    cancelColor: '#eeeeee',
+    targetText: '百度贴吧',
+    emojiPath: '../emojidata',
     success: function (res) {
         console.log('openCommunityEditor success', res);
+        // 将图片上传到服务器
         swan.uploadFile({
             url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
             filePath: res.tempFilePaths[0], // 要上传文件资源的路径
@@ -114,9 +122,14 @@ swan.openCommunityEditor({
                 console.log('错误信息：' + err.errMsg);
             }
         });
+        swan.closeCommunityEditor();
     },
     fail: function (err) {
         console.log('openCommunityEditor fail', err);
+        swan.closeCommunityEditor();
+    },
+    complete: function (res) {
+        console.log('openCommunityEditor complete', res);
     }
 })
 ```
@@ -136,6 +149,9 @@ swan.openCommunityEditor({
 |complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
+
+<a href="swanide://fragment/063a4b74f84b571ffff57f805a1f15d41563779692092" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 swan.openCommunityEditor({
     contentPlaceholder: '在这里编辑正文',
@@ -146,14 +162,13 @@ swan.openCommunityEditor({
         ratio: 0.5
     },
     navBarTitleText: '社区文章发布器',
-    emojiPath: '../../emojidata'
+    emojiPath: '../../emojidata',
     success: function (res) {
         console.log('openCommunityEditor success', res);
-        swan.closeCommunityEditor({
-            success: function (res) {
-                console.log('发布成功，关闭发布器');
-            }
+        swan.showToast({
+            title: '关闭发布器'
         });
+        swan.closeCommunityEditor();
     },
     fail: function (err) {
         console.log('openCommunityEditor fail', err);
