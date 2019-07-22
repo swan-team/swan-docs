@@ -8,7 +8,7 @@ sidebar: open_editor
 
 ## swan.openCommunityEditor
 
-> 基础库 x.x.x 版本开始支持。以下版本请使用小程序发布器组件
+> 基础库 3.90.1 版本开始支持。以下版本请使用小程序发布器组件
 
 **解释**： 调起社区内容通用发布器，并支持开发者配置发布器展示模块。
 
@@ -39,7 +39,8 @@ sidebar: open_editor
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
-| tempFiles|Array | 图片临时地址 |
+| tempFilePaths  | `Array.<string>` |图片的本地文件路径列表 。|
+| tempFiles  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象。|
 | title | String | 标题 |
 | content | String | 正文 |
 
@@ -74,15 +75,17 @@ imageConf: {
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 
 自定义表情资源文件夹格式：
-文件夹中包括：`emoji.json` 和所有表情图片资源
+文件夹中包括：`emoji.json` 和所有表情图片资源。外层文件夹名字可以由开发者自由定义，路径配置在 emojiPath 中即可，`emoji.json` 为固定文件名，请开发者按格式创建。表情没有数量和大小限制，但是表情资源会占用包体大小。
+
 ![图片](../../../img/api/community_editor/emoji_path.jpg)
 `emoji.json` 格式：
 ![图片](../../../img/api/community_editor/emoji_json.jpg)
 
 
+
 **示例**：
 
-<a href="swanide://fragment/31604f4bbfc86a85e3fa313ec8c451461562738957458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c065348c9ce42caa6628225b9fafefc01563775472118" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({
