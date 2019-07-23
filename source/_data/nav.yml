@@ -38,21 +38,13 @@
                 name: authenticity
                 sidebar:
                   -
-                    link: /introduction/authenticity/#对公验证
-                    text: 对公验证
-                    name: authenticity_对公验证
+                    link: /introduction/authenticity/#验证
+                    text: 验证
+                    name: authenticity_验证
                   -
-                    link: /introduction/authenticity/#证照验证
-                    text: 证照验证
-                    name: authenticity_证照验证            
-                  -
-                    link: /introduction/authenticity/#法人人脸识别
-                    text: 法人人脸识别
-                    name: authenticity_法人人脸识别
-                  -
-                    link: /introduction/authenticity/#小程序优惠通道
-                    text: 小程序优惠通道
-                    name: authenticity_小程序优惠通道 
+                    link: /introduction/authenticity/#收费（小程序优惠通道）
+                    text: 收费（小程序优惠通道）
+                    name: authenticity_收费（小程序优惠通道）
         -    
             link: /introduction/register_consummate
             text: 创建小程序
@@ -197,10 +189,10 @@
                     link: /introduction/rank/#提交Sitemap
                     text: 提交Sitemap
                     name: rank_提交Sitemap  
-                  # -
-                  #   link: /introduction/rank/#小程序API提交
-                  #   text: 小程序API提交
-                  #   name: rank_小程序API提交                 
+                  -
+                    link: /introduction/rank/#小程序API提交
+                    text: 小程序API提交
+                    name: rank_小程序API提交                 
                   -
                     link: /introduction/rank/#robots协议介绍
                     text: robots协议介绍
@@ -765,6 +757,10 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
+            -
+              link: /develop/framework/http
+              text: http请求失败说明
+              name: http              
             -
               link: /develop/framework/whitescreen
               text: 白屏优化建议
@@ -2989,8 +2985,25 @@
                 name: power_exp     
               -
                 link: /develop/serverapi/open_risk_power/#detectrisk
-                text: 风控检测说明
-                name: open_risk_power                           
+                text: 风控服务
+                name: open_risk_power     
+                sidebar:
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用场景
+                    text: 使用场景
+                    name: open_risk_power_使用场景  
+                  -
+                    link: /develop/serverapi/open_risk_power/#功能介绍
+                    text: 功能介绍
+                    name: open_risk_power_功能介绍 
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用说明
+                    text: 使用说明
+                    name: open_risk_power_使用说明                                                          
+                  -
+                    link: /develop/serverapi/open_risk_power/#detectrisk
+                    text: detectrisk
+                    name: open_risk_power_detectrisk                       
     -
       link: /develop/devtools/page
       text: 工具

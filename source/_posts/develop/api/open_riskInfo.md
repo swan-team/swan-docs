@@ -7,7 +7,7 @@ sidebar: open_riskInfo
 
 ## swan.getSystemRiskInfo
 
-**解释**： 获取用于得到风控信息的加密信息对象。
+**解释**： 获取用于得到风控信息的加密信息对象。更多小程序风控能力参见[风控服务](https://smartprogram.baidu.com/docs/develop/serverapi/open_risk_power/)。
 
 **方法参数**：Object object
 
