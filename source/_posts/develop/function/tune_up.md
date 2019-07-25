@@ -91,27 +91,28 @@ swan.requestPolymerPayment({
 * 在调起收银台过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，请认真阅读文档。
 
 ## 通知支付状态
-#### 使用场景
 
-业务方智能小程序跳转至百度收银台，输入正确的交易密码之后，即订单支付成功后，百度收银台会主动调用业务方的的支付回调地址（开发者平台注册的支付回调地址）通知业务方该订单支付成功。
+### 使用场景
 
-###  接口注意事项 
+业务方智能小程序跳转至百度收银台，输入正确的交易密码之后，即订单支付成功后，百度收银台会主动调用业务方的的支付回调地址（开发者平台注册的支付回调地址）通知业务方该订单支付成功。 
 
-* **幂等性：**业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
+### 接口注意事项 
 
-* **超时时间：**业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，为保障体验，重试只有三次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）；
+1. 幂等性：业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
 
-* **返回值判断：**errno 为 0 表示商户已经成功收到支付信息，并妥善处理，errno 不为 0 将认为是同步支付信息失败，连续三次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产；
+2. 超时时间：业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，为保障体验，重试只有三次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）；
 
-* **回调地址服务器部署：**如果回调接口部署在阿里云或有网关准入限制，请参考文档[阿里云安全组设置](http://smartprogram.baidu.com/docs/develop/function/aliyun_v2/)中的IP地址设置白名单。<br />
+3. 返回值判断：errno为0表示商户已经成功收到支付信息，并妥善处理，errno不为0将认为是同步支付信息失败，连续三次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产；
+
+4. 回调地址服务器部署：如果回调接口部署在阿里云或有网关准入限制，请参考文档[阿里云安全组设置](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。<br />
 
 
-回调地址配置后要确认服务审核是“审核通过”状态，审核中会导致无法收到回调地址,详见[服务审核注意事项](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_4_rule/appauditrule_v2.md)。
+> 回调地址配置后要确认服务审核是“审核通过”状态，审核中会导致无法收到回调地址,详见[<服务审核注意事项>](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_4_rule/appauditrule_v2.md)。
 
-服务器调用开发者回调接口不成功或开发者返回参数有误连续三次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产。还请开发者仔细根据文档操作。如有无法核销的“已付款订单，请开发者提供appId、orderId、服务名称、公司名称、问题描述发送至问题反馈邮箱，` jiaoyi-ask@baidu.com `。
- 
+> 服务器调用开发者回调接口不成功或开发者返回参数有误连续三次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产。还请开发者仔细根据文档操作。如有无法核销的“已付款订单，请开发者提供appId、orderId、服务名称、公司名称、问题描述发送至问题反馈邮:jiaoyi-ask@baidu.com
 
-###  通知参数说明 
+
+### 通知参数说明 
 
 |参数|参数名称|类型|说明|示例|
 |---|---|---|---|---|
@@ -133,12 +134,12 @@ swan.requestPolymerPayment({
 |status             |订单支付状态|Integer|1：未支付；2：已支付；-1：订单取消|2|
 |tpOrderId          |业务方订单号|String|业务方唯一订单号|33330020199|
 |returnData         |业务方透传数据|Object|业务方下单时传入的数据| |
-|rsaSign            |rsa签名|String|rsa签名字符串|全部参数参与签名，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。	|
+|rsaSign            |rsa签名|String|rsa签名字符串|全部参数参与签名，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)	|
 
 
- 这里对全部参数签名是对收到的平台回调的所有POST参数进行签名（这里所指的参数不包含rsasign，故不需要参与签名），空值参数不会发送且不需要参与签名，如没有对回调中收到的所有参数签名，会导致验签不通过，如果商户URL里包含GET类型参数，不会参与签名。 
+<font color=red>这里对全部参数签名是对收到的平台回调的所有POST参数进行签名（这里所指的参数不包含rsasign，故不需要参与签名），空值参数同样需要参与签名，建议格式：key=&key2=value2，如没有对回调中收到的所有参数签名，会导致验签不通过，如果商户URL里包含GET类型参数，不会参与签名。注意：验签需要使用正确的平台公钥，可以在服务详情中查询，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)第8项内容。</font><br />
 
-###  返回参数说明 
+####**三、返回参数说明**
 
 
 |名称|类型|是否必须|示例值|描述|
@@ -147,7 +148,7 @@ swan.requestPolymerPayment({
 |msg	|String	    |是  |success    |返回信息|
 |data   |Object	|是  |{"isConsumed":0}	|返回数据|
 
-
+<br />
 
 data字段为JSON格式，参数如下：
 
@@ -156,7 +157,7 @@ data字段为JSON格式，参数如下：
 |isConsumed|Integer|是|2|是否标记核销|
 |isErrorOrder|Integer|否|1|是否异常订单（如需主动发起异常退款，需将此字段设置为1）|
 
-
+<br />
 
 isConsumed字段参数枚举值如下：
 
@@ -165,46 +166,46 @@ isConsumed字段参数枚举值如下：
 |1|未消费|
 |2|已消费|
 
-
+<br />
 
 **注意:**
 
 **isConsumed重要性：**为必传参数（不传会触发异常退款），用来标记该订单是否已消费。
-小程序接入为支付成功即消费场景，该字段需设置为 2。（字段不设置为 2 订单同样会变更为“已消费”）如 isConsumed 值不返回 2，“已消费”状态的订单金额不能顺利进入企业余额。 
+<font color=red>小程序接入为支付成功即消费场景，该字段需设置为2。（字段不设置为2订单同样会变更为“已消费”）如isConsumed值不返回2，“已消费”状态的订单金额不能顺利进入企业余额。</font>
 
-### 通知触发条件 
+####**四、通知触发条件**
 
-用户支付成功，通过了各项支付后校验之后，会调用此接口，将支付信息同步给业务方。 
-如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](http://smartprogram.baidu.com/docs/develop/function/aliyun_v2/)中的IP地址设置白名单；业务方接口的耗时要求小于 2s
-（超过 2s 会触发平台的超时重试，为保障体验，重试只有三次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）。 
+用户支付成功，通过了各项支付后校验之后，会调用此接口，将支付信息同步给业务方。<br />
+<font color=red>如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[<阿里云安全组设置>](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单；业务方接口的耗时要求小于2s
+（超过2s会触发平台的超时重试，为保障体验，重试只有三次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）。</font><br />
 
-###  业务方服务器通知参数获取 
+####**五、业务方服务器通知参数获取**
 
-1、百度收银台是用 POST 方式发送通知信息，参数以 URL param 的方式返回。
+1、百度收银台是用POST方式发送通知信息，参数以URL param的方式返回
 
 PHP服务推荐参数获取方式：$_POST['xxx']
 
 Java服务推荐参数获取方式：@RequestParam(value="xxx")
 
-2、百度收银台主动发起通知，该方式才会被启用。
+2、百度收银台主动发起通知，该方式才会被启用
 
-3、程序执行完后须同步返回符合要求的 JSON 字符串。如果商户返回给百度收银台的字符不是合法 JSON 或者解析出来的 errno不为0，会对订单发起异常退款（所付款项及资产将全数退还给用户）。
+3、程序执行完后须同步返回符合要求的JSON字符串。如果商户返回给百度收银台的字符不是合法JSON或者解析出来的errno不为0，会对订单发起异常退款（所付款项及资产将全数退还给用户）
 
 
-###  业务方通知参数合法性验证 
+####**六、业务方通知参数合法性验证**
 
 当百度收银台通过调用接口同步支付信息给给业务方时，业务方获得这些数据时，必须进行如下处理:
 
 1、验证签名
 
-首先必需验证签名，然后验证是否是百度收银台发来的通知，请参见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。
+首先必需验证签名，然后验证是否是百度收银台发来的通知，请参见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)。
 
 2、业务数据处理注意事项
 
-业务方需要验证该通知数据中的 tpOrderId 是否为业务方系统中创建的订单号，并判断 totalMoney 是否确实为该订单的实际金额（即商户订单创建时的金额），上述有任何一个验证不通过，则表明本次通知是异常通知，务必忽略。在上述验证通过后业务方必须根据百度收银台不同类型的业务通知，正确的进行不同的业务处理，并且过滤重复的通知结果数据。如果商户需要对同步返回的数据做验签，必须通过服务端的签名验签代码逻辑来实现。如果商户未正确处理业务通知，存在潜在的风险，商户自行承担因此而产生的所有损失。
+业务方需要验证该通知数据中的tpOrderId是否为业务方系统中创建的订单号，并判断totalMoney是否确实为该订单的实际金额（即商户订单创建时的金额），上述有任何一个验证不通过，则表明本次通知是异常通知，务必忽略。在上述验证通过后业务方必须根据百度收银台不同类型的业务通知，正确的进行不同的业务处理，并且过滤重复的通知结果数据。如果商户需要对同步返回的数据做验签，必须通过服务端的签名验签代码逻辑来实现。如果商户未正确处理业务通知，存在潜在的风险，商户自行承担因此而产生的所有损失。
 
 
-###  DEMO 
+####**七、DEMO**
 
 入参(REQUEST) DEMO：
 
@@ -212,7 +213,7 @@ Java服务推荐参数获取方式：@RequestParam(value="xxx")
 http://xxx.tpbusiness.xxx/SyncPayInfo?userId=149235070&orderId=800020199&unitPrice=800&count=2&totalMoney=1600&payMoney=1200&promoMoney=100&hbMoney=100&hbBalanceMoney=100&giftCardMoney=100&dealId=7423328&payTime=1463037529&promoDetail=&payType=9101&partnerId=1000000003&status=2&tpOrderId=33330020199&returnData=&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 
- 
+<br />
 
 返回(RESPONSE) DEMO:
 
@@ -226,9 +227,11 @@ http://xxx.tpbusiness.xxx/SyncPayInfo?userId=149235070&orderId=800020199&unitPri
 {"errno": 0,"msg": "success","data": {"isErrorOrder": 1,"isConsumed": 2}
 ```
 
- 
+<br />
 
-小程序场景 isConsumed 返回值一定要为 2，（字段不设置为2订单不会变更为“已消费”）不按照要求值返回参数，用户已付款金额不能顺利进入企业余额。
+
+
+<font color=red>小程序场景isConsumed返回值一定要为2，（字段不设置为2订单不会变更为“已消费”）不按照要求值返回参数，用户已付款金额不能顺利进入企业余额。</font><br />
 
 ## 支付状态查询
 
@@ -425,24 +428,24 @@ nuomi.cashier.applyorderrefund
 
 ## 请求业务方退款审核
 
-#### 使用场景 
+**使用场景：**
 
-* 当用户的某个订单申请了退款后，百度收银台会主动调用业务方的退款审核地址（开发者平台注册的退款审核地址）询问订单是否可退。
+1、当用户的某个订单申请了退款后，百度收银台会主动调用业务方的退款审核地址（开发者平台注册的退款审核地址）询问订单是否可退。
 
-* 用户支付成功后，百度收银台通过通知业务方支付成功接口通知业务方，业务方反馈给百度收银台的字符不是合法json或者解析出来的errno不为0时，系统会自动发起退款，此时百度收银台也会调用业务方的退款审核接口询问业务方订单是否可以退款。
+2、用户支付成功后，百度收银台通过通知业务方支付成功接口通知业务方，业务方反馈给百度收银台的字符不是合法json或者解析出来的errno不为0时，系统会自动发起退款，此时百度收银台也会调用业务方的退款审核接口询问业务方订单是否可以退款。
 
 
-### 接口注意事项 
+####**一、接口注意事项**
 
-* **幂等性：**业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
+**1、幂等性：**业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
 
-* **超时时间：**业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，重试间隔：2min/4min/10min/30min/1h...）；
+**2、超时时间：**业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，重试间隔：2min/4min/10min/30min/1h...）；
 
-* **返回值判断：**errno为0表示业务方已经成功收到该订单的退款审核信息，errno不为0将认为是请求业务方退款审核接口失败，会发起重试（不限次数，重试间隔：2min/4min/10min/30min/1h...）。
+**3、返回值判断：**errno为0表示业务方已经成功收到该订单的退款审核信息，errno不为0将认为是请求业务方退款审核接口失败，会发起重试（不限次数，重试间隔：2min/4min/10min/30min/1h...）。
 
-* **异常退款：**由于支付回调不成功导致的异常退款也会请求业务方退款审核；
+**4、异常退款：**由于支付回调不成功导致的异常退款也会请求业务方退款审核；
 
-### 请求参数说明 
+####**二、请求参数说明**
 
 |参数|参数名称|类型（长度范围）|参数说明|是否必需|样例|
 |---|---|---|---|---|---|
@@ -450,13 +453,13 @@ nuomi.cashier.applyorderrefund
 |userId|用户ID|Long	|百度用户ID|	是|149235070|
 |tpOrderId|业务方订单ID|string|业务方订单ID|是|11119800|
 |refundBatchId|退款批次号|String	|百度平台退款批次号【[幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)标识参数】(用于重入判断)|	是|149235070|
-|rsaSign|参数签名|String	|平台生成的sign|	是|全部参数参与签名，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)|
+|rsaSign|参数签名|String	|平台生成的sign|	是|全部参数参与签名，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)|
 
 <br />
 
-备注：这里对全部参数签名是对平台的所有POST参数进行签名，如果商户URL里包含GET类型参数，不会参与签名。
+备注：这里对全部参数签名是对平台的所有POST参数进行签名，如果商户URL里包含GET类型参数，不会参与签名。验签需要使用正确格式的平台公钥，可以在服务详情中查询，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)第8项内容。
 
-###  返回参数说明 
+####**三、返回参数说明**
 
 
 
@@ -473,9 +476,10 @@ data字段为json格式，参数如下：
 |名称|类型|是否必须|示例值|描述|
 |---|---|---|---|---|
 |auditStatus|Integer|是|0|退款审核状态|
-|calculateRes|Object|是|{"refundPayMoney":100}|退款金额（默认全退即下单时的payMoney金额，暂不支持部分退)，不论审核成功还是失败都需要填写本字段|
+|calculateRes|Object|是|{"refundPayMoney":100}|全额退和部分退均要填写订单实际支付金额，单位：分。不论审核成功还是失败都需要填写本字段。|
 
- >refundPayMoney的值是以分为单位的整数。 
+<font color=red>refundPayMoney的值是以分为单位的整数。</font><br />
+<br />
 
 auditStatus枚举值说明如下：
 
@@ -487,17 +491,17 @@ auditStatus枚举值说明如下：
 
 <br />
 
-#### **注意:**
+**注意:**
 
 **auditStatus重要性：**为必传参数（不传会认为接口返回出错），用来标识第三方的退款审核结果，平台根据审核结果执行退款或置为不可退款，若auditStatus=3，百度收银台会视为审核结果不确定，会继续重试（重试频率：每5min一次），目前重试次数&重试期限不做限制（直到业务方返回审核通过或不通过等审核终态才结束重试），注意：业务方返回auditStatus=3，退款审核结果不确定，收银台不会给用户退款，可能会影响用户退款体验。
 
 
-### **通知触发条件**
+####**四、通知触发条件**
 
 当订单发起退款时，经平台初步校验认为可以退款的，会通过此接口向业务方请求退款审核。
 
 
-### **业务方服务器参数获取**
+####**五、业务方服务器参数获取**
 
 1、百度收银台是用POST方式发送通知信息，因此该页面中获取参数的方式，如：request.Form(“orderId”)、$_POST[‘orderId’]；
 
@@ -512,20 +516,20 @@ auditStatus枚举值说明如下：
 6、该方式的调试与运行必须在服务器上，即互联网上能访问。
 
 
-### **业务方通知参数合法性验证**
+####**六、业务方通知参数合法性验证**
 
 当百度收银台通过调用接口请求业务方订单退款审核时，业务方获得这些数据后，必须进行如下处理:
 
 1、验证签名
 
-首先必需验证签名，然后验证是否是平台发来的通知，请参见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。
+首先必需验证签名，然后验证是否是平台发来的通知，请参见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)。
 
 2、业务数据处理注意事项
 
 业务方需要验证该通知数据中的orderId是否为业务方系统中创建的订单号，若非业务方订单，则表明本次通知是异常通知，务必忽略。在上述验证通过后业务方请审核判断该订单是否可以退款，将审核结果返回（若业务方返回可退款，平台会执行退款任务，退款成功后该笔订单不参与业务方的核销结算）。如果商户未正确处理业务通知，存在潜在的风险，商户自行承担因此而产生的所有损失。
 
 
-### **DEMO**
+####**七、DEMO**
 
 入参(REQUEST) DEMO：
 
@@ -541,29 +545,28 @@ http://xxx.tpbusiness.xxx/refundAudit?orderId=800020199&refundBatchId=100003588&
 
 <br />
 
->refundPayMoney的值是以分为单位的整数，如不严格按照文档提示操作，会导致退款审核失败。
+<font color=red>refundPayMoney的值是以分为单位的整数，如不严格按照文档提示操作，会导致退款审核失败。</font><br />
 <br />
-
 
 ## 通知退款状态
 
-#### 使用场景 
+**使用场景：**
 
 百度收银台调用业务方的退款审核接口成功，且业务方返回允许退款后，平台会去做退款操作，当订单退款成功后，百度收银台会主动调用业务方的退款回调地址（开发者平台注册的退款回调地址）通知业务方该订单退款成功。
 
-###  接口注意事项 
+####**一、接口注意事项**
 
-* **幂等性：**业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
+**1、幂等性：**业务方接口需要具备幂等性[平台技术术语---幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)；
 
-* **超时时间：**业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，重试间隔：2min/4min/10min/30min/1h...）；
+**2、超时时间：**业务方接口的耗时要求小于2s（超过2s会触发平台的超时重试，重试间隔：2min/4min/10min/30min/1h...）；
 
-* **返回值判断：**errno为0表示商户已经成功收到退款成功信息，并妥善处理。errno不为0将认为是同步退款结果信息失败，会发起重试（不限次数，重试间隔：2min/4min/10min/30min/1h...）；
+**3、返回值判断：**errno为0表示商户已经成功收到退款成功信息，并妥善处理。errno不为0将认为是同步退款结果信息失败，会发起重试（不限次数，重试间隔：2min/4min/10min/30min/1h...）；
 
-* **订单状态同步：**商家收到通知退款状态回调切严格按照文档提示返回参数，后台订单状态才会同步且显示“已退款”；
+**4.订单状态同步：**商家收到通知退款状态回调切严格按照文档提示返回参数，后台订单状态才会同步且显示“已退款”；
 
->如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](http://smartprogram.baidu.com/docs/develop/function/aliyun_v2/)中的IP地址设置白名单。
+<font color=red>如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[<阿里云安全组设置>](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。</font><br />
 
-###  通知参数说明 
+####**二、通知参数说明**
 
 |参数|参数名称|类型（长度范围）|参数说明|是否可空|样例|
 |---|---|---|---|---|---|
@@ -572,10 +575,10 @@ http://xxx.tpbusiness.xxx/refundAudit?orderId=800020199&refundBatchId=100003588&
 |tpOrderId|业务方订单ID|string|业务方订单ID|是|11119800|
 |refundBatchId|退款批次号|String|平台退款批次号【[幂等性](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/term.md)标识参数】(用于重入判断)|否|149235070|
 |refundStatus|退款状态|Integer|1：退款成功，2：退款失败|否|1|
-|rsaSign|参数签名|String	|平台生成的sign|	是|全部参数参与签名，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)|
-备注：这里对全部参数签名是对平台的所有POST参数进行签名，如果商户URL里包含GET类型参数，不会参与签名。
+|rsaSign|参数签名|String	|平台生成的sign|	是|全部参数参与签名，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)|
+备注：这里对全部参数签名是对平台的所有POST参数进行签名，如果商户URL里包含GET类型参数，不会参与签名。验签需要使用正确格式的平台公钥，可以在服务详情中查询，详见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)第8项内容。
 
-###  返回参数说明 
+####**三、返回参数说明**
 
 |名称|类型|是否必须|示例值|描述|
 |---|---|---|---|---|
@@ -584,37 +587,37 @@ http://xxx.tpbusiness.xxx/refundAudit?orderId=800020199&refundBatchId=100003588&
 |data|	Object	|是|	{}	|返回数据|
 
 
-###  通知触发条件 
+####**四、通知触发条件**
 
 退款成功后，平台会调用该接口，将退款成功消息通知到业务方。
 
-###  业务方服务器通知参数获取 
+####**五、业务方服务器通知参数获取**
 
-1.百度收银台是用POST方式发送通知信息，参数以URL param的方式返回
+1、百度收银台是用POST方式发送通知信息，参数以URL param的方式返回
 
-  PHP服务推荐参数获取方式：$_POST['xxx']
+PHP服务推荐参数获取方式：$_POST['xxx']
 
-  Java服务推荐参数获取方式：@RequestParam(value="xxx") 
+Java服务推荐参数获取方式：@RequestParam(value="xxx")
 
-2.百度收银台主动发起通知，该方式才会被启用
+2、百度收银台主动发起通知，该方式才会被启用
 
-3.程序执行完后须同步返回符合要求的JSON字符串。如果商户返回给百度收银台的字符不是合法JSON或者解析出来的errno不为0，会再次重发
+3、程序执行完后须同步返回符合要求的JSON字符串。如果商户返回给百度收银台的字符不是合法JSON或者解析出来的errno不为0，会再次重发
 
 
-###  业务方通知参数合法性验证 
+####**六、业务方通知参数合法性验证**
 
 当百度收银台通过调用接口同步退款信息给给业务方时，业务方获得这些数据后，必须进行如下处理:
 
-1.验证签名
+1、验证签名
 
-首先必需验证签名，然后验证是否是百度收银台发来的通知，请参见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。
+首先必需验证签名，然后验证是否是百度收银台发来的通知，请参见[签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/anchor/sign.md)。
 
-2.业务数据处理注意事项
+2、业务数据处理注意事项
 
 业务方需要验证该通知数据中的orderId是否为业务方系统中记录的百度订单号，若未发现该订单，则表明本次通知是异常通知，务必忽略。在上述验证通过后业务方请处理退款成功消息，将处理结果返回。如果商户未正确处理业务通知，存在潜在的风险，业务方自行承担因此而产生的所有损失。
 
 
-### DEMO 
+####**七、DEMO**
 
 入参(REQUEST) DEMO：
 
