@@ -3220,7 +3220,32 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
-
+    -
+          text: 插件
+          name: plugins
+          sidebar:
+            -
+              sidebar:
+                -
+                  link: /develop/plugins/survey
+                  text: 插件概述
+                  name: survey
+                -
+                  link: /develop/plugins/develop
+                  text: 开发插件
+                  name: develop
+                -
+                  link: /develop/plugins/use
+                  text: 使用插件
+                  name: use
+                -
+                  link: /develop/plugins/limit_api
+                  text: 插件中api的限制
+                  name: limit_api
+                -
+                  link: /develop/plugins/limit_components
+                  text: 插件中组件的限制
+                  name: limit_components
     
     -
       link: /develop/third/pro
