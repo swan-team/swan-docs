@@ -2,7 +2,7 @@
 //     (c) 2010-2016 Thomas Fuchs
 //     Zepto.js may be freely distributed under the MIT license.
 
-;(function($, undefined){
+(function($, undefined){
   var prefix = '', eventPrefix,
     vendors = { Webkit: 'webkit', Moz: '', O: 'o' },
     testEl = document.createElement('div'),
@@ -142,7 +142,7 @@
                   if(opts.callback && typeof opts.callback == 'function'){
                       opts.callback();
                   }
-                  return;
+                  //return;
               }else{
                   _this.scrollTop(curTop + index*per);
               }
@@ -153,4 +153,4 @@
       return _this;
   };
   testEl = null
-})(Zepto)
+})($)

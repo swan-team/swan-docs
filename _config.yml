@@ -86,9 +86,19 @@ neat_css:
     - '*.min.css'
 
 neat_js:
-  enable: true
+  enable: false
   mangle: true
   output:
   compress:
   exclude:
     - '*.min.js'
+    - '*.raw.js'
+
+# Markdown Include
+include_markdown:
+  dir: source/_posts
+
+# marked config
+# smartypants 配置项决定了是否使用“智能”排版标点符号来表示引号和短划线。
+marked: 
+  smartypants: false

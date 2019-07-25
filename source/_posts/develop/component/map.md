@@ -5,44 +5,52 @@ nav: component
 sidebar: map
 ---
 ## map
-<div class="notice">解释： </div>地图<div></div><text class="notice">属性说明:</text>
 
-|属性名 |类型  |默认值  |说明| 最低版本 |
-|---- | ---- | ---- |---- | --- |
-| longitude | Number | -| 中心经度 |- |
-| latitude | Number | -| 中心纬度 | -|
-| scale |  Number | 16 | 缩放级别，取值范围为4-21 |- |
-| markers |  Array | - | 标记点 |- |
-| polyline |  Array | - | 路线 | -|
-| polygons |  Array | - | 多边形（工具暂不支持） | 2.0.13 |
-| circles |  Array |  -|  圆 |- |
-| controls |  Array | - | 控件 | -|
-| include-points |  Array | - | 缩放视野以包含所有给定的坐标点   | -|
-| show-location | Boolean |  -| 显示带有方向的当前定位点 |- |
-| enable-3D | Boolean |  false | 显示3D楼块（工具暂不支持） | 2.0.13|
-| show-compass | Boolean |  false | 显示指南针（工具暂不支持） | 2.0.13|
-| enable-overlooking | Boolean |  false | 开启俯视（工具暂不支持） | 2.0.13 |
-| enable-zoom | Boolean | true | 是否支持缩放（工具暂不支持） | 2.0.13 |
-| enable-scroll | Boolean | true | 是否支持拖动（工具暂不支持） | 2.0.13 |
-| enable-rotate | Boolean | false | 是否支持旋转（工具暂不支持） | 2.0.13|
-| bindmarkertap | EventHandle | -| 点击标记点时触发 | -|
-| bindcallouttap |  EventHandle | - | 点击标记点对应的气泡时触发 |- |
-| bindcontroltap | EventHandle |  -| 点击控件时触发 | -|
-| bindregionchange | EventHandle | - | 视野发生变化时触发 |- |
-| bindtap | EventHandle | - | 点击地图时触发 | -|
-| bindupdated | EventHandle | - | 在地图渲染更新完成时触发 |- |
+**解释**：地图
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
+**属性说明**: 
+
+|属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
+|---- | ---- | ---- |---- | --- |---- |
+| longitude | Number |  | 是 |中心经度 |- |
+| latitude | Number |  | 是 |中心纬度 | -|
+| scale |  Number | 16 | 否 |缩放级别，取值范围为4-21 |- |
+| markers |  Array |   | 否 |标记点 |- |
+| polyline |  Array |   | 否 |路线 | -|
+| polygons |  Array |   | 否 |多边形（工具暂不支持） | 2.0.13 |
+| circles |  Array |   | 否 |  圆 |- |
+| controls |  Array |   | 否 |控件 | -|
+| include-points |  Array |   | 否 | 缩放视野以包含所有给定的坐标点   | -|
+| show-location | Boolean |   | 否 | 显示带有方向的当前定位点 |- |
+| enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13|
+| show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13|
+| enable-overlooking | Boolean |  false |否 | 开启俯视（工具暂不支持） | 2.0.13 |
+| enable-zoom | Boolean | true | 否 |是否支持缩放（工具暂不支持） | 2.0.13 |
+| enable-scroll | Boolean | true | 否 |是否支持拖动（工具暂不支持） | 2.0.13 |
+| enable-rotate | Boolean | false | 否 | 是否支持旋转（工具暂不支持） | 2.0.13|
+| bindmarkertap | EventHandle |  | 否 |点击标记点时触发 | -|
+| bindcallouttap |  EventHandle |  | 否 |点击标记点对应的气泡时触发 |- |
+| bindcontroltap | EventHandle |   | 否 |点击控件时触发 | -|
+| bindregionchange | EventHandle |  | 否 |视野发生变化时触发 |- |
+| bindtap | EventHandle |   | 否 |点击地图时触发 | -|
+| bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
+| bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
 ### markers
 
-**解释**：标记点用于在地图上显示标记的位置<div></div><text class="notice">属性说明:</text>
+**解释**：标记点，用于在地图上显示标记的位置
+
+**属性说明**：
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
-| id | 标记点id | Number | 否 | marker点击事件回调会返回此id。建议为每个marker设置上Number类型id，保证更新marker时有更好的性能。 |
+| id | 标记点id | Number | 否 | marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
 | latitude | 纬度 | Number | 是 | 浮点数，范围 -90 ~ 90 |
 | longitude | 经度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
 | title  | 标注点名  | String | 否    |  |
+| zIndex  | 显示层级  | Number | 否    |  |
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | rotate | 旋转角度 | Number | 否 | 顺时针旋转的角度，范围 0 ~ 360，默认为 0 |
 | alpha | 标注的透明度 | Number    | 否 | 默认1，无透明 |
@@ -51,8 +59,8 @@ sidebar: map
 | callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，不可识别换行符。 |
 | label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | anchor | 经纬度在标注图标的锚点，默认底边中点 | Object | 否 | {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
-#### callout
-<text class="notice">属性说明:</text>
+
+**callout 属性说明**：
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -64,8 +72,8 @@ sidebar: map
 | padding | 文本边缘留白 | Number |
 | display | 'BYCLICK':点击显示; 'ALWAYS':常显 | String |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
-#### label
-</div><text class="notice">属性说明:</text>
+
+**label 属性说明**：
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -94,6 +102,18 @@ sidebar: map
 | arrowIconPath | 更换箭头图标 | String | 否 | 在arrowLine为true时生效 |
 | borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
+
+### polygon
+**解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<div></div><text class="notice">属性说明:</text>
+
+| 属性名 | 说明 | 类型  | 必填  | 备注 |
+|---- | ---- | ---- |---- | ---- |
+| points | 经纬度数组 | Array |	是 | [{latitude: 0, longitude: 0}]|
+| strokeWidth |	描边的宽度 | Number | 否 ||
+| strokeColor |	描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
+| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
+| zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
+
 ### circles
 **解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
 
@@ -124,11 +144,13 @@ sidebar: map
 | width | 控件宽度 | Number | 否 | 默认为图片宽度 |
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 
-地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
 
 **示例**：
-<a href="swanide://fragment/3979f647ab4d5848afc3d96d4c9ad2fc1540397393" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/8365c966bc3ceac343aae7a1a239021a1562933737180" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
+
+* 在 swan 文件中
+
 ```xml
 <!-- map.swan -->
 <map id="myMap"
@@ -137,13 +159,14 @@ sidebar: map
      longitude="{{longitude}}"
      latitude="{{latitude}}"
      markers="{{markers}}"
-     position="{{position}}"
      showLocation="{{showLocation}}"
      polyline="{{polyline}}"
      controls="{{controls}}"
      circles="{{circles}}"
      bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated"></map>
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
@@ -238,8 +261,12 @@ Page({
 ```
 
 
-<notice>说明:</notice>
+**Bug & Tip**：
 
-* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级；
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件；
+* 地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
+* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。
+* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件。
 * CSS 动画对 map 组件无效。
+* cover-view、cover-image 组件可覆盖在map组件之上。
+* map组件的 markers 的 label 暂不支持换行。
+* Android 与 iOS 定位精度不同，双端定位存在差异。

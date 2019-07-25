@@ -6,13 +6,15 @@ sidebar: media_backgroundaudiomanager
 ---
 
 
-getBackgroundAudioManager
----
-**解释：**获取全局唯一的背景音频管理器 `backgroundAudioManager`。
+## swan.getBackgroundAudioManager
 
-**参数：**无
+**解释**：获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
-**backgroundAudioManager 对象的属性列表：**
+**方法参数**：无
+
+##  backgroundAudioManager
+
+**`backgroundAudioManager`对象的属性列表**：
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -26,34 +28,237 @@ getBackgroundAudioManager
 |singer |String |否 |歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 |
 |coverImgUrl |String |否 |封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 |
 
-**backgroundAudioManager 对象的方法列表：**
 
-|方法 | 参数 | 说明 |
-|---- | ---- | ---- |
-|play | 无 | 播放 |
-|pause | 无 | 暂停 |
-|stop | 无 | 停止 |
-|seek | position | 跳转到指定位置（单位：s） |
-|onCanplay | callback | 音频进入可以播放状态，但不保证后面可以流畅播放 。|
-|onPlay | callback | 音频播放事件 |
-|onPause | callback | 音频暂停事件 |
-|onStop | callback | 音频停止事件 |
-|onEnded | callback | 音频自然播放结束事件 |
-|onTimeUpdate | callback | 音频进度更新事件 |
-|onError | callback | 音频播放错误事件 |
-|onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。|
-<!-- |onPrev | callback | 用户在系统音乐播放面板点击上一曲事件（iOS only）。 |
-|onNext | callback | 用户在系统音乐播放面板点击下一曲事件（iOS only）。| -->
-**示例：**
+ 
+**示例**：
+
+<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="play">play</button>
+    <button type="primary" bindtap="pause">pause</button>
+    <button type="primary" bindtap="stop">stop</button>
+    <button type="primary" bindtap="seek">seek</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```javascript
 
-const backgroundAudioManager = swan.getBackgroundAudioManager();
+Page({
+    onLoad() {
+        const backgroundAudioManager = swan.getBackgroundAudioManager();
+        backgroundAudioManager.title = '演员';
+        backgroundAudioManager.epname = '演员';
+        backgroundAudioManager.singer = '薛之谦';
+        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
-backgroundAudioManager.title = '此时此刻';
-backgroundAudioManager.epname = '此时此刻';
-backgroundAudioManager.singer = '许巍';
-backgroundAudioManager.coverImgUrl = 'xxx';
-backgroundAudioManager.src = 'xxx';
+        backgroundAudioManager.onPlay(res => {
+            swan.showToast({
+                title: 'play',
+                icon: 'none'
+            });
+            console.log('onPlay', res);
+        });
+
+        backgroundAudioManager.onPause(res => {
+            swan.showToast({
+                title: 'pause',
+                icon: 'none'
+            });
+            console.log('onPause', res);
+        });
+
+        backgroundAudioManager.onStop(res => {
+            swan.showToast({
+                title: 'stop',
+                icon: 'none'
+            });
+            console.log('onStop', res);
+        });
+
+        backgroundAudioManager.onEnded(res => {
+            swan.showToast({
+                title: 'end',
+                icon: 'none'
+            });
+            console.log('onEnded', res);
+        });
+
+        backgroundAudioManager.onTimeUpdate(res => {
+            console.log('onTimeUpdate', res);
+        });
+
+        backgroundAudioManager.onError(res => {
+            swan.showToast({
+                title: 'error',
+                icon: 'none'
+            });
+            console.log('onError', res);
+        });
+
+        backgroundAudioManager.onWaiting(res => {
+            swan.showToast({
+                title: 'waiting',
+                icon: 'none'
+            });
+            console.log('onWaiting', res);
+        });
+
+        this.backgroundAudioManager = backgroundAudioManager;
+    },
+    play() {
+        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.play();
+    },
+    pause() {
+        this.backgroundAudioManager.pause();
+    },
+    stop() {
+        this.backgroundAudioManager.stop();
+    },
+    seek() {
+        this.backgroundAudioManager.seek(10);
+    }
+});
 
 ```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap button {
+    margin-bottom: 50rpx;
+}
+```
+
+
+**图示**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/getBackgroundAudioManager.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+## backgroundAudioManager.play 
+
+**解释**：播放
+
+**方法参数**：无
+
+## backgroundAudioManager.pause
+
+
+**解释**：暂停
+
+**方法参数**：无
+ 
+
+## backgroundAudioManager.stop
+
+**解释**：停止 
+
+**方法参数**：无
+ 
+
+## backgroundAudioManager.seek
+
+**解释**：跳转到指定位置（单位：s）
+
+**方法参数**：Number position
+
+
+## backgroundAudioManager.onCanplay
+
+**解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
+
+**方法参数**：Function callback
+ 
+
+## backgroundAudioManager.onPlay
+
+**解释**：音频播放事件
+
+**方法参数**：Function callback
+ 
+
+## backgroundAudioManager.onPause
+
+**解释**： 音频暂停事件
+
+**方法参数**：Function callback
+ 
+
+## backgroundAudioManager.onStop
+
+**解释**：音频停止事件
+
+**方法参数**：Function callback
+ 
+
+## backgroundAudioManager.onEnded 
+
+**解释**：音频自然播放结束事件
+
+**方法参数**：Function callback
+ 
+
+## backgroundAudioManager.onTimeUpdate 
+
+**解释**：音频进度更新事件
+
+**方法参数**：Function callback
+
+
+## backgroundAudioManager.onError
+
+**解释**：音频播放错误事件
+
+**方法参数**：Function callback
+
+
+## backgroundAudioManager.onWaiting 
+
+**解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
+
+**方法参数**：Function callback
+
+
+## backgroundAudioManager.onSeeked
+
+**解释**：监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。
+
+**方法参数**：Function callback
+
+## backgroundAudioManager.onSeeking
+
+**解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。
+
+**方法参数**：Function callback
+
+## backgroundAudioManager.onNext
+
+**解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback
+
+## backgroundAudioManager.onPrev
+
+**解释**：监听用户在系统音乐播放面板点击上一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback

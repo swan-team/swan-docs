@@ -1,0 +1,117 @@
+<%
+    var navs = [
+        {
+            text: '介绍',
+            name: 'introduction-group',
+            link: '/introduction/enter_application/',
+            children: [
+                {
+                    link: '/introduction/enter_application/',
+                    // text: '小程序介绍',
+                    text: '介绍',
+                    name: 'introduction'
+                },
+                {
+                    link: '/game/introduction/prerare/enter/',
+                    text: '小游戏介绍',
+                    name: 'game-introduction'
+                }
+            ]
+        },
+        {
+            link: '/design/overview/introduction/',
+            text: '设计',
+            name: 'design'
+        },
+        {
+            text: '开发',
+            name: 'develop-group',
+            link: '/develop/fuctionlist/list/',
+            children: [
+                {
+                    link: '/develop/fuctionlist/list/',
+                    // text: '小程序开发',
+                    text: '开发',
+                    name: 'develop'
+                },
+                {
+                    link: '/game/api/openApi/authorize/',
+                    text: '小游戏开发',
+                    name: 'game-develop'
+                }
+            ]
+        },
+        {
+            text: '数据',
+            name: 'data-group',
+            link: '/data/concept/',
+            children: [
+                {
+                    link: '/data/concept/',
+                    // text: '小程序数据',
+                    text: '数据',
+                    name: 'data'
+                },
+                {
+                    link: '/game/data/feature/concept/',
+                    text: '小游戏数据',
+                    name: 'game-data'
+                }
+            ]
+        },
+        {
+            link: '/operations/specification/',
+            text: '运营',
+            name: 'operations'
+        }
+    ];
+
+    var pageType = page.header;
+    // HACK: 小游戏根据文章路径，设置pageType
+    if (!pageType) {
+        if (page.path.indexOf('game/introduction') === 0) {
+            pageType = 'game-introduction';
+        }
+        else if (page.path.indexOf('game/data') === 0) {
+            pageType = 'game-data';
+        }
+        else if (/^game\/(api|tutorials)/.test(page.path)) {
+            pageType = 'game-develop';
+        }
+    }
+
+    var index;
+    var activeText;
+    var activeLink;
+    navs.forEach((nav, i) => {
+        if (nav.children) {
+            nav.children.forEach((subNav, j) => {
+                if (pageType === subNav.name) {
+                    index = i;
+                    activeText = subNav.text;
+                    activeLink = subNav.link;
+                }
+            });
+        }
+        else if (pageType === nav.name) {
+            index = i;
+            activeText = nav.text;
+            activeLink = nav.link;
+        }
+    });
+%>
+<script>var headerNavs = <%-JSON.stringify(navs)%>;</script>
+<div class="m-doc-level1">
+    <ul><%#
+        %><% for(var i = 0; i < navs.length; i++) {%><%#
+            %><li class="<%- navs[i].name %><%- (i === index ? ' m-doc-header-nav-selected' : '') %>"><%#
+                %><% if(i === index) { %><%#
+                    %><a href="/docs<%- activeLink %>"><%- activeText %></a><%#
+                %><% } else { %><%#
+                    %><a href="/docs<%- navs[i].link %>"><%- navs[i].text %></a><%#
+                %><% } %><%#
+            %></li><%#
+        %><% } %><%#
+    %></ul>
+    <div class="m-doc-crumbs-wrapper"><span></span><span></span><span></span></div>
+</div>
