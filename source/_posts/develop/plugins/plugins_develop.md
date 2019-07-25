@@ -2,7 +2,7 @@
 title: 开发插件
 header: develop
 nav: plugins
-sidebar: develop
+sidebar: plugins_develop
 ---
 
 ## 插件目录结构 

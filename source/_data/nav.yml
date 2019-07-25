@@ -3244,9 +3244,9 @@
                   text: 插件概述
                   name: survey
                 -
-                  link: /develop/plugins/develop
+                  link: /develop/plugins/plugins_develop
                   text: 开发插件
-                  name: develop
+                  name: plugins_develop
                 -
                   link: /develop/plugins/use
                   text: 使用插件
