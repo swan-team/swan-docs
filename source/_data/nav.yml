@@ -239,7 +239,11 @@
               -
                 link: /introduction/adopen
                 text: 流量主开通指引
-                name: adopen             
+                name: adopen          
+              -
+                link: /introduction/adopen_feedback
+                text: 流量主接入FAQ
+                name: adopen_feedback                   
     -
       link: /introduction/pay
       text: 百度收银台支付开通
@@ -443,7 +447,7 @@
   nav:
 
     -
-      link: /develop/tutorial/codedir
+      link: /develop/tutorial/demo
       text: 快速入门
       name: tutorial
       sidebar:     

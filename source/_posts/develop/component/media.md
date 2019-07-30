@@ -422,7 +422,7 @@ Page({
 ```
 
 **Bug & Tip**：
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/'>createVideoContext</a>。
+* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/)
 * `<video />` 默认宽度 300px、高度 225px。
 
 ## camera

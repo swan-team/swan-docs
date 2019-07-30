@@ -47,17 +47,17 @@ plugin
 这个插件将为第三方小程序提供一个自定义组件`list`，一个页面`public`和接口`index.js`
 
 ## 进行插件开发
-在插件开发的过程中，有一部分 api 与组件是不可使用或者受限使用的，具体请参考 <a href="/docs/develop/plugins/limit_components/">插件中api的限制</a> 与 <a href="/docs/develop/plugins/limit_components/">插件中组件的限制的限制</a>。
+在插件开发的过程中，有一部分 api 与组件是不可使用或者受限使用的，具体请参考 <a href="https://smartprogram.baidu.com/docs/develop/plugins/limit_api/">插件中api的限制</a> 与 <a href="https://smartprogram.baidu.com/docs/develop/plugins/limit_components/">插件中组件的限制的限制</a>。
 
 ## 自定义组件
 ** 作用：** 插件可以定义若干个自定义组件，这些自定义组件都可以在插件内相互引用。但提供给第三方小程序使用的自定义组件必须在配置文件中列出（参考上文）。
 
-** 结构：** 除去接口限制以外，自定义组件的编写和组织方式与一般的自定义组件相同，每个自定义组件由 swan模板, css文件, js逻辑 和 json配置 四个文件组成。可以参考<a href="/docs/develop/framework/custom-component/"> 自定义组件 </a>的文档。
+** 结构：** 除去接口限制以外，自定义组件的编写和组织方式与一般的自定义组件相同，每个自定义组件由 swan模板, css文件, js逻辑 和 json配置 四个文件组成。可以参考<a href="https://smartprogram.baidu.com/docs/develop/plugins/limit_components/"> 自定义组件 </a>的文档。
 
 ## 页面
 ** 作用：** 插件可以定义若干个插件页面，这些插件页面可以从本插件的自定义组件、其他页面中跳转，或从第三方小程序中跳转。其中，提供给第三方小程序跳转的页面必须在配置文件`plugin.json`中列出（参考上文中的插件配置文件）。
 
-** 结构：** 除去接口限制以外，插件的页面编写和组织方式与一般的页面相同，每个页面由 swan模板, css文件, js逻辑 和 json配置。具体可以参考其他关于页面的文档 <a href="/docs/develop/tutorial/dev_swan/"> 页面开发 </a>。
+** 结构：** 除去接口限制以外，插件的页面编写和组织方式与一般的页面相同，每个页面由 swan模板, css文件, js逻辑 和 json配置。具体可以参考其他关于页面的文档 <a href="https://smartprogram.baidu.com/docs/develop/tutorial/dev_swan/"> 页面开发 </a>。
 
 ** 说明：** 插件执行页面跳转的时候，可以使用 navigator 组件或 swan.navigateTo。当插件跳转到自身页面时， url 应设置为这样的形式：plugin-private://providerAppId/$path 。需要跳转到其他插件时，也可以这样设置 url 。
 
