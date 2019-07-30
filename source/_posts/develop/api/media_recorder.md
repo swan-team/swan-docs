@@ -68,6 +68,7 @@ recorderManager.start(options);
 |numberOfChannels |Number |否 | |录音通道数，有效值 1/2。 |
 |encodeBitRate |Number |否 | |编码码率，有效值见下表格。 |
 |format |String |否 | |音频格式，支持切仅支持 aac/pcm。 |
+|audioSource |string  |  否 | auto|  指定录音的音频输入源，可通过 wx.getAvailableAudioSources() 获取当前可用的音频源; 基础库3.80.2开始支持|
 
 其中，采样率和码率有一定要求，具体有效值如下：
 
@@ -137,4 +138,72 @@ recorderManager.start(options);
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |errMsg |String | 错误信息 |
+
+## swan.getAvailableAudioSources
+> 基础库3.80.2开始支持，低版本需做兼容处理
+
+**解释**：获取当前支持的音频输入源
+
+**方法参数**：Object data
+**`data` 参数说明**：
+
+|参数名 |类型  |是否必填  |默认值|说明|
+|---- | ---- | ---- |--|---- |
+|success |Function  |  否 |  接口调用成功的回调|
+|fail   | Function |   否  | 接口调用失败的回调函数|
+|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**data.success回调函数**
+**方法参数**：Object res
+|参数名 |类型  |说明|
+|---- | ---- |---- |
+|audioSources |Array| 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用 |
+
+**res.audioSources合法值**
+|返回值|说明  |
+|---- | ---- |
+|auto |自动设置，默认使用手机麦克风，插上耳麦后自动切换使用耳机麦克风，所有平台适用|
+|buildInMic |手机麦克风，仅限 iOS|
+|headsetMic |耳机麦克风，仅限 iOS|
+|mic |麦克风（没插耳麦时是手机麦克风，插耳麦时是耳机麦克风），仅限 Android|
+|camcorder |同 mic，适用于录制音视频内容，仅限 Android|
+|voice_communication |同 mic，适用于实时沟通，仅限 Android|
+|voice_recognition |同 mic，适用于语音识别，仅限 Android|
+
+
+
+**示例**：
+代码片段链接
+
+* 在 swan 文件中
+```
+<view class="wrap">
+    <button type="primary" bindtap="getAvailableAudioSources">点击分享文件</button>
+</view>
+```
+
+* 在 js 文件中
+```
+Page({
+    getAvailableAudioSources() {
+        swan.getAvailableAudioSources({
+            success: function (res) {
+	            console.log('当前支持的音频输入源:', res.audioSources);
+		    },
+		    fail: function (err) {
+		        console.log('错误码：' + err.errCode);
+		        console.log('错误信息：' + err.errMsg);
+		    }
+		});
+    }
+});
+```
+* 在 css 文件中
+```
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
+
 
