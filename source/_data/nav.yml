@@ -1395,7 +1395,10 @@
                     -
                       link: /develop/api/media_recorder/#recorderManager-onStop
                       text: recorderManager.onStop
-                      name: media_recorder_recorderManager-onStop 
+                      name: media_recorder_recorderManager-onStop
+                - link: /develop/api/media_recorder/#swan-getAvailableAudioSources
+                  text: swan.getAvailableAudioSources
+                  name: media_recorder_swan-getAvailableAudioSources
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
