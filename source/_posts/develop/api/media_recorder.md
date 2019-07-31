@@ -176,13 +176,14 @@ recorderManager.start(options);
 
 
 **示例**：
-代码片段链接
+<a href="swanide://fragment/9c26d58a030286edc4bf71e0d9c8da651564554438009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
 ```json
 <view class="wrap">
-    <button type="primary" bindtap="getAvailableAudioSources">点击分享文件</button>
+    <button type="primary" bindtap="getAvailableAudioSources">点击获取支持音频输入源</button>
 </view>
 ```
 

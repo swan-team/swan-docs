@@ -169,7 +169,7 @@ Page({
 * 在触发距离内滑动期间，该事件只会被触发一次。
 
 ### onPageScroll
-**解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听用户滑动页面事件。
+**解释**：在 Page 中定义 onPageScroll 处理函数，监听用户滑动页面事件。
 **方法参数**：Object object
 **Object参数说明**：
 
