@@ -18,7 +18,7 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady: function () {
+    onReady： function () {
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady: function () {
+    onReady： function () {
         const ctx = this.createCanvasContext('myCanvas');
 	}
 });
@@ -74,7 +74,7 @@ ctx.draw();
 
 
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
-如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x: 100, y: 200`为圆心处，开始画圆。
+如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
 
 ## swan.createCanvasContext
@@ -177,13 +177,13 @@ Page({
         swan.canvasGetImageData({
             canvasId: 'canvas',
             x: 0,
-            y: 0,
+           y: 0,
             width: 100,
             height: 100,
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail: function (err) {
+            fail： function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -194,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding: 50rpx 30rpx;
+    padding： 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -228,7 +228,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide：//fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -283,7 +283,7 @@ Page({
         swan.canvasGetImageData({
             canvasId: 'canvas1',
             x: 0,
-            y: 0,
+           y: 0,
             width: 200,
             height: 200,
             success(res) {
@@ -313,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding: 50rpx 30rpx;
+    padding： 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -358,11 +358,11 @@ Page({
 ```js
 swan.canvasToTempFilePath({
     x: 100,
-    y: 200,
+   y: 200,
     width: 50,
     height: 50,
-    destWidth: 100,
-    destHeight: 100,
+    destwidth: 100,
+    destheight: 100,
     canvasId: 'myCanvas',
     success: function(res) {
         console.log(res.tempFilePath)
@@ -385,7 +385,7 @@ swan.canvasToTempFilePath({
 
 **示例**：
 
-<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -835,9 +835,9 @@ ctx.draw();
 
 **`y0`参数说明**：起点的 y 坐标
 
-**`x1`参数说明**：阴影的模糊级别，数值越大越模糊。
+**`x1`参数说明**：终点的 x 坐标
 
-**`y1`参数说明**：阴影的颜色
+**`y1`参数说明**：终点的 y 坐标
 
 
 
@@ -899,7 +899,7 @@ ctx.draw();
 
 **`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。
 
-**`color`参数说明:**渐变点的颜色
+**`color`参数说明**：渐变点的颜色
 
 
 **示例**：
@@ -1091,7 +1091,7 @@ ctx.draw();
 
 **方法参数**： Number miterLimit
 
-**`miterLimit`参数说明:**最大斜接长度  
+**`miterLimit`参数说明：**最大斜接长度  
 
 **示例**：
 
@@ -1511,7 +1511,7 @@ ctx.draw();
 const ctx = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
-    url: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
+    url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
         ctx.save()
         ctx.beginPath()
@@ -1683,7 +1683,7 @@ swan.chooseImage({
     success: function(res){
         ctx.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
         ctx.draw();
-    };
+    }
 });
 ```
 ![图片](../../../img/draw-image.png)
@@ -1785,7 +1785,7 @@ canvasContext.setLineDashOffset = value;
 
 **`image`参数说明**：  重复的图像源，仅支持包内路径和临时路径 。 
 
-**`repetition`参数说明**：  指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat。 
+**`repetition`参数说明**：  指定如何重复图像，有效值有： repeat, repeat-x, repeat-y, no-repeat。 
 
 **示例**：
 

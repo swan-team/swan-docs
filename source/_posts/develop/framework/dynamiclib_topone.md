@@ -91,7 +91,7 @@ info|Array|其他信息
 类型 | 取值说明 |
 ---|---
 标题 | {type: 'caption', text: '标题 content'}
-文章内容 | {type: ' section', text: '文章 content'}
+文章内容 | {type: 'section', text: '文章 content'}
 图片 | {type: 'img', src: 'xxx'}
 
 ### 展示示例

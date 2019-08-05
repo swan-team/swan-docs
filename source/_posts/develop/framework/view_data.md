@@ -64,7 +64,7 @@ Page({
 
 ```xml
 <!-- condition-demo.swan -->
-<view s-if="flag">如果为flag为true，你看不见我</view>
+<view s-if="flag">如果为flag为true，你看得到我。</view>
 ```
 
 ```javascript

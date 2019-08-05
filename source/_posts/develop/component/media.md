@@ -295,6 +295,7 @@ Page({
 |objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
 |poster|String|  |否|视频封面的图片网络资源地址|
 |page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
+|direction|Number|	|否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
 |show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
 |enable-progress-gesture|	Boolean	|true|否|	是否开启使用手势控制进度|
@@ -318,6 +319,14 @@ Page({
 | contain | 包含 |
 | fill | 填充 |
 | cover | 覆盖 |
+
+**direction 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| 0 | 正常竖向 |
+| 90 | 屏幕顺时针90度 |
+| -90 | 屏幕逆时针90度 |
 
 **主流格式支持**：
 
@@ -413,7 +422,7 @@ Page({
 ```
 
 **Bug & Tip**：
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/'>createVideoContext</a>。
+* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/)
 * `<video />` 默认宽度 300px、高度 225px。
 
 ## camera

@@ -213,6 +213,9 @@ article h2 {
     max-width: 80%;
     margin-top: 0px;
 }
+.m-doc-content-inner .show-scene-container .show-scene-btn{
+    color: #38f;
+}
 article h2 .m-doc-content-h2-toggle {
     width: 22px;
     height: 22px;
@@ -826,7 +829,26 @@ article thead tr {
     padding-top: 200px;
     text-align: center;
 }
-
+.search-result-bread-crumb .breadcrumb_item:last-child .arrow-right {
+    display: none;
+}
+.breadcrumb_item a {
+    color: #b2b2b2 !important;
+    text-decoration: none;
+}
+.breadcrumb_item .arrow-right {
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url(/docs/img/level1_arrow.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: -2px;
+    transform: rotate(-90deg);
+    opacity: .2;
+}
 .ispc,
 .ismobile,
 .isbox {

@@ -79,7 +79,7 @@ bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取�
 
 ##  swan.shareFile
 
->  基础库3.80.2开始支持，低版本需做兼容处理
+>  在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。基础库3.80.2开始支持，低版本需做兼容处理。
 
 **解释**：支持调起系统分享面板将文件分享到其他App。
 

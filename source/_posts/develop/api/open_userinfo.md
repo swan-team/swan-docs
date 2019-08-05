@@ -17,7 +17,7 @@ sidebar: open_userinfo
 
 ## swan.getSwanId
 
-**解释**：获取 swanid。
+**解释**：获取 swanid，swanid 长度不超过 100 个字符。
 
 **方法参数**：Object object
 
