@@ -3,11 +3,12 @@ title: 系统信息
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-03
 ---
 
 ### swan.getSystemInfo()
 
-显示消息提示框。
+获取系统信息。
 
 ```js
 swan.getSystemInfo(opts)
@@ -36,13 +37,17 @@ swan.getSystemInfo(opts)
 |res.screenHeight|number|屏幕高度|
 |res.windowWidth|number|可使用窗口宽度|
 |res.windowHeight|number|可使用窗口高度|
+|res.statusBarHeight|number|状态栏的高度|
+|res.navigationBarHeight|number|导航栏的高度|
 |res.language|string|百度 App 设置的语言|
 |res.version|string|百度 App 版本号|
 |res.system|string|操作系统版本|
 |res.platform|string|客户端平台|
 |res.fontSizeSetting|number|用户字体大小设置|
 |res.SDKVersion|string|客户端基础库版本|
-
+|res.host|string|宿主平台，如：baiduboxapp|
+|res.swanNativeVersion|string|宿主平台版本号|
+|res.devicePixelRatio|string|屏幕密度|
 **示例：**
 
 ```js
@@ -59,7 +64,7 @@ swan.getSystemInfo({
 
 ### swan.getSystemInfoSync()
 
-显示消息提示框。
+获取系统信息同步版本。
 
 ```js
 swan.getSystemInfoSync()
@@ -78,12 +83,17 @@ swan.getSystemInfoSync()
 |screenHeight|number|屏幕高度|
 |windowWidth|number|可使用窗口宽度|
 |windowHeight|number|可使用窗口高度|
+|statusBarHeight|number|状态栏的高度|
+|navigationBarHeight|number|导航栏的高度|
 |language|string|百度 App 设置的语言|
 |version|string|百度 App 版本号|
 |system|string|操作系统版本|
 |platform|string|客户端平台|
 |fontSizeSetting|number|用户字体大小设置|
 |SDKVersion|string|客户端基础库版本|
+|host|string|宿主平台，如：baiduboxapp|
+|swanNativeVersion|string|宿主平台版本号|
+|devicePixelRatio|string|屏幕密度|
 
 **示例：**
 

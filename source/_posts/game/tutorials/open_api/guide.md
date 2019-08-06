@@ -189,14 +189,14 @@ openDataContext.onMessage(data => {
 **帧率**
 
 + [requestAnimationFrame()](/game/api/render/framerate/#requestAnimationFrame)
-+ [cancelAnimationFrame()](/game/api/render/framerate/#cancelAnimationFrame) -->
++ [cancelAnimationFrame()](/game/api/render/framerate/#cancelAnimationFrame)
 
 **Timer**
 
 + [setTimeout()](/game/api/system/timeout/#setTimeout)
 + [clearTimeout()](/game/api/system/timeout/#clearTimeout)
 + [setInterval()](/game/api/system/timeout/#setInterval)
-+ [clearInterval()](/game/api/system/timeout/#clearInterval) -->
++ [clearInterval()](/game/api/system/timeout/#clearInterval)
 
 **触摸事件**
 
@@ -207,7 +207,7 @@ openDataContext.onMessage(data => {
 + [swan.offTouchStart()](/game/api/system/touchEvents/#swan-offTouchStart)
 + [swan.offTouchMove()](/game/api/system/touchEvents/#swan-offTouchMove)
 + [swan.offTouchEnd()](/game/api/system/touchEvents/#swan-offTouchEnd)
-+ [swan.offTouchCancel()](/game/api/system/touchEvents/#swan-offTouchCancel) -->
++ [swan.offTouchCancel()](/game/api/system/touchEvents/#swan-offTouchCancel)
 
 **画布**
 

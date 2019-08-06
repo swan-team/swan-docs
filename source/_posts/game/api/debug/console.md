@@ -3,6 +3,7 @@ title: console
 layout: gamedoc
 topic: debug
 categoryName: api
+priority: 17-01
 ---
 
 向 sConsole 调试面板中打印日志。
@@ -15,35 +16,35 @@ console.debug()
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
-| args | any |是|日志内容,可以有任意多个|
+| args | any |是|日志内容，可以有任意多个|
 
 console.log()
 向调试面板中打印 log 日志
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
-| args | any |是|日志内容,可以有任意多个|
+| args | any |是|日志内容，可以有任意多个|
 
 console.info()
 向调试面板中打印 info 日志
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
-| args | any |是|日志内容,可以有任意多个|
+| args | any |是|日志内容，可以有任意多个|
 
 console.warn()
 向调试面板中打印 warn 日志
 
 |参数|类型|是否必填|描述|
 |-|-|-|-|
-| args | any |是|日志内容,可以有任意多个|
+| args | any |是|日志内容，可以有任意多个|
 
 console.error()
 向调试面板中打印 error 日志
 
-|参数|类型|是否必填|描述|
+|参数|类型|是否必填|描
 |-|-|-|-|
-| args | any |是|日志内容,可以有任意多个|
+| args | any |是|日志内容，可以有任意多个|
 
 
 **注意：**

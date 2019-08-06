@@ -3,6 +3,7 @@ title: 交互
 layout: gamedoc
 topic: ui
 categoryName: api
+priority: 12-01
 ---
 
 ### swan.showActionSheet()

@@ -3,10 +3,12 @@ title: 音频
 layout: gamedoc
 topic: media
 categoryName: api
+priority: 08-02
 ---
 
 <!-- md game/api/media/_audioContext/InnerAudioContext.md -->
 <!-- md game/api/media/_audioContext/createInnerAudioContext.md -->
+<!-- md game/api/media/_audioContext/setInnerAudioOption.md -->
 
 <!-- md game/api/media/_audioContext/play.md -->
 <!-- md game/api/media/_audioContext/onPlay.md -->

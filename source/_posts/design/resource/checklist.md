@@ -15,7 +15,7 @@ sidebar: checklist
 走查表适用于设计流程中的各个阶段，项目初期，开发者可通过走查表预知并规避风险点；设计方案产出后，走查表可协助开发者快速遍历，查找遗漏或不周。作为轻量型设计检验工具，《智能小程序UE走查表》旨在协助小程序开发者提高设计效率，其涉及的全部设计关键点将在50个简短的问句中呈现，使用者只需在检查无问题的条目前标记完成，即可完成走查。
 
 <div class="m-doc-custom-download">
-	<a href="../../../img/design/resource/Checklist-Excel.xlsx" class="m-doc-custom-download-left">
+	<a href="../../../img/design/resource/Checklist-Excel.xlsx" target="_blank" class="m-doc-custom-download-left">
 		<img src="../../../img/design/resource/ico-excel.png"><p>智能小程序设计走查表-Excel</p>
 	</a>
 	<a href="../../../img/design/resource/Checklist-PDF.pdf" target="_blank" class="m-doc-custom-download-right">

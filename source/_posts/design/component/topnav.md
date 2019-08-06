@@ -8,6 +8,9 @@ sidebar: topnav
 顶部导航栏始终固定在屏幕顶部，不随页面滚动隐藏。
 智能小程序会自动继承小程序首页顶部导航栏的配置，但每个页面均可配置其顶部导航栏。即同一智能小程序中，不但可同时存在原生顶部导航栏和自定义导航栏，也可为每个页面定制不同的样式。
 
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/" target="_blank">导航栏</a>。
+
+
 ## 原生顶部导航栏
 原生顶部导航栏默认由智能小程序框架统一提供，用于控制整体小程序，指示当前位置及辅助小程序内部页面导航。
 <div class="m-doc-custom-examples">
@@ -32,7 +35,7 @@ sidebar: topnav
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/topnav/3.png"><p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
-iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
+iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</p>
 	</div>
 </div>
 
@@ -102,17 +105,17 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏高度一致（iOS为44pt，Android为38pt）。
-技术实现请参考开发文档[全局配置](../../../develop/tutorial/process_page/#window)章节。
+自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏（navigationBarHeight）高度水平居中对齐。
+技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#%E9%85%8D%E7%BD%AE-app-json-%E6%96%87%E4%BB%B6/)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/topnav/9-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">自定义顶部导航栏元素与控制功能区垂直居中对齐</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">自定义顶部导航栏元素与控制功能区水平居中对齐。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/9-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">自定义顶部导航栏元素未对齐</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">自定义顶部导航栏元素未水平居中对齐。</p>
 	</div>
 </div>
 
@@ -136,7 +139,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/11-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">容器背景避免使用高饱和度或较深的颜色，黑色元素与之搭配可识别性较差。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">当使用黑色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
 	</div>
 </div>
 
@@ -156,6 +159,6 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">容器背景使用高饱和度或较浅颜色，白色元素与之搭配可识别性较差。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用黑色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
 	</div>
 </div>
