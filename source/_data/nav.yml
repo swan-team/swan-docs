@@ -2726,7 +2726,7 @@
 
               -
                 link: /develop/api/open_community
-                text: 全屏内容发布器
+                text: 社区发布器
                 name: open_community
                 sidebar:
                   -
@@ -2759,11 +2759,7 @@
                   -
                     link: /develop/api/open_smartprogram/#swan-navigateBackSmartProgram
                     text: swan.navigateBackSmartProgram
-                    name: open_smartprogram_swan-navigateBackSmartProgram
-                  -
-                    link: /develop/api/open_smartprogram/#H5页面打开小程序
-                    text: H5页面打开小程序
-                    name: open_smartprogram_H5页面打开小程序                  
+                    name: open_smartprogram_swan-navigateBackSmartProgram                
 
               -
                 link: /develop/api/pageinfo

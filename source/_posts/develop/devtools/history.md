@@ -12,7 +12,7 @@ sidebar: history
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#%E6%AD%A3%E5%BC%8F%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
 
-### 最新 Beta 版本（2.4.5-beta）
+### 最新 Beta 版本（2.5.1-beta）
 
 > Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
 
