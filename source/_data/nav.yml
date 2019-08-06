@@ -3241,7 +3241,6 @@
                 text: 编译工具历史更新日志
                 name: uplog_compile
 
-
     - 
       link: /develop/cloud/cloud_init
       text: 云开发
@@ -3284,7 +3283,7 @@
               -
                   text: 数据库
                   name: cloud_database
-                  link: /develop/cloud/cloud_database/swan-cloud-database
+                  link: /develop/cloud/cloud_database
                   sidebar:
                     # database
                     -
@@ -3450,8 +3449,6 @@
                               text: command.unshift
                               name: cloud_database_command_unshift
                               link: /develop/cloud/cloud_database/command/#command-unshift
-
-
 
     # -
     #       text: 插件
