@@ -38,7 +38,7 @@ sidebar: cardticket
 
 | ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | 
 |:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | string     | 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)   |  query    |  true    | string     | 
 | bgColor   |  背景色的名称，按钮的颜色跟着背景色走   |  query    |  true    | string     | 
 | couponType   |  优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券     |  query    |  true    | integer     | 
 | description   |  补充说明：卡券的优惠内容说明，如"代金券一张"  ，字数上限为20个汉字。(建议涵盖卡券类型、张数、适用品类等)   |  query    |  false    | string     | 
@@ -112,7 +112,7 @@ sidebar: cardticket
 
 | ** 参数名称         **   | ** 参数说明     **   | ** in **   | **  是否必须      **   | **  数据类型  **   | 
 |:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | string     | 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)    |  query    |  true    | string     | 
 | couponTemplateId    |  优惠券id     |  query    |  true    | integer     | 
 | destUrl   |  小程序内的跳转path   |  query    |  true    | string     | 
 | multipartFile   |  广告图    |  formData    |  true    | file     | 
@@ -143,11 +143,11 @@ sidebar: cardticket
 **请求方式**：`POST`
 **请求参数**
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token    |      |  query    |  true    | string     |        | 
-| couponBannerId   |  优惠券广告图id     |  query    |  true    | integer     |        | 
-| couponTemplateId   |  优惠券id     |  query    |  true    | integer     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)   |  query    |  true    | string     |        
+| couponBannerId   |  优惠券广告图id     |  query    |  true    | integer     |       
+| couponTemplateId   |  优惠券id     |  query    |  true    | integer     |      
 
 
 **响应示例**:
@@ -166,12 +166,12 @@ sidebar: cardticket
 **请求方式**：`GET`
 **请求参数**：
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | String     |        | 
-| couponTemplateId   |   优惠券id    |  query    |  false    | integer     |        | 
-| page   |  page     |  query    |  false    | integer     |        | 
-| pageSize   |  pageSize     |  query    |  false    | integer     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | 
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)     |  query    |  true    | String     |    
+| couponTemplateId   |   优惠券id    |  query    |  false    | integer     |       
+| page   |  page     |  query    |  false    | integer     |       
+| pageSize   |  pageSize     |  query    |  false    | integer     |       
 
 
 **响应示例**:
@@ -205,11 +205,10 @@ sidebar: cardticket
 **请求方式**：`POST`
 **请求参数**：
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| bd_app_id   |  bd_app_id     |  query    |  true    | integer     |        | 
-| couponTemplateId   |  优惠券id     |  query    |  true    | integer     |        | 
-
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| bd_app_id   |  bd_app_id     |  query    |  true    | integer     |       
+| couponTemplateId   |  优惠券id     |  query    |  true    | integer     |        
 
 **响应示例**:
 
@@ -227,20 +226,20 @@ sidebar: cardticket
 **请求方式**：`POST`
 **请求参数**：
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |       |  query    |  true    | string     |        | 
-| couponTemplateId   |  优惠券id     |  query    |  false    | integer     |        | 
-| bgColor   |  背景色的编码，按钮的颜色跟着背景色走     |  query    |  true    | string     |        | 
-| couponType   |  优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券     |  query    |  true    | integer     |        | 
-| description   |  补充说明：卡券的优惠内容说明     |  query    |  false    | string     |        | 
-| effectTime   |  生效时间的Unix时间戳     |  query    |  true    | integer     |        | 
-| expireTime   |  失效时间的Unix时间戳     |  query    |  true    | integer     |        | 
-| introduce   |  使用须知：卡券使用方法的介绍     |  query    |  true    | string     |        | 
-| sill   |   使用优惠券的门槛条件    |  query    |  true    | string     |        | 
-| takeLimit   |  领取限制，这里仅作描述，实际领取策略需要另外建词典来支持     |  query    |  true    | string     |        | 
-| title   |  10元优惠券     |  query    |  true    | string     |        | 
-| **callbackUrl**   | 发券回调地址   | query   | true   | string   |    | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)   |  query    |  true    | string     |        
+| couponTemplateId   |  优惠券id     |  query    |  false    | integer     |        
+| bgColor   |  背景色的编码，按钮的颜色跟着背景色走     |  query    |  true    | string     |        
+| couponType   |  优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券     |  query    |  true    | integer     |   
+| description   |  补充说明：卡券的优惠内容说明     |  query    |  false    | string     |       
+| effectTime   |  生效时间的Unix时间戳     |  query    |  true    | integer     |       
+| expireTime   |  失效时间的Unix时间戳     |  query    |  true    | integer     |       
+| introduce   |  使用须知：卡券使用方法的介绍     |  query    |  true    | string     |      
+| sill   |   使用优惠券的门槛条件    |  query    |  true    | string     |        
+| takeLimit   |  领取限制，这里仅作描述，实际领取策略需要另外建词典来支持     |  query    |  true    | string     |    
+| title   |  10元优惠券     |  query    |  true    | string     |        
+| **callbackUrl**   | 发券回调地址   | query   | true   | string   |    
 
 
 **响应示例**:
@@ -273,12 +272,12 @@ sidebar: cardticket
 **请求方式**：`GET`
 **请求参数**：
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |  bd_app_id     |  query    |  true    | string     |        | 
-| couponType   |   优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券    |  query    |  false    | integer     |        | 
-| page   |  page     |  query    |  false    | integer     |        | 
-| pageSize   |  pageSize     |  query    |  false    | integer     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/） |  bd_app_id     |  query    |  true    | string     |     
+| couponType   |   优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券    |  query    |  false    | integer     |  
+| page   |  page     |  query    |  false    | integer     |       
+| pageSize   |  pageSize     |  query    |  false    | integer     |       
 
 
 **响应示例**:
@@ -320,9 +319,9 @@ sidebar: cardticket
 
 **Query参数：**
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | String     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)    |  query    |  true    | String     |      
 
 **POST数据：**
 
@@ -352,9 +351,9 @@ sidebar: cardticket
 
 **Query参数：**
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | String     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)    |  query    |  true    | String     |    
 
 **POST数据：**
 
@@ -407,8 +406,8 @@ sidebar: cardticket
 | openId   | openId   | 是   | string   | 
 | **couponT****emplateId**   | 优惠券模板id   | 是   | long   | 
 | sign   | md5签名串(小写)    签名盐： recordId +openId+timestamp后5位+**couponTemplateId**+*&^%$#    md5(recordId+openId+**couponTemplateId**+timestamp+盐)     | 是   | string   | 
-| timestamp   | 时间戳 单位s   |    |    | 
-
+| timestamp   | 时间戳 单位s   |  -  | -|
+   
 格式：**application/json**
 
 
@@ -428,9 +427,9 @@ sidebar: cardticket
 
 **Query参数：**
 
-| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   | **  schema  **   | 
-|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|
-| access_token   |      |  query    |  true    | String     |        | 
+| ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
+|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)   |  query    |  true    | String     |      
 
 **POST数据：**
 
