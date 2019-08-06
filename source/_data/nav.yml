@@ -3240,6 +3240,7 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
+
     - 
       link: /develop/cloud/cloud_init
       text: 云开发
@@ -3365,6 +3366,18 @@
                         link: /develop/cloud/cloud_database/command/#command
                         sidebar:
                           -
+                              text: command.geoNear
+                              name: cloud_database_command_geoNear
+                              link: /develop/cloud/cloud_database/command/#command-geoNear
+                          -
+                              text: command.geoWithin
+                              name: cloud_database_command_geoWithin
+                              link: /develop/cloud/cloud_database/command/#command-geoWithin
+                          -
+                              text: command.geoIntersects
+                              name: cloud_database_command_geoIntersects
+                              link: /develop/cloud/cloud_database/command/#command-geoIntersects
+                          -
                               text: command.eq
                               name: cloud_database_command_eq
                               link: /develop/cloud/cloud_database/command/#command-eq
@@ -3436,6 +3449,7 @@
                               text: command.unshift
                               name: cloud_database_command_unshift
                               link: /develop/cloud/cloud_database/command/#command-unshift
+
     # -
     #       text: 插件
     #       name: plugins
