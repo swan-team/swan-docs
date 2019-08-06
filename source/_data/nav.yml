@@ -2381,6 +2381,217 @@
                 text: 编译工具历史更新日志
                 name: uplog_compile
 
+
+    - 
+      link: /develop/cloud/cloud_init
+      text: 云开发
+      name: cloud
+      sidebar: 
+        -
+            text: 小程序端 API 文档
+            name: smartapp_api_document
+            sidebar:
+              -
+                  text: 初始化
+                  name: cloud_init
+                  link: /develop/cloud/cloud_init
+              -
+                  text: 云函数
+                  name: cloud_functions
+                  link: /develop/cloud/cloud_functions
+                  sidebar: 
+                    -
+                        text: swan.cloud.callFunction
+                        name: cloud_callFunction
+                        link: /develop/cloud/cloud_functions/#swan-cloud-callFunction
+              -
+                  text: 存储
+                  name: cloud_storage
+                  link: /develop/cloud/cloud_storage
+                  sidebar:  
+                    -
+                        text: swan.cloud.uploadFile
+                        name: cloud_uploadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-uploadFile
+                    -
+                        text: swan.cloud.downloadFile
+                        name: cloud_downloadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-downloadFile
+                    -
+                        text: swan.cloud.deleteFile
+                        name: cloud_deleteFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-deleteFile
+              -
+                  text: 数据库
+                  name: cloud_database
+                  link: /develop/cloud/cloud_database/swan-cloud-database
+                  sidebar:
+                    # database
+                    -
+                        text: database
+                        name: cloud_database
+                        link: /develop/cloud/cloud_database/swan-cloud-database
+                    
+                    # collection
+                    -
+                        text: collection
+                        name: cloud_database_collection
+                        link: /develop/cloud/cloud_database/collection
+                        sidebar: 
+                          -
+                              text: collection.doc
+                              name: cloud_database_collection_doc
+                              link: /develop/cloud/cloud_database/collection/#collection-doc
+                          -
+                              text: collection.get
+                              name: cloud_database_collection_get
+                              link: /develop/cloud/cloud_database/collection/#collection-get
+                          -
+                              text: collection.add
+                              name: cloud_database_collection_add
+                              link: /develop/cloud/cloud_database/collection/#collection-add
+                          -
+                              text: collection.count
+                              name: cloud_database_collection_count
+                              link: /develop/cloud/cloud_database/collection/#collection-count
+                          -
+                              text: collection.where
+                              name: cloud_database_collection_where
+                              link: /develop/cloud/cloud_database/collection/#collection-where
+                          -
+                              text: collection.orderBy
+                              name: cloud_database_collection_orderBy
+                              link: /develop/cloud/cloud_database/collection/#collection-orderBy
+                          -
+                              text: collection.limit
+                              name: cloud_database_collection_limit
+                              link: /develop/cloud/cloud_database/collection/#collection-limit
+                          -
+                              text: collection.skip
+                              name: cloud_database_collection_skip
+                              link: /develop/cloud/cloud_database/collection/#collection-skip
+                          -
+                              text: collection.field
+                              name: cloud_database_collection_field
+                              link: /develop/cloud/cloud_database/collection/#collection-field
+                    
+                    # doc
+                    -
+                        text: doc
+                        name: cloud_database_collection_doc
+                        link: /develop/cloud/cloud_database/doc
+                        sidebar:
+                          -
+                              text: doc.get
+                              name: cloud_database_collection_doc_get
+                              link: /develop/cloud/cloud_database/doc/#doc-get
+                          -
+                              text: doc.update
+                              name: cloud_database_collection_doc_update
+                              link: /develop/cloud/cloud_database/doc/#doc-update
+                          -
+                              text: doc.set
+                              name: cloud_database_collection_doc_set
+                              link: /develop/cloud/cloud_database/doc/#doc-set
+                          -
+                              text: doc.remove
+                              name: cloud_database_collection_doc_remove
+                              link: /develop/cloud/cloud_database/doc/#doc-remove
+                    
+
+
+                    # db.command
+                    -
+                        text: command
+                        name: cloud_database_command
+                        link: /develop/cloud/cloud_database/command/#command
+                        sidebar:
+                          -
+                              text: command.geoNear
+                              name: cloud_database_command_geoNear
+                              link: /develop/cloud/cloud_database/command/#command-geoNear
+                          -
+                              text: command.geoWithin
+                              name: cloud_database_command_geoWithin
+                              link: /develop/cloud/cloud_database/command/#command-geoWithin
+                          -
+                              text: command.geoIntersects
+                              name: cloud_database_command_geoIntersects
+                              link: /develop/cloud/cloud_database/command/#command-geoIntersects
+                          -
+                              text: command.eq
+                              name: cloud_database_command_eq
+                              link: /develop/cloud/cloud_database/command/#command-eq
+                          -
+                              text: command.neq
+                              name: cloud_database_command_neq
+                              link: /develop/cloud/cloud_database/command/#command-neq
+                          -
+                              text: command.lt
+                              name: cloud_database_command_lt
+                              link: /develop/cloud/cloud_database/command/#command-lt
+                          -
+                              text: command.lte
+                              name: cloud_database_command_lte
+                              link: /develop/cloud/cloud_database/command/#command-lte
+                          -
+                              text: command.gt
+                              name: cloud_database_command_gt
+                              link: /develop/cloud/cloud_database/command/#command-gt
+                          -
+                              text: command.gte
+                              name: cloud_database_command_gte
+                              link: /develop/cloud/cloud_database/command/#command-gte
+                          -
+                              text: command.in
+                              name: cloud_database_command_in
+                              link: /develop/cloud/cloud_database/command/#command-in
+                          -
+                              text: command.nin
+                              name: cloud_database_command_nin
+                              link: /develop/cloud/cloud_database/command/#command-nin
+                          -
+                              text: command.and
+                              name: cloud_database_command_and
+                              link: /develop/cloud/cloud_database/command/#command-and
+                          -
+                              text: command.or
+                              name: cloud_database_command_or
+                              link: /develop/cloud/cloud_database/command/#command-or
+                          -
+                              text: command.set
+                              name: cloud_database_command_set
+                              link: /develop/cloud/cloud_database/command/#command-set
+                          -
+                              text: command.remove
+                              name: cloud_database_command_remove
+                              link: /develop/cloud/cloud_database/command/#command-remove
+                          -
+                              text: command.inc
+                              name: cloud_database_command_inc
+                              link: /develop/cloud/cloud_database/command/#command-inc
+                          -
+                              text: command.mul
+                              name: cloud_database_command_mul
+                              link: /develop/cloud/cloud_database/command/#command-mul
+                          -
+                              text: command.push
+                              name: cloud_database_command_push
+                              link: /develop/cloud/cloud_database/command/#command-push
+                          -
+                              text: command.pop
+                              name: cloud_database_command_pop
+                              link: /develop/cloud/cloud_database/command/#command-pop
+                          -
+                              text: command.shift
+                              name: cloud_database_command_shift
+                              link: /develop/cloud/cloud_database/command/#command-shift
+                          -
+                              text: command.unshift
+                              name: cloud_database_command_unshift
+                              link: /develop/cloud/cloud_database/command/#command-unshift
+
+
     -
       link: /develop/server/oauth_intr
       text: 开放服务
