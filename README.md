@@ -1,12 +1,19 @@
 # 智能小程序文档编写指导&规范
 ## 如何编写
 
-### 开启预览
+### 开启本地预览
 进入 swan-docs，终端执行 `npm start`;
 
 终端看到`Hexo is running at http://localhost:4000/docs/. Press Ctrl+C to stop.` 提示，启动成功。
 
 访问 http://localhost:4000/docs/introduction/register/ 开始编辑（path与线上一致）。
+
+### 开启开发机预览
+进入 swan-docs，终端执行 `sh deploy.sh`;
+
+终端看到`deploy done!` 提示，启动成功。
+
+访问 http://10.64.15.32:8879/docs/ 查看预览效果。
 
 ### 编写
 编辑器打开模块，找到你要编辑的文档所在文件夹，修改刷新浏览器即可看到修改。
