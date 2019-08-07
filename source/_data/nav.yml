@@ -17,7 +17,7 @@
             sidebar:
               -
                 link: /introduction/enter_application
-                text:   登录注册
+                text: 登录注册
                 name: enter_application                   
               -
                 link: /introduction/register
@@ -792,9 +792,9 @@
             #   name: process_life                            
 
     -
-      link: /develop/component/componetlist
+      link: /develop/component 
       text: 组件
-      name: componetlist
+      name: componet 
       sidebar:
         -
             sidebar:
@@ -1029,9 +1029,9 @@
                       name: ad_ad
                                       
     -
-      link: /develop/api/apilist
+      link: /develop/api/api 
       text: API
-      name: apilist
+      name: api 
       sidebar:
         -
             sidebar:
@@ -2872,9 +2872,9 @@
                     text: swan.getSystemRiskInfo
                     name: open_userinfo_swan-getSystemRiskInfo   
     -
-      link: /develop/serverapi/open_feed
+      link: /develop/serverapi 
       text: 服务端 API
-      name: open_feed
+      name: serverapi
       sidebar:
         - 
           sidebar:             
@@ -3008,9 +3008,9 @@
                     text: detectrisk
                     name: open_risk_power_detectrisk                       
     -
-      link: /develop/devtools/page
+      link: /develop/devtools 
       text: 工具
-      name: page
+      name: devtools
       sidebar:       
         -
             sidebar:
@@ -3264,9 +3264,9 @@
     #               name: limit_components
     
     -
-      link: /develop/third/pro
+      link: /develop/third 
       text: 第三方接入
-      name: pro
+      name: third
       sidebar:
         -
           sidebar:
@@ -3361,9 +3361,9 @@
               text: 更新日志
               name: log
     -
-      link: /develop/function/navigation
+      link: /develop/function 
       text: 功能开发
-      name: navigation
+      name: function 
       sidebar:
         -
           sidebar:              
@@ -3419,8 +3419,7 @@
             link: /develop/function/tune_up
             text: 百度收银台接口
             name: tune_up
-            sidebar: 
-                   
+            sidebar:                    
               -
                 link: /develop/function/tune_up/#调起百度收银台
                 text: 调起百度收银台
@@ -3456,9 +3455,9 @@
             name: error_code             
       
     -
-      link: /develop/swan/client-lib
+      link: /develop/swan 
       text: 基础库版本信息
-      name: client-lib
+      name: swan
       sidebar:
         -
           sidebar:
@@ -3505,9 +3504,9 @@
                 name: concept_基础库最低版本设置
 
     -
-      link: /develop/faq/frequently
+      link: /develop/faq
       text: FAQ
-      name: frequently
+      name: faq
       sidebar:
         -
           sidebar:            
