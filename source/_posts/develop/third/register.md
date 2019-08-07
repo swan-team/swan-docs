@@ -492,3 +492,40 @@ authorization\_code |string | 是 | 代注册授权码
   }
 }
 ```
+
+### 3、代注册或代创建授权码换取创建小程序相关信息
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/auth/tp/authcodetoapp?access_token=ACCESS_TOKEN
+```
+参数说明:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access\_token |string | 是 | 第三方平台的access\_token
+authorization\_code|string|是|代注册或代创建授权码
+
+返回值说明:
+
+字段名 | 类型  | 描述
+----- |-----| -----
+app_id |int | 小程序id
+app_name | string| 小程序名称
+app_key |string|小程序key
+
+### 返回值示例:
+
+> 调用接口成功后,若参数authorization\_code为代注册授权码,返回结果只会有一个小程序信息，如果为代创建授权码,返回结果可能会有多个小程序信息。
+
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": [
+        {
+            "app_id": 1482655150,
+            "app_name": "代创建小程序测试99",
+            "app_key": "8MxLy4yNm0p4LZoYBSux2B7HOVO0rMc2"
+        }
+	]
+}
+```
