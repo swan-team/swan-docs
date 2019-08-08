@@ -114,7 +114,7 @@ subPackages 中，每个分包的配置有以下几项：
 └── utils
 ```
 
-开发者通过在`app.json`的`subpackages`字段中对应的分包配置项中定义`independent`字段声明对应分包为独立分包。
+开发者通过在`app.json`的`subPackages`字段中对应的分包配置项中定义`independent`字段声明对应分包为独立分包。
 
 ```json
 {
@@ -122,7 +122,7 @@ subPackages 中，每个分包的配置有以下几项：
 	  "pages/index",
 	  "pages/logs"
    ],
-  "subpackages": [
+  "subPackages": [
     {
       "root": "moduleA",
       "pages": [
@@ -204,7 +204,7 @@ API调用方式参考：<a href="https://smartprogram.baidu.com/docs/develop/api
 ```json
 {
   "pages": ["pages/index"],
-  "subpackages": [
+  "subPackages": [
     {
       "root": "important",
       "pages": ["index"],

@@ -98,3 +98,29 @@ msg |string  | 第三方id
 }
 ```
 
+## 高级认证结果推送
+
+当客户的高级认证状态发生变化后,第三方平台将可以通过开放平台上填写的消息与事件接受URL,获得变更内容。若客户账号下有多个小程序,会收到数量与客户小程序数量相等的推送
+
+认证状态变更时，接收到的推送数据示例如下：
+
+```json
+{
+    "appId":小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "ADVANCED_AUDIT_CHANGED",
+    "adType":2, 
+    "adStatus":1
+}
+```
+
+### 参数说明
+参数名 | 类型  | 描述
+----- |-----| -----
+appId |long | 小程序appid
+tpAppId |long | 第三方平台appid
+eventTime |string | 事件发生时间
+event |string | ADVANCED\_AUDIT\_CHANGED 高级认证状态变更
+adType |int | 认证类型<br>2:对公打款认证<br>23:法人人脸识别认证
+adStatus |int | 认证状态<br>1:<br>真实性认证通过<br>7:<br>对公打款认证: 对公打款认证完成,待支付认证费用<br>法人人脸识别认证: 人脸识别认证完成,待支付认证费用
