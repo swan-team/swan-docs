@@ -6,13 +6,13 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.4.6） 
+### 最新正式版本（2.5.2） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#%E6%AD%A3%E5%BC%8F%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
 
-### 最新 Beta 版本（2.5.1-beta）
+### 最新 Beta 版本（2.6.0-beta）
 
 > Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
 
@@ -26,6 +26,7 @@ sidebar: history
 
 |mac|windows|用户占比|
 |--|--|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.5.2.dmg">2.5.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.5.2.exe">2.5.2</a>|-|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.4.6.dmg">2.4.6</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.4.6.exe">2.4.6</a>|0.81%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.4.5.dmg">2.4.5</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.4.5.exe">2.4.5</a>|54.52%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.4.3.dmg">2.4.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.4.3.exe">2.4.3</a>|17.85%|
