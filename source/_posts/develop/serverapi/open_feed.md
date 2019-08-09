@@ -85,19 +85,21 @@ sidebar: open_feed
 **method**: GET&POST
 **params**:
 
-| access_token | string   | true         | GET        | 权限校验TOKEN      |                                |
+| **key**      | **类型** | **是否必填** | **method** | **备注**           | **示例** 
 | ------------ | -------- | ------------ | ---------- | ------------------ | ------------------------------ |
+| access_token | string   | true         | GET        | 权限校验TOKEN      |                                |
 | app_id       | string   | true         | POST       | 智能小程序ID       | 15625863                       |
 | path         | string   | true         | POST       | 智能小程序内页链接 | /pages/detail/detail?id=100001 |
-| **key**      | **类型** | **是否必填** | **method** | **备注**           | **示例**                       |
+                      |
 
 return:json
 
-| errno   | int      | 0        |
+| **key** | **类型** | **备注** |
 | ------- | -------- | -------- |
+| errno   | int      | 0        |
 | msg     | string   | 错误信息 |
 | data    | string   | 返回数据 |
-| **key** | **类型** | **备注** |
+
 
 返回示例
 

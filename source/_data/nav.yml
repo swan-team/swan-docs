@@ -142,8 +142,17 @@
 
               -
                 link: /introduction/auditing_info
-                text: 信息流素材审核规范
+                text: 信息流审核规范
                 name: auditing_info
+                sidebar:
+                  -
+                    link: /introduction/auditing_info/#信息流流量入驻规范
+                    text: 信息流流量入驻规范 
+                    name: auditing_info_信息流流量入驻规范
+                  -
+                    link: /introduction/auditing_info/#信息流素材审核规范
+                    text: 信息流素材审核规范
+                    name: auditing_info_信息流素材审核规范                
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -799,9 +808,9 @@
         -
             sidebar:
               -
-                link: /develop/component/componetlist
+                link: /develop/component/componet 
                 text: 组件列表
-                name: componetlist
+                name: componet 
               -
                 link: /develop/component/native
                 text: 原生组件说明
