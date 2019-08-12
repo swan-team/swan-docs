@@ -3366,18 +3366,6 @@
                         link: /develop/cloud/cloud_database/command/#command
                         sidebar:
                           -
-                              text: command.geoNear
-                              name: cloud_database_command_geoNear
-                              link: /develop/cloud/cloud_database/command/#command-geoNear
-                          -
-                              text: command.geoWithin
-                              name: cloud_database_command_geoWithin
-                              link: /develop/cloud/cloud_database/command/#command-geoWithin
-                          -
-                              text: command.geoIntersects
-                              name: cloud_database_command_geoIntersects
-                              link: /develop/cloud/cloud_database/command/#command-geoIntersects
-                          -
                               text: command.eq
                               name: cloud_database_command_eq
                               link: /develop/cloud/cloud_database/command/#command-eq
