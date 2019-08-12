@@ -146,7 +146,7 @@ sidebar: map
 
 
 **示例**：
-<a href="swanide://fragment/7c60415ef8fb3072a5e710ec75be76841565510374695" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/fd809ae921113fe3b5a684cd8c69541d1565587461294" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
 * 在 swan 文件中
@@ -171,7 +171,7 @@ sidebar: map
         enable-zoom="{{enableZoom}}"
         enable-scroll="{{enableScroll}}"
         enable-rotate="{{enableRotate}}"
-       bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated">
+        bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated">
     </map>
 </view>
 ```
