@@ -724,6 +724,10 @@
                 text: behaviors
                 name: custom-component_behaviors
               -
+                link: /develop/framework/custom-component_generic
+                text: 抽象节点
+                name: custom-component_generic
+              -
                 link: /develop/framework/custom-component_extend
                 text: 自定义组件扩展
                 name: custom-component_extend
