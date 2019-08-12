@@ -38,21 +38,13 @@
                 name: authenticity
                 sidebar:
                   -
-                    link: /introduction/authenticity/#对公验证
-                    text: 对公验证
-                    name: authenticity_对公验证
+                    link: /introduction/authenticity/#验证
+                    text: 验证
+                    name: authenticity_验证
                   -
-                    link: /introduction/authenticity/#证照验证
-                    text: 证照验证
-                    name: authenticity_证照验证            
-                  -
-                    link: /introduction/authenticity/#法人人脸识别
-                    text: 法人人脸识别
-                    name: authenticity_法人人脸识别
-                  -
-                    link: /introduction/authenticity/#小程序优惠通道
-                    text: 小程序优惠通道
-                    name: authenticity_小程序优惠通道 
+                    link: /introduction/authenticity/#收费（小程序优惠通道）
+                    text: 收费（小程序优惠通道）
+                    name: authenticity_收费（小程序优惠通道）
         -    
             link: /introduction/register_consummate
             text: 创建小程序
@@ -184,15 +176,23 @@
                   -
                     link: /introduction/rank/#关联H5站点
                     text: 关联H5站点
-                    name: rank_关联H5站点                  
+                    name: rank_关联H5站点   
                   -
-                    link: /introduction/rank/#配置URL映射规则
-                    text: 配置URL映射规则
-                    name: rank_配置URL映射规则
+                    link: /introduction/rank/#数据提交如何选择  
+                    text: 数据提交如何选择  
+                    name: rank_数据提交如何选择                                   
                   -
-                    link: /introduction/rank/#提交sitemap
-                    text: 提交sitemap
-                    name: rank_提交sitemap  
+                    link: /introduction/rank/#配置URL适配规则
+                    text: 配置URL适配规则
+                    name: rank_配置URL适配规则
+                  -
+                    link: /introduction/rank/#提交Sitemap
+                    text: 提交Sitemap
+                    name: rank_提交Sitemap  
+                  -
+                    link: /introduction/rank/#小程序API提交
+                    text: 小程序API提交
+                    name: rank_小程序API提交                 
                   -
                     link: /introduction/rank/#robots协议介绍
                     text: robots协议介绍
@@ -239,7 +239,11 @@
               -
                 link: /introduction/adopen
                 text: 流量主开通指引
-                name: adopen             
+                name: adopen          
+              -
+                link: /introduction/adopen_feedback
+                text: 流量主接入FAQ
+                name: adopen_feedback                   
     -
       link: /introduction/pay
       text: 百度收银台支付开通
@@ -443,7 +447,7 @@
   nav:
 
     -
-      link: /develop/tutorial/codedir
+      link: /develop/tutorial/demo
       text: 快速入门
       name: tutorial
       sidebar:     
@@ -757,6 +761,10 @@
               link: /develop/framework/performance-tips
               text: 性能优化建议
               name: performance-tips
+            -
+              link: /develop/framework/http
+              text: http请求失败说明
+              name: http              
             -
               link: /develop/framework/whitescreen
               text: 白屏优化建议
@@ -1391,7 +1399,10 @@
                     -
                       link: /develop/api/media_recorder/#recorderManager-onStop
                       text: recorderManager.onStop
-                      name: media_recorder_recorderManager-onStop 
+                      name: media_recorder_recorderManager-onStop
+                - link: /develop/api/media_recorder/#swan-getAvailableAudioSources
+                  text: swan.getAvailableAudioSources
+                  name: media_recorder_swan-getAvailableAudioSources
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
@@ -2714,6 +2725,20 @@
                     name: open_payment_swan-requestPolymerPayment
 
               -
+                link: /develop/api/open_community
+                text: 全屏内容发布器
+                name: open_community
+                sidebar:
+                  -
+                    link: /develop/api/open_community/#swan-openCommunityEditor
+                    text: swan.openCommunityEditor
+                    name: open_community_swan-openCommunityEditor
+                  -
+                    link: /develop/api/open_community/#swan-closeCommunityEditor
+                    text: swan.closeCommunityEditor
+                    name: open_community_swan-closeCommunityEditor
+                    
+              -
                 link: /develop/api/open_chooseinvoicetitle
                 text: 获取发票抬头
                 name: open_chooseinvoicetitle
@@ -2967,8 +2992,25 @@
                 name: power_exp     
               -
                 link: /develop/serverapi/open_risk_power/#detectrisk
-                text: 风控检测说明
-                name: open_risk_power                           
+                text: 风控服务
+                name: open_risk_power     
+                sidebar:
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用场景
+                    text: 使用场景
+                    name: open_risk_power_使用场景  
+                  -
+                    link: /develop/serverapi/open_risk_power/#功能介绍
+                    text: 功能介绍
+                    name: open_risk_power_功能介绍 
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用说明
+                    text: 使用说明
+                    name: open_risk_power_使用说明                                                          
+                  -
+                    link: /develop/serverapi/open_risk_power/#detectrisk
+                    text: detectrisk
+                    name: open_risk_power_detectrisk                       
     -
       link: /develop/devtools/page
       text: 工具
@@ -3198,7 +3240,32 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
-
+    # -
+    #       text: 插件
+    #       name: plugins
+    #       sidebar:
+    #         -
+    #           sidebar:
+    #             -
+    #               link: /develop/plugins/survey
+    #               text: 插件概述
+    #               name: survey
+    #             -
+    #               link: /develop/plugins/plugins_develop
+    #               text: 开发插件
+    #               name: plugins_develop
+    #             -
+    #               link: /develop/plugins/use
+    #               text: 使用插件
+    #               name: use
+    #             -
+    #               link: /develop/plugins/limit_api
+    #               text: 插件中api的限制
+    #               name: limit_api
+    #             -
+    #               link: /develop/plugins/limit_components
+    #               text: 插件中组件的限制
+    #               name: limit_components
     
     -
       link: /develop/third/pro
