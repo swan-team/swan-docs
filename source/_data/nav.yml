@@ -2735,7 +2735,7 @@
 
               -
                 link: /develop/api/open_community
-                text: 社区发布器
+                text: 全屏内容发布器
                 name: open_community
                 sidebar:
                   -
