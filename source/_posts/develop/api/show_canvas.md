@@ -336,10 +336,10 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x	| Number | 否  |0| 指定的画布区域的左上角横坐标，|
+|x	| Number | 否  |0| 指定的画布区域的左上角横坐标|
 |y	| Number | 否  | 0| 指定的画布区域的左上角纵坐标|
-|width	| Number | 否  | canvas宽度-x |指定的画布区域的宽度，当 x<0 或者 x>canvase.width 时，x 会被置0 |
-|height	| Number | 否  | canvas高度-y | 指定的画布区域的高度，当 y<0 或者 y>canvase.height 时，y 会被置0|
+|width	| Number | 否  | canvas宽度-x |指定的画布区域的宽度 |
+|height	| Number | 否  | canvas高度-y | 指定的画布区域的高度 |
 |destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
 |destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
 |canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
