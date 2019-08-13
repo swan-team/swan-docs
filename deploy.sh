@@ -1,5 +1,10 @@
 
 hexo g
+cd output
+mkdir docs
+mv miniappdocs/* docs
+mv docs miniappdocs
+cd ..
 fis3 release
-rm -rf docs
+rm -rf output
 echo "deploy done!"
