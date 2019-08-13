@@ -17,7 +17,6 @@ sidebar: native
 * 原生组件无法在 scroll-view、swiper、picker-view、movable-view 中使用。
 * 部分CSS样式无法应用于原生组件，例如：
         无法对原生组件设置 CSS 动画；
-        无法定义原生组件为 position: fixed；
         不能在父级节点使用 overflow: hidden 来裁剪原生组件的显示区域。
 * 在IOS下，video 组件暂时不支持触摸相关事件。
 * 原生组件会遮挡 vConsole 弹出的调试面板。

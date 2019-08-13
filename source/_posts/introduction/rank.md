@@ -18,19 +18,9 @@ sidebar: rank
 
 
 ## 开启Web化能力
-
->工具从 [2.2.4](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/) 版本开始，默认开启 web 化能力，更多内容详见[开发建议](http://smartprogram.baidu.com/docs/develop/function/proposal/)。
-
-**1.为什么要开启Web化？**
-开启Web化是为了让智能小程序被搜索引擎抓取收录。
-智能小程序创建后，想要进入搜索，就需要能够被搜索引擎的爬虫发现并成功抓取。但由于是运行在宿主APP中，小程序无法被被爬虫感知。所以需要对智能小程序进行 Web 化的处理。
-在开启web化后，开发者能在后台自动转化得到一个小程序的H5版本。其功能与展示形式与小程序一致，可以理解为每一个智能小程序页面都会转成网页。
-（在开发工具中开启 Web 化功能后发布小程序即可完成 Web 化小程序版本的生成）。
-
-**2.如何开启Web化？**
-第一步：确认当前账号具有小程序开发权限（在成员管理中可进行对应权限设置）
-第二步：工具从 2.2.4 版本开始，默认开启 web 化能力，可直接进行下一步操作。
- ![Alt text](../../img/introduction/rank/1.png)
+工具从 [2.2.4](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/) 版本开始，默认开启 web 化能力，更多内容详见[开发建议](http://smartprogram.baidu.com/docs/develop/function/proposal/)。
+ 
+如您使用的版本不支持默认开启 web 化能力，建议升级您所使用的工具版本。
 
 
 
