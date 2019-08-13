@@ -35,20 +35,22 @@ sidebar: remotedebugging
 
     * 信息球的位置可以拖拽变化：
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/tool/远程调试04.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src="../../../img/tool/远程调试04.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>    
     </div>    
-</div>    
+
     * 手机端显示：
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/tool/远程调试05.png">
+
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src="../../../img/tool/远程调试05.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>    
     </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>    
-</div>
