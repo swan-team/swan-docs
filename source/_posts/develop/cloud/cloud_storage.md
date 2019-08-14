@@ -18,7 +18,7 @@ sidebar: cloud_storage
 |cloudPath| String| 是| 云存储路径|
 |filePath| String| 是| 要上传图片资源的路径|
 |header| Object| 否| HTTP请求Header, header中不能设置Referer|
-|config| Function| 否| 局部覆盖swan.cloud.init中的全局配置|
+|config| Object| 否| 局部覆盖swan.cloud.init中的全局配置|
 |success| Function| 否| 接口调用成功的回调函数|
 |fail| Function| 否| 接口调用失败的回调函数|
 |complete| Function| 否| 接口调用结束的回调函数|
