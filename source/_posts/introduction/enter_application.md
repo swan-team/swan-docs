@@ -6,7 +6,7 @@ sidebar: enter_application
 ---
 
    
-   打开智能小程序[首页](https://smartprogram.baidu.com/mappconsole/main/login)，点击智能小程序首页右上方“登录”按钮 。
+   打开智能小程序[首页](https://smartprogram.baidu.com/mappconsole/main/login)，点击智能小程序首页右上方“登录”按钮。
 
  ![图片](../../img/introduction/enter/p1.png)
 
