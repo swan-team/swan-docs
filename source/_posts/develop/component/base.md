@@ -10,11 +10,11 @@ sidebar: base
 **解释**： 图标
 **属性说明**:
 
-|属性名|类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|type |String  | |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect|
-|size | Number  |23 |icon 的大小，单位是 px|
-|color | Color |   |icon 的颜色，同 css 的 color|
+|属性名|类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- | ---- |---- |
+|type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
+|size | Number  |23 | 否 |icon 的大小，单位是 px|
+|color | Color |   | 否 |icon 的颜色，同 css 的 color|
 
 **type 有效值**:
 
@@ -36,9 +36,10 @@ sidebar: base
 | checkboxSelected | 复选框选中图标 |
 | radioSelected | 单选框选中图标 |
 | radioUnselect | 单选框未选中图标 |
+| loadingGrey | loading图标 |
 
 **示例**：
-<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -60,7 +61,7 @@ sidebar: base
     <view class="group choose">
         <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
     </view>
-</view> 
+</view>
 ```
 
 * 在 js 文件中
@@ -81,58 +82,18 @@ Page({
             40, 35, 30, 25
         ]
     }
-}); 
+});
 ```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-}
-.group {
-    background: #fff;
-    padding: .17rem .4rem;
-}
-icon:last-child {
-    margin-right: 0;
-}
-.big-default {
-    margin-right: .19rem;
-}
-.small-default {
-    margin: .2rem .2rem .1rem 0;
-    display: inline-block;
-}
-.small-primary {
-    margin: .15rem .2rem .1rem 0;
-    display: inline-block;
-}
-.default {
-    height: 1.8rem;
-}
-.choose {
-    height: .8367rem;
-    line-height: .8rem;
-}
-.icon-color,
-.icon-size {
-    margin-right: .15rem;
-    line-height: 1;
-} 
-```
-
-![图片](../../../img/icon-demo.png)
 
 ## text
 
-**解释**：放文本的元素
+**解释**：文本元素
 **属性说明:**
 
-|属性名 |类型  |默认值  |说明|最低版本|
-|---- | ---- | ---- |---- |--|
-| space | String  | false |显示连续空格|-|
-| selectable|Boolean|false|文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
+|---- | ---- | ---- |---- |---- |--|
+| space | String  | false | 否 |显示连续空格|-|
+| selectable|Boolean|false| 否 |文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
 
 **space 有效值**:
 
@@ -143,98 +104,108 @@ icon:last-child {
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/475757ad12315ba758ce42bc61e47ba11565503530789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <text selectable="true">{{text}}</text>
-    <button class="btn" type="primary" bind:tap="add">add text</button>
-    <button class="btn" type="primary" bind:tap="remove">remove text</button>
-</view> 
+    <view class="page-section page-section-spacing">
+        <view class="text-box">
+            <text selectable="true" space="20">{{text}}</text>
+        </view>
+        <button class="btn" disabled="{{!canAdd}}" type="primary" bind:tap="add">add text</button>
+        <button class="btn" disabled="{{!canRemove}}" type="primary" bind:tap="remove">remove text</button>
+    </view>
+</view>
 ```
 
 * 在 js 文件中
 
 ```js
-let initData = '这是一段文字.';
-let extraLine;
+const texts = [
+    '百度智能小程序',
+    '生态共建',
+    '持续为开发者拓展更多的百度内、外的流量资源',
+    '百亿广告分成',
+    '通过把广告组件嵌入到小程序里得到广告收益',
+    '十亿创新基金',
+    '为创新类小程序提升流量及曝光',
+    '......'
+  ]
+  let extraLine = []
+
 Page({
     data: {
-        text: initData
+        text: '这是一段文字',
+        canAdd: true,
+        canRemove: false,
+        extraLine : [],
     },
-    onShow(e) {
-        extraLine = [];
-    },
-    add(e) {
-        extraLine.push('其他文字');
+    add() {
+        extraLine.push(texts[extraLine.length % 12])
         this.setData({
-            text: initData + extraLine.join(',')
-        });
+          text: extraLine.join('\n'),
+          canAdd: extraLine.length < 12,
+          canRemove: extraLine.length > 0
+        })
     },
-    remove(e) {
-        if (extraLine.length > 0) {
-            extraLine.pop();
-            this.setData({
-                text: initData + extraLine.join(',')
-            });
+    remove() {
+      if (extraLine.length > 0) {
+          extraLine.pop()
+          this.setData({
+            text: extraLine.join('\n'),
+            canAdd: extraLine.length < 12,
+            canRemove: extraLine.length > 0,
+          })
+        }
+        else {
+          this.setData({
+            text: 'end'
+          })
         }
     }
-}); 
-```
+});
 
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: 29rpx;
-    padding: 30rpx;
-}
-
-.wrap button {
-    margin-top: 30rpx;
-    height: 80rpx;
-    line-height: 80rpx;
-}
 ```
 **图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/text-demo2.png">
+        <img src="../../../img/component/text.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
 
-**说明:**
+**Bug & Tip**：
 
-* 除了文本节点以外的其他节点都无法长按选中。
+* 除了文本节点以外的其他节点都无法长按选中，支持复制，但不支持剪切。
 * 各个操作系统的空格标准并不一致。
-* `<text/>`组件内只支持`<text/>`嵌套。
+* `<text/>`组件内只支持`<text/>`嵌套，注意被嵌套的text绑定事件无法触发。
 
 
 ## rich-text
 
 **解释**： 富文本
+
+> nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
+
 **属性说明:**
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| nodes | Array / String  | [] |节点列表 / HTML String。|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- | ---- |---- |
+| nodes | Array / String  | [] | 否 |节点列表 / HTML String|
 
 ### nodes
+现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点** ，默认是元素节点，在富文本区域里显示的HTML节点。
 
-* nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
-* 现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点。
-
-#### 元素节点：type = node
+* 元素节点：type = node
 
 **属性说明:**
 
@@ -244,7 +215,8 @@ Page({
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
 
-#### 文本节点：type = text
+* 文本节点：type = text
+
 
 **属性说明:**
 
@@ -304,26 +276,13 @@ Page({
 | tr | -|
 | ul | - |
 
-**说明**：
-
-* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
-* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
-* nodes 不推荐使用 String 类型，性能会有所下降。
-* rich-text 组件内屏蔽所有节点的事件。
-* attrs 属性不支持 id ，支持 class。
-* name 属性大小写不敏感。
-* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
-* img 标签仅支持网络图片。
-* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
-
-
 **示例**
 
-<a href="swanide://fragment/191f3a0c75c7f87284bd3f3b03fcfa3a1556527446420" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e9ad331b85bd358a215813e62dbfea601565503525233" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
-```xml
+```html
 <view class="rich-text">
     <view class="renders">
         <view class="renders_title">通过HTML String渲染</view>
@@ -344,7 +303,7 @@ Page({
                 <view class="cont">{{nodeSnip}}</view>
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
-            <block s-if="{{renderedByNode}}">
+            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem">
                 <rich-text nodes="{{nodes}}"></rich-text>
             </block>
         </view>
@@ -409,69 +368,39 @@ Page({
         });
     },
     enterCode(e) {
-        console.log(e.detail.value);
-        this.setData({
-            htmlSnip: e.detail.value
-        });
+      this.setData({
+          htmlSnip: e.detail.value
+      });
     }
 });
 ```
-
-* 在 css 文件中
-
-```css
-.rich-text {
-    width: 100%;
-    height: 100%;
-    font-size: .16rem;
-    padding: .16rem;
-}
-.renders {
-    width: 100%;
-    margin-top: 60rpx;
-}
-.renders_view {
-    width: 100%;
-    height: auto;
-}
-.renders_title {
-    color: darkgrey;
-}
-.p {
-    color: #4F99FB;
-    line-height: 60rpx;
-}
-scroll-view {
-    width: 100%;
-    height: 350rpx;
-    border: 1rpx solid #1AAD19;
-    box-sizing: border-box;
-    line-height: 50rpx;
-}
-.cont {
-    width: 100%;
-    height: 100%;
-    white-space: pre;
-}
-button {
-    margin: 20rpx 0;
-}
-```
-
-
-**图示:**
+**图示**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/richtext.png">
+        <img src="../../../img/component/rich-text.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
+
+**Bug & Tip**：
+
+* 单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
+* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* nodes 不推荐使用 String 类型，性能会有所下降。
+* rich-text 组件内屏蔽所有节点的事件。
+* attrs 属性不支持 id ，支持 class。
+* name 属性大小写不敏感。
+* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
+* img 标签仅支持网络图片。
+* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+
+
 
 
 
@@ -481,29 +410,31 @@ button {
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| percent | Float  | |百分比 0~100 |
-| show-info | Boolean  | false  |在进度条右侧显示百分比|
-| stroke-width | Number/String | 2 |进度条线的宽度，单位 px|
-| color | Color  | #09BB07 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  | #09BB07 | 已选择的进度条的颜色	|
-| backgroundColor |  Color | #E6E6E6 |未选择的进度条的颜色	|
-| active | Boolean  | false  |进度条从左往右的动画	|
-| active-mode | String  | backwards  |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+| percent | Float  | | 否 |百分比 0~100 |
+| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
+| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
+| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
+| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
+| active | Boolean  | false  | 否 |进度条从左往右的动画	|
+| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例**：
-<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
+    <progress class="progress" percent="20" activeColor="#3c76ff" show-info />
     <progress class="progress" percent="40" activeColor="#3c76ff" active />
-    <progress class="progress" percent="60" activeColor="#3c76ff" active />
-    <progress class="progress" percent="80" activeColor="#74fa7d" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
+    <progress class="progress" percent="70" color="#3c76ff" active/>
+    <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
 </view>
+
 ```
 
 * 在 css 文件中
@@ -547,15 +478,9 @@ button {
 | pause | 暂停 |
 | stop | 停止 |
 
-**说明:**
-
-* animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
-* animation-view组件不支持原生组件嵌套。
-* 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
-
 **示例**：
 
-<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19c06d05f550daf240008413039c50021565512139450" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -563,16 +488,12 @@ button {
 <view class="container">
     <view class="animation-content hide">
         <view class="animation-info">
-            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" path="{{path}}">
+            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" bind:ended="end" path="{{path}}">
             </animation-view>
         </view>
         <view class="button-content">
-            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}动画</button>
+            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}lottie动画</button>
         </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
     </view>
 </view>
 
@@ -582,7 +503,7 @@ button {
 ```javascript
 Page({
     data: {
-        title: 'animation-view',
+        title: 'lottie',
         action: 'play',
         hidden: false,
         path: '/anims/lottie_example.json',
@@ -591,6 +512,9 @@ Page({
         status: '停止',
         updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
         textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+    },
+    onShow(){
+        console.log('手百版本11.3以上才可使用');
     },
     playLottie() {
         // 切换播放状态
@@ -602,28 +526,28 @@ Page({
             action,
             status
         });
+    },
+    end() {
+        console.log('播放结束,设置不循环播放才能触发');
     }
 });
 ```
-* 在 css 文件中
+**图示**
 
-```css
-.animation-info {
-    padding-top: .4rem;
-}
-.controls {
-    width: 88%;
-    margin: 0 auto;
-}
-.button-content {
-    position: relative;
-    top: 0;
-}
-.toggle-animation {
-    margin-top: .22rem!important;
-    border-radius: .04rem;
-}
-.toggle-animation::after {
-    border: none;
-}
-```
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/animation-view.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
+
+**Bug & Tip**：
+
+* animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
+* animation-view组件不支持原生组件嵌套。
+* 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。

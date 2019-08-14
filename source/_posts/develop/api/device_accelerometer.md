@@ -219,7 +219,7 @@ body {
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|interval|String |否 |-|监听加速度数据回调函数的执行频率|
+|interval|String |否 |normal|监听加速度数据回调函数的执行频率|
 |success |Function  |  否 |-|  接口调用成功的回调函数|
 |fail  |  Function |   否 | -| 接口调用失败的回调函数|
 |complete |   Function |   否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|

@@ -51,7 +51,7 @@ sidebar: open_log
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|code|String|用户登录凭证（有效期五分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
 **示例**：
 <a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -219,7 +219,7 @@ Page({
 
 ## swan.isLoginSync
 
-**解释**：获取百度 App登录状态。
+**解释**：获取宿主 App登录状态。
 
 **方法参数**：无
 
@@ -227,7 +227,7 @@ Page({
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
 **示例**：
 

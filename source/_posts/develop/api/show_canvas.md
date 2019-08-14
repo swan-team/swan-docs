@@ -18,7 +18,7 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady: function () {
+    onReady： function () {
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady: function () {
+    onReady： function () {
         const ctx = this.createCanvasContext('myCanvas');
 	}
 });
@@ -74,7 +74,7 @@ ctx.draw();
 
 
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
-如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x: 100, y: 200`为圆心处，开始画圆。
+如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
 
 ## swan.createCanvasContext
@@ -83,6 +83,8 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 **解释**：在 Page 中，推荐使用`this.createCanvasContext(canvasId)`，进行绘图上下文的创建。也可使用`swan.createCanvasContext(canvasId)`，但使用`swan.createCanvasContext(canvasId)`进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。
 
 **方法参数**：String canvasId
+
+**`canvasId`参数说明**：要获取 canvas 组件的 id。
 
 **返回值**：canvasContext
 
@@ -175,13 +177,13 @@ Page({
         swan.canvasGetImageData({
             canvasId: 'canvas',
             x: 0,
-            y: 0,
+           y: 0,
             width: 100,
             height: 100,
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail: function (err) {
+            fail： function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -192,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding: 50rpx 30rpx;
+    padding： 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -281,7 +283,7 @@ Page({
         swan.canvasGetImageData({
             canvasId: 'canvas1',
             x: 0,
-            y: 0,
+           y: 0,
             width: 200,
             height: 200,
             success(res) {
@@ -311,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding: 50rpx 30rpx;
+    padding： 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -334,10 +336,10 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x	| Number | 否  |0| 画布 x 轴起点|
-|y	| Number | 否  | 0|画布 y 轴起点（|
-|width	| Number | 否  | -x|画布宽度 |
-|height	| Number | 否  |-y| 画布高度（）|
+|x	| Number | 否  |0| 指定的画布区域的左上角横坐标|
+|y	| Number | 否  | 0| 指定的画布区域的左上角纵坐标|
+|width	| Number | 否  | canvas宽度-x |指定的画布区域的宽度 |
+|height	| Number | 否  | canvas高度-y | 指定的画布区域的高度 |
 |destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
 |destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
 |canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
@@ -349,18 +351,20 @@ Page({
 
 **说明**：
 
-在 draw 回调里调用该方法才能保证图片导出成功。
+* 在 draw 回调里调用该方法才能保证图片导出成功。
+* 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。
+* 当 x 合法的前提下，若 x + width > canvas.width 时， width 会被置成 canvas.width - x，y 同理。
 
 **示例**：
 
 ```js
 swan.canvasToTempFilePath({
     x: 100,
-    y: 200,
+   y: 200,
     width: 50,
     height: 50,
-    destWidth: 100,
-    destHeight: 100,
+    destwidth: 100,
+    destheight: 100,
     canvasId: 'myCanvas',
     success: function(res) {
         console.log(res.tempFilePath)
@@ -383,7 +387,7 @@ swan.canvasToTempFilePath({
 
 **示例**：
 
-<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -761,7 +765,7 @@ module.exports = canvas;
 
 **解释**：设置填充色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 
 
@@ -781,7 +785,7 @@ ctx.draw();
 
 **解释**：设置边框颜色。
 
-**方法参数**： Color color
+**方法参数**： [Color](/develop/api/canvas_color/) color
 
 **示例**：
 
@@ -796,18 +800,19 @@ ctx.draw();
 
 ##  canvasContext.setShadow
 
+> 使用顺序：setShadow(offsetX, offsetY, blur, color)
+
 **解释**：设置阴影样式。
 
-**方法参数**：Object object
+**方法参数**：Number offsetX, Number offsetY, Number blur, [Color](/develop/api/canvas_color/) color
 
-**`object`参数说明**：
+**`offsetX`参数说明**：阴影相对于形状在水平方向的偏移。
 
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-| offsetX | Number | 是| -|阴影相对于形状在水平方向的偏移 |
-| offsetY | Number |是 | -| 阴影相对于形状在竖直方向的偏移 |
-| blur | Number | 是 |  -|阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 |
-| color	| Color | 是| -| 阴影的颜色 |
+**`offsetY`参数说明**：阴影相对于形状在竖直方向的偏移。
+
+**`blur `参数说明**：阴影的模糊级别，数值越大越模糊，范围：0 ~ 100。 
+
+**`color`参数说明**：阴影的颜色。 
 
 **示例**：
 
@@ -832,9 +837,9 @@ ctx.draw();
 
 **`y0`参数说明**：起点的 y 坐标
 
-**`x1`参数说明**：阴影的模糊级别，数值越大越模糊。
+**`x1`参数说明**：终点的 x 坐标
 
-**`y1`参数说明**：阴影的颜色
+**`y1`参数说明**：终点的 y 坐标
 
 
 
@@ -892,11 +897,11 @@ ctx.draw();
 
 **解释**：创建一个颜色的渐变点。
 
-**方法参数**：Number stop, Color color
+**方法参数**：Number stop, [Color](/develop/api/canvas_color/) color
 
 **`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。
 
-**`color`参数说明:**渐变点的颜色
+**`color`参数说明**：渐变点的颜色
 
 
 **示例**：
@@ -1059,7 +1064,7 @@ ctx.draw();
 
 ##  canvasContext.setLineDash
 
-**解释**：设置线条的宽度。
+**解释**：设置线条虚线样式的间距和长度。
 
 **方法参数**：Array pattern, Number offset
 
@@ -1088,7 +1093,7 @@ ctx.draw();
 
 **方法参数**： Number miterLimit
 
-**`miterLimit`参数说明:**最大斜接长度  
+**`miterLimit`参数说明：**最大斜接长度  
 
 **示例**：
 
@@ -1508,7 +1513,7 @@ ctx.draw();
 const ctx = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
-    url: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
+    url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
         ctx.save()
         ctx.beginPath()
@@ -1645,7 +1650,7 @@ ctx.draw();
 
 ## canvasContext.drawImage
 
-> 使用顺序：drawImage(image, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
+> 使用顺序：drawImage(imageResource, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
 **解释**：绘制图像到画布。
 
@@ -1680,7 +1685,7 @@ swan.chooseImage({
     success: function(res){
         ctx.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
         ctx.draw();
-    };
+    }
 });
 ```
 ![图片](../../../img/draw-image.png)
@@ -1726,7 +1731,7 @@ ctx.draw();
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
-| width | String | 文本的宽度 |
+| width | Number | 文本的宽度 |
 
 **示例**：
 
@@ -1782,7 +1787,7 @@ canvasContext.setLineDashOffset = value;
 
 **`image`参数说明**：  重复的图像源，仅支持包内路径和临时路径 。 
 
-**`repetition`参数说明**：  指定如何重复图像，有效值有: repeat, repeat-x, repeat-y, no-repeat。 
+**`repetition`参数说明**：  指定如何重复图像，有效值有： repeat, repeat-x, repeat-y, no-repeat。 
 
 **示例**：
 

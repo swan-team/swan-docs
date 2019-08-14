@@ -101,7 +101,7 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|header| object | 是|-|连接成功的 HTTP 响应 Header。|
+|header| Object | 是|-|连接成功的 HTTP 响应 Header。|
 
 **示例**：
 
@@ -600,19 +600,19 @@ Page({
 
 **解释**：监听 WebSocket 连接打开事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onClose
 
 **解释**：监听 WebSocket 连接关闭事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onError
 
 **解释**：监听 WebSocket 错误。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 
 ## SocketTask.onMessage

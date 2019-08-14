@@ -3,6 +3,7 @@ title: 键盘
 layout: gamedoc
 topic: ui
 categoryName: api
+priority: 12-02
 ---
 <!-- md game/api/ui/_keyboard/showKeyboard.md -->
 <!-- md game/api/ui/_keyboard/hideKeyboard.md -->

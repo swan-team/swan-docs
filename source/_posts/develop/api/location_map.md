@@ -11,6 +11,8 @@ sidebar: location_map
 
 **方法参数**：String mapId
 
+**`mapId`参数说明**：要获取 map 组件的 id。
+
 **返回值**：mapContext
 
 ## mapContext
@@ -225,6 +227,7 @@ Page({
 |duration  |Number   |  否 |  |动画持续时长，默认值1000ms，平移与旋转分别计算。 |
 |fail   | Function   | 否 |  |接口调用失败的回调函数|
 |animationEnd|Function|否||动画结束时回调函数|
+|success|	function|		否||	接口调用成功的回调函数|
 
 ## mapContext.includePoints
 
@@ -239,6 +242,10 @@ Page({
 |---- | ---- | ---- |---- |---|
 |points  |Array  |  是  | |要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
 |padding  |Array  |  否 |  |坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
+|success|	function|		否||	接口调用成功的回调函数|
+|fail	|function	|	否||	接口调用失败的回调函数|
+|complete|	function|		否||	接口调用结束的回调函数（调用成功、失败都会执行）|
+
 
 ## mapContext.getRegion
 

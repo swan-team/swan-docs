@@ -11,6 +11,8 @@ sidebar: media_liveplayercontext
 
 **方法参数**： String domId
 
+**`domId`参数说明**：要获取 live-player 组件的 id。
+
 **返回值**：livePlayerContext
 
 ## livePlayerContext
@@ -19,7 +21,7 @@ sidebar: media_liveplayercontext
 
 **示例**：
 
-<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/1c03ff864ae6e6b6632eea2f539623021565512790335" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
 
@@ -54,6 +56,9 @@ Page({
         maxCache: 3,
         muted: false,
         backgroundMute: false
+    },
+    onShow() {
+        console.log('目前此组件在真机双端不能播放，请在开发者工具中查看完整效果');
     },
     onReady(e) {
         this.ctx = swan.createLivePlayerContext('myLive');
@@ -109,9 +114,18 @@ button {
 
 
 **图示**
-![图片](../../../img/component/liveplayer.png)
 
- 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/live-player.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ## livePlayerContext.play
 

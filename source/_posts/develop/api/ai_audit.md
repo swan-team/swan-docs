@@ -24,7 +24,7 @@ sidebar: ai_audit
 
 |参数 | 类型 | 	说明  |
 |---- | ---- | ---- |
-|log_id|	Long|		请求唯一id|
+|log_id|	Number|		请求唯一id|
 |conclusion|	String|	审核结果描述，成功才返回，失败不返回。|
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|

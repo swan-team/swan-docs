@@ -28,7 +28,7 @@ sidebar: device_scan
 |---- | ---- |
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
-|charSet|所扫码的字符集|
+|charSet|所扫码的字符集，仅支持 Andriod 系统。|
 
 **示例**：
 

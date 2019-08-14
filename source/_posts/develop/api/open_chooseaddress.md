@@ -20,20 +20,25 @@ sidebar: open_chooseaddress
 
 **success返回参数说明**：
 
-|参数名 |类型 | 说明|
+|参数名 |类型 | 说明|最低版本
 |---- | ---- | ---- |
-|userName|String |  收货人姓名|
-|postalCode  |String|  邮编|
-|provinceName|    String|  国标收货地址第一级地址|
-|cityName|    String|  国标收货地址第二级地址|
-|countyName|  String|  国标收货地址第三级地址|
-|detailInfo|  String|  详细收货地址信息|
-|telNumber|   String|  收货人手机号码|
-|nationalCode|	String	|收货地址国家码|
+|userName|String |  收货人姓名|-|
+|postalCode  |String|  邮编|-|
+|provinceCode|	String|	国标收货地址第一级地址国家码|最低支持版本 3.90.4 |
+|provinceName|    String|  国标收货地址第一级地址|-|
+|cityCode|	String|	国标收货地址第二级地址国家码|最低支持版本 3.90.4|
+|cityName|    String|  国标收货地址第二级地址|-|
+|countyCode|	String|	国标收货地址第三级地址国家码|最低支持版本 3.90.4 |
+|countyName|  String|  国标收货地址第三级地址|-|
+|townCode	|String	|国标收货地址第四级地址国家码	|最低支持版本 3.90.4 |
+|townName|	String|	国标收货地址第四级地址	|最低支持版本 3.90.4 |
+|detailInfo|  String|  详细收货地址信息|-|
+|telNumber|   String|  收货人手机号码|-|
+|nationalCode|	String	|收货地址国家码|-|
 
 **示例**：
 
-<a href="wanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
