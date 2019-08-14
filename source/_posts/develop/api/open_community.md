@@ -129,7 +129,7 @@ swan.openCommunityEditor({
 
 ## swan.closeCommunityEditor
 
-**解释**： 关闭社区内容发布器
+**解释**： 关闭社区发布器
 
 **方法参数**：Object object
 
