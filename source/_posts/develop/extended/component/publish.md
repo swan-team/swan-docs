@@ -9,7 +9,8 @@ sidebar: publish
 
 **解释：** 社区发布器组件，不含发布服务，只含有发布界面
 
-**效果示例：**
+**示例：**
+<a href="swanide://fragment/0fdfa7e3dbb1373489906e74a4ba32fb1565689497911" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **属性说明：**
 
@@ -36,10 +37,14 @@ sidebar: publish
 **示例代码：**
 
 ```
+npm install swan-solution-components-publish@1.2.17
+```
+
+```
 {
     "navigationBarTitleText": "标题",
     "usingComponents": {
-        "ga-form": "@baidu/swan-solution-components/src/publish"
+        "publish": "swan-solution-components-publish"
     }
 }
 ```
@@ -47,4 +52,3 @@ sidebar: publish
 ```
 <publish></publish>
 ```
-
