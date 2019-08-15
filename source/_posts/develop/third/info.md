@@ -7,6 +7,8 @@ sidebar: info
 
 ## 获取小程序全类目列表
 
+
+
 接口说明:
 ```
 GET https://openapi.baidu.com/rest/2.0/smartapp/app/category/list
@@ -67,6 +69,12 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/category/list
 |category_quali.list.must|int|资质项是否必须 1:必须 0:非必须|
 |category_quali.list.name|string|资质项名称|
 |category_quali.list.desc|string|资质项描述|
+
+
+### 相关内容导读
+
+获取小程序全类目列表：[服务类目](https://smartprogram.baidu.com/docs/operations/catagory/)
+
 ## 修改小程序类目
 
 现在只支持类目的覆盖修改，主体下类目资质已经审核通过的不会再次审核，小程序类目上限为5个。资质图片需要使用<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>的返回值
@@ -324,6 +332,10 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion?access_to
 |错误码 | 错误描述 | 
 |----- |-----|
 |470021| 版本输入错误|
+
+### 相关内容导读
+
+设置最低基础版本库：[基础库](https://smartprogram.baidu.com/docs/develop/swan/client-lib/)
 
 ## 查询当前设置的最低基础库版本及各版本列表
 
