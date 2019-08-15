@@ -355,17 +355,41 @@ Page({
 
 **示例**：
 
+<a href="swanide://fragment/66c76fa499b4cc0f533d7d0cd849d2ba1565858472543" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+* 在 swan 文件中
+
+```html
+<canvas canvas-id="myCanvas" />
+<button class="btn" type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
+<image src="{{src}}"></image>
+```
 ```js
-swan.canvasToTempFilePath({
-    x: 100,
-   y: 200,
-    width: 50,
-    height: 50,
-    destwidth: 100,
-    destheight: 100,
-    canvasId: 'myCanvas',
-    success: function(res) {
-        console.log(res.tempFilePath)
+Page({
+     data: {
+        src: ''
+    },
+    onReady: function () {
+        const ctx = this.createCanvasContext('myCanvas');
+        ctx.setFillStyle('#ff0000');
+        ctx.arc(100, 50, 50, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.draw();
+    },
+    canvasToTempFilePath (){
+        const _this = this;
+        swan.canvasToTempFilePath({
+            x: 0,
+            y: 0,
+            width: 300,
+            height: 225,
+            destwidth: 300,
+            destheight: 225,
+            canvasId: 'myCanvas',
+            success: function(res){
+                console.log(res.tempFilePath);
+                _this.setData("src",res.tempFilePath);
+            }
+        })
     }
 });
 ```
