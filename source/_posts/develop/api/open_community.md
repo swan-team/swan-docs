@@ -1,12 +1,15 @@
 ---
-title: 社区内容发布器
+title: 原生全屏内容发布器
 header: develop
 nav: api
 sidebar: open_community
 ---
+
 ## swan.openCommunityEditor
+
 > 基础库 3.90.1 版本开始支持。以下版本请使用小程序发布器组件
-**解释**： 调起社区内容通用发布器，并支持开发者配置发布器展示模块。
+
+**解释**： 调起原生全屏内容发布器，并支持开发者配置发布器展示模块。
 **方法参数**：Object object
 
 |参数名 |类型  |必填 | 默认值 |说明|
@@ -129,7 +132,7 @@ swan.openCommunityEditor({
 
 ## swan.closeCommunityEditor
 
-**解释**： 关闭社区发布器
+**解释**： 关闭原生全屏内容发布器
 
 **方法参数**：Object object
 
@@ -154,12 +157,12 @@ swan.openCommunityEditor({
         maxNum: 3,
         ratio: 0.5
     },
-    navBarTitleText: '社区文章发布器',
+    navBarTitleText: '原生全屏内容发布器',
     emojiPath: '../../emojidata',
     success: function (res) {
         console.log('openCommunityEditor success', res);
         swan.showToast({
-            title: '关闭发布器'
+            title: '关闭原生全屏内容发布器'
         });
         swan.closeCommunityEditor();
     },

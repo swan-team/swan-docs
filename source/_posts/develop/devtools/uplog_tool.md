@@ -17,7 +17,7 @@ sidebar: uplog_tool
 
 |版本号|更新时间|更新内容|
 |--|--|
-|2.4.6|2019.7.26|**New**<p>**·**宿主通过“宿主名_app.json”设置自定义tabbar功能；<p>**·**新增swan.openCommunityEditor（打开发布器）、swan.closeCommunityEditor（关闭发布器）；<p>**·**新增[插件开发](http://smartprogram.baidu.com/docs/develop/plugins/survey/)功能;<p>**·**新增小程序集中授权能力。|
+|2.4.6|2019.7.26|**New**<p>**·**宿主通过“宿主名_app.json”设置自定义tabbar功能；<p>**·**新增swan.openCommunityEditor（打开原生全屏内容发布器）、swan.closeCommunityEditor（关闭原生全屏内容发布器）；<p>**·**新增[插件开发](http://smartprogram.baidu.com/docs/develop/plugins/survey/)功能;<p>**·**新增小程序集中授权能力。|
 |2.4.5|2019.7.19|**Change**<p>**·**预览和发布的“上线基础库”改为“最低基础库”，并添加选择高版本基础库时的提示；<p>**·**编辑器将保存文件改为保存全部文件；<p>**·**编辑器的文件树更新为展开样式。<p>**BugFix**<p>**·**修复auto rename tag 处理多行标签的问题；<p>**·**修复非闭合标签导致编辑器卡死问题；<p>**·**修复request请求data传空字符串返回与真机不一致问题；<p>**·**修复工具刷新出现的样式丢失问题；<p>**·**修复live-player组件缺少bindnetstatus功能问题。|
 |2.4.3|2019.7.11|**New**<p>新增发布失败时，弹窗中添加去反馈入口提问题的引导。<p>**Change**<p>删除web化白屏检测功能。<p>**BugFix**<p>修复某些情况下编辑器卡死问题。|
 |2.4.2|2019.7.4|**BugFix**<p>修复修改 appId 后点击预览 appId 重置问题。|
