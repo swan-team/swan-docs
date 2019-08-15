@@ -18,7 +18,7 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
 	}
 });
@@ -183,7 +183,7 @@ Page({
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail： function (err) {
+            fail: function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -194,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -313,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -387,7 +387,7 @@ swan.canvasToTempFilePath({
 
 **示例**：
 
-<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
