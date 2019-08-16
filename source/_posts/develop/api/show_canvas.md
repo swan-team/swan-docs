@@ -384,8 +384,8 @@ Page({
             y: 0,
             width: 300,
             height: 225,
-            destwidth: 300,
-            destheight: 225,
+            destWidth: 300,
+            destHeight: 225,
             canvasId: 'myCanvas',
             success: function(res){
                 console.log(res.tempFilePath);
