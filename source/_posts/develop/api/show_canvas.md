@@ -358,6 +358,9 @@ Page({
 **示例**：
 
 <a href="swanide://fragment/66c76fa499b4cc0f533d7d0cd849d2ba1565858472543" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+
 * 在 swan 文件中
 
 ```html
