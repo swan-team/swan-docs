@@ -21,7 +21,7 @@ sidebar: net_rule
 * [request](https://smartprogram.baidu.com/docs/develop/api/net_request/#swan-request/) 最大并发数6；
 * [websocket](https://smartprogram.baidu.com/docs/develop/api/net_websocket/) 最大并发数5。
 * 网络请求的 referer header 不可设置。
-    * 其格式固定为 https://smartprogram.baidu.com/{appKey}/{version}/page-frame.html。
+    * 其格式固定为 https://smartapp.baidu.com/{appKey}/{version}/page-frame.html。
     * 其中 {appkey} 为小程序的 appkey。
     * {version} 为小程序的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本，正式版本号发布前在开发者工具中设置。
     ![图片](../../../img/min-swan-version.png)
