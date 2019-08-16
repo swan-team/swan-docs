@@ -357,7 +357,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/66c76fa499b4cc0f533d7d0cd849d2ba1565858472543" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中
 
 ```html
@@ -371,6 +371,7 @@ Page({
         src: ''
     },
     onReady: function () {
+        console.log('在工具2.7.0及以上版本正常使用');
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 50, 50, 0, 2 * Math.PI);
@@ -378,18 +379,17 @@ Page({
         ctx.draw();
     },
     canvasToTempFilePath (){
-        const _this = this;
+        const that = this;
         swan.canvasToTempFilePath({
             x: 0,
             y: 0,
             width: 300,
             height: 225,
-            destwidth: 300,
-            destheight: 225,
+            destWidth: 300,
+            destHeight: 225,
             canvasId: 'myCanvas',
             success: function(res){
-                console.log(res.tempFilePath);
-                _this.setData("src",res.tempFilePath);
+                that.setData("src", res.tempFilePath);
             }
         })
     }
