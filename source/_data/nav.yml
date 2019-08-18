@@ -3339,6 +3339,11 @@
               name: datastatistics
 
         - sidebar:
+            - link: /develop/third/customerability
+              text: 客服消息能力
+              name: customerability
+
+        - sidebar:
             - link: /develop/third/domain
               text: 设置第三方服务/业务域名
               name: domain
