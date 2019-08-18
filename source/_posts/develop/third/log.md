@@ -8,6 +8,7 @@ sidebar: log
 
 |更新日期| 更新内容|
 |-----|-----|
+|2019.8.19 | **New** <br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/customerability/">客服消息能力</a>；|
 |2019.7.08 | **New**<br/>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/sitemap/">流量配置能力</a> <br/> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/customer/">法人人脸识别高级认证</a> </a><br>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/pro/#8、获取小程序基础信息">小程序基本信息接口内容丰富（查询小程序与第三方授权关系）；</a> <br>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/domain">设置第三方服务/业务域名</a><br>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/deciphering/">消息加解密消息文档更新</a>|
 |2019.7.03 | **New**<br/>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/paymentservice/">支付服务能力相关接口</a> |
 |2019.5.30 | **New**<br>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/pro/#9、找回授权码">找回授权码接口</a><br>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/datastatistics/">数据统计分析相关接口</a> |
