@@ -152,7 +152,11 @@
                   -
                     link: /introduction/auditing_info/#信息流素材审核规范
                     text: 信息流素材审核规范
-                    name: auditing_info_信息流素材审核规范                
+                    name: auditing_info_信息流素材审核规范  
+                  -
+                    link: /introduction/auditing_info/#分垂类物料提交规范
+                    text: 分垂类物料提交规范
+                    name: auditing_info_分垂类物料提交规范                                              
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -1314,18 +1318,18 @@
                     link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
                     text: swan.ai.facePersonIdmatch
                     name: ai_face_swan-ai-facePersonIdmatch                 
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceVerify
-                    text: swan.ai.faceVerify
-                    name: ai_face_swan-ai-faceVerify
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceVerify
+                  #   text: swan.ai.faceVerify
+                  #   name: ai_face_swan-ai-faceVerify
                   -
                     link: /develop/api/ai_face/#swan-ai-faceLivenessSessioncode
                     text: swan.ai.faceLivenessSessioncode
                     name: ai_face_swan-ai-faceLivenessSessioncode
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
-                    text: swan.ai.faceLivenessVerify
-                    name: ai_face_swan-ai-faceLivenessVerify
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
+                  #   text: swan.ai.faceLivenessVerify
+                  #   name: ai_face_swan-ai-faceLivenessVerify
               -
                 link: /develop/api/ai_word
                 text: 词法分析
