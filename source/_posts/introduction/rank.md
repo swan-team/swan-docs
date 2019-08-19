@@ -278,9 +278,9 @@ Sitemap 示例:
 ##  小程序API提交
 
 
-#### 什么是小程序API提交？为何要API提交？
+#### 什么是小程序API提交？与上传sitemap文件有何区别？
 
-小程序API提交是将小程序资源提交到搜索的一种方式，即开发者可通过请求API接口，将小程序资源path路径，提交到API接口中。通过这种方式，给用户更便捷的提交体验。
+小程序API提交是将小程序资源提交到搜索的一种方式，即开发者可通过请求API接口，将小程序资源path路径，提交到API接口中。相比于上传sitemap文件，API提交方式能给用户更便捷的提交体验，两种方式都会占用当日提交配额。
 
 #### 请求路径:
 ```
@@ -295,7 +295,7 @@ Content-Type 表单类型提交
 ----- |-----| ------| ----- | ----
 access_token	|string|	是	|权限校验Token，获取方式见[开发者服务权限说明](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)。|
 type |int | 是 | 通过TYPE字段选择上传接口。0：周级提交，一周左右生效；1：天级提交，2~3天生效| 0
-url\_list |List<String> | 是 | 小程序path集合；上传级别上限，0：每天3000条，1：每天5000条|["/pages/index1","/pages/index2"]
+url\_list |List<String> | 是 | 小程序path集合；天级提交配额根据提交活跃度和资源质量进行调节，具体以平台显示为准；周级提交配额每日上限为5W条。|["/pages/index1","/pages/index2"]
 
 #### 返回值示例:
 ```
