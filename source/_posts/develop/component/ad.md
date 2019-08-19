@@ -27,7 +27,7 @@ sidebar: ad
 | feed | 流式类型 |
 
 **示例**：
-<a href="swanide://fragment/887f2bc9c844abf188eeefc57d2aa0b21559048217250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a02321e8d6aae0c798777266fbafca6f1565503494109" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * banner
 
@@ -40,17 +40,17 @@ sidebar: ad
 
     ```
     <view class="ad-container">
-    <div style="background-color: #fff">
-    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>;
-    </div>
+        <div style="background-color: #fff">
+            <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>
+        </div>
     </view>
+
     .ad-container {
         width: 100%;
-    height: auto;
+        height: auto;
     }
 
     ```
-
     **说明**：
     1. 从百青藤获取的代码，是`<ad></ad>`标签组件，把这段代码，嵌入到页面中你需要展现广告的位置处，然后给他一些样式就可以，样式控制只能到`<ad>`这一层，内部的展示效果对小程序的开发者来说没有权限。
     2. banner样式的背景色默认透明，建议开发者自定义背景色。通过（`div style="background-color: #fff"`）自行定义。其中`#fff`代表白色，可以根据广告场景自行修改参数。

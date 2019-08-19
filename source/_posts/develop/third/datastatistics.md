@@ -1241,7 +1241,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/data/getdata?access_token=ACCESS
 
 | 参数名        | 类型   | 是否必须 | 描述                                                         |
 | ------------- | ------ | -------- | ------------------------------------------------------------ |
-| access\_token | string | 是       | 授权小程序的接口调用凭据                                     |
+| access\_token | string | 是       | 第三方平台的接口调用凭据                                     |
 | scene         | int    | 是       | 小程序来源ID (场景值)                                        |
 | metrics       | string | 是       | 指标以逗号分隔，全量指标如下：tp\_day\_app\_count,tp\_week\_app\_count,tp\_month\_app\_count,tp\_day\_user\_count,tp\_week\_user\_count,tp\_month\_user\_count,tp\_day\_session\_count,tp\_week\_session\_count,tp\_month\_session\_count,tp\_day\_page\_count,tp\_activity\_degree,tp\_session\_count\_per\_person,tp\_session\_count\_per\_day,tp\_day\_share\_count,tp\_day\_feedback\_count |
 | start\_date   | string | 是       | 起始时间戳,格式如 20190321                                   |

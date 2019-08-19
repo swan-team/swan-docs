@@ -7,11 +7,25 @@ sidebar: uplog_tool
 
 ## 正式版更新日志
 
+
+
+### 2.6 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.6.1|2019.8.15|**New**<p>增加新机型 iphone XR && iphone XS MAX。<p>**Change**<p>**·**调试面板顺序固定为 Console、Network、Sources、Security、Appdata、Audits、Sensor、Storage、Swan Element；<p>**·**预览时自动运行体验评分。|
+
+### 2.5 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.5.2|2019.8.7|**New**<p>**·**项目信息添加图片压缩开关；<p>**·**预览添加使用体验评分弹窗引导提示；<p>**·**Windows 支持自定义安装路径；<p>**·**工具栏增加云测试入口。<p>**Change**<p>**·**欢迎页启动页交互体验优化；<p>**·**编辑器改为只 watch 开发者打开的文件夹。<p>**BugFix**<p>**·**删除 project.swan.json 中的基础库版本配置；<p>**·**修复Windows自定义安装路径问题。|
+
 ### 2.4 版本 
 
 |版本号|更新时间|更新内容|
 |--|--|
-|2.4.6|2019.7.26|**New**<p>**·**宿主通过“宿主名_app.json”设置自定义tabbar功能；<p>**·**新增swan.openCommunityEditor（打开发布器）、swan.closeCommunityEditor（关闭发布器）；<p>**·**新增[插件开发](http://smartprogram.baidu.com/docs/develop/plugins/survey/)功能;<p>**·**新增小程序集中授权能力。|
+|2.4.6|2019.7.26|**New**<p>**·**宿主通过“宿主名_app.json”设置自定义tabbar功能；<p>**·**新增swan.openCommunityEditor（打开原生全屏内容发布器）、swan.closeCommunityEditor（关闭原生全屏内容发布器）；<p>**·**新增[插件开发](http://smartprogram.baidu.com/docs/develop/plugins/survey/)功能;<p>**·**新增小程序集中授权能力。|
 |2.4.5|2019.7.19|**Change**<p>**·**预览和发布的“上线基础库”改为“最低基础库”，并添加选择高版本基础库时的提示；<p>**·**编辑器将保存文件改为保存全部文件；<p>**·**编辑器的文件树更新为展开样式。<p>**BugFix**<p>**·**修复auto rename tag 处理多行标签的问题；<p>**·**修复非闭合标签导致编辑器卡死问题；<p>**·**修复request请求data传空字符串返回与真机不一致问题；<p>**·**修复工具刷新出现的样式丢失问题；<p>**·**修复live-player组件缺少bindnetstatus功能问题。|
 |2.4.3|2019.7.11|**New**<p>新增发布失败时，弹窗中添加去反馈入口提问题的引导。<p>**Change**<p>删除web化白屏检测功能。<p>**BugFix**<p>修复某些情况下编辑器卡死问题。|
 |2.4.2|2019.7.4|**BugFix**<p>修复修改 appId 后点击预览 appId 重置问题。|
@@ -123,7 +137,7 @@ sidebar: uplog_tool
 |版本号|更新内容|
 |----|----|
 |v1.7.3|**New**<p>**·** 支持API：chooseVideo/saveVideoToPhotosAlbum/getLocation/onAccelerometerChange/startAccelerometer/stopAccelerometer/onCompassChange/startCompass/stopCompass；<p>**·** 支持组件: web-view；<p>**·** 调试工具增加 Sensors 面板，用于模拟地址、加速度计和罗盘信息；<p>**·** 增加清除授权缓存功能。<p>**Change**<p>预览增加上传人及时间信息，增加错误信息提示。<p>**BugFix**<p>**·**  修复无 AppID 时无法登录成功的问题；<p>**·** 修复切后台时没有 onHide 事件的问题；<p>**·** 修复 picker 组件在重新编译后无法隐藏的bug；<p>**·**  修复 choseImage 返回文件路径错误的问题；<p>**·** 修复 getSwanId 的返回数据不正确问题。|
-|v1.7.2 |**New**<p>**·** 更新工具栏图标；<p>**·**  支持API：recommendSimilarProducts/recommendProducts/setScreenBrightness/getScreenBrightness/setKeepScreenOn/vibrateLong/vibrateShort；<p>**·** 支持组件： open-data；<p>**·** 调试工具增加 Storages 和 App data 面板；<p>**·** 模拟器内  useragent 增加 swan 标识；<p>**·** 增加清除缓存功能。<p>**Change**<p> request 请求增加 referer，格式 `https://smartapp.baidu.com/{appkey}/devtools/page-frame.html`。<p>**BugFix**<p>**·** 优化调试工具通信时序，修复 Swan 面板偶现的白屏问题；<p>**·** 修改模拟器背景色为白色，保持和百度App一致；<p>**·** 修复历史工程排序不正确问题；<p>**·** 修复 video 无法播放问题；<p>**·** 修复切换 tab 后，进入任意页面后退无法点击问题。|
+|v1.7.2 |**New**<p>**·** 更新工具栏图标；<p>**·**  支持API：recommendSimilarProducts/recommendProducts/setScreenBrightness/getScreenBrightness/setKeepScreenOn/vibrateLong/vibrateShort；<p>**·** 支持组件： open-data；<p>**·** 调试工具增加 Storages 和 App data 面板；<p>**·** 模拟器内  useragent 增加 swan 标识；<p>**·** 增加清除缓存功能。<p>**Change**<p> request 请求增加 referer，格式 `https://smartprogram.baidu.com/{appkey}/devtools/page-frame.html`。<p>**BugFix**<p>**·** 优化调试工具通信时序，修复 Swan 面板偶现的白屏问题；<p>**·** 修改模拟器背景色为白色，保持和百度App一致；<p>**·** 修复历史工程排序不正确问题；<p>**·** 修复 video 无法播放问题；<p>**·** 修复切换 tab 后，进入任意页面后退无法点击问题。|
 
 ### 1.6版本 
 
@@ -138,7 +152,25 @@ sidebar: uplog_tool
 |----|----|
 |v1.4.2 |**BugFix**<p>**·** 修复 input 组件的背景颜色和 placeholder 颜色问题；<p>**·** 修复 swan.request 回调函数的语法问题。|
 
+
 ## Beta版更新日志
+
+### 2.7 版本 
+|版本号|更新时间|更新内容|
+|--|--|
+|2.7.0|2019.8.15|**New**<p>工具关闭时增加未保存文件提示。<p>**Change**<p>**·**toolbar按钮去掉置灰态，增加鉴权引导；<p>**·**优化登录弹窗框，项目信息框样式；<p>**·**优化编辑器内存使用，提升工具与编辑器打开速度，减少工具内存占用；<p>**·**模拟器独立窗口样式优化。<p>**BugFix**<p>**·**修复自定义导航情况下iphoneX刘海儿偏移问题；<p>**·**修复swan.canvasToTempFilePath生成图片失败问题；<p>**·**修复视频全屏胶囊按钮依然存在问题。|
+
+### 2.6 版本 
+|版本号|更新时间|更新内容|
+|--|--|
+|2.6.0|2019.8.8|**New**<p>增加新机型 iphone XR && iphone XS MAX。<p>**Change**<p>**·**调试面板顺序固定为 Console、Network、Sources、Security、Appdata、Audits、Sensor、Storage、Swan Element；<p>**·**预览时自动运行体验评分。|
+
+
+### 2.5 版本 
+|版本号|更新时间|更新内容|
+|--|--|
+|2.5.1|2019.8.2|**BugFix**<p>修复Windows自定义安装路径问题。|
+|2.5.0|2019.8.1|**New**<p>**·**项目信息添加图片压缩开关；<p>**·**预览添加使用体验评分弹窗引导提示；<p>**·**Windows 支持自定义安装路径；<p>**·**工具栏增加云测试入口。<p>**Change**<p>**·**欢迎页启动页交互体验优化；<p>**·**编辑器改为只 watch 开发者打开的文件夹。<p>**BugFix**<p>删除 project.swan.json 中的基础库版本配置。|
 
 ### 2.4 版本 
 |版本号|更新时间|更新内容|
