@@ -3,7 +3,7 @@ title: DuXRFace
 layout: gamedoc
 topic: xr
 categoryName: api
-priority: 10-03
+priority: 10-07
 ---
 
 > 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持

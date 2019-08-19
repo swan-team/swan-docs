@@ -2735,7 +2735,7 @@
 
               -
                 link: /develop/api/open_community
-                text: 全屏内容发布器
+                text: 原生全屏内容发布器
                 name: open_community
                 sidebar:
                   -
@@ -3174,11 +3174,11 @@
                     text: Security panel
                     name: smartappdebug_tool_Security-panel
               -
-                link: /develop/debug/remoterelease
+                link: /develop/devtools/remoterelease
                 text: 真机调试
                 name: remoterelease
               -
-                link: /develop/debug/remotedebugging
+                link: /develop/devtools/remotedebugging
                 text: 远程调试
                 name: remotedebugging 
               -

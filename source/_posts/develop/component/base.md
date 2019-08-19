@@ -390,7 +390,7 @@ Page({
 
 **Bug & Tip**：
 
-* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
+* 单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
