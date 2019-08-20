@@ -18,7 +18,7 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
 	}
 });
@@ -74,7 +74,7 @@ ctx.draw();
 
 
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
-如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100, y： 200`为圆心处，开始画圆。
+如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
 
 ## swan.createCanvasContext
@@ -123,7 +123,7 @@ OBJECT this
 
 **示例**：
 
-<a href="swanide：//fragment/eea85b4841ebe6025de5ce03bfa495a71558353193641" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/eea85b4841ebe6025de5ce03bfa495a71558353193641" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -175,15 +175,15 @@ Page({
     },
     canvasGetImageData() {
         swan.canvasGetImageData({
-            canvasId： 'canvas',
-            x： 0,
-            y： 0,
-            width： 100,
-            height： 100,
+            canvasId: 'canvas',
+            x: 0,
+           y: 0,
+            width: 100,
+            height: 100,
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail： function (err) {
+            fail: function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -194,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -228,7 +228,7 @@ Page({
 
 **示例**：
 
-<a href="swanide：//fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -281,28 +281,28 @@ Page({
     },
     canvasPutImageData() {
         swan.canvasGetImageData({
-            canvasId： 'canvas1',
-            x： 0,
-            y： 0,
-            width： 200,
-            height： 200,
+            canvasId: 'canvas1',
+            x: 0,
+           y: 0,
+            width: 200,
+            height: 200,
             success(res) {
                 swan.canvasPutImageData({
-                    canvasId： 'canvas2',
-                    x： 0,
-                    y： 0,
-                    width： 200,
-                    height： 200,
-                    data： res.data,
+                    canvasId: 'canvas2',
+                    x: 0,
+                    y: 0,
+                    width: 200,
+                    height: 200,
+                    data: res.data,
                     success(res) {
                         console.log('canvasPutImageData success', res);
                     },
-                    fail： function (err) {
+                    fail: function (err) {
                         console.log('canvasPutImageData fail', err);
                     }
                 })
             },
-            fail： function (err) {
+            fail: function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -313,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -336,10 +336,10 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x	| Number | 否  |0| 画布 x 轴起点|
-|y	| Number | 否  | 0|画布 y 轴起点（|
-|width	| Number | 否  | -x|画布宽度 |
-|height	| Number | 否  |-y| 画布高度（）|
+|x	| Number | 否  |0| 指定的画布区域的左上角横坐标|
+|y	| Number | 否  | 0| 指定的画布区域的左上角纵坐标|
+|width	| Number | 否  | canvas宽度-x |指定的画布区域的宽度 |
+|height	| Number | 否  | canvas高度-y | 指定的画布区域的高度 |
 |destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
 |destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
 |canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
@@ -351,21 +351,51 @@ Page({
 
 **说明**：
 
-在 draw 回调里调用该方法才能保证图片导出成功。
+* 在 draw 回调里调用该方法才能保证图片导出成功。
+* 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。
+* 当 x 合法的前提下，若 x + width > canvas.width 时， width 会被置成 canvas.width - x，y 同理。
 
 **示例**：
 
+<a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+
+
+* 在 swan 文件中
+
+```html
+<canvas canvas-id="myCanvas" />
+<button class="btn" type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
+<image src="{{src}}"></image>
+```
 ```js
-swan.canvasToTempFilePath({
-    x： 100,
-    y： 200,
-    width： 50,
-    height： 50,
-    destWidth： 100,
-    destHeight： 100,
-    canvasId： 'myCanvas',
-    success： function(res) {
-        console.log(res.tempFilePath)
+Page({
+     data: {
+        src: ''
+    },
+    onReady: function () {
+        console.log('在工具2.7.0及以上版本正常使用');
+        const ctx = this.createCanvasContext('myCanvas');
+        ctx.setFillStyle('#ff0000');
+        ctx.arc(100, 50, 50, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.draw();
+    },
+    canvasToTempFilePath (){
+        const that = this;
+        swan.canvasToTempFilePath({
+            x: 0,
+            y: 0,
+            width: 300,
+            height: 225,
+            destWidth: 300,
+            destHeight: 225,
+            canvasId: 'myCanvas',
+            success: function(res){
+                that.setData("src", res.tempFilePath);
+            }
+        })
     }
 });
 ```
@@ -385,7 +415,7 @@ swan.canvasToTempFilePath({
 
 **示例**：
 
-<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -411,8 +441,8 @@ swan.canvasToTempFilePath({
 const canvas = require('./canvas.js');
 
 Page({
-    data： {
-        methods： []
+    data: {
+        methods: []
     },
     onReady() {
         this.canvasContext = swan.createCanvasContext('canvas');
@@ -431,7 +461,7 @@ Page({
     },
     toTempFilePath() {
         swan.canvasToTempFilePath({
-            canvasId： 'canvas',
+            canvasId: 'canvas',
             success(res) {
                 console.log('canvasToTempFilePath success', res);
             },
@@ -446,29 +476,29 @@ Page({
 
 ```css
 .wrap {
-    padding-top： 50rpx;
+    padding-top: 50rpx;
 }
 
 .canvas-element-wrapper {
-    display： block;
-    margin-bottom： 100rpx;
+    display: block;
+    margin-bottom: 100rpx;
 }
 .canvas-element {
-    width： 100%;
-    height： 500rpx;
-    background-color： #fff;
+    width: 100%;
+    height: 500rpx;
+    background-color: #fff;
 }
 .canvas-buttons {
-    padding： 30rpx 50rpx 10rpx;
-    width： 100%;
-    height： 360rpx;
-    box-sizing： border-box;
+    padding: 30rpx 50rpx 10rpx;
+    width: 100%;
+    height: 360rpx;
+    box-sizing: border-box;
 }
 .canvas-button {
-    float： left;
-    line-height： 2;
-    width： 300rpx;
-    margin： 15rpx 12rpx;
+    float: left;
+    line-height: 2;
+    width: 300rpx;
+    margin: 15rpx 12rpx;
 }
   
 ```
@@ -1512,7 +1542,7 @@ const ctx = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
     url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
-    success： function(res) {
+    success: function(res) {
         ctx.save()
         ctx.beginPath()
         ctx.arc(50, 50, 25, 0, 2*Math.PI)
@@ -1680,10 +1710,10 @@ ctx.draw();
 const ctx = swan.createCanvasContext('myCanvas');
 
 swan.chooseImage({
-    success： function(res){
+    success: function(res){
         ctx.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
         ctx.draw();
-    };
+    }
 });
 ```
 ![图片](../../../img/draw-image.png)

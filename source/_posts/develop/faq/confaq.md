@@ -21,7 +21,30 @@ A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swa
 > 图中 “2.0.6.js”版本为举例，开发时请参考[swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/)文档中的最新版本好进行填写。
 
 ![](../../../img/faq/webview.png)
+**完整的H5示例：**
 
+生成的h5站点地址放入小程序web-view的src即可。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>call phone</title>
+        <script  src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.6.js"></script>
+    </head>
+    <body>
+        <button onclick="callMobile()">clickMe</button>
+    </body>
+    <script type="text/javascript">
+        function callMobile() {
+            swan.makePhoneCall({
+                phoneNumber: '10086' 
+            });
+        }
+    </script>
+</html>
+```
 #### Q：cover-view可以使用border吗？ 
 
 A: cover-view 为原生组件，原生组件为系统提供的控件不支持单边设置；对于 cover-view 只支持基本的定位、布局、文本样式。不支持设置单边的 border、background-image、shadow、overflow: visible 等。
@@ -46,3 +69,4 @@ A: [参见swiper参数](https://smartprogram.baidu.com/docs/develop/component/vi
 #### Q：小程序使用 webview，分享出去的链接能直接是 webview 对应的 url 而不是小程序的 url 么？
 
 A：小程序页面在进行分享时，如果分享出去的是web view引入的H5 页面，只能是分享的小程序的页面路径，不能是原H5 的页面路径。
+

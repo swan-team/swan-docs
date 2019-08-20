@@ -27,7 +27,7 @@ sidebar: open
 
 **示例**
 
-<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e98cfa76e01e4b38ab712a7942c6b32b1565510599988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -102,13 +102,13 @@ sidebar: open
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/opendata.png">
+        <img src="../../../img/component/open-data.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
@@ -129,56 +129,28 @@ sidebar: open
 
 
 **示例**：
-<a href="swanide://fragment/ac090bcb0bfd8aca1b9d47c7c854c6271560838933592" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a72d09c94460f8960e5003020b7ba9fc1565510747924" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 
 ```xml
 <view>
-    <web-view s-if="src" src="{{src}}"></web-view>
-    <view class="tip">web-view是承载网页的容器</view>
-    <button type="primary" class="btn" bindtap="openWebViewInNewPage">新页面打开web-view</button>
-    <button type="primary" class="btn" bindtap="openWebViewCurrent">当前页打开web-view</button>
+    <web-view src="{{src}}"></web-view>
 </view>
+
 ```
 * 在 js 文件中：
 
 ```js
-const webviewUrl = 'https://smartprogram.baidu.com';
 Page({
     data: {
-        src: ''
+        src: 'https://smartprogram.baidu.com'
     },
-    onLoad(options) {
-        if (options.webview) {
-            this.setData('src', webviewUrl);
-        }
-    },
-    openWebViewCurrent() {
-        this.setData('src', webviewUrl);
-    },
-    openWebViewInNewPage() {
-        swan.navigateTo({
-            url: '/pages/webview/webview?webview=1'
-        });
+   //接收H5页传过来的参数
+    onShareAppMessage(options) {
+        console.log(options.webViewUrl);
     }
 });
-```
-* 在 css 文件中：
-
-```css
-.tip {
-    text-align: center;
-    padding: .3rem 0 .35rem 0;
-    font-size: .15rem;
-    color: #333;
-}
-
-.btn {
-    line-height: .44rem;
-    font-size: .18rem;
-    margin: 0 .23rem .15rem .23rem;
-}
 ```
 
 ### **相关接口1 **

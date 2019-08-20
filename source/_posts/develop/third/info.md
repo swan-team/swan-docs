@@ -7,6 +7,8 @@ sidebar: info
 
 ## 获取小程序全类目列表
 
+
+
 接口说明:
 ```
 GET https://openapi.baidu.com/rest/2.0/smartapp/app/category/list
@@ -67,9 +69,15 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/category/list
 |category_quali.list.must|int|资质项是否必须 1:必须 0:非必须|
 |category_quali.list.name|string|资质项名称|
 |category_quali.list.desc|string|资质项描述|
+
+
+### 相关内容导读
+
+获取小程序全类目列表：[服务类目](https://smartprogram.baidu.com/docs/operations/catagory/)
+
 ## 修改小程序类目
 
-现在只支持类目的覆盖修改，主体下类目资质已经审核通过的不会再次审核。资质图片需要使用<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>的返回值
+现在只支持类目的覆盖修改，主体下类目资质已经审核通过的不会再次审核，小程序类目上限为5个。资质图片需要使用<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>的返回值
 
 接口说明:
 ```
@@ -111,6 +119,18 @@ categorys示例：
 }
 ```
 
+**错误码说明**：
+
+|错误码 | 错误描述 | 
+|----- |-----|
+|50013| 暂时不支持小游戏，敬请期待！|
+|50060| 小程序类目上限为5个|
+|50061| 类目id不正确，请检查|
+|50062| categorys格式非法，请检查|
+|50063| 资质信息不正确，请检查|
+|47008| 图片来源非法|
+|47007| 修改服务分类超过限制次数|
+
 ## 修改小程序icon
 
 修改小程序icon会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/develop/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
@@ -132,6 +152,13 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
     "msg": "success"
 }
 ```
+**错误码说明**：
+
+|错误码 | 错误描述 | 
+|----- |-----|
+|47005|修改头像超过限制次数|
+|47008|图片来源非法|
+
 ## 修改小程序功能介绍
 
 修改小程序功能介绍会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/develop/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
@@ -146,6 +173,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifysignature
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
 |signature|	string|	是|	小程序的功能介绍（简介）|
+
 响应数据:
 ```json
 {
@@ -153,6 +181,12 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifysignature
     "msg": "success"
 }
 ```
+**错误码说明**：
+
+|错误码 | 错误描述 | 
+|----- |-----|
+|47006| 修改简介超过限制次数|
+
 ## 暂停服务
 
 暂停服务后，用户将不可以正常访问线上小程序版本小程序
@@ -166,6 +200,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/pause
 |参数名|	类型|	是否必须|	描述|
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
+
 响应数据:
 ```json
 {
@@ -173,6 +208,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/pause
     "msg": "success"
 }
 ```
+
 ## 开启服务
 
 开启服务，可将暂定服务的小程序恢复正常
@@ -186,6 +222,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/resume
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
+
 响应数据:
 ```json
 {
@@ -193,6 +230,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/resume
     "msg": "success"
 }
 ```
+
 ## 二维码
 
 支持自定义路径、图片大小
@@ -258,6 +296,13 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
 }
 ```
 
+**错误码说明**：
+
+|错误码 | 错误描述 | 
+|----- |-----|
+|47004|修改名称超过限制次数|
+|47008|图片来源非法|
+
 ## 设置最低基础库版本
 
 若用户使用的基础库版本低于设置的最低版本时，用户本地版本将不更新
@@ -287,6 +332,10 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion?access_to
 |错误码 | 错误描述 | 
 |----- |-----|
 |470021| 版本输入错误|
+
+### 相关内容导读
+
+设置最低基础版本库：[基础库](https://smartprogram.baidu.com/docs/develop/swan/client-lib/)
 
 ## 查询当前设置的最低基础库版本及各版本列表
 

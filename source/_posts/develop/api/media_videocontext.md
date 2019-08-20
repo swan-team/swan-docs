@@ -132,9 +132,11 @@ Page({
 
 **方法参数**：Object danmu
 
-## videoContext.requestFullScreen(Object)
+## videoContext.requestFullScreen 
  
-**解释**：按设置的视频全屏方向进入全屏 <font color="#4183c4">百度 APP 11.12 以上</font>。不指定视频全屏方向时则根据设备方向判断全屏方向。
+> 最低支持基础库版本 3.90.x 。
+
+**解释**：按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。
 
 **方法参数**：Object direction
 

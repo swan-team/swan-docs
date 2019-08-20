@@ -454,7 +454,7 @@ swan.chooseImage({
 
 |参数名 | 参数类型 |说明 | 
 |---|---|---|
-|log_id | string | 日志 ID| 
+|log_id | Number | 日志 ID| 
 |score | number | 与公安小图相似度可能性，用于验证生活照与公安小图是否为同一人，有正常分数时为 [0~100]，推荐阈值 80，超过即判断为同一人。| 
 
 
@@ -518,7 +518,7 @@ swan.ai.facePersonIdmatch({
 ```
 
 
-##  swan.ai.faceVerify
+<!-- ##  swan.ai.faceVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -775,7 +775,7 @@ swan.chooseImage({
     }
 ]
 }
-```
+``` -->
 
 
 ##  swan.ai.faceLivenessSessioncode
@@ -835,7 +835,7 @@ swan.ai.faceLivenessSessioncode({
 }
 ```
 
-## swan.ai.faceLivenessVerify
+<!-- ## swan.ai.faceLivenessVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -923,4 +923,4 @@ swan.ai.faceLivenessVerify({
  	"cached": 0,
  	"serverlogid": "2248375729"
 }
-```
+``` -->

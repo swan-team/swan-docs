@@ -6,6 +6,7 @@ categoryName: api
 priority: 07-01
 ---
 
+> 为规范小游戏中banner广告体验，1.11.0 以上 game-core 版本，启动后 5s 内不允许创建 banner 广告；banner 广告展现 15s后自动隐藏；banner 成功展现后，30s 内不允许再次展现 banner 广告。
 
 创建小游戏 banner 广告组件，createBannerAd 成功后会自动加载广告物料。
 

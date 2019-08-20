@@ -17,7 +17,7 @@
             sidebar:
               -
                 link: /introduction/enter_application
-                text:   登录注册
+                text: 登录注册
                 name: enter_application                   
               -
                 link: /introduction/register
@@ -38,21 +38,13 @@
                 name: authenticity
                 sidebar:
                   -
-                    link: /introduction/authenticity/#对公验证
-                    text: 对公验证
-                    name: authenticity_对公验证
+                    link: /introduction/authenticity/#验证
+                    text: 验证
+                    name: authenticity_验证
                   -
-                    link: /introduction/authenticity/#证照验证
-                    text: 证照验证
-                    name: authenticity_证照验证            
-                  -
-                    link: /introduction/authenticity/#法人人脸识别
-                    text: 法人人脸识别
-                    name: authenticity_法人人脸识别
-                  -
-                    link: /introduction/authenticity/#小程序优惠通道
-                    text: 小程序优惠通道
-                    name: authenticity_小程序优惠通道 
+                    link: /introduction/authenticity/#收费（小程序优惠通道）
+                    text: 收费（小程序优惠通道）
+                    name: authenticity_收费（小程序优惠通道）
         -    
             link: /introduction/register_consummate
             text: 创建小程序
@@ -150,8 +142,21 @@
 
               -
                 link: /introduction/auditing_info
-                text: 信息流素材审核规范
+                text: 信息流审核规范
                 name: auditing_info
+                sidebar:
+                  -
+                    link: /introduction/auditing_info/#信息流流量入驻规范
+                    text: 信息流流量入驻规范 
+                    name: auditing_info_信息流流量入驻规范
+                  -
+                    link: /introduction/auditing_info/#信息流素材审核规范
+                    text: 信息流素材审核规范
+                    name: auditing_info_信息流素材审核规范  
+                  -
+                    link: /introduction/auditing_info/#分垂类物料提交规范
+                    text: 分垂类物料提交规范
+                    name: auditing_info_分垂类物料提交规范                                              
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -184,15 +189,23 @@
                   -
                     link: /introduction/rank/#关联H5站点
                     text: 关联H5站点
-                    name: rank_关联H5站点                  
+                    name: rank_关联H5站点   
                   -
-                    link: /introduction/rank/#配置URL映射规则
-                    text: 配置URL映射规则
-                    name: rank_配置URL映射规则
+                    link: /introduction/rank/#数据提交如何选择  
+                    text: 数据提交如何选择  
+                    name: rank_数据提交如何选择                                   
                   -
-                    link: /introduction/rank/#提交sitemap
-                    text: 提交sitemap
-                    name: rank_提交sitemap  
+                    link: /introduction/rank/#配置URL适配规则
+                    text: 配置URL适配规则
+                    name: rank_配置URL适配规则
+                  -
+                    link: /introduction/rank/#提交Sitemap
+                    text: 提交Sitemap
+                    name: rank_提交Sitemap  
+                  -
+                    link: /introduction/rank/#小程序API提交
+                    text: 小程序API提交
+                    name: rank_小程序API提交                 
                   -
                     link: /introduction/rank/#robots协议介绍
                     text: robots协议介绍
@@ -239,7 +252,11 @@
               -
                 link: /introduction/adopen
                 text: 流量主开通指引
-                name: adopen             
+                name: adopen          
+              -
+                link: /introduction/adopen_feedback
+                text: 流量主接入FAQ
+                name: adopen_feedback                   
     -
       link: /introduction/pay
       text: 百度收银台支付开通
@@ -443,7 +460,7 @@
   nav:
 
     -
-      link: /develop/tutorial/codedir
+      link: /develop/tutorial/demo
       text: 快速入门
       name: tutorial
       sidebar:     
@@ -758,6 +775,10 @@
               text: 性能优化建议
               name: performance-tips
             -
+              link: /develop/framework/http
+              text: http请求失败说明
+              name: http              
+            -
               link: /develop/framework/whitescreen
               text: 白屏优化建议
               name: whitescreen      
@@ -784,16 +805,16 @@
             #   name: process_life                            
 
     -
-      link: /develop/component/componetlist
+      link: /develop/component 
       text: 组件
-      name: componetlist
+      name: componet 
       sidebar:
         -
             sidebar:
               -
-                link: /develop/component/componetlist
+                link: /develop/component/componet 
                 text: 组件列表
-                name: componetlist
+                name: componet 
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -1021,9 +1042,9 @@
                       name: ad_ad
                                       
     -
-      link: /develop/api/apilist
+      link: /develop/api/api 
       text: API
-      name: apilist
+      name: api 
       sidebar:
         -
             sidebar:
@@ -1297,18 +1318,18 @@
                     link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
                     text: swan.ai.facePersonIdmatch
                     name: ai_face_swan-ai-facePersonIdmatch                 
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceVerify
-                    text: swan.ai.faceVerify
-                    name: ai_face_swan-ai-faceVerify
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceVerify
+                  #   text: swan.ai.faceVerify
+                  #   name: ai_face_swan-ai-faceVerify
                   -
                     link: /develop/api/ai_face/#swan-ai-faceLivenessSessioncode
                     text: swan.ai.faceLivenessSessioncode
                     name: ai_face_swan-ai-faceLivenessSessioncode
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
-                    text: swan.ai.faceLivenessVerify
-                    name: ai_face_swan-ai-faceLivenessVerify
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
+                  #   text: swan.ai.faceLivenessVerify
+                  #   name: ai_face_swan-ai-faceLivenessVerify
               -
                 link: /develop/api/ai_word
                 text: 词法分析
@@ -1391,7 +1412,10 @@
                     -
                       link: /develop/api/media_recorder/#recorderManager-onStop
                       text: recorderManager.onStop
-                      name: media_recorder_recorderManager-onStop 
+                      name: media_recorder_recorderManager-onStop
+                - link: /develop/api/media_recorder/#swan-getAvailableAudioSources
+                  text: swan.getAvailableAudioSources
+                  name: media_recorder_swan-getAvailableAudioSources
             -
               link: /develop/api/media_backgroundaudiomanager
               text: 背景音频管理播放
@@ -2714,6 +2738,20 @@
                     name: open_payment_swan-requestPolymerPayment
 
               -
+                link: /develop/api/open_community
+                text: 原生全屏内容发布器
+                name: open_community
+                sidebar:
+                  -
+                    link: /develop/api/open_community/#swan-openCommunityEditor
+                    text: swan.openCommunityEditor
+                    name: open_community_swan-openCommunityEditor
+                  -
+                    link: /develop/api/open_community/#swan-closeCommunityEditor
+                    text: swan.closeCommunityEditor
+                    name: open_community_swan-closeCommunityEditor
+                    
+              -
                 link: /develop/api/open_chooseinvoicetitle
                 text: 获取发票抬头
                 name: open_chooseinvoicetitle
@@ -2734,11 +2772,7 @@
                   -
                     link: /develop/api/open_smartprogram/#swan-navigateBackSmartProgram
                     text: swan.navigateBackSmartProgram
-                    name: open_smartprogram_swan-navigateBackSmartProgram
-                  -
-                    link: /develop/api/open_smartprogram/#H5页面打开小程序
-                    text: H5页面打开小程序
-                    name: open_smartprogram_H5页面打开小程序                  
+                    name: open_smartprogram_swan-navigateBackSmartProgram                
 
               -
                 link: /develop/api/pageinfo
@@ -2851,9 +2885,9 @@
                     text: swan.getSystemRiskInfo
                     name: open_userinfo_swan-getSystemRiskInfo   
     -
-      link: /develop/serverapi/open_feed
+      link: /develop/serverapi 
       text: 服务端 API
-      name: open_feed
+      name: serverapi
       sidebar:
         - 
           sidebar:             
@@ -2967,12 +3001,29 @@
                 name: power_exp     
               -
                 link: /develop/serverapi/open_risk_power/#detectrisk
-                text: 风控检测说明
-                name: open_risk_power                           
+                text: 风控服务
+                name: open_risk_power     
+                sidebar:
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用场景
+                    text: 使用场景
+                    name: open_risk_power_使用场景  
+                  -
+                    link: /develop/serverapi/open_risk_power/#功能介绍
+                    text: 功能介绍
+                    name: open_risk_power_功能介绍 
+                  -
+                    link: /develop/serverapi/open_risk_power/#使用说明
+                    text: 使用说明
+                    name: open_risk_power_使用说明                                                          
+                  -
+                    link: /develop/serverapi/open_risk_power/#detectrisk
+                    text: detectrisk
+                    name: open_risk_power_detectrisk                       
     -
-      link: /develop/devtools/page
+      link: /develop/devtools 
       text: 工具
-      name: page
+      name: devtools
       sidebar:       
         -
             sidebar:
@@ -3127,11 +3178,11 @@
                     text: Security panel
                     name: smartappdebug_tool_Security-panel
               -
-                link: /develop/debug/remoterelease
+                link: /develop/devtools/remoterelease
                 text: 真机调试
                 name: remoterelease
               -
-                link: /develop/debug/remotedebugging
+                link: /develop/devtools/remotedebugging
                 text: 远程调试
                 name: remotedebugging 
               -
@@ -3198,12 +3249,37 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
-
+    # -
+    #       text: 插件
+    #       name: plugins
+    #       sidebar:
+    #         -
+    #           sidebar:
+    #             -
+    #               link: /develop/plugins/survey
+    #               text: 插件概述
+    #               name: survey
+    #             -
+    #               link: /develop/plugins/plugins_develop
+    #               text: 开发插件
+    #               name: plugins_develop
+    #             -
+    #               link: /develop/plugins/use
+    #               text: 使用插件
+    #               name: use
+    #             -
+    #               link: /develop/plugins/limit_api
+    #               text: 插件中api的限制
+    #               name: limit_api
+    #             -
+    #               link: /develop/plugins/limit_components
+    #               text: 插件中组件的限制
+    #               name: limit_components
     
     -
-      link: /develop/third/pro
+      link: /develop/third 
       text: 第三方接入
-      name: pro
+      name: third
       sidebar:
         -
           sidebar:
@@ -3298,9 +3374,9 @@
               text: 更新日志
               name: log
     -
-      link: /develop/function/navigation
+      link: /develop/function 
       text: 功能开发
-      name: navigation
+      name: function 
       sidebar:
         -
           sidebar:              
@@ -3356,8 +3432,7 @@
             link: /develop/function/tune_up
             text: 百度收银台接口
             name: tune_up
-            sidebar: 
-                   
+            sidebar:                    
               -
                 link: /develop/function/tune_up/#调起百度收银台
                 text: 调起百度收银台
@@ -3393,9 +3468,9 @@
             name: error_code             
       
     -
-      link: /develop/swan/client-lib
+      link: /develop/swan 
       text: 基础库版本信息
-      name: client-lib
+      name: swan
       sidebar:
         -
           sidebar:
@@ -3418,11 +3493,33 @@
             -
               link: /develop/swan/compatibility
               text: 兼容性说明
-              name: compatibility 
+              name: compatibility
+              sidebar:
+              -
+                link: /develop/swan/compatibility/#版本号比较
+                text: 版本号比较
+                name: concept_版本号比较
+              -
+                link: /develop/swan/compatibility/#API存在判断
+                text: API存在判断
+                name: concept_API存在判断
+              -
+                link: /develop/swan/compatibility/#canIUse
+                text: canIUse
+                name: concept_canIUse
+              -
+                link: /develop/swan/compatibility/#Android-与-iOS-差异
+                text: Android 与 iOS 差异
+                name: concept_Android-与-iOS-差异
+              -
+                link: /develop/swan/compatibility/#基础库最低版本设置
+                text: 基础库最低版本设置
+                name: concept_基础库最低版本设置
+
     -
-      link: /develop/faq/frequently
+      link: /develop/faq
       text: FAQ
-      name: frequently
+      name: faq
       sidebar:
         -
           sidebar:            

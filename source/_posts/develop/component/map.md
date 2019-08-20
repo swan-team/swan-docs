@@ -146,25 +146,34 @@ sidebar: map
 
 
 **示例**：
-<a href="swanide://fragment/8d637f6a9f61064eeee857a2bb94f6fd1559047949918" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/fd809ae921113fe3b5a684cd8c69541d1565587461294" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
 * 在 swan 文件中
 
 ```xml
-<!-- map.swan -->
-<map id="myMap"
-     style="width: 100%"
-     scale="{{scale}}"
-     longitude="{{longitude}}"
-     latitude="{{latitude}}"
-     markers="{{markers}}"
-     position="{{position}}"
-     showLocation="{{showLocation}}"
-     polyline="{{polyline}}"
-     controls="{{controls}}"
-     circles="{{circles}}"
-     bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated"></map>
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        scale="{{scale}}"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        polygons="{{drawPolygon ? polygons : []}}"
+        circles="{{circles}}"
+        controls="{{controls}}"
+        show-location="{{show-location}}"
+        include-points="{{include-points}}"
+        enable-3D="{{enable3d}}"
+        show-compass="{{showCompass}}"
+        enable-overlooking="{{enableOverlooking}}"
+        enable-zoom="{{enableZoom}}"
+        enable-scroll="{{enableScroll}}"
+        enable-rotate="{{enableRotate}}"
+        bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated">
+    </map>
+</view>
 ```
 
 * 在 js 文件中
@@ -175,6 +184,18 @@ Page({
         scale: 16,
         latitude: '40.048828',
         longitude: '116.280412',
+        polyline:[],
+        circles:[],
+        enable3d: false,
+        showCompass: false,
+        showLocation: true,
+        enableOverlooking: false,
+        enableZoom: true,
+        enableScroll: true,
+        enableRotate: false,
+        drawPolygon: false,
+        enableSatellite: false,
+        enableTraffic: false,
         markers: [{
             markerId: '1',
             latitude: '40.052751',
@@ -196,7 +217,6 @@ Page({
                 content: '西山壹号院'
             }
         }],
-        showLocation: '1',
         polyline: [{
             points: [{
                 longitude: 116.278796,
@@ -233,6 +253,56 @@ Page({
         console.log('map ready');
         this.mapContext = swan.createMapContext('myMap');
     },
+    toggle3d() {
+        this.setData({
+            enable3d: !this.data.enable3d
+        })
+    },
+    toggleShowCompass() {
+        this.setData({
+            showCompass: !this.data.showCompass
+        })
+    },
+    toggleRotate() {
+        this.setData({
+          enableRotate: !this.data.enableRotate
+        })
+    },
+    togglePolygon() {
+        this.setData({
+          drawPolygon: !this.data.drawPolygon
+        })
+      },
+      toggleSatellite() {
+        this.setData({
+          enableSatellite: !this.data.enableSatellite
+        })
+      },
+      toggleTraffic() {
+        this.setData({
+          enableTraffic: !this.data.enableTraffic
+        })
+      },
+    demoCircle() {
+        this.setData({
+            scale: 16,
+            longitude,
+            latitude,
+            circles: [{
+            latitude: '40.048828',
+            longitude: '116.280412',
+            color: '#BB76FF88',
+            fillColor: '#BB76FF33',
+            radius: 100,
+            strokeWidth:3,
+            }]
+        });
+    },
+    toggleOverlooking() {
+        this.setData({
+          enableOverlooking: !this.data.enableOverlooking
+        })
+    },
     onMarkertap(e) {
         console.log('onMarkertap callback:');
         console.log(e);
@@ -257,8 +327,7 @@ Page({
         console.log('onUpdated callback::');
         console.log(e);
     }
-}）
-
+});
 ```
 
 
