@@ -310,7 +310,7 @@ Page({
 
 **示例**
 
-<a href="swanide://fragment/0ba593e011e3129511a30bd8fa74be271563434270938" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1bc40bb78b92e16dc825782a0c53111c1566271413468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -324,7 +324,7 @@ Page({
             </scroll-view>
             <button type="primary" bind:tap="renderHtml">渲染HTML</button>
             <block s-if="{{renderedByHtml}}">
-                <rich-text nodes="{{htmlSnip}}"></rich-text>
+                <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
@@ -336,7 +336,7 @@ Page({
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
             <block s-if="{{renderedByNode}}">
-                <rich-text nodes="{{nodes}}"></rich-text>
+                <rich-text nodes="{{nodes}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
