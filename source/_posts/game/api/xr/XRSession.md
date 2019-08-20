@@ -17,6 +17,7 @@ draft: true
 + 锚点创建
 + 环境光强度估计
 
+<!--
 ### getCameraVideo()
 
 使用方法参考 [DuXRSessionFaceMode#getCameraVideo](/game/api/xr/DuXRSessionFaceMode/#getCameraVideo)
@@ -29,6 +30,7 @@ draft: true
 |height|number|相机高度，一般为 1280|
 |videoWidth|number|同 width|
 |videoHeight|number|同 height|
+-->
 
 ### getFrame()
 

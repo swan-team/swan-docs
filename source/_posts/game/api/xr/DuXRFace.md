@@ -23,7 +23,7 @@ const face = frame.getUpdatedTrackableFaces()[0];
 if (face) {
     // 将姿态矩阵应用到模型变换中
     model.matrixAutoUpdate = false;
-    model.matrix.fromArray(face.headPoseMatrix);
+    model.matrix.fromArray(face.centerPoseMatrix);
     model.matrixWorldNeedsUpdate = true;
 }
 ```

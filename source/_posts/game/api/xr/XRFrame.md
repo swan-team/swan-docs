@@ -22,7 +22,7 @@ function update() {
     const viewMatrix = frame.getViewMatrix();
     const projectionMatrix = frame.getProjectionMatrix();
     // 获取点云数据
-    const pointCloud = frame.getPoinCloud();
+    const pointCloud = frame.getPointCloud();
     // 获取当前帧的环境光强度
     const lightEstimate = frame.getLightEstimate();
 }
@@ -92,28 +92,20 @@ function update() {
 
 |参数|类型|描述|
 |-|-|-|
-|points|Float32Array|包含点云中所有点(x, y, z)坐标和置信度数据的数组|
+|points|Float32Array|包含点云中所有点(x, y, z)坐标的数组|
 
 **使用示例：**
 
 ```js
 // 使用 THREE.js 的点云
 var points = new THREE.Points(new THREE.BufferGeometry(), new THREE.PointsMaterial({ color: 0x888888 }));
-points.geometry.addAttribute('position', new THREE.BufferAttribute([], 3));
+points.geometry.addAttribute('position', new THREE.Float32BufferAttribute([], 3));
 
 function update() {
     let pointCloud = frame.getPointCloud();
-    // 点云数量
-    let pointNumber = pointCloud.points.length / 4;
-    // 提取出数据中的 x,y,z 坐标，忽略置信度
-    let xyzArr = new Float32Array(pointNumber * 3);
-    for (let i = 0; i < pointNumber; i++) {
-        for (let k = 0; k < 3; k++) {
-            xyzArr[i * 3 + k] = pointCloud.points[i * 4 + k];
-        }
-    }
     // 给 THREE.js 使用
-    points.geometry.attributes.position.array = xyzArr;
+    points.geometry.attributes.position.setArray(new Float32Array(pointCloud.points));
+    points.geometry.attributes.position.needsUpdate = true;
 }
 ```
 
