@@ -286,31 +286,32 @@ Page({
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
 |src|String|  | 是 |视频的资源地址|
-|initial-time|Number|  | 否 |指定视频初始播放位置|
-|duration|Number|  | 否 |指定视频时长|
+|initial-time|Number|  |否|指定视频初始播放位置|
+|duration|Number|  |否|指定视频时长|
 |controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|否|是否自动播放|
 |loop|Boolean|false|否|是否循环播放|
 |muted|Boolean|false|否|是否静音播放|
-|objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
+|objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain：包含，fill：填充，cover：覆盖|
 |poster|String|  |否|视频封面的图片网络资源地址|
-|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
-|direction|Number|	|否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
-|show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
-|show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
-|enable-progress-gesture|	Boolean	|true|否|	是否开启使用手势控制进度|
-|danmu-list|	` Array.<object> `|	 	|否|弹幕列表|
-|danmu-btn|	Boolean|	false|否|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
-|enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
-|show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
-|show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
-|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
-|bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
-|bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
+|page-gesture|Boolean|false|否|在非全屏模式下，是否开启使用手势调节亮度与音量|
+|direction|Number|  |否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
+|show-progress|Boolean|true|否|是否显示播放进度，若不设置，宽度大于240时才会显示|
+|show-fullscreen-btn|Boolean|true|否|是否显示全屏按钮|
+|enable-progress-gesture|Boolean|true|否|是否开启使用手势控制进度|
+|danmu-list|` Array.<object> `|	 |否|弹幕列表|
+|danmu-btn|Boolean|false|否|是否显示弹幕按钮，只在初始化时有效，不能动态变更|
+|enable-danmu|Boolean|false|否|是否展示弹幕，只在初始化时有效，不能动态变更|
+|show-play-btn|Boolean|true|否|是否显示视频底部控制栏的播放按钮|
+|show-center-play-btn|Boolean|true|否|是否显示视频中间的播放按钮|
+|show-no-wifi-tip|Boolean|true|否|非wifi网络环境下是否显示继续播放浮层 <font color="#4183c4">百度 APP 11.13 以上</font>|
+|bindplay|EventHandle|  |否|开始播放时触发 play 事件|
+|bindpause|EventHandle|  |否|暂停播放时触发 pause 事件|
+|bindended|EventHandle|  |否|播放完时触发 ended 事件|
 |bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle|  |否|当视频进入和退出全屏是触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
-|bindwaiting|	EventHandle| |否|		视频出现缓冲时触发|
-|binderror|	EventHandle	| | 否 |视频播放出错时触发|
+|bindfullscreenchange|EventHandle|  |否|视频进入和退出全屏时触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindwaiting|EventHandle|  |否|视频出现缓冲时触发|
+|binderror|EventHandle|  |否|视频播放出错时触发|
 
 **objectFit 有效值**:
 
@@ -330,41 +331,67 @@ Page({
 
 **主流格式支持**：
 
-|格式|	Android|	IOS|
+| 格式 | Android | IOS |
 |--|--|--|
-|mp4|	是	|是|
-|mov|	是	|是|
-|m4v|	是	|是|
-|3gp|	是	|是|
-|avi|	是	|是|
-|m3u8|	是	|是|
-|webm|	是|	否|
-|flv	|	是	|是|
-|mkv|	是	|是|
-|rmvb|是	|是|
-|rm|	是	|是|
-|ogg|	是	|是|
+| mp4 | 是 | 是 |
+| mov | 是 | 是 |
+| m4v |	是 | 是 |
+| 3gp |	是 | 是 |
+| avi |	是 | 是 |
+| m3u8 | 是 | 是 |
+| webm | 是 | 否 |
+| flv | 是 | 是 |
+| mkv |	是 | 是 |
+| rmvb | 是 | 是 |
+| rm | 是 | 是 |
+| ogg | 是 | 是 |
 
 **主流编码格式支持**：
 
-|格式|	Android|	IOS|
+| 格式 | Android | IOS |
 |--|--|--|
-|H.263	|是|	是|
-|H.264	|是|是|
-|HEVC	|是|	是|
-|MPEG-4	|是|	否|
-|VP8|	是	|否|
-|VP9|	是	|否|
+| H.263 | 是 | 是 |
+| H.264	| 是 | 是 |
+| HEVC | 是 | 是 |
+| MPEG-4 | 是 |	否 |
+| VP8 | 是 | 否 |
+| VP9 | 是 | 否 |
 
 **示例**：
-<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/480d0ff9dd2f5392539f0ac601f0b8e21566368394489" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
     <view class="video-wrap">
-        <video id="myde" style="width: 100%;" src="{{src}}" controls bindplay="play" bindpause="pause" bindfullscreenchange="fullscreen" bindended="ended" autoplay="{{autoplay}}"></video>
+        <video 
+            id="myde"
+            style="width: 100%;"
+            src="{{src}}"
+            initial-time="{{initialTime}}"
+            controls="{{controls}}"
+            autoplay="{{autoplay}}"
+            loop="{{loop}}"
+            muted="{{muted}}"
+            objectFit="{{objectFit}}"
+            page-gesture="{{pageGesture}}"
+            direction="{{direction}}"
+            show-progress="{{showProgress}}"
+            show-fullscreen-btn="{{showFullscreenBtn}}"
+            enable-progress-gesture="{{enableProgressGesture}}"
+            danmu-btn="{{danmuBtn}}"
+            enable-danmu="{{enableDanmu}}"
+            show-play-btn="{{showPlayBtn}}"
+            show-center-play-btn="{{showCenterPlayBtn}}"
+            show-no-wifi-tip="{{showNoWifiTip}}"
+            bindplay="play"
+            bindpause="pause"
+            bindended="ended"
+            bindtimeupdate="timeupdate"
+            bindfullscreenchange="fullscreen"
+            bindwaiting="waiting"
+            binderror="error"></video>
     </view>
     <button class="btn" bindtap="next" type="primary">切换视频地址</button>
 </view>
@@ -378,34 +405,58 @@ Page({
         current: 0,
         srcList: ['https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4', 'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'],
         src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
-        loop: false,
-        autoplay: false
+        initialTime: 0,  // 指定视频初始播放位置
+        controls: true,  // 是否显示默认播放控件（播放/暂停按钮、播放进度、时间）
+        autoplay: false,  // 是否自动播放
+        loop: false,  // 是否循环播放
+        muted: false,  // 是否静音播放
+        objectFit: 'contain', // 当视频与容器大小不一致时，视频的表现形式。contain：包含，fill：填充，cover：覆盖
+        pageGesture: true,  // 在非全屏模式下，是否开启使用手势调节亮度与音量
+        direction: 0,  // 指定视频全屏方向，0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 
+        showProgress: true,  // 是否显示进度条
+        showFullscreenBtn: true, // 是否显示全屏按钮
+        enableProgressGesture: true,  // 是否开启使用手势控制进度
+        danmuList: [],  // 弹幕列表
+        danmuBtn: true,  // 是否显示弹幕按钮，只在初始化时有效，不能动态变更
+        enableDanmu: true,  // 是否展示弹幕，只在初始化时有效，不能动态变更
+        showPlayBtn: true,  // 是否显示视频底部控制栏的播放按钮
+        showCenterPlayBtn: true,  // 是否显示视频中间的播放按钮
+        showNoWifiTip: false // 非wifi网络环境下是否显示继续播放浮层
     },
     play: function (e) {
-        console.log('play!');
+        // 开始播放时触发
+        console.log('play');
     },
     pause: function (e) {
+        // 暂停播放时触发
         console.log('pause');
     },
-    fullscreen: function (e) {
-        console.log('fullscreenchange!! 参数是' + JSON.stringify(e));
-    },
     ended: function (e) {
+        // 播放完时触发
         console.log('ended');
         this.next();
+    },
+    timeupdate: function(e) {
+        // 播放进度变化时触发
+        // e.detail = {currentTime, duration} 
+    },
+    fullscreen: function (e) {
+        // 视频进入和退出全屏时触发
+        console.log('fullscreenchange 参数是: ' + JSON.stringify(e));
+    },
+    waiting: function(e) {
+        // 视频出现缓冲时触发
+        console.log('waiting');
+    },
+    error: function(e) {
+        // 视频播放出错时触发
+        console.log('error');
     },
     next: function (e) {
         let list = this.getData('srcList');
         let current = (this.getData('current') + 1) % list.length;
         this.setData('src', list[current]);
         this.setData('current', current);
-    },
-    setloop: function (e) {
-        this.setData('loop', !this.getData('loop'));
-    },
-    setautoplay: function (e) {
-        let autoplay = this.getData('autoplay');
-        this.setData('autoplay', !autoplay);
     }
 });
 ```
