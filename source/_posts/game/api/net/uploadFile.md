@@ -110,7 +110,7 @@ UploadTask.onProgressUpdate(callback)
 **示例：**
 
 ```js
-const uploadUrl = 'https://smartapp.baidu.com/xxx'; // 仅为示例，并非真实的接口地址
+const uploadUrl = 'https://smartprogram.baidu.com/xxx'; // 仅为示例，并非真实的接口地址
 const downloadUrl = 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf';
 swan.downloadFile({
     url: downloadUrl,

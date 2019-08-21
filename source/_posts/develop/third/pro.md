@@ -136,7 +136,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 ### 4、引导小程序管理员对第三方平台进行授权
 
-将用户浏览器重定向的如下授权页面，生成授权二维码。
+将用户浏览器从第三方平台授权发起页地址跳转到的如下授权页面，生成授权二维码。
 > 注意：在授权前需要在第三方平台-设置-修改授权发起页域名处设置域名，否则提示发起页域名错误
 
 页面地址:

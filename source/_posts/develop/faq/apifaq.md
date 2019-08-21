@@ -101,5 +101,76 @@ A：[已知情况](https://github.com/baidu/san/commit/b4b044cfa27782e5249952788
 attr1="{{''}}"
 ```
 
+#### Q：富文本框里的<img> 图片，如何使用 previewImage这个api？
 
+A：使用方法如下：
+1. 如果整个页面都是rich-text，那么可以用一个[web-view](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/)组件加载h5，在h5中自己实现一个类似rich-text组件的功能（把 js tree/ dom片段渲染成最终 html），预览图片可以用h5功能来做，或者百度的端能力
+。
+2. 如果小程序页面中部分区域是rich-text，想要实现rich-text中预览图片不行，因为rich-text中会屏蔽所有的事件。
 
+#### Q：如何判断浏览器类型动态加载 jssdk？
+
+A：可以使用  下面 来判断
+```
+var uaStr = 'baiduboxapp'
+var userAgent = navigator.userAgent.toLowerCase();
+var str = userAgent.indexOf(uaStr)
+console.log(uaStr)
+alert(userAgent.substr(str,uaStr.length))
+alert(userAgent)
+```
+
+#### Q：百度小程序有直接把图片转为base64的吗？类似微信wx.getFileSystemManager().readFileSync(tempFilePaths[0], 'base64')
+
+A：目前还没有支持转化的api，可以先让在后台生成base64后，传递到前端进行使用。 
+
+#### Q：我是在手机百度内打开的小程序，然后内嵌的H5页面 。怎么跳回原生的小程序页面呢
+
+A：开发者您好，为您准备了webview的3个功能，方便您使用，请看代码：
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>H5打电话/H5跳转小程序/H5向小程序通信</title>
+<script  src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.11.js"></script>
+</head>
+<body>
+    <button onclick="callMobile()">clickMe</button>
+    <div onclick="toWebPage()">跳回小程序web页面</div>
+</body>
+
+<script type="text/javascript">
+
+// 打电话功能
+
+function callMobile() {
+    swan.webView.getEnv(function(res){
+        console.log(res);
+        if(res.smartprogram){
+            swan.makePhoneCall({
+            phoneNumber: '10086'
+        });
+        }else {
+            window.location.href = "tel:10086";
+                }
+        })
+    }
+
+//跳回小程序页面
+
+function toWebPage() {
+    swan.webView.navigateTo({url: '/index/web/web?a=1'});
+    }
+// 通信（分享/后退/销毁场景下触发）
+    swan.webView.postMessage({ data: {foo: 'bar'} })
+</script>
+</html>
+
+```
+#### Q：有没有相应的API,可以根据具体地址获取经纬度？
+
+A：两种方式可获取到:
+1. 通过api：[swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)可获取到选择当前位置的经纬度。
+2. 进入百度搜索“拾取坐标”，打开页面后输入具体地址，然后点击百度一下，右方即可出现对应的坐标请查看[详情](http://api.map.baidu.com/lbsapi/getpoint/index.html)。

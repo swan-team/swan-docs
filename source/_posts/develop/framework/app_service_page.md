@@ -163,13 +163,13 @@ Page({
 
 
 ### onReachBottom
-**解释**：在`Page`中定义 onPullDownRefresh 处理函数，监听该页面用户上拉触底事件。
+**解释**：在`Page`中定义 onReachBottom 处理函数，监听该页面用户上拉触底事件。
 **说明**：
 * 可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBottomDistance 。
 * 在触发距离内滑动期间，该事件只会被触发一次。
 
 ### onPageScroll
-**解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听用户滑动页面事件。
+**解释**：在 Page 中定义 onPageScroll 处理函数，监听用户滑动页面事件。
 **方法参数**：Object object
 **Object参数说明**：
 
