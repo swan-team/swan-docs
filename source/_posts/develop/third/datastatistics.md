@@ -5,7 +5,8 @@ nav: third
 sidebar: datastatistics
 ---
 
-小程序纬度相关的统计数据，主要提供以下几个方面的接口：
+提供给第三方平台调用的小程序纬度相关的统计数据，需要第三方平台支持**数据权限（唯一性权限）**，同时需要小程序授予该权限给予第三方平台，使用小程序授权给第三方平台生成的token进行调用。
+主要提供以下几个方面的接口：
 
 1. 用户趋势
 2. 活跃用户
@@ -1240,7 +1241,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/data/getdata?access_token=ACCESS
 
 | 参数名        | 类型   | 是否必须 | 描述                                                         |
 | ------------- | ------ | -------- | ------------------------------------------------------------ |
-| access\_token | string | 是       | 授权小程序的接口调用凭据                                     |
+| access\_token | string | 是       | 第三方平台的接口调用凭据                                     |
 | scene         | int    | 是       | 小程序来源ID (场景值)                                        |
 | metrics       | string | 是       | 指标以逗号分隔，全量指标如下：tp\_day\_app\_count,tp\_week\_app\_count,tp\_month\_app\_count,tp\_day\_user\_count,tp\_week\_user\_count,tp\_month\_user\_count,tp\_day\_session\_count,tp\_week\_session\_count,tp\_month\_session\_count,tp\_day\_page\_count,tp\_activity\_degree,tp\_session\_count\_per\_person,tp\_session\_count\_per\_day,tp\_day\_share\_count,tp\_day\_feedback\_count |
 | start\_date   | string | 是       | 起始时间戳,格式如 20190321                                   |

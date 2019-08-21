@@ -518,7 +518,7 @@ swan.ai.facePersonIdmatch({
 ```
 
 
-##  swan.ai.faceVerify
+<!-- ##  swan.ai.faceVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -775,7 +775,7 @@ swan.chooseImage({
     }
 ]
 }
-```
+``` -->
 
 
 ##  swan.ai.faceLivenessSessioncode
@@ -835,7 +835,7 @@ swan.ai.faceLivenessSessioncode({
 }
 ```
 
-## swan.ai.faceLivenessVerify
+<!-- ## swan.ai.faceLivenessVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -923,4 +923,4 @@ swan.ai.faceLivenessVerify({
  	"cached": 0,
  	"serverlogid": "2248375729"
 }
-```
+``` -->

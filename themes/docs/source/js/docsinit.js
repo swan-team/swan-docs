@@ -395,8 +395,15 @@
                         var hash = $(this).children('a')[0].hash;
                         sidebar.each(function (i) {
                             if (this.hash.replace('/', '') === hash) {
-                                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                                $(this).parent('li').addClass('m-doc-sidebar-selected');
+                                var parentHref = $(this)
+                                    .parents('.m-doc-h2-children')
+                                    .siblings('.m-doc-h2-list')
+                                    .attr('href')
+                                    .split('#')[0];
+                                if (parentHref === location.pathname) {
+                                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                                    $(this).parent('li').addClass('m-doc-sidebar-selected');
+                                }
                             }
                         });
                     }
