@@ -2625,6 +2625,10 @@
                     text: swan.login
                     name: open_log_swan-login
                   -
+                    link: /develop/api/open_log/#getunionid
+                    text: getunionid
+                    name: open_log_getunionid                   
+                  -
                     link: /develop/api/open_log/#Session-Key
                     text: Session Key
                     name: open_log_Session-Key
