@@ -678,7 +678,7 @@ swan.ai.facePersonIdmatch({
 
 **示例代码**
 
-<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/59f2a60d4c30204b22e0bd0ce33c684a1566464969177" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
