@@ -2884,6 +2884,12 @@
                     link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: open_userinfo_swan-getSystemRiskInfo   
+        -
+            sidebar:
+              -
+                link: /develop/api/errorcode
+                text: 错误码
+                name: errorcode                   
     -
       link: /develop/serverapi 
       text: 服务端 API
