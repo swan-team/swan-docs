@@ -437,19 +437,6 @@ Page({
 
 ```
 
-* 在 css 文件中
-
-
-```css
-.wrap {
-    font-size: .16rem;
-    padding: .3rem .15rem;
-}
-.progress {
-    margin-bottom: .35rem;
-    border-radius: 3px;
-}
-```
 
 
 ## animation-view
