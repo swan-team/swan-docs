@@ -71,6 +71,8 @@ sidebar: formlist
 **示例**：
 <a href="swanide://fragment/c5e9c02cad6b485032a87ee568c3fe4a1565507494356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <view class="mini-btn-content">
@@ -134,6 +136,8 @@ sidebar: formlist
     </view>
 </view>
 ```
+
+* 在 js 文件中
 
 ```js
 Page({
@@ -213,6 +217,9 @@ Page({
 
 示例：
 <a href="swanide://fragment/72d45eb3b93a72d92a553736ebf4b8941565507862768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <view class="title">默认样式</view>
@@ -232,6 +239,7 @@ Page({
     </view>
 </view>
 ```
+* 在 js 文件中
 
 ```javascript
 Page({
@@ -275,6 +283,8 @@ Page({
 **示例：**
 <a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
@@ -311,6 +321,7 @@ Page({
     </form>
 </view>
 ```
+* 在 js 文件中
 
 ```javascript
 Page({
@@ -491,6 +502,8 @@ Page({
 **示例**：
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
 ``` xml
 <view class="wrap">
     <view class="page-section">
@@ -635,6 +648,9 @@ Page({
 
 **示例**：
 <a href="swanide://fragment/4e627d1fb5e3167c46e736956cd1e8581565503520142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
 <view class="wrap">
     <view class="title">时间选择</view>
@@ -686,6 +702,7 @@ Page({
     </form>
 </view>
 ```
+* 在 js 文件中
 
 ```javascript
 Page({
@@ -1076,35 +1093,6 @@ Page({
         </view>
     </view>
 </view>
-```
-* 在 css 文件中
-```css
-.wrap {
-    font-size: .16rem;
-}
-.init-switch {
-    margin: 0 .05rem 0 .25rem;
-    vertical-align: middle;
-
-}
-.switch-text {
-    vertical-align: -.02rem;
-}
-.item-wrap {
-    background: #fff;
-}
-.item {
-    padding: .15rem 0;
-    border-bottom: 1px #f5f5f5 solid;
-    margin-left: .2rem;
-    position: relative;
-}
-.switch {
-    position: absolute;
-    top: 50%;
-    right: .2rem;
-    transform: translateY(-50%); 
-}
 ```
 **Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。

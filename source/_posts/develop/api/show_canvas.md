@@ -369,6 +369,9 @@ Page({
 <button class="btn" type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
 <image src="{{src}}"></image>
 ```
+
+* 在 js 文件中
+
 ```js
 Page({
      data: {

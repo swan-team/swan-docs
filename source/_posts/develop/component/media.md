@@ -637,6 +637,8 @@ Page({
 
 <a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
 ```html
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
 </ar-camera>

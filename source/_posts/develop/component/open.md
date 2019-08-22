@@ -53,51 +53,6 @@ sidebar: open
 </view>
 ```
 
-* 在 css 文件中
-
-```css
-.open-data {
-    width: 100%;
-    height: 100%;
-    font-size: .16rem;
-    padding-top: 100rpx;
-}
-.avatar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.avatar .avatar-img {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-}
-.section {
-    width: 100%;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0 .16rem;
-    margin-top: 50rpx;
-    background: #fff;
-}
-.sec {
-    width: 100%;
-    height: .5rem;
-    line-height: .5rem;
-    display: flex;
-    border-bottom: 1px solid #e5e5e5;
-    display: flex;
-}
-.sec:nth-of-type(4) {
-    border: none;
-}
-.sec .sec_left {
-    flex-basis: 160rpx;
-}
-.sec .sec_right {
-    flex: 1;
-```
-
 **图示**：
 
 <div class="m-doc-custom-examples">

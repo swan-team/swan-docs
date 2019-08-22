@@ -34,7 +34,7 @@ sidebar: ad
     **获取代码示例**：
 
     ```
-    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>;
+    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>
     ```
     **示例 1**:
 
@@ -59,7 +59,7 @@ sidebar: ad
 
     **获取信息流广告代码示例**：
     ```
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>;
+    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
     ```
 
 
@@ -68,7 +68,7 @@ sidebar: ad
     ```
     <view class="ad-container">
     <div style="background-color: #fff">
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>;
+    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
     </div>
     </view>
     .ad-container {
