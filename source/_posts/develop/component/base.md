@@ -201,6 +201,7 @@ Page({
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- | ---- |---- |
 | nodes | Array / String  | [] | 否 |节点列表 / HTML String|
+| selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴等场景。 <font color="#4183c4">百度 APP 11.10 以上</font>|
 
 ### nodes
 现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点** ，默认是元素节点，在富文本区域里显示的HTML节点。
@@ -278,7 +279,7 @@ Page({
 
 **示例**
 
-<a href="swanide://fragment/e9ad331b85bd358a215813e62dbfea601565503525233" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/746c4d81d51218ea977782622aa61d9a1566379382794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -292,7 +293,7 @@ Page({
             </scroll-view>
             <button type="primary" bind:tap="renderHtml">渲染HTML</button>
             <block s-if="{{renderedByHtml}}">
-                <rich-text nodes="{{htmlSnip}}"></rich-text>
+                <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
@@ -304,7 +305,7 @@ Page({
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
             <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem">
-                <rich-text nodes="{{nodes}}"></rich-text>
+                <rich-text nodes="{{nodes}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
