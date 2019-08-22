@@ -530,7 +530,7 @@ swan.ai.facePersonIdmatch({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data | Array| 是 |-| 图片信息 | 
+|data | Array| 是 |-| 图片信息, 可以上传同一个用户的1张，3张或者8张图片来进行活体判断，后端会选择每组照片中的最高分数作为整体分数 |
 |success | Function | 否 |-| 接口调用成功后的回调函数 | 
 |fail | Function | 否 |-| 接口调用失败的回调函数 | 
 |complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -682,7 +682,7 @@ swan.ai.facePersonIdmatch({
 
 ```js
 swan.chooseImage({
-    count: 2,
+    count: 3,
     success(res) {
         swan.ai.faceVerify({
             data: [
@@ -693,6 +693,11 @@ swan.chooseImage({
                 },
                 {
                     "image": res.tempFilePaths[1],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                },
+                {
+                    "image": res.tempFilePaths[2],
                     "image_type": "BASE64",
                     "face_field": "age,beauty,expression"
                 }
