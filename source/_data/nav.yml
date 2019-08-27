@@ -2754,6 +2754,20 @@
                     link: /develop/api/open_community/#swan-closeCommunityEditor
                     text: swan.closeCommunityEditor
                     name: open_community_swan-closeCommunityEditor
+
+              -
+                link: /develop/api/open_replyeditor
+                text: 原生半屏内容发布器
+                name: open_replyeditor
+                sidebar:
+                  -
+                    link: /develop/api/open_replyeditor/#swan-openReplyEditor
+                    text: swan.openReplyEditor
+                    name: open_replyeditor_swan-openReplyEditor
+                  -
+                    link: /develop/api/open_replyeditor/#swan-closeReplyEditor
+                    text: swan.closeReplyEditor
+                    name: open_replyeditor_swan-closeReplyEditor
                     
               -
                 link: /develop/api/open_chooseinvoicetitle

@@ -33,15 +33,7 @@ sidebar: customerability
 
 当用户给小程序（已授权客服权限）客服发消息时，百度的服务器会将消息的数据包（JSON或者XML格式）POST到第三方服务商的消息与事件接收URL。服务商收到客服消息后，需自行展示给客户的客服人员，并在客服回复消息后，调用接口将该消息异步回复给百度。
 
-### 在页面中使用客服消息
-
-可参考：[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)
-
-### 接收客服消息
-
-用户向小程序客服发送消息时，百度服务器将向第三方服务商的**消息与事件接收URL**推送消息，开发者可以依据自身业务逻辑进行响应。百度服务器在将用户的消息发给服务商服务器地址后，百度服务器在2秒内收不到响应会断掉连接。
-
-关于重试的消息排重，有 msgid 的消息推荐使用 msgid 排重。事件类型消息推荐使用 FromUserName + CreateTime 排重。
+### 第三方平台的客服功能
 
 在[客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)文档的介绍中，使用客服消息需要配置以下四个参数，第三方平台开通客服权限后，会使用原来的平台设置中的参数进行配置。
 
@@ -57,7 +49,32 @@ sidebar: customerability
 * EncodingAESKey:【第三方平台-设置-开发设置-授权后实现业务-消息加解密Key】
 * 消息加解密方式：JSON格式
 
-另外，为了证明使用的消息接受URL是有效的，服务器收到请求必须做出下述回复。
+另外，为了证明使用的消息接受URL是有效的，我们会向第三方平台设置的URL发送请求，服务器收到请求必须做出规定的回复。
+
+百度服务器将发送POST请求到填写的服务器地址URL上，POST请求携带参数如下表所示：
+
+| 参数      | 描述                                                         |
+| :-------- | :----------------------------------------------------------- |
+| signature | 百度加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数.nonce参数。 |
+| timestamp | 时间戳                                                       |
+| nonce     | 随机数                                                       |
+| echoStr   | 随机字符串                                                   |
+
+开发者通过检验 signature 对请求进行校验（下面有校验方式）。若确认此次 POST 请求来自百度服务器，请原样返回 echoStr 参数内容，则接入生效，成为开发者成功，
+
+**当进行全网发布或新添加权限包含客服能力权限时，同样会进行该URL的检测，要求返回与上所述一致**
+
+### 在页面中使用客服消息
+
+可参考：[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)
+
+### 接收客服消息
+
+用户向小程序客服发送消息时，百度服务器将向第三方服务商的**消息与事件接收URL**推送消息，开发者可以依据自身业务逻辑进行响应。百度服务器在将用户的消息发给服务商服务器地址后，百度服务器在2秒内收不到响应会断掉连接。
+
+关于重试的消息排重，有 msgid 的消息推荐使用 msgid 排重。事件类型消息推荐使用 FromUserName + CreateTime 排重。
+
+消息接受成功，要求服务器收到请求必须做出下述回复。详见下面说明：
 
 > 1. 直接回复success（推荐方式）
 > 2. 直接回复空串
@@ -122,6 +139,7 @@ sidebar: customerability
 
 本接口应在服务器端调用，用于发送客服消息给用户。
 具体接口可参考：[发送客服消息API](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%8F%91%E9%80%81%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A5%E5%8F%A3/)
+
 
 
 

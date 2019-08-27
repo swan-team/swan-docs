@@ -27,8 +27,8 @@ sidebar: open_community
 |cancelColor  |  HexColor  | 否 | #666666|取消按钮的文字颜色|
 |targetText  |  String  | 否 | -|设置发布范围文案，若配置发布范围模块，则必填|
 |emojiPath  |  String  | 否 | -|设置自定义表情配置路径|
-|success  |  Function  | 否 | -|发布成功的回调函数|
-|fail  |  Function  | 否 | -|发布失败的回调函数|
+|success  |  Function  | 否 | -|发布内容的回调函数|
+|fail  |  Function  | 否 | -|调起失败的回调函数|
 |complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
