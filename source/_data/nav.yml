@@ -3219,10 +3219,6 @@
                 text: 问题反馈
                 name: question
               -
-                link: /develop/devtools/plain
-                text: 白屏检测
-                name: plain
-              -
                 link: /develop/devtools/commandtool
                 text: 命令行工具
                 name: commandtool
@@ -3470,7 +3466,10 @@
                 link: /develop/function/tune_up/#通知退款状态
                 text: 通知退款状态
                 name: tune_up_通知退款状态 
-
+          -
+            link: /develop/function/payfaq
+            text: 支付常见问题
+            name: payfaq
           -
             link: /develop/function/error_code
             text: 错误码

@@ -297,6 +297,128 @@ access_token	|string|	是	|权限校验Token，获取方式见[开发者服务�
 type |int | 是 | 通过TYPE字段选择上传接口。0：周级提交，一周左右生效；1：天级提交，2~3天生效| 0
 url\_list |List<String> | 是 | 小程序path集合；天级提交配额根据提交活跃度和资源质量进行调节，具体以平台显示为准；周级提交配额每日上限为5W条。|["/pages/index1","/pages/index2"]
 
+#### 提交代码示例:
+```
+import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStream;
+    import java.io.InputStreamReader;
+    import java.io.UnsupportedEncodingException;
+    import java.util.ArrayList;
+    import java.util.HashMap;
+    import java.util.Iterator;
+    import java.util.List;
+    import java.util.Map;
+    import java.util.Set;
+    
+    import org.apache.commons.httpclient.HttpClient;
+    import org.apache.commons.httpclient.HttpStatus;
+    import org.apache.commons.httpclient.NameValuePair;
+    import org.apache.commons.httpclient.methods.PostMethod;
+    import org.apache.commons.httpclient.params.HttpMethodParams;
+    
+    public class Demo {
+    
+        public static String doPost() {
+    
+            String url = "https://openapi.baidu.com/rest/2.0/smartapp/access/submitsitemap/api";
+            Map<String, Object> paramMap = new HashMap<>();
+            // 获取输入流
+            InputStream is = null;
+            BufferedReader br = null;
+            String result = null;
+    
+            List<String> list = new ArrayList<>();
+            list.add("/pages/index/test");
+            list.add("/pages/index/test2?id=1");
+            list.add("/pages/index/test3/query?id=1&age=10");
+    
+            paramMap.put("url_list",list);
+            paramMap.put("type",0);
+            paramMap.put("access_token","dwhiuhv32noi3nco2innvpnsdv");
+            // 创建httpClient实例对象
+            HttpClient httpClient = new HttpClient();
+            // 设置httpClient连接主机服务器超时时间：15000毫秒
+            httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(15000);
+            // 创建post请求方法实例对象
+            PostMethod postMethod = new PostMethod(url);
+            // 设置post请求超时时间
+            postMethod.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, 60000);
+    
+            NameValuePair[] nvp = null;
+            // 判断参数map集合paramMap是否为空
+            if (null != paramMap && paramMap.size() > 0) {
+                // 创建键值参数对象数组，大小为参数的个数
+                nvp = new NameValuePair[paramMap.size()];
+                // 循环遍历参数集合map
+                Set<Map.Entry<String, Object>> entrySet = paramMap.entrySet();
+                // 获取迭代器
+                Iterator<Map.Entry<String, Object>> iterator = entrySet.iterator();
+    
+                int index = 0;
+                while (iterator.hasNext()) {
+                    Map.Entry<String, Object> mapEntry = iterator.next();
+                    // 从mapEntry中获取key和value创建键值对象存放到数组中
+                    try {
+                        nvp[index] = new NameValuePair(mapEntry.getKey(),
+                                new String(mapEntry.getValue().toString().getBytes("UTF-8"), "UTF-8"));
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+                    index++;
+                }
+            }
+            // 判断nvp数组是否为空
+            if (null != nvp && nvp.length > 0) {
+                // 将参数存放到requestBody对象中
+                postMethod.setRequestBody(nvp);
+            }
+            // 执行POST方法
+            try {
+                int statusCode = httpClient.executeMethod(postMethod);
+                // 判断是否成功
+                if (statusCode != HttpStatus.SC_OK) {
+                    System.err.println("Method faild: " + postMethod.getStatusLine());
+                }
+                // 获取远程返回的数据
+                is = postMethod.getResponseBodyAsStream();
+                // 封装输入流
+                br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+    
+                StringBuffer sbf = new StringBuffer();
+                String temp = null;
+                while ((temp = br.readLine()) != null) {
+                    sbf.append(temp).append("\r\n");
+                }
+    
+                result = sbf.toString();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                // 关闭资源
+                if (null != br) {
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (null != is) {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                // 释放连接
+                postMethod.releaseConnection();
+            }
+            return result;
+        }
+    
+    } 
+```
+
 #### 返回值示例:
 ```
 {
