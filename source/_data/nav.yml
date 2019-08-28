@@ -1119,6 +1119,7 @@
                   link: /develop/api/url_query/#swan-setURLQuery
                   text: swan.setURLQuery
                   name: url_query_swan-setURLQuery
+
         -
             link: /develop/api/net_rule
             text: 网络
@@ -2791,6 +2792,7 @@
                     link: /develop/api/open_replyeditor/#swan-closeReplyEditor
                     text: swan.closeReplyEditor
                     name: open_replyeditor_swan-closeReplyEditor
+
               -
                 link: /develop/api/open_chooseinvoicetitle
                 text: 获取发票抬头
@@ -3168,6 +3170,10 @@
                     link: /develop/devtools/smartappdebug_function/#自定义编译
                     text: 自定义编译
                     name: smartappdebug_function_自定义编译
+                  -
+                    link: /develop/devtools/smartappdebug_function/#自定义预处理
+                    text: 自定义预处理
+                    name: smartappdebug_function_自定义预处理
                   -
                     link: /develop/devtools/smartappdebug_function/#前后台切换
                     text: 前后台切换
