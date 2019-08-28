@@ -1093,7 +1093,24 @@
                 -
                   link: /develop/api/base_app_event/#swan-offAppHide
                   text: swan.offAppHide
-                  name: base_app_event_swan-offAppHide      
+                  name: base_app_event_swan-offAppHide
+            -
+              link: /develop/api/url_query
+              text: URL Query
+              name: url_query
+              sidebar:
+                -
+                  link: /develop/api/url_query/#onURLQueryChange
+                  text: onURLQueryChange
+                  name: url_query_onURLQueryChange
+                -
+                  link: /develop/api/url_query/#swan-getURLQuery
+                  text: swan.getURLQuery
+                  name: url_query_swan-getURLQuery
+                -
+                  link: /develop/api/url_query/#swan-setURLQuery
+                  text: swan.setURLQuery
+                  name: url_query_swan-setURLQuery 
      
         -
             link: /develop/api/net_rule
