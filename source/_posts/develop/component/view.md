@@ -55,62 +55,6 @@ sidebar: view
 </view>
 ```
 
-* 在 css 文件中
-
-```css
-.rowlike {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    height: 1.5rem;
-    line-height: 1.5rem;
-}
-
-.view-title {
-    display: block;
-    margin: .25rem .18rem .18rem;
-    color: #666;
-}
-
-.rowlike view {
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-
-.bottom-block {
-    padding-bottom: .6rem;
-}
-
-.collike {
-    margin: 0 auto;
-    flex-direction: column;
-    width: 2.4rem;
-}
-
-.collike view {
-    height: 1.2rem;
-    line-height: 1.2rem;
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
-.hover {
-    opacity: .2;
-}
-```
-
 **Bug & Tip**：
 
 1、 如果需要使用滚动视图，请使用 scroll-view。
@@ -680,15 +624,7 @@ Page({
     </cover-image>
 </map>
 ```
-* 在 css 文件中
 
-```css
-.cover-image {
-    position: relative;
-    width: 200px;
-    margin: 18% auto;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">

@@ -8,7 +8,7 @@ priority: 10-01
 
 > 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
 
-百度小游戏提供了 XR 系列接口用于开发 AR 游戏，目前该接口只支持人脸模式 `'du_face'` 的 AR 效果。之后百度小游戏会加入更多的 AR 模式用于开发效果更丰富的 AR 游戏。
+百度小游戏提供了 XR 系列接口用于开发 AR 游戏，目前该接口支持平面检测模式`'ar'`（基于 ARCore 和 ARKit），以及人脸模式 `'du_face'` 的 AR 效果。
 
 `swan.requestXRSession` 用于申请创建一个指定模式的 XR 会话，一个小游戏中同时只能存在一个 Session，如果要创建新的，必须要把已有的通过 `end` 方法关闭。
 
@@ -21,9 +21,9 @@ swan.requestXRSession(opts)
  |属性|类型|是否必填|描述|
 |-|-|-|-|
 |opts|Object|是|传入的对象参数|
-|opts.mode|string|是| XR 的模式，目前只支持传入 `'du_face'`，如果传入其它模式或者不传入则会创建失败 |
+|opts.mode|string|是| XR 的模式，支持传入 `'du_face'`，`'ar'`，如果传入其它模式或者不传入则会创建失败 |
 |opts.drawCameraBackground|boolean|否| 每一帧是否自动绘制相机的画面作为背景，默认为 `true`，即绘制，可以选择 `false` 不绘制通过 `getCameraVideo` 获取相机对象自己管理绘制。 |
-|opts.success|function|是| 创建会话成功的回调，传入 [DuXRSessionFaceMode](/game/api/xr/DuXRSessionFaceMode/) 对象 |
+|opts.success|function|是| 创建会话成功的回调，根据设置的模式传入 [XRSession](/game/api/xr/XRSession/) 或者 [DuXRSessionFaceMode](/game/api/xr/DuXRSessionFaceMode/) 对象 |
 |opts.fail|function|否| 创建会话失败的回调 |
 |opts.complete|function|否| 无论成功失败，接口调用完成的回调 |
 
@@ -35,7 +35,7 @@ swan.requestXRSession(opts)
 
 |属性|类型|描述|
 |-|-|-|
-|xrSession|DuXRSessionFaceMode|Session 对象|
+|xrSession|XRSession | DuXRSessionFaceMode|Session 对象|
 
 
 `fail` 回调函数：
@@ -63,6 +63,8 @@ swan.requestXRSession(opts)
     不支持的 XR 模式
 + `fail unknown error`
     未知错误
++ `fail device not supported`
+    设备不支持当前指定的模式
 
 
 `complete` 回调函数：
@@ -72,9 +74,22 @@ swan.requestXRSession(opts)
 
 **几种模式介绍：**
 
-1. `'du_face'`
+1. `'ar'`
 
-当 `swan.requestXRSession` 中的 `mode` 参数设置成 `'du_face'` 时，小游戏会使用人脸模式的 XR 会话。该模式会调起前置摄像头，并且负责每一帧前置摄像头画面中的人脸的实时检测，追踪和数据的计算。该模式下拥有的特性包括：
+当 `swan.requestXRSession` 中的 `mode` 参数设置成 `'ar'` 时，小游戏会使用基于 ARCore（Android） 和 ARkit（iOS）的平面检测模式的 XR 会话。该模式会调起后置摄像头，检测画面中的平面用于放置三维渲染的虚拟物体，实现虚拟融合的游戏效果。该模式下拥有的特性包括：
+
++ 相机追踪，得到相机的视图变换（View Trasnform）矩阵和投影变换（Projection）矩阵
++ 获取实时检测的特征点点云
++ 相机画面中的平面检测和追踪
++ 锚点创建
++ 环境光强度估计
+
+基于这些特性你可以将游戏中虚拟的三维物体和相机中的真实画面融合，让用户获得更沉浸式的游戏体验。
+
+
+2. `'du_face'`
+
+当 `swan.requestXRSession` 中的 `mode` 参数设置成 `'du_face'` 时，小游戏会使用人脸检测模式的 XR 会话。该模式会调起前置摄像头，并且负责每一帧前置摄像头画面中的人脸的实时检测，追踪和数据的计算。该模式下拥有的特性包括：
 
 + 单人脸的实时追踪，人脸姿态的计算
 + 人脸特征点识别

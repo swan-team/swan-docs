@@ -267,6 +267,7 @@ Page({
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
@@ -320,7 +321,7 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/4cc0b8fa8e59d67d8e952ef17be19d961565512621984" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b4de2816258292dec183838859e8c57f1566389828332" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -343,6 +344,7 @@ Page({
                show-progress="true"
                show-fullscreen-btn="true"
                enable-progress-gesture="true"
+               show-no-wifi-tip="true"
                danmu-list="{{danmuList}}"
                danmu-btn="true"
                enable-danmu="true"
@@ -630,12 +632,14 @@ Page({
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
 * 同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
-* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
 
 
 **示例**：
 
 <a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 
 ```html
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">

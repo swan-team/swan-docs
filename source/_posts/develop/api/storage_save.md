@@ -305,7 +305,7 @@ Page({
 
 ```html
 <view class="wrap">
-    <button type="primary" bindtap="setStorageSync">setStorageSync</button>
+    <button type="primary" bindtap="getStorageSync">getStorageSync</button>
 </view>
 ```
 

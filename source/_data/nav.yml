@@ -152,7 +152,11 @@
                   -
                     link: /introduction/auditing_info/#信息流素材审核规范
                     text: 信息流素材审核规范
-                    name: auditing_info_信息流素材审核规范
+                    name: auditing_info_信息流素材审核规范  
+                  -
+                    link: /introduction/auditing_info/#分垂类物料提交规范
+                    text: 分垂类物料提交规范
+                    name: auditing_info_分垂类物料提交规范                                              
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -1090,6 +1094,23 @@
                   link: /develop/api/base_app_event/#swan-offAppHide
                   text: swan.offAppHide
                   name: base_app_event_swan-offAppHide
+            -
+              link: /develop/api/url_query
+              text: URL Query
+              name: url_query
+              sidebar:
+                -
+                  link: /develop/api/url_query/#onURLQueryChange
+                  text: onURLQueryChange
+                  name: url_query_onURLQueryChange
+                -
+                  link: /develop/api/url_query/#swan-getURLQuery
+                  text: swan.getURLQuery
+                  name: url_query_swan-getURLQuery
+                -
+                  link: /develop/api/url_query/#swan-setURLQuery
+                  text: swan.setURLQuery
+                  name: url_query_swan-setURLQuery 
 
         -
             link: /develop/api/net_rule
@@ -1313,19 +1334,19 @@
                   -
                     link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
                     text: swan.ai.facePersonIdmatch
-                    name: ai_face_swan-ai-facePersonIdmatch
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceVerify
-                    text: swan.ai.faceVerify
-                    name: ai_face_swan-ai-faceVerify
+                    name: ai_face_swan-ai-facePersonIdmatch                 
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceVerify
+                  #   text: swan.ai.faceVerify
+                  #   name: ai_face_swan-ai-faceVerify
                   -
                     link: /develop/api/ai_face/#swan-ai-faceLivenessSessioncode
                     text: swan.ai.faceLivenessSessioncode
                     name: ai_face_swan-ai-faceLivenessSessioncode
-                  -
-                    link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
-                    text: swan.ai.faceLivenessVerify
-                    name: ai_face_swan-ai-faceLivenessVerify
+                  # -
+                  #   link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
+                  #   text: swan.ai.faceLivenessVerify
+                  #   name: ai_face_swan-ai-faceLivenessVerify
               -
                 link: /develop/api/ai_word
                 text: 词法分析
@@ -2621,6 +2642,10 @@
                     text: swan.login
                     name: open_log_swan-login
                   -
+                    link: /develop/api/open_log/#getunionid
+                    text: getunionid
+                    name: open_log_getunionid                   
+                  -
                     link: /develop/api/open_log/#Session-Key
                     text: Session Key
                     name: open_log_Session-Key
@@ -2735,7 +2760,7 @@
 
               -
                 link: /develop/api/open_community
-                text: 社区发布器
+                text: 原生全屏内容发布器
                 name: open_community
                 sidebar:
                   -
@@ -2746,6 +2771,20 @@
                     link: /develop/api/open_community/#swan-closeCommunityEditor
                     text: swan.closeCommunityEditor
                     name: open_community_swan-closeCommunityEditor
+
+              -
+                link: /develop/api/open_replyeditor
+                text: 原生半屏内容发布器
+                name: open_replyeditor
+                sidebar:
+                  -
+                    link: /develop/api/open_replyeditor/#swan-openReplyEditor
+                    text: swan.openReplyEditor
+                    name: open_replyeditor_swan-openReplyEditor
+                  -
+                    link: /develop/api/open_replyeditor/#swan-closeReplyEditor
+                    text: swan.closeReplyEditor
+                    name: open_replyeditor_swan-closeReplyEditor
 
               -
                 link: /develop/api/open_chooseinvoicetitle
@@ -3346,6 +3385,11 @@
             - link: /develop/third/datastatistics
               text: 数据统计分析
               name: datastatistics
+
+        - sidebar:
+            - link: /develop/third/customerability
+              text: 客服消息能力
+              name: customerability
 
         - sidebar:
             - link: /develop/third/domain
