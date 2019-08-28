@@ -1,7 +1,7 @@
 # 智能小程序文档编写指导&规范
 ## 如何编写
 
-### 开启预览
+### 开启本地预览
 进入 swan-docs，终端执行 `npm start`;
 
 终端看到`Hexo is running at http://localhost:4000/docs/. Press Ctrl+C to stop.` 提示，启动成功。

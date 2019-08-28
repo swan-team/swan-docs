@@ -69,25 +69,118 @@ sidebar: formlist
 
 
 **示例**：
-<a href="swanide://fragment/81370643e0e8f39a56bfde69f120f5091548066208458" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-```css
-/** button.css **/
-/** 修改 button 点击态样式**/
-.button-hover {
-    background-color: green;
-}
-/** 添加自定义 button 点击态样式类**/
-.other-button-hover {
-    background-color: blue;
-}
+<a href="swanide://fragment/c5e9c02cad6b485032a87ee568c3fe4a1565507494356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-```
+* 在 swan 文件中
 
 ```xml
-<!-- button.swan-->
-<button type="default" size="mini" disabled="true" hover-class="other-button-hover">我是 button </button>
+<view class="wrap">
+    <view class="mini-btn-content">
+        <view class="title">默认态</view>
+        <button type="primary" size="mini" class="mini-btn primary">
+            按钮
+        </button>
+        <button type="default" size="mini" class="mini-btn">按钮</button>
+        <button type="warn"    size="mini" class="mini-btn warn">
+            按钮
+        </button>
+    </view>
+
+    <view class="mini-btn-content">
+        <view class="title">禁用态</view>
+        <button type="primary" size="mini" class="mini-btn primary" disabled>
+            按钮
+        </button>
+        <button type="default" size="mini" class="mini-btn" disabled>
+            按钮
+        </button>
+        <button type="warn" size="mini" class="mini-btn warn" disabled>
+            按钮
+        </button>
+    </view>
+
+    <view class="btn-content">
+        <button type="primary" class="btn primary">
+            主操作按钮 默认态
+        </button>
+        <button type="primary" class="btn primary" plain='true'>
+            主操作按钮 背景镂空
+        </button>
+        <button type="primary" hover-class='none' hover-stop-propagation="true" class="btn primary" bind:tap="tap">
+            主操作按钮 无点击态
+        </button>
+        <button type="primary" class="btn primary" hover-start-time="1000" hover-stay-time="2000">
+            主操作按钮 延迟点击
+        </button>
+        <button type="primary" loading="true" class="btn primary">
+            主操作按钮 loading
+        </button>
+        <button type="primary" class="btn primary" disabled>
+            主操作按钮 禁用态
+        </button>
+        <button type="default" class="btn">
+            次要操作按钮 默认态
+        </button>
+        <button type="default" class="btn" disabled>
+            次要操作按钮 禁用态
+        </button>
+        <button type="warn" class="btn warn">
+            警告类操作按钮 默认态
+        </button>
+        <button type="warn" class="btn warn" disabled>
+            警告类操作按钮 禁用态
+        </button>
+    </view>
+    <view class="btn-bottom">
+        <button type="default" class="middle-btn" open-type="share">分享按钮</button>
+    </view>
+</view>
 ```
 
+* 在 js 文件中
+
+```js
+Page({
+    onShareAppMessage() {
+        return {
+            title: '小程序标题',
+            content: '世界很复杂，百度更懂你',
+            imageUrl: 'http://imgsrc.baidu.com/forum/pic/item/d9f9d72a6059252daecdfc36309b033b5bb5b92e.jpg',
+            path: '/pages/openShare/openShare',
+            success(res) {
+                // 分享成功
+            },
+            fail(err) {
+                // 分享失败
+            }
+        };
+    },
+    getUserInfo(e) {
+        console.log('cdsf');
+        swan.getUserInfo({
+            success: res => {
+                swan.showModal({
+                    title: '获取成功',
+                    content: JSON.stringfy(res)
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    },
+    tap() {
+        swan.showToast({
+            title: '已点击',
+            icon: 'none'
+        });
+
+    }
+});
+
+```
 
 ## 获取用户手机号权限申请
 
@@ -112,58 +205,7 @@ sidebar: formlist
 |color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
 
 
-示例：
-<a href="swanide://fragment/78b63afcadb30a4071508be700c5b5171548066839061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-```xml
-<!-- checkbox.swan -->
-<form bind:submit="formSubmit">
-    <checkbox-group bind:change="checkboxChange" name="citylist">
-        <view class="checkbox" s-for="item in items">
-            <checkbox value="{{item.value}}" checked="{{item.checked}}">{{item.text}}</checkbox>
-        </view>
-        <view class="checkbox">
-            <checkbox value="red" color="red">我是红色的</checkbox>
-        </view>
-        <view class="checkbox">
-            <checkbox value="disabled" disabled>我不可用</checkbox>
-        </view>
-    </checkbox-group>
-    <button formType="submit">提交</button>
-    <button formType="reset">重置</button>
-</form>
 
-```
-
-
-```javascript
-// checkbox.js
-Page({
-    data: {
-        items: [
-            {
-                value: 'China',
-                text: '中国'
-            },
-            {
-                value: 'US',
-                text: '美国'
-            },
-            {
-                value: 'Britain',
-                text: '英国',
-                checked: true
-            }
-        ]
-    },
-    checkboxChange(e) {
-        console.log(e.detail);
-    },
-    formSubmit(e) {
-        // todo someThing
-    }
-});
-
-```
 ## checkbox-group
 
 **解释**：多项选择器，内部由多个 checkbox 组成
@@ -173,6 +215,57 @@ Page({
 |---- | ---- | ---- |---- |---- |
 |bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
 
+示例：
+<a href="swanide://fragment/72d45eb3b93a72d92a553736ebf4b8941565507862768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="checkbox-group">
+        <checkbox class="checkbox" checked>&nbsp;&nbsp;选中</checkbox>
+        <checkbox class="checkbox" checked="false">&nbsp;&nbsp;未选中</checkbox>
+        <checkbox class="checkbox" disabled>&nbsp;&nbsp;不可选</checkbox>
+        <checkbox class="checkbox" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</checkbox>
+    </view>
+    <view class="title">列表选项</view>
+    <view class="item-wrap">
+        <checkbox-group bindchange="checkboxChange" >
+            <view class='check' s-for="item in items">
+                <checkbox class="check-box" value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">{{item.text}}</checkbox>
+            </view>
+        </checkbox-group>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        items: [
+            {
+                value: 'China',
+                text: '中国',
+                id: '1'
+            },
+            {
+                value: 'US',
+                text: '美国',
+                id: '2'
+            },
+            {
+                value: 'Britain',
+                text: '英国',
+                checked: true,
+                id: '3'
+            }
+        ],
+        result: []
+    }
+});
+```
 ## form
 
 **解释**：
@@ -188,31 +281,63 @@ Page({
 
 
 **示例：**
-<a href="swanide://fragment/ae55c117fd32f76e6287a4d1754c7aa01548068500546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 
 ```xml
-<form bindsubmit="formSubmitHandle" bindreset="formReset" report-submit>
-    <view class="btn-area">
-    <view class="section-title">input输入框</view>
-    <input name="input" placeholder="please input here~~~" />
-    </view>
-    <view class="btn">
-        <button class="form-button" form-type="submit">提交</button>
-        <button class="form-button" form-type="reset">重置</button>
-    </view>
-</form>
+<view class="wrap">
+    <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+        <view class="section">
+            <view class="section-title">switch</view>
+            <switch name="switch" checked/>
+        </view>
+        <view class="section">
+            <view class="section-title">radio</view>
+            <radio-group name="radio-group">
+                <label><radio value="radio1" checked/>选中</label>
+                <label class="label"><radio value="radio2"/>未选中</label>
+            </radio-group>
+        </view>
+        <view class="section section-gap">
+            <view class="section-title">checkbox</view>
+            <checkbox-group name="checkbox">               
+                <label><checkbox value="checkbox1" checked/>选项一</label>
+                <label class="label-checkbox"><checkbox  value="checkbox2"/>选项二</label>              
+            </checkbox-group>
+        </view>
+        <view class="section section-gap">
+            <view class="section-title">slider</view>
+            <slider name="slider" show-value ></slider>
+        </view>
+        <view class="section">
+            <view class="section-title">input</view>
+        </view>
+         <input name="input" placeholder="这是一个输入框" />
+        <view class="btn-area">
+            <button formType="submit" type="primary">Submit</button>
+            <button formType="reset">Reset</button>
+        </view>
+    </form>
+</view>
 ```
+* 在 js 文件中
 
 ```javascript
 Page({
-    formSubmitHandle: function(e) {
-      console.log('form表单submit：', e.detail.value);
-      console.log('form表单submit：', e.detail.formId);
+    data: {},
+    formSubmit: function(e) {
+        console.log('form发生了submit事件，携带数据为：', e.detail.value);
+        swan.showModal({
+            content: '数据：' + JSON.stringify(e.detail.value),
+            confirmText: '确定'
+        });
     },
     formReset: function() {
-        console.log('form表单reset')
+        console.log('form表单reset');
     }
 });
+
 ```
 
 ## input
@@ -265,15 +390,20 @@ Page({
 | done |键盘右下角按钮为 “完成” |
 
 **示例**：
-<a href="swanide://fragment/96f998d76928f1aba4cf4dfd66271dfe1548067130957" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/1c64feb864d9378d6e69bec6ab1b21671565503514247" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
 * 在 swan 文件中
 
-```html
+```xml
+
 <view class="section">
     <view class="title">可以自动聚焦的input</view>
-    <input class="ipt" placeholder="将会获取焦点" focus="autoFocus"/>
+    <input class="ipt" placeholder="将会获取焦点" bindfocus="bindKeyfocus" selection-start="3" selection-end="7" focus="autoFocus" confirm-hold="false" confirm-type="send"/>
+</view>
+<view class="section">
+    <view class="title">普通input</view>
+    <input class="ipt" cursor='10' bindblur="bindKeyblur"  bindconfirm="bindKeyconfirm" placeholder="这是一个普通输入框"/>
 </view>
 
 <view class="section">
@@ -299,22 +429,29 @@ Page({
 </view>
 <view class="section">
     <view class="title">身份证输入的input</view>
-    <input class="ipt" type="idcard" placeholder="身份证输入键盘" />
+    <input class="ipt" type="idcard" adjust-position="true" placeholder="身份证输入键盘" />
+</view>
+<view class="section" >
+    <view class="title">控制占位符颜色的input</view>
+    <input class="ipt" placeholder-class="placeholder" placeholder-style="color:#6895FF" placeholder="占位符字体是蓝色的" />
 </view>
 <view class="section" style="padding-bottom: .2rem;">
-    <view class="title">控制占位符颜色的input</view>
-    <input class="ipt" placeholder-style="color:red" placeholder="占位符字体是红色的" />
+    <view class="title">禁止使用input</view>
+    <input class="ipt" disabled/>
 </view>
-
 ```
 * 在 js 文件中
 
 ```javascript
 Page({
     data: {
-        focus: false,
         inputValue: '',
         autoFocus: true
+    },
+    onShow(){
+        this.setData({
+            autoFocus: true
+        });
     },
     bindButtonTap: function () {
         this.setData({
@@ -325,27 +462,23 @@ Page({
         this.setData({
             inputValue: e.detail.value
         });
+    },
+    bindKeyfocus: function (e){
+        console.log(e.detail);
+    },
+    bindKeyblur: function (e){
+        swan.showToast({
+            title: '普通input失焦时间',
+            icon: 'none'
+        });
+    },
+    bindKeycomfirm: function (e){
+        swan.showToast({
+            title: '点击确定',
+            icon: 'none'
+        });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.section {
-    font-size: .16rem;
-}
-.title {
-    padding: .2rem .2rem .14rem;
-}
-.ipt {
-    width: 100%;
-    padding-left: .2rem;
-    height: .4rem;
-    background: #fff;
-}
-.small-ipt {
-    width: 2.79rem;
-}
 ```
 
 **Bug & Tip**：
@@ -367,22 +500,61 @@ Page({
 |-----|--- |--- |--- |--- |
 |for|String| | 否 |绑定控件的 id|
 **示例**：
-<a href="swanide://fragment/95eca5f691f984f4c480416e0059c1d71540395356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-```
-<view class="section">
-    <label>
-        选项一label
-        <checkbox>选项一</checkbox>
-    </label>
+* 在 swan 文件中
 
-    <checkbox id="checkbox-id">选项二</checkbox>
-    <label for="checkbox-id">
-        选项二label
-    </label>
+``` xml
+<view class="wrap">
+    <view class="page-section">
+        <view class="page-section-title">表单组件在label内</view>
+        <checkbox-group class="group">
+            <view class="label-1 {{index === 0 ? 'label-first': ''}}" s-for="item, index in checkboxItems">
+              <label>
+                <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+                <text class="label-1-text">{{item.value}}</text>
+              </label>
+            </view>
+        </checkbox-group>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">label用for标识表单组件</view>
+        <radio-group class="group">
+            <view class="label-2 {{index === 0 ? 'label-first': ''}}" s-for="item, index in radioItems">
+              <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+              <label class="label-2-text" for="{{item.name}}"><text>{{item.value}}</text></label>
+            </view>
+        </radio-group>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">label内有多个时选中第一个</view>
+        <label class="label-3">
+            <view class="label-box">
+                <checkbox></checkbox>
+                <checkbox></checkbox>
+                <checkbox></checkbox>      
+                <checkbox></checkbox>           
+            </view>
+            <view class="label-3-text">click me～</view>
+        </label>
+    </view>
 </view>
 ```
-
+* 在 js 文件中
+```javascript
+Page({
+    data: {
+        checkboxItems: [
+            {name: 'CHN', value: '中国', checked: 'true'},
+            {name: 'USA', value: '美国'}
+        ],
+        radioItems: [
+            {name: 'CHN', value: '中国', checked: 'true'},
+            {name: 'USA', value: '美国'}
+        ]
+    }
+});
+```
 ## picker
 
 **解释：** 从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
@@ -475,66 +647,109 @@ Page({
 | region | 省市区选择器 |
 
 **示例**：
-<a href="swanide://fragment/6c3b4418ea1963aae604f3ffe3d5d3b81548066758143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4e627d1fb5e3167c46e736956cd1e8581565503520142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
 ```xml
-<view class="section">
-    <view class="section-title">时间选择器</view>
-    <picker mode="time" value="{{time}}" start="11:11" end="23:11" bindchange="bindTimeChange">
-        <view class="picker">
-            当前选择: {{time}}
-        </view>
-    </picker>
-</view>
-<view class="section">
-    <view class="section-title">单列选择器</view>
-    <picker mode="selector" value="{{index}}" range="{{array}}" bind:change="selectorChange" title="普通选择器">
-        <view class="picker">
-            当前选择: {{array[index]}}
-        </view>
-    </picker>
-</view>
-<view class="section">
-    <view class="section-title">多列选择器</view>
-    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" title="多列选择器">
-        <view class="picker">
-            当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-        </view>
-    </picker>
-</view>
-<view class="section">
-    <view class="section-title">地区选择器</view>
-    <picker mode="region" bindchange="regionChange" custom-item="{{customItem}}" title="省市区选择器">
-        <view class="picker">
-            当前选择：{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
-        </view>
-    </picker>
+<view class="wrap">
+    <view class="title">时间选择</view>
+    <form>
+        <label class="section" for="section1">
+            <picker id="section1" mode="time" value="{{time}}" start="1:01" end="22:59" bind:change="timeChange" disabled="false" bindcancel="cancel">
+                <view class="picker">
+                    <text class='chooseItem'>当前选择:</text>{{time}}
+                </view>
+            </picker>
+        </label>
+    </form>
+    <view class="title">日期选择</view>
+    <form>
+        <label class="section date-section" for="section2">
+            <picker id="section2" mode="date" value="{{dateDay}}" bind:change="dateChangeDay" fields="day" bindcancel="cancel">
+                <view>
+                    <text class='chooseItem'>当前选择:</text>{{dateDay}}
+                </view>
+            </picker>
+        </label>
+    </form> 
+    <view class="title">多列选择器</view>
+    <form>
+        <label class="section date-section" for="section3">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" title="多列选择器">
+                <view class="picker">
+                   <text class='chooseItem'>当前选择:</text>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
+                </view>
+            </picker>
+        </label>
+        <label class="section" for="section4">
+            <picker id="section4" mode="date" value="{{dateYear}}" bind:change="dateChangeYear" fields="year" bindcancel="cancel">
+                <view>
+                    <text class='chooseItem'>当前选择:</text>{{dateYear}}
+                </view>
+            </picker>
+        </label>
+    </form>
+    <view class="title">地区选择</view>
+    <form>
+        <label class="section" for="section5">
+            <picker id="section5" mode="region" bind:change="regionChange" custom-item="{{customItem}}" title="地区选择器" bindcancel="cancel">
+                <view class="picker">
+                    <text class='chooseItem'>当前选择:</text>{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
+                </view>
+            </picker>
+        </label>
+    </form>
 </view>
 ```
+* 在 js 文件中
 
 ```javascript
 Page({
     data: {
         time: '12:12',
-        index: 1,
-        array: ['科目一', '科目二', '科目三', '科目四'],
+        dateDay: '2018-01-05',
+        dateMonth: '2018-01',
+        dateYear: '2018',
+        regionData: ['全部', '全部', '全部'],
+        customItem: '全部',
         multiIndex: [0, 0, 0],
         multiArray: [['无脊柱动物', '脊柱动物'], ['扁性动物', '线形动物', '环节动物', '软体动物', '节肢动物'], ['猪肉绦虫', '吸血虫']],
-        regionData: ['全部', '全部', '全部'],
-        customItem: '全部'
     },
-    bindTimeChange: function(e) {
-        console.log('picker-time changed，值为', e.detail.value)
-        this.setData({
-            time: e.detail.value
-        })
+    timeChange(e) {
+        console.log('picker-time changed，值为', e.detail.value);
+        this.setData('time', e.detail.value);
     },
-    selectorChange: function (e) {
-        console.log('picker-selector changed，值为', e.detail.value)
+    dateChangeDay(e) {
+        console.log('picker-date changed，值为', e.detail.value);
         this.setData(
-            'index', e.detail.value
+            'dateDay', e.detail.value
         );
     },
-
+    dateChangeMonth(e) {
+        console.log('picker-date changed，值为', e.detail.value);
+        this.setData(
+            'dateMonth', e.detail.value
+        );
+    },
+    dateChangeYear(e) {
+        console.log('picker-date changed，值为', e.detail.value);
+        this.setData(
+            'dateYear', e.detail.value
+        );
+    },
+    regionChange(e) {
+        this.setData(
+            'regionData', e.detail.value
+        );
+        console.log('picker-time changed，值为', e.detail.value);
+    },
+    cancel() {
+        swan.showToast({
+            title: '用户取消选择',
+            icon: 'none'
+        });
+    },
     bindMultiPickerChange: function (e) {
         console.log('picker-multiSelector changed，值为', e.detail.value)
         this.setData(
@@ -605,14 +820,6 @@ Page({
         this.setData('multiArray', data.multiArray);
         this.setData('multiIndex', data.multiIndex);
     },
-
-    regionChange: function (e) {
-        this.setData(
-            'regionData', e.detail.value
-        );
-        console.log('picker-time changed，值为', e.detail.value)
-    }
-
 });
 ```
 
@@ -640,24 +847,24 @@ Page({
 <div class="notice">解释： </div>滚动选择器的子节点。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。<div></div>
 
 **示例**：
-<a href="swanide://fragment/fa9cbcb83033ca080069da8f72d266771563433863796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3c91ac3d1d08ec0d7e5dd4033498dd311565503521188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
-```html
+```xml
 <view class="wrap">
     <view class="page-body">
     <view class="selected-date">{{year}}年{{month}}月{{day}}日{{isDaytime ? "白天" : "夜晚"}}</view>
-    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
-      <picker-view-column>
-        <view s-for="item in years" style="line-height: 50px; text-align: center;">{{item}}年</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view s-for="item in months" style="line-height: 50px; text-align: center;">{{item}}月</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view s-for="item in days" style="line-height: 50px; text-align: center;">{{item}}日</view>
-      </picker-view-column>
+    <picker-view  indicator-style ="color: #74fa7d" mask-style="color: #74fa7d" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view s-for="item in years" class="item">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view s-for="item in months" class="item">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view s-for="item in days" class="item">{{item}}日</view>
+        </picker-view-column>
     </picker-view>
   </view>
 </view>
@@ -666,21 +873,21 @@ Page({
 * 在 js 文件中
 
 ```js
-const date = new Date();
-const years = [];
-const months = [];
-const days = [];
+const date = new Date()
+const years = []
+const months = []
+const days = []
 
 for (let i = 1990; i <= date.getFullYear(); i++) {
-    years.push(i);
+    years.push(i)
 }
 
 for (let i = 1; i <= 12; i++) {
-    months.push(i);
+    months.push(i)
 }
 
 for (let i = 1; i <= 31; i++) {
-    days.push(i);
+    days.push(i)
 }
 
 Page({
@@ -695,39 +902,15 @@ Page({
         isDaytime: true,
     },
     bindChange(e) {
-        const val = e.detail.value;
+        const val = e.detail.value
         this.setData({
             year: this.data.years[val[0]],
             month: this.data.months[val[1]],
             day: this.data.days[val[2]],
             isDaytime: !val[3]
-        });
+        })
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding-top: 50rpx;
-}
-
-.selected-date {
-    text-align: center;
-    margin: 30rpx;
-}
-
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.picker-icon {
-    width: 50rpx;
-    height: 50rpx;
-}
 ```
 
 ## radio
@@ -741,8 +924,21 @@ Page({
 | disabled | Boolean | false | 否 |是否禁用 |
 | color | Color | #3c76ff| 否 | radio 的颜色，同 CSS 的 color |
 
+## radio-group
+
+
+**解释**：单项选择器，内部由多个radio组成
+
+
+> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
+
+
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| ---- | ---- | ---- | ---- | ---- |
+| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
+
 **示例**：
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -752,6 +948,8 @@ Page({
     <radio-group bindchange="radioChange" class="radio-group">
         <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
         <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
+         <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
+          <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
     </radio-group>
 
     <view class="title">推荐示例</view>
@@ -783,68 +981,20 @@ Page({
                 value: 'have',
                 text: '未选中选项',
                 id: 2
-            },
-            {
-                value: 'none',
-                text: '未选中选项',
-                id: 3
             }
         ],
         result: []
     },
+
     radioChange: e => {
         console.log(e);
     },
+
     formSubmit: e => {
-        console.log(e);
+        console.log('ljh', e);
     }
 });
 ```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-}
-
-.radio {
-    margin: 0 .25rem;
-}
-.item-wrap {
-    background: #fff;
-}
-.item {
-    padding: .15rem 0;
-    border-bottom: 1px #f5f5f5 solid;
-    margin-left: .25rem;
-}
-.radio-background-active:active {
-    display: block;
-    background-color: #f2f2f2;
-}
-.switch {
-    float: right;
-}
-```
-## radio-group
-
-
-**解释**：单项选择器，内部由多个radio组成
-
-
-> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
-
-
-| 属性名 | 类型 | 默认值 | 必填 | 说明 |
-| ---- | ---- | ---- | ---- | ---- |
-| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
-
-
-
-**示例**：
-
-<a href="swanide://fragment/9eb379ba1a630954e0a19aa20f221cc21559046508774" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ## slider
@@ -869,18 +1019,20 @@ Page({
 |bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
 **示例**：
-<a href="swanide://fragment/52972cf5e70224467ab100257f8f7b031560838826410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d47270bf31719f0e0ff2dc7975f968861565503527422" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
     <view class="title">设置step</view>
-    <slider min="0" max="1500" value="200" step="30" show-value bind:change="sliderChange"></slider>
+    <slider min="0" max="1500" value="200" step="30" bind:change="sliderChange" disabled="false"></slider>
     <view class="title">显示当前value</view>
     <slider min="0" max="1500" value="421" show-value bind:change="sliderChange"></slider>
     <view class="title">设置最小最大值</view>
     <slider min="200" max="1500" value="330" show-value bind:change="sliderChange"></slider>
+    <view class="title">自定义样式</view>
+    <slider min="200" max="1500" value="330" block-size='12' activeColor="#8FB1FF" bindchanging="changing" block-color="#6895FF" backgroundColor="#fff" show-value bind:change="sliderChange"></slider>
 </view>
 
 ```
@@ -890,18 +1042,13 @@ Page({
 Page({
     sliderChange(e) {
         console.log(e);
+    },
+    changing(e){
+        console.log(e);
     }
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-    padding: 0 .3rem;
-}
-```
 ## switch
 
 **解释**： 开关选择器
@@ -922,15 +1069,16 @@ Page({
 | checkbox | 复选框样式 |
 
 **示例**：
-<a href="swanide://fragment/0388a5096113ac6efc7e45ef2db22f0a1559047010065" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/acd75f1f1c4ecb2e83e4af8f7cb6cd661565508713613" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```xml
 <view class="wrap">
     <view class="title">默认样式</view>
     <view>
-        <switch class="init-switch" checked></switch><text class="switch-text">开启</text>
+        <switch class="init-switch" checked disabled="false"></switch><text class="switch-text">开启</text>
         <switch class="init-switch"></switch><text class="switch-text">关闭</text>
+         <switch class="init-switch" color="#FF3333" checked></switch><text class="switch-text">红色</text>
     </view>
 
     <view class="title">推荐示例</view>
@@ -945,39 +1093,7 @@ Page({
         </view>
     </view>
 </view>
-
 ```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-}
-.init-switch {
-    margin: 0 .05rem 0 .25rem;
-    vertical-align: middle;
-}
-.switch-text {
-    vertical-align: -.02rem;
-}
-.item-wrap {
-    background: #fff;
-}
-.item {
-    padding: .15rem 0;
-    border-bottom: 1px #f5f5f5 solid;
-    margin-left: .2rem;
-    position: relative;
-}
-.switch {
-    position: absolute;
-    top: 50%;
-    right: .2rem;
-    transform: translateY(-50%);
-}
-```
-
 **Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
 <div></div>
@@ -1036,13 +1152,29 @@ switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与
 <view class="wrap">
     <view class="section">
         <view class="title">输入区高度自适应</view>
-        <textarea auto-height bindinput="bindInput"/>
+        <textarea auto-height maxlength="-1" bindinput="bindInput"/>
     </view>
     <view class="section">
-        <view class="title">自动聚焦的textarea</view>
-        <textarea auto-focus="{{focus}}" style="height: 3em"/>
+        <view class="title">受控聚焦</view>
+        <textarea style="height: 3em"
+                  maxlength="-1"
+                  auto-focus="{{focus}}" 
+                  cursor="-1" show-confirm-bar="true" 
+                  placeholder="我会出现滚动条~" 
+                  placeholder-class="plh" 
+                  selection-start="-1"
+                  selection-end="-1"
+                  adjust-position="true"
+                  bindinput="bindInput"
+                  bindfocus="bindFocus"
+                  bindblur="bindBlur"
+                  bindlinechange="bindLineChange"
+                  bindconfirm="bindConfirm"
+                  />
+        <button type="primary" style="margin-top:.3rem">聚焦</button>
     </view>
 </view>
+
 ```
 
 * 在 js 文件中
@@ -1053,41 +1185,38 @@ Page({
         height: 1,
         focus: true
     },
-    bindFocus(e) {
+    bindfocus(e) {
         console.log('focus - e:', e);
     },
     bindInput(e) {
         console.log('input - e:', e);
     },
-    bindLinechange(e) {
+    bindLineChange(e) {
         console.log('linechange - e:', e);
     },
-    bindBlur(e) {
+    bindblur(e) {
         console.log('blur - e:', e);
+    },
+    bindConfirm(e){
+        console.log('confirm - e:', e);
     }
 });
+
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-    height: 100%;
-}
-.title {
-    color: #999;
-    padding: .33rem .21rem .17rem;
-}
-textarea {
-    background: #fff;
-    width: 100%;
-    padding: .17rem;
-    line-height: 40rpx;
-}
-```
 **图示**
-![图片](../../../img/component/textarea.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/textarea.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
 **Bug & Tip**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。

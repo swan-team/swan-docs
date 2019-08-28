@@ -43,7 +43,7 @@ sidebar: media_image
 
 
 **示例**：
-<a href="sswanide://fragment/5739ca862a06d44ad662d8edd9c6bbd31559049434270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5739ca862a06d44ad662d8edd9c6bbd31559049434270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

@@ -39,7 +39,7 @@ sidebar: base
 | loadingGrey | loading图标 |
 
 **示例**：
-<a href="swanide://fragment/2a32f184480504bafc440fea395eaac21558615858590" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -61,7 +61,7 @@ sidebar: base
     <view class="group choose">
         <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
     </view>
-</view> 
+</view>
 ```
 
 * 在 js 文件中
@@ -82,48 +82,8 @@ Page({
             40, 35, 30, 25
         ]
     }
-}); 
+});
 ```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: .16rem;
-}
-.group {
-    background: #fff;
-    padding: .17rem .4rem;
-}
-icon:last-child {
-    margin-right: 0;
-}
-.big-default {
-    margin-right: .19rem;
-}
-.small-default {
-    margin: .2rem .2rem .1rem 0;
-    display: inline-block;
-}
-.small-primary {
-    margin: .15rem .2rem .1rem 0;
-    display: inline-block;
-}
-.default {
-    height: 1.8rem;
-}
-.choose {
-    height: .8367rem;
-    line-height: .8rem;
-}
-.icon-color,
-.icon-size {
-    margin-right: .15rem;
-    line-height: 1;
-} 
-```
-
-![图片](../../../img/icon-demo.png)
 
 ## text
 
@@ -144,72 +104,81 @@ icon:last-child {
 | nbsp | 根据字体设置的空格大小 |
 
 **示例**：
-<a href="swanide://fragment/73974b65ed16e5694bfcf2337b8df8d41558616173370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/475757ad12315ba758ce42bc61e47ba11565503530789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <text selectable="true">{{text}}</text>
-    <button class="btn" type="primary" bind:tap="add">add text</button>
-    <button class="btn" type="primary" bind:tap="remove">remove text</button>
-</view> 
+    <view class="page-section page-section-spacing">
+        <view class="text-box">
+            <text selectable="true" space="20">{{text}}</text>
+        </view>
+        <button class="btn" disabled="{{!canAdd}}" type="primary" bind:tap="add">add text</button>
+        <button class="btn" disabled="{{!canRemove}}" type="primary" bind:tap="remove">remove text</button>
+    </view>
+</view>
 ```
 
 * 在 js 文件中
 
 ```js
-let initData = '这是一段文字.';
-let extraLine;
+const texts = [
+    '百度智能小程序',
+    '生态共建',
+    '持续为开发者拓展更多的百度内、外的流量资源',
+    '百亿广告分成',
+    '通过把广告组件嵌入到小程序里得到广告收益',
+    '十亿创新基金',
+    '为创新类小程序提升流量及曝光',
+    '......'
+  ]
+  let extraLine = []
+
 Page({
     data: {
-        text: initData
+        text: '这是一段文字',
+        canAdd: true,
+        canRemove: false,
+        extraLine : [],
     },
-    onShow(e) {
-        extraLine = [];
-    },
-    add(e) {
-        extraLine.push('其他文字');
+    add() {
+        extraLine.push(texts[extraLine.length % 12])
         this.setData({
-            text: initData + extraLine.join(',')
-        });
+          text: extraLine.join('\n'),
+          canAdd: extraLine.length < 12,
+          canRemove: extraLine.length > 0
+        })
     },
-    remove(e) {
-        if (extraLine.length > 0) {
-            extraLine.pop();
-            this.setData({
-                text: initData + extraLine.join(',')
-            });
+    remove() {
+      if (extraLine.length > 0) {
+          extraLine.pop()
+          this.setData({
+            text: extraLine.join('\n'),
+            canAdd: extraLine.length < 12,
+            canRemove: extraLine.length > 0,
+          })
+        }
+        else {
+          this.setData({
+            text: 'end'
+          })
         }
     }
-}); 
-```
+});
 
-* 在 css 文件中
-
-```css
-.wrap {
-    font-size: 29rpx;
-    padding: 30rpx;
-}
-
-.wrap button {
-    margin-top: 30rpx;
-    height: 80rpx;
-    line-height: 80rpx;
-}
 ```
 **图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/text-demo2.png">
+        <img src="../../../img/component/text.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
@@ -232,6 +201,7 @@ Page({
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- | ---- |---- |
 | nodes | Array / String  | [] | 否 |节点列表 / HTML String|
+| selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴等场景。 <font color="#4183c4">百度 APP 11.10 以上</font>|
 
 ### nodes
 现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点** ，默认是元素节点，在富文本区域里显示的HTML节点。
@@ -309,11 +279,11 @@ Page({
 
 **示例**
 
-<a href="swanide://fragment/0ba593e011e3129511a30bd8fa74be271563434270938" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/746c4d81d51218ea977782622aa61d9a1566379382794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
-```xml
+```html
 <view class="rich-text">
     <view class="renders">
         <view class="renders_title">通过HTML String渲染</view>
@@ -323,7 +293,7 @@ Page({
             </scroll-view>
             <button type="primary" bind:tap="renderHtml">渲染HTML</button>
             <block s-if="{{renderedByHtml}}">
-                <rich-text nodes="{{htmlSnip}}"></rich-text>
+                <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
@@ -334,8 +304,8 @@ Page({
                 <view class="cont">{{nodeSnip}}</view>
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
-            <block s-if="{{renderedByNode}}">
-                <rich-text nodes="{{nodes}}"></rich-text>
+            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem">
+                <rich-text nodes="{{nodes}}" selectable="true"></rich-text>
             </block>
         </view>
     </view>
@@ -399,73 +369,29 @@ Page({
         });
     },
     enterCode(e) {
-        console.log(e.detail.value);
-        this.setData({
-            htmlSnip: e.detail.value
-        });
+      this.setData({
+          htmlSnip: e.detail.value
+      });
     }
 });
 ```
-
-* 在 css 文件中
-
-```css
-.rich-text {
-    width: 100%;
-    height: 100%;
-    font-size: .16rem;
-    padding: .16rem;
-}
-.renders {
-    width: 100%;
-    margin-top: 60rpx;
-}
-.renders_view {
-    width: 100%;
-    height: auto;
-}
-.renders_title {
-    color: darkgrey;
-}
-.p {
-    color: #4F99FB;
-    line-height: 60rpx;
-}
-scroll-view {
-    width: 100%;
-    height: 350rpx;
-    border: 1rpx solid #1AAD19;
-    box-sizing: border-box;
-    line-height: 50rpx;
-}
-.cont {
-    width: 100%;
-    height: 100%;
-    white-space: pre;
-}
-button {
-    margin: 20rpx 0;
-}
-```
-
-
-**图示:**
+**图示**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/richtext.png">
+        <img src="../../../img/component/rich-text.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
 **Bug & Tip**：
 
-* 单击此处，查看将<a herf="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
+* 单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
@@ -497,32 +423,21 @@ button {
 | active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 **示例**：
-<a href="swanide://fragment/92ceb2b4893622aee68732f8ab88b7481558616315541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <progress class="progress" percent="20" activeColor="#3c76ff" stroke-width="2" show-info />
+    <progress class="progress" percent="20" activeColor="#3c76ff" show-info />
     <progress class="progress" percent="40" activeColor="#3c76ff" active />
-    <progress class="progress" percent="60" activeColor="#3c76ff" active />
-    <progress class="progress" percent="80" activeColor="#74fa7d" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
+    <progress class="progress" percent="70" color="#3c76ff" active/>
+    <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
 </view>
+
 ```
 
-* 在 css 文件中
-
-
-```css
-.wrap {
-    font-size: .16rem;
-    padding: .3rem .15rem;
-}
-.progress {
-    margin-bottom: .35rem;
-    border-radius: 3px;
-}
-```
 
 
 ## animation-view
@@ -553,7 +468,7 @@ button {
 
 **示例**：
 
-<a href="swanide://fragment/1aaf692b0800fd9e2ea9d84e1c0613431556528002310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19c06d05f550daf240008413039c50021565512139450" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -561,16 +476,12 @@ button {
 <view class="container">
     <view class="animation-content hide">
         <view class="animation-info">
-            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" path="{{path}}">
+            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" bind:ended="end" path="{{path}}">
             </animation-view>
         </view>
         <view class="button-content">
-            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}动画</button>
+            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}lottie动画</button>
         </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
     </view>
 </view>
 
@@ -580,7 +491,7 @@ button {
 ```javascript
 Page({
     data: {
-        title: 'animation-view',
+        title: 'lottie',
         action: 'play',
         hidden: false,
         path: '/anims/lottie_example.json',
@@ -589,6 +500,9 @@ Page({
         status: '停止',
         updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
         textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+    },
+    onShow(){
+        console.log('手百版本11.3以上才可使用');
     },
     playLottie() {
         // 切换播放状态
@@ -600,31 +514,25 @@ Page({
             action,
             status
         });
+    },
+    end() {
+        console.log('播放结束,设置不循环播放才能触发');
     }
 });
 ```
-* 在 css 文件中
+**图示**
 
-```css
-.animation-info {
-    padding-top: .4rem;
-}
-.controls {
-    width: 88%;
-    margin: 0 auto;
-}
-.button-content {
-    position: relative;
-    top: 0;
-}
-.toggle-animation {
-    margin-top: .22rem!important;
-    border-radius: .04rem;
-}
-.toggle-animation::after {
-    border: none;
-}
-```
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/animation-view.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
 **Bug & Tip**：
 
