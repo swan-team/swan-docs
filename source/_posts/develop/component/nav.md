@@ -143,6 +143,8 @@ Page({
 
 **示例一**：普通的导航
 
+<a href="swanide://fragment/ffdd42b9621602c7a89cdfa7e4cfab7b1566986567638" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
 * 在 swan 文件中
 
 ```html
@@ -152,7 +154,7 @@ Page({
     tabs-inactive-text-color="#fff"
     tabs-active-text-color="#fff"
     bindtabchange="onTabClick"
-	active-name="{{activeName}}">
+    active-name="{{activeName}}">
     <tab-item
         s-for="tab in tabs"
         badge-type="{{tab.badgeType}}"
@@ -195,6 +197,8 @@ Page({
 ```
 
 **示例二**：能修改页面 url 的导航
+
+<a href="swanide://fragment/dbd53a620ddde5781f09c0886955e0261566986685494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 * 在 swan 文件中
