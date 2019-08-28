@@ -152,11 +152,11 @@
                   -
                     link: /introduction/auditing_info/#信息流素材审核规范
                     text: 信息流素材审核规范
-                    name: auditing_info_信息流素材审核规范  
+                    name: auditing_info_信息流素材审核规范
                   -
                     link: /introduction/auditing_info/#分垂类物料提交规范
                     text: 分垂类物料提交规范
-                    name: auditing_info_分垂类物料提交规范                                              
+                    name: auditing_info_分垂类物料提交规范
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -960,6 +960,14 @@
                     link: /develop/component/nav/#navigator
                     text: navigator
                     name: nav_navigator
+                  -
+                    link: /develop/component/nav/#tabs
+                    text: tabs
+                    name: nav_tabs
+                  -
+                    link: /develop/component/nav/#tab-item
+                    text: tab-item
+                    name: nav_tab-item
         -
             sidebar:
               -
@@ -1110,7 +1118,7 @@
                 -
                   link: /develop/api/url_query/#swan-setURLQuery
                   text: swan.setURLQuery
-                  name: url_query_swan-setURLQuery 
+                  name: url_query_swan-setURLQuery
 
         -
             link: /develop/api/net_rule
@@ -1334,7 +1342,7 @@
                   -
                     link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
                     text: swan.ai.facePersonIdmatch
-                    name: ai_face_swan-ai-facePersonIdmatch                 
+                    name: ai_face_swan-ai-facePersonIdmatch
                   # -
                   #   link: /develop/api/ai_face/#swan-ai-faceVerify
                   #   text: swan.ai.faceVerify
@@ -2644,7 +2652,7 @@
                   -
                     link: /develop/api/open_log/#getunionid
                     text: getunionid
-                    name: open_log_getunionid                   
+                    name: open_log_getunionid
                   -
                     link: /develop/api/open_log/#Session-Key
                     text: Session Key
@@ -2771,7 +2779,6 @@
                     link: /develop/api/open_community/#swan-closeCommunityEditor
                     text: swan.closeCommunityEditor
                     name: open_community_swan-closeCommunityEditor
-
               -
                 link: /develop/api/open_replyeditor
                 text: 原生半屏内容发布器
