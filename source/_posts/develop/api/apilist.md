@@ -158,7 +158,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-measureText/">canvasContext.measureText</a>|测量文本尺寸信息，目前仅返回文本宽度，同步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-strokeText/">canvasContext.strokeText</a>|给定的 (x, y) 位置绘制文本描边的方法。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>|设置虚线偏移量的属性。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-createPattern/">canvasContext.createPattern</a>|对指定的图像创建模式的方法，可在指定的方向上重复元图像。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>|创建三次方贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-quadraticCurveTot/">canvasContext.quadraticCurveTo</a>|创建二次贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-save/">canvasContext.save</a>|保存当前的绘图上下文。|
