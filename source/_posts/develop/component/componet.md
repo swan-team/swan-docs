@@ -13,7 +13,7 @@ sidebar:  componet
 |---- | ---- |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#view/">view</a>  | 视图容器 |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a>| 可滚动视图区域 |
-|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper/">swiper</a> |滑块视图容器 |  
+|<a href="https://smartprogram.baidu.com/docs/develop/component/view/#swiper/">swiper</a> |滑块视图容器 |
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#movable-area/">movable-area</a>|movable-view 的可移动区域|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a>|可移动的视图容器，在页面中可以拖拽滑动。|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-image/">cover-image</a>|覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view ，支持嵌套在 cover-view 里。|
@@ -33,6 +33,7 @@ sidebar:  componet
 |<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#switch/">switch</a>|开关选择器|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#textarea/">textarea</a>| 多行输入框|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/">navigator</a>|页面链接|
+|<a href="https://smartprogram.baidu.com/docs/develop/component/nav/#tabs/">tabs</a>|导航栏|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/media/#audio/">audio</a>|音频|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/media/#image/">image</a>|图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/component/media/#video/">video</a>|视频|

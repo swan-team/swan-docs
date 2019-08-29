@@ -97,6 +97,8 @@ App.after({
 
 * onTabItemTap
 
+* onURLQueryChange
+
 **示例代码：**
 
 ```js
