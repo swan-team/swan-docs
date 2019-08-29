@@ -5,11 +5,18 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.100 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.100.4|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**Breaking Change**<p>登录授权逻辑优化。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
+
 
 ## 3.90 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.90.14|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.90.6|2019.8.7|**BugFix**<p>**·**修复动态库小刷新问题；<p>**·**修复框架模块化循环引用时取不到前一个模块导出的问题。|
 
 
@@ -17,6 +24,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.80.27|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.80.8|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。<p>**BugFix**<p>修复setData(data, callback)callback回调里无法获取新增的组件实例的问题。|
 |3.80.6|2019.7.05|**BugFix**<p>修复 cover-view/cover-iamge transition 动画不生效的问题。|
 |3.80.2|2019.6.26|**New**<p>支持获取风控信息。<p>**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
@@ -25,6 +33,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.39|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.70.25|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.70.20|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
@@ -34,6 +43,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.60.36|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.60.32|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.60.27|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.60.25|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
@@ -45,6 +55,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.50.34|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.50.29|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.50.18|2019.6.5|**BugFix**<p>**·**修复模块化循环引用的报错；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题。|
 |3.50.16|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
