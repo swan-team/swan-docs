@@ -2038,10 +2038,6 @@
                         text: canvasContext.setLineDashOffset
                         name: show_canvas_canvasContext-setLineDashOffset
                       -
-                        link: /develop/api/show_canvas/#canvasContext-createPattern
-                        text: canvasContext.createPattern
-                        name: show_canvas_canvasContext.createPattern
-                      -
                         link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
                         text: canvasContext.bezierCurveTo
                         name: show_canvas_canvasContext-bezierCurveTo
