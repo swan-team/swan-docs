@@ -21,7 +21,7 @@ sidebar: nav
 |app-id|	String| | 否 |	当target="miniProgram"时有效，要打开的小程序 App Key (小程序后台设置-开发设置中)|	2.5.2
 |path|	String| | 否 | 当target="miniProgram"时有效，打开的页面路径，如果为空则打开首页。|	2.5.2|
 |extra-data|	Object| | 否 |	当target="miniProgram"时有效，需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_register/">详情</a>|	2.5.2|
-|version|	version|	release| 否 | 当target="miniProgram"时有效，要打开的小程序版本，有效值 develop（开发版），trial（体验版），release（正式版），仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。|2.5.2|
+|version|	String|	release| 否 | 当target="miniProgram"时有效，要打开的小程序版本，有效值 develop（开发版），trial（体验版），release（正式版），仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。|2.5.2|
 |hover-class | String  |navigator-hover | 否 |指定点击时的样式类，当`hover-class="none"`时，没有点击态效果。||
 |hover-stop-propagation | Boolean  | false | 否 |指定是否阻止本节点的祖先节点出现点击态。|-|
 |hover-start-time |Number | 50  | 否 | 按住后多久出现点击态，单位毫秒。 |-|
@@ -100,9 +100,13 @@ Page({
 });
 ```
 
-## tabs
+<!-- ## tabs
+
+
 
 **解释**：导航栏，用于让用户在不同的视图中进行切换。
+
+> 基础库 3.100.4 版本开始支持
 
 > 很多小程序都有在首页分垂类设置顶部导航的需求。通常开发者实现顶部导航的方式是通过 js 实现一个纯前端的切换。这样的实现使所有 tab 对应页面的 url 为同一个，从而导致 tab 页对搜索爬虫不可知。
 我们提供 tabs 和 tab-item 组件，你既可以把它作为一个基础的tab组件来使用，也可以利用它来动态的变更当前页面 url。使它更容易被搜索检索到。
@@ -123,7 +127,9 @@ Page({
 
 ## tab-item
 
-**解释** 搭配 tabs 一起使用，导航栏内单个 tab 内容
+**解释**： 搭配 tabs 一起使用，导航栏内单个 tab 内容。
+
+> 基础库 3.100.4 版本开始支持。
 
 |属性 | 类型 | 默认值 | 必填 | 说明 |最低版本|
 |---- | ---- | ---- |---- |---- |---- |
@@ -246,4 +252,4 @@ Page({
 	    // 此时tab切换，刷新tabs下方视图数据
     }
 });
-```
+``` -->

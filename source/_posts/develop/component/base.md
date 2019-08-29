@@ -200,7 +200,7 @@ Page({
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- | ---- |---- |
-| nodes | Array / String  | [] | 否 |节点列表 / HTML String|
+| nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String|
 | selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴等场景。 <font color="#4183c4">百度 APP 11.10 以上</font>|
 
 ### nodes

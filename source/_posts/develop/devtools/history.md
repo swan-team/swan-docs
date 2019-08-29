@@ -8,7 +8,7 @@ sidebar: history
 
 ### 最新正式版本（2.8.1） 
 
-* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
+* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#%E6%AD%A3%E5%BC%8F%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
 
@@ -16,7 +16,7 @@ sidebar: history
 
 > Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
 
-* 下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [Mac-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
+* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) /[Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=beta) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
 
 * [Beta版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#Beta%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
 

@@ -7,7 +7,7 @@ sidebar: open_replyeditor
 
 ## swan.openReplyEditor
 
-> 基础库 3.100.3 版本开始支持。以下版本请使用小程序发布器组件
+> 基础库 3.100.4 版本开始支持，以下版本请使用小程序发布器组件。
 
 **解释**： 调起原生半屏内容发布器，并支持开发者配置发布器展示模块。
 **方法参数**：Object object
@@ -98,6 +98,8 @@ swan.openReplyEditor({
 ```
 
 ## swan.closeReplyEditor
+
+> 基础库 3.100.4 版本开始支持，以下版本请使用小程序发布器组件。
 
 **解释**： 关闭原生半屏内容发布器
 

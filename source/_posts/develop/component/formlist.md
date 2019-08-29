@@ -22,10 +22,10 @@ sidebar: formlist
 | hover-stop-propagation|Boolean|false | 否 |指定是否阻止本节点的祖先节点出现点击态。|
 |hover-start-time | Number |20  | 否 |按住后多久出现点击态，单位毫秒。|
 |hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|
-| bindgetuserinfo |Handler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
 |disabled|Boolean|false| 否 |是否禁用|
 |loading|Boolean|false| 否 |名称前是否带有loading图标|
 |bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
+| bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
 | bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
 |contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
@@ -208,7 +208,7 @@ Page({
 
 ## checkbox-group
 
-**解释**：多项选择器，内部由多个 checkbox 组成
+**解释**：多选项目组，内部由多个 checkbox 组成
 
 
 |属性名 |类型  |默认值  | 必填 |说明|
@@ -275,9 +275,10 @@ Page({
 
 |属性名 |类型 | 默认值 | 必填 |说明|最低版本|
 |-----|---- |---- |----|----|----|
+|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: ''}	`|-|
 | bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|-|
-|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
+
 
 
 **示例：**
@@ -581,7 +582,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range | Array &#124; ` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
 | range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
@@ -619,7 +620,7 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | 二维 Array/` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range | 二维 Array &#124; ` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
 | range-key | String |  |当 range 是一个二维 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
@@ -830,7 +831,7 @@ Page({
 
 |属性名 |类型  |默认值|必填|说明|
 |---- | ---- |---- |---- |---- |
-| value |NumberArray  |[]|否|数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。|
+| value |`Array.<number>` |[]|否|数组中的数字依次表示 picker-view 内的 picker-view-colume 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。|
 |indicator-style | String ||否|设置选择器中间选中框的样式|
 |indicator-class | String ||否|设置选择器中间选中框的类名|
 |mask-style | String ||否|设置蒙层的样式 |

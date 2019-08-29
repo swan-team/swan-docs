@@ -70,10 +70,10 @@ sidebar: view
 |---- | ---- | ---- |---- |---|
 |scroll-x | Boolean  |  false  | 否 | 允许横向滚动|-|
 |scroll-y| Boolean  | false | 否 |允许纵向滚动|-|
-|upper-threshold| Number/String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|-|
-|lower-threshold| Number/String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|-|
-|scroll-top | Number/String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
-|scroll-left| Number/String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|-|
+|upper-threshold| Number &#124; String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|-|
+|lower-threshold| Number &#124; String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|-|
+|scroll-top | Number &#124; String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
+|scroll-left| Number &#124; String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|-|
 |scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|-|
 |scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|-|
 |enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |-|
