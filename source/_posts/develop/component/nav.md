@@ -241,7 +241,7 @@ Page({
     },
     onLoad(query) {
         if (query.city) {
-            // 如果页面加在的时候，query是预期的，则不需要调用 swan.setURLQuery
+            // 如果页面加载的时候，query是预期的，则不需要调用 swan.setURLQuery
             // 请求页面数据
         }
         swan.setURLQuery({
