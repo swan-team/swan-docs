@@ -960,14 +960,14 @@
                     link: /develop/component/nav/#navigator
                     text: navigator
                     name: nav_navigator
-                  # -
-                  #   link: /develop/component/nav/#tabs
-                  #   text: tabs
-                  #   name: nav_tabs
-                  # -
-                  #   link: /develop/component/nav/#tab-item
-                  #   text: tab-item
-                  #   name: nav_tab-item
+                  -
+                    link: /develop/component/nav/#tabs
+                    text: tabs
+                    name: nav_tabs
+                  -
+                    link: /develop/component/nav/#tab-item
+                    text: tab-item
+                    name: nav_tab-item
         -
             sidebar:
               -
