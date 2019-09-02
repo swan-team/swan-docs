@@ -8,6 +8,8 @@ sidebar: device_sys
 
 ## swan.getSystemInfo
 
+>  基础库 1.10.8 版本开始支持。
+
 **解释**：获取系统信息
 
 **方法参数**：Object object

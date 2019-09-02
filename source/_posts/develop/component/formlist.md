@@ -11,24 +11,24 @@ sidebar: formlist
 
 **解释**： 按钮
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-|size|String | default  | 否 |大小|
-| type | String | default | 否 |类型|
-| plain | Boolean  |false | 否 |按钮是否镂空，背景色透明。|
-|form-type |String  | buttonclick | 否 |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|
-|open-type | String |  | 否 |百度 App开放能力，比如分享、获取用户信息等等。|
-|hover-class |String  |button-hover | 否 |点击态。指定按钮按下去的样式类。当 ` hover-class="none"`  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|
-| hover-stop-propagation|Boolean|false | 否 |指定是否阻止本节点的祖先节点出现点击态。|
-|hover-start-time | Number |20  | 否 |按住后多久出现点击态，单位毫秒。|
-|hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|
-|disabled|Boolean|false| 否 |是否禁用|
-|loading|Boolean|false| 否 |名称前是否带有loading图标|
-|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|
-| bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|
-|bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|
-| bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|
-|contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
+|属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
+|---- | ---- | ---- |---- |---- |---- |
+|size|String | default  | 否 |大小|- |
+| type | String | default | 否 |类型|- |
+| plain | Boolean  |false | 否 |按钮是否镂空，背景色透明。|- |
+|form-type |String  | buttonclick | 否 |用于`<form/>`组件，点击分别会触发`<form/>`组件的  submit/reset 事件。|- |
+|open-type | String |  | 否 |百度 App开放能力，比如分享、获取用户信息等等。|- |
+|hover-class |String  |button-hover | 否 |点击态。指定按钮按下去的样式类。当 ` hover-class="none"`  时，没有点击态效果。 button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}。|- |
+| hover-stop-propagation|Boolean|false | 否 |指定是否阻止本节点的祖先节点出现点击态。|- |
+|hover-start-time | Number |20  | 否 |按住后多久出现点击态，单位毫秒。|- |
+|hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|- |
+|disabled|Boolean|false| 否 |是否禁用|- |
+|loading|Boolean|false| 否 |名称前是否带有loading图标|- |
+|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|1.12.14	|
+| bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|- |
+|bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|- |
+| bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|- |
+|contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|- |
 
 
 **size有效值**：
