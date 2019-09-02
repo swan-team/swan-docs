@@ -4,8 +4,9 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-03
-draft: true
 ---
+
+> 从 基础库 1.12.0 开始支持
 
 基于 ARCore 和 ARKit 的平面检测的 XR 会话实例。在 [swan.requestXRSession](/game/api/xr/requestXRSession/) 的 `mode` 传入 `'ar'` 的时候创建。
 

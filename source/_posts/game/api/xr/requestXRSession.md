@@ -6,7 +6,7 @@ categoryName: api
 priority: 10-01
 ---
 
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
+> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持。其中 `'ar'` 模式从 基础库 1.12.0 开始支持
 
 百度小游戏提供了 XR 系列接口用于开发 AR 游戏，目前该接口支持平面检测模式`'ar'`（基于 ARCore 和 ARKit），以及人脸模式 `'du_face'` 的 AR 效果。
 

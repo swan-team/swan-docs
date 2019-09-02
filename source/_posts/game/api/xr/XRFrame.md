@@ -4,9 +4,9 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-04
-draft: true
 ---
 
+> 从 基础库 1.12.0 开始支持
 
 平面模式的帧对象。调用 [XRSession#getFrame](/game/api/xr/XRSession/#getFrame) 返回。
 
