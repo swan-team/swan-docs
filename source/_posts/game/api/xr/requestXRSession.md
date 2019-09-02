@@ -6,7 +6,7 @@ categoryName: api
 priority: 10-01
 ---
 
-> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
+> 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持。其中 `'ar'` 模式从 基础库 1.12.0 开始支持
 
 百度小游戏提供了 XR 系列接口用于开发 AR 游戏，目前该接口支持平面检测模式`'ar'`（基于 ARCore 和 ARKit），以及人脸模式 `'du_face'` 的 AR 效果。
 
@@ -22,7 +22,7 @@ swan.requestXRSession(opts)
 |-|-|-|-|
 |opts|Object|是|传入的对象参数|
 |opts.mode|string|是| XR 的模式，支持传入 `'du_face'`，`'ar'`，如果传入其它模式或者不传入则会创建失败 |
-|opts.drawCameraBackground|boolean|否| 每一帧是否自动绘制相机的画面作为背景，默认为 `true`，即绘制，可以选择 `false` 不绘制通过 `getCameraVideo` 获取相机对象自己管理绘制。 |
+|opts.drawCameraBackground|boolean|否| 每一帧是否自动绘制相机的画面作为背景，默认为 `true`，即绘制，可以选择 `false` 不绘制通过 `getCameraVideo` 获取相机对象自己管理绘制。 `'ar'` 模式不支持该参数|
 |opts.success|function|是| 创建会话成功的回调，根据设置的模式传入 [XRSession](/game/api/xr/XRSession/) 或者 [DuXRSessionFaceMode](/game/api/xr/DuXRSessionFaceMode/) 对象 |
 |opts.fail|function|否| 创建会话失败的回调 |
 |opts.complete|function|否| 无论成功失败，接口调用完成的回调 |
