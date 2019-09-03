@@ -269,6 +269,22 @@ Page({
 |newURLQuery|Object| 改变后的 URL query |
 |oldURLQuery|Object| 改变前的 URL query |
 
+**示例代码**
+<a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onURLQueryChange({newURLQuery, oldURLQuery}) {
+        console.log(newURLQuery, oldURLQuery) //  输出结果为 {channel: 'movie'} {}
+    },
+    onLoad(query) {
+        if(!query.channel) {
+            swan.setURLQuery({channel: 'movie'})
+        }
+    }
+})
+```
+
 ## 组件事件处理函数
 
 **解释：**
