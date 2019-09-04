@@ -67,9 +67,9 @@ Page({
 }
 ```
 
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod *
 
 |错误码|说明|
 |--|--|
@@ -77,7 +77,7 @@ Page({
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
-**iOS**
+* iOS 
 
 |错误码|说明errMsg|
 |--|--|
@@ -85,7 +85,7 @@ Page({
 |7|安全校验失败|
 |errorCode为1|超过设置的最大task数量|
 |errorCode为2|url/subProtocals错误|
-|errorCode为3|创建task实例失败| -->
+|errorCode为3|创建task实例失败|
 
 ## swan.onSocketOpen
 
@@ -196,7 +196,21 @@ Page({
 }
 ```
 
+ 
+#### 错误码
 
+* Andriod
+
+|错误码|说明|
+|--|--|
+|0|error happen    |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+||Status error,current + 当前状态|
+||Excedding max concurrency + 设置的最大并发数|
 
 ## swan.sendSocketMessage
 
@@ -263,9 +277,9 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod 
  
 |错误码|说明|
 |--|--|
@@ -273,11 +287,11 @@ Page({
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
-**iOS**
+* iOS 
 
 |错误码|说明|
 |--|--|
-|4|参数有误 | -->
+|4|参数有误 |
 
 ## swan.onSocketMessage
 
@@ -418,15 +432,22 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+ 
+#### 错误码
 
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
+|202|解析失败，请检查参数是否正确  |
 |302|找不到调起协议对应端能力方法|
-|202|解析失败，请检查参数是否正确 |
-|1001|执行失败| -->
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|4|参数有误   |
 
 
 ## swan.onSocketClose
