@@ -242,9 +242,7 @@ Page({
 
 ## rich-text 富文本
 
-> nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
-
-**解释**： 富文本
+**解释**： 富文本，nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
 
 
 
@@ -464,10 +462,7 @@ Page({
 
 ## animation-view Lottie 动画
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
-
-
-**解释**：支持 Lottie 动画
+**解释**：支持 Lottie 动画，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 **百度APP中扫码体验：**
 

@@ -7,9 +7,7 @@ sidebar: canvas
 
 ## canvas 画布
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
-
-**解释**：画布
+**解释**：画布，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 
 

@@ -7,10 +7,7 @@ sidebar: media
 
 ## image 图片
 
-
-> image 组件默认宽度 300px、高度 225px。
-
-**解释**：图片
+**解释**：图片，image 组件默认宽度 300px、高度 225px。
 
 **百度APP中扫码体验：**
 
@@ -251,9 +248,7 @@ Page({
 ## video 视频
 
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
-
-**解释**：视频
+**解释**：视频，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
 **百度APP中扫码体验：**
 
@@ -689,10 +684,7 @@ Page({
 
 ## live-player 实时视频播放器
 
-
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。<br> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
-
-**解释**：实时视频播放器
+**解释**：实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 
 |一级类目|二级类目|

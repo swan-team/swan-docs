@@ -199,10 +199,7 @@ Page({
 
 ## form 表单
 
-**解释**：
-表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。
-
-当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
+**解释**：表单，将组件内的用户输入的`<switch/>   <input/>   <checkbox/>   <slider/>   <radio/>   <picker/>`提交。当点击`<form/>`表单中 form-type 为 submit 的`<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。
 
 **百度APP中扫码体验：**
 
@@ -280,8 +277,7 @@ Page({
 
 ## label 表单组件标签
 
-**解释：** 为鼠标用户改进表单的可用性。
-使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。目前可以绑定的控件有：`'<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
+**解释：** 为鼠标用户改进表单的可用性。使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。目前可以绑定的控件有：`'<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
 
 **百度APP中扫码体验：**
 
@@ -350,9 +346,7 @@ Page({
 ```
 ## input 输入框
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
-
-**解释**：输入框
+**解释**：输入框，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 **百度APP中扫码体验：**
 
@@ -506,9 +500,8 @@ Page({
 
 ## textarea 多行输入框
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-**解释**：多行输入框。
+**解释**：多行输入框。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
 
 
@@ -742,9 +735,7 @@ Page({
 
 ## radio-group 单项选择器组
 
-> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
-
-**解释**：单项选择器组，内部由多个radio组成
+**解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
 
 
