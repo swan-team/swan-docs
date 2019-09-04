@@ -921,7 +921,7 @@ Page({
 ```
 
 
-## picker-view 可嵌页面的滚动选择器
+## picker-view 滚动选择器
 
 **解释**： 可嵌页面的滚动选择器
 
@@ -945,7 +945,7 @@ Page({
 
 其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
 
-## picker-view-column 可嵌页面的滚动选择器子项
+## picker-view-column 滚动选择器子项
 
 **解释**：  可嵌页面的滚动选择器子项。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。
 

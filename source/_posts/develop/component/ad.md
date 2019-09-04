@@ -12,7 +12,7 @@ sidebar: ad
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/slider.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

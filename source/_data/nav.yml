@@ -937,13 +937,13 @@
                     text: slider 滑动选择器
                     name: formlist_slider-滑动选择器
                   -
-                    link: /develop/component/formlist/#picker-view-可嵌页面的滚动选择器
-                    text: picker-view 可嵌页面的滚动选择器
-                    name: formlist_picker-view-可嵌页面的滚动选择器
+                    link: /develop/component/formlist/#picker-view-滚动选择器
+                    text: picker-view 滚动选择器
+                    name: formlist_picker-view-滚动选择器
                   -
-                    link: /develop/component/formlist/#picker-view-column-可嵌页面的滚动选择器子项
-                    text: picker-view-column 可嵌页面的滚动选择器子项
-                    name: formlist_picker-view-column-可嵌页面的滚动选择器子项
+                    link: /develop/component/formlist/#picker-view-column-滚动选择器子项
+                    text: picker-view-column 滚动选择器子项
+                    name: formlist_picker-view-column-滚动选择器子项
                   -
                     link: /develop/component/formlist/#picker-底部弹起的滚动选择器
                     text: picker 底部弹起的滚动选择器 
