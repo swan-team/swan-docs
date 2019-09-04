@@ -516,7 +516,62 @@ swan.ai.facePersonIdmatch({
     }
 });
 ```
+##  swan.ai.faceLivenessSessioncode
 
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
+
+**解释**：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|appid | string| 是 | -|百度云创建应用时的唯一标识 ID | 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明** 
+
+|参数名 | 参数类型 |说明  | 
+|---|---|---|---|
+|log_id| Number|	唯一的log id，用于问题定位。|
+|error_no| Number|	错误码，错误码为0时，活体检测成功。|
+|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
+|session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
+|code | string |语音验证码，数字形式，3~6 位数字。| 
+
+
+
+**示例代码**
+
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+swan.ai.faceLivenessSessioncode({
+  appid: '',
+  success(res) {
+    console.log('res');
+  }
+});
+```
+
+**返回示例**
+```js
+{
+	"err_no": 0,
+	"err_msg": "SUCCESS",
+	"result": {
+		"session_id": "S59faeeebb9111890355690",
+		"code": "9940"
+	},
+	"timestamp": 1509617387,
+	"cached": 0,
+	"serverlogid": "0587756642"
+}
+```
 
 
 
@@ -680,7 +735,7 @@ swan.ai.faceLivenessVerify({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data | Array| 是 |-| 图片信息 | 
+|data | Array| 是 |-| 图片信息, 可以上传同一个用户的1张，3张或者8张图片来进行活体判断，后端会选择每组照片中的最高分数作为整体分数 |
 |success | Function | 否 |-| 接口调用成功后的回调函数 | 
 |fail | Function | 否 |-| 接口调用失败的回调函数 | 
 |complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -828,11 +883,11 @@ swan.ai.faceLivenessVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/59f2a60d4c30204b22e0bd0ce33c684a1566464969177" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-    count: 2,
+    count: 3,
     success(res) {
         swan.ai.faceVerify({
             data: [
@@ -843,6 +898,11 @@ swan.chooseImage({
                 },
                 {
                     "image": res.tempFilePaths[1],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                },
+                {
+                    "image": res.tempFilePaths[2],
                     "image_type": "BASE64",
                     "face_field": "age,beauty,expression"
                 }
@@ -924,5 +984,98 @@ swan.chooseImage({
         "beauty": 8.20657444
     }
 ]
+}
+``` -->
+
+
+
+
+<!-- ## swan.ai.faceLivenessVerify
+
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
+
+**解释**：H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|video_base64 | string| 是 |-| base64 编码后的视频数据（视频限制：最佳为上传 5-15s 的 mp4 文件。视频编码方式：h264 编码；音频编码格式：aac，pcm 均可。）| 
+|session_id | string| 否 |-| 语音校验码会话 ID，使用此接口的前提是已经调用了语音校验码接口。语音校验码作为辅助性质的验证条件，是一个可选项，如果应用场景比较嘈杂或方言口音比较重，可以不使用语音验证。  | 
+|success | Function | 否 | -|接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明**
+
+|参数名 | 参数类型 |说明  | 
+|---|---|---|---|
+|score | number |活体检测分数。此分数为视频分析结果，不包含语音验证结果，语音验证需开发基于自己的业务需求做判断。| 
+|thresholds | Array |阈值参考，实际业务应用中，请以 <score> 阈值判定通过，可直接选择不同误识别率的阈值，无需对应具体的分值，选择阈值参数即可。| 
+|code | Object |语音校验码信息| 
+|pic_list | Array |抽取图片信息列表| 
+
+**code参数说明**
+
+|参数名 | 参数类型 |说明  | 
+|---|---|---|---|
+|create | string |生成的校验码| 
+|identify | string |语音识别出来的校验码,通过 create 和 identify 两个字段的对比，可以判断上传的视频是否为现成录制。create 和 identify 两个字段的对比逻辑需要开发者基于自身业务逻辑进行判断和开发。| 
+
+**pic_list参数说明**
+
+|参数名 | 参数类型 |说明  | 
+|---|---|---|---|
+|face_id | string |face 唯一 ID| 
+|pic | string |base64 编码后的图片信息| 
+
+
+**示例代码**
+
+<a href="swanide://fragment/12de6980b19dad00f8239fafed3abea61559042410956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+swan.ai.faceLivenessVerify({
+  video_base64: '',
+  session_id: '',
+  success(res) {
+    console.log('res');
+  }
+});
+```
+
+**返回示例**
+```js
+{
+
+	err_no:0,
+	err_msg: 'success',
+	result: {
+		score: 0.984654366,
+		thresholds: {
+			"frr_1e-4": 0.05, //万分之一误识别率的阈值
+			"frr_1e-3": 0.3,  //千分之一误识别率的阈值
+			"frr_1e-2": 0.9   //百分之一误识别率的阈值
+   		},
+   		code: {
+     		"create": "5789",
+     		"identify": "5789"
+   		},
+   		pic_list: [
+   			{
+     			"face_id": 5745745747,
+     			"pic": "gsagaheryzxv..."
+   			},
+   			{
+     			"face_id": 5745745747,
+     			"pic": "gsagaheryzxv..."
+   			}
+   		]
+ 	},
+ 	"timestamp": 1509611848,
+ 	"cached": 0,
+ 	"serverlogid": "2248375729"
 }
 ``` -->

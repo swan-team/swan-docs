@@ -7,6 +7,7 @@ sidebar: show_background
 
 ## swan.setBackgroundColor
 
+> 基础库 3.10.4 版本开始支持。
 
 **解释**：设置窗口的背景颜色。
 
@@ -64,6 +65,7 @@ Page({
 
 ## swan.setBackgroundTextStyle
 
+> 基础库 3.10.4 版本开始支持。
 
 **解释**：设置窗口下拉背景loading样式。
 
