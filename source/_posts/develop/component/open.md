@@ -10,6 +10,11 @@ sidebar: open
 
 **解释：**用于展示百度 App 开放的数据。
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
+
 **属性说明：**
 
 
@@ -74,7 +79,9 @@ sidebar: open
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/web-view.png"  class="demo-qrcode-image" />
 **属性说明:**
 
 | 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |

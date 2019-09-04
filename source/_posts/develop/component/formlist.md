@@ -751,7 +751,7 @@ Page({
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio-group.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

@@ -10,7 +10,9 @@ sidebar: map
 
 **解释**：地图
 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/map.png"  class="demo-qrcode-image" />
 
 **属性说明**: 
 

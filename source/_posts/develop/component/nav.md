@@ -11,9 +11,11 @@ sidebar: nav
 
 **解释**：  页面链接，控制小程序的跳转，既可在当前小程序内部进行跳转，也可跳转至其他小程序。
 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigator.png"  class="demo-qrcode-image" />
 
-
+**属性说明**：
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |---- |
 |target|	String|	self| 否 |在哪个目标上发生跳转，默认当前小程序，可选值self/miniProgram|2.5.2|
