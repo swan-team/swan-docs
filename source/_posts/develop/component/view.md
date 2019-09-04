@@ -9,6 +9,10 @@ sidebar: view
 
 **解释**：视图容器。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
+
 **属性说明**：
 
 |属性名 |类型  |默认值  |说明|
@@ -61,8 +65,14 @@ sidebar: view
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
 ## scroll-view 可滚动视图区域
+
+> 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
+
 **解释**：可滚动视图区域。
-> 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scroll-view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -212,8 +222,13 @@ Page({
 
 ## swiper 滑块视图容器
 
-**解释**：滑块视图容器。
 > 内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
+
+**解释**：滑块视图容器。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -253,6 +268,12 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 ## swiper-item 滑块视图容器子项
 
 > 仅可放置在`<swiper>`组件中，宽高自动设置为100%。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper-item.png"  class="demo-qrcode-image" />
+
 
 **属性说明**：
 
@@ -387,8 +408,13 @@ Page({
 
 ## movable-view 可移动视图容器
 
-**解释**：可移动的视图容器，在页面中可以拖拽滑动。
 > movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movable-view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -531,8 +557,16 @@ Page({
 ```
 ## movable-area 可移动视图区域
 
-**解释**：`movable-view` 的可移动区域。
 > `movable-area` 必须设置width和height属性，不设置默认为10px。
+
+**解释**：`movable-view` 的可移动区域。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movable-area.png"  class="demo-qrcode-image" />
+
+**属性说明**：
 
 |属性名	|类型	|默认值| 必填 |	说明|
 |--|--|--|--|
@@ -540,9 +574,13 @@ Page({
 
 ## cover-view 文本视图
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 **解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
@@ -599,9 +637,15 @@ Page({
 
 ## cover-image 图片视图
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
+
 **解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-image.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
