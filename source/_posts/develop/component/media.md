@@ -7,9 +7,12 @@ sidebar: media
 
 ## image 图片
 
-**解释**：图片
 
 > image 组件默认宽度 300px、高度 225px。
+
+**解释**：图片
+
+
 
 **属性说明**：
 
@@ -241,9 +244,12 @@ Page({
 
 ## video 视频
 
-**解释**：视频
 
 > 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+**解释**：视频
+
+
 
 
 **属性说明**：
@@ -458,6 +464,7 @@ Page({
 * `<video />` 默认宽度 300px、高度 225px。
 
 ## camera 相机
+
 **解释**：系统相机
 
 **属性说明**：
@@ -596,9 +603,11 @@ Page({
 
 ## ar-camera AR相机
 
+> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
+
 **解释**：AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
-> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
+
 
 
 **属性说明**：
@@ -665,9 +674,11 @@ Page({
 
 ## live-player 实时视频播放器
 
-**解释**：实时视频播放器
 
 > 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。<br> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+
+**解释**：实时视频播放器
+
 
 |一级类目|二级类目|
 |--|--|

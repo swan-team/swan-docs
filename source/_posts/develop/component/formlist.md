@@ -506,9 +506,11 @@ Page({
 
 ## textarea 多行输入框
 
+> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 **解释**：多行输入框。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
 
 **百度APP中扫码体验：**
 
@@ -740,11 +742,12 @@ Page({
 
 ## radio-group 单项选择器组
 
+> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
 
 **解释**：单项选择器组，内部由多个radio组成
 
 
-> 代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
+
 
 **百度APP中扫码体验：**
 
@@ -868,7 +871,7 @@ Page({
 ```
 **Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
-<div></div>
+ 
 
 ## slider 滑动选择器
 
@@ -957,7 +960,7 @@ Page({
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view-column.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view.png"  class="demo-qrcode-image" />
 
 **示例**：
 <a href="swanide://fragment/3c91ac3d1d08ec0d7e5dd4033498dd311565503521188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
