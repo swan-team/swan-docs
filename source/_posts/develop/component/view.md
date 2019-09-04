@@ -5,7 +5,7 @@ nav: component
 sidebar: view
 ---
 
-## view
+## view 视图容器
 
 **解释**：视图容器。
 
@@ -60,7 +60,7 @@ sidebar: view
 1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
-## scroll-view
+## scroll-view 可滚动视图区域
 **解释**：可滚动视图区域。
 > 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height
 
@@ -210,7 +210,7 @@ Page({
 * 在设置 scroll-view 组件 height 属性不是内容可视区总高度时，使用 swan.pageScrollTo() API 无法生效。
 
 
-## swiper
+## swiper 滑块视图容器
 
 **解释**：滑块视图容器。
 > 内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
@@ -250,7 +250,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 * 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
 * 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
 
-## swiper-item
+## swiper-item 滑块视图容器子项
 
 > 仅可放置在`<swiper>`组件中，宽高自动设置为100%。
 
@@ -383,16 +383,10 @@ Page({
     }
 });
 ```
-## movable-area
 
-**解释**：`movable-view` 的可移动区域。
-> `movable-area` 必须设置width和height属性，不设置默认为10px。
 
-|属性名	|类型	|默认值| 必填 |	说明|
-|--|--|--|--|
-|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+## movable-view 可移动视图容器
 
-## movable-view
 **解释**：可移动的视图容器，在页面中可以拖拽滑动。
 > movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
 
@@ -535,8 +529,16 @@ Page({
     }
 });
 ```
+## movable-area 可移动视图区域
 
-## cover-view
+**解释**：`movable-view` 的可移动区域。
+> `movable-area` 必须设置width和height属性，不设置默认为10px。
+
+|属性名	|类型	|默认值| 必填 |	说明|
+|--|--|--|--|
+|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+
+## cover-view 文本视图
 
 **解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。
 
@@ -595,7 +597,7 @@ Page({
     </div>
 </div>
 
-## cover-image
+## cover-image 图片视图
 
 **解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
 

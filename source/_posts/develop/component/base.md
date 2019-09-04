@@ -5,89 +5,15 @@ nav: component
 sidebar: base
 ---
 
-## icon
 
-**解释**： 图标
-**属性说明**:
-
-|属性名|类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- | ---- |---- |
-|type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
-|size | Number  |23 | 否 |icon 的大小，单位是 px|
-|color | Color |   | 否 |icon 的颜色，同 css 的 color|
-
-**type 有效值**:
-
-| 值 | 说明 |
-| ---- | ---- |
-| success | 成功图标 |
-| info | 消息图标 |
-| warn | 警告图标 |
-| waiting | 等待图标 |
-| success_no_circle | 无圆形边框成功图标 |
-| clear | 删除图标 |
-| search | 搜索图标 |
-| personal | 人物图标 |
-| setting | 设置图标 |
-| top | 回到顶部图标 |
-| close | 关闭图标 |
-| cancel | 取消图标 |
-| download | 下载图标 |
-| checkboxSelected | 复选框选中图标 |
-| radioSelected | 单选框选中图标 |
-| radioUnselect | 单选框未选中图标 |
-| loadingGrey | loading图标 |
-
-**示例**：
-<a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <view class="title">默认样式</view>
-    <view class="group">
-        <view>
-            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
-        </view>
-    </view>
-
-    <view class="title">尺寸选择</view>
-    <view class="group choose">
-        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
-    </view>
-
-    <view class="title">颜色选择</view>
-    <view class="group choose">
-        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
-    </view>
-</view>
-```
-
-* 在 js 文件中
-
-```js
-Page({
-    data: {
-        types: {
-            smallDefault: ['success', 'info', 'warn', 'waiting',
-            'success_no_circle', 'clear', 'search', 'personal',
-            'setting', 'top', 'close', 'cancel', 'download',
-            'checkboxSelected', 'radioSelected', 'radioUnselect']
-        },
-        colors: [
-            '#333', '#666', '#999', '#3C76FF', '#F7534F'
-        ],
-        sizes: [
-            40, 35, 30, 25
-        ]
-    }
-});
-```
-
-## text
+## text 文本
 
 **解释**：文本元素
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/text.png"  class="demo-qrcode-image" />
+
 **属性说明:**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
@@ -190,11 +116,140 @@ Page({
 * `<text/>`组件内只支持`<text/>`嵌套，注意被嵌套的text绑定事件无法触发。
 
 
-## rich-text
+
+## icon 图标
+
+**解释**： 图标
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/icon.png"  class="demo-qrcode-image" />
+
+**属性说明**:
+
+|属性名|类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- | ---- |---- |
+|type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
+|size | Number  |23 | 否 |icon 的大小，单位是 px|
+|color | Color |   | 否 |icon 的颜色，同 css 的 color|
+
+**type 有效值**:
+
+| 值 | 说明 |
+| ---- | ---- |
+| success | 成功图标 |
+| info | 消息图标 |
+| warn | 警告图标 |
+| waiting | 等待图标 |
+| success_no_circle | 无圆形边框成功图标 |
+| clear | 删除图标 |
+| search | 搜索图标 |
+| personal | 人物图标 |
+| setting | 设置图标 |
+| top | 回到顶部图标 |
+| close | 关闭图标 |
+| cancel | 取消图标 |
+| download | 下载图标 |
+| checkboxSelected | 复选框选中图标 |
+| radioSelected | 单选框选中图标 |
+| radioUnselect | 单选框未选中图标 |
+| loadingGrey | loading图标 |
+
+**示例**：
+<a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="group">
+        <view>
+            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+        </view>
+    </view>
+
+    <view class="title">尺寸选择</view>
+    <view class="group choose">
+        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
+    </view>
+
+    <view class="title">颜色选择</view>
+    <view class="group choose">
+        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        types: {
+            smallDefault: ['success', 'info', 'warn', 'waiting',
+            'success_no_circle', 'clear', 'search', 'personal',
+            'setting', 'top', 'close', 'cancel', 'download',
+            'checkboxSelected', 'radioSelected', 'radioUnselect']
+        },
+        colors: [
+            '#333', '#666', '#999', '#3C76FF', '#F7534F'
+        ],
+        sizes: [
+            40, 35, 30, 25
+        ]
+    }
+});
+```
+
+## progress 进度条
+
+**解释**：进度条
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/progress.png"  class="demo-qrcode-image" />
+
+**属性说明**：
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+| percent | Float  | | 否 |百分比 0~100 |
+| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
+| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
+| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
+| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
+| active | Boolean  | false  | 否 |进度条从左往右的动画	|
+| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
+
+**示例**：
+<a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <progress class="progress" percent="20" activeColor="#3c76ff" show-info />
+    <progress class="progress" percent="40" activeColor="#3c76ff" active />
+    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
+    <progress class="progress" percent="70" color="#3c76ff" active/>
+    <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
+</view>
+
+```
+
+
+## rich-text 富文本
+
 
 **解释**： 富文本
 
 > nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rich-text.png"  class="demo-qrcode-image" />
 
 **属性说明:**
 
@@ -405,47 +460,17 @@ Page({
 
 
 
-## progress
 
-**解释**：进度条
-
-**属性说明**：
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-| percent | Float  | | 否 |百分比 0~100 |
-| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
-| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
-| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
-| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
-| active | Boolean  | false  | 否 |进度条从左往右的动画	|
-| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
-
-**示例**：
-<a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <progress class="progress" percent="20" activeColor="#3c76ff" show-info />
-    <progress class="progress" percent="40" activeColor="#3c76ff" active />
-    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
-    <progress class="progress" percent="70" color="#3c76ff" active/>
-    <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
-</view>
-
-```
-
-
-
-## animation-view
+## animation-view Lottie 动画
 
 > 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 
 **解释**：支持 Lottie 动画
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/animation-view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

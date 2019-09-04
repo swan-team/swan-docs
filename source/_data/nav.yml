@@ -825,37 +825,38 @@
                 name: view
                 sidebar:
                   -
-                    link: /develop/component/view/#view
-                    text: view
-                    name: view_view
+                    link: /develop/component/view/#view-视图容器
+                    text: view 视图容器
+                    name: view_view-视图容器
                   -
-                    link: /develop/component/view/#scroll-view
-                    text: scroll-view
-                    name: view_scroll-view
+                    link: /develop/component/view/#scroll-view-可滚动视图区域
+                    text: scroll-view 可滚动视图区域
+                    name: view_scroll-view-可滚动视图区域
                   -
-                    link: /develop/component/view/#swiper
-                    text: swiper
-                    name: view_swiper
+                    link: /develop/component/view/#swiper-滑块视图容器
+                    text: swiper 滑块视图容器
+                    name: view_swiper-滑块视图容器
                   -
-                    link: /develop/component/view/#swiper-item
-                    text: swiper-item
-                    name: view_swiper-item
+                    link: /develop/component/view/#swiper-item-滑块视图容器子项
+                    text: swiper-item 滑块视图容器子项
+                    name: view_swiper-item-滑块视图容器子项
                   -
-                    link: /develop/component/view/#movable-area
-                    text: movable-area
-                    name: view_movable-area
+                    link: /develop/component/view/#movable-view-可移动视图容器
+                    text: movable-view 可移动视图容器
+                    name: view_movable-view-可移动视图容器                    
                   -
-                    link: /develop/component/view/#movable-view
-                    text: movable-view
-                    name: view_movable-view
+                    link: /develop/component/view/#movable-area-可移动视图区域
+                    text: movable-area 可移动视图区域
+                    name: view_movable-area-可移动视图区域
+
                   -
-                    link: /develop/component/view/#cover-view
-                    text: cover-view
-                    name: view_cover-view
+                    link: /develop/component/view/#cover-view-文本视图
+                    text: cover-view 文本视图
+                    name: view_cover-view-文本视图
                   -
-                    link: /develop/component/view/#cover-image
-                    text: cover-image
-                    name: view_cover-image
+                    link: /develop/component/view/#cover-image-图片视图
+                    text: cover-image 图片视图
+                    name: view_cover-image-图片视图
         -
             sidebar:
               -
@@ -864,25 +865,26 @@
                 name: base
                 sidebar:
                   -
-                    link: /develop/component/base/#icon
-                    text:  icon
-                    name: base_icon
+                    link: /develop/component/base/#text-文本
+                    text:  text 文本
+                    name: base_text-文本                  
                   -
-                    link: /develop/component/base/#text
-                    text:  text
-                    name: base_text
+                    link: /develop/component/base/#icon-图标
+                    text:  icon 图标
+                    name: base_icon-图标
                   -
-                    link: /develop/component/base/#rich-text
-                    text:  rich-text
-                    name: base_rich-text
+                    link: /develop/component/base/#progress-进度条
+                    text:  progress 进度条
+                    name: base_progress-进度条
                   -
-                    link: /develop/component/base/#progress
-                    text:  progress
-                    name: base_progress
+                    link: /develop/component/base/#rich-text-富文本
+                    text:  rich-text 富文本
+                    name: base_rich-text-富文本
+
                   -
-                    link: /develop/component/base/#animation-view
-                    text:  animation-view
-                    name: base_animation-view
+                    link: /develop/component/base/#animation-view-Lottie-动画
+                    text:  animation-view Lottie 动画
+                    name: base_animation-view-Lottie-动画
         -
             sidebar:
               -
@@ -891,64 +893,61 @@
                 name: formlist
                 sidebar:
                   -
-                    link: /develop/component/formlist/#button
-                    text: button
-                    name: formlist_button
+                    link: /develop/component/formlist/#button-按钮
+                    text: button 按钮
+                    name: formlist_button-按钮
                   -
-                    link: /develop/component/formlist/#checkbox
-                    text: checkbox
-                    name: formlist_checkbox
+                    link: /develop/component/formlist/#form-表单
+                    text: form 表单
+                    name: formlist_form-表单  
                   -
-                    link: /develop/component/formlist/#checkbox-group
-                    text: checkbox-group
-                    name: formlist_checkbox-group
+                    link: /develop/component/formlist/#label-表单组件标签
+                    text: label 表单组件标签
+                    name: formlist_label-表单组件标签    
                   -
-                    link: /develop/component/formlist/#form
-                    text: form
-                    name: formlist_form
+                    link: /develop/component/formlist/#input-输入框
+                    text: input 输入框
+                    name: formlist_input-输入框
                   -
-                    link: /develop/component/formlist/#input
-                    text: input
-                    name: formlist_input
+                    link: /develop/component/formlist/#textarea-多行输入框
+                    text: textarea 多行输入框
+                    name: formlist_textarea-多行输入框
                   -
-                    link: /develop/component/formlist/#label
-                    text: label
-                    name: formlist_label
+                    link: /develop/component/formlist/#checkbox-多项选择器
+                    text: checkbox 多项选择器
+                    name: formlist_checkbox-多项选择器
                   -
-                    link: /develop/component/formlist/#picker
-                    text: picker
-                    name: formlist_picker
+                    link: /develop/component/formlist/#checkbox-group-多项选择器组
+                    text: checkbox-group 多项选择器组
+                    name: formlist_checkbox-group-多项选择器组
                   -
-                    link: /develop/component/formlist/#picker-view
-                    text: picker-view
-                    name: formlist_picker-view
+                    link: /develop/component/formlist/#radio-单项选择器
+                    text: radio 单项选择器
+                    name: formlist_radio-单项选择器
                   -
-                    link: /develop/component/formlist/#picker-view-column
-                    text: picker-view-column
-                    name: formlist_picker-view-column
-
+                    link: /develop/component/formlist/#radio-group-单项选择器组
+                    text: radio-group 单项选择器组
+                    name: formlist_radio-group-单项选择器组
                   -
-                    link: /develop/component/formlist/#radio
-                    text: radio
-                    name: formlist_radio
-
+                    link: /develop/component/formlist/#switch-开关选择器
+                    text: switch 开关选择器
+                    name: formlist_switch-开关选择器
                   -
-                    link: /develop/component/formlist/#radio-group
-                    text: radio-group
-                    name: formlist_radio-group
-
+                    link: /develop/component/formlist/#slider-滑动选择器
+                    text: slider 滑动选择器
+                    name: formlist_slider-滑动选择器
                   -
-                    link: /develop/component/formlist/#slider
-                    text: slider
-                    name: formlist_slider
+                    link: /develop/component/formlist/#picker-view-可嵌页面的滚动选择器
+                    text: picker-view 可嵌页面的滚动选择器
+                    name: formlist_picker-view-可嵌页面的滚动选择器
                   -
-                    link: /develop/component/formlist/#switch
-                    text: switch
-                    name: formlist_switch
+                    link: /develop/component/formlist/#picker-view-column-可嵌页面的滚动选择器子项
+                    text: picker-view-column 可嵌页面的滚动选择器子项
+                    name: formlist_picker-view-column-可嵌页面的滚动选择器子项
                   -
-                    link: /develop/component/formlist/#textarea
-                    text: textarea
-                    name: formlist_textarea
+                    link: /develop/component/formlist/#picker-底部弹起的滚动选择器
+                    text: picker 底部弹起的滚动选择器 
+                    name: formlist_picker-底部弹起的滚动选择器
         -
             sidebar:
               -
@@ -957,17 +956,17 @@
                 name: nav
                 sidebar:
                   -
-                    link: /develop/component/nav/#navigator
-                    text: navigator
-                    name: nav_navigator
+                    link: /develop/component/nav/#navigator-页面导航
+                    text: navigator 页面导航
+                    name: nav_navigator-页面导航
                   # -
-                  #   link: /develop/component/nav/#tabs
-                  #   text: tabs
-                  #   name: nav_tabs
+                  #   link: /develop/component/nav/#tabs-导航
+                  #   text: tabs 导航
+                  #   name: nav_tabs-导航
                   # -
-                  #   link: /develop/component/nav/#tab-item
-                  #   text: tab-item
-                  #   name: nav_tab-item
+                  #   link: /develop/component/nav/#tab-item-导航内容
+                  #   text: tab-item 导航内容
+                  #   name: nav_tab-item-导航内容
         -
             sidebar:
               -
@@ -976,29 +975,29 @@
                   name: media
                   sidebar:
                     -
-                      link: /develop/component/media/#audio
-                      text: audio
-                      name: media_audio
+                      link: /develop/component/media/#image-图片
+                      text: image 图片
+                      name: media_image-图片                    
                     -
-                      link: /develop/component/media/#image
-                      text: image
-                      name: media_image
+                      link: /develop/component/media/#audio-音频
+                      text: audio 音频
+                      name: media_audio-音频
                     -
-                      link: /develop/component/media/#video
-                      text: video
-                      name: media_video
+                      link: /develop/component/media/#video-视频
+                      text: video 视频
+                      name: media_video-视频
                     -
-                      link: /develop/component/media/#camera
-                      text: camera
-                      name: media_camera
+                      link: /develop/component/media/#camera-相机
+                      text: camera 相机
+                      name: media_camera-相机
                     -
-                      link: /develop/component/media/#ar-camera
-                      text: ar-camera
-                      name: media_ar-camera
+                      link: /develop/component/media/#ar-camera-AR相机
+                      text: ar-camera AR相机
+                      name: media_ar-camera-AR相机
                     -
-                      link: /develop/component/media/#live-player
-                      text: live-player
-                      name: media_live-player
+                      link: /develop/component/media/#live-player-实时视频播放器
+                      text: live-player 实时视频播放器
+                      name: media_live-player-实时视频播放器
 
         -
             sidebar:
@@ -1008,9 +1007,9 @@
                 name: map
                 sidebar:
                   -
-                    link: /develop/component/map/#map
-                    text: map
-                    name: map
+                    link: /develop/component/map/#map-地图
+                    text: map 地图
+                    name: map-地图
         -
             sidebar:
                 -
@@ -1019,9 +1018,9 @@
                   name: canvas
                   sidebar:
                     -
-                      link: /develop/component/canvas/#canvas
-                      text: canvas
-                      name: canvas_canvas
+                      link: /develop/component/canvas/#canvas-画布
+                      text: canvas 画布
+                      name: canvas_canvas-画布
         -
             sidebar:
                 -
@@ -1030,13 +1029,13 @@
                   name: open
                   sidebar:
                     -
-                      link: /develop/component/open/#open-data
-                      text: open-data
-                      name: open_open-data
+                      link: /develop/component/open/#open-data-开放数据
+                      text: open-data 开放数据
+                      name: open_open-data-开放数据
                     -
-                      link: /develop/component/open/#web-view
-                      text: web-view
-                      name: open_web-view
+                      link: /develop/component/open/#web-view-网页容器
+                      text: web-view 网页容器
+                      name: open_web-view-网页容器
         -
             sidebar:
                 -
@@ -1045,9 +1044,9 @@
                   name: ad
                   sidebar:
                     -
-                      link: /develop/component/ad/#ad
-                      text: ad
-                      name: ad_ad
+                      link: /develop/component/ad/#ad-广告
+                      text: ad 广告
+                      name: ad_ad-广告
 
     -
       link: /develop/api/api

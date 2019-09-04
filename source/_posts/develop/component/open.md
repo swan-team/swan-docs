@@ -6,7 +6,7 @@ sidebar: open
 ---
 
 
-## open-data
+## open-data 开放数据
 
 **解释：**用于展示百度 App 开放的数据。
 
@@ -70,7 +70,7 @@ sidebar: open
 
 
 
-## web-view
+## web-view 网页容器
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 

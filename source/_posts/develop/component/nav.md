@@ -5,7 +5,7 @@ nav: component
 sidebar: nav
 ---
 
-## navigator
+## navigator 页面导航
 
 **解释**：  页面链接，控制小程序的跳转，既可在当前小程序内部进行跳转，也可跳转至其他小程序。
 
