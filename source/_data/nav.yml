@@ -1405,38 +1405,38 @@
                   text: swan.getRecorderManager
                   name: media_recorder_swan-getRecorderManager
                 -
-                  link: /develop/api/media_recorder/#recorderManager
-                  text: recorderManager
-                  name: media_recorder_recorderManager
+                  link: /develop/api/media_recorder/#RecorderManager
+                  text: RecorderManager
+                  name: media_recorder_RecorderManager
                   sidebar:
                     -
-                      link: /develop/api/media_recorder/#recorderManager-start
-                      text: recorderManager.start
-                      name: media_recorder_recorderManager-start
+                      link: /develop/api/media_recorder/#RecorderManager-start
+                      text: RecorderManager.start
+                      name: media_recorder_RecorderManager-start
                     -
-                      link: /develop/api/media_recorder/#recorderManager-pause
-                      text: recorderManager.pause
-                      name: media_recorder_recorderManager-pause
+                      link: /develop/api/media_recorder/#RecorderManager-pause
+                      text: RecorderManager.pause
+                      name: media_recorder_RecorderManager-pause
                     -
-                      link: /develop/api/media_recorder/#recorderManager-resume
-                      text: recorderManager.resume
-                      name: media_recorder_recorderManager-resume
+                      link: /develop/api/media_recorder/#RecorderManager-resume
+                      text: RecorderManager.resume
+                      name: media_recorder_RecorderManager-resume
                     -
-                      link: /develop/api/media_recorder/#recorderManager-stop
-                      text: recorderManager.stop
-                      name: media_recorder_recorderManager-stop
+                      link: /develop/api/media_recorder/#RecorderManager-stop
+                      text: RecorderManager.stop
+                      name: media_recorder_RecorderManager-stop
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onStart
-                      text: recorderManager.onStart
-                      name: media_recorder_recorderManager-onStart
+                      link: /develop/api/media_recorder/#RecorderManager-onStart
+                      text: RecorderManager.onStart
+                      name: media_recorder_RecorderManager-onStart
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onPause
-                      text: recorderManager.onPause
-                      name: media_recorder_recorderManager-onPause
+                      link: /develop/api/media_recorder/#RecorderManager-onPause
+                      text: RecorderManager.onPause
+                      name: media_recorder_RecorderManager-onPause
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onStop
-                      text: recorderManager.onStop
-                      name: media_recorder_recorderManager-onStop
+                      link: /develop/api/media_recorder/#RecorderManager-onStop
+                      text: RecorderManager.onStop
+                      name: media_recorder_RecorderManager-onStop
                 - link: /develop/api/media_recorder/#swan-getAvailableAudioSources
                   text: swan.getAvailableAudioSources
                   name: media_recorder_swan-getAvailableAudioSources
@@ -1450,74 +1450,74 @@
                   text: swan.getBackgroundAudioManager
                   name: media_backgroundaudiomanager_swan-getBackgroundAudioManager
                 -
-                  link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
-                  text: backgroundAudioManager
-                  name: media_backgroundaudiomanager_backgroundAudioManager
+                  link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager
+                  text: BackgroundAudioManager
+                  name: media_backgroundaudiomanager_BackgroundAudioManager
                   sidebar:
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-play
-                      text: backgroundAudioManager.play
-                      name: media_backgroundaudiomanager_backgroundAudioManager-play
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-play
+                      text: BackgroundAudioManager.play
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-play
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-pause
-                      text: backgroundAudioManager.pause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-pause
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-pause
+                      text: BackgroundAudioManager.pause
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-pause
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-stop
-                      text: backgroundAudioManager.stop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-stop
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-stop
+                      text: BackgroundAudioManager.stop
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-stop
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-seek
-                      text: backgroundAudioManager.seek
-                      name: media_backgroundaudiomanager_backgroundAudioManager-seek
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-seek
+                      text: BackgroundAudioManager.seek
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-seek
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onCanplay
-                      text: backgroundAudioManager.onCanplay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onCanplay
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onCanplay
+                      text: BackgroundAudioManager.onCanplay
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onCanplay
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPlay
-                      text: backgroundAudioManager.onPlay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPlay
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPlay
+                      text: BackgroundAudioManager.onPlay
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPlay
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPause
-                      text: backgroundAudioManager.onPause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPause
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPause
+                      text: BackgroundAudioManager.onPause
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPause
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onStop
-                      text: backgroundAudioManager.onStop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onStop
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onStop
+                      text: BackgroundAudioManager.onStop
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onStop
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onEnded
-                      text: backgroundAudioManager.onEnded
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onEnded
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onEnded
+                      text: BackgroundAudioManager.onEnded
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onEnded
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onTimeUpdate
-                      text: backgroundAudioManager.onTimeUpdate
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onTimeUpdate
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onTimeUpdate
+                      text: BackgroundAudioManager.onTimeUpdate
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onTimeUpdate
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onError
-                      text: backgroundAudioManager.onError
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onError
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onError
+                      text: BackgroundAudioManager.onError
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onError
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onWaiting
-                      text: backgroundAudioManager.onWaiting
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onWaiting
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onWaiting
+                      text: BackgroundAudioManager.onWaiting
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onWaiting
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeked
-                      text: backgroundAudioManager.onSeeked
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeked
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeked
+                      text: BackgroundAudioManager.onSeeked
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onSeeked
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
-                      text: backgroundAudioManager.onSeeking
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeking
+                      text: BackgroundAudioManager.onSeeking
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onSeeking
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onNext
-                      text: backgroundAudioManager.onNext
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onNext
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onNext
+                      text: BackgroundAudioManager.onNext
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onNext
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
-                      text: backgroundAudioManager.onPrev
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPrev
+                      text: BackgroundAudioManager.onPrev
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPrev
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -1559,42 +1559,42 @@
                   text: swan.createVideoContext
                   name: media_videocontext_swan-createVideoContext
                 -
-                  link: /develop/api/media_videocontext/#videoContext
-                  text: videoContext
-                  name: media_videocontext_videoContext
+                  link: /develop/api/media_videocontext/#VideoContext
+                  text: VideoContext
+                  name: media_videocontext_VideoContext
                   sidebar:
                     -
-                      link: /develop/api/media_videocontext/#videoContext-play
-                      text: videoContext.play
-                      name: media_videocontext_videoContext-play
+                      link: /develop/api/media_videocontext/#VideoContext-play
+                      text: VideoContext.play
+                      name: media_videocontext_VideoContext-play
                     -
-                      link: /develop/api/media_videocontext/#videoContext-pause
-                      text: videoContext.pause
-                      name: media_videocontext_videoContext-pause
+                      link: /develop/api/media_videocontext/#VideoContext-pause
+                      text: VideoContext.pause
+                      name: media_videocontext_VideoContext-pause
                     -
-                      link: /develop/api/media_videocontext/#videoContext-seek
-                      text: videoContext.seek
-                      name: media_videocontext_videoContext-seek
+                      link: /develop/api/media_videocontext/#VideoContext-seek
+                      text: VideoContext.seek
+                      name: media_videocontext_VideoContext-seek
                     -
-                      link: /develop/api/media_videocontext/#videoContext-sendDanmu
-                      text: videoContext.sendDanmu
-                      name: media_videocontext_videoContext-sendDanmu
+                      link: /develop/api/media_videocontext/#VideoContext-sendDanmu
+                      text: VideoContext.sendDanmu
+                      name: media_videocontext_VideoContext-sendDanmu
                     -
-                      link: /develop/api/media_videocontext/#videoContext-requestFullScreen
-                      text: videoContext.requestFullScreen
-                      name: media_videocontext_videoContext-requestFullScreen
+                      link: /develop/api/media_videocontext/#VideoContext-requestFullScreen
+                      text: VideoContext.requestFullScreen
+                      name: media_videocontext_VideoContext-requestFullScreen
                     -
-                      link: /develop/api/media_videocontext/#videoContext-exitFullScreen
-                      text: videoContext.exitFullScreen
-                      name: media_videocontext_videoContext-exitFullScreen
+                      link: /develop/api/media_videocontext/#VideoContext-exitFullScreen
+                      text: VideoContext.exitFullScreen
+                      name: media_videocontext_VideoContext-exitFullScreen
                     -
-                      link: /develop/api/media_videocontext/#videoContext-showStatusBar
-                      text: videoContext.showStatusBar
-                      name: media_videocontext_videoContext-showStatusBar
+                      link: /develop/api/media_videocontext/#VideoContext-showStatusBar
+                      text: VideoContext.showStatusBar
+                      name: media_videocontext_VideoContext-showStatusBar
                     -
-                      link: /develop/api/media_videocontext/#videoContext-hideStatusBar
-                      text: videoContext.hideStatusBar
-                      name: media_videocontext_videoContext-hideStatusBar
+                      link: /develop/api/media_videocontext/#VideoContext-hideStatusBar
+                      text: VideoContext.hideStatusBar
+                      name: media_videocontext_VideoContext-hideStatusBar
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
@@ -1605,34 +1605,34 @@
                   text: swan.createLivePlayerContext
                   name: media_liveplayercontext_swan-createLivePlayerContext
                 -
-                  link:  /develop/api/media_liveplayercontext/#livePlayerContext
-                  text: livePlayerContext
-                  name: media_liveplayercontext_livePlayerContext
+                  link:  /develop/api/media_liveplayercontext/#LivePlayerContext
+                  text: LivePlayerContext
+                  name: media_liveplayercontext_LivePlayerContext
                   sidebar:
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-play
-                      text: livePlayerContext.play
-                      name: media_liveplayercontext_livePlayerContext-play
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-play
+                      text: LivePlayerContext.play
+                      name: media_liveplayercontext_LivePlayerContext-play
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-stop
-                      text: livePlayerContext.stop
-                      name: media_liveplayercontext_livePlayerContext-stop
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-stop
+                      text: LivePlayerContext.stop
+                      name: media_liveplayercontext_LivePlayerContext-stop
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-mute
-                      text: livePlayerContext.mute
-                      name: media_liveplayercontext_livePlayerContext-mute
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-mute
+                      text: LivePlayerContext.mute
+                      name: media_liveplayercontext_LivePlayerContext-mute
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-pause
-                      text: livePlayerContext.pause
-                      name: media_liveplayercontext_livePlayerContext-pause
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-pause
+                      text: LivePlayerContext.pause
+                      name: media_liveplayercontext_LivePlayerContext-pause
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-requestFullScreen
-                      text: livePlayerContext.requestFullScreen
-                      name: media_liveplayercontext_livePlayerContext-requestFullScreen
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-requestFullScreen
+                      text: LivePlayerContext.requestFullScreen
+                      name: media_liveplayercontext_LivePlayerContext-requestFullScreen
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-exitFullScreen
-                      text: livePlayerContext.exitFullScreen
-                      name: media_liveplayercontext_livePlayerContext-exitFullScreen
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-exitFullScreen
+                      text: LivePlayerContext.exitFullScreen
+                      name: media_liveplayercontext_LivePlayerContext-exitFullScreen
 
             -
               link: /develop/api/media_cameracontext
