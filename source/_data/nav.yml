@@ -3528,10 +3528,6 @@
               text: 版本分布
               name: version
             -
-              link: /develop/swan/shine
-              text: 与客户端版本映射关系
-              name: shine
-            -
               link: /develop/swan/swanchangelog
               text: 历史更新日志
               name: swanchangelog
