@@ -23,7 +23,7 @@ sidebar: base_app_event
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
 **示例代码**
-<a href="swanide://fragment/e7ce55be1f58e8d42fd83468d4ed38201566501983565" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3a13a179e4089fc5eb246675244a37551567703460426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -60,7 +60,7 @@ App({
 错误信息，包含堆栈。
 
 **示例代码**
-<a href="swanide://fragment/1f5741b28af61c1dc141dce9dae97ccd1566503302868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/586c93bf9be6677849b96b75d4a197001567705705833" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -143,7 +143,7 @@ App({
 小程序切后台事件的回调函数。
 
 **示例代码**
-<a href="swanide://fragment/68efdbea47c9b3e53b195a77a9f363a41566502693436" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c5245a3754670b23afe52bbf27570d91567705983829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -166,7 +166,7 @@ App({
 小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 **示例代码**
-<a href="swanide://fragment/767889c204af72c74cd0549416f9ebdc1566503119420" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/89c7e6b8401b308e07556874b8467b271567706228311" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -193,7 +193,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/e660f8c2675de855fac6cd377086f3491566503524654" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d08a55a9db6a51a7646cb4ded4c0eca21567706756650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -220,7 +220,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/1e2babe797a333a334d3898c3c448a1f1566503776337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e69e06ce6a94ec75c6ef2b29e4e34be51567706876670" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -249,7 +249,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/86f819e18f4010d4d54df508868200b71566503909021" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77af814357acd94631e44c46addbbff91567706941671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
