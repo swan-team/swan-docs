@@ -1405,38 +1405,38 @@
                   text: swan.getRecorderManager
                   name: media_recorder_swan-getRecorderManager
                 -
-                  link: /develop/api/media_recorder/#recorderManager
-                  text: recorderManager
-                  name: media_recorder_recorderManager
+                  link: /develop/api/media_recorder/#RecorderManager
+                  text: RecorderManager
+                  name: media_recorder_RecorderManager
                   sidebar:
                     -
-                      link: /develop/api/media_recorder/#recorderManager-start
-                      text: recorderManager.start
-                      name: media_recorder_recorderManager-start
+                      link: /develop/api/media_recorder/#RecorderManager-start
+                      text: RecorderManager.start
+                      name: media_recorder_RecorderManager-start
                     -
-                      link: /develop/api/media_recorder/#recorderManager-pause
-                      text: recorderManager.pause
-                      name: media_recorder_recorderManager-pause
+                      link: /develop/api/media_recorder/#RecorderManager-pause
+                      text: RecorderManager.pause
+                      name: media_recorder_RecorderManager-pause
                     -
-                      link: /develop/api/media_recorder/#recorderManager-resume
-                      text: recorderManager.resume
-                      name: media_recorder_recorderManager-resume
+                      link: /develop/api/media_recorder/#RecorderManager-resume
+                      text: RecorderManager.resume
+                      name: media_recorder_RecorderManager-resume
                     -
-                      link: /develop/api/media_recorder/#recorderManager-stop
-                      text: recorderManager.stop
-                      name: media_recorder_recorderManager-stop
+                      link: /develop/api/media_recorder/#RecorderManager-stop
+                      text: RecorderManager.stop
+                      name: media_recorder_RecorderManager-stop
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onStart
-                      text: recorderManager.onStart
-                      name: media_recorder_recorderManager-onStart
+                      link: /develop/api/media_recorder/#RecorderManager-onStart
+                      text: RecorderManager.onStart
+                      name: media_recorder_RecorderManager-onStart
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onPause
-                      text: recorderManager.onPause
-                      name: media_recorder_recorderManager-onPause
+                      link: /develop/api/media_recorder/#RecorderManager-onPause
+                      text: RecorderManager.onPause
+                      name: media_recorder_RecorderManager-onPause
                     -
-                      link: /develop/api/media_recorder/#recorderManager-onStop
-                      text: recorderManager.onStop
-                      name: media_recorder_recorderManager-onStop
+                      link: /develop/api/media_recorder/#RecorderManager-onStop
+                      text: RecorderManager.onStop
+                      name: media_recorder_RecorderManager-onStop
                 - link: /develop/api/media_recorder/#swan-getAvailableAudioSources
                   text: swan.getAvailableAudioSources
                   name: media_recorder_swan-getAvailableAudioSources
@@ -1450,74 +1450,74 @@
                   text: swan.getBackgroundAudioManager
                   name: media_backgroundaudiomanager_swan-getBackgroundAudioManager
                 -
-                  link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager
-                  text: backgroundAudioManager
-                  name: media_backgroundaudiomanager_backgroundAudioManager
+                  link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager
+                  text: BackgroundAudioManager
+                  name: media_backgroundaudiomanager_BackgroundAudioManager
                   sidebar:
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-play
-                      text: backgroundAudioManager.play
-                      name: media_backgroundaudiomanager_backgroundAudioManager-play
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-play
+                      text: BackgroundAudioManager.play
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-play
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-pause
-                      text: backgroundAudioManager.pause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-pause
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-pause
+                      text: BackgroundAudioManager.pause
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-pause
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-stop
-                      text: backgroundAudioManager.stop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-stop
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-stop
+                      text: BackgroundAudioManager.stop
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-stop
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-seek
-                      text: backgroundAudioManager.seek
-                      name: media_backgroundaudiomanager_backgroundAudioManager-seek
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-seek
+                      text: BackgroundAudioManager.seek
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-seek
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onCanplay
-                      text: backgroundAudioManager.onCanplay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onCanplay
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onCanplay
+                      text: BackgroundAudioManager.onCanplay
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onCanplay
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPlay
-                      text: backgroundAudioManager.onPlay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPlay
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPlay
+                      text: BackgroundAudioManager.onPlay
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPlay
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPause
-                      text: backgroundAudioManager.onPause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPause
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPause
+                      text: BackgroundAudioManager.onPause
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPause
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onStop
-                      text: backgroundAudioManager.onStop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onStop
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onStop
+                      text: BackgroundAudioManager.onStop
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onStop
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onEnded
-                      text: backgroundAudioManager.onEnded
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onEnded
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onEnded
+                      text: BackgroundAudioManager.onEnded
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onEnded
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onTimeUpdate
-                      text: backgroundAudioManager.onTimeUpdate
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onTimeUpdate
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onTimeUpdate
+                      text: BackgroundAudioManager.onTimeUpdate
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onTimeUpdate
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onError
-                      text: backgroundAudioManager.onError
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onError
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onError
+                      text: BackgroundAudioManager.onError
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onError
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onWaiting
-                      text: backgroundAudioManager.onWaiting
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onWaiting
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onWaiting
+                      text: BackgroundAudioManager.onWaiting
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onWaiting
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeked
-                      text: backgroundAudioManager.onSeeked
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeked
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeked
+                      text: BackgroundAudioManager.onSeeked
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onSeeked
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onSeeking
-                      text: backgroundAudioManager.onSeeking
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeking
+                      text: BackgroundAudioManager.onSeeking
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onSeeking
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onNext
-                      text: backgroundAudioManager.onNext
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onNext
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onNext
+                      text: BackgroundAudioManager.onNext
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onNext
                     -
-                      link: /develop/api/media_backgroundaudiomanager/#backgroundAudioManager-onPrev
-                      text: backgroundAudioManager.onPrev
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev
+                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPrev
+                      text: BackgroundAudioManager.onPrev
+                      name: media_backgroundaudiomanager_BackgroundAudioManager-onPrev
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制
@@ -1559,42 +1559,42 @@
                   text: swan.createVideoContext
                   name: media_videocontext_swan-createVideoContext
                 -
-                  link: /develop/api/media_videocontext/#videoContext
-                  text: videoContext
-                  name: media_videocontext_videoContext
+                  link: /develop/api/media_videocontext/#VideoContext
+                  text: VideoContext
+                  name: media_videocontext_VideoContext
                   sidebar:
                     -
-                      link: /develop/api/media_videocontext/#videoContext-play
-                      text: videoContext.play
-                      name: media_videocontext_videoContext-play
+                      link: /develop/api/media_videocontext/#VideoContext-play
+                      text: VideoContext.play
+                      name: media_videocontext_VideoContext-play
                     -
-                      link: /develop/api/media_videocontext/#videoContext-pause
-                      text: videoContext.pause
-                      name: media_videocontext_videoContext-pause
+                      link: /develop/api/media_videocontext/#VideoContext-pause
+                      text: VideoContext.pause
+                      name: media_videocontext_VideoContext-pause
                     -
-                      link: /develop/api/media_videocontext/#videoContext-seek
-                      text: videoContext.seek
-                      name: media_videocontext_videoContext-seek
+                      link: /develop/api/media_videocontext/#VideoContext-seek
+                      text: VideoContext.seek
+                      name: media_videocontext_VideoContext-seek
                     -
-                      link: /develop/api/media_videocontext/#videoContext-sendDanmu
-                      text: videoContext.sendDanmu
-                      name: media_videocontext_videoContext-sendDanmu
+                      link: /develop/api/media_videocontext/#VideoContext-sendDanmu
+                      text: VideoContext.sendDanmu
+                      name: media_videocontext_VideoContext-sendDanmu
                     -
-                      link: /develop/api/media_videocontext/#videoContext-requestFullScreen
-                      text: videoContext.requestFullScreen
-                      name: media_videocontext_videoContext-requestFullScreen
+                      link: /develop/api/media_videocontext/#VideoContext-requestFullScreen
+                      text: VideoContext.requestFullScreen
+                      name: media_videocontext_VideoContext-requestFullScreen
                     -
-                      link: /develop/api/media_videocontext/#videoContext-exitFullScreen
-                      text: videoContext.exitFullScreen
-                      name: media_videocontext_videoContext-exitFullScreen
+                      link: /develop/api/media_videocontext/#VideoContext-exitFullScreen
+                      text: VideoContext.exitFullScreen
+                      name: media_videocontext_VideoContext-exitFullScreen
                     -
-                      link: /develop/api/media_videocontext/#videoContext-showStatusBar
-                      text: videoContext.showStatusBar
-                      name: media_videocontext_videoContext-showStatusBar
+                      link: /develop/api/media_videocontext/#VideoContext-showStatusBar
+                      text: VideoContext.showStatusBar
+                      name: media_videocontext_VideoContext-showStatusBar
                     -
-                      link: /develop/api/media_videocontext/#videoContext-hideStatusBar
-                      text: videoContext.hideStatusBar
-                      name: media_videocontext_videoContext-hideStatusBar
+                      link: /develop/api/media_videocontext/#VideoContext-hideStatusBar
+                      text: VideoContext.hideStatusBar
+                      name: media_videocontext_VideoContext-hideStatusBar
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
@@ -1605,34 +1605,34 @@
                   text: swan.createLivePlayerContext
                   name: media_liveplayercontext_swan-createLivePlayerContext
                 -
-                  link:  /develop/api/media_liveplayercontext/#livePlayerContext
-                  text: livePlayerContext
-                  name: media_liveplayercontext_livePlayerContext
+                  link:  /develop/api/media_liveplayercontext/#LivePlayerContext
+                  text: LivePlayerContext
+                  name: media_liveplayercontext_LivePlayerContext
                   sidebar:
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-play
-                      text: livePlayerContext.play
-                      name: media_liveplayercontext_livePlayerContext-play
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-play
+                      text: LivePlayerContext.play
+                      name: media_liveplayercontext_LivePlayerContext-play
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-stop
-                      text: livePlayerContext.stop
-                      name: media_liveplayercontext_livePlayerContext-stop
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-stop
+                      text: LivePlayerContext.stop
+                      name: media_liveplayercontext_LivePlayerContext-stop
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-mute
-                      text: livePlayerContext.mute
-                      name: media_liveplayercontext_livePlayerContext-mute
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-mute
+                      text: LivePlayerContext.mute
+                      name: media_liveplayercontext_LivePlayerContext-mute
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-pause
-                      text: livePlayerContext.pause
-                      name: media_liveplayercontext_livePlayerContext-pause
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-pause
+                      text: LivePlayerContext.pause
+                      name: media_liveplayercontext_LivePlayerContext-pause
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-requestFullScreen
-                      text: livePlayerContext.requestFullScreen
-                      name: media_liveplayercontext_livePlayerContext-requestFullScreen
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-requestFullScreen
+                      text: LivePlayerContext.requestFullScreen
+                      name: media_liveplayercontext_LivePlayerContext-requestFullScreen
                     -
-                      link: /develop/api/media_liveplayercontext/#livePlayerContext-exitFullScreen
-                      text: livePlayerContext.exitFullScreen
-                      name: media_liveplayercontext_livePlayerContext-exitFullScreen
+                      link: /develop/api/media_liveplayercontext/#LivePlayerContext-exitFullScreen
+                      text: LivePlayerContext.exitFullScreen
+                      name: media_liveplayercontext_LivePlayerContext-exitFullScreen
 
             -
               link: /develop/api/media_cameracontext
@@ -1644,22 +1644,22 @@
                   text: swan.createCameraContext
                   name: media_cameracontext_swan-createCameraContext
                 -
-                  link: /develop/api/media_cameracontext/#cameraContext
-                  text: cameraContext
-                  name: media_cameracontext_cameraContext
+                  link: /develop/api/media_cameracontext/#CameraContext
+                  text: CameraContext
+                  name: media_cameracontext_CameraContext
                   sidebar:
                     -
-                      link: /develop/api/media_cameracontext/#cameraContext-takePhoto
-                      text: cameraContext.takePhoto
-                      name: media_cameracontext_cameraContext-takePhoto
+                      link: /develop/api/media_cameracontext/#CameraContext-takePhoto
+                      text: CameraContext.takePhoto
+                      name: media_cameracontext_CameraContext-takePhoto
                     -
-                      link: /develop/api/media_cameracontext/#cameraContext-startRecord
-                      text: cameraContext.startRecord
-                      name: media_cameracontext_cameraContext-startRecord
+                      link: /develop/api/media_cameracontext/#CameraContext-startRecord
+                      text: CameraContext.startRecord
+                      name: media_cameracontext_CameraContext-startRecord
                     -
-                      link: /develop/api/media_cameracontext/#cameraContext-stopRecord
-                      text: cameraContext.stopRecord
-                      name: media_cameracontext_cameraContext-stopRecord
+                      link: /develop/api/media_cameracontext/#CameraContext-stopRecord
+                      text: CameraContext.stopRecord
+                      name: media_cameracontext_CameraContext-stopRecord
 
             -
               link: /develop/api/media_arcameracontext
@@ -1833,34 +1833,34 @@
                     text: swan.createMapContext
                     name: location_map_swan-createMapContext
                   -
-                    link: /develop/api/location_map/#mapContext
-                    text: mapContext
-                    name: location_map_mapContext
+                    link: /develop/api/location_map/#MapContext
+                    text: MapContext
+                    name: location_map_MapContext
                     sidebar:
                       -
-                        link: /develop/api/location_map/#mapContext-getCenterLocation
-                        text: mapContext.getCenterLocation
-                        name: mapContext-getCenterLocation
+                        link: /develop/api/location_map/#MapContext-getCenterLocation
+                        text: MapContext.getCenterLocation
+                        name: MapContext-getCenterLocation
                       -
-                        link: /develop/api/location_map/#mapContext-moveToLocation
-                        text: mapContext.moveToLocation
-                        name: mapContext-moveToLocation
+                        link: /develop/api/location_map/#MapContext-moveToLocation
+                        text: MapContext.moveToLocation
+                        name: MapContext-moveToLocation
                       -
-                        link: /develop/api/location_map/#mapContext-translateMarker
-                        text: mapContext.translateMarker
-                        name: mapContext-translateMarker
+                        link: /develop/api/location_map/#MapContext-translateMarker
+                        text: MapContext.translateMarker
+                        name: MapContext-translateMarker
                       -
-                        link: /develop/api/location_map/#mapContext-includePoints
-                        text: mapContext.includePoints
-                        name: mapContext-includePoints
+                        link: /develop/api/location_map/#MapContext-includePoints
+                        text: MapContext.includePoints
+                        name: MapContext-includePoints
                       -
-                        link: /develop/api/location_map/#mapContext-getRegion
-                        text: mapContext.getRegion
-                        name: mapContext-.getRegion
+                        link: /develop/api/location_map/#MapContext-getRegion
+                        text: MapContext.getRegion
+                        name: MapContext-.getRegion
                       -
-                        link: /develop/api/location_map/#mapContext-getScale
-                        text: mapContext.getScale
-                        name: mapContext-getScale
+                        link: /develop/api/location_map/#MapContext-getScale
+                        text: MapContext.getScale
+                        name: MapContext-getScale
         -
             link: /develop/api/show_canvas
             text: 界面
@@ -1892,178 +1892,178 @@
                     text: swan.canvasToTempFilePath
                     name: show_canvas_swan-canvasToTempFilePath
                   -
-                    link: /develop/api/show_canvas/#canvasContext
-                    text: canvasContext
-                    name: show_canvas_canvasContext
+                    link: /develop/api/show_canvas/#CanvasContext
+                    text: CanvasContext
+                    name: show_canvas_CanvasContext
                     sidebar:
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setFillStyle
-                        text: canvasContext.setFillStyle
-                        name: show_canvas_canvasContext-setFillStyle
+                        link: /develop/api/show_canvas/#CanvasContext-setFillStyle
+                        text: CanvasContext.setFillStyle
+                        name: show_canvas_CanvasContext-setFillStyle
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setStrokeStyle
-                        text: canvasContext.setStrokeStyle
-                        name: show_canvas_canvasContext-setStrokeStyle
+                        link: /develop/api/show_canvas/#CanvasContext-setStrokeStyle
+                        text: CanvasContext.setStrokeStyle
+                        name: show_canvas_CanvasContext-setStrokeStyle
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setShadow
-                        text: canvasContext.setShadow
-                        name: show_canvas_canvasContext-setShadow
+                        link: /develop/api/show_canvas/#CanvasContext-setShadow
+                        text: CanvasContext.setShadow
+                        name: show_canvas_CanvasContext-setShadow
                       -
-                        link: /develop/api/show_canvas/#canvasContext-createLinearGradient
-                        text: canvasContext.createLinearGradient
-                        name: show_canvas_canvasContext-createLinearGradient
+                        link: /develop/api/show_canvas/#CanvasContext-createLinearGradient
+                        text: CanvasContext.createLinearGradient
+                        name: show_canvas_CanvasContext-createLinearGradient
                       -
-                        link: /develop/api/show_canvas/#canvasContext-createCircularGradient
-                        text: canvasContext.createCircularGradient
-                        name: show_canvas_canvasContext-createCircularGradient
+                        link: /develop/api/show_canvas/#CanvasContext-createCircularGradient
+                        text: CanvasContext.createCircularGradient
+                        name: show_canvas_CanvasContext-createCircularGradient
                       -
-                        link: /develop/api/show_canvas/#canvasContext-addColorStop
-                        text: canvasContext.addColorStop
-                        name: show_canvas_canvasContext-addColorStop
+                        link: /develop/api/show_canvas/#CanvasContext-addColorStop
+                        text: CanvasContext.addColorStop
+                        name: show_canvas_CanvasContext-addColorStop
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setLineWidth
-                        text: canvasContext.setLineWidth
-                        name: show_canvas_canvasContext-setLineWidth
+                        link: /develop/api/show_canvas/#CanvasContext-setLineWidth
+                        text: CanvasContext.setLineWidth
+                        name: show_canvas_CanvasContext-setLineWidth
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setLineCap
-                        text: canvasContext.setLineCap
-                        name: show_canvas_canvasContext-.setLineCap
+                        link: /develop/api/show_canvas/#CanvasContext-setLineCap
+                        text: CanvasContext.setLineCap
+                        name: show_canvas_CanvasContext-.setLineCap
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setLineJoin
-                        text: canvasContext.setLineJoin
-                        name: show_canvas_canvasContext-setLineJoin
+                        link: /develop/api/show_canvas/#CanvasContext-setLineJoin
+                        text: CanvasContext.setLineJoin
+                        name: show_canvas_CanvasContext-setLineJoin
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setLineDash
-                        text: canvasContext.setLineDash
-                        name: show_canvas_canvasContext-setLineDash
+                        link: /develop/api/show_canvas/#CanvasContext-setLineDash
+                        text: CanvasContext.setLineDash
+                        name: show_canvas_CanvasContext-setLineDash
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setMiterLimit
-                        text: canvasContext.setMiterLimit
-                        name: show_canvas_canvasContext-setMiterLimit
+                        link: /develop/api/show_canvas/#CanvasContext-setMiterLimit
+                        text: CanvasContext.setMiterLimit
+                        name: show_canvas_CanvasContext-setMiterLimit
                       -
-                        link: /develop/api/show_canvas/#canvasContext-rect
-                        text: canvasContext.rect
-                        name: show_canvas_canvasContext-rect
+                        link: /develop/api/show_canvas/#CanvasContext-rect
+                        text: CanvasContext.rect
+                        name: show_canvas_CanvasContext-rect
                       -
-                        link: /develop/api/show_canvas/#canvasContext-fillRect
-                        text: canvasContext.fillRect
-                        name: show_canvas_canvasContext-fillRect
+                        link: /develop/api/show_canvas/#CanvasContext-fillRect
+                        text: CanvasContext.fillRect
+                        name: show_canvas_CanvasContext-fillRect
                       -
-                        link: /develop/api/show_canvas/#canvasContext-strokeRect
-                        text: canvasContext.strokeRect
-                        name: show_canvas_canvasContext-strokeRect
+                        link: /develop/api/show_canvas/#CanvasContext-strokeRect
+                        text: CanvasContext.strokeRect
+                        name: show_canvas_CanvasContext-strokeRect
                       -
-                        link: /develop/api/show_canvas/#canvasContext-clearRect
-                        text: canvasContext.clearRect
-                        name: show_canvas_canvasContext-clearRect
+                        link: /develop/api/show_canvas/#CanvasContext-clearRect
+                        text: CanvasContext.clearRect
+                        name: show_canvas_CanvasContext-clearRect
                       -
-                        link: /develop/api/show_canvas/#canvasContext-fill
-                        text: canvasContext.fill
-                        name: show_canvas_canvasContext-fill
+                        link: /develop/api/show_canvas/#CanvasContext-fill
+                        text: CanvasContext.fill
+                        name: show_canvas_CanvasContext-fill
                       -
-                        link: /develop/api/show_canvas/#canvasContext-stroke
-                        text: canvasContext.stroke
-                        name: show_canvas_canvasContext-stroke
+                        link: /develop/api/show_canvas/#CanvasContext-stroke
+                        text: CanvasContext.stroke
+                        name: show_canvas_CanvasContext-stroke
                       -
-                        link: /develop/api/show_canvas/#canvasContext-beginPath
-                        text: canvasContext.beginPath
-                        name: show_canvas_canvasContext-beginPath
+                        link: /develop/api/show_canvas/#CanvasContext-beginPath
+                        text: CanvasContext.beginPath
+                        name: show_canvas_CanvasContext-beginPath
                       -
-                        link: /develop/api/show_canvas/#canvasContext-closePath
-                        text: canvasContext.closePath
-                        name: show_canvas_canvasContext-closePath
+                        link: /develop/api/show_canvas/#CanvasContext-closePath
+                        text: CanvasContext.closePath
+                        name: show_canvas_CanvasContext-closePath
                       -
-                        link: /develop/api/show_canvas/#canvasContext-moveTo
-                        text: canvasContext.moveTo
-                        name: show_canvas_canvasContext-moveTo
+                        link: /develop/api/show_canvas/#CanvasContext-moveTo
+                        text: CanvasContext.moveTo
+                        name: show_canvas_CanvasContext-moveTo
                       -
-                        link: /develop/api/show_canvas/#canvasContext-lineTo
-                        text: canvasContext.lineTo
-                        name: show_canvas_canvasContext-lineTo
+                        link: /develop/api/show_canvas/#CanvasContext-lineTo
+                        text: CanvasContext.lineTo
+                        name: show_canvas_CanvasContext-lineTo
                       -
-                        link: /develop/api/show_canvas/#canvasContext-arc
-                        text: canvasContext.arc
-                        name: show_canvas_canvasContext-arc
+                        link: /develop/api/show_canvas/#CanvasContext-arc
+                        text: CanvasContext.arc
+                        name: show_canvas_CanvasContext-arc
                       -
-                        link: /develop/api/show_canvas/#canvasContext-scale
-                        text: canvasContext.scale
-                        name: show_canvas_canvasContext-scale
+                        link: /develop/api/show_canvas/#CanvasContext-scale
+                        text: CanvasContext.scale
+                        name: show_canvas_CanvasContext-scale
                       -
-                        link: /develop/api/show_canvas/#canvasContext-rotate
-                        text: canvasContext.rotate
-                        name: show_canvas_canvasContext-rotate
+                        link: /develop/api/show_canvas/#CanvasContext-rotate
+                        text: CanvasContext.rotate
+                        name: show_canvas_CanvasContext-rotate
                       -
-                        link: /develop/api/show_canvas/#canvasContext-translate
-                        text: canvasContext.translate
-                        name: show_canvas_canvasContext-translate
+                        link: /develop/api/show_canvas/#CanvasContext-translate
+                        text: CanvasContext.translate
+                        name: show_canvas_CanvasContext-translate
                       -
-                        link: /develop/api/show_canvas/#canvasContext-clip
-                        text: canvasContext.clip
-                        name: show_canvas_canvasContext-clip
+                        link: /develop/api/show_canvas/#CanvasContext-clip
+                        text: CanvasContext.clip
+                        name: show_canvas_CanvasContext-clip
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setFontSize
-                        text: canvasContext.setFontSize
-                        name: show_canvas_canvasContext-setFontSize
+                        link: /develop/api/show_canvas/#CanvasContext-setFontSize
+                        text: CanvasContext.setFontSize
+                        name: show_canvas_CanvasContext-setFontSize
                       -
-                        link: /develop/api/show_canvas/#canvasContext-fillText
-                        text: canvasContext.fillText
-                        name: show_canvas_canvasContext-fillText
+                        link: /develop/api/show_canvas/#CanvasContext-fillText
+                        text: CanvasContext.fillText
+                        name: show_canvas_CanvasContext-fillText
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setTextAlign
-                        text: canvasContext.setTextAlign
-                        name: show_canvas_canvasContext-setTextAlign
+                        link: /develop/api/show_canvas/#CanvasContext-setTextAlign
+                        text: CanvasContext.setTextAlign
+                        name: show_canvas_CanvasContext-setTextAlign
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setTextBaseline
-                        text: canvasContext.setTextBaseline
-                        name: show_canvas_canvasContext-setTextBaseline
+                        link: /develop/api/show_canvas/#CanvasContext-setTextBaseline
+                        text: CanvasContext.setTextBaseline
+                        name: show_canvas_CanvasContext-setTextBaseline
                       -
-                        link: /develop/api/show_canvas/#canvasContext-drawImage
-                        text: canvasContext.drawImage
-                        name: show_canvas_canvasContext-drawImage
+                        link: /develop/api/show_canvas/#CanvasContext-drawImage
+                        text: CanvasContext.drawImage
+                        name: show_canvas_CanvasContext-drawImage
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setGlobalAlpha
-                        text: canvasContext.setGlobalAlpha
-                        name: show_canvas_canvasContext-setGlobalAlpha
+                        link: /develop/api/show_canvas/#CanvasContext-setGlobalAlpha
+                        text: CanvasContext.setGlobalAlpha
+                        name: show_canvas_CanvasContext-setGlobalAlpha
                       -
-                        link: /develop/api/show_canvas/#canvasContext-measureText
-                        text: canvasContext.measureText
-                        name: show_canvas_canvasContext-measureText
+                        link: /develop/api/show_canvas/#CanvasContext-measureText
+                        text: CanvasContext.measureText
+                        name: show_canvas_CanvasContext-measureText
                       -
-                        link: /develop/api/show_canvas/#canvasContext-strokeText
-                        text: canvasContext.strokeText
-                        name: show_canvas_canvasContext-strokeText
+                        link: /develop/api/show_canvas/#CanvasContext-strokeText
+                        text: CanvasContext.strokeText
+                        name: show_canvas_CanvasContext-strokeText
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setLineDashOffset
-                        text: canvasContext.setLineDashOffset
-                        name: show_canvas_canvasContext-setLineDashOffset
+                        link: /develop/api/show_canvas/#CanvasContext-setLineDashOffset
+                        text: CanvasContext.setLineDashOffset
+                        name: show_canvas_CanvasContext-setLineDashOffset
                       -
-                        link: /develop/api/show_canvas/#canvasContext-bezierCurveTo
-                        text: canvasContext.bezierCurveTo
-                        name: show_canvas_canvasContext-bezierCurveTo
+                        link: /develop/api/show_canvas/#CanvasContext-bezierCurveTo
+                        text: CanvasContext.bezierCurveTo
+                        name: show_canvas_CanvasContext-bezierCurveTo
                       -
-                        link: /develop/api/show_canvas/#canvasContext-quadraticCurveTo
-                        text: canvasContext.quadraticCurveTo
-                        name: show_canvas_canvasContext-quadraticCurveTo
+                        link: /develop/api/show_canvas/#CanvasContext-quadraticCurveTo
+                        text: CanvasContext.quadraticCurveTo
+                        name: show_canvas_CanvasContext-quadraticCurveTo
                       -
-                        link: /develop/api/show_canvas/#canvasContext-save
-                        text: canvasContext.save
-                        name: show_canvas_canvasContext-save
+                        link: /develop/api/show_canvas/#CanvasContext-save
+                        text: CanvasContext.save
+                        name: show_canvas_CanvasContext-save
                       -
-                        link: /develop/api/show_canvas/#canvasContext-restore
-                        text: canvasContext.restore
-                        name: show_canvas_canvasContext-restore
+                        link: /develop/api/show_canvas/#CanvasContext-restore
+                        text: CanvasContext.restore
+                        name: show_canvas_CanvasContext-restore
                       -
-                        link: /develop/api/show_canvas/#canvasContext-draw
-                        text: canvasContext.draw
-                        name: show_canvas_canvasContext-draw
+                        link: /develop/api/show_canvas/#CanvasContext-draw
+                        text: CanvasContext.draw
+                        name: show_canvas_CanvasContext-draw
                       -
-                        link: /develop/api/show_canvas/#canvasContext-font
-                        text: canvasContext.font
-                        name: show_canvas_canvasContext-font
+                        link: /develop/api/show_canvas/#CanvasContext-font
+                        text: CanvasContext.font
+                        name: show_canvas_CanvasContext-font
                       -
-                        link: /develop/api/show_canvas/#canvasContext-setTransform
-                        text: canvasContext.setTransform
-                        name: show_canvas_canvasContext-setTransform
+                        link: /develop/api/show_canvas/#CanvasContext-setTransform
+                        text: CanvasContext.setTransform
+                        name: show_canvas_CanvasContext-setTransform
               -
                 link: /develop/api/show_toast
                 text: 交互反馈
@@ -2186,90 +2186,90 @@
                     text: swan.createAnimation
                     name: show_createanimation_swan-createAnimation
                   -
-                    link: /develop/api/show_createanimation/#animation
-                    text: animation
-                    name: show_createanimation_animation
+                    link: /develop/api/show_createanimation/#Animation
+                    text: Animation
+                    name: show_createanimation_Animation
                     sidebar:
                       -
-                        link: /develop/api/show_createanimation/#animation-rotate
-                        text: animation.rotate
-                        name: show_createanimation_animation-rotate
+                        link: /develop/api/show_createanimation/#Animation-rotate
+                        text: Animation.rotate
+                        name: show_createanimation_Animation-rotate
                       -
-                        link: /develop/api/show_createanimation/#animation-rotateX
-                        text: animation.rotateX
-                        name: show_createanimation_animation-rotateX
+                        link: /develop/api/show_createanimation/#Animation-rotateX
+                        text: Animation.rotateX
+                        name: show_createanimation_Animation-rotateX
                       -
-                        link: /develop/api/show_createanimation/#animation-rotateY
-                        text: animation.rotateY
-                        name: show_createanimation_animation-rotateY
+                        link: /develop/api/show_createanimation/#Animation-rotateY
+                        text: Animation.rotateY
+                        name: show_createanimation_Animation-rotateY
                       -
-                        link: /develop/api/show_createanimation/#animation-rotateZ
-                        text: animation.rotateZ
-                        name: show_createanimation_animation-rotateZ
+                        link: /develop/api/show_createanimation/#Animation-rotateZ
+                        text: Animation.rotateZ
+                        name: show_createanimation_Animation-rotateZ
                       -
-                        link: /develop/api/show_createanimation/#animation-rotate3d
-                        text: animation.rotate3d
-                        name: show_createanimation_animation-rotate3d
+                        link: /develop/api/show_createanimation/#Animation-rotate3d
+                        text: Animation.rotate3d
+                        name: show_createanimation_Animation-rotate3d
                       -
-                        link: /develop/api/show_createanimation/#animation-scale
-                        text: animation.scale
-                        name: show_createanimation_animation-scale
+                        link: /develop/api/show_createanimation/#Animation-scale
+                        text: Animation.scale
+                        name: show_createanimation_Animation-scale
                       -
-                        link: /develop/api/show_createanimation/#animation-scaleX
-                        text: animation.scaleX
-                        name: show_createanimation_animation-scaleX
+                        link: /develop/api/show_createanimation/#Animation-scaleX
+                        text: Animation.scaleX
+                        name: show_createanimation_Animation-scaleX
                       -
-                        link: /develop/api/show_createanimation/#animation-scaleY
-                        text: animation.scaleY
-                        name: show_createanimation_animation-scaleY
+                        link: /develop/api/show_createanimation/#Animation-scaleY
+                        text: Animation.scaleY
+                        name: show_createanimation_Animation-scaleY
                       -
-                        link: /develop/api/show_createanimation/#animation-scaleZ
-                        text: animation.scaleZ
-                        name: show_createanimation_animation-scaleZ
+                        link: /develop/api/show_createanimation/#Animationn-scaleZ
+                        text: Animation.scaleZ
+                        name: show_createanimation_Animation-scaleZ
                       -
-                        link: /develop/api/show_createanimation/#animation-scale3d
-                        text: animation.scale3d
-                        name: show_createanimation_animation-scale3d
+                        link: /develop/api/show_createanimation/#Animation-scale3d
+                        text: Animation.scale3d
+                        name: show_createanimation_Animation-scale3d
                       -
-                        link: /develop/api/show_createanimation/#animation-translate
-                        text: animation.translate
-                        name: show_createanimation_animation-translate
+                        link: /develop/api/show_createanimation/#Animation-translate
+                        text: Animation.translate
+                        name: show_createanimation_Animation-translate
                       -
-                        link: /develop/api/show_createanimation/#animation-translateX
-                        text: animation.translateX
-                        name: show_createanimation_animation-translateX
+                        link: /develop/api/show_createanimation/#Animation-translateX
+                        text: Animation.translateX
+                        name: show_createanimation_Animation-translateX
                       -
-                        link: /develop/api/show_createanimation/#animation-translateY
-                        text: animation.translateY
-                        name: show_createanimation_animation-translateY
+                        link: /develop/api/show_createanimation/#Animation-translateY
+                        text: Animation.translateY
+                        name: show_createanimation_Animation-translateY
                       -
-                        link: /develop/api/show_createanimation/#animation-translateZ
-                        text: animation.translateZ
-                        name: show_createanimation_animation-translateZ
+                        link: /develop/api/show_createanimation/#Animation-translateZ
+                        text: Animation.translateZ
+                        name: show_createanimation_Animation-translateZ
                       -
-                        link: /develop/api/show_createanimation/#animation-translate3d
-                        text: animation.translate3d
-                        name: show_createanimation_animation-translate3d
+                        link: /develop/api/show_createanimation/#Animation-translate3d
+                        text: Animation.translate3d
+                        name: show_createanimation_Animation-translate3d
                       -
-                        link: /develop/api/show_createanimation/#animation-skew
-                        text: animation.skew
-                        name: show_createanimation_animation-skew
+                        link: /develop/api/show_createanimation/#Animation-skew
+                        text: Animation.skew
+                        name: show_createanimation_Animation-skew
                       -
-                        link: /develop/api/show_createanimation/#animation-skewX
-                        text: animation.skewX
-                        name: show_createanimation_animation-skewX
+                        link: /develop/api/show_createanimation/#Animation-skewX
+                        text: Animation.skewX
+                        name: show_createanimation_Animation-skewX
                       -
-                        link: /develop/api/show_createanimation/#animation-skewY
-                        text: animation.skewY
-                        name: show_createanimation_animation-skewY
+                        link: /develop/api/show_createanimation/#Animation-skewY
+                        text: Animation.skewY
+                        name: show_createanimation_Animation-skewY
                       -
-                        link: /develop/api/show_createanimation/#animation-matrix
-                        text: animation.matrix
-                        name: show_createanimation_animation-matrix
+                        link: /develop/api/show_createanimation/#Animation-matrix
+                        text: Animation.matrix
+                        name: show_createanimation_Animation-matrix
                       -
-                        link: /develop/api/show_createanimation/#animation-matrix3d
-                        text: animation.matrix3d
-                        name: show_createanimation_animation-matrix3d
+                        link: /develop/api/show_createanimation/#Animation-matrix3d
+                        text: Animation.matrix3d
+                        name: show_createanimation_Animation-matrix3d
 
               -
                 link: /develop/api/show_pagescrollto
@@ -2363,47 +2363,47 @@
                     text: swan.createSelectorQuery
                     name: show_query_swan-createSelectorQuery
                   -
-                    link: /develop/api/show_query/#selectorQuery
-                    text: selectorQuery
-                    name: show_query_selectorQuery
+                    link: /develop/api/show_query/#SelectorQuery
+                    text: SelectorQuery
+                    name: show_query_SelectorQuery
                     sidebar:
                       -
-                        link: /develop/api/show_query/#selectorQuery-in
-                        text: selectorQuery.in
-                        name: show_query_selectorQuery-in
+                        link: /develop/api/show_query/#SelectorQuery-in
+                        text: SelectorQuery.in
+                        name: show_query_SelectorQuery-in
                       -
-                        link: /develop/api/show_query/#selectorQuery-select
-                        text: selectorQuery.select
-                        name: show_query_selectorQuery-select
+                        link: /develop/api/show_query/#SelectorQuery-select
+                        text: SelectorQuery.select
+                        name: show_query_SelectorQuery-select
                       -
-                        link: /develop/api/show_query/#selectorQuery-selectAll
-                        text: selectorQuery.selectAll
-                        name: show_query_selectorQuery-selectAll
+                        link: /develop/api/show_query/#SelectorQuery-selectAll
+                        text: SelectorQuery.selectAll
+                        name: show_query_SelectorQuery-selectAll
                       -
-                        link: /develop/api/show_query/#selectorQuery-selectViewport
-                        text: selectorQuery.selectViewport
-                        name: show_query_selectorQuery-selectViewport
+                        link: /develop/api/show_query/#SelectorQuery-selectViewport
+                        text: SelectorQuery.selectViewport
+                        name: show_query_SelectorQuery-selectViewport
                       -
-                        link: /develop/api/show_query/#selectorQuery-exec
-                        text: selectorQuery.exec
-                        name: show_swan-query_selectorQuery-exec
+                        link: /develop/api/show_query/#SelectorQuery-exec
+                        text: SelectorQuery.exec
+                        name: show_swan-query_SelectorQuery-exec
                   -
-                    link: /develop/api/show_query/#nodesRef
-                    text: nodesRef
-                    name: show_query_nodesRef
+                    link: /develop/api/show_query/#NodesRef
+                    text: NodesRef
+                    name: show_query_NodesRef
                     sidebar:
                       -
-                        link: /develop/api/show_query/#nodesRef-boundingClientRect
-                        text: nodesRef.boundingClientRect
-                        name: show_query_nodesRef-boundingClientRect
+                        link: /develop/api/show_query/#NodesRef-boundingClientRect
+                        text: NodesRef.boundingClientRect
+                        name: show_query_NodesRef-boundingClientRect
                       -
-                        link: /develop/api/show_query/#nodesRef-scrollOffset
-                        text: nodesRef.scrollOffset
-                        name: show_query_nodesRef-scrollOffset
+                        link: /develop/api/show_query/#NodesRef-scrollOffset
+                        text: NodesRef.scrollOffset
+                        name: show_query_NodesRef-scrollOffset
                       -
-                        link: /develop/api/show_query/#nodesRef-fields
-                        text: nodesRef.fields
-                        name: show_query_nodesRef-fields
+                        link: /develop/api/show_query/#NodesRef-fields
+                        text: NodesRef.fields
+                        name: show_query_NodesRef-fields
 
               -
                 link: /develop/api/nacomponent
@@ -2852,26 +2852,26 @@
                     text: swan.getUpdateManager
                     name: get_swan-getUpdateManager
                   -
-                    link: /develop/api/get/#updateManager
-                    text: updateManager
-                    name: updateManager
+                    link: /develop/api/get/#UpdateManager
+                    text: UpdateManager
+                    name: UpdateManager
                     sidebar:
                       -
-                        link: /develop/api/get/#updateManager-onCheckForUpdate
-                        text: updateManager.onCheckForUpdate
-                        name: get_updateManager-onCheckForUpdate
+                        link: /develop/api/get/#UpdateManager-onCheckForUpdate
+                        text: UpdateManager.onCheckForUpdate
+                        name: get_UpdateManager-onCheckForUpdate
                       -
-                        link: /develop/api/get/#updateManager-onUpdateReady
-                        text: updateManager.onUpdateReady
-                        name: get_updateManager-onUpdateReady
+                        link: /develop/api/get/#UpdateManager-onUpdateReady
+                        text: UpdateManager.onUpdateReady
+                        name: get_UpdateManager-onUpdateReady
                       -
-                        link: /develop/api/get/#updateManager-onUpdateFailed
-                        text: updateManager.onUpdateFailed
-                        name: get_updateManager-onUpdateFailed
+                        link: /develop/api/get/#UpdateManager-onUpdateFailed
+                        text: UpdateManager.onUpdateFailed
+                        name: get_UpdateManager-onUpdateFailed
                       -
-                        link: /develop/api/get/#updateManager-applyUpdate
-                        text: updateManager.applyUpdate
-                        name: get_updateManager-applyUpdate
+                        link: /develop/api/get/#UpdateManager-applyUpdate
+                        text: UpdateManager.applyUpdate
+                        name: get_UpdateManager-applyUpdate
 
               -
                 link: /develop/api/debug
@@ -3533,10 +3533,6 @@
               link: /develop/swan/version
               text: 版本分布
               name: version
-            -
-              link: /develop/swan/shine
-              text: 与客户端版本映射关系
-              name: shine
             -
               link: /develop/swan/swanchangelog
               text: 历史更新日志
