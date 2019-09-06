@@ -12,7 +12,6 @@ sidebar: media_backgroundaudiomanager
 
 **方法参数**：无
 
-<<<<<<< HEAD
 #### 错误码
 
 * Andriod
@@ -31,10 +30,8 @@ sidebar: media_backgroundaudiomanager
 |1006|加载音频失败|
 |1007|seek失败，播放器尚未缓冲|
 
-##  backgroundAudioManager
-=======
+ 
 ##  BackgroundAudioManager
->>>>>>> master
 
 **`backgroundAudioManager`对象的属性列表**：
 
