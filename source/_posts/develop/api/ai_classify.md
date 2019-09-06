@@ -49,6 +49,9 @@ swan.chooseImage({
       image,
       success(res) {
         console.log(res.result);
+      },
+      fail(err) {
+        console.log(err);
       }
     });
   }
@@ -201,17 +204,21 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/84f5b4c3a32407d7bc015ad52ca892da1559034220848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/96db64443663c4666fd4fa2fd9e835751567746210709" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.carClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
+        image,
+        top_num: 5,
+        success(res) {
+          console.log(res.result);
+        },
+        fail(err){
+          console.log(err);
+        }
     });
   }
 });
@@ -308,7 +315,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/cb45e8b18d6c3a029794d92983c61b8e1559034320412" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f8c8090c501943e3bf0294d50f95f2e41567750360658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -316,6 +323,8 @@ swan.chooseImage({
     let image = res.tempFilePaths[0];
     swan.ai.dishClassify({
       image,
+      top_num: 5,
+      filter_threshold: 0.95,
       success(res) {
         console.log(res.result);
       }
@@ -412,7 +421,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/c318343cd552374941c434da1ffa9b611559034387688" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f4d7ec16806e58ad02ddb33a9737f4131567750643638" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -421,8 +430,12 @@ swan.chooseImage({
     let image = res.tempFilePaths[0];
     swan.ai.logoClassify({
       image,
+      custom_lib: false,
       success(res) {
         console.log(res.result);
+      },
+      fail(err) {
+        console.log(err);
       }
     });
   }
@@ -485,7 +498,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/5f8c77146dce77806c690234f2e2d8161559034590812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c0d55c9f9bdabc817bec1fa807519bf61567750900353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -493,6 +506,7 @@ swan.chooseImage({
     let image = res.tempFilePaths[0];
     swan.ai.animalClassify({
       image,
+      top_num: 6,
       success(res) {
         console.log(res.result);
       }
@@ -577,6 +591,9 @@ swan.chooseImage({
       image,
       success(res) {
         console.log(res.result);
+      },
+      fail(err) {
+        console.log(err);
       }
     });
   }

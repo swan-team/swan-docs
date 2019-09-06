@@ -31,7 +31,7 @@ sidebar: apilist
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrIdCard/">swan.ai.ocrIdCard</a>|用户向服务请求识别身份证，身份证识别包括正面和背面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrBankCard/">swan.ai.ocrBankCard</a>|识别银行卡并返回卡号、发卡行和卡片类型。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrDrivingLicense/">swan.ai.ocrDrivingLicense</a>|对机动车驾驶证所有关键字段进行识别。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrDrivingLicense/"></a>|对机动车驾驶证所有关键字段进行识别。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrVehicleLicense/">swan.ai.ocrVehicleLicense</a>|对机动车行驶证正本所有关键字段进行识别。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_text/#swan-ai-textReview/">swan.ai.textReview</a>|运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_audio/#swan-ai-textToAudio/">swan.ai.textToAudio</a>|将文本转换为可以播放的 mp3 文件。|
