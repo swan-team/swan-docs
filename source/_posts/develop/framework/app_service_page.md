@@ -26,6 +26,7 @@ sidebar: app_service_page
 |onShareAppMessage | Function | 页面的事件处理函数 -- 用户点击右上角转发 |
 |onPageScroll | Function | 页面的事件处理函数 -- 页面滚动触发事件的处理函数 |
 |onTabItemTap | Function | 页面的事件处理函数 -- 当前是 tab 页时，点击 tab 时触发 |
+| onURLQueryChange | Function | 页面的事件处理函数 -- 监听页面 URL query 改变 |
 |其他 | Any | 开发者可以添加任意的函数或数据到 object 参数中 |
 
 **名词解释:**
@@ -56,7 +57,7 @@ Page({
     },
     onForceReLaunch() {
         // do something when page force reLaunch
-    },    
+    },
     onPullDownRefresh() {
         // do something when pull down
     },
@@ -66,13 +67,16 @@ Page({
     onShareAppMessage() {
         // return custom share data
     },
-    onPageScroll: function () {
+    onPageScroll() {
         // do something when page scroll
     },
     onTabItemTap(item) {
         console.log(item.index);
         console.log(item.pagePath);
         console.log(item.text);
+    },
+    onURLQueryChange({newURLQuery, oldURLQuery}) {
+        // do something when url query change
     },
     customData: {}
 });
@@ -226,7 +230,7 @@ Page({
 });
 ```
 
-## onTabItemTap(Object object)
+### onTabItemTap(Object object)
 **解释**：点击 tab 时触发。
 
 **方法参数**：Object object
@@ -250,6 +254,35 @@ Page({
     console.log(item.text);
   }
 });
+```
+
+### onURLQueryChange
+
+**解释**：在 Page 中定义 onURLQueryChange 处理函数，监听页面 URL query 改变。引起页面 URL query 更新的原因有：调用 [swan.setURLQuery](/develop/api/url_query/#swan-setURLQuery/) ；带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 切换 tab。
+
+**方法参数**：Object object
+
+**Object参数说明**：
+
+|字段 |类型  |说明 |
+|---- | ---- | ---- |
+|newURLQuery|Object| 改变后的 URL query |
+|oldURLQuery|Object| 改变前的 URL query |
+
+**示例代码**
+<a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onURLQueryChange({newURLQuery, oldURLQuery}) {
+        console.log(newURLQuery, oldURLQuery) //  输出结果为 {channel: 'movie'} {}
+    },
+    onLoad(query) {
+        if(!query.channel) {
+            swan.setURLQuery({channel: 'movie'})
+        }
+    }
+})
 ```
 
 ## 组件事件处理函数

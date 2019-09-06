@@ -868,3 +868,10 @@ article thead tr {
   font-size: 16px;
   color: #666;
 }
+
+/* 二维码示例图片 */
+.demo-qrcode-image {
+    width: 180px;
+    height: 180px;
+    margin: 0;
+}

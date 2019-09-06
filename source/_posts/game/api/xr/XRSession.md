@@ -4,8 +4,9 @@ layout: gamedoc
 topic: xr
 categoryName: api
 priority: 10-03
-draft: true
 ---
+
+> 从 基础库 1.12.0 开始支持
 
 基于 ARCore 和 ARKit 的平面检测的 XR 会话实例。在 [swan.requestXRSession](/game/api/xr/requestXRSession/) 的 `mode` 传入 `'ar'` 的时候创建。
 
@@ -17,6 +18,7 @@ draft: true
 + 锚点创建
 + 环境光强度估计
 
+<!--
 ### getCameraVideo()
 
 使用方法参考 [DuXRSessionFaceMode#getCameraVideo](/game/api/xr/DuXRSessionFaceMode/#getCameraVideo)
@@ -29,6 +31,7 @@ draft: true
 |height|number|相机高度，一般为 1280|
 |videoWidth|number|同 width|
 |videoHeight|number|同 height|
+-->
 
 ### getFrame()
 

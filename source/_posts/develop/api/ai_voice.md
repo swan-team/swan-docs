@@ -66,12 +66,12 @@ context有效值如下
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
-|errCode |String | 错误码 |
-|errMsg |String | 错误信息 |
+|errorCode |String | 错误码 |
+|errorMsg |String | 错误信息 |
 
-**errCode值说明**：
+**errorCode值说明**：
 
-|errCode|errMsg|
+|errorCode|errorMsg|
 |---- | ---- |
 |1001|	DNS解析失败|
 |1002|	请求超时|

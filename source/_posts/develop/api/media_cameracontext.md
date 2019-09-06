@@ -15,7 +15,7 @@ sidebar: media_cameracontext
 
 **返回值**：cameraContext
 
-## cameraContext
+## CameraContext
 
 **解释**：swan.createCameraContext 的返回值。
 
@@ -139,7 +139,7 @@ video {
 
 
 
-## cameraContext.takePhoto
+## CameraContext.takePhoto
 
 **解释**：拍照，可指定质量，成功则返回图片。
 
@@ -154,7 +154,7 @@ video {
 |fail  |  Function  |  否 |  |接口调用失败的回调函数|
 |complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## cameraContext.startRecord
+## CameraContext.startRecord
 
 **解释**：开始录像
 
@@ -168,7 +168,7 @@ video {
 |fail  |  Function |   否  | |接口调用失败的回调函数|
 |complete   | Function |   否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## cameraContext.stopRecord
+## CameraContext.stopRecord
 
 **解释**：结束录像，成功则返回封面与视频。
 

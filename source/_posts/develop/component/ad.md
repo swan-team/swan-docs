@@ -5,19 +5,22 @@ nav: component
 sidebar: ad
 ---
 
-## ad
+## ad 广告
 
 **解释**：广告组件，按照<a href="https://smartprogram.baidu.com/docs/introduction/adopen/">流量主开通指引</a>中的操作获取广告组件代码。
 
+<!-- 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" /> -->
 
 **属性说明**：
 
 |属性名 |类型  |默认值  |必填|说明|
 |---- | ---- | ---- |---- |---- |
-|appid|string| |是|小程序应用 ID|
-|apid|string| |是|小程序广告位 ID|
-|type|string|feed|否|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
+|appid|String| |是|小程序应用 ID|
+|apid|String| |是|小程序广告位 ID|
+|type|String|feed|否|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
 
 **type 有效值:**:
 
@@ -34,7 +37,7 @@ sidebar: ad
     **获取代码示例**：
 
     ```
-    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>;
+    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>
     ```
     **示例 1**:
 
@@ -59,7 +62,7 @@ sidebar: ad
 
     **获取信息流广告代码示例**：
     ```
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>;
+    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
     ```
 
 
@@ -68,7 +71,7 @@ sidebar: ad
     ```
     <view class="ad-container">
     <div style="background-color: #fff">
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>;
+    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
     </div>
     </view>
     .ad-container {

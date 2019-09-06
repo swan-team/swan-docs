@@ -5,9 +5,13 @@ nav: component
 sidebar: view
 ---
 
-## view
+## view 视图容器
 
 **解释**：视图容器。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -55,87 +59,36 @@ sidebar: view
 </view>
 ```
 
-* 在 css 文件中
-
-```css
-.rowlike {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    height: 1.5rem;
-    line-height: 1.5rem;
-}
-
-.view-title {
-    display: block;
-    margin: .25rem .18rem .18rem;
-    color: #666;
-}
-
-.rowlike view {
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-
-.bottom-block {
-    padding-bottom: .6rem;
-}
-
-.collike {
-    margin: 0 auto;
-    flex-direction: column;
-    width: 2.4rem;
-}
-
-.collike view {
-    height: 1.2rem;
-    line-height: 1.2rem;
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
-.hover {
-    opacity: .2;
-}
-```
-
 **Bug & Tip**：
 
 1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
-## scroll-view
-**解释**：可滚动视图区域。
-> 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height
+## scroll-view 可滚动视图区域
+
+
+**解释**：可滚动视图区域，使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scroll-view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |
-|scroll-x | Boolean  |  false  | 否 | 允许横向滚动|
-|scroll-y| Boolean  | false | 否 |允许纵向滚动|
-|upper-threshold| Number/String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
-|lower-threshold| Number/String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
-|scroll-top | Number/String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
-|scroll-left| Number/String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
-|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|
-|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|
-|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |
-|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件|
-|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件|
-|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
+|属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
+|---- | ---- | ---- |---- |---|
+|scroll-x | Boolean  |  false  | 否 | 允许横向滚动|-|
+|scroll-y| Boolean  | false | 否 |允许纵向滚动|-|
+|upper-threshold| Number &#124; String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|-|
+|lower-threshold| Number &#124; String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|-|
+|scroll-top | Number &#124; String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
+|scroll-left| Number &#124; String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|-|
+|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|-|
+|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|-|
+|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |-|
+|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件|-|
+|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件|-|
+|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |-|
 
 
 **示例**：
@@ -266,10 +219,14 @@ Page({
 * 在设置 scroll-view 组件 height 属性不是内容可视区总高度时，使用 swan.pageScrollTo() API 无法生效。
 
 
-## swiper
+## swiper 滑块视图容器
 
-**解释**：滑块视图容器。
-> 内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
+
+**解释**：滑块视图容器。内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -306,9 +263,15 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 * 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
 * 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
 
-## swiper-item
+## swiper-item 滑块视图容器子项
 
-> 仅可放置在`<swiper>`组件中，宽高自动设置为100%。
+**解释**： 滑块视图容器子项，仅可放置在`<swiper>`组件中，宽高自动设置为100%。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
+
 
 **属性说明**：
 
@@ -439,18 +402,16 @@ Page({
     }
 });
 ```
-## movable-area
 
-**解释**：`movable-view` 的可移动区域。
-> `movable-area` 必须设置width和height属性，不设置默认为10px。
 
-|属性名	|类型	|默认值| 必填 |	说明|
-|--|--|--|--|
-|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+## movable-view 可移动视图容器
 
-## movable-view
-**解释**：可移动的视图容器，在页面中可以拖拽滑动。
-> movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -591,12 +552,30 @@ Page({
     }
 });
 ```
+## movable-area 可移动视图区域
 
-## cover-view
 
-**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。
+**解释**：`movable-view` 的可移动区域。`movable-area` 必须设置width和height属性，不设置默认为10px。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
+
+**属性说明**：
+
+|属性名	|类型	|默认值| 必填 |	说明|
+|--|--|--|--|
+|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+
+## cover-view 文本视图
+
+
+**解释**： 覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
@@ -651,11 +630,15 @@ Page({
     </div>
 </div>
 
-## cover-image
+## cover-image 图片视图
 
-**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
+**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。 
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-image.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
@@ -680,15 +663,7 @@ Page({
     </cover-image>
 </map>
 ```
-* 在 css 文件中
 
-```css
-.cover-image {
-    position: relative;
-    width: 200px;
-    margin: 18% auto;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">

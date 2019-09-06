@@ -6,6 +6,8 @@ sidebar: location_get
 ---
 ## swan.getLocation
 
+> 在工具和真机中的实现有区别，详见[API 实现差异](/develop/devtools/diff/)。
+
 **解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
 **方法参数**：Object object
