@@ -41,12 +41,9 @@ sidebar: editor
 |developType|String|开发模式|
 |editor|Object|编辑器参数|
 |host|String|宿主名称|
-|minSwanVersion|String|最小基础库版本|
 |preview|Object|web预览信息|
 |publish|Object|发布信息|
 |swan|Object|宿主信息|
-|swanList|Object|基础库版本列表|
-
 
 setting 中可以指定以下设置
 
