@@ -175,7 +175,7 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/3899599e8e90a39eba89682d4c37b7301567774309868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/57ab8062cc2e4ae51f5b1984f748b83c1567929767878" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -229,15 +229,8 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/b773d94033175e28f71a369cd6563fd71559044847609" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3b280bc5e58d5b733feb4eae1f1d22ab1567929725092" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="saveImageToPhotosAlbum">saveImageToPhotosAlbum</button>
-</view>
-```
 * 在 js 文件中
 
 ```js
@@ -274,13 +267,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.chooseAlbum
 
