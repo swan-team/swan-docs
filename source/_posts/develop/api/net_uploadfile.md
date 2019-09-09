@@ -38,7 +38,7 @@ sidebar: net_uploadfile
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
-<a href="swanide://fragment/9aa7bb960bd9eebce07522b7b058379d1559048969876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4d40e686634831976100dd55846072831567714120367" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 
@@ -49,6 +49,12 @@ swan.chooseImage({
             url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
             filePath: res.tempFilePaths[0], // 要上传文件资源的路径
             name: 'myfile',
+            header: {
+                'content-type': 'application/json'
+            },
+            formData: {
+                'user': 'test'
+            },
             success: function (res) {
                 console.log(res.statusCode);
             },
@@ -63,7 +69,7 @@ swan.chooseImage({
 
 **返回值**：
 
-返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
+返回一个`UploadTask`对象，通过`UploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
 ## UploadTask
 
@@ -85,10 +91,16 @@ swan.chooseImage({
 **示例**
 
 ```js
-const uploadTask = swan.uploadFile({
+const UploadTask = swan.uploadFile({
     url: 'https://smartprogram.baidu.com/xxx', //开发者服务器 url
     filePath: res.tempFilePaths[0], // 要上传文件资源的路径
     name: 'myfile',
+    header: {
+        'content-type': 'application/json'
+    },
+    formData: {
+        'user': 'test'
+    },
     success: function (res){
         console.log(res.statusCode);
     },
@@ -98,13 +110,13 @@ const uploadTask = swan.uploadFile({
     }
 });
 
-uploadTask.onProgressUpdate(res => {
-    console.log('上传进度', res.progress)
-    console.log('已经上传的数据长度', res.totalBytesSent)
-    console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend)
+UploadTask.onProgressUpdate(res => {
+    console.log('上传进度', res.progress);
+    console.log('已经上传的数据长度', res.totalBytesSent);
+    console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend);
 });
 
-uploadTask.abort(); // 取消上传任务
+UploadTask.abort(); // 取消上传任务
 ```
  
 ## swan.downloadFile
@@ -141,7 +153,7 @@ uploadTask.abort(); // 取消上传任务
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 
 
-<a href="swanide://fragment/3ac15397aa60af4d3a84bbee534df38a1559049176281" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/323e5fa5ca81f1727057d5c48313eca11567714653015" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 
@@ -152,6 +164,9 @@ uploadTask.abort(); // 取消上传任务
 ```js
 swan.downloadFile({
     url: 'https://smartprogram.baidu.com/xxx', //仅为示例，并非真实的资源
+    header: {
+        'content-type': 'application/json'
+    },
     success: function (res) {
         //下载成功
         if (res.statusCode === 200) {
@@ -189,8 +204,11 @@ swan.downloadFile({
 * 在 js 文件中
 
 ```js
-const downloadTask = swan.downloadFile({
+const DownloadTask = swan.downloadFile({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的资源
+    header: {
+        'content-type': 'application/json'
+    },
     success: function (res){
         console.log(res.tempFilePath);
     },
@@ -200,13 +218,13 @@ const downloadTask = swan.downloadFile({
     }
 });
 
-downloadTask.onProgressUpdate(res => {
+DownloadTask.onProgressUpdate(res => {
     console.log('下载进度', res.progress);
     console.log('已经下载的数据长度', res.totalBytesWritten);
     console.log('预期需要下载的数据总长度', res.totalBytesExpectedToWrite);
 });
 
-downloadTask.abort(); // 取消下载任务
+DownloadTask.abort(); // 取消下载任务
 ```
 
 **说明**：

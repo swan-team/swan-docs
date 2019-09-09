@@ -18,12 +18,12 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady: function () {
-        const ctx = this.createCanvasContext('myCanvas');
-        ctx.setFillStyle('#ff0000');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.draw();
+    onReady： function () {
+        const CanvasContext = this.createCanvasContext('myCanvas');
+        CanvasContext.setFillStyle('#ff0000');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.draw();
     }
 });
 ```
@@ -36,8 +36,8 @@ Page({
 
 ```js
 Page({
-    onReady: function () {
-        const ctx = this.createCanvasContext('myCanvas');
+    onReady： function () {
+        const CanvasContext = this.createCanvasContext('myCanvas');
 	}
 });
 
@@ -47,7 +47,7 @@ Page({
 如下，我们调用 SWAN 的接口`createCanvasContext`创建了一个绘制上下文（但请注意，使用 SWAN 上挂载的`createCanvasContext`，会在当前用户可见的 Page 中寻找`canvas`）。
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 ```
 
 **2、发送绘制指令**
@@ -55,17 +55,17 @@ const ctx = swan.createCanvasContext('myCanvas');
 设置颜色，并画一个圆，填充。
 
 ```js
-ctx.setFillStyle('#ff0000');
+CanvasContext.setFillStyle('#ff0000');
 
-ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-ctx.fill();
+CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+CanvasContext.fill();
 ```
 
 **3、绘制**
 执行上面已经发出的指令，进行 canvas 绘制。
 
 ```js
-ctx.draw();
+CanvasContext.draw();
 ```
 
 
@@ -74,7 +74,7 @@ ctx.draw();
 
 
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
-如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
+如：`CanvasContext.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
 
 ## swan.createCanvasContext
@@ -139,39 +139,39 @@ OBJECT this
 ```js
 Page({
     onReady() {
-        const ctx = swan.createCanvasContext('canvas');
-        ctx.setFillStyle('#0f0f0f');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(90, 70);
-        ctx.lineTo(70, 80);
-        ctx.lineTo(90, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(130, 70);
-        ctx.lineTo(110, 80);
-        ctx.lineTo(130, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setFillStyle('#00ff00');
-        ctx.arc(100, 100, 20, 0, 1 * Math.PI);
-        ctx.fill();
-        ctx.setFillStyle('#00ff00');
-        ctx.setFontSize(12);
-        ctx.fillText('haha', 165, 78);
-        ctx.moveTo(100, 50);
-        ctx.setStrokeStyle('#00ff00');
-        ctx.bezierCurveTo(100, 25, 75, 25, 50, 50);
-        ctx.stroke();
-        ctx.moveTo(100, 50);
-        ctx.quadraticCurveTo(75, 25, 50, 50);
-        ctx.stroke();
-        ctx.draw();
+        const CanvasContext = swan.createCanvasContext('canvas');
+        CanvasContext.setFillStyle('#0f0f0f');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(90, 70);
+        CanvasContext.lineTo(70, 80);
+        CanvasContext.lineTo(90, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(130, 70);
+        CanvasContext.lineTo(110, 80);
+        CanvasContext.lineTo(130, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.setFontSize(12);
+        CanvasContext.fillText('haha', 165, 78);
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.setStrokeStyle('#00ff00');
+        CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.quadraticCurveTo(75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.draw();
     },
     canvasGetImageData() {
         swan.canvasGetImageData({
@@ -245,39 +245,39 @@ Page({
 ```js
 Page({
     onReady() {
-        const ctx = swan.createCanvasContext('canvas1');
-        ctx.setFillStyle('#0f0f0f');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(90, 70);
-        ctx.lineTo(70, 80);
-        ctx.lineTo(90, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(130, 70);
-        ctx.lineTo(110, 80);
-        ctx.lineTo(130, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setFillStyle('#00ff00');
-        ctx.arc(100, 100, 20, 0, 1 * Math.PI);
-        ctx.fill();
-        ctx.setFillStyle('#00ff00');
-        ctx.setFontSize(12);
-        ctx.fillText('haha', 165, 78);
-        ctx.moveTo(100, 50);
-        ctx.setStrokeStyle('#00ff00');
-        ctx.bezierCurveTo(100, 25, 75, 25, 50, 50);
-        ctx.stroke();
-        ctx.moveTo(100, 50);
-        ctx.quadraticCurveTo(75, 25, 50, 50);
-        ctx.stroke();
-        ctx.draw();
+        const CanvasContext = swan.createCanvasContext('canvas1');
+        CanvasContext.setFillStyle('#0f0f0f');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(90, 70);
+        CanvasContext.lineTo(70, 80);
+        CanvasContext.lineTo(90, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(130, 70);
+        CanvasContext.lineTo(110, 80);
+        CanvasContext.lineTo(130, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.setFontSize(12);
+        CanvasContext.fillText('haha', 165, 78);
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.setStrokeStyle('#00ff00');
+        CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.quadraticCurveTo(75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.draw();
     },
     canvasPutImageData() {
         swan.canvasGetImageData({
@@ -379,11 +379,11 @@ Page({
     },
     onReady: function () {
         console.log('在工具2.7.0及以上版本正常使用');
-        const ctx = this.createCanvasContext('myCanvas');
-        ctx.setFillStyle('#ff0000');
-        ctx.arc(100, 50, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.draw();
+        const CanvasContext = this.createCanvasContext('myCanvas');
+        CanvasContext.setFillStyle('#ff0000');
+        CanvasContext.arc(100, 50, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.draw();
     },
     canvasToTempFilePath (){
         const that = this;
@@ -448,7 +448,7 @@ Page({
         methods: []
     },
     onReady() {
-        this.canvasContext = swan.createCanvasContext('canvas');
+        this.CanvasContext = swan.createCanvasContext('canvas');
         const methods = Object.keys(canvas);
         this.setData({
             methods
@@ -457,8 +457,8 @@ Page({
         const that = this;
         methods.forEach(function (method) {
             that[method] = function () {
-                canvas[method](that.canvasContext);
-                that.canvasContext.draw();
+                canvas[method](that.CanvasContext);
+                that.CanvasContext.draw();
             }
         })
     },
@@ -803,10 +803,10 @@ module.exports = canvas;
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = this.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setFillStyle.png)
@@ -821,10 +821,10 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
-ctx.setStrokeStyle('blue');
-ctx.strokeRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = this.createCanvasContext('myCanvas');
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.strokeRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
@@ -848,11 +848,11 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.setShadow(10, 50, 50, 'red');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.setShadow(10, 50, 50, 'red');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setShadow.png)
@@ -877,17 +877,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
+const CanvasContext = this.createCanvasContext('myCanvas');
 
 // Create linear gradient
-const grd = ctx.createLinearGradient(0, 0, 200, 0);
+const grd = CanvasContext.createLinearGradient(0, 0, 200, 0);
 grd.addColorStop(0, 'blue');
 grd.addColorStop(1, 'red');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createLinearGradient.png)
@@ -908,17 +908,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create circular gradient
-const grd = ctx.createCircularGradient(75, 50, 50);
+const grd = CanvasContext.createCircularGradient(75, 50, 50);
 grd.addColorStop(0, 'red');
 grd.addColorStop(1, 'blue');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createCircularGradient.png)
@@ -938,10 +938,10 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create circular gradient
-const grd = ctx.createLinearGradient(30, 10, 120, 10);
+const grd = CanvasContext.createLinearGradient(30, 10, 120, 10);
 grd.addColorStop(0, 'red');
 grd.addColorStop(0.16, 'orange');
 grd.addColorStop(0.33, 'yellow');
@@ -951,9 +951,9 @@ grd.addColorStop(0.83, 'blue');
 grd.addColorStop(1, 'purple');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/addColorStop.png)
@@ -973,31 +973,31 @@ addColorStop 目前在 Android 有bug。
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(30, 10);
-ctx.lineTo(200, 10);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(30, 10);
+CanvasContext.lineTo(200, 10);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(5);
-ctx.moveTo(50, 30);
-ctx.lineTo(200, 30);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(5);
+CanvasContext.moveTo(50, 30);
+CanvasContext.lineTo(200, 30);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.moveTo(70, 50);
-ctx.lineTo(200, 50);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(70, 50);
+CanvasContext.lineTo(200, 50);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(15);
-ctx.moveTo(90, 70);
-ctx.lineTo(200, 70);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(15);
+CanvasContext.moveTo(90, 70);
+CanvasContext.lineTo(200, 70);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineWidth.png)
@@ -1013,34 +1013,34 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(30, 10);
-ctx.lineTo(200, 10);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(30, 10);
+CanvasContext.lineTo(200, 10);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('butt');
-ctx.setLineWidth(10);
-ctx.moveTo(50, 30);
-ctx.lineTo(200, 30);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('butt');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(50, 30);
+CanvasContext.lineTo(200, 30);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('round');
-ctx.setLineWidth(10);
-ctx.moveTo(70, 50);
-ctx.lineTo(200, 50);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('round');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(70, 50);
+CanvasContext.lineTo(200, 50);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('square');
-ctx.setLineWidth(10);
-ctx.moveTo(90, 70);
-ctx.lineTo(200, 70);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('square');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(90, 70);
+CanvasContext.lineTo(200, 70);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineCap.png)
@@ -1057,38 +1057,38 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 50);
-ctx.lineTo(10, 90);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 50);
+CanvasContext.lineTo(10, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('bevel');
-ctx.setLineWidth(10);
-ctx.moveTo(50, 10);
-ctx.lineTo(140, 50);
-ctx.lineTo(50, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('bevel');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(50, 10);
+CanvasContext.lineTo(140, 50);
+CanvasContext.lineTo(50, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('round');
-ctx.setLineWidth(10);
-ctx.moveTo(90, 10);
-ctx.lineTo(180, 50);
-ctx.lineTo(90, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('round');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(90, 10);
+CanvasContext.lineTo(180, 50);
+CanvasContext.lineTo(90, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('miter');
-ctx.setLineWidth(10);
-ctx.moveTo(130, 10);
-ctx.lineTo(220, 50);
-ctx.lineTo(130, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('miter');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(130, 10);
+CanvasContext.lineTo(220, 50);
+CanvasContext.lineTo(130, 90);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineJoin.png)
@@ -1106,13 +1106,13 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setLineDash([10, 20], 5);
-ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setLineDash([10, 20], 5);
+CanvasContext.beginPath();
+CanvasContext.moveTo(0,100);
+CanvasContext.lineTo(400, 100);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineDash.png)
@@ -1129,44 +1129,44 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(1);
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 50);
-ctx.lineTo(10, 90);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(1);
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 50);
+CanvasContext.lineTo(10, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(2);
-ctx.moveTo(50, 10);
-ctx.lineTo(140, 50);
-ctx.lineTo(50, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(2);
+CanvasContext.moveTo(50, 10);
+CanvasContext.lineTo(140, 50);
+CanvasContext.lineTo(50, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(3);
-ctx.moveTo(90, 10);
-ctx.lineTo(180, 50);
-ctx.lineTo(90, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(3);
+CanvasContext.moveTo(90, 10);
+CanvasContext.lineTo(180, 50);
+CanvasContext.lineTo(90, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(4);
-ctx.moveTo(130, 10);
-ctx.lineTo(220, 50);
-ctx.lineTo(130, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(4);
+CanvasContext.moveTo(130, 10);
+CanvasContext.lineTo(220, 50);
+CanvasContext.lineTo(130, 90);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setMiterLimit.png)
@@ -1189,11 +1189,11 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.rect(30, 30, 150, 75);
-ctx.setFillStyle('blue');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.rect(30, 30, 150, 75);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/rect.png)
@@ -1216,10 +1216,10 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/rect.png)
@@ -1242,10 +1242,10 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setStrokeStyle('blue');
-ctx.strokeRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.strokeRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
@@ -1268,13 +1268,13 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('red');
-ctx.fillRect(0, 0, 150, 200);
-ctx.setFillStyle('blue');
-ctx.fillRect(150, 0, 150, 200);
-ctx.clearRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('red');
+CanvasContext.fillRect(0, 0, 150, 200);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(150, 0, 150, 200);
+CanvasContext.clearRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/clearRect.png)
@@ -1290,12 +1290,12 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/fill.png)
@@ -1310,12 +1310,12 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/stroke.png)
@@ -1330,18 +1330,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.rect(10, 10, 100, 30);
-ctx.setFillStyle('red');
-ctx.fill();
-ctx.beginPath();
-ctx.rect(10, 40, 100, 30);
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 70, 100, 30);
-ctx.rect(10, 100, 100, 30);
-ctx.setFillStyle('green');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.rect(10, 10, 100, 30);
+CanvasContext.setFillStyle('red');
+CanvasContext.fill();
+CanvasContext.beginPath();
+CanvasContext.rect(10, 40, 100, 30);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 70, 100, 30);
+CanvasContext.rect(10, 100, 100, 30);
+CanvasContext.setFillStyle('green');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/beginPath.png)
@@ -1356,13 +1356,13 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.closePath();
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.closePath();
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/closePath.png)
@@ -1382,13 +1382,13 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 10);
-ctx.moveTo(10, 100);
-ctx.lineTo(100, 100);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 10);
+CanvasContext.moveTo(10, 100);
+CanvasContext.lineTo(100, 100);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/moveTo.png)
@@ -1407,12 +1407,12 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(10, 10);
-ctx.rect(10, 10, 100, 50);
-ctx.lineTo(110, 60);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(10, 10);
+CanvasContext.rect(10, 10, 100, 50);
+CanvasContext.lineTo(110, 60);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/lineTo.png)
@@ -1440,11 +1440,11 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.setFillStyle('blue');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/arc.png)
@@ -1464,15 +1464,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(10, 10, 25, 15);
-ctx.scale(2, 2);
-ctx.strokeRect(10, 10, 25, 15);
-ctx.scale(2, 2);
-ctx.strokeRect(10, 10, 25, 15);
+CanvasContext.strokeRect(10, 10, 25, 15);
+CanvasContext.scale(2, 2);
+CanvasContext.strokeRect(10, 10, 25, 15);
+CanvasContext.scale(2, 2);
+CanvasContext.strokeRect(10, 10, 25, 15);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/scale.png)
@@ -1490,15 +1490,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(100, 10, 150, 100);
-ctx.rotate(20 * Math.PI / 180);
-ctx.strokeRect(100, 10, 150, 100);
-ctx.rotate(20 * Math.PI / 180);
-ctx.strokeRect(100, 10, 150, 100);
+CanvasContext.strokeRect(100, 10, 150, 100);
+CanvasContext.rotate(20 * Math.PI / 180);
+CanvasContext.strokeRect(100, 10, 150, 100);
+CanvasContext.rotate(20 * Math.PI / 180);
+CanvasContext.strokeRect(100, 10, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/rotate.png)
@@ -1518,15 +1518,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(10, 10, 150, 100);
-ctx.translate(20, 20);
-ctx.strokeRect(10, 10, 150, 100);
-ctx.translate(20, 20);
-ctx.strokeRect(10, 10, 150, 100);
+CanvasContext.strokeRect(10, 10, 150, 100);
+CanvasContext.translate(20, 20);
+CanvasContext.strokeRect(10, 10, 150, 100);
+CanvasContext.translate(20, 20);
+CanvasContext.strokeRect(10, 10, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/translate.png)
@@ -1541,18 +1541,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas')
+const CanvasContext = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
     url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
-        ctx.save()
-        ctx.beginPath()
-        ctx.arc(50, 50, 25, 0, 2*Math.PI)
-        ctx.clip()
-        ctx.drawImage(res.tempFilePath, 25, 25)
-        ctx.restore()
-        ctx.draw()
+        CanvasContext.save()
+        CanvasContext.beginPath()
+        CanvasContext.arc(50, 50, 25, 0, 2*Math.PI)
+        CanvasContext.clip()
+        CanvasContext.drawImage(res.tempFilePath, 25, 25)
+        CanvasContext.restore()
+        CanvasContext.draw()
     }
 });
 ```
@@ -1570,18 +1570,18 @@ swan.downloadFile({
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFontSize(20);
-ctx.fillText('20', 20, 20);
-ctx.setFontSize(30);
-ctx.fillText('30', 40, 40);
-ctx.setFontSize(40);
-ctx.fillText('40', 60, 60);
-ctx.setFontSize(50);
-ctx.fillText('50', 90, 90);
+CanvasContext.setFontSize(20);
+CanvasContext.fillText('20', 20, 20);
+CanvasContext.setFontSize(30);
+CanvasContext.fillText('30', 40, 40);
+CanvasContext.setFontSize(40);
+CanvasContext.fillText('40', 60, 60);
+CanvasContext.setFontSize(50);
+CanvasContext.fillText('50', 90, 90);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/font-size.png)
@@ -1601,13 +1601,13 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFontSize(20);
-ctx.fillText('Hello', 20, 20);
-ctx.fillText('World', 100, 100);
+CanvasContext.setFontSize(20);
+CanvasContext.fillText('Hello', 20, 20);
+CanvasContext.fillText('World', 100, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ##  CanvasContext.setTextAlign
@@ -1622,24 +1622,24 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setStrokeStyle('red');
-ctx.moveTo(150, 20);
-ctx.lineTo(150, 170);
-ctx.stroke();
+CanvasContext.setStrokeStyle('red');
+CanvasContext.moveTo(150, 20);
+CanvasContext.lineTo(150, 170);
+CanvasContext.stroke();
 
-ctx.setFontSize(15);
-ctx.setTextAlign('left');
-ctx.fillText('textAlign=left', 150, 60);
+CanvasContext.setFontSize(15);
+CanvasContext.setTextAlign('left');
+CanvasContext.fillText('textAlign=left', 150, 60);
 
-ctx.setTextAlign('center');
-ctx.fillText('textAlign=center', 150, 80);
+CanvasContext.setTextAlign('center');
+CanvasContext.fillText('textAlign=center', 150, 80);
 
-ctx.setTextAlign('right');
-ctx.fillText('textAlign=right', 150, 100);
+CanvasContext.setTextAlign('right');
+CanvasContext.fillText('textAlign=right', 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/set-text-align.png)
 
@@ -1654,28 +1654,28 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setStrokeStyle('red');
-ctx.moveTo(5, 75);
-ctx.lineTo(295, 75);
-ctx.stroke();
+CanvasContext.setStrokeStyle('red');
+CanvasContext.moveTo(5, 75);
+CanvasContext.lineTo(295, 75);
+CanvasContext.stroke();
 
-ctx.setFontSize(20);
+CanvasContext.setFontSize(20);
 
-ctx.setTextBaseline('top');
-ctx.fillText('top', 5, 75);
+CanvasContext.setTextBaseline('top');
+CanvasContext.fillText('top', 5, 75);
 
-ctx.setTextBaseline('middle');
-ctx.fillText('middle', 50, 75);
+CanvasContext.setTextBaseline('middle');
+CanvasContext.fillText('middle', 50, 75);
 
-ctx.setTextBaseline('bottom');
-ctx.fillText('bottom', 120, 75);
+CanvasContext.setTextBaseline('bottom');
+CanvasContext.fillText('bottom', 120, 75);
 
-ctx.setTextBaseline('normal');
-ctx.fillText('normal', 200, 75);
+CanvasContext.setTextBaseline('normal');
+CanvasContext.fillText('normal', 200, 75);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/set-text-baseline.png)
 
@@ -1710,12 +1710,12 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 swan.chooseImage({
     success: function(res){
-        ctx.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
-        ctx.draw();
+        CanvasContext.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
+        CanvasContext.draw();
     }
 });
 ```
@@ -1733,17 +1733,17 @@ swan.chooseImage({
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFillStyle('red');
-ctx.fillRect(10, 10, 150, 100);
-ctx.setGlobalAlpha(0.2);
-ctx.setFillStyle('blue');
-ctx.fillRect(50, 50, 150, 100);
-ctx.setFillStyle('yellow');
-ctx.fillRect(100, 100, 150, 100);
+CanvasContext.setFillStyle('red');
+CanvasContext.fillRect(10, 10, 150, 100);
+CanvasContext.setGlobalAlpha(0.2);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(50, 50, 150, 100);
+CanvasContext.setFillStyle('yellow');
+CanvasContext.fillRect(100, 100, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/global-alpha.png)
 
@@ -1767,9 +1767,9 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas')
-ctx.font = 'italic bold 20px cursive'
-const metrics = ctx.measureText('Hello World')
+const CanvasContext = swan.createCanvasContext('myCanvas')
+CanvasContext.font = 'italic bold 20px cursive'
+const metrics = CanvasContext.measureText('Hello World')
 console.log(metrics.width);
 ```
  
@@ -1831,15 +1831,15 @@ canvasContext.setLineDashOffset = value;
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
-ctx.setStrokeStyle('black');
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.moveTo(20, 20);
+CanvasContext.bezierCurveTo(20, 100, 200, 100, 200, 20);
+CanvasContext.setStrokeStyle('black');
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/bezierCurveTo.png)
@@ -1861,15 +1861,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.quadraticCurveTo(20, 100, 200, 20);
-ctx.setStrokeStyle('blue');
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.moveTo(20, 20);
+CanvasContext.quadraticCurveTo(20, 100, 200, 20);
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/quadraticCurveTo.png)
@@ -1884,17 +1884,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // save the default fill style
-ctx.save();
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
+CanvasContext.save();
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
 
 // restore to the previous saved state
-ctx.restore();
-ctx.fillRect(50, 50, 150, 100);
+CanvasContext.restore();
+CanvasContext.fillRect(50, 50, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/save.png)
@@ -1909,17 +1909,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // save the default fill style
-ctx.save();
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
+CanvasContext.save();
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
 
 // restore to the previous saved state
-ctx.restore();
-ctx.fillRect(50, 50, 150, 100);
+CanvasContext.restore();
+CanvasContext.fillRect(50, 50, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/save.png)
@@ -1939,12 +1939,12 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
-ctx.draw();
-ctx.fillRect(30, 30, 150, 100);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
+CanvasContext.draw();
+CanvasContext.fillRect(30, 30, 150, 100);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/draw1.png)
