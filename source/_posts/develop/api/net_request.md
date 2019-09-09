@@ -49,7 +49,7 @@ sidebar: net_request
 
 <a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 
 **在 js 文件中**
@@ -79,13 +79,15 @@ swan.request({
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
 
-**requestTask 对象的方法列表**：
+##  RequestTask
+
+**方法列表**：
 
 |方法 | 参数 | 说明  |
 |---- | ---- | ---- |
 |abort  |      | 中断请求任务 |
 
-**示例 2**
+**示例**
 
 ```js
 const requestTask = swan.request({

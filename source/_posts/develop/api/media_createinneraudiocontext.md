@@ -18,9 +18,9 @@ sidebar: media_createinneraudiocontext
 
 **返回值**：innerAudioContext 
 
-## innerAudioContext
+## InnerAudioContext
 
-**`innerAudioContext`对象的属性列表**：
+**属性列表**：
 
 |方法 | 参数 | 只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -34,9 +34,9 @@ sidebar: media_createinneraudiocontext
 |paused |Boolean |是 |当前状态:true 表示暂停或停止，false 表示正在播放。 |
 |volume |Number |否 |音量，范围 0~1。 |
 
-### innerAudioContext
 
-**`innerAudioContext`对象的方法列表**：
+
+**方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |

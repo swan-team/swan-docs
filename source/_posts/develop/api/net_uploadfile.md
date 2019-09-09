@@ -40,7 +40,7 @@ sidebar: net_uploadfile
 
 <a href="swanide://fragment/9aa7bb960bd9eebce07522b7b058379d1559048969876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 ```js
 swan.chooseImage({
@@ -65,7 +65,9 @@ swan.chooseImage({
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
-**uploadTask 对象的方法列表**：
+## UploadTask
+
+**方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -80,7 +82,7 @@ swan.chooseImage({
 |totalBytesSent   | Number  |已经上传的数据长度，单位 Bytes。|
 |totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
 
-**示例 2**
+**示例**
 
 ```js
 const uploadTask = swan.uploadFile({
@@ -141,7 +143,7 @@ uploadTask.abort(); // 取消上传任务
 
 <a href="swanide://fragment/3ac15397aa60af4d3a84bbee534df38a1559049176281" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 
 
@@ -166,8 +168,8 @@ swan.downloadFile({
 **返回值**：
 
 返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
-
-**downloadTask 对象的方法列表**：
+## DownloadTask 
+**方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |

@@ -816,9 +816,9 @@
         -
             sidebar:
               -
-                link: /develop/component/componet
+                link: /develop/component/component
                 text: 组件列表
-                name: componet
+                name: component
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -1141,6 +1141,10 @@
                   link: /develop/api/net_request/#swan-request
                   text: swan.request
                   name: net_request_swan-request
+                -
+                  link: /develop/api/net_request/#RequestTask
+                  text: RequestTask
+                  name: net_request_RequestTask            
             -
               link: /develop/api/net_uploadfile
               text: 上传、下载
@@ -1151,10 +1155,17 @@
                   text: swan.uploadFile
                   name: net_uploadfile_swan-uploadFile
                 -
+                  link: /develop/api/net_uploadfile/#UploadTask
+                  text: UploadTask
+                  name: net_uploadfile_UploadTask           
+                -
                   link: /develop/api/net_uploadfile/#swan-downloadFile
                   text: swan.downloadFile
                   name: net_uploadfile_swan-downloadFile
-
+                -
+                  link: /develop/api/net_uploadfile/#DownloadTask
+                  text: DownloadTask
+                  name: net_uploadfile_DownloadTask
             -
               link: /develop/api/net_websocket
               text: WebSocket
@@ -1321,6 +1332,10 @@
                     link: /develop/api/ai_voice/#swan-ai-getVoiceRecognizer
                     text: swan.ai.getVoiceRecognizer
                     name: ai_voice_swan-ai-getVoiceRecognizer
+                  -
+                    link: /develop/api/ai_voice/#VoiceRecognizer
+                    text: VoiceRecognizer
+                    name: ai_voice_swan-VoiceRecognizer      
               -
                 link: /develop/api/ai_face
                 text: 人脸识别
@@ -1533,9 +1548,9 @@
                   name: media_createinneraudiocontext_swan-createInnerAudioContext
                   sidebar:
                     -
-                      link: /develop/api/media_createinneraudiocontext/#innerAudioContext
-                      text: innerAudioContext
-                      name: media_createinneraudiocontext_innerAudioContext
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext
+                      text: InnerAudioContext
+                      name: media_createinneraudiocontext_InnerAudioContext
                 -
                   link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
                   text: swan.setInnerAudioOption
