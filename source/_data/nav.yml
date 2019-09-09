@@ -1456,78 +1456,11 @@
                 -
                   link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager
                   text: BackgroundAudioManager
-<<<<<<< HEAD
-                  name: media_backgroundaudiomanager_backgroundAudioManager
-=======
                   name: media_backgroundaudiomanager_BackgroundAudioManager
->>>>>>> 939bf7ece763a02ca4ecc7f895430a783c7e12d3
                   sidebar:
                     -
                       link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-play
                       text: BackgroundAudioManager.play
-<<<<<<< HEAD
-                      name: media_backgroundaudiomanager_backgroundAudioManager-play
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-pause
-                      text: BackgroundAudioManager.pause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-pause
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-stop
-                      text: BackgroundAudioManager.stop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-stop   
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-seek
-                      text: BackgroundAudioManager.seek
-                      name: media_backgroundaudiomanager_backgroundAudioManager-seek                      
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onCanplay
-                      text: BackgroundAudioManager.onCanplay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onCanplay                      
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPlay
-                      text: BackgroundAudioManager.onPlay
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPlay
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPause
-                      text: BackgroundAudioManager.onPause
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPause
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onStop
-                      text: BackgroundAudioManager.onStop
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onStop
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onEnded
-                      text: BackgroundAudioManager.onEnded
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onEnded
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onTimeUpdate
-                      text: BackgroundAudioManager.onTimeUpdate
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onTimeUpdate
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onError
-                      text: BackgroundAudioManager.onError
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onError
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onWaiting
-                      text: BackgroundAudioManager.onWaiting
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onWaiting                      
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeked
-                      text: BackgroundAudioManager.onSeeked
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeked                      
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onSeeking
-                      text: BackgroundAudioManager.onSeeking
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onSeeking
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onNext
-                      text: BackgroundAudioManager.onNext
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onNext
-                    -
-                      link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPrev
-                      text: BackgroundAudioManager.onPrev
-                      name: media_backgroundaudiomanager_backgroundAudioManager-onPrev
-=======
                       name: media_backgroundaudiomanager_BackgroundAudioManager-play
                     -
                       link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-pause
@@ -1589,7 +1522,6 @@
                       link: /develop/api/media_backgroundaudiomanager/#BackgroundAudioManager-onPrev
                       text: BackgroundAudioManager.onPrev
                       name: media_backgroundaudiomanager_BackgroundAudioManager-onPrev
->>>>>>> 939bf7ece763a02ca4ecc7f895430a783c7e12d3
             -
               link: /develop/api/media_createinneraudiocontext
               text: 音频组件控制

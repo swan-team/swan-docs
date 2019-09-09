@@ -18,21 +18,12 @@ sidebar: show_canvas
 
 ```js
 Page({
-<<<<<<< HEAD
     onReady： function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
         CanvasContext.setFillStyle('#ff0000');
         CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
         CanvasContext.fill();
         CanvasContext.draw();
-=======
-    onReady: function () {
-        const ctx = this.createCanvasContext('myCanvas');
-        ctx.setFillStyle('#ff0000');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.draw();
->>>>>>> 939bf7ece763a02ca4ecc7f895430a783c7e12d3
     }
 });
 ```
@@ -45,13 +36,8 @@ Page({
 
 ```js
 Page({
-<<<<<<< HEAD
     onReady： function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
-=======
-    onReady: function () {
-        const ctx = this.createCanvasContext('myCanvas');
->>>>>>> 939bf7ece763a02ca4ecc7f895430a783c7e12d3
 	}
 });
 
@@ -1823,38 +1809,7 @@ canvasContext.strokeText(text, x, y, maxWidth);
 canvasContext.setLineDashOffset = value;
 ```
 
-<<<<<<< HEAD
-##  canvasContext.createPattern
-
-
-**解释**：对指定的图像创建模式的方法，可在指定的方向上重复元图像。
-
-**方法参数**：String image, String repetitio
-
-**`image`参数说明**：  重复的图像源，仅支持包内路径和临时路径 。 
-
-**`repetition`参数说明**：  指定如何重复图像，有效值有： repeat, repeat-x, repeat-y, no-repeat。 
-
-**示例**：
-
-```js
-canvasContext.createPattern(image, repetition);
-```
-
-**示例**：
-
-```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-const pattern = CanvasContext.createPattern('/path/to/image', 'repeat-x');
-CanvasContext.fillStyle = pattern;
-CanvasContext.fillRect(0, 0, 300, 150);
-CanvasContext.draw();
-```
-
-##  canvasContext.bezierCurveTo
-=======
 ##  CanvasContext.bezierCurveTo
->>>>>>> 939bf7ece763a02ca4ecc7f895430a783c7e12d3
 
 
 **解释**：创建三次方贝塞尔曲线路径。
