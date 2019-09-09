@@ -10,6 +10,10 @@ sidebar: ai_ocr
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -159,6 +163,10 @@ swan.chooseImage({
 
 **解释**：识别银行卡并返回卡号、发卡行和卡片类型。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrBankCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -219,6 +227,11 @@ swan.chooseImage({
 ## swan.ai.ocrDrivingLicense
 
 **解释**：对机动车驾驶证所有关键字段进行识别。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrDrivingLicense.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
