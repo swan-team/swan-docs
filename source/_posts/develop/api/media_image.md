@@ -43,7 +43,7 @@ sidebar: media_image
 
 
 **示例**：
-<a href="swanide://fragment/0d62ef0c8ea615754904189fac8a13d11567755481204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/92838a57a97149dc11056c5928d70c7b1567998657162" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -103,7 +103,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/d8f77c4c6a5047acd4180d05f149273a1567920655913" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/38f4c33b5ebbda9c2b98a9ee1381ec871567998705872" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -229,7 +229,7 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/3b280bc5e58d5b733feb4eae1f1d22ab1567929725092" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d2ca4220ef3a8436f9eda8f3da9765161568010174134" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -341,9 +341,7 @@ swan.chooseAlbum({
     mode: 'both',
     compressed: false,
     success: function (res) {
-
         console.log(res.tempFilePaths);
-
         console.log(res.tempFiles);
     },
     fail: function (err) {

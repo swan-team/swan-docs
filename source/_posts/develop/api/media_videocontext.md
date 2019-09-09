@@ -43,52 +43,36 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
+        const VideoContext = swan.createVideoContext('myVideo');
+        this.VideoContext = VideoContext;
     },
     play() {
-        this.video.play();
+        this.VideoContext.play();
     },
     pause() {
-        this.video.pause();
+        this.VideoContext.pause();
     },
     seek() {
-        this.video.seek(10);
+        this.VideoContext.seek(10);
     },
     sendDanmu() {
-        this.video.sendDanmu({
+        this.VideoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.video.requestFullScreen();
+            this.VideoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.video.exitFullScreen();
+            this.VideoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap video {
-    width: 100%;
-    margin-bottom: 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-```
 
 **图示**
 

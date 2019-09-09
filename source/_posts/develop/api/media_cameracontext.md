@@ -60,8 +60,8 @@ Page({
         }
     },
     takePhoto() {
-        const ctx = swan.createCameraContext();
-        ctx.takePhoto({
+        const CameraContext = swan.createCameraContext();
+        CameraContext.takePhoto({
             quality: 'high',
             success: res => {
                 this.setData({
@@ -71,8 +71,8 @@ Page({
         });
     },
     startRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.startRecord({
+        const CameraContext = swan.createCameraContext();
+        CameraContext.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -81,8 +81,8 @@ Page({
         });
     },
     stopRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.stopRecord({
+        const CameraContext = swan.createCameraContext();
+        CameraContext.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',
@@ -100,29 +100,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-.camera {
-    width: 100%;
-    padding: .16rem;
-    font-size: .16rem;
-}
-.preview {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-button {
-    margin-top: .16rem;
-}
-.img,
-video {
-    width: 100%;
-    margin-top: 50rpx;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">

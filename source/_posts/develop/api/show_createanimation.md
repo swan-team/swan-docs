@@ -50,14 +50,14 @@ sidebar: show_createanimation
 ```js
 Page({
     createAnimation() {
-        const animation = swan.createAnimation({
+        const Animation = swan.createAnimation({
             transformOrigin: "50% 50%",
             duration: 1000,
             timingFunction: "ease",
             delay: 0
         });
 
-        console.log('createAnimation', animation);
+        console.log('createAnimation', Animation);
     }
 });
 ```
@@ -111,11 +111,11 @@ Page({
         animationData: {}
     },
     startToAnimate() {
-        const animation = swan.createAnimation();
-        animation.rotate(90).translateY(10).step();
-        animation.rotate(-90).translateY(-10).step();
+        const Animation = swan.createAnimation();
+        Animation.rotate(90).translateY(10).step();
+        Animation.rotate(-90).translateY(-10).step();
         this.setData({
-            animationData: animation.export()
+            animationData: Animation.export()
         });
     }
 });

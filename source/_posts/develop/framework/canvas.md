@@ -18,10 +18,10 @@ SWAN模板写法示例：
 ```js
 Page({
     onReady: function () {
-        const ctx = swan.createCanvasContext('myCanvas');
-        ctx.setFillStyle('blue');
-        ctx.fillRect(30, 30, 150, 75);
-        ctx.draw();
+        const CanvasContext = swan.createCanvasContext('myCanvas');
+        CanvasContext.setFillStyle('blue');
+        CanvasContext.fillRect(30, 30, 150, 75);
+        CanvasContext.draw();
     }
 });
 
@@ -36,7 +36,7 @@ Page({
 createCanvasContext 是智能小程序内建的一个对象，有一些绘图的方法：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 ```
 
 **第二步：使用 Canvas 绘图上下文进行绘图描述**
@@ -44,15 +44,15 @@ const ctx = swan.createCanvasContext('myCanvas');
 画一个矩形，并进行填充。
 
 ```js
-ctx.setFillStyle('blue');
-ctx.fillRect(30, 30, 150, 75);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(30, 30, 150, 75);
 ```
 
 **第三步：画图**
 
 告诉 `canvas` 组件进行相应绘制：
 ```js
-ctx.draw();
+CanvasContext.draw();
 ```
 
 最终渲染结果如下:
@@ -66,7 +66,7 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 如：
 
 ```js
-ctx.arc(100, 200, 50, 0, 2 * Math.PI);
+CanvasContext.arc(100, 200, 50, 0, 2 * Math.PI);
 ```
 该命令，就是在x: 100, y: 200为圆心处，开始画圆。
 
@@ -92,17 +92,17 @@ createCircularGradient(x, y, r)     // 创建一个从圆心开始的渐变
 **1. 使用 <a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-createCircularGradient">createLinearGradient()</a>**
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create linear gradient
-const grd = ctx.createLinearGradient(0, 0, 200, 0);
+const grd = CanvasContext.createLinearGradient(0, 0, 200, 0);
 grd.addColorStop(0, 'blue');
 grd.addColorStop(1, 'red');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createLinearGradient.png)
@@ -111,17 +111,17 @@ ctx.draw();
 **2. 使用 <a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-createCircularGradient">createCircularGradient()</a> 创建一个圆形的渐变颜色。**
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create circular gradient
-const grd = ctx.createCircularGradient(75, 50, 50);
+const grd = CanvasContext.createCircularGradient(75, 50, 50);
 grd.addColorStop(0, 'red');
 grd.addColorStop(1, 'blue');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createCircularGradient.png)
