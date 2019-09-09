@@ -5,7 +5,7 @@ nav: cloud
 sidebar: cloud_init
 ---
 
-> 云开发自 安卓 11.13.5 及 IOS 11.13.0 开始支持
+> 云开发自基础库3.105.2开始支持
 
 ## swan.cloud.init
 
