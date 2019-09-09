@@ -204,6 +204,8 @@ Page({
 
 ## swan.setInnerAudioOption
 
+> 基础库 3.10.4 版本开始支持。
+
 **解释**： 对`innerAudioContext`进行小程序内部的全局设置。
 
 **方法参数**：Object object

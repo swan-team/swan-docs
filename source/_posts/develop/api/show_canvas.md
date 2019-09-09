@@ -18,7 +18,7 @@ sidebar: show_canvas
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
         ctx.setFillStyle('#ff0000');
         ctx.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const ctx = this.createCanvasContext('myCanvas');
 	}
 });
@@ -183,7 +183,7 @@ Page({
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail： function (err) {
+            fail: function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -194,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -313,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -336,10 +336,10 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x	| Number | 否  |0| 画布 x 轴起点|
-|y	| Number | 否  | 0|画布 y 轴起点（|
-|width	| Number | 否  | -x|画布宽度 |
-|height	| Number | 否  |-y| 画布高度（）|
+|x	| Number | 否  |0| 指定的画布区域的左上角横坐标|
+|y	| Number | 否  | 0| 指定的画布区域的左上角纵坐标|
+|width	| Number | 否  | canvas宽度-x |指定的画布区域的宽度 |
+|height	| Number | 否  | canvas高度-y | 指定的画布区域的高度 |
 |destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
 |destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
 |canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
@@ -351,11 +351,17 @@ Page({
 
 **说明**：
 
-在 draw 回调里调用该方法才能保证图片导出成功。
+* 在 draw 回调里调用该方法才能保证图片导出成功。
+* 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。
+* 当 x 合法的前提下，若 x + width > canvas.width 时， width 会被置成 canvas.width - x，y 同理。
 
 **示例**：
 
 <a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+
+
 * 在 swan 文件中
 
 ```html
@@ -406,13 +412,13 @@ Page({
 |1001|执行失败|
 |202|解析失败，请检查参数是否正确。| -->
 
-## canvasContext
+## CanvasContext
 
 **解释**： 绘图上下文。
 
 **示例**：
 
-<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -785,7 +791,7 @@ module.exports = canvas;
 
 ```
 
-## canvasContext.setFillStyle
+## CanvasContext.setFillStyle
 
 
 **解释**：设置填充色。
@@ -805,7 +811,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setFillStyle.png)
 
-##  canvasContext.setStrokeStyle
+##  CanvasContext.setStrokeStyle
 
 
 **解释**：设置边框颜色。
@@ -823,7 +829,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-##  canvasContext.setShadow
+##  CanvasContext.setShadow
 
 > 使用顺序：setShadow(offsetX, offsetY, blur, color)
 
@@ -851,7 +857,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setShadow.png)
 
-##  canvasContext.createLinearGradient
+##  CanvasContext.createLinearGradient
 
 
 **解释**：创建一个线性的渐变颜色。
@@ -886,7 +892,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/createLinearGradient.png)
 
-##  canvasContext.createCircularGradient
+##  CanvasContext.createCircularGradient
 
 **解释**：创建一个圆形的渐变颜色。
 
@@ -917,7 +923,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/createCircularGradient.png)
 
-##  canvasContext.addColorStop
+##  CanvasContext.addColorStop
 
 
 **解释**：创建一个颜色的渐变点。
@@ -955,7 +961,7 @@ ctx.draw();
 **说明**：
 addColorStop 目前在 Android 有bug。
 
-##  canvasContext.setLineWidth
+##  CanvasContext.setLineWidth
 
 
 **解释**：设置线条的宽度。
@@ -996,7 +1002,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setLineWidth.png)
 
-##  canvasContext.setLineCap
+##  CanvasContext.setLineCap
 
 **解释**：设置线条的端点样式。
 
@@ -1039,7 +1045,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setLineCap.png)
 
-##  canvasContext.setLineJoin
+##  CanvasContext.setLineJoin
 
 
 **解释**：设置线条的交点样式。
@@ -1087,7 +1093,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setLineJoin.png)
 
-##  canvasContext.setLineDash
+##  CanvasContext.setLineDash
 
 **解释**：设置线条虚线样式的间距和长度。
 
@@ -1111,7 +1117,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setLineDash.png)
 
-##  canvasContext.setMiterLimit
+##  CanvasContext.setMiterLimit
 
 
 **解释**：设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离，当 setLineJoin() 为 miter 时才有效，超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。
@@ -1165,7 +1171,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setMiterLimit.png)
 
-##  canvasContext.rect
+##  CanvasContext.rect
 
 
 **解释**：创建一个矩形。
@@ -1192,7 +1198,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/rect.png)
 
-##  canvasContext.fillRect
+##  CanvasContext.fillRect
 
 
 **解释**：填充一个矩形。
@@ -1218,7 +1224,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/rect.png)
 
-##  canvasContext.strokeRect
+##  CanvasContext.strokeRect
 
 
 **解释**：画一个矩形(非填充)。
@@ -1244,7 +1250,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-##  canvasContext.clearRect
+##  CanvasContext.clearRect
 
 
 **解释**：清除画布上在该矩形区域内的内容。
@@ -1274,7 +1280,7 @@ ctx.draw();
 ![图片](../../../img/api/canvas/clearRect.png)
 
 
-##  canvasContext.fill
+##  CanvasContext.fill
 
 
 **解释**：对当前路径中的内容进行填充。默认的填充色为黑色。
@@ -1294,7 +1300,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/fill.png)
 
-## canvasContext.stroke
+## CanvasContext.stroke
 
 
 **解释**：画出当前路径的边框。默认颜色为黑色。
@@ -1314,7 +1320,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/stroke.png)
 
-##  canvasContext.beginPath
+##  CanvasContext.beginPath
 
 
 **解释**：开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。
@@ -1340,7 +1346,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/beginPath.png)
 
-##  canvasContext.closePath
+##  CanvasContext.closePath
 
 
 **解释**：关闭一个路径。
@@ -1361,7 +1367,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/closePath.png)
 
-##  canvasContext.moveTo
+##  CanvasContext.moveTo
 
 
 **解释**：把路径移动到画布中的指定点，不创建线条。
@@ -1387,7 +1393,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/moveTo.png)
 
-##  canvasContext.lineTo
+##  CanvasContext.lineTo
 
 
 **解释**：lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。
@@ -1411,7 +1417,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/lineTo.png)
 
-##  canvasContext.arc
+##  CanvasContext.arc
 
 
 **解释**：画一条弧线。
@@ -1443,7 +1449,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/arc.png)
 
-##  canvasContext.scale
+##  CanvasContext.scale
 
 
 **解释**：在调用`scale`方法后，之后创建的路径其横纵坐标会被缩放。多次调用`scale`，倍数会相乘。
@@ -1471,7 +1477,7 @@ ctx.draw();
 
 ![图片](../../../img/scale.png)
 
-##  canvasContext.rotate
+##  CanvasContext.rotate
 
 
 **解释**：以原点为中心，原点可以用 translate 方法修改。顺时针旋转当前坐标轴。多次调用 rotate，旋转的角度会叠加。
@@ -1497,7 +1503,7 @@ ctx.draw();
 
 ![图片](../../../img/rotate.png)
 
-##  canvasContext.translate
+##  CanvasContext.translate
 
 
 **解释**：对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。
@@ -1525,7 +1531,7 @@ ctx.draw();
 
 ![图片](../../../img/translate.png)
 
-##  canvasContext.clip
+##  CanvasContext.clip
 
 
 **解释**： clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。
@@ -1551,7 +1557,7 @@ swan.downloadFile({
 });
 ```
 
-##  canvasContext.setFontSize
+##  CanvasContext.setFontSize
 
 
 **解释**：设置字体的字号。
@@ -1580,7 +1586,7 @@ ctx.draw();
 
 ![图片](../../../img/font-size.png)
 
-##  canvasContext.fillText
+##  CanvasContext.fillText
 
 
 **解释**：在画布上绘制被填充的文本。
@@ -1604,7 +1610,7 @@ ctx.fillText('World', 100, 100);
 ctx.draw();
 ```
 
-##  canvasContext.setTextAlign
+##  CanvasContext.setTextAlign
 
 
 **解释**：用于设置文字的对齐。
@@ -1637,7 +1643,7 @@ ctx.draw();
 ```
 ![图片](../../../img/set-text-align.png)
 
-##  canvasContext.setTextBaseline
+##  CanvasContext.setTextBaseline
 
 **解释**：用于设置文字的水平对齐。
 
@@ -1673,7 +1679,7 @@ ctx.draw();
 ```
 ![图片](../../../img/set-text-baseline.png)
 
-## canvasContext.drawImage
+## CanvasContext.drawImage
 
 > 使用顺序：drawImage(imageResource, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
@@ -1715,7 +1721,7 @@ swan.chooseImage({
 ```
 ![图片](../../../img/draw-image.png)
 
-## canvasContext.setGlobalAlpha
+## CanvasContext.setGlobalAlpha
 
 
 **解释**：设置全局画笔透明度。
@@ -1741,7 +1747,7 @@ ctx.draw();
 ```
 ![图片](../../../img/global-alpha.png)
 
-## canvasContext.measureText
+## CanvasContext.measureText
 
 
 **解释**：测量文本尺寸信息，目前仅返回文本宽度，同步接口。
@@ -1768,7 +1774,7 @@ console.log(metrics.width);
 ```
  
 
-##  canvasContext.strokeText
+##  CanvasContext.strokeText
 
 **解释**：给定的 (x, y) 位置绘制文本描边的方法。
 
@@ -1788,7 +1794,7 @@ console.log(metrics.width);
 canvasContext.strokeText(text, x, y, maxWidth);
 ```
 
-##  canvasContext.setLineDashOffset
+##  CanvasContext.setLineDashOffset
 
 
 **解释**：设置虚线偏移量的属性。
@@ -1803,34 +1809,7 @@ canvasContext.strokeText(text, x, y, maxWidth);
 canvasContext.setLineDashOffset = value;
 ```
 
-##  canvasContext.createPattern
-
-
-**解释**：对指定的图像创建模式的方法，可在指定的方向上重复元图像。
-
-**方法参数**：String image, String repetitio
-
-**`image`参数说明**：  重复的图像源，仅支持包内路径和临时路径 。 
-
-**`repetition`参数说明**：  指定如何重复图像，有效值有： repeat, repeat-x, repeat-y, no-repeat。 
-
-**示例**：
-
-```js
-canvasContext.createPattern(image, repetition);
-```
-
-**示例**：
-
-```js
-const ctx = swan.createCanvasContext('myCanvas');
-const pattern = ctx.createPattern('/path/to/image', 'repeat-x');
-ctx.fillStyle = pattern;
-ctx.fillRect(0, 0, 300, 150);
-ctx.draw();
-```
-
-##  canvasContext.bezierCurveTo
+##  CanvasContext.bezierCurveTo
 
 
 **解释**：创建三次方贝塞尔曲线路径。
@@ -1865,7 +1844,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/bezierCurveTo.png)
 
-##  canvasContext.quadraticCurveTo
+##  CanvasContext.quadraticCurveTo
 
 **解释**：创建二次贝塞尔曲线路径。
 
@@ -1895,7 +1874,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/quadraticCurveTo.png)
 
-##  canvasContext.save
+##  CanvasContext.save
 
 
 **解释**：保存当前的绘图上下文。
@@ -1920,7 +1899,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/save.png)
 
-##  canvasContext.restore
+##  CanvasContext.restore
 
 
 **解释**：恢复之前保存的绘图上下文。
@@ -1945,7 +1924,7 @@ ctx.draw();
 
 ![图片](../../../img/api/canvas/save.png)
 
-##  canvasContext.draw
+##  CanvasContext.draw
 
 
 **解释**：将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
@@ -1972,7 +1951,7 @@ ctx.draw();
 
  
 
-##  canvasContext.font
+##  CanvasContext.font
 
 
 **解释**：设置当前字体样式的属性。
@@ -1996,7 +1975,7 @@ ctx.draw();
 canvasContext.font = value;
 ```
 
-##  canvasContext.setTransform
+##  CanvasContext.setTransform
 
 
 **解释**：使用矩阵重新设置（覆盖）当前变换的方法。

@@ -3,7 +3,7 @@ title: DuXRSessionFaceMode
 layout: gamedoc
 topic: xr
 categoryName: api
-priority: 10-02
+priority: 10-05
 ---
 
 > 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持

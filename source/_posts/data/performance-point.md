@@ -194,7 +194,7 @@ Page({
 ```js
 App({
     onShow(options) {
-        that.globalData.appKey = options.appId;
+        that.globalData.appKey = options.referrerInfo.appId;
     },
     onHide(options) {
         // 访问结束，上报埋点。

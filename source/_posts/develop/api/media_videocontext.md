@@ -12,7 +12,7 @@ sidebar: media_videocontext
 
 **返回值**：videoContext
 
-## videoContext
+## VideoContext
 
 **解释**： swan.createVideoContext 的返回值
 
@@ -107,32 +107,32 @@ Page({
 
 
 
-## videoContext.play
+## VideoContext.play
 
 **解释**：播放
 
 **方法参数**：无
  
 
-## videoContext.pause
+## VideoContext.pause
  
 **解释**： 暂停
 
 **方法参数**：无
 
-## videoContext.seek 
+## VideoContext.seek 
  
 **解释**：跳转到指定位置（单位：s）
 
 **方法参数**：Number position
 
-## videoContext.sendDanmu 
+## VideoContext.sendDanmu 
  
 **解释**：发送弹幕，danmu 包含两个属性 text、color。
 
 **方法参数**：Object danmu
 
-## videoContext.requestFullScreen 
+## VideoContext.requestFullScreen 
  
 > 最低支持基础库版本 3.90.x 。
 
@@ -153,19 +153,19 @@ Page({
 videoContext.requestFullScreen({direction: 90});
 ```
 
-## videoContext.exitFullScreen 
+## VideoContext.exitFullScreen 
  
 **解释**：退出全屏
 
 **方法参数**：无
 
-## videoContext.showStatusBar
+## VideoContext.showStatusBar
  
 **解释**：显示状态栏，仅在iOS全屏下有效。
 
 **方法参数**：无
 
-## videoContext.hideStatusBar
+## VideoContext.hideStatusBar
 
  
 **解释**：隐藏状态栏，仅在iOS全屏下有效。

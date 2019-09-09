@@ -14,7 +14,7 @@ sidebar: media_recorder
 
 **返回值**：recorderManager
 
-## recorderManager
+## RecorderManager
 
 **解释**：swan.getRecorderManager 的返回值。
 
@@ -53,7 +53,7 @@ recorderManager.start(options);
 ```
 
 
-## recorderManager.start 
+## RecorderManager.start 
 
 **解释**： 开始录音
 
@@ -78,7 +78,7 @@ recorderManager.start(options);
 |16000| 24000 ~ 96000|
 |44100| 64000 ~ 320000|
 
-## recorderManager.pause
+## RecorderManager.pause
 
 
 **解释**： 暂停录音
@@ -86,20 +86,20 @@ recorderManager.start(options);
 **方法参数**：无
 
 
-## recorderManager.resume
+## RecorderManager.resume
 
 **解释**： 继续录音
 
 **方法参数**：无
 
 
-## recorderManager.stop 
+## RecorderManager.stop 
 
 **解释**： 停止录音
 
 **方法参数**：无
 
-## recorderManager.onStart
+## RecorderManager.onStart
 
 
 **解释**： 录音开始事件
@@ -107,13 +107,13 @@ recorderManager.start(options);
 **方法参数**：Function callback
 
 
-## recorderManager.onPause
+## RecorderManager.onPause
 
 **解释**： 监听录音暂停事件
 
 **方法参数**：Function callback
 
-## recorderManager.onStop
+## RecorderManager.onStop
 
 **解释**： 录音停止事件，会回调文件地址。
 
@@ -125,7 +125,7 @@ recorderManager.start(options);
 |---- | ---- | ---- |
 |tempFilePath |String | 录音文件的临时路径 |
 
-## recorderManager.onError
+## RecorderManager.onError
 
 
 **解释**： 录音错误事件, 会回调错误信息 。

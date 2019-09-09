@@ -5,11 +5,15 @@ nav: component
 sidebar: canvas
 ---
 
-## canvas
+## canvas 画布
 
-**解释**：画布
+**解释**：画布，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/canvas.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

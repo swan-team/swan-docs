@@ -5,109 +5,13 @@ nav: component
 sidebar: media
 ---
 
-## audio
+## image 图片
 
-**解释**：音频
+**解释**：图片，image 组件默认宽度 300px、高度 225px。
 
-**属性说明**：
+**百度APP中扫码体验：**
 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-|id|String||否|audio 组件的唯一标识符|
-|src|String||否|要播放音频的资源地址|
-|loop|Boolean|false|否|是否循环播放|
-|controls|Boolean|false|否|是否显示默认控件|
-|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
-|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
-|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
-|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
-|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
-|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
-|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
-|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
-
-
-**MediaError.code**
-
-|返回错误码|描述|
-|---- |---- |
-|1|获取资源过程被用户终止|
-|2|网络错误|
-|3|当解码时发生错误|
-|4|不支持音频|
-
-**示例**：
-
-<a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<audio poster="{{poster}}" 
-       name="{{name}}" 
-       loop="false" 
-       author="{{author}}" 
-       src="{{src}}" 
-       id="myAudio" 
-       controls 
-       bind:error="error" 
-       bind:play="audioPlay" 
-       bind:pause="audioPause" 
-       bind:timeupdate="timeupdate" 
-       bind:ended="audioEnded">
-</audio>
-```
-
-* 在 js 文件中
-
-```javascript
-Page({
-    data: {
-        poster: 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg',
-        name: '演员',
-        author: '薛之谦',
-        src: 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
-    },
-    error: function (e) {
-        console.log('audio error:', e);
-        swan.showToast({
-            title: '加载音频资源出错',
-            duration: 1000
-        });
-    },
-    audioPlay: function (e) {
-        console.log('audio play');
-        swan.showToast({
-            title: '音频开始播放',
-            duration: 1000
-        });
-    },
-    audioPause: function (e) {
-        console.log('audio pause');
-        swan.showToast({
-            title: '音频暂停',
-            duration: 1000
-        });
-    },
-    audioEnded: function () {
-        console.log('audio ended');
-        swan.showToast({
-            title: '音频播放完',
-            duration: 1000
-        });
-    },
-    timeupdate: function () {
-        console.log('audio update');
-    }
-});
-```
-
-## image
-
-**解释**：图片
-
-> image 组件默认宽度 300px、高度 225px。
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/image.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -237,11 +141,118 @@ Page({
     </div>     
 </div>
 
-## video
 
-**解释**：视频
+## audio 音频
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+**解释**：音频
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/audio.png"  class="demo-qrcode-image" />
+
+**属性说明**：
+
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|id|String||否|audio 组件的唯一标识符|
+|src|String||否|要播放音频的资源地址|
+|loop|Boolean|false|否|是否循环播放|
+|controls|Boolean|false|否|是否显示默认控件|
+|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
+|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
+|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
+|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
+|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
+|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
+|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
+|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
+
+
+**MediaError.code**
+
+|返回错误码|描述|
+|---- |---- |
+|1|获取资源过程被用户终止|
+|2|网络错误|
+|3|当解码时发生错误|
+|4|不支持音频|
+
+**示例**：
+
+<a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<audio poster="{{poster}}" 
+       name="{{name}}" 
+       loop="false" 
+       author="{{author}}" 
+       src="{{src}}" 
+       id="myAudio" 
+       controls 
+       bind:error="error" 
+       bind:play="audioPlay" 
+       bind:pause="audioPause" 
+       bind:timeupdate="timeupdate" 
+       bind:ended="audioEnded">
+</audio>
+```
+
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        poster: 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg',
+        name: '演员',
+        author: '薛之谦',
+        src: 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
+    },
+    error: function (e) {
+        console.log('audio error:', e);
+        swan.showToast({
+            title: '加载音频资源出错',
+            duration: 1000
+        });
+    },
+    audioPlay: function (e) {
+        console.log('audio play');
+        swan.showToast({
+            title: '音频开始播放',
+            duration: 1000
+        });
+    },
+    audioPause: function (e) {
+        console.log('audio pause');
+        swan.showToast({
+            title: '音频暂停',
+            duration: 1000
+        });
+    },
+    audioEnded: function () {
+        console.log('audio ended');
+        swan.showToast({
+            title: '音频播放完',
+            duration: 1000
+        });
+    },
+    timeupdate: function () {
+        console.log('audio update');
+    }
+});
+```
+
+
+## video 视频
+
+
+**解释**：视频，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
 
 
 **属性说明**：
@@ -267,6 +278,7 @@ Page({
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
@@ -320,7 +332,7 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/4cc0b8fa8e59d67d8e952ef17be19d961565512621984" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b4de2816258292dec183838859e8c57f1566389828332" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -343,6 +355,7 @@ Page({
                show-progress="true"
                show-fullscreen-btn="true"
                enable-progress-gesture="true"
+               show-no-wifi-tip="true"
                danmu-list="{{danmuList}}"
                danmu-btn="true"
                enable-danmu="true"
@@ -453,8 +466,14 @@ Page({
 * 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/)
 * `<video />` 默认宽度 300px、高度 225px。
 
-## camera
+## camera 相机
+
 **解释**：系统相机
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -590,11 +609,15 @@ Page({
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 * 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>。
 
-## ar-camera
+## ar-camera AR相机
+
+> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
 **解释**：AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
-> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ar-camera.png"  class="demo-qrcode-image" />
 
 
 **属性说明**：
@@ -630,7 +653,7 @@ Page({
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
 * 同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
-* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
 
 
 **示例**：
@@ -659,15 +682,18 @@ Page({
     </div>
 </div>
 
-## live-player
+## live-player 实时视频播放器
 
-**解释**：实时视频播放
+**解释**：实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。<br> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 |一级类目|二级类目|
 |--|--|
 |娱乐|直播、直播答题|
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

@@ -12,13 +12,31 @@ sidebar: auditing_baijiahao
 ### 三、内容
 避免出现色情低俗、恶心血腥、虚假信息和违反现行法律法规等内容；发布具有时效性的文章。
 文章挂载通过后需要您在百家号上发布的文章中自行选择挂载，效果如下：
-![图片](../../img/introduction/scancode/auditing.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/scancode/auditing.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
  	
 ### 四、避免发推广信息
 不发布二维码、营销电话、带有推广信息水印的图片；不发布恶意推广类信息。
 ### 五、常见问题
 标题或图片与落地页内容相关性差（如落地页进入主页，与标题不一致）；标题/内容等存在引导性广告，如满减/促销活动/引导至其他平台等；标题过短或表意不清。
-### 六、不符合平台内容规范
+
+### 六、物料类型
+请提交工具型、服务型物料用于百家号文章挂载智能小程序，内容型物料后续将陆续开放百家号挂载能力支持，当前请通过“流量配置-信息流”投放。
+
+
+### 七、不符合平台内容规范
 
 发布不通过，不被推荐的类型包括但不限于以下几种：
 
