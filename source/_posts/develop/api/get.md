@@ -15,9 +15,9 @@ sidebar: get
 
 **返回值**：updateManager
 
-## updateManager
+## UpdateManager
 
-**解释**：管理更新，[swan.getUpdateManager](https://smartapp.baidu.com/docs/develop/api/get/)返回值。
+**解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/get/)返回值。
 
 **示例**：
 
@@ -75,7 +75,7 @@ Page({
 }
 ```
 
-## updateManager.onCheckForUpdate
+## UpdateManager.onCheckForUpdate
 
 **解释**：当向百度后台请求完新版本信息，会进行回调。
 
@@ -87,20 +87,20 @@ Page({
 |---- | ---- | ---- |
 |hasUpdate |  Boolean | 是否有新的版本 |
 
-## updateManager.onUpdateReady
+## UpdateManager.onUpdateReady
 
 **解释**：当新版本下载完成，会进行回调。
 
 **方法参数**：Function callback
 
-## updateManager.onUpdateFailed 
+## UpdateManager.onUpdateFailed 
 
 **解释**：当新版本下载失败，会进行回调
 
 **方法参数**：Function callback
 
 
-## updateManager.applyUpdate
+## UpdateManager.applyUpdate
 
 
 **解释**： 当新版本下载完成，调用该方法会强制当前小程序应用上新版本并重启

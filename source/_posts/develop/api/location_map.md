@@ -15,7 +15,7 @@ sidebar: location_map
 
 **返回值**：mapContext
 
-## mapContext
+## MapContext
 
 **解释**：map 返回值。
 
@@ -177,7 +177,7 @@ Page({
 
 
 
-## mapContext.getCenterLocation
+## MapContext.getCenterLocation
 
 **解释**：获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation。
 
@@ -191,14 +191,14 @@ Page({
 |fail  |Function  |  否 |  |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## mapContext.moveToLocation
+## MapContext.moveToLocation
 
 **解释**：将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。
 
 **方法参数**：无
 
 
-## mapContext.translateMarker
+## MapContext.translateMarker
 
 **解释**：平移 marker，带动画 。
 
@@ -217,7 +217,7 @@ Page({
 |animationEnd|Function|否||动画结束时回调函数|
 |success|	function|		否||	接口调用成功的回调函数|
 
-## mapContext.includePoints
+## MapContext.includePoints
 
 **解释**：缩放视野展示所有经纬度。
 
@@ -235,7 +235,7 @@ Page({
 |complete|	function|		否||	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-## mapContext.getRegion
+## MapContext.getRegion
 
 **解释**：获取当前地图的视野范围。
 
@@ -249,7 +249,7 @@ Page({
 |success   |Function  |  否  | |接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度。 |
 |fail  |Function  |  否 |  |接口调用失败的回调函数|
 |complete   | Function   | 否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
-## mapContext.getScale	
+## MapContext.getScale	
 
 **解释**：获取当前地图的缩放级别。
 

@@ -258,6 +258,11 @@
                 var tarTop = offsetTop + scrollTop - 30;
                 var diffTop = Math.abs(tarTop - scrollTop);
                 var time = diffTop > 1800 ? 200 : 100;
+                
+                // 修复 当切换的两个元素offsetTop距离一致时 不会触发滚动事件，导航栏高亮不生效
+                if(diffTop === 0) {
+                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time })
+                }
                 $('.m-doc-content-layout').scrollTo({toT: tarTop, durTime: time });
             }, 0);
         },
@@ -395,8 +400,15 @@
                         var hash = $(this).children('a')[0].hash;
                         sidebar.each(function (i) {
                             if (this.hash.replace('/', '') === hash) {
-                                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                                $(this).parent('li').addClass('m-doc-sidebar-selected');
+                                var parentHref = $(this)
+                                    .parents('.m-doc-h2-children')
+                                    .siblings('.m-doc-h2-list')
+                                    .attr('href')
+                                    .split('#')[0];
+                                if (parentHref === location.pathname) {
+                                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                                    $(this).parent('li').addClass('m-doc-sidebar-selected');
+                                }
                             }
                         });
                     }

@@ -75,7 +75,7 @@ Page({
 
 ## swan.onNetworkStatusChange
 
-> 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
+> 工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听网络状态变化。
 

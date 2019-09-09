@@ -243,17 +243,18 @@ access_token	|string|	是	|授权小程序的接口调用凭据
 
 #### 返回值说明:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
+参数名 | 类型 |描述
+----- |-----| -----
 app\_id |int |	小程序的appid
 app\_name |	string |	小程序的名称
+app_key |	string | 小程序的key 
 app\_desc |	string |	小程序的介绍内容
 photo\_addr |	string	| 小程序图标
 qualification	 | object	| 小程序账号对应的主体信息
 qualification.name	 | string	| 主体名称
 qualification.type	 | int	| 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放
 qualification.satus	 | int	| 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败
-qualification.ad\_type	 | int	| 高级认证类型 <br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证
+qualification.ad\_type	 | int	| 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 
 qualification.ad_status	 | int	| 高级认证状态 <br>1：通过 <br>3：失败
 category	| array	| 小程序类目信息
 category.category\_id	|int	| 类目id
@@ -304,69 +305,74 @@ msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
 
 ```json
 {
-	"errno": 0,
-	"msg": "success",
-	"data": {
-		"app_id": 111111,
-		"app_name": "小程序",
-		"app_desc": "1531812276",
-		"photo_addr": "[{\"cover\":\"https:\\/\\/b.bdstatic.com\\/searchbox\\/mappconsole\\/image\\/20180416\\/1523870283-34303.jpg\"}]",
-		"qualification": {
-			"name": "",
-			"type": 1,
-			"satus": 1,
-			"ad_type": 1,
-			"ad_status": 1
-		},
-		 "modify_count": {
-            "name_modify_used": 4,
-            "name_modify_quota": 5,
-            "signature_modify_used": 0,
-            "signature_modify_quota": 5,
-            "image_modify_used": 0,
-            "image_modify_quota": 5,
-            "category_modify_used": 0,
-            "category_modify_quota": 3
+    "errno":0,
+    "msg":"success",
+    "data":{
+        "app_id":111111,
+        "app_name":"小程序",
+        "app_key":"1eQayZtM6Vg5C9E3vAgg2IOYjugXqNj2",
+        "app_desc":"1531812276",
+        "photo_addr":"[{"cover":"https:\/\/b.bdstatic.com\/searchbox\/mappconsole\/image\/20180416\/1523870283-34303.jpg"}]",
+        "qualification":{
+            "name":"",
+            "type":1,
+            "satus":1,
+            "ad_type":1,
+            "ad_status":1
         },
-		"category": [{
-			"category_id": 1,
-			"category_name": "电商",
-			"category_desc": "电商",
-			"reason": "失败原因",
-			"audit_status": 1,
-			"parent": {
-				"category_id": 2,
-				"category_name": "电商",
-				"category_desc": "电商"
-			}
-		}],
-		"audit_info": {
-			"audit_app_name_status": 1,
-			"audit_app_name": "测试中名称",
-			"audit_app_name_reason": "名称审核审核失败原因",
-			"audit_app_desc_status": 3,
-			"audit_app_desc": "测试中描述",
-			"audit_app_desc_reason": "审核审核失败原因",
-			"audit_photo_addr_status": 1,
-			"audit_photo_addr": "xxx",
-			"audit_photo_addr_reason": "头像审核失败原因"
-		},
-		 "auth_info":[{
-                        "scope_name":"数据权限",
-                        "type":0
-                    },
-                    {
-                        "scope_name":"账号管理权限",
-                        "type":0
-                    },
-                    {
-                        "scope_name":"推广权限",
-                        "type":0
-                    }],
-		"min_swan_version": "1.6.17",
-		"status": 1,
-		"web_status":1
-	}
+        "modify_count":{
+            "name_modify_used":4,
+            "name_modify_quota":5,
+            "signature_modify_used":0,
+            "signature_modify_quota":5,
+            "image_modify_used":0,
+            "image_modify_quota":5,
+            "category_modify_used":0,
+            "category_modify_quota":3
+        },
+        "category":[
+            {
+                "category_id":1,
+                "category_name":"电商",
+                "category_desc":"电商",
+                "reason":"失败原因",
+                "audit_status":1,
+                "parent":{
+                    "category_id":2,
+                    "category_name":"电商",
+                    "category_desc":"电商"
+                }
+            }
+        ],
+        "audit_info":{
+            "audit_app_name_status":1,
+            "audit_app_name":"测试中名称",
+            "audit_app_name_reason":"名称审核审核失败原因",
+            "audit_app_desc_status":3,
+            "audit_app_desc":"测试中描述",
+            "audit_app_desc_reason":"审核审核失败原因",
+            "audit_photo_addr_status":1,
+            "audit_photo_addr":"xxx",
+            "audit_photo_addr_reason":"头像审核失败原因"
+        },
+        "auth_info":[
+            {
+                "scope_name":"数据权限",
+                "type":0
+            },
+            {
+                "scope_name":"账号管理权限",
+                "type":0
+            },
+            {
+                "scope_name":"推广权限",
+                "type":0
+            }
+        ],
+        "min_swan_version":"1.6.17",
+        "status":1,
+        "web_status":1
+    }
 }
 ```
 

@@ -41,15 +41,3 @@ sidebar: selection
 		<img src="../../../img/design/component/selection/3.png">
 	</div>
 </div>
-
-## 全屏选择器
-用于承载选项较多的列表，以下场景更适合全屏选择器：
-1. 选项较多时，筛选成本高；
-2. 列表选项较长；
-3. 列表选项信息量较多；
-4. 带交互操作（如搜索、编辑等）。
-<div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct ">
-		<img src="../../../img/design/component/selection/4.png">
-	</div>
-</div>

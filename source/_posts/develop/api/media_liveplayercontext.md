@@ -15,7 +15,7 @@ sidebar: media_liveplayercontext
 
 **返回值**：livePlayerContext
 
-## livePlayerContext
+## LivePlayerContext
 
 **解释**： swan.createLivePlayerContext 的返回值
 
@@ -115,7 +115,7 @@ Page({
     </div>     
 </div>
 
-## livePlayerContext.play
+## LivePlayerContext.play
 
 **解释**：播放 
 
@@ -129,7 +129,7 @@ Page({
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-## livePlayerContext.stop
+## LivePlayerContext.stop
 
  
 **解释**：停止 
@@ -144,7 +144,7 @@ Page({
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.mute
+## LivePlayerContext.mute
 
 **解释**：静音
 
@@ -158,7 +158,7 @@ Page({
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.pause 
+## LivePlayerContext.pause 
 
 **解释**：暂停
 
@@ -172,7 +172,7 @@ Page({
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.resume 
+## LivePlayerContext.resume 
 
 **解释**：恢复
 
@@ -186,7 +186,7 @@ Page({
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.requestFullScreen
+## LivePlayerContext.requestFullScreen
 
 **解释**：进入全屏
 
@@ -201,7 +201,7 @@ Page({
 |fail  |Function  |  否 |  |接口调用失败的回调函数。|
 |complete   | Function   | 否 |  |接口调用结束的回调函数（调用成功、失败都会执行）。|
 
-## livePlayerContext.exitFullScreen
+## LivePlayerContext.exitFullScreen
 
 **解释**：退出全屏
 

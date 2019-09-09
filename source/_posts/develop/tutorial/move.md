@@ -41,7 +41,7 @@ log
 
 ```
 4. 根据开发者工具报错以及转换 log 进行二次开发。
- 
+
 #### 百度开发者工具入口
 除了上面 NPM 的方式使用搬家工具，您还可以在在百度开发者工具里进入搬家工具：
 1. **登录开发者工具。**
@@ -52,6 +52,7 @@ log
 ## 框架开发
 小程序的开发除去常见的原生小程序语法的开发模式，还可以应用层框架开发，用类现代框架 (vue/react) 的语法去开发小程序，提升开发体验和解决跨平台的问题。本文主要讲解如何用常见的小程序框架开发百度小程序。
 
+>  由于开发者工具会 watch 项目文件修改，如果出现三方框架构建时变更大量文件而导致无法编译的情况，请尝试在三方框架的构建结束后重新打开项目。
 
 ### Taro
 
@@ -72,7 +73,7 @@ log
 	$ taro init swan-taro
 ```
 
-也可以参考[Taro 开发百度小程序示例](https://github.com/zhengjiaqi/taro-demo-swan)
+也可以参考 [Taro 开发百度小程序示例](https://github.com/zhengjiaqi/taro-demo-swan)
 
 #### 第三步: 安装依赖
 进入项目目录，安装依赖
@@ -94,11 +95,19 @@ log
 	$ taro build --type swan
 ```
 
-#### 第五步: 开发者工具预览
-在百度开发者工具中选择打开项目目录下的`dist`目录，就可以在开发者工具中预览项目。
+#### 第四步: 开发者工具打开项目
+可以通过两种方式打开项目：
+方式一：使用开发者工具打开生成的 `dist` 目录，进行调试、预览、上传，
+方式二：使用 2.8.1 及以上版本开发者工具打开项目目录，同时进行以下配置，配置完成后，就可以在开发者工具中开发、调试、预览、上传。
 
+1. `npm run build:swan`
+2. 在 `project.swan.json`文件中增加配置 `"smartProgramRoot": "dist"`（如果已有此配置，请忽略）
+3. 在项目信息面板中设置如下自定义预处理指令。
+	- 编译前预处理: `npm run dev:swan` 并勾选 **异步执行**
+	- 上传前预处理: `npm run build:swan`
+4. 重新打开项目
 
-### Mpvue
+### mpvue
 
 #### 第一步: 初始化项目
 使用示例项目:
@@ -107,7 +116,7 @@ log
 	$ git clone git@github.com:hucq/mpvue-platform-sample.git
 ```
 
-也可以参考[mpvue百度小程序demo ](https://github.com/zhengjiaqi/mpvue-demo-swan)
+也可以参考 [mpvue 开发百度小程序示例](https://github.com/zhengjiaqi/mpvue-demo-swan)
 
 #### 第二步: 安装依赖
 进入项目目录，安装依赖
@@ -119,14 +128,22 @@ log
 
 #### 第三步: 构建目标代码
 
-
 ```
 	$ npm run dev:swan  // 开发模式
 	$ npm run build:swan // 线上模式
 ```
 
-#### 第四步: 开发者工具预览
-在百度开发者工具中选择打开项目目录下的`dist/swan`目录，就可以在开发者工具中预览项目。
+#### 第四步: 开发者工具打开项目
+可以通过两种方式打开项目：
+方式一：使用开发者工具打开生成的 `dist/swan` 目录，进行调试、预览、上传，
+方式二：使用 2.8.1 及以上版本开发者工具打开项目目录，同时进行以下配置，配置完成后，就可以在开发者工具中开发、调试、预览、上传。
+
+1. `npm run build:swan`
+2. 在 `project.swan.json`文件中增加配置 `"smartProgramRoot": "dist/swan"`（如果已有此配置，请忽略）
+3. 在项目信息面板中设置如下自定义预处理指令。
+	- 编译前预处理: `npm run dev:swan` 并勾选 **异步执行**
+	- 上传前预处理: `npm run build:swan`
+4. 点击编译按钮
 
 ### WePY
 
@@ -144,7 +161,7 @@ log
 ```
 	$ wepy init standard
 ```
-也可以参考[WePY开发百度小程序示例](https://github.com/qianliu013/swan-wepy-todo-demo)
+也可以参考 [WePY 开发百度小程序示例](https://github.com/qianliu013/swan-wepy-todo-demo)
 
 #### 第三步: 安装依赖
 进入项目目录，安装依赖
@@ -194,9 +211,17 @@ npm install
 |`npm run build`| 删掉构建重新构建（没有 watch && 开发 Server）|
 |`npm run prod`| 生产环境构建|
 
-#### 第四步：开发工具预览
+#### 第四步: 开发者工具打开项目
+可以通过两种方式打开项目：
+方式一：使用开发者工具打开生成的 `dist` 目录，进行调试、预览、上传，
+方式二：使用 2.8.1 及以上版本开发者工具打开项目目录，同时进行以下配置，配置完成后，就可以在开发者工具中开发、调试、预览、上传。
 
-在百度开发者工具中选择打开项目目录下的 `dist` 目录，就可以在开发者工具中预览项目。
+1. `npm run prod`
+2. 在 `project.swan.json`文件中增加配置 `"smartProgramRoot": "dist"`（如果已有此配置，请忽略）
+3. 在项目信息面板中设置如下自定义预处理指令。
+	- 编译前预处理: `npm run dev` 并勾选 **异步执行**
+	- 上传前预处理: `npm run prod`
+4. 点击编译按钮
 
 更多关于 `Okam` 使用，可以参考 [Okam 文档](https://ecomfe.github.io/okam)。
 
