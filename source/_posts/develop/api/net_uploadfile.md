@@ -64,9 +64,9 @@ swan.chooseImage({
 
 **返回值**：
 
-返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
+返回一个`UploadTask`对象，通过`UploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
-**uploadTask 对象的方法列表**：
+**UploadTask 对象的方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -170,9 +170,9 @@ swan.downloadFile({
 
 **返回值**：
 
-返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
+返回一个 DownloadTask 对象，通过 DownloadTask ，可监听下载进度变化事件，以及取消下载任务。
 
-**downloadTask 对象的方法列表**：
+**DownloadTask 对象的方法列表**：
 
 |方法 | 类型 | 说明|
 |---- | ---- | ---- |

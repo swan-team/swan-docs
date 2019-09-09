@@ -12,15 +12,15 @@ sidebar: media_createinneraudiocontext
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
 
-**解释**： 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
+**解释**： 创建并返回内部 audio 上下文 `InnerAudioContext` 对象。
 
 **方法参数**： 无
 
-**返回值**：innerAudioContext 
+**返回值**：InnerAudioContext
 
-## innerAudioContext
+## InnerAudioContext
 
-**`innerAudioContext`对象的属性列表**：
+**`InnerAudioContext`对象的属性列表**：
 
 |方法 | 参数 | 只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -34,9 +34,9 @@ sidebar: media_createinneraudiocontext
 |paused |Boolean |是 |当前状态:true 表示暂停或停止，false 表示正在播放。 |
 |volume |Number |否 |音量，范围 0~1。 |
 
-### innerAudioContext
+### InnerAudioContext
 
-**`innerAudioContext`对象的方法列表**：
+**`InnerAudioContext`对象的方法列表**：
 
 |方法 | 参数 | 说明 |
 |---- | ---- | ---- |
@@ -89,11 +89,11 @@ sidebar: media_createinneraudiocontext
 
 Page({
     onLoad() {
-        const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
-        innerAudioContext.autoplay = false;
+        const InnerAudioContext = swan.createInnerAudioContext();
+        InnerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        InnerAudioContext.autoplay = false;
 
-        innerAudioContext.onPlay(res => {
+        InnerAudioContext.onPlay(res => {
             swan.showToast({
                 title: 'play',
                 icon: 'none'
@@ -101,7 +101,7 @@ Page({
             console.log('onPlay', res);
         });
 
-        innerAudioContext.onPause(res => {
+        InnerAudioContext.onPause(res => {
             swan.showToast({
                 title: 'pause',
                 icon: 'none'
@@ -109,7 +109,7 @@ Page({
             console.log('onPause', res);
         });
 
-        innerAudioContext.onStop(res => {
+        InnerAudioContext.onStop(res => {
             swan.showToast({
                 title: 'stop',
                 icon: 'none'
@@ -117,7 +117,7 @@ Page({
             console.log('onStop', res);
         });
 
-        innerAudioContext.onEnded(res => {
+        InnerAudioContext.onEnded(res => {
             swan.showToast({
                 title: 'end',
                 icon: 'none'
@@ -125,11 +125,11 @@ Page({
             console.log('onEnded', res);
         });
 
-        innerAudioContext.onTimeUpdate(res => {
+        InnerAudioContext.onTimeUpdate(res => {
             console.log('onTimeUpdate', res);
         });
 
-        innerAudioContext.onError(res => {
+        InnerAudioContext.onError(res => {
             swan.showToast({
                 title: 'error',
                 icon: 'none'
@@ -137,7 +137,7 @@ Page({
             console.log('onError', res);
         });
 
-        innerAudioContext.onWaiting(res => {
+        InnerAudioContext.onWaiting(res => {
             swan.showToast({
                 title: 'waiting',
                 icon: 'none'
@@ -145,25 +145,25 @@ Page({
             console.log('onWaiting', res);
         });
 
-        this.innerAudioContext = innerAudioContext;
+        this.InnerAudioContext = InnerAudioContext;
     },
     play() {
-        this.innerAudioContext.play();
+        this.InnerAudioContext.play();
     },
     pause() {
-        this.innerAudioContext.pause();
+        this.InnerAudioContext.pause();
     },
     stop() {
-        this.innerAudioContext.stop();
+        this.InnerAudioContext.stop();
     },
     seek() {
-        this.innerAudioContext.seek(10);
+        this.InnerAudioContext.seek(10);
     },
     destroy() {
-        this.innerAudioContext.destroy();
+        this.InnerAudioContext.destroy();
     },
     offTimeUpdate() {
-        this.innerAudioContext.offTimeUpdate(res => {
+        this.InnerAudioContext.offTimeUpdate(res => {
             swan.showToast({
                 title: 'offTimeUpdate',
                 icon: 'none'
@@ -240,24 +240,24 @@ view class="wrap">
 ```javascript
 Page({
     onLoad() {
-        const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
-        innerAudioContext.autoplay = false;
+        const InnerAudioContext = swan.createInnerAudioContext();
+        InnerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        InnerAudioContext.autoplay = false;
 
-        innerAudioContext.onPlay(() => {
+        InnerAudioContext.onPlay(() => {
             swan.showToast({
                 title: 'play',
                 icon: 'none'
             });
         });
 
-        this.innerAudioContext = innerAudioContext;
+        this.InnerAudioContext = InnerAudioContext;
     },
     play() {
-        this.innerAudioContext.play();
+        this.InnerAudioContext.play();
     },
     stop() {
-        this.innerAudioContext.stop();
+        this.InnerAudioContext.stop();
     },
     setInnerAudioOption() {
         swan.setInnerAudioOption({

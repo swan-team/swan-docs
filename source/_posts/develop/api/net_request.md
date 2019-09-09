@@ -74,9 +74,9 @@ swan.request({
 
 **返回值**：
 
-返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
+返回一个 RequestTask 对象，通过 RequestTask，可中断请求任务。
 
-**requestTask 对象的方法列表**：
+**RequestTask 对象的方法列表**：
 
 |方法 | 参数 | 说明  |
 |---- | ---- | ---- |
