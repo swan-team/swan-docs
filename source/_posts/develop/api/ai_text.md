@@ -60,10 +60,13 @@ sidebar: ai_text
 
 ```js
 swan.ai.textReview({
-  content: '',
-  success(res) {
-    console.log(res.result.spam); // 0 表示审核通过
-  }
+    content: '',
+    success(res) {
+      console.log(res.result.spam); // 0 表示审核通过
+    },
+    fail(err) {
+      console.log(err);
+    }
 });
 ```
 

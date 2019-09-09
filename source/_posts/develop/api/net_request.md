@@ -43,7 +43,7 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 
@@ -53,13 +53,14 @@ sidebar: net_request
 ```js
 swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    method: 'GET',
-    dataType: 'json',
+    header: {
+        'content-type': 'application/json'
+    },
+    method: 'POST',
+    dataType: 'JSON',
+    responseType: 'text',
     data: {
         key: 'value'
-    },
-    header: {
-        'content-type': 'application/json' // 默认值
     },
     success: function (res) {
         console.log(res.data);
@@ -73,9 +74,9 @@ swan.request({
 
 **返回值**：
 
-返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
+返回一个 RequestTask 对象，通过 RequestTask，可中断请求任务。
 
-**requestTask 对象的方法列表**：
+**RequestTask 对象的方法列表**：
 
 |方法 | 参数 | 说明  |
 |---- | ---- | ---- |
@@ -84,21 +85,25 @@ swan.request({
 **示例 2**
 
 ```js
-const requestTask = swan.request({
-    url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
-    data: {
-        tabname: '美食酒水'
-    },
+const RequestTask = swan.request({
+    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
     header: {
         'content-type': 'application/json'
     },
+    method: 'GET',
+    dataType: 'JSON',
+    responseType: 'text',
     success: function (res) {
         console.log(res.data)
+    },
+    fail: function (err) {
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
     }
 });
 
 //取消请求任务
-requestTask.abort();
+RequestTask.abort();
 ```
 
 **说明**

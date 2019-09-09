@@ -688,5 +688,6 @@ Page({
 * 建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常。
 * IOS端暂不支持一个页面有多个video时嵌套cover-view。
 * cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
+* cover-image和cover-view的渲染顺序与页面中的标签使用顺序一致。
 
 

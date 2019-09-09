@@ -61,7 +61,7 @@ Page({
         console.log('目前此组件在真机双端不能播放，请在开发者工具中查看完整效果');
     },
     onReady(e) {
-        this.ctx = swan.createLivePlayerContext('myLive');
+        LivePlayerContext = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
         swan.showToast({
@@ -74,13 +74,13 @@ Page({
         });
     },
     livePlay(e) {
-        this.ctx.play();
+        LivePlayerContext.play();
     },
     objectFit(e) {
         this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
     },
     liveStop(e) {
-        this.ctx.stop();
+        LivePlayerContext.stop();
     },
     liveMute(e) {
         this.setData({
@@ -100,18 +100,6 @@ Page({
     },
 });
 ```
-
-* 在 css 文件中
-```css
-.live-play {
-    width: 100%;
-    padding: .16rem;
-}
-button {
-    margin-top: 20rpx;
-}
-```
-
 
 **图示**
 

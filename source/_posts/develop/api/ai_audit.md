@@ -64,10 +64,13 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.imageAudit({
-      image,
-      success(res) {
-        console.log(res.conclusionType); // 1 为合规
-      }
+        image,
+        success(res) {
+            console.log(res.conclusionType); // 1 为合规
+        },
+        fail(err){
+            console.log(err); 
+        }
     });
   }
 });
