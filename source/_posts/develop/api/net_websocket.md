@@ -30,7 +30,7 @@ sidebar: net_websocket
 
 **示例**：
 
-<a href="swanide://fragment/66d08f4a9aadda42620f3005242695721559043634442" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/66d08f4a9aadda42620f3005242695721559043634442" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -101,11 +101,11 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|header| object | 是|-|连接成功的 HTTP 响应 Header。|
+|header| Object | 是|-|连接成功的 HTTP 响应 Header。|
 
 **示例**：
 
-<a href="swanide://fragment/cb33316c7dc0aeaa07ed957ec74229c81559044468276" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cb33316c7dc0aeaa07ed957ec74229c81559044468276" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -155,7 +155,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/8697b85081dbaebafa4207562a7a9f3e1559044367812" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8697b85081dbaebafa4207562a7a9f3e1559044367812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -215,7 +215,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/1e3a78fa7771b02cd58902a750b502201559045140980" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1e3a78fa7771b02cd58902a750b502201559045140980" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -297,7 +297,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/a861668fb7883a1fbcc483540ef2b3e51559044408858" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a861668fb7883a1fbcc483540ef2b3e51559044408858" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -369,7 +369,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/1dd4f099f6066c0b3edc86b77987ec521559043567840" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1dd4f099f6066c0b3edc86b77987ec521559043567840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -437,7 +437,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f13c9d8eb241c61a61c3a175111891d81559044298681" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f13c9d8eb241c61a61c3a175111891d81559044298681" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -487,7 +487,7 @@ Page({
 **解释**：WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。
 **示例**：
 
-<a href="swanide://fragment/fb3d04261e78d1d4c08b3aafe5a11a9d1559046188876" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fb3d04261e78d1d4c08b3aafe5a11a9d1559046188876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -503,30 +503,30 @@ Page({
 ```js
 Page({
     onLoad() {
-        const ws = swan.connectSocket({
+        const SocketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org'
         });
 
-        ws.onOpen(function (res) {
+        SocketTask.onOpen(function (res) {
             console.log('WebSocket连接已打开！', res);
         });
 
-        ws.onError(function (err) {
+        SocketTask.onError(function (err) {
             console.log('WebSocket连接错误！', err);
         });
 
-        ws.onMessage(function (res) {
+        SocketTask.onMessage(function (res) {
             console.log('WebSocket接受到服务器的消息', res);
         });
 
-        ws.onClose(function (res) {
+        SocketTask.onClose(function (res) {
             console.log('WebSocket连接已关闭！', res);
         });
 
-        this.ws = ws;
+        this.SocketTask = SocketTask;
     },
     send() {
-        this.ws.send({
+        this.SocketTask.send({
             data: 'baidu',
             success: function (res) {
                 console.log('WebSocket发送数据成功', res);
@@ -537,7 +537,7 @@ Page({
         });
     },
     close() {
-        this.ws.close({
+        this.SocketTask.close({
             code: '1001',
             reason: 'close reason',
             success: function (res) {
@@ -600,19 +600,19 @@ Page({
 
 **解释**：监听 WebSocket 连接打开事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onClose
 
 **解释**：监听 WebSocket 连接关闭事件。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 ## SocketTask.onError
 
 **解释**：监听 WebSocket 错误。
 
-**方法参数**：无
+**方法参数**：Function callback
 
 
 ## SocketTask.onMessage

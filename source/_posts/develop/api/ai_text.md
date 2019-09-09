@@ -24,7 +24,7 @@ sidebar: ai_text
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|log_id | String |唯一的log id，用于问题定位。|
+|log_id | Number |唯一的log id，用于问题定位。|
 |result| Object| 审核结果详情 |
 
 **result 返回参数说明**
@@ -56,14 +56,17 @@ sidebar: ai_text
 
 **示例**：
 
-<a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.textReview({
-  content: '',
-  success(res) {
-    console.log(res.result.spam); // 0 表示审核通过
-  }
+    content: '',
+    success(res) {
+      console.log(res.result.spam); // 0 表示审核通过
+    },
+    fail(err) {
+      console.log(err);
+    }
 });
 ```
 

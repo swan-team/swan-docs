@@ -21,7 +21,7 @@ sidebar: show_query
 
 **示例**：
 
-<a href="swanide://fragment/efd1a134de87bfcdf9b15b5156d4e0061558352337120" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/efd1a134de87bfcdf9b15b5156d4e0061558352337120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -51,15 +51,15 @@ Page({
         appear: false
     },
     onReady() {
-        const observer = swan.createIntersectionObserver(this);
-        observer.relativeTo('.scroll-view').observe('.ball', res => {
+        const IntersectionObserver = swan.createIntersectionObserver(this);
+        IntersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
             console.log('observe', res)
             this.setData('appear', res.intersectionRatio > 0);
         });
-        this.observer = observer;
+        this.IntersectionObserver = IntersectionObserver;
     },
     onUnload() {
-        this.observer && this.observer.disconnect();
+        this.IntersectionObserver && this.IntersectionObserver.disconnect();
     }
 });
 ```
@@ -223,7 +223,7 @@ swan.createIntersectionObserver(this, {
 
 **示例**：
 
-<a href="swanide://fragment/6444dc8c1a552c147d760e0bb95059f61558352422429" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6444dc8c1a552c147d760e0bb95059f61558352422429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -261,10 +261,10 @@ Page({
         this.queryNodeInfo();
     },
     queryNodeInfo() {
-        const query = swan.createSelectorQuery();
-        query.select('.target').boundingClientRect();
+        const SelectorQuery = swan.createSelectorQuery();
+        SelectorQuery.select('.target').boundingClientRect();
 
-        query.exec(res => {
+        SelectorQuery.exec(res => {
             const rect = res[0]
             if (rect) {
                 const metrics = []
@@ -361,8 +361,8 @@ movable-area {
 ```js
 Component({
     queryMultipleNodes: function(){
-        var query = swan.createSelectorQuery().in(this)
-        query.select('#the-id').boundingClientRect(function(res){
+        var SelectorQuery = swan.createSelectorQuery().in(this)
+        SelectorQuery.select('#the-id').boundingClientRect(function(res){
             res.top // 这个组件内 #the-id 节点的上边界坐标
         }).exec()
     }

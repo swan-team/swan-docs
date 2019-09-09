@@ -7,7 +7,7 @@ sidebar: nacomponent
 
 ## swan.showFavoriteGuide
 
-> 引导组件有统一的策略，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。
+> 引导组件有统一的策略，若用户未执行过添加操作，则3天内不再出现引导组件；若用户执行过添加操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">添加到我的小程序引导</a>。
 
@@ -27,7 +27,7 @@ sidebar: nacomponent
 
 **示例**：
 
-<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -80,7 +80,7 @@ sidebar: nacomponent
     })
     ```
 
-用户通过引导添加组件“添加到我的小程序”后，可以在百度APP首页的智能小程序二楼“我的小程序”中看到它。
+用户通过引导添加组件“添加到我的小程序”后，可以在宿主APP首页的智能小程序二楼“我的小程序”中看到它。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/guide_add/2.png">

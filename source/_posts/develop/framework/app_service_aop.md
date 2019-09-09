@@ -5,16 +5,17 @@ nav: framework
 sidebar: app_service_aop
 ---
 
-## AOP
+## AOP说明
 
-小程序的开发者或者服务商会提供一些lib库，代理小程序的生命周期或API等，从而执行：打点/事件触发/统一登录等等通用逻辑。通常，小程序开发者们使用这些扩展包时，不得不在各个使用点（生命周期、事件触发等）处显式调用。
+小程序的开发者或者服务商会提供一些lib库，用来代理小程序的生命周期或API等，进而想要进行一些通用逻辑的处理(例如: 打点/事件触发/统一登录等等通用逻辑)。
 
-所以，智能小程序在框架层提供切面。让扩展包的开发者可以在小程序运行的生命周期/事件触发/API调用等处，注入通用逻辑。
+通常，小程序开发者们使用这些扩展包时，不得不在各个使用点（生命周期、事件触发等）处显式调用。
+
+为解决该类问题，智能小程序在框架层提供切面。让扩展包的开发者可以在小程序运行的生命周期/事件触发/API调用等处，注入通用逻辑。
 
 ## App.after
 
-<div class="notice">解释： </div>
-App.after可以增加APP级的切面，触发的时机是在所拦截的对应生命周期方法执行之后
+**解释：** App.after可以增加APP级的切面，触发的时机是在所拦截的对应生命周期方法执行之后。
 
 **方法参数**：Object
 
@@ -36,9 +37,10 @@ App.after可以增加APP级的切面，触发的时机是在所拦截的对应�
 
 * onPageNotFound
 
-**<div class="notice">示例： </div>**
+**示例代码：**
 
 ```js
+// app.js
 App({
     onShow() {
         console.log('normal onShow');
@@ -61,8 +63,7 @@ App.after({
 
 ## Page.after
 
-<div class="notice">解释： </div>
-Page.after可以Page级的切面，触发的时机是在所拦截的对应生命周期方法执行之后，也可以拦截所有页面上发生的事件（对于要拦截的事件，在swan文件上必须显示绑定了相应事件）
+**解释：** Page.after可以增加Page级的切面，触发的时机是在所拦截的对应生命周期方法执行之后，也可以拦截所有页面上发生的事件（对于要拦截的事件，在swan文件上必须显示绑定了相应事件）。
 
 **方法参数**：Object
 
@@ -96,9 +97,11 @@ Page.after可以Page级的切面，触发的时机是在所拦截的对应生命
 
 * onTabItemTap
 
-**<div class="notice">示例： </div>**
+* onURLQueryChange
 
-```
+**示例代码：**
+
+```js
 // 为url中含有page/index的page实例增加切面
 Page.after({
 
@@ -122,9 +125,7 @@ Page.after({
 
 ## swan.after
 
-<div class="notice">解释： </div>
-swan.after可以拦截所有当前运行小程序对于API的调用，默认传入 `function` 时，只在API函数调用的返回阶段拦截。如果传入Object，则可以选择在返回阶段拦截，还是在回调调用阶段拦截。
-
+**解释：** swan.after可以拦截所有当前运行小程序对于API的调用，默认传入`function`时，只在API函数调用的返回阶段拦截。如果传入Object，则可以选择拦截的阶段（例如: 返回阶段、回调调用阶段）。
 
 **方法参数**：Object
 
@@ -139,9 +140,9 @@ swan.after可以拦截所有当前运行小程序对于API的调用，默认传�
 
 参见API文档，API中所有swan调用的均可以拦截
 
-**<div class="notice">示例： </div>**
+**示例代码：**
 
-```
+```js
 swan.after({
 
     // 默认在returning阶段进行拦截

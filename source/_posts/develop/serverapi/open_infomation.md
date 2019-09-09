@@ -314,59 +314,68 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel?access_tok
     "data": []
 }
 ```
+
+
+
 ## sendTemplateMessage
-**解释**：推送模板消息
-**接口调用请求说明**：请提前在开发者平台创建消息模板。
+
+**解释：**推送模板消息
+
+**接口调用请求说明：**请提前在开发者平台创建消息模板。用`application/x-www-form-urlencoded`方式提交数据。
 
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCESS_TOKEN
+
 ```
-**参数说明**:
-
-|参数名	|类型|	是否必须|	描述|
-|---|---|---|---|
-|template_id|	string|	是|	所需下发的模板消息的id|
-|touser	|string	|否|	接收者swan_id|
-|touser_openId|string|否|接收者open_id|
-|data|	json string|	是|`	{"keyword1": {"value": "2018-09-06"},"keyword2": {"value": "kfc"}}`。|
-|page|	string|	否|	点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数，（示例index?foo=bar），该字段不填则模板无跳转。|
-|scene_id|	string|	是|	场景id，例如formId、orderId、payId。|
-|scene_type	|int|	是|	场景type，1：表单；2：百度收银台订单；3:直连订单。|
-|ext|json string|否|`{"xzh_id":111,"category_id":15}`|
-|access_token|string	|是| [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
 
 
-**说明**：
-* 当开发者获得用户 openid，填写到 touser_openid，否则获取用户 swanid，填写到 touser。
-* 当 touser_openId  和 touser 至少填写一个，如同时填写，仅以 touser_openId  下发消息。
-* 评价服务必须填写 touser_openId  以及 ext 字段。其中ext字段以 json 格式包含 category_id 和 xzh_id。
+**名词解释：**
 
-### 消息发送失败可能的原因
-* scene_id 状态需要和用户登录状态保持一致，否则 scene_id 校验会失败。 
-    > 如：登录态scene_id最后一位是1, 未登录态最后一位是0， 登录态对应的是touser_openId，未登录态对应的是touser。 
-如果不匹配 scene_id 将会校验失败，导致消息无法发送。
+- [swan_id](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)：百度生成的与设备相关的唯一标识，APP卸载重安装不会变 
+- open_id：百度用户登录唯一标识
+- formId：[form_id官方文档介绍](https://smartprogram.baidu.com/docs/develop/component/formlist/#form/)
 
-* 发送消息时用到的 touser/touser_openid 必须和 申请 scene_id 时的 touser/touser_openid 一一对应， 否则也会导致 scene_id 检验失败。
-* 如果通过上面的查验仍然发送消息失败， 请检查 appkey 是否异常。
+**参数说明：**
 
-**返回值**:
+| 参数名            | 类型      | 是否必须 | 描述   |
+|----|--|------|-----|
+| access\_token  | String  | 是    | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
+| touser         | String  | 是    | 接收者swan\_id，与touser\_openId二选一 （使用方式参考下面规则）|
+| touser\_openId | String  | 是    | 接收者open\_id，与touser 二选一（使用方式参考下面规则） |
+| template\_id   | String  | 是    | 所需下发的模板消息的id  |
+| data           | Objec   | 是    | \{"keyword1": \{"value": "2018\-09\-06"\},"keyword2": \{"value": "kfc"\}\}为json对象 |
+| page           | String  | 否    | 跳转小程序页面地址 pages/xxx/xxx?f=xxxx   |
+| scene\_id      | String  | 是    | 表单提交场景下，为 submit 事件带上的 formId；支付场景下，为本次支付的 payId、orderId   |
+| scene\_type    | Integer | 是    | 场景id类型，1：表单；2：百度收银台订单；3:直连订单        |
+| ext            | Object  | 否    | \{"xzh\_id":111,"category\_id":15\}      |
 
-```json
-{
-    "errno": 0,
-    "msg": "success",
-    "data": {
-        "msg_key": 158
-    }
- ```
+**touser&touser_openId使用规则说明：**
+
+- 百度登录用户使用touser_openId，游客用户使用touser，详见[如何判断当前用户是游客状态还是登陆状态](#如何判断当前用户是游客状态还是登陆状态？)。
+
+### Q&A
+
+ 
+#### 如何判断当前用户是游客状态还是登陆状态？
+ - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登陆游客状态
+ - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登陆状态
+ 
+#### 如何获取swan\_id & open\_id？
+ - 获取swan\_id：[swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
+ - 获取open\_id：参考官方文档 [获取登录用户OpenId](https://smartprogram.baidu.com/docs/develop/api/open_log/)
+ 
+
+### 模板消息开发流程图：
+
+![图片](../../../img/api/information/模板消息开发流程图.svg)
+
 ### 错误码
 
-|错误码|	说明|
-|---|---|
-|2002|	参数错误|
-|4001|	template_id 不正确|
-|4002|	消息推送接口调用失败|
-|4003|	表单无效|
-|4004|	场景id无效|
-|6001|	无 push 权限|
-
+| 错误码  | 说明               |
+|-------|------------------|
+| 2002 | 参数错误             |
+| 4001 | template\_id 不正确 |
+| 4002 | 消息推送接口调用失败       |
+| 4003 | 表单无效             |
+| 4004 | 场景id无效           |
+| 6001 | 无 push 权限        |

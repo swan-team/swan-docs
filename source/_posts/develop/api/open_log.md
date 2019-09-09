@@ -51,10 +51,14 @@ sidebar: open_log
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|code|String|用户登录凭证（有效期五分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
 **示例**：
-<a href="swanide://fragment/f24161cd6644de1ef912cf50f5a9d86f1544431618" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+> 详细示例请在开发者工具中查看。
+
+* 在 js 文件中
+
 ```js
 swan.login({
     success: function (res) {
@@ -70,22 +74,63 @@ swan.login({
     }
 });
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败| -->
+## getunionid
 
-<!-- **iOS**
+### unionid说明
+1. 一个开发者可以创建多个小程序， 开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在一个开发者所有的小程序下的unionid是唯一的。
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确|
-|10001|内部错误 |
-|10002|网络请求失败|
-|10004|用户未登录(user not login)|
-|10007|请求超时| -->
+2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open_log/)，请妥善处理用户未授权场景。
+
+### 接口调用请求说明
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_TOKEN
+```
+### 参数说明
+
+**query参数**
+
+参数名 | 类型 | 是否必须 | 描述 
+--| --| --|--
+access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)
+
+
+**post参数**
+
+参数名 | 类型 | 是否必须 | 描述 
+--| --| --|--
+openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open_log/)获取
+
+
+**返回值说明**
+
+参数名 | 类型 |描述 
+--| --| --|--
+errno| int | 错误码 0：正确返回，1：异常返回
+errmsg| string | 错误信息
+request_id| string | 请求ID，标识一次请求
+data| object | 详细数据，errno为0的情况下才有意义
+
+
+**data字段描述**
+
+参数名 | 类型 | 描述 
+--| --| --|--
+unionid| string | 小程序用户 + 开发者主体维度 唯一的id
+
+
+**返回值示例**
+```
+    { 
+      "data": {
+			 "unionid": "St6PVMkgMDeh92Uq2EWfx6H"
+	   },
+	 "errmsg": "succ",
+	 "errno": 0,
+	 "request_id": "2321772211",
+	 "timestamp": 1563886782
+	}
+```
+
 
 ## Session Key
 
@@ -148,7 +193,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 **示例**：
 
-<a href="swanide://fragment/fb9d919d0ecca8fc3cc6c89a597210ff1558336225956" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fb9d919d0ecca8fc3cc6c89a597210ff1558336225956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -231,7 +276,9 @@ Page({
 
 ## swan.isLoginSync
 
-**解释**：获取百度 App登录状态。
+> 基础库 1.13.4 版本开始支持。
+
+**解释**：获取宿主 App登录状态。
 
 **方法参数**：无
 
@@ -239,11 +286,11 @@ Page({
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
 **示例**：
 
-<a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -13,17 +13,17 @@ sidebar: net_request
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-|url |String | 是   |-|    开发者服务器接口地址|
-|data  |  Object/String  | 否  |-| 请求的参数|
-|header | Object | 否    |-|   设置请求的 header，header 中不能设置 Referer。|
-|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE 。|
-|dataType   | String | 否  | json  | 有效值：string,json。 如果设为 json，会尝试对返回的数据做一次 JSON.parse 。|
-|responseType   | String | 否  | text  | 设置响应的数据类型, 合法值：text、arraybuffer。|
-|success |Function    |否 |-|      收到开发者服务成功返回的回调函数。|
-|fail |   Function|    否  |-|     接口调用失败的回调函数。|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）。|
+|参数名 |类型  |必填 | 默认值 |说明|最低支持版本|
+|---- | ---- | ---- | ----|----|----|
+|url |String | 是   |-|    开发者服务器接口地址|-|
+|data  |  Object/String  | 否  |-| 请求的参数|-|
+|header | Object | 否    |-|   设置请求的 header，header 中不能设置 Referer。|-|
+|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE/CONNECT(仅 Andriod 支持)。|-|
+|dataType   | String | 否  | json  | 有效值：string,json。 如果设为 json，会尝试对返回的数据做一次 JSON.parse 。|-|
+|responseType   | String | 否  | text  | 设置响应的数据类型, 合法值：text、arraybuffer。|1.11.20|
+|success |Function    |否 |-|      收到开发者服务成功返回的回调函数。|-|
+|fail |   Function|    否  |-|     接口调用失败的回调函数。|-|
+|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）。|-|
 
 
 **success 返回参数说明**：
@@ -43,7 +43,7 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 
@@ -53,13 +53,14 @@ sidebar: net_request
 ```js
 swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    method: 'GET',
-    dataType: 'json',
+    header: {
+        'content-type': 'application/json'
+    },
+    method: 'POST',
+    dataType: 'JSON',
+    responseType: 'text',
     data: {
         key: 'value'
-    },
-    header: {
-        'content-type': 'application/json' // 默认值
     },
     success: function (res) {
         console.log(res.data);
@@ -73,9 +74,9 @@ swan.request({
 
 **返回值**：
 
-返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
+返回一个 RequestTask 对象，通过 RequestTask，可中断请求任务。
 
-**requestTask 对象的方法列表**：
+**RequestTask 对象的方法列表**：
 
 |方法 | 参数 | 说明  |
 |---- | ---- | ---- |
@@ -84,21 +85,25 @@ swan.request({
 **示例 2**
 
 ```js
-const requestTask = swan.request({
-    url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
-    data: {
-        tabname: '美食酒水'
-    },
+const RequestTask = swan.request({
+    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
     header: {
         'content-type': 'application/json'
     },
+    method: 'GET',
+    dataType: 'JSON',
+    responseType: 'text',
     success: function (res) {
         console.log(res.data)
+    },
+    fail: function (err) {
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
     }
 });
 
 //取消请求任务
-requestTask.abort();
+RequestTask.abort();
 ```
 
 **说明**

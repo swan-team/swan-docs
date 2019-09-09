@@ -8,7 +8,7 @@ sidebar: open_payment
 
 ## swan.requestPolymerPayment
 
-> 基础库 1.8.5 版本开始支持。使用工具调试时为模拟支付，使用真机调试时可查看真实支付结果。
+> 基础库 1.8.5 版本开始支持。使用工具调试时为模拟支付，使用真机调试时可查看真实支付结果。在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。
 
@@ -33,7 +33,7 @@ sidebar: open_payment
 
 |参数| 必填|说明|
 |----|   ----|---|
-|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装与组装</a>。|
+|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装</a>。|
 |appKey| 是|支付能力开通后分配的支付appKey，用以表示应用身份的唯一ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/)。">核心参数获取与组装</a>。|
 |totalAmount|  是|订单金额，单位为人民币分。|
 |tpOrderId| 是|商户平台自己记录的订单ID，当支付状态发生变化时，会通过此订单ID通知商户。|
@@ -53,7 +53,7 @@ sidebar: open_payment
 | WeChat | 微信支付|
 
 **示例**：
-<a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js

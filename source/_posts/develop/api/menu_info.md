@@ -29,7 +29,7 @@ sidebar: menu_info
 
 **示例**：
 
-<a href="swanide://fragment/58313b1eb5dd40b7ca199130b33b8f281557730380596" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/58313b1eb5dd40b7ca199130b33b8f281557730380596" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

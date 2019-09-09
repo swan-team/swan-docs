@@ -6,11 +6,11 @@ sidebar: show_createanimation
 ---
 ## swan.createAnimation
 
-**解释**：创建一个动画实例 animation
+**解释**：创建一个动画实例 Animation
 
 **方法参数**：Object object
 
-**返回值**：animation
+**返回值**：Animation
 
 **`object`参数说明**：
 
@@ -35,7 +35,7 @@ sidebar: show_createanimation
 
 **示例**：
 
-<a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -50,14 +50,14 @@ sidebar: show_createanimation
 ```js
 Page({
     createAnimation() {
-        const animation = swan.createAnimation({
+        const Animation = swan.createAnimation({
             transformOrigin: "50% 50%",
             duration: 1000,
             timingFunction: "ease",
             delay: 0
         });
 
-        console.log('createAnimation', animation);
+        console.log('createAnimation', Animation);
     }
 });
 ```
@@ -93,7 +93,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -111,11 +111,11 @@ Page({
         animationData: {}
     },
     startToAnimate() {
-        const animation = swan.createAnimation();
-        animation.rotate(90).translateY(10).step();
-        animation.rotate(-90).translateY(-10).step();
+        const Animation = swan.createAnimation();
+        Animation.rotate(90).translateY(10).step();
+        Animation.rotate(-90).translateY(-10).step();
         this.setData({
-            animationData: animation.export()
+            animationData: Animation.export()
         });
     }
 });

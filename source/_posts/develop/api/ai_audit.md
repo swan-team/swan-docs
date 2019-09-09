@@ -24,7 +24,7 @@ sidebar: ai_audit
 
 |参数 | 类型 | 	说明  |
 |---- | ---- | ---- |
-|log_id|	Long|		请求唯一id|
+|log_id|	Number|		请求唯一id|
 |conclusion|	String|	审核结果描述，成功才返回，失败不返回。|
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|
@@ -57,17 +57,20 @@ sidebar: ai_audit
 
 **示例**：
 
-<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.imageAudit({
-      image,
-      success(res) {
-        console.log(res.conclusionType); // 1 为合规
-      }
+        image,
+        success(res) {
+            console.log(res.conclusionType); // 1 为合规
+        },
+        fail(err){
+            console.log(err); 
+        }
     });
   }
 });

@@ -11,15 +11,17 @@ sidebar: media_liveplayercontext
 
 **方法参数**： String domId
 
+**`domId`参数说明**：要获取 live-player 组件的 id。
+
 **返回值**：livePlayerContext
 
-## livePlayerContext
+## LivePlayerContext
 
 **解释**： swan.createLivePlayerContext 的返回值
 
 **示例**：
 
-<a href="swanide://fragment/269a6e88275152375d129b4aef3745a41556529331372" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/1c03ff864ae6e6b6632eea2f539623021565512790335" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
 
@@ -55,8 +57,11 @@ Page({
         muted: false,
         backgroundMute: false
     },
+    onShow() {
+        console.log('目前此组件在真机双端不能播放，请在开发者工具中查看完整效果');
+    },
     onReady(e) {
-        this.ctx = swan.createLivePlayerContext('myLive');
+        LivePlayerContext = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
         swan.showToast({
@@ -69,13 +74,13 @@ Page({
         });
     },
     livePlay(e) {
-        this.ctx.play();
+        LivePlayerContext.play();
     },
     objectFit(e) {
         this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
     },
     liveStop(e) {
-        this.ctx.stop();
+        LivePlayerContext.stop();
     },
     liveMute(e) {
         this.setData({
@@ -96,24 +101,21 @@ Page({
 });
 ```
 
-* 在 css 文件中
-```css
-.live-play {
-    width: 100%;
-    padding: .16rem;
-}
-button {
-    margin-top: 20rpx;
-}
-```
-
-
 **图示**
-![图片](../../../img/component/liveplayer.png)
 
- 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/api/media/live-player.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-## livePlayerContext.play
+## LivePlayerContext.play
 
 **解释**：播放 
 
@@ -127,7 +129,7 @@ button {
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-## livePlayerContext.stop
+## LivePlayerContext.stop
 
  
 **解释**：停止 
@@ -142,7 +144,7 @@ button {
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.mute
+## LivePlayerContext.mute
 
 **解释**：静音
 
@@ -156,7 +158,7 @@ button {
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.pause 
+## LivePlayerContext.pause 
 
 **解释**：暂停
 
@@ -170,7 +172,7 @@ button {
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.resume 
+## LivePlayerContext.resume 
 
 **解释**：恢复
 
@@ -184,7 +186,7 @@ button {
 |fail  |Function  |  否 | |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## livePlayerContext.requestFullScreen
+## LivePlayerContext.requestFullScreen
 
 **解释**：进入全屏
 
@@ -199,7 +201,7 @@ button {
 |fail  |Function  |  否 |  |接口调用失败的回调函数。|
 |complete   | Function   | 否 |  |接口调用结束的回调函数（调用成功、失败都会执行）。|
 
-## livePlayerContext.exitFullScreen
+## LivePlayerContext.exitFullScreen
 
 **解释**：退出全屏
 

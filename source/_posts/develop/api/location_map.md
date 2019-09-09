@@ -11,15 +11,17 @@ sidebar: location_map
 
 **方法参数**：String mapId
 
+**`mapId`参数说明**：要获取 map 组件的 id。
+
 **返回值**：mapContext
 
-## mapContext
+## MapContext
 
 **解释**：map 返回值。
 
 **示例**：
 
-<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -106,10 +108,10 @@ Page({
         }]
     },
     onReady() {
-        this.mapContext = swan.createMapContext('myMap');
+        this.MapContext = swan.createMapContext('myMap');
     },
     getCenterLocation: function () {
-        this.mapContext.getCenterLocation({
+        this.MapContext.getCenterLocation({
             success: function (res) {
                 console.log("经度", res.longitude);
                 console.log("纬度", res.latitude);
@@ -117,10 +119,10 @@ Page({
         })
     },
     moveToLocation: function () {
-        this.mapContext.moveToLocation();
+        this.MapContext.moveToLocation();
     },
     translateMarker: function () {
-        this.mapContext.translateMarker({
+        this.MapContext.translateMarker({
             markerId: 0,
             rotate: 90,
             autoRotate: true,
@@ -135,7 +137,7 @@ Page({
         })
     },
     includePoints: function () {
-        this.mapContext.includePoints({
+        this.MapContext.includePoints({
             padding: [10],
             points: [{
                 latitude: 23,
@@ -147,7 +149,7 @@ Page({
         })
     },
     getRegion: function () {
-        this.mapContext.getRegion({
+        this.MapContext.getRegion({
             success: function (res) {
                 console.log("西南角的经纬度", res.southwest);
                 console.log("东北角的经纬度", res.northeast);
@@ -155,18 +157,6 @@ Page({
         });
     }
 });
-```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
 ```
 
 
@@ -187,7 +177,7 @@ Page({
 
 
 
-## mapContext.getCenterLocation
+## MapContext.getCenterLocation
 
 **解释**：获取当前地图中心的经纬度，返回的是 gcj02 坐标系，可以用于 swan.openLocation。
 
@@ -201,14 +191,14 @@ Page({
 |fail  |Function  |  否 |  |接口调用失败的回调函数|
 |complete   | Function   | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## mapContext.moveToLocation
+## MapContext.moveToLocation
 
 **解释**：将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。
 
 **方法参数**：无
 
 
-## mapContext.translateMarker
+## MapContext.translateMarker
 
 **解释**：平移 marker，带动画 。
 
@@ -225,8 +215,9 @@ Page({
 |duration  |Number   |  否 |  |动画持续时长，默认值1000ms，平移与旋转分别计算。 |
 |fail   | Function   | 否 |  |接口调用失败的回调函数|
 |animationEnd|Function|否||动画结束时回调函数|
+|success|	function|		否||	接口调用成功的回调函数|
 
-## mapContext.includePoints
+## MapContext.includePoints
 
 **解释**：缩放视野展示所有经纬度。
 
@@ -239,8 +230,12 @@ Page({
 |---- | ---- | ---- |---- |---|
 |points  |Array  |  是  | |要显示在可视区域内的坐标点列表，[{latitude, longitude}] 。|
 |padding  |Array  |  否 |  |坐标点形成的矩形边缘到地图边缘的距离，单位像素。格式为[上,右,下,左]，安卓上只能识别数组第一项，上下左右的 padding 一致。开发者工具暂不支持 padding 参数。|
+|success|	function|		否||	接口调用成功的回调函数|
+|fail	|function	|	否||	接口调用失败的回调函数|
+|complete|	function|		否||	接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## mapContext.getRegion
+
+## MapContext.getRegion
 
 **解释**：获取当前地图的视野范围。
 
@@ -254,7 +249,7 @@ Page({
 |success   |Function  |  否  | |接口调用成功的回调函数，res = {southwest, northeast}，西南角与东北角的经纬度。 |
 |fail  |Function  |  否 |  |接口调用失败的回调函数|
 |complete   | Function   | 否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
-## mapContext.getScale	
+## MapContext.getScale	
 
 **解释**：获取当前地图的缩放级别。
 

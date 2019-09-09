@@ -3,6 +3,7 @@ title: 系统事件
 layout: gamedoc
 topic: system
 categoryName: api
+priority: 02-02
 ---
 
 

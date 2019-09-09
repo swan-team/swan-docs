@@ -12,7 +12,7 @@ sidebar: media_backgroundaudiomanager
 
 **方法参数**：无
 
-##  backgroundAudioManager
+##  BackgroundAudioManager
 
 **`backgroundAudioManager`对象的属性列表**：
 
@@ -32,7 +32,7 @@ sidebar: media_backgroundaudiomanager
  
 **示例**：
 
-<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/27e9caf2a1251f5db5c43fd60a4535e21567971373405" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -51,13 +51,13 @@ sidebar: media_backgroundaudiomanager
 
 Page({
     onLoad() {
-        const backgroundAudioManager = swan.getBackgroundAudioManager();
-        backgroundAudioManager.title = '演员';
-        backgroundAudioManager.epname = '演员';
-        backgroundAudioManager.singer = '薛之谦';
-        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+        const BackgroundAudioManager = swan.getBackgroundAudioManager();
+        BackgroundAudioManager.title = '演员';
+        BackgroundAudioManager.epname = '演员';
+        BackgroundAudioManager.singer = '薛之谦';
+        BackgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
-        backgroundAudioManager.onPlay(res => {
+        BackgroundAudioManager.onPlay(res => {
             swan.showToast({
                 title: 'play',
                 icon: 'none'
@@ -65,7 +65,7 @@ Page({
             console.log('onPlay', res);
         });
 
-        backgroundAudioManager.onPause(res => {
+        BackgroundAudioManager.onPause(res => {
             swan.showToast({
                 title: 'pause',
                 icon: 'none'
@@ -73,7 +73,7 @@ Page({
             console.log('onPause', res);
         });
 
-        backgroundAudioManager.onStop(res => {
+        BackgroundAudioManager.onStop(res => {
             swan.showToast({
                 title: 'stop',
                 icon: 'none'
@@ -81,7 +81,7 @@ Page({
             console.log('onStop', res);
         });
 
-        backgroundAudioManager.onEnded(res => {
+        BackgroundAudioManager.onEnded(res => {
             swan.showToast({
                 title: 'end',
                 icon: 'none'
@@ -89,11 +89,11 @@ Page({
             console.log('onEnded', res);
         });
 
-        backgroundAudioManager.onTimeUpdate(res => {
+        BackgroundAudioManager.onTimeUpdate(res => {
             console.log('onTimeUpdate', res);
         });
 
-        backgroundAudioManager.onError(res => {
+        BackgroundAudioManager.onError(res => {
             swan.showToast({
                 title: 'error',
                 icon: 'none'
@@ -101,7 +101,7 @@ Page({
             console.log('onError', res);
         });
 
-        backgroundAudioManager.onWaiting(res => {
+        BackgroundAudioManager.onWaiting(res => {
             swan.showToast({
                 title: 'waiting',
                 icon: 'none'
@@ -109,35 +109,23 @@ Page({
             console.log('onWaiting', res);
         });
 
-        this.backgroundAudioManager = backgroundAudioManager;
+        this.BackgroundAudioManager = BackgroundAudioManager;
     },
     play() {
-        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
-        this.backgroundAudioManager.play();
+        this.BackgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.BackgroundAudioManager.play();
     },
     pause() {
-        this.backgroundAudioManager.pause();
+        this.BackgroundAudioManager.pause();
     },
     stop() {
-        this.backgroundAudioManager.stop();
+        this.BackgroundAudioManager.stop();
     },
     seek() {
-        this.backgroundAudioManager.seek(10);
+        this.BackgroundAudioManager.seek(10);
     }
 });
 
-```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
 ```
 
 
@@ -155,13 +143,13 @@ Page({
     </div>     
 </div>
 
-## backgroundAudioManager.play 
+## BackgroundAudioManager.play 
 
 **解释**：播放
 
 **方法参数**：无
 
-## backgroundAudioManager.pause
+## BackgroundAudioManager.pause
 
 
 **解释**：暂停
@@ -169,85 +157,96 @@ Page({
 **方法参数**：无
  
 
-## backgroundAudioManager.stop
+## BackgroundAudioManager.stop
 
 **解释**：停止 
 
 **方法参数**：无
  
 
-## backgroundAudioManager.seek
+## BackgroundAudioManager.seek
 
 **解释**：跳转到指定位置（单位：s）
 
 **方法参数**：Number position
 
 
-## backgroundAudioManager.onCanplay
+## BackgroundAudioManager.onCanplay
 
 **解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onPlay
+## BackgroundAudioManager.onPlay
 
 **解释**：音频播放事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onPause
+## BackgroundAudioManager.onPause
 
 **解释**： 音频暂停事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onStop
+## BackgroundAudioManager.onStop
 
 **解释**：音频停止事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onEnded 
+## BackgroundAudioManager.onEnded 
 
 **解释**：音频自然播放结束事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onTimeUpdate 
+## BackgroundAudioManager.onTimeUpdate 
 
 **解释**：音频进度更新事件
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onError
+## BackgroundAudioManager.onError
 
 **解释**：音频播放错误事件
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onWaiting 
+## BackgroundAudioManager.onWaiting 
 
 **解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onSeeked
+## BackgroundAudioManager.onSeeked
 
 **解释**：监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。
 
 **方法参数**：Function callback
 
-## backgroundAudioManager.onSeeking
+## BackgroundAudioManager.onSeeking
 
-**解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数
+**解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。
 
 **方法参数**：Function callback
 
+## BackgroundAudioManager.onNext
+
+**解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback
+
+## BackgroundAudioManager.onPrev
+
+**解释**：监听用户在系统音乐播放面板点击上一曲事件，仅支持 Andriod。
+
+**方法参数**：Function callback

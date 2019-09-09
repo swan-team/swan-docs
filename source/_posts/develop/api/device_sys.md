@@ -8,6 +8,8 @@ sidebar: device_sys
 
 ## swan.getSystemInfo
 
+>  基础库 1.10.8 版本开始支持。
+
 **解释**：获取系统信息
 
 **方法参数**：Object object
@@ -16,7 +18,7 @@ sidebar: device_sys
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  是 |  -|接口调用成功的回调|
+|success |Function  |  否 |  -|接口调用成功的回调|
 |fail   | Function |   否  | -|接口调用失败的回调函数|
 |complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -33,38 +35,108 @@ sidebar: device_sys
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
+|cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
+|swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
+|devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
 
 **示例**：
-<a href="swanide://fragment/8ecdf5d7226a7a576f4c3b46227cab711540395127" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <view class="info-ctn">
+            <view class="info-item" s-for="item in infoList">
+                <text class="info-label">{{item.label}}：</text>
+                <text class="info-value">{{item.value}}</text>
+            </view>
+        </view>
+        <view class="btn-ctn">
+            <button bind:tap="getSystemInfo" type="primary" hover-stop-propagation="true">点击获取系统信息</button>
+            <button bind:tap="clearClick" hover-stop-propagation="true">清空</button>
+        </view>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">{{title}}</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-swan.getSystemInfo({
-    success: function (res) {
-        console.log(res.model);
-        console.log(res.pixelRatio);
-        console.log(res.windowWidth);
-        console.log(res.windowHeight);
-        console.log(res.language);
-        console.log(res.version);
-        console.log(res.platform);
+Page({
+    data: {
+        title: 'getSystemInfo',
+        infoList: [{
+            label: '手机品牌',
+            key: 'brand',
+            value: ''
+        }, {
+            label: '手机型号',
+            key: 'model',
+            value: ''
+        }, {
+            label: '当前版本',
+            key: 'version',
+            value: ''
+        }, {
+            label: '屏幕宽度',
+            key: 'screenWidth',
+            value: ''
+        }, {
+            label: '屏幕高度',
+            key: 'screenHeight',
+            value: ''
+        }, {
+            label: 'DPI',
+            key: 'pixelRatio',
+            value: ''
+        }, {
+            label: '语言',
+            key: 'language',
+            value: ''
+        }]
+    },
+
+    getSystemInfo(e) {
+        swan.getSystemInfo({
+            success: res => {
+                // 更新数据
+                this.updateInfoList(res);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    },
+
+    clearClick() {
+        this.updateInfoList({});
+    },
+
+    updateInfoList(res) {
+        let infoList = this.getData('infoList');
+        for (let i = 0; i < infoList.length; ++i) {
+            infoList[i].value = res[infoList[i].key];
+        }
+        this.setData('infoList', infoList);
     }
 });
 ```
-<!-- #### 错误码
 
-<!-- **Andriod**
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|402|安全性检查：访问控制校验失败。| -->
 
 ## swan.getSystemInfoSync
 
@@ -85,17 +157,21 @@ swan.getSystemInfo({
 |windowHeight  |  可使用窗口高度 |-|
 |statusBarHeight| 状态栏的高度 |-|
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |百度 App 设置的语言 |-|
-|version |百度 App 版本号|-|
+|language |宿主 App 设置的语言 |-|
+|version |宿主 App 版本号|-|
 |system  |操作系统版本  |-|
 |platform |客户端平台，如：ios。|-|
 |fontSizeSetting |用户字体大小设置 |-|
 |SDKVersion |客户端基础库版本 |-|
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
+|cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
+|swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
+|devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
+
 
 **示例**：
 
-<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -146,10 +222,11 @@ Page({
 |lastAppURL |string|  智能小程序最近一次打开的调起协议  |
 |sdkVersion |string|  基础库版本   |
 |scheme |string|  调起协议的协议头   |
+|env |string|  智能小程序的版本（基础库 3.90.12 开始支持）；development 代表开发版本，trial 代表体验版本，production 代表线上版本  |
 
 **示例**：
 
-<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -183,7 +260,7 @@ Page({
 
 ## swan.canIUse
 
-**解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。
+**解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。暂无法校验宿主扩展的API。
 
 **方法参数**： String schema
 
@@ -204,7 +281,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

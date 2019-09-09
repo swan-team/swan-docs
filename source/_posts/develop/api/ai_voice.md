@@ -8,7 +8,7 @@ sidebar: ai_voice
 ## swan.ai.getVoiceRecognizer
 
 
-**解释**：获取全局唯一的语音识别器`voiceRecognizer`。
+**解释**：获取全局唯一的语音识别器`voiceRecognizer`。详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **方法参数**：无
 
@@ -66,12 +66,12 @@ context有效值如下
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
-|errCode |String | 错误码 |
-|errMsg |String | 错误信息 |
+|errorCode |String | 错误码 |
+|errorMsg |String | 错误信息 |
 
-**errCode值说明**：
+**errorCode值说明**：
 
-|errCode|errMsg|
+|errorCode|errorMsg|
 |---- | ---- |
 |1001|	DNS解析失败|
 |1002|	请求超时|
@@ -98,21 +98,21 @@ context有效值如下
 **示例**
 
 
-<a href="swanide://fragment/b0c9408a0e336e47e3c34f167d9703211558355039398" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b0c9408a0e336e47e3c34f167d9703211558355039398" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-const voiceRecognizer = swan.ai.getVoiceRecognizer();
+const VoiceRecognizer = swan.ai.getVoiceRecognizer();
 
-voiceRecognizer.onStart(() => {
+VoiceRecognizer.onStart(() => {
     console.log('voice start');
 });
-voiceRecognizer.onRecognize(res => {
+VoiceRecognizer.onRecognize(res => {
     console.log('voice recognize', res);
 });
-voiceRecognizer.onFinish(res => {
+VoiceRecognizer.onFinish(res => {
     console.log('voice end', res);
 });
-voiceRecognizer.onError(err => {
+VoiceRecognizer.onError(err => {
     console.log('voice error', err);
 });
 
@@ -121,7 +121,7 @@ const options = {
     longSpeech: false
 };
 
-voiceRecognizer.start(options);
+VoiceRecognizer.start(options);
 
 ```
 
