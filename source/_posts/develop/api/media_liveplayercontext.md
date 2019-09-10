@@ -61,7 +61,7 @@ Page({
         console.log('目前此组件在真机双端不能播放，请在开发者工具中查看完整效果');
     },
     onReady(e) {
-        LivePlayerContext = swan.createLivePlayerContext('myLive');
+        livePlayerContext = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
         swan.showToast({
@@ -74,13 +74,13 @@ Page({
         });
     },
     livePlay(e) {
-        LivePlayerContext.play();
+        livePlayerContext.play();
     },
     objectFit(e) {
         this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
     },
     liveStop(e) {
-        LivePlayerContext.stop();
+        livePlayerContext.stop();
     },
     liveMute(e) {
         this.setData({
