@@ -11,21 +11,14 @@ sidebar: getphonenumber
 已完成认证的企业账号。
 
 ### 申请入口
-小程序后台-设置-开发设置-获取用户手机号权限申请。
+登录[开发者平台](https://smartprogram.baidu.com/developer/index.html)，通过小程序后台-设置-开发设置-获取用户手机号权限申请，申请获取用户手机号权限。
 
-
-审核过后，登录[开发者平台](https://smartprogram.baidu.com/developer/index.html)可通过如下操作获取用户手机号权限：
-1、在页面左侧导航栏，单击“设置-开发设置”；
-2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
-3、在弹出的页面填写如下信息，点击提交。
-
- ![图片](../../img/introduction/register/register-14.png)
 
 
 ### 申请材料
 
 企业注册资本、行业口碑、信息安全等级证书、手机号使用场景等。
-
+ ![图片](../../img/introduction/register/register-14.png)
 * 企业注册资本，比如：50万
 
 * 行业口碑：申请获取用户手机号权限企业需具备良好的行业口碑：申请企业需无不良信用记录。
