@@ -76,7 +76,7 @@ Page({
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/showNavigationBarLoading.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：无
@@ -117,7 +117,7 @@ Page({
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/hideNavigationBarLoading.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：无

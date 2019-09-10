@@ -20,7 +20,7 @@ sidebar: process
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
 |[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)|` Array.<object> `|否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
-|networkTimeout|Object|否|网络超时|
+|[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
 <notice>示例： </notice>
@@ -205,6 +205,16 @@ pages/index/index?id=123
 ```
 这样，再次使用request发起请求时，就可以利用上prefetches中的配置。
 
+### networkTimeout
+
+各类网络请求的超时时间。
+
+|属性|	类型|必填|	默认值|	说明|
+|---|---|---|---|---|
+|request|	number|	否|	60000|	swan.request 的超时时间，单位：毫秒。|
+|connectSocket|	number|	否|	60000|	swan.connectSocket 的超时时间，单位：毫秒。|
+|uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
+|downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
 
 ## 配置 app.js 文件
 
