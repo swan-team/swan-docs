@@ -60,8 +60,8 @@ Page({
         }
     },
     takePhoto() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.takePhoto({
+        const ctx = swan.createCameraContext();
+        ctx.takePhoto({
             quality: 'high',
             success: res => {
                 this.setData({
@@ -71,8 +71,8 @@ Page({
         });
     },
     startRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.startRecord({
+        const ctx = swan.createCameraContext();
+        ctx.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -81,8 +81,8 @@ Page({
         });
     },
     stopRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.stopRecord({
+        const ctx = swan.createCameraContext();
+        ctx.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',

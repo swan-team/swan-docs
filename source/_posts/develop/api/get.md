@@ -36,34 +36,34 @@ sidebar: get
 ```js
 Page({
     onLoad() {
-        const UpdateManager = swan.getUpdateManager();
-        UpdateManager.onCheckForUpdate(function (res) {
+        const updateManager = swan.getUpdateManager();
+        updateManager.onCheckForUpdate(function (res) {
             // 请求完新版本信息的回调
             console.log(res.hasUpdate);
         });
 
-        UpdateManager.onUpdateReady(function (res) {
+        updateManager.onUpdateReady(function (res) {
             swan.showModal({
                 title: '更新提示',
                 content: '新版本已经准备好，是否重启应用？',
                 success(res) {
                     if (res.confirm) {
                         // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-                        UpdateManager.applyUpdate();
+                        updateManager.applyUpdate();
                     }
                 }
             });
         });
 
-        UpdateManager.onUpdateFailed(function (err) {
+        updateManager.onUpdateFailed(function (err) {
             // 新的版本下载失败
             console.log('update fail', err);
         });
 
-        this.UpdateManager = UpdateManager;
+        this.updateManager = updateManager;
     },
     applyUpdate() {
-        this.UpdateManager.applyUpdate();
+        this.updateManager.applyUpdate();
     }
 });
 ```
