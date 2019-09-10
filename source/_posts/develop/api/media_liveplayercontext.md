@@ -9,6 +9,11 @@ sidebar: media_liveplayercontext
 
 **解释**： 操作对应的 `<live-player/>` 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
+
+
 **方法参数**： String domId
 
 **`domId`参数说明**：要获取 live-player 组件的 id。
@@ -61,7 +66,7 @@ Page({
         console.log('目前此组件在真机双端不能播放，请在开发者工具中查看完整效果');
     },
     onReady(e) {
-        this.ctx = swan.createLivePlayerContext('myLive');
+        livePlayerContext = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
         swan.showToast({
@@ -74,13 +79,13 @@ Page({
         });
     },
     livePlay(e) {
-        this.ctx.play();
+        livePlayerContext.play();
     },
     objectFit(e) {
         this.setData('objectFit', this.getData('objectFit') === 'contain' ? 'fillCrop' : 'contain');
     },
     liveStop(e) {
-        this.ctx.stop();
+        livePlayerContext.stop();
     },
     liveMute(e) {
         this.setData({
@@ -100,18 +105,6 @@ Page({
     },
 });
 ```
-
-* 在 css 文件中
-```css
-.live-play {
-    width: 100%;
-    padding: .16rem;
-}
-button {
-    margin-top: 20rpx;
-}
-```
-
 
 **图示**
 

@@ -291,6 +291,18 @@
                 text: 扫码打开智能小程序
                 name: scancode
     -
+      link: /introduction/getphonenumber
+      text: 获取用户手机号权限申请
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/getphonenumber
+                text: 获取用户手机号权限申请
+                name: getphonenumber
+
+    -
       link: /introduction/productlaboratory
       text: 产品实验室
       name: book
@@ -737,6 +749,10 @@
                 text: behaviors
                 name: custom-component_behaviors
               -
+                link: /develop/framework/custom-component_generic
+                text: 抽象节点
+                name: custom-component_generic
+              -
                 link: /develop/framework/custom-component_extend
                 text: 自定义组件扩展
                 name: custom-component_extend
@@ -812,9 +828,9 @@
         -
             sidebar:
               -
-                link: /develop/component/componet
+                link: /develop/component/component
                 text: 组件列表
-                name: componet
+                name: component
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -1137,6 +1153,15 @@
                   link: /develop/api/net_request/#swan-request
                   text: swan.request
                   name: net_request_swan-request
+                -
+                  link: /develop/api/net_request/#RequestTask
+                  text: RequestTask
+                  name: net_request_RequestTask      
+                  sidebar:
+                    -
+                      link: /develop/api/net_request/#RequestTask-abort
+                      text: RequestTask.abort
+                      name: net_request_RequestTask-abort
             -
               link: /develop/api/net_uploadfile
               text: 上传、下载
@@ -1147,9 +1172,35 @@
                   text: swan.uploadFile
                   name: net_uploadfile_swan-uploadFile
                 -
+                  link: /develop/api/net_uploadfile/#UploadTask
+                  text: UploadTask
+                  name: net_uploadfile_UploadTask   
+                  sidebar:
+                    -
+                      link: /develop/api/net_uploadfile/#UploadTask-onProgressUpdate
+                      text: UploadTask.onProgressUpdate
+                      name: net_uploadfile_UploadTask-onProgressUpdate  
+                    -
+                      link: /develop/api/net_uploadfile/#UploadTask-abort
+                      text: UploadTask.abort
+                      name: net_uploadfile_UploadTask-abort                   
+                -
                   link: /develop/api/net_uploadfile/#swan-downloadFile
                   text: swan.downloadFile
                   name: net_uploadfile_swan-downloadFile
+                -
+                  link: /develop/api/net_uploadfile/#DownloadTask
+                  text: DownloadTask
+                  name: net_uploadfile_DownloadTask
+                  sidebar:
+                    -
+                      link: /develop/api/net_uploadfile/#DownloadTask-onProgressUpdate  
+                      text: DownloadTask.onProgressUpdate
+                      name: net_uploadfile_DownloadTask-onProgressUpdate  
+                    -
+                      link: /develop/api/net_uploadfile/#DownloadTask-abort    
+                      text: DownloadTask.abort
+                      name: net_uploadfile_DownloadTask-abort    
 
             -
               link: /develop/api/net_websocket
@@ -1317,6 +1368,10 @@
                     link: /develop/api/ai_voice/#swan-ai-getVoiceRecognizer
                     text: swan.ai.getVoiceRecognizer
                     name: ai_voice_swan-ai-getVoiceRecognizer
+                  -
+                    link: /develop/api/ai_voice/#VoiceRecognizer
+                    text: VoiceRecognizer
+                    name: ai_voice_swan-VoiceRecognizer      
               -
                 link: /develop/api/ai_face
                 text: 人脸识别
@@ -1527,11 +1582,111 @@
                   link: /develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext
                   text: swan.createInnerAudioContext
                   name: media_createinneraudiocontext_swan-createInnerAudioContext
+                -
+                  link: /develop/api/media_createinneraudiocontext/#InnerAudioContext
+                  text: InnerAudioContext
+                  name: media_createinneraudiocontext_InnerAudioContext
                   sidebar:
                     -
-                      link: /develop/api/media_createinneraudiocontext/#innerAudioContext
-                      text: innerAudioContext
-                      name: media_createinneraudiocontext_innerAudioContext
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-play
+                      text: InnerAudioContext.play
+                      name: media_createinneraudiocontext_InnerAudioContext-play
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-pause
+                      text: InnerAudioContext.pause
+                      name: media_createinneraudiocontext_InnerAudioContext-pause                   
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-stop
+                      text: InnerAudioContext.stop
+                      name: media_createinneraudiocontext_InnerAudioContext-stop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-seek	
+                      text: InnerAudioContext.seek	
+                      name: media_createinneraudiocontext_InnerAudioContext-seek	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-destroy	
+                      text: InnerAudioContext.destroy	
+                      name: media_createinneraudiocontext_InnerAudioContext-destroy	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onCanplay	
+                      text: InnerAudioContext.onCanplay	
+                      name: media_createinneraudiocontext_InnerAudioContext-onCanplay	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onPlay
+                      text: InnerAudioContext.onPlay
+                      name: media_createinneraudiocontext_InnerAudioContext-onPlay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onPause
+                      text: InnerAudioContext.onPause
+                      name: media_createinneraudiocontext_InnerAudioContext-onPause
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onStop
+                      text: InnerAudioContext.onStop
+                      name: media_createinneraudiocontext_InnerAudioContext-onStop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onEnded	
+                      text: InnerAudioContext.onEnded
+                      name: media_createinneraudiocontext_InnerAudioContext-onEnded
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onTimeUpdate
+                      text: InnerAudioContext.onTimeUpdate
+                      name: media_createinneraudiocontext_InnerAudioContext-onTimeUpdate
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onError
+                      text: InnerAudioContext.onError
+                      name: media_createinneraudiocontext_InnerAudioContext-onError
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onWaiting
+                      text: InnerAudioContext.onWaiting
+                      name: media_createinneraudiocontext_InnerAudioContext-onSonWaitingtop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onSeeking
+                      text: InnerAudioContext.onSeeking
+                      name: media_createinneraudiocontext_InnerAudioContext-onSeeking
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onSeeked
+                      text: InnerAudioContext.onSeeked
+                      name: media_createinneraudiocontext_InnerAudioContext-onSeeked
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offCanplay
+                      text: InnerAudioContext.offCanplay
+                      name: media_createinneraudiocontext_InnerAudioContext-offCanplay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offPlay
+                      text: InnerAudioContext.offPlay
+                      name: media_createinneraudiocontext_InnerAudioContext-offPlay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offPause
+                      text: InnerAudioContext.offPause
+                      name: media_createinneraudiocontext_InnerAudioContext-offPause
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offStop
+                      text: InnerAudioContext.offStop
+                      name: media_createinneraudiocontext_InnerAudioContext-offStop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offEnded
+                      text: InnerAudioContext.offEnded
+                      name: media_createinneraudiocontext_InnerAudioContext-offEnded
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offTimeUpdate
+                      text: InnerAudioContext.offTimeUpdate
+                      name: media_createinneraudiocontext_InnerAudioContext-offTimeUpdate
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offError
+                      text: InnerAudioContext.offError
+                      name: media_createinneraudiocontext_InnerAudioContext-offError
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offWaiting
+                      text: InnerAudioContext.offWaiting
+                      name: media_createinneraudiocontext_InnerAudioContext-offWaiting
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offSeeking
+                      text: InnerAudioContext.offSeeking
+                      name: media_createinneraudiocontext_InnerAudioContext-offSeeking
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offSeeked
+                      text: InnerAudioContext.offSeeked
+                      name: media_createinneraudiocontext_InnerAudioContext-offSeeked
                 -
                   link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
                   text: swan.setInnerAudioOption

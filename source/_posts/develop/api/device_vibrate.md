@@ -12,6 +12,12 @@ sidebar: device_vibrate
 
 **解释**： 使手机发生较长时间的振动（400ms）
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/vibrate.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -63,6 +69,11 @@ Page({
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/vibrate.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 

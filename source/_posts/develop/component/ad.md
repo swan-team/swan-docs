@@ -9,10 +9,10 @@ sidebar: ad
 
 **解释**：广告组件，按照<a href="https://smartprogram.baidu.com/docs/introduction/adopen/">流量主开通指引</a>中的操作获取广告组件代码。
 
-<!-- 
+
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -30,28 +30,21 @@ sidebar: ad
 | feed | 流式类型 |
 
 **示例**：
-<a href="swanide://fragment/a02321e8d6aae0c798777266fbafca6f1565503494109" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fd1b5c33e1b3a2ce094e490b3ac108de1567749057225" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * banner
 
     **获取代码示例**：
 
     ```
-    <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>
+    <ad appid="xxx" apid="xxx" type="banner"> </ad>
     ```
     **示例 1**:
 
     ```
-    <view class="ad-container">
-        <div style="background-color: #fff">
-            <ad appid="275104941" apid="6113075" class="ad" type="banner"> </ad>
-        </div>
-    </view>
-
-    .ad-container {
-        width: 100%;
-        height: auto;
-    }
+    <div class="ad-container">
+        <ad appid="a764cad8" apid="6511101" class="ad" type="banner" ></ad>
+    </div>
 
     ```
     **说明**：
@@ -69,15 +62,9 @@ sidebar: ad
     **示例 2**:
 
     ```
-    <view class="ad-container">
-    <div style="background-color: #fff">
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
+    <div class="ad-container">
+        <ad appid="b2f8234f" apid="6315886" class="ad"></ad>
     </div>
-    </view>
-    .ad-container {
-        width: 100%;
-    height: auto;
-    }
 
     ```
 

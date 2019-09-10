@@ -10,6 +10,10 @@ sidebar: ai_ocr
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -73,13 +77,16 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrIdCard({
-      detect_direction: true,
-      id_card_side: 'front',
-      detect_risk: true,
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
+        detect_direction: true,
+        id_card_side: 'front',
+        detect_risk: true,
+        image,
+        success(res) {
+            console.log(res.words_result);
+        },
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });
@@ -159,6 +166,10 @@ swan.chooseImage({
 
 **解释**：识别银行卡并返回卡号、发卡行和卡片类型。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrBankCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -195,10 +206,13 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrBankCard({
-      image,
-      success(res) {
-        console.log(res.result.bank_name);
-      }
+        image,
+        success(res) {
+            console.log(res.result);
+        }，
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });
@@ -219,6 +233,11 @@ swan.chooseImage({
 ## swan.ai.ocrDrivingLicense
 
 **解释**：对机动车驾驶证所有关键字段进行识别。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrDrivingLicense.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -374,18 +393,22 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7af77d60172653c21d560267618b86de1567750091523" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrVehicleLicense({
-      image,
-      detect_direction: true,
-      success(res) {
-        console.log(res.words_result);
-      }
+        image,
+        detect_direction: true,
+        accuracy: normal
+        success(res) {
+            console.log(res.words_result);
+        },
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });

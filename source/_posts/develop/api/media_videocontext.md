@@ -8,6 +8,11 @@ sidebar: media_videocontext
 
 **解释**： 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：String videoId
 
 **返回值**：videoContext
@@ -43,52 +48,36 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = videoContext;
     },
     play() {
-        this.video.play();
+        this.videoContext.play();
     },
     pause() {
-        this.video.pause();
+        this.videoContext.pause();
     },
     seek() {
-        this.video.seek(10);
+        this.videoContext.seek(10);
     },
     sendDanmu() {
-        this.video.sendDanmu({
+        this.videoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.video.requestFullScreen();
+            this.videoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.video.exitFullScreen();
+            this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap video {
-    width: 100%;
-    margin-bottom: 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-```
 
 **图示**
 

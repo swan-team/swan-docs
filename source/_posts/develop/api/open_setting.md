@@ -8,6 +8,11 @@ sidebar: open_setting
 
 **解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openSetting.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

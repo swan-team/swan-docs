@@ -10,6 +10,10 @@ sidebar: media_recorder
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getRecorderManager.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回值**：recorderManager
@@ -196,16 +200,8 @@ recorderManager.start(options);
 
 
 **示例**：
-<a href="swanide://fragment/9c26d58a030286edc4bf71e0d9c8da651564554438009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bea70d0226e937e1e1ac613ef5a6ec1b1567940572468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-
-* 在 swan 文件中
-
-```json
-<view class="wrap">
-    <button type="primary" bindtap="getAvailableAudioSources">点击获取支持音频输入源</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -224,12 +220,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+
 
 
 

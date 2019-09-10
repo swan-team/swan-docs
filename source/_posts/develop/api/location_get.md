@@ -10,6 +10,11 @@ sidebar: location_get
 
 **解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getLocation.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -116,6 +121,11 @@ Page({
 ## swan.chooseLocation
 
 **解释**： 打开地图选择位置。需要用户授权 scope.userLocation。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseLocation.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 

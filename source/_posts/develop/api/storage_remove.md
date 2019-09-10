@@ -201,6 +201,10 @@ Page({
 
 **解释**：同步清理本地数据缓存。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 <a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

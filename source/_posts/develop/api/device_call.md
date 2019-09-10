@@ -11,6 +11,12 @@ sidebar: device_call
 
 **解释**：拨打电话
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/makePhoneCall.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

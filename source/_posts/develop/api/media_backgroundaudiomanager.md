@@ -10,6 +10,10 @@ sidebar: media_backgroundaudiomanager
 
 **解释**：获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getBackgroundAudioManager.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 #### 错误码
@@ -51,7 +55,7 @@ sidebar: media_backgroundaudiomanager
  
 **示例**：
 
-<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/27e9caf2a1251f5db5c43fd60a4535e21567971373405" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -145,18 +149,6 @@ Page({
     }
 });
 
-```
-
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
 ```
 
 

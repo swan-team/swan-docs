@@ -9,6 +9,10 @@ sidebar: net_request
 
 **解释**：发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/request.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -43,9 +47,9 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/a90a7404743c04403c7c354ff960aae71559048522810" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 
 **在 js 文件中**
@@ -53,13 +57,14 @@ sidebar: net_request
 ```js
 swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    method: 'GET',
-    dataType: 'json',
+    header: {
+        'content-type': 'application/json'
+    },
+    method: 'POST',
+    dataType: 'JSON',
+    responseType: 'text',
     data: {
         key: 'value'
-    },
-    header: {
-        'content-type': 'application/json' // 默认值
     },
     success: function (res) {
         console.log(res.data);
@@ -75,35 +80,45 @@ swan.request({
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
 
-**requestTask 对象的方法列表**：
+##  RequestTask
 
-|方法 | 参数 | 说明  |
-|---- | ---- | ---- |
-|abort  |      | 中断请求任务 |
+**解释**：网络请求任务对象
 
-**示例 2**
+**示例**
 
 ```js
 const requestTask = swan.request({
-    url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
-    data: {
-        tabname: '美食酒水'
-    },
+    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
     header: {
         'content-type': 'application/json'
     },
+    method: 'GET',
+    dataType: 'JSON',
+    responseType: 'text',
     success: function (res) {
         console.log(res.data)
+    },
+    fail: function (err) {
+        console.log('错误码：' + err.errCode);
+        console.log('错误信息：' + err.errMsg);
     }
 });
 
 //取消请求任务
-requestTask.abort();
+RequestTask.abort();
 ```
 
 **说明**
 *  content-type 默认为 'application/json'；
 *  url 中不能有端口。
+
+
+
+## RequestTask.abort
+
+**解释**：中断请求任务。
+
+**方法参数**：无
 
 #### 错误码
 
@@ -119,4 +134,4 @@ requestTask.abort();
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查调起协议是否合法|
-|errorCode为4|URL无效|
+|errorCode为4|URL无效|  

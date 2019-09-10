@@ -11,7 +11,11 @@ sidebar: media_arcameracontext
 
 **解释**：创建并返回 ar-camera 上下文 `ARCameraContext`对象，ARCameraContext 与页面的 <a href='https://smartprogram.baidu.com/docs/develop/component/media/#ar-camera/'>ar-camera</a> 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。
 
-<!-- docs/develop/component/media/#ar-camera/ -->
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ar-camera.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
 **返回值**：ARCameraContext

@@ -30,7 +30,7 @@ sidebar: formlist
 |hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|- |
 |disabled|Boolean|false| 否 |是否禁用|- |
 |loading|Boolean|false| 否 |名称前是否带有loading图标|- |
-|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#获取用户手机号权限申请">获取用户手机号权限申请</a>。|1.12.14	|
+|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="http://smartprogram.baidu.com/docs/introduction/getphonenumber/">获取用户手机号权限申请</a>。|1.12.14	|
 | bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|- |
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|- |
 | bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|- |
@@ -188,14 +188,7 @@ Page({
 
 ```
 
-## 获取用户手机号权限申请
 
-审核过后，登录[开发者平台](https://smartprogram.baidu.com/developer/index.html)可通过如下操作获取用户手机号权限：
-1、在页面左侧导航栏，单击“设置-开发设置”；
-2、下拉页面，可见“获取用户手机号申请”，单击“申请开通”；
-3、在弹出的页面填写如下信息，点击提交。
-
-![图片](../../../img/introduction/register/register-14.png)
 
 ## form 表单
 

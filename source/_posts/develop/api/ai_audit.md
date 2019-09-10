@@ -8,6 +8,10 @@ sidebar: ai_audit
 
 **解释**：自定义图像审核。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -64,10 +68,13 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.imageAudit({
-      image,
-      success(res) {
-        console.log(res.conclusionType); // 1 为合规
-      }
+        image,
+        success(res) {
+            console.log(res.conclusionType); // 1 为合规
+        },
+        fail(err){
+            console.log(err); 
+        }
     });
   }
 });
