@@ -508,30 +508,30 @@ Page({
 ```js
 Page({
     onLoad() {
-        const SocketTask = swan.connectSocket({
+        const ws = swan.connectSocket({
             url: 'wss://echo.websocket.org'
         });
 
-        SocketTask.onOpen(function (res) {
+        ws.onOpen(function (res) {
             console.log('WebSocket连接已打开！', res);
         });
 
-        SocketTask.onError(function (err) {
+        ws.onError(function (err) {
             console.log('WebSocket连接错误！', err);
         });
 
-        SocketTask.onMessage(function (res) {
+        ws.onMessage(function (res) {
             console.log('WebSocket接受到服务器的消息', res);
         });
 
-        SocketTask.onClose(function (res) {
+        ws.onClose(function (res) {
             console.log('WebSocket连接已关闭！', res);
         });
 
-        this.SocketTask = SocketTask;
+        this.ws = ws;
     },
     send() {
-        this.SocketTask.send({
+        this.ws.send({
             data: 'baidu',
             success: function (res) {
                 console.log('WebSocket发送数据成功', res);
@@ -542,7 +542,7 @@ Page({
         });
     },
     close() {
-        this.SocketTask.close({
+        this.ws.close({
             code: '1001',
             reason: 'close reason',
             success: function (res) {

@@ -9,8 +9,9 @@ sidebar: customer
 
 ### 两种方式：
 
-1.对公打款
->对公打款可以在第三方平台-客户管理页面进行操作，通过点击客户高级认证栏『待认证』跳转到百度信誉的高级认证页面，代客户进行对公打款高级认证。
+1.对公打款(两种方式)
+>1.对公打款可以在第三方平台-客户管理页面进行操作，通过点击客户高级认证栏『待认证』跳转到百度信誉的高级认证页面，代客户进行对公打款高级认证。
+2.通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
 
 2.法人人脸识别
 >通过人脸识别调起二维码接口，跳转百度信誉人脸识别页面，进行法人身份高级认证。
@@ -98,6 +99,33 @@ msg |string  | 第三方id
 }
 ```
 
+## 获取对公认证页面链接
+
+通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/auth/paymentCertification?access_token=ACCESS_TOKEN
+```
+### 参数说明:
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token |string | 是 | 授权小程序的access_token
+### 返回值说明:
+字段名 | 类型  | 描述
+----- |-----| -----
+url |string | 认证页面调起url
+
+### 返回值示例:
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+          "url": "http://auth.baidu.com/thrones/auth/acctcheck?officialid=OFFICIALID&appkey=APPKEY&token=TOKEN",
+    }
+}
+```
+
 ## 高级认证结果推送
 
 当客户的高级认证状态发生变化后,第三方平台将可以通过开放平台上填写的消息与事件接受URL,获得变更内容。若客户账号下有多个小程序,会收到数量与客户小程序数量相等的推送
@@ -122,5 +150,5 @@ appId |long | 小程序appid
 tpAppId |long | 第三方平台appid
 eventTime |string | 事件发生时间
 event |string | ADVANCED\_AUDIT\_CHANGED 高级认证状态变更
-adType |int | 认证类型<br>2:对公打款认证<br>23:法人人脸识别认证
+adType |int | 认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 
 adStatus |int | 认证状态<br>1:<br>真实性认证通过<br>7:<br>对公打款认证: 对公打款认证完成,待支付认证费用<br>法人人脸识别认证: 人脸识别认证完成,待支付认证费用

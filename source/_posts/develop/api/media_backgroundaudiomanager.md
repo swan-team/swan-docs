@@ -55,13 +55,13 @@ sidebar: media_backgroundaudiomanager
 
 Page({
     onLoad() {
-        const BackgroundAudioManager = swan.getBackgroundAudioManager();
-        BackgroundAudioManager.title = '演员';
-        BackgroundAudioManager.epname = '演员';
-        BackgroundAudioManager.singer = '薛之谦';
-        BackgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+        const backgroundAudioManager = swan.getBackgroundAudioManager();
+        backgroundAudioManager.title = '演员';
+        backgroundAudioManager.epname = '演员';
+        backgroundAudioManager.singer = '薛之谦';
+        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
-        BackgroundAudioManager.onPlay(res => {
+        backgroundAudioManager.onPlay(res => {
             swan.showToast({
                 title: 'play',
                 icon: 'none'
@@ -69,7 +69,7 @@ Page({
             console.log('onPlay', res);
         });
 
-        BackgroundAudioManager.onPause(res => {
+        backgroundAudioManager.onPause(res => {
             swan.showToast({
                 title: 'pause',
                 icon: 'none'
@@ -77,7 +77,7 @@ Page({
             console.log('onPause', res);
         });
 
-        BackgroundAudioManager.onStop(res => {
+        backgroundAudioManager.onStop(res => {
             swan.showToast({
                 title: 'stop',
                 icon: 'none'
@@ -85,7 +85,7 @@ Page({
             console.log('onStop', res);
         });
 
-        BackgroundAudioManager.onEnded(res => {
+        backgroundAudioManager.onEnded(res => {
             swan.showToast({
                 title: 'end',
                 icon: 'none'
@@ -93,11 +93,11 @@ Page({
             console.log('onEnded', res);
         });
 
-        BackgroundAudioManager.onTimeUpdate(res => {
+        backgroundAudioManager.onTimeUpdate(res => {
             console.log('onTimeUpdate', res);
         });
 
-        BackgroundAudioManager.onError(res => {
+        backgroundAudioManager.onError(res => {
             swan.showToast({
                 title: 'error',
                 icon: 'none'
@@ -105,7 +105,7 @@ Page({
             console.log('onError', res);
         });
 
-        BackgroundAudioManager.onWaiting(res => {
+        backgroundAudioManager.onWaiting(res => {
             swan.showToast({
                 title: 'waiting',
                 icon: 'none'
@@ -113,20 +113,20 @@ Page({
             console.log('onWaiting', res);
         });
 
-        this.BackgroundAudioManager = BackgroundAudioManager;
+        this.backgroundAudioManager = backgroundAudioManager;
     },
     play() {
-        this.BackgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
-        this.BackgroundAudioManager.play();
+        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.play();
     },
     pause() {
-        this.BackgroundAudioManager.pause();
+        this.backgroundAudioManager.pause();
     },
     stop() {
-        this.BackgroundAudioManager.stop();
+        this.backgroundAudioManager.stop();
     },
     seek() {
-        this.BackgroundAudioManager.seek(10);
+        this.backgroundAudioManager.seek(10);
     }
 });
 

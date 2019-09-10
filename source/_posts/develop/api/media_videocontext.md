@@ -48,30 +48,30 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const VideoContext = swan.createVideoContext('myVideo');
-        this.VideoContext = VideoContext;
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = videoContext;
     },
     play() {
-        this.VideoContext.play();
+        this.videoContext.play();
     },
     pause() {
-        this.VideoContext.pause();
+        this.videoContext.pause();
     },
     seek() {
-        this.VideoContext.seek(10);
+        this.videoContext.seek(10);
     },
     sendDanmu() {
-        this.VideoContext.sendDanmu({
+        this.videoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.VideoContext.requestFullScreen();
+            this.videoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.VideoContext.exitFullScreen();
+            this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }

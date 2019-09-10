@@ -106,18 +106,18 @@ context有效值如下
 <a href="swanide://fragment/b0c9408a0e336e47e3c34f167d9703211558355039398" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-const VoiceRecognizer = swan.ai.getVoiceRecognizer();
+const voiceRecognizer = swan.ai.getVoiceRecognizer();
 
-VoiceRecognizer.onStart(() => {
+voiceRecognizer.onStart(() => {
     console.log('voice start');
 });
-VoiceRecognizer.onRecognize(res => {
+voiceRecognizer.onRecognize(res => {
     console.log('voice recognize', res);
 });
-VoiceRecognizer.onFinish(res => {
+voiceRecognizer.onFinish(res => {
     console.log('voice end', res);
 });
-VoiceRecognizer.onError(err => {
+voiceRecognizer.onError(err => {
     console.log('voice error', err);
 });
 
@@ -126,7 +126,7 @@ const options = {
     longSpeech: false
 };
 
-VoiceRecognizer.start(options);
+voiceRecognizer.start(options);
 
 ```
 

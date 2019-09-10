@@ -28,17 +28,17 @@ sidebar: media_recorder
 **在 js 文件中**
 
 ```javascript
-const RecorderManager = swan.getRecorderManager()
+const recorderManager = swan.getRecorderManager()
 
-RecorderManager.onStart(function() {
+recorderManager.onStart(function() {
     // 开始录音事件
     console.log('recorder start')
 });
-RecorderManager.onPause(function() {
+recorderManager.onPause(function() {
     // 暂停录音事件
     console.log('recorder pause')
 });
-RecorderManager.onStop(function(res) {
+recorderManager.onStop(function(res) {
     // 停止录音事件
     console.log('recorder stop', res)
     const { tempFilePath } = res
@@ -52,7 +52,7 @@ const options = {
     format: 'aac'
 };
 
-RecorderManager.start(options);
+recorderManager.start(options);
 
 ```
 

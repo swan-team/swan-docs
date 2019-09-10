@@ -69,9 +69,20 @@ swan.chooseImage({
 
 **返回值**：
 
-返回一个`UploadTask`对象，通过`UploadTask`，可监听上传进度变化事件，以及取消上传任务。
+返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
+<<<<<<< HEAD
 ## UploadTask
+=======
+**uploadTask 对象的方法列表**：
+
+|方法 | 类型 | 说明|
+|---- | ---- | ---- |
+|onProgressUpdate   | callback  |监听上传进度变化|
+|abort | - | 中断上传任务|
+
+**onProgressUpdate 返回参数说明**：
+>>>>>>> 069dab92d95df0681c2cc6563b6e908a05949d8f
 
 **解释**：上传任务对象
 
