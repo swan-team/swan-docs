@@ -124,7 +124,7 @@ sidebar: specification
 
 6.1.2 反政府、反社会，或存在煽动性的涉政言论、散布谣言，扰乱社会秩序，破坏社会稳定。
 
-6.1.3 煽动民族仇恨、民族歧视、破坏民族团结、破坏国家宗教政策、宣扬邪教、封建迷信风水运势等。
+6.1.3 煽动民族仇恨、民族歧视、破坏民族团结、破坏国家宗教政策、宣扬邪教、封建迷信等。
 
 6.1.4 展示人或动物被杀戮、致残、枪击、针刺或其他伤害的真实图片，描述暴力或虐待儿童的，或包含宣扬暴力血腥内容。
 
@@ -266,7 +266,7 @@ sidebar: specification
 
 11.3 在智能小程序平台使用支付功能的，应当依照法律、法规等规范性文件的规定开展，不得实施非法吸收公众存款、集资诈骗等违法犯罪行为，或为违法犯罪行为提供协助。
 
-11.4 在苹果（Apple）iOS 系统下，百度智能小程序不可提供虚拟物品的购买支付包括不限于开通视频会员、支付阅读章节小说、发帖付费置顶、视频课程、在线付费问答等，不应展示支付功能如展示开通VIP、订阅课程内容、含有价格标签等，也不得引导至外部网页、二维码、添加社交账号、APP来实现支付功能。具体请参阅《[Apple Developer Program 许可协议](https://developer.apple.com/terms/)》《[App Store 审核指南](https://developer.apple.com/cn/app-store/review/guidelines/)》 等终端设备系统、应用程序商店、市场等的协议规范。
+11.4 在苹果（Apple）iOS 系统下，百度智能小程序不可提供虚拟物品的购买支付包括不限于开通视频会员、支付阅读章节小说、发帖付费置顶、视频课程、在线付费问答等，不应展示支付功能如展示开通VIP、订阅课程内容、含有价格标签等，也不得引导至外部网页、二维码、添加社交账号、APP来实现支付功能。您可使用 [getSystemInfo](https://smartapp.baidu.com/docs/develop/api/device_sys/#getSystemInfo) 接口判断系统类型（安卓/IOS）和百度APP版本号等信息，完成相关业务逻辑适配。另你应当已经阅读、同意包括但不限于《[Apple Developer Program 许可协议](https://developer.apple.com/terms/)》《[App Store 审核指南](https://developer.apple.com/cn/app-store/review/guidelines/)》等终端设备系统、应用程序商店、市场等的协议规范。
 
 ### 12.技术实现规范
 

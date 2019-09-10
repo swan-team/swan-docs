@@ -73,20 +73,7 @@ swan.chooseImage({
 
 ## UploadTask
 
-**方法列表**：
-
-|方法 | 类型 | 说明|
-|---- | ---- | ---- |
-|onProgressUpdate   | callback  |监听上传进度变化|
-|abort | - | 中断上传任务|
-
-**onProgressUpdate 返回参数说明**：
-
-|参数 | 类型 | 说明|
-|---- | ---- | ---- |
-|progress   | Number  |上传进度百分比|
-|totalBytesSent   | Number  |已经上传的数据长度，单位 Bytes。|
-|totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
+**解释**：上传任务对象
 
 **示例**
 
@@ -119,6 +106,26 @@ UploadTask.onProgressUpdate(res => {
 UploadTask.abort(); // 取消上传任务
 ```
  
+## UploadTask.onProgressUpdate
+
+**解释**：监听上传进度变化
+
+**方法参数**：Function callback
+
+**返回参数说明**：
+
+|参数 | 类型 | 说明|
+|---- | ---- | ---- |
+|progress   | Number  |上传进度百分比|
+|totalBytesSent   | Number  |已经上传的数据长度，单位 Bytes。|
+|totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
+
+## UploadTask.abort
+
+**解释**：中断上传任务
+
+**方法参数**：无
+
 ## swan.downloadFile
 
 **解释**：下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。
@@ -183,23 +190,13 @@ swan.downloadFile({
 **返回值**：
 
 返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
+
 ## DownloadTask 
-**方法列表**：
 
-|方法 | 类型 | 说明|
-|---- | ---- | ---- |
-|onProgressUpdate   | callback  |监听上传进度变化|
-|abort | - | 中断下载任务|
 
-#### **onProgressUpdate 返回参数说明**：
+**解释**：下载任务对象
 
-|参数 | 类型 | 说明|
-|---- | ---- | ---- |
-|progress   | Number  |下载进度百分比|
-|totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
-|totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
-
-**示例 2**
+**示例**
 
 * 在 js 文件中
 
@@ -231,4 +228,22 @@ DownloadTask.abort(); // 取消下载任务
 
 uploadFile 上传文件大小限制为 25M。
 
- 
+## DownloadTask.onProgressUpdate
+
+**解释**：监听下载进度变化
+
+**方法参数**：Function callback
+
+#### 返回参数说明**：
+
+|参数 | 类型 | 说明|
+|---- | ---- | ---- |
+|progress   | Number  |下载进度百分比|
+|totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
+|totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
+
+## UploadTask.abort
+
+**解释**：中断下载任务
+
+**方法参数**：无

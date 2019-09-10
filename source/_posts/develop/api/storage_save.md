@@ -82,6 +82,10 @@ swan.getStorageInfo({
 
 **解释**：将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容。主动删除历史小程序，卸载手百，或在系统中清除百度app的缓存即可清除数据。目前单个 key 允许存储的最大数据长度无限制，没有自动清理存储机制。storage 上限 10MB，用户需主动清理，期间数据一直可用。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
+
 **方法参数**： Object object 
 
 **`object`参数说明**：
@@ -263,6 +267,10 @@ Page({
 
 
 **解释**：从本地缓存中异步获取指定 key 对应的内容。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

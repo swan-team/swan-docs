@@ -36,6 +36,13 @@ sidebar: open_log
 
 **解释**： 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/login.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

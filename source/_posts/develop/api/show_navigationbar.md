@@ -8,6 +8,11 @@ sidebar: show_navigationbar
 
 **解释**：动态设置当前页面的标题。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setNavigationBarTitle.png"  class="demo-qrcode-image" />
+
+
 **方法参数**： Object object
 
 **`object`参数说明**：
@@ -69,6 +74,11 @@ Page({
 
 **解释**： 该方法在当前页面显示导航条加载动画。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/showNavigationBarLoading.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
 **示例**：
@@ -104,6 +114,11 @@ Page({
 ## swan.hideNavigationBarLoading
 
 **解释**： 隐藏导航条加载动画。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/hideNavigationBarLoading.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：无
 
