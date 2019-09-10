@@ -73,13 +73,16 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrIdCard({
-      detect_direction: true,
-      id_card_side: 'front',
-      detect_risk: true,
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
+        detect_direction: true,
+        id_card_side: 'front',
+        detect_risk: true,
+        image,
+        success(res) {
+            console.log(res.words_result);
+        },
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });
@@ -195,10 +198,13 @@ swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrBankCard({
-      image,
-      success(res) {
-        console.log(res.result.bank_name);
-      }
+        image,
+        success(res) {
+            console.log(res.result);
+        }，
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });
@@ -374,18 +380,22 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7af77d60172653c21d560267618b86de1567750091523" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.ocrVehicleLicense({
-      image,
-      detect_direction: true,
-      success(res) {
-        console.log(res.words_result);
-      }
+        image,
+        detect_direction: true,
+        accuracy: normal
+        success(res) {
+            console.log(res.words_result);
+        },
+        fail(err) {
+            console.log(err);
+        }
     });
   }
 });

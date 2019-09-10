@@ -5,93 +5,13 @@ nav: component
 sidebar: media
 ---
 
-## audio
+## image 图片
 
-**解释**：音频
+**解释**：图片，image 组件默认宽度 300px、高度 225px。
 
-**属性说明**：
+**百度APP中扫码体验：**
 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-|id|String||否|audio 组件的唯一标识符|
-|src|String||否|要播放音频的资源地址|
-|loop|Boolean|false|否|是否循环播放|
-|controls|Boolean|false|否|是否显示默认控件|
-|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
-|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
-|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
-|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
-|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
-|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
-|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
-|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
-
-
-**MediaError.code**
-
-|返回错误码|描述|
-|---- |---- |
-|1|获取资源过程被用户终止|
-|2|网络错误|
-|3|当解码时发生错误|
-|4|不支持音频|
-
-**示例**：
-
-<a href="swanide://fragment/234a1d97f146d9b63a2d2970d53663301559047346815" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls="true" bind:error="error" bind:play="audioPlay" bind:pause="audioPause" bind:timeupdate="timeupdate" bind:ended="audioEnded"></audio>
-```
-
-* 在 js 文件中
-
-```javascript
-Page({
-    data: {
-        poster: 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg',
-        name: '演员',
-        author: '薛之谦',
-        src: 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
-    },
-    error: function (e) {
-        console.log(e);
-    },
-    audioPlay: function (e) {
-        console.log('audio play');
-        swan.showToast({
-            title: '音频开始播放',
-            duration: 1000
-        });
-    },
-    audioPause: function (e) {
-        console.log('audio pause');
-        swan.showToast({
-            title: '音频暂停',
-            duration: 1000
-        });
-    },
-    audioEnded: function () {
-        console.log('audio ended');
-        swan.showToast({
-            title: '音频播放完',
-            duration: 1000
-        });
-    },
-    timeupdate: function () {
-        console.log('audio update');
-    }
-});
-```
-
-## image
-
-**解释**：图片
-
-> image 组件默认宽度 300px、高度 225px。
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/image.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -128,157 +48,211 @@ Page({
 * image 组件默认宽度 300px、高度 225px。
 
 **示例**：
-  <a href="swanide://fragment/7a68224b93ea534f04994407a85387b91540360503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+  <a href="swanide://fragment/a65834765b18e32b8bbf4473c526c4141565503512941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
-<view class="wrap">
-    <view>
-        <text>image</text>
-        <text>图片</text>
+<view class="container">
+  <view class="page-section" s-for="{{array}}">
+    <view class="page-section-title">{{item.text}}</view>
+    <view class="page-section-demo">
+      <image class="image"
+        data-name="{{item.mode}}"
+        bindtap="onTap"
+        mode="{{item.mode}}" src="{{src}}" binderror="imageError" bindload="imageLoad" />
     </view>
-    <view>
-        <view s-for="item in test">
-            <view>{{item.text}}</view>
-            <view>
-                <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}"></image>
-            </view>
-        </view>
-    </view>
+  </view>
 </view>
-
 ```
-
 * 在 js 文件中
 
 ```js
 Page({
     data: {
-        test: [
-            {
-                mode: 'scaleToFill',
-                text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
-            },
-            {
-                mode: 'aspectFit',
-                text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
-            },
-            {
-                mode: 'aspectFill',
-                text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
-            },
-            {
-                mode: 'top',
-                text: 'top：不缩放图片，只显示图片的顶部区域'
-            },
-            {
-                mode: 'bottom',
-                text: 'bottom：不缩放图片，只显示图片的底部区域'
-            },
-            {
-                mode: 'center',
-                text: 'center：不缩放图片，只显示图片的中间区域'
-            },
-            {
-                mode: 'left',
-                text: 'left：不缩放图片，只显示图片的左边区域'
-            },
-            {
-                mode: 'right',
-                text: 'right：不缩放图片，只显示图片的右边边区域'
-            },
-            {
-                mode: 'top left',
-                text: 'top left：不缩放图片，只显示图片的左上边区域'
-            },
-            {
-                mode: 'top right',
-                text: 'top right：不缩放图片，只显示图片的右上边区域'
-            },
-            {
-                mode: 'bottom left',
-                text: 'bottom left：不缩放图片，只显示图片的左下边区域'
-            },
-            {
-                mode: 'bottom right',
-                text: 'bottom right：不缩放图片，只显示图片的右下边区域'
-            }
-        ],
-        src: '../../images/image8.jpg'
-    }
-});
+      array: [{
+        mode: 'scaleToFill',
+        text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应',
+      }, {
+        mode: 'aspectFit',
+        text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来',
+      }, {
+        mode: 'aspectFill',
+        text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来',
+      }, {
+        mode: 'widthFix',
+        text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变',
+      }, {
+        mode: 'top',
+        text: 'top：不缩放图片，只显示图片的顶部区域',
+      }, {
+        mode: 'bottom',
+        text: 'bottom：不缩放图片，只显示图片的底部区域',
+      }, {
+        mode: 'center',
+        text: 'center：不缩放图片，只显示图片的中间区域',
+      }, {
+        mode: 'left',
+        text: 'left：不缩放图片，只显示图片的左边区域',
+      }, {
+        mode: 'right',
+        text: 'right：不缩放图片，只显示图片的右边边区域',
+      }, {
+        mode: 'top left',
+        text: 'top left：不缩放图片，只显示图片的左上边区域',
+      }, {
+        mode: 'top right',
+        text: 'top right：不缩放图片，只显示图片的右上边区域',
+      }, {
+        mode: 'bottom left',
+        text: 'bottom left：不缩放图片，只显示图片的左下边区域',
+      }, {
+        mode: 'bottom right',
+        text: 'bottom right：不缩放图片，只显示图片的右下边区域',
+      }],
+      src: 'https://b.bdstatic.com/miniapp/image.png',
+    },
+    imageError(e) {
+      console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
+    },
+    onTap(e) {
+      console.log('image 发生 tap 事件', e);
+    },
+    imageLoad(e) {
+      console.log('image 加载成功', e);
+    },
+  });
 
 ```
-**原图**
+**图示**
 
-![图片](../../../img/image.jpg)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/image01.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/image02.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/image03.jpeg">
+    </div>  
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/image04.jpeg">
+    </div>     
+</div>
 
-**scaleToFill**
-**不保持纵横比缩放图片，使图片完全适应**
 
-![图片](../../../img/image-scaleToFill.png)
+## audio 音频
 
-**aspectFit**
-**保持纵横比缩放图片，使图片的长边能完全显示出来**
+**解释**：音频
 
-![图片](../../../img/image-aspectFit.png)
+**百度APP中扫码体验：**
 
-**aspectFill**
-**保持纵横比缩放图片，只保证图片的短边能完全显示出来**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/audio.png"  class="demo-qrcode-image" />
 
-![图片](../../../img/image-aspectFill.png)
+**属性说明**：
 
-**top**
-**不缩放图片，只显示图片的顶部区域**
 
-![图片](../../../img/image-top.png)
+|属性名 |类型  |默认值  | 必填 |说明|
+|---- | ---- | ---- |---- |---- |
+|id|String||否|audio 组件的唯一标识符|
+|src|String||否|要播放音频的资源地址|
+|loop|Boolean|false|否|是否循环播放|
+|controls|Boolean|false|否|是否显示默认控件|
+|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
+|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
+|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
+|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
+|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
+|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
+|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
+|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
 
-**bottom**
-**不缩放图片，只显示图片的底部区域**
 
-![图片](../../../img/image-bottom.png)
+**MediaError.code**
 
-**center**
-**不缩放图片，只显示图片的中间区域**
+|返回错误码|描述|
+|---- |---- |
+|1|获取资源过程被用户终止|
+|2|网络错误|
+|3|当解码时发生错误|
+|4|不支持音频|
 
-![图片](../../../img/image-center.png)
+**示例**：
 
-**left**
-**不缩放图片，只显示图片的左边区域**
+<a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-![图片](../../../img/image-left.png)
+* 在 swan 文件中
 
-**right**
-**不缩放图片，只显示图片的右边边区域**
+```html
+<audio poster="{{poster}}" 
+       name="{{name}}" 
+       loop="false" 
+       author="{{author}}" 
+       src="{{src}}" 
+       id="myAudio" 
+       controls 
+       bind:error="error" 
+       bind:play="audioPlay" 
+       bind:pause="audioPause" 
+       bind:timeupdate="timeupdate" 
+       bind:ended="audioEnded">
+</audio>
+```
 
-![图片](../../../img/image-right.png)
+* 在 js 文件中
 
-**top left**
-**不缩放图片，只显示图片的左上边区域**
+```javascript
+Page({
+    data: {
+        poster: 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg',
+        name: '演员',
+        author: '薛之谦',
+        src: 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3'
+    },
+    error: function (e) {
+        console.log('audio error:', e);
+        swan.showToast({
+            title: '加载音频资源出错',
+            duration: 1000
+        });
+    },
+    audioPlay: function (e) {
+        console.log('audio play');
+        swan.showToast({
+            title: '音频开始播放',
+            duration: 1000
+        });
+    },
+    audioPause: function (e) {
+        console.log('audio pause');
+        swan.showToast({
+            title: '音频暂停',
+            duration: 1000
+        });
+    },
+    audioEnded: function () {
+        console.log('audio ended');
+        swan.showToast({
+            title: '音频播放完',
+            duration: 1000
+        });
+    },
+    timeupdate: function () {
+        console.log('audio update');
+    }
+});
+```
 
-![图片](../../../img/image-top-left.png)
 
-**top right**
-**不缩放图片，只显示图片的右上边区域**
+## video 视频
 
-![图片](../../../img/image-top-right.png)
 
-**bottom left**
-**不缩放图片，只显示图片的左下边区域**
+**解释**：视频，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-![图片](../../../img/image-bottom-left.png)
+**百度APP中扫码体验：**
 
-**bottom right**
-**不缩放图片，只显示图片的右下边区域**
-
-![图片](../../../img/image-bottom-right.png)
-
-## video
-
-**解释**：视频
-
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
 
 
 **属性说明**：
@@ -304,6 +278,7 @@ Page({
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
@@ -357,16 +332,60 @@ Page({
 |VP9|	是	|否|
 
 **示例**：
-<a href="swanide://fragment/f0ac75b192674cf5f940e96ef28ed7851559047792530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b4de2816258292dec183838859e8c57f1566389828332" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
     <view class="video-wrap">
-        <video id="myde" style="width: 100%;" src="{{src}}" controls bindplay="play" bindpause="pause" bindfullscreenchange="fullscreen" bindended="ended" autoplay="{{autoplay}}"></video>
+        <video style="width: 100%;"
+               id="myVideo"
+               src="{{src}}"
+               initial-time="0"
+               duration="48"
+               controls='true'
+               autoplay="{{autoplay}}"
+               loop="false"
+               muted="false"
+               objectFit="fill"
+               poster="{{posterSrc}}"
+               page-gesture='true'
+               direction='0'
+               show-progress="true"
+               show-fullscreen-btn="true"
+               enable-progress-gesture="true"
+               show-no-wifi-tip="true"
+               danmu-list="{{danmuList}}"
+               danmu-btn="true"
+               enable-danmu="true"
+               show-play-btn="true"
+               show-center-play-btn="true"
+               bindplay="play"
+               bindpause="pause"
+               bindended="ended" 
+               bindfullscreenchange="fullscreen" 
+               bindwaiting="waiting"
+               binderror="error"
+               >
+        </video>
     </view>
-    <button class="btn" bindtap="next" type="primary">切换视频地址</button>
+    <form bindreset="cleanInput">
+        <view class="swan-cells">
+            <view class="swan-cell swan-cell_input">
+            <view class="swan-cell__hd">
+                <view class="swan-label">弹幕内容</view>
+            </view>
+            <view class="swan-cell__bd">
+                <input bindinput="bindInput" class="swan-input" type="text" placeholder="在此处输入弹幕内容" />
+            </view>
+            </view>
+        </view>
+        <view class="btn-area">
+            <button class="page-body-button" type="primary" formType="reset">发送弹幕</button>
+            <button class="btn" bindtap="next" type="primary">切换视频地址</button>
+        </view>
+    </form>
 </view>
 ```
 
@@ -379,7 +398,22 @@ Page({
         srcList: ['https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4', 'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'],
         src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
         loop: false,
-        autoplay: false
+        autoplay: false,
+        posterSrc: "",
+        danmuList:[{
+            text: '第 1s 出现的弹幕',
+            color: '#ff0000',
+            time: 1
+            }, {
+            text: '第 3s 出现的弹幕',
+            color: '#ff00ff',
+            time: 3
+        }],
+        sendInfo: '',
+        userMessage: ''
+    },
+    onReady() {
+        this.videoContext = swan.createVideoContext('myVideo')
     },
     play: function (e) {
         console.log('play!');
@@ -400,33 +434,46 @@ Page({
         this.setData('src', list[current]);
         this.setData('current', current);
     },
+    waiting: function (e) {
+        console.log('waiting');
+    },
+    error: function (e) {
+        console.log('error');
+    },
     setloop: function (e) {
         this.setData('loop', !this.getData('loop'));
     },
     setautoplay: function (e) {
         let autoplay = this.getData('autoplay');
         this.setData('autoplay', !autoplay);
-    }
+    },
+    bindInput(e) {
+        this.setData({
+            userMessage: e.detail.value
+        })
+    },
+    cleanInput() {
+        this.videoContext.sendDanmu({
+            text: this.getData('userMessage')
+        })
+    },
+    
 });
 ```
 
-* 在 css 文件中
-
-```css
-.video-wrap {
-    padding: .3rem .23rem 0;
-}
-.btn {
-    margin: .15rem .23rem 0;
-}
-```
 
 **Bug & Tip**：
 * 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/)
 * `<video />` 默认宽度 300px、高度 225px。
 
-## camera
+## camera 相机
+
 **解释**：系统相机
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -454,13 +501,18 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e57c71266aac86d6a0f6253f3c0f8de41565512985352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <div class="camera">
-    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
+    <camera device-position="{{device}}" 
+            flash="off" 
+            bindstop="stop"
+            binderror="error" 
+            style="width: 100%; height: 3rem;">
+    </camera>
     <button type="primary" bind:tap="switchCamera">切换摄像头</button>
     <button type="primary" bind:tap="takePhoto">拍照</button>
     <button type="primary" bind:tap="startRecord">开始录像</button>
@@ -469,6 +521,7 @@ Page({
     <image s-if="src" class="img" mode="widthFix" src="{{src}}"></image>
     <video s-if="videoSrc" class="video" src="{{videoSrc}}"></video>
 </div>
+
 ```
 
 * 在 js 文件中
@@ -479,6 +532,9 @@ Page({
         src: '',
         device: 'back',
         videoSrc: ''
+    },
+    onShow() {
+         console.log("目前此组件的录像功能在安卓端不能播放，请在开发者工具中查看完整效果");
     },
     switchCamera() {
         const devices = this.getData('device');
@@ -532,41 +588,17 @@ Page({
     }
 });
 ```
-
-* 在 css 文件中
-
-```css
-.camera {
-    width: 100%;
-    padding: .16rem;
-    font-size: .16rem;
-}
-.preview {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-button {
-    margin-top: .16rem;
-}
-.img,
-video {
-    width: 100%;
-    margin-top: 50rpx;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera.jpeg">
+        <img src="../../../img/component/camera01.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="../../../img/component/camera02.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
@@ -577,11 +609,15 @@ video {
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
 * 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>。
 
-## ar-camera
+## ar-camera AR相机
+
+> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
 
 **解释**：AR相机，在DuMixAR内容开放平台（ http://dumix.baidu.com/content#/ ）提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
-> 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用。**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ar-camera.png"  class="demo-qrcode-image" />
 
 
 **属性说明**：
@@ -617,29 +653,47 @@ video {
 * ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
 * 同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
-* 相关API：<a href='https://smartapp.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
+* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
 
 
 **示例**：
 
-<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
 
 ```html
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
 </ar-camera>
 ```
-> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
+> 其它代码过长，建议直接<a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
 
+**图示**
 
-## live-player
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/ar-camera.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
-**解释**：实时视频播放
+## live-player 实时视频播放器
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。<br> 只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+**解释**：实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+
 
 |一级类目|二级类目|
 |--|--|
 |娱乐|直播、直播答题|
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -744,13 +798,25 @@ video {
 
 **示例**：
 
-<a href="swanide://fragment/c410637db3921439b6e438ee5448e0961557733794935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
-```swan
+```xml
 <view class="live-play">
-    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}" object-fit="{{objectFit}}" background-mute="{{backgroundMute}}" muted="{{muted}}" min-cache="{{minCache}}" max-cache="{{maxCache}}" bind:statechange="statechange" bind:netstatus="netstatus"></live-player>
+    <live-player id="myLive" 
+                 src="{{src}}" 
+                 autoplay="{{autoplay}}"
+                 muted="{{muted}}"
+                 orientation="vertical"
+                 object-fit="{{objectFit}}" 
+                 background-mute="{{backgroundMute}}" 
+                 min-cache="{{minCache}}" 
+                 max-cache="{{maxCache}}"
+                 bind:statechange="statechange" 
+                 bind:netstatus="netstatus"
+                 bindfullscreenchange>
+    </live-player>
     <div class="section">
         <button type="primary" bind:tap="livePlay">开始播放 play</button>
         <button type="primary" bind:tap="liveStop">停止播放 stop</button>
@@ -767,10 +833,10 @@ Page({
     data: {
         cur: 0,
         autoplay: false,
-        src: 'http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8',
+        src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
         srcList: [
-            'http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8',
-            'http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8'
+            'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share',
+            'https://vd3.bdstatic.com/mda-ib0u8x1bvaf00qa8/mda-ib0u8x1bvaf00qa8.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D'
         ],
         objectFit: 'contain',
         orientation: 'vertical',
@@ -783,14 +849,10 @@ Page({
         this.ctx = swan.createLivePlayerContext('myLive');
     },
     statechange(e) {
-        swan.showToast({
-            title: '播放状态变化 statechange' + JSON.stringify(e)
-        });
+        console.log('播放状态变化 statechange' + JSON.stringify(e))
     },
     netstatus(e) {
-        swan.showToast({
-            title: '网络状态变化 netstatus' + JSON.stringify(e)
-        });
+        console.log('网络状态变化 netstatus' + JSON.stringify(e))
     },
     livePlay(e) {
         this.ctx.play();
@@ -819,20 +881,20 @@ Page({
     },
 });
 ```
-* 在 css 文件中
-```css
-.live-play {
-    width: 100%;
-    padding: .16rem;
-}
-button {
-    margin-top: 20rpx;
-}
-```
-
 
 **图示**
-![图片](../../../img/component/liveplayer.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/live-player.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
 **Bug & Tip**：
 * live-player 默认宽度 300px、高度 225px；

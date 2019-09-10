@@ -5,7 +5,10 @@ nav: third
 sidebar: paymentservice
 ---
 
-本章功能是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。小程序开发者自行开通支付服务请参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。
+本章功能是第三方平台（TP）代替小程序开发者完成开通支付功能而提供的 API。
+>* 小程序开发者自行开通支付服务请参见[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)。
+>* 我们提供了Go语言版本封装了签名&验签、HTTP接口请求等基础功能，调用收银台接口，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
+
 第三方平台帮助小程序开通支付功能需要以下三个步骤，并且需要小程序授予第三方平台**支付服务权限**（唯一性权限）：
 
 **1. 代创建支付账号。**

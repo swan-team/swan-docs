@@ -3,7 +3,7 @@ title: DuXRFace
 layout: gamedoc
 topic: xr
 categoryName: api
-priority: 10-03
+priority: 10-07
 ---
 
 > 从 [基础库 1.10.3](/game/tutorials/version/releaseLog/) 开始支持
@@ -23,7 +23,7 @@ const face = frame.getUpdatedTrackableFaces()[0];
 if (face) {
     // 将姿态矩阵应用到模型变换中
     model.matrixAutoUpdate = false;
-    model.matrix.fromArray(face.headPoseMatrix);
+    model.matrix.fromArray(face.centerPoseMatrix);
     model.matrixWorldNeedsUpdate = true;
 }
 ```

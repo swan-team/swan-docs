@@ -49,10 +49,10 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceSearch/">swan.ai.faceSearch</a>|人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-facePersonVerify/">swan.ai.facePersonVerify</a>|公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-facePersonIdmatch/">swan.ai.facePersonIdmatch</a>|身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessSessioncode/">swan.ai.faceLivenessSessioncode</a>|H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_word/#swan-ai-nlpLexerCustom/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
+<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。| -->
+<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。| -->
 
 ## 媒体
 
@@ -64,6 +64,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
@@ -157,7 +158,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-measureText/">canvasContext.measureText</a>|测量文本尺寸信息，目前仅返回文本宽度，同步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-strokeText/">canvasContext.strokeText</a>|给定的 (x, y) 位置绘制文本描边的方法。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>|设置虚线偏移量的属性。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-createPattern/">canvasContext.createPattern</a>|对指定的图像创建模式的方法，可在指定的方向上重复元图像。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>|创建三次方贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-quadraticCurveTot/">canvasContext.quadraticCurveTo</a>|创建二次贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-save/">canvasContext.save</a>|保存当前的绘图上下文。|
@@ -277,8 +277,10 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#swan-shareFile/">swan.shareFile</a>|支持调起系统分享面板将文件分享到其他App。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/">swan.chooseAddress</a>|调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_payment/#swan-requestPolymerPayment/">swan.requestPolymerPayment</a>|百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-openCommunityEditor/">swan.openCommunityEditor</a>|调起社区内容通用发布器，并支持开发者配置发布器展示模块。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-closeCommunityEditor/">swan.closeCommunityEditor</a>|关闭社区发布器。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-openCommunityEditor/">swan.openCommunityEditor</a>|调起原生全屏内容发布器，并支持开发者配置发布器展示模块。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-closeCommunityEditor/">swan.closeCommunityEditor</a>|关闭原生全屏内容发布器。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_replyeditor/#swan-openReplyEditor/">swan.openReplyEditor</a>|调起原生半屏内容发布器，并支持开发者配置发布器展示模块。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_replyeditor/#swan-closeReplyEditor/">swan.closeReplyEditor</a>|关闭原生半屏内容发布器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|

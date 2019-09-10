@@ -37,7 +37,7 @@ sidebar: media_video
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 **示例**：
-<a href="swanide://fragment/1ad682d22d305ed32c33695919d358791548069205371" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0eef619e22e72c017b16183fdf143ec31568001484211" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```html
 <button bind:tap="chooseVideo" type="primary">点击选择视频</button>
 <video src="{{src}}" controls></video>
@@ -45,22 +45,14 @@ sidebar: media_video
 
 ```javascript
 Page({
-    data: {
-        sourceType: ['album', 'camera'],
-        compressed: false,
-        maxDuration: 60,
-        src: ''
-    },
-
     chooseVideo() {
-        let self = this;
         swan.chooseVideo({
-            sourceType: this.getData('sourceType'),
-            compressed: this.getData('compressed'),
-            maxDuration: this.getData('maxDuration'),
+            sourceType: ['album', 'camera'],
+            compressed: false,
+            maxDuration: 60,
             success: function (res) {
                 // 成功返回选定视频的临时文件路径
-                self.setData('src', res.tempFilePath);
+                console.log('res', res.tempFilePath);
             },
             fail: function (err) {
                 console.log('错误码：' + err.errCode);
@@ -111,15 +103,7 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/c7a97fa9b2fef8f2f99fb4694c018f8d1556536133280" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="saveVideoToPhotosAlbum">saveVideoToPhotosAlbum</button>
-</view>
-```
+<a href="swanide://fragment/ec3a0eebd4faa29ba8db3a34fcca02721567962713625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -156,14 +140,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-```
 <!-- #### 错误码
 
 **Andriod**

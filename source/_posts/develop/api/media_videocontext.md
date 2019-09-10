@@ -12,7 +12,7 @@ sidebar: media_videocontext
 
 **返回值**：videoContext
 
-## videoContext
+## VideoContext
 
 **解释**： swan.createVideoContext 的返回值
 
@@ -43,52 +43,36 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
+        const VideoContext = swan.createVideoContext('myVideo');
+        this.VideoContext = VideoContext;
     },
     play() {
-        this.video.play();
+        this.VideoContext.play();
     },
     pause() {
-        this.video.pause();
+        this.VideoContext.pause();
     },
     seek() {
-        this.video.seek(10);
+        this.VideoContext.seek(10);
     },
     sendDanmu() {
-        this.video.sendDanmu({
+        this.VideoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.video.requestFullScreen();
+            this.VideoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.video.exitFullScreen();
+            this.VideoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap video {
-    width: 100%;
-    margin-bottom: 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-```
 
 **图示**
 
@@ -107,32 +91,32 @@ Page({
 
 
 
-## videoContext.play
+## VideoContext.play
 
 **解释**：播放
 
 **方法参数**：无
  
 
-## videoContext.pause
+## VideoContext.pause
  
 **解释**： 暂停
 
 **方法参数**：无
 
-## videoContext.seek 
+## VideoContext.seek 
  
 **解释**：跳转到指定位置（单位：s）
 
 **方法参数**：Number position
 
-## videoContext.sendDanmu 
+## VideoContext.sendDanmu 
  
 **解释**：发送弹幕，danmu 包含两个属性 text、color。
 
 **方法参数**：Object danmu
 
-## videoContext.requestFullScreen 
+## VideoContext.requestFullScreen 
  
 > 最低支持基础库版本 3.90.x 。
 
@@ -153,19 +137,19 @@ Page({
 videoContext.requestFullScreen({direction: 90});
 ```
 
-## videoContext.exitFullScreen 
+## VideoContext.exitFullScreen 
  
 **解释**：退出全屏
 
 **方法参数**：无
 
-## videoContext.showStatusBar
+## VideoContext.showStatusBar
  
 **解释**：显示状态栏，仅在iOS全屏下有效。
 
 **方法参数**：无
 
-## videoContext.hideStatusBar
+## VideoContext.hideStatusBar
 
  
 **解释**：隐藏状态栏，仅在iOS全屏下有效。
