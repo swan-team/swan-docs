@@ -45,7 +45,7 @@ sidebar: cloud_storage
 
 
 **示例代码**
-`Callback`风格：
+`callback`风格：
 ```js
 swan.cloud.uploadFile({
     cloudPath,
@@ -121,7 +121,7 @@ swan.cloud.uploadFile({
 
 
 **示例代码**
-`Callback`风格：
+`callback`风格：
 ```js
 swan.cloud.downloadFile({
   fileID: 'test-env/my-image.png',
@@ -190,7 +190,7 @@ swan.cloud.downloadFile({
 
 
 **示例代码 **
-`Callback`风格：
+`callback`风格：
 ```js
 swan.cloud.deleteFile({
   fileList: ['test-env/my-image.png'],
