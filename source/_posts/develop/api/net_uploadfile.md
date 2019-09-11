@@ -71,14 +71,7 @@ swan.chooseImage({
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
-**uploadTask 对象的方法列表**：
-
-|方法 | 类型 | 说明|
-|---- | ---- | ---- |
-|onProgressUpdate   | callback  |监听上传进度变化|
-|abort | - | 中断上传任务|
-
-**onProgressUpdate 返回参数说明**：
+## UploadTask
 
 **解释**：上传任务对象
 
@@ -260,7 +253,7 @@ uploadFile 上传文件大小限制为 25M。
 
 **方法参数**：Function callback
 
-#### 返回参数说明**：
+**返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -268,7 +261,7 @@ uploadFile 上传文件大小限制为 25M。
 |totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
 |totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
 
-## UploadTask.abort
+## DownloadTask.abort
 
 **解释**：中断下载任务
 
