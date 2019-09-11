@@ -3437,7 +3437,31 @@
                               text: command.unshift
                               name: cloud_database_command_unshift
                               link: /develop/cloud/cloud_database/command/#command-unshift
-
+        -
+            text: 云开发控制台
+            name: console
+            link: /develop/cloud/console
+            sidebar:
+              -
+                  text: 云开发控制台介绍
+                  name: console
+                  link: /develop/cloud/console
+              -
+                  text: 概览
+                  name: console_overview
+                  link: /develop/cloud/console_overview
+              -
+                  text: 云数据库
+                  name: cloud_database
+                  link: /develop/cloud/console_database
+              -
+                  text: 云文件
+                  name: cloud_bos
+                  link: /develop/cloud/console_bos
+              -
+                  text: 云函数
+                  name: cloud_functions
+                  link: /develop/cloud/console_functions
     # -
     #       text: 插件
     #       name: plugins
