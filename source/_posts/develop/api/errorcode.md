@@ -6,7 +6,7 @@ sidebar: errorcode
 ---
 
 
-## * iOS 通用错误码  
+## iOS 通用错误码  
 
 
 |错误码|说明|

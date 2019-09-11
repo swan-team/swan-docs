@@ -129,6 +129,7 @@ UploadTask.abort(); // 取消上传任务
 |--|--|
 |202|解析失败，请检查参数是否正确  |
 |1|解析失败，请检查参数是否正确|
+
 ## UploadTask.onProgressUpdate
 
 **解释**：监听上传进度变化
