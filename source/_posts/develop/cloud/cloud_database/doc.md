@@ -263,12 +263,7 @@ Promise风格
 
 |字段 |类型 |说明 |
 |----- |----- |----- |
-|stats |Object |更新结果的统计，stats定义如下 |
-
-`stats`对象是一个如下结构的对象
-
-|字段 |类型 |说明 |
-|removed |Number |成功删除的记录数量，值为0或1 |
+|data |Object |记录数据 |
 
 `fail`或`Promise reject`的回调结果结构如下：
 
