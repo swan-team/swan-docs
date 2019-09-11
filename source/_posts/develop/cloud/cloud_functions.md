@@ -49,7 +49,7 @@ exports.add = (event, context, cb) => {
   return event.x + event.y
 }
 ```
-`Callback`风格：
+`callback`风格：
 
 ```js
 swan.cloud.callFunction({
