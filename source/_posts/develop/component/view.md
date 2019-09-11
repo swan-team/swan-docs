@@ -5,9 +5,13 @@ nav: component
 sidebar: view
 ---
 
-## view
+## view 视图容器
 
 **解释**：视图容器。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -19,7 +23,7 @@ sidebar: view
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
 **示例**：
-<a href="swanide://fragment/8dc160060d39fc11f07c82c73cb308431558613505857" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -27,7 +31,7 @@ sidebar: view
 <view>
     <view class="title">横向布局</view>
     <view class="rowlike">
-        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200">
+        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200" hover-stop-propagation="false">
             <text>A</text>
         </view>
         <view class="color-b">
@@ -53,59 +57,6 @@ sidebar: view
         </view>
     </view>
 </view>
-
-```
-
-* 在 css 文件中
-
-```css
-.rowlike {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    height: 1.5rem;
-    line-height: 1.5rem;
-}
-.view-title {
-    display: block;
-    margin: .25rem .18rem .18rem;
-    color: #666;
-}
-.rowlike view {
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-.bottom-block {
-    padding-bottom: .6rem;
-}
-
-.collike {
-    margin: 0 auto;
-    flex-direction: column;
-    width: 2.4rem;
-}
-.collike view {
-    height: 1.2rem;
-    line-height: 1.2rem;
-    flex: 1;
-    text-align: center;
-    font-size: .16rem;
-    color: #FFF;
-}
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
-.hover {
-    opacity: .2;
-}
 ```
 
 **Bug & Tip**：
@@ -113,152 +64,151 @@ sidebar: view
 1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
 
-## scroll-view
-**解释**：可滚动视图区域。
-> 使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height
+## scroll-view 可滚动视图区域
+
+
+**解释**：可滚动视图区域，使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scroll-view.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |
-|scroll-x | Boolean  |  false  | 否 | 允许横向滚动|
-|scroll-y| Boolean  | false | 否 |允许纵向滚动|
-|upper-threshold| Number/String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|
-|lower-threshold| Number/String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|
-|scroll-top | Number/String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|
-|scroll-left| Number/String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|
-|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|
-|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|
-|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |
-|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件|
-|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件|
-|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |
+|属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
+|---- | ---- | ---- |---- |---|
+|scroll-x | Boolean  |  false  | 否 | 允许横向滚动|-|
+|scroll-y| Boolean  | false | 否 |允许纵向滚动|-|
+|upper-threshold| Number &#124; String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件|-|
+|lower-threshold| Number &#124; String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件|-|
+|scroll-top | Number &#124; String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
+|scroll-left| Number &#124; String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`|-|
+|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。|-|
+|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡|-|
+|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 |-|
+|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件|-|
+|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件|-|
+|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} |-|
 
 
 **示例**：
-<a href="swanide://fragment/401c9a44528a80b39a848baf565888641558613903593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cbb3914cf94d91d1273c190b0dead3201565503526386" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
+    <view class="title">纵向滚动</view>
+    <scroll-view
+        scroll-y
+        class="scroll-view"
+        scroll-into-view="{= toView =}"
+        scroll-with-animation="true"
+        bind:scrolltoupper="upper"
+        bind:scrolltolower="lower"
+        upper-threshold="1"
+        scroll-top="{= scrollTop =}"
+        lower-threshold="1"
+        bind:scroll="myscroll"
+        enable-back-to-top="true"
+    >
+        <view id="one" class="color-a">A</view>
+        <view id="two" class="color-b">B</view>
+        <view id="three"  class="color-c">C</view>
+    </scroll-view>
+
+    <view class="page-section-btns">
+        <view class="next" bindtap="tap">next</view>
+        <view bindtap="tapMove">move</view>
+        <view class="scrollToTop" bindtap="scrollToTop">scrollToTop</view>
+    </view>
     <view class="title">横向滚动</view>
     <scroll-view
         scroll-x
         class="scroll-view"
         bind:scrolltoupper="toLeft"
         bind:scrolltolower="toRight"
-        scroll-into-view="one"
+        scroll-left="{= scrollLeft =}"
         upper-threshold="1"
         lower-threshold="1"
-        bind:scroll="myscroll"
+        bind:scroll="scroll"
     >
-        <view id="one"   class="color-a row-view">A</view>
-        <view id="two"   class="color-b row-view">B</view>
-        <view id="three" class="color-c row-view">C</view>
-    </scroll-view>
-
-    <view class="title">纵向滚动</view>
-    <scroll-view
-        scroll-y
-        class="scroll-view"
-        bind:scrolltoupper="upper"
-        bind:scrolltolower="lower"
-        scroll-into-view="four"
-        upper-threshold="10"
-        lower-threshold="10"
-        bind:scroll="myscroll"
-        enable-back-to-top="true"
-    >
-        <view id="four" class="color-a">A</view>
-        <view id="five" class="color-b">B</view>
-        <view id="six"  class="color-c">C</view>
+        <view id="four" class="color-a row-view">A</view>
+        <view id="five" class="color-b row-view">B</view>
+        <view id="six" class="color-c row-view">C</view>
     </scroll-view>
 </view>
+
 ```
 * 在 js 文件中
 
 ```js
+const order = ['one', 'two', 'three'];
 Page({
     data: {
-        data: {
-            toView: 'view4',
-            scrollTop: 100
-        },
+        scrollLeft: 'five',
+        toView: 'one',
+        scrollTop: 0,
     },
+
     toLeft() {
         swan.showToast({
-            duration: 1000,
-            title: '到最左边了'
+            title: '到最左边了',
+            icon: 'none'
         });
     },
     toRight() {
         swan.showToast({
-            duration: 1000,
-            title: '到最右边了'
+            title: '到最右边了',
+            icon: 'none'
         });
     },
     upper() {
         swan.showToast({
-            duration: 1000,
-            title: '到顶了'
+            title: '到顶了',
+            icon: 'none'
         });
     },
+
     lower() {
         swan.showToast({
-            duration: 1000,
-            title: '到底了'
+            title: '到底了',
+            icon: 'none'
         });
     },
-    myscroll(e) {
-        console.log('获取滚动事件的详细信息e.detail：', e.detail);
+
+    scroll(e) {
+        console.log('获取滚动事件的详细信息e.detail：');
+        console.dir(e.detail);
+        this.setData({
+            scrollTop: e.detail.scrollTop
+        })
+    },
+    scrollToTop(e) {
+        console.log(e);
+        this.setData({
+          scrollTop: 0,
+        });
+    },
+    tap(e) {
+        for (let i = 0; i < order.length; ++i) {
+            if (order[i] === this.data.toView) {
+            const next = (i + 1) % order.length;
+            this.setData({
+                toView: order[next],
+                scrollTop: next * 200,
+            });
+            break;
+            }
+        }
+    },
+    tapMove() {
+        this.setData({
+            scrollTop: this.data.scrollTop + 10,
+        });
     }
 });
 ```
-
-* 在 css 文件中：
-
-```css
-.wrap {
-    font-size: .16rem;
-}
-.scroll-view {
-    height: 1.66rem;
-    white-space: nowrap;
-    padding: 0 .25rem;
-    font-size: 0;
-}
-.color-a,
-.color-b,
-.color-c {
-    height: 1.66rem;
-    line-height: 1.66rem;
-    text-align: center;
-    font-size: .16rem;
-    color: #fff;
-}
-
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
-
-.row-view {
-    display: inline-block;
-    width: 100%;
-    height: 1.66rem;
-    line-height: 1.66rem;
-    font-size: 20px;
-}
-```
-
-
-
 **Bug & Tip**：
 
 * 请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
@@ -266,12 +216,17 @@ Page({
 * 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh。
 * 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view。
 * scroll-into-view、scroll-top、scroll-left 需要在页面数据高度（或宽度）撑开时生效，若有异步加载数据，请在数据渲染完成时，重新动态赋值，才可生效。
+* 在设置 scroll-view 组件 height 属性不是内容可视区总高度时，使用 swan.pageScrollTo() API 无法生效。
 
 
-## swiper
+## swiper 滑块视图容器
 
-**解释**：滑块视图容器。
-> 内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
+
+**解释**：滑块视图容器。内部只允许使用`<swiper-item>`组件描述滑块内容，否则会导致未定义的行为。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -308,9 +263,15 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 * 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
 * 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
 
-## swiper-item
+## swiper-item 滑块视图容器子项
 
-> 仅可放置在`<swiper>`组件中，宽高自动设置为100%。
+**解释**： 滑块视图容器子项，仅可放置在`<swiper>`组件中，宽高自动设置为100%。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
+
 
 **属性说明**：
 
@@ -319,25 +280,31 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 |item-id|String| | 否 |该swiper-item的标识符|1.11 低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 **示例**：
-<a href="swanide://fragment/805216ff931a1923577fe3c9f34f10fa1558614600338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d0dec68787a4c179328c6a22d80325981565503528602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <view class="title">示例</view>
+    <view class="title"></view>
     <view class="swiper-wrap">
-        <swiper
+        <swiper 
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
             duration="{{switchDuration}}"
             interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}"
+            indicator-dots="{{switchIndicateStatus}}" 
             vertical="false"
             circular="true"
             current="0"
-            bind:change="swiperChange">
+            current-item-id="0"
+            previous-margin="0px"
+            next-margin="0px"
+            display-multiple-items="1"
+            bind:change="swiperChange"
+            bind:animationfinish="animationfinish"
+        >
             <block s-for="item in items">
                 <swiper-item class="{{item.className}}">
                     <view class="item">{{item.value}}</view>
@@ -394,113 +361,57 @@ Page({
                 value: 'C'
             }
         ],
+        imgUrls: [
+            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
+        ],
         current: 0,
         switchIndicateStatus: true,
         switchAutoPlayStatus: false,
         switchDuration: 500,
         autoPlayInterval: 2000
     },
+    
     swiperChange(e) {
-        console.log('swiperChange:', e);
+        console.log('swiperChange:', e.detail);
     },
     switchIndicate() {
-        this.setData({switchIndicateStatus: !this.getData('switchIndicateStatus')});
+        this.setData({
+            switchIndicateStatus: !this.getData('switchIndicateStatus')
+        });
     },
     switchAutoPlay() {
-        this.setData({switchAutoPlayStatus: !this.getData('switchAutoPlayStatus')});
+        this.setData({
+            switchAutoPlayStatus: !this.getData('switchAutoPlayStatus')
+        });
     },
     changeSwitchDuration(e) {
-        this.setData({switchDuration: e.detail.value});
+        this.setData({
+            switchDuration: e.detail.value
+        });
     },
     changeAutoPlayInterval(e) {
-        this.setData({autoPlayInterval: e.detail.value});
+        this.setData({
+            autoPlayInterval: e.detail.value
+        });
+    },
+    animationfinish() {
+        console.log('animationfinish');
     }
 });
 ```
 
-* 在 css 文件中
 
-```css
-.wrap {
-    font-size: .16rem;
-}
-.swiper-wrap {
-    width: 88%;
-    margin: .1rem auto;
-}
-.item {
-    width: 100%;
-    height: 150px;
-    font-size: .16rem;
-    color: #fff;
-    text-align: center;
-    line-height: 150px;
-}
-.color-a {
-    background-color: #6895FF;
-}
-.color-b {
-    background-color: #8FB1FF;
-}
-.color-c {
-    background-color: #C3D1FF;
-}
+## movable-view 可移动视图容器
 
-.switch-wrap {
-    padding: 0 .17rem;
-    background: #fff;
-    margin: .2rem 0;
-}
-.switch-wrap > view {
-    height: .48rem;
-    line-height: .48rem;
-    color: #000;
-    font-size: .18rem;
-    border-bottom: 1px #f5f5f5 solid;
-    position: relative;
-}
-.switch {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-.slider-wrap > view {
-    height: 100%;
-    padding: 0 .17rem;
-}
-.slider-title-time {
-    overflow: hidden;
-    padding: .2rem 0 .1rem;
-}
-.slider-title,
-.slider-time {
-    font-size: .16rem;
-    color: #666;
-    line-height: .25rem;
-}
-.slider-title {
-    float: left;
-}
-.slider-time {
-    float: right;
-    margin-right: .1rem;
-}
 
-```
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
 
-## movable-area
+**百度APP中扫码体验：**
 
-**解释**：`movable-view` 的可移动区域。
-> `movable-area` 必须设置width和height属性，不设置默认为10px。
-
-|属性名	|类型	|默认值| 必填 |	说明|
-|--|--|--|--|
-|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
-
-## movable-view
-**解释**：可移动的视图容器，在页面中可以拖拽滑动。
-> movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -543,77 +454,71 @@ Page({
 * movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
 
 **示例**：
-<a href="swanide://fragment/681608f3da87faa45a131f7c7c712aa11558615413530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34026129ece94156c05e4567f773288e1565511303256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="container">
-    <view class="content">
-        <view class="section">
-            <view class="content-title">
-                movable-view区域小于movable-area
-            </view>
-            <movable-area>
-                <movable-view x="{{x}}" y="{{y}}" direction="all">text</movable-view>
-            </movable-area>
-            <button bind:tap="move" class="move-button" type="primary">点击移动到 (30px, 30px)</button>
+    <view class="section">
+        <view class="content-title">
+            movable-view区域小于movable-area
         </view>
-        <view class="section">
-            <view class="content-title">
-                movable-view区域大于movable-area
-            </view>
-            <movable-area>
-                <movable-view class="bigger-area" direction="all">text</movable-view>
-            </movable-area>
-        </view>
-        <view class="section">
-            <view class="content-title">
-                只可以横向移动
-            </view>
-            <movable-area>
-                <movable-view direction="horizontal">text</movable-view>
-            </movable-area>
-        </view>
-        <view class="section">
-            <view class="content-title">
-                只可以纵向移动
-            </view>
-            <movable-area>
-                <movable-view direction="vertical">text</movable-view>
-            </movable-area>
-        </view>
-        <view class="section">
-            <view class="content-title">
-                可超出边界
-            </view>
-            <movable-area>
-                <movable-view direction="all" out-of-bounds>text</movable-view>
-            </movable-area>
-        </view>
-        <view class="section">
-            <view class="content-title">
-                带有惯性
-            </view>
-            <movable-area>
-                <movable-view direction="all" inertia>text</movable-view>
-            </movable-area>
-        </view>
-        <view class="section">
-            <view class="content-title">
-                可放缩
-            </view>
-            <movable-area>
-                <movable-view direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
-                    text
-                </movable-view>
-            </movable-area>
-            <button bind:tap="scale" class="scale-button" type="primary">点击放大3倍</button>
-        </view>
+        <movable-area>
+            <movable-view x="{=x=}" y="{=y=}" damping="20" disabled="false" direction="all">text</movable-view>
+        </movable-area>
+        <button bind:tap="move" class="move-button" type="primary">点击移动到 (30px, 30px)</button>
     </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
+    <view class="section">
+        <view class="content-title">
+            movable-view区域大于movable-area
+        </view>
+        <movable-area>
+            <movable-view class="bigger-area" direction="all">text</movable-view>
+        </movable-area>
+    </view>
+    <view class="section">
+        <view class="content-title">
+            只可以横向移动
+        </view>
+        <movable-area htouchmove>
+            <movable-view direction="horizontal">text</movable-view>
+        </movable-area>
+    </view>
+    <view class="section">
+        <view class="content-title">
+            只可以纵向移动
+        </view>
+        <movable-area vtouchmove>
+            <movable-view direction="vertical">text</movable-view>
+        </movable-area>
+    </view>
+    <view class="section">
+        <view class="content-title">
+            可超出边界
+        </view>
+        <movable-area>
+            <movable-view direction="all" out-of-bounds>text</movable-view>
+        </movable-area>
+    </view>
+    <view class="section">
+        <view class="content-title">
+            带有惯性
+        </view>
+        <movable-area>
+            <movable-view direction="all" inertia friction="2">text</movable-view>
+        </movable-area>
+    </view>
+    <view class="section">
+        <view class="content-title">
+            可放缩
+        </view>
+        <movable-area>
+            <movable-view direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
+                text
+            </movable-view>
+        </movable-area>
+        <button bind:tap="scale" class="scale-button" type="primary">点击放大3倍</button>
     </view>
 </view>
 ```
@@ -647,44 +552,30 @@ Page({
     }
 });
 ```
+## movable-area 可移动视图区域
 
-* 在 css 文件中
 
-```css
-.content-title {
-    color: #999;
-    padding: 0 .3rem;
-    margin: .5rem 0 .1rem;
-}
+**解释**：`movable-view` 的可移动区域。`movable-area` 必须设置width和height属性，不设置默认为10px。
 
-movable-area {
-    width: 2.2rem;
-    height: 2.2rem;
-    background-color: #ccc;
-    overflow: hidden;
-    margin: 0 0 .2rem .3rem;
-}
 
-movable-view {
-    width: .6rem;
-    height: .6rem;
-    background-color: #6895FF;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+**百度APP中扫码体验：**
 
-.bigger-area {
-    width: 3rem;
-    height: 3rem;
-}
-```
-## cover-view
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
-**解释： **覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。
+**属性说明**：
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+|属性名	|类型	|默认值| 必填 |	说明|
+|--|--|--|--|
+|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
+
+## cover-view 文本视图
+
+
+**解释**： 覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
@@ -694,79 +585,60 @@ movable-view {
 
 **示例**：
 
-<a href="swanide://fragment/3df4ea38c30ec1940cea3e54665d62491556527219460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e56bb94ee8226ee3635915e1596f239b1565512006326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```html
-<video id="myVideo"
-    src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
-    controls>
-    <cover-view class="controls">
-        <cover-view class="switchs" bindtap="switchs">{{switchs}}</cover-view>
+<map id="myMap"
+     longitude="{{longitude}}"
+     latitude="{{latitude}}">
+    <cover-view class="cover-view">
+        <cover-view class="container">
+            <cover-view class="flex-wrp" style="flex-direction:row;">
+              <cover-view class="flex-item demo-text-1"></cover-view>
+              <cover-view class="flex-item demo-text-2"></cover-view>
+              <cover-view class="flex-item demo-text-3"></cover-view>
+            </cover-view>
+        </cover-view>
     </cover-view>
-</video>
-
+</map>
 ```
 * 在 js 文件中
 ```js
 Page({
     data: {
-        switchs: '点击开始播放'
+        latitude: '40.042500',
+        longitude: '116.274040'
     },
     onReady() {
-        this.videoCtx = swan.createVideoContext('myVideo');
-    },
-    switchs() {
-        const switchs = this.getData('switchs');
-        console.log(switchs);
-        if (switchs === '点击开始播放') {
-            this.setData({
-                switchs: '点击暂停播放'
-            });
-            this.videoCtx.play();
-        } else {
-            this.setData({
-                switchs: '点击开始播放'
-            });
-            this.videoCtx.pause();
-        }
+        this.mapContext = swan.createMapContext('myMap');
     }
 });
 ```
 
-* 在 css 文件中
-```css
-controls {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.switchs {
-    width: 100%;
-    height: 100%;
-    background: #4F99FB;
-    color: #fff;
-    line-height: 50px;
-    text-align: center;
-}
-.pause,
-.time {
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
-}
-```
 **图示**
 
-![图片](../../../img/component/coverview.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/cover-view.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
-## cover-image
+## cover-image 图片视图
 
-**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。
+**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#cover-view/">cover-view</a> 里。 
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，覆盖在原生组件之上的图片视图。可覆盖的原生组件同cover-view，支持嵌套在cover-view里。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-image.png"  class="demo-qrcode-image" />
 
 **属性说明： **
 
@@ -780,32 +652,31 @@ controls {
 
 **示例**：
 
-<a href="swanide://fragment/34ce2e7161c8bcc674d03f731800cced1556527311997" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/23aebf6b1898af1931dba33c5df80f331565505998697" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<video id="myVideo"
-    src="https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share"
-    controls>
+<map id="myMap" style="width: 100%" longitude="{{longitude}}" atitude="{{latitude}}">
     <cover-image class="cover-image"
-        src="https://smartprogram.baidu.com/docs/img/logo.png">
+        src="https://b.bdstatic.com/miniapp/image/cover-image.png">
     </cover-image>
-</video>
+</map>
 ```
-* 在 css 文件中
 
-```css
-.cover-image {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 50px;
-}
-```
 **图示**
 
-![图片](../../../img/component/coverimage.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/cover-image.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
 
 **Bug & Tip**：
 
@@ -817,5 +688,6 @@ controls {
 * 建议不要频繁改变 s-if 表达式的值控制显隐，否则会导致 cover-view 显示异常。
 * IOS端暂不支持一个页面有多个video时嵌套cover-view。
 * cover-view 和 cover-image 从基础库版本1.12.0开始支持事件捕获、冒泡。
+* cover-image和cover-view的渲染顺序与页面中的标签使用顺序一致。
 
 

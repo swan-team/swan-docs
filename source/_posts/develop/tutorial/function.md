@@ -77,6 +77,7 @@ Page() 函数用来注册一个页面。接受一个 object 参数，其指定�
 |onPullDownRefresh|Function| 监听用户下拉动作|
 |onReachBottom|Function| 页面上拉触底事件的处理函数|
 |onShareAppMessage|Function| 用户点击右上角转发|
+|onURLQueryChange|Function|监听页面 URL query 改变|
 |onError|Function|错误监听函数|
 |其他|不限|开发者可以添加任意的函数或数据到 object 参数中，在页面的函数中用 this 可以访问|
 
@@ -109,6 +110,9 @@ Page({
 	},
 	onShareAppMessage: function () {
 		// return custom share data when user share.
+	},
+	onURLQueryChange: function() {
+		// Do something when url query change.
 	}
 });
 ```

@@ -249,8 +249,8 @@ http://xxx.tpbusiness.xxx/SyncPayInfo?userId=149235070&orderId=800020199&unitPri
 
 |参数名称|类型|是否必须|描述|
 |---|---|---|---|
-|appId| Long |是|10026，指应用ID，在用户应用申请通过后，开发者进入管理中心查看应用的APP ID|
-|appKey|String|是|MMM4oc,第三方应用在百度电商开放平台的唯一标识|
+|appId| Long |是|10026，在支付能力申请通过后，开发者在开发者平台-支付管理-支付设置中查看支付的APP ID|
+|appKey|String|是|MMM4oc，在开发者平台开通支付能力后分配的支付appKey|
 |orderId|Long|是|1920891312,百度平台订单ID|
 |siteId|Long|是|	百度用户ID(通过支付成功回调给业务的userId)，如：2250333905|
 |sign|String|是|RSA签名，基于appKey/appId/orderId/siteId，参数计算，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
@@ -350,7 +350,6 @@ https://dianshang.baidu.com/platform/entity/openapi/queryorderdetail?appKey=MMM4
 
 ## 申请退款
 
-> 业务方可以通过该接口申请订单退款，仅限在百度电商开放平台支付的订单。
 
 ### 特别说明
 
@@ -475,7 +474,7 @@ data字段为json格式，参数如下：
 |名称|类型|是否必须|示例值|描述|
 |---|---|---|---|---|
 |auditStatus|Integer|是|0|退款审核状态|
-|calculateRes|Object|是|{"refundPayMoney":100}|全额退和部分退均要填写订单实际支付金额，单位：分。不论审核成功还是失败都需要填写本字段。|
+|calculateRes|Object|是|{"refundPayMoney":100}|全额退和部分退均要填写订单实际退款金额，单位：分。不论审核成功还是失败都需要填写本字段。|
 
 >refundPayMoney的值是以分为单位的整数。 
 <br />

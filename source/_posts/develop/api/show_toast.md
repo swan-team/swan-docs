@@ -10,6 +10,11 @@ sidebar: show_toast
 
 **解释**：显示消息提示框
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/toast.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -274,6 +279,11 @@ Page({
 
 **解释**：显示模态弹窗
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/modal.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -346,6 +356,11 @@ Page({
 ## swan.showActionSheet
 
 **解释**：​显示操作菜单
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/showActionSheet.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 

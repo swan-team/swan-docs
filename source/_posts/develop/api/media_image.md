@@ -10,6 +10,10 @@ sidebar: media_image
 
 **解释**：从本地相册选择图片或使用相机拍照。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/api-image.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -43,7 +47,8 @@ sidebar: media_image
 
 
 **示例**：
-<a href="sswanide://fragment/5739ca862a06d44ad662d8edd9c6bbd31559049434270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<a href="swanide://fragment/0d62ef0c8ea615754904189fac8a13d11567755481204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -87,6 +92,10 @@ swan.chooseImage({
 
 **解释**： 预览图片。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/previewImage.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -103,62 +112,29 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/0853b6b5ebfae073d92923f6bc305c411559044720278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/38f4c33b5ebbda9c2b98a9ee1381ec871567998705872" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="previewImage">previewImage</button>
-    <button type="primary" bindtap="previewOriginImage">previewOriginImage</button>
-</view>
-```
 * 在 js 文件中
 
 ```js
-Page({
-    previewImage() {
-        swan.previewImage({
-            current: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', // 当前显示图片的http链接
-            urls: ['https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', 'https://smartprogram.baidu.com/docs/img/design/overview/1-2.png'], // 需要预览的图片http链接列表
-            success: function (res) {
-                console.log('previewImage success', res);
-            },
-            fail: function (err) {
-                console.log('previewImage fail', err);
-            }
-        });
+
+swan.previewImage({
+    current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',// current需与urls中链接一致
+    urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
+    images: [
+        {
+            "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png', 
+            "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-origin.png'
+        }
+    ],
+    success: res => {
+        console.log('previewImage success', res);
     },
-    previewOriginImage() {
-        swan.previewImage({
-            urls: ['https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png'], // 需要预览的图片http链接列表
-            images: [
-                {
-                    "url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
-                    "origin_url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
-                },
-                {
-                    "url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
-                    "origin_url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
-                }
-            ],
-            success: function (res) {
-                console.log('previewImage success', res);
-            },
-            fail: function (err) {
-                console.log('previewImage fail', err);
-            }
-        });
+    fail: err => {
+        console.log('previewImage fail', err);
     }
 });
-```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 **说明**
@@ -208,24 +184,15 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/57ab8062cc2e4ae51f5b1984f748b83c1567929767878" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getImageInfo">getImageInfo</button>
-</view>
-
-```
 
 * 在 js 文件中
 
 ```js
-Page({
     getImageInfo() {
         swan.getImageInfo({
-            src: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png',
+            src: 'https://smartprogram.baidu.com/xxx.png',
             success: function (res) {
                 console.log('getImageInfo success', res);
             },
@@ -234,15 +201,6 @@ Page({
             }
         });
     }
-});
-
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 <!-- #### 错误码
@@ -280,15 +238,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/b773d94033175e28f71a369cd6563fd71559044847609" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d2ca4220ef3a8436f9eda8f3da9765161568010174134" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="saveImageToPhotosAlbum">saveImageToPhotosAlbum</button>
-</view>
-```
 * 在 js 文件中
 
 ```js
@@ -325,19 +276,16 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.chooseAlbum
 
 > 基础库 3.30.3开始支持，低版本需做兼容处理
 
 **解释**：打开本地相册，相册内可以同时包含图片和视频。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseAlbum.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -406,9 +354,7 @@ swan.chooseAlbum({
     mode: 'both',
     compressed: false,
     success: function (res) {
-
         console.log(res.tempFilePaths);
-
         console.log(res.tempFiles);
     },
     fail: function (err) {

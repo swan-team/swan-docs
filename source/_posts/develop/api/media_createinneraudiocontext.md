@@ -16,11 +16,12 @@ sidebar: media_createinneraudiocontext
 
 **方法参数**： 无
 
-**返回值**：innerAudioContext 
+**返回值**：innerAudioContext
 
 ## innerAudioContext
 
-**`innerAudioContext`对象的属性列表**：
+**解释**： swan.createInnerAudioContext 的返回值。
+**属性列表**：
 
 |方法 | 参数 | 只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -34,37 +35,6 @@ sidebar: media_createinneraudiocontext
 |paused |Boolean |是 |当前状态:true 表示暂停或停止，false 表示正在播放。 |
 |volume |Number |否 |音量，范围 0~1。 |
 
-### innerAudioContext
-
-**`innerAudioContext`对象的方法列表**：
-
-|方法 | 参数 | 说明 |
-|---- | ---- | ---- |
-|play | 无 | 播放 |
-|pause | 无 | 暂停 |
-|stop | 无 | 停止 |
-|seek | position | 跳转到指定位置（单位：s）|
-|destroy | 无 | 销毁当前实例 |
-|onCanplay | callback | 音频进入可以播放状态，但不保证后面可以流畅播放 。|
-|onPlay | callback | 音频播放事件 |
-|onPause | callback | 音频暂停事件 |
-|onStop | callback | 音频停止事件 |
-|onEnded | callback | 音频自然播放结束事件 |
-|onTimeUpdate | callback | 音频进度更新事件 |
-|onError | callback | 音频播放错误事件 |
-|onWaiting | callback | 音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。|
-|onSeeking | callback | 音频进行 seek 操作事件 |
-|onSeeked | callback | 音频完成 seek 操作事件 |
-|offCanplay | callback | 取消监听 onCanplay 事件 |
-|offPlay | callback | 取消监听 onPlay 事件 |
-|offPause | callback | 取消监听 onPause 事件 |
-|offStop | callback | 取消监听 onStop 事件 |
-|offEnded | callback | 取消监听 onEnded 事件 |
-|offTimeUpdate | callback | 取消监听 onTimeUpdate 事件 |
-|offError | callback | 取消监听 onError 事件 |
-|offWaiting | callback | 取消监听 onWaiting 事件 |
-|offSeeking | callback | 取消监听 onSeeking 事件 |
-|offSeeked | callback | 取消监听 onSeeked 事件 |
 
 **示例**：
 
@@ -175,18 +145,6 @@ Page({
 
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-
-```
 
 **图示**
 
@@ -202,7 +160,160 @@ Page({
     </div>     
 </div>
 
+## InnerAudioContext.play
+
+**解释**：播放
+
+**方法参数**：无
+
+## InnerAudioContext.pause
+
+**解释**：暂停 
+
+**方法参数**：无
+
+## InnerAudioContext.stop 
+
+**解释**：停止 
+
+**方法参数**：无
+
+## InnerAudioContext.seek
+
+**解释**：跳转到指定位置（单位：s）
+
+**方法参数**：Number position
+
+## InnerAudioContext.destroy
+
+**解释**：销毁当前实例 
+
+**方法参数**：无
+
+## InnerAudioContext.onCanplay
+
+**解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onPlay
+
+**解释**：音频播放事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onPause
+
+**解释**：音频暂停事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onStop
+
+**解释**：音频停止事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onEnded
+
+**解释**：音频自然播放结束事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onTimeUpdate
+
+**解释**：音频进度更新事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onError
+
+**解释**：音频播放错误事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onWaiting
+
+**解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onSeeking
+
+**解释**：音频进行 seek 操作事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.onSeeked
+
+**解释**：音频完成 seek 操作事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offCanplay
+
+**解释**：取消监听 onCanplay 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offPlay
+
+**解释**：取消监听 onPlay 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offPause
+
+**解释**：取消监听 onPause 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offStop
+
+**解释**：取消监听 onStop 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offEnded
+
+**解释**：取消监听 onEnded 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offTimeUpdate
+
+**解释**：取消监听 onTimeUpdate 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offError
+
+**解释**：取消监听 offError 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offWaiting
+
+**解释**：取消监听 onWaiting 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offSeeking
+
+**解释**：取消监听 onSeeking 事件
+
+**方法参数**：Function callback
+
+## InnerAudioContext.offSeeked
+
+**解释**：取消监听 onSeeked 事件
+
+**方法参数**：Function callback
+
+
 ## swan.setInnerAudioOption
+
+> 基础库 3.10.4 版本开始支持。
 
 **解释**： 对`innerAudioContext`进行小程序内部的全局设置。
 
@@ -227,7 +338,7 @@ Page({
 * 在 swan 文件中
 
 ```html
-view class="wrap">
+<view class="wrap">
     <button type="primary" bindtap="play">play</button>
     <button type="primary" bindtap="stop">stop</button>
     <button type="primary" bindtap="setInnerAudioOption">setInnerAudioOption</button>

@@ -11,11 +11,16 @@ sidebar: media_cameracontext
 
 **解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
 **返回值**：cameraContext
 
-## cameraContext
+## CameraContext
 
 **解释**：swan.createCameraContext 的返回值。
 
@@ -100,29 +105,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-.camera {
-    width: 100%;
-    padding: .16rem;
-    font-size: .16rem;
-}
-.preview {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-button {
-    margin-top: .16rem;
-}
-.img,
-video {
-    width: 100%;
-    margin-top: 50rpx;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">
@@ -139,7 +121,7 @@ video {
 
 
 
-## cameraContext.takePhoto
+## CameraContext.takePhoto
 
 **解释**：拍照，可指定质量，成功则返回图片。
 
@@ -154,7 +136,7 @@ video {
 |fail  |  Function  |  否 |  |接口调用失败的回调函数|
 |complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## cameraContext.startRecord
+## CameraContext.startRecord
 
 **解释**：开始录像
 
@@ -168,7 +150,7 @@ video {
 |fail  |  Function |   否  | |接口调用失败的回调函数|
 |complete   | Function |   否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-## cameraContext.stopRecord
+## CameraContext.stopRecord
 
 **解释**：结束录像，成功则返回封面与视频。
 

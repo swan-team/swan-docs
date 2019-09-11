@@ -6,9 +6,14 @@ sidebar: open
 ---
 
 
-## open-data
+## open-data 开放数据
 
 **解释：**用于展示百度 App 开放的数据。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
 
 **属性说明：**
 
@@ -27,7 +32,7 @@ sidebar: open
 
 **示例**
 
-<a href="swanide://fragment/7422d5f9b6c47e60886f90b55d13232a1556529501185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e98cfa76e01e4b38ab712a7942c6b32b1565510599988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -53,73 +58,30 @@ sidebar: open
 </view>
 ```
 
-* 在 css 文件中
-
-```css
-.open-data {
-    width: 100%;
-    height: 100%;
-    font-size: .16rem;
-    padding-top: 100rpx;
-}
-.avatar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.avatar .avatar-img {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-}
-.section {
-    width: 100%;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 0 .16rem;
-    margin-top: 50rpx;
-    background: #fff;
-}
-.sec {
-    width: 100%;
-    height: .5rem;
-    line-height: .5rem;
-    display: flex;
-    border-bottom: 1px solid #e5e5e5;
-    display: flex;
-}
-.sec:nth-of-type(4) {
-    border: none;
-}
-.sec .sec_left {
-    flex-basis: 160rpx;
-}
-.sec .sec_right {
-    flex: 1;
-```
-
 **图示**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/opendata.png">
+        <img src="../../../img/component/open-data.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="">
     </div>
 </div>
 
 
 
 
-## web-view
+## web-view 网页容器
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/webview.png"  class="demo-qrcode-image" />
 **属性说明:**
 
 | 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
@@ -129,56 +91,28 @@ sidebar: open
 
 
 **示例**：
-<a href="swanide://fragment/ac090bcb0bfd8aca1b9d47c7c854c6271560838933592" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a72d09c94460f8960e5003020b7ba9fc1565510747924" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 
 ```xml
 <view>
-    <web-view s-if="src" src="{{src}}"></web-view>
-    <view class="tip">web-view是承载网页的容器</view>
-    <button type="primary" class="btn" bindtap="openWebViewInNewPage">新页面打开web-view</button>
-    <button type="primary" class="btn" bindtap="openWebViewCurrent">当前页打开web-view</button>
+    <web-view src="{{src}}"></web-view>
 </view>
+
 ```
 * 在 js 文件中：
 
 ```js
-const webviewUrl = 'https://smartprogram.baidu.com';
 Page({
     data: {
-        src: ''
+        src: 'https://smartprogram.baidu.com'
     },
-    onLoad(options) {
-        if (options.webview) {
-            this.setData('src', webviewUrl);
-        }
-    },
-    openWebViewCurrent() {
-        this.setData('src', webviewUrl);
-    },
-    openWebViewInNewPage() {
-        swan.navigateTo({
-            url: '/pages/webview/webview?webview=1'
-        });
+   //接收H5页传过来的参数
+    onShareAppMessage(options) {
+        console.log(options.webViewUrl);
     }
 });
-```
-* 在 css 文件中：
-
-```css
-.tip {
-    text-align: center;
-    padding: .3rem 0 .35rem 0;
-    font-size: .15rem;
-    color: #333;
-}
-
-.btn {
-    line-height: .44rem;
-    font-size: .18rem;
-    margin: 0 .23rem .15rem .23rem;
-}
 ```
 
 ### **相关接口1 **
@@ -187,15 +121,15 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 > 旧版本 swan.xxxx,已更新为 swan.webView.xxxx。
 
-| 接口名               | 说明         | 
+| 接口名               | 说明         | 最低版本 |
 | ----------------- | ---------- | 
-| swan.webView.navigateTo   | 参数与智能小程序接口一致 | 
-| swan.webView.navigateBack | 参数与智能小程序接口一致 | 
-| swan.webView.switchTab    | 参数与智能小程序接口一致 |
-| swan.webView.reLaunch     | 参数与智能小程序接口一致 |
-| swan.webView.redirectTo   | 参数与智能小程序接口一致 |
-| swan.webView.getEnv   | 获取当前环境 |
-| swan.webView.postMessage   | 向小程序发送消息 |
+| swan.webView.navigateTo   | 参数与智能小程序接口一致 | - |
+| swan.webView.navigateBack | 参数与智能小程序接口一致 | - |
+| swan.webView.switchTab    | 参数与智能小程序接口一致 | - |
+| swan.webView.reLaunch     | 参数与智能小程序接口一致 | - |
+| swan.webView.redirectTo   | 参数与智能小程序接口一致 | - |
+| swan.webView.getEnv   | 获取当前环境 | - |
+| swan.webView.postMessage   | 向小程序发送消息 | - |
 
 **示例**：
 
@@ -219,18 +153,18 @@ swan.webView.getEnv(function(res) { console.log(res.smartprogram) // true })
 web-view 网页中支持的接口有：
 
 
-| 接口模块               | 接口说明         | 具体接口  | 备注 |
+| 接口模块               | 接口说明         | 具体接口  | 备注 | 最低版本 |
 | ----------------- | ---------- | --- |
-|设备| 拨打电话| <a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#makePhoneCall/">swan.makePhoneCall</a> |-|
-|开放接口| 打开小程序| <a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">swan.navigateToSmartProgram</a> |-|
-|开放接口| 登录| <a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#login/">swan.login</a> |-|
-|剪贴板| 设置剪贴板| <a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#setClipboardData/">swan.setClipboardData</a> |-|
-|设备| 获取网络类型| <a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#getNetworkType/">swan.getNetworkType</a> |-|
-|媒体| 预览图片| <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#previewImage/">swan.previewImage</a> |-|
-|开放接口| 分享 | <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#openShare/">swan.openShare</a> |需传入当前要分享的小程序的appKey|
-|地理位置|使用内置地图打开地点|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/">swan.openLocation</a>|-|
-|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#getLocation/">swan.getLocation<a>|-|
-|图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#chooseImage/">swan.chooseImage</a>| -|
+|设备| 拨打电话| <a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#makePhoneCall/">swan.makePhoneCall</a> |-| - |
+|开放接口| 打开小程序| <a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">swan.navigateToSmartProgram</a> |-| 1.1.0 |
+|开放接口| 登录| <a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#login/">swan.login</a> |-| 1.1.0|
+|剪贴板| 设置剪贴板| <a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#setClipboardData/">swan.setClipboardData</a> |-| 1.1.0|
+|设备| 获取网络类型| <a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#getNetworkType/">swan.getNetworkType</a> |-| 1.1.0|
+|媒体| 预览图片| <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#previewImage/">swan.previewImage</a> |-|1.1.0 |
+|开放接口| 分享 | <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/#openShare/">swan.openShare</a> |需传入当前要分享的小程序的appKey| 1.2.0|
+|地理位置|使用内置地图打开地点|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/">swan.openLocation</a>|-| 1.6.1|
+|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#getLocation/">swan.getLocation<a>|-|1.6.1 |
+|图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#chooseImage/">swan.chooseImage</a>| -|1.6.1 |
 
 ### **相关接口3 **
 

@@ -38,7 +38,7 @@ priority: 09-01
 **使用限制**
 
 网络请求的 `header` 中不可设置`referer`。
-默认referer格式为：`https://smartapp.baidu.com/{appkey}/{version}/page-frame.html`
+默认referer格式为：`https://smartprogram.baidu.com/{appkey}/{version}/page-frame.html`
 - {appkey}：客户端小游戏的appkey（aps 下发的 appkey，不含调起协议中拼接的下划线），非服务端的小游戏 appid。
 - {version}：为小游戏的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本。
 

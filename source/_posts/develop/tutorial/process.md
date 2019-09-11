@@ -20,6 +20,7 @@ sidebar: process
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
 |[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)|` Array.<object> `|否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
+|[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
 <notice>示例： </notice>
@@ -147,7 +148,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |backgroundColor|HexColor|是|tab 的背景色。|
 |borderStyle|String|否|tabBar 边框颜色。仅支持 black/white 两种边框颜色，默认值为 black 。|
 |color|HexColor|是|tab 上文字的默认颜色。|
-|list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。<br>- 当 position 为 top 时，不显示 icon 。|
+|list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。|
 |selectedColor|HexColor|是|tab 上的文字选中时的颜色。|
 
 ### requiredBackgroundModes
@@ -204,6 +205,16 @@ pages/index/index?id=123
 ```
 这样，再次使用request发起请求时，就可以利用上prefetches中的配置。
 
+### networkTimeout
+
+各类网络请求的超时时间。
+
+|属性|	类型|必填|	默认值|	说明|
+|---|---|---|---|---|
+|request|	number|	否|	60000|	swan.request 的超时时间，单位：毫秒。|
+|connectSocket|	number|	否|	60000|	swan.connectSocket 的超时时间，单位：毫秒。|
+|uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
+|downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
 
 ## 配置 app.js 文件
 
