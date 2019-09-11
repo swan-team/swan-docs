@@ -60,7 +60,7 @@ const doc = db.collection('users').doc('docId');
 
 **示例代码**
 
-`Callback`风格：
+`callback`风格：
 ```js
 swan.cloud.init({
     env: 'envId'
@@ -121,7 +121,7 @@ db.collection('users')
 
 **示例代码**
 
-`Callback`风格：
+`callback`风格：
 
 ```js
 swan.cloud.init({
@@ -188,7 +188,7 @@ db.collection('users')
 
 **示例代码**
 
-`Callback`风格：
+`callback`风格：
 
 ```js
 swan.cloud.init({

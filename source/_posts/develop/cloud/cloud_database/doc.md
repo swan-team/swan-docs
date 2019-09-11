@@ -22,7 +22,7 @@ siderbar: cloud_database_collection_doc
 
 **返回值说明**
 
-`sucess`或`Promise resolve`的回调结果结构如下：
+`success`或`Promise resolve`的回调结果结构如下：
 
 |字段 |类型 |说明 |
 |---- |---- |----- |
@@ -91,7 +91,7 @@ Promise风格
 
 **返回值说明**
 
-`sucess`或`Promise resolve`的回调结果结构如下：
+`success`或`Promise resolve`的回调结果结构如下：
 
 |字段 |类型 |说明 |
 |-----|------|-----|
@@ -174,7 +174,7 @@ Promise风格
 
 **返回值说明**
 
-`sucess`或`Promise resolve`的回调结果结构如下：
+`success`或`Promise resolve`的回调结果结构如下：
 
 |字段 |类型 |说明 |
 |----- |----- |----- |
@@ -259,7 +259,7 @@ Promise风格
 
 **返回值说明**
 
-`sucess`或`Promise resolve`的回调结果结构如下：
+`success`或`Promise resolve`的回调结果结构如下：
 
 |字段 |类型 |说明 |
 |----- |----- |----- |
