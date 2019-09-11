@@ -3242,10 +3242,64 @@
                 name: uplog_compile
 
     - 
-      link: /develop/cloud/cloud_init
       text: 云开发
       name: cloud
       sidebar: 
+        -
+          text: 介绍
+          name: smartapp_cloud_document
+          sidebar:
+            -
+                text: 云开发介绍
+                name: cloud_info
+                link: /develop/cloud/cloud_info
+            -
+                text: 快速上手
+                name: cloud_start
+                link: /develop/cloud/cloud_start
+            -
+                text: 云开发能力介绍
+                name: cloud_basement
+                link: /develop/cloud/cloud_basement
+                sidebar:
+                  -
+                    text: 数据库
+                    name: cloud_database_info
+                    link: /develop/cloud/cloud_database_info
+                  -
+                    text: 存储
+                    name: cloud_file_info
+                    link: /develop/cloud/cloud_file_info
+                  -
+                    text: 云函数
+                    name: cloud_function_info
+                    link: /develop/cloud/cloud_function_info
+            -
+                text: 云开发配额说明
+                name: cloud_
+                link: /develop/cloud/cloud_
+            -
+              text: 云开发控制台
+              name: console
+              link: /develop/cloud/console
+              sidebar:
+                -
+                    text: 概览
+                    name: console_overview
+                    link: /develop/cloud/console_overview
+                -
+                    text: 云数据库
+                    name: console_database
+                    link: /develop/cloud/console_database
+                -
+                    text: 云文件
+                    name: console_bos
+                    link: /develop/cloud/console_bos
+                -
+                    text: 云函数
+                    name: console_functions
+                    link: /develop/cloud/console_functions
+            
         -
             text: 小程序端 API 文档
             name: smartapp_api_document
@@ -3438,30 +3492,13 @@
                               name: cloud_database_command_unshift
                               link: /develop/cloud/cloud_database/command/#command-unshift
         -
-            text: 云开发控制台
-            name: console
-            link: /develop/cloud/console
-            sidebar:
-              -
-                  text: 云开发控制台介绍
-                  name: console
-                  link: /develop/cloud/console
-              -
-                  text: 概览
-                  name: console_overview
-                  link: /develop/cloud/console_overview
-              -
-                  text: 云数据库
-                  name: cloud_database
-                  link: /develop/cloud/console_database
-              -
-                  text: 云文件
-                  name: cloud_bos
-                  link: /develop/cloud/console_bos
-              -
-                  text: 云函数
-                  name: cloud_functions
-                  link: /develop/cloud/console_functions
+          text: 服务端 API 文档
+          name: smartapp_api_document
+          sidebar:
+            -
+                text: 初始化
+                name: cloud_init
+                link: /develop/cloud/cloud_init
     # -
     #       text: 插件
     #       name: plugins

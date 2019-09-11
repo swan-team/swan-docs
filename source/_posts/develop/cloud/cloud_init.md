@@ -4,9 +4,6 @@ header: develop
 nav: cloud
 sidebar: cloud_init
 ---
-
-> 云开发自基础库3.105.2开始支持
-
 ## swan.cloud.init
 
 在调用云开发API前，需先调用此方法初始化一次。全局只需一次，多次调用时只有第一次生效。
