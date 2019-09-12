@@ -3502,13 +3502,8 @@
                     link: /develop/cloud/console/#云存储
                 -
                     text: 云函数
-<<<<<<< HEAD
                     name: console_云函数
                     link: /develop/cloud/console/#云函数
-            
-=======
-                    name: console_functions
-                    link: /develop/cloud/console_functions
         -
           text: 开发指南
           name: smartapp_cloud_guide
@@ -3546,7 +3541,6 @@
                 text: 云开发配额
                 name: cloud_quota
                 link: /develop/cloud/guide/quota
->>>>>>> cloud
         -
             text: 小程序端 API 文档
             name: /develop/cloud/cloud_init
