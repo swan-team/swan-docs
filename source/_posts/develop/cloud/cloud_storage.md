@@ -6,7 +6,7 @@ sidebar: cloud_storage
 ---
 ## swan.cloud.uploadFile
 
-将本地图片上传至云存储空间，如果上传路径相同则覆盖。
+**解释**：将本地资源上传至云存储空间，如果上传至相同路径则会进行资源覆盖。
 
 
 **参数说明**
@@ -83,7 +83,7 @@ swan.cloud.uploadFile({
 
 ## swan.cloud.downloadFile
 
-从云存储空间下载文件。
+**解释**：将资源文件从云存储空间下载至本地。
 
 
 **参数说明**
@@ -146,7 +146,7 @@ swan.cloud.downloadFile({
 
 ## swan.cloud.deleteFile
 
-从云存储空间删除文件，一次最多删除50个。
+**解释**：删除云存储空间中的指定文件，一次最多删除50个。
 
 
 **参数说明**
