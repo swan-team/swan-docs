@@ -6,7 +6,7 @@ sidebar: cloud_functions
 ---
 ## swan.cloud.callFunction
 
-调用云函数。
+**解释**：调用云函数。
 
 **参数说明**
 该方法的传入参数类型为对象类型，参数说明如下：
