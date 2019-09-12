@@ -5,8 +5,7 @@ nav: cloud
 sidebar: cloud_server_sdk_init
 ---
 
-**解释**
-初始化云开发SDK
+**解释**：初始化云开发SDK
 
 **参数说明**
 

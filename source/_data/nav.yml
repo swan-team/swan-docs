@@ -3465,24 +3465,24 @@
             -
                 text: 云开发能力介绍
                 name: cloud_essentials
-                link: /develop/cloud/cloud_essentials/index
+                link: /develop/cloud/cloud_essentials 
                 sidebar:
                   -
                     text: 云数据库
-                    name: cloud_essentials_database
-                    link: /develop/cloud/cloud_essentials/database
+                    name: cloud_essentials_云数据库
+                    link: /develop/cloud/cloud_essentials/#云数据库
                   -
                     text: 云存储
-                    name: cloud_essentials_storage
-                    link: /develop/cloud/cloud_essentials/storage
+                    name: cloud_essentials_云存储
+                    link: /develop/cloud/cloud_essentials/#云存储
                   -
                     text: 云函数
-                    name: cloud_essentials_function
-                    link: /develop/cloud/cloud_essentials/function
+                    name: cloud_essentials_云函数
+                    link: /develop/cloud/cloud_essentials/#云函数
                   -
                     text: 用户集成
-                    name: cloud_essentials_user
-                    link: /develop/cloud/cloud_essentials/user
+                    name: cloud_essentials_用户集成
+                    link: /develop/cloud/cloud_essentials/#用户集成
             -
               text: 云开发控制台
               name: console
@@ -3505,42 +3505,35 @@
                     name: console_云函数
                     link: /develop/cloud/console/#云函数
         -
-          text: 开发指南
-          name: smartapp_cloud_guide
+
           sidebar:
               -
-                text: 环境
-                name: cloud_workspace
-                link: /develop/cloud/guide/workspace
-              -
-                text: 云函数开发指南
-                name: cloud_function_guide
-                link: /develop/cloud/guide/function_guide
+                text: 开发指南
+                name: guide
+                link: /develop/cloud/guide
                 sidebar:
+
                   -
-                    text: 示例：在小程序中调用云函数
-                    name: cloud_function_guide_call_function
-                    link: /develop/cloud/guide/call_function
+                    text: 环境
+                    name: guide_环境
+                    link: /develop/cloud/guide/#环境
                   -
-                    text: 示例：在云函数中调用其他云函数
-                    name: cloud_function_guide_function_call_function
-                    link: /develop/cloud/guide/function_call_function
-              -
-                text: 云数据库开发指南
-                name: cloud_database_guide
-                link: /develop/cloud/guide/database_guide
-              -
-                text: 云存储开发指南
-                name: cloud_storage_guide
-                link: /develop/cloud/guide/storage_guide
-              -
-                text: 用户集成相关问题
-                name: cloud_user_auth_guide
-                link: /develop/cloud/guide/user_auth_guide
-              -
-                text: 云开发配额
-                name: cloud_quota
-                link: /develop/cloud/guide/quota
+                    text: 云函数开发指南
+                    name: guide_云函数开发指南
+                    link: /develop/cloud/guide/#云函数开发指南               
+                      
+                  -
+                    text: 数据库开发常见问题
+                    name:  guide_数据库开发常见问题
+                    link: /develop/cloud/guide/#数据库开发常见问题
+                  -
+                    text: 用户集成相关问题
+                    name:  guide_用户集成相关问题
+                    link: /develop/cloud/guide/#用户集成相关问题
+                  -
+                    text: 云开发配额
+                    name: guide_云开发配额
+                    link: /develop/cloud/guide/#云开发配额
         -
             text: 小程序端 API 文档
             name: /develop/cloud/cloud_init
