@@ -3814,6 +3814,10 @@
                   name: cloud_server_sdk_database_Database.serverDate
                   link: /develop/cloud/server_sdk/database/#Database-serverDate
                 -
+                  text: Database.RegExp
+                  name: cloud_server_sdk_database_Database.RegExp
+                  link: /develop/cloud/server_sdk/database/#Database-RegExp
+                -
                   text: Document.get
                   name: cloud_server_sdk_database_Document.get
                   link: /develop/cloud/server_sdk/database/#Document-get
