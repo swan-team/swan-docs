@@ -7,7 +7,7 @@ sidebar: cloud_function_guide_function_call_function
 
 # 云函数使用示例：在云函数中调用另一个云函数
 
-在云函数中，可以使用 swan-server-sdk 来访问当前环境中的其他资源，包括调用另一个云函数。在本例中，你会创建两个函数：sum 和 call_sum，然后在小程序端调用 call_sum 函数，call_sum 函数会调用 sum 函数获取结果，最终返回给小程序端。
+在云函数中，可以使用 swan-server-sdk 来访问当前环境中的其他资源，包括调用另一个云函数。在本例中，你会创建两个函数：sum 和 call_sum，然后在智能小程序端调用 call_sum 函数，call_sum 函数会调用 sum 函数获取结果，最终返回给智能小程序端。
 
 需要注意的是，这里的调用是同步调用。也就是说，第二个函数的执行时间会全部计算到第一个函数的执行时间内。实际使用时，需要注意设置合理的函数超时时间。
 
@@ -63,6 +63,6 @@ sidebar: cloud_function_guide_function_call_function
 
 	npm install
 
-将这两个函数都部署到云开发后，可以在小程序中调用 call_sum 函数，正常的话可以看到返回结果。
+将这两个函数都部署到云开发后，可以在智能小程序中调用 call_sum 函数，正常的话可以看到返回结果。
 
 	sum: 10

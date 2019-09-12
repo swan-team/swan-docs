@@ -1,11 +1,11 @@
 ---
-title: 云函数使用示例：在小程序中调用云函数
+title: 云函数使用示例：在智能小程序中调用云函数
 header: develop
 nav: cloud
 sidebar: cloud_function_guide_call_function
 ---
 
-# 云函数使用示例：在小程序中调用云函数
+# 云函数使用示例：在智能小程序中调用云函数
 
 在本例中，我们会创建一个名为 sum 的函数，他可以接收一系列数字作为输入，并且将他们的和返回。
 
@@ -38,7 +38,7 @@ sidebar: cloud_function_guide_call_function
 
 可以看到该云函数能够正确返回结果。
 
-在小程序中，通过以下方式调用这个云函数获取结果：
+在智能小程序中，通过以下方式调用这个云函数获取结果：
 
 ```js
 swan.cloud.callFunction({
