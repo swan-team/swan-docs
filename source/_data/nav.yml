@@ -3462,27 +3462,27 @@
                 text: 快速上手
                 name: cloud_start
                 link: /develop/cloud/cloud_start
-            -
-                text: 云开发能力介绍
-                name: cloud_basement
-                link: /develop/cloud/cloud_basement
-                sidebar:
-                  -
-                    text: 数据库
-                    name: cloud_database_info
-                    link: /develop/cloud/cloud_database_info
-                  -
-                    text: 存储
-                    name: cloud_file_info
-                    link: /develop/cloud/cloud_file_info
-                  -
-                    text: 云函数
-                    name: cloud_function_info
-                    link: /develop/cloud/cloud_function_info
-            -
-                text: 云开发配额说明
-                name: cloud_
-                link: /develop/cloud/cloud_
+            # -
+            #     text: 云开发能力介绍
+            #     name: cloud_basement
+            #     link: /develop/cloud/cloud_basement
+            #     sidebar:
+            #       -
+            #         text: 数据库
+            #         name: cloud_database_info
+            #         link: /develop/cloud/cloud_database_info
+            #       -
+            #         text: 存储
+            #         name: cloud_file_info
+            #         link: /develop/cloud/cloud_file_info
+            #       -
+            #         text: 云函数
+            #         name: cloud_function_info
+            #         link: /develop/cloud/cloud_function_info
+            # -
+            #     text: 云开发配额说明
+            #     name: cloud_
+            #     link: /develop/cloud/cloud_
             -
               text: 云开发控制台
               name: console
@@ -3490,29 +3490,34 @@
               sidebar:
                 -
                     text: 概览
-                    name: console_overview
-                    link: /develop/cloud/console_overview
+                    name: console_概览
+                    link: /develop/cloud/console/#概览
                 -
                     text: 云数据库
-                    name: console_database
-                    link: /develop/cloud/console_database
+                    name: console_云数据库
+                    link: /develop/cloud/console/#云数据库
                 -
-                    text: 云文件
-                    name: console_bos
-                    link: /develop/cloud/console_bos
+                    text: 云存储
+                    name: console_云存储
+                    link: /develop/cloud/console/#云存储
                 -
                     text: 云函数
-                    name: console_functions
-                    link: /develop/cloud/console_functions
+                    name: console_云函数
+                    link: /develop/cloud/console/#云函数
             
         -
             text: 小程序端 API 文档
-            name: smartapp_api_document
+            name: /develop/cloud/cloud_init
             sidebar:
               -
                   text: 初始化
-                  name: cloud_init
-                  link: /develop/cloud/cloud_init
+                  name: cloud_init 
+                  link: /develop/cloud/cloud_init 
+                  sidebar:
+                    - 
+                      text: swan.cloud.init
+                      name: cloud_init_swan-cloud-init
+                      link: /develop/cloud/cloud_init/#swan-cloud-init
               -
                   text: 云函数
                   name: cloud_functions
