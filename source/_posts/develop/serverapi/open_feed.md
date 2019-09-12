@@ -510,7 +510,7 @@ return:json
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能全英文，最少6个字，不大于40个字 | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做 |
 | body | string   | **是** | 消息体，为小程序或内容的详细介绍，机器将参考消息体为物料打上相应分发标签 | 内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
 | path | string   | **是** | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考手百问答落地页，**feed****要求至少8个答案** | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（问答资源要求3张封图，单图片最大2M），且封图不可重复   建议尺寸：高>=210 & 宽>=375   最小尺寸：高>=146 & 宽>=218 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
+| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1| ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | 问答型固定为1009   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 例如美食（可选有限集合） |
