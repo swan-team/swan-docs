@@ -3434,6 +3434,10 @@
                     text: 正式版更新日志
                     name: uplog_tool_正式版更新日志
                   -
+                    link: /develop/devtools/uplog_tool/#rc版更新日志
+                    text: rc版更新日志
+                    name: uplog_tool_rc版更新日志                    
+                  -
                     link: /develop/devtools/uplog_tool/#Beta版更新日志
                     text: Beta版更新日志
                     name: uplog_tool_Beta版更新日志
