@@ -44,6 +44,8 @@ px转换rpx
 ![](../../../img/tool/px2rpx转换.gif)
 
 ##Git 状态展示
+>此功能在`2.11.0-rc`之后版本可用
+
 如果所在的小程序工程目录（project.config.json 所在目录）存在 Git 仓库，编辑器可以展示目前的 Git 状态。
 
 ###目录树
