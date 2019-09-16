@@ -12,6 +12,10 @@ sidebar: show_pull
 
 **解释**：开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -62,6 +66,11 @@ Page({
 ## swan.stopPullDownRefresh
 
 **解释**： 停止当前页面下拉刷新。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png"  class="demo-qrcode-image" />
+
 
 **方法参数**： 无
 

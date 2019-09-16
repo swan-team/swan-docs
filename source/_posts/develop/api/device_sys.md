@@ -8,7 +8,14 @@ sidebar: device_sys
 
 ## swan.getSystemInfo
 
+>  基础库 1.10.8 版本开始支持。
+
 **解释**：获取系统信息
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -220,6 +227,7 @@ Page({
 |lastAppURL |string|  智能小程序最近一次打开的调起协议  |
 |sdkVersion |string|  基础库版本   |
 |scheme |string|  调起协议的协议头   |
+|env |string|  智能小程序的版本（基础库 3.90.12 开始支持）；development 代表开发版本，trial 代表体验版本，production 代表线上版本  |
 
 **示例**：
 

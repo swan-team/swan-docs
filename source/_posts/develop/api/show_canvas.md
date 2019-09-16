@@ -19,11 +19,11 @@ sidebar: show_canvas
 ```js
 Page({
     onReady： function () {
-        const ctx = this.createCanvasContext('myCanvas');
-        ctx.setFillStyle('#ff0000');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.draw();
+        const CanvasContext = this.createCanvasContext('myCanvas');
+        CanvasContext.setFillStyle('#ff0000');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.draw();
     }
 });
 ```
@@ -37,7 +37,7 @@ Page({
 ```js
 Page({
     onReady： function () {
-        const ctx = this.createCanvasContext('myCanvas');
+        const CanvasContext = this.createCanvasContext('myCanvas');
 	}
 });
 
@@ -47,7 +47,7 @@ Page({
 如下，我们调用 SWAN 的接口`createCanvasContext`创建了一个绘制上下文（但请注意，使用 SWAN 上挂载的`createCanvasContext`，会在当前用户可见的 Page 中寻找`canvas`）。
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 ```
 
 **2、发送绘制指令**
@@ -55,17 +55,17 @@ const ctx = swan.createCanvasContext('myCanvas');
 设置颜色，并画一个圆，填充。
 
 ```js
-ctx.setFillStyle('#ff0000');
+CanvasContext.setFillStyle('#ff0000');
 
-ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-ctx.fill();
+CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+CanvasContext.fill();
 ```
 
 **3、绘制**
 执行上面已经发出的指令，进行 canvas 绘制。
 
 ```js
-ctx.draw();
+CanvasContext.draw();
 ```
 
 
@@ -74,7 +74,7 @@ ctx.draw();
 
 
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
-如：`ctx.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
+如：`CanvasContext.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
 
 ## swan.createCanvasContext
@@ -139,39 +139,39 @@ OBJECT this
 ```js
 Page({
     onReady() {
-        const ctx = swan.createCanvasContext('canvas');
-        ctx.setFillStyle('#0f0f0f');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(90, 70);
-        ctx.lineTo(70, 80);
-        ctx.lineTo(90, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(130, 70);
-        ctx.lineTo(110, 80);
-        ctx.lineTo(130, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setFillStyle('#00ff00');
-        ctx.arc(100, 100, 20, 0, 1 * Math.PI);
-        ctx.fill();
-        ctx.setFillStyle('#00ff00');
-        ctx.setFontSize(12);
-        ctx.fillText('haha', 165, 78);
-        ctx.moveTo(100, 50);
-        ctx.setStrokeStyle('#00ff00');
-        ctx.bezierCurveTo(100, 25, 75, 25, 50, 50);
-        ctx.stroke();
-        ctx.moveTo(100, 50);
-        ctx.quadraticCurveTo(75, 25, 50, 50);
-        ctx.stroke();
-        ctx.draw();
+        const CanvasContext = swan.createCanvasContext('canvas');
+        CanvasContext.setFillStyle('#0f0f0f');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(90, 70);
+        CanvasContext.lineTo(70, 80);
+        CanvasContext.lineTo(90, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(130, 70);
+        CanvasContext.lineTo(110, 80);
+        CanvasContext.lineTo(130, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.setFontSize(12);
+        CanvasContext.fillText('haha', 165, 78);
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.setStrokeStyle('#00ff00');
+        CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.quadraticCurveTo(75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.draw();
     },
     canvasGetImageData() {
         swan.canvasGetImageData({
@@ -183,7 +183,7 @@ Page({
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail： function (err) {
+            fail: function (err) {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -194,7 +194,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码 -->
@@ -228,7 +228,7 @@ Page({
 
 **示例**：
 
-<a href="swanide：//fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -245,39 +245,39 @@ Page({
 ```js
 Page({
     onReady() {
-        const ctx = swan.createCanvasContext('canvas1');
-        ctx.setFillStyle('#0f0f0f');
-        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(90, 70);
-        ctx.lineTo(70, 80);
-        ctx.lineTo(90, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setStrokeStyle('#0000ff');
-        ctx.moveTo(130, 70);
-        ctx.lineTo(110, 80);
-        ctx.lineTo(130, 80);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.setFillStyle('#00ff00');
-        ctx.arc(100, 100, 20, 0, 1 * Math.PI);
-        ctx.fill();
-        ctx.setFillStyle('#00ff00');
-        ctx.setFontSize(12);
-        ctx.fillText('haha', 165, 78);
-        ctx.moveTo(100, 50);
-        ctx.setStrokeStyle('#00ff00');
-        ctx.bezierCurveTo(100, 25, 75, 25, 50, 50);
-        ctx.stroke();
-        ctx.moveTo(100, 50);
-        ctx.quadraticCurveTo(75, 25, 50, 50);
-        ctx.stroke();
-        ctx.draw();
+        const CanvasContext = swan.createCanvasContext('canvas1');
+        CanvasContext.setFillStyle('#0f0f0f');
+        CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(90, 70);
+        CanvasContext.lineTo(70, 80);
+        CanvasContext.lineTo(90, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setStrokeStyle('#0000ff');
+        CanvasContext.moveTo(130, 70);
+        CanvasContext.lineTo(110, 80);
+        CanvasContext.lineTo(130, 80);
+        CanvasContext.closePath();
+        CanvasContext.stroke();
+        CanvasContext.beginPath();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.setFillStyle('#00ff00');
+        CanvasContext.setFontSize(12);
+        CanvasContext.fillText('haha', 165, 78);
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.setStrokeStyle('#00ff00');
+        CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.moveTo(100, 50);
+        CanvasContext.quadraticCurveTo(75, 25, 50, 50);
+        CanvasContext.stroke();
+        CanvasContext.draw();
     },
     canvasPutImageData() {
         swan.canvasGetImageData({
@@ -313,7 +313,7 @@ Page({
 
 ```css
 .wrap {
-    padding： 50rpx 30rpx;
+    padding: 50rpx 30rpx;
 }
 ```
 <!-- #### 错误码
@@ -357,17 +357,48 @@ Page({
 
 **示例**：
 
+<a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+
+
+* 在 swan 文件中
+
+```html
+<canvas canvas-id="myCanvas" />
+<button class="btn" type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
+<image src="{{src}}"></image>
+```
+
+* 在 js 文件中
+
 ```js
-swan.canvasToTempFilePath({
-    x: 100,
-   y: 200,
-    width: 50,
-    height: 50,
-    destwidth: 100,
-    destheight: 100,
-    canvasId: 'myCanvas',
-    success: function(res) {
-        console.log(res.tempFilePath)
+Page({
+     data: {
+        src: ''
+    },
+    onReady: function () {
+        console.log('在工具2.7.0及以上版本正常使用');
+        const CanvasContext = this.createCanvasContext('myCanvas');
+        CanvasContext.setFillStyle('#ff0000');
+        CanvasContext.arc(100, 50, 50, 0, 2 * Math.PI);
+        CanvasContext.fill();
+        CanvasContext.draw();
+    },
+    canvasToTempFilePath (){
+        const that = this;
+        swan.canvasToTempFilePath({
+            x: 0,
+            y: 0,
+            width: 300,
+            height: 225,
+            destWidth: 300,
+            destHeight: 225,
+            canvasId: 'myCanvas',
+            success: function(res){
+                that.setData("src", res.tempFilePath);
+            }
+        })
     }
 });
 ```
@@ -381,13 +412,13 @@ swan.canvasToTempFilePath({
 |1001|执行失败|
 |202|解析失败，请检查参数是否正确。| -->
 
-## canvasContext
+## CanvasContext
 
 **解释**： 绘图上下文。
 
 **示例**：
 
-<a href="swanide：//fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -417,7 +448,7 @@ Page({
         methods: []
     },
     onReady() {
-        this.canvasContext = swan.createCanvasContext('canvas');
+        this.CanvasContext = swan.createCanvasContext('canvas');
         const methods = Object.keys(canvas);
         this.setData({
             methods
@@ -426,8 +457,8 @@ Page({
         const that = this;
         methods.forEach(function (method) {
             that[method] = function () {
-                canvas[method](that.canvasContext);
-                that.canvasContext.draw();
+                canvas[method](that.CanvasContext);
+                that.CanvasContext.draw();
             }
         })
     },
@@ -760,7 +791,7 @@ module.exports = canvas;
 
 ```
 
-## canvasContext.setFillStyle
+## CanvasContext.setFillStyle
 
 
 **解释**：设置填充色。
@@ -772,15 +803,15 @@ module.exports = canvas;
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = this.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setFillStyle.png)
 
-##  canvasContext.setStrokeStyle
+##  CanvasContext.setStrokeStyle
 
 
 **解释**：设置边框颜色。
@@ -790,15 +821,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
-ctx.setStrokeStyle('blue');
-ctx.strokeRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = this.createCanvasContext('myCanvas');
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.strokeRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-##  canvasContext.setShadow
+##  CanvasContext.setShadow
 
 > 使用顺序：setShadow(offsetX, offsetY, blur, color)
 
@@ -817,16 +848,16 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.setShadow(10, 50, 50, 'red');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.setShadow(10, 50, 50, 'red');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setShadow.png)
 
-##  canvasContext.createLinearGradient
+##  CanvasContext.createLinearGradient
 
 
 **解释**：创建一个线性的渐变颜色。
@@ -846,22 +877,22 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = this.createCanvasContext('myCanvas');
+const CanvasContext = this.createCanvasContext('myCanvas');
 
 // Create linear gradient
-const grd = ctx.createLinearGradient(0, 0, 200, 0);
+const grd = CanvasContext.createLinearGradient(0, 0, 200, 0);
 grd.addColorStop(0, 'blue');
 grd.addColorStop(1, 'red');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createLinearGradient.png)
 
-##  canvasContext.createCircularGradient
+##  CanvasContext.createCircularGradient
 
 **解释**：创建一个圆形的渐变颜色。
 
@@ -877,22 +908,22 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create circular gradient
-const grd = ctx.createCircularGradient(75, 50, 50);
+const grd = CanvasContext.createCircularGradient(75, 50, 50);
 grd.addColorStop(0, 'red');
 grd.addColorStop(1, 'blue');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/createCircularGradient.png)
 
-##  canvasContext.addColorStop
+##  CanvasContext.addColorStop
 
 
 **解释**：创建一个颜色的渐变点。
@@ -907,10 +938,10 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 // Create circular gradient
-const grd = ctx.createLinearGradient(30, 10, 120, 10);
+const grd = CanvasContext.createLinearGradient(30, 10, 120, 10);
 grd.addColorStop(0, 'red');
 grd.addColorStop(0.16, 'orange');
 grd.addColorStop(0.33, 'yellow');
@@ -920,9 +951,9 @@ grd.addColorStop(0.83, 'blue');
 grd.addColorStop(1, 'purple');
 
 // Fill with gradient
-ctx.setFillStyle(grd);
-ctx.fillRect(30, 30, 150, 80);
-ctx.draw();
+CanvasContext.setFillStyle(grd);
+CanvasContext.fillRect(30, 30, 150, 80);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/addColorStop.png)
@@ -930,7 +961,7 @@ ctx.draw();
 **说明**：
 addColorStop 目前在 Android 有bug。
 
-##  canvasContext.setLineWidth
+##  CanvasContext.setLineWidth
 
 
 **解释**：设置线条的宽度。
@@ -942,36 +973,36 @@ addColorStop 目前在 Android 有bug。
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(30, 10);
-ctx.lineTo(200, 10);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(30, 10);
+CanvasContext.lineTo(200, 10);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(5);
-ctx.moveTo(50, 30);
-ctx.lineTo(200, 30);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(5);
+CanvasContext.moveTo(50, 30);
+CanvasContext.lineTo(200, 30);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.moveTo(70, 50);
-ctx.lineTo(200, 50);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(70, 50);
+CanvasContext.lineTo(200, 50);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(15);
-ctx.moveTo(90, 70);
-ctx.lineTo(200, 70);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(15);
+CanvasContext.moveTo(90, 70);
+CanvasContext.lineTo(200, 70);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineWidth.png)
 
-##  canvasContext.setLineCap
+##  CanvasContext.setLineCap
 
 **解释**：设置线条的端点样式。
 
@@ -982,39 +1013,39 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(30, 10);
-ctx.lineTo(200, 10);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(30, 10);
+CanvasContext.lineTo(200, 10);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('butt');
-ctx.setLineWidth(10);
-ctx.moveTo(50, 30);
-ctx.lineTo(200, 30);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('butt');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(50, 30);
+CanvasContext.lineTo(200, 30);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('round');
-ctx.setLineWidth(10);
-ctx.moveTo(70, 50);
-ctx.lineTo(200, 50);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('round');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(70, 50);
+CanvasContext.lineTo(200, 50);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineCap('square');
-ctx.setLineWidth(10);
-ctx.moveTo(90, 70);
-ctx.lineTo(200, 70);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineCap('square');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(90, 70);
+CanvasContext.lineTo(200, 70);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineCap.png)
 
-##  canvasContext.setLineJoin
+##  CanvasContext.setLineJoin
 
 
 **解释**：设置线条的交点样式。
@@ -1026,43 +1057,43 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 50);
-ctx.lineTo(10, 90);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 50);
+CanvasContext.lineTo(10, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('bevel');
-ctx.setLineWidth(10);
-ctx.moveTo(50, 10);
-ctx.lineTo(140, 50);
-ctx.lineTo(50, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('bevel');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(50, 10);
+CanvasContext.lineTo(140, 50);
+CanvasContext.lineTo(50, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('round');
-ctx.setLineWidth(10);
-ctx.moveTo(90, 10);
-ctx.lineTo(180, 50);
-ctx.lineTo(90, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('round');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(90, 10);
+CanvasContext.lineTo(180, 50);
+CanvasContext.lineTo(90, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineJoin('miter');
-ctx.setLineWidth(10);
-ctx.moveTo(130, 10);
-ctx.lineTo(220, 50);
-ctx.lineTo(130, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineJoin('miter');
+CanvasContext.setLineWidth(10);
+CanvasContext.moveTo(130, 10);
+CanvasContext.lineTo(220, 50);
+CanvasContext.lineTo(130, 90);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineJoin.png)
 
-##  canvasContext.setLineDash
+##  CanvasContext.setLineDash
 
 **解释**：设置线条虚线样式的间距和长度。
 
@@ -1075,18 +1106,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setLineDash([10, 20], 5);
-ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setLineDash([10, 20], 5);
+CanvasContext.beginPath();
+CanvasContext.moveTo(0,100);
+CanvasContext.lineTo(400, 100);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setLineDash.png)
 
-##  canvasContext.setMiterLimit
+##  CanvasContext.setMiterLimit
 
 
 **解释**：设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离，当 setLineJoin() 为 miter 时才有效，超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。
@@ -1098,49 +1129,49 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(1);
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 50);
-ctx.lineTo(10, 90);
-ctx.stroke();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(1);
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 50);
+CanvasContext.lineTo(10, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(2);
-ctx.moveTo(50, 10);
-ctx.lineTo(140, 50);
-ctx.lineTo(50, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(2);
+CanvasContext.moveTo(50, 10);
+CanvasContext.lineTo(140, 50);
+CanvasContext.lineTo(50, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(3);
-ctx.moveTo(90, 10);
-ctx.lineTo(180, 50);
-ctx.lineTo(90, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(3);
+CanvasContext.moveTo(90, 10);
+CanvasContext.lineTo(180, 50);
+CanvasContext.lineTo(90, 90);
+CanvasContext.stroke();
 
-ctx.beginPath();
-ctx.setLineWidth(10);
-ctx.setLineJoin('miter');
-ctx.setMiterLimit(4);
-ctx.moveTo(130, 10);
-ctx.lineTo(220, 50);
-ctx.lineTo(130, 90);
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.setLineWidth(10);
+CanvasContext.setLineJoin('miter');
+CanvasContext.setMiterLimit(4);
+CanvasContext.moveTo(130, 10);
+CanvasContext.lineTo(220, 50);
+CanvasContext.lineTo(130, 90);
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setMiterLimit.png)
 
-##  canvasContext.rect
+##  CanvasContext.rect
 
 
 **解释**：创建一个矩形。
@@ -1158,16 +1189,16 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.rect(30, 30, 150, 75);
-ctx.setFillStyle('blue');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.rect(30, 30, 150, 75);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/rect.png)
 
-##  canvasContext.fillRect
+##  CanvasContext.fillRect
 
 
 **解释**：填充一个矩形。
@@ -1185,15 +1216,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/rect.png)
 
-##  canvasContext.strokeRect
+##  CanvasContext.strokeRect
 
 
 **解释**：画一个矩形(非填充)。
@@ -1211,15 +1242,15 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setStrokeStyle('blue');
-ctx.strokeRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.strokeRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/setStrokeStyle.png)
 
-##  canvasContext.clearRect
+##  CanvasContext.clearRect
 
 
 **解释**：清除画布上在该矩形区域内的内容。
@@ -1237,19 +1268,19 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('red');
-ctx.fillRect(0, 0, 150, 200);
-ctx.setFillStyle('blue');
-ctx.fillRect(150, 0, 150, 200);
-ctx.clearRect(30, 30, 150, 75);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('red');
+CanvasContext.fillRect(0, 0, 150, 200);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(150, 0, 150, 200);
+CanvasContext.clearRect(30, 30, 150, 75);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/clearRect.png)
 
 
-##  canvasContext.fill
+##  CanvasContext.fill
 
 
 **解释**：对当前路径中的内容进行填充。默认的填充色为黑色。
@@ -1259,17 +1290,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/fill.png)
 
-## canvasContext.stroke
+## CanvasContext.stroke
 
 
 **解释**：画出当前路径的边框。默认颜色为黑色。
@@ -1279,17 +1310,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/stroke.png)
 
-##  canvasContext.beginPath
+##  CanvasContext.beginPath
 
 
 **解释**：开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。
@@ -1299,23 +1330,23 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.rect(10, 10, 100, 30);
-ctx.setFillStyle('red');
-ctx.fill();
-ctx.beginPath();
-ctx.rect(10, 40, 100, 30);
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 70, 100, 30);
-ctx.rect(10, 100, 100, 30);
-ctx.setFillStyle('green');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.rect(10, 10, 100, 30);
+CanvasContext.setFillStyle('red');
+CanvasContext.fill();
+CanvasContext.beginPath();
+CanvasContext.rect(10, 40, 100, 30);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 70, 100, 30);
+CanvasContext.rect(10, 100, 100, 30);
+CanvasContext.setFillStyle('green');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/beginPath.png)
 
-##  canvasContext.closePath
+##  CanvasContext.closePath
 
 
 **解释**：关闭一个路径。
@@ -1325,18 +1356,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(100, 100);
-ctx.lineTo(10, 100);
-ctx.lineTo(10, 10);
-ctx.closePath();
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(100, 100);
+CanvasContext.lineTo(10, 100);
+CanvasContext.lineTo(10, 10);
+CanvasContext.closePath();
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/closePath.png)
 
-##  canvasContext.moveTo
+##  CanvasContext.moveTo
 
 
 **解释**：把路径移动到画布中的指定点，不创建线条。
@@ -1351,18 +1382,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(10, 10);
-ctx.lineTo(100, 10);
-ctx.moveTo(10, 100);
-ctx.lineTo(100, 100);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(10, 10);
+CanvasContext.lineTo(100, 10);
+CanvasContext.moveTo(10, 100);
+CanvasContext.lineTo(100, 100);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/moveTo.png)
 
-##  canvasContext.lineTo
+##  CanvasContext.lineTo
 
 
 **解释**：lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。
@@ -1376,17 +1407,17 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.moveTo(10, 10);
-ctx.rect(10, 10, 100, 50);
-ctx.lineTo(110, 60);
-ctx.stroke();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.moveTo(10, 10);
+CanvasContext.rect(10, 10, 100, 50);
+CanvasContext.lineTo(110, 60);
+CanvasContext.stroke();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/lineTo.png)
 
-##  canvasContext.arc
+##  CanvasContext.arc
 
 
 **解释**：画一条弧线。
@@ -1409,16 +1440,16 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.setFillStyle('blue');
-ctx.fill();
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fill();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/arc.png)
 
-##  canvasContext.scale
+##  CanvasContext.scale
 
 
 **解释**：在调用`scale`方法后，之后创建的路径其横纵坐标会被缩放。多次调用`scale`，倍数会相乘。
@@ -1433,20 +1464,20 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(10, 10, 25, 15);
-ctx.scale(2, 2);
-ctx.strokeRect(10, 10, 25, 15);
-ctx.scale(2, 2);
-ctx.strokeRect(10, 10, 25, 15);
+CanvasContext.strokeRect(10, 10, 25, 15);
+CanvasContext.scale(2, 2);
+CanvasContext.strokeRect(10, 10, 25, 15);
+CanvasContext.scale(2, 2);
+CanvasContext.strokeRect(10, 10, 25, 15);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/scale.png)
 
-##  canvasContext.rotate
+##  CanvasContext.rotate
 
 
 **解释**：以原点为中心，原点可以用 translate 方法修改。顺时针旋转当前坐标轴。多次调用 rotate，旋转的角度会叠加。
@@ -1459,20 +1490,20 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(100, 10, 150, 100);
-ctx.rotate(20 * Math.PI / 180);
-ctx.strokeRect(100, 10, 150, 100);
-ctx.rotate(20 * Math.PI / 180);
-ctx.strokeRect(100, 10, 150, 100);
+CanvasContext.strokeRect(100, 10, 150, 100);
+CanvasContext.rotate(20 * Math.PI / 180);
+CanvasContext.strokeRect(100, 10, 150, 100);
+CanvasContext.rotate(20 * Math.PI / 180);
+CanvasContext.strokeRect(100, 10, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/rotate.png)
 
-##  canvasContext.translate
+##  CanvasContext.translate
 
 
 **解释**：对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。
@@ -1487,20 +1518,20 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.strokeRect(10, 10, 150, 100);
-ctx.translate(20, 20);
-ctx.strokeRect(10, 10, 150, 100);
-ctx.translate(20, 20);
-ctx.strokeRect(10, 10, 150, 100);
+CanvasContext.strokeRect(10, 10, 150, 100);
+CanvasContext.translate(20, 20);
+CanvasContext.strokeRect(10, 10, 150, 100);
+CanvasContext.translate(20, 20);
+CanvasContext.strokeRect(10, 10, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/translate.png)
 
-##  canvasContext.clip
+##  CanvasContext.clip
 
 
 **解释**： clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。
@@ -1510,23 +1541,23 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas')
+const CanvasContext = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
     url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
-        ctx.save()
-        ctx.beginPath()
-        ctx.arc(50, 50, 25, 0, 2*Math.PI)
-        ctx.clip()
-        ctx.drawImage(res.tempFilePath, 25, 25)
-        ctx.restore()
-        ctx.draw()
+        CanvasContext.save()
+        CanvasContext.beginPath()
+        CanvasContext.arc(50, 50, 25, 0, 2*Math.PI)
+        CanvasContext.clip()
+        CanvasContext.drawImage(res.tempFilePath, 25, 25)
+        CanvasContext.restore()
+        CanvasContext.draw()
     }
 });
 ```
 
-##  canvasContext.setFontSize
+##  CanvasContext.setFontSize
 
 
 **解释**：设置字体的字号。
@@ -1539,23 +1570,23 @@ swan.downloadFile({
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFontSize(20);
-ctx.fillText('20', 20, 20);
-ctx.setFontSize(30);
-ctx.fillText('30', 40, 40);
-ctx.setFontSize(40);
-ctx.fillText('40', 60, 60);
-ctx.setFontSize(50);
-ctx.fillText('50', 90, 90);
+CanvasContext.setFontSize(20);
+CanvasContext.fillText('20', 20, 20);
+CanvasContext.setFontSize(30);
+CanvasContext.fillText('30', 40, 40);
+CanvasContext.setFontSize(40);
+CanvasContext.fillText('40', 60, 60);
+CanvasContext.setFontSize(50);
+CanvasContext.fillText('50', 90, 90);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/font-size.png)
 
-##  canvasContext.fillText
+##  CanvasContext.fillText
 
 
 **解释**：在画布上绘制被填充的文本。
@@ -1570,16 +1601,16 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFontSize(20);
-ctx.fillText('Hello', 20, 20);
-ctx.fillText('World', 100, 100);
+CanvasContext.setFontSize(20);
+CanvasContext.fillText('Hello', 20, 20);
+CanvasContext.fillText('World', 100, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
-##  canvasContext.setTextAlign
+##  CanvasContext.setTextAlign
 
 
 **解释**：用于设置文字的对齐。
@@ -1591,28 +1622,28 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setStrokeStyle('red');
-ctx.moveTo(150, 20);
-ctx.lineTo(150, 170);
-ctx.stroke();
+CanvasContext.setStrokeStyle('red');
+CanvasContext.moveTo(150, 20);
+CanvasContext.lineTo(150, 170);
+CanvasContext.stroke();
 
-ctx.setFontSize(15);
-ctx.setTextAlign('left');
-ctx.fillText('textAlign=left', 150, 60);
+CanvasContext.setFontSize(15);
+CanvasContext.setTextAlign('left');
+CanvasContext.fillText('textAlign=left', 150, 60);
 
-ctx.setTextAlign('center');
-ctx.fillText('textAlign=center', 150, 80);
+CanvasContext.setTextAlign('center');
+CanvasContext.fillText('textAlign=center', 150, 80);
 
-ctx.setTextAlign('right');
-ctx.fillText('textAlign=right', 150, 100);
+CanvasContext.setTextAlign('right');
+CanvasContext.fillText('textAlign=right', 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/set-text-align.png)
 
-##  canvasContext.setTextBaseline
+##  CanvasContext.setTextBaseline
 
 **解释**：用于设置文字的水平对齐。
 
@@ -1623,32 +1654,32 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setStrokeStyle('red');
-ctx.moveTo(5, 75);
-ctx.lineTo(295, 75);
-ctx.stroke();
+CanvasContext.setStrokeStyle('red');
+CanvasContext.moveTo(5, 75);
+CanvasContext.lineTo(295, 75);
+CanvasContext.stroke();
 
-ctx.setFontSize(20);
+CanvasContext.setFontSize(20);
 
-ctx.setTextBaseline('top');
-ctx.fillText('top', 5, 75);
+CanvasContext.setTextBaseline('top');
+CanvasContext.fillText('top', 5, 75);
 
-ctx.setTextBaseline('middle');
-ctx.fillText('middle', 50, 75);
+CanvasContext.setTextBaseline('middle');
+CanvasContext.fillText('middle', 50, 75);
 
-ctx.setTextBaseline('bottom');
-ctx.fillText('bottom', 120, 75);
+CanvasContext.setTextBaseline('bottom');
+CanvasContext.fillText('bottom', 120, 75);
 
-ctx.setTextBaseline('normal');
-ctx.fillText('normal', 200, 75);
+CanvasContext.setTextBaseline('normal');
+CanvasContext.fillText('normal', 200, 75);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/set-text-baseline.png)
 
-## canvasContext.drawImage
+## CanvasContext.drawImage
 
 > 使用顺序：drawImage(imageResource, dx, dy, dWidth, dHeight, sx, sy, sWidth, sHeight)
 
@@ -1679,18 +1710,18 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
 swan.chooseImage({
     success: function(res){
-        ctx.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
-        ctx.draw();
+        CanvasContext.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
+        CanvasContext.draw();
     }
 });
 ```
 ![图片](../../../img/draw-image.png)
 
-## canvasContext.setGlobalAlpha
+## CanvasContext.setGlobalAlpha
 
 
 **解释**：设置全局画笔透明度。
@@ -1702,21 +1733,21 @@ swan.chooseImage({
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 
-ctx.setFillStyle('red');
-ctx.fillRect(10, 10, 150, 100);
-ctx.setGlobalAlpha(0.2);
-ctx.setFillStyle('blue');
-ctx.fillRect(50, 50, 150, 100);
-ctx.setFillStyle('yellow');
-ctx.fillRect(100, 100, 150, 100);
+CanvasContext.setFillStyle('red');
+CanvasContext.fillRect(10, 10, 150, 100);
+CanvasContext.setGlobalAlpha(0.2);
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(50, 50, 150, 100);
+CanvasContext.setFillStyle('yellow');
+CanvasContext.fillRect(100, 100, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 ![图片](../../../img/global-alpha.png)
 
-## canvasContext.measureText
+## CanvasContext.measureText
 
 
 **解释**：测量文本尺寸信息，目前仅返回文本宽度，同步接口。
@@ -1736,14 +1767,14 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas')
-ctx.font = 'italic bold 20px cursive'
-const metrics = ctx.measureText('Hello World')
+const CanvasContext = swan.createCanvasContext('myCanvas')
+CanvasContext.font = 'italic bold 20px cursive'
+const metrics = CanvasContext.measureText('Hello World')
 console.log(metrics.width);
 ```
  
 
-##  canvasContext.strokeText
+##  CanvasContext.strokeText
 
 **解释**：给定的 (x, y) 位置绘制文本描边的方法。
 
@@ -1763,7 +1794,7 @@ console.log(metrics.width);
 canvasContext.strokeText(text, x, y, maxWidth);
 ```
 
-##  canvasContext.setLineDashOffset
+##  CanvasContext.setLineDashOffset
 
 
 **解释**：设置虚线偏移量的属性。
@@ -1778,34 +1809,7 @@ canvasContext.strokeText(text, x, y, maxWidth);
 canvasContext.setLineDashOffset = value;
 ```
 
-##  canvasContext.createPattern
-
-
-**解释**：对指定的图像创建模式的方法，可在指定的方向上重复元图像。
-
-**方法参数**：String image, String repetitio
-
-**`image`参数说明**：  重复的图像源，仅支持包内路径和临时路径 。 
-
-**`repetition`参数说明**：  指定如何重复图像，有效值有： repeat, repeat-x, repeat-y, no-repeat。 
-
-**示例**：
-
-```js
-canvasContext.createPattern(image, repetition);
-```
-
-**示例**：
-
-```js
-const ctx = swan.createCanvasContext('myCanvas');
-const pattern = ctx.createPattern('/path/to/image', 'repeat-x');
-ctx.fillStyle = pattern;
-ctx.fillRect(0, 0, 300, 150);
-ctx.draw();
-```
-
-##  canvasContext.bezierCurveTo
+##  CanvasContext.bezierCurveTo
 
 
 **解释**：创建三次方贝塞尔曲线路径。
@@ -1827,20 +1831,20 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
-ctx.setStrokeStyle('black');
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.moveTo(20, 20);
+CanvasContext.bezierCurveTo(20, 100, 200, 100, 200, 20);
+CanvasContext.setStrokeStyle('black');
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/bezierCurveTo.png)
 
-##  canvasContext.quadraticCurveTo
+##  CanvasContext.quadraticCurveTo
 
 **解释**：创建二次贝塞尔曲线路径。
 
@@ -1857,20 +1861,20 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.quadraticCurveTo(20, 100, 200, 20);
-ctx.setStrokeStyle('blue');
-ctx.stroke();
+CanvasContext.beginPath();
+CanvasContext.moveTo(20, 20);
+CanvasContext.quadraticCurveTo(20, 100, 200, 20);
+CanvasContext.setStrokeStyle('blue');
+CanvasContext.stroke();
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/quadraticCurveTo.png)
 
-##  canvasContext.save
+##  CanvasContext.save
 
 
 **解释**：保存当前的绘图上下文。
@@ -1880,22 +1884,22 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // save the default fill style
-ctx.save();
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
+CanvasContext.save();
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
 
 // restore to the previous saved state
-ctx.restore();
-ctx.fillRect(50, 50, 150, 100);
+CanvasContext.restore();
+CanvasContext.fillRect(50, 50, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/save.png)
 
-##  canvasContext.restore
+##  CanvasContext.restore
 
 
 **解释**：恢复之前保存的绘图上下文。
@@ -1905,22 +1909,22 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
+const CanvasContext = swan.createCanvasContext('myCanvas');
 // save the default fill style
-ctx.save();
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
+CanvasContext.save();
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
 
 // restore to the previous saved state
-ctx.restore();
-ctx.fillRect(50, 50, 150, 100);
+CanvasContext.restore();
+CanvasContext.fillRect(50, 50, 150, 100);
 
-ctx.draw();
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/save.png)
 
-##  canvasContext.draw
+##  CanvasContext.draw
 
 
 **解释**：将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
@@ -1935,19 +1939,19 @@ ctx.draw();
 **示例**：
 
 ```js
-const ctx = swan.createCanvasContext('myCanvas');
-ctx.setFillStyle('blue');
-ctx.fillRect(10, 10, 150, 100);
-ctx.draw();
-ctx.fillRect(30, 30, 150, 100);
-ctx.draw();
+const CanvasContext = swan.createCanvasContext('myCanvas');
+CanvasContext.setFillStyle('blue');
+CanvasContext.fillRect(10, 10, 150, 100);
+CanvasContext.draw();
+CanvasContext.fillRect(30, 30, 150, 100);
+CanvasContext.draw();
 ```
 
 ![图片](../../../img/api/canvas/draw1.png)
 
  
 
-##  canvasContext.font
+##  CanvasContext.font
 
 
 **解释**：设置当前字体样式的属性。
@@ -1971,7 +1975,7 @@ ctx.draw();
 canvasContext.font = value;
 ```
 
-##  canvasContext.setTransform
+##  CanvasContext.setTransform
 
 
 **解释**：使用矩阵重新设置（覆盖）当前变换的方法。

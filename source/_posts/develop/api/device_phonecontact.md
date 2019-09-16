@@ -10,6 +10,11 @@ sidebar: device_phonecontact
 
 **解释**：调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/addPhoneContact.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

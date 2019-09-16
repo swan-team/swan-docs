@@ -79,18 +79,18 @@ sidebar: toast
 		<img src="../../../img/design/component/toast/7-1.png">
 		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">使用简单易懂的文案，交待原因和当前状态。</p>
 	</div>
-	<div class="m-doc-custom-examples-cerror">
+	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/toast/7-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">当需要较长文案说明时，折行断句可以帮助用户阅读更顺畅。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">当需要较长文案说明时，折行断句可以帮助用户阅读更顺畅。</p>
 	</div>
 </div>
 
 过长的文案会导致信息无法展现完全，且短时间内无法完成浏览，导致交代不清楚当前状况。
 我们应精简表达，控制文案长度，同时，在措辞上应该使用用户能理解的表达。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/toast/8-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">未使用标点和断句，表述模糊冗余，且过长文案显示不完整。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">未使用标点和断句，表述模糊冗余，且过长文案显示不完整。</p>
 	</div>
 	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/toast/8-2.png">

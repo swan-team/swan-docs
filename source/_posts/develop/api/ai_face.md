@@ -11,6 +11,11 @@ sidebar: ai_face
 
 **解释**：人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceDetect.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -160,18 +165,24 @@ sidebar: ai_face
 
 **示例代码**
 
-<a href="swanide://fragment/96339dc6f02871f0e915d86dfabf77b51559034789238" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e6b484f151d6281bcdc5dbbee8cbf1fe1567751456446" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
   success(res) {
     let image = res.tempFilePaths[0];
     swan.ai.faceDetect({
-      image,
-      image_type: 'BASE64',
-      success(res) {
-        console.log(res);
-      }
+        image,
+        image_type: 'BASE64',
+        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+        max_face_num: '1',
+        face_type: 'LIVE',
+        success(res) {
+            console.log(res.face_list);
+       },
+       fail(err) {
+            console.log( err);
+        }
     });
   }
 });
@@ -261,6 +272,9 @@ swan.chooseImage({
 
 **解释**：人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceMatch.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -298,7 +312,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/40d95ae15cddc5c71a9a861f68539bbc1559034958852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2c717bcac95b9db8690aafee3fee504b1567751699749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceMatch({
@@ -320,6 +334,9 @@ swan.ai.faceMatch({
   ],
   success(res) {
     console.log('res');
+  },
+  fail(err) {
+    console.log('err');
   }
 });
 ```
@@ -349,6 +366,10 @@ swan.ai.faceMatch({
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
 **解释**：人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceSearch.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -387,7 +408,7 @@ swan.ai.faceMatch({
 
 **示例代码**
 
-<a href="swanide://fragment/7727278125ceb0c5bfe3f453358212ee1559035045986" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/60b0dfce28b43de99c9f83df68fefd041567751857137" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -402,10 +423,10 @@ swan.chooseImage({
 	    user_id: 'xxxxxx',
 	    max_user_num: 20,
 	    success(res) {
-	        console.log('success', res);
+	        console.log(res);
 	    },
 	    fail(err) {
-	        console.warn('fail', err);
+	        console.log(err);
 	    }
 	});
   }
@@ -434,6 +455,10 @@ swan.chooseImage({
 
 **解释**：公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonVerify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -461,7 +486,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/61cc0d14b6451b66a11f216bb642d96a1559042207734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9043d43466d79899ca90e751da65ec191567752086557" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonVerify({
@@ -473,6 +498,9 @@ swan.ai.facePersonVerify({
     name: '',
     success(res) {
         console.log('success', res);
+    },
+    fail(err) {
+        console.log('fail', err);
     }
 });
 ```
@@ -491,6 +519,11 @@ swan.ai.facePersonVerify({
 
 **解释**：身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonIdmatch.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -505,7 +538,7 @@ swan.ai.facePersonVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/04462fe149a853690ab633749d3fc7a91559042274246" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e30c906169cc2c20f43d68cf3fea872c1567752214190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonIdmatch({
@@ -513,12 +546,70 @@ swan.ai.facePersonIdmatch({
     name: '',
     success(res) {
         console.log('success', res);
+    },
+    fail(err) {
+        console.log('fail', err);
     }
 });
 ```
+##  swan.ai.faceLivenessSessioncode
+
+>基础库 3.20.11 开始支持，低版本需做兼容处理。
+
+**解释**：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|appid | string| 是 | -|百度云创建应用时的唯一标识 ID | 
+|success | Function | 否 |-| 接口调用成功后的回调函数 | 
+|fail | Function | 否 |-| 接口调用失败的回调函数 | 
+|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**返回值参数说明** 
+
+|参数名 | 参数类型 |说明  | 
+|---|---|---|---|
+|log_id| Number|	唯一的log id，用于问题定位。|
+|error_no| Number|	错误码，错误码为0时，活体检测成功。|
+|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
+|session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
+|code | string |语音验证码，数字形式，3~6 位数字。| 
 
 
-##  swan.ai.faceVerify
+
+**示例代码**
+
+<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+swan.ai.faceLivenessSessioncode({
+  appid: '',
+  success(res) {
+    console.log('res');
+  }
+});
+```
+
+**返回示例**
+```js
+{
+	"err_no": 0,
+	"err_msg": "SUCCESS",
+	"result": {
+		"session_id": "S59faeeebb9111890355690",
+		"code": "9940"
+	},
+	"timestamp": 1509617387,
+	"cached": 0,
+	"serverlogid": "0587756642"
+}
+```
+
+<!-- ##  swan.ai.faceVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -530,7 +621,7 @@ swan.ai.facePersonIdmatch({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data | Array| 是 |-| 图片信息 | 
+|data | Array| 是 |-| 图片信息, 可以上传同一个用户的1张，3张或者8张图片来进行活体判断，后端会选择每组照片中的最高分数作为整体分数 |
 |success | Function | 否 |-| 接口调用成功后的回调函数 | 
 |fail | Function | 否 |-| 接口调用失败的回调函数 | 
 |complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -678,11 +769,11 @@ swan.ai.facePersonIdmatch({
 
 **示例代码**
 
-<a href="swanide://fragment/94cfbc0a75ee4b38ff4e7f9cc7b502511559042312465" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/59f2a60d4c30204b22e0bd0ce33c684a1566464969177" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-    count: 2,
+    count: 3,
     success(res) {
         swan.ai.faceVerify({
             data: [
@@ -693,6 +784,11 @@ swan.chooseImage({
                 },
                 {
                     "image": res.tempFilePaths[1],
+                    "image_type": "BASE64",
+                    "face_field": "age,beauty,expression"
+                },
+                {
+                    "image": res.tempFilePaths[2],
                     "image_type": "BASE64",
                     "face_field": "age,beauty,expression"
                 }
@@ -775,67 +871,12 @@ swan.chooseImage({
     }
 ]
 }
-```
-
-
-##  swan.ai.faceLivenessSessioncode
-
->基础库 3.20.11 开始支持，低版本需做兼容处理。
-
-**解释**：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。
-
-**方法参数**：Object object
-
-**`object`参数说明**：
-
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-|appid | string| 是 | -|百度云创建应用时的唯一标识 ID | 
-|success | Function | 否 |-| 接口调用成功后的回调函数 | 
-|fail | Function | 否 |-| 接口调用失败的回调函数 | 
-|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**返回值参数说明** 
-
-|参数名 | 参数类型 |说明  | 
-|---|---|---|---|
-|log_id| Number|	唯一的log id，用于问题定位。|
-|error_no| Number|	错误码，错误码为0时，活体检测成功。|
-|error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
-|session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
-|code | string |语音验证码，数字形式，3~6 位数字。| 
+``` -->
 
 
 
-**示例代码**
 
-<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-```js
-swan.ai.faceLivenessSessioncode({
-  appid: '',
-  success(res) {
-    console.log('res');
-  }
-});
-```
-
-**返回示例**
-```js
-{
-	"err_no": 0,
-	"err_msg": "SUCCESS",
-	"result": {
-		"session_id": "S59faeeebb9111890355690",
-		"code": "9940"
-	},
-	"timestamp": 1509617387,
-	"cached": 0,
-	"serverlogid": "0587756642"
-}
-```
-
-## swan.ai.faceLivenessVerify
+<!-- ## swan.ai.faceLivenessVerify
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
@@ -923,4 +964,4 @@ swan.ai.faceLivenessVerify({
  	"cached": 0,
  	"serverlogid": "2248375729"
 }
-```
+``` -->

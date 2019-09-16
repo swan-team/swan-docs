@@ -8,9 +8,13 @@ sidebar: device_scan
 
 ## swan.scanCode
 
-> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：调起客户端扫码界面，扫码成功后返回对应的结果。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scanCode.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
