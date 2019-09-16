@@ -3460,25 +3460,25 @@
                 link: /develop/cloud/cloud_start
             -
                 text: 云开发能力介绍
-                name: cloud_basement
-                link: /develop/cloud/cloud_basement
+                name: cloud_essentials
+                link: /develop/cloud/cloud_essentials/index
                 sidebar:
                   -
-                    text: 数据库
-                    name: cloud_database_info
-                    link: /develop/cloud/cloud_database_info
+                    text: 云数据库
+                    name: cloud_essentials_database
+                    link: /develop/cloud/cloud_essentials/database
                   -
-                    text: 存储
-                    name: cloud_file_info
-                    link: /develop/cloud/cloud_file_info
+                    text: 云存储
+                    name: cloud_essentials_storage
+                    link: /develop/cloud/cloud_essentials/storage
                   -
                     text: 云函数
-                    name: cloud_function_info
-                    link: /develop/cloud/cloud_function_info
-            -
-                text: 云开发配额说明
-                name: cloud_
-                link: /develop/cloud/cloud_
+                    name: cloud_essentials_function
+                    link: /develop/cloud/cloud_essentials/function
+                  -
+                    text: 用户集成
+                    name: cloud_essentials_user
+                    link: /develop/cloud/cloud_essentials/user
             -
               text: 云开发控制台
               name: console
@@ -3500,7 +3500,47 @@
                     text: 云函数
                     name: console_functions
                     link: /develop/cloud/console_functions
-            
+        -
+          text: 开发指南
+          name: smartapp_cloud_guide
+          sidebar:
+              -
+                text: 环境
+                name: cloud_workspace
+                link: /develop/cloud/guide/workspace
+              -
+                text: 云函数开发指南
+                name: cloud_function_guide
+                link: /develop/cloud/guide/function_guide
+                sidebar:
+                  -
+                    text: 编辑器中的云函数操作
+                    name: cloud_function_guide_editor
+                    link: /develop/cloud/guide/editor
+                  -
+                    text: 示例：在小程序中调用云函数
+                    name: cloud_function_guide_call_function
+                    link: /develop/cloud/guide/call_function
+                  -
+                    text: 示例：在云函数中调用其他云函数
+                    name: cloud_function_guide_function_call_function
+                    link: /develop/cloud/guide/function_call_function
+              -
+                text: 云数据库开发指南
+                name: cloud_database_guide
+                link: /develop/cloud/guide/database_guide
+              -
+                text: 云存储开发指南
+                name: cloud_storage_guide
+                link: /develop/cloud/guide/storage_guide
+              -
+                text: 用户集成相关问题
+                name: cloud_user_auth_guide
+                link: /develop/cloud/guide/user_auth_guide
+              -
+                text: 云开发配额
+                name: cloud_quota
+                link: /develop/cloud/guide/quota
         -
             text: 小程序端 API 文档
             name: smartapp_api_document
@@ -3697,9 +3737,133 @@
           name: smartapp_api_document
           sidebar:
             -
-                text: 初始化
-                name: cloud_init
-                link: /develop/cloud/cloud_init
+              text: 初始化
+              name: cloud_server_sdk_init
+              link: /develop/cloud/server_sdk/init
+            -
+              text: 获取当前上下文
+              name: cloud_server_sdk_getSwanContext
+              link: /develop/cloud/server_sdk/getSwanContext
+            -
+              text: 云数据库
+              name: cloud_server_sdk_database
+              link: /develop/cloud/server_sdk/database
+              sidebar: 
+                -
+                  text: cloud.database
+                  name: cloud_server_sdk_database_cloud.database
+                  link: /develop/cloud/server_sdk/database/#cloud-database
+                -
+                  text: Collection.add
+                  name: cloud_server_sdk_database_Collection.add
+                  link: /develop/cloud/server_sdk/database/#Collection-add
+                -
+                  text: Collection.count
+                  name: cloud_server_sdk_database_Collection.count
+                  link: /develop/cloud/server_sdk/database/#Collection-count
+                -
+                  text: Collection.doc
+                  name: cloud_server_sdk_database_Collection.doc
+                  link: /develop/cloud/server_sdk/database/#Collection-doc
+                -
+                  text: Collection.field
+                  name: cloud_server_sdk_database_Collection.field
+                  link: /develop/cloud/server_sdk/database/#Collection-field
+                -
+                  text: Collection.get
+                  name: cloud_server_sdk_database_Collection.get
+                  link: /develop/cloud/server_sdk/database/#Collection-get
+                -
+                  text: Collection.limit
+                  name: cloud_server_sdk_database_Collection.limit
+                  link: /develop/cloud/server_sdk/database/#Collection-limit
+                -
+                  text: Collection.orderBy
+                  name: cloud_server_sdk_database_Collection.orderBy
+                  link: /develop/cloud/server_sdk/database/#Collection-orderBy
+                -
+                  text: Collection.remove
+                  name: cloud_server_sdk_database_Collection.remove
+                  link: /develop/cloud/server_sdk/database/#Collection-remove
+                -
+                  text: Collection.skip
+                  name: cloud_server_sdk_database_Collection.skip
+                  link: /develop/cloud/server_sdk/database/#Collection-skip
+                -
+                  text: Collection.update
+                  name: cloud_server_sdk_database_Collection.update
+                  link: /develop/cloud/server_sdk/database/#Collection-update
+                -
+                  text: Collection.where
+                  name: cloud_server_sdk_database_Collection.where
+                  link: /develop/cloud/server_sdk/database/#Collection-where
+                -
+                  text: Database.collection
+                  name: cloud_server_sdk_database_Database.collection
+                  link: /develop/cloud/server_sdk/database/#Database-collection
+                -
+                  text: Database.command
+                  name: cloud_server_sdk_database_Database.command
+                  link: /develop/cloud/server_sdk/database/#Database-command
+                -
+                  text: Database.createCollection
+                  name: cloud_server_sdk_database_Database.createCollection
+                  link: /develop/cloud/server_sdk/database/#Database-createCollection
+                -
+                  text: Database.Geo
+                  name: cloud_server_sdk_database_Database.Geo
+                  link: /develop/cloud/server_sdk/database/#Database-Geo
+                -
+                  text: Database.serverDate
+                  name: cloud_server_sdk_database_Database.serverDate
+                  link: /develop/cloud/server_sdk/database/#Database-serverDate
+                -
+                  text: Document.get
+                  name: cloud_server_sdk_database_Document.get
+                  link: /develop/cloud/server_sdk/database/#Document-get
+                -
+                  text: Document.remove
+                  name: cloud_server_sdk_database_Document.remove
+                  link: /develop/cloud/server_sdk/database/#Document-remove
+                -
+                  text: Document.set
+                  name: cloud_server_sdk_database_Document.set
+                  link: /develop/cloud/server_sdk/database/#Document-set
+                -
+                  text: Document.update
+                  name: cloud_server_sdk_database_Document.update
+                  link: /develop/cloud/server_sdk/database/#Document-update
+            -
+              text: 云存储
+              name: cloud_server_sdk_storage
+              link: /develop/cloud/server_sdk/storage
+              sidebar: 
+                -
+                  text: cloud.uploadFile
+                  name: cloud_server_sdk_storage_cloud.uploadFile
+                  link: /develop/cloud/server_sdk/storage/#cloud-uploadFile
+                -
+                  text: cloud.downloadFile
+                  name: cloud_server_sdk_storage_cloud.downloadFile
+                  link: /develop/cloud/server_sdk/storage/#cloud-downloadFile
+                -
+                  text: cloud.getTempFileURL
+                  name: cloud_server_sdk_storage_loud.getTempFileURL
+                  link: /develop/cloud/server_sdk/storage/#loud-getTempFileURL
+                -
+                  text: cloud.deleteFile
+                  name: cloud_server_sdk_storage_cloud.deleteFile
+                  link: /develop/cloud/server_sdk/storage/#cloud-deleteFile
+            -
+              text: 云函数
+              name: cloud_server_sdk_function
+              link: /develop/cloud/server_sdk/function
+              sidebar: 
+                -
+                  text: cloud.callFunction
+                  name: cloud_server_sdk_function_callFunction
+                  link: /develop/cloud/server_sdk/function/#cloud-callFunction
+
     # -
     #       text: 插件
     #       name: plugins
