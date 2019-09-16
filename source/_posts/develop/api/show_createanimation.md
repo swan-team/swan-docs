@@ -208,7 +208,7 @@ Page({
 
 **方法参数**：Number sz 
 
-**参数说明**： 在Z轴缩放sy倍数
+**参数说明**： 在Z轴缩放sz倍数
 
 ##  Animation.scale3d
  
@@ -241,7 +241,7 @@ Page({
 
 **方法参数**：Number  ty  
 
-**参数说明**：在 Y 轴偏移 tx ，单位 px。 
+**参数说明**：在 Y 轴偏移 ty ，单位 px。 
 
 ##  Animation.translateZ
  
@@ -249,7 +249,7 @@ Page({
 
 **方法参数**： Number  tz
 
-**参数说明**： 在 Z 轴偏移 tx ，单位 px。
+**参数说明**： 在 Z 轴偏移 tz ，单位 px。
 
 ##  Animation.translate3d
 

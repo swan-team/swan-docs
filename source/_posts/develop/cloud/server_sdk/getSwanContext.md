@@ -14,8 +14,8 @@ SwanContext：
 
 |名称|类型|说明|
 |---|---|---|
-|USERID|String|小程序用户ID|
-|APPID|String|小程序APPID|
+|USERID|String|智能小程序用户ID|
+|APPID|String|智能小程序APPID|
 |ENV|String|云开发环境|
 |SOURCE|String|调用来源|
 
