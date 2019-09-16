@@ -3303,6 +3303,10 @@
                     text: 自动补全
                     name: editor_自动补全
                   -
+                    link: /develop/devtools/editor/#Git-状态展示
+                    text: Git 状态展示
+                    name: editor_Git-状态展示                
+                  -
                     link: /develop/devtools/editor/#项目配置文件
                     text: 项目配置文件
                     name: editor_项目配置文件
