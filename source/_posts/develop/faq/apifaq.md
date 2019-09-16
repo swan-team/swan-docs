@@ -5,6 +5,24 @@ nav: faq
 sidebar: apifaq
 ---
 
+#### Q：如何查询指定地点的经纬度？
+
+A：当前我们提供方式可以查询到您指定地点的经纬度
+
+* 推荐使用[swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)可获取到选择当前位置的经纬度。
+
+    在开发者工具中调用 swan.chooseLocation 用日志输出看到经纬度(坐标系GCJ02，可以直接用于小程序)，具体方法可参考官方示例[在开发者工具中预览效果](swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300)。
+
+    ![](../../../img/faq/apifaq0916.png)
+
+* 使用地图拾取器
+
+    1. [百度地图拾取器](http://api.map.baidu.com/lbsapi/getpoint/index.html)：坐标系BD09，不能直接用于小程序，需要开发者转换为GCJ02。后期小程序优化后可以支持该坐标系。      
+
+    2. [腾讯地图拾取器](https://lbs.qq.com/tool/getpoint/)：坐标系GCJ02，可直接使用。
+
+    3. [高德地图拾取器](https://lbs.amap.com/console/show/picker)：坐标系GCJ02，可直接使用。
+
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？
 
@@ -169,8 +187,5 @@ function toWebPage() {
 </html>
 
 ```
-#### Q：有没有相应的API,可以根据具体地址获取经纬度？
 
-A：两种方式可获取到:
-1. 通过api：[swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)可获取到选择当前位置的经纬度。
-2. 进入百度搜索“拾取坐标”，打开页面后输入具体地址，然后点击百度一下，右方即可出现对应的坐标请查看[详情](http://api.map.baidu.com/lbsapi/getpoint/index.html)。
+
