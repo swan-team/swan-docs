@@ -191,6 +191,10 @@
                     text: 关联H5站点
                     name: rank_关联H5站点
                   -
+                    link: /introduction/rank/#搜索结果出图配置
+                    text: 搜索结果出图配置
+                    name: rank_搜索结果出图配置             
+                  -
                     link: /introduction/rank/#数据提交如何选择
                     text: 数据提交如何选择
                     name: rank_数据提交如何选择
