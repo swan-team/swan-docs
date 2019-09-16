@@ -78,9 +78,20 @@ function searchFunc(path, searchId, contentId) {
                     e.preventDefault();
                 }
             })
-           
+
+            var timer;
             $input.addEventListener('input', function () {
                 var $this = this;
+                // 1s内再次输入，则清除打点
+                clearTimeout(timer);
+
+                // 搜索打点，当input停止输入超过1s且input中存在value时上报一次
+                timer = setTimeout(function() {
+                    // 打点上报
+                    if ($this.value.trim().length) {
+                        _hmt.push(['_trackEvent', 'search', '搜索查询']);
+                    }
+                }, 1000);
                 setTimeout(function () {
                     if (!flag) {
                         return;

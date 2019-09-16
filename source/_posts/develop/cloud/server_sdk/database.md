@@ -205,6 +205,7 @@ exports.main = async (event, context) => {
   }
 }
 ```
+
 ## Collection.limit
 设置查询条件中的文档匹配数量限制，可以配合skip，实现分页功能
 
@@ -586,6 +587,43 @@ exports.main = async (event, context) => {
         visits: 0,
         createDate: new Date({
             offset: 1000
+        }),
+    })
+  } catch(err) {
+    console.log(err)
+  }
+}
+```
+
+## Database.RegExp
+
+创建云数据库的相关指令所需的正则表达式对象
+
+**参数**
+
+|名称|类型|必须|说明|
+|---|---|---|---|
+|data|Object|是||
+|data.regexp|String|是|正则表达式|
+|data.options|String|否|正则表达式flags: i, m, s|
+
+
+**返回值**
+
+RegExp
+
+**使用示例**
+
+``` js
+const cloud = require('swan-server-sdk')
+exports.main = async (event, context) => {
+  cloud.init(context)
+  const db = cloud.database()
+  try {
+      return await db.collection('articles').where({
+        title: new db.RegExp({
+            regexp: '^baidu',
+            options: 'i',
         }),
     })
   } catch(err) {
