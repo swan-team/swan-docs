@@ -42,4 +42,3 @@ sidebar: cloud_function_guide_editor
 ## 上传并部署
 右键点击上传并部署，可以将选中的云函数目录上传并部署到线上环境中。
 
-
