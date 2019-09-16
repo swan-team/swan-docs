@@ -108,10 +108,10 @@ Page({
         }]
     },
     onReady() {
-        this.MapContext = swan.createMapContext('myMap');
+        this.mapContext = swan.createMapContext('myMap');
     },
     getCenterLocation: function () {
-        this.MapContext.getCenterLocation({
+        this.mapContext.getCenterLocation({
             success: function (res) {
                 console.log("经度", res.longitude);
                 console.log("纬度", res.latitude);
@@ -119,10 +119,10 @@ Page({
         })
     },
     moveToLocation: function () {
-        this.MapContext.moveToLocation();
+        this.mapContext.moveToLocation();
     },
     translateMarker: function () {
-        this.MapContext.translateMarker({
+        this.mapContext.translateMarker({
             markerId: 0,
             rotate: 90,
             autoRotate: true,
@@ -137,7 +137,7 @@ Page({
         })
     },
     includePoints: function () {
-        this.MapContext.includePoints({
+        this.mapContext.includePoints({
             padding: [10],
             points: [{
                 latitude: 23,
@@ -149,7 +149,7 @@ Page({
         })
     },
     getRegion: function () {
-        this.MapContext.getRegion({
+        this.mapContext.getRegion({
             success: function (res) {
                 console.log("西南角的经纬度", res.southwest);
                 console.log("东北角的经纬度", res.northeast);

@@ -9,10 +9,10 @@ sidebar: ad
 
 **解释**：广告组件，按照<a href="https://smartprogram.baidu.com/docs/introduction/adopen/">流量主开通指引</a>中的操作获取广告组件代码。
 
-<!-- 
+
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ad.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 

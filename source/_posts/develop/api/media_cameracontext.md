@@ -11,6 +11,11 @@ sidebar: media_cameracontext
 
 **解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
 **返回值**：cameraContext
@@ -60,8 +65,8 @@ Page({
         }
     },
     takePhoto() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.takePhoto({
+        const ctx = swan.createCameraContext();
+        ctx.takePhoto({
             quality: 'high',
             success: res => {
                 this.setData({
@@ -71,8 +76,8 @@ Page({
         });
     },
     startRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.startRecord({
+        const ctx = swan.createCameraContext();
+        ctx.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -81,8 +86,8 @@ Page({
         });
     },
     stopRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.stopRecord({
+        const ctx = swan.createCameraContext();
+        ctx.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',

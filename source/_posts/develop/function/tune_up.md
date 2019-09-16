@@ -474,7 +474,7 @@ data字段为json格式，参数如下：
 |名称|类型|是否必须|示例值|描述|
 |---|---|---|---|---|
 |auditStatus|Integer|是|0|退款审核状态|
-|calculateRes|Object|是|{"refundPayMoney":100}|全额退和部分退均要填写订单实际支付金额，单位：分。不论审核成功还是失败都需要填写本字段。|
+|calculateRes|Object|是|{"refundPayMoney":100}|全额退和部分退均要填写订单实际退款金额，单位：分。不论审核成功还是失败都需要填写本字段。|
 
 >refundPayMoney的值是以分为单位的整数。 
 <br />

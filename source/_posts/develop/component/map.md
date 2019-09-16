@@ -48,7 +48,7 @@ sidebar: map
 
 |属性名 |类型  |默认值  | 必填 |说明| 
 |---- | ---- | ---- |---- | --- | 
-| id |  Number| | 否 | 标记点id ，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
+| markerId |  Number| | 否 | 标记点id ，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
 | latitude |   Number || 是 | 纬度，浮点数，范围 -90 ~ 90 |
 | longitude |  Number || 是 | 经度，浮点数，范围 -180 ~ 180 |
 | title  |   String | |否    | 标注点名 |
@@ -132,7 +132,7 @@ sidebar: map
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
-| id | 控件id | Number | 否 | 在控件点击事件回调会返回此id |
+| controlId | 控件id | Number | 否 | 在控件点击事件回调会返回此id |
 | position | 控件在地图的位置 | Object | 是 | 控件相对地图位置 |
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | clickable | 是否可点击 | Boolean | 否 | 默认不可点击 |

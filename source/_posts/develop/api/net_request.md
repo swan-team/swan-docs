@@ -9,6 +9,10 @@ sidebar: net_request
 
 **解释**：发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/request.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -45,7 +49,7 @@ sidebar: net_request
 
 <a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 
 **在 js 文件中**
@@ -74,18 +78,16 @@ swan.request({
 
 **返回值**：
 
-返回一个 RequestTask 对象，通过 RequestTask，可中断请求任务。
+返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
 
-**RequestTask 对象的方法列表**：
+##  RequestTask
 
-|方法 | 参数 | 说明  |
-|---- | ---- | ---- |
-|abort  |      | 中断请求任务 |
+**解释**：网络请求任务对象
 
-**示例 2**
+**示例**
 
 ```js
-const RequestTask = swan.request({
+const requestTask = swan.request({
     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
     header: {
         'content-type': 'application/json'
@@ -125,3 +127,9 @@ RequestTask.abort();
 |--|--|
 |202|解析失败，请检查调起协议是否合法|
 |errorCode为4|URL无效| -->
+
+## RequestTask.abort
+
+**解释**：中断请求任务。
+
+**方法参数**：无

@@ -11,6 +11,11 @@ sidebar: file_save
 
 **解释**：保存文件到本地
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -257,7 +262,7 @@ Page({
 |createTime  |Number | 文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数。|
 |size  |Number | 文件大小，单位 B|
 
-**示例**：
+
 
 **示例**：
 

@@ -10,6 +10,10 @@ sidebar: media_recorder
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getRecorderManager.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回值**：recorderManager
@@ -24,17 +28,17 @@ sidebar: media_recorder
 **在 js 文件中**
 
 ```javascript
-const RecorderManager = swan.getRecorderManager()
+const recorderManager = swan.getRecorderManager()
 
-RecorderManager.onStart(function() {
+recorderManager.onStart(function() {
     // 开始录音事件
     console.log('recorder start')
 });
-RecorderManager.onPause(function() {
+recorderManager.onPause(function() {
     // 暂停录音事件
     console.log('recorder pause')
 });
-RecorderManager.onStop(function(res) {
+recorderManager.onStop(function(res) {
     // 停止录音事件
     console.log('recorder stop', res)
     const { tempFilePath } = res
@@ -48,7 +52,7 @@ const options = {
     format: 'aac'
 };
 
-RecorderManager.start(options);
+recorderManager.start(options);
 
 ```
 
@@ -150,9 +154,9 @@ RecorderManager.start(options);
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
-|success |Function  |  否 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否 |   | 接口调用成功的回调|
+|fail   | Function |   否  |  | 接口调用失败的回调函数|
+|complete  |  Function |   否 |   | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data.success回调函数**
 **方法参数**：Object res

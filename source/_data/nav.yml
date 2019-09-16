@@ -291,6 +291,18 @@
                 text: 扫码打开智能小程序
                 name: scancode
     -
+      link: /introduction/getphonenumber
+      text: 获取用户手机号权限申请
+      name: book
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /introduction/getphonenumber
+                text: 获取用户手机号权限申请
+                name: getphonenumber
+
+    -
       link: /introduction/productlaboratory
       text: 产品实验室
       name: book
@@ -816,9 +828,9 @@
         -
             sidebar:
               -
-                link: /develop/component/componet
+                link: /develop/component/component
                 text: 组件列表
-                name: componet
+                name: component
               -
                 link: /develop/component/native
                 text: 原生组件说明
@@ -1141,6 +1153,15 @@
                   link: /develop/api/net_request/#swan-request
                   text: swan.request
                   name: net_request_swan-request
+                -
+                  link: /develop/api/net_request/#RequestTask
+                  text: RequestTask
+                  name: net_request_RequestTask      
+                  sidebar:
+                    -
+                      link: /develop/api/net_request/#RequestTask-abort
+                      text: RequestTask.abort
+                      name: net_request_RequestTask-abort
             -
               link: /develop/api/net_uploadfile
               text: 上传、下载
@@ -1151,9 +1172,35 @@
                   text: swan.uploadFile
                   name: net_uploadfile_swan-uploadFile
                 -
+                  link: /develop/api/net_uploadfile/#UploadTask
+                  text: UploadTask
+                  name: net_uploadfile_UploadTask   
+                  sidebar:
+                    -
+                      link: /develop/api/net_uploadfile/#UploadTask-onProgressUpdate
+                      text: UploadTask.onProgressUpdate
+                      name: net_uploadfile_UploadTask-onProgressUpdate  
+                    -
+                      link: /develop/api/net_uploadfile/#UploadTask-abort
+                      text: UploadTask.abort
+                      name: net_uploadfile_UploadTask-abort                   
+                -
                   link: /develop/api/net_uploadfile/#swan-downloadFile
                   text: swan.downloadFile
                   name: net_uploadfile_swan-downloadFile
+                -
+                  link: /develop/api/net_uploadfile/#DownloadTask
+                  text: DownloadTask
+                  name: net_uploadfile_DownloadTask
+                  sidebar:
+                    -
+                      link: /develop/api/net_uploadfile/#DownloadTask-onProgressUpdate  
+                      text: DownloadTask.onProgressUpdate
+                      name: net_uploadfile_DownloadTask-onProgressUpdate  
+                    -
+                      link: /develop/api/net_uploadfile/#DownloadTask-abort    
+                      text: DownloadTask.abort
+                      name: net_uploadfile_DownloadTask-abort    
 
             -
               link: /develop/api/net_websocket
@@ -1321,6 +1368,10 @@
                     link: /develop/api/ai_voice/#swan-ai-getVoiceRecognizer
                     text: swan.ai.getVoiceRecognizer
                     name: ai_voice_swan-ai-getVoiceRecognizer
+                  -
+                    link: /develop/api/ai_voice/#VoiceRecognizer
+                    text: VoiceRecognizer
+                    name: ai_voice_swan-VoiceRecognizer      
               -
                 link: /develop/api/ai_face
                 text: 人脸识别
@@ -1531,11 +1582,111 @@
                   link: /develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext
                   text: swan.createInnerAudioContext
                   name: media_createinneraudiocontext_swan-createInnerAudioContext
+                -
+                  link: /develop/api/media_createinneraudiocontext/#InnerAudioContext
+                  text: InnerAudioContext
+                  name: media_createinneraudiocontext_InnerAudioContext
                   sidebar:
                     -
-                      link: /develop/api/media_createinneraudiocontext/#innerAudioContext
-                      text: innerAudioContext
-                      name: media_createinneraudiocontext_innerAudioContext
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-play
+                      text: InnerAudioContext.play
+                      name: media_createinneraudiocontext_InnerAudioContext-play
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-pause
+                      text: InnerAudioContext.pause
+                      name: media_createinneraudiocontext_InnerAudioContext-pause                   
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-stop
+                      text: InnerAudioContext.stop
+                      name: media_createinneraudiocontext_InnerAudioContext-stop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-seek	
+                      text: InnerAudioContext.seek	
+                      name: media_createinneraudiocontext_InnerAudioContext-seek	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-destroy	
+                      text: InnerAudioContext.destroy	
+                      name: media_createinneraudiocontext_InnerAudioContext-destroy	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onCanplay	
+                      text: InnerAudioContext.onCanplay	
+                      name: media_createinneraudiocontext_InnerAudioContext-onCanplay	
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onPlay
+                      text: InnerAudioContext.onPlay
+                      name: media_createinneraudiocontext_InnerAudioContext-onPlay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onPause
+                      text: InnerAudioContext.onPause
+                      name: media_createinneraudiocontext_InnerAudioContext-onPause
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onStop
+                      text: InnerAudioContext.onStop
+                      name: media_createinneraudiocontext_InnerAudioContext-onStop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onEnded	
+                      text: InnerAudioContext.onEnded
+                      name: media_createinneraudiocontext_InnerAudioContext-onEnded
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onTimeUpdate
+                      text: InnerAudioContext.onTimeUpdate
+                      name: media_createinneraudiocontext_InnerAudioContext-onTimeUpdate
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onError
+                      text: InnerAudioContext.onError
+                      name: media_createinneraudiocontext_InnerAudioContext-onError
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onWaiting
+                      text: InnerAudioContext.onWaiting
+                      name: media_createinneraudiocontext_InnerAudioContext-onSonWaitingtop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onSeeking
+                      text: InnerAudioContext.onSeeking
+                      name: media_createinneraudiocontext_InnerAudioContext-onSeeking
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-onSeeked
+                      text: InnerAudioContext.onSeeked
+                      name: media_createinneraudiocontext_InnerAudioContext-onSeeked
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offCanplay
+                      text: InnerAudioContext.offCanplay
+                      name: media_createinneraudiocontext_InnerAudioContext-offCanplay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offPlay
+                      text: InnerAudioContext.offPlay
+                      name: media_createinneraudiocontext_InnerAudioContext-offPlay
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offPause
+                      text: InnerAudioContext.offPause
+                      name: media_createinneraudiocontext_InnerAudioContext-offPause
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offStop
+                      text: InnerAudioContext.offStop
+                      name: media_createinneraudiocontext_InnerAudioContext-offStop
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offEnded
+                      text: InnerAudioContext.offEnded
+                      name: media_createinneraudiocontext_InnerAudioContext-offEnded
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offTimeUpdate
+                      text: InnerAudioContext.offTimeUpdate
+                      name: media_createinneraudiocontext_InnerAudioContext-offTimeUpdate
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offError
+                      text: InnerAudioContext.offError
+                      name: media_createinneraudiocontext_InnerAudioContext-offError
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offWaiting
+                      text: InnerAudioContext.offWaiting
+                      name: media_createinneraudiocontext_InnerAudioContext-offWaiting
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offSeeking
+                      text: InnerAudioContext.offSeeking
+                      name: media_createinneraudiocontext_InnerAudioContext-offSeeking
+                    -
+                      link: /develop/api/media_createinneraudiocontext/#InnerAudioContext-offSeeked
+                      text: InnerAudioContext.offSeeked
+                      name: media_createinneraudiocontext_InnerAudioContext-offSeeked
                 -
                   link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
                   text: swan.setInnerAudioOption
@@ -3283,6 +3434,10 @@
                     text: 正式版更新日志
                     name: uplog_tool_正式版更新日志
                   -
+                    link: /develop/devtools/uplog_tool/#rc版更新日志
+                    text: rc版更新日志
+                    name: uplog_tool_rc版更新日志                    
+                  -
                     link: /develop/devtools/uplog_tool/#Beta版更新日志
                     text: Beta版更新日志
                     name: uplog_tool_Beta版更新日志
@@ -3290,6 +3445,270 @@
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
+
+    - 
+      text: 云开发
+      name: cloud
+      sidebar: 
+        -
+          text: 介绍
+          name: smartapp_cloud_document
+          sidebar:
+            -
+                text: 云开发介绍
+                name: cloud_info
+                link: /develop/cloud/cloud_info
+            -
+                text: 快速上手
+                name: cloud_start
+                link: /develop/cloud/cloud_start
+            # -
+            #     text: 云开发能力介绍
+            #     name: cloud_basement
+            #     link: /develop/cloud/cloud_basement
+            #     sidebar:
+            #       -
+            #         text: 数据库
+            #         name: cloud_database_info
+            #         link: /develop/cloud/cloud_database_info
+            #       -
+            #         text: 存储
+            #         name: cloud_file_info
+            #         link: /develop/cloud/cloud_file_info
+            #       -
+            #         text: 云函数
+            #         name: cloud_function_info
+            #         link: /develop/cloud/cloud_function_info
+            # -
+            #     text: 云开发配额说明
+            #     name: cloud_
+            #     link: /develop/cloud/cloud_
+            -
+              text: 云开发控制台
+              name: console
+              link: /develop/cloud/console
+              sidebar:
+                -
+                    text: 概览
+                    name: console_概览
+                    link: /develop/cloud/console/#概览
+                -
+                    text: 云数据库
+                    name: console_云数据库
+                    link: /develop/cloud/console/#云数据库
+                -
+                    text: 云存储
+                    name: console_云存储
+                    link: /develop/cloud/console/#云存储
+                -
+                    text: 云函数
+                    name: console_云函数
+                    link: /develop/cloud/console/#云函数
+            
+        -
+            text: 小程序端 API 文档
+            name: /develop/cloud/cloud_init
+            sidebar:
+              -
+                  text: 初始化
+                  name: cloud_init 
+                  link: /develop/cloud/cloud_init 
+                  sidebar:
+                    - 
+                      text: swan.cloud.init
+                      name: cloud_init_swan-cloud-init
+                      link: /develop/cloud/cloud_init/#swan-cloud-init
+              -
+                  text: 云函数
+                  name: cloud_functions
+                  link: /develop/cloud/cloud_functions
+                  sidebar: 
+                    -
+                        text: swan.cloud.callFunction
+                        name: cloud_callFunction
+                        link: /develop/cloud/cloud_functions/#swan-cloud-callFunction
+              -
+                  text: 存储
+                  name: cloud_storage
+                  link: /develop/cloud/cloud_storage
+                  sidebar:  
+                    -
+                        text: swan.cloud.uploadFile
+                        name: cloud_uploadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-uploadFile
+                    -
+                        text: swan.cloud.downloadFile
+                        name: cloud_downloadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-downloadFile
+                    -
+                        text: swan.cloud.deleteFile
+                        name: cloud_deleteFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-deleteFile
+              -
+                  text: 数据库
+                  name: cloud_database
+                  link: /develop/cloud/cloud_database
+                  sidebar:
+                    # database
+                    -
+                        text: database
+                        name: cloud_database
+                        link: /develop/cloud/cloud_database/swan-cloud-database
+                    
+                    # collection
+                    -
+                        text: collection
+                        name: cloud_database_collection
+                        link: /develop/cloud/cloud_database/collection
+                        sidebar: 
+                          -
+                              text: collection.doc
+                              name: cloud_database_collection_doc
+                              link: /develop/cloud/cloud_database/collection/#collection-doc
+                          -
+                              text: collection.get
+                              name: cloud_database_collection_get
+                              link: /develop/cloud/cloud_database/collection/#collection-get
+                          -
+                              text: collection.add
+                              name: cloud_database_collection_add
+                              link: /develop/cloud/cloud_database/collection/#collection-add
+                          -
+                              text: collection.count
+                              name: cloud_database_collection_count
+                              link: /develop/cloud/cloud_database/collection/#collection-count
+                          -
+                              text: collection.where
+                              name: cloud_database_collection_where
+                              link: /develop/cloud/cloud_database/collection/#collection-where
+                          -
+                              text: collection.orderBy
+                              name: cloud_database_collection_orderBy
+                              link: /develop/cloud/cloud_database/collection/#collection-orderBy
+                          -
+                              text: collection.limit
+                              name: cloud_database_collection_limit
+                              link: /develop/cloud/cloud_database/collection/#collection-limit
+                          -
+                              text: collection.skip
+                              name: cloud_database_collection_skip
+                              link: /develop/cloud/cloud_database/collection/#collection-skip
+                          -
+                              text: collection.field
+                              name: cloud_database_collection_field
+                              link: /develop/cloud/cloud_database/collection/#collection-field
+                    
+                    # doc
+                    -
+                        text: doc
+                        name: cloud_database_collection_doc
+                        link: /develop/cloud/cloud_database/doc
+                        sidebar:
+                          -
+                              text: doc.get
+                              name: cloud_database_collection_doc_get
+                              link: /develop/cloud/cloud_database/doc/#doc-get
+                          -
+                              text: doc.update
+                              name: cloud_database_collection_doc_update
+                              link: /develop/cloud/cloud_database/doc/#doc-update
+                          -
+                              text: doc.set
+                              name: cloud_database_collection_doc_set
+                              link: /develop/cloud/cloud_database/doc/#doc-set
+                          -
+                              text: doc.remove
+                              name: cloud_database_collection_doc_remove
+                              link: /develop/cloud/cloud_database/doc/#doc-remove
+                    
+
+
+                    # db.command
+                    -
+                        text: command
+                        name: cloud_database_command
+                        link: /develop/cloud/cloud_database/command/#command
+                        sidebar:
+                          -
+                              text: command.eq
+                              name: cloud_database_command_eq
+                              link: /develop/cloud/cloud_database/command/#command-eq
+                          -
+                              text: command.neq
+                              name: cloud_database_command_neq
+                              link: /develop/cloud/cloud_database/command/#command-neq
+                          -
+                              text: command.lt
+                              name: cloud_database_command_lt
+                              link: /develop/cloud/cloud_database/command/#command-lt
+                          -
+                              text: command.lte
+                              name: cloud_database_command_lte
+                              link: /develop/cloud/cloud_database/command/#command-lte
+                          -
+                              text: command.gt
+                              name: cloud_database_command_gt
+                              link: /develop/cloud/cloud_database/command/#command-gt
+                          -
+                              text: command.gte
+                              name: cloud_database_command_gte
+                              link: /develop/cloud/cloud_database/command/#command-gte
+                          -
+                              text: command.in
+                              name: cloud_database_command_in
+                              link: /develop/cloud/cloud_database/command/#command-in
+                          -
+                              text: command.nin
+                              name: cloud_database_command_nin
+                              link: /develop/cloud/cloud_database/command/#command-nin
+                          -
+                              text: command.and
+                              name: cloud_database_command_and
+                              link: /develop/cloud/cloud_database/command/#command-and
+                          -
+                              text: command.or
+                              name: cloud_database_command_or
+                              link: /develop/cloud/cloud_database/command/#command-or
+                          -
+                              text: command.set
+                              name: cloud_database_command_set
+                              link: /develop/cloud/cloud_database/command/#command-set
+                          -
+                              text: command.remove
+                              name: cloud_database_command_remove
+                              link: /develop/cloud/cloud_database/command/#command-remove
+                          -
+                              text: command.inc
+                              name: cloud_database_command_inc
+                              link: /develop/cloud/cloud_database/command/#command-inc
+                          -
+                              text: command.mul
+                              name: cloud_database_command_mul
+                              link: /develop/cloud/cloud_database/command/#command-mul
+                          -
+                              text: command.push
+                              name: cloud_database_command_push
+                              link: /develop/cloud/cloud_database/command/#command-push
+                          -
+                              text: command.pop
+                              name: cloud_database_command_pop
+                              link: /develop/cloud/cloud_database/command/#command-pop
+                          -
+                              text: command.shift
+                              name: cloud_database_command_shift
+                              link: /develop/cloud/cloud_database/command/#command-shift
+                          -
+                              text: command.unshift
+                              name: cloud_database_command_unshift
+                              link: /develop/cloud/cloud_database/command/#command-unshift
+        -
+          text: 服务端 API 文档
+          name: smartapp_api_document
+          sidebar:
+            -
+                text: 初始化
+                name: cloud_init
+                link: /develop/cloud/cloud_init
     # -
     #       text: 插件
     #       name: plugins
