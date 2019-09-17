@@ -4219,62 +4219,62 @@
             name: concept
             sidebar:
               -
-                link: /data/concept/#应用概况
+                link: /data/concept_survey
                 text: 应用概况
-                name: concept_应用概况
+                name: concept_survey
               -
-                link: /data/concept/#用户分析
+                link: /data/concept_useranalysis
                 text: 用户分析
-                name: concept_用户分析
+                name: concept_useranalysis
               -
-                link: /data/concept/#使用分析
+                link: /data/concept_useanalysis
                 text: 使用分析
-                name: concept_使用分析
+                name: concept_useanalysis
               -
-                link: /data/concept/#来源分析
+                link: /data/concept_source
                 text: 来源分析
-                name: concept_来源分析
+                name: concept_source
               -
-                link: /data/concept/#留存分析
+                link: /data/concept_retain
                 text: 留存分析
-                name: concept_留存分析
+                name: concept_retain
               -
-                link: /data/concept/#转化分析
+                link: /data/concept_conversion
                 text: 转化分析
-                name: concept_转化分析
+                name: concept_conversion
           -
             link: /data/custom
             text: 自定义事件分析
             name: custom
           -
-            link: /data/guideline
+            link: /data/target_user
             text: 指标说明
-            name: guideline
+            name: target_user
             sidebar:
               -
-                link: /data/guideline/#用户类指标
+                link: /data/target_user
                 text: 用户类指标
-                name: guideline_用户类指标
+                name: target_user
               -
-                link: /data/guideline/#活跃类指标
+                link: /data/target_active
                 text: 活跃类指标
-                name: guideline_活跃类指标
+                name: target_active
               -
-                link: /data/guideline/#留存类指标
+                link: /data/target_retain
                 text: 留存类指标
-                name: guideline_留存类指标
+                name: target_retain
               -
-                link: /data/guideline/#页面类指标
+                link: /data/target_page
                 text: 页面类指标
-                name: guideline_页面类指标
+                name: target_page
               -
-                link: /data/guideline/#使用习惯类指标
+                link: /data/target_habit
                 text: 使用习惯类指标
-                name: guideline_使用习惯类指标
+                name: target_habit
               -
-                link: /data/guideline/#数据分析维度
+                link: /data/target_data
                 text: 数据分析维度
-                name: guideline_数据分析维度
+                name: target_data
     -
       link: /data/performance-point
       text: 统计方法
