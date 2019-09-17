@@ -508,85 +508,85 @@
                 name: process
                 sidebar:
                     -
-                      link: /develop/tutorial/process/#配置-app-json-文件
+                      link: /develop/tutorial/process 
                       text: 配置 app.json 文件
-                      name: process_配置-app-json-文件
+                      name: process 
                     -
-                      link: /develop/tutorial/process/#配置-app-js-文件
+                      link: /develop/tutorial/processjs
                       text: 配置 app.js 文件
-                      name: process_配置-app-js-文件
+                      name: processjs
               -
                 link: /develop/tutorial/dev
                 text: 页面开发
                 name: dev
                 sidebar:
                     -
-                      link: /develop/tutorial/dev/#开发-swan-文件
+                      link: /develop/tutorial/dev 
                       text: 开发 .swan 文件
-                      name: dev_开发-swan-文件
+                      name: dev 
                     -
-                      link: /develop/tutorial/dev/#开发-css-文件
+                      link: /develop/tutorial/devcss
                       text: 开发 .css 文件
-                      name: dev_开发-css-文件
+                      name: devcss
                     -
-                      link: /develop/tutorial/dev/#开发-js-文件
+                      link: /develop/tutorial/devjs
                       text: 开发 .js 文件
-                      name: dev_开发-js-文件
+                      name: devjs
                     -
-                      link: /develop/tutorial/dev/#开发-json-文件
+                      link: /develop/tutorial/devjson
                       text: 开发 .json 文件
-                      name: dev_开发-json-文件
+                      name: devjson
               -
                 link: /develop/tutorial/function
                 text: 功能开发
                 name: function
                 sidebar:
                     -
-                      link: /develop/tutorial/function/#页面路由
+                      link: /develop/tutorial/function 
                       text: 页面路由
-                      name: function_页面路由
+                      name: function 
                     -
-                      link: /develop/tutorial/function/#Page
+                      link: /develop/tutorial/function_page
                       text: Page
-                      name: function_Page
+                      name: function_page
                     -
-                      link: /develop/tutorial/function/#组件
+                      link: /develop/tutorial/function_component
                       text: 组件
-                      name: function_组件
+                      name: function_component
                     -
-                      link: /develop/tutorial/function/#API
+                      link: /develop/tutorial/function_api
                       text: API
-                      name: function_API
+                      name: function_api
               -
                 link: /develop/tutorial/publish
                 text: 调试预览发布
                 name: pulish
-                sidebar:
-                    -
-                      link: /develop/tutorial/publish/#调试
-                      text: 调试
-                      name: publish_调试
-                    -
-                      link: /develop/tutorial/publish/#预览
-                      text: 预览
-                      name: publish_预览
-                    -
-                      link: /develop/tutorial/publish/#发布
-                      text: 发布
-                      name: publish_发布
+                # sidebar:
+                #     -
+                #       link: /develop/tutorial/publish/#调试
+                #       text: 调试
+                #       name: publish_调试
+                #     -
+                #       link: /develop/tutorial/publish/#预览
+                #       text: 预览
+                #       name: publish_预览
+                #     -
+                #       link: /develop/tutorial/publish/#发布
+                #       text: 发布
+                #       name: publish_发布
               -
                 link: /develop/tutorial/move
                 text: 开发解决方案
                 name: move
                 sidebar:
                     -
-                      link: /develop/tutorial/move/#搬家工具
+                      link: /develop/tutorial/move 
                       text: 搬家工具
-                      name: move_搬家工具
+                      name: move 
                     -
-                      link: /develop/tutorial/move/#框架开发
+                      link: /develop/tutorial/frameworkdevelop
                       text: 框架开发
-                      name: move_框架开发
+                      name: frameworkdevelop
     -
       link: /develop/framework/app_service_register
       text: 框架

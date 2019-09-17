@@ -1,11 +1,11 @@
 ---
-title: 全局配置
+title: 配置 app.json 文件
 header: develop
 nav: tutorial
 sidebar: process
 ---
 
-##  配置 app.json 文件
+
 
 可以通过配置 app.json 文件，设置 SWAN 的界面、路径、多 TAB 等。
 
@@ -217,25 +217,3 @@ pages/index/index?id=123
 |uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
 |downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
 
-## 配置 app.js 文件
-
-app.js 中存放全局的 JavaScript 逻辑。
-
-<notice>示例： </notice>
-```javascript
-App({
-	onLaunch: function () {
-		console.log('SWAN launch');
-	},
-	onShow: function () {
-		console.log('SWAN展现');
-	},
-	onHide: function () {
-		console.log('SWAN当前处于后台');
-	},
-	onError: function () {
-		console.log('SWAN发生错误');
-	},
-	globalData: 'SWAN'
-});
-```
