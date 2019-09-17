@@ -3514,6 +3514,10 @@
                 sidebar:
 
                   -
+                    text: 编辑器中的云函数操作
+                    name: cloud_function_guide_editor
+                    link: /develop/cloud/guide/editor
+                  -
                     text: 环境
                     name: guide_环境
                     link: /develop/cloud/guide/#环境
@@ -3845,7 +3849,7 @@
                   name: cloud_server_sdk_storage_cloud.uploadFile
                   link: /develop/cloud/server_sdk/storage/#cloud-uploadFile
                 -
-                  text: cloud.ownloadFile
+                  text: cloud.downloadFile
                   name: cloud_server_sdk_storage_cloud.downloadFile
                   link: /develop/cloud/server_sdk/storage/#cloud-downloadFile
                 -
