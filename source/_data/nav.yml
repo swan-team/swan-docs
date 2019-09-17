@@ -4082,33 +4082,33 @@
             name: tune_up
             sidebar:
               -
-                link: /develop/function/tune_up/#调起百度收银台
+                link: /develop/function/tune_up 
                 text: 调起百度收银台
-                name: tune_up_调起百度收银台
+                name: tune_up 
               -
-                link: /develop/function/tune_up/#通知支付状态
+                link: /develop/function/tune_up_notice
                 text: 通知支付状态
-                name: tune_up_通知支付状态
+                name: tune_up_notice
               -
-                link: /develop/function/tune_up/#支付状态查询
+                link: /develop/function/tune_up_queryorderdetail
                 text: 支付状态查询
-                name: tune_up_支付状态查询
+                name: tune_up_queryorderdetail
               -
-                link: /develop/function/tune_up/#取消核销
+                link: /develop/function/tune_up_rest
                 text: 取消核销
-                name: tune_up_取消核销
+                name: tune_up_rest
               -
-                link: /develop/function/tune_up/#申请退款
+                link: /develop/function/tune_up_applyorderrefund
                 text: 申请退款
-                name: tune_up_申请退款
+                name: tune_up_applyorderrefund
               -
-                link: /develop/function/tune_up/#请求业务方退款审核
+                link: /develop/function/tune_up_examine
                 text: 请求业务方退款审核
-                name: tune_up_请求业务方退款审核
+                name: tune_up_examine
               -
-                link: /develop/function/tune_up/#通知退款状态
+                link: /develop/function/tune_up_drawback
                 text: 通知退款状态
-                name: tune_up_通知退款状态 
+                name: tune_up_drawback
           -
             link: /develop/function/payfaq
             text: 支付常见问题
@@ -4143,25 +4143,25 @@
               name: compatibility
               sidebar:
               -
-                link: /develop/swan/compatibility/#版本号比较
+                link: /develop/swan/compatibility_compare
                 text: 版本号比较
-                name: concept_版本号比较
+                name: compatibility_compare
               -
-                link: /develop/swan/compatibility/#API存在判断
+                link: /develop/swan/compatibility_api
                 text: API存在判断
-                name: concept_API存在判断
+                name: compatibility_api
               -
-                link: /develop/swan/compatibility/#canIUse
+                link: /develop/swan/compatibility_caniuse
                 text: canIUse
-                name: concept_canIUse
+                name: compatibility__caniuse
               -
-                link: /develop/swan/compatibility/#Android-与-iOS-差异
+                link: /develop/swan/compatibility_diff
                 text: Android 与 iOS 差异
-                name: concept_Android-与-iOS-差异
+                name: compatibility__diff
               -
-                link: /develop/swan/compatibility/#基础库最低版本设置
+                link: /develop/swan/compatibility_version
                 text: 基础库最低版本设置
-                name: concept_基础库最低版本设置
+                name: compatibility_version
 
     -
       link: /develop/faq
