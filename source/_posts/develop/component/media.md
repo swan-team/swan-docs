@@ -261,7 +261,6 @@ Page({
 |---- | ---- | ---- |---- |---- |
 |src|String|  | 是 |视频的资源地址|
 |initial-time|Number|  | 否 |指定视频初始播放位置|
-|duration|Number|  | 否 |指定视频时长|
 |controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|否|是否自动播放|
 |loop|Boolean|false|否|是否循环播放|
