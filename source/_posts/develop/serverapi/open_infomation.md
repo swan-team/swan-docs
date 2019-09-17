@@ -10,13 +10,13 @@ sidebar: open_infomation
 > 目前模板消息仅支持文本消息。
 
 ## 功能介绍
-目前已经开放的模板消息主要是两类：支付类和表单类消息。
-> 两种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
+目前已经开放的模板消息主要是三类：支付类消息、表单类消息、订阅类消息。
+> 三种类型的下发条件有所差异，详见<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%B8%8B%E5%8F%91%E6%9D%A1%E4%BB%B6%E8%AF%B4%E6%98%8E/">下发条件说明</a>。
 
 ### 消息的入口
 
 * 百度App-我的tab-消息中心
-    > 支付、表单消息均有该入口。
+    > 支付类、表单类、订阅类消息均有该入口。
 
 <!-- ![图片](../../../img/api/information/1.jpg)
 ![图片](../../../img/api/information/2.jpg) -->
@@ -33,7 +33,7 @@ sidebar: open_infomation
 </div>
 
 * 搜索结果页菜单面板
-    > 支付、表单类消息均有该入口。
+    > 支付类、表单类、订阅类消息均有该入口。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -48,12 +48,16 @@ sidebar: open_infomation
 <!-- ![图片](../../../img/api/information/3.jpg)
 ![图片](../../../img/api/information/4.jpg) -->
 * 手机通知栏
-    > 仅限支付消息，部分Android厂商机型可能受限。
+    > 仅限支付类、订阅类消息，部分Android厂商机型可能受限。
 
     ![图片](../../../img/api/information/5.png)
 * 模板消息体的样式示意：
 
     ![图片](../../../img/api/information/8.png)
+
+* 订阅类消息的用户授权面板示意：
+
+    ![图片](../../../img/api/information/9.png)
 
 ## 使用说明
 
@@ -66,14 +70,16 @@ sidebar: open_infomation
 ### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过支付获取 <a href="http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/standard_interface/push_notice.md">orderId</a> 或者 payId。
 
 
-#### formid 
-页面的`<form/>`组件，属性report-submit为true时，可以声明为需发模板消息，此时用户点击按钮提交表单可以获取formId，用于发送表单类模板消息。
+#### formid
+页面的`<form/>`组件，属性 report-submit 为 true 时，可以声明为需发模板消息:
+    1、 属性 report-type 为 default 时（默认），声明为发送表单类模板消息。此时用户点击按钮提交表单可以获取 formId，用于发送表单类模板消息
+    2、 属性 report-type 为 subscribe 时，声明为发送订阅类模板消息。此时用户点击按钮，首先弹出请求授权面板，授权成功后可以获取 formId，用于发送订阅类模板消息
 
 #### orderId
-当用户通过百度收银台支付后，开发者可以在收银台接口通知支付状态通知参数中获取到orderId 用于发送交易类模板消息。
+当用户通过百度收银台支付后，开发者可以在收银台接口通知支付状态通知参数中获取到orderId 用于发送支付类模板消息。
 
-#### payId 
-当用户通过直连（微信、支付宝）支付等完成支付行为时，可以获取payId用于发送交易类模板消息。
+#### payId
+当用户通过直连（微信、支付宝）支付等完成支付行为时，可以获取payId用于发送支付类模板消息。
 
 ### 步骤三：调用接口下发模板消息
 
@@ -89,16 +95,25 @@ sidebar: open_infomation
 
 ### 表单类消息
 
-对于在智能小程序内发生过提交表单行为且该表单声明要发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户在 7 天内推送有限条数的模板消息。
-> 1次提交表单可下发 1 条，多次提交下发条数独立，相互不影响。
+对于在智能小程序内发生过提交表单行为且同意授权开发者发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户在 7 天内推送有限条数的模板消息。
+
+> 1 次提交表单可下发 1 条，多次提交下发条数独立，相互不影响。
+
+### 订阅类消息
+
+对于在智能小程序内发生过订阅行为且同意授权开发者发送模板消息的用户，当开发者需要向用户提供服务时，可允许开发者向用户推送有限条数的模板消息，无时间限制。
+
+> 1 次订阅授权可下发 1 条，同一订阅行为的多次授权下发条数不累计。
+
 
 ### 支付类消息
 对于在智能小程序内完成过支付行为的用户，可允许开发者向用户在 7 天内推送有限条数的模板消息。
-> 1次支付可下发3条，多次支付下发的条数独立，互不影响。
+
+> 1 次支付可下发 3 条，多次支付下发的条数独立，互不影响。
 
 
 
-## getTemplateLibraryList 
+## getTemplateLibraryList
 **解释**：获取小程序模板库标题列表。
 **接口调用请求说明**：
 ```
@@ -145,11 +160,11 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_tok
     }
 }
 ```
-## getTemplateLibraryById 
+## getTemplateLibraryById
 **解释**：获取模板库某个模板标题下的关键词库。
 **接口调用请求说明**：
 
-``` 
+```
 POST https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget?access_token=ACCESS_TOKEN
 ```
 
@@ -255,7 +270,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templateadd?access_tok
     "errno": 0,
     "msg": "success",
     "data": {
-        "template_id": "f34178cd598201d9dc8d5c88cd87b44cf7cd0e62NwmP" 
+        "template_id": "f34178cd598201d9dc8d5c88cd87b44cf7cd0e62NwmP"
     }
 }
 ```
@@ -295,7 +310,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist?access_to
     }
 }
 ```
-## deleteTemplate 
+## deleteTemplate
 **解释**：删除帐号下的某个模板。
 **接口调用请求说明**:
 ```
@@ -336,7 +351,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 **名词解释：**
 
-- [swan_id](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)：百度生成的与设备相关的唯一标识，APP卸载重安装不会变 
+- [swan_id](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)：百度生成的与设备相关的唯一标识，APP卸载重安装不会变
 - open_id：百度用户登录唯一标识
 - formId：[form_id官方文档介绍](https://smartprogram.baidu.com/docs/develop/component/formlist/#form/)
 
@@ -360,15 +375,15 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 ### Q&A
 
- 
+
 #### 如何判断当前用户是游客状态还是登陆状态？
  - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登陆游客状态
  - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登陆状态
- 
+
 #### 如何获取swan\_id & open\_id？
  - 获取swan\_id：[swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
  - 获取open\_id：参考官方文档 [获取登录用户OpenId](https://smartprogram.baidu.com/docs/develop/api/open_log/)
- 
+
 
 ### 模板消息开发流程图：
 

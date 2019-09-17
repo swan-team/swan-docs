@@ -191,6 +191,10 @@
                     text: 关联H5站点
                     name: rank_关联H5站点
                   -
+                    link: /introduction/rank/#搜索结果出图配置
+                    text: 搜索结果出图配置
+                    name: rank_搜索结果出图配置             
+                  -
                     link: /introduction/rank/#数据提交如何选择
                     text: 数据提交如何选择
                     name: rank_数据提交如何选择
@@ -3298,6 +3302,10 @@
                     link: /develop/devtools/editor/#自动补全
                     text: 自动补全
                     name: editor_自动补全
+                  -
+                    link: /develop/devtools/editor/#Git-状态展示
+                    text: Git 状态展示
+                    name: editor_Git-状态展示                
                   -
                     link: /develop/devtools/editor/#项目配置文件
                     text: 项目配置文件
