@@ -68,7 +68,7 @@
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
-            this.initHighlight();
+            // this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -80,20 +80,20 @@
             this.initInvokeDemo();
             // this.initCustom();
         },
-        initHighlight() {
-            let keywords = window.localStorage.getItem('keywords');
-            window.localStorage.removeItem('keywords');
-            if (!keywords || !keywords.length) {
-                return;
-            }
-            keywords = Array.isArray(keywords) ? keywords : [keywords];
-            let content = $('.m-doc-content-layout').html();
-            keywords.forEach(function (keyword, index) {
-                var regExp = new RegExp(keyword, 'g');
-                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
-            });
-            $('.m-doc-content-layout').html(content);
-        },    
+        // initHighlight() {
+        //     let keywords = window.localStorage.getItem('keywords');
+        //     window.localStorage.removeItem('keywords');
+        //     if (!keywords || !keywords.length) {
+        //         return;
+        //     }
+        //     keywords = Array.isArray(keywords) ? keywords : [keywords];
+        //     let content = $('.m-doc-content-layout').html();
+        //     keywords.forEach(function (keyword, index) {
+        //         var regExp = new RegExp(keyword, 'g');
+        //         content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
+        //     });
+        //     $('.m-doc-content-layout').html(content);
+        // },
         initSidebar: function () {
             var ctx = this;
             var sidebarData = localSidebar.getLocal(window.localData.headerName);
