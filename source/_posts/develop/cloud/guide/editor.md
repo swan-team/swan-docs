@@ -5,8 +5,8 @@ nav: cloud
 sidebar: cloud_function_guide_editor
 ---
 
-# 编辑器中的云函数操作
 
+ 
 ## 配置云函数本地目录
 在project.config.json文件中设置cloudfunctionRoot字段，即可指定云函数的本地目录，当通过创建云函数项目打开工程时，该字段自动生成。
 

@@ -4,7 +4,7 @@ header: develop
 nav: cloud
 sidebar: cloud_init
 ---
-## swan.cloud.init
+ 
 
 **解释**：使用智能小程序云开发API之前，必须调用该方法初始化云开发环境，该方法全局只需调用一次。如不进行初始化设置，将无法获取开发者当前的环境配置。
 

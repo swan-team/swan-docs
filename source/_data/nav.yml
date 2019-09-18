@@ -3507,31 +3507,31 @@
             -
               text: 云开发控制台
               name: console
-              link: /develop/cloud/console
+ 
               sidebar:
                 -
                     text: 概览
-                    name: console_概览
-                    link: /develop/cloud/console/#概览
+                    name: console
+                    link: /develop/cloud/console 
                 -
                     text: 云数据库
-                    name: console_云数据库
-                    link: /develop/cloud/console/#云数据库
+                    name: console_data
+                    link: /develop/cloud/console_data
                 -
                     text: 云存储
-                    name: console_云存储
-                    link: /develop/cloud/console/#云存储
+                    name: console_storage
+                    link: /develop/cloud/console_storage
                 -
                     text: 云函数
-                    name: console_云函数
-                    link: /develop/cloud/console/#云函数
+                    name: console_function
+                    link: /develop/cloud/console_function
         -
 
           sidebar:
               -
                 text: 开发指南
                 name: guide
-                link: /develop/cloud/guide
+ 
                 sidebar:
 
                   -
@@ -3540,25 +3540,25 @@
                     link: /develop/cloud/guide/editor
                   -
                     text: 环境
-                    name: guide_环境
-                    link: /develop/cloud/guide/#环境
+                    name: guide 
+                    link: /develop/cloud/guide/guide 
                   -
                     text: 云函数开发指南
-                    name: guide_云函数开发指南
-                    link: /develop/cloud/guide/#云函数开发指南               
+                    name: guide_function
+                    link: /develop/cloud/guide/guide_function          
                       
                   -
                     text: 数据库开发常见问题
-                    name:  guide_数据库开发常见问题
-                    link: /develop/cloud/guide/#数据库开发常见问题
+                    name:  guide_databasefaq
+                    link: /develop/cloud/guide/guide_databasefaq
                   -
                     text: 用户集成相关问题
-                    name:  guide_用户集成相关问题
-                    link: /develop/cloud/guide/#用户集成相关问题
+                    name:  guide_user
+                    link: /develop/cloud/guide/guide_user
                   -
                     text: 云开发配额
-                    name: guide_云开发配额
-                    link: /develop/cloud/guide/#云开发配额
+                    name: guide_dev
+                    link: /develop/cloud/guide/guide_dev
         -
             text: 小程序端 API 文档
             name: /develop/cloud/cloud_init
@@ -3566,48 +3566,48 @@
               -
                   text: 初始化
                   name: cloud_init 
-                  link: /develop/cloud/cloud_init 
+ 
                   sidebar:
                     - 
                       text: swan.cloud.init
-                      name: cloud_init_swan-cloud-init
-                      link: /develop/cloud/cloud_init/#swan-cloud-init
+                      name: cloud_init 
+                      link: /develop/cloud/cloud_init 
               -
                   text: 云函数
                   name: cloud_functions
-                  link: /develop/cloud/cloud_functions
+      
                   sidebar: 
                     -
                         text: swan.cloud.callFunction
-                        name: cloud_callFunction
-                        link: /develop/cloud/cloud_functions/#swan-cloud-callFunction
+                        name: cloud_functions 
+                        link: /develop/cloud/cloud_functions 
               -
                   text: 存储
                   name: cloud_storage
-                  link: /develop/cloud/cloud_storage
+                   
                   sidebar:  
                     -
                         text: swan.cloud.uploadFile
                         name: cloud_uploadFile
-                        link: /develop/cloud/cloud_storage/#swan-cloud-uploadFile
+                        link: /develop/cloud/cloud_uploadFile
                     -
                         text: swan.cloud.downloadFile
                         name: cloud_downloadFile
-                        link: /develop/cloud/cloud_storage/#swan-cloud-downloadFile
+                        link: /develop/cloud/cloud_downloadFile
                     -
                         text: swan.cloud.deleteFile
                         name: cloud_deleteFile
-                        link: /develop/cloud/cloud_storage/#swan-cloud-deleteFile
+                        link: /develop/cloud/cloud_deleteFile
               -
                   text: 数据库
                   name: cloud_database
-                  link: /develop/cloud/cloud_database
+                  
                   sidebar:
                     # database
                     -
                         text: database
-                        name: cloud_database
-                        link: /develop/cloud/cloud_database/swan-cloud-database
+                        name: database
+                        link: /develop/cloud/cloud_database/database
                     
                     # collection
                     -
