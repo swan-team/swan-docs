@@ -1,11 +1,11 @@
 ---
-title: 广告组件
+title: ad 广告
 header: develop
 nav: component
 sidebar: ad
 ---
 
-## ad 广告
+ 
 
 **解释**：广告组件，按照<a href="https://smartprogram.baidu.com/docs/introduction/adopen/">流量主开通指引</a>中的操作获取广告组件代码。
 

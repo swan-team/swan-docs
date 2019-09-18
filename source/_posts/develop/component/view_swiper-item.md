@@ -1,5 +1,10 @@
-
-## swiper-item 滑块视图容器子项
+---
+title: swiper-item 滑块视图容器子项
+header: develop
+nav: component
+sidebar: view_swiper-item
+---
+ 
 
 **解释**： 滑块视图容器子项，仅可放置在`<swiper>`组件中，宽高自动设置为100%。
 

@@ -1,10 +1,10 @@
 ---
-title: map
+title: map 地图
 header: develop
 nav: component
 sidebar: map
 ---
-## map 地图
+ 
 
 **解释**：地图，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
