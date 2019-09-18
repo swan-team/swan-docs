@@ -1,11 +1,11 @@
 ---
-title: 云函数
+title: cloud.callFunction
 header: develop
 nav: cloud
-sidebar: cloud_server_sdk_function
+sidebar:  function
 ---
 
-## cloud.callFunction
+ 
 
 调用云函数。
 

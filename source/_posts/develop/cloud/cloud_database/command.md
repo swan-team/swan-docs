@@ -1,11 +1,11 @@
 ---
-title: 数据库指令
+title: db.command
 header: develop
 nav: cloud
 siderbar: cloud_database_command
 ---
 
-## db.command
+ 
 
 **解释**：数据库相关查询及更新指令。
 

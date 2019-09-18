@@ -1,11 +1,11 @@
 ---
-title: 数据库指令
+title: doc.get
 header: develop
 nav: cloud
 siderbar: cloud_database_collection_doc
 ---
 
-## doc.get
+ 
 
 **解释**：获取指定ID的记录数据
 

@@ -3604,10 +3604,10 @@
                   
                   sidebar:
                     # database
-                    -
-                        text: database
-                        name: database
-                        link: /develop/cloud/cloud_database/database
+                    # -
+                    #     text: database
+                    #     name: cloud_database
+                    #     link: /develop/cloud/cloud_database 
                     
                     # collection
                     -
@@ -3770,56 +3770,61 @@
             -
               text: 云数据库
               name: cloud_server_sdk_database
-              link: /develop/cloud/server_sdk/database
+             
               sidebar: 
                 -
                   text: cloud.database
                   name: cloud_server_sdk_database_cloud.database
-                  link: /develop/cloud/server_sdk/database/#cloud-database
+                  link: /develop/cloud/server_sdk/database 
                 -
-                  text: Collection.add
-                  name: cloud_server_sdk_database_Collection.add
-                  link: /develop/cloud/server_sdk/database/#Collection-add
-                -
-                  text: Collection.count
-                  name: cloud_server_sdk_database_Collection.count
-                  link: /develop/cloud/server_sdk/database/#Collection-count
-                -
-                  text: Collection.doc
-                  name: cloud_server_sdk_database_Collection.doc
-                  link: /develop/cloud/server_sdk/database/#Collection-doc
-                -
-                  text: Collection.field
-                  name: cloud_server_sdk_database_Collection.field
-                  link: /develop/cloud/server_sdk/database/#Collection-field
-                -
-                  text: Collection.get
-                  name: cloud_server_sdk_database_Collection.get
-                  link: /develop/cloud/server_sdk/database/#Collection-get
-                -
-                  text: Collection.limit
-                  name: cloud_server_sdk_database_Collection.limit
-                  link: /develop/cloud/server_sdk/database/#Collection-limit
-                -
-                  text: Collection.orderBy
-                  name: cloud_server_sdk_database_Collection.orderBy
-                  link: /develop/cloud/server_sdk/database/#Collection-orderBy
-                -
-                  text: Collection.remove
-                  name: cloud_server_sdk_database_Collection.remove
-                  link: /develop/cloud/server_sdk/database/#Collection-remove
-                -
-                  text: Collection.skip
-                  name: cloud_server_sdk_database_Collection.skip
-                  link: /develop/cloud/server_sdk/database/#Collection-skip
-                -
-                  text: Collection.update
-                  name: cloud_server_sdk_database_Collection.update
-                  link: /develop/cloud/server_sdk/database/#Collection-update
-                -
-                  text: Collection.where
-                  name: cloud_server_sdk_database_Collection.where
-                  link: /develop/cloud/server_sdk/database/#Collection-where
+                  text: Collection 
+                  name: collection  
+                  link: /develop/cloud/server_sdk/collection 
+                  sidebar:                              
+                    -
+                      text: Collection.add
+                      name: collection_Collection.add
+                      link: /develop/cloud/server_sdk/collection/#Collection-add
+                    -
+                      text: Collection.count
+                      name: collection_Collection.count
+                      link: /develop/cloud/server_sdk/collection/#Collection-count
+                    -
+                      text: Collection.doc
+                      name: collection_Collection.doc
+                      link: /develop/cloud/server_sdk/collection/#Collection-doc
+                    -
+                      text: Collection.field
+                      name: collection_Collection.field
+                      link: /develop/cloud/server_sdk/collection/#Collection-field
+                    -
+                      text: Collection.get
+                      name: collection_Collection.get
+                      link: /develop/cloud/server_sdk/collection/#Collection-get
+                    -
+                      text: Collection.limit
+                      name: collection_Collection.limit
+                      link: /develop/cloud/server_sdk/collection/#Collection-limit
+                    -
+                      text: Collection.orderBy
+                      name: collection_Collection.orderBy
+                      link: /develop/cloud/server_sdk/collection/#Collection-orderBy
+                    -
+                      text: Collection.remove
+                      name: collection_Collection.remove
+                      link: /develop/cloud/server_sdk/collection/#Collection-remove
+                    -
+                      text: Collection.skip
+                      name: collection_Collection.skip
+                      link: /develop/cloud/server_sdk/collection/#Collection-skip
+                    -
+                      text: Collection.update
+                      name: collection_Collection.update
+                      link: /develop/cloud/server_sdk/collection/#Collection-update
+                    -
+                      text: Collection.where
+                      name: collection_Collection.where
+                      link: /develop/cloud/server_sdk/collection/#Collection-where
                 -
                   text: Database.collection
                   name: cloud_server_sdk_database_Database.collection
@@ -3884,12 +3889,12 @@
             -
               text: 云函数
               name: cloud_server_sdk_function
-              link: /develop/cloud/server_sdk/function
+              
               sidebar: 
                 -
                   text: cloud.callFunction
-                  name: cloud_server_sdk_function_callFunction
-                  link: /develop/cloud/server_sdk/function/#cloud-callFunction
+                  name: function 
+                  link: /develop/cloud/server_sdk/function 
 
     # -
     #       text: 插件
