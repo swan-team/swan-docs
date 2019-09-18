@@ -3487,24 +3487,23 @@
             -
                 text: 云开发能力介绍
                 name: cloud_essentials
-                link: /develop/cloud/cloud_essentials 
                 sidebar:
                   -
                     text: 云数据库
-                    name: cloud_essentials_云数据库
-                    link: /develop/cloud/cloud_essentials/#云数据库
+                    name: cloud_essentials 
+                    link: /develop/cloud/cloud_essentials 
                   -
                     text: 云存储
-                    name: cloud_essentials_云存储
-                    link: /develop/cloud/cloud_essentials/#云存储
+                    name: cloud_essentials_storage
+                    link: /develop/cloud/cloud_essentials_storage
                   -
                     text: 云函数
-                    name: cloud_essentials_云函数
-                    link: /develop/cloud/cloud_essentials/#云函数
+                    name: cloud_essentials_function
+                    link: /develop/cloud/cloud_essentials_function
                   -
                     text: 用户集成
-                    name: cloud_essentials_用户集成
-                    link: /develop/cloud/cloud_essentials/#用户集成
+                    name: cloud_essentials_user
+                    link: /develop/cloud/cloud_essentials_user
             -
               text: 云开发控制台
               name: console
@@ -4077,14 +4076,14 @@
             text: 密钥生成
             name: keygen_v2
           -
-            link: /develop/function/tune_up
+ 
             text: 百度收银台接口
             name: tune_up
             sidebar:
-              # -
-              #   link: /develop/function/tune_up 
-              #   text: 调起百度收银台
-              #   name: tune_up 
+              -
+                link: /develop/function/tune_up 
+                text: 调起百度收银台
+                name: tune_up 
               -
                 link: /develop/function/tune_up_notice
                 text: 通知支付状态

@@ -92,15 +92,7 @@ sidebar: formlist_picker
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
 
 
-**mode 有效值**:
-
-| 值 | 说明 |
-| ---- | ---- |
-| selector | 普通选择器 |
-| time | 时间选择器 |
-| date | 日期选择器 |
-| multiSelector | 多列选择器 |
-| region | 省市区选择器 |
+ 
 
 **示例**：
 <a href="swanide://fragment/4e627d1fb5e3167c46e736956cd1e8581565503520142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

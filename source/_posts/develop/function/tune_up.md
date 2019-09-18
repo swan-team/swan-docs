@@ -1,12 +1,12 @@
 ---
-title: 百度收银台接口
+title: 调起百度收银台
 header: develop
 nav: function
 sidebar: tune_up
 ---
 
 
-## 调起百度收银台
+ 
 
 > 基础库 1.8.5 版本开始支持。使用工具调试时为模拟支付，使用真机调试时可查看真实支付结果。
 
