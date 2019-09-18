@@ -123,10 +123,10 @@
                 text: 接入信息流流量
                 name: accessfeed
                 sidebar:
-                  -
-                    link: /introduction/accessfeed 
-                    text: 接入信息流流量
-                    name: accessfeed                 
+                  # -
+                  #   link: /introduction/accessfeed 
+                  #   text: 接入信息流流量
+                  #   name: accessfeed                 
                   -
                     link: /introduction/accessfeed_publish
                     text: 小程序发布上线
@@ -149,9 +149,9 @@
                     name: accessfeed_monitor
 
               -
-                link: /introduction/auditing_info
+                link: /introduction/auditinginfo_settled
                 text: 信息流审核规范
-                name: auditing_info
+                name: auditinginfo_settled
                 sidebar:
                   -
                     link: /introduction/auditinginfo_settled
@@ -182,10 +182,10 @@
                 text: 接入自然搜索结果
                 name: rank
                 sidebar:
-                  -
-                    link: /introduction/rank 
-                    text: 自然搜索
-                    name: rank 
+                  # -
+                  #   link: /introduction/rank 
+                  #   text: 自然搜索
+                  #   name: rank 
                   -
                     link: /introduction/rank_pageinfo
                     text: 设置页面基础信息
@@ -607,67 +607,67 @@
                 name: app_service_register
                 sidebar:
                   -
-                    link: /develop/framework/app_service_register/#App
+                    link: /develop/framework/app_service_register 
                     text: App
-                    name: app_service_register_App
+                    name: app_service_register 
                   -
-                    link: /develop/framework/app_service_register/#getApp
+                    link: /develop/framework/app_service_registergetapp
                     text: getApp
-                    name: app_service_register_getApp
+                    name: app_service_registergetapp
               -
                 link: /develop/framework/app_service_page
                 text: 注册页面
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page/#参数说明
+                    link: /develop/framework/app_service_page 
                     text: 参数说明
-                    name: app_service_page_参数说明
+                    name: app_service_page 
                   -
-                    link: /develop/framework/app_service_page/#初始化数据
+                    link: /develop/framework/app_service_pagedata
                     text: 初始化数据
-                    name: app_service_page_初始化数据
+                    name: app_service_pagedata
                   -
-                    link: /develop/framework/app_service_page/#生命周期函数
+                    link: /develop/framework/app_service_pagelife
                     text: 生命周期函数
-                    name: app_service_page_生命周期函数
+                    name: app_service_pagelife
                   -
-                    link: /develop/framework/app_service_page/#页面事件处理函数
+                    link: /develop/framework/app_service_pagefunction
                     text: 页面事件处理函数
-                    name: app_service_page_页面事件处理函数
+                    name: app_service_pagefunction
                   -
-                    link: /develop/framework/app_service_page/#组件事件处理函数
+                    link: /develop/framework/app_service_pagecomponent
                     text: 组件事件处理函数
-                    name: app_service_page_组件事件处理函数
+                    name: app_service_pagecomponent
                   -
-                    link: /develop/framework/app_service_page/#setData-机制
+                    link: /develop/framework/app_service_page_setData 
                     text: setData 机制
-                    name: app_service_page_setData-机制
+                    name: app_service_page_setData 
               -
                 link: /develop/framework/app_service_route
                 text: 页面路由
                 name: app_service_route
                 sidebar:
                   -
-                    link: /develop/framework/app_service_route/#页面栈
+                    link: /develop/framework/app_service_route 
                     text: 页面栈
-                    name: app_service_route_页面栈
+                    name: app_service_route 
                   -
-                    link: /develop/framework/app_service_route/#getCurrentPages
+                    link: /develop/framework/app_service_routegetCurrentPages
                     text: getCurrentPages
-                    name: app_service_route_getCurrentPages
+                    name: app_service_routegetCurrentPages
                   -
-                    link: /develop/framework/app_service_route/#路由方式
+                    link: /develop/framework/app_service_routestyle
                     text: 路由方式
-                    name: app_service_route_路由方式
+                    name: app_service_routestyle
                   -
-                    link: /develop/framework/app_service_route/#文件作用域
+                    link: /develop/framework/app_service_routefile
                     text: 文件作用域
-                    name: app_service_route_文件作用域
+                    name: app_service_routefile
                   -
-                    link: /develop/framework/app_service_route/#模块化
+                    link: /develop/framework/app_service_routemodule
                     text: 模块化
-                    name: app_service_route_模块化
+                    name: app_service_routemodule
 
               -
                 link: /develop/framework/app_service_aop
@@ -675,21 +675,21 @@
                 name: app_service_aop
                 sidebar:
                   -
-                    link: /develop/framework/app_service_aop/#AOP
+                    link: /develop/framework/app_service_aop 
                     text: AOP说明
-                    name: app_service_aop_App.aop
+                    name: app_service_aop 
                   -
-                    link: /develop/framework/app_service_aop/#App-after
+                    link: /develop/framework/app_service_aopapp-after
                     text: App.after
-                    name: app_service_aop_App.after
+                    name: app_service_aopapp-after
                   -
-                    link: /develop/framework/app_service_aop/#Page-after
+                    link: /develop/framework/app_service_aoppage-after
                     text: Page.after
-                    name: app_service_aop_Page.after
+                    name: app_service_aoppage-after
                   -
-                    link: /develop/framework/app_service_aop/#swan-after
+                    link: /develop/framework/app_service_aopswan-after
                     text: swan.after
-                    name: app_service_aop_swan.after
+                    name: app_service_aopswan-after
 
         -
             link: /develop/framework/view
@@ -853,21 +853,21 @@
                 name: view
                 sidebar:
                   -
-                    link: /develop/component/view/#view-视图容器
+                    link: /develop/component/view_view
                     text: view 视图容器
-                    name: view_view-视图容器
+                    name: view_view 
                   -
-                    link: /develop/component/view/#scroll-view-可滚动视图区域
+                    link: /develop/component/view_scroll-view 
                     text: scroll-view 可滚动视图区域
-                    name: view_scroll-view-可滚动视图区域
+                    name: view_scroll-view
                   -
-                    link: /develop/component/view/#swiper-滑块视图容器
+                    link: /develop/component/view_swiper 
                     text: swiper 滑块视图容器
-                    name: view_swiper-滑块视图容器
+                    name: view_swiper 
                   -
-                    link: /develop/component/view/#swiper-item-滑块视图容器子项
+                    link: /develop/component/view_swiper-item 
                     text: swiper-item 滑块视图容器子项
-                    name: view_swiper-item-滑块视图容器子项
+                    name: view_swiper-item
                   -
                     link: /develop/component/view/#movable-view-可移动视图容器
                     text: movable-view 可移动视图容器
@@ -4081,10 +4081,10 @@
             text: 百度收银台接口
             name: tune_up
             sidebar:
-              -
-                link: /develop/function/tune_up 
-                text: 调起百度收银台
-                name: tune_up 
+              # -
+              #   link: /develop/function/tune_up 
+              #   text: 调起百度收银台
+              #   name: tune_up 
               -
                 link: /develop/function/tune_up_notice
                 text: 通知支付状态

@@ -1,5 +1,5 @@
 ---
-title: 调起百度收银台
+title: 百度收银台接口
 header: develop
 nav: function
 sidebar: tune_up

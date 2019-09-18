@@ -1,5 +1,5 @@
 ---
-title: 自然搜索
+title: 接入自然搜索结果
 header: introduction
 nav: book
 sidebar: rank
