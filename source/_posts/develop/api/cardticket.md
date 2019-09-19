@@ -404,7 +404,7 @@ sidebar: cardticket
 |:----|:----|:----|:----|
 | recordId   |  优惠券领取记录id   | 是   | string   | 
 | openId   | openId   | 是   | string   | 
-| **couponT****emplateId**   | 优惠券模板id   | 是   | long   | 
+| **couponTemplateId**   | 优惠券模板id   | 是   | long   | 
 | sign   | md5签名串(小写)    签名盐： recordId +openId+timestamp后5位+**couponTemplateId**+*&^%$#    md5(recordId+openId+**couponTemplateId**+timestamp+盐)     | 是   | string   | 
 | timestamp   | 时间戳 单位s   |  -  | -|
    
