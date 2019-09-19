@@ -310,8 +310,8 @@
                         ctx._scrollToAnchor($this[0]);
                     });
                 } else {
-                    var href = $this.parent('li').find('ul li:first-child a').attr('href');
-                    var $this = $this.parent('li').find('ul li:first-child a');
+                    var href = $this.next('ul').children('li:first-child').children('a').attr('href');
+                    var $this = $this.next('ul').children('li:first-child').children('a');
                     updateArticle($this, href);
                 }
             }
