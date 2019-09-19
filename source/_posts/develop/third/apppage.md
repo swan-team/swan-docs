@@ -15,7 +15,7 @@ sidebar: apppage
 第三方可通过模板提包或源代码提包两种方式，为授权小程序账号提交代码包
 
 * 通过API实现模板提包可参考：[为授权的小程序帐号上传小程序代码API](https://smartprogram.baidu.com/docs/develop/third/apppage/#为授权的小程序帐号上传小程序代码)
-* 是用开发者工具直接代提交源代码包可参考：[为授权的小程序帐号上传源代码包](https://smartprogram.baidu.com/docs/develop/third/develop/#二、定制开发)
+* 使用开发者工具直接代提交源代码包可参考：[为授权的小程序帐号上传源代码包](https://smartprogram.baidu.com/docs/develop/third/develop/#二、定制开发)
 * 查询代码包状态及详情可参考：[获取小程序包列表API](https://smartprogram.baidu.com/docs/develop/third/apppage/#获取小程序包列表)
 
 ### 第二步：提交代码审核

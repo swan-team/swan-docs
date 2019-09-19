@@ -3943,6 +3943,12 @@
         -
           sidebar:
             -
+              link: /develop/third/publication
+              text: 第三方平台发布检测
+              name: publication
+        -
+          sidebar:
+            -
               link: /develop/third/pro
               text: 授权流程
               name: pro
@@ -4113,6 +4119,15 @@
                 link: /develop/function/tune_up_drawback
                 text: 通知退款状态
                 name: tune_up_drawback
+              -
+                link: /develop/function/tune_up_orderBill
+                text: 下载订单对账单
+                name: tune_up_orderBill
+              -
+                link: /develop/function/tune_up_capitaBill
+                text: 下载资金账单
+                name: tune_up_capitaBill
+
           -
             link: /develop/function/payfaq
             text: 支付常见问题
