@@ -3518,13 +3518,13 @@
               -
                 text: 开发指南
                 name: guide
-                link: /develop/cloud/guide
+                link: /develop/cloud/guide 
                 sidebar:
 
                   -
                     text: 编辑器中的云函数操作
-                    name: cloud_function_guide_editor
-                    link: /develop/cloud/guide/editor
+                    name: guide_编辑器中的云函数操作
+                    link: /develop/cloud/guide/#编辑器中的云函数操作
                   -
                     text: 环境
                     name: guide_环境
