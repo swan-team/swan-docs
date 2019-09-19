@@ -14,7 +14,7 @@ https://openapi.baidu.com/rest/2.0/smartapp
 ## 订单同步
 
 
-**接口描述**:
+**接口描述**:开发者可以在用户产生交易后，同步小程序内的订单数据至百度订单（用户可在百度App-个人中心-常用功能-订单中查看）。
 
 
 **接口地址**:`/ordercenter/sync`
@@ -295,7 +295,7 @@ https://openapi.baidu.com/rest/2.0/smartapp
 
 ## Data.Ext.SubsOrder.Item.OrderDetail
 
-参照`OrderDetail`结构
+见[DetailPage](#DetailPage)结构
 
 ## Data.Ext.SubsOrder.Item.Payment
 
