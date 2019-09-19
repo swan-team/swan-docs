@@ -6,7 +6,7 @@ sidebar: open_setting
 ---
 ## swan.openSetting
 
-**解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。
+**解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。swan.openSetting 可打开的控制面板权限详见[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open_authorize/#%E9%9C%80%E6%8E%88%E6%9D%83%E6%8E%A5%E5%8F%A3%E5%88%97%E8%A1%A8/)。
 
 **百度APP中扫码体验：**
 

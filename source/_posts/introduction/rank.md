@@ -78,7 +78,7 @@ sidebar: rank
         <img src="../../img/introduction/rank/rank09161.png"> 
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="../../img/introduction/rank/rank0919.png">
     </div>     
 </div>
 

@@ -4101,6 +4101,15 @@
                 link: /develop/function/tune_up/#通知退款状态
                 text: 通知退款状态
                 name: tune_up_通知退款状态 
+              -
+                link: /develop/function/tune_up/#下载订单对账单
+                text: 下载订单对账单
+                name: tune_up_下载订单对账单
+              -
+                link: /develop/function/tune_up/#下载资金账单
+                text: 下载资金账单
+                name: tune_up_下载资金账单
+
           -
             link: /develop/function/payfaq
             text: 支付常见问题
