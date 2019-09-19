@@ -4,7 +4,7 @@ header: develop
 nav: swan
 sidebar: compatibility_caniuse
 ---
- [canIUse](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-canIUse/)
+> 详细API内容参见[canIUse](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-canIUse/)。
 ### 兼容api新增属性或返回值
 开发者可以用以下代码判断 API 的参数或者返回值是否有新增：
 ```js
