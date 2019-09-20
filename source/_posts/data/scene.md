@@ -4,9 +4,14 @@ header: data
 nav: book
 sidebar: scene
 ---
-> 场景值可以通过<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/">App（）</a>生命周期函数中 onShow 事件中的 scene 字段获取。
 
-以下各场景和scene值的对应关系。
+场景值用来描述用户进入小程序的路径。
+
+开发者可以在 App 生命周期函数中 [onLaunch](/develop/framework/app_service_register/#onLaunch-Object-object) 或 [onShow](/develop/framework/app_service_register/#onShow-Object-object) 事件中的 scene 字段获取场景值。
+
+App 多次触发 onShow 事件，获得的场景值可能有所不同。如，首先通过自然搜索打开小程序，然后切至后台，然后通过信息流打开小程序，两次 onShow 事件获取的场景值不同。
+
+以下为各场景和scene值的对应关系。
 
 ## 自然搜索
 |场景|	scene值| 图例|
