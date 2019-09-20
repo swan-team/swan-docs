@@ -47,4 +47,4 @@ sidebar: develop
 ### 第二步：开发并上传小程序源代码包
 使用绑定开发小程序的开发者账号登录百度小程序开发者工具（IDE），并在开发者工具中按照正常的小程序开发流程进行代码开发和调试。开发完成后，在小程序包中增加ext.json文件，并在文件中增加extAppid字段（该appId请填写待提包的客户授权小程序id），点击发布即可完成授权小程序代码包提交。
 
-注意：您可通过开发者工具的命令行操作功能实现自动化操作，具体文档可参考：https://smartprogram.baidu.com/docs/develop/devtools/commandtool/。
+注意：您可通过开发者工具的命令行操作功能实现自动化操作，具体文档可参考：https://smartprogram.baidu.com/docs/develop/devtools/commandtool/ 。
