@@ -10,7 +10,7 @@ sidebar: move
 * 搬家工具：针对曾经开发过微信小程序的开发者，帮助您把微信小程序的部分代码迁移到百度智能小程序上。
 * 框架开发：支持 Taro、Mpvue、WePY、Okam 四种不同的框架，只写一套代码，通过编译即可生成在不同端（微信/百度/支付宝/字节跳动小程序、H5、React-Native 等）运行的代码。
 
-> 为了更好的了解开发者的需求，帮助您减少不必要的工作量，我们邀请您填写<a href="https://smartprogram.baidu.com/docs/html/third_party/acess-wenjuan/#/wenjuan/">智能小程序接入技术问卷调查</a>。
+
 
 
 ## 搬家工具
