@@ -9,7 +9,7 @@ sidebar: base_app_event
 ## swan.onPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](/develop/framework/app_service_register/) 的回调时机一致。
 
 **方法参数：** Function callback
 小程序要打开的页面不存在的事件回调函数。
