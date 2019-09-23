@@ -133,7 +133,7 @@ swan.exit(opts)
 
 > 从 [基础库 1.11.3](/game/tutorials/version/releaseLog/) 开始支持
 
-监听小游戏首次绘制上屏，此时loading页面会消失。
+监听小游戏首次绘制上屏，此时loading页面会消失，看到游戏首页，首帧绘制逻辑不能放在该监听内部，否则因为没有任何绘制导致该API不回调，造成死锁。
 
 ```js
 swan.onDisplay(function(res) {
