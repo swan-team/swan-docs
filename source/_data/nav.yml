@@ -20,35 +20,31 @@
                 text: 登录注册
                 name: enter_application
               -
-                link: /introduction/register_choosebodystyle
+                link: /introduction/register
                 text: 主体认证
-                name: register_choosebodystyle
+                name: register
                 sidebar:
                   -
-                    link: /introduction/register_choosebodystyle
+                    link: /introduction/register/#主体类型选择
                     text: 主体类型选择
-                    name: register_choosebodystyle 
+                    name: enter_register_主体类型选择
                   -
-                    link: /introduction/register_addbodyinfo
+                    link: /introduction/register/#主体信息填写
                     text: 主体信息填写
-                    name: register_addbodyinfo
+                    name: enter_register_主体信息填写
               -
                 link: /introduction/authenticity
                 text: 真实性认证
                 name: authenticity
                 sidebar:
                   -
-                    link: /introduction/authenticity 
-                    text: 真实性
-                    name: authenticity         
-                  -
-                    link: /introduction/authenticity_verification
+                    link: /introduction/authenticity/#验证
                     text: 验证
-                    name: authenticity_verification
+                    name: authenticity_验证
                   -
-                    link: /introduction/authenticity_charge
+                    link: /introduction/authenticity/#收费（小程序优惠通道）
                     text: 收费（小程序优惠通道）
-                    name: authenticity_charge
+                    name: authenticity_收费（小程序优惠通道）
         -
             link: /introduction/register_consummate
             text: 创建小程序
@@ -123,48 +119,44 @@
                 text: 接入信息流流量
                 name: accessfeed
                 sidebar:
-                  # -
-                  #   link: /introduction/accessfeed 
-                  #   text: 接入信息流流量
-                  #   name: accessfeed                 
                   -
-                    link: /introduction/accessfeed_publish
+                    link: /introduction/accessfeed/#小程序发布上线
                     text: 小程序发布上线
-                    name: accessfeed_publish
+                    name: accessfeed_小程序发布上线
                   -
-                    link: /introduction/accessfeed_push
+                    link: /introduction/accessfeed/#素材上传
                     text: 素材上传
-                    name: accessfeed_push
+                    name: accessfeed_素材上传
                   -
-                    link: /introduction/accessfeed_examine
+                    link: /introduction/accessfeed/#素材审核
                     text: 素材审核
-                    name: accessfeed_examine
+                    name: accessfeed_素材审核
                   -
-                    link: /introduction/accessfeed_suggest
+                    link: /introduction/accessfeed/#素材优化建议
                     text: 素材优化建议
-                    name: accessfeed_suggest
+                    name: accessfeed_素材优化建议
                   -
-                    link: /introduction/accessfeed_monitor
+                    link: /introduction/accessfeed/#流量效果监控
                     text: 流量效果监控
-                    name: accessfeed_monitor
+                    name: accessfeed_流量效果监控
 
               -
-                link: /introduction/auditinginfo_settled
+                link: /introduction/auditing_info
                 text: 信息流审核规范
-                name: auditinginfo_settled
+                name: auditing_info
                 sidebar:
                   -
-                    link: /introduction/auditinginfo_settled
+                    link: /introduction/auditing_info/#信息流流量入驻规范
                     text: 信息流流量入驻规范
-                    name: auditinginfo_settled
+                    name: auditing_info_信息流流量入驻规范
                   -
-                    link: /introduction/auditinginfo_examine
+                    link: /introduction/auditing_info/#信息流素材审核规范
                     text: 信息流素材审核规范
-                    name: auditinginfo_examine
+                    name: auditing_info_信息流素材审核规范
                   -
-                    link: /introduction/auditinginfo_vertical
+                    link: /introduction/auditing_info/#分垂类物料提交规范
                     text: 分垂类物料提交规范
-                    name: auditinginfo_vertical
+                    name: auditing_info_分垂类物料提交规范
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
@@ -182,50 +174,50 @@
                 text: 接入自然搜索结果
                 name: rank
                 sidebar:
-                  # -
-                  #   link: /introduction/rank 
-                  #   text: 自然搜索
-                  #   name: rank 
                   -
-                    link: /introduction/rank_pageinfo
+                    link: /introduction/rank/#开启Web化能力
+                    text: 开启Web化能力
+                    name: rank_开启Web化能力
+                  -
+                    link: /introduction/rank/#设置页面基础信息
                     text: 设置页面基础信息
-                    name: rank_pageinfo
+                    name: rank_设置页面基础信息
                   -
-                    link: /introduction/rank_id
+                    link: /introduction/rank/#绑定熊掌ID
                     text: 绑定熊掌ID
-                    name: rank_id
+                    name: rank_绑定熊掌ID
                   -
-                    link: /introduction/rank_h5
+                    link: /introduction/rank/#关联H5站点
                     text: 关联H5站点
-                    name: rank_h5
+                    name: rank_关联H5站点
                   -
-                    link: /introduction/rank_setimage
+                    link: /introduction/rank/#搜索结果出图配置
                     text: 搜索结果出图配置
-                    name: rank_setimage
+                    name: rank_搜索结果出图配置             
                   -
-                    link: /introduction/rank_data
+                    link: /introduction/rank/#数据提交如何选择
                     text: 数据提交如何选择
-                    name: rank_data
+                    name: rank_数据提交如何选择
                   -
-                    link: /introduction/rank_url
+                    link: /introduction/rank/#配置URL适配规则
                     text: 配置URL适配规则
-                    name: rank_url
+                    name: rank_配置URL适配规则
                   -
-                    link: /introduction/rank_sitemap
+                    link: /introduction/rank/#提交Sitemap
                     text: 提交Sitemap
-                    name: rank_sitemap
+                    name: rank_提交Sitemap
                   -
-                    link: /introduction/rank_api
+                    link: /introduction/rank/#小程序API提交
                     text: 小程序API提交
-                    name: rank_api
+                    name: rank_小程序API提交
                   -
-                    link: /introduction/rank_robots 
+                    link: /introduction/rank/#robots协议介绍
                     text: robots协议介绍
-                    name: rank_robots 
+                    name: rank_robots协议介绍
                   -
-                    link: /introduction/rank_faq
+                    link: /introduction/rank/#搜索流量接入FAQ
                     text: 搜索流量接入FAQ
-                    name: rank_faq
+                    name: rank_搜索流量接入FAQ
         -
             link: /introduction/baijiahao
             text: 百家号流量接入
@@ -503,90 +495,90 @@
                 text: 开发智能小程序
                 name: startdevelop
               -
-               
+                link: /develop/tutorial/process
                 text: 全局配置
                 name: process
                 sidebar:
                     -
-                      link: /develop/tutorial/process 
+                      link: /develop/tutorial/process/#配置-app-json-文件
                       text: 配置 app.json 文件
-                      name: process 
+                      name: process_配置-app-json-文件
                     -
-                      link: /develop/tutorial/processjs
+                      link: /develop/tutorial/process/#配置-app-js-文件
                       text: 配置 app.js 文件
-                      name: processjs
+                      name: process_配置-app-js-文件
               -
-                
+                link: /develop/tutorial/dev
                 text: 页面开发
                 name: dev
                 sidebar:
                     -
-                      link: /develop/tutorial/dev 
+                      link: /develop/tutorial/dev/#开发-swan-文件
                       text: 开发 .swan 文件
-                      name: dev 
+                      name: dev_开发-swan-文件
                     -
-                      link: /develop/tutorial/devcss
+                      link: /develop/tutorial/dev/#开发-css-文件
                       text: 开发 .css 文件
-                      name: devcss
+                      name: dev_开发-css-文件
                     -
-                      link: /develop/tutorial/devjs
+                      link: /develop/tutorial/dev/#开发-js-文件
                       text: 开发 .js 文件
-                      name: devjs
+                      name: dev_开发-js-文件
                     -
-                      link: /develop/tutorial/devjson
+                      link: /develop/tutorial/dev/#开发-json-文件
                       text: 开发 .json 文件
-                      name: devjson
+                      name: dev_开发-json-文件
               -
-               
+                link: /develop/tutorial/function
                 text: 功能开发
                 name: function
                 sidebar:
                     -
-                      link: /develop/tutorial/function 
+                      link: /develop/tutorial/function/#页面路由
                       text: 页面路由
-                      name: function 
+                      name: function_页面路由
                     -
-                      link: /develop/tutorial/function_page
+                      link: /develop/tutorial/function/#Page
                       text: Page
-                      name: function_page
+                      name: function_Page
                     -
-                      link: /develop/tutorial/function_component
+                      link: /develop/tutorial/function/#组件
                       text: 组件
-                      name: function_component
+                      name: function_组件
                     -
-                      link: /develop/tutorial/function_api
+                      link: /develop/tutorial/function/#API
                       text: API
-                      name: function_api
+                      name: function_API
               -
                 link: /develop/tutorial/publish
                 text: 调试预览发布
                 name: pulish
-                # sidebar:
-                #     -
-                #       link: /develop/tutorial/publish/#调试
-                #       text: 调试
-                #       name: publish_调试
-                #     -
-                #       link: /develop/tutorial/publish/#预览
-                #       text: 预览
-                #       name: publish_预览
-                #     -
-                #       link: /develop/tutorial/publish/#发布
-                #       text: 发布
-                #       name: publish_发布
+                sidebar:
+                    -
+                      link: /develop/tutorial/publish/#调试
+                      text: 调试
+                      name: publish_调试
+                    -
+                      link: /develop/tutorial/publish/#预览
+                      text: 预览
+                      name: publish_预览
+                    -
+                      link: /develop/tutorial/publish/#发布
+                      text: 发布
+                      name: publish_发布
               -
-                
+                link: /develop/tutorial/move
                 text: 开发解决方案
                 name: move
                 sidebar:
                     -
-                      link: /develop/tutorial/move 
+                      link: /develop/tutorial/move/#搬家工具
                       text: 搬家工具
-                      name: move 
+                      name: move_搬家工具
                     -
-                      link: /develop/tutorial/frameworkdevelop
+                      link: /develop/tutorial/move/#框架开发
                       text: 框架开发
-                      name: frameworkdevelop
+                      name: move_框架开发
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -602,97 +594,97 @@
                 text: 方法说明
                 name: app_service
               -
-                
+                link: /develop/framework/app_service_register
                 text: 注册 App
                 name: app_service_register
                 sidebar:
                   -
-                    link: /develop/framework/app_service_register 
+                    link: /develop/framework/app_service_register/#App
                     text: App
-                    name: app_service_register 
+                    name: app_service_register_App
                   -
-                    link: /develop/framework/app_service_registergetapp
+                    link: /develop/framework/app_service_register/#getApp
                     text: getApp
-                    name: app_service_registergetapp
+                    name: app_service_register_getApp
               -
-                 
+                link: /develop/framework/app_service_page
                 text: 注册页面
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page 
+                    link: /develop/framework/app_service_page/#参数说明
                     text: 参数说明
-                    name: app_service_page 
+                    name: app_service_page_参数说明
                   -
-                    link: /develop/framework/app_service_pagedata
+                    link: /develop/framework/app_service_page/#初始化数据
                     text: 初始化数据
-                    name: app_service_pagedata
+                    name: app_service_page_初始化数据
                   -
-                    link: /develop/framework/app_service_pagelife
+                    link: /develop/framework/app_service_page/#生命周期函数
                     text: 生命周期函数
-                    name: app_service_pagelife
+                    name: app_service_page_生命周期函数
                   -
-                    link: /develop/framework/app_service_pagefunction
+                    link: /develop/framework/app_service_page/#页面事件处理函数
                     text: 页面事件处理函数
-                    name: app_service_pagefunction
+                    name: app_service_page_页面事件处理函数
                   -
-                    link: /develop/framework/app_service_pagecomponent
+                    link: /develop/framework/app_service_page/#组件事件处理函数
                     text: 组件事件处理函数
-                    name: app_service_pagecomponent
+                    name: app_service_page_组件事件处理函数
                   -
-                    link: /develop/framework/app_service_page_setData 
+                    link: /develop/framework/app_service_page/#setData-机制
                     text: setData 机制
-                    name: app_service_page_setData 
+                    name: app_service_page_setData-机制
               -
-                 
+                link: /develop/framework/app_service_route
                 text: 页面路由
                 name: app_service_route
                 sidebar:
                   -
-                    link: /develop/framework/app_service_route 
+                    link: /develop/framework/app_service_route/#页面栈
                     text: 页面栈
-                    name: app_service_route 
+                    name: app_service_route_页面栈
                   -
-                    link: /develop/framework/app_service_routegetCurrentPages
+                    link: /develop/framework/app_service_route/#getCurrentPages
                     text: getCurrentPages
-                    name: app_service_routegetCurrentPages
+                    name: app_service_route_getCurrentPages
                   -
-                    link: /develop/framework/app_service_routestyle
+                    link: /develop/framework/app_service_route/#路由方式
                     text: 路由方式
-                    name: app_service_routestyle
+                    name: app_service_route_路由方式
                   -
-                    link: /develop/framework/app_service_routefile
+                    link: /develop/framework/app_service_route/#文件作用域
                     text: 文件作用域
-                    name: app_service_routefile
+                    name: app_service_route_文件作用域
                   -
-                    link: /develop/framework/app_service_routemodule
+                    link: /develop/framework/app_service_route/#模块化
                     text: 模块化
-                    name: app_service_routemodule
+                    name: app_service_route_模块化
 
               -
-                 
+                link: /develop/framework/app_service_aop
                 text: AOP机制
                 name: app_service_aop
                 sidebar:
                   -
-                    link: /develop/framework/app_service_aop 
+                    link: /develop/framework/app_service_aop/#AOP
                     text: AOP说明
-                    name: app_service_aop 
+                    name: app_service_aop_App.aop
                   -
-                    link: /develop/framework/app_service_aopapp-after
+                    link: /develop/framework/app_service_aop/#App-after
                     text: App.after
-                    name: app_service_aopapp-after
+                    name: app_service_aop_App.after
                   -
-                    link: /develop/framework/app_service_aoppage-after
+                    link: /develop/framework/app_service_aop/#Page-after
                     text: Page.after
-                    name: app_service_aoppage-after
+                    name: app_service_aop_Page.after
                   -
-                    link: /develop/framework/app_service_aopswan-after
+                    link: /develop/framework/app_service_aop/#swan-after
                     text: swan.after
-                    name: app_service_aopswan-after
+                    name: app_service_aop_swan.after
 
         -
-            
+            link: /develop/framework/view
             text: 视图层
             name: view
             sidebar:
@@ -732,7 +724,7 @@
 
 
         -
-          
+            link: /develop/framework/custom-component
             text: 自定义组件
             name: custom-component
             sidebar:
@@ -773,7 +765,7 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
-            
+            link: /develop/framework/dynamiclib_use
             text: 动态库
             name: dynamiclib_use
             sidebar:
@@ -848,145 +840,145 @@
                 text: 原生组件说明
                 name: native
               -
-                
+                link: /develop/component/view
                 text: 视图容器
-                name: view_view
+                name: view
                 sidebar:
                   -
-                    link: /develop/component/view_view
+                    link: /develop/component/view/#view-视图容器
                     text: view 视图容器
-                    name: view_view 
+                    name: view_view-视图容器
                   -
-                    link: /develop/component/view_scroll-view 
+                    link: /develop/component/view/#scroll-view-可滚动视图区域
                     text: scroll-view 可滚动视图区域
-                    name: view_scroll-view
+                    name: view_scroll-view-可滚动视图区域
                   -
-                    link: /develop/component/view_swiper 
+                    link: /develop/component/view/#swiper-滑块视图容器
                     text: swiper 滑块视图容器
-                    name: view_swiper 
+                    name: view_swiper-滑块视图容器
                   -
-                    link: /develop/component/view_swiper-item 
+                    link: /develop/component/view/#swiper-item-滑块视图容器子项
                     text: swiper-item 滑块视图容器子项
-                    name: view_swiper-item
+                    name: view_swiper-item-滑块视图容器子项
                   -
-                    link: /develop/component/view_movable-view 
+                    link: /develop/component/view/#movable-view-可移动视图容器
                     text: movable-view 可移动视图容器
-                    name: view_movable-view                     
+                    name: view_movable-view-可移动视图容器                    
                   -
-                    link: /develop/component/view_movable-area
+                    link: /develop/component/view/#movable-area-可移动视图区域
                     text: movable-area 可移动视图区域
-                    name: view_movable-area
+                    name: view_movable-area-可移动视图区域
 
                   -
-                    link: /develop/component/view_cover-view 
+                    link: /develop/component/view/#cover-view-文本视图
                     text: cover-view 文本视图
-                    name: view_cover-view 
+                    name: view_cover-view-文本视图
                   -
-                    link: /develop/component/view_cover-image 
+                    link: /develop/component/view/#cover-image-图片视图
                     text: cover-image 图片视图
-                    name: view_cover-image 
+                    name: view_cover-image-图片视图
         -
             sidebar:
               -
-                 
+                link: /develop/component/base
                 text:  基础内容
-                name: base_text 
+                name: base
                 sidebar:
                   -
-                    link: /develop/component/base_text 
+                    link: /develop/component/base/#text-文本
                     text:  text 文本
-                    name: base_text              
+                    name: base_text-文本                  
                   -
-                    link: /develop/component/base_icon 
+                    link: /develop/component/base/#icon-图标
                     text:  icon 图标
-                    name: base_icon 
+                    name: base_icon-图标
                   -
-                    link: /develop/component/base_progress 
+                    link: /develop/component/base/#progress-进度条
                     text:  progress 进度条
-                    name: base_progress
+                    name: base_progress-进度条
                   -
-                    link: /develop/component/base_rich-text 
+                    link: /develop/component/base/#rich-text-富文本
                     text:  rich-text 富文本
-                    name: base_rich-text
+                    name: base_rich-text-富文本
 
                   -
-                    link: /develop/component/base_animation-view-Lottie 
+                    link: /develop/component/base/#animation-view-Lottie-动画
                     text:  animation-view Lottie 动画
-                    name: base_animation-view-Lottie 
+                    name: base_animation-view-Lottie-动画
         -
             sidebar:
               -
-               
+                link: /develop/component/formlist
                 text: 表单组件
-                name: formlist_button 
+                name: formlist
                 sidebar:
                   -
-                    link: /develop/component/formlist_button 
+                    link: /develop/component/formlist/#button-按钮
                     text: button 按钮
-                    name: formlist_button 
+                    name: formlist_button-按钮
                   -
-                    link: /develop/component/formlist_form 
+                    link: /develop/component/formlist/#form-表单
                     text: form 表单
-                    name: formlist_form 
+                    name: formlist_form-表单  
                   -
-                    link: /develop/component/formlist_label 
+                    link: /develop/component/formlist/#label-表单组件标签
                     text: label 表单组件标签
-                    name: formlist_label 
+                    name: formlist_label-表单组件标签    
                   -
-                    link: /develop/component/formlist_input 
+                    link: /develop/component/formlist/#input-输入框
                     text: input 输入框
-                    name: formlist_input 
+                    name: formlist_input-输入框
                   -
-                    link: /develop/component/formlist_textarea 
+                    link: /develop/component/formlist/#textarea-多行输入框
                     text: textarea 多行输入框
-                    name: formlist_textarea 
+                    name: formlist_textarea-多行输入框
                   -
-                    link: /develop/component/formlist_checkbox 
+                    link: /develop/component/formlist/#checkbox-多项选择器
                     text: checkbox 多项选择器
-                    name: formlist_checkbox 
+                    name: formlist_checkbox-多项选择器
                   -
-                    link: /develop/component/formlist_checkbox-group 
+                    link: /develop/component/formlist/#checkbox-group-多项选择器组
                     text: checkbox-group 多项选择器组
-                    name: formlist_checkbox-group 
+                    name: formlist_checkbox-group-多项选择器组
                   -
-                    link: /develop/component/formlist_radio 
+                    link: /develop/component/formlist/#radio-单项选择器
                     text: radio 单项选择器
-                    name: formlist_radio 
+                    name: formlist_radio-单项选择器
                   -
-                    link: /develop/component/formlist_radio-group 
+                    link: /develop/component/formlist/#radio-group-单项选择器组
                     text: radio-group 单项选择器组
-                    name: formlist_radio-group 
+                    name: formlist_radio-group-单项选择器组
                   -
-                    link: /develop/component/formlist_switch 
+                    link: /develop/component/formlist/#switch-开关选择器
                     text: switch 开关选择器
-                    name: formlist_switch 
+                    name: formlist_switch-开关选择器
                   -
-                    link: /develop/component/formlist_slider 
+                    link: /develop/component/formlist/#slider-滑动选择器
                     text: slider 滑动选择器
-                    name: formlist_slider 
+                    name: formlist_slider-滑动选择器
                   -
-                    link: /develop/component/formlist_picker-view 
+                    link: /develop/component/formlist/#picker-view-滚动选择器
                     text: picker-view 滚动选择器
-                    name: formlist_picker-view 
+                    name: formlist_picker-view-滚动选择器
                   -
-                    link: /develop/component/formlist_picker-view-column 
+                    link: /develop/component/formlist/#picker-view-column-滚动选择器子项
                     text: picker-view-column 滚动选择器子项
-                    name: formlist_picker-view-column  
+                    name: formlist_picker-view-column-滚动选择器子项
                   -
-                    link: /develop/component/formlist_picker 
+                    link: /develop/component/formlist/#picker-底部弹起的滚动选择器
                     text: picker 底部弹起的滚动选择器 
-                    name: formlist_picker 
+                    name: formlist_picker-底部弹起的滚动选择器
         -
             sidebar:
               -
-             
+                link: /develop/component/nav
                 text: 导航
                 name: nav
                 sidebar:
                   -
-                    link: /develop/component/nav 
+                    link: /develop/component/nav/#navigator-页面导航
                     text: navigator 页面导航
-                    name: nav 
+                    name: nav_navigator-页面导航
                   # -
                   #   link: /develop/component/nav/#tabs-导航
                   #   text: tabs 导航
@@ -998,83 +990,83 @@
         -
             sidebar:
               -
-                  
+                  link: /develop/component/media
                   text: 媒体组件
                   name: media
                   sidebar:
                     -
-                      link: /develop/component/media_image 
+                      link: /develop/component/media/#image-图片
                       text: image 图片
-                      name: media_image                  
+                      name: media_image-图片                    
                     -
-                      link: /develop/component/media_audio 
+                      link: /develop/component/media/#audio-音频
                       text: audio 音频
-                      name: media_audio 
+                      name: media_audio-音频
                     -
-                      link: /develop/component/media_video 
+                      link: /develop/component/media/#video-视频
                       text: video 视频
-                      name: media_video 
+                      name: media_video-视频
                     -
-                      link: /develop/component/media_camera 
+                      link: /develop/component/media/#camera-相机
                       text: camera 相机
-                      name: media_camera 
+                      name: media_camera-相机
                     -
-                      link: /develop/component/media_ar-camera 
+                      link: /develop/component/media/#ar-camera-AR相机
                       text: ar-camera AR相机
-                      name: media_ar-camera 
+                      name: media_ar-camera-AR相机
                     -
-                      link: /develop/component/media_live-player 
+                      link: /develop/component/media/#live-player-实时视频播放器
                       text: live-player 实时视频播放器
-                      name: media_live-player 
+                      name: media_live-player-实时视频播放器
 
         -
             sidebar:
               -
-                 
+                link: /develop/component/map
                 text: 地图
                 name: map
                 sidebar:
                   -
-                    link: /develop/component/map 
+                    link: /develop/component/map/#map-地图
                     text: map 地图
-                    name: map 
+                    name: map-地图
         -
             sidebar:
                 -
-                  
+                  link: /develop/component/canvas
                   text: 画布
                   name: canvas
                   sidebar:
                     -
-                      link: /develop/component/canvas 
+                      link: /develop/component/canvas/#canvas-画布
                       text: canvas 画布
-                      name: canvas 
+                      name: canvas_canvas-画布
         -
             sidebar:
                 -
-                  
+                  link: /develop/component/open
                   text: 开放能力
                   name: open
                   sidebar:
                     -
-                      link: /develop/component/open 
+                      link: /develop/component/open/#open-data-开放数据
                       text: open-data 开放数据
-                      name: open 
+                      name: open_open-data-开放数据
                     -
-                      link: /develop/component/open_web-view 
+                      link: /develop/component/open/#web-view-网页容器
                       text: web-view 网页容器
-                      name: open_web-view 
+                      name: open_web-view-网页容器
         -
             sidebar:
                 -
-                  
+                  link: /develop/component/ad
                   text: 广告
                   name: ad
                   sidebar:
                     -
-                      link: /develop/component/ad 
+                      link: /develop/component/ad/#ad-广告
                       text: ad 广告
-                      name: ad 
+                      name: ad_ad-广告
 
     -
       link: /develop/api/api
@@ -3087,13 +3079,7 @@
                   -
                     link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
-                    name: open_userinfo_swan-getSystemRiskInfo   
-        -
-            sidebar:
-              -
-                link: /develop/api/errorcode
-                text: 错误码
-                name: errorcode                   
+                    name: open_userinfo_swan-getSystemRiskInfo
     -
       link: /develop/serverapi
       text: 服务端 API
@@ -3487,78 +3473,79 @@
             -
                 text: 云开发能力介绍
                 name: cloud_essentials
+                link: /develop/cloud/cloud_essentials 
                 sidebar:
                   -
                     text: 云数据库
-                    name: cloud_essentials 
-                    link: /develop/cloud/cloud_essentials 
+                    name: cloud_essentials_云数据库
+                    link: /develop/cloud/cloud_essentials/#云数据库
                   -
                     text: 云存储
-                    name: cloud_essentials_storage
-                    link: /develop/cloud/cloud_essentials_storage
+                    name: cloud_essentials_云存储
+                    link: /develop/cloud/cloud_essentials/#云存储
                   -
                     text: 云函数
-                    name: cloud_essentials_function
-                    link: /develop/cloud/cloud_essentials_function
+                    name: cloud_essentials_云函数
+                    link: /develop/cloud/cloud_essentials/#云函数
                   -
                     text: 用户集成
-                    name: cloud_essentials_user
-                    link: /develop/cloud/cloud_essentials_user
+                    name: cloud_essentials_用户集成
+                    link: /develop/cloud/cloud_essentials/#用户集成
             -
               text: 云开发控制台
               name: console
- 
+              link: /develop/cloud/console
               sidebar:
                 -
                     text: 概览
-                    name: console
-                    link: /develop/cloud/console 
+                    name: console_概览
+                    link: /develop/cloud/console/#概览
                 -
                     text: 云数据库
-                    name: console_data
-                    link: /develop/cloud/console_data
+                    name: console_云数据库
+                    link: /develop/cloud/console/#云数据库
                 -
                     text: 云存储
-                    name: console_storage
-                    link: /develop/cloud/console_storage
+                    name: console_云存储
+                    link: /develop/cloud/console/#云存储
                 -
                     text: 云函数
-                    name: console_function
-                    link: /develop/cloud/console_function
+                    name: console_云函数
+                    link: /develop/cloud/console/#云函数
         -
 
           sidebar:
               -
                 text: 开发指南
                 name: guide
- 
+                link: /develop/cloud/guide 
                 sidebar:
 
                   -
                     text: 编辑器中的云函数操作
-                    name: cloud_function_guide_editor
-                    link: /develop/cloud/guide/editor
+                    name: guide_编辑器中的云函数操作
+                    link: /develop/cloud/guide/#编辑器中的云函数操作
                   -
                     text: 环境
-                    name: guide 
-                    link: /develop/cloud/guide/guide 
+                    name: guide_环境
+                    link: /develop/cloud/guide/#环境
                   -
                     text: 云函数开发指南
-                    name: guide_function
-                    link: /develop/cloud/guide/guide_function          
+                    name: guide_云函数开发指南
+                    link: /develop/cloud/guide/#云函数开发指南               
                       
                   -
                     text: 数据库开发常见问题
-                    name:  guide_databasefaq
-                    link: /develop/cloud/guide/guide_databasefaq
+                    name:  guide_数据库开发常见问题
+                    link: /develop/cloud/guide/#数据库开发常见问题
                   -
                     text: 用户集成相关问题
-                    name:  guide_user
-                    link: /develop/cloud/guide/guide_user
+                    name:  guide_用户集成相关问题
+                    link: /develop/cloud/guide/#用户集成相关问题
                   -
                     text: 云开发配额
-                    name: guide_dev
-                    link: /develop/cloud/guide/guide_dev
+                    name: guide_云开发配额
+                    link: /develop/cloud/guide/#云开发配额
         -
             text: 小程序端 API 文档
             name: /develop/cloud/cloud_init
@@ -3566,48 +3553,48 @@
               -
                   text: 初始化
                   name: cloud_init 
- 
+                  link: /develop/cloud/cloud_init 
                   sidebar:
                     - 
                       text: swan.cloud.init
-                      name: cloud_init 
-                      link: /develop/cloud/cloud_init 
+                      name: cloud_init_swan-cloud-init
+                      link: /develop/cloud/cloud_init/#swan-cloud-init
               -
                   text: 云函数
                   name: cloud_functions
-      
+                  link: /develop/cloud/cloud_functions
                   sidebar: 
                     -
                         text: swan.cloud.callFunction
-                        name: cloud_functions 
-                        link: /develop/cloud/cloud_functions 
+                        name: cloud_callFunction
+                        link: /develop/cloud/cloud_functions/#swan-cloud-callFunction
               -
                   text: 存储
                   name: cloud_storage
-                   
+                  link: /develop/cloud/cloud_storage
                   sidebar:  
                     -
                         text: swan.cloud.uploadFile
                         name: cloud_uploadFile
-                        link: /develop/cloud/cloud_uploadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-uploadFile
                     -
                         text: swan.cloud.downloadFile
                         name: cloud_downloadFile
-                        link: /develop/cloud/cloud_downloadFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-downloadFile
                     -
                         text: swan.cloud.deleteFile
                         name: cloud_deleteFile
-                        link: /develop/cloud/cloud_deleteFile
+                        link: /develop/cloud/cloud_storage/#swan-cloud-deleteFile
               -
                   text: 数据库
                   name: cloud_database
-                  
+                  link: /develop/cloud/cloud_database
                   sidebar:
                     # database
-                    # -
-                    #     text: database
-                    #     name: cloud_database
-                    #     link: /develop/cloud/cloud_database 
+                    -
+                        text: database
+                        name: cloud_database
+                        link: /develop/cloud/cloud_database/swan-cloud-database
                     
                     # collection
                     -
@@ -3770,61 +3757,56 @@
             -
               text: 云数据库
               name: cloud_server_sdk_database
-             
+              link: /develop/cloud/server_sdk/database
               sidebar: 
                 -
                   text: cloud.database
                   name: cloud_server_sdk_database_cloud.database
-                  link: /develop/cloud/server_sdk/database 
+                  link: /develop/cloud/server_sdk/database/#cloud-database
                 -
-                  text: Collection 
-                  name: collection  
-                  link: /develop/cloud/server_sdk/collection 
-                  sidebar:                              
-                    -
-                      text: Collection.add
-                      name: collection_Collection.add
-                      link: /develop/cloud/server_sdk/collection/#Collection-add
-                    -
-                      text: Collection.count
-                      name: collection_Collection.count
-                      link: /develop/cloud/server_sdk/collection/#Collection-count
-                    -
-                      text: Collection.doc
-                      name: collection_Collection.doc
-                      link: /develop/cloud/server_sdk/collection/#Collection-doc
-                    -
-                      text: Collection.field
-                      name: collection_Collection.field
-                      link: /develop/cloud/server_sdk/collection/#Collection-field
-                    -
-                      text: Collection.get
-                      name: collection_Collection.get
-                      link: /develop/cloud/server_sdk/collection/#Collection-get
-                    -
-                      text: Collection.limit
-                      name: collection_Collection.limit
-                      link: /develop/cloud/server_sdk/collection/#Collection-limit
-                    -
-                      text: Collection.orderBy
-                      name: collection_Collection.orderBy
-                      link: /develop/cloud/server_sdk/collection/#Collection-orderBy
-                    -
-                      text: Collection.remove
-                      name: collection_Collection.remove
-                      link: /develop/cloud/server_sdk/collection/#Collection-remove
-                    -
-                      text: Collection.skip
-                      name: collection_Collection.skip
-                      link: /develop/cloud/server_sdk/collection/#Collection-skip
-                    -
-                      text: Collection.update
-                      name: collection_Collection.update
-                      link: /develop/cloud/server_sdk/collection/#Collection-update
-                    -
-                      text: Collection.where
-                      name: collection_Collection.where
-                      link: /develop/cloud/server_sdk/collection/#Collection-where
+                  text: Collection.add
+                  name: cloud_server_sdk_database_Collection.add
+                  link: /develop/cloud/server_sdk/database/#Collection-add
+                -
+                  text: Collection.count
+                  name: cloud_server_sdk_database_Collection.count
+                  link: /develop/cloud/server_sdk/database/#Collection-count
+                -
+                  text: Collection.doc
+                  name: cloud_server_sdk_database_Collection.doc
+                  link: /develop/cloud/server_sdk/database/#Collection-doc
+                -
+                  text: Collection.field
+                  name: cloud_server_sdk_database_Collection.field
+                  link: /develop/cloud/server_sdk/database/#Collection-field
+                -
+                  text: Collection.get
+                  name: cloud_server_sdk_database_Collection.get
+                  link: /develop/cloud/server_sdk/database/#Collection-get
+                -
+                  text: Collection.limit
+                  name: cloud_server_sdk_database_Collection.limit
+                  link: /develop/cloud/server_sdk/database/#Collection-limit
+                -
+                  text: Collection.orderBy
+                  name: cloud_server_sdk_database_Collection.orderBy
+                  link: /develop/cloud/server_sdk/database/#Collection-orderBy
+                -
+                  text: Collection.remove
+                  name: cloud_server_sdk_database_Collection.remove
+                  link: /develop/cloud/server_sdk/database/#Collection-remove
+                -
+                  text: Collection.skip
+                  name: cloud_server_sdk_database_Collection.skip
+                  link: /develop/cloud/server_sdk/database/#Collection-skip
+                -
+                  text: Collection.update
+                  name: cloud_server_sdk_database_Collection.update
+                  link: /develop/cloud/server_sdk/database/#Collection-update
+                -
+                  text: Collection.where
+                  name: cloud_server_sdk_database_Collection.where
+                  link: /develop/cloud/server_sdk/database/#Collection-where
                 -
                   text: Database.collection
                   name: cloud_server_sdk_database_Database.collection
@@ -3889,12 +3871,12 @@
             -
               text: 云函数
               name: cloud_server_sdk_function
-              
+              link: /develop/cloud/server_sdk/function
               sidebar: 
                 -
                   text: cloud.callFunction
-                  name: function 
-                  link: /develop/cloud/server_sdk/function 
+                  name: cloud_server_sdk_function_callFunction
+                  link: /develop/cloud/server_sdk/function/#cloud-callFunction
 
     # -
     #       text: 插件
@@ -4087,46 +4069,46 @@
             text: 密钥生成
             name: keygen_v2
           -
- 
+            link: /develop/function/tune_up
             text: 百度收银台接口
             name: tune_up
             sidebar:
               -
-                link: /develop/function/tune_up 
+                link: /develop/function/tune_up/#调起百度收银台
                 text: 调起百度收银台
-                name: tune_up 
+                name: tune_up_调起百度收银台
               -
-                link: /develop/function/tune_up_notice
+                link: /develop/function/tune_up/#通知支付状态
                 text: 通知支付状态
-                name: tune_up_notice
+                name: tune_up_通知支付状态
               -
-                link: /develop/function/tune_up_queryorderdetail
+                link: /develop/function/tune_up/#支付状态查询
                 text: 支付状态查询
-                name: tune_up_queryorderdetail
+                name: tune_up_支付状态查询
               -
-                link: /develop/function/tune_up_rest
+                link: /develop/function/tune_up/#取消核销
                 text: 取消核销
-                name: tune_up_rest
+                name: tune_up_取消核销
               -
-                link: /develop/function/tune_up_applyorderrefund
+                link: /develop/function/tune_up/#申请退款
                 text: 申请退款
-                name: tune_up_applyorderrefund
+                name: tune_up_申请退款
               -
-                link: /develop/function/tune_up_examine
+                link: /develop/function/tune_up/#请求业务方退款审核
                 text: 请求业务方退款审核
-                name: tune_up_examine
+                name: tune_up_请求业务方退款审核
               -
-                link: /develop/function/tune_up_drawback
+                link: /develop/function/tune_up/#通知退款状态
                 text: 通知退款状态
-                name: tune_up_drawback
+                name: tune_up_通知退款状态 
               -
-                link: /develop/function/tune_up_orderBill
+                link: /develop/function/tune_up/#下载订单对账单
                 text: 下载订单对账单
-                name: tune_up_orderBill
+                name: tune_up_下载订单对账单
               -
-                link: /develop/function/tune_up_capitaBill
+                link: /develop/function/tune_up/#下载资金账单
                 text: 下载资金账单
-                name: tune_up_capitaBill
+                name: tune_up_下载资金账单
 
           -
             link: /develop/function/payfaq
@@ -4162,25 +4144,25 @@
               name: compatibility
               sidebar:
               -
-                link: /develop/swan/compatibility_compare
+                link: /develop/swan/compatibility/#版本号比较
                 text: 版本号比较
-                name: compatibility_compare
+                name: concept_版本号比较
               -
-                link: /develop/swan/compatibility_api
+                link: /develop/swan/compatibility/#API存在判断
                 text: API存在判断
-                name: compatibility_api
+                name: concept_API存在判断
               -
-                link: /develop/swan/compatibility_caniuse
+                link: /develop/swan/compatibility/#canIUse
                 text: canIUse
-                name: compatibility__caniuse
+                name: concept_canIUse
               -
-                link: /develop/swan/compatibility_diff
+                link: /develop/swan/compatibility/#Android-与-iOS-差异
                 text: Android 与 iOS 差异
-                name: compatibility__diff
+                name: concept_Android-与-iOS-差异
               -
-                link: /develop/swan/compatibility_version
+                link: /develop/swan/compatibility/#基础库最低版本设置
                 text: 基础库最低版本设置
-                name: compatibility_version
+                name: concept_基础库最低版本设置
 
     -
       link: /develop/faq
@@ -4238,62 +4220,62 @@
             name: concept
             sidebar:
               -
-                link: /data/concept_survey
+                link: /data/concept/#应用概况
                 text: 应用概况
-                name: concept_survey
+                name: concept_应用概况
               -
-                link: /data/concept_useranalysis
+                link: /data/concept/#用户分析
                 text: 用户分析
-                name: concept_useranalysis
+                name: concept_用户分析
               -
-                link: /data/concept_useanalysis
+                link: /data/concept/#使用分析
                 text: 使用分析
-                name: concept_useanalysis
+                name: concept_使用分析
               -
-                link: /data/concept_source
+                link: /data/concept/#来源分析
                 text: 来源分析
-                name: concept_source
+                name: concept_来源分析
               -
-                link: /data/concept_retain
+                link: /data/concept/#留存分析
                 text: 留存分析
-                name: concept_retain
+                name: concept_留存分析
               -
-                link: /data/concept_conversion
+                link: /data/concept/#转化分析
                 text: 转化分析
-                name: concept_conversion
+                name: concept_转化分析
           -
             link: /data/custom
             text: 自定义事件分析
             name: custom
           -
-            link: /data/target_user
+            link: /data/guideline
             text: 指标说明
-            name: target_user
+            name: guideline
             sidebar:
               -
-                link: /data/target_user
+                link: /data/guideline/#用户类指标
                 text: 用户类指标
-                name: target_user
+                name: guideline_用户类指标
               -
-                link: /data/target_active
+                link: /data/guideline/#活跃类指标
                 text: 活跃类指标
-                name: target_active
+                name: guideline_活跃类指标
               -
-                link: /data/target_retain
+                link: /data/guideline/#留存类指标
                 text: 留存类指标
-                name: target_retain
+                name: guideline_留存类指标
               -
-                link: /data/target_page
+                link: /data/guideline/#页面类指标
                 text: 页面类指标
-                name: target_page
+                name: guideline_页面类指标
               -
-                link: /data/target_habit
+                link: /data/guideline/#使用习惯类指标
                 text: 使用习惯类指标
-                name: target_habit
+                name: guideline_使用习惯类指标
               -
-                link: /data/target_data
+                link: /data/guideline/#数据分析维度
                 text: 数据分析维度
-                name: target_data
+                name: guideline_数据分析维度
     -
       link: /data/performance-point
       text: 统计方法

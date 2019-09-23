@@ -404,7 +404,9 @@
                 success: function (res) {
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
+                    var docMenu = $html.find('#m-doc-menu-wrapper').html();
                     $('#article-main-content').html(article);
+                    $('#m-doc-menu-wrapper').html(docMenu);
                     // $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
                     if ($('header').hasClass('m-doc-header-hide')) {
                         $('header').removeClass('m-doc-header-hide');
