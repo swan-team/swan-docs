@@ -8,7 +8,7 @@ sidebar: formlist_radio-group
 
  
 
-**解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](https://smartprogram.baidu.com/docs/develop/component/formlist/#radio/) 相同。
+**解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](/develop/component/formlist_radio/) 相同。
 
 
 

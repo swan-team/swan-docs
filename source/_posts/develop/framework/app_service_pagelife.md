@@ -6,7 +6,6 @@ sidebar: app_service_pagelife
 ---
 
 
-> 更多介绍参见[生命周期介绍](http://smartprogram.baidu.com/docs/develop/framework/process_life/)。
 
 生命周期的触发以及页面的路由方式详见
 
