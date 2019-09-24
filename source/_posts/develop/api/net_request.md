@@ -43,7 +43,7 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7ed470ee03edc63ecc49173ab72d72e21569321718423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 
@@ -62,10 +62,10 @@ swan.request({
     data: {
         key: 'value'
     },
-    success: function (res) {
+    success: res => {
         console.log(res.data);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }
@@ -93,10 +93,10 @@ const requestTask = swan.request({
     method: 'GET',
     dataType: 'JSON',
     responseType: 'text',
-    success: function (res) {
+    success: res => {
         console.log(res.data)
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }

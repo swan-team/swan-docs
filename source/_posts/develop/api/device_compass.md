@@ -349,10 +349,10 @@ body {
 Page({
     startCompass() {
         swan.startCompass({
-            success: function (res) {
+            success: res => {
                 console.log('startCompass success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('startCompass fail', err);
             }
         });
@@ -402,10 +402,10 @@ Page({
     },
     stopCompass() {
         swan.stopCompass({
-            success: function (res) {
+            success: res => {
                 console.log('stopCompass success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('stopCompass fail', err);
             }
         });

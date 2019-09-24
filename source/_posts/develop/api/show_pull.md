@@ -43,7 +43,7 @@ Page({
             success: function () {
                 console.log('startPullDownRefresh success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('startPullDownRefresh fail', err);
             }
         });
@@ -90,7 +90,7 @@ Page({
             success: function () {
                 console.log('stopPullDownRefresh success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('stopPullDownRefresh fail', err);
             }
         });

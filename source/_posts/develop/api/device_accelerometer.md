@@ -253,10 +253,10 @@ Page({
     startAccelerometer() {
         swan.startAccelerometer({
             interval: 'ui',
-            success: function (res) {
+            success: res => {
                 console.log('startAccelerometer success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('startAccelerometer fail', err);
             }
         });
@@ -308,10 +308,10 @@ Page({
     },
     stopAccelerometer() {
         swan.stopAccelerometer({
-            success: function (res) {
+            success: res => {
                 console.log('startAccelerometer success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('startAccelerometer fail', err);
             }
         });

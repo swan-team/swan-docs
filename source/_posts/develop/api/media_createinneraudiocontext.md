@@ -250,14 +250,14 @@ Page({
     setInnerAudioOption() {
         swan.setInnerAudioOption({
             mixWithOther: true,
-            success: function (res) {
+            success: res => {
                 swan.showToast({
                     title: 'success',
                     icon: 'none'
                 });
                 console.log('setInnerAudioOption success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 swan.showToast({
                     title: 'fail',
                     icon: 'none'

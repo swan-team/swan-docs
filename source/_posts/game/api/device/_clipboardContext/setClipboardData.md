@@ -21,9 +21,9 @@ swan.setClipboardData(opts)
 ```js
 swan.setClipboardData({
     data: 'baidu',
-    success: function (res) {
+    success: res => {
         swan.getClipboardData({
-            success: function (res) {
+            success: res => {
                 console.log(res.data) // baidu
             }
         });

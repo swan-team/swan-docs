@@ -183,7 +183,7 @@ Page({
             success(res) {
                 console.log('canvasGetImageData success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -297,12 +297,12 @@ Page({
                     success(res) {
                         console.log('canvasPutImageData success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('canvasPutImageData fail', err);
                     }
                 })
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('canvasGetImageData fail', err);
             }
         });

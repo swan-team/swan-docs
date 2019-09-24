@@ -112,7 +112,7 @@ Page({
     },
     getCenterLocation: function () {
         this.mapContext.getCenterLocation({
-            success: function (res) {
+            success: res => {
                 console.log("经度", res.longitude);
                 console.log("纬度", res.latitude);
             }
@@ -150,7 +150,7 @@ Page({
     },
     getRegion: function () {
         this.mapContext.getRegion({
-            success: function (res) {
+            success: res => {
                 console.log("西南角的经纬度", res.southwest);
                 console.log("东北角的经纬度", res.northeast);
             }

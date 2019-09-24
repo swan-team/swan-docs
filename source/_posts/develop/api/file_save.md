@@ -177,18 +177,18 @@ Page({
     getFileInfo() {
         swan.chooseImage({
             count: 1,
-            success: function (res) {
+            success: res => {
                 const tempFilePaths = res.tempFilePaths;
                 swan.getFileInfo({
                     filePath: tempFilePaths[0],
-                    success: function (res) {
+                    success: res => {
                         swan.showToast({
                             title: 'success',
                             icon: 'none'
                         });
                         console.log('getFileInfo success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         swan.showToast({
                             title: 'fail',
                             icon: 'none'
@@ -278,20 +278,20 @@ Page({
     getSavedFileList() {
         swan.chooseImage({
             count: 1,
-            success: function (res) {
+            success: res => {
                 const tempFilePaths = res.tempFilePaths;
                 swan.saveFile({
                     tempFilePath: tempFilePaths[0],
-                    success: function (res) {
+                    success: res => {
                         swan.getSavedFileList({
-                            success: function (res) {
+                            success: res => {
                                 swan.showToast({
                                     title: 'success',
                                     icon: 'none'
                                 });
                                 console.log('getSavedFileList success', res);
                             },
-                            fail: function (err) {
+                            fail: err => {
                                 swan.showToast({
                                     title: 'fail',
                                     icon: 'none'
@@ -365,19 +365,19 @@ Page({
 Page({
     getSavedFileInfo() {
         swan.getSavedFileList({
-            success: function (res) {
+            success: res => {
                 if (res.fileList.length > 0) {
                     const filePath = res.fileList[0].filePath;
                     swan.getSavedFileInfo({
                         filePath,
-                        success: function (res) {
+                        success: res => {
                             swan.showToast({
                                 title: 'success',
                                 icon: 'none'
                             });
                             console.log('getSavedFileList success', res);
                         },
-                        fail: function (err) {
+                        fail: err => {
                             swan.showToast({
                                 title: 'fail',
                                 icon: 'none'

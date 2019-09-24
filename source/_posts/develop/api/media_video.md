@@ -50,11 +50,11 @@ Page({
             sourceType: ['album', 'camera'],
             compressed: false,
             maxDuration: 60,
-            success: function (res) {
+            success: res => {
                 // 成功返回选定视频的临时文件路径
                 console.log('res', res.tempFilePath);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
@@ -113,17 +113,17 @@ Page({
         swan.chooseVideo({
             sourceType: ['album', 'camera'],
             compressed: false,
-            success: function (res) {
+            success: res => {
                 swan.saveVideoToPhotosAlbum({
                     filePath: res.tempFilePath,
-                    success: function (res) {
+                    success: res => {
                         swan.showToast({
                             title: 'success',
                             icon: 'none'
                         });
                         console.log('saveVideoToPhotosAlbum success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         swan.showToast({
                             title: 'fail',
                             icon: 'none'
@@ -132,7 +132,7 @@ Page({
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('fail', err);
             }
         });

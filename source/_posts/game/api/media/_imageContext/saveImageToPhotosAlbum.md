@@ -23,10 +23,10 @@ swan.saveImageToPhotosAlbum(opts)
 ```js
 swan.saveImageToPhotosAlbum({
     filePath: '/xxx/xxx.jpg',
-    success: function (res) {
+    success: res => {
         console.log(res);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }

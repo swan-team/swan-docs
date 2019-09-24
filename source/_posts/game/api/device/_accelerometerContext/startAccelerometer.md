@@ -32,7 +32,7 @@ swan.startAcclerometer(opts)
 ```js
 swan.startAccelerometer({
     interval: 'ui',
-    success: function (res) {
+    success: res => {
         console.log(res);
     }
 });

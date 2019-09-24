@@ -40,14 +40,14 @@ sidebar: file_remove
 Page({
     removeSavedFile() {
         swan.getSavedFileList({
-            success: function (res) {
+            success: res => {
                 if (res.fileList.length > 0) {
                     swan.removeSavedFile({
                         filePath: res.fileList[0].filePath,
-                        success: function (res) {
+                        success: res => {
                             console.log('removeSavedFile success', res);
                         },
-                        fail: function (err) {
+                        fail: err => {
                             console.log('removeSavedFile fail', err);
                         }
                     });

@@ -112,7 +112,7 @@ Page({
             success: function () {
                 console.log('redirectTo success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('redirectTo fail', err);
             }
         });
@@ -164,7 +164,7 @@ Page({
             success: function () {
                 console.log('switchTab success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('switchTab fail', err);
             }
         });
@@ -225,7 +225,7 @@ Page({
             success: function () {
                 console.log('navigateTo success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateTo fail', err);
             }
         });
@@ -244,7 +244,7 @@ Page({
             success: function () {
                 console.log('navigateBack success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateBack fail', err);
             }
         });
@@ -298,7 +298,7 @@ Page({
             success: function () {
                 console.log('reLaunch success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('reLaunch fail', err);
             }
         });

@@ -80,7 +80,7 @@ Page({
             scale: 18,
             name: locationInfo.name,
             address: locationInfo.address,
-            success: function (res) {
+            success: res => {
                 console.log('success', res);
             },
             fail : function (err) {

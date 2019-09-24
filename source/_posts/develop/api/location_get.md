@@ -178,7 +178,7 @@ Page({
     onReady() {
         swan.authorize({
             scope: 'scope.userLocation',
-            success: function (res) {
+            success: res => {
                 console.log(res);
             },
             fail: function () {
@@ -189,14 +189,14 @@ Page({
     chooseLocation() {
         let that = this;
         swan.chooseLocation({
-            success: function (res) {
+            success: res => {
                 console.log(res);
                 that.setData({
                     'msg': res.name,
                     'location': that.formatLocation(res.longitude, res.latitude)
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }

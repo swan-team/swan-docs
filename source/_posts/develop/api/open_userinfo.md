@@ -63,10 +63,10 @@ sidebar: open_userinfo
 Page({
     getSwanId() {
         swan.getSwanId({
-            success: function (res) {
+            success: res => {
                 console.log('getSwanId success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getSwanId fail', err);
             }
         });

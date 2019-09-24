@@ -39,10 +39,10 @@ Page({
     loadSubPackage() {
         swan.loadSubPackage({
             root: 'subpackage',
-            success: function (res) {
+            success: res => {
                 console.log('loadSubPackage success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('loadSubPackage fail', err);
             }
         });

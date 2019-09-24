@@ -40,10 +40,10 @@ Page({
     removeStorage() {
         swan.removeStorage({
             key: 'key',
-            success: function (res) {
+            success: res => {
                 console.log('removeStorage success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('removeStorage fail', err);
             }
         });
@@ -169,7 +169,7 @@ Page({
             success: function () {
                 console.log('clearStorage success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('clearStorage fail', err);
             }
         });

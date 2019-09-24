@@ -53,13 +53,13 @@ swan.chooseImage({
     count: 1,
     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-    success: function (res) {
+    success: res => {
         // 成功则返回图片的本地文件路径列表 tempFilePaths
         console.log(res.tempFilePaths);
         // 文件列表对象
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }
@@ -185,10 +185,10 @@ swan.previewImage({
     getImageInfo() {
         swan.getImageInfo({
             src: 'https://smartprogram.baidu.com/xxx.png',
-            success: function (res) {
+            success: res => {
                 console.log('getImageInfo success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getImageInfo fail', err);
             }
         });
@@ -241,17 +241,17 @@ Page({
             count: 1,
             sizeType: ['original', 'compressed'],
             sourceType: ['album', 'camera'],
-            success: function (res) {
+            success: res => {
                 swan.saveImageToPhotosAlbum({
                     filePath: res.tempFilePaths[0],
-                    success: function (res) {
+                    success: res => {
                         swan.showToast({
                             title: 'success',
                             icon: 'none'
                         });
                         console.log('saveImageToPhotosAlbum success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         swan.showToast({
                             title: 'fail',
                             icon: 'none'
@@ -260,7 +260,7 @@ Page({
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('chooseImage fail', err);
             }
         });
@@ -319,13 +319,13 @@ Page({
     count: 2,
     mode: 'single',
     compressed: true,
-    success: function (res) {
+    success: res => {
         // 成功则返回图片的本地文件路径列表 tempFilePaths
         console.log(res.tempFilePaths);
         // 文件列表对象
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }
@@ -341,11 +341,11 @@ swan.chooseAlbum({
     count: 3,
     mode: 'both',
     compressed: false,
-    success: function (res) {
+    success: res => {
         console.log(res.tempFilePaths);
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }

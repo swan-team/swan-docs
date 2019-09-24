@@ -98,10 +98,10 @@ Page({
 Page({
     getSetting() {
         swan.getSetting({
-            success: function (res) {
+            success: res => {
                 console.log('getSetting success, authSetting:', res.authSetting);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getSetting fail', err);
             }
         });

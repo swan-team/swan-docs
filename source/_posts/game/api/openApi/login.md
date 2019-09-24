@@ -37,7 +37,7 @@ swan.login(opts)
 **示例 1：**
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         console.log('登录成功', res.code);
     },
     fail: function () {
@@ -61,7 +61,7 @@ function baiduLogin() {
                 title: "登录失败",
                 content: "是否重新登录？",
                 cancelText: "退出游戏",
-                success: function (res) {
+                success: res => {
                     if (res.confirm) {
                         console.log("点击了确定");
                         baiduLogin();
@@ -188,7 +188,7 @@ swan.checkSession({
 
 ```js
 swan.getSwanId({
-    success: function (res) {
+    success: res => {
         console.log(res.data.swanid);
     }
 });

@@ -508,7 +508,7 @@
             $.ajax({
                 url: href,
                 dataType: 'html',
-                success: function (res) {
+                success: res => {
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
                     $('#article-main-content').html(article);

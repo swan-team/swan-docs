@@ -48,7 +48,7 @@ Page({
             success: function () {
                 console.log('setBackgroundColor success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setBackgroundColor fail', err);
             }
         });
@@ -102,7 +102,7 @@ Page({
             success: function () {
                 console.log('setBackgroundTextStyle success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setBackgroundTextStyle fail', err);
             }
         });

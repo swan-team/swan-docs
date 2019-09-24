@@ -43,10 +43,10 @@ Page({
         swan.pageScrollTo({
             scrollTop: 0,
             duration: 300,
-            success: function (res) {
+            success: res => {
                 console.log('pageScrollTo success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('pageScrollTo fail', err);
             }
         });

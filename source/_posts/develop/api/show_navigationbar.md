@@ -211,7 +211,7 @@ Page({
             success: function () {
                 console.log('setNavigationBarColor success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setNavigationBarColor fail', err);
             }
         });

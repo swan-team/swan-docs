@@ -374,10 +374,10 @@ Page({
 Page({
     getStorageInfo() {
         swan.getStorageInfo({
-            success: function (res) {
+            success: res => {
                 console.log('getStorageInfo success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getStorageInfo fail', err);
             }
         });

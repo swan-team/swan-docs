@@ -144,7 +144,7 @@ Page({
             success: function () {
                 console.log('showLoading success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('showLoading fail', err);
             }
         });

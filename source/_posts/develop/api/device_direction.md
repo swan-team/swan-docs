@@ -99,10 +99,10 @@ Page({
     startDeviceMotionListening() {
         swan.startDeviceMotionListening({
             interval: 'ui',
-            success: function (res) {
+            success: res => {
                 console.log('startDeviceMotionListening success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('startDeviceMotionListening fail', err);
             }
         });
@@ -158,10 +158,10 @@ Page({
     },
     stopDeviceMotionListening() {
         swan.stopDeviceMotionListening({
-            success: function (res) {
+            success: res => {
                 console.log('stopDeviceMotionListening success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('stopDeviceMotionListening fail', err);
             }
         });

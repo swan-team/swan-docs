@@ -44,7 +44,7 @@ Page({
             success: function () {
                 console.log('setTabBarBadge success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setTabBarBadge fail', err);
             }
         });
@@ -117,7 +117,7 @@ Page({
             success: function () {
                 console.log('removeTabBarBadge success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('removeTabBarBadge fail', err);
             }
         });
@@ -174,7 +174,7 @@ Page({
             success: function () {
                 console.log('showTabBarRedDot success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('showTabBarRedDot fail', err);
             }
         });
@@ -246,7 +246,7 @@ Page({
             success: function () {
                 console.log('hideTabBarRedDot success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('hideTabBarRedDot fail', err);
             }
         });
@@ -308,7 +308,7 @@ Page({
             success: function () {
                 console.log('setTabBarStyle success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setTabBarStyle fail', err);
             }
         });
@@ -366,7 +366,7 @@ Page({
             success: function () {
                 console.log('setTabBarItem success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setTabBarItem fail', err);
             }
         });
@@ -437,7 +437,7 @@ Page({
             success: function () {
                 console.log('showTabBar success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('showTabBar fail', err);
             }
         });
@@ -503,7 +503,7 @@ Page({
             success: function () {
                 console.log('hideTabBar success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('hideTabBar fail', err);
             }
         });

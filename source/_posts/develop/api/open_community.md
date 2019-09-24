@@ -101,26 +101,26 @@ swan.openCommunityEditor({
     cancelColor: '#eeeeee',
     targetText: '百度贴吧',
     emojiPath: '../emojidata',
-    success: function (res) {
+    success: res => {
         console.log('openCommunityEditor success', res);
         // 将图片上传到服务器
         swan.uploadFile({
             url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
             filePath: res.tempFilePaths[0], // 要上传文件资源的路径
             name: 'myfile',
-            success: function (res) {
+            success: res => {
                 console.log(res.statusCode);
                 // 上传成功关闭发布器
                 swan.closeCommunityEditor();
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
         });
         swan.closeCommunityEditor();
     },
-    fail: function (err) {
+    fail: err => {
         console.log('openCommunityEditor fail', err);
         swan.closeCommunityEditor();
     },
@@ -159,14 +159,14 @@ swan.openCommunityEditor({
     },
     navBarTitleText: '原生全屏内容发布器',
     emojiPath: '../../emojidata',
-    success: function (res) {
+    success: res => {
         console.log('openCommunityEditor success', res);
         swan.showToast({
             title: '关闭原生全屏内容发布器'
         });
         swan.closeCommunityEditor();
     },
-    fail: function (err) {
+    fail: err => {
         console.log('openCommunityEditor fail', err);
     }
 })
