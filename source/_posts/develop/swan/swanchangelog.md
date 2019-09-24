@@ -5,10 +5,18 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.105 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.105.09|2019.9.18|**New**<p>新增自定义组件数据监听器功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
+
+
 ## 3.100 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.100.10|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.100.09|2019.9.4|**New**<p>新增小程序消息订阅功能。<p>**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
 |3.100.5|2019.8.28|**Breaking Change**<p>triggerEvent支持第三个参数,可以实现父子组件关系之间的冒泡和捕获<p>**BugFix**<p>**·**修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题；<p>**·**tabs组件修改了 url-query，去掉了local-event。|
 |3.100.4|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**Breaking Change**<p>登录授权逻辑优化。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
@@ -18,6 +26,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.90.22|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.90.19|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
 |3.90.16|2019.8.28|**BugFix**<p>修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题。|
 |3.90.14|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
