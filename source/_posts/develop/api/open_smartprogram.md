@@ -23,7 +23,7 @@ sidebar: open_smartprogram
 |success | Function |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
-|envVersion	|String	|否|release|	要打开的小程序版本。|
+|envVersion	|String	|否|release|	要打开的小程序版本。（develop 开发版，trial 体验版）|
 
 **示例**：
 
