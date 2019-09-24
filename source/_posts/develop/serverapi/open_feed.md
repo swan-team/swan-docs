@@ -863,6 +863,15 @@ return:json
 |comment|	string|	优质评论内容|	否|智能连接人与信息、人与服务、人与万物的开放生态|
 |topic_path|	string|	话题落地页链接|	否|/pages/topic/topic|
 
+
+
+ 示例
+```
+{
+ "publish_time":"2019年9月20日"
+}
+```
+
 视频
 
 |参数名|类型|说明|是否必填|示例|
@@ -900,6 +909,18 @@ return:json
 |is_exclusive	|string|	是否独播	|	否|是1，否0 |
 |img_urls|	string	|视频内多张图片url（至少3张）JSON格式|	否|`https://b.bdstatic.com/miniapp/resource/image/headImg.png`<p>`https://b.bdstatic.com/miniapp/resource/image/headImg.png`<p>`https://b.bdstatic.com/miniapp/resource/image/headImg.png`|
 
+
+
+ 示例
+```
+{ 
+ "publish_time":"2019年6月3日”, 
+ "video_duration":"00:03:43",
+ "pc_url":"http://v.youku.com/v_show/id_XNDIxNDI4NTE4OA==.html",
+ "h5_url":"https://m.youku.com/video/id_XNDIxNDI4NTE4OA==.html"
+}
+```
+
 直播
 
 |参数名|类型|说明|是否必填|示例|
@@ -909,6 +930,20 @@ return:json
 |publish_time|	int	|开播时间|是|	10位时间戳|
 |end_time| 	int	|关播时间|是|	10位时间戳|
 |session_id 	|string	|场次	|是|场次 id|
+
+
+
+ 示例
+
+```
+ {
+ "source_name":"阿冷aleng丶",
+ "living_type":"offline", 
+ "publish_time":1568972457,
+ "end_time":1568972628, 
+ "session_id":"162252200"
+}
+```
 
 服务类
 
