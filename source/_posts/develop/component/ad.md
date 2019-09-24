@@ -1,11 +1,11 @@
 ---
-title: 广告组件
+title: ad 广告
 header: develop
 nav: component
 sidebar: ad
 ---
 
-## ad 广告
+ 
 
 **解释**：广告组件，按照<a href="https://smartprogram.baidu.com/docs/introduction/adopen/">流量主开通指引</a>中的操作获取广告组件代码。
 
@@ -21,6 +21,9 @@ sidebar: ad
 |appid|String| |是|小程序应用 ID|
 |apid|String| |是|小程序广告位 ID|
 |type|String|feed|否|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
+|binderror|EventHandle||否|广告组件加载失败时触发|
+|bindload|EventHandle||否|广告组件加载完成触发|
+|bindclose|EventHandle||否|关闭广告组件时触发|
 
 **type 有效值:**:
 
@@ -30,7 +33,7 @@ sidebar: ad
 | feed | 流式类型 |
 
 **示例**：
-<a href="swanide://fragment/fd1b5c33e1b3a2ce094e490b3ac108de1567749057225" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6efb7c4c8ba9a1963c76c4c24fc8250a1568795647795" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * banner
 
@@ -43,7 +46,7 @@ sidebar: ad
 
     ```
     <div class="ad-container">
-        <ad appid="a764cad8" apid="6511101" class="ad" type="banner" ></ad>
+        <ad appid="a764cad8" apid="6511101" type="banner" ></ad>
     </div>
 
     ```
@@ -55,7 +58,7 @@ sidebar: ad
 
     **获取信息流广告代码示例**：
     ```
-    <ad appid="275104976" apid="6115465" class="ad" type="feed"> </ad>
+    <ad appid="xxx" apid="xxx" type="feed"> </ad>
     ```
 
 
@@ -63,7 +66,7 @@ sidebar: ad
 
     ```
     <div class="ad-container">
-        <ad appid="b2f8234f" apid="6315886" class="ad"></ad>
+        <ad appid="b2f8234f" apid="6315886"></ad>
     </div>
 
     ```

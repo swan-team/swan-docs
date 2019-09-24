@@ -5,7 +5,7 @@ nav: cloud
 sidebar: cloud_database_collection
 ---
 
-## collection
+
 
 **解释**：获取数据库集合的引用。
 

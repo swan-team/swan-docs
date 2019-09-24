@@ -18,6 +18,21 @@ sidebar: media_createinneraudiocontext
 
 **返回值**：innerAudioContext
 
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确     |
+
 ## innerAudioContext
 
 **解释**： swan.createInnerAudioContext 的返回值。
@@ -415,3 +430,17 @@ Page({
         <img src=" ">
     </div>     
 </div>
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败  |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |

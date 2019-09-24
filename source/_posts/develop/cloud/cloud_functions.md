@@ -1,11 +1,10 @@
 ---
-title: 云函数
+title:  swan.cloud.callFunction
 header: develop
 nav: cloud
 sidebar: cloud_functions
 ---
-## swan.cloud.callFunction
-
+ 
 **解释**：调用云函数。
 
 **参数说明**

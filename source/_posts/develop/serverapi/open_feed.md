@@ -51,7 +51,7 @@ sidebar: open_feed
 **params**:
 
 | **key** | **类型** | **是否必填**   | **method** | **备注**  | **示例**  |
-| ------------- | -------- | -------------------- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ------ | -------- | --------- | ------- | ------ | ------- |
 | access_token  | string   | 是 | GET  | 权限校验[Token](https://smartprogram.baidu.com/docs/develop/server/power/#开发者服务权限说明)|  |
 | app_id  | string   | 是 | POST | 智能小程序ID | 15625863  |
 | title   | string   | 是 | POST | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能全英文，最少6个字 | 示例：百度智能小程序，给你全新的智能体验   |
@@ -111,7 +111,7 @@ return:json
 
 **解释**：提交链接文件（即Sitemap）接口，链接文件提交方式（即sitemap提交）。
 
-> 1. 需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为单条素材内容。
+> 1. 需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为该loc链接下所有素材的具体内容，即 “单条素材” 的具体内容合集。
 2. 提交素材或更新素材，则链接文件的type（即sitemap）选为“1”。
 3. 删除素材或下线素材，则链接文件的type选为“0”。
 4. 每个小程序，最多提交3条sitemap链接，建议一条type为1的sitemap链接，一条type为0的sitemap链接的（即增量/更新的sitemap一个，线下/删除的sitemap一个），若已满3条sitemap，若想添加新的sitemap链接，建议先删除一条sitemap，再进行添加新的sitemap。
@@ -121,14 +121,14 @@ return:json
 **method**: GET&POST
 **params**:
 
-| access_token | string   | true   | GET  | 权限校验TOKEN   | |
+| **key**   | **类型** | **是否必填** | **method** | **备注**  | **示例** |
 | ------------ | -------- | ------------ | ---------- | ------------------------------ | -------------- |
 | app_id | string   | true   | POST | 智能小程序ID | 15625863 |
 | url | string   | true   | POST | sitemap链接  | |
 | desc   | string   | true   | POST | 描述信息  | 智能小程序示例 |
 | type   | int   | true   | POST | 类型 1-增量/更新； 0-下线/删除 | 1  |
 | frequency | int   | true   | POST | 更新频率 3-每天 4-每周   | 3  |
-| **key**   | **类型** | **是否必填** | **method** | **备注**  | **示例** |
+| access_token | string   | true   | GET  | 权限校验TOKEN   | ||
 
 **sitemap内容格式**
 
@@ -863,6 +863,15 @@ return:json
 |comment|	string|	优质评论内容|	否|智能连接人与信息、人与服务、人与万物的开放生态|
 |topic_path|	string|	话题落地页链接|	否|/pages/topic/topic|
 
+
+
+ 示例
+```
+{
+ "publish_time":"2019年9月20日"
+}
+```
+
 视频
 
 |参数名|类型|说明|是否必填|示例|
@@ -900,6 +909,18 @@ return:json
 |is_exclusive	|string|	是否独播	|	否|是1，否0 |
 |img_urls|	string	|视频内多张图片url（至少3张）JSON格式|	否|`https://b.bdstatic.com/miniapp/resource/image/headImg.png`<p>`https://b.bdstatic.com/miniapp/resource/image/headImg.png`<p>`https://b.bdstatic.com/miniapp/resource/image/headImg.png`|
 
+
+
+ 示例
+```
+{ 
+ "publish_time":"2019年6月3日”, 
+ "video_duration":"00:03:43",
+ "pc_url":"http://v.youku.com/v_show/id_XNDIxNDI4NTE4OA==.html",
+ "h5_url":"https://m.youku.com/video/id_XNDIxNDI4NTE4OA==.html"
+}
+```
+
 直播
 
 |参数名|类型|说明|是否必填|示例|
@@ -909,6 +930,20 @@ return:json
 |publish_time|	int	|开播时间|是|	10位时间戳|
 |end_time| 	int	|关播时间|是|	10位时间戳|
 |session_id 	|string	|场次	|是|场次 id|
+
+
+
+ 示例
+
+```
+ {
+ "source_name":"阿冷aleng丶",
+ "living_type":"offline", 
+ "publish_time":1568972457,
+ "end_time":1568972628, 
+ "session_id":"162252200"
+}
+```
 
 服务类
 
@@ -990,18 +1025,20 @@ return:json
 |language|	string|	语言|	英语|
 |game_type|	string|	游戏类型|	动作|
 
-## **常见问题**
-1. **access_token不合法**
+## 常见问题
+1. access_token不合法
 
-常见异常原因: 小程序密钥(client_secret)在开发者平台有改动，但未同步到获取access_token的接口。(获取access_token : [接口文档](https://smartprogram.baidu.com/docs/develop/server/power/#开发者服务权限说明) )
+常见异常原因: 小程序密钥(client_secret)在开发者平台有改动，但未同步到获取access_token的接口。(获取access_token : [接口文档](/develop/serverapi/power_exp/) )
 
 2. API接口调用失败，提示“Invalid parameter”。
 
-注意access_token字段使用GET方法，其他字段使用POST方法form-data提交2. **如何修改已提交的素材**
+注意access_token字段使用GET方法，其他字段使用POST方法form-data提交。
+
+3.  如何修改已提交的素材 
 
 path字段是素材的唯一标识，将需要修改的素材更新任一字段（除path字段外）重新进行提交，则会触发资源修改。
 
-3. **如何删除已提交的素材**
+4. 如何删除已提交的素材
 
 > path字段是素材的唯一标识，已删除的资源不可再次提交，所以建议若非严重性问题，无需将素材进行删除操作，可以直接在提交接口中重新提交修改或更新后的素材。
 
@@ -1010,17 +1047,17 @@ path字段是素材的唯一标识，将需要修改的素材更新任一字段�
 * 链接文件删除，链接文件类型（type字段）为0，[submitsitemap](#submitsitemap)
 
 
-4. **素材发布时间（publish_time）格式不正确**
+5. 素材发布时间（publish_time）格式不正确
 
 扩展字段中，publish_time的格式为2019年1月2日，若传2019-01-02、时间戳格式或其他格式，则属于错误格式。
 
-5. **素材审核拒绝后，是否可以重新提交**
+6. 素材审核拒绝后，是否可以重新提交
 
 可以重新提交，但建议提交的资源为优化后的资源（以path为素材的唯一标识），否则依旧会被审核拒绝。
 
 注意：需要重新提交的素材，需更素材的任一字段（除path字段外）重新进行提交才会触发资源入库，否则会默认为重复资源入库失败。
 
-6. **为什么使用sitemap提交的素材，没有提交成功**
+7. 为什么使用sitemap提交的素材，没有提交成功
 
 1）确定是否素材的sitemap链接无效，导致解析失败；
 
@@ -1032,7 +1069,7 @@ path字段是素材的唯一标识，将需要修改的素材更新任一字段�
 
 5）确定sitemap链接设置的更新频率，若为每天，则次日凌晨执行素材入库任务，若为每周，则七天后的凌晨执行素材入库任务；建议开发者更新频率设置为每天。
 
-7. 为什么单条素材管理中展示的素材数量与提交量不一致，例如提交了10条，单条素材管理中仅展示5条
+8. 为什么单条素材管理中展示的素材数量与提交量不一致，例如提交了10条，单条素材管理中仅展示5条
 
 １）确认是否素材的path字段是否相同，若素材path字段相同，标题或其他字段有不同，则视为素材更新入库，（素材内容会以最新提交的素材为准）
 
@@ -1044,6 +1081,6 @@ path字段是素材的唯一标识，将需要修改的素材更新任一字段�
 
 ２）确认是否其中提交的素材在提交前进行过删除操作，若素材进行过删除操作，则再次提交无法入库，（删除素材视为线下操作）。
 
-８. API接口调用失败，提示“Invalid parameter”
+9. API接口调用失败，提示“Invalid parameter”
 
 注意access_token字段使用GET方法，其他字段使用POST方法form-data提交
