@@ -106,7 +106,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 </div>
 
 自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏（navigationBarHeight）高度水平居中对齐。
-技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#%E9%85%8D%E7%BD%AE-app-json-%E6%96%87%E4%BB%B6/)章节。
+技术实现请参考开发文档[全局配置](/develop/tutorial/process/)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
