@@ -76,7 +76,7 @@ sidebar: smartappdebug_function
 
 对于高级开发者来说，完全可以自己编写自动化构建脚本对代码文件进行预处理，所以我们提供了 `启用自定义处理命令` 选项，开发者可以指定 `编译前/预览前/上传前` 需要预处理的命令 开发者工具使用 shell 的方式运行指定的命令，并在控制台中输出命令的执行日志
 
-如果您使用框架开发小程序，可以参考文档 [框架开发](https://smartprogram.baidu.com/docs/develop/tutorial/move/#%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91/)
+如果您使用框架开发小程序，可以参考文档 [框架开发](/develop/tutorial/frameworkdevelop/)
 
 预处理命令的默认执行顺序：
 

@@ -17,8 +17,8 @@ A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的�
 A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://smartprogram.baidu.com/docs/develop/api/net_request/)。
 
 #### Q: 如何在web-view中使用拨打电话的功能？
-A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/) 包，如下示例：
-> 图中 “2.0.6.js”版本为举例，开发时请参考[swanjs](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/)文档中的最新版本好进行填写。
+A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](/develop/component/open_web-view/) 包，如下示例：
+> 图中 “2.0.6.js”版本为举例，开发时请参考[swanjs](/develop/component/open_web-view/)文档中的最新版本好进行填写。
 
 ![](../../../img/faq/webview.png)
 **完整的H5示例：**
@@ -64,7 +64,7 @@ A：如果设置 inline-block 会出现间隙，建议父级元素使用font-siz
 
 ####  Q：swiper 的面板指示点能自定义样式吗？
 
-A: [参见swiper参数](https://smartprogram.baidu.com/docs/develop/component/view/#swiper/)，可以去 dot 显示之后，自己定义 dot 样式。
+A: [参见swiper参数](/develop/component/view_swiper/)，可以去 dot 显示之后，自己定义 dot 样式。
 
 #### Q：小程序使用 webview，分享出去的链接能直接是 webview 对应的 url 而不是小程序的 url 么？
 

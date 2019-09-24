@@ -67,7 +67,7 @@ sidebar: open_infomation
 ![图片](../../../img/api/information/6.png)
 ![图片](../../../img/api/information/7.png)
 
-### 步骤二：通过<a href="http://smartprogram.baidu.com/docs/develop/component/formlist/#form/">form</a>组件获取 formId 或者通过支付获取 <a href="http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/standard_interface/push_notice.md">orderId</a> 或者 payId。
+### 步骤二：通过<a href="/develop/component/formlist_form/">form</a>组件获取 formId 或者通过支付获取 <a href="http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/standard_interface/push_notice.md">orderId</a> 或者 payId。
 
 
 #### formid
@@ -353,7 +353,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 - [swan_id](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)：百度生成的与设备相关的唯一标识，APP卸载重安装不会变
 - open_id：百度用户登录唯一标识
-- formId：[form_id官方文档介绍](https://smartprogram.baidu.com/docs/develop/component/formlist/#form/)
+- formId：[form_id官方文档介绍](/develop/component/formlist_form/)
 
 **参数说明：**
 

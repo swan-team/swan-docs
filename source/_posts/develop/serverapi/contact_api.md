@@ -32,7 +32,7 @@ sidebar: contact_api
 
 ## 在页面中使用客服消息
 
-小程序 [button](https://smartprogram.baidu.com/docs/develop/component/formlist/#button/) 组件提供了 open-type 属性来供开发者调用百度 APP 的开放能力，若开发者需要使用客服能力，需要将 open-type 属性的值设置为 contact ，当用户点击该按钮时就会打开客服会话，如果用户在会话中点击消息卡片后返回小程序，开发者可以从 bindcontact 回调中获得具体的信息。 
+小程序 [button](/develop/component/formlist_button/) 组件提供了 open-type 属性来供开发者调用百度 APP 的开放能力，若开发者需要使用客服能力，需要将 open-type 属性的值设置为 contact ，当用户点击该按钮时就会打开客服会话，如果用户在会话中点击消息卡片后返回小程序，开发者可以从 bindcontact 回调中获得具体的信息。 
 
 
 #### 代码示例
