@@ -49,7 +49,7 @@ App({
 ## swan.onError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序错误事件。如脚本错误或`API`调用报错等。该事件与 [App.onError](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机与参数一致。
+**解释：** 监听小程序错误事件。如脚本错误或`API`调用报错等。该事件与 [App.onError](/develop/framework/app_service_register/) 的回调时机与参数一致。
 
 **方法参数：** Function callback
 小程序错误事件的回调函数。
@@ -76,7 +76,7 @@ App({
 ## swan.onAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序切前台事件。该事件与 [App.onShow](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调参数一致。
+**解释：** 监听小程序切前台事件。该事件与 [App.onShow](/develop/framework/app_service_register/) 的回调参数一致。
 
 **方法参数：** function callback
 小程序切前台事件的回调函数。
@@ -137,7 +137,7 @@ App({
 ## swan.onAppHide
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序切后台事件。该事件与 [App.onHide](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序切后台事件。该事件与 [App.onHide](/develop/framework/app_service_register/) 的回调时机一致。
 
 **方法参数：** Function callback
 小程序切后台事件的回调函数。
