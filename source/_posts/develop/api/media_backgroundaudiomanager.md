@@ -10,8 +10,31 @@ sidebar: media_backgroundaudiomanager
 
 **解释**：获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getBackgroundAudioManager.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法 |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202  |解析失败，请检查参数是否正确|
+|204|当前正在播放来源于其他小程序的音频，无权控制|
+|1005|播放被打断|
+|1006|加载音频失败|
+|1007|seek失败，播放器尚未缓冲|
+
+ 
 ##  BackgroundAudioManager
 
 **`backgroundAudioManager`对象的属性列表**：
@@ -51,13 +74,13 @@ sidebar: media_backgroundaudiomanager
 
 Page({
     onLoad() {
-        const BackgroundAudioManager = swan.getBackgroundAudioManager();
-        BackgroundAudioManager.title = '演员';
-        BackgroundAudioManager.epname = '演员';
-        BackgroundAudioManager.singer = '薛之谦';
-        BackgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+        const backgroundAudioManager = swan.getBackgroundAudioManager();
+        backgroundAudioManager.title = '演员';
+        backgroundAudioManager.epname = '演员';
+        backgroundAudioManager.singer = '薛之谦';
+        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
-        BackgroundAudioManager.onPlay(res => {
+        backgroundAudioManager.onPlay(res => {
             swan.showToast({
                 title: 'play',
                 icon: 'none'
@@ -65,7 +88,7 @@ Page({
             console.log('onPlay', res);
         });
 
-        BackgroundAudioManager.onPause(res => {
+        backgroundAudioManager.onPause(res => {
             swan.showToast({
                 title: 'pause',
                 icon: 'none'
@@ -73,7 +96,7 @@ Page({
             console.log('onPause', res);
         });
 
-        BackgroundAudioManager.onStop(res => {
+        backgroundAudioManager.onStop(res => {
             swan.showToast({
                 title: 'stop',
                 icon: 'none'
@@ -81,7 +104,7 @@ Page({
             console.log('onStop', res);
         });
 
-        BackgroundAudioManager.onEnded(res => {
+        backgroundAudioManager.onEnded(res => {
             swan.showToast({
                 title: 'end',
                 icon: 'none'
@@ -89,11 +112,11 @@ Page({
             console.log('onEnded', res);
         });
 
-        BackgroundAudioManager.onTimeUpdate(res => {
+        backgroundAudioManager.onTimeUpdate(res => {
             console.log('onTimeUpdate', res);
         });
 
-        BackgroundAudioManager.onError(res => {
+        backgroundAudioManager.onError(res => {
             swan.showToast({
                 title: 'error',
                 icon: 'none'
@@ -101,7 +124,7 @@ Page({
             console.log('onError', res);
         });
 
-        BackgroundAudioManager.onWaiting(res => {
+        backgroundAudioManager.onWaiting(res => {
             swan.showToast({
                 title: 'waiting',
                 icon: 'none'
@@ -109,20 +132,20 @@ Page({
             console.log('onWaiting', res);
         });
 
-        this.BackgroundAudioManager = BackgroundAudioManager;
+        this.backgroundAudioManager = backgroundAudioManager;
     },
     play() {
-        this.BackgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
-        this.BackgroundAudioManager.play();
+        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.play();
     },
     pause() {
-        this.BackgroundAudioManager.pause();
+        this.backgroundAudioManager.pause();
     },
     stop() {
-        this.BackgroundAudioManager.stop();
+        this.backgroundAudioManager.stop();
     },
     seek() {
-        this.BackgroundAudioManager.seek(10);
+        this.backgroundAudioManager.seek(10);
     }
 });
 

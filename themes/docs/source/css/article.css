@@ -87,6 +87,12 @@
   margin-bottom: 12px;
 }
 
+.m-doc-menu-wrapper .m-doc-menu-edit {
+    background:#fff center center url(../img/article-edit.png) no-repeat;
+    background-size: 24px;
+    margin-bottom: 12px;
+}
+
 .m-doc-menu-wrapper .m-doc-menu-top-show {
     visibility: visible;
     pointer-events: auto;

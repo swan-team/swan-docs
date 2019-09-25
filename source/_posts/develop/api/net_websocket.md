@@ -7,6 +7,10 @@ sidebar: net_websocket
 请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/webSocket.png"  class="demo-qrcode-image" />
+
 ## swan.connectSocket
 
 **解释**：创建一个 WebSocket 连接。
@@ -67,9 +71,9 @@ Page({
 }
 ```
 
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod *
 
 |错误码|说明|
 |--|--|
@@ -77,7 +81,7 @@ Page({
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
-**iOS**
+* iOS 
 
 |错误码|说明errMsg|
 |--|--|
@@ -85,7 +89,7 @@ Page({
 |7|安全校验失败|
 |errorCode为1|超过设置的最大task数量|
 |errorCode为2|url/subProtocals错误|
-|errorCode为3|创建task实例失败| -->
+|errorCode为3|创建task实例失败|
 
 ## swan.onSocketOpen
 
@@ -196,7 +200,21 @@ Page({
 }
 ```
 
+ 
+#### 错误码
 
+* Andriod
+
+|错误码|说明|
+|--|--|
+|0|error happen    |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+||Status error,current + 当前状态|
+||Excedding max concurrency + 设置的最大并发数|
 
 ## swan.sendSocketMessage
 
@@ -208,7 +226,7 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data| String/ArrayBuffer | 是 |-| 需要发送的内容|
+|data| String | 是 |-| 需要发送的内容|
 |success   |Function  |  否  | -|接口调用成功的回调函数 |
 |fail  |Function  |  否 | -| 接口调用失败的回调函数|
 |complete   | Function   | 否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -263,9 +281,9 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod 
  
 |错误码|说明|
 |--|--|
@@ -273,11 +291,11 @@ Page({
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
-**iOS**
+* iOS 
 
 |错误码|说明|
 |--|--|
-|4|参数有误 | -->
+|4|参数有误 |
 
 ## swan.onSocketMessage
 
@@ -294,6 +312,7 @@ Page({
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer | 是|-|服务器返回的消息|
+|dataType|String|否|-|data 类型|
 
 **示例**：
 
@@ -418,15 +437,22 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+ 
+#### 错误码
 
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
+|202|解析失败，请检查参数是否正确  |
 |302|找不到调起协议对应端能力方法|
-|202|解析失败，请检查参数是否正确 |
-|1001|执行失败| -->
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|4|参数有误   |
 
 
 ## swan.onSocketClose
@@ -503,30 +529,30 @@ Page({
 ```js
 Page({
     onLoad() {
-        const SocketTask = swan.connectSocket({
+        const ws = swan.connectSocket({
             url: 'wss://echo.websocket.org'
         });
 
-        SocketTask.onOpen(function (res) {
+        ws.onOpen(function (res) {
             console.log('WebSocket连接已打开！', res);
         });
 
-        SocketTask.onError(function (err) {
+        ws.onError(function (err) {
             console.log('WebSocket连接错误！', err);
         });
 
-        SocketTask.onMessage(function (res) {
+        ws.onMessage(function (res) {
             console.log('WebSocket接受到服务器的消息', res);
         });
 
-        SocketTask.onClose(function (res) {
+        ws.onClose(function (res) {
             console.log('WebSocket连接已关闭！', res);
         });
 
-        this.SocketTask = SocketTask;
+        this.ws = ws;
     },
     send() {
-        this.SocketTask.send({
+        this.ws.send({
             data: 'baidu',
             success: function (res) {
                 console.log('WebSocket发送数据成功', res);
@@ -537,7 +563,7 @@ Page({
         });
     },
     close() {
-        this.SocketTask.close({
+        this.ws.close({
             code: '1001',
             reason: 'close reason',
             success: function (res) {

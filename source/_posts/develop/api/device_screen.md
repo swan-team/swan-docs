@@ -9,6 +9,11 @@ sidebar: device_screen
 
 **解释**：设置屏幕亮度。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/screenBrightness.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -56,6 +61,22 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.getScreenBrightness
 
@@ -112,6 +133,12 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败  |
 
 ## swan.setKeepScreenOn
 
@@ -164,32 +191,18 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- onUserCaptureScreen
----
-**解释**：监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
-**参数**：CALLBACK
 
-**CALLBACK返回参数**：
-无
-**示例**：
-
-```js
-swan.onUserCaptureScreen(function() {
-    console.log('用户截屏了')
-});
-``` -->
-<!-- #### 错误码
-
-**Andriod**
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。| -->
+|202|解析失败，请检查参数是否正确      |

@@ -48,6 +48,11 @@ sidebar: open_authorize
 
 **解释**： 提前向用户发起授权请求。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/authorize.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -124,4 +129,24 @@ Page({
 
 **说明**：
 授权操作为异步操作，完成前请不要多次调用。
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
+|10001|内部错误|
+|11001|未知错误|
+|11003|用户取消授权|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10001|内部错误   |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
 

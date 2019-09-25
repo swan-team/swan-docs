@@ -10,6 +10,11 @@ sidebar: location_get
 
 **解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getLocation.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -111,11 +116,32 @@ Page({
     }
 });
 ```
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|401|安全校验失败|
+|1001|文件不存在|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10005|系统拒绝|
+
 
 
 ## swan.chooseLocation
 
 **解释**： 打开地图选择位置。需要用户授权 scope.userLocation。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseLocation.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -133,8 +159,8 @@ Page({
 |---- | ---- |
 |name   | 位置名称|
 |address |  详细地址|
-|latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系。|
-|longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系。|
+|latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系，[查询指定地点的经纬度方法](/develop/faq/apifaq/)。|
+|longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系，[查询指定地点的经纬度方法](/develop/faq/apifaq/)。|
 
 **示例**：
 
@@ -289,3 +315,20 @@ swan-button:after {
     </div>     
 </div>
 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1002|用户取消错误码                                |
+|1003|没有获取位置的权限|
+|1007|地图服务异常|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+|1002|用户取消操作错误码|
+|1003|没有获取位置的权限|
+|1007|地图服务异常|

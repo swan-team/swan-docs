@@ -23,6 +23,7 @@
         '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
         '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -67,7 +68,7 @@
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
-            this.initHighlight();
+            // this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -79,20 +80,20 @@
             this.initInvokeDemo();
             // this.initCustom();
         },
-        initHighlight() {
-            let keywords = window.localStorage.getItem('keywords');
-            window.localStorage.removeItem('keywords');
-            if (!keywords || !keywords.length) {
-                return;
-            }
-            keywords = Array.isArray(keywords) ? keywords : [keywords];
-            let content = $('.m-doc-content-layout').html();
-            keywords.forEach(function (keyword, index) {
-                var regExp = new RegExp(keyword, 'g');
-                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
-            });
-            $('.m-doc-content-layout').html(content);
-        },    
+        // initHighlight() {
+        //     let keywords = window.localStorage.getItem('keywords');
+        //     window.localStorage.removeItem('keywords');
+        //     if (!keywords || !keywords.length) {
+        //         return;
+        //     }
+        //     keywords = Array.isArray(keywords) ? keywords : [keywords];
+        //     let content = $('.m-doc-content-layout').html();
+        //     keywords.forEach(function (keyword, index) {
+        //         var regExp = new RegExp(keyword, 'g');
+        //         content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
+        //     });
+        //     $('.m-doc-content-layout').html(content);
+        // },
         initSidebar: function () {
             var ctx = this;
             var sidebarData = localSidebar.getLocal(window.localData.headerName);
@@ -252,7 +253,7 @@
                 var href = element && element.href ? element.href : $(this)[0].href;
                 href = decodeURIComponent(href);
                 var tar = href.indexOf('#');
-                href = tar > -1 ? href.substr(tar).replace('/', '') : href;
+                href = tar > -1 ? href.substr(tar).replace('/', '') : '';
                 var offsetTop = $(href).offset() ? $(href).offset().top : 0;
                 var scrollTop = $('.m-doc-content-layout').scrollTop();
                 var tarTop = offsetTop + scrollTop - 30;
@@ -263,7 +264,7 @@
                 if(diffTop === 0) {
                     $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time })
                 }
-                $('.m-doc-content-layout').scrollTo({toT: tarTop, durTime: time });
+                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time });
             }, 0);
         },
         addEvent: function () {
@@ -299,46 +300,29 @@
                     localSidebar.setLocal(window.localData.headerName, sidebarData);
                 }
             });
-            // 点击h2 高亮h2 修改url 更新文章内容、面包屑、title
-            $('.m-doc-h2-list').on('click', function (e) {
+
+            function updateArticle($this, href) {
+                if( href != '/docs/') {
+                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                    $this.parent('li').addClass('m-doc-sidebar-selected');
+                    win.history.pushState(href, '', href);
+                    ctx.getArticle(href, function() {
+                        ctx._scrollToAnchor($this[0]);
+                    });
+                } else {
+                    var href = $this.next('ul').children('li:first-child').children('a').attr('href');
+                    var $this = $this.next('ul').children('li:first-child').children('a');
+                    updateArticle($this, href);
+                }
+            }
+            // 点击左侧标题，导航栏高亮显示 && 右侧文章更新
+            $('.list-item').on('click', function(e) {
                 e.preventDefault();
                 var href = $(this).attr('href');
-                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $(this).parent('li').addClass('m-doc-sidebar-selected');
-                win.history.pushState(href, '', href);
-                ctx.getArticle(href);
+                updateArticle($(this), href);
             });
-            // 点击h3 滚动到锚点
-            $('.m-doc-h2-children .m-doc-h3-list').on('click', function (e) {
-                if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h2-children').children('.m-doc-sidebar-selected').length > 0) {
-                    ctx._scrollToAnchor($(this)[0]);
-                } else {
-                    e.preventDefault();
-                    var _this = this;
-                    var href = $(_this).attr('href');
-                    win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function() {
-                        ctx._scrollToAnchor($(_this)[0]);
-                    });
-                }
-            });
-            // 点击h4 滚动到锚点
-            $('.m-doc-h3-children a').on('click', function (e) {
-                if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h3-children').children('.m-doc-sidebar-selected').length > 0) {
-                    ctx._scrollToAnchor($(this)[0]);
-                } else {
-                    e.preventDefault();
-                    var _this = this;
-                    var href = $(_this).attr('href');
-                    win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function() {
-                        ctx._scrollToAnchor($(_this)[0]);
-                    });
-                }
-            });
-            // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
-            $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
-            // back to top 按钮隐藏/显示
+
+            // 回到顶部
             $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
                 if (ctx.screenHeight > $(this).scrollTop()) {
@@ -346,90 +330,10 @@
                 } else {
                     backTop.addClass('m-doc-menu-top-show');
                 }
-            }))
-            // 导航跟随
-            .on('scroll', function () {
-                var h2 = $('article').find('h2');
-                var h3 = $('article').find('h3');
-                var scrollTop = $(this).scrollTop();
-                var tocH2 = $('.toc-wrap').find('.toc-level-2');
-                var tocH3 = $('.toc-wrap').find('.toc-level-3');
-                h2.each(function (index) {
-                    var h2Top = $(this)[0].offsetTop - scrollTop;
-                    if (h2Top <= 60) {
-                        tocH2.each(function (andex) {
-                            tocH2.eq(andex).removeClass('toc-level-2-on');
-                            tocH2.eq(andex).removeClass('toc-level-2-select');
-                        });
-                        tocH2.eq(index).addClass('toc-level-2-select');
-                        if (tocH2.eq(index).find('.toc-level-3').length === 0) {
-                            tocH2.eq(index).addClass('toc-level-2-on');
-                            // $('.m-doc-crumbs-wrapper').find('span').eq(3).hide();
-                            tocH3.removeClass('toc-level-3-on');
-                        }
-                        // 面包屑导航切换
-                        $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-2-select .toc-text').eq(0).text());
-                    }
-                });
-                h3.each(function (index) {
-                    var h3Top = $(this)[0].offsetTop - scrollTop;
-                    var tocH2Selected = $('.toc-wrap').find('.toc-level-2.toc-level-2-on').length;
-                    if (h3Top <= 60) {
-                        tocH3.each(function (andex) {
-                            tocH3.eq(andex).removeClass('toc-level-3-on');
-                        });
-                        if (!tocH2Selected) {
-                            var $indexTocH3 = tocH3.eq(index);
-                            $indexTocH3.addClass('toc-level-3-on');
-                            // 面包屑导航切换
-                            // $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-3-on .toc-text').text()).show();
-                        }
-                    }
-                });
-            })
-            .on('scroll', function () {
-                // 左侧导航栏跟随
-                var h2 = $('article').find('h2');
-                var scrollTop = $(this).scrollTop();
-                var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
-                var scrollHeight = $(this)[0].scrollHeight;
-                var clientHeight = $(this)[0].clientHeight;
-                h2.each(function (index) {
-                    var h2Top = this.offsetTop - scrollTop;
-                    if (h2Top <= 80) {
-                        var hash = $(this).children('a')[0].hash;
-                        sidebar.each(function (i) {
-                            if (this.hash.replace('/', '') === hash) {
-                                var parentHref = $(this)
-                                    .parents('.m-doc-h2-children')
-                                    .siblings('.m-doc-h2-list')
-                                    .attr('href')
-                                    .split('#')[0];
-                                if (parentHref === location.pathname) {
-                                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                                    $(this).parent('li').addClass('m-doc-sidebar-selected');
-                                }
-                            }
-                        });
-                    }
-                });
-                // 由h3高亮跳转到顶部时高亮h2
-                if (scrollTop === 0 && $('.m-doc-h2-children .m-doc-sidebar-selected').length > 0) {
-                    var selected = $('.m-doc-sidebar-selected');
-                    selected.removeClass('m-doc-sidebar-selected');
-                    $(selected.parent('ul.m-doc-h2-children')[0]).parent('li').addClass('m-doc-sidebar-selected');
-                }
-                // 滑动到底部时高亮最后一个h3
-                if (scrollTop + clientHeight == scrollHeight && h2.length > 0) {
-                    var hash = $(h2[h2.length - 1]).children('a')[0].hash;
-                    sidebar.each(function () {
-                        if (this.hash.replace('/', '') === hash) {
-                            $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                            $(this).parent('li').addClass('m-doc-sidebar-selected');
-                        }
-                    });
-                }
-            });
+            }));
+            
+            // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
+            $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
             if (this.screenWidth > 768) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
@@ -511,7 +415,9 @@
                 success: function (res) {
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
+                    var docMenu = $html.find('#m-doc-menu-wrapper').html();
                     $('#article-main-content').html(article);
+                    $('#m-doc-menu-wrapper').html(docMenu);
                     // $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
                     if ($('header').hasClass('m-doc-header-hide')) {
                         $('header').removeClass('m-doc-header-hide');

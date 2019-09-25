@@ -9,6 +9,11 @@ sidebar: device_clipboard
 
 **解释**：设置系统剪贴板的内容
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/clipboardData.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -95,7 +100,19 @@ Page({
     }
 });
 ```
+ 
+#### 错误码
+* Andriod
 
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.getClipboardData
 
@@ -121,3 +138,11 @@ Page({
 <a href="swanide://fragment/f931552b616c92a0c7f4e3ad721b99131560169348430" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 >在 swan/js 文件中代码示例与[swan.setClipboardData](https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#swan-setClipboardData/)相同。
+
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |

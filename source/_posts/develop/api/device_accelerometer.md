@@ -10,6 +10,11 @@ sidebar: device_accelerometer
 
 **解释**：监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getGravity.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **`callback`参数说明**：
@@ -208,7 +213,20 @@ body {
     height: 302px;
 }
 ```
+ 
+#### 错误码
+* Andriod
 
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|设备不支持否正确      |
 ## swan.startAccelerometer
 
 **解释**：开始监听加速度数据。

@@ -9,6 +9,11 @@ sidebar: open_chooseinvoicetitle
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 选择用户的发票抬头，需要[用户授权](http://smartapp.baidu.com/docs/develop/api/open_authorize/#swan-authorize/) scope.invoiceTitle。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseInvoiceTitle.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -67,21 +72,21 @@ page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
 
-**Andriod**
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
-|1002|取消选择状态码|
-|1003|选择失败状态码|
+|1002|取消选择|
+|1003|选择失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|1001|解析失败，请检查参数是否正确。|
+|1001|解析失败，请检查参数是否正确      |
 |1002|取消获取发票|
-|1003|获取发票失败| -->
+|1003|获取发票失败|

@@ -11,6 +11,11 @@ sidebar: media_cameracontext
 
 **解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
 **返回值**：cameraContext
@@ -60,8 +65,8 @@ Page({
         }
     },
     takePhoto() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.takePhoto({
+        const ctx = swan.createCameraContext();
+        ctx.takePhoto({
             quality: 'high',
             success: res => {
                 this.setData({
@@ -71,8 +76,8 @@ Page({
         });
     },
     startRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.startRecord({
+        const ctx = swan.createCameraContext();
+        ctx.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -81,8 +86,8 @@ Page({
         });
     },
     stopRecord() {
-        const CameraContext = swan.createCameraContext();
-        CameraContext.stopRecord({
+        const ctx = swan.createCameraContext();
+        ctx.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',
@@ -114,7 +119,29 @@ Page({
     </div>     
 </div>
 
+#### 错误码
 
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+|200101|相机权限-用户拒绝|
+|200102|相机权限-系统权限拒绝|
+|200201|录音权限-用户拒绝|
+|200201|录音权限-系统权限拒绝|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202  |解析失败，请检查参数是否正确|
+|10002|网络请求失败|
+|200101|相机权限-用户拒绝限|
+|200102|相机权限-系统权限拒绝|
+|200201|录音权限-用户拒绝|
+|200202|录音权限-系统权限拒绝|
 
 ## CameraContext.takePhoto
 

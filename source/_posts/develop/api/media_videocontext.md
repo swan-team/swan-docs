@@ -8,6 +8,11 @@ sidebar: media_videocontext
 
 **解释**： 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：String videoId
 
 **返回值**：videoContext
@@ -43,30 +48,30 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const VideoContext = swan.createVideoContext('myVideo');
-        this.VideoContext = VideoContext;
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = videoContext;
     },
     play() {
-        this.VideoContext.play();
+        this.videoContext.play();
     },
     pause() {
-        this.VideoContext.pause();
+        this.videoContext.pause();
     },
     seek() {
-        this.VideoContext.seek(10);
+        this.videoContext.seek(10);
     },
     sendDanmu() {
-        this.VideoContext.sendDanmu({
+        this.videoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.VideoContext.requestFullScreen();
+            this.videoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.VideoContext.exitFullScreen();
+            this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }
@@ -90,6 +95,21 @@ Page({
 
 
 
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
 
 ## VideoContext.play
 

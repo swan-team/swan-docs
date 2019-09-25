@@ -8,6 +8,11 @@ sidebar: show_navigationbar
 
 **解释**：动态设置当前页面的标题。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setNavigationBarTitle.png"  class="demo-qrcode-image" />
+
+
 **方法参数**： Object object
 
 **`object`参数说明**：
@@ -64,10 +69,30 @@ Page({
     }
 });
 ```
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
+
+
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确   |
 
 ## swan.showNavigationBarLoading
 
 **解释**： 该方法在当前页面显示导航条加载动画。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：无
 
@@ -100,10 +125,21 @@ Page({
 }
 ```
 
+#### 错误码
 
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
 ## swan.hideNavigationBarLoading
 
 **解释**： 隐藏导航条加载动画。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：无
 
@@ -143,6 +179,13 @@ Page({
     margin-bottom: 30rpx;
 }
 ```
+#### 错误码
+
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
 
 ## swan.setNavigationBarColor
 
@@ -225,3 +268,16 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败     |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确   |
