@@ -3242,18 +3242,18 @@
                 text: 版本下载
                 name: history
               -
-                link: /develop/devtools/page
-                name: page
+              
+                name: page_start
                 text: 界面
                 sidebar:
                   -
-                    link: /develop/devtools/page/#启动页
+                    link: /develop/devtools/page_start
                     text: 启动页
-                    name: page_启动页
+                    name: page_start
                   -
-                    link: /develop/devtools/page/#菜单栏
+                    link: /develop/devtools/page_menu
                     text: 菜单栏
-                    name: page_菜单栏
+                    name: page_menu
                   -
                     link: /develop/devtools/page/#工具栏
                     text: 工具栏
