@@ -281,7 +281,7 @@ Page({
 
 ## swan.canIUse
 
-**解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。暂无法校验宿主扩展的API。
+**解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。支持宿主扩展API的校验。
 
 **方法参数**： String schema
 
@@ -292,13 +292,26 @@ Page({
 |参数  |说明 |
 |---- | ---- |
 |${API}  | API 名字 |
-|${method} |  调用方式，有效值为return, success, object, callback   |
+|${method} |  调用方式，有效值为return, Object类型的参数的名称（多数为object）, 回调函数的名称（多数为success和callback）   |
 |${param} | 参数或者返回值  |
 |${options} |参数的可选值   |
 |${component} |   组件名字 |
 |${attribute} | 组件属性 |
 |${option}  |  组件属性的可选值 |
 
+**说明**：
+1. Object 类型的参数的名称和回调函数的名称以文档为准；
+2. 不支持 fail 和 complete 回调函数的判断；
+3. 纯 number 类型的属性不做支持；
+4. 带有`.`或空格的属性不做支持；
+5. 如果参数是 Array.<Object\> 或 Array.<string\> 类型，校验方式举例如下：
+```js
+// swan.ai.textReview   Array.<Object>
+swan.canIUse('ai.textReview.success.result.reject.label');
+
+// swan.chooseImage  Array.<string>
+swan.canIUse('swan.chooseVideo.object.sourceType.album');
+```
 
 **示例**：
 
@@ -317,14 +330,26 @@ Page({
 ```js
 Page({
     canIUse() {
+        // 组件
         console.log('canIUse:view.hover-class', swan.canIUse('view.hover-class'));
         console.log('canIUse:scroll-view.scroll-x', swan.canIUse('scroll-view.scroll-x'));
         console.log('canIUse:cover-view', swan.canIUse('cover-view'));
-        console.log('canIUse:button.size.default', swan.canIUse('view.button.size.default'));
-        console.log('canIUse:request.object.success.data', swan.canIUse('request.object.success.data'));
-        console.log('canIUse:getSavedFileList', swan.canIUse('getSavedFileList'));
-        console.log('canIUse:getSavedFileList.object', swan.canIUse('getSavedFileList.object'));
-        console.log('canIUse:getSavedFileList.object.success', swan.canIUse('getSavedFileList.object.success'));
+        console.log('canIUse:button.size.default', swan.canIUse('button.size.default'));
+
+        // API: ${method} 为 object
+        console.log('canIUse:request.object.method.OPTIONS', swan.canIUse('request.object.method.OPTIONS'));
+
+        // API: ${method} 为 success
+        console.log('canIUse:ai.imageAudit.success.conclusionType.data.stars.name', swan.canIUse('ai.imageAudit.success.conclusionType.data.stars.name'));
+
+        // API: ${method} 为 callback
+        console.log('canIUse:onAppShow.callback.entryType.user', swan.canIUse('onAppShow.callback.entryType.user'));
+
+        // API: ${method} 为 return
+        console.log('canIUse:getEnvInfoSync.return.env.trial', swan.canIUse('getEnvInfoSync.return.env.trial'));
+
+        // API: 类
+        console.log('canIUse:VideoContext.requestFullScreen.object.direction', swan.canIUse('VideoContext.requestFullScreen.object.direction'));
     }
 });
 ```
