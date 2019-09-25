@@ -3317,6 +3317,10 @@
                     text: 自动补全
                     name: editor_自动补全
                   -
+                    link: /develop/devtools/editor/#转换px为rpx
+                    text: 转换px为rpx
+                    name: editor_转换px为rpx                    
+                  -
                     link: /develop/devtools/editor/#Git-状态展示
                     text: Git 状态展示
                     name: editor_Git-状态展示                
