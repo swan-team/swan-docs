@@ -55,7 +55,7 @@ sidebar: ai_word
 ```js
 swan.ai.nlpLexerCustom({
     text: '百度是一家高科技公司',
-    success(res) {
+    success: res => {
         console.log('success', res);
     }
 });

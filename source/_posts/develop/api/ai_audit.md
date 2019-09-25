@@ -57,22 +57,24 @@ sidebar: ai_audit
 
 **示例**：
 
-<a href="swanide://fragment/f7e9e4806e3926c69b89814e8d2cd15a1558354829667" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.imageAudit({
-        image,
-        success(res) {
-            console.log(res.conclusionType); // 1 为合规
-        },
-        fail(err){
-            console.log(err); 
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.imageAudit({
+                image, // 暂不支持识别网络图片
+                success: res => {
+                    console.log('imageAudit res', res.conclusionType);
+                },
+                fail: err => {
+                    console.log('imageAudit err', err); 
+                }
+            });
         }
-    });
-  }
+    })
 });
 ```
 

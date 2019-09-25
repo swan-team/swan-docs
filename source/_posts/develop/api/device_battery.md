@@ -47,11 +47,11 @@ success回调函数参数：
 Page({
     getBatteryInfo() {
         swan.getBatteryInfo({
-            success(res) {
+            success: res => {
                 console.log('当前设备电量值：', res.level);
                 console.log('当前设备是否正在充电：', res.isCharging);
             },
-            fail(err) {
+            fail: err => {
                 console.log('getBatteryInfo fail', err);
             }
         });

@@ -180,7 +180,7 @@ Page({
            y: 0,
             width: 100,
             height: 100,
-            success(res) {
+            success: res => {
                 console.log('canvasGetImageData success', res);
             },
             fail: err => {
@@ -286,7 +286,7 @@ Page({
            y: 0,
             width: 200,
             height: 200,
-            success(res) {
+            success: res => {
                 swan.canvasPutImageData({
                     canvasId: 'canvas2',
                     x: 0,
@@ -294,7 +294,7 @@ Page({
                     width: 200,
                     height: 200,
                     data: res.data,
-                    success(res) {
+                    success: res => {
                         console.log('canvasPutImageData success', res);
                     },
                     fail: err => {
@@ -465,10 +465,10 @@ Page({
     toTempFilePath() {
         swan.canvasToTempFilePath({
             canvasId: 'canvas',
-            success(res) {
+            success: res => {
                 console.log('canvasToTempFilePath success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('canvasToTempFilePath fail', err);
             }
         });

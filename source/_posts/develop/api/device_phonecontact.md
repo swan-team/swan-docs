@@ -103,10 +103,10 @@ Page({
             homeAddressCity: '',
             homeAddressStreet: '',
             homeAddressPostalCode: '',
-            success(res) {
+            success: res => {
                 console.log('vibrateLong success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateLong fail', err);
             }
         });

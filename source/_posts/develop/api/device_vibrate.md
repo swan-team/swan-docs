@@ -40,10 +40,10 @@ sidebar: device_vibrate
 Page({
     vibrateLong() {
         swan.vibrateLong({
-            success(res) {
+            success: res => {
                 console.log('vibrateLong success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateLong fail', err);
             }
         });
@@ -92,10 +92,10 @@ Page({
 Page({
     vibrateShort() {
         swan.vibrateShort({
-            success(res) {
+            success: res => {
                 console.log('vibrateShort success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateShort fail', err);
             }
         });

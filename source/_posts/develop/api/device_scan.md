@@ -48,12 +48,12 @@ sidebar: device_scan
 Page({
     scanCode() {
         swan.scanCode({
-            success(res) {
+            success: res => {
                 console.log('扫码的内容', res.result);
                 console.log('扫码的类型', res.scanType);
                 console.log('扫码的字符集', res.charSet);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });

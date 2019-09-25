@@ -52,10 +52,10 @@ sidebar: nacomponent
         swan.showFavoriteGuide({
             type: 'bar',
             content:'一键添加到我的小程序',
-            success(res) {
+            success: res => {
                 console.log('添加成功：', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('添加失败：', err);
             }
         })
@@ -71,10 +71,10 @@ sidebar: nacomponent
     swan.showFavoriteGuide({
         type: 'tip',
         content:'一键添加到我的小程序',
-        success(res) {
+        success: res => {
             console.log('添加成功：', res);
         },
-        fail(err) {
+        fail: err => {
             console.log('添加失败：', err);
         }
     })

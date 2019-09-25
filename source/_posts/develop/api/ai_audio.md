@@ -53,10 +53,10 @@ Page({
     textToAudio() {
         swan.ai.textToAudio({
             tex: '这是一段测试文字',
-            success(res) {
+            success: res => {
                 console.log('ai.textToAudio success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('ai.textToAudio fail', err);
             }
         });

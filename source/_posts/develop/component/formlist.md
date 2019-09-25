@@ -153,10 +153,10 @@ Page({
             content: '世界很复杂，百度更懂你',
             imageUrl: 'http://imgsrc.baidu.com/forum/pic/item/d9f9d72a6059252daecdfc36309b033b5bb5b92e.jpg',
             path: '/pages/openShare/openShare',
-            success(res) {
+            success: res => {
                 // 分享成功
             },
-            fail(err) {
+            fail: err => {
                 // 分享失败
             }
         };

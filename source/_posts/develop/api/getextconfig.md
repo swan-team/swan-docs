@@ -45,10 +45,10 @@ sidebar: getextconfig
 Page({
     getExtConfig() {
         swan.getExtConfig({
-            success(res) {
+            success: res => {
                 console.log('自定义的数据', res.extConfig);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });

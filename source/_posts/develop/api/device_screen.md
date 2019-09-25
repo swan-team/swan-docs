@@ -39,10 +39,10 @@ Page({
     setScreenBrightness() {
         swan.setScreenBrightness({
             value: 1,
-            success(res) {
+            success: res => {
                 console.log('setScreenBrightness success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
@@ -95,10 +95,10 @@ Page({
 Page({
     getScreenBrightness() {
         swan.getScreenBrightness({
-            success(res) {
+            success: res => {
                 console.log('屏幕亮度值', res.value);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
@@ -147,10 +147,10 @@ Page({
     setKeepScreenOn() {
         swan.setKeepScreenOn({
             keepScreenOn: true,
-            success(res) {
+            success: res => {
                 console.log('keepScreenOn success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('keepScreenOn fail', err);
             }
         });

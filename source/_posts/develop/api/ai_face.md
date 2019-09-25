@@ -164,7 +164,7 @@ sidebar: ai_face
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.faceDetect({
         image,
@@ -172,10 +172,10 @@ swan.chooseImage({
         face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
         max_face_num: '1',
         face_type: 'LIVE',
-        success(res) {
+        success: res => {
             console.log(res.face_list);
        },
-       fail(err) {
+       fail: err => {
             console.log( err);
         }
     });
@@ -324,10 +324,10 @@ swan.ai.faceMatch({
         "liveness_control": "HIGH"
     }
   ],
-  success(res) {
+  success: res => {
     console.log('res');
   },
-  fail(err) {
+  fail: err => {
     console.log('err');
   }
 });
@@ -400,7 +400,7 @@ swan.ai.faceMatch({
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.faceSearch({
 	    image,
@@ -410,10 +410,10 @@ swan.chooseImage({
 	    face_type: 'LIVE',
 	    user_id: 'xxxxxx',
 	    max_user_num: 20,
-	    success(res) {
+	    success: res => {
 	        console.log(res);
 	    },
-	    fail(err) {
+	    fail: err => {
 	        console.log(err);
 	    }
 	});
@@ -480,10 +480,10 @@ swan.ai.facePersonVerify({
     liveness_control: 'NONE',
     id_card_number: '',
     name: '',
-    success(res) {
+    success: res => {
         console.log('success', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('fail', err);
     }
 });
@@ -523,10 +523,10 @@ swan.ai.facePersonVerify({
 swan.ai.facePersonIdmatch({
     id_card_number: '',
     name: '',
-    success(res) {
+    success: res => {
         console.log('success', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('fail', err);
     }
 });
@@ -567,7 +567,7 @@ swan.ai.facePersonIdmatch({
 ```js
 swan.ai.faceLivenessSessioncode({
   appid: '',
-  success(res) {
+  success: res => {
     console.log('res');
   }
 });
@@ -753,7 +753,7 @@ swan.ai.faceLivenessSessioncode({
 ```js
 swan.chooseImage({
     count: 3,
-    success(res) {
+    success: res => {
         swan.ai.faceVerify({
             data: [
                 {
@@ -772,10 +772,10 @@ swan.chooseImage({
                     "face_field": "age,beauty,expression"
                 }
             ],
-            success(res) {
+            success: res => {
                 console.log('ai.faceVerify success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('ai.faceVerify fail', err);
             }
         });
@@ -905,7 +905,7 @@ swan.chooseImage({
 swan.ai.faceLivenessVerify({
   video_base64: '',
   session_id: '',
-  success(res) {
+  success: res => {
     console.log('res');
   }
 });
