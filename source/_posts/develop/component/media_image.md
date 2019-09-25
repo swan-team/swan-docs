@@ -19,7 +19,7 @@ sidebar: media_image
 |---- | ---- | ---- |---- |---- |
 | src | String  |  | 否 |图片资源地址|
 | mode | String  | scaleToFill | 否 |图片裁剪、缩放的模式|
-|lazy-load | Boolean  |false | 否 |图片懒加载，在图片即将进入一定范围（距离当前屏50px）时才开始进行加载。只针对 scroll-view 下的 image 有效 |
+|lazy-load | Boolean  |false | 否 |图片懒加载，在图片即将进入一定范围（距离当前屏50px）时才开始进行加载。|
 | binderror |HandleEvent | | 否 |当错误发生时，发布到 AppService 的事件名，事件对象 event.detail = {errMsg: 'something wrong'}|
 | bindload | HandleEvent  | | 否 |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
@@ -135,9 +135,9 @@ Page({
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src="../../../img/component/image03.jpeg">
-    </div>  
+    </div>
     <div class="m-doc-custom-examples-correct">
         <img src="../../../img/component/image04.jpeg">
-    </div>     
+    </div>
 </div>
 
