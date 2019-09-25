@@ -160,7 +160,7 @@ sidebar: ai_face
 
 **示例代码**
 
-<a href="swanide://fragment/e6b484f151d6281bcdc5dbbee8cbf1fe1567751456446" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dd9ef2f0f209e086ee27ab4d71b43cef1569390482495" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -304,7 +304,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/2c717bcac95b9db8690aafee3fee504b1567751699749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1a7de5da7df354b6b437441b9ecd75671569390677906" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceMatch({
@@ -470,7 +470,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/9043d43466d79899ca90e751da65ec191567752086557" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e4aafc79256bf81f38b300ecf21f21b61569390813784" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonVerify({
@@ -517,7 +517,7 @@ swan.ai.facePersonVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/e30c906169cc2c20f43d68cf3fea872c1567752214190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/59f17de4a1c8cfd424e06f81ff9b3a841569390923478" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonIdmatch({

@@ -32,18 +32,7 @@ sidebar: media_backgroundaudiomanager
  
 **示例**：
 
-<a href="swanide://fragment/27e9caf2a1251f5db5c43fd60a4535e21567971373405" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="play">play</button>
-    <button type="primary" bindtap="pause">pause</button>
-    <button type="primary" bindtap="stop">stop</button>
-    <button type="primary" bindtap="seek">seek</button>
-</view>
-```
+<a href="swanide://fragment/778f67b7399d2d019ebc67d498e2e03f1569392503088" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -127,21 +116,6 @@ Page({
 });
 
 ```
-
-
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/getBackgroundAudioManager.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ## BackgroundAudioManager.play 
 

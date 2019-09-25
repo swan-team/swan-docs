@@ -37,11 +37,7 @@ sidebar: media_video
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 **示例**：
-<a href="swanide://fragment/0eef619e22e72c017b16183fdf143ec31568001484211" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-```html
-<button bind:tap="chooseVideo" type="primary">点击选择视频</button>
-<video src="{{src}}" controls></video>
-```
+<a href="swanide://fragment/b86b8c8cd6f7ad38c0139a8dc9a8699c1569395309880" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```javascript
 Page({
@@ -103,7 +99,7 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/ec3a0eebd4faa29ba8db3a34fcca02721567962713625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/078059df20a15ce21c906235c4a075771569395753746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

@@ -44,7 +44,7 @@ sidebar: media_image
 
 **示例**：
 
-<a href="swanide://fragment/0d62ef0c8ea615754904189fac8a13d11567755481204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f2e63ad4bd1589a93b0c042cbbc64b531569391349605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -104,7 +104,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/38f4c33b5ebbda9c2b98a9ee1381ec871567998705872" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f894cd9bd5137023f6820041d829c12e1569391306305" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -176,7 +176,7 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/57ab8062cc2e4ae51f5b1984f748b83c1567929767878" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b439e751ff3f4f8002c24abb715bdda11569391409791" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -230,41 +230,43 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/d2ca4220ef3a8436f9eda8f3da9765161568010174134" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6d330084d94bdd9e49f28be58cb7bd491569391477884" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    saveImageToPhotosAlbum() {
-        swan.chooseImage({
-            count: 1,
-            sizeType: ['original', 'compressed'],
-            sourceType: ['album', 'camera'],
-            success: res => {
-                swan.saveImageToPhotosAlbum({
-                    filePath: res.tempFilePaths[0],
-                    success: res => {
-                        swan.showToast({
-                            title: 'success',
-                            icon: 'none'
-                        });
-                        console.log('saveImageToPhotosAlbum success', res);
-                    },
-                    fail: err => {
-                        swan.showToast({
-                            title: 'fail',
-                            icon: 'none'
-                        });
-                        console.log('saveImageToPhotosAlbum fail', err);
-                    }
-                });
-            },
-            fail: err => {
-                console.log('chooseImage fail', err);
-            }
-        });
-    }
+    swan.downloadFile({
+        // 仅为示例，并非真实的资源
+        url: 'https://b.bdstatic.com/miniapp/image/getImageInfo.png',
+        header: {
+            'content-type': 'application/json'
+        },
+        success: res => {
+            let filePath = res.tempFilePath;
+            swan.saveImageToPhotosAlbum({
+                filePath, // 暂不支持网络图片地址，需与swan.downloadFile一起使用
+                success: res => {
+                    swan.showToast({
+                        title: '已保存到本地相册',
+                        icon: 'none'
+                    });
+                    console.log('saveImageToPhotosAlbum success', res);
+                },
+                fail: err => {
+                    swan.showToast({
+                        title: '',
+                        icon: 'none'
+                    });
+                    console.log('saveImageToPhotosAlbum fail', err);
+                }
+            });
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    });
 });
 ```
 
@@ -309,7 +311,7 @@ Page({
 |duration|Number|选定视频的时间长度 (单位：s)|
 
 **示例**
-<a href="swanide://fragment/ede0ca93153cd6f1b6f4b83198b0d8c91561972369610" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c310588e62681210194939ddf60e29e91569391695543" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **示例 1 打开相册只选择图片或视频**
 * 在 js 文件中

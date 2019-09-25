@@ -19,7 +19,7 @@ sidebar: media_recorder
 **解释**：swan.getRecorderManager 的返回值。
 
 **示例**：
-<a href="swanide://fragment/9594161131c27e789538f1e4bb99f4b51559049882382" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7c14ca3d4e36f07aed3f68185333b6d91569392187260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -176,7 +176,7 @@ recorderManager.start(options);
 
 
 **示例**：
-<a href="swanide://fragment/bea70d0226e937e1e1ac613ef5a6ec1b1567940572468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
