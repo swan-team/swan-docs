@@ -19,7 +19,7 @@ swan.stopCompass(opts)
 
 ```js
 swan.stopCompass({
-    success: function (res) {
+    success: res => {
         console.log(res);
     }
 });

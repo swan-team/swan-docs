@@ -94,10 +94,10 @@ Page({
             collects: '23',
             shares: '8',
             followers: '35',
-            success: function () {
+            success: res => {
                 console.log('setPageInfo success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setPageInfo fail', err);
             }
         })
@@ -134,10 +134,10 @@ Page({
     onShow() {
         swan.setMetaDescription({
             content: '当前小程序页面描述信息',
-            success: function (res) {
+            success: res => {
                 console.log('setMetaDescription success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setMetaDescription fail', err);
             }
         });
@@ -182,10 +182,10 @@ Page({
     onShow() {
         swan.setMetaKeywords({
             content: '小程序, 关键字',
-            success: function (res) {
+            success: res => {
                 console.log('setMetaKeywords success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setMetaKeywords fail', err);
             }
         });
@@ -230,10 +230,10 @@ Page({
     onShow() {
         swan.setDocumentTitle({
             title: '我是页面标题',
-            success: function (res) {
+            success: res => {
                 console.log('setDocumentTitle success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('setDocumentTitle fail', err);
             }
         });

@@ -48,10 +48,10 @@ Page({
             extraData: {
                 foo: 'baidu'
             },
-            success: function (res) {
+            success: res => {
                 console.log('navigateToSmartProgram success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateToSmartProgram fail', err);
             }
         });
@@ -121,10 +121,10 @@ Page({
             extraData: {
                 foo: 'baidu'
             },
-            success: function (res) {
+            success: res => {
                 console.log('navigateBackSmartProgram success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateBackSmartProgram fail', err);
             }
         });

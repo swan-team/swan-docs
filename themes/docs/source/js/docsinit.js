@@ -412,7 +412,7 @@
             $.ajax({
                 url: href,
                 dataType: 'html',
-                success: function (res) {
+                success: res => {
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
                     var docMenu = $html.find('#m-doc-menu-wrapper').html();

@@ -53,7 +53,7 @@ swan.openCustomerServiceConversation(opts)
 ```js
 swan.onTouchStart(res => {
     swan.openCustomerServiceConversation({
-        success(res) {
+        success: res => {
             console.log('success', res.errMsg)
         },
         fail(res) {

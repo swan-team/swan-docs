@@ -61,17 +61,19 @@ sidebar: ai_text
 
 **示例**：
 
-<a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.textReview({
-    content: '',
-    success(res) {
-      console.log(res.result.spam); // 0 表示审核通过
-    },
-    fail(err) {
-      console.log(err);
-    }
+Page({
+  swan.ai.textReview({
+      content: '',
+      success: res => {
+        console.log('textReview res', res.result.spam); // 0 表示审核通过
+      },
+      fail: err => {
+        console.log('textReview err', err);
+      }
+  })
 });
 ```
 

@@ -68,7 +68,7 @@ sidebar: open_log
 
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         swan.request({
             url: 'https://xxx/xxx', // 开发者服务器地址
             data: {
@@ -76,7 +76,7 @@ swan.login({
             }
         });
     },
-    fail: function (err) {
+    fail: err => {
         console.log('login fail', err);
     }
 });
@@ -234,10 +234,10 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 Page({
     checkSession() {
         swan.checkSession({
-            success: function (res) {
+            success: res => {
                 console.log('登录态有效');
                 swan.getUserInfo({
-                    success: function (res) {
+                    success: res => {
                         console.log('用户名', res.userInfo.nickName);
                         swan.request({
                             url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
@@ -249,10 +249,10 @@ Page({
                     }
                 })
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('登录态无效');
                 swan.login({
-                    success: function (res) {
+                    success: res => {
                         swan.request({
                             url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
                             data: {
@@ -260,7 +260,7 @@ Page({
                             }
                         });
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('登录失败', err);
                     }
                 });

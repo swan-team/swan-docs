@@ -34,41 +34,24 @@ sidebar: net_websocket
 
 **示例**：
 
-<a href="swanide://fragment/66d08f4a9aadda42620f3005242695721559043634442" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="connectSocket">connectSocket</button>
-</view>
-```
+<a href="swanide://fragment/f17dc02d2033796daeba252414b4bfef1569386069789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    connectSocket() {
-        swan.connectSocket({
-            url: 'wss://echo.websocket.org',
-            header: {},
-            protocols: [''],
-            success: function (res) {
-                console.log('connectSocket success', res);
-            },
-            fail: function (err) {
-                console.log('connectSocket fail', err);
-            }
-        });
-    }
+    swan.connectSocket({
+        url: 'wss://echo.websocket.org',
+        header: {},
+        protocols: [''],
+        success: res => {
+            console.log('connectSocket success', res);
+        },
+        fail: err => {
+            console.log('connectSocket fail', err);
+        }
+    });
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 #### 错误码
@@ -111,43 +94,26 @@ Page({
 
 <a href="swanide://fragment/cb33316c7dc0aeaa07ed957ec74229c81559044468276" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="onSocketOpen">onSocketOpen</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
 Page({
-    onSocketOpen() {
-        swan.onSocketOpen(function (res) {
-            console.log('WebSocket连接已打开！', res);
-        });
+    swan.onSocketOpen(function (res) {
+        console.log('WebSocket连接已打开！', res);
+    });
 
-        swan.connectSocket({
-            url: 'wss://echo.websocket.org',
-            header: {},
-            protocols: [''],
-            success: function (res) {
-                console.log('connectSocket success', res);
-            },
-            fail: function (err) {
-                console.log('connectSocket fail', err);
-            }
-        });
-    }
+    swan.connectSocket({
+        url: 'wss://echo.websocket.org',
+        header: {},
+        protocols: [''],
+        success: res => {
+            console.log('connectSocket success', res);
+        },
+        fail: err => {
+            console.log('connectSocket fail', err);
+        }
+    });
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.onSocketError
@@ -161,44 +127,28 @@ Page({
 
 <a href="swanide://fragment/8697b85081dbaebafa4207562a7a9f3e1559044367812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="onSocketError">onSocketError</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
 Page({
-    onSocketError() {
-        swan.onSocketError(function (res) {
-            console.log('WebSocket连接打开失败，请检查！', res);
-        });
+    swan.onSocketError(function (res) {
+        console.log('WebSocket连接打开出错，请检查！', res);
+    });
 
-        swan.connectSocket({
-            url: 'wss://xxx.websocket.org',
-            header: {},
-            protocols: [''],
-            success: function (res) {
-                console.log('connectSocket success', res);
-            },
-            fail: function (err) {
-                console.log('connectSocket fail', err);
-            }
-        });
-    }
+    swan.connectSocket({
+        url: 'wss://xxx.websocket.org',
+        header: {},
+        protocols: [''],
+        success: res => {
+            console.log('connectSocket success', res);
+        },
+        fail: err => {
+            console.log('connectSocket fail', err);
+        }
+    });
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
  
 #### 错误码
@@ -235,14 +185,6 @@ Page({
 
 <a href="swanide://fragment/1e3a78fa7771b02cd58902a750b502201559045140980" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="sendSocketMessage">sendSocketMessage</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
@@ -251,10 +193,10 @@ Page({
         swan.onSocketOpen(function () {
             swan.sendSocketMessage({
                 data: 'baidu',
-                success: function (res) {
+                success: res => {
                     console.log('WebSocket发送数据成功', res);
                 },
-                fail: function (err) {
+                fail: err => {
                     console.log('WebSocket发送数据失败', err);
                 }
             });
@@ -264,23 +206,17 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             protocols: [''],
-            success: function (res) {
+            success: res => {
                 console.log('connectSocket success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('connectSocket fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 #### 错误码
 
 * Andriod 
@@ -318,14 +254,6 @@ Page({
 
 <a href="swanide://fragment/a861668fb7883a1fbcc483540ef2b3e51559044408858" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="onSocketMessage">onSocketMessage</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
@@ -344,22 +272,15 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             protocols: [''],
-            success: function (res) {
+            success: res => {
                 console.log('connectSocket success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('connectSocket fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 <!-- #### 错误码
 
@@ -390,27 +311,22 @@ Page({
 
 <a href="swanide://fragment/1dd4f099f6066c0b3edc86b77987ec521559043567840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="closeSocket">closeSocket</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
 Page({
     closeSocket() {
+        //注意这里有时序问题，
+        //如果 swan.connectSocket 还没回调 swan.onSocketOpen，而先调用 swan.closeSocket，那么就做不到关闭 WebSocket 的目的。
+        //必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
         swan.onSocketOpen(function () {
             swan.closeSocket({
                 code: '1001',
                 reason: 'close reason',
-                success: function (res) {
+                success: res => {
                     console.log('WebSocket链接关闭成功', res);
                 },
-                fail: function (err) {
+                fail: err => {
                     console.log('WebSocket链接关闭失败', err);
                 }
             });
@@ -420,23 +336,17 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             protocols: [''],
-            success: function (res) {
+            success: res => {
                 console.log('connectSocket success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('connectSocket fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
  
 #### 错误码
 
@@ -465,13 +375,6 @@ Page({
 
 <a href="swanide://fragment/f13c9d8eb241c61a61c3a175111891d81559044298681" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="onSocketClose">onSocketClose</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -490,22 +393,15 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             protocols: [''],
-            success: function (res) {
+            success: res => {
                 console.log('connectSocket success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('connectSocket fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ##  SocketTask
@@ -529,64 +425,54 @@ Page({
 ```js
 Page({
     onLoad() {
-        const ws = swan.connectSocket({
+        const webSocket = swan.connectSocket({
             url: 'wss://echo.websocket.org'
         });
 
-        ws.onOpen(function (res) {
+        webSocket.onOpen(function (res) {
             console.log('WebSocket连接已打开！', res);
         });
 
-        ws.onError(function (err) {
+        webSocket.onError(function (err) {
             console.log('WebSocket连接错误！', err);
         });
 
-        ws.onMessage(function (res) {
+        webSocket.onMessage(function (res) {
             console.log('WebSocket接受到服务器的消息', res);
         });
 
-        ws.onClose(function (res) {
+        webSocket.onClose(function (res) {
             console.log('WebSocket连接已关闭！', res);
         });
 
-        this.ws = ws;
+        this.webSocket = webSocket;
     },
     send() {
-        this.ws.send({
+        this.webSocket.send({
             data: 'baidu',
-            success: function (res) {
+            success: res => {
                 console.log('WebSocket发送数据成功', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('WebSocket发送数据失败', err);
             }
         });
     },
     close() {
-        this.ws.close({
+        this.webSocket.close({
             code: '1001',
             reason: 'close reason',
-            success: function (res) {
+            success: res => {
                 console.log('WebSocket链接关闭成功', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('WebSocket链接关闭失败', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
-```
  
 
 ## SocketTask.send

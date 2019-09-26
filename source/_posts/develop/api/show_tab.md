@@ -31,50 +31,24 @@ sidebar: show_tab
 
 
 **示例**：
-<a href="swanide://fragment/d2ca0174fbc5e441f603668b91abaee21560167954476" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
-        <button bind:tap="navigateBack" type="primary" hover-stop-propagation="true">返回上一页</button>
-        <button bind:tap="redirectTo" type="primary" hover-stop-propagation="true">在当前页面打开</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'navigateTo/Back,redirectTo'
-    },
 
-    navigateTo(e) {
-        swan.navigateTo({
-            url: '/pages/detail/detail'
-        });
-    },
+navigateTo(e) {
+    swan.navigateTo({
+        url: '/pages/detail/detail',
+        success: res => {
+            console.log('navigateTo success')
+        },
+        fail: err => {
+            console.log('navigateTo fail')
+        }
+    });
+},
 
-    navigateBack(e) {
-        swan.navigateBack({
-            delta: 2
-        });
-    },
-
-    redirectTo(e) {
-        swan.redirectTo({
-            url: '/pages/detail/detail'
-        });
-    }
-});
 ```
 **Bug & Tip**：
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
@@ -101,40 +75,23 @@ jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、compl
 
 **示例**：
 
-<a href="swanide://fragment/00b8b93225cfaf30de9f4329f1962ee91557729109817" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="redirectTo">redirectTo</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    redirectTo() {
-        swan.redirectTo({
-            url: '/api/api?key=value',
-            success: function () {
-                console.log('redirectTo success');
-            },
-            fail: function (err) {
-                console.log('redirectTo fail', err);
-            }
-        });
+swan.redirectTo({
+    url: '/api/api?key1=value1&key2=value2',
+    success: res => {
+        console.log('redirectTo success');
+    },
+    fail: err => {
+        console.log('redirectTo fail', err);
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.switchTab
 
@@ -153,39 +110,22 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/b62ad6cdc0ef78061a6581fa9a1fc9ab1557729238493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="switchTab">switchTab</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    switchTab() {
-        swan.switchTab({
-            url: '/api/api',
-            success: function () {
-                console.log('switchTab success');
-            },
-            fail: function (err) {
-                console.log('switchTab fail', err);
-            }
-        });
+swan.switchTab({
+    url: '/api/api',
+    success: res => {
+        console.log('switchTab success');
+    },
+    fail: err => {
+        console.log('switchTab fail', err);
     }
 });
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.navigateBack
@@ -211,7 +151,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f8d91e30ca7ed70b3114add6fd1a58711557729485160" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 component.swan 文件中
 
@@ -236,10 +176,10 @@ Page({
     navigateTo() {
         swan.navigateTo({
             url: '/api/api?key=value',
-            success: function () {
+            success: res => {
                 console.log('navigateTo success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateTo fail', err);
             }
         });
@@ -255,22 +195,15 @@ Page({
     },
     navigateBack() {
         swan.navigateBack({
-            success: function () {
+            success: res => {
                 console.log('navigateBack success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateBack fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 
@@ -292,37 +225,20 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/7a5d527292a5ff0339bc3dc24803bc7c1557729741562" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="reLaunch">reLaunch</button>
-</view>
-```
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    reLaunch() {
-        swan.reLaunch({
-            url: '/api/api?key=value',
-            success: function () {
-                console.log('reLaunch success');
-            },
-            fail: function (err) {
-                console.log('reLaunch fail', err);
-            }
-        });
+
+swan.reLaunch({
+    url: '/api/api?key=value',
+    success: res => {
+        console.log('reLaunch success', res);
+    },
+    fail: err => {
+        console.log('reLaunch fail', err);
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+    
 ```

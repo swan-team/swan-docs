@@ -68,13 +68,13 @@ swan.requestPolymerPayment({
         "rsaSign": '',
         "bizInfo": ''
     },
-    success: function (res) {
+    success: res => {
         swan.showToast({
             title: '支付成功',
             icon: 'success'
         });
     },
-    fail: function (err) {
+    fail: err => {
         swan.showToast({
             title: JSON.stringify(err)
         });

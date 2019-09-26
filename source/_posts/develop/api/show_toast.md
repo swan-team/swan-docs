@@ -39,71 +39,21 @@ sidebar: show_toast
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
 **示例**：
-<a href="swanide://fragment/01994f6893c352812490ee52cabd36ef1560167169455" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="showToast" type="primary" hover-stop-propagation="true">点击弹出默认toast</button>
-        <button bind:tap="showToastIcon" type="primary" hover-stop-propagation="true">点击弹出设置icon的toast</button>
-        <button bind:tap="showToastDuration" type="primary" hover-stop-propagation="true">点击弹出设置duration的toast</button>
-        <button bind:tap="showToastLoading" type="primary" hover-stop-propagation="true">点击弹出显示loading的toast</button>
-        <button bind:tap="hideToast" type="primary" hover-stop-propagation="true">点击隐藏toast</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'toast'
+swan.showToast({
+    title: 'success',
+    icon: 'success',
+    duration: 5000,
+    mask: true,
+    success: res => {
+        console.log('showToast success');
     },
-
-    onHide() {
-        swan.hideToast();
-    },
-
-    showToast() {
-        swan.showToast({
-            title: '默认'
-        });
-    },
-
-    showToastIcon() {
-        swan.showToast({
-            title: 'success',
-            icon: 'success'
-        });
-    },
-
-    showToastDuration() {
-        swan.showToast({
-            duration: 5000,
-            title: 'duration 5000'
-        });
-    },
-
-    showToastLoading() {
-        swan.showToast({
-            title: '正在加载...',
-            icon: 'loading'
-        });
-    },
-
-    hideLoading() {
-        swan.hideLoading();
-    },
-
-    hideToast() {
-        swan.hideToast();
+    fail: err => {
+        console.log('showToast fail', err);
     }
 });
 ```
@@ -143,40 +93,17 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/57166a3f5efd17f9397b6abde17b57b61557727729286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showLoading">showLoading</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    showLoading() {
-        swan.showLoading({
-            title: 'loading',
-            mask: true,
-            success: function () {
-                console.log('showLoading success');
-            },
-            fail: function (err) {
-                console.log('showLoading fail', err);
-            }
-        });
-    }
+swan.showToast({
+    title: '正在加载...',
+    icon: 'loading'
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+   
 ```
 #### 错误码
 * Andriod
@@ -207,42 +134,23 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/a0acd2d1849d0584f88c644db70b4c1f1557727806672" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showToast">showToast</button>
-    <button type="primary" bindtap="hideToast">hideToast</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
+
     showToast() {
         swan.showToast({
             title: 'toast',
-            duration: 10000
+            icon: 'none'
         });
     },
     hideToast() {
         swan.hideToast();
     }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
 #### 错误码
 **Andriod**
@@ -269,21 +177,12 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f9c9c15b36a79c338e7ff389eb3eccde1557727891494" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showLoading">showLoading</button>
-    <button type="primary" bindtap="hideLoading">hideLoading</button>
-</view>
-```
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
+
     showLoading() {
         swan.showLoading({
             title: 'loading'
@@ -292,18 +191,7 @@ Page({
     hideLoading() {
         swan.hideLoading();
     }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
 #### 错误码
 
@@ -349,47 +237,26 @@ Page({
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
 **示例**：
-<a href="swanide://fragment/76a314862cb93d31184b7a251cc5cd061560167300670" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="showModal" type="primary" hover-stop-propagation="true">有标题的modal</button>
-        <button bind:tap="showModalNotitle" type="primary" hover-stop-propagation="true">无标题的modal</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'modal'
-    },
-
-    showModal() {
-        swan.showModal({
-            title: '标题',
-            content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-            showCancel: false
-        });
-    },
-
-    showModalNotitle() {
-        swan.showModal({
-            content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-            confirmText: '确定',
-            cancelText: '取消'
-        });
-    }
+swan.showModal({
+    title: '标题',
+    content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+    showCancel: false
 });
+
+showModalNotitle() {
+    swan.showModal({
+        content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+        confirmText: '确定',
+        confirmColor: '色值',
+        cancelText: '取消',
+        cancelColor	: '确定',
+    });
+}
 ```
 
             
@@ -438,37 +305,21 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/cb742037e729ede5fd6efe8967dfd55f1540397056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="showActionSheet" class="button" type="default" hover-stop-propagation="true">弹出action sheet</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
-
+<a href="swanide://fragment/5b21419f4f4abd6685556b4f7e524cd81569464246835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        title: 'action-sheet'
-    },
-
     showActionSheet() {
         swan.showActionSheet({
             itemList: ['选项一', '选项二', '选项三', '选项四'],
             itemColor: '#333',
             success: res => {
                 console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
+            },
+            fail: err => {
+                console.log('showActionSheet fail', err);
             }
         });
     }

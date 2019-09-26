@@ -43,22 +43,24 @@ sidebar: ai_classify
 
 **示例**：
 
-<a href="swanide://fragment/f0f5c38f725ffc2be62f96eb4be8c3421559033876094" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dcc9c3fcf59e0de53028a481f22d92951569388593001" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.advancedGeneralIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      },
-      fail(err) {
-        console.log(err);
-      }
-    });
-  }
+Page({
+  swan.chooseImage({
+    success: res => {
+      let image = res.tempFilePaths[0];
+      swan.ai.advancedGeneralIdentify({
+        image, // 暂不支持识别网络图片
+        success: res => {
+          console.log('advancedGeneralIdentify res', res.result);
+        },
+        fail: err => {
+          console.log('advancedGeneralIdentify err', err);
+        }
+      });
+    }
+  })
 });
 ```
 
@@ -140,16 +142,21 @@ swan.chooseImage({
 <a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.objectDetectIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
+Page({
+  swan.chooseImage({
+    success: res => {
+      let image = res.tempFilePaths[0];
+      swan.ai.objectDetectIdentify({
+        image,
+        success: res => {
+          console.log('objectDetectIdentify res', res.result);
+        },
+        fail: err => {
+          console.log('objectDetectIdentify fail', err);
+        }
+      });
+    }
+  })
 });
 ```
 
@@ -217,20 +224,20 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/96db64443663c4666fd4fa2fd9e835751567746210709" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5cb0c5cf808cc6057d8fb94b56357bf21569414658661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.carClassify({
         image,
         top_num: 5,
-        success(res) {
-          console.log(res.result);
+        success: res => {
+          console.log('carClassify res', res.result);
         },
-        fail(err){
-          console.log(err);
+        fail: err => {
+          console.log('carClassify err', err);
         }
     });
   }
@@ -332,19 +339,22 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/f8c8090c501943e3bf0294d50f95f2e41567750360658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f1a28edc917988c8cfcf0c257dbeeefa1569414920893" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.dishClassify({
       image,
       top_num: 5,
       filter_threshold: 0.95,
-      success(res) {
-        console.log(res.result);
-      }
+      success: res => {
+        console.log('dishClassify res', res.result);
+      },
+      fail: err => {
+          console.log('dishClassify res', err);
+        }
     });
   }
 });
@@ -444,21 +454,21 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/f4d7ec16806e58ad02ddb33a9737f4131567750643638" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab217ecd1c08c7d10992d367ac052dbb1569414838193" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.logoClassify({
       image,
       custom_lib: false,
-      success(res) {
-        console.log(res.result);
+      success: res => {
+        console.log('dishClassify res', res.result);
       },
-      fail(err) {
-        console.log(err);
+      fail: err => {
+        console.log('dishClassify err', err);
       }
     });
   }
@@ -526,17 +536,20 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/c0d55c9f9bdabc817bec1fa807519bf61567750900353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61d91bbf4843daa85ff43dbbb9cc23691569414992464" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.animalClassify({
       image,
       top_num: 6,
-      success(res) {
-        console.log(res.result);
+      success: res => {
+        console.log('animalClassify res', res.result);
+      },
+      fail: err => {
+        console.log('animalClassify err', err);
       }
     });
   }
@@ -615,19 +628,19 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/d1c86b7451424a0fc11257035438df4e1559034681121" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0ed61bf9910ed18a664037cd907c0fae1569415076954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.plantClassify({
       image,
-      success(res) {
-        console.log(res.result);
+      success: res => {
+        console.log('plantClassify res', res.result);
       },
-      fail(err) {
-        console.log(err);
+      fail: err => {
+        console.log('plantClassify err', err);
       }
     });
   }
@@ -697,10 +710,10 @@ swan.recognizeImage({
     categoryList: ['BARCODE'],
     index: 0,
     showTitle: true,
-    success(res) {
+    success: res => {
         console.log('调起识图成功：', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('调起识图失败：', err);
     }
 })

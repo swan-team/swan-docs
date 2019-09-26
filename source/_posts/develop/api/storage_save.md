@@ -99,104 +99,19 @@ swan.getStorageInfo({
 |complete   | Function   | 否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/f5a28a2461c85a3d8147fb9338ae5ed21560166356644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <input bind:input="keyInput" class="input" type="text" placeholder="请输入key"/>
-        <input bind:input="valueInput" class="input" type="text" placeholder="请输入value"/>
-        <button bind:tap="setStorage" type="primary" hover-stop-propagation="true">存储数据</button>
-        <button bind:tap="getStorage" type="primary" hover-stop-propagation="true">读取数据</button>
-        <button bind:tap="clearStorage" hover-stop-propagation="true">清理数据</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
 
 * 在 js 文件中
 ```js
-Page({
-    data: {
-        title: 'get/set/clearStorage',
-        key: '',
-        value: '',
-        keyValue: ''
+swan.setStorage({
+    key: 'xxx',
+    data: 'xxx',
+    success: res => {
+        console.log('setStorage success', res);
     },
-
-    keyInput(e) {
-        this.setData('key', e.detail.value);
-    },
-
-    valueInput(e) {
-        this.setData('value', e.detail.value);
-    },
-
-    setStorage() {
-        let key = this.hasKey();
-        if (!key) {
-            return;
-        }
-        swan.setStorage({
-            key,
-            data: this.getData('value'),
-            success: res => {
-                swan.showToast({
-                    title: '存储数据成功'
-                });
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '存储数据失败'
-                });
-            }
-        });
-    },
-
-    getStorage() {
-        let key = this.hasKey();
-        if (!key) {
-            return;
-        }
-        swan.getStorage({
-            key,
-            success: res => {
-                swan.showModal({
-                    title: '读取数据成功',
-                    content: JSON.stringify(res),
-                    showCancel: false
-                });
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '读取数据失败'
-                });
-            }
-        });
-    },
-
-    clearStorage() {
-        swan.clearStorageSync();
-        console.log('why', this.getData('keyValue'));
-        this.setData('keyValue', '');
-        swan.showToast({
-            title: '清除数据成功'
-        });
-    },
-
-    hasKey() {
-        let key = this.getData('key');
-        if (key) {
-            return key;
-        }
-        swan.showToast({
-            title: 'key不能为空'
-        });
+    fail: err => {
+        console.log('setStorage err', err);
     }
 });
 ```
@@ -229,16 +144,6 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f07013d420a6a32eab070dccc03e9b641557726296439" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setStorageSync">setStorageSync</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
@@ -247,18 +152,13 @@ Page({
         try {
             swan.setStorageSync('key', 'value');
         } catch (e) {
+
         }
     }
 });
 ```
 
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
-}
- ```
+
 
 #### 错误码
 
@@ -304,11 +204,23 @@ Page({
 |data   | Object/String/Number/Array | key 对应的内容|
 
 **示例**：
-<a href="swanide://fragment/a7b2504b71ca436426b0ae155f622b8a1560166561702" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
-> 在 swan/js 文件中的代码示例与[swan.setStorage](https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/)相同
+> 建议先setStorage, 再getStorage
 
+* 在 js 文件中
+```js
+swan.getStorage({
+    key: 'xxx',
+    success: res => {
+        console.log('getStorage success', res);
+    },
+    fail: err => {
+        console.log('getStorage err', err);
+    }
+});
+```
 
 #### 错误码
 
@@ -335,35 +247,15 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/bd8f752a2c02005a844cd5ad556217421557726472856" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getStorageSync">getStorageSync</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    getStorageSync() {
-        try {
-            const result = swan.getStorageSync('key');
-            console.log('getStorageSync result:', result);
-        } catch (e) {
-        }
-    }
-});
-```
-
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getStorageSync('key');
+    console.log('getStorageSync result:', result);
+} catch (e) {
+    
 }
 ```
 
@@ -410,40 +302,22 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/dc05ce95db3e8fe09126a85b95ee42d11559043750363" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getStorageInfo">getStorageInfo</button>
-</view>
-```
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    getStorageInfo() {
-        swan.getStorageInfo({
-            success: function (res) {
-                console.log('getStorageInfo success', res);
-            },
-            fail: function (err) {
-                console.log('getStorageInfo fail', err);
-            }
-        });
+swan.getStorageInfo({
+    success: res => {
+        console.log('getStorageInfo success', res);
+    },
+    fail: err => {
+        console.log('getStorageInfo fail', err);
     }
 });
 ```
 
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
-}
-```
+
 
 #### 错误码
 * Andriod
@@ -462,38 +336,18 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9f944dc011c08e56e5729912272087101557726939078" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getStorageInfoSync">getStorageInfoSync</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
-Page({
-    getStorageInfoSync() {
-        try {
-            const result = swan.getStorageInfoSync();
-            console.log('getStorageInfoSync success', result);
-        } catch (err) {
-            console.log('getStorageInfoSync fail', err);
-        }
-    }
-});
-```
-
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getStorageInfoSync();
+    console.log('getStorageInfoSync success', result);
+} catch (err) {
+    console.log('getStorageInfoSync fail', err);
 }
 ```
+<<<<<<< HEAD
+=======
 
 #### 错误码
 
@@ -502,3 +356,4 @@ Page({
 |错误码|说明|
 |--|--|
 |1001|执行失败  |
+>>>>>>> 98b202defcf8fe8f326cab80cff761ffa8f9c0c8

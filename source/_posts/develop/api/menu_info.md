@@ -29,34 +29,16 @@ sidebar: menu_info
 
 **示例**：
 
-<a href="swanide://fragment/58313b1eb5dd40b7ca199130b33b8f281557730380596" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getMenuButtonBoundingClientRect">getMenuButtonBoundingClientRect</button>
-</view>
-```
+<a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    getMenuButtonBoundingClientRect() {
-        try {
-            const result = swan.getMenuButtonBoundingClientRect();
-            console.log('getMenuButtonBoundingClientRect success', result);
-        } catch (err) {
-            console.log('getMenuButtonBoundingClientRect fail', err);
-        }
+    try {
+        const result = swan.getMenuButtonBoundingClientRect();
+        console.log('getMenuButtonBoundingClientRect success', result);
+    } catch (err) {
+        console.log('getMenuButtonBoundingClientRect fail', err);
     }
-});
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```

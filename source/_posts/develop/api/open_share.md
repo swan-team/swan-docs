@@ -58,13 +58,13 @@ Page({
             content: '世界很复杂，百度更懂你',
             path: '/pages/openShare/openShare?key=value',
             imageUrl: 'https://smartprogram.baidu.com/docs/img/logo_new.png',
-            success: function (res) {
+            success: res => {
                 swan.showToast({
                     title: '分享成功'
                 });
                 console.log('openShare success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('openShare fail', err);
             }
         });
@@ -115,7 +115,7 @@ Page({
     shareFile() {
         swan.chooseImage({
             count: 1,
-            success: function (res) {
+            success: res => {
                 swan.shareFile({
                     filePath: res.tempFilePaths[0],
                     success: res => {
@@ -132,7 +132,7 @@ Page({
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }

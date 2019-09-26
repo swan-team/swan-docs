@@ -185,7 +185,7 @@ audio: 后台音乐播放
 swan.request({
     url: 'https://m.baidu.com',
     usePrefetchCache: true,
-    success: function (res) {
+    success: res => {
         console.log('缓存结果:', res);
     }
 });

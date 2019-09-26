@@ -59,10 +59,10 @@ sidebar: open_chooseaddress
 Page({
     chooseAddress() {
         swan.chooseAddress({
-            success: function (res) {
+            success: res => {
                 console.log('chooseAddress success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('chooseAddress fail', err);
             }
         });

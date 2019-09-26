@@ -53,7 +53,7 @@ const data = {
 swan.setStorage({
     key,
     data,
-    success: function () {
+    success: res => {
         console.log('接口执行成功');
     },
     fail: function () {

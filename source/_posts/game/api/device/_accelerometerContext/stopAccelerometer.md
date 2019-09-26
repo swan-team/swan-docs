@@ -20,7 +20,7 @@ swan.stopAccelerometer(opts)
 
 ```js
 swan.stopAccelerometer({
-    success: function (res) {
+    success: res => {
         console.log(res);
     }
 });

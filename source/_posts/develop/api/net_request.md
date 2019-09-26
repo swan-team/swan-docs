@@ -47,32 +47,34 @@ sidebar: net_request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/7ceecfa2db5da561e3f91a4bd35a8e241567708797326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7ed470ee03edc63ecc49173ab72d72e21569321718423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 
 
-**在 js 文件中**
+* 在 js 文件中
 
 ```js
-swan.request({
-    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    header: {
-        'content-type': 'application/json'
-    },
-    method: 'POST',
-    dataType: 'JSON',
-    responseType: 'text',
-    data: {
-        key: 'value'
-    },
-    success: function (res) {
-        console.log(res.data);
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
-    }
+Page({
+    swan.request({
+        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+        header: {
+            'content-type': 'application/json'
+        },
+        method: 'POST',
+        dataType: 'JSON',
+        responseType: 'text',
+        data: {
+            key: 'value'
+        },
+        success: res => {
+            console.log(res.data);
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    });
 });
 ```
 
@@ -86,23 +88,27 @@ swan.request({
 
 **示例**
 
+* 在 js 文件中
+
 ```js
-const requestTask = swan.request({
-    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    header: {
-        'content-type': 'application/json'
-    },
-    method: 'GET',
-    dataType: 'JSON',
-    responseType: 'text',
-    success: function (res) {
-        console.log(res.data)
-    },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
-    }
-});
+Page({
+    const requestTask = swan.request({
+        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+        header: {
+            'content-type': 'application/json'
+        },
+        method: 'GET',
+        dataType: 'JSON',
+        responseType: 'text',
+        success: res => {
+            console.log(res.data)
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    })
+})
 
 //取消请求任务
 RequestTask.abort();

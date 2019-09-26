@@ -27,16 +27,7 @@ sidebar: nacomponent
 
 **示例**：
 
-<a href="swanide://fragment/b60e1bb5c5217fc142338525370b005f1559046099425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showFavoriteGuide1">示例1</button>
-    <button type="primary" bindtap="showFavoriteGuide2">示例2</button>
-</view>
-```
+<a href="swanide://fragment/e067d7b02af88008e08fa4bcb26906a51569378513731" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **展现形式**：
@@ -52,10 +43,10 @@ sidebar: nacomponent
         swan.showFavoriteGuide({
             type: 'bar',
             content:'一键添加到我的小程序',
-            success(res) {
+            success: res => {
                 console.log('添加成功：', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('添加失败：', err);
             }
         })
@@ -71,10 +62,10 @@ sidebar: nacomponent
     swan.showFavoriteGuide({
         type: 'tip',
         content:'一键添加到我的小程序',
-        success(res) {
+        success: res => {
             console.log('添加成功：', res);
         },
-        fail(err) {
+        fail: err => {
             console.log('添加失败：', err);
         }
     })

@@ -44,19 +44,19 @@ Page({
     openDocument() {
         swan.downloadFile({
             url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
-            success: function (res) {
+            success: res => {
                 swan.openDocument({
                     filePath: res.tempFilePath,
                     fileType: 'pdf',
-                    success: function (res) {
+                    success: res => {
                         console.log('openDocument success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('openDocument fail', err);
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('downloadFile fail', err);
             }
         });

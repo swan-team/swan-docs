@@ -53,20 +53,7 @@ sidebar: media_createinneraudiocontext
 
 **示例**：
 
-<a href="swanide://fragment/3f02bf553d26adb2adc3dcc248b892bf1556535805834" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="play">play</button>
-    <button type="primary" bindtap="pause">pause</button>
-    <button type="primary" bindtap="stop">stop</button>
-    <button type="primary" bindtap="seek">seek</button>
-    <button type="primary" bindtap="destroy">destroy</button>
-    <button type="primary" bindtap="offTimeUpdate">offTimeUpdate</button>
-</view>
-```
+<a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -159,21 +146,6 @@ Page({
 });
 
 ```
-
-
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/createInnerAudioContext.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ## InnerAudioContext.play
 
@@ -386,14 +358,14 @@ Page({
     setInnerAudioOption() {
         swan.setInnerAudioOption({
             mixWithOther: true,
-            success: function (res) {
+            success: res => {
                 swan.showToast({
                     title: 'success',
                     icon: 'none'
                 });
                 console.log('setInnerAudioOption success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 swan.showToast({
                     title: 'fail',
                     icon: 'none'
@@ -417,19 +389,6 @@ Page({
 }
 
 ```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/setInnerAudioOption1.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 #### 错误码
 

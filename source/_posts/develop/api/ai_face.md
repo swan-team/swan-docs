@@ -165,11 +165,11 @@ sidebar: ai_face
 
 **示例代码**
 
-<a href="swanide://fragment/e6b484f151d6281bcdc5dbbee8cbf1fe1567751456446" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fc4fb555f1a72d086ef4698de4c0a8b01569415643600" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.faceDetect({
         image,
@@ -177,10 +177,10 @@ swan.chooseImage({
         face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
         max_face_num: '1',
         face_type: 'LIVE',
-        success(res) {
+        success: res => {
             console.log(res.face_list);
        },
-       fail(err) {
+       fail: err => {
             console.log( err);
         }
     });
@@ -312,7 +312,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/2c717bcac95b9db8690aafee3fee504b1567751699749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ae12872d24c04bfd2071e38cbbf2a1aa1569415830853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.faceMatch({
@@ -332,10 +332,10 @@ swan.ai.faceMatch({
         "liveness_control": "HIGH"
     }
   ],
-  success(res) {
+  success: res => {
     console.log('res');
   },
-  fail(err) {
+  fail: err => {
     console.log('err');
   }
 });
@@ -412,7 +412,7 @@ swan.ai.faceMatch({
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.faceSearch({
 	    image,
@@ -422,10 +422,10 @@ swan.chooseImage({
 	    face_type: 'LIVE',
 	    user_id: 'xxxxxx',
 	    max_user_num: 20,
-	    success(res) {
+	    success: res => {
 	        console.log(res);
 	    },
-	    fail(err) {
+	    fail: err => {
 	        console.log(err);
 	    }
 	});
@@ -486,7 +486,7 @@ swan.chooseImage({
 
 **示例代码**
 
-<a href="swanide://fragment/9043d43466d79899ca90e751da65ec191567752086557" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a0142547079efe546bcc078e70501fbb1569416045077" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonVerify({
@@ -496,10 +496,10 @@ swan.ai.facePersonVerify({
     liveness_control: 'NONE',
     id_card_number: '',
     name: '',
-    success(res) {
+    success: res => {
         console.log('success', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('fail', err);
     }
 });
@@ -538,16 +538,16 @@ swan.ai.facePersonVerify({
 
 **示例代码**
 
-<a href="swanide://fragment/e30c906169cc2c20f43d68cf3fea872c1567752214190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/49590e5e5e3e6e4dc9f04b1795d3c18c1569416163042" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.ai.facePersonIdmatch({
     id_card_number: '',
     name: '',
-    success(res) {
+    success: res => {
         console.log('success', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('fail', err);
     }
 });
@@ -588,7 +588,7 @@ swan.ai.facePersonIdmatch({
 ```js
 swan.ai.faceLivenessSessioncode({
   appid: '',
-  success(res) {
+  success: res => {
     console.log('res');
   }
 });
@@ -924,7 +924,7 @@ swan.ai.faceLivenessVerify({
 ```js
 swan.chooseImage({
     count: 3,
-    success(res) {
+    success: res => {
         swan.ai.faceVerify({
             data: [
                 {
@@ -943,10 +943,10 @@ swan.chooseImage({
                     "face_field": "age,beauty,expression"
                 }
             ],
-            success(res) {
+            success: res => {
                 console.log('ai.faceVerify success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('ai.faceVerify fail', err);
             }
         });
@@ -1076,7 +1076,7 @@ swan.chooseImage({
 swan.ai.faceLivenessVerify({
   video_base64: '',
   session_id: '',
-  success(res) {
+  success: res => {
     console.log('res');
   }
 });
