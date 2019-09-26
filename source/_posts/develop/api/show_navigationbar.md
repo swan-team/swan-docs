@@ -20,49 +20,20 @@ sidebar: show_navigationbar
 |complete   | Function   | 否| -|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/3ff8ec46ea66f6affc018216e83a03701560167567749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <input bind:input="titleInput" class="input" type="text" placeholder="请输入页面标题并点击设置即可"/>
-        <button bind:tap="setNavigationBarTitle" type="primary" hover-stop-propagation="true">设置</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/66fa0985fb6f44388c9b21f76651cfe51569464933222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'setNavigationBarTitle',
-        newTitle: ''
-    },
-
-    titleInput(e) {
-        this.setData('newTitle', e.detail.value);
-    },
-
-    setNavigationBarTitle(e) {
-        let newTitle = this.getData('newTitle');
-        if (!newTitle) {
-            swan.showToast({
-                title: '请输入标题'
-            });
-            return;
+    swan.setNavigationBarTitle({
+        title: 'xxx',
+        success: res => {
+            console.log('setNavigationBarTitle success', res);
+        },
+        fail: err => {
+            console.log('setNavigationBarTitle fail', err);
         }
-        swan.setNavigationBarTitle({
-            title: this.getData('newTitle')
-        });
-    }
-});
+    });
 ```
 
 ## swan.showNavigationBarLoading
@@ -73,32 +44,17 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/3d496fc2607b3bd1b8ffedef5228609d1557728152780" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c4a65ff2c078e16699cc67084b4e842f1569465767383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showNavigationBarLoading">showNavigationBarLoading</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    showNavigationBarLoading() {
-        swan.showNavigationBarLoading();
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
+showNavigationBarLoading() {
+    swan.showNavigationBarLoading();
 }
 ```
+
 
 
 ## swan.hideNavigationBarLoading
@@ -109,38 +65,14 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/0060abe0cf362da58c48f49c569351991557728006673" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c4a65ff2c078e16699cc67084b4e842f1569465767383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showNavigationBarLoading">showNavigationBarLoading</button>
-    <button type="primary" bindtap="hideNavigationBarLoading">hideNavigationBarLoading</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    showNavigationBarLoading() {
-        swan.showNavigationBarLoading();
-    },
-    hideNavigationBarLoading() {
-        swan.hideNavigationBarLoading();
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
+hideNavigationBarLoading() {
+    swan.hideNavigationBarLoading();
 }
 ```
 
@@ -186,42 +118,24 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/0db7b37e85705e66e6f53956f0a7e5091557728238505" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5324faec9c72f07b9827b7a08ac9a2791569466207792" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setNavigationBarColor">setNavigationBarColor</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    setNavigationBarColor() {
-        swan.setNavigationBarColor({
-            frontColor: '#ffffff',
-            backgroundColor: '#ff0000',
-            animation: {
-                duration: 500,
-                timingFunc: 'linear'
-            },
-            success: function () {
-                console.log('setNavigationBarColor success');
-            },
-            fail: err => {
-                console.log('setNavigationBarColor fail', err);
-            }
-        });
+swan.setNavigationBarColor({
+    frontColor: '#ffffff',
+    backgroundColor: '#3C76FF',
+    animation: {
+        duration: 500,
+        timingFunc: 'linear'
+    },
+    success: res => {
+        console.log('setNavigationBarColor success');
+    },
+    fail: err => {
+        console.log('setNavigationBarColor fail', err);
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```

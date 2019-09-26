@@ -23,41 +23,23 @@ sidebar: storage_remove
 
 **示例**：
 
-<a href="swanide://fragment/395ad953dca3b94d7ec05b420a48e9571557727036250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="removeStorage">removeStorage</button>
-</view
-```
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    removeStorage() {
-        swan.removeStorage({
-            key: 'key',
-            success: res => {
-                console.log('removeStorage success', res);
-            },
-            fail: err => {
-                console.log('removeStorage fail', err);
-            }
-        });
-    }
-});
+    swan.removeStorage({
+        key: 'xxx',
+        success: res => {
+            console.log('removeStorage success', res);
+        },
+        fail: err => {
+            console.log('removeStorage fail', err);
+        }
+    });
+   
 ```
 
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
-}
-```
 <!-- #### 错误码
 
 **Andriod**
@@ -85,37 +67,18 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/41efb9f3f2d0e4a34d44790d33f714521557727162319" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="removeStorageSync">removeStorageSync</button>
-</view>
-```
-
 * 在 js 文件中
 
 ```js
-Page({
-    removeStorageSync() {
-        try {
-            swan.removeStorageSync('key');
-            console.log('removeStorageSync success');
-        } catch (err) {
-            console.log('removeStorageSync fail', err);
-        }
+removeStorageSync() {
+    try {
+        swan.removeStorageSync('xxx');
+        console.log('removeStorageSync success');
+    } catch (err) {
+        console.log('removeStorageSync fail', err);
     }
-});
-```
-
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
 }
+
 ```
 
 <!-- #### 错误码
@@ -150,39 +113,19 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/cd617d30d8fa35df29173efcddf2a0bc1557727217323" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="clearStorage">clearStorage</button>
-</view>
-```
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    clearStorage() {
-        swan.clearStorage({
-            success: function () {
-                console.log('clearStorage success');
-            },
-            fail: err => {
-                console.log('clearStorage fail', err);
-            }
-        });
+swan.clearStorage({
+    success: res => {
+        console.log('clearStorage success');
+    },
+    fail: err => {
+        console.log('clearStorage fail', err);
     }
-});
-```
-
-* 在 css 文件中 
- 
-```css
- .wrap {
-    padding: 50rpx 30rpx;
-}
+})
 ```
 
 ## swan.clearStorageSync
@@ -190,8 +133,6 @@ Page({
 **解释**：同步清理本地数据缓存。
 
 **方法参数**：无
-
-<a href="swanide://fragment/17cdc0c62288d1df2ce8bdc587bcaf211540397011" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**：
 

@@ -48,27 +48,29 @@ sidebar: net_request
 **示例 1**
 
 
-**在 js 文件中**
+* 在 js 文件中
 
 ```js
-swan.request({
-    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    header: {
-        'content-type': 'application/json'
-    },
-    method: 'POST',
-    dataType: 'JSON',
-    responseType: 'text',
-    data: {
-        key: 'value'
-    },
-    success: res => {
-        console.log(res.data);
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
-    }
+Page({
+    swan.request({
+        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+        header: {
+            'content-type': 'application/json'
+        },
+        method: 'POST',
+        dataType: 'JSON',
+        responseType: 'text',
+        data: {
+            key: 'value'
+        },
+        success: res => {
+            console.log(res.data);
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    });
 });
 ```
 
@@ -84,23 +86,27 @@ swan.request({
 
 **示例 2**
 
+* 在 js 文件中
+
 ```js
-const requestTask = swan.request({
-    url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-    header: {
-        'content-type': 'application/json'
-    },
-    method: 'GET',
-    dataType: 'JSON',
-    responseType: 'text',
-    success: res => {
-        console.log(res.data)
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
-    }
-});
+Page({
+    const requestTask = swan.request({
+        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+        header: {
+            'content-type': 'application/json'
+        },
+        method: 'GET',
+        dataType: 'JSON',
+        responseType: 'text',
+        success: res => {
+            console.log(res.data)
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    })
+})
 
 //取消请求任务
 RequestTask.abort();

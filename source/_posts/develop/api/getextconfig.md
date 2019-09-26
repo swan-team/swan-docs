@@ -29,15 +29,7 @@ sidebar: getextconfig
 
 **示例**：
 
-<a href="swanide://fragment/88f7ccb04d54d3d2cefd118040877f501558336059868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getExtConfig">getExtConfig</button>
-</view>
-```
+<a href="swanide://fragment/dcbff11e967bbe165470eadfd555d3ba1569485763978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -55,13 +47,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 
 **Tip**
@@ -84,15 +70,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d5dea858ea9874504d0aea64a989ddbd1558336152471" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getExtConfigSync">getExtConfigSync</button>
-</view>
-```
+<a href="swanide://fragment/dcbff11e967bbe165470eadfd555d3ba1569485763978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -107,13 +85,6 @@ Page({
         }
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 **Tip**

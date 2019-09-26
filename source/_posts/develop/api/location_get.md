@@ -44,72 +44,24 @@ sidebar: location_get
 
 
 **示例**：
-<a href="swanide://fragment/775dce89a25a95becbe8cb12562c5b581560166773963" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="title">当前位置经纬度</view>
-        <view s-if="location" class="info">E: {{location.longitude[0]}}°{{location.longitude[1]}}′ N: {{location.latitude[0]}}°{{location.latitude[1]}}′</view>
-        <view s-else class="info">未获取</view>
-        <button bind:tap="getLocation" type="primary" loading="{{loading}}" hover-stop-propagation="true">点击获取位置信息</button>
-        <button bind:tap="clearLocation" hover-stop-propagation="true">清空</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'getLocation',
-        loading: false
-    },
-
-    getLocation(e) {
-        this.setData('loading', true);
-        swan.getLocation({
-            type: 'wgs84',
-            altitude: true,
-            success: res => {
-                this.setData('location', this.formatLocation(res.longitude, res.latitude));
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '获取失败'
-                });
-            },
-            complete: () => {
-                this.setData('loading', false);
-            }
-        });
-    },
-
-    clearLocation(e) {
-        this.setData('location', '');
-    },
-
-    formatLocation(longitude, latitude) {
-        if (typeof longitude === 'string' && typeof latitude === 'string') {
-            longitude = parseFloat(longitude);
-            latitude = parseFloat(latitude);
+    swan.getLocation({
+        type: 'wgs84',
+        altitude: true,
+        success: res => {
+            console.log('getLocation success', res)
+        },
+        fail: err => {
+            console.log('getLocation fail', res)
+        },
+        complete: () => {
+           
         }
-
-        longitude = longitude.toFixed(2);
-        latitude = latitude.toFixed(2);
-
-        return {
-            longitude: longitude.toString().split('.'),
-            latitude: latitude.toString().split('.')
-        };
-    }
-});
+    });
 ```
 
 
@@ -138,43 +90,12 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="container">
-    <view class="page-body">
-        <view class="page-dec">
-            当前位置信息
-        </view>
-        <view class="page-content">
-            <view s-if="location">
-                <view>{{msg}}}</view><br/>
-                <text class="page-font">E: {{location.longitude[0]}}°{{location.longitude[1]}}′ N: {{location.latitude[0]}}°{{location.latitude[1]}}′</text>
-            </view>
-            <view s-else>未获取位置</view>
-        </view>
-        <view class="page-btn">
-            <button bind:tap="chooseLocation" class="btn" type="primary" hover-stop-propagation="true">点击获取位置信息</button>
-            <button bind:tap="clearLocation">清空</button>
-        </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/729f820b3217a154d3064696f6d90e8e1569429506976" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        location: '',
-        title: 'chooseLocation'
-    },
     onReady() {
         swan.authorize({
             scope: 'scope.userLocation',
@@ -187,105 +108,15 @@ Page({
         });
     },
     chooseLocation() {
-        let that = this;
         swan.chooseLocation({
             success: res => {
-                console.log(res);
-                that.setData({
-                    'msg': res.name,
-                    'location': that.formatLocation(res.longitude, res.latitude)
-                });
+                console.log('chooseLocation success', res);
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
         });
-    },
-    clearLocation() {
-        this.setData({
-            location: ''
-        });
-    },
-    formatLocation(longitude, latitude) {
-        if (typeof longitude === 'string' && typeof latitude === 'string') {
-            longitude = parseFloat(longitude);
-            latitude = parseFloat(latitude);
-        }
-        longitude = longitude.toFixed(2);
-        latitude = latitude.toFixed(2);
-        return {
-            longitude: longitude.toString().split('.'),
-            latitude: latitude.toString().split('.')
-        };
     }
-});
 ```
-
-* 在 css 文件中 
- 
-```css
-.container {
-    background-color: white;
-}
-
-.page-dec {
-    font-family: PingFangSC-Regular;
-    font-size: .15rem;
-    color: #333333;
-    letter-spacing: 0;
-    text-align: center;
-    line-height: .15rem;
-}
-
-.page-body {
-    margin-top: .3rem; 
-}
-
-.page-content {
-    background-color: #FAFAFA;
-    text-align: center;
-    color: #999;
-    height: 2.24rem;
-    margin-top: .35rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.page-btn {
-    margin-top: .3rem;
-}
-
-.page-font {
-    color: #333333;
-}
-
-swan-button {
-    margin-top: .17rem;
-    padding: 0;
-    font-size: .18rem;  
-}
-
-swan-button:after {
-    border: 1px solid #999; 
-}
-
-.btn:after {
-    border: none;
-}
-```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/location/chooseLocation.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 

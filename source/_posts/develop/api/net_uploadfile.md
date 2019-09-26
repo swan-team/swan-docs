@@ -33,7 +33,7 @@ sidebar: net_uploadfile
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
-<a href="swanide://fragment/e82438b52514a56028f9dcf0180c66291569319707317" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/839d1e92d253116528c330a82ec6124d1569413746044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例 1**
 

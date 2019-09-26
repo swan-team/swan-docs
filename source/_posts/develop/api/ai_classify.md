@@ -211,7 +211,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/c69ec94188e4506d43f0e94bd379dada1569389294813" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5cb0c5cf808cc6057d8fb94b56357bf21569414658661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -322,7 +322,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/98a7d65497ccc19564c61a1f6711a00f1569389380530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f1a28edc917988c8cfcf0c257dbeeefa1569414920893" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -431,7 +431,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/94c4174be029d9a73154d86c2b0c0bfe1569389487711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab217ecd1c08c7d10992d367ac052dbb1569414838193" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -508,7 +508,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/1f77007108d8305ee52f1f36d9c9c39b1569389579023" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61d91bbf4843daa85ff43dbbb9cc23691569414992464" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
@@ -594,7 +594,7 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/5e2066268d8f37dfdf2e354056504d131569389662779" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0ed61bf9910ed18a664037cd907c0fae1569415076954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

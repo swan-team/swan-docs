@@ -24,38 +24,21 @@ sidebar: show_pull
 
 **示例**：
 
-<a href="swanide://fragment/52a39e929f29f6e6e6673dd65f59e45c1557730225489" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="startPullDownRefresh">startPullDownRefresh</button>
-</view>
-```
+<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    startPullDownRefresh() {
-        swan.startPullDownRefresh({
-            success: function () {
-                console.log('startPullDownRefresh success');
-            },
-            fail: err => {
-                console.log('startPullDownRefresh fail', err);
-            }
-        });
-    }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+    swan.startPullDownRefresh({
+        success: res => {
+            console.log('startPullDownRefresh success');
+        },
+        fail: err => {
+            console.log('startPullDownRefresh fail', err);
+        }
+    });
+  
 ```
 
  
@@ -67,16 +50,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/400bd77feef9dce5451ac6d9b1939ac31557730312251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="startPullDownRefresh">startPullDownRefresh</button>
-    <button type="primary" bindtap="stopPullDownRefresh">stopPullDownRefresh</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -87,7 +62,7 @@ Page({
     },
     stopPullDownRefresh() {
         swan.stopPullDownRefresh({
-            success: function () {
+            success: res => {
                 console.log('stopPullDownRefresh success');
             },
             fail: err => {
@@ -96,15 +71,4 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```

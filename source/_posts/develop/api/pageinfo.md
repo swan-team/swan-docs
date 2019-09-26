@@ -94,7 +94,7 @@ Page({
             collects: '23',
             shares: '8',
             followers: '35',
-            success: function () {
+            success: res => {
                 console.log('setPageInfo success');
             },
             fail: err => {

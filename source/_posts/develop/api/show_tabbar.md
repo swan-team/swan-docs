@@ -23,41 +23,26 @@ sidebar: show_tabbar
 
 **示例**：
 
-<a href="swanide://fragment/482e7c6c58d4a14339abc8fda24074c11557728348921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0b8a3e106dcdf2db3a238ed3c23127f21569467141078" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    setTabBarBadge() {
-        swan.setTabBarBadge({
-            index: 0,
-            text: '文本',
-            success: function () {
-                console.log('setTabBarBadge success');
-            },
-            fail: err => {
-                console.log('setTabBarBadge fail', err);
-            }
-        });
+
+swan.setTabBarBadge({
+    index: 0,
+    text: '文本',
+    success: res => {
+        console.log('setTabBarBadge success', res);
+    },
+    fail: err => {
+        console.log('setTabBarBadge fail', err);
     }
 });
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
+
 <!-- #### 错误码
 
 **Andriod**
@@ -90,51 +75,29 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/284536873b4cc51e3b48942124ec4b7b1557728443718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
-    <button type="primary" bindtap="removeTabBarBadge">removeTabBarBadge</button>
-</view>
-```
+<a href="swanide://fragment/0b8a3e106dcdf2db3a238ed3c23127f21569467141078" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    setTabBarBadge() {
-        swan.setTabBarBadge({
-            index: 0,
-            text: '文本'
-        });
-    },
-    removeTabBarBadge() {
-        swan.removeTabBarBadge({
-            index: 0,
-            success: function () {
-                console.log('removeTabBarBadge success');
-            },
-            fail: err => {
-                console.log('removeTabBarBadge fail', err);
-            }
-        });
-    }
+swan.setTabBarBadge({
+    index: 0,
+    text: '文本'
 });
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
+removeTabBarBadge() {
+    swan.removeTabBarBadge({
+        index: 0,
+        success: res => {
+            console.log('removeTabBarBadge success');
+        },
+        fail: err => {
+            console.log('removeTabBarBadge fail', err);
+        }
+    });
 }
 ```
+
 
 
 ## swan.showTabBarRedDot
@@ -154,24 +117,17 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/2937f493a9bb306369b370c7126badd51557728534632" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/616a15df8959503ae3c8fa0d3191020b1569467482291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
+
     showTabBarRedDot() {
         swan.showTabBarRedDot({
             index: 0,
-            success: function () {
+            success: res => {
                 console.log('showTabBarRedDot success');
             },
             fail: err => {
@@ -179,15 +135,9 @@ Page({
             }
         });
     }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
+
 <!-- #### 错误码
 
 **Andriod**
@@ -220,16 +170,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f7cad6e41c79acdff1f019cfe010f7261557728623673" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
-    <button type="primary" bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
-</view>
-```
+<a href="swanide://fragment/616a15df8959503ae3c8fa0d3191020b1569467482291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -243,7 +184,7 @@ Page({
     hideTabBarRedDot() {
         swan.hideTabBarRedDot({
             index: 0,
-            success: function () {
+            success: res => {
                 console.log('hideTabBarRedDot success');
             },
             fail: err => {
@@ -252,17 +193,6 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
 
 ## swan.setTabBarStyle
@@ -285,15 +215,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/314390fbe5bef9e465d158b2102a9e121557728702320" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
-</view>
-```
+<a href="swanide://fragment/8a0d64dcd0e68d1861cc116a2e8c1b891569469282679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -301,11 +223,11 @@ Page({
 Page({
     setTabBarStyle() {
         swan.setTabBarStyle({
-            color: '#FFFFBD',
-            selectedColor: '#FFFFBD',
+            color: '#38f',
+            selectedColor: '#38f',
             backgroundColor: '#FFFFBD',
-            borderStyle: 'white',
-            success: function () {
+            borderStyle: 'black',
+            success: res => {
                 console.log('setTabBarStyle success');
             },
             fail: err => {
@@ -315,13 +237,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.setTabBarItem
 
@@ -343,43 +259,27 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/2cc5fab9e4c419ba33c2dc9857a24f811557728801013" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2030d26a377cc39560eb625d8dd8f2a11569468598586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarItem">setTabBarItem</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    setTabBarItem() {
-        swan.setTabBarItem({
-            index: 0,
-            text: '文本',
-            iconPath: '/images/component_normal.png',
-            selectedIconPath: '/images/component_selected.png',
-            success: function () {
-                console.log('setTabBarItem success');
-            },
-            fail: err => {
-                console.log('setTabBarItem fail', err);
-            }
-        });
-    }
-});
+    swan.setTabBarItem({
+        index: 0,
+        text: '文本',
+        iconPath: '/images/API_normal.png',
+        selectedIconPath: '/images/API_selected.png',
+        success: res => {
+            console.log('setTabBarItem success');
+        },
+        fail: err => {
+            console.log('setTabBarItem fail', err);
+        }
+    });
+  
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 <!-- #### 错误码
 
 **Andriod**
@@ -414,43 +314,24 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/5942c633249ac5244cb0f565c425cc1b1557728863827" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showTabBar">showTabBar</button>
-</view>
-```
+<a href="swanide://fragment/c6924169544d35cf75f404fdb41e88801569469634696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    onLoad() {
-        swan.hideTabBar();
-    },
-    showTabBar() {
-        swan.showTabBar({
-            animation: true,
-            success: function () {
-                console.log('showTabBar success');
-            },
-            fail: err => {
-                console.log('showTabBar fail', err);
-            }
-        });
-    }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+    swan.showTabBar({
+        animation: true,
+        success: res => {
+            console.log('showTabBar success');
+        },
+        fail: err => {
+            console.log('showTabBar fail', err);
+        }
+    });
+    
 ```
+
 <!-- #### 错误码
 
 **Andriod**
@@ -483,37 +364,18 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/87d265ceed5cf64c0141fb2c200bd5eb1557728942583" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="hideTabBar">hideTabBar</button>
-</view>
-```
+<a href="swanide://fragment/c6924169544d35cf75f404fdb41e88801569469634696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    hideTabBar() {
-        swan.hideTabBar({
-            animation: true,
-            success: function () {
-                console.log('hideTabBar success');
-            },
-            fail: err => {
-                console.log('hideTabBar fail', err);
-            }
-        });
+swan.hideTabBar({
+    animation: true,
+    success: res => {
+        console.log('hideTabBar success');
+    },
+    fail: err => {
+        console.log('hideTabBar fail', err);
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```

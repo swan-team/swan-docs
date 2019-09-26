@@ -398,26 +398,26 @@ Page({
             url: 'wss://echo.websocket.org'
         });
 
-        ws.onOpen(function (res) {
+        webSocket.onOpen(function (res) {
             console.log('WebSocket连接已打开！', res);
         });
 
-        ws.onError(function (err) {
+        webSocket.onError(function (err) {
             console.log('WebSocket连接错误！', err);
         });
 
-        ws.onMessage(function (res) {
+        webSocket.onMessage(function (res) {
             console.log('WebSocket接受到服务器的消息', res);
         });
 
-        ws.onClose(function (res) {
+        webSocket.onClose(function (res) {
             console.log('WebSocket连接已关闭！', res);
         });
 
-        this.ws = ws;
+        this.webSocket = webSocket;
     },
     send() {
-        this.ws.send({
+        this.webSocket.send({
             data: 'baidu',
             success: res => {
                 console.log('WebSocket发送数据成功', res);
@@ -428,7 +428,7 @@ Page({
         });
     },
     close() {
-        this.ws.close({
+        this.webSocket.close({
             code: '1001',
             reason: 'close reason',
             success: res => {

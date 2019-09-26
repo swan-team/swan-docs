@@ -22,15 +22,7 @@ sidebar: device_screen
 
 **示例**：
 
-<a href="swanide://fragment/e5d47d57648d468eccaaace41cdc98581557732266048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setScreenBrightness">setScreenBrightness</button>
-</view>
-```
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -48,13 +40,6 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.getScreenBrightness
@@ -79,15 +64,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/243a71bee8db9c47e577113676a7cb871557732358188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getScreenBrightness">getScreenBrightness</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -105,13 +83,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.setKeepScreenOn
 
@@ -130,15 +102,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/67ec77169a612cba1709271e950f35fb1557732443741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setKeepScreenOn">setKeepScreenOn</button>
-</view>
-```
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -157,13 +121,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 <!-- onUserCaptureScreen
 ---
 **解释**：监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。

@@ -18,15 +18,7 @@ sidebar: device_capture
 
 **示例**：
 
-<a href="swanide://fragment/6ae3289ac39db172706f00b22c7126d61557732528718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    onUserCaptureScreen
-</view>
-```
+<a href="swanide://fragment/7698c886c8f28bb55b7b2f0e07c266931569483700129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -38,11 +30,4 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```

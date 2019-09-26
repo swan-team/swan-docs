@@ -24,15 +24,8 @@ sidebar: device_direction
 
 **示例**：
 
-<a href="swanide://fragment/0cbcd6927a69de03076fd28110c987e21557731615850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    onDeviceMotionChange
-</view>
-```
 
 * 在 js 文件中
 
@@ -40,17 +33,11 @@ sidebar: device_direction
 Page({
     onLoad() {
         swan.onDeviceMotionChange(function (res) {
+            console.log('请在真机中预览效果');
             console.log('onDeviceMotionChange', res);
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.startDeviceMotionListening
@@ -82,15 +69,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/419eaaa0083d3956c3b32f632388750f1557731685135" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="startDeviceMotionListening">startDeviceMotionListening</button>
-</view>
-```
+<a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -109,14 +88,6 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-
 
 
 ## swan.stopDeviceMotionListening
@@ -137,15 +108,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/f211d7a7f1fb3b9aac48856b3fe463bb1557731761885" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="stopDeviceMotionListening">stopDeviceMotionListening</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -167,11 +131,4 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```

@@ -24,16 +24,7 @@ sidebar: show_pagescrollto
 
 **示例**：
 
-<a href="swanide://fragment/84173982a61ebfce398d8958f4961b711557729973205" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <view>往下滑动</view>
-    <button type="primary" bindtap="pageScrollTo">pageScrollTo</button>
-</view>
-```
+<a href="swanide://fragment/692556b3f94d4194e7f932460121faf61569476076182" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -52,15 +43,4 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-top: 1200rpx;
-}
 ```

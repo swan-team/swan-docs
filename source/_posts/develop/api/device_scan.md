@@ -32,15 +32,8 @@ sidebar: device_scan
 
 **示例**：
 
-<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/32f7d4dc285398ab6cce6478554830091569483361410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="scanCode">scanCode</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -59,11 +52,4 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```

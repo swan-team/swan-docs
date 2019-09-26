@@ -53,7 +53,7 @@ swan.login({
 ```js
 function baiduLogin() {
     swan.login({
-        success: function () {
+        success: res => {
             // 登录成功后的业务逻辑
         },
         fail: function () {
@@ -99,7 +99,7 @@ swan.checkSession(opts)
 
 ```js
 swan.checkSession({
-    success: function () {
+    success: res => {
         console.log('登录态有效');
     },
     fail: function () {

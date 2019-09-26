@@ -44,7 +44,7 @@ sidebar: media_image
 
 **示例**：
 
-<a href="swanide://fragment/f2e63ad4bd1589a93b0c042cbbc64b531569391349605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/25ee1bf808f49aeae2975827d0fd654e1569416277213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -230,7 +230,7 @@ swan.previewImage({
 
 **示例**：
 
-<a href="swanide://fragment/6d330084d94bdd9e49f28be58cb7bd491569391477884" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1493fabbbf98659284ff1d4837d9cb7f1569416506836" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -238,7 +238,7 @@ swan.previewImage({
 Page({
     swan.downloadFile({
         // 仅为示例，并非真实的资源
-        url: 'https://b.bdstatic.com/miniapp/image/getImageInfo.png',
+        url: 'https://b.bdstatic.com/miniapp/xxxx',
         header: {
             'content-type': 'application/json'
         },
@@ -311,7 +311,7 @@ Page({
 |duration|Number|选定视频的时间长度 (单位：s)|
 
 **示例**
-<a href="swanide://fragment/c310588e62681210194939ddf60e29e91569391695543" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9e816c3b680f03a8ebc74b23a831b06a1569416597656" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **示例 1 打开相册只选择图片或视频**
 * 在 js 文件中
