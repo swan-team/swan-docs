@@ -89,7 +89,7 @@ function searchFunc(path, searchId, contentId) {
                 timer = setTimeout(function() {
                     // 打点上报
                     if ($this.value.trim().length) {
-                        _hmt.push(['_trackEvent', 'search', '搜索查询']);
+                        _hmt.push(['_trackEvent', 'search', '搜索查询',  $this.value.trim()]);
                     }
                 }, 1000);
                 setTimeout(function () {
