@@ -63,7 +63,7 @@ exports.main = async (event, context) => {
 ```
 
 
-## cloud.ownloadFile
+## cloud.downloadFile
 下载云存储文件
 
 
