@@ -3779,9 +3779,34 @@
              
               sidebar: 
                 -
-                  text: cloud.database
-                  name: cloud_server_sdk_database_cloud.database
-                  link: /develop/cloud/server_sdk/database 
+                  text: Database
+                  name: database
+                  link: /develop/cloud/server_sdk/database
+                  sidebar:
+                    -
+                      text: Database.collection
+                      name: database_Database.collection
+                      link: /develop/cloud/server_sdk/database/#Database-collection
+                    -
+                      text: Database.command
+                      name: database_Database.command
+                      link: /develop/cloud/server_sdk/database/#Database-command
+                    -
+                      text: Database.createCollection
+                      name: database_Database.createCollection
+                      link: /develop/cloud/server_sdk/database/#Database-createCollection
+                    -
+                      text: Database.Geo
+                      name: database_Database.Geo
+                      link: /develop/cloud/server_sdk/database/#Database-Geo
+                    -
+                      text: Database.serverDate
+                      name: database_Database.serverDate
+                      link: /develop/cloud/server_sdk/database/#Database-serverDate
+                    -
+                      text: Database.RegExp
+                      name: database_Database.RegExp
+                      link: /develop/cloud/server_sdk/database/#Database-RegExp
                 -
                   text: Collection 
                   name: collection  
@@ -3831,6 +3856,7 @@
                       text: Collection.where
                       name: collection_Collection.where
                       link: /develop/cloud/server_sdk/collection/#Collection-where
+<<<<<<< HEAD
                 # -
                 #   text: Database.collection
                 #   name: cloud_server_sdk_database_Database.collection
@@ -3871,6 +3897,29 @@
                 #   text: Document.update
                 #   name: cloud_server_sdk_database_Document.update
                 #   link: /develop/cloud/server_sdk/database/#Document-update
+=======
+                -
+                  text: Document 
+                  name: document
+                  link: /develop/cloud/server_sdk/document
+                  sidebar:
+                    -
+                      text: Document.get
+                      name: cloud_server_sdk_database_Document.get
+                      link: /develop/cloud/server_sdk/document/#Document-get
+                    -
+                      text: Document.remove
+                      name: cloud_server_sdk_database_Document.remove
+                      link: /develop/cloud/server_sdk/document/#Document-remove
+                    -
+                      text: Document.set
+                      name: cloud_server_sdk_database_Document.set
+                      link: /develop/cloud/server_sdk/document/#Document-set
+                    -
+                      text: Document.update
+                      name: cloud_server_sdk_database_Document.update
+                      link: /develop/cloud/server_sdk/document/#Document-update
+>>>>>>> e8a33d30c5c14d6228e567621407f098d53f22c3
             -
               text: 云存储
               name: cloud_server_sdk_storage
@@ -3886,7 +3935,7 @@
                   link: /develop/cloud/server_sdk/storage/#cloud-downloadFile
                 -
                   text: cloud.getTempFileURL
-                  name: cloud_server_sdk_storage_loud.getTempFileURL
+                  name: cloud_server_sdk_storage_cloud.getTempFileURL
                   link: /develop/cloud/server_sdk/storage/#cloud-getTempFileURL
                 -
                   text: cloud.deleteFile
@@ -3895,7 +3944,7 @@
             -
               text: 云函数
               name: cloud_server_sdk_function
-              
+              link: /develop/cloud/server_sdk/function
               sidebar: 
                 -
                   text: cloud.callFunction
