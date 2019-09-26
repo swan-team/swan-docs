@@ -101,7 +101,6 @@ sidebar: media_video
                id="myVideo"
                src="{{src}}"
                initial-time="0"
-               duration="48"
                controls='true'
                autoplay="{{autoplay}}"
                loop="false"
@@ -109,7 +108,7 @@ sidebar: media_video
                objectFit="fill"
                poster="{{posterSrc}}"
                page-gesture='true'
-               direction='0'
+               direction='{{0}}'
                show-progress="true"
                show-fullscreen-btn="true"
                enable-progress-gesture="true"

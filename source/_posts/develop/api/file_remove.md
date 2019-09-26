@@ -31,13 +31,6 @@ sidebar: file_remove
 
 <a href="swanide://fragment/a0ed4057cda01aef18eca1fe45d012f61557725960459" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="removeSavedFile">removeSavedFile</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -63,13 +56,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 #### 错误码
 

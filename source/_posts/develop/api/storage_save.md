@@ -346,8 +346,6 @@ try {
     console.log('getStorageInfoSync fail', err);
 }
 ```
-<<<<<<< HEAD
-=======
 
 #### 错误码
 
@@ -356,4 +354,3 @@ try {
 |错误码|说明|
 |--|--|
 |1001|执行失败  |
->>>>>>> 98b202defcf8fe8f326cab80cff761ffa8f9c0c8

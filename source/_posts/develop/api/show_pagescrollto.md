@@ -24,7 +24,7 @@ sidebar: show_pagescrollto
 
 **示例**：
 
-<a href="swanide://fragment/692556b3f94d4194e7f932460121faf61569476076182" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1da0995c33ce55aaee91c780b076e1991569491978009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

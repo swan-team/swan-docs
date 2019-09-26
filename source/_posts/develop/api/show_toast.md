@@ -254,7 +254,7 @@ showModalNotitle() {
         confirmText: '确定',
         confirmColor: '色值',
         cancelText: '取消',
-        cancelColor	: '确定',
+        cancelColor: '确定',
     });
 }
 ```
