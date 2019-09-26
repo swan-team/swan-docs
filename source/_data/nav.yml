@@ -3831,46 +3831,46 @@
                       text: Collection.where
                       name: collection_Collection.where
                       link: /develop/cloud/server_sdk/collection/#Collection-where
-                -
-                  text: Database.collection
-                  name: cloud_server_sdk_database_Database.collection
-                  link: /develop/cloud/server_sdk/database/#Database-collection
-                -
-                  text: Database.command
-                  name: cloud_server_sdk_database_Database.command
-                  link: /develop/cloud/server_sdk/database/#Database-command
-                -
-                  text: Database.createCollection
-                  name: cloud_server_sdk_database_Database.createCollection
-                  link: /develop/cloud/server_sdk/database/#Database-createCollection
-                -
-                  text: Database.Geo
-                  name: cloud_server_sdk_database_Database.Geo
-                  link: /develop/cloud/server_sdk/database/#Database-Geo
-                -
-                  text: Database.serverDate
-                  name: cloud_server_sdk_database_Database.serverDate
-                  link: /develop/cloud/server_sdk/database/#Database-serverDate
-                -
-                  text: Database.RegExp
-                  name: cloud_server_sdk_database_Database.RegExp
-                  link: /develop/cloud/server_sdk/database/#Database-RegExp
-                -
-                  text: Document.get
-                  name: cloud_server_sdk_database_Document.get
-                  link: /develop/cloud/server_sdk/database/#Document-get
-                -
-                  text: Document.remove
-                  name: cloud_server_sdk_database_Document.remove
-                  link: /develop/cloud/server_sdk/database/#Document-remove
-                -
-                  text: Document.set
-                  name: cloud_server_sdk_database_Document.set
-                  link: /develop/cloud/server_sdk/database/#Document-set
-                -
-                  text: Document.update
-                  name: cloud_server_sdk_database_Document.update
-                  link: /develop/cloud/server_sdk/database/#Document-update
+                # -
+                #   text: Database.collection
+                #   name: cloud_server_sdk_database_Database.collection
+                #   link: /develop/cloud/server_sdk/database/#Database-collection
+                # -
+                #   text: Database.command
+                #   name: cloud_server_sdk_database_Database.command
+                #   link: /develop/cloud/server_sdk/database/#Database-command
+                # -
+                #   text: Database.createCollection
+                #   name: cloud_server_sdk_database_Database.createCollection
+                #   link: /develop/cloud/server_sdk/database/#Database-createCollection
+                # -
+                #   text: Database.Geo
+                #   name: cloud_server_sdk_database_Database.Geo
+                #   link: /develop/cloud/server_sdk/database/#Database-Geo
+                # -
+                #   text: Database.serverDate
+                #   name: cloud_server_sdk_database_Database.serverDate
+                #   link: /develop/cloud/server_sdk/database/#Database-serverDate
+                # -
+                #   text: Database.RegExp
+                #   name: cloud_server_sdk_database_Database.RegExp
+                #   link: /develop/cloud/server_sdk/database/#Database-RegExp
+                # -
+                #   text: Document.get
+                #   name: cloud_server_sdk_database_Document.get
+                #   link: /develop/cloud/server_sdk/database/#Document-get
+                # -
+                #   text: Document.remove
+                #   name: cloud_server_sdk_database_Document.remove
+                #   link: /develop/cloud/server_sdk/database/#Document-remove
+                # -
+                #   text: Document.set
+                #   name: cloud_server_sdk_database_Document.set
+                #   link: /develop/cloud/server_sdk/database/#Document-set
+                # -
+                #   text: Document.update
+                #   name: cloud_server_sdk_database_Document.update
+                #   link: /develop/cloud/server_sdk/database/#Document-update
             -
               text: 云存储
               name: cloud_server_sdk_storage
@@ -3887,7 +3887,7 @@
                 -
                   text: cloud.getTempFileURL
                   name: cloud_server_sdk_storage_loud.getTempFileURL
-                  link: /develop/cloud/server_sdk/storage/#loud-getTempFileURL
+                  link: /develop/cloud/server_sdk/storage/#cloud-getTempFileURL
                 -
                   text: cloud.deleteFile
                   name: cloud_server_sdk_storage_cloud.deleteFile

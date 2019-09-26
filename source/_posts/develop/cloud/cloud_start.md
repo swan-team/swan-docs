@@ -34,7 +34,7 @@ sidebar: cloud_start
 
 ## 发布一个云开发小程序
 
-**云开发小程序在发布之前，需要确认[最低基础库的版本](https://smartprogram.baidu.com/docs/develop/swan/compatibility/#%E5%9F%BA%E7%A1%80%E5%BA%93%E6%9C%80%E4%BD%8E%E7%89%88%E6%9C%AC%E8%AE%BE%E7%BD%AE/)。**
+**云开发小程序在发布之前，需要确认[最低基础库的版本](https://smartprogram.baidu.com/docs/develop/swan/compatibility_version/)。**
 如果当前智能小程序是云开发类型，开发者工具会默认将最低基础库版本设置为 3.105.2，如果开发者手动将最低基础库版本调低，开发者工具会给出相关警告。
 同时在"项目信息"中的"调试基础库"，也要确认基础库的版本是 3.105.2 或者以上，保证云开发相关功能可以在模拟器中正常运行。
 ## 云开发控制台
