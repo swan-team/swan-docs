@@ -1235,7 +1235,7 @@ TP平台汇总数据获取
 **请求地址:**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/data/getdata?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/data/gettpdata?access_token=ACCESS_TOKEN
 ```
 **参数说明:**
 

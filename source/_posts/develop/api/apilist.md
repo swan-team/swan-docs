@@ -5,7 +5,7 @@ nav: api
 sidebar: apilist
 ---
 
-
+> API [错误码](/develop/api/errorcode/)
 
 ## 网络
 

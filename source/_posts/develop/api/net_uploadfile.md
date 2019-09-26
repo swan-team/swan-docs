@@ -11,6 +11,11 @@ sidebar: net_uploadfile
 **解释**：将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 `content-type` 为 `multipart/form-data`
 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。
 
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadFile.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -35,7 +40,7 @@ sidebar: net_uploadfile
 
 <a href="swanide://fragment/839d1e92d253116528c330a82ec6124d1569413746044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 ```js
 swan.chooseImage({
@@ -66,22 +71,11 @@ swan.chooseImage({
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
-**uploadTask 对象的方法列表**：
+## UploadTask
 
-|方法 | 类型 | 说明|
-|---- | ---- | ---- |
-|onProgressUpdate   | callback  |监听上传进度变化|
-|abort | - | 中断上传任务|
+**解释**：上传任务对象
 
-**onProgressUpdate 返回参数说明**：
-
-|参数 | 类型 | 说明|
-|---- | ---- | ---- |
-|progress   | Number  |上传进度百分比|
-|totalBytesSent   | Number  |已经上传的数据长度，单位 Bytes。|
-|totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
-
-**示例 2**
+**示例**
 
 ```js
 const uploadTask = swan.uploadFile({
@@ -112,9 +106,51 @@ uploadTask.onProgressUpdate(res => {
 uploadTask.abort(); // 取消上传任务
 ```
  
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法   |
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+|1|解析失败，请检查参数是否正确|
+
+## UploadTask.onProgressUpdate
+
+**解释**：监听上传进度变化
+
+**方法参数**：Function callback
+
+**返回参数说明**：
+
+|参数 | 类型 | 说明|
+|---- | ---- | ---- |
+|progress   | Number  |上传进度百分比|
+|totalBytesSent   | Number  |已经上传的数据长度，单位 Bytes。|
+|totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
+
+## UploadTask.abort
+
+**解释**：中断上传任务
+
+**方法参数**：无
+
 ## swan.downloadFile
 
 **解释**：下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadFile.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -143,7 +179,7 @@ uploadTask.abort(); // 取消上传任务
 
 <a href="swanide://fragment/7a1522102ced64468f6caf23bf13b1581569320565929" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**示例 1**
+**示例**
 
 
 
@@ -172,22 +208,12 @@ swan.downloadFile({
 
 返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
 
-**downloadTask 对象的方法列表**：
+## DownloadTask 
 
-|方法 | 类型 | 说明|
-|---- | ---- | ---- |
-|onProgressUpdate   | callback  |监听上传进度变化|
-|abort | - | 中断下载任务|
 
-#### **onProgressUpdate 返回参数说明**：
+**解释**：下载任务对象
 
-|参数 | 类型 | 说明|
-|---- | ---- | ---- |
-|progress   | Number  |下载进度百分比|
-|totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
-|totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
-
-**示例 2**
+**示例**
 
 * 在 js 文件中
 
@@ -219,4 +245,41 @@ downloadTask.abort(); // 取消下载任务
 
 uploadFile 上传文件大小限制为 25M。
 
+
  
+## DownloadTask.onProgressUpdate
+
+**解释**：监听下载进度变化
+
+**方法参数**：Function callback
+
+**返回参数说明**：
+
+|参数 | 类型 | 说明|
+|---- | ---- | ---- |
+|progress   | Number  |下载进度百分比|
+|totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
+|totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
+
+## DownloadTask.abort
+
+**解释**：中断下载任务
+
+**方法参数**：无
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+|1001|执行错误|
+
+* iOS
+
+|错误码|说明errMsg|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+|1001|请求文件超过10M|
+|1002|无法确定下载文件大小|

@@ -12,6 +12,10 @@ sidebar: show_pull
 
 **解释**：开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -41,10 +45,29 @@ sidebar: show_pull
   
 ```
 
+
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败  |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
  
 ## swan.stopPullDownRefresh
 
 **解释**： 停止当前页面下拉刷新。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png"  class="demo-qrcode-image" />
+
 
 **方法参数**： 无
 
@@ -72,3 +95,18 @@ Page({
     }
 });
 ```
+
+
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|

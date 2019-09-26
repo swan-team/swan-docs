@@ -10,6 +10,11 @@ sidebar: show_toast
 
 **解释**：显示消息提示框
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/toast.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -53,7 +58,22 @@ swan.showToast({
 });
 ```
  
+#### 错误码
+* Andriod
 
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|302|找不到调起协议对应端能力方法|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+
+
+   
 ## swan.showLoading
 
 
@@ -85,6 +105,19 @@ swan.showToast({
 });
    
 ```
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.hideToast
 
@@ -119,6 +152,16 @@ swan.showToast({
     }
 
 ```
+#### 错误码
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败              |
+
+
+
+
 
 ## swan.hideLoading
 
@@ -150,18 +193,24 @@ swan.showToast({
     }
 
 ```
-
-<!-- #### 错误码
+#### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
-|1001|执行失败| -->
+|1001|执行失败|
+
+ 
 
 ## swan.showModal
 
 **解释**：显示模态弹窗
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/modal.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -210,10 +259,31 @@ showModalNotitle() {
 }
 ```
 
+            
+
+
+                                      
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+
 
 ## swan.showActionSheet
 
 **解释**：​显示操作菜单
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/showActionSheet.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -255,3 +325,10 @@ Page({
     }
 });
 ```
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|

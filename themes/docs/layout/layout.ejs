@@ -17,23 +17,22 @@
             headerNavIndex = i;
         }
     }
- 
- 
-    var navLen = nav ? nav.length : 0;
-    for (var j = 0; j < navLen; j++) {
-        var h1List = nav[j].sidebar;
-        localData[nav[j].name] = true;
-        for (var k = 0; k < h1List.length; k++) {
-            var h2List = h1List[k].sidebar;
-            for (var m = 0; m < h2List.length; m++) {
-                var h2Page = h2List[m];
-                currentPageList.push(h2Page);
-                if (h2Page.name == page.sidebar) {
-                    h1 = h2Page.text;
-                }
+
+    var recursiveTitle = function(list) {
+        list.forEach(function(item) {
+            if (item.sidebar) {
+                var sidebarList = item.sidebar;
+                recursiveTitle(sidebarList);
+            } else {
+                currentPageList.push(item);
+                h1 = page.title;
             }
-        }
-    }
+        })
+    };
+
+    var nav = nav ? nav : [];
+    recursiveTitle(nav);
+
  
     for (var n = 0; n < currentPageList.length; n++) {
         if (currentPageList[n].name == page.sidebar) {

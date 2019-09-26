@@ -231,6 +231,43 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/resume
 }
 ```
 
+## 小程序状态变更推送
+### 当小程序暂停服务、重新启用、强制下线时通知TP
+
+>暂停服务、重新启用会通知小程序授权基本信息设置权限的TP
+>强制下线会通知小程序授权任意权限的TP
+>推送接收地址为消息与事件接收URL
+
+事件推送内容:
+```json
+{
+    "appId":小程序appid,
+    "tpAppId": 第三方平台appid,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APP_FORCE_OFFLINE",
+    "reason":"强制下线原因",
+    "offlineReason":3,
+    "illegalFields":"appName,photoAddr,appDesc"
+}
+```
+
+参数说明
+
+参数名 | 类型  | 描述
+----- |-----| -----
+appId |int | 小程序appid
+tpAppId |int | 第三方平台id
+eventTime |string | 事件发生时间
+event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用
+
+> 当 event 为 APP\_FORCE\_OFFLINE 时会多出以下一些内容
+
+参数名 | 类型  | 描述
+----- |-----| -----
+reason |string | 强制下线原因描述
+offlineReason |int | 强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线<br> 3:基本信息和代码包强制下线
+illegalFields |string | 强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有
+
 ## 二维码
 
 支持自定义路径、图片大小

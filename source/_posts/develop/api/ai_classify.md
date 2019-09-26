@@ -10,6 +10,10 @@ sidebar: ai_classify
 
 **解释**：通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/advancedGeneralIdentify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -100,6 +104,10 @@ Page({
 
 **解释**：用户向服务请求检测图像中的主体位置。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/objectDetectIdentify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -169,6 +177,11 @@ Page({
 ## swan.ai.carClassify
 
 **解释**：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/carClassify.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -288,6 +301,10 @@ swan.chooseImage({
 
 **解释**：用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/dishClassify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -389,6 +406,12 @@ swan.chooseImage({
 
 **解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
 
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/logoClassify.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -479,6 +502,11 @@ swan.chooseImage({
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/animalClassify.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -566,6 +594,12 @@ swan.chooseImage({
 ## swan.ai.plantClassify
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/plantClassify.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 

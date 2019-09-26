@@ -20,7 +20,7 @@ sidebar: startdevelop
 
 > 以在“智能小程序示例”中增加快速入门教学视频为例。
 
-#### 1. 参考文档中 [video](https://smartprogram.baidu.com/docs/develop/component/media/#video/) 组件的内容，分别更新[.swan文件](https://smartprogram.baidu.com/docs/develop/tutorial/dev/#%E5%BC%80%E5%8F%91-swan-%E6%96%87%E4%BB%B6/)、[.js文件](https://smartprogram.baidu.com/docs/develop/tutorial/dev/#%E5%BC%80%E5%8F%91-js-%E6%96%87%E4%BB%B6/)、[.css文件](https://smartprogram.baidu.com/docs/develop/tutorial/dev/#%E5%BC%80%E5%8F%91-css-%E6%96%87%E4%BB%B6/)。
+#### 1. 参考文档中 [video](/develop/component/media_video/) 组件的内容，分别更新[.swan文件](/develop/tutorial/dev/)、[.js文件](/develop/tutorial/devjs/)。
 
 ![图片](../../../img/tutorial/start/start3.gif)
 

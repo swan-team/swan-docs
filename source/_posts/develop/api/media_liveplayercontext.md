@@ -9,6 +9,11 @@ sidebar: media_liveplayercontext
 
 **解释**： 操作对应的 `<live-player/>` 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
+
+
 **方法参数**： String domId
 
 **`domId`参数说明**：要获取 live-player 组件的 id。
@@ -114,6 +119,23 @@ Page({
         <img src=" ">
     </div>     
 </div>
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|401|安全校验失败|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+|401|安全校验失败|
 
 ## LivePlayerContext.play
 

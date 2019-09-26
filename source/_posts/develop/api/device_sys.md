@@ -12,6 +12,11 @@ sidebar: device_sys
 
 **解释**：获取系统信息
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -61,7 +66,15 @@ sidebar: device_sys
         }
     });
 ```
+#### 错误码
+Andriod
 
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|402|安全性检查：访问控制校验失败|
+                                
 
 ## swan.getSystemInfoSync
 
@@ -110,6 +123,14 @@ try {
 }
 
 ```
+
+#### 错误码
+
+Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.getEnvInfoSync
 
@@ -189,4 +210,5 @@ Page({
     }
 });
 ```
+
 

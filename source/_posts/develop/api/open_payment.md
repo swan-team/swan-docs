@@ -17,6 +17,11 @@ sidebar: open_payment
 
 了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/payment.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -89,3 +94,18 @@ swan.requestPolymerPayment({
 * 整个orderInfo 是个 json 对象； 
 * bizInfo  这个键值是一个以字符串形式存放的json对象； 
 * 在调起收银台过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，请认真阅读文档。
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败                                           |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10002|网络请求失败|
+|10005|系统拒绝|

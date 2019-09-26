@@ -10,6 +10,10 @@ sidebar: media_image
 
 **解释**：从本地相册选择图片或使用相机拍照。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/api-image.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -66,27 +70,32 @@ swan.chooseImage({
 });
 
 ```
-<!-- #### 错误码
 
-**Andriod**
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确   |
 |1002|用户取消操作错误码|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确  |
 |1002|用户取消操作错误码|
 |1003|用户没有授权百度使用相册|
-|1003|小程序文件目录为空| -->
+|1003|小程序文件目录为空|	
 
 ## swan.previewImage
 
 **解释**： 预览图片。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/previewImage.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -148,6 +157,22 @@ swan.previewImage({
     </div>     
 </div>
 
+
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+
 ## swan.getImageInfo
 
 **解释**：获取图片信息
@@ -195,9 +220,9 @@ swan.previewImage({
     }
 ```
 
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
@@ -205,13 +230,12 @@ swan.previewImage({
 |202|解析失败，请检查参数是否正确|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
-|1003|小程序文件夹为空|
-|1003|读取图片失败| -->
+|202  |解析失败，请检查参数是否正确|
+|1003|读取图片内容为空(小程序文件夹为空或读取图片失败)|
 
 ## swan.saveImageToPhotosAlbum
 
@@ -276,6 +300,10 @@ Page({
 > 基础库 3.30.3开始支持，低版本需做兼容处理
 
 **解释**：打开本地相册，相册内可以同时包含图片和视频。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseAlbum.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

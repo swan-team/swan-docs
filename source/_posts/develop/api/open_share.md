@@ -13,6 +13,11 @@ sidebar: open_share
 
 **解释**： 调起分享面板。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openShare.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

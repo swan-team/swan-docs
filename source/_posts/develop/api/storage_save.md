@@ -82,6 +82,10 @@ swan.getStorageInfo({
 
 **解释**：将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容。主动删除历史小程序，卸载手百，或在系统中清除百度app的缓存即可清除数据。目前单个 key 允许存储的最大数据长度无限制，没有自动清理存储机制。storage 上限 10MB，用户需主动清理，期间数据一直可用。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
+
 **方法参数**： Object object 
 
 **`object`参数说明**：
@@ -111,7 +115,21 @@ swan.setStorage({
     }
 });
 ```
- 
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1003|超过最大存储文件大小| 
 
 ## swan.setStorageSync
 
@@ -140,28 +158,33 @@ Page({
 });
 ```
 
-<!-- #### 错误码
 
-**Andriod**
+
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|1003|超过最大存储文件大小| -->
-
+|202|解析失败，请检查参数是否正确      |
+|1003|超过最大存储文件大小|
 
 
 ## swan.getStorage
 
 
 **解释**：从本地缓存中异步获取指定 key 对应的内容。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -199,6 +222,20 @@ swan.getStorage({
 });
 ```
 
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 ## swan.getStorageSync
 
 
@@ -221,6 +258,22 @@ try {
     
 }
 ```
+
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 ## swan.getStorageInfo
 
 
@@ -242,8 +295,8 @@ try {
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |keys  |  `Array.<string>` |   当前 storage 中所有的 key。|
-|currentSize | Number | 当前占用的空间大小, 单位 kB。|
-|limitSize |  Number |  限制的空间大小，单位 kB。|  
+|currentSize | Number | 当前占用的空间大小, 单位 KB。|
+|limitSize |  Number |  限制的空间大小，单位 KB。|  
 
 
 
@@ -263,13 +316,16 @@ swan.getStorageInfo({
     }
 });
 ```
-<!-- #### 错误码
 
-**Andriod**
+
+
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|1001|执行失败| -->
+|1001|执行失败    |
+ 
 
 ## swan.getStorageInfoSync
 
@@ -290,3 +346,14 @@ try {
     console.log('getStorageInfoSync fail', err);
 }
 ```
+<<<<<<< HEAD
+=======
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败  |
+>>>>>>> 98b202defcf8fe8f326cab80cff761ffa8f9c0c8

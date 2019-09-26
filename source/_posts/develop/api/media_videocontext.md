@@ -8,6 +8,11 @@ sidebar: media_videocontext
 
 **解释**： 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：String videoId
 
 **返回值**：videoContext
@@ -90,6 +95,21 @@ Page({
 
 
 
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
 
 ## VideoContext.play
 

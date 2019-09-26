@@ -9,7 +9,7 @@ sidebar: url_query
 
 ## onURLQueryChange
 
-详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。
+详情参见<a href="/develop/framework/app_service_pagefunction/">页面相关事件处理函数</a>。
 
 ## swan.getURLQuery
 
@@ -38,7 +38,8 @@ Page({
 
 > 基础库 3.100.6 开始支持，低版本需做[兼容处理](/develop/swan/compatibility/)。
 
-**解释：** 设置当前页面的 URL query。如果调用 swan.setURLQuery 导致 URL query 更新，则会同步地调用当前页面的 onURLQueryChange，并引起带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 组件更新视图。
+**解释：** 设置当前页面的 URL query。
+<!-- 如果调用 swan.setURLQuery 导致 URL query 更新，则会同步地调用当前页面的 onURLQueryChange，并引起带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 组件更新视图。 -->
 
 **方法参数：** Object newURLquery
 

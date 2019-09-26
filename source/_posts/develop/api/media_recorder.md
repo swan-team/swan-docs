@@ -10,6 +10,10 @@ sidebar: media_recorder
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getRecorderManager.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回值**：recorderManager
@@ -51,7 +55,27 @@ const options = {
 recorderManager.start(options);
 
 ```
+#### 错误码
 
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查参数是否正确|
+|1001|执行失败|
+|2001|错误调起时机|
+|2002|录音执行错误|
+|2003|录音调起action错误，无需调用release|
+|2004|用户拒绝|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+|2001|错误的调起时机|
+|2002|录音执行错误|
+|2004|用户拒绝小程序使用麦克风|
 
 ## RecorderManager.start 
 
@@ -150,9 +174,9 @@ recorderManager.start(options);
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
-|success |Function  |  否 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否 |   | 接口调用成功的回调|
+|fail   | Function |   否  |  | 接口调用失败的回调函数|
+|complete  |  Function |   否 |   | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data.success回调函数**
 **方法参数**：Object res
