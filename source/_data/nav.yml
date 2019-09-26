@@ -3611,13 +3611,11 @@
                   name: cloud_database
                   
                   sidebar:
-                    # database
-                    # -
-                    #     text: database
-                    #     name: cloud_database
-                    #     link: /develop/cloud/cloud_database 
-                    
-                    # collection
+                    -
+                        text: database
+                        name: cloud_database_database
+                        link: /develop/cloud/cloud_database/database
+
                     -
                         text: collection
                         name: cloud_database_collection
