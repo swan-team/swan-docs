@@ -1,5 +1,5 @@
 ---
-title: cloud_start
+title: 快速上手
 header: develop
 nav: cloud
 sidebar: cloud_start
