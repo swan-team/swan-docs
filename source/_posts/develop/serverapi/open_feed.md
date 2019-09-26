@@ -304,7 +304,7 @@ return:json
 | is_verified  | string  | 否  | 是否大V   | true   |
 | author_level | int  | 否  | 作者等级  | 0为无等级，1为最低，数字越大等级越高 |
 | author_registration_year | string  | 否  | 作者注册年限 | 8（不足一年按照1计算）   |
-| content_items   | JSON array | 否  | 文章结构化内容，需要提供正文所有的文字和图片混排内容   按原文正文换行及图片进行item分隔   type为item类型 text-文本 image-图片   例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
+| content_items   | JSON array | 否  | 文章结构化内容（提交该字段有助于提升信息流对内容的理解，有益于分发），需要提供正文所有的文字和图片混排内容 按原文正文换行及图片进行item分隔 type为item类型 text-文本 image-图片 例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
 | ip  | string  | 否  | 需引入的热点ip资源名称（如，漫画类，综艺类等）   | 极限挑战 斗破苍穹  |
 
 2）视频型

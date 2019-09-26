@@ -199,6 +199,10 @@
                     text: 关联H5站点
                     name: rank_h5
                   -
+                    link: /introduction/rank_single
+                    text: 单卡配置说明
+                    name: rank_single
+                  -
                     link: /introduction/rank_setimage
                     text: 搜索结果出图配置
                     name: rank_setimage
@@ -3242,18 +3246,18 @@
                 text: 版本下载
                 name: history
               -
-              
-                name: page_start
+                link: /develop/devtools/page
+                name: page
                 text: 界面
                 sidebar:
                   -
-                    link: /develop/devtools/page_start
+                    link: /develop/devtools/page/#启动页
                     text: 启动页
-                    name: page_start
+                    name: page_启动页
                   -
-                    link: /develop/devtools/page_menu
+                    link: /develop/devtools/page/#菜单栏
                     text: 菜单栏
-                    name: page_menu
+                    name: page_菜单栏
                   -
                     link: /develop/devtools/page/#工具栏
                     text: 工具栏
@@ -3319,7 +3323,7 @@
                   -
                     link: /develop/devtools/editor/#转换px为rpx
                     text: 转换px为rpx
-                    name: editor_转换px为rpx                    
+                    name: editor_转换px为rpx              
                   -
                     link: /develop/devtools/editor/#Git-状态展示
                     text: Git 状态展示
