@@ -122,7 +122,7 @@ attr1="{{''}}"
 #### Q：富文本框里的<img> 图片，如何使用 previewImage这个api？
 
 A：使用方法如下：
-1. 如果整个页面都是rich-text，那么可以用一个[web-view](https://smartprogram.baidu.com/docs/develop/component/open/#web-view/)组件加载h5，在h5中自己实现一个类似rich-text组件的功能（把 js tree/ dom片段渲染成最终 html），预览图片可以用h5功能来做，或者百度的端能力
+1. 如果整个页面都是rich-text，那么可以用一个[web-view](/develop/component/open_web-view/)组件加载h5，在h5中自己实现一个类似rich-text组件的功能（把 js tree/ dom片段渲染成最终 html），预览图片可以用h5功能来做，或者百度的端能力
 。
 2. 如果小程序页面中部分区域是rich-text，想要实现rich-text中预览图片不行，因为rich-text中会屏蔽所有的事件。
 

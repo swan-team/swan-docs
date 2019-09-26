@@ -5,7 +5,7 @@ nav: api
 sidebar: apilist
 ---
 
-> API [错误码](https://smartprogram.baidu.com/docs/develop/api/errorcode)
+> API [错误码](/develop/api/errorcode/)
 
 ## 网络
 
