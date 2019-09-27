@@ -43,15 +43,7 @@ sidebar: open_chooseaddress
 
 **示例**：
 
-<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="chooseAddress">chooseAddress</button>
-</view>
-```
+<a href="swanide://fragment/c2a5be569685e534881507529ca44d681569553491853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -69,13 +61,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 #### 错误码
 
 * Andriod

@@ -440,23 +440,28 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/aa9911cedcb062d178b980d0b0472eb81569511874890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<view class="wrap">
-    <view class="page-body">
-    <view class="page-section">
-      <canvas class="canvas-element" canvas-id="canvas"></canvas>
+<view class="container"> 
+  <view>
+      <view class="card-area">
+        <canvas canvas-id="canvas"></canvas>
+      </view>
       <scroll-view class="canvas-buttons" scroll-y="true">
-        <block s-for="item in methods">
-          <button class="canvas-button" bindtap="{{item}}">{{item}}</button>
-        </block>
+       <view class="card-area" s-for="item in methods">
+            <view class="top-description border-bottom">{{item}}</view>
+            <button class="canvas-button" type="primary" bindtap="{{item}}">button</button>
+        </view>
         <button class="canvas-button" bindtap="toTempFilePath" type="primary">toTempFilePath</button>
       </scroll-view>
-    </view>
   </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">createCanvasContext</view>
+    </view>
 </view>
 ```
 
@@ -466,11 +471,12 @@ Page({
 const canvas = require('./canvas.js');
 
 Page({
+    /* eslint-enable */
     data: {
         methods: []
     },
     onReady() {
-        this.CanvasContext = swan.createCanvasContext('canvas');
+        this.canvasContext = swan.createCanvasContext('canvas');
         const methods = Object.keys(canvas);
         this.setData({
             methods
@@ -479,54 +485,25 @@ Page({
         const that = this;
         methods.forEach(function (method) {
             that[method] = function () {
-                canvas[method](that.CanvasContext);
-                that.CanvasContext.draw();
+                canvas[method](that.canvasContext);
+                that.canvasContext.draw();
             }
         })
     },
     toTempFilePath() {
         swan.canvasToTempFilePath({
             canvasId: 'canvas',
-            success: res => {
+            success(res) {
                 console.log('canvasToTempFilePath success', res);
             },
-            fail: err => {
+            fail(err) {
                 console.log('canvasToTempFilePath fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding-top: 50rpx;
-}
-
-.canvas-element-wrapper {
-    display: block;
-    margin-bottom: 100rpx;
-}
-.canvas-element {
-    width: 100%;
-    height: 500rpx;
-    background-color: #fff;
-}
-.canvas-buttons {
-    padding: 30rpx 50rpx 10rpx;
-    width: 100%;
-    height: 360rpx;
-    box-sizing: border-box;
-}
-.canvas-button {
-    float: left;
-    line-height: 2;
-    width: 300rpx;
-    margin: 15rpx 12rpx;
-}
-  
-```
 * 在 canvas.js 文件中
 ```js
 const canvas = {};

@@ -23,16 +23,7 @@ sidebar: debug
 
 **示例**：
 
-<a href="swanide://fragment/6aa7bd93efb52c51cb9fc663bb5559241558343027401" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="openEnableDebug">openEnableDebug</button>
-    <button type="primary" bindtap="closeEnableDebug">closeEnableDebug</button>
-</view>
-```
+<a href="swanide://fragment/905712491046e4225a45c47d655371511569554133813" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -49,17 +40,6 @@ Page({
         })
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
 
 **说明**：

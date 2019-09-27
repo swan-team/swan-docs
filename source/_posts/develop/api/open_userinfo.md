@@ -47,15 +47,7 @@ sidebar: open_userinfo
 
 **示例**：
 
-<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSwanId">getSwanId</button>
-</view>
-```
+<a href="swanide://fragment/ad03da064eaa85a0b4857a78dd148d5c1569552502284" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -72,13 +64,6 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
  
 
@@ -149,110 +134,26 @@ Page({
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
 **示例**：
-<a href="swanide://fragment/6de8312d15371a1d3d686a4cd92b637f1560170029351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b7f78e3d07efbcfb45fb24d707a4132c1569552705855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="user-content">
-        <view class="user-info">
-            <image class="avator" src="{{imageSrc}}"></image>
-            <view class="nickname {{nameColor}}">{{nickname}}</view>
-        </view>
-        <view class="button-content">
-            <button bind:tap="getUserInfo" class="get-info" type="primary" hover-stop-propagation="true">获取用户信息</button>
-            <button bind:tap="clearUserInfo" class="clear-info" type="default" hover-stop-propagation="true">清空</button>
-        </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        nickname: '百度网友',
-        imageSrc: '../images/avator.png',
-        nameColor: 'default',
-        title: 'getUserInfo'
-    },
     getUserInfo(e) {
         swan.getUserInfo({
             success: res => {
                 let userInfo = res.userInfo;
-                this.setData({
-                    nickname: userInfo.nickName || '百度网友',
-                    imageSrc: userInfo.avatarUrl || '../../images/avator.png',
-                    nameColor: 'active'
-                });
+                console.log('userInfo.nickName', userInfo.nickName);
+                console.log('userInfo.avatarUrl', userInfo.avatarUrl);
             },
             fail: err => {
                 console.log(err);
-                swan.showToast({
-                    title: '请先授权'
-                });
             }
         });
-    },
-    clearUserInfo(e) {
-        this.setData({
-            nickname: '百度网友',
-            imageSrc: '../../images/avator.png',
-            nameColor: 'default'
-        });
     }
-});
 ```
 
-* 在 css 文件中
-
-```css
-.user-info {
-    padding-top: 1rem;
-}
-.avator {
-    width: .95rem;
-    height: .95rem;
-    margin: 0 auto;
-    display: block;
-    border-radius: 50%;
-}
-.nickname {
-    font-size: .18rem;
-    text-align: center;
-    height: .58rem;
-    line-height: .58rem;
-    padding: 0 .15rem;
-}
-.nickname.default {
-    color: #999;
-}
-.nickname.active {
-    color: #333;
-}
-.button-content {
-    position: relative;
-    top: 0;
-}
-.button-content button {
-    margin-top: .15rem;
-    border-radius: .04rem;
-}
-.get-info {
-    margin-top: .39rem!important;
-}
-.get-info::after {
-    border: none;
-}
-.clear-info::after {
-    border-color: #999;
-}
-```
 
 ## signature 计算方法
 

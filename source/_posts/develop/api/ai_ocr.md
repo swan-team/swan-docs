@@ -200,7 +200,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/93a953878450cff70360bf8306753ff51569387641576" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1e8e28ffd4bb694c9c9b006da1b3f31c1569500427353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
@@ -288,7 +288,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/37093ec7f3e0d3524e8ed4d2a7efc3761569387704914" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/208a29298f9a7c31f626328e779e94081569500548249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -402,7 +402,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9209b1777685306d5286a8bfc44b8b231569387791873" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

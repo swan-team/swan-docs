@@ -81,7 +81,7 @@ imageConf: {
 
 **示例**：
 
-<a href="swanide://fragment/2ad65127412c25e036d6c360f082f0c41563779186331" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/90a4f08210b859b89e1b6c36c90037941569553579185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({
@@ -146,7 +146,7 @@ swan.openCommunityEditor({
 
 **示例**：
 
-<a href="swanide://fragment/063a4b74f84b571ffff57f805a1f15d41563779692092" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/90a4f08210b859b89e1b6c36c90037941569553579185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({

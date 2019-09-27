@@ -35,15 +35,8 @@ sidebar: show_createanimation
 
 **示例**：
 
-<a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cbe942cf0d8668860324cd708523674b1569512196550" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="createAnimation">createAnimation</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -61,13 +54,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 
 ## Animation
@@ -95,13 +82,6 @@ Page({
 
 <a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
-</view>
-```
 
 * 在 js 文件中
 
@@ -120,19 +100,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.anim {
-    width: 100%;
-    height: 280rpx;
-    background: #38f;
-}
-```
 
 
 

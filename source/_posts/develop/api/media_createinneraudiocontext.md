@@ -322,15 +322,6 @@ Page({
 
 <a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="play">play</button>
-    <button type="primary" bindtap="stop">stop</button>
-    <button type="primary" bindtap="setInnerAudioOption">setInnerAudioOption</button>
-</view>
-```
 * 在 js 文件中
 
 ```javascript
@@ -377,18 +368,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-``` css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-
-```
 
 #### 错误码
 

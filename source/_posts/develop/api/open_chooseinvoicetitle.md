@@ -39,15 +39,8 @@ sidebar: open_chooseinvoicetitle
 
 **示例**：
 
-<a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/66a10b10e16f2321cf5172b1d6a9d5af1569553654185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="chooseInvoiceTitle">chooseInvoiceTitle</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -65,13 +58,7 @@ page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 #### 错误码
 * Andriod

@@ -323,7 +323,7 @@ Page({
 |duration|Number|选定视频的时间长度 (单位：s)|
 
 **示例**
-<a href="swanide://fragment/9e816c3b680f03a8ebc74b23a831b06a1569416597656" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e0984aa8374449ead4cfb885dbf0ce331569502073433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **示例 1 打开相册只选择图片或视频**
 * 在 js 文件中

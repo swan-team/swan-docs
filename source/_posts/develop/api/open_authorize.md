@@ -77,54 +77,28 @@ sidebar: open_authorize
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
 **示例**：
-<a href="swanide://fragment/a866a61034de7c92163fa56338f6258b1560169856336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b823c7245fc5009c0be0a45a060cb2891569552275612" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button s-for="item in items" id="{{item.id}}" bind:tap="btnClick" type="primary" hover-stop-propagation="true">{{item.name}}</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        title: 'authorize',
-        items: [{
-            name: '授权获取用户信息',
-            id: 'scope.userInfo'
-        }, {
-            name: '授权获取位置信息',
-            id: 'scope.userLocation'
-        }]
-    },
 
-    btnClick(e) {
-        let scope = e.currentTarget.id;
-        swan.authorize({
-            scope,
-            success: res => {
-                swan.showToast({
-                    title: '授权成功'
-                });
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '授权失败'
-                });
-                console.log('authorize fail', err);
-            }
+swan.authorize({
+    scope: 'scope.userInfo',
+    success: res => {
+        swan.showToast({
+            title: '授权成功'
         });
+    },
+    fail: err => {
+        swan.showToast({
+            title: '授权失败'
+        });
+        console.log('authorize fail', err);
     }
 });
+   
 ```
 
 **说明**：

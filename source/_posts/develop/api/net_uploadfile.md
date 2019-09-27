@@ -38,7 +38,7 @@ sidebar: net_uploadfile
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
-<a href="swanide://fragment/839d1e92d253116528c330a82ec6124d1569413746044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/75303bc805bf42f2075a9e92b01b71131569499818191" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 
@@ -150,7 +150,7 @@ uploadTask.abort(); // 取消上传任务
 
 **百度APP中扫码体验：**
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadFile.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadFile.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -177,7 +177,7 @@ uploadTask.abort(); // 取消上传任务
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 
 
-<a href="swanide://fragment/7a1522102ced64468f6caf23bf13b1581569320565929" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f4bec567044c2a9803528de722c7cc3e1569499921724" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 

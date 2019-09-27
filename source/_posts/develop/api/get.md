@@ -21,15 +21,8 @@ sidebar: get
 
 **示例**：
 
-<a href="swanide://fragment/ed874693dca5217df429f19488b83fbc1558342900404" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0c200e097017ef1f7409aec546adb30c1569553882500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="applyUpdate">applyUpdate</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -66,13 +59,6 @@ Page({
         this.updateManager.applyUpdate();
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## UpdateManager.onCheckForUpdate

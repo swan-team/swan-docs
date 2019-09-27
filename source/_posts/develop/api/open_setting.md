@@ -32,30 +32,12 @@ sidebar: open_setting
 
 
 **示例**：
-<a href="swanide://fragment/1b12263b2caf52db8d7fce9f5420bf121560170167235" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="openSetting" type="primary" hover-stop-propagation="true">打开设置</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/45d618399ea5935c6cd42c9ee3f091a01569552850130" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        title: 'openSetting'
-    },
-
     openSetting() {
         swan.openSetting({});
     }
@@ -101,15 +83,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSetting">getSetting</button>
-</view>
-```
+<a href="swanide://fragment/45d618399ea5935c6cd42c9ee3f091a01569552850130" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -126,13 +100,6 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 #### 错误码
 * Andriod
