@@ -325,12 +325,21 @@
       sidebar:
         -
             link: /introduction/productlaboratory
-            text: Discuz 论坛解决方案
+            text: Discuz! 论坛解决方案
             sidebar:
               -
                 link: /introduction/productlaboratory
-                text: 开通指引
+                text: 论坛小程序开通指引
                 name: productlaboratory
+              -
+                link: /introduction/productlaboratory_ad
+                text: 广告组件接入指引
+                name: productlaboratory_ad
+              -
+                link: /introduction/productlaboratory_faq
+                text: 论坛小程序开通FAQ 
+                name: productlaboratory_faq                
+
 
 # 2
 -
@@ -3856,7 +3865,6 @@
                       text: Collection.where
                       name: collection_Collection.where
                       link: /develop/cloud/server_sdk/collection/#Collection-where
-<<<<<<< HEAD
                 # -
                 #   text: Database.collection
                 #   name: cloud_server_sdk_database_Database.collection
@@ -3897,7 +3905,6 @@
                 #   text: Document.update
                 #   name: cloud_server_sdk_database_Document.update
                 #   link: /develop/cloud/server_sdk/database/#Document-update
-=======
                 -
                   text: Document 
                   name: document
@@ -3919,7 +3926,6 @@
                       text: Document.update
                       name: cloud_server_sdk_database_Document.update
                       link: /develop/cloud/server_sdk/document/#Document-update
->>>>>>> e8a33d30c5c14d6228e567621407f098d53f22c3
             -
               text: 云存储
               name: cloud_server_sdk_storage
@@ -4320,6 +4326,10 @@
             link: /data/custom
             text: 自定义事件分析
             name: custom
+          -
+            link: /data/visualization
+            text: 可视化圈选
+            name: visualization      
           -
             link: /data/target_user
             text: 指标说明

@@ -22,6 +22,9 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |语音直达|	10810013|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810013.png"/></div></div>|
 |小程序单卡|	10810014|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810014-1.png"/><img src="../../img/data/scene/scene-10810014-2.png"/><img src="../../img/data/scene/scene-10810014-3.png"/><img src="../../img/data/scene/scene-10810014-4.png"/></div></div>|
 |小程序 Tab|10810083|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810083.png"/></div></div>|
+|购物 Tab| 10810022|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-shopping.png"/></div></div>|
+|职位 Tab|10810023|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-job.png"/></div></div>|
+|笔记 Tab|10810024|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-note.png"/></div></div>|
 
 ## 信息流	
 |场景|	scene值| 图例|
