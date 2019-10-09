@@ -48,7 +48,7 @@ sidebar: productlaboratory
 
 请务必按照README文件部署“bd_mapp_domaincer.txt”、“baidusm_smartprogram”文件夹到服务器。
 	
-![图片](../../img/introduction/discuz/3.jpg)
+
 
 1.2. 粘贴完“baidusm_smartprogram”到服务器并且将文件夹读写权限设置为 777 后，请用管理员账号登录discuz论坛，打开管理中心，在『应用』-『插件』中找到“百度小程序”。
 
@@ -58,7 +58,7 @@ sidebar: productlaboratory
 
 ![图片](../../img/introduction/discuz/4.jpg)
 
-1.3. 在“百度小程序”中填写完数据后返回Discuz!论坛开通页，填写论坛域名和App Secret（注意：两端填写的域名和App Secret需完全一致），点击<立即提交>按钮，若数据对接成功，即可进入Discuz!小程序管理页面。若数据对接失败，请按报错提示进行错误排查。
+1.3. 在“百度小程序”中填写完数据后返回Discuz!论坛开通页，填写论坛域名和App Secret（注意：两端填写的域名和App Secret需完全一致），点击<确认提交>按钮，若数据对接成功，即可进入Discuz!小程序管理页面。若数据对接失败，请按报错提示进行错误排查。
 
 ![图片](../../img/introduction/discuz/5.jpg)
 

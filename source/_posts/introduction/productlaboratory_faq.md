@@ -17,7 +17,7 @@ sidebar: productlaboratory_faq
 ### 1、数据对接时提示报错『论坛域名或App secret校验失败』。
 
 1）确保你已经在"论坛-管理中心-应用-插件"中安装了插件并填写了App Secret和论坛域名；
-2）论坛域名后需添加"/", 如: `https://www.baidu.com/`。
+2）论坛域名后需添加"/"， 如: `https://www.baidu.com/`。
 3）确保两端填写的App Secret和论坛域名保持一致。
 4）请在两端填写最新的App Secret，若你已经开通成功并进入下一个页面，请不要重置你的App Secret；
 
@@ -40,24 +40,24 @@ chmod -R 777 baidusm_smartprogram
 
     ```
     CREATE TABLE IF NOT EXISTS `pre_swan_app_config` (
-      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-      `ad_config` text NOT NULL,
-      `is_effect` tinyint(1) NOT NULL DEFAULT '1',
-      `update_time` int(10) unsigned NOT NULL DEFAULT '0',
-      `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT，
+      `ad_config` text NOT NULL，
+      `is_effect` tinyint(1) NOT NULL DEFAULT '1'，
+      `update_time` int(10) unsigned NOT NULL DEFAULT '0'，
+      `create_time` int(10) unsigned NOT NULL DEFAULT '0'，
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
     
     
     CREATE TABLE IF NOT EXISTS `pre_login_token` (
-      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-      `uid` mediumint(8) unsigned NOT NULL,
-      `username` char(15)  NOT NULL,
-      `token` varchar(150)  NOT NULL,
-      `is_effect` tinyint(1) NOT NULL DEFAULT '1',
-      `expire_time` int(10) unsigned NOT NULL,
-      `update_time` int(10) unsigned NOT NULL DEFAULT '0',
-      `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT，
+      `uid` mediumint(8) unsigned NOT NULL，
+      `username` char(15)  NOT NULL，
+      `token` varchar(150)  NOT NULL，
+      `is_effect` tinyint(1) NOT NULL DEFAULT '1'，
+      `expire_time` int(10) unsigned NOT NULL，
+      `update_time` int(10) unsigned NOT NULL DEFAULT '0'，
+      `create_time` int(10) unsigned NOT NULL DEFAULT '0'，
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
     ```
@@ -66,23 +66,23 @@ chmod -R 777 baidusm_smartprogram
     
     ```
     CREATE TABLE IF NOT EXISTS `pre_swan_app_config` (
-      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-      `ad_config` text NOT NULL,
-      `is_effect` tinyint(1) NOT NULL DEFAULT '1',
-      `update_time` int(10) unsigned NOT NULL DEFAULT '0',
-      `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+      `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT，
+      `ad_config` text NOT NULL，
+      `is_effect` tinyint(1) NOT NULL DEFAULT '1'，
+      `update_time` int(10) unsigned NOT NULL DEFAULT '0'，
+      `create_time` int(10) unsigned NOT NULL DEFAULT '0'，
       PRIMARY KEY (`id`)
       ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=gbk;
       
     CREATE TABLE IF NOT EXISTS `pre_login_token` (
-    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-    `uid` mediumint(8) unsigned NOT NULL,
-    `username` char(15)  NOT NULL,
-    `token` varchar(150)  NOT NULL,
-    `is_effect` tinyint(1) NOT NULL DEFAULT '1',
-    `expire_time` int(10) unsigned NOT NULL,
-    `update_time` int(10) unsigned NOT NULL DEFAULT '0',
-    `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT，
+    `uid` mediumint(8) unsigned NOT NULL，
+    `username` char(15)  NOT NULL，
+    `token` varchar(150)  NOT NULL，
+    `is_effect` tinyint(1) NOT NULL DEFAULT '1'，
+    `expire_time` int(10) unsigned NOT NULL，
+    `update_time` int(10) unsigned NOT NULL DEFAULT '0'，
+    `create_time` int(10) unsigned NOT NULL DEFAULT '0'，
     PRIMARY KEY (`id`)
     ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=gbk;
     ```
@@ -93,7 +93,7 @@ chmod -R 777 baidusm_smartprogram
 
 1）请进入服务器查看业务日志，是否有设置域名和App Secret的日志，如果没有，请检查网络后重新点击<立即开通>。日志目录如下:
 
-    > Path-to-DiscuzX/upload/data/log/201907_swan.log, 
+    > Path-to-DiscuzX/upload/data/log/201907_swan.log， 
 
     文件内容如下：
     ```
@@ -106,8 +106,10 @@ chmod -R 777 baidusm_smartprogram
 2）查看webserver的访问日志和错误日志，把相关日志（访问日志、服务器错误日志、业务日志）及以下信息打包发给**百度官方运营**。打包文件命名<DZ接入反馈+小程序名称>，打包内容包括：
 - 相关日志（日志中相关密码信息可酌情打码）
 - 小程序后台DZ开通页面截图（需含有填写的信息，可酌情打码）
-- 在开通页面打开浏览器开发者工具(Mac快捷键 cmonand+option+i;Windows快捷键F12),定位到<Network - preview>,截图以</discuz/data/discuzUrl?appId=xxxxxx>接口请求返回的内容页面，如图：
-![image](https://note.youdao.com/yws/public/resource/8aa7effe8fe426629b1f1f6b02e9b9ea/xmlnote/3289F6099E7F4443B0F267DD7BABAD74/258)
+- 在开通页面打开浏览器开发者工具(Mac快捷键 cmonand+option+i;Windows快捷键F12)，定位到<Network - preview>，截图以</discuz/data/discuzUrl?appId=xxxxxx>接口请求返回的内容页面，如图：
+
+![image](../../img/introduction/discuz/18.jpg)
+
 - 论坛插件中心百度小程序插件截图（需含有填写的信息，可酌情打码）
 - 其他信息（个人信息整理成txt文件，命名为README.txt，包含以下内容：小程序App id、小程序名称、论坛域名、论坛编码、服务器系统类型、PHP版本、小程序管理中心登录账号及密码、QQ号、手机号。另外，插件需打包成zip压缩包文件。）
 
