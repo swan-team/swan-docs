@@ -22,7 +22,7 @@ sidebar: productlaboratory
 
 #### 服务器配置要求
 
-放置discuz论坛的服务器只支持Linux。
+放置Discuz!论坛的服务器只支持Linux。
 
  
 
