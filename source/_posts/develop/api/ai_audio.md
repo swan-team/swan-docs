@@ -30,7 +30,7 @@ sidebar: ai_audio
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
-|filePath | String | 合成的音频文件的路径。|
+|filePath | String | 合成的音频文件的路径，此路径为临时路径且不能重复使用|
 
 
 **示例**：
