@@ -774,6 +774,10 @@
                 text: behaviors
                 name: custom-component_behaviors
               -
+                link: /develop/framework/custom-component_observers
+                text: 数据监听器
+                name: custom-component_observers
+              -
                 link: /develop/framework/custom-component_generic
                 text: 抽象节点
                 name: custom-component_generic
