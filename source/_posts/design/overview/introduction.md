@@ -1,10 +1,10 @@
 ---
-title: 介绍小程序设计
+title: 智能小程序体验设计指南
 header: design
 nav: overview
 sidebar: introduction
 ---
-# 智能小程序体验设计指南
+ 
 此指南由小程序团队提供，旨在帮助开发者们快速了解智能小程序，并在提升小程序体验方面给出相关设计建议。
 
 ## 内容构成
