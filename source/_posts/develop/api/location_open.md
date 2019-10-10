@@ -6,11 +6,16 @@ sidebar: location_open
 ---
 ## swan.openLocation
 
-**解释：**使用百度 App 内置地图查看位置。
+**解释**：使用宿主 App 内置地图查看位置。
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openLocation.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,28 +28,44 @@ sidebar: location_open
 |fail  | Function |否 | -| 接口调用失败的回调函数|
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
-<a href="swanide://fragment/8dfef443454866063515a1c3192982281548068706910" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/c85dc8f8f87366dcde740c908c21e79f1569429868373" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
 
 ```js
-swan.getLocation({
-    type: 'gcj02',
-    success: function (res) {
-        swan.openLocation({
-            latitude: res.latitude,
-            longitude: res.longitude,
-            scale: 18
-        })
+Page({
+    data: {
+        locationInfo: {
+            latitude: 40.04,
+            longitude: 116.27,
+            scale: 18,
+            name: '百度科技园',
+            address: '北京市海淀区西北旺东路10号院'
+        }
     },
-    fail: function (err) {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+    openLocation () {
+        let locationInfo = this.data.locationInfo;
+        swan.openLocation({
+            latitude: locationInfo.latitude,
+            longitude: locationInfo.longitude,
+            scale: locationInfo.scale,
+            name: locationInfo.name,
+            address: locationInfo.address,
+            success: res => {
+                console.log('openLocation success', res);
+            },
+            fail : function (err) {
+                console.log('openLocation fail', err);
+            }
+        });
     }
 });
 ```
-<!-- #### 错误码
+ #### 错误码
 
+**iOS**
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。| -->
+|202|解析失败，请检查参数是否正确      |

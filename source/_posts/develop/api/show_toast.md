@@ -8,11 +8,16 @@ sidebar: show_toast
 ## swan.showToast
 
 
-**解释：**显示消息提示框
+**解释**：显示消息提示框
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/toast.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +30,7 @@ sidebar: show_toast
 |complete   | Function |   否| -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
-**icon有效值：**
+**icon有效值**：
 
 |有效值 |说明  |
 |---- | ---- |
@@ -33,34 +38,50 @@ sidebar: show_toast
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
-**示例：**
-<a href="swanide://fragment/4eae9e20dfda147fe6634d9d8fcc11231548067816375" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
 ```js
 swan.showToast({
-    title: '我是标题',
-    icon: 'loading',
-    duration: 1000,
+    title: 'success',
+    icon: 'success',
+    duration: 5000,
+    mask: true,
+    success: res => {
+        console.log('showToast success');
+    },
+    fail: err => {
+        console.log('showToast fail', err);
+    }
 });
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|302|无法找到调起协议对应端能力方法|
-**iOS**
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。| -->
+ 
+#### 错误码
+* Andriod
 
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|302|找不到调起协议对应端能力方法|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+
+
+   
 ## swan.showLoading
 
 
-**解释：**显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
+**解释**：显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -70,114 +91,98 @@ swan.showToast({
 |fail  |  Function   | 否 |-|   接口调用失败的回调函数|
 |complete  |  Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/57166a3f5efd17f9397b6abde17b57b61557727729286" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showLoading">showLoading</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    showLoading() {
-        swan.showLoading({
-            title: 'loading',
-            mask: true,
-            success: function () {
-                console.log('showLoading success');
-            },
-            fail: function (err) {
-                console.log('showLoading fail', err);
-            }
-        });
-    }
+swan.showToast({
+    title: '正在加载...',
+    icon: 'loading'
 });
+   
 ```
-* 在 css 文件中
+#### 错误码
+* Andriod
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.hideToast
 
 
-**解释：** 隐藏消息提示框
+**解释**： 隐藏消息提示框
 
-**方法参数：**无
+**方法参数**：Object object
 
-**示例：**
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success|	function|		否||	接口调用成功的回调函数|
+|fail	|function		|否||	接口调用失败的回调函数|
+|complete|	function	|	否||	接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<a href="swanide://fragment/a0acd2d1849d0584f88c644db70b4c1f1557727806672" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
 
-* 在 swan 文件中
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showToast">showToast</button>
-    <button type="primary" bindtap="hideToast">hideToast</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
+
     showToast() {
         swan.showToast({
             title: 'toast',
-            duration: 10000
+            icon: 'none'
         });
     },
     hideToast() {
         swan.hideToast();
     }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
+#### 错误码
+**Andriod**
+
+|错误码|说明|
+|--|--|
+|1001|执行失败              |
+
+
+
+
 
 ## swan.hideLoading
 
-**解释：**隐藏 loading 提示框
+**解释**：隐藏 loading 提示框
 
-**方法参数：**无
+**方法参数**：Object object
 
-**示例：**
+|参数名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+|success	|function	|	否||接口调用成功的回调函数|
+|fail|	function	|	否	||接口调用失败的回调函数|
+|complete|	function|		否||	接口调用结束的回调函数（调用成功、失败都会执行）|
 
-<a href="swanide://fragment/f9c9c15b36a79c338e7ff389eb3eccde1557727891494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="showLoading">showLoading</button>
-    <button type="primary" bindtap="hideLoading">hideLoading</button>
-</view>
-```
+<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
+
     showLoading() {
         swan.showLoading({
             title: 'loading'
@@ -186,34 +191,30 @@ Page({
     hideLoading() {
         swan.hideLoading();
     }
-});
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 30rpx;
-}
 ```
-<!-- #### 错误码
+#### 错误码
 
 **Andriod**
 
 |错误码|说明|
 |--|--|
-|1001|执行失败| -->
+|1001|执行失败|
+
+ 
 
 ## swan.showModal
 
-**解释：**显示模态弹窗
+**解释**：显示模态弹窗
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/modal.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -228,87 +229,106 @@ Page({
 |fail   | Function  |  否  |-|接口调用失败的回调函数|
 |complete   | Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |confirm |Boolean |为 true 时，表示用户点击了确定按钮 。 |
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
-**示例：**
-<a href="swanide://fragment/553a0685c5979cfe831b1178661476001540395468" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-        </a>
+**示例**：
+<a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
 ```js
 swan.showModal({
-    title: '提示',
-    content: '这是一个模态弹窗',
-    cancelColor: '#999999',
-    confirmColor: '#0099cc',
-    success: function (res) {
-        if (res.confirm) {
-            console.log('用户点击了确定');
-        } else if (res.cancel) {
-            console.log('用户点击了取消');
-        }
-    }
+    title: '标题',
+    content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+    showCancel: false
 });
+
+showModalNotitle() {
+    swan.showModal({
+        content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+        confirmText: '确定',
+        confirmColor: '色值',
+        cancelText: '取消',
+        cancelColor	: '确定',
+    });
+}
 ```
-<!-- #### 错误码
 
-**Andriod**
+            
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
 
-**iOS**
+                                      
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。| -->
+|201|解析失败，请检查调起协议是否合法|
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 
 ## swan.showActionSheet
 
-**解释：**​显示操作菜单
+**解释**：​显示操作菜单
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/showActionSheet.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|itemList |   Array.<string>  |  是 |-|  按钮的文字数组，数组长度最大为6个。|
+|itemList |   `Array.<string>`  |  是 |-|  按钮的文字数组，数组长度最大为6个。|
 |itemColor |  HexColor|    否   |#3c76ff|按钮的文字颜色。|
 |success| Function  |  否  |-| 接口调用成功的回调函数，详见返回参数说明。|
 |fail  |  Function |   否  |-|  接口调用失败的回调函数|
 |complete   | Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始。|
 
 
-**示例：**
-<a href="swanide://fragment/cb742037e729ede5fd6efe8967dfd55f1540397056" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/5b21419f4f4abd6685556b4f7e524cd81569464246835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 js 文件中
 
 ```js
-swan.showActionSheet({
-    itemList: ['同意', '一般', '不同意'],
-    success: function (res) {
-        console.log('用户点击了第' + (res.tapIndex + 1) + '按钮');
+Page({
+    showActionSheet() {
+        swan.showActionSheet({
+            itemList: ['选项一', '选项二', '选项三', '选项四'],
+            itemColor: '#333',
+            success: res => {
+                console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
+            },
+            fail: err => {
+                console.log('showActionSheet fail', err);
+            }
+        });
     }
 });
 ```
-
-<!-- #### 错误码
-
-**Andriod**
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。| -->
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|

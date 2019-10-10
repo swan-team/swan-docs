@@ -8,11 +8,16 @@ sidebar: file_remove
 ## swan.removeSavedFile
 
 
-**解释：**删除本地存储的文件
+**解释**：删除本地存储的文件
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -22,9 +27,9 @@ sidebar: file_remove
 |complete   | Function   | 否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/a0ed4057cda01aef18eca1fe45d012f61557725960459" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a0ed4057cda01aef18eca1fe45d012f61557725960459" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -40,14 +45,14 @@ sidebar: file_remove
 Page({
     removeSavedFile() {
         swan.getSavedFileList({
-            success: function (res) {
+            success: res => {
                 if (res.fileList.length > 0) {
                     swan.removeSavedFile({
                         filePath: res.fileList[0].filePath,
-                        success: function (res) {
+                        success: res => {
                             console.log('removeSavedFile success', res);
                         },
-                        fail: function (err) {
+                        fail: err => {
                             console.log('removeSavedFile fail', err);
                         }
                     });
@@ -66,27 +71,25 @@ Page({
 }
 ```
 
+#### 错误码
 
-
-<!-- #### 错误码
-
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确   |
 |1001|执行失败|
 |2000|文件路径无效|
 |2001|文件不存在|
 |2002|文件过大|
 |2004|文件删除失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|2001|指定文件不存在|
-|2004|文件删除失败| -->
+|202|解析失败，请检查参数是否正确   |
+|2001|文件不存在|
+|2004|文件删除失败|
 
 

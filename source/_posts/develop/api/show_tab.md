@@ -5,17 +5,22 @@ nav: api
 sidebar: show_tab
 ---
 
-> 以下 5 个 API 都有与之功能一致的 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 声明方式。
-如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解。
+> * 以下 5 个 API 都有与之功能一致的 [navigator 组件](/develop/component/nav/) 声明方式。
+* 如果两种方式都能满足您的使用场景，推荐您使用 [navigator 组件](/develop/component/nav/) 实现相应的导航功能，以便更好的被搜索引擎理解。
+
 
 ## swan.navigateTo
 
+**解释**：保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
-**解释：**保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
+**百度APP中扫码体验：**
 
-**方法参数：**Object object
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
 
-**`object`参数说明：**
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,33 +30,40 @@ sidebar: show_tab
 |complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
-<a href="swanide://fragment/dd7e70fdad89cca08b0a8a54e12a0b9c1540396427" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果 </a>
+**示例**：
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
 ```js
-swan.navigateTo({
-     //此路径为相对路径；如需写为绝对地址，则可写为‘/example/xxx?key=valu’。
-    url: 'example/xxx?key=value'
-});
+
+navigateTo(e) {
+    swan.navigateTo({
+        url: '/pages/detail/detail',
+        success: res => {
+            console.log('navigateTo success')
+        },
+        fail: err => {
+            console.log('navigateTo fail')
+        }
+    });
+},
+
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-**iOS**
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-|1001|下载子包失败| -->
-
-
+**Bug & Tip**：
+jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
+ 
 ## swan.redirectTo
 
-**解释：**关闭当前页面，跳转到应用内的某个页面。
+**解释**：关闭当前页面，跳转到应用内的某个页面。
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -61,50 +73,33 @@ swan.navigateTo({
 |complete  |  Function  |  否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/00b8b93225cfaf30de9f4329f1962ee91557729109817" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="redirectTo">redirectTo</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    redirectTo() {
-        swan.redirectTo({
-            url: '/api/api?key=value',
-            success: function () {
-                console.log('redirectTo success');
-            },
-            fail: function (err) {
-                console.log('redirectTo fail', err);
-            }
-        });
+swan.redirectTo({
+    url: '/api/api?key1=value1&key2=value2',
+    success: res => {
+        console.log('redirectTo success');
+    },
+    fail: err => {
+        console.log('redirectTo fail', err);
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.switchTab
 
-**解释：**跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
+**解释**：跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -113,52 +108,38 @@ Page({
 |fail   | Function |   否  |-|  接口调用失败的回调函数|
 |complete |   Function |   否 |-|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/b62ad6cdc0ef78061a6581fa9a1fc9ab1557729238493" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="switchTab">switchTab</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    switchTab() {
-        swan.switchTab({
-            url: '/api/api',
-            success: function () {
-                console.log('switchTab success');
-            },
-            fail: function (err) {
-                console.log('switchTab fail', err);
-            }
-        });
+swan.switchTab({
+    url: '/api/api',
+    success: res => {
+        console.log('switchTab success');
+    },
+    fail: err => {
+        console.log('switchTab fail', err);
     }
 });
-```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.navigateBack
 
-**解释：**关闭当前页面，返回上一页面或多级页面。
+**解释**：关闭当前页面，返回上一页面或多级页面。
 
-**Object 参数说明：**
+**百度APP中扫码体验：**
 
-**方法参数：**Object object
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
 
-**`object`参数说明：**
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -168,9 +149,9 @@ Page({
 |complete|	function|		否|-| 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/f8d91e30ca7ed70b3114add6fd1a58711557729485160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 component.swan 文件中
 
@@ -195,10 +176,10 @@ Page({
     navigateTo() {
         swan.navigateTo({
             url: '/api/api?key=value',
-            success: function () {
+            success: res => {
                 console.log('navigateTo success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateTo fail', err);
             }
         });
@@ -214,32 +195,25 @@ Page({
     },
     navigateBack() {
         swan.navigateBack({
-            success: function () {
+            success: res => {
                 console.log('navigateBack success');
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateBack fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 
 ## swan.reLaunch
 
-**解释：**关闭所有页面，打开到应用内的某个页面。
+**解释**：关闭所有页面，打开到应用内的某个页面。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -249,39 +223,22 @@ Page({
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/7a5d527292a5ff0339bc3dc24803bc7c1557729741562" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="reLaunch">reLaunch</button>
-</view>
-```
+<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    reLaunch() {
-        swan.reLaunch({
-            url: '/api/api?key=value',
-            success: function () {
-                console.log('reLaunch success');
-            },
-            fail: function (err) {
-                console.log('reLaunch fail', err);
-            }
-        });
+
+swan.reLaunch({
+    url: '/api/api?key=value',
+    success: res => {
+        console.log('reLaunch success', res);
+    },
+    fail: err => {
+        console.log('reLaunch fail', err);
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+    
 ```

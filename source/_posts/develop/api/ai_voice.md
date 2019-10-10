@@ -8,15 +8,20 @@ sidebar: ai_voice
 ## swan.ai.getVoiceRecognizer
 
 
-**解释**：获取全局唯一的语音识别器`voiceRecognizer`。
+**解释**：获取全局唯一的语音识别器`voiceRecognizer`。其在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getVoiceManager.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：无
 
-**返回值：**voiceRecognizer
+**返回值**：voiceRecognizer
 
-### voiceRecognizer
+## VoiceRecognizer
 
-**`voiceRecognizer`对象的方法列表：**
+**方法列表**：
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
@@ -50,28 +55,28 @@ context有效值如下
 |input| 输入法场景|
 |search|搜索场景值|
 
-**onRecognize(callback) 回调结果说明：**
+**onRecognize(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |result |String | 小程序语音识别过程中的返回内容 |
 
-**onFinish(callback) 回调结果说明：**
+**onFinish(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |result |String | 小程序语音识别完成后的返回内容 |
 
-**onError(callback) 回调结果说明：**
+**onError(callback) 回调结果说明**：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
-|errCode |String | 错误码 |
-|errMsg |String | 错误信息 |
+|errorCode |String | 错误码 |
+|errorMsg |String | 错误信息 |
 
-**errCode值说明：**
+**errorCode值说明**：
 
-|errCode|errMsg|
+|errorCode|errorMsg|
 |---- | ---- |
 |1001|	DNS解析失败|
 |1002|	请求超时|
@@ -96,6 +101,9 @@ context有效值如下
 |9000|	未知错误|
 
 **示例**
+
+
+<a href="swanide://fragment/623d10008e3c4a087ac1c35f20df32881569415699768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const voiceRecognizer = swan.ai.getVoiceRecognizer();

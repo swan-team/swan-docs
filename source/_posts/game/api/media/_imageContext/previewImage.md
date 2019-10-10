@@ -28,7 +28,7 @@ const urls = [
 swan.previewImage({
     current,
     urls,
-    success: function () {
+    success: res => {
         console.log('接口执行成功');
     },
     fail: function () {

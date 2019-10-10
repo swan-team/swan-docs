@@ -8,9 +8,13 @@ sidebar: ai_audit
 
 **解释**：自定义图像审核。
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png"  class="demo-qrcode-image" />
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,21 +24,33 @@ sidebar: ai_audit
 |fail |   Function|    否  |   -|     接口调用失败的回调函数|
 |complete  |  Function  |  否| -|    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数 | 类型 | 	说明  |
 |---- | ---- | ---- |
-|log_id|	Long|		请求唯一id|
+|log_id|	Number|		请求唯一id|
 |conclusion|	String|	审核结果描述，成功才返回，失败不返回。|
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|
-|+type|	Number|		审核类型，1：色情、2：性感、3：暴恐、4：恶心、5：水印码、6：二维码、7：条形码、8：政治人物、9：敏感词、10：自定义敏感词、11: 存在公众人物。|
-|+msg|	String|	不合规项描述信息|
-|+probability|	Number|	不合规项置信度|
-|+stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
-|+words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
 
-**conclusion、conclusionType参数说明：**
+**data 返回值说明**
+
+|参数 | 类型 | 说明  |
+|---- | ---- | ---- |
+|type|	Number|		审核类型，1：色情、2：性感、3：暴恐、4：恶心、5：水印码、6：二维码、7：条形码、8：政治人物、9：敏感词、10：自定义敏感词、11: 存在公众人物。|
+|msg|	String|	不合规项描述信息|
+|probability|	Number|	不合规项置信度|
+|words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
+|stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
+
+**stars 返回值说明**
+
+|参数 | 类型 | 说明  |
+|---- | ---- | ---- |
+|probability|	Number|	不合规项置信度|
+| name |	String|	姓名|
+
+**conclusion、conclusionType参数说明**：
 
 |参数 |说明  |
 |---- | ---- |
@@ -43,7 +59,30 @@ sidebar: ai_audit
 |3 | 疑似 |
 |4 | 审核失败 |
 
-**返回值示例：**
+**示例**：
+
+<a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.imageAudit({
+                image, // 暂不支持识别网络图片
+                success: res => {
+                    console.log('imageAudit res', res.conclusionType);
+                },
+                fail: err => {
+                    console.log('imageAudit err', err); 
+                }
+            });
+        }
+    })
+});
+```
+
+**返回值示例**：
 ```json
 {
     "log_id": $log_id,
@@ -109,17 +148,3 @@ sidebar: ai_audit
 }
 ```
 
-**示例：**
-```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.imageAudit({
-      image,
-      success(res) {
-        console.log(res.conclusionType); // 1 为合规
-      }
-    });
-  }
-});
-```

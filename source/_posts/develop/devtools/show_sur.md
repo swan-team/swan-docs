@@ -4,19 +4,8 @@ header: develop
 nav: devtools
 sidebar: show_sur
 ---
+
 为了帮助开发者简单高效地开发和调试智能小程序，我们推出了百度开发者工具。
-### 最新正式版本（2.2.4）
-下载链接：[windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
-### 最新 Beta 版本（2.3.0-beta）
-
-> Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
-
-下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [mac-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
-
-
-
-使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。点击查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/history/">历史版本</a>信息、<a href="https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/">历史更新日志</a>。
-
 ## 项目选择及管理页
 
     1、点击新建会进入新建页面。

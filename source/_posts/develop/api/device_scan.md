@@ -8,11 +8,17 @@ sidebar: device_scan
 
 ## swan.scanCode
 
-**解释：**调起客户端扫码界面，扫码成功后返回对应的结果。
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
-**方法参数：**Object object
+**解释**：调起客户端扫码界面，扫码成功后返回对应的结果。
 
-**`object`参数说明：**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scanCode.png"  class="demo-qrcode-image" />
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,25 +26,18 @@ sidebar: device_scan
 |fail  |  Function  |  否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |说明|
 |---- | ---- |
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
-|charSet|所扫码的字符集|
+|charSet|所扫码的字符集，仅支持 Andriod 系统。|
 
-**示例：**
+**示例**：
 
-<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/32f7d4dc285398ab6cce6478554830091569483361410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="scanCode">scanCode</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -46,22 +45,32 @@ sidebar: device_scan
 Page({
     scanCode() {
         swan.scanCode({
-            success(res) {
+            success: res => {
                 console.log('扫码的内容', res.result);
                 console.log('扫码的类型', res.scanType);
                 console.log('扫码的字符集', res.charSet);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|203|处理失败，无返回结果|

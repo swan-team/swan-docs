@@ -14,10 +14,10 @@ sidebar: uikit
 为方便小程序开发团队的视觉设计师进行小程序设计，小程序团队提供常用的视觉设计组件资源。
 
 <div class="m-doc-custom-download">
-	<a href="https://amis.bj.bcebos.com/amis/2019-5/1557727269688/Smartapplet_uikit_sketch.sketch-0.zip" class="m-doc-custom-download-left" target="_blank">
+	<a href="https://amis.bj.bcebos.com/amis/2019-5/1558957061504/Smartapplet_uikit_sketch.zip" class="m-doc-custom-download-left" target="_blank">
 		<img src="../../../img/design/resource/ico-sketch.png"><p>智能小程序 Sketch 组件库</p>
 	</a>
-	<a href="https://amis.bj.bcebos.com/amis/2019-5/1557727132280/smartapplet%20uikit.psb.zip" class="m-doc-custom-download-right" target="_blank">
+	<a href="https://amis.bj.bcebos.com/amis/2019-5/1558957104138/smartapplet%20uikit%20.psb.zip" class="m-doc-custom-download-right" target="_blank">
 		<img src="../../../img/design/resource/ico-ps.png"><p>智能小程序 Photoshop 组件库</p>
 	</a>
 </div>

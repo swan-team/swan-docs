@@ -44,7 +44,7 @@ const data = {
 swan.setStorageSync(key, data);
 swan.getStorage({
     key,
-    success: function (res) {
+    success: res => {
         console.log('接口执行成功', res.data);
     },
     fail: function () {

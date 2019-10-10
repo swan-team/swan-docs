@@ -157,7 +157,7 @@ header .m-doc-level1 ul li {
 header .m-doc-level1 ul .m-doc-header-nav-selected {
     background-color: rgba(255, 255, 255, 0.15);
 }
-header .m-doc-forum:hover,
+header .m-doc-item:hover,
 header .m-doc-level1 ul li:hover {
     background: #181818;
 }
@@ -165,7 +165,7 @@ header .m-doc-level1 ul li:hover {
 header .m-doc-level1 ul .m-doc-header-nav-selected a {
     color: #fff;
 }
-header .m-doc-forum a,
+header .m-doc-item a,
 header .m-doc-level1 ul li a {
     font-size: 16px;
     color: #fff;
@@ -180,16 +180,19 @@ header .m-doc-level1 ul li a {
 }
 
 /**社区样式start***/
-header .m-doc-forum {
+header .m-doc-item {
     font-size: 14px;
     position: absolute;
     right: 10px;
-    top: 0px;
-    padding: 0 30px 0 32px;
+    top: 0;
+    padding: 0 20px;
     background: #000;
     z-index:9;
 }
-header .m-doc-forum a {
+header .m-doc-service-market {
+    right: 80px;
+}
+header .m-doc-item a {
     font-size: 14px;
     color: #fff;
     cursor: pointer;
@@ -206,6 +209,9 @@ header .m-doc-logo-line {
     width: 1px;
     background: #787878;
     margin: 0 7px;
+}
+header a {
+    text-decoration: none;
 }
 
 /* header 移动端适配 */
@@ -254,7 +260,7 @@ header .m-doc-logo-line {
         margin-left: 0;
         text-align: center;
     }
-    .m-doc-forum,
+    .m-doc-item,
     .m-doc-level1 {
         display: none;
     }
@@ -370,7 +376,7 @@ header .m-doc-logo-line {
 
 .top-search-box {
     position: absolute;
-    right: 100px;
+    right: 190px;
     top: 0;
     width: 40px;
     height: 60px;

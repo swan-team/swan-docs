@@ -34,11 +34,18 @@ sidebar: open_log
 
 ## swan.login
 
-**解释：** 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
+**解释**： 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
-**方法参数：**Object object
 
-**`object`参数说明：**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/login.png"  class="demo-qrcode-image" />
+
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -47,17 +54,21 @@ sidebar: open_log
 |fail  |  Function |   否 | -|  接口调用失败的回调函数|
 |complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明：**
+**success 返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|code|String|用户登录凭证（有效期五分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
-**示例：**
-<a href="swanide://fragment/f24161cd6644de1ef912cf50f5a9d86f1544431618" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+> 详细示例请在开发者工具中查看。
+
+* 在 js 文件中
+
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         swan.request({
             url: 'https://xxx/xxx', // 开发者服务器地址
             data: {
@@ -65,40 +76,99 @@ swan.login({
             }
         });
     },
-    fail: function (err) {
+    fail: err => {
         console.log('login fail', err);
     }
 });
 ```
-<!-- #### 错误码
-**Andriod**
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|1001|执行失败| -->
 
-<!-- **iOS**
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确|
-|10001|内部错误 |
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10001|内部错误   |
 |10002|网络请求失败|
-|10004|用户未登录(user not login)|
-|10007|请求超时| -->
+|10004|用户拒绝(user not login)|
+|10007|请求超时|
+## getunionid
+
+### unionid说明
+1. 一个开发者可以创建多个小程序， 开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在一个开发者所有的小程序下的unionid是唯一的。
+
+2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open_log/)，请妥善处理用户未授权场景。
+
+### 接口调用请求说明
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_TOKEN
+```
+### 参数说明
+
+**query参数**
+
+参数名 | 类型 | 是否必须 | 描述 
+--| --| --|--
+access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)
+
+
+**post参数**
+
+参数名 | 类型 | 是否必须 | 描述 
+--| --| --|--
+openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open_log/)获取
+
+
+**返回值说明**
+
+参数名 | 类型 |描述 
+--| --| --|--
+errno| int | 错误码 0：正确返回，1：异常返回
+errmsg| string | 错误信息
+request_id| string | 请求ID，标识一次请求
+data| object | 详细数据，errno为0的情况下才有意义
+
+
+**data字段描述**
+
+参数名 | 类型 | 描述 
+--| --| --|--
+unionid| string | 小程序用户 + 开发者主体维度 唯一的id
+
+
+**返回值示例**
+```
+    { 
+      "data": {
+			 "unionid": "St6PVMkgMDeh92Uq2EWfx6H"
+	   },
+	 "errmsg": "succ",
+	 "errno": 0,
+	 "request_id": "2321772211",
+	 "timestamp": 1563886782
+	}
+```
+
 
 ## Session Key
 
-**解释：** 智能小程序在其服务端中发送POST请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到Session Key。
+**解释**： 智能小程序在其服务端中发送POST请求到百度 OAuth2.0 授权服务地址，并带上对应的参数，便可获取到Session Key。
 
-**获取Session Key的URL地址：**
+**获取Session Key的URL地址**：
 
 https://spapi.baidu.com/oauth/jscode2sessionkey
 
 > 为了让您的智能小程序运行在联盟 App 上,我们对获取 SessionKey 的接口做了升级。新接口可以兼容获取百度内部 App 和百度外部 App 的 SessionKey。
 您只需要将原接口地址 `"https://openapi.baidu.com/nalogin/getSessionKeyByCode"` 更改为 `"https://spapi.baidu.com/oauth/jscode2sessionkey"` ,即可让您的智能小程序在其它App上自动实现账号关联。
 
-**获取Session Key需要的参数：**
+**获取Session Key需要的参数**：
 
 | 参数名 | 是否必须 | 说明 |
 | ----- | ------ | --- |
@@ -120,7 +190,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 | error | 错误码；关于错误码的详细信息请参考<a href=" http://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
-**请求示例：**
+**请求示例**：
 
 ```
 # curl -d "code=xxx&client_id=xxx&sk=xxx" 
@@ -134,11 +204,11 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 ## swan.checkSession
 
-**解释：**通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
+**解释**：通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 **检测当前用户登录态是否有效**，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -146,96 +216,137 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 |fail  |  Function |   否 | -|  接口调用失败的回调函数|
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/fb9d919d0ecca8fc3cc6c89a597210ff1558336225956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="checkSession">checkSession</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-swan.checkSession({
-    success: function (res) {
-        console.log('登录态有效');
-        swan.getUserInfo({
-            success: function (res) {
-                console.log('用户名', res.userInfo.nickName);
-                swan.request({
-                    url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
-                    data: {
-                        data: res.data,
-                        iv: res.iv
+Page({
+    checkSession() {
+        swan.checkSession({
+            success: res => {
+                console.log('登录态有效');
+                swan.getUserInfo({
+                    success: res => {
+                        console.log('用户名', res.userInfo.nickName);
+                        swan.request({
+                            url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
+                            data: {
+                                data: res.data,
+                                iv: res.iv
+                            }
+                        });
                     }
-                });
-            }
-        })
-    },
-    fail: function (err) {
-        console.log('登录态无效');
-        swan.login({
-            success: function (res) {
-                swan.request({
-                    url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
-                    data: {
-                        code: res.code
-                    }
-                });
+                })
             },
-            fail: function (err) {
-                console.log('登录失败', err);
+            fail: err => {
+                console.log('登录态无效');
+                swan.login({
+                    success: res => {
+                        swan.request({
+                            url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
+                            data: {
+                                code: res.code
+                            }
+                        });
+                    },
+                    fail: err => {
+                        console.log('登录失败', err);
+                    }
+                });
             }
         });
     }
 });
 ```
+* 在 css 文件中
 
-<!-- #### 错误码  -->
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+#### 错误码
+* Andriod
 
-<!-- | 错误码 | 错误信息 | 详细描述 |
-| - | :- | - |
-| invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
-| invalid_client | unknown client id | client_id、client_secret 参数无效。 |
-| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
-<!-- **Andriod** -->
-
-<!-- |错误码|说明|
+|错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确|
-|10001|内部错误 |
+|10001|内部错误  |
 |10002|网络请求失败|
-|10004|用户未登录(user not login)| -->
+|10004|用户拒绝(user not login)|
 
 ## swan.isLoginSync
 
-**解释：**获取百度 App登录状态。
+> 基础库 1.13.4 版本开始支持。
+
+**解释**：获取宿主 App登录状态。
 
 **方法参数**：无
 
-**返回参数说明：**
+**返回参数说明**：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  Boolean | 百度 App登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
-**示例：**
+**示例**：
+
+<a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="isLoginSync">isLoginSync</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
-try {
-    var result = swan.isLoginSync();
-    console.log('isLoginSync', result);
-} catch (e) {
-    console.log('error', e);
+Page({
+    isLoginSync() {
+        try {
+            var result = swan.isLoginSync();
+            console.log('isLoginSync', result);
+        } catch (e) {
+            console.log('error', e);
+        }
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod 
 
 |错误码|说明|
 |--|--|
-|1001|执行失败| -->
+|1001|执行失败|
 
 ## 用户数据的签名验证和加解密
 
@@ -247,14 +358,14 @@ try {
 
 解密过程：开发者智能小程序（通过 swan.request）将加密数据发送至自身 Server 进行解密后返回智能小程序。
 
-**解密算法如下：**
+**解密算法如下**：
 
 1. 对称解密使用的算法为 AES-192-CBC，数据采用PKCS#7填充；
 2. 对称解密的目标密文为 Base64_Decode(data)；
 3. 对称解密秘钥 AESKey = Base64_Decode(session_key), AESKey 是24字节；
 4. 对称解密算法初始向量 为Base64_Decode(iv)，其中iv由数据接口返回。
 
-**解密后内容如下：**
+**解密后内容如下**：
 
 | 内容 | 长度 |
 | - | :- |
@@ -264,7 +375,7 @@ try {
 | app_key | 与app_key长度相同 |
 
 
-**解密示例代码：**
+**解密示例代码**：
 
 PHP版本：
 
@@ -340,7 +451,7 @@ function decrypt($ciphertext, $iv, $app_key, $session_key) {
 
 Java版本：
 
-**特别说明：**
+**特别说明**：
  受美国软件出口限制，JDK默认使用的AES算法最高只能支持128位。如需要更高位的支持需要从oracle官网下载Java密码技术扩展(JCE)更换JAVA_HOME/jre/lib/security目录下的： local_policy.jar和US_export_policy.jar。
 > 下载地址：https://www.oracle.com/technetwork/java/javase/downloads/jce-all-download-5170447.html
 

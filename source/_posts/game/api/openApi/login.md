@@ -3,9 +3,12 @@ title: 登录
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-01
 ---
 
 ### swan.login()
+
+>注意：请不要将游戏的首帧（首屏）渲染操作放在回调函数中，详情参考： [登录、授权、获取用户信息接口使用规范](/game/tutorials/open_api/first-frame-rule/)
 
 调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid）及本次登录的 会话密钥（session_key）等。用户数据的加解密通讯需要依赖会话密钥完成。
 
@@ -34,7 +37,7 @@ swan.login(opts)
 **示例 1：**
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         console.log('登录成功', res.code);
     },
     fail: function () {
@@ -50,7 +53,7 @@ swan.login({
 ```js
 function baiduLogin() {
     swan.login({
-        success: function () {
+        success: res => {
             // 登录成功后的业务逻辑
         },
         fail: function () {
@@ -58,7 +61,7 @@ function baiduLogin() {
                 title: "登录失败",
                 content: "是否重新登录？",
                 cancelText: "退出游戏",
-                success: function (res) {
+                success: res => {
                     if (res.confirm) {
                         console.log("点击了确定");
                         baiduLogin();
@@ -96,7 +99,7 @@ swan.checkSession(opts)
 
 ```js
 swan.checkSession({
-    success: function () {
+    success: res => {
         console.log('登录态有效');
     },
     fail: function () {
@@ -185,7 +188,7 @@ swan.checkSession({
 
 ```js
 swan.getSwanId({
-    success: function (res) {
+    success: res => {
         console.log(res.data.swanid);
     }
 });

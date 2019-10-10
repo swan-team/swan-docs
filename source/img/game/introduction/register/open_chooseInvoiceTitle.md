@@ -6,13 +6,13 @@ sidebar: open_chooseInvoiceTitle
 ---
 chooseInvoiceTitle
 ---
-**解释：**选择用户的发票抬头。
+**解释**：选择用户的发票抬头。
 
 需要用户授权 scope.invoiceTitle
 
-**参数：**Object
+**参数**：Object
 
-**Object参数说明：**
+**Object参数说明**：
 
 |参数名 |类型  |必填  |说明|
 |---- | ---- | ---- |---- |
@@ -20,7 +20,7 @@ chooseInvoiceTitle
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -33,10 +33,10 @@ chooseInvoiceTitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-**示例：**
+**示例**：
 ```js
 swan.chooseInvoiceTitle({
-    success: function (res) {
+    success: res => {
         console.log(res.type);
         console.log(res.title);
         console.log(res.taxNumber);

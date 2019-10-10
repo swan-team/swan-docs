@@ -15,8 +15,8 @@ sidebar: input
 
 ## 文本输入框
 针对常用的输入场景，智能小程序提供常用文本输入框：
-- 单行输入框，开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#input/"  target="_blank">input</a>；
-- 多行输入框，开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#textarea/" target="_blank">textarea</a>。
+- 单行输入框，开发文档说明详见<a href="/develop/component/formlist_input/"  target="_blank">input</a>；
+- 多行输入框，开发文档说明详见<a href="/develop/component/formlist_textarea/" target="_blank">textarea</a>。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct ">
 		<img src="../../../img/design/component/input/2.png">

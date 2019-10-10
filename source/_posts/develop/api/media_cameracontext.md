@@ -9,53 +9,24 @@ sidebar: media_cameracontext
 
 ## swan.createCameraContext
 
-**解释：**创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
+**解释**：创建并返回 camera 上下文 `cameraContext`对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。
 
-**方法参数：**无
+**百度APP中扫码体验：**
 
-**返回值：**cameraContext
-
-## cameraContext
-
-**`cameraContext`对象的方法列表：**
-
-|方法 | 参数  |说明|
-|---- | ---- | ---- |
-|takePhoto |  Object|  拍照，可指定质量，成功则返回图片。|
-|startRecord |Object  |开始录像|
-|stopRecord | Object | 结束录像，成功则返回封面与视频。|
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
 
 
-**takePhoto 的 Object 参数列表：**
+**方法参数**：无
 
-|参数  |类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|quality |String  |否  | 成像质量，值为high, normal, low，默认normal。|
-|success| Function |   否  | 接口调用成功的回调函数 ，res = { tempImagePath }。|
-|fail  |  Function  |  否 |  接口调用失败的回调函数|
-|complete |   Function  |  否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
+**返回值**：cameraContext
 
+## CameraContext
 
-**startRecord 的 Object 参数列表：**
+**解释**：swan.createCameraContext 的返回值。
 
-|参数 | 类型 | 必填 | 说明|
-|---- | ---- | ---- |---- |
-|success |Function  |  否 |  接口调用成功的回调函数|
-|fail  |  Function |   否  | 接口调用失败的回调函数|
-|complete   | Function |   否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-
-**stopRecord 的 Object 参数列表：**
-
-|参数 | 类型  |必填  |说明|
-|---- | ---- | ---- |---- |
-|success |Function   | 否  | 接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }。|
-|fail |   Function |   否  | 接口调用失败的回调函数|
-|complete   | Function   | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例：**
+**示例**：
  
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -134,29 +105,6 @@ Page({
 });
 ```
 
-* 在 css 文件中
-
-```css
-.camera {
-    width: 100%;
-    padding: .16rem;
-    font-size: .16rem;
-}
-.preview {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-button {
-    margin-top: .16rem;
-}
-.img,
-video {
-    width: 100%;
-    margin-top: 50rpx;
-}
-```
 **图示**
 
 <div class="m-doc-custom-examples">
@@ -170,3 +118,71 @@ video {
         <img src=" ">
     </div>     
 </div>
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+|200101|相机权限-用户拒绝|
+|200102|相机权限-系统权限拒绝|
+|200201|录音权限-用户拒绝|
+|200201|录音权限-系统权限拒绝|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202  |解析失败，请检查参数是否正确|
+|10002|网络请求失败|
+|200101|相机权限-用户拒绝限|
+|200102|相机权限-系统权限拒绝|
+|200201|录音权限-用户拒绝|
+|200202|录音权限-系统权限拒绝|
+
+## CameraContext.takePhoto
+
+**解释**：拍照，可指定质量，成功则返回图片。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|quality |String  |否  | normal|成像质量，值为high, normal, low。|
+|success| Function |   否  | |接口调用成功的回调函数 ，res = { tempImagePath }。|
+|fail  |  Function  |  否 |  |接口调用失败的回调函数|
+|complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+## CameraContext.startRecord
+
+**解释**：开始录像
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success |Function  |  否 |  |接口调用成功的回调函数|
+|fail  |  Function |   否  | |接口调用失败的回调函数|
+|complete   | Function |   否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+## CameraContext.stopRecord
+
+**解释**：结束录像，成功则返回封面与视频。
+
+**方法参数**：Object object
+
+**`object`参数说明**：
+
+|参数名 |类型 | 必填 | 默认值|说明|
+|---- | ---- | ---- |---- |---|
+|success |Function   | 否  || 接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }。|
+|fail |   Function |   否  | |接口调用失败的回调函数|
+|complete   | Function   | 否  || 接口调用结束的回调函数（调用成功、失败都会执行）|
+

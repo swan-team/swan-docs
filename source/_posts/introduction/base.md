@@ -12,9 +12,10 @@ sidebar: base
 
 获取方式：该入口不需要开发者进行配置，小程序上线后自动获取。
 
+
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：自然搜索-小程序单卡-初级卡.jpg">
+        <img src="../../img/introduction/base/1.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -26,13 +27,13 @@ sidebar: base
 
 ## 自然搜索-智能小程序搜索tab
 
-渠道介绍：当用户在百度App（10.10或以上版本）搜索输入的关键词命中小程序的相关关键词时，即会在搜索结果页小程序tab中看到小程序的入口，点击可进入相关小程序，小程序从而获得曝光和流量。
+渠道说明：当用户在百度App（10.10或以上版本）搜索输入的关键词命中小程序的相关关键词时，即会在搜索结果页小程序tab中看到小程序的入口，点击可进入相关小程序，小程序从而获得曝光和流量。
 
 获取方式：该入口不需要开发者进行配置，小程序上线后自动获取。
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础入口：自然搜索-小程序.jpg">
+        <img src="../../img/introduction/base/2.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -48,9 +49,10 @@ sidebar: base
 
 获取方式：该入口不需要开发者进行配置，小程序上线后自动获取。
 
+
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础入口：自然搜索-语音直达.jpg">
+        <img src="../../img/introduction/base/3.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -60,16 +62,17 @@ sidebar: base
     </div>     
 </div>
 
-## 智能小程序-搜索
+## 自然搜索-搜索词推荐直达
 
-渠道说明：当用户在百度App（10.10或以上版本）首页顶部下拉进入二楼页面，点击二楼“更多历史”可进入智能小程序页面搜索。个人中心路径：“我的”-点击小程序横滑模块“…”进入智能小程序，在搜索框输入相关小程序名称后，点击搜索结果页会直接进入对应的小程序，小程序从而获得曝光和流量。
+渠道说明：当用户在百度App（10.11或以上版本）搜索小程序精准名称时，会在搜索框下方展现小程序相关入口，点击可直达相关小程序。
 
-获取方式：该入口不需要开发者进行配置，小程序上线后自动获取。
+获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及体验自动获取。
+
 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础入口：智能小程序-搜索.jpg">
+        <img src="../../img/introduction/base/4.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -79,16 +82,18 @@ sidebar: base
     </div>     
 </div>
 
-## 二楼-大家都在用
+## 百度首页下拉（二楼）-大家都在用
 
-渠道说明：当用户打开百度App（10.10或以上版本），在首页顶部下拉进入二楼，可在“大家都在用”模块看到相关小程序推荐，此模块可根据用户画像进行个性化推荐。该入口不需要开发者进行配置，
+渠道说明：当用户打开百度App（10.10 或以上版本），在首页顶部下拉进入二楼，可在“大家都在用”模块看到相关小程序推荐，此模块可根据用户画像进行个性化推荐。
 
-获取方式：小程序上线后将根据质量及体验自动获取。
+获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及体验自动获取。
+
+
 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/重访入口：小程序历史3+我的小程序.jpg">
+        <img src="../../img/introduction/base/5.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -104,22 +109,31 @@ sidebar: base
 
 获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及体验自动获取。
 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/base/6.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
  
 
-## 智能小程序-精品推荐
+## 智能小程序中心-搜索
 
-渠道说明：当用户打开百度App（10.10或以上版本），可在以下路径进入智能小程序页面，精品推荐模块会根据用户画像进行精准推荐。
+渠道说明：当用户在百度App（10.10或以上版本）首页顶部下拉进入二楼页面，点击二楼“最近使用”可进入智能小程序中心页面搜索。个人中心路径：“我的”-点击小程序横滑模块“…”点击左下角“发现”进入智能小程序中心，在搜索框输入相关小程序名称后，点击搜索结果页会直接进入对应的小程序，小程序从而获得曝光和流量。
 
-•         二楼—点击“历史”进入智能小程序页面
+获取方式：该入口不需要开发者进行配置，小程序上线后自动获取。
 
-•         我的-点击小程序横滑模块“…”进入智能小程序页面
-
-获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及体验自动获取
 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础入口：智能小程序-搜索7.jpg">
+        <img src="../../img/introduction/base/7.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -129,15 +143,19 @@ sidebar: base
     </div>     
 </div>
 
-## 自然搜索-搜索词推荐直达
+## 智能小程序中心-热搜榜
 
-渠道说明：当用户在百度App（10.11或以上版本）搜索小程序精准名称时，会在搜索框下方展现小程序相关入口，点击可直达相关小程序。
+渠道说明：当用户在百度App（10.10或以上版本）可通过以下2种方式查看热搜榜：
 
-获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及体验自动获取
+渠道说明：当用户在百度App（10.10或以上版本）可通过以下2种方式查看热搜榜。
+• 首页下拉进入二楼页面—点击“最近使用”进入智能小程序我的-点击左下角“发现”进入智能小程序中心页面热搜榜。
+• 个人中心路径：我的-点击小程序横滑模块“…”进入小程序中心我的-点击左下角“发现”进入智能小程序中心页面热搜榜。
+获取方式：该入口不需要开发者进行配置，小程序上线后将根据质量及用户体验自动获取。
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：自然搜索-搜索词推荐直达.jpg">
+        <img src="../../img/introduction/base/8.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

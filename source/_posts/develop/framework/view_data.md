@@ -5,43 +5,42 @@ nav: framework
 sidebar: view_data
 ---
 
-
 SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
-
-<br />
 
 ### 基础数据绑定
 数据绑定和许多模板引擎一样，数据包裹在双大括号里面。
 双向绑定的数据需包裹在`{=  =}`中。
 
 **例如**：
-组件 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
+组件 <a href="/develop/component/view_scroll-view//">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
 * `scroll-top="{= scrollTop =}"`
 * `scroll-left="{= scrollLeft =}"`
 
-<br />
+### 渲染内容
 
-### 内容
+**示例代码**
 
 ```xml
 <!-- data-demo.swan -->
 <view>
     Hello My {{ name }}
 </view>
+
+<!-- 被渲染成: Hello My SWAN App -->
 ```
 
 ```javascript
 // data-demo.js
 Page({
     data: {
-        name: 'SWAN'
+        name: 'SWAN App'
     }
 });
 ```
 
-<br />
-
 ### 属性绑定
+
+**示例代码**
 
 ```xml
 <!-- attr-demo.swan -->
@@ -57,13 +56,15 @@ Page({
 });
 ```
 
-<br />
+### 控制属性
 
-### 控制属性(不需要被双大括号包裹)
+**注:** 属性不需要被双大括号包裹
+
+**示例代码**
 
 ```xml
 <!-- condition-demo.swan -->
-<view s-if="flag"></view>
+<view s-if="flag">如果为flag为true，你看得到我。</view>
 ```
 
 ```javascript
@@ -74,8 +75,6 @@ Page({
     }
 });
 ```
-
-<br />
 
 ### 运算
 SWAN 模板 提供了丰富的表达式类型支持，让使用者在编写视图模板时更方便。
@@ -137,7 +136,10 @@ SWAN 模板 提供了丰富的表达式类型支持，让使用者在编写视�
 <br />
 
 #### 对象字面量(对象字面量是三个大括号包裹)
-对象字面量支持了在模板里重组对象以及使用扩展运算符 ... 来展开对象。
+
+**注:** 对象字面量支持了在模板里重组对象以及使用扩展运算符 ... 来展开对象。
+
+**示例代码**
 
 ```xml
 <!-- template-demo.swan-->
@@ -184,5 +186,3 @@ Page({
     }
 });
 ```
-
-<br />

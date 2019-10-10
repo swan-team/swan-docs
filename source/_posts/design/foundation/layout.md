@@ -5,11 +5,11 @@ nav: foundation
 sidebar: layout
 ---
 ## 基础布局
-基于宽度750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区留出至少左右边距34px（17pt），限制内容宽度以获得最佳的可读性。
+基于宽度750px（iPhone 6）输出视觉方案，我们在布局智能小程序信息时，为信息内容区至少留出左右边距34px（17pt），限制内容宽度以获得最佳的可读性。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/1-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px。</p>
+		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少留出34px。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/foundation/layout/1-2.png">
@@ -22,7 +22,6 @@ sidebar: layout
 </div>
 
 ## 透明框架布局适配
-
 当开发者使用小程序的原生顶部导航栏时，开发者只需要在顶部导航栏下方开始布局页面即可。
 智能小程序在百度App v11.1及以上版本，可以[自定义顶部导航栏](../../component/topnav/#自定义顶部导航栏)，使其只保留框架控制功能区，后文简称为“透明框架”。
 <div class="m-doc-custom-examples">
@@ -75,8 +74,9 @@ sidebar: layout
 	</div>
 </div>
 
-一般来说，全面屏安卓手机的刘海高度=系统状态栏高度，全面屏iPhone刘海高度为44pt。
-通过系统信息接口[getSystemInfoSync](../../../develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
+全面屏手机的刘海高度等同于系统状态栏的高度。
+通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/10-1.png">
@@ -84,13 +84,13 @@ sidebar: layout
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/foundation/layout/10-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">未考虑状态栏高度，导致元素重叠。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">元素被遮挡，显示不全。</p>
 	</div>
 </div>
 
 
 ### 注意：全面屏iPhone底部适配
-在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置，其高度为34pt。
+在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置。
 全面屏iPhone的底部横条默认透明，如开发者使用小程序底部标签栏，底部横条会自动适配底部标签栏的背景颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">

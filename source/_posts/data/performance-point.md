@@ -24,7 +24,7 @@ App({
                 uid: self.globalData.uuid
                   // that.globalData.uuid为用户的唯一标识，详见"uuid的统计逻辑"。
             },
-            success: function (res) {
+            success: res => {
                 self.globalData.data = res.data;
                 // 此处为网络请求，加入 callback 确保在 Page.onLoad 之前返回。
                 self.globalData.callBackArr.forEach(callBack => {
@@ -194,7 +194,7 @@ Page({
 ```js
 App({
     onShow(options) {
-        that.globalData.appKey = options.appId;
+        that.globalData.appKey = options.referrerInfo.appId;
     },
     onHide(options) {
         // 访问结束，上报埋点。

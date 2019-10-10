@@ -7,11 +7,16 @@ sidebar: device_clipboard
 
 ## swan.setClipboardData
 
-**解释：**设置系统剪贴板的内容
+**解释**：设置系统剪贴板的内容
 
-**方法参数：**Object object
+**百度APP中扫码体验：**
 
-**`object`参数说明：**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/clipboardData.png"  class="demo-qrcode-image" />
+
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -20,41 +25,50 @@ sidebar: device_clipboard
 |fail  | Function  |  否  |-| 接口调用失败的回调函数|
 |complete   | Function   | 否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例：**
-<a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**示例**：
+<a href="swanide://fragment/6fec884cc46de9ec15292cbd1da569701569485595295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
 ```js
-swan.setClipboardData({
-    data: 'baidu',
-    success: function (res) {
-        swan.getClipboardData({
-            success: function (res) {
-                console.log(res.data) // baidu
-            }
-        });
-    }
-});
+
+    swan.setClipboardData({
+        data: 'xxxxxx',
+        success: res => {
+            swan.showToast({
+                title: '设置成功'
+            });
+        },
+        fail: err => {
+            swan.showToast({
+                title: '设置失败'
+            });
+            console.log('setClipboardData fail', err);
+        }
+    });
+               
 ```
-<!-- #### 错误码
-
-<!-- **Andriod**
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确。|
-
-**iOS**
+ 
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|  -->
+|202|解析失败，请检查参数是否正确      |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.getClipboardData
 
-**解释：**获取系统剪贴板内容
+**解释**：获取系统剪贴板内容
 
-**方法参数：**Object object
+**方法参数**：Object object
 
-**`object`参数说明：**
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -62,25 +76,21 @@ swan.setClipboardData({
 |fail  |  Function |   否 | -| 接口调用失败的回调函数|
 |complete  |  Function |   否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
 
-**示例：**
-<a href="swanide://fragment/fb9c6df88f60031316330ec0fe156cad1540394512" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
-```js
-swan.getClipboardData({
-    success: function (res) {
-        console.log(res.data);
-    }
-});
-```
-<!-- #### 错误码
+**示例**：
+<a href="swanide://fragment/6fec884cc46de9ec15292cbd1da569701569485595295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-<!-- **Andriod**
+>在 swan/js 文件中代码示例与[swan.setClipboardData](https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#swan-setClipboardData/)相同。
+
+
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|1001|执行失败|  -->
+|1001|执行失败   |

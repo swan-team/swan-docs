@@ -5,7 +5,7 @@ nav: component
 sidebar: toast
 ---
 
-反馈提示Toast用于向用户提供其行为的简洁的结果反馈。它既不会阻塞用户后续行为，也不要求用户响应操作，在同步用户展现信息一定时间（可配，不建议超过7s）后便自动消失。在连续反馈场景，新的反馈提示会被优先展现。
+反馈提示Toast用于向用户提示某种行为的轻量结果反馈。它既不会阻塞用户后续行为，也不要求用户响应操作，在同步用户展现信息一定时间（可配，建议不超过7s）后便自动消失。在连续反馈场景，新的反馈提示会被优先展现。
 
 开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showToast/" target="_blank">showToast</a>。
 
@@ -85,14 +85,14 @@ sidebar: toast
 	</div>
 </div>
 
-过长的文案会导致文案无法展现完全，且短时间内无法阅读接收信息，反而交代不清楚当前状况。
+过长的文案会导致信息无法展现完全，且短时间内无法完成浏览，导致交代不清楚当前状况。
 我们应精简表达，控制文案长度，同时，在措辞上应该使用用户能理解的表达。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/toast/8-1.png">
-		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">未使用标点和断句，表述模糊冗余，且过长文案显示不完整。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">未使用标点和断句，表述模糊冗余，且过长文案显示不完整。</p>
 	</div>
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/toast/8-2.png">
 		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">行业术语、技术代码均无法交代清楚原因，应转化为用户语言。</p>
 	</div>

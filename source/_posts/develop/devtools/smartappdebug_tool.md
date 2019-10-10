@@ -54,3 +54,6 @@ Storage panel 用于显示当前项目使用 swan.setStorage 或者 swan.setStor
 ## Swan audits
 
 <a href="http://smartprogram.baidu.com/docs/develop/devtools/audits/">体验评分</a>，是一项给小程序的体验打分的功能，它会在小程序运行过程中实时检查，分析出一些可能影响开发者体验的地方，并且定位问题，及时给出相应的优化建议。
+
+## Security panel
+通过该面板你可以去调试当前网页的安全和认证等问题并确保您已经在你的网站上正确地实现HTTPS。

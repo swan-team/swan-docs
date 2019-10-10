@@ -6,11 +6,17 @@ sidebar: open_chooseinvoicetitle
 ---
 ## swan.chooseInvoiceTitle
 
-**解释：** 选择用户的发票抬头，需要用户授权 scope.invoiceTitle。
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
-**方法参数：**Object object
+**解释**： 选择用户的发票抬头，需要[用户授权](http://smartapp.baidu.com/docs/develop/api/open_authorize/#swan-authorize/) scope.invoiceTitle。
 
-**`object`参数说明：**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseInvoiceTitle.png"  class="demo-qrcode-image" />
+
+**方法参数**：Object object
+
+**`object`参数说明**：
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -18,7 +24,7 @@ sidebar: open_chooseinvoicetitle
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明：**
+**success返回参数说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -31,35 +37,56 @@ sidebar: open_chooseinvoicetitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-**示例：**
-```js
-swan.chooseInvoiceTitle({
-    success: function (res) {
-        console.log(res.type);
-        console.log(res.title);
-        console.log(res.taxNumber);
-        console.log(res.companyAddress);
-        console.log(res.telephone);
-        console.log(res.bankName);
-        console.log(res.bankAccount);
-    }
-})
+**示例**：
+
+<a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="chooseInvoiceTitle">chooseInvoiceTitle</button>
+</view>
 ```
-<!-- #### 错误码
 
-**Andriod**
+* 在 js 文件中
+
+```js
+page({
+    chooseInvoiceTitle() {
+        swan.chooseInvoiceTitle({
+            success: res => {
+                console.log('chooseInvoiceTitle success', res);
+            },
+            fail: err => {
+                console.log('chooseInvoiceTitle fail', err);
+            }
+        });
+    }
+});
+```
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 50rpx 30rpx;
+}
+```
+
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
-|1002|取消选择状态码|
-|1003|选择失败状态码|
+|1002|取消选择|
+|1003|选择失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|1001|解析失败，请检查参数是否正确。|
+|1001|解析失败，请检查参数是否正确      |
 |1002|取消获取发票|
-|1003|获取发票失败| -->
+|1003|获取发票失败|
