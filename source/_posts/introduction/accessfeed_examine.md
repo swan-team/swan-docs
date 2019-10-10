@@ -16,7 +16,7 @@ sidebar: accessfeed_examine
 
 ![图片](../../img/introduction/auditing/图13.png) 
 
-**字段信息请参考开发文档** [submitresource](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/#submitresource/)
+**字段信息请参考开发文档** [submitresource](/develop/serverapi/submitresource/)
 
  
 

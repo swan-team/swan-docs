@@ -3125,82 +3125,78 @@
                 sidebar:
 
                   -
-                    link: /develop/serverapi/open_feed/#信息流物料提交简介
+                    link: /develop/serverapi/open_feed 
                     text: 信息流物料提交简介
                     name: open_feed_信息流物料提交简介
                   -
-                    link: /develop/serverapi/open_feed/#submitresource
+                    link: /develop/serverapi/submitresource
                     text: submitresource
-                    name: open_feed_submitresource
+                    name:  submitresource
                   -
-                    link: /develop/serverapi/open_feed/#deleteresource
+                    link: /develop/serverapi/deleteresource
                     text: deleteresource
-                    name: open_feed_deleteresource
+                    name:  deleteresource
                   -
-                    link: /develop/serverapi/open_feed/#submitsitemap
+                    link: /develop/serverapi/submitsitemap
                     text: submitsitemap
-                    name: open_feed_submitsitemap
+                    name:  submitsitemap
                   -
-                    link: /develop/serverapi/open_feed/#deletesitemap
+                    link: /develop/serverapi/deletesitemap
                     text: deletesitemap
-                    name: open_feed_deletesitemap
+                    name: deletesitemap
                   -
-                    link: /develop/serverapi/open_feed/#信息流物料投放具体字段
+                    link: /develop/serverapi/type
                     text: 信息流物料投放具体字段
-                    name: open_feed_信息流物料投放具体字段
+                    name: type
                   -
-                    link: /develop/serverapi/open_feed/#信息流字段附录
+                    link: /develop/serverapi/appendix
                     text: 信息流字段附录
-                    name: open_feed_信息流字段附录
+                    name: appendix
                   -
-                    link: /develop/serverapi/open_feed/#常见问题
+                    link: /develop/serverapi/faq
                     text: 常见问题
-                    name: open_feed_常见问题
+                    name: faq
               -
                 link: /develop/serverapi/open_infomation
-                text: 模板消息
+                text: 消息模板
                 name: open_infomation
                 sidebar:
                   -
-                    link: /develop/serverapi/open_infomation/#使用场景
-                    text: 使用场景
-                    name: open_infomation_使用场景
+                    link: /develop/serverapi/open_infomation 
+                    text: 消息模板介绍
+                    name: open_infomation 
                   -
-                    link: /develop/serverapi/open_infomation/#功能介绍
-                    text: 功能介绍
-                    name: open_infomation_功能介绍
-                  -
-                    link: /develop/serverapi/open_infomation/#使用说明
+                    link: /develop/serverapi/useintroduction
                     text: 使用说明
-                    name: open_infomation_使用说明
+                    name: useintroduction
                   -
-                    link: /develop/serverapi/open_infomation/#下发条件说明
+                    link: /develop/serverapi/sendintroduction
                     text: 下发条件说明
-                    name: open_infomation_下发条件说明
+                    name: sendintroduction
                   -
-                    link: /develop/serverapi/open_infomation/#getTemplateLibraryList
+                    link: /develop/serverapi/getTemplateLibraryList
                     text: getTemplateLibraryList
-                    name: open_infomation_getTemplateLibraryList
+                    name: getTemplateLibraryList
                   -
-                    link: /develop/serverapi/open_infomation/#getTemplateLibraryById
+                    link: /develop/serverapi/getTemplateLibraryById
                     text: getTemplateLibraryById
-                    name: open_infomation_getTemplateLibraryById
+                    name: getTemplateLibraryById
                   -
-                    link: /develop/serverapi/open_infomation/#addTemplate
+                    link: /develop/serverapi/addTemplate
                     text: addTemplate
-                    name: open_infomation_addTemplate
+                    name: addTemplate
                   -
-                    link: /develop/serverapi/open_infomation/#getTemplateList
+                    link: /develop/serverapi/getTemplateList
                     text: getTemplateList
-                    name: open_infomation_getTemplateList
+                    name: getTemplateList
                   -
-                    link: /develop/serverapi/open_infomation/#deleteTemplate
+                    link: /develop/serverapi/deleteTemplate
                     text: deleteTemplate
-                    name: open_infomation_deleteTemplate
+                    name: deleteTemplate
                   -
-                    link: /develop/serverapi/open_infomation/#sendTemplateMessage
+                    link: /develop/serverapi/sendTemplateMessage
                     text: sendTemplateMessage
-                    name: open_infomation_sendTemplateMessage
+                    name: sendTemplateMessage
               -
                 link: /develop/serverapi/contact_api
                 text: 客服消息
