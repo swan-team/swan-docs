@@ -2,7 +2,6 @@
 !function(pathname){
     var urlMap = {
         '/docs/design/principle/':'/docs/design/overview/introduction/',
-        '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
         '/docs/design/component/nav/':'/docs/design/component/topnav/',
         '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
         '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
