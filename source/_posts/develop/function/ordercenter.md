@@ -205,7 +205,7 @@ https://openapi.baidu.com/rest/2.0/smartapp
 
 ## Data.Ext.MainOrder.Payment
 
-Payment.Amount = (Products.PayPrice * Products.Quantity) + (PaymentInfo.Value * PaymentInfo.Quantity)  - (PreferentialInfo.Value * PreferentialInfo.Quantity)
+`Payment.Amount = (Products.PayPrice * Products.Quantity) + (PaymentInfo.Value * PaymentInfo.Quantity)  - (PreferentialInfo.Value * PreferentialInfo.Quantity)`
 
 |字段名称|字段类型|必填|备注|
 |---|---|---|---|

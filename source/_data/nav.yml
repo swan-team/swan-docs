@@ -199,6 +199,10 @@
                     text: 关联H5站点
                     name: rank_h5
                   -
+                    link: /introduction/rank_single
+                    text: 单卡配置说明
+                    name: rank_single
+                  -
                     link: /introduction/rank_setimage
                     text: 搜索结果出图配置
                     name: rank_setimage
@@ -760,6 +764,10 @@
                 link: /develop/framework/custom-component_behaviors
                 text: behaviors
                 name: custom-component_behaviors
+              -
+                link: /develop/framework/custom-component_observers
+                text: 数据监听器
+                name: custom-component_observers
               -
                 link: /develop/framework/custom-component_generic
                 text: 抽象节点
@@ -3317,6 +3325,10 @@
                     text: 自动补全
                     name: editor_自动补全
                   -
+                    link: /develop/devtools/editor/#转换px为rpx
+                    text: 转换px为rpx
+                    name: editor_转换px为rpx              
+                  -
                     link: /develop/devtools/editor/#Git-状态展示
                     text: Git 状态展示
                     name: editor_Git-状态展示                
@@ -3771,9 +3783,34 @@
              
               sidebar: 
                 -
-                  text: cloud.database
-                  name: cloud_server_sdk_database_cloud.database
-                  link: /develop/cloud/server_sdk/database 
+                  text: Database
+                  name: database
+                  link: /develop/cloud/server_sdk/database
+                  sidebar:
+                    -
+                      text: Database.collection
+                      name: database_Database.collection
+                      link: /develop/cloud/server_sdk/database/#Database-collection
+                    -
+                      text: Database.command
+                      name: database_Database.command
+                      link: /develop/cloud/server_sdk/database/#Database-command
+                    -
+                      text: Database.createCollection
+                      name: database_Database.createCollection
+                      link: /develop/cloud/server_sdk/database/#Database-createCollection
+                    -
+                      text: Database.Geo
+                      name: database_Database.Geo
+                      link: /develop/cloud/server_sdk/database/#Database-Geo
+                    -
+                      text: Database.serverDate
+                      name: database_Database.serverDate
+                      link: /develop/cloud/server_sdk/database/#Database-serverDate
+                    -
+                      text: Database.RegExp
+                      name: database_Database.RegExp
+                      link: /develop/cloud/server_sdk/database/#Database-RegExp
                 -
                   text: Collection 
                   name: collection  
@@ -3824,45 +3861,26 @@
                       name: collection_Collection.where
                       link: /develop/cloud/server_sdk/collection/#Collection-where
                 -
-                  text: Database.collection
-                  name: cloud_server_sdk_database_Database.collection
-                  link: /develop/cloud/server_sdk/database/#Database-collection
-                -
-                  text: Database.command
-                  name: cloud_server_sdk_database_Database.command
-                  link: /develop/cloud/server_sdk/database/#Database-command
-                -
-                  text: Database.createCollection
-                  name: cloud_server_sdk_database_Database.createCollection
-                  link: /develop/cloud/server_sdk/database/#Database-createCollection
-                -
-                  text: Database.Geo
-                  name: cloud_server_sdk_database_Database.Geo
-                  link: /develop/cloud/server_sdk/database/#Database-Geo
-                -
-                  text: Database.serverDate
-                  name: cloud_server_sdk_database_Database.serverDate
-                  link: /develop/cloud/server_sdk/database/#Database-serverDate
-                -
-                  text: Database.RegExp
-                  name: cloud_server_sdk_database_Database.RegExp
-                  link: /develop/cloud/server_sdk/database/#Database-RegExp
-                -
-                  text: Document.get
-                  name: cloud_server_sdk_database_Document.get
-                  link: /develop/cloud/server_sdk/database/#Document-get
-                -
-                  text: Document.remove
-                  name: cloud_server_sdk_database_Document.remove
-                  link: /develop/cloud/server_sdk/database/#Document-remove
-                -
-                  text: Document.set
-                  name: cloud_server_sdk_database_Document.set
-                  link: /develop/cloud/server_sdk/database/#Document-set
-                -
-                  text: Document.update
-                  name: cloud_server_sdk_database_Document.update
-                  link: /develop/cloud/server_sdk/database/#Document-update
+                  text: Document 
+                  name: document
+                  link: /develop/cloud/server_sdk/document
+                  sidebar:
+                    -
+                      text: Document.get
+                      name: cloud_server_sdk_database_Document.get
+                      link: /develop/cloud/server_sdk/document/#Document-get
+                    -
+                      text: Document.remove
+                      name: cloud_server_sdk_database_Document.remove
+                      link: /develop/cloud/server_sdk/document/#Document-remove
+                    -
+                      text: Document.set
+                      name: cloud_server_sdk_database_Document.set
+                      link: /develop/cloud/server_sdk/document/#Document-set
+                    -
+                      text: Document.update
+                      name: cloud_server_sdk_database_Document.update
+                      link: /develop/cloud/server_sdk/document/#Document-update
             -
               text: 云存储
               name: cloud_server_sdk_storage
@@ -3878,8 +3896,8 @@
                   link: /develop/cloud/server_sdk/storage/#cloud-downloadFile
                 -
                   text: cloud.getTempFileURL
-                  name: cloud_server_sdk_storage_loud.getTempFileURL
-                  link: /develop/cloud/server_sdk/storage/#loud-getTempFileURL
+                  name: cloud_server_sdk_storage_cloud.getTempFileURL
+                  link: /develop/cloud/server_sdk/storage/#cloud-getTempFileURL
                 -
                   text: cloud.deleteFile
                   name: cloud_server_sdk_storage_cloud.deleteFile
@@ -3887,7 +3905,7 @@
             -
               text: 云函数
               name: cloud_server_sdk_function
-              
+              link: /develop/cloud/server_sdk/function
               sidebar: 
                 -
                   text: cloud.callFunction

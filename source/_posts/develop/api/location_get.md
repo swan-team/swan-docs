@@ -116,7 +116,7 @@ sidebar: location_get
 
 **示例**：
 
-<a href="swanide://fragment/f4bde7ec693b398cbe9e964f26f024fb1569506448265" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ebaf0022546dcefd6de64c062af9b6481569570163901" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

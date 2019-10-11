@@ -6,14 +6,14 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.11.2） 
+### 最新正式版本（2.11.3） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#%E6%AD%A3%E5%BC%8F%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
 
-### 最新 rc 版本（2.11.1-rc）
+### 最新 rc 版本（2.12.0-rc）
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
 
@@ -34,7 +34,7 @@ sidebar: history
 
 |mac|windows|用户占比|
 |--|--|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.2.dmg">2.11.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.11.2.exe">2.11.2</a>|6.11%|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.3.dmg">2.11.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.11.3.exe">2.11.3</a>|6.11%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.10.1.dmg">2.10.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.10.1.exe">2.10.1</a>|38.51%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.9.1.dmg">2.9.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.9.1.exe">2.9.1</a>|18.34%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.8.2.dmg">2.8.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.8.2.exe">2.8.2</a>|5.22%|
