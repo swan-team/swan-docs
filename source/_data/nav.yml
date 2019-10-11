@@ -3203,21 +3203,21 @@
                 name: contact_api
                 sidebar:
                   -
-                    link: /develop/serverapi/contact_api/#消息推送介绍
+                    link: /develop/serverapi/contact_api 
                     text: 消息推送介绍
-                    name: contact_api_消息推送介绍
+                    name: contact_api 
                   -
-                    link: /develop/serverapi/contact_api/#在页面中使用客服消息
+                    link: /develop/serverapi/contact_api_page
                     text: 在页面中使用客服消息
-                    name: contact_api_在页面中使用客服消息
+                    name: contact_api_page
                   -
-                    link: /develop/serverapi/contact_api/#后台接入消息服务
+                    link: /develop/serverapi/contact_api_background
                     text: 后台接入消息服务
-                    name: contact_api_后台接入消息服务
+                    name: contact_api_background
                   -
-                    link: /develop/serverapi/contact_api/#发送客服消息接口
+                    link: /develop/serverapi/contact_api_send
                     text: 发送客服消息接口
-                    name: contact_api_发送客服消息接口
+                    name: contact_api_send
               -
                 link: /develop/serverapi/power_exp
                 text: 开发者服务权限说明
@@ -3228,19 +3228,11 @@
                 name: open_risk_power
                 sidebar:
                   -
-                    link: /develop/serverapi/open_risk_power/#使用场景
-                    text: 使用场景
-                    name: open_risk_power_使用场景
-                  -
-                    link: /develop/serverapi/open_risk_power/#功能介绍
+                    link: /develop/serverapi/open_risk_power 
                     text: 功能介绍
-                    name: open_risk_power_功能介绍
+                    name: open_risk_power 
                   -
-                    link: /develop/serverapi/open_risk_power/#使用说明
-                    text: 使用说明
-                    name: open_risk_power_使用说明
-                  -
-                    link: /develop/serverapi/open_risk_power/#detectrisk
+                    link: /develop/serverapi/open_risk_power_detectrisk
                     text: detectrisk
                     name: open_risk_power_detectrisk
     -
