@@ -8,7 +8,14 @@ sidebar: device_sys
 
 ## swan.getSystemInfo
 
+>  基础库 1.10.8 版本开始支持。
+
 **解释**：获取系统信息
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -45,96 +52,29 @@ sidebar: device_sys
 |devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
 
 **示例**：
-<a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="info-ctn">
-            <view class="info-item" s-for="item in infoList">
-                <text class="info-label">{{item.label}}：</text>
-                <text class="info-value">{{item.value}}</text>
-            </view>
-        </view>
-        <view class="btn-ctn">
-            <button bind:tap="getSystemInfo" type="primary" hover-stop-propagation="true">点击获取系统信息</button>
-            <button bind:tap="clearClick" hover-stop-propagation="true">清空</button>
-        </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'getSystemInfo',
-        infoList: [{
-            label: '手机品牌',
-            key: 'brand',
-            value: ''
-        }, {
-            label: '手机型号',
-            key: 'model',
-            value: ''
-        }, {
-            label: '当前版本',
-            key: 'version',
-            value: ''
-        }, {
-            label: '屏幕宽度',
-            key: 'screenWidth',
-            value: ''
-        }, {
-            label: '屏幕高度',
-            key: 'screenHeight',
-            value: ''
-        }, {
-            label: 'DPI',
-            key: 'pixelRatio',
-            value: ''
-        }, {
-            label: '语言',
-            key: 'language',
-            value: ''
-        }]
-    },
-
-    getSystemInfo(e) {
-        swan.getSystemInfo({
-            success: res => {
-                // 更新数据
-                this.updateInfoList(res);
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '获取失败'
-                });
-            }
-        });
-    },
-
-    clearClick() {
-        this.updateInfoList({});
-    },
-
-    updateInfoList(res) {
-        let infoList = this.getData('infoList');
-        for (let i = 0; i < infoList.length; ++i) {
-            infoList[i].value = res[infoList[i].key];
+    swan.getSystemInfo({
+        success: res => {
+            console.log('getSystemInfo success', res)
+        },
+        fail: err => {
+            console.log('getSystemInfo fail', err)
         }
-        this.setData('infoList', infoList);
-    }
-});
+    });
 ```
+#### 错误码
+Andriod
 
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|402|安全性检查：访问控制校验失败|
+                                
 
 ## swan.getSystemInfoSync
 
@@ -169,38 +109,28 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSystemInfoSync">getSystemInfoSync</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-
-Page({
-    getSystemInfoSync() {
-        try {
-            const result = swan.getSystemInfoSync();
-            console.log('getSystemInfoSync success', result);
-        } catch (e) {
-            console.log('getSystemInfoSync fail', e);
-        }
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getSystemInfoSync();
+    console.log('getSystemInfoSync success', result);
+} catch (e) {
+    console.log('getSystemInfoSync fail', e);
 }
+
 ```
+
+#### 错误码
+
+Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.getEnvInfoSync
 
@@ -220,38 +150,21 @@ Page({
 |lastAppURL |string|  智能小程序最近一次打开的调起协议  |
 |sdkVersion |string|  基础库版本   |
 |scheme |string|  调起协议的协议头   |
+|env |string|  智能小程序的版本（基础库 3.90.12 开始支持）；development 代表开发版本，trial 代表体验版本，production 代表线上版本  |
 
 **示例**：
 
-<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/82e11bbc8ad46f16d1358e023478af9e1569478295415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getEnvInfoSync">getEnvInfoSync</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    getEnvInfoSync() {
-        try {
-            const result = swan.getEnvInfoSync();
-            console.log('getEnvInfoSync success', result);
-        } catch (e) {
-            console.log('getEnvInfoSync fail', e);
-        }
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getEnvInfoSync();
+    console.log('getEnvInfoSync success', result);
+} catch (e) {
+    console.log('getEnvInfoSync fail', e);
 }
 ```
 
@@ -278,15 +191,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/46118bb2080dbb4afe733717c987f6e31569478359497" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="canIUse">canIUse</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -304,10 +210,5 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+

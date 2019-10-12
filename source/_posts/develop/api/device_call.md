@@ -11,6 +11,12 @@ sidebar: device_call
 
 **解释**：拨打电话
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/makePhoneCall.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -23,79 +29,42 @@ sidebar: device_call
 |complete  |  Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/20cc334d3f9433dd7e8cde22d37b5d8c1560169077444" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="phone-call-container">
-            <text>请在下方输入电话号码</text>
-            <input bind:input="phoneNumberInput" class="input" type="number" placeholder="请输入电话号码"/>
-            <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打</button>
-        </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/9cf5e060c76b0c2d9160335b815d2ccf1569484502200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'makePhoneCall',
-        phoneNumber: ''
-    },
-
-    phoneNumberInput(e) {
-        this.setData('phoneNumber', e.detail.value);
-    },
-
-    makePhoneCall(e) {
-        let phoneNumber = this.getData('phoneNumber');
-        if (!phoneNumber) {
-            swan.showToast({
-                title: '请输入电话号码'
+makePhoneCall(e) {
+    swan.makePhoneCall({
+        'xxxxx',
+        success: res => {
+            console.log('makePhoneCall success', res);
+        },
+        fail: err => {
+            swan.showModal({
+                title: '拨打失败',
+                content: '请检查是否输入了正确的电话号码',
+                showCancel: false
             });
-            return;
         }
-        swan.makePhoneCall({
-            phoneNumber,
-            fail: err => {
-                swan.showModal({
-                    title: '拨打失败',
-                    content: '请检查是否输入了正确的电话号码',
-                    showCancel: false
-                });
-            }
-        });
-    }
-});
-```
+    });
+}
 
-* 在 css 文件中
-
-```css
-swan-button {
-    margin-top: .15rem;
-}
-.phone-call-container {
-    margin: 0 .15rem;
-    padding: .3rem 0;
-    background-color: #fff;
-}
-.phone-call-container swan-text{
-    margin: .1rem .23rem .3rem;
-    color: #666;
-}
-.phone-call-container swan-input{
-    padding-left: 0;
-    border-bottom: 1px solid #eee;
-    box-sizing: content-box;
-}
 ``` 
+ 
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|302|找不到调起协议对应端能力方法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |

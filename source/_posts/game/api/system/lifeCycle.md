@@ -147,7 +147,7 @@ swan.reload(opts)
 ```js
 swan.reload({
     content: '确认重载小游戏？',
-    success: function (res) {
+    success: res => {
         if (res.confirm) {
             console.log('点击了确定');
         }
@@ -171,4 +171,46 @@ swan.exit(opts)
 |opts.success|function|接口调用成功的回调函数|
 |opts.fail|function|接口调用失败的回调函数|
 |opts.complete|function|接口调用完成的回调函数，无论失败成功都会调用|
+
+### swan.onDisplay()
+
+> 从 [基础库 1.11.3](/game/tutorials/version/releaseLog/) 开始支持
+
+监听小游戏首次绘制上屏，此时loading页面会消失，看到游戏首页，首帧绘制逻辑不能放在该监听内部，否则因为没有任何绘制导致该API不回调，造成死锁。
+
+```js
+swan.onDisplay(function(res) {
+    // res.startupTime 为小游戏启动时长，单位ms
+})
+```
+
+**参数值：**
+
+|参数|类型|描述|
+|-|-|-|
+|callback|function|回调函数|
+
+参数
+
+**Object res**
+
+|属性|类型|描述|
+|-|-|-|
+|startupTime|number|小游戏启动时长，单位ms|
+
+### swan.offDisplay()
+
+> 从 [基础库 1.11.3](/game/tutorials/version/releaseLog/) 开始支持
+
+取消监听小游戏首次绘制上屏。
+
+```js
+swan.offDisplay(callback)
+```
+
+**参数值：**
+
+|参数|类型|描述|
+|-|-|-|
+|callback|function|调用 `swan.onDispaly()` 时传入的回调函数|
 

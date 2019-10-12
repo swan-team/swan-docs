@@ -8,6 +8,11 @@ sidebar: location_open
 
 **解释**：使用宿主 App 内置地图查看位置。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openLocation.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -24,46 +29,13 @@ sidebar: location_open
 |complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
-<a href="swanide://fragment/871fe815f19378bd3e236b906660af671560167014840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="item">
-            <view class="label">经度</view>
-            <view class="value">116°27′</view>
-        </view>
-        <view class="item">
-            <view class="label">纬度</view>
-            <view class="value">40°04′</view>
-        </view>
-        <view class="item">
-            <view class="label">位置名称</view>
-            <view class="value">{{locationInfo.name}}</view>
-        </view>
-        <view class="item">
-            <view class="label">详细位置</view>
-            <view class="value">{{locationInfo.address}}</view>
-        </view>
-        <button class="button" bind:tap="openLocation" type="primary" loading="{{loading}}" hover-stop-propagation="true">查看位置</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/c85dc8f8f87366dcde740c908c21e79f1569429868373" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
     data: {
-        title: 'openLocation',
-        loading: false,
         locationInfo: {
             latitude: 40.04,
             longitude: 116.27,
@@ -77,21 +49,23 @@ Page({
         swan.openLocation({
             latitude: locationInfo.latitude,
             longitude: locationInfo.longitude,
-            scale: 18,
+            scale: locationInfo.scale,
             name: locationInfo.name,
             address: locationInfo.address,
-            success: function (res) {
-                console.log('success', res);
+            success: res => {
+                console.log('openLocation success', res);
             },
             fail : function (err) {
-                swan.showToast({
-                    title: '检查位置权限',
-                    icon: 'none'
-                })
-                console.log('fail msg', err);
+                console.log('openLocation fail', err);
             }
         });
     }
 });
 ```
- 
+ #### 错误码
+
+**iOS**
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |

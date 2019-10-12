@@ -1,28 +1,30 @@
 ---
-title: map
+title: map 地图
 header: develop
 nav: component
 sidebar: map
 ---
-## map
+ 
 
-**解释**：地图
+**解释**：地图，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
-> 客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/map.png"  class="demo-qrcode-image" />
 
 **属性说明**: 
 
 |属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |---- |
-| longitude | Number |  | 是 |中心经度 |- |
-| latitude | Number |  | 是 |中心纬度 | -|
+| longitude | Number |  | 是 |gcj02 坐标系中心经度 |- |
+| latitude | Number |  | 是 |gcj02 坐标系中心纬度 | -|
 | scale |  Number | 16 | 否 |缩放级别，取值范围为4-21 |- |
-| markers |  Array |   | 否 |标记点 |- |
-| polyline |  Array |   | 否 |路线 | -|
-| polygons |  Array |   | 否 |多边形（工具暂不支持） | 2.0.13 |
-| circles |  Array |   | 否 |  圆 |- |
-| controls |  Array |   | 否 |控件 | -|
-| include-points |  Array |   | 否 | 缩放视野以包含所有给定的坐标点   | -|
+| markers |	Array.&lt;marker&gt;|   | 否 |标记点 |- |
+| polyline | Array.&lt;polyline&gt; |   | 否 |路线 | -|
+| polygons |  Array.&lt;polygon&gt; |   | 否 |多边形（工具暂不支持） | 2.0.13 |
+| circles |  Array.&lt;circle&gt; |   | 否 |  圆 |- |
+| controls |  Array.&lt;control&gt; |   | 否 |控件 | -|
+| include-points |  Array&lt;point&gt; |   | 否 | 缩放视野以包含所有给定的坐标点   | -|
 | show-location | Boolean |   | 否 | 显示带有方向的当前定位点 |- |
 | enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13|
 | show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13|
@@ -38,27 +40,27 @@ sidebar: map
 | bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
 | bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
-### markers
+### marker
 
 **解释**：标记点，用于在地图上显示标记的位置
 
 **属性说明**：
 
-| 属性名 | 说明 | 类型  | 必填  | 备注 |
-|---- | ---- | ---- |---- | ---- |
-| id | 标记点id | Number | 否 | marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
-| latitude | 纬度 | Number | 是 | 浮点数，范围 -90 ~ 90 |
-| longitude | 经度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
-| title  | 标注点名  | String | 否    |  |
-| zIndex  | 显示层级  | Number | 否    |  |
-| iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
-| rotate | 旋转角度 | Number | 否 | 顺时针旋转的角度，范围 0 ~ 360，默认为 0 |
-| alpha | 标注的透明度 | Number    | 否 | 默认1，无透明 |
-| width | 标注图标宽度 | Number | 否 | 默认为图片实际宽度 |
-| height | 标注图标高度 | Number | 否 | 默认为图片实际高度 |
-| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，不可识别换行符。 |
-| label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
-| anchor | 经纬度在标注图标的锚点，默认底边中点 | Object | 否 | {x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
+|属性名 |类型  |默认值  | 必填 |说明| 
+|---- | ---- | ---- |---- | --- | 
+| markerId |  Number| | 否 | 标记点id ，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
+| latitude |   Number || 是 | 纬度，浮点数，范围 -90 ~ 90 |
+| longitude |  Number || 是 | 经度，浮点数，范围 -180 ~ 180 |
+| title  |   String | |否    | 标注点名 |
+| zIndex  |  Number | |否    |  显示层级 |
+| iconPath |   String | |是 | 显示的图标，项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
+| rotate |   Number |0| 否 |旋转角度，顺时针旋转的角度，范围 0 ~ 360，默认为 0 |
+| alpha |   Number    | 1|否 | 标注的透明度，默认1，无透明 |
+| width |   Number | |否 | 标注图标宽度，默认为图片实际宽度 |
+| height |   Number | |否 | 标注图标高度，默认为图片实际高度 |
+| callout |   Object || 否 | 自定义标记点上方的气泡窗口，支持的属性见下表，不可识别换行符。 |
+| label |   Object | |否 | 为标记点旁边增加标签，支持的属性见下表，可识别换行符。 |
+| anchor |   Object | |否 | 经纬度在标注图标的锚点，默认底边中点，{x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
 
 **callout 属性说明**：
 
@@ -114,7 +116,7 @@ sidebar: map
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
 | zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
 
-### circles
+### circle
 **解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
@@ -125,17 +127,18 @@ sidebar: map
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
 | radius | 半径 | Number | 是 |  - |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
-### controls
+
+### control
 **解释**：在地图上显示控件，控件不随着地图移动<div></div><text class="notice">属性说明:</text>
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
-| id | 控件id | Number | 否 | 在控件点击事件回调会返回此id |
+| controlId | 控件id | Number | 否 | 在控件点击事件回调会返回此id |
 | position | 控件在地图的位置 | Object | 是 | 控件相对地图位置 |
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | clickable | 是否可点击 | Boolean | 否 | 默认不可点击 |
-#### position
-<text class="notice">属性说明:</text>
+
+**position 属性说明**：
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -146,7 +149,7 @@ sidebar: map
 
 
 **示例**：
-<a href="swanide://fragment/fd809ae921113fe3b5a684cd8c69541d1565587461294" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/64984d55db8ac69c2a1fc651cc7fc2671570610273844" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
 * 在 swan 文件中
@@ -160,18 +163,24 @@ sidebar: map
         scale="{{scale}}"
         markers="{{markers}}"
         polyline="{{polyline}}"
-        polygons="{{drawPolygon ? polygons : []}}"
+        polygons="{{polygons}}"
         circles="{{circles}}"
         controls="{{controls}}"
-        show-location="{{show-location}}"
-        include-points="{{include-points}}"
+        include-points="{{includePoints}}"
+        show-location="{{showLocation}}"
         enable-3D="{{enable3d}}"
         show-compass="{{showCompass}}"
         enable-overlooking="{{enableOverlooking}}"
         enable-zoom="{{enableZoom}}"
         enable-scroll="{{enableScroll}}"
         enable-rotate="{{enableRotate}}"
-        bindmarkertap="onMarkertap" bindcallouttap="onCallouttap" bindcontroltap="onControltap" bindregionchange="onRegionchange" bindtap="onTap" bindupdated="onUpdated">
+        bindmarkertap="onMarkertap" 
+        bindcallouttap="onCallouttap" 
+        bindcontroltap="onControltap" 
+        bindregionchange="onRegionchange" 
+        bindtap="onTap" 
+        bindupdated="onUpdated"
+        bindpoitap="onPoitap">
     </map>
 </view>
 ```
@@ -182,36 +191,32 @@ sidebar: map
 Page({
     data: {
         scale: 16,
-        latitude: '40.048828',
-        longitude: '116.280412',
-        polyline:[],
-        circles:[],
+        latitude: 40.048828,
+        longitude: 116.280412,
+        showLocation: true,
         enable3d: false,
         showCompass: false,
-        showLocation: true,
         enableOverlooking: false,
         enableZoom: true,
         enableScroll: true,
         enableRotate: false,
-        drawPolygon: false,
-        enableSatellite: false,
-        enableTraffic: false,
+        polygons: [],
         markers: [{
-            markerId: '1',
-            latitude: '40.052751',
-            longitude: '116.278796'
+            markerId: 1,
+            latitude: 40.052751,
+            longitude: 116.278796
         }, {
-            markerId: '2',
-            latitude: '40.048828',
-            longitude: '116.280412',
+            markerId: 2,
+            latitude: 40.048828,
+            longitude: 116.280412,
             callout: {
                 display: 'ALWAYS',
                 content: '百度科技园'
             }
         }, {
-            markerId: '3',
-            latitude: '40.049655',
-            longitude: '116.27505',
+            markerId: 3,
+            latitude: 40.049655,
+            longitude: 116.27505,
             callout: {
                 display: 'ALWAYS',
                 content: '西山壹号院'
@@ -229,6 +234,14 @@ Page({
             width: 2,
             dottedLine: true
         }],
+        circles: [{
+            latitude: 40.052751,
+            longitude: 116.278796,
+            color: '#FF5F41FF',
+            fillColor: '#FF5F41FF',
+            radius: 200,
+            strokeWidth: 2
+        }],
         controls: [{
             controlId: 1,
             iconPath: '/images/api_logo.png',
@@ -239,69 +252,11 @@ Page({
                 height: 50
             },
             clickable: true
-        }],
-        circles: [{
-            latitude: '40.052751',
-            longitude: '116.278796',
-            color: '#FF5F41FF',
-            fillColor: '#21FFFFFF',
-            radius: '200',
-            strokeWidth: '2'
         }]
     },
     onReady() {
         console.log('map ready');
         this.mapContext = swan.createMapContext('myMap');
-    },
-    toggle3d() {
-        this.setData({
-            enable3d: !this.data.enable3d
-        })
-    },
-    toggleShowCompass() {
-        this.setData({
-            showCompass: !this.data.showCompass
-        })
-    },
-    toggleRotate() {
-        this.setData({
-          enableRotate: !this.data.enableRotate
-        })
-    },
-    togglePolygon() {
-        this.setData({
-          drawPolygon: !this.data.drawPolygon
-        })
-      },
-      toggleSatellite() {
-        this.setData({
-          enableSatellite: !this.data.enableSatellite
-        })
-      },
-      toggleTraffic() {
-        this.setData({
-          enableTraffic: !this.data.enableTraffic
-        })
-      },
-    demoCircle() {
-        this.setData({
-            scale: 16,
-            longitude,
-            latitude,
-            circles: [{
-            latitude: '40.048828',
-            longitude: '116.280412',
-            color: '#BB76FF88',
-            fillColor: '#BB76FF33',
-            radius: 100,
-            strokeWidth:3,
-            }]
-        });
-    },
-    toggleOverlooking() {
-        this.setData({
-          enableOverlooking: !this.data.enableOverlooking
-        })
     },
     onMarkertap(e) {
         console.log('onMarkertap callback:');
@@ -324,7 +279,11 @@ Page({
         console.log(e);
     },
     onUpdated(e) {
-        console.log('onUpdated callback::');
+        console.log('onUpdated callback:');
+        console.log(e);
+    },
+    onPoitap(e) {
+        console.log('onPoitap callback:');
         console.log(e);
     }
 });
@@ -340,3 +299,5 @@ Page({
 * cover-view、cover-image 组件可覆盖在map组件之上。
 * map组件的 markers 的 label 暂不支持换行。
 * Android 与 iOS 定位精度不同，双端定位存在差异。
+* map 组件使用的经纬度是火星坐标系，调用 swan.getLocation 接口需要指定 type 为 gcj02。
+* 开发者工具由于坐标系不同，定位与双端存在差异。开发时请以双端为准。

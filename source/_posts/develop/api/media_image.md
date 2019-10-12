@@ -10,6 +10,10 @@ sidebar: media_image
 
 **解释**：从本地相册选择图片或使用相机拍照。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/api-image.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -43,7 +47,8 @@ sidebar: media_image
 
 
 **示例**：
-<a href="swanide://fragment/5739ca862a06d44ad662d8edd9c6bbd31559049434270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<a href="swanide://fragment/25ee1bf808f49aeae2975827d0fd654e1569416277213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -52,40 +57,45 @@ swan.chooseImage({
     count: 1,
     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-    success: function (res) {
+    success: res => {
         // 成功则返回图片的本地文件路径列表 tempFilePaths
         console.log(res.tempFilePaths);
         // 文件列表对象
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }
 });
 
 ```
-<!-- #### 错误码
 
-**Andriod**
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确   |
 |1002|用户取消操作错误码|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确  |
 |1002|用户取消操作错误码|
 |1003|用户没有授权百度使用相册|
-|1003|小程序文件目录为空| -->
+|1003|小程序文件目录为空|	
 
 ## swan.previewImage
 
 **解释**： 预览图片。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/previewImage.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -103,62 +113,29 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/0853b6b5ebfae073d92923f6bc305c411559044720278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f894cd9bd5137023f6820041d829c12e1569391306305" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="previewImage">previewImage</button>
-    <button type="primary" bindtap="previewOriginImage">previewOriginImage</button>
-</view>
-```
 * 在 js 文件中
 
 ```js
-Page({
-    previewImage() {
-        swan.previewImage({
-            current: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', // 当前显示图片的http链接
-            urls: ['https://smartprogram.baidu.com/docs/img/design/overview/1-1.png', 'https://smartprogram.baidu.com/docs/img/design/overview/1-2.png'], // 需要预览的图片http链接列表
-            success: function (res) {
-                console.log('previewImage success', res);
-            },
-            fail: function (err) {
-                console.log('previewImage fail', err);
-            }
-        });
+
+swan.previewImage({
+    current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',// current需与urls中链接一致
+    urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
+    images: [
+        {
+            "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png', 
+            "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-origin.png'
+        }
+    ],
+    success: res => {
+        console.log('previewImage success', res);
     },
-    previewOriginImage() {
-        swan.previewImage({
-            urls: ['https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png'], // 需要预览的图片http链接列表
-            images: [
-                {
-                    "url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image.jpg', //图片预览链接
-                    "origin_url": 'https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-origin.jpg' //图片的原图地址
-                },
-                {
-                    "url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2.png",//图片预览链接
-                    "origin_url": "https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-preview-image-2-origin.png"  //图片的原图地址
-                }
-            ],
-            success: function (res) {
-                console.log('previewImage success', res);
-            },
-            fail: function (err) {
-                console.log('previewImage fail', err);
-            }
-        });
+    fail: err => {
+        console.log('previewImage fail', err);
     }
 });
-```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 **说明**
@@ -179,6 +156,22 @@ Page({
         <img src=" ">
     </div>     
 </div>
+
+
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
 
 ## swan.getImageInfo
 
@@ -208,46 +201,28 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/7a32bdca963927f591579f644d2831601556530296484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b439e751ff3f4f8002c24abb715bdda11569391409791" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getImageInfo">getImageInfo</button>
-</view>
-
-```
 
 * 在 js 文件中
 
 ```js
-Page({
     getImageInfo() {
         swan.getImageInfo({
-            src: 'https://smartprogram.baidu.com/docs/img/design/overview/1-1.png',
-            success: function (res) {
+            src: 'https://smartprogram.baidu.com/xxx.png',
+            success: res => {
                 console.log('getImageInfo success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getImageInfo fail', err);
             }
         });
     }
-});
-
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
@@ -255,13 +230,12 @@ Page({
 |202|解析失败，请检查参数是否正确|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
-|1003|小程序文件夹为空|
-|1003|读取图片失败| -->
+|202  |解析失败，请检查参数是否正确|
+|1003|读取图片内容为空(小程序文件夹为空或读取图片失败)|
 
 ## swan.saveImageToPhotosAlbum
 
@@ -280,64 +254,56 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/b773d94033175e28f71a369cd6563fd71559044847609" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1493fabbbf98659284ff1d4837d9cb7f1569416506836" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="saveImageToPhotosAlbum">saveImageToPhotosAlbum</button>
-</view>
-```
 * 在 js 文件中
 
 ```js
 Page({
-    saveImageToPhotosAlbum() {
-        swan.chooseImage({
-            count: 1,
-            sizeType: ['original', 'compressed'],
-            sourceType: ['album', 'camera'],
-            success: function (res) {
-                swan.saveImageToPhotosAlbum({
-                    filePath: res.tempFilePaths[0],
-                    success: function (res) {
-                        swan.showToast({
-                            title: 'success',
-                            icon: 'none'
-                        });
-                        console.log('saveImageToPhotosAlbum success', res);
-                    },
-                    fail: function (err) {
-                        swan.showToast({
-                            title: 'fail',
-                            icon: 'none'
-                        });
-                        console.log('saveImageToPhotosAlbum fail', err);
-                    }
-                });
-            },
-            fail: function (err) {
-                console.log('chooseImage fail', err);
-            }
-        });
-    }
+    swan.downloadFile({
+        // 仅为示例，并非真实的资源
+        url: 'https://b.bdstatic.com/miniapp/xxxx',
+        header: {
+            'content-type': 'application/json'
+        },
+        success: res => {
+            let filePath = res.tempFilePath;
+            swan.saveImageToPhotosAlbum({
+                filePath, // 暂不支持网络图片地址，需与swan.downloadFile一起使用
+                success: res => {
+                    swan.showToast({
+                        title: '已保存到本地相册',
+                        icon: 'none'
+                    });
+                    console.log('saveImageToPhotosAlbum success', res);
+                },
+                fail: err => {
+                    swan.showToast({
+                        title: '',
+                        icon: 'none'
+                    });
+                    console.log('saveImageToPhotosAlbum fail', err);
+                }
+            });
+        },
+        fail: err => {
+            console.log('错误码：' + err.errCode);
+            console.log('错误信息：' + err.errMsg);
+        }
+    });
 });
 ```
 
-* 在 css 文件中
-
-```css
-wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.chooseAlbum
 
 > 基础库 3.30.3开始支持，低版本需做兼容处理
 
 **解释**：打开本地相册，相册内可以同时包含图片和视频。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseAlbum.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -373,7 +339,7 @@ wrap {
 |duration|Number|选定视频的时间长度 (单位：s)|
 
 **示例**
-<a href="swanide://fragment/ede0ca93153cd6f1b6f4b83198b0d8c91561972369610" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9e816c3b680f03a8ebc74b23a831b06a1569416597656" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 **示例 1 打开相册只选择图片或视频**
 * 在 js 文件中
@@ -383,13 +349,13 @@ wrap {
     count: 2,
     mode: 'single',
     compressed: true,
-    success: function (res) {
+    success: res => {
         // 成功则返回图片的本地文件路径列表 tempFilePaths
         console.log(res.tempFilePaths);
         // 文件列表对象
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }
@@ -405,13 +371,11 @@ swan.chooseAlbum({
     count: 3,
     mode: 'both',
     compressed: false,
-    success: function (res) {
-
+    success: res => {
         console.log(res.tempFilePaths);
-
         console.log(res.tempFiles);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }

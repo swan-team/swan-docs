@@ -10,6 +10,10 @@ sidebar: ai_classify
 
 **解释**：通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/advancedGeneralIdentify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -39,19 +43,24 @@ sidebar: ai_classify
 
 **示例**：
 
-<a href="swanide://fragment/f0f5c38f725ffc2be62f96eb4be8c3421559033876094" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dcc9c3fcf59e0de53028a481f22d92951569388593001" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.advancedGeneralIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
+Page({
+  swan.chooseImage({
+    success: res => {
+      let image = res.tempFilePaths[0];
+      swan.ai.advancedGeneralIdentify({
+        image, // 暂不支持识别网络图片
+        success: res => {
+          console.log('advancedGeneralIdentify res', res.result);
+        },
+        fail: err => {
+          console.log('advancedGeneralIdentify err', err);
+        }
+      });
+    }
+  })
 });
 ```
 
@@ -95,6 +104,10 @@ swan.chooseImage({
 
 **解释**：用户向服务请求检测图像中的主体位置。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/objectDetectIdentify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -129,16 +142,21 @@ swan.chooseImage({
 <a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.objectDetectIdentify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
-    });
-  }
+Page({
+  swan.chooseImage({
+    success: res => {
+      let image = res.tempFilePaths[0];
+      swan.ai.objectDetectIdentify({
+        image,
+        success: res => {
+          console.log('objectDetectIdentify res', res.result);
+        },
+        fail: err => {
+          console.log('objectDetectIdentify fail', err);
+        }
+      });
+    }
+  })
 });
 ```
 
@@ -159,6 +177,11 @@ swan.chooseImage({
 ## swan.ai.carClassify
 
 **解释**：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/carClassify.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -201,17 +224,21 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/84f5b4c3a32407d7bc015ad52ca892da1559034220848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5cb0c5cf808cc6057d8fb94b56357bf21569414658661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.carClassify({
-      image,
-      success(res) {
-        console.log(res.result);
-      }
+        image,
+        top_num: 5,
+        success: res => {
+          console.log('carClassify res', res.result);
+        },
+        fail: err => {
+          console.log('carClassify err', err);
+        }
     });
   }
 });
@@ -274,6 +301,10 @@ swan.chooseImage({
 
 **解释**：用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/dishClassify.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -308,17 +339,22 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/cb45e8b18d6c3a029794d92983c61b8e1559034320412" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f1a28edc917988c8cfcf0c257dbeeefa1569414920893" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.dishClassify({
       image,
-      success(res) {
-        console.log(res.result);
-      }
+      top_num: 5,
+      filter_threshold: 0.95,
+      success: res => {
+        console.log('dishClassify res', res.result);
+      },
+      fail: err => {
+          console.log('dishClassify res', err);
+        }
     });
   }
 });
@@ -370,6 +406,12 @@ swan.chooseImage({
 
 **解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
 
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/logoClassify.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -412,17 +454,21 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/c318343cd552374941c434da1ffa9b611559034387688" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab217ecd1c08c7d10992d367ac052dbb1569414838193" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.logoClassify({
       image,
-      success(res) {
-        console.log(res.result);
+      custom_lib: false,
+      success: res => {
+        console.log('dishClassify res', res.result);
+      },
+      fail: err => {
+        console.log('dishClassify err', err);
       }
     });
   }
@@ -456,6 +502,11 @@ swan.chooseImage({
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/animalClassify.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -485,16 +536,20 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/5f8c77146dce77806c690234f2e2d8161559034590812" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61d91bbf4843daa85ff43dbbb9cc23691569414992464" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.animalClassify({
       image,
-      success(res) {
-        console.log(res.result);
+      top_num: 6,
+      success: res => {
+        console.log('animalClassify res', res.result);
+      },
+      fail: err => {
+        console.log('animalClassify err', err);
       }
     });
   }
@@ -540,6 +595,12 @@ swan.chooseImage({
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
 
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/plantClassify.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -567,16 +628,19 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/d1c86b7451424a0fc11257035438df4e1559034681121" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0ed61bf9910ed18a664037cd907c0fae1569415076954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({
-  success(res) {
+  success: res => {
     let image = res.tempFilePaths[0];
     swan.ai.plantClassify({
       image,
-      success(res) {
-        console.log(res.result);
+      success: res => {
+        console.log('plantClassify res', res.result);
+      },
+      fail: err => {
+        console.log('plantClassify err', err);
       }
     });
   }
@@ -646,10 +710,10 @@ swan.recognizeImage({
     categoryList: ['BARCODE'],
     index: 0,
     showTitle: true,
-    success(res) {
+    success: res => {
         console.log('调起识图成功：', res);
     },
-    fail(err) {
+    fail: err => {
         console.log('调起识图失败：', err);
     }
 })

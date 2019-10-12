@@ -114,7 +114,7 @@ const uploadUrl = 'https://smartprogram.baidu.com/xxx'; // 仅为示例，并非
 const downloadUrl = 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf';
 swan.downloadFile({
     url: downloadUrl,
-    success(res) {
+    success: res => {
         let uploadTask = swan.uploadFile({
             url: uploadUrl,
             filePath: res.tempFilePath,

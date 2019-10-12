@@ -1,14 +1,18 @@
 ---
-title: 开放接口
+title: open-data 开放数据
 header: develop
 nav: component
 sidebar: open
 ---
 
 
-## open-data
 
 **解释：**用于展示百度 App 开放的数据。
+
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
 
 **属性说明：**
 
@@ -70,6 +74,7 @@ sidebar: open
 
 
 
+<<<<<<< HEAD
 ## web-view
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
@@ -199,3 +204,5 @@ Page({
 * 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
 * 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
 * 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
+=======
+>>>>>>> upstream/master

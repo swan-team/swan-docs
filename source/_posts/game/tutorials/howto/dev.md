@@ -280,7 +280,7 @@ swan.showModal({
     content: '这是一个模态弹窗',
     cancelColor: '#ff0000',
     confirmColor: '#fff000',
-    success: function (res) {
+    success: res => {
         if (res.confirm) {
             console.log('点击了确定');
         } else if (res.cancel) {

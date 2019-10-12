@@ -10,9 +10,32 @@ sidebar: media_backgroundaudiomanager
 
 **解释**：获取全局唯一的背景音频管理器 `backgroundAudioManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getBackgroundAudioManager.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
-##  backgroundAudioManager
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法 |
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202  |解析失败，请检查参数是否正确|
+|204|当前正在播放来源于其他小程序的音频，无权控制|
+|1005|播放被打断|
+|1006|加载音频失败|
+|1007|seek失败，播放器尚未缓冲|
+
+ 
+##  BackgroundAudioManager
 
 **`backgroundAudioManager`对象的属性列表**：
 
@@ -32,18 +55,7 @@ sidebar: media_backgroundaudiomanager
  
 **示例**：
 
-<a href="swanide://fragment/64190712c60317f82e2458635fe7f19b1556530973999" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="play">play</button>
-    <button type="primary" bindtap="pause">pause</button>
-    <button type="primary" bindtap="stop">stop</button>
-    <button type="primary" bindtap="seek">seek</button>
-</view>
-```
+<a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -128,40 +140,13 @@ Page({
 
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-```
-
-
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/getBackgroundAudioManager.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-## backgroundAudioManager.play 
+## BackgroundAudioManager.play 
 
 **解释**：播放
 
 **方法参数**：无
 
-## backgroundAudioManager.pause
+## BackgroundAudioManager.pause
 
 
 **解释**：暂停
@@ -169,95 +154,95 @@ Page({
 **方法参数**：无
  
 
-## backgroundAudioManager.stop
+## BackgroundAudioManager.stop
 
 **解释**：停止 
 
 **方法参数**：无
  
 
-## backgroundAudioManager.seek
+## BackgroundAudioManager.seek
 
 **解释**：跳转到指定位置（单位：s）
 
 **方法参数**：Number position
 
 
-## backgroundAudioManager.onCanplay
+## BackgroundAudioManager.onCanplay
 
 **解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onPlay
+## BackgroundAudioManager.onPlay
 
 **解释**：音频播放事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onPause
+## BackgroundAudioManager.onPause
 
 **解释**： 音频暂停事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onStop
+## BackgroundAudioManager.onStop
 
 **解释**：音频停止事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onEnded 
+## BackgroundAudioManager.onEnded 
 
 **解释**：音频自然播放结束事件
 
 **方法参数**：Function callback
  
 
-## backgroundAudioManager.onTimeUpdate 
+## BackgroundAudioManager.onTimeUpdate 
 
 **解释**：音频进度更新事件
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onError
+## BackgroundAudioManager.onError
 
 **解释**：音频播放错误事件
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onWaiting 
+## BackgroundAudioManager.onWaiting 
 
 **解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
 
 **方法参数**：Function callback
 
 
-## backgroundAudioManager.onSeeked
+## BackgroundAudioManager.onSeeked
 
 **解释**：监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。
 
 **方法参数**：Function callback
 
-## backgroundAudioManager.onSeeking
+## BackgroundAudioManager.onSeeking
 
 **解释**：监听背景音频开始跳转操作事件，背景音频开始跳转操作事件的回调函数。
 
 **方法参数**：Function callback
 
-## backgroundAudioManager.onNext
+## BackgroundAudioManager.onNext
 
 **解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
 
 **方法参数**：Function callback
 
-## backgroundAudioManager.onPrev
+## BackgroundAudioManager.onPrev
 
 **解释**：监听用户在系统音乐播放面板点击上一曲事件，仅支持 Andriod。
 

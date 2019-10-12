@@ -5,7 +5,7 @@ nav: api
 sidebar: apilist
 ---
 
-
+> API [错误码](/develop/api/errorcode/)
 
 ## 网络
 
@@ -158,7 +158,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-measureText/">canvasContext.measureText</a>|测量文本尺寸信息，目前仅返回文本宽度，同步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-strokeText/">canvasContext.strokeText</a>|给定的 (x, y) 位置绘制文本描边的方法。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>|设置虚线偏移量的属性。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-createPattern/">canvasContext.createPattern</a>|对指定的图像创建模式的方法，可在指定的方向上重复元图像。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>|创建三次方贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-quadraticCurveTot/">canvasContext.quadraticCurveTo</a>|创建二次贝塞尔曲线路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_canvas/#canvasContext-save/">canvasContext.save</a>|保存当前的绘图上下文。|
@@ -280,6 +279,8 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_payment/#swan-requestPolymerPayment/">swan.requestPolymerPayment</a>|百度收银台，聚合了主流的百度钱包、微信、支付宝、网银等多种支付方式，方便开发者一站式快速接入多种支付渠道，让百度用户能在智能小程序场景下，直接完成支付、交易闭环，提升用户支付体验的同时，提高智能小程序的订单转化率。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-openCommunityEditor/">swan.openCommunityEditor</a>|调起原生全屏内容发布器，并支持开发者配置发布器展示模块。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_community/#swan-closeCommunityEditor/">swan.closeCommunityEditor</a>|关闭原生全屏内容发布器。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_replyeditor/#swan-openReplyEditor/">swan.openReplyEditor</a>|调起原生半屏内容发布器，并支持开发者配置发布器展示模块。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_replyeditor/#swan-closeReplyEditor/">swan.closeReplyEditor</a>|关闭原生半屏内容发布器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|

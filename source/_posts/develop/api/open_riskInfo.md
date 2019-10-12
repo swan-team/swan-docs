@@ -43,10 +43,10 @@ sidebar: open_riskInfo
 Page({
     getSystemRiskInfo() {
         swan.getSystemRiskInfo({
-            success: function (res) {
+            success: res => {
                 console.log('getSystemRiskInfo success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getSystemRiskInfo fail', err);
             }
         });

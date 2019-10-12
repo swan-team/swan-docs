@@ -10,6 +10,10 @@ sidebar: ai_ocr
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -69,19 +73,24 @@ sidebar: ai_ocr
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrIdCard({
-      detect_direction: true,
-      id_card_side: 'front',
-      detect_risk: true,
-      image,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.ocrIdCard({
+                detect_direction: true,
+                id_card_side: 'front',
+                detect_risk: true,
+                image, // 暂不支持识别网络图片
+                success: res => {
+                    console.log('ocrIdCard res', res.words_result);
+                },
+                fail: err => {
+                    console.log('ocrIdCard err', err);
+                }
+            });
+        }
+    })
 });
 ```
 
@@ -159,6 +168,10 @@ swan.chooseImage({
 
 **解释**：识别银行卡并返回卡号、发卡行和卡片类型。
 
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrBankCard.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -187,20 +200,25 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/92a8c2396bf7d7de34f665bfd3a169d51558354163733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/93a953878450cff70360bf8306753ff51569387641576" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrBankCard({
-      image,
-      success(res) {
-        console.log(res.result.bank_name);
-      }
-    });
-  }
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.ocrBankCard({
+                image, // 暂不支持识别网络图片
+                success: res => {
+                    console.log('ocrBankCard res', res.result);
+                }，
+                fail: err => {
+                    console.log('ocrBankCard err', err);
+                }
+            });
+        }
+    })
 });
 ```
 
@@ -219,6 +237,11 @@ swan.chooseImage({
 ## swan.ai.ocrDrivingLicense
 
 **解释**：对机动车驾驶证所有关键字段进行识别。
+
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrDrivingLicense.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -265,21 +288,26 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/2e29be1712f733c5ff929633e6cc9e381558354253516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/37093ec7f3e0d3524e8ed4d2a7efc3761569387704914" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrDrivingLicense({
-      image,
-      detect_direction: true,
-      unified_valid_period: true,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.ocrDrivingLicense({
+                image, // 暂不支持识别网络图片
+                detect_direction: true,
+                unified_valid_period: true,
+                success: res => {
+                    console.log('ocrDrivingLicense res',res.words_result);
+                },
+                fail: err => {
+                    console.log('ocrDrivingLicense err', err);
+                }
+            });
+        }
+    })
 });
 ```
 
@@ -374,20 +402,26 @@ swan.chooseImage({
 
 **示例**：
 
-<a href="swanide://fragment/fd832f72c79de41db18251f4999214ba1558354370200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9209b1777685306d5286a8bfc44b8b231569387791873" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success(res) {
-    let image = res.tempFilePaths[0];
-    swan.ai.ocrVehicleLicense({
-      image,
-      detect_direction: true,
-      success(res) {
-        console.log(res.words_result);
-      }
-    });
-  }
+Page({
+    swan.chooseImage({
+        success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.ocrVehicleLicense({
+                image, // 暂不支持识别网络图片
+                detect_direction: true,
+                accuracy: normal
+                success: res => {
+                    console.log('ocrVehicleLicense res', res.words_result);
+                },
+                fail: err => {
+                    console.log('ocrVehicleLicense err', err);
+                }
+            });
+        }
+    })
 });
 ```
 

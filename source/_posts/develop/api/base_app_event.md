@@ -9,7 +9,7 @@ sidebar: base_app_event
 ## swan.onPageNotFound
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](/develop/framework/app_service_register/) 的回调时机一致。
 
 **方法参数：** Function callback
 小程序要打开的页面不存在的事件回调函数。
@@ -23,7 +23,7 @@ sidebar: base_app_event
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
 **示例代码**
-<a href="swanide://fragment/37ce9a4e5cb1c29e1182b76f561d4fa11561949585690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3a13a179e4089fc5eb246675244a37551567703460426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -49,7 +49,7 @@ App({
 ## swan.onError
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序错误事件。如脚本错误或`API`调用报错等。该事件与 [App.onError](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机与参数一致。
+**解释：** 监听小程序错误事件。如脚本错误或`API`调用报错等。该事件与 [App.onError](/develop/framework/app_service_register/) 的回调时机与参数一致。
 
 **方法参数：** Function callback
 小程序错误事件的回调函数。
@@ -60,7 +60,7 @@ App({
 错误信息，包含堆栈。
 
 **示例代码**
-<a href="swanide://fragment/3e041dd08b16620b89b8f130abbf0c3c1561950449427" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/586c93bf9be6677849b96b75d4a197001567705705833" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -76,7 +76,7 @@ App({
 ## swan.onAppShow
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序切前台事件。该事件与 [App.onShow](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调参数一致。
+**解释：** 监听小程序切前台事件。该事件与 [App.onShow](/develop/framework/app_service_register/) 的回调参数一致。
 
 **方法参数：** function callback
 小程序切前台事件的回调函数。
@@ -112,7 +112,7 @@ App({
 |sys|String|其它。|
 
 **示例代码**
-<a href="swanide://fragment/b181931dbbdeb7fb557225b70e56e8cc1561948864535" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/68fb2a8f3e534b87eb78cf2f3131754c1566460332372" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -137,13 +137,13 @@ App({
 ## swan.onAppHide
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 监听小程序切后台事件。该事件与 [App.onHide](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 的回调时机一致。
+**解释：** 监听小程序切后台事件。该事件与 [App.onHide](/develop/framework/app_service_register/) 的回调时机一致。
 
 **方法参数：** Function callback
 小程序切后台事件的回调函数。
 
 **示例代码**
-<a href="swanide://fragment/4be4c88950619fc8674d5e7a5de1e9561561957185046" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c5245a3754670b23afe52bbf27570d91567705983829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -166,7 +166,7 @@ App({
 小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
 **示例代码**
-<a href="swanide://fragment/89777c33f7b020b4a5db8eb45906fbbb1561957127870" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/89c7e6b8401b308e07556874b8467b271567706228311" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -193,7 +193,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/f00758365371a1065c5b63d0ea89272e1561957033278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d08a55a9db6a51a7646cb4ded4c0eca21567706756650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -220,7 +220,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/d4ed29475758d6b24721cb0666a7c1411561956949062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e69e06ce6a94ec75c6ef2b29e4e34be51567706876670" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -249,7 +249,7 @@ App({
 **方法参数：** 无
 
 **示例代码**
-<a href="swanide://fragment/93ae938df0cc43285ca8eecfa0071d261561956898192" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77af814357acd94631e44c46addbbff91567706941671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js

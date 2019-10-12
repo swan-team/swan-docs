@@ -10,6 +10,11 @@ sidebar: device_phonecontact
 
 **解释**：调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/addPhoneContact.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -54,15 +59,8 @@ sidebar: device_phonecontact
 
 **示例**：
 
-<a href="swanide://fragment/8bd9b2c7500c14a85cff265bb671d1ec1557732716138" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/453112cac6fd6392b45fac632ebe00c81569483938431" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="addPhoneContact">addPhoneContact</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -103,20 +101,31 @@ Page({
             homeAddressCity: '',
             homeAddressStreet: '',
             homeAddressPostalCode: '',
-            success(res) {
+            success: res => {
                 console.log('vibrateLong success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateLong fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|

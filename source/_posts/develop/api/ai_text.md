@@ -9,6 +9,11 @@ sidebar: ai_text
 
 **解释**：运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。
 
+
+**百度APP中扫码体验：**
+
+<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/textReview.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -56,14 +61,19 @@ sidebar: ai_text
 
 **示例**：
 
-<a href="swanide://fragment/ac0db02bdbfcb722069dbbffeba716c21558354483470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.textReview({
-  content: '',
-  success(res) {
-    console.log(res.result.spam); // 0 表示审核通过
-  }
+Page({
+  swan.ai.textReview({
+      content: '',
+      success: res => {
+        console.log('textReview res', res.result.spam); // 0 表示审核通过
+      },
+      fail: err => {
+        console.log('textReview err', err);
+      }
+  })
 });
 ```
 

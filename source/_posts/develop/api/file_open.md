@@ -8,6 +8,11 @@ sidebar: file_open
 
 **解释**：新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -39,19 +44,19 @@ Page({
     openDocument() {
         swan.downloadFile({
             url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
-            success: function (res) {
+            success: res => {
                 swan.openDocument({
                     filePath: res.tempFilePath,
                     fileType: 'pdf',
-                    success: function (res) {
+                    success: res => {
                         console.log('openDocument success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('openDocument fail', err);
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('downloadFile fail', err);
             }
         });
@@ -65,3 +70,19 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确   |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确   |
+|2001|文件不存在|
+|2005|文件格式不支持|

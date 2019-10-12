@@ -207,7 +207,7 @@ sidebar: cardticket
 
 | ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
 |:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
-| bd_app_id   |  bd_app_id     |  query    |  true    | integer     |       
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/) |  获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)       |  query    |  true    | String    |       
 | couponTemplateId   |  优惠券id     |  query    |  true    | integer     |        
 
 **响应示例**:
@@ -274,7 +274,7 @@ sidebar: cardticket
 
 | ** 参数名称         **   | ** 参数说明     **   | **     in **   | **  是否必须      **   | **  数据类型  **   |  
 |:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----|:----:|:----| 
-| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/） |  bd_app_id     |  query    |  true    | string     |     
+| [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|  获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)      |  query    |  true    | string     |     
 | couponType   |   优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券    |  query    |  false    | integer     |  
 | page   |  page     |  query    |  false    | integer     |       
 | pageSize   |  pageSize     |  query    |  false    | integer     |       
@@ -404,7 +404,7 @@ sidebar: cardticket
 |:----|:----|:----|:----|
 | recordId   |  优惠券领取记录id   | 是   | string   | 
 | openId   | openId   | 是   | string   | 
-| **couponT****emplateId**   | 优惠券模板id   | 是   | long   | 
+| **couponTemplateId**   | 优惠券模板id   | 是   | long   | 
 | sign   | md5签名串(小写)    签名盐： recordId +openId+timestamp后5位+**couponTemplateId**+*&^%$#    md5(recordId+openId+**couponTemplateId**+timestamp+盐)     | 是   | string   | 
 | timestamp   | 时间戳 单位s   |  -  | -|
    
@@ -421,7 +421,7 @@ sidebar: cardticket
 ```
 ## 同步优惠券核销状态
 **接口描述：同步优惠券状态到百度服务器**
-**接口地址：**`https://openapi.baidu.com/rest/2.0/smartapp/coupon/**writeOffCoupon**`
+**接口地址：**`https://openapi.baidu.com/rest/2.0/smartapp/coupon/writeOffCoupon`
 **请求方式：**`POST`
 **请求参数：**
 
@@ -448,4 +448,52 @@ sidebar: cardticket
 }
 ```
 
+## 统计接口
 
+
+**接口描述**:在线查询优惠券历史数据。
+
+
+**接口地址**:`https://openapi.baidu.com/rest/2.0/smartapp/coupon/couponStat`
+
+
+**请求方式**：`POST`
+
+**请求参数**：
+
+| 参数名称         | 参数说明     |     in |  是否必须      |  数据类型  | 
+| ------------ | ------------  |-----------|--------|----|
+|access\_token|获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | query | true |string  |  
+|statDateStart|  开始时间 | query | true |string  |  
+|statDateEnd| 结束时间  | query | true |integer  |   
+|pageNo| 默认 0  | query | false |integer  |    
+|pageSize| 默认20  | query | true |integer  |   
+
+**响应示例**:
+
+```json
+{
+  "data": {
+    "dataList": [
+      {
+        "appKey": "string", 
+        "couponId": 0, 
+        "getPv": 0,//领取次数
+        "getRate": 0,// 领取人数
+        "getUv": 0,//浏览人数
+        "pdate": "2019-07-19T05:45:57.323Z",//数据更新时间
+        "stock": 0,//优惠券库存
+        "usePv": 0,//使用次数
+        "useRate": 0,//使用人数/领取人数
+        "useUv": 0,//使用人数
+        "viewPv": 0,//浏览次数
+        "viewUv": 0//浏览人数
+      }
+    ],
+    "pageNo": 0,
+    "total": 0
+  },
+  "errno": 0,
+  "msg": "string"
+}
+```

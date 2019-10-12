@@ -5,11 +5,31 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.105 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.105.09|2019.9.18|**New**<p>新增自定义组件数据监听器功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
+
+
+## 3.100 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.100.10|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
+|3.100.09|2019.9.4|**New**<p>新增小程序消息订阅功能。<p>**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
+|3.100.5|2019.8.28|**Breaking Change**<p>triggerEvent支持第三个参数,可以实现父子组件关系之间的冒泡和捕获<p>**BugFix**<p>**·**修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题；<p>**·**tabs组件修改了 url-query，去掉了local-event。|
+|3.100.4|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**Breaking Change**<p>登录授权逻辑优化。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
+
 
 ## 3.90 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.90.22|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
+|3.90.19|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
+|3.90.16|2019.8.28|**BugFix**<p>修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题。|
+|3.90.14|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.90.6|2019.8.7|**BugFix**<p>**·**修复动态库小刷新问题；<p>**·**修复框架模块化循环引用时取不到前一个模块导出的问题。|
 
 
@@ -17,6 +37,9 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.80.32|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
+|3.80.29|2019.8.28|**BugFix**<p>修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题。|
+|3.80.27|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.80.8|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。<p>**BugFix**<p>修复setData(data, callback)callback回调里无法获取新增的组件实例的问题。|
 |3.80.6|2019.7.05|**BugFix**<p>修复 cover-view/cover-iamge transition 动画不生效的问题。|
 |3.80.2|2019.6.26|**New**<p>支持获取风控信息。<p>**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
@@ -25,6 +48,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.50|2019.9.9|**New**<p>新版生命周期上线。|
+|3.70.39|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.70.25|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.70.20|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.70.15|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
@@ -34,6 +59,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.60.36|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.60.32|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
 |3.60.27|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.60.25|2019.6.12|**Breaking Change**<p>checkbox默认值修改为checked:true。<p>**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
@@ -45,6 +71,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.50.34|2019.8.21|**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.50.29|2019.6.26|**Breaking Change**<p>小程序中禁止使用script/link/iframe标签。|
 |3.50.18|2019.6.5|**BugFix**<p>**·**修复模块化循环引用的报错；<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题。|
 |3.50.16|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
@@ -57,7 +84,7 @@ sidebar: swanchangelog
 |----|----|----|
 |3.40.29|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
 |3.40.28|2019.6.5|**BugFix**<p>**·**修复swiper嵌套横向scroll-view无法滚动问题；<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复animate不支持rpx的问题；<p>**·**修复模块化循环引用的报错。|
-|3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
+|3.40.26|2019.5.30|**BugFix**<p>修复AOP在自定义组件中的调用问题。|
 |3.40.19|2019.5.18|**BugFix**<p>**·**修复 onError 中 error 信息不明确的问题；<p>**·**修复 Android 端设置静态 src 和 autoplay 的问题。|
 |3.40.15|2019.4.22|**BugFix**<p>**·**修复bindlongtap事件长按并移动后不能触发的问题；<p>**·**修复 cover-image 销毁后 update 的问题。|
 |3.40.9|2019.4.11|**BugFix**<p>修复textarea的focus没有双绑定的问题。|
@@ -69,8 +96,7 @@ sidebar: swanchangelog
 |版本号|更新日期|更新内容|
 |----|----|----|
 |3.30.39|2019.6.5|**BugFix**<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复模块化循环引用的报错。|
-|3.40.26|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
-|3.30.37|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
+|3.30.37|2019.5.30|**BugFix**<p>修复AOP在自定义组件中的调用问题。|
 |3.30.34|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.30.32|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.30.31|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -83,7 +109,7 @@ sidebar: swanchangelog
 |版本号|更新日期|更新内容|
 |----|----|----|
 |3.20.46|2019.6.5|**BugFix**<p>**·**修复 onLaunch/onShow 时，query 解析错误的问题；<p>**·**修复模块化循环引用的报错。|
-|3.20.44|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
+|3.20.44|2019.5.30|**BugFix**<p>修复AOP在自定义组件中的调用问题。|
 |3.20.36|2019.5.18|**BugFix**<p>修复 onError 中 error 信息不明确的问题。|
 |3.20.35|2019.4.26|**BugFix**<p>修复 cover-image 销毁后 update 的问题。|
 |3.20.34|2019.4.22|**BugFix**<p>修复bindlongtap事件长按并移动后不能触发的问题。|
@@ -101,14 +127,14 @@ sidebar: swanchangelog
 |版本号|更新日期|更新内容|
 |----|----|----|
 |3.15.144|2019.6.12|**BugFix**<p>修复 page 生命周期中抛出的异常没有触发 onError 的问题。|
-|3.15.143|2019.6.5|**BugFix**<p>**修复模块化循环引用的报错。|
-|3.15.141|2019.5.30|**BugFix**修复AOP在自定义组件中的调用问题。|
+|3.15.143|2019.6.5|**BugFix**<p>修复模块化循环引用的报错。|
+|3.15.141|2019.5.30|**BugFix**<p>修复AOP在自定义组件中的调用问题。|
 |3.15.132|2019.4.11|**New**<p>增加AOP机制。|
 |3.15.125|2019.3.20|**BugFix**<p>**·**修复 android 端 autoplay 为 false 时候点击不能播放问题；<p>**·**修复 video 和 live-player 用 s-if 方式创建立即销毁不能销毁的问题。|
 |3.15.120|2019.3.11|**BugFix**<p>修复自定义组件中 properties 的属性 value 不支持 new Date()，type 不支持 Date 类型的问题。|
 |3.15. 116  |2019.3.5|**BugFix**<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁；<p>**·**修复video和live-player 用s-if方式创建立即销毁不能销毁。|
 |3.15.112|2019.3.1|**Breaking Change** <p>live-player objectFit属性值修复：由vertial改为contain。|
-|3.15.110|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复;<p>修复dataset 大小写转化问题。|
+|3.15.110|2019.2.27|**BugFix**<p>**·**修复 input 组件 value、placeholder 字号异常的问题；<p>**·**修复 swiper 组件在 android 端的滑动事件与下拉刷新冲突的问题；<p>**·**修复 textarea 组件设置 placeholder-class 不生效的问题；<p>**·**组件规范修改 + ios9下bug修复;<p>**·**修复dataset 大小写转化问题。|
 |3.15.105  |2019.2.19|**New**<p>**·**自定义组件中支持使用相对路径动态引用资源；<p>**·**自定义组件内支持支持 hoverclass；<p>**·**app 工程里计算基础路径时支持 http/https 开头的绝对路径。|
 |3.15.104  |2019.2.15|**New**<p>swan上新增nextTick方法。|
 ## 3.10 版本日志更新
@@ -255,7 +281,7 @@ sidebar: swanchangelog
 |1.11.25|2018.09.14|**New**<p>**·**  Android 开放微博分享渠道;<p>**·** 新增video点击穿透h5按钮。<p>**Breaking Change**<p>checkbox样式。 <p>**BugFix**<p>修复 自定义组件第一次不触发observer问题，及observer第二个参数不为oldValue问题。|
 |1.11.22|2018.09.12|**New**<p>**·** 新增动态rpx;<p>**·** 增加打开广告落地页功能 <p>**Breaking Change**<p>文本长度超出 input 组件的可容纳范围时，默认不显示省略号，直接截断文本 <p>**BugFix**<p>**·** 修复video  android点击穿透问题;<p>**·** 修复button组件iOS9下分享兼容性问题。|
 |1.11.21|2018.09.06|**New**<p> **·** 新增mask组件;<p>**·** 添加动画结束事件;<p>**Breaking Change**<p>**·** 广告组件去除位置信息 <p>**BugFix**<p>**·** 修复swiper bug;<p>**·** 修复h5 catch事件问题;<p>**·** 修复pageScrollTo设置duration为0，body上方会留白问题|
-|1.11.20|2018.09.4|**New**<p> **·** html增加高度100%。<p> **·** picker-view支持动态修改数据。<p>request新增responseType属性<p>**BugFix**<p> **·** 修复 input 组件外层设置 display: flex 后，组件渲染异常的 bug。<p> **·** 修复 audio 组件 的 poster 值为空时，组件渲染异常的 bug。<p> **·** 修复H5、NA事件解决多指点击触发多个tap事件问题。<p> **·** 修复picker-view动态修改数据滑动异常问题。<p> **·** 修复设置button为disable未置灰的问题。|
+|1.11.20|2018.09.4|**New**<p> **·** html增加高度100%。<p> **·** picker-view支持动态修改数据；<p> **·** request新增responseType属性<p>**BugFix**<p> **·** 修复 input 组件外层设置 display: flex 后，组件渲染异常的 bug。<p> **·** 修复 audio 组件 的 poster 值为空时，组件渲染异常的 bug。<p> **·** 修复H5、NA事件解决多指点击触发多个tap事件问题。<p> **·** 修复picker-view动态修改数据滑动异常问题。<p> **·** 修复设置button为disable未置灰的问题。|
 |1.11.12|2018.08.22|**BugFix**<p>修复text组件不支持\n换行的问题，修复自定义组件methods-bug，增加selectComponent方法。|
 |1.11.8|2018.08.15|**BugFix**<p>修复 video 组件嵌套在 template 使用时，getFirstParentComponentId 方法为 undefined 的 bug。|
 |1.11.5|2018.08.14|**New**<p>**·** 新增cover-view/cover-image/video/live-player组件更新时的 diff 策略;<p>**·** 框架流程异常 trace-log 增加用户点击轨迹;<p>**·** cover-image 支持直接嵌套在其它原生组件中;<p>**·** 新增所有组件的 longtap 事件;<p>**·** 新增filter过滤器功能。<p>**BugFix** <p>**·** 修复生命周期不抛出异常问题;<p>**·** 修复 label 不能绑定tap事件，以及for属性设置不存在id时控制台会报错的bug;<p>**·** 修复createQuerySelect API在scroll-view中获取节点信息失败的 bug;<p>**·** 修复input组件在获得焦点的情况下设置文本颜色不生效的 bug;<p>**·** 修复 cover-view 高度单位为 % 时，其内部组件高度渲染异常的 bug;<p>**·** 修复 longpress 事件需要在 touchend 后触发的问题;<p>**·** 修复 chooseAddress，安卓端返回参数不一致的问题。|
@@ -268,7 +294,7 @@ sidebar: swanchangelog
 |1.10.37|2018.10.10|**BugFix**<p>修复低版本自定义组件class不生效的bug。|
 |1.10.32|2018.09.14|**New**<p>Android 开放微博分享渠道。|
 |1.10.29|2018.09.12|<p>**Breaking Change**<p>文本长度超出 input 组件的可容纳范围时，默认不显示省略号，直接截断文本 <p>**BugFix**<p>**·** 修复video  android点击穿透问题;<p>**·** 修复button组件iOS9下分享兼容性问题。|
-|1.10.28|2018.09.06|**New**<p>***·** 增加mask组件。<p>**BugFix**<p>**·** 修复pageScrollTo设置duration为0，body上方会留白问题;<p>**·** 兼容安卓4.4系统步行导航会强退问题。|
+|1.10.28|2018.09.06|**New**<p>**·** 增加mask组件。<p>**BugFix**<p>**·** 修复pageScrollTo设置duration为0，body上方会留白问题;<p>**·** 兼容安卓4.4系统步行导航会强退问题。|
 |1.10.27|2018.09.04|**New**<p>html增加高度100%。<p>**BugFix**<p> **·** 修复 input 组件外层设置 display: flex 后，组件渲染异常的 bug。<p> **·** 修复 audio 组件 的 poster 值为空时，组件渲染异常的 bug。|
 |1.10.14|2018.08.02|**New**<p>增加框架全流程事件,性能&trace-log。<p>**Breaking Change**<p>删除body默认高度100。<p>**BugFix**<p>修复 redirect 后切换tab-slave白屏问题。|
 |1.10.13|2018.07.31|**New**<p> **·** 新增canIUse；<p>**·** 新增 track-log组件;<p>**·** 新增自定义组件的支持。<p>**BugFix**<p>**·** 修复 input 组件设置 margin 属性导致闪动的问题;<p>**·** 修复 picker-view 组件动态设置value 视图没更新的问题。|

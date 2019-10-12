@@ -27,7 +27,7 @@ swan.getScreenBrightness(opts)
 
 ```js
 swan.getScreenBrightness({
-    success: function (res) {
+    success: res => {
         console.log(res);
     }
 })

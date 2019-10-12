@@ -11,6 +11,11 @@ sidebar: file_save
 
 **解释**：保存文件到本地
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -29,36 +34,14 @@ sidebar: file_save
 |savedFilePath  |String | 文件的保存路径|
 
 **示例**：
-<a href="swanide://fragment/4816f991cc6234fb35caa7f93d2e55621560166064722" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <button bind:tap="saveFile" type="primary" hover-stop-propagation="true">下载并保存文件</button>
-        <button bind:tap="openDocument" type="primary" hover-stop-propagation="true">打开文件</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    data: {
-        title: 'saveFile/openDocument',
-        filePath: ''
-    },
-
     saveFile() {
-        swan.showToast({
-            title: '开始下载'
-        });
+        // 先把服务器上文件下载下来生成临时文件路径，再保存到本地,不支持网络路径
         swan.downloadFile({
             header: {
                 'Cache-Control': 'no-cache'
@@ -80,30 +63,7 @@ Page({
                     }
                 });
             },
-            fail: err => {
-                swan.showToast({
-                    title: '下载失败'
-                });
-            }
-        });
-    },
-
-    openDocument() {
-        swan.openDocument({
-            filePath: this.getData('filePath'),
-            fileType: 'pdf',
-            fail: err => {
-                if (!this.getData('filePath')) {
-                    swan.showToast({
-                        title: '请先点击保存文件'
-                    });
-                    return;
-                }
-                swan.showToast({
-                    title: '打开失败'
-                });
-            }
-        });
+        })
     }
 });
 ```
@@ -112,27 +72,28 @@ Page({
 
 本地文件存储的大小限制为 10M。
 
-<!-- #### 错误码
 
-**Andriod**
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201 |解析失败，请检查调起协议是否合法|
+|201  |解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 |2000|文件路径无效|
 |2001|文件不存在|
-|2002|文件过大|
+|2002|文件大小超过限制|
 |2003|IO异常|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|2001|指定文件不存在|
+|202|解析失败，请检查参数是否正确   |
+|2001|文件不存在|
 |2002|文件大小超过限制|
-|2003|IO异常| -->
+|2003|IO异常|
 
 ## swan.getFileInfo
 
@@ -160,71 +121,83 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/03fb8ed0c13722acc9b06f441603988b1556536748943" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getFileInfo">getFileInfo</button>
-</view>
-```
-
-* 在 js 文件中
+**示例 1 获取临时文件信息**
 
 ```js
-Page({
-    getFileInfo() {
-        swan.chooseImage({
-            count: 1,
-            success: function (res) {
-                const tempFilePaths = res.tempFilePaths;
-                swan.getFileInfo({
-                    filePath: tempFilePaths[0],
-                    success: function (res) {
-                        swan.showToast({
-                            title: 'success',
-                            icon: 'none'
-                        });
-                        console.log('getFileInfo success', res);
-                    },
-                    fail: function (err) {
-                        swan.showToast({
-                            title: 'fail',
-                            icon: 'none'
-                        });
-                        console.log('getFileInfo success', err);
-                    }
+swan.downloadFile({
+    header: {
+        'Cache-Control': 'no-cache'
+    },
+    url: 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf',
+    success: res => {
+        swan.getFileInfo({
+            tempFilePath: res.tempFilePath,
+            success: res => {
+                swan.showToast({
+                    title: 'success',
+                    icon: 'none'
                 });
+                console.log('getFileInfo success', res);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: 'fail',
+                    icon: 'none'
+                });
+                console.log('getFileInfo fail', err);
+            }
+        });
+    },
+})
+```
+
+**示例 2 获取本地文件信息**
+```js
+swan.chooseImage({
+    count: 1,
+    success: res => {
+        const tempFilePaths = res.tempFilePaths;  // 本地文件的路径(也可通过swan.saveFile获取)
+        swan.getFileInfo({
+            filePath: tempFilePaths[0],
+            success: res => {
+                swan.showToast({
+                    title: 'success',
+                    icon: 'none'
+                });
+                console.log('getFileInfo success', res);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: 'fail',
+                    icon: 'none'
+                });
+                console.log('getFileInfo fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确   |
 |1001|执行失败|
 |2001|文件不存在|
 |2003|IO异常|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|2001|指定文件不存在| -->
+|202|解析失败，请检查参数是否正确   |
+|2001|文件不存在|
+
 
 
 
@@ -257,70 +230,42 @@ Page({
 |createTime  |Number | 文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数。|
 |size  |Number | 文件大小，单位 B|
 
-**示例**：
+
 
 **示例**：
 
-<a href="swanide://fragment/3450c561cdf1ef62951d13eff25df65b1556536911397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSavedFileList">getSavedFileList</button>
-</view>
-```
-
-* 在 js 文件中
 
 ```js
-Page({
-    getSavedFileList() {
-        swan.chooseImage({
-            count: 1,
-            success: function (res) {
-                const tempFilePaths = res.tempFilePaths;
-                swan.saveFile({
-                    tempFilePath: tempFilePaths[0],
-                    success: function (res) {
-                        swan.getSavedFileList({
-                            success: function (res) {
-                                swan.showToast({
-                                    title: 'success',
-                                    icon: 'none'
-                                });
-                                console.log('getSavedFileList success', res);
-                            },
-                            fail: function (err) {
-                                swan.showToast({
-                                    title: 'fail',
-                                    icon: 'none'
-                                });
-                                console.log('getSavedFileList fail', err);
-                            }
-                        });
-                    }
-                });
-            }
+
+swan.getSavedFileList({
+    success: res => {
+        swan.showToast({
+            title: 'success',
+            icon: 'none'
         });
+        console.log('getSavedFileList success', res);
+    },
+    fail: err => {
+        swan.showToast({
+            title: 'fail',
+            icon: 'none'
+        });
+        console.log('getSavedFileList fail', err);
     }
 });
+                   
 ```
 
-* 在 css 文件中
+#### 错误码
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-<!-- #### 错误码
-
+Andriod
 
 |错误码|说明|
 |--|--|
-|1001|执行失败 |
-|2003|IO异常| -->
+|1001|执行失败   |
+|2003|IO异常|
 
 
 
@@ -349,15 +294,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/8e9af32a9901a93711f286f0f65e2eb61556537016514" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSavedFileInfo">getSavedFileInfo</button>
-</view>
-```
+<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -365,19 +302,19 @@ Page({
 Page({
     getSavedFileInfo() {
         swan.getSavedFileList({
-            success: function (res) {
+            success: res => {
                 if (res.fileList.length > 0) {
                     const filePath = res.fileList[0].filePath;
                     swan.getSavedFileInfo({
                         filePath,
-                        success: function (res) {
+                        success: res => {
                             swan.showToast({
                                 title: 'success',
                                 icon: 'none'
                             });
                             console.log('getSavedFileList success', res);
                         },
-                        fail: function (err) {
+                        fail: err => {
                             swan.showToast({
                                 title: 'fail',
                                 icon: 'none'
@@ -392,28 +329,21 @@ Page({
 });
 ```
 
-* 在 css 文件中
+ 
+#### 错误码
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-<!-- #### 错误码
-
-**Andriod**
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确    |
 |1001|执行失败|
 |2001|文件不存在|
 |2003|IO异常|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|2001|指定文件不存在| -->
-
+|202|解析失败，请检查参数是否正确    |
+|2001|文件不存在|

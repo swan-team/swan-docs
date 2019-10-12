@@ -7,7 +7,7 @@ sidebar: open_smartprogram
 
 ## swan.navigateToSmartProgram
 
-> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
+> 基础库 1.10.8 版本开始支持。在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 打开另一个小程序。
 
@@ -17,13 +17,13 @@ sidebar: open_smartprogram
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|appKey | String | 是 | -| 要打开的小程序App Key 。|
+|appKey | String | 是 | -| 要打开的小程序App Key（使用线上版appkey和envVersion配合使用）|
 |path | String | 否 | -| 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
 |extraData | Object | 否 | -| 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|
 |success | Function |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
-|envVersion	|String	|否|release|	要打开的小程序版本。|
+|envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
 
 **示例**：
 
@@ -48,10 +48,10 @@ Page({
             extraData: {
                 foo: 'baidu'
             },
-            success: function (res) {
+            success: res => {
                 console.log('navigateToSmartProgram success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateToSmartProgram fail', err);
             }
         });
@@ -65,24 +65,28 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
-**Andriod**
+
+#### 错误码
+* Andriod
+
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
-|202|解析失败，请检查参数是否正确。|
-|402|安全性检查：访问控制校验失败。|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|402|安全性检查：访问控制校验失败|
 |501|网络错误|
 |1001|执行失败|
-**iOS**
+
+* iOS
+
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
-|402|访问控制校验失败| -->
+|202|解析失败，请检查参数是否正确      |
+|402|访问控制校验失败|
 
 ## swan.navigateBackSmartProgram
 
-> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
+>  基础库 1.10.8 版本开始支持。在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 返回到上一个小程序。
 
@@ -117,10 +121,10 @@ Page({
             extraData: {
                 foo: 'baidu'
             },
-            success: function (res) {
+            success: res => {
                 console.log('navigateBackSmartProgram success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('navigateBackSmartProgram fail', err);
             }
         });
@@ -134,3 +138,13 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+

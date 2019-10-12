@@ -8,11 +8,16 @@ sidebar: media_videocontext
 
 **解释**： 创建并返回 video 上下文 `videoContext` 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：String videoId
 
 **返回值**：videoContext
 
-## videoContext
+## VideoContext
 
 **解释**： swan.createVideoContext 的返回值
 
@@ -43,52 +48,36 @@ Page({
         fullScreenText: 'requestFullScreen'
     },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = videoContext;
     },
     play() {
-        this.video.play();
+        this.videoContext.play();
     },
     pause() {
-        this.video.pause();
+        this.videoContext.pause();
     },
     seek() {
-        this.video.seek(10);
+        this.videoContext.seek(10);
     },
     sendDanmu() {
-        this.video.sendDanmu({
+        this.videoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });
     },
     fullScreen() {
         if (this.getData('fullScreenText') === 'requestFullScreen') {
-            this.video.requestFullScreen();
+            this.videoContext.requestFullScreen();
             this.setData('fullScreenText', 'exitFullScreen');
         } else {
-            this.video.exitFullScreen();
+            this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
     }
 });
 ```
 
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-
-.wrap video {
-    width: 100%;
-    margin-bottom: 30rpx;
-}
-
-.wrap button {
-    margin-bottom: 50rpx;
-}
-```
 
 **图示**
 
@@ -107,32 +96,47 @@ Page({
 
 
 
-## videoContext.play
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确       |
+
+## VideoContext.play
 
 **解释**：播放
 
 **方法参数**：无
  
 
-## videoContext.pause
+## VideoContext.pause
  
 **解释**： 暂停
 
 **方法参数**：无
 
-## videoContext.seek 
+## VideoContext.seek 
  
 **解释**：跳转到指定位置（单位：s）
 
 **方法参数**：Number position
 
-## videoContext.sendDanmu 
+## VideoContext.sendDanmu 
  
 **解释**：发送弹幕，danmu 包含两个属性 text、color。
 
 **方法参数**：Object danmu
 
-## videoContext.requestFullScreen 
+## VideoContext.requestFullScreen 
  
 > 最低支持基础库版本 3.90.x 。
 
@@ -153,19 +157,19 @@ Page({
 videoContext.requestFullScreen({direction: 90});
 ```
 
-## videoContext.exitFullScreen 
+## VideoContext.exitFullScreen 
  
 **解释**：退出全屏
 
 **方法参数**：无
 
-## videoContext.showStatusBar
+## VideoContext.showStatusBar
  
 **解释**：显示状态栏，仅在iOS全屏下有效。
 
 **方法参数**：无
 
-## videoContext.hideStatusBar
+## VideoContext.hideStatusBar
 
  
 **解释**：隐藏状态栏，仅在iOS全屏下有效。

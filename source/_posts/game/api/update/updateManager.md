@@ -76,7 +76,7 @@ updateManager.onUpdateReady(() => {
     swan.showModal({
         title: '提示',
         content: '更新 ready， 是否重启',
-        success(res) {
+        success: res => {
             if (res.confirm) {
                 updateManager.applyUpdate();
             }

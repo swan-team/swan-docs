@@ -5,8 +5,9 @@ nav: tutorial
 sidebar: install
 ---
 为了帮助开发者简单高效地开发和调试智能小程序，我们推出了百度开发者工具。
-正式版本下载链接：[windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
-Beta 版本下载链接：[Windows-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [mac-beta](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
+正式版本下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
+rc 版本下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
+Beta 版本下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=beta) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
 查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/history/">历史版本</a>信息。
 
 > <a href="https://smartprogram.baidu.com/docs/develop/faq/frequently/#工具">安装过程中碰到的问题</a>。

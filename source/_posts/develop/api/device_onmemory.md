@@ -27,15 +27,8 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
 **示例**：
 
-<a href="swanide://fragment/fa0e47771625a386cdcb9b076efc0cf71557731171800" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45797da5a75fbe90a9ef2be56bb707651569478446351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    onMemoryWarning
-</view>
-```
 
 * 在 js 文件中
 
@@ -48,10 +41,18 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |

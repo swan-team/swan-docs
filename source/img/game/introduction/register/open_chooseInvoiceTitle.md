@@ -36,7 +36,7 @@ chooseInvoiceTitle
 **示例**：
 ```js
 swan.chooseInvoiceTitle({
-    success: function (res) {
+    success: res => {
         console.log(res.type);
         console.log(res.title);
         console.log(res.taxNumber);

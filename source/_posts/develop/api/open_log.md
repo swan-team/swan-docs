@@ -36,6 +36,13 @@ sidebar: open_log
 
 **解释**： 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/login.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -61,7 +68,7 @@ sidebar: open_log
 
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         swan.request({
             url: 'https://xxx/xxx', // 开发者服务器地址
             data: {
@@ -69,11 +76,29 @@ swan.login({
             }
         });
     },
-    fail: function (err) {
+    fail: err => {
         console.log('login fail', err);
     }
 });
 ```
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10001|内部错误   |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
+|10007|请求超时|
 ## getunionid
 
 ### unionid说明
@@ -209,10 +234,10 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 Page({
     checkSession() {
         swan.checkSession({
-            success: function (res) {
+            success: res => {
                 console.log('登录态有效');
                 swan.getUserInfo({
-                    success: function (res) {
+                    success: res => {
                         console.log('用户名', res.userInfo.nickName);
                         swan.request({
                             url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
@@ -224,10 +249,10 @@ Page({
                     }
                 })
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('登录态无效');
                 swan.login({
-                    success: function (res) {
+                    success: res => {
                         swan.request({
                             url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
                             data: {
@@ -235,7 +260,7 @@ Page({
                             }
                         });
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('登录失败', err);
                     }
                 });
@@ -251,30 +276,26 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码  -->
+#### 错误码
+* Andriod
 
-<!-- | 错误码 | 错误信息 | 详细描述 |
-| - | :- | - |
-| invalid_request | invalid refresh token | 请求缺少某个必需参数，包含一个不支持的参数或参数值，或者格式不正确。 |
-| invalid_client | unknown client id | client_id、client_secret 参数无效。 |
-| invalid_grant | The provided authorization grant is revoked | 提供的 Access Grant 是无效的、过期的或已撤销的，例如，Authorization Code 无效(一个授权码只能使用一次)、Refresh Token 无效、redirect_uri 与获取 Authorization Code 时提供的不一致、Devie Code 无效(一个设备授权码只能使用一次)等。 | -->
-<!-- **Andriod** -->
-
-<!-- |错误码|说明|
+|错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确|
-|10001|内部错误 |
+|10001|内部错误  |
 |10002|网络请求失败|
-|10004|用户未登录(user not login)| -->
+|10004|用户拒绝(user not login)|
 
 ## swan.isLoginSync
+
+> 基础库 1.13.4 版本开始支持。
 
 **解释**：获取宿主 App登录状态。
 
@@ -319,13 +340,13 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
+#### 错误码
 
-**Andriod**
+* Andriod 
 
 |错误码|说明|
 |--|--|
-|1001|执行失败| -->
+|1001|执行失败|
 
 ## 用户数据的签名验证和加解密
 

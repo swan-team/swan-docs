@@ -7,7 +7,7 @@ sidebar: getextconfig
 
 ## swan.getExtConfig
 
->需要上传小程序包之后，才能通过API获取自定义数据，小程序包上传流程、数据配置参考：[小程序包管理](../../third/apppage/)。
+>基础库 1.10.8 版本开始支持，需要上传小程序包之后，才能通过API获取自定义数据，小程序包上传流程、数据配置参考：[小程序包管理](../../third/apppage/)。
 
 **解释**：获取第三方平台自定义的数据字段。
 
@@ -29,15 +29,7 @@ sidebar: getextconfig
 
 **示例**：
 
-<a href="swanide://fragment/88f7ccb04d54d3d2cefd118040877f501558336059868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getExtConfig">getExtConfig</button>
-</view>
-```
+<a href="swanide://fragment/dcbff11e967bbe165470eadfd555d3ba1569485763978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -45,23 +37,17 @@ sidebar: getextconfig
 Page({
     getExtConfig() {
         swan.getExtConfig({
-            success(res) {
+            success: res => {
                 console.log('自定义的数据', res.extConfig);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 
 **Tip**
@@ -71,7 +57,7 @@ Page({
 
 ## swan.getExtConfigSync
 
-
+> 基础库 1.10.8 版本开始支持。
 **解释**： [swan.getExtConfig](./#getExtConfig)的同步版本。
 
 **方法参数**： 无
@@ -84,15 +70,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d5dea858ea9874504d0aea64a989ddbd1558336152471" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getExtConfigSync">getExtConfigSync</button>
-</view>
-```
+<a href="swanide://fragment/dcbff11e967bbe165470eadfd555d3ba1569485763978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -107,13 +85,6 @@ Page({
         }
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 **Tip**
