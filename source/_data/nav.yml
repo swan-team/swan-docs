@@ -45,10 +45,10 @@
                     link: /introduction/authenticity_verification
                     text: 验证
                     name: authenticity_verification
-                  -
-                    link: /introduction/authenticity_charge
-                    text: 收费（小程序优惠通道）
-                    name: authenticity_charge
+                  # -
+                  #   link: /introduction/authenticity_charge
+                  #   text: 收费（小程序优惠通道）
+                  #   name: authenticity_charge
         -
             link: /introduction/register_consummate
             text: 创建小程序
