@@ -4318,10 +4318,10 @@
             link: /data/custom
             text: 自定义事件分析
             name: custom
-          # -
-          #   link: /data/visualization
-          #   text: 可视化圈选
-          #   name: visualization      
+          -
+            link: /data/visualization
+            text: 可视化圈选
+            name: visualization      
           -
             link: /data/target_user
             text: 指标说明

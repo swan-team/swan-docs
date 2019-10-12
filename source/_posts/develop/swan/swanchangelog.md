@@ -9,7 +9,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|3.105.09|2019.9.18|**New**<p>新增自定义组件数据监听器功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
+|3.105.09|2019.9.18|**New**<p>新增自定义组件[数据监听器](https://smartprogram.baidu.com/docs/develop/framework/custom-component_observers/)功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 
 
 ## 3.100 版本日志更新
