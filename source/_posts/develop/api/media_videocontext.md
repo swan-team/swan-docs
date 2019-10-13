@@ -24,13 +24,13 @@ sidebar: media_videocontext
 
 
 **示例**：
-<a href="swanide://fragment/9c93370ee6d59177ca696966033540261570533594995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2a74a56f21b40ba5bc93803d70065cf21556536372261" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <video id="myVideo" auto src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
 
     <button type="primary" bindtap="play">play</button>
     <button type="primary" bindtap="pause">pause</button>
