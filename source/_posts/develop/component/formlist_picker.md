@@ -2,7 +2,7 @@
 title: picker 底部弹起的滚动选择器
 header: develop
 nav: component
-sidebar: formlist_picker 
+sidebar: formlist_picker
 ---
 
 
@@ -41,7 +41,7 @@ sidebar: formlist_picker
 | range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 
 <notice>时间选择器：mode = time</notice>
@@ -80,7 +80,7 @@ sidebar: formlist_picker
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String | | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 <notice>省市区选择器：mode = region</notice>
 
@@ -89,10 +89,10 @@ sidebar: formlist_picker
 | value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
 | custom-item | String | |可为每一列的顶部添加一个自定义的项|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 
- 
+
 
 **示例**：
 <a href="swanide://fragment/4e627d1fb5e3167c46e736956cd1e8581565503520142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
