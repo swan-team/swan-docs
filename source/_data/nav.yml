@@ -1115,54 +1115,54 @@
               name: base_app_event
               sidebar:
                 -
-                  link: /develop/api/base_app_event/#swan-onPageNotFound
+                  link: /develop/api/base_app_event/swan-onPageNotFound
                   text: swan.onPageNotFound
-                  name: base_app_event_swan-onPageNotFound
+                  name: swan-onPageNotFound
                 -
-                  link: /develop/api/base_app_event/#swan-onError
+                  link: /develop/api/base_app_event/swan-onError
                   text: swan.onError
-                  name: base_app_event_swan-onError
+                  name: swan-onError
                 -
-                  link: /develop/api/base_app_event/#swan-onAppShow
+                  link: /develop/api/base_app_event/swan-onAppShow
                   text: swan.onAppShow
-                  name: base_app_event_swan-onAppShow
+                  name: swan-onAppShow
                 -
-                  link: /develop/api/base_app_event/#swan-onAppHide
+                  link: /develop/api/base_app_event/swan-onAppHide
                   text: swan.onAppHide
-                  name: base_app_event_swan-onAppHide
+                  name: swan-onAppHide
                 -
-                  link: /develop/api/base_app_event/#swan-offPageNotFound
+                  link: /develop/api/base_app_event/swan-offPageNotFound
                   text: swan.offPageNotFound
-                  name: base_app_event_swan-offPageNotFound
+                  name: swan-offPageNotFound
                 -
-                  link: /develop/api/base_app_event/#swan-offError
+                  link: /develop/api/base_app_event/swan-offError
                   text: swan.offError
-                  name: base_app_event_swan-offError
+                  name: swan-offError
                 -
-                  link: /develop/api/base_app_event/#swan-offAppShow
+                  link: /develop/api/base_app_event/swan-offAppShow
                   text: swan.offAppShow
-                  name: base_app_event_swan-offAppShow
+                  name: swan-offAppShow
                 -
-                  link: /develop/api/base_app_event/#swan-offAppHide
+                  link: /develop/api/base_app_event/swan-offAppHide
                   text: swan.offAppHide
-                  name: base_app_event_swan-offAppHide
+                  name: swan-offAppHide
             -
               link: /develop/api/url_query
               text: URL Query
               name: url_query
               sidebar:
                 -
-                  link: /develop/api/url_query/#onURLQueryChange
+                  link: /develop/api/url_query/onURLQueryChange
                   text: onURLQueryChange
-                  name: url_query_onURLQueryChange
+                  name: onURLQueryChange
                 -
-                  link: /develop/api/url_query/#swan-getURLQuery
+                  link: /develop/api/url_query/swan-getURLQuery
                   text: swan.getURLQuery
-                  name: url_query_swan-getURLQuery
+                  name: swan-getURLQuery
                 -
-                  link: /develop/api/url_query/#swan-setURLQuery
+                  link: /develop/api/url_query/swan-setURLQuery
                   text: swan.setURLQuery
-                  name: url_query_swan-setURLQuery
+                  name: swan-setURLQuery
 
         -
             link: /develop/api/net_rule
@@ -2614,21 +2614,21 @@
                 name: device_sys
                 sidebar:
                   -
-                    link: /develop/api/device_sys/#swan-getSystemInfo
+                    link: /develop/api/device_sys/swan-getSystemInfo
                     text: swan.getSystemInfo
-                    name: device_sys_swan-getSystemInfo
+                    name: swan-getSystemInfo
                   -
-                    link: /develop/api/device_sys/#swan-getSystemInfoSync
+                    link: /develop/api/device_sys/swan-getSystemInfoSync
                     text: swan.getSystemInfoSync
-                    name: device_sys_swan-getSystemInfoSync
+                    name: wan-getSystemInfoSync
                   -
-                    link: /develop/api/device_sys/#swan-getEnvInfoSync
+                    link: /develop/api/device_sys/swan-getEnvInfoSync
                     text: swan.getEnvInfoSync
-                    name: device_sys_swan-getEnvInfoSync
+                    name: swan-getEnvInfoSync
                   -
-                    link: /develop/api/device_sys/#swan-canIUse
+                    link: /develop/api/device_sys/swan-canIUse
                     text: swan.canIUse
-                    name: device_sys_swan-canIUse
+                    name: swan-canIUse
               -
                 link: /develop/api/device_onmemory
                 text: 内存

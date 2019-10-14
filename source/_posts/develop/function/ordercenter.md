@@ -34,19 +34,16 @@ https://openapi.baidu.com/rest/2.0/smartapp
 ```json
 
 {
-  "UID": 123321123321,  // 百度PassPort体系UID
-  "TypeID": 2,          // 2:订单资产
-  "BizID": 1,           // 需要提前分配 1:小程序内部
   "Data": [
     {
-      "CateID": 2,       // 2:订单种类-虚拟物品
-      "BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 应用ID
+      "CateID": 1,       // 1:订单种类-实物商品
+      "BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 小程序AppKey
       "Title": "test",                                // 订单名称
-      "ResourceID": "2221554346520",                  // 业务方接入的资源唯一ID
+      "ResourceID": "2221554346520",                  // 订单ID，业务方接入的唯一订单ID
       "Ctime": 1233212343,                            // 订单创建时间
       "Mtime": 1233212343,                            // 订单最后修改时间
       "Status": 200,                                  // 200:订单状态-已完成交易
-      "EXT": {                                        // 拓展字段 根据资产的不同其结构也不固定 此处以订单为例
+      "EXT": {                                        // 拓展字段 根据订单的不同其结构也不固定 此处以订单为例
         "MainOrder": {                                // 主订单信息
           "Products": [                               // 商品信息
             {
@@ -67,39 +64,75 @@ https://openapi.baidu.com/rest/2.0/smartapp
               ]
             }
           ],
-          "Payment": {                                          // 支付信息
+          "Payment": {                                          //支付信息
             "Time": 0,                                          //付款时间，时间戳
             "Method": 1,                                        //支付方式
             "Amount": 2390,                                     //合计金额，单位分
             "IsPayment": false,                                 //是否支付
-            "PreferentialInfo": null,                           //优惠信息
-            "PaymentInfo": null                                 //付款信息
+            "PreferentialInfo": [                               //优惠信息
+              {
+                "Name":"优惠券使用",                             //名称
+                "Value":100,                                    //优惠金额，单位分
+                "Quantity":1                                    //数量
+              }
+            ],                         
+            "PaymentInfo": [                                    //付款信息
+              {
+                "Name":"运费",                                    //展示名称
+                "Value":100,                                    //付款金额，单位分
+                "Quantity":1                                    //数量
+              }
+            ]                          
           },
           "Appraise": {                                         // 订单评价跳转
             "Status": 0,
             "Name": "",
             "H5Schema": "",
             "SwanSchema": "",
-            "IPhoneSchema": "",
-            "AndroidSchema": ""
-          },
+                   },
           "OrderDetail": {                                      // 订单详情跳转
             "Status": 2,
             "Name": "",
             "H5Schema": "",
             "SwanSchema": "baiduboxapp://swan/B3GF3AWvCSr59myIs61uqaoYz7pPCSY1/wjz/bdxd/order-detail/order-detail?orderId=159259079195",
-            "IPhoneSchema": "",
-            "AndroidSchema": ""
+       
           }
         },
-        "SubsOrder": {                                          // 子订单信息
+        "SubsOrder": {                                          // 子订单，即售后订单信息，若该主订单发生退款/售后，需新增同步其子订单的售后信息状态
           "Status": 0,
-          "Items": null
+          "Items": [
+            {
+              "SubOrderID":"onlyOne",                           // 子订单，即售后订单ID
+              "SubStatus":"",                                   // 自订单状态,枚举参照 【退换货枚举值】
+              "CTime":1571026201,                               // 售后订单创建时间,时间戳
+              "MTime":1571026201,                               // 售后订单修改时间,时间戳
+              "OrderDetail":{                                   // 退款退货订单详情跳转
+                "Status": 2,
+                "Name": "",
+                "H5Schema": "",
+                "SwanSchema": "baiduboxapp://swan/B3GF3AWvCSr59myIs61uqaoYz7pPCSY1/wjz/bdxd/order-detail/order-detail?orderId=159259079195",
+                "IPhoneSchema": "",
+                "AndroidSchema": ""
+               },
+              "Refund":{                                        //商品 退款／退货 信息
+                "Amount":10,                                    //退款总金额
+                "Product":[                                     //退款/退货商品
+                  {
+                    "ID":"1014093064",                          //商品ID
+                    "Quantity":1,                               //商品退款/商品退货 数量
+                    "Amount":0                                  //应退金额,单位分
+                  }
+                ]
+              },
+              "OrderType":1                                     // 退款订单类型
+            }
+          ]
         }
       }
     }
   ]
 }
+
 ```
 
 **响应示例**:
