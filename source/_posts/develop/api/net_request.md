@@ -98,7 +98,7 @@ Page({
             'content-type': 'application/json'
         },
         method: 'GET',
-        dataType: 'JSON',
+        dataType: 'json',
         responseType: 'text',
         success: res => {
             console.log(res.data)
