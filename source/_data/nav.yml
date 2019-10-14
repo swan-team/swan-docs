@@ -2610,21 +2610,21 @@
                 name: device_sys
                 sidebar:
                   -
-                    link: /develop/api/device_sys/#swan-getSystemInfo
+                    link: /develop/api/device_sys/swan-getSystemInfo
                     text: swan.getSystemInfo
-                    name: device_sys_swan-getSystemInfo
+                    name: swan-getSystemInfo
                   -
-                    link: /develop/api/device_sys/#swan-getSystemInfoSync
+                    link: /develop/api/device_sys/swan-getSystemInfoSync
                     text: swan.getSystemInfoSync
-                    name: device_sys_swan-getSystemInfoSync
+                    name: wan-getSystemInfoSync
                   -
-                    link: /develop/api/device_sys/#swan-getEnvInfoSync
+                    link: /develop/api/device_sys/swan-getEnvInfoSync
                     text: swan.getEnvInfoSync
-                    name: device_sys_swan-getEnvInfoSync
+                    name: swan-getEnvInfoSync
                   -
-                    link: /develop/api/device_sys/#swan-canIUse
+                    link: /develop/api/device_sys/swan-canIUse
                     text: swan.canIUse
-                    name: device_sys_swan-canIUse
+                    name: swan-canIUse
               -
                 link: /develop/api/device_onmemory
                 text: 内存
