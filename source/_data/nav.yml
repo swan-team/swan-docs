@@ -1470,6 +1470,10 @@
                   text: swan.getImageInfo
                   name: media_image_swan-getImageInfo
                 -
+                  link: /develop/api/media_image/#swan-compressImage
+                  text: swan.compressImage
+                  name: media_image_swan-compressImage
+                -
                   link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
                   text: swan.saveImageToPhotosAlbum
                   name: media_image_swan-saveImageToPhotosAlbum
