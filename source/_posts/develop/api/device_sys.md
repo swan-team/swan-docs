@@ -308,9 +308,13 @@ schema 的表达形式如下：
 **说明**：
 1. 回调函数的名称以文档为准；
 2. 不支持 fail 和 complete 回调函数的判断；
-3. 纯 number 类型的属性不做支持；
-4. 带有`.`或空格的属性不做支持；
-5. 如果参数是 Array.<Object\> 或 Array.<string\> 类型，校验方式举例如下：
+3. 支持success回调参数的判断，举例如下：
+```js
+swan.canIUse('request.success.data');
+```
+4. 纯 number 类型的属性不做支持；
+5. 带有`.`或空格的属性不做支持；
+6. 如果参数是 Array.<Object\> 或 Array.<string\> 类型，校验方式举例如下：
 ```js
 // swan.ai.textReview   Array.<Object>
 swan.canIUse('ai.textReview.success.result.reject.label');
@@ -337,26 +341,26 @@ swan.canIUse('chooseVideo.object.sourceType.album');
 Page({
     canIUse() {
         // 组件
-        console.log('canIUse:view.hover-class', swan.canIUse('view.hover-class'));
-        console.log('canIUse:scroll-view.scroll-x', swan.canIUse('scroll-view.scroll-x'));
-        console.log('canIUse:cover-view', swan.canIUse('cover-view'));
-        console.log('canIUse:button.size.default', swan.canIUse('button.size.default'));
+        console.log('view.hover-class', swan.canIUse('view.hover-class'));
+        console.log('scroll-view.scroll-x', swan.canIUse('scroll-view.scroll-x'));
+        console.log('cover-view', swan.canIUse('cover-view'));
+        console.log('button.size.default', swan.canIUse('button.size.default'));
 
         // API: ${method} 为 object
-        console.log('canIUse:request.object.method.OPTIONS', swan.canIUse('request.object.method.OPTIONS'));
+        console.log('request.object.method.OPTIONS', swan.canIUse('request.object.method.OPTIONS'));
 
         // API: ${method} 为 success
-        console.log('canIUse:ai.imageAudit.success.conclusionType.data.stars.name', swan.canIUse('ai.imageAudit.success.conclusionType.data.stars.name'));
+        console.log('ai.imageAudit.success.conclusionType.data.stars.name', swan.canIUse('ai.imageAudit.success.conclusionType.data.stars.name'));
 
         // API: ${method} 为 callback
-        console.log('canIUse:onAppShow.callback.entryType.user', swan.canIUse('onAppShow.callback.entryType.user'));
+        console.log('onAppShow.callback.entryType.user', swan.canIUse('onAppShow.callback.entryType.user'));
 
         // API: ${method} 为 return
-        console.log('canIUse:getEnvInfoSync.return.env.trial', swan.canIUse('getEnvInfoSync.return.env.trial'));
+        console.log('getEnvInfoSync.return.env.trial', swan.canIUse('getEnvInfoSync.return.env.trial'));
 
         // API: 类
-        console.log('canIUse:VideoContext.requestFullScreen.object.direction', swan.canIUse('VideoContext.requestFullScreen.object.direction'));
-        console.log('canIUse:CanvasContext.fill', swan.canIUse('CanvasContext.fill'));
+        console.log('VideoContext.requestFullScreen.object.direction', swan.canIUse('VideoContext.requestFullScreen.object.direction'));
+        console.log('CanvasContext.fill', swan.canIUse('CanvasContext.fill'));
     }
 });
 ```
