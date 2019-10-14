@@ -1152,17 +1152,17 @@
               name: url_query
               sidebar:
                 -
-                  link: /develop/api/url_query/#onURLQueryChange
+                  link: /develop/api/url_query/onURLQueryChange
                   text: onURLQueryChange
-                  name: url_query_onURLQueryChange
+                  name: onURLQueryChange
                 -
-                  link: /develop/api/url_query/#swan-getURLQuery
+                  link: /develop/api/url_query/swan-getURLQuery
                   text: swan.getURLQuery
-                  name: url_query_swan-getURLQuery
+                  name: swan-getURLQuery
                 -
-                  link: /develop/api/url_query/#swan-setURLQuery
+                  link: /develop/api/url_query/swan-setURLQuery
                   text: swan.setURLQuery
-                  name: url_query_swan-setURLQuery
+                  name: swan-setURLQuery
 
         -
             link: /develop/api/net_rule
