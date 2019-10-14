@@ -96,4 +96,4 @@ sidebar: smartappdebug_function
 
 工具栏中切后台模拟了智能小程序被切换到后台的情况。
 
-![图片](http://bos.nj.bpc.baidu.com/v1/agroup/d238688e45990a0f15e9d771eef7896a3281226a)
+![图片](../../../img/tool/background.png)

@@ -34,7 +34,7 @@ sidebar: history
 
 |mac|windows|用户占比|
 |--|--|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.3.dmg">2.12.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.11.3.exe">2.11.3</a>|35.47%|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.12.1.dmg">2.12.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.12.1.exe">2.12.1</a>|35.47%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.3.dmg">2.11.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.11.3.exe">2.11.3</a>|18.52%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.10.1.dmg">2.10.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.10.1.exe">2.10.1</a>|4.36%|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.9.1.dmg">2.9.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.9.1.exe">2.9.1</a>|6.00%|
