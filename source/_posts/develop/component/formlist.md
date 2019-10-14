@@ -236,9 +236,9 @@ Page({
         </view>
         <view class="section section-gap">
             <view class="section-title">checkbox</view>
-            <checkbox-group name="checkbox">               
+            <checkbox-group name="checkbox">
                 <label><checkbox value="checkbox1" checked/>选项一</label>
-                <label class="label-checkbox"><checkbox  value="checkbox2"/>选项二</label>              
+                <label class="label-checkbox"><checkbox  value="checkbox2"/>选项二</label>
             </checkbox-group>
         </view>
         <view class="section section-gap">
@@ -321,8 +321,8 @@ Page({
             <view class="label-box">
                 <checkbox></checkbox>
                 <checkbox></checkbox>
-                <checkbox></checkbox>      
-                <checkbox></checkbox>           
+                <checkbox></checkbox>
+                <checkbox></checkbox>
             </view>
             <view class="label-3-text">click me～</view>
         </label>
@@ -564,10 +564,10 @@ Page({
         <view class="title">受控聚焦</view>
         <textarea style="height: 3em"
                   maxlength="-1"
-                  auto-focus="{{focus}}" 
-                  cursor="-1" show-confirm-bar="true" 
-                  placeholder="我会出现滚动条~" 
-                  placeholder-class="plh" 
+                  auto-focus="{{focus}}"
+                  cursor="-1" show-confirm-bar="true"
+                  placeholder="我会出现滚动条~"
+                  placeholder-class="plh"
                   selection-start="-1"
                   selection-end="-1"
                   adjust-position="true"
@@ -862,7 +862,7 @@ Page({
 ```
 **Bug & Tip**:
 switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
- 
+
 
 ## slider 滑动选择器
 
@@ -1061,7 +1061,7 @@ Page({
 | range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font>|
 
 
 <notice>时间选择器：mode = time</notice>
@@ -1100,7 +1100,7 @@ Page({
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String | | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font>|
 
 <notice>省市区选择器：mode = region</notice>
 
@@ -1109,7 +1109,7 @@ Page({
 | value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
 | custom-item | String | |可为每一列的顶部添加一个自定义的项|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置" |
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 
 **mode 有效值**:
@@ -1148,7 +1148,7 @@ Page({
                 </view>
             </picker>
         </label>
-    </form> 
+    </form>
     <view class="title">多列选择器</view>
     <form>
         <label class="section date-section" for="section3">
