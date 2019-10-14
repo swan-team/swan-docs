@@ -1105,12 +1105,12 @@
               text: API 列表
               name: apilist
         -
-            link: /develop/api/base_app_event
+ 
             text: 基础
             name: base_app_event
             sidebar:
             -
-              link: /develop/api/base_app_event
+ 
               text: 应用级事件
               name: base_app_event
               sidebar:
@@ -1147,7 +1147,7 @@
                   text: swan.offAppHide
                   name: swan-offAppHide
             -
-              link: /develop/api/url_query
+ 
               text: URL Query
               name: url_query
               sidebar:
@@ -2600,12 +2600,12 @@
                     name: nacomponent_swan-showFavoriteGuide
 
         -
-            link: /develop/api/device_sys
+
             text: 设备
             name: device_sys
             sidebar:
               -
-                link: /develop/api/device_sys
+
                 text: 系统信息
                 name: device_sys
                 sidebar:
