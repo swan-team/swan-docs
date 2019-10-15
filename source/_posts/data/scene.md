@@ -71,6 +71,8 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |场景|	scene值| 图例|
 |---|---|---|
 |服务消息|	11310021|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：消息通知1-通知栏消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-表单消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-支付消息.jpg"/></div></div>|
+|营销消息|	11310004|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/营销消息样例.jpg"/></div></div>|
+
 
 ## 分享	
 |场景|	scene值| 图例|
