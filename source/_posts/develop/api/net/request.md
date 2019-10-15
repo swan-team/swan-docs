@@ -1,11 +1,11 @@
 ---
-title: 请求
+title: swan.request
 header: develop
 nav: api
-sidebar: net_request
+sidebar: request
 ---
 
-## swan.request
+ 
 
 **解释**：发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
@@ -38,6 +38,23 @@ sidebar: net_request
 |data  |  Object/String  | 开发者服务器返回的数据|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 |header | Object | 开发者服务器返回的 HTTP Response Header|
+
+
+**fail 返回参数说明**：
+
+* Andriod 
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;|
+|1001|执行失败|
+
+* iOS 
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查调起协议是否合法|
+|errorCode为4|URL无效| 
 
 #### **data 数据说明**：
 
@@ -82,62 +99,3 @@ Page({
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
 
-##  RequestTask
-
-**解释**：网络请求任务对象
-
-**示例**
-
-* 在 js 文件中
-
-```js
-Page({
-    const requestTask = swan.request({
-        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-        header: {
-            'content-type': 'application/json'
-        },
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: res => {
-            console.log(res.data)
-        },
-        fail: err => {
-            console.log('错误码：' + err.errCode);
-            console.log('错误信息：' + err.errMsg);
-        }
-    })
-})
-
-//取消请求任务
-RequestTask.abort();
-```
-
-**说明**
-*  content-type 默认为 'application/json'；
-*  url 中不能有端口。
-
-
-
-## RequestTask.abort
-
-**解释**：中断请求任务。
-
-**方法参数**：无
-
-#### 错误码
-
-* Andriod 
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法&nbsp;&nbsp;|
-|1001|执行失败|
-
-* iOS 
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查调起协议是否合法|
-|errorCode为4|URL无效|  

@@ -1004,14 +1004,14 @@
                     link: /develop/component/nav 
                     text: navigator 页面导航
                     name: nav 
-                  # -
-                  #   link: /develop/component/nav/#tabs-导航
-                  #   text: tabs 导航
-                  #   name: nav_tabs-导航
-                  # -
-                  #   link: /develop/component/nav/#tab-item-导航内容
-                  #   text: tab-item 导航内容
-                  #   name: nav_tab-item-导航内容
+                  -
+                    link: /develop/component/tabs
+                    text: tabs 导航
+                    name: tabs
+                  -
+                    link: /develop/component/tab-item
+                    text: tab-item 导航内容
+                    name: tab-item
         -
             sidebar:
               -
@@ -1165,71 +1165,69 @@
                   name: swan-setURLQuery
 
         -
-            link: /develop/api/net_rule
+ 
             text: 网络
             name: net_rule
             sidebar:
             -
-              link: /develop/api/net_rule
+              link: /develop/api/net/net_rule
               text: 使用注意事项
               name: net_rule
             -
-              link: /develop/api/net_request
               text: 请求
               name: net_request
               sidebar:
                 -
-                  link: /develop/api/net_request/#swan-request
+                  link: /develop/api/net/request 
                   text: swan.request
-                  name: net_request_swan-request
+                  name: request 
                 -
-                  link: /develop/api/net_request/#RequestTask
+                  link: /develop/api/net/requestTask
                   text: RequestTask
-                  name: net_request_RequestTask      
+                  name: requestTask      
                   sidebar:
                     -
-                      link: /develop/api/net_request/#RequestTask-abort
+                      link: /develop/api/net/requestTask-abort
                       text: RequestTask.abort
-                      name: net_request_RequestTask-abort
+                      name: requestTask-abort
             -
-              link: /develop/api/net_uploadfile
               text: 上传、下载
               name: net_uploadfile
               sidebar:
                 -
-                  link: /develop/api/net_uploadfile/#swan-uploadFile
+                  link: /develop/api/net/uploadFile
                   text: swan.uploadFile
-                  name: net_uploadfile_swan-uploadFile
+                  name: uploadFile
                 -
-                  link: /develop/api/net_uploadfile/#UploadTask
+                  link: /develop/api/net/uploadTask
                   text: UploadTask
-                  name: net_uploadfile_UploadTask   
+                  name: uploadTask   
                   sidebar:
                     -
-                      link: /develop/api/net_uploadfile/#UploadTask-onProgressUpdate
+                      link: /develop/api/net/uploadTask-onProgressUpdate
                       text: UploadTask.onProgressUpdate
-                      name: net_uploadfile_UploadTask-onProgressUpdate  
+                      name: uploadTask-onProgressUpdate  
                     -
-                      link: /develop/api/net_uploadfile/#UploadTask-abort
+                      link: /develop/api/net/uploadTask-abort
                       text: UploadTask.abort
-                      name: net_uploadfile_UploadTask-abort                   
+                      name: uploadTask-abort                   
                 -
-                  link: /develop/api/net_uploadfile/#swan-downloadFile
+                  link: /develop/api/net/downloadFile
                   text: swan.downloadFile
-                  name: net_uploadfile_swan-downloadFile
+                  name: downloadFile
                 -
-                  link: /develop/api/net_uploadfile/#DownloadTask
+                  link: /develop/api/net/downloadTask
                   text: DownloadTask
-                  name: net_uploadfile_DownloadTask
+                  name: downloadTask
                   sidebar:
                     -
-                      link: /develop/api/net_uploadfile/#DownloadTask-onProgressUpdate  
+                      link: /develop/api/net/downloadTask-onProgressUpdate  
                       text: DownloadTask.onProgressUpdate
-                      name: net_uploadfile_DownloadTask-onProgressUpdate  
+                      name: downloadTask-onProgressUpdate  
                     -
-                      link: /develop/api/net_uploadfile/#DownloadTask-abort    
+                      link: /develop/api/net/downloadTask-abort    
                       text: DownloadTask.abort
-                      name: net_uploadfile_DownloadTask-abort    
+                      name: downloadTask-abort    
 
             -
               link: /develop/api/net_websocket
