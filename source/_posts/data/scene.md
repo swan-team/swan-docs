@@ -63,11 +63,13 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |桌面快捷方式|	12300000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：快捷桌面.jpg"/><img src="../../img/introduction/base/基础流量：快捷桌面2.jpg"/></div></div>|
 
 ## 系统多任务	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |系统多任务|	12500000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：系统多任务.jpg"/></div></div>|
 
 ## 消息通知	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |服务消息|	11310021|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：消息通知1-通知栏消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-表单消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-支付消息.jpg"/></div></div>|
@@ -75,11 +77,13 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 
 
 ## 分享	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |分享|	11600000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：分享.jpg"/></div></div>|
 
-## 小程序	
+## 小程序
+	
 |场景|	scene值| 图例|
 |---|---|---|
 |小程序打开小程序|11700000|<div>/</div>|
