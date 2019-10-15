@@ -11,17 +11,17 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_request/#swan-request/">swan.request</a>|发起网络请求|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#swan-uploadFile/">swan.uploadFile</a>|将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 content-type 为 multipart/form-data 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#swan-downloadFile/">swan.downloadFile</a>|下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-connectSocket/">swan.connectSocket</a>|创建一个 WebSocket 连接。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketOpen/">swan.onSocketOpen</a>|监听 WebSocket 连接打开事件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketError/">swan.onSocketError</a>|监听 WebSocket 错误|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-sendSocketMessage/">swan.sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketMessage/">swan.onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-closeSocket/">swan.closeSocket</a>|关闭 WebSocket 连接，须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketClose/">swan.onSocketClose</a>|监听 WebSocket 关闭。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#SocketTask/">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/request/">swan.request</a>|发起网络请求|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/uploadfile/">swan.uploadFile</a>|将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 content-type 为 multipart/form-data 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。|
+|<a href="https://smartprogram.baidu.com/docs /develop/api/net/downloadFile/">swan.downloadFile</a>|下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket/">swan.connectSocket</a>|创建一个 WebSocket 连接。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketOpen/">swan.onSocketOpen</a>|监听 WebSocket 连接打开事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketError/">swan.onSocketError</a>|监听 WebSocket 错误|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-sendSocketMessage/">swan.sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketMessage/">swan.onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-closeSocket/">swan.closeSocket</a>|关闭 WebSocket 连接，须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketClose/">swan.onSocketClose</a>|监听 WebSocket 关闭。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_SocketTask/">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
 
 
 
