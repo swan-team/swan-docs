@@ -2,7 +2,7 @@
 title: DownloadTask.onProgressUpdate
 header: develop
 nav: api
-sidebar: downloadTask.onProgressUpdate
+sidebar: downloadTask-onProgressUpdate
 ---
 
  

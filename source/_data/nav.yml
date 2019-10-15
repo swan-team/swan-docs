@@ -1195,9 +1195,9 @@
               name: net_uploadfile
               sidebar:
                 -
-                  link: /develop/api/net/uploadFile
+                  link: /develop/api/net/uploadfile
                   text: swan.uploadFile
-                  name: uploadFile
+                  name: uploadfile
                 -
                   link: /develop/api/net/uploadTask
                   text: UploadTask
@@ -1229,68 +1229,67 @@
                       text: DownloadTask.abort
                       name: downloadTask-abort    
 
-            -
-              link: /develop/api/net_websocket
+            -             
               text: WebSocket
               name: net_websocket
               sidebar:
                 -
-                  link: /develop/api/net_websocket/#swan-connectSocket
+                  link: /develop/api/net/websocket 
                   text: swan.connectSocket
-                  name: net_websocket_swan-connectSocket
+                  name: websocket
                 -
-                  link: /develop/api/net_websocket/#swan-onSocketOpen
+                  link: /develop/api/net/websocket_swan-onSocketOpen
                   text: swan.onSocketOpen
-                  name: net_websocket_swan-onSocketOpen
+                  name: websocket_swan-onSocketOpen
                 -
-                  link: /develop/api/net_websocket/#swan-onSocketError
+                  link: /develop/api/net/websocket_swan-onSocketError
                   text: swan.onSocketError
-                  name: net_websocket_swan-onSocketError
+                  name: websocket_swan-onSocketError
                 -
-                  link: /develop/api/net_websocket/#swan-sendSocketMessage
+                  link: /develop/api/net/websocket_swan-sendSocketMessage
                   text: swan.sendSocketMessage
-                  name: net_websocket_swan-sendSocketMessage
+                  name: websocket_swan-sendSocketMessage
                 -
-                  link: /develop/api/net_websocket/#swan-onSocketMessage
+                  link: /develop/api/net/websocket_swan-onSocketMessage
                   text: swan.onSocketMessage
-                  name: net_websocket_swan-onSocketMessage
+                  name: websocket_swan-onSocketMessage
                 -
-                  link: /develop/api/net_websocket/#swan-closeSocket
+                  link: /develop/api/net/websocket_swan-closeSocket
                   text: swan.closeSocket
-                  name: net_websocket_swan-closeSocket
+                  name:  websocket_swan-closeSocket
                 -
-                  link: /develop/api/net_websocket/#swan-onSocketClose
+                  link: /develop/api/net/websocket_swan-onSocketClose
                   text: swan.onSocketClose
-                  name: net_websocket_swan-onSocketClose
+                  name: websocket_swan-onSocketClose
                 -
-                  link: /develop/api/net_websocket/#SocketTask
+                  link: /develop/api/net/websocket_SocketTask
                   text: SocketTask
-                  name: net_websocket_SocketTask
+                  name: websocket_SocketTask
                   sidebar:
                   -
-                      link: /develop/api/net_websocket/#SocketTask-send
+                      link: /develop/api/net/websocket_SocketTask-send
                       text: SocketTask.send
-                      name: net_websocket_SocketTask-send
+                      name:  websocket_SocketTask-send
                   -
-                      link: /develop/api/net_websocket/#SocketTask-close
+                      link: /develop/api/net/websocket_SocketTask-close
                       text: SocketTask.close
-                      name: net_websocket_SocketTask-close
+                      name:  websocket_SocketTask-close
                   -
-                      link: /develop/api/net_websocket/#SocketTask-onOpen
+                      link: /develop/api/net/websocket_SocketTask-onOpen
                       text: SocketTask.onOpen
-                      name: net_websocket_SocketTask-onOpen
+                      name:  websocket_SocketTask-onOpen
                   -
-                      link: /develop/api/net_websocket/#SocketTask-onClose
+                      link: /develop/api/net/websocket_SocketTask-onClose
                       text: SocketTask.onClose
-                      name: net_websocket_SocketTask-onClose
+                      name:  websocket_SocketTask-onClose
                   -
-                      link: /develop/api/net_websocket/#SocketTask-onError
+                      link: /develop/api/net/websocket_SocketTask-onError
                       text: SocketTask.onError
-                      name: net_websocket_SocketTask-onError
+                      name: websocket_SocketTask-onError
                   -
-                      link: /develop/api/net_websocket/#SocketTask-onMessage
+                      link: /develop/api/net/websocket_SocketTask-onMessage
                       text: SocketTask.onMessage
-                      name: net_websocket_SocketTask-onMessage
+                      name: websocket_SocketTask-onMessage
 
         -
             link: /develop/api/ai
