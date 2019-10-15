@@ -5,10 +5,19 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+
+## 3.110 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。|
+
+
 ## 3.105 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.105.17|2019.10.14|**New**<p>新增SJS功能。<p>**Breaking Change**<p>生命周期内容更新。<p>**BugFix**<p>修复picker-view设置indicator高度但蒙层不适配问题。
 |3.105.09|2019.9.18|**New**<p>新增自定义组件[数据监听器](https://smartprogram.baidu.com/docs/develop/framework/custom-component_observers/)功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 
 
@@ -16,6 +25,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.100.13|2019.10.12|**BugFix**<p>**·**修复picker-view设置indicator高度但蒙层不适配问题；<p>**·**修复安卓真机无法获取formId问题。|
 |3.100.10|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.100.09|2019.9.4|**New**<p>新增小程序消息订阅功能。<p>**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
 |3.100.5|2019.8.28|**Breaking Change**<p>triggerEvent支持第三个参数,可以实现父子组件关系之间的冒泡和捕获<p>**BugFix**<p>**·**修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题；<p>**·**tabs组件修改了 url-query，去掉了local-event。|
@@ -26,6 +36,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.90.25|2019.10.12|**BugFix**<p>**·**修复 setData callback 无法获取自定义组件的问题；<p>**·**修复picker-view设置indicator高度但蒙层不适配问题。|
 |3.90.22|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.90.19|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
 |3.90.16|2019.8.28|**BugFix**<p>修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题。|
@@ -48,6 +59,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.52|2019.10.12|**BugFix**<p>修复 setData callback 无法获取自定义组件的问题。|
 |3.70.50|2019.9.9|**New**<p>新版生命周期上线。|
 |3.70.39|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
 |3.70.25|2019.7.12|**Breaking Change**<p>更新框架分享卡片的title、content、icon默认方案。|
