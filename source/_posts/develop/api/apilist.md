@@ -216,7 +216,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-boundingClientRect/">nodesRef.boundingClientRect</a>|添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-scrollOffset/">nodesRef.scrollOffset</a>| 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-fields/">nodesRef.fields</a>|获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/">swan.showFavoriteGuide</a>|支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：添加到我的小程序引导。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/">swan.showFavoriteGuide</a>|支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：关注小程序引导。|
 
 ## 设备
 
