@@ -743,6 +743,42 @@
                 text: 引用
                 name: view_quote
               -
+                text: SJS 语法参考
+                name: sjs
+                sidebar:
+                  -
+                    link: /develop/framework/sjs_start
+                    text: 开始
+                    name: sjs_start
+                  -
+                    link: /develop/framework/sjs_variable
+                    text: 变量
+                    name: sjs_variable
+                  -
+                    link: /develop/framework/sjs_annotation
+                    text: 注释
+                    name: sjs_annotation
+                  -
+                    link: /develop/framework/sjs_operator
+                    text: 运算符
+                    name: sjs_operator
+                  -
+                    link: /develop/framework/sjs_statement
+                    text: 语句
+                    name: sjs_statement
+                  -
+                    link: /develop/framework/sjs_datatype
+                    text: 数据类型
+                    name: sjs-sjs_datatype
+                  -
+                    link: /develop/framework/sjs_basic_library
+                    text: 基础类库
+                    name: sjs_basic_library
+                  -
+                    link: /develop/framework/sjs_esnext
+                    text: esnext
+                    name: sjs_esnext
+              -
                 link: /develop/framework/view_filter
                 text: Filter过滤器
                 name: view_filter
