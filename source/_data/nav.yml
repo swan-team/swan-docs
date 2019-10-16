@@ -445,7 +445,7 @@
               name: actionsheet
             -
               link: /design/component/guide_add
-              text: 添加到我的小程序引导
+              text: 引导关注
               name: guide_add
             -
               link: /design/component/empty_state
@@ -3248,161 +3248,148 @@
                 text: 版本下载
                 name: history
               -
-                link: /develop/devtools/page
+                 
                 name: page
                 text: 界面
                 sidebar:
                   -
-                    link: /develop/devtools/page/#启动页
+                    link: /develop/devtools/page_start
                     text: 启动页
-                    name: page_启动页
+                    name: page_start
                   -
-                    link: /develop/devtools/page/#菜单栏
+                    link: /develop/devtools/page_menu
                     text: 菜单栏
-                    name: page_菜单栏
+                    name: page_menu
                   -
-                    link: /develop/devtools/page/#工具栏
+                    link: /develop/devtools/page_tool
                     text: 工具栏
-                    name: page_工具栏
+                    name: page_tool
                   -
-                    link: /develop/devtools/page/#模拟器
+                    link: /develop/devtools/page_monitor
                     text: 模拟器
-                    name: page_模拟器
+                    name: page_monitor
                   -
-                    link: /develop/devtools/page/#编辑器
+                    link: /develop/devtools/page_editor
                     text: 编辑器
-                    name: page_编辑器
+                    name: page_editor
                   -
-                    link: /develop/devtools/page/#调试器
+                    link: /develop/devtools/page_debug
                     text: 调试器
-                    name: page_调试器
+                    name: page_debug
         -
             sidebar:
               -
-                link: /develop/devtools/setting
+              
                 name: setting
                 text: 设置
                 sidebar:
                   -
-                    link: /develop/devtools/setting/#快捷键设置
+                    link: /develop/devtools/set_shortcutkey
                     text: 快捷键设置
-                    name: setting_快捷键设置
+                    name: set_shortcutkey
                   -
-                    link: /develop/devtools/setting/#编辑设置
+                    link: /develop/devtools/set_edit
                     text: 编辑设置
-                    name: setting_编辑设置
+                    name: set_edit
                   -
-                    link: /develop/devtools/setting/#代理设置
+                    link: /develop/devtools/set_proxy
                     text: 代理设置
-                    name: setting_代理设置
+                    name: set_proxy
                   -
-                    link: /develop/devtools/setting/#外观设置
+                    link: /develop/devtools/set_outlook
                     text: 外观设置
-                    name: setting_外观设置
+                    name: set_outlook
         -
             sidebar:
               -
-                link: /develop/devtools/editor
+              
                 name: editor
                 text: 代码编辑
                 sidebar:
                   -
-                    link: /develop/devtools/editor/#文件支持
-                    text: 文件支持
-                    name: editor_文件支持
+                    link: /develop/devtools/editor_file 
+                    text: 文件 
+                    name: editor_file 
                   -
-                    link: /develop/devtools/editor/#文件操作
-                    text: 文件操作
-                    name: editor_文件操作
-                  -
-                    link: /develop/devtools/editor/#自动保存
-                    text: 自动保存
-                    name: editor_自动保存
-                  -
-                    link: /develop/devtools/editor/#自动补全
-                    text: 自动补全
-                    name: editor_自动补全
-                  -
-                    link: /develop/devtools/editor/#转换px为rpx
+                    link: /develop/devtools/editor_rpx
                     text: 转换px为rpx
-                    name: editor_转换px为rpx              
+                    name: editor_rpx           
                   -
-                    link: /develop/devtools/editor/#Git-状态展示
+                    link: /develop/devtools/editor_git
                     text: Git 状态展示
-                    name: editor_Git-状态展示                
+                    name: editor_git    
                   -
-                    link: /develop/devtools/editor/#项目配置文件
+                    link: /develop/devtools/editor_set
                     text: 项目配置文件
-                    name: editor_项目配置文件
+                    name: editor_set
         -
             link: /develop/devtools/smartappdebug_function
             text: 小程序调试
             name: smartappdebug_function
             sidebar:
               -
-                link: /develop/devtools/smartappdebug_function
                 name: smartappdebug_function
                 text: 调试常用功能
                 sidebar:
                   -
-                    link: /develop/devtools/smartappdebug_function/#模拟器功能
+                    link: /develop/devtools/smartappdebug_function_monitor
                     text: 模拟器功能
-                    name: smartappdebug_function_模拟器功能
+                    name: smartappdebug_function_monitor
                   -
-                    link: /develop/devtools/smartappdebug_function/#自定义编译
+                    link: /develop/devtools/smartappdebug_function_compilation
                     text: 自定义编译
-                    name: smartappdebug_function_自定义编译
+                    name: smartappdebug_function_compilation
                   -
-                    link: /develop/devtools/smartappdebug_function/#自定义预处理
+                    link: /develop/devtools/smartappdebug_function_pre
                     text: 自定义预处理
-                    name: smartappdebug_function_自定义预处理
+                    name: smartappdebug_function_pre
                   -
-                    link: /develop/devtools/smartappdebug_function/#前后台切换
+                    link: /develop/devtools/smartappdebug_function_change
                     text: 前后台切换
-                    name: smartappdebug_function_前后台切换
+                    name: smartappdebug_function_change
                   # -
                   #   link: /develop/devtools/smartappdebug_function/#调试器
                   #   text: 调试器
                   #   name: smartappdebug_function_调试器
               -
-                link: /develop/devtools/smartappdebug_tool
+                
                 text: 调试工具
                 name: smartappdebug_tool
                 sidebar:
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Swan-panel
-                    text: Swan panel
+                    link: /develop/devtools/smartappdebug_tool_Swan-panel
+                    text: Swan Element panel
                     name: smartappdebug_tool_Swan-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Sources-panel
+                    link: /develop/devtools/smartappdebug_tool_Sources-panel
                     text: Sources panel
                     name: smartappdebug_tool_Sources-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Network-panel
+                    link: /develop/devtools/smartappdebug_tool_Network-panel
                     text: Network panel
                     name: smartappdebug_tool_Network-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Console-panel
+                    link: /develop/devtools/smartappdebug_tool_Console-panel
                     text: Console panel
                     name: smartappdebug_tool_Console-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Storage-panel
+                    link: /develop/devtools/smartappdebug_tool_Storage-panel
                     text: Storage panel
                     name: smartappdebug_tool_Storage-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#App-data-panel
+                    link: /develop/devtools/smartappdebug_tool_App-data-panel
                     text: App data panel
                     name: smartappdebug_tool_App-data-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Sensors-panel
+                    link: /develop/devtools/smartappdebug_tool_Sensors-panel
                     text: Sensors panel
                     name: smartappdebug_tool_Sensors-panel
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Swan-audits
+                    link: /develop/devtools/smartappdebug_tool_Swan-audits
                     text: Swan audits
                     name: smartappdebug_tool_Swan-audits
                   -
-                    link: /develop/devtools/smartappdebug_tool/#Security-panel
+                    link: /develop/devtools/smartappdebug_tool_Security-panel
                     text: Security panel
                     name: smartappdebug_tool_Security-panel
               -
