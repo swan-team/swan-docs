@@ -7,6 +7,8 @@ sidebar: view_filter
 
 Filter 是小程序的过滤器，结合 SWAN 模版，可以构建出页面的结构。
 
+> 推荐使用 [SJS功能](https://smartprogram.baidu.com/docs/develop/framework/sjs_start/)
+
 ### 说明：
 * Filter 文件命名方式为:模块名.filter.js;
 * Filter 通过 export default 方式对外暴露其内部的私有函数;

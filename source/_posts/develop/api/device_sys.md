@@ -325,6 +325,7 @@ Page({
         console.log('canIUse:getSavedFileList', swan.canIUse('getSavedFileList'));
         console.log('canIUse:getSavedFileList.object', swan.canIUse('getSavedFileList.object'));
         console.log('canIUse:getSavedFileList.object.success', swan.canIUse('getSavedFileList.object.success'));
+        console.log('canIUse:sjs', swan.canIUse('sjs'));
     }
 });
 ```
