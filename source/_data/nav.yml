@@ -169,6 +169,10 @@
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
                 name: auditing_faq
+              -
+                link: /introduction/auditing_road
+                text: 资源下线退场通路 
+                name: auditing_road               
         -
             link: /introduction/intro
             text: 自然搜索结果流量接入
@@ -230,6 +234,10 @@
                     link: /introduction/rank_faq
                     text: 搜索流量接入FAQ
                     name: rank_faq
+                  -
+                    link: /introduction/rank_road
+                    text: 资源下线退场通路 
+                    name: rank_road                    
         -
             link: /introduction/baijiahao
             text: 百家号流量接入
