@@ -303,10 +303,7 @@
                 link: /introduction/contact
                 text: 客服功能接入说明
                 name: contact
-              -
-                link: /introduction/contact_third
-                text: 第三方客服工具
-                name: contact_third
+         
 
     -
       link: /introduction/scancode
