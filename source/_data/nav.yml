@@ -303,6 +303,11 @@
                 link: /introduction/contact
                 text: 客服功能接入说明
                 name: contact
+              -
+                link: /introduction/contact_third
+                text: 第三方客服工具
+                name: contact_third
+
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -2837,23 +2842,23 @@
                     name: device_clipboard_swan-getClipboardData
 
         -
-            link: /develop/api/getextconfig
+            
             text: 第三方平台
             name: getextconfig
             sidebar:
               -
-                link: /develop/api/getextconfig
+                
                 text: 获取第三方平台数据
                 name: getextconfig
                 sidebar:
                   -
-                    link: /develop/api/getextconfig/#swan-getExtConfig
+                    link: /develop/api/getextconfig/swan-getExtConfig
                     text: swan.getExtConfig
-                    name: getextconfig_swan-getExtConfig
+                    name: swan-getExtConfig
                   -
-                    link: /develop/api/getextconfig/#swan-getExtConfigSync
+                    link: /develop/api/getextconfig/swan-getExtConfigSync
                     text: swan.getExtConfigSync
-                    name: getextconfig_swan-getExtConfigSync
+                    name:  swan-getExtConfigSync
         -
             link: /develop/api/open_log
             text: 开放接口
