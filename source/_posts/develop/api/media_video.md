@@ -9,6 +9,10 @@ sidebar: media_video
 
 **解释**： 拍摄视频或从手机相册中选视频，返回视频的临时文件路径。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -37,11 +41,7 @@ sidebar: media_video
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
 **示例**：
-<a href="swanide://fragment/0eef619e22e72c017b16183fdf143ec31568001484211" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-```html
-<button bind:tap="chooseVideo" type="primary">点击选择视频</button>
-<video src="{{src}}" controls></video>
-```
+<a href="swanide://fragment/b86b8c8cd6f7ad38c0139a8dc9a8699c1569395309880" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```javascript
 Page({
@@ -50,11 +50,11 @@ Page({
             sourceType: ['album', 'camera'],
             compressed: false,
             maxDuration: 60,
-            success: function (res) {
+            success: res => {
                 // 成功返回选定视频的临时文件路径
                 console.log('res', res.tempFilePath);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
@@ -63,22 +63,23 @@ Page({
 });
 ```
 
-<!-- #### 错误码
 
-**Andriod**
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
-|1002|用户取消操作错误码|
+|1002|用户取消操作|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确。|
+|202|解析失败，请检查参数是否正确       |
 |1002|用户取消操作|
-|1004|小程序文件目录为空| -->
+|1004|小程序文件目录为空|
 
 ## swan.saveVideoToPhotosAlbum
 
@@ -103,7 +104,7 @@ Page({
 
 
 **示例**：
-<a href="swanide://fragment/ec3a0eebd4faa29ba8db3a34fcca02721567962713625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/078059df20a15ce21c906235c4a075771569395753746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -113,17 +114,17 @@ Page({
         swan.chooseVideo({
             sourceType: ['album', 'camera'],
             compressed: false,
-            success: function (res) {
+            success: res => {
                 swan.saveVideoToPhotosAlbum({
                     filePath: res.tempFilePath,
-                    success: function (res) {
+                    success: res => {
                         swan.showToast({
                             title: 'success',
                             icon: 'none'
                         });
                         console.log('saveVideoToPhotosAlbum success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         swan.showToast({
                             title: 'fail',
                             icon: 'none'
@@ -132,7 +133,7 @@ Page({
                     }
                 });
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('fail', err);
             }
         });
@@ -142,22 +143,24 @@ Page({
 
 <!-- #### 错误码
 
-**Andriod**
+#### 错误码
+
+* Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确       |
 |1001|执行失败|
 |200301|保存图片、视频到相册-用户拒绝|
 
-**iOS**
+* iOS
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确 |
+|202|解析失败，请检查参数是否正确       |
 |1003|用户没有授权百度使用相册|
 |1005|没有读取任何视频数据|
 |1006|保存出错|
 |10002|网络请求失败|
-|200301|相册权限，用户拒绝小程序相册|
-|200302|相册权限，用户拒绝系统相册权限| -->
+|200301|保存图片、视频到相册-用户拒绝|
+|200302|保存图片、视频到相册-系统拒绝|

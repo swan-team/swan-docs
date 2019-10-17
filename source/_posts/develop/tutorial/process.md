@@ -1,11 +1,11 @@
 ---
-title: 全局配置
+title: 配置 app.json 文件
 header: develop
 nav: tutorial
 sidebar: process
 ---
 
-##  配置 app.json 文件
+
 
 可以通过配置 app.json 文件，设置 SWAN 的界面、路径、多 TAB 等。
 
@@ -20,6 +20,7 @@ sidebar: process
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
 |[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)|` Array.<object> `|否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
+|[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
 <notice>示例： </notice>
@@ -121,7 +122,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 
@@ -171,6 +172,7 @@ audio: 后台音乐播放
 用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
 
 <notice>示例： </notice>
+<a href="swanide://fragment/394925243b3cd7130d9e3f99d1ae4c4a1568612690028" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```json
 // app.json
 {
@@ -183,7 +185,7 @@ audio: 后台音乐播放
 swan.request({
     url: 'https://m.baidu.com',
     usePrefetchCache: true,
-    success: function (res) {
+    success: res => {
         console.log('缓存结果:', res);
     }
 });
@@ -194,7 +196,7 @@ swan.request({
 // app.json
 {
     prefetches: [
-        'https://m.baidu.com'
+        'https://m.baidu.com?id=${id}'
     ]
 }
 ```
@@ -204,26 +206,14 @@ pages/index/index?id=123
 ```
 这样，再次使用request发起请求时，就可以利用上prefetches中的配置。
 
+### networkTimeout
 
-## 配置 app.js 文件
+各类网络请求的超时时间。
 
-app.js 中存放全局的 JavaScript 逻辑。
+|属性|	类型|必填|	默认值|	说明|
+|---|---|---|---|---|
+|request|	number|	否|	60000|	swan.request 的超时时间，单位：毫秒。|
+|connectSocket|	number|	否|	60000|	swan.connectSocket 的超时时间，单位：毫秒。|
+|uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
+|downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
 
-<notice>示例： </notice>
-```javascript
-App({
-	onLaunch: function () {
-		console.log('SWAN launch');
-	},
-	onShow: function () {
-		console.log('SWAN展现');
-	},
-	onHide: function () {
-		console.log('SWAN当前处于后台');
-	},
-	onError: function () {
-		console.log('SWAN发生错误');
-	},
-	globalData: 'SWAN'
-});
-```

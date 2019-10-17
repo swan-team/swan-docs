@@ -14,7 +14,7 @@ sidebar: baijiahao
 ## 小程序平台操作流程
 1. 完成小程序发布上线
 ![图片](../../img/introduction/scancode/baijiahao9.png)
-2. 绑定熊掌号
+2. 绑定熊掌ID/授权
 ![图片](../../img/introduction/scancode/baijiahao8.png)
 3. 上传素材
 ![图片](../../img/introduction/scancode/baijiahao3.png)

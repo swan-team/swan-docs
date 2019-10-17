@@ -10,6 +10,10 @@ sidebar: media_recorder
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getRecorderManager.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回值**：recorderManager
@@ -19,22 +23,22 @@ sidebar: media_recorder
 **解释**：swan.getRecorderManager 的返回值。
 
 **示例**：
-<a href="swanide://fragment/9594161131c27e789538f1e4bb99f4b51559049882382" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7c14ca3d4e36f07aed3f68185333b6d91569392187260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
 ```javascript
-const RecorderManager = swan.getRecorderManager()
+const recorderManager = swan.getRecorderManager()
 
-RecorderManager.onStart(function() {
+recorderManager.onStart(function() {
     // 开始录音事件
     console.log('recorder start')
 });
-RecorderManager.onPause(function() {
+recorderManager.onPause(function() {
     // 暂停录音事件
     console.log('recorder pause')
 });
-RecorderManager.onStop(function(res) {
+recorderManager.onStop(function(res) {
     // 停止录音事件
     console.log('recorder stop', res)
     const { tempFilePath } = res
@@ -48,10 +52,30 @@ const options = {
     format: 'aac'
 };
 
-RecorderManager.start(options);
+recorderManager.start(options);
 
 ```
+#### 错误码
 
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查参数是否正确|
+|1001|执行失败|
+|2001|错误调起时机|
+|2002|录音执行错误|
+|2003|录音调起action错误，无需调用release|
+|2004|用户拒绝|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确  |
+|2001|错误的调起时机|
+|2002|录音执行错误|
+|2004|用户拒绝小程序使用麦克风|
 
 ## RecorderManager.start 
 
@@ -150,9 +174,9 @@ RecorderManager.start(options);
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
-|success |Function  |  否 |  接口调用成功的回调|
-|fail   | Function |   否  | 接口调用失败的回调函数|
-|complete  |  Function |   否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否 |   | 接口调用成功的回调|
+|fail   | Function |   否  |  | 接口调用失败的回调函数|
+|complete  |  Function |   否 |   | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data.success回调函数**
 **方法参数**：Object res
@@ -176,7 +200,7 @@ RecorderManager.start(options);
 
 
 **示例**：
-<a href="swanide://fragment/bea70d0226e937e1e1ac613ef5a6ec1b1567940572468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -185,10 +209,10 @@ RecorderManager.start(options);
 Page({
     getAvailableAudioSources() {
         swan.getAvailableAudioSources({
-            success: function (res) {
+            success: res => {
 	            console.log('当前支持的音频输入源:', res.audioSources);
 		    },
-		    fail: function (err) {
+		    fail: err => {
 		        console.log('错误码：' + err.errCode);
 		        console.log('错误信息：' + err.errMsg);
 		    }

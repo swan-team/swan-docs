@@ -180,10 +180,10 @@ Page({
            y: 0,
             width: 100,
             height: 100,
-            success(res) {
+            success: res => {
                 console.log('canvasGetImageData success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -197,14 +197,19 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码 -->
 
+#### 错误码
+* Andriod
 
-<!-- |错误码|说明|
+|错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
-|202|解析失败，请检查参数是否正确。| -->
 
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 ## swan.canvasPutImageData
 
 
@@ -286,7 +291,7 @@ Page({
            y: 0,
             width: 200,
             height: 200,
-            success(res) {
+            success: res => {
                 swan.canvasPutImageData({
                     canvasId: 'canvas2',
                     x: 0,
@@ -294,15 +299,15 @@ Page({
                     width: 200,
                     height: 200,
                     data: res.data,
-                    success(res) {
+                    success: res => {
                         console.log('canvasPutImageData success', res);
                     },
-                    fail: function (err) {
+                    fail: err => {
                         console.log('canvasPutImageData fail', err);
                     }
                 })
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('canvasGetImageData fail', err);
             }
         });
@@ -316,14 +321,21 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
-<!-- #### 错误码
 
+
+#### 错误码
+* Andriod
 
 |错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
-|202|解析失败，请检查参数是否正确。| -->
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.canvasToTempFilePath
 
@@ -402,15 +414,25 @@ Page({
     }
 });
 ```
-<!-- #### 错误码 -->
 
 
 
-<!-- |错误码|说明|
+#### 错误码
+* Andriod
+
+|错误码|说明|
 |--|--|
-|201|解析失败，请检查调起协议是否合法。|
+|201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
-|202|解析失败，请检查参数是否正确。| -->
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+ 
+
+ 
 
 ## CanvasContext
 
@@ -465,10 +487,10 @@ Page({
     toTempFilePath() {
         swan.canvasToTempFilePath({
             canvasId: 'canvas',
-            success(res) {
+            success: res => {
                 console.log('canvasToTempFilePath success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('canvasToTempFilePath fail', err);
             }
         });
@@ -1772,7 +1794,20 @@ CanvasContext.font = 'italic bold 20px cursive'
 const metrics = CanvasContext.measureText('Hello World')
 console.log(metrics.width);
 ```
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
  
+
 
 ##  CanvasContext.strokeText
 
@@ -1949,7 +1984,18 @@ CanvasContext.draw();
 
 ![图片](../../../img/api/canvas/draw1.png)
 
- 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ##  CanvasContext.font
 

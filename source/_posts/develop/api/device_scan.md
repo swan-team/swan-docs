@@ -12,6 +12,10 @@ sidebar: device_scan
 
 **解释**：调起客户端扫码界面，扫码成功后返回对应的结果。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scanCode.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -32,15 +36,8 @@ sidebar: device_scan
 
 **示例**：
 
-<a href="swanide://fragment/0fd5772c3958f41c72ce6ccf48d4a6061557732093518" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/32f7d4dc285398ab6cce6478554830091569483361410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="scanCode">scanCode</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -48,22 +45,32 @@ sidebar: device_scan
 Page({
     scanCode() {
         swan.scanCode({
-            success(res) {
+            success: res => {
                 console.log('扫码的内容', res.result);
                 console.log('扫码的类型', res.scanType);
                 console.log('扫码的字符集', res.charSet);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|202|解析失败，请检查参数是否正确|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|203|处理失败，无返回结果|

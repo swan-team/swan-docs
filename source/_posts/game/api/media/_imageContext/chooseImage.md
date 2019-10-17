@@ -58,7 +58,7 @@ swan.chooseImage({
     count: 1,
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
-    success: function (res) {
+    success: res => {
         console.log(res.tempFilePaths);
         console.log(res.tempFiles);
     },

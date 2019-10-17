@@ -70,14 +70,14 @@ swan.openReplyEditor({
     contentPlaceholder: '请输入评论内容',
     moduleList: ['emoji'],
     emojiPath: '../../emojidata',
-    success: function (res) {
+    success: res => {
       console.log('openReplyEditor success', res);
       // 点击了发表按钮
       if (res.status === 'reply') {
 		    // 开发者处理返回内容。
         // 主动关闭评论发布器
         swan.closeReplyEditor({
-          success: function (res) {
+          success: res => {
             console.log('closeReplyEditor success', res);
           }
         });
@@ -125,14 +125,14 @@ swan.openReplyEditor({
     contentPlaceholder: '请输入评论内容',
     moduleList: ['emoji'],
     emojiPath: '../../emojidata',
-    success: function (res) {
+    success: res => {
       console.log('openReplyEditor success', res);
       // 点击了发表按钮
       if (res.status === 'reply') {
 	      	// 开发者处理返回内容。
           // 主动关闭评论发布器
           swan.closeReplyEditor({
-            success: function (res) {
+            success: res => {
               console.log('closeReplyEditor success', res);
             }
           });

@@ -8,6 +8,7 @@ sidebar: log
 
 |更新日期| 更新内容|
 |-----|-----|
+|2019.9.16 |**New** <br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/sitemap/#小程序单卡配置">小程序单卡配置</a>|
 |2019.9.10 |**New** <br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/customer/#获取对公认证页面链接">新增真实性认证方式</a><br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/customer/#高级认证结果推送">高级认证结果推送兼容所有认证类型</a> <br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/info/#小程序状态变更推送">小程序状态变更事件推送(暂停服务、重新启用、强制下线)</a>|
 |2019.8.19 | **New** <br> **·**<a href="http://smartprogram.baidu.com/docs/develop/third/customerability/">客服消息能力</a>|
 |2019.8.07 | **New**<br/>**·**<a href="http://smartprogram.baidu.com/docs/develop/third/customer/#高级认证结果推送">高级认证结果推送</a>|

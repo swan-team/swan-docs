@@ -29,18 +29,18 @@
                             <% if (nav[i].sidebar[j].sidebar) { %>
                             <ul <% if (nav[i].sidebar[j].text) { %>class="m-doc-h1-children"<% } else { %> class="m-doc-h1-children m-doc-h1-noh1" <% } %> >
                                 <% for (var k = 0; k < nav[i].sidebar[j].sidebar.length; k++) { %>
-                                <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
-                                    <a class="m-doc-h2-list" href="/docs<%- nav[i].sidebar[j].sidebar[k].link %>/"><%- nav[i].sidebar[j].sidebar[k].text %></a>
+                                <li <% if (nav[i].name == page.nav &&nav[i].sidebar[j].sidebar[k].link &&nav[i].sidebar[j].sidebar[k].link.replace('/', '') == page.slug) { %> class="m-doc-sidebar-selected" <% } %>>
+                                    <a class="m-doc-h2-list list-item" href="/docs<%- nav[i].sidebar[j].sidebar[k].link %>/"><%- nav[i].sidebar[j].sidebar[k].text %></a>
                                     <% if (nav[i].sidebar[j].sidebar[k].sidebar) { %>
                                     <ul class="m-doc-h2-children">
-                                        <% for (var m = 0; m < nav[i].sidebar[j].sidebar[k].sidebar.length; m++) {%>
-                                            <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
-                                                <a class="m-doc-h3-list" href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].text %></a>
+                                        <% for (var m = 0; m < nav[i].sidebar[j].sidebar[k].sidebar.length; m++) { %>
+                                            <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].link && nav[i].sidebar[j].sidebar[k].sidebar[m].link.replace('/', '') == page.slug) { %> class="m-doc-sidebar-selected" <% } %>>
+                                                <a class="m-doc-h3-list list-item" href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].text %></a>
                                                 <% if (nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar) { %>
                                                   <ul class="m-doc-h3-children">
-                                                      <% for (var z = 0; z < nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar.length; z++) {%>
-                                                        <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].name == page.sidebar) { %> class="m-doc-sidebar-selected" <% } %>>
-                                                          <a href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].text %></a>
+                                                      <% for (var z = 0; z < nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar.length; z++) { %>
+                                                        <li <% if (nav[i].name == page.nav && nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].link == page.slug) { %> class="m-doc-sidebar-selected" <% } %>>
+                                                          <a class="list-item" href="/docs<%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].link %>/"><%- nav[i].sidebar[j].sidebar[k].sidebar[m].sidebar[z].text %></a>
                                                         </li>
                                                       <% } %>
                                                   </ul>

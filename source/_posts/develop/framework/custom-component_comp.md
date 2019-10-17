@@ -13,18 +13,18 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |字段|类型|是否必填|描述|最低版本|
 |---|--|---|---|---|
 |properties|Object Map|否|组件的对外属性，是属性名到属性设置的映射表，属性设置中可包含三个字段， type 表示属性类型、 value 表示属性初始值、 observer 表示属性值被更改时的响应函数|-|
-|data|Object|否|组件的内部数据，和 properties 一同用于组件的模版渲染|-|
-|methods|Object|否|组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/">组件事件</a>|-|
-|behaviors|Array.<string>|否|类似于mixins和traits的组件间代码复用机制，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_behaviors/">behaviors</a>|-|
-|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData,参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
-|attached|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
-|ready|Function|否|组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
-|detached|Function|否|组件生命周期函数，在组件实例被从页面节点树移除时执行，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
-|externalClasses|Array.<string>|否|组件接受的外部样式类，参见<a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_temp/">组件模板和样式</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|data|Object|否|组件的内部数据，和 properties 一同用于组件的模板渲染|-|
+|methods|Object|否|组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 <a href="/develop/framework/custom-component_cont/">组件事件</a>|-|
+|behaviors|Array.<string>|否|类似于mixins和traits的组件间代码复用机制，参见 <a href="/develop/framework/custom-component_behaviors/">behaviors</a>|-|
+|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData,参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
+|attached|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
+|ready|Function|否|组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
+|detached|Function|否|组件生命周期函数，在组件实例被从页面节点树移除时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|-|
+|externalClasses|Array.<string>|否|组件接受的外部样式类，参见<a href="/develop/framework/custom-component_temp/">组件模板和样式</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 |options|Object Map|否|一些选项（文档中介绍相关特性时会涉及具体的选项设置，这里暂不列举）|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
-|lifetimes|Object|否|组件生命周期声明对象，组件的生命周期：created、attached、ready、detached将收归到lifetimes字段内进行声明，原有声明方式仍旧有效，如同时存在两种声明方式，则lifetimes字段内声明方式优先级最高，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
-|pageLifetimes|Object|否|组件所在页面的生命周期声明对象，目前仅支持页面的show和hide两个生命周期，参见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_lifetimes/">组件生命周期</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
-|definitionFilter|Function|否|定义段过滤器，用于自定义组件扩展，参见<a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_extend/">自定义组件扩展</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|lifetimes|Object|否|组件生命周期声明对象，组件的生命周期：created、attached、ready、detached将收归到lifetimes字段内进行声明，原有声明方式仍旧有效，如同时存在两种声明方式，则lifetimes字段内声明方式优先级最高，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|pageLifetimes|Object|否|组件所在页面的生命周期声明对象，目前仅支持页面的show和hide两个生命周期，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
+|definitionFilter|Function|否|定义段过滤器，用于自定义组件扩展，参见<a href="/develop/framework/custom-component_extend/">自定义组件扩展</a>|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
 
 
 生成的组件实例可以在组件的方法、生命周期函数和属性 observer 中通过 this 访问。组件包含一些通用属性和方法。
@@ -41,7 +41,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |---|---|---|---|
 |setData|Object newData|设置data并执行视图层渲染|-|
 |hasBehavior|Object|检查组件是否具有 behavior （检查时会递归检查被直接或间接引入的所有behavior）|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">1.13.27</a>|
-|triggerEvent|String name, Object detail|触发事件，参见 <a href="http://smartprogram.baidu.com/docs/develop/framework/custom-component_cont/">组件事件</a>|-|
+|triggerEvent|String name, Object detail|触发事件，参见 <a href="/develop/framework/custom-component_cont/">组件事件</a>|-|
 |createSelectorQuery||创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery/">SelectorQuery</a> 对象，选择器选取范围为这个组件实例内, 与 swan.createSelectorQuery().in(this) 是等效|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">2.5.3</a>|
 |createIntersectionObserver|Object options|创建一个 <a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#IntersectionObserver/">IntersectionObserver</a> 对象，选择器选取范围为这个组件实例内|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">2.5.3</a>|
 |selectComponent|String selector|使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象（会被 swan://component-export 影响），在生命周期 onReay 开始时生效|-|
@@ -64,7 +64,7 @@ Component({
         }
     },
 
-    data: {}, // 私有数据，可用于模版渲染
+    data: {}, // 私有数据，可用于模板渲染
 
     // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
     attached: function () {},

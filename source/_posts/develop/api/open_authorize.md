@@ -16,7 +16,7 @@ sidebar: open_authorize
 |	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
 |[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
 |	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/)|	录音功能|
-|	[camera](https://smartprogram.baidu.com/docs/develop/component/media/#camera/)|	摄像头|
+|	[camera](/develop/component/media_camera/)|	摄像头|
 
 
 **此类接口调用时需注意**：
@@ -48,6 +48,11 @@ sidebar: open_authorize
 
 **解释**： 提前向用户发起授权请求。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/authorize.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -69,7 +74,7 @@ sidebar: open_authorize
 |scope.address|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
 |scope.invoiceTitle|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
 |scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/)|	录音功能|
-|scope.camera|	[camera](https://smartprogram.baidu.com/docs/develop/component/media/#camera/)|	摄像头|
+|scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
 **示例**：
 <a href="swanide://fragment/a866a61034de7c92163fa56338f6258b1560169856336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -124,4 +129,24 @@ Page({
 
 **说明**：
 授权操作为异步操作，完成前请不要多次调用。
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|1001|执行失败   |
+|10001|内部错误|
+|11001|未知错误|
+|11003|用户取消授权|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10001|内部错误   |
+|10002|网络请求失败|
+|10004|用户拒绝(user not login)|
 

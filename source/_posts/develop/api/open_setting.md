@@ -6,7 +6,12 @@ sidebar: open_setting
 ---
 ## swan.openSetting
 
-**解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。
+**解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。swan.openSetting 可打开的控制面板权限详见[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open_authorize/#%E9%9C%80%E6%8E%88%E6%9D%83%E6%8E%A5%E5%8F%A3%E5%88%97%E8%A1%A8/)。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openSetting.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -57,6 +62,20 @@ Page({
 });
 ```
 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+
 
 ## swan.getSetting
 
@@ -98,10 +117,10 @@ Page({
 Page({
     getSetting() {
         swan.getSetting({
-            success: function (res) {
+            success: res => {
                 console.log('getSetting success, authSetting:', res.authSetting);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('getSetting fail', err);
             }
         });
@@ -115,4 +134,18 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
- 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|10001|内部错误                                           |
+|10002|网络请求失败|

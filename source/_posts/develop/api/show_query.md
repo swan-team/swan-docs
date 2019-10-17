@@ -21,7 +21,7 @@ sidebar: show_query
 
 **示例**：
 
-<a href="swanide://fragment/efd1a134de87bfcdf9b15b5156d4e0061558352337120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8ab0bafd72cae605089addc3f1bb66601569477488019" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -335,7 +335,7 @@ movable-area {
     width: 100rpx;
 }
 ```
-## selectorQuery
+## SelectorQuery
 
 **解释**： 选择器
 
@@ -349,7 +349,7 @@ movable-area {
 |selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
 |exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#selectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
 
-## selectorQuery.in 
+## SelectorQuery.in 
 
 **解释**： 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 
@@ -369,7 +369,7 @@ Component({
 });
 ```
 
-## selectorQuery.select 
+## SelectorQuery.select 
 
 **解释**： 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
 
@@ -385,7 +385,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 4、后代选择器：.the-ancestor .the-descendant
 5、多选择器的并集：#a-node, .some-other-nodes
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
-## selectorQuery.selectAll 
+## SelectorQuery.selectAll 
 
 **解释**： 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
 
@@ -393,7 +393,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 **返回值**：nodesRef
 
-## selectorQuery.selectViewport 
+## SelectorQuery.selectViewport 
 
 **解释**： 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
 
@@ -401,17 +401,17 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 **返回值**：nodesRef
 
-##  selectorQuery.exec 
+##  SelectorQuery.exec 
 
 **解释**： 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。
 
 **方法参数**：Function callback
 
-## nodesRef 
+## NodesRef 
 
 **解释**： 节点信息
 
-## nodesRef.boundingClientRect 
+## NodesRef.boundingClientRect 
 
 **解释**： 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
 
@@ -452,7 +452,7 @@ Page({
 });
 ```
 
-## nodesRef.scrollOffset 
+## NodesRef.scrollOffset 
 
 **解释**： 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
 
@@ -475,7 +475,7 @@ Page({
 });
 ```
 
-## nodesRef.fields
+## NodesRef.fields
 
 **解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 

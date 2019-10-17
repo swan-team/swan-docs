@@ -39,10 +39,10 @@ Page({
     loadSubPackage() {
         swan.loadSubPackage({
             root: 'subpackage',
-            success: function (res) {
+            success: res => {
                 console.log('loadSubPackage success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('loadSubPackage fail', err);
             }
         });
@@ -56,3 +56,19 @@ Page({
     padding: 50rpx 30rpx;
 }
 ```
+
+#### 错误码
+
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|预加载子包失败|

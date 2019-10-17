@@ -6,11 +6,11 @@ sidebar: show_createanimation
 ---
 ## swan.createAnimation
 
-**解释**：创建一个动画实例 Animation
+**解释**：创建一个动画实例 animation
 
 **方法参数**：Object object
 
-**返回值**：Animation
+**返回值**：animation
 
 **`object`参数说明**：
 
@@ -50,14 +50,14 @@ sidebar: show_createanimation
 ```js
 Page({
     createAnimation() {
-        const Animation = swan.createAnimation({
+        const animation = swan.createAnimation({
             transformOrigin: "50% 50%",
             duration: 1000,
             timingFunction: "ease",
             delay: 0
         });
 
-        console.log('createAnimation', Animation);
+        console.log('createAnimation', animation);
     }
 });
 ```
@@ -70,7 +70,7 @@ Page({
 ```
 
 
-## animation
+## Animation
 
 **解释**：动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
@@ -111,11 +111,11 @@ Page({
         animationData: {}
     },
     startToAnimate() {
-        const Animation = swan.createAnimation();
-        Animation.rotate(90).translateY(10).step();
-        Animation.rotate(-90).translateY(-10).step();
+        const animation = swan.createAnimation();
+        animation.rotate(90).translateY(10).step();
+        animation.rotate(-90).translateY(-10).step();
         this.setData({
-            animationData: Animation.export()
+            animationData: animation.export()
         });
     }
 });
@@ -137,7 +137,7 @@ Page({
 
 
 
-##  animation.rotate
+##  Animation.rotate
 
 **解释**：从原点顺时针旋转一个角度
 
@@ -145,7 +145,7 @@ Page({
 
 **参数说明**：deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
 
-##  animation.rotateX
+##  Animation.rotateX
  
 **解释**：从 X 轴顺时针旋转一个角度
 
@@ -153,7 +153,7 @@ Page({
 
 **参数说明**：deg的范围-180~180，在X轴旋转一个 deg 角度。
 
-##  animation.rotateY
+##  Animation.rotateY
  
 **解释**：从 Y 轴顺时针旋转一个角度
 
@@ -161,7 +161,7 @@ Page({
 
 **参数说明**：deg的范围-180~180，在Y轴旋转一个 deg 角度。
 
-##  animation.rotateZ
+##  Animation.rotateZ
 
 **解释**：从 Z 轴顺时针旋转一个角度
 
@@ -170,7 +170,7 @@ Page({
 **参数说明**：deg的范围-180~180，在Z轴旋转一个 deg 角度。
 
 
-##  animation.rotate3d
+##  Animation.rotate3d
  
 **解释**：从 X 轴顺时针旋转一个角度
 
@@ -178,7 +178,7 @@ Page({
 
 **参数说明**：同 transform-function rotate3d。
 
-##  animation.scale
+##  Animation.scale
  
 **解释**： 缩放
 
@@ -186,7 +186,7 @@ Page({
 
 **参数说明**： 一个参数时，表示在X轴、Y轴同时缩放sx倍数；两个参数时表示在X轴缩放sx倍数，在Y轴缩放sy倍数。
 
-##  animation.scaleX
+##  Animation.scaleX
  
 **解释**： 缩放 X 轴
 
@@ -194,7 +194,7 @@ Page({
 
 **参数说明**： 在X轴缩放sx倍数
 
-##  animation.scaleY
+##  Animation.scaleY
  
 **解释**： 缩放 Y 轴
 
@@ -202,15 +202,15 @@ Page({
 
 **参数说明**： 在Y轴缩放sy倍数
 
-##  animation.scaleZ
+##  Animation.scaleZ
  
 **解释**： 缩放 Z 轴
 
 **方法参数**：Number sz 
 
-**参数说明**： 在Z轴缩放sy倍数
+**参数说明**： 在Z轴缩放sz倍数
 
-##  animation.scale3d
+##  Animation.scale3d
  
 **解释**： 缩放
 
@@ -219,7 +219,7 @@ Page({
 **参数说明**： 在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数。
  
 
-##  animation.translate
+##  Animation.translate
  
 **解释**： 平移变换
 
@@ -227,7 +227,7 @@ Page({
 
 **参数说明**：一个参数时，表示在X轴偏移 tx ，单位 px ；两个参数时，表示在 X 轴偏移 tx ，在 Y 轴偏移 ty ，单位 px 。 
 
-##  animation.translateX
+##  Animation.translateX
  
 **解释**： 对 X 轴平移
 
@@ -235,23 +235,23 @@ Page({
 
 **参数说明**： 在 X 轴偏移 tx ，单位 px。
 
-##  animation.translateY
+##  Animation.translateY
  
 **解释**： 对 Y 轴平移
 
 **方法参数**：Number  ty  
 
-**参数说明**：在 Y 轴偏移 tx ，单位 px。 
+**参数说明**：在 Y 轴偏移 ty ，单位 px。 
 
-##  animation.translateZ
+##  Animation.translateZ
  
 **解释**： 对 Z 轴平移
 
 **方法参数**： Number  tz
 
-**参数说明**： 在 Z 轴偏移 tx ，单位 px。
+**参数说明**： 在 Z 轴偏移 tz ，单位 px。
 
-##  animation.translate3d
+##  Animation.translate3d
 
 **解释**： 对 X、Y、Z 坐标进行平移变换
 
@@ -259,7 +259,7 @@ Page({
 
 **参数说明**： 在 X 轴偏移 tx ，在 Y 轴偏移 ty ，在 Z 轴偏移 tz，单位 px。
  
-##  animation.skew
+##  Animation.skew
  
 **解释**： 对 X、Y 轴坐标进行倾斜
 
@@ -267,7 +267,7 @@ Page({
 
 **参数说明**： 参数范围-180~180；一个参数时， Y 轴坐标不变， X 轴坐标延顺时针倾斜 ax 度；两个参数时，分别在 X 轴倾斜 ax 度，在 Y 轴倾斜 ay 度。
 
-##  animation.skewX
+##  Animation.skewX
 
 **解释**： 对 X 轴坐标进行倾斜
 
@@ -275,7 +275,7 @@ Page({
 
 **参数说明**： 参数范围-180~180；Y 轴坐标不变， X 轴坐标延顺时针倾斜 ax 度。
 
-##  animation.skewY
+##  Animation.skewY
 
 **解释**：对 Y 轴坐标进行倾斜 
 
@@ -283,7 +283,7 @@ Page({
 
 **参数说明**： 参数范围-180~180；X 轴坐标不变， Y 轴坐标延顺时针倾斜 ay 度。
  
-##  animation.matrix
+##  Animation.matrix
  
 **解释**： 同[transform-function matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
 
@@ -291,7 +291,7 @@ Page({
 
  
 
-##  animation.matrix3d
+##  Animation.matrix3d
  
 **解释**： 3D转换，同[transform-function matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)。
 

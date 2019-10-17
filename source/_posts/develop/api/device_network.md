@@ -9,6 +9,11 @@ sidebar: device_network
 
 **解释**：获取网络类型
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getNetworkType.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -26,33 +31,12 @@ sidebar: device_network
 |networkType |String|网络类型，值有 wifi/2g/3g/4g/unknown (Android 下不常见的网络类型)/none (无网络)。|
 
 **示例**：
-<a href="swanide://fragment/33d64ae36aaded38bb0fe1d67da68a831560168350301" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6fb983a430aa1864af5650c5b9b54f9d1569478503845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="title">当前网络状态</view>
-        <view class="page-info">{{networkType}}</view>
-        <button class="btn" bind:tap="getNetworkType" type="primary" hover-stop-propagation="true">点击获取网络状态</button>
-        <button bind:tap="clearClick" hover-stop-propagation="true">清空</button>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
-* 在 js 稳重
+* 在 js 中
 
 ```js
 Page({
-    data: {
-        title: 'getNetworkType',
-        networkType: '未获取'
-    },
-
     getNetworkType() {
         swan.getNetworkType({
             success: res => {
@@ -64,20 +48,28 @@ Page({
                 });
             }
         });
-    },
-
-    clearClick(e) {
-        this.setData('networkType', '未获取');
     }
 });
 ```
 
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 
 ## swan.onNetworkStatusChange
 
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听网络状态变化。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onNetworkStatusChange.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Function callback
 
@@ -100,31 +92,12 @@ Page({
 |unknown |Android 下不常见的网络类型|
 
 **示例**：
-<a href="swanide://fragment/2a22d045874fb13e60e7e17efc3ad1061560168528969" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7c0e8595fa15fb27338683115a63df031569478717853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="title">当前网络状态</view>
-        <view class="page-info">{{networkType}}</view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
 
 * 在 js 文件中
 ```js
 Page({
-    data: {
-        title: 'onNetworkStatusChange',
-        networkType: '未获取'
-    },
-
     onLoad() {
         let self = this;
         swan.getNetworkType({
@@ -138,3 +111,19 @@ Page({
     }
 });
 ```
+
+
+ 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |

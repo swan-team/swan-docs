@@ -25,7 +25,7 @@ swan.getClipboardData(opts)
 
 ```js
 swan.getClipboardData({
-    success: function (res) {
+    success: res => {
         console.log(res.data);
     }
 });

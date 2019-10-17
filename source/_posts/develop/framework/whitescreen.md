@@ -54,13 +54,13 @@ sidebar: whitescreen
     ```
     swan.request({
         url: 'https://www.baidu.com/keyData',
-        success(res) {
+        success: res => {
             this.setData({
                 keyData: res
             });
             swan.request({
                 url: 'https://www.baidu.com/nonKeyData',
-                success(res) {}
+                success: res => {}
             });
         }
     })

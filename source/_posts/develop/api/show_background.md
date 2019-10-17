@@ -26,43 +26,39 @@ sidebar: show_background
 
 **示例**：
 
-<a href="swanide://fragment/ab56d47c0644aada7d01b8fbadb30ebf1557730077056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setBackgroundColor">setBackgroundColor</button>
-</view>
-```
+<a href="swanide://fragment/261c4a5f3e104b0d7120d30651879cf51569476555815" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    setBackgroundColor() {
-        swan.setBackgroundColor({
-            backgroundColor: '#000000',
-            backgroundColorTop: '#222222',
-            backgroundColorBottom: '#333333',
-            success: function () {
-                console.log('setBackgroundColor success');
-            },
-            fail: function (err) {
-                console.log('setBackgroundColor fail', err);
-            }
-        });
+
+swan.setBackgroundColor({
+    backgroundColor: '#000000',
+    backgroundColorTop: '#222222',
+    backgroundColorBottom: '#333333',
+    success: res => {
+        console.log('setBackgroundColor success');
+    },
+    fail: err => {
+        console.log('setBackgroundColor fail', err);
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+   
 ```
 
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
 ## swan.setBackgroundTextStyle
 
 > 基础库 3.10.4 版本开始支持。
@@ -82,37 +78,37 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/d051af9cce097ea405f94592ec8128941557730133671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setBackgroundTextStyle">setBackgroundTextStyle</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    setBackgroundTextStyle() {
-        swan.setBackgroundTextStyle({
-            textStyle: 'light',
-            success: function () {
-                console.log('setBackgroundTextStyle success');
-            },
-            fail: function (err) {
-                console.log('setBackgroundTextStyle fail', err);
-            }
-        });
+
+swan.setBackgroundTextStyle({
+    textStyle: 'light',
+    success: res => {
+        console.log('setBackgroundTextStyle success');
+    },
+    fail: err => {
+        console.log('setBackgroundTextStyle fail', err);
     }
 });
+  
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+
+
+#### 错误码
+* Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |
+|1001|执行失败|
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确      |   

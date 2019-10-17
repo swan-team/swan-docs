@@ -12,6 +12,12 @@ sidebar: device_vibrate
 
 **解释**： 使手机发生较长时间的振动（400ms）
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/vibrate.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -24,15 +30,8 @@ sidebar: device_vibrate
 
 **示例**：
 
-<a href="swanide://fragment/68b0d89af019129d48b899052f023fbb1557732604443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e87388ef787854a02ca900c6c28307dd1569483846383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="vibrateLong">vibrateLong</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -40,29 +39,28 @@ sidebar: device_vibrate
 Page({
     vibrateLong() {
         swan.vibrateLong({
-            success(res) {
+            success: res => {
                 console.log('vibrateLong success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateLong fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ## swan.vibrateShort
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/vibrate.png"  class="demo-qrcode-image" />
+
 
 **方法参数**：Object object
 
@@ -76,15 +74,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/a6df718fa0df4ec933e432d2b81d7fc41557732661761" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e87388ef787854a02ca900c6c28307dd1569483846383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="vibrateShort">vibrateShort</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -92,20 +83,22 @@ Page({
 Page({
     vibrateShort() {
         swan.vibrateShort({
-            success(res) {
+            success: res => {
                 console.log('vibrateShort success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('vibrateShort fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
+ 
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
+#### 错误码
+
+* iOS
+
+|错误码|说明|
+|--|--|
+|1001|设备不支持    |
