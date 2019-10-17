@@ -1,6 +1,6 @@
 ---
 title: 更新日志
-header: develop
+header: third
 nav: third
 sidebar: log
 ---

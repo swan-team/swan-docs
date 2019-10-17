@@ -1,6 +1,6 @@
 ---
 title: 第三方平台消息加解密
-header: develop
+header: third
 nav: third
 sidebar: deciphering
 ---

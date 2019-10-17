@@ -1,7 +1,6 @@
-
 ---
 title: 第三方平台开发指南
-header: develop
+header: third
 nav: third
 sidebar: develop
 ---

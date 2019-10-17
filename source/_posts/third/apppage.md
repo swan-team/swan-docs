@@ -1,6 +1,6 @@
 ---
 title: 启动流程与能力
-header: develop
+header: third
 nav: third
 sidebar: apppage
 ---

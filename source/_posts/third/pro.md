@@ -1,6 +1,6 @@
 ---
 title: 授权流程
-header: develop
+header: third
 nav: third
 sidebar: pro
 ---

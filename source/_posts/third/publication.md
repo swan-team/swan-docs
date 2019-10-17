@@ -1,6 +1,6 @@
 ---
 title: 第三方平台检测
-header: develop
+header: third
 nav: third
 sidebar: publication
 ---

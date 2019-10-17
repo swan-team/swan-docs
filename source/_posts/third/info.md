@@ -1,6 +1,6 @@
 ---
 title: 基本信息设置
-header: develop
+header: third
 nav: third
 sidebar: info
 ---

@@ -1,6 +1,6 @@
 ---
 title: 第三方平台创建引导
-header: develop
+header: third
 nav: third
 sidebar: create
 ---
