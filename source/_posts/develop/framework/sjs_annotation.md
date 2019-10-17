@@ -1,5 +1,5 @@
 ---
-title:   SJS 注释
+title: 注释
 header: develop
 nav: framework
 sidebar: sjs_annotation

@@ -1,5 +1,5 @@
 ---
-title:   SJS 运算符
+title:  运算符
 header: develop
 nav: framework
 sidebar: sjs_operator

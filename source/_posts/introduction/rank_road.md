@@ -26,7 +26,16 @@ sidebar: rank_road
 
 若智能小程序资源下线，对应的语音直达能力也会在约15分钟左右同步关闭，生效后用户将无法通过语音直接进入到对应的小程序。
 
- ![Alt text](../../img/introduction/rank/road3.png)
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/rank/road3.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+ 
 
 2. 自然搜索结果-适配资源&原生小程序资源：
 
@@ -46,7 +55,18 @@ sidebar: rank_road
 
 当智能小程序资源下线后，对应的搜索词推荐直达入口会在约2小时内关闭。生效后，用户搜索时，将不会出现自动推荐的小程序结果。
 
- ![Alt text](../../img/introduction/rank/road5.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/rank/road5.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+        <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+</div>
+
 
 5. 百度APP搜索结果顶部「小程序」tab &「小程序中心」页面内搜索结果&百度APP下拉二楼
 

@@ -1,5 +1,5 @@
 ---
-title:   SJS esnext
+title:  esnext
 header: develop
 nav: framework
 sidebar: sjs_esnext

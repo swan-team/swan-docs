@@ -1,5 +1,5 @@
 ---
-title:   SJS 变量
+title: 变量
 header: develop
 nav: framework
 sidebar: sjs_variable

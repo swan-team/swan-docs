@@ -1,5 +1,5 @@
 ---
-title:   SJS 语句
+title:  语句
 header: develop
 nav: framework
 sidebar: sjs_statement

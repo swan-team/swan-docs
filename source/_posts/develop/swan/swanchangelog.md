@@ -17,7 +17,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|3.105.17|2019.10.14|**New**<p>新增SJS功能。<p>**Breaking Change**<p>生命周期内容更新。<p>**BugFix**<p>修复picker-view设置indicator高度但蒙层不适配问题。
+|3.105.17|2019.10.14|**New**<p>新增[SJS](/develop/framework/sjs_start/)功能。<p>**Breaking Change**<p>生命周期内容更新。<p>**BugFix**<p>修复picker-view设置indicator高度但蒙层不适配问题。
 |3.105.09|2019.9.18|**New**<p>新增自定义组件[数据监听器](https://smartprogram.baidu.com/docs/develop/framework/custom-component_observers/)功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 
 

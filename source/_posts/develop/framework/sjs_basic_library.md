@@ -1,5 +1,5 @@
 ---
-title:   SJS 基础类库
+title:  基础类库
 header: develop
 nav: framework
 sidebar: sjs_basic_library

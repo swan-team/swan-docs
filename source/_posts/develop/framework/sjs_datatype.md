@@ -1,5 +1,5 @@
 ---
-title:   SJS 数据类型
+title:  数据类型
 header: develop
 nav: framework
 sidebar: sjs_datatype
