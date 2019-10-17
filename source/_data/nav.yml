@@ -1826,6 +1826,15 @@
                       link: /develop/api/media_videocontext/#VideoContext-hideStatusBar
                       text: VideoContext.hideStatusBar
                       name: media_videocontext_VideoContext-hideStatusBar
+                    -
+                      link: /develop/api/media_videocontext/#VideoContext-stop
+                      text: VideoContext.stop
+                      name: media_videocontext_VideoContext-stop
+                    -
+                      link: /develop/api/media_videocontext/#VideoContext-playbackRate
+                      text: VideoContext.playbackRate
+                      name: media_videocontext_VideoContext-playbackRate
+                    
             -
               link: /develop/api/media_liveplayercontext
               text: 直播组件控制
