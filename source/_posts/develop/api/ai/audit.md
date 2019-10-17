@@ -1,10 +1,10 @@
 ---
-title: 图像审核
+title: swan.ai.imageAudit
 header: develop
 nav: api
-sidebar: ai_audit
+sidebar:  audit
 ---
-## swan.ai.imageAudit
+ 
 
 **解释**：自定义图像审核。
 

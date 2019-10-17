@@ -1,11 +1,11 @@
 ---
-title: 语音合成
+title: swan.ai.textToAudio
 header: develop
 nav: api
-sidebar: ai_audio
+sidebar:  audio
 ---
 
-## swan.ai.textToAudio
+ 
 
 **解释**：将文本转换为可以播放的 mp3 文件。
 

@@ -1,11 +1,11 @@
 ---
-title: 文本审核
+title: swan.ai.textReview
 header: develop
 nav: api
-sidebar: ai_text
+sidebar: text_swan-ai-textReview
 ---
 
-## swan.ai.textReview
+
 
 **解释**：运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。
 

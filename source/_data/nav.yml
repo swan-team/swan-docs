@@ -1342,152 +1342,152 @@
             sidebar:
 
               -
-                link: /develop/api/ai
+                link: /develop/api/ai/ai
                 text: 接入说明
                 name: ai
               -
-                link: /develop/api/ai_ocr
+                 
                 text: 文字识别
                 name: ai_ocr
                 sidebar:
                   -
-                    link: /develop/api/ai_ocr/#swan-ai-ocrIdCard
+                    link: /develop/api/ai/ocr_swan-ai-ocrIdCard
                     text: swan.ai.ocrIdCard
-                    name: ai_ocr_swan-ai-ocrIdCard
+                    name:  ocr_swan-ai-ocrIdCard
                   -
-                    link: /develop/api/ai_ocr/#swan-ai-ocrBankCard
+                    link: /develop/api/ai/ocr_swan-ai-ocrBankCard
                     text: swan.ai.ocrBankCard
-                    name: ai_ocr_swan-ai-ocrBankCard
+                    name:  ocr_swan-ai-ocrBankCard
                   -
-                    link: /develop/api/ai_ocr/#swan-ai-ocrDrivingLicense
+                    link: /develop/api/ai/ocr_swan-ai-ocrDrivingLicense
                     text: swan.ai.ocrDrivingLicense
-                    name: ai_ocr_swan-ai-ocrDrivingLicense
+                    name: ocr_swan-ai-ocrDrivingLicense
                   -
-                    link: /develop/api/ai_ocr/#swan-ai-ocrVehicleLicense
+                    link: /develop/api/ai/ocr_swan-ai-ocrVehicleLicense
                     text: swan.ai.ocrVehicleLicense
-                    name: ai_ocr_swan-ai-ocrVehicleLicense
+                    name: ocr_swan-ai-ocrVehicleLicense
 
 
               -
-                link: /develop/api/ai_text
+                
                 text: 文本审核
-                name: ai_text
+                name: text
                 sidebar:
                   -
-                    link: /develop/api/ai_text/#swan-ai-textReview
+                    link: /develop/api/ai/text_swan-ai-textReview
                     text: swan.ai.textReview
-                    name: ai_text_swan-ai-textReview
+                    name: text_swan-ai-textReview
               -
-                link: /develop/api/ai_audio
+              
                 text: 语音合成
                 name: ai_audio
                 sidebar:
                   -
-                    link: /develop/api/ai_audio/#swan-ai-textToAudio
+                    link: /develop/api/ai/audio 
                     text: swan.ai.textToAudio
-                    name: ai_audio_swan-ai-textToAudio
+                    name:  audio 
               -
-                link: /develop/api/ai_audit
+                 
                 text: 图像审核
-                name: ai_audit
+                name:  audit
                 sidebar:
                   -
-                    link: /develop/api/ai_audit/#swan-ai-imageAudit
+                    link: /develop/api/ai/audit
                     text: swan.ai.imageAudit
-                    name: ai_audit_swan-ai-imageAudit
+                    name:  audit 
               -
-                link: /develop/api/ai_classify
+           
                 text: 图像识别
                 name: ai_classify
                 sidebar:
                   -
-                    link: /develop/api/ai_classify/#swan-ai-advancedGeneralIdentify
+                    link: /develop/api/ai/classify_swan-ai-advancedGeneralIdentify
                     text: swan.ai.advancedGeneralIdentify
-                    name: ai_classify_swan-ai-advancedGeneralIdentify
+                    name:  classify_swan-ai-advancedGeneralIdentify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-objectDetectIdentify
+                    link: /develop/api/ai/classify_swan-ai-objectDetectIdentify
                     text: swan.ai.objectDetectIdentify
-                    name: ai_classify_swan-ai-objectDetectIdentify
+                    name:  classify_swan-ai-objectDetectIdentify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-carClassify
+                    link: /develop/api/ai/classify_swan-ai-carClassify
                     text: swan.ai.carClassify
-                    name: ai_classify_swan-ai-carClassify
+                    name:  classify_swan-ai-carClassify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-dishClassify
+                    link: /develop/api/ai/classify_swan-ai-dishClassify
                     text: swan.ai.dishClassify
-                    name: ai_classify_swan-ai-dishClassify
+                    name:  classify_swan-ai-dishClassify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-logoClassify
+                    link: /develop/api/ai/classify_swan-ai-logoClassify
                     text: swan.ai.logoClassify
-                    name: ai_classify_swan-ai-logoClassify
+                    name:  classify_swan-ai-logoClassify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-animalClassify
+                    link: /develop/api/ai/classify_swan-ai-animalClassify
                     text: swan.ai.animalClassify
-                    name: ai_classify_swan-ai-animalClassify
+                    name:  classify_swan-ai-animalClassify
                   -
-                    link: /develop/api/ai_classify/#swan-ai-plantClassify
+                    link: /develop/api/ai/classify_swan-ai-plantClassify
                     text: swan.ai.plantClassify
-                    name: ai_classify_swan-ai-plantClassify
+                    name:  classify_swan-ai-plantClassify
 
               -
-                link: /develop/api/ai_voice
+                
                 text: 语音识别
                 name: ai_voice
                 sidebar:
                   -
-                    link: /develop/api/ai_voice/#swan-ai-getVoiceRecognizer
+                    link: /develop/api/ai/voice_swan-ai-getVoiceRecognizer
                     text: swan.ai.getVoiceRecognizer
-                    name: ai_voice_swan-ai-getVoiceRecognizer
+                    name:  voice_swan-ai-getVoiceRecognizer
                   -
-                    link: /develop/api/ai_voice/#VoiceRecognizer
+                    link: /develop/api/ai/voice_swan-VoiceRecognizer
                     text: VoiceRecognizer
-                    name: ai_voice_swan-VoiceRecognizer      
+                    name:  voice_swan-VoiceRecognizer      
               -
-                link: /develop/api/ai_face
+                
                 text: 人脸识别
                 name: ai_face
                 sidebar:
                   -
-                    link: /develop/api/ai_face/#swan-ai-faceDetect
+                    link: /develop/api/ai/face_swan-ai-faceDetect
                     text: swan.ai.faceDetect
-                    name: ai_face_swan-ai-faceDetect
+                    name:  face_swan-ai-faceDetect
                   -
-                    link: /develop/api/ai_face/#swan-ai-faceMatch
+                    link: /develop/api/ai/face_swan-ai-faceMatch
                     text: swan.ai.faceMatch
-                    name: ai_face_swan-ai-faceMatch
+                    name:  face_swan-ai-faceMatch
                   -
-                    link: /develop/api/ai_face/#swan-ai-faceSearch
+                    link: /develop/api/ai/face_swan-ai-faceSearch
                     text: swan.ai.faceSearch
-                    name: ai_face_swan-ai-faceSearch
+                    name:  face_swan-ai-faceSearch
                   -
-                    link: /develop/api/ai_face/#swan-ai-facePersonVerify
+                    link: /develop/api/ai/face_swan-ai-facePersonVerify
                     text: swan.ai.facePersonVerify
-                    name: ai_face_swan-ai-facePersonVerify
+                    name:  face_swan-ai-facePersonVerify
                   -
-                    link: /develop/api/ai_face/#swan-ai-facePersonIdmatch
+                    link: /develop/api/ai/face_swan-ai-facePersonIdmatch
                     text: swan.ai.facePersonIdmatch
-                    name: ai_face_swan-ai-facePersonIdmatch
+                    name:  face_swan-ai-facePersonIdmatch
                   # -
                   #   link: /develop/api/ai_face/#swan-ai-faceVerify
                   #   text: swan.ai.faceVerify
                   #   name: ai_face_swan-ai-faceVerify
                   -
-                    link: /develop/api/ai_face/#swan-ai-faceLivenessSessioncode
+                    link: /develop/api/ai/face_swan-ai-faceLivenessSessioncode
                     text: swan.ai.faceLivenessSessioncode
-                    name: ai_face_swan-ai-faceLivenessSessioncode
+                    name:  face_swan-ai-faceLivenessSessioncode
                   # -
                   #   link: /develop/api/ai_face/#swan-ai-faceLivenessVerify
                   #   text: swan.ai.faceLivenessVerify
                   #   name: ai_face_swan-ai-faceLivenessVerify
               -
-                link: /develop/api/ai_word
+                
                 text: 词法分析
                 name: ai_word
                 sidebar:
                   -
-                    link: /develop/api/ai_word/#swan-ai-nlpLexerCustom
+                    link: /develop/api/ai/word 
                     text: swan.ai.nlpLexerCustom
-                    name: ai_word_swan-ai-nlpLexerCustom
+                    name: word 
         -
             link: /develop/api/media_image
             text: 媒体

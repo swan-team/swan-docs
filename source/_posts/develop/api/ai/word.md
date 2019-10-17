@@ -1,12 +1,12 @@
 ---
-title: 词法分析
+title: swan.ai.nlpLexerCustom
 header: develop
 nav: api
-sidebar: ai_word
+sidebar: word
 ---
 
 
-##  swan.ai.nlpLexerCustom
+   
 
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
