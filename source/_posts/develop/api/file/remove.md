@@ -1,11 +1,11 @@
 ---
-title: 删除文件
+title: swan.removeSavedFile
 header: develop
 nav: api
-sidebar: file_remove
+sidebar:  remove
 ---
 
-## swan.removeSavedFile
+ 
 
 
 **解释**：删除本地存储的文件

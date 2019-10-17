@@ -1924,49 +1924,49 @@
                       name: ARCameraContext-stopRecord
 
         -
-            link: /develop/api/file_save
+            
             text: 文件
             name: file_save
             sidebar:
               -
-                link: /develop/api/file_save
+                
                 text: 保存、获取文件
                 name: file_save
                 sidebar:
                   -
-                    link: /develop/api/file_save/#swan-saveFile
+                    link: /develop/api/file/save_swan-saveFile
                     text: swan.saveFile
-                    name: file_save_swan-saveFile
+                    name: save_swan-saveFile
                   -
-                    link: /develop/api/file_save/#swan-getFileInfo
+                    link: /develop/api/file/save_swan-getFileInfo
                     text: swan.getFileInfo
-                    name: file_save_swan-getFileInfo
+                    name: save_swan-getFileInfo
                   -
-                    link: /develop/api/file_save/#swan-getSavedFileList
+                    link: /develop/api/file/save_swan-getSavedFileList
                     text: swan.getSavedFileList
-                    name: file_save_swan-getSavedFileList
+                    name: save_swan-getSavedFileList
                   -
-                    link: /develop/api/file_save/#swan-getSavedFileInfo
+                    link: /develop/api/file/save_swan-getSavedFileInfo
                     text: swan.getSavedFileInfo
-                    name: file_save_swan-getSavedFileInfo
+                    name: save_swan-getSavedFileInfo
               -
-                link: /develop/api/file_remove
+                 
                 text: 删除文件
                 name: file_remove
                 sidebar:
                   -
-                    link: /develop/api/file_remove/#swan-removeSavedFile
+                    link: /develop/api/file/remove 
                     text: swan.removeSavedFile
-                    name: file_remove_swan-removeSavedFile
+                    name: remove 
               -
-                link: /develop/api/file_open
+                
                 text: 打开新的文件页面
                 name: file_open
                 sidebar:
                   -
-                    link: /develop/api/file_open/#swan-openDocument
+                    link: /develop/api/file/open 
                     text: swan.openDocument
-                    name: file_open_swan-openDocument
+                    name: open 
         -
             link: /develop/api/storage_save
             text: 数据存储

@@ -1,10 +1,10 @@
 ---
-title: 打开新的文件页面
+title: swan.openDocument
 header: develop
 nav: api
-sidebar: file_open
+sidebar: open
 ---
-## swan.openDocument
+
 
 **解释**：新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
 

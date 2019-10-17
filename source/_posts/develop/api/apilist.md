@@ -81,12 +81,12 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-saveFile/">swan.saveFile</a>|保存文件到本地|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getFileInfo/">swan.getFileInfo</a>|获取文件信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getSavedFileList/">swan.getSavedFileList</a>|获取本地已保存的文件列表|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getSavedFileInfo/">swan.getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_remove/#swan-removeSavedFile/">swan.removeSavedFile</a>|删除本地存储的文件|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_open/#swan-openDocument/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-saveFile/">swan.saveFile</a>|保存文件到本地|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getFileInfo/">swan.getFileInfo</a>|获取文件信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileList/">swan.getSavedFileList</a>|获取本地已保存的文件列表|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileInfo/">swan.getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/remove/">swan.removeSavedFile</a>|删除本地存储的文件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/open/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
 
 
 ## 数据存储
