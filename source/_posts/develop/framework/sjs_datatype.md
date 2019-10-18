@@ -174,7 +174,7 @@ function 里面可以使用 arguments 关键词。该关键词目前只支持以
 **示例代码：**
 
 ```js
-var a = function(){
+var a = function() {
   console.log(3 === arguments.length);
   console.log(100 === arguments[0]);
   console.log(200 === arguments[1]);
@@ -196,9 +196,9 @@ a(100,200,300);
 ```js
 var func = function (a,b,c) { }
 
-console.log("Function" === func.constructor);
+console.log('Function' === func.constructor);
 console.log(3 === func.length);
-console.log("[function Function]" === func.toString());
+console.log('[function Function]' === func.toString());
 ```
 
 ## array
@@ -210,7 +210,7 @@ array 支持以下的定义方式：
 ```js
 var a = [];      //生成一个新的空数组
 
-a = [1,"2",{},function(){}];  //生成一个新的非空数组，数组元素可以是任何类型
+a = [1, '2', {}, function() {}];  //生成一个新的非空数组，数组元素可以是任何类型
 ```
 
 **属性**
@@ -348,8 +348,8 @@ getRegExp(pattern[, flags])
 **示例代码：**
 
 ```js
-var a = getRegExp("x", "img");
-console.log("x" === a.source);
+var a = getRegExp('x', 'img');
+console.log('x' === a.source);
 console.log(true === a.global);
 console.log(true === a.ignoreCase);
 console.log(true === a.multiline);
@@ -384,28 +384,28 @@ console.log(true === a.multiline);
 
 ```js
 var number = 10;
-console.log( "Number" === number.constructor );
+console.log( 'Number' === number.constructor );
 
-var string = "str";
-console.log( "String" === string.constructor );
+var string = 'str';
+console.log( 'String' === string.constructor );
 
 var boolean = true;
-console.log( "Boolean" === boolean.constructor );
+console.log( 'Boolean' === boolean.constructor );
 
 var object = {};
-console.log( "Object" === object.constructor );
+console.log( 'Object' === object.constructor );
 
 var func = function(){};
-console.log( "Function" === func.constructor );
+console.log( 'Function' === func.constructor );
 
 var array = [];
-console.log( "Array" === array.constructor );
+console.log( 'Array' === array.constructor );
 
 var date = getDate();
-console.log( "Date" === date.constructor );
+console.log( 'Date' === date.constructor );
 
 var regexp = getRegExp();
-console.log( "RegExp" === regexp.constructor );
+console.log( 'RegExp' === regexp.constructor );
 ```
 
 **typeof**
