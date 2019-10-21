@@ -19,6 +19,7 @@ sidebar: useintroduction
 页面的`<form/>`组件，属性 report-submit 为 true 时，可以声明为需发模板消息:
     1、 属性 report-type 为 default 时（默认），声明为发送表单类模板消息。此时用户点击按钮提交表单可以获取 formId，用于发送表单类模板消息
     2、 属性 report-type 为 subscribe 时，声明为发送订阅类模板消息。此时用户点击按钮，首先弹出请求授权面板，授权成功后可以获取 formId，用于发送订阅类模板消息
+    3、 未避免多次推送对用户造成干扰，formid 仅进行一次推送。
 
 #### orderId
 当用户通过百度收银台支付后，开发者可以在收银台接口通知支付状态通知参数中获取到orderId 用于发送支付类模板消息。
