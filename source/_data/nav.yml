@@ -1871,7 +1871,7 @@
                   text: swan.createCameraContext
                   name: cameracontext_swan-createCameraContext
                 -
-                  link: /develop/media/cameracontext_CameraContext
+                  link: /develop/api/media/cameracontext_CameraContext
                   text: CameraContext
                   name: cameracontext_CameraContext
                   sidebar:
