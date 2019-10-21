@@ -1,5 +1,5 @@
 ---
-title: 开发简易
+title: web 化开发建议
 header: develop
 nav: function
 sidebar: proposal

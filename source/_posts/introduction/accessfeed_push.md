@@ -88,9 +88,9 @@ sidebar: accessfeed_push
 
 
 
-**详情请参考开发者文档内容**
+**详情请参考[开发者文档](/develop/serverapi/submitresource/)内容**
 
-https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/#submitresource/
+ 
 
  
 

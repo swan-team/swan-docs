@@ -47,7 +47,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/package/upload?access_token=ACC
 |参数名|	类型|	是否必须|	描述|
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
-|template_id	|int	|是	|代码库中的代码模版ID，可以在第三方平台-模板管理-模板库 查看到模板ID|
+|template_id	|int	|是	|代码库中的代码模板ID，可以在第三方平台-模板管理-模板库 查看到模板ID|
 |ext_json	|string|	是|	第三方自定义的配置|
 |user_version	|string	|是|	代码版本号，开发者可自定义。|
 |user_desc	|string|	是|	代码描述，开发者可自定义。|
@@ -123,7 +123,7 @@ ext_json内容说明
 |directCommit	|string|否|	是否直接送审|
 
 **说明**
-* 为了便于第三方平台使用同一个小程序模版为不同的小程序提供服务，第三方可以将自定义信息放置在ext_json中。
+* 为了便于第三方平台使用同一个小程序模板为不同的小程序提供服务，第三方可以将自定义信息放置在ext_json中。
 
 * 关于ext_json中的其他参数详情见：https://smartprogram.baidu.com/docs/develop/tutorial/process/
 

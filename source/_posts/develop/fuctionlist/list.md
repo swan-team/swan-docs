@@ -4,7 +4,7 @@ header: develop
 nav: fuctionlist
 sidebar: list
 ---
-# 欢迎开发智能小程序
+ 
 
 欢迎使用百度智能小程序，本文档为您提供[快速入门](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](http://smartprogram.baidu.com/docs/develop/component/componetlist/)、[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方接入](https://smartprogram.baidu.com/docs/develop/third/pro/)等详细的文档的介绍。
 如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
