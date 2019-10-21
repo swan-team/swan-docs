@@ -7,7 +7,7 @@ sidebar:  liveplayercontext_LivePlayerContext
 
  
 
-## 
+
 
 **解释**： swan.createLivePlayerContext 的返回值
 
