@@ -69,8 +69,8 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-saveVideoToPhotosAlbum">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-saveVideoToPhotosAlbum/">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_liveplayercontext/#swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
