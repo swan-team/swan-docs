@@ -1760,7 +1760,7 @@
                       text: InnerAudioContext.offSeeked
                       name: createinneraudiocontext_InnerAudioContext-offSeeked
                 -
-                  link: /develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption
+                  link: /develop/api/media/createinneraudiocontext_swan-setInnerAudioOption
                   text: swan.setInnerAudioOption
                   name: createinneraudiocontext_swan-setInnerAudioOption
             -

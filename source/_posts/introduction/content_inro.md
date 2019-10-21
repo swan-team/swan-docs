@@ -55,7 +55,7 @@ sidebar: content_inro
 
 当需要插入小程序时，点击插入小程序按钮，输入小程序对应配置信息，确定后即可成功插入小程序卡片到光标位置；
 
-![image-20190920163412549](/Users/wangdong22/Library/Application Support/typora-user-images/image-20190920163412549.png)
+![image-20190920163412549](../../img/introduction/contact/添加小程序.png)
 
 3.2选择"卡券内容"时，进入卡券编辑页面，在编辑框添加已经创建的卡券，配置一段描述文字，进行发布；
 
