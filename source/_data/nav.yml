@@ -1964,64 +1964,64 @@
                     text: swan.openDocument
                     name: open 
         -
-            link: /develop/api/storage_save
+     
             text: 数据存储
-            name: storage_save
+       
             sidebar:
               -
-                link: /develop/api/storage_save
+      
                 text: 存储数据
-                name: storage_save
+          
                 sidebar:
                   -
-                    link: /develop/api/storage_save/#数据缓存流程
+                    link: /develop/api/storage/save_process
                     text: 数据缓存流程
-                    name: storage_save_数据缓存流程
+                    name: save_process
                   -
-                    link: /develop/api/storage_save/#swan-setStorage
+                    link: /develop/api/storage/save_swan-setStorage
                     text: swan.setStorage
-                    name: storage_save_swan-setStorage
+                    name:  save_swan-setStorage
                   -
-                    link: /develop/api/storage_save/#swan-setStorageSync
+                    link: /develop/api/storage/save_swan-setStorageSync
                     text: swan.setStorageSync
-                    name: storage_save_swan-setStorageSync
+                    name: save_swan-setStorageSync
                   -
-                    link: /develop/api/storage_save/#swan-getStorage
+                    link: /develop/api/storage/save_swan-getStorage
                     text: swan.getStorage
-                    name: storage_save_swan-getStorage
+                    name:  save_swan-getStorage
                   -
-                    link: /develop/api/storage_save/#swan-getStorageSync
+                    link: /develop/api/storage/save_swan-getStorageSync
                     text: swan.getStorageSync
-                    name: storage_save_swan-getStorageSync
+                    name: save_swan-getStorageSync
                   -
-                    link: /develop/api/storage_save/#swan-getStorageInfo
+                    link: /develop/api/storage/save_swan-getStorageInfo
                     text: swan.getStorageInfo
-                    name: storage_save_swan-getStorageInfo
+                    name: save_swan-getStorageInfo
                   -
-                    link: /develop/api/storage_save/#swan-getStorageInfoSync
+                    link: /develop/api/storage/save_swan-getStorageInfoSync
                     text: swan.getStorageInfoSync
-                    name: storage_save_swan-getStorageInfoSync
+                    name: save_swan-getStorageInfoSync
               -
-                link: /develop/api/storage_remove
+              
                 text: 存储清理
-                name: storage_remove
+               
                 sidebar:
                   -
-                    link: /develop/api/storage_remove/#swan-removeStorage
+                    link: /develop/api/storage/remove_swan-removeStorage
                     text: swan.removeStorage
-                    name: storage_remove_swan-removeStorage
+                    name: remove_swan-removeStorage
                   -
-                    link: /develop/api/storage_remove/#swan-removeStorageSync
+                    link: /develop/api/storage/remove_swan-removeStorageSync
                     text: swan.removeStorageSync
-                    name: storage_remove_swan-removeStorageSync
+                    name: remove_swan-removeStorageSync
                   -
-                    link: /develop/api/storage_remove/#swan-clearStorage
+                    link: /develop/api/storage/remove_swan-clearStorage
                     text: swan.clearStorage
-                    name: storage_remove_swan-clearStorage
+                    name: remove_swan-clearStorage
                   -
-                    link: /develop/api/storage_remove/#swan-clearStorageSync
+                    link: /develop/api/storage/remove_swan-clearStorageSync
                     text: swan.clearStorageSync
-                    name: storage_remove_swan-clearStorageSync
+                    name: remove_swan-clearStorageSync
         -
             link: /develop/api/location_get
             text: 位置

@@ -94,15 +94,15 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
 
 
 ## 位置
