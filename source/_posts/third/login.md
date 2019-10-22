@@ -1,6 +1,6 @@
 ---
 title: 授权小程序登录
-header: develop
+header: third
 nav: third
 sidebar: login
 ---

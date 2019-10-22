@@ -18,15 +18,16 @@ sidebar: media_video
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
-|src|String|  | 是 |视频的资源地址|
+|src|String|  | 是 |视频的资源地址，支持云文件ID（<font color="#4183c4">百度 APP 11.16 以上</font>）|
+|title| String | | 否 | 视频标题，全屏时在视频顶部展示 <font color="#4183c4">百度 APP 11.16 以上</font> |
 |initial-time|Number|  | 否 |指定视频初始播放位置|
 |controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|否|是否自动播放|
 |loop|Boolean|false|否|是否循环播放|
 |muted|Boolean|false|否|是否静音播放|
 |objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String|  |否|视频封面的图片网络资源地址|
-|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
+|poster|String|  |否|视频封面的图片网络资源地址，支持云文件ID（<font color="#4183c4">百度 APP 11.16 以上</font>）|
+|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|
 |direction|Number|	|否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
 |show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
@@ -36,7 +37,12 @@ sidebar: media_video
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
+|show-mute-btn|Boolean|false|否|是否显示静音按钮 <font color="#4183c4">百度 APP 11.16 以上</font>|
+|play-button-position| String | bottom| 否 | 播放按钮的位置 <font color="#4183c4">百度 APP 11.16 以上</font> |
 |show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
+|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 <font color="#4183c4">百度 APP 11.16 以上</font>|
+|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势 <font color="#4183c4">百度 APP 11.16 以上</font>|
+|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停 <font color="#4183c4">百度 APP 11.16 以上</font>|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
@@ -88,6 +94,14 @@ sidebar: media_video
 |MPEG-4	|是|	否|
 |VP8|	是	|否|
 |VP9|	是	|否|
+
+**play-btn-position的合法值**：
+
+|值| 说明|
+|----|----|
+|bottom| console bar 上 |
+|center| 视频中间 |
+
 
 **示例**：
 <a href="swanide://fragment/b4de2816258292dec183838859e8c57f1566389828332" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

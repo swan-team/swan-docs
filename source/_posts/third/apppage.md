@@ -1,13 +1,13 @@
 ---
 title: 启动流程与能力
-header: develop
+header: third
 nav: third
 sidebar: apppage
 ---
 
 ## 小程序提包上线流程
 
-![上线流程](../../../img/tp/8d86c204cc7d7940542cfb859.png "上线流程")
+![上线流程](../../img/tp/8d86c204cc7d7940542cfb859.png "上线流程")
 
 如上图所示，在开发者将小程序授权给第三方平台后，第三方代客户完成小程序提包上线需如下步骤：
 

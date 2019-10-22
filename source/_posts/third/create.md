@@ -1,6 +1,6 @@
 ---
 title: 第三方平台创建引导
-header: develop
+header: third
 nav: third
 sidebar: create
 ---
@@ -15,7 +15,7 @@ sidebar: create
 
 前往[第三方平台官网](https://smartprogram.baidu.com/developer/tpindex.html)，点击立即申请按钮。
 
-![avatar](../../../img/tp/dsfpt.png)
+![avatar](../../img/tp/dsfpt.png)
 <br>
 
 百度会对您的服务商资质进行审核，根据账号的主体认证状态不同，具体流程如下：
@@ -23,14 +23,14 @@ sidebar: create
 #### 1. 针对未进行过主体认证的账号：
 填写企业名称，需确保与营业执照的名称一致，否则将影响后续平台注册与认证。
 
-![avatar](../../../img/tp/txqymc.png)
+![avatar](../../img/tp/txqymc.png)
 
 <br>
 请务必再次确认是否使用当前帐号及企业主体申请入驻第三方平台，确认提交后，百度将对您的服务商资质进行审核。
 >注意：审核通过后，账号将与该企业主体绑定，且短期内不支持解绑。
 
 
-![avatar](../../../img/tp/qrzt.png)
+![avatar](../../img/tp/qrzt.png)
 
 #### 2. 针对已进行过主体认证的账号：
 自动复用主体认证时所提交的企业信息，确认使用当前帐号及企业主体申请入驻后，将进入服务商资质审核流程。
@@ -54,12 +54,12 @@ sidebar: create
 #### 第一步：填写基本信息
 填写您的第三方平台基本信息，该信息将展示在用户授权页面。其中**官方网站**需填写您的主体在工信部完成备案的网址。
 
-![填写基本信息](../../../img/tp/txjbxx.png)
+![填写基本信息](../../img/tp/txjbxx.png)
 
 #### 第二步：选择权限
 选择您的平台所需获取的用户权限，选中后该权限将展示在用户授权页面中，并可被用户选择
 
-![选择权限](../../../img/tp/xzqx.png)
+![选择权限](../../img/tp/xzqx.png)
 
 #### 第三步：填写开发资料
 填写开发相关信息，具体如下：
@@ -74,7 +74,7 @@ sidebar: create
 * 业务域名：小程序内H5跳转域名限制规则，业务域名需要经过ICP备案。
 * 白名单IP地址列表：仅当第三方平台IP地址在该列表中时，才被允许调用相关接口。
 
-![填写开发资料](../../../img/tp/txkfzl.png)
+![填写开发资料](../../img/tp/txkfzl.png)
 
 ### 四、第三方平台开发
 
@@ -89,7 +89,7 @@ sidebar: create
 #### 2.权限集能力检测
 在您完成主体真实性认证及平台开发后，可提交全网发布。
 
-![全网发布](../../../img/tp/dfb.png)
+![全网发布](../../img/tp/dfb.png)
 
 在您点击全网发布后，百度将会对您所选的平台权限集所对应能力的实现情况进行自动化检测，请确保您已经使用授权测试小程序验证相关能力。具体检测机制可参考：[第三方平台发布检测](https://smartprogram.baidu.com/docs/develop/third/publication/)。
 
@@ -98,4 +98,4 @@ sidebar: create
 
 通过审核后，平台全网发布成功，您的平台信息即可在第三方平台官方主页中被查询到，地址：[https://smartprogram.baidu.com/developer/tpindex.html](https://smartprogram.baidu.com/developer/tpindex.html)。
 
-![查询平台](../../../img/tp/cxpt.png)
+![查询平台](../../img/tp/cxpt.png)

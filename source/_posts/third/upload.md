@@ -1,6 +1,6 @@
 ---
 title: 图片上传
-header: develop
+header: third
 nav: third
 sidebar: upload
 ---

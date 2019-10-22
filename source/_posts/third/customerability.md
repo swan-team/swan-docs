@@ -1,6 +1,6 @@
 ---
 title: 客服消息功能
-header: develop
+header: third
 nav: third
 sidebar: customerability
 ---
@@ -29,7 +29,7 @@ sidebar: customerability
 
 在开发者将**客服权限**授权给服务商后，服务商可以代为接收并回复小程序的客服消息。
 
-![客服消息转发原理](../../../img/tp/kf.png "客服消息转发原理")
+![客服消息转发原理](../../img/tp/kf.png "客服消息转发原理")
 
 当用户给小程序（已授权客服权限）客服发消息时，百度的服务器会将消息的数据包（JSON或者XML格式）POST到第三方服务商的消息与事件接收URL。服务商收到客服消息后，需自行展示给客户的客服人员，并在客服回复消息后，调用接口将该消息异步回复给百度。
 

@@ -63,6 +63,12 @@ Page({
             this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
+    },
+    stop() {
+        this.videoContext.stop();
+    },
+    playbackRate() {
+        this.videoContext.playbackRate(2);
     }
 });
 ```

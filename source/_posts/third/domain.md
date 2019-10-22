@@ -1,6 +1,6 @@
 ---
 title: 设置第三方服务/业务域名 
-header: develop
+header: third
 nav: third
 sidebar: domain
 ---
