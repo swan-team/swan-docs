@@ -24,6 +24,7 @@ function searchFunc(searchId, contentId) {
         });
     }
     $('#top-search-box').on('click', function (e) {
+        console.log(222)
         if ($(e.target).hasClass('reset-search-btn')) {
             toggleArticleContent(true);
             $('#top-search-box').removeClass('top-search-box-focus');
@@ -51,6 +52,8 @@ function searchFunc(searchId, contentId) {
         if (e.keyCode === 13) {
             e.returnValue = false;
             e.preventDefault();
+            // 搜索跳转打点
+            _hmt.push(['_trackEvent', 'search', '搜索跳转', e.target.value]);
             window.open(`${window.location.origin}/forum/search?word=${e.target.value}&scope=devdocs`, '_blank');
         }
     })
