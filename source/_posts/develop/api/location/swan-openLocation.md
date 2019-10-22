@@ -1,10 +1,9 @@
 ---
-title: 查看位置
+title: swan.openLocation
 header: develop
 nav: api
-sidebar: location_open
+sidebar: swan-openLocation
 ---
-## swan.openLocation
 
 **解释**：使用宿主 App 内置地图查看位置。
 

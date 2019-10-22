@@ -2023,69 +2023,69 @@
                     text: swan.clearStorageSync
                     name: remove_swan-clearStorageSync
         -
-            link: /develop/api/location_get
+        
             text: 位置
-            name: location_get
+      
             sidebar:
               -
-                link: /develop/api/location_get
+             
                 text: 获取位置
-                name: location_get
+           
                 sidebar:
                   -
-                    link: /develop/api/location_get/#swan-getLocation
+                    link: /develop/api/location/swan-getLocation
                     text: swan.getLocation
-                    name: location_get_swan-getLocation
+                    name: swan-getLocation
                   -
-                    link: /develop/api/location_get/#swan-chooseLocation
+                    link: /develop/api/location/swan-chooseLocation
                     text: swan.chooseLocation
-                    name: location_get_swan-chooseLocation
+                    name:  swan-chooseLocation
 
               -
-                link: /develop/api/location_open
+      
                 text: 查看位置
-                name: location_open
+             
                 sidebar:
                   -
-                    link: /develop/api/location_open/#swan-openLocation
+                    link: /develop/api/location/swan-openLocation
                     text: swan.openLocation
-                    name: location_open_swan-openLocation
+                    name:  swan-openLocation
               -
-                link: /develop/api/location_map
+           
                 text: 地图组件控制
-                name: location_map
+            
                 sidebar:
                   -
-                    link: /develop/api/location_map/#swan-createMapContext
+                    link: /develop/api/location/swan-createMapContext
                     text: swan.createMapContext
-                    name: location_map_swan-createMapContext
+                    name:  swan-createMapContext
                   -
-                    link: /develop/api/location_map/#MapContext
+                    link: /develop/api/location/MapContext
                     text: MapContext
-                    name: location_map_MapContext
+                    name:  MapContext
                     sidebar:
                       -
-                        link: /develop/api/location_map/#MapContext-getCenterLocation
+                        link: /develop/api/location/MapContext-getCenterLocation
                         text: MapContext.getCenterLocation
                         name: MapContext-getCenterLocation
                       -
-                        link: /develop/api/location_map/#MapContext-moveToLocation
+                        link: /develop/api/location/MapContext-moveToLocation
                         text: MapContext.moveToLocation
                         name: MapContext-moveToLocation
                       -
-                        link: /develop/api/location_map/#MapContext-translateMarker
+                        link: /develop/api/location/MapContext-translateMarker
                         text: MapContext.translateMarker
                         name: MapContext-translateMarker
                       -
-                        link: /develop/api/location_map/#MapContext-includePoints
+                        link: /develop/api/location/MapContext-includePoints
                         text: MapContext.includePoints
                         name: MapContext-includePoints
                       -
-                        link: /develop/api/location_map/#MapContext-getRegion
+                        link: /develop/api/location/MapContext-getRegion
                         text: MapContext.getRegion
-                        name: MapContext-.getRegion
+                        name: MapContext-getRegion
                       -
-                        link: /develop/api/location_map/#MapContext-getScale
+                        link: /develop/api/location/MapContext-getScale
                         text: MapContext.getScale
                         name: MapContext-getScale
         -
