@@ -37,13 +37,7 @@ sidebar: media_video
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
-|show-mute-btn|Boolean|false|否|是否显示静音按钮 <font color="#4183c4">百度 APP 11.16 以上</font>|
-|play-button-position| String | bottom| 否 | 播放按钮的位置 <font color="#4183c4">百度 APP 11.16 以上</font> |
 |show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
-|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 <font color="#4183c4">百度 APP 11.16 以上</font>|
-|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势 <font color="#4183c4">百度 APP 11.16 以上</font>|
-|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停 <font color="#4183c4">百度 APP 11.16 以上</font>|
-|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
@@ -95,12 +89,6 @@ sidebar: media_video
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-**play-btn-position的合法值**：
-
-|值| 说明|
-|----|----|
-|bottom| console bar 上 |
-|center| 视频中间 |
 
 
 **示例**：
