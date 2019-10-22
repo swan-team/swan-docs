@@ -122,8 +122,6 @@ hello swan
 <!-- 定义SJS -->
 <import-sjs module="utils">
 const bar = function(name) {
-    console.log('=====');
-    console.log(name);
     return 'swan-' + name;
 }
 const foo = 'hello swan';

@@ -22,13 +22,20 @@
         '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
         '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
-        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
-        '/docs/develop/devtools/smartappdebug_function/#自定义预处理/':'/docs/develop/devtools/smartappdebug_function_pre/',
-        '/docs/develop/swan/compatibility/#基础库最低版本设置':'/docs/develop/swan/compatibility_version/',
+        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/'
 
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
+
+!function(url) {
+    var urlMap = {
+        '/docs/develop/devtools/smartappdebug_function/#自定义预处理/': '/docs/develop/devtools/smartappdebug_function_pre/',
+        '/docs/develop/swan/compatibility/#基础库最低版本设置': '/docs/develop/swan/compatibility_version/'
+    };
+    urlMap[url] && location.replace(urlMap[url]);
+}(decodeURIComponent(location.pathname + location.hash));
+
 (function(win, doc, $) {
     var localSidebar = function () {
         var noop = function () {};

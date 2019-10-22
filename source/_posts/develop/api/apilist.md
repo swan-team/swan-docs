@@ -58,23 +58,23 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="http://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-saveVideoToPhotosAlbum">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_liveplayercontext/#swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-saveVideoToPhotosAlbum/">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/cameracontext_swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
 
 
 ## 文件
@@ -94,25 +94,25 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
 
 
 ## 位置
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/#swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_map/#swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
 
 
 ## 界面
