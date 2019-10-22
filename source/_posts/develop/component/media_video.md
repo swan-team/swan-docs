@@ -18,16 +18,15 @@ sidebar: media_video
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
-|src|String|  | 是 |视频的资源地址，支持云文件ID（<font color="#4183c4">百度 APP 11.16 以上</font>）|
-|title| String | | 否 | 视频标题，全屏时在视频顶部展示 <font color="#4183c4">百度 APP 11.16 以上</font> |
+|src|String|  | 是 |视频的资源地址|
 |initial-time|Number|  | 否 |指定视频初始播放位置|
 |controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
 |autoplay|Boolean|false|否|是否自动播放|
 |loop|Boolean|false|否|是否循环播放|
 |muted|Boolean|false|否|是否静音播放|
 |objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String|  |否|视频封面的图片网络资源地址，支持云文件ID（<font color="#4183c4">百度 APP 11.16 以上</font>）|
-|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|
+|poster|String|  |否|视频封面的图片网络资源地址|
+|page-gesture|	Boolean|	false|否|	在非全屏模式下，是否开启使用手势调节亮度与音量。|
 |direction|Number|	|否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
 |show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
