@@ -289,7 +289,7 @@ auth_info.scope_name|string|权限名称
 auth_info.type|int|权限类型(0:小程序纬度权限 1:账号纬度权限)
 min\_swan\_version	|string	|开发者工具最低版本
 min\_swan\_version	|string	|开发者工具最低版本
-status	|int	| 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务
+status	|int	| 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线
 web\_status |int | 小程序的web化开关状态 <br> 0:未开启 <br>1:开启 <br>2:关闭
  
 
