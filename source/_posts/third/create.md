@@ -78,7 +78,7 @@ sidebar: create
 
 ### 四、第三方平台开发
 
-开发并实现第三方平台授权、代开发、代运营相关能力，具体可参考：[第三方接入文档](https://smartprogram.baidu.com/docs/develop/third/develop/)。
+开发并实现第三方平台授权、代开发、代运营相关能力，具体可参考：[第三方接入文档](https://smartprogram.baidu.com/docs/third/develop/)。
 
 ### 五、第三方平台发布
 当您的第三方平台相关功能开发完成通过主体真实性认证后，可以提交全网发布。百度将会对您提交的平台基本信息进行审核，并对所选权限集对应的能力进行检测。具体流程如下：
@@ -91,7 +91,7 @@ sidebar: create
 
 ![全网发布](../../img/tp/dfb.png)
 
-在您点击全网发布后，百度将会对您所选的平台权限集所对应能力的实现情况进行自动化检测，请确保您已经使用授权测试小程序验证相关能力。具体检测机制可参考：[第三方平台发布检测](https://smartprogram.baidu.com/docs/develop/third/publication/)。
+在您点击全网发布后，百度将会对您所选的平台权限集所对应能力的实现情况进行自动化检测，请确保您已经使用授权测试小程序验证相关能力。具体检测机制可参考：[第三方平台发布检测](https://smartprogram.baidu.com/docs/develop/third/develop/)。
 
 #### 3.平台基本信息审核
 在您通过权限集能力检测后，百度将会对您的平台基本信息进行人工审核，请您耐心等待审核结果。

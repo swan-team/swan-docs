@@ -77,7 +77,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/category/list
 
 ## 修改小程序类目
 
-现在只支持类目的覆盖修改，主体下类目资质已经审核通过的不会再次审核，小程序类目上限为5个。资质图片需要使用<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>的返回值
+现在只支持类目的覆盖修改，主体下类目资质已经审核通过的不会再次审核，小程序类目上限为5个。资质图片需要使用<a href="https://smartprogram.baidu.com/docs/third/upload/">图片上传接口</a>的返回值
 
 接口说明:
 ```
@@ -133,7 +133,7 @@ categorys示例：
 
 ## 修改小程序icon
 
-修改小程序icon会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/develop/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
+修改小程序icon会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
 
 接口说明:
 ```
@@ -144,7 +144,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
 |参数名	|类型|	是否必须|	描述|
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
-|image_url|	string	|是	|小程序icon地址，可以通过<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>获取icon的url。|
+|image_url|	string	|是	|小程序icon地址，可以通过<a href="https://smartprogram.baidu.com/docs/third/upload/">图片上传接口</a>获取icon的url。|
 响应数据:
 ```json
 {
@@ -161,7 +161,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
 
 ## 修改小程序功能介绍
 
-修改小程序功能介绍会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/develop/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
+修改小程序功能介绍会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
 
 接口说明:
 ```
@@ -311,7 +311,7 @@ msg | string | 错误描述信息，用来帮助理解和解决发生的错误
 
 ## 修改小程序名称
 
-修改小程序名称会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/develop/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
+修改小程序名称会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
 
 接口说明:
 ```
@@ -323,7 +323,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
 |---|---|---|---|
 |access_token|	string|	是|	授权小程序的接口调用凭据|
 |nick_name|	string|	是|	小程序名字|
-|app_name_material| string | 否 | 如果小程序名称包含品牌词，需要上传品牌资质证明。要求图片链接来自于<a href="https://smartprogram.baidu.com/docs/develop/third/upload/">图片上传接口</a>返回的url，多个图片链接以逗号 , 分隔 |
+|app_name_material| string | 否 | 如果小程序名称包含品牌词，需要上传品牌资质证明。要求图片链接来自于<a href="https://smartprogram.baidu.com/docs/third/upload/">图片上传接口</a>返回的url，多个图片链接以逗号 , 分隔 |
 
 响应数据:
 ```json

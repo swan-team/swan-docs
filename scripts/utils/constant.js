@@ -10,7 +10,7 @@ const BOARD_MAP = {
     'develop': '开发',
     'introduction': '介绍',
     'operations': '运营',
-    'third': '第三方接入'
+    'third': '第三方平台'
 };
 
 // 文档tagName

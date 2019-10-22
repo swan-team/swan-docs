@@ -33,15 +33,15 @@ sidebar: develop
 ![添加模板](../../img/tp/tjmb.png "添加模板")
 
 ### 第四步：开发者将小程序授权第三方平台
-开发者需要通过百度APP扫描第三方平台提供的授权二维码，将小程序授权给第三方平台。具体第三方授权流程可参考文档：https://smartprogram.baidu.com/docs/develop/third/pro/
+开发者需要通过百度APP扫描第三方平台提供的授权二维码，将小程序授权给第三方平台。具体第三方授权流程可参考文档：https://smartprogram.baidu.com/docs/third/pro/
 
 ### 第五步：调用接口为授权小程序提交代码包
-具体接口详见“小程序包管理”中相关接口：https://smartprogram.baidu.com/docs/develop/third/apppage/
+具体接口详见“小程序包管理”中相关接口：https://smartprogram.baidu.com/docs/third/apppage/
 
 ## 二、定制开发
 
 ### 第一步：开发者将小程序授权第三方平台
-开发者需要通过百度APP扫描第三方平台提供的授权二维码，将小程序授权给第三方平台。具体第三方授权流程可参考文档：https://smartprogram.baidu.com/docs/develop/third/pro/
+开发者需要通过百度APP扫描第三方平台提供的授权二维码，将小程序授权给第三方平台。具体第三方授权流程可参考文档：https://smartprogram.baidu.com/docs/third/pro/
 
 ### 第二步：开发并上传小程序源代码包
 使用绑定开发小程序的开发者账号登录百度小程序开发者工具（IDE），并在开发者工具中按照正常的小程序开发流程进行代码开发和调试。开发完成后，在小程序包中增加ext.json文件，并在文件中增加extAppid字段（该appId请填写待提包的客户授权小程序id），点击发布即可完成授权小程序代码包提交。

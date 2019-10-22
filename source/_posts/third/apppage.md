@@ -14,22 +14,22 @@ sidebar: apppage
 ### 第一步：提交代码包
 第三方可通过模板提包或源代码提包两种方式，为授权小程序账号提交代码包
 
-* 通过API实现模板提包可参考：[为授权的小程序帐号上传小程序代码API](https://smartprogram.baidu.com/docs/develop/third/apppage/#为授权的小程序帐号上传小程序代码)
-* 使用开发者工具直接代提交源代码包可参考：[为授权的小程序帐号上传源代码包](https://smartprogram.baidu.com/docs/develop/third/develop/#二、定制开发)
-* 查询代码包状态及详情可参考：[获取小程序包列表API](https://smartprogram.baidu.com/docs/develop/third/apppage/#获取小程序包列表)
+* 通过API实现模板提包可参考：[为授权的小程序帐号上传小程序代码API](https://smartprogram.baidu.com/docs/third/apppage/#为授权的小程序帐号上传小程序代码)
+* 使用开发者工具直接代提交源代码包可参考：[为授权的小程序帐号上传源代码包](https://smartprogram.baidu.com/docs/third/develop/#二、定制开发)
+* 查询代码包状态及详情可参考：[获取小程序包列表API](https://smartprogram.baidu.com/docs/third/apppage/#获取小程序包列表)
 
 ### 第二步：提交代码审核
 代码包提交成功后，可以为小程序提交代码审核
 
-* 为代码包提交审核可参考：[为授权的小程序提交审核API](https://smartprogram.baidu.com/docs/develop/third/apppage/#为授权的小程序提交审核)
-* 审核完成出结果后，将会推送审核结果消息至第三方平台：[代码审核状态推送](https://smartprogram.baidu.com/docs/develop/third/apppage/#代码审核状态推送)
+* 为代码包提交审核可参考：[为授权的小程序提交审核API](https://smartprogram.baidu.com/docs/third/apppage/#为授权的小程序提交审核)
+* 审核完成出结果后，将会推送审核结果消息至第三方平台：[代码审核状态推送](https://smartprogram.baidu.com/docs/third/apppage/#代码审核状态推送)
 
 **注意：提交代码审核前请确保小程序的基本信息已经全部审核通过，否则无法正常提交代码包审核**
 
 ### 第三步：提交发布上线
 代码包审核通过后，可以提交小程序发布，实现小程序上线
 
-* 为小程序提交发布可参考：[发布已通过审核的小程序API](https://smartprogram.baidu.com/docs/develop/third/apppage/#发布已通过审核的小程序)
+* 为小程序提交发布可参考：[发布已通过审核的小程序API](https://smartprogram.baidu.com/docs/third/apppage/#发布已通过审核的小程序)
 
 **注意：提交小程序发布前，请确保开发者的主体真实性认证已通过，否则无法发布上线。**
 

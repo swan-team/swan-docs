@@ -36,7 +36,7 @@ post 数据示例：
 }
 ```
 其中 Encrypt 参数需要解密，解密详情见<a href="https://smartprogram.baidu
-.com/docs/develop/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>部分，解密后数据如下：
+.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>部分，解密后数据如下：
 ```json
 {
     "Ticket" : "8c0da4968b0d1e28acbc1d738a56607d",
