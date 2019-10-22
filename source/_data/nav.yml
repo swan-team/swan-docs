@@ -4408,19 +4408,22 @@
             name: thirdparty_low
 
 # 6
--
+-        
   link: third/create
   text: 第三方接入
-  name: create
+  name: third
   nav:
     -
+      link: third/create
+      text: 快速入门
       name: book
       sidebar:
-
         -
-          link: /third/create
-          text: 第三方平台创建指南
-          name: create        
+          sidebar:       
+            -
+              link: /third/create
+              text: 第三方平台创建指南
+              name: create        
         -
           sidebar:
             -
@@ -4433,6 +4436,11 @@
               link:  /third/publication
               text: 第三方平台发布检测
               name: publication
+    -
+      link: third/pro
+      text: 接口说明
+      name: book
+      sidebar:              
         -
           sidebar:
             -

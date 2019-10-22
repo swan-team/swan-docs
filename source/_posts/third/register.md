@@ -3,7 +3,7 @@
 **使用此功能前，请您发送邮件至 TP-smartprogramme@baidu.com 申请开通接口权限**
 
 ### 一、流程图
-![授权流程图](../../../img/tp/dc0ebefe712072046e7fa5a13.png)
+![授权流程图](../../img/tp/dc0ebefe712072046e7fa5a13.png)
 
 ### 二、流程详解
 

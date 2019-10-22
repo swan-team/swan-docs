@@ -7,7 +7,7 @@ sidebar: pro
 第三方平台（TP）是指帮助小程序运营者进行开发、管理、运营小程序并从此获取收益的平台；可在<a href="https://smartprogram.baidu.com/mappconsole/main/login ">小程序首页</a>进行注册，成为**企业类型**的智能小程序后即可创建第三方平台。**小程序运营者，可以一键授权给第三方平台，通过第三方平台来完成业务。**
 <!-- 目前智能小程序第三方平台为邀请制，如需申请，请发邮件至：smartprogram_bd@baidu.com -->
 <p>小程序授权给第三方平台的技术实现流程如下图：
-![图片](../../../img/third.png)
+![图片](../../img/third.png)
 
 
 
