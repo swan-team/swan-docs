@@ -24,7 +24,6 @@ function searchFunc(searchId, contentId) {
         });
     }
     $('#top-search-box').on('click', function (e) {
-        console.log(222)
         if ($(e.target).hasClass('reset-search-btn')) {
             toggleArticleContent(true);
             $('#top-search-box').removeClass('top-search-box-focus');
