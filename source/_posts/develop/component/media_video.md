@@ -37,6 +37,7 @@ sidebar: media_video
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|
 |show-center-play-btn|	Boolean	|true	|否|是否显示视频中间的播放按钮|
 |show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
+|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
 |bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
