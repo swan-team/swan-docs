@@ -47,4 +47,4 @@ CanvasContext.stroke();
 CanvasContext.draw();
 ```
 
-![图片](../../../img/api/canvas/setLineCap.png)
+![图片](../../../../img/api/canvas/setLineCap.png)

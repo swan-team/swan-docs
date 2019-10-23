@@ -2109,7 +2109,7 @@
                 sidebar:
                   -
                     link: /develop/api/show/canvas 
-                    text: 坐标系
+                    text: canvas 
                     name:  canvas 
                   -
                     link: /develop/api/show/canvas_swan-createCanvasContext

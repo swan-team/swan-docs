@@ -1,5 +1,5 @@
 ---
-title: canvas 画布
+title: canvas 
 header: develop
 nav: api
 sidebar: show_canvas
