@@ -55,10 +55,10 @@ sidebar: open_chooseinvoicetitle
 page({
     chooseInvoiceTitle() {
         swan.chooseInvoiceTitle({
-            success: function (res) {
+            success: res => {
                 console.log('chooseInvoiceTitle success', res);
             },
-            fail: function (err) {
+            fail: err => {
                 console.log('chooseInvoiceTitle fail', err);
             }
         });

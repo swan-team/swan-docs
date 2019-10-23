@@ -21,7 +21,7 @@ swan.setKeepScreenOn(opts)
 ```js
 swan.setKeepScreenOn({
     keepScreenOn: true,
-    success: function (res) {
+    success: res => {
         console.log(res);
     }
 })

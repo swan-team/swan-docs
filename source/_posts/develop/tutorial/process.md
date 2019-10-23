@@ -122,7 +122,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 
@@ -185,7 +185,7 @@ audio: 后台音乐播放
 swan.request({
     url: 'https://m.baidu.com',
     usePrefetchCache: true,
-    success: function (res) {
+    success: res => {
         console.log('缓存结果:', res);
     }
 });

@@ -11,9 +11,6 @@ if (swan.createCanvasContext) {
   swan.createCanvasContext()
 }
 else {
-  swan.showModal({
-    title: '提示',
-    content: '当前客户端版本过低，无法使用该功能，请升级。'
-  })
+   //这里是开发者自己的兼容逻辑，可以把相关功能入口隐藏掉
 }
 ```

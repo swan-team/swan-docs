@@ -107,7 +107,7 @@ swan.request({
             }
         });
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：', err.errCode);
         console.log('错误信息：', err.errMsg);
     }

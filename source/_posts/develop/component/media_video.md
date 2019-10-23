@@ -89,6 +89,8 @@ sidebar: media_video
 |VP8|	是	|否|
 |VP9|	是	|否|
 
+
+
 **示例**：
 <a href="swanide://fragment/b4de2816258292dec183838859e8c57f1566389828332" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -221,5 +223,5 @@ Page({
 
 
 **Bug & Tip**：
-* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/)
+* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
 * `<video />` 默认宽度 300px、高度 225px。

@@ -27,15 +27,7 @@ sidebar: device_screen
 
 **示例**：
 
-<a href="swanide://fragment/e5d47d57648d468eccaaace41cdc98581557732266048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setScreenBrightness">setScreenBrightness</button>
-</view>
-```
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -44,22 +36,15 @@ Page({
     setScreenBrightness() {
         swan.setScreenBrightness({
             value: 1,
-            success(res) {
+            success: res => {
                 console.log('setScreenBrightness success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
  
@@ -100,15 +85,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/243a71bee8db9c47e577113676a7cb871557732358188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getScreenBrightness">getScreenBrightness</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -116,23 +94,17 @@ Page({
 Page({
     getScreenBrightness() {
         swan.getScreenBrightness({
-            success(res) {
+            success: res => {
                 console.log('屏幕亮度值', res.value);
             },
-            fail(err) {
+            fail: err => {
                 console.log('scanCode fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 #### 错误码
 * Andriod
 
@@ -157,15 +129,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/67ec77169a612cba1709271e950f35fb1557732443741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setKeepScreenOn">setKeepScreenOn</button>
-</view>
-```
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -174,22 +138,15 @@ Page({
     setKeepScreenOn() {
         swan.setKeepScreenOn({
             keepScreenOn: true,
-            success(res) {
+            success: res => {
                 console.log('keepScreenOn success', res);
             },
-            fail(err) {
+            fail: err => {
                 console.log('keepScreenOn fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 #### 错误码

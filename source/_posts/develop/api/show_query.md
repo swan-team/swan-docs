@@ -21,7 +21,7 @@ sidebar: show_query
 
 **示例**：
 
-<a href="swanide://fragment/efd1a134de87bfcdf9b15b5156d4e0061558352337120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8ab0bafd72cae605089addc3f1bb66601569477488019" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -31,15 +31,7 @@ success回调函数参数：
 
 **示例**：
 
-<a href="swanide://fragment/cb6297a52344d70cb6550b4b64b6bf641557731832995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getBatteryInfo">getBatteryInfo</button>
-</view>
-```
+<a href="swanide://fragment/3d96361544920be300bde9b3e9742fc21569483132498" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -47,23 +39,16 @@ success回调函数参数：
 Page({
     getBatteryInfo() {
         swan.getBatteryInfo({
-            success(res) {
+            success: res => {
                 console.log('当前设备电量值：', res.level);
                 console.log('当前设备是否正在充电：', res.isCharging);
             },
-            fail(err) {
+            fail: err => {
                 console.log('getBatteryInfo fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 ## swan.getBatteryInfoSync
@@ -81,15 +66,7 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/9e460b922c49f43567359b50f84488b21557732035056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getBatteryInfoSync">getBatteryInfoSync</button>
-</view>
-```
+<a href="swanide://fragment/3d96361544920be300bde9b3e9742fc21569483132498" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -105,13 +82,6 @@ Page({
         }
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 **Bug&tips**:
 * iOS 不可用会 mock 返回值 level为100， isCharging 为true。

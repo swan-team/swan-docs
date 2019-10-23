@@ -50,96 +50,32 @@ sidebar: device_sys
 |cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
 |swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
 |devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
+|albumAuthorized|允许宿主使用相册的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationAuthorized|允许宿主通知的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|notificationAlertAuthorized|允许宿主通知带有提醒的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationBadgeAuthorized|允许宿主通知带有标记的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationSoundAuthorized|允许宿主通知带有声音的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|cameraAuthorized|允许宿主使用摄像头的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|locationAuthorized|允许宿主使用定位的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|microphoneAuthorized|允许宿主使用麦克风的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|locationEnabled|地理位置的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|wifiEnabled|Wi-Fi 的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
 
 **示例**：
-<a href="swanide://fragment/76507c0039b267dcb3cace3613a972f71560168111650" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
-
-* 在 swan 文件中
-
-```xml
-<view class="container">
-    <view class="page-body">
-        <view class="info-ctn">
-            <view class="info-item" s-for="item in infoList">
-                <text class="info-label">{{item.label}}：</text>
-                <text class="info-value">{{item.value}}</text>
-            </view>
-        </view>
-        <view class="btn-ctn">
-            <button bind:tap="getSystemInfo" type="primary" hover-stop-propagation="true">点击获取系统信息</button>
-            <button bind:tap="clearClick" hover-stop-propagation="true">清空</button>
-        </view>
-    </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
-</view>
-```
+<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    data: {
-        title: 'getSystemInfo',
-        infoList: [{
-            label: '手机品牌',
-            key: 'brand',
-            value: ''
-        }, {
-            label: '手机型号',
-            key: 'model',
-            value: ''
-        }, {
-            label: '当前版本',
-            key: 'version',
-            value: ''
-        }, {
-            label: '屏幕宽度',
-            key: 'screenWidth',
-            value: ''
-        }, {
-            label: '屏幕高度',
-            key: 'screenHeight',
-            value: ''
-        }, {
-            label: 'DPI',
-            key: 'pixelRatio',
-            value: ''
-        }, {
-            label: '语言',
-            key: 'language',
-            value: ''
-        }]
-    },
-
-    getSystemInfo(e) {
-        swan.getSystemInfo({
-            success: res => {
-                // 更新数据
-                this.updateInfoList(res);
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '获取失败'
-                });
-            }
-        });
-    },
-
-    clearClick() {
-        this.updateInfoList({});
-    },
-
-    updateInfoList(res) {
-        let infoList = this.getData('infoList');
-        for (let i = 0; i < infoList.length; ++i) {
-            infoList[i].value = res[infoList[i].key];
+    swan.getSystemInfo({
+        success: res => {
+            console.log('getSystemInfo success', res)
+        },
+        fail: err => {
+            console.log('getSystemInfo fail', err)
         }
-        this.setData('infoList', infoList);
-    }
-});
+    });
 ```
 #### 错误码
 Andriod
@@ -180,41 +116,34 @@ Andriod
 |cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
 |swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
 |devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
+|albumAuthorized|允许宿主使用相册的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationAuthorized|允许宿主通知的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|notificationAlertAuthorized|允许宿主通知带有提醒的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationBadgeAuthorized|允许宿主通知带有标记的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|notificationSoundAuthorized|允许宿主通知带有声音的开关（仅 iOS 有效）|ios最低支持版本3.110.3 |
+|cameraAuthorized|允许宿主使用摄像头的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|locationAuthorized|允许宿主使用定位的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|microphoneAuthorized|允许宿主使用麦克风的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|locationEnabled|地理位置的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|wifiEnabled|Wi-Fi 的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
+|safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
 
 
 **示例**：
 
-<a href="swanide://fragment/e351abc548d711c90b08dbf1dd6546a21557730715787" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getSystemInfoSync">getSystemInfoSync</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-
-Page({
-    getSystemInfoSync() {
-        try {
-            const result = swan.getSystemInfoSync();
-            console.log('getSystemInfoSync success', result);
-        } catch (e) {
-            console.log('getSystemInfoSync fail', e);
-        }
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getSystemInfoSync();
+    console.log('getSystemInfoSync success', result);
+} catch (e) {
+    console.log('getSystemInfoSync fail', e);
 }
+
 ```
 
 #### 错误码
@@ -247,35 +176,17 @@ Andriod
 
 **示例**：
 
-<a href="swanide://fragment/d00d4cb044b83f2cb975a1b8041c66ee1557730799522" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/82e11bbc8ad46f16d1358e023478af9e1569478295415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="getEnvInfoSync">getEnvInfoSync</button>
-</view>
-```
 
 * 在 js 文件中
 
 ```js
-Page({
-    getEnvInfoSync() {
-        try {
-            const result = swan.getEnvInfoSync();
-            console.log('getEnvInfoSync success', result);
-        } catch (e) {
-            console.log('getEnvInfoSync fail', e);
-        }
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
+try {
+    const result = swan.getEnvInfoSync();
+    console.log('getEnvInfoSync success', result);
+} catch (e) {
+    console.log('getEnvInfoSync fail', e);
 }
 ```
 
@@ -302,15 +213,8 @@ Page({
 
 **示例**：
 
-<a href="swanide://fragment/5c62655674387bd88ff338a9bb3f3f861557731053647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/46118bb2080dbb4afe733717c987f6e31569478359497" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="canIUse">canIUse</button>
-</view>
-```
 
 * 在 js 文件中
 
@@ -325,15 +229,9 @@ Page({
         console.log('canIUse:getSavedFileList', swan.canIUse('getSavedFileList'));
         console.log('canIUse:getSavedFileList.object', swan.canIUse('getSavedFileList.object'));
         console.log('canIUse:getSavedFileList.object.success', swan.canIUse('getSavedFileList.object.success'));
+        console.log('canIUse:sjs', swan.canIUse('sjs'));
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-                     
 

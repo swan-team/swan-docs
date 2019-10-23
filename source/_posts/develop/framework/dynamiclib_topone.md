@@ -31,7 +31,7 @@ topOne 动态库包含一个名为 top-one 的自定义组件。
     "navigationBarTitleText": "智能小程序示例",
     "usingComponents": {
         // 这里 key 中的 'top-one' 是个可以自己任意指定的别名，
-        // 本页面或者本组件在模版中统一用此别名引用这个自定义组件。
+        // 本页面或者本组件在模板中统一用此别名引用这个自定义组件。
         // 这里的 'myTopOne' 就是上面定义的，本小程序使用此动态库的别名。
         // 这里 value 最后部分的 'top-one' 是此动态库的公开的自定义组件（publicComponents）的名称。
         "top-one": "dynamicLib://myTopOne/top-one"

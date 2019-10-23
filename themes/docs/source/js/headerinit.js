@@ -2,13 +2,15 @@
 !function(pathname){
     var urlMap = {
         '/docs/design/principle/':'/docs/design/overview/introduction/',
-        '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
         '/docs/design/component/nav/':'/docs/design/component/topnav/',
         '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
         '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
+        '/docs/develop/devtools/smartappdebug_function/#自定义预处理/':'/docs/develop/devtools/smartappdebug_function_pre/',
+        '/docs/develop/swan/compatibility/#基础库最低版本设置':'/docs/develop/swan/compatibility_version/',
+
 
         '/docs/game/introduction/prerare/enter_application/': '/docs/game/introduction/prerare/enter/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',

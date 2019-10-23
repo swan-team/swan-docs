@@ -108,7 +108,7 @@ swanInvoke功能：
     <head>
         <meta charset="utf-8">
         <!-- 引入 调起sdk 文件 -->
-        <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swanInvoke.js?v=2019-06-04-13"></script>
+        <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swanInvoke.js"></script>
     </head>
     </html>
     ```
@@ -145,7 +145,7 @@ swanInvoke功能：
 | failUrl | String | 否 | 默认的调起中间页 | 调起小程序失败后H5跳转页面 |
 | timeout | Number | 否 | 200 | 非百度app内打开H5页面调起小程序，跳转到failUrl的延时 | 
 
-这里的appKey、path、query，对应scheme中的同名参数（scheme参数请参考[URL Scheme](#url-scheme)）。
+这里的appKey、path、query，对应scheme中的同名参数（scheme参数请参考[URL Scheme](#URL-Scheme)）。
 > swanInvoke方法的query可以填写Object类型，不需要拼接成类似“aa=1&bb=2“的字符串形式。具体形式参考代码示例。
 
 4. 调起失败
@@ -174,7 +174,7 @@ swanInvoke功能：
 
 在小程序的web-view中打开另一个小程序，需要在引入jssdk后，调用swan.navigateToSmartProgram接口。
 
-引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view//)
+引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view/#相关接口2)
 
 ## 小程序来源统计
 > 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。

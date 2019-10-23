@@ -1,5 +1,5 @@
 ---
-title: 订单中心
+title: 订单接口
 header: develop
 nav: function
 sidebar: ordercenter 
@@ -34,100 +34,105 @@ https://openapi.baidu.com/rest/2.0/smartapp
 ```json
 
 {
-    "Data": [
-        {
-            "CateID": 2,                                    // 2:订单种类-虚拟物品
-            "BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 小程序AppKey
-            "Title": "test",                                // 订单名称
-            "ResourceID": "2221554346520",                  // 业务方接入的资源唯一ID
-            "Ctime": 1233212343,                            // 订单创建时间
-            "Mtime": 1233212343,                            // 订单最后修改时间
-            "Status": 200,                                  // 200:订单状态-已完成交易
-            "EXT": {              // 拓展字段 根据资产的不同其结构也不固定 此处以订单为例
-                "MainOrder": {    // 主订单
-                    "Products": [ // 订单总涉及到的产品列表
-                        {
-                            "ID": "业务方商品ID",
-                            "Name": "业务方商品名字",
-                            "Desc": "xxx",
-                            "Quantity": 1,  // 商品数
-                            "Price": 100,   // 商品原价
-                            "PayPrice": 98, // 商品实付
-                            "ImgList": [    // 商品图片
-                                "https://golang.org/lib/godoc/images/footer-gopher.jpg",
-                                "https://golang.org/lib/godoc/images/footer-gopher.jpg?a=1"
-                            ],
-                            "SkuAttr": [ // 商品规格 最多4个
-                                { "Name": "XL", "Value": "大号" },
-                                { "Name": "XXL", "Value": "加大号" }
-                            ],
-                            "DetailPage": {  // 商品地址 用于点击后回溯到商品页面（或activity）
-                                "Status": 2, // 2:正常展示且允许跳转到商品页
-                                "Name": "体恤衫特价店铺",
-                                "SwanSchema": "baiduboxapp://v11/test/xxx" // 跳转到商铺的scheme scheme执行的方式可从H5Schema、SwanSchema、IPhoneSchema、AndroidSchema中选择一个或多个
-                            }
-                        }
-                    ]
-                },
-                "SubOrder": {     // 子订单 例如和主订单相关的商品的退换货等关联订单 没有子订单式时可不使用此结构
-                    "Status": 402 // 所有子订单的总状态,402:退款成功
-                    "Items": [
-                        {
-                            "SubOrderID": "2221554346521", // 业务方接入的资源唯一ID
-                            "SubStatus": 402,              // 子订单状态 402:退款成功
-                            "OrderType": 1,                // 退款订单状态， 1:仅退款
-                            "CTime": 1231231231,
-                            "MTime": 1231231231,
-                            "OrderDetail": {
-                                "Status": 2,                                // 2:正常展示且允许跳转
-                                "Name": "体恤衫退款订单",
-                                "SwanSchema": "baiduboxapp://v11/test/xxx", // 跳转到退款订单详情
-                            }
-                            "URLList": [],      // 跳转连接列表
-                            "Refund": {         // 退款信息
-                                "Amount": 123,  // 应退总金额
-                                "Product": [    // 退款相关的商品信息
-                                    {
-                                        "ID": "业务方商品ID1", // 退款商品ID
-                                        "Quantity": 1,       // 退的数量
-                                        "Amount": 98,        // 应退金额，小数点后保留2位
-                                    },
-                                    {
-                                        "ID": "业务方商品ID2", // 退款商品ID
-                                        "Quantity": 1,       // 退的数量
-                                        "Amount": 53,        // 应退金额，小数点后保留2位
-                                    }
-                                ]
-                            },
-                            "Aftermarket": { // 退货信息
-                                "Product": [
-                                    {
-                                        "ID": "业务方商品ID3", // 退款商品ID
-                                        "Quantity": 1,       // 退的数量
-                                        "Amount": 100,       // 退款金额，金额单位为“分”
-                                    },
-                                    {
-                                        "ID": "业务方商品ID4", // 退款商品ID
-                                        "Quantity": 1,       // 退的数量
-                                        "Amount": 999,       // 退款金额，金额单位为“分”
-                                    }
-                                ]
-                            },
-                            "Payment": {                // 退换货涉及到的额外的付款订单
-                                "Time": 1231231231,
-                                "Method": 1,            // 付款方式 1:在线付 2:货到付
-                                "Amount": 1000,         // 合计金额
-                                "IsPayment": true,      // 是否完成付款
-                                "PreferentialInfo": [], // 优惠券信息
-                                "PaymentInfo": []       // 其他付款信息
-                            }
-                        }
-                    ]
+  "Data": [
+    {
+      "CateID": 1,       // 1:订单种类-实物商品
+      "BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 小程序AppKey
+      "Title": "test",                                // 订单名称
+      "ResourceID": "2221554346520",                  // 订单ID，业务方接入的唯一订单ID
+      "Ctime": 1233212343,                            // 订单创建时间
+      "Mtime": 1233212343,                            // 订单最后修改时间
+      "Status": 200,                                  // 200:订单状态-已完成交易
+      "EXT": {                                        // 拓展字段 根据订单的不同其结构也不固定 此处以订单为例
+        "MainOrder": {                                // 主订单信息
+          "Products": [                               // 商品信息
+            {
+              "ID": "1014093064",                               //商品ID
+              "Name": "四川大凉山丑苹果脆甜红将军盐源丑苹果",         //商品名称
+              "Desc": "四川大凉山丑苹果脆甜:5斤小果25个左右偏小;",    //商品详情
+              "Quantity": 1,                                    //商品数量
+              "Price": 2390,                                    //商品原价,单位分。
+              "PayPrice": 2390,                                 //实付价格,单位分。
+              "ImgList": [                                      //商品图片地址
+                "https://imagelib.cdn.bcebos.com/cip_ml_picbc34db9a-7e10-4a96-bf8e-1c690640c6a4.jpeg"
+              ],
+              "SkuAttr": [                                      //商品SKU属性
+                {
+                  "Name": "四川大凉山丑苹果脆甜",
+                  "Value": "5斤小果25个左右偏小"
                 }
+              ]
             }
+          ],
+          "Payment": {                                          //支付信息
+            "Time": 0,                                          //付款时间，时间戳
+            "Method": 1,                                        //支付方式
+            "Amount": 2390,                                     //合计金额，单位分
+            "IsPayment": false,                                 //是否支付
+            "PreferentialInfo": [                               //优惠信息
+              {
+                "Name":"优惠券使用",                             //名称
+                "Value":100,                                    //优惠金额，单位分
+                "Quantity":1                                    //数量
+              }
+            ],                         
+            "PaymentInfo": [                                    //付款信息
+              {
+                "Name":"运费",                                    //展示名称
+                "Value":100,                                    //付款金额，单位分
+                "Quantity":1                                    //数量
+              }
+            ]                          
+          },
+          "Appraise": {                                         // 订单评价跳转
+            "Status": 0,
+            "Name": "",
+            "H5Schema": "",
+            "SwanSchema": "",
+                   },
+          "OrderDetail": {                                      // 订单详情跳转
+            "Status": 2,
+            "Name": "",
+            "H5Schema": "",
+            "SwanSchema": "baiduboxapp://swan/B3GF3AWvCSr59myIs61uqaoYz7pPCSY1/wjz/bdxd/order-detail/order-detail?orderId=159259079195",
+       
+          }
+        },
+        "SubsOrder": {                                          // 子订单，即售后订单信息，若该主订单发生退款/售后，需新增同步其子订单的售后信息状态
+          "Status": 0,
+          "Items": [
+            {
+              "SubOrderID":"onlyOne",                           // 子订单，即售后订单ID
+              "SubStatus":"",                                   // 自订单状态,枚举参照 【退换货枚举值】
+              "CTime":1571026201,                               // 售后订单创建时间,时间戳
+              "MTime":1571026201,                               // 售后订单修改时间,时间戳
+              "OrderDetail":{                                   // 退款退货订单详情跳转
+                "Status": 2,
+                "Name": "",
+                "H5Schema": "",
+                "SwanSchema": "baiduboxapp://swan/B3GF3AWvCSr59myIs61uqaoYz7pPCSY1/wjz/bdxd/order-detail/order-detail?orderId=159259079195",
+                "IPhoneSchema": "",
+                "AndroidSchema": ""
+               },
+              "Refund":{                                        //商品 退款／退货 信息
+                "Amount":10,                                    //退款总金额
+                "Product":[                                     //退款/退货商品
+                  {
+                    "ID":"1014093064",                          //商品ID
+                    "Quantity":1,                               //商品退款/商品退货 数量
+                    "Amount":0                                  //应退金额,单位分
+                  }
+                ]
+              },
+              "OrderType":1                                     // 退款订单类型
+            }
+          ]
         }
-    ]
+      }
+    }
+  ]
 }
+
 ```
 
 **响应示例**:
@@ -233,6 +238,8 @@ https://openapi.baidu.com/rest/2.0/smartapp
 
 ## Data.Ext.MainOrder.Payment
 
+`Payment.Amount = (Products.PayPrice * Products.Quantity) + (PaymentInfo.Value * PaymentInfo.Quantity)  - (PreferentialInfo.Value * PreferentialInfo.Quantity)`
+
 |字段名称|字段类型|必填|备注|
 |---|---|---|---|
 |Method|int|是|付款方式，1(在线付)，2(货到付款)|
@@ -240,7 +247,7 @@ https://openapi.baidu.com/rest/2.0/smartapp
 |IsPayment|bool|是|是否已付款|
 |Time|int|否|付款时间|
 |PreferentialInfo|[]Data.Ext.MainOrder.Payment.PaymentSpecInfo|否|优惠券信息|
-|PaymentInfo|[]Data.Ext.MainOrder.Payment.PaymentSpecInfo|否|其他|
+|PaymentInfo|[]Data.Ext.MainOrder.Payment.PaymentSpecInfo|否|其他支付信息，如运费、保险等。|
 
 ## Data.Ext.MainOrder.Payment.PaymentSpecInfo
 
@@ -286,12 +293,10 @@ https://openapi.baidu.com/rest/2.0/smartapp
 |SubStatus|int|是|子订单状态，同Data.Ext.SubsOrder.Status|
 |CTime|int|是|创建时间|
 |MTime|int|是|修改时间|
-|OrderType|int|是|退款类型，1(仅退款)，2(仅退货)，3(退款+退货)|
+|OrderType|int|是|退款类型，1(仅退款)，2(换货)，3(退款+退货)|
 |OrderDetail|Data.Ext.SubsOrder.Item.OrderDetail|否|跳转到这个订单的详情结构|
 |URLList|[]Data.Ext.SubsOrder.Item.OrderDetail|否|顺序会影响展示排序，跳转连接列表|
-|Payment|[]Data.Ext.SubsOrder.Item.Payment|否|支付信息|
-|Refund|Data.Ext.SubsOrder.Item.Refund|否|退款信息|
-|Aftermarket|Data.Ext.SubsOrder.Item.Aftermarket|否|商品退换货售后|
+|Refund|Data.Ext.SubsOrder.Item.Refund|否|售后子订单商品信息|
 
 ## Data.Ext.SubsOrder.Item.OrderDetail
 
@@ -306,17 +311,17 @@ https://openapi.baidu.com/rest/2.0/smartapp
 |字段名称|字段类型|必填|备注|
 |---|---|---|---|
 |Amount|int|是|退款总金额，单位分，即`100`为`1元`|
-|Product|[]Data.Ext.SubsOrder.Item.Refund.Product|是|退款商品列表|
+|Product|[]Data.Ext.SubsOrder.Item.Refund.Product|是|售后商品列表|
 
 ## Data.Ext.SubsOrder.Item.Refund.Product
 
 |字段名称|字段类型|必填|备注|
 |---|---|---|---|
 |ID|string|是|商品ID|
-|Quantity|int|是|商品退款数量|
-|Amount|int|是|应退金额，单位分，即`100`为`1元`|
+|Quantity|int|是|售后商品数量|
+|Amount|int|是|退款金额，单位分，即`100`为`1元`|
 
-## Data.Ext.SubsOrder.Item.Aftermarket
+<!-- ## Data.Ext.SubsOrder.Item.Aftermarket
 
 |字段名称|字段类型|必填|备注|
 |---|---|---|---|
@@ -325,7 +330,7 @@ https://openapi.baidu.com/rest/2.0/smartapp
 ## Data.Ext.SubsOrder.Item.Aftermarket.Product
 
 参照[Data.Ext.SubsOrder.Item.Refund.Product](#Data-Ext-SubsOrder-Item-Refund-Product)结构
-
+ -->
 
 ## DetailPage
 

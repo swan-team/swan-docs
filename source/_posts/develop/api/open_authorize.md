@@ -11,12 +11,12 @@ sidebar: open_authorize
 |接口|	描述|
 |---|---|
 |[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getUserInfo/)|	用户信息|
-|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)|地理位置|
+|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
 |[swan.saveImageToPhotosAlbum](http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
 |	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
 |[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
-|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/)|	录音功能|
-|	[camera](https://smartprogram.baidu.com/docs/develop/component/media/#camera/)|	摄像头|
+|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
+|	[camera](/develop/component/media_camera/)|	摄像头|
 
 
 **此类接口调用时需注意**：
@@ -69,12 +69,12 @@ sidebar: open_authorize
 |scope|	对应接口|	描述|
 |---|---|---|
 |scope.userInfo|[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getUserInfo/)|	用户信息|
-|scope.userLocation|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)|地理位置|
+|scope.userLocation|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
 |scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
 |scope.address|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
 |scope.invoiceTitle|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
-|scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/)|	录音功能|
-|scope.camera|	[camera](https://smartprogram.baidu.com/docs/develop/component/media/#camera/)|	摄像头|
+|scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
+|scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
 **示例**：
 <a href="swanide://fragment/a866a61034de7c92163fa56338f6258b1560169856336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
