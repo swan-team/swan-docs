@@ -1822,14 +1822,14 @@
                       link: /develop/api/media/videocontext_VideoContext-hideStatusBar
                       text: VideoContext.hideStatusBar
                       name:  videocontext_VideoContext-hideStatusBar
-                    # -
-                    #   link: /develop/api/media/videocontext_VideoContext-stop
-                    #   text: VideoContext.stop
-                    #   name:  videocontext_VideoContext-stop
-                    # -
-                    #   link: /develop/api/media/videocontext_VideoContext-playbackRate
-                    #   text: VideoContext.playbackRate
-                    #   name:  videocontext_VideoContext-playbackRate
+                    -
+                      link: /develop/api/media/videocontext_VideoContext-stop
+                      text: VideoContext.stop
+                      name:  videocontext_VideoContext-stop
+                    -
+                      link: /develop/api/media/videocontext_VideoContext-playbackRate
+                      text: VideoContext.playbackRate
+                      name:  videocontext_VideoContext-playbackRate
                     
             -
             
@@ -2098,558 +2098,558 @@
                         text: MapContext.getScale
                         name: MapContext-getScale
         -
-            link: /develop/api/show/canvas
+            link: /develop/api/show_canvas
             text: 界面
-            name: canvas
+            name: show_canvas
             sidebar:
               -
- 
+                link: /develop/api/show_canvas
                 text: 绘图
-            
+                name: show_canvas
                 sidebar:
                   -
-                    link: /develop/api/show/canvas 
-                    text: canvas 
-                    name:  canvas 
+                    link: /develop/api/show_canvas/#坐标系
+                    text: 坐标系
+                    name: show_canvas_坐标系
                   -
-                    link: /develop/api/show/canvas_swan-createCanvasContext
+                    link: /develop/api/show_canvas/#swan-createCanvasContext
                     text: swan.createCanvasContext
-                    name:  canvas_swan-createCanvasContext
+                    name: show_canvas_swan-createCanvasContext
                   -
-                    link: /develop/api/show/canvas_swan-canvasGetImageData
+                    link: /develop/api/show_canvas/#swan-canvasGetImageData
                     text: swan.canvasGetImageData
-                    name: canvas_swan-canvasGetImageData
+                    name: show_canvas_swan-canvasGetImageData
                   -
-                    link: /develop/api/show/canvas_swan-canvasPutImageData
+                    link: /develop/api/show_canvas/#swan-canvasPutImageData
                     text: swan.canvasPutImageData
-                    name: canvas_swan-canvasPutImageData
+                    name: show_canvas_swan-canvasPutImageData
                   -
-                    link: /develop/api/show/canvas_swan-canvasToTempFilePath
+                    link: /develop/api/show_canvas/#swan-canvasToTempFilePath
                     text: swan.canvasToTempFilePath
-                    name: canvas_swan-canvasToTempFilePath
+                    name: show_canvas_swan-canvasToTempFilePath
                   -
-                    link: /develop/api/show/canvas_CanvasContext
+                    link: /develop/api/show_canvas/#CanvasContext
                     text: CanvasContext
-                    name: canvas_CanvasContext
+                    name: show_canvas_CanvasContext
                     sidebar:
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setFillStyle
+                        link: /develop/api/show_canvas/#CanvasContext-setFillStyle
                         text: CanvasContext.setFillStyle
-                        name: canvas_CanvasContext-setFillStyle
+                        name: show_canvas_CanvasContext-setFillStyle
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setStrokeStyle
+                        link: /develop/api/show_canvas/#CanvasContext-setStrokeStyle
                         text: CanvasContext.setStrokeStyle
-                        name: canvas_CanvasContext-setStrokeStyle
+                        name: show_canvas_CanvasContext-setStrokeStyle
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setShadow
+                        link: /develop/api/show_canvas/#CanvasContext-setShadow
                         text: CanvasContext.setShadow
-                        name: canvas_CanvasContext-setShadow
+                        name: show_canvas_CanvasContext-setShadow
                       -
-                        link: /develop/api/show/canvas_CanvasContext-createLinearGradient
+                        link: /develop/api/show_canvas/#CanvasContext-createLinearGradient
                         text: CanvasContext.createLinearGradient
-                        name: canvas_CanvasContext-createLinearGradient
+                        name: show_canvas_CanvasContext-createLinearGradient
                       -
-                        link: /develop/api/show/canvas_CanvasContext-createCircularGradient
+                        link: /develop/api/show_canvas/#CanvasContext-createCircularGradient
                         text: CanvasContext.createCircularGradient
-                        name: canvas_CanvasContext-createCircularGradient
+                        name: show_canvas_CanvasContext-createCircularGradient
                       -
-                        link: /develop/api/show/canvas_CanvasContext-addColorStop
+                        link: /develop/api/show_canvas/#CanvasContext-addColorStop
                         text: CanvasContext.addColorStop
-                        name: canvas_CanvasContext-addColorStop
+                        name: show_canvas_CanvasContext-addColorStop
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setLineWidth
+                        link: /develop/api/show_canvas/#CanvasContext-setLineWidth
                         text: CanvasContext.setLineWidth
-                        name: canvas_CanvasContext-setLineWidth
+                        name: show_canvas_CanvasContext-setLineWidth
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setLineCap
+                        link: /develop/api/show_canvas/#CanvasContext-setLineCap
                         text: CanvasContext.setLineCap
-                        name: canvas_CanvasContext-.setLineCap
+                        name: show_canvas_CanvasContext-.setLineCap
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setLineJoin
+                        link: /develop/api/show_canvas/#CanvasContext-setLineJoin
                         text: CanvasContext.setLineJoin
-                        name: canvas_CanvasContext-setLineJoin
+                        name: show_canvas_CanvasContext-setLineJoin
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setLineDash
+                        link: /develop/api/show_canvas/#CanvasContext-setLineDash
                         text: CanvasContext.setLineDash
-                        name: canvas_CanvasContext-setLineDash
+                        name: show_canvas_CanvasContext-setLineDash
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setMiterLimit
+                        link: /develop/api/show_canvas/#CanvasContext-setMiterLimit
                         text: CanvasContext.setMiterLimit
-                        name: canvas_CanvasContext-setMiterLimit
+                        name: show_canvas_CanvasContext-setMiterLimit
                       -
-                        link: /develop/api/show/canvas_CanvasContext-rect
+                        link: /develop/api/show_canvas/#CanvasContext-rect
                         text: CanvasContext.rect
-                        name: canvas_CanvasContext-rect
+                        name: show_canvas_CanvasContext-rect
                       -
-                        link: /develop/api/show/canvas_CanvasContext-fillRect
+                        link: /develop/api/show_canvas/#CanvasContext-fillRect
                         text: CanvasContext.fillRect
-                        name: canvas_CanvasContext-fillRect
+                        name: show_canvas_CanvasContext-fillRect
                       -
-                        link: /develop/api/show/canvas_CanvasContext-strokeRect
+                        link: /develop/api/show_canvas/#CanvasContext-strokeRect
                         text: CanvasContext.strokeRect
-                        name: canvas_CanvasContext-strokeRect
+                        name: show_canvas_CanvasContext-strokeRect
                       -
-                        link: /develop/api/show/canvas_CanvasContext-clearRect
+                        link: /develop/api/show_canvas/#CanvasContext-clearRect
                         text: CanvasContext.clearRect
-                        name: canvas_CanvasContext-clearRect
+                        name: show_canvas_CanvasContext-clearRect
                       -
-                        link: /develop/api/show/canvas_CanvasContext-fill
+                        link: /develop/api/show_canvas/#CanvasContext-fill
                         text: CanvasContext.fill
-                        name: canvas_CanvasContext-fill
+                        name: show_canvas_CanvasContext-fill
                       -
-                        link: /develop/api/show/canvas_CanvasContext-stroke
+                        link: /develop/api/show_canvas/#CanvasContext-stroke
                         text: CanvasContext.stroke
-                        name: canvas_CanvasContext-stroke
+                        name: show_canvas_CanvasContext-stroke
                       -
-                        link: /develop/api/show/canvas_CanvasContext-beginPath
+                        link: /develop/api/show_canvas/#CanvasContext-beginPath
                         text: CanvasContext.beginPath
-                        name: canvas_CanvasContext-beginPath
+                        name: show_canvas_CanvasContext-beginPath
                       -
-                        link: /develop/api/show/canvas_CanvasContext-closePath
+                        link: /develop/api/show_canvas/#CanvasContext-closePath
                         text: CanvasContext.closePath
-                        name: canvas_CanvasContext-closePath
+                        name: show_canvas_CanvasContext-closePath
                       -
-                        link: /develop/api/show/canvas_CanvasContext-moveTo
+                        link: /develop/api/show_canvas/#CanvasContext-moveTo
                         text: CanvasContext.moveTo
-                        name: canvas_CanvasContext-moveTo
+                        name: show_canvas_CanvasContext-moveTo
                       -
-                        link: /develop/api/show/canvas_CanvasContext-lineTo
+                        link: /develop/api/show_canvas/#CanvasContext-lineTo
                         text: CanvasContext.lineTo
-                        name: canvas_CanvasContext-lineTo
+                        name: show_canvas_CanvasContext-lineTo
                       -
-                        link: /develop/api/show/canvas_CanvasContext-arc
+                        link: /develop/api/show_canvas/#CanvasContext-arc
                         text: CanvasContext.arc
-                        name: canvas_CanvasContext-arc
+                        name: show_canvas_CanvasContext-arc
                       -
-                        link: /develop/api/show/canvas_CanvasContext-scale
+                        link: /develop/api/show_canvas/#CanvasContext-scale
                         text: CanvasContext.scale
-                        name: canvas_CanvasContext-scale
+                        name: show_canvas_CanvasContext-scale
                       -
-                        link: /develop/api/show/canvas_CanvasContext-rotate
+                        link: /develop/api/show_canvas/#CanvasContext-rotate
                         text: CanvasContext.rotate
-                        name: canvas_CanvasContext-rotate
+                        name: show_canvas_CanvasContext-rotate
                       -
-                        link: /develop/api/show/canvas_CanvasContext-translate
+                        link: /develop/api/show_canvas/#CanvasContext-translate
                         text: CanvasContext.translate
-                        name: canvas_CanvasContext-translate
+                        name: show_canvas_CanvasContext-translate
                       -
-                        link: /develop/api/show/canvas_CanvasContext-clip
+                        link: /develop/api/show_canvas/#CanvasContext-clip
                         text: CanvasContext.clip
-                        name: canvas_CanvasContext-clip
+                        name: show_canvas_CanvasContext-clip
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setFontSize
+                        link: /develop/api/show_canvas/#CanvasContext-setFontSize
                         text: CanvasContext.setFontSize
-                        name: canvas_CanvasContext-setFontSize
+                        name: show_canvas_CanvasContext-setFontSize
                       -
-                        link: /develop/api/show/canvas_CanvasContext-fillText
+                        link: /develop/api/show_canvas/#CanvasContext-fillText
                         text: CanvasContext.fillText
-                        name: canvas_CanvasContext-fillText
+                        name: show_canvas_CanvasContext-fillText
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setTextAlign
+                        link: /develop/api/show_canvas/#CanvasContext-setTextAlign
                         text: CanvasContext.setTextAlign
-                        name: canvas_CanvasContext-setTextAlign
+                        name: show_canvas_CanvasContext-setTextAlign
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setTextBaseline
+                        link: /develop/api/show_canvas/#CanvasContext-setTextBaseline
                         text: CanvasContext.setTextBaseline
-                        name: canvas_CanvasContext-setTextBaseline
+                        name: show_canvas_CanvasContext-setTextBaseline
                       -
-                        link: /develop/api/show/canvas_CanvasContext-drawImage
+                        link: /develop/api/show_canvas/#CanvasContext-drawImage
                         text: CanvasContext.drawImage
-                        name: canvas_CanvasContext-drawImage
+                        name: show_canvas_CanvasContext-drawImage
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setGlobalAlpha
+                        link: /develop/api/show_canvas/#CanvasContext-setGlobalAlpha
                         text: CanvasContext.setGlobalAlpha
-                        name: canvas_CanvasContext-setGlobalAlpha
+                        name: show_canvas_CanvasContext-setGlobalAlpha
                       -
-                        link: /develop/api/show/canvas_CanvasContext-measureText
+                        link: /develop/api/show_canvas/#CanvasContext-measureText
                         text: CanvasContext.measureText
-                        name: canvas_CanvasContext-measureText
+                        name: show_canvas_CanvasContext-measureText
                       -
-                        link: /develop/api/show/canvas_CanvasContext-strokeText
+                        link: /develop/api/show_canvas/#CanvasContext-strokeText
                         text: CanvasContext.strokeText
-                        name: canvas_CanvasContext-strokeText
+                        name: show_canvas_CanvasContext-strokeText
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setLineDashOffset
+                        link: /develop/api/show_canvas/#CanvasContext-setLineDashOffset
                         text: CanvasContext.setLineDashOffset
-                        name: canvas_CanvasContext-setLineDashOffset
+                        name: show_canvas_CanvasContext-setLineDashOffset
                       -
-                        link: /develop/api/show/canvas_CanvasContext-bezierCurveTo
+                        link: /develop/api/show_canvas/#CanvasContext-bezierCurveTo
                         text: CanvasContext.bezierCurveTo
-                        name: canvas_CanvasContext-bezierCurveTo
+                        name: show_canvas_CanvasContext-bezierCurveTo
                       -
-                        link: /develop/api/show/canvas_CanvasContext-quadraticCurveTo
+                        link: /develop/api/show_canvas/#CanvasContext-quadraticCurveTo
                         text: CanvasContext.quadraticCurveTo
-                        name: canvas_CanvasContext-quadraticCurveTo
+                        name: show_canvas_CanvasContext-quadraticCurveTo
                       -
-                        link: /develop/api/show/canvas_CanvasContext-save
+                        link: /develop/api/show_canvas/#CanvasContext-save
                         text: CanvasContext.save
-                        name: canvas_CanvasContext-save
+                        name: show_canvas_CanvasContext-save
                       -
-                        link: /develop/api/show/canvas_CanvasContext-restore
+                        link: /develop/api/show_canvas/#CanvasContext-restore
                         text: CanvasContext.restore
-                        name: canvas_CanvasContext-restore
+                        name: show_canvas_CanvasContext-restore
                       -
-                        link: /develop/api/show/canvas_CanvasContext-draw
+                        link: /develop/api/show_canvas/#CanvasContext-draw
                         text: CanvasContext.draw
-                        name: canvas_CanvasContext-draw
+                        name: show_canvas_CanvasContext-draw
                       -
-                        link: /develop/api/show/canvas_CanvasContext-font
+                        link: /develop/api/show_canvas/#CanvasContext-font
                         text: CanvasContext.font
-                        name: canvas_CanvasContext-font
+                        name: show_canvas_CanvasContext-font
                       -
-                        link: /develop/api/show/canvas_CanvasContext-setTransform
+                        link: /develop/api/show_canvas/#CanvasContext-setTransform
                         text: CanvasContext.setTransform
-                        name: canvas_CanvasContext-setTransform
+                        name: show_canvas_CanvasContext-setTransform
               -
-               
+                link: /develop/api/show_toast
                 text: 交互反馈
-                
+                name: show_toast
                 sidebar:
                   -
-                    link: /develop/api/show/toast_swan-showToast
+                    link: /develop/api/show_toast/#swan-showToast
                     text: swan.showToast
-                    name: toast_swan-showToast
+                    name: show_toast_swan-showToast
                   -
-                    link: /develop/api/show/toast_swan-showLoading
+                    link: /develop/api/show_toast/#swan-showLoading
                     text: swan.showLoading
-                    name: toast_swan-showLoading
+                    name: show_toast_swan-showLoading
                   -
-                    link: /develop/api/show/toast_swan-hideToast
+                    link: /develop/api/show_toast/#swan-hideToast
                     text: swan.hideToast
-                    name: toast_swan-hideToast
+                    name: show_toast_swan-hideToast
                   -
-                    link: /develop/api/show/toast_swan-hideLoading
+                    link: /develop/api/show_toast/#swan-hideLoading
                     text: swan.hideLoading
-                    name: toast_swan-hideLoading
+                    name: show_toast_swan-hideLoading
                   -
-                    link: /develop/api/show/toast_swan-showModal
+                    link: /develop/api/show_toast/#swan-showModal
                     text: swan.showModal
-                    name: toast_swan-showModal
+                    name: show_toast_swan-showModal
                   -
-                    link: /develop/api/show/toast_swan-showActionSheet
+                    link: /develop/api/show_toast/#swan-showActionSheet
                     text: swan.showActionSheet
-                    name: toast_swan-showActionSheet
+                    name: show_toast_swan-showActionSheet
               -
-      
+                link: /develop/api/show_navigationbar
                 text: 导航栏
-             
+                name: show_navigationbar
                 sidebar:
                   -
-                    link: /develop/api/show/navigationbar_swan-setNavigationBarTitle
+                    link: /develop/api/show_navigationbar/#swan-setNavigationBarTitle
                     text: swan.setNavigationBarTitle
-                    name: navigationbar_swan-setNavigationBarTitle
+                    name: show_navigationbar_swan-setNavigationBarTitle
                   -
-                    link: /develop/api/show/navigationbar_swan-showNavigationBarLoading
+                    link: /develop/api/show_navigationbar/#swan-showNavigationBarLoading
                     text: swan.showNavigationBarLoading
-                    name: navigationbar_swan-showNavigationBarLoading
+                    name: show_navigationbar_swan-showNavigationBarLoading
                   -
-                    link: /develop/api/show/navigationbar_swan-hideNavigationBarLoading
+                    link: /develop/api/show_navigationbar/#swan-hideNavigationBarLoading
                     text: swan.hideNavigationBarLoading
-                    name: navigationbar_swan-hideNavigationBarLoading
+                    name: show_navigationbar_swan-hideNavigationBarLoading
                   -
-                    link: /develop/api/show/navigationbar_swan-setNavigationBarColor
+                    link: /develop/api/show_navigationbar/#swan-setNavigationBarColor
                     text: swan.setNavigationBarColor
-                    name: navigationbar_swan-setNavigationBarColor
+                    name: show_navigationbar_swan-setNavigationBarColor
               -
-           
+                link: /develop/api/show_tabbar
                 text: 设置tabBar
-             
+                name: show_tabbar
                 sidebar:
                   -
-                    link: /develop/api/show/tabbar_swan-setTabBarBadge
+                    link: /develop/api/show_tabbar/#swan-setTabBarBadge
                     text: swan.setTabBarBadge
-                    name: tabbar_swan-setTabBarBadge
+                    name: show_tabbar_swan-setTabBarBadge
                   -
-                    link: /develop/api/show/tabbar_swan-removeTabBarBadge
+                    link: /develop/api/show_tabbar/#swan-removeTabBarBadge
                     text: swan.removeTabBarBadge
-                    name: tabbar_swan-removeTabBarBadge
+                    name: show_tabbar_swan-removeTabBarBadge
                   -
-                    link: /develop/api/show/tabbar_swan-showTabBarRedDot
+                    link: /develop/api/show_tabbar/#swan-showTabBarRedDot
                     text: swan.showTabBarRedDot
-                    name: tabbar_swan-showTabBarRedDot
+                    name: show_tabbar_swan-showTabBarRedDot
                   -
-                    link: /develop/api/show/tabbar_swan-hideTabBarRedDot
+                    link: /develop/api/show_tabbar/#swan-hideTabBarRedDot
                     text: swan.hideTabBarRedDot
-                    name: tabbar_swan-hideTabBarRedDot
+                    name: show_tabbar_swan-hideTabBarRedDot
                   -
-                    link: /develop/api/show/tabbar_swan-setTabBarStyle
+                    link: /develop/api/show_tabbar/#swan-setTabBarStyle
                     text: swan.setTabBarStyle
-                    name: tabbar_swan-setTabBarStyle
+                    name: show_tabbar_swan-setTabBarStyle
                   -
-                    link: /develop/api/show/tabbar_swan-setTabBarItem
+                    link: /develop/api/show_tabbar/#swan-setTabBarItem
                     text: swan.setTabBarItem
-                    name: tabbar_swan-setTabBarItem
+                    name: show_tabbar_swan-setTabBarItem
                   -
-                    link: /develop/api/show/tabbar_swan-showTabBar
+                    link: /develop/api/show_tabbar/#swan-showTabBar
                     text: swan.showTabBar
-                    name: tabbar_swan-showTabBar
+                    name: show_tabbar_swan-showTabBar
                   -
-                    link: /develop/api/show/tabbar_swan-hideTabBar
+                    link: /develop/api/show_tabbar/#swan-hideTabBar
                     text: swan.hideTabBar
-                    name: tabbar_swan-hideTabBar
+                    name: show_tabbar_swan-hideTabBar
               -
- 
+                link: /develop/api/show_tab
                 text: 导航
-     
+                name: show_tab
                 sidebar:
                   -
-                    link: /develop/api/show/tab_swan-navigateTo
+                    link: /develop/api/show_tab/#swan-navigateTo
                     text: swan.navigateTo
-                    name: tab_swan-navigateTo
+                    name: show_tab_swan-navigateTo
                   -
-                    link: /develop/api/show/tab_swan-redirectTo
+                    link: /develop/api/show_tab/#swan-redirectTo
                     text: swan.redirectTo
-                    name: tab_swan-redirectTo
+                    name: show_tab_swan-redirectTo
                   -
-                    link: /develop/api/show/tab_swan-switchTab
+                    link: /develop/api/show_tab/#swan-switchTab
                     text: swan.switchTab
-                    name: tab_swan-switchTab
+                    name: show_tab_swan-switchTab
                   -
-                    link: /develop/api/show/tab_swan-navigateBack
+                    link: /develop/api/show_tab/#swan-navigateBack
                     text: swan.navigateBack
-                    name: tab_swan-navigateBack
+                    name: show_tab_swan-navigateBack
                   -
-                    link: /develop/api/show/tab_swan-reLaunch
+                    link: /develop/api/show_tab/#swan-reLaunch
                     text: swan.reLaunch
-                    name: tab_swan-reLaunch
+                    name: show_tab_swan-reLaunch
               -
- 
+                link: /develop/api/show_createanimation
                 text: 动画
-                name: createanimation_
+                name: show_createanimation
                 sidebar:
                   -
-                    link: /develop/api/show/createanimation_swan-createAnimation
+                    link: /develop/api/show_createanimation/#swan-createAnimation
                     text: swan.createAnimation
-                    name: createanimation__swan-createAnimation
+                    name: show_createanimation_swan-createAnimation
                   -
-                    link: /develop/api/show/createanimation_Animation
+                    link: /develop/api/show_createanimation/#Animation
                     text: Animation
-                    name: createanimation__Animation
+                    name: show_createanimation_Animation
                     sidebar:
                       -
-                        link: /develop/api/show/createanimation_Animation-rotate
+                        link: /develop/api/show_createanimation/#Animation-rotate
                         text: Animation.rotate
-                        name: createanimation__Animation-rotate
+                        name: show_createanimation_Animation-rotate
                       -
-                        link: /develop/api/show/createanimation_Animation-rotateX
+                        link: /develop/api/show_createanimation/#Animation-rotateX
                         text: Animation.rotateX
-                        name: createanimation__Animation-rotateX
+                        name: show_createanimation_Animation-rotateX
                       -
-                        link: /develop/api/show/createanimation_Animation-rotateY
+                        link: /develop/api/show_createanimation/#Animation-rotateY
                         text: Animation.rotateY
-                        name: createanimation__Animation-rotateY
+                        name: show_createanimation_Animation-rotateY
                       -
-                        link: /develop/api/show/createanimation_Animation-rotateZ
+                        link: /develop/api/show_createanimation/#Animation-rotateZ
                         text: Animation.rotateZ
-                        name: createanimation__Animation-rotateZ
+                        name: show_createanimation_Animation-rotateZ
                       -
-                        link: /develop/api/show/createanimation_Animation-rotate3d
+                        link: /develop/api/show_createanimation/#Animation-rotate3d
                         text: Animation.rotate3d
-                        name: createanimation__Animation-rotate3d
+                        name: show_createanimation_Animation-rotate3d
                       -
-                        link: /develop/api/show/createanimation_Animation-scale
+                        link: /develop/api/show_createanimation/#Animation-scale
                         text: Animation.scale
-                        name: createanimation__Animation-scale
+                        name: show_createanimation_Animation-scale
                       -
-                        link: /develop/api/show/createanimation_Animation-scaleX
+                        link: /develop/api/show_createanimation/#Animation-scaleX
                         text: Animation.scaleX
-                        name: createanimation__Animation-scaleX
+                        name: show_createanimation_Animation-scaleX
                       -
-                        link: /develop/api/show/createanimation_Animation-scaleY
+                        link: /develop/api/show_createanimation/#Animation-scaleY
                         text: Animation.scaleY
-                        name: createanimation__Animation-scaleY
+                        name: show_createanimation_Animation-scaleY
                       -
-                        link: /develop/api/show/createanimation_Animationn-scaleZ
+                        link: /develop/api/show_createanimation/#Animationn-scaleZ
                         text: Animation.scaleZ
-                        name: createanimation__Animation-scaleZ
+                        name: show_createanimation_Animation-scaleZ
                       -
-                        link: /develop/api/show/createanimation_Animation-scale3d
+                        link: /develop/api/show_createanimation/#Animation-scale3d
                         text: Animation.scale3d
-                        name: createanimation__Animation-scale3d
+                        name: show_createanimation_Animation-scale3d
                       -
-                        link: /develop/api/show/createanimation_Animation-translate
+                        link: /develop/api/show_createanimation/#Animation-translate
                         text: Animation.translate
-                        name: createanimation__Animation-translate
+                        name: show_createanimation_Animation-translate
                       -
-                        link: /develop/api/show/createanimation_Animation-translateX
+                        link: /develop/api/show_createanimation/#Animation-translateX
                         text: Animation.translateX
-                        name: createanimation__Animation-translateX
+                        name: show_createanimation_Animation-translateX
                       -
-                        link: /develop/api/show/createanimation_Animation-translateY
+                        link: /develop/api/show_createanimation/#Animation-translateY
                         text: Animation.translateY
-                        name: createanimation__Animation-translateY
+                        name: show_createanimation_Animation-translateY
                       -
-                        link: /develop/api/show/createanimation_Animation-translateZ
+                        link: /develop/api/show_createanimation/#Animation-translateZ
                         text: Animation.translateZ
-                        name: createanimation__Animation-translateZ
+                        name: show_createanimation_Animation-translateZ
                       -
-                        link: /develop/api/show/createanimation_Animation-translate3d
+                        link: /develop/api/show_createanimation/#Animation-translate3d
                         text: Animation.translate3d
-                        name: createanimation__Animation-translate3d
+                        name: show_createanimation_Animation-translate3d
                       -
-                        link: /develop/api/show/createanimation_Animation-skew
+                        link: /develop/api/show_createanimation/#Animation-skew
                         text: Animation.skew
-                        name: createanimation__Animation-skew
+                        name: show_createanimation_Animation-skew
                       -
-                        link: /develop/api/show/createanimation_Animation-skewX
+                        link: /develop/api/show_createanimation/#Animation-skewX
                         text: Animation.skewX
-                        name: createanimation__Animation-skewX
+                        name: show_createanimation_Animation-skewX
                       -
-                        link: /develop/api/show/createanimation_Animation-skewY
+                        link: /develop/api/show_createanimation/#Animation-skewY
                         text: Animation.skewY
-                        name: createanimation__Animation-skewY
+                        name: show_createanimation_Animation-skewY
                       -
-                        link: /develop/api/show/createanimation_Animation-matrix
+                        link: /develop/api/show_createanimation/#Animation-matrix
                         text: Animation.matrix
-                        name: createanimation__Animation-matrix
+                        name: show_createanimation_Animation-matrix
                       -
-                        link: /develop/api/show/createanimation_Animation-matrix3d
+                        link: /develop/api/show_createanimation/#Animation-matrix3d
                         text: Animation.matrix3d
-                        name: createanimation__Animation-matrix3d
+                        name: show_createanimation_Animation-matrix3d
 
               -
-             
+                link: /develop/api/show_pagescrollto
                 text: 位置
-             
+                name: show_pagescrollto
                 sidebar:
                   -
-                    link: /develop/api/show/pagescrollto_swan-pageScrollTo
+                    link: /develop/api/show_pagescrollto/#swan-pageScrollTo
                     text: swan.pageScrollTo
-                    name:  pagescrollto_swan-pageScrollTo
+                    name: show_pagescrollto_swan-pageScrollTo
               -
-             
+                link: /develop/api/show_background
                 text: 背景
-               
+                name: show_background
                 sidebar:
                   -
-                    link: /develop/api/show/background_swan-setBackgroundColor
+                    link: /develop/api/show_background/#swan-setBackgroundColor
                     text: swan.setBackgroundColor
-                    name: background_swan-setBackgroundColor
+                    name: show_background_swan-setBackgroundColor
                   -
-                    link: /develop/api/show/background_swan-setBackgroundTextStyle
+                    link: /develop/api/show_background/#swan-setBackgroundTextStyle
                     text: swan.setBackgroundTextStyle
-                    name: background_swan-setBackgroundTextStyle
+                    name: show_background_swan-setBackgroundTextStyle
               -
-    
+                link: /develop/api/show_pull
                 text: 下拉刷新
-   
+                name: show_pull
                 sidebar:
                   -
-                    link: /develop/api/show/pull_onPullDownRefresh
+                    link: /develop/api/show_pull/#onPullDownRefresh
                     text: onPullDownRefresh
-                    name: pull_onPullDownRefresh
+                    name: show_pull_onPullDownRefresh
                   -
-                    link: /develop/api/show/pull_swan-startPullDownRefresh
+                    link: /develop/api/show_pull/#swan-startPullDownRefresh
                     text: swan.startPullDownRefresh
-                    name: pull_swan-startPullDownRefresh
+                    name: show_pull_swan-startPullDownRefresh
                   -
-                    link: /develop/api/show/pull_swan-stopPullDownRefresh
+                    link: /develop/api/show_pull/#swan-stopPullDownRefresh
                     text: swan.stopPullDownRefresh
-                    name: pull_swan-stopPullDownRefresh
+                    name: show_pull_swan-stopPullDownRefresh
               -
-    
+                link: /develop/api/custom_component
                 text: 自定义组件
-           
+                name: custom_component
                 sidebar:
                   -
-                    link: /develop/api/show/custom_component 
+                    link: /develop/api/custom_component/#swan-nextTick
                     text: swan.nextTick
-                    name: custom_component 
+                    name: custom_component_swan-nextTick
               -
-              
+                link: /develop/api/menu_info
                 text: 菜单
-            
+                name: menu_info
                 sidebar:
                   -
-                    link: /develop/api/show/menu_info 
+                    link: /develop/api/menu_info/#swan-getMenuButtonBoundingClientRect
                     text: swan.getMenuButtonBoundingClientRect
-                    name: menu_info 
+                    name: menu_info_swan-getMenuButtonBoundingClientRect
               -
-             
+                link: /develop/api/show_query
                 text: 节点信息
-              
+                name: show_query
                 sidebar:
                   -
-                    link: /develop/api/show/query_swan-createIntersectionObserver
+                    link: /develop/api/show_query/#swan-createIntersectionObserver
                     text: swan.createIntersectionObserver
-                    name: query_swan-createIntersectionObserver
+                    name: show_query_swan-createIntersectionObserver
                   -
-                    link: /develop/api/show/query_IntersectionObserver
+                    link: /develop/api/show_query/#IntersectionObserver
                     text: IntersectionObserver
-                    name: query_IntersectionObserver
+                    name: show_query_IntersectionObserver
                     sidebar:
                       -
-                        link: /develop/api/show/query_IntersectionObserver-relativeTo
+                        link: /develop/api/show_query/#IntersectionObserver-relativeTo
                         text: IntersectionObserver.relativeTo
-                        name: query_IntersectionObserver-relativeTo
+                        name: show_query_IntersectionObserver-relativeTo
                       -
-                        link: /develop/api/show/query_IntersectionObserver-relativeToViewport
+                        link: /develop/api/show_query/#IntersectionObserver-relativeToViewport
                         text: IntersectionObserver.relativeToViewport
-                        name: query_IntersectionObserver-relativeToViewport
+                        name: show_query_IntersectionObserver-relativeToViewport
                       -
-                        link: /develop/api/show/query_IntersectionObserver-observe
+                        link: /develop/api/show_query/#IntersectionObserver-observe
                         text: IntersectionObserver.observe
-                        name: query_IntersectionObserver-observe
+                        name: show_query_IntersectionObserver-observe
                       -
-                        link: /develop/api/show/query_IntersectionObserver-disconnect
+                        link: /develop/api/show_query/#IntersectionObserver-disconnect
                         text: IntersectionObserver.disconnect
-                        name: query_IntersectionObserver-disconnect
+                        name: show_query_IntersectionObserver-disconnect
                   -
-                    link: /develop/api/show/query_swan-createSelectorQuery
+                    link: /develop/api/show_query/#swan-createSelectorQuery
                     text: swan.createSelectorQuery
-                    name: query_swan-createSelectorQuery
+                    name: show_query_swan-createSelectorQuery
                   -
-                    link: /develop/api/show/query_SelectorQuery
+                    link: /develop/api/show_query/#SelectorQuery
                     text: SelectorQuery
-                    name: query_SelectorQuery
+                    name: show_query_SelectorQuery
                     sidebar:
                       -
-                        link: /develop/api/show/query_SelectorQuery-in
+                        link: /develop/api/show_query/#SelectorQuery-in
                         text: SelectorQuery.in
-                        name: query_SelectorQuery-in
+                        name: show_query_SelectorQuery-in
                       -
-                        link: /develop/api/show/query_SelectorQuery-select
+                        link: /develop/api/show_query/#SelectorQuery-select
                         text: SelectorQuery.select
-                        name: query_SelectorQuery-select
+                        name: show_query_SelectorQuery-select
                       -
-                        link: /develop/api/show/query_SelectorQuery-selectAll
+                        link: /develop/api/show_query/#SelectorQuery-selectAll
                         text: SelectorQuery.selectAll
-                        name: query_SelectorQuery-selectAll
+                        name: show_query_SelectorQuery-selectAll
                       -
-                        link: /develop/api/show/query_SelectorQuery-selectViewport
+                        link: /develop/api/show_query/#SelectorQuery-selectViewport
                         text: SelectorQuery.selectViewport
-                        name: query_SelectorQuery-selectViewport
+                        name: show_query_SelectorQuery-selectViewport
                       -
-                        link: /develop/api/show/query_SelectorQuery-exec
+                        link: /develop/api/show_query/#SelectorQuery-exec
                         text: SelectorQuery.exec
                         name: show_swan-query_SelectorQuery-exec
                   -
-                    link: /develop/api/show/query_NodesRef
+                    link: /develop/api/show_query/#NodesRef
                     text: NodesRef
-                    name: query_NodesRef
+                    name: show_query_NodesRef
                     sidebar:
                       -
-                        link: /develop/api/show/query_NodesRef-boundingClientRect
+                        link: /develop/api/show_query/#NodesRef-boundingClientRect
                         text: NodesRef.boundingClientRect
-                        name: query_NodesRef-boundingClientRect
+                        name: show_query_NodesRef-boundingClientRect
                       -
-                        link: /develop/api/show/query_NodesRef-scrollOffset
+                        link: /develop/api/show_query/#NodesRef-scrollOffset
                         text: NodesRef.scrollOffset
-                        name: query_NodesRef-scrollOffset
+                        name: show_query_NodesRef-scrollOffset
                       -
-                        link: /develop/api/show/query_NodesRef-fields
+                        link: /develop/api/show_query/#NodesRef-fields
                         text: NodesRef.fields
-                        name: query_NodesRef-fields
+                        name: show_query_NodesRef-fields
 
               -
-              
+                link: /develop/api/nacomponent
                 text:  添加到我的小程序引导
-             
+                name: nacomponent
                 sidebar:
                   -
-                    link: /develop/api/show/nacomponent 
+                    link: /develop/api/nacomponent/#swan-showFavoriteGuide
                     text: swan.showFavoriteGuide
-                    name: nacomponent_ 
+                    name: nacomponent_swan-showFavoriteGuide
 
         -
 
@@ -4410,7 +4410,7 @@
 # 6
 -        
   link: third/create
-  text: 第三方平台
+  text: 第三方接入
   name: third
   nav:
     -

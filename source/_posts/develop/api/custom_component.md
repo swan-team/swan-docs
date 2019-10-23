@@ -1,11 +1,11 @@
 ---
-title: swan.nextTick
+title: 自定义组件
 header: develop
 nav: api
 sidebar: custom_component
 ---
 
- 
+## swan.nextTick
 
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。
 
