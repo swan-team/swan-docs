@@ -285,7 +285,11 @@ Page({
 <a href="swanide://fragment/a7b2504b71ca436426b0ae155f622b8a1560166561702" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
-> 在 swan/js 文件中的代码示例与[swan.setStorage](https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/)相同
+> 在 swan/js 文件中的代码示例与[swan.setStorage](https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/)相同;
+
+**bugs&tips**:
+
+getStorage获取一个不存在的key对应的value值， 目前会调用success回调并返回一个空字符串， 返回格式为{data: ''}, 该问题预计在后续版本进行修复
 
 
 ## swan.getStorageSync
