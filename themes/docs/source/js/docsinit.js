@@ -22,7 +22,8 @@
         '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
         '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
-        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/'
+        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
+        '/docs/develop/tutorial/index/':'/docs/develop/fuctionlist/list/'
 
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
