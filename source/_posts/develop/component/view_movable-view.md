@@ -46,14 +46,6 @@ sidebar: view_movable-view
 | none | 不可移动 |
 
 
-**Bug & Tip**：
-
-* movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
-* movable-view 默认为绝对定位，top 和 left 属性为 0px。
-* 当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
-* 当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
-* movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
-
 **示例**：
 <a href="swanide://fragment/34026129ece94156c05e4567f773288e1565511303256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -153,3 +145,12 @@ Page({
     }
 });
 ```
+
+
+**Bug & Tip**：
+
+* movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
+* movable-view 默认为绝对定位，top 和 left 属性为 0px。
+* 当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
+* 当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
+* movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。

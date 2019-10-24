@@ -9,7 +9,7 @@ sidebar: apifaq
 
 A：当前我们提供方式可以查询到您指定地点的经纬度
 
-* 推荐使用[swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/)可获取到选择当前位置的经纬度。
+* 推荐使用[swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)可获取到选择当前位置的经纬度。
 
     在开发者工具中调用 swan.chooseLocation 用日志输出看到经纬度(坐标系GCJ02，可以直接用于小程序)，具体方法可参考官方示例[在开发者工具中预览效果](swanide://fragment/09f8e00c2d4fd069e5001041293d07191557727424300)。
 

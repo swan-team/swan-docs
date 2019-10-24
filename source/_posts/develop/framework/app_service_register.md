@@ -74,22 +74,22 @@ App({
 
 
 ### onShow(Object object)
-小程序启动，或从后台进入前台显示时触发。也可以使用 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onAppShow/) 绑定监听。
+小程序启动，或从后台进入前台显示时触发。也可以使用 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppShow/) 绑定监听。
 
-**参数：**与 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onAppShow/) 一致
+**参数：**与 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppShow/) 一致
 
 ### onHide()
-小程序从前台进入后台时触发。也可以使用 [swan.onAppHide](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onAppHide/) 绑定监听。
+小程序从前台进入后台时触发。也可以使用 [swan.onAppHide](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppHide/) 绑定监听。
 
 ### onError(Object object)
-小程序发生脚本错误或 API 调用报错时触发。也可以使用 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onError/) 绑定监听。
+小程序发生脚本错误或 API 调用报错时触发。也可以使用 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/) 绑定监听。
 
-**参数：**与 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onError/) 一致
+**参数：**与 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/) 一致
 
 ### onPageNotFound(Object object)
-小程序要打开的页面不存在时触发。也可以使用 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onPageNotFound/) 绑定监听。注意事项请参考 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onPageNotFound/)。
+小程序要打开的页面不存在时触发。也可以使用 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 绑定监听。注意事项请参考 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/)。
 
-**参数：**与 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/#swan-onPageNotFound/) 一致
+**参数：**与 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 一致
 
 **示例代码**
 ```js

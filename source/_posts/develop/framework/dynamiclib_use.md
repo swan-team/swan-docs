@@ -40,7 +40,7 @@ sidebar: dynamiclib_use
         // 这里的 'myDynamicLib' 就是上面定义的，本小程序使用此动态库的别名。
         // 这里的 'special-list' 是此动态库的公开的自定义组件（publicComponents）的名称。
         // 动态库有哪些公开的自定义组件，应从各个动态库的用户文档中得到。
-        // 这里的 'my-special-list' 也是个自己定的别名，本页面或者本组件在模版中用此别名引用这个自定义组件。
+        // 这里的 'my-special-list' 也是个自己定的别名，本页面或者本组件在模板中用此别名引用这个自定义组件。
         "my-special-list": "dynamicLib://myDynamicLib/special-list"
     }
 }

@@ -11,17 +11,17 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_request/#swan-request/">swan.request</a>|发起网络请求|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#swan-uploadFile/">swan.uploadFile</a>|将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 content-type 为 multipart/form-data 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_uploadfile/#swan-downloadFile/">swan.downloadFile</a>|下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-connectSocket/">swan.connectSocket</a>|创建一个 WebSocket 连接。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketOpen/">swan.onSocketOpen</a>|监听 WebSocket 连接打开事件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketError/">swan.onSocketError</a>|监听 WebSocket 错误|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-sendSocketMessage/">swan.sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketMessage/">swan.onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-closeSocket/">swan.closeSocket</a>|关闭 WebSocket 连接，须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#swan-onSocketClose/">swan.onSocketClose</a>|监听 WebSocket 关闭。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/net_websocket/#SocketTask/">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/request/">swan.request</a>|发起网络请求|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/uploadfile/">swan.uploadFile</a>|将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 content-type 为 multipart/form-data 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。|
+|<a href="https://smartprogram.baidu.com/docs /develop/api/net/downloadFile/">swan.downloadFile</a>|下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket/">swan.connectSocket</a>|创建一个 WebSocket 连接。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketOpen/">swan.onSocketOpen</a>|监听 WebSocket 连接打开事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketError/">swan.onSocketError</a>|监听 WebSocket 错误|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-sendSocketMessage/">swan.sendSocketMessage</a>|通过 WebSocket 连接发送数据，需要先调用 swan.connectSocket，并在 swan.onSocketOpen 回调之后才能发送。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketMessage/">swan.onSocketMessage</a>|监听 WebSocket 接受到服务器的消息事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-closeSocket/">swan.closeSocket</a>|关闭 WebSocket 连接，须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_swan-onSocketClose/">swan.onSocketClose</a>|监听 WebSocket 关闭。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/net/websocket_SocketTask/">SocketTask</a>|WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。|
 
 
 
@@ -29,28 +29,28 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrIdCard/">swan.ai.ocrIdCard</a>|用户向服务请求识别身份证，身份证识别包括正面和背面。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrBankCard/">swan.ai.ocrBankCard</a>|识别银行卡并返回卡号、发卡行和卡片类型。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrDrivingLicense/">swan.ai.ocrDrivingLicense</a>|对机动车驾驶证所有关键字段进行识别。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_ocr/#swan-ai-ocrVehicleLicense/">swan.ai.ocrVehicleLicense</a>|对机动车行驶证正本所有关键字段进行识别。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_text/#swan-ai-textReview/">swan.ai.textReview</a>|运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_audio/#swan-ai-textToAudio/">swan.ai.textToAudio</a>|将文本转换为可以播放的 mp3 文件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_audit/#swan-ai-imageAudit/">swan.ai.imageAudit</a>|自定义图像审核。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-advancedGeneralIdentify/">swan.ai.advancedGeneralIdentify</a>|通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-objectDetectIdentify/"> swan.ai.objectDetectIdentify</a>|用户向服务请求检测图像中的主体位置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-carClassify/">swan.ai.carClassify</a>|用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-dishClassify/">swan.ai.dishClassify</a>|用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-logoClassify/">swan.ai.logoClassify</a>|用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-animalClassify/">swan.ai.animalClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_classify/#swan-ai-plantClassify/">swan.ai.plantClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_voice/#swan-ai-getVoiceRecognizer/">swan.ai.getVoiceRecognizer</a>|获取全局唯一的语音识别器voiceRecognizer。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceDetect/">swan.ai.faceDetect</a>|人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceMatch/">swan.ai.faceMatch</a>|人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceSearch/">swan.ai.faceSearch</a>|人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-facePersonVerify/">swan.ai.facePersonVerify</a>|公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-facePersonIdmatch/">swan.ai.facePersonIdmatch</a>|身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessSessioncode/">swan.ai.faceLivenessSessioncode</a>|H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai_word/#swan-ai-nlpLexerCustom/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrIdCard/">swan.ai.ocrIdCard</a>|用户向服务请求识别身份证，身份证识别包括正面和背面。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrBankCard/">swan.ai.ocrBankCard</a>|识别银行卡并返回卡号、发卡行和卡片类型。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrDrivingLicense/">swan.ai.ocrDrivingLicense</a>|对机动车驾驶证所有关键字段进行识别。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrVehicleLicense/">swan.ai.ocrVehicleLicense</a>|对机动车行驶证正本所有关键字段进行识别。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/text_swan-ai-textReview/#swan-ai-textReview/">swan.ai.textReview</a>|运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/audio/#swan-ai-textToAudio/">swan.ai.textToAudio</a>|将文本转换为可以播放的 mp3 文件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/audit/#swan-ai-imageAudit/">swan.ai.imageAudit</a>|自定义图像审核。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-advancedGeneralIdentify/">swan.ai.advancedGeneralIdentify</a>|通用物体及场景识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中的多个物体及场景标签。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-objectDetectIdentify/"> swan.ai.objectDetectIdentify</a>|用户向服务请求检测图像中的主体位置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-carClassify/">swan.ai.carClassify</a>|用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-dishClassify/">swan.ai.dishClassify</a>|用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_wan-ai-logoClassify/">swan.ai.logoClassify</a>|用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-animalClassify/">swan.ai.animalClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-plantClassify/">swan.ai.plantClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/voice_swan-ai-getVoiceRecognizer/">swan.ai.getVoiceRecognizer</a>|获取全局唯一的语音识别器voiceRecognizer。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceDetect/">swan.ai.faceDetect</a>|人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceMatch/">swan.ai.faceMatch</a>|人脸对比，支持两张人脸图片的相似度对比，图片类型可以为：生活照，证件照，身份证芯片照或者带网纹照。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceSearch/">swan.ai.faceSearch</a>|人脸搜索，传入人脸图片，支持在指定人脸图片集合中，找到与传入图片中人脸最为相似的图片。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-facePersonVerify/">swan.ai.facePersonVerify</a>|公安验证，基于姓名和身份证号，调取公民身份证小图（源自公安系统），将当前获取的人脸图片，与此证件小图进行对比，得出比对分数。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-facePersonIdmatch/">swan.ai.facePersonIdmatch</a>|身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceLivenessSessioncode/">swan.ai.faceLivenessSessioncode</a>|H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/word/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
 <!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。| -->
 <!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。| -->
 
@@ -58,34 +58,35 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="http://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_recorder/#swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_backgroundaudiomanager/#swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_createinneraudiocontext/#swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_video/#swan-saveVideoToPhotosAlbum">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_videocontext/#swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_liveplayercontext/#swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-createInnerAudioContext/">swan.createInnerAudioContext</a>|创建并返回内部 audio 上下文 innerAudioContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-setInnerAudioOption/">swan.setInnerAudioOption</a>|对innerAudioContext进行小程序内部的全局设置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-saveVideoToPhotosAlbum/">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/cameracontext_swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
 
 
 ## 文件
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-saveFile/">swan.saveFile</a>|保存文件到本地|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getFileInfo/">swan.getFileInfo</a>|获取文件信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getSavedFileList/">swan.getSavedFileList</a>|获取本地已保存的文件列表|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_save/#swan-getSavedFileInfo/">swan.getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_remove/#swan-removeSavedFile/">swan.removeSavedFile</a>|删除本地存储的文件|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/file_open/#swan-openDocument/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-saveFile/">swan.saveFile</a>|保存文件到本地|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getFileInfo/">swan.getFileInfo</a>|获取文件信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileList/">swan.getSavedFileList</a>|获取本地已保存的文件列表|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileInfo/">swan.getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/remove/">swan.removeSavedFile</a>|删除本地存储的文件|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/file/open/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
 
 
 ## 数据存储
@@ -93,25 +94,25 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_remove/#swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfo/">swan.getStorageInfo</a>|异步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageInfoSync/">swan.getStorageInfoSync</a>|同步获取当前 storage 的相关信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorage/">swan.removeStorage</a>|从本地缓存中异步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-removeStorageSync/">swan.removeStorageSync</a>|从本地缓存中同步移除指定 key。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorage/">swan.clearStorage</a>|清理本地数据缓存。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorageSync/">swan.clearStorageSync</a>|同步清理本地数据缓存。|
 
 
 ## 位置
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_open/#swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/location_map/#swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-createMapContext/">swan.createMapContext</a>|创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 <map/> 组件。mapContext 通过 mapId 跟一个 组件绑定，通过它可以操作对应的 组件。|
 
 
 ## 界面
@@ -215,16 +216,16 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-boundingClientRect/">nodesRef.boundingClientRect</a>|添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-scrollOffset/">nodesRef.scrollOffset</a>| 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show_query/#nodesRef-fields/">nodesRef.fields</a>|获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/">swan.showFavoriteGuide</a>|支持在小程序内调起添加到我的小程序引导组件，引导用户添加到我的小程序。引导组件设计文档详见：添加到我的小程序引导。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/nacomponent/#swan-showFavoriteGuide/">swan.showFavoriteGuide</a>|支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：关注小程序引导。|
 
 ## 设备
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfo/">swan.getSystemInfo</a>|获取系统信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getSystemInfoSync/">swan.getSystemInfoSync</a>|获取系统信息同步接口|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-getEnvInfoSync/">swan.getEnvInfoSync</a>|获取运行环境信息同步接口|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#swan-canIUse/">swan.canIUse</a>|判断智能小程序的API，回调，参数，组件等是否在当前版本可用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/">swan.getSystemInfo</a>|获取系统信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/">swan.getSystemInfoSync</a>|获取系统信息同步接口|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getEnvInfoSync/">swan.getEnvInfoSync</a>|获取运行环境信息同步接口|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-canIUse/">swan.canIUse</a>|判断智能小程序的API，回调，参数，组件等是否在当前版本可用。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_onmemory/#swan-onMemoryWarning/">swan.onMemoryWarning</a>|监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#swan-getNetworkType/">swan.getNetworkType</a>|获取网络类型|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#swan-onNetworkStatusChange/">swan.onNetworkStatusChange</a>|监听网络状态变化|
@@ -256,8 +257,8 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/#swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/#swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
+|<a href="https://smartprogram.baidu.com/docsdevelop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
  
 
 ## 开放接口
