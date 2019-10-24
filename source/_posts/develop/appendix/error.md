@@ -24,7 +24,7 @@ API对入参进行特殊校验时，如果校验失败会报如下错误码：
 ## ARGUMENTS_TYPE_API_ERROR
 
 使用 API 的时候，入参中有部分参数值的类型有误。
-如：应该传入 object ，结果传入 string 。需要开发者严格按照文档规定来使用API。
+如：应该传入 object，结果传入 string 。需要开发者严格按照文档规定来使用API。
 
 ## ARGUMENTS_TYPE_ERROR
 

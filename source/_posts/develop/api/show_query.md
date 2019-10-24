@@ -17,7 +17,7 @@ sidebar: show_query
 |---- | ---- | ---- | ----|----|
 |thresholds|Array|否|[0]|一个数值数组，包含所有阈值。|
 |initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|
-|selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
+|selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
 
 **示例**：
 
@@ -389,7 +389,7 @@ Page({
 |dataset |boolean | 否 | |是否返回节点 dataset |
 |rect  | boolean| 否  | |是否返回节点布局位置（left right top bottom） |
 |size  | boolean |否  | |是否返回节点尺寸（width height） |
-|scrollOffset |boolean |  否  | |是否返回节点的 scrollLeft scrollTop ，节点必须是 scroll-view 或者 viewport |
+|scrollOffset |boolean |  否  | |是否返回节点的 scrollLeft scrollTop，节点必须是 scroll-view 或者 viewport |
 |properties  | `Array.<string>`| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
 |computedStyle  |`Array.<string>` | []  | |指定样式名列表，返回节点对应样式名的当前值 |
 

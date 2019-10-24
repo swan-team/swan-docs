@@ -29,7 +29,7 @@ sidebar: open_share
 |title |String  |  否  | -| 分享标题|
 |content |String  |  否  |  -|分享内容|
 |imageUrl |String  |  否  | -| 分享图标|
-|path |String  |  否  | -| 页面 path ，必须是以 / 开头的完整路径。|
+|path |String  |  否  | -| 页面 path，必须是以 / 开头的完整路径。|
 |success |Function  |  否  | -| 接口调用成功的回调函数|
 |fail   | Function  |  否  | -| 接口调用失败的回调函数|
 |complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|

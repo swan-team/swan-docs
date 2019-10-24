@@ -18,7 +18,7 @@ sidebar:  componet
 |<a href="/develop/component/view_movable-view/">movable-view</a>|可移动视图容器|
 |<a href="/develop/component/view_movable-area/">movable-area</a>|movable-view 的可移动区域|
 |<a href="/develop/component/view_cover-view/">cover-view</a>| 覆盖在原生组件之上的文本视图。只支持嵌套cover-view、cover-image组件。|
-|<a href="/develop/component/view_cover-image/">cover-image</a>|覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view ，支持嵌套在 cover-view 里。|
+|<a href="/develop/component/view_cover-image/">cover-image</a>|覆盖在原生组件之上的图片视图，可覆盖的原生组件同 cover-view，支持嵌套在 cover-view 里。|
 |<a href="/develop/component/base_text/">text</a>|放置文本的元素。|
 |<a href="/develop/component/base_icon/">icon</a>|图标|
 |<a href="/develop/component/base_progress/">progress</a>|进度条|

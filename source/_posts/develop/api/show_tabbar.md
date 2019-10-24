@@ -297,7 +297,7 @@ Page({
 |index |Number  |是|-| tabBar的哪一项，从左边算起。|
 |text |String  |否| -|tab 上按钮文字|
 |iconPath |String |否|-| 图片绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px，当 position 为 top 时，此参数无效，不支持网络图片。|
-|selectedIconPath |String |否|-| 选中时的图片的绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px ，当`position`为 top 时，此参数无效。|
+|selectedIconPath |String |否|-| 选中时的图片的绝对路径，icon 大小限制为 40KB，建议尺寸为 81px * 81px，当`position`为 top 时，此参数无效。|
 |success| Function |   否 |-|  接口调用成功的回调函数|
 |fail   | Function  |  否  |-| 接口调用失败的回调函数|
 |complete  |  Function  |  否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|

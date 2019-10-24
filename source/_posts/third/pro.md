@@ -40,7 +40,7 @@ post 数据示例：
 }
 ```
 其中 Encrypt 参数需要解密，解密详情见<a href="https://smartprogram.baidu
-.com/docs/develop/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>部分，解密后数据如下：
+.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>部分，解密后数据如下：
 ```json
 {
     "Ticket" : "8c0da4968b0d1e28acbc1d738a56607d",
@@ -455,7 +455,7 @@ POST数据示例（授权更新通知）
 }
 ```
 
-第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/develop/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
+第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
 
 
 #### 参数说明

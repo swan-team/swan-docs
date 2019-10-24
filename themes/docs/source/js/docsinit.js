@@ -23,8 +23,7 @@
         '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
         '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
-        '/docs/develop/devtools/smartappdebug_function/#自定义预处理/':'/docs/develop/devtools/smartappdebug_function_pre/',
-        '/docs/develop/swan/compatibility/#基础库最低版本设置':'/docs/develop/swan/compatibility_version/',
+        '/docs/develop/tutorial/index/':'/docs/develop/fuctionlist/list/'
 
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
@@ -282,7 +281,11 @@
             var ctx = this;
             var before = $('.m-doc-content-layout').scrollTop();
             // 点击 二级导航折叠/展开/跳转
-            $('.m-doc-nav-list').on('click', function () {
+            $('.m-doc-nav-list').on('click', function (e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
+
                 var parent = $(this).parent('li');
                 if (parent.hasClass('m-doc-nav-on')) {
                     parent.removeClass('m-doc-nav-on')
@@ -300,7 +303,11 @@
                 }
             });
             // 点击h1 折叠/展开
-            $('.m-doc-h1-list').on('click', function () {
+            $('.m-doc-h1-list').on('click', function (e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
+
                 var parent = $(this).parent('li');
                 parent.hasClass('m-doc-sidebar-on')
                     ? parent.removeClass('m-doc-sidebar-on')
@@ -328,6 +335,9 @@
             }
             // 点击左侧标题，导航栏高亮显示 && 右侧文章更新
             $('.list-item').on('click', function(e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
                 e.preventDefault();
                 var href = $(this).attr('href');
                 updateArticle($(this), href);

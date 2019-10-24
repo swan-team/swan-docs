@@ -19,15 +19,15 @@ sidebar: sitemap
 #### 第一步：模板开启web化
 若第三方选择以模板方式代授权小程序提交代码包，则第三方小程序模板需要开启web化
 
-* 查询模板是否开启web化可参考：[模板列表API](https://smartprogram.baidu.com/docs/develop/third/module/)
+* 查询模板是否开启web化可参考：[模板列表API](https://smartprogram.baidu.com/docs/third/module/)
 
 **注意：目前，提交模板将默认开启web化，无需您进行任何操作。而存量未开启web化的模板则需要重新提交草稿并添加至模板库**
 
 #### 第二步：小程序开启web化
 在小程序提交代码包审核前，需要确保开启小程序web化
 
-* 开启小程序web化可参考：[设置web化开关API](https://smartprogram.baidu.com/docs/develop/third/sitemap/#设置web化开关)
-* 查询小程序是否开启web化可参考：[获取小程序基础信息API](https://smartprogram.baidu.com/docs/develop/third/pro/#8、获取小程序基础信息)
+* 开启小程序web化可参考：[设置web化开关API](https://smartprogram.baidu.com/docs/third/sitemap/#设置web化开关)
+* 查询小程序是否开启web化可参考：[获取小程序基础信息API](https://smartprogram.baidu.com/docs/third/pro/#8、获取小程序基础信息)
 
 **注意：目前，新创建的小程序将默认开启web化，而存量未开启web化的小程序需调用上述API开启web化**
 
@@ -35,12 +35,12 @@ sidebar: sitemap
 智能小程序被搜索引擎正常收录的前提是Web化，Web化后小程序将以普通网页的形式被爬虫发现和抓取，因此需要进行页面基础信息的设置用于提升搜索引擎优化。具体配置方式可参考：[设置页面基础信息指南](https://smartprogram.baidu.com/docs/introduction/rank/#%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/)
 
 #### 第四步：小程序发布上线
-小程序上线后才能被自然搜索收录，具体发布上线流程可参考：[小程序包管理](https://smartprogram.baidu.com/docs/develop/third/apppage/)
+小程序上线后才能被自然搜索收录，具体发布上线流程可参考：[小程序包管理](https://smartprogram.baidu.com/docs/third/apppage/)
 
 #### 第五步：绑定熊掌ID
 绑定熊掌ID后才可提交Sitemap从而被百度收录并获取流量。第三方可通过API代授权小程序绑定当前超管账号的熊掌ID，或引导开发者自行前往开发者平台绑定已有的其他熊掌ID。
 
-* 绑定当前超管账号熊掌ID可参考：[绑定熊掌ID API](https://smartprogram.baidu.com/docs/develop/third/sitemap/#小程序熊掌ID绑定)
+* 绑定当前超管账号熊掌ID可参考：[绑定熊掌ID API](https://smartprogram.baidu.com/docs/third/sitemap/#小程序熊掌ID绑定)
 * 绑定其他熊掌ID则需要引导开发者前往小程序开发者平台进行操作：[绑定熊掌ID操作指南](https://smartprogram.baidu.com/docs/introduction/rank/#%E7%BB%91%E5%AE%9A%E7%86%8A%E6%8E%8CID/)
 
 #### 第六步：提交sitemap
@@ -50,7 +50,7 @@ Sitemap（即站点地图）就是您⽹站上各⽹⻚的列表。创建并提�
 
 此外，Sitemap 与搜索排名没有关系，提交的 Sitemap 内容为⼩程序⻚⾯的 Path路径列表，以便百度 spider 按照其规则尽可能多的抓取和收录⼩程序的⻚⾯。
 
-* 通过API提交sitemap可参考：[提交sitemap API](https://smartprogram.baidu.com/docs/develop/third/sitemap/#提交sitemap)
+* 通过API提交sitemap可参考：[提交sitemap API](https://smartprogram.baidu.com/docs/third/sitemap/#提交sitemap)
 * sitemap的内容、格式等其他信息可参考：[提交sitemap指南](https://smartprogram.baidu.com/docs/introduction/rank/#%E6%8F%90%E4%BA%A4sitemap/)
 
 

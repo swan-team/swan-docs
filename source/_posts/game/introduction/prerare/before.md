@@ -32,5 +32,5 @@ priority: 01-04
  ![图片](/img/game/introduction/prerare/newadd05.png)
 
 #### 配置服务器
-在开发设置页面查看 AppID 和 AppSecret ，配置服务器域名。
+在开发设置页面查看 AppID 和 AppSecret，配置服务器域名。
  ![图片](/img/game/introduction/prerare/newadd06.png)
