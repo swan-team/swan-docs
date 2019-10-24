@@ -24,7 +24,7 @@ priority: 03-01
 3. 点击开发者工具面板的新建按钮。
 ![](/img/game/tutorials/create.png)
 
-4. 选择刚才的微信小游戏项目目录，填写项目名称，项目类型选择**小游戏**，并填写**百度小游戏**的 AppID ，点击完成按钮。
+4. 选择刚才的微信小游戏项目目录，填写项目名称，项目类型选择**小游戏**，并填写**百度小游戏**的 AppID，点击完成按钮。
 ![](/img/game/tutorials/fillin.png)
 
 5. 在百度开发者工具打开项目中刚创建出的 `project.swan.json` 文件，在配置项中添加字段：`"projectOrigin": "weapp"`。
@@ -35,7 +35,7 @@ priority: 03-01
 
 ### 迁移过程中可能遇见的问题
 
-1. 开放数据域 API 与微信存在差异，百度小游戏开放数据域会屏蔽所有非开放数据域 API ，详细内容请看[关系链数据使用指南](/game/tutorials/open_api/guide/)。
+1. 开放数据域 API 与微信存在差异，百度小游戏开放数据域会屏蔽所有非开放数据域 API，详细内容请看[关系链数据使用指南](/game/tutorials/open_api/guide/)。
 
 2. 百度 App 没有群的概念，所以原项目中分享群的逻辑需要修改，具体查看[转发](/game/api/share/onShareAppMessage/)文档。
 

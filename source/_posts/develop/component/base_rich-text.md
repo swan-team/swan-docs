@@ -21,7 +21,7 @@ sidebar: base_rich-text
 | selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴等场景。 <font color="#4183c4">百度 APP 11.10 以上</font>|
 
 ### nodes
-现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点** ，默认是元素节点，在富文本区域里显示的HTML节点。
+现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点**，默认是元素节点，在富文本区域里显示的HTML节点。
 
 * 元素节点：type = node
 
@@ -212,7 +212,7 @@ Page({
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
 * nodes 不推荐使用 String 类型，性能会有所下降。
 * rich-text 组件内屏蔽所有节点的事件。
-* attrs 属性不支持 id ，支持 class。
+* attrs 属性不支持 id，支持 class。
 * name 属性大小写不敏感。
 * 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
 * img 标签仅支持网络图片。

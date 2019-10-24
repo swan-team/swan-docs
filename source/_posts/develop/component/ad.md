@@ -20,7 +20,7 @@ sidebar: ad
 |---- | ---- | ---- |---- |---- |
 |appid|String| |是|小程序应用 ID|
 |apid|String| |是|小程序广告位 ID|
-|type|String|feed|否|广告类型：banner/feed ，需和百青藤平台上的代码位类型相匹配。|
+|type|String|feed|否|广告类型：banner/feed，需和百青藤平台上的代码位类型相匹配。|
 |binderror|EventHandle||否|广告组件加载失败时触发|
 |bindload|EventHandle||否|广告组件加载完成触发|
 |bindclose|EventHandle||否|关闭广告组件时触发|

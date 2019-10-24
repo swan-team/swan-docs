@@ -28,7 +28,7 @@ sidebar: submitresource
 | mapp_sub_type | string   | 是 | POST | 资源子类型（参考附录一） | 1001   |
 | feed_type  | string   | 否 | POST | feed一级分类（参考附录二）  | 娱乐（可选有限集合）  |
 | feed_sub_type | string   | 否 | POST | feed二级分类（参考附录二）  | 明星八卦（可选有限集合） |
-| tags | string   | 否 | POST | 资源标签，英文逗号分割 ，填写越准确详细可能带来更好的分发效果（最多10个，总长度最多100字） | 示例：电影,吴亦凡  |
+| tags | string   | 否 | POST | 资源标签，英文逗号分割，填写越准确详细可能带来更好的分发效果（最多10个，总长度最多100字） | 示例：电影,吴亦凡  |
 | ext  | string   | 部分必填（见附录三） | POST | 扩展信息（JSON格式，参考附录三）  | {"publish_time": "2018年11月1日"} |
 
 **返回示例**：

@@ -7,7 +7,7 @@ sidebar: save_swan-setStorageSync
 
 
  
-**解释**：将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。
+**解释**：将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key，会覆盖掉原来该 key 对应的内容。这是一个同步接口。
 
 **方法参数**：String key, Object/String data
 

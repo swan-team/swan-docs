@@ -21,7 +21,7 @@ sidebar: save_process
 
 数据缓存每个 API 提供同步和异步方法，使用的基本流程如下, 以异步存储为例：
 1. 添加数据缓存
-将数据异步存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。
+将数据异步存储在本地缓存指定的 key 中。如果之前存在同名 key，会覆盖掉原来该 key 对应的内容。
 ```javascript
 const key = 'mockData';
 const data = {
