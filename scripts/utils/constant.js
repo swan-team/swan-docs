@@ -9,8 +9,12 @@ const BOARD_MAP = {
     'design': '设计',
     'develop': '开发',
     'introduction': '介绍',
+<<<<<<< HEAD
     'operations': '运营',
     'third':'第三方接入'
+=======
+    'operations': '运营'
+>>>>>>> 3cbe5e8d39c3dd531a96534b87093ee4ec7a375c
 };
 
 // 文档tagName
@@ -38,6 +42,10 @@ const TAG_MAP = {
     'serverapi': '服务端API',
     'simple': '',
     'swan': '基础库版本信息',
+<<<<<<< HEAD
+=======
+    'third': '第三方接入',
+>>>>>>> 3cbe5e8d39c3dd531a96534b87093ee4ec7a375c
     'tutorial': '快速入门'
 };
 

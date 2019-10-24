@@ -12,7 +12,7 @@ API 在模拟器与真机中的实现差异如下：
 |api |  差异| 
 |---|---|
 |[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/) | 开发者工具暂不支持 | 
-|[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
+|[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location_get/#swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
 |[swan.onMemoryWarning](https://smartprogram.baidu.com/docs/develop/api/device_onmemory/#swan-onMemoryWarning/) | 通过“模拟操作->内存警告”触发 | 
 |[swan.onNetworkStatusChange](https://smartprogram.baidu.com/docs/develop/api/device_network/#swan-onNetworkStatusChange/) | 通过“模拟操作->网络”切换网络触发 | 
 |[swan.onCompassChange](https://smartprogram.baidu.com/docs/develop/api/device_compass/#swan-onCompassChange/) | 返回模拟数据 | 
