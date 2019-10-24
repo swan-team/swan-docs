@@ -81,6 +81,8 @@ swan.login({
     }
 });
 ```
+**Bug & Tip**
+bug: 和其他API套用会破坏swan.login在页面onShow中的调用频次限制，建议在onShow中单独使用swan.login
 
 #### 错误码
 * Andriod
