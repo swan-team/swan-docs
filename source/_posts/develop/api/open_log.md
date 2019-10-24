@@ -218,15 +218,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 **示例**：
 
-<a href="swanide://fragment/fb9d919d0ecca8fc3cc6c89a597210ff1558336225956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="checkSession">checkSession</button>
-</view>
-```
+<a href="swanide://fragment/1ec851d3cb38ef000ce47c30357094c61571838688627" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -236,45 +228,15 @@ Page({
         swan.checkSession({
             success: res => {
                 console.log('登录态有效');
-                swan.getUserInfo({
-                    success: res => {
-                        console.log('用户名', res.userInfo.nickName);
-                        swan.request({
-                            url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
-                            data: {
-                                data: res.data,
-                                iv: res.iv
-                            }
-                        });
-                    }
-                })
+                console.log('success', res);
             },
             fail: err => {
                 console.log('登录态无效');
-                swan.login({
-                    success: res => {
-                        swan.request({
-                            url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
-                            data: {
-                                code: res.code
-                            }
-                        });
-                    },
-                    fail: err => {
-                        console.log('登录失败', err);
-                    }
-                });
+                console.log('fail', err);
             }
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 #### 错误码
 * Andriod
