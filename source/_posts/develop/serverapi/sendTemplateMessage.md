@@ -43,14 +43,14 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 **touser&touser_openId使用规则说明：**
 
-- 百度登录用户使用touser_openId，游客用户使用touser，详见[如何判断当前用户是游客状态还是登陆状态](#如何判断当前用户是游客状态还是登陆状态？)。
+- 百度登录用户使用touser_openId，游客用户使用touser，详见[如何判断当前用户是游客状态还是登录状态](#如何判断当前用户是游客状态还是登录状态？)。
 
 ### Q&A
 
 
-#### 如何判断当前用户是游客状态还是登陆状态？
- - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登陆游客状态
- - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登陆状态
+#### 如何判断当前用户是游客状态还是登录状态？
+ - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登录游客状态
+ - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登录状态
 
 #### 如何获取swan\_id & open\_id？
  - 获取swan\_id：[swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
