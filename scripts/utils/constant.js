@@ -10,7 +10,6 @@ const BOARD_MAP = {
     'develop': '开发',
     'introduction': '介绍',
     'operations': '运营',
-    'operations': '运营',
     'third': '第三方平台'
 };
 
@@ -39,7 +38,6 @@ const TAG_MAP = {
     'serverapi': '服务端API',
     'simple': '',
     'swan': '基础库版本信息',
-    'third': '第三方接入',
     'tutorial': '快速入门'
 };
 

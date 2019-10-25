@@ -1515,15 +1515,11 @@
                   text: swan.compressImage
                   name:  image_swan-compressImage
                 -
-<<<<<<< HEAD
-                  link: /develop/api/media/image_swan-saveImageToPhotosAlbum
-=======
                   link: /develop/api/media_image/#swan-compressImage
                   text: swan.compressImage
                   name: media_image_swan-compressImage
                 -
                   link: /develop/api/media_image/#swan-saveImageToPhotosAlbum
->>>>>>> 3cbe5e8d39c3dd531a96534b87093ee4ec7a375c
                   text: swan.saveImageToPhotosAlbum
                   name:  image_swan-saveImageToPhotosAlbum
                 -
