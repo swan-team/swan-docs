@@ -25,10 +25,10 @@ sidebar: app_service_pagelife
 页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。
 
 ### onHide()
-页面隐藏/切入后台时触发。 如通过调用 [swan.navigateTo](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/) 或底部 tab 切换到其他页面，小程序切入后台等时触发。
+页面隐藏/切入后台时触发。 如通过调用 [swan.navigateTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateTo/) 或底部 tab 切换到其他页面，小程序切入后台等时触发。
 
 ### onUnload()
-页面卸载时触发。如通过调用 [swan.redirectTo](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/) 或 [swan.navigateBack](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/) 到其他页面时触发。
+页面卸载时触发。如通过调用 [swan.redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/) 或 [swan.navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/) 到其他页面时触发。
 
 
 <div class="m-doc-custom-examples">

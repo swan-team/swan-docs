@@ -53,11 +53,11 @@ sidebar: nav
 
 |值 |说明 |最低版本|
 |--- |--- |--- |
-| navigate | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/">`swan.navigateTo`</a> 的功能|-|
-| redirect | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/">`swan.redirectTo` </a> 的功能|-|
-| switchTab | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-switchTab/">`swan.switchTab ` </a> 的功能|-|
-| navigateBack | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/">`swan.navigateBack `</a>  的功能|-|
-| reLaunch | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-reLaunch/">`swan.reLaunch `</a>  的功能|-|
+| navigate | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateTo/">`swan.navigateTo`</a> 的功能|-|
+| redirect | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/">`swan.redirectTo` </a> 的功能|-|
+| switchTab | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/">`swan.switchTab ` </a> 的功能|-|
+| navigateBack | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/">`swan.navigateBack `</a>  的功能|-|
+| reLaunch | 对应 <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/">`swan.reLaunch `</a>  的功能|-|
 |exit|	退出小程序，target="miniProgram"时生效|	2.5.2|
 
 

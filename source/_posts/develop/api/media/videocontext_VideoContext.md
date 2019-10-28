@@ -63,7 +63,7 @@ Page({
             this.videoContext.exitFullScreen();
             this.setData('fullScreenText', 'requestFullScreen');
         }
-
+    }
 });
 ```
 
