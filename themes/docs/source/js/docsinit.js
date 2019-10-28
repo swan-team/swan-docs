@@ -24,7 +24,8 @@
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
         '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
         '/docs/develop/tutorial/index/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/codedir/':'/docs/develop/fuctionlist/list/'
+        '/docs/develop/tutorial/codedir/':'/docs/develop/fuctionlist/list/',
+        '/docs/develop/devtools/uplog_tool/#正式版更新日志/': '/docs/develop/devtools/uplog_tool_normal/'
 
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
