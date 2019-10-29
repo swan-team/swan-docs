@@ -19,10 +19,10 @@ sidebar: swan-canIUse
 |${API}  | API 名字 |
 |${method} |  调用方式，有效值为return, success, object, callback   |
 |${param} | 参数或者返回值  |
-|${options} |参数的可选值   |
+|${options} |参数的有效值   |
 |${component} |   组件名字 |
 |${attribute} | 组件属性 |
-|${option}  |  组件属性的可选值 |
+|${option}  |  组件属性的有效值 |
 
 
 **示例**：

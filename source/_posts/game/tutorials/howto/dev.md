@@ -42,7 +42,7 @@ priority: 01-01
 |networkTimeout|Object| |否|网络请求的超时时间，单位：毫秒|
 |subpackages|array.<`Object`\>| |否|分包结构配置|
 
-`networkTimeout` 的合法值：
+`networkTimeout` 的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|

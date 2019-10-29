@@ -18,7 +18,7 @@ sidebar: nav
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |---- |
-|target|	String|	self| 否 |在哪个目标上发生跳转，默认当前小程序，可选值self/miniProgram|2.5.2|
+|target|	String|	self| 否 |在哪个目标上发生跳转，默认当前小程序，有效值self/miniProgram|2.5.2|
 | url | String |   | 否 |应用内的跳转链接 | |
 |open-type | String  | navigate  | 否 |跳转方式| |
 |delta | Number |  | 否 |当 open-type 为 'navigateBack' 时有效，表示回退的层数| |

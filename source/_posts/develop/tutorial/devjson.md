@@ -28,11 +28,11 @@ sidebar: devjson
 |属性|类型|默认值|描述|最低版本|
 |----|----|----|----|
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 `#000000`| |
-|navigationBarTextStyle|String|white|导航栏标题颜色，仅支持 black / white| |
+|navigationBarTextStyle|String|white|导航栏标题颜色，有效值 black / white| |
 |navigationBarTitleText|String|--|导航栏标题文字内容| |
-|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮，在页面级配置优先级高于全局配置|<a href="/develop/swan/compatibility/">iOS 百度 App11.2, Android 百度 App版本11.1</a>|
+|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮，在页面级配置优先级高于全局配置|<a href="/develop/swan/compatibility/">iOS 百度 App11.2, Android 百度 App版本11.1</a>|
 |backgroundColor|HexColor|#ffffff|窗口的背景色| |
-|backgroundTextStyle|String|dark|下拉 loading 的样式，仅支持 dark / light| |
+|backgroundTextStyle|String|dark|下拉 loading 的样式，有效值 dark / light| |
 |enablePullDownRefresh|Boolean|false|是否全局开启下拉刷新。详见 <a href="/develop/framework/app_service_pagefunction/">Page.onPullDownRefresh</a>。| |
 |onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为px。详见<a href="/develop/framework/app_service_pagefunction/">Page.onReachBottom</a>。| |
 |disableSwipeBack|Boolean|false|禁止页面右滑手势返回。如果右滑导致小程序切到后台，可以使用disableSwipeBack关闭。|<a href="/develop/swan/compatibility/">百度 App11.8</a>|

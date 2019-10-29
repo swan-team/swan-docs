@@ -16,7 +16,7 @@ swan.startAcclerometer(opts)
 |opts.fail|function| |否|接口调用失败的回调函数|
 |opts.complete|function| |否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-**interval 的合法值**
+**interval 的有效值**
 
 根据机型性能、当前 CPU 与内存的占用情况，interval 的设置与实际 swan.onAccelerometerChange() 回调函数的执行频率会有一些出入。
 

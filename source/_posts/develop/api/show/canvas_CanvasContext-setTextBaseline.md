@@ -10,7 +10,7 @@ sidebar: canvas_CanvasContext.setTextBaseline
 
 **方法参数**：String textBaseline
 
-**`textBaseline`参数说明**：可选值 'top'、'bottom'、'middle'、'normal' 。 
+**`textBaseline`参数说明**：有效值 'top'、'bottom'、'middle'、'normal' 。 
 
 **示例**：
 

@@ -98,11 +98,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |属性|类型|默认值|描述|最低版本|
 |----|----|----|----|----|
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"| |
-|navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white| |
+|navigationBarTextStyle|String|white|导航栏标题颜色，目前有效值 black/white| |
 |navigationBarTitleText|String| |导航栏标题文字内容| |
-|navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
+|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
 |backgroundColor|HexColor|#ffffff|背景颜色| |
-|backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，仅支持 dark/light| |
+|backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，有效值 dark/light| |
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新| |
 |onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px| |
 
@@ -146,7 +146,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |属性|类型|必填|描述|
 |----|----|----|----|
 |backgroundColor|HexColor|是|tab 的背景色。|
-|borderStyle|String|否|tabBar 边框颜色。仅支持 black/white 两种边框颜色，默认值为 black 。|
+|borderStyle|String|否|tabBar 边框颜色。有效值 black/white 两种边框颜色，默认值为 black 。|
 |color|HexColor|是|tab 上文字的默认颜色。|
 |list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。|
 |selectedColor|HexColor|是|tab 上的文字选中时的颜色。|

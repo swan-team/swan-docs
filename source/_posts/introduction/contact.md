@@ -21,11 +21,10 @@ sidebar: contact
         <img src="../../img/introduction/contact/1.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>    
+        <img src="../../img/introduction/contact/2.png ">
+    </div>       
 </div>
 
-![图片](../../img/introduction/contact/2.png)
 
    
 

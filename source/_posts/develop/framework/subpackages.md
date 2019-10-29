@@ -241,4 +241,4 @@ preloadRule 中，key 是页面路径，value 是进入此页面的预下载配�
 |字段|类型|必填|默认值|说明|
 |--|--|--|--|--|
 |packages|StringArray|是 |无|进入页面后预下载分包的 root。|
-|network |String|否|wifi |在指定网络下预下载，可选值为：<br/>**all:** 不限网络 <br/>**wifi:** 仅wifi下预下载|
+|network |String|否|wifi |在指定网络下预下载，有效值为：<br/>**all:** 不限网络 <br/>**wifi:** 仅wifi下预下载|

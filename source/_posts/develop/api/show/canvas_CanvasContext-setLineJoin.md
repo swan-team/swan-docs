@@ -10,7 +10,7 @@ sidebar: canvas_CanvasContext_setLineJoin
 
 **方法参数**：String lineJoin
 
-**`lineJoin`参数说明**：取值范围：'bevel'、'round'、'miter'， 线条的结束交点样式。  
+**`lineJoin`参数说明**：有效值：'bevel'、'round'、'miter'， 线条的结束交点样式。  
 
 **示例**：
 

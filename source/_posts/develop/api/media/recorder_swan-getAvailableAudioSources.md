@@ -30,7 +30,7 @@ sidebar: swan.getAvailableAudioSources
 |---- | ---- |---- |
 |audioSources |Array| 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用 |
 
-**res.audioSources合法值**
+**res.audioSources有效值**
 
 |返回值|说明  |
 |---- | ---- |

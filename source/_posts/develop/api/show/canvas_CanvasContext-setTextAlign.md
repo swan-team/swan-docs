@@ -9,7 +9,7 @@ sidebar: canvas_CanvasContext-setTextAlign
 
 **方法参数**：String align
 
-**`align `参数说明**： 可选值 'left'、'center'、'right'。 
+**`align `参数说明**： 有效值 'left'、'center'、'right'。 
 
 **示例**：
 

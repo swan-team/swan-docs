@@ -16,14 +16,14 @@ swan.createUserInfoButton(opts)
 |opts.image|string| `''` |否|按钮的背景图片，仅当 opts.type 为 `'image'` 时有效|
 |opts.style|Object| |否|自定义按钮的样式|
 
-`opts.type` 的合法值：
+`opts.type` 的有效值：
 
 |值|描述|
 |-|-|
 | `'text'` |设置文本按钮|
 | `'image'` |只能设置背景图片的按钮，背景图片会拉伸平铺按钮|
 
-`opts.style` 的合法值：
+`opts.style` 的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -39,7 +39,7 @@ swan.createUserInfoButton(opts)
 |fontSize|number| |否|文本字号|
 |lineHeight|number| |否|文本的行高|
 
-`style.textAlign` 的合法值：
+`style.textAlign` 的有效值：
 
 |值|描述|
 |-|-|

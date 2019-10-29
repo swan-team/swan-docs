@@ -12,7 +12,7 @@ sidebar:  canvas_CanvasContext-setLineCap
 
 **方法参数**：String lineCap
 
-**`lineCap`参数说明**：取值范围：'butt'、'round'、'square', 线条的结束端点样式。
+**`lineCap`参数说明**：有效值：'butt'、'round'、'square', 线条的结束端点样式。
 
 **示例**：
 

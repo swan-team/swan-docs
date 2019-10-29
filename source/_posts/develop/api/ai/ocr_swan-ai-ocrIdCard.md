@@ -23,7 +23,7 @@ sidebar: ocr_swan-ai-ocrIdCard
 |detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
 |id_card_side  |  String  | 否  |- |front：身份证含照片的一面；back：身份证带国徽的一面。|
 |image | String | 是   | | 图片资源地址|
-|detect_risk | Boolean | 否  |- | 是否开启身份证风险类型(身份证复印件、临时身份证、身份证翻拍、修改过的身份证)功能，默认不开启，即：false。可选值:true-开启；false-不开启。|
+|detect_risk | Boolean | 否  |- | 是否开启身份证风险类型(身份证复印件、临时身份证、身份证翻拍、修改过的身份证)功能，默认不开启，即：false。有效值:true-开启；false-不开启。|
 |success |Function    |否 | |      接口调用成功的回调函数|
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|

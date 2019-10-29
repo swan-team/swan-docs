@@ -19,7 +19,7 @@ sidebar: open_community
 |moduleList  |  Array  | 否 | |显示模块list|
 |imageConf  |  Object  | 否 | {maxNum:9,ratio:1}|图片参数配置，最大上传图片数量和图片压缩比|
 |navBarTitleText  |  String  | 否 | 发布帖子|导航栏标题文案|
-|navBarTextStyle  |  String  | 否 | black  |导航栏标题文字颜色，仅支持 black / white|
+|navBarTextStyle  |  String  | 否 | black  |导航栏标题文字颜色，有效值 black / white|
 |navBarBackgroundColor  |  HexColor  | 否 | #ffffff|导航栏背景颜色|
 |confirmText  |  String  | 否 | 发布|发布按钮的文字，最多 2 个字符，超出长度会被截断|
 |confirmColor  |  HexColor  | 否 | #3388ff|发布按钮的文字颜色|

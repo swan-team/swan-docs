@@ -17,7 +17,7 @@ sidebar: tabbar_swan-setTabBarStyle
 |color |HexColor | 否| |tab 上的文字默认颜色|
 |selectedColor |HexColor | 否| |tab 上的文字选中时的颜色|
 |backgroundColor |HexColor | 否| | tab 的背景色|
-|borderStyle |String |否 | | tabbar上边框的颜色， 仅支持 black/white|
+|borderStyle |String |否 | | tabbar上边框的颜色， 有效值 black/white|
 |success| Function | 否 | |  接口调用成功的回调函数|
 |fail   | Function  | 否 | |接口调用失败的回调函数|
 |complete  |  Function  |  否| |接口调用结束的回调函数（调用成功、失败都会执行）|

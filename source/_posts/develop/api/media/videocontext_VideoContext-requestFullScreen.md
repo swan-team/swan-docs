@@ -12,6 +12,12 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 **方法参数**：Object object
 
+**object 参数说明**：
+
+|参数名	|类型	|是否必填	|默认值	|说明|
+|---|---|---|---|---|
+|direction|object|||角度，有效值为0，90，-90|
+
 **direction 有效值**:
 
 | 值 | 说明 |

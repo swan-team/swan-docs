@@ -11,7 +11,7 @@ sidebar: voice_swan-ai-VoiceRecognizer
 
 |方法 | 参数  |说明|
 |---- | ---- | ---- |
-|start |  options|  开始|
+|start |  object|  开始|
 |stop |  |停止|
 |cancel | | 取消|
 |onStart | callback| 引擎准备就绪，可以开始说话|
@@ -19,7 +19,7 @@ sidebar: voice_swan-ai-VoiceRecognizer
 |onFinish | callback| 识别完成 |
 |onError | callback| 识别遇到错误 |
 
-**start(options) 说明**
+**object 参数说明**
 
 |属性 |类型  |必填 |默认值 |说明|
 |---- | ---- | ---- |---- |---- |

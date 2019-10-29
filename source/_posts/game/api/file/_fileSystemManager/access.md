@@ -26,7 +26,7 @@ fileSystemManager.access(opts)
 
 
 
-`res.errMsg` 的合法值：
+`res.errMsg` 的有效值：
 
 | 值| 描述|
 |-|-|

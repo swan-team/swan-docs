@@ -21,10 +21,10 @@ sidebar: image_chooseAlbum
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|count  | Number | 否  最多可以选择的图片/视频数量，默认 9。|
-|mode  | String| 否  打开相册后可选择资源类型设置, 可选择模式为： single/both; single: 打开相册后只能选择图片或视频； both： 打开相册后，可以同时选择图片和视频; 默认为single。|
-|compressed | Boolean |否 | |  是否压缩所选的视频源文件，默认值为true，需要压缩。|
-|success |Function  |  是 成功则返回图片或视频的本地文件路径列表 tempFilePaths。|
+|count  | Number | 否|9|  最多可以选择的图片/视频数量。|
+|mode  | String| 否 |single| 打开相册后可选择资源类型设置, 可选择模式为： single/both; single: 打开相册后只能选择图片或视频； both： 打开相册后，可以同时选择图片和视频。|
+|compressed | Boolean |否 |true |  是否压缩所选的视频源文件，需要压缩。|
+|success |Function  |  是 | |成功则返回图片或视频的本地文件路径列表 tempFilePaths。|
 |fail  |  Function |   否  | | 接口调用失败的回调函数|
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -45,7 +45,7 @@ sidebar: image_chooseAlbum
 |---- | ---- | ---- |
 |path  |  String  |本地文件路径|
 |size   | Number | 本地文件大小（单位：B）|
-|type|文件类型|photo、video|
+|type|文件类型|有效值：photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)|
 
 **示例**

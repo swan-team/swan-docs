@@ -25,8 +25,8 @@ sidebar: media_live-player
 |src|String|  | 是 |音视频地址。目前仅支持 m3u8 格式|
 |autoplay|Boolean|false| 否 |自动播放|
 |muted|Boolean|false| 否 |是否静音|
-|orientation|	String|	vertical| 否 |画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
-|object-fit|String|contain| 否 |填充模式，可选值:contain、fillCrop|
+|orientation|	String|	vertical| 否 |画面方向，有效值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
+|object-fit|String|contain| 否 |填充模式，有效值:contain、fillCrop|
 |background-mute|Boolean|false| 否 |进入后台时是否静音|
 |min-cache|Number|1| 否 |最小缓冲区，单位s|
 |max-cache|Number|3| 否 |最大缓冲区，单位s|

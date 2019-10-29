@@ -41,7 +41,7 @@ swan.requestPolymerPayment(opts)
 |opts.orderInfo.rsaSign|是|对对 appKey，dealId，tpOrderId，totalAmount RSA 加密后的签名，防止订单被伪造。签名过程见[百度电商开发平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md) |
 |opts.orderInfo.bizInfo|否|订单详细信息，需要是一个可解析为 JSON Object 的字符串。字段内容见：[百度电商开发平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
 
-`opts.bannedChannels` 的合法值：
+`opts.bannedChannels` 的有效值：
 
 |值|描述|
 |-|-|

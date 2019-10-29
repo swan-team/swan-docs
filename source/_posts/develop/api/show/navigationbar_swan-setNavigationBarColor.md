@@ -14,7 +14,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|frontColor | String|  是  | | 前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000。|
+|frontColor | String|  是  | | 前景颜色值，包括按钮、标题、状态栏的颜色，有效值 #ffffff 和 #000000。|
 |backgroundColor| String | 是  | | 背景颜色值，有效值为十六进制颜色。|
 |animation  | Object  |否  | | 动画效果|
 |success |Function  |  否 | |  接口调用成功的回调函数|

@@ -17,8 +17,8 @@ sidebar: canvas_CanvasContext_font
 
 | 属性 | 说明 |
 |---- | ---- |
-| style | 字体样式，仅支持 italic, oblique, normal。 |
-| weight | 字体粗细，仅支持 normal, bold。 |
+| style | 字体样式，有效值 italic, oblique, normal。 |
+| weight | 字体粗细，有效值 normal, bold。 |
 | size | 字体大小 |
 | family | 字体族名，注意确认各平台所支持的字体 。|
 
