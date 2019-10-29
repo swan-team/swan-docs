@@ -18,7 +18,7 @@ sidebar: video_swan-saveVideoToPhotosAlbum
 |---- | ---- | ---- | ----|----|
 |filePath  |  String  |是 | |  视频文件路径，可以是临时文件路径也可以是永久文件路径。|
 |success |Function |   否  | | 接口调用成功的回调函数|
-|fail  |  Function  |  否  接口调用失败的回调函数|
+|fail  |  Function  |  否 || 接口调用失败的回调函数|
 |complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
  

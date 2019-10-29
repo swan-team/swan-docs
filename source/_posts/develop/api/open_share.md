@@ -25,7 +25,7 @@ sidebar: open_share
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |title |String  |  否  | | 分享标题|
-|content |String  |  否  分享内容|
+|content |String  |  否 || 分享内容|
 |imageUrl |String  |  否  | | 分享图标|
 |path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|
 |success |Function  |  否  | | 接口调用成功的回调函数|

@@ -18,7 +18,7 @@ sidebar: pageinfo
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title | String | 是 页面标题 |
+|title | String | 是 ||页面标题 |
 |keywords|String|是| |页面关键词，多个关键词之间使用英文逗号“,”隔开|
 |description|String|是| | 页面描述信息|
 |releaseDate|String|否（入宿主APP信息流为必填）| |原始发布时间(年-月-日 时:分:秒 带有前导零）|
@@ -117,8 +117,8 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-| content |  String  |是  需要设置的 description 内容|
-|success |Function  |  否  接口调用成功的回调函数|
+| content |  String  |是 || 需要设置的 description 内容|
+|success |Function  |  否  ||接口调用成功的回调函数|
 |fail  | Function  |  否  | | 接口调用失败的回调函数|
 |complete   | Function   | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
@@ -160,8 +160,8 @@ Page({
 |---- | ---- | ---- | ----|----|
 | content |  String  |是 | | 需要设置的 keywords 内容|
 |success |Function  |  否  | | 接口调用成功的回调函数|
-|fail  | Function  |  否  接口调用失败的回调函数|
-|complete   | Function   | 否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|fail  | Function  |  否 || 接口调用失败的回调函数|
+|complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 
@@ -216,7 +216,7 @@ Page({
 |title   |String|  是 | | 页面中 title 标签中的内容 |
 |success |Function |   否 | |  接口调用成功的回调函数|
 |fail   | Function|    否 | |  接口调用失败的回调函数|
-|complete   | Function   | 否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 

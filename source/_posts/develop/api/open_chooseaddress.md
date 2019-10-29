@@ -19,8 +19,8 @@ sidebar: open_chooseaddress
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success | Function |  否  返回用户选择的收货地址信息|
-|fail   | Function  |  否  接口调用失败的回调函数|
+|success | Function |  否 || 返回用户选择的收货地址信息|
+|fail   | Function  |  否 || 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
@@ -39,7 +39,7 @@ sidebar: open_chooseaddress
 |townName|	String|	国标收货地址第四级地址	|最低支持版本 3.90.4 |
 |detailInfo|  String|  详细收货地址信息| |
 |telNumber|   String|  收货人手机号码| |
-|nationalCode|	String	|收货地址国家码| |
+|nationalCode|	String	|收货地址国家码| ||
 
 **示例**：
 

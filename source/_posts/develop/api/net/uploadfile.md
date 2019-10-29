@@ -23,13 +23,13 @@ sidebar: uploadfile
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |url |String | 是  | |开发者服务器 url|
-|filePath  |  String | 是  要上传文件资源的路径|
+|filePath  |  String | 是 || 要上传文件资源的路径|
 |name  |  String | 是 | | 文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容。|
 |header | Object  |否 | |HTTP 请求 Header, header 中不能设置 Referer 。|
 |formData  |  Object  |否  | | HTTP 请求中其他额外的 form data|
-|success| Function |   否  接口调用成功的回调函数|
-|fail   | Function |   否  接口调用失败的回调函数|
-|complete  |  Function  |  否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success| Function |   否 || 接口调用成功的回调函数|
+|fail   | Function |   否 || 接口调用失败的回调函数|
+|complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 

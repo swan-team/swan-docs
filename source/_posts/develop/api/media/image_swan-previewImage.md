@@ -23,8 +23,8 @@ sidebar: image_swan-previewImage
 |urls   | `Array.<string>` |是 | |  需要预览的图片链接列表|
 |images| `Array.<object>` | 否 | - | 支持原图的图片链接列表 |
 |success| Function |   否  | | 接口调用成功的回调函数|
-|fail  |  Function  |  否  接口调用失败的回调函数|
-|complete  |  Function  |  否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|fail  |  Function  |  否 || 接口调用失败的回调函数|
+|complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例**：

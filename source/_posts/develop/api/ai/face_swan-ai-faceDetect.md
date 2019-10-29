@@ -28,7 +28,7 @@ sidebar: face_swan-ai-faceDetect
 |max_face_num | string | 否 | 1| 最多处理人脸的数目，默认值为 1，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
 |face_type | string | 否 |LIVE| 人脸的类型。有效值：<br>**· LIVE 表示生活照**：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>**· IDCARD 表示身份证芯片照**：二代身份证内置芯片中的人像照片；<br>**· WATERMARK 表示带水印证件照**：一般为带水印的小图，如公安网小图；<br>**· CERT 表示证件照片**：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
 |success | Function | 否 | | 接口调用成功后的回调函数 | 
-|fail | Function | 否 接口调用失败的回调函数 | 
+|fail | Function | 否 ||接口调用失败的回调函数 | 
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**
