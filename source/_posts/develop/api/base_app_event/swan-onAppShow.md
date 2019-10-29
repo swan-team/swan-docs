@@ -32,8 +32,8 @@ sidebar: swan-onAppShow
 
 |属性|类型|说明|
 |---- | ---- | ---- |
-|appId|String|来源小程序的 appKey。| |
-|extraData|Object|来源小程序传过来的数据| |
+|appId|String|来源小程序的 appKey。|  
+|extraData|Object|来源小程序传过来的数据|  
 
 **entryType 的取值说明:**
 
