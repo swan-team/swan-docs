@@ -19,12 +19,12 @@ sidebar: video_swan-chooseVideo
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|sourceType | `Array.<string>` |否 | -|  album 从相册选择视频，camera 使用相机，默认二者都有。|
-|compressed  | Boolean | 否  | -| 是否压缩所选的视频源文件，默认值为true，需要压缩。|
-|maxDuration  | Number | 否  | -| 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|
-|success |Function  |  否 | -| 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|
-|fail  |  Function |   否  |  -|接口调用失败的回调函数|
-|complete   | Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|sourceType | `Array.<string>` |否 | |  album 从相册选择视频，camera 使用相机，默认二者都有。|
+|compressed  | Boolean | 否  | | 是否压缩所选的视频源文件，默认值为true，需要压缩。|
+|maxDuration  | Number | 否  | | 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|
+|success |Function  |  否 | | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|
+|fail  |  Function |   否  接口调用失败的回调函数|
+|complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 

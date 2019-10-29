@@ -20,11 +20,11 @@ sidebar: swan-onAppShow
 
 |属性  |类型  |说明  |最低版本|
 |---- | ---- | ---- |---|
-|scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/">场景值</a> |-|
-|path|String|打开小程序的路径。|-|
-|query|Object|打开小程序的query。|-|
-|shareTicket|String|标记转发对象。|-|
-|referrerInfo|Object|从另一个小程序打开该小程序时，返回此字段。|-|
+|scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
+|path|String|打开小程序的路径。| |
+|query|Object|打开小程序的query。| |
+|shareTicket|String|标记转发对象。| |
+|referrerInfo|Object|从另一个小程序打开该小程序时，返回此字段。| |
 |entryType|String|页面展现的来源标识，可取的值为: 'user'、'schema'、'sys'，对应代表的意义如下表。|2.10.7|
 |appURL| String|展现时的调起协议，仅当entryType值为 schema 时存在。|2.10.7|
 
@@ -32,8 +32,8 @@ sidebar: swan-onAppShow
 
 |属性|类型|说明|
 |---- | ---- | ---- |
-|appId|String|来源小程序的 appKey。|-|
-|extraData|Object|来源小程序传过来的数据|-|
+|appId|String|来源小程序的 appKey。| |
+|extraData|Object|来源小程序传过来的数据| |
 
 **entryType 的取值说明:**
 

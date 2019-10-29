@@ -15,10 +15,10 @@ sidebar: image_swan-getImageInfo
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|src |String | 是  | -| 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
-|success| Function  |  否  | -| 接口调用成功的回调函数|
-|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
-|complete |   Function |   否  | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|src |String | 是  | | 图片的路径，可以是相对路径、临时文件路径或存储文件路径、网络图片。|
+|success| Function  |  否  | | 接口调用成功的回调函数|
+|fail  |  Function  |  否  | | 接口调用失败的回调函数|
+|complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 

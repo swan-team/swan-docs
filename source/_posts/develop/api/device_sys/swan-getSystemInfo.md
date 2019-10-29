@@ -23,29 +23,29 @@ sidebar: swan-getSystemInfo
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  否 |  -|接口调用成功的回调|
-|fail   | Function |   否  | -|接口调用失败的回调函数|
-|complete  |  Function |   否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function  |  否 接口调用成功的回调|
+|fail   | Function |   否  | |接口调用失败的回调函数|
+|complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 
 |参数  |说明 |最低版本|
 |---- | ---- |
-|brand  | 手机品牌 |-|
-|model |  手机型号   |-|
-|pixelRatio | 设备像素比  |-|
-|screenWidth |屏幕宽度   |-|
-|screenHeight |   屏幕高度 |-|
-|windowWidth |可使用窗口宽度 |-|
-|windowHeight  |  可使用窗口高度 |-|
-|statusBarHeight| 状态栏的高度 |-|
+|brand  | 手机品牌 | |
+|model |  手机型号   | |
+|pixelRatio | 设备像素比  | |
+|screenWidth |屏幕宽度   | |
+|screenHeight |   屏幕高度 | |
+|windowWidth |可使用窗口宽度 | |
+|windowHeight  |  可使用窗口高度 | |
+|statusBarHeight| 状态栏的高度 | |
 |navigationBarHeight| 导航栏的高度|3.0.17|
-|language |宿主 App 设置的语言 |-|
-|version |宿主 App 版本号|-|
-|system  |操作系统版本  |-|
-|platform |客户端平台，如：ios。|-|
-|fontSizeSetting |用户字体大小设置 |-|
-|SDKVersion |客户端基础库版本 |-|
+|language |宿主 App 设置的语言 | |
+|version |宿主 App 版本号| |
+|system  |操作系统版本  | |
+|platform |客户端平台，如：ios。| |
+|fontSizeSetting |用户字体大小设置 | |
+|SDKVersion |客户端基础库版本 | |
 |host|宿主平台，如：baiduboxapp 。|3.30.2|
 |cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
 |swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|

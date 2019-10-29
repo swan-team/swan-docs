@@ -18,14 +18,14 @@ sidebar: view_swiper
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
 |indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
-|indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| -|
-|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| -|
-|autoplay |Boolean  | false | 否 |是否自动切换| -|
-|current|Number |0 | 否 |当前所在页面的 index| -|
+|indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| |
+|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| |
+|autoplay |Boolean  | false | 否 |是否自动切换| |
+|current|Number |0 | 否 |当前所在页面的 index| |
 |current-item-id|String|| 否 |当前所在滑块的 item-id，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |interval | Number | 5000 | 否 |自动切换时间间隔，单位ms|- |
 |duration| Number |500 | 否 |滑动动画时长，单位ms|- |
-|circular| Boolean |false | 否 |是否采用衔接滑动| -|
+|circular| Boolean |false | 否 |是否采用衔接滑动| |
 |vertical | Boolean  | false  | 否 |滑动方向是否为纵向|- |
 |previous-margin|String|`"0px"`| 否 |前边距，可用于露出前一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |next-margin|String|`"0px"`| 否 |后边距，可用于露出后一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|

@@ -22,9 +22,9 @@ sidebar:  classify_swan-ai-carClassify
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
 |top_num	|Number	|否|5|返回结果top n，默认5。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 

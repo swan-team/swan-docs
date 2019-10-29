@@ -58,8 +58,8 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|from |String  |是| -|  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
-|target |Object  |是| -|  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined。|
+|from |String  |是| |  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
+|target |Object  |是| |  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined。|
 
 **自定义分享字段**：
 

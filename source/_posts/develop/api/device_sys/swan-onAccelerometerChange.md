@@ -21,9 +21,9 @@ sidebar: swan-onAccelerometerChange
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|x |Number |是|-|X 轴|
-|y |Number |是|-|Y 轴|
-|z |Number |是|-|Z 轴|
+|x |Number |是| |X 轴|
+|y |Number |是| |Y 轴|
+|z |Number |是| |Z 轴|
 
 **示例**：
 <a href="swanide://fragment/0ed5fe5e4d0957055cd7669fd83612731569478872196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

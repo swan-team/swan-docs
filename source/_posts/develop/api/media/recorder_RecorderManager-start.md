@@ -9,7 +9,7 @@ sidebar: RecorderManager.start
 
 **解释**： 开始录音
 
-**方法参数**：Object options 
+**方法参数**：Object object 
 
 **options 参数说明**：
 

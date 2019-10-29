@@ -12,7 +12,7 @@ sidebar: swan-setURLQuery
 **解释：** 设置当前页面的 URL query。
 <!-- 如果调用 swan.setURLQuery 导致 URL query 更新，则会同步地调用当前页面的 onURLQueryChange，并引起带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 组件更新视图。 -->
 
-**方法参数：** Object newURLquery
+**方法参数：** Object object
 
 **`newURLquery`参数说明**：
 newURLQuery 必须是值为字符串的对象，否则调用 setURLQuery 会抛错。新设置的 URL query 会与当前的 URL query 融合。

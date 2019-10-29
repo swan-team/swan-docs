@@ -16,7 +16,7 @@ sidebar: open_community
 |---- | ---- | ---- | ----|----|
 |contentPlaceholder   | String  |  否  | 请输入正文 |正文默认占位符|
 |titlePlaceholder  |  String  | 否 | 请输入标题 |标题默认占位文符|
-|moduleList  |  Array  | 否 | -|显示模块list|
+|moduleList  |  Array  | 否 | |显示模块list|
 |imageConf  |  Object  | 否 | {maxNum:9,ratio:1}|图片参数配置，最大上传图片数量和图片压缩比|
 |navBarTitleText  |  String  | 否 | 发布帖子|导航栏标题文案|
 |navBarTextStyle  |  String  | 否 | black  |导航栏标题文字颜色，仅支持 black / white|
@@ -25,11 +25,11 @@ sidebar: open_community
 |confirmColor  |  HexColor  | 否 | #3388ff|发布按钮的文字颜色|
 |cancelText  |  String  | 否 | 取消|取消按钮的文字，最多 2 个字符，超出长度会被截断|
 |cancelColor  |  HexColor  | 否 | #666666|取消按钮的文字颜色|
-|targetText  |  String  | 否 | -|设置发布范围文案，若配置发布范围模块，则必填|
-|emojiPath  |  String  | 否 | -|设置自定义表情配置路径|
-|success  |  Function  | 否 | -|发布内容的回调函数|
-|fail  |  Function  | 否 | -|调起失败的回调函数|
-|complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|targetText  |  String  | 否 | |设置发布范围文案，若配置发布范围模块，则必填|
+|emojiPath  |  String  | 否 | |设置自定义表情配置路径|
+|success  |  Function  | 否 | |发布内容的回调函数|
+|fail  |  Function  | 否 | |调起失败的回调函数|
+|complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 
@@ -140,9 +140,9 @@ swan.openCommunityEditor({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success  |  Function  | 否 | -|发布成功的回调函数|
-|fail  |  Function  | 否 | -|发布失败的回调函数|
-|complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|success  |  Function  | 否 | |发布成功的回调函数|
+|fail  |  Function  | 否 | |发布失败的回调函数|
+|complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 

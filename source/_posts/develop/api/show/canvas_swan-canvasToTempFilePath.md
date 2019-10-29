@@ -21,12 +21,12 @@ sidebar: canvas_swan-canvasToTempFilePath
 |height	| Number | 否  | canvas高度-y | 指定的画布区域的高度 |
 |destWidth	| Number | 否  |width * 屏幕像素密度| 输出图片宽度|
 |destHeight	| Number | 否  |height * 屏幕像素密度| 输出图片高度 |
-|canvasId	| String | 是  |-| 画布标识，传入`<canvas/>`的 canvas-id|
+|canvasId	| String | 是  | | 画布标识，传入`<canvas/>`的 canvas-id|
 |fileType	| String | 否  |png| 目标文件的类型，只支持 'jpg' 或 'png' 。|
-|quality	| Number | 否  |-| 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 。|
-|success	| Function | 否  |-| 接口调用成功的回调函数 |
-|fail	| Function | 否  | -|接口调用失败的回调函数 |
-|complete	| Function | 否  | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|quality	| Number | 否  | | 图片的质量，取值范围为 (0, 1]，不在范围内时当作 1.0 处理 。|
+|success	| Function | 否  | | 接口调用成功的回调函数 |
+|fail	| Function | 否  | |接口调用失败的回调函数 |
+|complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 

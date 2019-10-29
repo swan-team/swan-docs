@@ -23,7 +23,7 @@ sidebar: swan-onCompassChange
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|direction |Number |是|-|面对的方向度数|
+|direction |Number |是| |面对的方向度数|
 
 **示例**：
 <a href="swanide://fragment/dd5f2caff98f590d42027517729532851569479416199" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

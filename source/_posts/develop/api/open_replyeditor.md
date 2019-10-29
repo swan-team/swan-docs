@@ -18,11 +18,11 @@ sidebar: open_replyeditor
 |sendTextColor  |  String  | 否 | #FFFFFF |发表按钮颜色，支持#333 和#333333 两种写法|
 |sendText  |  Object  | 否 | 发表 | 发表的显示文案|
 |contentPlaceholder  |  String  | 否 | 请输入内容|内容提示占位文案|
-|moduleList  |  Array  | 否 | -|显示模块list|
-|emojiPath  |  String  | 否 | -|设置自定义表情配置路径|
-|success  |  Function  | 否 | -|发布内容的回调函数|
-|fail  |  Function  | 否 | -|调起失败的回调函数|
-|complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|moduleList  |  Array  | 否 | |显示模块list|
+|emojiPath  |  String  | 否 | |设置自定义表情配置路径|
+|success  |  Function  | 否 | |发布内容的回调函数|
+|fail  |  Function  | 否 | |调起失败的回调函数|
+|complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 
@@ -109,9 +109,9 @@ swan.openReplyEditor({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success  |  Function  | 否 | -|发布内容的回调函数|
-|fail  |  Function  | 否 | -|调起失败的回调函数|
-|complete  |  Function  | 否 | -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|success  |  Function  | 否 | |发布内容的回调函数|
+|fail  |  Function  | 否 | |调起失败的回调函数|
+|complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 

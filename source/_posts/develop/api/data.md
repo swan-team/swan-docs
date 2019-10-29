@@ -8,7 +8,7 @@ sidebar: data
 
 **解释**：自定义分析数据上报接口。使用前，需要在小程序管理后台自定义分析中新建事件，配置好事件名与字段。
 
-**方法参数**：String eventName, Object data
+**方法参数**：String eventName, Object object
 
 **`eventName`参数说明**：事件名
 

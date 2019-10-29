@@ -16,11 +16,11 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image | String | 是   |- | 图像资源地址|
-|detect_direction |Boolean | 否   | -| 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
+|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
 |accuracy	 | String   |否 |- | normal 使用快速服务，1200ms左右时延；缺省或其它值使用高精度服务，1600ms左右时延。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 

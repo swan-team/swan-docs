@@ -17,12 +17,12 @@ sidebar: open_smartprogram
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|appKey | String | 是 | -| 要打开的小程序App Key（使用线上版appkey和envVersion配合使用）|
-|path | String | 否 | -| 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
-|extraData | Object | 否 | -| 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|
-|success | Function |  否  | -| 接口调用成功的回调函数|
-|fail   | Function  |  否  | -| 接口调用失败的回调函数|
-|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|appKey | String | 是 | | 要打开的小程序App Key（使用线上版appkey和envVersion配合使用）|
+|path | String | 否 | | 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
+|extraData | Object | 否 | | 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|
+|success | Function |  否  | | 接口调用成功的回调函数|
+|fail   | Function  |  否  | | 接口调用失败的回调函数|
+|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
 
 **示例**：
@@ -96,10 +96,10 @@ Page({
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|extraData | Object | 否 | -| 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
-|success | Function |  否  | -| 接口调用成功的回调函数|
-|fail   | Function  |  否  | -| 接口调用失败的回调函数|
-|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|extraData | Object | 否 | | 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
+|success | Function |  否  | | 接口调用成功的回调函数|
+|fail   | Function  |  否  | | 接口调用失败的回调函数|
+|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 <a href="swanide://fragment/df2bcb7ca1229b466e859bc1a40c21091559044133015" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

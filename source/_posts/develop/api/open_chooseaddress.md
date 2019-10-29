@@ -19,27 +19,27 @@ sidebar: open_chooseaddress
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success | Function |  否  |  -|返回用户选择的收货地址信息|
-|fail   | Function  |  否  |  -|接口调用失败的回调函数|
-|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|success | Function |  否  返回用户选择的收货地址信息|
+|fail   | Function  |  否  接口调用失败的回调函数|
+|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 
 |参数名 |类型 | 说明|最低版本
 |---- | ---- | ---- |
-|userName|String |  收货人姓名|-|
-|postalCode  |String|  邮编|-|
+|userName|String |  收货人姓名| |
+|postalCode  |String|  邮编| |
 |provinceCode|	String|	国标收货地址第一级地址国家码|最低支持版本 3.90.4 |
-|provinceName|    String|  国标收货地址第一级地址|-|
+|provinceName|    String|  国标收货地址第一级地址| |
 |cityCode|	String|	国标收货地址第二级地址国家码|最低支持版本 3.90.4|
-|cityName|    String|  国标收货地址第二级地址|-|
+|cityName|    String|  国标收货地址第二级地址| |
 |countyCode|	String|	国标收货地址第三级地址国家码|最低支持版本 3.90.4 |
-|countyName|  String|  国标收货地址第三级地址|-|
+|countyName|  String|  国标收货地址第三级地址| |
 |townCode	|String	|国标收货地址第四级地址国家码	|最低支持版本 3.90.4 |
 |townName|	String|	国标收货地址第四级地址	|最低支持版本 3.90.4 |
-|detailInfo|  String|  详细收货地址信息|-|
-|telNumber|   String|  收货人手机号码|-|
-|nationalCode|	String	|收货地址国家码|-|
+|detailInfo|  String|  详细收货地址信息| |
+|telNumber|   String|  收货人手机号码| |
+|nationalCode|	String	|收货地址国家码| |
 
 **示例**：
 

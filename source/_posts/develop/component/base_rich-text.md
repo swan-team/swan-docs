@@ -50,20 +50,20 @@ sidebar: base_rich-text
 
 |节点 | 属性 |
 |---- | ---- |
-| a | -|
+| a | |
 | abbr |- |
 | b |- |
-| blockquote | -|
-| br | -|
+| blockquote | |
+| br | |
 | code |- |
 | col | span，width |
 | colgroup | span，width |
-| dd | -|
-| del | -|
+| dd | |
+| del | |
 | div |- |
 | dl |- |
 | dt |- |
-| em | -|
+| em | |
 | fieldset |- |
 | h1 |- |
 | h2 |- |
@@ -71,27 +71,27 @@ sidebar: base_rich-text
 | h4 |- |
 | h5 |- |
 | h6 |- |
-| hr | -|
+| hr | |
 | i |- |
 | img | alt，src，height，width |
 | ins |- |
 | label |- |
 | legend |- |
-| li | -|
+| li | |
 | ol | start，type |
-| p | -|
+| p | |
 | q |- |
 | span |- |
-| strong | -|
+| strong | |
 | sub |- |
 | sup |- |
 | table | width |
 | tbody |- |
 | td | colspan，height，rowspan，width |
-| tfoot | -|
+| tfoot | |
 | th | colspan，height，rowspan，width |
 | thead |- |
-| tr | -|
+| tr | |
 | ul | - |
 
 **示例**

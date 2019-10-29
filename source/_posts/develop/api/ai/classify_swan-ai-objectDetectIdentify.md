@@ -21,9 +21,9 @@ sidebar:  classify_swan-ai-objectDetectIdentify
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
 |with_face|Number	|否|	1|如果检测主体是人，主体区域是否带上人脸部分，0-不带人脸区域，其他-带人脸区域，裁剪类需求推荐带人脸，检索/识别类需求推荐不带人脸。默认取1，带人脸。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 

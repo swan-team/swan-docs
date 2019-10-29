@@ -10,7 +10,7 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 **解释**：按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。
 
-**方法参数**：Object direction
+**方法参数**：Object object
 
 **direction 有效值**:
 

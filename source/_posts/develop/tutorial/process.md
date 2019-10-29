@@ -97,14 +97,14 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 |属性|类型|默认值|描述|最低版本|
 |----|----|----|----|----|
-|navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"|-|
-|navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white|-|
-|navigationBarTitleText|String|-|导航栏标题文字内容|-|
+|navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"| |
+|navigationBarTextStyle|String|white|导航栏标题颜色，目前仅支持 black/white| |
+|navigationBarTitleText|String| |导航栏标题文字内容| |
 |navigationStyle|String|default|导航栏样式，仅支持以下值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
-|backgroundColor|HexColor|#ffffff|背景颜色|-|
-|backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，仅支持 dark/light|-|
-|enablePullDownRefresh|Boolean|false|是否开启下拉刷新|-|
-|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px|-|
+|backgroundColor|HexColor|#ffffff|背景颜色| |
+|backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，仅支持 dark/light| |
+|enablePullDownRefresh|Boolean|false|是否开启下拉刷新| |
+|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px| |
 
 
 **注意**：
@@ -116,8 +116,8 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 |顶bar设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|
-|百度 App定义的顶bar|无版本限制|无版本限制|无版本限制|-|
-|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效|-|
+|百度 App定义的顶bar|无版本限制|无版本限制|无版本限制| |
+|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效| |
 |顶bar子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
 
 <div class="m-doc-custom-examples">

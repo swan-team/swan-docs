@@ -16,7 +16,7 @@ sidebar: websocket_SocketTask-onMessage
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data| String/ArrayBuffer |是| -| 服务器返回的消息|
+|data| String/ArrayBuffer |是| | 服务器返回的消息|
 
 ### bug&tips:
 

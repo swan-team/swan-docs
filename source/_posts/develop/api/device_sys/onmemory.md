@@ -17,7 +17,7 @@ sidebar:  onmemory
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|level |Number |是|-|仅 Android 有该字段，对应系统内存告警等级宏定义。|
+|level |Number |是| |仅 Android 有该字段，对应系统内存告警等级宏定义。|
 
 Android下告警等级对应系统宏：
 

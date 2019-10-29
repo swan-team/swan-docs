@@ -20,12 +20,12 @@ sidebar: word
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|text | string| 是 |-| 待分析文本| 
-|success | Function | 否 |-| 接口调用成功后的回调函数 | 
-|fail | Function | 否 |-| 接口调用失败的回调函数 | 
-|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+|text | string| 是 | | 待分析文本| 
+|success | Function | 否 | | 接口调用成功后的回调函数 | 
+|fail | Function | 否 | | 接口调用失败的回调函数 | 
+|complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**返回参数说明**
+**success 返回参数说明**：
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -33,7 +33,7 @@ sidebar: word
 |text | string| 原始单条请求文本| 
 |items | Array| 词汇数组，每个元素对应结果中的一个词。| 
 
-**items 参数说明**
+**items 参数说明**：
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|

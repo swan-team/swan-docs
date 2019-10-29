@@ -14,9 +14,9 @@ sidebar: app_service_aoppage-after
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 否 |-| 要增加切面的页面的URL规则, 当URL参数不填时，则默认拦截所有页面 |
-|methods | Object | 否 |-| 所有需要拦截的声明周期方法的集合 |
-|events | Object | 否 |-| 所有要拦截的事件的集合 |
+|url |String | 否 | | 要增加切面的页面的URL规则, 当URL参数不填时，则默认拦截所有页面 |
+|methods | Object | 否 | | 所有需要拦截的声明周期方法的集合 |
+|events | Object | 否 | | 所有要拦截的事件的集合 |
 
 ** 可拦截的所有方法 **
 

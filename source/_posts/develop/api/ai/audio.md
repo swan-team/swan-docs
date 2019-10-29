@@ -9,7 +9,7 @@ sidebar:  audio
 
 **解释**：将文本转换为可以播放的 mp3 文件。
 
-**方法参数**：Object data
+**方法参数**：Object object
 
 **`data` 参数说明**：
 
@@ -22,9 +22,9 @@ sidebar:  audio
 |pit| String|否  | 5 |音调，取值0-9，默认为5中语调。|
 |vol| String|否  | 5 |音量，取值0-9，默认为5中音量。|
 |per| String|否  |0 |发音人选择, 0为普通女声，1为普通男生，3为情感合成-度逍遥，4为情感合成-度丫丫，默认为普通女声。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 

@@ -19,15 +19,15 @@ sidebar: request
 
 |参数名 |类型  |必填 | 默认值 |说明|最低支持版本|
 |---- | ---- | ---- | ----|----|----|
-|url |String | 是   |-|    开发者服务器接口地址|-|
-|data  |  Object/String  | 否  |-| 请求的参数|-|
-|header | Object | 否    |-|   设置请求的 header，header 中不能设置 Referer。|-|
-|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE/CONNECT(仅 Andriod 支持)。|-|
-|dataType   | String | 否  | json  | 有效值：string,json。 如果设为 json，会尝试对返回的数据做一次 JSON.parse 。|-|
+|url |String | 是   | |    开发者服务器接口地址| |
+|data  |  Object/String  | 否  | | 请求的参数| |
+|header | Object | 否    | |   设置请求的 header，header 中不能设置 Referer。| |
+|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE/CONNECT(仅 Andriod 支持)。| |
+|dataType   | String | 否  | json  | 有效值：string,json。 如果设为 json，会尝试对返回的数据做一次 JSON.parse 。| |
 |responseType   | String | 否  | text  | 设置响应的数据类型, 合法值：text、arraybuffer。|1.11.20|
-|success |Function    |否 |-|      收到开发者服务成功返回的回调函数。|-|
-|fail |   Function|    否  |-|     接口调用失败的回调函数。|-|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）。|-|
+|success |Function    |否 | |      收到开发者服务成功返回的回调函数。| |
+|fail |   Function|    否  | |     接口调用失败的回调函数。| |
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）。| |
 
 
 **success 返回参数说明**：

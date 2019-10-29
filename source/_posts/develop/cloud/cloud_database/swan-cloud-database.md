@@ -14,15 +14,15 @@ sidebar: cloud_database
 
 |字段|类型|必填|默认值|说明|
 |---|---|---|---|---|
-|env|String|否|-|环境ID|
+|env|String|否| |环境ID|
 
 当`env`传入参数为对象时，可以指定各个服务的默认环境，字段如下：
 
 |字段|类型|必填|默认值|说明|
 |---|---|---|---|---|
-|database|String|是|-|数据库默认环境配置|
-|functions|String|是|-|云函数默认环境配置|
-|storage|String|是|-|云存储默认环境配置|
+|database|String|是| |数据库默认环境配置|
+|functions|String|是| |云函数默认环境配置|
+|storage|String|是| |云存储默认环境配置|
 
 **示例代码1**
 获取默认环境数据库：

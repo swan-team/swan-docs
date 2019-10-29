@@ -21,12 +21,12 @@ sidebar: image_chooseAlbum
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|count  | Number | 否  |  -|最多可以选择的图片/视频数量，默认 9。|
-|mode  | String| 否  |  -|打开相册后可选择资源类型设置, 可选择模式为： single/both; single: 打开相册后只能选择图片或视频； both： 打开相册后，可以同时选择图片和视频; 默认为single。|
-|compressed | Boolean |否 | -|  是否压缩所选的视频源文件，默认值为true，需要压缩。|
-|success |Function  |  是 |  -|成功则返回图片或视频的本地文件路径列表 tempFilePaths。|
-|fail  |  Function |   否  | -| 接口调用失败的回调函数|
-|complete   | Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|count  | Number | 否  最多可以选择的图片/视频数量，默认 9。|
+|mode  | String| 否  打开相册后可选择资源类型设置, 可选择模式为： single/both; single: 打开相册后只能选择图片或视频； both： 打开相册后，可以同时选择图片和视频; 默认为single。|
+|compressed | Boolean |否 | |  是否压缩所选的视频源文件，默认值为true，需要压缩。|
+|success |Function  |  是 成功则返回图片或视频的本地文件路径列表 tempFilePaths。|
+|fail  |  Function |   否  | | 接口调用失败的回调函数|
+|complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。

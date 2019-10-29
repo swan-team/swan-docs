@@ -17,14 +17,14 @@ sidebar: canvas_swan-canvasGetImageData
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|canvasId	| String | 是  |-| 画布标识，传入 `<canvas>` 组件的 canvas-id 属性。|
-|x	| Number | 是  | -|将要被提取的图像数据矩形区域的左上角横坐标 |
-|y	| Number | 是  |-| 将要被提取的图像数据矩形区域的左上角纵坐标 |
-|width	| Number | 是  |-| 将要被提取的图像数据矩形区域的宽度|
-|height	| Number | 是  |-| 将要被提取的图像数据矩形区域的高度 |
-|success	| Function | 否  | -|接口调用成功的回调函数 |
-|fail	| Function | 否  |-| 接口调用失败的回调函数 |
-|complete	| Function | 否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|canvasId	| String | 是  | | 画布标识，传入 `<canvas>` 组件的 canvas-id 属性。|
+|x	| Number | 是  |  |将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  | | 将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  | | 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  | | 将要被提取的图像数据矩形区域的高度 |
+|success	| Function | 否  | |接口调用成功的回调函数 |
+|fail	| Function | 否  | | 接口调用失败的回调函数 |
+|complete	| Function | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 

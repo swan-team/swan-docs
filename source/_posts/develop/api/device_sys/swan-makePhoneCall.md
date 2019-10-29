@@ -23,10 +23,10 @@ sidebar: swan-makePhoneCall
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|phoneNumber |String | 是  |-| 需要拨打的电话号码|
-|success| Function  |  否  |-| 接口调用成功的回调|
-|fail  |  Function  |  否 | -| 接口调用失败的回调函数|
-|complete  |  Function |   否 |-|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|phoneNumber |String | 是  | | 需要拨打的电话号码|
+|success| Function  |  否  | | 接口调用成功的回调|
+|fail  |  Function  |  否 | | 接口调用失败的回调函数|
+|complete  |  Function |   否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **示例**：
 <a href="swanide://fragment/9cf5e060c76b0c2d9160335b815d2ccf1569484502200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

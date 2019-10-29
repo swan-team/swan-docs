@@ -15,26 +15,26 @@ sidebar: formlist_input
 
 |属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
 |---- | ---- | ---- |---- |---- |---- |
-| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`|-|
-| type | String  |text  | 否 |input 的类型|-|
-| password | Boolean  | false  | 否 |是否是密码类型|-|
-| placeholder | String  |   | 否 |输入框为空时占位符|-|
-|placeholder-style| String  |  | 否 | placeholder 的样式|-|
-|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|-|
-| disabled | Boolean  | false  | 否 |是否禁用|-|
-| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|-|
-|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|-|
-| focus |Boolean	  | false | 否 |获取焦点，调起键盘|-|
-|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|-|
-|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|-|
-|cursor	 | Number  |  | 否 |指定 focus 时的光标位置|-|
+| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`| |
+| type | String  |text  | 否 |input 的类型| |
+| password | Boolean  | false  | 否 |是否是密码类型| |
+| placeholder | String  |   | 否 |输入框为空时占位符| |
+|placeholder-style| String  |  | 否 | placeholder 的样式| |
+|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类| |
+| disabled | Boolean  | false  | 否 |是否禁用| |
+| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度| |
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。| |
+| focus |Boolean	  | false | 否 |获取焦点，调起键盘| |
+|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字| |
+|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起| |
+|cursor	 | Number  |  | 否 |指定 focus 时的光标位置| |
 |selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用|1.10.0|
 |selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 |1.10.0|
 |adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |1.10.0|
-| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |-|
-| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|-|
-|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|-|
-| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|-|
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 | |
+| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度| |
+|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}| |
+| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}| |
 
 
 **type 有效值**：

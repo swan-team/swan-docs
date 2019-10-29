@@ -21,8 +21,8 @@ sidebar:  swan-onNetworkStatusChange
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|isConnected |Boolean |是|-|当前是否有网络连接|
-|networkType| String |是|-| 网络类型|
+|isConnected |Boolean |是| |当前是否有网络连接|
+|networkType| String |是| | 网络类型|
 
 **networkType 有效值**：
 

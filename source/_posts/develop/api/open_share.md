@@ -24,13 +24,13 @@ sidebar: open_share
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title |String  |  否  | -| 分享标题|
-|content |String  |  否  |  -|分享内容|
-|imageUrl |String  |  否  | -| 分享图标|
-|path |String  |  否  | -| 页面 path，必须是以 / 开头的完整路径。|
-|success |Function  |  否  | -| 接口调用成功的回调函数|
-|fail   | Function  |  否  | -| 接口调用失败的回调函数|
-|complete  |  Function  |  否 | -|  接口调用结束的回调函数（调用成功、失败都会执行）|
+|title |String  |  否  | | 分享标题|
+|content |String  |  否  分享内容|
+|imageUrl |String  |  否  | | 分享图标|
+|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|
+|success |Function  |  否  | | 接口调用成功的回调函数|
+|fail   | Function  |  否  | | 接口调用失败的回调函数|
+|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **函数返回值**：Boolean result
@@ -89,7 +89,7 @@ bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取�
 **解释**：支持调起系统分享面板将文件分享到其他App。
 
 
-**方法参数**：Object data
+**方法参数**：Object object
 **`data` 参数说明**：
 
 |参数名 |类型  |是否必填  |默认值|说明|

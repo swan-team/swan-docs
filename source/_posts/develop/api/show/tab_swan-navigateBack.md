@@ -20,9 +20,9 @@ sidebar: tab_swan-navigateBack
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |delta  | Number | 否  |1|  返回的页面数，如果 delta 大于现有页面数，则返回到首页1。|
-|success|	function|		否|-| 	接口调用成功的回调函数|	
+|success|	function|		否| | 	接口调用成功的回调函数|	
 |fail|	function|		否|	-| 接口调用失败的回调函数|	
-|complete|	function|		否|-| 	接口调用结束的回调函数（调用成功、失败都会执行）|
+|complete|	function|		否| | 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **示例**：

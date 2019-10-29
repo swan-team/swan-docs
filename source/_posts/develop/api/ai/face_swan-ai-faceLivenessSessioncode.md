@@ -17,12 +17,12 @@ sidebar: face_swan-ai-faceLivenessSessioncode
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|appid | string| 是 | -|百度云创建应用时的唯一标识 ID | 
-|success | Function | 否 |-| 接口调用成功后的回调函数 | 
-|fail | Function | 否 |-| 接口调用失败的回调函数 | 
-|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+|appid | string| 是 | |百度云创建应用时的唯一标识 ID | 
+|success | Function | 否 | | 接口调用成功后的回调函数 | 
+|fail | Function | 否 | | 接口调用失败的回调函数 | 
+|complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**返回值参数说明** 
+**success 返回参数说明** 
 
 |参数名 | 参数类型 |说明  | 
 |---|---|---|---|

@@ -59,10 +59,10 @@ sidebar: open_authorize
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|scope  | String| 是  | -| 部分接口需要经过用户授权同意才能调用。将这些接口按使用范围分成多个 scope，用户选择对 scope 来进行授权，当授权给一个 scope 之后，其对应的所有接口都可以直接使用，详见 scope 列表。|
-|success |Function|    否  | -| 接口调用成功的回调函数|
-|fail |   Function  |  否  |  -|接口调用失败的回调函数|
-|complete  |  Function   | 否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|scope  | String| 是  | | 部分接口需要经过用户授权同意才能调用。将这些接口按使用范围分成多个 scope，用户选择对 scope 来进行授权，当授权给一个 scope 之后，其对应的所有接口都可以直接使用，详见 scope 列表。|
+|success |Function|    否  | | 接口调用成功的回调函数|
+|fail |   Function  |  否  接口调用失败的回调函数|
+|complete  |  Function   | 否  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **scope 列表**：
 

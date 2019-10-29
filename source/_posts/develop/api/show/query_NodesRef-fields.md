@@ -7,7 +7,7 @@ sidebar: query_NodesRef-fields
  
 **解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 
-**方法参数**：Object fields, Function callback
+**方法参数**：Object object, Function callback
 
 **`fields`参数说明**：
 

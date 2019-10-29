@@ -19,16 +19,16 @@ sidebar: toast_swan-showModal
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title  | String|  是 | -| 提示的标题|
-|content |String | 是 |-|  提示的内容|
+|title  | String|  是 | | 提示的标题|
+|content |String | 是 | |  提示的内容|
 |showCancel | Boolean|否  | true| 是否显示取消按钮 。|
 |cancelText  |String | 否  |取消|取消按钮的文字，最多 4 个字符。|
 |cancelColor |HexColor|    否  |#000000| 取消按钮的文字颜色。|
 |confirmText |String | 否 | 确定| 确定按钮的文字，最多 4 个字符。|
 |confirmColor |   HexColor  |  否 |#3c76ff|  确定按钮的文字颜色。|
-|success| Function|    否  |-| 接口调用成功的回调函数|
-|fail   | Function  |  否  |-|接口调用失败的回调函数|
-|complete   | Function  |  否  |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|success| Function|    否  | | 接口调用成功的回调函数|
+|fail   | Function  |  否  | |接口调用失败的回调函数|
+|complete   | Function  |  否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 

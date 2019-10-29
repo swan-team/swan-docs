@@ -15,7 +15,7 @@ sidebar: app_service_aopapp-after
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|methods | Object | 否 |-| 所有需要拦截的声明周期方法的集合 |
+|methods | Object | 否 | | 所有需要拦截的声明周期方法的集合 |
 
 ** 可拦截的所有方法 **
 

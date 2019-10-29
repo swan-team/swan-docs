@@ -21,12 +21,12 @@ sidebar: websocket
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url| String | 是 |-| 开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。|
-|header| Object | 否 |-| HTTP Header，Header 中不能设置 Referer。|
-|protocols| StringArray | 否 | -|子协议数组|
-|success| Function | 否 |-|接口调用成功的回调函数|
-|fail | Function | 否 |-|接口调用失败的回调函数|
-|complete| Function | 否 |-| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|url| String | 是 | | 开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。|
+|header| Object | 否 | | HTTP Header，Header 中不能设置 Referer。|
+|protocols| StringArray | 否 | |子协议数组|
+|success| Function | 否 | |接口调用成功的回调函数|
+|fail | Function | 否 | |接口调用失败的回调函数|
+|complete| Function | 否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 * 基础库 1.9.4 之前，一个智能小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接。

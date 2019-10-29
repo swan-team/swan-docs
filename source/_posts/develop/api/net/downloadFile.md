@@ -20,11 +20,11 @@ sidebar: downloadFile
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 是  |  -|下载资源的 url|
-|header | Object  |否  |  -|HTTP 请求 Header，header 中不能设置 Referer|
-|success |Function |   否  | -| 下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}|
-|fail   | Function   | 否  |  -|接口调用失败的回调函数|
-|complete  |  Function  |  否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String | 是  下载资源的 url|
+|header | Object  |否  HTTP 请求 Header，header 中不能设置 Referer|
+|success |Function |   否  | | 下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}|
+|fail   | Function   | 否  接口调用失败的回调函数|
+|complete  |  Function  |  否  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **说明**：
 * 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
