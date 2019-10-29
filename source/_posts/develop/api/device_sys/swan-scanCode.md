@@ -1,12 +1,12 @@
 ---
-title: 扫码
+title: swan.scanCode
 header: develop
 nav: api
-sidebar: device_scan
+sidebar: swan-scanCode
 ---
 
 
-## swan.scanCode
+ 
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 

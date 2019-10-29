@@ -223,34 +223,34 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/">swan.getSystemInfo</a>|获取系统信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/">swan.getSystemInfoSync</a>|获取系统信息同步接口|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getEnvInfoSync/">swan.getSystemInfoSync</a>|获取系统信息同步接口|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getEnvInfoSync/">swan.getEnvInfoSync</a>|获取运行环境信息同步接口|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-canIUse/">swan.canIUse</a>|判断智能小程序的API，回调，参数，组件等是否在当前版本可用。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_onmemory/#swan-onMemoryWarning/">swan.onMemoryWarning</a>|监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#swan-getNetworkType/">swan.getNetworkType</a>|获取网络类型|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_network/#swan-onNetworkStatusChange/">swan.onNetworkStatusChange</a>|监听网络状态变化|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#swan-onAccelerometerChange/">swan.onAccelerometerChange</a>|监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#swan-startAccelerometer/">swan.startAccelerometer</a>|开始监听加速度数据|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_accelerometer/#swan-stopAccelerometer/">swan.stopAccelerometer</a>|停止监听加速度数据|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#swan-onCompassChange/">swan.onCompassChange</a>|监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#swan-startCompass/">swan.startCompass</a>|开始监听罗盘数据。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_compass/#swan-stopCompass/">swan.stopCompass</a>|停止监听罗盘数据。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_direction/#swan-onDeviceMotionChange/">swan.onDeviceMotionChange</a>|监听设备方向变化事件。频率根据 swan.startDeviceMotionListening() 的 interval 参数。可以使用 swan.stopDeviceMotionListening() 停止监听。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_direction/#swan-startDeviceMotionListening/">swan.startDeviceMotionListening</a>|开始监听设备方向的变化|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_direction/#swan-stopDeviceMotionListening/">swan.stopDeviceMotionListening</a>|停止监听设备方向的变化。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_battery/#swan-getBatteryInfo/">swan.getBatteryInfo</a>|支持在小程序内获取当前设备电量|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_battery/#swan-getBatteryInfoSync/">swan.getBatteryInfoSync</a>|获取当前设备电量同步接口，ios系统不可用。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_scan/#swan-scanCode/">swan.scanCode</a>|调起客户端扫码界面，扫码成功后返回对应的结果。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#swan-setScreenBrightness/">swan.setScreenBrightness</a>|设置屏幕亮度|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#swan-getScreenBrightness/">swan.getScreenBrightness</a>|获取屏幕亮度|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_screen/#swan-setKeepScreenOn/">swan.setKeepScreenOn</a>|设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_capture/#swan-onUserCaptureScreen/">swan.onUserCaptureScreen</a>|监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_vibrate/#swan-vibrateLong/">swan.vibrateLong</a>|使手机发生较长时间的振动（400ms）|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_vibrate/#swan-vibrateShort/">swan.vibrateShort</a>|使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_phonecontact/#swan-addPhoneContact/">swan.addPhoneContact</a>|调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_call/#swan-makePhoneCall/">swan.makePhoneCall</a>|拨打电话|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#swan-setClipboardData/">swan.setClipboardData</a>|设置系统剪贴板的内容|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/device_clipboard/#swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/onmemory/">swan.onMemoryWarning</a>|监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getNetworkType/">swan.getNetworkType</a>|获取网络类型|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onNetworkStatusChange/">swan.onNetworkStatusChange</a>|监听网络状态变化|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onAccelerometerChange/">swan.onAccelerometerChange</a>|监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-startAccelerometer/">swan.startAccelerometer</a>|开始监听加速度数据|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-stopAccelerometer/">swan.stopAccelerometer</a>|停止监听加速度数据|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onCompassChange/">swan.onCompassChange</a>|监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-startCompass/">swan.startCompass</a>|开始监听罗盘数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-stopCompass/">swan.stopCompass</a>|停止监听罗盘数据。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onDeviceMotionChange/">swan.onDeviceMotionChange</a>|监听设备方向变化事件。频率根据 swan.startDeviceMotionListening() 的 interval 参数。可以使用 swan.stopDeviceMotionListening() 停止监听。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-startDeviceMotionListening/">swan.startDeviceMotionListening</a>|开始监听设备方向的变化|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-stopDeviceMotionListening/">swan.stopDeviceMotionListening</a>|停止监听设备方向的变化。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getBatteryInfo/">swan.getBatteryInfo</a>|支持在小程序内获取当前设备电量|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getBatteryInfoSync/">swan.getBatteryInfoSync</a>|获取当前设备电量同步接口，ios系统不可用。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-scanCode/">swan.scanCode</a>|调起客户端扫码界面，扫码成功后返回对应的结果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setScreenBrightness/">swan.setScreenBrightness</a>|设置屏幕亮度|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getScreenBrightness/">swan.getScreenBrightness</a>|获取屏幕亮度|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setKeepScreenOn/">swan.setKeepScreenOn</a>|设置是否保持常亮状态。仅在当前智能小程序生效，离开智能小程序后设置失效。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onUserCaptureScreen/">swan.onUserCaptureScreen</a>|监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-vibrateLong/">swan.vibrateLong</a>|使手机发生较长时间的振动（400ms）|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-vibrateShort/">swan.vibrateShort</a>|使手机发生较短时间的振动（15ms），仅在 iPhone 7/7 Plus 以上及 Android 机型生效。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addPhoneContact/">swan.addPhoneContact</a>|调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/">swan.makePhoneCall</a>|拨打电话|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/">swan.setClipboardData</a>|设置系统剪贴板的内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
 
 
 ## 第三方平台

@@ -1,11 +1,11 @@
 ---
-title: 内存
+title:  swan.onMemoryWarning
 header: develop
 nav: api
-sidebar: device_onmemory
+sidebar:  onmemory
 ---
 
-## swan.onMemoryWarning
+ 
 
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
 

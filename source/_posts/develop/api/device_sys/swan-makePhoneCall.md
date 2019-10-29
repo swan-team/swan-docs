@@ -1,11 +1,11 @@
 ---
-title: 拨打电话
+title: swan.makePhoneCall
 header: develop
 nav: api
-sidebar: device_call
+sidebar: swan-makePhoneCall
 ---
 
-## swan.makePhoneCall
+ 
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 

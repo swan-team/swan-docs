@@ -56,7 +56,7 @@ sidebar: devjson
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getEnvInfoSync/) 获取。</p>
 </div>
 </div>
 

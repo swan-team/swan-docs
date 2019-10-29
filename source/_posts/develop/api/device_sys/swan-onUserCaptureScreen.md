@@ -1,12 +1,12 @@
 ---
-title: 用户截屏事件
+title: swan.onUserCaptureScreen
 header: develop
 nav: api
-sidebar: device_capture
+sidebar: swan-onUserCaptureScreen
 ---
 
 
-## swan.onUserCaptureScreen
+ 
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
 

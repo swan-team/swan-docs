@@ -2678,170 +2678,170 @@
                     text: swan.canIUse
                     name: swan-canIUse
               -
-                link: /develop/api/device_onmemory
+           
                 text: 内存
-                name: device_onmemory
+             
                 sidebar:
                   -
-                    link: /develop/api/device_onmemory/#swan-onMemoryWarning
+                    link: /develop/api/device_sys/onmemory 
                     text: swan.onMemoryWarning
-                    name: device_onmemory_swan-onMemoryWarning
+                    name:  onmemory 
               -
-                link: /develop/api/device_network
+          
                 text: 网络状态
-                name: device_network
+    
                 sidebar:
                   -
-                    link: /develop/api/device_network/#swan-getNetworkType
+                    link: /develop/api/device_sys/swan-getNetworkType
                     text: swan.getNetworkType
-                    name: device_network_swan-getNetworkType
+                    name:  swan-getNetworkType
                   -
-                    link: /develop/api/device_network/#swan-onNetworkStatusChange
+                    link: /develop/api/device_sys/swan-onNetworkStatusChange
                     text: swan.onNetworkStatusChange
-                    name: device_network_swan-onNetworkStatusChange
+                    name: swan-onNetworkStatusChange
               -
-                link: /develop/api/device_accelerometer
+          
                 text: 加速度计
-                name: device_accelerometer
+       
                 sidebar:
                   -
-                    link: /develop/api/device_accelerometer/#swan-onAccelerometerChange
+                    link: /develop/api/device_sys/swan-onAccelerometerChange
                     text: swan.onAccelerometerChange
-                    name: device_accelerometer_swan-onAccelerometerChange
+                    name:  swan-onAccelerometerChange
                   -
-                    link: /develop/api/device_accelerometer/#swan-startAccelerometer
+                    link: /develop/api/device_sys/swan-startAccelerometer
                     text: swan.startAccelerometer
-                    name: device_accelerometer_swan-startAccelerometer
+                    name: swan-startAccelerometer
                   -
-                    link: /develop/api/device_accelerometer/#swan-stopAccelerometer
+                    link: /develop/api/device_sys/swan-stopAccelerometer
                     text: swan.stopAccelerometer
-                    name: device_accelerometer_swan-stopAccelerometer
+                    name: swan-stopAccelerometer
               -
-                link: /develop/api/device_compass
+           
                 text: 罗盘
-                name: device_compass
+              
                 sidebar:
                   -
-                    link: /develop/api/device_compass/#swan-onCompassChange
+                    link: /develop/api/device_sys/swan-onCompassChange
                     text: swan.onCompassChange
-                    name: device_compass_swan-onCompassChange
+                    name: swan-onCompassChange
                   -
-                    link: /develop/api/device_compass/#swan-startCompass
+                    link: /develop/api/device_sys/swan-startCompass
                     text: swan.startCompass
-                    name: device_compass_swan-startCompass
+                    name: swan-startCompass
                   -
-                    link: /develop/api/device_compass/#swan-stopCompass
+                    link: /develop/api/device_sys/swan-stopCompass
                     text: swan.stopCompass
-                    name: device_compass_swan-stopCompass
+                    name: swan-stopCompass
               -
-                link: /develop/api/device_direction
+               
                 text: 设备方向
-                name: device_direction
+            
                 sidebar:
                   -
-                    link: /develop/api/device_direction/#swan-onDeviceMotionChange
+                    link: /develop/api/device_sys/swan-onDeviceMotionChange
                     text: swan.onDeviceMotionChange
-                    name: device_direction_swan-onDeviceMotionChange
+                    name: swan-onDeviceMotionChange
                   -
-                    link: /develop/api/device_direction/#swan-startDeviceMotionListening
+                    link: /develop/api/device_sys/swan-startDeviceMotionListening
                     text: swan.startDeviceMotionListening
-                    name: device_direction_swan-startDeviceMotionListening
+                    name: swan-startDeviceMotionListening
                   -
-                    link: /develop/api/device_direction/#swan-stopDeviceMotionListening
+                    link: /develop/api/device_sys/swan-stopDeviceMotionListening
                     text: swan.stopDeviceMotionListening
-                    name: device_direction_swan-stopDeviceMotionListening
+                    name: swan-stopDeviceMotionListening
               -
-                link: /develop/api/device_battery
+              
                 text: 获取电量信息
-                name: device_battery
+              
                 sidebar:
                   -
-                    link: /develop/api/device_battery/#swan-getBatteryInfo
+                    link: /develop/api/device_sys/swan-getBatteryInfo
                     text: swan.getBatteryInfo
-                    name: device_battery_swan-getBatteryInfo
+                    name: swan-getBatteryInfo
                   -
-                    link: /develop/api/device_battery/#swan-getBatteryInfoSync
+                    link: /develop/api/device_sys/swan-getBatteryInfoSync
                     text: swan.getBatteryInfoSync
-                    name: device_battery_swan-getBatteryInfoSync
+                    name: swan-getBatteryInfoSync
               -
-                link: /develop/api/device_scan
+             
                 text: 扫码
-                name: device_scan
+              
                 sidebar:
                   -
-                    link: /develop/api/device_scan/#swan-scanCode
+                    link: /develop/api/device_sys/swan-scanCode
                     text: swan.scanCode
-                    name: device_scan_swan-scanCode
+                    name: swan-scanCode
               -
-                link: /develop/api/device_screen
+            
                 text: 屏幕亮度
-                name: device_screen
+               
                 sidebar:
                   -
-                    link: /develop/api/device_screen/#swan-setScreenBrightness
+                    link: /develop/api/device_sys/swan-setScreenBrightness
                     text: swan.setScreenBrightness
-                    name: device_screen_swan-setScreenBrightness
+                    name: swan-setScreenBrightness
                   -
-                    link: /develop/api/device_screen/#swan-getScreenBrightness
+                    link: /develop/api/device_sys/swan-getScreenBrightness
                     text: swan.getScreenBrightness
-                    name: device_screen_swan-getScreenBrightness
+                    name: swan-getScreenBrightness
                   -
-                    link: /develop/api/device_screen/#swan-setKeepScreenOn
+                    link: /develop/api/device_sys/swan-setKeepScreenOn
                     text: swan.setKeepScreenOn
-                    name: device_screen_swan-setKeepScreenOn
+                    name: screen_swan-setKeepScreenOn
               -
-                link: /develop/api/device_capture
+          
                 text: 用户截屏事件
-                name: device_capture
+              
                 sidebar:
                   -
-                    link: /develop/api/device_capture/#swan-onUserCaptureScreen
+                    link: /develop/api/device_sys/swan-onUserCaptureScreen
                     text: swan.onUserCaptureScreen
-                    name: device_capture_swan-onUserCaptureScreen
+                    name: swan-onUserCaptureScreen
               -
-                link: /develop/api/device_vibrate
+             
                 text: 振动
-                name: device_vibrate
+              
                 sidebar:
                   -
-                    link: /develop/api/device_vibrate/#swan-vibrateLong
+                    link: /develop/api/device_sys/swan-vibrateLong
                     text: swan.vibrateLong
-                    name: device_vibrate_swan-vibrateLong
+                    name: swan-vibrateLong
                   -
-                    link: /develop/api/device_vibrate/#swan-vibrateShort
+                    link: /develop/api/device_sys/swan-vibrateShort
                     text: swan.vibrateShort
-                    name: device_vibrate_swan-vibrateShort
+                    name: swan-vibrateShort
               -
-                link: /develop/api/device_phonecontact
+               
                 text: 手机联系人
-                name: device_phonecontact
+               
                 sidebar:
                   -
-                    link: /develop/api/device_phonecontact/#swan-addPhoneContact
+                    link: /develop/api/device_sys/swan-addPhoneContact
                     text: swan.addPhoneContact
-                    name: device_phonecontact_swan-addPhoneContact
+                    name: swan-addPhoneContact
               -
-                link: /develop/api/device_call
+             
                 text: 拨打电话
-                name: device_call
+             
                 sidebar:
                   -
-                    link: /develop/api/device_call/#swan-makePhoneCall
+                    link: /develop/api/device_sys/swan-makePhoneCall
                     text: swan.makePhoneCall
-                    name: device_call_swan-makePhoneCall
+                    name: swan-makePhoneCall
               -
-                link: /develop/api/device_clipboard
+             
                 text: 剪贴板
-                name: device_clipboard
+             
                 sidebar:
                   -
-                    link: /develop/api/device_clipboard/#swan-setClipboardData
+                    link: /develop/api/device_sys/swan-setClipboardData
                     text: swan.setClipboardData
-                    name: device_clipboard_swan-setClipboardData
+                    name: swan-setClipboardData
                   -
-                    link: /develop/api/device_clipboard/#swan-getClipboardData
+                    link: /develop/api/device_sys/swan-getClipboardData
                     text: swan.getClipboardData
-                    name: device_clipboard_swan-getClipboardData
+                    name: swan-getClipboardData
 
         -
             

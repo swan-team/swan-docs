@@ -1,12 +1,11 @@
 ---
-title: 手机联系人
+title: swan.addPhoneContact
 header: develop
 nav: api
-sidebar: device_phonecontact
+sidebar: swan-addPhoneContact
 ---
 
-
-## swan.addPhoneContact
+ 
 
 **解释**：调用后，用户可以选择将联系人数据以“新增联系人”或“添加到已有联系人”的方式，写入手机系统通讯录，完成手机通讯录联系人和联系方式的增加。
 
