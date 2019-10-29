@@ -212,13 +212,13 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  否 | -|  接口调用成功的回调函数，11.16之前会以result的值标识session key是否失效|
-|fail  |  Function |   否 | -|  接口调用失败的回调函数，11.16之后session key失效/手百未登录会直接走fail回调|
+|success |Function  |  否 | -|  用户登录态的回调函数，百度APP版本11.16（不包括11.16）之前会以result的值标识Session Key是否失效|
+|fail  |  Function |   否 | -|  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例一**：在手百版本11.16之前
+**示例一**：在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
 
-<a href="swanide://fragment/359a7faa56673b9ae53ec5d6c4479a541572265853840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2a052b4283fb1e23d02a69dae170f1331572274389729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -227,12 +227,12 @@ swan.checkSession({
     success: function (res) {
         swan.showModal({
             title: '',
-            content: '登陆态有效'
+            content: '用户在小程序中登陆态有效'
         });
         if(!res.result){
             swan.showModal({
                 title: '',
-                content: '登陆态无效,调用swan.login可获取有效session key',
+                content: '用户在小程序中登陆态无效,调用swan.login可获取有效Session Key',
             });
             swan.login({
                 success: res => {
@@ -247,7 +247,7 @@ swan.checkSession({
     fail: function (err) {
         swan.showModal({
             title: '',
-            content: '登陆态无效,请登陆手百',
+            content: '用户在小程序中登陆态无效,请先登陆百度APP',
         });
         swan.login({
             success: res => {
@@ -261,9 +261,9 @@ swan.checkSession({
 });
 ```
 
-**示例二**：在手百版本11.16之后
+**示例二**：在百度APP版本11.16（包括11.16）之后建议按照如下示例使用
 
-<a href="swanide://fragment/ab404ad2ed6127924ea14f54b6116feb1572265578070" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3bf18e6a967cec2a94c8ae9ee93d78cd1572274602042" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -273,17 +273,17 @@ Page({
         success: function (res) {
             swan.showModal({
                 title: '',
-                content: '登陆态有效'
+                content: '用户在小程序中登陆态有效'
             });
         },
         fail: function (err) {
             swan.showModal({
                 title: '',
-                content: '登陆态无效,调用swan.login可获取有效登陆态',
+                content: '用户在小程序中登陆态无效,调用swan.login可获取有效登陆态',
             });
             swan.login({
                 success: res => {
-                    console.log('login success', err);
+                    console.log('login success', res);
                 },
                 fail: err => {
                     console.log('login fail', err);
@@ -295,7 +295,7 @@ Page({
 
 ```
 **Bug & Tip**
-bug: 和其他API套用会破坏swan.login在页面onShow中的调用频次限制，建议在onShow中单独使用swan.login或在onLoad套用
+bug: 和其他API套用会破坏swan.login在页面onShow中的调用频次限制，建议在onShow中单独使用swan.login或在onLoad中套用
 #### 错误码
 * Andriod
 
