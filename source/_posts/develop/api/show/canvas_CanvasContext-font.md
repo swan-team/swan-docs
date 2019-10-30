@@ -11,7 +11,7 @@ sidebar: canvas_CanvasContext_font
 
 **方法参数**：String value
 
-**`value` 参数说明**：符合 CSS font 示例的 DOMString 字符串，至少需要提供字体大小和字体族名，默认值为 10px sans-serif 。 
+**`value` 参数说明**：符合 CSS font 示例的 DOMString 字符串，至少需要提供字体大小和字体族名，有效值为 10px sans-serif 。 
 
 **value 支持的属性有**：
 

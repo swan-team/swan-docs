@@ -12,6 +12,8 @@ sidebar: base_progress
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/progress.png"  class="demo-qrcode-image" />
 
+
+
 **属性说明**：
 
 |属性名 |类型  |默认值  | 必填 |说明|
@@ -40,3 +42,16 @@ sidebar: base_progress
 </view>
 
 ```
+**图示**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/progress.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>

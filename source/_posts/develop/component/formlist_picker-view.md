@@ -23,6 +23,9 @@ sidebar: formlist_picker-view
 |mask-class | String ||否|设置蒙层的类名|
 | bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
+**示例**：
+
+参见[picker-view-column](https://smartprogram.baidu.com/docs/develop/component/formlist_picker-view-column/)示例内容。
 
 **Bug & Tip**:
 
