@@ -9,7 +9,7 @@ sidebar: open_log
 智能小程序可以通过百度官方提供的登录能力方便地获取百度提供的用户身份标识，快速建立智能小程序内的用户体系。
 
 ## 授权流程说明
-1、 调用 swan.login() 获取 **临时登录凭证code** ，并回传到开发者服务器；
+1、 调用 swan.login() 获取 **临时登录凭证code**，并回传到开发者服务器；
 2、 开发者服务器以 code 换取 **session_key**；
 3、 调用 swan.getUserInfo() 获取用户信息。
 
@@ -19,7 +19,7 @@ sidebar: open_log
 ### 流程示意图
 **概念介绍**：
 * OAuth 2.0（开放授权）：一个开放登录授权标准。用户授权后，第三方智能小程序无需获取用户的用户名和密码就可以访问该用户。
-* Session Key：用户对智能小程序的授权会话的密钥。用户授权后，开发者可以通过百度开放平台获取授权会话的Session Key，此后便可在智能小程序中获取用户信息。
+* Session Key：用户对智能小程序的授权会话的密钥。用户授权后，开发者可以通过百度开放平台获取授权会话的Session Key，此后便可在智能小程序中获取用户信息。为了应用自身的数据安全，开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥。
 * Code：用户授权的标识。在用户完成对应用的授权后，会生成一个很短时间（十分钟）内有效的授权标识，开发者通过服务端请求，将code以及智能小程序的client\_id和secret\_key传到开放平台接口，可以获取到SessionKey。
 
 以下是智能小程序使用OAuth 2.0进行授权及获取用户信息的示意图：
@@ -31,6 +31,13 @@ sidebar: open_log
 3、 调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#getUserInfo/">getUserInfo</a>获取用户信息;
 4、 当用户完成了授权，且授权会话仍处于有效期时，智能小程序不需要每次都进行前两步，而是可以直接进行第三步获取用户信息。
 要判断当前用户的授权会话是否仍处于有效期，可调用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
+
+### 会话密钥Session Key有效性说明
+开发者基于Session Key 进行信息解密过程中，如果突然开始出现解密失败情况，请关注下面几个与 Session Key有关的注意事项。
+
+1、 Session key是具有时效性的，过期的Session Key将无法使用。开发者在 Session Key 失效时，需要通过重新执行登录流程获取有效的Session Key。
+2、 使用<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>可以校验 Session Key 是否有效，从而避免小程序反复执行登录流程，参考<a href="http://smartprogram.baidu.com/docs/develop/api/open_log/#授权流程说明/">授权流程图</a>中checkSession()使用。
+3、 智能小程序不会把 Session Key 的有效期告知开发者。我们会根据用户使用小程序的行为对 Session Key 进行续期。用户越频繁使用小程序， Session key 有效期越长。
 
 ## swan.login
 
@@ -212,70 +219,90 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 |参数名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  否 | -|  接口调用成功的回调函数|
-|fail  |  Function |   否 | -|  接口调用失败的回调函数|
+|success |Function  |  否 | -|  用户登录态的回调函数，百度APP版本11.16（不包括11.16）之前会以result的值标识Session Key是否失效|
+|fail  |  Function |   否 | -|  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|
 |complete |   Function |   否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**示例一**：在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
 
-<a href="swanide://fragment/fb9d919d0ecca8fc3cc6c89a597210ff1558336225956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="checkSession">checkSession</button>
-</view>
-```
+<a href="swanide://fragment/2a052b4283fb1e23d02a69dae170f1331572274389729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-Page({
-    checkSession() {
-        swan.checkSession({
+swan.checkSession({
+    success: function (res) {
+        swan.showModal({
+            title: '',
+            content: '用户在小程序中登陆态有效'
+        });
+        if(!res.result){
+            swan.showModal({
+                title: '',
+                content: '用户在小程序中登陆态无效,调用swan.login可获取有效Session Key',
+            });
+            swan.login({
+                success: res => {
+                    console.log('login success', res);
+                },
+                fail: err => {
+                    console.log('login fail', err);
+                }
+            });
+        }
+    },
+    fail: function (err) {
+        swan.showModal({
+            title: '',
+            content: '用户在小程序中登陆态无效,请先登陆百度APP',
+        });
+        swan.login({
             success: res => {
-                console.log('登录态有效');
-                swan.getUserInfo({
-                    success: res => {
-                        console.log('用户名', res.userInfo.nickName);
-                        swan.request({
-                            url: "https://xxx/decrypt_user_data", // 开发者服务器地址，对 data 进行解密
-                            data: {
-                                data: res.data,
-                                iv: res.iv
-                            }
-                        });
-                    }
-                })
+                console.log('login success', res);
             },
             fail: err => {
-                console.log('登录态无效');
-                swan.login({
-                    success: res => {
-                        swan.request({
-                            url: 'https://xxx/xxx', // 开发者服务器地址，用 code 换取 session_key
-                            data: {
-                                code: res.code
-                            }
-                        });
-                    },
-                    fail: err => {
-                        console.log('登录失败', err);
-                    }
-                });
+                console.log('login fail', err);
             }
         });
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+**示例二**：在百度APP版本11.16（包括11.16）之后建议按照如下示例使用
+
+<a href="swanide://fragment/3bf18e6a967cec2a94c8ae9ee93d78cd1572274602042" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    swan.checkSession({
+        success: function (res) {
+            swan.showModal({
+                title: '',
+                content: '用户在小程序中登陆态有效'
+            });
+        },
+        fail: function (err) {
+            swan.showModal({
+                title: '',
+                content: '用户在小程序中登陆态无效,调用swan.login可获取有效登陆态',
+            });
+            swan.login({
+                success: res => {
+                    console.log('login success', res);
+                },
+                fail: err => {
+                    console.log('login fail', err);
+                }
+            });
+        }
+    });
+});
+
 ```
+**Bug & Tip**
+bug: 和其他API套用会破坏swan.login在页面onShow中的调用频次限制，建议在onShow中单独使用swan.login或在onLoad中套用
 #### 错误码
 * Andriod
 
@@ -292,6 +319,8 @@ Page({
 |10001|内部错误  |
 |10002|网络请求失败|
 |10004|用户拒绝(user not login)|
+
+
 
 ## swan.isLoginSync
 

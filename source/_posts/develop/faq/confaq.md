@@ -60,7 +60,7 @@ A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 
 
 #### Q：使用两个text组件，组件之间有间隙，在不同手机端偶现，影响部分用户体验的问题该如何解决？
 
-A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0 ，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
+A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
 
 ####  Q：swiper 的面板指示点能自定义样式吗？
 

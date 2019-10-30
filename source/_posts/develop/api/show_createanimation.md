@@ -225,7 +225,7 @@ Page({
 
 **方法参数**： Number tx，Number ty 
 
-**参数说明**：一个参数时，表示在X轴偏移 tx ，单位 px ；两个参数时，表示在 X 轴偏移 tx ，在 Y 轴偏移 ty ，单位 px 。 
+**参数说明**：一个参数时，表示在X轴偏移 tx，单位 px ；两个参数时，表示在 X 轴偏移 tx，在 Y 轴偏移 ty，单位 px 。 
 
 ##  Animation.translateX
  
@@ -233,7 +233,7 @@ Page({
 
 **方法参数**：Number tx 
 
-**参数说明**： 在 X 轴偏移 tx ，单位 px。
+**参数说明**： 在 X 轴偏移 tx，单位 px。
 
 ##  Animation.translateY
  
@@ -241,7 +241,7 @@ Page({
 
 **方法参数**：Number  ty  
 
-**参数说明**：在 Y 轴偏移 ty ，单位 px。 
+**参数说明**：在 Y 轴偏移 ty，单位 px。 
 
 ##  Animation.translateZ
  
@@ -249,7 +249,7 @@ Page({
 
 **方法参数**： Number  tz
 
-**参数说明**： 在 Z 轴偏移 tz ，单位 px。
+**参数说明**： 在 Z 轴偏移 tz，单位 px。
 
 ##  Animation.translate3d
 
@@ -257,7 +257,7 @@ Page({
 
 **方法参数**：Number tx，Number ty，Number tz 
 
-**参数说明**： 在 X 轴偏移 tx ，在 Y 轴偏移 ty ，在 Z 轴偏移 tz，单位 px。
+**参数说明**： 在 X 轴偏移 tx，在 Y 轴偏移 ty，在 Z 轴偏移 tz，单位 px。
  
 ##  Animation.skew
  

@@ -249,7 +249,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?acces
 | open_province         | String | true     | 开户省份。由数据字典接口取                     |
 | open_city             | String | true     | 开户城市。由数据字典接口取                     |
 | payment_days          | int    | true     | 结算周期。由数据字典接口取                     |
-| commission_rate       | int    | true     | 佣金比例。固定传 6 ，小程序固定为千分之六(6)   |
+| commission_rate       | int    | true     | 佣金比例。固定传 6，小程序固定为千分之六(6)   |
 | pool_cash_pledge      | Long   | true     | 打款预留（元）。提现后的保留金额               |
 | day_max_frozen_amount | Long   | true     | 每日退款上限(元)。每天最大退款限额10000元      |
 
@@ -365,7 +365,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 | open_province         | String | true     | 开户省份。由数据字典接口取                     |
 | open_city             | String | true     | 开户城市。由数据字典接口取                     |
 | payment_days          | int    | true     | 结算周期。由数据字典接口取                     |
-| commission_rate       | int    | true     | 佣金比例。固定传 6 ，小程序固定为千分之六(6)   |
+| commission_rate       | int    | true     | 佣金比例。固定传 6，小程序固定为千分之六(6)   |
 | pool_cash_pledge      | Long   | true     | 打款预留（元）。提现后的保留金额               |
 | day_max_frozen_amount | Long   | true     | 每日退款上限(元)。每天最大退款限额10000元      |
 
@@ -424,7 +424,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 | open_province         | String | 开户省份。由数据字典接口取                     |
 | open_city             | String | 开户城市。由数据字典接口取                     |
 | payment_days          | int    | 结算周期。由数据字典接口取                     |
-| commission_rate       | int    | 佣金比例。固定传 6 ，小程序固定为千分之六(6)   |
+| commission_rate       | int    | 佣金比例。固定传 6，小程序固定为千分之六(6)   |
 | pool_cash_pledge      | Long   | 打款预留（元）。提现后的保留金额               |
 | day_max_frozen_amount | Long   | 每日退款上限(元)。每天最大退款限额10000元      |
 | open_status | int | 开通状态. 0:新建 1:审核中 2:审核通过 3:驳回 |

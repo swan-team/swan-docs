@@ -85,4 +85,4 @@ swan.downloadFile({
 
 **返回值**：
 
-返回一个 downloadTask 对象，通过 downloadTask ，可监听下载进度变化事件，以及取消下载任务。
+返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。

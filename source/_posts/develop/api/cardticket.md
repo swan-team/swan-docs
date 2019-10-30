@@ -41,13 +41,13 @@ sidebar: cardticket
 | [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)  | 获取[access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)   |  query    |  true    | string     | 
 | bgColor   |  背景色的名称，按钮的颜色跟着背景色走   |  query    |  true    | string     | 
 | couponType   |  优惠券类型，1-通用优惠券，2-代金券，3-折扣券，4-兑换券，5-团购券     |  query    |  true    | integer     | 
-| description   |  补充说明：卡券的优惠内容说明，如"代金券一张"  ，字数上限为20个汉字。(建议涵盖卡券类型、张数、适用品类等)   |  query    |  false    | string     | 
+| description   |  补充说明：卡券的优惠内容说明，如"代金券一张" ，字数上限为20个汉字。(建议涵盖卡券类型、张数、适用品类等)   |  query    |  false    | string     | 
 | effectTime   |  生效时间的Unix时间戳     |  query    |  true    | integer     | 
 | expireTime   |  失效时间的Unix时间戳     |  query    |  true    | integer     | 
 | introduce   |  使用须知：卡券使用方法的介绍 ；字数上限为500个汉字；  |  query    |  true    | string     | 
 | sill   |   使用优惠券的门槛条件，字数上限为20个汉字；   |  query    |  true    | string     | 
 | takeLimit   |  领取限制，这里仅作描述，实际领取策略需要另外建词典来支持；字数上限为20个汉字；   |  query    |  true    | string     | 
-| title   |  10元优惠券  ，字数上限为10个汉字 (建议涵盖卡券属性、服务及金额)   |  query    |  true    | string     | 
+| title   |  10元优惠券 ，字数上限为10个汉字 (建议涵盖卡券属性、服务及金额)   |  query    |  true    | string     | 
 | **callbackUrl**   | 发券回调地址   | query   |  true   | string   | 
 
 

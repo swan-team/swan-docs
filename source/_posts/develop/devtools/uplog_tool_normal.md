@@ -5,6 +5,12 @@ nav: devtools
 sidebar: uplog_tool_normal
 ---
 
+### 2.14 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+| 2.14.1 | 2019.10.23 |**New**<p>**·** 项目名称可动态修改；<p>**·** 压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。<p>**Change**<p>更新添加到我的小程序引导。<p>**BugFix**<p>**·** 修复工具改版预览缩小二维码，偶现预览扫描失败，加载缓慢等问题；<p>**·** 修复发布弹窗加载时，提示信息隐藏的问题。| 
+
 ### 2.13 版本 
 
 |版本号|更新时间|更新内容|

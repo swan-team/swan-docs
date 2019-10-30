@@ -48,7 +48,7 @@ sidebar: map
 
 |属性名 |类型  |默认值  | 必填 |说明| 
 |---- | ---- | ---- |---- | --- | 
-| markerId |  Number| | 否 | 标记点id ，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
+| markerId |  Number| | 否 | 标记点id，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
 | latitude |   Number || 是 | 纬度，浮点数，范围 -90 ~ 90 |
 | longitude |  Number || 是 | 经度，浮点数，范围 -180 ~ 180 |
 | title  |   String | |否    | 标注点名 |
