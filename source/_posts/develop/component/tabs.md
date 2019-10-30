@@ -129,9 +129,11 @@ Page({
             // 如果页面加载的时候，query是预期的，则不需要调用 swan.setURLQuery
             // 请求页面数据
         }
-        swan.setURLQuery({
-            city: 'shanghai'
-        });
+        else {
+            swan.setURLQuery({
+                city: 'shanghai'
+            });
+        }
     },
     // 监听函数，点击切换 tabs 组件或者调用 swan.setURLQuery 时，url 发生变化自动触发
     onURLQueryChange({newURLQuery, oldURLQuery}) {
