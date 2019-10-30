@@ -36,3 +36,10 @@ compilation-args.common 中可以指定以下设置
 |ignoreTransJs|Boolean|ES6 转 ES5|
 |ignorePrefixCss|Boolean|上传代码时样式自动补全|
 |ignoreUglify|Boolean|上传代码时自动压缩混淆|
+|babelSetting|Object|增强编译下Babel的配置项|
+
+compilation-args.common.babelSetting 中可以指定以下设置
+
+|名称 | 类型  | 说明|
+|---|---|---|
+|ignore|Array<String>|配置需要跳过Babel编译(包括代码压缩)处理的文件或目录|
