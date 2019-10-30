@@ -18,7 +18,6 @@ sidebar: complation
 |Presets |env {} |env {chrome:53, ios:8} |
 |Helpers |单文件内联 |跨文件共享 |
 |Async/Await |不支持 |支持 |
-|严格模式开关 |不支持 |支持 |
 |忽略文件目录 |不支持 |支持 |
 |代码压缩 |uglify-js |terser |
 
@@ -26,7 +25,6 @@ sidebar: complation
 - 共享Babel辅助函数，减小产出包体积
 - 支持async/await语法，按需注入regeneratorRuntime
 - 忽略文件目录，可通过<a href="https://smartprogram.baidu.com/docs/develop/devtools/editor_set/">项目配置</a>文件配置
-- 文件首行是// use strict disable;时，即可禁用当前文件严格模式
 - 可通过项目配置文件指定任意文件、目录不经过编译
 
 ## ES6 转 ES5
