@@ -1,13 +1,13 @@
 ---
-title: 配置页面基础信息
+title: swan.setPageInfo
 header: develop
 nav: api
-sidebar: pageinfo
+sidebar: swan-setPageInfo
 ---
 配置页面基础信息接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
-## swan.setPageInfo
+ 
 >建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数。
 
 **解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
@@ -101,142 +101,6 @@ Page({
                 console.log('setPageInfo fail', err);
             }
         })
-    }
-});
-```
-
-## swan.setMetaDescription
-
-> 不推荐使用。
-
-**解释**： 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**方法参数**：Object object
-
-**`object`参数说明**：
-
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-| content |  String  |是 || 需要设置的 description 内容|
-|success |Function  |  否  ||接口调用成功的回调函数|
-|fail  | Function  |  否  | | 接口调用失败的回调函数|
-|complete   | Function   | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例**：
-
-<a href="swanide://fragment/4ccb5b68713b1395539d9a7cfd596cf81559045540637" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-
-**在 js 文件中**
-
-```js
-Page({
-    onShow() {
-        swan.setMetaDescription({
-            content: '当前小程序页面描述信息',
-            success: res => {
-                console.log('setMetaDescription success', res);
-            },
-            fail: err => {
-                console.log('setMetaDescription fail', err);
-            }
-        });
-    }
-});
-```
-
-
-## swan.setMetaKeywords
-
-> 不推荐使用。
-
-**解释**： 设置 web 版小程序 keywords meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**方法参数**：Object object
-
-**`object`参数说明**：
-
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-| content |  String  |是 | | 需要设置的 keywords 内容|
-|success |Function  |  否  | | 接口调用成功的回调函数|
-|fail  | Function  |  否 || 接口调用失败的回调函数|
-|complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例**：
-
-<a href="swanide://fragment/6bd9438e46899f7bb13a676cf457256f1559045708714" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="setMetaKeywords">setMetaKeywords</button>
-</view>
-```
-
-* 在 js 文件中
-
-```js
-Page({
-    onShow() {
-        swan.setMetaKeywords({
-            content: '小程序, 关键字',
-            success: res => {
-                console.log('setMetaKeywords success', res);
-            },
-            fail: err => {
-                console.log('setMetaKeywords fail', err);
-            }
-        });
-    }
-});
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-
-
-## swan.setDocumentTitle
-
-> 不推荐使用。
-
-**解释**：动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
-
-**方法参数**：Object object
-
-**`object`参数说明**：
-
-|参数名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-|title   |String|  是 | | 页面中 title 标签中的内容 |
-|success |Function |   否 | |  接口调用成功的回调函数|
-|fail   | Function|    否 | |  接口调用失败的回调函数|
-|complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
-
-**示例**：
-
-<a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-
-**在 js 文件中**
-
-```js
-Page({
-    onShow() {
-        swan.setDocumentTitle({
-            title: '我是页面标题',
-            success: res => {
-                console.log('setDocumentTitle success', res);
-            },
-            fail: err => {
-                console.log('setDocumentTitle fail', err);
-            }
-        });
     }
 });
 ```

@@ -8,7 +8,7 @@
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
-        '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
+        '/docs/develop/api/seo/':'/docs/develop/api/open/swan-setPageInfo/',
         '/docs/develop/tutorial/shine/':'/docs/develop/swan/shine/',
         '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
@@ -25,8 +25,9 @@
         '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
         '/docs/develop/tutorial/index/': '/docs/develop/fuctionlist/list/',
         '/docs/develop/tutorial/codedir/':'/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/uplog_tool/#正式版更新日志/': '/docs/develop/devtools/uplog_tool_normal/'
-
+        '/docs/develop/api/pageinfo/': '/docs/develop/api/open/swan-setPageInfo/',
+        '/docs/develop/devtools/show_sur/': '/docs/develop/devtools/page_start/',
+        '/docs/develop/devtools/uplog_tool/': '/docs/develop/devtools/uplog_tool_normal/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
@@ -34,7 +35,14 @@
 !function(url) {
     var urlMap = {
         '/docs/develop/devtools/smartappdebug_function/#自定义预处理/': '/docs/develop/devtools/smartappdebug_function_pre/',
-        '/docs/develop/swan/compatibility/#基础库最低版本设置': '/docs/develop/swan/compatibility_version/'
+        '/docs/develop/swan/compatibility/#基础库最低版本设置': '/docs/develop/swan/compatibility_version/',
+        '/docs/develop/devtools/uplog_tool/#正式版更新日志/': '/docs/develop/devtools/uplog_tool_normal/',
+        '/docs/develop/api/open_authorize/#authorize/': '/docs/develop/api/open/authorize_swan-authorize/',
+        '/docs/develop/api/open_log/#%E6%8E%88%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E/': '/docs/develop/api/open/log/',
+        '/docs/develop/api/open_log/#login/': '/develop/api/open/log_swan-login/',
+        '/docs/develop/api/open_log/#isLoginSync/': '/docs/develop/api/open/log_swan-isLoginSync/',
+        '/docs/develop/api/open_log/#checkSession/': '/docs/develop/api/open/log_swan-checkSession/',
+        '/docs/develop/api/pageinfo/#swan-setPageInfo/': '/docs/develop/api/open/swan-setPageInfo/'
     };
     urlMap[url] && location.replace(urlMap[url]);
 }(decodeURIComponent(location.pathname + location.hash));

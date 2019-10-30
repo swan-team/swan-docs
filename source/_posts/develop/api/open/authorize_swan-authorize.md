@@ -1,50 +1,11 @@
 ---
-title: 授权
+title: swan.authorize
 header: develop
 nav: api
-sidebar: open_authorize
+sidebar: authorize_swan-authorize
 ---
-
-## 需授权接口列表
-
-
-|接口|	描述|
-|---|---|
-|[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getUserInfo/)|	用户信息|
-|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
-|[swan.saveImageToPhotosAlbum](http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
-|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
-|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
-|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
-|	[camera](/develop/component/media_camera/)|	摄像头|
-
-
-**此类接口调用时需注意**：
-* 如果用户未接受或拒绝过此权限，会弹窗询问用户，用户点击同意后方可调用接口；
-* 如果用户之前已经同意授权，则不会出现弹窗，可直接调用接口；
-* 如果用户之前已经拒绝，则再次调用也不会弹窗，会执行 fail 回调。请开发者兼容用户拒绝授权的场景。
-
-## 获取用户授权设置
-
-> 在真正需要使用授权接口时，才向用户发起授权申请，并需要在授权申请中说明清楚要使用该功能的理由。
-
-1. 开发者可以使用 [swan.getSetting](https://smartprogram.baidu.com/docs/develop/api/open_setting/#swan-openSetting/) 获取用户的当前设置。
  
-2. 打开设置界面
-
-  * **用户打开设置界面方法**：
-  可以在小程序设置界面（“右上角 -> 关于 -> 右上角 -> 权限管理”）中控制对该小程序的授权状态。
-
-  * **开发者打开设置界面方法**：
-  可以调用 [swan.openSetting](https://smartprogram.baidu.com/docs/develop/api/open_setting/#swan-openSetting/) 调起客户端智能小程序设置界面，返回用户设置的操作结果。
-
-3. 开发者可以使用 [swan.authorize](http://smartprogram.baidu.com/docs/develop/api/open_authorize/#swan-authorize/) 提前向用户发起授权请求。
-
-**授权有效期**
-一旦用户明确同意或拒绝过授权，其授权关系会记录在后台，直到用户主动删除小程序。
  
-
-## swan.authorize
 
 **解释**： 提前向用户发起授权请求。
 
@@ -68,11 +29,11 @@ sidebar: open_authorize
 
 |scope|	对应接口|	描述|
 |---|---|---|
-|scope.userInfo|[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getUserInfo/)|	用户信息|
+|scope.userInfo|[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/)|	用户信息|
 |scope.userLocation|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
 |scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
-|scope.address|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open_chooseaddress/#swan-chooseAddress/)|	收货地址|
-|scope.invoiceTitle|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)	|发票抬头|
+|scope.address|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/)|	收货地址|
+|scope.invoiceTitle|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
 |scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 

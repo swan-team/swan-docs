@@ -1,10 +1,10 @@
 ---
-title: 选择收货地址
+title: swan.chooseAddress
 header: develop
 nav: api
-sidebar: open_chooseaddress
+sidebar: chooseaddress_swan-chooseAddress
 ---
-## swan.chooseAddress
+ 
 
 **解释**： 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。
 

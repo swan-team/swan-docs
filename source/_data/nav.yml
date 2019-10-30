@@ -2862,301 +2862,301 @@
                     text: swan.getExtConfigSync
                     name:  swan-getExtConfigSync
         -
-            link: /develop/api/open_log
+     
             text: 开放接口
-            name: open_log
+        
             sidebar:
 
               -
-                link: /develop/api/open_log
+   
                 text: 登录
-                name: open_log
+            
                 sidebar:
                   -
-                    link: /develop/api/open_log/#授权流程说明
+                    link: /develop/api/open/log 
                     text: 授权流程说明
-                    name: open_log_授权流程说明
+                    name:  log 
                   -
-                    link: /develop/api/open_log/#swan-login
+                    link: /develop/api/open/log_swan-login
                     text: swan.login
-                    name: open_log_swan-login
+                    name:  log_swan-login
                   -
-                    link: /develop/api/open_log/#getunionid
+                    link: /develop/api/open/log_getunionid
                     text: getunionid
-                    name: open_log_getunionid
+                    name: log_getunionid
                   -
-                    link: /develop/api/open_log/#Session-Key
+                    link: /develop/api/open/log_Session-Key
                     text: Session Key
-                    name: open_log_Session-Key
+                    name: log_Session-Key
                   -
-                    link: /develop/api/open_log/#swan-checkSession
+                    link: /develop/api/open/log_swan-checkSession
                     text: swan.checkSession
-                    name: open_log_swan-checkSession
+                    name: log_swan-checkSession
                   -
-                    link: /develop/api/open_log/#swan-isLoginSync
+                    link: /develop/api/open/log_swan-isLoginSync
                     text: swan.isLoginSync
-                    name: open_log_swan-isLoginSync
+                    name: log_swan-isLoginSync
                   -
-                    link: /develop/api/open_log/#用户数据的签名验证和加解密
+                    link: /develop/api/open/log_userdata
                     text: 用户数据的签名验证和加解密
-                    name: open_log_用户数据的签名验证和加解密
+                    name: log_userdata
 
               -
-                link: /develop/api/open_authorize
+          
                 text: 授权
-                name: open_authorize
+              
                 sidebar:
                   -
-                    link: /develop/api/open_authorize/#需授权接口列表
+                    link: /develop/api/open/authorize_list
                     text: 需授权接口列表
-                    name: open_authorize_需授权接口列表
+                    name: authorize_list
                   -
-                    link: /develop/api/open_authorize/#获取用户授权设置
+                    link: /develop/api/open/authorize_set
                     text: 获取用户授权设置
-                    name: open_authorize_获取用户授权设置
+                    name: authorize_set
                   -
-                    link: /develop/api/open_authorize/#swan-authorize
+                    link: /develop/api/open/authorize_swan-authorize
                     text: swan.authorize
-                    name: open_authorize_swan-authorize
+                    name: authorize_swan-authorize
 
               -
-                link: /develop/api/open_userinfo
+            
                 text: 用户信息
-                name: open_userinfo
+          
                 sidebar:
                   -
-                    link: /develop/api/open_userinfo/#swanid机制说明
+                    link: /develop/api/open/userinfo_swanid 
                     text: swanid机制说明
-                    name: open_userinfo_swanid机制说明
+                    name:  userinfo_swanid 
                   -
-                    link: /develop/api/open_userinfo/#swan-getSwanId
+                    link: /develop/api/open/userinfo_swan-getSwanId
                     text: swan.getSwanId
-                    name: open_userinfo_swan-getSwanId
+                    name:  userinfo_swan-getSwanId
                   -
-                    link: /develop/api/open_userinfo/#swan-getUserInfo
+                    link: /develop/api/open/userinfo_swan-getUserInfo
                     text: swan.getUserInfo
-                    name: open_userinfo_swan-getUserInfo
+                    name:   userinfo_swan-getUserInfo
                   -
-                    link: /develop/api/open_userinfo/#signature-计算方法
+                    link: /develop/api/open/userinfo_signature 
                     text: signature 计算方法
-                    name: open_userinfo_signature-计算方法
+                    name:  userinfo_signature 
 
               -
-                link: /develop/api/open_setting
+     
                 text: 设置
-                name: open_setting
+ 
                 sidebar:
                   -
-                    link: /develop/api/open_setting/#swan-openSetting
+                    link: /develop/api/open/setting_swan-openSetting
                     text: swan.openSetting
-                    name: open_setting_swan-openSetting
+                    name:  setting_swan-openSetting
                   -
-                    link: /develop/api/open_setting/#swan-getSetting
+                    link: /develop/api/open/setting_swan-getSetting
                     text: swan.getSetting
-                    name: open_setting_swan-getSetting
+                    name:  setting_swan-getSetting
 
               -
-                link: /develop/api/open_share
+            
                 text: 分享
-                name: open_share
+         
                 sidebar:
                   -
-                    link: /develop/api/open_share/#onShareAppMessage
+                    link: /develop/api/open/share_onShareAppMessage
                     text: onShareAppMessage
-                    name: open_share_onShareAppMessage
+                    name: share_onShareAppMessage
                   -
-                    link: /develop/api/open_share/#swan-openShare
+                    link: /develop/api/open/share_swan-openShare
                     text: swan.openShare
-                    name: open_share_swan-openShare
+                    name: share_swan-openShare
                   -
-                    link: /develop/api/open_share/#swan-shareFile
+                    link: /develop/api/open/share_swan-shareFile
                     text: swan.shareFile
-                    name: open_share_swan-shareFile
+                    name: share_swan-shareFile
                   -
-                    link: /develop/api/open_share/#web-view中的分享
+                    link: /develop/api/open/share_web-view
                     text: web-view中的分享
-                    name: open_share_web-view中的分享
+                    name: share_web-view
 
               -
-                link: /develop/api/open_chooseaddress
+         
                 text: 选择收货地址
-                name: open_chooseaddress
+         
                 sidebar:
                   -
-                    link: /develop/api/open_chooseaddress/#swan-chooseAddress
+                    link: /develop/api/open/chooseaddress_swan-chooseAddress
                     text: swan.chooseAddress
-                    name: open_chooseaddress_swan-chooseAddress
+                    name:  chooseaddress_swan-chooseAddress
 
               -
-                link: /develop/api/open_payment
+              
                 text: 百度收银台支付
-                name: open_payment
+                
                 sidebar:
                   -
-                    link: /develop/api/open_payment/#swan-requestPolymerPayment
+                    link: /develop/api/open/payment_swan-requestPolymerPayment
                     text: swan.requestPolymerPayment
-                    name: open_payment_swan-requestPolymerPayment
+                    name:  payment_swan-requestPolymerPayment
 
               -
-                link: /develop/api/open_community
+           
                 text: 原生全屏内容发布器
-                name: open_community
+              
                 sidebar:
                   -
-                    link: /develop/api/open_community/#swan-openCommunityEditor
+                    link: /develop/api/open/community_swan-openCommunityEditor
                     text: swan.openCommunityEditor
-                    name: open_community_swan-openCommunityEditor
+                    name: community_swan-openCommunityEditor
                   -
-                    link: /develop/api/open_community/#swan-closeCommunityEditor
+                    link: /develop/api/open/community_swan-closeCommunityEditor
                     text: swan.closeCommunityEditor
-                    name: open_community_swan-closeCommunityEditor
+                    name: community_swan-closeCommunityEditor
               -
-                link: /develop/api/open_replyeditor
+         
                 text: 原生半屏内容发布器
-                name: open_replyeditor
+           
                 sidebar:
                   -
-                    link: /develop/api/open_replyeditor/#swan-openReplyEditor
+                    link: /develop/api/open/replyeditor_swan-openReplyEditor
                     text: swan.openReplyEditor
-                    name: open_replyeditor_swan-openReplyEditor
+                    name: replyeditor_swan-openReplyEditor
                   -
-                    link: /develop/api/open_replyeditor/#swan-closeReplyEditor
+                    link: /develop/api/open/replyeditor_swan-closeReplyEditor
                     text: swan.closeReplyEditor
-                    name: open_replyeditor_swan-closeReplyEditor
+                    name: replyeditor_swan-closeReplyEditor
 
               -
-                link: /develop/api/open_chooseinvoicetitle
+             
                 text: 获取发票抬头
-                name: open_chooseinvoicetitle
+               
                 sidebar:
                   -
-                    link: /develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle
+                    link: /develop/api/open/swan-chooseInvoiceTitle
                     text: swan.chooseInvoiceTitle
-                    name: open_chooseinvoicetitle_swan-chooseInvoiceTitle
+                    name: swan-chooseInvoiceTitle
               -
-                link: /develop/api/open_smartprogram
+            
                 text: 打开小程序
-                name: open_smartprogram
+      
                 sidebar:
                   -
-                    link: /develop/api/open_smartprogram/#swan-navigateToSmartProgram
+                    link: /develop/api/open/swan-navigateToSmartProgram
                     text: swan.navigateToSmartProgram
-                    name: open_smartprogram_swan-navigateToSmartProgram
+                    name: swan-navigateToSmartProgram
                   -
-                    link: /develop/api/open_smartprogram/#swan-navigateBackSmartProgram
+                    link: /develop/api/open/swan-navigateBackSmartProgram
                     text: swan.navigateBackSmartProgram
-                    name: open_smartprogram_swan-navigateBackSmartProgram
+                    name: swan-navigateBackSmartProgram
 
               -
-                link: /develop/api/pageinfo
+            
                 text: 页面基础信息
-                name: pageinfo
+              
                 sidebar:
                   -
-                    link: /develop/api/pageinfo/#swan-setPageInfo
+                    link: /develop/api/open/swan-setPageInfo
                     text: swan.setPageInfo
-                    name: seo_swan-setPageInfo
+                    name:  swan-setPageInfo
                   -
-                    link: /develop/api/pageinfo/#swan-setMetaDescription
+                    link: /develop/api/open/swan-setMetaDescription
                     text: swan.setMetaDescription
-                    name: seo_swan-setMetaDescription
+                    name:  swan-setMetaDescription
                   -
-                    link: /develop/api/pageinfo/#swan-setMetaKeywords
+                    link: /develop/api/open/swan-setMetaKeywords
                     text: swan.setMetaKeywords
-                    name: seo_swan-setMetaKeywords
+                    name: swan-setMetaKeywords
                   -
-                    link: /develop/api/pageinfo/#swan-setDocumentTitle
+                    link: /develop/api/open/swan-setDocumentTitle
                     text: swan.setDocumentTitle
-                    name: seo_swan-setDocumentTitle
+                    name: swan-setDocumentTitle
 
               -
-                link: /develop/api/open_preloadsubpackage
+           
                 text: 分包预下载
-                name: open_preloadsubpackage
+             
                 sidebar:
                   -
-                    link: /develop/api/open_preloadsubpackage/#swan-loadSubPackage
+                    link: /develop/api/open/swan-loadSubPackage
                     text: swan.loadSubPackage
-                    name: open_preloadsubpackage_swan-preloadSubPackage
+                    name:  swan-loadSubPackage
               -
-                link: /develop/api/get
+            
                 text: 更新
-                name: get
+         
                 sidebar:
                   -
-                    link: /develop/api/get/#swan-getUpdateManager
+                    link: /develop/api/open/swan-getUpdateManager
                     text: swan.getUpdateManager
-                    name: get_swan-getUpdateManager
+                    name:  swan-getUpdateManager
                   -
-                    link: /develop/api/get/#UpdateManager
+                    link: /develop/api/open/UpdateManager
                     text: UpdateManager
                     name: UpdateManager
                     sidebar:
                       -
-                        link: /develop/api/get/#UpdateManager-onCheckForUpdate
+                        link: /develop/api/open/UpdateManager-onCheckForUpdate
                         text: UpdateManager.onCheckForUpdate
-                        name: get_UpdateManager-onCheckForUpdate
+                        name: UpdateManager-onCheckForUpdate
                       -
-                        link: /develop/api/get/#UpdateManager-onUpdateReady
+                        link: /develop/api/open/UpdateManager-onUpdateReady
                         text: UpdateManager.onUpdateReady
-                        name: get_UpdateManager-onUpdateReady
+                        name: UpdateManager-onUpdateReady
                       -
-                        link: /develop/api/get/#UpdateManager-onUpdateFailed
+                        link: /develop/api/open/UpdateManager-onUpdateFailed
                         text: UpdateManager.onUpdateFailed
-                        name: get_UpdateManager-onUpdateFailed
+                        name: UpdateManager-onUpdateFailed
                       -
-                        link: /develop/api/get/#UpdateManager-applyUpdate
+                        link: /develop/api/open/UpdateManager-applyUpdate
                         text: UpdateManager.applyUpdate
-                        name: get_UpdateManager-applyUpdate
+                        name: UpdateManager-applyUpdate
 
               -
-                link: /develop/api/debug
+          
                 text: 调试
-                name: debug
+            
                 sidebar:
                   -
-                    link: /develop/api/debug/#swan-setEnableDebug
+                    link: /develop/api/open/swan-setEnableDebug
                     text: swan.setEnableDebug
-                    name: debug_swan-setEnableDebug
+                    name: swan-setEnableDebug
               -
-                link: /develop/api/data
+           
                 text: 数据分析
-                name: data
+      
                 sidebar:
                   -
-                    link: /develop/api/data/#swan-reportAnalytics
+                    link: /develop/api/open/swan-reportAnalytics
                     text: swan.reportAnalytics
-                    name: data_swan-reportAnalytics
+                    name: swan-reportAnalytics
               -
-                link: /develop/api/timer
+          
                 text: 定时器
-                name: timer
+           
                 sidebar:
                   -
-                    link: /develop/api/timer/#clearInterval
+                    link: /develop/api/open/timer_clearInterval
                     text: clearInterval
                     name: timer_clearInterval
                   -
-                    link: /develop/api/timer/#clearTimeout
+                    link: /develop/api/open/timer_clearTimeout
                     text: clearTimeout
                     name: timer_clearTimeout
                   -
-                    link: /develop/api/timer/#setInterval
+                    link: /develop/api/open/timer_setInterval
                     text: setInterval
                     name: timer_setInterval
                   -
-                    link: /develop/api/timer/#setTimeout
+                    link: /develop/api/open/timer_setTimeout
                     text: setTimeout
                     name: timer_setTimeout
               -
-                link: /develop/api/open_riskInfo
+ 
                 text: 风控
-                name: open_riskInfo
+  
                 sidebar:
                   -
-                    link: /develop/api/open_riskInfo/#swan-getSystemRiskInfo
+                    link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
-                    name: open_userinfo_swan-getSystemRiskInfo   
+                    name: swan-getSystemRiskInfo   
         -
             sidebar:
               -

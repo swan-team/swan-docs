@@ -1,11 +1,11 @@
 ---
-title: 风控
+title: swan.getSystemRiskInfo
 header: develop
 nav: api
-sidebar: open_riskInfo
+sidebar: swan-getSystemRiskInfo
 ---
 
-## swan.getSystemRiskInfo
+ 
 
 **解释**： 获取用于得到风控信息的加密信息对象。更多小程序风控能力参见[风控服务](https://smartprogram.baidu.com/docs/develop/serverapi/open_risk_power/)。
 

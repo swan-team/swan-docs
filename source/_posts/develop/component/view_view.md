@@ -6,7 +6,7 @@ sidebar: view_view
 ---
 
 
-**解释**：视图容器。
+**解释**：视图容器，相当于 html 中的 div ，可将页面分割为独立的、不同的部分。如果需要使用滚动视图，请使用 [scroll-view](/develop/component/view_scroll-view/)。
 
 **百度APP中扫码体验：**
 

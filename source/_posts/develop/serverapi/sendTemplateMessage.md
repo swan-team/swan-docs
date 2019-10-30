@@ -50,10 +50,10 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 #### 如何判断当前用户是游客状态还是登录状态？
  - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登录游客状态
- - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登录状态
+ - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open/log_swan-isLoginSync/) API可以判断当前用户是否为登录状态
 
 #### 如何获取swan\_id & open\_id？
- - 获取swan\_id：[swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
+ - 获取swan\_id：[swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getSwanId/)
  - 获取open\_id：参考官方文档 [获取登录用户OpenId](https://smartprogram.baidu.com/docs/develop/api/open_log/)
 
 

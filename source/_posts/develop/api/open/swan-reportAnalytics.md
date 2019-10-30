@@ -1,10 +1,10 @@
 ---
-title: 数据分析
+title: swan.reportAnalytics
 header: develop
 nav: api
-sidebar: data
+sidebar: swan-reportAnalytics
 ---
-## swan.reportAnalytics
+ 
 
 **解释**：自定义分析数据上报接口。使用前，需要在小程序管理后台自定义分析中新建事件，配置好事件名与字段。
 

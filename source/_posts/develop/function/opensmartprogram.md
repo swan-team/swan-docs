@@ -168,7 +168,7 @@ swanInvoke功能：
 
 * 组件：在小程序中使用组件打开另一个小程序，请参考[navigator组件](/develop/component/nav/)中target="miniProgram"的使用方法。
 
-* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/)
+* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/)
 
 ### 在web-view中打开小程序 
 

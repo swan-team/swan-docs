@@ -22,11 +22,11 @@ API 在模拟器与真机中的实现差异如下：
 |[swan.vibrateLong](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-vibrateLong/) | 开发者工具暂不支持 | 
 | [swan.vibrateShort](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-vibrateShort/)| 开发者工具暂不支持 | 
 | [swan.makePhoneCall](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/)| 弹窗提示接口调用成功 | 
-|[swan.requestPolymerPayment](https://smartprogram.baidu.com/docs/develop/api/open_payment/#swan-requestPolymerPayment/) | 工具暂不支持调起支付 | 
-| [swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open_chooseinvoicetitle/#swan-chooseInvoiceTitle/)| 提供模拟可选发票 | 
-|[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/) | 开发者工具暂不支持 | 
-|[swan.navigateBackSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateBackSmartProgram/) |  开发者工具暂不支持| 
-|[swan.setEnableDebug](https://smartprogram.baidu.com/docs/develop/api/debug/#swan-setEnableDebug/)|开发者工具暂不支持|
+|[swan.requestPolymerPayment](https://smartprogram.baidu.com/docs/develop/api/open/payment_swan-requestPolymerPayment/) | 工具暂不支持调起支付 | 
+| [swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)| 提供模拟可选发票 | 
+|[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/) | 开发者工具暂不支持 | 
+|[swan.navigateBackSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateBackSmartProgram/) |  开发者工具暂不支持| 
+|[swan.setEnableDebug](https://smartprogram.baidu.com/docs/develop/api/open/swan-setEnableDebug/)|开发者工具暂不支持|
 |[swan.showFavoriteGuide](https://smartprogram.baidu.com/docs/develop/api/show/nacomponent/)| 为方便开发者开发和调试，该api在开发工具中并未使用引导组件的统一[策略](https://smartapp.baidu.com/docs/develop/api/show/nacomponent/)。|
 |[swan.setInnerAudioOption](https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-setInnerAudioOption/)|开发者工具暂不支持| 
 |[swan.ai.getVoiceRecognizer](https://smartprogram.baidu.com/docs/develop/api/ai_voice/#swan-ai-getVoiceRecognizer/)|开发者工具暂不支持| 

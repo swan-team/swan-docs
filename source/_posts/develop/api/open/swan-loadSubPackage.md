@@ -1,11 +1,11 @@
 ---
-title: 子包预下载
+title: swan.loadSubPackage
 header: develop
 nav: api
-sidebar: open_preloadsubpackage
+sidebar: swan-loadSubPackage
 ---
 
-## swan.loadSubPackage
+ 
 
 **解释**：提前下载好子包的资源，目录结构配置参考[分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)。
 

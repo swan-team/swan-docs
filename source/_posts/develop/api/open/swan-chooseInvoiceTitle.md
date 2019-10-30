@@ -1,14 +1,14 @@
 ---
-title: 获取发票抬头
+title: swan.chooseInvoiceTitle
 header: develop
 nav: api
-sidebar: open_chooseinvoicetitle
+sidebar: chooseinvoicetitle_swan-chooseInvoiceTitle
 ---
-## swan.chooseInvoiceTitle
+ 
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
-**解释**： 选择用户的发票抬头，需要[用户授权](http://smartapp.baidu.com/docs/develop/api/open_authorize/#swan-authorize/) scope.invoiceTitle。
+**解释**： 选择用户的发票抬头，需要[用户授权](http://smartapp.baidu.com/docs/develop/api/open/authorize_swan-authorize/) scope.invoiceTitle。
 
 **百度APP中扫码体验：**
 

@@ -1,10 +1,10 @@
 ---
-title: 调试接口
+title: swan.setEnableDebug
 header: develop
 nav: api
-sidebar: debug
+sidebar: swan-setEnableDebug
 ---
-## swan.setEnableDebug
+ 
 
 > 客户端10.12，基础库1.12开始支持,在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
