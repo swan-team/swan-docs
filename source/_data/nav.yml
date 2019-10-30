@@ -3370,6 +3370,10 @@
                     text: Git 状态展示
                     name: editor_git    
                   -
+                    link: /develop/devtools/editor_debug
+                    text: 代码调试
+                    name: editor_debug 
+                  -
                     link: /develop/devtools/editor_set
                     text: 项目配置文件
                     name: editor_set
