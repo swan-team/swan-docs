@@ -6,7 +6,7 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.15.2） 
+### 最新正式版本（2.15.3） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
@@ -34,9 +34,9 @@ sidebar: history
 
 |mac|windows|
 |--|--|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/bdb68/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2.dmg">2.15.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/ea784/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2-x64.exe">2.15.2</a>|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/bdb68/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1.dmg">2.14.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/ea784/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1-x64.exe">2.14.1</a>|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/bdb68/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.13.1.dmg">2.13.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/ea784/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.13.1-x64.exe">2.13.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/9bafb/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2.dmg">2.15.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/5fd52/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2-x64.exe">2.15.2</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/3d730/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1.dmg">2.14.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/f949e/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1-x64.exe">2.14.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/44513/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.13.1.dmg">2.13.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/6941a/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.13.1-x64.exe">2.13.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/bdb68/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.12.1.dmg">2.12.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/ea784/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.12.1-x64.exe">2.12.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/9ce92/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.3.dmg">2.11.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/2620b/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.11.3-x64.exe">2.11.3</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.10.1.dmg">2.10.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%20Setup-2.10.1.exe">2.10.1</a>|
