@@ -11,7 +11,14 @@ sidebar: query_NodesRef-scrollOffset
 
 **方法参数**：Function callback
 
-返回的节点信息中，每个节点的滚动位置用 scrollLeft 、s crollTop 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
+**返回值说明**：
+返回的节点信息中，每个节点的滚动位置用 scrollLeft 、scrollTop 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
+
+|参数|类型|说明|
+|---|---|---|
+|scrollLeft|Nunber|节点水平滚动位置|
+|scrollTop|Nunber|节点竖直滚动位置|
+ 
 
 **示例**：
 

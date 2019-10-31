@@ -178,6 +178,13 @@ swanInvoke功能：
 
 引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view/#相关接口2)
 
+### 如何判断 H5 页面是否在小程序 web-view 打开？
+
+H5 运行时，通过 window.navigator.userAgent 获取浏览器的 userAgent。当`userAgent` 字符串中包含小程序标识：`swan-baiduboxapp/`时，则说明当前环境为小程序web-view；否则不在小程序中。
+
+> 请勿通过`swan/`关键字判断 h5 是否在小程序 web-view 中。
+
+
 ## 小程序来源统计
 > 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。
 

@@ -1443,7 +1443,36 @@
                   -
                     link: /develop/api/ai/voice_swan-VoiceRecognizer
                     text: VoiceRecognizer
-                    name:  voice_swan-VoiceRecognizer      
+                    name:  voice_swan-VoiceRecognizer 
+                    sidebar:  
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-start
+                      text:  VoiceRecognizer.start
+                      name:  voice_VoiceRecognizer-start
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-stop
+                      text:  VoiceRecognizer.stop
+                      name:  voice_VoiceRecognizer-stop
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-cancel
+                      text:  VoiceRecognizer.cancel
+                      name:  voice_VoiceRecognizer-cancel
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-onStart
+                      text:  VoiceRecognizer.onStart
+                      name:  voice_VoiceRecognizer-onStart
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-onRecognize
+                      text:  VoiceRecognizer.onRecognize
+                      name:  voice_VoiceRecognizer-onRecognize                  
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-onFinish	
+                      text:  VoiceRecognizer.onFinish	
+                      name:  voice_VoiceRecognizer-onFinish	  
+                    -
+                      link:  /develop/api/ai/voice_VoiceRecognizer-onError
+                      text:  VoiceRecognizer.onError
+                      name:  voice_VoiceRecognizer-onError                        
               -
                 
                 text: 人脸识别

@@ -6,7 +6,7 @@ sidebar: BackgroundAudioManager
 ---
 
 
-**`backgroundAudioManager`对象的属性列表**：
+**`backgroundAudioManager`类的属性列表**：
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |

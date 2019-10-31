@@ -25,7 +25,7 @@ sidebar: authorize_swan-authorize
 |fail |   Function  |  否 || 接口调用失败的回调函数|
 |complete  |  Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**scope 列表**：
+**scope 有效值列表**：
 
 |scope|	对应接口|	描述|
 |---|---|---|

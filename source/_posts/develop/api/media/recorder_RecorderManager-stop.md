@@ -1,8 +1,8 @@
 ---
-title: swan.getRecorderManager
+title: RecorderManager.stop 
 header: develop
 nav: api
-sidebar: swan.getRecorderManager
+sidebar: recorder_tRecorderManager-stop
 ---
 
 
@@ -10,7 +10,7 @@ sidebar: swan.getRecorderManager
 
 
 
-## RecorderManager.stop 
+ 
 
 **解释**： 停止录音
 
