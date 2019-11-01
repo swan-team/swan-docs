@@ -32,65 +32,65 @@ sidebar: submitsitemap
 
 ```
 {
- "sitemapindex": [
- {
- "sitemap": {
- "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_01.json",
- "lastmod": "2018-07-17"
- }
- },
- {
- "sitemap": {
- "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_02.json",
- "lastmod": "2018-07-17"
- }
- },
- {
- "sitemap": {
- "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_03.json",
- "lastmod": "2018-07-17"
- }
- }
- ]
+    "sitemapindex": [
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_01.json",
+                "lastmod": "2018-07-17"
+            }
+        },
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_02.json",
+                "lastmod": "2018-07-17"
+            }
+        },
+        {
+            "sitemap": {
+                "loc": "https://www.baidu.com/baidu/little/program/baidu_little_program_add_03.json",
+                "lastmod": "2018-07-17"
+            }
+        }
+    ]
 }
 ```
 **loc为小于5M的分片数据，格式如下**：
 ```
 [
- {
- "app_id": "1000001",
- "title": "百度智能小程序，给你全新的智能体验",
- "body": "智能小程序，智能连接人与信息、人与服务、人与万物的开放生态，依托以百度APP为代表的全域流量，通过百度AI开放式赋能，精准连接用户，无需下载安装便可享受智慧超前的使用体验",
- "path": "/pages/index/index",
- "images": [
- "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png",
- "https://www.baidu.com/img/bd_logo1.png?qua=high%26where=super"
- ],
- "mapp_type": "1000",
- "mapp_sub_type": "1001",
- “feed_type”: “娱乐”
- “feed_sub_type”: “明星八卦”
- "tags": "组件,接口",
- "ext": {
- "desc": "智能小程序官方示例",
- "version": "10.7.1"
- }
- },
- {
- "app_id": "1000001",
- "title": "小程序接口",
- "body": "百度智能小程序提供丰富的接口，为开发者赋能。",
- "path": "/pages/api/api",
- "images": [
- "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png"
- ],
- "mapp_type": "1000",
- "mapp_sub_type": "1001",
- “feed_type”: “娱乐”
- “feed_sub_type”: “明星八卦”
- "tags": "接口",
- "ext": {}
- }
+    {
+        "app_id": "1000001",
+        "title": "百度智能小程序，给你全新的智能体验",
+        "body": "智能小程序，智能连接人与信息、人与服务、人与万物的开放生态，依托以百度APP为代表的全域流量，通过百度AI开放式赋能，精准连接用户，无需下载安装便可享受智慧超前的使用体验",
+        "path": "/pages/index/index",
+        "images": [
+            "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png",
+            "https://www.baidu.com/img/bd_logo1.png?qua=high%26where=super"
+        ],
+        "mapp_type": "1000",
+        "mapp_sub_type": "1001",
+        “feed_type”: “娱乐”,
+        “feed_sub_type”: “明星八卦”,
+        "tags": "组件,接口",
+        "ext": {
+            "desc": "智能小程序官方示例",
+            "version": "10.7.1"
+        }
+    },
+    {
+        "app_id": "1000001",
+        "title": "小程序接口",
+        "body": "百度智能小程序提供丰富的接口，为开发者赋能。",
+        "path": "/pages/api/api",
+        "images": [
+            "https://b.bdstatic.com/searchbox/mappconsole/image/20180712/1531387421302894.png"
+        ],
+        "mapp_type": "1000",
+        "mapp_sub_type": "1001",
+        “feed_type”: “娱乐”
+        “feed_sub_type”: “明星八卦”
+        "tags": "接口",
+        "ext": {}
+    }
 ]
 ```
 

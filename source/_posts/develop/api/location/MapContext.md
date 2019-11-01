@@ -154,7 +154,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/location/createMapContext.png">
+        <img src="../../../../img/api/location/createMapContext.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

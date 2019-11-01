@@ -72,7 +72,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/createVideoContext.png">
+        <img src="../../../../img/api/media/createVideoContext.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

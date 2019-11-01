@@ -96,7 +96,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera.jpeg">
+        <img src="../../../../img/component/camera.jpeg">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

@@ -18,7 +18,6 @@ sidebar: deleteresource
 | access_token | string   | true   | GET  | 权限校验TOKEN   |  |
 | app_id | string   | true   | POST | 智能小程序ID | 15625863  |
 | path   | string   | true   | POST | 智能小程序内页链接 | /pages/detail/detail?id=100001 |
- |
 
 return:json
 
@@ -28,9 +27,12 @@ return:json
 | msg  | string   | 错误信息 |
 | data | string   | 返回数据 |
 
-
-返回示例
-
+**返回示例**：
 ```
-`{   　　"errno":0,   　　"msg":"success",   　　"data":""   }`
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
 ```
+ 

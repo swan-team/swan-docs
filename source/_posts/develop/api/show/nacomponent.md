@@ -36,7 +36,8 @@ sidebar: nacomponent
 1. 浮层引导(type=bar)
     一直展现：用户点击关闭，浮层引导消失；点击关注按钮可直接关注小程序。
 
-    ![图片](../../../img/api/nacomponent/强引导.png)
+    ![图片](../../../../img/api/nacomponent/强引导.png)
+
     **示例代码 1**
 
         ```javascript
@@ -55,7 +56,7 @@ sidebar: nacomponent
 2. 气泡引导(type=tip)
     引导组件 5s 后自动消失，组件箭头指向小程序菜单。
 
-    ![图片](../../../img/api/nacomponent/弱引导.png)
+    ![图片](../../../../img/api/nacomponent/弱引导.png)
     **示例代码 2**
 
     ```javascript
@@ -74,7 +75,7 @@ sidebar: nacomponent
 用户通过引导关注组件“关注小程序”后，可以在百度APP-我的“我的小程序”中看到它。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/component/guide_add/2.png">
+		<img src="../../../../img/design/component/guide_add/2.png">
 	</div>
 </div>
 

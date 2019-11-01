@@ -97,7 +97,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/api/media/live-player.png">
+        <img src="../../../../img/api/media/live-player.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
