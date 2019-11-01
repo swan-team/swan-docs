@@ -91,7 +91,7 @@ Page({
 
 **示例二**：可寻址导航组件
 
-<a href="swanide://fragment/dbd53a620ddde5781f09c0886955e0261566986685494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e070218e2a0c6aa1e63208e5207711de1572603902121" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 * 在 swan 文件中
