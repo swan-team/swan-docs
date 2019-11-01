@@ -11,10 +11,15 @@ sidebar: nav
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
+* 普通导航组件
 
-导航组件分为两种：
-**普通导航组件**和**可寻址导航组件**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/normalTabs.png"  class="demo-qrcode-image" />
+
+
+* 可寻址导航组件
+
+<img src="//b.bdstatic.com/miniapp/assets/images/doc_demo/urlTabs.png"  class="demo-qrcode-image" />
+
 
 普通导航组件与可寻址导航组件的区别是：可寻址导航组件在导航 tab 切换时，该页面的 uri 参数会同步变化；反之，跳转某页面 uri 时，指定导航栏绑定的参数值也会打开该值对应的 tab 页。由于这种绑定关系的存在，相比于普通导航栏，可寻址导航栏更利于搜索引擎收录。**建议开发者尽量使用可寻址导航栏组件实现页面主导航栏功能**。例如：主页的多频道切换。
 

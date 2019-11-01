@@ -10,7 +10,8 @@ sidebar: nav
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)二维码内容。
+
 
 **属性说明**：
 
