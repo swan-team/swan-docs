@@ -5,6 +5,9 @@ nav: faq
 sidebar: confaq
 ---
 
+#### Q: 如何判断 H5 页面是否在小程序 web-view 打开？
+
+A: H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
 #### Q: 在webview 中使用了 cookie，导致存储信息与小程序不能共享的原因是什么？
 

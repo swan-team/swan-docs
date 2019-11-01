@@ -50,17 +50,25 @@ sidebar: media_image
         <img src="https://b.bdstatic.com/miniapp/images/image1.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image2.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/image3.png">
-    </div> 
+    </div>              
+</div>
+<div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/image4.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/image5.png">
-    </div>             
+    </div>   
+</div>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image2.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+    </div>    
 </div>
 
 **代码示例**：
@@ -141,22 +149,7 @@ Page({
   });
 
 ```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image01.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image02.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image03.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image04.jpeg">
-    </div>
-</div>
+ 
 
 
 **Bug & Tip**：

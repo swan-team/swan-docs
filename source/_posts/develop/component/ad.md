@@ -32,10 +32,27 @@ sidebar: ad
 | banner | 横幅类型 |
 | feed | 流式类型 |
 
-**示例**：
-<a href="swanide://fragment/6efb7c4c8ba9a1963c76c4c24fc8250a1568795647795" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * banner
+
+    **图片示例 1**：
+
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src=" https://b.bdstatic.com/miniapp/images/ad-banner.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>     
+    </div>
+
+    **代码示例 1**：
+
+    <a href="swanide://fragment/6efb7c4c8ba9a1963c76c4c24fc8250a1568795647795" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
     **获取代码示例**：
 
@@ -55,6 +72,22 @@ sidebar: ad
     2. banner样式的背景色默认透明，建议开发者自定义背景色。通过（`div style="background-color: #fff"`）自行定义。其中`#fff`代表白色，可以根据广告场景自行修改参数。
 
 * feed
+
+    **图片示例 2**：
+
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src="https://b.bdstatic.com/miniapp/images/ad-feed.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>     
+    </div>
+
+    **代码示例 2**：
 
     **获取信息流广告代码示例**：
     ```

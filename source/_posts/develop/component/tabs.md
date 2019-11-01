@@ -7,9 +7,11 @@ sidebar: nav
 
 
 
-**解释**：导航栏，用于让用户在不同的视图中进行切换。
+**解释**：导航栏，用于让用户在不同的视图中进行切换。基础库 3.100.4 版本开始支持。
 
-> 基础库 3.100.4 版本开始支持。
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
 
 导航组件分为两种：
 **普通导航组件**和**可寻址导航组件**
@@ -35,7 +37,21 @@ sidebar: nav
 * 如果开发者需要的只是一个普通的顶部导航组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
 * 如果开发者需要的是可以修改页面 url 的顶部导航组件，只需指定url-query-name，无需设置 active-name
 
-**示例一**：普通导航组件
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/normalTabs.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例 1**：普通导航组件
 
 <a href="swanide://fragment/ffdd42b9621602c7a89cdfa7e4cfab7b1566986567638" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -90,7 +106,21 @@ Page({
 });
 ```
 
-**示例二**：可寻址导航组件
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/urlTabs.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例 2**：可寻址导航组件
 
 <a href="swanide://fragment/dbd53a620ddde5781f09c0886955e0261566986685494" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

@@ -152,3 +152,4 @@ Page({
 * 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
 * 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
 * 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
+* H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。

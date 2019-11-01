@@ -6,9 +6,11 @@ sidebar: nav
 ---
 
 
-**解释**： 搭配 tabs 一起使用，导航栏内单个 tab 内容。
+**解释**： 搭配 tabs 一起使用，导航栏内单个 tab 内容。基础库 3.100.4 版本开始支持。
 
-> 基础库 3.100.4 版本开始支持。
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/open-data.png"  class="demo-qrcode-image" />
 
 **属性说明**：
 
@@ -25,3 +27,12 @@ sidebar: nav
 | ---- | ---- |
 | 'dot' | 徽标类型为圆点 |
 | 'text'| 徽标类型为文字 |
+
+**图片示例**：
+
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
+
+**代码示例**：
+
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
+
