@@ -12,6 +12,7 @@ sidebar: view_view
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
 
+
 **属性说明**：
 
 |属性名 |类型  |默认值  |说明|
@@ -21,12 +22,31 @@ sidebar: view_view
 |hover-start-time| Number | 50 | 按住后多久出现点击态，单位毫秒|
 |hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
 
-**示例**：
+
+
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/view.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+
 
 ```html
+// 在 swan 文件中
 <view>
     <view class="title">横向布局</view>
     <view class="rowlike">

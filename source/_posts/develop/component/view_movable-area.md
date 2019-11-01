@@ -22,7 +22,10 @@ sidebar: view_movable-area
 |--|--|--|--|
 |scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
+**图片示例**：
 
-**示例**：
+参见[movable-view](https://smartprogram.baidu.com/docs/develop/component/view_movable-view/)示例内容。
+
+**代码示例**：
 
 参见[movable-view](https://smartprogram.baidu.com/docs/develop/component/view_movable-view/)示例内容。

@@ -30,12 +30,12 @@ swan.checkSession({
     success: function (res) {
         swan.showModal({
             title: '',
-            content: '用户在小程序中登陆态有效'
+            content: '用户在小程序中 登录态有效'
         });
         if(!res.result){
             swan.showModal({
                 title: '',
-                content: '用户在小程序中登陆态无效,调用swan.login可获取有效Session Key',
+                content: '用户在小程序中 登录态无效,调用swan.login可获取有效Session Key',
             });
             swan.login({
                 success: res => {
@@ -50,7 +50,7 @@ swan.checkSession({
     fail: function (err) {
         swan.showModal({
             title: '',
-            content: '用户在小程序中登陆态无效,请先登陆百度APP',
+            content: '用户在小程序中 登录态无效,请先 登录百度APP',
         });
         swan.login({
             success: res => {
@@ -76,13 +76,13 @@ Page({
         success: function (res) {
             swan.showModal({
                 title: '',
-                content: '用户在小程序中登陆态有效'
+                content: '用户在小程序中 登录态有效'
             });
         },
         fail: function (err) {
             swan.showModal({
                 title: '',
-                content: '用户在小程序中登陆态无效,调用swan.login可获取有效登陆态',
+                content: '用户在小程序中 登录态无效,调用swan.login可获取有效 登录态',
             });
             swan.login({
                 success: res => {

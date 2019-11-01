@@ -31,8 +31,22 @@ sidebar: view_scroll-view
 |bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件| |
 |bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | |
 
+**图片示例**：
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src=" https://b.bdstatic.com/miniapp/images/scroll-view.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/cbb3914cf94d91d1273c190b0dead3201565503526386" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

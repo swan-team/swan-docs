@@ -148,7 +148,22 @@ sidebar: map
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/64984d55db8ac69c2a1fc651cc7fc2671570610273844" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 

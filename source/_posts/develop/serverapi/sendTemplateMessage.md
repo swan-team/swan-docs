@@ -43,7 +43,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 **touser&touser_openId使用规则说明：**
 
-- 百度登录用户使用touser_openId，游客用户使用touser（参考Q&A：怎么判断当前用户是游客状态还是登陆状态）
+- 百度登录用户使用touser_openId，游客用户使用touser（参考Q&A：怎么判断当前用户是游客状态还是 登录状态）
 
 ### Q&A
 
@@ -55,17 +55,17 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
  - 如果通过上面的查验仍然发送消息失败，请检查 appkey 是否异常
 
-2. 怎么判断当前用户是游客状态还是登陆状态？
+2. 怎么判断当前用户是游客状态还是 登录状态？
 
- - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未登陆游客状态
+ - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未 登录游客状态
 
- - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为登陆状态
+ - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为 登录状态
 
 3. 如何获取swan\_id & open\_id？
 
  - 获取swan\_id：详见 [swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
 
- - 获取open\_id：详见 [登陆](https://smartprogram.baidu.com/docs/develop/api/open_log/) 文档中获取登录用户OpenId相关内容
+ - 获取open\_id：详见 [ 登录](https://smartprogram.baidu.com/docs/develop/api/open_log/) 文档中获取登录用户OpenId相关内容
 
 
 ### 模板消息开发流程图：

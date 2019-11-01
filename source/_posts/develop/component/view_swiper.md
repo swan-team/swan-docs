@@ -43,7 +43,11 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 | touch | 用户划动导致的swiper切换 |
 | "" | 其他原因将返回空字符串 |
 
-**示例**：
+**图片示例**：
+
+参见[swiper-item](https://smartprogram.baidu.com/docs/develop/component/view_swiper-item/)示例内容。
+
+**代码示例**：
 
 参见[swiper-item](https://smartprogram.baidu.com/docs/develop/component/view_swiper-item/)示例内容。
 

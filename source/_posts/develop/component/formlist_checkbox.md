@@ -21,3 +21,13 @@ sidebar: formlist_checkbox
 |disabled|Boolean| false| 否 | 是否禁用|
 |checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
 |color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
+
+**图片示例**：
+
+参见[checkbox-group](https://smartprogram.baidu.com/docs/develop/component/formlist_checkbox-group/)示例内容。
+
+**代码示例**：
+
+参见[checkbox-group](https://smartprogram.baidu.com/docs/develop/component/formlist_checkbox-group/)示例内容。
+
+

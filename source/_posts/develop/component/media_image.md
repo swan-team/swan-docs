@@ -42,12 +42,29 @@ sidebar: media_image
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-**Bug & Tip**：
 
-* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
-* image 组件默认宽度 300px、高度 225px。
+**图片示例**：
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image2.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image3.png">
+    </div> 
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image4.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image5.png">
+    </div>             
+</div>
+
+**代码示例**：
+
   <a href="swanide://fragment/a65834765b18e32b8bbf4473c526c4141565503512941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -141,3 +158,8 @@ Page({
     </div>
 </div>
 
+
+**Bug & Tip**：
+
+* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+* image 组件默认宽度 300px、高度 225px。
