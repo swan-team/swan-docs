@@ -73,9 +73,9 @@ imageConf: {
 自定义表情资源文件夹格式：
 文件夹中包括：`emoji.json` 和所有表情图片资源。外层文件夹名字可以由开发者自由定义，路径配置在 emojiPath 中即可，`emoji.json` 为固定文件名，请开发者按格式创建。表情没有数量和大小限制，但是表情资源会占用包体大小。
 
-![图片](../../../img/api/community_editor/emoji_path.jpg)
+![图片](../../../../img/api/community_editor/emoji_path.jpg)
 `emoji.json` 格式：
-![图片](../../../img/api/community_editor/emoji_json.jpg)
+![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
 
 

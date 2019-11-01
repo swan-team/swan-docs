@@ -142,20 +142,7 @@ Page({
     }
 });
 ```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera01.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera02.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
-
+ 
 
 **Bug & Tip**：
 * camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。

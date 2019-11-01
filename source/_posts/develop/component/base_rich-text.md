@@ -207,19 +207,7 @@ Page({
     }
 });
 ```
-**图示**
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/rich-text.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
 
 **Bug & Tip**：
 

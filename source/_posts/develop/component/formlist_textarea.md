@@ -132,19 +132,7 @@ Page({
 
 ```
 
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/textarea.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
+ 
 
 **Bug & Tip**：
 * textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。

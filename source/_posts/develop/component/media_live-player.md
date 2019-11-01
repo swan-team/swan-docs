@@ -219,20 +219,7 @@ Page({
 });
 ```
 
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/live-player.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
-
+ 
 **Bug & Tip**：
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。
