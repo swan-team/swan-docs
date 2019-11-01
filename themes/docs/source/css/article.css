@@ -1,3 +1,6 @@
+.body {
+
+}
 .m-doc-content-layout {
     visibility: hidden;
     position: absolute;
@@ -18,15 +21,20 @@
 /* 右下菜单样式 */
 .m-doc-menu-wrapper {
     position: fixed;
-    right: 20px;
-    bottom: 30px;
+    right: 22px;
+    bottom: 136px;
 }
 
 .m-doc-menu-wrapper a {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 40px;
     background-size: 100%;
+    text-decoration: none;
+    color: #666;
+    padding: 5px 9px;
+    line-height: 20px;
+    letter-spacing: -1px;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-toc {
@@ -36,6 +44,24 @@
         -ms-transition: all .1s;
          -o-transition: all .1s;
             transition: all .1s;
+}
+.m-doc-menu-wrapper .m-doc-menu-item{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px #ddd;
+    cursor: pointer;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item span {
+  display: none;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item:hover{
+  background: #fff;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-item:hover span {
+  display: block;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-toc-close {
@@ -48,9 +74,23 @@
 }
 
 .m-doc-menu-wrapper .m-doc-menu-top {
-    pointer-events: none;
+
     visibility: hidden;
-    background-image: url(../img/back_top.png);
+    background:#fff center center url(../img/back_top.png) no-repeat;
+    background-size: 24px;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-feedback {
+  /* visibility: hidden; */
+  background:#fff center center url(../img/feedback-question.png) no-repeat;
+  background-size: 24px;
+  margin-bottom: 12px;
+}
+
+.m-doc-menu-wrapper .m-doc-menu-edit {
+    background:#fff center center url(../img/article-edit.png) no-repeat;
+    background-size: 24px;
+    margin-bottom: 12px;
 }
 
 .m-doc-menu-wrapper .m-doc-menu-top-show {
@@ -161,6 +201,26 @@ article h2 {
 }
 .m-doc-content-inner .multilayer {
     font-size: 18px;
+}
+.m-doc-content-inner .show-scene-container .img-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ccc;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.m-doc-content-inner .show-scene-container img{
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 0px;
+}
+.m-doc-content-inner .show-scene-container .show-scene-btn{
+    color: #38f;
 }
 article h2 .m-doc-content-h2-toggle {
     width: 22px;
@@ -352,8 +412,9 @@ article dl dd > :last-child {
 
 article blockquote {
     color: #666;
-    border-left: 3px solid #e6e6e6;
-    padding: 0 15px;
+    border-left: 2px solid #38f;
+    padding: 10px 15px;
+    background: rgba(51, 136, 255, .08);
 }
 
 article blockquote > :first-child {
@@ -774,9 +835,49 @@ article thead tr {
     padding-top: 200px;
     text-align: center;
 }
-
+.search-result-bread-crumb .breadcrumb_item:last-child .arrow-right {
+    display: none;
+}
+.breadcrumb_item a {
+    color: #b2b2b2 !important;
+    text-decoration: none;
+}
+.breadcrumb_item .arrow-right {
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url(/docs/img/level1_arrow.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: -2px;
+    transform: rotate(-90deg);
+    opacity: .2;
+}
 .ispc,
 .ismobile,
 .isbox {
     display: none;
+}
+
+
+/*反馈问题*/
+.feedback-question{
+  text-align: center;
+  line-height: 100px;
+}
+.feedback-question .question-text{
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* 二维码示例图片 */
+.demo-qrcode-image {
+    width: 180px;
+    height: 180px;
+    margin: 0;
 }

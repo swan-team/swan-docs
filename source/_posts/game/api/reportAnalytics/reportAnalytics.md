@@ -4,5 +4,5 @@ layout: gamedoc
 topic: reportAnalytics
 level: root
 categoryName: api
-priority: 18-00
+priority: 19-00
 ---

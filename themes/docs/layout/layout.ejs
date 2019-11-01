@@ -7,7 +7,7 @@
     var license = {};
     var bottomPage = {}; // 底部跳转
     var localData = {}; // 页面siderbar数据
-
+ 
     // 当前headerNavs索引
     var headerNavIndex;
     for(var i = 0; i < headerNavs.length; i++) {
@@ -18,29 +18,28 @@
         }
     }
 
-
-    var navLen = nav ? nav.length : 0;
-    for (var j = 0; j < navLen; j++) {
-        var h1List = nav[j].sidebar;
-        localData[nav[j].name] = true;
-        for (var k = 0; k < h1List.length; k++) {
-            var h2List = h1List[k].sidebar;
-            for (var m = 0; m < h2List.length; m++) {
-                var h2Page = h2List[m];
-                currentPageList.push(h2Page);
-                if (h2Page.name == page.sidebar) {
-                    h1 = h2Page.text;
-                }
+    var recursiveTitle = function(list) {
+        list.forEach(function(item) {
+            if (item.sidebar) {
+                var sidebarList = item.sidebar;
+                recursiveTitle(sidebarList);
+            } else {
+                currentPageList.push(item);
+                h1 = page.title;
             }
-        }
-    }
+        })
+    };
 
+    var nav = nav ? nav : [];
+    recursiveTitle(nav);
+
+ 
     for (var n = 0; n < currentPageList.length; n++) {
         if (currentPageList[n].name == page.sidebar) {
             if (n > 0) {
                 bottomPage.left = currentPageList[n-1];
             }
-
+ 
             if (n < currentPageList.length - 1) {
                 bottomPage.right = currentPageList[n+1];
             }
@@ -68,9 +67,18 @@
     <%- css('css/code') %>
     <%- css('css/custom') %>
     <%- css('css/tooltipster.bundle') %>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0db18a3ce977f2c77edf8e7a00bf159d";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
-
+ 
     <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
     <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage, license: license}) %>
@@ -90,17 +98,12 @@
     <%- js('js/docsinit') %>
     <%- js('js/search') %>
     <%- js('js/clipboard.min') %>
-
+ 
    <% if (config.search) { %>
       <script type="text/javascript">
-         var search_path = "<%= config.search.path %>";
-         if (search_path.length == 0) {
-            search_path = "search.xml";
-         }
-         var path = "<%= config.root %>" + search_path;
-         searchFunc(path, 'local-search-input', 'article-search-result');
+         searchFunc('local-search-input', 'article-search-result');
       </script>
    <% } %>
-
+ 
 </body>
 </html>

@@ -16,7 +16,7 @@ fileSystemManager.readFile(opts)
 |opts.fail|function| |否|失败回调函数。|
 |opts.complete|function| |否|接口调用完成的回调函数（接口成功、失败都会执行）。|
 
-`opts.encoding` 的合法值：
+`opts.encoding` 的有效值：
 
 |值|描述|
 |-|-|
@@ -46,7 +46,7 @@ fileSystemManager.readFile(opts)
 |res.errMsg|string|报错信息 |
 
 
-`res.errMsg` 的合法值：
+`res.errMsg` 的有效值：
 
 |值|描述|
 |-|-|

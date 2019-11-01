@@ -42,7 +42,7 @@ priority: 12-01
 #### 开发者工具
 
 Q：开发者工具一直显示在编译，看不到日志？
-A：点击右上角 “更多功能” -> “编译日志” ，查看是否编译错误。
+A：点击右上角 “更多功能” -> “编译日志”，查看是否编译错误。
 
 Q：使用 socket 连接必须使用 wss 吗？
 A：开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。
@@ -93,7 +93,7 @@ A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文�
 Q：在真机无法调起百度收银台支付？
 A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 中提到的的[签名与验签文档](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。
 
-Q：在真机调起支付后，在点击付款的时候提示签名错误 ，验签一直不通过？
+Q：在真机调起支付后，在点击付款的时候提示签名错误，验签一直不通过？
 A：确认选择的公钥是否是平台公钥。从百度电商开放平台后台能看到两个公钥，一个是开发者公钥，另一个是平台公钥，验签需要用平台公钥。参见[百度电商开发平台核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。
 此外，其他环节也可能导致验签错误，请认真阅读 [`requestPolymerPayment`](/game/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment) 中涉及到的文档。
 
@@ -101,5 +101,34 @@ Q：授权用户信息，如果用户取消授权后，再次发起授权，直�
 A：目前，小游戏的用户信息权限没有重试机制。如果用户拒绝授权，用户只能手动在“右上角菜单-关于-右上角菜单-权限管理” 重新打开。
 
 Q：Android 分包加载失败？
-A：已知问题，Android 的路径原因，会导致分包加载失败。下版本 Android（11.5）将修复。
+A：已知低版本 Android 问题，由于 Android 的路径原因，会导致分包加载失败。已在 Android 11.5 上修复。
 
+Q：为什么 iOS 键盘无法弹出？
+A：使用 Laya 引擎游戏的已知问题，将 Laya 引擎更新至 2.0.0 以上版本问题即可解决。
+
+Q：为什么 iOS 未登录状态下打开横屏游戏，调用登录、授权接口偶现画面半屏？
+A：iOS 已知问题，修复中。建议开发者先渲染游戏画面，待游戏画面出现后，提供交互按钮给用户点击，再调用登录接口。
+
+Q：为什么 iOS 使用 UpdateManger.applyUpdate 接口后，部分游戏的加载进度条卡住？
+A：百度App 11.3.5 版本修复了该问题，若要在低版本使用该接口，需在各机型尤其是低端机上测试通过后再使用，或在收到 UpdateManager.onUpdateReady 回调后，引导用户退出重新进入。
+
+Q：为什么 iOS 使用 UpdateManager.applyUpdate 后，游戏无法更新？
+A：部分游戏上会出现该问题。在新版本基础库上修复，详见[基础库更新日志](https://smartprogram.baidu.com/docs/game/tutorials/version/releaseLog/)。低版本在收到 UpdateManager.onUpdateReady 回调后，可引导用户退出重新进入。
+
+Q：为什么 iOS 无法使用支付相关 API？
+A：由于苹果政策限制，支付相关 API 在 iOS 上无法使用。
+
+Q：为什么 iOS 的 swan.onTouchStart 无法响应？
+A：百度 App 11.3.6 之前的版本已知问题， iPhone 屏幕左侧 1/5 概率性无法响应 swan.onTouchStart 事件，新版本修复。老版本可绕过该区域触摸或者监听其他触摸事件。
+
+Q：为什么 iOS 分包加载回调成功，但却加载失败？
+A：百度 App 11.3.6 之前版本已知问题，新版本修复，老版本可将 LoadSubpackageTask 对象挂在某个全局对象上增加引用，不让其释放，待分包加载完成后再减少引用，释放对象。
+
+Q：为什么 swan.request 接口，调用失败的时候，无法获取到 HTTP status code？
+A：百度 App 11.6.0 版本增加网络请求失败时的 HTTP status code，之前版本只能获取请求成功的 HTTP status code。
+
+Q：为什么调用 swan.getUserInfo 接口，用户点击拒绝之后，无法再次弹出授权框？
+A：该接口的设计既是如此，删除历史包后会重置授权状态。如一定要使用该 API，可在授权失败后，引导用户在权限管理中主动打开。不过强烈建议使用 UserInfoButton，这样用户点击拒绝之后，可通过点击按钮再次弹出授权框。
+
+Q：如何获取百度 App 版本、基础库版本信息？
+A：在关于页面中快速点击 5 次游戏图标，即可在弹出的 toast 中看到。

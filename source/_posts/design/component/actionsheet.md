@@ -4,7 +4,10 @@ header: design
 nav: component
 sidebar: actionsheet
 ---
-操作菜单用于显示某项操作的选项列表。当用户与按钮，操作或其他控件交互时出现在页面底部。
+操作菜单用于显示用户操作某个控件时，出现选项列表。
+
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showActionSheet/" target="_blank">showActionSheet</a>。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/actionsheet/1.png">

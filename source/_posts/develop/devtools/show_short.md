@@ -5,6 +5,7 @@ nav: devtools
 sidebar: show_short
 ---
 
+> 其它快捷键设置参见[设置](http://smartprogram.baidu.com/docs/develop/devtools/setting/#快捷键设置)。
 
 |Mac OS 快捷键 | Windows 快捷键 | 说明 |
 |---|---|---|

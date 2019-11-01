@@ -3,6 +3,7 @@ title: 百度收银台支付
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-11
 ---
 
 ### swan.requestPolymerPayment()
@@ -32,15 +33,15 @@ swan.requestPolymerPayment(opts)
 |值|必填|描述|
 |-|-|-|
 |opts.orderInfo.dealId|是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见[核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
-|opts.orderInfo.appKey|是|[百度电商开放平台 appKey](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/term_v2.md) ，用以表示应用身份的唯一 ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见[核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
+|opts.orderInfo.appKey|是|[百度电商开放平台 appKey](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/term_v2.md)，用以表示应用身份的唯一 ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见[核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
 |opts.orderInfo.totalAmount|是|订单金额，单位为人民币分|
 |opts.orderInfo.tpOrderId|是|商户平台自己记录的订单 ID，当支付状态发生变化时，会通过此订单 ID 通知商户|
 |opts.orderInfo.dealTitle|是|订单的名称|
 |opts.orderInfo.signFieldsRange|是|固定值 1|
-|opts.orderInfo.rsaSign|是|对对 appKey，dealId，tpOrderId，totalamount RSA 加密后的签名，防止订单被伪造。签名过程见[百度电商开发平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md) |
+|opts.orderInfo.rsaSign|是|对对 appKey，dealId，tpOrderId，totalAmount RSA 加密后的签名，防止订单被伪造。签名过程见[百度电商开发平台：签名与验签](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md) |
 |opts.orderInfo.bizInfo|否|订单详细信息，需要是一个可解析为 JSON Object 的字符串。字段内容见：[百度电商开发平台：收银台接入](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md) |
 
-`opts.bannedChannels` 的合法值：
+`opts.bannedChannels` 的有效值：
 
 |值|描述|
 |-|-|
@@ -106,7 +107,7 @@ swan.request({
             }
         });
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：', err.errCode);
         console.log('错误信息：', err.errMsg);
     }

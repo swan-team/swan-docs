@@ -4,7 +4,23 @@ layout: gamedoc
 topic: openApi
 draft: true
 categoryName: api
+priority: 01-04
 ---
+
+### OpenSettingButton
+
+[`swan.createOpenSettingButton()`](#swan-createOpenSettingButton) 的返回值，用户点击后点击按钮展示用户在该小游戏中已经授权过的权限页面
+
+`OpenSettingButton.show()`
+显示打开设置页面按钮
+
+`OpenSettingButton.hide()`
+隐藏打开设置页面按钮
+
+`OpenSettingButton.destory()`
+销毁打开设置页面按钮
+
+
 
 ### swan.createOpenSettingButton()
 
@@ -24,14 +40,14 @@ swan.createOpenSettingButton(opts)
 |opts.image|string||否|设置按钮的背景图片，当 type 为 'image' 时有效|
 |opts.style|Object||否|自定义按钮的样式|
 
-`opts.type` 的合法值：
+`opts.type` 的有效值：
 
 |值|描述|
 |-|-|
 |text|设置文本按钮|
 |image|只设置背景图片的按钮，背景图片大小会自动拉伸到与按钮相同|
 
-`opts.style` 对象的合法值：
+`opts.style` 对象的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -51,7 +67,7 @@ swan.createOpenSettingButton(opts)
 |hidden|boolean| `false` |否|是否隐藏|
 |opacity|number| |否|透明度|
 
-`style.textAlign` 的合法值：
+`style.textAlign` 的有效值：
 
 |值|描述|
 |-|-|

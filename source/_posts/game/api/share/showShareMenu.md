@@ -3,7 +3,7 @@ title: swan.showShareMenu()
 layout: gamedoc
 topic: share
 categoryName: api
-priority: 10-02
+priority: 11-02
 ---
 
 显示当前页面的转发按钮。

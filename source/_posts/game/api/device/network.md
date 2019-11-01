@@ -3,7 +3,7 @@ title: 网络状态
 layout: gamedoc
 topic: device
 categoryName: api
-priority: 12-01
+priority: 14-01
 ---
 
 <!-- md game/api/device/_networkContext/getNetworkType.md -->
@@ -11,7 +11,7 @@ priority: 12-01
 
 ## 附录
 
-**networkType 的合法值**
+**networkType 的有效值**
 
 `Object` 类型的对象：
 

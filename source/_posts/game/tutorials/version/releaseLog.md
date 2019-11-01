@@ -14,14 +14,14 @@ priority: 04-04
 2. 版本兼容方案见 [小游戏版本兼容](/game/tutorials/version/compatibility/)。
 
 
-<!--
+#### v 1.6.3
+1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
 
-todo
-需要补充 api 及对应链接
+#### v 1.6.1
+1. `Feature` 新增 [worker 能力](/game/tutorials/worker/worker.md) 支持及 [createWorker API](/game/api/worker/createWorker.md)。
 
-2. `feat` 新增 API 加速计、屏幕、罗盘、剪切板、saveImageToPhotosAlbum
-
--->
+#### v 1.5.3
+1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
 
 #### v 1.5.2
 1. `Feature` 新增交叉推荐 API [createRecommendationButton](/game/api/recommendationButton/createRecommendationButton/)
@@ -31,6 +31,8 @@ todo
 5. `Feature` 新增剪贴板 API [setClipboardData, getClipboardData](/game/api/device/Clipboard/)
 4. `Feature` 新增保存图片 API [saveImageToPhotosAlbum](/game/api/media/image/#swan-saveImageToPhotosAlbum)
 
+#### v 1.4.5
+1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
 
 #### v 1.4.4
 无对外功能
@@ -39,6 +41,9 @@ todo
 1. `Feature` 新增录屏 API [getVideoRecorderManager](/game/api/media/videoRecorder/#swan-getVideoRecorderManager)
 2. `Feature` 新增分享 API [shareVideo](/game/api/share/shareVideo/)
 3. `Bug Fix` 禁掉 eval 和 Function
+
+#### v 1.1.3
+1. `Bug Fix` 修复 iOS 部分用户 [updateManager. applyUpdate](/game/api/update/updateManager/#applyUpdate) 调用失败。
 
 #### v 1.1.1
 1. `Feature` 新增 API [getSwanId](/game/api/openApi/login/#swan-getSwanId)、[isLoginSync](/game/api/openApi/login/#isLoginSync)，可用于实现[资产继承](/game/tutorials/open_api/open-inherit/)

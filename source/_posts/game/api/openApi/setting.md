@@ -3,6 +3,7 @@ title: 设置
 layout: gamedoc
 topic: openApi
 categoryName: api
+priority: 01-03
 ---
 
 ### swan.getSetting()
@@ -81,7 +82,7 @@ swan.openSetting(opts)
 
 ```js
     swan.openSetting({
-        success: function (res) {
+        success: res => {
             console.log(res.authSetting['scope.userInfo']);
             console.log(res.authSetting['scope.userLocation']);
         }

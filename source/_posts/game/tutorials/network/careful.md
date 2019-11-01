@@ -17,7 +17,8 @@ priority: 09-01
 
 **超时时间**
 
-- 网络请求默认超时时间 `30s`。
+<!--  todo 目前11.8以前双端 game.json 超时时间设置无效，是否应该先把这个描述去掉？-->
+- 网络请求默认超时时间 `60s`。
 - 超时时间可以在 `game.json` 中配置。
 
 ```
@@ -37,10 +38,11 @@ priority: 09-01
 **使用限制**
 
 网络请求的 `header` 中不可设置`referer`。
-默认referer格式为：`https://smartapp.baidu.com/{appkey}/{version}/page-frame.html`
+默认referer格式为：`https://smartprogram.baidu.com/{appkey}/{version}/page-frame.html`
 - {appkey}：客户端小游戏的appkey（aps 下发的 appkey，不含调起协议中拼接的下划线），非服务端的小游戏 appid。
 - {version}：为小游戏的版本号，版本号为 0 表示为开发版、体验版以及审核版本，版本号为 devtools 表示为开发者工具，其余为正式版本。
 
+<!--  todo 目前request无并发限制，是否应该先把这个描述去掉？-->
 request、uploadFile、downloadFile 的最大并发限制是 10 个。
 
 **返回值编码**

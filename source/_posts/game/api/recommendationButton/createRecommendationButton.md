@@ -3,6 +3,7 @@ title: createRecommendationButton
 layout: gamedoc
 topic: recommendationButton
 categoryName: api
+priority: 13-01
 ---
 
 > 从基础库 swan-game.js 1.5.2 开始支持。
@@ -39,7 +40,7 @@ swan.createRecommendationButton(opts)
 |style.top|number|300|否|左上角纵坐标|
 
 
-**opts.type 的合法值**
+**opts.type 的有效值**
 
 |值|描述|
 |-|-|
