@@ -24,7 +24,7 @@ sidebar: startdevelop
 
 ![图片](../../../img/tutorial/start/start3.gif)
 
-#### 2. 修改视频链接及 button 名称。（视频上传后改为gif）
+#### 2. 修改视频链接及 button 名称。 
 
 ![图片](../../../img/tutorial/start/start4.png)
 ![图片](../../../img/tutorial/start/start5.png)
