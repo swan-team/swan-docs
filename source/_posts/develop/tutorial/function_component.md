@@ -30,3 +30,4 @@ Page({
 	}
 });
 ```
+具体可以参考组件说明：https://smartprogram.baidu.com/docs/develop/tutorial/function_component/
