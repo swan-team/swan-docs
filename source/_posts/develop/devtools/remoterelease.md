@@ -48,5 +48,8 @@ sidebar: remoterelease
 #### iOS如何真机上调试？
 iOS暂时不支持真机调试，建议使用 [远程调试](https://smartprogram.baidu.com/docs/develop/debug/remotedebugging/) 。
 
+#### 真机调试展示的页面和手机不一致？
+真机调试PC上展示的只是小程序页面的镜像，TabBar等NA组件无法展示在工具上，使用时以手机页面为准。
+
 #### 其他真机调试相关问题或者建议？
 真机调试相关的问题，可以联系客服微信：`wx2swan-helper`，验证信息 `真机调试`。
