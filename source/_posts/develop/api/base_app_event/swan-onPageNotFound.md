@@ -37,7 +37,32 @@ sidebar: swan.onPageNotFound
 
 **代码示例**：
 
-<a href="swanide://fragment/3a13a179e4089fc5eb246675244a37551567703460426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+* 示例一：在生命周期的onPageNotFound中使用 
+<a href="swanide://fragment/1e8c3ffbb08f5f2ad67a325f4e4f8c231572839598490" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// app.js
+App({
+    onLaunch() {
+
+    }，
+    onPageNotFound(res) {
+        console.log(res);
+        swan.showModal({
+            title: '',
+            content: JSON.stringify(res)
+        });
+        // 如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
+        swan.navigateTo({
+            url: '/home/home'
+        });
+    }
+});
+
+```
+
+* 示例二：等同于示例一的另一种写法 
+<a href="swanide://fragment/7d29139d4769344ee69353e82515a0151572839669563" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -45,11 +70,49 @@ App({
     onLaunch() {
         swan.onPageNotFound(function(res) {
             console.log(res);
+            swan.showModal({
+                title: '',
+                content: JSON.stringify(res)
+            });
             // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
             // Do something
             // 页面不存在时，默认跳转到首页
-            swan.redirectTo({
-                url: '/index/index'
+            swan.navigateTo({
+                url: '/home/home'
+            });
+        });
+    }
+});
+
+```
+
+* 示例三：可根据开发者的业务逻辑调整用法 
+<a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    data: {},
+    onTap() {
+        swan.navigateTo({
+            url: '/path/to/otherPage'
+        });
+        swan.onPageNotFound(function(res) {
+            console.log('onPageNotFound success',res);
+            swan.showModal({
+                title: '',
+                content: JSON.stringify(res)
+            });
+            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
+            // Do something
+            // 页面不存在时，默认跳转到首页
+            swan.navigateTo({
+                url: '/home/home',
+                success: res => {
+                    swan.offPageNotFound();
+                },
+                fail: err => {
+                    console.log('navigateTo fail');
+                }
             });
         });
     }
@@ -59,3 +122,4 @@ App({
 
 **说明:**
 - 开发者可以在回调中进行页面重定向。
+- 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用swan.onPageNotFound取消监听，否则会出现监听多次的情况

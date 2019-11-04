@@ -26,3 +26,17 @@ sidebar: onURLQueryChange
 </div>
 
 **代码示例**：
+ 
+<a href="swanide://fragment/862ac1772aabc0a8cf065093f7784d021572856346528" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onURLQueryChange({newURLQuery, oldURLQuery}) {
+        console.log(newURLQuery, oldURLQuery);
+        this.setData({
+            content: `${oldURLQuery.channel || '电影'} To ${newURLQuery.channel}`
+        })
+    }
+})
+```
+ 

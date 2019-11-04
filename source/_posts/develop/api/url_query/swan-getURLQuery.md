@@ -28,15 +28,15 @@ sidebar: swan-getURLQuery
 </div>
 
 **代码示例**：
-<a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<a href="swanide://fragment/7d33cd2f8a5f2b69bd6ec79437834bf11572856867852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
     onLoad(query) {
-        if(!query.channel) {
-            swan.setURLQuery({channel: 'movie'})
+        if(query.channel) {
             const newURLQuery = swan.getURLQuery()
-            console.log(query.channel === undefined && newURLQuery.channel === 'movie') // true
+            console.log(newURLQuery)
         }
     }
 })

@@ -59,16 +59,47 @@ sidebar: swan-onAppShow
 
 **代码示例**：
 
-<a href="swanide://fragment/68fb2a8f3e534b87eb78cf2f3131754c1566460332372" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+* 示例一：在onShow中使用 
+<a href="swanide://fragment/43271d765935b79fea07900426f687ed1572851143727" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
 App({
-    onLaunch() {
+    onShow: function (res) {
+        console.log('onShow', res)
+        swan.showModal({
+            title: 'res',
+            content: JSON.stringify(res),
+            showCancel: false
+        });
+    }
+});
+
+```
+
+* 示例二：在生命周期的onAppShow中使用 
+<a href="swanide://fragment/4efb3ba9fdce332a9d1f323ebb69302d1572851185273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// app.js
+App({
+    onLaunch: function () {
         swan.onAppShow(function(res) {
-            console.log(res.scene);
-            console.log(res.path);
-            console.log(res.query);
+            console.warn('请在真机中进行中进行验证,在工具中点击工具栏的刷新按钮也可模拟onShow触发事件，开发者按照自己的业务逻辑进行监听，被触发时机和App.onShow一致。');
+            // Doing  something
+            swan.showModal({
+                title: 'res',
+                content: JSON.stringify(res),
+                showCancel: false
+            });
+            console.log('scene', res.scene);
+            console.log('path', res.path);
+            console.log('query', res.query);
+            console.log('shareTicket', res.shareTicket);
+            console.log('referrerInfo', res.referrerInfo);
+            console.log('entryType', res.entryType);
+            console.log('appURL', res.appURL);
         });
     }
 });
