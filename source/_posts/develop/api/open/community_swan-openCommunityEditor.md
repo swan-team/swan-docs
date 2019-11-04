@@ -81,7 +81,7 @@ imageConf: {
 
 **示例**：
 
-<a href="swanide://fragment/2ad65127412c25e036d6c360f082f0c41563779186331" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1742fba61202ef6776302e6eba1c383e1572759108236" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({
@@ -98,35 +98,35 @@ swan.openCommunityEditor({
     confirmText: '发布',
     confirmColor: '#3388ff',
     cancelText: '取消',
-    cancelColor: '#eeeeee',
-    targetText: '百度贴吧',
+    cancelColor: '#3388ff',
+    targetText: '发布到 话题/吧/板块',
     emojiPath: '../emojidata',
-    success: res => {
+    success: function (res) {
         console.log('openCommunityEditor success', res);
         // 将图片上传到服务器
-        swan.uploadFile({
-            url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-            filePath: res.tempFilePaths[0], // 要上传文件资源的路径
-            name: 'myfile',
-            success: res => {
-                console.log(res.statusCode);
-                // 上传成功关闭发布器
-                swan.closeCommunityEditor();
-            },
-            fail: err => {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
-            }
-        });
+        //  swan.uploadFile({
+        //     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+        //     filePath: res.tempFilePaths[0], // 要上传文件资源的路径
+        //     name: 'myfile',
+        //     success: function (res) {
+        //         console.log(res.statusCode);
+        //         // 上传成功关闭发布器
+        //         swan.closeCommunityEditor();
+        //     },
+        //     fail: function (err) {
+        //         console.log('错误码：' + err.errCode);
+        //         console.log('错误信息：' + err.errMsg);
+        //     }
+        // });
         swan.closeCommunityEditor();
     },
-    fail: err => {
+    fail: function (err) {
         console.log('openCommunityEditor fail', err);
         swan.closeCommunityEditor();
     },
     complete: function (res) {
         console.log('openCommunityEditor complete', res);
     }
-})
+});
 ```
 
