@@ -12,16 +12,40 @@ sidebar: swan-onAppHide
 **方法参数：** Function callback
 小程序切后台事件的回调函数。
 
-**示例代码**
-<a href="swanide://fragment/5c5245a3754670b23afe52bbf27570d91567705983829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**示例一：在onHide中使用**
+<a href="swanide://fragment/dd9635306671da7cc68151263cf468b61572852464155" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
 App({
-    onLaunch() {
-        swan.onAppHide(function() {
-            // Do other things
+    onHide: function (res) {
+        console.log('onHide', res)
+        swan.showModal({
+            title: 'res',
+            content: JSON.stringify(res),
+            showCancel: false
         });
     }
 });
+
+```
+
+**示例二：在生命周期的onAppHide中使用**
+<a href="swanide://fragment/4bf6ff94cddfcd769859def82905c36b1572852489456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// app.js
+App({
+    onLaunch: function () {
+        swan.onAppHide(function(res) {
+            // Do something
+            swan.showModal({
+                title: 'res',
+                content: JSON.stringify(res)
+            });
+            console.log('app hide');
+        });
+    }
+});
+
 ```
