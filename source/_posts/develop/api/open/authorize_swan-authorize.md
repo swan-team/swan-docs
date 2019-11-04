@@ -38,7 +38,7 @@ sidebar: authorize_swan-authorize
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
 **示例**：
-<a href="swanide://fragment/a866a61034de7c92163fa56338f6258b1560169856336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b823c7245fc5009c0be0a45a060cb2891569552275612" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

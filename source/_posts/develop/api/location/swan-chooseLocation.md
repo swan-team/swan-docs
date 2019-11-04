@@ -37,7 +37,7 @@ sidebar: swan-chooseLocation
 
 **示例**：
 
-<a href="swanide://fragment/729f820b3217a154d3064696f6d90e8e1569429506976" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ebaf0022546dcefd6de64c062af9b6481569570163901" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

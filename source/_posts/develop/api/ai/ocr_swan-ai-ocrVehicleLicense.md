@@ -53,7 +53,7 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 **示例**：
 
-<a href="swanide://fragment/9209b1777685306d5286a8bfc44b8b231569387791873" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

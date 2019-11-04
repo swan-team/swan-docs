@@ -55,7 +55,7 @@ sidebar:  classify_swan-ai-carClassify
 
 **示例**：
 
-<a href="swanide://fragment/5cb0c5cf808cc6057d8fb94b56357bf21569414658661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

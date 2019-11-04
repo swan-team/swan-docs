@@ -37,13 +37,7 @@ sidebar:  audio
 
 <a href="swanide://fragment/506b61732036a40590ea79c33f1541311559033551164" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="textToAudio">textToAudio</button>
-</view>
-```
+ 
 
 * 在 js 文件中 
 
@@ -64,13 +58,7 @@ Page({
 });
 ```
 
-* 在 css 文件中 
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 
 ### Bug & Tip
 

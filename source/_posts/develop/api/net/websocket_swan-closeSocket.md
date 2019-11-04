@@ -24,7 +24,7 @@ sidebar: websocket_swan-closeSocket
 
 **示例**：
 
-<a href="swanide://fragment/1dd4f099f6066c0b3edc86b77987ec521559043567840" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

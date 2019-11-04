@@ -47,7 +47,7 @@ sidebar:  classify_swan-ai-dishClassify
 
 **示例**：
 
-<a href="swanide://fragment/f1a28edc917988c8cfcf0c257dbeeefa1569414920893" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/537ef56cc65e65914349ddad095f1d021569501070696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

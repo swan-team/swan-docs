@@ -11,27 +11,28 @@ sidebar: MapContext
 
 **示例**：
 
-<a href="swanide://fragment/f95be9b50c98489dfbaec599db78672f1557727607625" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/caf6209fb3b9109a245df5ee2cf865fd1569511091359" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<view class="wrap">
+<view class="container">
     <map id="myMap" style="width: 100%"
      scale="{{scale}}"
      longitude="{{longitude}}"
      latitude="{{latitude}}"
      markers="{{markers}}"
      position="{{position}}"
-     showLocation="{{showLocation}}"
+     show-location="{{showlocation}}"
      polyline="{{polyline}}"
      controls="{{controls}}"
      circles="{{circles}}"></map>
     <button type="primary" bindtap="getCenterLocation">获取位置</button>
-    <button type="primary" bindtap="moveToLocation">移动位置</button>
-    <button type="primary" bindtap="translateMarker">移动标注</button>
-    <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
-    <button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
+	<button type="primary" bindtap="moveToLocation">移动位置</button>
+	<button type="primary" bindtap="translateMarker">移动标注</button>
+	<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
+	<button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
+    <button type="primary" bindtap="getScale">获取当前地图的缩放级别</button>
 </view>
 ```
 
@@ -39,15 +40,12 @@ sidebar: MapContext
 
 ```js
 Page({
+    /* eslint-enable */
     data: {
         scale: 16,
         latitude: '40.048828',
         longitude: '116.280412',
         markers: [{
-            markerId: '1',
-            latitude: '40.052751',
-            longitude: '116.278796'
-        }, {
             markerId: '2',
             latitude: '40.048828',
             longitude: '116.280412',
@@ -55,16 +53,8 @@ Page({
                 display: 'ALWAYS',
                 content: '百度科技园'
             }
-        }, {
-            markerId: '3',
-            latitude: '40.049655',
-            longitude: '116.27505',
-            callout: {
-                display: 'ALWAYS',
-                content: '西山壹号院'
-            }
         }],
-        showLocation: '1',
+        showLocation: '5',
         polyline: [{
             points: [{
                 longitude: 116.278796,
@@ -102,7 +92,11 @@ Page({
     },
     getCenterLocation: function () {
         this.mapContext.getCenterLocation({
-            success: res => {
+            success: function (res) {
+                swan.showModal({
+                    title: '位置信息',
+                    content: JSON.stringify(res.longitude) + '/' + JSON.stringify(res.latitude)
+                });
                 console.log("经度", res.longitude);
                 console.log("纬度", res.latitude);
             }
@@ -113,16 +107,18 @@ Page({
     },
     translateMarker: function () {
         this.mapContext.translateMarker({
-            markerId: 0,
-            rotate: 90,
-            autoRotate: true,
-            duration: 1000,
+            markerId: '2',
             destination: {
                 latitude: 23.10229,
                 longitude: 113.3345211,
             },
-            animationEnd() {
-                console.log('animation end');
+            autoRotate: false,
+            rotate: 30,
+            success(res) {
+                console.log('haha', res)
+            },
+            fail (err) {
+                console.log('fail', err)
             }
         })
     },
@@ -140,11 +136,18 @@ Page({
     },
     getRegion: function () {
         this.mapContext.getRegion({
-            success: res => {
+            success: function (res) {
                 console.log("西南角的经纬度", res.southwest);
                 console.log("东北角的经纬度", res.northeast);
             }
         });
+    },
+    getScale: function () {
+        this.mapContext.getRegion({
+            success: function (res) {
+                console.log('getScale res', res);
+            }
+        });        
     }
 });
 ```

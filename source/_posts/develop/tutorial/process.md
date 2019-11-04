@@ -23,17 +23,17 @@ sidebar: process
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
-<notice>示例： </notice>
+示例： 
 
 ```json
 {
-	"pages": [
+    "pages": [
 		"pages/index/index",
 		"pages/detail/detail"
-	],
-	"window": {
+    ],
+    "window": {
 		"navigationBarTitleText": "Demo"
-	},
+    },
     "tabBar": {
         "list": [
             {

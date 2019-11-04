@@ -16,7 +16,7 @@ sidebar: query_swan-createSelectorQuery
 
 **示例**：
 
-<a href="swanide://fragment/6444dc8c1a552c147d760e0bb95059f61558352422429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/499b9f5a6292b7581f5ef675f86a49aa1569513374378" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

@@ -59,7 +59,7 @@ sidebar: uploadfile
 
 **示例**：
 
-<a href="swanide://fragment/839d1e92d253116528c330a82ec6124d1569413746044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/75303bc805bf42f2075a9e92b01b71131569499818191" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

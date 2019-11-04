@@ -42,7 +42,7 @@ sidebar:  classify_swan-ai-plantClassify
 
 **示例**：
 
-<a href="swanide://fragment/0ed61bf9910ed18a664037cd907c0fae1569415076954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2af91115191447b4b93ae469129f7fb91569501181045" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

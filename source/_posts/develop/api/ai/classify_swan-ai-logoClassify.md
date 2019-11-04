@@ -57,7 +57,7 @@ sidebar:  classify_swan-ai-logoClassify
 
 **示例**：
 
-<a href="swanide://fragment/ab217ecd1c08c7d10992d367ac052dbb1569414838193" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js

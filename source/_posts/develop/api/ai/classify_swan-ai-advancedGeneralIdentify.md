@@ -43,7 +43,7 @@ sidebar:  classify_swan-ai-advancedGeneralIdentify
 
 **示例**：
 
-<a href="swanide://fragment/dcc9c3fcf59e0de53028a481f22d92951569388593001" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c2ab942b5e6b9ac02739a7e70ec298c11569500914210" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

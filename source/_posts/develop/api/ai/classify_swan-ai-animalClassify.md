@@ -43,7 +43,7 @@ sidebar:  classify_swan-ai-animalClassify
 
 **示例**：
 
-<a href="swanide://fragment/61d91bbf4843daa85ff43dbbb9cc23691569414992464" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d3a867157469e01d1f6515f27172d4331569501144725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.chooseImage({

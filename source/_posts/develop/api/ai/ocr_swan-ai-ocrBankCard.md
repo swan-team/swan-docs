@@ -41,7 +41,7 @@ sidebar: ocr_swan-ai-ocrBankCard
 
 **示例**：
 
-<a href="swanide://fragment/93a953878450cff70360bf8306753ff51569387641576" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1e8e28ffd4bb694c9c9b006da1b3f31c1569500427353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js

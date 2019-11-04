@@ -60,7 +60,7 @@ sidebar: downloadFile
 
 **示例**
 
-<a href="swanide://fragment/7a1522102ced64468f6caf23bf13b1581569320565929" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f4bec567044c2a9803528de722c7cc3e1569499921724" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
