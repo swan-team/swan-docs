@@ -15,9 +15,11 @@ sidebar: swan-setURLQuery
 **方法参数：** Object object
 
 **`newURLquery`参数说明**：
+
 newURLQuery 必须是值为字符串的对象，否则调用 setURLQuery 会抛错。新设置的 URL query 会与当前的 URL query 融合。
 
-**示例代码**
+**示例代码**：
+
 <a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

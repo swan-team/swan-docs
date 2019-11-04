@@ -43,7 +43,22 @@ sidebar: swan-onAppShow
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onAppShow.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/68fb2a8f3e534b87eb78cf2f3131754c1566460332372" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

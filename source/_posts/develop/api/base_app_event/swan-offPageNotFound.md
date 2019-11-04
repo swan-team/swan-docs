@@ -12,7 +12,22 @@ sidebar: swan-offPageNotFound
 **方法参数：** Function callback | 无
 小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/offPageNotFound.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/89c7e6b8401b308e07556874b8467b271567706228311" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

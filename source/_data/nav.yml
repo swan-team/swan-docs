@@ -4018,8 +4018,8 @@
               sidebar: 
                 -
                   text: cloud.callFunction
-                  name: function 
-                  link: /develop/cloud/server_sdk/function 
+                  name: cloud-callFunction 
+                  link: /develop/cloud/server_sdk/cloud-callFunction 
 
     # -
     #       text: 插件

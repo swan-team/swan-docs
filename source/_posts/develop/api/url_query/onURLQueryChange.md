@@ -10,4 +10,19 @@ sidebar: onURLQueryChange
 
 
 详情参见<a href="/develop/framework/app_service_pagefunction/">页面相关事件处理函数</a>。
- 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onURLQueryChange.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：

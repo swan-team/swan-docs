@@ -21,7 +21,22 @@ sidebar: swan.onPageNotFound
 |query|Object|打开不存在页面的 query 参数|
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onPageNotFound.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/3a13a179e4089fc5eb246675244a37551567703460426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

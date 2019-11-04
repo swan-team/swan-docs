@@ -19,6 +19,12 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_
 ```
 ### 参数说明
 
+**Header 参数**
+
+参数名 | 类型 | 是否必须 | 描述 
+--| --| --|--
+Content-Type| application/x-www-form-urlencoded | 是 | 
+
 **query参数**
 
 参数名 | 类型 | 是否必须 | 描述 
