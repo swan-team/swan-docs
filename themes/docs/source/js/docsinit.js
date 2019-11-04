@@ -595,11 +595,13 @@
                 e.preventDefault();
                 var href = $(this).attr('href');
                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $('.m-doc-h2-list').filter(function () {
+                // 点击上/下一页，左侧导航高亮显示
+                $('.list-item').filter(function () {
                     return $(this).attr('href') === href;
                 }).parent('li').addClass('m-doc-sidebar-selected');
                 win.history.pushState(href, '', href);
                 ctx.getArticle(href);
+                ctx._scrollToAnchor($(this)[0]);
             });
         }
     };
