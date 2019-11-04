@@ -64,7 +64,7 @@ sidebar: request
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
 
-<a href="swanide://fragment/7ed470ee03edc63ecc49173ab72d72e21569321718423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/36157cd0c8c8d3d4cbb95d41aa7c30a21572760307408" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **示例**
 
@@ -79,7 +79,7 @@ Page({
             'content-type': 'application/json'
         },
         method: 'POST',
-        dataType: 'JSON',
+        dataType: 'json',
         responseType: 'text',
         data: {
             key: 'value'
