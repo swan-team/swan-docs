@@ -19,8 +19,8 @@ sidebar: view_view
 |---- | ---- | ---- |---- |
 |hover-class | String  |  none  | 指定按下去的样式类。当  hover-class="none"  时，没有点击态效果|
 |hover-stop-propagation| Boolean  | false | 指定是否阻止本节点的祖先节点出现点击态|
-|hover-start-time| Number | 50 | 按住后多久出现点击态，单位毫秒|
-|hover-stay-time| Number |400 |手指松开后点击态保留时间，单位毫秒|
+|hover-start-time| Number | 50 | 按住后出现点击态的时间长度，单位毫秒|
+|hover-stay-time| Number |400 |手指松开后点击态保留的时间长度，单位毫秒|
 
 
 
@@ -78,7 +78,7 @@ sidebar: view_view
 </view>
 ```
 
-**Bug & Tip**：
+**Tips**：
 
 1、 如果需要使用滚动视图，请使用 scroll-view。
 2、 从基础库版本1.12.0开始支持事件捕获、冒泡。

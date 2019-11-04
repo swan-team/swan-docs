@@ -8,7 +8,7 @@ sidebar: view_movable-view
  
 
 
-**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。
 
 **百度APP中扫码体验：**
 

@@ -8,7 +8,7 @@ sidebar: view_scroll-view
 
 
 
-**解释**：可滚动视图区域，使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
+**解释**：可滚动视图区域，可实现横向滚动和竖向滚动。使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
 
 **百度APP中扫码体验：**
 
@@ -29,7 +29,7 @@ sidebar: view_scroll-view
 |enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 | |
 |bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件| |
 |bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件| |
-|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | |
+|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | | |
 
 **图片示例**：
 
