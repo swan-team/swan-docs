@@ -17,7 +17,7 @@ sidebar: tab_swan-navigateBack
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |delta  | Number | 否  |1|  返回的页面数，如果 delta 大于现有页面数，则返回到首页1。|
 |success|	function|		否| | 	接口调用成功的回调函数|	

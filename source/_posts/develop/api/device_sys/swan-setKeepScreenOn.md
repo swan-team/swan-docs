@@ -14,7 +14,7 @@ sidebar: swan-setKeepScreenOn
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |keepScreenOn |Boolean | 是  | | 是否保持屏幕常亮|
 |success| Function  |  否  | | 接口调用成功的回调|

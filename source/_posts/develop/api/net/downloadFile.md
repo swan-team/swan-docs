@@ -18,7 +18,7 @@ sidebar: downloadFile
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |url |String | 是 || 下载资源的 url|
 |header | Object  |否 || HTTP 请求 Header，header 中不能设置 Referer|

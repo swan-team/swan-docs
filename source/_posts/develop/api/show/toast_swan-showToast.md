@@ -17,7 +17,7 @@ sidebar:  toast_swan-showToast
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |title  | String | 是  | | 提示的内容 |
 |icon | String | 否  | success|图标，有效值` "success"、"loading"、"none"`。 |

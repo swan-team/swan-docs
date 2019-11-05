@@ -18,7 +18,7 @@ sidebar: swan-setScreenBrightness
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |value |Number | 是  | |屏幕亮度值，范围 0~1，0 最暗，1 最亮。|
 |success| Function  |  否  | |接口调用成功的回调|

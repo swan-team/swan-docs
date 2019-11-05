@@ -12,7 +12,7 @@ sidebar:  MapContext-translateMarker
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填  |默认值|说明|
+|属性名 |类型  |必填 |默认值 |说明|
 |---- | ---- | ---- |---- |---|
 |markerId  |Number  |  是  | |指定 marker |
 |destination  |Object  |  是 | | 指定marker移动到的目标点|

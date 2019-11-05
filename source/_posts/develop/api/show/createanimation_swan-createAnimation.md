@@ -14,7 +14,7 @@ sidebar:  createanimation_swan-createAnimation
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |duration |Number | 否|  400 | 动画持续时间，单位 ms 。|
 |timingFunction |String | 否|  `‘linear’`| 定义动画的效果 |

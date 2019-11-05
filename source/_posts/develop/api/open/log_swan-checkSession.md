@@ -13,7 +13,7 @@ sidebar: log_swan-checkSession
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |success |Function  |  否 |  |  用户登录态的回调函数，百度APP版本11.16（不包括11.16）之前会以result的值标识Session Key是否失效|
 |fail  |  Function |   否 |  |  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|

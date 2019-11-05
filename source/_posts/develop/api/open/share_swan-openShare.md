@@ -17,7 +17,7 @@ sidebar: share_swan-openShare
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |title |String  |  否  | | 分享标题|
 |content |String  |  否 || 分享内容|

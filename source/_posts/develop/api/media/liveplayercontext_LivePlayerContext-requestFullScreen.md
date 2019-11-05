@@ -12,7 +12,7 @@ sidebar: liveplayercontext_LivePlayerContext-requestFullScreen
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填  |默认值|说明|
+|属性名 |类型  |必填 |默认值 |说明|
 |---- | ---- | ---- |---- |--|
 |direction |Number  |  是  | |有效值为 0（正常竖向）, 90（屏幕逆时针90度）, -90（屏幕顺时针90度）。|
 |success   |Function  |  否  | |接口调用成功的回调函数。|

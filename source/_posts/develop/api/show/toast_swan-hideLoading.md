@@ -11,7 +11,7 @@ sidebar:  toast_swan-hideLoading
 
 **方法参数**：Object object
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |success	|function	|	否||接口调用成功的回调函数|
 |fail|	function	|	否	||接口调用失败的回调函数|

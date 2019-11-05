@@ -15,7 +15,7 @@ sidebar: swan-startDeviceMotionListening
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |interval |String  | 否 | normal| 监听设备方向的变化回调函数的执行频率|
 |success |Function  | 否 | |  接口调用成功的回调函数|

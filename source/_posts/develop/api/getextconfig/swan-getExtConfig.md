@@ -14,7 +14,7 @@ sidebar: swan-getExtConfig
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |success| Function |   否 | | 返回第三方平台自定义的数据|
 |fail  |  Function |   否  | |接口调用失败的回调函数|

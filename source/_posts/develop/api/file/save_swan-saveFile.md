@@ -20,7 +20,7 @@ sidebar: save_swan-saveFile
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |tempFilePath |String  |  是  | | 需要保存的文件的临时路径|
 |success   |Function  |  否  | | 返回文件的保存路径。|

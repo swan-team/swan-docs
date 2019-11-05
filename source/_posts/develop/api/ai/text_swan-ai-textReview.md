@@ -18,7 +18,7 @@ sidebar: text_swan-ai-textReview
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |content | String | 是  | | 待审核文本，UTF-8，不可为空，不超过20000字节。 |
 |success |Function    |否 | |      接口调用成功的回调函数|

@@ -25,7 +25,7 @@ sidebar: payment_swan.requestPolymerPayment
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |orderInfo| Object | 是 | |订单信息|
 |bannedChannels| StringArray | 否 | | 需要隐藏的支付方式|

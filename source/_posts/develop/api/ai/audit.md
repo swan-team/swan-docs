@@ -16,7 +16,7 @@ sidebar:  audit
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是|  |图像资源地址|
 |imgUrl|	String|	否| |网图URL地址，以网图形式请求，图片Url需要做UrlEncode，不能与image并存。|

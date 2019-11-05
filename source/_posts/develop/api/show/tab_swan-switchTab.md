@@ -13,7 +13,7 @@ sidebar: tab_swan-switchTab
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |url |String | 是  | | 需要跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。|
 |success |Function  |  否  | |  接口调用成功的回调函数|

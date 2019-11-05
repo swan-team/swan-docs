@@ -12,7 +12,7 @@ sidebar: app_service_aopswan-after
 
  **Object 参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |[key] | String |否 ||要拦截的API的名称 |
 |[value] | Object / Function |否 ||拦截之后的处理器(如果为function，则默认在returning阶段调用) |

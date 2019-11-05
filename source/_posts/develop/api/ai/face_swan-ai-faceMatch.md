@@ -19,7 +19,7 @@ sidebar: face_swan-ai-faceMatch
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data | Array| 是 | | 图片信息 | 
 |success | Function |  否 | |接口调用成功后的回调函数 | 

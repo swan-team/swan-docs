@@ -18,7 +18,7 @@ sidebar: toast_swan-showActionSheet
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |itemList |   `Array.<string>`  |  是 | |  按钮的文字数组，数组长度最大为6个。|
 |itemColor |  HexColor|    否   |#3c76ff|按钮的文字颜色。|

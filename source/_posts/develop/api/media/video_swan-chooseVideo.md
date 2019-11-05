@@ -17,7 +17,7 @@ sidebar: video_swan-chooseVideo
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |sourceType | `Array.<string>` |否 | |  album 从相册选择视频，camera 使用相机，默认二者都有。|
 |compressed  | Boolean | 否  | | 是否压缩所选的视频源文件，默认值为true，需要压缩。|

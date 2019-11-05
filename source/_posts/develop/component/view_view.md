@@ -15,12 +15,13 @@ sidebar: view_view
 
 **属性说明**：
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-|hover-class | String  |  none  | 指定按下去的样式类。当  hover-class="none"  时，没有点击态效果|
-|hover-stop-propagation| Boolean  | false | 指定是否阻止本节点的祖先节点出现点击态|
-|hover-start-time| Number | 50 | 按住后出现点击态的时间长度，单位毫秒|
-|hover-stay-time| Number |400 |手指松开后点击态保留的时间长度，单位毫秒|
+
+|属性名 |类型  |默认值  |必填|说明| 
+|---- | ---- | ---- |---- |---- | 
+|hover-class | String  |  none  | 否|指定按下去的样式类。当  hover-class="none"  时，没有点击态效果|
+|hover-stop-propagation| Boolean  | false |否 |指定是否阻止本节点的祖先节点出现点击态|
+|hover-start-time| Number | 50 |否 |按住后出现点击态的时间长度，单位毫秒|
+|hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
 
 

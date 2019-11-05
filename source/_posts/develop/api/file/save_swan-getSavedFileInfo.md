@@ -14,7 +14,7 @@ sidebar: save_swan-getSavedFileInfo
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |filePath   |String  |  是  | | 文件路径|
 |success   |Function  |  否  | | 接口调用成功的回调函数，返回结果见 success 返回参数说明。|

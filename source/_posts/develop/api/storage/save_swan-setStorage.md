@@ -17,7 +17,7 @@ sidebar:  save_swan-setStorage
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |key|String|是||本地缓存中的指定的 key|
 |data  |  Object/String/Number/Array  | 是  | | 需要存储的内容|

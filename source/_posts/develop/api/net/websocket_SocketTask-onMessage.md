@@ -14,7 +14,7 @@ sidebar: websocket_SocketTask-onMessage
 
 **`callback`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer |是| | 服务器返回的消息|
 

@@ -19,7 +19,7 @@ sidebar:  classify_swan-ai-plantClassify
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
 |success |Function    |否 | |      接口调用成功的回调函数|

@@ -12,7 +12,7 @@ sidebar: query_swan-createIntersectionObserver
 
 **`options`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |thresholds|Array|否|[0]|一个数值数组，包含所有阈值。|
 |initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|

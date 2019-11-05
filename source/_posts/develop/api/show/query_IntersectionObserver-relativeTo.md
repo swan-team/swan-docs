@@ -18,7 +18,7 @@ sidebar: query_IntersectionObserver-relativeTo
 
 **`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |left|number|否| |节点布局区域的左边界|
 |right|number|否| |节点布局区域的右边界|

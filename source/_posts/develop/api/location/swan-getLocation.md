@@ -19,7 +19,7 @@ sidebar: swan-getLocation
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。|
 |altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，会很耗时，默认没有用 gps。|

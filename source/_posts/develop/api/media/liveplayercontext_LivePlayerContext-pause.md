@@ -11,7 +11,7 @@ sidebar:  liveplayercontext_LivePlayerContext-pause
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填  |默认值|说明|
+|属性名 |类型  |必填 |默认值 |说明|
 |---- | ---- | ---- |---- |---|
 |success   |Function  |  否  | |接口调用成功的回调函数|
 |fail  |Function  |  否 | |接口调用失败的回调函数|

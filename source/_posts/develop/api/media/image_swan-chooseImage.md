@@ -18,7 +18,7 @@ sidebar: image_swan-chooseImage
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |count  | Number | 否 |9| 最多可以选择的图片张数 。|
 |sizeType  |`Array.<string>`| 否 || original 原图，compressed 压缩图，默认二者都有。|
