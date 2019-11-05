@@ -162,7 +162,7 @@ const nodeSnip
       name: 'div',
       attrs: {
         class: 'div_class',
-        style: 'line-height: 60px; color: red;'
+        style: 'line-height: 60px; color: #4F99FB;'
       },
       children: [{
         type: 'text',

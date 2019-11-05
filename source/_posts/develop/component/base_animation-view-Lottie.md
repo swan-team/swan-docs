@@ -72,15 +72,12 @@ sidebar: base_animation-view-Lottie
 ```javascript
 Page({
     data: {
-        title: 'lottie',
         action: 'play',
         hidden: false,
         path: '/anims/lottie_example.json',
         loop: true,
         autoplay: true,
-        status: '停止',
-        updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
-        textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+        status: '停止'
     },
     onShow(){
         console.log('手百版本11.3以上才可使用');
@@ -97,7 +94,7 @@ Page({
         });
     },
     end() {
-        console.log('播放结束,设置不循环播放才能触发');
+        console.log('播放结束,设置不循环播放才能再次触发');
     }
 });
 ```

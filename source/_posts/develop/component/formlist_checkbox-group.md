@@ -36,19 +36,12 @@ sidebar: formlist_checkbox-group
 
 **代码示例**：
 
-<a href="swanide://fragment/72d45eb3b93a72d92a553736ebf4b8941565507862768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
-    <view class="title">默认样式</view>
-    <view class="checkbox-group">
-        <checkbox class="checkbox" checked>&nbsp;&nbsp;选中</checkbox>
-        <checkbox class="checkbox" checked="false">&nbsp;&nbsp;未选中</checkbox>
-        <checkbox class="checkbox" disabled>&nbsp;&nbsp;不可选</checkbox>
-        <checkbox class="checkbox" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</checkbox>
-    </view>
     <view class="title">列表选项</view>
     <view class="item-wrap">
         <checkbox-group bindchange="checkboxChange" >

@@ -20,8 +20,8 @@ sidebar: formlist_picker-view-column
 ```xml
 <view class="wrap">
     <view class="page-body">
-    <view class="selected-date">{{year}}年{{month}}月{{day}}日{{isDaytime ? "白天" : "夜晚"}}</view>
-    <picker-view  indicator-style ="color: #74fa7d" mask-style="color: #74fa7d" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+    <view class="selected-date">{{year}}年{{month}}月{{day}}日</view>
+    <picker-view  indicator-style ="color: #74fa7d" mask-class="maskStyle" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
         <picker-view-column>
             <view s-for="item in years" class="item">{{item}}年</view>
         </picker-view-column>

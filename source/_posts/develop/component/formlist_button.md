@@ -153,6 +153,10 @@ sidebar: formlist_button
     </view>
     <view class="btn-bottom">
         <button type="default" class="middle-btn" open-type="share">分享按钮</button>
+        <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息按钮</button>
+        <button type="primary" class="middle-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号回调</button>
+        <button type="primary" class="middle-btn" open-type="openSetting" bindopensetting="opensetting">打开授权设置页后回调</button>
+        <button type="primary" class="middle-btn" contact open-type="contact" bindopensetting="contact">客服信息回调</button>
     </view>
 </view>
 ```
@@ -176,20 +180,16 @@ Page({
         };
     },
     getUserInfo(e) {
-        console.log('cdsf');
-        swan.getUserInfo({
-            success: res => {
-                swan.showModal({
-                    title: '获取成功',
-                    content: JSON.stringfy(res)
-                });
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '获取失败'
-                });
-            }
-        });
+        console.log('用户信息:', e);
+    },
+    opensetting(e) {
+        console.log('用户设置:', e);
+    },
+    getPhoneNumber(e) {
+        console.log('用户手机号:', e);
+    },
+    contact(e) {
+        console.log('用户面板:', e);
     },
     tap() {
         swan.showToast({
