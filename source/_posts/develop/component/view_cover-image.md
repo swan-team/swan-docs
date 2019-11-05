@@ -51,6 +51,16 @@ sidebar: view_cover-image
 </map>
 ```
 
+* 在 js 文件中
+```js
+Page({
+    data: {
+        latitude: '40.042500',
+        longitude: '116.274040'
+    }
+});
+```
+
 
 
 **Bug & Tip**：

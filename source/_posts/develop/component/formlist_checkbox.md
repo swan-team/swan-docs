@@ -24,10 +24,34 @@ sidebar: formlist_checkbox
 
 **图片示例**：
 
-参见[checkbox-group](https://smartprogram.baidu.com/docs/develop/component/formlist_checkbox-group/)示例内容。
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/checkbox1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
-参见[checkbox-group](https://smartprogram.baidu.com/docs/develop/component/formlist_checkbox-group/)示例内容。
+<a href="swanide://fragment/19b41700694c662e8dae6dd6a9d676c91572917630510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="checkbox-group">
+        <checkbox class="checkbox" checked>&nbsp;&nbsp;选中</checkbox>
+        <checkbox class="checkbox" checked="false">&nbsp;&nbsp;未选中</checkbox>
+        <checkbox class="checkbox" disabled>&nbsp;&nbsp;不可选</checkbox>
+        <checkbox class="checkbox" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</checkbox>
+    </view>
+</view>
+```
 
 

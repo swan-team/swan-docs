@@ -49,7 +49,7 @@ sidebar: base_animation-view-Lottie
 **代码示例**：
 
 
-<a href="swanide://fragment/19c06d05f550daf240008413039c50021565512139450" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/72ffe9be4e8e6dbcd24ca12659fd43591572918523899" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -72,15 +72,12 @@ sidebar: base_animation-view-Lottie
 ```javascript
 Page({
     data: {
-        title: 'lottie',
         action: 'play',
         hidden: false,
         path: '/anims/lottie_example.json',
         loop: true,
         autoplay: true,
-        status: '停止',
-        updateImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/bg-new.png',
-        textImgSrc: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/title.png'
+        status: '停止'
     },
     onShow(){
         console.log('手百版本11.3以上才可使用');
@@ -97,7 +94,7 @@ Page({
         });
     },
     end() {
-        console.log('播放结束,设置不循环播放才能触发');
+        console.log('播放结束,设置不循环播放才能再次触发');
     }
 });
 ```
