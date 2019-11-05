@@ -15,7 +15,7 @@ sidebar: websocket_swan-onSocketError
 
 **示例**：
 
-<a href="swanide://fragment/9e62eafcd16c89a9f0728de59fd7fe1b1572951731079" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/da307c17be7e754db3914cce326cdbc51572996762746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -23,17 +23,16 @@ sidebar: websocket_swan-onSocketError
 Page({
     onSocketError() {
         swan.onSocketError(function (res) {
-            swan.showToast({
-                title: 'WebSocket连接打开出错',
+            swan.showModal({
+                title: '监听到webSocket连接出错，请检查！',
                 content: JSON.stringify(res)
             })
             console.log('WebSocket连接打开出错，请检查！', res);
         });
 
         swan.connectSocket({
-            url: 'wss://xxx.websocket.org',
+            url: 'wss://xxx.websocket',
             header: {},
-            protocols: [''],
             success: res => {
                 console.log('connectSocket success', res);
             },

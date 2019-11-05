@@ -13,7 +13,7 @@ sidebar: websocket_swan-onSocketClose
 
 **示例**：
 
-<a href="swanide://fragment/1d09352a3e3691f94d12209039e669f01572953946905" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19f83edf472078bc9a5d645bd506b93b1572996481834" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -24,7 +24,6 @@ Page({
         swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: ['name'],
             success: res => {
                 console.log('connectSocket success', res);
             },

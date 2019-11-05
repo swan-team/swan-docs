@@ -22,7 +22,7 @@ sidebar: websocket_swan-onSocketOpen
 
 **示例**：
 
-<a href="swanide://fragment/53a08f893721aacfa00df80f2f99dbe81572951349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f05c1cbaaa8d2bfc338ac531901064ee1572997062469" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

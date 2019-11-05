@@ -25,7 +25,7 @@ sidebar: websocket_swan-onSocketMessage
 
 **示例**：
 
-<a href="swanide://fragment/14dda81c7200e78411c206f55fd52f171572952663404" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d9b624d38bb041e59e309ca867a10d141572996994020" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -38,13 +38,15 @@ Page({
             });
         });
         swan.onSocketMessage(function (res) {
-            console.log('收到服务器内容：', res.data);
+            swan.showModal({
+                title: '监听到收到服务器内容',
+                content: res.data
+            });
         });
 
         swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: ['name'],
             success: res => {
                 console.log('connectSocket success', res);
             },

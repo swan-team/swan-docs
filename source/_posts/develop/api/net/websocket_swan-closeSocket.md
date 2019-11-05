@@ -24,17 +24,17 @@ sidebar: websocket_swan-closeSocket
 
 **示例**：
 
-<a href="swanide://fragment/8c60d12957843194309aa3429193208e1572952923047" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e12f46ff393bf12b2ceeb5118803725c1572996346704" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-      onShow() {
+    onShow() {
+        let that = this;
         swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: [''],
             success: res => {
                 console.log('connectSocket success', res);
                 swan.showToast({
@@ -46,19 +46,22 @@ Page({
                 console.log('connectSocket fail', err);
             }
         });
+        swan.onSocketOpen(function () {
+            that.setData({'openWebsocket': true})
+        })
     },
     closeSocket() {
         //注意这里有时序问题，
         //如果 swan.connectSocket 还没回调 swan.onSocketOpen，而先调用 swan.closeSocket，那么就做不到关闭 WebSocket 的目的。
         //必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
-        swan.onSocketOpen(function () {
+        let openWebsocket = this.getData('openWebsocket')
+        if (openWebsocket) {
             swan.closeSocket({
                 code: '1001',
                 reason: 'close reason',
                 success: res => {
-                    swan.showToast({
+                    swan.showModal({
                         title: 'websocket已关闭',
-                        icon: 'none'
                     });
                     console.log('WebSocket链接关闭成功', res);
                 },
@@ -66,7 +69,7 @@ Page({
                     console.log('WebSocket链接关闭失败', err);
                 }
             });
-        });
+        }
     }
 });
 ```
