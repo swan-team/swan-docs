@@ -9,10 +9,10 @@ sidebar: app_service_pagesetData
 **解释**：setData 函数用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化会引起视图层的更新。
 **参数说明**
 
-|属性|类型|是否必填|描述|
-|--|--|--|--|
-|data|	Object|	是|	这次要改变的数据|	
-|callback	|Function|	否	|setData引起的界面更新渲染完毕后的回调函数|
+|属性|类型|默认值|必填|描述|
+|--|--|--|--|--|
+|data|	Object| |	是|	这次要改变的数据|	
+|callback	|Function||	否	|setData引起的界面更新渲染完毕后的回调函数|
 
 **说明**：
 * Object 以`key: value`的形式表示，将`this.data`中的`key`对应的值改变成`value`。

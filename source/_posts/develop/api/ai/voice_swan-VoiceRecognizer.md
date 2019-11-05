@@ -9,11 +9,11 @@ sidebar: voice_swan-ai-VoiceRecognizer
 
 **object 参数说明**
 
-|属性名 |类型  |必填 |默认值 |说明|
+|属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |---- |
-|mode |String  |  否  | dnn|听音模式，有效值dnn/touch|
-|longSpeech   |Boolean  |  否  | false | 是否开启长语音|
-|context |String  |  否  | input|语音识别所用的场景值，有效值见下表格。 |
+|mode |String  |  dnn| 否  |听音模式，有效值dnn/touch|
+|longSpeech   |Boolean  |   false | 否  |是否开启长语音|
+|context |String  |   input|否  |语音识别所用的场景值，有效值见下表格。 |
 
 mode有效值如下
 
