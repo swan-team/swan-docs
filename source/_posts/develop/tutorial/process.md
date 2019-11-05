@@ -30,9 +30,9 @@ sidebar: process
 
 ```json
 {
-	"pages": [
-		"pages/index/index"
-	],
+    "pages": [
+	"pages/index/index"
+    ],
     "subPackages": [
         {
             "root": "subpackage",
@@ -42,8 +42,8 @@ sidebar: process
             ]
         }
     ],
-	"window": {
-		"navigationBarTitleText": "Demo",
+    "window": {
+	"navigationBarTitleText": "Demo",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
         "navigationStyle": "default",
@@ -51,9 +51,8 @@ sidebar: process
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh": "true",
         "onReachBottomDistance":"50"
-	},
-    "preloadRule": 
-    {
+    },
+    "preloadRule": {
        "pages/index": {
             "network": "all",
             "packages": ["subpackage"]
@@ -66,7 +65,7 @@ sidebar: process
                 "text": "首页",
                 "iconPath":"/images/API_normal.png",
                 "selectedIconPath":"/images/API_selected.png"
-	        },
+	    },
             {
                 "pagePath": "pages/detail/detail",
                 "text": "详情",
@@ -124,10 +123,10 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 ```json
 {
-	"pages":[
-		"pages/index/index",
-		"pages/detail/detail"
-	]
+    "pages":[
+	"pages/index/index",
+	"pages/detail/detail"
+    ]
 }
 ```
 <br>
@@ -170,13 +169,13 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 ```json
 {
-	"window":{
-		"navigationBarBackgroundColor": "#ffffff",
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "swan接口功能演示",
-		"backgroundColor": "#eeeeee",
-		"backgroundTextStyle": "light"
-	}
+    "window": {
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "swan接口功能演示",
+	"backgroundColor": "#eeeeee",
+	"backgroundTextStyle": "light"
+    }
 }
 ```
 <br>
@@ -204,7 +203,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
                 "text": "首页",
                 "iconPath":"/images/API_normal.png",
                 "selectedIconPath":"/images/API_selected.png"
-	        },
+	    },
             {
                 "pagePath": "pages/detail/detail",
                 "text": "详情",
@@ -230,8 +229,8 @@ audio: 后台音乐播放
 如：
 ```json
 {
-  "pages": ["pages/index/index"],
-  "requiredBackgroundModes": ["audio"]
+    "pages": ["pages/index/index"],
+    "requiredBackgroundModes": ["audio"]
 }
 ```
 注：在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。
