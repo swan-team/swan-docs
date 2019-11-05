@@ -68,8 +68,8 @@ sidebar: submitsitemap
         ],
         "mapp_type": "1000",
         "mapp_sub_type": "1001",
-        “feed_type”: “娱乐”,
-        “feed_sub_type”: “明星八卦”,
+        "feed_type": "娱乐",
+        "feed_sub_type": "明星八卦",
         "tags": "组件,接口",
         "ext": {
             "desc": "智能小程序官方示例",
@@ -86,8 +86,8 @@ sidebar: submitsitemap
         ],
         "mapp_type": "1000",
         "mapp_sub_type": "1001",
-        “feed_type”: “娱乐”
-        “feed_sub_type”: “明星八卦”
+        "feed_type": "娱乐",
+        "feed_sub_type": "明星八卦",
         "tags": "接口",
         "ext": {}
     }
