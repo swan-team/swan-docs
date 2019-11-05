@@ -9,32 +9,50 @@ sidebar: requestTask
 
 **解释**：网络请求任务对象
 
-**示例**
+**代码示例**
+
+<a href="swanide://fragment/2666d8786677778d18177eae7db623d11572938991162" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    const requestTask = swan.request({
-        url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-        header: {
-            'content-type': 'application/json'
-        },
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: res => {
-            console.log(res.data)
-        },
-        fail: err => {
-            console.log('错误码：' + err.errCode);
-            console.log('错误信息：' + err.errMsg);
-        }
-    })
-})
+    data: {    
+    },
+    request() {
+        const requestTask = swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                tabname: '美食酒水'
+            },
+            success: res => {
+                
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '创建失败',
+                    icon: 'none'
+                });
+                console.log('request fail', err);
+            },
+            complete: () => {
+                console.log('request complete');
+            }
+        });
+        console.log('res', requestTask);
+        swan.showModal({
+            title: '创建' + requestTask._reqId,
+            content: JSON.stringify(requestTask)
+        });
+    }
+});
 
-//取消请求任务
-RequestTask.abort();
 ```
 
 **说明**

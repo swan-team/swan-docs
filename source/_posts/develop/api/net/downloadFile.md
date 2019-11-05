@@ -60,13 +60,13 @@ sidebar: downloadFile
 
 **示例**
 
-<a href="swanide://fragment/f4bec567044c2a9803528de722c7cc3e1569499921724" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0bac1c0d10ee17ce6be023aac81a8c381572945831796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 swan.downloadFile({
-    url: 'https://smartprogram.baidu.com/xxx', //仅为示例，并非真实的资源
+    url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
     header: {
         'content-type': 'application/json'
     },
