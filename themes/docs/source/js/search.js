@@ -29,12 +29,18 @@ function searchFunc(searchId, contentId) {
             $('#top-search-box').removeClass('top-search-box-focus');
             return;
         }
+        $('.m-doc-level1').css({
+            'display': 'none'
+        });
         $(this).addClass('top-search-box-focus');
         $input.focus();
     });
 
     $($input).on('blur', function () {
         $(this).val() || $('#top-search-box').removeClass('top-search-box-focus');
+        $('.m-doc-level1').css({
+            'display': 'block'
+        });
     });
 
     var flag = true;
