@@ -47,6 +47,6 @@ Page({
 })
 ```
 
-### Bug & Tip
+**Bug & Tip**：
 
-tip: swan.setURLQuery 会触发 onURLQueryChange
+调用 swan.setURLQuery 则会触发 onURLQueryChange 页面函数。

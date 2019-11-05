@@ -9,6 +9,9 @@ sidebar: websocket_SocketTask
 
 
 **解释**：WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。
+
+**方法参数**：无
+
 **示例**：
 
 <a href="swanide://fragment/f13c9d8eb241c61a61c3a175111891d81559044298681" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
