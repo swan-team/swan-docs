@@ -36,8 +36,8 @@ function searchFunc(searchId, contentId) {
         $input.focus();
     });
 
-    $($input).on('blur', function () {
-        $(this).val() || $('#top-search-box').removeClass('top-search-box-focus');
+    $($input).on('blur', function (e) {
+        $('#top-search-box').removeClass('top-search-box-focus');
         $('.m-doc-level1').css({
             'display': 'block'
         });
