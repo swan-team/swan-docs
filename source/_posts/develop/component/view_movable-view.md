@@ -114,7 +114,7 @@ sidebar: view_movable-view
             带有惯性
         </view>
         <movable-area>
-            <movable-view direction="all" inertia friction="2">text</movable-view>
+            <movable-view direction="all" inertia friction="1">text</movable-view>
         </movable-area>
     </view>
     <view class="section">

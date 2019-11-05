@@ -157,10 +157,9 @@ sidebar: media_live-player
     <div class="section">
         <button type="primary" bind:tap="livePlay">开始播放 play</button>
         <button type="primary" bind:tap="liveStop">停止播放 stop</button>
-        <button type="primary" bind:tap="liveMute">静音</button>
-        <button type="primary" bind:tap="changeSrc">更换src</button>
-        <button type="primary" bind:tap="backgroundMute">后台静音</button>
-        <button type="primary" bind:tap="objectFit">object-fit改变</button>
+        <button type="primary" bind:tap="liveMute">{{muted? '': '不'}}静音</button>
+        <button type="primary" bind:tap="backgroundMute">进入后台静音</button>
+        <button type="primary" bind:tap="objectFit">object-fit改变为{{objectFit}}</button>
     </div>
 </view>
 ```

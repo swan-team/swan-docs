@@ -23,30 +23,70 @@ sidebar: process
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
-示例： 
+**代码示例**：
+
+<a href="swanide://fragment/22c464efe88757d194d6af37db126ddd1572882792148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
 
 ```json
 {
-    "pages": [
-		"pages/index/index",
-		"pages/detail/detail"
+	"pages": [
+		"pages/index/index"
+	],
+    "subPackages": [
+        {
+            "root": "subpackage",
+            "pages": [
+                "pages/subpageone/subpageone",
+                "pages/subpagetwo/subpagetwo"
+            ]
+        }
     ],
-    "window": {
-		"navigationBarTitleText": "Demo"
+	"window": {
+		"navigationBarTitleText": "Demo",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "default",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": "true",
+        "onReachBottomDistance":"50"
+	},
+    "preloadRule": 
+    {
+       "pages/index": {
+            "network": "all",
+            "packages": ["subpackage"]
+        }
     },
     "tabBar": {
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "首页",
+                "iconPath":"/images/API_normal.png",
+                "selectedIconPath":"/images/API_selected.png"
 	        },
             {
                 "pagePath": "pages/detail/detail",
-                "text": "详情"
+                "text": "详情",
+                "iconPath":"/images/component_normal.png",
+                "selectedIconPath":"/images/component_selected.png"
             }
-        ]
+        ],
+        "backgroundColor" : "#ffffff",
+        "borderStyle": "white",
+        "color": "#000",
+        "selectedColor": "#6495ED"
     },
-    "prefetches": ["https://m.baidu.com", "https://m.baidu.com?query=${query}"]
+    "requiredBackgroundModes": ["audio"],
+    "prefetches": ["https://m.baidu.com", "https://m.baidu.com?query=${query}"],
+    "networkTimeout": {
+        "request": 30000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    }
 }
 ```
 
@@ -150,6 +190,35 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |color|HexColor|是|tab 上文字的默认颜色。|
 |list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。|
 |selectedColor|HexColor|是|tab 上的文字选中时的颜色。|
+
+**代码示例**：
+
+<a href="swanide://fragment/22c464efe88757d194d6af37db126ddd1572882792148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```json
+{
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath":"/images/API_normal.png",
+                "selectedIconPath":"/images/API_selected.png"
+	        },
+            {
+                "pagePath": "pages/detail/detail",
+                "text": "详情",
+                "iconPath":"/images/component_normal.png",
+                "selectedIconPath":"/images/component_selected.png"
+            }
+        ],
+        "backgroundColor" : "#ffffff",
+        "borderStyle": "white",
+        "color": "#000",
+        "selectedColor": "#6495ED"
+    }
+}
+```
 
 ### requiredBackgroundModes
 

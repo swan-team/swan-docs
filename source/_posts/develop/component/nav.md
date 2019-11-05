@@ -91,15 +91,34 @@ sidebar: nav
 * 在 swan 文件中
 
 ```html
-<button type="primary" class="btn">
-	<navigator class="nav" url="/detail/detail?id=新页面" hover-class="navigator-hover">跳转到新页面</navigator>
-</button>
-<button type="primary" class="btn">
-	<navigator class="nav" url="/detail/detail?id=当前页" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
-</button>
-<button type="primary" class="btn">
-  	<navigator class="nav" target="miniProgram" open-type="navigate" app-id="79RKhZ2BTvyyHitg4W3Xle4kkFgwwXyp" version="release" bindsuccess="successHandler" bindfail="failHandler" bindcomplete="completeHandler">打开绑定的小程序</navigator>
-</button>
+<view class="card-area">
+	<button type="primary">
+		<navigator target="self" open-type="navigate" url="/pages/detail/detail?id=新页面,点击左上角返回回到之前页面" hover-class="navigator-hover" hover-stop-propagation="true">跳转到新页面</navigator>
+	</button>
+	<button type="primary">
+		<navigator target="self" open-type="redirect" url="/pages/detail/detail?id=当前页,点击左上角返回回到上级菜单" hover-class="other-navigator-hover">在当前页打开</navigator>
+	</button>
+
+	<button type="primary">
+		<navigator target="self" open-type="navigateBack" hover-class="other-navigator-hover" delta="1">返回上一页面</navigator>
+	</button>
+
+	<button type="primary">
+		<navigator target="miniProgram" open-type="exit">退出当前小程序</navigator>
+	</button>
+	
+	<button type="primary">
+		<navigator target="self" open-type="switchTab" url="/pages/component/component">打开一个有Tab的页面</navigator>
+	</button>
+
+	<button type="primary">
+		<navigator target="self" open-type="reLaunch" url="/pages/detail/detail?id=新页面,点击左上角返回回到上级菜单">关闭所有页面打开新页面</navigator>
+	</button>
+
+	<button type="primary">
+		<navigator target="miniProgram" open-type="navigate" extra-data="extra-data" app-id="79RKhZ2BTvyyHitg4W3Xle4kkFgwwXyp" version="release" bindsuccess="successHandler" bindfail="failHandler" bindcomplete="completeHandler">打开绑定的小程序</navigator>
+	</button>
+</view>
 ```
 
 * 在 js 文件中
