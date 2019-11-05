@@ -72,7 +72,7 @@ sidebar: formlist_input
 
 **代码示例**：
 
-<a href="swanide://fragment/1c64feb864d9378d6e69bec6ab1b21671565503514247" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/9de486a69d0608944a7f7d0ff94746151572919458545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
 * 在 swan 文件中
@@ -81,7 +81,7 @@ sidebar: formlist_input
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">可以自动聚焦的input</view>
-        <input class="ipt" placeholder="将会获取焦点" bindfocus="bindKeyfocus" selection-start="3" selection-end="7" focus={{true}} confirm-hold="false" confirm-type="send"/>
+        <input class="ipt" placeholder="将会获取焦点" bindfocus="bindKeyfocus" selection-start="3" selection-end="7" focus="{{true}}" confirm-hold="false" confirm-type="send"/>
     </view>
     <view class="card-area">
         <view class="top-description border-bottom">实时获取输入值：{{inputValue}}</view>

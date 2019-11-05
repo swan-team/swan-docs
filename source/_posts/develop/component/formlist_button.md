@@ -89,7 +89,7 @@ sidebar: formlist_button
 
 **代码示例**：
 
-<a href="swanide://fragment/c5e9c02cad6b485032a87ee568c3fe4a1565507494356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a90e9e3b2bc2402a14a1c481157d12301572918972473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

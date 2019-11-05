@@ -111,7 +111,7 @@ sidebar: base_rich-text
 **代码示例**：
 
 
-<a href="swanide://fragment/746c4d81d51218ea977782622aa61d9a1566379382794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ce3c9b8128d96855f3a0983f2b897b661572918834655" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
