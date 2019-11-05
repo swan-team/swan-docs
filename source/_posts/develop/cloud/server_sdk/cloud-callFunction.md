@@ -2,7 +2,7 @@
 title: cloud.callFunction
 header: develop
 nav: cloud
-sidebar:  function
+sidebar:  cloud-function
 ---
 
  
