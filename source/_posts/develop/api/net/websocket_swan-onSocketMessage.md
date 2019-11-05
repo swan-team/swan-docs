@@ -25,13 +25,13 @@ sidebar: websocket_swan-onSocketMessage
 
 **示例**：
 
-<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/14dda81c7200e78411c206f55fd52f171572952663404" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    onSocketMessage() {
+    onSocketMessage(e) {
         swan.onSocketOpen(function () {
             swan.sendSocketMessage({
                 data: 'baidu'
@@ -44,7 +44,7 @@ Page({
         swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: [''],
+            protocols: ['name'],
             success: res => {
                 console.log('connectSocket success', res);
             },
