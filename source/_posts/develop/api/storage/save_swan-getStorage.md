@@ -17,7 +17,7 @@ sidebar: save_swan-getStorage
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |key |String | 是 | |  本地缓存中的指定的 key|
 |success |Function   | 否  | | 接口调用成功的回调函数。|

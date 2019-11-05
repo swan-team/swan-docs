@@ -19,7 +19,7 @@ sidebar: websocket
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |url| String | 是 | | 开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。|
 |header| Object | 否 | | HTTP Header，Header 中不能设置 Referer。|

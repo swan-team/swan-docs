@@ -11,7 +11,7 @@ sidebar: tabbar_swan-setTabBarBadge
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |index |Number  |是| |tabBar的哪一项，从左边算起|
 |text |String  |是| | 显示的文本，超过 3 个字符则显示成“…”|

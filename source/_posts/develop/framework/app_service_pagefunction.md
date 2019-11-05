@@ -56,7 +56,7 @@ Page({
 **方法参数**：Object object
 **Object参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |from |String  |是| |  分享事件来源。button：页面内转发按钮；menu：右上角分享菜单 。 |
 |target |Object  |是| |  如果 from 值是 button，则 target 是触发这次转发事件的 button，否则为 undefined。|
@@ -119,30 +119,5 @@ Page({
 
 ### onURLQueryChange
 
-**解释**：在 Page 中定义 onURLQueryChange 处理函数，监听页面 URL query 改变。引起页面 URL query 更新的原因有：调用 [swan.setURLQuery](/develop/api/url_query/swan-setURLQuery/) 。
-<!-- 带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 切换 tab。 -->
 
-**方法参数**：Object object
-
-**Object参数说明**：
-
-|字段 |类型  |说明 |
-|---- | ---- | ---- |
-|newURLQuery|Object| 改变后的 URL query |
-|oldURLQuery|Object| 改变前的 URL query |
-
-**示例代码**
-<a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-```js
-Page({
-    onURLQueryChange({newURLQuery, oldURLQuery}) {
-        console.log(newURLQuery, oldURLQuery) //  输出结果为 {channel: 'movie'} {}
-    },
-    onLoad(query) {
-        if(!query.channel) {
-            swan.setURLQuery({channel: 'movie'})
-        }
-    }
-})
-```
+详情参见[onURLQueryChange](https://smartprogram.baidu.com/docs/develop/api/url_query/onURLQueryChange/)

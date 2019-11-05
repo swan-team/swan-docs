@@ -17,7 +17,7 @@ sidebar: image_swan-previewImage
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |current |String | 否  当前显示图片的链接，不填则默认为 urls 的第一张。|
 |urls   | `Array.<string>` |是 | |  需要预览的图片链接列表|

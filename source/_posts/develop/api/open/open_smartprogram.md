@@ -15,7 +15,7 @@ sidebar: open_smartprogram
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |appKey | String | 是 | | 要打开的小程序App Key（使用线上版appkey和envVersion配合使用）|
 |path | String | 否 | | 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
@@ -94,7 +94,7 @@ Page({
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |extraData | Object | 否 | | 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
 |success | Function |  否  | | 接口调用成功的回调函数|

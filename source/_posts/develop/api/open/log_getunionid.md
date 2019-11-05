@@ -23,7 +23,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
-Content-Type| application/x-www-form-urlencoded | 是 | 
+Content-Type| application/x-www-form-urlencoded | 是 | Http的实体首部字段，浏览器原生form表单。|
 
 **query参数**
 

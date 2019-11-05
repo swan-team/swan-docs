@@ -13,7 +13,7 @@ sidebar: save_swan-getFileInfo
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |filePath  |String  |  是  | | 本地文件路径 |
 |digestAlgorithm  |String	| 否  |md5|计算文件摘要的算法，有效值：md5，sha1。|

@@ -17,7 +17,7 @@ sidebar: toast_swan-showModal
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |title  | String|  是 | | 提示的标题|
 |content |String | 是 | |  提示的内容|

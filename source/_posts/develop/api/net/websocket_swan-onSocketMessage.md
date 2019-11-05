@@ -18,7 +18,7 @@ sidebar: websocket_swan-onSocketMessage
 
 `res`参数说明：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer | 是| |服务器返回的消息|
 |dataType|String|否| |data 类型|

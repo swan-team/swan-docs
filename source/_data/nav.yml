@@ -583,7 +583,7 @@
               -
                 link: /develop/tutorial/publish
                 text: 调试预览发布
-                name: pulish
+                name: publish
                 # sidebar:
                 #     -
                 #       link: /develop/tutorial/publish/#调试
@@ -598,7 +598,6 @@
                 #       text: 发布
                 #       name: publish_发布
               -
-                
                 text: 开发解决方案
                 name: move
                 sidebar:

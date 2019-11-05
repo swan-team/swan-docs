@@ -17,7 +17,7 @@ sidebar: open
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |filePath   |String  |  是  | | 文件路径，可通过 downloadFile 获得|
 |fileType   |String  |  否  | | 文件类型，指定文件类型打开文件，有效值 doc, xls, ppt, pdf, docx, xlsx, pptx。|

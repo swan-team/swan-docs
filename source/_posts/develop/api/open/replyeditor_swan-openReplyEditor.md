@@ -12,7 +12,7 @@ sidebar: replyeditor_swan-openReplyEditor
 **解释**： 调起原生半屏内容发布器，并支持开发者配置发布器展示模块。
 **方法参数**：Object object
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |sendBackgroundColor   | String  |  否  | #3388ff |发布按钮填充颜色，支持#333 和#333333 两种写法|
 |sendTextColor  |  String  | 否 | #FFFFFF |发表按钮颜色，支持#333 和#333333 两种写法|

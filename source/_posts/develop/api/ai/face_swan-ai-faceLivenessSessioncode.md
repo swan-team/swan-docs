@@ -15,7 +15,7 @@ sidebar: face_swan-ai-faceLivenessSessioncode
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |appid | string| 是 | |百度云创建应用时的唯一标识 ID | 
 |success | Function | 否 | | 接口调用成功后的回调函数 | 

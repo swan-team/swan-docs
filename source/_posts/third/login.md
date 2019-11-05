@@ -45,3 +45,51 @@ grant_type | string | 是| 授权类型，固定字符串："authorization_code"
 ------ | -----| ----
 error | string | 错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error
 error\_description | string | 错误描述信息，用来帮助理解和解决发生的错误
+
+
+## 获取unionid
+
+**unionid说明：**
+
+1. 一个开发者可以创建多个小程序， 开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在一个开发者所有的小程序下的unionid是唯一的。
+2. unionid 获取依赖用户登录授权，请妥善处理用户未授权场景。
+
+**请求地址**:
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/unionId/get?access_token=ACCESS_TOKEN
+```
+
+**参数说明**：
+
+| 参数名称     | 类型   | 是否必须 | 说明                                                         |
+| ------------ | ------ | -------- | ------------------------------------------------------------ |
+| access_token | string | true     | 授权小程序的接口调用凭据                                     |
+| open_id      | string | true     | 用户openid, 需要经过用户登录授权过程获取 |
+
+**返回值说明**
+
+| 参数名 | 类型   | 描述     |
+| ------ | ------ | -------- |
+| errno  | string | 状态码   |
+| msg    | string | 状态信息 |
+| data   | string | 文件链接 |
+
+**data 中返回值说明：**
+
+| 参数名   | 类型   | 描述            |
+| -------- | ------ | --------------- |
+| union_id | string | 对应的 union id |
+
+**返回值示例**
+
+```json
+{
+    "errno":0,
+    "msg":"success",
+    "data":{
+        "union_id":"Srn8jbRVFTFMRdV2KTJfmSE"
+    }
+}
+```
+

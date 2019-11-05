@@ -19,7 +19,7 @@ sidebar: swan-onAccelerometerChange
 
 **`callback`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |x |Number |是| |X 轴|
 |y |Number |是| |Y 轴|

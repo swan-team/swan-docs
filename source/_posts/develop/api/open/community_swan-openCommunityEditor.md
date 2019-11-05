@@ -12,7 +12,7 @@ sidebar: community_swan-openCommunityEditor
 **解释**： 调起原生全屏内容发布器，并支持开发者配置发布器展示模块。
 **方法参数**：Object object
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |contentPlaceholder   | String  |  否  | 请输入正文 |正文默认占位符|
 |titlePlaceholder  |  String  | 否 | 请输入标题 |标题默认占位文符|

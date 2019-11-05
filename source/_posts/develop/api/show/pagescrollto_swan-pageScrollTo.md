@@ -13,7 +13,7 @@ sidebar: pagescrollto_swan-pageScrollTo
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |scrollTop |Number | 是| | 滚动到页面的目标位置（单位 px） |
 |duration |Number | 否| 300 | 滚动动画的时长，（单位 ms） |

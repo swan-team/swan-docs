@@ -5,8 +5,8 @@ nav: framework
 sidebar: view_for
 ---
 
-s-for
----
+## s-for
+ 
 通过循环渲染列表是常见的场景，在元素上作用 s-for 指令，我们可以渲染一个列表。
 ### 默认情况
 默认不写情况下，下标索引是为 index，数组当前变量名默认为 item。

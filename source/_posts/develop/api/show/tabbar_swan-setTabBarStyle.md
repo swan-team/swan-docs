@@ -12,7 +12,7 @@ sidebar: tabbar_swan-setTabBarStyle
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |color |HexColor | 否| |tab 上的文字默认颜色|
 |selectedColor |HexColor | 否| |tab 上的文字选中时的颜色|

@@ -12,7 +12,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |frontColor | String|  是  | | 前景颜色值，包括按钮、标题、状态栏的颜色，有效值 #ffffff 和 #000000。|
 |backgroundColor| String | 是  | | 背景颜色值，有效值为十六进制颜色。|
@@ -23,7 +23,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
 
 **animation**
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 | duration|Number | 否  |0|动画变化时间，单位：毫秒。|
 |timingFunc|String | 否  |linear| 动画变化方式  |

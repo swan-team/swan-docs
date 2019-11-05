@@ -9,7 +9,18 @@ sidebar: onURLQueryChange
 
 
 
-详情参见<a href="/develop/framework/app_service_pagefunction/">页面相关事件处理函数</a>。
+**解释**：在 Page 中定义 onURLQueryChange 处理函数，监听页面 URL query 改变。引起页面 URL query 更新的原因有：调用 [swan.setURLQuery](/develop/api/url_query/swan-setURLQuery/) 。
+ 
+
+**方法参数**：Object object
+
+**Object参数说明**：
+
+|属性名 |类型  |默认值 |必填|说明|
+|---|---|---|---|---|
+|newURLQuery|Object| ||改变后的 URL query |
+|oldURLQuery|Object| ||改变前的 URL query |
+
 
 **图片示例**：
 

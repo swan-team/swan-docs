@@ -14,7 +14,7 @@ sidebar: app_service_pagelife
 
 **参数：**
 
-|名称|类型|说明|
+|属性名|类型|说明|
 |----|----|----|
 |query|Object|打开当前页面路径中的参数|
 

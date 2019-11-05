@@ -11,7 +11,7 @@ sidebar:  toast_swan-showLoading
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |title  | String | 是  | | 提示的内容|
 |mask | Boolean| 否 |false|  是否显示透明蒙层，防止触摸穿透。|
