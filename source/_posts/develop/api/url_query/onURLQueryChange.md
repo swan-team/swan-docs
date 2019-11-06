@@ -11,6 +11,9 @@ sidebar: onURLQueryChange
 
 **解释**：在 Page 中定义 onURLQueryChange 处理函数，监听页面 URL query 改变。引起页面 URL query 更新的原因有：调用 [swan.setURLQuery](/develop/api/url_query/swan-setURLQuery/) 。
  
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onURLQueryChange.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

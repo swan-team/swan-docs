@@ -9,6 +9,11 @@ sidebar: swan-offPageNotFound
 
 **解释：** 取消监听小程序要打开的页面不存在事件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offPageNotFound.png"  class="demo-qrcode-image" />
+
+
 **方法参数：** Function callback | 无
 小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 

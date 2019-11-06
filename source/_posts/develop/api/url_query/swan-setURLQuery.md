@@ -12,6 +12,10 @@ sidebar: swan-setURLQuery
 **解释：** 设置当前页面的 URL query。
 <!-- 如果调用 swan.setURLQuery 导致 URL query 更新，则会同步地调用当前页面的 onURLQueryChange，并引起带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 组件更新视图。 -->
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setURLQuery.png"  class="demo-qrcode-image" />
+
 **方法参数：** Object object
 
 **`newURLquery`参数说明**：
@@ -47,6 +51,6 @@ Page({
 })
 ```
 
-### Bug & Tip
+**Bug & Tip**：
 
-tip: swan.setURLQuery 会触发 onURLQueryChange
+调用 swan.setURLQuery 则会触发 onURLQueryChange 页面函数。

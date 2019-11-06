@@ -8,6 +8,11 @@ sidebar: websocket_swan-onSocketOpen
  
 **解释**：监听 WebSocket 连接打开事件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onSocketOpen.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **`callback`参数说明**：WebSocket 连接打开事件的回调函数。

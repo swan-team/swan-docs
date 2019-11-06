@@ -10,7 +10,28 @@ sidebar: websocket_SocketTask
 
 **解释**：WebSocket 任务，可通过 swan.connectSocket() 接口创建返回。
 
-**示例**：
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTask.png"  class="demo-qrcode-image" />
+
+**方法参数**：无
+
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/socketTask.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/6d4912bc70732735e223a5a4998582e81572975999449" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

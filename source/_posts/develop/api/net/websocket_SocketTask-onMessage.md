@@ -9,6 +9,9 @@ sidebar: websocket_SocketTask-onMessage
 
 **解释**：监听 WebSocket 接受到服务器的消息事件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskOnMessage.png"  class="demo-qrcode-image" />
 
 **方法参数**：Function callback
 
@@ -18,7 +21,21 @@ sidebar: websocket_SocketTask-onMessage
 |---- | ---- | ---- | ----|----|
 |data| String/ArrayBuffer |是| | 服务器返回的消息|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onMessage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/7542c489fd72f5e555f34aa2a8983b591572997750751" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

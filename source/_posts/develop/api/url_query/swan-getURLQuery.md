@@ -11,6 +11,10 @@ sidebar: swan-getURLQuery
 
 **解释：** 获取当前页面的 URL query 对象值。在当前页面的 URL Query 更新后，只能通过此 API 主动获取当前页面最新的 URL query。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getURLQuery.png"  class="demo-qrcode-image" />
+
 **方法参数：** 无
 
 **图片示例**：

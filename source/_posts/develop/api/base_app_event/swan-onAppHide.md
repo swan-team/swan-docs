@@ -9,6 +9,11 @@ sidebar: swan-onAppHide
 
 **解释：** 监听小程序切后台事件。该事件与 [App.onHide](/develop/framework/app_service_register/) 的回调时机一致。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onAppHide.png"  class="demo-qrcode-image" />
+
+
 **方法参数：** Function callback
 小程序切后台事件的回调函数。
 
@@ -17,7 +22,7 @@ sidebar: swan-onAppHide
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onAppShow.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/onAppHide.gif ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
