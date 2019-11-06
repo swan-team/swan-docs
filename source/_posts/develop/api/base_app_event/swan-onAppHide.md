@@ -22,7 +22,7 @@ sidebar: swan-onAppHide
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onAppShow.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/onAppHide.gif ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

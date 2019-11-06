@@ -21,7 +21,7 @@ sidebar: swan-offAppHide
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/offAppShow.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/offAppHide.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
