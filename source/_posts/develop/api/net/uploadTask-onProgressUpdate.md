@@ -9,6 +9,10 @@ sidebar: uploadTask-onProgressUpdate
 
 **解释**：监听上传进度变化
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadTaskOnProgressUpdate.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **返回参数说明**：

@@ -10,7 +10,25 @@ sidebar: downloadTask
 
 **解释**：下载任务对象
 
-**示例**
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadTask.png"  class="demo-qrcode-image" />
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/downloadTask.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/c77c402000c8ed09238116000c09165c1572947847546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

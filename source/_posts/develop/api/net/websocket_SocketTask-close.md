@@ -9,6 +9,10 @@ sidebar: websocket_SocketTask-close
 
 **解释**：关闭 WebSocket 连接
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/csocketTaskClose.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

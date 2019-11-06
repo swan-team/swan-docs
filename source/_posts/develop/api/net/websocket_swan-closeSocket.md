@@ -7,8 +7,11 @@ sidebar: websocket_swan-closeSocket
 
 
 
-**解释**：关闭 WebSocket 连接。
-必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
+**解释**：关闭 WebSocket 连接。必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/closeSocket.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

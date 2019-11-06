@@ -8,9 +8,27 @@ sidebar: uploadTask
 
 **解释**：上传任务对象
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadTask.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
  
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/uploadTask.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

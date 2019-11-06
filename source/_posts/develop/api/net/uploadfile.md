@@ -57,6 +57,20 @@ sidebar: uploadfile
 
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/uploadFile.gif ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/f925bd04e9b45916c6450fbb6f22b1cf1572940642903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

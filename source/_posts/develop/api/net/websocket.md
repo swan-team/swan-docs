@@ -7,13 +7,15 @@ sidebar: websocket
 请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
 
 
-**百度APP中扫码体验：**
-
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/webSocket.png"  class="demo-qrcode-image" />
-
 
 
 **解释**：创建一个 WebSocket 连接。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/connectSocket.png"  class="demo-qrcode-image" />
+
+
 
 **方法参数**：Object object
 
