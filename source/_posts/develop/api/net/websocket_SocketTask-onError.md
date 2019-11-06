@@ -15,7 +15,21 @@ sidebar: websocket_SocketTask-onError
 
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/onSocketError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/33f5346f3be5b653f3a36962a62622821572997904644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -15,7 +15,21 @@ sidebar: websocket_SocketTask-onClose
 
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/onClose.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/4e697ae8243a0dc5267b9d32d26ee7961572998042629" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

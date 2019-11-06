@@ -27,19 +27,6 @@ sidebar: websocket_swan-onSocketMessage
 |data| String/ArrayBuffer | 是| |服务器返回的消息|
 |dataType|String|否| |data 类型|
 
-**图片示例**：
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onMessage.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 **代码示例**：
 
