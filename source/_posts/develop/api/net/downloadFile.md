@@ -58,7 +58,22 @@ sidebar: downloadFile
 
 
 
-**示例**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/downloadFile.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+ 
 
 <a href="swanide://fragment/f4bec567044c2a9803528de722c7cc3e1569499921724" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

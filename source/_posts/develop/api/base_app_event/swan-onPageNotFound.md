@@ -10,6 +10,10 @@ sidebar: swan.onPageNotFound
 
 **解释：** 监听小程序要打开的页面不存在事件。该事件与 [App.onPageNotFound](/develop/framework/app_service_register/) 的回调时机一致。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onPageNotFound.png"  class="demo-qrcode-image" />
+
 **方法参数：** Function callback
 小程序要打开的页面不存在的事件回调函数。
 

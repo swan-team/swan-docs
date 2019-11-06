@@ -9,6 +9,11 @@ sidebar: swan-offAppShow
 
 **解释：** 取消监听小程序切前台事件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offAppShow.png"  class="demo-qrcode-image" />
+
+
 **方法参数：** 无
 
 **图片示例**：

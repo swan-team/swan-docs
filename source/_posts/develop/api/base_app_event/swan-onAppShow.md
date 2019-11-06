@@ -10,6 +10,11 @@ sidebar: swan-onAppShow
 
 **解释：** 监听小程序切前台事件。该事件与 [App.onShow](/develop/framework/app_service_register/) 的回调参数一致。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onAppShow.png"  class="demo-qrcode-image" />
+
+
 **方法参数：** function callback
 小程序切前台事件的回调函数。
 
