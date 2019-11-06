@@ -13,7 +13,7 @@ sidebar: websocket_SocketTask-onClose
 
 **示例**：
 
-<a href="swanide://fragment/4e697ae8243a0dc5267b9d32d26ee7961572998042629" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3989e0fdcd4998b441d5e4656630fcc71572998953990" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -41,6 +41,10 @@ Page({
         });
         socketTask.onClose({
             success: res => {
+                swan.showToast({
+                    title: '监听到关闭WebSocket',
+                    icon: 'none'
+                });
                 console.log('监听到关闭WebSocket', res);
             },
             fail: err => {
@@ -49,13 +53,9 @@ Page({
         }),
         this.socketTask = socketTask
     },
-    socketTaskClose() {
+    socketTaskOnClose() {
         this.socketTask.close({
             success: res => {
-                swan.showToast({
-                    title: '关闭WebSocket成功',
-                    icon: 'none'
-                });
                 console.log('关闭WebSocket成功', res);
             },
             fail: err => {
