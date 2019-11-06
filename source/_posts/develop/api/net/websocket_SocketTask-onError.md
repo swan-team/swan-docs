@@ -15,23 +15,10 @@ sidebar: websocket_SocketTask-onError
 
 **方法参数**：Function callback
 
-**图片示例**：
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/onSocketError.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 **代码示例**：
 
-<a href="swanide://fragment/33f5346f3be5b653f3a36962a62622821572997904644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1432356a3b3212eefb114963ebd275e51573043371074" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -48,16 +35,12 @@ Page({
                 console.log('connectSocket fail', err);
             }
         });
-        socketTask.onError({
-            success: res => {
-                swan.showModal({
-                    title: '监听到WebSocket报错',
-                    content: JSON.stringify(res)
-                });
-            },
-            fail: err => {
-                console.log('监听到WebSocket报错失败', err);
-            }
+        socketTask.onError(function (res) {
+            console.log('socketTask.onError success', res);
+            swan.showModal({
+                title: '监听错误发送事件成功',
+                content: JSON.stringify(res.reason)
+            });
         }),
         this.socketTask = socketTask
     }

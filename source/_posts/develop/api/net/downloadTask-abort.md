@@ -32,7 +32,7 @@ sidebar: downloadTask-abort
 **代码示例**：
  
 
-<a href="swanide://fragment/c77c402000c8ed09238116000c09165c1572947847546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dcaee8cc80556c6096c0f550d3292da41573018260749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

@@ -33,7 +33,7 @@ sidebar: websocket_SocketTask
 
 **代码示例**：
 
-<a href="swanide://fragment/6d4912bc70732735e223a5a4998582e81572975999449" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/34c47f3104b2a70210d786e5bb9ce3731572997244307" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
