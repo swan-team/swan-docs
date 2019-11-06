@@ -15,27 +15,32 @@ sidebar: websocket_swan-onSocketError
 
 **示例**：
 
-<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/da307c17be7e754db3914cce326cdbc51572996762746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    swan.onSocketError(function (res) {
-        console.log('WebSocket连接打开出错，请检查！', res);
-    });
+    onSocketError() {
+        swan.onSocketError(function (res) {
+            swan.showModal({
+                title: '监听到webSocket连接出错，请检查！',
+                content: JSON.stringify(res)
+            })
+            console.log('WebSocket连接打开出错，请检查！', res);
+        });
 
-    swan.connectSocket({
-        url: 'wss://xxx.websocket.org',
-        header: {},
-        protocols: [''],
-        success: res => {
-            console.log('connectSocket success', res);
-        },
-        fail: err => {
-            console.log('connectSocket fail', err);
-        }
-    });
+        swan.connectSocket({
+            url: 'wss://xxx.websocket',
+            header: {},
+            success: res => {
+                console.log('connectSocket success', res);
+            },
+            fail: err => {
+                console.log('connectSocket fail', err);
+            }
+        });
+    }
 });
 ```
 

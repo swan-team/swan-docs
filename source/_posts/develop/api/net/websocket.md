@@ -34,23 +34,31 @@ sidebar: websocket
 
 **示例**：
 
-<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1241b261727079e050c52871830939491572951069253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    swan.connectSocket({
-        url: 'wss://echo.websocket.org',
-        header: {},
-        protocols: [''],
-        success: res => {
-            console.log('connectSocket success', res);
-        },
-        fail: err => {
-            console.log('connectSocket fail', err);
-        }
-    });
+    connectSocket() {
+        swan.connectSocket({
+            url: 'wss://echo.websocket.org',
+            success: res => {
+                swan.showToast({
+                    title: 'websocket 连接成功',
+                    icon: 'none'
+                });
+                console.log('connectSocket success', res);
+            },
+            fail: err => {
+                swan.showModal({
+                    title: 'websocket 连接失败',
+                    content: JSON.stringify(err)
+                });
+                console.log('connectSocket fail', err);
+            }
+        })
+    } 
 });
 ```
 

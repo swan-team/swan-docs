@@ -22,17 +22,21 @@ sidebar: websocket_swan-sendSocketMessage
 
 **示例**：
 
-<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a1272c3dcff4f89bc4081d4a8c590d4c1572997122605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    sendSocketMessage() {
+    sendSocketMessage() { 
         swan.onSocketOpen(function () {
             swan.sendSocketMessage({
                 data: 'baidu',
                 success: res => {
+                    swan.showToast({
+                        title: 'WebSocket发送数据成功',
+                        icon: "none"
+                    });
                     console.log('WebSocket发送数据成功', res);
                 },
                 fail: err => {
@@ -44,7 +48,6 @@ Page({
         swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: [''],
             success: res => {
                 console.log('connectSocket success', res);
             },
@@ -54,6 +57,7 @@ Page({
         });
     }
 });
+
 ```
 
 #### 错误码
