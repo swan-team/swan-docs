@@ -16,11 +16,12 @@ sidebar: websocket_SocketTask-onOpen
 
 **方法参数**：Function callback
 
+
 **图片示例**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onOpen.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/taskonopen.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -30,15 +31,19 @@ sidebar: websocket_SocketTask-onOpen
     </div>     
 </div>
 
+
 **代码示例**：
 
-<a href="swanide://fragment/2eef4ce7dda672cc8789d10f6df0b2e61572997499124" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c0971dfd26e12cd56876819535843b171573042484363" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    onShow() {
+    data: {
+        
+    },
+    onOpen() {
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
@@ -49,13 +54,12 @@ Page({
                 console.log('connectSocket fail', err);
             }
         });
-        socketTask.onOpen({
-            success: res => {
-                console.log('监听到开启WebSocket', res);
-            },
-            fail: err => {
-                console.log('监听开启WebSocket失败', err);
-            }
+        socketTask.onOpen(function (res) {
+            console.log('socketTask.onOpen success', res);
+            swan.showModal({
+                title: 'title',
+                content: '监听打开事件成功'
+            });
         }),
         this.socketTask = socketTask
     }

@@ -28,6 +28,20 @@ sidebar: websocket_swan-onSocketMessage
 |dataType|String|否| |data 类型|
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onMessage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/d9b624d38bb041e59e309ca867a10d141572996994020" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
