@@ -19,7 +19,7 @@ sidebar: websocket_SocketTask-onClose
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/onClose.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/taskonclose.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -31,11 +31,12 @@ sidebar: websocket_SocketTask-onClose
 
 **代码示例**：
 
-<a href="swanide://fragment/3989e0fdcd4998b441d5e4656630fcc71572998953990" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d46dc0c6c70e9d1c32c5f492eb10dd691573043225396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
+
 Page({
     data: {
         disabled: true
@@ -57,17 +58,12 @@ Page({
                 console.log('connectSocket fail', err);
             }
         });
-        socketTask.onClose({
-            success: res => {
-                swan.showToast({
-                    title: '监听到关闭WebSocket',
-                    icon: 'none'
-                });
-                console.log('监听到关闭WebSocket', res);
-            },
-            fail: err => {
-                console.log('监听WebSocket失败', err);
-            }
+        socketTask.onClose(function (res) {
+            console.log('socketTask.onClose success', res);
+            swan.showModal({
+                title: '监听关闭事件成功',
+                content: JSON.stringify(res.reason)
+            });
         }),
         this.socketTask = socketTask
     },
