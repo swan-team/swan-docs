@@ -10,33 +10,52 @@ sidebar: uploadTask
 
 **方法参数**：无
 
-**示例**
+ 
+**代码示例**：
+
+<a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-const uploadTask = swan.uploadFile({
-    url: 'https://smartprogram.baidu.com/xxx', //开发者服务器 url
-    filePath: res.tempFilePaths[0], // 要上传文件资源的路径
-    name: 'myfile',
-    header: {
-        'content-type': 'application/json'
+
+Page({
+    data: { 
     },
-    formData: {
-        'user': 'test'
-    },
-    success: res =>{
-        console.log(res.statusCode);
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+    uploadFile() {
+        const uploadTask = swan.uploadFile({
+            url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile', 
+            filePath: "http://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
+            name: 'myfile',
+            header: {
+                'content-type': 'application/json'
+            },
+            formData: {
+                'user': 'test'
+            },
+            success: res => {
+                swan.showToast({
+                    title: '上传成功',
+                    icon: 'none'
+                });
+                console.log('uploadFile success', res);
+                this.setData({filePath});
+            },
+            fail: err => {
+                console.log('fail', err);
+                swan.showToast({
+                    title: '上传失败',
+                    icon: none
+                });
+            },
+            complete() {
+                console.log('complete');
+            }
+        });
+        console.log('res', uploadTask);
+        swan.showModal({
+            title: '创建' + uploadTask._reqId,
+            content: JSON.stringify(uploadTask)
+        });
     }
 });
 
-uploadTask.onProgressUpdate(res => {
-    console.log('上传进度', res.progress);
-    console.log('已经上传的数据长度', res.totalBytesSent);
-    console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend);
-});
-
-uploadTask.abort(); // 取消上传任务
 ```

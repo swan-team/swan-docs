@@ -22,26 +22,32 @@ sidebar: websocket_swan-onSocketOpen
 
 **示例**：
 
-<a href="swanide://fragment/a22e8de4dae980a6179ade70625f9fbf1569500084816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f05c1cbaaa8d2bfc338ac531901064ee1572997062469" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    swan.onSocketOpen(function (res) {
-        console.log('WebSocket连接已打开！', res);
-    });
+    onSocketOpen(){
+        swan.onSocketOpen(function (res) {
+            swan.showToast({
+                title: '监听到WebSocket连接已打开',
+                content: JSON.stringify(res)
+            })
+            console.log('WebSocket连接已打开！', res);
+        });
 
-    swan.connectSocket({
-        url: 'wss://echo.websocket.org',
-        header: {},
-        protocols: [''],
-        success: res => {
-            console.log('connectSocket success', res);
-        },
-        fail: err => {
-            console.log('connectSocket fail', err);
-        }
-    });
+        swan.connectSocket({
+            url: 'wss://echo.websocket.org',
+            header: {},
+            protocols: [''],
+            success: res => {
+                console.log('connectSocket success', res);
+            },
+            fail: err => {
+                console.log('connectSocket fail', err);
+            }
+        });
+    }
 });
 ```

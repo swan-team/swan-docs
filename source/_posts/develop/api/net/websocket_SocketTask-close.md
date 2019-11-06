@@ -21,3 +21,42 @@ sidebar: websocket_SocketTask-close
 |fail  |Function  |  否 || 接口调用失败的回调函数|
 |complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**示例**：
+
+<a href="swanide://fragment/50264d121d923997bdef399eb6c30ffe1572998206666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    onShow() {
+        const socketTask = swan.connectSocket({
+            url: 'wss://echo.websocket.org',
+            header: {},
+            protocols: ['name'],
+            success: function (res) {
+                console.log('connectSocket success', res.socketTaskId)
+            },
+            fail: function (err) {
+                console.log('connectSocket fail', err);
+            }
+        });
+        this.socketTask = socketTask
+    },
+    socketTaskClose() {
+       this.socketTask.close({
+            success: res => {
+                console.log('关闭WebSocket成功', res);
+                swan.showToast({
+                    title: '关闭WebSocket成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('关闭WebSocket失败', err);
+            }
+        });
+    }
+});
+```
+
