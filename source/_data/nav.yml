@@ -3278,9 +3278,9 @@
                     text: sendTemplateMessage
                     name: sendTemplateMessage
               -
-                link: /develop/serverapi/contact_api
+     
                 text: 客服消息
-                name: contact_api
+
                 sidebar:
                   -
                     link: /develop/serverapi/contact_api 
@@ -3504,6 +3504,10 @@
                 link: /develop/devtools/cloudtext
                 text: 云测试
                 name: cloudtext
+              -
+                link: /develop/devtools/pre_testtool
+                text: 预检测工具
+                name: pre_testtool                
               -
                 link: /develop/devtools/audits
                 text: 体验评分
