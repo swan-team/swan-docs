@@ -618,5 +618,9 @@
     };
     $(doc).ready(function () {
         docs.start();
+        try {
+            $('.m-doc-sidebar-selected')[0].scrollIntoView();
+        }
+        catch (err) {}
     });
 })(window, document, window.$);
