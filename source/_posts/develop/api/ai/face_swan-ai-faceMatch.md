@@ -49,7 +49,21 @@ sidebar: face_swan-ai-faceMatch
 |---|---|---|
 |face_token|string |人脸的唯一标志|
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceMatch.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/ae12872d24c04bfd2071e38cbbf2a1aa1569415830853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

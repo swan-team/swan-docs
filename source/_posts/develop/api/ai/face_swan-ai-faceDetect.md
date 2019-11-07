@@ -163,7 +163,21 @@ sidebar: face_swan-ai-faceDetect
 |right_cheek| number |右脸颊遮挡比例，[0-1]，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1]，1 表示完全遮挡。|
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceDetect.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/fc4fb555f1a72d086ef4698de4c0a8b01569415643600" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

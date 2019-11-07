@@ -41,7 +41,21 @@ sidebar:  classify_swan-ai-advancedGeneralIdentify
 |score|Number	|置信度，0-1|
 |root|	String|	识别结果的上层标签，有部分钱币、动漫、烟酒等tag无上层标签。|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/advancedGeneralIdentify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/c2ab942b5e6b9ac02739a7e70ec298c11569500914210" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

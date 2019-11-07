@@ -53,7 +53,21 @@ sidebar:  classify_swan-ai-carClassify
 |height|  Number| 像素高|
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/carClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

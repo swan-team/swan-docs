@@ -31,7 +31,21 @@ sidebar: image_swan-getImageInfo
 |type|String|返回图片的格式 |
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/getImageInfo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/b439e751ff3f4f8002c24abb715bdda11569391409791" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

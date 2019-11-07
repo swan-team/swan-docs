@@ -40,7 +40,21 @@ sidebar: face_swan-ai-facePersonVerify
 
 
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/facePersonVerify.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/5d891de85f044848f89a94607f3130931569501369472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

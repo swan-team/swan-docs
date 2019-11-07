@@ -46,7 +46,21 @@ sidebar: image_swan-chooseImage
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/chooseImage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/25ee1bf808f49aeae2975827d0fd654e1569416277213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

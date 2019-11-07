@@ -197,7 +197,7 @@ sidebar: thirdparty_agreement
 
 ## 八、 其他 
 
-1. 本协议内容同时包括[《百度用户协议》](https://passport.baidu.com/static/passpc-account/html/protocal.html)、[《智能小程序平台服务条款》](https://smartprogram.baidu.com/docs/operations/service/)、[《百度公司移动应用软件服务协议》](https://s.bdstatic.com/common/agreement/ios.html)、[《百度公司移动应用隐私政策》](https://s.bdstatic.com/common/agreement/privacy.html)、本协议附件中的协议或规则、百度公司可能不断发布的关于本服务的其他相关协议、规则等内容。上述内容一经正式发布，即为本协议不可分割的组成部分，您同样应当遵守。上述内容与本协议存在冲突的，以本协议为准。
+1. **本协议内容同时包括[《百度用户协议》](https://passport.baidu.com/static/passpc-account/html/protocal.html)、[《智能小程序平台服务条款》](https://smartprogram.baidu.com/docs/operations/service/)、[《百度公司移动应用软件服务协议》](https://s.bdstatic.com/common/agreement/ios.html)、[《百度公司移动应用隐私政策》](https://s.bdstatic.com/common/agreement/privacy.html)、本协议附件中的协议或规则、百度公司可能不断发布的关于本服务的其他相关协议、规则等内容。上述内容一经正式发布，即为本协议不可分割的组成部分，您同样应当遵守。上述内容与本协议存在冲突的，以本协议为准。**
 
 2. 本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。
 

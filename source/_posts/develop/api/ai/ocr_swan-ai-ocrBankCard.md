@@ -39,7 +39,21 @@ sidebar: ocr_swan-ai-ocrBankCard
 |bank_name |String | 银行名，不能识别时为空 。|
 |bank_card_type | Number | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrBankCard.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/1e8e28ffd4bb694c9c9b006da1b3f31c1569500427353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
