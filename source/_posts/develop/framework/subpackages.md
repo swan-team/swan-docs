@@ -17,48 +17,82 @@ sidebar: subpackages
 将智能小程序按照业务特点合理的分包，可以提升智能小程序的加载速度，优化用户体验。
 
 ### 使用方法
+
+[在开发者工具中预览效果](swanide://fragment/5ec5755c02bef7496cfadf0cccd8baef1573114425086)
+
 假设支持分包的小程序，目录结构如下：
+
 ```
 ├── app.js
 ├── app.json
 ├── app.css
-├── subpackage
+├── packageA
 │   └── pages
-│       ├── subpageone
-│       │   ├── subpageone.swan
-│       │   ├── subpageone.css
-│       │   ├── subpageone.json
-│       │   └── subpageone.js
-│       └── suboagetwo
-│           ├── suboagetwo.swan
-│           ├── suboagetwo.css
-│           ├── suboagetwo.json
-│           └── suboagetwo.js
+│       ├── pageOne
+│       │   
+│       └── pageTwo
+│ 
+├── packageB
+│   └── pages
+│       ├── pageThree
+│       │   
+│       └── pageFour
+│           
 ├── pages
 │   └── index
-        ├── index.swan
-│       ├── index.css
-│       ├── index.json
-│       └── index.js
-└── utils
+│   │   
+│   └── tabOne           
+└
 ```
 开发者通过在 app.json subPackages 字段声明项目分包结构：
 
 ```js
 {
+    // 主包，推荐只保留最常用的核心页面：启动页、tab页及公共资源
     "pages": [
-        "page/index/index"
+        "pages/index/index",
+	"pages/tabOne/tabOne"
     ],
     "subPackages": [
         {
-            "root": "subpackage",
+            "root": "packageA",
             "pages": [
-                "pages/subpageone/subpageone",
-                "pages/subpagetwo/subpagetwo"
+                "pages/pageOne/pageOne",
+                "pages/pageTwo/pageTwo"
+            ]
+        },
+	{
+            "root": "packageB/pages",
+            "pages": [
+                "pageThree/pageThree",
+		"pageFour/pageFour"
             ]
         }
-    ]
+    ],
+    "tabBar": {
+        "borderStyle": "black",
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },{
+            "pagePath": "pages/tabOne/tabOne",
+            "text": "tabOne"
+        }]
+    }
 }
+```
+
+主包页面跳转分包页面
+
+```html
+<!-- index.swan -->
+<view class="navigate-list">
+    <navigator url="/packageA/pages/pageOne/pageOne" class="navigator">
+        跳 pageOne
+    </navigator>
+</view>
 ```
 
 subPackages 中，每个分包的配置有以下几项：
