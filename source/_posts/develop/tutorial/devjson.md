@@ -14,11 +14,11 @@ sidebar: devjson
 
 ```js
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "智能小程序接口功能演示",
-  "backgroundColor": "#eeeeee",
-  "backgroundTextStyle": "light"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智能小程序接口功能演示",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
 }
 ```
 
