@@ -56,7 +56,7 @@ sidebar: face_swan-ai-faceMatch
         <img src="https://b.bdstatic.com/miniapp/images/faceMatch.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="https://b.bdstatic.com/miniapp/images/faceMatch2.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

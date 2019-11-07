@@ -3280,7 +3280,7 @@
               -
      
                 text: 客服消息
-
+                name: serverapi
                 sidebar:
                   -
                     link: /develop/serverapi/contact_api 
@@ -4436,11 +4436,11 @@
           sidebar:
           -
             link: /operations/thirdparty_agreement
-            text: 智能小程序第三方平台开发者服务协议
+            text: 第三方服务条款
             name: thirdparty_agreement
           -
             link: /operations/thirdparty_low
-            text: 第三方平台服务—开发者授权条款 
+            text: 第三方平台授权法律条款
             name: thirdparty_low
 
 # 6
