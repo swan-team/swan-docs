@@ -50,7 +50,7 @@ sidebar: image_swan-chooseImage
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/chooseImage.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseImage2.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
