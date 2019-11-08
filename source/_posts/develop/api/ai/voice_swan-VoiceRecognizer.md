@@ -6,6 +6,7 @@ sidebar: voice_swan-ai-VoiceRecognizer
 ---
 
 
+**解释**：语音识别
 
 **object 参数说明**
 
