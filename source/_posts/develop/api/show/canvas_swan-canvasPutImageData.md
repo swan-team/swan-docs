@@ -47,6 +47,7 @@ Page({
         CanvasContext.setFillStyle('#0f0f0f');
         CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
         CanvasContext.fill();
+        
         CanvasContext.beginPath();
         CanvasContext.setStrokeStyle('#0000ff');
         CanvasContext.moveTo(90, 70);
@@ -54,6 +55,7 @@ Page({
         CanvasContext.lineTo(90, 80);
         CanvasContext.closePath();
         CanvasContext.stroke();
+        
         CanvasContext.beginPath();
         CanvasContext.setStrokeStyle('#0000ff');
         CanvasContext.moveTo(130, 70);
@@ -61,6 +63,7 @@ Page({
         CanvasContext.lineTo(130, 80);
         CanvasContext.closePath();
         CanvasContext.stroke();
+        
         CanvasContext.beginPath();
         CanvasContext.setFillStyle('#00ff00');
         CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
@@ -72,16 +75,18 @@ Page({
         CanvasContext.setStrokeStyle('#00ff00');
         CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
         CanvasContext.stroke();
+        
         CanvasContext.moveTo(100, 50);
         CanvasContext.quadraticCurveTo(75, 25, 50, 50);
         CanvasContext.stroke();
+        
         CanvasContext.draw();
     },
     canvasPutImageData() {
         swan.canvasGetImageData({
             canvasId: 'canvas1',
             x: 0,
-           y: 0,
+            y: 0,
             width: 200,
             height: 200,
             success: res => {
