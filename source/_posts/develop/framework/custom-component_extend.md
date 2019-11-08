@@ -18,20 +18,20 @@ sidebar: custom-component_extend
 ```js
 // behavior.js
 module.exports = Behavior({
-  definitionFilter(defFields) {
-    defFields.data.from = 'behavior'
-  }
+    definitionFilter(defFields) {
+        defFields.data.from = 'behavior'
+    }
 })
 
 // component.js
 Component({
-  data: {
-    from: 'component'
-  },
-  behaviors: [require('behavior.js')],
-  ready() {
-    console.log(this.data.from) // 此处会发现输出 behavior 而不是 component
-  }
+    data: {
+        from: 'component'
+    },
+    behaviors: [require('behavior.js')],
+    ready() {
+        console.log(this.data.from) // 此处会发现输出 behavior 而不是 component
+    }
 });
 ```
 
@@ -54,21 +54,21 @@ module.exports = Behavior({
 
 // behavior2.js
 module.exports = Behavior({
-  behaviors: [require('behavior3.js')],
-  definitionFilter(defFields, definitionFilterArr) {
-    // definitionFilterArr[0](defFields)
-  }
+    behaviors: [require('behavior3.js')],
+    definitionFilter(defFields, definitionFilterArr) {
+        // definitionFilterArr[0](defFields)
+    }
 });
 
 // behavior1.js
 module.exports = Behavior({
-  behaviors: [require('behavior2.js')],
-  definitionFilter(defFields, definitionFilterArr) {}
+    behaviors: [require('behavior2.js')],
+    definitionFilter(defFields, definitionFilterArr) {}
 });
 
 // component.js
 Component({
-  behaviors: [require('behavior1.js')]
+    behaviors: [require('behavior1.js')]
 });
 ```
 
