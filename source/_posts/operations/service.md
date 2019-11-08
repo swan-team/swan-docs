@@ -7,7 +7,7 @@ sidebar: service
 
 欢迎您使用智能小程序平台！
 
-为使用智能小程序平台服务（以下简称“本服务”），**您应当阅读并遵守《智能小程序平台服务协议》（以下简称“本协议”），本协议视与《百度用户协议》、《[智能小程序第三方平台开发者服务协议](https://smartprogram.baidu.com/docs/operations/thirdparty_agreement/)》、《[智能小程序平台运营规范](https://smartprogram.baidu.com/docs/operations/specification/)》等相关协议和规则视为一个整体，除非您已阅读并接受本协议及相关协议、规则的所有条款，否则，请您停止使用本服务。**
+为使用智能小程序平台服务（以下简称“本服务”），**您应当阅读并遵守《智能小程序平台服务协议》（以下简称“本协议”），本协议视与《[百度用户协议](https://passport.baidu.com/static/passpc-account/html/protocal.html)》、《[智能小程序第三方平台开发者服务协议](https://smartprogram.baidu.com/docs/operations/thirdparty_agreement/)》、《[智能小程序平台运营规范](https://smartprogram.baidu.com/docs/operations/specification/)》等相关协议和规则视为一个整体，除非您已阅读并接受本协议及相关协议、规则的所有条款，否则，请您停止使用本服务。**
 
 **<br/>您使用本服务，即视为您已阅读并同意上述协议、规则等的约束。您有违反本协议的任何行为时，百度公司有权依照违反情况，随时单方限制、中止或终止向您提供本服务，并有权追究您的相关责任。**
 
