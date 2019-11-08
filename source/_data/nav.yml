@@ -1591,6 +1591,10 @@
                       link: /develop/api/media/recorder_#RecorderManager-onStop
                       text: RecorderManager.onStop
                       name:  recorder_RecorderManager-onStop
+                    -
+                      link: /develop/api/media/recorder_#RecorderManager-onError
+                      text: RecorderManager.onError
+                      name:  recorder_RecorderManager-onError                     
                 - 
                   link: /develop/api/media/recorder_swan-getAvailableAudioSources
                   text: swan.getAvailableAudioSources
