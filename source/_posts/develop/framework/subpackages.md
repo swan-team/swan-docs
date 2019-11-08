@@ -209,8 +209,8 @@ app.global = {};
 - app.js 中
 ```js
 App({
-  data: 123,
-  from: 'swan'
+    data: 123,
+    from: 'swan'
 });
 
 console.log(getApp()); // {global: {}, data: 456, from: 'swan'}
@@ -237,36 +237,37 @@ API调用方式参考：<a href="https://smartprogram.baidu.com/docs/develop/api
 全局配置方法：
 ```json
 {
-  "pages": ["pages/index"],
-  "subPackages": [
-    {
-      "root": "important",
-      "pages": ["index"],
-    },
-    {
-      "root": "sub1",
-      "pages": ["index"],
-    },
-    {
-      "name": "hello",
-      "root": "path/to",
-      "pages": ["index"]
-    },
-    {
-      "root": "sub3",
-      "pages": ["index"]
-    }
-  ],
-  "preloadRule": {
-    "pages/index": {
-      "network": "all",
-      "packages": ["important"]
-    },
-    "sub1/index": {
-      "packages": ["hello", "sub3"]
-    },
-    "sub3/index": {
-      "packages": ["path/to"]
+    "pages": ["pages/index"],
+    "subPackages": [
+        {
+            "root": "important",
+            "pages": ["index"],
+        },
+        {
+            "root": "sub1",
+            "pages": ["index"],
+        },
+        {
+            "name": "hello",
+            "root": "path/to",
+            "pages": ["index"]
+        },
+        {
+            "root": "sub3",
+            "pages": ["index"]
+        }
+    ],
+    "preloadRule": {
+        "pages/index": {
+            "network": "all",
+            "packages": ["important"]
+        },
+        "sub1/index": {
+            "packages": ["hello", "sub3"]
+        },
+        "sub3/index": {
+            "packages": ["path/to"]
+        }
     }
 }
 ```
