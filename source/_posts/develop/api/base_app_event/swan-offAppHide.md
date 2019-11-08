@@ -33,7 +33,7 @@ sidebar: swan-offAppHide
 
 **代码示例**：
 
-<a href="swanide://fragment/77af814357acd94631e44c46addbbff91567706941671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6e0d43a789932418eb363dbcd6f43d241573102069062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
