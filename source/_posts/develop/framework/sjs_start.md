@@ -40,19 +40,19 @@ sidebar: sjs_start
 // pages/utils.sjs中编写SJS逻辑
 
 const bar = function(name) {
-  return 'swan-' + name;
+    return 'swan-' + name;
 }
 const foo = 'hello swan';
 
 export default {
-  bar: bar,
-  foo: foo
+    bar: bar,
+    foo: foo
 };
 
 // 或者使用CMD的形式导出
 // module.exports = {
-//   bar: bar,
-//   foo: foo
+//     bar: bar,
+//     foo: foo
 // };
 ```
 
@@ -127,8 +127,8 @@ const bar = function(name) {
 const foo = 'hello swan';
 
 export default {
-  bar: bar,
-  foo: foo
+    bar: bar,
+    foo: foo
 };
 </import-sjs>
 

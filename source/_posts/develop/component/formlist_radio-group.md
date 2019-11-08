@@ -49,8 +49,8 @@ sidebar: formlist_radio-group
     <radio-group bindchange="radioChange" class="radio-group">
         <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
         <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
-         <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
-          <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
+        <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
+        <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
     </radio-group>
 
     <view class="title">推荐示例</view>
@@ -58,7 +58,9 @@ sidebar: formlist_radio-group
         <radio-group bindchange="radioChange">
             <label s-for="item in items" class="radio-background-active" for="{{item.id}}">
                 <view class="item">
-                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">&nbsp;&nbsp;{{item.text}}</radio>
+                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">
+                         &nbsp;&nbsp;{{item.text}}
+                    </radio>
                 </view>
             </label>
         </radio-group>
@@ -92,7 +94,7 @@ Page({
     },
 
     formSubmit: e => {
-        console.log('ljh', e);
+        console.log(e);
     }
 });
 ```

@@ -27,7 +27,7 @@ sidebar: custom-component
 ```js
 // 自定义组件配置 (custom.json)
 {
-  "component": true
+    "component": true
 }
 ```
 
