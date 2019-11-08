@@ -136,7 +136,7 @@ sidebar: base_rich-text
                 <view class="cont">{{nodeSnip}}</view>
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
-            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem">
+            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem;">
                 <rich-text nodes="{{nodes}}" selectable="true"></rich-text>
             </block>
         </view>
@@ -147,29 +147,29 @@ sidebar: base_rich-text
 * 在 js 文件中
 
 ```js
-const htmlSnip
-=`<div class="div_class">
-  <h1>Title</h1>
-  <p class="p">
-    Life is&nbsp;<i>like</i>&nbsp;a box of
-    <b>&nbsp;chocolates</b>
-  </p>
+const htmlSnip =
+`<div class="div_class">
+    <h1>Title</h1>
+    <p class="p">
+        Life is&nbsp;<i>like</i>&nbsp;a box of
+        <b>&nbsp;chocolates</b>
+    </p>
 </div>`;
-const nodeSnip
-=`Page({
-  data: {
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 60px; color: #4F99FB;'
-      },
-      children: [{
-        type: 'text',
-        text: 'You never know what you're gonna get.'
-      }]
-    }]
-  }
+const nodeSnip =
+`Page({
+    data: {
+        nodes: [{
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you're gonna get.'
+            }]
+        }]
+    }
 })`;
 
 Page({
