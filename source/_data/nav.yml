@@ -1588,11 +1588,11 @@
                       text: RecorderManager.onPause
                       name:  recorder_RecorderManager-onPause
                     -
-                      link: /develop/api/media/recorder_#RecorderManager-onStop
+                      link: /develop/api/media/recorder_RecorderManager-onStop
                       text: RecorderManager.onStop
                       name:  recorder_RecorderManager-onStop
                     -
-                      link: /develop/api/media/recorder_#RecorderManager-onError
+                      link: /develop/api/media/recorder_RecorderManager-onError
                       text: RecorderManager.onError
                       name:  recorder_RecorderManager-onError                     
                 - 
@@ -1901,7 +1901,10 @@
                       link: /develop/api/media/liveplayercontext_LivePlayerContext-exitFullScreen
                       text: LivePlayerContext.exitFullScreen
                       name: liveplayercontext_LivePlayerContext-exitFullScreen
-
+                    -
+                      link: /develop/api/media/liveplayercontext_LivePlayerContext-resume
+                      text: LivePlayerContext.resume
+                      name: liveplayercontext_LivePlayerContext-resume
             -
               
               text: 相机组件控制

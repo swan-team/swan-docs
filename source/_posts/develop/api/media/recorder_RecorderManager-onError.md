@@ -2,7 +2,7 @@
 title: RecorderManager.onError
 header: develop
 nav: api
-sidebar: recorder_tRecorderManager-onError
+sidebar: recorder_RecorderManager-onError
 ---
 
 
