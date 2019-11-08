@@ -211,7 +211,7 @@ Page({
 ```js
 /* 组件 custom-component.js */
 Component({
-  externalClasses: ['external-class']
+    externalClasses: ['external-class']
 });
 
 ```
@@ -229,7 +229,7 @@ Component({
 ```
 ```css
 .red-text {
-  color: red;
+    color: red;
 }
 ```
 
@@ -244,9 +244,9 @@ Component({
 ```js
 /* 组件 custom-component.js */
 Component({
-  options: {
-    addGlobalClass: true,
-  }
+    options: {
+        addGlobalClass: true,
+    }
 });
 ```
 
@@ -258,7 +258,7 @@ Component({
 ```css
 /* 组件外的样式定义 */
 .global-class {
-  color: red;
+    color: red;
 }
 ```
 
