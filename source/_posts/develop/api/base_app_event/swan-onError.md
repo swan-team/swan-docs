@@ -80,7 +80,7 @@ App({
 ```
 
 * 示例三：可根据开发者的业务逻辑调整用法 
-<a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8efbf176816348c943901a2e541563271573098386086" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

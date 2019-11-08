@@ -18,3 +18,23 @@ sidebar: voice_swan-ai-getVoiceRecognizer
 **方法参数**：无
 
 **返回值**：voiceRecognizer
+
+**代码示例**：
+
+<a href="swanide://fragment/6e0d43a789932418eb363dbcd6f43d241573102069062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onShow() {
+        this.voiceManager = swan.ai.getVoiceRecognizer();
+    },
+    onStart() {
+        this.voiceManager.onStart(() => { 
+            swan.showToast({
+                title: 'start'
+            });
+        });
+    }
+    
+});
+```
