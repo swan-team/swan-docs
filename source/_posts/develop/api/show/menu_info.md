@@ -35,5 +35,5 @@ try {
     console.log('getMenuButtonBoundingClientRect success', result);
 } catch (err) {
     console.log('getMenuButtonBoundingClientRect fail', err);
-    
+}   
 ```

@@ -33,7 +33,7 @@ sidebar: swan-offPageNotFound
 
 **代码示例**：
 
-<a href="swanide://fragment/89c7e6b8401b308e07556874b8467b271567706228311" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/972f69ca3f6e83cd0a43548655c752951573101506473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -47,6 +47,10 @@ App({
     onShow() {
         setTimeout(function() {
             swan.offPageNotFound();
+            swan.showModal({
+                title: '',
+                content: '此后将不再触发swan.onPageNotFound回调'
+            });
         }, 3000);
     }
 });

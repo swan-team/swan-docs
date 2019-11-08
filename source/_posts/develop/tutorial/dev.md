@@ -66,7 +66,7 @@ Page({
     data: {
 	persons: [
 	    {name: 'superman'},
-		{name: 'spiderman'}
+	    {name: 'spiderman'}
 	]
     }
 });

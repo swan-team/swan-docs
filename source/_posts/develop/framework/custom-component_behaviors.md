@@ -18,19 +18,19 @@ sidebar: custom-component_behaviors
 ```js
 // my-behavior.js
 module.exports = Behavior({
-  behaviors: [],
-  properties: {
-    myBehaviorProperty: {
-      type: String,
-      value: 'behavior'
-    }
+    behaviors: [],
+    properties: {
+        myBehaviorProperty: {
+            type: String,
+            value: 'behavior'
+        }
   },
   data: {
-    myBehaviorData: {}
+      myBehaviorData: {}
   },
   attached: function(){},
   methods: {
-    myBehaviorMethod: function(){}
+      myBehaviorMethod: function(){}
   }
 });
 ```
@@ -41,19 +41,19 @@ module.exports = Behavior({
 // my-component.js
 var myBehavior = require('my-behavior')
 Component({
-  behaviors: [myBehavior],
-  properties: {
-    myProperty: {
-      type: String,
-      value: 'component'
-    }
+    behaviors: [myBehavior],
+    properties: {
+        myProperty: {
+            type: String,
+            value: 'component'
+        }
   },
   data: {
-    myData: {}
+      myData: {}
   },
   attached: function(){},
   methods: {
-    myMethod: function(){}
+      myMethod: function(){}
   }
 });
 ```
@@ -82,7 +82,7 @@ Component({
 
 ```js
 Component({
-  behaviors: ['swan://form-field']
+    behaviors: ['swan://form-field']
 });
 ```
 
@@ -113,10 +113,10 @@ form 组件可以识别这些自定义组件，并在 submit 事件中返回组�
 ```js
 // 自定义组件的js文件
 Component({
-  behaviors: ['swan://component-export'],
-  export() {
-    return { componentField: 'componentValue' }
-  }
+    behaviors: ['swan://component-export'],
+    export() {
+        return { componentField: 'componentValue' }
+    }
 });
 ```
 

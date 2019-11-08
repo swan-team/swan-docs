@@ -19,10 +19,10 @@ sidebar: custom-component_generic
 ```html
 <!-- selectable-group.swan -->
 <view s-for="{{labels}}">
-  <label bindtap="itemTap" data-index="{{index}}">
-    <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
-    {{item}}
-  </label>
+    <label bindtap="itemTap" data-index="{{index}}">
+        <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
+        {{item}}
+    </label>
 </view>
 ```
 
@@ -30,9 +30,9 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": true
-  }
+    "componentGenerics": {
+        "selectable": true
+    }
 }
 ```
 
@@ -55,10 +55,10 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "usingComponents": {
-    "custom-radio": "path/to/custom/radio",
-    "custom-checkbox": "path/to/custom/checkbox"
-  }
+    "usingComponents": {
+        "custom-radio": "path/to/custom/radio",
+        "custom-checkbox": "path/to/custom/checkbox"
+    }
 }
 ```
 
@@ -68,11 +68,11 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": {
-      "default": "path/to/default/component"
+    "componentGenerics": {
+        "selectable": {
+            "default": "path/to/default/component"
+        }
     }
-  }
 }
 ```
 

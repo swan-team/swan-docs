@@ -46,42 +46,42 @@ sidebar: app_service_pagesetData
 ```js
 // index.js
 Page({
-  data: {
-    text: 'init data',
-    num: 0,
-    arr: [{text: 'init data'}],
-    obj: {
-      text: 'init data'
+    data: {
+        text: 'init data',
+        num: 0,
+        arr: [{text: 'init data'}],
+        obj: {
+            text: 'init data'
+        }
+    },
+    changeText() {
+        // 不要直接通过 this.data.text = 'changed data' 修改this.data，应该使用 setData
+        this.setData({
+            text: 'changed data'
+        });
+    },
+    changeNum() {
+        // 或者，可以修改 this.data 之后马上用 setData 设置一下修改了的字段
+        this.data.num = 1
+        this.setData({
+            num: this.data.num
+        });
+    },
+    changeItemInArr() {
+        // 对于对象或数组字段，可以直接修改一个子字段，这样方式会有带来更好的性能
+        this.setData({
+            'arr[0].text':'changed data'
+        });
+    },
+    changeItemInObj(){
+        this.setData({
+            'obj.text': 'changed data'
+        });
+    },
+    addNewField() {
+        this.setData({
+            'newField.text': 'new data'
+        });
     }
-  },
-  changeText() {
-    // 不要直接通过 this.data.text = 'changed data' 修改this.data，应该使用 setData
-    this.setData({
-      text: 'changed data'
-    });
-  },
-  changeNum() {
-    // 或者，可以修改 this.data 之后马上用 setData 设置一下修改了的字段
-    this.data.num = 1
-    this.setData({
-      num: this.data.num
-    });
-  },
-  changeItemInArr() {
-    // 对于对象或数组字段，可以直接修改一个子字段，这样方式会有带来更好的性能
-    this.setData({
-      'arr[0].text':'changed data'
-    });
-  },
-  changeItemInObj(){
-    this.setData({
-      'obj.text': 'changed data'
-    });
-  },
-  addNewField() {
-    this.setData({
-      'newField.text': 'new data'
-    });
-  }
 });
 ```

@@ -82,9 +82,9 @@ Hello world
 ```js
 // index.js
 Page({
-  data: {
-    array: [1, 3, 6, 8, 2, 0]
-  }
+    data: {
+        array: [1, 3, 6, 8, 2, 0]
+    }
 });
 ```
 ```js

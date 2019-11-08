@@ -29,6 +29,18 @@ Page({
 
 ### onReachBottom
 **解释**：在`Page`中定义 onReachBottom 处理函数，监听该页面用户上拉触底事件。
+**示例代码**：
+<a href="swanide://fragment/231087fc63ccb30eb5f7bffbd9b40af21573190784925" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// page.js
+Page({
+    onReachBottom(e) {
+        console.log('onReachBottom')
+        // 常见的业务场景是开发者在这里请求分页数据
+    }
+});
+```
 **说明**：
 * 可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBottomDistance 。
 * 在触发距离内滑动期间，该事件只会被触发一次。
@@ -41,6 +53,18 @@ Page({
 |字段 |类型  |说明 |
 |---- | ---- | ---- |
 |scrollTop|Number|页面在垂直方向已滚动的距离（单位px）|
+
+**示例代码**：
+<a href="swanide://fragment/9c275e938b5b6fe4fdb30c1c31b057511573192145081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// page.js
+Page({
+    onPageScroll(e) {
+        console.log(e)
+    }
+});
+```
 
 **注意：**
 - 请在需要的时候定义此方法，以减少不必要的事件派发对渲染层-逻辑层通信造成影响；
@@ -189,11 +213,11 @@ Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能�
 ```js
 // tab.js
 Page({
-  onTabItemTap(item) {
-    console.log(item.index);
-    console.log(item.pagePath);
-    console.log(item.text);
-  }
+    onTabItemTap(item) {
+        console.log(item.index);
+        console.log(item.pagePath);
+        console.log(item.text);
+    }
 });
 ```
 

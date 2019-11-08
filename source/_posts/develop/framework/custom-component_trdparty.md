@@ -24,8 +24,8 @@ npm install
 
 ```
 "usingComponents": {
-    "swan-custom-component":"swan-custom-component"
-    }
+    "swan-custom-component": "swan-custom-component"
+}
 ```
 
 ## 开发 npm 包

@@ -24,14 +24,14 @@ sidebar: custom_component
 
 ```js
 Component({
-  doSth() {
-    this.setData({number: 1}) // 直接在当前同步流程中执行
+    doSth() {
+        this.setData({number: 1}) // 直接在当前同步流程中执行
 
-    swan.nextTick(() => {
-      this.setData({number: 3}) // 在当前同步流程结束后，下一个时间片执行
-    })
+        swan.nextTick(() => {
+            this.setData({number: 3}) // 在当前同步流程结束后，下一个时间片执行
+        })
 
-    this.setData({number: 2}) // 直接在当前同步流程中执行
-  }
+        this.setData({number: 2}) // 直接在当前同步流程中执行
+    }
 });
 ```

@@ -73,28 +73,27 @@ swan.openReplyEditor({
     moduleList: ['emoji'],
     emojiPath: '../../emojidata',
     success: res => {
-      console.log('openReplyEditor success', res);
-      // 点击了发表按钮
-      if (res.status === 'reply') {
-		    // 开发者处理返回内容。
-        // 主动关闭评论发布器
-        swan.closeReplyEditor({
-          success: res => {
-            console.log('closeReplyEditor success', res);
-          }
-        });
-      }
-      // 点击发布器外隐藏发布器，编辑的内容将存为草稿
-      else if (res.status === 'draft') {
-          // 处理草稿内容，如ui处理
-      }
-
+        console.log('openReplyEditor success', res);
+        // 点击了发表按钮
+        if (res.status === 'reply') {
+            // 开发者处理返回内容。
+            // 主动关闭评论发布器
+            swan.closeReplyEditor({
+                success: res => {
+                    console.log('closeReplyEditor success', res);
+                }
+            });
+        }
+        // 点击发布器外隐藏发布器，编辑的内容将存为草稿
+        else if (res.status === 'draft') {
+            // 处理草稿内容，如ui处理
+        }
     },
     fail: function (res) {
-      console.log('openReplyEditor fail', res);
+        console.log('openReplyEditor fail', res);
     },
     complete: function (res) {
-      console.log('openReplyEditor complete', res);
+        console.log('openReplyEditor complete', res);
     }
 })
 ```
