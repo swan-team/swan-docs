@@ -14,7 +14,7 @@ sidebar: app_service_routefile
 ```js
 // app.js
 App({
-  data: 1
+    data: 1
 });
 ```
 

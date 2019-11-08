@@ -16,12 +16,12 @@ SJS 支持部分 ES6 语法。
 ```js
 // demo.sjs
 function foo(){
-  let str = 'hello sjs';
-  if (true) {
-    let count = 2;
-  }
-  console.log(str); // hello sjs
-  console.log(count); // 引用错误：count 未定义
+    let str = 'hello sjs';
+    if (true) {
+        let count = 2;
+    }
+    console.log(str); // hello sjs
+    console.log(count); // 引用错误：count 未定义
 }
 ```
 
@@ -55,10 +55,10 @@ obj.getAge();
 ```js
 var num = 1;
 var obj = {
-  num, // 对象属性
-  printNum() { // 对象方法
+    num, // 对象属性
+    printNum() { // 对象方法
 	console.log(num);
-  }
+    }
 };
 obj.printNum(); // 1
 ```
@@ -111,7 +111,7 @@ a === 1; // true
 
 // 函数参数：解构赋值 + 默认值
 function r({a, b, c = 3, d = 4}) {
-  return a + b + c + d;
+    return a + b + c + d;
 }
 r({a: 1, b: 2}) === 10; // true
 ```
@@ -124,20 +124,20 @@ r({a: 1, b: 2}) === 10; // true
 ```js
 // 1. Default
 function f1(x, y = 2) {
-  // 如果不给y传值，或者传值为undefied，则y的值为12
-  return x + y;
+    // 如果不给y传值，或者传值为undefied，则y的值为12
+    return x + y;
 }
 f1(1) === 3; // true
 
 // 2. Rest
 function f2(x, ...arr) {
-  return x * arr.length;
+    return x * arr.length;
 }
 f2(3, 'hello', 'sjs') === 6; // true
 
 // 3. Spread
 function f3(x, y, z) {
-  return x + y + z;
+    return x + y + z;
 }
 f3(...[1,2,3]) == 6; // 数组解构
 

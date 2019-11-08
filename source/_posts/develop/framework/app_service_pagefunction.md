@@ -213,11 +213,11 @@ Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能�
 ```js
 // tab.js
 Page({
-  onTabItemTap(item) {
-    console.log(item.index);
-    console.log(item.pagePath);
-    console.log(item.text);
-  }
+    onTabItemTap(item) {
+        console.log(item.index);
+        console.log(item.pagePath);
+        console.log(item.text);
+    }
 });
 ```
 

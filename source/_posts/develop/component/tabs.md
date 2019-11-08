@@ -84,23 +84,21 @@ sidebar: nav
 ```js
 Page({
     data: {
-        tabs: [
-            {
-                name: 'beijing',
-                label: '北京',
-                badgeType: 'dot'
-            },
-            {
-                name: 'shanghai',
-                label: '上海' ,
-                badgeType: 'text'
-                badgeText: '66'
-            },
-            {
-                name: 'guangzhou',
-                label: '广州'
-            }
-        ]
+        tabs: [{
+            name: 'beijing',
+            label: '北京',
+            badgeType: 'dot'
+        },
+        {
+            name: 'shanghai',
+            label: '上海' ,
+            badgeType: 'text'
+            badgeText: '66'
+        },
+        {
+            name: 'guangzhou',
+            label: '广州'
+        }]
     },
     onTabClick(e) {
         console.log(e.detail.name);
@@ -145,20 +143,18 @@ Page({
 ```js
 Page({
     data: {
-        tabs: [
-            {
-                name: 'beijing',
-                label: '北京'
-            },
-            {
-                name: 'shanghai',
-                label: '上海'
-            },
-            {
-                name: 'guangzhou',
-                label: '广州'
-            }
-        ]
+        tabs: [{
+            name: 'beijing',
+            label: '北京'
+        },
+        {
+            name: 'shanghai',
+            label: '上海'
+        },
+        {
+            name: 'guangzhou',
+            label: '广州'
+        }]
     },
     onLoad(query) {
         if (query.city) {
@@ -174,7 +170,7 @@ Page({
     // 监听函数，点击切换 tabs 组件或者调用 swan.setURLQuery 时，url 发生变化自动触发
     onURLQueryChange({newURLQuery, oldURLQuery}) {
         console.log(newURLQuery, oldURLQuery)
-	    // 此时tab切换，刷新tabs下方视图数据
+	// 此时tab切换，刷新tabs下方视图数据
     }
 });
 

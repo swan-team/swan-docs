@@ -108,12 +108,12 @@ Component({
 ```js
 /* /components/custom/custom.js */
 Component({
-  methods: {
-    onLoad: function(options) {
-      console.log(options.paramA); // 123
-      console.log(options.paramB); // xyz
+    methods: {
+        onLoad: function(options) {
+            console.log(options.paramA); // 123
+            console.log(options.paramB); // xyz
+        }
     }
-  }
 });
 ```
 

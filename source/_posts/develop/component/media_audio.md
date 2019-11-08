@@ -65,17 +65,18 @@ sidebar: media_audio
 
 ```html
 <audio poster="{{poster}}" 
-       name="{{name}}" 
-       loop="false" 
-       author="{{author}}" 
-       src="{{src}}" 
-       id="myAudio" 
-       controls 
-       bind:error="error" 
-       bind:play="audioPlay" 
-       bind:pause="audioPause" 
-       bind:timeupdate="timeupdate" 
-       bind:ended="audioEnded">
+    name="{{name}}" 
+    loop="false" 
+    author="{{author}}" 
+    src="{{src}}" 
+    id="myAudio" 
+    controls 
+    bind:error="error" 
+    bind:play="audioPlay" 
+    bind:pause="audioPause" 
+    bind:timeupdate="timeupdate" 
+    bind:ended="audioEnded"
+>
 </audio>
 ```
 

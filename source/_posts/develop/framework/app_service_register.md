@@ -95,12 +95,12 @@ App({
 ```js
 // app.js
 App({
-  onPageNotFound(res) {
-    // 如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
-    swan.redirectTo({
-      url: 'path/to/otherPage'
-    });
-  }
+    onPageNotFound(res) {
+        // 如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
+        swan.redirectTo({
+            url: 'path/to/otherPage'
+        });
+    }
 });
 ```
 

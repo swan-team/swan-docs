@@ -81,16 +81,15 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 ```xml
 <!-- html -->
-
 <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js"></script>
 ```
 
 ```javascript
 // javascript
 swan.webView.navigateTo({url: '/pages/detail/index'});
-swan.webView.postMessage({ data: 'foo' })
-swan.webView.postMessage({ data: {foo: 'bar'} })
-swan.webView.getEnv(function(res) { console.log(res.smartprogram) // true })
+swan.webView.postMessage({data: 'foo'})
+swan.webView.postMessage({data: {foo: 'bar'} })
+swan.webView.getEnv(function(res) {console.log(res.smartprogram) // true })
 ```
 
 
@@ -120,9 +119,9 @@ web-view 网页中支持的接口有：
 
 ```javascript
 Page({
-  onShareAppMessage(options) {
-    console.log(options.webViewUrl)
-  }
+    onShareAppMessage(options) {
+        console.log(options.webViewUrl);
+    }
 })
 ```
 

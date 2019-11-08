@@ -67,7 +67,7 @@ sidebar: formlist_picker
 Page({
     data: {
         arrIndex: 0,
-        selector:['React', 'Vue', 'AngularJS']
+        selector: ['React', 'Vue', 'AngularJS']
     },
     selectorChange(e) {
         console.log('picker-selector changed，值为', e.detail.value);

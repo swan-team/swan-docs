@@ -20,9 +20,9 @@ sidebar: view_incident
 **定义事件的处理函数：**
 ```js
 Page({
-  tapHandle(e) {
-    swan.showToast(e.currentTarget.dataset.say);
-  }
+    tapHandle(e) {
+        swan.showToast(e.currentTarget.dataset.say);
+    }
 });
 ```
 **效果：**
@@ -61,13 +61,13 @@ Page({
 **示例代码**
 ```xml
 <view id="wrap" bindtap="handleTap1">
-  wrap
-  <view id="module" catchtap="handleTap2">
-    module
-    <view id="text" bindtap="handleTap3">
-      text
+    wrap
+    <view id="module" catchtap="handleTap2">
+        module
+        <view id="text" bindtap="handleTap3">
+            text
+        </view>
     </view>
-  </view>
 </view>
 ```
 
@@ -84,10 +84,10 @@ Page({
 **示例代码**
 ```xml
 <view id="wrap" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
-  wrap
-  <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
-    text
-  </view>
+    wrap
+    <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+        text
+    </view>
 </view>
 ```
 **效果**：

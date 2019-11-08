@@ -41,7 +41,7 @@ Page({
 const webViewUrl = location.href;
 swan.openShare({
     title: '智能小程序示例',
-	content: '世界很复杂，百度更懂你',
+    content: '世界很复杂，百度更懂你',
     appKey: 'y3dTfnWfkx2OXttMEMWlGHoB1KzMogm7', // 可通过 开发者平台 -> 设置 -> 开发设置 中查看
     path: `/pages/openShare/openShare?webViewUrl=${encodeURIComponent(webViewUrl)}`
 });

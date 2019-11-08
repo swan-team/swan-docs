@@ -55,7 +55,7 @@ sidebar: formlist_switch
     <view>
         <switch class="init-switch" checked disabled="false"></switch><text class="switch-text">开启</text>
         <switch class="init-switch"></switch><text class="switch-text">关闭</text>
-         <switch class="init-switch" color="#FF3333" checked></switch><text class="switch-text">红色</text>
+        <switch class="init-switch" color="#FF3333" checked></switch><text class="switch-text">红色</text>
     </view>
 
     <view class="title">推荐示例</view>

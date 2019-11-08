@@ -58,15 +58,15 @@ unionid| string | 小程序用户 + 开发者主体维度 唯一的id
 
 **返回值示例**
 ```
-    { 
-      "data": {
-			 "unionid": "St6PVMkgMDeh92Uq2EWfx6H"
-	   },
-	 "errmsg": "succ",
-	 "errno": 0,
-	 "request_id": "2321772211",
-	 "timestamp": 1563886782
-	}
+{ 
+    "data": {
+        "unionid": "St6PVMkgMDeh92Uq2EWfx6H"
+    },
+    "errmsg": "succ",
+    "errno": 0,
+    "request_id": "2321772211",
+    "timestamp": 1563886782
+}
 ```
 
 
