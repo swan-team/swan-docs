@@ -108,9 +108,9 @@ var o = {} //生成一个新的空对象
 
 //生成一个新的非空对象
 o = {
-  'string'  : 1,  //object 的 key 可以是字符串
-  const_var : 2,  //object 的 key 也可以是符合变量定义规则的标识符
-  func      : {}, //object 的 value 可以是任何类型
+    'string': 1,  //object 的 key 可以是字符串
+    const_var: 2,  //object 的 key 也可以是符合变量定义规则的标识符
+    func: {}, //object 的 value 可以是任何类型
 };
 
 //对象属性的读操作
@@ -131,7 +131,7 @@ console.log(13 === o.const_var);
 **属性**
 
 - constructor：返回字符串 "Object"。
-- console.log("Object" === {k:"1",v:"2"}.constructor)
+- console.log("Object" === {k: "1",v: "2"}.constructor)
 
 **方法**
 
@@ -144,12 +144,12 @@ function 支持以下的定义方式：
 ```js
 //方法 1
 function a (x) {
-  return x;
+    return x;
 }
 
 //方法 2
 var b = function (x) {
-  return x;
+    return x;
 }
 ```
 
@@ -157,7 +157,7 @@ function 同时也支持以下的语法（匿名函数，闭包等）：
 
 ```js
 var a = function (x) {
-  return function () { return x;}
+    return function () { return x;}
 }
 
 var b = a(100);
@@ -175,12 +175,12 @@ function 里面可以使用 arguments 关键词。该关键词目前只支持以
 
 ```js
 var a = function() {
-  console.log(3 === arguments.length);
-  console.log(100 === arguments[0]);
-  console.log(200 === arguments[1]);
-  console.log(300 === arguments[2]);
+    console.log(3 === arguments.length);
+    console.log(100 === arguments[0]);
+    console.log(200 === arguments[1]);
+    console.log(300 === arguments[2]);
 };
-a(100,200,300);
+a(100, 200, 300);
 ```
 
 **属性**
@@ -194,7 +194,7 @@ a(100,200,300);
 **示例代码：**
 
 ```js
-var func = function (a,b,c) { }
+var func = function (a, b, c) { }
 
 console.log('Function' === func.constructor);
 console.log(3 === func.length);
@@ -384,28 +384,28 @@ console.log(true === a.multiline);
 
 ```js
 var number = 10;
-console.log( 'Number' === number.constructor );
+console.log('Number' === number.constructor);
 
 var string = 'str';
-console.log( 'String' === string.constructor );
+console.log('String' === string.constructor);
 
 var boolean = true;
-console.log( 'Boolean' === boolean.constructor );
+console.log('Boolean' === boolean.constructor);
 
 var object = {};
-console.log( 'Object' === object.constructor );
+console.log('Object' === object.constructor);
 
 var func = function(){};
-console.log( 'Function' === func.constructor );
+console.log('Function' === func.constructor);
 
 var array = [];
-console.log( 'Array' === array.constructor );
+console.log('Array' === array.constructor);
 
 var date = getDate();
-console.log( 'Date' === date.constructor );
+console.log('Date' === date.constructor);
 
 var regexp = getRegExp();
-console.log( 'RegExp' === regexp.constructor );
+console.log('RegExp' === regexp.constructor);
 ```
 
 **typeof**
@@ -417,19 +417,19 @@ console.log( 'RegExp' === regexp.constructor );
 var number = 10;
 var boolean = true;
 var object = {};
-var func = function(){};
+var func = function() {};
 var array = [];
 var date = getDate();
 var regexp = getRegExp();
 
-console.log( 'number' === typeof number );
-console.log( 'boolean' === typeof boolean );
-console.log( 'object' === typeof object );
-console.log( 'function' === typeof func );
-console.log( 'object' === typeof array );
-console.log( 'object' === typeof date );
-console.log( 'object' === typeof regexp );
+console.log('number' === typeof number);
+console.log('boolean' === typeof boolean);
+console.log('object' === typeof object);
+console.log('function' === typeof func);
+console.log('object' === typeof array);
+console.log('object' === typeof date);
+console.log('object' === typeof regexp);
 
-console.log( 'undefined' === typeof undefined );
-console.log( 'object' === typeof null );
+console.log('undefined' === typeof undefined);
+console.log('object' === typeof null);
 ```
