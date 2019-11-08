@@ -74,8 +74,8 @@ const texts = [
     '十亿创新基金',
     '为创新类小程序提升流量及曝光',
     '......'
-  ]
-  let extraLine = []
+];
+let extraLine = [];
 
 Page({
     data: {
@@ -85,26 +85,26 @@ Page({
         extraLine : [],
     },
     add() {
-        extraLine.push(texts[extraLine.length % 12])
+        extraLine.push(texts[extraLine.length % 12]);
         this.setData({
-          text: extraLine.join('\n'),
-          canAdd: extraLine.length < 12,
-          canRemove: extraLine.length > 0
+            text: extraLine.join('\n'),
+            canAdd: extraLine.length < 12,
+            canRemove: extraLine.length > 0
         })
     },
     remove() {
-      if (extraLine.length > 0) {
-          extraLine.pop()
-          this.setData({
-            text: extraLine.join('\n'),
-            canAdd: extraLine.length < 12,
-            canRemove: extraLine.length > 0,
-          })
+        if (extraLine.length > 0) {
+            extraLine.pop();
+            this.setData({
+                text: extraLine.join('\n'),
+                canAdd: extraLine.length < 12,
+                canRemove: extraLine.length > 0,
+            })
         }
         else {
-          this.setData({
-            text: 'end'
-          })
+            this.setData({
+                text: 'end'
+            })
         }
     }
 });
