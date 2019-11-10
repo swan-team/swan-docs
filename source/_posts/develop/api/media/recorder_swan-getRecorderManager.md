@@ -16,3 +16,17 @@ sidebar: swan-getRecorderManager
 **方法参数**： 无
 
 **返回值**：recorderManager
+
+**示例**：
+<a href="swanide://fragment/7c14ca3d4e36f07aed3f68185333b6d91569392187260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+* 在 js 文件中
+
+```js
+Page({
+    onShow() {
+        swan.getRecorderManager()
+    }
+});
+```

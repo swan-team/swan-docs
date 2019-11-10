@@ -34,4 +34,20 @@ sidebar: swan.getBackgroundAudioManager
 |1006|加载音频失败|
 |1007|seek失败，播放器尚未缓冲|
 
+**示例**：
+
+<a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```javascript
+
+Page({
+    onShow() {
+        swan.getBackgroundAudioManager();
+    }
+});
+
+```
+
  
