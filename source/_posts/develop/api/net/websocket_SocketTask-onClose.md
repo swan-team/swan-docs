@@ -31,7 +31,7 @@ sidebar: websocket_SocketTask-onClose
 
 **代码示例**：
 
-<a href="swanide://fragment/d46dc0c6c70e9d1c32c5f492eb10dd691573043225396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3719998274e68270309d9331d12182261573408663337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -39,25 +39,25 @@ sidebar: websocket_SocketTask-onClose
 
 Page({
     data: {
-        disabled: true
+        disabled: false
     },
-    onShow() {
-        let that = this;
+    onTap() {
+        let that = this
+        that.setData('disabled', true)
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                swan.showToast({
-                    title: 'websocket 已打开',
-                    icon: 'none'
-                });
-                that.setData('disabled', false)
                 console.log('connectSocket success', res.socketTaskId)
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
             }
         });
+        
+        socketTask.onOpen(function (res) {
+            that.socketTaskClose()
+        })
         socketTask.onClose(function (res) {
             console.log('socketTask.onClose success', res);
             swan.showModal({
@@ -66,11 +66,18 @@ Page({
             });
         }),
         this.socketTask = socketTask
+
     },
-    socketTaskOnClose() {
+    socketTaskClose() {
+        let that = this
         this.socketTask.close({
             success: res => {
+                that.setData('disabled', false)
                 console.log('关闭WebSocket成功', res);
+                swan.showToast({
+                    title: '关闭WebSocket成功',
+                    icon: 'none'
+                });
             },
             fail: err => {
                 console.log('关闭WebSocket失败', err);

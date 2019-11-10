@@ -41,7 +41,7 @@ sidebar: websocket_swan-closeSocket
 
 **代码示例**：
 
-<a href="swanide://fragment/e12f46ff393bf12b2ceeb5118803725c1572996346704" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a5a74d0efd59156c0af2bfcbe0882e471573402421510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -66,6 +66,7 @@ Page({
         swan.onSocketOpen(function () {
             that.setData({'openWebsocket': true})
         })
+
     },
     closeSocket() {
         //注意这里有时序问题，
