@@ -79,7 +79,7 @@ sidebar: request
 
 **代码示例**：
  
-<a href="swanide://fragment/9630e4da1bdf3827318a314ea028f7251572926578287" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/803b7548eb35a2c48a455a68a8cf4a5d1573204895956" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
