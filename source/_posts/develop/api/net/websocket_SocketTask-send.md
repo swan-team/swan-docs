@@ -39,38 +39,47 @@ sidebar: websocket_SocketTask-send
 
 **代码示例**：
 
-<a href="swanide://fragment/521d4906fe3f1da8be3133df983b5d151572997353370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fcb725c6e572878cb2ed15780a5ded7e1573404090822" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
     onShow() {
-        const socketTask = swan.connectSocket({
-            url: 'wss://echo.websocket.org',
-            header: {},
-            success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
-            },
-            fail: function (err) {
-                console.log('connectSocket fail', err);
-            }
+        const socketTask = new Promise((resolve, reject) => {
+            const socketHandler = swan.connectSocket({
+                url: 'wss://echo.websocket.org',
+                header: {},
+                success: function (res) {
+                    console.log('connectSocket success', res.socketTaskId)
+                },
+                fail: function (err) {
+                    reject(err);
+                    console.log('connectSocket fail', err);
+                }
+            });
+            socketHandler.onOpen(function () {
+                resolve(socketHandler);
+            });
         });
-        this.socketTask = socketTask
+        this.socketTask = socketTask;
     },
+
     socketTaskSend() {
-       this.socketTask.send({
-            data: 'baidu',
-            success: res => {
-                swan.showToast({
-                    title: '发送数据成功'
-                });
-                console.log('WebSocket发送数据成功', res);
-            },
-            fail: err => {
-                console.log('WebSocket发送数据失败', err);
-            }
-        });
+       this.socketTask.then(socketHandler => {
+            socketHandler.send({
+                data: 'baidu',
+                success: res => {
+                    swan.showToast({
+                        title: '发送数据成功'
+                    });
+                    console.log('WebSocket发送数据成功', res);
+                },
+                fail: err => {
+                    console.log('WebSocket发送数据失败', err);
+                }
+            });
+       })
     }
 });
 

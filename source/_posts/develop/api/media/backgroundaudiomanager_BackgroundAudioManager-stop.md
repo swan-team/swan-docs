@@ -10,3 +10,30 @@ sidebar: BackgroundAudioManager.stop
 
 **方法参数**：无
  
+**示例**：
+
+<a href="swanide://fragment/99abee86d7e0572077f10bc0c17e66fe1573420645738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```javascript
+
+Page({
+    onLoad() {
+        const backgroundAudioManager = swan.getBackgroundAudioManager();
+        backgroundAudioManager.title = '演员';
+        backgroundAudioManager.epname = '演员';
+        backgroundAudioManager.singer = '薛之谦';
+        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+
+        this.backgroundAudioManager = backgroundAudioManager;
+        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.play();
+    },
+    stop() {
+        this.backgroundAudioManager.stop();
+    }
+});
+
+```
+

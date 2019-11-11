@@ -24,7 +24,7 @@ sidebar: BackgroundAudioManager
  
 **示例**：
 
-<a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7fb2d76b501e08dd2249246b87fbfcfe1573420173331" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -33,6 +33,7 @@ sidebar: BackgroundAudioManager
 Page({
     onLoad() {
         const backgroundAudioManager = swan.getBackgroundAudioManager();
+        console.log('backgroundAudioManager:', backgroundAudioManager)
         backgroundAudioManager.title = '演员';
         backgroundAudioManager.epname = '演员';
         backgroundAudioManager.singer = '薛之谦';
@@ -90,6 +91,36 @@ Page({
             console.log('onWaiting', res);
         });
 
+        backgroundAudioManager.onSeeked(res => {
+            swan.showToast({
+                title: 'onSeeked',
+                icon: 'none'
+            });
+            console.log('onSeeked', res);
+        });
+        backgroundAudioManager.onSeeking(res => {
+            swan.showToast({
+                title: 'onSeeking',
+                icon: 'none'
+            });
+            console.log('onSeeking', res);
+        });
+
+        backgroundAudioManager.onNext(res => {
+            swan.showToast({
+                title: 'onNext',
+                icon: 'none'
+            });
+            console.log('onNext', res);
+        });
+
+        backgroundAudioManager.onPrev(res => {
+            swan.showToast({
+                title: 'onPrev',
+                icon: 'none'
+            });
+            console.log('onPrev', res);
+        });
         this.backgroundAudioManager = backgroundAudioManager;
     },
     play() {
