@@ -5,6 +5,7 @@ nav: api
 sidebar: BackgroundAudioManager
 ---
 
+**解释**：[swan.getBackgroundAudioManager](/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/)的返回值。
 
 **`backgroundAudioManager`类的属性列表**：
 

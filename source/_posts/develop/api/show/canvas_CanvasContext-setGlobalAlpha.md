@@ -26,5 +26,6 @@ CanvasContext.fillRect(100, 100, 150, 100);
 
 CanvasContext.draw();
 ```
-![图片](../../../../img/api/canvas/global-alpha.png)
+
+<!-- ![图片](../../../img/api/canvas/global-alpha.png) -->
 
