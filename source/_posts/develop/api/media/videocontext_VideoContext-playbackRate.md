@@ -6,7 +6,7 @@ sidebar: videocontext_VideoContext-playbackRate
 ---
  
 
-> 最低支持手百版本 11.16
+> 最低支持基础库版本 3.120.2
 
 **解释**：倍速播放视频
 
