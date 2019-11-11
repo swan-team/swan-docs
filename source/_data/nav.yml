@@ -1854,14 +1854,14 @@
                       link: /develop/api/media/videocontext_VideoContext-hideStatusBar
                       text: VideoContext.hideStatusBar
                       name:  videocontext_VideoContext-hideStatusBar
-                    # -
-                    #   link: /develop/api/media/videocontext_VideoContext-stop
-                    #   text: VideoContext.stop
-                    #   name:  videocontext_VideoContext-stop
-                    # -
-                    #   link: /develop/api/media/videocontext_VideoContext-playbackRate
-                    #   text: VideoContext.playbackRate
-                    #   name:  videocontext_VideoContext-playbackRate
+                    -
+                      link: /develop/api/media/videocontext_VideoContext-stop
+                      text: VideoContext.stop
+                      name:  videocontext_VideoContext-stop
+                    -
+                      link: /develop/api/media/videocontext_VideoContext-playbackRate
+                      text: VideoContext.playbackRate
+                      name:  videocontext_VideoContext-playbackRate
                     
             -
             
