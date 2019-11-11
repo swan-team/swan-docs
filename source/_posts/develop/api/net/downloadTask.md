@@ -65,7 +65,7 @@ Page({
 
 ```
 
-**说明**：
+**Bug & Tip**：
 
 uploadFile 上传文件大小限制为 25M。
 

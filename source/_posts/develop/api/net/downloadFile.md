@@ -26,10 +26,6 @@ sidebar: downloadFile
 |fail   | Function   | 否||  接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**说明**：
-* 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
-* 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。
-* 下载最大限制10MB。
 
 **success 返回参数说明**：
 
@@ -101,3 +97,9 @@ swan.downloadFile({
 **返回值**：
 
 返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。
+
+**Bug & Tip**：
+
+* 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
+* 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。
+* 下载最大限制10MB。
