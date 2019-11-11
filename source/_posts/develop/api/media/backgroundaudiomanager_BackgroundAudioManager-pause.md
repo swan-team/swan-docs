@@ -15,7 +15,7 @@ sidebar: BackgroundAudioManager.pause
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/pause.png">
+        <img src="https://b.bdstatic.com/miniapp/images/pause.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

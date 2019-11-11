@@ -14,7 +14,7 @@ sidebar: BackgroundAudioManager.stop
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/stop2.png">
+        <img src="https://b.bdstatic.com/miniapp/images/stop2.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

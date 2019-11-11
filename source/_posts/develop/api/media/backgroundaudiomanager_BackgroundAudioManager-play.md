@@ -16,7 +16,7 @@ sidebar: BackgroundAudioManager.play
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/play.png">
+        <img src="https://b.bdstatic.com/miniapp/images/play.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

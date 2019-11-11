@@ -14,7 +14,7 @@ sidebar: BackgroundAudioManager.seek
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/seek.png">
+        <img src="https://b.bdstatic.com/miniapp/images/seek.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
