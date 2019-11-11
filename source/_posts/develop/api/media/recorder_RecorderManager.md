@@ -11,37 +11,44 @@ sidebar: RecorderManager
 **解释**：swan.getRecorderManager 的返回值。
 
 **示例**：
-<a href="swanide://fragment/7c14ca3d4e36f07aed3f68185333b6d91569392187260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/70d4f42e90d9ad149e2dc0226bd82d2c1573410962037" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
 ```javascript
-const recorderManager = swan.getRecorderManager()
+Page({
+    onShow() {
+        const recorderManager = swan.getRecorderManager()
+        console.log(recorderManager)
+        recorderManager.onStart(function() {
+            // 开始录音事件
+            console.log('recorder start')
+        });
+        recorderManager.onPause(function() {
+            // 暂停录音事件
+            console.log('recorder pause')
+        });
+        recorderManager.onStop(function(res) {
+            // 停止录音事件
+            console.log('recorder stop', res)
+            const { tempFilePath } = res
+        });
 
-recorderManager.onStart(function() {
-    // 开始录音事件
-    console.log('recorder start')
+        const options = {
+            duration: 10000,
+            sampleRate: 44100,
+            numberOfChannels: 1,
+            encodeBitRate: 96000,
+            format: 'aac'
+        };
+
+        recorderManager.start(options);
+        // recorderManager.stop();
+        // recorderManager.resume();
+        // recorderManager.pause();
+        this.recorderManager = recorderManager;
+    }
 });
-recorderManager.onPause(function() {
-    // 暂停录音事件
-    console.log('recorder pause')
-});
-recorderManager.onStop(function(res) {
-    // 停止录音事件
-    console.log('recorder stop', res)
-    const { tempFilePath } = res
-});
-
-const options = {
-    duration: 10000,
-    sampleRate: 44100,
-    numberOfChannels: 1,
-    encodeBitRate: 96000,
-    format: 'aac'
-};
-
-recorderManager.start(options);
-
 ```
 #### 错误码
 

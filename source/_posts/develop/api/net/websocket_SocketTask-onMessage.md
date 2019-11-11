@@ -39,51 +39,54 @@ sidebar: websocket_SocketTask-onMessage
 
 **代码示例**：
 
-<a href="swanide://fragment/8361e67ce6cbae996f9c2e393e28b9651573041915405" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e29ae16b9805c74e25c1865bdc696b351573408501452" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-
 Page({
-    data: {
-        disabled: true
-    },
     onShow() {
-        let that = this;
-        const socketTask = swan.connectSocket({
-            url: 'wss://echo.websocket.org',
-            header: {},
-            success: function (res) {
-                swan.showToast({
-                    title: 'websocket 已打开',
-                    icon: 'none'
-                });
-                that.setData('disabled', false)
-                console.log('connectSocket success', res.socketTaskId)
-            },
-            fail: function (err) {
-                console.log('connectSocket fail', err);
-            }
-        });
-        socketTask.onClose(function (res) {
-            console.log('socketTask.onClose success', res);
-            swan.showModal({
-                title: 'title',
-                content: '监听到关闭WebSocket事件成功'
+        const socketTask = new Promise((resolve, reject) => {
+            const socketHandler = swan.connectSocket({
+                url: 'wss://echo.websocket.org',
+                header: {},
+                success: function (res) {
+                    console.log('connectSocket success', res.socketTaskId)
+                },
+                fail: function (err) {
+                    reject(err);
+                    console.log('connectSocket fail', err);
+                }
             });
-        }),
-        this.socketTask = socketTask
-    },
-    socketTaskOnClose() {
-        this.socketTask.close({
-            success: res => {
-                console.log('关闭WebSocket成功', res);
-            },
-            fail: err => {
-                console.log('关闭WebSocket失败', err);
-            }
+            socketHandler.onOpen(function () {
+                resolve(socketHandler);
+            });
+            socketHandler.onMessage(function (res) {
+                console.log(res);
+                swan.showModal({
+                    title: '监听到发送的数据为' + res.data,
+                    content: res.dataType + '类型'
+                });
+            })
         });
+        this.socketTask = socketTask;
+    },
+
+    socketTaskSend() {
+       this.socketTask.then(socketHandler => {
+            socketHandler.send({
+                data: 'baidu',
+                success: res => {
+                    swan.showToast({
+                        title: '发送数据成功'
+                    });
+                    console.log('WebSocket发送数据成功', res);
+                },
+                fail: err => {
+                    console.log('WebSocket发送数据失败', err);
+                }
+            });
+       })
     }
 });
 

@@ -31,13 +31,13 @@ sidebar: websocket_SocketTask-onError
 
 **代码示例**：
 
-<a href="swanide://fragment/1432356a3b3212eefb114963ebd275e51573043371074" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/988ec5f9b41c4f603e4358ca69d54b041573407221622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-     socketTaskError() {
+    socketTaskOnError() {
         const socketTask = swan.connectSocket({
             url: 'wss://xxx.websocket',
             header: {},
@@ -52,7 +52,7 @@ Page({
             console.log('socketTask.onError success', res);
             swan.showModal({
                 title: '监听错误发送事件成功',
-                content: JSON.stringify(res.reason)
+                content: JSON.stringify(res)
             });
         }),
         this.socketTask = socketTask
