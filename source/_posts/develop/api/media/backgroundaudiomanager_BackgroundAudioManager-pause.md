@@ -28,7 +28,7 @@ sidebar: BackgroundAudioManager.pause
 **代码示例**：
 
 
-<a href="swanide://fragment/9b0b68e4cfbd744421400e76342075cd1573421987556" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/fb668009b1eb06088ad1d8fc2b7148a71573440369183" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
