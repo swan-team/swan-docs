@@ -11,7 +11,22 @@ sidebar: BackgroundAudioManager.pause
 
 **方法参数**：无
  
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/pause.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/9b0b68e4cfbd744421400e76342075cd1573421987556" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

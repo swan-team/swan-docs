@@ -34,7 +34,22 @@ sidebar: swan.getBackgroundAudioManager
 |1006|加载音频失败|
 |1007|seek失败，播放器尚未缓冲|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getBackgroundAudioManager.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

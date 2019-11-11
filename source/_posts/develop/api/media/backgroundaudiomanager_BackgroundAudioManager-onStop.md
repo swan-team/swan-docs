@@ -10,7 +10,22 @@ sidebar: BackgroundAudioManager.onStop
 
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/stop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/a8eb1bdd1b9370283d8ab70418213a711573423983357" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

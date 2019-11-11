@@ -11,7 +11,21 @@ sidebar: BackgroundAudioManager.onEnded
 
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onend.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/47e321650c63f8ee18e44f46957ab7511573422774419" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

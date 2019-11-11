@@ -12,7 +12,21 @@ sidebar: media_backgroundaudiomanager
 
 **方法参数**：Function callback
  
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/oncanplay.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/1f2e51c17e86f21e8eb67b2894dcbf301573422228143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

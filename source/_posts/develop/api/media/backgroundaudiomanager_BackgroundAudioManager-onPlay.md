@@ -12,7 +12,21 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
 **方法参数**：Function callback
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onplay.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/ec4d4a59b04e1d25f9ab6e3a608b3c001573421647159" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

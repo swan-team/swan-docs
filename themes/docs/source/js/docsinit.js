@@ -29,6 +29,7 @@
         '/docs/develop/devtools/show_sur/': '/docs/develop/devtools/page_start/',
         '/docs/develop/devtools/uplog_tool/': '/docs/develop/devtools/uplog_tool_normal/',
         '/docs/introduction/single/': '/docs/introduction/rank_single/',
+        '/docs/develop/function/single/': '/docs/introduction/rank_single/',
         '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);

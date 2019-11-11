@@ -43,8 +43,22 @@ sidebar: swan.getAvailableAudioSources
 |voice_recognition |同 mic，适用于语音识别，仅限 Android|
 
 
+**图片示例**：
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getAvailableAudioSources.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

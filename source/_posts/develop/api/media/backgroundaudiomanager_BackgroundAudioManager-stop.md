@@ -10,7 +10,22 @@ sidebar: BackgroundAudioManager.stop
 
 **方法参数**：无
  
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/stop2.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/99abee86d7e0572077f10bc0c17e66fe1573420645738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

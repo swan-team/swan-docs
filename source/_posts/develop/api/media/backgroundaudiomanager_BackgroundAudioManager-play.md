@@ -12,7 +12,22 @@ sidebar: BackgroundAudioManager.play
 
 **方法参数**：无
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/play.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/b2781601c85332edee9b1ccf1661f9be1573420325233" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
