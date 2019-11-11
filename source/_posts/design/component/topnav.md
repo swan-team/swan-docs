@@ -159,6 +159,6 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用黑色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用白色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
 	</div>
 </div>
