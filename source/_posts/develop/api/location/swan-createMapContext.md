@@ -13,6 +13,21 @@ sidebar: swan-createMapContext
 
 **返回值**：mapContext
 
+**示例**：
+
+<a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    onShow() {
+        swan.createMapContext('myMap');
+    }
+})
+
+```
+
 #### 错误码
 * Andriod
 

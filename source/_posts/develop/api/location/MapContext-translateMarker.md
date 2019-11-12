@@ -28,6 +28,22 @@ sidebar:  MapContext-translateMarker
 
 <a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <map id="myMap" 
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        style="width: 100%"  
+        markers="{{markers}}">
+    </map>
+    <button type="primary" bindtap="translateMarker">平移 marker</button>
+</view>
+
+
+```
+
 * 在 js 文件中
 
 ```js
