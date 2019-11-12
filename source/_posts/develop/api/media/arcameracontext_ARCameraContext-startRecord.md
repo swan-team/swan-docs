@@ -36,3 +36,4 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tempVideoPath  | String | 视频的临时路径 |
+

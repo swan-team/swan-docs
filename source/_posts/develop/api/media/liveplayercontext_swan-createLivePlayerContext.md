@@ -20,3 +20,17 @@ sidebar:  liveplayercontext_swan-createLivePlayerContext
 
 **返回值**：livePlayerContext
 
+**示例**：
+<a href="swanide://fragment/703092891fd158851d3920c29e31113d1573523316988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onLoad() {
+       swan.createLivePlayerContext('myLive');
+    }
+});
+```
