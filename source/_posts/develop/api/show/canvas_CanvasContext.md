@@ -9,7 +9,7 @@ sidebar: canvas_CanvasContext
 
 **解释**： 绘图上下文。
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/34667d95c36661c19e338fd95ef83bfd1558353421258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

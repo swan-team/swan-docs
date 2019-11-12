@@ -34,7 +34,7 @@ sidebar: userinfo_swan-getSwanId
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -28,13 +28,7 @@ sidebar: canvas_swan-canvasToTempFilePath
 |fail	| Function | 否  | |接口调用失败的回调函数 |
 |complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**说明**：
-
-* 在 draw 回调里调用该方法才能保证图片导出成功。
-* 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。
-* 当 x 合法的前提下，若 x + width > canvas.width 时， width 会被置成 canvas.width - x，y 同理。
-
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -99,5 +93,10 @@ Page({
 |202|解析失败，请检查参数是否正确      |
  
 
- 
+ **Bug & Tip**：
+
+* 在 draw 回调里调用该方法才能保证图片导出成功。
+* 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。
+* 当 x 合法的前提下，若 x + width > canvas.width 时， width 会被置成 canvas.width - x，y 同理。
+
 

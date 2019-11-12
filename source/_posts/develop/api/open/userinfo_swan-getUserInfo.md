@@ -49,7 +49,7 @@ sidebar: userinfo_swan-getUserInfo
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/6de8312d15371a1d3d686a4cd92b637f1560170029351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

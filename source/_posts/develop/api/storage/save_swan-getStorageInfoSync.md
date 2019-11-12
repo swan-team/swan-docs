@@ -13,7 +13,7 @@ sidebar: save_swan-getStorageInfoSync
 
 **方法参数**： 无
 
-**示例**：
+**代码示例**：
 
 * 在 js 文件中
 

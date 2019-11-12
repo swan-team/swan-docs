@@ -20,7 +20,7 @@ sidebar: custom_component
 **举例**：当父组件的 setData 引发了子组件的 triggerEvent，进而使得父组件又进行了一次 setData，期间有通过 s-if 语句对子组件进行卸载，就有可能引发奇怪的错误，所以对于不需要在一个同步流程内完成的逻辑，可以使用此接口延迟到下一个时间片再执行。
 
 
-**示例**：
+**代码示例**：
 
 ```js
 Component({

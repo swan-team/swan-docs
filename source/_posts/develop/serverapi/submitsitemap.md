@@ -19,7 +19,7 @@ sidebar: submitsitemap
 **method**: GET&POST
 **params**:
 
-| **key**   | **类型** | **是否必填** | **method** | **备注**  | **示例** |
+| **key**   | **类型** | **是否必填** | **method** | **备注**  | **代码示例** |
 | ------------ | -------- | ------------ | ---------- | ------------------------------ | -------------- |
 | app_id | string   | true   | POST | 智能小程序ID | 15625863 |
 | url | string   | true   | POST | sitemap链接  | |

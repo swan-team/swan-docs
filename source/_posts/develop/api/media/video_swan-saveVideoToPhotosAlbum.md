@@ -24,7 +24,7 @@ sidebar: video_swan-saveVideoToPhotosAlbum
  
 
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/040241cd887662c3711632a38bede27a1569504939570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中

@@ -21,7 +21,7 @@ sidebar: swan-setDocumentTitle
 |fail   | Function|    否 | |  接口调用失败的回调函数|
 |complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/17ee1728dd17b02eb2454886a8e7d77e1558342572018" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

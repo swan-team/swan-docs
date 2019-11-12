@@ -10,7 +10,7 @@ sidebar:  query_SelectorQuery-in
 
 **方法参数**：Component component
 
-**示例**：
+**代码示例**：
 
 ```js
 Component({

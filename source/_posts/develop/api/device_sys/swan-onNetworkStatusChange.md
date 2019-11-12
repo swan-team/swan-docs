@@ -35,7 +35,7 @@ sidebar:  swan-onNetworkStatusChange
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/7c0e8595fa15fb27338683115a63df031569478717853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

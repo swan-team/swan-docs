@@ -48,7 +48,7 @@ sidebar: swan-getLocation
 |district|区|
 
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中

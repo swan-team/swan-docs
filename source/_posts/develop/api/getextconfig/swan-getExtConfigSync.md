@@ -19,7 +19,7 @@ sidebar: swan-getExtConfigSync
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/dcbff11e967bbe165470eadfd555d3ba1569485763978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

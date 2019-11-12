@@ -15,7 +15,7 @@ sidebar: save_swan-setStorageSync
 
 **`data`参数说明**：需要存储的内容
 
-**示例**：
+**代码示例**：
 
 * 在 js 文件中
 

@@ -21,7 +21,7 @@ sidebar: pagescrollto_swan-pageScrollTo
 |fail  |  Function |   否  | | 接口调用失败的回调函数|  
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/1da0995c33ce55aaee91c780b076e1991569491978009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

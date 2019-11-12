@@ -33,7 +33,7 @@ sidebar:  audio
 |filePath | String | 合成的音频文件的路径，此路径为临时路径且在当次回调中有效|
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/506b61732036a40590ea79c33f1541311559033551164" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

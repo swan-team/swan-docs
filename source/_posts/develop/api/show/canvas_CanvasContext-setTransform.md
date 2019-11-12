@@ -22,7 +22,7 @@ sidebar: canvas_CanvasContext-setTransform
 
 **`translateY`参数说明**：垂直移动  
 
-**示例**：
+**代码示例**：
 
 ```js
 canvasContext.setTransform(scaleX, skewX, skewY, scaleY, translateX, translateY);

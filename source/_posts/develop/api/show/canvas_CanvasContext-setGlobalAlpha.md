@@ -11,7 +11,7 @@ sidebar: canvas_CanvasContext_setGlobalAlpha
 
 **`alpha` 参数说明**： 透明度取值范围： 0~1 ，0 表示完全透明，1 表示完全不透明。  
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

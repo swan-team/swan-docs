@@ -27,7 +27,7 @@ sidebar: query_NodesRef-boundingClientRect
 
 
 
-**示例**：
+**代码示例**：
 
 ```js
 Page({

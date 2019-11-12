@@ -77,7 +77,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 | swan.webView.getEnv   | 获取当前环境 | - |
 | swan.webView.postMessage   | 向小程序发送消息 | - |
 
-**示例**：
+**代码示例**：
 
 ```xml
 <!-- html -->

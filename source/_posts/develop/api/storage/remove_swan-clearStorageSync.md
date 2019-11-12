@@ -14,7 +14,7 @@ sidebar: remove_swan-clearStorageSync
 
 **方法参数**：无
 
-**示例**：
+**代码示例**：
 
 ```js
 try {

@@ -12,7 +12,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
 
 **方法参数**：Function callback
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/01475be361811871bf712ade8fe010881573422974213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -16,7 +16,7 @@ sidebar: canvas_CanvasContext-setMiterLimit
 
 **`miterLimit`参数说明：**最大斜接长度  
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

@@ -9,7 +9,7 @@ sidebar: MapContext
 
 **解释**：map 返回值。
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/caf6209fb3b9109a245df5ee2cf865fd1569511091359" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

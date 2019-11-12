@@ -33,7 +33,7 @@ sidebar: canvas_CanvasContext-drawImage
 
 **`sHeight`参数说明**：  源图像的矩形选择框的高度 。
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

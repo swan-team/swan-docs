@@ -25,7 +25,7 @@ sidebar: nacomponent
 |fail   | Function |   否  | | 接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/e067d7b02af88008e08fa4bcb26906a51569378513731" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

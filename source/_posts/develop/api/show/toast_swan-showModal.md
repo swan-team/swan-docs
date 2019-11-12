@@ -37,7 +37,7 @@ sidebar: toast_swan-showModal
 |confirm |Boolean |为 true 时，表示用户点击了确定按钮 。 |
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 js 文件中

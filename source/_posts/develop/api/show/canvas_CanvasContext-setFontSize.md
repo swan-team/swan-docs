@@ -12,7 +12,7 @@ sidebar: canvas_CanvasContext_setFontSize
 `fontSize`参数说明：字体的字号 
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

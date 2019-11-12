@@ -33,7 +33,7 @@ chooseInvoiceTitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-**示例**：
+**代码示例**：
 ```js
 swan.chooseInvoiceTitle({
     success: res => {

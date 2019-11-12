@@ -33,7 +33,7 @@ sidebar: query_IntersectionObserver-observe
 |top| number | 上边界|
 |bottom  |number | 下边界|
 
-**示例**：
+**代码示例**：
 
 ```javascript
 swan.createIntersectionObserver(this, {

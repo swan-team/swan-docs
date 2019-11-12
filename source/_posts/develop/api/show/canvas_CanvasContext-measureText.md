@@ -22,7 +22,7 @@ sidebar: canvas_CanvasContext-measureText
 |---- | ---- | ---- |
 | width | Number | 文本的宽度 |
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas')

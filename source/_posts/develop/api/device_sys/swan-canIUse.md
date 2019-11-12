@@ -25,7 +25,7 @@ sidebar: swan-canIUse
 |${option}  |  组件属性的有效值 |
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/46118bb2080dbb4afe733717c987f6e31569478359497" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

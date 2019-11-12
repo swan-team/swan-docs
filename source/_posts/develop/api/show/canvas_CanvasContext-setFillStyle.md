@@ -12,7 +12,7 @@ sidebar:  canvas_CanvasContext_setFillStyle
 
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = this.createCanvasContext('myCanvas');

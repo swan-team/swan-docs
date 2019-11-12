@@ -25,7 +25,7 @@ sidebar: swan-onAccelerometerChange
 |y |Number |是| |Y 轴|
 |z |Number |是| |Z 轴|
 
-**示例**：
+**代码示例****：
 <a href="swanide://fragment/0ed5fe5e4d0957055cd7669fd83612731569478872196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中

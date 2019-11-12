@@ -30,7 +30,7 @@ sidebar: swan-getNetworkType
 |---- | ---- |---|
 |networkType |String|网络类型，有效值有： wifi，2g，3g，4g，unknown (Android 下不常见的网络类型)，none (无网络)。|
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/6fb983a430aa1864af5650c5b9b54f9d1569478503845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 中

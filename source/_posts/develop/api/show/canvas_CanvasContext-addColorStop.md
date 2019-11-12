@@ -17,7 +17,7 @@ sidebar: canvas_CanvasContext-addColorStop
 **`color`参数说明**：渐变点的颜色
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');
@@ -40,6 +40,7 @@ CanvasContext.draw();
 
 ![图片](../../../../img/api/canvas/addColorStop.png)
 
-**说明**：
+ **Bug & Tip**：
+
 addColorStop 目前在 Android 有bug。
 

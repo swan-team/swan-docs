@@ -31,7 +31,7 @@ sidebar: share_swan-openShare
 **函数返回值**：Boolean result
 **返回值说明**：反馈分享结果，成功或失败。
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

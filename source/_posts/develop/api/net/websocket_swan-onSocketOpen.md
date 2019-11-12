@@ -40,7 +40,7 @@ sidebar: websocket_swan-onSocketOpen
     </div>     
 </div>
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/f05c1cbaaa8d2bfc338ac531901064ee1572997062469" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

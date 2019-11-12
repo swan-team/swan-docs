@@ -29,7 +29,7 @@ sidebar: image_swan-compressImage
 |---- | ---- | ---- |
 |tempFilePath |  String | 压缩后图片的临时文件路径示例代码|
 
-<!-- **示例**：
+<!-- **代码示例**：
 
 <a href="swanide://fragment/57ab8062cc2e4ae51f5b1984f748b83c1567929767878" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> -->
 

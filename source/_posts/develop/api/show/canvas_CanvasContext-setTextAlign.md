@@ -11,7 +11,7 @@ sidebar: canvas_CanvasContext-setTextAlign
 
 **`align `参数说明**： 有效值 'left'、'center'、'right'。 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

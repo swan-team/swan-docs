@@ -21,7 +21,7 @@ sidebar: canvas_CanvasContext-createLinearGradient
 
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = this.createCanvasContext('myCanvas');

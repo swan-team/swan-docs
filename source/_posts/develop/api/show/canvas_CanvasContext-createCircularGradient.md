@@ -17,7 +17,7 @@ sidebar: canvas_CanvasContext-createCircularGradient
 **`z`参数说明**：圆的半径
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

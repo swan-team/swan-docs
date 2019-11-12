@@ -16,7 +16,7 @@ sidebar:  canvas_CanvasContext-fillText
 **`y`参数说明**： 绘制文本的左上角 y 坐标位置。
 **`maxWidth` 参数说明**：| 需要绘制的最大宽度（可选 ）。
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

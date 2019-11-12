@@ -60,7 +60,7 @@ sidebar: replyeditor_swan-openReplyEditor
 
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/a013aec8b73e24ed9f6bbf11f4f1cd431566889380983" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

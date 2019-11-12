@@ -13,7 +13,7 @@ sidebar: save_swan-getStorageSync
 
 **`key`参数说明**： 本地缓存中的指定的 key
 
-**示例**：
+**代码示例**：
 
 
 * 在 js 文件中

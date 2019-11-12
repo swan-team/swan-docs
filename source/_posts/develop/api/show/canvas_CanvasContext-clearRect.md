@@ -20,7 +20,7 @@ sidebar: canvas_CanvasContext-clearRect
 
 **`height`参数说明**：矩形路径的高度。
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

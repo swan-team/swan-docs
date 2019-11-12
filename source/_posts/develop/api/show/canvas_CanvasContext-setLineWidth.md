@@ -13,7 +13,7 @@ sidebar: canvas_CanvasContext-setLineWidth
 
 **`lineWidth`参数说明**：线条的宽度(单位是 px)
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

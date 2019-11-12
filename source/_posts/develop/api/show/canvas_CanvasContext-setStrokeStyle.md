@@ -11,7 +11,7 @@ sidebar: canvas_CanvasContext-setStrokeStyle
 
 **方法参数**： [Color](/develop/api/canvas_color/) color
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = this.createCanvasContext('myCanvas');

@@ -44,7 +44,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
 |errMsg | String  |调用结果| -->
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/5324faec9c72f07b9827b7a08ac9a2791569466207792" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

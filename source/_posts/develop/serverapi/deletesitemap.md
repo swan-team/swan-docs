@@ -15,7 +15,7 @@ sidebar: deletesitemap
 **method**: GET&POST
 **params**:
 
-| **key**   | **类型** | **是否必填** | **method** | **备注**   | **示例** |
+| **key**   | **类型** | **是否必填** | **method** | **备注**   | **代码示例** |
 | ------------ | -------- | ------------ | ---------- | ------------- | -------- |
 | access_token | string   | true   | GET  | 权限校验TOKEN | |
 | app_id | string   | true   | POST | 智能小程序ID  | 100001   |

@@ -11,7 +11,7 @@ sidebar: cameracontext_CameraContext
 
 **解释**：swan.createCameraContext 的返回值。
 
-**示例**：
+**代码示例**：
  
 <a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

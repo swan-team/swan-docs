@@ -32,7 +32,7 @@ sidebar:  save_swan-getStorageInfo
 
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

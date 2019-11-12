@@ -18,7 +18,7 @@ sidebar: canvas_CanvasContext-strokeText
 
 **`maxWidth`参数说明**：需要绘制的最大宽度，可选。
 
-**示例**：
+**代码示例**：
 
 ```js
 canvasContext.strokeText(text, x, y, maxWidth);

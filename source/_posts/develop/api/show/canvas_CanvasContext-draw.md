@@ -16,7 +16,7 @@ sidebar: canvas_CanvasContext-draw
 **`callback`参数说明**：绘制完成后回调 
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

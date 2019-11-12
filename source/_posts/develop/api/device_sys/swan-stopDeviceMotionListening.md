@@ -21,7 +21,7 @@ sidebar: swan-stopDeviceMotionListening
 |fail  |  Function |   否 | |  接口调用失败的回调函数|
 |complete |   Function |   否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

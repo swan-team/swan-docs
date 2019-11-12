@@ -15,7 +15,7 @@ sidebar: canvas_CanvasContext_rotate
 **`rotate` 参数说明**：旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)。
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

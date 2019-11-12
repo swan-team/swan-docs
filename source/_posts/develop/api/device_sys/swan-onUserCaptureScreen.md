@@ -21,7 +21,7 @@ sidebar: swan-onUserCaptureScreen
 
 **`callback`参数说明**：无
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/7698c886c8f28bb55b7b2f0e07c266931569483700129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

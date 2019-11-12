@@ -12,7 +12,7 @@ sidebar: canvas_CanvasContext_setLineJoin
 
 **`lineJoin`参数说明**：有效值：'bevel'、'round'、'miter'， 线条的结束交点样式。  
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

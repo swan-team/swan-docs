@@ -12,7 +12,7 @@ sidebar: canvas_CanvasContext.setTextBaseline
 
 **`textBaseline`参数说明**：有效值 'top'、'bottom'、'middle'、'normal' 。 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

@@ -17,7 +17,7 @@ sidebar: canvas_CanvasContext-moveTo
 **`y`参数说明**：目标位置的 y 坐标
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

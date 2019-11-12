@@ -28,7 +28,7 @@ sidebar: save_swan-getFileInfo
 |size  | Number | 文件大小，单位：B。|
 |digest  | String | 按照传入的 digestAlgorithm 计算得出的的文件摘要。|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

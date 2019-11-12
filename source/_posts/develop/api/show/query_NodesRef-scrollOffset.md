@@ -20,7 +20,7 @@ sidebar: query_NodesRef-scrollOffset
 |scrollTop|Nunber|节点竖直滚动位置|
  
 
-**示例**：
+**代码示例**：
 
 ```js
 Page({

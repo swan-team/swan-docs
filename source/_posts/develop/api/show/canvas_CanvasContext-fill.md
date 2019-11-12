@@ -11,7 +11,7 @@ sidebar:  canvas_CanvasContext-fill
 
 **方法参数**：无
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

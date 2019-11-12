@@ -26,7 +26,7 @@ sidebar: videocontext_VideoContext-requestFullScreen
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-**示例**
+**代码示例**
 ```
 videoContext.requestFullScreen({direction: 90});
 ```

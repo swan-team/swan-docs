@@ -62,7 +62,7 @@ sidebar: swan-getSystemInfo
 |wifiEnabled|Wi-Fi 的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
 |safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3 |
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
 * 在 js 文件中

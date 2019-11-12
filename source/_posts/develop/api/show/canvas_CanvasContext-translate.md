@@ -14,7 +14,7 @@ sidebar: canvas_CanvasContext-translate
 **`y`参数说明**：竖直坐标平移量
 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

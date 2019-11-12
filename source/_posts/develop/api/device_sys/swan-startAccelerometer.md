@@ -29,7 +29,7 @@ sidebar: swan-startAccelerometer
 |ui |适用于更新 UI 的回调频率，在 60ms/次 左右|
 |normal |普通的回调频率，在 200ms/次 左右|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/0ed5fe5e4d0957055cd7669fd83612731569478872196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

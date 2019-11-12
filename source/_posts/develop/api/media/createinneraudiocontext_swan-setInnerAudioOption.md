@@ -26,7 +26,7 @@ sidebar: swan.setInnerAudioOption
 
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

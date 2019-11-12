@@ -33,7 +33,7 @@ sidebar: toast_swan-showActionSheet
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始。|
 
 
-**示例**：
+**代码示例**：
 <a href="swanide://fragment/5b21419f4f4abd6685556b4f7e524cd81569464246835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中

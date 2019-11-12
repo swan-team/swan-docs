@@ -28,7 +28,7 @@ sidebar: setting_swan-getSetting
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/fd766a831dfad90a23a57b4c9e78c62f1558336554529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

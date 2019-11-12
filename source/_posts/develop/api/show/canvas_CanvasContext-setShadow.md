@@ -21,7 +21,7 @@ sidebar: canvas_CanvasContext-setShadow
 
 **`color`参数说明**：阴影的颜色。 
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

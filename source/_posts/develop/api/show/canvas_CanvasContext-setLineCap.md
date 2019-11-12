@@ -14,7 +14,7 @@ sidebar:  canvas_CanvasContext-setLineCap
 
 **`lineCap`参数说明**：有效值：'butt'、'round'、'square', 线条的结束端点样式。
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

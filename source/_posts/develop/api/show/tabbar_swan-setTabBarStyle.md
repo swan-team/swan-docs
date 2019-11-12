@@ -22,7 +22,7 @@ sidebar: tabbar_swan-setTabBarStyle
 |fail   | Function  | 否 | |接口调用失败的回调函数|
 |complete  |  Function  |  否| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/8a0d64dcd0e68d1861cc116a2e8c1b891569469282679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

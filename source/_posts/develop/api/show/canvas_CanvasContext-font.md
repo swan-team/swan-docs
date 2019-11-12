@@ -22,7 +22,7 @@ sidebar: canvas_CanvasContext_font
 | size | 字体大小 |
 | family | 字体族名，注意确认各平台所支持的字体 。|
 
-**示例**：
+**代码示例**：
 
 ```js
 canvasContext.font = value;

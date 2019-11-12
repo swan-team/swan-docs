@@ -19,7 +19,7 @@ sidebar:  toast_swan-showLoading
 |fail  |  Function   | 否 | |   接口调用失败的回调函数|
 |complete  |  Function |   否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

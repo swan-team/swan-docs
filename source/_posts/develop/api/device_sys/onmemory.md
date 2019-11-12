@@ -25,7 +25,7 @@ Android下告警等级对应系统宏：
 TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/45797da5a75fbe90a9ef2be56bb707651569478446351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

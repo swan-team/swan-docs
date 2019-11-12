@@ -13,7 +13,7 @@ sidebar: canvas_CanvasContext_setLineDash
 
 **`offset`参数说明**：虚线偏移量。
 
-**示例**：
+**代码示例**：
 
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');

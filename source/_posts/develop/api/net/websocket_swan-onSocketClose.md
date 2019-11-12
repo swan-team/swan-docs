@@ -29,7 +29,7 @@ sidebar: websocket_swan-onSocketClose
     </div>     
 </div>
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/84ceaad32308575a769b2475b7594b691573403059070" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

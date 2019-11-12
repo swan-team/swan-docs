@@ -16,7 +16,7 @@ sidebar: navigationbar_swan-showNavigationBarLoading
 
 **方法参数**：无
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/c4a65ff2c078e16699cc67084b4e842f1569465767383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -20,7 +20,7 @@ sidebar: timer_setInterval
 |--|--|
 |number|定时器的编号。这个值可以传递给 <a href="http://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/283a511a5f8ef18ab6b2b90c8c6e44441558350989738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

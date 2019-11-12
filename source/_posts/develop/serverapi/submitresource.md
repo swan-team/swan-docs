@@ -16,7 +16,7 @@ sidebar: submitresource
 
 **params**:
 
-| **key** | **类型** | **是否必填**   | **method** | **备注**  | **示例**  |
+| **key** | **类型** | **是否必填**   | **method** | **备注**  | **代码示例**  |
 | ------ | -------- | --------- | ------- | ------ | ------- |
 | access_token  | string   | 是 | GET  | 权限校验[Token](https://smartprogram.baidu.com/docs/develop/server/power/#开发者服务权限说明)|  |
 | app_id  | string   | 是 | POST | 智能小程序ID | 15625863  |

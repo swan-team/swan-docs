@@ -11,7 +11,7 @@ sidebar: UpdateManager
 
 **解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/get/)返回值。
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/0c200e097017ef1f7409aec546adb30c1569553882500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
