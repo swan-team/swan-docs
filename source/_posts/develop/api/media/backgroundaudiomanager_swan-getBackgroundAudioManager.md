@@ -65,4 +65,6 @@ Page({
 
 ```
 
+**Bug & Tip**：
  
+如需使用背景音频可在[配置 app.json 文件](https://smartprogram.baidu.com/docs/develop/tutorial/process/)中，对[requiredBackgroundModes](https://smartprogram.baidu.com/docs/develop/tutorial/process/#requiredBackgroundModes)进行设置。
