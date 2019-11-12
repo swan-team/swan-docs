@@ -43,7 +43,7 @@ sidebar: image_chooseAlbum
 |path  |  String  |本地文件路径|
 |size   | Number | 本地文件大小（单位：B）|
 |type|文件类型|有效值：photo、video|
-|duration|Number|选定视频的时间长度 (单位：s)|
+|duration|Number|选定视频的时间长度 (单位：s)； 开发者工具暂不支持|
 
 **图片示例**：
 

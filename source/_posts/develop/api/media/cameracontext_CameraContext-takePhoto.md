@@ -19,3 +19,31 @@ sidebar: cameracontext_CameraContext-takePhoto
 |success| Function |   否  | |接口调用成功的回调函数，res = { tempImagePath }。|
 |fail  |  Function  |  否 |  |接口调用失败的回调函数|
 |complete |   Function  |  否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+ 
+<a href="swanide://fragment/e0c330e454f8e09a92c2851ea5a56eb61573545400501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        src: ''
+    },
+    onShow() {
+        const cameraContext = swan.createCameraContext();
+        this.cameraContext = cameraContext;
+    },
+    takePhoto() {
+        this.cameraContext.takePhoto({
+            quality: 'high',
+            success: res => {
+                this.setData({
+                    src: res.tempImagePath
+                });
+            }
+        });
+    }
+});
+```
