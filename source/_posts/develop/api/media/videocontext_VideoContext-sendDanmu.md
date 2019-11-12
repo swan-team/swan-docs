@@ -17,3 +17,27 @@ sidebar: videocontext_VideoContext-sendDanmu
 |---|---|---|---|---|
 |text|string|	否	||弹幕文字|
 |color|string|否||弹幕颜色|
+
+
+**示例**：
+<a href="swanide://fragment/dfdf6e177f818808b415b657d64c1c7c1573479113127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        const video = swan.createVideoContext('myVideo');
+        this.video = video;
+        this.video.play();
+    },
+    sendDanmu() {
+        this.video.sendDanmu({
+            text: '这是一条弹幕',
+            color: '#f60'
+        });
+    }
+});
+```

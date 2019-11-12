@@ -26,8 +26,23 @@ sidebar: videocontext_VideoContext-requestFullScreen
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-**示例**
-```
-videoContext.requestFullScreen({direction: 90});
+**示例**：
+<a href="swanide://fragment/c9568967cece545edaf1edefa52d71c11573479259203" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        const video = swan.createVideoContext('myVideo');
+        this.video = video;
+        this.video.play();
+    },
+    requestFullScreen() {
+        this.video.requestFullScreen({direction: 90});
+    }
+});
 ```
 
