@@ -28,3 +28,35 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tempImagePath  | String | 图片的临时路径 |
+
+ 
+**示例**：
+
+<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    data: {
+        photoSrc: ''
+    },
+    onShow() {
+        const ARCameraContext = swan.createARCameraContext();
+        this.ARCameraContext = ARCameraContext
+    },
+    takePhoto() {
+        this.ARCameraContext.takePhoto({
+            quality: 'high',
+            success: res => {
+                this.setData({
+                    photoSrc: res.tempImagePath
+                });
+            },
+            fail: res => {
+                swan.showToast({
+                    title: '请检查设备',
+                    icon: 'none'
+                });
+            }
+        });
+    }
+```
