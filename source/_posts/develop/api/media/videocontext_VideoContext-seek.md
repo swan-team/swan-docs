@@ -22,12 +22,12 @@ sidebar: videocontext_VideoContext-seek
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
+        this.videoContext.play();
     },
     seek() {
-        this.video.seek(180);
+        this.videoContext.seek(180);
     }
 });
 ```

@@ -30,8 +30,7 @@ sidebar:  liveplayercontext_swan-createLivePlayerContext
 Page({
     data: { },
     onLoad() {
-        const livePlayerContext = swan.createLivePlayerContext('myLive');
-        this.livePlayerContext = livePlayerContext;
+       swan.createLivePlayerContext('myLive');
     }
 });
 ```

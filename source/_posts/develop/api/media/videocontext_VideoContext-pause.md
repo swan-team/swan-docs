@@ -21,12 +21,12 @@ sidebar:  videocontext_VideoContext-pause
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
+        this.videoContext.play();
     },
     pause() {
-        this.video.pause();
+        this.videoContext.pause();
     }
 });
 ```

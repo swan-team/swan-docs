@@ -13,7 +13,7 @@ sidebar: videocontext_VideoContext
 
 
 **示例**：
-<a href="swanide://fragment/1698a97f40e2adada30defc7256904661573521281898" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d1dc373ed75d6ba89e6e40cd981e3a7a1573525726544" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -23,6 +23,7 @@ Page({
     data: { },
     onLoad() {
         const videoContext = swan.createVideoContext('myVideo');
+        console.log(videoContext);
         this.videoContext = videoContext;
     },
     play() {
@@ -60,7 +61,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../../img/api/media/createVideoContext.png">
+        <img src=" ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

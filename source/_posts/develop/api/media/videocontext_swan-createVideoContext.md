@@ -18,7 +18,7 @@ sidebar: videocontext_swan-createVideoContext
 **返回值**：videoContext
 
 **示例**：
-<a href="swanide://fragment/9c93370ee6d59177ca696966033540261570533594995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/45b489b0165f458d5c0de30719645bdd1573525569310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -27,8 +27,7 @@ sidebar: videocontext_swan-createVideoContext
 Page({
     data: { },
     onLoad() {
-        const videoContext = swan.createVideoContext('myVideo');
-        this.videoContext = videoContext;
+        swan.createVideoContext('myVideo');  
     }
 });
 ```

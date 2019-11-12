@@ -13,47 +13,21 @@ sidebar: cameracontext_CameraContext
 
 **示例**：
  
-<a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<div class="camera">
-    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
-    <button type="primary" bind:tap="switchCamera">切换摄像头</button>
-    <button type="primary" bind:tap="takePhoto">拍照</button>
-    <button type="primary" bind:tap="startRecord">开始录像</button>
-    <button type="primary" bind:tap="stopRecord">结束录像</button>
-    <view class="preview">预览</view>
-    <image s-if="src" class="img" mode="widthFix" src="{{src}}"></image>
-    <video s-if="videoSrc" class="video" src="{{videoSrc}}"></video>
-</div>
-```
+<a href="swanide://fragment/6087c1da593efa7eece7cc9f4b4e0a3e1573542045061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```javascript
 Page({
     data: {
-        src: '',
-        device: 'back',
-        videoSrc: ''
+        src: ''
     },
-    switchCamera() {
-        const devices = this.getData('device');
-        if (devices === 'back') {
-            this.setData({
-                device: 'front'
-            });
-        } else {
-            this.setData({
-                device: 'back'
-            });
-        }
+    onShow() {
+        const cameraContext = swan.createCameraContext();
+        this.cameraContext = cameraContext
     },
     takePhoto() {
-        const ctx = swan.createCameraContext();
-        ctx.takePhoto({
+        this.cameraContext.takePhoto({
             quality: 'high',
             success: res => {
                 this.setData({
@@ -63,8 +37,7 @@ Page({
         });
     },
     startRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.startRecord({
+        this.cameraContext.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -73,8 +46,7 @@ Page({
         });
     },
     stopRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.stopRecord({
+        this.cameraContext.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',
@@ -85,9 +57,6 @@ Page({
                 });
             }
         });
-    },
-    error(e) {
-        console.log(e.detail);
     }
 });
 ```
@@ -96,7 +65,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../../img/component/camera.jpeg">
+        <img src=" ">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

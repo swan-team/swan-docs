@@ -21,11 +21,11 @@ sidebar:  videocontext_VideoContext-play
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
     },
     play() {
-        this.video.play();
+        this.videoContext.play();
     }
 });
 ```

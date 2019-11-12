@@ -29,12 +29,12 @@ sidebar: videocontext_VideoContext-sendDanmu
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
+        this.videoContext.play();
     },
     sendDanmu() {
-        this.video.sendDanmu({
+        this.videoContext.sendDanmu({
             text: '这是一条弹幕',
             color: '#f60'
         });

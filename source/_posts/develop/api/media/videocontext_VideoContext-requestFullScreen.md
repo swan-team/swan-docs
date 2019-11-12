@@ -36,12 +36,12 @@ sidebar: videocontext_VideoContext-requestFullScreen
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
+        this.videoContext.play();
     },
     requestFullScreen() {
-        this.video.requestFullScreen({direction: 90});
+        this.videoContext.requestFullScreen({direction: 90});
     }
 });
 ```

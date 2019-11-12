@@ -21,13 +21,13 @@ sidebar: videocontext_VideoContext-exitFullScreen
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
-        this.video.requestFullScreen({direction: 90});
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = video;
+        this.videoContext.play();
+        this.videoContext.requestFullScreen({direction: 90});
     },
     exitFullScreen() {
-        this.video.exitFullScreen();
+        this.videoContext.exitFullScreen();
     }
 });
 ```

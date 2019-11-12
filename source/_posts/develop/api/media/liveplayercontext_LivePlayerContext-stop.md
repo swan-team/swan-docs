@@ -21,7 +21,7 @@ sidebar: liveplayercontext_LivePlayerContext-stop
 
 **示例**：
 
-<a href="swanide://fragment/fde41dba7cc64b655e9e6181024fdd571573522009534" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/4428752ba0ea11a9bcfd115691e958491573522155890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 js 文件中
 ```js
