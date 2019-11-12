@@ -23,3 +23,59 @@ sidebar:  MapContext-translateMarker
 |success|	function|	|	否|	接口调用成功的回调函数|
 |fail   | Function   |  |否 | 接口调用失败的回调函数|
 |complete|Function  |  |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**示例**：
+
+<a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+   data: {
+        latitude: 40.048828,
+        longitude: 116.280412,  
+        markers: [{
+            markerId: 1,
+            latitude: 40.052751,
+            longitude: 116.278796
+        }, {
+            markerId: 2,
+            latitude: 40.048828,
+            longitude: 116.280412,
+            callout: {
+                display: 'ALWAYS',
+                content: '百度科技园'
+            }
+        }] 
+    },
+    onReady() {
+        this.mapContext = swan.createMapContext('myMap');
+    },
+    translateMarker: function () {
+        this.mapContext.translateMarker({
+            markerId: '2',
+            destination: {
+                latitude: 40.049655,
+                longitude: 116.27505,
+            },
+            autoRotate: true,
+            rotate: 30,
+            duration: 1000,
+            animationEnd() {
+                swan.showToast({
+                    title: '动画结束啦！',
+                    icon: 'none'
+                });
+            },
+            success(res) {
+                console.log('success', res)
+            },
+            fail (err) {
+                console.log('fail', err)
+            }
+        })
+    }
+});
+
+```

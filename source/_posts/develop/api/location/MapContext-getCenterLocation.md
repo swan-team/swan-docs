@@ -24,3 +24,31 @@ sidebar: MapContext-getCenterLocation
 |---- | ---- | ---- |
 |longitude|Number|经度|
 |latitude|Number|纬度|
+
+**示例**：
+
+<a href="swanide://fragment/b3313255208a24cb637265f42ea157391573550085624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onReady() {
+        this.mapContext = swan.createMapContext('myMap');
+    },
+    getCenterLocation: function () {
+        this.mapContext.getCenterLocation({
+            success: function (res) {
+                swan.showModal({
+                    title: '位置信息',
+                    content: (res.longitude).toFixed(2) + '/' + (res.latitude).toFixed(2)
+                });
+                console.log("经度", res.longitude);
+                console.log("纬度", res.latitude);
+            }
+        })
+    }
+});
+
+```
