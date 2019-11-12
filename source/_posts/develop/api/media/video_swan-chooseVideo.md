@@ -40,7 +40,21 @@ sidebar: video_swan-chooseVideo
 **说明**：
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseVideo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 <a href="swanide://fragment/b86b8c8cd6f7ad38c0139a8dc9a8699c1569395309880" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```javascript

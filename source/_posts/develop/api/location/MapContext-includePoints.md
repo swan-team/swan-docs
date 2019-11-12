@@ -29,7 +29,22 @@ sidebar: MapContext-includePoints
 |longitude|String|经度|
 |latitude|String|纬度|
 
-**示例**：
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/includePoints.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/d920818b854d716aa8787795cfd47b561573554788777" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -25,7 +25,22 @@ sidebar: MapContext-getCenterLocation
 |longitude|Number|经度|
 |latitude|Number|纬度|
 
-**示例**：
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getCenterLocation.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/b3313255208a24cb637265f42ea157391573550085624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

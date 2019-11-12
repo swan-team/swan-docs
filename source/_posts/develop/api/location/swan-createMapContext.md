@@ -13,7 +13,22 @@ sidebar: swan-createMapContext
 
 **返回值**：mapContext
 
-**示例**：
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/createMapContext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
