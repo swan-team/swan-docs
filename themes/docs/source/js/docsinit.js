@@ -352,6 +352,7 @@
                 _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
                 e.preventDefault();
                 var href = $(this).attr('href');
+                // 更新右侧文章
                 updateArticle($(this), href);
             });
 
@@ -456,6 +457,12 @@
                         $('header').removeClass('m-doc-header-hide');
                     }
                     doc.title = $html.filter('title').html();
+                    // 更新页面 meta 的 title、keywords、description
+                    var keywords = $html.filter('meta[name="keywords"]').attr('content');
+                    var description = $html.filter('meta[name="description"]').attr('content');
+                    $('meta[name="keywords"]').attr('content', keywords);
+                    $('meta[name="description"]').attr('content', description);
+
                     ctx.initCrumbs();
                     ctx.initH2();
                     ctx.initList();
