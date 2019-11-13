@@ -17,6 +17,9 @@ sidebar: remove_swan-removeStorageSync
 
 **代码示例**：
 
+
+<a href="swanide://fragment/fdb596bbf3dc4eb3aef72230ab6b9bfc1573635261030" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 * 在 js 文件中
 
 ```js
