@@ -37,34 +37,45 @@ sidebar: swan-chooseLocation
 
 **代码示例**：
 
-<a href="swanide://fragment/ebaf0022546dcefd6de64c062af9b6481569570163901" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8d260b725527f894f3e42571fcb9b57e1573635756219" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    onReady() {
-        swan.authorize({
+    chooseLocation() {
+         swan.authorize({
             scope: 'scope.userLocation',
             success: res => {
                 console.log(res);
             },
             fail: function () {
-                console.log('授权失败');
+                swan.openSetting({})
             }
         });
-    },
-    chooseLocation() {
+        let that = this;
         swan.chooseLocation({
             success: res => {
-                console.log('chooseLocation success', res);
+                console.log('success', res);
+                let longitude = 'E:' + that.formatLocation(res.longitude) + '′';
+                let latitude =  'N:' + that.formatLocation(res.latitude) + '′';
+                that.setData({
+                    'name': res.name,
+                    'address': res.address,
+                    'longitude': longitude,
+                    'latitude': latitude
+                });
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
         });
+    },
+    formatLocation(data) {
+        return data.toFixed(2).replace('.', '°');
     }
+})
 ```
 
 #### 错误码

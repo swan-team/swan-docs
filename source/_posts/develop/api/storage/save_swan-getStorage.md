@@ -31,20 +31,103 @@ sidebar: save_swan-getStorage
 |data   | Object/String/Number/Array | key 对应的内容|
 
 **代码示例**：
-<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/84384a223a90d8a24ee7754217b4130d1573632783248" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 > 建议先setStorage, 再getStorage
 
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="list-area border-bottom">
+            <label class="list-item-key-4">key</label>
+            <input class="list-item-value" bindfocus="keyFocus" bindinput="keyInput" type="text" value="{{key}}" placeholder="请输入key"/>
+        </view>
+        <view class="list-area border-bottom">
+            <label class="list-item-key-4">value</label>
+            <input class="list-item-value" bindfocus="valueFocus" bindinput="valueInput" type="text" value="{{value}}" placeholder="请输入value"/>
+        </view>
+        <view>
+            <button  bindtap="setStorage" type="primary" hover-stop-propagation="true">存储数据</button>
+            <button  bindtap="getStorage" type="primary" hover-stop-propagation="true" disabled="{{disabled}}">读取数据</button>
+        </view>
+    </view>
+</view>
+```
+
 * 在 js 文件中
+
 ```js
-swan.getStorage({
-    key: 'xxx',
-    success: res => {
-        console.log('getStorage success', res);
+Page({
+    data: {
+        key: '示例Key',
+        value: '示例Value',
+        disabled: true
     },
-    fail: err => {
-        console.log('getStorage err', err);
+    keyInput(e) {
+        this.setData('key', e.detail.value);
+    },
+    valueInput(e) {
+        this.setData('value', e.detail.value);
+    },
+    valueFocus() {
+        this.setData('value', '');
+    },
+    keyFocus() {
+        this.setData('key', '');
+    },
+    setStorage() {
+        let key = this.hasKey();
+        if (!key) {
+            return;
+        }
+        swan.setStorage({
+            key,
+            data: this.getData('value'),
+            success: res => {
+                this.toast('存储成功', 'none');
+                this.setData('disabled', false);
+            },
+            fail: err => {
+                this.toast('存储数据失败');
+            }
+        });
+    },
+    getStorage() {
+        let key = this.hasKey();
+        if (!key) {
+            return;
+        }
+        swan.getStorage({
+            key,
+            success: res => {
+                const data = res.data;
+                if (data) {
+                    swan.showModal({
+                        title: '数据信息',
+                        content: `${key}: ${data}`,
+                        showCancel: false
+                    });
+                } else {
+                    this.toast('找不到key对应的值');
+                }
+            },
+            fail: err => {
+                this.toast('读取数据失败');
+            }
+        });
+    },
+    hasKey() {
+        let key = this.getData('key');
+        if (key) {
+            return key;
+        }
+        this.toast('key不能为空');
+    },
+    toast(title, icon = 'none') {
+        swan.showToast({title, icon});
     }
 });
 ```

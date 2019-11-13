@@ -21,7 +21,7 @@ sidebar: remove_swan-clearStorage
 
 **代码示例**：
 
-<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/88f608adafa373cc2e4d379a95fc140e1573634432911" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
