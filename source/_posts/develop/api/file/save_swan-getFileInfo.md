@@ -30,7 +30,7 @@ sidebar: save_swan-getFileInfo
 
 **代码示例**：
 
-**示例 1 获取服务器上文件信息**
+**示例 1 获取临时文件信息**
 
 <a href="swanide://fragment/f71d02a0f25cf550584e34c6cc5d00b91573626558825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
