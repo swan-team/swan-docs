@@ -17,7 +17,21 @@ sidebar: videocontext_swan-createVideoContext
 
 **返回值**：videoContext
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/createVideoContext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 <a href="swanide://fragment/45b489b0165f458d5c0de30719645bdd1573525569310" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

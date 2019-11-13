@@ -11,25 +11,22 @@ sidebar: MapContext
 
 **代码示例**：
 
-<a href="swanide://fragment/caf6209fb3b9109a245df5ee2cf865fd1569511091359" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f65cf95759e65c9d01bcf3ce0d70f7981573558407387" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="container">
-    <map id="myMap" style="width: 100%"
-     scale="{{scale}}"
-     longitude="{{longitude}}"
-     latitude="{{latitude}}"
-     markers="{{markers}}"
-     position="{{position}}"
-     show-location="{{showlocation}}"
-     polyline="{{polyline}}"
-     controls="{{controls}}"
-     circles="{{circles}}"></map>
+    <map id="myMap" 
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        style="width: 100%"  
+        markers="{{markers}}"
+        show-location>
+    </map>
     <button type="primary" bindtap="getCenterLocation">获取位置</button>
 	<button type="primary" bindtap="moveToLocation">移动位置</button>
-	<button type="primary" bindtap="translateMarker">移动标注</button>
+	<button type="primary" bindtap="translateMarker">平移 marker</button>
 	<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
 	<button type="primary" bindtap="getRegion">获取当前地图的视野范围</button>
     <button type="primary" bindtap="getScale">获取当前地图的缩放级别</button>
@@ -39,53 +36,22 @@ sidebar: MapContext
 * 在 js 文件中
 
 ```js
-Page({
-    /* eslint-enable */
     data: {
-        scale: 16,
-        latitude: '40.048828',
-        longitude: '116.280412',
+        latitude: 40.048828,
+        longitude: 116.280412,  
         markers: [{
-            markerId: '2',
-            latitude: '40.048828',
-            longitude: '116.280412',
+            markerId: 1,
+            latitude: 40.052751,
+            longitude: 116.278796
+        }, {
+            markerId: 2,
+            latitude: 40.048828,
+            longitude: 116.280412,
             callout: {
                 display: 'ALWAYS',
                 content: '百度科技园'
             }
-        }],
-        showLocation: '5',
-        polyline: [{
-            points: [{
-                longitude: 116.278796,
-                latitude: 40.048828
-            }, {
-                longitude: 116.27505,
-                latitude: 40.049655
-            }],
-            color: '#FF5F41FF',
-            width: 2,
-            dottedLine: true
-        }],
-        controls: [{
-            controlId: 1,
-            iconPath: '/images/group.png',
-            position: {
-                left: 0,
-                top: 100,
-                width: 50,
-                height: 50
-            },
-            clickable: true
-        }],
-        circles: [{
-            latitude: '40.052751',
-            longitude: '116.278796',
-            color: '#FF5F41FF',
-            fillColor: '#21FFFFFF',
-            radius: '200',
-            strokeWidth: '2'
-        }]
+        }] 
     },
     onReady() {
         this.mapContext = swan.createMapContext('myMap');
@@ -95,7 +61,7 @@ Page({
             success: function (res) {
                 swan.showModal({
                     title: '位置信息',
-                    content: JSON.stringify(res.longitude) + '/' + JSON.stringify(res.latitude)
+                    content: (res.longitude).toFixed(2) + '/' + (res.latitude).toFixed(2)
                 });
                 console.log("经度", res.longitude);
                 console.log("纬度", res.latitude);
@@ -109,13 +75,20 @@ Page({
         this.mapContext.translateMarker({
             markerId: '2',
             destination: {
-                latitude: 23.10229,
-                longitude: 113.3345211,
+                latitude: 40.049655,
+                longitude: 116.27505,
             },
-            autoRotate: false,
+            autoRotate: true,
             rotate: 30,
+            duration: 1000,
+            animationEnd() {
+                swan.showToast({
+                    title: '动画结束啦！',
+                    icon: 'none'
+                });
+            },
             success(res) {
-                console.log('haha', res)
+                console.log('success', res)
             },
             fail (err) {
                 console.log('fail', err)
@@ -131,23 +104,36 @@ Page({
             }, {
                 latitude: 23,
                 longitude: 113.3345211,
-            }]
-        })
+            }],
+            success: function (res) {
+                console.log(res)
+            },
+            fail: function (err) {
+                    
+            }
+        })  
     },
     getRegion: function () {
         this.mapContext.getRegion({
             success: function (res) {
-                console.log("西南角的经纬度", res.southwest);
-                console.log("东北角的经纬度", res.northeast);
+                swan.showModal({
+                    title: '视野范围',
+                    content: 'northeast: ' + JSON.stringify(
+                       res.northeast) + '/' + "southwest: " + JSON.stringify(res.southwest)
+                });
+                console.log("视野范围", res);
             }
-        });
+        })
     },
     getScale: function () {
-        this.mapContext.getRegion({
+        this.mapContext.getScale({
             success: function (res) {
-                console.log('getScale res', res);
+                swan.showModal({
+                    title: '缩放级别',
+                    content: JSON.stringify(res.scale)
+                });
             }
-        });        
+        })       
     }
 });
 ```

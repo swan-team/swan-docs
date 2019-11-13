@@ -12,7 +12,21 @@ sidebar: videocontext_VideoContext-seek
 **方法参数**：Number position
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/vseek.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 <a href="swanide://fragment/722c7d08ecf8bbf86bb2d76f49e3b9411573478866443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
