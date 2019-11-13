@@ -11,6 +11,8 @@ sidebar: save_swan-getStorageInfoSync
 
 **解释**：同步获取当前 storage 的相关信息。
 
+<a href="swanide://fragment/b030af90ec924e5ee3934fa2aeccb8e91569427287486" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 **方法参数**： 无
 
 **代码示例**：
