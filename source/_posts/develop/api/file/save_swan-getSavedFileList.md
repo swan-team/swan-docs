@@ -37,28 +37,50 @@ sidebar: save_swan-getSavedFileList
 
 **代码示例**：
 
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f888ef3be2955b94548c5dcecf7c5b061573627301292" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
-
-swan.getSavedFileList({
-    success: res => {
-        swan.showToast({
-            title: 'success',
-            icon: 'none'
+Page({
+    data: { },
+    saveFile() {
+        swan.downloadFile({
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            success: res => {
+                swan.saveFile({
+                    tempFilePath: res.tempFilePath,
+                    success: res => {
+                        this.toast('保存成功', 'none');
+                    },
+                    fail: err => {
+                        this.toast('保存失败，请稍后重试', 'none');
+                    }
+                });
+            },
+            fail: err => {
+                this.toast('下载失败，请稍后重试', 'none');
+            }
         });
-        console.log('getSavedFileList success', res);
     },
-    fail: err => {
-        swan.showToast({
-            title: 'fail',
-            icon: 'none'
+    getSavedFileList() {
+        swan.getSavedFileList({
+            success: res => {
+                swan.showModal({
+                    title: 'success',
+                    content: '目前保存文件数' + res.fileList.length
+                });
+                console.log('getSavedFileList success', res);
+            },
+            fail: err => {
+                this.toast('fail', 'none');
+                console.log('getSavedFileList fail', err);
+            }
         });
-        console.log('getSavedFileList fail', err);
+    },
+    toast(title, icon) {
+        swan.showToast({title, icon});
     }
 });
-                   
 ```
 
 #### 错误码
