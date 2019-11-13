@@ -20,7 +20,7 @@ sidebar: nacomponent
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |type |String | 否 | bar| 引导组件类型，有效值： bar,tip。 |
-|content |String| 否 |bar: 关注小程序；<br> tip: 关注小程序，下次使用更便捷。| 引导组件文字， bar类型限制少于11个字符，tip类型少于18个字符，超过长度将截断显示。|
+|content |String| 否 |bar: 关注小程序；<br> tip: 关注小程序，下次使用更便捷。| 引导组件文字，不支持开发者自定义。|
 |success |Function  |  否 | | 接口调用成功的回调|
 |fail   | Function |   否  | | 接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
