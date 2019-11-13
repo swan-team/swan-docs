@@ -30,63 +30,76 @@ sidebar: save_swan-getFileInfo
 
 **代码示例**：
 
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**示例 1 获取服务器上文件信息**
 
-**示例 1 获取临时文件信息**
+<a href="swanide://fragment/f71d02a0f25cf550584e34c6cc5d00b91573626558825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.downloadFile({
-    header: {
-        'Cache-Control': 'no-cache'
-    },
-    url: 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf',
-    success: res => {
-        swan.getFileInfo({
-            tempFilePath: res.tempFilePath,
-            success: res => {
-                swan.showToast({
-                    title: 'success',
-                    icon: 'none'
-                });
-                console.log('getFileInfo success', res);
+Page({
+    data: { },
+    getFileInfo() {
+        swan.downloadFile({
+            header: {
+                'Cache-Control': 'no-cache'
             },
-            fail: err => {
-                swan.showToast({
-                    title: 'fail',
-                    icon: 'none'
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            success: res => {
+                swan.getFileInfo({
+                    filePath: res.tempFilePath,
+                    success: res => {
+                        console.log('getFileInfo success', res);
+                        swan.showModal({
+                            title: 'getFileInfo success',
+                            content: JSON.stringify(res)
+                        });
+                    },
+                    fail: err => {
+                        console.log('getFileInfo fail', err);
+                        swan.showModal({
+                            title: 'getFileInfo fail',
+                            content: JSON.stringify(err)
+                        });
+                    }
                 });
-                console.log('getFileInfo fail', err);
             }
-        });
-    },
+        })
+    }    
 })
 ```
 
 **示例 2 获取本地文件信息**
+
+<a href="swanide://fragment/a0491bc953bae3ceac257222d8f964621573626622598" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-swan.chooseImage({
-    count: 1,
-    success: res => {
-        const tempFilePaths = res.tempFilePaths;  // 本地文件的路径(也可通过swan.saveFile获取)
-        swan.getFileInfo({
-            filePath: tempFilePaths[0],
+Page({
+    data: { },
+    getFileInfo() {
+        swan.chooseImage({
+            count: 1,
             success: res => {
-                swan.showToast({
-                    title: 'success',
-                    icon: 'none'
-                });
-                console.log('getFileInfo success', res);
-            },
-            fail: err => {
-                swan.showToast({
-                    title: 'fail',
-                    icon: 'none'
-                });
-                console.log('getFileInfo fail', err);
+                const tempFilePaths = res.tempFilePaths;  // 本地文件的路径(也可通过swan.saveFile获取)
+                swan.getFileInfo({
+                    filePath: tempFilePaths[0],
+                    success: res => {
+                        swan.showModal({
+                            title: 'getFileInfo success',
+                            content: JSON.stringify(res)
+                        });
+                        console.log('getFileInfo success', res);
+                    },
+                    fail: err => {
+                        swan.showModal({
+                            title: 'getFileInfo fail',
+                            content: JSON.stringify(err)
+                        });
+                        console.log('getFileInfo fail', err);
+                    }
+                })
             }
         });
-    }
-});
+    }    
+})
 ```
 
 #### 错误码
