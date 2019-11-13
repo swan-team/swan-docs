@@ -34,7 +34,7 @@ sidebar: save_swan-saveFile
 |savedFilePath  |String | 文件的保存路径|
 
 **代码示例**：
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/08e654d3cd0a9812f5cb500d0be6d1b41573624533671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -46,15 +46,17 @@ Page({
             header: {
                 'Cache-Control': 'no-cache'
             },
-            url: 'https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf',
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
             success: res => {
+                console.log('临时文件路径:', res);
                 swan.saveFile({
                     tempFilePath: res.tempFilePath,
                     success: res => {
-                        swan.showToast({
-                            title: '保存成功'
+                        console.log('保存到的路径是：', res.savedFilePath);
+                        swan.showModal({
+                            title: '保存成功',
+                            content: '保存到的路径是：' + res.savedFilePath
                         });
-                        this.setData('filePath', res.savedFilePath);
                     },
                     fail: err => {
                         swan.showToast({
@@ -65,7 +67,7 @@ Page({
             },
         })
     }
-});
+})
 ```
 
 

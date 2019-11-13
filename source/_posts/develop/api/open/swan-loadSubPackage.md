@@ -22,7 +22,7 @@ sidebar: swan-loadSubPackage
 
 **代码示例**：
 
-<a href="swanide://fragment/29d0cdeccb7b4dcb8614e6a64cdf59fb1559043962845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0708301e164b80b42155a0313ad9bb3e1573614983911" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -38,7 +38,7 @@ sidebar: swan-loadSubPackage
 Page({
     loadSubPackage() {
         swan.loadSubPackage({
-            root: 'subpackage',
+            root: 'packageA/pages',
             success: res => {
                 console.log('loadSubPackage success', res);
             },
