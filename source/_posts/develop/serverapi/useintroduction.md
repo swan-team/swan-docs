@@ -1,5 +1,5 @@
 ---
-title: 使用说明
+title: 模板消息使用说明
 header: develop
 nav: serverapi
 sidebar: useintroduction

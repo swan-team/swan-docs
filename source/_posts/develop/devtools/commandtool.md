@@ -17,7 +17,7 @@ npm i swan-toolkit -g
 
 - 环境依赖：[Node.js](https://nodejs.org)
 - 亦可局部安装，通过`npx`或`node_modules/.bin/swan`执行。
-- 本工具跨平台，可以部署在windows/mac/Linux，可用于产品集成流水线部署。
+- 本工具跨平台，可以部署在windows/Mac/Linux，可用于产品集成流水线部署。
 - （全局）安装后即可使用全局shell命令`swan`。
 
 ### 更新

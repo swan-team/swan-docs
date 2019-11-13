@@ -40,28 +40,9 @@ sidebar: nacomponent
 
     **示例代码 1**
 
-        ```javascript
-        swan.showFavoriteGuide({
-            type: 'bar',
-            content:'一键关注小程序',
-            success: res => {
-                console.log('关注成功：', res);
-            },
-            fail: err => {
-                console.log('关注失败：', err);
-            }
-        })
-        ```
-
-2. 气泡引导(type=tip)
-    引导组件 5s 后自动消失，组件箭头指向小程序菜单。
-
-    ![图片](../../../../img/api/nacomponent/弱引导.png)
-    **示例代码 2**
-
     ```javascript
     swan.showFavoriteGuide({
-        type: 'tip',
+        type: 'bar',
         content:'一键关注小程序',
         success: res => {
             console.log('关注成功：', res);
@@ -72,11 +53,34 @@ sidebar: nacomponent
     })
     ```
 
-用户通过引导关注组件“关注小程序”后，可以在百度APP-我的“我的小程序”中看到它。
+2. 气泡引导(type=tip)
+    引导组件 5s 后自动消失，组件箭头指向小程序菜单。
+  
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
-		<img src="../../../../img/design/component/guide_add/2.png">
-	</div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../../img/api/nacomponent/弱引导.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>  
 </div>
+
+**示例代码 2**
+
+```javascript
+swan.showFavoriteGuide({
+    type: 'tip',
+    content:'一键关注小程序',
+    success: res => {
+        console.log('关注成功：', res);
+    },
+    fail: err => {
+        console.log('关注失败：', err);
+    }
+})
+```
+
+用户通过引导关注组件“关注小程序”后，可以在百度APP-我的“我的小程序”中看到它。
+
 
 

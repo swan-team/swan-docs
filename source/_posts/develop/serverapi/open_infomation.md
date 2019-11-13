@@ -1,5 +1,5 @@
 ---
-title: 消息模板介绍
+title: 模板消息介绍
 header: develop
 nav: serverapi
 sidebar: open_infomation

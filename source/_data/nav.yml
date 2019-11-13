@@ -3250,15 +3250,15 @@
                 sidebar:
                   -
                     link: /develop/serverapi/open_infomation 
-                    text: 消息模板介绍
+                    text: 模板消息介绍
                     name: open_infomation 
                   -
                     link: /develop/serverapi/useintroduction
-                    text: 使用说明
+                    text: 模板消息使用说明
                     name: useintroduction
                   -
                     link: /develop/serverapi/sendintroduction
-                    text: 下发条件说明
+                    text: 模板消息下发条件 
                     name: sendintroduction
                   -
                     link: /develop/serverapi/getTemplateLibraryList
