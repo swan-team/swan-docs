@@ -62,9 +62,6 @@ sidebar: swan-getLocation
         },
         fail: err => {
             console.log('getLocation fail', res)
-        },
-        complete: () => {
-           
         }
     });
 ```
