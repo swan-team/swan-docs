@@ -51,7 +51,7 @@ sidebar: swan.getBackgroundAudioManager
 **代码示例**：
 
 
-<a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5beabcb45088a2a513f5eab9de2ef98a1573617055617" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

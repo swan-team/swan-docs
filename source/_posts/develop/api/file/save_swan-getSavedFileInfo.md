@@ -30,12 +30,36 @@ sidebar: save_swan-getSavedFileInfo
 
 **代码示例**：
 
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/60491d398987bd00c7c871c129e5c98a1573628667023" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
+    data: {
+        filePath: ''
+    },
+    saveFile() {
+        this.toast('正在保存', 'loading');
+        swan.downloadFile({
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            success: res => {
+                swan.saveFile({
+                    tempFilePath: res.tempFilePath,
+                    success: res => {
+                        this.toast('保存成功', 'none');
+                        this.setData('filePath', res.savedFilePath);
+                    },
+                    fail: err => {
+                        this.toast('保存失败，请稍后重试', 'none');
+                    }
+                });
+            },
+            fail: err => {
+                this.toast('下载失败，请稍后重试', 'none');
+            }
+        });
+    },
     getSavedFileInfo() {
         swan.getSavedFileList({
             success: res => {
@@ -60,7 +84,10 @@ Page({
                     });
                 }
             }
-        });
+        })
+    },
+    toast(title, icon) {
+        swan.showToast({title, icon});
     }
 });
 ```

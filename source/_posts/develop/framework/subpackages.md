@@ -18,7 +18,7 @@ sidebar: subpackages
 
 ### 使用方法
 
-[在开发者工具中预览效果](swanide://fragment/5ec5755c02bef7496cfadf0cccd8baef1573114425086)
+[在开发者工具中预览效果](swanide://fragment/46f0c277ccf2f56f2cb8072bb2b50def1573614948336)
 
 假设支持分包的小程序，目录结构如下：
 
@@ -55,18 +55,22 @@ sidebar: subpackages
     ],
     "subPackages": [
         {
-            "root": "packageA",
+            "root": "packageA/pages",
+            "name": "packageOne",	
             "pages": [
-                "pages/pageOne/pageOne",
-                "pages/pageTwo/pageTwo"
-            ]
+                "pageOne/pageOne",
+                "pageTwo/pageTwo"
+            ],
+            "independent": true
         },
-	{
+        {
             "root": "packageB/pages",
+            "name": "packageTwo",	
             "pages": [
-                "pageThree/pageThree",
-		"pageFour/pageFour"
-            ]
+                "pages/pageThree/pageThree",
+                "pages/pageFour/pageFour"
+            ],
+            "independent": true
         }
     ],
     "tabBar": {

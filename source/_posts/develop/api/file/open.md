@@ -27,16 +27,7 @@ sidebar: open
 
 **代码示例**：
 
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="openDocument">openDocument</button>
-</view>
-```
-
+<a href="swanide://fragment/8ac31cf0028bdeb66b5f7d9ecd83ec271573630425994" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 js 文件中
 
 ```js
@@ -63,13 +54,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 #### 错误码
 
 * Andriod
