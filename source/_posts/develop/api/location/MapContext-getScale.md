@@ -27,3 +27,43 @@ sidebar: MapContext-getScale
 |scale|Number|地图的缩放级别 |
  
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getScale.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/9f39f67280da838ca99d8be3e100008e1573557670114" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onReady() {
+        this.mapContext = swan.createMapContext('myMap');
+    },
+    getScale: function () {
+        this.mapContext.getScale({
+            success: function (res) {
+                swan.showModal({
+                    title: '缩放级别',
+                    content: JSON.stringify(res.scale)
+                });
+            }
+        })
+    }
+});
+
+```
+

@@ -19,7 +19,21 @@ sidebar: videocontext_VideoContext-sendDanmu
 |color|string|否||弹幕颜色|
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/vdanmu.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 <a href="swanide://fragment/dfdf6e177f818808b415b657d64c1c7c1573479113127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
