@@ -13,7 +13,22 @@ sidebar: save_swan-getStorageSync
 
 **`key`参数说明**： 本地缓存中的指定的 key
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/storage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
+
 <a href="swanide://fragment/67afe5dddb614eba763185066b2e60ea1573632298467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

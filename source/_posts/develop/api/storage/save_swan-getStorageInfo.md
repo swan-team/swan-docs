@@ -32,6 +32,20 @@ sidebar:  save_swan-getStorageInfo
 
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getStorageInfo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/eec686606577d1cd002b300acd3e88681573633461847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

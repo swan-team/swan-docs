@@ -28,9 +28,23 @@ sidebar: save_swan-getFileInfo
 |size  | Number | 文件大小，单位：B。|
 |digest  | String | 按照传入的 digestAlgorithm 计算得出的的文件摘要。|
 
-**代码示例**：
+**图片示例**：
 
-**示例 1 获取临时文件信息**
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getFileInfo1.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例 1**：
+
+**获取临时文件信息**
 
 <a href="swanide://fragment/f71d02a0f25cf550584e34c6cc5d00b91573626558825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -67,7 +81,22 @@ Page({
 })
 ```
 
-**示例 2 获取本地文件信息**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getFileInfo2.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例 2**：
+**获取本地文件信息**
 
 <a href="swanide://fragment/a0491bc953bae3ceac257222d8f964621573626622598" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
