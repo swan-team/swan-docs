@@ -41,3 +41,44 @@ sidebar: voice_VoiceRecognizer_onError
 |4003|	没有匹配的识别结果|
 |4004|	返回结果异常|
 |9000|	未知错误|
+
+**代码示例**
+
+
+<a href="swanide://fragment/020e4a4c5c395d83a4df5f8dcb029e741573732689748" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+* 在 swan 文件中
+
+```html
+<view class="result">{{result}}</view>
+<button type="primary" bindtap="voiceRecognizerStart">点击开始识别语音</button>
+<view>点击开始不说话即可触发</view>
+```
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        result: ''
+    },
+    voiceRecognizerStart() {
+
+        const voiceRecognizer = swan.ai.getVoiceRecognizer();
+
+        voiceRecognizer.onError(res => {
+            console.log('voice onError', res.result);
+            swan.showModal({
+                title: 'onError',
+                content: JSON.stringify(res)
+            })
+        });
+
+        const options = {
+            mode: 'dnn',
+            longSpeech: false
+        };
+
+        voiceRecognizer.start(options);
+    }
+})
+
+```
