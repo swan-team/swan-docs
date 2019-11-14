@@ -58,7 +58,6 @@ const CanvasContext = swan.createCanvasContext('myCanvas');
 
 ```js
 CanvasContext.setFillStyle('#ff0000');
-
 CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
 CanvasContext.fill();
 ```
