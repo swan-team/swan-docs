@@ -36,7 +36,7 @@ Page({
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
 	}
 });
