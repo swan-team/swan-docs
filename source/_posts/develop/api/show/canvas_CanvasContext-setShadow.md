@@ -23,12 +23,15 @@ sidebar: canvas_CanvasContext-setShadow
 
 **代码示例**：
 
+<a href="swanide://fragment/9e80840b183a93ec01b126abac5dd1a81573719669152" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.setFillStyle('blue');
-CanvasContext.setShadow(10, 50, 50, 'red');
-CanvasContext.fillRect(30, 30, 150, 75);
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setFillStyle('blue');
+canvasContext.setShadow(10, 50, 50, 'red');
+canvasContext.fillRect(30, 30, 150, 75);
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/setShadow.png)
