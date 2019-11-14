@@ -16,7 +16,7 @@ sidebar: show_canvas
 
 **JS写法示例**：
 
-<a href="swanide://fragment/3a8536b8c05b15c0a6004acac7c6cc341573708568526" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5a48405eb904cfe0231782d70f94ef3e1573708931657" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
