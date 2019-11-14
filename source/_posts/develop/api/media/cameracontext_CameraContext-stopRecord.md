@@ -21,7 +21,7 @@ sidebar: cameracontext_CameraContext-stopRecord
 
 **示例**：
  
-<a href="swanide://fragment/6964b37034ded8170df9dcc2bb15461c1573545722656" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d6e4c23348cc8dc4a639b6c5e0670ca61573701710321" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -31,8 +31,8 @@ Page({
         videoSrc: ''
     },
     startRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.startRecord({
+        const cameraContext = swan.createCameraContext();
+        cameraContext.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -41,8 +41,8 @@ Page({
         });
     },
     stopRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.stopRecord({
+        const cameraContext = swan.createCameraContext();
+        cameraContext.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',

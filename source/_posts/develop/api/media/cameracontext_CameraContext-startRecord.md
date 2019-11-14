@@ -22,7 +22,7 @@ sidebar: cameracontext_CameraContext.startRecord
 
 **示例**：
  
-<a href="swanide://fragment/6964b37034ded8170df9dcc2bb15461c1573545722656" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/398fc8b20a9b3411e7c3a22a6f9876f41573701771835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -32,8 +32,8 @@ Page({
         videoSrc: ''
     },
     startRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.startRecord({
+        const cameraContext = swan.createCameraContext();
+        cameraContext.startRecord({
             success: res => {
                 swan.showToast({
                     title: 'startRecord'
@@ -42,8 +42,8 @@ Page({
         });
     },
     stopRecord() {
-        const ctx = swan.createCameraContext();
-        ctx.stopRecord({
+        const cameraContext = swan.createCameraContext();
+        cameraContext.stopRecord({
             success: res => {
                 swan.showModal({
                     title: '提示',
