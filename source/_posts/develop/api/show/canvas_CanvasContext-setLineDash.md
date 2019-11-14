@@ -15,14 +15,16 @@ sidebar: canvas_CanvasContext_setLineDash
 
 **代码示例**：
 
+<a href="swanide://fragment/a0f3e795134820d54777817b4240fdbb1573721214224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.setLineDash([10, 20], 5);
-CanvasContext.beginPath();
-CanvasContext.moveTo(0,100);
-CanvasContext.lineTo(400, 100);
-CanvasContext.stroke();
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setLineDash([10, 20], 5);
+canvasContext.beginPath();
+canvasContext.moveTo(0,100);
+canvasContext.lineTo(400, 100);
+canvasContext.stroke();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/setLineDash.png)

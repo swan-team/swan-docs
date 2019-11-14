@@ -17,16 +17,18 @@ sidebar:  canvas_CanvasContext_scale
 
 **代码示例**：
 
+<a href="swanide://fragment/20797ae6b76f08d393130138ca733ffe1573723645337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
+const canvasContext = swan.createCanvasContext('myCanvas');
 
-CanvasContext.strokeRect(10, 10, 25, 15);
-CanvasContext.scale(2, 2);
-CanvasContext.strokeRect(10, 10, 25, 15);
-CanvasContext.scale(2, 2);
-CanvasContext.strokeRect(10, 10, 25, 15);
+canvasContext.strokeRect(10, 10, 25, 15);
+canvasContext.scale(2, 2);
+canvasContext.strokeRect(10, 10, 25, 15);
+canvasContext.scale(2, 2);
+canvasContext.strokeRect(10, 10, 25, 15);
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/scale.png)

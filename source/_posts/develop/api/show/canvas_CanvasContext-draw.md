@@ -18,13 +18,15 @@ sidebar: canvas_CanvasContext-draw
 
 **代码示例**：
 
+<a href="swanide://fragment/b39a66dd09566477c1abddd6ffa146111573725210935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.setFillStyle('blue');
-CanvasContext.fillRect(10, 10, 150, 100);
-CanvasContext.draw();
-CanvasContext.fillRect(30, 30, 150, 100);
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setFillStyle('blue');
+canvasContext.fillRect(10, 10, 150, 100);
+canvasContext.draw();
+canvasContext.fillRect(30, 30, 150, 100);
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/draw1.png)

@@ -31,12 +31,14 @@ sidebar: canvas_CanvasContext.arc
 
 **代码示例**：
 
+<a href="swanide://fragment/6e90c6683d0c5676207fd5eefa1c06b71573723566960" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
-CanvasContext.setFillStyle('blue');
-CanvasContext.fill();
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
+canvasContext.setFillStyle('blue');
+canvasContext.fill();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/arc.png)

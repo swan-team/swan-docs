@@ -14,39 +14,41 @@ sidebar: canvas_CanvasContext_setLineJoin
 
 **代码示例**：
 
+<a href="swanide://fragment/929c9c0021fb686fcb5292575e4369531573721091729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.beginPath();
-CanvasContext.moveTo(10, 10);
-CanvasContext.lineTo(100, 50);
-CanvasContext.lineTo(10, 90);
-CanvasContext.stroke();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.beginPath();
+canvasContext.moveTo(10, 10);
+canvasContext.lineTo(100, 50);
+canvasContext.lineTo(10, 90);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineJoin('bevel');
-CanvasContext.setLineWidth(10);
-CanvasContext.moveTo(50, 10);
-CanvasContext.lineTo(140, 50);
-CanvasContext.lineTo(50, 90);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineJoin('bevel');
+canvasContext.setLineWidth(10);
+canvasContext.moveTo(50, 10);
+canvasContext.lineTo(140, 50);
+canvasContext.lineTo(50, 90);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineJoin('round');
-CanvasContext.setLineWidth(10);
-CanvasContext.moveTo(90, 10);
-CanvasContext.lineTo(180, 50);
-CanvasContext.lineTo(90, 90);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineJoin('round');
+canvasContext.setLineWidth(10);
+canvasContext.moveTo(90, 10);
+canvasContext.lineTo(180, 50);
+canvasContext.lineTo(90, 90);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineJoin('miter');
-CanvasContext.setLineWidth(10);
-CanvasContext.moveTo(130, 10);
-CanvasContext.lineTo(220, 50);
-CanvasContext.lineTo(130, 90);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineJoin('miter');
+canvasContext.setLineWidth(10);
+canvasContext.moveTo(130, 10);
+canvasContext.lineTo(220, 50);
+canvasContext.lineTo(130, 90);
+canvasContext.stroke();
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/setLineJoin.png)

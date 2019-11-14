@@ -16,16 +16,18 @@ sidebar: canvas_CanvasContext-translate
 
 **代码示例**：
 
+<a href="swanide://fragment/755378a183a45481f8a03347f75519251573723810204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
+const canvasContext = swan.createCanvasContext('myCanvas');
 
-CanvasContext.strokeRect(10, 10, 150, 100);
-CanvasContext.translate(20, 20);
-CanvasContext.strokeRect(10, 10, 150, 100);
-CanvasContext.translate(20, 20);
-CanvasContext.strokeRect(10, 10, 150, 100);
+canvasContext.strokeRect(10, 10, 150, 100);
+canvasContext.translate(20, 20);
+canvasContext.strokeRect(10, 10, 150, 100);
+canvasContext.translate(20, 20);
+canvasContext.strokeRect(10, 10, 150, 100);
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/translate.png)
