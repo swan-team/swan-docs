@@ -39,7 +39,7 @@ context有效值如下
 **代码示例**
 
 
-<a href="swanide://fragment/623d10008e3c4a087ac1c35f20df32881569415699768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cc2100b123bbb0154c277fe6c8f8fa5b1573728427299" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const voiceRecognizer = swan.ai.getVoiceRecognizer();
