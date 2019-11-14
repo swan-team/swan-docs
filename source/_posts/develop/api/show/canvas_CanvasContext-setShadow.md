@@ -1,5 +1,5 @@
 ---
-title: CanvasContext.setShadow
+title: cameraContextsetShadow
 header: develop
 nav: api
 sidebar: canvas_CanvasContext-setShadow
@@ -23,12 +23,15 @@ sidebar: canvas_CanvasContext-setShadow
 
 **代码示例**：
 
+<a href="swanide://fragment/632fdfb62dafc611f117a28a61a6c0201573719196994" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.setFillStyle('blue');
-CanvasContext.setShadow(10, 50, 50, 'red');
-CanvasContext.fillRect(30, 30, 150, 75);
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+cameraContextsetFillStyle('blue');
+cameraContextsetShadow(10, 50, 50, 'red');
+cameraContextfillRect(30, 30, 150, 75);
+cameraContextdraw();
 ```
 
 ![图片](../../../../img/api/canvas/setShadow.png)
