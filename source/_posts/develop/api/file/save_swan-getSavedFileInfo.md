@@ -30,7 +30,7 @@ sidebar: save_swan-getSavedFileInfo
 
 **代码示例**：
 
-<a href="swanide://fragment/60491d398987bd00c7c871c129e5c98a1573628667023" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/492382b4ae79bea6296cf50bbe19a7031573644436590" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -68,18 +68,18 @@ Page({
                     swan.getSavedFileInfo({
                         filePath,
                         success: res => {
-                            swan.showToast({
+                            swan.showModal({
                                 title: 'success',
-                                icon: 'none'
+                                content: JSON.stringify(res)
                             });
-                            console.log('getSavedFileList success', res);
+                            console.log('getSavedFileInfo success', res);
                         },
                         fail: err => {
                             swan.showToast({
                                 title: 'fail',
                                 icon: 'none'
                             });
-                            console.log('getSavedFileList fail', err);
+                            console.log('getSavedFileInfo fail', err);
                         }
                     });
                 }
