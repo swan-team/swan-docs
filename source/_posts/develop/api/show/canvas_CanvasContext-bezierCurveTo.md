@@ -29,16 +29,18 @@ sidebar:  canvas_CanvasContext-bezierCurveTo
 
 **代码示例**：
 
-```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-// Draw quadratic curve
-CanvasContext.beginPath();
-CanvasContext.moveTo(20, 20);
-CanvasContext.bezierCurveTo(20, 100, 200, 100, 200, 20);
-CanvasContext.setStrokeStyle('black');
-CanvasContext.stroke();
+<a href="swanide://fragment/f54afefdc128050accdc18a9e52296911573724955575" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-CanvasContext.draw();
+```js
+const canvasContext = swan.createCanvasContext('myCanvas');
+// Draw quadratic curve
+canvasContext.beginPath();
+canvasContext.moveTo(20, 20);
+canvasContext.bezierCurveTo(20, 100, 200, 100, 200, 20);
+canvasContext.setStrokeStyle('black');
+canvasContext.stroke();
+
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/bezierCurveTo.png)

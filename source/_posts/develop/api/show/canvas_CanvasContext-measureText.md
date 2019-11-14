@@ -25,9 +25,9 @@ sidebar: canvas_CanvasContext-measureText
 **代码示例**：
 
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas')
-CanvasContext.font = 'italic bold 20px cursive'
-const metrics = CanvasContext.measureText('Hello World')
+const canvasContext = swan.createCanvasContext('myCanvas')
+canvasContext.font = 'italic bold 20px cursive'
+const metrics = canvasContext.measureText('Hello World')
 console.log(metrics.width);
 ```
 #### 错误码

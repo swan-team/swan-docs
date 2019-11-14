@@ -17,16 +17,18 @@ sidebar: canvas_CanvasContext_rotate
 
 **代码示例**：
 
+<a href="swanide://fragment/b33903f1e7561b351e0e560c3ff5273c1573723721593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
+const canvasContext = swan.createCanvasContext('myCanvas');
 
-CanvasContext.strokeRect(100, 10, 150, 100);
-CanvasContext.rotate(20 * Math.PI / 180);
-CanvasContext.strokeRect(100, 10, 150, 100);
-CanvasContext.rotate(20 * Math.PI / 180);
-CanvasContext.strokeRect(100, 10, 150, 100);
+canvasContext.strokeRect(100, 10, 150, 100);
+canvasContext.rotate(20 * Math.PI / 180);
+canvasContext.strokeRect(100, 10, 150, 100);
+canvasContext.rotate(20 * Math.PI / 180);
+canvasContext.strokeRect(100, 10, 150, 100);
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/rotate.png)

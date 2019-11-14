@@ -22,14 +22,16 @@ sidebar: canvas_CanvasContext-clearRect
 
 **代码示例**：
 
+<a href="swanide://fragment/3b71cc1ec5750d4b8555c914f211fe761573722908842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.setFillStyle('red');
-CanvasContext.fillRect(0, 0, 150, 200);
-CanvasContext.setFillStyle('blue');
-CanvasContext.fillRect(150, 0, 150, 200);
-CanvasContext.clearRect(30, 30, 150, 75);
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setFillStyle('blue');
+canvasContext.fillRect(0, 0, 150, 200);
+canvasContext.setFillStyle('blue');
+canvasContext.fillRect(150, 0, 150, 200);
+canvasContext.clearRect(30, 30, 150, 75);
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/clearRect.png)

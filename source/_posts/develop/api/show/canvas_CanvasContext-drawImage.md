@@ -36,12 +36,12 @@ sidebar: canvas_CanvasContext-drawImage
 **代码示例**：
 
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
+const canvasContext = swan.createCanvasContext('myCanvas');
 
 swan.chooseImage({
     success: function(res){
-        CanvasContext.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
-        CanvasContext.draw();
+        canvasContext.drawImage(res.tempFilePaths[0], 0, 0, 150, 100);
+        canvasContext.draw();
     }
 });
 ```

@@ -19,16 +19,18 @@ sidebar:  canvas_CanvasContext-quadraticCurveTo
 
 **代码示例**：
 
-```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-// Draw quadratic curve
-CanvasContext.beginPath();
-CanvasContext.moveTo(20, 20);
-CanvasContext.quadraticCurveTo(20, 100, 200, 20);
-CanvasContext.setStrokeStyle('blue');
-CanvasContext.stroke();
+<a href="swanide://fragment/d2d5ff700bbf4feba2a4bf925e0c8d151573725024694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-CanvasContext.draw();
+```js
+const canvasContext = swan.createCanvasContext('myCanvas');
+// Draw quadratic curve
+canvasContext.beginPath();
+canvasContext.moveTo(20, 20);
+canvasContext.quadraticCurveTo(20, 100, 200, 20);
+canvasContext.setStrokeStyle('blue');
+canvasContext.stroke();
+
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/quadraticCurveTo.png)
