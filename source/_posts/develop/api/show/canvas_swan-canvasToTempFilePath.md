@@ -30,7 +30,7 @@ sidebar: canvas_swan-canvasToTempFilePath
 
 **代码示例**：
 
-<a href="swanide://fragment/9fc3a4eba1969fa4d15b3d35184ed3cf1565930971190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4ac77250ce4c4913ad584d3ae6d1f4691573715486339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 > 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
 
@@ -39,7 +39,7 @@ sidebar: canvas_swan-canvasToTempFilePath
 
 ```html
 <canvas canvas-id="myCanvas" />
-<button class="btn" type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
+<button type="primary" bindtap="canvasToTempFilePath">canvasToTempFilePath</button>
 <image src="{{src}}"></image>
 ```
 
@@ -51,12 +51,11 @@ Page({
         src: ''
     },
     onReady: function () {
-        console.log('在工具2.7.0及以上版本正常使用');
-        const CanvasContext = this.createCanvasContext('myCanvas');
-        CanvasContext.setFillStyle('#ff0000');
-        CanvasContext.arc(100, 50, 50, 0, 2 * Math.PI);
-        CanvasContext.fill();
-        CanvasContext.draw();
+        const canvasContext = this.createCanvasContext('myCanvas');
+        canvasContext.setFillStyle('#ff0000');
+        canvasContext.arc(100, 50, 50, 0, 2 * Math.PI);
+        canvasContext.fill();
+        canvasContext.draw();
     },
     canvasToTempFilePath (){
         const that = this;
@@ -73,7 +72,7 @@ Page({
             }
         })
     }
-});
+})
 ```
 
 
