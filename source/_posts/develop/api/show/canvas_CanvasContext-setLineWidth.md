@@ -15,32 +15,34 @@ sidebar: canvas_CanvasContext-setLineWidth
 
 **代码示例**：
 
+<a href="swanide://fragment/4e19cb2db62b79cb68943f3971dd54101573720541344" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.beginPath();
-CanvasContext.moveTo(30, 10);
-CanvasContext.lineTo(200, 10);
-CanvasContext.stroke();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.beginPath();
+canvasContext.moveTo(30, 10);
+canvasContext.lineTo(200, 10);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineWidth(5);
-CanvasContext.moveTo(50, 30);
-CanvasContext.lineTo(200, 30);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineWidth(5);
+canvasContext.moveTo(50, 30);
+canvasContext.lineTo(200, 30);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineWidth(10);
-CanvasContext.moveTo(70, 50);
-CanvasContext.lineTo(200, 50);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineWidth(10);
+canvasContext.moveTo(70, 50);
+canvasContext.lineTo(200, 50);
+canvasContext.stroke();
 
-CanvasContext.beginPath();
-CanvasContext.setLineWidth(15);
-CanvasContext.moveTo(90, 70);
-CanvasContext.lineTo(200, 70);
-CanvasContext.stroke();
+canvasContext.beginPath();
+canvasContext.setLineWidth(15);
+canvasContext.moveTo(90, 70);
+canvasContext.lineTo(200, 70);
+canvasContext.stroke();
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/setLineWidth.png)
