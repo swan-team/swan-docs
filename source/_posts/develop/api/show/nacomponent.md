@@ -36,11 +36,19 @@ sidebar: nacomponent
 1. 浮层引导(type=bar)
     一直展现：用户点击关闭，浮层引导消失；点击关注按钮可直接关注小程序。
 
-    ![图片](../../../../img/api/nacomponent/强引导.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../../img/api/nacomponent/强引导.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>      
+</div>
+  
 
-    **示例代码 1**
+**示例代码 1**
 
-    ```javascript
+```javascript
     swan.showFavoriteGuide({
         type: 'bar',
         content:'一键关注小程序',
@@ -51,7 +59,7 @@ sidebar: nacomponent
             console.log('关注失败：', err);
         }
     })
-    ```
+```
 
 2. 气泡引导(type=tip)
     引导组件 5s 后自动消失，组件箭头指向小程序菜单。
