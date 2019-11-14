@@ -1,5 +1,5 @@
 ---
-title: cameraContextsetShadow
+title: CanvasContext.setShadow
 header: develop
 nav: api
 sidebar: canvas_CanvasContext-setShadow
