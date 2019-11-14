@@ -23,6 +23,8 @@ sidebar: canvas_CanvasContext-createLinearGradient
 
 **代码示例**：
 
+<a href="swanide://fragment/44364a5e7710fd57be9c2269dbcba3f11573719980297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 const CanvasContext = this.createCanvasContext('myCanvas');
 
