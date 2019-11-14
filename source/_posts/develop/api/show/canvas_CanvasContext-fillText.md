@@ -18,13 +18,15 @@ sidebar:  canvas_CanvasContext-fillText
 
 **代码示例**：
 
+<a href="swanide://fragment/111d313d772997c85709aaa679ddb9e81573724209338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
+const canvasContext = swan.createCanvasContext('myCanvas');
 
-CanvasContext.setFontSize(20);
-CanvasContext.fillText('Hello', 20, 20);
-CanvasContext.fillText('World', 100, 100);
+canvasContext.setFontSize(20);
+canvasContext.fillText('Hello', 20, 20);
+canvasContext.fillText('World', 100, 100);
 
-CanvasContext.draw();
+canvasContext.draw();
 ```
 

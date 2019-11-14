@@ -17,18 +17,18 @@ sidebar:  canvas_CanvasContext-clip
 **代码示例**：
 
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas')
+const canvasContext = swan.createCanvasContext('myCanvas')
 
 swan.downloadFile({
-    url： 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
+    url: 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {
-        CanvasContext.save()
-        CanvasContext.beginPath()
-        CanvasContext.arc(50, 50, 25, 0, 2*Math.PI)
-        CanvasContext.clip()
-        CanvasContext.drawImage(res.tempFilePath, 25, 25)
-        CanvasContext.restore()
-        CanvasContext.draw()
+        canvasContext.save()
+        canvasContext.beginPath()
+        canvasContext.arc(50, 50, 25, 0, 2*Math.PI)
+        canvasContext.clip()
+        canvasContext.drawImage(res.tempFilePath, 25, 25)
+        canvasContext.restore()
+        canvasContext.draw()
     }
 });
 ```

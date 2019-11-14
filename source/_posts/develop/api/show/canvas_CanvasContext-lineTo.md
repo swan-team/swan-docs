@@ -17,13 +17,15 @@ sidebar: canvas_CanvasContext-lineTo
 
 **代码示例**：
 
+<a href="swanide://fragment/7be2fad3d201ee3f09e4b2e81a875b031573723506586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.moveTo(10, 10);
-CanvasContext.rect(10, 10, 100, 50);
-CanvasContext.lineTo(110, 60);
-CanvasContext.stroke();
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.moveTo(10, 10);
+canvasContext.rect(10, 10, 100, 50);
+canvasContext.lineTo(110, 60);
+canvasContext.stroke();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/lineTo.png)

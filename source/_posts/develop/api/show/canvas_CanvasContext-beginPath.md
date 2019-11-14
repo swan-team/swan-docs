@@ -17,19 +17,21 @@ sidebar: canvas_CanvasContext-beginPath
 
 **代码示例**：
 
+<a href="swanide://fragment/74a4bfc69db830725b7bac2eb6eca3911573723257254" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.rect(10, 10, 100, 30);
-CanvasContext.setFillStyle('red');
-CanvasContext.fill();
-CanvasContext.beginPath();
-CanvasContext.rect(10, 40, 100, 30);
-CanvasContext.setFillStyle('blue');
-CanvasContext.fillRect(10, 70, 100, 30);
-CanvasContext.rect(10, 100, 100, 30);
-CanvasContext.setFillStyle('green');
-CanvasContext.fill();
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.rect(10, 10, 100, 30);
+canvasContext.setFillStyle('red');
+canvasContext.fill();
+canvasContext.beginPath();
+canvasContext.rect(10, 40, 100, 30);
+canvasContext.setFillStyle('blue');
+canvasContext.fillRect(10, 70, 100, 30);
+canvasContext.rect(10, 100, 100, 30);
+canvasContext.setFillStyle('green');
+canvasContext.fill();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/beginPath.png)

@@ -21,12 +21,14 @@ sidebar: canvas_CanvasContext_rect
 
 **代码示例**：
 
+<a href="swanide://fragment/59b1eaf288f0666fd272e0c22fc3eb7e1573721931595" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-const CanvasContext = swan.createCanvasContext('myCanvas');
-CanvasContext.rect(30, 30, 150, 75);
-CanvasContext.setFillStyle('blue');
-CanvasContext.fill();
-CanvasContext.draw();
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.rect(30, 30, 150, 75);
+canvasContext.setFillStyle('blue');
+canvasContext.fill();
+canvasContext.draw();
 ```
 
 ![图片](../../../../img/api/canvas/rect.png)
