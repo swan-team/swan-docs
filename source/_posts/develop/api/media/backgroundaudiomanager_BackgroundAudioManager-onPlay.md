@@ -28,7 +28,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
 
 **代码示例**：
 
-<a href="swanide://fragment/ec4d4a59b04e1d25f9ab6e3a608b3c001573421647159" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4e979750e2b05cc2a429b96c067554c71573699897428" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
