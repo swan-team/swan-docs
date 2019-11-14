@@ -8,9 +8,9 @@ sidebar: swan-onAccelerometerChange
 
  
 
-**解释**：监听加速度数据，频率：5次/秒，接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
+**解释**：监听加速度数据，频率依赖 [swan.startAccelerometer](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-startAccelerometer/) 传递的interval，默认 5 次/秒。接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
 
-**百度APP中扫码体验：**
+**百度APP中扫码体验**：
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getGravity.png"  class="demo-qrcode-image" />
 

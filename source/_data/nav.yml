@@ -237,7 +237,11 @@
                   -
                     link: /introduction/rank_road
                     text: 资源下线退场通路 
-                    name: rank_road                    
+                    name: rank_road    
+              -
+                link: /introduction/OpenCard
+                text: 接入OpenCard
+                name: OpenCard                                   
         -
             link: /introduction/baijiahao
             text: 百家号流量接入
