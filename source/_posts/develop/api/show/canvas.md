@@ -16,9 +16,11 @@ sidebar: show_canvas
 
 **JS写法示例**：
 
+<a href="swanide://fragment/3a8536b8c05b15c0a6004acac7c6cc341573708568526" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
         CanvasContext.setFillStyle('#ff0000');
         CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
