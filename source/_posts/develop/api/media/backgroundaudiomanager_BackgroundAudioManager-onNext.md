@@ -14,7 +14,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
 
 **代码示例**：
 
-<a href="swanide://fragment/01475be361811871bf712ade8fe010881573422974213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/00fff718478aa5679cbc92158d6fd8561573758677667" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

@@ -36,15 +36,27 @@ sidebar: face_swan-ai-faceLivenessSessioncode
 
 **示例代码**
 
-<a href="swanide://fragment/29768b64338265d1fa6d2414881cec101559042370312" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ada1eec5142a8582dfa2c9395a043f411573752628692" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.faceLivenessSessioncode({
-  appid: '',
-  success: res => {
-    console.log('res');
-  }
+Page({
+    faceLivenessSessioncode() {
+        swan.ai.faceLivenessSessioncode({
+            appid: 'xxx', // 百度云创建应用时的唯一标识 ID
+            success(res) {
+                console.log('ai.faceLivenessSessioncode success', res);
+                swan.showModal({
+                    title: '五分钟内语音验证码会失效',
+                    content: 'session_id为' + JSON.stringify(res.result.session_id)+ '，语音校验码为' + JSON.stringify(res.result.code)
+                });
+            },
+            fail(err) {
+                console.log('ai.faceLivenessSessioncode fail', err);
+            }
+        });
+    }
 });
+
 ```
 
 **返回示例**
