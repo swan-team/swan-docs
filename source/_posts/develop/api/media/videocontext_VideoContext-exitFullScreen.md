@@ -12,7 +12,7 @@ sidebar: videocontext_VideoContext-exitFullScreen
 **方法参数**：无
  
 **示例**：
-<a href="swanide://fragment/6fa1bf005963101b3480f3fe549e10af1573718802551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1be020daed52e503c2048d1b70d5fd881573759781574" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
@@ -21,13 +21,13 @@ sidebar: videocontext_VideoContext-exitFullScreen
 Page({
     data: { },
     onLoad() {
-        const video = swan.createVideoContext('myVideo');
-        this.video = video;
-        this.video.play();
-        this.video.requestFullScreen({direction: 90});
+        const videoContext = swan.createVideoContext('myVideo');
+        this.videoContext = videoContext;
+        this.videoContext.play();
+        this.videoContext.requestFullScreen({direction: 90});
         let that = this;
         setTimeout(function () {
-            that.video.exitFullScreen();
+            that.videoContext.exitFullScreen();
         }, 5000);
     }
 });

@@ -22,14 +22,12 @@ sidebar: liveplayercontext_LivePlayerContext-exitFullScreen
 
 **示例**：
 
-<a href="swanide://fragment/43874088d8fb3919128a9e594feb136f1573523422052" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/f6e0f83c034dd0a69a963fb6a3e895891573759816251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 js 文件中
 ```js
 Page({
     data: {
-        cur: 0,
-        autoplay: false,
         src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share'
     },
     onShow(){
@@ -39,9 +37,11 @@ Page({
         const livePlayerContext = swan.createLivePlayerContext('myLive');
         this.livePlayerContext = livePlayerContext;
         this.livePlayerContext.play();
-    },
-    exitFullScreen(e) {
-        this.livePlayerContext.exitFullScreen();
+        this.livePlayerContext.requestFullScreen({direction: 90});
+        let that = this;
+        setTimeout(function () {
+            that.livePlayerContext.exitFullScreen();
+        }, 5000);
     }
 });
 ```
