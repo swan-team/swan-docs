@@ -12,6 +12,11 @@ sidebar: replyeditor_swan-closeReplyEditor
 
 **解释**： 关闭原生半屏内容发布器
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_openReplyEditor.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **emojiPath 参数说明**：
@@ -21,6 +26,20 @@ sidebar: replyeditor_swan-closeReplyEditor
 |success  |  Function  | 否 | |发布内容的回调函数|
 |fail  |  Function  | 否 | |调起失败的回调函数|
 |complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/closeReplyEditor.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
