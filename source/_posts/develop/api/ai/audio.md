@@ -35,20 +35,64 @@ sidebar:  audio
 
 **代码示例**：
 
-<a href="swanide://fragment/506b61732036a40590ea79c33f1541311559033551164" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0cf44d538ab84b993aacf1ce2b2340241573755477099" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
  
 
 * 在 js 文件中 
 
 ```js
-
 Page({
+    data: {
+        sourceIndex: 5,
+        sourceArray: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        sizeIndex: 5,
+        sizeArray: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        countIndex: 5,
+        countArray: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        perIndex: 1,
+        perArray: ['普通女声', '普通男声', '情感合成-度逍遥', '情感合成-度丫丫'],
+        msg: 'hello，这是一段测试语音合成的文字'
+    },
+    onLoad(e) {
+        const array = [];
+        for (let i = 0; i < 9; i++) {
+            array.push(i + 1);
+        }
+        this.setData({
+            countIndex: array.length - 1,
+            countArray: array
+        });
+    },
+    sourceChange(e) {
+        this.setData('sourceIndex', e.detail.value);
+    },
+    sizeChange(e) {
+        this.setData('sizeIndex', e.detail.value);
+    },
+    countChange(e) {
+        this.setData('countIndex', e.detail.value);
+    },
     textToAudio() {
+        let tex = this.getData('msg');
+        let sourceIndex = this.getData('sourceIndex');
+        let sizeIndex = this.getData('sizeIndex');
+        let countIndex = this.getData('countIndex');
+        let perIndex = this.getData('perIndex');
         swan.ai.textToAudio({
-            tex: '这是一段测试文字',
+            tex,
+            ctp: 1,
+            lan: 'zn',
+            spd: JSON.stringify(this.data.sourceArray[sourceIndex]),
+            pit: JSON.stringify(this.data.sizeArray[sizeIndex]),
+            vol: JSON.stringify(this.data.countArray[countIndex]),
+            per: JSON.stringify(this.data.perArray[perIndex]),
             success: res => {
                 console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
             },
             fail: err => {
                 console.log('ai.textToAudio fail', err);

@@ -45,13 +45,13 @@ sidebar: voice_VoiceRecognizer_onError
 **代码示例**
 
 
-<a href="swanide://fragment/020e4a4c5c395d83a4df5f8dcb029e741573732689748" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中
 
 ```html
 <view class="result">{{result}}</view>
 <button type="primary" bindtap="voiceRecognizerStart">点击开始识别语音</button>
-<view>点击开始不说话即可触发</view>
+<view>点击开始，不说话即可触发</view>
 ```
 * 在 js 文件中
 

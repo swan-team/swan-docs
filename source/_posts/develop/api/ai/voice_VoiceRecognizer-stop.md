@@ -12,7 +12,7 @@ sidebar: voice_VoiceRecognizer_stop
  **代码示例**
 
 
-<a href="swanide://fragment/93c00ae29b0cd0b086a0425ac254853c1573731767284" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7e4fe85cd2c742caf6eb5a17ef826e421573743143847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -43,9 +43,7 @@ Page({
         const options = {
             mode: 'dnn',
             // mode: 'touch',
-            // longSpeech: true
-            longSpeech: false
-
+            longSpeech: true
         };
 
         voiceRecognizer.start(options);

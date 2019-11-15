@@ -30,7 +30,7 @@ sidebar: swan-createMapContext
 
 **代码示例**：
 
-<a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f65cf95759e65c9d01bcf3ce0d70f7981573558407387" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
