@@ -17,6 +17,7 @@ sidebar: app_service
 - 每个页面有独立的 [文件作用域](/develop/framework/app_service_routefile/) ，并提供 [模块化](/develop/framework/app_service_routemodule/)，使得开发者更容易进行代码封装并复用；
 - 框架本身并非运行在浏览器中，所以 JavaScript 在 Web 中的一些能力都无法使用，如 document , window 等，这会使得小程序应用更接近原生；
 - 开发者所编写的代码，最终会被编译打包成一份 JavaScript 文件，并在智能小程序启动时进行加载并运行，直到智能小程序销毁。
+- 请勿在 App、Page 等构造器的参数对象中使用底层已存在的 key，如在 Page 中添加 getData  将会被示例属性覆盖。
 
 详细内容请参看<a href="/develop/framework/app_service_register/">注册 App</a>、<a href="/develop/framework/app_service_page/">注册页面</a>、<a href="/develop/framework/app_service_route/">页面路由</a>。
 
