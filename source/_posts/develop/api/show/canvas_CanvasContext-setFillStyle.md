@@ -10,7 +10,9 @@ sidebar:  canvas_CanvasContext_setFillStyle
 
 **方法参数**： [Color](/develop/api/canvas_color/) color
 
+**图片示例**：
 
+![图片](../../../../img/api/canvas/setFillStyle.png)
 
 **代码示例**：
 
@@ -23,5 +25,4 @@ canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/setFillStyle.png)
 

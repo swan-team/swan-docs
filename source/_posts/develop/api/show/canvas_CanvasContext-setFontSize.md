@@ -11,6 +11,9 @@ sidebar: canvas_CanvasContext_setFontSize
 
 `fontSize`参数说明：字体的字号 
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/font-size.png)
 
 **代码示例**：
 
@@ -30,5 +33,3 @@ canvasContext.fillText('50', 90, 90);
 
 canvasContext.draw();
 ```
-
-![图片](../../../../img/api/canvas/font-size.png)

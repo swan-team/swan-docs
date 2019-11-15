@@ -13,6 +13,9 @@ sidebar: canvas_CanvasContext-translate
 
 **`y`参数说明**：竖直坐标平移量
 
+**图片示例**：
+
+![图片](../../../../img/translate.png)
 
 **代码示例**：
 
@@ -30,5 +33,4 @@ canvasContext.strokeRect(10, 10, 150, 100);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/translate.png)
 

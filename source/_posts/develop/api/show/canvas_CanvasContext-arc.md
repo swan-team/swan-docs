@@ -28,6 +28,9 @@ sidebar: canvas_CanvasContext.arc
 
 **`counterclockwise`参数说明**：可选。指定弧度的方向是逆时针还是顺时针。默认是 false，即顺时针。
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/arc.png)
 
 **代码示例**：
 
@@ -41,5 +44,5 @@ canvasContext.fill();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/arc.png)
+
 

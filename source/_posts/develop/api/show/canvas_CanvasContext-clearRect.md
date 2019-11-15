@@ -20,6 +20,10 @@ sidebar: canvas_CanvasContext-clearRect
 
 **`height`参数说明**：矩形路径的高度。
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/clearRect.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/3b71cc1ec5750d4b8555c914f211fe761573722908842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -34,6 +38,6 @@ canvasContext.clearRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/clearRect.png)
+
 
 

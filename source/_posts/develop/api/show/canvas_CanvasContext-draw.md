@@ -15,6 +15,9 @@ sidebar: canvas_CanvasContext-draw
 
 **`callback`参数说明**：绘制完成后回调 
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/draw1.png)
 
 **代码示例**：
 
@@ -29,7 +32,6 @@ canvasContext.fillRect(30, 30, 150, 100);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/draw1.png)
 
 #### 错误码
 * Andriod

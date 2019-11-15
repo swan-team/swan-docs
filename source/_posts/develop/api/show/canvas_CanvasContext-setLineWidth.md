@@ -13,6 +13,10 @@ sidebar: canvas_CanvasContext-setLineWidth
 
 **`lineWidth`参数说明**：线条的宽度(单位是 px)
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/setLineWidth.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/4e19cb2db62b79cb68943f3971dd54101573720541344" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -45,5 +49,4 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/setLineWidth.png)
 

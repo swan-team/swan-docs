@@ -19,6 +19,9 @@ sidebar: canvas_CanvasContext-createLinearGradient
 
 **`y1`参数说明**：终点的 y 坐标
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/createLinearGradient.png)
 
 
 **代码示例**：
@@ -38,6 +41,4 @@ canvasContext.setFillStyle(grd);
 canvasContext.fillRect(30, 30, 150, 80);
 canvasContext.draw();
 ```
-
-![图片](../../../../img/api/canvas/createLinearGradient.png)
 

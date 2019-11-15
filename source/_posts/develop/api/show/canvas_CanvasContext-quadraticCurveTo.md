@@ -17,6 +17,10 @@ sidebar:  canvas_CanvasContext-quadraticCurveTo
 
 **`y`参数说明**：结束点的 y 坐标 
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/quadraticCurveTo.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/d2d5ff700bbf4feba2a4bf925e0c8d151573725024694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -33,5 +37,5 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/quadraticCurveTo.png)
+
 

@@ -14,6 +14,9 @@ sidebar: canvas_CanvasContext_rotate
 
 **`rotate` 参数说明**：旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)。
 
+**图片示例**：
+
+![图片](../../../../img/rotate.png)
 
 **代码示例**：
 
@@ -31,5 +34,5 @@ canvasContext.strokeRect(100, 10, 150, 100);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/rotate.png)
+
 

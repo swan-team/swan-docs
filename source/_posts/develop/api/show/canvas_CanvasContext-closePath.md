@@ -11,6 +11,10 @@ sidebar: canvas_CanvasContext-closePath
 
 **方法参数**：无
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/closePath.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/5d87113894328289d174d41abdbb70db1573723366858" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -25,5 +29,4 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/closePath.png)
 

@@ -10,6 +10,10 @@ sidebar:  canvas_CanvasContext_restore
 
 **方法参数**：无
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/save.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/9710a7359d484b4682e6338a2b4e1bd91573725069024" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -28,5 +32,5 @@ canvasContext.fillRect(50, 50, 150, 100);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/save.png)
+
 

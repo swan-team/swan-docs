@@ -11,6 +11,10 @@ sidebar:  canvas_CanvasContext-fill
 
 **方法参数**：无
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/fill.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/c551260de09c005e80e141a7ad42313e1573722986970" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -24,5 +28,4 @@ canvasContext.fill();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/fill.png)
 

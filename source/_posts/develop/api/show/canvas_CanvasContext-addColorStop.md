@@ -16,6 +16,9 @@ sidebar: canvas_CanvasContext-addColorStop
 
 **`color`参数说明**：渐变点的颜色
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/addColorStop.png)
 
 **代码示例**：
 
@@ -40,7 +43,8 @@ canvasContext.fillRect(30, 30, 150, 80);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/addColorStop.png)
+
+
 
  **Bug & Tip**：
 

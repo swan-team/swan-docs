@@ -14,6 +14,9 @@ sidebar:  canvas_CanvasContext_scale
 
 **`scaleHeigh`参数说明**：纵坐标轴缩放的倍数 (1 = 100%，0.5 = 50%，2 = 200%)。
 
+**图片示例**：
+
+![图片](../../../../img/scale.png)
 
 **代码示例**：
 
@@ -31,5 +34,4 @@ canvasContext.strokeRect(10, 10, 25, 15);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/scale.png)
 

@@ -19,6 +19,10 @@ sidebar: canvas_CanvasContext-strokeRect
 
 **`height`参数说明**：矩形路径的高度。
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/setStrokeStyle.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/7cb458f5b49dc32e6239628d1bd953941573722734012" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -30,5 +34,4 @@ canvasContext.strokeRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/setStrokeStyle.png)
 

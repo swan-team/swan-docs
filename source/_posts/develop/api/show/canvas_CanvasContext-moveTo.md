@@ -16,6 +16,9 @@ sidebar: canvas_CanvasContext-moveTo
 
 **`y`参数说明**：目标位置的 y 坐标
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/moveTo.png)
 
 **代码示例**：
 
@@ -31,5 +34,5 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/moveTo.png)
+
 

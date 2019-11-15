@@ -27,6 +27,10 @@ sidebar:  canvas_CanvasContext-bezierCurveTo
 
 **`y`参数说明**：结束点的 y 坐标 
 
+**图片示例**：
+
+![图片](../../../../img/api/canvas/bezierCurveTo.png)
+
 **代码示例**：
 
 <a href="swanide://fragment/f54afefdc128050accdc18a9e52296911573724955575" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -43,5 +47,4 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-![图片](../../../../img/api/canvas/bezierCurveTo.png)
 
