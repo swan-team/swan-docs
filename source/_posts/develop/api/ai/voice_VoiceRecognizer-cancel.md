@@ -9,7 +9,7 @@ sidebar: voice_VoiceRecognizer_cancel
 
 **方法参数**：无
 
- **代码示例**
+**代码示例**
 
 
 <a href="swanide://fragment/9134657812dc84c371a566bc4a28d58e1573735356397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

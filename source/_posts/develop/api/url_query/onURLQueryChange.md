@@ -43,8 +43,29 @@ sidebar: onURLQueryChange
  
 <a href="swanide://fragment/862ac1772aabc0a8cf065093f7784d021572856346528" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<tabs url-query-name="channel">
+    <tab-item s-for="tab in tabs" name="{{tab.label}}" label="{{tab.label}}" />
+</tabs>
+
+<view class="intro">
+    {{content}}
+</view>
+```
+
+* 在 js 文件中
 ```js
 Page({
+    data: {
+        tabs: [
+            { name: 'movie', label: '电影' },
+            { name: 'food', label: '美食' },
+            { name: 'sports', label: '体育' }
+        ],
+        content: '电影'
+    },
     onURLQueryChange({newURLQuery, oldURLQuery}) {
         console.log(newURLQuery, oldURLQuery);
         this.setData({

@@ -32,23 +32,31 @@ sidebar: swan-offAppShow
 
 **代码示例**：
 
-<a href="swanide://fragment/e69e06ce6a94ec75c6ef2b29e4e34be51567706876670" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bb397425fd644712e7949da424c12cdf1573990116771" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
 App({
     onLaunch() {
         swan.onAppShow(function(res) {
-            console.log(res.scene);
-            console.log(res.path);
-            console.log(res.query);
+            console.log('scene', res.scene);
+            console.log('path', res.path);
+            console.log('query', res.query);
+            swan.showModal({
+                title: '',
+                content: '触发swan.onAppShow回调'
+            });
         });
     },
-    // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机） 
     onShow() {
-        setTimeout(function() {
+        // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机）
+        setTimeout(() => {
             swan.offAppShow();
-        }, 3000);
+            swan.showModal({
+                title: '',
+                content: '此后将不会触发swan.onAppShow回调'
+            });
+        }, 3000)
     }
 });
 ```

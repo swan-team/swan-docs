@@ -92,7 +92,6 @@ App({
     onLaunch: function () {
         swan.onAppShow(function(res) {
             console.warn('请在真机中进行中进行验证,在工具中点击工具栏的刷新按钮也可模拟onShow触发事件，开发者按照自己的业务逻辑进行监听，被触发时机和App.onShow一致。');
-            // Doing  something
             swan.showModal({
                 title: 'res',
                 content: JSON.stringify(res),

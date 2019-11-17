@@ -50,7 +50,7 @@ App({
 
     },
     onError(err) {
-        console.log(err);
+        console.log('catch error');
         swan.showModal({
             title: '',
             content: JSON.stringify(err)
