@@ -55,25 +55,29 @@ sidebar: face_swan-ai-faceSearch
 <a href="swanide://fragment/60b0dfce28b43de99c9f83df68fefd041567751857137" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.faceSearch({
-	    image,
-	    image_type: 'BASE64',
-	    quality_control: 'NONE',
-	    liveness_control: 'NONE',
-	    face_type: 'LIVE',
-	    user_id: 'xxxxxx',
-	    max_user_num: 20,
-	    success: res => {
-	        console.log(res);
-	    },
-	    fail: err => {
-	        console.log(err);
-	    }
-	});
-  }
+Page({
+    faceSearch() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.faceSearch({
+                  image,
+                  image_type: 'BASE64',
+                  quality_control: 'NONE',
+                  liveness_control: 'NONE',
+                  face_type: 'LIVE',
+                  user_id: 'xxxxxx',
+                  max_user_num: 20,
+                  success: res => {
+                      console.log(res);
+                  },
+                  fail: err => {
+                      console.log(err);
+                  }
+               });
+            }
+        });
+    }
 });
 ```
 

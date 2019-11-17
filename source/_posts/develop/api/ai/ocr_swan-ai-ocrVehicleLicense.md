@@ -72,22 +72,24 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrVehicleLicense({
-                image, // 暂不支持识别网络图片
-                detect_direction: true,
-                accuracy: normal
-                success: res => {
-                    console.log('ocrVehicleLicense res', res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrVehicleLicense err', err);
-                }
-            });
-        }
-    })
+    ocrVehicleLicense() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrVehicleLicense({
+                    image, // 暂不支持识别网络图片
+                    detect_direction: true,
+                    accuracy: normal
+                    success: res => {
+                        console.log('ocrVehicleLicense res', res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrVehicleLicense err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

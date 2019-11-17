@@ -75,20 +75,24 @@ sidebar:  classify_swan-ai-logoClassify
 
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.logoClassify({
-      image,
-      custom_lib: false,
-      success: res => {
-        console.log('dishClassify res', res.result);
-      },
-      fail: err => {
-        console.log('dishClassify err', err);
-      }
-    });
-  }
+Page({
+    logoClassify() {
+        swan.chooseImage({
+            success: res => {
+              let image = res.tempFilePaths[0];
+              swan.ai.logoClassify({
+                  image,
+                  custom_lib: false,
+                  success: res => {
+                    console.log('dishClassify res', res.result);
+                  },
+                  fail: err => {
+                    console.log('dishClassify err', err);
+                  }
+              });
+            }
+        });
+    }
 });
 ```
 

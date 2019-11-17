@@ -79,15 +79,17 @@ sidebar: text_swan-ai-textReview
 
 ```js
 Page({
-  swan.ai.textReview({
-      content: '',
-      success: res => {
-        console.log('textReview res', res.result.spam); // 0 表示审核通过
-      },
-      fail: err => {
-        console.log('textReview err', err);
-      }
-  })
+    textReview() {
+        swan.ai.textReview({
+            content: '',
+            success: res => {
+              console.log('textReview res', res.result.spam); // 0 表示审核通过
+            },
+            fail: err => {
+              console.log('textReview err', err);
+            }
+      })
+    }
 });
 ```
 
