@@ -38,6 +38,16 @@ sidebar: cameracontext_CameraContext.startRecord
  
 <a href="swanide://fragment/398fc8b20a9b3411e7c3a22a6f9876f41573701771835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<div class="camera">
+    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
+    <button type="primary" bind:tap="startRecord">开始录像</button>
+    <button type="primary" bind:tap="stopRecord">结束录像</button>
+    <video s-if="videoSrc" class="video" src="{{videoSrc}}"></video>
+</div>
+```
 * 在 js 文件中
 
 ```javascript

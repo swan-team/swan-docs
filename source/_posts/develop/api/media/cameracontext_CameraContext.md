@@ -24,7 +24,7 @@ Page({
     },
     onShow() {
         const cameraContext = swan.createCameraContext();
-        this.cameraContext = cameraContext
+        this.cameraContext = cameraContext;
     },
     takePhoto() {
         this.cameraContext.takePhoto({

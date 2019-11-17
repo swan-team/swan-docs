@@ -42,6 +42,7 @@ Page({
             innerAudioContext.offSeeking();
         });
         this.innerAudioContext = innerAudioContext;
+        this.innerAudioContext.play();
     },
     seek() {
         this.innerAudioContext.seek(80);
