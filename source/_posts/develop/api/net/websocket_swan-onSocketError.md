@@ -43,7 +43,7 @@ Page({
             swan.showModal({
                 title: '监听到webSocket连接出错，请检查！',
                 content: JSON.stringify(res)
-            })
+            });
             console.log('WebSocket连接打开出错，请检查！', res);
         });
 

@@ -39,14 +39,10 @@ sidebar: requestTask-abort
 
 ```js
 Page({
-    data: {
-        disabled: true
-    },
-    onShow() {
-    },
+    data: { },
     request() {
         const requestTask = swan.request({
-            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai', // 仅为示例，并非真实的接口地址
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
             header: {
                 'content-type': 'application/json'
             },

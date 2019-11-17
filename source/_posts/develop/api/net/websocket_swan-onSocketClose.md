@@ -45,13 +45,13 @@ Page({
         });
         let that = this;
         swan.onSocketClose(function (res) {
-            that.setData('disabled', false)
+            that.setData('disabled', false);
             swan.showToast({
                 title: '监听到WebSocket已关闭',
                 icon: 'none'
             });
             console.log('监听到WebSocket已关闭');
-        })
+        });
 
         swan.connectSocket({
             url: 'wss://echo.websocket.org',

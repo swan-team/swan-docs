@@ -64,7 +64,7 @@ Page({
             }
         });
         swan.onSocketOpen(function () {
-            that.setData({'openWebsocket': true})
+            that.setData({'openWebsocket': true});
         })
 
     },
@@ -72,7 +72,7 @@ Page({
         //注意这里有时序问题，
         //如果 swan.connectSocket 还没回调 swan.onSocketOpen，而先调用 swan.closeSocket，那么就做不到关闭 WebSocket 的目的。
         //必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
-        let openWebsocket = this.getData('openWebsocket')
+        let openWebsocket = this.getData('openWebsocket');
         if (openWebsocket) {
             swan.closeSocket({
                 code: '1001',
