@@ -31,3 +31,17 @@ sidebar: swan.createInnerAudioContext
 |--|--|
 |202|解析失败，请检查参数是否正确     |
 
+**代码示例**：
+
+<a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```javascript
+Page({
+    onLoad() {
+        const innerAudioContext = swan.createInnerAudioContext();
+    }
+});
+```
+
