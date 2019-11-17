@@ -31,4 +31,4 @@ sidebar: arcameracontext_ARCameraContext-stopRecord
 
 **代码示例**：
 
-参见[picker-view-column](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
+参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
