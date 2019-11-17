@@ -12,9 +12,24 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
 
 **方法参数**：Function callback
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/onNext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 **代码示例**：
 
-<a href="swanide://fragment/00fff718478aa5679cbc92158d6fd8561573758677667" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a9c6b4e5aa2b4b7c6416889607407ff91574005094848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

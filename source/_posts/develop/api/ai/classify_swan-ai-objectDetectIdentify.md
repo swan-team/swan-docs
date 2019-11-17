@@ -46,7 +46,7 @@ sidebar:  classify_swan-ai-objectDetectIdentify
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/objectDetectIdentify.jpeg">
+        <img src="https://b.bdstatic.com/miniapp/image/objectDetectIdentify.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

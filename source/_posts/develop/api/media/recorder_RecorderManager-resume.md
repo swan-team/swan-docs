@@ -44,7 +44,12 @@ Page({
         };
         recorderManager.start(options);
         setTimeout(function() {
-            recorderManager.pause()
+            recorderManager.pause();
+            swan.showModal({
+                title: 'recorder pause success',
+                content: '点击RecorderManagerResume可恢复播放'
+            })
+
         }, 3000);
         this.recorderManager = recorderManager;
     },

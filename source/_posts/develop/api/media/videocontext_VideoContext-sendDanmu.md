@@ -36,6 +36,14 @@ sidebar: videocontext_VideoContext-sendDanmu
 **代码示例**：
 <a href="swanide://fragment/dfdf6e177f818808b415b657d64c1c7c1573479113127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <button type="primary" bindtap="sendDanmu">sendDanmu</button>
+</view>
+```
 
 * 在 js 文件中
 
