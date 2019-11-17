@@ -65,22 +65,25 @@ sidebar: image_swan-chooseImage
 * 在 js 文件中
 
 ```js
-swan.chooseImage({
-    count: 1,
-    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-    success: res => {
-        // 成功则返回图片的本地文件路径列表 tempFilePaths
-        console.log(res.tempFilePaths);
-        // 文件列表对象
-        console.log(res.tempFiles);
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    chooseImage() {
+        swan.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: res => {
+                // 成功则返回图片的本地文件路径列表 tempFilePaths
+                console.log(res.tempFilePaths);
+                // 文件列表对象
+                console.log(res.tempFiles);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
 });
-
 ```
 
 #### 错误码

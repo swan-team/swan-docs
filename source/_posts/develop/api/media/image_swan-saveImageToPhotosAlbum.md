@@ -43,36 +43,37 @@ sidebar: image_saveImageToPhotosAlbum
 
 ```js
 Page({
-    swan.downloadFile({
-        // 仅为示例，并非真实的资源
-        url: 'https://b.bdstatic.com/miniapp/xxxx',
-        header: {
-            'content-type': 'application/json'
-        },
-        success: res => {
-            let filePath = res.tempFilePath;
-            swan.saveImageToPhotosAlbum({
-                filePath, // 暂不支持网络图片地址，需与swan.downloadFile一起使用
-                success: res => {
-                    swan.showToast({
-                        title: '已保存到本地相册',
-                        icon: 'none'
-                    });
-                    console.log('saveImageToPhotosAlbum success', res);
-                },
-                fail: err => {
-                    swan.showToast({
-                        title: '',
-                        icon: 'none'
-                    });
-                    console.log('saveImageToPhotosAlbum fail', err);
-                }
-            });
-        },
-        fail: err => {
-            console.log('错误码：' + err.errCode);
-            console.log('错误信息：' + err.errMsg);
-        }
-    });
+    saveImageToPhotosAlbum() {
+        swan.downloadFile({
+            url: 'https://b.bdstatic.com/miniapp/image/getImageInfo.png',
+            header: {
+                'content-type': 'application/json'
+            },
+            success: res => {
+                let filePath = res.tempFilePath;
+                swan.saveImageToPhotosAlbum({
+                    filePath, // 暂不支持网络图片地址，需与swan.downloadFile一起使用
+                    success: res => {
+                        swan.showToast({
+                            title: '已保存到本地相册',
+                            icon: 'none'
+                        });
+                        console.log('saveImageToPhotosAlbum success', res);
+                    },
+                    fail: err => {
+                        swan.showToast({
+                            title: '',
+                            icon: 'none'
+                        });
+                        console.log('saveImageToPhotosAlbum fail', err);
+                    }
+                });
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
 });
 ```

@@ -67,42 +67,48 @@ sidebar: image_chooseAlbum
 * 在 js 文件中
 
 ```js
- swan.chooseAlbum({
-    count: 2,
-    mode: 'single',
-    compressed: true,
-    success: res => {
-        // 成功则返回图片的本地文件路径列表 tempFilePaths
-        console.log(res.tempFilePaths);
-        // 文件列表对象
-        console.log(res.tempFiles);
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    chooseAlbum() {
+        swan.chooseAlbum({
+            count: 2,
+            mode: 'single',
+            compressed: true,
+            success: res => {
+                // 成功则返回图片的本地文件路径列表 tempFilePaths
+                console.log(res.tempFilePaths);
+                // 文件列表对象
+                console.log(res.tempFiles);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
 });
-
 ```
 
-**示例 2 打开相册只选择图片和视频**
+**示例 2 打开相册选择图片和视频**
 * 在 js 文件中
 
 ```js
-swan.chooseAlbum({
-    count: 3,
-    mode: 'both',
-    compressed: false,
-    success: res => {
-        console.log(res.tempFilePaths);
-        console.log(res.tempFiles);
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    chooseAlbum() {
+        swan.chooseAlbum({
+            count: 3,
+            mode: 'both',
+            compressed: false,
+            success: res => {
+                console.log(res.tempFilePaths);
+                console.log(res.tempFiles);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
 });
-
 ```
 
 **Bug & Tip**：
