@@ -52,7 +52,7 @@ Page({
         recorderManager.onPause(function(res) {
             console.log('recorder onPause', res)
             swan.showModal({
-                title: 'success',
+                title: 'recorder onPause',
                 content: JSON.stringify(res)
             })
         });

@@ -48,21 +48,24 @@ sidebar: image_swan-previewImage
 * 在 js 文件中
 
 ```js
-
-swan.previewImage({
-    current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',// current需与urls中链接一致
-    urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
-    images: [
-        {
-            "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png', 
-            "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-origin.png'
-        }
-    ],
-    success: res => {
-        console.log('previewImage success', res);
-    },
-    fail: err => {
-        console.log('previewImage fail', err);
+Page({
+    previewImage() {
+        swan.previewImage({
+            current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',// current需与urls中链接一致
+            urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
+            images: [
+                {
+                    "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png', 
+                    "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-origin.png'
+                }
+            ],
+            success: res => {
+                console.log('previewImage success', res);
+            },
+            fail: err => {
+                console.log('previewImage fail', err);
+            }
+        });
     }
 });
 

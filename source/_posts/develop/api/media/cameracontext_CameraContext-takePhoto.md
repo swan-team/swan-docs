@@ -42,6 +42,17 @@ sidebar: cameracontext_CameraContext-takePhoto
  
 <a href="swanide://fragment/e0c330e454f8e09a92c2851ea5a56eb61573545400501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<div class="camera">
+    <camera device-position="{{device}}" flash="off" binderror="error" style="width: 100%; height: 500rpx;"></camera>
+    <button type="primary" bind:tap="takePhoto">拍照</button>
+    <image class="img" mode="widthFix" src="{{src}}"></image>
+</div>
+
+```
+
 * 在 js 文件中
 
 ```javascript

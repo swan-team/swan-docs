@@ -42,7 +42,7 @@ Page({
             url: 'wss://xxx.websocket',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
@@ -52,10 +52,10 @@ Page({
             console.log('socketTask.onError success', res);
             swan.showModal({
                 title: '监听错误发送事件成功',
-                content: JSON.stringify(res)
+                content: JSON.stringify(res);
             });
         }),
-        this.socketTask = socketTask
+        this.socketTask = socketTask;
     }
 });
 ```

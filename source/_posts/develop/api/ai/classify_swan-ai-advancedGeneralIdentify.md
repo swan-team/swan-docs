@@ -61,20 +61,22 @@ sidebar:  classify_swan-ai-advancedGeneralIdentify
 
 ```js
 Page({
-  swan.chooseImage({
-    success: res => {
-      let image = res.tempFilePaths[0];
-      swan.ai.advancedGeneralIdentify({
-        image, // 暂不支持识别网络图片
-        success: res => {
-          console.log('advancedGeneralIdentify res', res.result);
-        },
-        fail: err => {
-          console.log('advancedGeneralIdentify err', err);
-        }
-      });
+    advancedGeneralIdentify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.advancedGeneralIdentify({
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('advancedGeneralIdentify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('advancedGeneralIdentify err', err);
+                    }
+                });
+            }
+        })
     }
-  })
 });
 ```
 

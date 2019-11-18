@@ -76,22 +76,27 @@ sidebar: downloadFile
 * 在 js 文件中
 
 ```js
-swan.downloadFile({
-    url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
-    header: {
-        'content-type': 'application/json'
-    },
-    success: res => {
-        //下载成功
-        if (res.statusCode === 200) {
-            console.log("临时文件路径" + res.tempFilePath);
-        }
-    },
-    fail: err => {
-        console.log('错误码：' + err.errCode);
-        console.log('错误信息：' + err.errMsg);
+Page({
+    data: { },
+    downloadFile() {
+        swan.downloadFile({
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            header: {
+                'content-type': 'application/json'
+            },
+            success: res => {
+                //下载成功
+                if (res.statusCode === 200) {
+                    console.log("临时文件路径" + res.tempFilePath);
+                }
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
-});
+})
 ```
 
 **返回值**：

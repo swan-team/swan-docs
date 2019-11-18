@@ -54,9 +54,7 @@ Page({
             // mode: 'touch',
             // longSpeech: true
             longSpeech: false
-
         };
-
         voiceRecognizer.start(options);
     }
 })

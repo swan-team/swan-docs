@@ -57,9 +57,10 @@ sidebar: image_swan-getImageInfo
 * 在 js 文件中
 
 ```js
+Page({
     getImageInfo() {
         swan.getImageInfo({
-            src: 'https://smartprogram.baidu.com/xxx.png',
+            src: 'https://b.bdstatic.com/miniapp/image/getImageInfo.png',
             success: res => {
                 console.log('getImageInfo success', res);
             },
@@ -68,6 +69,7 @@ sidebar: image_swan-getImageInfo
             }
         });
     }
+});
 ```
 
 #### 错误码

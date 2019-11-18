@@ -65,9 +65,7 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-
         const voiceRecognizer = swan.ai.getVoiceRecognizer();
-
         voiceRecognizer.onError(res => {
             console.log('voice onError', res.result);
             swan.showModal({

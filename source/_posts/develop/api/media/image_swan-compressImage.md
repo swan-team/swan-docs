@@ -29,22 +29,31 @@ sidebar: image_swan-compressImage
 |---- | ---- | ---- |
 |tempFilePath |  String | 压缩后图片的临时文件路径示例代码|
 
-<!-- **代码示例**：
+**代码示例**：
 
-<a href="swanide://fragment/57ab8062cc2e4ae51f5b1984f748b83c1567929767878" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> -->
+<a href="swanide://fragment/75e1969a8be33484cb52b8bcf3ac591c1574001475054" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
 
 ```js
+Page({
+    data: {
+        oldSrc: '',
+        newSrc: ''
+    },
     compressImage() {
+        let that = this;
         swan.chooseImage({
             success: function (res) {
+                console.log(res.tempFilePaths[0]);
+                that.setData({'oldSrc': res.tempFilePaths[0]});
                 swan.compressImage({
                     src: res.tempFilePaths[0],
                     quality: 80,
                     success: function (res) {
                         console.log('compressImage success', res);
+                        that.setData('newSrc', res.tempFilePath)
                     },
                     fail: function (err) {
                         console.log('compressImage fail', err);
@@ -57,5 +66,6 @@ sidebar: image_swan-compressImage
             }
         });
     }
+});
 ```
 

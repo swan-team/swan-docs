@@ -60,20 +60,22 @@ sidebar: ocr_swan-ai-ocrBankCard
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrBankCard({
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('ocrBankCard res', res.result);
-                }，
-                fail: err => {
-                    console.log('ocrBankCard err', err);
-                }
-            });
-        }
-    })
+    ocrBankCard() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrBankCard({
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('ocrBankCard res', res.result);
+                    }，
+                    fail: err => {
+                        console.log('ocrBankCard err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

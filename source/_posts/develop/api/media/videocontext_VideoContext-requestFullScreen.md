@@ -48,6 +48,14 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 <a href="swanide://fragment/c9568967cece545edaf1edefa52d71c11573479259203" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <button type="primary" bindtap="requestFullScreen">点击全屏</button>
+</view>
+```
 
 * 在 js 文件中
 

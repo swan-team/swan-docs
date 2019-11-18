@@ -39,7 +39,7 @@ sidebar:  audio
 
 **代码示例**：
 
-<a href="swanide://fragment/0cf44d538ab84b993aacf1ce2b2340241573755477099" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b2861370f6a561f81ebeef1dd5861dd51573995603718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
  
 
@@ -58,16 +58,6 @@ Page({
         perArray: ['普通女声', '普通男声', '情感合成-度逍遥', '情感合成-度丫丫'],
         msg: 'hello，这是一段测试语音合成的文字'
     },
-    onLoad(e) {
-        const array = [];
-        for (let i = 0; i < 9; i++) {
-            array.push(i + 1);
-        }
-        this.setData({
-            countIndex: array.length - 1,
-            countArray: array
-        });
-    },
     sourceChange(e) {
         this.setData('sourceIndex', e.detail.value);
     },
@@ -77,6 +67,9 @@ Page({
     countChange(e) {
         this.setData('countIndex', e.detail.value);
     },
+    perChange(e) {
+        this.setData('perIndex', e.detail.value);
+    },
     textToAudio() {
         let tex = this.getData('msg');
         let sourceIndex = this.getData('sourceIndex');
@@ -85,7 +78,7 @@ Page({
         let perIndex = this.getData('perIndex');
         swan.ai.textToAudio({
             tex,
-            ctp: 1,
+            ctp: '1',
             lan: 'zn',
             spd: JSON.stringify(this.data.sourceArray[sourceIndex]),
             pit: JSON.stringify(this.data.sizeArray[sizeIndex]),

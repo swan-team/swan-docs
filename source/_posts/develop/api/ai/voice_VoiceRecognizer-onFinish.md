@@ -37,9 +37,7 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-
         const voiceRecognizer = swan.ai.getVoiceRecognizer();
-
         voiceRecognizer.onStart(res => {
             swan.showToast({
                 title: '开始识别',
@@ -57,7 +55,6 @@ Page({
             // longSpeech: true
             longSpeech: false
         };
-
         voiceRecognizer.start(options);
     }
 })

@@ -36,7 +36,7 @@ sidebar: liveplayercontext_LivePlayerContext-resume
 </div>
 
 **代码示例**：
-<a href="swanide://fragment/ff5b167972362e5e88023ffdf54bdc711573572163977" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/9fcddb4c8560e7d842cd1149ca6eef111574010255537" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 js 文件中
 ```js

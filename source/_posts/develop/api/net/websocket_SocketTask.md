@@ -44,7 +44,7 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);

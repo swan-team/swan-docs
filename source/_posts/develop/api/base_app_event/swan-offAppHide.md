@@ -33,7 +33,7 @@ sidebar: swan-offAppHide
 
 **代码示例**：
 
-<a href="swanide://fragment/6e0d43a789932418eb363dbcd6f43d241573102069062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/75379c24eb11bd10506a3f14c57a9ea61573990215340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // app.js
@@ -41,13 +41,23 @@ App({
     onLaunch() {
         swan.onAppHide(function(res) {
             console.log(res);
+            swan.showModal({
+                title: 'res',
+                content: JSON.stringify(res),
+                showCancel: false
+            });
         });
     },
-    // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机） 
     onShow() {
-        setTimeout(function() {
+        // 在App onShow后约3秒取消事件监听（仅做功能示例，开发者可根据业务逻辑选择取消监听时机）
+        setTimeout(() => {
             swan.offAppHide();
-        }, 3000);
+            swan.showModal({
+                title: '',
+                content: '此后将不再触发swan.onAppHide回调'，
+                showCancel: false
+            });
+        }, 3000)
     }
 });
 ```

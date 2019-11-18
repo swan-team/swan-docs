@@ -41,6 +41,15 @@ sidebar: liveplayercontext_LivePlayerContext-stop
 **代码示例**：
 <a href="swanide://fragment/4428752ba0ea11a9bcfd115691e958491573522155890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
+* 在 swan 文件中
+
+```html
+<view class="live-play">
+    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}"></live-player>
+    <button type="primary" bind:tap="liveStop">停止播放 stop</button>
+</view>
+```
+
 * 在 js 文件中
 ```js
 Page({

@@ -47,14 +47,18 @@ sidebar: face_swan-ai-facePersonIdmatch
 <a href="swanide://fragment/53bba74307c3e4069bac51734e28fdd21569501442624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.facePersonIdmatch({
-    id_card_number: '',
-    name: '',
-    success: res => {
-        console.log('success', res);
-    },
-    fail: err => {
-        console.log('fail', err);
+Page({
+    facePersonIdmatch() {
+        swan.ai.facePersonIdmatch({
+            id_card_number: '',
+            name: '',
+            success: res => {
+                console.log('success', res);
+            },
+            fail: err => {
+                console.log('fail', err);
+            }
+        });
     }
 });
 ```

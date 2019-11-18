@@ -60,12 +60,12 @@ App({
 App({
     onLaunch: function () {
         swan.onAppHide(function(res) {
-            // Do something
             swan.showModal({
                 title: 'res',
-                content: JSON.stringify(res)
+                content: JSON.stringify(res),
+                showCancel: false  
             });
-            console.log('app hide');
+            console.log('App hide');
         });
     }
 });

@@ -33,15 +33,36 @@ sidebar: swan-getURLQuery
 
 **代码示例**：
 
-<a href="swanide://fragment/7d33cd2f8a5f2b69bd6ec79437834bf11572856867852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dd565f21448c3e95a9471b7f953fed7b1573991326390" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<tabs url-query-name="channel">
+    <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
+</tabs>
+
+<button type="primary" class="btn">
+	<navigator class="nav" url="/index/index?channel=sports" hover-class="other-navigator-hover">打开默认是体育的当前页</navigator>
+</button>
+```
+
+* 在 js 文件中
 ```js
 Page({
+    data: {
+        tabs: [
+            {name: 'movie', label: '电影'},
+            {name: 'food', label: '美食'},
+            {name: 'sports', label: '体育'}
+        ],
+        content: ''
+    },
     onLoad(query) {
-        if(query.channel) {
-            const newURLQuery = swan.getURLQuery()
-            console.log(newURLQuery)
+        if (query.channel) {
+            const newURLQuery = swan.getURLQuery();
+            console.log(newURLQuery); // {channel: "sports"}
         }
     }
-})
+});
 ```

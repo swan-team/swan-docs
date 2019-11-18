@@ -38,13 +38,8 @@ sidebar: downloadTask-abort
 
 ```js
 Page({
-    data: {
-        disabled: true
-    },
-    onShow() {
-    },
+    data: { },
     downloadFile() {
-        this.setData({ disabled: false})
         const downloadTask = swan.downloadFile({
             url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
             header: {

@@ -88,23 +88,25 @@ sidebar: ocr_swan-ai-ocrIdCard
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrIdCard({
-                detect_direction: true,
-                id_card_side: 'front',
-                detect_risk: true,
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('ocrIdCard res', res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrIdCard err', err);
-                }
-            });
-        }
-    })
+    ocrIdCard() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrIdCard({
+                    detect_direction: true,
+                    id_card_side: 'front',
+                    detect_risk: true,
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('ocrIdCard res', res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrIdCard err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

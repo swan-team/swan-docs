@@ -22,7 +22,7 @@ sidebar: voice_swan-ai-getVoiceRecognizer
 **代码示例**
 
 
-<a href="swanide://fragment/4206e3b4c3c8cc60fac918e69c033c701573727770016" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2e32098e4419e91a5bf1173f190369021573999089554" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const voiceRecognizer = swan.ai.getVoiceRecognizer();

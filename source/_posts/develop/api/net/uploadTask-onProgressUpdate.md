@@ -60,7 +60,7 @@ Page({
                         'content-type': 'application/json'
                     },
                     formData: {
-                        'user': 'test'
+                        'user': 'swan'
                     },
                     success: res =>{
                         console.log(res.statusCode);
