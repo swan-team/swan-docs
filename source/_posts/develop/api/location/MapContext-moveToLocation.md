@@ -9,6 +9,10 @@ sidebar: MapContext-moveToLocation
 
 **解释**：将地图中心移动到当前定位点，需要配合 map 组件的 show-location 使用 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextMoveToLocation.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 

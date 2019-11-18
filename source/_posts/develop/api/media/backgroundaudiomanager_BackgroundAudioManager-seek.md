@@ -8,6 +8,10 @@ sidebar: BackgroundAudioManager.seek
 
 **解释**：跳转到指定位置（单位：s）
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerSeek.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number position
 
 **图片示例**：

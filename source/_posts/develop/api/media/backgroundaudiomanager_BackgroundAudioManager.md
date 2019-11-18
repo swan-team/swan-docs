@@ -7,6 +7,11 @@ sidebar: BackgroundAudioManager
 
 **解释**：[swan.getBackgroundAudioManager](/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/)的返回值。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManager.png"  class="demo-qrcode-image" />
+
+
 **`backgroundAudioManager`类的属性列表**：
 
 |属性 | 类型 |  只读 |说明 |

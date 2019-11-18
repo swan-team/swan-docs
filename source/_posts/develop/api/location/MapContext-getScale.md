@@ -9,6 +9,10 @@ sidebar: MapContext-getScale
 
 **解释**：获取当前地图的缩放级别。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextGetScale.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

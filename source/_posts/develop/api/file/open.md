@@ -10,7 +10,7 @@ sidebar: open
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_openDocument.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object

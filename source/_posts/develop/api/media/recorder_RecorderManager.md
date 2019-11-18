@@ -10,6 +10,9 @@ sidebar: RecorderManager
 
 **解释**：swan.getRecorderManager 的返回值。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManager.png"  class="demo-qrcode-image" />
 
 
 **代码示例**：

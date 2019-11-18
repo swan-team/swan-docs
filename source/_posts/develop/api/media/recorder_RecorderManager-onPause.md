@@ -10,6 +10,12 @@ sidebar: RecorderManager.onPause
 
 **解释**： 监听录音暂停事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" />
+
+
+
 **方法参数**：Function callback
 
 **图片示例**：

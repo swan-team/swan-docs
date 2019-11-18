@@ -10,6 +10,10 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 **解释**：按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextRequestFullScreen.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **object 参数说明**：

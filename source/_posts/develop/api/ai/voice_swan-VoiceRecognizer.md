@@ -8,6 +8,11 @@ sidebar: voice_swan-ai-VoiceRecognizer
 
 **解释**：语音识别
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizer.png"  class="demo-qrcode-image" />
+
+
 **object 参数说明**
 
 |属性名 |类型  |默认值 |必填|说明|

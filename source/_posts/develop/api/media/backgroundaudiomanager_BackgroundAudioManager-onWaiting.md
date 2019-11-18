@@ -8,6 +8,11 @@ sidebar: BackgroundAudioManager.onWaiting
 
 **解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnWaiting.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **图片示例**：

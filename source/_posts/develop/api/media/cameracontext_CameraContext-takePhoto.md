@@ -9,6 +9,10 @@ sidebar: cameracontext_CameraContext-takePhoto
 
 **解释**：拍照，可指定质量，成功则返回图片。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_CameraContextTakePhoto.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

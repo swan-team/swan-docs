@@ -7,6 +7,10 @@ sidebar: voice_VoiceRecognizer_stop
 
 **解释**： 停止
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStop.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
  **代码示例**

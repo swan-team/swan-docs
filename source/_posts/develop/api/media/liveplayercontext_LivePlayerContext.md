@@ -11,6 +11,7 @@ sidebar:  liveplayercontext_LivePlayerContext
 
 **解释**： swan.createLivePlayerContext 的返回值
 
+
 **代码示例**：
 
 <a href="swanide://fragment/fde41dba7cc64b655e9e6181024fdd571573522009534" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 

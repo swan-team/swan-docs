@@ -9,6 +9,10 @@ sidebar: remove_swan-clearStorage
 
 **解释**:清理本地数据缓存。  
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_clearStorage.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

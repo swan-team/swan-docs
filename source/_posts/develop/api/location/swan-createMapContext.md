@@ -7,6 +7,10 @@ sidebar: swan-createMapContext
 
 **解释**：创建并返回 map 上下文 mapContext 对象。在自定义组件下，第二个参数传入组件实例 this，以操作组件内 `<map/>` 组件。mapContext 通过 mapId 跟一个 <map/> 组件绑定，通过它可以操作对应的 <map/> 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createMapContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String mapId
 
 **`mapId`参数说明**：要获取 map 组件的 id。

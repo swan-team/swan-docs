@@ -11,7 +11,6 @@ sidebar: videocontext_VideoContext
 **解释**： swan.createVideoContext 的返回值
 
 
-
 **代码示例**：
 <a href="swanide://fragment/d1dc373ed75d6ba89e6e40cd981e3a7a1573525726544" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

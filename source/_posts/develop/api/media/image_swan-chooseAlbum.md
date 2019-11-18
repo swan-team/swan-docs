@@ -13,7 +13,7 @@ sidebar: image_chooseAlbum
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseAlbum.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_chooseAlbum.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

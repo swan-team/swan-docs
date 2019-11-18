@@ -12,6 +12,10 @@ sidebar: swan.getAvailableAudioSources
 
 **解释**：获取当前支持的音频输入源
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getAvailableAudioSources.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object` 参数说明**：

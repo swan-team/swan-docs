@@ -9,6 +9,11 @@ sidebar: BackgroundAudioManager.onError
 
 **解释**：音频播放错误事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnError.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **代码示例**：

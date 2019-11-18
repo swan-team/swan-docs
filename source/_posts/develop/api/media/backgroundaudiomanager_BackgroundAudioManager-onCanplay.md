@@ -10,6 +10,11 @@ sidebar: media_backgroundaudiomanager
 
 **解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnCanplay.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
  
 **图片示例**：

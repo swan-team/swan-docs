@@ -7,6 +7,10 @@ sidebar: voice_VoiceRecognizer_start
 
 **解释**：  开始
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStart.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **代码示例一：短语音识别（与长语音使用方式一致） - 自动听音**

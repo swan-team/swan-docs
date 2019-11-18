@@ -9,6 +9,10 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 **解释**：对机动车行驶证正本所有关键字段进行识别。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_ocrVehicleLicense.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

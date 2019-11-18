@@ -9,6 +9,10 @@ sidebar: videocontext_VideoContext-exitFullScreen
  
 **解释**：退出全屏
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextExitFullScreen.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
  
 **示例**：

@@ -7,9 +7,13 @@ sidebar: voice_VoiceRecognizer_cancel
 
 **解释**： 取消
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerCancel.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
- **代码示例**
+ **代码示例**：
 
 
 <a href="swanide://fragment/9134657812dc84c371a566bc4a28d58e1573735356397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

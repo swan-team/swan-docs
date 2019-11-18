@@ -12,7 +12,7 @@ sidebar: voice_swan-ai-getVoiceRecognizer
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getVoiceManager.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getVoiceRecognizer.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：无

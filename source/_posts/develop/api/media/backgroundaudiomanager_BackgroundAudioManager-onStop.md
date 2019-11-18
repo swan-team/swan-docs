@@ -8,6 +8,11 @@ sidebar: BackgroundAudioManager.onStop
 
 **解释**：音频停止事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnStop.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **图片示例**：

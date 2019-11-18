@@ -9,6 +9,11 @@ sidebar: BackgroundAudioManager.onSeeked
 
 **解释**：监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnSeeked.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
 **图片示例**：
