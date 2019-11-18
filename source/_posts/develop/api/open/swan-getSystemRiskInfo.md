@@ -23,7 +23,7 @@ sidebar: swan-getSystemRiskInfo
 
 |参数|类型|说明|
 |----|----|----|
-|content|Object|用于获取风控信息的加密信息对象。要获取风控信息，需要和[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口联合使用，并作为[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口的 xtoken 参数传入。|
+|content|Object|用于获取风控信息的加密信息对象。要获取风控信息，需要和[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口联合使用，并作为[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口的 xtoken 参数传入。格式：{"key":"xxxx","value":"xxxx"}|
 
 **代码示例**：
 
@@ -45,6 +45,7 @@ Page({
         swan.getSystemRiskInfo({
             success: res => {
                 console.log('getSystemRiskInfo success', res);
+                // res：{"key":"xxxx","value":"xxxx"}
             },
             fail: err => {
                 console.log('getSystemRiskInfo fail', err);

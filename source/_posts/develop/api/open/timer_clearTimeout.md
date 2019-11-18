@@ -14,16 +14,14 @@ sidebar: timer_clearTimeout
 
 **代码示例**：
 
-<a href="swanide://fragment/283a511a5f8ef18ab6b2b90c8c6e44441558350989738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3b962a13eb39f09ce8e94f6e77ebef4d1574043590740" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <button type="primary" bindtap="setInterval">setInterval</button>
-    <button type="primary" bindtap="clearInterval">clearInterval</button>
-    <button type="primary" bindtap="setTimeout">setTimeout</button>
-    <button type="primary" bindtap="clearTimeout">clearTimeout</button>
+    <button type="primary" bindtap="setTimeoutTap">setTimeout</button>
+    <button type="primary" bindtap="clearTimeoutTap">clearTimeout</button>
 </view>
 ```
 
@@ -31,18 +29,8 @@ sidebar: timer_clearTimeout
 
 ```js
 Page({
-    setInterval() {
-        this.interval = setInterval(function () {
-            swan.showToast({
-                title: 'setInterval',
-                icon: 'none'
-            })
-        }, 5000);
-    },
-    clearInterval() {
-        this.interval && clearInterval(this.interval);
-    },
-    setTimeout() {
+    setTimeoutTap() {
+        this.timeout && clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
             swan.showToast({
                 title: 'timeout',
@@ -50,8 +38,8 @@ Page({
             })
         }, 5000);
     },
-    clearTimeout() {
-        this.timeout && clearInterval(this.timeout);
+    clearTimeoutTap() {
+        this.timeout && clearTimeout(this.timeout);
     }
 });
 ```
