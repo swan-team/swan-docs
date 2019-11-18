@@ -1055,11 +1055,11 @@
                     name: nav 
                   -
                     link: /develop/component/tabs
-                    text: tabs 导航
+                    text: tabs 标签栏
                     name: tabs
                   -
                     link: /develop/component/tab-item
-                    text: tab-item 导航内容
+                    text: tab-item 标签栏子项
                     name: tab-item
         -
             sidebar:

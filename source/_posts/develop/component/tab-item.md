@@ -1,12 +1,12 @@
 ---
-title: tab-item 导航内容
+title: tab-item 标签栏子项
 header: develop
 nav: component
 sidebar: nav
 ---
 
 
-**解释**： 搭配 tabs 一起使用，导航栏内单个 tab 内容。基础库 3.100.4 版本开始支持。
+**解释**： 搭配 tabs 一起使用，标签栏栏内单个 tab 内容。基础库 3.100.4 版本开始支持。
 
 **百度APP中扫码体验：**
 
