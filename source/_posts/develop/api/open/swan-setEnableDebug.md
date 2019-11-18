@@ -23,7 +23,7 @@ sidebar: swan-setEnableDebug
 
 **代码示例**：
 
-<a href="swanide://fragment/905712491046e4225a45c47d655371511569554133813" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b16d4650778afde3aa54d7e501e16a051574047694621" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
