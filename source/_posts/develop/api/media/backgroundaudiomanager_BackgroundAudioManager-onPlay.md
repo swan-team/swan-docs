@@ -16,7 +16,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onplay.png">
+        <img src="https://b.bdstatic.com/miniapp/image/onPlay.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -28,7 +28,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
 
 **代码示例**：
 
-<a href="swanide://fragment/4e979750e2b05cc2a429b96c067554c71573699897428" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7bba223fa1189e84565b3787a7eeab971574003489852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

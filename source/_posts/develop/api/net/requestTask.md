@@ -34,13 +34,18 @@ sidebar: requestTask
 
 <a href="swanide://fragment/2666d8786677778d18177eae7db623d11572938991162" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<button bindtap="createRequestTask">创建request实例对象</button>
+```
+
 * 在 js 文件中
 
 ```js
 Page({
-    data: {    
-    },
-    request() {
+    data: { },
+    createRequestTask() {
         const requestTask = swan.request({
             url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
             header: {

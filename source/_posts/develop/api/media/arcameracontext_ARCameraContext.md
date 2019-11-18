@@ -12,9 +12,48 @@ sidebar: media_arcameracontext_ARCameraContext
 
 <a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-```html
-<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
-</ar-camera>
+```js
+Page({
+    data: {
+        src: ''
+    },
+    onShow() {
+        const cameraContext = swan.createCameraContext();
+        this.cameraContext = cameraContext
+    },
+    takePhoto() {
+        this.cameraContext.takePhoto({
+            quality: 'high',
+            success: res => {
+                this.setData({
+                    src: res.tempImagePath
+                });
+            }
+        });
+    },
+    startRecord() {
+        this.cameraContext.startRecord({
+            success: res => {
+                swan.showToast({
+                    title: 'startRecord'
+                });
+            }
+        });
+    },
+    stopRecord() {
+        this.cameraContext.stopRecord({
+            success: res => {
+                swan.showModal({
+                    title: '提示',
+                    content: res.tempVideoPath
+                });
+                this.setData({
+                    videoSrc: res.tempVideoPath
+                });
+            }
+        });
+    }
+});
 ```
-> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
+
 

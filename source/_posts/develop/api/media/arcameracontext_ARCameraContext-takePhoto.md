@@ -30,9 +30,9 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
 |tempImagePath  | String | 图片的临时路径 |
 
  
-**示例**：
+**代码示例**：
 
-<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3b604592b50b1a8ac8ddd311037becae1574015629545" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

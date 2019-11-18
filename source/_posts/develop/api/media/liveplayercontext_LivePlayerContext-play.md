@@ -34,7 +34,16 @@ sidebar: liveplayercontext_LivePlayerContext-play
 </div>
 
 **代码示例**：
-<a href="swanide://fragment/128fce811aa7dee160511ca5679f837f1573522392276" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/a6023d9b3dc99a25b9a79575a5b98fad1574008679886" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+
+* 在 swan 文件中
+
+```html
+<view class="live-play">
+    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}"></live-player>
+    <button type="primary" bind:tap="livePlay">开始播放 play</button>
+</view>
+```
 
 * 在 js 文件中
 ```js

@@ -42,13 +42,13 @@ Page({
         disabled: false
     },
     onTap() {
-        let that = this
-        that.setData('disabled', true)
+        let that = this;
+        that.setData('disabled', true);
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
@@ -56,7 +56,7 @@ Page({
         });
         
         socketTask.onOpen(function (res) {
-            that.socketTaskClose()
+            that.socketTaskClose();
         })
         socketTask.onClose(function (res) {
             console.log('socketTask.onClose success', res);
@@ -65,14 +65,13 @@ Page({
                 content: JSON.stringify(res.reason)
             });
         }),
-        this.socketTask = socketTask
-
+        this.socketTask = socketTask;
     },
     socketTaskClose() {
         let that = this
         this.socketTask.close({
             success: res => {
-                that.setData('disabled', false)
+                that.setData('disabled', false);
                 console.log('关闭WebSocket成功', res);
                 swan.showToast({
                     title: '关闭WebSocket成功',

@@ -116,7 +116,6 @@ Page({
             icon: 'none'
         });
         const voiceRecognizer = swan.ai.getVoiceRecognizer();
-
         voiceRecognizer.onRecognize(res => {
             console.log('voice recognize', res.result);
             this.setData('result', res.result);

@@ -50,13 +50,24 @@ sidebar: word
 
 **示例代码**
 
-<a href="swanide://fragment/90590b9b20bc84912e4eb3a96aa3a0e01559043393195" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/85f75200012b846c6078ba0cb1ddac0d1573998944572" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.nlpLexerCustom({
-    text: '百度是一家高科技公司',
-    success: res => {
-        console.log('success', res);
+Page({
+    data: {
+        content: '百度是一家高科技公司'
+    },
+    nlpLexerCustom() {
+        const text = this.getData('content');
+        swan.ai.nlpLexerCustom({
+            text,
+            success(res) {
+                console.log('ai.nlpLexerCustom success', res);
+            },
+            fail(err) {
+                console.log('ai.nlpLexerCustom fail', err);
+            }
+        });
     }
 });
 ```

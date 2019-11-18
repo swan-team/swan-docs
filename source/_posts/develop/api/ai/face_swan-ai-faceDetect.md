@@ -182,23 +182,27 @@ sidebar: face_swan-ai-faceDetect
 <a href="swanide://fragment/fc4fb555f1a72d086ef4698de4c0a8b01569415643600" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.faceDetect({
-        image,
-        image_type: 'BASE64',
-        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
-        max_face_num: '1',
-        face_type: 'LIVE',
-        success: res => {
-            console.log(res.face_list);
-       },
-       fail: err => {
-            console.log( err);
-        }
-    });
-  }
+Page({
+    faceDetect() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.faceDetect({
+                    image,
+                    image_type: 'BASE64',
+                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                    max_face_num: '1',
+                    face_type: 'LIVE',
+                    success: res => {
+                        console.log(res.face_list);
+                },
+                fail: err => {
+                        console.log( err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

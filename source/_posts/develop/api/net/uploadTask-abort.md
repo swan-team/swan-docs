@@ -36,13 +36,8 @@ sidebar: uploadTask-abort
 ```js
 
 Page({
-    data: {
-        disabled: true
-    },
-    onShow() {
-    },
+    data: { },
     uploadFile() {
-        this.setData({ disabled: false})
         swan.chooseImage({
             success: res => {
                 const uploadTask = swan.uploadFile({
@@ -53,7 +48,7 @@ Page({
                         'content-type': 'application/json'
                     },
                     formData: {
-                        'user': 'test'
+                        'user': 'swan'
                     },
                     success: res => {
                         swan.showModal({
@@ -64,13 +59,13 @@ Page({
                         this.setData({filePath});
                     },
                     fail: err => {
-                        console.log('fail', err);
+                        console.log('uploadFile fail', err);
                         swan.showToast({
                             title: '上传失败',
                             icon: none
                         });
                     },
-                    complete() {
+                    complete: () => {
                         console.log('complete');
                     }
                 });

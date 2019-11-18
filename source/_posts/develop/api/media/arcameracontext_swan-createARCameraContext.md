@@ -45,3 +45,24 @@ sidebar: arcameracontext_swan-createARCameraContext
 |200201|录音权限-用户拒绝|
 |200202|录音权限-系统权限拒绝|
 
+**代码示例**
+
+
+<a href="swanide://fragment/9134657812dc84c371a566bc4a28d58e1573735356397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+* 在 swan 文件中
+
+```html
+<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
+</ar-camera>
+```
+> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onReady() {
+       this.ARCameraContext = swan.createARCameraContext();
+    }
+})
+```

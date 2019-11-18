@@ -56,7 +56,7 @@ App({
             title: '',
             content: JSON.stringify(res)
         });
-        // 如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
+        // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
         swan.navigateTo({
             url: '/home/home'
         });
@@ -78,9 +78,7 @@ App({
                 title: '',
                 content: JSON.stringify(res)
             });
-            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
-            // Do something
-            // 页面不存在时，默认跳转到首页
+            // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
             swan.navigateTo({
                 url: '/home/home'
             });
@@ -101,14 +99,12 @@ Page({
             url: '/path/to/otherPage'
         });
         swan.onPageNotFound(function(res) {
-            console.log('onPageNotFound success',res);
+            console.log(res);
             swan.showModal({
                 title: '',
                 content: JSON.stringify(res)
             });
-            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
-            // Do something
-            // 页面不存在时，默认跳转到首页
+            // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
             swan.navigateTo({
                 url: '/home/home',
                 success: res => {

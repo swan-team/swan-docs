@@ -40,15 +40,13 @@ sidebar: websocket_SocketTask-onOpen
 
 ```js
 Page({
-    data: {
-        
-    },
+    data: { },
     onOpen() {
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
@@ -61,7 +59,7 @@ Page({
                 content: '监听打开事件成功'
             });
         }),
-        this.socketTask = socketTask
+        this.socketTask = socketTask;
     }
 });
 ```

@@ -20,3 +20,6 @@ sidebar: arcameracontext_ARCameraContext-reset
 |fail  |  Function  |   | 否 |接口调用失败的回调函数|
 |complete |   Function  | | 否  | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**代码示例**：
+
+参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
