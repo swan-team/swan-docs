@@ -13,7 +13,7 @@ sidebar: contact_api_page
 <a href="swanide://fragment/98aecd7f087df1074986f7a658b710b01574068001913" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-<button open-type="contact" bindcontact="contactCB">客服</button>
+<button open-type="contact" bindcontact="contactCB">点击进入客服页面</button>
 ```
 
 ```
@@ -42,4 +42,4 @@ Page({
 
 | 参数 | 类型 | 说明 |
 | ---- |---- |----|
-| detail | object | 小程序消息详细信息 |
+| detail | object | 小程序消息的详细信息，{errMsg: 'enterContact:ok'} 表示进入客服页面成功 |
