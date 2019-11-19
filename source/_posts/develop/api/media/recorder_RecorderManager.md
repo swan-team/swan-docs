@@ -39,6 +39,18 @@ Page({
             console.log('recorder stop', res)
             const { tempFilePath } = res
         });
+        recorderManager.onResume(function() {
+            // 继续录音事件
+            console.log('recorder resume')
+        });
+        recorderManager.onInterruptionBegin(function() {
+            // 终端录音开始事件
+            console.log('recorder interruptionBegin')
+        });
+        recorderManager.onInterruptionEnd(function() {
+            // 终端录音结束事件
+            console.log('recorder interruptionEnd')
+        });
 
         const options = {
             duration: 10000,
