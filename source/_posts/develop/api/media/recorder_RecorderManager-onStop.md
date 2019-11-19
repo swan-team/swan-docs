@@ -17,9 +17,11 @@ sidebar: RecorderManager.onStop
 
 **callback 回调结果说明**：
 
-|参数名| 类型 | 说明 |
-|---- | ---- | ---- |
-|tempFilePath |String | 录音文件的临时路径 |
+|参数名| 类型 | 说明 |最低版本|
+|---- | ---- | ---- | ---- |
+|tempFilePath |String | 录音文件的临时路径 |-|
+|duration |Number | 录音总时长，单位：ms |3.120.1|
+|fileSize |Number | 录音文件大小，单位：Byte |3.120.1|
 
 
 **图片示例**：
@@ -38,7 +40,7 @@ sidebar: RecorderManager.onStop
 
 **代码示例**：
 
-<a href="swanide://fragment/ee2d08e058696342496cd34fcc302dc61573418403441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
