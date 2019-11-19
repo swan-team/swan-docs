@@ -34,6 +34,20 @@ sidebar: userinfo_swan-getSwanId
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getSwanId.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

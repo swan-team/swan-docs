@@ -37,7 +37,22 @@ sidebar: authorize_swan-authorize
 |scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/authorize.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
+
 <a href="swanide://fragment/b823c7245fc5009c0be0a45a060cb2891569552275612" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

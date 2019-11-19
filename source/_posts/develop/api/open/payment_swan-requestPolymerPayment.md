@@ -56,7 +56,22 @@ sidebar: payment_swan.requestPolymerPayment
 | BDWallet | 百度钱包 |
 | WeChat | 微信支付|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/requestPolymerPayment.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
+
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

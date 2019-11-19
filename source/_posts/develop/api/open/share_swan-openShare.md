@@ -29,7 +29,22 @@ sidebar: share_swan-openShare
 
 
 **函数返回值**：Boolean result
+
 **返回值说明**：反馈分享结果，成功或失败。
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/openShare.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
