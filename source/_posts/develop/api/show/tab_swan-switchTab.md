@@ -20,15 +20,29 @@ sidebar: tab_swan-switchTab
 |fail   | Function |   否  | |  接口调用失败的回调函数|
 |complete |   Function |   否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**代码示例**：
+**图片示例**：
 
-<a href="swanide://fragment/d2315389d09e4409617e1ffef50cba571574139374472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/switchtab.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+<a href="swanide://fragment/ec2dc973777c2059652a99fda7f117621574140319528" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">    
-    <button bind:tap="switchTab" type="primary" hover-stop-propagation="true">跳转到组件Tab页</button>
+    <button bind:tap="switchTab" type="primary" hover-stop-propagation="true">跳转到API Tab页</button>
 </view>
 ```
 

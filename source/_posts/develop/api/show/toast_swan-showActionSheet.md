@@ -33,6 +33,20 @@ sidebar: toast_swan-showActionSheet
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始。|
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/showAction.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 <a href="swanide://fragment/c96f91497b4edc0c93df37756919a2001574135826789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
