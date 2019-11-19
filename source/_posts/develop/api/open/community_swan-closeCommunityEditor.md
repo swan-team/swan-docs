@@ -20,28 +20,32 @@ sidebar: community_swan-closeCommunityEditor
 
 **代码示例**：
 
-<a href="swanide://fragment/063a4b74f84b571ffff57f805a1f15d41563779692092" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c7b782b7267887f3a46fb23380e8c39f1574131275403" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.openCommunityEditor({
-    contentPlaceholder: '在这里编辑正文',
-    titlePlaceholder: '在这里编辑标题',
-    moduleList: ['image', 'title', 'emoji'],
-    imgParame: {
-        maxNum: 3,
-        ratio: 0.5
-    },
-    navBarTitleText: '原生全屏内容发布器',
-    emojiPath: '../../emojidata',
-    success: res => {
-        console.log('openCommunityEditor success', res);
-        swan.showToast({
-            title: '关闭原生全屏内容发布器'
+Page({
+    openCommunityEditor() {
+        swan.openCommunityEditor({
+            contentPlaceholder: '在这里编辑正文',
+            titlePlaceholder: '在这里编辑标题',
+            moduleList: ['image', 'title', 'emoji'],
+            imgParame: {
+                maxNum: 3,
+                ratio: 0.5
+            },
+            navBarTitleText: '社区文章发布器',
+            emojiPath: '../../emojidata',
+            success: function (res) {
+                console.log('openCommunityEditor success', res);
+                
+            },
+            fail: function (err) {
+                console.log('openCommunityEditor fail', err);
+            }
         });
-        swan.closeCommunityEditor();
-    },
-    fail: err => {
-        console.log('openCommunityEditor fail', err);
+        setTimeout(() => {
+            swan.closeCommunityEditor();
+        }, 3000);
     }
-})
+});
 ```
