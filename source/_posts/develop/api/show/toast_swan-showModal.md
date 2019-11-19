@@ -46,7 +46,13 @@ sidebar: toast_swan-showModal
 swan.showModal({
     title: '标题',
     content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-    showCancel: false
+    showCancel: false,
+    success: res => {
+        console.log('showModal success', res);
+    },
+    fail: err => {
+        console.log('showModal fail', err);
+    }
 });
 
 showModalNotitle() {
@@ -56,6 +62,12 @@ showModalNotitle() {
         confirmColor: '色值',
         cancelText: '取消',
         cancelColor: '确定',
+        success: res => {
+            console.log('showModal success', res);
+        },
+        fail: err => {
+            console.log('showModal fail', err);
+        }
     });
 }
 ```

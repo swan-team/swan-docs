@@ -21,22 +21,47 @@ sidebar: tabbar_swan-showTabBar
 
 **代码示例**：
 
-<a href="swanide://fragment/c6924169544d35cf75f404fdb41e88801569469634696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5aa2f4593413e51fd723d5effc62d8221574138247912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">      
+    <button type="primary" bindtap="showTabBar">showTabBar</button>
+    <button type="primary" bindtap="hideTabBar">hideTabBar</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-    swan.showTabBar({
-        animation: true,
-        success: res => {
-            console.log('showTabBar success');
-        },
-        fail: err => {
-            console.log('showTabBar fail', err);
-        }
-    });
-    
+Page({
+    onLoad() {
+        swan.hideTabBar();
+    },
+    showTabBar() {
+        swan.showTabBar({
+            animation: true,
+            success: function () {
+                console.log('showTabBar success');
+            },
+            fail: function (err) {
+                console.log('showTabBar fail', err);
+            }
+        });
+    },
+    hideTabBar() {
+        swan.hideTabBar({
+            animation: true,
+            success: function () {
+                console.log('hideTabBar success');
+            },
+            fail: function (err) {
+                console.log('hideTabBar fail', err);
+            }
+        });
+    }
+});
 ```
 #### 错误码
 

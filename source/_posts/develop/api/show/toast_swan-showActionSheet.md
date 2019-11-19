@@ -34,7 +34,15 @@ sidebar: toast_swan-showActionSheet
 
 
 **代码示例**：
-<a href="swanide://fragment/5b21419f4f4abd6685556b4f7e524cd81569464246835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c96f91497b4edc0c93df37756919a2001574135826789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="showActionSheet" class="button" type="primary" hover-stop-propagation="true">弹出action sheet</button> 
+</view>
+```
 
 * 在 js 文件中
 

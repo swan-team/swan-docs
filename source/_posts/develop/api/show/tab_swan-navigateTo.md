@@ -31,24 +31,27 @@ sidebar: tab_swan-navigateTo
 
 
 **代码示例**：
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-navigateTo(e) {
-    swan.navigateTo({
-        url: '/pages/detail/detail',
-        success: res => {
-            console.log('navigateTo success')
-        },
-        fail: err => {
-            console.log('navigateTo fail')
-        }
-    });
-},
-
+Page({
+    data: { },
+    navigateTo(e) {
+        swan.navigateTo({
+            url: '/detail/detail?id=新页面'
+        });
+    }
+});
 ```
 **Bug & Tip**：
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。

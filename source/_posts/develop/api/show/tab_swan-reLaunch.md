@@ -23,20 +23,30 @@ sidebar: tab_swan-reLaunch
 
 **代码示例**：
 
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/846aafb088c8a69de62456103660db2f1574139934370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="reLaunch" type="primary" hover-stop-propagation="true">关闭所有页面并跳转到detail页</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-swan.reLaunch({
-    url: '/api/api?key=value',
-    success: res => {
-        console.log('reLaunch success', res);
-    },
-    fail: err => {
-        console.log('reLaunch fail', err);
+Page({
+    reLaunch() {
+        swan.reLaunch({
+            url: '/detail/detail?key=value',
+            success: res => {
+                console.log('reLaunch success', res);
+            },
+            fail: err => {
+                console.log('reLaunch fail', err);
+            }
+        })
     }
 });
-    
 ```

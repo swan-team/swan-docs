@@ -27,56 +27,54 @@ sidebar: tab_swan-navigateBack
 
 **代码示例**：
 
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 component.swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="navigateTo">navigateTo</button>
-</view>
-```
-
-* 在 api.swan 文件中
+* 在 index.swan 文件中
 
 ```html
 <view class="wrap">
-    <button type="primary" bindtap="navigateBack">navigateBack</button>
+    <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
 </view>
 ```
 
-* 在 component.js 文件中
+* 在 detail.swan 文件中
+
+```html
+<view class="wrap">
+    <view class="page-top">
+        <view class="page-top-text">{{id}}</view>
+    </view>
+    <button bind:tap="navigateBack" type="primary" hover-stop-propagation="true">返回上一页</button> 
+</view> 
+```
+
+* 在 index.js 文件中
 
 ```js
 Page({
-    navigateTo() {
+    data: { },
+    navigateTo(e) {
         swan.navigateTo({
-            url: '/api/api?key=value',
-            success: res => {
-                console.log('navigateTo success');
-            },
-            fail: err => {
-                console.log('navigateTo fail', err);
-            }
+            url: '/detail/detail?id=新页面'
         });
     }
 });
 ```
-* 在 api.js 文件中
+* 在 detail.js 文件中
 
 ```js
 Page({
-    onLoad(options) {
-        console.log('onLoad', options);
+    data: {
+        id: 'detail'
     },
-    navigateBack() {
+    onLoad(options) {
+        this.setData({
+            'id': options.id
+        });
+    },
+    navigateBack(e) {
         swan.navigateBack({
-            success: res => {
-                console.log('navigateBack success');
-            },
-            fail: err => {
-                console.log('navigateBack fail', err);
-            }
+            delta: 2
         });
     }
 });

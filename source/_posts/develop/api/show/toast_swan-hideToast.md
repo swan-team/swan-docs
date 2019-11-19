@@ -18,23 +18,31 @@ sidebar:  toast_swan-hideToast
 
 **代码示例**：
 
-<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/39bce6ec155b167062495e213ae5ebfe1574135466986" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button bindtap="showToast" type="primary" hover-stop-propagation="true">swan.showToast</button> 
+        <button bindtap="hideToast" type="primary" hover-stop-propagation="true">swan.hideToast</button>   
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-    showToast() {
-        swan.showToast({
-            title: 'toast',
-            icon: 'none'
-        });
-    },
-    hideToast() {
-        swan.hideToast();
-    }
-
+showToast() {
+    swan.showToast({
+        title: 'toast',
+        icon: 'none'
+    });
+},
+hideToast() {
+    swan.hideToast();
+}
 ```
 #### 错误码
 **Andriod**
