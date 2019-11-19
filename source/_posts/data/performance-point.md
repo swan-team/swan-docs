@@ -1,5 +1,5 @@
 ---
-title: 打点统计方案
+title: 手工埋点统计
 header: data
 nav: book
 sidebar: performance-point
