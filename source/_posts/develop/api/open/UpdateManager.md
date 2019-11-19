@@ -5,25 +5,18 @@ nav: api
 sidebar: UpdateManager
 ---
 
- 
 
- 
+
+
 
 **解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/get/)返回值。
+
+**方法参数**：无
 
 **代码示例**：
 
 <a href="swanide://fragment/0c200e097017ef1f7409aec546adb30c1569553882500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-    <button type="primary" bindtap="applyUpdate">applyUpdate</button>
-</view>
-```
-
-* 在 js 文件中
 
 ```js
 Page({
@@ -46,24 +39,6 @@ Page({
                 }
             });
         });
-
-        updateManager.onUpdateFailed(function (err) {
-            // 新的版本下载失败
-            console.log('update fail', err);
-        });
-
-        this.updateManager = updateManager;
-    },
-    applyUpdate() {
-        this.updateManager.applyUpdate();
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-
