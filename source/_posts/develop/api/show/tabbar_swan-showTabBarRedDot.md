@@ -21,25 +21,38 @@ sidebar: tabbar_swan-showTabBarRedDot
 
 **代码示例**：
 
-<a href="swanide://fragment/616a15df8959503ae3c8fa0d3191020b1569467482291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c0cd5b823043904c1690f5e2b51fe2591574137456000" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
+    <button type="primary" bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
+Page({
     showTabBarRedDot() {
         swan.showTabBarRedDot({
+            index: 0
+        });
+    },
+    hideTabBarRedDot() {
+        swan.hideTabBarRedDot({
             index: 0,
-            success: res => {
-                console.log('showTabBarRedDot success');
+            success: function () {
+                console.log('hideTabBarRedDot success');
             },
-            fail: err => {
-                console.log('showTabBarRedDot fail', err);
+            fail: function (err) {
+                console.log('hideTabBarRedDot fail', err);
             }
         });
     }
-
+});
 ```
 #### 错误码
 

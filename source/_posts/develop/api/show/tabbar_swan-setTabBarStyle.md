@@ -24,7 +24,15 @@ sidebar: tabbar_swan-setTabBarStyle
 
 **代码示例**：
 
-<a href="swanide://fragment/8a0d64dcd0e68d1861cc116a2e8c1b891569469282679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/44d27e9d57b8848544201181fe547cb01574137906215" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
+</view>
+```
 
 * 在 js 文件中
 
@@ -32,14 +40,14 @@ sidebar: tabbar_swan-setTabBarStyle
 Page({
     setTabBarStyle() {
         swan.setTabBarStyle({
-            color: '#38f',
-            selectedColor: '#38f',
+            color: '#000',// black
+            selectedColor: '#FF0000',// red
             backgroundColor: '#FFFFBD',
             borderStyle: 'black',
-            success: res => {
+            success: function () {
                 console.log('setTabBarStyle success');
             },
-            fail: err => {
+            fail: function (err) {
                 console.log('setTabBarStyle fail', err);
             }
         });

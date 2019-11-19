@@ -46,24 +46,41 @@ sidebar: navigationbar_swan-setNavigationBarColor
 
 **代码示例**：
 
-<a href="swanide://fragment/5324faec9c72f07b9827b7a08ac9a2791569466207792" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dace5658a19b604ff4d62d0c760fb7351574136817988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>设置当前页面导航条颜色</view>
+            <view>色值为: #ff0000</view>
+        </view>
+        <button bind:tap="setNavigationBarColor" type="primary" hover-stop-propagation="true">点击设置</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-swan.setNavigationBarColor({
-    frontColor: '#ffffff',
-    backgroundColor: '#3C76FF',
-    animation: {
-        duration: 500,
-        timingFunc: 'linear'
-    },
-    success: res => {
-        console.log('setNavigationBarColor success');
-    },
-    fail: err => {
-        console.log('setNavigationBarColor fail', err);
+Page({
+    setNavigationBarColor() {
+        swan.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: '#3C76FF',
+            animation: {
+                duration: 500,
+                timingFunc: 'linear'
+            },
+            success: res => {
+                console.log('setNavigationBarColor success');
+            },
+            fail: err => {
+                console.log('setNavigationBarColor fail', err);
+            }
+        });
     }
 });
 ```

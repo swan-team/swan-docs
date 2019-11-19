@@ -21,24 +21,39 @@ sidebar: tabbar_swan-setTabBarBadge
 
 **代码示例**：
 
-<a href="swanide://fragment/0b8a3e106dcdf2db3a238ed3c23127f21569467141078" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6fa8cb5655d510b33220f6203e4e02c51574137194069" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
+    <button type="primary" bindtap="removeTabBarBadge">removeTabBarBadge</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-swan.setTabBarBadge({
-    index: 0,
-    text: '文本',
-    success: res => {
-        console.log('setTabBarBadge success', res);
+Page({
+    setTabBarBadge() {
+        swan.setTabBarBadge({
+            index: 0,
+            text: '文本'
+        });
     },
-    fail: err => {
-        console.log('setTabBarBadge fail', err);
+    removeTabBarBadge() {
+        swan.removeTabBarBadge({
+            index: 0,
+            success: function () {
+                console.log('removeTabBarBadge success');
+            },
+            fail: function (err) {
+                console.log('removeTabBarBadge fail', err);
+            }
+        });
     }
 });
-
 ```
  
 #### 错误码

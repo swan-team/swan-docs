@@ -25,25 +25,36 @@ sidebar: tabbar_swan-setTabBarItem
 
 **代码示例**：
 
-<a href="swanide://fragment/2030d26a377cc39560eb625d8dd8f2a11569468598586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8b445d78cbdabc8066c1dbec707dbefd1574138075367" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-    swan.setTabBarItem({
-        index: 0,
-        text: '文本',
-        iconPath: '/images/API_normal.png',
-        selectedIconPath: '/images/API_selected.png',
-        success: res => {
-            console.log('setTabBarItem success');
-        },
-        fail: err => {
-            console.log('setTabBarItem fail', err);
-        }
-    });
-  
+Page({
+    setTabBarItem() {
+        swan.setTabBarItem({
+            index: 0,
+            text: '替换文本',
+            iconPath: '/images/API_normal.png',
+            selectedIconPath: '/images/API_selected.png',
+            success: function () {
+                console.log('setTabBarItem success');
+            },
+            fail: function (err) {
+                console.log('setTabBarItem fail', err);
+            }
+        });
+    }
+});
 ```
 
 
