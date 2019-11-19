@@ -6,7 +6,7 @@ sidebar: app_service_life
 ---
 生命周期可帮助您更好的了解页面工作原理：
 
- ![图片](../../../img/framwork/framwork-01.png)
+ ![图片](../../../img/framwork/framework-01.png)
 
 
  1、**notify**:当渲染线程初始化后，向APP服务线程派发消息，请求获取初始化渲染数据；
