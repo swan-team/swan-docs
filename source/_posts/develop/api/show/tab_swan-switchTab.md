@@ -22,21 +22,32 @@ sidebar: tab_swan-switchTab
 
 **代码示例**：
 
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d2315389d09e4409617e1ffef50cba571574139374472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">    
+    <button bind:tap="switchTab" type="primary" hover-stop-propagation="true">跳转到组件Tab页</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-swan.switchTab({
-    url: '/api/api',
-    success: res => {
-        console.log('switchTab success');
-    },
-    fail: err => {
-        console.log('switchTab fail', err);
+Page({
+    data: { },
+    switchTab() {
+        swan.switchTab({
+            url: '/api/api',
+            success: res => {
+                console.log('switchTab success');
+            },
+            fail: err => {
+                console.log('switchTab fail', err);
+            }
+        })
     }
 });
-
 ```
 

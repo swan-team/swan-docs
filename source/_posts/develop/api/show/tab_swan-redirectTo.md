@@ -26,19 +26,31 @@ sidebar: tab_swan-redirectTo
 
 **代码示例**：
 
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/441e13e266a3072d50cfe2e1b896f9451574139717336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="redirectTo" type="primary" hover-stop-propagation="true">在当前页面打开</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-swan.redirectTo({
-    url: '/api/api?key1=value1&key2=value2',
-    success: res => {
-        console.log('redirectTo success');
-    },
-    fail: err => {
-        console.log('redirectTo fail', err);
+Page({
+    data: { },
+    redirectTo(e) {
+        swan.redirectTo({
+            url: '/detail/detail?id=当前页',
+            success: res => {
+                console.log('redirectTo success');
+            },
+            fail: err => {
+                console.log('redirectTo fail', err);
+            }
+        });
     }
 });
 ```
