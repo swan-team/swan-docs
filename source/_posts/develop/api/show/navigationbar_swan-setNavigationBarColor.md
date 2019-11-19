@@ -44,6 +44,20 @@ sidebar: navigationbar_swan-setNavigationBarColor
 |errMsg | String  |调用结果| -->
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/setNavigationBarColor.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/dace5658a19b604ff4d62d0c760fb7351574136817988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

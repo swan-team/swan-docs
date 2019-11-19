@@ -22,6 +22,20 @@ sidebar: tabbar_swan-setTabBarStyle
 |fail   | Function  | 否 | |接口调用失败的回调函数|
 |complete  |  Function  |  否| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/settabbarstyle.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/44d27e9d57b8848544201181fe547cb01574137906215" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
