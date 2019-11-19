@@ -37,21 +37,75 @@ sidebar:  toast_swan-showToast
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
 **代码示例**：
-<a href="swanide://fragment/5050e3a31e5a3d2ecc1843df6fcb19511569462991855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view>
+        <view class="card-area"> 
+            <button data-title="success" data-icon="success" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出成功toast</button>   
+        </view>
+        <view class="card-area">   
+            <button data-title="loading" data-icon="loading" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出loading toast</button>   
+        </view>
+        <view class="card-area">      
+            <button data-title="none" data-icon="none" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出无图标toast</button>   
+        </view>
+        <view class="card-area">
+            <button bindtap="tapHandleDuration" type="primary" hover-stop-propagation="true">点击弹出延时toast  {{num}}</button>   
+        </view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-swan.showToast({
-    title: 'success',
-    icon: 'success',
-    duration: 5000,
-    mask: true,
-    success: res => {
-        console.log('showToast success');
+Page({
+    data: {
+        num: 5
     },
-    fail: err => {
-        console.log('showToast fail', err);
+    tapHandle(e) {
+        this.toast(e.currentTarget.dataset.title,          e.currentTarget.dataset.icon);
+    },
+    toast(title, icon) {
+        swan.showToast({
+            title, 
+            icon,
+            mask: false, // 此属性设置为true不能打断toast
+            success: res => {
+                console.log('showToast success', res);
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        })
+    },
+    tapHandleDuration() {
+        let that = this;
+        swan.showToast({
+            title: '延时5s', 
+            icon: 'none',
+            mask: false,
+            duration: 5000,
+            success: res => {
+                console.log('showToast success', res);
+                let num = 5;
+                let interval = setInterval(function() {
+                    num = num - 1;
+                    that.setData({num: num});
+                    if(num === 0) {
+                        clearInterval(interval);
+                    }
+                }, 1000);
+                console.log('num', num);
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        })
     }
 });
 ```
