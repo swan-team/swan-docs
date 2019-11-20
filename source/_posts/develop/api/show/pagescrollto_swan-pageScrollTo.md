@@ -21,15 +21,40 @@ sidebar: pagescrollto_swan-pageScrollTo
 |fail  |  Function |   否  | | 接口调用失败的回调函数|  
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）| 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/pageScrollTo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/1da0995c33ce55aaee91c780b076e1991569491978009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+
+<view class="wrap">
+    <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
+    <button type="primary" bindtap="scrollToTop">返回图片顶部</button>
+</view>
+
+```
 
 * 在 js 文件中
 
 ```js
 Page({
-    pageScrollTo() {
+    scrollToTop() {
         swan.pageScrollTo({
             scrollTop: 0,
             duration: 300,
