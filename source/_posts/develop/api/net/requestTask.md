@@ -13,7 +13,6 @@ sidebar: requestTask
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/requestTask.png"  class="demo-qrcode-image" />
 
-**方法参数**：无
 
  
 **图片示例**：

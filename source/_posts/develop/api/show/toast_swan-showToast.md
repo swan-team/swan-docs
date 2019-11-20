@@ -124,7 +124,13 @@ Page({
     }
 });
 ```
- 
+
+**Bug&Tip**：
+
+* [swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个
+* swan.showToast 应与 [swan.hideToast](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/) 配对使用
+
+
 #### 错误码
 * Andriod
 
