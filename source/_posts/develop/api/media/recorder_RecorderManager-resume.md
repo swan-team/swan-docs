@@ -9,9 +9,9 @@ sidebar: RecorderManager.resume
 
 **解释**： 继续录音
 
-**百度APP中扫码体验：**
+<!-- **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerResume.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerResume.png"  class="demo-qrcode-image" /> -->
 
 **方法参数**：无
 

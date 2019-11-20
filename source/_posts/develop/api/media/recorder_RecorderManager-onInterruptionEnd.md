@@ -11,9 +11,9 @@ sidebar: RecorderManager.onInterruptionEnd
 
 **解释**： 录音中断结束事件。在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。
 
-**百度APP中扫码体验：**
+<!-- **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> -->
 
 **方法参数**：Function callback
 
