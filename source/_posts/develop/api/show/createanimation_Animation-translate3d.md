@@ -20,7 +20,7 @@ sidebar: createanimation_Animation-translate3d
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/translate3d.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/translate3d.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

@@ -16,6 +16,21 @@ sidebar: createanimation_Animation-rotate
 
 **参数说明**：deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/rotate.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 **代码示例**
 
 

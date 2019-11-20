@@ -17,8 +17,22 @@ sidebar: createanimation_Animation-translateY
 
 **参数说明**：在 Y 轴偏移 ty ，单位 px。 
 
-**代码示例**
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/translateY.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/e6fdb305fefb7291a5d9635defd630581574217543717" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
