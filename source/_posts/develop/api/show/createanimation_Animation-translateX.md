@@ -46,6 +46,6 @@ Page({
     translateX() {
       this.animation.translateX(Math.random() * 100 - 50).step()
       this.setData({animation: this.animation.export()})
-    },
+    }
 });
 ```
