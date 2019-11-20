@@ -1,21 +1,20 @@
 ---
-title: RecorderManager.pause
+title: RecorderManager.onResume
 header: develop
 nav: api
-sidebar:  RecorderManager.pause
+sidebar: RecorderManager.onResume
 ---
 
+>基础库 3.120.1 开始支持，低版本需做兼容处理。
 
 
-
-**解释**： 暂停录音
+**解释**： 监听录音继续事件
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerPause.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" />
 
-
-**方法参数**：无
+**方法参数**：Function callback
 
 **图片示例**：
 
@@ -48,11 +47,19 @@ Page({
             encodeBitRate: 96000,
             format: 'aac'
         };
+        recorderManager.onResume(function(res) {
+            console.log('recorder onResume', res)
+            swan.showModal({
+                title: 'success',
+                content: JSON.stringify(res)
+            })
+        });
         recorderManager.start(options);
         this.recorderManager = recorderManager;
     },
-    RecorderManagerPause() {
-        this.recorderManager.pause()
+    RecorderManagerResume() {
+        this.recorderManager.resume()
     }
 });
 ```
+

@@ -1,21 +1,21 @@
 ---
-title: RecorderManager.pause
+title: RecorderManager.onInterruptionBegin
 header: develop
 nav: api
-sidebar:  RecorderManager.pause
+sidebar: RecorderManager.onInterruptionBegin
 ---
 
+>基础库 3.120.1 开始支持，低版本需做兼容处理。
 
 
 
-**解释**： 暂停录音
+**解释**： 录音因为受到系统占用而被中断开始事件。以下场景会触发此事件：电话响铃、接听电话。此事件触发后，录音会被暂停。pause 事件在此事件后触发。
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerPause.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" />
 
-
-**方法参数**：无
+**方法参数**：Function callback
 
 **图片示例**：
 
@@ -48,11 +48,15 @@ Page({
             encodeBitRate: 96000,
             format: 'aac'
         };
+        recorderManager.onInterruptionBegin(function(res) {
+            console.log('recorder onInterruptionBegin', res)
+            swan.showModal({
+                title: 'success',
+                content: 'recorder onInterruptionBegin'
+            })
+        });
         recorderManager.start(options);
         this.recorderManager = recorderManager;
-    },
-    RecorderManagerPause() {
-        this.recorderManager.pause()
     }
 });
 ```

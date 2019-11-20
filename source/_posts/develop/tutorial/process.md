@@ -240,7 +240,7 @@ audio: 后台音乐播放
 用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
 
 <notice>示例： </notice>
-<a href="swanide://fragment/394925243b3cd7130d9e3f99d1ae4c4a1568612690028" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1b50c5342babcda03f71d3d559bca6fc1574152614328" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```json
 // app.json
 {
