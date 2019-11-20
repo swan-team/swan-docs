@@ -21,7 +21,7 @@ sidebar: swan-getExtConfigSync
 
 **代码示例**：
 
-<a href="swanide://fragment/c42ce499fd82b9d28c10fb5cd03d25c61574154547470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ce597f3bb6e7ca606ccacb253f1726b41574213264242" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
