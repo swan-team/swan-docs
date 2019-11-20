@@ -15,7 +15,7 @@ sidebar: createanimation_Animation-rotate
 **代码示例**
 
 
-<a href="swanide://fragment/4b970304f04cf159f4a626b099b3f4e21574215665095" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bca91eb49e9480552201776e3b25090b1574215871646" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -26,7 +26,7 @@ sidebar: createanimation_Animation-rotate
     </view>
     <view class="card-area">
         <view class="top-description border-bottom">展示动画</view>
-        <button type="primary" bindtap="rotate">旋转</button>
+        <button type="primary" bindtap="rotate">rotate</button>
     </view>
 </view>
 ```
