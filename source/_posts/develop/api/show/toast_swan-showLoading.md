@@ -7,6 +7,7 @@ sidebar:  toast_swan-showLoading
 
 **解释**：显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。
 
+
 **方法参数**：Object object
 
 **`object`参数说明**：

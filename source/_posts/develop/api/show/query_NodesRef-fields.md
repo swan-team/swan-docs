@@ -18,8 +18,8 @@ sidebar: query_NodesRef-fields
 |rect  | boolean| 否  | |是否返回节点布局位置（left right top bottom） |
 |size  | boolean |否  | |是否返回节点尺寸（width height） |
 |scrollOffset |boolean |  否  | |是否返回节点的 scrollLeft scrollTop ，节点必须是 scroll-view 或者 viewport |
-|properties  | `Array.<string>`| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
-|computedStyle  |`Array.<string>` | []  | |指定样式名列表，返回节点对应样式名的当前值 |
+|properties  | Array.&lt;string&gt;| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
+|computedStyle  |Array.&lt;string&gt; | []  | |指定样式名列表，返回节点对应样式名的当前值 |
 
 **代码示例**：
 

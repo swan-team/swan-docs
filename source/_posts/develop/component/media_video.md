@@ -32,7 +32,7 @@ sidebar: media_video
 |show-progress|	Boolean|	true|否|	若不设置，宽度大于240时才会显示。|
 |show-fullscreen-btn|	Boolean|	true|否|	是否显示全屏按钮|
 |enable-progress-gesture|	Boolean	|true|否|	是否开启使用手势控制进度|
-|danmu-list|	` Array.<object> `|	 	|否|弹幕列表|
+|danmu-list|	Array.&lt;object&gt;|	 	|否|弹幕列表|
 |danmu-btn|	Boolean|	false|否|	是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
 |enable-danmu	|Boolean	|false	|否|是否展示弹幕，只在初始化时有效，不能动态变更。|
 |show-play-btn|	Boolean	|true|否|	是否显示视频底部控制栏的播放按钮|

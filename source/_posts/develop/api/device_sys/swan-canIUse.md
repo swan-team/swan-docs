@@ -25,7 +25,22 @@ sidebar: swan-canIUse
 |${option}  |  组件属性的有效值 |
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/canIUse.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
+
 
 <a href="swanide://fragment/46118bb2080dbb4afe733717c987f6e31569478359497" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

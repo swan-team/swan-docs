@@ -7,6 +7,7 @@ sidebar: tabbar_swan-showTabBar
  
 **解释**：显示 tabBar
 
+
 **方法参数**：Object object
 
 **`object`参数说明**：

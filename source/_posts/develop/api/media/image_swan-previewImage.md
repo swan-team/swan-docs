@@ -20,8 +20,8 @@ sidebar: image_swan-previewImage
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |current |String | 否 || 当前显示图片的链接，不填则默认为 urls 的第一张。|
-|urls   | `Array.<string>` |是 | |  需要预览的图片链接列表|
-|images| `Array.<object>` | 否 | - | 支持原图的图片链接列表 |
+|urls   | Array.&lt;string&gt;|是 | |  需要预览的图片链接列表|
+|images| Array.&lt;object&gt; | 否 | - | 支持原图的图片链接列表 |
 |success| Function |   否  | | 接口调用成功的回调函数|
 |fail  |  Function  |  否 || 接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|

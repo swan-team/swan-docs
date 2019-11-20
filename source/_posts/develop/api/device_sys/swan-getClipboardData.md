@@ -25,7 +25,22 @@ sidebar: swan-getClipboardData
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getClipboardData.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
+
 <a href="swanide://fragment/6fec884cc46de9ec15292cbd1da569701569485595295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 >在 swan/js 文件中代码示例与[swan.setClipboardData](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/)相同。

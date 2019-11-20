@@ -33,8 +33,8 @@ sidebar: image_chooseAlbum
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | `Array.<string>` |选择资源(图片或视频)的本地文件路径列表 。|
-|tempFiles  | ` Array.<object> ` |选择资源(图片或视频)本地文件列表，每一项是一个 File 对象。|
+|tempFilePaths  | Array.&lt;string&gt;  |选择资源(图片或视频)的本地文件路径列表 。|
+|tempFiles  |Array.&lt;object&gt; |选择资源(图片或视频)本地文件列表，每一项是一个 File 对象。|
 
 **tempFiles 对象结构如下:**
 

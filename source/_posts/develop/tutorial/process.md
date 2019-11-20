@@ -13,12 +13,12 @@ sidebar: process
 
 |属性|类型|必填|描述|
 |----|----|----|----|
-|[pages](#pages)|`Array.<string>`|是|设置页面路径|
+|[pages](#pages)|Array.&lt; string&gt; |是|设置页面路径|
 |[window](#window)|Object|否|设置页面展现|
 |[preloadRule](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
 |[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)|` Array.<object> `|否|	分包结构配置|
+|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
@@ -130,6 +130,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 }
 ```
 <br>
+
 ### window
 
 用于设置 SWAN 的状态栏、导航条、标题、窗口背景色。
@@ -143,7 +144,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |backgroundColor|HexColor|#ffffff|背景颜色| |
 |backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，有效值 dark/light| |
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新| |
-|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px| |
+|onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为 px| | |
 
 
 **注意**：

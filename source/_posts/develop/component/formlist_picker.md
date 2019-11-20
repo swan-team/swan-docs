@@ -37,8 +37,8 @@ sidebar: formlist_picker
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | Array &#124; ` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |  |当 range 是一个 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | Array &#124;  Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |  |当 range 是一个 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
@@ -194,8 +194,8 @@ Page({
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
-| range | 二维 Array &#124; ` Array.<object> ` |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
-| range-key | String |  |当 range 是一个二维 ` Array.<object> ` 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| range | 二维 Array &#124; Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range-key | String |  |当 range 是一个二维 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
 | value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
 | bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|

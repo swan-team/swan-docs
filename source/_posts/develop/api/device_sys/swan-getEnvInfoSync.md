@@ -23,6 +23,20 @@ sidebar: swan-getEnvInfoSync
 |scheme |string|  调起协议的协议头   |
 |env |string|  智能小程序的版本（基础库 3.90.12 开始支持）。有效值：development，trial，production 。<br>development 代表开发版本；<br>trial 代表体验版本;<br>production 代表线上版本。  |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getEnvInfoSync.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/82e11bbc8ad46f16d1358e023478af9e1569478295415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

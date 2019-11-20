@@ -34,6 +34,20 @@ sidebar: swan-scanCode
 |scanType| 所扫码的类型 |
 |charSet|所扫码的字符集，仅支持 Andriod 系统。|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/scanCode.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/32f7d4dc285398ab6cce6478554830091569483361410" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

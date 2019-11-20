@@ -19,6 +19,20 @@ sidebar: swan-getExtConfigSync
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getExtConfigSync.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/c42ce499fd82b9d28c10fb5cd03d25c61574154547470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

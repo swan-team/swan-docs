@@ -8,6 +8,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
  
 **解释**：动态设置当前页面导航条的颜色。
 
+
 **方法参数**： Object object
 
 **`object`参数说明**：

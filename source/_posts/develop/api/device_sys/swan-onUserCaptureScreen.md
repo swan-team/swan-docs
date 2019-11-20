@@ -21,6 +21,20 @@ sidebar: swan-onUserCaptureScreen
 
 **`callback`参数说明**：无
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onUserCaptureScreen.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/7698c886c8f28bb55b7b2f0e07c266931569483700129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

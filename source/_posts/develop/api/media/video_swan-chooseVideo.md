@@ -19,7 +19,7 @@ sidebar: video_swan-chooseVideo
 
 |属性名 |类型  |必填 | 默认值 |说明|最低版本|
 |---- | ---- | ---- | ----|----|----|
-|sourceType | `Array.<string>` |否 | ['album', 'camera']|  album 从相册选择视频，camera 使用相机，默认二者都有。|-|
+|sourceType | Array.&lt;string&gt; |否 | ['album', 'camera']|  album 从相册选择视频，camera 使用相机，默认二者都有。|-|
 |compressed  | Boolean | 否  | true| 是否压缩所选的视频源文件，默认值为true，需要压缩。|-|
 |maxDuration  | Number | 否  | 60| 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|-|
 |camera  | String | 否  | 'back'| 默认拉起的是前置或者后置摄像头。部分 Android 手机下由于系统 ROM 不支持无法生效。|3.120.1|
@@ -50,7 +50,7 @@ sidebar: video_swan-chooseVideo
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/chooseVideo.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseVideo1.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

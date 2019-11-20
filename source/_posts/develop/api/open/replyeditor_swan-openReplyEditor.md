@@ -32,7 +32,7 @@ sidebar: replyeditor_swan-openReplyEditor
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
 | status  | String |当前发布器状态  reply: 点击发表按钮；draft: 草稿状态，发布器当前为隐藏状态。|
-| tempFile  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象。|
+| tempFile  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 | content | String | 正文 |
 
 
