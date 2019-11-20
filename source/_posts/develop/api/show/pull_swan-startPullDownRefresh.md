@@ -43,16 +43,19 @@ sidebar: pull_swan-startPullDownRefresh
 * 在 js 文件中
 
 ```js
-
-    swan.startPullDownRefresh({
-        success: res => {
-            console.log('startPullDownRefresh success');
-        },
-        fail: err => {
-            console.log('startPullDownRefresh fail', err);
-        }
-    });
-  
+Page({
+    startPullDownRefresh() {
+        // 若要触发用户手动下拉刷新，在json文件中设置 "enablePullDownRefresh": true
+        swan.startPullDownRefresh({
+            success: res => {
+                console.log('startPullDownRefresh success');
+            },
+            fail: err => {
+                console.log('startPullDownRefresh fail', err);
+            }
+        });
+    }
+});
 ```
 
 
