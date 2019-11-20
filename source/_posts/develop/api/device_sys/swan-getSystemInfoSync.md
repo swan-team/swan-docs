@@ -50,7 +50,7 @@ sidebar: swan-getSystemInfoSync
 
 **代码示例**：
 
-<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6f066eef865faf28a95af5c97553df451574243505661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中

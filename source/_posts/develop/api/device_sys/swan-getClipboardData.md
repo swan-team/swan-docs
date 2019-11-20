@@ -26,9 +26,31 @@ sidebar: swan-getClipboardData
 |data   | String | 剪贴板的内容|
 
 **代码示例**：
-<a href="swanide://fragment/6fec884cc46de9ec15292cbd1da569701569485595295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4c450f850d7cbc51e124ccb8eeb2e9da1574215012467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
->在 swan/js 文件中代码示例与[swan.setClipboardData](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/)相同。
+* 在 js 文件中
+```js
+Page({
+    data: {
+        clipboardData: ''
+    },
+    getClipboardData() {
+        swan.getClipboardData({
+            success: res => {
+                console.log('getClipboardData success');
+                this.setData('clipboardData', res.data);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取剪贴板内容失败',
+                    icon: 'none'
+                });
+                console.log('getClipboardData fail', err);
+            }
+        });
+    }
+});
+```
 
 
 #### 错误码
