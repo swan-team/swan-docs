@@ -8,9 +8,27 @@ sidebar: createanimation_Animation-rotateX
  
 **解释**：从 X 轴顺时针旋转一个角度
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateX.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number deg
 
 **参数说明**：deg的范围-180~180，在X轴旋转一个 deg 角度。
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/rotateX.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**
 

@@ -7,9 +7,28 @@ sidebar: createanimation_Animation-rotate3d
  
 **解释**：从 X 轴顺时针旋转一个角度
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate3d.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x，Number y，Number z，Number deg
 
 **参数说明**：同 transform-function rotate3d。
+
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/rotate3d.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**
 

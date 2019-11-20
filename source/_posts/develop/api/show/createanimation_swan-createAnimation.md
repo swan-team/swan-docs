@@ -8,6 +8,10 @@ sidebar:  createanimation_swan-createAnimation
 
 **解释**：创建一个动画实例 animation
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/createAnimation.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **返回值**：animation
