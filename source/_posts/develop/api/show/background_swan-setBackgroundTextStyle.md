@@ -56,14 +56,7 @@ Page({
         textStyle: 'dark',
     },
     onShow() {
-        swan.startPullDownRefresh({
-            success: function (res) {
-                console.log('startPullDownRefresh success', res);
-            },
-            fail: err => {
-                console.log('startPullDownRefresh fail', err);
-            }
-        });
+        swan.startPullDownRefresh();
     },
     setBackgroundTextStyle(e) {
         console.log('e', e.target.dataset.set);
