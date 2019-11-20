@@ -8,6 +8,10 @@ sidebar: createanimation_Animation-rotate
  
 **解释**：从原点顺时针旋转一个角度
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number deg
 
 **参数说明**：deg的范围-180~180，从原点顺时针旋转一个 deg 角度。

@@ -10,6 +10,10 @@ sidebar:  createanimation_Animation-matrix
  
 **解释**： 同[transform-function matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
 
+**百度APP中扫码体验：**
+
+<img src=" https://b.bdstatic.com/miniapp/assets/images/doc_demo/matrix.png"  class="demo-qrcode-image" />
+
 **方法参数**： Number a，Number b，Number c，Number d 
 
 **代码示例**

@@ -8,6 +8,10 @@ sidebar: createanimation_Animation-skewY
  
 **解释**：对 Y 轴坐标进行倾斜 
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/skewY.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number ay
 
 **参数说明**： 参数范围-180~180；X 轴坐标不变， Y 轴坐标延顺时针倾斜 ay 度。

@@ -8,6 +8,10 @@ sidebar: createanimation_Animation
  
 **解释**：动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/Animation.png"  class="demo-qrcode-image" />
+
 普通样式：
 
 |属性|参数|说明|

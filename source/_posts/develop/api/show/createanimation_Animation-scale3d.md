@@ -7,6 +7,10 @@ sidebar:  createanimation_Animation-scale3d
 
 **解释**： 缩放
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scale3d.png"  class="demo-qrcode-image" />
+
 **方法参数**： Number sx，Number sy，Number sz
 
 **参数说明**： 在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数。

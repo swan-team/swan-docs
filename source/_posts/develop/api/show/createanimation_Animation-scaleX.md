@@ -15,6 +15,10 @@ sidebar: createanimation_Animation-scaleX
 
 **代码示例**
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scaleX.png"  class="demo-qrcode-image" />
+
 
 <a href="swanide://fragment/6007d96630c306b5c22cb6defe0652b41574216405521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

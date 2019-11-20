@@ -9,6 +9,10 @@ sidebar: createanimation_Animation-translateY
  
 **解释**： 对 Y 轴平移
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/translateY.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number  ty  
 
 **参数说明**：在 Y 轴偏移 ty ，单位 px。 
