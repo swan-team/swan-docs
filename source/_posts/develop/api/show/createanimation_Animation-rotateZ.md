@@ -8,6 +8,7 @@ sidebar: createanimation_Animation-rotateZ
  
 **解释**：从 Z 轴顺时针旋转一个角度
 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateZ.png"  class="demo-qrcode-image" />
 
