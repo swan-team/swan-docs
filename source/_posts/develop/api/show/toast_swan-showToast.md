@@ -83,7 +83,7 @@ Page({
         num: 5
     },
     tapHandle(e) {
-        this.toast(e.currentTarget.dataset.title,          e.currentTarget.dataset.icon);
+        this.toast(e.currentTarget.dataset.title, e.currentTarget.dataset.icon);
     },
     toast(title, icon) {
         swan.showToast({

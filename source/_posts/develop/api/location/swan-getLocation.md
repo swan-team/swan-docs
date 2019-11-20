@@ -69,16 +69,20 @@ sidebar: swan-getLocation
 * 在 js 文件中
 
 ```js
-    swan.getLocation({
-        type: 'wgs84',
-        altitude: true,
-        success: res => {
-            console.log('getLocation success', res)
-        },
-        fail: err => {
-            console.log('getLocation fail', res)
-        }
-    });
+Page({
+    getLocation() {
+        swan.getLocation({
+            type: 'wgs84',
+            altitude: true,
+            success: res => {
+                console.log('getLocation success', res)
+            },
+            fail: err => {
+                console.log('getLocation fail', res)
+            }
+        });
+    }
+});
 ```
 #### 错误码
 * Andriod

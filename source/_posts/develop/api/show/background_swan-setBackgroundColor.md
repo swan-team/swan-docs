@@ -45,19 +45,21 @@ sidebar: background_swan-setBackgroundColor
 * 在 js 文件中
 
 ```js
-
-swan.setBackgroundColor({
-    backgroundColor: '#000000',
-    backgroundColorTop: '#222222',
-    backgroundColorBottom: '#333333',
-    success: res => {
-        console.log('setBackgroundColor success');
-    },
-    fail: err => {
-        console.log('setBackgroundColor fail', err);
+Page({
+    setBackgroundColor() {
+        swan.setBackgroundColor({
+            backgroundColor: '#000000',
+            backgroundColorTop: '#222222',
+            backgroundColorBottom: '#333333',
+            success: function () {
+                console.log('setBackgroundColor success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundColor fail', err);
+            }
+        });
     }
 });
-   
 ```
 
 #### 错误码
