@@ -22,13 +22,56 @@ sidebar: canvas_CanvasContext-measureText
 |---- | ---- | ---- |
 | width | Number | 文本的宽度 |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/measureText.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
+<a href="swanide://fragment/15efae9ad9cf32fc8ba7991ca3a877f51574271401532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view>在此输入文本信息</view>
+    <input class="ipt" bindinput="keyInput"></input>
+    <button type="primary" bindtap="measureText">点击获取文本信息的长度</button>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
-const canvasContext = swan.createCanvasContext('myCanvas')
-canvasContext.font = 'italic bold 20px cursive'
-const metrics = canvasContext.measureText('Hello World')
-console.log(metrics.width);
+Page({
+    data: {
+        key: ''
+    },
+    keyInput(e) {
+        this.data.key = e.detail.value;
+    },
+    measureText() {
+        let data = this.data.key;
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.font = 'italic bold 20px cursive'
+        const metrics = canvasContext.measureText(data);
+        console.log(metrics.width);
+        swan.showModal({
+            title: '文本信息长度为',
+            content: JSON.stringify(metrics.width)
+        }); 
+    }
+});
 ```
 #### 错误码
 * Andriod
