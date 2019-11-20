@@ -14,7 +14,7 @@ sidebar:  createanimation_Animation-rotateY
 
 **代码示例**
 
-<a href="swanide://fragment/99d39f936516065c24f28968d64d22b81574214592101" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/029b22bb84ed13c34666162d600f82071574215498426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
