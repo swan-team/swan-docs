@@ -33,19 +33,65 @@ sidebar: query_IntersectionObserver-observe
 |top| number | 上边界|
 |bottom  |number | 下边界|
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/observe.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
+<a href="swanide://fragment/9e13f19179f3ff25f0b2ffbbe17e978e1574307679898" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <scroll-view class="scroll-view" scroll-y>
+        <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+            <text class="notice">向下滚动让小球出现</text>
+            <!-- 占位元素 -->
+            <view class="filling"></view> 
+            <!-- 小球 -->
+            <view class="ball"></view>
+        </view>
+    </scroll-view>  
+    <view class="result-keyword">top: {{data.top}}</view>
+    <view class="result-keyword">right: {{data.right}}</view>
+    <view class="result-keyword">bottom: {{data.bottom}}</view>  
+    <view class="result-keyword">left: {{data.left}}</view>  
+    <view class="result-keyword">width: {{data.width}}</view>    
+    <view class="result-keyword">height: {{data.height}}</view>
+</view>
+```
+
 ```javascript
-swan.createIntersectionObserver(this, {
-    selectAll: true
-})
-.relativeTo('.container')
-.observe('.ball', res => {
-    console.log(res.intersectionRect); // 相交区域
-    console.log(res.intersectionRect.left); // 相交区域的左边界坐标
-    console.log(res.intersectionRect.top); // 相交区域的上边界坐标
-    console.log(res.intersectionRect.width); // 相交区域的宽度
-    console.log(res.intersectionRect.height); // 相交区域的高度
+Page({
+    data: {
+        data: ''
+    },
+    onReady() {
+        swan.createIntersectionObserver(this, {
+            selectAll: true
+        })
+        .relativeTo('.scroll-view')
+        .observe('.ball', res => {
+            this.setData('data', res.intersectionRect);
+            console.log(res.intersectionRect.left); // 相交区域的左边界坐标
+            console.log(res.intersectionRect.top); // 相交区域的上边界坐标
+            console.log(res.intersectionRect.width); // 相交区域的宽度
+            console.log(res.intersectionRect.height); // 相交区域的高度
+        });
+    }
 });
 ```
 

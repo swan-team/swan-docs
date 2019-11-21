@@ -19,3 +19,41 @@ sidebar: query_IntersectionObserver
 |observe|指定目标节点并开始监听相交状态变化情况|
 |disconnect|停止监听。回调函数将不再触发|
 
+**代码示例**：
+
+<a href="swanide://fragment/f60eb7f2ab1b7fd10e352d0f9157d58b1574304539900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<scroll-view class="scroll-view" scroll-y>
+    <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+        <text class="notice">向下滚动让小球出现</text>
+        <!-- 占位元素 -->
+        <view class="filling"></view> 
+        <!-- 小球 -->
+        <view class="ball"></view>
+    </view>
+</scroll-view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver(this);
+        intersectionObserver
+        .relativeTo('.scroll-view')
+        .relativeToViewport({bottom: 100})
+        .observe('.ball', res => {
+            console.log('observe', res)
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```
