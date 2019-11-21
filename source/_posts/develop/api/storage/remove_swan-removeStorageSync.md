@@ -10,6 +10,10 @@ sidebar: remove_swan-removeStorageSync
 
 **解释**：从本地缓存中同步移除指定 key。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_removeStorage.png"  class="demo-qrcode-image" />
+
 **方法参数**：String key
 
 **`key`参数说明**：本地缓存中的指定的 key。
