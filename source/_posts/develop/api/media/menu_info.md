@@ -12,6 +12,10 @@ sidebar: menu_info
 
 **解释**：获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getMenuButtonBoundingClientRect.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回参数说明**：
