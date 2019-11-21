@@ -34,7 +34,7 @@ sidebar: query_swan-createIntersectionObserver
 
 **代码示例**：
 
-<a href="swanide://fragment/e0c8fa5ca4912f94e49c71a6145e37b01574303938703" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -79,10 +79,10 @@ Page({
             // time: 监测到两者相交时的时间戳
             this.setData('appear', res.intersectionRatio > 0);
         });
-        this.IntersectionObserver = IntersectionObserver;
+        this.intersectionObserver = intersectionObserver;
     },
     onUnload() {
-        this.IntersectionObserver && this.IntersectionObserver.disconnect();
+        this.intersectionObserver && this.intersectionObserver.disconnect();
     }
 });
 ```
