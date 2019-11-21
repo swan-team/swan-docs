@@ -11,7 +11,9 @@ sidebar: nacomponent
 
 **解释**：支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">关注小程序引导</a>。
 
+**百度APP中扫码体验：**
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_showFavoriteGuide.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
