@@ -113,7 +113,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/urlTabs.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/tabUrls1.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -125,7 +125,7 @@ Page({
 
 **代码示例 2**：可寻址标签栏组件
 
-<a href="swanide://fragment/e070218e2a0c6aa1e63208e5207711de1572603902121" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/794216313384422b8dbf901aed3240441574300960227" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 
 * 在 swan 文件中
@@ -154,7 +154,16 @@ Page({
         {
             name: 'guangzhou',
             label: '广州'
-        }]
+        }, {
+	    name: 'shenzhen',
+	    label: '深圳'
+	}, {
+	    name: 'xiamen',
+	    label: '厦门'
+	}, {
+	    name: 'haerbin',
+	    label: '哈尔滨'
+	}]
     },
     onLoad(query) {
         if (query.city) {
