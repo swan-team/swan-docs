@@ -8,9 +8,9 @@ sidebar: recorder_tRecorderManager-stop
 
 **解释**： 停止录音
 
-**百度APP中扫码体验：**
+<!-- **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerStop.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerStop.png"  class="demo-qrcode-image" /> -->
 
 
 **方法参数**：无
@@ -32,7 +32,7 @@ sidebar: recorder_tRecorderManager-stop
 
 **代码示例**：
 
-<a href="swanide://fragment/ee2d08e058696342496cd34fcc302dc61573418403441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 

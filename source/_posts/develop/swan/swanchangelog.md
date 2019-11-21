@@ -9,12 +9,14 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.120.6|2019.11.18|**BugFix**<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复android video 结束前自动暂停的问题;<p>**·**修复相机 insert 未结束就调用 update 的问题。|
 |3.120.2|2019.11.11|**BugFix**<p>**·**修复安卓同层textarea auto-height的默认高度问题;<p>**·**修复ios视频播放时圆角不生效的问题。|
 
 ## 3.110 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.110.20|2019.11.18|**BugFix**<p>**·**修复安卓同层textarea auto-height的默认高度问题;<p>**·**修复ios视频播放时圆角不生效的问题;<p>**·**修复 android video 结束前自动暂停的问题;<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复相机insert未结束就调用update的问题。|
 |3.110.15|2019.11.11|**BugFix**<p>**·**修复scroll-view或scroll-veiw父节点绑定catchtouchmove后scoll-veiw不能滚动的问题；<p>**·**修复安卓同层textarea auto-height的默认高度问题；<p>**·**修复ios视频播放时圆角不生效的问题。|
 |3.110.14|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
 |3.110.9|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
@@ -25,6 +27,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.105.25|2019.11.18|**BugFix**<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复android video 结束前自动暂停的问题;<p>**·**修复相机 insert 未结束就调用 update 的问题。|
 |3.105.22|2019.11.11|**BugFix**<p>修复ios视频播放时圆角不生效的问题。|
 |3.105.21|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
 |3.105.19|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
@@ -36,7 +39,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|3.100.18|2019.11.11|**BugFix**<p>修复ios视频播放时圆角不生效的问题。|
+|3.100.21|2019.11.18|**BugFix**<p>修复android video 结束前自动暂停的问题。|
 |3.100.17|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
 |3.100.14|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
 |3.100.13|2019.10.12|**BugFix**<p>**·**修复picker-view设置indicator高度但蒙层不适配问题；<p>**·**修复安卓真机无法获取formId问题。|

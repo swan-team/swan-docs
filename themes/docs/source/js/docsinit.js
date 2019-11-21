@@ -30,7 +30,8 @@
         '/docs/develop/devtools/uplog_tool/': '/docs/develop/devtools/uplog_tool_normal/',
         '/docs/introduction/single/': '/docs/introduction/rank_single/',
         '/docs/develop/function/single/': '/docs/introduction/rank_single/',
-        '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/'
+        '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/',
+        '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);

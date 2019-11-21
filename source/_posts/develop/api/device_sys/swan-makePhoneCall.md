@@ -16,7 +16,6 @@ sidebar: swan-makePhoneCall
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/makePhoneCall.png"  class="demo-qrcode-image" />
 
 
-
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -29,27 +28,41 @@ sidebar: swan-makePhoneCall
 |complete  |  Function |   否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **代码示例**：
+
 <a href="swanide://fragment/9cf5e060c76b0c2d9160335b815d2ccf1569484502200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="card-area">
+    <input bind:input="phoneNumberInput" class="input border-bottom" type="number" placeholder="请输入电话号码"/>
+    <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-makePhoneCall(e) {
-    swan.makePhoneCall({
-        'xxxxx',
-        success: res => {
-            console.log('makePhoneCall success', res);
-        },
-        fail: err => {
-            swan.showModal({
-                title: '拨打失败',
-                content: '请检查是否输入了正确的电话号码',
-                showCancel: false
-            });
-        }
-    });
-}
-
+Page({
+    data: {
+        phoneNumber: '133***222'
+    }
+    makePhoneCall() {
+        swan.makePhoneCall({
+            phoneNumber: this.data.phoneNumber,
+            success: () => {
+                console.log('makePhoneCall success');
+            },
+            fail: err => {
+                swan.showModal({
+                    title: '拨打失败',
+                    content: '请检查是否输入了正确的电话号码',
+                    showCancel: false
+                });
+            }
+        });
+    }
+});
 ``` 
  
 #### 错误码

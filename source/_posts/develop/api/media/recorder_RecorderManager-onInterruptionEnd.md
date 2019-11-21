@@ -1,21 +1,21 @@
 ---
-title: RecorderManager.pause
+title: RecorderManager.onInterruptionEnd
 header: develop
 nav: api
-sidebar:  RecorderManager.pause
+sidebar: RecorderManager.onInterruptionEnd
 ---
 
+>基础库 3.120.1 开始支持，低版本需做兼容处理。
 
 
 
-**解释**： 暂停录音
+**解释**： 录音中断结束事件。在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。
 
 <!-- **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerPause.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> -->
 
-
-**方法参数**：无
+**方法参数**：Function callback
 
 **图片示例**：
 
@@ -48,11 +48,15 @@ Page({
             encodeBitRate: 96000,
             format: 'aac'
         };
+        recorderManager.onInterruptionEnd(function(res) {
+            console.log('recorder onInterruptionEnd', res)
+            swan.showModal({
+                title: 'success',
+                content: 'recorder onInterruptionEnd'
+            })
+        });
         recorderManager.start(options);
         this.recorderManager = recorderManager;
-    },
-    RecorderManagerPause() {
-        this.recorderManager.pause()
     }
 });
 ```

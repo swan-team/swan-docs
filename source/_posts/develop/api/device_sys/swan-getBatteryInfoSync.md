@@ -22,7 +22,7 @@ sidebar: swan-getBatteryInfoSync
 
 **代码示例**：
 
-<a href="swanide://fragment/3d96361544920be300bde9b3e9742fc21569483132498" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3de7a3cb8b3eb224071690c85741db091574233742997" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

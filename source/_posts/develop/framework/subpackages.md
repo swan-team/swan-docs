@@ -104,7 +104,7 @@ subPackages 中，每个分包的配置有以下几项：
 |字段|	类型|	说明|
 |---|---|---|
 |root|	String|	分包根目录|
-|name|	String|	分包别名，<a href="https://smartprogram.baidu.com/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">分包预下载</a>时可以使用。|
+|name|	String|	分包别名。|
 |pages|	StringArray|	分包页面路径，相对于分包根目录。|
 |independent|	Boolean|	分包是否是独立分包|
 

@@ -34,9 +34,23 @@ sidebar: userinfo_swan-getSwanId
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getSwanId.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/c9e65c8a95454a6246328f88f54205d61558336445340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c1dd6988ce7a3e6d91cede5362701c931574144622515" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -44,18 +58,29 @@ sidebar: userinfo_swan-getSwanId
 <view class="wrap">
     <button type="primary" bindtap="getSwanId">getSwanId</button>
 </view>
+<view class="container">
+    <view>获取到的swanId为：</view>
+    <view>{{swanId}}</view>
+</view>
 ```
 
 * 在 js 文件中
 
 ```js
 Page({
+    data: {
+        swanId: ''
+    },
     getSwanId() {
         swan.getSwanId({
             success: res => {
                 console.log('getSwanId success', res);
+                this.setData({
+                    swanId: res.data.swanid
+                })
+                
             },
-            fail: err => {
+            fail: function (err) {
                 console.log('getSwanId fail', err);
             }
         });
@@ -67,6 +92,10 @@ Page({
 ```css
 .wrap {
     padding: 50rpx 30rpx;
+}
+.container {
+    word-break: break-all;
+    line-height: 60rpx;
 }
 ```
  

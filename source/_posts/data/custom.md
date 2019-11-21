@@ -1,5 +1,5 @@
 ---
-title: 自定统计
+title: 自定事件分析
 header: data
 nav: book
 sidebar: custom
