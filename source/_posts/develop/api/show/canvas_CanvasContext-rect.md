@@ -9,6 +9,10 @@ sidebar: canvas_CanvasContext_rect
 
 **解释**：创建一个矩形。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x, Number y, Number width, Number height
 
 **`x`参数说明**：矩形路径左上角的 x 坐标。

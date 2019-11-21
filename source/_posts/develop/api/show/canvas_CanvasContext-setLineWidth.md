@@ -9,6 +9,10 @@ sidebar: canvas_CanvasContext-setLineWidth
 
 **解释**：设置线条的宽度。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number lineWidth
 
 **`lineWidth`参数说明**：线条的宽度(单位是 px)

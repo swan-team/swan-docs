@@ -9,6 +9,10 @@ sidebar: canvas_CanvasContext-lineTo
 
 **解释**：lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x, Number y
 
 **`x`参数说明**：目标位置的 x 坐标

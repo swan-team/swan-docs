@@ -7,6 +7,10 @@ sidebar: canvas_CanvasContext_setGlobalAlpha
  
 **解释**：设置全局画笔透明度。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**： Number alpha
 
 **`alpha` 参数说明**： 透明度取值范围： 0~1 ，0 表示完全透明，1 表示完全不透明。  

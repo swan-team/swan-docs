@@ -14,6 +14,10 @@ sidebar: canvas_CanvasContext.arc
 
 **解释**：画一条弧线。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x, Number y, Number r, Number sAngle, Number eAngle, Boolean counterclockwise
 
 **`x`参数说明**：圆的 x 坐标

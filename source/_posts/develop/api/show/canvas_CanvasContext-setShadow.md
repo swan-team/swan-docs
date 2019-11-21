@@ -11,6 +11,10 @@ sidebar: canvas_CanvasContext-setShadow
 
 **解释**：设置阴影样式。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number offsetX, Number offsetY, Number blur, [Color](/develop/api/canvas_color/) color
 
 **`offsetX`参数说明**：阴影相对于形状在水平方向的偏移。

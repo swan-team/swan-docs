@@ -8,6 +8,10 @@ sidebar: canvas_CanvasContext-setTransform
  
 **解释**：使用矩阵重新设置（覆盖）当前变换的方法。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number scaleX, Number scaleY, Number skewX, Number skewY, Number translateX, Number translateY
 
 **`scaleX`参数说明**： 水平缩放  

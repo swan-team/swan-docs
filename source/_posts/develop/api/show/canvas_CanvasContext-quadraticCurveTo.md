@@ -7,6 +7,10 @@ sidebar:  canvas_CanvasContext-quadraticCurveTo
  
 **解释**：创建二次贝塞尔曲线路径。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number cpx, Number cpy, Number x, Number y
 
 **`cpx`参数说明**：贝塞尔控制点的 x 坐标 

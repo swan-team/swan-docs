@@ -8,6 +8,10 @@ sidebar: canvas_CanvasContext-strokeText
 
 **解释**：给定的 (x, y) 位置绘制文本描边的方法。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String text, Number x, Number y, Number maxWidth
 
 **`text`参数说明**：要绘制的文本

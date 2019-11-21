@@ -9,6 +9,10 @@ sidebar:  canvas_CanvasContext-fillText
 
 **解释**：在画布上绘制被填充的文本。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String text, Number x, Number y, Number maxWidth
 
 **`text`参数说明**： 在画布上输出的文本。
