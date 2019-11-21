@@ -27,7 +27,7 @@
                   -
                     link: /introduction/register_choosebodystyle
                     text: 主体类型选择
-                    name: register_choosebodystyle 
+                    name: register_choosebodystyle
                   -
                     link: /introduction/register_addbodyinfo
                     text: 主体信息填写
@@ -38,9 +38,9 @@
                 name: authenticity
                 sidebar:
                   -
-                    link: /introduction/authenticity 
+                    link: /introduction/authenticity
                     text: 真实性
-                    name: authenticity         
+                    name: authenticity
                   -
                     link: /introduction/authenticity_verification
                     text: 验证
@@ -124,9 +124,9 @@
                 name: accessfeed
                 sidebar:
                   # -
-                  #   link: /introduction/accessfeed 
+                  #   link: /introduction/accessfeed
                   #   text: 接入信息流流量
-                  #   name: accessfeed                 
+                  #   name: accessfeed
                   -
                     link: /introduction/accessfeed_publish
                     text: 小程序发布上线
@@ -171,8 +171,8 @@
                 name: auditing_faq
               -
                 link: /introduction/auditing_road
-                text: 资源下线退场通路 
-                name: auditing_road               
+                text: 资源下线退场通路
+                name: auditing_road
         -
             link: /introduction/intro
             text: 自然搜索结果流量接入
@@ -187,9 +187,9 @@
                 name: rank
                 sidebar:
                   # -
-                  #   link: /introduction/rank 
+                  #   link: /introduction/rank
                   #   text: 自然搜索
-                  #   name: rank 
+                  #   name: rank
                   -
                     link: /introduction/rank_pageinfo
                     text: 设置页面基础信息
@@ -227,21 +227,21 @@
                     text: 小程序API提交
                     name: rank_api
                   -
-                    link: /introduction/rank_robots 
+                    link: /introduction/rank_robots
                     text: robots协议介绍
-                    name: rank_robots 
+                    name: rank_robots
                   -
                     link: /introduction/rank_faq
                     text: 搜索流量接入FAQ
                     name: rank_faq
                   -
                     link: /introduction/rank_road
-                    text: 资源下线退场通路 
-                    name: rank_road    
+                    text: 资源下线退场通路
+                    name: rank_road
               -
                 link: /introduction/OpenCard
                 text: 接入OpenCard
-                name: OpenCard                                   
+                name: OpenCard
         -
             link: /introduction/baijiahao
             text: 百家号流量接入
@@ -307,7 +307,7 @@
                 link: /introduction/contact
                 text: 客服功能接入说明
                 name: contact
-         
+
 
     -
       link: /introduction/scancode
@@ -351,8 +351,8 @@
                 name: productlaboratory_ad
               -
                 link: /introduction/productlaboratory_faq
-                text: 论坛小程序开通FAQ 
-                name: productlaboratory_faq                
+                text: 论坛小程序开通FAQ
+                name: productlaboratory_faq
 
 
 # 2
@@ -530,27 +530,27 @@
                 text: 开发智能小程序
                 name: startdevelop
               -
-               
+
                 text: 全局配置
                 name: process
                 sidebar:
                     -
-                      link: /develop/tutorial/process 
+                      link: /develop/tutorial/process
                       text: 配置 app.json 文件
-                      name: process 
+                      name: process
                     -
                       link: /develop/tutorial/processjs
                       text: 配置 app.js 文件
                       name: processjs
               -
-                
+
                 text: 页面开发
                 name: dev
                 sidebar:
                     -
-                      link: /develop/tutorial/dev 
+                      link: /develop/tutorial/dev
                       text: 开发 .swan 文件
-                      name: dev 
+                      name: dev
                     -
                       link: /develop/tutorial/devcss
                       text: 开发 .css 文件
@@ -564,14 +564,14 @@
                       text: 开发 .json 文件
                       name: devjson
               -
-               
+
                 text: 功能开发
                 name: function
                 sidebar:
                     -
-                      link: /develop/tutorial/function 
+                      link: /develop/tutorial/function
                       text: 页面路由
-                      name: function 
+                      name: function
                     -
                       link: /develop/tutorial/function_page
                       text: Page
@@ -606,13 +606,17 @@
                 name: move
                 sidebar:
                     -
-                      link: /develop/tutorial/move 
+                      link: /develop/tutorial/move
                       text: 搬家工具
-                      name: move 
+                      name: move
                     -
                       link: /develop/tutorial/frameworkdevelop
                       text: 框架开发
                       name: frameworkdevelop
+              -
+                link: /develop/tutorial/testapp
+                text: 测试号
+                name: testapp
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -628,27 +632,27 @@
                 text: 方法说明
                 name: app_service
               -
-                
+
                 text: 注册 App
                 name: app_service_register
                 sidebar:
                   -
-                    link: /develop/framework/app_service_register 
+                    link: /develop/framework/app_service_register
                     text: App
-                    name: app_service_register 
+                    name: app_service_register
                   -
                     link: /develop/framework/app_service_registergetapp
                     text: getApp
                     name: app_service_registergetapp
               -
-                 
+
                 text: 注册页面
                 name: app_service_page
                 sidebar:
                   -
-                    link: /develop/framework/app_service_page 
+                    link: /develop/framework/app_service_page
                     text: 参数说明
-                    name: app_service_page 
+                    name: app_service_page
                   -
                     link: /develop/framework/app_service_pagedata
                     text: 初始化数据
@@ -666,18 +670,18 @@
                     text: 组件事件处理函数
                     name: app_service_pagecomponent
                   -
-                    link: /develop/framework/app_service_page_setData 
+                    link: /develop/framework/app_service_page_setData
                     text: setData 机制
-                    name: app_service_page_setData 
+                    name: app_service_page_setData
               -
-                 
+
                 text: 页面路由
                 name: app_service_route
                 sidebar:
                   -
-                    link: /develop/framework/app_service_route 
+                    link: /develop/framework/app_service_route
                     text: 页面栈
-                    name: app_service_route 
+                    name: app_service_route
                   -
                     link: /develop/framework/app_service_routegetCurrentPages
                     text: getCurrentPages
@@ -696,14 +700,14 @@
                     name: app_service_routemodule
 
               -
-                 
+
                 text: AOP机制
                 name: app_service_aop
                 sidebar:
                   -
-                    link: /develop/framework/app_service_aop 
+                    link: /develop/framework/app_service_aop
                     text: AOP说明
-                    name: app_service_aop 
+                    name: app_service_aop
                   -
                     link: /develop/framework/app_service_aopapp-after
                     text: App.after
@@ -718,7 +722,7 @@
                     name: app_service_aopswan-after
 
         -
-            
+
             text: 视图层
             name: view
             sidebar:
@@ -794,7 +798,7 @@
 
 
         -
-          
+
             text: 自定义组件
             name: custom-component
             sidebar:
@@ -839,7 +843,7 @@
                 text: 第三方自定义组件
                 name: custom-component_trdparty
         -
-            
+
             text: 动态库
             name: dynamiclib_use
             sidebar:
@@ -914,145 +918,145 @@
                 text: 原生组件说明
                 name: native
               -
-                
+
                 text: 视图容器
                 name: view_view
                 sidebar:
                   -
                     link: /develop/component/view_view
                     text: view 视图容器
-                    name: view_view 
+                    name: view_view
                   -
-                    link: /develop/component/view_scroll-view 
+                    link: /develop/component/view_scroll-view
                     text: scroll-view 可滚动视图区域
                     name: view_scroll-view
                   -
-                    link: /develop/component/view_swiper 
+                    link: /develop/component/view_swiper
                     text: swiper 滑块视图容器
-                    name: view_swiper 
+                    name: view_swiper
                   -
-                    link: /develop/component/view_swiper-item 
+                    link: /develop/component/view_swiper-item
                     text: swiper-item 滑块视图容器子项
                     name: view_swiper-item
                   -
-                    link: /develop/component/view_movable-view 
+                    link: /develop/component/view_movable-view
                     text: movable-view 可移动视图容器
-                    name: view_movable-view                     
+                    name: view_movable-view
                   -
                     link: /develop/component/view_movable-area
                     text: movable-area 可移动视图区域
                     name: view_movable-area
 
                   -
-                    link: /develop/component/view_cover-view 
+                    link: /develop/component/view_cover-view
                     text: cover-view 文本视图
-                    name: view_cover-view 
+                    name: view_cover-view
                   -
-                    link: /develop/component/view_cover-image 
+                    link: /develop/component/view_cover-image
                     text: cover-image 图片视图
-                    name: view_cover-image 
+                    name: view_cover-image
         -
             sidebar:
               -
-                 
+
                 text:  基础内容
-                name: base_text 
+                name: base_text
                 sidebar:
                   -
-                    link: /develop/component/base_text 
+                    link: /develop/component/base_text
                     text:  text 文本
-                    name: base_text              
+                    name: base_text
                   -
-                    link: /develop/component/base_icon 
+                    link: /develop/component/base_icon
                     text:  icon 图标
-                    name: base_icon 
+                    name: base_icon
                   -
-                    link: /develop/component/base_progress 
+                    link: /develop/component/base_progress
                     text:  progress 进度条
                     name: base_progress
                   -
-                    link: /develop/component/base_rich-text 
+                    link: /develop/component/base_rich-text
                     text:  rich-text 富文本
                     name: base_rich-text
 
                   -
-                    link: /develop/component/base_animation-view-Lottie 
+                    link: /develop/component/base_animation-view-Lottie
                     text:  animation-view Lottie 动画
-                    name: base_animation-view-Lottie 
+                    name: base_animation-view-Lottie
         -
             sidebar:
               -
-               
+
                 text: 表单组件
-                name: formlist_button 
+                name: formlist_button
                 sidebar:
                   -
-                    link: /develop/component/formlist_button 
+                    link: /develop/component/formlist_button
                     text: button 按钮
-                    name: formlist_button 
+                    name: formlist_button
                   -
-                    link: /develop/component/formlist_form 
+                    link: /develop/component/formlist_form
                     text: form 表单
-                    name: formlist_form 
+                    name: formlist_form
                   -
-                    link: /develop/component/formlist_label 
+                    link: /develop/component/formlist_label
                     text: label 表单组件标签
-                    name: formlist_label 
+                    name: formlist_label
                   -
-                    link: /develop/component/formlist_input 
+                    link: /develop/component/formlist_input
                     text: input 输入框
-                    name: formlist_input 
+                    name: formlist_input
                   -
-                    link: /develop/component/formlist_textarea 
+                    link: /develop/component/formlist_textarea
                     text: textarea 多行输入框
-                    name: formlist_textarea 
+                    name: formlist_textarea
                   -
-                    link: /develop/component/formlist_checkbox 
+                    link: /develop/component/formlist_checkbox
                     text: checkbox 多项选择器
-                    name: formlist_checkbox 
+                    name: formlist_checkbox
                   -
-                    link: /develop/component/formlist_checkbox-group 
+                    link: /develop/component/formlist_checkbox-group
                     text: checkbox-group 多项选择器组
-                    name: formlist_checkbox-group 
+                    name: formlist_checkbox-group
                   -
-                    link: /develop/component/formlist_radio 
+                    link: /develop/component/formlist_radio
                     text: radio 单项选择器
-                    name: formlist_radio 
+                    name: formlist_radio
                   -
-                    link: /develop/component/formlist_radio-group 
+                    link: /develop/component/formlist_radio-group
                     text: radio-group 单项选择器组
-                    name: formlist_radio-group 
+                    name: formlist_radio-group
                   -
-                    link: /develop/component/formlist_switch 
+                    link: /develop/component/formlist_switch
                     text: switch 开关选择器
-                    name: formlist_switch 
+                    name: formlist_switch
                   -
-                    link: /develop/component/formlist_slider 
+                    link: /develop/component/formlist_slider
                     text: slider 滑动选择器
-                    name: formlist_slider 
+                    name: formlist_slider
                   -
-                    link: /develop/component/formlist_picker-view 
+                    link: /develop/component/formlist_picker-view
                     text: picker-view 滚动选择器
-                    name: formlist_picker-view 
+                    name: formlist_picker-view
                   -
-                    link: /develop/component/formlist_picker-view-column 
+                    link: /develop/component/formlist_picker-view-column
                     text: picker-view-column 滚动选择器子项
-                    name: formlist_picker-view-column  
+                    name: formlist_picker-view-column
                   -
-                    link: /develop/component/formlist_picker 
-                    text: picker 底部弹起的滚动选择器 
-                    name: formlist_picker 
+                    link: /develop/component/formlist_picker
+                    text: picker 底部弹起的滚动选择器
+                    name: formlist_picker
         -
             sidebar:
               -
-             
+
                 text: 导航
                 name: nav
                 sidebar:
                   -
-                    link: /develop/component/nav 
+                    link: /develop/component/nav
                     text: navigator 页面导航
-                    name: nav 
+                    name: nav
                   -
                     link: /develop/component/tabs
                     text: tabs 标签栏
@@ -1064,83 +1068,83 @@
         -
             sidebar:
               -
-                  
+
                   text: 媒体组件
                   name: media
                   sidebar:
                     -
-                      link: /develop/component/media_image 
+                      link: /develop/component/media_image
                       text: image 图片
-                      name: media_image                  
+                      name: media_image
                     -
-                      link: /develop/component/media_audio 
+                      link: /develop/component/media_audio
                       text: audio 音频
-                      name: media_audio 
+                      name: media_audio
                     -
-                      link: /develop/component/media_video 
+                      link: /develop/component/media_video
                       text: video 视频
-                      name: media_video 
+                      name: media_video
                     -
-                      link: /develop/component/media_camera 
+                      link: /develop/component/media_camera
                       text: camera 相机
-                      name: media_camera 
+                      name: media_camera
                     -
-                      link: /develop/component/media_ar-camera 
+                      link: /develop/component/media_ar-camera
                       text: ar-camera AR相机
-                      name: media_ar-camera 
+                      name: media_ar-camera
                     -
-                      link: /develop/component/media_live-player 
+                      link: /develop/component/media_live-player
                       text: live-player 实时视频播放器
-                      name: media_live-player 
+                      name: media_live-player
 
         -
             sidebar:
               -
-                 
+
                 text: 地图
                 name: map
                 sidebar:
                   -
-                    link: /develop/component/map 
+                    link: /develop/component/map
                     text: map 地图
-                    name: map 
+                    name: map
         -
             sidebar:
                 -
-                  
+
                   text: 画布
                   name: canvas
                   sidebar:
                     -
-                      link: /develop/component/canvas 
+                      link: /develop/component/canvas
                       text: canvas 画布
-                      name: canvas 
+                      name: canvas
         -
             sidebar:
                 -
-                  
+
                   text: 开放能力
                   name: open
                   sidebar:
                     -
-                      link: /develop/component/open 
+                      link: /develop/component/open
                       text: open-data 开放数据
-                      name: open 
+                      name: open
                     -
-                      link: /develop/component/open_web-view 
+                      link: /develop/component/open_web-view
                       text: web-view 网页容器
-                      name: open_web-view 
+                      name: open_web-view
         -
             sidebar:
                 -
-                  
+
                   text: 广告
                   name: ad
                   sidebar:
                     -
-                      link: /develop/component/ad 
+                      link: /develop/component/ad
                       text: ad 广告
-                      name: ad 
+                      name: ad
 
     -
       link: /develop/api/api
@@ -1154,12 +1158,12 @@
               text: API 列表
               name: apilist
         -
- 
+
             text: 基础
             name: base_app_event
             sidebar:
             -
- 
+
               text: 应用级事件
               name: base_app_event
               sidebar:
@@ -1196,7 +1200,7 @@
                   text: swan.offAppHide
                   name: swan-offAppHide
             -
- 
+
               text: URL Query
               name: url_query
               sidebar:
@@ -1214,7 +1218,7 @@
                   name: swan-setURLQuery
 
         -
- 
+
             text: 网络
             name: net_rule
             sidebar:
@@ -1227,13 +1231,13 @@
               name: net_request
               sidebar:
                 -
-                  link: /develop/api/net/request 
+                  link: /develop/api/net/request
                   text: swan.request
-                  name: request 
+                  name: request
                 -
                   link: /develop/api/net/requestTask
                   text: RequestTask
-                  name: requestTask      
+                  name: requestTask
                   sidebar:
                     -
                       link: /develop/api/net/requestTask-abort
@@ -1250,16 +1254,16 @@
                 -
                   link: /develop/api/net/uploadTask
                   text: UploadTask
-                  name: uploadTask   
+                  name: uploadTask
                   sidebar:
                     -
                       link: /develop/api/net/uploadTask-onProgressUpdate
                       text: UploadTask.onProgressUpdate
-                      name: uploadTask-onProgressUpdate  
+                      name: uploadTask-onProgressUpdate
                     -
                       link: /develop/api/net/uploadTask-abort
                       text: UploadTask.abort
-                      name: uploadTask-abort                   
+                      name: uploadTask-abort
                 -
                   link: /develop/api/net/downloadFile
                   text: swan.downloadFile
@@ -1270,20 +1274,20 @@
                   name: downloadTask
                   sidebar:
                     -
-                      link: /develop/api/net/downloadTask-onProgressUpdate  
+                      link: /develop/api/net/downloadTask-onProgressUpdate
                       text: DownloadTask.onProgressUpdate
-                      name: downloadTask-onProgressUpdate  
+                      name: downloadTask-onProgressUpdate
                     -
-                      link: /develop/api/net/downloadTask-abort    
+                      link: /develop/api/net/downloadTask-abort
                       text: DownloadTask.abort
-                      name: downloadTask-abort    
+                      name: downloadTask-abort
 
-            -             
+            -
               text: WebSocket
               name: net_websocket
               sidebar:
                 -
-                  link: /develop/api/net/websocket 
+                  link: /develop/api/net/websocket
                   text: swan.connectSocket
                   name: websocket
                 -
@@ -1351,7 +1355,7 @@
                 text: 接入说明
                 name: ai
               -
-                 
+
                 text: 文字识别
                 name: ai_ocr
                 sidebar:
@@ -1374,7 +1378,7 @@
 
 
               -
-                
+
                 text: 文本审核
                 name: text
                 sidebar:
@@ -1383,25 +1387,25 @@
                     text: swan.ai.textReview
                     name: text_swan-ai-textReview
               -
-              
+
                 text: 语音合成
                 name: ai_audio
                 sidebar:
                   -
-                    link: /develop/api/ai/audio 
+                    link: /develop/api/ai/audio
                     text: swan.ai.textToAudio
-                    name:  audio 
+                    name:  audio
               -
-                 
+
                 text: 图像审核
                 name:  audit
                 sidebar:
                   -
                     link: /develop/api/ai/audit
                     text: swan.ai.imageAudit
-                    name:  audit 
+                    name:  audit
               -
-           
+
                 text: 图像识别
                 name: ai_classify
                 sidebar:
@@ -1435,7 +1439,7 @@
                     name:  classify_swan-ai-plantClassify
 
               -
-                
+
                 text: 语音识别
                 name: ai_voice
                 sidebar:
@@ -1446,8 +1450,8 @@
                   -
                     link: /develop/api/ai/voice_swan-VoiceRecognizer
                     text: VoiceRecognizer
-                    name:  voice_swan-VoiceRecognizer 
-                    sidebar:  
+                    name:  voice_swan-VoiceRecognizer
+                    sidebar:
                     -
                       link:  /develop/api/ai/voice_VoiceRecognizer-start
                       text:  VoiceRecognizer.start
@@ -1467,17 +1471,17 @@
                     -
                       link:  /develop/api/ai/voice_VoiceRecognizer-onRecognize
                       text:  VoiceRecognizer.onRecognize
-                      name:  voice_VoiceRecognizer-onRecognize                  
+                      name:  voice_VoiceRecognizer-onRecognize
                     -
-                      link:  /develop/api/ai/voice_VoiceRecognizer-onFinish	
-                      text:  VoiceRecognizer.onFinish	
-                      name:  voice_VoiceRecognizer-onFinish	  
+                      link:  /develop/api/ai/voice_VoiceRecognizer-onFinish
+                      text:  VoiceRecognizer.onFinish
+                      name:  voice_VoiceRecognizer-onFinish
                     -
                       link:  /develop/api/ai/voice_VoiceRecognizer-onError
                       text:  VoiceRecognizer.onError
-                      name:  voice_VoiceRecognizer-onError                        
+                      name:  voice_VoiceRecognizer-onError
               -
-                
+
                 text: 人脸识别
                 name: ai_face
                 sidebar:
@@ -1514,21 +1518,21 @@
                   #   text: swan.ai.faceLivenessVerify
                   #   name: ai_face_swan-ai-faceLivenessVerify
               -
-                
+
                 text: 词法分析
                 name: ai_word
                 sidebar:
                   -
-                    link: /develop/api/ai/word 
+                    link: /develop/api/ai/word
                     text: swan.ai.nlpLexerCustom
-                    name: word 
+                    name: word
         -
-            
+
             text: 媒体
             name: media_image
             sidebar:
-            -           
-              text: 图片        
+            -
+              text: 图片
               sidebar:
                 -
                   link: /develop/api/media/image_swan-chooseImage
@@ -1554,7 +1558,7 @@
                   link: /develop/api/media/image_swan-chooseAlbum
                   text: swan.chooseAlbum
                   name:  image_swan-chooseAlbum
-            -              
+            -
               text: 录音管理
               name: media_recorder
               sidebar:
@@ -1598,7 +1602,7 @@
                     -
                       link: /develop/api/media/recorder_RecorderManager-onError
                       text: RecorderManager.onError
-                      name:  recorder_RecorderManager-onError                     
+                      name:  recorder_RecorderManager-onError
                     -
                       link: /develop/api/media/recorder_RecorderManager-onResume
                       text: RecorderManager.onResume
@@ -1611,14 +1615,14 @@
                       link: /develop/api/media/recorder_RecorderManager-onInterruptionEnd
                       text: RecorderManager.onInterruptionEnd
                       name:  recorder_RecorderManager-onInterruptionEnd
-                - 
+                -
                   link: /develop/api/media/recorder_swan-getAvailableAudioSources
                   text: swan.getAvailableAudioSources
                   name: recorder_swan-getAvailableAudioSources
             -
-        
+
               text: 背景音频管理播放
-         
+
               sidebar:
                 -
                   link: /develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager
@@ -1694,9 +1698,9 @@
                       text: BackgroundAudioManager.onPrev
                       name: backgroundaudiomanager_BackgroundAudioManager-onPrev
             -
-            
+
               text: 音频组件控制
-              
+
               sidebar:
                 -
                   link: /develop/api/media/createinneraudiocontext_swan-createInnerAudioContext
@@ -1714,23 +1718,23 @@
                     -
                       link: /develop/api/media/createinneraudiocontext_InnerAudioContext-pause
                       text: InnerAudioContext.pause
-                      name: createinneraudiocontext_InnerAudioContext-pause                   
+                      name: createinneraudiocontext_InnerAudioContext-pause
                     -
                       link: /develop/api/media/createinneraudiocontext_InnerAudioContext-stop
                       text: InnerAudioContext.stop
                       name: createinneraudiocontext_InnerAudioContext-stop
                     -
-                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-seek	
-                      text: InnerAudioContext.seek	
-                      name: createinneraudiocontext_InnerAudioContext-seek	
+                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-seek
+                      text: InnerAudioContext.seek
+                      name: createinneraudiocontext_InnerAudioContext-seek
                     -
-                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-destroy	
-                      text: InnerAudioContext.destroy	
-                      name: createinneraudiocontext_InnerAudioContext-destroy	
+                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-destroy
+                      text: InnerAudioContext.destroy
+                      name: createinneraudiocontext_InnerAudioContext-destroy
                     -
-                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-onCanplay	
-                      text: InnerAudioContext.onCanplay	
-                      name: createinneraudiocontext_InnerAudioContext-onCanplay	
+                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-onCanplay
+                      text: InnerAudioContext.onCanplay
+                      name: createinneraudiocontext_InnerAudioContext-onCanplay
                     -
                       link: /develop/api/media/createinneraudiocontext_InnerAudioContext-onPlay
                       text: InnerAudioContext.onPlay
@@ -1744,7 +1748,7 @@
                       text: InnerAudioContext.onStop
                       name: createinneraudiocontext_InnerAudioContext-onStop
                     -
-                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-onEnded	
+                      link: /develop/api/media/createinneraudiocontext_InnerAudioContext-onEnded
                       text: InnerAudioContext.onEnded
                       name: createinneraudiocontext_InnerAudioContext-onEnded
                     -
@@ -1812,9 +1816,9 @@
                   text: swan.setInnerAudioOption
                   name: createinneraudiocontext_swan-setInnerAudioOption
             -
-             
+
               text: 视频
-             
+
               sidebar:
                 -
                   link: /develop/api/media/video_swan-chooseVideo
@@ -1825,9 +1829,9 @@
                   text: swan.saveVideoToPhotosAlbum
                   name:  video_swan-saveVideoToPhotosAlbum
             -
-           
+
               text: 视频组件控制
-            
+
               sidebar:
                 -
                   link: /develop/api/media/videocontext_swan-createVideoContext
@@ -1878,11 +1882,11 @@
                       link: /develop/api/media/videocontext_VideoContext-playbackRate
                       text: VideoContext.playbackRate
                       name:  videocontext_VideoContext-playbackRate
-                    
+
             -
-            
+
               text: 直播组件控制
-            
+
               sidebar:
                 -
                   link: /develop/api/media/liveplayercontext_swan-createLivePlayerContext
@@ -1922,9 +1926,9 @@
                       text: LivePlayerContext.resume
                       name: liveplayercontext_LivePlayerContext-resume
             -
-              
+
               text: 相机组件控制
-             
+
               sidebar:
                 -
                   link: /develop/api/media/cameracontext_swan-createCameraContext
@@ -1949,9 +1953,9 @@
                       name: cameracontext_CameraContext-stopRecord
 
             -
-            
+
               text: AR 相机组件控制
-           
+
               sidebar:
                 -
                   link: /develop/api/media/arcameracontext_swan-createARCameraContext
@@ -1980,12 +1984,12 @@
                       name: arcameracontext_ARCameraContext-stopRecord
 
         -
-            
+
             text: 文件
             name: file_save
             sidebar:
               -
-                
+
                 text: 保存、获取文件
                 name: file_save
                 sidebar:
@@ -2006,32 +2010,32 @@
                     text: swan.getSavedFileInfo
                     name: save_swan-getSavedFileInfo
               -
-                 
+
                 text: 删除文件
                 name: file_remove
                 sidebar:
                   -
-                    link: /develop/api/file/remove 
+                    link: /develop/api/file/remove
                     text: swan.removeSavedFile
-                    name: remove 
+                    name: remove
               -
-                
+
                 text: 打开新的文件页面
                 name: file_open
                 sidebar:
                   -
-                    link: /develop/api/file/open 
+                    link: /develop/api/file/open
                     text: swan.openDocument
-                    name: open 
+                    name: open
         -
-     
+
             text: 数据存储
-       
+
             sidebar:
               -
-      
+
                 text: 存储数据
-          
+
                 sidebar:
                   -
                     link: /develop/api/storage/save_process
@@ -2062,9 +2066,9 @@
                     text: swan.getStorageInfoSync
                     name: save_swan-getStorageInfoSync
               -
-              
+
                 text: 存储清理
-               
+
                 sidebar:
                   -
                     link: /develop/api/storage/remove_swan-removeStorage
@@ -2083,14 +2087,14 @@
                     text: swan.clearStorageSync
                     name: remove_swan-clearStorageSync
         -
-        
+
             text: 位置
-      
+
             sidebar:
               -
-             
+
                 text: 获取位置
-           
+
                 sidebar:
                   -
                     link: /develop/api/location/swan-getLocation
@@ -2102,18 +2106,18 @@
                     name:  swan-chooseLocation
 
               -
-      
+
                 text: 查看位置
-             
+
                 sidebar:
                   -
                     link: /develop/api/location/swan-openLocation
                     text: swan.openLocation
                     name:  swan-openLocation
               -
-           
+
                 text: 地图组件控制
-            
+
                 sidebar:
                   -
                     link: /develop/api/location/swan-createMapContext
@@ -2154,14 +2158,14 @@
             name: canvas
             sidebar:
               -
- 
+
                 text: 绘图
-            
+
                 sidebar:
                   -
-                    link: /develop/api/show/canvas 
-                    text: canvas 
-                    name:  canvas 
+                    link: /develop/api/show/canvas
+                    text: canvas
+                    name:  canvas
                   -
                     link: /develop/api/show/canvas_swan-createCanvasContext
                     text: swan.createCanvasContext
@@ -2352,9 +2356,9 @@
                         text: CanvasContext.setTransform
                         name: canvas_CanvasContext-setTransform
               -
-               
+
                 text: 交互反馈
-                
+
                 sidebar:
                   -
                     link: /develop/api/show/toast_swan-showToast
@@ -2381,9 +2385,9 @@
                     text: swan.showActionSheet
                     name: toast_swan-showActionSheet
               -
-      
+
                 text: 导航栏
-             
+
                 sidebar:
                   -
                     link: /develop/api/show/navigationbar_swan-setNavigationBarTitle
@@ -2402,9 +2406,9 @@
                     text: swan.setNavigationBarColor
                     name: navigationbar_swan-setNavigationBarColor
               -
-           
+
                 text: 设置tabBar
-             
+
                 sidebar:
                   -
                     link: /develop/api/show/tabbar_swan-setTabBarBadge
@@ -2439,9 +2443,9 @@
                     text: swan.hideTabBar
                     name: tabbar_swan-hideTabBar
               -
- 
+
                 text: 导航
-     
+
                 sidebar:
                   -
                     link: /develop/api/show/tab_swan-navigateTo
@@ -2464,9 +2468,9 @@
                     text: swan.reLaunch
                     name: tab_swan-reLaunch
               -
- 
+
                 text: 动画
-                name: createanimation 
+                name: createanimation
                 sidebar:
                   -
                     link: /develop/api/show/createanimation_swan-createAnimation
@@ -2559,18 +2563,18 @@
                         name: createanimation_Animation-matrix3d
 
               -
-             
+
                 text: 位置
-             
+
                 sidebar:
                   -
                     link: /develop/api/show/pagescrollto_swan-pageScrollTo
                     text: swan.pageScrollTo
                     name:  pagescrollto_swan-pageScrollTo
               -
-             
+
                 text: 背景
-               
+
                 sidebar:
                   -
                     link: /develop/api/show/background_swan-setBackgroundColor
@@ -2581,9 +2585,9 @@
                     text: swan.setBackgroundTextStyle
                     name: background_swan-setBackgroundTextStyle
               -
-    
+
                 text: 下拉刷新
-   
+
                 sidebar:
                   -
                     link: /develop/api/show/pull_onPullDownRefresh
@@ -2598,27 +2602,27 @@
                     text: swan.stopPullDownRefresh
                     name: pull_swan-stopPullDownRefresh
               -
-    
+
                 text: 自定义组件
-           
+
                 sidebar:
                   -
-                    link: /develop/api/show/custom_component 
+                    link: /develop/api/show/custom_component
                     text: swan.nextTick
-                    name: custom_component 
+                    name: custom_component
               -
-              
+
                 text: 菜单
-            
+
                 sidebar:
                   -
-                    link: /develop/api/show/menu_info 
+                    link: /develop/api/show/menu_info
                     text: swan.getMenuButtonBoundingClientRect
-                    name: menu_info 
+                    name: menu_info
               -
-             
+
                 text: 节点信息
-              
+
                 sidebar:
                   -
                     link: /develop/api/show/query_swan-createIntersectionObserver
@@ -2693,14 +2697,14 @@
                         name: query_NodesRef-fields
 
               -
-              
+
                 text:  添加到我的小程序引导
-             
+
                 sidebar:
                   -
-                    link: /develop/api/show/nacomponent 
+                    link: /develop/api/show/nacomponent
                     text: swan.showFavoriteGuide
-                    name: nacomponent 
+                    name: nacomponent
 
         -
 
@@ -2729,18 +2733,18 @@
                     text: swan.canIUse
                     name: swan-canIUse
               -
-           
+
                 text: 内存
-             
+
                 sidebar:
                   -
-                    link: /develop/api/device_sys/onmemory 
+                    link: /develop/api/device_sys/onmemory
                     text: swan.onMemoryWarning
-                    name:  onmemory 
+                    name:  onmemory
               -
-          
+
                 text: 网络状态
-    
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-getNetworkType
@@ -2751,9 +2755,9 @@
                     text: swan.onNetworkStatusChange
                     name: swan-onNetworkStatusChange
               -
-          
+
                 text: 加速度计
-       
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-onAccelerometerChange
@@ -2768,9 +2772,9 @@
                     text: swan.stopAccelerometer
                     name: swan-stopAccelerometer
               -
-           
+
                 text: 罗盘
-              
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-onCompassChange
@@ -2785,9 +2789,9 @@
                     text: swan.stopCompass
                     name: swan-stopCompass
               -
-               
+
                 text: 设备方向
-            
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-onDeviceMotionChange
@@ -2802,9 +2806,9 @@
                     text: swan.stopDeviceMotionListening
                     name: swan-stopDeviceMotionListening
               -
-              
+
                 text: 获取电量信息
-              
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-getBatteryInfo
@@ -2815,18 +2819,18 @@
                     text: swan.getBatteryInfoSync
                     name: swan-getBatteryInfoSync
               -
-             
+
                 text: 扫码
-              
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-scanCode
                     text: swan.scanCode
                     name: swan-scanCode
               -
-            
+
                 text: 屏幕亮度
-               
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-setScreenBrightness
@@ -2841,18 +2845,18 @@
                     text: swan.setKeepScreenOn
                     name: screen_swan-setKeepScreenOn
               -
-          
+
                 text: 用户截屏事件
-              
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-onUserCaptureScreen
                     text: swan.onUserCaptureScreen
                     name: swan-onUserCaptureScreen
               -
-             
+
                 text: 振动
-              
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-vibrateLong
@@ -2863,27 +2867,27 @@
                     text: swan.vibrateShort
                     name: swan-vibrateShort
               -
-               
+
                 text: 手机联系人
-               
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-addPhoneContact
                     text: swan.addPhoneContact
                     name: swan-addPhoneContact
               -
-             
+
                 text: 拨打电话
-             
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-makePhoneCall
                     text: swan.makePhoneCall
                     name: swan-makePhoneCall
               -
-             
+
                 text: 剪贴板
-             
+
                 sidebar:
                   -
                     link: /develop/api/device_sys/swan-setClipboardData
@@ -2895,12 +2899,12 @@
                     name: swan-getClipboardData
 
         -
-            
+
             text: 第三方平台
             name: getextconfig
             sidebar:
               -
-                
+
                 text: 获取第三方平台数据
                 name: getextconfig
                 sidebar:
@@ -2913,20 +2917,20 @@
                     text: swan.getExtConfigSync
                     name:  swan-getExtConfigSync
         -
-     
+
             text: 开放接口
-        
+
             sidebar:
 
               -
-   
+
                 text: 登录
-            
+
                 sidebar:
                   -
-                    link: /develop/api/open/log 
+                    link: /develop/api/open/log
                     text: 授权流程说明
-                    name:  log 
+                    name:  log
                   -
                     link: /develop/api/open/log_swan-login
                     text: swan.login
@@ -2953,9 +2957,9 @@
                     name: log_userdata
 
               -
-          
+
                 text: 授权
-              
+
                 sidebar:
                   -
                     link: /develop/api/open/authorize_list
@@ -2971,14 +2975,14 @@
                     name: authorize_swan-authorize
 
               -
-            
+
                 text: 用户信息
-          
+
                 sidebar:
                   -
-                    link: /develop/api/open/userinfo_swanid 
+                    link: /develop/api/open/userinfo_swanid
                     text: swanid机制说明
-                    name:  userinfo_swanid 
+                    name:  userinfo_swanid
                   -
                     link: /develop/api/open/userinfo_swan-getSwanId
                     text: swan.getSwanId
@@ -2988,14 +2992,14 @@
                     text: swan.getUserInfo
                     name:   userinfo_swan-getUserInfo
                   -
-                    link: /develop/api/open/userinfo_signature 
+                    link: /develop/api/open/userinfo_signature
                     text: signature 计算方法
-                    name:  userinfo_signature 
+                    name:  userinfo_signature
 
               -
-     
+
                 text: 设置
- 
+
                 sidebar:
                   -
                     link: /develop/api/open/setting_swan-openSetting
@@ -3007,9 +3011,9 @@
                     name:  setting_swan-getSetting
 
               -
-            
+
                 text: 分享
-         
+
                 sidebar:
                   -
                     link: /develop/api/open/share_onShareAppMessage
@@ -3029,9 +3033,9 @@
                     name: share_web-view
 
               -
-         
+
                 text: 选择收货地址
-         
+
                 sidebar:
                   -
                     link: /develop/api/open/chooseaddress_swan-chooseAddress
@@ -3039,9 +3043,9 @@
                     name:  chooseaddress_swan-chooseAddress
 
               -
-              
+
                 text: 百度收银台支付
-                
+
                 sidebar:
                   -
                     link: /develop/api/open/payment_swan-requestPolymerPayment
@@ -3049,9 +3053,9 @@
                     name:  payment_swan-requestPolymerPayment
 
               -
-           
+
                 text: 原生全屏内容发布器
-              
+
                 sidebar:
                   -
                     link: /develop/api/open/community_swan-openCommunityEditor
@@ -3062,9 +3066,9 @@
                     text: swan.closeCommunityEditor
                     name: community_swan-closeCommunityEditor
               -
-         
+
                 text: 原生半屏内容发布器
-           
+
                 sidebar:
                   -
                     link: /develop/api/open/replyeditor_swan-openReplyEditor
@@ -3076,18 +3080,18 @@
                     name: replyeditor_swan-closeReplyEditor
 
               -
-             
+
                 text: 获取发票抬头
-               
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-chooseInvoiceTitle
                     text: swan.chooseInvoiceTitle
                     name: swan-chooseInvoiceTitle
               -
-            
+
                 text: 打开小程序
-      
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-navigateToSmartProgram
@@ -3099,9 +3103,9 @@
                     name: swan-navigateBackSmartProgram
 
               -
-            
+
                 text: 页面基础信息
-              
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-setPageInfo
@@ -3121,18 +3125,18 @@
                     name: swan-setDocumentTitle
 
               -
-           
+
                 text: 分包预下载
-             
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-loadSubPackage
                     text: swan.loadSubPackage
                     name:  swan-loadSubPackage
               -
-            
+
                 text: 更新
-         
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-getUpdateManager
@@ -3161,27 +3165,27 @@
                         name: UpdateManager-applyUpdate
 
               -
-          
+
                 text: 调试
-            
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-setEnableDebug
                     text: swan.setEnableDebug
                     name: swan-setEnableDebug
               -
-           
+
                 text: 数据分析
-      
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-reportAnalytics
                     text: swan.reportAnalytics
                     name: swan-reportAnalytics
               -
-          
+
                 text: 定时器
-           
+
                 sidebar:
                   -
                     link: /develop/api/open/timer_clearInterval
@@ -3200,20 +3204,20 @@
                     text: setTimeout
                     name: timer_setTimeout
               -
- 
+
                 text: 风控
-  
+
                 sidebar:
                   -
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
-                    name: swan-getSystemRiskInfo   
+                    name: swan-getSystemRiskInfo
         -
             sidebar:
               -
                 link: /develop/api/errorcode
                 text: 错误码
-                name: errorcode                   
+                name: errorcode
     -
       link: /develop/serverapi
       text: 服务端 API
@@ -3228,7 +3232,7 @@
                 sidebar:
 
                   -
-                    link: /develop/serverapi/open_feed 
+                    link: /develop/serverapi/open_feed
                     text: 信息流物料提交简介
                     name: open_feed_信息流物料提交简介
                   -
@@ -3265,16 +3269,16 @@
                 name: open_infomation
                 sidebar:
                   -
-                    link: /develop/serverapi/open_infomation 
+                    link: /develop/serverapi/open_infomation
                     text: 模板消息介绍
-                    name: open_infomation 
+                    name: open_infomation
                   -
                     link: /develop/serverapi/useintroduction
                     text: 模板消息使用说明
                     name: useintroduction
                   -
                     link: /develop/serverapi/sendintroduction
-                    text: 模板消息下发条件 
+                    text: 模板消息下发条件
                     name: sendintroduction
                   -
                     link: /develop/serverapi/getTemplateLibraryList
@@ -3301,14 +3305,14 @@
                     text: sendTemplateMessage
                     name: sendTemplateMessage
               -
-     
+
                 text: 客服消息
                 name: serverapi
                 sidebar:
                   -
-                    link: /develop/serverapi/contact_api 
+                    link: /develop/serverapi/contact_api
                     text: 消息推送介绍
-                    name: contact_api 
+                    name: contact_api
                   -
                     link: /develop/serverapi/contact_api_page
                     text: 在页面中使用客服消息
@@ -3331,9 +3335,9 @@
                 name: open_risk_power
                 sidebar:
                   -
-                    link: /develop/serverapi/open_risk_power 
+                    link: /develop/serverapi/open_risk_power
                     text: 功能介绍
-                    name: open_risk_power 
+                    name: open_risk_power
                   -
                     link: /develop/serverapi/open_risk_power_detectrisk
                     text: detectrisk
@@ -3350,7 +3354,7 @@
                 text: 版本下载
                 name: history
               -
-                 
+
                 name: page
                 text: 界面
                 sidebar:
@@ -3381,7 +3385,7 @@
         -
             sidebar:
               -
-              
+
                 name: setting
                 text: 设置
                 sidebar:
@@ -3404,26 +3408,26 @@
         -
             sidebar:
               -
-              
+
                 name: editor
                 text: 代码编辑
                 sidebar:
                   -
-                    link: /develop/devtools/editor_file 
-                    text: 文件 
-                    name: editor_file 
+                    link: /develop/devtools/editor_file
+                    text: 文件
+                    name: editor_file
                   -
                     link: /develop/devtools/editor_rpx
                     text: 转换px为rpx
-                    name: editor_rpx           
+                    name: editor_rpx
                   -
                     link: /develop/devtools/editor_git
                     text: Git 状态展示
-                    name: editor_git    
+                    name: editor_git
                   -
                     link: /develop/devtools/editor_debug
                     text: 代码调试
-                    name: editor_debug 
+                    name: editor_debug
                   -
                     link: /develop/devtools/editor_set
                     text: 项目配置文件
@@ -3458,7 +3462,7 @@
                   #   text: 调试器
                   #   name: smartappdebug_function_调试器
               -
-                
+
                 text: 调试工具
                 name: smartappdebug_tool
                 sidebar:
@@ -3530,7 +3534,7 @@
               -
                 link: /develop/devtools/pre_testtool
                 text: 预检测工具
-                name: pre_testtool                
+                name: pre_testtool
               -
                 link: /develop/devtools/audits
                 text: 体验评分
@@ -3554,7 +3558,7 @@
             name: history
             sidebar:
               -
-               
+
                 text: 开发者工具历史更新日志
                 name: uplog_tool
                 sidebar:
@@ -3563,22 +3567,22 @@
                     text: 正式版更新日志
                     name: uplog_tool_normal
                   -
-                    link: /develop/devtools/uplog_tool_rc 
+                    link: /develop/devtools/uplog_tool_rc
                     text: rc版更新日志
-                    name: uplog_tool_rc                  
+                    name: uplog_tool_rc
                   -
-                    link: /develop/devtools/uplog_tool_beta 
+                    link: /develop/devtools/uplog_tool_beta
                     text: Beta版更新日志
-                    name: uplog_tool_beta 
+                    name: uplog_tool_beta
               -
                 link: /develop/devtools/uplog_compile
                 text: 编译工具历史更新日志
                 name: uplog_compile
 
-    - 
+    -
       text: 云开发
       name: cloud
-      sidebar: 
+      sidebar:
         -
           text: 介绍
           name: smartapp_cloud_document
@@ -3597,8 +3601,8 @@
                 sidebar:
                   -
                     text: 云数据库
-                    name: cloud_essentials 
-                    link: /develop/cloud/cloud_essentials 
+                    name: cloud_essentials
+                    link: /develop/cloud/cloud_essentials
                   -
                     text: 云存储
                     name: cloud_essentials_storage
@@ -3614,12 +3618,12 @@
             -
               text: 云开发控制台
               name: console
- 
+
               sidebar:
                 -
                     text: 概览
                     name: console
-                    link: /develop/cloud/console 
+                    link: /develop/cloud/console
                 -
                     text: 云数据库
                     name: console_data
@@ -3638,7 +3642,7 @@
               -
                 text: 开发指南
                 name: guide
- 
+
                 sidebar:
 
                   -
@@ -3647,13 +3651,13 @@
                     link: /develop/cloud/guide/editor
                   -
                     text: 环境
-                    name: guide 
-                    link: /develop/cloud/guide/guide 
+                    name: guide
+                    link: /develop/cloud/guide/guide
                   -
                     text: 云函数开发指南
                     name: guide_function
-                    link: /develop/cloud/guide/guide_function          
-                      
+                    link: /develop/cloud/guide/guide_function
+
                   -
                     text: 数据库开发常见问题
                     name:  guide_databasefaq
@@ -3672,27 +3676,27 @@
             sidebar:
               -
                   text: 初始化
-                  name: cloud_init 
- 
+                  name: cloud_init
+
                   sidebar:
-                    - 
+                    -
                       text: swan.cloud.init
-                      name: cloud_init 
-                      link: /develop/cloud/cloud_init 
+                      name: cloud_init
+                      link: /develop/cloud/cloud_init
               -
                   text: 云函数
                   name: cloud_functions
-      
-                  sidebar: 
+
+                  sidebar:
                     -
                         text: swan.cloud.callFunction
-                        name: cloud_functions 
-                        link: /develop/cloud/cloud_functions 
+                        name: cloud_functions
+                        link: /develop/cloud/cloud_functions
               -
                   text: 存储
                   name: cloud_storage
-                   
-                  sidebar:  
+
+                  sidebar:
                     -
                         text: swan.cloud.uploadFile
                         name: cloud_uploadFile
@@ -3708,7 +3712,7 @@
               -
                   text: 数据库
                   name: cloud_database
-                  
+
                   sidebar:
                     -
                         text: database
@@ -3719,7 +3723,7 @@
                         text: collection
                         name: cloud_database_collection
                         link: /develop/cloud/cloud_database/collection
-                        sidebar: 
+                        sidebar:
                           -
                               text: collection.doc
                               name: cloud_database_collection_doc
@@ -3756,7 +3760,7 @@
                               text: collection.field
                               name: cloud_database_collection_field
                               link: /develop/cloud/cloud_database/collection/#collection-field
-                    
+
                     # doc
                     -
                         text: doc
@@ -3779,7 +3783,7 @@
                               text: doc.remove
                               name: cloud_database_collection_doc_remove
                               link: /develop/cloud/cloud_database/doc/#doc-remove
-                    
+
 
 
                     # db.command
@@ -3875,8 +3879,8 @@
             -
               text: 云数据库
               name: cloud_server_sdk_database
-             
-              sidebar: 
+
+              sidebar:
                 -
                   text: Database
                   name: database
@@ -3907,10 +3911,10 @@
                       name: database_Database.RegExp
                       link: /develop/cloud/server_sdk/database/#Database-RegExp
                 -
-                  text: Collection 
-                  name: collection  
-                  link: /develop/cloud/server_sdk/collection 
-                  sidebar:                              
+                  text: Collection
+                  name: collection
+                  link: /develop/cloud/server_sdk/collection
+                  sidebar:
                     -
                       text: Collection.add
                       name: collection_Collection.add
@@ -3996,7 +4000,7 @@
                 #   name: cloud_server_sdk_database_Document.update
                 #   link: /develop/cloud/server_sdk/database/#Document-update
                 -
-                  text: Document 
+                  text: Document
                   name: document
                   link: /develop/cloud/server_sdk/document
                   sidebar:
@@ -4020,7 +4024,7 @@
               text: 云存储
               name: cloud_server_sdk_storage
               link: /develop/cloud/server_sdk/storage
-              sidebar: 
+              sidebar:
                 -
                   text: cloud.uploadFile
                   name: cloud_server_sdk_storage_cloud.uploadFile
@@ -4041,11 +4045,11 @@
               text: 云函数
               name: cloud_server_sdk_function
               link: /develop/cloud/server_sdk/function
-              sidebar: 
+              sidebar:
                 -
                   text: cloud.callFunction
-                  name: cloud-callFunction 
-                  link: /develop/cloud/server_sdk/cloud-callFunction 
+                  name: cloud-callFunction
+                  link: /develop/cloud/server_sdk/cloud-callFunction
 
     # -
     #       text: 插件
@@ -4130,14 +4134,14 @@
             text: 密钥生成
             name: keygen_v2
           -
- 
+
             text: 百度收银台接口
             name: tune_up
             sidebar:
               -
-                link: /develop/function/tune_up 
+                link: /develop/function/tune_up
                 text: 调起百度收银台
-                name: tune_up 
+                name: tune_up
               -
                 link: /develop/function/tune_up_notice
                 text: 通知支付状态
@@ -4311,7 +4315,7 @@
           -
             link: /data/visualization
             text: 可视化圈选
-            name: visualization      
+            name: visualization
           -
             link: /data/target_user
             text: 指标说明
@@ -4467,7 +4471,7 @@
             name: thirdparty_low
 
 # 6
--        
+-
   link: third/create
   text: 第三方平台
   name: third
@@ -4478,11 +4482,11 @@
       name: book
       sidebar:
         -
-          sidebar:       
+          sidebar:
             -
               link: /third/create
               text: 第三方平台创建指南
-              name: create        
+              name: create
         -
           sidebar:
             -
@@ -4499,7 +4503,7 @@
       link: third/pro
       text: 接口说明
       name: book
-      sidebar:              
+      sidebar:
         -
           sidebar:
             -
