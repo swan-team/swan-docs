@@ -16,6 +16,20 @@ sidebar:  canvas_CanvasContext-fillText
 **`y`参数说明**： 绘制文本的左上角 y 坐标位置。
 **`maxWidth` 参数说明**：| 需要绘制的最大宽度（可选 ）。
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/fillText.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/111d313d772997c85709aaa679ddb9e81573724209338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -21,25 +21,64 @@ sidebar: background_swan-setBackgroundTextStyle
 |fail  |  Function |   否  |   | 接口调用失败的回调函数| 
 |complete   | Function  |  否 |   |  接口调用结束的回调函数（调用成功、失败都会执行）| 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/setBackgroundTextStyle.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1a44f9e8f4e4cf559c3750e2e0ebc1061574253034280" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button data-set="{{textStyle}}" bind:tap="setBackgroundTextStyle" hover-stop-propagation="true" type='primary'>点击切换loading样式为：{{textStyle}}</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-swan.setBackgroundTextStyle({
-    textStyle: 'light',
-    success: res => {
-        console.log('setBackgroundTextStyle success');
+Page({
+    data: {
+        textStyle: 'dark',
     },
-    fail: err => {
-        console.log('setBackgroundTextStyle fail', err);
+    onShow() {
+        swan.startPullDownRefresh();
+    },
+    setBackgroundTextStyle(e) {
+        console.log('e', e.target.dataset.set);
+        let textStyle = e.target.dataset.set;
+        let that = this;
+        swan.setBackgroundTextStyle({
+            textStyle: textStyle,
+            success: function () {
+                console.log('setBackgroundTextStyle success');
+                if(textStyle == 'dark') {
+                    that.setData('textStyle', 'light')
+                }
+                else {
+                    that.setData('textStyle', 'dark')
+                }
+            },
+            fail: err => {
+                console.log('setBackgroundTextStyle fail', err);
+            }
+        });
     }
 });
-  
 ```
 
 

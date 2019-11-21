@@ -22,6 +22,20 @@ sidebar: pull_swan-startPullDownRefresh
 |fail   | Function |   否  | |接口调用失败的回调函数|
 |complete  |  Function  |  否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/PullDownRefresh.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -29,16 +43,19 @@ sidebar: pull_swan-startPullDownRefresh
 * 在 js 文件中
 
 ```js
-
-    swan.startPullDownRefresh({
-        success: res => {
-            console.log('startPullDownRefresh success');
-        },
-        fail: err => {
-            console.log('startPullDownRefresh fail', err);
-        }
-    });
-  
+Page({
+    startPullDownRefresh() {
+        // 若要触发用户手动下拉刷新，在json文件中设置 "enablePullDownRefresh": true
+        swan.startPullDownRefresh({
+            success: res => {
+                console.log('startPullDownRefresh success');
+            },
+            fail: err => {
+                console.log('startPullDownRefresh fail', err);
+            }
+        });
+    }
+});
 ```
 
 
