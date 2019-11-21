@@ -8,7 +8,7 @@ sidebar: swan-setPageInfo
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
  
->建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数。
+>建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数，详情参见下面的代码示例二。
 
 **解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
 
@@ -52,7 +52,7 @@ sidebar: swan-setPageInfo
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
 
-**代码示例**：
+**代码示例一**：
 
 <a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -92,6 +92,68 @@ Page({
             fail: err => {
                 console.log('setPageInfo fail', err);
             }
+        })
+    }
+});
+```
+**代码示例二**：
+
+<a href="swanide://fragment/6fb3c71167041164260b72debb6cac981574348549096" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+**在 js 文件中**
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        this.requestTask = new Promise((resolve, reject) => {
+            const requestHandler = swan.request({
+                url: '开发者服务器地址',
+                header: {
+                    'content-type': 'application/json'
+                },
+                method: 'POST',
+                dataType: 'json',
+                responseType: 'text',
+                data: {
+                    key: 'value'
+                },
+                success: res => {
+                    console.log(res.data);
+                    this.setData('data', res.data);
+                    resolve();
+                },
+                fail: err => {
+                    console.log('错误码：' + err.errCode);
+                    console.log('错误信息：' + err.errMsg);
+                }
+            })
+        });
+    },
+    onShow() {
+        this.requestTask.then( requestData => {
+            let res = this.getData('data');
+            swan.setPageInfo({
+                title: res.title,
+                keywords: res.keywords,
+                description: res.description,
+                articleTitle: res.articleTitle,
+                releaseDate: res.releaseDate,
+                image: res.image,
+                video: res.video,
+                visit: res.visit,
+                likes: '75',
+                comments: '13',
+                collects: '23',
+                shares: '8',
+                followers: '35',
+                success: res => {
+                    console.log('setPageInfo success');
+                },
+                fail: err => {
+                    console.log('setPageInfo fail', err);
+                }
+            })
         })
     }
 });
