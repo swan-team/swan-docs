@@ -34,7 +34,7 @@ sidebar: query_swan-createIntersectionObserver
 
 **代码示例**：
 
-<a href="swanide://fragment/8ab0bafd72cae605089addc3f1bb66601569477488019" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e0c8fa5ca4912f94e49c71a6145e37b01574303938703" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
