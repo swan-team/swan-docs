@@ -9,9 +9,9 @@ sidebar: video_swan-chooseVideo
 
 **解释**： 拍摄视频或从手机相册中选视频，返回视频的临时文件路径。
 
-<!-- **百度APP中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" />  
 
 **方法参数**：Object object
 

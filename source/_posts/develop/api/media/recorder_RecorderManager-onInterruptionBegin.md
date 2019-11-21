@@ -11,9 +11,9 @@ sidebar: RecorderManager.onInterruptionBegin
 
 **解释**： 录音因为受到系统占用而被中断开始事件。以下场景会触发此事件：电话响铃、接听电话。此事件触发后，录音会被暂停。pause 事件在此事件后触发。
 
-<!-- **百度APP中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> 
 
 **方法参数**：Function callback
 

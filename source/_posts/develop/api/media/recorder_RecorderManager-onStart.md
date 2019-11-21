@@ -11,9 +11,9 @@ sidebar: RecorderManager.onStart
 
 **解释**： 录音开始事件
 
-<!-- **百度APP中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnStart.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnStart.png"  class="demo-qrcode-image" /> 
 
 
 **方法参数**：Function callback
