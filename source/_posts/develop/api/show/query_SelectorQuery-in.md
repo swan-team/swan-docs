@@ -12,6 +12,8 @@ sidebar:  query_SelectorQuery-in
 
 **代码示例**：
 
+<a href="swanide://fragment/8c907e5f079c6f311bcb7d7a5d850b671574319866504" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 Component({
     queryMultipleNodes: function(){

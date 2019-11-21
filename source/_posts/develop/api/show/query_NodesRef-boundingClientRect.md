@@ -25,14 +25,31 @@ sidebar: query_NodesRef-boundingClientRect
 |width|Nunber|节点宽度|
 |height|Nunber|节点高度|
 
-
-
 **代码示例**：
+
+<a href="swanide://fragment/999592d947ab22d09bf07463947ba6da1574322257733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <movable-area>
+            <movable-view class="target" x="{{x}}" y="{{y}}" direction="all" bindchange="queryNodeInfo">
+                Drag
+            </movable-view>
+        </movable-area>
+    </view>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
 Page({
-    getRect: function(){
-        swan.createSelectorQuery().select('#the-id').boundingClientRect(function(rect){
+    queryNodeInfo: function(){
+        swan.createSelectorQuery().select('.target').boundingClientRect     (function(rect){
+            console.log(rect);
             rect.id      // 节点的ID
             rect.dataset // 节点的dataset
             rect.left    // 节点的左边界坐标
@@ -58,5 +75,25 @@ Page({
         }).exec()
     }
 });
+```
+* 在 css 文件中
+
+```css
+movable-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100rpx;
+    width: 100rpx;
+    background: #38f;
+    color: #fff;  
+}
+
+movable-area {
+    height: 400rpx;
+    width: 400rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
 ```
 

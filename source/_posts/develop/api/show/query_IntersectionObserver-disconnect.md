@@ -13,3 +13,45 @@ sidebar:  query_IntersectionObserver-disconnect
 **方法参数**：无
 
 
+**代码示例**：
+
+<a href="swanide://fragment/1de191695cff9d7d9160f50a7d4411321574308035061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <scroll-view class="scroll-view" scroll-y>
+        <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+            <text class="notice">向下滚动让小球出现</text>
+            <!-- 占位元素 -->
+            <view class="filling"></view> 
+            <!-- 小球 -->
+            <view class="ball"></view>
+        </view>
+    </scroll-view>  
+    <view class="result-keyword">top: {{data.top}}</view>
+    <view class="result-keyword">right: {{data.right}}</view>
+    <view class="result-keyword">bottom: {{data.bottom}}</view>  
+    <view class="result-keyword">left: {{data.left}}</view>  
+    <view class="result-keyword">width: {{data.width}}</view>    
+    <view class="result-keyword">height: {{data.height}}</view>
+    <button type="primary" bindtap="disconnect">停止监听</button>
+</view>
+```
+
+```javascript
+onReady() {
+        const intersectionObserver = swan.createIntersectionObserver(this);
+        intersectionObserver
+        .relativeTo('.scroll-view')
+        .relativeToViewport({bottom: 100})
+        .observe('.ball', res => {
+            console.log('observe', res)
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    disconnect() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+```
