@@ -20,7 +20,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 | 参数名 | 是否必须 | 说明 |
 | ----- | ------ | --- |
-| code | 是 | 通过上面第一步所获得的Authorization Code |
+| code | 是 | 通过上面第一步所获得的Authorization Code。<br>特殊说明：code中有@符号时，会请求对应的开源宿主，用户身份校验及SessionKey生成过程由开源宿主实现 |
 | client_id | 是 | 智能小程序的App Key |
 | sk | 是 | 智能小程序的App Secret |
 
