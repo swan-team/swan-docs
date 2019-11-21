@@ -42,7 +42,6 @@ sidebar: pagescrollto_swan-pageScrollTo
 * 在 swan 文件中
 
 ```html
-
 <view class="wrap">
     <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
     <button type="primary" bindtap="scrollToTop">返回图片顶部</button>
