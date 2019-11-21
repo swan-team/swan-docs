@@ -74,14 +74,14 @@ swan.getTextLineHeight(opts);
 |-|-|-|
 |res.errMsg|string|错误信息|
 
-**opts.fontStyle 的合法值：**
+**opts.fontStyle 的有效值：**
 
 |属性|描述|
 |-|-|
 |normal|正常|
 |italic|斜体|
 
-**opts.fontWeight 的合法值：**
+**opts.fontWeight 的有效值：**
 
 |属性|描述|
 |-|-|

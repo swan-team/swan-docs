@@ -37,7 +37,7 @@ Page({
 });
 ```
 
-智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data ，进行组合渲染。
+智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data，进行组合渲染。
 
 ## 组件
 
@@ -76,7 +76,7 @@ swan.showToast({
 	title: '我是标题'
 });
 ```
-也有很多挂载在 Page 对象与 SWAN 上的方法，如 createCanvasContext ，在 SWAN 对象与 Page 对象上均有。所以，你可以这样用：
+也有很多挂载在 Page 对象与 SWAN 上的方法，如 createCanvasContext，在 SWAN 对象与 Page 对象上均有。所以，你可以这样用：
 
 ```js
 Page({

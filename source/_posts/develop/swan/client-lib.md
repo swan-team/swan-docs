@@ -9,7 +9,7 @@ sidebar: client-lib
 -----
 
 由于智能小程序使用了客户端提供的端能力，所以每个版本的基础库只能在对应指定的客户端上运行。
-例如使用了高版本端能力的基础库无法在低版本的手机百度上运行，点击查看<a href="https://smartprogram.baidu.com/docs/develop/swan/shine/">与客户端版本映射关系</a>。
+例如使用了高版本端能力的基础库无法在低版本的手机百度上运行，点击查看<a href="https://smartprogram.baidu.com/docs/develop/swan/version/">与客户端版本映射关系</a>。
 
 
 

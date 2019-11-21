@@ -81,11 +81,12 @@ URL Scheme是一种 App 间的调起协议。App 内部注册协议后，当用�
 
 ## 调起功能开发
 
-根据小程序打开场景的不同，我们根据不同场景，封装了两种能力帮助开发者为自己的小程序添加入口，分别为：
+根据小程序打开场景的不同，我们根据不同场景，封装了三种能力帮助开发者为自己的小程序添加入口，分别为：
 * H5 打开小程序
-* 小程序打开小程序 
+* 小程序打开小程序
+* 在web-view中打开小程序 
 
-> 使用这两种能力开发调起功能，只需要配置必需的小程序参数，不需要开发者拼接 scheme。
+> 使用这三种能力开发调起功能，只需要配置必需的小程序参数，不需要开发者拼接 scheme。
 
 ### H5打开小程序
 
@@ -107,11 +108,10 @@ swanInvoke功能：
     <head>
         <meta charset="utf-8">
         <!-- 引入 调起sdk 文件 -->
-        <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swanInvoke.js?v=2019-06-04-13"></script>
+        <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swanInvoke.js"></script>
     </head>
     </html>
     ```
-    >引用以上 js 代码的v参数值的格式必须是2019-06-04-13（精确到小时级别），否则可能出现缓存更新不及时的问题，且尽量使用 server 端时间。
 
 2. 调起方法
 
@@ -145,7 +145,7 @@ swanInvoke功能：
 | failUrl | String | 否 | 默认的调起中间页 | 调起小程序失败后H5跳转页面 |
 | timeout | Number | 否 | 200 | 非百度app内打开H5页面调起小程序，跳转到failUrl的延时 | 
 
-这里的appKey、path、query，对应scheme中的同名参数（scheme参数请参考[URL Scheme](#url-scheme)）。
+这里的appKey、path、query，对应scheme中的同名参数（scheme参数请参考[URL Scheme](#URL-Scheme)）。
 > swanInvoke方法的query可以填写Object类型，不需要拼接成类似“aa=1&bb=2“的字符串形式。具体形式参考代码示例。
 
 4. 调起失败
@@ -160,13 +160,27 @@ swanInvoke功能：
     });
     ```
 
+    > 暂不支持在宿主APP中打开小程序。
+    > 百度APP安卓11.15版本以下，不支持非百度域的H5页面打开小程序。
+    
+
 ### 小程序打开小程序
 
 在小程序中打开另一个小程序可以通过组件或API的方式。
 
-* 组件：在小程序中使用组件打开另一个小程序，请参考[navigator组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/)中target="miniProgram"的使用方法。
+* 组件：在小程序中使用组件打开另一个小程序，请参考[navigator组件](/develop/component/nav/)中target="miniProgram"的使用方法。
 
-* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/)
+* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/)
+
+### 在web-view中打开小程序 
+
+在小程序的web-view中打开另一个小程序，需要在引入jssdk后，调用swan.navigateToSmartProgram接口。
+
+引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view/#相关接口2)
+
+### 如何判断H5页面是否在小程序web-view打开？
+
+H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
 ## 小程序来源统计
 > 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。
@@ -175,7 +189,7 @@ swanInvoke功能：
 
 1. 开发调起功能时，配置对应的调起参数。
 
-2. 在小程序 [App()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/#App/) 生命周期函数的`onLaunch`和`onShow`中取得 Scheme 中小程序的相关参数。
+2. 在小程序 [App()](/develop/framework/app_service_register/) 生命周期函数的`onLaunch`和`onShow`中取得 Scheme 中小程序的相关参数。
 
    ```
    App({

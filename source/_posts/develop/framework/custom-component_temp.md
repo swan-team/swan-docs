@@ -1,15 +1,15 @@
 ---
-title: 组件模版和样式
+title: 组件模板和样式
 header: develop
 nav: framework
 sidebar: custom-component_temp
 ---
 
-**解释**： 类似于页面，自定义组件拥有自己的 swan 模版和 css 样式。
+**解释**： 类似于页面，自定义组件拥有自己的 swan 模板和 css 样式。
 
-### 组件模版
+### 组件模板
 
-组件模版的写法与页面模板相同。组件模版与组件数据结合后生成的节点树，将被插入到组件的引用位置上。
+组件模板的写法与页面模板相同。组件模板与组件数据结合后生成的节点树，将被插入到组件的引用位置上。
 
 在组件模板中可以提供一个 `<slot>` 节点，用于承载组件引用时提供的子节点。
 
@@ -32,9 +32,9 @@ sidebar: custom-component_temp
 </view>
 ```
 
-### 模版数据绑定
+### 模板数据绑定
 
-与普通的 SWAN 模版类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。
+与普通的 SWAN 模板类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。
 
 ```xml
 <view>
@@ -196,7 +196,7 @@ Page({
 
 1. 只可以使用 class 选择器，其他的选择器，请改为 class 选择器实现；
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用；
-3. 继承样式，如 font 、 color ，会从组件外继承到组件内。
+3. 继承样式，如 font 、 color，会从组件外继承到组件内。
 
 ### 外部样式类
 <div class="notice">解释： </div>
@@ -211,7 +211,7 @@ Page({
 ```js
 /* 组件 custom-component.js */
 Component({
-  externalClasses: ['external-class']
+    externalClasses: ['external-class']
 });
 
 ```
@@ -229,7 +229,7 @@ Component({
 ```
 ```css
 .red-text {
-  color: red;
+    color: red;
 }
 ```
 
@@ -244,9 +244,9 @@ Component({
 ```js
 /* 组件 custom-component.js */
 Component({
-  options: {
-    addGlobalClass: true,
-  }
+    options: {
+        addGlobalClass: true,
+    }
 });
 ```
 
@@ -258,11 +258,19 @@ Component({
 ```css
 /* 组件外的样式定义 */
 .global-class {
-  color: red;
+    color: red;
 }
 ```
 
-### 覆盖样式：
+### 覆盖样式：（废弃）
+<font style="color: red">
+
+> 此规范与 BEM 规范相冲突，近期将重新设计此部分内容，请不要使用以下方式覆盖样式，除此之外也不要使用 `swan-tagName` 的方式覆盖样式。
+
+> 如果您已经使用了此方式，请尽快使用其他替代方案进行兼容处理。
+
+</font>
+
 自定义组件会给每个样式前面加上前缀，前缀的类型为:用户定义的自定组件名字 + "__"。
 例如：
 

@@ -17,48 +17,86 @@ sidebar: subpackages
 将智能小程序按照业务特点合理的分包，可以提升智能小程序的加载速度，优化用户体验。
 
 ### 使用方法
+
+[在开发者工具中预览效果](swanide://fragment/46f0c277ccf2f56f2cb8072bb2b50def1573614948336)
+
 假设支持分包的小程序，目录结构如下：
+
 ```
 ├── app.js
 ├── app.json
 ├── app.css
-├── subpackage
+├── packageA
 │   └── pages
-│       ├── subpageone
-│       │   ├── subpageone.swan
-│       │   ├── subpageone.css
-│       │   ├── subpageone.json
-│       │   └── subpageone.js
-│       └── suboagetwo
-│           ├── suboagetwo.swan
-│           ├── suboagetwo.css
-│           ├── suboagetwo.json
-│           └── suboagetwo.js
+│       ├── pageOne
+│       │   
+│       └── pageTwo
+│ 
+├── packageB
+│   └── pages
+│       ├── pageThree
+│       │   
+│       └── pageFour
+│           
 ├── pages
 │   └── index
-        ├── index.swan
-│       ├── index.css
-│       ├── index.json
-│       └── index.js
-└── utils
+│   │   
+│   └── tabOne           
+└
 ```
 开发者通过在 app.json subPackages 字段声明项目分包结构：
 
 ```js
 {
+    // 主包，推荐只保留最常用的核心页面：启动页、tab页及公共资源
     "pages": [
-        "page/index/index"
+        "pages/index/index",
+	"pages/tabOne/tabOne"
     ],
     "subPackages": [
         {
-            "root": "subpackage",
+            "root": "packageA/pages",
+            "name": "packageOne",	
             "pages": [
-                "pages/subpageone/subpageone",
-                "pages/subpagetwo/subpagetwo"
-            ]
+                "pageOne/pageOne",
+                "pageTwo/pageTwo"
+            ],
+            "independent": true
+        },
+        {
+            "root": "packageB/pages",
+            "name": "packageTwo",	
+            "pages": [
+                "pages/pageThree/pageThree",
+                "pages/pageFour/pageFour"
+            ],
+            "independent": true
         }
-    ]
+    ],
+    "tabBar": {
+        "borderStyle": "black",
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },{
+            "pagePath": "pages/tabOne/tabOne",
+            "text": "tabOne"
+        }]
+    }
 }
+```
+
+主包页面跳转分包页面
+
+```html
+<!-- index.swan -->
+<view class="navigate-list">
+    <navigator url="/packageA/pages/pageOne/pageOne" class="navigator">
+        跳 pageOne
+    </navigator>
+</view>
 ```
 
 subPackages 中，每个分包的配置有以下几项：
@@ -66,7 +104,7 @@ subPackages 中，每个分包的配置有以下几项：
 |字段|	类型|	说明|
 |---|---|---|
 |root|	String|	分包根目录|
-|name|	String|	分包别名，<a href="https://smartprogram.baidu.com/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">分包预下载</a>时可以使用。|
+|name|	String|	分包别名。|
 |pages|	StringArray|	分包页面路径，相对于分包根目录。|
 |independent|	Boolean|	分包是否是独立分包|
 
@@ -114,7 +152,7 @@ subPackages 中，每个分包的配置有以下几项：
 └── utils
 ```
 
-开发者通过在`app.json`的`subpackages`字段中对应的分包配置项中定义`independent`字段声明对应分包为独立分包。
+开发者通过在`app.json`的`subPackages`字段中对应的分包配置项中定义`independent`字段声明对应分包为独立分包。
 
 ```json
 {
@@ -122,7 +160,7 @@ subPackages 中，每个分包的配置有以下几项：
 	  "pages/index",
 	  "pages/logs"
    ],
-  "subpackages": [
+  "subPackages": [
     {
       "root": "moduleA",
       "pages": [
@@ -175,8 +213,8 @@ app.global = {};
 - app.js 中
 ```js
 App({
-  data: 123,
-  from: 'swan'
+    data: 123,
+    from: 'swan'
 });
 
 console.log(getApp()); // {global: {}, data: 456, from: 'swan'}
@@ -203,36 +241,37 @@ API调用方式参考：<a href="https://smartprogram.baidu.com/docs/develop/api
 全局配置方法：
 ```json
 {
-  "pages": ["pages/index"],
-  "subpackages": [
-    {
-      "root": "important",
-      "pages": ["index"],
-    },
-    {
-      "root": "sub1",
-      "pages": ["index"],
-    },
-    {
-      "name": "hello",
-      "root": "path/to",
-      "pages": ["index"]
-    },
-    {
-      "root": "sub3",
-      "pages": ["index"]
-    }
-  ],
-  "preloadRule": {
-    "pages/index": {
-      "network": "all",
-      "packages": ["important"]
-    },
-    "sub1/index": {
-      "packages": ["hello", "sub3"]
-    },
-    "sub3/index": {
-      "packages": ["path/to"]
+    "pages": ["pages/index"],
+    "subPackages": [
+        {
+            "root": "important",
+            "pages": ["index"],
+        },
+        {
+            "root": "sub1",
+            "pages": ["index"],
+        },
+        {
+            "name": "hello",
+            "root": "path/to",
+            "pages": ["index"]
+        },
+        {
+            "root": "sub3",
+            "pages": ["index"]
+        }
+    ],
+    "preloadRule": {
+        "pages/index": {
+            "network": "all",
+            "packages": ["important"]
+        },
+        "sub1/index": {
+            "packages": ["hello", "sub3"]
+        },
+        "sub3/index": {
+            "packages": ["path/to"]
+        }
     }
 }
 ```
@@ -241,4 +280,4 @@ preloadRule 中，key 是页面路径，value 是进入此页面的预下载配�
 |字段|类型|必填|默认值|说明|
 |--|--|--|--|--|
 |packages|StringArray|是 |无|进入页面后预下载分包的 root。|
-|network |String|否|wifi |在指定网络下预下载，可选值为：<br/>**all:** 不限网络 <br/>**wifi:** 仅wifi下预下载|
+|network |String|否|wifi |在指定网络下预下载，有效值为：<br/>**all:** 不限网络 <br/>**wifi:** 仅wifi下预下载|

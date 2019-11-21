@@ -14,7 +14,7 @@ fileSystemManager.writeFileSync(filePath, data, encoding)
 |data|string/ArrayBuffer| |是|要写入的文本或二进制数据|
 |encoding|string| |否|指定写入文件的字符编码。如果 `data` 为 `ArrayBuffer`，就不要传入 `encoding`。如果 `data` 为 `string`，`encoding` 默认为 `utf8`|
 
-`encoding` 的合法值：
+`encoding` 的有效值：
 
 |值|描述|
 |-|-|

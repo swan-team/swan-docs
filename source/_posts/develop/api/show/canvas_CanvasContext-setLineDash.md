@@ -1,0 +1,34 @@
+---
+title: CanvasContext.setLineDash
+header: develop
+nav: api
+sidebar: canvas_CanvasContext_setLineDash
+---
+ 
+**解释**：设置线条虚线样式的间距和长度。
+
+**方法参数**：Array pattern, Number offset
+
+**`pattern`参数说明**：一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 
+
+**`offset`参数说明**：虚线偏移量。
+
+**图片示例**：
+
+![图片](../../../../img/api/canvas/setLineDash.png)
+
+**代码示例**：
+
+<a href="swanide://fragment/a0f3e795134820d54777817b4240fdbb1573721214224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setLineDash([10, 20], 5);
+canvasContext.beginPath();
+canvasContext.moveTo(0,100);
+canvasContext.lineTo(400, 100);
+canvasContext.stroke();
+canvasContext.draw();
+```
+
+

@@ -96,7 +96,7 @@ header .m-doc-level1 ul li {
 header .m-doc-level1 ul .m-doc-header-nav-selected {
     background-color: rgba(255, 255, 255, 0.15);
 }
-header .m-doc-forum:hover,
+header .m-doc-item:hover,
 header .m-doc-level1 ul li:hover {
     background: #181818;
 }
@@ -104,7 +104,7 @@ header .m-doc-level1 ul li:hover {
 header .m-doc-level1 ul .m-doc-header-nav-selected a {
     color: #fff;
 }
-header .m-doc-forum a,
+header .m-doc-item a,
 header .m-doc-level1 ul li a {
     font-size: 16px;
     color: #fff;
@@ -118,16 +118,19 @@ header .m-doc-level1 ul li a {
 }
 
 /**社区样式start***/
-header .m-doc-forum {
+header .m-doc-item {
     font-size: 14px;
     position: absolute;
     right: 10px;
-    top: 0px;
-    padding: 0 30px 0 32px;
+    top: 0;
+    padding: 0 20px;
     background: #000;
-    z-index:9;
+    z-index: 9;
 }
-header .m-doc-forum a {
+header .m-doc-service-market {
+    right: 80px;
+}
+header .m-doc-item a {
     font-size: 14px;
     color: #fff;
     cursor: pointer;
@@ -149,15 +152,16 @@ header .m-doc-logo-line {
 /* header 移动端适配 */
 @media only screen and (max-width: 768px) {
     header {
-        padding: 0 40px;
+        padding: 0 20px 0 40px;
         position: fixed;
         top: 0;
         left: 0;
         background: #000;
     }
 
-    .top-search-box {
+    #top-search-box {
         margin-right: 87px;
+        right: 20px;
     }
     .top-search-box-focus {
         width: calc(100% - 80px) !important;
@@ -192,14 +196,15 @@ header .m-doc-logo-line {
         margin-left: 0;
         text-align: center;
     }
-    .m-doc-forum,
+    .m-doc-item,
     .m-doc-level1 {
         display: none;
     }
     .m-mobile-doc-level1 {
         float: right;
         display: block;
-        width: 50px;
+        /* width: 50px; */
+        width: 87px;
         text-align: center;
         position: relative;
     }
@@ -218,37 +223,43 @@ header .m-doc-logo-line {
         color: #000;
         /* background-color: #181818 */
     }
+    .m-mobile-level1-list-show .m-mobile-level1-selected {
+        background-color: #181818;
+    }
     .m-mobile-doc-level1 .m-mobile-level1-selected span,
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
         color: #fff;
-        vertical-align: middle;
+        /* vertical-align: middle; */
         display: inline-block;
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
-        width: 15px;
-        height: 15px;
+        width: 9px;
+        height: 6px;
         margin-left: 6px;
-    }
-    .m-mobile-level1-list-show .m-mobile-level1-selected img{
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
+    }
+    .m-mobile-level1-list-show .m-mobile-level1-selected img{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
     .m-mobile-doc-level1 ul {
         z-index: 10000;
         display: none;
         position: absolute;
-        top: 62px;
-        right: -20px;
-        background: #000;
+        /* top: 62px;
+        right: -20px; */
+        background: #181818;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     }
     .m-mobile-level1-list-show ul {
         display: block;
-        width: 240px;
+        width: 87px;
     }
     .m-mobile-level1-list-show ul li {
         text-align: center;
         display: block;
+        line-height: 44px;
     }
     .m-mobile-level1-list-show ul li:hover {
         background-color: #181818;
@@ -258,6 +269,9 @@ header .m-doc-logo-line {
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected {
         background: #181818;
+    }
+    .m-mobile-level1-list-show ul .m-doc-header-nav-selected a {
+        color:#3388FF !important;
     }
     .m-mobile-doc-level1 ul li a {
         color: #fff;
@@ -308,7 +322,7 @@ header .m-doc-logo-line {
 
 .top-search-box {
     position: absolute;
-    right: 100px;
+    right: 190px;
     top: 0;
     width: 40px;
     height: 60px;

@@ -28,7 +28,7 @@ swan.request(opts)
 |fail|function||否|接口调用失败的回调函数|
 |complete|function||否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-method 合法值：
+method 有效值：
 
 |属性|描述|
 |-|-|
@@ -39,14 +39,14 @@ method 合法值：
 |PUT|HTTP 请求 PUT|
 |DELETE|HTTP 请求 DELETE|
 
-dataType 合法值：
+dataType 有效值：
 
 |属性|描述|
 |-|-|
 |json|返回的数据为 JSON，返回后会对返回的数据进行一次 JSON.parse|
 |其他|不对返回的内容进行 JSON.parse|
 
-responseType 合法值：
+responseType 有效值：
 
 |属性|描述|
 |-|-|

@@ -5,7 +5,10 @@ nav: framework
 sidebar: view_filter
 ---
 
-Filter 是小程序的过滤器，结合 SWAN 模版，可以构建出页面的结构。
+> 推荐使用功能更全的 [SJS功能](https://smartprogram.baidu.com/docs/develop/framework/sjs_start/)。Filter 功能将不再更新，请勿在`s-if`、`s-for`、`template`、自定义组件等标签中使用。
+
+Filter 是小程序的过滤器，结合 SWAN 模板，可以构建出页面的结构。
+
 
 ### 说明：
 * Filter 文件命名方式为:模块名.filter.js;
@@ -80,9 +83,9 @@ Hello world
 ```js
 // index.js
 Page({
-  data: {
-    array: [1, 3, 6, 8, 2, 0]
-  }
+    data: {
+        array: [1, 3, 6, 8, 2, 0]
+    }
 });
 ```
 ```js
@@ -100,7 +103,7 @@ export default {
 };
 ```
 ```xml
-<!-- swan模版 -->
+<!-- swan模板 -->
 <view>{{swan.maxin(array)}}</view>
 <filter src="./index.filter.js" module="swan"></filter>
 
@@ -113,7 +116,7 @@ export default {
 
 ### 注释
 
-Filter 的注释与swan模版文件的注释方式相同。
+Filter 的注释与swan模板文件的注释方式相同。
 
 **示例代码**
 

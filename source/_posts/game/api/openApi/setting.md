@@ -82,7 +82,7 @@ swan.openSetting(opts)
 
 ```js
     swan.openSetting({
-        success: function (res) {
+        success: res => {
             console.log(res.authSetting['scope.userInfo']);
             console.log(res.authSetting['scope.userLocation']);
         }

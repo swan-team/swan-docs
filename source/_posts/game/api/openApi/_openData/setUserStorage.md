@@ -23,7 +23,7 @@ POST https://openapi.baidu.com
 |errno|number|错误码|
 |errmsg|string|错误信息|
 
-**errno 的合法值：**
+**errno 的有效值：**
 
 |值|说明|
 |-|-|

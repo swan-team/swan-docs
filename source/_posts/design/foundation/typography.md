@@ -67,7 +67,7 @@ sidebar: typography
 
 ## 颜色
 建议按使用场景定义文本颜色，常用场景文本颜色建议如下：
-1. 主要信息#000000，次要信息#333333，辅助信息使用#666666，附属信息使用#CCCCCC。
+1. 主要信息#000000，次要信息#333333，辅助信息使用#999999，附属信息使用#CCCCCC。
 
 <div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/7.png"></div>

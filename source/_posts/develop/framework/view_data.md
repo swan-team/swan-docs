@@ -12,7 +12,7 @@ SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
 双向绑定的数据需包裹在`{=  =}`中。
 
 **例如**：
-组件 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
+组件 <a href="/develop/component/view_scroll-view//">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
 * `scroll-top="{= scrollTop =}"`
 * `scroll-left="{= scrollLeft =}"`
 
@@ -64,7 +64,7 @@ Page({
 
 ```xml
 <!-- condition-demo.swan -->
-<view s-if="flag">如果为flag为true，你看不见我</view>
+<view s-if="flag">如果为flag为true，你看得到我。</view>
 ```
 
 ```javascript

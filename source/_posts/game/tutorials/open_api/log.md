@@ -12,7 +12,7 @@ priority: 07-02
 
 ### 授权流程
 
-1. 调用 [`swan.login()`](/game/api/openApi/login/#swan-login) 获取 **临时登录凭证 code** ，并回传到开发者服务器；
+1. 调用 [`swan.login()`](/game/api/openApi/login/#swan-login) 获取 **临时登录凭证 code**，并回传到开发者服务器；
 2. 开发者服务器以 code 换取 **session_key**；
 3. 调用 [`getUserInfo()`](/game/api/openApi/openData/#swan-getUserInfo) 获取用户信息。
 
