@@ -7,6 +7,10 @@ sidebar: canvas_CanvasContext-setTextAlign
  
 **解释**：用于设置文字的对齐。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String align
 
 **`align `参数说明**： 有效值 'left'、'center'、'right'。 

@@ -7,6 +7,10 @@ sidebar: canvas_CanvasContext-translate
  
 **解释**：对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x, Number y
 
 **`x`参数说明**：水平坐标平移量 

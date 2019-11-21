@@ -45,6 +45,21 @@ sidebar: arcameracontext_swan-createARCameraContext
 |200201|录音权限-用户拒绝|
 |200202|录音权限-系统权限拒绝|
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ar-camera.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**
 
 

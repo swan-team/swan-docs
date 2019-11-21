@@ -10,6 +10,10 @@ sidebar:  canvas_CanvasContext-setLineCap
  
 **解释**：设置线条的端点样式。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String lineCap
 
 **`lineCap`参数说明**：有效值：'butt'、'round'、'square', 线条的结束端点样式。

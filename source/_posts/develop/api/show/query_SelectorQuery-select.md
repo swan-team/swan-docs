@@ -22,6 +22,21 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 5、多选择器的并集：#a-node, .some-other-nodes
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/6f82dea6702d58a0de281183f459ff7d1574318084496" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

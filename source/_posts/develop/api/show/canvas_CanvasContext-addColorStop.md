@@ -10,6 +10,10 @@ sidebar: canvas_CanvasContext-addColorStop
 
 **解释**：创建一个颜色的渐变点。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number stop, [Color](/develop/api/canvas_color/) color
 
 **`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。

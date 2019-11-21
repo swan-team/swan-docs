@@ -7,6 +7,10 @@ sidebar: canvas_CanvasContext_setLineDash
  
 **解释**：设置线条虚线样式的间距和长度。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Array pattern, Number offset
 
 **`pattern`参数说明**：一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 

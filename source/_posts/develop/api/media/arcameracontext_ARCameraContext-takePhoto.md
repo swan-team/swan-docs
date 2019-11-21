@@ -32,7 +32,17 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
  
 **代码示例**：
 
-<a href="swanide://fragment/3b604592b50b1a8ac8ddd311037becae1574015629545" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e60cfcd18d6831e0dc63c740b747e3061574330923900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
+    <cover-view class="cameraState" bindtap="switchToPhoto"> 拍摄 </cover-view>
+    <cover-image src="{{photoSrc}}">  </cover-image>
+</ar-camera>
+```
+* 在 js 文件中
 
 ```js
 Page({
