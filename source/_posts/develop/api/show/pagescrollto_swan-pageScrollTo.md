@@ -9,6 +9,10 @@ sidebar: pagescrollto_swan-pageScrollTo
 
 **解释**：将页面滚动到目标位置（可以设置滚动动画时长）。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_PageScrollTo.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
