@@ -7,6 +7,10 @@ sidebar:  tabbar_swan-hideTabBarRedDot
  
 **解释**：隐藏 tabBar 某一项的右上角的红点
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_TabBarRedDot.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

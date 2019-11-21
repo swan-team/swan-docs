@@ -10,8 +10,7 @@ sidebar:  toast_swan-showToast
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/toast.png"  class="demo-qrcode-image" />
-
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_Toast.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
