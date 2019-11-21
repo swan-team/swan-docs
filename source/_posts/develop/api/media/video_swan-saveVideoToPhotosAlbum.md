@@ -10,6 +10,10 @@ sidebar: video_swan-saveVideoToPhotosAlbum
 
 **解释**： 保存视频到系统相册。需要用户授权。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_saveVideoToPhotosAlbum.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
