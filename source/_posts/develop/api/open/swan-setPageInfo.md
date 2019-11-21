@@ -98,7 +98,7 @@ Page({
 ```
 **代码示例二**：
 
-<a href="swanide://fragment/6fb3c71167041164260b72debb6cac981574348549096" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -119,7 +119,6 @@ Page({
                     key: 'value'
                 },
                 success: res => {
-                    console.log(res.data);
                     this.setData('data', res.data);
                     resolve();
                 },
