@@ -11,6 +11,11 @@ sidebar: swan-getBatteryInfoSync
 > 基础库 3.30.2 开始支持，低版本需做兼容处理。
 
 **解释**： 获取当前设备电量同步接口，ios系统不可用。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getBatteryInfoSync.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 **返回值说明**：

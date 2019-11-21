@@ -11,8 +11,12 @@ sidebar: share_swan-shareFile
 
 **解释**：支持调起系统分享面板将文件分享到其他App。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_shareFile.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
+
 **`data` 参数说明**：
 
 |参数名 |类型  |是否必填  |默认值|说明|

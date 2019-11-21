@@ -8,6 +8,10 @@ sidebar: swan-canIUse
 
 **解释**： 判断智能小程序的API，回调，参数，组件等是否在当前版本可用。暂无法校验宿主扩展的API。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_canIuse.png"  class="demo-qrcode-image" />
+
 **方法参数**： String schema
 
 使用 `${API}.${method}.${param}.${options} `或者 `${component}.${attribute}.${option}` 方式来调用。

@@ -11,6 +11,10 @@ sidebar:  onmemory
 
 **解释**：监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_onMemoryWarning.png "  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **`callback`参数说明**：

@@ -9,6 +9,10 @@ sidebar: swan-getEnvInfoSync
 
 **解释**：获取运行环境信息同步接口
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getEnvInfoSync.png "  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 

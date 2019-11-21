@@ -10,6 +10,11 @@ sidebar: community_swan-openCommunityEditor
 > 基础库 3.90.1 版本开始支持。以下版本请使用小程序发布器组件
 
 **解释**： 调起原生全屏内容发布器，并支持开发者配置发布器展示模块。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_closeCommunityEditor.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|

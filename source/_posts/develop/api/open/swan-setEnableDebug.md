@@ -10,6 +10,10 @@ sidebar: swan-setEnableDebug
 
 **解释**：设置是否打开调试开关，此开关对正式版也能生效。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setEnableDebug.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
