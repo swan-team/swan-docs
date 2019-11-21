@@ -76,22 +76,6 @@ Page({
 * 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
 * 不支持预览本地文件。
 
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../../img/api/media/previewImage2.jpg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../../img/api/media/previewImage1.jpg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-
-
 #### 错误码
 
 * Andriod

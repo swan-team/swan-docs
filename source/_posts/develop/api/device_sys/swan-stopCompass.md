@@ -4,11 +4,15 @@ header: develop
 nav: api
 sidebar: swan-stopCompass
 ---
- 
 
- 
+
+
 
 **解释**：停止监听罗盘数据。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getCompass.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 

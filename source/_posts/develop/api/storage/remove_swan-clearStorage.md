@@ -27,7 +27,7 @@ sidebar: remove_swan-clearStorage
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/clearstorage.gif">
+        <img src="https://b.bdstatic.com/miniapp/image/clearStorage.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -44,14 +44,18 @@ sidebar: remove_swan-clearStorage
 * 在 js 文件中
 
 ```js
-swan.clearStorage({
-    success: res => {
-        console.log('clearStorage success');
-    },
-    fail: err => {
-        console.log('clearStorage fail', err);
+Page({
+    clearStorage() {
+        swan.clearStorage({
+            success: res => {
+                console.log('clearStorage success', res);
+            },
+            fail: err => {
+                console.log('clearStorage fail', err);
+            }
+        })
     }
-})
+});
 ```
 #### 错误码
 * Andriod

@@ -5,7 +5,7 @@ nav: api
 sidebar: swan-getExtConfigSync
 ---
 
-  
+
 
 > 基础库 1.10.8 版本开始支持。
 

@@ -99,3 +99,6 @@ swan.openReplyEditor({
 })
 ```
 
+**Bug & Tip**：
+
+- 工具返回的 status 是0，与预期不符，正在修复中

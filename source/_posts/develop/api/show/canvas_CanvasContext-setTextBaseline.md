@@ -14,7 +14,17 @@ sidebar: canvas_canvasContext.setTextBaseline
 
 **图片示例**：
 
-![图片](../../../../img/set-text-baseline.png)
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/setTextBaseline.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
