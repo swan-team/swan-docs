@@ -6,14 +6,14 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.17.2） 
+### 最新正式版本（2.18.1） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
 
-### 最新 rc 版本（2.18.1-rc）
+### 最新 rc 版本（2.18.0-rc）
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
 
