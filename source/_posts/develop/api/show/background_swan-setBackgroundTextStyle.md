@@ -10,6 +10,10 @@ sidebar: background_swan-setBackgroundTextStyle
 
 **解释**：设置窗口下拉背景loading样式。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setBackgroundTextStyle.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
