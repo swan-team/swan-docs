@@ -23,16 +23,43 @@ sidebar: query_NodesRef-fields
 
 **代码示例**：
 
+<a href="swanide://fragment/999592d947ab22d09bf07463947ba6da1574322257733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <movable-area>
+            <movable-view class="target" x="{{x}}" y="{{y}}" direction="all" bindchange="queryNodeInfo">
+                Drag
+            </movable-view>
+        </movable-area>
+        <view>
+            得到的信息：<text class="list-item-key-4">{{data}}</text>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
 ```js
 Page({
-    getFields: function(){
-        swan.createSelectorQuery().select('#the-id').fields({
+    data: {
+        data: ''
+    },
+    queryNodeInfo: function(){
+        let that = this;
+        swan.createSelectorQuery().select('.target').fields({
             dataset: true,
             size: true,
             scrollOffset: true,
             properties: ['scrollX', 'scrollY'],
             computedStyle: ['margin', 'backgroundColor']
         }, function(res){
+            console.log(res)
+            that.setData('data', JSON.stringify(res));
             res.dataset    // 节点的dataset
             res.width      // 节点的宽度
             res.height     // 节点的高度
@@ -46,5 +73,25 @@ Page({
         }).exec()
     }
 });
+```
+* 在 css 文件中
+
+```css
+movable-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100rpx;
+    width: 100rpx;
+    background: #38f;
+    color: #fff;  
+}
+
+movable-area {
+    height: 400rpx;
+    width: 400rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
 ```
 
