@@ -8,6 +8,10 @@ sidebar: canvas_CanvasContext_setLineJoin
 
 **解释**：设置线条的交点样式。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String lineJoin
 
 **`lineJoin`参数说明**：有效值：'bevel'、'round'、'miter'， 线条的结束交点样式。  

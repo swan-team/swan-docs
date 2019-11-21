@@ -8,6 +8,10 @@ sidebar: canvas_CanvasContext-createCircularGradient
 
 **解释**：创建一个圆形的渐变颜色。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x，Number y，Number z
 
 **`x`参数说明**：圆心的 x 坐标

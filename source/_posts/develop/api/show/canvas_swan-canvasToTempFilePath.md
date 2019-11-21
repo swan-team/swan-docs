@@ -28,9 +28,23 @@ sidebar: canvas_swan-canvasToTempFilePath
 |fail	| Function | 否  | |接口调用失败的回调函数 |
 |complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/canvasToTempFilePath.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/4ac77250ce4c4913ad584d3ae6d1f4691573715486339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6558373f7fb39417072963fef3915f841574332412536" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 > 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
 
@@ -69,6 +83,10 @@ Page({
             canvasId: 'myCanvas',
             success: function(res){
                 that.setData("src", res.tempFilePath);
+                swan.showModal({
+                    title: '图片路径',
+                    content: JSON.stringify(res.tempFilePath)
+                })
             }
         })
     }

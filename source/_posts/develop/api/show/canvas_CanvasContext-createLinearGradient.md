@@ -9,6 +9,10 @@ sidebar: canvas_CanvasContext-createLinearGradient
 
 **解释**：创建一个线性的渐变颜色。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number x0，Number y0，Number x1，Number y1
 
 **`x0`参数说明**：起点的 x 坐标

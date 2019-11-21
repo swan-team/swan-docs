@@ -8,6 +8,10 @@ sidebar: canvas_canvasContext.setTextBaseline
  
 **解释**：用于设置文字的水平对齐。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String textBaseline
 
 **`textBaseline`参数说明**：有效值 'top'、'bottom'、'middle'、'normal' 。 

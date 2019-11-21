@@ -9,6 +9,10 @@ sidebar: canvas_CanvasContext-setStrokeStyle
 
 **解释**：设置边框颜色。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**： [Color](/develop/api/canvas_color/) color
 
 **图片示例**：

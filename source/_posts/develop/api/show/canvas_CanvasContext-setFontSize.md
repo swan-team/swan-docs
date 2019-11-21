@@ -7,6 +7,10 @@ sidebar: canvas_CanvasContext_setFontSize
  
 **解释**：设置字体的字号。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number fontSize
 
 `fontSize`参数说明：字体的字号 

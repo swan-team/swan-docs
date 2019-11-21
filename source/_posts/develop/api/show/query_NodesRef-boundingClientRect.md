@@ -25,6 +25,20 @@ sidebar: query_NodesRef-boundingClientRect
 |width|Nunber|节点宽度|
 |height|Nunber|节点高度|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/999592d947ab22d09bf07463947ba6da1574322257733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

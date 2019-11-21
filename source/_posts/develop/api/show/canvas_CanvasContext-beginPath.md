@@ -13,6 +13,10 @@ sidebar: canvas_CanvasContext-beginPath
 
 **解释**：开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 **图片示例**：
