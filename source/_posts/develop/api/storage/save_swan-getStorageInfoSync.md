@@ -11,6 +11,10 @@ sidebar: save_swan-getStorageInfoSync
 
 **解释**：同步获取当前 storage 的相关信息。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getStorageInfo.png" class="demo-qrcode-image" />
+
 <a href="swanide://fragment/b1fe8f153acf20d5ede9343adc3a87e71573633711521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **方法参数**： 无
