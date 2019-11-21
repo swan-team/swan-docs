@@ -11,6 +11,21 @@ sidebar: query_SelectorQuery-exec
 
 **方法参数**：Function callback
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/5bdf7f7297a730cfdc9e25daeb1763971574323496089" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
