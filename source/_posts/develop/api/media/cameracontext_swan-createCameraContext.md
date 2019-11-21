@@ -24,7 +24,7 @@ sidebar: cameracontext_swan-createCameraContext
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createCameraContext.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/createCamera.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
