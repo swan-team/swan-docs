@@ -6,16 +6,23 @@ let readline = require('readline');
 let fs = require('fs');
 
 let fReadName = './source/_data/nav.yml';
+let fWirteName = 'source/sitemap.txt';
 let fRead = fs.createReadStream(fReadName);
 
 let objReadline = readline.createInterface({
     input: fRead
 });
 
+// 如果sitemap已经存在，则删除
+if (fs.existsSync(fWirteName)) {
+    fs.unlinkSync(fWirteName);
+}
+
+// Set去重
 let urlSet = new Set(['/']);
+
 objReadline.on('line', line => {
     let mat = line.match(/^\s+link:(.+)/);
-    // console.log(mat);
     if (mat) {
         let url = mat[1].trim();
         if (url.indexOf('http') === 0) {
@@ -36,6 +43,6 @@ objReadline.on('line', line => {
 
 objReadline.on('close', () => {
     for (let url of urlSet.values()) {
-        fs.appendFileSync('./source/sitemap.txt', 'https://smartprogram.baidu.com/docs' + url + '\n');
+        fs.appendFileSync(fWirteName, 'https://smartprogram.baidu.com/docs' + url + '\n');
     }
 });
