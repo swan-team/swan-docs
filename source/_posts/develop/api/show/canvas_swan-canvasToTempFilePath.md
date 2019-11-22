@@ -42,7 +42,7 @@ sidebar: canvas_swan-canvasToTempFilePath
     </div>     
 </div>
 
-**代码示例**：
+**代码示例一**：
 
 <a href="swanide://fragment/6558373f7fb39417072963fef3915f841574332412536" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -89,6 +89,55 @@ Page({
                 })
             }
         })
+    }
+})
+```
+
+**代码示例二：在draw中使用**：
+
+<a href="swanide://fragment/0052de94836ab84f999612f1ed7437de1574352005128" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+
+
+* 在 swan 文件中
+
+```html
+<canvas canvas-id="myCanvas" />
+<image src="{{src}}"></image>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+     data: {
+        src: ''
+    },
+    onReady: function () {
+        let that = this;
+        const canvasContext = this.createCanvasContext('myCanvas');
+        canvasContext.setFillStyle('#ff0000');
+        canvasContext.arc(100, 50, 50, 0, 2 * Math.PI);
+        canvasContext.fill();
+        canvasContext.draw(function() {
+            swan.canvasToTempFilePath({
+                x: 0,
+                y: 0,
+                width: 300,
+                height: 225,
+                destWidth: 300,
+                destHeight: 225,
+                canvasId: 'myCanvas',
+                success: function(res){
+                    that.setData("src", res.tempFilePath);
+                    swan.showModal({
+                        title: '图片路径',
+                        content: JSON.stringify(res.tempFilePath)
+                    })
+                }
+            })
+        });
     }
 })
 ```

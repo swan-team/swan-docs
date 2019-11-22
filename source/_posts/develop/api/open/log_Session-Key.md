@@ -21,8 +21,8 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 | 参数名 | 是否必须 | 说明 |
 | ----- | ------ | --- |
 | code | 是 | 通过上面第一步所获得的Authorization Code |
-| client_id | 是 | 智能小程序的App Key |
-| sk | 是 | 智能小程序的App Secret |
+| client_id | 是 | 智能小程序的AppKey |
+| sk | 是 | 智能小程序的AppSecret |
 
 若参数无误，服务器将返回一段JSON文本，包含以下数据：
 
@@ -38,8 +38,59 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 | error | 错误码；关于错误码的详细信息请参考<a href=" http://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
-**请求示例**：
+**代码示例**：
 
+<a href="swanide://fragment/f1096993ea3d3a1546a191ff592078621574403620854" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+```js
+Page({
+    data: {
+        sessionKey: ''
+    },
+    getSessionKey() {
+        swan.login({
+            success: res => {
+                swan.request({
+                    url: 'https://spapi.baidu.com/oauth/jscode2sessionkey',
+                    method: 'POST',
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: {
+                        // swan.login()返回的 code
+                        code: res.code,
+                        client_id: 'WPGsbTTGEQ2VRnNcEIjyo5nT1wGxc3PZ',
+                        sk: 'zkDSFBfXvHtmtMAsNrQ8sFN9DNLFNZE4'
+                    },
+                    success: res => {
+                        if (res.statusCode === 200) {
+                            this.setData({
+                                sessionKey: res.data.session_key || ''
+                            });
+                        }
+                        
+                    }
+                });
+            }
+        });
+    }
+});
+```
+
+* 在 swan 文件中
+
+```html
+<view class="intro">
+    <button type="primary" bind:tap="getSessionKey">获取 session key</button>
+</view>
+<view class="container" s-if="{{sessionKey}}">
+    <view>session key 值为：</view>
+    {{sessionKey}}
+</view>
+```
+
+* res.data 的值为
 ```
 # curl -d "code=xxx&client_id=xxx&sk=xxx" 
 https://spapi.baidu.com/oauth/jscode2sessionkey
