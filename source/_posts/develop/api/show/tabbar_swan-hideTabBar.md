@@ -7,6 +7,10 @@ sidebar: show_tabbar_swan-hideTabBar
  
 **解释**：隐藏 tabBar
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_TabBar.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
