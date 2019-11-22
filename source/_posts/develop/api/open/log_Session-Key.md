@@ -38,6 +38,20 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 | error | 错误码；关于错误码的详细信息请参考<a href=" http://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/SessionKey.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/f1096993ea3d3a1546a191ff592078621574403620854" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
