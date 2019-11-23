@@ -11,6 +11,10 @@ sidebar: image_swan-compressImage
 
 **解释**：压缩图片接口，可选压缩质量
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_compressImage.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
