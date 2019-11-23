@@ -25,7 +25,7 @@ sidebar: query_SelectorQuery
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
+        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
