@@ -59,7 +59,19 @@ sidebar: replyeditor_swan-openReplyEditor
 
 ![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
+**图片示例**：
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/openReplyEditor1.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

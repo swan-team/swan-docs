@@ -10,6 +10,11 @@ sidebar: setting_swan-getSetting
 
 **解释**： 获取用户的当前设置
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openSetting.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：

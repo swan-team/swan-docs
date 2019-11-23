@@ -8,6 +8,10 @@ sidebar: timer_clearTimeout
 
 **解释**：取消由 setTimeout 设置的定时器。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number timeoutID
 
 **`timeoutID`参数说明**：要取消的定时器的 ID。
