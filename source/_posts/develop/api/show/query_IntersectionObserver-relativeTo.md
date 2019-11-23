@@ -12,6 +12,10 @@ sidebar: query_IntersectionObserver-relativeTo
 
 **解释**：使用选择器指定一个节点，作为参照区域之一。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_relativeTo.png" class="demo-qrcode-image" />
+
 **方法参数**：String selector, Object object
 
 **`selector`参数说明:**选择器

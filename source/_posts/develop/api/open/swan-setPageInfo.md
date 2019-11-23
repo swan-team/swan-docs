@@ -51,6 +51,19 @@ sidebar: swan-setPageInfo
 |uv |String|否| 页面的点击量（去重用户）|
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/setPageInfo1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例一**：
 
@@ -130,7 +143,7 @@ Page({
         });
     },
     onShow() {
-        this.requestTask.then( requestData => {
+        this.requestTask.then(requestData => {
             let res = this.getData('data');
             swan.setPageInfo({
                 title: res.title,

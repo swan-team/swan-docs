@@ -9,6 +9,11 @@ sidebar: canvas_swan-canvasToTempFilePath
 
 **解释**：把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。在自定义组件下，第二个参数传入组件实例`this`，以操作组件内`<canvas/>`组件。
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_canvasToTempFilePath.png" class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

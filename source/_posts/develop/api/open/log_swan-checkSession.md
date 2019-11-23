@@ -23,6 +23,20 @@ sidebar: log_swan-checkSession
 |fail  |  Function |   否 |  |  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|
 |complete |   Function |   否  |   |接口调用结束的回调函数（调用成功、失败都会执行）|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/checkSession.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **示例一**：在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
 
 <a href="swanide://fragment/2a052b4283fb1e23d02a69dae170f1331572274389729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

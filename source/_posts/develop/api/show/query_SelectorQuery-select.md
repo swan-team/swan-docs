@@ -9,6 +9,10 @@ sidebar: query_SelectorQuery-select
 
 **解释**： 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_select.png" class="demo-qrcode-image" />
+
 **方法参数**：String selector
 
 **返回值**：nodesRef
@@ -27,7 +31,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/selectorQuerySelect.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -39,7 +43,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 **代码示例**：
 
-<a href="swanide://fragment/6f82dea6702d58a0de281183f459ff7d1574318084496" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/28e00386b1bc7a310edf31e8ce4539dc1574490838253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -51,9 +55,9 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
                 Drag
             </movable-view>
         </movable-area>
-        <view s-for="item in metrics" class="list-area border-bottom">
-            <text class="list-item-key-4">{{item.key}}</text>
-            <text class="list-item-value">{{item.val}}</text>
+        <view class="list-area border-bottom">
+            <text>Drag的节点信息高度为：</text>
+            <text class="list-item-value-6"> {{message}}</text>
         </view>
     </view>
 </view>
@@ -63,7 +67,9 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 ```js
 Page({
-    data: { },
+    data: { 
+        message: ''
+    },
     onReady() {
         const selectorQuery = swan.createSelectorQuery();
         this.selectorQuery = selectorQuery;
@@ -73,6 +79,7 @@ Page({
         this.selectorQuery.select('.target').boundingClientRect();
         this.selectorQuery.exec(res => {
             console.log(res[0].top)
+            this.setData('message', res[0].top);
         });
     }
 });

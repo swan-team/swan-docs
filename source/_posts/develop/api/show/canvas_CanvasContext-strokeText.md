@@ -22,9 +22,41 @@ sidebar: canvas_CanvasContext-strokeText
 
 **`maxWidth`参数说明**：需要绘制的最大宽度，可选。
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/strokeText.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
+<a href="swanide://fragment/198f840b68c30fd3160e8a3bd11457df1574503509981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<canvas canvas-id="myCanvas" class="myCanvas"/>
+```
+
+* 在 js 文件中
+
 ```js
-canvasContext.strokeText(text, x, y, maxWidth);
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.setFontSize(50);
+        canvasContext.fillText('50', 90, 90);
+        canvasContext.strokeText('默认字样', 50, 50, 90);
+        canvasContext.draw();
+    }
+});
 ```
 
