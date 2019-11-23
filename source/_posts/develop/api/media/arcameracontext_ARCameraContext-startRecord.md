@@ -40,7 +40,7 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
 
 **代码示例**：
 
-<a href="swanide://fragment/c65bf6b8d21e92d6cbddb53e8c609d151574017249241" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3f6fad0d4e6c3b41fb26e037f51dc3d31574495010676" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -60,6 +60,7 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
 </ar-camera>
 
 ```
+* 在 js 文件中
 
 ```js
 Page({
