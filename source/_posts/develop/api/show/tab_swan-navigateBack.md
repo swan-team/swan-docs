@@ -10,7 +10,7 @@ sidebar: tab_swan-navigateBack
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object
