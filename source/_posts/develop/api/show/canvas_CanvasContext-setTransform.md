@@ -26,8 +26,18 @@ sidebar: canvas_CanvasContext-setTransform
 
 **`translateY`参数说明**：垂直移动  
 
+
 **代码示例**：
 
+<a href="swanide://fragment/11ac99eb65cf52ec79272ab2fce3321b1574506209743" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-canvasContext.setTransform(scaleX, skewX, skewY, scaleY, translateX, translateY);
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.strokeRect(50, 50, 150, 100);
+        canvasContext.setTransform(20, 30, 40, 20, 60, 20);
+        canvasContext.draw();
+    }
+});
 ```

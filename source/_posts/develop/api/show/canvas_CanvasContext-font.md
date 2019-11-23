@@ -28,7 +28,18 @@ sidebar: canvas_CanvasContext_font
 
 **代码示例**：
 
+<a href="swanide://fragment/111d313d772997c85709aaa679ddb9e81573724209338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
-canvasContext.font = value;
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.setFontSize(50);
+        canvasContext.fillText('50', 90, 90);
+        canvasContext.font = "40px oblique normal";
+        canvasContext.draw();
+    }
+});
 ```
+
 
