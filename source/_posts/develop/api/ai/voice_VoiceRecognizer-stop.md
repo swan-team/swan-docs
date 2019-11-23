@@ -13,8 +13,22 @@ sidebar: voice_VoiceRecognizer_stop
 
 **方法参数**：无
 
- **代码示例**
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerStop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+ **代码示例**
 
 <a href="swanide://fragment/7e4fe85cd2c742caf6eb5a17ef826e421573743143847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

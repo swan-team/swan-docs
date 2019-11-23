@@ -19,8 +19,21 @@ sidebar: voice_VoiceRecognizer_onFinish
 |---- | ---- | ---- |
 |result |String | 小程序语音识别完成后的返回内容 |
 
-**代码示例**
+**图片示例**：
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerOnFinish.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中

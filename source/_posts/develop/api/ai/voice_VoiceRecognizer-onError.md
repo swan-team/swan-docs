@@ -46,8 +46,22 @@ sidebar: voice_VoiceRecognizer_onError
 |4004|	返回结果异常|
 |9000|	未知错误|
 
-**代码示例**
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerOnError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中
