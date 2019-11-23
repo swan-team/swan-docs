@@ -64,6 +64,7 @@ sidebar: canvas_CanvasContext-drawImage
 ```
 
 * 在 js 文件中
+
 ```js
 Page({
     drawImage () {
