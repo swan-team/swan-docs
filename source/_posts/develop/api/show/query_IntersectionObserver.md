@@ -9,6 +9,9 @@ sidebar: query_IntersectionObserver
 
 **解释**： IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
 
 **`IntersectionObserver`对象的方法列表**：
 
@@ -18,6 +21,21 @@ sidebar: query_IntersectionObserver
 |relativeToViewport|指定页面显示区域作为参照区域之一|
 |observe|指定目标节点并开始监听相交状态变化情况|
 |disconnect|停止监听。回调函数将不再触发|
+
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>sss
 
 **代码示例**：
 

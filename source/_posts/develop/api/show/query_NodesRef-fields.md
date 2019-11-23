@@ -7,6 +7,10 @@ sidebar: query_NodesRef-fields
  
 **解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_NodesRefFields.png" class="demo-qrcode-image" />
+
 **方法参数**：Object object, Function callback
 
 **`fields`参数说明**：
@@ -37,7 +41,7 @@ sidebar: query_NodesRef-fields
 
 **代码示例**：
 
-<a href="swanide://fragment/999592d947ab22d09bf07463947ba6da1574322257733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/074e13432730548b49ba90f0fbcb8fac1574492260859" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

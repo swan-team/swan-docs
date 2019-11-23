@@ -7,6 +7,10 @@ sidebar: query_SelectorQuery
  
 **解释**： 选择器
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createSelectorQuery.png" class="demo-qrcode-image" />
+
 **`selectorQuery`对象的方法列表**：
 
 |方法 |参数  |说明|
@@ -16,6 +20,20 @@ sidebar: query_SelectorQuery
 |selectAll  |  selector  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-selectAll/">selectorQuery.selectAll</a>详细介绍 |
 |selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
 |exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

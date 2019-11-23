@@ -130,7 +130,7 @@ Page({
         });
     },
     onShow() {
-        this.requestTask.then( requestData => {
+        this.requestTask.then(requestData => {
             let res = this.getData('data');
             swan.setPageInfo({
                 title: res.title,
