@@ -25,6 +25,20 @@ sidebar: swan-navigateToSmartProgram
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/navigateToSmartProgram.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/08bcf5aff52ed378f39c8112eb3d4a051559044193460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
