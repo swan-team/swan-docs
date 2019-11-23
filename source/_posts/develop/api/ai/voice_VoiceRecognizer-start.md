@@ -13,8 +13,22 @@ sidebar: voice_VoiceRecognizer_start
 
 **方法参数**：Object object
 
-**代码示例一：短语音识别（与长语音使用方式一致） - 自动听音**
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerStart.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例一：短语音识别（与长语音使用方式一致） - 自动听音**
 
 <a href="swanide://fragment/8684b30fe9e56affafe11a8da47c9b421573730973671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

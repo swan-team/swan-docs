@@ -14,6 +14,21 @@ sidebar: voice_VoiceRecognizer_onStart
 **方法参数**：Function callback
 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerStart.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 **代码示例一：短语音识别（与长语音使用方式一致） - 自动听音**
 
 

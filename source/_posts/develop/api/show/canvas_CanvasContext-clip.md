@@ -20,9 +20,10 @@ sidebar:  canvas_CanvasContext-clip
 
 **代码示例**：
 
+<a href="swanide://fragment/d681f57d7da4801bfb3f2cc5e9e398281574506919889" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas')
-
 swan.downloadFile({
     url: 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
     success: function(res) {

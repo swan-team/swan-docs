@@ -36,12 +36,23 @@ sidebar:  audio
 |---- | ---- | ---- |
 |filePath | String | 合成的音频文件的路径，此路径为临时路径且在当次回调中有效|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/textToAudio.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
 <a href="swanide://fragment/b2861370f6a561f81ebeef1dd5861dd51573995603718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
 
 * 在 js 文件中 
 
