@@ -8,6 +8,10 @@ sidebar: community_swan-closeCommunityEditor
 
 **解释**： 关闭原生全屏内容发布器
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_closeCommunityEditor.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **emojiPath 参数说明**：
