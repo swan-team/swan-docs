@@ -9,6 +9,10 @@ sidebar: timer_setTimeout
 
 **解释**：设定一个定时器，在定时到期以后执行注册的回调函数。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback, Number delay
 
 **`callback`参数说明**：回调函数
