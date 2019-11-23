@@ -8,6 +8,10 @@ sidebar: query_swan-createIntersectionObserver
 
 **解释**： 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`options`参数说明**：

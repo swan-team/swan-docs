@@ -10,6 +10,10 @@ sidebar: query_NodesRef-boundingClientRect
 
 **解释**： 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_boundingClientRect.png" class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **返回值说明**：
@@ -29,7 +33,7 @@ sidebar: query_NodesRef-boundingClientRect
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+        <img src="https://b.bdstatic.com/miniapp/image/boundingClientRect.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -41,12 +45,12 @@ sidebar: query_NodesRef-boundingClientRect
 
 **代码示例**：
 
-<a href="swanide://fragment/999592d947ab22d09bf07463947ba6da1574322257733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bd188091c6a769dd38ecbb9d5cd640761574491158798" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<view class="container">
+<view class="wrap">
     <view class="card-area">
         <movable-area>
             <movable-view class="target" x="{{x}}" y="{{y}}" direction="all" bindchange="queryNodeInfo">
@@ -54,6 +58,7 @@ sidebar: query_NodesRef-boundingClientRect
             </movable-view>
         </movable-area>
     </view>
+    <button type="primary" bindtap="queryNodeInfo">获取Drag的boundingClientRect的返回值</button>
 </view>
 ```
 
@@ -62,30 +67,12 @@ sidebar: query_NodesRef-boundingClientRect
 ```js
 Page({
     queryNodeInfo: function(){
-        swan.createSelectorQuery().select('.target').boundingClientRect     (function(rect){
+        swan.createSelectorQuery().select('.target').boundingClientRect(function(rect){
             console.log(rect);
-            rect.id      // 节点的ID
-            rect.dataset // 节点的dataset
-            rect.left    // 节点的左边界坐标
-            rect.right   // 节点的右边界坐标
-            rect.top     // 节点的上边界坐标
-            rect.bottom  // 节点的下边界坐标
-            rect.width   // 节点的宽度
-            rect.height  // 节点的高度
-        }).exec()
-    },
-    getAllRects: function(){
-        swan.createSelectorQuery().selectAll('.a-class').boundingClientRect(function(rects){
-            rects.forEach(function(rect){
-                rect.id      // 节点的ID
-                rect.dataset // 节点的dataset
-                rect.left    // 节点的左边界坐标
-                rect.right   // 节点的右边界坐标
-                rect.top     // 节点的上边界坐标
-                rect.bottom  // 节点的下边界坐标
-                rect.width   // 节点的宽度
-                rect.height  // 节点的高度
-            })
+            swan.showModal({
+                title: 'NodesRef.boundingClientRect的返回值',
+                content: JSON.stringify(rect)
+            });
         }).exec()
     }
 });

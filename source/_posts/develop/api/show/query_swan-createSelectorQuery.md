@@ -10,6 +10,11 @@ sidebar: query_swan-createSelectorQuery
 
 **解释**： 返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createSelectorQuery.png" class="demo-qrcode-image" />
+
+
 **方法参数**： 无
 
 **返回值**：selectorQuery

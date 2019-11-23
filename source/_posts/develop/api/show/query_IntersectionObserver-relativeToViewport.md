@@ -8,6 +8,10 @@ sidebar: query_IntersectionObserver-relativeToViewport
  
 **解释**：指定页面显示区域作为参照区域之一
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_relativeToViewport.png" class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界

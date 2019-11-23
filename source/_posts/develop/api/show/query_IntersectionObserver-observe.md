@@ -8,6 +8,10 @@ sidebar: query_IntersectionObserver-observe
  
 **解释**：指定目标节点并开始监听相交状态变化情况
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_observe.png" class="demo-qrcode-image" />
+
 **方法参数**：String targetSelector, Function callback
 
 **`targetSelector`参数说明**：选择器

@@ -29,6 +29,10 @@ sidebar: arcameracontext_ARCameraContext-stopRecord
 |---- | ---- | ---- |
 |tempVideoPath  | String | 视频的临时路径 |
 
+**图片示例**：
+
+参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
+
 **代码示例**：
 
 参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
