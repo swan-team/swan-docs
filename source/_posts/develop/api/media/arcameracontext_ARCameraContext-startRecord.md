@@ -10,6 +10,9 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
  
 **解释**：开始录像
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContextRecord.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -37,6 +40,20 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tempVideoPath  | String | 视频的临时路径 |
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ARCameraContextRecord.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

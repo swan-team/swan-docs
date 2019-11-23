@@ -11,6 +11,9 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
 
 **解释**：拍照，成功则返回图片。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContextTakePhoto.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -29,6 +32,19 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
 |---- | ---- | ---- |
 |tempImagePath  | String | 图片的临时路径 |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ARCameraContextTakePhoto.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
  
 **代码示例**：
 
