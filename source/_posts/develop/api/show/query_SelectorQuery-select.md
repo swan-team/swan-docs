@@ -31,7 +31,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/selectorQuerySelect.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

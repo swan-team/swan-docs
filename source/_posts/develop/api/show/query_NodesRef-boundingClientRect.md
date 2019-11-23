@@ -33,7 +33,7 @@ sidebar: query_NodesRef-boundingClientRect
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+        <img src="https://b.bdstatic.com/miniapp/image/boundingClientRect.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

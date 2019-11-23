@@ -20,7 +20,7 @@ sidebar: query_SelectorQuery-exec
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/selectorQueryExec.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
