@@ -12,6 +12,10 @@ sidebar: swan.createInnerAudioContext
 
 **解释**： 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createInnerAudioContext.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回值**：innerAudioContext

@@ -25,7 +25,7 @@ sidebar: canvas_CanvasContext-draw
 
 **代码示例**：
 
-<a href="swanide://fragment/b39a66dd09566477c1abddd6ffa146111573725210935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/408aa17bb845b0a6d87ee5b5a13dc26e1574532413473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
