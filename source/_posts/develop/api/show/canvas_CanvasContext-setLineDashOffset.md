@@ -17,9 +17,23 @@ sidebar: canvas_CanvasContext_setLineDashOffset
 
 **`value`参数说明**： 偏移量，初始值为 0 。 
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/setLineDashOffset.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/5b090146e1e54a5d5dc9dcde98740f721574503865669" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a4a38a8bd21b845f527ac4aac69a57b81574525368679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -33,11 +47,15 @@ sidebar: canvas_CanvasContext_setLineDashOffset
 Page({
     onReady: function () {
         const canvasContext = swan.createCanvasContext('myCanvas');
-        canvasContext.setLineDash([10, 20]);
-        canvasContext.setLineDashOffset = 5;
+
         canvasContext.beginPath();
-        canvasContext.moveTo(0,100);
-        canvasContext.lineTo(400, 100);
+        canvasContext.setLineDash([10, 20], 5);
+        canvasContext.setLineDashOffset(400);
+        canvasContext.moveTo(10, 20);
+        canvasContext.lineTo(100, 20);
+        canvasContext.moveTo(10, 100);
+        canvasContext.lineTo(100, 100);
+        canvasContext.closePath();
         canvasContext.stroke();
         canvasContext.draw();
     }
