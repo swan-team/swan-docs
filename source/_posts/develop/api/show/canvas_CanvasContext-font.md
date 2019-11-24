@@ -26,17 +26,30 @@ sidebar: canvas_CanvasContext_font
 | size | 字体大小 |
 | family | 字体族名，注意确认各平台所支持的字体 。|
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/canvascontextfont.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>   
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/111d313d772997c85709aaa679ddb9e81573724209338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7a4e07cf5d732bc485825f880c450dbe1574527882687" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
     onReady: function () {
-        const canvasContext = swan.createCanvasContext('myCanvas');
-        canvasContext.setFontSize(50);
-        canvasContext.fillText('50', 90, 90);
-        canvasContext.font = "40px oblique normal";
+        let canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.font = "40px Microsoft YaiHei";
+        canvasContext.fillText('微软雅黑', 90, 90);
+        
+        canvasContext.font = "50px 楷体";
+        canvasContext.fillText('楷体', 90, 200);
         canvasContext.draw();
     }
 });
