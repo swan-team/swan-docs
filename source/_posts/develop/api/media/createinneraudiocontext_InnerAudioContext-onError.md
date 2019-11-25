@@ -16,6 +16,20 @@ sidebar: InnerAudioContext.onError
 
 **方法参数**：Function callback
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/InnerAudioContextOnError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/5fd261029e57512a9ca106f81328f5e91574546056156" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

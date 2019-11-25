@@ -10,8 +10,23 @@ sidebar: InnerAudioContext.offCanplay
 
 **解释**：取消监听 onCanplay 事件
 
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffCanplay.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/InnerAudioContextOffCanplay.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
