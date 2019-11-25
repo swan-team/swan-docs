@@ -7,6 +7,8 @@ sidebar: InnerAudioContext.destroy
 
 **解释**：销毁当前实例 
 
+**百度APP中扫码体验：**
+
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextDestroy.png"  class="demo-qrcode-image" />
 
 **方法参数**：无
