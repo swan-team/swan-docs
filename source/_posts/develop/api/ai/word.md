@@ -13,6 +13,9 @@ sidebar: word
 
 **解释**：词法分析，提供分词、词性标注、专名识别三大功能。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
