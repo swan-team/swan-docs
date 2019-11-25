@@ -2,7 +2,7 @@
 title: SelectorQuery.exec 
 header: develop
 nav: api
-sidebar: query_SelectorQuery-exec 
+sidebar: show_swan-query_SelectorQuery-exec
 ---
  
  

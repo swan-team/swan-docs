@@ -66,7 +66,7 @@ https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=hist
 ```
 https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 ```
-3. 小程序接入搜索Sitemap反馈失败及URL替换失败错误原因详解
+3. **小程序接入搜索Sitemap反馈失败及URL替换失败错误原因详解**
 开发者在小程序接入搜索的过程中，如遇到Sitemap反馈失败及URL替换失败的错误反馈，可以根据页面反馈及参照本文引导进行自查，通过本文列举的7种错误原因及处理方式，能够帮助开发者更快速准确的完成修改。
 
  - **资源未收录：**您的规则对应的H5或小程序资源未被收录，您可将对应小程序资源通过sitemap方式提交。 
