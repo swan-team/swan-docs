@@ -102,7 +102,7 @@ Page({
 
 <a href="swanide://fragment/0052de94836ab84f999612f1ed7437de1574352005128" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-> 请使用[2.7.0-beta及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.6.1以上版本支持。
+> 请使用[2.19.0-rc及其以上版本](https://smartprogram.baidu.com/docs/develop/devtools/history/)进行预览，正式版将在2.18.1(不包括2.18.1)以上版本支持。
 
 
 * 在 swan 文件中
