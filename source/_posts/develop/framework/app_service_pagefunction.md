@@ -77,6 +77,10 @@ Page({
 * 用户点击页面内的"分享"按钮([`button`](https://smartprogram.baidu.com/docs/develop/component/formlist_button/) 组件 open-type="share")或者页面右上角菜单的"分享"按钮的时候会调用；
 * 此事件需要 return 一个`Object`，用于自定义分享内容。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_onShareAppMessage.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 **Object参数说明**：
 
