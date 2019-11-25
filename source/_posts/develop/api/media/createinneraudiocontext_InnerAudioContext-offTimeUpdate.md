@@ -28,29 +28,45 @@ sidebar: InnerAudioContext.offTimeUpdate
 
 **代码示例**：
 
-<a href="swanide://fragment/07102148082bb1ee7dbc55d87b989d171574013321695" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/54ad4f8de96be55fee52898193440ada1574673008214" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="description"> 
+        正在播放《演员》
+        </view> 
+        <view class="description"> 
+            {{currentTime}} / {{duration}}
+        </view>
+    </view>
+    <button type="primary" bindtap="offTimeUpdate">点击取消监听</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```javascript
 Page({
+    data: {
+        currentTime: '',
+        duration: '0' 
+    },
     onLoad() {
-        let that = this;
         const innerAudioContext = swan.createInnerAudioContext();
         innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
-        innerAudioContext.onTimeUpdate(res => {
-            swan.showModal({
-                title: 'onTimeUpdate',
-                content: JSON.stringify(res)
-            });
-            console.log('onTimeUpdate', res);
-        });
-        innerAudioContext.onEnded(res => {
-            innerAudioContext.offTimeUpdate();
-        });
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+        this.innerAudioContext.onTimeUpdate(res => {
+        this.setData('currentTime', res.data.currentTime);
+        this.setData('duration', res.data.duration);
+        });
+    },
+    offTimeUpdate() {
+        this.innerAudioContext.offTimeUpdate()
     }
 });
 ```
