@@ -50,20 +50,20 @@ sidebar: base_rich-text
 
 |节点 | 属性 |
 |---- | ---- |
-| a | -|
+| a | |
 | abbr |- |
 | b |- |
-| blockquote | -|
-| br | -|
+| blockquote | |
+| br | |
 | code |- |
 | col | span，width |
 | colgroup | span，width |
-| dd | -|
-| del | -|
+| dd | |
+| del | |
 | div |- |
 | dl |- |
 | dt |- |
-| em | -|
+| em | |
 | fieldset |- |
 | h1 |- |
 | h2 |- |
@@ -71,32 +71,47 @@ sidebar: base_rich-text
 | h4 |- |
 | h5 |- |
 | h6 |- |
-| hr | -|
+| hr | |
 | i |- |
 | img | alt，src，height，width |
 | ins |- |
 | label |- |
 | legend |- |
-| li | -|
+| li | |
 | ol | start，type |
-| p | -|
+| p | |
 | q |- |
 | span |- |
-| strong | -|
+| strong | |
 | sub |- |
 | sup |- |
 | table | width |
 | tbody |- |
 | td | colspan，height，rowspan，width |
-| tfoot | -|
+| tfoot | |
 | th | colspan，height，rowspan，width |
 | thead |- |
-| tr | -|
+| tr | |
 | ul | - |
 
-**示例**
+**图片示例**：
 
-<a href="swanide://fragment/746c4d81d51218ea977782622aa61d9a1566379382794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/rich-text.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+
+<a href="swanide://fragment/ce3c9b8128d96855f3a0983f2b897b661572918834655" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -121,7 +136,7 @@ sidebar: base_rich-text
                 <view class="cont">{{nodeSnip}}</view>
             </scroll-view>
             <button type="primary" bind:tap="renderNode">渲染Node</button>
-            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem">
+            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem;">
                 <rich-text nodes="{{nodes}}" selectable="true"></rich-text>
             </block>
         </view>
@@ -132,29 +147,29 @@ sidebar: base_rich-text
 * 在 js 文件中
 
 ```js
-const htmlSnip
-=`<div class="div_class">
-  <h1>Title</h1>
-  <p class="p">
-    Life is&nbsp;<i>like</i>&nbsp;a box of
-    <b>&nbsp;chocolates</b>
-  </p>
+const htmlSnip =
+`<div class="div_class">
+    <h1>Title</h1>
+    <p class="p">
+        Life is&nbsp;<i>like</i>&nbsp;a box of
+        <b>&nbsp;chocolates</b>
+    </p>
 </div>`;
-const nodeSnip
-=`Page({
-  data: {
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 60px; color: red;'
-      },
-      children: [{
-        type: 'text',
-        text: 'You never know what you're gonna get.'
-      }]
-    }]
-  }
+const nodeSnip =
+`Page({
+    data: {
+        nodes: [{
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you're gonna get.'
+            }]
+        }]
+    }
 })`;
 
 Page({
@@ -192,19 +207,7 @@ Page({
     }
 });
 ```
-**图示**
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/rich-text.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
 
 **Bug & Tip**：
 

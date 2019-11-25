@@ -18,13 +18,13 @@ sidebar:  classify_swan-ai-animalClassify
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是|-  |图像资源地址|
 |top_num|	Number |否	| 6 |返回预测得分top结果数，默认为6|
-|success |Function    |否 | -|      接口调用成功的回调函数|
-|fail |   Function|    否  | -|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**
 
@@ -41,25 +41,43 @@ sidebar:  classify_swan-ai-animalClassify
 |score|	String|		置信度，示例：0.5321。|
 
 
-**示例**：
+**图片示例**：
 
-<a href="swanide://fragment/61d91bbf4843daa85ff43dbbb9cc23691569414992464" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/animalClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/d3a867157469e01d1f6515f27172d4331569501144725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.animalClassify({
-      image,
-      top_num: 6,
-      success: res => {
-        console.log('animalClassify res', res.result);
-      },
-      fail: err => {
-        console.log('animalClassify err', err);
-      }
-    });
-  }
+Page({
+    animalClassify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.animalClassify({
+                    image,
+                    top_num: 6,
+                    success: res => {
+                        console.log('animalClassify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('animalClassify err', err);
+                    }
+                });
+            }
+        });
+    }
 });
 ```
 

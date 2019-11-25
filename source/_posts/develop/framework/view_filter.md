@@ -5,9 +5,10 @@ nav: framework
 sidebar: view_filter
 ---
 
+> 推荐使用功能更全的 [SJS功能](https://smartprogram.baidu.com/docs/develop/framework/sjs_start/)。Filter 功能将不再更新，请勿在`s-if`、`s-for`、`template`、自定义组件等标签中使用。
+
 Filter 是小程序的过滤器，结合 SWAN 模板，可以构建出页面的结构。
 
-> 推荐使用功能更全的 [SJS功能](https://smartprogram.baidu.com/docs/develop/framework/sjs_start/)
 
 ### 说明：
 * Filter 文件命名方式为:模块名.filter.js;
@@ -82,9 +83,9 @@ Hello world
 ```js
 // index.js
 Page({
-  data: {
-    array: [1, 3, 6, 8, 2, 0]
-  }
+    data: {
+        array: [1, 3, 6, 8, 2, 0]
+    }
 });
 ```
 ```js

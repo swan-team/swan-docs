@@ -170,13 +170,17 @@ swanInvoke功能：
 
 * 组件：在小程序中使用组件打开另一个小程序，请参考[navigator组件](/develop/component/nav/)中target="miniProgram"的使用方法。
 
-* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/)
+* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/)
 
 ### 在web-view中打开小程序 
 
 在小程序的web-view中打开另一个小程序，需要在引入jssdk后，调用swan.navigateToSmartProgram接口。
 
 引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view/#相关接口2)
+
+### 如何判断H5页面是否在小程序web-view打开？
+
+H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
 ## 小程序来源统计
 > 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。

@@ -20,11 +20,11 @@ sidebar: swan-chooseLocation
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success  | Function |否 | -| 接口调用成功的回调函数|
-|fail  | Function |否 | -| 接口调用失败的回调函数|
-|complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|success  | Function |否 | | 接口调用成功的回调函数|
+|fail  | Function |否 | | 接口调用失败的回调函数|
+|complete  | Function |否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 
@@ -35,36 +35,61 @@ sidebar: swan-chooseLocation
 |latitude  | 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系，[查询指定地点的经纬度方法](/develop/faq/apifaq/)。|
 |longitude  |  经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系，[查询指定地点的经纬度方法](/develop/faq/apifaq/)。|
 
-**示例**：
+**图片示例**：
 
-<a href="swanide://fragment/729f820b3217a154d3064696f6d90e8e1569429506976" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseLocation.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/8d260b725527f894f3e42571fcb9b57e1573635756219" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    onReady() {
-        swan.authorize({
+    chooseLocation() {
+         swan.authorize({
             scope: 'scope.userLocation',
             success: res => {
                 console.log(res);
             },
             fail: function () {
-                console.log('授权失败');
+                swan.openSetting({})
             }
         });
-    },
-    chooseLocation() {
+        let that = this;
         swan.chooseLocation({
             success: res => {
-                console.log('chooseLocation success', res);
+                console.log('success', res);
+                let longitude = 'E:' + that.formatLocation(res.longitude) + '′';
+                let latitude =  'N:' + that.formatLocation(res.latitude) + '′';
+                that.setData({
+                    'name': res.name,
+                    'address': res.address,
+                    'longitude': longitude,
+                    'latitude': latitude
+                });
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
             }
         });
+    },
+    formatLocation(data) {
+        return data.toFixed(2).replace('.', '°');
     }
+})
 ```
 
 #### 错误码

@@ -32,17 +32,25 @@ sidebar: ad
 | banner | 横幅类型 |
 | feed | 流式类型 |
 
-**示例**：
-<a href="swanide://fragment/6efb7c4c8ba9a1963c76c4c24fc8250a1568795647795" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
 * banner
 
-    **获取代码示例**：
+    **图片示例 1**：
 
-    ```
-    <ad appid="xxx" apid="xxx" type="banner"> </ad>
-    ```
-    **示例 1**:
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src=" https://b.bdstatic.com/miniapp/images/ad-banner.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>     
+    </div>
+
+    **代码示例 1**：
+
+    <a href="swanide://fragment/d7056a8d90865d1a6a76bfb96c5d6d9a1572604050629" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
     ```
     <div class="ad-container">
@@ -56,13 +64,23 @@ sidebar: ad
 
 * feed
 
-    **获取信息流广告代码示例**：
-    ```
-    <ad appid="xxx" apid="xxx" type="feed"> </ad>
-    ```
+    **图片示例 2**：
 
+    <div class="m-doc-custom-examples">
+        <div class="m-doc-custom-examples-correct">
+            <img src="https://b.bdstatic.com/miniapp/images/ad-feed.png">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>
+        <div class="m-doc-custom-examples-correct">
+            <img src=" ">
+        </div>     
+    </div>
 
-    **示例 2**:
+    **代码示例 2**：获取信息流广告代码示例 
+
+    <a href="swanide://fragment/3d2b4b9c495c812edff04922a25bf0171572604070484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
     ```
     <div class="ad-container">

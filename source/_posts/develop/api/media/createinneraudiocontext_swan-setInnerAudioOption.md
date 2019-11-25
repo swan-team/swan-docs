@@ -12,21 +12,26 @@ sidebar: swan.setInnerAudioOption
 
 **解释**： 对`innerAudioContext`进行小程序内部的全局设置。
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setInnerAudioOption.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |mixWithOther |Boolean | 否 | false |设置是否与其他音频混播。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|success  | Function |否 | -| 接口调用成功的回调函数| 
-|fail  | Function |否 |  -|接口调用失败的回调函数| 
-|complete  | Function |否 | -| 接口调用结束的回调函数（调用成功、失败都会执行）|  
+|success  | Function |否 | | 接口调用成功的回调函数| 
+|fail  | Function |否|| 接口调用失败的回调函数| 
+|complete  | Function |否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|  
 
 
 
 
-**示例**：
+**代码示例**：
 
 <a href="swanide://fragment/e62fbe5e8485bfb6dc130933ada570781556535988468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

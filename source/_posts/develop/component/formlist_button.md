@@ -65,16 +65,31 @@ sidebar: formlist_button
 |值 |说明|
 |---- |---- |
 |share |触发用户分享，使用前建议先阅读 <a href="https://smartprogram.baidu.com/docs/develop/api/open_share/">swan.onShareAppMessage</a> 用。|
-| getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
-| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#用户数据的签名验证和加解密/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
+| getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_userdata/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
+| getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_userdata/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
 |contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
 
 
 
-**示例**：
-<a href="swanide://fragment/c5e9c02cad6b485032a87ee568c3fe4a1565507494356" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/button.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/a90e9e3b2bc2402a14a1c481157d12301572918972473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -138,6 +153,10 @@ sidebar: formlist_button
     </view>
     <view class="btn-bottom">
         <button type="default" class="middle-btn" open-type="share">分享按钮</button>
+        <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息按钮</button>
+        <button type="primary" class="middle-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号回调</button>
+        <button type="primary" class="middle-btn" open-type="openSetting" bindopensetting="opensetting">打开授权设置页后回调</button>
+        <button type="primary" class="middle-btn" contact open-type="contact" bindopensetting="contact">客服信息回调</button>
     </view>
 </view>
 ```
@@ -161,20 +180,16 @@ Page({
         };
     },
     getUserInfo(e) {
-        console.log('cdsf');
-        swan.getUserInfo({
-            success: res => {
-                swan.showModal({
-                    title: '获取成功',
-                    content: JSON.stringfy(res)
-                });
-            },
-            fail: err => {
-                swan.showToast({
-                    title: '获取失败'
-                });
-            }
-        });
+        console.log('用户信息:', e);
+    },
+    opensetting(e) {
+        console.log('用户设置:', e);
+    },
+    getPhoneNumber(e) {
+        console.log('用户手机号:', e);
+    },
+    contact(e) {
+        console.log('用户面板:', e);
     },
     tap() {
         swan.showToast({

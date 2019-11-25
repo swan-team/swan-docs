@@ -42,7 +42,7 @@ priority: 01-01
 |networkTimeout|Object| |否|网络请求的超时时间，单位：毫秒|
 |subpackages|array.<`Object`\>| |否|分包结构配置|
 
-`networkTimeout` 的合法值：
+`networkTimeout` 的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -317,3 +317,18 @@ ctx.fillRect(0, 0, 0, 0);
 ### 日志查看
 
 iOS 和 Android 的日志查看均可使用 sConsole 调试工具查看，详见[ sConsole 教程 ](/game/tutorials/devtools/smartappdebug/#sConsole)。
+
+
+### 测试号
+
+测试号是一个特殊的小游戏的 AppID，开发者可以使用此 AppID 来开发和体验小游戏。
+
+在 2.19.0 以上版本的百度开发者工具中，进入新建项目界面，在填写 AppID 下面可以点击使用测试号，即可自动开通测试号权限并将测试号填写到 AppID 输入框。
+
+![图片](../../../../img/tutorial/testapp/game-create.png)
+
+测试号在使用上有一些功能上的限制，比如不支持发布等能力，以及不支持支付、手机号等权限的获取。
+
+![图片](../../../../img/tutorial/testapp/game-main.png)
+
+

@@ -211,7 +211,7 @@ Page({
 ```js
 /* 组件 custom-component.js */
 Component({
-  externalClasses: ['external-class']
+    externalClasses: ['external-class']
 });
 
 ```
@@ -229,7 +229,7 @@ Component({
 ```
 ```css
 .red-text {
-  color: red;
+    color: red;
 }
 ```
 
@@ -244,9 +244,9 @@ Component({
 ```js
 /* 组件 custom-component.js */
 Component({
-  options: {
-    addGlobalClass: true,
-  }
+    options: {
+        addGlobalClass: true,
+    }
 });
 ```
 
@@ -258,11 +258,19 @@ Component({
 ```css
 /* 组件外的样式定义 */
 .global-class {
-  color: red;
+    color: red;
 }
 ```
 
-### 覆盖样式：
+### 覆盖样式：（废弃）
+<font style="color: red">
+
+> 此规范与 BEM 规范相冲突，近期将重新设计此部分内容，请不要使用以下方式覆盖样式，除此之外也不要使用 `swan-tagName` 的方式覆盖样式。
+
+> 如果您已经使用了此方式，请尽快使用其他替代方案进行兼容处理。
+
+</font>
+
 自定义组件会给每个样式前面加上前缀，前缀的类型为:用户定义的自定组件名字 + "__"。
 例如：
 

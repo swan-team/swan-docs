@@ -32,11 +32,11 @@ getCurrentPages() 函数用于获取当前页面栈的实例，以数组形式�
 |路由方式|触发时机|路由前页面|路由后页面|
 |----|----|----|----|
 |初始化|智能小程序打开的第一个页面|   | onLoad, onShow |
-|打开新页面|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/">swan.navigateTo</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="navigateTo"/ > | onHide | onLoad, onShow |
-|页面重定向|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/">swan.redirectTo</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="redirectTo"/ > | onUnload | onLoad, onShow |
-|Tab 切换	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-switchTab/">swan.switchTab</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="switchTab"/ > 或用户切换 Tab |    | 各种情况请参考下表 |
-|页面返回	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/">swan.navigateBack</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="navigateBack"/ > 或用户按左上角返回按钮 | onUnload | onShow |
-|重启动	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-reLaunch/">swan.reLaunch</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="reLaunch"/ > | onUnload | onLoad, onShow |
+|打开新页面|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateTo/">swan.navigateTo</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="navigateTo"/ > | onHide | onLoad, onShow |
+|页面重定向|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/">swan.redirectTo</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="redirectTo"/ > | onUnload | onLoad, onShow |
+|Tab 切换	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/">swan.switchTab</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="switchTab"/ > 或用户切换 Tab |    | 各种情况请参考下表 |
+|页面返回	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/">swan.navigateBack</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="navigateBack"/ > 或用户按左上角返回按钮 | onUnload | onShow |
+|重启动	|调用 API <a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/">swan.reLaunch</a> 或使用<a href="/develop/component/nav/">组件</a> < navigator open-type="reLaunch"/ > | onUnload | onLoad, onShow |
 
 Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）：
 

@@ -75,3 +75,7 @@ A: swan.createSelectorQuery()返回一个 SelectorQuery 对象实例。可以在
 
 A: 经测试确实出现黑边到问题，但是有的小程序却没有，到开发者后台打开调试模式查看图标发现，正常的图标都是正方形的，有问题的都是圆形的图标，所以导致在添加到主屏幕的时候抓取到的图标没有撑满safri设置的宽高，漏出了黑边。
 解决办法：开发者可到后台重新上传一张144px X 144px的正方形图片。
+
+#### Q：使用自定义组件时，如何设置胶囊字体颜色?
+
+A：请在page的json文件中设置[navigationBarTextStyle](https://smartprogram.baidu.com/docs/develop/tutorial/devjson/)。

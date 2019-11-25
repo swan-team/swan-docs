@@ -13,25 +13,25 @@ sidebar: custom-component_extend
 为了更好的理解扩展后的效果，在此举例说明：
 
 **示例代码**
-<a href="swanide://fragment/f2098282d8393f340ab37b278baac92b1545996186866" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5262a060bf8642ac809a8b116ad35dae1574058224954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // behavior.js
 module.exports = Behavior({
-  definitionFilter(defFields) {
-    defFields.data.from = 'behavior'
-  }
+    definitionFilter(defFields) {
+        defFields.data.from = 'behavior'
+    }
 })
 
 // component.js
 Component({
-  data: {
-    from: 'component'
-  },
-  behaviors: [require('behavior.js')],
-  ready() {
-    console.log(this.data.from) // 此处会发现输出 behavior 而不是 component
-  }
+    data: {
+        from: 'component'
+    },
+    behaviors: [require('./behavior.js')],
+    ready() {
+        console.log(this.data.from) // 此处会发现输出 behavior 而不是 component
+    }
 });
 ```
 
@@ -54,21 +54,21 @@ module.exports = Behavior({
 
 // behavior2.js
 module.exports = Behavior({
-  behaviors: [require('behavior3.js')],
-  definitionFilter(defFields, definitionFilterArr) {
-    // definitionFilterArr[0](defFields)
-  }
+    behaviors: [require('./behavior3.js')],
+    definitionFilter(defFields, definitionFilterArr) {
+        // definitionFilterArr[0](defFields)
+    }
 });
 
 // behavior1.js
 module.exports = Behavior({
-  behaviors: [require('behavior2.js')],
-  definitionFilter(defFields, definitionFilterArr) {}
+    behaviors: [require('./behavior2.js')],
+    definitionFilter(defFields, definitionFilterArr) {}
 });
 
 // component.js
 Component({
-  behaviors: [require('behavior1.js')]
+    behaviors: [require('./behavior1.js')]
 });
 ```
 

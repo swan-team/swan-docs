@@ -95,7 +95,7 @@ sidebar: frameworkdevelop
 方式二：使用 2.8.1 及以上版本开发者工具打开项目目录，同时进行以下配置，配置完成后，就可以在开发者工具中开发、调试、预览、上传。
 
 1. `npm run build:swan`
-2. 在 `project.swan.json`文件中增加配置 `"smartProgramRoot": "dist/swan"`（如果已有此配置，请忽略）
+2. 在`project.swan.json`文件中增加配置 `"smartProgramRoot": "dist/swan"`（如果已有此配置，请忽略）
 3. 在项目信息面板中设置如下自定义预处理指令。
 	- 编译前预处理: `npm run dev:swan` 并勾选 **异步执行**
 	- 上传前预处理: `npm run build:swan`

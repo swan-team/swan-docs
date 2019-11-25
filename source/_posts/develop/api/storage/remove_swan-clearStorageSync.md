@@ -14,13 +14,33 @@ sidebar: remove_swan-clearStorageSync
 
 **方法参数**：无
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/clearStorage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+<a href="swanide://fragment/1b5a4a2ad3734791147f6d74c02fb4201573634322221" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-try {
-    swan.clearStorageSync();
-} catch(e) {
-}
+Page({
+    clearStorage() {
+        try {
+            swan.clearStorageSync();
+        } catch(e) {
+
+        }
+    }
+});
 ```
 
 #### 错误码

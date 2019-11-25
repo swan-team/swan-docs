@@ -18,15 +18,15 @@ sidebar: ocr_swan-ai-ocrIdCard
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|detect_direction |Boolean | 否   |-| 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
+|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
 |id_card_side  |  String  | 否  |- |front：身份证含照片的一面；back：身份证带国徽的一面。|
-|image | String | 是   | -| 图片资源地址|
-|detect_risk | Boolean | 否  |- | 是否开启身份证风险类型(身份证复印件、临时身份证、身份证翻拍、修改过的身份证)功能，默认不开启，即：false。可选值:true-开启；false-不开启。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|image | String | 是   | | 图片资源地址|
+|detect_risk | Boolean | 否  |- | 是否开启身份证风险类型(身份证复印件、临时身份证、身份证翻拍、修改过的身份证)功能，默认不开启，即：false。有效值:true-开启；false-不开启。|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **success 返回参数说明**：
@@ -68,29 +68,45 @@ sidebar: ocr_swan-ai-ocrIdCard
 |width| Number | 表示识别结果的定位位置的长方形的宽度。|
 |height| Number | 表示识别结果的定位位置的长方形的高度。|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrIdCard.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrIdCard({
-                detect_direction: true,
-                id_card_side: 'front',
-                detect_risk: true,
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('ocrIdCard res', res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrIdCard err', err);
-                }
-            });
-        }
-    })
+    ocrIdCard() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrIdCard({
+                    detect_direction: true,
+                    id_card_side: 'front',
+                    detect_risk: true,
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('ocrIdCard res', res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrIdCard err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

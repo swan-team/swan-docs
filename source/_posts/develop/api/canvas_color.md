@@ -5,7 +5,7 @@ nav: api
 sidebar: canvas-color
 ---
 
-##  Canvas-Color
+   
 
 颜色的值，在 canvas 中可以使用如下的写法：
 

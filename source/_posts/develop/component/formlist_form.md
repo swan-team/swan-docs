@@ -17,12 +17,12 @@ sidebar: formlist_form
 
 |属性名 |类型 | 默认值 | 必填 |说明|最低版本|
 |-----|---- |---- |----|----|----|
-|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
+|report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12|
 |report-type| String  | 'default' | 否 |模板消息的类型，report-submit为true时填写有效。<br>取值：default或subscribe。|3.105.3|
-|template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="http://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/#getTemplateLibraryList/">getTemplateLibraryList</a>获取|3.105.3|
+|template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="http://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取|3.105.3|
 |subscribe-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息时所使用的唯一标识符，内容由开发者自定义，用来标识订阅场景<br>注意：同一用户在同一 subscribe-id 下的多次授权不累积下发权限，只能下发一条。若要订阅多条，需要不同 subscribe-id |3.105.3|
-| bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}	`,当report-type 为 subscribe 时，status 和message 中返回用户授权具体信息|-|
-| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|-|
+| bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}`,当report-type 为 subscribe 时，status 和message 中返回用户授权具体信息| |
+| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件| |
 
 
 
@@ -46,7 +46,22 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 | 500104 |请求模板内容失败|
 | 500105 |请求formId失败|
 
-**示例：**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/form.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

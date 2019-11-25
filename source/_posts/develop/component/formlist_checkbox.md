@@ -21,3 +21,37 @@ sidebar: formlist_checkbox
 |disabled|Boolean| false| 否 | 是否禁用|
 |checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
 |color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/checkbox1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/19b41700694c662e8dae6dd6a9d676c91572917630510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="title">默认样式</view>
+    <view class="checkbox-group">
+        <checkbox class="checkbox" checked>&nbsp;&nbsp;选中</checkbox>
+        <checkbox class="checkbox" checked="false">&nbsp;&nbsp;未选中</checkbox>
+        <checkbox class="checkbox" disabled>&nbsp;&nbsp;不可选</checkbox>
+        <checkbox class="checkbox" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</checkbox>
+    </view>
+</view>
+```
+
+

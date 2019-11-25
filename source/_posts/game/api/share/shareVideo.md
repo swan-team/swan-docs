@@ -26,7 +26,7 @@ swan.shareVideo(opts)
 |complete | function || 否| 接口调用完成的回调函数（接口成功、失败都会执行）|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 swan.shareVideo({

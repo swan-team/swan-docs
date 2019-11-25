@@ -18,13 +18,13 @@ sidebar:  classify_swan-ai-carClassify
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
 |top_num	|Number	|否|5|返回结果top n，默认5。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 
@@ -53,25 +53,43 @@ sidebar:  classify_swan-ai-carClassify
 |height|  Number| 像素高|
 
 
-**示例**：
+**图片示例**：
 
-<a href="swanide://fragment/5cb0c5cf808cc6057d8fb94b56357bf21569414658661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/carClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.carClassify({
-        image,
-        top_num: 5,
-        success: res => {
-          console.log('carClassify res', res.result);
-        },
-        fail: err => {
-          console.log('carClassify err', err);
-        }
-    });
-  }
+Page({
+  carClassify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.carClassify({
+                    image,
+                    top_num: 5,
+                    success: res => {
+                    console.log('carClassify res', res.result);
+                    },
+                    fail: err => {
+                    console.log('carClassify err', err);
+                    }
+                });
+            }
+        });
+    }
 });
 ```
 

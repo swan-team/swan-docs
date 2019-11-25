@@ -19,13 +19,13 @@ sidebar: swan-getLocation
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|type   | String | 否  | -| 默认为 wgs84 返回 gps 坐标，可选 gcj02 。|
-|altitude   | Boolean | 否  | -| 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，会很耗时，默认没有用 gps。|
-|success |Function  |  否 | -|  接口调用成功的回调函数，返回内容详见返回参数说明。|
-|fail  |  Function  |  否  | -| 接口调用失败的回调函数|
-|complete  |  Function |   否 |  -| 接口调用结束的回调函数（调用成功、失败都会执行）|
+|type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。|
+|altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，**会很耗时**，默认没有用 gps。|
+|success |Function  |  否 | |  接口调用成功的回调函数，返回内容详见返回参数说明。|
+|fail  |  Function  |  否  | | 接口调用失败的回调函数|
+|complete  |  Function |   否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 
@@ -48,25 +48,41 @@ sidebar: swan-getLocation
 |district|区|
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getlocation.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
-    swan.getLocation({
-        type: 'wgs84',
-        altitude: true,
-        success: res => {
-            console.log('getLocation success', res)
-        },
-        fail: err => {
-            console.log('getLocation fail', res)
-        },
-        complete: () => {
-           
-        }
-    });
+Page({
+    getLocation() {
+        swan.getLocation({
+            type: 'wgs84',
+            altitude: true,
+            success: res => {
+                console.log('getLocation success', res)
+            },
+            fail: err => {
+                console.log('getLocation fail', res)
+            }
+        });
+    }
+});
 ```
 #### 错误码
 * Andriod

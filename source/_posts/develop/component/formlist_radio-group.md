@@ -23,7 +23,22 @@ sidebar: formlist_radio-group
 | ---- | ---- | ---- | ---- | ---- |
 | bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/radio.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -34,8 +49,8 @@ sidebar: formlist_radio-group
     <radio-group bindchange="radioChange" class="radio-group">
         <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
         <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
-         <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
-          <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
+        <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
+        <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
     </radio-group>
 
     <view class="title">推荐示例</view>
@@ -43,7 +58,9 @@ sidebar: formlist_radio-group
         <radio-group bindchange="radioChange">
             <label s-for="item in items" class="radio-background-active" for="{{item.id}}">
                 <view class="item">
-                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">&nbsp;&nbsp;{{item.text}}</radio>
+                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">
+                         &nbsp;&nbsp;{{item.text}}
+                    </radio>
                 </view>
             </label>
         </radio-group>
@@ -77,7 +94,7 @@ Page({
     },
 
     formSubmit: e => {
-        console.log('ljh', e);
+        console.log(e);
     }
 });
 ```

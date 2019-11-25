@@ -8,34 +8,41 @@ sidebar: return
 
 ## 小程序历史
 
-渠道说明：当用户在百度APP访问过某个小程序，会在二楼-小程序历史模块，或个人中心-小程序横滑历史模块快速找到该小程序：
+渠道说明：当用户在百度APP访问过某个小程序，会在二楼-小程序历史模块，或我的-常用小程序模块快速找到该小程序：
 
 •         二楼-最近使用
 
-•         二楼-最近使用标题
+•         我的-常用小程序 
 
-•         二楼-最近使用更多
+•         我的-智能小程序-常用
 
-•         我的-小程序横滑历史
-
-•         我的-小程序横滑历史-更多
-
-•         我的-历史-小程序
+•         我的-常用功能-历史
 
 获取方式：该入口不需要开发者进行配置，小程序上线后有用户使用即自动获取。
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：二楼-最近使用.jpg">
+        <img src="../../img/introduction/base/最近使用.png">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：个人中心-小程序历史横滑模块.jpg">
+        <img src="../../img/introduction/base/常用小程序.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>     
 </div>
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/base/智能小程序常用.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../img/introduction/base/常用功能历史.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ## 我的小程序
 
@@ -43,7 +50,7 @@ sidebar: return
 
 •         二楼-我的小程序
 
-•         二楼-我的小程序更多
+•         我的-我的小程序 
 
 •         我的-智能小程序-我的小程序
 
@@ -57,10 +64,10 @@ sidebar: return
         <img src="../../img/introduction/base/基础流量：二楼-我的小程序.jpg">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：二楼-我的小程序.jpg">
+        <img src="../../img/introduction/base/基础流量：我的-我的小程序.jpg">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/base/基础流量：个人中心-历史-小程序历史.jpg">
+        <img src="../../img/introduction/base/基础流量：我的-智能小程序-我的小程序.jpg">
     </div>
 </div>
 

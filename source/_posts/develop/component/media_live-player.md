@@ -25,8 +25,8 @@ sidebar: media_live-player
 |src|String|  | 是 |音视频地址。目前仅支持 m3u8 格式|
 |autoplay|Boolean|false| 否 |自动播放|
 |muted|Boolean|false| 否 |是否静音|
-|orientation|	String|	vertical| 否 |画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
-|object-fit|String|contain| 否 |填充模式，可选值:contain、fillCrop|
+|orientation|	String|	vertical| 否 |画面方向，有效值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
+|object-fit|String|contain| 否 |填充模式，有效值:contain、fillCrop|
 |background-mute|Boolean|false| 否 |进入后台时是否静音|
 |min-cache|Number|1| 否 |最小缓冲区，单位s|
 |max-cache|Number|3| 否 |最大缓冲区，单位s|
@@ -118,7 +118,22 @@ sidebar: media_live-player
 |videoWidth|视频画面的宽度|
 |videoHeight|视频画面的高度|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/live-player.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -142,10 +157,9 @@ sidebar: media_live-player
     <div class="section">
         <button type="primary" bind:tap="livePlay">开始播放 play</button>
         <button type="primary" bind:tap="liveStop">停止播放 stop</button>
-        <button type="primary" bind:tap="liveMute">静音</button>
-        <button type="primary" bind:tap="changeSrc">更换src</button>
-        <button type="primary" bind:tap="backgroundMute">后台静音</button>
-        <button type="primary" bind:tap="objectFit">object-fit改变</button>
+        <button type="primary" bind:tap="liveMute">{{muted? '': '不'}}静音</button>
+        <button type="primary" bind:tap="backgroundMute">进入后台静音</button>
+        <button type="primary" bind:tap="objectFit">object-fit改变为{{objectFit}}</button>
     </div>
 </view>
 ```
@@ -204,20 +218,7 @@ Page({
 });
 ```
 
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/live-player.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
-
+ 
 **Bug & Tip**：
 * live-player 默认宽度 300px、高度 225px；
 * 从基础库版本1.12.0开始支持事件捕获、冒泡。

@@ -8,7 +8,7 @@ sidebar: view_movable-view
  
 
 
-**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在`movable-area`组件中，并且必须是直接子节点，否则不能移动。
+**解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。
 
 **百度APP中扫码体验：**
 
@@ -46,7 +46,22 @@ sidebar: view_movable-view
 | none | 不可移动 |
 
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/movable-view.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/34026129ece94156c05e4567f773288e1565511303256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -99,7 +114,7 @@ sidebar: view_movable-view
             带有惯性
         </view>
         <movable-area>
-            <movable-view direction="all" inertia friction="2">text</movable-view>
+            <movable-view direction="all" inertia friction="1">text</movable-view>
         </movable-area>
     </view>
     <view class="section">

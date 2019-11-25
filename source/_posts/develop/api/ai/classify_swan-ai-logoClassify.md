@@ -19,13 +19,13 @@ sidebar:  classify_swan-ai-logoClassify
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
 |custom_lib	|Boolean	|否|	-|是否只检索用户子库，true则只检索用户子库，false(默认)为检索底库+用户子库。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 
@@ -55,26 +55,44 @@ sidebar:  classify_swan-ai-logoClassify
 |height|	Number|	像素高|
 
 
-**示例**：
+**图片示例**：
 
-<a href="swanide://fragment/ab217ecd1c08c7d10992d367ac052dbb1569414838193" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/logoClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.logoClassify({
-      image,
-      custom_lib: false,
-      success: res => {
-        console.log('dishClassify res', res.result);
-      },
-      fail: err => {
-        console.log('dishClassify err', err);
-      }
-    });
-  }
+Page({
+    logoClassify() {
+        swan.chooseImage({
+            success: res => {
+              let image = res.tempFilePaths[0];
+              swan.ai.logoClassify({
+                  image,
+                  custom_lib: false,
+                  success: res => {
+                    console.log('dishClassify res', res.result);
+                  },
+                  fail: err => {
+                    console.log('dishClassify err', err);
+                  }
+              });
+            }
+        });
+    }
 });
 ```
 

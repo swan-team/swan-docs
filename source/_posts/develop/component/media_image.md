@@ -42,27 +42,52 @@ sidebar: media_image
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-**Bug & Tip**：
 
-* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
-* image 组件默认宽度 300px、高度 225px。
+**图片示例**：
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image1.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image3.png">
+    </div>              
+</div>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image4.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image5.png">
+    </div>   
+</div>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/image2.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+    </div>    
+</div>
+
+**代码示例**：
+
   <a href="swanide://fragment/a65834765b18e32b8bbf4473c526c4141565503512941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="container">
-  <view class="page-section" s-for="{{array}}">
-    <view class="page-section-title">{{item.text}}</view>
-    <view class="page-section-demo">
-      <image class="image"
-        data-name="{{item.mode}}"
-        bindtap="onTap"
-        mode="{{item.mode}}" src="{{src}}" binderror="imageError" bindload="imageLoad" />
+    <view class="page-section" s-for="{{array}}">
+        <view class="page-section-title">{{item.text}}</view>
+        <view class="page-section-demo">
+            <image class="image"
+                data-name="{{item.mode}}"
+                bindtap="onTap"
+                mode="{{item.mode}}" src="{{src}}" binderror="imageError" bindload="imageLoad" />
+        </view>
     </view>
-  </view>
 </view>
 ```
 * 在 js 文件中
@@ -70,74 +95,64 @@ sidebar: media_image
 ```js
 Page({
     data: {
-      array: [{
-        mode: 'scaleToFill',
-        text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应',
-      }, {
-        mode: 'aspectFit',
-        text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来',
-      }, {
-        mode: 'aspectFill',
-        text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来',
-      }, {
-        mode: 'widthFix',
-        text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变',
-      }, {
-        mode: 'top',
-        text: 'top：不缩放图片，只显示图片的顶部区域',
-      }, {
-        mode: 'bottom',
-        text: 'bottom：不缩放图片，只显示图片的底部区域',
-      }, {
-        mode: 'center',
-        text: 'center：不缩放图片，只显示图片的中间区域',
-      }, {
-        mode: 'left',
-        text: 'left：不缩放图片，只显示图片的左边区域',
-      }, {
-        mode: 'right',
-        text: 'right：不缩放图片，只显示图片的右边边区域',
-      }, {
-        mode: 'top left',
-        text: 'top left：不缩放图片，只显示图片的左上边区域',
-      }, {
-        mode: 'top right',
-        text: 'top right：不缩放图片，只显示图片的右上边区域',
-      }, {
-        mode: 'bottom left',
-        text: 'bottom left：不缩放图片，只显示图片的左下边区域',
-      }, {
-        mode: 'bottom right',
-        text: 'bottom right：不缩放图片，只显示图片的右下边区域',
-      }],
-      src: 'https://b.bdstatic.com/miniapp/image.png',
+        array: [{
+            mode: 'scaleToFill',
+            text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
+        }, {
+            mode: 'aspectFit',
+            text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
+        }, {
+            mode: 'aspectFill',
+            text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
+        }, {
+            mode: 'widthFix',
+            text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变'
+        }, {
+            mode: 'top',
+            text: 'top：不缩放图片，只显示图片的顶部区域'
+        }, {
+            mode: 'bottom',
+            text: 'bottom：不缩放图片，只显示图片的底部区域'
+        }, {
+            mode: 'center',
+            text: 'center：不缩放图片，只显示图片的中间区域'
+        }, {
+            mode: 'left',
+            text: 'left：不缩放图片，只显示图片的左边区域'
+        }, {
+            mode: 'right',
+            text: 'right：不缩放图片，只显示图片的右边边区域'
+        }, {
+            mode: 'top left',
+            text: 'top left：不缩放图片，只显示图片的左上边区域'
+        }, {
+            mode: 'top right',
+            text: 'top right：不缩放图片，只显示图片的右上边区域'
+        }, {
+            mode: 'bottom left',
+            text: 'bottom left：不缩放图片，只显示图片的左下边区域'
+        }, {
+            mode: 'bottom right',
+            text: 'bottom right：不缩放图片，只显示图片的右下边区域'
+        }],
+        src: 'https://b.bdstatic.com/miniapp/image.png',
     },
     imageError(e) {
-      console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
+        console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
     },
     onTap(e) {
-      console.log('image 发生 tap 事件', e);
+        console.log('image 发生 tap 事件', e);
     },
     imageLoad(e) {
-      console.log('image 加载成功', e);
+        console.log('image 加载成功', e);
     },
-  });
+});
 
 ```
-**图示**
+ 
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image01.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image02.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image03.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/image04.jpeg">
-    </div>
-</div>
 
+**Bug & Tip**：
+
+* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+* image 组件默认宽度 300px、高度 225px。

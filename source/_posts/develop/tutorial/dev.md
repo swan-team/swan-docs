@@ -12,20 +12,20 @@ sidebar: dev
 
 ```xml
 <view s-for="item in items" class="single-item" bind:tap="oneItemClick" bind:touchstart="oneItemTouchStart" bind:touchmove="oneItemTouchmove" bind:touchcancel="oneItemTouchcancel" bind:touchend="oneItemTouchEnd">
-	<image src="{{item.imgsrc}}" class="single-img"></image>
-	<view class="single-text-area">
-		<text class="single-title">
-			{{item.title}}
-		</text>
-		<view s-if="{{item.tags}}" class="tag-area">
-		<text s-for="tag in item.tags" class="{{tag.className}}">
-			{{tag.content}}
-		</text>
-		</view>
+    <image src="{{item.imgsrc}}" class="single-img"></image>
+    <view class="single-text-area">
+        <text class="single-title">
+	    {{item.title}}
+	</text>
+	<view s-if="{{item.tags}}" class="tag-area">
+	    <text s-for="tag in item.tags" class="{{tag.className}}">
+	        {{tag.content}}
+	    </text>
 	</view>
+    </view>
 </view>
 <view class="view-more" bind:tap="loadMore">
-	<text>点击加载更多</text>
+    <text>点击加载更多</text>
 </view>
 
 ```
@@ -35,16 +35,16 @@ sidebar: dev
 ```xml
 <!-- xxx.swan -->
 <view>
-	Hello My {{ name }}
+    Hello My {{ name }}
 </view>
 ```
 
 ```javascript
 // xxx.js
 Page({
-	data: {
-		name: 'SWAN'
-	}
+    data: {
+	name: 'SWAN'
+    }
 });
 ```
 
@@ -52,30 +52,30 @@ Page({
 
 开发者可以通过在元素上添加`s-for`指令，来渲染一个列表。
 
-**示例**：
+**代码示例**：
 
 ```xml
 <view>
-	<view s-for="p in persons">
-		{{p.name}}
-	</view>
+    <view s-for="p in persons">
+	{{p.name}}
+    </view>
 </view>
 ```
 ```javascript
 Page({
-	data: {
-		persons: [
-			{name: 'superman'},
-			{name: 'spiderman'}
-		]
-	}
+    data: {
+	persons: [
+	    {name: 'superman'},
+	    {name: 'spiderman'}
+	]
+    }
 });
 ```
 
 #### 条件
 
 开发者可以通过在元素上添加`s-if`指令，来在视图层进行逻辑判断：
-**示例**：
+**代码示例**：
 ```xml
 <view s-if="is4G">4G</view>
 <view s-elif="isWifi">Wifi</view>
@@ -84,10 +84,10 @@ Page({
 
 ```javascript
 Page({
-	data: {
-		is4G: true,
-		isWifi: false
-	}
+    data: {
+	is4G: true,
+	isWifi: false
+    }
 });
 ```
 <br/>
@@ -99,15 +99,15 @@ Page({
 
 ```xml
 <view class="view-more" bind:tap="loadMore">
-	点击加载更多
+    点击加载更多
 </view>
 ```
 
 ```javascript
 Page({
-	loadMore: function () {
-		console.log('加载更多被点击');
-	}
+    loadMore: function () {
+	console.log('加载更多被点击');
+    }
 });
 ```
 目前支持的事件类型有：
@@ -141,9 +141,9 @@ Page({
 
 ```javascript
 Page({
-	viewtap: function (event) {
-		console.log('value is:', event.currentTarget.dataset.swan);// 输出1
-	}
+    viewtap: function (event) {
+	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
+    }
 });
 ```
 

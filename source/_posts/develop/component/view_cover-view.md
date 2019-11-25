@@ -13,13 +13,28 @@ sidebar: view_cover-view
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png"  class="demo-qrcode-image" />
 
-**属性说明： **
+**属性说明：**
 
 | 属性 | 类型 | 默认值 | 必填 | 说明 |
 |------ |------ |------ |------ |------ |
 | scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/component/cover-view.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>
+</div>
+
+**代码示例**：
+
 
 <a href="swanide://fragment/e56bb94ee8226ee3635915e1596f239b1565512006326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -45,23 +60,8 @@ Page({
     data: {
         latitude: '40.042500',
         longitude: '116.274040'
-    },
-    onReady() {
-        this.mapContext = swan.createMapContext('myMap');
     }
 });
 ```
 
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/cover-view.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
+ 

@@ -40,7 +40,7 @@ Page({
 ```xml
 <!-- if-demo.swan-->
 <block s-if="flag">
-  <view> name </view>
-  <view> age </view>
+    <view> name </view>
+    <view> age </view>
 </block>
 ```

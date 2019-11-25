@@ -90,7 +90,7 @@ VideoRecorderManager.recordClip(opts)
 |opts|Object|-|是|调用该方法时，要传入的对象参数|
 |opts.timeRange|Array| [3,3] | 否 | 表示记录数组两个值表示的时间范围内的视频，以秒为单位。 |
 
-**示例**
+**代码示例**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
@@ -146,7 +146,7 @@ VideoRecorderManager.clipVideo(opts)
 
 
 
-**示例**
+**代码示例**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
@@ -176,7 +176,7 @@ recorder.onStop(({ videoPath })=>{
 videoRecorderManager.pause()
 ```
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -203,7 +203,7 @@ videoRecorderManager.onPause(callback)
 |callback|function|是|监听暂停录屏事件的回调函数|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -223,7 +223,7 @@ videoRecorderManager.resume()
 ```
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -255,7 +255,7 @@ recorder.resume()
 |callback|function|是|监听继续录屏事件的回调函数|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -281,7 +281,7 @@ recorder.resume()
 videoRecorderManager.stop()
 ```
 
-**示例**
+**代码示例**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
@@ -346,7 +346,7 @@ videoRecorderManager.onError(callback)
 |res.errMsg|string|错误信息|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();

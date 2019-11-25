@@ -38,7 +38,16 @@ sidebar: media_camera
 | on | 闪光灯开 |
 | off | 闪光灯关 |
 
-**示例**：
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/camera.gif">
+    </div> 
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/e57c71266aac86d6a0f6253f3c0f8de41565512985352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -127,20 +136,7 @@ Page({
     }
 });
 ```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera01.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera02.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
-
+ 
 
 **Bug & Tip**：
 * camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。

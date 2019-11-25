@@ -18,12 +18,12 @@ sidebar: text_swan-ai-textReview
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|content | String | 是  | -| 待审核文本，UTF-8，不可为空，不超过20000字节。 |
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|content | String | 是  | | 待审核文本，UTF-8，不可为空，不超过20000字节。 |
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**
 
@@ -59,21 +59,37 @@ sidebar: text_swan-ai-textReview
 |4 |恶意推广|
 |5 |低俗辱骂|
 
-**示例**：
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/textReview.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-  swan.ai.textReview({
-      content: '',
-      success: res => {
-        console.log('textReview res', res.result.spam); // 0 表示审核通过
-      },
-      fail: err => {
-        console.log('textReview err', err);
-      }
-  })
+    textReview() {
+        swan.ai.textReview({
+            content: '',
+            success: res => {
+              console.log('textReview res', res.result.spam); // 0 表示审核通过
+            },
+            fail: err => {
+              console.log('textReview err', err);
+            }
+      })
+    }
 });
 ```
 

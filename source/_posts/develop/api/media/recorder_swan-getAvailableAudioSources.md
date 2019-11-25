@@ -12,8 +12,13 @@ sidebar: swan.getAvailableAudioSources
 
 **解释**：获取当前支持的音频输入源
 
-**方法参数**：Object data
-**`data` 参数说明**：
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getAvailableAudioSources.png"  class="demo-qrcode-image" />
+
+**方法参数**：Object object
+
+**`object` 参数说明**：
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
@@ -21,14 +26,15 @@ sidebar: swan.getAvailableAudioSources
 |fail   | Function |   否  |  | 接口调用失败的回调函数|
 |complete  |  Function |   否 |   | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**data.success回调函数**
-**方法参数**：Object res
+**success回调函数**
+
+**方法参数**：Object object
 
 |参数名 |类型  |说明|
 |---- | ---- |---- |
 |audioSources |Array| 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用 |
 
-**res.audioSources合法值**
+**res.audioSources有效值**
 
 |返回值|说明  |
 |---- | ---- |
@@ -41,8 +47,22 @@ sidebar: swan.getAvailableAudioSources
 |voice_recognition |同 mic，适用于语音识别，仅限 Android|
 
 
+**图片示例**：
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getAvailableAudioSources.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
 <a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
@@ -53,17 +73,13 @@ Page({
     getAvailableAudioSources() {
         swan.getAvailableAudioSources({
             success: res => {
-	            console.log('当前支持的音频输入源:', res.audioSources);
-		    },
-		    fail: err => {
-		        console.log('错误码：' + err.errCode);
-		        console.log('错误信息：' + err.errMsg);
-		    }
-		});
+                console.log('当前支持的音频输入源:', res.audioSources);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
-});
+})
 ```
-
-
-
-

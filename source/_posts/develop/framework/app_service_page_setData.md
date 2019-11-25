@@ -6,13 +6,13 @@ sidebar: app_service_pagesetData
 ---
 
 
-**解释**：setData 函数，用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化，会引起视图层的更新。
+**解释**：setData 函数用于将数据，从逻辑层发送到视图层，当开发者调用 setData 后，数据的变化会引起视图层的更新。
 **参数说明**
 
-|属性|类型|是否必填|描述|
-|--|--|--|--|
-|data|	Object|	是|	这次要改变的数据|	
-|callback	|Function|	否	|setData引起的界面更新渲染完毕后的回调函数|
+|属性|类型|默认值|必填|描述|
+|--|--|--|--|--|
+|data|	Object| |	是|	这次要改变的数据|	
+|callback	|Function||	否	|setData引起的界面更新渲染完毕后的回调函数|
 
 **说明**：
 * Object 以`key: value`的形式表示，将`this.data`中的`key`对应的值改变成`value`。
@@ -46,42 +46,42 @@ sidebar: app_service_pagesetData
 ```js
 // index.js
 Page({
-  data: {
-    text: 'init data',
-    num: 0,
-    arr: [{text: 'init data'}],
-    obj: {
-      text: 'init data'
+    data: {
+        text: 'init data',
+        num: 0,
+        arr: [{text: 'init data'}],
+        obj: {
+            text: 'init data'
+        }
+    },
+    changeText() {
+        // 不要直接通过 this.data.text = 'changed data' 修改this.data，应该使用 setData
+        this.setData({
+            text: 'changed data'
+        });
+    },
+    changeNum() {
+        // 或者，可以修改 this.data 之后马上用 setData 设置一下修改了的字段
+        this.data.num = 1
+        this.setData({
+            num: this.data.num
+        });
+    },
+    changeItemInArr() {
+        // 对于对象或数组字段，可以直接修改一个子字段，这样方式会有带来更好的性能
+        this.setData({
+            'arr[0].text':'changed data'
+        });
+    },
+    changeItemInObj(){
+        this.setData({
+            'obj.text': 'changed data'
+        });
+    },
+    addNewField() {
+        this.setData({
+            'newField.text': 'new data'
+        });
     }
-  },
-  changeText() {
-    // 不要直接通过 this.data.text = 'changed data' 修改this.data，应该使用 setData
-    this.setData({
-      text: 'changed data'
-    });
-  },
-  changeNum() {
-    // 或者，可以修改 this.data 之后马上用 setData 设置一下修改了的字段
-    this.data.num = 1
-    this.setData({
-      num: this.data.num
-    });
-  },
-  changeItemInArr() {
-    // 对于对象或数组字段，可以直接修改一个子字段，这样方式会有带来更好的性能
-    this.setData({
-      'arr[0].text':'changed data'
-    });
-  },
-  changeItemInObj(){
-    this.setData({
-      'obj.text': 'changed data'
-    });
-  },
-  addNewField() {
-    this.setData({
-      'newField.text': 'new data'
-    });
-  }
 });
 ```

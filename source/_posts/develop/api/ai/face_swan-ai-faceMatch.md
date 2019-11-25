@@ -19,12 +19,12 @@ sidebar: face_swan-ai-faceMatch
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|data | Array| 是 | -| 图片信息 | 
-|success | Function |  否 | -|接口调用成功后的回调函数 | 
-|fail | Function | 否 |-| 接口调用失败的回调函数 | 
-|complete|	Function|	否	|-|接口调用结束的回调函数（调用成功、失败都会执行）|
+|data | Array| 是 | | 图片信息 | 
+|success | Function |  否 | |接口调用成功后的回调函数 | 
+|fail | Function | 否 | | 接口调用失败的回调函数 | 
+|complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **data  参数**
 
@@ -36,7 +36,7 @@ sidebar: face_swan-ai-faceMatch
 |liveness_control | string | 否 | 活体检测控制。<br> **· NONE**: 不进行控制；<br> **· LOW**:较低的活体要求(高通过率 低攻击拒绝率)；<br> **· NORMAL**: 一般的活体要求(平衡的攻击拒绝率, 通过率)；<br> **· HIGH**: 较高的活体要求(高攻击拒绝率 低通过率)。默认 NONE，若活体检测结果不满足要求，则返回结果中会提示活体检测失败。|
 |face_type | string | 否 | 人脸的类型。<br> **· LIVE** 表示生活照：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br> **· IDCARD**表示身份证芯片照：二代身份证内置芯片中的人像照片；<br> **· WATERMARK** 表示带水印证件照：一般为带水印的小图，如公安网小图；<br> **· CERT** 表示证件照片：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
 
-**返回值说明**
+**success 返回参数说明**
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -49,34 +49,50 @@ sidebar: face_swan-ai-faceMatch
 |---|---|---|
 |face_token|string |人脸的唯一标志|
 
-**示例代码**
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceMatch.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceMatch2.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/ae12872d24c04bfd2071e38cbbf2a1aa1569415830853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.ai.faceMatch({
-  data: [
-    {
-        "image": "https://www.downloadImage.com/xxxx.jpg",
-        "image_type": "URL",
-        "face_type": "LIVE",
-        "quality_control": "LOW",
-        "liveness_control": "HIGH"
-    },
-    {
-        "image": "https://www.downloadImage.com/xxxx.jpg",
-        "image_type": "URL",
-        "face_type": "IDCARD",
-        "quality_control": "LOW",
-        "liveness_control": "HIGH"
+Page({
+    faceMatch() {
+        swan.ai.faceMatch({
+            data: [{
+                    "image": "https://www.downloadImage.com/xxxx.jpg",
+                    "image_type": "URL",
+                    "face_type": "LIVE",
+                    "quality_control": "LOW",
+                    "liveness_control": "HIGH"
+                },
+                {
+                    "image": "https://www.downloadImage.com/xxxx.jpg",
+                    "image_type": "URL",
+                    "face_type": "IDCARD",
+                    "quality_control": "LOW",
+                    "liveness_control": "HIGH"
+            }],
+            success: res => {
+                console.log('res');
+            },
+            fail: err => {
+                console.log('err');
+            }
+        });
     }
-  ],
-  success: res => {
-    console.log('res');
-  },
-  fail: err => {
-    console.log('err');
-  }
 });
 ```
 

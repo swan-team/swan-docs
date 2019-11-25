@@ -19,9 +19,9 @@ SWAN 智能小程序中，JS 文件是控制交互逻辑的动态语言。
 
 ```js
 Page({
-	setName: function() {
-		this.setData({ me: "aaa" });
-	}
+    setName: function() {
+	this.setData({ me: "aaa" });
+    }
 })
 ```
 **说明**：

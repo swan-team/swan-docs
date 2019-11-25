@@ -42,7 +42,22 @@ sidebar: media_audio
 |3|当解码时发生错误|
 |4|不支持音频|
 
-**示例**：
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/audio.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
 
 <a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -50,17 +65,18 @@ sidebar: media_audio
 
 ```html
 <audio poster="{{poster}}" 
-       name="{{name}}" 
-       loop="false" 
-       author="{{author}}" 
-       src="{{src}}" 
-       id="myAudio" 
-       controls 
-       bind:error="error" 
-       bind:play="audioPlay" 
-       bind:pause="audioPause" 
-       bind:timeupdate="timeupdate" 
-       bind:ended="audioEnded">
+    name="{{name}}" 
+    loop="false" 
+    author="{{author}}" 
+    src="{{src}}" 
+    id="myAudio" 
+    controls 
+    bind:error="error" 
+    bind:play="audioPlay" 
+    bind:pause="audioPause" 
+    bind:timeupdate="timeupdate" 
+    bind:ended="audioEnded"
+>
 </audio>
 ```
 

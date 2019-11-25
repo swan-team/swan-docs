@@ -19,12 +19,12 @@ sidebar:  classify_swan-ai-plantClassify
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image|	String|是| - |图像资源地址|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**
 
@@ -40,24 +40,42 @@ sidebar:  classify_swan-ai-plantClassify
 |name| String|	植物名称，示例：吉娃莲。|
 |score	|Number|	置信度，示例：0.5321。|
 
-**示例**：
+**图片示例**：
 
-<a href="swanide://fragment/0ed61bf9910ed18a664037cd907c0fae1569415076954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/plantClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**：
+
+<a href="swanide://fragment/2af91115191447b4b93ae469129f7fb91569501181045" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.plantClassify({
-      image,
-      success: res => {
-        console.log('plantClassify res', res.result);
-      },
-      fail: err => {
-        console.log('plantClassify err', err);
-      }
-    });
-  }
+Page({
+    plantClassify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.plantClassify({
+                    image,
+                    success: res => {
+                        console.log('plantClassify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('plantClassify err', err);
+                    }
+                });
+            }
+        });
+    }
 });
 ```
 

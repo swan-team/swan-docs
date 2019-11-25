@@ -5,27 +5,21 @@ nav: api
 sidebar: voice_swan-ai-VoiceRecognizer
 ---
 
- 
 
-**方法列表**：
+**解释**：语音识别
 
-|方法 | 参数  |说明|
-|---- | ---- | ---- |
-|start |  options|  开始|
-|stop |  |停止|
-|cancel | | 取消|
-|onStart | callback| 引擎准备就绪，可以开始说话|
-|onRecognize | callback|有识别结果返回|
-|onFinish | callback| 识别完成 |
-|onError | callback| 识别遇到错误 |
+**百度APP中扫码体验：**
 
-**start(options) 说明**
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizer.png"  class="demo-qrcode-image" />
 
-|属性 |类型  |必填 |默认值 |说明|
+
+**object 参数说明**
+
+|属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |---- |
-|mode |String  |  否  | dnn|听音模式，有效值dnn/touch|
-|longSpeech   |Boolean  |  否  | false | 是否开启长语音|
-|context |String  |  否  | input|语音识别所用的场景值，有效值见下表格。 |
+|mode |String  |  dnn| 否  |听音模式，有效值dnn/touch|
+|longSpeech   |Boolean  |   false | 否  |是否开启长语音|
+|context |String  |   input|否  |语音识别所用的场景值，有效值见下表格。 |
 
 mode有效值如下
 
@@ -41,55 +35,16 @@ context有效值如下
 |input| 输入法场景|
 |search|搜索场景值|
 
-**onRecognize(callback) 回调结果说明**：
-
-|属性 | 类型 | 说明 |
-|---- | ---- | ---- |
-|result |String | 小程序语音识别过程中的返回内容 |
-
-**onFinish(callback) 回调结果说明**：
-
-|属性 | 类型 | 说明 |
-|---- | ---- | ---- |
-|result |String | 小程序语音识别完成后的返回内容 |
-
-**onError(callback) 回调结果说明**：
-
-|属性 | 类型 | 说明 |
-|---- | ---- | ---- |
-|errorCode |String | 错误码 |
-|errorMsg |String | 错误信息 |
-
-**errorCode值说明**：
-
-|errorCode|errorMsg|
-|---- | ---- |
-|1001|	DNS解析失败|
-|1002|	请求超时|
-|1003|	网络不稳定|	
-|1004|	网络不可用|	
-|2001|	录音设备异常|
-|2002|	用户未说话|
-|2003|	用户说话时间太短|
-|2004|	无录音权限|
-|2005|	用户拒绝授权录音权限|
-|2006|	识别被打断|
-|2007|	获取鉴权信息失败|
-|2008|	语音鉴权失败|
-|2009|	初始化失败|
-|3001|	请求参数错误|
-|3002|	识别引擎忙|
-|3003|	错误的调起时机|
-|4001|	识别过程出错|
-|4002|	语音过长|
-|4003|	没有匹配的识别结果|
-|4004|	返回结果异常|
-|9000|	未知错误|
-
-**示例**
 
 
-<a href="swanide://fragment/623d10008e3c4a087ac1c35f20df32881569415699768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+
+
+**代码示例**
+
+
+<a href="swanide://fragment/cc2100b123bbb0154c277fe6c8f8fa5b1573728427299" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const voiceRecognizer = swan.ai.getVoiceRecognizer();
