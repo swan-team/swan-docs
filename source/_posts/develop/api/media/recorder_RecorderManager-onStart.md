@@ -2,7 +2,7 @@
 title: RecorderManager.onStart
 header: develop
 nav: api
-sidebar: RecorderManager.onStart
+sidebar: recorder_RecorderManager-onStart
 ---
 
 

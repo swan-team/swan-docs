@@ -2,7 +2,7 @@
 title: CanvasContext.setLineDash
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setLineDash
+sidebar: canvas_CanvasContext-setLineDash
 ---
  
 **解释**：设置线条虚线样式的间距和长度。

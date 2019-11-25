@@ -2,7 +2,7 @@
 title: RecorderManager.stop 
 header: develop
 nav: api
-sidebar: recorder_tRecorderManager-stop
+sidebar: recorder_RecorderManager-stop
 ---
 
 

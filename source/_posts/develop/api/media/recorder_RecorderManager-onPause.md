@@ -2,7 +2,7 @@
 title: RecorderManager.onPause
 header: develop
 nav: api
-sidebar: RecorderManager.onPause
+sidebar: recorder_RecorderManager-onPause
 ---
 
 

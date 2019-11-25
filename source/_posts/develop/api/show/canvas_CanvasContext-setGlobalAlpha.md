@@ -2,7 +2,7 @@
 title: CanvasContext.setGlobalAlpha
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setGlobalAlpha
+sidebar: canvas_CanvasContext-setGlobalAlpha
 ---
  
 **解释**：设置全局画笔透明度。

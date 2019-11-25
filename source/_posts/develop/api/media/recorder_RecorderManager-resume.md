@@ -2,7 +2,7 @@
 title: RecorderManager.resume
 header: develop
 nav: api
-sidebar: RecorderManager.resume
+sidebar: recorder_RecorderManager-resume
 ---
 
 
