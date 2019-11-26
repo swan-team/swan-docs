@@ -2,7 +2,7 @@
 title: CanvasContext.rect
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_rect
+sidebar: canvas_CanvasContext-rect
 ---
 
  

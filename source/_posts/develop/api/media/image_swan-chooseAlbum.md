@@ -2,7 +2,7 @@
 title: swan.chooseAlbum
 header: develop
 nav: api
-sidebar: image_chooseAlbum
+sidebar: image_swan-chooseAlbum
 ---
 
 

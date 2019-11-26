@@ -9,6 +9,10 @@ sidebar: swan-getSystemRiskInfo
 
 **解释**： 获取用于得到风控信息的加密信息对象。更多小程序风控能力参见[风控服务](https://smartprogram.baidu.com/docs/develop/serverapi/open_risk_power/)。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getSystemRiskInfo.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -24,6 +28,20 @@ sidebar: swan-getSystemRiskInfo
 |参数|类型|说明|
 |----|----|----|
 |content|Object|用于获取风控信息的加密信息对象。要获取风控信息，需要和[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口联合使用，并作为[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口的 xtoken 参数传入。格式：{"key":"xxxx","value":"xxxx"}|
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getSystemRiskInfo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

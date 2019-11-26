@@ -2,7 +2,7 @@
 title: CanvasContext.setFontSize
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setFontSize
+sidebar: canvas_CanvasContext-setFontSize
 ---
  
 **解释**：设置字体的字号。

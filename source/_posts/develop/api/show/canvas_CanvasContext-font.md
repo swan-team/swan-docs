@@ -2,7 +2,7 @@
 title: CanvasContext.font
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_font
+sidebar: canvas_CanvasContext-font
 ---
 
  

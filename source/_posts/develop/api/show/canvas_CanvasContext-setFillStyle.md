@@ -2,7 +2,7 @@
 title: CanvasContext.setFillStyle
 header: develop
 nav: api
-sidebar:  canvas_CanvasContext_setFillStyle
+sidebar: canvas_CanvasContext-setFillStyle
 ---
  
 

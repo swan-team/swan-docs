@@ -2,7 +2,7 @@
 title: CanvasContext.setLineJoin
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setLineJoin
+sidebar: canvas_CanvasContext-setLineJoin
 ---
  
 

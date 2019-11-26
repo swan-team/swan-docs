@@ -2,7 +2,7 @@
 title: swan.chooseInvoiceTitle
 header: develop
 nav: api
-sidebar: chooseinvoicetitle_swan-chooseInvoiceTitle
+sidebar: swan-chooseInvoiceTitle
 ---
  
 
