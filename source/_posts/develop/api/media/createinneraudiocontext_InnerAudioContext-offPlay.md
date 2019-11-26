@@ -30,7 +30,7 @@ sidebar: InnerAudioContext.offPlay
 
 **代码示例**：
 
-<a href="swanide://fragment/800b3a6986f8100cd5d091acd7c761cc1574013917868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2cca8e2312f14597549f03baf43155ed1574736388770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
