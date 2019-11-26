@@ -23,7 +23,7 @@ sidebar: videocontext_VideoContext-hideStatusBar
 
 ```html
 <view class="wrap">
-    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <video id="myVideo" enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
     <button bindtap="hideStatusBar">点击隐藏状态栏</button>
 </view>
 ```

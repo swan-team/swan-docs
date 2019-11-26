@@ -21,18 +21,18 @@ sidebar: videocontext_VideoContext-playbackRate
 倍率，当前支持0.75 / 1.0 / 1.25 / 1.5 / 2.0 倍速。
 
 **代码示例**：
-<a href="swanide://fragment/5ec380fef54d731e089515001d8c77281574008073736" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/afe9615c43c4ce4762935353e649b4431574765430075" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
     <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
-    <button data-set="0.75" bindtap="playbackRate">点击0.75倍速播放</button>
-    <button data-set="1.0" bindtap="playbackRate">点击1.0倍速播放</button>
-    <button data-set="1.25" bindtap="playbackRate">点击1.25倍速播放</button>
-    <button data-set="1.5" bindtap="playbackRate">点击1.5倍速播放</button>
-    <button data-set="2.0" bindtap="playbackRate">点击2.0倍速播放</button>
+    <button type='primary' data-set="0.75" bindtap="playbackRate">点击0.75倍速播放</button>
+    <button type='primary' data-set="1.0" bindtap="playbackRate">点击1.0倍速播放</button>
+    <button type='primary' data-set="1.25" bindtap="playbackRate">点击1.25倍速播放</button>
+    <button type='primary' data-set="1.5" bindtap="playbackRate">点击1.5倍速播放</button>
+    <button type='primary' data-set="2.0" bindtap="playbackRate">点击2.0倍速播放</button>
 </view>
 ```
 
@@ -47,7 +47,8 @@ Page({
         this.videoContext.play();
     },
     playbackRate(e) {
-        this.videoContext.playbackRate({rate: e.target.dataset.set});
+        console.log(e);
+        this.videoContext.playbackRate(+e.target.dataset.set);
     }
 });
 ```
