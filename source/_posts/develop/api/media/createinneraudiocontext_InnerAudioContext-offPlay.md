@@ -32,6 +32,16 @@ sidebar: InnerAudioContext.offPlay
 
 <a href="swanide://fragment/800b3a6986f8100cd5d091acd7c761cc1574013917868" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offPlay">offPlay</button>
+    </view>
+</view>
+```
+
 * 在 js 文件中
 
 ```javascript
@@ -50,6 +60,13 @@ Page({
         innerAudioContext.offPlay();
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+    },
+    offPlay(){
+        swan.showModal({
+            title: 'offPlay',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offPlay();
     }
 });
 ```

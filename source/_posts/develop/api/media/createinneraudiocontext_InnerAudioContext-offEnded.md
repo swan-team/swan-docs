@@ -30,7 +30,17 @@ sidebar: InnerAudioContext.oc
 
 **代码示例**：
 
-<a href="swanide://fragment/d1fbe892282fee87f6c2c7b8782b9e251574014356972" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/321b65df068229350eb437db1f504a961574734480025" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offEnded">offEnded</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -53,9 +63,15 @@ Page({
                 content: JSON.stringify(res)
             });
         });
-        innerAudioContext.offEnded();
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+    },
+    offEnded(){
+        swan.showModal({
+            title: 'offEnded',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offEnded();
     }
 });
 ```

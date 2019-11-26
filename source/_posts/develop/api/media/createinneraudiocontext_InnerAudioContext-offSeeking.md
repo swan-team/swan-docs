@@ -33,7 +33,18 @@ sidebar: InnerAudioContext.offSeeking
 
 **代码示例**：
 
-<a href="swanide://fragment/c44c05fb6d6d711ed787dc20c15f22fb1574013583474" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/098280a7aa066a235d3c303848795dc61574735821779" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="seek">seek</button>
+        <button type="primary" bindtap="offSeeking">offSeeking</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -64,6 +75,13 @@ Page({
     },
     seek() {
         this.innerAudioContext.seek(80);
+    },
+    offSeeking(){
+        swan.showModal({
+            title: 'offSeeking',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offSeeking();
     }
 });
 ```
