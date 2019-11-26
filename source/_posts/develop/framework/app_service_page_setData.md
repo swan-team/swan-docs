@@ -2,7 +2,7 @@
 title: setData 机制
 header: develop
 nav: framework
-sidebar: app_service_pagesetData
+sidebar: app_service_page_setData
 ---
 
 

@@ -2,7 +2,7 @@
 title: cloud.database
 header: develop
 nav: cloud
-sidebar:  Database
+sidebar:  database
 ---
 
  
