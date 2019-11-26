@@ -20,6 +20,21 @@ sidebar: videocontext_VideoContext-playbackRate
 
 倍率，当前支持0.75 / 1.0 / 1.25 / 1.5 / 2.0 倍速。
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/vplaybackRate.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+</div>
+
 **代码示例**：
 <a href="swanide://fragment/afe9615c43c4ce4762935353e649b4431574765430075" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

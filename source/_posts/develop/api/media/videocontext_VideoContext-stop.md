@@ -16,6 +16,20 @@ sidebar: videocontext_VideoContext-stop
 
 **方法参数**：无
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/vstop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+</div>
+
 **代码示例**：
 <a href="swanide://fragment/29a896daf5efea6c76444ebe4471c82e1574763945881" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
