@@ -28,7 +28,7 @@ sidebar:  query_IntersectionObserver-disconnect
 
 **代码示例**：
 
-<a href="swanide://fragment/1de191695cff9d7d9160f50a7d4411321574308035061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0f2e97ad1bb513cc9b4a422a74a953e81574764698768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -42,29 +42,55 @@ sidebar:  query_IntersectionObserver-disconnect
             <!-- 小球 -->
             <view class="ball"></view>
         </view>
-    </scroll-view>  
-    <view class="result-keyword">top: {{data.top}}</view>
-    <view class="result-keyword">right: {{data.right}}</view>
-    <view class="result-keyword">bottom: {{data.bottom}}</view>  
-    <view class="result-keyword">left: {{data.left}}</view>  
-    <view class="result-keyword">width: {{data.width}}</view>    
-    <view class="result-keyword">height: {{data.height}}</view>
+    </scroll-view>
+    <view class="result-item border-bottom">
+        <view class="result-keyword">top</view>
+        <view class="result-value">{{data.top}}</view>
+    </view>
+    <view class="result-item border-bottom">
+        <view class="result-keyword">right</view>
+        <view class="result-value">{{data.right}}</view>
+    </view>
+    <view class="result-item border-bottom">
+        <view class="result-keyword">bottom</view>
+        <view class="result-value">{{data.bottom}}</view>
+    </view>
+    <view class="result-item">
+        <view class="result-keyword">left</view>
+        <view class="result-value">{{data.left}}</view>
+    </view>
+    <view class="result-item">
+        <view class="result-keyword">width</view>
+        <view class="result-value">{{data.width}}</view>
+    </view>
+    <view class="result-item">
+        <view class="result-keyword">height</view>
+        <view class="result-value">{{data.height}}</view>
+    </view>
     <button type="primary" bindtap="disconnect">停止监听</button>
 </view>
 ```
 
 ```javascript
-onReady() {
-        const intersectionObserver = swan.createIntersectionObserver(this);
-        intersectionObserver
-        .relativeTo('.scroll-view')
-        .relativeToViewport({bottom: 100})
-        .observe('.ball', res => {
-            console.log('observe', res)
+Page({
+    data: {
+        data: ''
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver(this,{
+            selectAll: true
+        });
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            this.setData('data', res.intersectionRect);
+            console.log(res.intersectionRect.left); // 相交区域的左边界坐标
+            console.log(res.intersectionRect.top); // 相交区域的上边界坐标
+            console.log(res.intersectionRect.width); // 相交区域的宽度
+            console.log(res.intersectionRect.height); // 相交区域的高度
         });
         this.intersectionObserver = intersectionObserver;
     },
     disconnect() {
         this.intersectionObserver && this.intersectionObserver.disconnect();
     }
+});
 ```
