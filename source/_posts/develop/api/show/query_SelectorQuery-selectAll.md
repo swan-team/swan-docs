@@ -63,12 +63,10 @@ sidebar: query_SelectorQuery-selectAll
         </text>
     </view>
     <view class="list-area border-bottom">
-
         <text class="list-item-key-6">
             targetSecond:
         </text>
         <text class="list-item-value-4">{{targetSecond}}</text>
-
     </view>
 </view>
 ```

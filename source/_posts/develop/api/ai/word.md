@@ -90,8 +90,6 @@ sidebar: word
             </view>
             <view class="list-item">
                 <view class="list-item-key-6">词性:</view>
-          
-            
                 <view class="list-item-value">{{item.pos !== '' ? item.pos : '暂无'}}</view>
             </view>
         </view>

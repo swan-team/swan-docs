@@ -35,7 +35,7 @@ sidebar: query_IntersectionObserver
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>     
-</div>sss
+</div>
 
 **代码示例**：
 
