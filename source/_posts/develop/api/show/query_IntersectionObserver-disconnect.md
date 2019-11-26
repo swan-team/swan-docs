@@ -16,7 +16,7 @@ sidebar:  query_IntersectionObserver-disconnect
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/disconnect.gif">
+        <img src="https://b.bdstatic.com/miniapp/image/disconnect.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
