@@ -2,7 +2,7 @@
 title: RecorderManager.onResume
 header: develop
 nav: api
-sidebar: RecorderManager.onResume
+sidebar: recorder_RecorderManager-onResume
 ---
 
 >基础库 3.120.1 开始支持，低版本需做兼容处理。

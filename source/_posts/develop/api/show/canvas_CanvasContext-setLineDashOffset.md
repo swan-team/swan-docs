@@ -2,7 +2,7 @@
 title: CanvasContext.setLineDashOffset
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setLineDashOffset
+sidebar: canvas_CanvasContext-setLineDashOffset
 ---
 
  

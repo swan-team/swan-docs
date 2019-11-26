@@ -2218,7 +2218,7 @@
                       -
                         link: /develop/api/show/canvas_CanvasContext-setLineCap
                         text: CanvasContext.setLineCap
-                        name: canvas_CanvasContext-.setLineCap
+                        name: canvas_CanvasContext-setLineCap
                       -
                         link: /develop/api/show/canvas_CanvasContext-setLineJoin
                         text: CanvasContext.setLineJoin

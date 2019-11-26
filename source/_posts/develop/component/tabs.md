@@ -2,7 +2,7 @@
 title: tabs 标签栏
 header: develop
 nav: component
-sidebar: nav
+sidebar: tabs
 ---
 
 

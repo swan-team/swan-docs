@@ -2,7 +2,7 @@
 title: CanvasContext.arc
 header: develop
 nav: api
-sidebar: canvas_CanvasContext.arc
+sidebar: canvas_CanvasContext-arc
 ---
 
 

@@ -2,7 +2,7 @@
 title: RecorderManager.pause
 header: develop
 nav: api
-sidebar:  RecorderManager.pause
+sidebar: recorder_RecorderManager-pause
 ---
 
 

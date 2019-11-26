@@ -2,7 +2,7 @@
 title: RecorderManager.onInterruptionBegin
 header: develop
 nav: api
-sidebar: RecorderManager.onInterruptionBegin
+sidebar: recorder_RecorderManager-onInterruptionBegin
 ---
 
 >基础库 3.120.1 开始支持，低版本需做兼容处理。

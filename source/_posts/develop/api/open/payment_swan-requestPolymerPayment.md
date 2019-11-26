@@ -2,7 +2,7 @@
 title: swan.requestPolymerPayment
 header: develop
 nav: api
-sidebar: payment_swan.requestPolymerPayment
+sidebar: payment_swan-requestPolymerPayment
 ---
 
 
@@ -43,7 +43,7 @@ sidebar: payment_swan.requestPolymerPayment
 |tpOrderId| 是|商户平台自己记录的订单ID，当支付状态发生变化时，会通过此订单ID通知商户。|
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
-|rsaSign| 是|对`appKey+dealId+tpOrderId+totalAmount`进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId `进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
 |bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  

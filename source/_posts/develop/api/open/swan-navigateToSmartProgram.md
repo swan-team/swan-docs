@@ -11,6 +11,10 @@ sidebar: swan-navigateToSmartProgram
 
 **解释**： 打开另一个小程序。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_navigateToSmartProgram.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：

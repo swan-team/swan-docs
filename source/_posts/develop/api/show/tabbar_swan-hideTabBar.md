@@ -2,7 +2,7 @@
 title: swan.hideTabBar
 header: develop
 nav: api
-sidebar: show_tabbar_swan-hideTabBar
+sidebar: tabbar_swan-hideTabBar
 ---
  
 **解释**：隐藏 tabBar

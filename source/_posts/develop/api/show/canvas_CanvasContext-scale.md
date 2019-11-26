@@ -2,7 +2,7 @@
 title: CanvasContext.scale
 header: develop
 nav: api
-sidebar:  canvas_CanvasContext_scale
+sidebar: canvas_CanvasContext-scale
 ---
 
  
