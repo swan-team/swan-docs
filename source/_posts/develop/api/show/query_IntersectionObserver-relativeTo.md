@@ -68,9 +68,8 @@ Page({
     data: { },
     onReady() {
         const intersectionObserver = swan.createIntersectionObserver(this);
-        intersectionObserver
-        .relativeTo('.scroll-view', 50)
-        console.log(intersectionObserver) // {selector: ".scroll-view", margins: 50}
+        intersectionObserver.relativeTo('.scroll-view', 50);
+        console.log(intersectionObserver); // {selector: ".scroll-view", margins: 50}
         swan.showModal({
             title: 'relativeTo',
             content: JSON.stringify(intersectionObserver._relativeInfo)
