@@ -2,7 +2,7 @@
 title: VoiceRecognizer.start
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_start
+sidebar: voice_VoiceRecognizer-start
 ---
 
 **解释**：  开始

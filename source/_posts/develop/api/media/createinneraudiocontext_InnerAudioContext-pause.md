@@ -2,7 +2,7 @@
 title: InnerAudioContext.pause
 header: develop
 nav: api
-sidebar: InnerAudioContext.pause
+sidebar: createinneraudiocontext_InnerAudioContext-pause
 ---
 
 

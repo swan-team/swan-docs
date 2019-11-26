@@ -2,7 +2,7 @@
 title: swan.saveImageToPhotosAlbum
 header: develop
 nav: api
-sidebar: image_saveImageToPhotosAlbum
+sidebar: image_swan-saveImageToPhotosAlbum
 ---
 
 

@@ -2,7 +2,7 @@
 title: ARCameraContext
 header: develop
 nav: api
-sidebar: media_arcameracontext_ARCameraContext
+sidebar: arcameracontext_ARCameraContext
 ---
 
  

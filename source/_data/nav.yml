@@ -2723,7 +2723,7 @@
                   -
                     link: /develop/api/device_sys/swan-getSystemInfoSync
                     text: swan.getSystemInfoSync
-                    name: wan-getSystemInfoSync
+                    name: swan-getSystemInfoSync
                   -
                     link: /develop/api/device_sys/swan-getEnvInfoSync
                     text: swan.getEnvInfoSync
@@ -2843,7 +2843,7 @@
                   -
                     link: /develop/api/device_sys/swan-setKeepScreenOn
                     text: swan.setKeepScreenOn
-                    name: screen_swan-setKeepScreenOn
+                    name: swan-setKeepScreenOn
               -
 
                 text: 用户截屏事件

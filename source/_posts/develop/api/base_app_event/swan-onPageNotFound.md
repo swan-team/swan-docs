@@ -2,7 +2,7 @@
 title: swan.onPageNotFound
 header: develop
 nav: api
-sidebar: swan.onPageNotFound
+sidebar: swan-onPageNotFound
 ---
 
 

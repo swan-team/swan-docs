@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onRecognize
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onRecognize
+sidebar: voice_VoiceRecognizer-onRecognize
 ---
 
 **解释**： 有识别结果返回

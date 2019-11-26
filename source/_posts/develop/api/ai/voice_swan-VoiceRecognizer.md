@@ -2,7 +2,7 @@
 title: VoiceRecognizer
 header: develop
 nav: api
-sidebar: voice_swan-ai-VoiceRecognizer
+sidebar: voice_swan-VoiceRecognizer
 ---
 
 

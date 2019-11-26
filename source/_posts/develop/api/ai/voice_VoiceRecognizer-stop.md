@@ -2,7 +2,7 @@
 title: VoiceRecognizer.stop
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_stop
+sidebar: voice_VoiceRecognizer-stop
 ---
 
 **解释**： 停止
