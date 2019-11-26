@@ -3769,8 +3769,8 @@
                         sidebar:
                           -
                               text: doc.get
-                              name: cloud_database_collection_doc_get
-                              link: /develop/cloud/cloud_database/doc/#doc-get
+                              name: doc
+                              link: /develop/cloud/cloud_database/doc 
                           -
                               text: doc.update
                               name: cloud_database_collection_doc_update

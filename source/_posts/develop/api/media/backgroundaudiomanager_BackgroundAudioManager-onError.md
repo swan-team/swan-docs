@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onError
 header: develop
 nav: api
-sidebar: backgroundaudiomanager_BackgroundAudioManager-onErro
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onError
 ---
 
 

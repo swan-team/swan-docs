@@ -2,7 +2,7 @@
 title: VideoContext.stop
 header: develop
 nav: api
-sidebar: videocontext-stop
+sidebar: videocontext_VideoContext-stop
 ---
 
 

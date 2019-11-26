@@ -2,7 +2,7 @@
 title: InnerAudioContext.onWaiting
 header: develop
 nav: api
-sidebar: createinneraudiocontext_InnerAudioContext-onWaiting
+sidebar: media/createinneraudiocontext_InnerAudioContext-onWaiting
 ---
 
 

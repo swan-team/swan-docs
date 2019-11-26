@@ -2,7 +2,7 @@
 title: swan.getRecorderManager
 header: develop
 nav: api
-sidebar: recorder_swan-getRecorderManager/
+sidebar: recorder_swan-getRecorderManager
 ---
 
 
