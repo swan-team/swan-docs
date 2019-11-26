@@ -10,11 +10,9 @@ sidebar: InnerAudioContext.offTimeUpdate
 
 **解释**：取消监听 onTimeUpdate 事件
 
-
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_offTimeUpdate.png"  class="demo-qrcode-image" />
-
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffTimeUpdate.png"  class="demo-qrcode-image" />
 
 **方法参数**：Function callback
 

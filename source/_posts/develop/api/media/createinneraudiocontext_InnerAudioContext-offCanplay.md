@@ -32,8 +32,17 @@ sidebar: InnerAudioContext.offCanplay
 
 **代码示例**：
 
-<a href="swanide://fragment/89e680a27ba56865d88ddb9b113d5f6b1574014416962" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f8bea8e31acd803303f1f9486276e9891574734004361" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offCanplay">offCanplay</button>
+    </view>
+</view>
+```
 * 在 js 文件中
 
 ```javascript
@@ -52,6 +61,13 @@ Page({
         innerAudioContext.offCanplay();
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+    },
+    offCanplay(){
+        swan.showModal({
+            title: 'offCanplay',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offCanplay();
     }
 });
 ```

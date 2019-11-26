@@ -17,7 +17,6 @@ sidebar: word
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png"  class="demo-qrcode-image" />
 
-
 **方法参数**：Object object
 
 **`object`参数说明**：
