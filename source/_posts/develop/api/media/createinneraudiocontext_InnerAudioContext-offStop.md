@@ -31,7 +31,17 @@ sidebar:  InnerAudioContext.offStop
 
 **代码示例**：
 
-<a href="swanide://fragment/7cc2d73a7d728df8d458a3fc77f691fe1574013520880" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f20c32c10740f5c4b7cc834a818daf691574735974064" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offStop">offStop</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -54,6 +64,13 @@ Page({
         });
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+    },
+    offStop(){
+        swan.showModal({
+            title: 'offStop',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offStop();
     }
 });
 ```

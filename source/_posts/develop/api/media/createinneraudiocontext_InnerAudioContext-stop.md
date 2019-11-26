@@ -16,6 +16,20 @@ sidebar: InnerAudioContext.stop
 
 **方法参数**：无
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/InnerAudioContextStop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
 <a href="swanide://fragment/85895f7c8bc3e8bad46e9d13a083667a1574011686142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -31,7 +31,17 @@ sidebar: InnerAudioContext.offError
 
 **代码示例**：
 
-<a href="swanide://fragment/69f5f45dc946b568f4ece41c39eae89c1574014252333" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e6758e5581755dff7088ca636b7770681574734618602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offError">offError</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -57,6 +67,13 @@ Page({
         innerAudioContext.offError();
         innerAudioContext.play();
         this.innerAudioContext = innerAudioContext;
+    },
+    offError(){
+        swan.showModal({
+            title: 'offError',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offError();
     }
 });
 ```
