@@ -37,7 +37,7 @@ sidebar: log_swan-checkSession
     </div>     
 </div>
 
-**示例一**：在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
+**代码示例1**：在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
 
 <a href="swanide://fragment/2a052b4283fb1e23d02a69dae170f1331572274389729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -82,7 +82,7 @@ swan.checkSession({
 });
 ```
 
-**示例二**：在百度APP版本11.16（包括11.16）之后建议按照如下示例使用
+**代码示例2**：在百度APP版本11.16（包括11.16）之后建议按照如下示例使用
 
 <a href="swanide://fragment/3bf18e6a967cec2a94c8ae9ee93d78cd1572274602042" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
