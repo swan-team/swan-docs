@@ -22,6 +22,7 @@ sidebar: swan-openLocation
 |longitude  | Float  | 是  | | 经度，范围为 -180~180，负数表示西经。|
 |scale  | INT |否 | |  缩放比例，范围 5~18，默认为18。|
 |name  | String |否 | | 位置名|
+|ignoredApps|array|否 | |定义在拉起的地图 App 面板中需要被屏蔽的地图类 App。|
 |address  | String |否 | | 地址的详细说明|
 |success  | Function |否 | | 接口调用成功的回调函数|
 |fail  | Function |否 | | 接口调用失败的回调函数|
