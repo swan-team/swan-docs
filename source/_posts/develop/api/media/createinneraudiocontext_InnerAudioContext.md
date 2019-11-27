@@ -15,8 +15,8 @@ sidebar: createinneraudiocontext_InnerAudioContext
 
 **属性列表**：
 
-|方法 | 参数 | 只读 |说明 |
-|---- | ---- | ---- | ---- |
+|方法 | 参数 | 必填 |说明 |
+|:---|:---|:---|:---|
 |src |String | 否 |音频的数据链接，用于直接播放，仅支持绝对路径。|
 |startTime |Number | 否 | 开始播放的位置（单位：s），默认 0 。|
 |autoplay |Boolean| 否 |是否自动开始播放，默认 false 。|
@@ -31,10 +31,19 @@ sidebar: createinneraudiocontext_InnerAudioContext
 **支持格式**:
 
 |格式	|iOS|	Android|
-|---|---|---|
-|flac<br>amr<br>wma<br>ogg<br>ape<br>mp4|	否	|是|
-|m4a<br>wav<br>mp3<br>aac	|是	|是|
-|aiff<br>caf|是|否|
+|:---|:---|:---|
+|flac|	否	|是|
+|amr |	否	|是|
+|wma |	否	|是|
+|ogg |	否	|是|
+|ape |	否	|是|
+|mp4|	否	|是|
+|m4a |是	|是|
+|wav 	|是	|是|
+|mp3 	|是	|是|
+|aac	|是	|是|
+|aiff |是|否|
+|caf|是|否|
 
  
 **代码示例**：
