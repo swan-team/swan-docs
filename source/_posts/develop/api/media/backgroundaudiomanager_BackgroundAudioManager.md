@@ -16,7 +16,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |
-|src |String |  否 |音频的数据链接，用于直接播放。|
+|src |String |  否 |音频的数据链接，用于直接播放。有效值：m4a, aac, mp3, wav。|
 |startTime |Number | 否 |开始播放的位置（单位：s），默认 0 。|
 |duration |Number |是 |当前音频的长度（单位：s），只有在当前有合法的 src 时返回。 |
 |currentTime |Number | 是 |当前音频的播放位置（单位：s），只有在当前有合法的 src 时返回，时间不取整，保留小数点后 6 位。 |

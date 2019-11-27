@@ -28,6 +28,15 @@ sidebar: createinneraudiocontext_InnerAudioContext
 |volume |Number |否 |音量，范围 0~1。 |
 
 
+**支持格式**:
+
+|格式	|iOS|	Android|
+|---|---|---|
+|flac<br>amr<br>wma<br>ogg<br>ape<br>mp4|	否	|是|
+|m4a<br>wav<br>mp3<br>aac	|是	|是|
+|aiff<br>caf|是|否|
+
+ 
 **代码示例**：
 
 <a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
