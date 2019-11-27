@@ -42,7 +42,7 @@ sidebar: app_service_aoppage-after
 
 * onURLQueryChange
 
-**示例代码：**
+**代码示例：**
 
 ```js
 // 为url中含有page/index的page实例增加切面

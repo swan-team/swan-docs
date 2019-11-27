@@ -57,7 +57,7 @@ sidebar: nacomponent
 </div>
   
 
-**示例代码 1**
+**代码示例 1**
 
 ```javascript
     swan.showFavoriteGuide({
@@ -84,7 +84,7 @@ sidebar: nacomponent
     </div>  
 </div>
 
-**示例代码 2**
+**代码示例 2**
 
 ```javascript
 swan.showFavoriteGuide({

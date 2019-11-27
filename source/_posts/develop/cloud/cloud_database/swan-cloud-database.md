@@ -24,13 +24,13 @@ sidebar: cloud_database
 |functions|String|是| |云函数默认环境配置|
 |storage|String|是| |云存储默认环境配置|
 
-**示例代码1**
+**代码示例1**
 获取默认环境数据库：
 ```js
 const db = swan.cloud.database();
 ```
 
-**示例代码2**
+**代码示例2**
 获取指定环境'test-1'的数据库：
 ```js
 swan.cloud.database({

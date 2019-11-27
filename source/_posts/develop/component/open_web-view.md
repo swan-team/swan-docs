@@ -115,7 +115,7 @@ web-view 网页中支持的接口有：
 
 用户分享时可获取当前web-view的URL，即在onShareAppMessage回调中返回webViewUrl参数。
 
-示例代码：
+代码示例：
 
 ```javascript
 Page({

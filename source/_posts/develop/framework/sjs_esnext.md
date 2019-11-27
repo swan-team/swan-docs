@@ -10,7 +10,7 @@ SJS 支持部分 ES6 语法。
 
 ## let & const
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/8e6dcb8d117f38f972352293c3eed5921571224893177" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -27,7 +27,7 @@ function foo(){
 
 ## 箭头函数
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/9a6a2cf7b615ee479a836561c75072781571225314434" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -49,7 +49,7 @@ obj.getAge();
 
 ## 更简洁的对象字面量（enhanced object literal）
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/884fffdf5524cc52bee2932baf3ba1141571225508817" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -74,7 +74,7 @@ const msg = `hello ${NAME}`; // hello sjs
 
 ## 解构赋值（Destructuring）
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/2837f75b9ce8e6833ec85067d19f48181571225677949" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -118,7 +118,7 @@ r({a: 1, b: 2}) === 10; // true
 
 ## Default + Rest + Spread
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/fa852e72c0cea30c95ec1fadd55732e81571225929605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

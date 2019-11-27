@@ -12,7 +12,7 @@ sidebar: custom-component_extend
 
 为了更好的理解扩展后的效果，在此举例说明：
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/5262a060bf8642ac809a8b116ad35dae1574058224954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -43,7 +43,7 @@ Behavior() 构造器提供了新的定义段 definitionFilter，用于支持自�
 * 第一个参数是使用该 behavior 的 component/behavior 的定义对象；
 * 第二个参数是该 behavior 所使用的 behavior 的 definitionFilter 函数列表。
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/f345c27e9d5cead64e6ca47bc090e8fa1545996451082" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
