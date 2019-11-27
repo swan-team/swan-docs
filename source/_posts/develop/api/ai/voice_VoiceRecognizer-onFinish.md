@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onFinish 
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onFinish 
+sidebar: voice_VoiceRecognizer-onFinish
 ---
 
 **解释**： 识别完成 

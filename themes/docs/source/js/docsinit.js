@@ -31,7 +31,9 @@
         '/docs/introduction/single/': '/docs/introduction/rank_single/',
         '/docs/develop/function/single/': '/docs/introduction/rank_single/',
         '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/',
-        '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/'
+        '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/',
+        '/docs/develop/third/register/': '/docs/third/register/',
+        '/docs/develop/api/open_authorize/': '/docs/develop/api/open/authorize_list/',
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);

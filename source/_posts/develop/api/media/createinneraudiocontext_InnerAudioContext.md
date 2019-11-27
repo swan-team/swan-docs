@@ -2,7 +2,7 @@
 title: innerAudioContext
 header: develop
 nav: api
-sidebar: innerAudioContext
+sidebar: createinneraudiocontext_InnerAudioContext
 ---
 
 

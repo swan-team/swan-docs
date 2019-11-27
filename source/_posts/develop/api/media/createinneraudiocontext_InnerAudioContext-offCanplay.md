@@ -2,13 +2,15 @@
 title: InnerAudioContext.offCanplay
 header: develop
 nav: api
-sidebar: InnerAudioContext.offCanplay
+sidebar: createinneraudiocontext_InnerAudioContext-offCanplay
 ---
 
 
  
 
 **解释**：取消监听 onCanplay 事件
+
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffCanplay.png"  class="demo-qrcode-image" />
 

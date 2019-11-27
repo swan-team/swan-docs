@@ -2,7 +2,7 @@
 title: InnerAudioContext.onCanplay
 header: develop
 nav: api
-sidebar: InnerAudioContext.onCanplay
+sidebar: createinneraudiocontext_InnerAudioContext-onCanplay
 ---
 
 

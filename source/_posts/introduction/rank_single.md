@@ -2,7 +2,7 @@
 title: 单卡配置说明
 header: introduction
 nav: book
-sidebar: rank_singe
+sidebar: rank_single
 ---
  
 

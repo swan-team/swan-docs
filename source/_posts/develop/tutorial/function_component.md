@@ -25,7 +25,7 @@ sidebar: function_component
 
 ```js
 Page({
-    changeSwitchDuration: function () {
+    changeSlider: function () {
         console.log('changeSwitchDuration');
     }
 });

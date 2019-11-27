@@ -112,7 +112,7 @@ sidebar: type
 | guest  | string   | 否 | 嘉宾 | 谢娜   |
 | publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在一年以内   示例：2018年9月8日   |
 | movie_release_time | string   | 电影上映时间   | 否   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
-| video_duration  | string   | **是**   | 视频时长   | 按照00:00:00格式填写  |
+| video_duration  | string   | **是**   | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
 | pc_url | string   | **是（和h5_url需填一种）** | 视频PC播放链接   |  |
 | h5_url | string   | **是（和pc_url需填一种）** | 视频H5播放链接   |  |
 | update_time  | string   | 否 | 更新时间   | 2018年9月10日 15:36:20   |
@@ -242,7 +242,7 @@ sidebar: type
 | comment_num   | int   | **是** | 内容评论量 | 1000   |
 | collect_num   | int   | **是** | 内容收藏量 | 1000   |
 | share_num  | int   | **是** | 内容转发量 | 1000   |
-| video_duration   | string   | 是（当资源为视频时，该字段必填）  | 视频时长   | 示例：00:00:00  |
+| video_duration   | string   | 是（当资源为视频时，该字段必填）  | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
 | pc_url  | string   | 是（当资源为视频时，和h5链接必填一种）  | 视频PC链接 |  |
 | h5_url  | string   | 是（当资源为视频时，和pc链接必填一种）  | 视频H5链接 |  |
 | store_name | string   | 是（如一篇文章有多个店铺，可不填写） | 商铺名称   | 商铺名称， case：火烧云  |

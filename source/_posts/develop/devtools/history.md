@@ -6,7 +6,7 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.18.1） 
+### 最新正式版本（2.19.1） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
@@ -19,16 +19,6 @@ sidebar: history
 
 * [rc 版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_rc/)
 
-
-<!-- ### 最新 Beta 版本（2.10.0-beta）
-
-> Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
-
-* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) /[Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=beta) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
-
-* [Beta版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#Beta%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
-
-使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。点击查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/">历史更新日志</a>。 -->
 
 ## 历史版本下载链接：
 

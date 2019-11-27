@@ -2,7 +2,7 @@
 title: swan.setInnerAudioOption
 header: develop
 nav: api
-sidebar: swan.setInnerAudioOption
+sidebar: createinneraudiocontext_swan-setInnerAudioOption
 ---
 
 

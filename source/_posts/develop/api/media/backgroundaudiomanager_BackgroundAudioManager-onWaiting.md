@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onWaiting 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onWaiting 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
 ---
 
 

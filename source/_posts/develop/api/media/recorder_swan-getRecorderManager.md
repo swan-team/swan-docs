@@ -2,12 +2,12 @@
 title: swan.getRecorderManager
 header: develop
 nav: api
-sidebar: swan-getRecorderManager
+sidebar: recorder_swan-getRecorderManager
 ---
 
 
 
-**解释**： 获取全局唯一的录音管理器`recorderManager`。
+**解释**： 获取全局唯一的录音管理器`recorderManager`。使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -47,3 +47,5 @@ Page({
     }
 });
 ```
+
+
