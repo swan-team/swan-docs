@@ -91,6 +91,115 @@ sidebar: map
 | padding    | 文本边缘留白 | Number |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/map-marker.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1：**：
+
+<a href="swanide://fragment/16a9806ccc835e31e5a7a4183f78435c1574840582474" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        markers="{{markers}}"
+        bindmarkertap="bindmarkertap"
+        bindcallouttap="bindcallouttap">
+    </map>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        latitude: 40.048828,
+        longitude: 116.280412,
+        markers: [{
+            markerId: 1,
+            latitude: 40.048828,
+            longitude: 116.280412,
+            title: 'markerId: 1',
+            zIndex: 100,
+            iconPath: '../images/location.png',
+            rotate: 90,
+            callout: {
+                display: 'ALWAYS',
+                content: '百度科技园',
+                color: '#000',
+                fontSize: '16',
+                borderRadius: 50,
+                bgColor: '#5B9FFF',
+                padding: 2,
+                textAlign: 'center'
+            }
+        }, {
+            markerId: 2,
+            latitude: 40.049655,
+            longitude: 116.27505,
+            title: 'markerId: 2',
+            zIndex: 100,
+            rotate: 90,
+            alpha: 0.5,
+            width: 30,
+            height: 50,
+            label: {
+                'content': 'label',
+                'color': '#7B68EE',
+                'fontSize': 16,
+                'borderWidth': 1,
+                'borderColor': '#5B9FFF',
+                'borderRadius': 50,
+                'bgColor': '#ADCFFF',
+                'padding': 5,
+                'textAlign': 'center'
+            },
+            anchor: {x: .5, y: 1},
+            callout: {
+                display: 'BYCLICK',
+                content: '西山壹号院',
+                color: '#FFF',
+                fontSize: '16',
+                borderRadius: 50,
+                bgColor: '#5B9FFF',
+                padding: 2,
+                textAlign: 'center'
+            }
+        }]
+    },
+    bindmarkertap() {
+        swan.showToast({
+            title: '点击标记啦',
+            icon: 'none'
+        });
+    },
+    bindcallouttap() {
+        swan.showToast({
+            title: '点击标记上方气泡啦',
+            icon: 'none'
+        });
+    }
+});
+```
+
+
 ### polyline
 **解释**：指定一系列坐标点，从数组第一项连线至最后一项<div></div><text class="notice">属性说明:</text>
 
@@ -105,6 +214,65 @@ sidebar: map
 | borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/map-polyline.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例2：**：
+
+<a href="swanide://fragment/831a5302b414013067743cb6286084171574841164008" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        polyline="{{polyline}}">
+    </map>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        latitude: 40.048828,
+        longitude: 116.280412,
+        polyline: [{
+            points: [{
+                longitude: 116.278796,
+                latitude: 40.048828
+            }, {
+                longitude: 116.27505,
+                latitude: 40.049655
+            }],
+            color: '#000000AA',
+            width: 2,
+            dottedLine: true,
+            arrowLine: true,
+            // arrowIconPath: '开发者服务器图片路径',
+            borderColor: '#FFB6C1',
+            borderWidth: 5
+        }]
+    }
+});
+```
+
 ### polygon
 **解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<div></div><text class="notice">属性说明:</text>
 
@@ -115,6 +283,68 @@ sidebar: map
 | strokeColor |	描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
 | zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/map-polygon.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例3:**：
+
+<a href="swanide://fragment/be2a2d5636c7a7421f64cd4e2c79ed301574841928160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        polygons="{{polygons}}">
+    </map>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        latitude: 40.048828,
+        longitude: 116.280412,
+        polygons: [{
+            points: [{
+                longitude: 116.278796,
+                latitude: 40.048828
+            }, {
+                longitude: 116.27505,
+                latitude: 40.049655
+            },{
+                longitude: 116.27305,
+                latitude: 40.050655
+            },{
+                longitude: 116.27105,
+                latitude: 40.051655
+            }],
+            strokeWidth: 1,
+            strokeColor: '#000000AA',
+            fillColor: '#000000AA',
+            zIndex: 20
+        }]
+    }
+});
+```
 
 ### circle
 **解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
@@ -127,6 +357,58 @@ sidebar: map
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
 | radius | 半径 | Number | 是 | |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/map-circle.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例4:**：
+
+<a href="swanide://fragment/6129297d298e20dc7e0b3f6d56ca24f01574842777356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        circles="{{circles}}">
+    </map>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        scale: 16,
+        latitude: 40.048828,
+        longitude: 116.280412,
+        circles: [{
+            latitude: 40.052751,
+            longitude: 116.278796,
+            color: '#FF5F41FF',
+            fillColor: '#FF5F41FF',
+            radius: 200,
+            strokeWidth: 2
+        }]
+    }
+});
+```
 
 ### control
 **解释**：在地图上显示控件，控件不随着地图移动<div></div><text class="notice">属性说明:</text>
@@ -152,7 +434,7 @@ sidebar: map
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
+        <img src="https://b.bdstatic.com/miniapp/image/map-control.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -162,7 +444,55 @@ sidebar: map
     </div>     
 </div>
 
-**代码示例**：
+**代码示例5**：
+
+<a href="swanide://fragment/5e5072a1342f5d576e57ffab2ac469d81574843304198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <map
+        style="width: 100%; height: 300px;"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        controls="{{controls}}"
+        bindcontroltap="bindcontroltap"
+        >
+    </map>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        latitude: 40.048828,
+        longitude: 116.280412,
+        controls: [{
+            controlId: 1,
+            iconPath: '/images/navigate.png',
+            position: {
+                left: 0,
+                top: 100,
+                width: 50,
+                height: 50
+            },
+            clickable: true
+        }]
+    },
+    bindcontroltap() {
+        swan.showToast({
+            title: '点击控件',
+            icon: 'none'
+        })
+    }
+});
+```
+
+**整体代码示例**：
 
 <a href="swanide://fragment/64984d55db8ac69c2a1fc651cc7fc2671570610273844" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
@@ -303,7 +633,19 @@ Page({
     }
 });
 ```
+**图片示例**：
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **Bug & Tip**：
 
