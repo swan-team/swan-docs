@@ -2,7 +2,7 @@
 title: RecorderManager
 header: develop
 nav: api
-sidebar: RecorderManager
+sidebar: recorder_RecorderManager
 ---
 
 

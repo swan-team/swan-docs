@@ -2,7 +2,7 @@
 title: swan.requestPolymerPayment
 header: develop
 nav: api
-sidebar: payment_swan.requestPolymerPayment
+sidebar: payment_swan-requestPolymerPayment
 ---
 
 

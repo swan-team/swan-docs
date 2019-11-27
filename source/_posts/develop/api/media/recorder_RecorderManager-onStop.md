@@ -2,7 +2,7 @@
 title: RecorderManager.onStop
 header: develop
 nav: api
-sidebar: RecorderManager.onStop
+sidebar: recorder_RecorderManager-onStop
 ---
 
 

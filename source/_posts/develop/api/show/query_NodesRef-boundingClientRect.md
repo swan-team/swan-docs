@@ -45,7 +45,7 @@ sidebar: query_NodesRef-boundingClientRect
 
 **代码示例**：
 
-<a href="swanide://fragment/bd188091c6a769dd38ecbb9d5cd640761574491158798" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/edf1aa51425ccf5e213e181ca267b5211574770246796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -53,7 +53,7 @@ sidebar: query_NodesRef-boundingClientRect
 <view class="wrap">
     <view class="card-area">
         <movable-area>
-            <movable-view class="target" x="{{x}}" y="{{y}}" direction="all" bindchange="queryNodeInfo">
+            <movable-view class="target" x="{{x}}" y="{{y}}" direction="all">
                 Drag
             </movable-view>
         </movable-area>

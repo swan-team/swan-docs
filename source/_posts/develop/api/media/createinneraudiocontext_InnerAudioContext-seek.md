@@ -2,7 +2,7 @@
 title: InnerAudioContext.seek
 header: develop
 nav: api
-sidebar: InnerAudioContext.seek
+sidebar: createinneraudiocontext_InnerAudioContext-seek
 ---
 
 

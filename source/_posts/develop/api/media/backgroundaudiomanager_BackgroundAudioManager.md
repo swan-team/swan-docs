@@ -2,7 +2,7 @@
 title: BackgroundAudioManager
 header: develop
 nav: api
-sidebar: BackgroundAudioManager
+sidebar: backgroundaudiomanager_BackgroundAudioManager 
 ---
 
 **解释**：[swan.getBackgroundAudioManager](/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/)的返回值。

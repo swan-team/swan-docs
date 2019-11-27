@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.play 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.play 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-play
 ---
 
 

@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.pause
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.pause
+sidebar: backgroundaudiomanager_BackgroundAudioManager-pause
 ---
 
 

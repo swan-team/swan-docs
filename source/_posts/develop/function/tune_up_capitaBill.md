@@ -2,7 +2,7 @@
 title: 下载资金账单
 header: develop
 nav: function
-sidebar: tune_up_capitaBil
+sidebar: tune_up_capitaBill
 ---
 
 

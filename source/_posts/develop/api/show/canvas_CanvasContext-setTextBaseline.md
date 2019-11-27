@@ -2,7 +2,7 @@
 title: CanvasContext.setTextBaseline
 header: develop
 nav: api
-sidebar: canvas_canvasContext.setTextBaseline
+sidebar: canvas_CanvasContext-setTextBaseline
 ---
 
  

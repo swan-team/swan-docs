@@ -22,7 +22,7 @@ sidebar: videocontext_VideoContext-showStatusBar
 
 ```html
 <view class="wrap">
-    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <video id="myVideo" enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
     <button bindtap="showStatusBar">点击显示状态栏</button>
 </view>
 ```

@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onTimeUpdate 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onTimeUpdate 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onTimeUpdate 
 ---
 
 

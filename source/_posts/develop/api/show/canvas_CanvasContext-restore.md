@@ -2,7 +2,7 @@
 title: CanvasContext.restore
 header: develop
 nav: api
-sidebar:  canvas_CanvasContext_restore
+sidebar:  canvas_CanvasContext-restore
 ---
 
 

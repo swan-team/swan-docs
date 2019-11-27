@@ -2,7 +2,7 @@
 title: InnerAudioContext.stop 
 header: develop
 nav: api
-sidebar: InnerAudioContext.stop 
+sidebar: createinneraudiocontext_InnerAudioContext-stop
 ---
 
 
@@ -15,6 +15,20 @@ sidebar: InnerAudioContext.stop
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextStop.png"  class="demo-qrcode-image" />
 
 **方法参数**：无
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/InnerAudioContextStop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

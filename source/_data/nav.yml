@@ -778,7 +778,7 @@
                   -
                     link: /develop/framework/sjs_datatype
                     text: 数据类型
-                    name: sjs-sjs_datatype
+                    name: sjs_datatype
                   -
                     link: /develop/framework/sjs_basic_library
                     text: 基础类库
@@ -2218,7 +2218,7 @@
                       -
                         link: /develop/api/show/canvas_CanvasContext-setLineCap
                         text: CanvasContext.setLineCap
-                        name: canvas_CanvasContext-.setLineCap
+                        name: canvas_CanvasContext-setLineCap
                       -
                         link: /develop/api/show/canvas_CanvasContext-setLineJoin
                         text: CanvasContext.setLineJoin
@@ -2723,7 +2723,7 @@
                   -
                     link: /develop/api/device_sys/swan-getSystemInfoSync
                     text: swan.getSystemInfoSync
-                    name: wan-getSystemInfoSync
+                    name: swan-getSystemInfoSync
                   -
                     link: /develop/api/device_sys/swan-getEnvInfoSync
                     text: swan.getEnvInfoSync
@@ -2843,7 +2843,7 @@
                   -
                     link: /develop/api/device_sys/swan-setKeepScreenOn
                     text: swan.setKeepScreenOn
-                    name: screen_swan-setKeepScreenOn
+                    name: swan-setKeepScreenOn
               -
 
                 text: 用户截屏事件
@@ -3769,8 +3769,8 @@
                         sidebar:
                           -
                               text: doc.get
-                              name: cloud_database_collection_doc_get
-                              link: /develop/cloud/cloud_database/doc/#doc-get
+                              name: doc
+                              link: /develop/cloud/cloud_database/doc 
                           -
                               text: doc.update
                               name: cloud_database_collection_doc_update

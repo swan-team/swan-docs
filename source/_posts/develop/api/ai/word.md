@@ -17,7 +17,6 @@ sidebar: word
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png"  class="demo-qrcode-image" />
 
-
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -91,8 +90,6 @@ sidebar: word
             </view>
             <view class="list-item">
                 <view class="list-item-key-6">词性:</view>
-          
-            
                 <view class="list-item-value">{{item.pos !== '' ? item.pos : '暂无'}}</view>
             </view>
         </view>

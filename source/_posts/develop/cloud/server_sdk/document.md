@@ -2,7 +2,7 @@
 title: Database.document
 header: develop
 nav: cloud
-sidebar:  Document
+sidebar:  document
 ---
 
 ## Document.get

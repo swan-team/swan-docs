@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onError
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onError
+sidebar: voice_VoiceRecognizer-onError
 ---
 
 **解释**： 识别遇到错误

@@ -2,7 +2,7 @@
 title: doc.get
 header: develop
 nav: cloud
-siderbar: cloud_database_collection_doc
+siderbar: doc
 ---
 
  

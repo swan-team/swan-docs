@@ -2,7 +2,7 @@
 title: swan.getAvailableAudioSources
 header: develop
 nav: api
-sidebar: swan.getAvailableAudioSources
+sidebar: recorder_swan-getAvailableAudioSources
 ---
 
 

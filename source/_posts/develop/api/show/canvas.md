@@ -2,7 +2,7 @@
 title: canvas 
 header: develop
 nav: api
-sidebar: show_canvas
+sidebar: canvas
 ---
 
 

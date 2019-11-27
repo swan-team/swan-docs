@@ -2,7 +2,7 @@
 title: CanvasContext.rotate
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_rotate
+sidebar: canvas_CanvasContext-rotate
 ---
 
  

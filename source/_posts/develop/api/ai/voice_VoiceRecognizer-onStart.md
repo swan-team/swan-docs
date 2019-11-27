@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onStart
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onStart
+sidebar: voice_VoiceRecognizer-onStart
 ---
 
 **解释**： 引擎准备就绪，可以开始说话
