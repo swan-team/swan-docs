@@ -8,7 +8,7 @@ sidebar: swan-getLocation
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](/develop/devtools/diff/)。
 
-**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。
+**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -84,19 +84,7 @@ Page({
     }
 });
 ```
-#### 错误码
-* Andriod
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法|
-|401|安全校验失败|
-|1001|文件不存在|
 
-* iOS
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确      |
-|10005|系统拒绝|
 
