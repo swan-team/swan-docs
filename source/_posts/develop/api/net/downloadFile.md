@@ -25,6 +25,7 @@ sidebar: downloadFile
 |success |Function |   否  | | 下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}|
 |fail   | Function   | 否||  接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
+|failPath| String|否||指定文件下载后存储的路径。|
 
 
 **success 返回参数说明**：
