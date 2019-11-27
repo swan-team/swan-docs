@@ -31,4 +31,6 @@ sidebar: authorize_list
 |10002|network error|网络异常、请求超时，请查看您的网络设置。|
 |10003|user deny|用户拒绝授权|
 |10004|user not logged in|用户未登录，建议提示用户登录。|
-|10005|system deny|系统拒绝授权，请查看您是否已申请[授权](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)，并提醒用户开启百度 App 相关权限。|
+|10005|system deny|系统拒绝授权，可能原因：未申请接口[授权](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)；用户未开启百度 APP 相关权限。|
+
+
