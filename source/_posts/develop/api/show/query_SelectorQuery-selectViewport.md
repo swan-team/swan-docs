@@ -20,7 +20,7 @@ sidebar: query_SelectorQuery-selectViewport
 ```js
 Page({
     getScrollOffset: function(){
-        swan.createSelectorQuery().selectViewport('.scroll-view').scrollOffset(function(res){
+        swan.createSelectorQuery().selectViewport().scrollOffset(function(res){
             res.id      // 节点的ID
             res.dataset // 节点的dataset
             res.scrollLeft // 节点的水平滚动位置

@@ -27,12 +27,12 @@ sidebar: query_NodesRef-scrollOffset
 ```js
 Page({
     getScrollOffset: function(){
-        swan.createSelectorQuery().selectViewport('.scroll-view').scrollOffset(function(res){
+        swan.createSelectorQuery().select('.scroll-view').scrollOffset(function(res){
             res.id      // 节点的ID
             res.dataset // 节点的dataset
             res.scrollLeft // 节点的水平滚动位置
             res.scrollTop  // 节点的竖直滚动位置
-        }).exec()
+        }).exec()sssss
     }
 });
 ```
