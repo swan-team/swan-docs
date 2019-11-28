@@ -36,10 +36,19 @@ context有效值如下
 |search|搜索场景值|
 
 
+**图片示例**：
 
-
-
-
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer2.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer3.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer.gif">
+    </div>     
+</div>
 
 **代码示例**
 

@@ -12,6 +12,10 @@ sidebar: custom_component
 **解释**：延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）
 
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nextTick.png" class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **`callback`参数说明**：

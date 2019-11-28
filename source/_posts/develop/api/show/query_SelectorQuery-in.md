@@ -7,6 +7,9 @@ sidebar:  query_SelectorQuery-in
  
 **解释**： 将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_SelectorQueryIn.png"  class="demo-qrcode-image" />
 
 **方法参数**：Component component
 

@@ -31,7 +31,6 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
 
 **代码示例**：
 
-
 <a href="swanide://fragment/589a045751e83eb654e932c7adcf70641573424513005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中

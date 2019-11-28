@@ -10,6 +10,10 @@ sidebar:  query_IntersectionObserver-disconnect
 
 **解释**：停止监听，回调函数将不再触发。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_disconnect.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 **图片示例**：
