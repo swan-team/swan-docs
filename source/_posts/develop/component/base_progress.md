@@ -41,7 +41,7 @@ sidebar: base_progress
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -56,4 +56,28 @@ sidebar: base_progress
     <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
 </view>
 
+```
+
+**代码示例2：设置圆角progress**：
+
+<a href="swanide://fragment/5b39c74d2356ad926786f66d9da753ce1573046087456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
+</view>
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    padding: 0.3rem 0.15rem;
+}
+.progress-bar, //外层圆角
+.progress-inner-bar {//内层圆角
+    border-radius: 30rpx;
+}
 ```
