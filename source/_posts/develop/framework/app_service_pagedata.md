@@ -11,7 +11,7 @@ sidebar: app_service_pagedata
 
 渲染层，通过SWAN模板，对数据进行绑定。
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/b58b1c817a99eab0f0a510e6e62e06e81560699650104" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml

@@ -62,7 +62,7 @@ sidebar: face_swan-ai-faceSearch
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/60b0dfce28b43de99c9f83df68fefd041567751857137" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

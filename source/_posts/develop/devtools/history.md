@@ -13,7 +13,7 @@ sidebar: history
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
 
-### 最新 rc 版本（2.19.0-rc）
+### 最新 rc 版本（2.20.0-rc）
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
 
@@ -24,6 +24,7 @@ sidebar: history
 
 |mac|windows|
 |--|--|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/8536e/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1.dmg">2.19.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/b4822/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1-x64.exe">2.19.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/733de/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1.dmg">2.18.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/272a9/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1-x64.exe">2.18.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/26d91/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.17.2.dmg">2.17.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/a9781/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.17.2-x64.exe">2.17.2</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/01bd1/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.3.dmg">2.16.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/2d0e3/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.3-x64.exe">2.16.3</a>|

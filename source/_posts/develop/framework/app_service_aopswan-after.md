@@ -21,7 +21,7 @@ sidebar: app_service_aopswan-after
 
 参见API文档，API中所有swan调用的均可以拦截
 
-**示例代码：**
+**代码示例：**
 
 ```js
 swan.after({

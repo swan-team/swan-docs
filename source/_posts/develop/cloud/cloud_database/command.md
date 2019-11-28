@@ -9,7 +9,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库相关查询及更新指令。
 
-**示例代码**
+**代码示例**
 
 ```js
     const _ = db.command
@@ -19,7 +19,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，用于查询字段等于某个值，该指令接受一个参数，可以是`number`，`string`，`object`，`boolean`，`array`。
 
-**示例代码**
+**代码示例**
 
 例如，查询一条标题为'smartprogram'的新闻时，可以有以下两种查询方式：
 
@@ -54,7 +54,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，与command.eq指令相反，表示查询的字段不等于某个值。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -72,7 +72,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，表示查询的字段小于某个值。
 
-**示例代码**
+**代码示例**
 
 例如，查询数据表中age小于25的所有用户
 
@@ -96,7 +96,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，表示查询的字段小于或等于某个值。
 
-**示例代码**
+**代码示例**
 
 例如，查询数据表中age小于或等于25的所有用户
 
@@ -120,7 +120,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，表示查询的字段大于某个值。
 
-**示例代码**
+**代码示例**
 
 例如，查询数据表中age大于25的所有用户
 
@@ -144,7 +144,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库查询指令，表示查询的字段大于或等于某个值。
 
-**示例代码**
+**代码示例**
 
 例如，查询数据表中age大于或等于25的所有用户
 
@@ -170,7 +170,7 @@ siderbar: cloud_database_command
 
 例如，查询age为25或者26的用户
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -194,7 +194,7 @@ siderbar: cloud_database_command
 
 例如，查询age不为25或者26的用户
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -218,7 +218,7 @@ siderbar: cloud_database_command
 
 例如，筛选出数据表中age大于25且小于50的用户
 
-**示例代码**
+**代码示例**
 
 级联查询写法：
 
@@ -252,7 +252,7 @@ siderbar: cloud_database_command
 
 例如，筛选出数据表中age小于25或者大于50的用户
 
-**示例代码**
+**代码示例**
 
 级联查询写法：
 
@@ -282,7 +282,7 @@ siderbar: cloud_database_command
 
 同时，或指令也支持跨字段的或操作，例如，筛选出数据表中age大于25或者address等于beijing的用户
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -300,7 +300,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，用于将某一字段设置为指定值。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -319,7 +319,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，用于删除记录中的某个字段。
 
-**示例代码**
+**代码示例**
 
 删除age字段：
 
@@ -340,7 +340,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，用于将记录中的某个字段自增加指定的值。
 
-**示例代码**
+**代码示例**
 
 将age的值自增加1：
 
@@ -361,7 +361,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，用于将记录中的某个字段自乘指定的值。
 
-**示例代码**
+**代码示例**
 
 将age的值乘以2：
 
@@ -382,7 +382,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，该指令需要操作一个类型为数组的字段，并在数组尾部增加一个或多个值。传入参数的类型需为数组类型。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -401,7 +401,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，该指令需要操作一个类型为数组的字段，并删除其最后一个元素。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -420,7 +420,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，该指令需要操作一个类型为数组的字段，并删除其第一个元素。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({
@@ -439,7 +439,7 @@ siderbar: cloud_database_command
 
 **解释**：数据库更新指令，该指令需要操作一个类型为数组的字段，并向其头部插入一个或多个元素。传入参数类型需为数组类型。
 
-**示例代码**
+**代码示例**
 
 ```js
     swan.cloud.init({

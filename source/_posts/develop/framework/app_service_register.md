@@ -34,7 +34,7 @@ sidebar: app_service_register
 - 系统资源占用过高；
 - 打开小程序数量超过系统支持上限(系统按照小程序被打开的先后顺序进行销毁)。
 
-**示例代码**
+**代码示例**
 
 ```js
 // app.js
@@ -91,7 +91,7 @@ App({
 
 **参数：**与 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 一致
 
-**示例代码**
+**代码示例**
 ```js
 // app.js
 App({

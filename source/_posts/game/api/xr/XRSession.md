@@ -93,7 +93,7 @@ function update() {
 |extentX|number|平面在 X 轴方向上的尺寸|
 |extentZ|number|平面在 Z 轴方向上的尺寸|
 
-**示例代码**
+**代码示例**
 
 ```js
 let planes = xrSession.getTrackablePlanes();

@@ -22,7 +22,7 @@ priority: 17-02
 | opts.fail | function |否|接口调用失败的回调函数|
 | opts.complete | function |否|接口调用结束的回调函数(调用成功、失败都会执行)|
 
-**示例代码**
+**代码示例**
 ```js
 // 打开调试
 swan.setEnableDebug({

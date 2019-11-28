@@ -41,7 +41,7 @@ config 说明：
 |errMsg|String|错误信息|
 
 
-**示例代码**
+**代码示例**
 假设已存在一个云函数`add`：
 ```js
 exports.add = (event, context, cb) => {

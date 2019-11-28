@@ -13,7 +13,7 @@ sidebar: cloud_database_collection
 该方法传入一个`name`参数，参数类型为字符串类型，指定需引用的集合名称。
 
 
-**示例代码**
+**代码示例**
 
 ```js
 const db = swan.cloud.database();
@@ -31,7 +31,7 @@ const testCollection = db.collection('users');
 
 
 
-**示例代码**
+**代码示例**
 
 ```js
 const doc = db.collection('users').doc('docId');
@@ -58,7 +58,7 @@ const doc = db.collection('users').doc('docId');
 |---|---|---|
 |data| Array|查询的结果数组，数据的每个元素是一个Object，代表一条记录|
 
-**示例代码**
+**代码示例**
 
 `callback`风格：
 ```js
@@ -119,7 +119,7 @@ db.collection('users')
 |---|---|---|
 |_id| String/Number|新增记录的ID|
 
-**示例代码**
+**代码示例**
 
 `callback`风格：
 
@@ -186,7 +186,7 @@ db.collection('users')
 |---|---|---|
 |total|Number|结果数量|
 
-**示例代码**
+**代码示例**
 
 `callback`风格：
 
@@ -232,7 +232,7 @@ db.collection('users')
 **参数说明**
 该方法的传入参数为必填参数，参数类型为对象类型，用来定义筛选条件。
 
-**示例代码**
+**代码示例**
 
 找出address的值为'beijing'的用户：
 
@@ -264,7 +264,7 @@ db.collection('users')
 如果需要对嵌套字段排序，需要用 "点表示法" 连接嵌套字段，比如`style.color`表示字段`style`里的嵌套字段`color`。
 同时也支持按多个字段排序，多次调用`orderBy`即可，多字段排序时的顺序会按照`orderBy`调用顺序先后对多个字段排序。
 
-**示例代码**
+**代码示例**
 
 ```js
 swan.cloud.init({
@@ -290,7 +290,7 @@ db.collection('users')
 **参数说明**
 该方法的传入参数为必填参数，参数类型为数字类型，用来定义最大结果集返回数量，最大为20。
 
-**示例代码**
+**代码示例**
 
 ```js
 swan.cloud.init({
@@ -315,7 +315,7 @@ db.collection('users')
 **参数说明**
 该方法的传入参数为必填参数，参数类型为数字类型，用来指定查询返回结果开始的序列。
 
-**示例代码**
+**代码示例**
 
 ```js
 swan.cloud.init({
@@ -341,7 +341,7 @@ db.collection('users')
 该方法的传入参数为必填参数，参数类型为对象类型，用来指定需返回的字段。
 
 
-**示例代码**
+**代码示例**
 
 ```js
 swan.cloud.init({

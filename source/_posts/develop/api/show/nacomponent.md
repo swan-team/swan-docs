@@ -36,7 +36,7 @@ sidebar: nacomponent
 4. 景区导览、线下活动等线下扫码场景
 
 
-**代码示例**：
+**示例**：
 
 <a href="swanide://fragment/e067d7b02af88008e08fa4bcb26906a51569378513731" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -57,7 +57,7 @@ sidebar: nacomponent
 </div>
   
 
-**示例代码 1**
+**代码示例 1**
 
 ```javascript
     swan.showFavoriteGuide({
@@ -84,7 +84,7 @@ sidebar: nacomponent
     </div>  
 </div>
 
-**示例代码 2**
+**代码示例 2**
 
 ```javascript
 swan.showFavoriteGuide({

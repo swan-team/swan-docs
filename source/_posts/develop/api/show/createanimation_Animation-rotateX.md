@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-rotateX
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/a9fc825b1b35446d0ee687d664d3b1821574215484188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
