@@ -48,7 +48,7 @@ canvasContext.draw();
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
