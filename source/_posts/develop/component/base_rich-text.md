@@ -25,6 +25,47 @@ sidebar: base_rich-text
 
 * 元素节点：type = node
 
+**代码示例1**：
+
+
+<a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过HTML String渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{htmlSnip}}</view>
+            </scroll-view>
+            <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+const htmlSnip =
+`<div class="div_class">
+    <h1>Title</h1>
+    <p class="p">
+        Life is&nbsp;<i>like</i>&nbsp;a box of
+        <b>&nbsp;chocolates</b>
+    </p>
+</div>`;
+
+Page({
+    data: {
+        htmlSnip
+    }
+});
+```
+
+
 **属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
@@ -35,6 +76,66 @@ sidebar: base_rich-text
 
 * 文本节点：type = text
 
+**代码示例2**：
+
+
+<a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过节点渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{nodeSnip}}</view>
+            </scroll-view>
+            <rich-text nodes="{{nodes}}" selectable="true">
+            </rich-text>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+const nodeSnip
+=`
+Page({
+  data: {
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: #4F99FB;;'
+      },
+      children: [{
+        type: 'text',
+        text: 'You never know what you're gonna get.'
+      }]
+    }]
+  }
+})`;
+
+Page({
+    data: {
+        nodeSnip,
+        nodes: [{
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you\'re gonna get.'
+            }]
+        }]
+    }
+});
+```
 
 **属性说明:**
 
