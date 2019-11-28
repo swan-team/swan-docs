@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-skewY
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/f72586cc72c18153d42220df8f0394fd1574218409844" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
