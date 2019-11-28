@@ -5,14 +5,15 @@ nav: api
 sidebar: swan-setPageInfo
 ---
 配置页面基础信息接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
+
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
  
 >建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数，详情参见下面的代码示例二。
 
-**解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
+**解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。其中title和image字段也有助于用户添加页面收藏的模板展现和回访体验（用户可以在小程序菜单中收藏当前页面，并通过百度App"我的-常用功能-收藏"回访已收藏的页面）。
 
-**百度APP中扫码体验：**
+**在浏览器中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setPageInfo.png"  class="demo-qrcode-image" />
 

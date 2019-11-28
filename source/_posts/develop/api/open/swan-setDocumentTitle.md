@@ -10,7 +10,7 @@ sidebar: swan-setDocumentTitle
 
 **解释**：动态设置当前页面的标题。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
 
-**百度APP中扫码体验：**
+**在浏览器中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setDocumentTitle.png"  class="demo-qrcode-image" />
 
