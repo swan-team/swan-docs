@@ -34,6 +34,8 @@
         '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/',
         '/docs/develop/third/register/': '/docs/third/register/',
         '/docs/develop/api/open_authorize/': '/docs/develop/api/open/authorize_list/',
+        '/docs/develop/web/start/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/web/detail/': '/docs/develop/fuctionlist/list/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
