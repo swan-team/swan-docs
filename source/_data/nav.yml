@@ -298,17 +298,34 @@
                 name: pay
     -
       link: /introduction/contact
-      text: 客服功能接入
+      text: 客服功能开通
       name: book
       sidebar:
         -
             sidebar:
               -
                 link: /introduction/contact
-                text: 客服功能接入说明
+                text: 客服功能介绍
                 name: contact
-
-
+              -
+                text: 客服功能支持的接入类型
+                sidebar:
+                  -
+                    link: /introduction/type_send
+                    text: 消息推送
+                    name: type_send
+                  -
+                    link: /introduction/type_tool
+                    text: 小程序客服工具
+                    name: type_tool
+                  -
+                    link: /introduction/type_thridtool
+                    text: 第三方客服工具
+                    name: type_thridtool                 
+              -
+                link: /introduction/contact_standard
+                text: 运营规范
+                name: contact_standard
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序

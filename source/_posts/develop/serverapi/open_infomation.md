@@ -40,23 +40,25 @@ sidebar: open_infomation
 
 ### 模板消息入口
 
+
 - 首页入口
+
 “百度APP首页-我的-通知”
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/api/information/1.jpg">
-		<!-- <p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)。</p> -->
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src=" ">
-		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
 	</div>
 </div>
 
- 
 
 - 搜索结果页入口
+
 “百度App-搜索结果页-菜单-通知”
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/api/information/2.jpg">
@@ -67,8 +69,11 @@ sidebar: open_infomation
 		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
 	</div>
 </div>
+
 - 小程序内消息聚合入口（用户需升级至百度APP v11.16版本以上）
+
 “小程序各级内置页面-菜单-消息”
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/api/information/3.jpg">
@@ -81,6 +86,7 @@ sidebar: open_infomation
 </div>
 
 - 消息体示意图
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/api/information/4.jpg">
@@ -92,6 +98,7 @@ sidebar: open_infomation
 	</div>
 </div>
 - 订阅类消息的用户授权面板
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/api/information/4-1.jpg">
@@ -100,9 +107,6 @@ sidebar: open_infomation
 	<div class="m-doc-custom-examples-error ">
 		<img src="">
 	</div>
-	<div class="m-doc-custom-examples-error ">
-		<img src=" ">
-	</div>	
 </div>
  
 

@@ -35,7 +35,6 @@ context有效值如下
 |input| 输入法场景|
 |search|搜索场景值|
 
-
 **图片示例**：
 
 <div class="m-doc-custom-examples">
@@ -51,7 +50,6 @@ context有效值如下
 </div>
 
 **代码示例**
-
 
 <a href="swanide://fragment/cc2100b123bbb0154c277fe6c8f8fa5b1573728427299" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -16,7 +16,7 @@ sidebar: base_animation-view-Lottie
 **属性说明**：
 
 |属性名 |类型  |默认值  |必填 |说明|最低版本|
-|---- | ---- | --- | ---- |---- |--|
+|---- | ---- | --- | ---- |---- |---|
 | path | String  |  |是 |动画资源地址，目前只支持绝对路径| |
 | loop | Boolean  |  false | 否 |动画是否循环播放 | |
 |autoplay | Boolean | true	  |否 |动画是否自动播放	| |

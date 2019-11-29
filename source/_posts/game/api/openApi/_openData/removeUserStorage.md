@@ -36,7 +36,7 @@ POST https://openapi.baidu.com
 |87020|内部请求失败|
 
 
-**示例代码：**
+**代码示例：**
 
 ```js
 // 仅为示例，请使用自己真实有效的 access_token 等 query 参数

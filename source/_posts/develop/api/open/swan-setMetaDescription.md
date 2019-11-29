@@ -11,7 +11,7 @@ sidebar: swan-setMetaDescription
 
 **解释**： 设置 web 版小程序 description meta 信息。此方法为 web 版小程序专用方法，使用前需判断方法是否存在。
 
-**百度APP中扫码体验：**
+**在浏览器中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setMetaDescription.png"  class="demo-qrcode-image" />
 

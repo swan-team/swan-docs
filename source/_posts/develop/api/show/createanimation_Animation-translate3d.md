@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-translate3d
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/90dfd1038c8a49c6b92de921d43e555b1574217718126" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

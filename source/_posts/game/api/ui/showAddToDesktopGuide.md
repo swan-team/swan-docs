@@ -63,7 +63,7 @@ swan.showAddToDesktopGuide(opts)
 * 一直展现：用户点击引导组件旁边的关闭按钮才能关闭，点击添加按钮可直接添加到我的桌面。
 
 ![图片](../../../../img/game/assets/bar.png)
-**示例代码 1:**
+**代码示例 1:**
 
 ```js
 swan.showAddToDesktopGuide({
@@ -81,7 +81,7 @@ swan.showAddToDesktopGuide({
 * 自动消失：引导组件 3s 后自动消失，点击添加按钮可直接添加到我的桌面。
 
 ![图片](../../../../img/game/assets/barAutohide.png)
-**示例代码 2:**
+**代码示例 2:**
 
 ```js
 swan.showAddToDesktopGuide({

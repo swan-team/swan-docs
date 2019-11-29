@@ -33,7 +33,7 @@ sidebar: custom-component
 
 同时，类似于页面开发。开发自定义组件，可以在 swan 文件中编写组件模板，在 css 文件中引入样式，它们的写法和页面的写法类似。
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- 自定义组件内部的模板 (custom.swan) -->
@@ -52,7 +52,7 @@ sidebar: custom-component
 
 组件的属性值和内部数据将被用于组件 swan 模板的渲染，其中，属性是可以由组件外部传入的。
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/c851a80326f0155bc18f1461f0fabdea1545207439099" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
@@ -112,7 +112,7 @@ Component({
 1.自定义组件文件路径: 自定义组件swan、css、js、json文件所在路径 + 该类文件的basename, 例如以上项目目录结构，该路径即是`/components/custom/custom`；
 2.创建自定义组件，推荐内层的文件(swan、css、js、json)与其自定义组件目录保持同名。
 
-**示例代码**
+**代码示例**
 ```js
 // 页面json配置 home.json
 {
@@ -123,7 +123,7 @@ Component({
 ```
 这样，在页面的 swan 文件中，就可以像使用基础组件一样使用自定义组件。节点名即自定义组件的标签名，节点属性即传递给组件的属性值。
 
-**示例代码**
+**代码示例**
 ```xml
 <!-- 页面模板 (home.swan) -->
 <view>
