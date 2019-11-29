@@ -18,21 +18,34 @@ sidebar:  canvas_CanvasContext-clip
 
 **方法参数**：无
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        clip之前：<img src="https://b.bdstatic.com/miniapp/images/clipBefore.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        clip之后：<img src="https://b.bdstatic.com/miniapp/images/clipAfter.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/d681f57d7da4801bfb3f2cc5e9e398281574506919889" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c18c27cffbeaf52e7e5d5032081bdeac1574973539888" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-const canvasContext = swan.createCanvasContext('myCanvas')
-swan.downloadFile({
-    url: 'https：//b.bdstatic.com/searchbox/icms/searchbox/img/LOGO300x300.jpg',
-    success: function(res) {
-        canvasContext.save()
-        canvasContext.beginPath()
-        canvasContext.arc(50, 50, 25, 0, 2*Math.PI)
-        canvasContext.clip()
-        canvasContext.drawImage(res.tempFilePath, 25, 25)
-        canvasContext.restore()
+Page({
+    onShow () {
+        const canvasContext = swan.createCanvasContext('myCanvas')
+        canvasContext.rect(50,20,200,120);
+        canvasContext.stroke();
+        canvasContext.clip();
+        // 在 clip() 之后绘制黑色矩形
+        canvasContext.fillStyle="black";
+        canvasContext.fillRect(0,0,150,100);
         canvasContext.draw()
     }
 });
