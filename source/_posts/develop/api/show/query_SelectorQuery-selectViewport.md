@@ -17,14 +17,46 @@ sidebar: query_SelectorQuery-selectViewport
 
 **返回值**：nodesRef
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/selectViewport.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/e748508ba5d88f93fd837b550b08faad1574507506861" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4fdca56adf0b81326bd4f838a5af4da51575002109257" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bindtap="selectViewport" type="primary" class="flex-button">滑动界面并点击获取窗口可视区域信息</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
 Page({
-    getScrollOffset: function(){
+    data: {
+        appear: false
+    },
+    selectViewport() {
         swan.createSelectorQuery().selectViewport().scrollOffset(function(res){
+            console.log(res)
+            swan.showModal({
+                title: 'title',
+                content: JSON.stringify(res)
+            });
             res.id      // 节点的ID
             res.dataset // 节点的dataset
             res.scrollLeft // 节点的水平滚动位置
@@ -32,4 +64,20 @@ Page({
         }).exec()
     }
 });
+```
+
+* 在 css 文件中
+
+```css
+.wrap {
+    margin-top: 30rpx;
+    height: 3000px;
+}
+
+.flex-button {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+}
 ```
