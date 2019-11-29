@@ -19,7 +19,7 @@ sidebar: type_send
 
 使用超级管理员或管理员权限登录开发者后台，点击“客服管理—消息推送-去配置”，按照页面提示进行配置。
 
-![图片](https://smartprogram.baidu.com/docs/img/introduction/contact/3.jpg)
+![图片](../../img/introduction/contact/3.jpg)
 
 ### **接口调用** 
 
