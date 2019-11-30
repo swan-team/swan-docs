@@ -58,7 +58,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/d0dec68787a4c179328c6a22d80325981565503528602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -183,6 +183,90 @@ Page({
 });
 ```
 
+**代码示例2 - 用于实现顶部标签切换**：
+
+<a href="swanide://fragment/82da7e569b409a1fa4fb753a010fd35e1575120753274" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container"> 
+    <!-- 顶部导航 -->
+    <view class="swiper-tab">
+        <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swiperNav">Tab1</view> 
+        <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swiperNav">Tab2</view>
+        <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swiperNav">Tab3</view>
+    </view>
+    <!-- 顶部导航对应的内容 -->
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+        <swiper-item>   
+            <view>我是tab1</view>   
+        </swiper-item>
+        <swiper-item>
+            <view>我是tab2</view>
+        </swiper-item> 
+        <swiper-item>
+            <view>我是tab3</view>
+        </swiper-item>
+    </swiper>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        currentTab: 0,
+    },
+    swiperNav(e) {
+        console.log(e); 
+       
+        if (this.data.currentTab === e.target.dataset.current) {
+            return false;
+        } else {
+            this.setData({ 
+                currentTab: e.target.dataset.current, 
+            })
+        }
+    },
+    swiperChange: function (e) {
+        console.log(e);  
+        this.setData({
+            currentTab: e.detail.current, 
+        })
+    }
+})
+```
+
+* 在 css 文件中 
+
+```js
+.swiper-tab {
+    display: flex;
+    flex-direction: row;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+}
+
+.tab-item {
+    width: 33.3%;
+    text-align: center; 
+    font-size: .16rem;
+    color: rgb(116, 113, 113);
+}
+
+.swiper {
+    height: 1100px; 
+    background: #dfdfdf;
+}
+
+.on {
+    color: #5B9FFF;
+    border-bottom: 1px solid #5B9FFF;
+    padding-bottom: 2px
+}
+```
 
 **Bug & Tip**：
 
