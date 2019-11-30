@@ -21,7 +21,7 @@ sidebar: swan-getLocation
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。|
+|type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。wgs84 返回 gps 坐标，gcj02 返回火星坐标，gcj02 比 wgs84更为精确,所以返回可用于 swan.openLocation 的坐标|
 |altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，**会很耗时**，默认没有用 gps。|
 |success |Function  |  否 | |  接口调用成功的回调函数，返回内容详见返回参数说明。|
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
@@ -62,7 +62,7 @@ sidebar: swan-getLocation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -82,6 +82,42 @@ Page({
             }
         });
     }
+});
+```
+
+**代码示例2**：
+
+<a href="swanide://fragment/04171dc524dea071a0d3f09b116aef661575111628030" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    getLocation(e) {
+        swan.getLocation({
+            type: 'gcj02',
+            altitude: true,
+            success: res => {
+                console.log('success', res);
+                swan.openLocation({
+                    latitude: res.latitude,
+                    longitude: res.longitude,
+                    success: res => {
+                        console.log('openLocation success', res);
+                    },
+                    fail : function (err) {
+                        console.log('openLocation fail', err);
+                    }
+                });
+            },
+            fail: err => {
+                swan.showToast({title: '获取失败'});
+            },
+            complete: () => {
+                this.setData('loading', false);
+            }
+        });
+    },
 });
 ```
 
