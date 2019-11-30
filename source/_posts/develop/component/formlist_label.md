@@ -115,7 +115,7 @@ Page({
             <switch/>
             <text style="vertical-align:.1rem">智能小程序</text>
         </label>  
-    </view>     
+    </view>
 </view>
 ```
 * 在 css 文件中

@@ -71,22 +71,20 @@ sidebar: media_image
     </div>    
 </div>
 
-**代码示例**：
+**代码示例1 - 缩放模式**：
 
-  <a href="swanide://fragment/a65834765b18e32b8bbf4473c526c4141565503512941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+  <a href="swanide://fragment/a1fcff6d4bd539ff72380eb26bcc93131575134308634" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
-<view class="container">
-    <view class="page-section" s-for="{{array}}">
-        <view class="page-section-title">{{item.text}}</view>
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">缩放模式</view>
         <view class="page-section-demo">
-            <image class="image"
-                data-name="{{item.mode}}"
-                bindtap="onTap"
-                mode="{{item.mode}}" src="{{src}}" binderror="imageError" bindload="imageLoad" />
+            <image class="image" mode="{{type}}" src='https://b.bdstatic.com/miniapp/image.png' binderror="imageError" bindload="imageLoad" />
         </view>
+        <button s-for="item in array" type="primary" class="page-section-title" data-type="{{item.mode}}" bindtap="onTap">{{item.mode}}</button>
     </view>
 </view>
 ```
@@ -97,57 +95,30 @@ Page({
     data: {
         array: [{
             mode: 'scaleToFill',
-            text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
+            text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应',
         }, {
             mode: 'aspectFit',
-            text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
+            text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来',
         }, {
             mode: 'aspectFill',
-            text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
+            text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来',
         }, {
             mode: 'widthFix',
-            text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变'
-        }, {
-            mode: 'top',
-            text: 'top：不缩放图片，只显示图片的顶部区域'
-        }, {
-            mode: 'bottom',
-            text: 'bottom：不缩放图片，只显示图片的底部区域'
-        }, {
-            mode: 'center',
-            text: 'center：不缩放图片，只显示图片的中间区域'
-        }, {
-            mode: 'left',
-            text: 'left：不缩放图片，只显示图片的左边区域'
-        }, {
-            mode: 'right',
-            text: 'right：不缩放图片，只显示图片的右边边区域'
-        }, {
-            mode: 'top left',
-            text: 'top left：不缩放图片，只显示图片的左上边区域'
-        }, {
-            mode: 'top right',
-            text: 'top right：不缩放图片，只显示图片的右上边区域'
-        }, {
-            mode: 'bottom left',
-            text: 'bottom left：不缩放图片，只显示图片的左下边区域'
-        }, {
-            mode: 'bottom right',
-            text: 'bottom right：不缩放图片，只显示图片的右下边区域'
+            text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变',
         }],
-        src: 'https://b.bdstatic.com/miniapp/image.png',
+        type: ''
     },
     imageError(e) {
         console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
     },
     onTap(e) {
-        console.log('image 发生 tap 事件', e);
+        console.log('image 发生 error 事件，携带值为', e.currentTarget.dataset.type);
+        this.setData({'type': e.currentTarget.dataset.type})
     },
     imageLoad(e) {
         console.log('image 加载成功', e);
     },
 });
-
 ```
  
 
