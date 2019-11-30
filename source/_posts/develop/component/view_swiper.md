@@ -200,6 +200,7 @@ Page({
     <!-- 顶部导航对应的内容 -->
     <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
         <swiper-item>   
+            <!-- 页面可使用自定义组件编写 -->
             <view>我是tab1</view>   
         </swiper-item>
         <swiper-item>
