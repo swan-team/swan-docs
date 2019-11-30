@@ -46,16 +46,27 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 
 **代码示例**：
 
-<a href="swanide://fragment/45797da5a75fbe90a9ef2be56bb707651569478446351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d78c8265a509149796a3f556a3db20171575140227666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
 
 ```js
 Page({
-    onLoad() {
+    data: {
+        data: '内存充足',
+        hasMemory: true
+    },
+    onShow() {
+        let that = this;
         swan.onMemoryWarning(function (res) {
             console.log('onMemoryWarningReceive', res);
+            if(res.level === 10){
+                that.setData('data', '内存不足')
+            }
+            else{
+                that.setData('data', '内存充足')
+            }
         });
     }
 });
