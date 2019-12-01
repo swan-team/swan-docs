@@ -158,7 +158,7 @@ Page({
 
 **代码示例2 - 设置obeyMuteSwitch为false**：
 
-<a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/630e947ea4b925fa576ff51439271a851575218694131" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
