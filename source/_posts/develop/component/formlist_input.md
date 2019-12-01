@@ -70,7 +70,7 @@ sidebar: formlist_input
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/9de486a69d0608944a7f7d0ff94746151572919458545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
@@ -167,6 +167,122 @@ Page({
         swan.showToast({
             title: '点击确定',
             icon: 'none'
+        });
+    }
+});
+```
+
+**代码示例2 - input做业务搜索框**：
+
+<a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <!-- 搜索框 -->
+    <view class="search">
+        <view class="search-box">
+            <view class="search-icon"></view>
+            <input class="search-input" 
+                style="max-width:70%;"
+                type="text" 
+                focus="{{focus}}" 
+                placeholder="搜索内容"
+                value="{=value=}" 
+                placeholder-class="searchholder" 
+                bindfocus="searchFocus"
+                bindinput="searchInput" 
+                bindconfirm="searchConfirm" 
+                confirm-type="search"
+                bindblur="searchBlur"/>
+                <block s-if="focus">
+                    <block s-if="value">
+                        <button class="search-input-clear" hover-class="search-clear-hover" bindtap="searchClear"></button>
+                    </block>
+                    <view class="{{value ? 'search-deep' : 'search-sear'}}" bindtap="searchConfirm">搜索</view>
+                </block>
+        </view>
+    </view>
+
+    <!-- 输入框占位 -->
+    <view style="height:0.52rem;"></view>
+
+    <!-- 搜索结果 -->
+    <view s-if="hasResult" class="search-result">
+        <view>
+            <view class="empty-icon"></view>
+            <view class="empty-msg">搜索结果内容</view>
+        </view>   
+    </view>
+
+    <!-- 搜索无结果 -->
+    <view s-if="!hasResult && showEmptyResult" class="empty-result">
+        <view>
+            <view class="empty-icon"></view>
+            <view class="empty-msg">暂无相关内容</view>
+        </view>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        value: '',
+        focus: true,
+        hasResult: false,
+        showEmptyResult: false,
+        blur: true
+    },
+    onShow() {
+        this.getHistoryStorage();
+    },
+    searchFocus(e) {
+        this.setData({
+            focus: true
+        });
+    },
+    searchInput(e) {
+        const value = e.detail.value;
+        this.setData({
+            value,
+            component: [],
+            api: [],
+            hasResult: false,
+            showEmptyResult: false
+        });
+        if (!value) {
+            this.resetResult();
+            return false;
+        }
+
+        if (value.length === 1 && /[a-zA-Z]/.test(value)) {
+            this.resetResult();
+            return false;
+        }
+    },
+    searchConfirm(e) {
+        const value = this.getData('value').replace(/\s/gi, '');
+        if (value) {
+            this.setData({
+                showEmptyResult: true,
+                hasHistory: true
+            });
+        }
+    },
+    searchBlur(e) {
+        this.setData({
+            focus: false
+        });
+    },
+    searchClear() {
+        this.setData({
+            value: '',
+            hasResult: false,
+            showEmptyResult: false
         });
     }
 });
