@@ -58,7 +58,7 @@ sidebar: image_swan-chooseImage
     </div>     
 </div>
 
-**代码示例1**：
+**代码示例1 - tempFilePaths**：
 
 <a href="swanide://fragment/8ffb1a4177b33946ea0bed99b96071c21575216316424" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -85,7 +85,7 @@ Page({
 });
 ```
 
-**代码示例2**：
+**代码示例2 - tempFiles**：
 
 <a href="swanide://fragment/593c7689acbe113cbdbb5e4441dcaa921575216919794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
