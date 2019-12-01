@@ -40,7 +40,7 @@ sidebar: tabbar_swan-setTabBarStyle
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 borderStyle为black**：
 
 <a href="swanide://fragment/44d27e9d57b8848544201181fe547cb01574137906215" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -62,6 +62,39 @@ Page({
             selectedColor: '#FF0000',// red
             backgroundColor: '#FFFFBD',
             borderStyle: 'black',
+            success: function () {
+                console.log('setTabBarStyle success');
+            },
+            fail: function (err) {
+                console.log('setTabBarStyle fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 borderStyle为white**：
+
+<a href="swanide://fragment/ee7e3b2a98030b55a1ffeffab686c1af1575222167942" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    setTabBarStyle() {
+        swan.setTabBarStyle({
+            color: '#000',// black
+            selectedColor: '#FF0000',// red
+            backgroundColor: '#FFFFBD',
+            borderStyle: 'white',
             success: function () {
                 console.log('setTabBarStyle success');
             },
