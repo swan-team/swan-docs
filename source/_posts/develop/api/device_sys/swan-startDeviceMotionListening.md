@@ -50,7 +50,7 @@ sidebar: swan-startDeviceMotionListening
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - interval为ui**：
 
 <a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -61,6 +61,50 @@ Page({
     startDeviceMotionListening() {
         swan.startDeviceMotionListening({
             interval: 'ui',
+            success: res => {
+                console.log('startDeviceMotionListening success', res);
+            },
+            fail: err => {
+                console.log('startDeviceMotionListening fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - interval为game**：
+
+<a href="swanide://fragment/e38daaa48f251db2de1d6d23b44b40001575204704761" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startDeviceMotionListening() {
+        swan.startDeviceMotionListening({
+            interval: 'game',
+            success: res => {
+                console.log('startDeviceMotionListening success', res);
+            },
+            fail: err => {
+                console.log('startDeviceMotionListening fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例3 - interval为normal**：
+
+<a href="swanide://fragment/c507dc5b0171c208542233113f54f04e1575204732536" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startDeviceMotionListening() {
+        swan.startDeviceMotionListening({
+            interval: 'normal',
             success: res => {
                 console.log('startDeviceMotionListening success', res);
             },
