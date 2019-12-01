@@ -46,7 +46,7 @@ sidebar: share_swan-openShare
     </div>     
 </div>
 
-**代码示例1**：
+**代码示例1 - API调起分享面板**：
 
 <a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -81,7 +81,7 @@ Page({
     }
 });
 ```
-**代码示例2**：
+**代码示例2 - 组件调起分享面板**：
 
 <a href="swanide://fragment/362c2203c0aa4bfd7f700553fa248fd41575200219753" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
