@@ -122,7 +122,7 @@ Page({
 });
 ```
 
-**代码示例2 - 组件获取用户信息(与API的区别是用户不需要授权，只能在页面中展示)**：
+**代码示例2 - open-data组件获取用户信息(与API的区别是用户不需要授权，只能在页面中展示)**：
 
 <a href="swanide://fragment/d84c7124420f7d8767bced690acec10c1575202052676" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -150,3 +150,26 @@ Page({
 </view>
 ```
 
+**代码示例3 - button组件获取用户信息**：
+
+<a href="swanide://fragment/8f079b427dd985c2988f2a3b85da73431575205539816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息按钮</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    getUserInfo(e) {
+        console.log(e.detail.userInfo.nickName)
+        console.log(e.detail.userInfo.avatarUrl)
+        console.log(e.detail.userInfo.gender)
+    }
+});
+```
