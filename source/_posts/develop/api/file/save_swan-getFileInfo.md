@@ -135,6 +135,45 @@ Page({
 })
 ```
 
+**代码示例 3 - digestAlgorithm为sha1**：
+**获取本地文件信息**
+
+<a href="swanide://fragment/d730cd04b43766202854c776fa7ca2fb1575219277634" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    data: { },
+    getFileInfo() {
+        swan.downloadFile({
+            header: {
+                'Cache-Control': 'no-cache'
+            },
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            success: res => {
+                swan.getFileInfo({
+                    filePath: res.tempFilePath,
+                    digestAlgorithm: 'sha1',
+                    success: res => {
+                        console.log('getFileInfo success', res);
+                        swan.showModal({
+                            title: 'getFileInfo success',
+                            content: JSON.stringify(res)
+                        });
+                    },
+                    fail: err => {
+                        console.log('getFileInfo fail', err);
+                        swan.showModal({
+                            title: 'getFileInfo fail',
+                            content: JSON.stringify(err)
+                        });
+                    }
+                });
+            }
+        })
+    }    
+})
+```
+
 #### 错误码
 
 * Andriod

@@ -59,7 +59,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -73,6 +73,104 @@ Page({
         const innerAudioContext = swan.createInnerAudioContext();
         innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
+
+        innerAudioContext.onPlay(res => {
+            swan.showToast({
+                title: 'play',
+                icon: 'none'
+            });
+            console.log('onPlay', res);
+        });
+
+        innerAudioContext.onPause(res => {
+            swan.showToast({
+                title: 'pause',
+                icon: 'none'
+            });
+            console.log('onPause', res);
+        });
+
+        innerAudioContext.onStop(res => {
+            swan.showToast({
+                title: 'stop',
+                icon: 'none'
+            });
+            console.log('onStop', res);
+        });
+
+        innerAudioContext.onEnded(res => {
+            swan.showToast({
+                title: 'end',
+                icon: 'none'
+            });
+            console.log('onEnded', res);
+        });
+
+        innerAudioContext.onTimeUpdate(res => {
+            console.log('onTimeUpdate', res);
+        });
+
+        innerAudioContext.onError(res => {
+            swan.showToast({
+                title: 'error',
+                icon: 'none'
+            });
+            console.log('onError', res);
+        });
+
+        innerAudioContext.onWaiting(res => {
+            swan.showToast({
+                title: 'waiting',
+                icon: 'none'
+            });
+            console.log('onWaiting', res);
+        });
+
+        this.innerAudioContext = innerAudioContext;
+    },
+    play() {
+        this.innerAudioContext.play();
+    },
+    pause() {
+        this.innerAudioContext.pause();
+    },
+    stop() {
+        this.innerAudioContext.stop();
+    },
+    seek() {
+        this.innerAudioContext.seek(10);
+    },
+    destroy() {
+        this.innerAudioContext.destroy();
+    },
+    offTimeUpdate() {
+        this.innerAudioContext.offTimeUpdate(res => {
+            swan.showToast({
+                title: 'offTimeUpdate',
+                icon: 'none'
+            });
+            console.log('offTimeUpdate', res);
+        });
+    }
+});
+
+```
+
+**代码示例2 - 设置obeyMuteSwitch为false**：
+
+<a href="swanide://fragment/630e947ea4b925fa576ff51439271a851575218694131" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```javascript
+
+Page({
+    onLoad() {
+        //  每次触发就会注册一次回调事件，所以只需把所有回调写在onLoad中即可
+        const innerAudioContext = swan.createInnerAudioContext();
+        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.autoplay = false;
+        innerAudioContext.obeyMuteSwitch = false;
 
         innerAudioContext.onPlay(res => {
             swan.showToast({

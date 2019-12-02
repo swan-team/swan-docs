@@ -21,7 +21,7 @@ sidebar: swan-getLocation
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。|
+|type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。wgs84 返回 gps 坐标，gcj02 返回火星坐标，gcj02 比 wgs84更为精确,所以返回可用于传入 swan.openLocation 的坐标|
 |altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，**会很耗时**，默认没有用 gps。|
 |success |Function  |  否 | |  接口调用成功的回调函数，返回内容详见返回参数说明。|
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
@@ -62,7 +62,7 @@ sidebar: swan-getLocation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -82,6 +82,58 @@ Page({
             }
         });
     }
+});
+```
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        同一位置下type属性为wgs84：
+        <img src="https://b.bdstatic.com/miniapp/images/wgs84.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        同一位置下type属性为gcj02：
+        <img src="https://b.bdstatic.com/miniapp/images/gcj02.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例2 - 图示可知type属性为gcj02的位置更为精准，建议与swan.openLocation连用**：
+
+<a href="swanide://fragment/f1d54cb8696efd08c210dc36c9ec09a91575112912482" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    getLocation(e) {
+        swan.getLocation({
+            type: 'gcj02', 
+            altitude: true,
+            success: res => {
+                console.log('success', res);
+                swan.openLocation({
+                    latitude: res.latitude,
+                    longitude: res.longitude,
+                    success: res => {
+                        console.log('openLocation success', res);
+                    },
+                    fail : function (err) {
+                        console.log('openLocation fail', err);
+                    }
+                });
+            },
+            fail: err => {
+                swan.showToast({title: '获取失败'});
+            },
+            complete: () => {
+                this.setData('loading', false);
+            }
+        });
+    },
 });
 ```
 

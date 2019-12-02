@@ -36,9 +36,52 @@ sidebar: tabbar_swan-showTabBar
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
-<a href="swanide://fragment/5aa2f4593413e51fd723d5effc62d8221574138247912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c45f4a5af785986752460c8d6e3a56801575210342255" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">      
+    <button type="primary" bindtap="showTabBar">showTabBar</button>
+    <button type="primary" bindtap="hideTabBar">hideTabBar</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        swan.hideTabBar();
+    },
+    showTabBar() {
+        swan.showTabBar({
+            success: function () {
+                console.log('showTabBar success');
+            },
+            fail: function (err) {
+                console.log('showTabBar fail', err);
+            }
+        });
+    },
+    hideTabBar() {
+        swan.hideTabBar({
+            success: function () {
+                console.log('hideTabBar success');
+            },
+            fail: function (err) {
+                console.log('hideTabBar fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - animation为true时，建议在真机上看效果，工具暂不支持**：
+
+<a href="swanide://fragment/653c2822a74192e84d5f53edd3cc8a231575210413682" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

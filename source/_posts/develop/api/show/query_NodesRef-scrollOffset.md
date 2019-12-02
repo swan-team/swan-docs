@@ -65,12 +65,6 @@ sidebar: query_NodesRef-scrollOffset
 * 在 js 文件中
 
 ```js
-/**
- * @file demo api for createSelectorQuery
- * @author swan
- */
-/* globals Page, swan */
-
 Page({
     data: {
         appear: false

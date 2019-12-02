@@ -55,7 +55,7 @@ sidebar: chooseaddress_swan-chooseAddress
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 用户允许授权情况下**：
 
 <a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -83,11 +83,35 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+**代码示例1 - 用户在拒绝了一次授权情况下，仍可访问此api**：
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="chooseAddress">chooseAddress</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    chooseAddress() {
+        swan.chooseAddress({
+            success: res => {
+                console.log('chooseAddress success', res);
+            },
+            fail: err => {
+                if(errCode == 10003){
+                    swan.openSetting({});
+                }
+                console.log('chooseAddress fail', err);
+            }
+        });
+    }
+});
 ```
  
