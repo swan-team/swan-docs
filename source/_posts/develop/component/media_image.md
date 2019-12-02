@@ -13,7 +13,7 @@ sidebar: media_image
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/image.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
@@ -24,7 +24,7 @@ sidebar: media_image
 | bindload | HandleEvent  | | 否 |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
 
-**mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
+### **mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |
@@ -42,8 +42,8 @@ sidebar: media_image
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -71,7 +71,7 @@ sidebar: media_image
     </div>    
 </div>
 
-**代码示例1 - 缩放模式**：
+### **代码示例1 - 缩放模式** 
 
   <a href="swanide://fragment/21139032b621d4c88d848f290fadd0bd1575135550850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -129,7 +129,7 @@ Page({
 });
 ```
 
-**代码示例2 - 裁剪模式**：
+### **代码示例2 - 裁剪模式** 
 
   <a href="swanide://fragment/7aa0d436bf859e57db61d570b21878141575135402549" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -201,7 +201,7 @@ Page({
     },
   });
 ```
-**代码示例3 - 可放动图**：
+### **代码示例3 - 可放动图** 
 
   <a href="swanide://fragment/a1ee4d3565a01e332c54460933b1c8ca1575135782389" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -211,7 +211,7 @@ Page({
 <image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
 ```
 
-**Bug & Tip**
+## **Bug & Tip**
 
-* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
-* image 组件默认宽度 300px、高度 225px。
+* Tip：支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+* Tip：image 组件默认宽度 300px、高度 225px。

@@ -17,7 +17,7 @@ sidebar: formlist_textarea
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/textarea.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名|类型|默认值|必填|说明|
 |----|----|----|----|----|
@@ -44,7 +44,7 @@ sidebar: formlist_textarea
 |bindinput|EventHandle| |否|当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
 |bindconfirm|EventHandle| |否|点击完成时， 触发 confirm 事件，event.detail = {value: value}|
 
-**confirm-type 有效值**：
+### **confirm-type 有效值**：
 
 | 值 | 说明 |
 |--- |--- |
@@ -55,7 +55,9 @@ sidebar: formlist_textarea
 | next | 右下角按钮为“下一步”，点击会触发bindconfirm事件 |
 | go | 右下角按钮为“前往”，点击会触发bindconfirm事件 |
 
-**图片示例**
+## 示例
+
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,7 +71,7 @@ sidebar: formlist_textarea
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
  <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -134,8 +136,8 @@ Page({
 
  
 
-**Bug & Tip**
-* textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
-* 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
-* 请使用cover-view组件在 textarea 组件上开发遮罩层。
+## **Bug & Tip**
+* Tip：textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
+* Tip：不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
+* Tip：请使用cover-view组件在 textarea 组件上开发遮罩层。
 

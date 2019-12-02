@@ -14,7 +14,7 @@ sidebar: formlist_radio
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 | 属性名 | 类型 | 默认值 | 必填 | 说明 |
 | ---- | ---- | ---- | ---- | ---- |
@@ -23,11 +23,12 @@ sidebar: formlist_radio
 | disabled | Boolean | false | 否 |是否禁用 |
 | color | Color | #3c76ff| 否 | radio 的颜色，同 CSS 的 color |
 
-**图片示例**
+## 示例
+### **图片示例**
 
 参见[radio-group](https://smartprogram.baidu.com/docs/develop/component/formlist_radio-group/)示例内容。
 
-**代码示例**
+### **代码示例**
 
 参见[radio-group](https://smartprogram.baidu.com/docs/develop/component/formlist_radio-group/)示例内容。
 

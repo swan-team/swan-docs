@@ -13,15 +13,17 @@ sidebar: open_web-view
 **百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/webview.png"  class="demo-qrcode-image" />
-**属性说明:**
+
+## **属性说明:**
 
 | 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
 | --- | ------ | ---- | ---- |---- |---- |
 | src | String |  | 是 |webview 指向网页的链接 | |
 |bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
+## 示例
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -35,7 +37,7 @@ sidebar: open_web-view
     </div>     
 </div>
 
-**代码示例1**：
+### **代码示例1**：
 
 <a href="swanide://fragment/5701757f175fd484c4f3b3a666d4a5301575189086529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -61,7 +63,7 @@ Page({
 });
 ```
 
-**代码示例2 - 在特定时机接受到H5传递参数的函数**：
+### **代码示例2 - 在特定时机接受到H5传递参数的函数**：
 
 <a href="swanide://fragment/6b417033a876fc19c589c7cdb875c9181575189212200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -87,6 +89,8 @@ Page({
 });
 ```
 
+## 相关接口介绍
+
 ### **相关接口1 **
 
 web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 支持的接口有：
@@ -103,7 +107,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 | swan.webView.getEnv   | 获取当前环境 | - |
 | swan.webView.postMessage   | 向小程序发送消息 | - |
 
-**代码示例**
+### **代码示例**
 
 ```xml
 <!-- html -->
@@ -170,11 +174,11 @@ Page({
     </div>
 </div>
 
-**Bug & Tip:**
+## **Bug & Tip:**
 
-* 网页内 iframe 的域名也需要配置到域名白名单。
-* 每个页面只能有一个 <`web-view/`>，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
-* 网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
-* 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
-* 如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
-* H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
+* Tip：网页内 iframe 的域名也需要配置到域名白名单。
+* Tip：每个页面只能有一个 <`web-view/`>，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。
+* Tip：网页与智能小程序之间不支持除 JSSDK 提供的接口之外的通信。
+* Tip：避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent。
+* Tip：如果使用了 JSSDK 提供的接口，需要引入 `swanjs`。
+* Tip：H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。

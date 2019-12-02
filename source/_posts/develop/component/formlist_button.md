@@ -14,7 +14,7 @@ sidebar: formlist_button
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/button.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
 |---- | ---- | ---- |---- |---- |---- |
@@ -36,7 +36,7 @@ sidebar: formlist_button
 |contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|- |
 
 
-**size有效值**：
+### **size有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -44,7 +44,7 @@ sidebar: formlist_button
 | mini   |小尺寸 |
 
 
-**type有效值**：
+### **type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -52,7 +52,7 @@ sidebar: formlist_button
 | default |白色|
 | warn |红色|
 
-**form-type有效值**：
+### **form-type有效值**：
 
 |值|说明|
 | ---- | ---- |
@@ -60,7 +60,7 @@ sidebar: formlist_button
 | submit | 提交表单 |
 | reset | 重置表单 |
 
-**open-type有效值**：
+### **open-type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -71,9 +71,9 @@ sidebar: formlist_button
 |contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
 
+## 示例
 
-
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -87,7 +87,7 @@ sidebar: formlist_button
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 <a href="swanide://fragment/a90e9e3b2bc2402a14a1c481157d12301572918972473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

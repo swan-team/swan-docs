@@ -15,13 +15,15 @@ sidebar: formlist_label
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/label.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名|类型|默认值|必填|说明|
 |-----|--- |--- |--- |--- |
 |for|String| | 否 |绑定控件的 id|
 
-**图片示例**
+## 示例
+
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -35,7 +37,7 @@ sidebar: formlist_label
     </div>     
 </div>
 
-**代码示例1**：
+### **代码示例1**：
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -77,7 +79,9 @@ sidebar: formlist_label
     </view>
 </view>
 ```
+
 * 在 js 文件中
+
 ```javascript
 Page({
     data: {
@@ -93,7 +97,7 @@ Page({
 });
 ```
 
-**代码示例2 - label可控制热区**：
+### **代码示例2 - label可控制热区**：
 
 <a href="swanide://fragment/72a27b52f27e27f779ceb251dd2666ae1575131264690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -118,7 +122,9 @@ Page({
     </view>
 </view>
 ```
+
 * 在 css 文件中
+
 ```css
 .wrap {
     font-size: .16rem;

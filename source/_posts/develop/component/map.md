@@ -12,7 +12,7 @@ sidebar: map
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/map.png"  class="demo-qrcode-image" />
 
-**属性说明**: 
+## **属性说明** 
 
 |属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |---- |
@@ -40,11 +40,11 @@ sidebar: map
 | bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
 | bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
-### marker
+# markers
 
 **解释**：标记点，用于在地图上显示标记的位置
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明| 
 |---- | ---- | ---- |---- | --- | 
@@ -62,7 +62,7 @@ sidebar: map
 | label |   Object | |否 | 为标记点旁边增加标签，支持的属性见下表，可识别换行符。 |
 | anchor |   Object | |否 | 经纬度在标注图标的锚点，默认底边中点，{x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
 
-**callout 属性说明**
+### **callout 属性说明**
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -75,7 +75,7 @@ sidebar: map
 | display | 'BYCLICK':点击显示; 'ALWAYS':常显 | String |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
-**label 属性说明**
+### **label 属性说明**
 
 | 属性名 | 说明 | 类型  |
 |---- | ---- | ---- |
@@ -91,7 +91,8 @@ sidebar: map
 | padding    | 文本边缘留白 | Number |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -105,7 +106,7 @@ sidebar: map
     </div>     
 </div>
 
-**代码示例1：**：
+### **代码示例1：** 
 
 <a href="swanide://fragment/16a9806ccc835e31e5a7a4183f78435c1574840582474" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
@@ -200,8 +201,10 @@ Page({
 ```
 
 
-### polyline
-**解释**：指定一系列坐标点，从数组第一项连线至最后一项<div></div><text class="notice">属性说明:</text>
+# polyline
+**解释**：指定一系列坐标点，从数组第一项连线至最后一项。
+
+## 属性说明 
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -214,7 +217,9 @@ Page({
 | borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
 
-**图片示例**
+## 示例
+
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -228,7 +233,7 @@ Page({
     </div>     
 </div>
 
-**代码示例2：**：
+### **代码示例2 **
 
 <a href="swanide://fragment/831a5302b414013067743cb6286084171574841164008" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
@@ -273,8 +278,10 @@ Page({
 });
 ```
 
-### polygon
-**解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<div></div><text class="notice">属性说明:</text>
+# polygon
+**解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<
+
+## 属性说明 
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -284,7 +291,9 @@ Page({
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
 | zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
 
-**图片示例**
+## 示例
+
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -298,7 +307,7 @@ Page({
     </div>     
 </div>
 
-**代码示例3:**：
+### **代码示例3:** 
 
 <a href="swanide://fragment/be2a2d5636c7a7421f64cd4e2c79ed301574841928160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
@@ -346,8 +355,10 @@ Page({
 });
 ```
 
-### circle
-**解释**：在地图上显示圆<div></div><text class="notice">属性说明:</text>
+# circle
+**解释**：在地图上显示圆
+
+## 属性说明 
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -358,7 +369,8 @@ Page({
 | radius | 半径 | Number | 是 | |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -372,7 +384,7 @@ Page({
     </div>     
 </div>
 
-**代码示例4:**：
+### **代码示例4:** 
 
 <a href="swanide://fragment/6129297d298e20dc7e0b3f6d56ca24f01574842777356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
@@ -410,8 +422,11 @@ Page({
 });
 ```
 
-### control
-**解释**：在地图上显示控件，控件不随着地图移动<div></div><text class="notice">属性说明:</text>
+# control
+
+**解释**：在地图上显示控件，控件不随着地图移动。
+
+## 属性说明 
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -420,7 +435,7 @@ Page({
 | iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
 | clickable | 是否可点击 | Boolean | 否 | 默认不可点击 |
 
-**position 属性说明**
+### **position 属性说明**
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -429,8 +444,9 @@ Page({
 | width | 控件宽度 | Number | 否 | 默认为图片宽度 |
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 
+## 示例
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -444,7 +460,7 @@ Page({
     </div>     
 </div>
 
-**代码示例5**：
+### **代码示例5** 
 
 <a href="swanide://fragment/5e5072a1342f5d576e57ffab2ac469d81574843304198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
@@ -491,8 +507,21 @@ Page({
     }
 });
 ```
+### **图片示例**
 
-**整体代码示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+### **整体代码示例**：
 
 <a href="swanide://fragment/64984d55db8ac69c2a1fc651cc7fc2671570610273844" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
@@ -633,28 +662,15 @@ Page({
     }
 });
 ```
-**图片示例**
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+## **Bug & Tip**
 
-**Bug & Tip**
-
-* 地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
-* map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件。
-* CSS 动画对 map 组件无效。
-* cover-view、cover-image 组件可覆盖在map组件之上。
-* map组件的 markers 的 label 暂不支持换行。
-* Android 与 iOS 定位精度不同，双端定位存在差异。
-* map 组件使用的经纬度是火星坐标系，调用 swan.getLocation 接口需要指定 type 为 gcj02。
-* 开发者工具由于坐标系不同，定位与双端存在差异。开发时请以双端为准。
+* Tip：地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
+* Tip：map 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。
+* Tip：请勿在 scroll-view、swiper、picker-view、movable-view 中使用 map 组件。
+* Tip：CSS 动画对 map 组件无效。
+* Tip：cover-view、cover-image 组件可覆盖在map组件之上。
+* Bug：map组件的 markers 的 label 暂不支持换行。
+* Tip：Android 与 iOS 定位精度不同，双端定位存在差异。
+* Tip：map 组件使用的经纬度是火星坐标系，调用 swan.getLocation 接口需要指定 type 为 gcj02。
+* Tip：开发者工具由于坐标系不同，定位与双端存在差异。开发时请以双端为准。

@@ -14,7 +14,7 @@ sidebar: media_video
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
 
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
@@ -50,7 +50,7 @@ sidebar: media_video
 |bindwaiting|   EventHandle| |否|        视频出现缓冲时触发|
 |binderror| EventHandle | | 否 |视频播放出错时触发|
 
-**objectFit 有效值**:
+### **objectFit 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -58,7 +58,7 @@ sidebar: media_video
 | fill | 填充 |
 | cover | 覆盖 |
 
-**direction 有效值**:
+### **direction 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -66,7 +66,7 @@ sidebar: media_video
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-**主流格式支持**：
+### **主流格式支持**：
 
 |格式|    Android|    IOS|
 |--|--|--|
@@ -83,7 +83,7 @@ sidebar: media_video
 |rm|    是   |是|
 |ogg|   是   |是|
 
-**主流编码格式支持**：
+### **主流编码格式支持**：
 
 |格式|    Android|    IOS|
 |--|--|--|
@@ -94,7 +94,9 @@ sidebar: media_video
 |VP8|   是   |否|
 |VP9|   是   |否|
 
-**图片示例**
+## 示例
+
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -108,7 +110,7 @@ sidebar: media_video
     </div>     
 </div>
 
-**代码示例1 - controls**：
+### **代码示例1 - controls** 
 
 <a href="swanide://fragment/1d10a86e191b4738516ec73594f6cdd51574846726432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -144,7 +146,7 @@ Page({
 })
 ```
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -158,7 +160,7 @@ Page({
     </div> 
 </div>
 
-**代码示例2 - title**：
+### **代码示例2 - title** 
 
 <a href="swanide://fragment/687b1ab6bd713b0fa80553503515d6651574851958216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -176,7 +178,7 @@ Page({
 </view>
 ```
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -190,7 +192,7 @@ Page({
     </div> 
 </div>
 
-**代码示例3 - direction**：
+### **代码示例3 - direction** 
 
 <a href="swanide://fragment/5a3e88566c4579b2b373ea6b1f4f7a631574853407212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -225,7 +227,7 @@ Page({
     }
 });
 ```
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -239,7 +241,7 @@ Page({
     </div>     
 </div>
 
-**代码示例4 - show-progress**：
+### **代码示例4 - show-progress** 
 
 <a href="swanide://fragment/6d40cf6c497c6eecf9f044a4ff9ff0901574854124112" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -257,7 +259,7 @@ Page({
 </view>
 ```
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -271,7 +273,7 @@ Page({
     </div>     
 </div>
 
-**代码示例5 - show-no-wifi-tip**：
+### **代码示例5 - show-no-wifi-tip** 
 
 <a href="swanide://fragment/f29d4f8d9d6884709607949f354aa7b91574854980912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -290,7 +292,7 @@ Page({
 </view>
 ```
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -304,7 +306,7 @@ Page({
     </div>     
 </div>
 
-**整体代码示例**：
+### **整体代码示例** 
 
 <a href="swanide://fragment/cf193e3b46933a9c48cdf78994ca79cf1574845335256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -525,8 +527,8 @@ Page({
 ```
 
 
-**Bug & Tip**
-* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
-* `<video />` 默认宽度 300px、高度 225px。
+## **Bug & Tip**
+* Tip：相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
+* Tip：`<video />` 默认宽度 300px、高度 225px。
 
 

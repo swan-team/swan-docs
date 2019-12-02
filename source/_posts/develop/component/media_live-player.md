@@ -17,7 +17,7 @@ sidebar: media_live-player
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
@@ -34,21 +34,21 @@ sidebar: media_live-player
 |bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
 |bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullScreen}。|
 
-**orientation 有效值**:
+### **orientation 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
 | vertical | 垂直方向 |
 | horizontal | 水平方向 |
 
-**object-fit 有效值**:
+### **object-fit 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
 | contain | 包含 |
 | fillCrop | 填充 |
 
-**主流格式支持**：
+### **主流格式支持**：
 
 |格式|	Android|	IOS|
 |--|--|--|
@@ -65,7 +65,7 @@ sidebar: media_live-player
 |rm|	是	|是|
 |ogg|	是	|是|
 
-**主流编码格式支持**：
+### **主流编码格式支持**：
 
 |格式|	Android|	IOS|
 |--|--|--|
@@ -76,7 +76,7 @@ sidebar: media_live-player
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-**状态码**：
+### **状态码**：
 
 |代码  |说明   |
 | --- | --- |
@@ -105,7 +105,7 @@ sidebar: media_live-player
 |3005|RTMP 读/写失败|
 
 
-**网络状态数据**：
+### **网络状态数据**：
 
 |键名  | 说明 |
 | --- | --- |
@@ -118,7 +118,8 @@ sidebar: media_live-player
 |videoWidth|视频画面的宽度|
 |videoHeight|视频画面的高度|
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -132,7 +133,7 @@ sidebar: media_live-player
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 
 <a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -219,6 +220,6 @@ Page({
 ```
 
  
-**Bug & Tip**
-* live-player 默认宽度 300px、高度 225px；
-* 从基础库版本1.12.0开始支持事件捕获、冒泡。
+## **Bug & Tip**
+* Tip：live-player 默认宽度 300px、高度 225px；
+* Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。

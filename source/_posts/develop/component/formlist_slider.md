@@ -13,7 +13,7 @@ sidebar: formlist_slider
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/slider.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
@@ -30,7 +30,8 @@ sidebar: formlist_slider
 |bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
 |bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +45,7 @@ sidebar: formlist_slider
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 <a href="swanide://fragment/d47270bf31719f0e0ff2dc7975f968861565503527422" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

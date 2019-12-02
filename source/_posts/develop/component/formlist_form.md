@@ -13,7 +13,7 @@ sidebar: formlist_form
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/form.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型 | 默认值 | 必填 |说明|最低版本|
 |-----|---- |---- |----|----|----|
@@ -22,11 +22,11 @@ sidebar: formlist_form
 |template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="http://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取|3.105.3|
 |subscribe-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息时所使用的唯一标识符，内容由开发者自定义，用来标识订阅场景<br>注意：同一用户在同一 subscribe-id 下的多次授权不累积下发权限，只能下发一条。若要订阅多条，需要不同 subscribe-id |3.105.3|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}`,当report-type 为 subscribe 时，status 和message 中返回用户授权具体信息| |
-| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件| |
+| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件| | |
 
 
 
-**report-type有效值**：
+### **report-type有效值**：
 
 |值 |说明|
 |---- |---- |
@@ -34,7 +34,7 @@ sidebar: formlist_form
 | subscribe |订阅类模板消息，需要用户授权才可发送|
 
 
-**report-type 为 subscribe时，status 和 message具体值**：
+### **report-type 为 subscribe时，status 和 message具体值**：
 
 status 为 Number 类型，message 为 String类型，当用户永久拒绝授权的时候，建议开发者不要再展示订阅消息授权面板入口。
 
@@ -46,7 +46,8 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 | 500104 |请求模板内容失败|
 | 500105 |请求formId失败|
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,7 +61,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
     </div>     
 </div>
 
-**代码示例1 - 普通表单**：
+### **代码示例1 - 普通表单**：
 
 <a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -128,7 +129,7 @@ Page({
 
 ```
 
-**代码示例2 - 模板类型表单**：
+### **代码示例2 - 模板类型表单**：
 
 <a href="swanide://fragment/9110d73ca11986733a7110625b52b2e21575228640083" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

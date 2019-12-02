@@ -14,13 +14,14 @@ sidebar: formlist_checkbox-group
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/checkbox.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
 |bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,7 +35,7 @@ sidebar: formlist_checkbox-group
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 <a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -12,7 +12,7 @@ sidebar: formlist_picker-view
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值|必填|说明|
 |---- | ---- |---- |---- |---- |
@@ -23,7 +23,8 @@ sidebar: formlist_picker-view
 |mask-class | String ||否|设置蒙层的类名|
 | bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,11 +38,11 @@ sidebar: formlist_picker-view
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 
 参见[picker-view-column](https://smartprogram.baidu.com/docs/develop/component/formlist_picker-view-column/)示例内容。
 
-**Bug & Tip**:
+## **Bug & Tip**
 
-其中只可放置`<picker-view-column/>`组件，其他节点不会显示。
+Tip：其中只可放置`<picker-view-column/>`组件，其他节点不会显示。

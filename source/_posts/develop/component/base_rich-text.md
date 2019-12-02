@@ -13,7 +13,7 @@ sidebar: base_rich-text
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rich-text.png"  class="demo-qrcode-image" />
 
-**属性说明:**
+## **属性说明:**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- | ---- |---- |
@@ -25,7 +25,8 @@ sidebar: base_rich-text
 
 * 元素节点：type = node
 
-**代码示例1**：
+## 示例
+### **代码示例1**：
 
 
 <a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -66,7 +67,7 @@ Page({
 ```
 
 
-**属性说明:**
+## **属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -76,7 +77,7 @@ Page({
 
 * 文本节点：type = text
 
-**代码示例2**：
+### **代码示例2**：
 
 
 <a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -137,7 +138,7 @@ Page({
 });
 ```
 
-**属性说明:**
+## **属性说明:**
 
 |属性名 | 说明 | 类型  | 必填 | 备注 |
 |---- | ---- | ---- |---- | ---- |
@@ -147,7 +148,7 @@ Page({
 
 > 全局支持class和style属性，不支持id属性。
 
-属性说明:
+## 属性说明:
 
 |节点 | 属性 |
 |---- | ---- |
@@ -195,7 +196,8 @@ Page({
 | tr | |
 | ul | - |
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -209,7 +211,7 @@ Page({
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 
 <a href="swanide://fragment/ce3c9b8128d96855f3a0983f2b897b661572918834655" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -310,17 +312,17 @@ Page({
 ```
 
 
-**Bug & Tip**
+## **Bug & Tip**
 
-* 单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
-* 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
-* nodes 不推荐使用 String 类型，性能会有所下降。
-* rich-text 组件内屏蔽所有节点的事件。
-* attrs 属性不支持 id，支持 class。
-* name 属性大小写不敏感。
-* 如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
-* img 标签仅支持网络图片。
-* 如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
+* Tip：单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
+* Tip：支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* Tip：nodes 不推荐使用 String 类型，性能会有所下降。
+* Tip：rich-text 组件内屏蔽所有节点的事件。
+* Tip：attrs 属性不支持 id，支持 class。
+* Tip：name 属性大小写不敏感。
+* Tip：如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
+* Tip：img 标签仅支持网络图片。
+* Tip：如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
 
 
 

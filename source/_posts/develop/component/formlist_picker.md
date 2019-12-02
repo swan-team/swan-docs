@@ -13,7 +13,7 @@ sidebar: formlist_picker
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性|类型|默认值|必填|说明|
 |--- |---|---|---|---|
@@ -23,7 +23,7 @@ sidebar: formlist_picker
 
 > 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
 
-**mode的有效值**
+### **mode的有效值**
 
 |值|说明|
 |---|---|
@@ -33,7 +33,7 @@ sidebar: formlist_picker
 |multiSelector|多列选择器|
 |region|省市区选择器|
 
-<notice>普通选择器：mode = selector</notice>
+### <notice>普通选择器：mode = selector</notice>
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -43,7 +43,23 @@ sidebar: formlist_picker
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
-**代码示例 1**：
+## 示例
+
+### **图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/picker.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+### **代码示例 1** 
 
 <a href="swanide://fragment/c16ae3b84a6ac40fefd4ddb0db99f3ce1572872865725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -81,7 +97,7 @@ Page({
     }
 });
 ```
-<notice>时间选择器：mode = time</notice>
+### <notice>时间选择器：mode = time</notice>
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -91,7 +107,7 @@ Page({
 |bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
 
 
-**代码示例 2**：
+### **代码示例 2** 
 
 <a href="swanide://fragment/6d81c7bad0496d09ca8ffe7981c5c3bf1572872978396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -131,7 +147,7 @@ Page({
 });
 ```
 
-<notice>日期选择器：mode = date</notice>
+### <notice>日期选择器：mode = date</notice>
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -141,7 +157,7 @@ Page({
 | fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
 
-<div style="font-style: italic"> fields有效值：</div>
+### <div style="font-style: italic"> fields有效值：</div>
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -150,7 +166,7 @@ Page({
 | day | 选择器粒度为天 |
 
 
-**代码示例 3**：
+### **代码示例 3**：
 
 <a href="swanide://fragment/0f83f4c4024d8c279589f5bb594515b51572873363338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -190,7 +206,7 @@ Page({
 });
 ```
 
-<notice>多列选择器：mode = multiSelector</notice>
+### <notice>多列选择器：mode = multiSelector</notice>
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -201,7 +217,7 @@ Page({
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
 | title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
-**代码示例 4**：
+### **代码示例 4**：
 
 <a href="swanide://fragment/6521d8dc859cdee233d6e68b00a2b1301572873475056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -300,7 +316,7 @@ Page({
 });
 ```
 
-<notice>省市区选择器：mode = region</notice>
+### <notice>省市区选择器：mode = region</notice>
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -309,7 +325,7 @@ Page({
 | bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
-**代码示例 5**：
+### **代码示例 5**：
 
 <a href="swanide://fragment/26a9c93186196d102d032ebcbfcf6df41572873584926" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -350,22 +366,10 @@ Page({
 ```
 
 
-**图片示例**
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/picker.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
-**Bug & Tip**
+## **Bug & Tip**
 
-* 基础库版本 11.15 以下：picker 组件在 iOS 系统中从底部弹出，在安卓系统中从中间弹出。
+* Tip：基础库版本 11.15 以下：picker 组件在 iOS 系统中从底部弹出，在安卓系统中从中间弹出。
 
-* 基础库版本 11.15 及以上：picker 组件双端都是从底部弹出。
+* Tip：基础库版本 11.15 及以上：picker 组件双端都是从底部弹出。

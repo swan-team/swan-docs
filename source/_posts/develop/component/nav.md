@@ -14,7 +14,7 @@ sidebar: nav
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigator.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |---- |
@@ -34,14 +34,14 @@ sidebar: nav
 |bindfail|	String| | 否 |当target="miniProgram"时有效，跳转小程序失败。|	2.5.2|
 |bindcomplete|	String|  | 否 |		当target="miniProgram"时有效，跳转小程序完成。|	2.5.2|
 
-**target 有效值**:
+### **target 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
 | self | 当前小程序 |
 | miniProgram | 跳转到另一个小程序 |
 
-**version 有效值**:
+### **version 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -49,7 +49,7 @@ sidebar: nav
 | trial | 体验版 |
 | release | 正式版 |
 
-**open-type 有效值**：
+### **open-type 有效值**：
 
 |值 |说明 |最低版本|
 |--- |--- |--- |
@@ -61,16 +61,9 @@ sidebar: nav
 |exit|	退出小程序，target="miniProgram"时生效|	2.5.2|
 
 
-**说明**:
-`navigator-hover` 默认为:
-```css
-{
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
-}
-```
+## 示例
 
-**图片示例**
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -84,7 +77,7 @@ sidebar: nav
     </div>     
 </div>
 
-**代码示例**
+### **代码示例**
 
 <a href="swanide://fragment/9999477aff1012b1f8d10125c245360f1565511678971" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -146,3 +139,11 @@ Page({
 
 
 
+### **说明**:
+`navigator-hover` 默认为:
+```css
+{
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
+}
+```

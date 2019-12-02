@@ -53,6 +53,7 @@ sidebar: view_cover-image
 ```
 
 * 在 js 文件中
+
 ```js
 Page({
     data: {

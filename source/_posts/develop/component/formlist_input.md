@@ -11,7 +11,7 @@ sidebar: formlist_input
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/input.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
 |---- | ---- | ---- |---- |---- |---- |
@@ -37,7 +37,7 @@ sidebar: formlist_input
 | bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}| |
 
 
-**type 有效值**：
+### **type 有效值**：
 
 |值|说明 |
 |---- | ---- |
@@ -46,7 +46,7 @@ sidebar: formlist_input
 | idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
-**confirm-type 有效值**：
+### **confirm-type 有效值**：
 
 |值|说明 |
 |---- | ---- |
@@ -56,7 +56,8 @@ sidebar: formlist_input
 | go |键盘右下角按钮为 “前往” |
 | done |键盘右下角按钮为 “完成” |
 
-**图片示例**
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -70,7 +71,7 @@ sidebar: formlist_input
     </div>     
 </div>
 
-**代码示例1**：
+### **代码示例1**：
 
 <a href="swanide://fragment/9de486a69d0608944a7f7d0ff94746151572919458545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
@@ -172,7 +173,7 @@ Page({
 });
 ```
 
-**代码示例2 - input做业务搜索框**：
+### **代码示例2 - input做业务搜索框**：
 
 <a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
@@ -288,11 +289,11 @@ Page({
 });
 ```
 
-**Bug & Tip**
+## **Bug & Tip**
 
-* confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。
-* input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family。
-* 在 input 聚焦期间，避免使用 css 动画。
-* placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
-* 在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
-* 暂不支持 bindinput 处理函数直接 return 一个字符串。
+* Tip：confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。
+* Tip：input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family。
+* Tip：在 input 聚焦期间，避免使用 css 动画。
+* Bug：placeholder 的样式暂时只支持设置 font-size、font-weight、color 。
+* Bug：在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
+* Tip：暂不支持 bindinput 处理函数直接 return 一个字符串。

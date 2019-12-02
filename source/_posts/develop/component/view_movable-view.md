@@ -162,7 +162,7 @@ Page({
 ```
 
 
-**Bug & Tip**
+## **Bug & Tip**
 
 * Tip：movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
 * Tip：movable-view 默认为绝对定位，top 和 left 属性为 0px。
