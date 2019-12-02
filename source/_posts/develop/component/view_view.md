@@ -13,7 +13,7 @@ sidebar: view_view
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
 
 
-**属性说明**：
+## 属性说明
 
 
 |属性名 |类型  |默认值  |必填|说明| 
@@ -24,9 +24,9 @@ sidebar: view_view
 |hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
 
+## 示例
 
-
-**图片示例**：
+### **图片示例**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: view_view
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例**：
 
 <a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -79,7 +79,7 @@ sidebar: view_view
 </view>
 ```
 
-**Tips**：
+## **Bug&Tip**：
 
-1、 如果需要使用滚动视图，请使用 scroll-view。
-2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
+1、 Tip：如果需要使用滚动视图，请使用 scroll-view。
+2、 Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。

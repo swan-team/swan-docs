@@ -18,7 +18,7 @@ canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的�
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/canvas.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+**属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |

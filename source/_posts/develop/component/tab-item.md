@@ -13,7 +13,7 @@ sidebar: tab-item
 参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)二维码内容。
 
 
-**属性说明**：
+**属性说明**
 
 |属性 | 类型 | 默认值 | 必填 | 说明 |最低版本|
 |---- | ---- | ---- |---- |---- |---- |

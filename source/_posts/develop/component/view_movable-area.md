@@ -16,7 +16,7 @@ sidebar: view_movable-area
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+**属性说明**
 
 |属性名	|类型	|默认值| 必填 |	说明|
 |--|--|--|--|

@@ -25,7 +25,7 @@ sidebar: tabs
 
 标签栏组件的使用需要通过 tabs 和 [tab-item](https://smartprogram.baidu.com/docs/develop/component/tab-item/) 组件配合实现。
 
-**属性说明**：
+**属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |---- |
