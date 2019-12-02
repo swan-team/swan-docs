@@ -20,7 +20,7 @@ sidebar: swan-getUpdateManager
 
 **返回值**：[updateManager](https://smartprogram.baidu.com/docs/develop/api/open/UpdateManager/)
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,7 +34,7 @@ sidebar: swan-getUpdateManager
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 [在开发者工具中预览效果](swanide://fragment/65877d62da2f54c951b087ed53ee2dc91573808765114)
 

@@ -27,7 +27,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

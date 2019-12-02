@@ -39,7 +39,7 @@ sidebar: media_camera
 | off | 闪光灯关 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -47,7 +47,7 @@ sidebar: media_camera
     </div> 
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e57c71266aac86d6a0f6253f3c0f8de41565512985352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -41,7 +41,7 @@ sidebar: base_icon
 | radioUnselect | 单选框未选中图标 |
 | loadingGrey | loading图标 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -55,7 +55,7 @@ sidebar: base_icon
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

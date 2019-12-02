@@ -29,7 +29,7 @@ sidebar: open
 | userAvatarUrl | 用户头像 |
 | userGender | 用户性别 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +43,7 @@ sidebar: open
     </div>
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e98cfa76e01e4b38ab712a7942c6b32b1565510599988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

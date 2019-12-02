@@ -22,7 +22,7 @@ sidebar: swan-setURLQuery
 
 newURLQuery 必须是值为字符串的对象，否则调用 setURLQuery 会抛错。新设置的 URL query 会与当前的 URL query 融合。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -36,7 +36,7 @@ newURLQuery 必须是值为字符串的对象，否则调用 setURLQuery 会抛�
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
  
 <a href="swanide://fragment/3a389c6476a58e0418b7aa40427f7e381573991590910" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

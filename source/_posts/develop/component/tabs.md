@@ -42,7 +42,7 @@ sidebar: tabs
 * 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
 * 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -109,7 +109,7 @@ Page({
 });
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

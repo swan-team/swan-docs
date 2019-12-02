@@ -15,7 +15,7 @@ sidebar: cameracontext_CameraContext
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: cameracontext_CameraContext
 </div>
 
 
-**代码示例**：
+**代码示例**
  
 <a href="swanide://fragment/6087c1da593efa7eece7cc9f4b4e0a3e1573542045061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

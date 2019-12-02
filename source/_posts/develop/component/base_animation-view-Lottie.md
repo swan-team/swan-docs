@@ -32,7 +32,7 @@ sidebar: base_animation-view-Lottie
 | pause | 暂停 |
 | stop | 停止 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,7 @@ sidebar: base_animation-view-Lottie
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/72ffe9be4e8e6dbcd24ca12659fd43591572918523899" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

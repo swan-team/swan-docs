@@ -15,7 +15,7 @@ sidebar: websocket_SocketTask-onError
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: websocket_SocketTask-onError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/988ec5f9b41c4f603e4358ca69d54b041573407221622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

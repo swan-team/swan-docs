@@ -52,7 +52,7 @@ sidebar: swan-getSystemInfoSync
 |safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -66,7 +66,7 @@ sidebar: swan-getSystemInfoSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6f066eef865faf28a95af5c97553df451574243505661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

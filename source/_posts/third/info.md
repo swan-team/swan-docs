@@ -486,7 +486,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifydomain
 |download_domain | string | 否 | download合法域名，多个时用,分割，当action参数是get时不需要此字段。|
 |upload_domain | string | 否 | upload合法域名，多个时用,分割，当action参数是get时不需要此字段。|
 **响应数据**: action=get
-**代码示例**：
+**代码示例**
 ```
 {
     "errno":0,
@@ -501,7 +501,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifydomain
 }
 ```
 **响应数据**: action=delete | set | add
-**代码示例**：
+**代码示例**
 ```
 {
     "errno":0,
@@ -547,7 +547,7 @@ web_view_domain | string | 否 | 小程序业务域名，多个时用,分割，�
 }
 ```
 **响应数据**: action=delete | set | add
-**代码示例**：
+**代码示例**
 ```
 {
     "errno":0,

@@ -195,7 +195,7 @@ Page({
 | tr | |
 | ul | - |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -209,7 +209,7 @@ Page({
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/ce3c9b8128d96855f3a0983f2b897b661572918834655" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

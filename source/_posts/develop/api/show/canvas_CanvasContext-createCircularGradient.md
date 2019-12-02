@@ -20,11 +20,11 @@ sidebar: canvas_CanvasContext-createCircularGradient
 
 **`z`参数说明**：圆的半径
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/createCircularGradient.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/44364a5e7710fd57be9c2269dbcba3f11573719980297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

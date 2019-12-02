@@ -44,7 +44,7 @@ sidebar: image_swan-chooseImage
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

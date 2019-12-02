@@ -56,7 +56,7 @@ sidebar: formlist_input
 | go |键盘右下角按钮为 “前往” |
 | done |键盘右下角按钮为 “完成” |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

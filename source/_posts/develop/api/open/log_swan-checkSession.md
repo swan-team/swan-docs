@@ -23,7 +23,7 @@ sidebar: log_swan-checkSession
 |fail  |  Function |   否 |  |  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|
 |complete |   Function |   否  |   |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

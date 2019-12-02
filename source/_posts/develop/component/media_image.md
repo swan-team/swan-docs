@@ -43,7 +43,7 @@ sidebar: media_image
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

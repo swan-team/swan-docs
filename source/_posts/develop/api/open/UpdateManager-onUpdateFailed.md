@@ -16,7 +16,7 @@ sidebar: UpdateManager-onUpdateFailed
 
 **方法参数**：Function callback
 
-**代码示例**：
+**代码示例**
 
 [在开发者工具中预览效果](swanide://fragment/65877d62da2f54c951b087ed53ee2dc91573808765114)
 

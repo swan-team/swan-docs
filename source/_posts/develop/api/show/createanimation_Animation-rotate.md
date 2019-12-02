@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-rotate
 
 **参数说明**：deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-rotate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/bca91eb49e9480552201776e3b25090b1574215871646" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

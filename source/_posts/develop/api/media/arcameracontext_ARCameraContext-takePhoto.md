@@ -32,7 +32,7 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
 |---- | ---- | ---- |
 |tempImagePath  | String | 图片的临时路径 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,7 @@ sidebar: arcameracontext_ARCameraContext-takePhoto
     </div>     
 </div>
  
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e60cfcd18d6831e0dc63c740b747e3061574330923900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

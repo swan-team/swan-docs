@@ -13,7 +13,7 @@ sidebar: view_swiper
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## 属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
@@ -33,7 +33,7 @@ sidebar: view_swiper
 |bindchange | EventHandle |  | 否 |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
 |bindanimationfinish|EventHandle| | 否 |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-**change 事件 source 返回值**
+### **change 事件 source 返回值**
 
 change事件中的source字段，表示触发change事件的原因，可能值如下：
 
@@ -43,8 +43,9 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 | touch | 用户划动导致的swiper切换 |
 | "" | 其他原因将返回空字符串 |
 
+## 示例
 
-**图片示例**：
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -58,7 +59,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
     </div>     
 </div>
 
-**代码示例1**：
+### **代码示例1**：
 
 <a href="swanide://fragment/d0dec68787a4c179328c6a22d80325981565503528602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -183,7 +184,7 @@ Page({
 });
 ```
 
-**代码示例2 - 用于实现顶部标签切换**：
+### **代码示例2 - 用于实现顶部标签切换**：
 
 <a href="swanide://fragment/82da7e569b409a1fa4fb753a010fd35e1575120753274" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -269,7 +270,7 @@ Page({
 }
 ```
 
-**Bug & Tip**：
+## **Bug & Tip**：
 
-* 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
-* 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
+* Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
+* Tip：其中只可放置 swiper-item 组件，否则会导致未定义的行为。

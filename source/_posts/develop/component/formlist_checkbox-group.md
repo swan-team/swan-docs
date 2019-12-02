@@ -20,7 +20,7 @@ sidebar: formlist_checkbox-group
 |---- | ---- | ---- |---- |---- |
 |bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,7 +34,7 @@ sidebar: formlist_checkbox-group
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

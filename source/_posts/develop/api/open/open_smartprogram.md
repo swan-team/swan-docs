@@ -25,7 +25,7 @@ sidebar: open_smartprogram
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/08bcf5aff52ed378f39c8112eb3d4a051559044193460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -101,7 +101,7 @@ Page({
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/df2bcb7ca1229b466e859bc1a40c21091559044133015" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

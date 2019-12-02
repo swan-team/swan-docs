@@ -19,7 +19,7 @@ sidebar: remove_swan-removeStorageSync
 **`key`参数说明**：本地缓存中的指定的 key。
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,7 +33,7 @@ sidebar: remove_swan-removeStorageSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/fdb596bbf3dc4eb3aef72230ab6b9bfc1573635261030" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

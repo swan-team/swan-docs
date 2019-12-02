@@ -15,7 +15,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onTimeUpdate
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onTimeUpdate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/f1637760fd5806867e309cb1bfc8fce61573424394917" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

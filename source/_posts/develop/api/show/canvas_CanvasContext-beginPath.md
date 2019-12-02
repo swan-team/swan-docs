@@ -19,11 +19,11 @@ sidebar: canvas_CanvasContext-beginPath
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/beginPath.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/74a4bfc69db830725b7bac2eb6eca3911573723257254" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

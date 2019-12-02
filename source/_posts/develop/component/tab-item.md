@@ -29,11 +29,11 @@ sidebar: tab-item
 | 'dot' | 徽标类型为圆点 |
 | 'text'| 徽标类型为文字 |
 
-**图片示例**：
+**图片示例**
 
 参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
 
-**代码示例**：
+**代码示例**
 
 参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
 

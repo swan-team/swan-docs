@@ -45,7 +45,7 @@ sidebar: image_swan-chooseAlbum
 |type|文件类型|有效值：photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)； 开发者工具暂不支持|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

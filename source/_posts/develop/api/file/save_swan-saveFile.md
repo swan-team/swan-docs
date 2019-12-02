@@ -33,7 +33,7 @@ sidebar: save_swan-saveFile
 |---- | ---- | ---- |
 |savedFilePath  |String | 文件的保存路径|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -47,7 +47,7 @@ sidebar: save_swan-saveFile
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/08e654d3cd0a9812f5cb500d0be6d1b41573624533671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

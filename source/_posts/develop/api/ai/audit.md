@@ -59,7 +59,7 @@ sidebar:  audit
 |3 | 疑似 |
 |4 | 审核失败 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -73,7 +73,7 @@ sidebar:  audit
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -37,7 +37,7 @@ sidebar:  createanimation_swan-createAnimation
 |step-start|动画第一帧就跳至结束状态直到结束。|
 |step-end|动画一直保持开始状态，最后一帧跳到结束状态。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -51,7 +51,7 @@ sidebar:  createanimation_swan-createAnimation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/bfccb9e8f50ca3284a700afc804ff0cc1557729832832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

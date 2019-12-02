@@ -29,7 +29,7 @@ sidebar: base_text
 | emsp | 中文字符空格大小 |
 | nbsp | 根据字体设置的空格大小 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -83,7 +83,7 @@ Page({
 });
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

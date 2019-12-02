@@ -23,7 +23,7 @@ sidebar: log_swan-isLoginSync
 |---- | ---- | ---- |
 |isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: log_swan-isLoginSync
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

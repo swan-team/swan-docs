@@ -25,7 +25,7 @@ sidebar: swan-vibrateShort
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e87388ef787854a02ca900c6c28307dd1569483846383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

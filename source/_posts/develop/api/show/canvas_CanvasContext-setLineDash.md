@@ -17,11 +17,11 @@ sidebar: canvas_CanvasContext-setLineDash
 
 **`offset`参数说明**：虚线偏移量。
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setLineDash.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a0f3e795134820d54777817b4240fdbb1573721214224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

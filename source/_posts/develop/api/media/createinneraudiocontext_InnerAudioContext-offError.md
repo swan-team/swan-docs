@@ -15,7 +15,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offError
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e6758e5581755dff7088ca636b7770681574734618602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

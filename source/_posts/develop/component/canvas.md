@@ -31,7 +31,7 @@ canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的�
 | bindlongtap | EventHandle |  | 否 |手指长按 350ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
 | binderror | EventHandle |  | 否 |当发生错误时触发 error 事件，detail = {errMsg: 'something wrong'} |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -45,7 +45,7 @@ canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的�
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6c7a47d907f45b2629884c6a9aed15541572509879120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

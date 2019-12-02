@@ -32,7 +32,7 @@ sidebar: websocket
 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,7 @@ sidebar: websocket
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/1241b261727079e050c52871830939491572951069253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

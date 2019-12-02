@@ -14,7 +14,7 @@ sidebar: view_movable-view
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
-**属性说明**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |
@@ -36,7 +36,7 @@ sidebar: view_movable-view
 | htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
 |vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
 
-**direction 有效值**:
+### **direction 有效值**:
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -45,8 +45,8 @@ sidebar: view_movable-view
 | horizontal | 水平方向 |
 | none | 不可移动 |
 
-
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,7 +60,7 @@ sidebar: view_movable-view
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例**
 
 <a href="swanide://fragment/34026129ece94156c05e4567f773288e1565511303256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -164,8 +164,8 @@ Page({
 
 **Bug & Tip**：
 
-* movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
-* movable-view 默认为绝对定位，top 和 left 属性为 0px。
-* 当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
-* 当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
-* movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
+* Tip：movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
+* Tip：movable-view 默认为绝对定位，top 和 left 属性为 0px。
+* Tip：当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
+* Tip：当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
+* Tip：movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。

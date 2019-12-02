@@ -78,7 +78,7 @@ function update() {
 
 返回当前帧的 [DuXRFrameFaceMode](/game/api/xr/DuXRFrameFaceMode/) 对象。通过该对象你可以获取到当前帧检测到的人脸以及特征点，骨骼的变换矩阵等所有人脸相关的数据。
 
-**代码示例：**
+**代码示例**
 ```js
 function update() {
     // 每次更新的时候获取当前帧的对象

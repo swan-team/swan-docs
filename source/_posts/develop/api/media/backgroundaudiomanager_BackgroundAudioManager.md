@@ -26,7 +26,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 |singer |String |否 |歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 |
 |coverImgUrl |String |否 |封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4546806675c2ecbdb645a0f4c51459731573617109560" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

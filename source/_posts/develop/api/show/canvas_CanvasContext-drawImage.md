@@ -38,7 +38,7 @@ sidebar: canvas_CanvasContext-drawImage
 **`sHeight`参数说明**：  源图像的矩形选择框的高度 。
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -52,7 +52,7 @@ sidebar: canvas_CanvasContext-drawImage
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/5f642a5821d97a419580f6661c537d8f1574501379932" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

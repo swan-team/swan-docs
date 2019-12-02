@@ -21,7 +21,7 @@ sidebar: open_web-view
 |bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -103,7 +103,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 | swan.webView.getEnv   | 获取当前环境 | - |
 | swan.webView.postMessage   | 向小程序发送消息 | - |
 
-**代码示例**：
+**代码示例**
 
 ```xml
 <!-- html -->

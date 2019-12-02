@@ -25,7 +25,7 @@ sidebar: swan-setEnableDebug
 |fail	|function		|否||	接口调用失败的回调函数，仅支持 Andriod。|
 |complete	|function		|否||	接口调用结束的回调函数（调用成功、失败都会执行），仅支持 Andriod。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: swan-setEnableDebug
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/b16d4650778afde3aa54d7e501e16a051574047694621" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

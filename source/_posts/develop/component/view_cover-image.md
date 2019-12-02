@@ -23,7 +23,7 @@ sidebar: view_cover-image
 |binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: view_cover-image
     </div>
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/23aebf6b1898af1931dba33c5df80f331565505998697" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -49,7 +49,7 @@ sidebar: userinfo_swan-getUserInfo
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

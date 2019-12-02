@@ -23,7 +23,7 @@ sidebar: swan-onError
 **Object error**
 错误信息，包含堆栈。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

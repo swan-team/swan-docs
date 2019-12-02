@@ -38,7 +38,7 @@ sidebar: toast_swan-showModal
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

@@ -48,7 +48,7 @@ sidebar: swan-onAppShow
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -62,7 +62,7 @@ sidebar: swan-onAppShow
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
  
 * 示例一：在onShow中使用 

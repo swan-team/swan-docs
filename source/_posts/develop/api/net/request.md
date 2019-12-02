@@ -63,7 +63,7 @@ sidebar: request
 2、对于 POST 方法且 header['content-type'] 为 application/json 的数据，会对数据进行 JSON 序列化；
 3、对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

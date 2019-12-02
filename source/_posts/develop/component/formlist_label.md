@@ -21,7 +21,7 @@ sidebar: formlist_label
 |-----|--- |--- |--- |--- |
 |for|String| | 否 |绑定控件的 id|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

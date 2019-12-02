@@ -94,7 +94,7 @@ sidebar: media_video
 |VP8|   是   |否|
 |VP9|   是   |否|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -144,7 +144,7 @@ Page({
 })
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -176,7 +176,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -225,7 +225,7 @@ Page({
     }
 });
 ```
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -257,7 +257,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -290,7 +290,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

@@ -35,7 +35,7 @@ sidebar:  toast_swan-showToast
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -49,7 +49,7 @@ sidebar:  toast_swan-showToast
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -26,7 +26,7 @@ sidebar: view_view
 
 ## 示例
 
-### **图片示例**：
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: view_view
     </div>     
 </div>
 
-### **代码示例**：
+### **代码示例**
 
 <a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

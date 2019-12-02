@@ -22,7 +22,7 @@ sidebar: formlist_checkbox
 |checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
 |color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -36,7 +36,7 @@ sidebar: formlist_checkbox
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/19b41700694c662e8dae6dd6a9d676c91572917630510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

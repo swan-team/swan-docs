@@ -55,7 +55,7 @@ data| object | 详细数据，errno为0的情况下才有意义
 --| --| --|--
 unionid| string | 小程序用户 + 开发者主体维度 唯一的id
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,7 +69,7 @@ unionid| string | 小程序用户 + 开发者主体维度 唯一的id
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/17bbb40b4856d0a6c59955a3567fe5a51574405159785" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

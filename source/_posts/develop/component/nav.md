@@ -70,7 +70,7 @@ sidebar: nav
 }
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -84,7 +84,7 @@ sidebar: nav
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/9999477aff1012b1f8d10125c245360f1565511678971" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

@@ -32,7 +32,7 @@ sidebar: save_swan-getFileInfo
 |size  | Number | 文件大小，单位：B。|
 |digest  | String | 按照传入的 digestAlgorithm 计算得出的的文件摘要。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -85,7 +85,7 @@ Page({
 })
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

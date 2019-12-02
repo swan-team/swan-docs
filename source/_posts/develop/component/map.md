@@ -91,7 +91,7 @@ sidebar: map
 | padding    | 文本边缘留白 | Number |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -214,7 +214,7 @@ Page({
 | borderColor | 线的边框颜色 | String | 否 | - |
 | borderWidth | 线的厚度 | Number | 否 | `` |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -284,7 +284,7 @@ Page({
 | fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
 | zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -358,7 +358,7 @@ Page({
 | radius | 半径 | Number | 是 | |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -430,7 +430,7 @@ Page({
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -633,7 +633,7 @@ Page({
     }
 });
 ```
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

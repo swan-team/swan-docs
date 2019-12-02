@@ -30,7 +30,7 @@ sidebar: formlist_slider
 |bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
 |bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +44,7 @@ sidebar: formlist_slider
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/d47270bf31719f0e0ff2dc7975f968861565503527422" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

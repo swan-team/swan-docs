@@ -27,7 +27,7 @@ sidebar: base_progress
 | active | Boolean  | false  | 否 |进度条从左往右的动画	|
 | active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

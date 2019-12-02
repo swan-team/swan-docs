@@ -14,7 +14,7 @@ sidebar: pull_swan-stopPullDownRefresh
 
 **方法参数**： 无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: pull_swan-stopPullDownRefresh
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

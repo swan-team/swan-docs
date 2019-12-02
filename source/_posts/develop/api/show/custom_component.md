@@ -23,7 +23,7 @@ sidebar: custom_component
 
 **举例**：当父组件的 setData 引发了子组件的 triggerEvent，进而使得父组件又进行了一次 setData，期间有通过 s-if 语句对子组件进行卸载，就有可能引发奇怪的错误，所以对于不需要在一个同步流程内完成的逻辑，可以使用此接口延迟到下一个时间片再执行。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: custom_component
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/645949899f4d4951ea0eb15ddb6c66101574773397207" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

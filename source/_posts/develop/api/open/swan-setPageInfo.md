@@ -56,7 +56,7 @@ sidebar: swan-setPageInfo
 |uv |String|否| 页面的点击量（去重用户）|
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

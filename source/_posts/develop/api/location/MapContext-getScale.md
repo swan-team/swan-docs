@@ -31,7 +31,7 @@ sidebar: MapContext-getScale
 |scale|Number|地图的缩放级别 |
  
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -45,7 +45,7 @@ sidebar: MapContext-getScale
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/9f39f67280da838ca99d8be3e100008e1573557670114" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

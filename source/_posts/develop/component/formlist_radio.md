@@ -23,11 +23,11 @@ sidebar: formlist_radio
 | disabled | Boolean | false | 否 |是否禁用 |
 | color | Color | #3c76ff| 否 | radio 的颜色，同 CSS 的 color |
 
-**图片示例**：
+**图片示例**
 
 参见[radio-group](https://smartprogram.baidu.com/docs/develop/component/formlist_radio-group/)示例内容。
 
-**代码示例**：
+**代码示例**
 
 参见[radio-group](https://smartprogram.baidu.com/docs/develop/component/formlist_radio-group/)示例内容。
 

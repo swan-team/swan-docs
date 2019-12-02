@@ -46,7 +46,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 | 500104 |请求模板内容失败|
 | 500105 |请求formId失败|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

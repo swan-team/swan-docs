@@ -20,11 +20,11 @@ sidebar: canvas_CanvasContext-addColorStop
 
 **`color`参数说明**：渐变点的颜色
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/addColorStop.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/227ecd832540ade6fe14c8ed77b817451573720334982" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

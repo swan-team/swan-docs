@@ -18,11 +18,11 @@ sidebar:  canvas_CanvasContext-setLineCap
 
 **`lineCap`参数说明**：有效值：'butt'、'round'、'square', 线条的结束端点样式。
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setLineCap.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f88c23c09480e31a3450caf4bb2054091573720910716" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

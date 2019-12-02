@@ -25,7 +25,7 @@ sidebar: tab_swan-navigateBack
 |complete|	function|		否| | 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: tab_swan-navigateBack
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 index.swan 文件中
