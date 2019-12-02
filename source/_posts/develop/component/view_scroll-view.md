@@ -165,7 +165,7 @@ Page({
     }
 });
 ```
-**Bug & Tip**：
+**Bug & Tip**
 
 * Tip：请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
 * Tip：scroll-into-view 的优先级低于 scroll-top、scroll-left。

@@ -80,7 +80,7 @@ Page({
 
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 *  content-type 默认为 'application/json'；
 *  url 中不能有端口。

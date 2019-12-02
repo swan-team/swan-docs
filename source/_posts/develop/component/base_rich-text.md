@@ -310,7 +310,7 @@ Page({
 ```
 
 
-**Bug & Tip**：
+**Bug & Tip**
 
 * 单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
 * 支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。

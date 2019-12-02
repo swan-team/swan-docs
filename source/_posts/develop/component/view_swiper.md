@@ -270,7 +270,7 @@ Page({
 }
 ```
 
-## **Bug & Tip**：
+## **Bug & Tip**
 
 * Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
 * Tip：其中只可放置 swiper-item 组件，否则会导致未定义的行为。

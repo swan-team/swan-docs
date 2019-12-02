@@ -211,7 +211,7 @@ Page({
 <image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 * 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
 * image 组件默认宽度 300px、高度 225px。

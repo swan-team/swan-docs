@@ -67,6 +67,6 @@ Page({
     }
 });
 ```
-**Bug & Tip**：
+**Bug & Tip**
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
  

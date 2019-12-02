@@ -525,7 +525,7 @@ Page({
 ```
 
 
-**Bug & Tip**：
+**Bug & Tip**
 * 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
 * `<video />` 默认宽度 300px、高度 225px。
 

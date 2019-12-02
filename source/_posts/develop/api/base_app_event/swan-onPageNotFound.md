@@ -122,7 +122,7 @@ Page({
 
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 - 开发者可以在回调中进行页面重定向。
 - 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用swan.onPageNotFound取消监听，否则会出现监听多次的情况

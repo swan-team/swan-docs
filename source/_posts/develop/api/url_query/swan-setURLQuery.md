@@ -70,6 +70,6 @@ Page({
 
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 调用 swan.setURLQuery 则会触发 onURLQueryChange 页面函数。

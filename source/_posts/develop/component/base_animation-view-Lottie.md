@@ -100,7 +100,7 @@ Page({
 ```
 
 
-**Bug & Tip**：
+**Bug & Tip**
 
 * animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * animation-view组件不支持原生组件嵌套。

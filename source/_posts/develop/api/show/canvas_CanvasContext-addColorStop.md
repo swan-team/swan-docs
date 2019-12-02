@@ -50,7 +50,7 @@ canvasContext.draw();
 
 
 
- **Bug & Tip**：
+ **Bug & Tip**
 
 addColorStop 目前在 Android 有bug。
 
