@@ -110,6 +110,7 @@ Page({
             movable-view区域大于movable-area
         </view>
         <movable-area>
+            <!-- 添加大于movable-area的class -->
             <movable-view x="{=x=}" y="{=y=}" class="bigger-area" direction="all">text</movable-view>
         </movable-area>
     </view>
@@ -171,37 +172,6 @@ Page({
         <movable-view x="{=x=}" y="{=y=}" direction="vertical">text</movable-view>
     </movable-area>
 </view>
-```
-
-* 在 js 文件中
-
-```js
-Page({
-    data: {
-        x: 30,
-        y: 30
-    },
-});
-```
-
-**代码示例5 - out-of-bounds**：
-
-<a href="swanide://fragment/cda1fa8dfe2b863edec778e3ee721bc51575278272229" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="wrap">
-   <view class="card-area">
-        <view class="top-description border-bottom">
-            可超出边界
-        </view>
-        <movable-area>
-            <movable-view x="{=x=}" y="{=y=}" direction="all" out-of-bounds>text</movable-view>
-        </movable-area>
-    </view>
-</view>
-
 ```
 
 * 在 js 文件中

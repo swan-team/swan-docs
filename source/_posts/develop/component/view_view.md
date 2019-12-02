@@ -45,7 +45,6 @@ sidebar: view_view
 <a href="swanide://fragment/8819fd543459539871829aea4398dfb01575275187354" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```html
-// 在 swan 文件中
 <view>
     <view class="title">横向布局</view>
     <view class="rowlike">
