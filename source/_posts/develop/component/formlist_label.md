@@ -35,7 +35,7 @@ sidebar: formlist_label
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -91,4 +91,41 @@ Page({
         ]
     }
 });
+```
+
+**代码示例2 - label可控制热区**：
+
+<a href="swanide://fragment/72a27b52f27e27f779ceb251dd2666ae1575131264690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+``` xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description">控制热区为整行</view>
+        <label class="label border-bottom">
+            <checkbox/>
+            <text>智能小程序</text>
+        </label>
+        <label class="label border-bottom">
+            <radio/>
+            <text>智能小程序</text>
+        </label>
+        <label class="label border-bottom">
+            <switch/>
+            <text style="vertical-align:.1rem">智能小程序</text>
+        </label>  
+    </view>
+</view>
+```
+* 在 css 文件中
+```css
+.wrap {
+    font-size: .16rem;
+}
+
+.label {
+    display: block;
+    padding: .2rem;
+}
 ```

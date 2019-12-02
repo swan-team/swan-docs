@@ -42,7 +42,7 @@ sidebar: swan-openLocation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 自定义位置信息**：
 
 <a href="swanide://fragment/c85dc8f8f87366dcde740c908c21e79f1569429868373" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -67,6 +67,38 @@ Page({
             scale: locationInfo.scale,
             name: locationInfo.name,
             address: locationInfo.address,
+            success: res => {
+                console.log('openLocation success', res);
+            },
+            fail : function (err) {
+                console.log('openLocation fail', err);
+            }
+        });
+    }
+})
+```
+
+**代码示例2 - 地图默认位置信息**：
+
+<a href="swanide://fragment/2887624ff4f3c1f08d5b4a11814ff2211575225318087" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        locationInfo: {
+            latitude: 40.04,
+            longitude: 116.27,
+            scale: 18
+        }
+    },
+    openLocation () {
+        let locationInfo = this.data.locationInfo;
+        swan.openLocation({
+            latitude: locationInfo.latitude,
+            longitude: locationInfo.longitude,
+            scale: locationInfo.scale,
             success: res => {
                 console.log('openLocation success', res);
             },

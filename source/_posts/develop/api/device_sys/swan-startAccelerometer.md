@@ -47,7 +47,7 @@ sidebar: swan-startAccelerometer
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/0ed5fe5e4d0957055cd7669fd83612731569478872196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -58,6 +58,50 @@ Page({
     startAccelerometer() {
         swan.startAccelerometer({
             interval: 'ui',
+            success: res => {
+                console.log('startAccelerometer success', res);
+            },
+            fail: err => {
+                console.log('startAccelerometer fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2**：
+
+<a href="swanide://fragment/d8652b571234113696cbffb0e0143ea61575140709680" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startAccelerometer() {
+        swan.startAccelerometer({
+            interval: 'normal',
+            success: res => {
+                console.log('startAccelerometer success', res);
+            },
+            fail: err => {
+                console.log('startAccelerometer fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例3**：
+
+<a href="swanide://fragment/81fe5d9ed0bc5ab2a083db4617f33b181575140731671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startAccelerometer() {
+        swan.startAccelerometer({
+            interval: 'game',
             success: res => {
                 console.log('startAccelerometer success', res);
             },

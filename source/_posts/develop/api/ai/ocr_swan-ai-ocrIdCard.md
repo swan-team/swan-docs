@@ -82,7 +82,7 @@ sidebar: ocr_swan-ai-ocrIdCard
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 参数属性全开启**：
 
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -95,8 +95,8 @@ Page({
                 swan.ai.ocrIdCard({
                     detect_direction: true,
                     id_card_side: 'front',
-                    detect_risk: true,
                     image, // 暂不支持识别网络图片
+                    detect_risk: true,
                     success: res => {
                         console.log('ocrIdCard res', res.words_result);
                     },

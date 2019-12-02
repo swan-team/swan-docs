@@ -76,7 +76,7 @@ sidebar: swan-getSystemInfo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
@@ -92,6 +92,45 @@ sidebar: swan-getSystemInfo
         }
     });
 ```
+**代码示例2: 开发者一般在模拟顶部导航栏时用到statusBarHeight属性**：
+
+<a href="swanide://fragment/bb980f42a3ee6fdb9edefdf9e528f0091575115252606" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中（代码链接中为自定义组件写法，可进行多页面复用）
+
+```html
+<view class="nav-box">
+    <view class="top-title" style="margin-top:{{statusBarHeight /100}}rem">
+        <view class="back-icon-wrap" bindtap="back">
+            <image class="back-icon" src="/images/back.png"></image>
+        </view>
+        <view class="title">
+            <view class="page-title-china">{{chinaName}}</view>
+            <view class="page-title-english">{{engName}}</view>
+        </view>
+    </view>
+</view>
+<!-- 占位元素，防止接下来的页面内容被导航栏遮挡 -->
+<view style="padding-top:{{statusBarHeight /100 + 0.53}}rem"></view>
+```
+
+* 在 js 文件中
+
+```js
+// 也可用同步写法
+swan.getSystemInfo({
+    success: res => {
+        console.log('getSystemInfo success', res);
+        this.setData({
+            'statusBarHeight': res.statusBarHeight
+        });
+    },
+    fail: err => {
+        console.log('getSystemInfo fail', err);
+    }
+});
+```
+
 #### 错误码
 Andriod
 
