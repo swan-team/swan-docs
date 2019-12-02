@@ -110,6 +110,7 @@ Page({
             movable-view区域大于movable-area
         </view>
         <movable-area>
+            <!-- 添加大于movable-area的class -->
             <movable-view x="{=x=}" y="{=y=}" class="bigger-area" direction="all">text</movable-view>
         </movable-area>
     </view>
@@ -212,6 +213,87 @@ Page({
         x: 30,
         y: 30
     },
+});
+```
+
+**代码示例6 - inertia && friction**：
+
+<a href="swanide://fragment/4cbd7c382d6429587a4ca46ed7699d161575282720618" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            带有惯性
+        </view>
+        <movable-area>
+            <movable-view x="{=x=}" y="{=y=}" direction="all" inertia friction="0.5">text</movable-view>
+        </movable-area>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30
+    },
+});
+```
+
+**代码示例7 - scale**：
+
+<a href="swanide://fragment/f25034201cf4345a8924b98cc23694cc1575282968286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            可放缩
+        </view>
+        <movable-area>
+            <movable-view x="{=x=}" y="{=y=}" direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
+               text
+            </movable-view>
+        </movable-area>
+        <button bind:tap="scale" class="scale-button" type="primary">点击放大3倍</button>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30,
+        scale: 1
+    },
+    move() {
+        this.setData({
+            x1: 50,
+            y1: 50
+        })
+    },
+    scale() {
+        this.setData({
+            scale: 3
+        })
+    },
+    onChange(e) {
+        console.log(e.detail)
+    },
+    onScale(e) {
+        console.log(e.detail)
+    }
 });
 ```
 
