@@ -60,73 +60,22 @@ sidebar: view_movable-view
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - movable-view区域小于movable-area**：
 
-<a href="swanide://fragment/34026129ece94156c05e4567f773288e1565511303256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/73dc993d033df84f14a5e47cafa16f721575277628615" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<view class="container">
-    <view class="section">
-        <view class="content-title">
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
             movable-view区域小于movable-area
         </view>
         <movable-area>
-            <movable-view x="{=x=}" y="{=y=}" damping="20" disabled="false" direction="all">text</movable-view>
-        </movable-area>
-        <button bind:tap="move" class="move-button" type="primary">点击移动到 (30px, 30px)</button>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            movable-view区域大于movable-area
-        </view>
-        <movable-area>
-            <movable-view class="bigger-area" direction="all">text</movable-view>
-        </movable-area>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            只可以横向移动
-        </view>
-        <movable-area htouchmove>
-            <movable-view direction="horizontal">text</movable-view>
-        </movable-area>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            只可以纵向移动
-        </view>
-        <movable-area vtouchmove>
-            <movable-view direction="vertical">text</movable-view>
-        </movable-area>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            可超出边界
-        </view>
-        <movable-area>
-            <movable-view direction="all" out-of-bounds>text</movable-view>
-        </movable-area>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            带有惯性
-        </view>
-        <movable-area>
-            <movable-view direction="all" inertia friction="1">text</movable-view>
-        </movable-area>
-    </view>
-    <view class="section">
-        <view class="content-title">
-            可放缩
-        </view>
-        <movable-area>
-            <movable-view direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
-                text
-            </movable-view>
-        </movable-area>
-        <button bind:tap="scale" class="scale-button" type="primary">点击放大3倍</button>
+            <movable-view x="{=x1=}" y="{=y1=}" damping="20" disabled="false" direction="all">text</movable-view>
+        </movable-area> 
+        <button bind:tap="move" class="move-button" type="primary">点击移动到 (50px, 50px)</button>
     </view>
 </view>
 ```
@@ -136,28 +85,133 @@ sidebar: view_movable-view
 ```js
 Page({
     data: {
-        title: 'movable-view',
-        x: 0,
-        y: 0,
-        scale: 2
+        x1: 30,
+        y1: 30,
     },
     move() {
         this.setData({
-            x: 30,
-            y: 30
+            x1: 50,
+            y1: 50
         })
-    },
-    scale() {
-        this.setData({
-            scale: 3
-        })
-    },
-    onChange(e) {
-        console.log(e.detail)
-    },
-    onScale(e) {
-        console.log(e.detail)
     }
+});
+```
+
+**代码示例2 - movable-view区域大于movable-area**：
+
+<a href="swanide://fragment/9679666769950f9bf1b375b9f1031e6d1575277723285" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            movable-view区域大于movable-area
+        </view>
+        <movable-area>
+            <movable-view x="{=x=}" y="{=y=}" class="bigger-area" direction="all">text</movable-view>
+        </movable-area>
+    </view>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30
+    },
+});
+```
+
+**代码示例3 - direction：horizontal**：
+
+<a href="swanide://fragment/0443fcb9517f6edb936d0ab16d52cbbf1575278148500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="card-area">
+    <view class="top-description border-bottom">
+        只可以横向移动
+    </view>
+    <movable-area htouchmove>
+        <movable-view x="{=x=}" y="{=y=}" direction="horizontal">text</movable-view>
+    </movable-area>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30
+    },
+});
+```
+
+**代码示例4 - direction：vertical**：
+
+<a href="swanide://fragment/b6560a4465bec23101854f6dd36eb98a1575278185097" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="card-area">
+    <view class="top-description border-bottom">
+        只可以纵向移动
+    </view>
+    <movable-area vtouchmove>
+        <movable-view x="{=x=}" y="{=y=}" direction="vertical">text</movable-view>
+    </movable-area>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30
+    },
+});
+```
+
+**代码示例5 - out-of-bounds**：
+
+<a href="swanide://fragment/cda1fa8dfe2b863edec778e3ee721bc51575278272229" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+   <view class="card-area">
+        <view class="top-description border-bottom">
+            可超出边界
+        </view>
+        <movable-area>
+            <movable-view x="{=x=}" y="{=y=}" direction="all" out-of-bounds>text</movable-view>
+        </movable-area>
+    </view>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30
+    },
 });
 ```
 
