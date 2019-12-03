@@ -2,7 +2,7 @@
 title: InnerAudioContext.onWaiting
 header: develop
 nav: api
-sidebar: InnerAudioContext.onWaiting
+sidebar: media/createinneraudiocontext_InnerAudioContext-onWaiting
 ---
 
 
@@ -15,6 +15,20 @@ sidebar: InnerAudioContext.onWaiting
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOnWaiting.png"  class="demo-qrcode-image" />
 
 **方法参数**：Function callback
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/InnerAudioContextOnWaiting.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

@@ -2,7 +2,7 @@
 title: 广告组件接入指引
 header: introduction
 nav: book
-sidebar: productlaboratory
+sidebar: productlaboratory_ad
 ---
 
  

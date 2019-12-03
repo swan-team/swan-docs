@@ -2,7 +2,7 @@
 title: doc.get
 header: develop
 nav: cloud
-siderbar: cloud_database_collection_doc
+siderbar: doc
 ---
 
  
@@ -36,7 +36,7 @@ siderbar: cloud_database_collection_doc
 |errMsg |String | 错误信息 |
 
 
-**示例代码**
+**代码示例**
 
 回调风格
 
@@ -111,7 +111,7 @@ Promise风格
 |errMsg |String | 错误信息 |
 
 
-**示例代码**
+**代码示例**
 
 回调风格
 
@@ -196,7 +196,7 @@ Promise风格
 |errMsg |String | 错误信息 |
 
 
-**示例代码**
+**代码示例**
 
 回调风格
 
@@ -273,7 +273,7 @@ Promise风格
 |errMsg |String | 错误信息 |
 
 
-**示例代码**
+**代码示例**
 
 回调风格
 

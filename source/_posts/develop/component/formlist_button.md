@@ -70,9 +70,6 @@ sidebar: formlist_button
 |openSetting|	打开授权设置页|
 |contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
-
-
-
 **图片示例**：
 
 <div class="m-doc-custom-examples">
@@ -87,76 +84,159 @@ sidebar: formlist_button
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - size有效值**：
 
-<a href="swanide://fragment/a90e9e3b2bc2402a14a1c481157d12301572918972473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d6a8f368b9c384ecaf68843d8b1ee8b31575284322744" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
-    <view class="mini-btn-content">
-        <view class="title">默认态</view>
-        <button type="primary" size="mini" class="mini-btn primary">
-            按钮
-        </button>
-        <button type="default" size="mini" class="mini-btn">按钮</button>
-        <button type="warn"    size="mini" class="mini-btn warn">
-            按钮
-        </button>
-    </view>
-
-    <view class="mini-btn-content">
-        <view class="title">禁用态</view>
-        <button type="primary" size="mini" class="mini-btn primary" disabled>
-            按钮
-        </button>
-        <button type="default" size="mini" class="mini-btn" disabled>
-            按钮
-        </button>
-        <button type="warn" size="mini" class="mini-btn warn" disabled>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            size='mini'
+        </view>
+        <button type="primary" size="mini">
             按钮
         </button>
     </view>
 
-    <view class="btn-content">
-        <button type="primary" class="btn primary">
-            主操作按钮 默认态
-        </button>
-        <button type="primary" class="btn primary" plain='true'>
-            主操作按钮 背景镂空
-        </button>
-        <button type="primary" hover-class='none' hover-stop-propagation="true" class="btn primary" bind:tap="tap">
-            主操作按钮 无点击态
-        </button>
-        <button type="primary" class="btn primary" hover-start-time="1000" hover-stay-time="2000">
-            主操作按钮 延迟点击
-        </button>
-        <button type="primary" loading="true" class="btn primary">
-            主操作按钮 loading
-        </button>
-        <button type="primary" class="btn primary" disabled>
-            主操作按钮 禁用态
-        </button>
-        <button type="default" class="btn">
-            次要操作按钮 默认态
-        </button>
-        <button type="default" class="btn" disabled>
-            次要操作按钮 禁用态
-        </button>
-        <button type="warn" class="btn warn">
-            警告类操作按钮 默认态
-        </button>
-        <button type="warn" class="btn warn" disabled>
-            警告类操作按钮 禁用态
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            size='default'
+        </view>
+        <button type="primary" size='default'>
+            按钮
         </button>
     </view>
-    <view class="btn-bottom">
-        <button type="default" class="middle-btn" open-type="share">分享按钮</button>
-        <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息按钮</button>
-        <button type="primary" class="middle-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号回调</button>
-        <button type="primary" class="middle-btn" open-type="openSetting" bindopensetting="opensetting">打开授权设置页后回调</button>
-        <button type="primary" class="middle-btn" contact open-type="contact" bindopensetting="contact">客服信息回调</button>
+</view>
+```
+
+**代码示例2 - type有效值**：
+
+<a href="swanide://fragment/97707988b4d68082a98a0c625afe81c41575284526768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            type='primary'
+        </view>
+        <button type="primary">
+            非禁用态
+        </button>
+        <button type="primary" disabled>
+            禁用态
+        </button>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            type='default'
+        </view>
+        <button type="default">
+            非禁用态
+        </button>
+        <button type="default"  disabled>
+            禁用态
+        </button>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            type='warn'
+        </view>
+        <button type="warn">
+            非禁用态
+        </button>
+        <button type="warn"  disabled>
+            禁用态
+        </button>
+    </view>
+</view>
+```
+
+**代码示例3 - form-type有效值**：
+
+<a href="swanide://fragment/405701fd348d68f9b8362718c38bff841575285086623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            form-type='submit/reset'
+        </view>
+        <form bindsubmit="submit" bindreset="reset">
+            <button form-type="submit" type="primary" size='mini'>
+                提交
+            </button>
+            <button form-type="reset" size='mini'>
+                重置
+            </button>
+        </form>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            form-type='buttonclick'
+        </view>
+        <form>
+            <button form-type="buttonclick" bindtap="buttonclick" type="primary" size='default'>
+                普通点击
+            </button>
+        </form>
+    </view>
+</view>
+```
+
+**代码示例4 - open-type有效值**：
+
+<a href="swanide://fragment/614656b7ead0489475b392a03a06f2471575285746664" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            open-type='share'
+        </view>
+        <button open-type='share' type="primary">
+            share
+        </button>
+    </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='getUserInfo'
+        </view>
+        <button open-type='getUserInfo' type="primary" bindgetuserinfo="getUserInfo">
+            getUserInfo
+        </button>
+    </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='getPhoneNumber'
+        </view>
+        <button open-type='getPhoneNumber' type="primary" bindgetphonenumber="getphonenumber">
+            getPhoneNumber
+        </button>
+    </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='openSetting'
+        </view>
+        <button open-type='openSetting' type="primary" bindopensetting="openSetting">
+            openSetting
+        </button>
+    </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='contact'
+        </view>
+        <button open-type='contact' type="primary" bindcontact="contact">
+            contact
+        </button>
     </view>
 </view>
 ```
@@ -165,41 +245,19 @@ sidebar: formlist_button
 
 ```js
 Page({
-    onShareAppMessage() {
-        return {
-            title: '小程序标题',
-            content: '世界很复杂，百度更懂你',
-            imageUrl: 'http://imgsrc.baidu.com/forum/pic/item/d9f9d72a6059252daecdfc36309b033b5bb5b92e.jpg',
-            path: '/pages/openShare/openShare',
-            success(res) {
-                // 分享成功
-            },
-            fail(err) {
-                // 分享失败
-            }
-        };
+    getphonenumber(e) {
+        console.log(e)
     },
-    getUserInfo(e) {
-        console.log('用户信息:', e);
+    getUserInfo(e){
+        console.log(e)
     },
     opensetting(e) {
-        console.log('用户设置:', e);
-    },
-    getPhoneNumber(e) {
-        console.log('用户手机号:', e);
+        console.log(e)
     },
     contact(e) {
-        console.log('用户面板:', e);
-    },
-    tap() {
-        swan.showToast({
-            title: '已点击',
-            icon: 'none'
-        });
-
+        console.log(e)
     }
 });
-
 ```
 
 

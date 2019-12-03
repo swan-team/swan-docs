@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onError
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onError
+sidebar: voice_VoiceRecognizer-onError
 ---
 
 **解释**： 识别遇到错误
@@ -61,7 +61,7 @@ sidebar: voice_VoiceRecognizer_onError
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中

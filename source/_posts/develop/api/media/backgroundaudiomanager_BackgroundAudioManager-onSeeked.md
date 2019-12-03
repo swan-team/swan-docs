@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onSeeked
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onSeeked
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onSeeked
 ---
 
 

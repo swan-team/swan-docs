@@ -2,7 +2,7 @@
 title: VoiceRecognizer.cancel
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_cancel
+sidebar: voice_VoiceRecognizer-cancel
 ---
 
 **解释**： 取消

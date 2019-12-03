@@ -2,7 +2,7 @@
 title: tab-item 标签栏子项
 header: develop
 nav: component
-sidebar: nav
+sidebar: tab-item
 ---
 
 

@@ -36,7 +36,7 @@ sidebar: nacomponent
 4. 景区导览、线下活动等线下扫码场景
 
 
-**代码示例**：
+**示例**：
 
 <a href="swanide://fragment/e067d7b02af88008e08fa4bcb26906a51569378513731" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -46,6 +46,8 @@ sidebar: nacomponent
 
 1. 浮层引导(type=bar)
     一直展现：用户点击关闭，浮层引导消失；点击关注按钮可直接关注小程序。
+
+**图片示例**：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -57,7 +59,7 @@ sidebar: nacomponent
 </div>
   
 
-**示例代码 1**
+**代码示例 1**
 
 ```javascript
     swan.showFavoriteGuide({
@@ -74,7 +76,9 @@ sidebar: nacomponent
 
 2. 气泡引导(type=tip)
     引导组件 5s 后自动消失，组件箭头指向小程序菜单。
-  
+
+**图片示例**：
+
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="../../../../img/api/nacomponent/弱引导.png">
@@ -84,7 +88,7 @@ sidebar: nacomponent
     </div>  
 </div>
 
-**示例代码 2**
+**代码示例 2**
 
 ```javascript
 swan.showFavoriteGuide({

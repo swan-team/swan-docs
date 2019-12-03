@@ -77,7 +77,7 @@ sidebar: request
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - post请求**：
  
 <a href="swanide://fragment/b1c6cd798117428ccb4683c12edfe5051573992468342" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -110,6 +110,48 @@ Page({
             fail: err => {
                 console.log('错误码：' + err.errCode);
                 console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - get请求**：
+ 
+<a href="swanide://fragment/b5e29a69ab7d1fead7844bf393406f8d1574929147853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'http://apis.baidu.com/heweather/weather/free?city=beijing',
+            method: 'GET', 
+            success: res => {
+                console.log('request success', res);
+                swan.showModal({
+                    title: '请求到的数据',
+                    content: JSON.stringify(res),
+                    showCancel: false
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: JSON.stringify(err)
+                });
+                console.log('request fail', err);
+            },
+            complete: () => {
+                this.setData('loading', false);
+                console.log('request complete');
             }
         });
     }

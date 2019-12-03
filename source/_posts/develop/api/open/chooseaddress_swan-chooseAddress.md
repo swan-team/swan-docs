@@ -6,7 +6,7 @@ sidebar: chooseaddress_swan-chooseAddress
 ---
  
 
-**解释**： 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。
+**解释**： 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -55,7 +55,7 @@ sidebar: chooseaddress_swan-chooseAddress
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 用户允许授权情况下**：
 
 <a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -83,31 +83,35 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+**代码示例1 - 用户在拒绝了一次授权情况下，仍可访问此api**：
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+<a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="chooseAddress">chooseAddress</button>
+</view>
 ```
-#### 错误码
 
-* Andriod
+* 在 js 文件中
 
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法|
-|202|解析失败，请检查参数是否正确|
-|1001|执行失败|
-|1002|用户取消操作|
-|1003|选择失败|
-
-* iOS
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确       |
-|10001|内部错误|
-|10002|网络请求失败|
-|10002|用户拒绝(user deny)|
-|10004|用户拒绝(user not login)|
+```js
+Page({
+    chooseAddress() {
+        swan.chooseAddress({
+            success: res => {
+                console.log('chooseAddress success', res);
+            },
+            fail: err => {
+                if(errCode == 10003){
+                    swan.openSetting({});
+                }
+                console.log('chooseAddress fail', err);
+            }
+        });
+    }
+});
+```
+ 

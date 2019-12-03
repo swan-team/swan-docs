@@ -37,7 +37,7 @@ sidebar:  videocontext_VideoContext-play
 
 ```html
 <view class="wrap">
-    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <video id="myVideo" enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
     <button type="primary" bindtap="play">play</button>
 </view>
 ```
@@ -49,7 +49,7 @@ Page({
     data: { },
     onLoad() {
         const videoContext = swan.createVideoContext('myVideo');
-        this.videoContext = video;
+        this.videoContext = videoContext;
     },
     play() {
         this.videoContext.play();

@@ -2,7 +2,7 @@
 title: InnerAudioContext.offSeeking
 header: develop
 nav: api
-sidebar: InnerAudioContext.offSeeking
+sidebar: createinneraudiocontext_InnerAudioContext-offSeeking
 ---
 
 

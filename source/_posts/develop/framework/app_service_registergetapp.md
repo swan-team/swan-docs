@@ -16,7 +16,7 @@ sidebar: app_service_registergetapp
 |allowDefault|boolean|false|否|在 App 未定义时返回默认实现。当App被调用时，默认实现中定义的属性会被覆盖合并到App中。一般用于[独立分包](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)。|3.60.2|
 
 
-**示例代码**
+**代码示例**
 
 ```js
 // other.js 获取以上经过App方法注册后的app实例

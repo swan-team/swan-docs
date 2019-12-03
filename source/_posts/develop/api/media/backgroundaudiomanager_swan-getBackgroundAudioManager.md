@@ -2,7 +2,7 @@
 title: swan.getBackgroundAudioManager
 header: develop
 nav: api
-sidebar: swan.getBackgroundAudioManager
+sidebar: backgroundaudiomanager_swan-getBackgroundAudioManager
 ---
 
 

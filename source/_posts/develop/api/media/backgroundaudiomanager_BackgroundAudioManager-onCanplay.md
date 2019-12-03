@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onCanplay
 header: develop
 nav: api
-sidebar: media_backgroundaudiomanager
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onCanplay
 ---
 
 

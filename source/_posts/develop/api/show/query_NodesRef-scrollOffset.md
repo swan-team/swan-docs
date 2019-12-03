@@ -9,6 +9,10 @@ sidebar: query_NodesRef-scrollOffset
 
 **解释**： 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_scrollOffset.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **返回值说明**：
@@ -19,20 +23,69 @@ sidebar: query_NodesRef-scrollOffset
 |scrollLeft|Nunber|节点水平滚动位置|
 |scrollTop|Nunber|节点竖直滚动位置|
  
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/scrolloffset.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 
-<a href="swanide://fragment/e748508ba5d88f93fd837b550b08faad1574507506861" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/33db2d08cc65630cc939ec8d268bf0481574974671748" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="message">
+        <text s-if="appear">小球出现</text>
+        <text s-else>小球消失</text>
+    </view>
+    <view>
+        <scroll-view class="scroll-view" scroll-y>
+            <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+                <text class="notice">向下滚动让小球出现</text>
+                <view class="filling"></view>
+                <view class="ball"></view>
+            </view>
+        </scroll-view>
+    </view>
+    <button bindtap="getNodeRef">点击获取scrollview组件的nodeRef信息</button>
+</view>
+```
+
+* 在 js 文件中
 
 ```js
 Page({
-    getScrollOffset: function(){
-        swan.createSelectorQuery().selectViewport('.scroll-view').scrollOffset(function(res){
-            res.id      // 节点的ID
-            res.dataset // 节点的dataset
-            res.scrollLeft // 节点的水平滚动位置
-            res.scrollTop  // 节点的竖直滚动位置
-        }).exec()
+    data: {
+        appear: false
+    },
+    onReady() {
+        const IntersectionObserver = swan.createIntersectionObserver(this);
+        IntersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            console.log('observe', res)
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.IntersectionObserver = IntersectionObserver;
+    },
+    getNodeRef() {
+        const node = swan.createSelectorQuery().select('.scroll-view');
+        node.scrollOffset(res => {
+            console.log('scrollOffset:::', res);
+            swan.showModal({
+                title: 'scrollOffset',
+                content: JSON.stringify(res)
+            });
+        }).exec();
     }
 });
 ```

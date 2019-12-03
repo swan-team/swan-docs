@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onEnded 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onEnded 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onEnded
 ---
 
 

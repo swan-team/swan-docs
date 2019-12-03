@@ -2,7 +2,7 @@
 title:  BackgroundAudioManager.onPrev
 header: develop
 nav: api
-sidebar:  BackgroundAudioManager.onPrev
+sidebar:  backgroundaudiomanager_BackgroundAudioManager-onPrev
 ---
 
 

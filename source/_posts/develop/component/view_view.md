@@ -40,14 +40,11 @@ sidebar: view_view
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 横向布局**：
 
-<a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-
+<a href="swanide://fragment/8819fd543459539871829aea4398dfb01575275187354" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```html
-// 在 swan 文件中
 <view>
     <view class="title">横向布局</view>
     <view class="rowlike">
@@ -62,18 +59,26 @@ sidebar: view_view
         </view>
     </view>
 </view>
+```
 
-<view class="bottom-block">
-    <view class="title">纵向布局</view>
-    <view class="collike">
-        <view class="color-a">
-            <text>A</text>
-        </view>
-        <view class="color-b">
-            <text>B</text>
-        </view>
-        <view class="color-c">
-            <text>C</text>
+**代码示例2 - 纵向布局**：
+
+<a href="swanide://fragment/5555234f798072194eb3018c329375601575275317320" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```html
+<view class='wrap'>
+    <view class="card-area">
+        <view class="top-description border-bottom">纵向布局</view>
+        <view class="collike">
+            <view class="color-a">
+                <text>A</text>
+            </view>
+            <view class="color-b">
+                <text>B</text>
+            </view>
+            <view class="color-c">
+                <text>C</text>
+            </view>
         </view>
     </view>
 </view>

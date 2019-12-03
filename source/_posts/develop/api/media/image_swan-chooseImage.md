@@ -58,9 +58,9 @@ sidebar: image_swan-chooseImage
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - tempFilePaths**：
 
-<a href="swanide://fragment/25ee1bf808f49aeae2975827d0fd654e1569416277213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8ffb1a4177b33946ea0bed99b96071c21575216316424" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -74,8 +74,38 @@ Page({
             success: res => {
                 // 成功则返回图片的本地文件路径列表 tempFilePaths
                 console.log(res.tempFilePaths);
+                this.setData('imageList', res.tempFilePaths);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - tempFiles**：
+
+<a href="swanide://fragment/593c7689acbe113cbdbb5e4441dcaa921575216919794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    chooseImage() {
+        swan.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: res => {
                 // 文件列表对象
                 console.log(res.tempFiles);
+                let imageList = [];
+                res.tempFiles.forEach((e)=>{ 
+                    imageList.push(e.path)
+                })
+                this.setData('imageList', imageList);
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);

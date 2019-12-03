@@ -39,18 +39,19 @@ sidebar: pagescrollto_swan-pageScrollTo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 页面滚动到顶部**：
 
-<a href="swanide://fragment/1da0995c33ce55aaee91c780b076e1991569491978009" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/25ef2f9fbdaaa9271329c02d7dafe8cc1575223153548" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<view class="wrap">
-    <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
-    <button type="primary" bindtap="scrollToTop">返回图片顶部</button>
+<view class="container">
+  <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
+   <view class="swan-security-padding-bottom flex-button">
+        <button type="primary" bindtap="scrollToTop">返回顶部</button>
+    </view>
 </view>
-
 ```
 
 * 在 js 文件中
@@ -70,6 +71,47 @@ Page({
         });
     }
 });
+```
+
+**代码示例2 - 页面滚动到底部**：
+
+<a href="swanide://fragment/0e4af77bf4d678bb744766e5faca641b1575223056610" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+  <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
+   <view class="swan-security-padding-bottom flex-button">
+        <button type="primary" bindtap="scrollToBottom">滚动到页面底部</button>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+
+Page({
+    scrollToBottom(){
+        swan.createSelectorQuery()
+        .select(".image")
+        .boundingClientRect(function(rect) {
+            swan.pageScrollTo({
+                scrollTop: rect.bottom,
+                duration: 300,
+                success: res => {
+                    console.log('pageScrollTo success', res);
+                },
+                fail: err => {
+                    console.log('pageScrollTo fail', err);
+                }
+            });
+        })
+        .exec();
+    }
+});
+
 ```
 #### 错误码
 
