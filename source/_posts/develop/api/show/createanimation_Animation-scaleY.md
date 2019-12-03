@@ -33,7 +33,7 @@ sidebar: createanimation_Animation-scaleY
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 
 <a href="swanide://fragment/7da5f367de840e80b2a6ea83465cddfb1574216533738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

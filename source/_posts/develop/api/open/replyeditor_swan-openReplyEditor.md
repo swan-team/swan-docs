@@ -77,9 +77,9 @@ sidebar: replyeditor_swan-openReplyEditor
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 moduleList传emoji并配置自定义图标**：
 
-<a href="swanide://fragment/a013aec8b73e24ed9f6bbf11f4f1cd431566889380983" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/eaa301106c159bbb2ac89a39422b9bd91575198845899" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openReplyEditor({
@@ -88,6 +88,44 @@ swan.openReplyEditor({
     sendText: '发送',
     contentPlaceholder: '请输入评论内容',
     moduleList: ['emoji'],
+    emojiPath: '../../emojidata',
+    success: res => {
+        console.log('openReplyEditor success', res);
+        // 点击了发表按钮
+        if (res.status === 'reply') {
+            // 开发者处理返回内容。
+            // 主动关闭评论发布器
+            swan.closeReplyEditor({
+                success: res => {
+                    console.log('closeReplyEditor success', res);
+                }
+            });
+        }
+        // 点击发布器外隐藏发布器，编辑的内容将存为草稿
+        else if (res.status === 'draft') {
+            // 处理草稿内容，如ui处理
+        }
+    },
+    fail: function (res) {
+        console.log('openReplyEditor fail', res);
+    },
+    complete: function (res) {
+        console.log('openReplyEditor complete', res);
+    }
+})
+```
+
+**代码示例2 moduleList传image**：
+
+<a href="swanide://fragment/0592737eb5c241eb4a4bb104f99c22e21575198390943" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+swan.openReplyEditor({
+    sendBackgroundColor: '#3388ff',
+    sendTextColor: '#FFFFFF',
+    sendText: '发送',
+    contentPlaceholder: '请输入评论内容',
+    moduleList: ['image'],
     emojiPath: '../../emojidata',
     success: res => {
         console.log('openReplyEditor success', res);

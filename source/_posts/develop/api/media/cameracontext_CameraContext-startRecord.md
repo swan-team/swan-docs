@@ -2,7 +2,7 @@
 title: CameraContext.startRecord
 header: develop
 nav: api
-sidebar: cameracontext_CameraContext.startRecord
+sidebar: cameracontext_CameraContext-startRecord
 ---
 
 

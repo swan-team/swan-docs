@@ -52,7 +52,7 @@ sidebar: toast_swan-showModal
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -86,6 +86,32 @@ showModalNotitle() {
         }
     });
 }
+```
+
+**代码示例2 - 开发者可在操作modal后进行业务逻辑**：
+
+<a href="swanide://fragment/f722c61b2e5961678fbce43a0ce91fae1575137772883" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    showModal() {
+        swan.showModal({
+            title: 'title',
+            content: 'content',
+            success(res) {
+                console.log(res)
+                if (res.confirm) {
+                    console.log('用户点击了确定');
+                }
+                else if(res.cancel) {
+                    console.log('用户点击了取消');
+                }
+            }
+        });
+    }
+});
 ```
 
             

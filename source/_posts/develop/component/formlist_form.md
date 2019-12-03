@@ -60,7 +60,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 普通表单**：
 
 <a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -126,4 +126,43 @@ Page({
     }
 });
 
+```
+
+**代码示例2 - 模板类型表单**：
+
+<a href="swanide://fragment/9110d73ca11986733a7110625b52b2e21575228640083" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <form report-submit="{{true}}" report-type="subscribe" template-id="BD0003" subscribe-id="8026" bindsubmit="formSubmit"
+        bindreset="formReset">
+            <button formType="submit" type="primary">report-type	为subscribe</button>
+        </view>
+    </form>
+</view>
+
+<view class="wrap">
+    <form report-submit="{{true}}" report-type="default" bindsubmit="formSubmit"
+        bindreset="formReset">
+            <button formType="submit" type="primary">report-type	为default</button>
+        </view>
+    </form>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    formSubmit(e) {
+        console.log(e);
+        swan.showModal({
+            title: '表单数据',
+            content: JSON.stringify(e.detail.message) + '/' +JSON.stringify(e.detail.status),
+            confirmText: '确定',
+            showCancel: false
+        });
+    }
+});
 ```

@@ -6,7 +6,7 @@ sidebar: userinfo_swan-getUserInfo
 ---
 
  
-**解释**：获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。
+**解释**：获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -63,9 +63,9 @@ sidebar: userinfo_swan-getUserInfo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - API获取用户信息（授权后拿到的信息可提交到服务器保存）**：
 
-<a href="swanide://fragment/6de8312d15371a1d3d686a4cd92b637f1560170029351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/3be63537f1edd6d143ee0333f16f346f1575201970930" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -81,10 +81,6 @@ sidebar: userinfo_swan-getUserInfo
             <button bind:tap="clearUserInfo" class="clear-info" type="default" hover-stop-propagation="true">清空</button>
         </view>
     </view>
-    <view class="page-title">
-        <view class="page-title-line"></view>
-        <view class="page-title-text">{{title}}</view>
-    </view>
 </view>
 ```
 * 在 js 文件中
@@ -94,16 +90,17 @@ Page({
     data: {
         nickname: '百度网友',
         imageSrc: '../images/avator.png',
-        nameColor: 'default',
-        title: 'getUserInfo'
+        nameColor: 'default'
     },
     getUserInfo(e) {
         swan.getUserInfo({
             success: res => {
+                // 用户在首次使用小程序时拒绝授权，可使用此api在合适的业务时机提醒用户再次授权
+                // swan.openSetting({});
                 let userInfo = res.userInfo;
                 this.setData({
-                    nickname: userInfo.nickName || '百度网友',
-                    imageSrc: userInfo.avatarUrl || '../../images/avator.png',
+                    nickname: userInfo.nickName,
+                    imageSrc: userInfo.avatarUrl,
                     nameColor: 'active'
                 });
             },
@@ -118,55 +115,61 @@ Page({
     clearUserInfo(e) {
         this.setData({
             nickname: '百度网友',
-            imageSrc: '../../images/avator.png',
+            imageSrc: '../images/avator.png',
             nameColor: 'default'
         });
     }
 });
 ```
 
-* 在 css 文件中
+**代码示例2 - open-data组件获取用户信息(与API的区别是用户不需要授权，只能在页面中展示)**：
 
-```css
-.user-info {
-    padding-top: 1rem;
-}
-.avator {
-    width: .95rem;
-    height: .95rem;
-    margin: 0 auto;
-    display: block;
-    border-radius: 50%;
-}
-.nickname {
-    font-size: .18rem;
-    text-align: center;
-    height: .58rem;
-    line-height: .58rem;
-    padding: 0 .15rem;
-}
-.nickname.default {
-    color: #999;
-}
-.nickname.active {
-    color: #333;
-}
-.button-content {
-    position: relative;
-    top: 0;
-}
-.button-content button {
-    margin-top: .15rem;
-    border-radius: .04rem;
-}
-.get-info {
-    margin-top: .39rem!important;
-}
-.get-info::after {
-    border: none;
-}
-.clear-info::after {
-    border-color: #999;
-}
+<a href="swanide://fragment/d84c7124420f7d8767bced690acec10c1575202052676" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="open-data">
+    <view class="avatar">
+        <open-data class="avatar-img" type="userAvatarUrl"></open-data>
+    </view>
+    <view class="section">
+        <view class="sec">
+            <view class="sec_left">昵称</view>
+            <view class="sec_right">
+                <open-data class="sec_left" type="userNickName"></open-data>
+            </view>
+        </view>
+        <view class="sec">
+            <view class="sec_left">性别</view>
+            <view class="sec_right">
+                <open-data class="sec_left" type="userGender"></open-data>
+            </view>
+        </view>
+    </view>
+</view>
 ```
 
+**代码示例3 - button组件获取用户信息**：
+
+<a href="swanide://fragment/8f079b427dd985c2988f2a3b85da73431575205539816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息按钮</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    getUserInfo(e) {
+        console.log(e.detail.userInfo.nickName)
+        console.log(e.detail.userInfo.avatarUrl)
+        console.log(e.detail.userInfo.gender)
+    }
+});
+```

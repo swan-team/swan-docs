@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onNext
 header: develop
 nav: api
-sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onNext
 ---
 
 

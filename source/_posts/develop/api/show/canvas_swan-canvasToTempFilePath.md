@@ -47,7 +47,7 @@ sidebar: canvas_swan-canvasToTempFilePath
     </div>     
 </div>
 
-**代码示例一**：
+**代码示例 1**：
 
 <a href="swanide://fragment/6558373f7fb39417072963fef3915f841574332412536" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -98,7 +98,7 @@ Page({
 })
 ```
 
-**代码示例二：在draw中使用**：
+**代码示例 2：在draw中使用**：
 
 <a href="swanide://fragment/0052de94836ab84f999612f1ed7437de1574352005128" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

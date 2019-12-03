@@ -298,17 +298,34 @@
                 name: pay
     -
       link: /introduction/contact
-      text: 客服功能接入
+      text: 客服功能开通
       name: book
       sidebar:
         -
             sidebar:
               -
                 link: /introduction/contact
-                text: 客服功能接入说明
+                text: 客服功能介绍
                 name: contact
-
-
+              -
+                text: 客服功能支持的接入类型
+                sidebar:
+                  -
+                    link: /introduction/type_send
+                    text: 消息推送
+                    name: type_send
+                  -
+                    link: /introduction/type_tool
+                    text: 小程序客服工具
+                    name: type_tool
+                  -
+                    link: /introduction/type_thridtool
+                    text: 第三方客服工具
+                    name: type_thridtool                 
+              -
+                link: /introduction/contact_standard
+                text: 运营规范
+                name: contact_standard
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -778,7 +795,7 @@
                   -
                     link: /develop/framework/sjs_datatype
                     text: 数据类型
-                    name: sjs-sjs_datatype
+                    name: sjs_datatype
                   -
                     link: /develop/framework/sjs_basic_library
                     text: 基础类库
@@ -2723,7 +2740,7 @@
                   -
                     link: /develop/api/device_sys/swan-getSystemInfoSync
                     text: swan.getSystemInfoSync
-                    name: wan-getSystemInfoSync
+                    name: swan-getSystemInfoSync
                   -
                     link: /develop/api/device_sys/swan-getEnvInfoSync
                     text: swan.getEnvInfoSync
@@ -2843,7 +2860,7 @@
                   -
                     link: /develop/api/device_sys/swan-setKeepScreenOn
                     text: swan.setKeepScreenOn
-                    name: screen_swan-setKeepScreenOn
+                    name: swan-setKeepScreenOn
               -
 
                 text: 用户截屏事件
@@ -3265,7 +3282,7 @@
                     name: faq
               -
                 link: /develop/serverapi/open_infomation
-                text: 消息模板
+                text: 模板消息
                 name: open_infomation
                 sidebar:
                   -
@@ -3769,8 +3786,8 @@
                         sidebar:
                           -
                               text: doc.get
-                              name: cloud_database_collection_doc_get
-                              link: /develop/cloud/cloud_database/doc/#doc-get
+                              name: doc
+                              link: /develop/cloud/cloud_database/doc 
                           -
                               text: doc.update
                               name: cloud_database_collection_doc_update

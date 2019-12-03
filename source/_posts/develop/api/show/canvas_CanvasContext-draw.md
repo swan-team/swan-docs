@@ -23,7 +23,7 @@ sidebar: canvas_CanvasContext-draw
 
 ![图片](../../../../img/api/canvas/draw1.png)
 
-**代码示例**：
+**代码示例1 - reserve为false**：
 
 <a href="swanide://fragment/408aa17bb845b0a6d87ee5b5a13dc26e1574532413473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -32,8 +32,42 @@ const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
 canvasContext.fillRect(10, 10, 150, 100);
 canvasContext.draw();
+canvasContext.setFillStyle('red');
 canvasContext.fillRect(30, 30, 150, 100);
 canvasContext.draw();
+```
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/draw.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+</div>
+
+
+**代码示例2 - reserve为true**：
+
+<a href="swanide://fragment/c644a427f48dbe93e232dabea0b3bc701574933246460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.setFillStyle('blue');
+        canvasContext.fillRect(10, 10, 150, 100);
+        canvasContext.draw();
+        canvasContext.setFillStyle('red');
+        canvasContext.fillRect(30, 30, 150, 100);
+        canvasContext.draw(true);
+    }
+});
 ```
 
 

@@ -36,7 +36,7 @@ sidebar: query_swan-createIntersectionObserver
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -70,7 +70,7 @@ Page({
         appear: false
     },
     onReady() {
-        const intersectionObserver = swan.createIntersectionObserver(this);
+        const intersectionObserver = swan.createIntersectionObserver();
         // 监测scroll-view可视区域 和 小球元素节点 的相交情况
         intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
             console.log('observe', res)
@@ -139,3 +139,95 @@ Page({
   
 ```
 
+**代码示例2 - options为thresholds时**：
+
+<a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            // 阈值设置少，避免触发过于频繁导致性能问题
+            thresholds: [1]
+        });
+        // 监测scroll-view可视区域 和 小球元素节点的相交情况
+       //  我配置了 thresholds：[1]，那么当监听对象和参照物相交比例达到 1 时，会触发监听器的回调函数
+
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            console.log('observe', res)
+            // intersectionRatio: 相交比例，为0时说明两者不相交。
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```
+
+
+**代码示例3 - options为initialRatio时**：
+
+<a href="swanide://fragment/2c3aea3f1bc1948d0ce69f56fa5acb571574931094969" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            // 初始相交比例，默认 0，达到 initialRatio 或 thresholds 中的阈值时，回调被触发
+            initialRatio: 1
+        });
+        // 监测scroll-view可视区域 和 小球元素节点的相交情况
+       //  我配置了 thresholds：[1]，那么当监听对象和参照物相交比例达到 1 时，会触发监听器的回调函数
+
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            console.log('observe', res)
+            // intersectionRatio: 相交比例，这里为 1 时说明两者不相交。
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```
+
+**代码示例4 - options为selectAll时**：
+
+<a href="swanide://fragment/cfae8c63d16efcf6a7b4d6b6b2f5d4f71574931774175" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            selectAll: true
+        });
+        // 监听两个小球
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball .ball2', res => {
+            console.log('observe', res);
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```

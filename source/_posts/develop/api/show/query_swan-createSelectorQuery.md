@@ -69,7 +69,6 @@ Page({
     queryNodeInfo() {
         const query = swan.createSelectorQuery();
         query.select('.target').boundingClientRect();
-
         query.exec(res => {
             const rect = res[0]
             if (rect) {

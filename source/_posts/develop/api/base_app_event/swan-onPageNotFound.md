@@ -2,7 +2,7 @@
 title: swan.onPageNotFound
 header: develop
 nav: api
-sidebar: swan.onPageNotFound
+sidebar: swan-onPageNotFound
 ---
 
 
@@ -39,9 +39,9 @@ sidebar: swan.onPageNotFound
     </div>     
 </div>
 
-**代码示例**：
+**代码示例 1**：
 
-* 示例一：在生命周期的onPageNotFound中使用 
+在生命周期的onPageNotFound中使用 
 <a href="swanide://fragment/1e8c3ffbb08f5f2ad67a325f4e4f8c231572839598490" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -65,7 +65,8 @@ App({
 
 ```
 
-* 示例二：等同于示例一的另一种写法 
+**代码示例 2**
+等同于示例一的另一种写法 
 <a href="swanide://fragment/7d29139d4769344ee69353e82515a0151572839669563" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -88,7 +89,8 @@ App({
 
 ```
 
-* 示例三：可根据开发者的业务逻辑调整用法 
+**代码示例 3**
+可根据开发者的业务逻辑调整用法 
 <a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

@@ -8,7 +8,7 @@ sidebar: swan-chooseInvoiceTitle
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
 
-**解释**： 选择用户的发票抬头，需要[用户授权](http://smartapp.baidu.com/docs/develop/api/open/authorize_swan-authorize/) scope.invoiceTitle。
+**解释**： 选择用户的发票抬头，使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -88,20 +88,4 @@ page({
 }
 ```
 
-#### 错误码
-* Andriod
-
-|错误码|说明|
-|--|--|
-|201|解析失败，请检查调起协议是否合法|
-|1001|执行失败|
-|1002|取消选择|
-|1003|选择失败|
-
-* iOS
-
-|错误码|说明|
-|--|--|
-|1001|解析失败，请检查参数是否正确      |
-|1002|取消获取发票|
-|1003|获取发票失败|
+ 

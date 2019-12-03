@@ -70,65 +70,64 @@ sidebar: formlist_input
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - 基础用法**：
 
-<a href="swanide://fragment/9de486a69d0608944a7f7d0ff94746151572919458545" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+<a href="swanide://fragment/06c050eeb63c8b030a17e943866a8c6c1575286848934" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
 * 在 swan 文件中
 
 ```xml
+
 <view class="wrap">
     <view class="card-area">
-        <view class="top-description border-bottom">可以自动聚焦的input</view>
-        <input class="ipt" placeholder="将会获取焦点" bindfocus="bindKeyfocus" selection-start="3" selection-end="7" focus="{{true}}" confirm-hold="false" confirm-type="send"/>
+        <view class="top-description border-bottom">基础用法</view>
+        <input class="ipt" placeholder="请在此输入标题"/>
     </view>
+</view>
+```
+
+**代码示例2 - 自定义输入控制**：
+
+<a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+
+<view class="wrap">
     <view class="card-area">
-        <view class="top-description border-bottom">实时获取输入值：{{inputValue}}</view>
-        <input class="ipt" bindinput="bindKeyInput" placeholder="输入同步到view中" maxlength="19"/>
-    </view>
-<view class="card-area">
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">最大长度</view>
-        <view class="list-item-value">
-            <input cursor='100' bindblur="bindKeyblur"  bindconfirm="bindKeyconfirm" placeholder="最大输入长度为10" maxlength="10"/>
-        </view> 
-    </view>
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">普通input</view>
-        <view class="list-item-value">
-            <input value="{= value =}" cursor='10' bindblur="bindKeyblur"  bindconfirm="bindKeyconfirm" placeholder="这是一个普通输入框"/>
-        </view> 
-    </view>
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">输入数字</view>
-        <view class="list-item-value">
-            <input type="number" placeholder="这是一个数字输入框" />
-        </view> 
-    </view>
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">输入密码</view>
-        <view class="list-item-value">
-            <input password placeholder="这是一个密码输入框" />
+        <view class="top-description border-bottom">自定义输入控制</view>
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">自动聚焦</view>
+            <view class="list-item-value">
+                <input bindfocus="bindKeyfocus" selection-start="3" placeholder="focus='true'" selection-end="7" focus={{true}} confirm-hold="false" confirm-type="send"/>
+            </view> 
         </view>
-    </view>
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">小数点键盘</view>
-        <view class="list-item-value">
-           <input type="digit" placeholder="带小数点的数字键盘"/>
+
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">控制长度</view>
+            <view class="list-item-value">
+                <input cursor='100' bindblur="bindKeyblur"  bindconfirm="bindKeyconfirm" placeholder="maxlength='10'" maxlength="10"/>
+            </view> 
         </view>
-    </view>
-    <view class="list-area border-bottom">
-        <view class="list-item-key-4">身份证键盘</view>
-        <view class="list-item-value">
-            <input type="idcard" adjust-position="true" placeholder="身份证输入键盘" />
+
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">禁用</view>
+            <view class="list-item-value">
+                <input disabled="true" placeholder="disabled='true'"/>
+            </view> 
+        </view>
+
+        <view class="list-area">
+            <view class="list-item-key-4">带有内容</view>
+            <view class="list-item-value">
+                <input value="value='{= value =}'"/>
+            </view> 
         </view>
     </view>
 </view>
-    <view class="card-area">
-            <view class="top-description border-bottom">控制占位符颜色的input</view>
-            <input class="ipt" placeholder-class="placeholder" placeholder-style="color:#6895FF" placeholder="占位符字体是蓝色的" />
-    </view>
 ```
 * 在 js 文件中
 
@@ -167,6 +166,197 @@ Page({
         swan.showToast({
             title: '点击确定',
             icon: 'none'
+        });
+    }
+});
+```
+
+**代码示例3 - type 有效值**：
+
+<a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">自定义输入内容</view>
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">文本</view>
+            <view class="list-item-value">
+                <input type="text" placeholder="type='text'" />
+            </view> 
+        </view>
+
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">数字</view>
+            <view class="list-item-value">
+                <input type="number" placeholder="type='number'" />
+            </view> 
+        </view>
+
+        <view class="list-area border-bottom">
+            <view class="list-item-key-4">身份证</view>
+            <view class="list-item-value">
+                <input type="idcard" adjust-position="{{true}}" placeholder="type='idcard'" />
+            </view>
+        </view>
+
+        <view class="list-area">
+            <view class="list-item-key-4">小数</view>
+            <view class="list-item-value">
+            <input type="digit" placeholder="type='digit'"/>
+            </view>
+        </view>
+    </view>
+
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>自定义占位符颜色</view>
+            <view>placeholder-style=color:"#3388FF"</view>
+        </view>
+        <input class="ipt" placeholder-class="placeholder" placeholder-style="color:#3388FF" placeholder="请在此输入" />
+    </view>
+</view>
+```
+**代码示例4 - bindinput实时获取input输入值**：
+
+<a href="swanide://fragment/aef77cb4643dcca1cec67fcf0feac9741575287321184" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description">
+            <view>实时获取输入值</view>
+            <view>bindinput="bindKeyInput"</view>
+        </view>
+        <view class="textarea">{{inputValue}}</view>
+        <input class="ipt" bindinput="bindKeyInput" placeholder="请在此输入内容" />
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```javascript
+Page({
+    bindKeyInput: function (e) {
+        this.setData({
+            inputValue: e.detail.value
+        });
+    }
+});
+```
+**代码示例5 - input做业务搜索框**：
+
+<a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <!-- 搜索框 -->
+    <view class="search">
+        <view class="search-box">
+            <view class="search-icon"></view>
+            <input class="search-input" 
+                style="max-width:70%;"
+                type="text" 
+                focus="{{focus}}" 
+                placeholder="搜索内容"
+                value="{=value=}" 
+                placeholder-class="searchholder" 
+                bindfocus="searchFocus"
+                bindinput="searchInput" 
+                bindconfirm="searchConfirm" 
+                confirm-type="search"
+                bindblur="searchBlur"/>
+                <block s-if="focus">
+                    <block s-if="value">
+                        <button class="search-input-clear" hover-class="search-clear-hover" bindtap="searchClear"></button>
+                    </block>
+                    <view class="{{value ? 'search-deep' : 'search-sear'}}" bindtap="searchConfirm">搜索</view>
+                </block>
+        </view>
+    </view>
+
+    <!-- 输入框占位 -->
+    <view style="height:0.52rem;"></view>
+
+    <!-- 搜索结果 -->
+    <view s-if="hasResult" class="search-result">
+        <view>
+            <view class="empty-icon"></view>
+            <view class="empty-msg">搜索结果内容</view>
+        </view>   
+    </view>
+
+    <!-- 搜索无结果 -->
+    <view s-if="!hasResult && showEmptyResult" class="empty-result">
+        <view>
+            <view class="empty-icon"></view>
+            <view class="empty-msg">暂无相关内容</view>
+        </view>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        value: '',
+        focus: true,
+        hasResult: false,
+        showEmptyResult: false,
+        blur: true
+    },
+    searchFocus(e) {
+        this.setData({
+            focus: true
+        });
+    },
+    searchInput(e) {
+        const value = e.detail.value;
+        this.setData({
+            value,
+            hasResult: false,
+            showEmptyResult: false
+        });
+        if (!value) {
+            this.resetResult();
+            return false;
+        }
+
+        if (value.length === 1 && /[a-zA-Z]/.test(value)) {
+            this.resetResult();
+            return false;
+        }
+    },
+    searchConfirm(e) {
+        const value = this.getData('value').replace(/\s/gi, '');
+        if (value) {
+            this.setData({
+                showEmptyResult: true
+            });
+        }
+    },
+    searchBlur(e) {
+        this.setData({
+            focus: false
+        });
+    },
+    searchClear() {
+        this.setData({
+            value: '',
+            hasResult: false,
+            showEmptyResult: false
         });
     }
 });

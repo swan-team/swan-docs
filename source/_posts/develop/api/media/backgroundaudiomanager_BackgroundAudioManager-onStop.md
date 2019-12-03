@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onStop
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onStop
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onStop
 ---
 
 

@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onRecognize
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onRecognize
+sidebar: voice_VoiceRecognizer-onRecognize
 ---
 
 **解释**： 有识别结果返回
@@ -34,7 +34,7 @@ sidebar: voice_VoiceRecognizer_onRecognize
     </div>     
 </div>
 
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/93c00ae29b0cd0b086a0425ac254853c1573731767284" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

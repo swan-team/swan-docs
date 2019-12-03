@@ -29,6 +29,59 @@ sidebar: base_text
 | emsp | 中文字符空格大小 |
 | nbsp | 根据字体设置的空格大小 |
 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/text.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1**：
+
+<a href="swanide://fragment/c5329d0683b8db558716cd60ed9b5fd51575020767658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>文本是否可选</view>
+            <view>下面文字空了4个格</view>
+        </view>
+        <view class="text">
+            <view>
+                <text class="content" selectable="true" space="ensp">{{text1}}</text>
+            </view>
+            <view>
+                <text class="content" selectable="true" space="nbsp">{{text3}}</text>
+            </view>
+            <view>
+                <text class="content" selectable="true" space="emsp">{{text2}}</text>
+            </view>
+        </viewclass>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        text1: '这是一段    文字；(中文字符空格一半大小)',
+        text2: '这是一段    文字；（中文字符空格大小)',
+        text3: '这是一段    文字；(根据字体设置的空格大小)'
+    }
+});
+```
 
 **图片示例**：
 
@@ -44,7 +97,7 @@ sidebar: base_text
     </div>     
 </div>
 
-**代码示例**：
+**代码示例2**：
 
 <a href="swanide://fragment/475757ad12315ba758ce42bc61e47ba11565503530789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

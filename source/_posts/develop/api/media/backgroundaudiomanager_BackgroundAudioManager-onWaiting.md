@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onWaiting 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onWaiting 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
 ---
 
 
@@ -30,7 +30,6 @@ sidebar: BackgroundAudioManager.onWaiting
 </div>
 
 **代码示例**：
-
 
 <a href="swanide://fragment/589a045751e83eb654e932c7adcf70641573424513005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

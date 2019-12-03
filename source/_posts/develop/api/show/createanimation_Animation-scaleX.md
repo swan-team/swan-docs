@@ -30,8 +30,7 @@ sidebar: createanimation_Animation-scaleX
         <img src=" ">
     </div>     
 </div>
-
-**代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/6007d96630c306b5c22cb6defe0652b41574216405521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

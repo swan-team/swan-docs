@@ -33,7 +33,11 @@
         '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/',
         '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/',
         '/docs/develop/tutorial/index_first/': '/docs/develop/tutorial/install/',
-        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/'
+        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/',
+        '/docs/develop/third/register/': '/docs/third/register/',
+        '/docs/develop/api/open_authorize/': '/docs/develop/api/open/authorize_list/',
+        '/docs/develop/web/start/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/web/detail/': '/docs/develop/fuctionlist/list/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);

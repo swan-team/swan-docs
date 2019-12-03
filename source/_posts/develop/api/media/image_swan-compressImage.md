@@ -33,10 +33,24 @@ sidebar: image_swan-compressImage
 |---- | ---- | ---- |
 |tempFilePath |  String | 压缩后图片的临时文件路径示例代码|
 
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/compressImage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例**：
 
-<a href="swanide://fragment/75e1969a8be33484cb52b8bcf3ac591c1574001475054" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
+<a href="swanide://fragment/8feeefde9488bc59c7a25bf521d6028a1574946928289" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

@@ -2,7 +2,7 @@
 title: 组件列表
 header: develop
 nav: component
-sidebar:  componet
+sidebar: component
 ---
 
 

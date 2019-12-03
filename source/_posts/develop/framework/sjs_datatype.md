@@ -171,7 +171,7 @@ function 里面可以使用 arguments 关键词。该关键词目前只支持以
 - length: 传递给函数的参数个数。
 - [index]: 通过 index 下标可以遍历传递给函数的每个参数。
 
-**示例代码：**
+**代码示例：**
 
 ```js
 var a = function() {
@@ -191,7 +191,7 @@ a(100, 200, 300);
 **方法**
 - toString：返回字符串 "[function Function]"。
 
-**示例代码：**
+**代码示例：**
 
 ```js
 var func = function (a, b, c) { }
@@ -262,7 +262,7 @@ getDate(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]])
 - milliseconds: 从1970年1月1日00:00:00 UTC开始计算的毫秒数
 - datestring: 日期字符串，其格式为："month day, year hours:minutes:seconds"
 
-**示例代码：**
+**代码示例：**
 
 ```js
 var date = getDate(); //返回当前时间对象
@@ -345,7 +345,7 @@ getRegExp(pattern[, flags])
 	- i: ignoreCase
 	- m: multiline。
 
-**示例代码：**
+**代码示例：**
 
 ```js
 var a = getRegExp('x', 'img');
@@ -379,7 +379,7 @@ console.log(true === a.multiline);
 
 **constructor 属性**
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/5f21fb3744e82d2529249352f8b8496d1571226348194" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -410,7 +410,7 @@ console.log('RegExp' === regexp.constructor);
 
 **typeof**
 
-**示例代码：**
+**代码示例：**
 <a href="swanide://fragment/c432c5dbe5f1a1bc4b0623ba3bd07b9b1571226443322" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

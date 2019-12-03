@@ -35,9 +35,9 @@ sidebar: open_web-view
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
-<a href="swanide://fragment/a72d09c94460f8960e5003020b7ba9fc1565510747924" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5701757f175fd484c4f3b3a666d4a5301575189086529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中：
 
@@ -55,8 +55,34 @@ Page({
         src: 'https://smartprogram.baidu.com'
     },
    //接收H5页传过来的参数
-    onShareAppMessage(options) {
+    onLoad(options) {
         console.log(options.webViewUrl);
+    }
+});
+```
+
+**代码示例2 - 在特定时机接受到H5传递参数的函数**：
+
+<a href="swanide://fragment/6b417033a876fc19c589c7cdb875c9181575189212200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中：
+
+```xml
+<view>
+    <web-view src="{{src}}"></web-view>
+</view>
+
+```
+* 在 js 文件中：
+
+```js
+Page({
+    data: {
+        src: 'https://smartprogram.baidu.com'
+    },
+    //小程序后退、组件销毁、分享时，由此函数来接收H5页传过来的参数
+    postMessage(options) {
+        console.log(options);
     }
 });
 ```
@@ -115,7 +141,7 @@ web-view 网页中支持的接口有：
 
 用户分享时可获取当前web-view的URL，即在onShareAppMessage回调中返回webViewUrl参数。
 
-示例代码：
+代码示例：
 
 ```javascript
 Page({

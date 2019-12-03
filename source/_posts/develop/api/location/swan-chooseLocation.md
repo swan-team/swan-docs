@@ -9,7 +9,7 @@ sidebar: swan-chooseLocation
 
  
 
-**解释**： 打开地图选择位置。需要用户授权 scope.userLocation。
+**解释**： 打开地图选择位置。需要用户授权 scope.userLocation。使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -92,20 +92,4 @@ Page({
 })
 ```
 
-#### 错误码
-* Andriod
 
-|错误码|说明|
-|--|--|
-|1002|用户取消错误码                                |
-|1003|没有获取位置的权限|
-|1007|地图服务异常|
-
-* iOS
-
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确       |
-|1002|用户取消操作错误码|
-|1003|没有获取位置的权限|
-|1007|地图服务异常|

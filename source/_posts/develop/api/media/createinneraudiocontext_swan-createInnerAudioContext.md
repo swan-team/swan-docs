@@ -2,7 +2,7 @@
 title: swan.createInnerAudioContext
 header: develop
 nav: api
-sidebar: swan.createInnerAudioContext
+sidebar: createinneraudiocontext_swan-createInnerAudioContext
 ---
 
 
@@ -34,6 +34,20 @@ sidebar: swan.createInnerAudioContext
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确     |
+
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/createInnerAudioContext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **代码示例**：
 

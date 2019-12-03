@@ -2,7 +2,7 @@
 title: VoiceRecognizer.stop
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_stop
+sidebar: voice_VoiceRecognizer-stop
 ---
 
 **解释**： 停止
@@ -28,7 +28,7 @@ sidebar: voice_VoiceRecognizer_stop
     </div>     
 </div>
 
- **代码示例**
+**代码示例**：
 
 <a href="swanide://fragment/7e4fe85cd2c742caf6eb5a17ef826e421573743143847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
