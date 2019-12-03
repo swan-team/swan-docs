@@ -35,7 +35,13 @@
         '/docs/develop/third/register/': '/docs/third/register/',
         '/docs/develop/api/open_authorize/': '/docs/develop/api/open/authorize_list/',
         '/docs/develop/web/start/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/web/detail/': '/docs/develop/fuctionlist/list/'
+        '/docs/develop/web/detail/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/tutorial/index_first/': '/docs/develop/tutorial/install/',
+        '/docs/operations/thirdparty/': '/docs/operations/thirdparty_agreement/',
+        '/docs/introduction/tiebaintroduction/': '/docs/introduction/tieba/',
+        '/docs/introduction/preparation/': '/docs/introduction/register_prepare/',
+        '/docs/develop/function/apply_refund/': '/docs/develop/function/tune_up_applyorderrefund/',
+        '/docs/develop/devtools/show_short/': '/docs/develop/devtools/set_shortcutkey/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);

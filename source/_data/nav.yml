@@ -4251,41 +4251,44 @@
                 name: compatibility_version
 
     -
-      link: /develop/faq
-      text: FAQ
-      name: faq
+      link: /develop/appendix
+      text: 附录
+      name: appendix
       sidebar:
         -
+          text: FAQ 
           sidebar:
-            # -
-            #   link: /develop/function/faq_v2
-            #   text: 支付常见问题
-            #   name: faq_v2
             -
-              link: /develop/faq/framworkfaq
+              link: /develop/appendix/framworkfaq
               text: 框架常见问题
               name: framworkfaq
             -
-              link: /develop/faq/confaq
+              link: /develop/appendix/confaq
               text: 组件常见问题
               name: confaq
             -
-              link: /develop/faq/apifaq
+              link: /develop/appendix/apifaq
               text: API 常见问题
               name: apifaq
             -
-              link: /develop/faq/toolfaq
+              link: /develop/appendix/toolfaq
               text: 工具常见问题
               name: toolfaq
             -
-              link: /develop/faq/webfaq
+              link: /develop/appendix/webfaq
               text: web 化常见问题
               name: webfaq
             -
-              link: /develop/faq/frequently
+              link: /develop/appendix/frequently
               text: 其它常见问题
               name: frequently
+        -
 
+          sidebar:
+            -
+              link: /develop/appendix/error
+              text: 错误码
+              name: error            
 # 4
 -
   link: /data/concept

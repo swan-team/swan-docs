@@ -36,3 +36,5 @@ sidebar: app_service_pagelife
  <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
+
+更多内容参见[生命周期](https://smartprogram.baidu.com/docs/develop/framework/process_life/)。
