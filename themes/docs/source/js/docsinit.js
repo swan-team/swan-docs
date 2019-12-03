@@ -42,6 +42,7 @@
         '/docs/introduction/preparation/': '/docs/introduction/register_prepare/',
         '/docs/develop/function/apply_refund/': '/docs/develop/function/tune_up_applyorderrefund/',
         '/docs/develop/devtools/show_short/': '/docs/develop/devtools/set_shortcutkey/'
+        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
