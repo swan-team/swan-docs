@@ -36,7 +36,7 @@ sidebar: view_movable-view
 | htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
 |vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
 
-### **direction 有效值**:
+### **direction 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |

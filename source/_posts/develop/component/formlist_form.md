@@ -26,7 +26,7 @@ sidebar: formlist_form
 
 
 
-### **report-type有效值**：
+### **report-type有效值**
 
 |值 |说明|
 |---- |---- |
@@ -34,7 +34,7 @@ sidebar: formlist_form
 | subscribe |订阅类模板消息，需要用户授权才可发送|
 
 
-### **report-type 为 subscribe时，status 和 message具体值**：
+### **report-type 为 subscribe时，status 和 message具体值**
 
 status 为 Number 类型，message 为 String类型，当用户永久拒绝授权的时候，建议开发者不要再展示订阅消息授权面板入口。
 

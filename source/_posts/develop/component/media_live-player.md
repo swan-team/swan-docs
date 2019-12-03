@@ -34,21 +34,21 @@ sidebar: media_live-player
 |bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
 |bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullScreen}。|
 
-### **orientation 有效值**:
+### **orientation 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
 | vertical | 垂直方向 |
 | horizontal | 水平方向 |
 
-### **object-fit 有效值**:
+### **object-fit 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
 | contain | 包含 |
 | fillCrop | 填充 |
 
-### **主流格式支持**：
+### **主流格式支持** 
 
 |格式|	Android|	IOS|
 |--|--|--|
@@ -65,7 +65,7 @@ sidebar: media_live-player
 |rm|	是	|是|
 |ogg|	是	|是|
 
-### **主流编码格式支持**：
+### **主流编码格式支持**
 
 |格式|	Android|	IOS|
 |--|--|--|
@@ -76,7 +76,7 @@ sidebar: media_live-player
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-### **状态码**：
+### **状态码** 
 
 |代码  |说明   |
 | --- | --- |
@@ -105,7 +105,7 @@ sidebar: media_live-player
 |3005|RTMP 读/写失败|
 
 
-### **网络状态数据**：
+### **网络状态数据** 
 
 |键名  | 说明 |
 | --- | --- |

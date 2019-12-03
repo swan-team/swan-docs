@@ -25,7 +25,7 @@ sidebar: ad
 |bindload|EventHandle||否|广告组件加载完成触发|
 |bindclose|EventHandle||否|关闭广告组件时触发|
 
-### **type 有效值:**:
+### **type 有效值**
 
 | 值 | 说明 |
 |--- |----- |
@@ -34,62 +34,61 @@ sidebar: ad
 
 ## 示例
 
-* banner
 
-    ### **图片示例 1**：
+### **图片示例 1**：
 
-    <div class="m-doc-custom-examples">
-        <div class="m-doc-custom-examples-correct">
-            <img src=" https://b.bdstatic.com/miniapp/images/ad-banner.png">
-        </div>
-        <div class="m-doc-custom-examples-correct">
-            <img src=" ">
-        </div>
-        <div class="m-doc-custom-examples-correct">
-            <img src=" ">
-        </div>     
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src=" https://b.bdstatic.com/miniapp/images/ad-banner.png">
     </div>
-
-    ### **代码示例 1**：
-
-    <a href="swanide://fragment/d7056a8d90865d1a6a76bfb96c5d6d9a1572604050629" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-    ```
-    <div class="ad-container">
-        <ad appid="a764cad8" apid="6511101" type="banner" ></ad>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
     </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-    ```
-    **说明**：
-    1. 从百青藤获取的代码，是`<ad></ad>`标签组件，把这段代码，嵌入到页面中你需要展现广告的位置处，然后给他一些样式就可以，样式控制只能到`<ad>`这一层，内部的展示效果对小程序的开发者来说没有权限。
-    2. banner样式的背景色默认透明，建议开发者自定义背景色。通过（`div style="background-color: #fff"`）自行定义。其中`#fff`代表白色，可以根据广告场景自行修改参数。
+### **代码示例 1**:banner
 
-* feed
+<a href="swanide://fragment/d7056a8d90865d1a6a76bfb96c5d6d9a1572604050629" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-    ### **图片示例 2**：
+```
+<div class="ad-container">
+    <ad appid="a764cad8" apid="6511101" type="banner" ></ad>
+</div>
 
-    <div class="m-doc-custom-examples">
-        <div class="m-doc-custom-examples-correct">
-            <img src="https://b.bdstatic.com/miniapp/images/ad-feed.png">
-        </div>
-        <div class="m-doc-custom-examples-correct">
-            <img src=" ">
-        </div>
-        <div class="m-doc-custom-examples-correct">
-            <img src=" ">
-        </div>     
+```
+**说明**：
+1. 从百青藤获取的代码，是`<ad></ad>`标签组件，把这段代码，嵌入到页面中你需要展现广告的位置处，然后给他一些样式就可以，样式控制只能到`<ad>`这一层，内部的展示效果对小程序的开发者来说没有权限。
+2. banner样式的背景色默认透明，建议开发者自定义背景色。通过（`div style="background-color: #fff"`）自行定义。其中`#fff`代表白色，可以根据广告场景自行修改参数。
+
+
+
+### **图片示例 2**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ad-feed.png">
     </div>
-
-    ### **代码示例 2**：获取信息流广告代码示例 
-
-    <a href="swanide://fragment/3d2b4b9c495c812edff04922a25bf0171572604070484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-    ```
-    <div class="ad-container">
-        <ad appid="b2f8234f" apid="6315886"></ad>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
     </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-    ```
+### **代码示例 2**：feed，获取信息流广告代码示例
+
+<a href="swanide://fragment/3d2b4b9c495c812edff04922a25bf0171572604070484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```
+<div class="ad-container">
+    <ad appid="b2f8234f" apid="6315886"></ad>
+</div>
+
+```
 
 ##  **Bug & Tip**
 

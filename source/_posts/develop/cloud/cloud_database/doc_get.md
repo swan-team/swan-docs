@@ -1,13 +1,13 @@
 ---
-title: doc.remove
+title: doc.get
 header: develop
 nav: cloud
-siderbar: doc
+siderbar: doc_get
 ---
 
- 
 
-**解释**：删除指定ID的记录
+
+**解释**：获取指定ID的记录数据
 
 **参数说明**
 
@@ -25,13 +25,13 @@ siderbar: doc
 `success`或`Promise resolve`的回调结果结构如下：
 
 |字段 |类型 |说明 |
-|----- |----- |----- |
+|---- |---- |----- |
 |data |Object |记录数据 |
 
 `fail`或`Promise reject`的回调结果结构如下：
 
 |字段 |类型 |说明 |
-|----- |----- |----- |
+|----- |------ |----- |
 |errCode |Number |错误码 |
 |errMsg |String | 错误信息 |
 
@@ -47,7 +47,7 @@ siderbar: doc
     const db = swan.cloud.database();
     db.collection('users')
       .doc('docId')
-      .remove({
+      .get({
           success: res => console.log(res.data),
           fail: err => console.warn(err.errMsg)
       })
@@ -62,7 +62,7 @@ Promise风格
     const db = swan.cloud.database();
     db.collection('users')
       .doc('docId')
-      .remove()
+      .get()
       .then(res => {
           console.log(res.data);
       })
@@ -70,5 +70,6 @@ Promise风格
           console.log(err.errMsg);
       })
 ```
+
 
 

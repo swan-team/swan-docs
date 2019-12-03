@@ -14,14 +14,14 @@ sidebar: base_text
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/text.png"  class="demo-qrcode-image" />
 
-## **属性说明:**
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |--|
 | space | String  | false | 否 |显示连续空格|1.10.1|
 | selectable|Boolean|false| 否 |文本是否可选<br>**true**:可用于文本复制，粘贴等场景。|3.10.4|
 
-### **space 有效值**:
+### **space 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |

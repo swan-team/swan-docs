@@ -21,7 +21,7 @@ innerAudioContext.onError(callback)
 |res.errCode|string|错误码||
 |res.errMsg|string|错误说明| |
 
-**errCode 的有效值:**
+**errCode 的有效值**
 
 |值|说明|
 |-|-|

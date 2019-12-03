@@ -14,7 +14,7 @@ sidebar: open_web-view
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/webview.png"  class="demo-qrcode-image" />
 
-## **属性说明:**
+## **属性说明**
 
 | 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
 | --- | ------ | ---- | ---- |---- |---- |
@@ -174,7 +174,7 @@ Page({
     </div>
 </div>
 
-## **Bug & Tip:**
+## **Bug & Tip**
 
 * Tip：网页内 iframe 的域名也需要配置到域名白名单。
 * Tip：每个页面只能有一个 <`web-view/`>，<`web-view/`> 会自动铺满整个页面，并覆盖其他组件。

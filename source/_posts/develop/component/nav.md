@@ -34,14 +34,14 @@ sidebar: nav
 |bindfail|	String| | 否 |当target="miniProgram"时有效，跳转小程序失败。|	2.5.2|
 |bindcomplete|	String|  | 否 |		当target="miniProgram"时有效，跳转小程序完成。|	2.5.2|
 
-### **target 有效值**:
+### **target 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
 | self | 当前小程序 |
 | miniProgram | 跳转到另一个小程序 |
 
-### **version 有效值**:
+### **version 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -49,7 +49,7 @@ sidebar: nav
 | trial | 体验版 |
 | release | 正式版 |
 
-### **open-type 有效值**：
+### **open-type 有效值**
 
 |值 |说明 |最低版本|
 |--- |--- |--- |

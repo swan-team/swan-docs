@@ -36,7 +36,7 @@ sidebar: formlist_button
 |contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|- |
 
 
-### **size有效值**：
+### **size有效值**
 
 |值 |说明|
 |---- |---- |
@@ -44,7 +44,7 @@ sidebar: formlist_button
 | mini   |小尺寸 |
 
 
-### **type有效值**：
+### **type有效值**
 
 |值 |说明|
 |---- |---- |
@@ -52,7 +52,7 @@ sidebar: formlist_button
 | default |白色|
 | warn |红色|
 
-### **form-type有效值**：
+### **form-type有效值**
 
 |值|说明|
 | ---- | ---- |
@@ -60,7 +60,7 @@ sidebar: formlist_button
 | submit | 提交表单 |
 | reset | 重置表单 |
 
-### **open-type有效值**：
+### **open-type有效值**
 
 |值 |说明|
 |---- |---- |

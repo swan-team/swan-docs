@@ -22,7 +22,7 @@ sidebar: videocontext_VideoContext-requestFullScreen
 |---|---|---|---|---|
 |direction|object|否|当前方向|角度，有效值为0，90，-90|
 
-**direction 有效值**:
+**direction 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |

@@ -27,7 +27,7 @@ sidebar:  toast_swan-showToast
 |complete   | Function |   否| |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
-**icon有效值**：
+**icon有效值**
 
 |有效值 |说明  |
 |---- | ---- |

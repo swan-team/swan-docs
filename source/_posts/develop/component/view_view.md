@@ -79,7 +79,7 @@ sidebar: view_view
 </view>
 ```
 
-## **Bug&Tip**：
+## **Bug&Tip** 
 
-1、 Tip：如果需要使用滚动视图，请使用 scroll-view。
-2、 Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。
+* Tip：如果需要使用滚动视图，请使用 scroll-view。
+* Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。

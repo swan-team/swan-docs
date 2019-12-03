@@ -25,7 +25,7 @@ sidebar:  createanimation_swan-createAnimation
 |delay|Number| 否|  0 | 动画延迟时间，单位 ms 。|
 |transformOrigin|String | 否|  `‘50% 50% 0’` | 动画 |
 
-**timingFunction 有效值**：
+**timingFunction 有效值**
 
 |值   |说明  |
 |---- | ---- |

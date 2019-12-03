@@ -44,7 +44,7 @@ sidebar: formlist_textarea
 |bindinput|EventHandle| |否|当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|
 |bindconfirm|EventHandle| |否|点击完成时， 触发 confirm 事件，event.detail = {value: value}|
 
-### **confirm-type 有效值**：
+### **confirm-type 有效值**
 
 | 值 | 说明 |
 |--- |--- |

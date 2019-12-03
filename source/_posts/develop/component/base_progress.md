@@ -42,7 +42,7 @@ sidebar: base_progress
     </div>     
 </div>
 
-### **代码示例1**：
+### **代码示例1** 
 
 <a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -59,7 +59,7 @@ sidebar: base_progress
 
 ```
 
-### **代码示例2：设置圆角progress**：
+### **代码示例2：设置圆角progress** 
 
 <a href="swanide://fragment/5b39c74d2356ad926786f66d9da753ce1573046087456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

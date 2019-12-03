@@ -24,7 +24,7 @@ sidebar: base_animation-view-Lottie
 |hidden | Boolean  |  true |否 |是否隐藏动画| |
 |bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
-### **action 有效值**:
+### **action 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |

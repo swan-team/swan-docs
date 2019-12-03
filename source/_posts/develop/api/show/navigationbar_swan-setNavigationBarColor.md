@@ -32,7 +32,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
 | duration|Number | 否  |0|动画变化时间，单位：毫秒。|
 |timingFunc|String | 否  |linear| 动画变化方式  |
 
-**animation.timingFunc 有效值**：
+**animation.timingFunc 有效值**
 
 |值  | 说明|
 | ---- |---- |

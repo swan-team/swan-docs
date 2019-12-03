@@ -24,7 +24,9 @@ sidebar: media_image
 | bindload | HandleEvent  | | 否 |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
 
-### **mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
+### **mode 有效值** 
+
+有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |

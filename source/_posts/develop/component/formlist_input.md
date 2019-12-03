@@ -37,7 +37,7 @@ sidebar: formlist_input
 | bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}| |
 
 
-### **type 有效值**：
+### **type 有效值**
 
 |值|说明 |
 |---- | ---- |
@@ -46,7 +46,7 @@ sidebar: formlist_input
 | idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
-### **confirm-type 有效值**：
+### **confirm-type 有效值**
 
 |值|说明 |
 |---- | ---- |

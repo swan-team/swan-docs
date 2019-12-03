@@ -19,7 +19,7 @@ sidebar: base_icon
 |size | Number  |23 | 否 |icon 的大小，单位是 px|
 |color | Color |   | 否 |icon 的颜色，同 css 的 color|
 
-### **type 有效值**:
+### **type 有效值** 
 
 | 值 | 说明 |
 | ---- | ---- |

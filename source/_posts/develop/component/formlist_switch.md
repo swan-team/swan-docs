@@ -23,7 +23,7 @@ sidebar: formlist_switch
 |disabled|	Boolean|	false| 否 |	是否禁用|
 |bindchange | EventHandle  | | 否 |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
-### **type 有效值**:
+### **type 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |

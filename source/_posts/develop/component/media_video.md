@@ -50,7 +50,7 @@ sidebar: media_video
 |bindwaiting|   EventHandle| |否|        视频出现缓冲时触发|
 |binderror| EventHandle | | 否 |视频播放出错时触发|
 
-### **objectFit 有效值**:
+### **objectFit 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -58,7 +58,7 @@ sidebar: media_video
 | fill | 填充 |
 | cover | 覆盖 |
 
-### **direction 有效值**:
+### **direction 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -66,7 +66,7 @@ sidebar: media_video
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-### **主流格式支持**：
+### **主流格式支持** 
 
 |格式|    Android|    IOS|
 |--|--|--|
@@ -83,7 +83,7 @@ sidebar: media_video
 |rm|    是   |是|
 |ogg|   是   |是|
 
-### **主流编码格式支持**：
+### **主流编码格式支持**
 
 |格式|    Android|    IOS|
 |--|--|--|
