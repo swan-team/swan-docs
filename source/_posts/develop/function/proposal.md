@@ -1,5 +1,5 @@
 ---
-title: 开发简易
+title: web 化开发建议
 header: develop
 nav: function
 sidebar: proposal
@@ -18,9 +18,9 @@ sidebar: proposal
 
 ### 页面跳转
 小程序提供了两种页面跳转的方式
-- [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/)
+- [navigator 组件](/develop/component/nav/)
 - [导航 API ](https://smartprogram.baidu.com/docs/develop/api/show_tab/)，包括 navigateTo、redirectTo、switchTab、navigateBack、reLaunch
-如果两种方式都能满足使用场景，**建议使用 [navigator 组件](https://smartprogram.baidu.com/docs/develop/component/nav/#navigator/) 实现相应的导航功能，以便更好的被搜索引擎理解**。
+如果两种方式都能满足使用场景，**建议使用 [navigator 组件](/develop/component/nav/) 实现相应的导航功能，以便更好的被搜索引擎理解**。
 
 ### 页面样式
 由于 Web 化中 header 和 tabBar 是由 H5 实现的，包含在窗口中；而小程序中的视窗是除去 header 和 tabBar 的部分。两种视窗的差异会导致 fixed 定位的差异。因此**开发中尽量避免使用fixed定位方式**。如图：

@@ -74,8 +74,9 @@ sidebar: layout
 	</div>
 </div>
 
-一般来说，全面屏安卓手机的刘海高度=系统状态栏高度，全面屏iPhone刘海高度为44pt。
-通过系统信息接口[getSystemInfoSync](../../../develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
+全面屏手机的刘海高度等同于系统状态栏的高度。
+通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
+
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/10-1.png">
@@ -89,7 +90,7 @@ sidebar: layout
 
 
 ### 注意：全面屏iPhone底部适配
-在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置，其高度为34pt。
+在布局上，全面屏iPhone需要格外关注底部横条（Home Indicator）的配置。
 全面屏iPhone的底部横条默认透明，如开发者使用小程序底部标签栏，底部横条会自动适配底部标签栏的背景颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">

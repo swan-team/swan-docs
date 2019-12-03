@@ -9,51 +9,33 @@ sidebar: aliyun_v2
 
 1、找到阿里云安全组，如下图:
 
-<br />
 
-![](http://hiphotos.baidu.com/nuomi/pic/item/f3d3572c11dfa9ecb37e84656bd0f703918fc174.jpg "")
+![图片](../../../img/function/aly1.jpg)
 
-<br />
 
 2、创建安全组，如下图:
 
-<br />
-
-![](http://hiphotos.baidu.com/nuomi/pic/item/42166d224f4a20a400afe2b599529822720ed00b.jpg "")
-
-<br />
+![图片](../../../img/function/aly2.jpg)
 
 3、配置规则，如下图:
 
-<br />
-
-![](http://hiphotos.baidu.com/nuomi/pic/item/902397dda144ad34214d5ef5d9a20cf430ad85d6.jpg "")
-
-<br />
+![图片](../../../img/function/aly3.jpg)
 
 点击添加安全组规则按钮:
 
-<br />
-
-![](http://hiphotos.baidu.com/nuomi/pic/item/023b5bb5c9ea15ce54b8387bbf003af33a87b26a.jpg "")
-
-<br />
+![图片](../../../img/function/aly4.jpg)
 
 此处安全组设置以百度杭州机房出口ip为例，4中会展示所有百度的出口机房ip，如下图:
 
-<br />
-
-![](http://hiphotos.baidu.com/nuomi/pic/item/cdbf6c81800a19d809a45f773afa828ba61e4619.jpg "")
-
-<br />
+![图片](../../../img/function/aly5.jpg)
 
 其余百度机房出口ip的配置和上图中类似。
 
-<br />
+
 
 4、百度机房出口ip列表:
 
-<br />
+
 
 **上海机房**
 117.185.18.6

@@ -40,7 +40,7 @@ swan.createRecommendationButton(opts)
 |style.top|number|300|否|左上角纵坐标|
 
 
-**opts.type 的合法值**
+**opts.type 的有效值**
 
 |值|描述|
 |-|-|

@@ -37,7 +37,7 @@ swan.login(opts)
 **示例 1：**
 ```js
 swan.login({
-    success: function (res) {
+    success: res => {
         console.log('登录成功', res.code);
     },
     fail: function () {
@@ -53,7 +53,7 @@ swan.login({
 ```js
 function baiduLogin() {
     swan.login({
-        success: function () {
+        success: res => {
             // 登录成功后的业务逻辑
         },
         fail: function () {
@@ -61,7 +61,7 @@ function baiduLogin() {
                 title: "登录失败",
                 content: "是否重新登录？",
                 cancelText: "退出游戏",
-                success: function (res) {
+                success: res => {
                     if (res.confirm) {
                         console.log("点击了确定");
                         baiduLogin();
@@ -99,7 +99,7 @@ swan.checkSession(opts)
 
 ```js
 swan.checkSession({
-    success: function () {
+    success: res => {
         console.log('登录态有效');
     },
     fail: function () {
@@ -136,7 +136,7 @@ swan.checkSession({
 若请求错误，服务器将返回一段 JSON 文本，包含以下参数：
 
 | 属性 | 描述 |
-| -| - |
+| | - |
 | error | 错误码；关于错误码的详细信息请参考"错误码列表"一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
@@ -188,7 +188,7 @@ swan.checkSession({
 
 ```js
 swan.getSwanId({
-    success: function (res) {
+    success: res => {
         console.log(res.data.swanid);
     }
 });

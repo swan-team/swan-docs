@@ -5,10 +5,11 @@ nav: framework
 sidebar: custom-component_generic
 ---
 
-> 抽象节点自小程序基础库版本 3.90.18 、开发者工具正式版 2.9.1，beta版 2.9.0-beta  开始支持。
+>  抽象节点自小程序基础库版本 3.90.18 、开发者工具正式版 2.9.1，beta版 2.9.0-beta  开始支持。
 
 ## 在组件中使用抽象节点
-有时，自定义组件模板中的一些节点，其对应的自定义组件不是由自定义组件本身确定的，而是自定义组件的调用者确定的。这时可以把这个节点声明为“抽象节点”。
+
+**抽象节点**：自定义组件模板中的一些节点，其对应的自定义组件不是由自定义组件本身确定的，而是由自定义组件的调用者确定的。这时可以把这个节点声明为“抽象节点”。
 
 例如，我们现在来实现一个“选框组”（selectable-group）组件，它其中可以放置单选框（custom-radio）或者复选框（custom-checkbox）。这个组件的 swan 可以这样编写：
 
@@ -18,10 +19,10 @@ sidebar: custom-component_generic
 ```html
 <!-- selectable-group.swan -->
 <view s-for="{{labels}}">
-  <label bindtap="itemTap" data-index="{{index}}">
-    <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
-    {{item}}
-  </label>
+    <label bindtap="itemTap" data-index="{{index}}">
+        <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
+        {{item}}
+    </label>
 </view>
 ```
 
@@ -29,9 +30,9 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": true
-  }
+    "componentGenerics": {
+        "selectable": true
+    }
 }
 ```
 
@@ -50,14 +51,14 @@ sidebar: custom-component_generic
 
 “selectable”节点则会生成“custom-checkbox”组件实例。
 
-注意：上述的 `custom-radio` 和 `custom-checkbox` 需要包含在这个 `swan` 对应 `json` 文件的 `usingComponents` 定义段中。
+>上述的 `custom-radio` 和 `custom-checkbox` 需要包含在这个 `swan` 对应 `json` 文件的 `usingComponents` 定义段中。
 
 ```json
 {
-  "usingComponents": {
-    "custom-radio": "path/to/custom/radio",
-    "custom-checkbox": "path/to/custom/checkbox"
-  }
+    "usingComponents": {
+        "custom-radio": "path/to/custom/radio",
+        "custom-checkbox": "path/to/custom/checkbox"
+    }
 }
 ```
 
@@ -67,14 +68,14 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": {
-      "default": "path/to/default/component"
+    "componentGenerics": {
+        "selectable": {
+            "default": "path/to/default/component"
+        }
     }
-  }
 }
 ```
 
-### Tips:
-- 节点的`generic`引用`generic:xxx="yyy"`中，值`yyy`只能是静态值，不能包含数据绑定。因而抽象节点特性并不适用于动态决定节点名的场景。
+
+> 节点的`generic`引用`generic:xxx="yyy"`中，值`yyy`只能是静态值，不能包含数据绑定。因而抽象节点特性并不适用于动态决定节点名的场景。
 

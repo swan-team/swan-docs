@@ -9,8 +9,8 @@
   "scripts": {
     "prebuild": "npm install && hexo --safe",
     "prestart": "npm install && hexo --safe",
-    "start": "npx hexo server",
-    "build": "npx hexo clean && npx hexo generate"
+    "start": "node make-sitemap.js && npx hexo server",
+    "build": "npx hexo clean && node make-sitemap.js && npx hexo generate"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.2",

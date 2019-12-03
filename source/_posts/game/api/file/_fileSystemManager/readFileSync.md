@@ -13,7 +13,7 @@ let data = fileSystemManager.readFileSync(filePath, encoding)
 |filePath|string| |是|文件/目录路径。“本地用户文件”须以 `swan.env.USER_DATA_PATH` 开头（如 `'swan.env.USER_DATA_PATH' + '/demo.txt'`），否则认为是“代码包文件”（如 `'asset/bg.jpg'`）。不支持相对路径。|
 |encoding|string| |否|指定写入文件的字符编码。如果不指定，则读出 `ArrayBuffer`；如果指定，则读出 `string`。|
 
-`encoding` 的合法值：
+`encoding` 的有效值：
 
 |值|描述|
 |-|-|

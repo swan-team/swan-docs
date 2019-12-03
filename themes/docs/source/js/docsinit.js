@@ -2,14 +2,13 @@
 !function(pathname){
     var urlMap = {
         '/docs/design/principle/':'/docs/design/overview/introduction/',
-        '/docs/develop/component/media_live-player/':'/docs/develop/component/media/',
         '/docs/design/component/nav/':'/docs/design/component/topnav/',
         '/docs/develop/server/upstream/':'/docs/develop/web/detail/',
         '/docs/develop/api/open_feed/':'/docs/develop/api/open_feed/#submitresource/',
         '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/show_sur/',
-        '/docs/develop/api/seo/':'/docs/develop/api/pageinfo/',
+        '/docs/develop/api/seo/':'/docs/develop/api/open/swan-setPageInfo/',
         '/docs/develop/tutorial/shine/':'/docs/develop/swan/shine/',
         '/docs/game/introduction/prerare/enter/':'/docsgame/introduction/prerare/enter_application/',
         '/docs/game/operations/service/service/':'/docs/game/operations/service/provision/',
@@ -23,9 +22,41 @@
         '/docs/game/api/ad/swan.createRewardedVideoAd/': '/docs/game/api/adApi/swan.createRewardedVideoAd/',
         '/docs/game/api/ad/rewardedVideoAd/': '/docs/game/api/adApi/rewardedVideoAd/',
         '/docs/game/api/ad/ad/': '/docs/game/api/adApi/swan.createBannerAd/',
+        '/docs/develop/cloud-develop/introduction/':'/docs/develop/cloud/cloud_info/',
+        '/docs/develop/tutorial/index/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/tutorial/codedir/':'/docs/develop/fuctionlist/list/',
+        '/docs/develop/api/pageinfo/': '/docs/develop/api/open/swan-setPageInfo/',
+        '/docs/develop/devtools/show_sur/': '/docs/develop/devtools/page_start/',
+        '/docs/develop/devtools/uplog_tool/': '/docs/develop/devtools/uplog_tool_normal/',
+        '/docs/introduction/single/': '/docs/introduction/rank_single/',
+        '/docs/develop/function/single/': '/docs/introduction/rank_single/',
+        '/docs/develop/api/nacomponent/': '/docs/develop/api/show/nacomponent/',
+        '/docs/develop/framework/app_service_life/': '/docs/develop/framework/process_life/',
+        '/docs/develop/third/register/': '/docs/third/register/',
+        '/docs/develop/api/open_authorize/': '/docs/develop/api/open/authorize_list/',
+        '/docs/develop/web/start/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/web/detail/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/tutorial/index_first/': '/docs/develop/tutorial/install/',
+        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/'
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
+
+!function(url) {
+    var urlMap = {
+        '/docs/develop/devtools/smartappdebug_function/#自定义预处理/': '/docs/develop/devtools/smartappdebug_function_pre/',
+        '/docs/develop/swan/compatibility/#基础库最低版本设置': '/docs/develop/swan/compatibility_version/',
+        '/docs/develop/devtools/uplog_tool/#正式版更新日志/': '/docs/develop/devtools/uplog_tool_normal/',
+        '/docs/develop/api/open_authorize/#authorize/': '/docs/develop/api/open/authorize_swan-authorize/',
+        '/docs/develop/api/open_log/#%E6%8E%88%E6%9D%83%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E/': '/docs/develop/api/open/log/',
+        '/docs/develop/api/open_log/#login/': '/develop/api/open/log_swan-login/',
+        '/docs/develop/api/open_log/#isLoginSync/': '/docs/develop/api/open/log_swan-isLoginSync/',
+        '/docs/develop/api/open_log/#checkSession/': '/docs/develop/api/open/log_swan-checkSession/',
+        '/docs/develop/api/pageinfo/#swan-setPageInfo/': '/docs/develop/api/open/swan-setPageInfo/'
+    };
+    urlMap[url] && location.replace(urlMap[url]);
+}(decodeURIComponent(location.pathname + location.hash));
+
 (function(win, doc, $) {
     var localSidebar = function () {
         var noop = function () {};
@@ -67,7 +98,7 @@
         screenWidth: win.innerWidth,
         frame: 1000 / 60,
         start: function () {
-            this.initHighlight();
+            // this.initHighlight();
             this.addEvent();
             this.initCrumbs();
             this.initToc();
@@ -79,20 +110,20 @@
             this.initInvokeDemo();
             // this.initCustom();
         },
-        initHighlight() {
-            let keywords = window.localStorage.getItem('keywords');
-            window.localStorage.removeItem('keywords');
-            if (!keywords || !keywords.length) {
-                return;
-            }
-            keywords = Array.isArray(keywords) ? keywords : [keywords];
-            let content = $('.m-doc-content-layout').html();
-            keywords.forEach(function (keyword, index) {
-                var regExp = new RegExp(keyword, 'g');
-                content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
-            });
-            $('.m-doc-content-layout').html(content);
-        },    
+        // initHighlight() {
+        //     let keywords = window.localStorage.getItem('keywords');
+        //     window.localStorage.removeItem('keywords');
+        //     if (!keywords || !keywords.length) {
+        //         return;
+        //     }
+        //     keywords = Array.isArray(keywords) ? keywords : [keywords];
+        //     let content = $('.m-doc-content-layout').html();
+        //     keywords.forEach(function (keyword, index) {
+        //         var regExp = new RegExp(keyword, 'g');
+        //         content = content.replace(regExp, "<mark class='marked_" + index + "'>" + keyword + "</mark>");
+        //     });
+        //     $('.m-doc-content-layout').html(content);
+        // },
         initSidebar: function () {
             var ctx = this;
             var sidebarData = localSidebar.getLocal(window.localData.headerName);
@@ -252,20 +283,29 @@
                 var href = element && element.href ? element.href : $(this)[0].href;
                 href = decodeURIComponent(href);
                 var tar = href.indexOf('#');
-                href = tar > -1 ? href.substr(tar).replace('/', '') : href;
+                href = tar > -1 ? href.substr(tar).replace('/', '') : '';
                 var offsetTop = $(href).offset() ? $(href).offset().top : 0;
                 var scrollTop = $('.m-doc-content-layout').scrollTop();
                 var tarTop = offsetTop + scrollTop - 30;
                 var diffTop = Math.abs(tarTop - scrollTop);
                 var time = diffTop > 1800 ? 200 : 100;
-                $('.m-doc-content-layout').scrollTo({toT: tarTop, durTime: time });
+                
+                // 修复 当切换的两个元素offsetTop距离一致时 不会触发滚动事件，导航栏高亮不生效
+                if(diffTop === 0) {
+                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time })
+                }
+                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time });
             }, 0);
         },
         addEvent: function () {
             var ctx = this;
             var before = $('.m-doc-content-layout').scrollTop();
             // 点击 二级导航折叠/展开/跳转
-            $('.m-doc-nav-list').on('click', function () {
+            $('.m-doc-nav-list').on('click', function (e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
+
                 var parent = $(this).parent('li');
                 if (parent.hasClass('m-doc-nav-on')) {
                     parent.removeClass('m-doc-nav-on')
@@ -283,7 +323,11 @@
                 }
             });
             // 点击h1 折叠/展开
-            $('.m-doc-h1-list').on('click', function () {
+            $('.m-doc-h1-list').on('click', function (e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
+
                 var parent = $(this).parent('li');
                 parent.hasClass('m-doc-sidebar-on')
                     ? parent.removeClass('m-doc-sidebar-on')
@@ -294,46 +338,33 @@
                     localSidebar.setLocal(window.localData.headerName, sidebarData);
                 }
             });
-            // 点击h2 高亮h2 修改url 更新文章内容、面包屑、title
-            $('.m-doc-h2-list').on('click', function (e) {
+
+            function updateArticle($this, href) {
+                if( href != '/docs/') {
+                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                    $this.parent('li').addClass('m-doc-sidebar-selected');
+                    win.history.pushState(href, '', href);
+                    ctx.getArticle(href, function() {
+                        ctx._scrollToAnchor($this[0]);
+                    });
+                } else {
+                    var href = $this.next('ul').children('li:first-child').children('a').attr('href');
+                    var $this = $this.next('ul').children('li:first-child').children('a');
+                    updateArticle($this, href);
+                }
+            }
+            // 点击左侧标题，导航栏高亮显示 && 右侧文章更新
+            $('.list-item').on('click', function(e) {
+                var e = e || event;
+                // 导航栏打点统计
+                _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
                 e.preventDefault();
                 var href = $(this).attr('href');
-                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $(this).parent('li').addClass('m-doc-sidebar-selected');
-                win.history.pushState(href, '', href);
-                ctx.getArticle(href);
+                // 更新右侧文章
+                updateArticle($(this), href);
             });
-            // 点击h3 滚动到锚点
-            $('.m-doc-h2-children .m-doc-h3-list').on('click', function (e) {
-                if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h2-children').children('.m-doc-sidebar-selected').length > 0) {
-                    ctx._scrollToAnchor($(this)[0]);
-                } else {
-                    e.preventDefault();
-                    var _this = this;
-                    var href = $(_this).attr('href');
-                    win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function() {
-                        ctx._scrollToAnchor($(_this)[0]);
-                    });
-                }
-            });
-            // 点击h4 滚动到锚点
-            $('.m-doc-h3-children a').on('click', function (e) {
-                if ($(this).parent('.m-doc-sidebar-selected').length > 0 || $(this).parents('.m-doc-h3-children').children('.m-doc-sidebar-selected').length > 0) {
-                    ctx._scrollToAnchor($(this)[0]);
-                } else {
-                    e.preventDefault();
-                    var _this = this;
-                    var href = $(_this).attr('href');
-                    win.history.pushState(href, '', href);
-                    ctx.getArticle(href, function() {
-                        ctx._scrollToAnchor($(_this)[0]);
-                    });
-                }
-            });
-            // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
-            $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
-            // back to top 按钮隐藏/显示
+
+            // 回到顶部
             $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
                 if (ctx.screenHeight > $(this).scrollTop()) {
@@ -341,83 +372,10 @@
                 } else {
                     backTop.addClass('m-doc-menu-top-show');
                 }
-            }))
-            // 导航跟随
-            .on('scroll', function () {
-                var h2 = $('article').find('h2');
-                var h3 = $('article').find('h3');
-                var scrollTop = $(this).scrollTop();
-                var tocH2 = $('.toc-wrap').find('.toc-level-2');
-                var tocH3 = $('.toc-wrap').find('.toc-level-3');
-                h2.each(function (index) {
-                    var h2Top = $(this)[0].offsetTop - scrollTop;
-                    if (h2Top <= 60) {
-                        tocH2.each(function (andex) {
-                            tocH2.eq(andex).removeClass('toc-level-2-on');
-                            tocH2.eq(andex).removeClass('toc-level-2-select');
-                        });
-                        tocH2.eq(index).addClass('toc-level-2-select');
-                        if (tocH2.eq(index).find('.toc-level-3').length === 0) {
-                            tocH2.eq(index).addClass('toc-level-2-on');
-                            // $('.m-doc-crumbs-wrapper').find('span').eq(3).hide();
-                            tocH3.removeClass('toc-level-3-on');
-                        }
-                        // 面包屑导航切换
-                        $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-2-select .toc-text').eq(0).text());
-                    }
-                });
-                h3.each(function (index) {
-                    var h3Top = $(this)[0].offsetTop - scrollTop;
-                    var tocH2Selected = $('.toc-wrap').find('.toc-level-2.toc-level-2-on').length;
-                    if (h3Top <= 60) {
-                        tocH3.each(function (andex) {
-                            tocH3.eq(andex).removeClass('toc-level-3-on');
-                        });
-                        if (!tocH2Selected) {
-                            var $indexTocH3 = tocH3.eq(index);
-                            $indexTocH3.addClass('toc-level-3-on');
-                            // 面包屑导航切换
-                            // $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-3-on .toc-text').text()).show();
-                        }
-                    }
-                });
-            })
-            .on('scroll', function () {
-                // 左侧导航栏跟随
-                var h2 = $('article').find('h2');
-                var scrollTop = $(this).scrollTop();
-                var sidebar = $('.m-doc-nav-on .m-doc-h2-children a');
-                var scrollHeight = $(this)[0].scrollHeight;
-                var clientHeight = $(this)[0].clientHeight;
-                h2.each(function (index) {
-                    var h2Top = this.offsetTop - scrollTop;
-                    if (h2Top <= 80) {
-                        var hash = $(this).children('a')[0].hash;
-                        sidebar.each(function (i) {
-                            if (this.hash.replace('/', '') === hash) {
-                                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                                $(this).parent('li').addClass('m-doc-sidebar-selected');
-                            }
-                        });
-                    }
-                });
-                // 由h3高亮跳转到顶部时高亮h2
-                if (scrollTop === 0 && $('.m-doc-h2-children .m-doc-sidebar-selected').length > 0) {
-                    var selected = $('.m-doc-sidebar-selected');
-                    selected.removeClass('m-doc-sidebar-selected');
-                    $(selected.parent('ul.m-doc-h2-children')[0]).parent('li').addClass('m-doc-sidebar-selected');
-                }
-                // 滑动到底部时高亮最后一个h3
-                if (scrollTop + clientHeight == scrollHeight && h2.length > 0) {
-                    var hash = $(h2[h2.length - 1]).children('a')[0].hash;
-                    sidebar.each(function () {
-                        if (this.hash.replace('/', '') === hash) {
-                            $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                            $(this).parent('li').addClass('m-doc-sidebar-selected');
-                        }
-                    });
-                }
-            });
+            }));
+            
+            // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
+            $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
             if (this.screenWidth > 768) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
@@ -496,15 +454,23 @@
             $.ajax({
                 url: href,
                 dataType: 'html',
-                success: function (res) {
+                success: res => {
                     var $html = $($.parseHTML(res));
                     var article = $html.find('#article-main-content').html();
+                    var docMenu = $html.find('#m-doc-menu-wrapper').html();
                     $('#article-main-content').html(article);
+                    $('#m-doc-menu-wrapper').html(docMenu);
                     // $('.m-doc-content-layout').scrollTo({ toT: 0, durTime: 0 });
                     if ($('header').hasClass('m-doc-header-hide')) {
                         $('header').removeClass('m-doc-header-hide');
                     }
                     doc.title = $html.filter('title').html();
+                    // 更新页面 meta 的 title、keywords、description
+                    var keywords = $html.filter('meta[name="keywords"]').attr('content');
+                    var description = $html.filter('meta[name="description"]').attr('content');
+                    $('meta[name="keywords"]').attr('content', keywords);
+                    $('meta[name="description"]').attr('content', description);
+
                     ctx.initCrumbs();
                     ctx.initH2();
                     ctx.initList();
@@ -655,15 +621,21 @@
                 e.preventDefault();
                 var href = $(this).attr('href');
                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $('.m-doc-h2-list').filter(function () {
+                // 点击上/下一页，左侧导航高亮显示
+                $('.list-item').filter(function () {
                     return $(this).attr('href') === href;
                 }).parent('li').addClass('m-doc-sidebar-selected');
                 win.history.pushState(href, '', href);
                 ctx.getArticle(href);
+                ctx._scrollToAnchor($(this)[0]);
             });
         }
     };
     $(doc).ready(function () {
         docs.start();
+        try {
+            $('.m-doc-sidebar-selected')[0].scrollIntoView();
+        }
+        catch (err) {}
     });
 })(window, document, window.$);

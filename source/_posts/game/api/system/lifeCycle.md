@@ -112,6 +112,49 @@ swan.offHide(callback)
 |callback|function|调用 [`swan.onHide()`](#swan-onHide) 时传入的回调函数|
 
 
+### swan.reload()
+
+> 从基础库 swan-game.js 1.10.x 开始支持。
+
+重载小游戏。
+
+```js
+swan.reload(opts)
+```
+
+**参数值：**
+
+|属性|类型|默认值|是否必填|描述|
+|-|-|-|-|
+|opts|Object|-|-|调用时，要传入的对象参数|
+|opts.content|将重新加载小游戏，确认？|否|提示的内容|
+|opts.success|function|-|否|接口调用成功的回调函数|
+|opts.fail|function|-|否|接口调用失败的回调函数|
+|opts.complete|function|-|否|接口调用完成的回调函数，无论失败成功都会调用|
+
+`success` 回调函数：
+形如 `function (res) {...}`，其中：
+
+|属性|类型|描述|
+|-|-|-|
+|res.confirm|boolean|为 true 时，表示用户点击了确定按钮(小游戏将会开始重启)|
+|res.cancel|boolean|为 true 时，表示用户点击了取消按钮（弹窗消失，不会重启游戏）|
+
+`fail` 回调函数：reload 弹窗未被调起，详情可打印 `res.errMsg`。
+
+**示例：**
+
+```js
+swan.reload({
+    content: '确认重载小游戏？',
+    success: res => {
+        if (res.confirm) {
+            console.log('点击了确定');
+        }
+    }
+});
+```
+
 ### swan.exit()
 
 退出小游戏。
