@@ -23,7 +23,7 @@ sidebar: formlist_picker
 
 > 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
 
-### **mode的有效值**
+###  mode的有效值 
 
 |值|说明|
 |---|---|
@@ -33,7 +33,7 @@ sidebar: formlist_picker
 |multiSelector|多列选择器|
 |region|省市区选择器|
 
-### <notice>普通选择器：mode = selector</notice>
+### 普通选择器：mode = selector 
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |

@@ -872,6 +872,10 @@
                 link: /develop/framework/dynamiclib_topone
                 text: topOne动态库
                 name: dynamiclib_topone
+              -
+                link: /develop/framework/echarts
+                text: ECharts 动态库 
+                name: echarts               
         -
           link: /develop/framework/subpackages
           text: 性能
