@@ -12,13 +12,13 @@ SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
 双向绑定的数据需包裹在`{=  =}`中。
 
 **例如**：
-组件 <a href="https://smartprogram.baidu.com/docs/develop/component/view/#scroll-view/">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
+组件 <a href="/develop/component/view_scroll-view//">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
 * `scroll-top="{= scrollTop =}"`
 * `scroll-left="{= scrollLeft =}"`
 
 ### 渲染内容
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- data-demo.swan -->
@@ -40,7 +40,7 @@ Page({
 
 ### 属性绑定
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- attr-demo.swan -->
@@ -60,7 +60,7 @@ Page({
 
 **注:** 属性不需要被双大括号包裹
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- condition-demo.swan -->
@@ -139,7 +139,7 @@ SWAN 模板 提供了丰富的表达式类型支持，让使用者在编写视�
 
 **注:** 对象字面量支持了在模板里重组对象以及使用扩展运算符 ... 来展开对象。
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- template-demo.swan-->

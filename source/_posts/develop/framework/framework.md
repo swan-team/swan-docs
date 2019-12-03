@@ -181,7 +181,7 @@ Page({
 
 开发者可以在组件中自定义数据，并在事件发生时，由 SWAN 所在事件对象中，传递给绑定函数。
 
-示例代码：
+代码示例：
 
 ```xml
 <view data-swan="1" bind:tap="viewtap">dataset-test</view>

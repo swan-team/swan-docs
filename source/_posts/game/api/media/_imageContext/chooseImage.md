@@ -17,7 +17,7 @@ swan.chooseImage(opts)
 |fail|function|否|接口调用失败的回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-object.sizeType 的合法值：
+object.sizeType 的有效值：
 
 |值|描述|
 |-|-|
@@ -25,7 +25,7 @@ object.sizeType 的合法值：
 |['compressed']|压缩图|
 |['original', 'compressed']|原图和压缩图都有|
 
-object.sourceType 的合法值：
+object.sourceType 的有效值：
 
 |值|描述|
 |-|-|
@@ -58,7 +58,7 @@ swan.chooseImage({
     count: 1,
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
-    success: function (res) {
+    success: res => {
         console.log(res.tempFilePaths);
         console.log(res.tempFiles);
     },

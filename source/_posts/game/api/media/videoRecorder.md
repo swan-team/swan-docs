@@ -75,6 +75,100 @@ recorder.start({
 })
 ```
 
+### VideoRecorderManager.recordClip()
+
+记录精彩的视频片段，调用时必须是正在录屏，可以多次调用，记录不同时刻。在结束录屏时，可以调用 [clipVideo](./#VideoRecorderManager-clipVideo) 接口剪辑并合成记录的片段。
+
+```
+VideoRecorderManager.recordClip(opts)
+```
+
+**参数值**
+
+|属性 |类型 |默认值 |是否必填 |描述 |
+|---|-------|---|-------|-------|
+|opts|Object|-|是|调用该方法时，要传入的对象参数|
+|opts.timeRange|Array| [3,3] | 否 | 表示记录数组两个值表示的时间范围内的视频，以秒为单位。 |
+
+**代码示例**
+```javascript
+const recorder = swan.getVideoRecorderManager();
+
+recorder.start({
+  duration: 30,
+})
+
+// 记录当前时刻前三秒，后三秒，支持多次调用
+recorder.recordClip({
+  timeRange: [3, 3]
+})
+
+recorder.onStop(({ videoPath })=>{
+  recorder.clipVideo({
+    path: videoPath,
+    success(res){
+      console.log(res.videoPath);
+    }
+  })
+})
+```
+
+### VideoRecorderManager.clipVideo()
+剪辑视频片段。
+
+```
+VideoRecorderManager.clipVideo(opts)
+```
+
+**参数**
+
+|属性 |类型 |默认值 |是否必填 |描述 |
+|---|-------|---|-------|-------|
+|path | string || 是 | path的值为停止录屏拿到的视频地址 |
+|success | function| | 否 | 剪辑成功的回调函数 |
+|fail | function || 否| 剪辑失败的回调函数|
+|complete | function || 否| 接口调用完成的回调函数（接口成功、失败都会执行）|
+
+
+**success回调函数参数值：**
+
+|属性|类型|描述|
+|---|-------|---|
+|res| Object| 回调函数的参数|
+|res.videoPath|string|剪辑成功的视频地址|
+
+**fail、complete回调参数：**
+
+| 名称 | 数据类型 | 描述 |
+|-----------|--------|-------|
+|res| Object| 回调函数的参数|
+|res.errMsg|string|错误信息|
+
+
+
+**代码示例**
+```javascript
+const recorder = swan.getVideoRecorderManager();
+
+recorder.start({
+  duration: 30,
+})
+
+// 记录当前时刻前三秒，后三秒
+recorder.recordClip({
+  timeRange: [3, 3]
+})
+
+recorder.onStop(({ videoPath })=>{
+  recorder.clipVideo({
+    path: videoPath,
+    success(res){
+      console.log(res.videoPath);
+    }
+  })
+})
+```
+
 
 ### videoRecorderManager.pause()
 暂停录屏。在录屏开始后调用。
@@ -82,7 +176,7 @@ recorder.start({
 videoRecorderManager.pause()
 ```
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -109,7 +203,7 @@ videoRecorderManager.onPause(callback)
 |callback|function|是|监听暂停录屏事件的回调函数|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -129,7 +223,7 @@ videoRecorderManager.resume()
 ```
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -161,7 +255,7 @@ recorder.resume()
 |callback|function|是|监听继续录屏事件的回调函数|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();
@@ -187,7 +281,7 @@ recorder.resume()
 videoRecorderManager.stop()
 ```
 
-**示例**
+**代码示例**
 ```javascript
 const recorder = swan.getVideoRecorderManager();
 
@@ -252,7 +346,7 @@ videoRecorderManager.onError(callback)
 |res.errMsg|string|错误信息|
 
 
-**示例**
+**代码示例**
 
 ```javascript
 const recorder = swan.getVideoRecorderManager();

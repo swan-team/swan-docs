@@ -18,7 +18,7 @@ A：可以通过[ Web 化预览](https://smartprogram.baidu.com/docs/develop/web
 
 #### Q: Web 化后代理接口出错该如何处理？
 A： 代理接口出错分以下两种情况：
-* 如果错误码为 416 ，则是 request 域名校验未通过。请按该指示完成设置：“小程序后台-设置-开发设置-服务器域名-request的合法域名”。
+* 如果错误码为 416，则是 request 域名校验未通过。请按该指示完成设置：“小程序后台-设置-开发设置-服务器域名-request的合法域名”。
 * 如果非 416 错误码，请检查开发者服务器接口是否针对  Web 化请求环境校验不通过，或者开发者服务器接口不稳定。
 
 #### Q: Web 化的 SEO 信息要在哪里配置？
@@ -32,3 +32,6 @@ A：提交完成一周之后即可生效。
 
 #### Q: Web 化的展示形式是怎样的？
 A：请阅读[流量接入说明](https://smartprogram.baidu.com/docs/introduction/intro/)了解。
+
+#### Q: web化后，setClipboardData和onReachBottom失效怎么办？
+A：setClipboardData为浏览器兼容性问题，在部分内核上无法支持该API，onReachBottom已修复，开发者需要更新开发者工具编译热更新到3.50.0以上后发包

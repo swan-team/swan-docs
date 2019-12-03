@@ -5,7 +5,10 @@ nav: framework
 sidebar: view_filter
 ---
 
-Filter 是小程序的过滤器，结合 SWAN 模版，可以构建出页面的结构。
+> 推荐使用功能更全的 [SJS功能](https://smartprogram.baidu.com/docs/develop/framework/sjs_start/)。Filter 功能将不再更新，请勿在`s-if`、`s-for`、`template`、自定义组件等标签中使用。
+
+Filter 是小程序的过滤器，结合 SWAN 模板，可以构建出页面的结构。
+
 
 ### 说明：
 * Filter 文件命名方式为:模块名.filter.js;
@@ -20,8 +23,8 @@ Filter 是小程序的过滤器，结合 SWAN 模版，可以构建出页面的�
 ### Filter模块
 
 filter代码有两种编写方式:
-- 可以编写在 swan 文件中的`<filter></filter>`标签内，直接在该swan文件中通过`module.fn`的形式进行方法调用，例如`示例代码1`；
-- 可以编写在以 .filter.js 为后缀名的文件内，在其它swan文件中通过`filter`标签的src进行引入，例如`示例代码2`。
+- 可以编写在 swan 文件中的`<filter></filter>`标签内，直接在该swan文件中通过`module.fn`的形式进行方法调用，例如`代码示例1`；
+- 可以编写在以 .filter.js 为后缀名的文件内，在其它swan文件中通过`filter`标签的src进行引入，例如`代码示例2`。
 
 每一个 .filter.js 文件和`<filter></filter>`标签都是一个单独的模块。每个模块都有自己独立的作用域。即在一个模块里面定义的变量与函数，默认为私有的，对其他模块不可见。
 
@@ -38,7 +41,7 @@ filter代码有两种编写方式:
 
 filter逻辑代码使用`export default`的形式导出封装的一系列方法。
 
-**示例代码**
+**代码示例**
 ```js
 export default {
     Foo: () => {
@@ -52,7 +55,7 @@ export default {
 
 ### filter内联渲染
 
-**示例代码1**
+**代码示例1**
 
 ```xml
 <!-- swan -->
@@ -74,15 +77,15 @@ Hello world
 
 ### 数据处理示例
 
-**示例代码2**
+**代码示例2**
 <a href="swanide://fragment/7c72741b7676220c98761ad11107da481560741101294" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // index.js
 Page({
-  data: {
-    array: [1, 3, 6, 8, 2, 0]
-  }
+    data: {
+        array: [1, 3, 6, 8, 2, 0]
+    }
 });
 ```
 ```js
@@ -100,7 +103,7 @@ export default {
 };
 ```
 ```xml
-<!-- swan模版 -->
+<!-- swan模板 -->
 <view>{{swan.maxin(array)}}</view>
 <filter src="./index.filter.js" module="swan"></filter>
 
@@ -113,9 +116,9 @@ export default {
 
 ### 注释
 
-Filter 的注释与swan模版文件的注释方式相同。
+Filter 的注释与swan模板文件的注释方式相同。
 
-**示例代码**
+**代码示例**
 
 ```xml
 <!-- <filter module="swan">

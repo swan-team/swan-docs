@@ -87,6 +87,12 @@
   margin-bottom: 12px;
 }
 
+.m-doc-menu-wrapper .m-doc-menu-edit {
+    background:#fff center center url(../img/article-edit.png) no-repeat;
+    background-size: 24px;
+    margin-bottom: 12px;
+}
+
 .m-doc-menu-wrapper .m-doc-menu-top-show {
     visibility: visible;
     pointer-events: auto;
@@ -212,6 +218,9 @@ article h2 {
     max-height: 80%;
     max-width: 80%;
     margin-top: 0px;
+}
+.m-doc-content-inner .show-scene-container .show-scene-btn{
+    color: #38f;
 }
 article h2 .m-doc-content-h2-toggle {
     width: 22px;
@@ -864,4 +873,11 @@ article thead tr {
   border-radius: 3px;
   font-size: 16px;
   color: #666;
+}
+
+/* 二维码示例图片 */
+.demo-qrcode-image {
+    width: 180px;
+    height: 180px;
+    margin: 0;
 }

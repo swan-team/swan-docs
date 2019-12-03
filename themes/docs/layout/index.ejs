@@ -16,6 +16,20 @@ layout: false
 <%- css('css/footer') %>
 <%- css('css/tooltipster.bundle') %>
 <script type="application/javascript" src="<%- url_for('js/bodymovin.min.js') %>"></script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 </head>
 
 <body id="home">
@@ -63,7 +77,7 @@ layout: false
             </div>
             <ul class="m-hp-list clearfix">
                 <li class ="m-hp-item">
-                    <a href="/docs/develop/tutorial/codedir/">
+                    <a href="/docs/develop/fuctionlist/list/">
                         <div class= "m-hp-document-icon m-hp-icon"></div>
                     </a>
                     <div class="m-hp-words">
@@ -73,11 +87,11 @@ layout: false
                         <div class="m-hp-desc">
                             <div>
                                 在开发过程中，您需要熟悉智能小程序的结构、有哪些
-                                <a href = "/docs/develop/component/view/">组件</a> 和
-                                <a href = "/docs/develop/api/net_rule/">API</a> 可以使用、如何使用
-                                <a href = "/docs/develop/devtools/show_sur/">开发者工具</a>
+                                <a href = "/docs/develop/component/componetlist/">组件</a> 和
+                                <a href = "/docs/develop/api/apilist/">API</a> 可以使用、如何使用
+                                <a href = "/docs/develop/devtools/history/">开发者工具</a>
                                 进行开发和调试等。
-                                您可以从一个 <a href="/docs/develop/tutorial/index/">简易教程</a> 开始，也可以直接浏览 <a href="/docs/develop/reference/">API和组件的聚合参考页</a>。
+                                您可以从一个 <a href="/docs/develop/tutorial/demo/">快速入门</a> 开始。
                             </div>
                         </div>
                     </div>

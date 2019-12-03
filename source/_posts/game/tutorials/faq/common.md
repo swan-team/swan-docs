@@ -42,7 +42,7 @@ priority: 12-01
 #### 开发者工具
 
 Q：开发者工具一直显示在编译，看不到日志？
-A：点击右上角 “更多功能” -> “编译日志” ，查看是否编译错误。
+A：点击右上角 “更多功能” -> “编译日志”，查看是否编译错误。
 
 Q：使用 socket 连接必须使用 wss 吗？
 A：开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。
@@ -93,7 +93,7 @@ A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文�
 Q：在真机无法调起百度收银台支付？
 A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 中提到的的[签名与验签文档](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。
 
-Q：在真机调起支付后，在点击付款的时候提示签名错误 ，验签一直不通过？
+Q：在真机调起支付后，在点击付款的时候提示签名错误，验签一直不通过？
 A：确认选择的公钥是否是平台公钥。从百度电商开放平台后台能看到两个公钥，一个是开发者公钥，另一个是平台公钥，验签需要用平台公钥。参见[百度电商开发平台核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。
 此外，其他环节也可能导致验签错误，请认真阅读 [`requestPolymerPayment`](/game/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment) 中涉及到的文档。
 

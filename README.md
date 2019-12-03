@@ -1,7 +1,7 @@
 # 智能小程序文档编写指导&规范
 ## 如何编写
 
-### 开启预览
+### 开启本地预览
 进入 swan-docs，终端执行 `npm start`;
 
 终端看到`Hexo is running at http://localhost:4000/docs/. Press Ctrl+C to stop.` 提示，启动成功。
@@ -51,9 +51,9 @@ nav.yml 例子如下
                     name: header
 ```
 
-## 定制模版
-在.md文件中可以引入定制模版按参数替换即可
-### 下载模版
+## 定制模板
+在.md文件中可以引入定制模板按参数替换即可
+### 下载模板
 ```
 <div class="m-doc-custom-download">
   <a href="{下载链接左}" class="m-doc-custom-download-left">
@@ -74,32 +74,32 @@ nav.yml 例子如下
 - {文案左} 替换成文案说明
 - {文案右} 替换成文案说明
 
-### 双图模版 & 三图模版
+### 双图模板 & 三图模板
 ```
-  <div class="m-doc-custom-img">{待选模版}</div>
-  // 待选模版
+  <div class="m-doc-custom-img">{待选模板}</div>
+  // 待选模板
   <div><img src="{图片}"></div>
 ```
 **参数**
 - {图片} 替换成图片地址
-- {待选模版} 两图就复制两个待选模版进去，三图就复制三个待选模版进去，将`{图片}`替换要展示图片地址。
+- {待选模板} 两图就复制两个待选模板进去，三图就复制三个待选模板进去，将`{图片}`替换要展示图片地址。
 
-### 左图右文模版
+### 左图右文模板
 ```
-  <div class="m-doc-custom-text-image"><div>{待选模版}</div><div><img src="{图片}"></div></div>
-  // 待选模版1
+  <div class="m-doc-custom-text-image"><div>{待选模板}</div><div><img src="{图片}"></div></div>
+  // 待选模板1
   <p class="m-doc-custom-text-image-h2">{标题文案}</p>
-  // 待选模版2
+  // 待选模板2
   <notice>{加粗文案}</notice>
-  // 待选模版3
+  // 待选模板3
   <p>{普通文案}</p>
-  // 待选模版4
+  // 待选模板4
   <ul><li>{列表文案}</li><li>{列表文案}</li></ul>
 ```
-### 示例模版
+### 示例模板
 ```
-  <div class="m-doc-custom-examples">{待选模版}</div>
-  // 待选模版
+  <div class="m-doc-custom-examples">{待选模板}</div>
+  // 待选模板
   <div class="{待选样式}">
     <img src="{图片地址}">
     <p class="m-doc-custom-examples-title">{高亮文案}</p>
@@ -108,11 +108,11 @@ nav.yml 例子如下
 ```
 **参数**
 - {图片} 替换成图片地址
-- {待选模版} 两列就复制两个待选模版进去，三列就复制三个待选模版进去。
+- {待选模板} 两列就复制两个待选模板进去，三列就复制三个待选模板进去。
 - {待选样式} 正确：m-doc-custom-examples-correct，错误：m-doc-custom-examples-error，警告：m-doc-custom-examples-warning
 - {高亮文案} 高亮的文案
 - {解释说明} 对示例的解释说明
 
 ### 控制在不同设备中显示
 
-只在pc端显示添加 `class="ispc"` ，只在百度 App端显示添加 `class="isbox"` ，只在除百度 App外移动端显示添加 `class="ismobile"` ，参考 [设计-重创新](http://localhost:4000/docs/docs/design/principle/innovation/) 实现。  
+只在pc端显示添加 `class="ispc"`，只在百度 App端显示添加 `class="isbox"`，只在除百度 App外移动端显示添加 `class="ismobile"`，参考 [设计-重创新](http://localhost:4000/docs/docs/design/principle/innovation/) 实现。  
