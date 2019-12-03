@@ -59,7 +59,22 @@ sidebar: base_progress
 
 ```
 
-### **代码示例2：设置圆角progress** 
+**图片示例**：
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/process.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**代码示例2：设置圆角progress**：
 
 <a href="swanide://fragment/5b39c74d2356ad926786f66d9da753ce1573046087456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
