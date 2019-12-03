@@ -83,9 +83,6 @@ Page({
             // 新的版本下载失败
             console.log('update fail', err);
         });
-
-        this.updateManager = updateManager;
-        this.updateManager.applyUpdate();
     }
 });
 ```
