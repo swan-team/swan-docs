@@ -1,5 +1,5 @@
 ---
-title: ECharts 动态库 
+title: ECharts 动态库-Beta 
 header: develop
 nav: framework
 sidebar: echarts
@@ -26,7 +26,7 @@ ECharts 动态库是智能小程序基于 [ECharts](https://echarts.apache.org) 
 },
 ```
 
-`provider` 的值包含了 ECharts 的版本号，目前只支持 `"echarts_4_4_0"`，对应 ECharts 4.4.0 版本。当需要更新 ECharts 版本时，请查看 ECharts 动态库支持的 ECharts [版本号](https://echarts.apache.org/zh/changelog.html)。
+`provider` 的值包含了 ECharts 的版本号，目前只支持 `"echarts_4_4_0"`，对应 ECharts 4.4.0 版本。当需要更新 ECharts 版本时，请查看 ECharts 动态库支持的 ECharts 版本号。
 
 ### 2. 在使用到图表组件的页面配置动态库
 
