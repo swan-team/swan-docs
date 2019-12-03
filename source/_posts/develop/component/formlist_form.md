@@ -62,49 +62,54 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 
 **代码示例1 - 普通表单**：
 
-<a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6d6936dea3bcd07995ee815f6c5ff6a71575343650280" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
-    <form
-        bindsubmit="formSubmit"
-        bindreset="formReset"
-        report-submit="true"
-        report-type="subscribe"
-        subscribe-id="food"
-        template-id="BD0001"
-    >
-        <view class="section">
-            <view class="section-title">switch</view>
-            <switch name="switch" checked/>
+    <form bindsubmit="formSubmit"
+        bindreset="formReset">
+        <view class="card-area">
+            <view class="top-description border-bottom">开关选择器</view>
+            <view class="item-scroll">
+                <text class="switch-text">开关</text>
+                <switch></switch>
+            </view>
         </view>
-        <view class="section">
-            <view class="section-title">radio</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">单项选择器</view>
             <radio-group name="radio-group">
-                <label><radio value="radio1" checked/>选中</label>
-                <label class="label"><radio value="radio2"/>未选中</label>
+                <radio class="block border-bottom" value="radio1">单选项一</radio>
+                <radio class="block" value="radio2">单选项二</radio>
             </radio-group>
         </view>
-        <view class="section section-gap">
-            <view class="section-title">checkbox</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">多项选择器</view>
             <checkbox-group name="checkbox">
-                <label><checkbox value="checkbox1" checked/>选项一</label>
-                <label class="label-checkbox"><checkbox  value="checkbox2"/>选项二</label>
+                <label class="block border-bottom">
+                    <checkbox value="checkbox1">多选项一</checkbox>
+                </label>
+                <label class="block border-bottom">
+                    <checkbox value="checkbox2">多选项二</checkbox>
+                </label> 
+                <label class="block">
+                    <checkbox value="checkbox2">多选项三</checkbox>
+                </label>
             </checkbox-group>
         </view>
-        <view class="section section-gap">
-            <view class="section-title">slider</view>
-            <slider name="slider" show-value ></slider>
+        <view class="card-area">
+            <view class="top-description border-bottom">滑块选择器</view>
+            <slider class='slider' activeColor="#3388FF" block-size="20" name="slider"></slider>
         </view>
-        <view class="section">
-            <view class="section-title">input</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">输入框</view>
+            <input name="input" class="ipt" placeholder="请在此输入" />
         </view>
-         <input name="input" placeholder="这是一个输入框" />
-        <view class="btn-area">
-            <button formType="submit" type="primary">Submit</button>
-            <button formType="reset">Reset</button>
+        <view class="card-area">
+            <view class="top-description border-bottom">提交表单</view>
+            <button formType="submit" type="primary">提交</button>
+            <button formType="reset">清空</button>
         </view>
     </form>
 </view>
