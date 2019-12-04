@@ -39,7 +39,7 @@ sidebar: remove_swan-removeStorage
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 - 基础用法**
 
 
 <a href="swanide://fragment/f207f3e068fe5be65a44064b8e62038f1573635193397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -57,6 +57,33 @@ sidebar: remove_swan-removeStorage
         }
     });
    
+```
+
+**代码示例2 - 业务场景 - 搜索历史**
+
+
+<a href="swanide://fragment/8145ede74de8e44e4a763ba97e80865e1575451221886" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+storageQuery(value) {
+    let queryArr = this.getData('queryArr');
+    if (value) {
+        const index = queryArr.findIndex(item => item === value);
+        if (index > -1) {
+            queryArr.splice(index, 1);
+        }
+        queryArr.unshift(value);
+    }
+    const storeArr = queryArr.slice(0, 20);
+    swan.setStorageSync('queryData', storeArr);
+},
+clearQuery() {
+    swan.removeStorageSync('queryData');
+    this.setData('queryArr', []);
+    console.log('搜索历史清空成功');
+}
 ```
 
 
