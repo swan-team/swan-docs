@@ -172,3 +172,65 @@ Page({
     }
 });
 ```
+
+### **代码示例3 - 获取getTemplateLibraryList示例**：
+
+<a href="swanide://fragment/d422d409d3a0257de70e9007b96871bc1575446314278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">点击获取Access Token</view>
+        <button bind:tap="AccessToken" type="primary" hover-stop-propagation="true">button</button>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">点击获取getTemplateLibraryList
+</view>
+        <button bind:tap="getTemplateLibraryList" type="primary" hover-stop-propagation="true">button</button>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        access_token: ''
+    },
+    AccessToken() {
+        swan.request({
+            url: 'https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=WPGsbTTGEQ2VRnNcEIjyo5nT1wGxc3PZ&client_secret=zkDSFBfXvHtmtMAsNrQ8sFN9DNLFNZE4&scope=smartapp_snsapi_base',
+            method: 'POST',
+            success: res => {
+                console.log('request success', res);
+                console.log('access_token', res.data.access_token);
+                this.setData('access_token', res.data.access_token)
+                swan.showModal({
+                    title: '请求到的数据',
+                    content: JSON.stringify(res.data.data),
+                    showCancel: false
+                });
+            },
+            fail: err => {
+                console.log('request fail', err);
+            }
+        });
+    },
+    getTemplateLibraryList() {
+        let access_token = this.getData('access_token');
+        console.log(access_token)
+        swan.request({
+            url: 'https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_token=24.2bd968d94d25bba71157b82890e97422.2592000.1578037913.282335-11136662&offset=2&count=2',
+            method: 'POST',
+            success: res => {
+                console.log('request success', res);
+            },
+            fail: err => {
+                console.log('request fail', err);
+            }
+        });
+    }
+});
+```
