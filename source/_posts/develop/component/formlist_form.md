@@ -136,7 +136,7 @@ Page({
 
 ### **代码示例2 - 模板类型表单**：
 
-<a href="swanide://fragment/9110d73ca11986733a7110625b52b2e21575228640083" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bb18ed1a0c2761c1447233d3b79944181575460279530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -144,7 +144,7 @@ Page({
 <view class="wrap">
     <form report-submit="{{true}}" report-type="subscribe" template-id="BD0003" subscribe-id="8026" bindsubmit="formSubmit"
         bindreset="formReset">
-            <button formType="submit" type="primary">report-type	为subscribe</button>
+            <button formType="submit" type="primary">report-type为subscribe</button>
         </view>
     </form>
 </view>
@@ -152,7 +152,7 @@ Page({
 <view class="wrap">
     <form report-submit="{{true}}" report-type="default" bindsubmit="formSubmit"
         bindreset="formReset">
-            <button formType="submit" type="primary">report-type	为default</button>
+            <button formType="submit" type="primary">report-type为default</button>
         </view>
     </form>
 </view>
@@ -161,14 +161,17 @@ Page({
 
 ```javascript
 Page({
+    onLoad() {
+        // 兼容开发者工具的逻辑，因为模拟器在此表单模版中不会自动同步用户登陆态
+        swan.login()
+    },
     formSubmit(e) {
-        console.log(e);
         swan.showModal({
             title: '表单数据',
             content: JSON.stringify(e.detail.message) + '/' +JSON.stringify(e.detail.status),
             confirmText: '确定',
             showCancel: false
-        });
+        });  
     }
 });
 ```
