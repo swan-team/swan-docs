@@ -8,7 +8,7 @@ sidebar: echarts
  
 ### 介绍
 
-ECharts 动态库是智能小程序基于 [ECharts](http://echarts.apache.org/) 实现的图表动态库，提供了图表在小程序中的使用方法。如果在使用中碰到问题，可以在 [github](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo/issues)提问。
+ECharts 动态库是智能小程序基于 [ECharts](http://echarts.apache.org/) 实现的图表动态库，提供了图表在小程序中的使用方法。如果在使用中碰到问题，可以在 [Github](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo/issues) 提问。
 
 完整的示例程序参见：[demo](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo)。
 
@@ -78,7 +78,7 @@ option = {
 };
 ```
 
-如果你不知道如何编写配置项，可以在[Echarts官网](https://echarts.apache.org/examples/zh/index.html)或[Echarts社区](https://gallery.echartsjs.com/)找到相似的例子，结合[Echarts配置项文档](https://echarts.apache.org/zh/option.html)模仿修改。
+如果你不知道如何编写配置项，可以在 [Echarts 官网](https://echarts.apache.org/examples/zh/index.html)或 [Echarts 社区](https://gallery.echartsjs.com/)找到相似的例子，结合 [Echarts 配置项文档](https://echarts.apache.org/zh/option.html)模仿修改。
 
 ## 动态库属性列表
 
