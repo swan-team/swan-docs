@@ -42,7 +42,22 @@
         '/docs/introduction/preparation/': '/docs/introduction/register_prepare/',
         '/docs/develop/function/apply_refund/': '/docs/develop/function/tune_up_applyorderrefund/',
         '/docs/develop/devtools/show_short/': '/docs/develop/devtools/set_shortcutkey/',
-        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/'
+        '/docs/develop/devtools/show/': '/docs/develop/devtools/page_start/',
+        '/docs/data/guideline/': '/docs/data/target_user/',
+        '/docs/design/component/choose/': '/docs/design/component/selection/',  
+        '/docs/design/component/feedback/': '/docs/design/component/toast/',    
+        '/docs/design/component/feedback/': '/docs/design/component/toast/',     
+        '/docs/design/component/': '/docs/design/component/topnav/',   
+        '/docs/design/component/nav/': '/docs/design/component/topnav/',  
+        '/docs/design/component/toptab/': '/docs/design/component/topnav/',  
+        '/docs/design/download/': '/docs/design/resource/uikit/',  
+        '/docs/design/download/load/': '/docs/design/resource/uikit/', 
+        '/docs/design/index/': '/docs/design/principle/easytouse/',  
+        '/docs/design/principle/clear/': '/docs/design/principle/hierarchical/',  
+        '/docs/design/principle/ease/': '/docs/design/principle/innovation/',  
+
+
+
     };
     urlMap[pathname] && location.replace(urlMap[pathname]);
 }(location.pathname);
