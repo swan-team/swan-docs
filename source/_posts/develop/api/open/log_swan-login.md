@@ -46,7 +46,30 @@ sidebar: log_swan-login
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 获取code**
+
+<a href="swanide://fragment/feb6bbe10081695f109a108abe6313561575445076337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+> 详细示例请在开发者工具中查看。
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    login() {
+        swan.login({
+            success: res => {
+                console.log('login success', res) // {code: "e4a13af4e6d8c491b701a86682a5bc76NW"}
+            },
+            fail: err => {
+                console.log('login fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2: 详细示例**
 
 <a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 > 详细示例请在开发者工具中查看。
