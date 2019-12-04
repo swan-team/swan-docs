@@ -136,7 +136,7 @@ Page({
 
 ### **代码示例2 - 模板类型表单**：
 
-<a href="swanide://fragment/1aa0e40b349889c7935cfb8b7828fcf11575461249254" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0cf7c53906fff54ad2a10034cdfb8ef21575461381127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
