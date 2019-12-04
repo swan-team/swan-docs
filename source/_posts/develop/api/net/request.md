@@ -197,6 +197,68 @@ Page({
 });
 ```
 
+**代码示例 4 - promise写法保障request的请求顺序**：
+
+<a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+**在 js 文件中**
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        this.requestTask = new Promise((resolve, reject) => {
+            const requestHandler = swan.request({
+                url: '开发者服务器地址',
+                header: {
+                    'content-type': 'application/json'
+                },
+                method: 'POST',
+                dataType: 'json',
+                responseType: 'text',
+                data: {
+                    key: 'value'
+                },
+                success: res => {
+                    this.setData('data', res.data);
+                    resolve();
+                },
+                fail: err => {
+                    console.log('错误码：' + err.errCode);
+                    console.log('错误信息：' + err.errMsg);
+                }
+            })
+        });
+    },
+    onShow() {
+        this.requestTask.then(requestData => {
+            let res = this.getData('data');
+            swan.setPageInfo({
+                title: res.title,
+                keywords: res.keywords,
+                description: res.description,
+                articleTitle: res.articleTitle,
+                releaseDate: res.releaseDate,
+                image: res.image,
+                video: res.video,
+                visit: res.visit,
+                likes: '75',
+                comments: '13',
+                collects: '23',
+                shares: '8',
+                followers: '35',
+                success: res => {
+                    console.log('setPageInfo success');
+                },
+                fail: err => {
+                    console.log('setPageInfo fail', err);
+                }
+            })
+        })
+    }
+});
+```
+
 **返回值**：
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。

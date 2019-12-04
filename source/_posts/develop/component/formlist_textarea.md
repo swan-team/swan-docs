@@ -71,40 +71,17 @@ sidebar: formlist_textarea
     </div>     
 </div>
 
-### **代码示例**
+### **代码示例1 - 输入区高度自适应**
 
- <a href="swanide://fragment/ac338b37c23a6f6bc3c29479bb0eee761556528438569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<!--textarea.swan-->
 <view class="wrap">
-    <view class="section">
-        <view class="title">输入区高度自适应</view>
-        <textarea auto-height maxlength="-1" bindinput="bindInput"/>
-    </view>
-    <view class="section">
-        <view class="title">受控聚焦</view>
-        <textarea style="height: 3em"
-                  maxlength="-1"
-                  auto-focus="{{focus}}"
-                  cursor="-1" show-confirm-bar="true"
-                  placeholder="我会出现滚动条~"
-                  placeholder-class="plh"
-                  selection-start="-1"
-                  selection-end="-1"
-                  adjust-position="true"
-                  bindinput="bindInput"
-                  bindfocus="bindFocus"
-                  bindblur="bindBlur"
-                  bindlinechange="bindLineChange"
-                  bindconfirm="bindConfirm"
-                  />
-        <button type="primary" style="margin-top:.3rem">聚焦</button>
-    </view>
+    <view class="description">输入区高度自适应</view>
+    <textarea auto-height maxlength="-1" bindinput="bindInput"/>
 </view>
-
 ```
 
 * 在 js 文件中
@@ -134,7 +111,71 @@ Page({
 
 ```
 
- 
+### **代码示例2 - 出现滚动条**
+
+ <a href="swanide://fragment/2c52dbb6892633cf203432ea3d56d8031575401486499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="description">受控聚焦</view>
+    <textarea style="height: 3em"
+                maxlength="-1"
+                disabled="{{false}}"
+                auto-focus="{{true}}"
+                placeholder="我会出现滚动条~" 
+                placeholder-class="plh" 
+                cursor="-1"
+                confirm-type="send"
+                fixed="{{true}}"
+                focus="{{focus}}"
+                cursor-spacing="20"
+                show-confirm-bar="{{true}}"
+                selection-start="-1"
+                selection-end="-1"
+                adjust-position="{{true}}"
+                bindfocus="bindFocus"
+                bindblur="bindBlur"
+                bindlinechange="bindLineChange"
+                bindinput="bindInput"
+                bindconfirm="bindConfirm"
+                />
+    <button type="primary" bind:tap="bindFocusTap">聚焦</button>
+</view>
+```
+
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        height: 1,
+        focus: true
+    },
+    onHide() {
+        getApp().globalData.openParams = ''
+    },
+    bindFocusTap() {
+        this.setData('focus', true);
+    },
+    bindfocus(e) {
+        console.log('focus - e:', e);
+    },
+    bindInput(e) {
+        console.log('input - e:', e);
+    },
+    bindLineChange(e) {
+        console.log('linechange - e:', e);
+    },
+    bindblur(e) {
+        console.log('blur - e:', e);
+    },
+    bindConfirm(e){
+        console.log('confirm - e:', e);
+    }
+});
+```
 
 ## **Bug & Tip**
 * Tip：textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
