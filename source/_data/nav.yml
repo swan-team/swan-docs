@@ -255,9 +255,17 @@
                 text: 接入百家号流量
                 name: baijiahao
               -
-                link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
-                name: auditing_baijiahao
+                sidebar:
+                  -
+                    link: /introduction/baijiahao_audit
+                    text: 百家号素材审核规范
+                    name: baijiahao_audit
+                  -
+                    link: /introduction/baijiahao_submit
+                    text: 百家号素材提交规范
+                    name: baijiahao_submit                    
+
         -
             link: /introduction/tieba
             text: 贴吧流量接入
@@ -874,7 +882,7 @@
                 name: dynamiclib_topone
               -
                 link: /develop/framework/echarts
-                text: ECharts 动态库 
+                text: ECharts 动态库-beta 
                 name: echarts               
         -
           link: /develop/framework/subpackages
