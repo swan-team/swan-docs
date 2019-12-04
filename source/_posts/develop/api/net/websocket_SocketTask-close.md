@@ -39,7 +39,7 @@ sidebar: websocket_SocketTask-close
     </div>     
 </div>
 
-**代码示例**
+**代码示例1**
 
 <a href="swanide://fragment/d1d8bd733fb20844c847e4494e6aeb1a1573406116849" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -88,5 +88,29 @@ Page({
     }
 });
 
+```
+
+**代码示例2 - 参数全集**
+
+<a href="swanide://fragment/f0c512ef4c7915ac9e7be017b03c75641575448859220" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+this.socketTask.close({
+    code: 1000,
+    reason: '正常关闭',
+    success: res => {
+        that.setData('disabled', false)
+        console.log('关闭WebSocket成功', res);
+        swan.showToast({
+            title: '关闭WebSocket成功',
+            icon: 'none'
+        });
+    },
+    fail: err => {
+        console.log('关闭WebSocket失败', err);
+    }
+});
 ```
 
