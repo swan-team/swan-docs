@@ -77,9 +77,48 @@ sidebar: request
     </div>     
 </div>
 
-**代码示例1 - post请求**：
+**代码示例1 - post的header['content-type'] 为 application/json**：
  
 <a href="swanide://fragment/b1c6cd798117428ccb4683c12edfe5051573992468342" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - post的header['content-type'] 为 application/x-www-form-urlencoded**：
+ 
+<a href="swanide://fragment/238d903105a27ead9347e7a78491979d1575441394601" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -116,9 +155,9 @@ Page({
 });
 ```
 
-**代码示例2 - header的content-type参数为application/x-www-form-urlencoded**：
+**代码示例3 - post的dataType为string**：
  
-<a href="swanide://fragment/b1c6cd798117428ccb4683c12edfe5051573992468342" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c1d2a9d6e654e688b5560b0932d2784e1575441611330" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -135,10 +174,10 @@ Page({
         swan.request({
             url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
             header: {
-                'content-type': 'application/x-www-form-urlencoded'
+                'content-type': 'application/json'
             },
             method: 'POST',
-            dataType: 'json',
+            dataType: 'string',
             responseType: 'text',
             data: {
                 key: 'value'
@@ -155,7 +194,98 @@ Page({
 });
 ```
 
-**代码示例3 - get请求**：
+**代码示例4 - post的data为string**：
+ 
+<a href="swanide://fragment/8bcef88f7b2552027fa0b59ac6ea231a1575442423461" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        loading: false
+    },
+    request() {
+        this.setData('loading', true);
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: '美食酒水',
+            success: res => {
+                console.log('request success', res);
+                swan.showModal({
+                    title: '请求到的数据',
+                    content: JSON.stringify(res.data.data),
+                    showCancel: false
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: JSON.stringify(err)
+                });
+                console.log('request fail', err);
+            },
+            complete: () => {
+                this.setData('loading', false);
+                console.log('request complete');
+            }
+        });
+    }
+});
+
+```
+
+**代码示例5 - post的responseType为arraybuffer**：
+ 
+<a href="swanide://fragment/c97a64395a631f0cb2cb141203d0803b1575442201289" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'arraybuffer',// 一般会将返回数据转化为BASE64编码格式
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例6 - get请求**：
  
 <a href="swanide://fragment/b5e29a69ab7d1fead7844bf393406f8d1574929147853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -197,7 +327,7 @@ Page({
 });
 ```
 
-**代码示例 4 - promise写法保障request的请求顺序**：
+**代码示例7 - promise写法保障request的请求顺序**：
 
 <a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
