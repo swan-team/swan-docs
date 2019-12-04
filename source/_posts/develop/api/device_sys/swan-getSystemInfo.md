@@ -76,21 +76,132 @@ sidebar: swan-getSystemInfo
     </div>     
 </div>
 
-**代码示例1**：
+**代码示例1 - 属性全集**：
 
-<a href="swanide://fragment/6eb773151e65554728a7731425b69b341569477824448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
+<a href="swanide://fragment/4de8b62e859105b558003e89dc6254791575397907738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
+
+* 在 swan 文件中
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="list-area border-bottom" s-for="item in infoList">
+            <text class="list-item-key-4">{{item.label}}：</text>
+            <text class="list-item-value">{{item.value}}</text>
+        </view>
+        <view class="button-group">
+            <button bind:tap="getSystemInfo" type="primary" hover-stop-propagation="true">点击获取系统信息</button>
+        </view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-    swan.getSystemInfo({
-        success: res => {
-            console.log('getSystemInfo success', res)
-        },
-        fail: err => {
-            console.log('getSystemInfo fail', err)
+Page({
+    data: {
+        infoList: [{
+            label: '手机品牌',
+            key: 'brand',
+            value: ''
+        }, {
+            label: '手机型号',
+            key: 'model',
+            value: ''
+        }, {
+            label: '使用窗口宽',
+            key: 'windowWidth',
+            value: ''
+        }, {
+            label: '使用窗口高',
+            key: 'windowHeight',
+            value: ''
+        },{
+            label: '状态栏高',
+            key: 'statusBarHeight',
+            value: ''
+        },{
+            label: '导航栏高',
+            key: 'navigationBarHeight',
+            value: ''
+        }, {
+            label: '宿主版本',
+            key: 'version',
+            value: ''
+        }, {
+            label: '操作系统',
+            key: 'system',
+            value: ''
+        }, {
+            label: '客户端平台',
+            key: 'platform',
+            value: ''
+        }, {
+            label: '屏幕宽度',
+            key: 'screenWidth',
+            value: ''
+        }, {
+            label: '屏幕高度',
+            key: 'screenHeight',
+            value: ''
+        }, {
+            label: '用户字体',
+            key: 'fontSizeSetting',
+            value: ''
+        }, {
+            label: '基础库版本',
+            key: 'SDKVersion',
+            value: ''
+        }, {
+            label: '宿主平台',
+            key: 'host',
+            value: ''
+        }, {
+            label: '宿主平台版本',
+            key: 'swanNativeVersion',
+            value: ''
+        }, {
+            label: '屏幕密度',
+            key: 'devicePixelRatio',
+            value: ''
+        }, {
+            label: 'DPI',
+            key: 'pixelRatio',
+            value: ''
+        }, {
+            label: '宿主语言',
+            key: 'language',
+            value: ''
+        }]
+    },
+    onLoad(e) {
+    },
+    getSystemInfo(e) {
+        swan.getSystemInfo({
+            success: res => {
+                console.log('res', res);
+                // 更新数据
+                this.updateInfoList(res);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    },
+    updateInfoList(res) {
+        let infoList = this.getData('infoList');
+        for (let i = 0; i < infoList.length; ++i) {
+            if (res[infoList[i].key] === '') {
+                infoList[i].value = '暂无';
+            } else {
+                infoList[i].value = res[infoList[i].key];
+            }
         }
-    });
+        this.setData('infoList', infoList);
+    }
+});
 ```
 **代码示例2: 开发者一般在模拟顶部导航栏时用到statusBarHeight属性**：
 
@@ -130,6 +241,82 @@ swan.getSystemInfo({
     }
 });
 ```
+
+**代码示例3: safeArea属性**：
+
+<a href="swanide://fragment/6f572c0011b79291f0f7f9b1ac47ed201575399890385" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+```html
+<!-- tabbar页面 -->
+<view class="wrap">
+    <view class="card-area">屏幕高度:{{screenHeight}} </view>
+    <view class="card-area">可使用窗口高度:{{windowHeight}} </view>
+    <view class="card-area">安全区域高度{{safeArea}} </view>
+    <button bind:tap="getSystemInfo" type="primary">获取数据</button>
+    <button bind:tap="navigateTo">点击跳转到无tabbar页面查看安全区差异</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    getSystemInfo(e) {
+        swan.getSystemInfo({
+            success: res => {
+                console.log('res', res);
+                this.setData('screenHeight', res.screenHeight)
+                this.setData('windowHeight', res.windowHeight)
+                this.setData('safeArea', 
+                res.safeArea.height)
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    }
+});
+```
+
+**代码示例4: 适配iphoneX等机型**：
+
+或参见百度通用[iphoneX适配](https://smartprogram.baidu.com/docs/develop/framework/view_css/)
+
+<a href="swanide://fragment/e0559da0cb11da9bd7d39e127052ce8c1575400633196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    getSystemInfo(e) {
+        swan.getSystemInfo({
+            success: systemInfo => {
+                console.log('systemInfo', systemInfo);
+                // 针对适配某一机型和模拟器
+                if (systemInfo.model 
+                && (systemInfo.model.indexOf('iPhone X') > -1)
+                || (systemInfo.model === 'iPhone Simulator <x86-64>' 
+                && systemInfo.screenWidth === 375)) {
+                    this.setData({
+                        isIPhoneX: true
+                    })
+                }
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取失败'
+                });
+            }
+        });
+    }
+});
+```
+
+
 
 #### 错误码
 Andriod

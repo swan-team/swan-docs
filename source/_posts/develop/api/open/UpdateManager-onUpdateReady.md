@@ -19,15 +19,14 @@ sidebar: UpdateManager-onUpdateReady
 
 **代码示例**
 
-<a href="swanide://fragment/1d5e55c4a591129c35adf0cb7bd4c2f21574070810759" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7e11216c88b914ab394f74e952b144d81575375461493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="container">
     <view class="card-area">
-        <view class="top-description border-bottom">onUpdateReady</view>
-        <button type="primary" bindtap="bindOnUpdateReady">button</button>   
+        <view class="top-description border-bottom">此api会在旧版小程序在成功拉到最新包时触发</view>   
     </view>
 </view>
 ```
@@ -35,16 +34,16 @@ sidebar: UpdateManager-onUpdateReady
 * 在 js 文件中
 ```js
 Page({
-    data: {},
-    bindOnCheckForUpdate() {
+    data: { },
+    onLoad() {
         const updateManager = swan.getUpdateManager();
-        updateManager.onCheckForUpdate(function (res) {
+        updateManager.onUpdateReady(function (res) {
             // 请求完新版本信息的回调
-            console.log("res", res.hasUpdate);
+            console.log("res", res);
             if(!res.hasUpdate){
                 swan.showModal({
                     title: '更新提示',
-                    content: '无可用更新版本',
+                    content: '新版本下载完成啦， 是否应用',
                 });
             }
         });
