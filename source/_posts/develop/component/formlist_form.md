@@ -136,7 +136,7 @@ Page({
 
 ### **代码示例2 - 模板类型表单**：
 
-<a href="swanide://fragment/bb18ed1a0c2761c1447233d3b79944181575460279530" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1aa0e40b349889c7935cfb8b7828fcf11575461249254" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -162,7 +162,7 @@ Page({
 ```javascript
 Page({
     onLoad() {
-        // 兼容开发者工具的逻辑，因为模拟器在此表单模版中不会自动同步用户登陆态
+        // 此组件需要在登陆态下使用
         swan.login()
     },
     formSubmit(e) {
