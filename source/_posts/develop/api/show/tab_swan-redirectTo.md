@@ -38,7 +38,7 @@ sidebar: tab_swan-redirectTo
     </div>     
 </div>
 
-**代码示例**
+**代码示例 1**
 
 <a href="swanide://fragment/441e13e266a3072d50cfe2e1b896f9451574139717336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -58,6 +58,29 @@ Page({
     redirectTo(e) {
         swan.redirectTo({
             url: '/detail/detail?id=当前页',
+            success: res => {
+                console.log('redirectTo success');
+            },
+            fail: err => {
+                console.log('redirectTo fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例 2 - 多级页面的跳转**
+
+<a href="swanide://fragment/c24dc8fd5e6e10fcc02f8615b5e09e341575404434832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    redirectTo(e) {
+        swan.redirectTo({
+            url: '/detail/detail',
             success: res => {
                 console.log('redirectTo success');
             },

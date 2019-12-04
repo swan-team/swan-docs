@@ -25,12 +25,12 @@ sidebar: canvas_CanvasContext-save
 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
-// save the default fill style
+// 保存默认填充样式
 canvasContext.save();
 canvasContext.setFillStyle('blue');
 canvasContext.fillRect(10, 10, 150, 100);
 
-// restore to the previous saved state
+// 恢复到以前保存的状态
 canvasContext.restore();
 canvasContext.fillRect(50, 50, 150, 100);
 
