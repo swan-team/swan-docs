@@ -36,6 +36,21 @@ canvasContext.fillRect(50, 50, 150, 100);
 canvasContext.draw();
 ```
 
+
+### **图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/restoreTwo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 **代码示例2**
 
 <a href="swanide://fragment/8bdb88bb1a23d69aca4a8c94ad1440031575438792950" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
