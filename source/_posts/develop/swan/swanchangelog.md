@@ -5,6 +5,14 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+
+<!-- ## 3.130 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.130.1|2019.12.04|**New**<p>**·**新增live-player ios同层组件;<p>**·**新增文件系统&request的data参数支持arrayBuffer。<p>**Breaking Change**<p>优化video ios同层事件处理机制。| -->
+
+
 ## 3.125 版本日志更新
 
 |版本号|更新日期|更新内容|

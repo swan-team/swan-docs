@@ -5,6 +5,14 @@ nav: devtools
 sidebar: uplog_tool_normal
 ---
 
+
+### 2.20 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.20.1|2019.12.04|**New**<p> 新建小游戏项目模板优化适配大尺寸屏幕。<p>**Change**<p>**·** 小程序新建代码片段模板修改 navigationBarTitleText 字段为“智能小程序”；<p>**·** 小游戏模拟器预置设备增加iPhone X、iPhone XR、iPhone XS Max、Ipad Air、iPad pro 10.5、iPad pro 12.9预置尺寸。<p>**BugFix**<p>**·** 修复trace面板触发预览前走鉴权逻辑的问题；<p>**·** 修复增强编译在普通编译模式下保存或新建文件可能出现的报错问题。|
+
+
 ### 2.19 版本 
 
 |版本号|更新时间|更新内容|

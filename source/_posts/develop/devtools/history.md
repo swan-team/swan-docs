@@ -6,7 +6,7 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.19.1） 
+### 最新正式版本（2.20.1） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
