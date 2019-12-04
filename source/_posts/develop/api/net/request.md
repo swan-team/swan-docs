@@ -389,6 +389,44 @@ Page({
 });
 ```
 
+**代码示例8 - post的method为PUT**：
+ 
+<a href="swanide://fragment/adc8307fb683e4513aed1371de2b09551575467162358" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'PUT',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
 **返回值**：
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
