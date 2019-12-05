@@ -427,6 +427,123 @@ Page({
     }
 });
 ```
+
+**代码示例9 - post的method为DELETE**：
+ 
+<a href="swanide://fragment/f1bdb32e95587b2ed2293f262b380e5d1575539783630" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'DELETE',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例10 - post的method为HEAD**：
+ 
+<a href="swanide://fragment/804df7647a7adc20c246cd76de4214b71575539832230" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'HEAD',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例11 - post的method为OPTIONS**：
+ 
+<a href="swanide://fragment/7352a72b7ca6c19e5366bc287d4da49f1575539911628" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'OPTIONS',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
 **返回值**：
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
