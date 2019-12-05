@@ -45,7 +45,7 @@ sidebar: formlist_switch
     </div>     
 </div>
 
-### **代码示例**
+### **代码示例1**
 
 <a href="swanide://fragment/acd75f1f1c4ecb2e83e4af8f7cb6cd661565508713613" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -72,5 +72,18 @@ sidebar: formlist_switch
     </view>
 </view>
 ```
+
+### **代码示例2 type='switch'/ type='checkbox'的对比**
+
+<a href="swanide://fragment/f80fd7e081b4ba5e200cd5837705a5af1575544028129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+```xml
+<view class="wrap">
+    <switch class="init-switch" type="switch" checked disabled="false"></switch>
+    <switch class="init-switch" type="checkbox"></switch>
+</view>
+```
+
 ## **Bug & Tip**
 Tip：switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。
