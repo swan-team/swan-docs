@@ -463,8 +463,8 @@ POST数据|Json数据
         <FromUserName> <![CDATA[open_id]]> </FromUserName>
         <CreateTime>1472551036</CreateTime>
         <MsgType> <![CDATA[event]]> </MsgType>
-        <Event> <![CDATA[user_get_card]]> </Event>
-        <CouponId> <![CDATA[pZI8Fjwsy5fVPRBeD78J4RmqVvBc]]> </CardId>
+        <Event> <![CDATA[user_get_coupon]]> </Event>
+        <CouponId> <![CDATA[pZI8Fjwsy5fVPRBeD78J4RmqVvBc]]> </CouponId>
         <UserCouponCode> <![CDATA[226009850808]]> </UserCardCode>
         <CouponTakeId><![CDATA[xxxxx]]> </CouponTakeId>
     </xml>
@@ -479,7 +479,7 @@ POST数据|Json数据
         "FromUserName":"open_id",
         "CreateTime":"1472551036",
         "MsgType":"event",
-        "Event":"user_get_card",
+        "Event":"user_get_coupon",
         "CouponId":"pZI8Fjwsy5fVPRBeD78J4RmqVvBc",
         "CouponCode":"226009850808",
         "CouponTakeId":"xxxxx"
@@ -495,7 +495,7 @@ POST数据|Json数据
 |FromUserName	|领券用户的OpenID|
 |CreateTime	|消息创建时间 （整型）|
 |MsgType	|消息类型，event|
-|Event	|事件类型，user_get_card(用户领取卡券)|
+|Event	|事件类型，user_get_coupon(用户领取卡券)|
 |CouponId|卡券ID|
 |UserCouponCode|卡券Code码|
 |CouponTakeId	|卡券领取标识，调用核销同步接口时必传|
