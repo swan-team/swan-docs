@@ -42,7 +42,7 @@ sidebar: createanimation_Animation
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 - 动画队列**
 
 <a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -71,19 +71,93 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+**代码示例2 - 动画样式设置**
 
-.anim {
-    width: 100%;
-    height: 280rpx;
-    background: #38f;
-}
+<a href="swanide://fragment/2fb5684d1d02b0b2b389174ea0a1136b1575537062260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
+</view>
 ```
+
+* 在 js 文件中
+
+```js
+Page({
+    /* eslint-enable */
+    data: {
+        animationData: {}
+    },
+    startToAnimate() {
+        const animation = swan.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 1000,
+            timingFunction: "linear",
+            delay: 0,
+            opacity: 0.5
+        });
+        animation.opacity(0.5);
+        animation.backgroundColor('#DC143C');
+        animation.rotate(90).translateY(10).step();
+        animation.rotate(-90).translateY(-10).step();
+        this.setData({
+            animationData: animation.export()
+        });
+        console.log('createAnimation', animation);
+    }
+});
+```
+
+
+**代码示例3 - 动画宽高设置**
+
+<a href="swanide://fragment/933d1f771edd2968879fe952d832da341575537199303" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        animationData: {}
+    },
+    startToAnimate() {
+        const animation = swan.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 1000,
+            timingFunction: "linear",
+            delay: 0,
+            opacity: 0.5
+        });
+        animation.opacity(0.5);
+        animation.backgroundColor('#DC143C');
+        animation.width('20px');
+        animation.height('70px');
+        animation.top('40px');
+        animation.left('90px');
+        animation.bottom('60px');
+        animation.right('80px');
+        animation.rotate(90).translateY(10).step();
+        animation.rotate(-90).translateY(-10).step();
+        this.setData({
+            animationData: animation.export()
+        });
+        console.log('createAnimation', animation);
+    }
+});
+```
+
 
 
 
