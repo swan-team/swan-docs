@@ -3557,6 +3557,10 @@
                 text: 代码编译
                 name: complation
               -
+                link: /develop/devtools/source-manager
+                text: 版本管理
+                name: source-manager
+              -
                 link: /develop/devtools/cloudtext
                 text: 云测试
                 name: cloudtext
