@@ -31,7 +31,7 @@ sidebar:  pull_onPullDownRefresh
 
 **代码示例**
 
-<a href="swanide://fragment/42b2a10229c159beefd2faa896dc5be91574508155019" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b047393e957357ccc3dc6d83aa99dca31575531088981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

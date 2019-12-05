@@ -45,34 +45,56 @@ sidebar: formlist_slider
     </div>     
 </div>
 
-### **代码示例**
+### **代码示例1 - 显示当前取值**
 
-<a href="swanide://fragment/d47270bf31719f0e0ff2dc7975f968861565503527422" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/588aacb801bd077789e11c6834513f441575544226353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
-    <view class="title">设置step</view>
-    <slider min="0" max="1500" value="200" step="30" bind:change="sliderChange" disabled="false"></slider>
-    <view class="title">显示当前value</view>
-    <slider min="0" max="1500" value="421" show-value bind:change="sliderChange"></slider>
-    <view class="title">设置最小最大值</view>
-    <slider min="200" max="1500" value="330" show-value bind:change="sliderChange"></slider>
-    <view class="title">自定义样式</view>
-    <slider min="200" max="1500" value="330" block-size='12' activeColor="#8FB1FF" bindchanging="changing" block-color="#6895FF" backgroundColor="#fff" show-value bind:change="sliderChange"></slider>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>显示当前取值</view>
+            <view>show-value</view>
+        </view>
+        <slider class="slider" min="0" max="200" value="30" show-value step="30" bind:change="sliderChange" disabled="false"></slider>
+    </view>
 </view>
-
 ```
-* 在 js 文件中
 
-```javascript
-Page({
-    sliderChange(e) {
-        console.log(e);
-    },
-    changing(e){
-        console.log(e);
-    }
-});
+**代码示例2 - 自定义滑块样式**
+
+<a href="swanide://fragment/adb53cc13556fb8e4277c02396c9b8791575544431665" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>自定义样式</view>
+            <view>block-size="16"  block-color="#3388FF"</view>
+        </view>
+        <slider class="slider"  min="0" max="1500" value="200" step="30" block-size="16"  block-color="#3388FF" bind:change="sliderChange" disabled="false"></slider>
+    </view>
+</view>
+```
+
+**代码示例3 - 自定义进度条样式**
+
+<a href="swanide://fragment/53d10260749725380e0bc544d2e76b361575544520470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>自定义样式</view>
+            <view>backgroundColor="#DB7093"  activeColor="#000"</view>
+        </view>
+        <slider class="slider"  min="0" max="1500" value="200" step="30" block-size="16"  backgroundColor="#DB7093"  activeColor="#000" bind:change="sliderChange" disabled="false"></slider>
+    </view>
+</view>
 ```
