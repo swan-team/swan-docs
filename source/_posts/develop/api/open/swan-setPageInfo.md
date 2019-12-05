@@ -116,56 +116,31 @@ Page({
 
 ```js
 Page({
-    data: { },
-    onLoad() {
-        this.requestTask = new Promise((resolve, reject) => {
-            const requestHandler = swan.request({
-                url: '开发者服务器地址',
-                header: {
-                    'content-type': 'application/json'
-                },
-                method: 'POST',
-                dataType: 'json',
-                responseType: 'text',
-                data: {
-                    key: 'value'
-                },
-                success: res => {
-                    this.setData('data', res.data);
-                    resolve();
-                },
-                fail: err => {
-                    console.log('错误码：' + err.errCode);
-                    console.log('错误信息：' + err.errMsg);
-                }
-            })
+    onLoad(query) {
+        // 当请求依赖于 query 参数时，先从 onLoad 生命周期中取出 query
+        this.setData({
+            articleID: query.id
         });
     },
     onShow() {
-        this.requestTask.then(requestData => {
-            let res = this.getData('data');
-            swan.setPageInfo({
-                title: res.title,
-                keywords: res.keywords,
-                description: res.description,
-                articleTitle: res.articleTitle,
-                releaseDate: res.releaseDate,
-                image: res.image,
-                video: res.video,
-                visit: res.visit,
-                likes: '75',
-                comments: '13',
-                collects: '23',
-                shares: '8',
-                followers: '35',
-                success: res => {
-                    console.log('setPageInfo success');
-                },
-                fail: err => {
-                    console.log('setPageInfo fail', err);
-                }
-            })
-        })
+        const articleID = this.getData('articleID');
+        swan.request({
+            url: `https://example.com/api/article_info?id=${articleID}`,
+            success: res => {
+                swan.setPageInfo({
+                    title: res.title,
+                    keywords: res.keywords,
+                    description: res.description,
+                    articleTitle: res.articleTitle,
+                    releaseDate: res.releaseDate,
+                    image: res.image,
+                    video: res.video
+                });
+            },
+            fail: err => {
+                // 异常处理
+            }
+        });
     }
 });
 ```
