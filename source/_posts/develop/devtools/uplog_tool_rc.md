@@ -5,6 +5,11 @@ nav: devtools
 sidebar: uplog_tool_rc
 ---
 
+### 2.21 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.21.0|2019.12.05|**BugFix**<p>**·** 修复onDeviceMotionChange参数返回类型的问题；<p>**·** 修复downloadFile 图片 image 不显示的问题；<p>**·** 修复修复小游戏cts测试相关的问题；<p>**·** 修复小游戏调起分享面板报错问题。|
 
 ### 2.20 版本 
 
