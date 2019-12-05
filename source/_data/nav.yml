@@ -385,9 +385,6 @@
   link: /design/overview/introduction
   text: 设计
   name: design
-  license:
-    name: 创作共用-署名-禁止演绎
-    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
     -
       link: /design/principle/easytouse
@@ -530,9 +527,6 @@
   link: /develop/fuctionlist/list
   text: 开发
   name: develop
-  license:
-    name: 创作共用-署名-禁止演绎
-    link: https://creativecommons.org/licenses/by-nd/4.0/deed.zh
   nav:
 
     -
