@@ -46,11 +46,8 @@ sidebar: view_scroll-view
     </div>     
 </div>
 
-<<<<<<< HEAD
-### **代码示例**
-=======
 **代码示例1 - 纵向滚动**：
->>>>>>> f0ab02d98e5159d91be4de32b1d8f97be0f941c5
+
 
 <a href="swanide://fragment/f8ad424521036b9ccdd86ab5d46d13581575277042020" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
