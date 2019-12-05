@@ -49,7 +49,6 @@ sidebar: log_swan-login
 **代码示例1 获取code**
 
 <a href="swanide://fragment/feb6bbe10081695f109a108abe6313561575445076337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-> 详细示例请在开发者工具中查看。
 
 * 在 js 文件中
 
@@ -91,6 +90,12 @@ swan.login({
     }
 });
 ```
+
+**代码示例3: 开发者工具中右上角的登陆态与模拟器中用户的手百登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
+
+<a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
 
 #### 错误码
 * Andriod
