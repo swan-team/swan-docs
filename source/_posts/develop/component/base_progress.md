@@ -42,22 +42,62 @@ sidebar: base_progress
     </div>     
 </div>
 
-### **代码示例1** 
+### **代码示例1 - 显示百分比** 
 
-<a href="swanide://fragment/1a3cd8dd48a72058a36b9d2238cc9a281565503522559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/855d7136e81ee2bce14311337a708e141575545470490" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <progress class="progress" percent="20" activeColor="#3c76ff" show-info />
-    <progress class="progress" percent="40" activeColor="#3c76ff" active />
-    <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
-    <progress class="progress" percent="70" color="#3c76ff" active/>
-    <progress class="progress" percent="80" activeColor="#74fa7d"  backgroundColor="#3c76ff" active active-mode="backwards"/>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>显示当前百分比</view>
+            <view>show-info</view>
+        </view>
+        <progress class="progress" percent="40" activeColor="#3c76ff" show-info active />
+    </view>
 </view>
-
 ```
+
+**代码示例2 - 自定义样式** 
+
+<a href="swanide://fragment/4d0714c06064cc9e29e668f8295fb59a1575545655098" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">默认样式</view>
+        <progress class="progress" percent="20" activeColor="#3c76ff"/>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>自定义样式</view>
+            <view>stroke-width="7" activeColor="#00BC89"</view>
+        </view>
+        <progress class="progress" percent="60" activeColor="#00BC89" stroke-width="7" active />
+    </view>
+</view>
+```
+
+**代码示例3 - active-mode属性** 
+
+<a href="swanide://fragment/83a75e26865f007b957d51434d562ce91575545714578" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">显示动画</view>
+        <progress class="progress" percent="70" color="#38f" active active-mode='backwards'/>
+        <progress class="progress" percent="80" color="#38f" active active-mode='forwards'/>
+    </view>
+</view>
+```
+
 
 **图片示例**：
 
