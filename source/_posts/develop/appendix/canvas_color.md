@@ -1,7 +1,7 @@
 ---
 title: canvas-color
 header: develop
-nav: api
+nav: faq
 sidebar: canvas-color
 ---
 

@@ -4300,7 +4300,14 @@
             -
               link: /develop/appendix/error
               text: 错误码
-              name: error            
+              name: error    
+        -
+
+          sidebar:
+            -
+              link: /develop/appendix/canvas_color
+              text: canvas-color
+              name: canvas_color                       
 # 4
 -
   link: /data/concept
