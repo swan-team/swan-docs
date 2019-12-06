@@ -12,7 +12,7 @@ A: H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。
 #### Q: 在webview 中使用了 cookie，导致存储信息与小程序不能共享的原因是什么？
 
 A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的通信； 
-1. 小程序中如需设置cookie 建议使用Storage； 参见[详情](https://smartprogram.baidu.com/docs/develop/api/storage_save/) 。
+1. 小程序中如需设置cookie 建议使用Storage； 参见[详情](https://smartprogram.baidu.com/docs/develop/api/storage/save_process/) 。
 2. 如需要共享小程序参数到 webview 页面中， 可在 webview的src中加上链接参数。
 
 
