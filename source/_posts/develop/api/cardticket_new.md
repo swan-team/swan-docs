@@ -134,7 +134,9 @@ POST数据|Json数据
 |description | 是 | String | 打开小程序，①在个人中心-我的礼券可查看；②下单时选择该优惠券 | 使用须知：卡券使用方法的介绍 | 
 |callbackUrl | 是 | String |  | 卡券领取事件推送地址| 
 
-> **开发者须知**： 一个小程序内全部卡券的callbackUrl需为同一个。
+> **开发者须知**： 
+> 1) 一个小程序内全部卡券的callbackUrl需为同一个；
+> 2) description 字段传入文本格式支持[富文本标签](https://smartapp.baidu.com/docs/develop/component/base_rich-text/)，如使用`<br>`换行；
 
 ```json
 {
