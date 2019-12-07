@@ -17,6 +17,7 @@ sidebar: UpdateManager-applyUpdate
 
 **方法参数**：无
 
+
 **代码示例**
 
 [在开发者工具中预览效果](swanide://fragment/65877d62da2f54c951b087ed53ee2dc91573808765114)
@@ -69,4 +70,5 @@ Page({
 * 检查更新操作由宿主APP在小程序冷启动时自动触发，不需由开发者主动触发，开发者只需监听检查结果即可。
 * onUpdateReady(callback) 回调结果说明：当宿主APP检查到小程序有新版本，会主动触发下载操作（无需开发者触发），当下载完成后，会通过 onUpdateReady 告知开发者。
 * onUpdateFailed(callback) 回调结果说明：当宿主APP检查到小程序有新版本，会主动触发下载操作（无需开发者触发），如果下载失败（可能是网络原因等），会通过 onUpdateFailed 告知开发者。
-* applyUpdate 说明：当小程序新版本已经下载时（即收到 onUpdateReady 回调），可以通过这个方法强制重启小程序并应用上最新版本。
+* 当小程序新版本下载完成时（即收到 onUpdateReady 回调），可以通过此接口强制重启小程序并应用最新版本。
+* 当新版本未下载完成时，调用此接口将返回undefined；当新版本下载完成时，若接口调用失败，会抛出一个标准的`Error`对象。

@@ -24,6 +24,8 @@ sidebar: swan-getExtConfigSync
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
+若接口调用失败，会抛出一个标准的`Error`对象。
+
 **图片示例**
 
 <div class="m-doc-custom-examples">

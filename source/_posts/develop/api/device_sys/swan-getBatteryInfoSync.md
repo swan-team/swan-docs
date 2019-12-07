@@ -59,4 +59,7 @@ Page({
 });
 ```
 **Bug & Tip**
-* iOS 不可用会 mock 返回值 level为100， isCharging 为true。
+
+- iOS 不可用时，返回值 level 为100， isCharging 为true。
+- 基础库 3.130.1 之前，入参错误时会返回一个`Error`对象，接口调用失败时会返回一个对象，对象中包含`errCode`和`errMsg`。
+- 基础库 3.130.1 及以后，入参错误和接口调用失败时都会返回一个`Error`对象。
