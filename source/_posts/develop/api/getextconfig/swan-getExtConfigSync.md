@@ -62,7 +62,7 @@ Page({
 });
 ```
 
-**Tip**
+**Bug & Tip**
 
 * swan.getExtConfigSync 暂时无法通过 swan.canIUse 判断是否兼容，开发者需要自行判断 swan.getExtConfigSync 是否存在兼容。
 * 需要小程序授权第三方平台，并且添加自定义字段值（例：{"extEnable":true,"ext":{"appid":"xxx"}}），swan.getExtConfigSync()方法请求的时候返回的 extConfig 值才不为｛｝
