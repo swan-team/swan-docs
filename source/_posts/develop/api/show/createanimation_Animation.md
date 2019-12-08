@@ -348,6 +348,104 @@ Page({
 });
 ```
 
+**代码示例7 - 弹出菜单特效的实现**
+
+<a href="swanide://fragment/b80823a3c8127277935d521b04b69fe31575826980941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view>
+    <image src="/images/ai.png" class="img" animation="{{animFavor}}"></image>
+    <image src="/images/basecontent.png" class="img" animation="{{animShare}}"></image>
+    <image src="/images/canvas.png" class="img" animation="{{animWrite}}"></image>
+    <image src="/images/interface.png" class="img-plus" animation="{{animPlus}}" bindtap="isPoping"></image>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        isPopping: false,
+        animPlus: {},
+        animFavor: {},
+        animShare: {},
+        animWrite: {},
+    },
+    isPoping () {
+        if (this.data.isPopping) {
+            this.pop();
+            this.setData({
+                isPopping: false
+            })
+        } else {
+            this.back();
+            this.setData({
+                isPopping: true
+            })
+        }
+    },
+    pop () {
+        var animationPlus = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animFavor = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animShare = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animWrite = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        animationPlus.rotateZ(180).step();
+        animFavor.translate(-100, -100).rotateZ(180).opacity(1).step();
+        animShare.translate(-140, 0).rotateZ(180).opacity(1).step();
+        animWrite.translate(-100, 100).rotateZ(180).opacity(1).step();
+        this.setData({
+            animPlus: animationPlus.export(),
+            animFavor: animFavor.export(),
+            animShare: animShare.export(),
+            animWrite: animWrite.export(),
+        })
+    },
+    back() {
+        var animationPlus = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animFavor = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animShare = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        var animWrite = swan.createAnimation({
+            duration: 500,
+            timingFunction: 'ease-out'
+        })
+        animationPlus.rotateZ(0).step();
+        animFavor.translate(0, 0).rotateZ(0).opacity(0).step();
+        animShare.translate(0, 0).rotateZ(0).opacity(0).step();
+        animWrite.translate(0, 0).rotateZ(0).opacity(0).step();
+        this.setData({
+            animPlus: animationPlus.export(),
+            animFavor: animFavor.export(),
+            animShare: animShare.export(),
+            animWrite: animWrite.export(),
+        })
+    }
+})
+```
+
 
 
 
