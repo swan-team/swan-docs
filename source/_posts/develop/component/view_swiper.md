@@ -270,6 +270,83 @@ Page({
 }
 ```
 
+### **代码示例3 - 自定义底部切换圆点**：
+
+<a href="swanide://fragment/74666ea390cd54afd971879d8028578d1575819223978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="swiper-wrap">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+        <swiper-item s-for="{{slider}}">
+            <image src="{{item.imageUrl}}" class="img"></image>
+        </swiper-item>
+    </swiper>
+    
+    <view class="dots">
+        <view s-for="{{slider}}" class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        slider: [{
+            imageUrl: 'https://b.bdstatic.com/miniapp/image/hypnosis.jpeg'
+        }, {
+            imageUrl: 'https://b.bdstatic.com/miniapp/images/hypnosis.jpeg'
+        }, {
+            imageUrl: 'https://b.bdstatic.com/miniapp/image/airCaptain.jpeg'
+        }],
+        swiperCurrent: 0
+    },
+    swiperChange(e) {
+        this.setData({
+            swiperCurrent: e.detail.current
+        })
+    }
+})
+```
+
+* 在 css 文件中 
+
+```js
+.swiper-wrap{
+    position: relative;
+}
+.swiper-wrap .swiper{
+    height: 300rpx;
+}
+.swiper-wrap .swiper .img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrap .dots{
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+.swiper-wrap .dots .dot{
+    margin: 0 8rpx;
+    width: 14rpx;
+    height: 14rpx;
+    background: #fff;
+    border-radius: 8rpx;
+    transition: all .6s;
+}
+
+.swiper-wrap .dots .dot.active{
+    width: 24rpx;
+    background: #38f;
+}
+```
+
 ## **Bug & Tip**
 
 * Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
