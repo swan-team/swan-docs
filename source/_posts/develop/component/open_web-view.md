@@ -89,6 +89,20 @@ Page({
 });
 ```
 
+### **代码示例3 - 如何判断 H5 页面是否在小程序 web-view 打开**：
+
+<a href="swanide://fragment/547f28b94e391bf484dece2bdc4c1e9b1575830214937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 H5 文件中：
+
+```js
+
+let UA = window.navigator.userAgent;
+var regex = /swan\//;
+console.log( regex.test(UA) );// 若为true，则是在小程序的web-view中打开
+
+```
+
 ## 相关接口介绍
 
 ### **相关接口1 **
