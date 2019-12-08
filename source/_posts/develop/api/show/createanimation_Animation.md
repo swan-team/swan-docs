@@ -156,16 +156,17 @@ Page({
 });
 ```
 
-**代码示例5 - 底部弹窗自定义动画**
+**代码示例5 - 底部弹窗自定义动画（css控制）**
 
-<a href="swanide://fragment/635ca5d644048d79aac1973429d13ea01575815268239" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/93e40bd1926b5672c061e84492503a2a1575816747690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
-<button catchtap='clickPup' type="primary">点击底部动画弹窗</button>
+<button bindtap='showshadow' type="primary">点击显示底部弹框</button>
  
 <view class='content {{click? "showContent": "hideContent"}} {{option? "open": "close"}}' hover-stop-propagation='true'>
+    <!-- 内容 -->
     <view class='content-top' s-for="item in list">
       {{item}}
     </view>
@@ -182,7 +183,7 @@ Page({
         option: false, //是否显示弹窗或关闭弹窗的操作动画
         list: ['列表一','列表二','列表三','列表四']
     },
-    clickPup: function() {
+    showshadow() {
         let that = this;
         if (!that.data.click) {
             that.setData({
@@ -208,8 +209,144 @@ Page({
 });
 ```
 
+* 在 css 文件中
+
+```css
+.content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 0 10rpx #333;
+  height: 0;
+  z-index: 999;
+  font-size: 16px;
+}
+ 
+.showContent {
+  display: block;
+}
+ 
+.hideContent {
+  display: none;
+}
+ 
+/* 弹出或关闭动画来动态设置内容高度 */
+ 
+@keyframes slideContentUp {
+  from {
+    height: 0;
+  }
+ 
+  to {
+    height: 800rpx;
+  }
+}
+ 
+@keyframes slideContentDown {
+  from {
+    height: 800rpx;
+  }
+ 
+  to {
+    height: 0;
+  }
+}
+ 
+/* 显示或关闭内容时动画 */
+ 
+.open {
+  animation: slideContentUp 0.5s ease-in both;
+}
+ 
+.close {
+  animation: slideContentDown 0.5s ease-in both;
+}
+```
 
 
+**代码示例6 - 底部弹窗自定义动画（API控制）**
+
+<a href="swanide://fragment/8a843dcdf2f4e31945b4af996c2e3e381575816832551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bindtap='showshadow' type="primary">点击显示底部弹框</button>
+    <!-- 遮罩层 -->
+    <view class="shadow" s-if="{{chooseSize}}" bindtap='hideModal'></view>
+    <!-- 上滑高度 -->
+    <view class='choosen' s-if="{{chooseSize}}" animation='{{animationData}}'>
+    <!-- 内容 -->
+    <view class='content-top' s-for="item in list">
+        {{item}}
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data:{
+        chooseSize: false,
+        list: ['列表一','列表二','列表三','列表四']
+    },
+    showshadow:function(e){
+        if (this.data.chooseSize == false) {
+            this.chooseSezi()
+        } else {
+            this.hideModal()
+        }
+    },
+    chooseSezi() {
+        var that = this;
+        // 创建一个动画实例
+        var animation = swan.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 1000,
+            timingFunction: "ease",
+            delay: 0
+        })
+  
+        animation.translateY(1000).step()
+        that.setData({
+            animationData: animation.export(),
+            chooseSize: true
+        })
+        // 设置setTimeout来改变y轴偏移量，实现有感觉的滑动 滑动时间
+        setTimeout(function () {
+            animation.translateY(0).step()
+            that.setData({
+                animationData: animation.export(),
+                clearcart: false
+            })
+        }, 100)
+    },
+    // 隐藏
+    hideModal: function (e) {
+        var that = this;
+        var animation = swan.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 1000,
+            timingFunction: "ease",
+            delay: 0
+        })
+
+        animation.translateY(700).step()
+        that.setData({
+            animationData: animation.export()
+        })
+        setTimeout(function () {
+            animation.translateY(0).step()
+            that.setData({
+                animationData: animation.export(),
+                chooseSize: false
+            })
+        }, 500)
+    }
+});
+```
 
 
 
