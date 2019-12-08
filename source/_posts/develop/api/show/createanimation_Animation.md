@@ -97,8 +97,7 @@ Page({
             transformOrigin: "50% 50%",
             duration: 1000,
             timingFunction: "linear",
-            delay: 0,
-            opacity: 0.5
+            delay: 0
         });
         animation.opacity(0.5);
         animation.backgroundColor('#DC143C');
@@ -137,8 +136,7 @@ Page({
             transformOrigin: "50% 50%",
             duration: 1000,
             timingFunction: "linear",
-            delay: 0,
-            opacity: 0.5
+            delay: 0
         });
         animation.opacity(0.5);
         animation.backgroundColor('#DC143C');
@@ -154,6 +152,78 @@ Page({
             animationData: animation.export()
         });
         console.log('createAnimation', animation);
+    }
+});
+```
+
+**代码示例4 - 吸顶操作示例**
+
+<a href="swanide://fragment/696eb31b135a4bf21271fcabbfdca0c51575810037687" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="top-bar" s-if="{{fixTopBar}}">
+        <view class="fixTopBarBlock" style="height:{{statusBarHeight}}px" animation="{{animationData}}"></view>
+        <view animation="{{animationData}}" class="fixTopBar flex" style="top:{{statusBarHeight}}">
+            <view class="fixTopBarText">百度智能小程序</view>
+        </view>
+    </view>
+    <view class="group-hd" style="margin-top:{{statusBarHeight}}px">
+        logo
+    </view>
+    <view class="search">
+        <view class="search-box">
+            <text>搜索框</text>
+        </view>
+    </view>
+    <view class="card-area" style="height: 800px">
+        <view class="flex">content</view>
+    </view>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        statusBarHeight: 0,
+        fixTop: '', // 区域离顶部的高度
+        scrollTop: 0, // 滑动条离顶部的距离
+        fixTopBar: false
+    },
+    onLoad() {
+        const t = this;
+        swan.getSystemInfo({
+            success: res => {
+                this.setData({
+                    "statusBarHeight": res.statusBarHeight
+                })
+            }
+        });
+        swan.createSelectorQuery().select(".group-logo").boundingClientRect(function(rect) {
+            console.log('rect.top :::', rect.top);
+            t.setData({
+                fixTop: rect.top,
+            })
+        }).exec();
+    },
+    onPageScroll(res) {
+        console.log('res.scrollTop :::', res.scrollTop);
+        let fixTop = this.getData('fixTop');
+        if (res.scrollTop > fixTop) {
+            this.setData({'fixTopBar': true});
+            const animation = swan.createAnimation({
+                duration: 1000,
+                timingFunction: "ease-out",
+                delay: 0
+            });
+        } else {
+            this.setData({'fixTopBar': false});
+        }
     }
 });
 ```
