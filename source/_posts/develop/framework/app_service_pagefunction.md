@@ -10,7 +10,9 @@ sidebar: app_service_pagefunction
 ### onPullDownRefresh
 
 **解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
+
 **代码示例**
+
 <a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -29,7 +31,9 @@ Page({
 
 ### onReachBottom
 **解释**：在`Page`中定义 onReachBottom 处理函数，监听该页面用户上拉触底事件。
+
 **代码示例**
+
 <a href="swanide://fragment/231087fc63ccb30eb5f7bffbd9b40af21573190784925" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -55,6 +59,7 @@ Page({
 |scrollTop|Number|页面在垂直方向已滚动的距离（单位px）|
 
 **代码示例**
+
 <a href="swanide://fragment/9c275e938b5b6fe4fdb30c1c31b057511573192145081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

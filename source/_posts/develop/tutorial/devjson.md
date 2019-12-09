@@ -12,6 +12,8 @@ sidebar: devjson
 
 ### 配置示例
 
+**代码示例**
+
 ```js
 {
     "navigationBarBackgroundColor": "#ffffff",

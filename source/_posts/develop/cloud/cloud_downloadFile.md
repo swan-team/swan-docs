@@ -44,6 +44,7 @@ sidebar: cloud_downloadFile
 
 
 **代码示例**
+
 `callback`风格：
 ```js
 swan.cloud.downloadFile({

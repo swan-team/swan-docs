@@ -91,6 +91,7 @@ sidebar: process
 
 
 <br/>
+
 ### pages
 
 pages 接受一个数组，每一项都是一个字符串，指定 SWAN App 都有哪些页面。每一项代表页面的[路径 + 文件名]，数组第一项代表 SWAN 初始页面。
@@ -166,7 +167,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 </div>
 </div>
 
-<notice>示例： </notice>
+**代码示例**
 
 ```json
 {
@@ -180,7 +181,9 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 }
 ```
 <br>
+
 ### tabBar
+
 用于设置客户端底部的tab栏：可通过tabBar设置tab的颜色、个数、位置、背景色等内容。
 
 |属性|类型|必填|描述|
@@ -227,7 +230,9 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 申明需要后台运行的能力，类型为数组。目前支持以下项目：
 
 audio: 后台音乐播放
-如：
+
+**代码示例**
+
 ```json
 {
     "pages": ["pages/index/index"],
@@ -240,7 +245,8 @@ audio: 后台音乐播放
 
 用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
 
-<notice>示例： </notice>
+**代码示例**
+
 <a href="swanide://fragment/1b50c5342babcda03f71d3d559bca6fc1574152614328" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```json
 // app.json

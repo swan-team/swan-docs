@@ -28,6 +28,8 @@ A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swa
 
 生成的h5站点地址放入小程序web-view的src即可。
 
+**代码示例**
+
 ```
 <!DOCTYPE html>
 <html lang="en">
