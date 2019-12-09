@@ -88,7 +88,6 @@ Page({
 
 ```js
 Page({
-    /* eslint-enable */
     data: {
         animationData: {}
     },
