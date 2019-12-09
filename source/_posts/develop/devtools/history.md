@@ -15,6 +15,8 @@ sidebar: history
 
 ### 最新 rc 版本（2.21.0-rc）
 
+> 包含大的新增特性，修复缺陷问题，通过内部测试的稳定版本。
+
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
 
 * [rc 版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_rc/)

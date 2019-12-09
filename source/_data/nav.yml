@@ -451,6 +451,10 @@
               text: 顶部导航栏
               name: topnav
             -
+              link: /design/component/toptab
+              text: 栏目选项条
+              name: toptab          
+            -
               link: /design/component/bottomtab
               text: 底部标签栏
               name: bottomtab
@@ -490,6 +494,7 @@
               link: /design/component/empty_state
               text: 空态
               name: empty_state
+            
     -
       link: /design/story/arzoo
       text: 设计故事
