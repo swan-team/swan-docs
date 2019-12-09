@@ -93,4 +93,43 @@ Page({
 });
 ```
 
+**代码示例2 - 从小程序原生页面返回到 H5 页面，并需要刷新：**
+<a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 detail.swan 文件中
+
+```html
+<web-view src="{{url}}"></web-view>
+```
+
+* 在 detail.js 文件中
+
+```js
+Page({
+    data: {
+        src: ''
+    },
+   //接收H5页传过来的参数
+    onLoad(options) {
+        this.setData({'src': options.webViewUrl})
+    },
+    onShow(){
+        this.onLoad()
+    }
+});
+```
+
+* 在 index.js 文件中
+
+```js
+Page({
+    data: { },
+    navigateTo(e) {
+        swan.navigateTo({
+            url: "/detail/detail?webViewUrl=https://smartprogram.baidu.com&Math.radom()"
+        });
+    }
+});
+```
+
 
