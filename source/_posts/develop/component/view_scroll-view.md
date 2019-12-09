@@ -193,6 +193,31 @@ Page({
 });
 ```
 
+### **代码示例3 - 横向滚动套纵向滚动常用业务场景**：
+
+<a href="swanide://fragment/b8dd91b985ad471daeb43f8b79d7bc011575813000917" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+     <view class="card-area">
+        <view class="top-description border-bottom">推荐列表</view>
+        <scroll-view
+            scroll-x
+            class="scroll-view"
+        >
+            <view class="flex">
+                <scroll-view class="item" scroll-y s-for="item in list">
+                    <image class="image" src="{{item.src}}"></image>
+                    <view class="introduce">{{item.description}}</view>
+                </scroll-view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+```
+
 ## **Bug & Tip**
 
 * Tip：请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。

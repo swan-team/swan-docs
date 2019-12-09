@@ -292,7 +292,9 @@ POST数据|Json数据
 |picUrl | 卡券banner图片 | String | 是 |   
 |title | 卡券banner图标题 | String | 是 |    
 |appRedirectPath |  banner图跳转的小程序页面路径 | String | 否 | |  
-开发者须知：图片尺寸：1032* 144px；
+> 开发者须知：
+>1) 图片尺寸：1032* 144px；
+>2) 当前一个卡券ID仅支持创建一个Banner；
 
 ##### 返回示例
 ```
@@ -513,12 +515,22 @@ POST数据|Json数据
 ##### 接口调用说明
 
  ![图片](../../../img/api/card_ticket/7.png)
-涉及开发者端+Server开发：
-1）端开发：开发者需在卡券详情页点击去使用跳转的页面上，通过 [onLoad(Object query)](https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/) 获取打开当前页面路径中的`coupon` 参数；
-> **开发者须知**
-> 若「立即使用」 点击跳转的页面为首页，需在小程序首页页面上增加onLoad能力开发；需设置为自定义跳转页面，需在该页面增加onLoad能力开发。
 
-2）Server开发：对`coupon`参数进行解密，获取到用户的领券信息，为用户发券；
+涉及开发者端+Server开发：
+1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/) 获取当前页面路径中的**coupon**参数；
+> **开发者须知** 
+> 若点击「立即使用」 跳转的页面为首页，需在小程序首页页面上增加onShow能力开发；需设置为自定义跳转页面，需在该页面增加onShow能力开发。
+##### 代码示例（放在app.js中）
+```
+onShow(event) {
+        let extraData = event.referrerInfo.extraData;
+        let coupon = extraData.coupon;
+        swan.showModal({
+            title: '提示' + coupon,
+        });
+    }
+```
+2）Server开发：对**coupon**参数进行解密，获取到用户的领券信息，为用户发券；
 
 ##### 协议拼接格式说明
 ```

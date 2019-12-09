@@ -7,7 +7,7 @@ sidebar: processjs
 
 
 
-app.js 中存放全局的 JavaScript 逻辑。
+app.js 中存放全局的 JavaScript 逻辑；更多内容参见[生命周期](https://smartprogram.baidu.com/docs/develop/framework/process_life/)。
 
 <notice>示例： </notice>
 ```javascript
