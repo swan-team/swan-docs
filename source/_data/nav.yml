@@ -450,10 +450,10 @@
               link: /design/component/topnav
               text: 顶部导航栏
               name: topnav
-            -
-              link: /design/component/toptab
-              text: 栏目选项条
-              name: toptab          
+            # -
+            #   link: /design/component/toptab
+            #   text: 栏目选项条
+            #   name: toptab          
             -
               link: /design/component/bottomtab
               text: 底部标签栏
