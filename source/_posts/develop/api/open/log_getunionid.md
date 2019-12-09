@@ -9,7 +9,7 @@ sidebar: log_getunionid
 **解释**：获取unionid
 
 ### unionid说明
-1. 一个开发者可以创建多个小程序， 开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在一个开发者所有的小程序下的unionid是唯一的。
+1.同一主体下的不同小程序，开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在同一主体下的小程序内unionid是唯一的。
 
 2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open_log/)，请妥善处理用户未授权场景。
 
