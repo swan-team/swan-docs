@@ -15,10 +15,10 @@ sidebar: base_rich-text
 
 ## **属性说明**
 
-|属性名 |类型  |默认值  | 必填 |说明|
+|属性名 |类型  |默认值  | 必填 |说明| 
 |---- | ---- | ---- | ---- |---- |
-| nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String|
-| selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴等场景。 <font color="#4183c4">百度 APP 11.10 以上</font>|
+| nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String| 
+| selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
 
 ### nodes
 现支持两种节点，通过type来区分，分别是 **元素节点** 和 **文本节点**，默认是元素节点，在富文本区域里显示的HTML节点。

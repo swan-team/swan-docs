@@ -7,10 +7,7 @@ sidebar: canvas
 
  
 
-**解释**：画布。画布是一个矩形区域，开发者可以在页面上绘制图形。
-canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的方法。
-相关api：[swan.createCanvasContext](https://smartprogram.baidu.com/docs/develop/api/show/canvas/)
-该组件是客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+**解释**：画布。画布是一个矩形区域，开发者可以在页面上绘制图形。canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的方法。相关api：[swan.createCanvasContext](https://smartprogram.baidu.com/docs/develop/api/show/canvas/)该组件是客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
 
 
