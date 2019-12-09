@@ -77,7 +77,7 @@ sidebar: nav
     </div>     
 </div>
 
-### **代码示例**
+### **代码示例1**
 
 <a href="swanide://fragment/9999477aff1012b1f8d10125c245360f1565511678971" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -137,6 +137,44 @@ Page({
 });
 ```
 
+### **代码示例2**
+
+<a href="swanide://fragment/665a831e40430f98f90b77e1bb90db7e1575878989152" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 detail.swan 文件中
+
+```html
+<web-view src="{{url}}"></web-view>
+```
+
+* 在 detail.js 文件中
+
+```js
+Page({
+    data: {
+        src: ''
+    },
+   //接收H5页传过来的参数
+    onLoad(options) {
+        this.setData({'src': options.webViewUrl})
+    },
+    onShow(){
+        this.onLoad()
+    }
+});
+```
+
+* 在 index.swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary">
+        <navigator target="self" open-type="navigate" url="/detail/detail?webViewUrl=https://smartprogram.baidu.com&Math.radom()" hover-class="navigator-hover" hover-stop-propagation="true">
+            跳转到新页面
+        </navigator>
+    </button>
+</view>
+```
 
 
 ### **说明**:
