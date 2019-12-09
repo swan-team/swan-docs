@@ -124,6 +124,68 @@ Page({
 });
 ```
 
+**代码示例2 - 开发者可自定义showToast样式**
+
+<a href="swanide://fragment/392bbc1fb46cce63621c37aac706635e1575824847831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="clickbtn"> 点击 </button>
+    <view animation="{{animationData}}" class="toast-view" s-if="{{showModalStatus}}">要显示的内容
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        animationData: "",
+        showModalStatus: false
+    },
+    showModal() {
+        var animation = swan.createAnimation({ 
+            duration: 200,  
+            timingFunction: "linear",  
+            delay: 0  
+        })  
+        animation.translateY(200).step()
+        this.setData({
+            animationData: animation.export(),
+            showModalStatus: true
+        })
+        let that = this;
+        setTimeout(function () { 
+            animation.translateY(0).step()  
+            that.setData({
+                animationData: animation.export()  
+            })  
+        }, 200)  
+        setTimeout(function () {
+            if(that.data.showModalStatus){ 
+                that.hideModal();
+            }  
+        }, 5000)  
+    },  
+    clickbtn() {  
+        if(this.data.showModalStatus){  
+            this.hideModal();  
+        }
+        else {  
+            this.showModal();  
+        }  
+    },  
+    hideModal() {  
+        this.setData({
+            showModalStatus: false
+        })
+    },  
+})
+```
+
 **Bug&Tip**：
 
 * [swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个

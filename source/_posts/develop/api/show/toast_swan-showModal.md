@@ -114,6 +114,97 @@ Page({
 });
 ```
 
+**代码示例3 - 开发者可自定义一个showModal**：
+
+<a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="showModal" data-statu="open">点我打开自定义弹窗</button>  
+    <!--mask-->  
+    <view class="mask" bindtap="showModal" data-statu="close" s-if="{{showModalStatus}}"></view>  
+    <!--content-->  
+    <view animation="{{animationData}}" class="showModal-box" s-if="{{showModalStatus}}">  
+    <view class="showModal-title">标题</view>  
+    <view class="showModal-content">  
+       <view class="border-bottom">可自定义展示接口请求返回的数据</view>
+       <view s-for="item, index in data" class="border-bottom">
+           <view>{{index}}</view>
+           <view>价钱：{{item.money}}</view>
+           <view>途径：{{item.source}}</view>
+           <view>类型：{{item.type}}</view>
+           <view>满减活动：{{item.upTo}}</view>
+        </view>
+    </view>  
+    <view class="confirm" bindtap="showModal" data-statu="close">确定</view>  
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        showModalStatus: false,
+        data: {}
+    },
+    showModal(e) {
+        var currentStatu = e.currentTarget.dataset.statu;
+        this.animation(currentStatu);
+        this.request();
+    },
+    animation(currentStatu){
+        var animation = swan.createAnimation({
+            duration: 1000,  
+            timingFunction: "ease",
+            delay: 0  
+        });
+        animation.opacity(0).rotateX(-100).step();
+        this.setData({
+            animationData: animation.export()
+        })
+        setTimeout(function () {
+            animation.opacity(1).rotateX(0).step();
+            this.setData({
+                animationData: animation
+            }) 
+            if (currentStatu == "close") {
+                this.setData({showModalStatus: false});
+            }
+        }.bind(this), 200)
+        if (currentStatu == "open") {
+            this.setData({showModalStatus: true});
+        }
+    },
+    request() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                this.setData({
+                    data: res.data.data.couponList
+                })
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+})
+```
+
             
 
 
