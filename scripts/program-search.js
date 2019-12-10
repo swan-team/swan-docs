@@ -90,10 +90,6 @@ hexo.extend.generator.register('programSearch', function (locals) {
     const navList = {};
 
     resBreadCrumbs = resBreadCrumbs.map(function (item) {
-        var a = item.breadCrumbs.filter(function (subitem) {
-            return !(subitem.name && subitem.link);
-        });
-        console.log('111', a);
         //  保证面包屑数据中 text和link均存在
         item.breadCrumbs = item.breadCrumbs.filter(function (subitem) {
             return subitem.name && subitem.link;
@@ -136,13 +132,6 @@ hexo.extend.generator.register('programSearch', function (locals) {
         posts = locals.posts.sort('-date');
     }
 
-    var b = posts.filter(function (post) {
-        const postPath = config.root + post.path;
-        return !navList[postPath];
-    });
-
-    console.log(222, b)
-
     // 过滤掉不存在侧边栏的文档，保证搜索数据干净
     posts = posts.filter(function (post) {
         const postPath = config.root + post.path;
@@ -164,12 +153,6 @@ hexo.extend.generator.register('programSearch', function (locals) {
                 if (post._content) {
                     tmpPost.content = post.more ? replaceHtml(post.more) : includeMarkdown(post._content);
                 }
-                var c = resBreadCrumbs.filter(function (item) {
-                    // 保证该页面的url存在nav.yml文件中 且 name与sidebar对应
-                    // todo: name与sidebar一一对应 @wenlixiu
-                    return !(item.url === tmpPost.url) && (item.name === post.sidebar);
-                });
-                console.log(333, c);
                 const tmpPostBreadCrumbs = resBreadCrumbs.filter(function (item) {
                     // 保证该页面的url存在nav.yml文件中 且 name与sidebar对应
                     // todo: name与sidebar一一对应 @wenlixiu
