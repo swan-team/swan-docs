@@ -24,10 +24,10 @@ sidebar: formlist_input
 | disabled | Boolean  | false  | 否 |是否禁用| |
 | maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度| |
 |cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。| |
-| focus |Boolean	  | false | 否 |获取焦点，调起键盘| |
+| focus |Boolean	  | false | 否 |获取焦点，调起键盘| 开发者工具暂不支持自动获取焦点|
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字| |
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起| |
-|cursor	 | Number  |  | 否 |指定 focus 时的光标位置| |
+|cursor	 | Number  |  | 否 |指定 focus 时的光标位置| 开发者工具暂不支持|
 |selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用|1.10.0|
 |selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 |1.10.0|
 |adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |1.10.0|
