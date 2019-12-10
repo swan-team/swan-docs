@@ -31,6 +31,7 @@ sidebar: formlist_textarea
 |cursor|Number|-1|否|指定focus时的光标位置 <font color="#4183c4">10.8.5 以上</font>|
 |auto-focus|Boolean|false|否|自动聚焦，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |confirm-type|String|default|否|设置键盘右下角按钮的文字。<font color="#4183c4">11.10.0 以上</font>|
+|confirm-hold|Boolean|false|否|点击键盘右下角按钮时是否保持键盘不收起 <font color="#4183c4">11.16.5.0 及以上</font>|
 |focus|Boolean|false|否|获取焦点，调起键盘 <font color="#4183c4">10.8.5 以上</font>|
 |fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true <font color="#4183c4">10.8.5 以上</font>|
 |cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 <font color="#4183c4">10.8.5 以上</font>|
@@ -113,7 +114,7 @@ Page({
 
 ### **代码示例2 - 出现滚动条**
 
- <a href="swanide://fragment/2c52dbb6892633cf203432ea3d56d8031575401486499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ <a href="swanide://fragment/734cdf54f64041526837042b7a9f39af1575977673258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -128,6 +129,7 @@ Page({
                 placeholder-class="plh" 
                 cursor="-1"
                 confirm-type="send"
+                confirm-hold="true"
                 fixed="{{true}}"
                 focus="{{focus}}"
                 cursor-spacing="20"
