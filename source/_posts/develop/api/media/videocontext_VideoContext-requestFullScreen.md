@@ -10,6 +10,10 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 **解释**：按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextRequestFullScreen.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **object 参数说明**：
@@ -18,7 +22,7 @@ sidebar: videocontext_VideoContext-requestFullScreen
 |---|---|---|---|---|
 |direction|object|否|当前方向|角度，有效值为0，90，-90|
 
-**direction 有效值**:
+**direction 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -26,9 +30,32 @@ sidebar: videocontext_VideoContext-requestFullScreen
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/requestFullScreen.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 <a href="swanide://fragment/c9568967cece545edaf1edefa52d71c11573479259203" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <video id="myVideo" enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <button type="primary" bindtap="requestFullScreen">点击全屏</button>
+</view>
+```
 
 * 在 js 文件中
 
@@ -37,7 +64,7 @@ Page({
     data: { },
     onLoad() {
         const videoContext = swan.createVideoContext('myVideo');
-        this.videoContext = video;
+        this.videoContext = videoContext;
         this.videoContext.play();
     },
     requestFullScreen() {

@@ -2,7 +2,7 @@
 title:  BackgroundAudioManager.onPrev
 header: develop
 nav: api
-sidebar:  BackgroundAudioManager.onPrev
+sidebar:  backgroundaudiomanager_BackgroundAudioManager-onPrev
 ---
 
 
@@ -10,11 +10,30 @@ sidebar:  BackgroundAudioManager.onPrev
 
 **解释**：监听用户在系统音乐播放面板点击上一曲事件，仅支持 Andriod。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnPrev.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/dbb61557bfe2c861b7b5674388fb68521573423487333" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/onPrev.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/a28151532de19edd3f3c2a689e9b440b1574004847897" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

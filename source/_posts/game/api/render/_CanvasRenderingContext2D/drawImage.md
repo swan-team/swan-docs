@@ -36,7 +36,7 @@ context.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 使用的图像：
 ![图片](/img/game/canvas/drawImage-005.jpg)
 
-直接调用绘制该图像的示例代码：
+直接调用绘制该图像的代码示例：
 ![图片](/img/game/canvas/drawImage-001.png)
 
 ```js

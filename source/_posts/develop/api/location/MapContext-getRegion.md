@@ -8,6 +8,11 @@ sidebar: MapContext-getRegion
 
 **解释**：获取当前地图的视野范围。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextGetRegion.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 
@@ -26,3 +31,46 @@ sidebar: MapContext-getRegion
 |---- | ---- | ---- |
 |southwest|Object|西南角方向的经纬度|
 |northeast|Object|东北角方向的经纬度|
+
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getRegion.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/2f38e37ec2f6adf2e9a20025ec886b761573553896758" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+   data: { },
+    onReady() {
+        this.mapContext = swan.createMapContext('myMap');
+    },
+    getRegion: function () {
+        this.mapContext.getRegion({
+            success: function (res) {
+                swan.showModal({
+                    title: '视野范围',
+                    content: 'northeast: ' + JSON.stringify(
+                       res.northeast) + '/' + "southwest: " + JSON.stringify(res.southwest)
+                });
+                console.log("视野范围", res);
+            }
+        })
+    }
+});
+
+```

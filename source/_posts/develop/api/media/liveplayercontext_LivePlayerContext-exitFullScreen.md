@@ -8,6 +8,11 @@ sidebar: liveplayercontext_LivePlayerContext-exitFullScreen
 
 **解释**：退出全屏
 
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_LivePlayerContextExitFullScreen.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
  
 
@@ -20,16 +25,28 @@ sidebar: liveplayercontext_LivePlayerContext-exitFullScreen
 |fail  |Function  |  | 否 |接口调用失败的回调函数|
 |complete   | Function   ||  否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/43874088d8fb3919128a9e594feb136f1573523422052" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/LexitFullScreen.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/f6e0f83c034dd0a69a963fb6a3e895891573759816251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 js 文件中
 ```js
 Page({
     data: {
-        cur: 0,
-        autoplay: false,
         src: 'https://vd3.bdstatic.com/mda-ia8e6q3g23py8qdh/hd/mda-ia8e6q3g23py8qdh.mp4?playlist=%5B%22hd%22%5D&auth_key=1521549485-0-0-d5d042ba3555b2d23909d16a82916ebc&bcevod_channel=searchbox_feed&pd=share'
     },
     onShow(){
@@ -39,9 +56,11 @@ Page({
         const livePlayerContext = swan.createLivePlayerContext('myLive');
         this.livePlayerContext = livePlayerContext;
         this.livePlayerContext.play();
-    },
-    exitFullScreen(e) {
-        this.livePlayerContext.exitFullScreen();
+        this.livePlayerContext.requestFullScreen({direction: 90});
+        let that = this;
+        setTimeout(function () {
+            that.livePlayerContext.exitFullScreen();
+        }, 5000);
     }
 });
 ```

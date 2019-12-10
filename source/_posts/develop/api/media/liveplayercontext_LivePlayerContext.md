@@ -11,7 +11,25 @@ sidebar:  liveplayercontext_LivePlayerContext
 
 **解释**： swan.createLivePlayerContext 的返回值
 
-**示例**：
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/liveplayer.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/fde41dba7cc64b655e9e6181024fdd571573522009534" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 

@@ -2,7 +2,7 @@
 title: swan.getBackgroundAudioManager
 header: develop
 nav: api
-sidebar: swan.getBackgroundAudioManager
+sidebar: backgroundaudiomanager_swan-getBackgroundAudioManager
 ---
 
 
@@ -12,7 +12,7 @@ sidebar: swan.getBackgroundAudioManager
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getBackgroundAudioManager.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getBackgroundAudioManager.png"  class="demo-qrcode-image" />
 
 **方法参数**：无
 
@@ -34,9 +34,24 @@ sidebar: swan.getBackgroundAudioManager
 |1006|加载音频失败|
 |1007|seek失败，播放器尚未缓冲|
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/baabeadbe2985d54085de54aa8404ff21569416813876" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getBackgroundAudioManager.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+
+<a href="swanide://fragment/5beabcb45088a2a513f5eab9de2ef98a1573617055617" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -50,4 +65,6 @@ Page({
 
 ```
 
+**Bug & Tip**
  
+如需使用背景音频可在[配置 app.json 文件](https://smartprogram.baidu.com/docs/develop/tutorial/process/)中，对[requiredBackgroundModes](https://smartprogram.baidu.com/docs/develop/tutorial/process/#requiredBackgroundModes)进行设置。

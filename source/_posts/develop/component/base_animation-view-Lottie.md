@@ -13,10 +13,10 @@ sidebar: base_animation-view-Lottie
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/animation-view.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+## **属性说明**
 
 |属性名 |类型  |默认值  |必填 |说明|最低版本|
-|---- | ---- | --- | ---- |---- |--|
+|---- | ---- | --- | ---- |---- |---|
 | path | String  |  |是 |动画资源地址，目前只支持绝对路径| |
 | loop | Boolean  |  false | 否 |动画是否循环播放 | |
 |autoplay | Boolean | true	  |否 |动画是否自动播放	| |
@@ -24,7 +24,7 @@ sidebar: base_animation-view-Lottie
 |hidden | Boolean  |  true |否 |是否隐藏动画| |
 |bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
 
-**action 有效值**:
+### **action 有效值**
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -32,7 +32,8 @@ sidebar: base_animation-view-Lottie
 | pause | 暂停 |
 | stop | 停止 |
 
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +47,7 @@ sidebar: base_animation-view-Lottie
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例**
 
 
 <a href="swanide://fragment/72ffe9be4e8e6dbcd24ca12659fd43591572918523899" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -100,8 +101,8 @@ Page({
 ```
 
 
-**Bug & Tip**：
+## **Bug & Tip**
 
-* animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
-* animation-view组件不支持原生组件嵌套。
-* 为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
+* Tip：animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
+* Tip：animation-view组件不支持原生组件嵌套。
+* Tip：为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。

@@ -1,20 +1,39 @@
 ---
-title: 背景音频管理播放
+title: BackgroundAudioManager.onCanplay
 header: develop
 nav: api
-sidebar: media_backgroundaudiomanager
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onCanplay
 ---
 
 
-## BackgroundAudioManager.onCanplay
+
 
 **解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnCanplay.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
  
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/1f2e51c17e86f21e8eb67b2894dcbf301573422228143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/oncanplay.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/be16165a761e6d742056eaf7ddc1d9fd1573699811282" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

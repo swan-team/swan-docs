@@ -2,7 +2,7 @@
 title: RecorderManager
 header: develop
 nav: api
-sidebar: RecorderManager
+sidebar: recorder_RecorderManager
 ---
 
 
@@ -10,7 +10,26 @@ sidebar: RecorderManager
 
 **解释**：swan.getRecorderManager 的返回值。
 
-**示例**：
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManager.png"  class="demo-qrcode-image" />
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/RecorderManager.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 <a href="swanide://fragment/70d4f42e90d9ad149e2dc0226bd82d2c1573410962037" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
@@ -32,6 +51,18 @@ Page({
             // 停止录音事件
             console.log('recorder stop', res)
             const { tempFilePath } = res
+        });
+        recorderManager.onResume(function() {
+            // 继续录音事件
+            console.log('recorder resume')
+        });
+        recorderManager.onInterruptionBegin(function() {
+            // 终端录音开始事件
+            console.log('recorder interruptionBegin')
+        });
+        recorderManager.onInterruptionEnd(function() {
+            // 终端录音结束事件
+            console.log('recorder interruptionEnd')
         });
 
         const options = {

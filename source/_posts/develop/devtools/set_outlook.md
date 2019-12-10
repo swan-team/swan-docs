@@ -11,4 +11,13 @@ sidebar: set_outlook
 * 字号
 * 间距
 
-![图片](../../../img/tool/face-set.png)
+
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="../../../img/tool/face-set.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>   
+</div>

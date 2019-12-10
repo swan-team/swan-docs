@@ -12,7 +12,8 @@ sidebar: formlist_picker-view-column
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view.png"  class="demo-qrcode-image" />
 
-**示例**：
+## 示例
+### **代码示例**
 <a href="swanide://fragment/90e982e82a72eb9c469080bd3e7477091572919598850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

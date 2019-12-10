@@ -5,7 +5,7 @@ nav: api
 sidebar: swan-getNetworkType
 ---
 
- 
+
 
 **解释**：获取网络类型
 
@@ -26,11 +26,38 @@ sidebar: swan-getNetworkType
 
 **success返回参数说明**：
 
-|参数  |类型|说明 |
+| 参数  | 类型 | 说明 |
 |---- | ---- |---|
-|networkType |String|网络类型，有效值有： wifi，2g，3g，4g，unknown (Android 下不常见的网络类型)，none (无网络)。|
+|networkType |String|网络类型|
 
-**示例**：
+**networkType有效值说明**：
+
+| 值 | 说明 |
+|----|----|
+|wifi|wifi 网络|
+|2g|2g 网络|
+|3g|3g 网络|
+|4g|4g 网络|
+|unknown|Android 下不常见的网络类型|
+|none|无网络|
+|web_unknown|Web 化无法判断网络环境时类型|
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getNetworkType.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 <a href="swanide://fragment/6fb983a430aa1864af5650c5b9b54f9d1569478503845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 中
@@ -52,7 +79,7 @@ Page({
 });
 ```
 
- 
+
 #### 错误码
 * Andriod
 

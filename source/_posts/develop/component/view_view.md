@@ -13,7 +13,7 @@ sidebar: view_view
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/view.png"  class="demo-qrcode-image" />
 
 
-**属性说明**：
+## 属性说明
 
 
 |属性名 |类型  |默认值  |必填|说明| 
@@ -24,9 +24,9 @@ sidebar: view_view
 |hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
 
+## 示例
 
-
-**图片示例**：
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,14 +40,11 @@ sidebar: view_view
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例1 - 横向布局**：
 
-<a href="swanide://fragment/0ec2ff19098945ea7ea26197454e741f1565503534116" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-
+<a href="swanide://fragment/8819fd543459539871829aea4398dfb01575275187354" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```html
-// 在 swan 文件中
 <view>
     <view class="title">横向布局</view>
     <view class="rowlike">
@@ -62,24 +59,32 @@ sidebar: view_view
         </view>
     </view>
 </view>
+```
 
-<view class="bottom-block">
-    <view class="title">纵向布局</view>
-    <view class="collike">
-        <view class="color-a">
-            <text>A</text>
-        </view>
-        <view class="color-b">
-            <text>B</text>
-        </view>
-        <view class="color-c">
-            <text>C</text>
+### **代码示例2 - 纵向布局**：
+
+<a href="swanide://fragment/5555234f798072194eb3018c329375601575275317320" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```html
+<view class='wrap'>
+    <view class="card-area">
+        <view class="top-description border-bottom">纵向布局</view>
+        <view class="collike">
+            <view class="color-a">
+                <text>A</text>
+            </view>
+            <view class="color-b">
+                <text>B</text>
+            </view>
+            <view class="color-c">
+                <text>C</text>
+            </view>
         </view>
     </view>
 </view>
 ```
 
-**Tips**：
+## **Bug&Tip** 
 
-1、 如果需要使用滚动视图，请使用 scroll-view。
-2、 从基础库版本1.12.0开始支持事件捕获、冒泡。
+* Tip：如果需要使用滚动视图，请使用 scroll-view。
+* Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。

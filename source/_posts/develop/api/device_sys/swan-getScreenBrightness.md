@@ -4,10 +4,14 @@ header: develop
 nav: api
 sidebar: swan-getScreenBrightness
 ---
- 
- 
+
+
 
 **解释**：获取屏幕亮度。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/screenBrightness.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -25,7 +29,21 @@ sidebar: swan-getScreenBrightness
 |---- | ---- | ---- |
 |value   | Number | 屏幕亮度值，范围 0~1，0 最暗，1 最亮。|
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getScreenBrightness.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -53,4 +71,3 @@ Page({
 |错误码|说明|
 |--|--|
 |1001|执行失败  |
-

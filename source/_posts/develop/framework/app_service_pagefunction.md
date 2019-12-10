@@ -10,7 +10,9 @@ sidebar: app_service_pagefunction
 ### onPullDownRefresh
 
 **解释**：在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
-**示例代码**：
+
+**代码示例**
+
 <a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -29,7 +31,9 @@ Page({
 
 ### onReachBottom
 **解释**：在`Page`中定义 onReachBottom 处理函数，监听该页面用户上拉触底事件。
-**示例代码**：
+
+**代码示例**
+
 <a href="swanide://fragment/231087fc63ccb30eb5f7bffbd9b40af21573190784925" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -54,7 +58,8 @@ Page({
 |---- | ---- | ---- |
 |scrollTop|Number|页面在垂直方向已滚动的距离（单位px）|
 
-**示例代码**：
+**代码示例**
+
 <a href="swanide://fragment/9c275e938b5b6fe4fdb30c1c31b057511573192145081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -77,6 +82,10 @@ Page({
 * 用户点击页面内的"分享"按钮([`button`](https://smartprogram.baidu.com/docs/develop/component/formlist_button/) 组件 open-type="share")或者页面右上角菜单的"分享"按钮的时候会调用；
 * 此事件需要 return 一个`Object`，用于自定义分享内容。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_onShareAppMessage.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 **Object参数说明**：
 
@@ -97,7 +106,7 @@ Page({
 |fail   | Function  |  否  | 接口调用失败的回调函数|
 |complete  |  Function  |  否 |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例代码**：
+**代码示例**
 <a href="swanide://fragment/6b1e6d28c542397d04f5408242ac55a21573032765644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **场景一：分享页面为 tab 页**
@@ -207,7 +216,7 @@ Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能�
 |pagePath|String|被点击tabItem的页面路径|[3.0.2](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)|
 |text|String|被点击tabItem的按钮文字|[3.0.2](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)|
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/31512b7bbfc12330f054e50873b05b8b1560700621686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -235,7 +244,7 @@ Page({
 |newURLQuery|Object| 改变后的 URL query |
 |oldURLQuery|Object| 改变前的 URL query |
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/5bb1ffbf3d23686cf27bf5ba40329d491567219843686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

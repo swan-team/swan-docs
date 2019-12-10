@@ -32,7 +32,44 @@ sidebar: log_swan-login
 |---- | ---- |---- |
 |code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/login.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 获取code**
+
+<a href="swanide://fragment/feb6bbe10081695f109a108abe6313561575445076337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    login() {
+        swan.login({
+            success: res => {
+                console.log('login success', res) // {code: "e4a13af4e6d8c491b701a86682a5bc76NW"}
+            },
+            fail: err => {
+                console.log('login fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2: 详细示例**
+
 <a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 > 详细示例请在开发者工具中查看。
 
@@ -53,6 +90,12 @@ swan.login({
     }
 });
 ```
+
+**代码示例3: 开发者工具中右上角的登陆态与模拟器中用户的手百登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
+
+<a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
 
 #### 错误码
 * Andriod

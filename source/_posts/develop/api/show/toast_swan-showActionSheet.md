@@ -20,7 +20,7 @@ sidebar: toast_swan-showActionSheet
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|itemList |   `Array.<string>`  |  是 | |  按钮的文字数组，数组长度最大为6个。|
+|itemList |   Array.&lt;string&gt;  |  是 | |  按钮的文字数组，数组长度最大为6个。|
 |itemColor |  HexColor|    否   |#3c76ff|按钮的文字颜色。|
 |success| Function  |  否  | | 接口调用成功的回调函数，详见返回参数说明。|
 |fail  |  Function |   否  | |  接口调用失败的回调函数|
@@ -33,8 +33,30 @@ sidebar: toast_swan-showActionSheet
 |tapIndex |   Number | 用户点击的按钮，从上到下的顺序，从0开始。|
 
 
-**示例**：
-<a href="swanide://fragment/5b21419f4f4abd6685556b4f7e524cd81569464246835" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/showAction.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+<a href="swanide://fragment/c96f91497b4edc0c93df37756919a2001574135826789" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="showActionSheet" class="button" type="primary" hover-stop-propagation="true">弹出action sheet</button> 
+</view>
+```
 
 * 在 js 文件中
 

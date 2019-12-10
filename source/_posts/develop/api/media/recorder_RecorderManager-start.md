@@ -2,12 +2,17 @@
 title: RecorderManager.start 
 header: develop
 nav: api
-sidebar: RecorderManager.start 
+sidebar: recorder_RecorderManager-start
 ---
 
 
 
 **解释**： 开始录音
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerStart.png"  class="demo-qrcode-image" /> 
+
 
 **方法参数**：Object object 
 
@@ -31,8 +36,23 @@ sidebar: RecorderManager.start
 |44100| 64000 ~ 320000|
 
 
-**示例**：
-<a href="swanide://fragment/ee2d08e058696342496cd34fcc302dc61573418403441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/RecorderManagerStart.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 format为aac**：
+
+<a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **在 js 文件中**
 
@@ -46,6 +66,40 @@ Page({
             numberOfChannels: 1,
             encodeBitRate: 96000,
             format: 'aac'
+        };
+        recorderManager.start(options);
+        this.recorderManager = recorderManager;
+    }
+});
+```
+
+**代码示例2 指定录音的音频输入源**：
+
+<a href="swanide://fragment/ff452321703d4b008cef28d2c889de4a1575218133212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+**在 js 文件中**
+
+```javascript
+Page({
+    RecorderManagerStart() {
+        swan.getAvailableAudioSources({
+            success: res => {
+                that.setData({'audioSources': res.audioSources});
+                console.log('当前支持的音频输入源:', res.audioSources);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+        const recorderManager = swan.getRecorderManager()
+        const options = {
+            duration: 10000,
+            sampleRate: 44100,
+            numberOfChannels: 1,
+            encodeBitRate: 96000,
+            format: 'aac',
+            audioSource: that.getData('audioSources')
         };
         recorderManager.start(options);
         this.recorderManager = recorderManager;

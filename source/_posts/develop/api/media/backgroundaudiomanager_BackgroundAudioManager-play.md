@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.play 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.play 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-play
 ---
 
 
@@ -10,11 +10,31 @@ sidebar: BackgroundAudioManager.play
 
 **解释**：播放
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerPlay.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/21b710d8660145b2d5435b607ccdcf9f1573439985006" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/play.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+
+<a href="swanide://fragment/6cdda54dc84f9af03e56e456ed98dbc41573698666408" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

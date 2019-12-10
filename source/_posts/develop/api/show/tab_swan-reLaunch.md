@@ -9,6 +9,10 @@ sidebar: tab_swan-reLaunch
 
 **解释**：关闭所有页面，打开到应用内的某个页面。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -21,22 +25,68 @@ sidebar: tab_swan-reLaunch
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/relunch.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - 关闭所有页面，打开到应用内的某个页面**
+
+<a href="swanide://fragment/846aafb088c8a69de62456103660db2f1574139934370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="reLaunch" type="primary" hover-stop-propagation="true">关闭所有页面并跳转到detail页</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-
-swan.reLaunch({
-    url: '/api/api?key=value',
-    success: res => {
-        console.log('reLaunch success', res);
-    },
-    fail: err => {
-        console.log('reLaunch fail', err);
+Page({
+    reLaunch() {
+        swan.reLaunch({
+            url: '/detail/detail?key=value',
+            success: res => {
+                console.log('reLaunch success', res);
+            },
+            fail: err => {
+                console.log('reLaunch fail', err);
+            }
+        })
     }
 });
-    
+```
+**代码示例 2 - 多级页面的跳转**
+
+<a href="swanide://fragment/4936d6e83b8de1c04966e9b8f744e48a1575404793406" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    redirectTo(e) {
+        swan.redirectTo({
+            url: '/detail/detail',
+            success: res => {
+                console.log('redirectTo success');
+            },
+            fail: err => {
+                console.log('redirectTo fail', err);
+            }
+        });
+    }
+});
 ```

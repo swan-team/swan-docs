@@ -17,7 +17,7 @@ sidebar: websocket_SocketTask-onOpen
 **方法参数**：Function callback
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar: websocket_SocketTask-onOpen
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c0971dfd26e12cd56876819535843b171573042484363" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -40,15 +40,13 @@ sidebar: websocket_SocketTask-onOpen
 
 ```js
 Page({
-    data: {
-        
-    },
+    data: { },
     onOpen() {
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
@@ -61,7 +59,7 @@ Page({
                 content: '监听打开事件成功'
             });
         }),
-        this.socketTask = socketTask
+        this.socketTask = socketTask;
     }
 });
 ```

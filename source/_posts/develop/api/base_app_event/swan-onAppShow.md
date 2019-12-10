@@ -48,7 +48,7 @@ sidebar: swan-onAppShow
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -62,7 +62,7 @@ sidebar: swan-onAppShow
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
  
 * 示例一：在onShow中使用 
@@ -92,7 +92,6 @@ App({
     onLaunch: function () {
         swan.onAppShow(function(res) {
             console.warn('请在真机中进行中进行验证,在工具中点击工具栏的刷新按钮也可模拟onShow触发事件，开发者按照自己的业务逻辑进行监听，被触发时机和App.onShow一致。');
-            // Doing  something
             swan.showModal({
                 title: 'res',
                 content: JSON.stringify(res),

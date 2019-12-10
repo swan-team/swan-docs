@@ -13,7 +13,7 @@ sidebar: media_image
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/image.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- |---- |---- |
@@ -24,7 +24,9 @@ sidebar: media_image
 | bindload | HandleEvent  | | 否 |当图片载入完毕时，发布到 AppService 的事件名，事件对象 event.detail = {height:'图片高度px', width:'图片宽度px'}|
 
 
-**mode 有效值**： 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
+### **mode 有效值** 
+
+有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
 
 |模式 |值  |说明|
 |--- | ---- |---- |
@@ -42,8 +44,8 @@ sidebar: media_image
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -71,23 +73,29 @@ sidebar: media_image
     </div>    
 </div>
 
-**代码示例**：
+### **代码示例1 - 缩放模式** 
 
-  <a href="swanide://fragment/a65834765b18e32b8bbf4473c526c4141565503512941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+  <a href="swanide://fragment/21139032b621d4c88d848f290fadd0bd1575135550850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
-<view class="container">
-    <view class="page-section" s-for="{{array}}">
-        <view class="page-section-title">{{item.text}}</view>
-        <view class="page-section-demo">
-            <image class="image"
-                data-name="{{item.mode}}"
-                bindtap="onTap"
-                mode="{{item.mode}}" src="{{src}}" binderror="imageError" bindload="imageLoad" />
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>缩放模式</view>
+            <view data-type="scaleToFill" bindtap="onTap">点击恢复原图</view>
         </view>
-    </view>
+        <view class="page-section-demo">
+        <image class="image" mode="{{type}}" src='https://b.bdstatic.com/miniapp/image.png' binderror="imageError" bindload="imageLoad" />
+        </view> 
+     </view>
+        <scroll-view scroll-y='true'>
+            <view class="card-area" s-for="item in array">
+                <view class="top-description border-bottom">{{item.text}}</view>
+                <button type="primary" class="page-section-title" data-type="{{item.mode}}" bindtap="onTap">{{item.mode}}</button>
+            </view>
+        </scroll-view>
 </view>
 ```
 * 在 js 文件中
@@ -95,19 +103,65 @@ sidebar: media_image
 ```js
 Page({
     data: {
-        array: [{
+      array: [{
             mode: 'scaleToFill',
-            text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
+            text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应',
         }, {
             mode: 'aspectFit',
-            text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
+            text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来',
         }, {
             mode: 'aspectFill',
-            text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
+            text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来',
         }, {
             mode: 'widthFix',
-            text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变'
-        }, {
+            text: 'widthFix：宽度不变，高度自动变化，保持原图宽高比不变',
+        }],
+      type: ''
+    },
+    imageError(e) {
+      console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
+    },
+    onTap(e) {
+        console.log('image 发生 error 事件，携带值为', e.currentTarget.dataset.type);
+        this.setData({'type': e.currentTarget.dataset.type})
+    },
+    imageLoad(e) {
+      console.log('image 加载成功', e);
+    },
+});
+```
+
+### **代码示例2 - 裁剪模式** 
+
+  <a href="swanide://fragment/7aa0d436bf859e57db61d570b21878141575135402549" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>裁剪模式</view>
+            <view data-type="scaleToFill" bindtap="onTap">点击恢复原图</view>
+        </view>
+        <view class="page-section-demo">
+        <image class="image" mode="{{type}}" src='https://b.bdstatic.com/miniapp/image.png' binderror="imageError" bindload="imageLoad" />
+        </view> 
+     </view>
+        <scroll-view scroll-y='true'>
+            <view class="card-area" s-for="item in array">
+                <view class="top-description border-bottom">{{item.text}}</view>
+                <button type="primary" class="page-section-title" data-type="{{item.mode}}" bindtap="onTap">{{item.mode}}</button>
+            </view>
+        </scroll-view>
+</view>
+```
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+      array: [{
             mode: 'top',
             text: 'top：不缩放图片，只显示图片的顶部区域'
         }, {
@@ -135,24 +189,41 @@ Page({
             mode: 'bottom right',
             text: 'bottom right：不缩放图片，只显示图片的右下边区域'
         }],
-        src: 'https://b.bdstatic.com/miniapp/image.png',
+      type: ''
     },
     imageError(e) {
-        console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
+      console.log('image 发生 error 事件，携带值为', e.detail.errMsg);
     },
     onTap(e) {
-        console.log('image 发生 tap 事件', e);
+        console.log('image 发生 error 事件，携带值为', e.currentTarget.dataset.type);
+        this.setData({'type': e.currentTarget.dataset.type})
     },
     imageLoad(e) {
-        console.log('image 加载成功', e);
+      console.log('image 加载成功', e);
     },
-});
-
+  });
 ```
- 
+### **代码示例3 - 可放动图** 
 
+  <a href="swanide://fragment/a1ee4d3565a01e332c54460933b1c8ca1575135782389" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**Bug & Tip**：
+* 在 swan 文件中
 
-* 支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
-* image 组件默认宽度 300px、高度 225px。
+```xml
+<image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
+```
+
+### **代码示例4 - 图片懒加载** 
+
+  <a href="swanide://fragment/a1ee4d3565a01e332c54460933b1c8ca1575135782389" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
+```
+
+## **Bug & Tip**
+
+* Tip：支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。
+* Tip：image 组件默认宽度 300px、高度 225px。

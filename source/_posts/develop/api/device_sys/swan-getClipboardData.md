@@ -5,9 +5,13 @@ nav: api
 sidebar: swan-getClipboardData
 ---
 
- 
+
 
 **解释**：获取系统剪贴板内容
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/clipboardData.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -25,10 +29,89 @@ sidebar: swan-getClipboardData
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
 
-**示例**：
-<a href="swanide://fragment/6fec884cc46de9ec15292cbd1da569701569485595295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**
 
->在 swan/js 文件中代码示例与[swan.setClipboardData](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/)相同。
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getClipboardData.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1**：
+
+<a href="swanide://fragment/4c450f850d7cbc51e124ccb8eeb2e9da1574215012467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+```js
+Page({
+    data: {
+        clipboardData: ''
+    },
+    getClipboardData() {
+        swan.getClipboardData({
+            success: res => {
+                console.log('getClipboardData success');
+                this.setData('clipboardData', res.data);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取剪贴板内容失败',
+                    icon: 'none'
+                });
+                console.log('getClipboardData fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2**：
+
+<a href="swanide://fragment/de4e9dfd7aebdc2f056b590d607663bd1575143435273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            小程序中只有text节点可以进行复制操作，用户在其他非小程序进行了复制操作，也可放到这里～
+        </view>
+        <view class="content">{{content}}</view>
+        <button bind:tap="getClipboardData" type="primary" hover-stop-propagation="true">点击粘贴</button>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        content: '这里是粘贴内容'
+    },
+    getClipboardData() {  
+        swan.getClipboardData({
+            success: res => {
+                console.log('getClipboardData success');
+                this.setData('content', res.data);
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '获取剪贴板内容失败',
+                    icon: 'none'
+                });
+                console.log('getClipboardData fail', err);
+            }
+        });
+    }
+});
+```
 
 
 #### 错误码

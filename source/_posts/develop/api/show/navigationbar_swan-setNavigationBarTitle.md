@@ -24,22 +24,61 @@ sidebar: navigationbar_swan-setNavigationBarTitle
 |fail   | Function|    否 | |   接口调用失败的回调函数|
 |complete   | Function   | 否| |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
-<a href="swanide://fragment/66fa0985fb6f44388c9b21f76651cfe51569464933222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/setnavigationbartitle.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+<a href="swanide://fragment/01552c32fa4399c3ae2b3465ecd5977c1574136270589" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <input bind:input="titleInput" class="input border-bottom" type="text" placeholder="请输入页面标题并点击设置即可"/>
+        <button bind:tap="setNavigationBarTitle" type="primary" hover-stop-propagation="true">设置框架标题</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-    swan.setNavigationBarTitle({
-        title: 'xxx',
-        success: res => {
-            console.log('setNavigationBarTitle success', res);
-        },
-        fail: err => {
-            console.log('setNavigationBarTitle fail', err);
+Page({
+    data: {
+        newTitle: ''
+    },
+    titleInput(e) {
+        this.setData('newTitle', e.detail.value);
+    },
+    setNavigationBarTitle(e) {
+        let newTitle = this.getData('newTitle');
+        if (!newTitle) {
+            swan.showToast({
+                title: '请输入标题'
+            });
+            return;
         }
-    });
+        swan.setNavigationBarTitle({
+            title: newTitle
+        });
+    }
+});
 ```
+
 #### 错误码
 
 * Andriod

@@ -41,7 +41,17 @@ const TAG_MAP = {
     'tutorial': '快速入门'
 };
 
+const BOARD_URL_MAP = {
+    'data': '/docs/data/concept/',
+    'design': '/docs/design/overview/introduction/',
+    'develop': '/docs/develop/fuctionlist/list/',
+    'introduction': '/docs/introduction/enter_application/',
+    'operations': '/docs/operations/specification/',
+    'third': '/docs/third/create/'
+};
+
 module.exports = {
     BOARD_MAP,
-    TAG_MAP
+    TAG_MAP,
+    BOARD_URL_MAP
 };

@@ -1,5 +1,5 @@
 ---
-title: 下发条件说明
+title: 模板消息下发条件 
 header: develop
 nav: serverapi
 sidebar: sendintroduction

@@ -9,6 +9,11 @@ sidebar: liveplayercontext_LivePlayerContext-play
 
 **解释**：播放 
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_LivePlayerContextPlay.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -19,9 +24,31 @@ sidebar: liveplayercontext_LivePlayerContext-play
 |fail  |Function  |   |否 |接口调用失败的回调函数|
 |complete   | Function   |  |否 | 接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/128fce811aa7dee160511ca5679f837f1573522392276" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/Lplay.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+<a href="swanide://fragment/a6023d9b3dc99a25b9a79575a5b98fad1574008679886" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+
+* 在 swan 文件中
+
+```html
+<view class="live-play">
+    <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}"></live-player>
+    <button type="primary" bind:tap="livePlay">开始播放 play</button>
+</view>
+```
 
 * 在 js 文件中
 ```js

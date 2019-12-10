@@ -2,17 +2,36 @@
 title: BackgroundAudioManager.seek
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.seek
+sidebar: backgroundaudiomanager_BackgroundAudioManager-seek
 ---
 
 
 **解释**：跳转到指定位置（单位：s）
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerSeek.png"  class="demo-qrcode-image" />
+
 **方法参数**：Number position
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/85bfa296545313f3800800d36c7af6411573440842559" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/seek.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+
+<a href="swanide://fragment/70ab4fb20d9d4644f13af709dff33f111573699746282" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

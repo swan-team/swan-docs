@@ -142,17 +142,46 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 > 注意：在授权前需要在第三方平台-设置-修改授权发起页域名处设置域名，否则提示发起页域名错误
 
 页面地址:
+
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4&type=1
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4&type=1&user_id=1asdqwe1eWQ
 ```
 参数说明
 
-|参数名称|	类型|	是否必须|	描述|
-|---|---|---|---|
-|client\_id|string|是|	第三方平台Key|
-|pre\_auth\_code|string|是	|预授权码|
-|redirect\_uri|string|是|回调URI|
-|type|int|是|固定为1，表明授权类型为代注册或代创建|
+| 参数名称        | 类型   | 是否必须 | 描述                                  |
+| --------------- | ------ | -------- | ------------------------------------- |
+| client\_id      | string | 是       | 第三方平台Key                         |
+| pre\_auth\_code | string | 是       | 预授权码                              |
+| redirect\_uri   | string | 是       | 回调URI                               |
+| type            | int    | 是       | 固定为1，表明授权类型为代注册或代创建 |
+| user_id | string | 否 |    用户唯一标示，在授权成功后推送中包含，默认随机生成 |
+
+当授权成功后，百度服务器会向第三方平台方的授权事件接收URL（创建第三方平台时填写）推送相关通知。
+
+POST数据示例：
+
+#### 授权成功通知
+
+```json
+{
+    "tpAppId": 14278283,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "REGISTER_AUTH_SUCCESS",
+    "authorizationCode":"代注册授权码",
+    "createAuthorizationCode":"代创建授权码",
+    "userId": "用户唯一标示,与之前生成授权二维码页面时user_id一致"
+}
+```
+#### 参数说明
+
+| 参数名                  | 类型   | 描述                                               |
+| ----------------------- | ------ | -------------------------------------------------- |
+| tpAppId                 | int    | 第三方平台id                                       |
+| event                   | string | REGISTER_AUTH_SUCCESS：代注册授权成功              |
+| eventTime               | string | 事件发生时间 示例：2019-03-01 10:00:00             |
+| authorizationCode       | string | 代注册授权码                                       |
+| createAuthorizationCode | string | 代创建授权码                                       |
+| userId                  | string | 用户唯一标示,与之前生成授权二维码页面时user_id一致 |
 
 ### 5、授权回调，获取代注册授权码和代创建授权码
 

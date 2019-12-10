@@ -15,7 +15,7 @@ sidebar: tab_swan-navigateTo
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object
@@ -30,26 +30,68 @@ sidebar: tab_swan-navigateTo
 |complete  |  Function  |  否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**示例**：
-<a href="swanide://fragment/45278c71d4a12fb61433343139698da11569475457272" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/navigeto.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1**
+<a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
+Page({
+    data: { },
+    navigateTo(e) {
+        swan.navigateTo({
+            url: '/detail/detail?id=新页面'
+        });
+    }
+});
+```
 
-navigateTo(e) {
-    swan.navigateTo({
-        url: '/pages/detail/detail',
-        success: res => {
-            console.log('navigateTo success')
-        },
-        fail: err => {
-            console.log('navigateTo fail')
-        }
-    });
-},
+**代码示例2 - 根据页面栈来判断页面层级**
+<a href="swanide://fragment/c6fca5358fe9204946156bbe2264b1941575403962704" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+// 目标页面
+Page({
+    onLoad(options) {
+        this.setData({
+            'id': options.id
+        });
+    },
+    onShow() {
+        console.log(getCurrentPages()); // [{uri: 'index/index'}]
+    },
+    navigateBack(e) {
+        swan.navigateBack({
+            delta: 2
+        });
+    }
+});
 
 ```
-**Bug & Tip**：
+**Bug & Tip**
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
  

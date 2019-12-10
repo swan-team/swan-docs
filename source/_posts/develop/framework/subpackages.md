@@ -18,7 +18,7 @@ sidebar: subpackages
 
 ### 使用方法
 
-[在开发者工具中预览效果](swanide://fragment/5ec5755c02bef7496cfadf0cccd8baef1573114425086)
+[在开发者工具中预览效果](swanide://fragment/46f0c277ccf2f56f2cb8072bb2b50def1573614948336)
 
 假设支持分包的小程序，目录结构如下：
 
@@ -55,18 +55,22 @@ sidebar: subpackages
     ],
     "subPackages": [
         {
-            "root": "packageA",
+            "root": "packageA/pages",
+            "name": "packageOne",	
             "pages": [
-                "pages/pageOne/pageOne",
-                "pages/pageTwo/pageTwo"
-            ]
+                "pageOne/pageOne",
+                "pageTwo/pageTwo"
+            ],
+            "independent": true
         },
-	{
+        {
             "root": "packageB/pages",
+            "name": "packageTwo",	
             "pages": [
-                "pageThree/pageThree",
-		"pageFour/pageFour"
-            ]
+                "pages/pageThree/pageThree",
+                "pages/pageFour/pageFour"
+            ],
+            "independent": true
         }
     ],
     "tabBar": {
@@ -100,7 +104,7 @@ subPackages 中，每个分包的配置有以下几项：
 |字段|	类型|	说明|
 |---|---|---|
 |root|	String|	分包根目录|
-|name|	String|	分包别名，<a href="https://smartprogram.baidu.com/docs/develop/api/open_preloadsubpackage/#loadSubPackage/">分包预下载</a>时可以使用。|
+|name|	String|	分包别名。|
 |pages|	StringArray|	分包页面路径，相对于分包根目录。|
 |independent|	Boolean|	分包是否是独立分包|
 
@@ -197,7 +201,7 @@ subPackages 中，每个分包的配置有以下几项：
 
 为了在独立分包中满足这一需求，基础库`3.60.2`版本开始`getApp`支持`[allowDefault]`参数，在`App`未定义时返回一个默认实现。当主包加载，`App`被注册时，默认实现中定义的属性会被覆盖合并到真正的`App`中。
 
-**示例代码：**
+**代码示例**
 
 - 独立分包中
 ```js

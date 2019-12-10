@@ -40,7 +40,7 @@ sidebar:  classify_swan-ai-plantClassify
 |name| String|	植物名称，示例：吉娃莲。|
 |score	|Number|	置信度，示例：0.5321。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -54,24 +54,28 @@ sidebar:  classify_swan-ai-plantClassify
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/2af91115191447b4b93ae469129f7fb91569501181045" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.plantClassify({
-      image,
-      success: res => {
-        console.log('plantClassify res', res.result);
-      },
-      fail: err => {
-        console.log('plantClassify err', err);
-      }
-    });
-  }
+Page({
+    plantClassify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.plantClassify({
+                    image,
+                    success: res => {
+                        console.log('plantClassify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('plantClassify err', err);
+                    }
+                });
+            }
+        });
+    }
 });
 ```
 

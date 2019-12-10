@@ -11,20 +11,28 @@ sidebar: video_swan-chooseVideo
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" />  
 
 **方法参数**：Object object
 
 **`object`参数说明**：
 
-|属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-|sourceType | `Array.<string>` |否 | |  album 从相册选择视频，camera 使用相机，默认二者都有。|
-|compressed  | Boolean | 否  | | 是否压缩所选的视频源文件，默认值为true，需要压缩。|
-|maxDuration  | Number | 否  | | 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|
-|success |Function  |  否 | | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|
-|fail  |  Function |   否 || 接口调用失败的回调函数|
-|complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|属性名 |类型  |必填 | 默认值 |说明|最低版本|
+|---- | ---- | ---- | ----|----|----|
+|sourceType | Array.&lt;string&gt; |否 | ['album', 'camera']|  album 从相册选择视频，camera 使用相机，默认二者都有。|-|
+|compressed  | Boolean | 否  | true| 是否压缩所选的视频源文件，默认值为true，需要压缩。|-|
+|maxDuration  | Number | 否  | 60| 拍摄视频最长拍摄时间，（单位：s）。最长支持 60 秒。|-|
+|camera  | String | 否  | 'back'| 默认拉起的是前置或者后置摄像头。部分 Android 手机下由于系统 ROM 不支持无法生效。|3.120.1|
+|success |Function  |  否 | | 接口调用成功，返回视频文件的临时文件路径，详见返回参数说明。|-|
+|fail  |  Function |   否 || 接口调用失败的回调函数|-|
+|complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|-|
+
+**camera参数说明**：
+
+|参数名|参数类型|说明|
+|---|---|---|
+|back|String|默认拉起后置摄像头|
+|front|String|默认拉起前置摄像头|
 
 **success返回参数说明**：
 
@@ -37,11 +45,24 @@ sidebar: video_swan-chooseVideo
 |height | 返回选定视频的长 |
 |width | 返回选定视频的宽 |
 
-**说明**：
-文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
-**示例**：
-<a href="swanide://fragment/b86b8c8cd6f7ad38c0139a8dc9a8699c1569395309880" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseVideo1.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/c82decd60ec2154b7458ded836c3d2c91573651529736" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```javascript
 Page({
@@ -50,6 +71,7 @@ Page({
             sourceType: ['album', 'camera'],
             compressed: false,
             maxDuration: 60,
+            camera: 'back',
             success: res => {
                 // 成功返回选定视频的临时文件路径
                 console.log('res', res.tempFilePath);
@@ -81,3 +103,6 @@ Page({
 |1002|用户取消操作|
 |1004|小程序文件目录为空|
 
+**Bug & Tip**
+
+文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。

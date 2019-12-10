@@ -2,15 +2,34 @@
 title: BackgroundAudioManager.onWaiting 
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onWaiting 
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
 ---
 
 
 **解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnWaiting.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：Function callback
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onwaiting.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/589a045751e83eb654e932c7adcf70641573424513005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -10,6 +10,11 @@ sidebar: community_swan-openCommunityEditor
 > 基础库 3.90.1 版本开始支持。以下版本请使用小程序发布器组件
 
 **解释**： 调起原生全屏内容发布器，并支持开发者配置发布器展示模块。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_closeCommunityEditor.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|
@@ -35,8 +40,8 @@ sidebar: community_swan-openCommunityEditor
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
-| tempFilePaths  | `Array.<string>` |图片的本地文件路径列表 。|
-| tempFiles  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象。|
+| tempFilePaths  | Array.&lt;string&gt; |图片的本地文件路径列表 。|
+| tempFiles  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 | title | String | 标题 |
 | content | String | 正文 |
 
@@ -79,9 +84,23 @@ imageConf: {
 
 
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/1742fba61202ef6776302e6eba1c383e1572759108236" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/openCommunityEditor.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/35e77aafc2ff31ec9a169e4cda4657191574130936339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 swan.openCommunityEditor({

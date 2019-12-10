@@ -13,7 +13,7 @@ sidebar: formlist_form
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/form.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+## **属性说明**
 
 |属性名 |类型 | 默认值 | 必填 |说明|最低版本|
 |-----|---- |---- |----|----|----|
@@ -22,11 +22,11 @@ sidebar: formlist_form
 |template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="http://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取|3.105.3|
 |subscribe-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息时所使用的唯一标识符，内容由开发者自定义，用来标识订阅场景<br>注意：同一用户在同一 subscribe-id 下的多次授权不累积下发权限，只能下发一条。若要订阅多条，需要不同 subscribe-id |3.105.3|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}`,当report-type 为 subscribe 时，status 和message 中返回用户授权具体信息| |
-| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件| |
+| bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件| | |
 
 
 
-**report-type有效值**：
+### **report-type有效值**
 
 |值 |说明|
 |---- |---- |
@@ -34,7 +34,7 @@ sidebar: formlist_form
 | subscribe |订阅类模板消息，需要用户授权才可发送|
 
 
-**report-type 为 subscribe时，status 和 message具体值**：
+### **report-type 为 subscribe时，status 和 message具体值**
 
 status 为 Number 类型，message 为 String类型，当用户永久拒绝授权的时候，建议开发者不要再展示订阅消息授权面板入口。
 
@@ -46,7 +46,8 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 | 500104 |请求模板内容失败|
 | 500105 |请求formId失败|
 
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,51 +61,56 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例1 - 普通表单**：
 
-<a href="swanide://fragment/76cdbf7140fe788bb467feeca6abaddf1565507977593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6d6936dea3bcd07995ee815f6c5ff6a71575343650280" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
-    <form
-        bindsubmit="formSubmit"
-        bindreset="formReset"
-        report-submit="true"
-        report-type="subscribe"
-        subscribe-id="food"
-        template-id="BD0001"
-    >
-        <view class="section">
-            <view class="section-title">switch</view>
-            <switch name="switch" checked/>
+    <form bindsubmit="formSubmit"
+        bindreset="formReset">
+        <view class="card-area">
+            <view class="top-description border-bottom">开关选择器</view>
+            <view class="item-scroll">
+                <text class="switch-text">开关</text>
+                <switch></switch>
+            </view>
         </view>
-        <view class="section">
-            <view class="section-title">radio</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">单项选择器</view>
             <radio-group name="radio-group">
-                <label><radio value="radio1" checked/>选中</label>
-                <label class="label"><radio value="radio2"/>未选中</label>
+                <radio class="block border-bottom" value="radio1">单选项一</radio>
+                <radio class="block" value="radio2">单选项二</radio>
             </radio-group>
         </view>
-        <view class="section section-gap">
-            <view class="section-title">checkbox</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">多项选择器</view>
             <checkbox-group name="checkbox">
-                <label><checkbox value="checkbox1" checked/>选项一</label>
-                <label class="label-checkbox"><checkbox  value="checkbox2"/>选项二</label>
+                <label class="block border-bottom">
+                    <checkbox value="checkbox1">多选项一</checkbox>
+                </label>
+                <label class="block border-bottom">
+                    <checkbox value="checkbox2">多选项二</checkbox>
+                </label> 
+                <label class="block">
+                    <checkbox value="checkbox2">多选项三</checkbox>
+                </label>
             </checkbox-group>
         </view>
-        <view class="section section-gap">
-            <view class="section-title">slider</view>
-            <slider name="slider" show-value ></slider>
+        <view class="card-area">
+            <view class="top-description border-bottom">滑块选择器</view>
+            <slider class='slider' activeColor="#3388FF" block-size="20" name="slider"></slider>
         </view>
-        <view class="section">
-            <view class="section-title">input</view>
+        <view class="card-area">
+            <view class="top-description border-bottom">输入框</view>
+            <input name="input" class="ipt" placeholder="请在此输入" />
         </view>
-         <input name="input" placeholder="这是一个输入框" />
-        <view class="btn-area">
-            <button formType="submit" type="primary">Submit</button>
-            <button formType="reset">Reset</button>
+        <view class="card-area">
+            <view class="top-description border-bottom">提交表单</view>
+            <button formType="submit" type="primary">提交</button>
+            <button formType="reset">清空</button>
         </view>
     </form>
 </view>
@@ -126,4 +132,108 @@ Page({
     }
 });
 
+```
+
+### **代码示例2 - 模板类型表单**：
+
+<a href="swanide://fragment/0cf7c53906fff54ad2a10034cdfb8ef21575461381127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <form report-submit="{{true}}" report-type="subscribe" template-id="BD0003" subscribe-id="8026" bindsubmit="formSubmit"
+        bindreset="formReset">
+            <button formType="submit" type="primary">report-type为subscribe</button>
+        </view>
+    </form>
+</view>
+
+<view class="wrap">
+    <form report-submit="{{true}}" report-type="default" bindsubmit="formSubmit"
+        bindreset="formReset">
+            <button formType="submit" type="primary">report-type为default</button>
+        </view>
+    </form>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    onLoad() {
+        // 此组件需要在登陆态下使用
+        swan.login()
+    },
+    formSubmit(e) {
+        swan.showModal({
+            title: '表单数据',
+            content: JSON.stringify(e.detail.message) + '/' +JSON.stringify(e.detail.status),
+            confirmText: '确定',
+            showCancel: false
+        });  
+    }
+});
+```
+
+### **代码示例3 - 获取getTemplateLibraryList示例**：
+
+<a href="swanide://fragment/d422d409d3a0257de70e9007b96871bc1575446314278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">点击获取Access Token</view>
+        <button bind:tap="AccessToken" type="primary" hover-stop-propagation="true">button</button>
+    </view>
+    <view class="card-area">
+        <view class="top-description border-bottom">点击获取getTemplateLibraryList
+</view>
+        <button bind:tap="getTemplateLibraryList" type="primary" hover-stop-propagation="true">button</button>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        access_token: ''
+    },
+    AccessToken() {
+        swan.request({
+            url: 'https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=WPGsbTTGEQ2VRnNcEIjyo5nT1wGxc3PZ&client_secret=zkDSFBfXvHtmtMAsNrQ8sFN9DNLFNZE4&scope=smartapp_snsapi_base',
+            method: 'POST',
+            success: res => {
+                console.log('request success', res);
+                console.log('access_token', res.data.access_token);
+                this.setData('access_token', res.data.access_token)
+                swan.showModal({
+                    title: '请求到的数据',
+                    content: JSON.stringify(res.data.data),
+                    showCancel: false
+                });
+            },
+            fail: err => {
+                console.log('request fail', err);
+            }
+        });
+    },
+    getTemplateLibraryList() {
+        let access_token = this.getData('access_token');
+        console.log(access_token)
+        swan.request({
+            url: 'https://openapi.baidu.com/rest/2.0/smartapp/template/librarylist?access_token=24.2bd968d94d25bba71157b82890e97422.2592000.1578037913.282335-11136662&offset=2&count=2',
+            method: 'POST',
+            success: res => {
+                console.log('request success', res);
+            },
+            fail: err => {
+                console.log('request fail', err);
+            }
+        });
+    }
+});
 ```

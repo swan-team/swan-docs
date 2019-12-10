@@ -163,7 +163,7 @@ sidebar: face_swan-ai-faceDetect
 |right_cheek| number |右脸颊遮挡比例，[0-1]，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1]，1 表示完全遮挡。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -177,28 +177,90 @@ sidebar: face_swan-ai-faceDetect
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - image_type为BASE64**：
 
 <a href="swanide://fragment/fc4fb555f1a72d086ef4698de4c0a8b01569415643600" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.faceDetect({
-        image,
-        image_type: 'BASE64',
-        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
-        max_face_num: '1',
-        face_type: 'LIVE',
-        success: res => {
-            console.log(res.face_list);
-       },
-       fail: err => {
-            console.log( err);
-        }
-    });
-  }
+Page({
+    faceDetect() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.faceDetect({
+                    image,
+                    image_type: 'BASE64',
+                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                    max_face_num: '1',
+                    face_type: 'LIVE',
+                    success: res => {
+                        console.log(res.face_list);
+                },
+                fail: err => {
+                        console.log( err);
+                    }
+                });
+            }
+        })
+    }
+});
+```
+
+**代码示例2 - image_type为URL**：
+
+<a href="swanide://fragment/b0ecedcb1fcb245aeb82adc06eb57c191575196761907" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    faceDetect() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.faceDetect({
+                    image:'https://b.bdstatic.com/miniapp/image/faceDetect.png',
+                    image_type: 'URL',
+                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                    max_face_num: '1',
+                    face_type: 'LIVE',
+                    success: res => {
+                        console.log(res.face_list);
+                    },
+                    fail: err => {
+                            console.log( err);
+                    }
+                });
+            }
+        })
+    }
+});
+```
+
+**代码示例3 - image_type为FACE_TOKEN:**：
+
+<a href="swanide://fragment/b9d0ec89d4f2c17d896234f0a8a9d4d51575196922700" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    faceDetect() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.faceDetect({
+                    image:'4160b708a826b18de95fe5c9a098a436', //可由之前图片检测的返回值中获得
+                    image_type: 'FACE_TOKEN',
+                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                    max_face_num: '1',
+                    face_type: 'LIVE',
+                    success: res => {
+                        console.log(res.face_list);
+                    },
+                    fail: err => {
+                            console.log( err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

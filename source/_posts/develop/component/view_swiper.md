@@ -13,7 +13,7 @@ sidebar: view_swiper
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/swiper.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+## 属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |
@@ -33,7 +33,7 @@ sidebar: view_swiper
 |bindchange | EventHandle |  | 否 |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
 |bindanimationfinish|EventHandle| | 否 |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-**change 事件 source 返回值**
+### **change 事件 source 返回值**
 
 change事件中的source字段，表示触发change事件的原因，可能值如下：
 
@@ -43,8 +43,9 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 | touch | 用户划动导致的swiper切换 |
 | "" | 其他原因将返回空字符串 |
 
+## 示例
 
-**图片示例**：
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -58,7 +59,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例1**：
 
 <a href="swanide://fragment/d0dec68787a4c179328c6a22d80325981565503528602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -183,8 +184,170 @@ Page({
 });
 ```
 
+### **代码示例2 - 用于实现顶部标签切换**：
 
-**Bug & Tip**：
+<a href="swanide://fragment/82da7e569b409a1fa4fb753a010fd35e1575120753274" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
-* 其中只可放置 swiper-item 组件，否则会导致未定义的行为。
+* 在 swan 文件中
+
+```html
+<view class="container"> 
+    <!-- 顶部导航 -->
+    <view class="swiper-tab">
+        <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swiperNav">Tab1</view> 
+        <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swiperNav">Tab2</view>
+        <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swiperNav">Tab3</view>
+    </view>
+    <!-- 顶部导航对应的内容 -->
+    <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+        <swiper-item>   
+            <!-- 页面可使用自定义组件编写 -->
+            <view>我是tab1</view>   
+        </swiper-item>
+        <swiper-item>
+            <view>我是tab2</view>
+        </swiper-item> 
+        <swiper-item>
+            <view>我是tab3</view>
+        </swiper-item>
+    </swiper>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        currentTab: 0,
+    },
+    swiperNav(e) {
+        console.log(e); 
+       
+        if (this.data.currentTab === e.target.dataset.current) {
+            return false;
+        } else {
+            this.setData({ 
+                currentTab: e.target.dataset.current, 
+            })
+        }
+    },
+    swiperChange: function (e) {
+        console.log(e);  
+        this.setData({
+            currentTab: e.detail.current, 
+        })
+    }
+})
+```
+
+* 在 css 文件中 
+
+```js
+.swiper-tab {
+    display: flex;
+    flex-direction: row;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+}
+
+.tab-item {
+    width: 33.3%;
+    text-align: center; 
+    font-size: .16rem;
+    color: rgb(116, 113, 113);
+}
+
+.swiper {
+    height: 1100px; 
+    background: #dfdfdf;
+}
+
+.on {
+    color: #5B9FFF;
+    border-bottom: 1px solid #5B9FFF;
+    padding-bottom: 2px
+}
+```
+
+### **代码示例3 - 自定义底部切换圆点**：
+
+<a href="swanide://fragment/74666ea390cd54afd971879d8028578d1575819223978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="swiper-wrap">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+        <swiper-item s-for="{{slider}}">
+            <image src="{{item.imageUrl}}" class="img"></image>
+        </swiper-item>
+    </swiper>
+    
+    <view class="dots">
+        <view s-for="{{slider}}" class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        slider: [{
+            imageUrl: 'https://b.bdstatic.com/miniapp/image/hypnosis.jpeg'
+        }, {
+            imageUrl: 'https://b.bdstatic.com/miniapp/images/hypnosis.jpeg'
+        }, {
+            imageUrl: 'https://b.bdstatic.com/miniapp/image/airCaptain.jpeg'
+        }],
+        swiperCurrent: 0
+    },
+    swiperChange(e) {
+        this.setData({
+            swiperCurrent: e.detail.current
+        })
+    }
+})
+```
+
+* 在 css 文件中 
+
+```js
+.swiper-wrap{
+    position: relative;
+}
+.swiper-wrap .swiper{
+    height: 300rpx;
+}
+.swiper-wrap .swiper .img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrap .dots{
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+.swiper-wrap .dots .dot{
+    margin: 0 8rpx;
+    width: 14rpx;
+    height: 14rpx;
+    background: #fff;
+    border-radius: 8rpx;
+    transition: all .6s;
+}
+
+.swiper-wrap .dots .dot.active{
+    width: 24rpx;
+    background: #38f;
+}
+```
+
+## **Bug & Tip**
+
+* Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
+* Tip：其中只可放置 swiper-item 组件，否则会导致未定义的行为。

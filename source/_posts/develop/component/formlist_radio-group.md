@@ -17,13 +17,14 @@ sidebar: formlist_radio-group
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio.png"  class="demo-qrcode-image" />
 
-**属性说明**：
+## **属性说明**
 
 | 属性名 | 类型 | 默认值 | 必填 | 说明 |
 | ---- | ---- | ---- | ---- | ---- |
 | bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
 
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +38,7 @@ sidebar: formlist_radio-group
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例**
 
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

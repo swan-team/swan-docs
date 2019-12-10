@@ -15,7 +15,7 @@ sidebar: uploadTask
 **方法参数**：无
 
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,16 +29,22 @@ sidebar: uploadTask
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+* 在 swan 文件中
+
+```html
+<button bindtap="createUploadTask">创建uploadFile实例对象</button>
+```
+
+* 在 js 文件中
 ```js
 
 Page({
-    data: { 
-    },
-    uploadFile() {
+    data: { },
+    createUploadTask() {
         const uploadTask = swan.uploadFile({
             url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile', 
             filePath: "http://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
@@ -47,7 +53,7 @@ Page({
                 'content-type': 'application/json'
             },
             formData: {
-                'user': 'test'
+                'user': 'swan'
             },
             success: res => {
                 swan.showToast({
@@ -58,13 +64,13 @@ Page({
                 this.setData({filePath});
             },
             fail: err => {
-                console.log('fail', err);
                 swan.showToast({
                     title: '上传失败',
                     icon: none
                 });
+                console.log('uploadFile fail', err);
             },
-            complete() {
+            complete: () => {
                 console.log('complete');
             }
         });

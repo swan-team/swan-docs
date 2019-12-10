@@ -55,7 +55,7 @@ sidebar:  classify_swan-ai-logoClassify
 |height|	Number|	像素高|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,26 +69,30 @@ sidebar:  classify_swan-ai-logoClassify
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.logoClassify({
-      image,
-      custom_lib: false,
-      success: res => {
-        console.log('dishClassify res', res.result);
-      },
-      fail: err => {
-        console.log('dishClassify err', err);
-      }
-    });
-  }
+Page({
+    logoClassify() {
+        swan.chooseImage({
+            success: res => {
+              let image = res.tempFilePaths[0];
+              swan.ai.logoClassify({
+                  image,
+                  custom_lib: false,
+                  success: res => {
+                    console.log('dishClassify res', res.result);
+                  },
+                  fail: err => {
+                    console.log('dishClassify err', err);
+                  }
+              });
+            }
+        });
+    }
 });
 ```
 

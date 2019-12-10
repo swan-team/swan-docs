@@ -25,7 +25,7 @@ sidebar: websocket_swan-closeSocket
 |fail  |Function  |  否 接口调用失败的回调函数|
 |complete   | Function   | 否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: websocket_swan-closeSocket
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a5a74d0efd59156c0af2bfcbe0882e471573402421510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -64,7 +64,7 @@ Page({
             }
         });
         swan.onSocketOpen(function () {
-            that.setData({'openWebsocket': true})
+            that.setData({'openWebsocket': true});
         })
 
     },
@@ -72,7 +72,7 @@ Page({
         //注意这里有时序问题，
         //如果 swan.connectSocket 还没回调 swan.onSocketOpen，而先调用 swan.closeSocket，那么就做不到关闭 WebSocket 的目的。
         //必须在 WebSocket 打开期间调用 swan.closeSocket 才能关闭。
-        let openWebsocket = this.getData('openWebsocket')
+        let openWebsocket = this.getData('openWebsocket');
         if (openWebsocket) {
             swan.closeSocket({
                 code: '1001',

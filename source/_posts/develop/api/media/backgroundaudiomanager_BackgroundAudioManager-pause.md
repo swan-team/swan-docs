@@ -2,18 +2,38 @@
 title: BackgroundAudioManager.pause
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.pause
+sidebar: backgroundaudiomanager_BackgroundAudioManager-pause
 ---
 
 
 
 **解释**：暂停
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerPause.png"  class="demo-qrcode-image" />
+
+
 **方法参数**：无
  
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/fb668009b1eb06088ad1d8fc2b7148a71573440369183" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/pause.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+
+<a href="swanide://fragment/26641d4db43b374b8c4fab724f06ed171573699565658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 

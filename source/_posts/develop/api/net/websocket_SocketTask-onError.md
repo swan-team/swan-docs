@@ -15,7 +15,7 @@ sidebar: websocket_SocketTask-onError
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: websocket_SocketTask-onError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/988ec5f9b41c4f603e4358ca69d54b041573407221622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -42,7 +42,7 @@ Page({
             url: 'wss://xxx.websocket',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
@@ -52,10 +52,10 @@ Page({
             console.log('socketTask.onError success', res);
             swan.showModal({
                 title: '监听错误发送事件成功',
-                content: JSON.stringify(res)
+                content: JSON.stringify(res);
             });
         }),
-        this.socketTask = socketTask
+        this.socketTask = socketTask;
     }
 });
 ```

@@ -132,7 +132,7 @@ sidebar: appendix
 |presenter|	string|	主持人|		否|何炅|
 |guest	|string	|嘉宾	|	否|谢娜|
 |publish_time	|string	|内容原始发布时间|是	|2018年9月8日|
-|video_duration	|string|	视频时长|	是|按照00:00:00格式填写|
+|video_duration	|string|	视频时长|	是|按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20）|
 |pc_url	|string	|视频PC播放链接	|是（和h5_url需填一种）| |
 |h5_url	|string	|视频H5播放链接|是（和pc_url需填一种）| |
 |update_time|	string|	更新时间|否|	2018年9月10日 15:36:20|
@@ -159,7 +159,7 @@ sidebar: appendix
 ```
 { 
  "publish_time":"2019年6月3日”, 
- "video_duration":"00:03:43",
+ "video_duration":"03:43",
  "pc_url":"http://v.youku.com/v_show/id_XNDIxNDI4NTE4OA==.html",
  "h5_url":"https://m.youku.com/video/id_XNDIxNDI4NTE4OA==.html"
 }

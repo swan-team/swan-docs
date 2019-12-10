@@ -11,6 +11,10 @@ sidebar: background_swan-setBackgroundColor
 
 **解释**：设置窗口的背景颜色。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -24,26 +28,129 @@ sidebar: background_swan-setBackgroundColor
 |fail  |  Function |   否  | | 接口调用失败的回调函数| 
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|  
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/261c4a5f3e104b0d7120d30651879cf51569476555815" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/setBackgroundColor.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - backgroundColor：#000000**：
+
+<a href="swanide://fragment/66f332965704ae69bbdcaefe3db158fa1575139212532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```js
+<view class="container">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>设置窗口的背景颜色</view>
+            <view>色值为: #000000</view>
+        </view>
+            <button type="primary" bindtap="setBackgroundColor">setBackgroundColor</button>
+    </view>
+    <view class="page-title">
+        <view class="page-title-line"></view>
+        <view class="page-title-text">setBackgroundColor</view>
+    </view>
+</view>
+```
+
 
 * 在 js 文件中
 
 ```js
-
-swan.setBackgroundColor({
-    backgroundColor: '#000000',
-    backgroundColorTop: '#222222',
-    backgroundColorBottom: '#333333',
-    success: res => {
-        console.log('setBackgroundColor success');
-    },
-    fail: err => {
-        console.log('setBackgroundColor fail', err);
+Page({
+    setBackgroundColor() {
+        swan.setBackgroundColor({
+            backgroundColor: '#000000',
+            success: function () {
+                console.log('setBackgroundColor success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundColor fail', err);
+            }
+        });
     }
 });
-   
+```
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/backgroundColorTop.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例2 - backgroundColorTop：#FFC0CB**：
+
+<a href="swanide://fragment/78fa2cb4a9f355eb08b78ce9ad2cf41d1575139455048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    setBackgroundColor() {
+        swan.setBackgroundColor({
+            backgroundColorTop: '#FFC0CB',
+            success: function () {
+                console.log('setBackgroundColor success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundColor fail', err);
+            }
+        });
+    }
+});
+```
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/backgroundColorBottom.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例3 - backgroundColorBottom：#7B68EE**：
+
+<a href="swanide://fragment/b748d492aae0dcbcd9fe4aa8b0dea4251575139563423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    setBackgroundColor() {
+        swan.setBackgroundColor({
+            backgroundColorBottom: '#7B68EE',
+            success: function () {
+                console.log('setBackgroundColor success');
+            },
+            fail: function (err) {
+                console.log('setBackgroundColor fail', err);
+            }
+        });
+    }
+});
 ```
 
 #### 错误码

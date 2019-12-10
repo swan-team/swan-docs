@@ -6,34 +6,31 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.16.2） 
+### 最新正式版本（2.20.1） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
 
-### 最新 rc 版本（2.17.1-rc）
+### 最新 rc 版本（2.21.0-rc）
+
+> 包含大的新增特性，修复缺陷问题，通过内部测试的稳定版本。电脑本地可以同时安装rc版本和正式版本的工具，两种版本可独立自动更新。
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=rc) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=rc)
 
 * [rc 版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_rc/)
 
 
-<!-- ### 最新 Beta 版本（2.10.0-beta）
-
-> Beta版本含大的特性；通过内部测试，稳定性尚可，如果发现有问题，欢迎在工具内反馈入口进行反馈。
-
-* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=beta) /[Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=beta) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=beta)
-
-* [Beta版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/#Beta%E7%89%88%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/)
-
-使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。点击查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool/">历史更新日志</a>。 -->
-
 ## 历史版本下载链接：
 
 |mac|windows|
 |--|--|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/89383/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.20.1.dmg">2.20.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/b3c1f/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.20.1-x64.exe">2.20.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/8536e/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1.dmg">2.19.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/b4822/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1-x64.exe">2.19.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/733de/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1.dmg">2.18.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/272a9/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1-x64.exe">2.18.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/26d91/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.17.2.dmg">2.17.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/a9781/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.17.2-x64.exe">2.17.2</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/01bd1/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.3.dmg">2.16.3</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/2d0e3/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.3-x64.exe">2.16.3</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/a0d82/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.2.dmg">2.16.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/8b884/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.16.2-x64.exe">2.16.2</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/9bafb/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2.dmg">2.15.2</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/5fd52/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.15.2-x64.exe">2.15.2</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/3d730/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1.dmg">2.14.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/f949e/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.14.1-x64.exe">2.14.1</a>|

@@ -2,7 +2,7 @@
 title: 预检测工具
 header: develop
 nav: devtools
-sidebar: page_tool  
+sidebar: pre_testtool
 ---
  
 
