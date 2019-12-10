@@ -176,7 +176,6 @@ Page({
 </view>
 ```
 
-
 ### **说明**:
 `navigator-hover` 默认为:
 ```css
