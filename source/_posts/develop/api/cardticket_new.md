@@ -464,6 +464,9 @@ POST数据|Json数据
 ## 2.1 领券事件推送
 
 用户在领取卡券时，百度会把这个事件推送到开发者填写的`callbackUrl`上。
+开发者服务器收到请求必须做出下述回复:
+> 1.直接回复success（推荐方式）
+> 2.直接回复空串
 
 ##### 接口调用说明
 
@@ -531,7 +534,7 @@ POST数据|Json数据
  ![图片](../../../img/api/card_ticket/7.png)
 
 涉及开发者端+Server开发：
-1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/) 获取当前页面路径中的**coupon**参数；
+1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 获取当前页面路径中的**coupon**参数；
 
 ##### 代码示例（放在app.js中）
 ```
