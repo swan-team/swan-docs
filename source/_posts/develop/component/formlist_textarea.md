@@ -114,7 +114,7 @@ Page({
 
 ### **代码示例2 - 出现滚动条**
 
- <a href="swanide://fragment/734cdf54f64041526837042b7a9f39af1575977673258" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ <a href="swanide://fragment/4d35f3e24c2abccf95c01b962d9724051575985791570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -129,7 +129,7 @@ Page({
                 placeholder-class="plh" 
                 cursor="-1"
                 confirm-type="send"
-                confirm-hold="true"
+                confirm-hold="false"
                 fixed="{{true}}"
                 focus="{{focus}}"
                 cursor-spacing="20"
