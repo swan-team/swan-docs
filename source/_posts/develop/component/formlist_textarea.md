@@ -129,7 +129,7 @@ Page({
                 placeholder-class="plh" 
                 cursor="-1"
                 confirm-type="send"
-                confirm-hold="false"
+                confirm-hold="{{false}}"
                 fixed="{{true}}"
                 focus="{{focus}}"
                 cursor-spacing="20"
