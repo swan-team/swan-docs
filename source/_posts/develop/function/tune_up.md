@@ -27,7 +27,7 @@ sidebar: tune_up
 |bannedChannels| StringArray | 否 | | 需要隐藏的支付方式|
 |success |Function  |  否  | | 接口调用成功的回调函数|
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
-|complete  |  Function  |  否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|complete  |  Function  |  否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **orderInfo 参数说明**：
 
