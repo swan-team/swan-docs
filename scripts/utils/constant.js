@@ -25,7 +25,7 @@ const TAG_MAP = {
     'resource': '设计资源',
     'story': '设计故事',
     // 开发
-    'api': 'api',
+    'api': 'API',
     'appendix': '附录',
     'cloud': '云开发',
     'component': '组件',
