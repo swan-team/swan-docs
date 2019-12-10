@@ -156,7 +156,7 @@ hexo.extend.generator.register('programSearch', function (locals) {
                 const tmpPostBreadCrumbs = resBreadCrumbs.filter(function (item) {
                     // 保证该页面的url存在nav.yml文件中 且 name与sidebar对应
                     // todo: name与sidebar一一对应 @wenlixiu
-                    return (item.url === tmpPost.url) && (item.name === post.sidebar);
+                    return (item.url === tmpPost.url) && (item.name === post.sidebar);;
                 });
                 // 如果不存在breadCrumbs，则默认将本身链接作为breadCrumbs
                 tmpPost.breadCrumbs = tmpPostBreadCrumbs.length > 0 ? tmpPostBreadCrumbs[0].breadCrumbs : [{
