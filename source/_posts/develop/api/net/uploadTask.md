@@ -15,7 +15,7 @@ sidebar: uploadTask
 **方法参数**：无
 
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: uploadTask
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

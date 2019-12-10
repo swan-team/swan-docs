@@ -11,6 +11,10 @@ sidebar: swan-startDeviceMotionListening
 
 **解释**：开始监听设备方向的变化。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_deviceMotion.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -32,7 +36,21 @@ sidebar: swan-startDeviceMotionListening
 |ui |适用于更新 UI 的回调频率，在 60ms/次 左右|
 |normal |普通的回调频率，在 200ms/次 左右|
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/startDeviceMotionListening.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - interval为ui**：
 
 <a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -43,6 +61,50 @@ Page({
     startDeviceMotionListening() {
         swan.startDeviceMotionListening({
             interval: 'ui',
+            success: res => {
+                console.log('startDeviceMotionListening success', res);
+            },
+            fail: err => {
+                console.log('startDeviceMotionListening fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - interval为game**：
+
+<a href="swanide://fragment/e38daaa48f251db2de1d6d23b44b40001575204704761" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startDeviceMotionListening() {
+        swan.startDeviceMotionListening({
+            interval: 'game',
+            success: res => {
+                console.log('startDeviceMotionListening success', res);
+            },
+            fail: err => {
+                console.log('startDeviceMotionListening fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例3 - interval为normal**：
+
+<a href="swanide://fragment/c507dc5b0171c208542233113f54f04e1575204732536" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    startDeviceMotionListening() {
+        swan.startDeviceMotionListening({
+            interval: 'normal',
             success: res => {
                 console.log('startDeviceMotionListening success', res);
             },

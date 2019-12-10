@@ -24,7 +24,7 @@ sidebar:  swan-onNetworkStatusChange
 |isConnected |Boolean |是| |当前是否有网络连接|
 |networkType| String |是| | 网络类型|
 
-**networkType 有效值**：
+**networkType 有效值**
 
 |值   |说明|
 |---- | ---- |
@@ -35,7 +35,22 @@ sidebar:  swan-onNetworkStatusChange
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onNetworkStatusChange.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 <a href="swanide://fragment/7c0e8595fa15fb27338683115a63df031569478717853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

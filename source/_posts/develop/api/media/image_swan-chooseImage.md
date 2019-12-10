@@ -21,8 +21,8 @@ sidebar: image_swan-chooseImage
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |count  | Number | 否 |9| 最多可以选择的图片张数 。|
-|sizeType  |`Array.<string>`| 否 || original 原图，compressed 压缩图，默认二者都有。|
-|sourceType | ` Array.<string> ` |否 | |  album 从相册选图，camera 使用相机，默认二者都有。|
+|sizeType  |Array.&lt;string&gt;  | 否 || original 原图，compressed 压缩图，默认二者都有。|
+|sourceType | Array.&lt;string&gt;  |否 | |  album 从相册选图，camera 使用相机，默认二者都有。|
 |success |Function  |  否 ||成功则返回图片的本地文件路径列表 tempFilePaths。|
 |fail  |  Function |   否  | | 接口调用失败的回调函数|
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -33,8 +33,8 @@ sidebar: image_swan-chooseImage
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | `Array.<string>` |图片的本地文件路径列表 。|
-|tempFiles  | ` Array.<object> ` |图片的本地文件列表，每一项是一个 File 对象。|
+|tempFilePaths  | Array.&lt; string&gt;  |图片的本地文件路径列表 。|
+|tempFiles  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
 **tempFiles 对象结构如下:**
 
@@ -44,7 +44,7 @@ sidebar: image_swan-chooseImage
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -58,9 +58,9 @@ sidebar: image_swan-chooseImage
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - tempFilePaths**：
 
-<a href="swanide://fragment/25ee1bf808f49aeae2975827d0fd654e1569416277213" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8ffb1a4177b33946ea0bed99b96071c21575216316424" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -74,8 +74,38 @@ Page({
             success: res => {
                 // 成功则返回图片的本地文件路径列表 tempFilePaths
                 console.log(res.tempFilePaths);
+                this.setData('imageList', res.tempFilePaths);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - tempFiles**：
+
+<a href="swanide://fragment/593c7689acbe113cbdbb5e4441dcaa921575216919794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    chooseImage() {
+        swan.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: res => {
                 // 文件列表对象
                 console.log(res.tempFiles);
+                let imageList = [];
+                res.tempFiles.forEach((e)=>{ 
+                    imageList.push(e.path)
+                })
+                this.setData('imageList', imageList);
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
@@ -104,7 +134,7 @@ Page({
 |1003|用户没有授权百度使用相册|
 |1003|小程序文件目录为空|	
 
-**Bug & Tip**：
+**Bug & Tip**
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 

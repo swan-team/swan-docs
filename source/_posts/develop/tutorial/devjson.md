@@ -12,6 +12,8 @@ sidebar: devjson
 
 ### 配置示例
 
+**代码示例**
+
 ```js
 {
     "navigationBarBackgroundColor": "#ffffff",
@@ -35,7 +37,6 @@ sidebar: devjson
 |backgroundTextStyle|String|dark|下拉 loading 的样式，有效值 dark / light| |
 |enablePullDownRefresh|Boolean|false|是否全局开启下拉刷新。详见 <a href="/develop/framework/app_service_pagefunction/">Page.onPullDownRefresh</a>。| |
 |onReachBottomDistance|Number|50|页面上拉触底事件触发时距页面底部距离，单位为px。详见<a href="/develop/framework/app_service_pagefunction/">Page.onReachBottom</a>。| |
-|disableSwipeBack|Boolean|false|禁止页面右滑手势返回。如果右滑导致小程序切到后台，可以使用disableSwipeBack关闭。|<a href="/develop/swan/compatibility/">百度 App11.8</a>|
 |disableScroll|Boolean|false|设置为 true 则页面整体不能上下滚动。只在页面配置中有效，无法在 app.json 中设置|<a href="/develop/swan/compatibility/">iOS 百度 App10.8，Android暂不支持</a>|
 
 

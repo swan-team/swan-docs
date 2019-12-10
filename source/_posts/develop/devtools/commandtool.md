@@ -82,6 +82,7 @@ swan upload --project-path /path/to/your/project --token THE_TOKEN_WITH_PREVIEW_
 | `--release-version`|必填|发布版本号|
 |`-d, --desc`|选填|版本描述|
 |`-V, --verbose`|选填| 输出日志|
+|`--min-swan-version`|选填|最低基础库版本，参见[最低基础库版本设置](https://smartprogram.baidu.com/docs/develop/swan/compatibility_version/)|
 
 **输出**
 - 发布成功提示

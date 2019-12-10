@@ -2,10 +2,14 @@
 title: swan.hideTabBar
 header: develop
 nav: api
-sidebar: show_tabbar_swan-hideTabBar
+sidebar: tabbar_swan-hideTabBar
 ---
  
 **解释**：隐藏 tabBar
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_tabBar.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -18,7 +22,7 @@ sidebar: show_tabbar_swan-hideTabBar
 |fail   | Function  |  否  | |接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +36,7 @@ sidebar: show_tabbar_swan-hideTabBar
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/5aa2f4593413e51fd723d5effc62d8221574138247912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

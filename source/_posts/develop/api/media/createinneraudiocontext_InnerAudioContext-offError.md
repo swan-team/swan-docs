@@ -2,18 +2,46 @@
 title: InnerAudioContext.offError
 header: develop
 nav: api
-sidebar: InnerAudioContext.offError
+sidebar: createinneraudiocontext_InnerAudioContext-offError
 ---
 
 
 
 **解释**：取消监听 offError 事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffError.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
-**代码示例**：
+**图片示例**
 
-<a href="swanide://fragment/69f5f45dc946b568f4ece41c39eae89c1574014252333" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/InnerAudioContextOffError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/e6758e5581755dff7088ca636b7770681574734618602" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offError">offError</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -39,6 +67,13 @@ Page({
         innerAudioContext.offError();
         innerAudioContext.play();
         this.innerAudioContext = innerAudioContext;
+    },
+    offError(){
+        swan.showModal({
+            title: 'offError',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offError();
     }
 });
 ```

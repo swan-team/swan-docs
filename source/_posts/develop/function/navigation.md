@@ -70,7 +70,7 @@ sidebar: navigation
 
 那么问题来了，怎么把点击的链接传到第二个页面呢？
 我们可以在 webview 组件页面使用 jssdk 中 h5 页面跳转到小程序页面的方法 swan.webView.navigateTo，然后再携带一个 url 参数：
-
+**代码示例**
 ```
 //webview 组件页面javascript
 navigate(url) {
@@ -79,6 +79,7 @@ navigate(url) {
 ```
 
 接着在小程序另外一个新的 webview 组件页面中：
+**代码示例**
 ```
 // pages/webview/webview.js
 Page({

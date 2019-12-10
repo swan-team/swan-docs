@@ -11,7 +11,7 @@ sidebar: base_icon
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/icon.png"  class="demo-qrcode-image" />
 
-**属性说明**:
+## **属性说明**
 
 |属性名|类型  |默认值  | 必填 |说明|
 |---- | ---- | ---- | ---- |---- |
@@ -19,7 +19,7 @@ sidebar: base_icon
 |size | Number  |23 | 否 |icon 的大小，单位是 px|
 |color | Color |   | 否 |icon 的颜色，同 css 的 color|
 
-**type 有效值**:
+### **type 有效值** 
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -41,7 +41,8 @@ sidebar: base_icon
 | radioUnselect | 单选框未选中图标 |
 | loadingGrey | loading图标 |
 
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -55,7 +56,7 @@ sidebar: base_icon
     </div>     
 </div>
 
-**代码示例**：
+### **代码示例**
 
 <a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

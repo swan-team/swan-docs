@@ -2,7 +2,7 @@
 title: 设置页面基础信息
 header: introduction
 nav: book
-sidebar: rank_page
+sidebar: rank_pageinfo
 ---
 
 

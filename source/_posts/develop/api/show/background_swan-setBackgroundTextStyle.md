@@ -10,6 +10,10 @@ sidebar: background_swan-setBackgroundTextStyle
 
 **解释**：设置窗口下拉背景loading样式。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setBackgroundTextStyle.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -21,7 +25,7 @@ sidebar: background_swan-setBackgroundTextStyle
 |fail  |  Function |   否  |   | 接口调用失败的回调函数| 
 |complete   | Function  |  否 |   |  接口调用结束的回调函数（调用成功、失败都会执行）| 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -35,7 +39,7 @@ sidebar: background_swan-setBackgroundTextStyle
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/1a44f9e8f4e4cf559c3750e2e0ebc1061574253034280" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

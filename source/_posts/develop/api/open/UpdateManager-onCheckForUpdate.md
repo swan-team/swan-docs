@@ -10,6 +10,10 @@ sidebar: UpdateManager-onCheckForUpdate
 
 **解释**：当向百度后台请求完新版本信息，会进行回调。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
 **参数说明**：
@@ -18,7 +22,7 @@ sidebar: UpdateManager-onCheckForUpdate
 |---- | ---- | ---- |
 |hasUpdate |  Boolean | 是否有新的版本 |
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/1d5e55c4a591129c35adf0cb7bd4c2f21574070810759" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

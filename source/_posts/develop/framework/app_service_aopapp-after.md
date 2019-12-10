@@ -29,7 +29,7 @@ sidebar: app_service_aopapp-after
 
 * onPageNotFound
 
-**示例代码：**
+**代码示例**
 
 ```js
 // app.js

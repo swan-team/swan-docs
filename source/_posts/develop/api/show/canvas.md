@@ -2,11 +2,29 @@
 title: canvas 
 header: develop
 nav: api
-sidebar: show_canvas
+sidebar: canvas
 ---
 
 
 **解释**：canvas 画布，可使用 JS 操作 canvas 上下文，发出指令，进行绘制。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/createCanvasContext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **SWAN模板写法示例**：
 

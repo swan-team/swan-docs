@@ -11,6 +11,10 @@ sidebar: canvas_swan-canvasGetImageData
 
 **解释**：返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，操作组件内 `<canvas>` 组件。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_canvasGetImageData.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -34,12 +38,23 @@ sidebar: canvas_swan-canvasGetImageData
 |height|number|图像数据矩形的高度|
 |data|Uint8ClampedArray|图像像素点数据，一维数组，每四项表示一个像素点的rgba|
 
- 
- 
+**图片示例**
 
-**代码示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/canvasGetImageData.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-<a href="swanide://fragment/44b66f87da0d1246a2f111d98e7bb10d1573713679352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**代码示例**
+
+<a href="swanide://fragment/b0967f7f06b396397157bb1fa217e4ee1574498382441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -105,13 +120,6 @@ Page({
         });
     }
 });
-```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
 ```
 
 #### 错误码

@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onNext
 header: develop
 nav: api
-sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onNext
 ---
 
 
@@ -17,7 +17,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager.onNext
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a9c6b4e5aa2b4b7c6416889607407ff91574005094848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

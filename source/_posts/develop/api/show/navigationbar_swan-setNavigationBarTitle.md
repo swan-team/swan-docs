@@ -26,7 +26,7 @@ sidebar: navigationbar_swan-setNavigationBarTitle
 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: navigationbar_swan-setNavigationBarTitle
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/01552c32fa4399c3ae2b3465ecd5977c1574136270589" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

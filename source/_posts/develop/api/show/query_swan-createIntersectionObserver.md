@@ -8,6 +8,10 @@ sidebar: query_swan-createIntersectionObserver
 
 **解释**： 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`options`参数说明**：
@@ -18,7 +22,7 @@ sidebar: query_swan-createIntersectionObserver
 |initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|
 |selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,9 +36,9 @@ sidebar: query_swan-createIntersectionObserver
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
-<a href="swanide://fragment/e0c8fa5ca4912f94e49c71a6145e37b01574303938703" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -66,7 +70,7 @@ Page({
         appear: false
     },
     onReady() {
-        const intersectionObserver = swan.createIntersectionObserver(this);
+        const intersectionObserver = swan.createIntersectionObserver();
         // 监测scroll-view可视区域 和 小球元素节点 的相交情况
         intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
             console.log('observe', res)
@@ -79,10 +83,10 @@ Page({
             // time: 监测到两者相交时的时间戳
             this.setData('appear', res.intersectionRatio > 0);
         });
-        this.IntersectionObserver = IntersectionObserver;
+        this.intersectionObserver = intersectionObserver;
     },
     onUnload() {
-        this.IntersectionObserver && this.IntersectionObserver.disconnect();
+        this.intersectionObserver && this.intersectionObserver.disconnect();
     }
 });
 ```
@@ -135,3 +139,95 @@ Page({
   
 ```
 
+**代码示例2 - options为thresholds时**：
+
+<a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            // 阈值设置少，避免触发过于频繁导致性能问题
+            thresholds: [1]
+        });
+        // 监测scroll-view可视区域 和 小球元素节点的相交情况
+       //  我配置了 thresholds：[1]，那么当监听对象和参照物相交比例达到 1 时，会触发监听器的回调函数
+
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            console.log('observe', res)
+            // intersectionRatio: 相交比例，为0时说明两者不相交。
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```
+
+
+**代码示例3 - options为initialRatio时**：
+
+<a href="swanide://fragment/2c3aea3f1bc1948d0ce69f56fa5acb571574931094969" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            // 初始相交比例，默认 0，达到 initialRatio 或 thresholds 中的阈值时，回调被触发
+            initialRatio: 1
+        });
+        // 监测scroll-view可视区域 和 小球元素节点的相交情况
+       //  我配置了 thresholds：[1]，那么当监听对象和参照物相交比例达到 1 时，会触发监听器的回调函数
+
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball', res => {
+            console.log('observe', res)
+            // intersectionRatio: 相交比例，这里为 1 时说明两者不相交。
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```
+
+**代码示例4 - options为selectAll时**：
+
+<a href="swanide://fragment/cfae8c63d16efcf6a7b4d6b6b2f5d4f71574931774175" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        appear: false
+    },
+    onReady() {
+        const intersectionObserver = swan.createIntersectionObserver({
+            selectAll: true
+        });
+        // 监听两个小球
+        intersectionObserver.relativeTo('.scroll-view').observe('.ball .ball2', res => {
+            console.log('observe', res);
+            this.setData('appear', res.intersectionRatio > 0);
+        });
+        this.intersectionObserver = intersectionObserver;
+    },
+    onUnload() {
+        this.intersectionObserver && this.intersectionObserver.disconnect();
+    }
+});
+```

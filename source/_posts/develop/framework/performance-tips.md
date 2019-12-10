@@ -18,6 +18,8 @@ sidebar: performance-tips
 ### 分包加载
 分包加载是智能小程序用来解决包体积过大而给出的一个技术解决方案（点击查看[分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)相关文档）。为了最大程度的减少主包的大小，提高小程序的加载速度，开发者使用分包加载策略时，建议将必须的和经常访问的页面放入主包当中，例如将声明在 app.json 当中的 tabBar 配置项下的页面放入主包当中。另外，根据小程序的投放场景不同，开发者需要仔细思考自己的小程序中哪些页面是经常被访问的。举个例子，在Feed和搜索分发的小程序非首页页面我们建议放到主包中，避免首次打开投放页面处于分包内时需要先下载主包再下载分包而导致的性能退化。
 
+**代码示例**
+
 ```json
 {
     "pages": [
@@ -71,6 +73,7 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
 4. 不建议在更新数据结构当中的某一子项的时候将整个数据结构放到setData方法中，可以通过优化setData的key值来实现。
 
     * **错误写法**：
+    **代码示例**
     ```javascript
     let person = this.getData('person');
     person.age = 30;
@@ -78,16 +81,19 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
     ```
 
     * **正确写法**:
+    **代码示例**
     ```javascript
     this.setData('person.age', 30);
     ```
 
     * 在更新列表中某一项内部的值时，**推荐的用法**为：
+    **代码示例**
     ```javascript
     this.setData('list[0].person.name', 'Harry');
     ```
 5. 在处理无限滚动页面加载的时候，我们发现很多开发者将新的一页上的数据添加整体的数据里面再调用setData。这样做造成每次页面加载传输的数据越来越大。
     * **未优化情况下的做法**：
+    **代码示例**
     ```javascript
     let pages = this.data.pages.push(pageData)
     this.setData({
@@ -95,6 +101,7 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
     });
     ```
     * **优化后的做法**：
+    **代码示例**
     ```javascript
     Page({
         data: {
@@ -111,6 +118,7 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
 6. 使用trackBy来优化列表更新时的渲染性能
 
     * 当使用下拉刷新功能时，新的数据会被添加到当前列表的头部，这种情况下，页面中列表内所有的项都会被重新渲染一次。
+    **代码示例**
     ```javascript
     // 下拉刷新更新方式举例
     let list = list.unshift(newPage);
@@ -119,6 +127,7 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
     });
     ```
     * 如果使用trackBy，那么原先的列表内的项位置会移动，新添加的项会被渲染。这样可以省去一部分重新渲染带来的消耗。
+    **代码示例**
     ```xml
     // 使用trackBy举例
     <scroll-view>
@@ -129,6 +138,7 @@ setData方法是开发者通过逻辑层向视图层发送数据的方法。每�
 
 ## 清理定时器
 当使用`swan.navigateTo`进行页面跳转的时候，旧页面是没有被销毁的。旧页面当中定义的定时器仍旧会运行。因此在页面跳转的时候，一定要记住清理没有用的定时器:
+**代码示例**
 ```javascript
 Page({
     onReady() {
@@ -145,6 +155,7 @@ Page({
 
 ## 合理使用自定义组件
 自定义组件与模板内的import与include功能都可以达到代码复用的效果。需要注意的是，如果自定义组件内没有逻辑层的功能的话，这时候使用自定义组件就是非必须的了。我们可以用下面的方式实现代码的复用：
+**代码示例**
 ```xml
 <import src="./person.swan" />
 <view class="container">
@@ -189,6 +200,7 @@ Page({
 ```
    
 - 第二步：使用标准HTML与CSS，编写骨架屏模板文件，如index.tpl骨架屏代码如下图
+**代码示例**
 ```html
 <style>
 .skeleton-list {
@@ -206,6 +218,7 @@ Page({
 ```
 
 - 第三步：配置config.json文件，pages和骨架屏是多对一的映射关系，可配置多个页面对应同一个骨架屏模板
+**代码示例**
 ```
 {
     "pages/home/index": "skeleton/page/index",
@@ -216,3 +229,4 @@ Page({
 > 说明
        1. 需要2.15及其上版本的开发者工具与百度App 11.10及其以上版本
        2. 骨架屏移除的时机由开发者自己掌控。开发者可以在Page内通过调用this.removeSkeleton()移除。
+       3. 在调用removeSkeleton方法的时候，需要有兼容逻辑（`this.removeSkeleton && this.removeSkeleton()`）

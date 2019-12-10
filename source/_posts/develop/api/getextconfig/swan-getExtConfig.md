@@ -10,6 +10,10 @@ sidebar: swan-getExtConfig
 
 **解释**：获取第三方平台自定义的数据字段。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getExtConfig.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -26,7 +30,21 @@ sidebar: swan-getExtConfig
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getExtConfig1.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/8193f2d5f3f69834261c1809c72c36071574154522656" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

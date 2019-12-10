@@ -16,7 +16,7 @@ sidebar:  createanimation_Animation-matrix
 
 **方法参数**： Number a，Number b，Number c，Number d 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

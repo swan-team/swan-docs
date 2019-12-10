@@ -12,6 +12,10 @@ sidebar: menu_info
 
 **解释**：获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getMenuButtonBoundingClientRect.png"  class="demo-qrcode-image" />
+
 **方法参数**： 无
 
 **返回参数说明**：
@@ -25,7 +29,7 @@ sidebar: menu_info
 |bottom|	number	|下边界坐标，单位：px|
 |left	|number|	左边界坐标，单位：px|
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +43,7 @@ sidebar: menu_info
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

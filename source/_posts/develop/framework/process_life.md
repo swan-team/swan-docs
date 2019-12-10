@@ -1,5 +1,5 @@
 ---
-title: SWAN 生命周期
+title: 生命周期
 header: develop
 nav: tutorial
 sidebar: process_life

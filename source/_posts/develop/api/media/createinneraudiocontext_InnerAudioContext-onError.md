@@ -2,7 +2,7 @@
 title: InnerAudioContext.onError
 header: develop
 nav: api
-sidebar: InnerAudioContext.onError
+sidebar: createinneraudiocontext_InnerAudioContext-onError
 ---
 
 
@@ -10,11 +10,39 @@ sidebar: InnerAudioContext.onError
 
 **解释**：音频播放错误事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOnError.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
-**代码示例**：
+**图片示例**
 
-<a href="swanide://fragment/0bb7e0e18a4f72de285a00a33a9541901574011550269" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/InnerAudioContextOnError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/5fd261029e57512a9ca106f81328f5e91574546056156" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        此页面遇到音频播放错误事件会弹窗提示
+    </view>
+</view>
+```
 
 * 在 js 文件中
 

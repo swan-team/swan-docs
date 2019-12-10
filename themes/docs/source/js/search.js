@@ -59,7 +59,7 @@ function searchFunc(searchId, contentId) {
             e.preventDefault();
             // 搜索跳转打点
             _hmt.push(['_trackEvent', 'search', '搜索跳转', e.target.value]);
-            window.open(`${window.location.origin}/forum/search?word=${e.target.value}&scope=devdocs`, '_blank');
+            window.open(`${window.location.origin}/forum/search?hmsr=docsSearch&word=${e.target.value}&scope=devdocs`, '_blank');
         }
     })
 }

@@ -2,7 +2,7 @@
 title: VoiceRecognizer.onStart
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onStart
+sidebar: voice_VoiceRecognizer-onStart
 ---
 
 **解释**： 引擎准备就绪，可以开始说话
@@ -14,7 +14,23 @@ sidebar: voice_VoiceRecognizer_onStart
 **方法参数**：Function callback
 
 
-**代码示例一：短语音识别（与长语音使用方式一致） - 自动听音**
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerStart.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**代码示例 1**：
+短语音识别（与长语音使用方式一致） - 自动听音 
 
 
 <a href="swanide://fragment/8684b30fe9e56affafe11a8da47c9b421573730973671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -60,7 +76,9 @@ Page({
 
 ```
 
-**代码示例二：短语音识别 （与长语音使用方式一致）- 自动听音**
+**代码示例 2**：
+
+短语音识别 （与长语音使用方式一致）- 自动听音 
 
 
 <a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -105,7 +123,9 @@ Page({
 
 ```
 
-**代码示例三：短语音识别 - 手动听音**
+**代码示例 3**：
+
+短语音识别 - 手动听音 
 
 
 <a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

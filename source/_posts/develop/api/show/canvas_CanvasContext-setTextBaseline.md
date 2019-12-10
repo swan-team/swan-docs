@@ -2,17 +2,21 @@
 title: CanvasContext.setTextBaseline
 header: develop
 nav: api
-sidebar: canvas_canvasContext.setTextBaseline
+sidebar: canvas_CanvasContext-setTextBaseline
 ---
 
  
 **解释**：用于设置文字的水平对齐。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：String textBaseline
 
 **`textBaseline`参数说明**：有效值 'top'、'bottom'、'middle'、'normal' 。 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -26,7 +30,7 @@ sidebar: canvas_canvasContext.setTextBaseline
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/7d2ce5d641357eddcb149a1bddc607881573724449363" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

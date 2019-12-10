@@ -16,7 +16,7 @@ sidebar: videocontext_VideoContext-seek
 **方法参数**：Number position
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,14 +30,14 @@ sidebar: videocontext_VideoContext-seek
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/722c7d08ecf8bbf86bb2d76f49e3b9411573478866443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```html
 <view class="wrap">
-    <video id="myVideo" auto enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
+    <video id="myVideo" enable-danmu="true" src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"></video>
     <button type="primary" bindtap="seek">seek</button>
 </view>
 ```
@@ -50,7 +50,7 @@ Page({
     data: { },
     onLoad() {
         const videoContext = swan.createVideoContext('myVideo');
-        this.videoContext = video;
+        this.videoContext = videoContext;
         this.videoContext.play();
     },
     seek() {

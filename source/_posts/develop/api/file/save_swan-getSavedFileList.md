@@ -37,7 +37,7 @@ sidebar: save_swan-getSavedFileList
 |createTime  |Number | 文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数。|
 |size  |Number | 文件大小，单位 B|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -52,7 +52,7 @@ sidebar: save_swan-getSavedFileList
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f888ef3be2955b94548c5dcecf7c5b061573627301292" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

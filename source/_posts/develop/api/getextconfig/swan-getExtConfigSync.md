@@ -11,6 +11,11 @@ sidebar: swan-getExtConfigSync
 
 **解释**： [swan.getExtConfig](https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/)的同步版本。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getExtConfigSync.png"  class="demo-qrcode-image" />
+
+
 **方法参数**： 无
 
 **返回说明**：
@@ -19,7 +24,21 @@ sidebar: swan-getExtConfigSync
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getExtConfigSync.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/ce597f3bb6e7ca606ccacb253f1726b41574213264242" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

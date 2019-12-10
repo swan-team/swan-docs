@@ -2,18 +2,46 @@
 title: InnerAudioContext.offWaiting
 header: develop
 nav: api
-sidebar: InnerAudioContext.offWaiting
+sidebar: createinneraudiocontext_InnerAudioContext-offWaiting
 ---
 
 
 
 **解释**：取消监听 onWaiting 事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOnError.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
-**代码示例**：
+**图片示例**
 
-<a href="swanide://fragment/daf22706411859f65d6218bf078944071574013156111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/InnerAudioContextOffWaiting.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/f103894c07ad661cef935b9bbcbca61b1574736090622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="offWaiting">offWaiting</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -35,6 +63,13 @@ Page({
         });
         this.innerAudioContext = innerAudioContext;
         this.innerAudioContext.play();
+    },
+    offWaiting(){
+        swan.showModal({
+            title: 'offWaiting',
+            content: '取消监听成功'
+        });
+        this.innerAudioContext.offWaiting();
     }
 });
 ```

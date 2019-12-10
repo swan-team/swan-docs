@@ -32,7 +32,7 @@ swan.showFavoriteGuide(opts)
 
 ![图片](../../../../img/game/assets/showFavoriteGuide_bar.jpeg)
 
-**示例代码 1:**
+**代码示例 1:**
 
 ```js
 swan.showFavoriteGuide({
@@ -50,7 +50,7 @@ swan.showFavoriteGuide({
 * 自动消失：引导组件 3s 后自动消失，点击添加按钮可直接添加到我的桌面。
 
 ![图片](../../../../img/game/assets/showFavoriteGuide_tip.jpeg)
-**示例代码 2:**
+**代码示例 2:**
 
 ```js
 swan.showFavoriteGuide({

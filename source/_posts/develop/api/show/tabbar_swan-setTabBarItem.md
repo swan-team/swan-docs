@@ -9,6 +9,10 @@ sidebar: tabbar_swan-setTabBarItem
 
 **解释**：动态设置 tabBar 某一项的内容
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_tabBar.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -24,7 +28,7 @@ sidebar: tabbar_swan-setTabBarItem
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +42,7 @@ sidebar: tabbar_swan-setTabBarItem
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8b445d78cbdabc8066c1dbec707dbefd1574138075367" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

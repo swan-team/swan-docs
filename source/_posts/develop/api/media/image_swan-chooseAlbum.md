@@ -2,7 +2,7 @@
 title: swan.chooseAlbum
 header: develop
 nav: api
-sidebar: image_chooseAlbum
+sidebar: image_swan-chooseAlbum
 ---
 
 
@@ -33,8 +33,8 @@ sidebar: image_chooseAlbum
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
-|tempFilePaths  | `Array.<string>` |选择资源(图片或视频)的本地文件路径列表 。|
-|tempFiles  | ` Array.<object> ` |选择资源(图片或视频)本地文件列表，每一项是一个 File 对象。|
+|tempFilePaths  | Array.&lt;string&gt;  |选择资源(图片或视频)的本地文件路径列表 。|
+|tempFiles  |Array.&lt;object&gt; |选择资源(图片或视频)本地文件列表，每一项是一个 File 对象。|
 
 **tempFiles 对象结构如下:**
 
@@ -45,7 +45,7 @@ sidebar: image_chooseAlbum
 |type|文件类型|有效值：photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)； 开发者工具暂不支持|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -59,11 +59,10 @@ sidebar: image_chooseAlbum
     </div>     
 </div>
 
-**代码示例**：
+**代码示例 1 - 打开相册只选择图片或视频**：
 
 <a href="swanide://fragment/e0984aa8374449ead4cfb885dbf0ce331569502073433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-**示例 1 打开相册只选择图片或视频**
 * 在 js 文件中
 
 ```js
@@ -88,7 +87,7 @@ Page({
 });
 ```
 
-**示例 2 打开相册选择图片和视频**
+**代码示例 2 - 打开相册选择图片和视频**
 * 在 js 文件中
 
 ```js
@@ -111,7 +110,7 @@ Page({
 });
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 

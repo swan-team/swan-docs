@@ -2,7 +2,7 @@
 title: RecorderManager.onResume
 header: develop
 nav: api
-sidebar: RecorderManager.onResume
+sidebar: recorder_RecorderManager-onResume
 ---
 
 >基础库 3.120.1 开始支持，低版本需做兼容处理。
@@ -10,13 +10,13 @@ sidebar: RecorderManager.onResume
 
 **解释**： 监听录音继续事件
 
-<!-- **百度APP中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> -->
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnPause.png"  class="demo-qrcode-image" /> 
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: RecorderManager.onResume
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

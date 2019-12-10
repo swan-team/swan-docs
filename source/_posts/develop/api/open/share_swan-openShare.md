@@ -32,7 +32,7 @@ sidebar: share_swan-openShare
 
 **返回值说明**：反馈分享结果，成功或失败。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,7 @@ sidebar: share_swan-openShare
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - API调起分享面板**：
 
 <a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -81,14 +81,17 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+**代码示例2 - 组件调起分享面板**：
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+<a href="swanide://fragment/362c2203c0aa4bfd7f700553fa248fd41575200219753" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" open-type="share">openShare</button>
+</view>
 ```
-
 **Bug & Tip**
 bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
 

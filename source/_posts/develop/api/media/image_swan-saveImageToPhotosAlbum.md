@@ -2,13 +2,13 @@
 title: swan.saveImageToPhotosAlbum
 header: develop
 nav: api
-sidebar: image_saveImageToPhotosAlbum
+sidebar: image_swan-saveImageToPhotosAlbum
 ---
 
 
 
 
-**解释**： 保存图片到系统相册，需要用户授权。
+**解释**： 保存图片到系统相册，使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
 **百度APP中扫码体验：**
 
@@ -25,7 +25,7 @@ sidebar: image_saveImageToPhotosAlbum
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
 |complete |   Function |   否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: image_saveImageToPhotosAlbum
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/1493fabbbf98659284ff1d4837d9cb7f1569416506836" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -81,3 +81,5 @@ Page({
     }
 });
 ```
+
+ 

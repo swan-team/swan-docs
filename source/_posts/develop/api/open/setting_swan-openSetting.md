@@ -30,7 +30,7 @@ sidebar: setting_swan-openSetting
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +44,7 @@ sidebar: setting_swan-openSetting
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 - API打开授权设置页**：
 
 <a href="swanide://fragment/1b12263b2caf52db8d7fce9f5420bf121560170167235" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -72,6 +72,33 @@ Page({
 
     openSetting() {
         swan.openSetting({});
+    }
+});
+```
+
+**代码示例2 - button组件打开授权设置页**：
+
+<a href="swanide://fragment/499a6f3b829cf541f1188ed5962e660d1575205877194" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view class="page-body">
+        <button bindopensetting="openSetting" type="primary" open-type="openSetting">打开设置</button>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    openSetting(){
+        swan.showToast({
+            title: '打开回调',
+            icon: 'none'
+        });
     }
 });
 ```

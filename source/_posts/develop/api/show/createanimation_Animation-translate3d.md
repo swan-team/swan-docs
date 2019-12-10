@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-translate3d
 
 **参数说明**： 在 X 轴偏移 tx ，在 Y 轴偏移 ty ，在 Z 轴偏移 tz，单位 px。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

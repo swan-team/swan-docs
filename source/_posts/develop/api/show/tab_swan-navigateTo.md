@@ -15,7 +15,7 @@ sidebar: tab_swan-navigateTo
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object
@@ -30,7 +30,7 @@ sidebar: tab_swan-navigateTo
 |complete  |  Function  |  否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +44,7 @@ sidebar: tab_swan-navigateTo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**
 <a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -67,6 +67,31 @@ Page({
     }
 });
 ```
-**Bug & Tip**：
+
+**代码示例2 - 根据页面栈来判断页面层级**
+<a href="swanide://fragment/c6fca5358fe9204946156bbe2264b1941575403962704" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+// 目标页面
+Page({
+    onLoad(options) {
+        this.setData({
+            'id': options.id
+        });
+    },
+    onShow() {
+        console.log(getCurrentPages()); // [{uri: 'index/index'}]
+    },
+    navigateBack(e) {
+        swan.navigateBack({
+            delta: 2
+        });
+    }
+});
+
+```
+**Bug & Tip**
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
  

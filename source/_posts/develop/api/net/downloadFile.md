@@ -25,6 +25,7 @@ sidebar: downloadFile
 |success |Function |   否  | | 下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}|
 |fail   | Function   | 否||  接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
+|filePath| String|否||指定文件下载后存储的路径。|
 
 
 **success 返回参数说明**：
@@ -46,7 +47,7 @@ sidebar: downloadFile
 
 * iOS
 
-|错误码|说明errMsg|
+|错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确  |
 |1001|请求文件超过10M|
@@ -54,7 +55,7 @@ sidebar: downloadFile
 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -68,7 +69,7 @@ sidebar: downloadFile
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
  
 
 <a href="swanide://fragment/0bac1c0d10ee17ce6be023aac81a8c381572945831796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -99,11 +100,59 @@ Page({
 })
 ```
 
+**代码示例2  - 指定下载路径**：
+ 
+
+<a href="swanide://fragment/3351aaeff8b78f4bdd7800516ab2b1841575215908227" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    downloadFile() {
+        swan.downloadFile({
+            url: 'https://smartprogram.baidu.com/docs/img/file-simple.pdf',
+            header: {
+                'content-type': 'application/json'
+            },
+            filePath: 'bdfile://usr/办理指南文档.pdf',
+            success: res => {
+                console.log(res);
+                let filePath = res.filePath;
+                swan.showModal({
+                    title: '文件下载完成',
+                    content: '是否需要打开？',
+                    confirmText: '打开',
+                    success: res => {
+                        if (res.confirm) {
+                            swan.openDocument({
+                                filePath: filePath,
+                                fileType: 'pdf',
+                                fail: err => {
+                                    this.toast('打开失败');
+                                }
+                            });
+                        }
+                    }
+                });
+            },
+            fail: err => {
+                this.toast('下载文件失败');
+            },
+            complete: () => {
+                swan.hideToast();
+            }
+        });
+    }
+});
+```
+
 **返回值**：
 
 返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。
 
-**Bug & Tip**：
+**Bug & Tip**
 
 * 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
 * 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。

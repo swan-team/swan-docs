@@ -2,7 +2,7 @@
 title: InnerAudioContext.onSeeking
 header: develop
 nav: api
-sidebar: InnerAudioContext.onSeeking
+sidebar: createinneraudiocontext_InnerAudioContext-onSeeking
 ---
 
 
@@ -10,11 +10,39 @@ sidebar: InnerAudioContext.onSeeking
 
 **解释**：音频进行 seek 操作事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextSeek.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
-**代码示例**：
+**图片示例**
 
-<a href="swanide://fragment/9bec998c484260859411b22a7243d82c1574011990921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/InnerAudioContextSeek.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/d212ce57dba7b428a1e69e94dda9deae1574540027838" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <button type="primary" bindtap="seek">跳转到80s处</button>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -34,17 +62,16 @@ Page({
         innerAudioContext.onSeeked(res => {
             swan.showModal({
                 title: 'onSeeked',
-                content: JSON.stringify(res)
+                content: '跳转完成'
             });
         });
         innerAudioContext.onSeeking(res => {
             swan.showModal({
                 title: 'onSeeking',
-                content: JSON.stringify(res)
+                content: '正在跳转至音频80s后'
             });
         });
         this.innerAudioContext = innerAudioContext;
-        this.innerAudioContext.play();
     },
     seek() {
         this.innerAudioContext.seek(80);

@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onSeeking
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onSeeking
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onSeeking
 ---
 
 
@@ -16,7 +16,7 @@ sidebar: BackgroundAudioManager.onSeeking
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: BackgroundAudioManager.onSeeking
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/9a6224313c658e1fb3911b90fb6749841573423783140" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

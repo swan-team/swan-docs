@@ -24,7 +24,7 @@ sidebar: websocket_swan-sendSocketMessage
 |fail  |Function  |  否 | | 接口调用失败的回调函数|
 |complete   | Function   | 否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: websocket_swan-sendSocketMessage
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/a1272c3dcff4f89bc4081d4a8c590d4c1572997122605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -76,6 +76,50 @@ Page({
     }
 });
 
+```
+
+**代码示例2 - 示例1的另一种写法**：
+
+<a href="swanide://fragment/841432aa1867e9d47f872e97dc945d7d1575227372569" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    sendSocketMessage() { 
+        new Promise((resolve, reject) => {
+            const socketHandler = swan.connectSocket({
+                url: 'wss://echo.websocket.org',
+                header: {},
+                success: function (res) {
+                    console.log('connectSocket success', res.socketTaskId)
+                },
+                fail: function (err) {
+                    reject(err);
+                    console.log('connectSocket fail', err);
+                }
+            });
+            socketHandler.onOpen(function () {
+                resolve(socketHandler);
+            });
+        })
+        .then(socketHandler => {
+            swan.sendSocketMessage({
+                data: 'baidu',
+                success: res => {
+                    swan.showToast({
+                        title: 'WebSocket发送数据成功',
+                        icon: "none"
+                    });
+                    console.log('WebSocket发送数据成功', res);
+                },
+                fail: err => {
+                    console.log('WebSocket发送数据失败', err);
+                }
+            });
+        })    
+    }
+});
 ```
 
 #### 错误码

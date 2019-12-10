@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-skewY
 
 **参数说明**： 参数范围-180~180；X 轴坐标不变， Y 轴坐标延顺时针倾斜 ay 度。
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

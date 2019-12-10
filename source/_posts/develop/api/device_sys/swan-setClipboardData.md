@@ -25,7 +25,22 @@ sidebar: swan-setClipboardData
 |fail  | Function  |  否  | | 接口调用失败的回调函数|
 |complete   | Function   | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/setClipboardData.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1**：
+
 <a href="swanide://fragment/ea39eea822a594a02b300d528c37da981574214762675" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
@@ -48,10 +63,60 @@ Page({
             }
         });
     }
-});   
-               
+});
 ```
- 
+**代码示例2 - 此api可实现一键复制的业务场景**：
+
+<a href="swanide://fragment/af0a3af2c7b2fcb5b4483791b64bb08d1575142881928" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        url: ''
+    },
+    onShow() {
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                this.setData('url', res.data.data.goodsList.goods[0].title)
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    },
+    setClipboardData() {  
+        swan.setClipboardData({
+            data: this.getData('url'),
+            success: () => {
+                swan.showToast({
+                    title: '一键复制成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '一键复制失败',
+                    icon: 'none'
+                });
+                console.log('setClipboardData fail', err);
+            }
+        });
+    }
+});
+``` 
 #### 错误码
 * Andriod
 

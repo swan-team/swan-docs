@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.onStop
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.onStop
+sidebar: backgroundaudiomanager_BackgroundAudioManager-onStop
 ---
 
 
@@ -15,7 +15,7 @@ sidebar: BackgroundAudioManager.onStop
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: BackgroundAudioManager.onStop
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/a8eb1bdd1b9370283d8ab70418213a711573423983357" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

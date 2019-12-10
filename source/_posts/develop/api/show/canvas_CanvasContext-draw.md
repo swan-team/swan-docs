@@ -9,27 +9,65 @@ sidebar: canvas_CanvasContext-draw
 
 **解释**：将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**：Boolean reserve, Function callback
 
 **`reserve`参数说明**： 非必填。本次绘制是否接着上一次绘制，即 reserve 参数为 false，则在本次调用 drawCanvas 绘制之前 native 层应先清空画布再继续绘制；若 reserver 参数为 true，则保留当前画布上的内容，本次调用 drawCanvas 绘制的内容覆盖在上面，默认 false。
 
 **`callback`参数说明**：绘制完成后回调 
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/draw1.png)
 
-**代码示例**：
+**代码示例1 - reserve为false**：
 
-<a href="swanide://fragment/b39a66dd09566477c1abddd6ffa146111573725210935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/408aa17bb845b0a6d87ee5b5a13dc26e1574532413473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
 canvasContext.fillRect(10, 10, 150, 100);
 canvasContext.draw();
+canvasContext.setFillStyle('red');
 canvasContext.fillRect(30, 30, 150, 100);
 canvasContext.draw();
+```
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/draw.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+</div>
+
+
+**代码示例2 - reserve为true**：
+
+<a href="swanide://fragment/c644a427f48dbe93e232dabea0b3bc701574933246460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.setFillStyle('blue');
+        canvasContext.fillRect(10, 10, 150, 100);
+        canvasContext.draw();
+        canvasContext.setFillStyle('red');
+        canvasContext.fillRect(30, 30, 150, 100);
+        canvasContext.draw(true);
+    }
+});
 ```
 
 

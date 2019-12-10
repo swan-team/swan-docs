@@ -9,11 +9,15 @@ sidebar: save_swan-getStorageSync
 
 **解释**：从本地缓存中同步获取指定 key 对应的内容。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setStorage.png"  class="demo-qrcode-image" />
+
 **方法参数**： String key
 
 **`key`参数说明**： 本地缓存中的指定的 key
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -27,7 +31,7 @@ sidebar: save_swan-getStorageSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/67afe5dddb614eba763185066b2e60ea1573632298467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

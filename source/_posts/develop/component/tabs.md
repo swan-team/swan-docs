@@ -2,7 +2,7 @@
 title: tabs 标签栏
 header: develop
 nav: component
-sidebar: nav
+sidebar: tabs
 ---
 
 
@@ -23,9 +23,9 @@ sidebar: nav
 
 普通标签栏组件与可寻址标签栏组件的区别是：可寻址标签栏组件在标签栏 tab 切换时，该页面的 uri 参数会同步变化；反之，跳转某页面 uri 时，指定标签栏栏绑定的参数值也会打开该值对应的 tab 页。由于这种绑定关系的存在，相比于普通标签栏栏，可寻址标签栏栏更利于搜索引擎收录。**建议开发者尽量使用可寻址标签栏栏组件实现页面主标签栏栏功能**。例如：主页的多频道切换。
 
-标签栏组件的使用需要通过 tabs 和 [tab-item](#tab-item) 组件配合实现。
+标签栏组件的使用需要通过 tabs 和 [tab-item](https://smartprogram.baidu.com/docs/develop/component/tab-item/) 组件配合实现。
 
-**属性说明**：
+## **属性说明**
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |---- | ---- | ---- |---- |---- |---- |
@@ -42,7 +42,8 @@ sidebar: nav
 * 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
 * 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name
 
-**图片示例**：
+## 示例
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -56,7 +57,7 @@ sidebar: nav
     </div>     
 </div>
 
-**代码示例 1**：普通标签栏组件
+### **代码示例 1**：普通标签栏组件
 
 <a href="swanide://fragment/ffdd42b9621602c7a89cdfa7e4cfab7b1566986567638" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -109,7 +110,7 @@ Page({
 });
 ```
 
-**图片示例**：
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -123,7 +124,7 @@ Page({
     </div>     
 </div>
 
-**代码示例 2**：可寻址标签栏组件
+### **代码示例 2**：可寻址标签栏组件，
 
 <a href="swanide://fragment/794216313384422b8dbf901aed3240441574300960227" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -184,3 +185,5 @@ Page({
 });
 
 ```
+**相关链接**：
+[onURLQueryChange](https://smartprogram.baidu.com/docs/develop/api/url_query/onURLQueryChange/)

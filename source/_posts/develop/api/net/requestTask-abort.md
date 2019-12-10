@@ -17,7 +17,7 @@ sidebar: requestTask-abort
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: requestTask-abort
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/416dbb4346110b4165313cbde9ac39bc1572937479743" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

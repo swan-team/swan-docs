@@ -11,6 +11,10 @@ sidebar: log_swan-isLoginSync
 
 **解释**：获取宿主 App登录状态。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_isLoginSync.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 **返回参数说明**：
@@ -19,7 +23,22 @@ sidebar: log_swan-isLoginSync
 |---- | ---- | ---- |
 |isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/isLoginSync.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**代码示例**
 
 <a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

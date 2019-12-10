@@ -15,7 +15,7 @@ sidebar: createanimation_Animation-rotate3d
 
 **参数说明**：同 transform-function rotate3d。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

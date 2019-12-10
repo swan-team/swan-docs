@@ -12,15 +12,19 @@ sidebar: canvas_CanvasContext-setMiterLimit
 
 **解释**：设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离。当 setLineJoin() 为 miter 时，该设置才有效。超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
 **方法参数**： Number miterLimit
 
 **`miterLimit`参数说明：**最大斜接长度  
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setMiterLimit.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4d8cb34c8688d828ba9064e3d9406a231573721300843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

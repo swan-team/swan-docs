@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-rotateZ
 
 **参数说明**：deg的范围-180~180，在Z轴旋转一个 deg 角度。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

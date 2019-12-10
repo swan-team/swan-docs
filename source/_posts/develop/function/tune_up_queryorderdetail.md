@@ -2,7 +2,7 @@
 title: 支付状态查询
 header: develop
 nav: function
-sidebar: tune_up_queryorderdetail|
+sidebar: tune_up_queryorderdetail
 ---
 
 

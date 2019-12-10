@@ -48,33 +48,49 @@ sidebar: face_swan-ai-faceSearch
 |user_info | Array | 注册用户时携带的 user_info|
 |score | number | 用户的匹配得分，推荐阈值 80 分。|
 
+**图片示例**
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceSearch.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-**示例代码**
+**代码示例**
 
-<a href="swanide://fragment/60b0dfce28b43de99c9f83df68fefd041567751857137" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c5aabb973ce9c3e6ce54d4a547b390711575000496556" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
     faceSearch() {
         swan.chooseImage({
             success: res => {
-                let image = res.tempFilePaths[0];
+                let imageTop = res.tempFilePaths[0];
+                // let imageLeft = res.tempFilePaths[1];
+                // let imageMid = res.tempFilePaths[2];
+                // let imageRight = res.tempFilePaths[3];
                 swan.ai.faceSearch({
-                  image,
-                  image_type: 'BASE64',
-                  quality_control: 'NONE',
-                  liveness_control: 'NONE',
-                  face_type: 'LIVE',
-                  user_id: 'xxxxxx',
-                  max_user_num: 20,
-                  success: res => {
-                      console.log(res);
-                  },
-                  fail: err => {
-                      console.log(err);
-                  }
-               });
+                    image,
+                    image_type: 'BASE64',
+                    group_id_list: 'imageLeft,imageMid,imageRight',
+                    quality_control: 'NONE',
+                    liveness_control: 'NONE',
+                    face_type: 'LIVE',
+                    user_id: 'xxxxxx',
+                    max_user_num: 20,
+                    success: res => {
+                        console.log(res);
+                    },
+                    fail: err => {
+                        console.log(err);
+                    }
+                });
             }
         });
     }

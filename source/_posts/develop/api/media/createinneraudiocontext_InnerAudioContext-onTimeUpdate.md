@@ -2,18 +2,51 @@
 title: InnerAudioContext.onTimeUpdate
 header: develop
 nav: api
-sidebar: InnerAudioContext.onTimeUpdate
+sidebar: createinneraudiocontext_InnerAudioContext-onTimeUpdate
 ---
 
 
 
 **解释**：音频进度更新事件
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOnTimeUpdate.png"  class="demo-qrcode-image" />
+
 **方法参数**：Function callback
 
-**代码示例**：
+**图片示例**
 
-<a href="swanide://fragment/9d7b411b963e7b7a4435f52ec9dc1b4e1574012908825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/onTimeUpdate.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/7fda9bcf589d3bce795ab773002dd8aa1574544580704" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="description"> 
+            正在播放《演员》
+        </view> 
+        <view class="description"> 
+            {{currentTime}} / {{duration}}
+        </view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 

@@ -15,7 +15,7 @@ sidebar:  createanimation_Animation-scale3d
 
 **参数说明**： 在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

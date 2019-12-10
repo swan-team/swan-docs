@@ -2,7 +2,7 @@
 title: cloud.callFunction
 header: develop
 nav: cloud
-sidebar:  cloud-function
+sidebar:  cloud-callFunction
 ---
 
  
@@ -35,7 +35,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 
 云函数 sum：
 ``` js

@@ -10,6 +10,10 @@ sidebar: swan-getSystemInfoSync
 
 **解释**：获取系统信息同步接口
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getSystemInfoSync.png"  class="demo-qrcode-image" />
+
 **方法参数**：无
 
 **同步返回参数说明**：
@@ -31,7 +35,7 @@ sidebar: swan-getSystemInfoSync
 |platform |客户端平台，如：ios。| |
 |fontSizeSetting |用户字体大小设置 | |
 |SDKVersion |客户端基础库版本 | |
-|host|宿主平台，如：baiduboxapp 。|3.30.2|
+|host|宿主平台，详见[宿主平台枚举值列表](https://smartprogram.baidu.com/docs/develop/api/device_sys/hostlist/) 。|3.30.2|
 |cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
 |swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
 |devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
@@ -48,7 +52,21 @@ sidebar: swan-getSystemInfoSync
 |safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 
 
-**代码示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getSystemInfoSync.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/6f066eef865faf28a95af5c97553df451574243505661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -2,16 +2,20 @@
 title: CanvasContext.setFontSize
 header: develop
 nav: api
-sidebar: canvas_CanvasContext_setFontSize
+sidebar: canvas_CanvasContext-setFontSize
 ---
  
 **解释**：设置字体的字号。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
 **方法参数**：Number fontSize
 
 `fontSize`参数说明：字体的字号 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -25,7 +29,7 @@ sidebar: canvas_CanvasContext_setFontSize
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/94b824f65c4ffa7f78b40f0d6f10bd1a1573724116782" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

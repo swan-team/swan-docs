@@ -10,7 +10,7 @@ sidebar: tab_swan-navigateBack
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigateTo.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object
@@ -25,7 +25,7 @@ sidebar: tab_swan-navigateBack
 |complete|	function|		否| | 	接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: tab_swan-navigateBack
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 index.swan 文件中
@@ -88,6 +88,45 @@ Page({
     navigateBack(e) {
         swan.navigateBack({
             delta: 2
+        });
+    }
+});
+```
+
+**代码示例2 - 从小程序原生页面返回到 H5 页面，并需要刷新：**
+<a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 detail.swan 文件中
+
+```html
+<web-view src="{{url}}"></web-view>
+```
+
+* 在 detail.js 文件中
+
+```js
+Page({
+    data: {
+        src: ''
+    },
+   //接收H5页传过来的参数
+    onLoad(options) {
+        this.setData({'src': options.webViewUrl})
+    },
+    onShow(){
+        this.onLoad()
+    }
+});
+```
+
+* 在 index.js 文件中
+
+```js
+Page({
+    data: { },
+    navigateTo(e) {
+        swan.navigateTo({
+            url: "/detail/detail?webViewUrl=https://smartprogram.baidu.com&Math.radom()"
         });
     }
 });

@@ -2,7 +2,7 @@
 title: BackgroundAudioManager.pause
 header: develop
 nav: api
-sidebar: BackgroundAudioManager.pause
+sidebar: backgroundaudiomanager_BackgroundAudioManager-pause
 ---
 
 
@@ -16,7 +16,7 @@ sidebar: BackgroundAudioManager.pause
 
 **方法参数**：无
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: BackgroundAudioManager.pause
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/26641d4db43b374b8c4fab724f06ed171573699565658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
