@@ -18,7 +18,7 @@ sidebar:  createanimation_Animation-scaleZ
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/scaleY.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/scaleZ.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

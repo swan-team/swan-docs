@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-translateZ
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/scaleY.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/translateZ.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
