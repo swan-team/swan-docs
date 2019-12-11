@@ -25,15 +25,15 @@ sidebar: process
 
 **代码示例**
 
-<a href="swanide://fragment/b562b584e79aeed4f6ed7b6657892ae61575946406123" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5ac6441402c040f2c37722872ee29c1e1576047748031" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
 
 ```json
 {
-	"pages": [
-		"component/component",
+    "pages": [
+        "component/component",
         "api/api"
-	],
+    ],
     "subPackages": [
         {
             "root": "subpackage",
@@ -43,8 +43,8 @@ sidebar: process
             ]
         }
     ],
-	"window": {
-		"navigationBarTitleText": "Demo",
+    "window": {
+        "navigationBarTitleText": "Demo",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
         "navigationStyle": "default",
@@ -52,7 +52,7 @@ sidebar: process
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh": "true",
         "onReachBottomDistance":"50"
-	},
+    },
     "preloadRule": 
     {
        "pages/index": {
