@@ -25,7 +25,7 @@ sidebar: process
 
 **代码示例**
 
-<a href="swanide://fragment/a89f34e587042e5e1f3ea0a1574916d71576047411425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5ac6441402c040f2c37722872ee29c1e1576047748031" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
 
 ```json
