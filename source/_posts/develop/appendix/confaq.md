@@ -9,6 +9,17 @@ sidebar: confaq
 
 A: H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
+**代码示例：**
+
+<a href="swanide://fragment/547f28b94e391bf484dece2bdc4c1e9b1575830214937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// 在 H5 文件中
+let UA = window.navigator.userAgent;
+var regex = /swan\//;
+console.log( regex.test(UA) );// 若为true，则是在小程序的web-view中打开
+```
+
 #### Q: 在webview 中使用了 cookie，导致存储信息与小程序不能共享的原因是什么？
 
 A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的通信； 
