@@ -8,7 +8,7 @@ sidebar: history
 
 ### 最新正式版本（2.21.1） 
 
-* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [Windows 32](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows32&type=online)/[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
+* 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) /[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
