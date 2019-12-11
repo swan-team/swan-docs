@@ -43,8 +43,8 @@ sidebar: process
             ]
         }
     ],
-	"window": {
-		"navigationBarTitleText": "Demo",
+    "window": {
+        "navigationBarTitleText": "Demo",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
         "navigationStyle": "default",
@@ -52,7 +52,7 @@ sidebar: process
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh": "true",
         "onReachBottomDistance":"50"
-	},
+    },
     "preloadRule": 
     {
        "pages/index": {
