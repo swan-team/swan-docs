@@ -25,14 +25,15 @@ sidebar: process
 
 **代码示例**
 
-<a href="swanide://fragment/22c464efe88757d194d6af37db126ddd1572882792148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b562b584e79aeed4f6ed7b6657892ae61575946406123" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
 
 ```json
 {
-    "pages": [
-	"pages/index/index"
-    ],
+	"pages": [
+		"component/component",
+        "api/api"
+	],
     "subPackages": [
         {
             "root": "subpackage",
@@ -42,8 +43,8 @@ sidebar: process
             ]
         }
     ],
-    "window": {
-	"navigationBarTitleText": "Demo",
+	"window": {
+		"navigationBarTitleText": "Demo",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
         "navigationStyle": "default",
@@ -51,8 +52,9 @@ sidebar: process
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh": "true",
         "onReachBottomDistance":"50"
-    },
-    "preloadRule": {
+	},
+    "preloadRule": 
+    {
        "pages/index": {
             "network": "all",
             "packages": ["subpackage"]
@@ -61,13 +63,13 @@ sidebar: process
     "tabBar": {
         "list": [
             {
-                "pagePath": "pages/index/index",
+                "pagePath": "component/component",
                 "text": "首页",
                 "iconPath":"/images/API_normal.png",
                 "selectedIconPath":"/images/API_selected.png"
-	    },
+	        },
             {
-                "pagePath": "pages/detail/detail",
+                "pagePath": "api/api",
                 "text": "详情",
                 "iconPath":"/images/component_normal.png",
                 "selectedIconPath":"/images/component_selected.png"
