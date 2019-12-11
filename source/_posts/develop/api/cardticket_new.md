@@ -535,7 +535,8 @@ POST数据|Json数据
 
 涉及开发者端+Server开发：
 1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 获取当前页面路径中的**coupon**参数；
-
+> **开发者须知** 
+> 若点击「立即使用」 加密信息传递，注意需要在小程序app.js文件中增加onShow能力开发；
 ##### 代码示例（放在app.js中）
 ```
 onShow(event) {
@@ -546,8 +547,7 @@ onShow(event) {
         });
     }
 ```
-> **开发者须知** 
-> 若点击「立即使用」 跳转的页面为首页，需在小程序首页页面上增加onShow能力开发；需设置为自定义跳转页面，需在该页面增加onShow能力开发。
+
 
 2）Server开发：对**coupon**参数进行解密，获取到用户的领券信息，为用户发券；
 ##### 解密结果说明
