@@ -663,6 +663,33 @@ Page({
 });
 ```
 
+### **代码示例 - 错误用法：原生组件设置border无效，也不可用cover-view覆盖为圆角**：
+
+<a href="swanide://fragment/23aba8b527f1ab7a948aed29e14dc1251576052042133" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
+        </a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <cover-view class="card-area">
+        <map
+            longitude="{{longitude}}"
+            latitude="{{latitude}}">
+        </map>
+    </cover-view>
+</view>
+```
+
+* 在 css 文件中
+
+```js
+.card-area { 
+    width: 3.88rem;
+    height: 2.18rem;
+}
+```
+
 ## **Bug & Tip**
 
 * Tip：地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。
