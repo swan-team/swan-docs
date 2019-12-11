@@ -30,10 +30,10 @@ sidebar: process
 
 ```json
 {
-	"pages": [
+    "pages": [
         "component/component",
         "api/api"
-	],
+    ],
     "subPackages": [
         {
             "root": "subpackage",
