@@ -112,4 +112,3 @@ A: [参见swiper参数](/develop/component/view_swiper/)，可以去 dot 显示�
 #### Q：小程序使用 webview，分享出去的链接能直接是 webview 对应的 url 而不是小程序的 url 么？
 
 A：小程序页面在进行分享时，如果分享出去的是web view引入的H5 页面，只能是分享的小程序的页面路径，不能是原H5 的页面路径。
-
