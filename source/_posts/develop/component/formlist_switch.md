@@ -45,35 +45,79 @@ sidebar: formlist_switch
     </div>     
 </div>
 
-### **代码示例1**
+### **代码示例1 - 默认样式**
 
 <a href="swanide://fragment/acd75f1f1c4ecb2e83e4af8f7cb6cd661565508713613" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```xml
-<view class="wrap">
-    <view class="title">默认样式</view>
-    <view>
-        <switch class="init-switch" checked disabled="false"></switch><text class="switch-text">开启</text>
-        <switch class="init-switch"></switch><text class="switch-text">关闭</text>
-        <switch class="init-switch" color="#FF3333" checked></switch><text class="switch-text">红色</text>
-    </view>
+<view class="card-area">
+    <view class="top-description border-bottom">默认样式</view>
+    <switch class="init-switch" checked disabled="false"></switch>
+    <text class="switch-text">已开启</text>
+    <switch class="init-switch-after"></switch>
+    <text class="switch-text">已关闭</text>
+</view>
+```
 
-    <view class="title">推荐示例</view>
-    <view class="item-wrap">
-        <view class="item">
-            <text>开启选项</text>
-            <switch checked class="switch"></switch>
-        </view>
-        <view class="item">
-            <text>关闭选项</text>
-            <switch class="switch"></switch>
-        </view>
+### **代码示例2 - 列表展示**
+
+* 在 swan 文件中
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">列表展示</view>
+    <view class="item-scroll border-bottom">
+        <text class="switch-text switch-text-before">已开启</text>
+        <switch class="init-switch" checked disabled="false"></switch>
+    </view>
+    <view class="item-scroll">
+        <text class="switch-text switch-text-before">已关闭</text>
+        <switch class="init-switch"></switch>     
     </view>
 </view>
 ```
 
-### **代码示例2 type='switch'/ type='checkbox'的对比**
+### **代码示例3 - 包含禁用选项**
+
+* 在 swan 文件中
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>包含禁用选项</view>
+        <view>disabled</view>
+    </view>
+    <view class="item-scroll border-bottom">
+        <text class="switch-text switch-text-before">已开启</text>
+        <switch class="init-switch" checked color="#C3D1FF" disabled></switch>
+    </view>
+    <view class="item-scroll">
+        <text class="switch-text switch-text-before">已关闭</text>
+        <switch class="init-switch" disabled></switch>     
+    </view>
+</view>
+```
+
+### **代码示例4 - 自定义颜色**
+
+* 在 swan 文件中
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>自定义颜色</view>
+        <view>color="#00BC89"</view>
+    </view>
+        <view class="item-scroll border-bottom">
+        <text class="switch-text switch-text-before">已开启</text>
+        <switch class="init-switch" checked color="#00BC89"></switch>
+    </view>
+    <view class="item-scroll">
+        <text class="switch-text switch-text-before">已关闭</text>
+        <switch class="init-switch" color="#00BC89"></switch>     
+    </view>
+</view>
+```
+
+### **代码示例5 type='switch'/ type='checkbox'的对比**
 
 <a href="swanide://fragment/f80fd7e081b4ba5e200cd5837705a5af1575544028129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -38,64 +38,97 @@ sidebar: formlist_radio-group
     </div>     
 </div>
 
-### **代码示例**
+### **代码示例1 - 默认样式**
 
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
-<view class="wrap">
-    <view class="title">默认样式</view>
-    <radio-group bindchange="radioChange" class="radio-group">
-        <radio class="radio" checked>&nbsp;&nbsp;选中</radio>
-        <radio class="radio" checked="false">&nbsp;&nbsp;未选中</radio>
-        <radio class="radio" disabled>&nbsp;&nbsp;不可用</radio>
-        <radio class="radio" color="#C3D1FF" checked>&nbsp;&nbsp;我是浅色的</radio>
-    </radio-group>
-
-    <view class="title">推荐示例</view>
-    <view class="item-wrap">
-        <radio-group bindchange="radioChange">
-            <label s-for="item in items" class="radio-background-active" for="{{item.id}}">
-                <view class="item">
-                    <radio value="{{item.value}}" checked="{{item.checked}}" id="{{item.id}}">
-                         &nbsp;&nbsp;{{item.text}}
-                    </radio>
-                </view>
-            </label>
+<view class="card-area">
+    <view class="top-description border-bottom">默认样式</view>
+    <view class="radio">
+        <radio-group>
+            <radio checked>单选项一</radio>
+            <radio class="radio-before" checked="false">单选项二</radio>
         </radio-group>
     </view>
 </view>
 ```
 
-* 在 js 文件中
+### **代码示例2 - 列表展示**
 
-```javascript
-Page({
-    data: {
-        items: [
-            {
-                value: 'have',
-                text: '选中选项',
-                checked: true,
-                id: 1
-            },
-            {
-                value: 'have',
-                text: '未选中选项',
-                id: 2
-            }
-        ],
-        result: []
-    },
+* 在 swan 文件中
 
-    radioChange: e => {
-        console.log(e);
-    },
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">列表展示</view>
+    <view class="radio-area">
+        <radio-group>
+            <radio class="radio border-bottom" checked>单选项一</radio>
+            <radio class="radio border-bottom" checked="false">单选项二</radio>
+            <radio class="radio border-bottom" checked="false">单选项三</radio>
+        </radio-group>
+    </view>
+</view>
+```
 
-    formSubmit: e => {
-        console.log(e);
-    }
-});
+### **代码示例3 - 包含禁用选项**
+
+* 在 swan 文件中
+
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>包含禁用选项</view>
+        <view>disabled</view>
+    </view>
+    <view class="radio-area">
+        <radio-group>
+            <radio class="radio border-bottom" checked>可用选项</radio>
+            <radio class="radio border-bottom" checked="false">可用选项</radio>
+            <radio class="radio" checked="false" disabled>
+                <text class="disabledText">禁用选项</text>
+            </radio>
+        </radio-group>
+    </view>
+</view>
+```
+
+### **代码示例4 - 默认不选中**
+
+* 在 swan 文件中
+
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>默认不选中</view>
+        <view>checked="false"</view>
+    </view>
+    <view class="radio-area">
+        <radio-group>
+            <radio class="radio border-bottom" checked>单选项一</radio>
+            <radio class="radio border-bottom" checked="false">单选项二</radio>
+        </radio-group>
+    </view>
+</view>
+```
+
+### **代码示例5 - 自定义颜色**
+
+* 在 swan 文件中
+
+```xml
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>自定义颜色</view>
+        <view>color="#00BC89"</view>
+    </view>
+    <view class="radio-area">
+        <radio-group>
+            <radio class="radio border-bottom" color="#00BC89" checked>单选项一</radio>
+            <radio class="radio border-bottom" color="#00BC89">单选项二</radio>
+        </radio-group>
+    </view>
+</view>
 ```
