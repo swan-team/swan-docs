@@ -78,6 +78,29 @@ A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 
 
 A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
 
+**代码示例：**
+
+<a href="swanide://fragment/33587beb69a085916a1b5c1a133bd3361576056022937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <text class="content" selectable="true" space="ensp">你</text>
+        <text class="content" selectable="true" space="ensp">好</text>
+    </view>
+</view>
+```
+
+```css
+.card-area {
+    font-size: 0
+}
+
+.content {
+    font-size: .16rem
+}
+```
+
 ####  Q：swiper 的面板指示点能自定义样式吗？
 
 A: [参见swiper参数](/develop/component/view_swiper/)，可以去 dot 显示之后，自己定义 dot 样式。
