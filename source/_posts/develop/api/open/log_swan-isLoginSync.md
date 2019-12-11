@@ -40,7 +40,7 @@ sidebar: log_swan-isLoginSync
 
 **代码示例**
 
-<a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b375302dc11056fa20ec76ebec02291c1576039943855" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -55,11 +55,15 @@ sidebar: log_swan-isLoginSync
 ```js
 Page({
     isLoginSync() {
-        try {
-            var result = swan.isLoginSync();
-            console.log('isLoginSync', result);
-        } catch (e) {
-            console.log('error', e);
+        let res = swan.isLoginSync();
+
+        // 基础库 3.130.1 之前，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
+        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+            console.log('isLoginSync success', res);
+        }
+        else {
+            console.log('isLoginSync fail', res.errMsg || res.message);
         }
     }
 });
@@ -81,5 +85,5 @@ Page({
 
 **Bug & Tip**
 
-* 基础库 3.130.1 之前，入参错误时会返回一个标准的`Error`对象；接口调用失败时会返回一个包含`errCode`和`errMsg`的对象，详见上述错误码。
-* 基础库 3.130.1 及以后，入参错误和接口调用失败时都会返回一个标准的`Error`对象。
+* 基础库 3.130.1 之前，接口调用失败时会返回一个包含`errCode`和`errMsg`的原生对象，可通过判断`errCode`和`errMsg`来判断接口是否调用失败，详见上述错误码。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

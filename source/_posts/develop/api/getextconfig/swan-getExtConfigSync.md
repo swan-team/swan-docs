@@ -47,19 +47,15 @@ sidebar: swan-getExtConfigSync
 * 在 js 文件中
 
 ```js
-Page({
-    getExtConfigSync() {
-        try {
-            const extData = swan.getExtConfigSync();
-            swan.showToast({
-                title: JSON.stringify(extData),
-                icon: 'none'
-            });
-        } catch (err) {
-            console.log('getExtConfigSync fail', err);
-        }
-    }
-});
+try {
+    let extData = swan.getExtConfigSync();
+    swan.showToast({
+        title: JSON.stringify(extData),
+        icon: 'none'
+    });
+} catch (err) {
+    console.log('getExtConfigSync fail', err);
+}
 ```
 
 **Bug & Tip**
