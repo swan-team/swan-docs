@@ -68,19 +68,22 @@ sidebar: swan-getSystemInfoSync
 
 **代码示例**
 
-<a href="swanide://fragment/6f066eef865faf28a95af5c97553df451574243505661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f058b77023a61545d126c5ce875cc8a21576033025390" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
 
 ```js
-try {
-    const result = swan.getSystemInfoSync();
-    console.log('getSystemInfoSync success', result);
-} catch (e) {
-    console.log('getSystemInfoSync fail', e);
-}
+let res = swan.getSystemInfoSync();
 
+// 基础库 3.130.1 之前，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
+// 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+    console.log('getSystemInfoSync success', res);
+}
+else {
+    console.log('getSystemInfoSync fail', res.errMsg || res.message);
+}
 ```
 
 #### 错误码
@@ -89,4 +92,10 @@ Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确      |
+|202|解析失败，请检查参数是否正确|
+
+
+**Bug & Tip**
+
+* 基础库 3.130.1 之前，接口调用失败时会返回一个包含`errCode`和`errMsg`的原生对象，可通过判断`errCode`和`errMsg`来判断接口是否调用失败，详见上述错误码。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

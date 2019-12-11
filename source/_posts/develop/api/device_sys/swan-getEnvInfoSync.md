@@ -43,16 +43,26 @@ sidebar: swan-getEnvInfoSync
 
 **代码示例**
 
-<a href="swanide://fragment/82e11bbc8ad46f16d1358e023478af9e1569478295415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d16d7d752c1d1117fda8fd07d97fe1f81576033078173" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 js 文件中
 
 ```js
-try {
-    const result = swan.getEnvInfoSync();
+let res = swan.getEnvInfoSync();
+
+// 基础库 3.130.1 之前，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
+// 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
     console.log('getEnvInfoSync success', result);
-} catch (e) {
-    console.log('getEnvInfoSync fail', e);
+}
+else {
+    console.log('getEnvInfoSync fail', res.errMsg || res.message);
 }
 ```
+
+
+**Bug & Tip**
+
+* 基础库 3.130.1 之前，接口调用失败时会返回一个包含`errCode`和`errMsg`的原生对象，可通过判断`errCode`和`errMsg`来判断接口是否调用失败。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

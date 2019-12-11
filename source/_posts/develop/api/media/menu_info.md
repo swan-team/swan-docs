@@ -45,7 +45,7 @@ sidebar: menu_info
 
 **代码示例**
 
-<a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/939bf2cfab58244d2ec43263f3f89a8c1576033739330" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -94,12 +94,16 @@ Page({
         }]
     },
     getMenuButtonBoundingClientRect() {
-        try {
-            const result = swan.getMenuButtonBoundingClientRect();
-            console.log('getMenuButtonBoundingClientRect success', result);
-            this.updateInfoList(result);
-        } catch (err) {
-            console.log('getMenuButtonBoundingClientRect fail', err);
+        let res = swan.getMenuButtonBoundingClientRect();
+
+        // 基础库 3.130.1 之前，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
+        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+            console.log('getMenuButtonBoundingClientRect success', res);
+            this.updateInfoList(res);
+        }
+        else {
+            console.log('getMenuButtonBoundingClientRect fail', res.errMsg || res.message);
         }
     },
     updateInfoList(res) {
@@ -117,3 +121,7 @@ Page({
 ```
 
 
+**Bug & Tip**
+
+* 基础库 3.130.1 之前，接口调用失败时会返回一个包含`errCode`和`errMsg`的原生对象，可通过判断`errCode`和`errMsg`来判断接口是否调用失败。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
