@@ -219,9 +219,9 @@ POST数据|Json数据
 |endTimestamp | 是 | Long | 1577544776 | 使用结束时间，当type为1时，endTimestamp必传且生效； | 
 |timeUnit | 是 | Integer | 2 | 时间单位：1-时；2-天；3-月；当type为2时，timeUnit必传且生效； | 
 |timeValue | 是 | Integer | 30 | 时间值；当type为2时，timeValue必传且生效； | 
-|getLimit | 是 | Integer | 2 | 每人领取次数限制 | 
 |getStartTimestamp | 是 | Long | 1574952776 | 开始领取时间 | 
 |getEndTimestamp | 是 | Long | 1577544776 | 结束领取时间 | 
+|getLimit | 是 | Integer | 2 | 每人领取次数限制 | 
 |appRedirectPath | 否 | String | pages/index/index | 已领取的卡券，从详情頁点击「立即使用」打开小程序页面地址，不传默认打开首页| 
 |callbackUrl | 是 | String |  | 卡券领取事件推送地址| 
 
@@ -264,7 +264,7 @@ POST数据|Json数据
 
 ##### 请求地址
 ```
-    https://openapi.baidu.com/file/2.0/smartapp/v1.0/coupon/upload/image?access_token
+    POST请求 https://openapi.baidu.com/file/2.0/smartapp/v1.0/coupon/upload/image?access_token
 ```
 ##### 返回示例
 
@@ -316,7 +316,7 @@ POST数据|Json数据
     "errno": 0,
     "msg": "success",
     "data": {
-        "bannerIds": 23830865
+        "bannerId": 23830865
     }
 }
 ```
@@ -337,7 +337,7 @@ POST数据|Json数据
 ##### POST数据示例
 ```
 {
-    "bannerIds":"bannerIds",
+    "bannerId":"bannerId",
     "couponId":"xxx",
     "picUrl":"www.baidu.com",
     "title":"标题",
@@ -375,7 +375,7 @@ POST数据|Json数据
 |参数 | 说明 | 类型 | 是否必传 | 
 |---|---|---|---|---|
 |couponId | 卡券ID | String | 是 |  
-|bannerIds | 卡券banner记录id | Long | 是 |  |  
+|bannerId | 卡券banner记录id | Long | 是 |  |  
 ##### 返回示例
 ```
 {
@@ -440,7 +440,7 @@ POST数据|Json数据
         "total": 1,
         "dataList": [
             {
-                "bannerIds": 23830865,
+                "bannerId": 23830865,
                 "couponId": "23830866",
                 "title": "titletest",
                 "picUrl": "picUrlTest",
@@ -486,7 +486,7 @@ POST数据|Json数据
         <MsgType> <![CDATA[event]]> </MsgType>
         <Event> <![CDATA[user_get_coupon]]> </Event>
         <CouponId> <![CDATA[pZI8Fjwsy5fVPRBeD78J4RmqVvBc]]> </CouponId>
-        <UserCouponCode> <![CDATA[226009850808]]> </UserCardCode>
+        <UserCouponCode> <![CDATA[226009850808]]> </UserCouponCode>
         <CouponTakeId><![CDATA[xxxxx]]> </CouponTakeId>
     </xml>
 ```
@@ -502,7 +502,7 @@ POST数据|Json数据
         "MsgType":"event",
         "Event":"user_get_coupon",
         "CouponId":"pZI8Fjwsy5fVPRBeD78J4RmqVvBc",
-        "CouponCode":"226009850808",
+        "UserCouponCode":"226009850808",
         "CouponTakeId":"xxxxx"
     }
 ```
@@ -575,13 +575,6 @@ onShow(event) {
 ```
 POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/code/consume?access_token=ACCESS_TOKEN
 ```
-##### 请求参数
-
-|参数 | 说明 |
-|---|---|
-|access_token |调用接口凭证|
-|POST数据|Json数据|
-
 ##### 请求参数
 
 |参数 | 说明 | 类型 | 是否必传 | 
