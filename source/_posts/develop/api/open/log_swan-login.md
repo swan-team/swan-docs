@@ -97,6 +97,12 @@ swan.login({
 
 > 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
 
+**代码示例4: 联合登陆示例**
+
+<a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
+
 #### 错误码
 * Andriod
 
