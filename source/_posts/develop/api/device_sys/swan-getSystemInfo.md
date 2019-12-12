@@ -47,20 +47,20 @@ sidebar: swan-getSystemInfo
 |fontSizeSetting |用户字体大小设置 | |
 |SDKVersion |客户端基础库版本 | |
 |host|宿主平台，详见[宿主平台枚举值列表](https://smartprogram.baidu.com/docs/develop/api/device_sys/hostlist/) 。|3.30.2|
-|cacheLocation |上一次缓存的位置信息|安卓端最低swanjs版本3.40.4；ios最低支持版本3.70.2|
+|cacheLocation |上一次缓存的位置信息|安卓端最低基础库版本3.40.4；ios最低支持版本3.70.2|
 |swanNativeVersion|宿主平台版本号|最低支持版本1.13.18|
-|devicePixelRatio|屏幕密度|安卓最低支持swanjs版本3.0.39； ios最低支持版本3.0.39 |
+|devicePixelRatio|屏幕密度|安卓最低支持基础库版本3.0.39； ios最低支持版本3.0.39 |
 |albumAuthorized|允许宿主使用相册的开关（仅 iOS 有效）|ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|notificationAuthorized|允许宿主通知的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|notificationAuthorized|允许宿主通知的开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |notificationAlertAuthorized|允许宿主通知带有提醒的开关（仅 iOS 有效）|ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |notificationBadgeAuthorized|允许宿主通知带有标记的开关（仅 iOS 有效）|ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |notificationSoundAuthorized|允许宿主通知带有声音的开关（仅 iOS 有效）|ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|cameraAuthorized|允许宿主使用摄像头的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|locationAuthorized|允许宿主使用定位的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|microphoneAuthorized|允许宿主使用麦克风的开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|locationEnabled|地理位置的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|wifiEnabled|Wi-Fi 的系统开关|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
-|safeArea|在竖屏正方向下的安全区域|安卓最低支持swanjs版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|cameraAuthorized|允许宿主使用摄像头的开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|locationAuthorized|允许宿主使用定位的开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|microphoneAuthorized|允许宿主使用麦克风的开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|locationEnabled|地理位置的系统开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|wifiEnabled|Wi-Fi 的系统开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+|safeArea|在竖屏正方向下的安全区域|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 
 **图片示例**
 
