@@ -10,7 +10,7 @@ sidebar: view_cover-image
 
 ## 代码示例
 
-<a href="swanide://fragment/96cdf8767d76097235fdc7fb91be1dde1576119658466" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ef901c049df28a34af884269932898ce1576151678883" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
