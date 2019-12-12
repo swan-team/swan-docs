@@ -3,6 +3,7 @@ title: 人脸识别高级认证
 header: third
 nav: third
 sidebar: customer
+
 ---
 
 ### 小程序主体高级认证需要在小程序上线前完成，目前第三方代客户进行高级认证有
@@ -10,40 +11,62 @@ sidebar: customer
 ### 两种方式：
 
 1.对公打款(两种方式)
+
 >1.对公打款可以在第三方平台-客户管理页面进行操作，通过点击客户高级认证栏『待认证』跳转到百度信誉的高级认证页面，代客户进行对公打款高级认证。
-2.通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
+>2.通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
 
 2.法人人脸识别
+
 >通过人脸识别调起二维码接口，跳转百度信誉人脸识别页面，进行法人身份高级认证。
 
 
 ## 人脸识别调起二维码
-调用接口成功后,获得base64编码图片,使用手百扫码后可进入法人人脸识别认证
+
+> 调用接口成功后,获得base64编码图片,使用手百扫码后可进入法人人脸识别认证
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen
 ```
-参数说明:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token |string | 是 | 授权小程序的access_token
+**公共请求参数** 
 
-返回值说明:
+| 参数         | 类型   | 是否必填 | 描述            | 示例值 |
+| ------------ | ------ | -------- | --------------- | ------ |
+| access_token | string | 是       | 授权小程序Token | --     |
 
-字段名 | 类型  | 描述
------ |-----| -----
-qrcode |string | 二维码(base64编码图片)
-timeout | string| 过期时间
-legal\_face\_status|string|认证任务状态(1：初始化；2：通过；4：拒绝；6：进行中)
+**请求参数** 
 
-错误情况下:
+| 参数 | 类型 | 是否必填 | 描述 | 示例值 |
+| ---- | ---- | -------- | ---- | ------ |
+| --   | --   | --       | --   | --     |
 
-字段名 | 类型  | 描述
------ |-----| -----
-errno |int | 错误码
-msg |string  | 第三方id
-返回值示例:
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+
+| 字段名              | 类型   | 描述                                                 |
+| ------------------- | ------ | ---------------------------------------------------- |
+| qrcode              | string | 二维码(base64编码图片)                               |
+| timeout             | string | 过期时间                                             |
+| legal\_face\_status | string | 认证任务状态(1：初始化；2：通过；4：拒绝；6：进行中) |
+
+**请求示例** 
+
+```shell
+curl -X GET \
+  'http://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
+```
+
+
+
+**响应示例** 
+
 ```json
 {
     "errno": 0,
@@ -56,66 +79,51 @@ msg |string  | 第三方id
 }
 ```
 
-## 认证收费豁免
-在完成法人人脸识别完成之后,可调用豁免接口,调用接口后60天内小程序发布成功,则认证免费,若60天内无小程序发布成功,则需要重新收取相应费用
-
-后面接口只可调用一次 多次调用会返回不可重复开通提示
-
-
-```
-GET https://openapi.baidu.com/rest/2.0/smartapp/auth/setexempt?access_token=ACCESS_TOKEN
-```
-参数说明:
-
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token |string | 是 | 授权小程序的access_token
-
-返回值说明:
-
-字段名 | 类型  | 描述
------ |-----| -----
-add_time |string | 开通优惠豁免的时间
-push_time | string| 最近状态修改的时间
-overdue_time|string|过期时间
-
-错误情况下:
-
-字段名 | 类型  | 描述
------ |-----| -----
-errno |int | 错误码
-msg |string  | 第三方id
-
-返回值示例:
-```json
-{
-    "errno": 0,
-    "msg": "success",
-    "data": {
-        "addTime": "2019-5-30",
-        "pushTime": "2019-5-30",
-        "overdueTime": "2019-7-30"
-    }
-}
-```
-
 ## 获取对公认证页面链接
 
-通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
+> 通过获取对公认证页面链接接口，获得对公认证页面链接，用户可免登录进行填写信息完成认证
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/auth/paymentCertification?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/auth/paymentCertification
 ```
-### 参数说明:
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token |string | 是 | 授权小程序的access_token
-### 返回值说明:
-字段名 | 类型  | 描述
------ |-----| -----
-url |string | 认证页面调起url
 
-### 返回值示例:
+**公共请求参数** 
+
+| 参数         | 类型   | 是否必填 | 描述            | 示例值 |
+| ------------ | ------ | -------- | --------------- | ------ |
+| access_token | string | 是       | 授权小程序Token | --     |
+
+**请求参数** 
+
+| 参数 | 类型 | 是否必填 | 描述 | 示例值 |
+| ---- | ---- | -------- | ---- | ------ |
+| --   | --   | --       | --   | --     |
+
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+
+| 字段名 | 类型   | 描述            |
+| ------ | ------ | --------------- |
+| url    | string | 认证页面调起url |
+
+**请求示例** 
+
+```shell
+curl -X GET \
+  'http://{{openapiHTTP}}/rest/2.0/smartapp/auth/paymentCertification?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
+```
+
+
+
+**响应示例** 
+
 ```json
 {
     "errno": 0,
@@ -128,14 +136,14 @@ url |string | 认证页面调起url
 
 ## 高级认证结果推送
 
-当客户的高级认证状态发生变化后,第三方平台将可以通过开放平台上填写的消息与事件接受URL,获得变更内容。若客户账号下有多个小程序,会收到数量与客户小程序数量相等的推送
+>当客户的高级认证状态发生变化后,第三方平台将可以通过开放平台上填写的消息与事件接受URL,获得变更内容。若客户账号下有多个小程序,会收到数量与客户小程序数量相等的推送
 
 认证状态变更时，接收到的推送数据示例如下：
 
 ```json
 {
-    "appId":小程序appid,
-    "tpAppId": 第三方平台appid,
+    "appId":1452365,
+    "tpAppId": 17328232,
     "eventTime": "2019-01-14 12:45:10",
     "event": "ADVANCED_AUDIT_CHANGED",
     "adType":2, 
@@ -143,12 +151,13 @@ url |string | 认证页面调起url
 }
 ```
 
-### 参数说明
-参数名 | 类型  | 描述
------ |-----| -----
-appId |long | 小程序appid
-tpAppId |long | 第三方平台appid
-eventTime |string | 事件发生时间
-event |string | ADVANCED\_AUDIT\_CHANGED 高级认证状态变更
-adType |int | 认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 
-adStatus |int | 认证状态<br>1:<br>真实性认证通过<br>7:<br>对公打款认证: 对公打款认证完成,待支付认证费用<br>法人人脸识别认证: 人脸识别认证完成,待支付认证费用
+**参数说明**
+
+| 参数名    | 类型   | 描述                                                         |
+| --------- | ------ | ------------------------------------------------------------ |
+| appId     | long   | 小程序appid                                                  |
+| tpAppId   | long   | 第三方平台appid                                              |
+| eventTime | string | 事件发生时间                                                 |
+| event     | string | ADVANCED\_AUDIT\_CHANGED 高级认证状态变更                    |
+| adType    | int    | 认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 |
+| adStatus  | int    | 认证状态<br>1:<br>真实性认证通过<br>7:<br>对公打款认证: 对公打款认证完成,待支付认证费用<br>法人人脸识别认证: 人脸识别认证完成,待支付认证费用 |

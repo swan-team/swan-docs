@@ -25,11 +25,11 @@ sidebar: canvas_CanvasContext-setShadow
 
 **`color`参数说明**：阴影的颜色。 
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setShadow.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/9e80840b183a93ec01b126abac5dd1a81573719669152" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

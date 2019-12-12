@@ -32,7 +32,7 @@ sidebar: setting_swan-getSetting
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,7 @@ sidebar: setting_swan-getSetting
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/0cbaf44110e4d9283f9bcd78f477f0d51574136860171" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

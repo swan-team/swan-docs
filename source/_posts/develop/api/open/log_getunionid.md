@@ -9,7 +9,7 @@ sidebar: log_getunionid
 **解释**：获取unionid
 
 ### unionid说明
-1. 一个开发者可以创建多个小程序， 开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在一个开发者所有的小程序下的unionid是唯一的。
+1. 同一主体下的不同小程序，开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在同一主体下的小程序内unionid是唯一的。
 
 2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open_log/)，请妥善处理用户未授权场景。
 
@@ -55,7 +55,7 @@ data| object | 详细数据，errno为0的情况下才有意义
 --| --| --|--
 unionid| string | 小程序用户 + 开发者主体维度 唯一的id
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,7 +69,7 @@ unionid| string | 小程序用户 + 开发者主体维度 唯一的id
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/17bbb40b4856d0a6c59955a3567fe5a51574405159785" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

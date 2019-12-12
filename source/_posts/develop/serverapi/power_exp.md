@@ -34,7 +34,7 @@ scope：必须参数，固定为"smartapp_snsapi_base"
 　　"expires_in":86400,
 　　"refresh_token":"2.385d55f8615fdfd9edb7c4b5ebdc3e39.604800.1293440400-2346678-124328",
 　　"scope":"smartapp_snsapi_base",
-　　"session_key":"ANXxSNjwQDugf8615OnqeikRMu2bKaXCdlLxn",
+　　"session_key":"ANXxSNjwQDugf8615OnqeikRMu2bKaXCdlLxn",/*注意：字段已废弃，不可用*/
 　　"session_secret":"248APxvxjCZ0VEC43EYrvxqaK4oZExMB"
 }
 ```

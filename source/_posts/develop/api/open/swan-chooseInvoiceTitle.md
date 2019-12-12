@@ -37,7 +37,7 @@ sidebar: swan-chooseInvoiceTitle
 |bankAccount| String|  银行账号|
 <!-- |errMsg|  String|  接口调用结果| -->
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -52,7 +52,7 @@ sidebar: swan-chooseInvoiceTitle
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/cc76d7bff883f25aae817297814658931559043491920" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

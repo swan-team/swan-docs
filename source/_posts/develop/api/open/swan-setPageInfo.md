@@ -13,9 +13,9 @@ sidebar: swan-setPageInfo
 
 **解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。其中title和image字段也有助于用户添加页面收藏的模板展现和回访体验（用户可以在小程序菜单中收藏当前页面，并通过百度App"我的-常用功能-收藏"回访已收藏的页面）。
 
-**在浏览器中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setPageInfo.png"  class="demo-qrcode-image" />
+请<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中" target="_self">在开发者工具中</a>，单击“预览”，输入您的APPID，单击“WEB预览”，百度APP中扫码体验。
 
 **方法参数**：Object object
 
@@ -56,18 +56,12 @@ sidebar: swan-setPageInfo
 |uv |String|否| 页面的点击量（去重用户）|
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/setPageInfo1.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
+    </div>    
 </div>
 
 **代码示例 1**：
@@ -122,56 +116,31 @@ Page({
 
 ```js
 Page({
-    data: { },
-    onLoad() {
-        this.requestTask = new Promise((resolve, reject) => {
-            const requestHandler = swan.request({
-                url: '开发者服务器地址',
-                header: {
-                    'content-type': 'application/json'
-                },
-                method: 'POST',
-                dataType: 'json',
-                responseType: 'text',
-                data: {
-                    key: 'value'
-                },
-                success: res => {
-                    this.setData('data', res.data);
-                    resolve();
-                },
-                fail: err => {
-                    console.log('错误码：' + err.errCode);
-                    console.log('错误信息：' + err.errMsg);
-                }
-            })
+    onLoad(query) {
+        // 当请求依赖于 query 参数时，先从 onLoad 生命周期中取出 query
+        this.setData({
+            articleID: query.id
         });
     },
     onShow() {
-        this.requestTask.then(requestData => {
-            let res = this.getData('data');
-            swan.setPageInfo({
-                title: res.title,
-                keywords: res.keywords,
-                description: res.description,
-                articleTitle: res.articleTitle,
-                releaseDate: res.releaseDate,
-                image: res.image,
-                video: res.video,
-                visit: res.visit,
-                likes: '75',
-                comments: '13',
-                collects: '23',
-                shares: '8',
-                followers: '35',
-                success: res => {
-                    console.log('setPageInfo success');
-                },
-                fail: err => {
-                    console.log('setPageInfo fail', err);
-                }
-            })
-        })
+        const articleID = this.getData('articleID');
+        swan.request({
+            url: `https://example.com/api/article_info?id=${articleID}`,
+            success: res => {
+                swan.setPageInfo({
+                    title: res.title,
+                    keywords: res.keywords,
+                    description: res.description,
+                    articleTitle: res.articleTitle,
+                    releaseDate: res.releaseDate,
+                    image: res.image,
+                    video: res.video
+                });
+            },
+            fail: err => {
+                // 异常处理
+            }
+        });
     }
 });
 ```

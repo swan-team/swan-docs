@@ -27,7 +27,7 @@ sidebar: menu_info
 |bottom|	number|	下边界坐标，单位：px|
 |left	|number|	左边界坐标，单位：px|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -41,7 +41,7 @@ sidebar: menu_info
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

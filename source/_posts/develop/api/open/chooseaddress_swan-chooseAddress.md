@@ -41,7 +41,7 @@ sidebar: chooseaddress_swan-chooseAddress
 |telNumber|   String|  收货人手机号码| |
 |nationalCode|	String	|收货地址国家码| ||
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

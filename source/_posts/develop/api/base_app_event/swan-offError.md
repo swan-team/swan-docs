@@ -16,7 +16,7 @@ sidebar: swan-offError
 
 **方法参数：** 无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: swan-offError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/54f7a7d7055d5906448ac64a594c6e621573989952662" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

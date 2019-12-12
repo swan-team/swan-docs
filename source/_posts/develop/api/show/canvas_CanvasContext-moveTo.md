@@ -20,11 +20,11 @@ sidebar: canvas_CanvasContext-moveTo
 
 **`y`参数说明**：目标位置的 y 坐标
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/moveTo.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/7026a462f0cedf609a81733d28cb5fd11573723438564" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

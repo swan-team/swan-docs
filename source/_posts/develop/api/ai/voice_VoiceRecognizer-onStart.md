@@ -14,7 +14,7 @@ sidebar: voice_VoiceRecognizer-onStart
 **方法参数**：Function callback
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

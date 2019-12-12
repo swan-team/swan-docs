@@ -10,7 +10,7 @@ sidebar: publish
 **解释：** 社区全屏发布器组件，不含发布服务，只含有发布界面
 
 
-**属性说明：**
+**属性说明**
 
 |属性名 |类型  |默认值  |说明|
 |---- | ---- | ---- |---- |
@@ -32,7 +32,7 @@ sidebar: publish
 |bind:delImage | EventHandle |  | 点击图片右上角的删除按钮后，会直接删除图片，并通知删除的索引|
 |bind:publish | EventHandle |  | 点击提交按钮后，会回调给使用组件者|
 
-**代码示例：**
+**代码示例**
 
 <a href="swanide://fragment/0fdfa7e3dbb1373489906e74a4ba32fb1565689497911" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -48,8 +48,9 @@ sidebar: userinfo_swan-getUserInfo
 |nickname  | String  |用户昵称，用户未设置用户昵称时，将获取用户名。|
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
+|openid | String | 用户openid|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

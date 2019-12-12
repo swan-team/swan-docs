@@ -163,7 +163,7 @@ sidebar: face_swan-ai-faceDetect
 |right_cheek| number |右脸颊遮挡比例，[0-1]，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1]，1 表示完全遮挡。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

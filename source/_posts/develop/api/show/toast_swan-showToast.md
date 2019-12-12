@@ -27,7 +27,7 @@ sidebar:  toast_swan-showToast
 |complete   | Function |   否| |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
-**icon有效值**：
+**icon有效值**
 
 |有效值 |说明  |
 |---- | ---- |
@@ -35,7 +35,7 @@ sidebar:  toast_swan-showToast
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -49,7 +49,7 @@ sidebar:  toast_swan-showToast
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -122,6 +122,68 @@ Page({
         })
     }
 });
+```
+
+**代码示例2 - 开发者可自定义showToast样式**
+
+<a href="swanide://fragment/392bbc1fb46cce63621c37aac706635e1575824847831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="clickbtn"> 点击 </button>
+    <view animation="{{animationData}}" class="toast-view" s-if="{{showModalStatus}}">要显示的内容
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        animationData: "",
+        showModalStatus: false
+    },
+    showModal() {
+        var animation = swan.createAnimation({ 
+            duration: 200,  
+            timingFunction: "linear",  
+            delay: 0  
+        })  
+        animation.translateY(200).step()
+        this.setData({
+            animationData: animation.export(),
+            showModalStatus: true
+        })
+        let that = this;
+        setTimeout(function () { 
+            animation.translateY(0).step()  
+            that.setData({
+                animationData: animation.export()  
+            })  
+        }, 200)  
+        setTimeout(function () {
+            if(that.data.showModalStatus){ 
+                that.hideModal();
+            }  
+        }, 5000)  
+    },  
+    clickbtn() {  
+        if(this.data.showModalStatus){  
+            this.hideModal();  
+        }
+        else {  
+            this.showModal();  
+        }  
+    },  
+    hideModal() {  
+        this.setData({
+            showModalStatus: false
+        })
+    },  
+})
 ```
 
 **Bug&Tip**：

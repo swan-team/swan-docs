@@ -29,7 +29,7 @@ sidebar: query_IntersectionObserver-relativeTo
 |top|number|否| |节点布局区域的上边界|
 |bottom|number|否| |节点布局区域的下边界|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +43,7 @@ sidebar: query_IntersectionObserver-relativeTo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/2ccad5e6c49621ca8494346f4b6b7e161574305549903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

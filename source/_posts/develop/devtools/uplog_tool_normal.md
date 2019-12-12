@@ -5,6 +5,20 @@ nav: devtools
 sidebar: uplog_tool_normal
 ---
 
+### 2.21 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.21.2|2019.12.12|**New**<p> 新增[版本管理](https://smartprogram.baidu.com/docs/develop/devtools/source-manager/)功能。<p>**BugFix**<p>**·** 修复onDeviceMotionChange参数返回类型的问题；<p>**·** 修复downloadFile 图片 image 不显示的问题；<p>**·** 修复修复小游戏cts测试相关的问题；<p>**·** 修复小游戏调起分享面板报错问题。|
+
+
+### 2.20 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.20.1|2019.12.04|**New**<p> 新建小游戏项目模板优化适配大尺寸屏幕。<p>**Change**<p>**·** 小程序新建代码片段模板修改 navigationBarTitleText 字段为“智能小程序”；<p>**·** 小游戏模拟器预置设备增加iPhone X、iPhone XR、iPhone XS Max、Ipad Air、iPad pro 10.5、iPad pro 12.9预置尺寸。<p>**BugFix**<p>**·** 修复trace面板触发预览前走鉴权逻辑的问题；<p>**·** 修复增强编译在普通编译模式下保存或新建文件可能出现的报错问题。|
+
+
 ### 2.19 版本 
 
 |版本号|更新时间|更新内容|

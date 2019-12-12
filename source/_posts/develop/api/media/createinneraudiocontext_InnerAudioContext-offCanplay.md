@@ -16,7 +16,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offCanplay
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offCanplay
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f8bea8e31acd803303f1f9486276e9891574734004361" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

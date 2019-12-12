@@ -13,7 +13,7 @@ priority: 10-06
 通过该对象你可以获取到相机的变换矩阵以及当前画面中帧检测到的人脸对象（[DuXRFace](/game/api/xr/DuXRFace/)）
 
 
-**代码示例：**
+**代码示例**
 ```js
 function update() {
     // 每次更新的时候获取当前帧的对象

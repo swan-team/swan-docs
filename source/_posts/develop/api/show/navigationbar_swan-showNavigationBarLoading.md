@@ -17,7 +17,7 @@ sidebar: navigationbar_swan-showNavigationBarLoading
 **方法参数**：无
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: navigationbar_swan-showNavigationBarLoading
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/072bca954324649b05962f16c9d69de61574136587133" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

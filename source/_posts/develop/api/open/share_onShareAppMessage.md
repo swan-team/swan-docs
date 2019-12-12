@@ -10,7 +10,7 @@ sidebar: share_onShareAppMessage
 
 详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_pagefunction/">页面相关事件处理函数</a>。
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8e19207d8c8601731ca387ec93c582071575144140249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

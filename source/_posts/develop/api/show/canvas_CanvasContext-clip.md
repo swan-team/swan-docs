@@ -18,7 +18,7 @@ sidebar:  canvas_CanvasContext-clip
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar:  canvas_CanvasContext-clip
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c18c27cffbeaf52e7e5d5032081bdeac1574973539888" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

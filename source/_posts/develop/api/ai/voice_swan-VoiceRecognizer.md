@@ -35,7 +35,7 @@ context有效值如下
 |input| 输入法场景|
 |search|搜索场景值|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

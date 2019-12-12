@@ -22,7 +22,7 @@ sidebar: UpdateManager-onCheckForUpdate
 |---- | ---- | ---- |
 |hasUpdate |  Boolean | 是否有新的版本 |
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/1d5e55c4a591129c35adf0cb7bd4c2f21574070810759" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -255,9 +255,17 @@
                 text: 接入百家号流量
                 name: baijiahao
               -
-                link: /introduction/auditing_baijiahao
                 text: 百家号素材审核规范
-                name: auditing_baijiahao
+                sidebar:
+                  -
+                    link: /introduction/baijiahao_audit
+                    text: 百家号素材审核规范
+                    name: baijiahao_audit
+                  -
+                    link: /introduction/baijiahao_submit
+                    text: 百家号素材提交规范
+                    name: baijiahao_submit                    
+
         -
             link: /introduction/tieba
             text: 贴吧流量接入
@@ -442,6 +450,10 @@
               link: /design/component/topnav
               text: 顶部导航栏
               name: topnav
+            # -
+            #   link: /design/component/toptab
+            #   text: 栏目选项条
+            #   name: toptab          
             -
               link: /design/component/bottomtab
               text: 底部标签栏
@@ -482,6 +494,7 @@
               link: /design/component/empty_state
               text: 空态
               name: empty_state
+            
     -
       link: /design/story/arzoo
       text: 设计故事
@@ -872,6 +885,10 @@
                 link: /develop/framework/dynamiclib_topone
                 text: topOne动态库
                 name: dynamiclib_topone
+              -
+                link: /develop/framework/echarts
+                text: ECharts 动态库-beta 
+                name: echarts               
         -
           link: /develop/framework/subpackages
           text: 性能
@@ -920,7 +937,6 @@
             #   name: process_life
 
     -
-      link: /develop/component
       text: 组件
       name: component
       sidebar:
@@ -1164,7 +1180,6 @@
                       name: ad
 
     -
-      link: /develop/api/api
       text: API
       name: api
       sidebar:
@@ -3360,7 +3375,6 @@
                     text: detectrisk
                     name: open_risk_power_detectrisk
     -
-      link: /develop/devtools
       text: 工具
       name: devtools
       sidebar:
@@ -3544,6 +3558,10 @@
                 link: /develop/devtools/complation
                 text: 代码编译
                 name: complation
+              -
+                link: /develop/devtools/source-manager
+                text: 版本管理
+                name: source-manager
               -
                 link: /develop/devtools/cloudtext
                 text: 云测试
@@ -3738,149 +3756,149 @@
 
                     -
                         text: collection
-                        name: cloud_database_collection
+                        name: collection
                         link: /develop/cloud/cloud_database/collection
                         sidebar:
                           -
                               text: collection.doc
-                              name: cloud_database_collection_doc
-                              link: /develop/cloud/cloud_database/collection/#collection-doc
+                              name: collection_doc
+                              link: /develop/cloud/cloud_database/collection_doc
                           -
                               text: collection.get
-                              name: cloud_database_collection_get
-                              link: /develop/cloud/cloud_database/collection/#collection-get
+                              name: collection_get
+                              link: /develop/cloud/cloud_database/collection_get
                           -
                               text: collection.add
-                              name: cloud_database_collection_add
-                              link: /develop/cloud/cloud_database/collection/#collection-add
+                              name: collection_add
+                              link: /develop/cloud/cloud_database/collection_add
                           -
                               text: collection.count
-                              name: cloud_database_collection_count
-                              link: /develop/cloud/cloud_database/collection/#collection-count
+                              name: collection_count
+                              link: /develop/cloud/cloud_database/collection_count
                           -
                               text: collection.where
-                              name: cloud_database_collection_where
-                              link: /develop/cloud/cloud_database/collection/#collection-where
+                              name: collection_where
+                              link: /develop/cloud/cloud_database/collection_where
                           -
                               text: collection.orderBy
-                              name: cloud_database_collection_orderBy
-                              link: /develop/cloud/cloud_database/collection/#collection-orderBy
+                              name: collection_orderBy
+                              link: /develop/cloud/cloud_database/collection_orderBy
                           -
                               text: collection.limit
-                              name: cloud_database_collection_limit
-                              link: /develop/cloud/cloud_database/collection/#collection-limit
+                              name: collection_limit
+                              link: /develop/cloud/cloud_database/collection_limit
                           -
                               text: collection.skip
-                              name: cloud_database_collection_skip
-                              link: /develop/cloud/cloud_database/collection/#collection-skip
+                              name: collection_skip
+                              link: /develop/cloud/cloud_database/collection_skip
                           -
                               text: collection.field
-                              name: cloud_database_collection_field
-                              link: /develop/cloud/cloud_database/collection/#collection-field
+                              name: collection_field
+                              link: /develop/cloud/cloud_database/collection_field
 
                     # doc
                     -
                         text: doc
-                        name: cloud_database_collection_doc
-                        link: /develop/cloud/cloud_database/doc
+                    
+                   
                         sidebar:
                           -
                               text: doc.get
-                              name: doc
-                              link: /develop/cloud/cloud_database/doc 
+                              name: doc_get
+                              link: /develop/cloud/cloud_database/doc_get 
                           -
                               text: doc.update
-                              name: cloud_database_collection_doc_update
-                              link: /develop/cloud/cloud_database/doc/#doc-update
+                              name: doc_update
+                              link: /develop/cloud/cloud_database/doc_update
                           -
                               text: doc.set
-                              name: cloud_database_collection_doc_set
-                              link: /develop/cloud/cloud_database/doc/#doc-set
+                              name: doc_set
+                              link: /develop/cloud/cloud_database/doc_set
                           -
                               text: doc.remove
-                              name: cloud_database_collection_doc_remove
-                              link: /develop/cloud/cloud_database/doc/#doc-remove
+                              name:  doc 
+                              link: /develop/cloud/cloud_database/doc 
 
 
 
                     # db.command
                     -
-                        text: command
-                        name: cloud_database_command
-                        link: /develop/cloud/cloud_database/command/#command
+                        text: db.command
+                        name: command
+                        link: /develop/cloud/cloud_database/command 
                         sidebar:
                           -
                               text: command.eq
-                              name: cloud_database_command_eq
-                              link: /develop/cloud/cloud_database/command/#command-eq
+                              name: command_eq
+                              link: /develop/cloud/cloud_database/command_eq
                           -
                               text: command.neq
-                              name: cloud_database_command_neq
-                              link: /develop/cloud/cloud_database/command/#command-neq
+                              name:  command_neq
+                              link: /develop/cloud/cloud_database/command_neq
                           -
                               text: command.lt
-                              name: cloud_database_command_lt
-                              link: /develop/cloud/cloud_database/command/#command-lt
+                              name: command_lt
+                              link: /develop/cloud/cloud_database/command_lt
                           -
                               text: command.lte
-                              name: cloud_database_command_lte
-                              link: /develop/cloud/cloud_database/command/#command-lte
+                              name:  command_lte
+                              link: /develop/cloud/cloud_database/command_lte
                           -
                               text: command.gt
-                              name: cloud_database_command_gt
-                              link: /develop/cloud/cloud_database/command/#command-gt
+                              name: command_gt
+                              link: /develop/cloud/cloud_database/command_gt
                           -
                               text: command.gte
-                              name: cloud_database_command_gte
-                              link: /develop/cloud/cloud_database/command/#command-gte
+                              name: command_gte
+                              link: /develop/cloud/cloud_database/command_gte
                           -
                               text: command.in
-                              name: cloud_database_command_in
-                              link: /develop/cloud/cloud_database/command/#command-in
+                              name: command_in
+                              link: /develop/cloud/cloud_database/command_in
                           -
                               text: command.nin
-                              name: cloud_database_command_nin
-                              link: /develop/cloud/cloud_database/command/#command-nin
+                              name: command_nin
+                              link: /develop/cloud/cloud_database/command_nin
                           -
                               text: command.and
-                              name: cloud_database_command_and
-                              link: /develop/cloud/cloud_database/command/#command-and
+                              name: command_and
+                              link: /develop/cloud/cloud_database/command_and
                           -
                               text: command.or
-                              name: cloud_database_command_or
-                              link: /develop/cloud/cloud_database/command/#command-or
+                              name: command_or
+                              link: /develop/cloud/cloud_database/command_or
                           -
                               text: command.set
-                              name: cloud_database_command_set
-                              link: /develop/cloud/cloud_database/command/#command-set
+                              name: command_set
+                              link: /develop/cloud/cloud_database/command_set
                           -
                               text: command.remove
-                              name: cloud_database_command_remove
-                              link: /develop/cloud/cloud_database/command/#command-remove
+                              name: command_remove
+                              link: /develop/cloud/cloud_database/command_remove
                           -
                               text: command.inc
-                              name: cloud_database_command_inc
-                              link: /develop/cloud/cloud_database/command/#command-inc
+                              name: command_inc
+                              link: /develop/cloud/cloud_database/command_inc
                           -
                               text: command.mul
-                              name: cloud_database_command_mul
-                              link: /develop/cloud/cloud_database/command/#command-mul
+                              name: command_mul
+                              link: /develop/cloud/cloud_database/command_mul
                           -
                               text: command.push
-                              name: cloud_database_command_push
-                              link: /develop/cloud/cloud_database/command/#command-push
+                              name: command_push
+                              link: /develop/cloud/cloud_database/command_push
                           -
                               text: command.pop
-                              name: cloud_database_command_pop
-                              link: /develop/cloud/cloud_database/command/#command-pop
+                              name: command_pop
+                              link: /develop/cloud/cloud_database/command_pop
                           -
                               text: command.shift
-                              name: cloud_database_command_shift
-                              link: /develop/cloud/cloud_database/command/#command-shift
+                              name: command_shift
+                              link: /develop/cloud/cloud_database/command_shift
                           -
                               text: command.unshift
-                              name: cloud_database_command_unshift
-                              link: /develop/cloud/cloud_database/command/#command-unshift
+                              name: command_unshift
+                              link: /develop/cloud/cloud_database/command_unshift
         -
           text: 服务端 API 文档
           name: smartapp_api_document
@@ -4096,7 +4114,6 @@
     #               name: limit_components
 
     -
-      link: /develop/function
       text: 功能开发
       name: function
       sidebar:
@@ -4247,41 +4264,50 @@
                 name: compatibility_version
 
     -
-      link: /develop/faq
-      text: FAQ
-      name: faq
+      text: 附录
+      name: appendix
       sidebar:
         -
+          text: FAQ 
           sidebar:
-            # -
-            #   link: /develop/function/faq_v2
-            #   text: 支付常见问题
-            #   name: faq_v2
             -
-              link: /develop/faq/framworkfaq
+              link: /develop/appendix/framworkfaq
               text: 框架常见问题
               name: framworkfaq
             -
-              link: /develop/faq/confaq
+              link: /develop/appendix/confaq
               text: 组件常见问题
               name: confaq
             -
-              link: /develop/faq/apifaq
+              link: /develop/appendix/apifaq
               text: API 常见问题
               name: apifaq
             -
-              link: /develop/faq/toolfaq
+              link: /develop/appendix/toolfaq
               text: 工具常见问题
               name: toolfaq
             -
-              link: /develop/faq/webfaq
+              link: /develop/appendix/webfaq
               text: web 化常见问题
               name: webfaq
             -
-              link: /develop/faq/frequently
+              link: /develop/appendix/frequently
               text: 其它常见问题
               name: frequently
+        -
 
+          sidebar:
+            -
+              link: /develop/appendix/error
+              text: 错误码
+              name: error    
+        # -
+
+        #   sidebar:
+        #     -
+        #       link: /develop/appendix/canvas_color
+        #       text: canvas-color
+        #       name: canvas_color                       
 # 4
 -
   link: /data/concept

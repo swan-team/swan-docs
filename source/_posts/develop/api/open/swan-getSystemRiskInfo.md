@@ -29,7 +29,7 @@ sidebar: swan-getSystemRiskInfo
 |----|----|----|
 |content|Object|用于获取风控信息的加密信息对象。要获取风控信息，需要和[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口联合使用，并作为[风控检测](/develop/serverapi/open_risk_power/#detectrisk/)接口的 xtoken 参数传入。格式：{"key":"xxxx","value":"xxxx"}|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +43,7 @@ sidebar: swan-getSystemRiskInfo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e8f8b341e79ae777f0e8c9fcd46395321561118230856" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

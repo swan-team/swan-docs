@@ -45,7 +45,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
 |aiff |是|否|
 |caf|是|否|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

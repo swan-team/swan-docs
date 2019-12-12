@@ -19,7 +19,7 @@ sidebar: save_swan-setStorageSync
 
 **`data`参数说明**：需要存储的内容
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,7 +33,7 @@ sidebar: save_swan-setStorageSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/67afe5dddb614eba763185066b2e60ea1573632298467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

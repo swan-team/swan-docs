@@ -122,6 +122,17 @@ POST数据|Json数据
 }
 ```
 
+##### 返回示例
+```
+{
+    "errno":0,
+    "msg":"success",
+    "data":{
+        "couponId":"xxxx"
+    }
+}
+```
+
 
 ##### 1- 代金券
 
@@ -134,7 +145,9 @@ POST数据|Json数据
 |description | 是 | String | 打开小程序，①在个人中心-我的礼券可查看；②下单时选择该优惠券 | 使用须知：卡券使用方法的介绍 | 
 |callbackUrl | 是 | String |  | 卡券领取事件推送地址| 
 
-> **开发者须知**： 一个小程序内全部卡券的callbackUrl需为同一个。
+> **开发者须知**： 
+> 1) 一个小程序内全部卡券的callbackUrl需为同一个；
+> 2) description 字段传入文本格式支持[富文本标签](https://smartapp.baidu.com/docs/develop/component/base_rich-text/)，如使用`<br>`换行；
 
 ```json
 {
@@ -166,7 +179,7 @@ POST数据|Json数据
     "couponType":"DISCOUNT",
     "discount":30,
     "baseInfo":{
-           ················        
+     ················        
      },
      "description":"使用描述",
      "callbackUrl":"卡券事件回调地址"
@@ -206,11 +219,14 @@ POST数据|Json数据
 |endTimestamp | 是 | Long | 1577544776 | 使用结束时间，当type为1时，endTimestamp必传且生效； | 
 |timeUnit | 是 | Integer | 2 | 时间单位：1-时；2-天；3-月；当type为2时，timeUnit必传且生效； | 
 |timeValue | 是 | Integer | 30 | 时间值；当type为2时，timeValue必传且生效； | 
-|getLimit | 是 | Integer | 2 | 每人领取次数限制 | 
 |getStartTimestamp | 是 | Long | 1574952776 | 开始领取时间 | 
 |getEndTimestamp | 是 | Long | 1577544776 | 结束领取时间 | 
+|getLimit | 是 | Integer | 2 | 每人领取次数限制 | 
 |appRedirectPath | 否 | String | pages/index/index | 已领取的卡券，从详情頁点击「立即使用」打开小程序页面地址，不传默认打开首页| 
 |callbackUrl | 是 | String |  | 卡券领取事件推送地址| 
+
+
+
 
 ## 1.3 步骤三：上传Code码
 
@@ -229,8 +245,8 @@ POST数据|Json数据
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": {
           "successNum":5,
           "failNum":2  //重复导入的code会忽略
@@ -248,7 +264,7 @@ POST数据|Json数据
 
 ##### 请求地址
 ```
-    https://openapi.baidu.com/file/2.0/smartapp/v1.0/coupon/upload/image?access_token
+    POST请求 https://openapi.baidu.com/file/2.0/smartapp/v1.0/coupon/upload/image?access_token
 ```
 ##### 返回示例
 
@@ -290,14 +306,17 @@ POST数据|Json数据
 |picUrl | 卡券banner图片 | String | 是 |   
 |title | 卡券banner图标题 | String | 是 |    
 |appRedirectPath |  banner图跳转的小程序页面路径 | String | 否 | |  
+> 开发者须知：
+>1) 图片尺寸：1032* 144px；
+>2) 当前一个卡券ID仅支持创建一个Banner；
 
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": {
-        "bannerIds": 23830865
+        "bannerId": 23830865
     }
 }
 ```
@@ -318,7 +337,7 @@ POST数据|Json数据
 ##### POST数据示例
 ```
 {
-    "bannerIds":"bannerIds",
+    "bannerId":"bannerId",
     "couponId":"xxx",
     "picUrl":"www.baidu.com",
     "title":"标题",
@@ -339,8 +358,8 @@ POST数据|Json数据
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": true
 }
 ```
@@ -356,12 +375,12 @@ POST数据|Json数据
 |参数 | 说明 | 类型 | 是否必传 | 
 |---|---|---|---|---|
 |couponId | 卡券ID | String | 是 |  
-|bannerIds | 卡券banner记录id | Long | 是 |  |  
+|bannerId | 卡券banner记录id | Long | 是 |  |  
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": true
 }
 ```
@@ -381,8 +400,8 @@ POST数据|Json数据
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": [
         {
             "bannerIds": 23830865,
@@ -414,14 +433,14 @@ POST数据|Json数据
 ##### 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": {
         "pageNo": 1,
         "total": 1,
         "dataList": [
             {
-                "bannerIds": 23830865,
+                "bannerId": 23830865,
                 "couponId": "23830866",
                 "title": "titletest",
                 "picUrl": "picUrlTest",
@@ -445,6 +464,9 @@ POST数据|Json数据
 ## 2.1 领券事件推送
 
 用户在领取卡券时，百度会把这个事件推送到开发者填写的`callbackUrl`上。
+开发者服务器收到请求必须做出下述回复:
+> 1.直接回复success（推荐方式）
+> 2.直接回复空串
 
 ##### 接口调用说明
 
@@ -462,9 +484,9 @@ POST数据|Json数据
         <FromUserName> <![CDATA[open_id]]> </FromUserName>
         <CreateTime>1472551036</CreateTime>
         <MsgType> <![CDATA[event]]> </MsgType>
-        <Event> <![CDATA[user_get_card]]> </Event>
-        <CouponId> <![CDATA[pZI8Fjwsy5fVPRBeD78J4RmqVvBc]]> </CardId>
-        <UserCouponCode> <![CDATA[226009850808]]> </UserCardCode>
+        <Event> <![CDATA[user_get_coupon]]> </Event>
+        <CouponId> <![CDATA[pZI8Fjwsy5fVPRBeD78J4RmqVvBc]]> </CouponId>
+        <UserCouponCode> <![CDATA[226009850808]]> </UserCouponCode>
         <CouponTakeId><![CDATA[xxxxx]]> </CouponTakeId>
     </xml>
 ```
@@ -478,9 +500,9 @@ POST数据|Json数据
         "FromUserName":"open_id",
         "CreateTime":"1472551036",
         "MsgType":"event",
-        "Event":"user_get_card",
+        "Event":"user_get_coupon",
         "CouponId":"pZI8Fjwsy5fVPRBeD78J4RmqVvBc",
-        "CouponCode":"226009850808",
+        "UserCouponCode":"226009850808",
         "CouponTakeId":"xxxxx"
     }
 ```
@@ -494,7 +516,7 @@ POST数据|Json数据
 |FromUserName	|领券用户的OpenID|
 |CreateTime	|消息创建时间 （整型）|
 |MsgType	|消息类型，event|
-|Event	|事件类型，user_get_card(用户领取卡券)|
+|Event	|事件类型，user_get_coupon(用户领取卡券)|
 |CouponId|卡券ID|
 |UserCouponCode|卡券Code码|
 |CouponTakeId	|卡券领取标识，调用核销同步接口时必传|
@@ -510,23 +532,24 @@ POST数据|Json数据
 ##### 接口调用说明
 
  ![图片](../../../img/api/card_ticket/7.png)
+
 涉及开发者端+Server开发：
-1）端开发：开发者需在卡券详情页点击去使用跳转的页面上，通过 [onLoad(Object query)](https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/) 获取打开当前页面路径中的`encryptData` 参数；
-> **开发者须知**
-> 若「立即使用」 点击跳转的页面为首页，需在小程序首页页面上增加onLoad能力开发；需设置为自定义跳转页面，需在该页面增加onLoad能力开发。
-
-2）Server开发：对`encryptData`参数进行解密，获取到用户的领券信息，为用户发券；
-
-##### 协议拼接格式说明
+1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 获取当前页面路径中的**coupon**参数；
+> **开发者须知** 
+> 若点击「立即使用」 加密信息传递，注意需要在小程序app.js文件中增加onShow能力开发；
+##### 代码示例（放在app.js中）
 ```
-如果吊起协议之前无参数用"?"追加，如下：
-?coupon=encryptData
-
-如果吊起协议之前有参数用"&"追加，如下：
-?p1=xxx&coupon=encryptData
-
+onShow(event) {
+        let extraData = event.referrerInfo.extraData;
+        let coupon = extraData.coupon;
+        swan.showModal({
+            title: '提示' + coupon,
+        });
+    }
 ```
 
+
+2）Server开发：对**coupon**参数进行解密，获取到用户的领券信息，为用户发券；
 ##### 解密结果说明
 
 ```
@@ -546,19 +569,12 @@ POST数据|Json数据
 
 用户用券环节在开发者小程序内完成，开发者服务器核销掉该卡券后，需调用核销同步接口，同步至百度服务器。
 ##### 接口调用说明
- ![图片](../../../img/api/card_ticket/7.png)
+ ![图片](../../../img/api/card_ticket/8.png)
 
 ##### 接口请求说明
 ```
 POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/code/consume?access_token=ACCESS_TOKEN
 ```
-##### 请求参数
-
-|参数 | 说明 |
-|---|---|
-|access_token |调用接口凭证|
-|POST数据|Json数据|
-
 ##### 请求参数
 
 |参数 | 说明 | 类型 | 是否必传 | 
@@ -571,8 +587,8 @@ POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/code/consume?
 返回示例
 ```
 {
-    "errcode": 0,
-    "errmsg": "success",
+    "errno": 0,
+    "msg": "success",
     "data": true
 }
 ```
@@ -593,8 +609,8 @@ POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/code/consume?
 ##### 请求参数
 ```
 {
-    "errcode":0,
-    "errmsg":"success",
+    "errno":0,
+    "msg":"success",
     "data":{
         "couponId":"xxxx",
         "couponType":"DISCOUNT",
@@ -637,8 +653,8 @@ POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/code/consume?
 ##### 返回示例
 ``` 
 {
-    "errcode":0,
-    "errmsg":"success",
+    "errno":0,
+    "msg":"success",
     "data":{
         "pageNo":1,
         "total":3,
@@ -683,8 +699,8 @@ POST请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/delete?access
 
 ```
     {
-        "errcode": 0,
-        "errmsg": "success",
+        "errno": 0,
+        "msg": "success",
         "data": true
     }
 ```

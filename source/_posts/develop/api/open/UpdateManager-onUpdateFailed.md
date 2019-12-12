@@ -16,39 +16,34 @@ sidebar: UpdateManager-onUpdateFailed
 
 **方法参数**：Function callback
 
-**代码示例**：
+**代码示例**
 
-[在开发者工具中预览效果](swanide://fragment/65877d62da2f54c951b087ed53ee2dc91573808765114)
+[在开发者工具中预览效果](swanide://fragment/503b5e092aa23d3d161ab728f88d7b051575375613317)
 
 * 在 swan 文件中
 ```html
-<view class="card-area">
-    <view class="top-description border-bottom">applyUpdate</view>
-    <button type="primary" bindtap="updateTap">button</button>   
+<view class="container">
+    <view class="card-area">
+        <view class="top-description border-bottom">此api会在旧版小程序在拉到最新包失败时触发</view>   
+    </view>
 </view>
 ```
 
 * 在 js 文件中
 ```js
 Page({
-    updateTap() {
+    data: { },
+    onLoad() {
         const updateManager = swan.getUpdateManager();
-        updateManager.onCheckForUpdate(function (res) {
+        updateManager.onUpdateFailed(function (res) {
+            // 请求完新版本信息的回调
+            console.log("res", res);
             if(!res.hasUpdate){
                 swan.showModal({
                     title: '更新提示',
-                    content: '无可用更新版本',
+                    content: '版本更新失败，请重试',
                 });
             }
-        });
-
-        updateManager.onUpdateFailed(function (err) {
-            swan.showModal({
-                title: '更新提示',
-                content: '版本更新失败，请重试'
-            });
-            // 新的版本下载失败
-            console.log('update fail', err);
         });
     }
 });

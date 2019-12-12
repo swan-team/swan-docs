@@ -20,7 +20,7 @@ sidebar: cameracontext_swan-createCameraContext
 
 **返回值**：cameraContext
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,7 +34,7 @@ sidebar: cameracontext_swan-createCameraContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/21b60b0d38bf33771697da5c7d5149cd1556528875741" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

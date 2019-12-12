@@ -25,7 +25,7 @@ sidebar: swan-getBatteryInfoSync
 |level |string | 设备电量， 范围为1-100|
 |isCharging  | boolean | 设备是否正在充电|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: swan-getBatteryInfoSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/3de7a3cb8b3eb224071690c85741db091574233742997" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -58,5 +58,5 @@ Page({
     }
 });
 ```
-**Bug & Tip**：:
+**Bug & Tip**
 * iOS 不可用会 mock 返回值 level为100， isCharging 为true。

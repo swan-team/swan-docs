@@ -16,7 +16,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offTimeUpdate
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offTimeUpdate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/54ad4f8de96be55fee52898193440ada1574673008214" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

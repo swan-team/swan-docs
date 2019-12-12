@@ -9,92 +9,22 @@ sidebar: media_video
 
 **解释**：视频，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
 
 
-**属性说明**：
+## 代码示例
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-|src|String|  | 是 |视频的资源地址，支持云文件ID（<font color="#4183c4">基础库 3.120.2 以上</font>）|
-|title| String | | 否 | 视频标题，全屏时在视频顶部展示 <font color="#4183c4">基础库 3.120.2 以上</font> |
-|initial-time|Number|  | 否 |指定视频初始播放位置|
-|controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
-|autoplay|Boolean|false|否|是否自动播放|
-|loop|Boolean|false|否|是否循环播放|
-|muted|Boolean|false|否|是否静音播放|
-|objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
-|poster|String|  |否|视频封面的图片网络资源地址，支持云文件ID（<font color="#4183c4">基础库 3.120.2 以上</font>）|
-|page-gesture|  Boolean|    false|否|    在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|
-|direction|Number|  |否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
-|show-progress| Boolean|    true|否| 若不设置，宽度大于240时才会显示。|
-|show-fullscreen-btn|   Boolean|    true|否| 是否显示全屏按钮|
-|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|
-|danmu-list|    Array.&lt;object&gt;|       |否|弹幕列表|
-|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
-|enable-danmu   |Boolean    |false  |否|是否展示弹幕，只在初始化时有效，不能动态变更。|
-|show-play-btn| Boolean |true|否|    是否显示视频底部控制栏的播放按钮|
-|show-center-play-btn|  Boolean |true   |否|是否显示视频中间的播放按钮|
-|show-mute-btn|Boolean|false|否|是否显示静音按钮 <font color="#4183c4">基础库 3.120.2 以上</font>|
-|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
-|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 <font color="#4183c4">基础库 3.120.2 以上</font>|
-|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势 <font color="#4183c4">基础库 3.120.2 以上</font>|
-|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停 <font color="#4183c4">基础库 3.120.2 以上</font>|
-|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
-|bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
-|bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
-|bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
-|bindfullscreenchange|EventHandle|  |否|当视频进入和退出全屏时触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
-|bindwaiting|   EventHandle| |否|        视频出现缓冲时触发|
-|binderror| EventHandle | | 否 |视频播放出错时触发|
+<a href="swanide://fragment/6ff331dd200c341caea6ed1fe3ba85811576152071098" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**objectFit 有效值**:
+### 扫码体验
 
-| 值 | 说明 |
-| ---- | ---- |
-| contain | 包含 |
-| fill | 填充 |
-| cover | 覆盖 |
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**direction 有效值**:
 
-| 值 | 说明 |
-| ---- | ---- |
-| 0 | 正常竖向 |
-| 90 | 屏幕顺时针90度 |
-| -90 | 屏幕逆时针90度 |
 
-**主流格式支持**：
-
-|格式|    Android|    IOS|
-|--|--|--|
-|mp4|   是   |是|
-|mov|   是   |是|
-|m4v|   是   |是|
-|3gp|   是   |是|
-|avi|   是   |是|
-|m3u8|  是   |是|
-|webm|  是|  否|
-|flv    |   是   |是|
-|mkv|   是   |是|
-|rmvb|是 |是|
-|rm|    是   |是|
-|ogg|   是   |是|
-
-**主流编码格式支持**：
-
-|格式|    Android|    IOS|
-|--|--|--|
-|H.263  |是| 是|
-|H.264  |是|是|
-|HEVC   |是| 是|
-|MPEG-4 |是| 否|
-|VP8|   是   |否|
-|VP9|   是   |否|
-
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -108,7 +38,7 @@ sidebar: media_video
     </div>     
 </div>
 
-**代码示例1 - controls**：
+###  代码示例1 - controls  
 
 <a href="swanide://fragment/1d10a86e191b4738516ec73594f6cdd51574846726432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -144,7 +74,7 @@ Page({
 })
 ```
 
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -158,7 +88,7 @@ Page({
     </div> 
 </div>
 
-**代码示例2 - title**：
+###  代码示例2 - title  
 
 <a href="swanide://fragment/687b1ab6bd713b0fa80553503515d6651574851958216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -176,7 +106,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -190,7 +120,7 @@ Page({
     </div> 
 </div>
 
-**代码示例3 - direction**：
+###  代码示例3 - direction  
 
 <a href="swanide://fragment/5a3e88566c4579b2b373ea6b1f4f7a631574853407212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -225,7 +155,7 @@ Page({
     }
 });
 ```
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -239,7 +169,7 @@ Page({
     </div>     
 </div>
 
-**代码示例4 - show-progress**：
+###  代码示例4 - show-progress  
 
 <a href="swanide://fragment/6d40cf6c497c6eecf9f044a4ff9ff0901574854124112" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -257,7 +187,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -271,7 +201,7 @@ Page({
     </div>     
 </div>
 
-**代码示例5 - show-no-wifi-tip**：
+###  代码示例5 - show-no-wifi-tip  
 
 <a href="swanide://fragment/f29d4f8d9d6884709607949f354aa7b91574854980912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -290,7 +220,7 @@ Page({
 </view>
 ```
 
-**图片示例**：
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -304,7 +234,7 @@ Page({
     </div>     
 </div>
 
-**整体代码示例**：
+###  整体代码示例  
 
 <a href="swanide://fragment/cf193e3b46933a9c48cdf78994ca79cf1574845335256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -523,10 +453,89 @@ Page({
     }
 });
 ```
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- | :---- |:---- |:---- |
+|src|String|  | 是 |视频的资源地址，支持云文件ID（<font color="#4183c4">基础库 3.120.2 以上</font>）|
+|title| String | | 否 | 视频标题，全屏时在视频顶部展示 <font color="#4183c4">基础库 3.120.2 以上</font> |
+|initial-time|Number|  | 否 |指定视频初始播放位置|
+|controls|Boolean|true|否|是否显示默认播放控件（播放/暂停按钮、播放进度、时间）|
+|autoplay|Boolean|false|否|是否自动播放|
+|loop|Boolean|false|否|是否循环播放|
+|muted|Boolean|false|否|是否静音播放|
+|objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|
+|poster|String|  |否|视频封面的图片网络资源地址，支持云文件ID（<font color="#4183c4">基础库 3.120.2 以上</font>）|
+|page-gesture|  Boolean|    false|否|    在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|
+|direction|Number|  |否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度 <font color="#4183c4">百度 APP 11.12 以上</font>|
+|show-progress| Boolean|    true|否| 若不设置，宽度大于240时才会显示。|
+|show-fullscreen-btn|   Boolean|    true|否| 是否显示全屏按钮|
+|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|
+|danmu-list|    Array.&lt;object&gt;|       |否|弹幕列表|
+|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|
+|enable-danmu   |Boolean    |false  |否|是否展示弹幕，只在初始化时有效，不能动态变更。|
+|show-play-btn| Boolean |true|否|    是否显示视频底部控制栏的播放按钮|
+|show-center-play-btn|  Boolean |true   |否|是否显示视频中间的播放按钮|
+|show-mute-btn|Boolean|false|否|是否显示静音按钮 <font color="#4183c4">基础库 3.120.2 以上</font>|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层 <font color="#4183c4">基础库 3.100.4 以上</font>|
+|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 <font color="#4183c4">基础库 3.120.2 以上</font>|
+|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势 <font color="#4183c4">基础库 3.120.2 以上</font>|
+|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停 <font color="#4183c4">基础库 3.120.2 以上</font>|
+|bindplay|EventHandle| |否|当开始播放时触发 play 事件|
+|bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|
+|bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|
+|bindtimeupdate|EventHandle|  |否|播放进度变化时触发，event.detail = {currentTime, duration} 。|
+|bindfullscreenchange|EventHandle|  |否|当视频进入和退出全屏时触发，event.detail = {fullscreen, direction}，direction 取为 vertical 或 horizontal|
+|bindwaiting|   EventHandle| |否|        视频出现缓冲时触发|
+|binderror| EventHandle | | 否 |视频播放出错时触发|
+
+###  objectFit 有效值 
+
+| 值 | 说明 |
+| :---- | :---- |
+| contain | 包含 |
+| fill | 填充 |
+| cover | 覆盖 |
+
+###  direction 有效值 
+
+| 值 | 说明 |
+| :---- | :---- |
+| 0 | 正常竖向 |
+| 90 | 屏幕顺时针90度 |
+| -90 | 屏幕逆时针90度 |
+
+###  主流格式支持  
+
+|格式|    Android|    IOS|
+| :---- | :---- |:---|
+|mp4|   是   |是|
+|mov|   是   |是|
+|m4v|   是   |是|
+|3gp|   是   |是|
+|avi|   是   |是|
+|m3u8|  是   |是|
+|webm|  是|  否|
+|flv    |   是   |是|
+|mkv|   是   |是|
+|rmvb|是 |是|
+|rm|    是   |是|
+|ogg|   是   |是|
+
+###  主流编码格式支持 
+
+|格式|    Android|    IOS|
+| :---- | :---- |:---|
+|H.263  |是| 是|
+|H.264  |是|是|
+|HEVC   |是| 是|
+|MPEG-4 |是| 否|
+|VP8|   是   |否|
+|VP9|   是   |否|
 
 
-**Bug & Tip**：
-* 相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
-* `<video />` 默认宽度 300px、高度 225px。
+##  Bug & Tip 
+* Tip：相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
+* Tip：`<video />` 默认宽度 300px、高度 225px。
 
 
