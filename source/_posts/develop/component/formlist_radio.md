@@ -12,7 +12,7 @@ sidebar: formlist_radio
 
 ## 代码示例
 
-<a href="swanide://fragment/6dc54341c633a725d9f11a6b5463ce791576147477149" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8ad481330fb3c3f5e873d3d4f80155f81576151928561" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
