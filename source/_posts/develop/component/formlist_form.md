@@ -110,9 +110,9 @@ Page({
 });
 
 ```
-## 代码参考
+## 参考示例
 
-###  代码参考 1: 模板类型表单 
+###  参考示例 1: 模板类型表单 
 
 <a href="swanide://fragment/0cf7c53906fff54ad2a10034cdfb8ef21575461381127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -154,7 +154,7 @@ Page({
 });
 ```
 
-###  代码参考 2:获取 getTemplateLibraryList 示例  
+###  参考示例 2:获取 getTemplateLibraryList 示例  
 
 <a href="swanide://fragment/d422d409d3a0257de70e9007b96871bc1575446314278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

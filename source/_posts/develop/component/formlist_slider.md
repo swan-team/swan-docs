@@ -90,7 +90,7 @@ sidebar: formlist_slider
 </view>
 ```
 
- 代码示例4 - 自定义滑块样式 
+### 代码示例4 - 自定义滑块样式 
 
 <a href="swanide://fragment/adb53cc13556fb8e4277c02396c9b8791575544431665" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -108,7 +108,7 @@ sidebar: formlist_slider
 </view>
 ```
 
- 代码示例5 - 自定义进度条样式 
+### 代码示例5 - 自定义进度条样式 
 
 <a href="swanide://fragment/53d10260749725380e0bc544d2e76b361575544520470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

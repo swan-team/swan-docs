@@ -255,7 +255,7 @@ Page({
     </div>     
 </div>
 
-###  代码参考 1： 标记点
+###  参考示例 1： 标记点
 
 <a href="swanide://fragment/16a9806ccc835e31e5a7a4183f78435c1574840582474" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>

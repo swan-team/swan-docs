@@ -184,9 +184,9 @@ Page({
 });
 ```
 
-## 代码参考
+## 参考示例
 
-###  代码参考 1： 横向滚动套纵向滚动常用业务场景  
+###  参考示例 1： 横向滚动套纵向滚动常用业务场景  
 <a href="swanide://fragment/b8dd91b985ad471daeb43f8b79d7bc011575813000917" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中
 ```html
@@ -208,7 +208,7 @@ Page({
 </view>
 ```
 
-###  代码参考 2: 隐藏scroll-view的滚动条 
+###  参考示例 2: 隐藏scroll-view的滚动条 
 
 <a href="swanide://fragment/31ddeb76caca2583eba8b86df7dbf54a1575871524499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
