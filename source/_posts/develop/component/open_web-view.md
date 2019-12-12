@@ -12,7 +12,7 @@ sidebar: open_web-view
 
 ## 代码示例
 
-<a href="swanide://fragment/fb407b1f92920233724c9c34526cf6ef1576119818894" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/44fea332fa6dd229b9cce780089be3861576152075519" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

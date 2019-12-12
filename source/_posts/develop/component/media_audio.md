@@ -13,7 +13,7 @@ sidebar: media_audio
 
 ## 代码示例
 
-<a href="swanide://fragment/f423027130d0ab9b11ba87912b72b88f1576147326043" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/86a7b12384320bfd9bba0c4b289a06411576151632105" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

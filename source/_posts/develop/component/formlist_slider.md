@@ -110,7 +110,7 @@ sidebar: formlist_slider
 
  代码示例5 - 自定义进度条样式 
 
-<a href="swanide://fragment/53d10260749725380e0bc544d2e76b361575544520470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/03cd862f718cdbf42381e9eb48abcb691576152025499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
