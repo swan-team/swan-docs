@@ -40,7 +40,7 @@ sidebar: formlist_textarea
     </div>     
 </div>
 
-###  代码示例1 - 输入区高度自适应 
+###  代码示例 1：输入区高度自适应 
 
  <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -80,7 +80,7 @@ Page({
 
 ```
 
-###  代码示例2 - 出现滚动条 
+###  代码示例 2： 受控聚焦
 
  <a href="swanide://fragment/4d35f3e24c2abccf95c01b962d9724051575985791570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
