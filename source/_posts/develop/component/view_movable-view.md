@@ -14,7 +14,7 @@ sidebar: view_movable-view
 
 ## 代码示例
 
-<a href="swanide://fragment/4de282af91a1c2a3918983fdbf1d62941576119721867" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2302ff18acd4a72ef556bdca24e99d441576119723120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
