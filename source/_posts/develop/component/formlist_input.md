@@ -10,7 +10,7 @@ sidebar: formlist_input
 
 ## 代码示例
 
-<a href="swanide://fragment/8620d2dfb3cb937ec66453987503b6a91576147410498" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/bb8b94dafc8db0216331d376463130e81576151756019" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
