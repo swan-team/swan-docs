@@ -12,7 +12,7 @@ sidebar: tabs
 
 ## 代码示例
 
-<a href="swanide://fragment/4e8046f87d1fd5c379e0afbb7dd0ab991576119793306" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/04747f8fa2b02bda2eaf724e3c4475d31576152038705" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 * 普通标签栏组件

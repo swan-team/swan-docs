@@ -16,7 +16,7 @@ sidebar: media_live-player
 
 ## 代码示例
 
-<a href="swanide://fragment/e18ddcf46508fa3e5a967c2127e529601576119715210" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b76db148e33e5c554e72cafb75d1e6881576151767307" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
