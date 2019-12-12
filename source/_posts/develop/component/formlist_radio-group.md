@@ -11,20 +11,18 @@ sidebar: formlist_radio-group
 **解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](/develop/component/formlist_radio/) 相同。
 
 
+## 代码示例
 
+<a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**百度APP中扫码体验：**
+### 扫码体验
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio.png"  class="demo-qrcode-image" />
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/radio.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-## **属性说明**
-
-| 属性名 | 类型 | 默认值 | 必填 | 说明 |
-| ---- | ---- | ---- | ---- | ---- |
-| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
-
-## 示例
-### **图片示例**
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +36,7 @@ sidebar: formlist_radio-group
     </div>     
 </div>
 
-### **代码示例1 - 默认样式**
+###  代码示例1 - 默认样式 
 
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -56,7 +54,7 @@ sidebar: formlist_radio-group
 </view>
 ```
 
-### **代码示例2 - 列表展示**
+###  代码示例2 - 列表展示 
 
 * 在 swan 文件中
 
@@ -73,7 +71,7 @@ sidebar: formlist_radio-group
 </view>
 ```
 
-### **代码示例3 - 包含禁用选项**
+###  代码示例3 - 包含禁用选项 
 
 * 在 swan 文件中
 
@@ -95,7 +93,7 @@ sidebar: formlist_radio-group
 </view>
 ```
 
-### **代码示例4 - 默认不选中**
+###  代码示例4 - 默认不选中 
 
 * 在 swan 文件中
 
@@ -114,7 +112,7 @@ sidebar: formlist_radio-group
 </view>
 ```
 
-### **代码示例5 - 自定义颜色**
+###  代码示例5 - 自定义颜色 
 
 * 在 swan 文件中
 
@@ -132,3 +130,8 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
+##  属性说明 
+
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| :---- |: ---- |: ---- |: ---- |: ---- |
+| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |

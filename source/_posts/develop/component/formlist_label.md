@@ -8,22 +8,21 @@ sidebar: formlist_label
 
 
 
-**解释：** 为鼠标用户改进表单的可用性。使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。目前可以绑定的控件有：`<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
+**解释**：为鼠标用户改进表单的可用性。使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。for 优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。目前可以绑定的控件有：`<button/>`、 `<checkbox/>`、 `<radio/>`、`<switch/>`。
+
+## 代码示例
+
+<a href="swanide://fragment/8dacf3799cf8879f9509c00c75fe30e41576119712764" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/label.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/label.png"  class="demo-qrcode-image" />
-
-## **属性说明**
-
-|属性名|类型|默认值|必填|说明|
-|-----|--- |--- |--- |--- |
-|for|String| | 否 |绑定控件的 id|
-
-## 示例
-
-### **图片示例**
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +36,7 @@ sidebar: formlist_label
     </div>     
 </div>
 
-### **代码示例1 - label用for标识表单组件**：
+###  代码示例1 - label用for标识表单组件 ：
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -70,7 +69,7 @@ Page({
 });
 ```
 
-### **代码示例2 - 表单组件在label内**：
+###  代码示例2 - 表单组件在label内 ：
 
 * 在 swan 文件中
 
@@ -101,7 +100,7 @@ Page({
 });
 ```
 
-### **代码示例3 - label内有多个选项时，选中第一个**：
+###  代码示例3 - label内有多个选项时，选中第一个 ：
 
 * 在 swan 文件中
 
@@ -125,7 +124,7 @@ Page({
 </view>
 ```
 
-### **代码示例4 - label可控制热区**：
+###  代码示例4 - label可控制热区 ：
 
 <a href="swanide://fragment/72a27b52f27e27f779ceb251dd2666ae1575131264690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -163,3 +162,9 @@ Page({
     padding: .2rem;
 }
 ```
+
+##  属性说明 
+
+|属性名|类型|默认值|必填|说明|
+|:-----|:--- |:--- |:--- |:--- |
+|for|String| | 否 |绑定控件的 id|

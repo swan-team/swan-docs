@@ -10,43 +10,22 @@ sidebar: view_movable-view
 
 **解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png"  class="demo-qrcode-image" />
 
-## **属性说明**
+## 代码示例
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |
-| direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
-| inertia | Boolean | false | 否 |movable-view 是否带有惯性|
-|out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|
-|x	| Number |   | 否 |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
-| y | Number  | | 否 |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
-| damping | Number |20 | 否 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
-| friction | Number |2	  | 否 |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
-| disabled | Boolean |false | 否 |是否禁用   |
-| scale | Boolean |false | 否 |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
-| scale-min | Number |0.5 | 否 |定义缩放倍数最小值   |
-| scale-max | Number |10 | 否 |定义缩放倍数最大值   |
-| scale-value | Number |1 | 否 |定义缩放倍数，取值范围为 0.5 - 10  。 |
-|animation|Boolean|true| 否 |是否使用动画|
-| bindchange | EventHandle | | 否 |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）。|
-| bindscale | EventHandle | | 否 |缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
-| htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
-|vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
+<a href="swanide://fragment/4de282af91a1c2a3918983fdbf1d62941576119721867" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-### **direction 有效值**
+### 扫码体验
 
-| 值 | 说明 |
-| ---- | ---- |
-| all | 水平方向和垂直方向 |
-| vertical | 垂直方向 |
-| horizontal | 水平方向 |
-| none | 不可移动 |
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/movableView.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-## 示例
-### **图片示例**
+
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,9 +39,8 @@ sidebar: view_movable-view
     </div>     
 </div>
 
-### **代码示例1 - movable-view区域小于movable-area**：
+###  代码示例 1： movable-view区域小于movable-area  
 
-<a href="swanide://fragment/73dc993d033df84f14a5e47cafa16f721575277628615" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -97,9 +75,9 @@ Page({
 });
 ```
 
-**代码示例2 - movable-view区域大于movable-area**：
+### 代码示例 2：movable-view区域大于movable-area 
 
-<a href="swanide://fragment/9679666769950f9bf1b375b9f1031e6d1575277723285" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -129,9 +107,9 @@ Page({
 });
 ```
 
-**代码示例3 - direction：horizontal**：
+### 代码示例 3：只可以横向移动
 
-<a href="swanide://fragment/0443fcb9517f6edb936d0ab16d52cbbf1575278148500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -157,9 +135,9 @@ Page({
 });
 ```
 
-**代码示例4 - direction：vertical**：
+### 代码示例 4：只可以纵向移动
 
-<a href="swanide://fragment/b6560a4465bec23101854f6dd36eb98a1575278185097" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -185,9 +163,9 @@ Page({
 });
 ```
 
-**代码示例5 - out-of-bounds**：
+### 代码示例 5： 可超出边界
 
-<a href="swanide://fragment/cda1fa8dfe2b863edec778e3ee721bc51575278272229" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -216,9 +194,9 @@ Page({
 });
 ```
 
-**代码示例6 - inertia && friction**：
+### 代码示例 6： 带有惯性
 
-<a href="swanide://fragment/4cbd7c382d6429587a4ca46ed7699d161575282720618" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -246,9 +224,9 @@ Page({
 });
 ```
 
-**代码示例7 - scale**：
+### 代码示例 7： 可放缩
 
-<a href="swanide://fragment/f25034201cf4345a8924b98cc23694cc1575282968286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -297,8 +275,39 @@ Page({
 });
 ```
 
+##  属性说明 
 
-## **Bug & Tip**
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---|
+| direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
+| inertia | Boolean | false | 否 |movable-view 是否带有惯性|
+|out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|
+|x	| Number |   | 否 |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
+| y | Number  | | 否 |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
+| damping | Number |20 | 否 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
+| friction | Number |2	  | 否 |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
+| disabled | Boolean |false | 否 |是否禁用   |
+| scale | Boolean |false | 否 |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
+| scale-min | Number |0.5 | 否 |定义缩放倍数最小值   |
+| scale-max | Number |10 | 否 |定义缩放倍数最大值   |
+| scale-value | Number |1 | 否 |定义缩放倍数，取值范围为 0.5 - 10  。 |
+|animation|Boolean|true| 否 |是否使用动画|
+| bindchange | EventHandle | | 否 |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）。|
+| bindscale | EventHandle | | 否 |缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
+| htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
+|vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
+
+###  direction 有效值 
+
+| 值 | 说明 |
+|: ---- | :---- |
+| all | 水平方向和垂直方向 |
+| vertical | 垂直方向 |
+| horizontal | 水平方向 |
+| none | 不可移动 |
+
+
+##  Bug & Tip 
 
 * Tip：movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
 * Tip：movable-view 默认为绝对定位，top 和 left 属性为 0px。

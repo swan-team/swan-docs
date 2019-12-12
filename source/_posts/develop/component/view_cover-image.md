@@ -5,26 +5,22 @@ nav: component
 sidebar: view_cover-image
 ---
 
- 
-**解释：**覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 
+**解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 
 
 
+## 代码示例
 
-**百度APP中扫码体验：**
+<a href="swanide://fragment/19b2cfe1f63604d0fbdd5b04c406cb191576119657086" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-image.png"  class="demo-qrcode-image" />
+### 扫码体验
 
-## **属性说明**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-image.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- | ---- |---- |
-| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
-|bindload|	EventHandle| | 否 |图片加载成功时触发|
-|binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
-## 示例
-
-### **图片示例**
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,9 +34,8 @@ sidebar: view_cover-image
     </div>
 </div>
 
-### **代码示例**
+###  代码示例 ：图片视图
 
-<a href="swanide://fragment/23aebf6b1898af1931dba33c5df80f331565505998697" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -63,9 +58,16 @@ Page({
 });
 ```
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- | :---- |:---- |
+| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
+|bindload|	EventHandle| | 否 |图片加载成功时触发|
+|binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
-## **Bug & Tip**
+##  Bug & Tip 
 
 * Tip：支持 css transition 动画，transition-property 只支持 transform (translateX, translateY) 与 opacity。
 * Tip：文本建议都套上 cover-view 标签，避免排版错误。

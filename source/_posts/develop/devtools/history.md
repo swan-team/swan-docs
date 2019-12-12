@@ -6,14 +6,14 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.21.1） 
+### 最新正式版本（2.21.2） 
 
 * 下载链接：[Windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) /[mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
 
-### 最新 rc 版本（2.21.0-rc）
+### 最新 rc 版本（2.22.0-rc）
 
 > 包含大的新增特性，修复缺陷问题，通过内部测试的稳定版本。电脑本地可以同时安装rc版本和正式版本的工具，两种版本可独立自动更新。
 

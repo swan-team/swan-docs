@@ -10,18 +10,20 @@ sidebar: formlist_checkbox-group
 
 **解释**：多项选择器组，内部由多个 checkbox 组成
 
-**百度APP中扫码体验：**
+## 代码示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/checkbox.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-## **属性说明**
+### 扫码体验
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-|bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/checkbox.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-## 示例
-### **图片示例**
+
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -35,7 +37,7 @@ sidebar: formlist_checkbox-group
     </div>     
 </div>
 
-### **代码示例1 - 默认样式**
+###  代码示例1 - 默认样式 
 
 <a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -55,7 +57,7 @@ sidebar: formlist_checkbox-group
 </view>
 ```
 
-### **代码示例2 - 列表展示**
+###  代码示例2 - 列表展示 
 
 * 在 swan 文件中
 
@@ -94,7 +96,7 @@ Page({
 });
 ```
 
-### **代码示例3 - 包含禁用选项**
+###  代码示例3 - 包含禁用选项 
 
 * 在 swan 文件中
 
@@ -123,7 +125,7 @@ Page({
 </view>
 ```
 
-### **代码示例4 - 默认不选中**
+###  代码示例4 - 默认不选中 
 
 * 在 swan 文件中
 
@@ -144,7 +146,7 @@ Page({
 </view>
 ```
 
-### **代码示例5 - 自定义颜色**
+###  代码示例5 - 自定义颜色 
 
 * 在 swan 文件中
 
@@ -164,3 +166,9 @@ Page({
     </checkbox-group>
 </view>
 ```
+
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- | :---- |:---- |:---- |
+|bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|

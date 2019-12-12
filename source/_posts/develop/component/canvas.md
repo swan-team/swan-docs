@@ -11,25 +11,13 @@ sidebar: canvas
 
 
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/canvas.png"  class="demo-qrcode-image" />
 
-## **属性说明**
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-| canvas-id | String |  | 是 |canvas 组件的唯一标识符 |
-| disable-scroll | Boolean  | false | 否 | 当在 canvas 中移动且有绑定手势事件时，禁止屏幕滚动以及下拉刷新 |
-| bindtouchstart | EventHandle |  | 否 | 手指触摸动作开始 |
-| bindtouchmove | EventHandle |  | 否 |手指触摸后移动 |
-| bindtouchend | EventHandle |  | 否 |手指触摸动作结束 |
-| bindtouchcancel | EventHandle |  | 否 |手指触摸动作被打断，如来电提醒，弹窗 |
-| bindlongtap | EventHandle |  | 否 |手指长按 350ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
-| binderror | EventHandle |  | 否 |当发生错误时触发 error 事件，detail = {errMsg: 'something wrong'} |
 
 ## 示例
-### **图片示例**
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +31,7 @@ sidebar: canvas
     </div>     
 </div>
 
-### **代码示例1**
+###  代码示例1 
 
 <a href="swanide://fragment/6c7a47d907f45b2629884c6a9aed15541572509879120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -129,7 +117,7 @@ Page({
 }
 ```
 
-### **代码示例2**
+###  代码示例2 
 
 <a href="swanide://fragment/7f8700d9c2619093aac34548612fa3f91575828644802" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -215,7 +203,21 @@ Page({
 })
 ```
 
-## **Bug & Tip**
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |:---- |:---- |:---- |:---- |
+| canvas-id | String |  | 是 |canvas 组件的唯一标识符 |
+| disable-scroll | Boolean  | false | 否 | 当在 canvas 中移动且有绑定手势事件时，禁止屏幕滚动以及下拉刷新 |
+| bindtouchstart | EventHandle |  | 否 | 手指触摸动作开始 |
+| bindtouchmove | EventHandle |  | 否 |手指触摸后移动 |
+| bindtouchend | EventHandle |  | 否 |手指触摸动作结束 |
+| bindtouchcancel | EventHandle |  | 否 |手指触摸动作被打断，如来电提醒，弹窗 |
+| bindlongtap | EventHandle |  | 否 |手指长按 350ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
+| binderror | EventHandle |  | 否 |当发生错误时触发 error 事件，detail = {errMsg: 'something wrong'} |
+
+
+##  Bug & Tip 
 
 * Tip：canvas 组件不能使用动画进行控制。
 * Tip：组件默认宽度 300px、高度 225px。
