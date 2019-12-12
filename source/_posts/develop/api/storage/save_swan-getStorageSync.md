@@ -33,7 +33,7 @@ sidebar: save_swan-getStorageSync
 
 **代码示例**
 
-<a href="swanide://fragment/4551927945c7a56c9908cecd42d175bc1576055481853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0c1f7ac141da72c72282b7915041a30d1576122945261" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -84,16 +84,16 @@ Page({
         }
         let res = swan.setStorageSync(key, this.getData('value'));
 
-        // 基础库 3.130.1 之前，通过 instanceof 来判断是否未传必传值 key，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
-        // 基础库 3.130.1 及以后，通过 instanceof 来判断是否未传必传值 key 或接口是否调用失败
-        if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+        // 基础库 3.130.1 之前，无法判断接口是否调用失败
+        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        if (!(res instanceof Error)) {
             this.toast('存储成功', 'none');
             this.setData('disabled', false);
         }
         else {
             swan.showModal({
                 title: '存储失败',
-                content: res.errMsg || res.message
+                content: res.message
             });
         }
     },
@@ -104,9 +104,9 @@ Page({
         }
         let res = swan.getStorageSync(key);
 
-        // 基础库 3.130.1 之前，通过 instanceof 来判断是否未传必传值 key，通过返回的原生对象中是否有 errCode 和 errMsg 来判断接口是否调用失败
-        // 基础库 3.130.1 及以后，通过 instanceof 来判断是否未传必传值 key 或接口是否调用失败
-        if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+        // 基础库 3.130.1 之前，无法判断接口是否调用失败
+        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        if (!(res instanceof Error)) {
             console.log('getStorageSync success:', res);
             swan.showModal({
                 title: '数据信息',
@@ -149,5 +149,5 @@ Page({
 
 **Bug & Tip**
 
-* 基础库 3.130.1 之前，未传必传值`key`时，会返回一个标准的`Error`对象，可通过`instanceof`来判断是否未传必传值`key`；接口调用失败时会返回一个包含`errCode`和`errMsg`的原生对象，详见上述错误码。
-* 基础库 3.130.1 及以后，未传必传值`key`或接口调用失败时都会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
+* 基础库 3.130.1 之前，无法判断接口是否调用失败。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
