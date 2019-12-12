@@ -130,6 +130,35 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
+
+
+### 代码示例 6: 改变小程序原生组件大小,拿radio举例，其他组件也适用 
+
+<a href="swanide://fragment/e1e1a4c5c8688c310eb539033f72b3d51576135418767" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">改变小程序原生组件大小</view>
+            <radio-group class="radioSmall">
+                <radio checked class="radio1">单选项一</radio>
+                <radio checked="false" class="radio2">单选项二</radio>
+            </radio-group>
+        </view>
+    </view>
+</view>
+```
+
+* 在 css 文件中
+
+```css
+.radioSmall {
+    transform: scale(0.7)
+}
+```
+
 ##  属性说明 
 
 | 属性名 | 类型 | 默认值 | 必填 | 说明 |

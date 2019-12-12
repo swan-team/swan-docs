@@ -274,6 +274,46 @@ Page({
     }
 });
 ```
+###  代码示例 8: 可悬浮菜单 
+
+<a href="swanide://fragment/7dabfdd44f01d9546c2f5b7b8c92fe1d1576139863438" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <movable-area style="height: {{height}}px; width: {{width}}px; background-color: #f5f5f5">
+        <movable-view x="{=x=}" y="{=y=}" direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4">
+              菜单
+        </movable-view>
+    </movable-area>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        x: 30,
+        y: 30,
+    },
+    onShow() {
+        swan.getSystemInfo({
+            success: res => {
+                console.log('getSystemInfo success', res);
+                this.setData({
+                    'width': res.windowWidth,
+                    'height': res.windowHeight
+                });
+            },
+            fail: err => {
+                console.log('getSystemInfo fail', err);
+            }
+        });
+    }
+});
+```
 
 ##  属性说明 
 
