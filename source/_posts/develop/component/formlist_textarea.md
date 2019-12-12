@@ -15,7 +15,7 @@ sidebar: formlist_textarea
 
 ## 代码示例
 
-<a href="swanide://fragment/bd554bc3ae408adf45f703a01e39f1ce1576119799004" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c34912d442f03972fc7935686382c0261576151296601" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
