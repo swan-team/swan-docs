@@ -213,16 +213,6 @@ Page({
 <image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
 ```
 
-### **代码示例4 - 图片懒加载** 
-
-  <a href="swanide://fragment/a1ee4d3565a01e332c54460933b1c8ca1575135782389" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
-```
-
 ## **Bug & Tip**
 
 * Tip：支持设置 CSS background-position 属性，但是不推荐使用，会影响对应 mode 类型的展示。

@@ -119,7 +119,7 @@ sidebar: formlist_input
             <view class="list-item-key-4">禁用</view>
             <view class="list-item-value">
                 <input disabled="true" placeholder="disabled='true'"/>
-            </view> 
+            </view>
         </view>
 
         <view class="list-area">

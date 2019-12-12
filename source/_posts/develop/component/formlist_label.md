@@ -37,46 +37,54 @@ sidebar: formlist_label
     </div>     
 </div>
 
-### **代码示例1**：
+### **代码示例1 - label用for标识表单组件**：
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ``` xml
-<view class="wrap">
-    <view class="page-section">
-        <view class="page-section-title">表单组件在label内</view>
-        <checkbox-group class="group">
-            <view class="label-1 {{index === 0 ? 'label-first': ''}}" s-for="item, index in checkboxItems">
-              <label>
-                <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
-                <text class="label-1-text">{{item.value}}</text>
-              </label>
-            </view>
-        </checkbox-group>
-    </view>
-    <view class="page-section">
-        <view class="page-section-title">label用for标识表单组件</view>
+<view class="card-area">
+        <view class="top-description border-bottom">label用for标识表单组件</view>
         <radio-group class="group">
             <view class="label-2 {{index === 0 ? 'label-first': ''}}" s-for="item, index in radioItems">
-              <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
-              <label class="label-2-text" for="{{item.name}}"><text>{{item.value}}</text></label>
+                <label class="block {{item.checked == 'true' ? 'border-bottom': ''}}">
+                    <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+                    <label class="label-2-text" for="{{item.name}}"><text>{{item.value}}</text></label>
+                </label>
             </view>
         </radio-group>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">label内有多个时选中第一个</view>
-        <label class="label-3">
-            <view class="label-box">
-                <checkbox></checkbox>
-                <checkbox></checkbox>
-                <checkbox></checkbox>
-                <checkbox></checkbox>
-            </view>
-            <view class="label-3-text">click me～</view>
-        </label>
-    </view>
+```
+
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        radioItems: [
+            {name: 'CHN', value: '中国', checked: 'true'},
+            {name: 'USA', value: '美国'}
+        ]
+    }
+});
+```
+
+### **代码示例2 - 表单组件在label内**：
+
+* 在 swan 文件中
+
+``` xml
+<view class="card-area">
+    <view class="top-description border-bottom">表单组件在label内</view>
+    <checkbox-group class="group">
+        <view class="label-1 {{index === 0 ? 'label-first': ''}}" s-for="item, index in checkboxItems">
+            <label class="block {{item.checked == 'true' ? 'border-bottom': ''}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <text class="label-1-text">{{item.value}}</text>
+            </label>
+        </view>
+    </checkbox-group>
 </view>
 ```
 
@@ -88,16 +96,36 @@ Page({
         checkboxItems: [
             {name: 'CHN', value: '中国', checked: 'true'},
             {name: 'USA', value: '美国'}
-        ],
-        radioItems: [
-            {name: 'CHN', value: '中国', checked: 'true'},
-            {name: 'USA', value: '美国'}
         ]
     }
 });
 ```
 
-### **代码示例2 - label可控制热区**：
+### **代码示例3 - label内有多个选项时，选中第一个**：
+
+* 在 swan 文件中
+
+``` xml
+<view class="card-area">
+    <view class="top-description border-bottom">label内有多个选项时，选中第一个</view>
+    <label class="label-3">         
+        <label class="label-box border-bottom">
+            <checkbox>选项一</checkbox>
+        </label>
+        <label class="label-box border-bottom"> 
+            <checkbox>选项二</checkbox>
+        </label> 
+        <label class="label-box border-bottom"> 
+            <checkbox>选项三</checkbox>      
+        </label>
+        <view class="near-button">
+            点击选中第一项
+        </view>
+    </label>
+</view>
+```
+
+### **代码示例4 - label可控制热区**：
 
 <a href="swanide://fragment/72a27b52f27e27f779ceb251dd2666ae1575131264690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

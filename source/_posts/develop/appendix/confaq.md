@@ -74,6 +74,45 @@ A：支持。
 
 A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 CSS 设置 height。
 
+**代码示例：**
+
+<a href="swanide://fragment/ec9c378307f6f1ad5c6d8fbcbbebb0201576062412502" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description">纵向滚动</view>
+        <scroll-view
+            scroll-y
+            style="height: 1.66rem;"
+            scroll-into-view="{= toView =}"
+            scroll-top="{= scrollTop =}"
+        >
+            <view id="one" class="color-a">A</view>
+            <view id="two" class="color-b">B</view>
+            <view id="three" class="color-c">C</view>
+        </scroll-view>  
+        <view class="page-section-btns">
+            <view class="scrollToTop" bindtap="scrollToTop">回顶部</view>
+        </view>
+    </view>
+</view>
+
+```
+
+```js
+Page({
+    data: {
+        toView: 'three',
+        scrollTop: 0,
+    },
+    scrollToTop(e) {
+        console.log(e);
+        this.setData({ scrollTop: 0 });
+    }
+});
+```
+
 #### Q：使用两个text组件，组件之间有间隙，在不同手机端偶现，影响部分用户体验的问题该如何解决？
 
 A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
