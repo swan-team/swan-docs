@@ -12,7 +12,7 @@ sidebar: formlist_switch
 
 ## 代码示例
 
-<a href="swanide://fragment/bb061f7f3c2efda2156fd9854c6ccb261576119789648" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/798b2f8499d8c30fb2e7e9ae501078801576147511354" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

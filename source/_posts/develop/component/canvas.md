@@ -11,12 +11,18 @@ sidebar: canvas
 
 
 
- 百度APP中扫码体验： 
+## 代码示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/canvas.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/a019c6d454cd53dd65f600f2feeda11b1576147334822" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/canvas.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
 
-## 示例
 ###  图片示例 
 
 <div class="m-doc-custom-examples">
@@ -33,7 +39,7 @@ sidebar: canvas
 
 ###  代码示例1 
 
-<a href="swanide://fragment/6c7a47d907f45b2629884c6a9aed15541572509879120" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

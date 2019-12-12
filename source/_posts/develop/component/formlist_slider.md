@@ -11,7 +11,7 @@ sidebar: formlist_slider
 
 ## 代码示例
 
-<a href="swanide://fragment/6bbfbf296b4588c6a2433c1f24b744fa1576119784500" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e6854f5f4706d25302513c0c3f7ffcf01576119786017" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

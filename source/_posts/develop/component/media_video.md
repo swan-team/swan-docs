@@ -13,7 +13,7 @@ sidebar: media_video
 
 ## 代码示例
 
-<a href="swanide://fragment/fe7994c9166415350a6760980b7661a21576119812783" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d2a7ac72fc10a56ce1c33edc83316df71576147526658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

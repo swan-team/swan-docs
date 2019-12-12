@@ -12,7 +12,7 @@ sidebar: map
 
 ## 代码示例
 
-<a href="swanide://fragment/aaade71f7de23bb60402ac8adc5de5f01576119719403" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/27918a6adc60ff190e2c115b210fb9641576119720669" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

@@ -14,7 +14,7 @@ sidebar: base_text
 
 ## 代码示例
 
-<a href="swanide://fragment/c4b5c8a7e04b2df658af64877f262b671576119794832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ca4aca58357bb7128d8ca70bde83fc2c1576147516623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

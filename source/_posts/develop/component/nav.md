@@ -13,7 +13,7 @@ sidebar: nav
 
 ## 代码示例
 
-<a href="swanide://fragment/71c8749ccab13f1f34967233cb29651c1576119726763" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/771ed2728f026bae89b55ad250e7e0bd1576147438454" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

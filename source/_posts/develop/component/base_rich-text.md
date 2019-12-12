@@ -9,7 +9,7 @@ sidebar: base_rich-text
 
 ## 代码示例
 
-<a href="swanide://fragment/f8141ebc25d5f9e7f8753bd0843b538c1576119764786" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/a4dc9bddcce4f883653f856eb535693b1576147481431" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
