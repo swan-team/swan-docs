@@ -14,7 +14,7 @@ sidebar: view_scroll-view
 
 ## 代码示例
 
-<a href="swanide://fragment/45621afd145cd85bba0d0186e810a11d1576119773156" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/87e3120d2887979579f2c8759fc172561576151270485" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

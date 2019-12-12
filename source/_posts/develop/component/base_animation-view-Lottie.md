@@ -13,7 +13,7 @@ sidebar: base_animation-view-Lottie
 
 ## 代码示例
 
-<a href="swanide://fragment/dee020d611ea1685f9d0524b123290991576119631686" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ff5581f90f36b9ff2933e36e9ecf464a1576151625845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

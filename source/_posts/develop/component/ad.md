@@ -11,7 +11,7 @@ sidebar: ad
 
 ## 代码示例
 
-<a href="swanide://fragment/281c5eb488bbc4f5d7c534aa60b65d981576119626270" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f96a6c6603ee50a83347f909c714fb851576151617954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

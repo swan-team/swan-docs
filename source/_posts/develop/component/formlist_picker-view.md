@@ -11,7 +11,7 @@ sidebar: formlist_picker-view
 
 ## 代码示例
 
-<a href="swanide://fragment/8201605d0d006c00b48e45e5f6a8a0131576147470269" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b9f6c72162aa226cb1f03b2a212ad2891576151857903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
