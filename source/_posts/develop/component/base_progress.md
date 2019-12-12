@@ -12,7 +12,7 @@ sidebar: base_progress
 
 ## 代码示例
 
-<a href="swanide://fragment/e81d918da78288251072750311c70f6a1576119758945" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4a88dbad1fa7f30fa888793faae31e511576151886896" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
