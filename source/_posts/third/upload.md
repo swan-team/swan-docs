@@ -23,7 +23,7 @@ sidebar: upload
 
 | 参数          | 类型   | 是否必填 | 描述     | 示例值 |
 | ------------- | ------ | -------- | -------- | ------ |
-| multipartFile | ref    | 否       | 文件     | --     |
+| multipartFile | file    | 是       | 文件     | --     |
 | type          | string | 否       | 图片用途 | --     |
 
 **type 说明**：
