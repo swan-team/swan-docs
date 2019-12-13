@@ -3613,12 +3613,12 @@
                     sidebar:
                       -
                         link: /develop/devtools/auto/automator/connect
-                        text: connect
+                        text: automator.connect
                         name: connect
 
                       -
                         link: /develop/devtools/auto/automator/launch
-                        text: launch
+                        text: automator.launch
                         name: launch
                   -
                     text: SmartProgram
@@ -3626,55 +3626,55 @@
                     sidebar:
                       -
                           link: /develop/devtools/auto/smartprogram/pageStack
-                          text: pageStack
+                          text: smartProgram.pageStack
                           name: pageStack
                       -
                           link: /develop/devtools/auto/smartprogram/navigateBack
-                          text: navigateBack
+                          text: smartProgram.navigateBack
                           name: navigateBack
                       -
                           link: /develop/devtools/auto/smartprogram/redirectTo
-                          text: redirectTo
+                          text: smartProgram.redirectTo
                           name: redirectTo
                       -
                           link: /develop/devtools/auto/smartprogram/navigateTo
-                          text: navigateTo
+                          text: smartProgram.navigateTo
                           name: navigateTo
                       -
                           link: /develop/devtools/auto/smartprogram/reLaunch
-                          text: reLaunch
+                          text: smartProgram.reLaunch
                           name: reLaunch
                       -
                           link: /develop/devtools/auto/smartprogram/switchTab
-                          text: switchTab
+                          text: smartProgram.switchTab
                           name: switchTab
                       -
                           link: /develop/devtools/auto/smartprogram/currentPage
-                          text: currentPage
+                          text: smartProgram.currentPage
                           name: currentPage
                       -
                           link: /develop/devtools/auto/smartprogram/systemInfo
-                          text: systemInfo
+                          text: smartProgram.systemInfo
                           name: systemInfo
                       -
                           link: /develop/devtools/auto/smartprogram/callSwanMethod
-                          text: callSwanMethod
+                          text: smartProgram.callSwanMethod
                           name: callSwanMethod
                       -
                           link: /develop/devtools/auto/smartprogram/login
-                          text: login
+                          text: smartProgram.login
                           name: login
                       -
                           link: /develop/devtools/auto/smartprogram/remote
-                          text: remote
+                          text: smartProgram.remote
                           name: remote
                       -
                           link: /develop/devtools/auto/smartprogram/disconnect
-                          text: disconnect
+                          text: smartProgram.disconnect
                           name: disconnect
                       -
                           link: /develop/devtools/auto/smartprogram/close
-                          text: close
+                          text: smartProgram.close
                           name: close
                   -
                     text: Page
@@ -3682,31 +3682,31 @@
                     sidebar:
                       -
                         link: /develop/devtools/auto/page/path
-                        text: path
+                        text: page.path
                         name: path
                       -
                         link: /develop/devtools/auto/page/query
-                        text: query
+                        text: page.query
                         name: query
                       -
                         link: /develop/devtools/auto/page/$
-                        text: $
+                        text: page.$
                         name: $
                       -
                         link: /develop/devtools/auto/page/$$
-                        text: $$
+                        text: page.$$
                         name: $$
                       -
                         link: /develop/devtools/auto/page/waitFor
-                        text: waitFor
+                        text: page.waitFor
                         name: waitFor
                       -
                         link: /develop/devtools/auto/page/data
-                        text: data
+                        text: page.data
                         name: data
                       -
                         link: /develop/devtools/auto/page/size
-                        text: size
+                        text: page.size
                         name: size
                   -
                     text: Element
@@ -3714,51 +3714,51 @@
                     sidebar:
                       -
                         link: /develop/devtools/auto/element/tagName
-                        text: tagName
+                        text: element.tagName
                         name: tagName
                       -
                         link: /develop/devtools/auto/element/$
-                        text: $
+                        text: element.$
                         name: $
                       -
                         link: /develop/devtools/auto/element/$$
-                        text: $$
+                        text: element.$$
                         name: $$
                       -
                         link: /develop/devtools/auto/element/offset
-                        text: offset
+                        text: element.offset
                         name: offset
                       -
                         link: /develop/devtools/auto/element/size
-                        text: size
+                        text: element.size
                         name: size
                       -
                         link: /develop/devtools/auto/element/text
-                        text: text
+                        text: element.text
                         name: text
                       -
                         link: /develop/devtools/auto/element/attribute
-                        text: attribute
+                        text: element.attribute
                         name: attribute
                       -
                         link: /develop/devtools/auto/element/innerHTML
-                        text: innerHTML
+                        text: element.innerHTML
                         name: innerHTML
                       -
                         link: /develop/devtools/auto/element/outerHTML
-                        text: outerHTML
+                        text: element.outerHTML
                         name: outerHTML
                       -
                         link: /develop/devtools/auto/element/value
-                        text: value
+                        text: element.value
                         name: value
                       -
                         link: /develop/devtools/auto/element/style
-                        text: style
+                        text: element.style
                         name: style
                       -
                         link: /develop/devtools/auto/element/tap
-                        text: tap
+                        text: element.tap
                         name: tap
 
 
