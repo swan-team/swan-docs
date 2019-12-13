@@ -707,16 +707,14 @@
                 ctx.initToc();
             });
             win.onpopstate = function (e) {
-                if (e.state) {
-                    var href = e.state ? e.state : win.location.href;
-                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                    $('.m-doc-h2-list, .m-doc-h3-list').filter(function() {
-                        return $(this).attr('href').indexOf(href) > -1;
-                    }).parent('li').addClass('m-doc-sidebar-selected');
-                    ctx.getArticle(href, function() {
-                        ctx.scrollToHash();
-                    });
-                }
+                var href = e.state ? e.state : win.location.href;
+                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                $('.m-doc-h2-list, .m-doc-h3-list').filter(function() {
+                    return $(this).attr('href').indexOf(href) > -1;
+                }).parent('li').addClass('m-doc-sidebar-selected');
+                ctx.getArticle(href, function() {
+                    ctx.scrollToHash();
+                });
             };
         },
         scrollToHash: function () {
