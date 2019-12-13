@@ -40,7 +40,7 @@ sidebar: log_swan-isLoginSync
 
 **代码示例**
 
-<a href="swanide://fragment/f036e8e9edbe82f352f824c83e6b81911558336338111" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8e71ddeafda7abbf092093fa63ac0f621576122553639" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -55,11 +55,15 @@ sidebar: log_swan-isLoginSync
 ```js
 Page({
     isLoginSync() {
-        try {
-            var result = swan.isLoginSync();
-            console.log('isLoginSync', result);
-        } catch (e) {
-            console.log('error', e);
+        let res = swan.isLoginSync();
+
+        // 基础库 3.130.1 之前，无法判断接口是否调用失败
+        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        if (!(res instanceof Error)) {
+            console.log('isLoginSync success', res);
+        }
+        else {
+            console.log('isLoginSync fail', res.message);
         }
     }
 });
@@ -79,3 +83,7 @@ Page({
 |--|--|
 |1001|执行失败|
 
+**Bug & Tip**
+
+* 基础库 3.130.1 之前，无法判断接口是否调用失败。
+* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
