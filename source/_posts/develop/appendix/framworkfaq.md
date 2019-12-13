@@ -31,7 +31,7 @@ A：支持的。
 A：可以按照以下设置方式进行尝试：
 	给body标签指定背景图，这样背景图就可以填充整个浏览器viewport了
 
-代码片段：
+**代码示例**
 ```
 body{
 	margin: 0; 
@@ -70,6 +70,50 @@ A：兼容iphoneX方案：
 
 A: swan.createSelectorQuery()返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。
 
+**代码示例： 获取自定义组件内节点**
+
+<a href="swanide://fragment/89bb87e51057a582a1b9a8826ce393f31575004072494" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// 自定义组件逻辑 (custom.js)
+Component({
+    properties: {
+        // 定义了name属性，可以在使用组件时，由外部传入。此变量可以直接在组件模板中使用
+        name: {
+            type: String,
+            value: 'swan',
+        }
+    },
+    data: {
+        age: 1
+    },
+    methods: {
+        queryMultipleNodes: function(){
+            var SelectorQuery = swan.createSelectorQuery().in(this)
+            SelectorQuery.select('.name').boundingClientRect(function(res){
+                swan.showModal({
+                    title: '节点信息为',
+                    content: JSON.stringify(res)
+                });
+            }).exec()
+        }
+    }
+});
+```
+
+**代码示例： 获取基础组件内节点**
+
+<a href="swanide://fragment/901cdf4f9fc00ea28be314ec7f645e1b1576054968984" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```
+queryNodeInfo() {
+	const query = swan.createSelectorQuery();
+	query.select('.target').boundingClientRect();
+	query.exec(res => {
+		console.log(res)
+	});
+}
+```
 
 #### Q：ios添加到桌面图片会黑边，这个有办法解决吗?
 

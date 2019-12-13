@@ -7,20 +7,21 @@ sidebar: view_cover-view
 
 
 
-**解释**： 覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+**解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png"  class="demo-qrcode-image" />
+## 代码示例
 
-## **属性说明**
+<a href="swanide://fragment/3a20cabea8f8d7227222ce3ab1cd1a801576151679923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-| 属性 | 类型 | 默认值 | 必填 | 说明 |
-|------ |------ |------ |------ |------ |
-| scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
+### 扫码体验
 
-## 示例
-### **图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/cover-view.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,10 +35,9 @@ sidebar: view_cover-view
     </div>
 </div>
 
-### **代码示例**
+###  代码示例 ：文本视图
 
 
-<a href="swanide://fragment/e56bb94ee8226ee3635915e1596f239b1565512006326" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 ```html
@@ -65,4 +65,9 @@ Page({
 });
 ```
 
- 
+ ##  属性说明 
+
+| 属性 | 类型 | 默认值 | 必填 | 说明 |
+|:------ |:------ |:------ |:------ |:------ |
+| scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
+

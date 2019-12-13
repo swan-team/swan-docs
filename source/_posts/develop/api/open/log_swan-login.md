@@ -97,6 +97,62 @@ swan.login({
 
 > 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
 
+
+**代码示例4: 联合登陆**
+
+<a href="swanide://fragment/4ea2c9fd20e7a802eb3ed0fcc3f96f081576052720396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        // 用户首次登陆小程序同步手百登陆态
+        swan.login({
+            success: res => {
+                console.log('login success', res);
+            },
+            fail: err => {
+                console.log('login fail', err);
+            }
+        });
+    },
+    onShow() {
+        let that = this;
+        // 用户进入小程序检测小程序在手百的登陆态是否有效
+        swan.checkSession({
+            success: function (res) {
+                // 有效，获取用户信息
+                swan.getUserInfo({
+                    success: res => {
+                        console.log(res)
+                        let userInfo = res.userInfo;
+                    },
+                    fail: err => {
+                        console.log(err);
+                        swan.showToast({
+                            title: '请先授权'
+                        });
+                    }
+                });
+            },
+            fail: function (err) {
+                // 无效，同步手百登陆态
+                swan.login({
+                    success: res => {
+                        console.log('login success', res);
+                    },
+                    fail: err => {
+                        console.log('login fail', err);
+                    }
+                });
+            }
+        });
+    }
+});
+```
+
 #### 错误码
 * Andriod
 

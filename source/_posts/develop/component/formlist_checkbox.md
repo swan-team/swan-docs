@@ -7,23 +7,22 @@ sidebar: formlist_checkbox
 
  
 
-**解释**： 多项选择器
+**解释**：多项选择器
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/checkbox.png"  class="demo-qrcode-image" />
+## 代码示例
 
-## **属性说明**
+<a href="swanide://fragment/2b1058487cee67fe530bd34eea2761141576151667501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |
-|value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
-|disabled|Boolean| false| 否 | 是否禁用|
-|checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
-|color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
+### 扫码体验
 
-## 示例
-### **图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/checkbox.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +36,7 @@ sidebar: formlist_checkbox
     </div>     
 </div>
 
-### **代码示例**
+###  代码示例 
 
 <a href="swanide://fragment/19b41700694c662e8dae6dd6a9d676c91572917630510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -54,5 +53,13 @@ sidebar: formlist_checkbox
     </view>
 </view>
 ```
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- |: ---- |:---- |
+|value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
+|disabled|Boolean| false| 否 | 是否禁用|
+|checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
+|color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
 
 

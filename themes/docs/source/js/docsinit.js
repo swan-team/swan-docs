@@ -553,7 +553,7 @@
                 crumb = $('.m-doc-sidebar-selected').parents('.m-doc-nav-on').children('.m-doc-nav-list').children('span').html();
             }
             $('.m-doc-crumbs-wrapper').find('span').eq(0).text(crumb);
-            $('.m-doc-crumbs-wrapper').find('span').eq(1).text(doc.title.substr(0, doc.title.length - 4));
+            $('.m-doc-crumbs-wrapper').find('span').eq(1).text(doc.title.substr(0, doc.title.length - 12));
             if ($('.toc-level-2 .toc-text').length > 0) {
                 $('.m-doc-crumbs-wrapper').find('span').eq(2).show();
                 $('.m-doc-crumbs-wrapper').find('span').eq(2).text($('.toc-level-2 .toc-text').eq(0).text());
@@ -583,6 +583,7 @@
         addEvent: function () {
             var ctx = this;
             var before = $('.m-doc-content-layout').scrollTop();
+
             // 点击 二级导航折叠/展开/跳转
             $('.m-doc-nav-list').on('click', function (e) {
                 var e = e || event;
@@ -705,18 +706,16 @@
             $(win).on('resize', function () {
                 ctx.initToc();
             });
-            $(win).on('popstate', function (e) {
-                if (e.state) {
-                    var href = e.state ? e.state : win.location.href;
-                    $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                    $('.m-doc-h2-list').filter(function() {
-                        return href.indexOf($(this).attr('href')) > -1;
-                    }).parent('li').addClass('m-doc-sidebar-selected');
-                    ctx.getArticle(href, function() {
-                        ctx.scrollToHash();
-                    });
-                }
-            });
+            win.onpopstate = function (e) {
+                var href = e.state ? e.state : win.location.href;
+                $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
+                $('.m-doc-h2-list, .m-doc-h3-list').filter(function() {
+                    return $(this).attr('href').indexOf(href) > -1;
+                }).parent('li').addClass('m-doc-sidebar-selected');
+                ctx.getArticle(href, function() {
+                    ctx.scrollToHash();
+                });
+            };
         },
         scrollToHash: function () {
             var _this = this;

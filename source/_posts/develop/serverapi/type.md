@@ -111,7 +111,7 @@ sidebar: type
 | presenter | string   | 否 | 主持人  | 何炅   |
 | guest  | string   | 否 | 嘉宾 | 谢娜   |
 | publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在一年以内   示例：2018年9月8日   |
-| movie_release_time | string   | 电影上映时间   | 否   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
+| movie_release_time | string   |否   |  电影上映时间   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
 | video_duration  | string   | **是**   | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
 | pc_url | string   | **是（和h5_url需填一种）** | 视频PC播放链接   |  |
 | h5_url | string   | **是（和pc_url需填一种）** | 视频H5播放链接   |  |
@@ -271,7 +271,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做 |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
 | path | string   | **是** | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考手百问答落地页，**feed****要求至少8个答案** | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146| ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
+| images  | string   | **是** | 封面图片链接（JSON格式）（问答类型物料必须上传3张图，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146| ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | 问答型固定为1009   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 例如美食（可选有限集合） |

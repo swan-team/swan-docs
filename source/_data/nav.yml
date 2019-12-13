@@ -450,10 +450,10 @@
               link: /design/component/topnav
               text: 顶部导航栏
               name: topnav
-            -
-              link: /design/component/toptab
-              text: 栏目选项条
-              name: toptab          
+            # -
+            #   link: /design/component/toptab
+            #   text: 栏目选项条
+            #   name: toptab          
             -
               link: /design/component/bottomtab
               text: 底部标签栏
@@ -937,7 +937,6 @@
             #   name: process_life
 
     -
-      link: /develop/component
       text: 组件
       name: component
       sidebar:
@@ -1181,7 +1180,6 @@
                       name: ad
 
     -
-      link: /develop/api/api
       text: API
       name: api
       sidebar:
@@ -3377,7 +3375,6 @@
                     text: detectrisk
                     name: open_risk_power_detectrisk
     -
-      link: /develop/devtools
       text: 工具
       name: devtools
       sidebar:
@@ -4117,7 +4114,6 @@
     #               name: limit_components
 
     -
-      link: /develop/function
       text: 功能开发
       name: function
       sidebar:
@@ -4268,7 +4264,6 @@
                 name: compatibility_version
 
     -
-      link: /develop/appendix
       text: 附录
       name: appendix
       sidebar:
@@ -4306,13 +4301,13 @@
               link: /develop/appendix/error
               text: 错误码
               name: error    
-        -
+        # -
 
-          sidebar:
-            -
-              link: /develop/appendix/canvas_color
-              text: canvas-color
-              name: canvas_color                       
+        #   sidebar:
+        #     -
+        #       link: /develop/appendix/canvas_color
+        #       text: canvas-color
+        #       name: canvas_color                       
 # 4
 -
   link: /data/concept

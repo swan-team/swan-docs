@@ -8,27 +8,22 @@ sidebar: base_progress
 
 **解释**：进度条
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/progress.png"  class="demo-qrcode-image" />
 
 
+## 代码示例
 
-## **属性说明**
+<a href="swanide://fragment/4a88dbad1fa7f30fa888793faae31e511576151886896" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
-| percent | Float  | | 否 |百分比 0~100 |
-| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
-| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
-| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
-| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
-| active | Boolean  | false  | 否 |进度条从左往右的动画	|
-| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
+### 扫码体验
 
-## 示例
-### **图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/progress.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -42,11 +37,26 @@ sidebar: base_progress
     </div>     
 </div>
 
-### **代码示例1 - 显示百分比** 
+### 代码示例 1： 默认样式 
 
-<a href="swanide://fragment/855d7136e81ee2bce14311337a708e141575545470490" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+
+ 
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">默认样式</view>
+        <progress class="progress" percent="20" activeColor="#3c76ff"/>
+    </view>
+</view>
+```
+
+###  代码示例 2： 显示当前百分比 
+
+
+
+ 
 
 ```html
 <view class="wrap">
@@ -60,18 +70,12 @@ sidebar: base_progress
 </view>
 ```
 
-**代码示例2 - 自定义样式** 
+### 代码示例 3： 自定义样式
 
-<a href="swanide://fragment/4d0714c06064cc9e29e668f8295fb59a1575545655098" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
+ 
 
 ```html
 <view class="wrap">
-    <view class="card-area">
-        <view class="top-description border-bottom">默认样式</view>
-        <progress class="progress" percent="20" activeColor="#3c76ff"/>
-    </view>
     <view class="card-area">
         <view class="top-description border-bottom">
             <view>自定义样式</view>
@@ -82,11 +86,11 @@ sidebar: base_progress
 </view>
 ```
 
-**代码示例3 - active-mode属性** 
+### 代码示例 4： 显示动画
 
-<a href="swanide://fragment/83a75e26865f007b957d51434d562ce91575545714578" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+
+ 
 
 ```html
 <view class="wrap">
@@ -98,8 +102,11 @@ sidebar: base_progress
 </view>
 ```
 
+## 参考示例
 
-**图片示例**：
+<a href="swanide://fragment/5b39c74d2356ad926786f66d9da753ce1573046087456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 图片示例 ：
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -114,11 +121,11 @@ sidebar: base_progress
 </div>
 
 
-**代码示例2：设置圆角progress**：
+### 参考示例：设置圆角progress 
 
-<a href="swanide://fragment/5b39c74d2356ad926786f66d9da753ce1573046087456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+
+ 
 
 ```html
 <view class="wrap">
@@ -137,3 +144,17 @@ sidebar: base_progress
     border-radius: 30rpx;
 }
 ```
+
+
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+| percent | Float  | | 否 |百分比 0~100 |
+| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
+| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
+| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
+| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
+| active | Boolean  | false  | 否 |进度条从左往右的动画	|
+| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|

@@ -30,7 +30,7 @@ sidebar: proposal
 用户可从文章页跳转至作者页阅读作者详情。
 
 **错误**的实现方式如下：
-
+**代码示例**
 ```javascript
 // article.js 在文章页的实现片段：
 function goToAuthorPage() {
@@ -55,7 +55,7 @@ Page({
 上述示例代码存在的问题是，当用户直接访问作者页 ‘page/author/author’ 时，全局数据中没有存入 authorInfo 数据，导致页面渲染异常。
 
 **推荐**的实现方式是：
-
+**代码示例**
 ```javascript
 // article.js 在文章页的实现片段：
 function goToAuthorPage() {

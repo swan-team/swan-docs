@@ -7,45 +7,24 @@ sidebar: formlist_picker
 
 
 
-**解释：** 从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
+**解释**：从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
 
-**百度APP中扫码体验：**
+ 
+## 代码示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/4ae98fdfb268ff17520a7573e1107daf1576151249224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-## **属性说明**
+### 扫码体验
 
-|属性|类型|默认值|必填|说明|
-|--- |---|---|---|---|
-|mode|String|selector|否|选择器类型|
-|disabled|Boolean|false|否|是否禁用|
-|bindcancel|EventHandle||否|取消选择或点击遮罩层收起 picker 时触发|
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-> 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
 
-###  mode的有效值 
+## 代码示例
 
-|值|说明|
-|---|---|
-|selector|普通选择器|
-|time|时间选择器|
-|date|日期选择器|
-|multiSelector|多列选择器|
-|region|省市区选择器|
-
-### 普通选择器：mode = selector 
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| range | Array &#124;  Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |  |当 range 是一个 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
-| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
-
-## 示例
-
-### **图片示例**
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -59,7 +38,7 @@ sidebar: formlist_picker
     </div>     
 </div>
 
-### **代码示例 1** 
+###  代码示例 1：普通选择器 
 
 <a href="swanide://fragment/c16ae3b84a6ac40fefd4ddb0db99f3ce1572872865725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -97,17 +76,8 @@ Page({
     }
 });
 ```
-### <notice>时间选择器：mode = time</notice>
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | String  |  |表示选中的时间，格式为 "hh:mm"|
-| start | String  |   |表示有效时间范围的开始，字符串格式为 "hh:mm"|
-| end | String  | |表示有效时间范围的结束，字符串格式为 "hh:mm"|
-|bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-
-
-### **代码示例 2** 
+###  代码示例 2：时间选择器 
 
 <a href="swanide://fragment/6d81c7bad0496d09ca8ffe7981c5c3bf1572872978396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -147,26 +117,10 @@ Page({
 });
 ```
 
-### <notice>日期选择器：mode = date</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | String | 当前日期|表示选中的日期，格式为 "YYYY-MM-DD"|
-| start | String |  |表示有效日期范围的开始，字符串格式为 "YYYY-MM-DD"|
-| end | String |  |表示有效日期范围的结束，字符串格式为 "YYYY-MM-DD"|
-| fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
-| bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
-
-### <div style="font-style: italic"> fields有效值：</div>
-
-| 值 | 说明 |
-| ---- | ---- |
-| year | 选择器粒度为年 |
-| month | 选择器粒度为月份 |
-| day | 选择器粒度为天 |
 
 
-### **代码示例 3**：
+
+###  代码示例 3 ：日期选择器
 
 <a href="swanide://fragment/0f83f4c4024d8c279589f5bb594515b51572873363338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -206,18 +160,7 @@ Page({
 });
 ```
 
-### <notice>多列选择器：mode = multiSelector</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| range | 二维 Array &#124; Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
-| range-key | String |  |当 range 是一个二维 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
-| value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
-| bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
-
-### **代码示例 4**：
+###  代码示例 4 ：多列选择器
 
 <a href="swanide://fragment/6521d8dc859cdee233d6e68b00a2b1301572873475056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -316,16 +259,8 @@ Page({
 });
 ```
 
-### <notice>省市区选择器：mode = region</notice>
 
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
-| custom-item | String | |可为每一列的顶部添加一个自定义的项|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
-
-### **代码示例 5**：
+###  代码示例 5 ：地区选择器
 
 <a href="swanide://fragment/26a9c93186196d102d032ebcbfcf6df41572873584926" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -365,10 +300,86 @@ Page({
 });
 ```
 
+##  属性说明 
+
+|属性|类型|默认值|必填|说明|
+|--- |---|---|---|---|
+|mode|String|selector|否|选择器类型|
+|disabled|Boolean|false|否|是否禁用|
+|bindcancel|EventHandle||否|取消选择或点击遮罩层收起 picker 时触发|
+
+> 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
+
+###  mode的有效值 
+
+|值|说明|
+|---|---|
+|selector|普通选择器|
+|time|时间选择器|
+|date|日期选择器|
+|multiSelector|多列选择器|
+|region|省市区选择器|
+
+### 普通选择器：mode = selector 
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| range | Array &#124;  Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |  |当 range 是一个 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 
+### <notice>时间选择器：mode = time</notice>
 
-## **Bug & Tip**
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | String  |  |表示选中的时间，格式为 "hh:mm"|
+| start | String  |   |表示有效时间范围的开始，字符串格式为 "hh:mm"|
+| end | String  | |表示有效时间范围的结束，字符串格式为 "hh:mm"|
+|bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+
+### <notice>日期选择器：mode = date</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | String | 当前日期|表示选中的日期，格式为 "YYYY-MM-DD"|
+| start | String |  |表示有效日期范围的开始，字符串格式为 "YYYY-MM-DD"|
+| end | String |  |表示有效日期范围的结束，字符串格式为 "YYYY-MM-DD"|
+| fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
+| bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
+
+### <div style="font-style: italic"> fields有效值：</div>
+
+| 值 | 说明 |
+| ---- | ---- |
+| year | 选择器粒度为年 |
+| month | 选择器粒度为月份 |
+| day | 选择器粒度为天 |
+
+
+### <notice>多列选择器：mode = multiSelector</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| range | 二维 Array &#124; Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range-key | String |  |当 range 是一个二维 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
+| bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
+
+### <notice>省市区选择器：mode = region</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
+| custom-item | String | |可为每一列的顶部添加一个自定义的项|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
+
+##  Bug & Tip 
 
 * Tip：基础库版本 11.15 以下：picker 组件在 iOS 系统中从底部弹出，在安卓系统中从中间弹出。
 

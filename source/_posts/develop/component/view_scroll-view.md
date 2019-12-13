@@ -10,29 +10,20 @@ sidebar: view_scroll-view
 
 **解释**：可滚动视图区域，可实现横向滚动和竖向滚动。使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scroll-view.png"  class="demo-qrcode-image" />
 
-## **属性说明**
+## 代码示例
 
-|属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
-|---- | ---- | ---- |---- |---|
-|scroll-x | Boolean  |  false  | 否 | 允许横向滚动| |
-|scroll-y| Boolean  | false | 否 |允许纵向滚动| |
-|upper-threshold| Number &#124; String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件| |
-|lower-threshold| Number &#124; String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件| |
-|scroll-top | Number &#124; String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
-|scroll-left| Number &#124; String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`| |
-|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。| |
-|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡| |
-|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 | |
-|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件| |
-|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件| |
-|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | | |
+<a href="swanide://fragment/87e3120d2887979579f2c8759fc172561576151270485" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-## 示例
-### **图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scroll-view.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,9 +37,9 @@ sidebar: view_scroll-view
     </div>     
 </div>
 
-### **代码示例1 - 纵向滚动**：
+###  代码示例 1：纵向滚动  
 
-<a href="swanide://fragment/f8ad424521036b9ccdd86ab5d46d13581575277042020" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
 
 * 在 swan 文件中
 
@@ -136,9 +127,9 @@ Page({
 });
 ```
 
-### **代码示例2 - 横向滚动**：
+###  代码示例 2：横向滚动 
 
-<a href="swanide://fragment/c7549d583ae0a9fb6c76736d15b317691575276812900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
 
 * 在 swan 文件中
 
@@ -193,12 +184,11 @@ Page({
 });
 ```
 
-### **代码示例3 - 横向滚动套纵向滚动常用业务场景**：
+## 参考示例
 
+###  参考示例 1： 横向滚动套纵向滚动常用业务场景  
 <a href="swanide://fragment/b8dd91b985ad471daeb43f8b79d7bc011575813000917" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
 * 在 swan 文件中
-
 ```html
 <view class="wrap">
      <view class="card-area">
@@ -218,7 +208,40 @@ Page({
 </view>
 ```
 
-## **Bug & Tip**
+###  参考示例 2: 隐藏scroll-view的滚动条 
+
+<a href="swanide://fragment/31ddeb76caca2583eba8b86df7dbf54a1575871524499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 css 文件中
+
+```css
+/* 添加此属性隐藏scroll-view的滚动条 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+```
+
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|最低支持版本|
+|:---- | :---- |: ---- |:---- |:---|:---|
+|scroll-x | Boolean  |  false  | 否 | 允许横向滚动| |
+|scroll-y| Boolean  | false | 否 |允许纵向滚动| |
+|upper-threshold| Number &#124; String | 50 | 否 | 距顶部/左边多远时（单位 px），触发 scrolltoupper 事件| |
+|lower-threshold| Number &#124; String |50 | 否 |距底部/右边多远时（单位 px），触发 scrolltolower 事件| |
+|scroll-top | Number &#124; String  | | 否 |设置竖向滚动条位置。要动态设置滚动条位置，用法`scroll-top="{= scrollTop =}"`|1.10.3|
+|scroll-left| Number &#124; String  | | 否 |设置横向滚动条位置。要动态设置滚动条位置，用法`scroll-left="{= scrollLeft =}"`| |
+|scroll-into-view | String  | | 否 |值应为某子元素 id（id 不能以数字开头）,设置滚动方向后，按方向滚动到该元素，动态设置用法`scroll-into-view="{= scrollIntoView =}"`。| |
+|scroll-with-animation| Boolean  | false | 否 |在设置滚动条位置时使用动画过渡| |
+|enable-back-to-top| Boolean | false | 否 | ios点击顶部导航栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向 | |
+|bindscrolltoupper | EventHandle  | | 否 |滚动到顶部/左边，会触发 scrolltoupper 事件| |
+|bindscrolltolower | EventHandle |  | 否 |滚动到底部/右边，会触发 scrolltolower 事件| |
+|bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | | |
+
+
+##  Bug & Tip 
 
 * Tip：请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
 * Tip：scroll-into-view 的优先级低于 scroll-top、scroll-left。
