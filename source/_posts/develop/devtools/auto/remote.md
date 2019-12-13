@@ -1,11 +1,10 @@
 ---
-title: 脚本示例
+title: 真机自动化
 header: develop
 nav: devtools
 sidebar: remote
 ---
 
-## 真机自动化
 
 小程序自动化除了能够控制开发者工具中的小程序模拟器，也支持通过预览控制真机，以达到在真机上进行自动化测试的目的。
 
