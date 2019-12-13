@@ -111,7 +111,7 @@ sidebar: type
 | presenter | string   | 否 | 主持人  | 何炅   |
 | guest  | string   | 否 | 嘉宾 | 谢娜   |
 | publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在一年以内   示例：2018年9月8日   |
-| movie_release_time | string   | 电影上映时间   | 否   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
+| movie_release_time | string   |否   |  电影上映时间   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
 | video_duration  | string   | **是**   | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
 | pc_url | string   | **是（和h5_url需填一种）** | 视频PC播放链接   |  |
 | h5_url | string   | **是（和pc_url需填一种）** | 视频H5播放链接   |  |
