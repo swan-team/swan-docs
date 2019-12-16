@@ -42,4 +42,16 @@ canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
 
+**代码示例2 - 立体数值**
+
+<a href="swanide://fragment/36f3d540b0ba078ac5017852b52bd11f1576351846639" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+```js
+const canvasContext = swan.createCanvasContext('myCanvas');
+canvasContext.setFillStyle('blue');
+canvasContext.setShadow(15, 15, 15, '#999');
+canvasContext.fillRect(30, 30, 150, 75);
+canvasContext.draw();
+```
 

@@ -39,7 +39,7 @@ sidebar: custom_component
 
 **代码示例**
 
-<a href="swanide://fragment/645949899f4d4951ea0eb15ddb6c66101574773397207" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8654bf82c90fd07869a882a72f8d098e1576497094976" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -58,6 +58,10 @@ Component({
     },
     methods: {
         nextTick() {
+            swan.showToast({
+                title: '请在控制台查看打印顺序',
+                icon: 'none'
+            })
             this.setData({number: 1}) // 直接在当前同步流程中执行
             console.log(this.data.number);
             swan.nextTick(() => {

@@ -41,9 +41,22 @@ sidebar: image_swan-previewImage
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 - 基本示例**
 
-<a href="swanide://fragment/f894cd9bd5137023f6820041d829c12e1569391306305" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/523172fb38fd75a5a2a93081d15d091c1576345594021" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="top-image">
+            <image src="https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png" mode="widthFix" bindtap="previewImage"></image>
+        </view>
+        <view class="tip-week">点击图片，预览大图</view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
@@ -51,7 +64,43 @@ sidebar: image_swan-previewImage
 Page({
     previewImage() {
         swan.previewImage({
-            current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',// current需与urls中链接一致
+            current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png',
+            urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png','https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
+            success: res => {
+                console.log('previewImage success', res);
+            },
+            fail: err => {
+                console.log('previewImage fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2 - images属性**
+
+<a href="swanide://fragment/51954f01c233f0ec9b6ae6b1c66312991576346402909" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="middle-image">
+            <image src="https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png" mode="aspectFit" bindtap="previewOriginImage"></image>
+        </view>
+        <view class="tip-week">点击图片，预览大图, 并可查看原图</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    previewOriginImage() {
+        swan.previewImage({
+            current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',
             urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png'], 
             images: [
                 {
@@ -68,7 +117,51 @@ Page({
         });
     }
 });
+```
 
+**代码示例3 - 多个urls，images属性的使用**
+
+<a href="swanide://fragment/cb85f5f7008a9d446e9ff65fd2fd0df31576346808639" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="middle-image">
+            <image src="https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png" mode="aspectFit" bindtap="previewOriginImage"></image>
+        </view>
+        <view class="tip-week">点击图片，预览大图, 并可查看原图</view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    previewOriginImage() {
+        swan.previewImage({
+            current: 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png',
+            urls: ['https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png','https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png'], 
+            images: [
+                {
+                    "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-zip.png', // 顺序需与urls中一致
+                    "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-origin.png'
+                },{
+                    "url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png', // 顺序需与urls中一致
+                    "origin_url": 'https://b.bdstatic.com/miniapp/image/swan-preview-image-2-zip.png'
+                }
+            ],
+            success: res => {
+                console.log('previewImage success', res);
+            },
+            fail: err => {
+                console.log('previewImage fail', err);
+            }
+        });
+    }
+});
 ```
 
 **说明**
