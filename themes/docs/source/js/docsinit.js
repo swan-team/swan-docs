@@ -709,13 +709,30 @@
             win.onpopstate = function (e) {
                 var href = e.state ? e.state : win.location.href;
                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $('.m-doc-h2-list, .m-doc-h3-list').filter(function() {
+                $('.list-item').filter(function() {
                     return $(this).attr('href').indexOf(href) > -1;
                 }).parent('li').addClass('m-doc-sidebar-selected');
                 ctx.getArticle(href, function() {
                     ctx.scrollToHash();
                 });
             };
+            // 代码片段打点
+            $('.highlight').on('click', function (e) {
+                var codeType = e.currentTarget.classList[1] || 'text';
+                _hmt.push(['_trackEvent', '代码片段', '点击', codeType]);
+            });
+            $('a[title="在开发者工具中预览效果"]').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '开发者工具预览', '点击', href]);
+            });
+            $('.m-doc-menu-feedback').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '问题反馈', '点击', href]);
+            });
+            $('.m-doc-menu-edit').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '编辑文档', '点击', href]);
+            });
         },
         scrollToHash: function () {
             var _this = this;
@@ -758,6 +775,7 @@
                     ctx.initList();
                     ctx.initBottomPage();
                     ctx.initInvokeDemo();
+                    ctx.addEvent();
                     if (callback) {
                         win.setTimeout(callback, 100);
                     }
