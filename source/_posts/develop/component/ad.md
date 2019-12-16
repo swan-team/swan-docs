@@ -52,7 +52,7 @@ sidebar: ad
 
 ```
 <div class="ad-container">
-    <ad appid="b2f8234f" apid="6315886"></ad>
+    <ad appid="b2f8234f" apid="6315886" type="feed"></ad>
 </div>
 
 ```
