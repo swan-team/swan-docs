@@ -155,7 +155,48 @@ Page({
 });
 ```
 
-**代码示例3 - post的dataType为string**：
+**代码示例3 - post的header中携带cookie**：
+ 
+<a href="swanide://fragment/9f33e070432787925131f55e8cdbad0d1576323297996" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bindtap="request">点击请求数据</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    request() {
+        let cuid = '';
+        swan.request({
+            url: 'https://sfc.baidu.com/shopping/nianhuo/bimai',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': 'BAIDUCUID=' + cuid
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            data: {
+                key: 'value'
+            },
+            success: res => {
+                console.log(res.data);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
+    }
+});
+```
+
+**代码示例4 - post的dataType为string**：
  
 <a href="swanide://fragment/c1d2a9d6e654e688b5560b0932d2784e1575441611330" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -194,7 +235,7 @@ Page({
 });
 ```
 
-**代码示例4 - post的data为string**：
+**代码示例5 - post的data为string**：
  
 <a href="swanide://fragment/8bcef88f7b2552027fa0b59ac6ea231a1575442423461" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -246,7 +287,7 @@ Page({
 
 ```
 
-**代码示例5 - post的responseType为arraybuffer**：
+**代码示例6 - post的responseType为arraybuffer**：
  
 <a href="swanide://fragment/c97a64395a631f0cb2cb141203d0803b1575442201289" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -285,7 +326,7 @@ Page({
 });
 ```
 
-**代码示例6 - get请求**：
+**代码示例7 - get请求**：
  
 <a href="swanide://fragment/b5e29a69ab7d1fead7844bf393406f8d1574929147853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -327,7 +368,7 @@ Page({
 });
 ```
 
-**代码示例7 - promise写法保障request的请求顺序**：
+**代码示例8 - promise写法保障request的请求顺序**：
 
 <a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -389,7 +430,7 @@ Page({
 });
 ```
 
-**代码示例8 - post的method为PUT**：
+**代码示例9 - post的method为PUT**：
  
 <a href="swanide://fragment/adc8307fb683e4513aed1371de2b09551575467162358" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -428,7 +469,7 @@ Page({
 });
 ```
 
-**代码示例9 - post的method为DELETE**：
+**代码示例10 - post的method为DELETE**：
  
 <a href="swanide://fragment/f1bdb32e95587b2ed2293f262b380e5d1575539783630" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -467,7 +508,7 @@ Page({
 });
 ```
 
-**代码示例10 - post的method为HEAD**：
+**代码示例11 - post的method为HEAD**：
  
 <a href="swanide://fragment/804df7647a7adc20c246cd76de4214b71575539832230" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -506,7 +547,7 @@ Page({
 });
 ```
 
-**代码示例11 - post的method为OPTIONS**：
+**代码示例12 - post的method为OPTIONS**：
  
 <a href="swanide://fragment/7352a72b7ca6c19e5366bc287d4da49f1575539911628" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
