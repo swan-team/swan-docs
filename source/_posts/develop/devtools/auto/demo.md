@@ -19,7 +19,7 @@ sidebar: demo
 npm i swan-automator jest --save-dev
 ```
 
-按照 [快速开始](../quick-start) 中的使用说明安装符合要求的开发者工具版本并配置运行环境。
+按照 [快速开始](../quick-start/) 中的使用说明安装符合要求的开发者工具版本并配置运行环境。
 
 ## 脚本编写
 
