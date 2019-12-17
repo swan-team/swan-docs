@@ -122,6 +122,7 @@ function searchFunc(searchId, contentId) {
         });
         $(this).addClass('top-search-box-focus');
         $input.focus();
+        _hmt.push(['_trackEvent', '移动端搜索框', '点击']);
     });
 
     $($input).on('blur', function (e) {
@@ -173,6 +174,7 @@ function searchFunc(searchId, contentId) {
     });
 
     $inputPc.addEventListener('focus', function () {
+        _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
         $('#top-search-sug').css({
             display: 'block'
         });

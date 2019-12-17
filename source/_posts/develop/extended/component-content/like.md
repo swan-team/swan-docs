@@ -28,7 +28,8 @@ sidebar: like
 |is-show-toast|Boolean|否|true|点赞后的结果反馈是否弹出toast提示|
 |toast-text|Array|否|['已点赞', '已取消']|toast文案，默认为已点赞、已取消|
 |bind:error|EventHandle|||点击按钮时在用户未登录状态下触发的事件|
-|bind:success|EventHandle|||点击点赞按钮，在百度服务成功后将状态返回给给使用组件者|
+|bind:success|EventHandle|||点击点赞按钮，在百度服务成功后将状态返回给使用组件者|
+|bind:fail|EventHandle|||点击点赞按钮，在百度服务失败后将状态返回给使用组件者|
 
 
 **代码示例**
