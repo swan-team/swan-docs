@@ -18,14 +18,14 @@ sidebar: ocr_swan-ai-ocrDrivingLicense
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image | String | 是   |- | 图像资源地址|
-|detect_direction |Boolean | 否   |-| 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
-|unified_valid_period |Boolean    |否 |-| <p> **·**  true: 归一化格式输出；<p> **·**  false 或无此参数按非归一化格式输出。|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
+|unified_valid_period |Boolean    |否 | | <p> **·**  true: 归一化格式输出；<p> **·**  false 或无此参数按非归一化格式输出。|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
 **success 返回参数说明**
@@ -57,28 +57,44 @@ sidebar: ocr_swan-ai-ocrDrivingLicense
 |---|---|---|---|
 |words | String | 识别结果字符串 |
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/37093ec7f3e0d3524e8ed4d2a7efc3761569387704914" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrDrivingLicense.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/208a29298f9a7c31f626328e779e94081569500548249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrDrivingLicense({
-                image, // 暂不支持识别网络图片
-                detect_direction: true,
-                unified_valid_period: true,
-                success: res => {
-                    console.log('ocrDrivingLicense res',res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrDrivingLicense err', err);
-                }
-            });
-        }
-    })
+    ocrDrivingLicense() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrDrivingLicense({
+                    image, // 暂不支持识别网络图片
+                    detect_direction: true,
+                    unified_valid_period: true,
+                    success: res => {
+                        console.log('ocrDrivingLicense res',res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrDrivingLicense err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

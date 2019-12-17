@@ -1,6 +1,6 @@
 ### save()
 
-`save()` 是将当前 canvas 的状态保存到堆栈中的方法。可使用 `save()` 方法保存状态 ，并配合 [`restore()`](#restore)  方法恢复并使用已保存的状态。
+`save()` 是将当前 canvas 的状态保存到堆栈中的方法。可使用 `save()` 方法保存状态，并配合 [`restore()`](#restore)  方法恢复并使用已保存的状态。
 
 ```js
 context.save();

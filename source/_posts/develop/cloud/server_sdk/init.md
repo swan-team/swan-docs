@@ -24,7 +24,8 @@ sidebar: cloud_server_sdk_init
 |storage|String|是|当前所在环境|云存储默认环境配置|
 
 
-使用示例：
+**代码示例**
+
 ``` js
 const cloud = require("swan-server-sdk")
 exports.main = (event, context) => {

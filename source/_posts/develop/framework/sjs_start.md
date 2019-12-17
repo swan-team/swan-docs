@@ -31,7 +31,7 @@ sidebar: sjs_start
 
 下述例子在`/pages/utils.sjs`的文件里面编写了`sjs`代码。该`.sjs`文件可以被其他的`.sjs`文件 或`SWAN`中的 `<import-sjs>` 标签引用。
 
-**示例代码：**
+**代码示例**
 <a href="swanide://fragment/5d52f3c6b35db9ac67f9eea0886d207b1571199141333" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 - 编写SJS逻辑
@@ -40,19 +40,19 @@ sidebar: sjs_start
 // pages/utils.sjs中编写SJS逻辑
 
 const bar = function(name) {
-  return 'swan-' + name;
+    return 'swan-' + name;
 }
 const foo = 'hello swan';
 
 export default {
-  bar: bar,
-  foo: foo
+    bar: bar,
+    foo: foo
 };
 
 // 或者使用CMD的形式导出
 // module.exports = {
-//   bar: bar,
-//   foo: foo
+//     bar: bar,
+//     foo: foo
 // };
 ```
 
@@ -113,7 +113,7 @@ hello swan
 
 `import-sjs`标签除了引用其它`sjs`模块，还可直接作为`SJS`代码的容器，使用`module`制定该模块名称，用法与上等同。
 
-**示例代码：**
+**代码示例**
 <a href="swanide://fragment/a214cb06c6d7342d91bde3135ce802851571214960218" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 - 在SWAN模板中定义并使用SJS
@@ -122,15 +122,13 @@ hello swan
 <!-- 定义SJS -->
 <import-sjs module="utils">
 const bar = function(name) {
-    console.log('=====');
-    console.log(name);
     return 'swan-' + name;
 }
 const foo = 'hello swan';
 
 export default {
-  bar: bar,
-  foo: foo
+    bar: bar,
+    foo: foo
 };
 </import-sjs>
 

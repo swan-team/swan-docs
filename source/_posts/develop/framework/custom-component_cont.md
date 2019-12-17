@@ -19,7 +19,7 @@ sidebar: custom-component_cont
 
 监听自定义组件事件的方法与监听基础组件事件的方法完全一致：
 
-**示例代码**
+**代码示例**
 ```xml
 <!-- 父组件模板 -->
 <component-tag-name bindmyevent="onMyEvent" />
@@ -30,7 +30,7 @@ sidebar: custom-component_cont
 通过 dispatch 方法，子组件可以向组件树的上层派发消息。消息将沿着组件树向上传递，直到遇到第一个处理该消息的组件，则停止。
 通过 messages 可以声明组件要处理的消息，messages 是一个对象，key 是消息名称，value 是消息处理的函数，接收一个包含 target(派发消息的组件) 和 value(消息的值) 的参数对象。
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/6f6ac82db74aa8795dfbc27fd760dd611545889059135" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -62,7 +62,7 @@ Component({
 <button bindtap="onTap">点击这个按钮将触发 myevent 事件</button>
 ```
 
-**示例代码**
+**代码示例**
 <a href="swanide://fragment/e5621e1c241dd7b47f2bc844277117b81545308225206" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -84,4 +84,5 @@ Page({
 })
 ```
 **注意**：
-对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容</a>。
+- 对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容</a>。
+- 对于很多UI组件库需要实现组件间关系，实际上组件间通信同样可以满足此需求。（之前组件间通信无法在存在 slot 环境使用，我们将于基础版本库 3.110.14 修复此问题）[详细内容](https://smartprogram.baidu.com/forum/topic/show/71953)

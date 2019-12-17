@@ -6,10 +6,39 @@ sidebar: swanchangelog
 ---
 
 
+## 3.130 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.130.1|2019.12.04|**New**<p>**·**新增live-player ios同层组件;<p>**·**新增文件系统&request的data参数支持arrayBuffer。<p>**Breaking Change**<p>优化video ios同层事件处理机制。|
+
+
+## 3.125 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.125.2|2019.12.02|**BugFix**<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复云开发项目中更新记录报错的问题。<p>na textarea 多实例情况调用 focus聚焦失败，ios-textarea支持双绑 <p>修复 ad组件优化视频贴片|
+|3.125.1|2019.11.22|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|
+
+## 3.120 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.120.9|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复 ad组件优化视频贴片|
+|3.120.7|2019.11.25|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|
+|3.120.6|2019.11.18|**BugFix**<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复android video 结束前自动暂停的问题;<p>**·**修复相机 insert 未结束就调用 update 的问题。|
+|3.120.2|2019.11.11|**BugFix**<p>**·**修复安卓同层textarea auto-height的默认高度问题;<p>**·**修复ios视频播放时圆角不生效的问题。|
+
 ## 3.110 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.110.22|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复 ad组件优化视频贴片|
+|3.110.21|2019.11.25|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|
+|3.110.20|2019.11.18|**BugFix**<p>**·**修复安卓同层textarea auto-height的默认高度问题;<p>**·**修复ios视频播放时圆角不生效的问题;<p>**·**修复 android video 结束前自动暂停的问题;<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复相机insert未结束就调用update的问题。|
+|3.110.15|2019.11.11|**BugFix**<p>**·**修复scroll-view或scroll-veiw父节点绑定catchtouchmove后scoll-veiw不能滚动的问题；<p>**·**修复安卓同层textarea auto-height的默认高度问题；<p>**·**修复ios视频播放时圆角不生效的问题。|
+|3.110.14|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
+|3.110.9|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
 |3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。|
 
 
@@ -17,6 +46,11 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.105.27|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复 ad组件优化视频贴片<p>**Breaking Change**<p>canIUse API 重构|
+|3.105.25|2019.11.18|**BugFix**<p>**·**修复切换视频src后起始播放时间不对问题;<p>**·**修复android video 结束前自动暂停的问题;<p>**·**修复相机 insert 未结束就调用 update 的问题。|
+|3.105.22|2019.11.11|**BugFix**<p>修复ios视频播放时圆角不生效的问题。|
+|3.105.21|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
+|3.105.19|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
 |3.105.17|2019.10.14|**New**<p>新增[SJS](/develop/framework/sjs_start/)功能。<p>**Breaking Change**<p>生命周期内容更新。<p>**BugFix**<p>修复picker-view设置indicator高度但蒙层不适配问题。
 |3.105.09|2019.9.18|**New**<p>新增自定义组件[数据监听器](https://smartprogram.baidu.com/docs/develop/framework/custom-component_observers/)功能。<p>**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 
@@ -25,6 +59,10 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.100.22|2019.12.02|**BugFix**<p>修复 ad组件优化视频贴片<p>|
+|3.100.21|2019.11.18|**BugFix**<p>修复android video 结束前自动暂停的问题。|
+|3.100.17|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
+|3.100.14|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
 |3.100.13|2019.10.12|**BugFix**<p>**·**修复picker-view设置indicator高度但蒙层不适配问题；<p>**·**修复安卓真机无法获取formId问题。|
 |3.100.10|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.100.09|2019.9.4|**New**<p>新增小程序消息订阅功能。<p>**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
@@ -36,6 +74,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.90.28|2019.12.02|**BugFix**<p>修复 ad组件优化视频贴片<p>|
+|3.90.27|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题。|
 |3.90.25|2019.10.12|**BugFix**<p>**·**修复 setData callback 无法获取自定义组件的问题；<p>**·**修复picker-view设置indicator高度但蒙层不适配问题。|
 |3.90.22|2019.9.18|**BugFix**<p>**·**修复initData前进行setData数据可能失效的问题；<p>**·**修复downloadFile控制台报uncaught error的问题。|
 |3.90.19|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
@@ -48,6 +88,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.80.33|2019.12.02|**BugFix**<p>修复 ad组件优化视频贴片<p>|
 |3.80.32|2019.9.4|**BugFix**<p>小程序中h5 a 标签转为view 标签，解决用户 z-index 设置过高问题。|
 |3.80.29|2019.8.28|**BugFix**<p>修复自定义组件有全局样式类配置时，内部基础组件class前缀被删除的问题。|
 |3.80.27|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
@@ -59,6 +100,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.70.53|2019.12.02|**BugFix**<p>修复 ad组件优化视频贴片<p>|
 |3.70.52|2019.10.12|**BugFix**<p>修复 setData callback 无法获取自定义组件的问题。|
 |3.70.50|2019.9.9|**New**<p>新版生命周期上线。|
 |3.70.39|2019.8.21|**New**<p>rich-text组件新增selectable属性。<p>**BugFix**<p>修复从extension注入components不生效、customLog不存在报错的问题。|
@@ -298,7 +340,7 @@ sidebar: swanchangelog
 |1.11.8|2018.08.15|**BugFix**<p>修复 video 组件嵌套在 template 使用时，getFirstParentComponentId 方法为 undefined 的 bug。|
 |1.11.5|2018.08.14|**New**<p>**·** 新增cover-view/cover-image/video/live-player组件更新时的 diff 策略;<p>**·** 框架流程异常 trace-log 增加用户点击轨迹;<p>**·** cover-image 支持直接嵌套在其它原生组件中;<p>**·** 新增所有组件的 longtap 事件;<p>**·** 新增filter过滤器功能。<p>**BugFix** <p>**·** 修复生命周期不抛出异常问题;<p>**·** 修复 label 不能绑定tap事件，以及for属性设置不存在id时控制台会报错的bug;<p>**·** 修复createQuerySelect API在scroll-view中获取节点信息失败的 bug;<p>**·** 修复input组件在获得焦点的情况下设置文本颜色不生效的 bug;<p>**·** 修复 cover-view 高度单位为 % 时，其内部组件高度渲染异常的 bug;<p>**·** 修复 longpress 事件需要在 touchend 后触发的问题;<p>**·** 修复 chooseAddress，安卓端返回参数不一致的问题。|
 |1.11.2|2018.08.09|**BugFix**<p>修复组件id不能通过变量设置为0的问题。|
-|1.11.1|2018.08.07|**New**<p>**·** setData数据流性能优化;<p>**·** video支持hidden属性；<p>**·**a d 组件打点增加滚动监控 。<p>**BugFix** <p>**·** 修复 textarea 组件在 auto-height 为 true ，且在内联样式中设置高度时，高度自适应不生效的 bug; <p>**·** 修复track-log组件不发请求bug; <p>**·** 修复image组件报错BUG; <p>**·** 修复自定义组件属性变更不触发master中变更bug; <p>**·** 修复 第一次切换tab时onTabItemTap生命周期回调回参为undefined 的bug; <p>**·** 修复swan-events文件引用bug。|
+|1.11.1|2018.08.07|**New**<p>**·** setData数据流性能优化;<p>**·** video支持hidden属性；<p>**·**a d 组件打点增加滚动监控 。<p>**BugFix** <p>**·** 修复 textarea 组件在 auto-height 为 true，且在内联样式中设置高度时，高度自适应不生效的 bug; <p>**·** 修复track-log组件不发请求bug; <p>**·** 修复image组件报错BUG; <p>**·** 修复自定义组件属性变更不触发master中变更bug; <p>**·** 修复 第一次切换tab时onTabItemTap生命周期回调回参为undefined 的bug; <p>**·** 修复swan-events文件引用bug。|
 
 ## 1.10 版本日志更新
 |版本号|更新日期|更新内容|

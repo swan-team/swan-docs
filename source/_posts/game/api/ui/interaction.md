@@ -66,7 +66,7 @@ swan.showToast(opts)
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
 
-icon 合法值：
+icon 有效值：
 
 |属性|描述|
 |-|-|

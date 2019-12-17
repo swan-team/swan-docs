@@ -15,7 +15,7 @@ priority: 07-01
 ```js
 const bannerAd = swan.createBannerAd(opts);
 ```
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -24,7 +24,7 @@ const bannerAd = swan.createBannerAd(opts);
 |opts.appSid|string| |是|应用 ID （开发者在 Mssp 平台建立的代码位所属应用的 ID 更多细节请访问[这里](/game/introduction/flow_open/guide/)）|
 |opts.style|object| |是| banner 样式|
 
-** opts.style 对象属性说明：**
+** opts.style 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|

@@ -24,7 +24,7 @@ sidebar: rank_setimage
 
 2. 如何配置搜索结果出图？
 （1）代码改造
-在智能小程序页面开发工具中，在【API】>【开放接口】>【页面基础信息】部分，调用[swan.setPageInfo](https://smartprogram.baidu.com/docs/develop/api/pageinfo/#swan-setPageInfo/)方法，通过修改image参数来配置希望在搜索结果页展现的图片。可以配置1图或者3图，3图时用数组表示。
+在智能小程序页面开发工具中，在【API】>【开放接口】>【页面基础信息】部分，调用[swan.setPageInfo](https://smartprogram.baidu.com/docs/develop/api/open/swan-setPageInfo/)方法，通过修改image参数来配置希望在搜索结果页展现的图片。可以配置1图或者3图，3图时用数组表示。
 
 >不建议配置1或3以外数量的图片，否则将无法正常展现。
 

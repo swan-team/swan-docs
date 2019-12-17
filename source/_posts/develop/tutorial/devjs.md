@@ -10,6 +10,8 @@ sidebar: devjs
 SWAN 智能小程序中，JS 文件是控制交互逻辑的动态语言。
 如，在 SWAN 模板中书写了以下代码：
 
+**代码示例**
+
 ```xml
 <view>{{ me }}</view>
 <button bind:tap="setName">点击变值</button>
@@ -19,9 +21,9 @@ SWAN 智能小程序中，JS 文件是控制交互逻辑的动态语言。
 
 ```js
 Page({
-	setName: function() {
-		this.setData({ me: "aaa" });
-	}
+    setName: function() {
+	this.setData({ me: "aaa" });
+    }
 })
 ```
 **说明**：

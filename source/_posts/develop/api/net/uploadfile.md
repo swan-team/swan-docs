@@ -20,16 +20,16 @@ sidebar: uploadfile
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 是  | -|开发者服务器 url|
-|filePath  |  String | 是  |  -|要上传文件资源的路径|
-|name  |  String | 是 | -| 文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容。|
-|header | Object  |否 | -|HTTP 请求 Header, header 中不能设置 Referer 。|
-|formData  |  Object  |否  | -| HTTP 请求中其他额外的 form data|
-|success| Function |   否 |  -| 接口调用成功的回调函数|
-|fail   | Function |   否  |  -|接口调用失败的回调函数|
-|complete  |  Function  |  否  |  -|接口调用结束的回调函数（调用成功、失败都会执行）|
+|url |String | 是  | |开发者服务器 url|
+|filePath  |  String | 是 || 要上传文件资源的路径|
+|name  |  String | 是 | | 文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容。|
+|header | Object  |否 | |HTTP 请求 Header, header 中不能设置 Referer 。|
+|formData  |  Object  |否  | | HTTP 请求中其他额外的 form data|
+|success| Function |   否 || 接口调用成功的回调函数|
+|fail   | Function |   否 || 接口调用失败的回调函数|
+|complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success返回参数说明**：
 
@@ -57,29 +57,48 @@ sidebar: uploadfile
 
 
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/839d1e92d253116528c330a82ec6124d1569413746044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/uploadFile.gif ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/9600df506a852243740082c960020f241573992659493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-    success: res => {
-        swan.uploadFile({
-            url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-            filePath: res.tempFilePaths[0], // 要上传文件资源的路径
-            name: 'myfile',
-            header: {
-                'content-type': 'application/json'
-            },
-            formData: {
-                'user': 'test'
-            },
+Page({
+    data: { },
+    uploadfile() {
+        swan.chooseImage({
             success: res => {
-                console.log(res.statusCode);
-            },
-            fail: err => {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                swan.uploadFile({
+                    url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile',
+                    filePath: res.tempFilePaths[0], // 要上传文件资源的路径
+                    name: 'myfile',
+                    header: {
+                        'content-type': 'application/json'
+                    },
+                    formData: {
+                        'user': 'swan'
+                    },
+                    success: res => {
+                        console.log(res.statusCode);
+                    },
+                    fail: err => {
+                        console.log('错误码：' + err.errCode);
+                        console.log('错误信息：' + err.errMsg);
+                    }
+                });
             }
         });
     }

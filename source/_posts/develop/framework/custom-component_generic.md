@@ -16,13 +16,15 @@ sidebar: custom-component_generic
 代码片段示例：
 [在开发者工具中预览效果](swanide://fragment/bee91460368ae837cdb5407a48902af81567754401729)
 
+**代码示例**
+
 ```html
 <!-- selectable-group.swan -->
 <view s-for="{{labels}}">
-  <label bindtap="itemTap" data-index="{{index}}">
-    <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
-    {{item}}
-  </label>
+    <label bindtap="itemTap" data-index="{{index}}">
+        <selectable disabled="{{false}}" selected="{{selected[index]}}" name="{{name}}"></selectable>
+        {{item}}
+    </label>
 </view>
 ```
 
@@ -30,9 +32,9 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": true
-  }
+    "componentGenerics": {
+        "selectable": true
+    }
 }
 ```
 
@@ -55,10 +57,10 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "usingComponents": {
-    "custom-radio": "path/to/custom/radio",
-    "custom-checkbox": "path/to/custom/checkbox"
-  }
+    "usingComponents": {
+        "custom-radio": "path/to/custom/radio",
+        "custom-checkbox": "path/to/custom/checkbox"
+    }
 }
 ```
 
@@ -68,11 +70,11 @@ sidebar: custom-component_generic
 
 ```json
 {
-  "componentGenerics": {
-    "selectable": {
-      "default": "path/to/default/component"
+    "componentGenerics": {
+        "selectable": {
+            "default": "path/to/default/component"
+        }
     }
-  }
 }
 ```
 

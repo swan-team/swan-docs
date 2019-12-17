@@ -12,6 +12,8 @@ sidebar: process
 3、根据框架机制，智能小程序框架在加载完成代码包之后，会启动 pages 中的第一项，并渲染为首次看到的页面;
 4、智能小程序启动后，开始调用 app.js 中预设的生命周期方法。
 
+**代码示例**
+
 ```js
 App({
 	onLaunch: function () {
@@ -26,6 +28,8 @@ App({
 
 一个智能小程序的页面的构造器如下：
 
+**代码示例**
+
 ```js
 Page({
 	data: {
@@ -37,7 +41,7 @@ Page({
 });
 ```
 
-智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data ，进行组合渲染。
+智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data，进行组合渲染。
 
 ## 组件
 
@@ -76,7 +80,7 @@ swan.showToast({
 	title: '我是标题'
 });
 ```
-也有很多挂载在 Page 对象与 SWAN 上的方法，如 createCanvasContext ，在 SWAN 对象与 Page 对象上均有。所以，你可以这样用：
+也有很多挂载在 Page 对象与 SWAN 上的方法，如 createCanvasContext，在 SWAN 对象与 Page 对象上均有。所以，你可以这样用：
 
 ```js
 Page({

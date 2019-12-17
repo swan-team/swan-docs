@@ -42,7 +42,7 @@
 - 修复小游戏开放域 bug
 - 修复小游戏 bdfile 网络加载问题
 - 修复小游戏键盘问题
-- 修复小游戏项目切换登陆状态问题
+- 修复小游戏项目切换登录状态问题
 
 下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.1&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.1&type=online)）
 
@@ -84,7 +84,7 @@
 - 新增模拟器自定义设备功能
 - 新增 “更多功能 -> 编译日志” 查看功能
 - 优化上传流程，可直接查看线上已提交版本
-- 优化退出登陆（将用户的退出登陆移到用户登陆头像下）
+- 优化退出登录（将用户的退出登录移到用户登录头像下）
 - 优化版本升级提示
 - 优化部分交互
 

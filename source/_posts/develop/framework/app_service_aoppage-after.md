@@ -12,11 +12,11 @@ sidebar: app_service_aoppage-after
 
 #### **Object 参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |默认值 必填 | |说明|
 |---- | ---- | ---- | ----|----|
-|url |String | 否 |-| 要增加切面的页面的URL规则, 当URL参数不填时，则默认拦截所有页面 |
-|methods | Object | 否 |-| 所有需要拦截的声明周期方法的集合 |
-|events | Object | 否 |-| 所有要拦截的事件的集合 |
+|url |String |  | 否 |要增加切面的页面的URL规则, 当URL参数不填时，则默认拦截所有页面 |
+|methods | Object |  | 否 |所有需要拦截的声明周期方法的集合 |
+|events | Object |  | 否 |所有要拦截的事件的集合 |
 
 ** 可拦截的所有方法 **
 
@@ -42,7 +42,7 @@ sidebar: app_service_aoppage-after
 
 * onURLQueryChange
 
-**示例代码：**
+**代码示例**
 
 ```js
 // 为url中含有page/index的page实例增加切面

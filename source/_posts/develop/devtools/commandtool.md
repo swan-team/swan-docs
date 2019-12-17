@@ -17,7 +17,7 @@ npm i swan-toolkit -g
 
 - 环境依赖：[Node.js](https://nodejs.org)
 - 亦可局部安装，通过`npx`或`node_modules/.bin/swan`执行。
-- 本工具跨平台，可以部署在windows/mac/Linux，可用于产品集成流水线部署。
+- 本工具跨平台，可以部署在windows/Mac/Linux，可用于产品集成流水线部署。
 - （全局）安装后即可使用全局shell命令`swan`。
 
 ### 更新
@@ -82,6 +82,7 @@ swan upload --project-path /path/to/your/project --token THE_TOKEN_WITH_PREVIEW_
 | `--release-version`|必填|发布版本号|
 |`-d, --desc`|选填|版本描述|
 |`-V, --verbose`|选填| 输出日志|
+|`--min-swan-version`|选填|最低基础库版本，参见[最低基础库版本设置](https://smartprogram.baidu.com/docs/develop/swan/compatibility_version/)|
 
 **输出**
 - 发布成功提示

@@ -17,12 +17,12 @@ sidebar: ocr_swan-ai-ocrBankCard
 
 **`object`参数说明**：
 
-|参数名 |类型  |必填 | 默认值 |说明|
+|属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image | String | 是   |- | 图像资源地址|
-|success |Function    |否 |-|      接口调用成功的回调函数|
-|fail |   Function|    否  |-|     接口调用失败的回调函数|
-|complete  |  Function  |  否   |-|    接口调用结束的回调函数（调用成功、失败都会执行）|
+|success |Function    |否 | |      接口调用成功的回调函数|
+|fail |   Function|    否  | |     接口调用失败的回调函数|
+|complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **success 返回参数说明**：
 
@@ -39,27 +39,43 @@ sidebar: ocr_swan-ai-ocrBankCard
 |bank_name |String | 银行名，不能识别时为空 。|
 |bank_card_type | Number | 银行卡类型，0: 不能识别; 1: 借记卡; 2: 信用卡 。|
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/93a953878450cff70360bf8306753ff51569387641576" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrBankCard.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/1e8e28ffd4bb694c9c9b006da1b3f31c1569500427353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrBankCard({
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('ocrBankCard res', res.result);
-                }，
-                fail: err => {
-                    console.log('ocrBankCard err', err);
-                }
-            });
-        }
-    })
+    ocrBankCard() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrBankCard({
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('ocrBankCard res', res.result);
+                    }，
+                    fail: err => {
+                        console.log('ocrBankCard err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

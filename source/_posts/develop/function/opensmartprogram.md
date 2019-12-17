@@ -101,7 +101,7 @@ swanInvoke功能：
 1. 引用
 
     像其他javascript库一样，在html中用script标签引入。
-
+    **代码示例**
     ```javascript
     <!DOCTYPE html>
     <html>
@@ -116,6 +116,7 @@ swanInvoke功能：
 2. 调起方法
 
     在绑定事件中调用swanInvoke方法触发调起功能。
+    **代码示例**
     ```
     <body>
         <button id='btn'>调起</button>
@@ -151,7 +152,7 @@ swanInvoke功能：
 4. 调起失败
 
     如果用户没有安装百度App，或由于某些浏览器或App禁止跳转到其他App，会出现调起失败的情况。调起失败默认跳转到我们提供的中间页，引导用户用其他方式跳转小程序。如果想要自己设置调起失败跳转页面，可以配置failUrl参数，代码示例如下：
-
+    **代码示例**
     ```
     window.swanInvoke({
         appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c', 
@@ -160,7 +161,9 @@ swanInvoke功能：
     });
     ```
 
-    > 暂不支持在安卓手机的百度 App内打开非百度域的H5页面。
+    > 暂不支持在宿主APP中打开小程序。
+    > 百度APP安卓11.15版本以下，不支持非百度域的H5页面打开小程序。
+    
 
 ### 小程序打开小程序
 
@@ -168,13 +171,17 @@ swanInvoke功能：
 
 * 组件：在小程序中使用组件打开另一个小程序，请参考[navigator组件](/develop/component/nav/)中target="miniProgram"的使用方法。
 
-* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#swan-navigateToSmartProgram/)
+* API：在小程序中使用API打开另一个小程序，请参考[swan.navigateToSmartProgram](https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/)
 
 ### 在web-view中打开小程序 
 
 在小程序的web-view中打开另一个小程序，需要在引入jssdk后，调用swan.navigateToSmartProgram接口。
 
 引入jssdk和接口调用的详细方法，请参考[web-view 网页容器](/develop/component/open_web-view/#相关接口2)
+
+### 如何判断H5页面是否在小程序web-view打开？
+
+H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
 ## 小程序来源统计
 > 百度已为小程序提供了搜索、信息流等流量入口。这部分流量可以在开发者平台——数据统计——来源统计中查看。
@@ -184,7 +191,7 @@ swanInvoke功能：
 1. 开发调起功能时，配置对应的调起参数。
 
 2. 在小程序 [App()](/develop/framework/app_service_register/) 生命周期函数的`onLaunch`和`onShow`中取得 Scheme 中小程序的相关参数。
-
+   **代码示例**
    ```
    App({
        onShow: function (options) {
