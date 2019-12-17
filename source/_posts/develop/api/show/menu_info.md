@@ -41,7 +41,7 @@ sidebar: menu_info
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 - 属性全集**
 
 <a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -113,4 +113,45 @@ Page({
         this.setData('infoList', infoList);
     }
 });
+```
+
+**代码示例2 - 应用场景**
+
+<a href="swanide://fragment/50a8932d2b9cd6ee093c3b6895f5f3d81576573561180" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="status-height" style="height:{{ statusHeight }}px">状态栏</view>
+<view class="nav-height"  style="height:{{ navHeight }}px">导航栏</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+            statusHeight: 0,  //状态栏高度
+            navHeight: 0      //导航栏高度
+        },
+    /**
+     * 获取状态栏|导航栏高度,
+     */
+    onLoad (){
+        let capsule = swan.getMenuButtonBoundingClientRect() ; //胶囊信息
+        console.log(capsule)
+        let that = this;
+        swan.getSystemInfo({
+            success(res) {
+                console.log(capsule.height + (capsule.top - res.statusBarHeight) * 2)
+                that.setData({
+                    statusHeight: res.statusBarHeight,
+                    navHeight: capsule.height + (capsule.top - res.statusBarHeight) * 2 // 与res.navigationBarHeight相同
+                })
+            }
+        })
+      
+    }
+});
+
 ```
