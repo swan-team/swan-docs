@@ -31,13 +31,13 @@ sidebar: commentpublish
 |comment-param.images|Array|否|-|NA和组件版支持，动态图集, json数组, 格式 ["a.jpg","b.jpg"]|
 |comment-param.appkey|String|是||NA和组件版支持，小程序App Key，在小程序管理中心>设置>开发设置中获取|
 |comment-param.path|String|是||NA和组件版支持，用于跳转的schema的path和query的拼接，参考如下：path='/page/a/b?query=q'|
+|bind:fail|EventHandle|||NA版和组件版支持，调用百度服务失败的回调|
 |bind:error|EventHandle|||仅组件版支持，点击按钮时在用户未登录状态下触发的事件|
 |bind:browsemode|EventHandle|||仅组件版支持，当输入框失焦后会触发事件(NA版不支持，降级版支持)|
 |bind:relasecomment|EventHandle|||NA和组件版支持，点击发表按钮时触发的事件。在NA版中相当于success成功回调中status为reply状态|
 |bind:close|EventHandle|||仅NA版支持，点击空白处关掉发布器的回调，相当于NA版success成功回调中status为draft的状态|
 |bind:previewimage|EventHandle|||仅组件版支持，点击输入框中已经上传的图片时触发的事件(NA版不支持，降级版支持)|
-|bind:fail|EventHandle|||仅NA版支持，调起NA版发布器失败的回调函数|
-|bind:complete|EventHandle|||仅NA版支持，NA版发布器接口调用结束的回调函数（调用成功、失败都会执行）|
+
 
 
 **代码示例**
