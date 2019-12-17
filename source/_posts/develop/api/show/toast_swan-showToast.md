@@ -186,6 +186,54 @@ Page({
 })
 ```
 
+**代码示例3 - showModal和showToast是否可共存**
+
+<a href="swanide://fragment/2a833f9c7f164efca05ade83ff9869de1576559710455" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="container">
+    <view>
+        <view class="card-area"> 
+            <view class="top-description border-bottom">showModal和showToast可共存</view>
+            <button data-title="success" data-icon="success" bindtap="showToast" type="primary" hover-stop-propagation="true">点击弹出toast</button>   
+            <button data-title="loading" data-icon="loading" bindtap="showModal" type="primary" hover-stop-propagation="true">点击弹出modal</button>   
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    showToast(e) {
+        this.toast(e.currentTarget.dataset.title, e.currentTarget.dataset.icon);
+    },
+    toast(title, icon) {
+        swan.showToast({
+            title, 
+            icon,
+            mask: false, // 此属性设置为true不能打断toast
+            success: res => {
+                console.log('showToast success', res);
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        })
+    },
+    showModal(){
+       swan.showModal({
+           title: 'title',
+           content: 'content'
+       });
+    }
+});
+```
+
 **Bug&Tip**：
 
 * [swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个
