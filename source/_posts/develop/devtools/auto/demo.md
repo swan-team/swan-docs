@@ -7,6 +7,16 @@ sidebar: demo
 
 智能小程序自动化 SDK 本身不提供测试框架。这意味着你可以将它与市面上流行的任意 Node.js 测试框架结合使用，以此来达到编写小程序测试用例的目的。接下来将使用 [Jest](https://jestjs.io/) 测试框架来编写一个实际的小程序自动化测试。
 
+## 完整示例
+以下讲解内容的完整示例可以从 [点击这里](https://b.bdstatic.com/searchbox/icms/searchbox/zip/miniapp/demo-automator-1.0.0.zip) 下载，确保 [运行环境](../quick-start/) 符合要求后，执行以下命令，即可开始在工具中运行自动化测试。
+
+```shell
+npm install
+npm run test
+```
+
+> 接下来，我们分步骤对整个测试用例的编写过程进行介绍。
+
 ## 测试对象
 
 这里以小程序示例为测试对象，将 [小程序示例](https://smartprogram.baidu.com/docs/develop/tutorial/demo/) 的源码下载到本地，然后打开小程序开发者工具，将该项目导入进去。
@@ -19,7 +29,7 @@ sidebar: demo
 npm i swan-automator jest --save-dev
 ```
 
-按照 [快速开始](../quick-start) 中的使用说明安装符合要求的开发者工具版本并配置运行环境。
+按照 [快速开始](../quick-start/) 中的使用说明安装符合要求的开发者工具版本并配置运行环境。
 
 ## 脚本编写
 
@@ -36,7 +46,7 @@ npm i swan-automator jest --save-dev
 对应脚本如下：
 
 ``` javascript
-const automator = require('@baidu/swan-automator');
+const automator = require('swan-automator');
 
 describe('index', () => {
     let smartProgram;
@@ -47,8 +57,7 @@ describe('index', () => {
             projectPath: 'path/to/swan-demo'
         });
         page = await smartProgram.reLaunch('/pages/component/component');
-        await page.waitFor(500);
-    }, 30000);
+    }, 50000);
 
     afterAll(async () => {
         await smartProgram.close();
@@ -111,6 +120,7 @@ it('item action', async () => {
     await firstItem.tap();
     const subItem = await page.$('.sub-item');
     await subItem.tap();
+    await page.waitFor(500);
     expect((await smartProgram.currentPage()).path).toBe('pages/view/view');
 });
 ```

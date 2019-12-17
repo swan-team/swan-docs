@@ -22,3 +22,10 @@ sidebar: history
 * [rc 版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_rc/)
 
 
+## 历史版本下载链接：
+
+|mac|windows|
+|--|--|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/89383/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.20.1.dmg">2.20.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/b3c1f/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.20.1-x64.exe">2.20.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/8536e/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1.dmg">2.19.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/b4822/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.19.1-x64.exe">2.19.1</a>|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/733de/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1.dmg">2.18.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/272a9/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.18.1-x64.exe">2.18.1</a>|
