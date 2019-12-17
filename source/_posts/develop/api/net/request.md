@@ -7,7 +7,7 @@ sidebar: request
 
  
 
-**解释**：发起网络请求，请参考[使用注意事项](http://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+**解释**：发起网络请求，请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 
 **百度APP中扫码体验：**
 

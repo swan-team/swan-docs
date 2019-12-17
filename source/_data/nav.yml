@@ -231,13 +231,17 @@
                     text: robots协议介绍
                     name: rank_robots
                   -
-                    link: /introduction/rank_faq
-                    text: 搜索流量接入FAQ
-                    name: rank_faq
+                    link: /introduction/rank_delete
+                    text: 资源删除功能介绍
+                    name: rank_delete             
                   -
                     link: /introduction/rank_road
                     text: 资源下线退场通路
                     name: rank_road
+                  -
+                    link: /introduction/rank_faq
+                    text: 搜索流量接入FAQ
+                    name: rank_faq                    
               -
                 link: /introduction/OpenCard
                 text: 接入OpenCard
@@ -887,8 +891,24 @@
                 name: dynamiclib_topone
               -
                 link: /develop/framework/echarts
-                text: ECharts 动态库-beta
+                text: ECharts 动态库-Beta
                 name: echarts
+              -
+                link: /develop/framework/panoviewer
+                text: panoviewer 动态库-Beta
+                name: panoviewer
+              -
+                link: /develop/framework/vrvideo
+                text: vrvideo 动态库-Beta
+                name: vrvideo
+              -
+                link: /develop/framework/spintileviewer
+                text: spintileviewer 动态库-Beta
+                name: spintileviewer
+              -
+                link: /develop/framework/modelviewer
+                text: modelviewer 动态库-Beta
+                name: modelviewer                                                                
         -
           link: /develop/framework/subpackages
           text: 性能
