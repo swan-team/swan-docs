@@ -1,11 +1,11 @@
 ---
-title: 模型modelviewer组件
+title: modelviewer 动态库-Beta
 header: develop
 nav: framework
 sidebar: modelviewer
 ---
 
-手百小程序modelviewer动态库提供了在小程序中展示3D模型功能，底层基于 [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现
+modelviewer 动态库提供了在小程序中展示 3D 模型功能，底层基于 [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现
 
 ## 使用方法
 ### 1. 在项目中引用动态库
@@ -248,7 +248,7 @@ option = {
 | -------- | ---- | -------- | ---- |
 | startAt  | 否   | 0        |      |
 | duration | 否   | Infinity |      |
-|          |      |          |      |
+
 
 ### 光照设置
 
@@ -264,7 +264,7 @@ option = {
 | params.position  | 否   | [1, 1, 1] | 光源的位置，数组长度为3，对应x，y，z坐标                     |
 | distance         | 否   | 0         | 光的最远照射距离，0表示无穷远                                |
 | angle            | 否   | 1.57      | 设置锥角弧度大小                                             |
-| decay            |      | 1         | 衰减率。离光越远，光照强度越弱。1为不衰减。取值为0到1之间    |
+| decay            | 否    | 1         | 衰减率。离光越远，光照强度越弱。1为不衰减。取值为0到1之间    |
 
 #### 平行光：
 
@@ -293,7 +293,7 @@ option = {
 | position              | 是   |          | 热点相对于3D场景挂载的模型节点的位置，数组长度为3，对应x，y，z坐标 |
 | parentName            | 是   |          | 热点所挂载的模型节点的网格或组的名称                         |
 | events                | 是   | {}       | 用于配置热点的交互。如果是{}则不会出现任何交互操作           |
-| events.click          |      |          | events可以设置一些交互操作名称，例如click，则交互操作在click事件触发。 |
+| events.click          | 否   |          | events可以设置一些交互操作名称，例如click，则交互操作在click事件触发。 |
 | events.click.type     | 是   |          | 取值为highlight或者jump，分别对应模型高度操作以及场景跳转操作。 |
 | events.click.color    | 否   | [1,1,1]  | 模型高亮的颜色，采用的是和着色器的颜色取值，必须是0到1之间的数字 |
 | events.click.duration | 否   | 1000     | 模型高亮是一种呼吸灯的忽明忽暗效果，这个是亮变暗的时间       |

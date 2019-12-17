@@ -1,12 +1,12 @@
 ---
-title: 3D环物spintileviewer组件
+title: spintileviewer 动态库—Beta
 header: develop
 nav: framework
 sidebar: spintileviewer
 ---
  
 
-手百小程序spintileviewer动态库提供了在小程序中播放3D环物的方法，底层基于百度webVR SDK [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
+spintileviewer 动态库提供了在小程序中播放 3D 环物的方法，底层基于百度 webVR SDK [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
 
 ## 使用方法
 
@@ -104,7 +104,7 @@ options = {
 
 参考配置文件url：http://hydreigon-dev.cdn.bcebos.com/demo/assets/panamera_256/external/closed/config.json
 
-动态库默认仅支持核心的3D环物渲染（多视角分级分块）和交互（拖拽缩放），也可以通过设置```defaultui=true```来显示默认的控件，支持PC和移动端的适配，支持功能包括：热点、缩放按钮、复位按钮、全屏按钮、二维码等，配置文件是在无UI配置项的基础上增加了相关字段，一个典型的有UI配置如下：
+动态库默认仅支持核心的 3D 环物渲染（多视角分级分块）和交互（拖拽缩放），也可以通过设置```defaultui=true```来显示默认的控件，支持PC和移动端的适配，支持功能包括：热点、缩放按钮、复位按钮、全屏按钮、二维码等，配置文件是在无UI配置项的基础上增加了相关字段，一个典型的有UI配置如下：
 
 ```js
 options = {
@@ -174,7 +174,7 @@ options = {
   ]
 }
 ```
-有UI的参考配置文件url：https://hydreigon-publish.cdn.bcebos.com/swan-hydreigon/spin/origin-vrloading-cdn.json
+参考[含UI 配置文件](https://hydreigon-publish.cdn.bcebos.com/swan-hydreigon/spin/origin-vrloading-cdn.json)
 
 ## 动态库属性列表
 

@@ -1,5 +1,5 @@
 ---
-title: 全景图panoviewer组件
+title: panoviewer 动态库-Beta
 header: develop
 nav: framework
 sidebar: panoviewer
@@ -7,7 +7,7 @@ sidebar: panoviewer
 
 
 
-手百小程序panoviewer动态库提供了在小程序中播放全景图的方法，底层基于百度webVR SDK [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
+panoviewer 动态库提供了在小程序中播放全景图的方法，底层基于百度 webVR SDK [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
 
 ## 使用方法
 

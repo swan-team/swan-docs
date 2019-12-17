@@ -1,13 +1,12 @@
 ---
-title: 全景视频vrvideo组件
+title: vrvideo 动态库-Beta
 header: develop
 nav: framework
 sidebar: vrvideo
 ---
 
 
-
-手百小程序vrvideo动态库提供了在小程序中播放全景视频的方法。
+vrvideo 动态库提供了在小程序中播放全景视频的方法。
 
 ## 使用方法
 
