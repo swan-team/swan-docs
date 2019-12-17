@@ -893,22 +893,22 @@
                 link: /develop/framework/echarts
                 text: ECharts 动态库-Beta
                 name: echarts
-              -
-                link: /develop/framework/panoviewer
-                text: panoviewer 动态库-Beta
-                name: panoviewer
-              -
-                link: /develop/framework/vrvideo
-                text: vrvideo 动态库-Beta
-                name: vrvideo
-              -
-                link: /develop/framework/spintileviewer
-                text: spintileviewer 动态库-Beta
-                name: spintileviewer
-              -
-                link: /develop/framework/modelviewer
-                text: modelviewer 动态库-Beta
-                name: modelviewer                                                                
+              # -
+              #   link: /develop/framework/panoviewer
+              #   text: panoviewer 动态库-Beta
+              #   name: panoviewer
+              # -
+              #   link: /develop/framework/vrvideo
+              #   text: vrvideo 动态库-Beta
+              #   name: vrvideo
+              # -
+              #   link: /develop/framework/spintileviewer
+              #   text: spintileviewer 动态库-Beta
+              #   name: spintileviewer
+              # -
+              #   link: /develop/framework/modelviewer
+              #   text: modelviewer 动态库-Beta
+              #   name: modelviewer                                                                
         -
           link: /develop/framework/subpackages
           text: 性能

@@ -5,7 +5,7 @@ nav: framework
 sidebar: modelviewer
 ---
 
-modelviewer 动态库提供了在小程序中展示 3D 模型功能，底层基于 [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现
+modelviewer 动态库提供了在小程序中展示 3D 模型功能，底层基于 [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
 
 ## 使用方法
 ### 1. 在项目中引用动态库
