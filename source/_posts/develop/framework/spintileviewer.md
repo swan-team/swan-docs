@@ -174,7 +174,7 @@ options = {
   ]
 }
 ```
-参考[含UI 配置文件](https://hydreigon-publish.cdn.bcebos.com/swan-hydreigon/spin/origin-vrloading-cdn.json)
+参考[含 UI 配置文件](https://hydreigon-publish.cdn.bcebos.com/swan-hydreigon/spin/origin-vrloading-cdn.json)
 
 ## 动态库属性列表
 

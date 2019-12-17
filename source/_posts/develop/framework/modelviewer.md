@@ -5,7 +5,7 @@ nav: framework
 sidebar: modelviewer
 ---
 
-modelviewer 动态库提供了在小程序中展示 3D 模型功能，底层基于 [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
+modelviewer 动态库提供了在小程序中展示 3D 模型功能，底层基于百度webVR SDK [Hydreigon](https://vr.baidu.com/vrtech/hydreigon/index/) 实现。
 
 ## 使用方法
 ### 1. 在项目中引用动态库
@@ -212,7 +212,7 @@ option = {
 | fov      | 否   | 65               | 调整透视相机fov    |
 | position | 否   | {x: 0, y:0, z:0} | 相机初始位置坐标   |
 | near     | 否   | 1                | 调整相机近截面距离 |
-|          | 否   | 10000            | 调整相机远截面距离 |
+| far        | 否   | 10000            | 调整相机远截面距离 |
 
 ### 场景配置
 

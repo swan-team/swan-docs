@@ -893,22 +893,22 @@
                 link: /develop/framework/echarts
                 text: ECharts 动态库-Beta
                 name: echarts
-              # -
-              #   link: /develop/framework/panoviewer
-              #   text: panoviewer 动态库-Beta
-              #   name: panoviewer
-              # -
-              #   link: /develop/framework/vrvideo
-              #   text: vrvideo 动态库-Beta
-              #   name: vrvideo
-              # -
-              #   link: /develop/framework/spintileviewer
-              #   text: spintileviewer 动态库-Beta
-              #   name: spintileviewer
-              # -
-              #   link: /develop/framework/modelviewer
-              #   text: modelviewer 动态库-Beta
-              #   name: modelviewer                                                                
+              -
+                link: /develop/framework/panoviewer
+                text: panoviewer 动态库-Beta
+                name: panoviewer
+              -
+                link: /develop/framework/vrvideo
+                text: vrvideo 动态库-Beta
+                name: vrvideo
+              -
+                link: /develop/framework/spintileviewer
+                text: spintileviewer 动态库-Beta
+                name: spintileviewer
+              -
+                link: /develop/framework/modelviewer
+                text: modelviewer 动态库-Beta
+                name: modelviewer                                                                
         -
           link: /develop/framework/subpackages
           text: 性能
@@ -1198,7 +1198,34 @@
                       link: /develop/component/ad
                       text: ad 广告
                       name: ad
-
+    -
+      text: 扩展组件
+      name: extended
+      sidebar:
+        -
+            sidebar:
+              -
+                link: /develop/extended/component-content/commentpublish
+                text: 半屏内容发布器带服务版
+                name: commentpublish
+        -
+            sidebar:
+              -
+                link: /develop/extended/component/publish
+                text: 全屏内容发布器组件
+                name: publish
+        -
+            sidebar:
+              -
+                link: /develop/extended/component-content/like
+                text: 点赞组件 
+                name: like                                
+        -
+            sidebar:
+              -
+                link: /develop/extended/component-content/concern
+                text: 关注组件
+                name: concern           
     -
       text: API
       name: api
