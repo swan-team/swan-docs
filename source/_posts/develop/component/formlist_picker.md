@@ -22,8 +22,6 @@ sidebar: formlist_picker
 </div>
 
 
-## 代码示例
-
 ###  图片示例 
 
 <div class="m-doc-custom-examples">
