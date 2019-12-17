@@ -37,7 +37,7 @@ sidebar: custom_component
     </div>     
 </div>
 
-**代码示例**
+**代码示例1**
 
 <a href="swanide://fragment/645949899f4d4951ea0eb15ddb6c66101574773397207" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -69,4 +69,40 @@ Component({
         }
     }
 });
+```
+
+**代码示例2 - 常用用法**
+
+<a href="swanide://fragment/6ae0107a1be2cf1f80a326a9053cc4a91576554621397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view>
+    <view>{{name}}</view>
+    <button bindtap="getStorage">点击赋值</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+// 在当前同步流程结束后，下一个时间片执行
+Page({
+    data: {
+        name: 'swan',
+        renderEnd: true
+    },
+    getStorage(){
+        this.setData({
+            name: 'smartApp'
+        }, () => {
+            swan.nextTick(() => {
+                this.data.renderEnd = false; // 在当前同步流程结束后，下一个时间片执行
+                console.log(this.data.renderEnd)
+            });
+        });
+    }
+});
+
 ```
