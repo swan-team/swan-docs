@@ -173,11 +173,17 @@ function searchFunc(searchId, contentId) {
         }, 300);
     });
 
-    $inputPc.addEventListener('focus', function () {
+    $inputPc.addEventListener('focus', function (e) {
+        var keywords = e.target.value;
         _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
         $('#top-search-sug').css({
             display: 'block'
         });
+        if ($('.top-search-sug-item').length > 0) {
+            _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
+        } else if ($('.top-search-sug-docs-empty').length > 0) {
+            _hmt.push(['_trackEvent', 'sug无结果', keywords, 'devdocs']);
+        }
     });
 
     function keyEnter(e) {
@@ -191,6 +197,7 @@ function searchFunc(searchId, contentId) {
                 return;
             }
             navToSearch(keywordsFilter, 'sug搜索关键词');
+            $inputPc.blur();
         }
     }
 
