@@ -240,7 +240,7 @@ Page({
 | padding    | 文本边缘留白 | Number |
 | textAlign | 文本对齐方式。有效值: left, right, center | String |
 
-## 示例参考
+## 参考示例
 ###  图片示例 
 
 <div class="m-doc-custom-examples">

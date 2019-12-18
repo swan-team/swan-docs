@@ -16,7 +16,7 @@ sidebar: commentpublish
 |---|---|---|---|---|
 |show-publish|Boolean|是|false|NA 和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
 |content-placeholder|String|否|NA 和组件版支持，请输入内容|提示占位文案|
-|module-list|Array|||仅 NA 版支持，显示模块 list，参见[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)|
+|module-list|Array|否||仅 NA 版支持，显示模块 list，参见[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)|
 |emoji-path|String|否||仅NA版支持，设置自定义表情配置路径|
 |foucs|Boolean|否|false|仅组件版支持，true 代表调起，false 则不调起|
 |is-upLoad-image|Boolean|否|false|仅组件版支持，是否展示上传图片按钮|
