@@ -391,6 +391,7 @@
             this.initList();
             this.initBottomPage();
             this.initInvokeDemo();
+            this.loadEvent();
             // this.initCustom();
         },
         // initHighlight() {
@@ -647,8 +648,6 @@
                 // 更新右侧文章
                 updateArticle($(this), href);
             });
-
-            // 回到顶部
             $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
                 if (ctx.screenHeight > $(this).scrollTop()) {
@@ -657,7 +656,6 @@
                     backTop.addClass('m-doc-menu-top-show');
                 }
             }));
-            
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
             if (this.screenWidth > 768) {
@@ -675,19 +673,6 @@
                     before = after;
                 }, 350));
             }
-            $('.m-doc-menu-top').on('click', function () {
-                var TIME = 500;
-                var scrollWrap = $('.m-doc-content-layout');
-                var scrollTop = scrollWrap.scrollTop();
-                var everyLength = scrollTop / TIME * ctx.frame;
-                function animat () {
-                    scrollWrap.scrollTop(scrollWrap.scrollTop() - everyLength);
-                    if (scrollWrap.scrollTop() !== 0) {
-                        ctx.animation(animat);
-                    }
-                }
-                ctx.animation(animat);
-            });
             $('.m-doc-menu-toc').on('click', function () {
                 if ($(this).hasClass('m-doc-menu-toc-close')) {
                     $(this).removeClass('m-doc-menu-toc-close');
@@ -716,6 +701,24 @@
                     ctx.scrollToHash();
                 });
             };
+        },
+        // DOM替换需要再次注册的事件
+        loadEvent: function() {
+            var ctx = this;
+            // 回到顶部
+            $('.m-doc-menu-top').on('click', function () {
+                var TIME = 500;
+                var scrollWrap = $('.m-doc-content-layout');
+                var scrollTop = scrollWrap.scrollTop();
+                var everyLength = scrollTop / TIME * ctx.frame;
+                function animat () {
+                    scrollWrap.scrollTop(scrollWrap.scrollTop() - everyLength);
+                    if (scrollWrap.scrollTop() !== 0) {
+                        ctx.animation(animat);
+                    }
+                }
+                ctx.animation(animat);
+            });
             // 代码片段打点
             $('.highlight').on('click', function (e) {
                 var codeType = e.currentTarget.classList[1] || 'text';
@@ -775,7 +778,7 @@
                     ctx.initList();
                     ctx.initBottomPage();
                     ctx.initInvokeDemo();
-                    ctx.addEvent();
+                    ctx.loadEvent();
                     if (callback) {
                         win.setTimeout(callback, 100);
                     }
