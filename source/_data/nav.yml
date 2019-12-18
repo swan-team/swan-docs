@@ -4635,8 +4635,12 @@
             name: performance-point
           -
             link: /data/scene
-            text: 场景值
+            text: 百度 App 场景值
             name: scene
+          -
+            link: /data/host_scene
+            text: 开源宿主场景值
+            name: host_scene           
 # 5
 -
   link: /operations/specification

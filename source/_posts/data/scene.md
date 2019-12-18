@@ -1,5 +1,5 @@
 ---
-title: 场景值
+title: 百度 App 场景值
 header: data
 nav: book
 sidebar: scene
@@ -123,6 +123,9 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |---|---|---|
 |百度爬虫抓取|WEB|<div>/</div>|
 |默认|NA|<div>/</div>|
+
+
+
 
 **说明**：
 * 智能小程序会被百度爬虫自动抓取，这部分流量的场景值为 WEB 。
