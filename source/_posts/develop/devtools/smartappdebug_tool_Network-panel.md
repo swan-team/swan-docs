@@ -2,7 +2,7 @@
 title: Network panel
 header: develop
 nav: devtools
-sidebar: smartappdebug_tool_Network panel
+sidebar: smartappdebug_tool_Network-panel
 ---
 
 

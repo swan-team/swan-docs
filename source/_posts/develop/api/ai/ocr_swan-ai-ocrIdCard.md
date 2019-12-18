@@ -68,29 +68,45 @@ sidebar: ocr_swan-ai-ocrIdCard
 |width| Number | 表示识别结果的定位位置的长方形的宽度。|
 |height| Number | 表示识别结果的定位位置的长方形的高度。|
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrIdCard.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - 参数属性全开启**：
 
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrIdCard({
-                detect_direction: true,
-                id_card_side: 'front',
-                detect_risk: true,
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('ocrIdCard res', res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrIdCard err', err);
-                }
-            });
-        }
-    })
+    ocrIdCard() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrIdCard({
+                    detect_direction: true,
+                    id_card_side: 'front',
+                    image, // 暂不支持识别网络图片
+                    detect_risk: true,
+                    success: res => {
+                        console.log('ocrIdCard res', res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrIdCard err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

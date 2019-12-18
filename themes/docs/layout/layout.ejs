@@ -18,6 +18,34 @@
         }
     }
 
+    // 处理页面的title
+    var filterTitle = function(title) {
+        if (title.indexOf(".") > 0) {
+            return title.trim().split(".").join(",") + ',' + title;
+        } else if (title.indexOf(" ") > 0) {
+            var initTitle = title.trim().split(/\s+/);
+            var nextTitle = '';
+            initTitle.forEach(function(item) {
+                if (item.indexOf("-") > 0) {
+                    nextTitle += item.split("-").join(",") + ',' + item.split("-").join("") + ',';
+                }
+            });
+            var finallyTitle = nextTitle + initTitle;
+            return finallyTitle ;
+        } else {
+            return title;
+        }
+    };
+
+    // 去除所有html标签 转为纯文本
+    var replaceHtml = function(str) {
+        str = str.replace(/(\r\n|\n)/g, '')               // 换行
+        .replace(/<!--.*?\/-->/g, '')                   // 注释
+        .replace(/<pre.*?\/pre>/g, '')                 // 去掉代码片段
+        .replace(/<[^>]+>/g, '');                     // html标签
+        return str;
+    }
+
     var recursiveTitle = function(list) {
         list.forEach(function(item) {
             if (item.sidebar) {
@@ -26,6 +54,9 @@
             } else {
                 currentPageList.push(item);
                 h1 = page.title;
+                title = filterTitle(page.title);
+                keywords = page.keywords ? (',' + page.keywords.join(",")) : '';
+                description = replaceHtml(page.more);
             }
         })
     };
@@ -52,12 +83,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
     <meta name="google" content="notranslate" />
-    <title>
-        <% if (h1) { %>
-            <%= h1 %> -
-        <% }%>
-        <%= headerNavIndex != null ? headerNavs[headerNavIndex].text : '' %>
-    </title>
+    <meta name="keywords" content="小程序,小程序开发,小程序文档,智能小程序,智能小程序开发,百度小程序,百度智能小程序,<%= title %><%= keywords %>" />
+    <meta name="description" content="<%= description %>" />
+    <title><% if (h1) { %><%= h1 %> - <% }%>百度智能小程序文档</title>
     <link rel="dns-prefetch" href="//smartprogram.baidu.com">
     <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
     <%- css('css/base') %>
@@ -74,6 +102,20 @@
             hm.src = "https://hm.baidu.com/hm.js?0db18a3ce977f2c77edf8e7a00bf159d";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
         })();
     </script>
 </head>

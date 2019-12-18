@@ -8,6 +8,10 @@ sidebar: MapContext-includePoints
 
 **解释**：缩放视野展示所有经纬度。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextIncludePoints.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 
@@ -28,3 +32,70 @@ sidebar: MapContext-includePoints
 |---- | ---- | ---- |
 |longitude|String|经度|
 |latitude|String|纬度|
+
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/includePoints.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/d920818b854d716aa8787795cfd47b561573554788777" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onReady() {
+        this.mapContext = swan.createMapContext('myMap');
+    },
+    includePointsOne: function () {
+        this.mapContext.includePoints({
+            padding: [10],
+            points: [{
+                latitude: 23,
+                longitude: 113.33,
+            }, {
+                latitude: 23,
+                longitude: 113.3345211,
+            }],
+            success: function (res) {
+                console.log(res)
+            },
+            fail: function (err) {
+                    
+            }
+        })  
+    },
+    includePointsTwo: function() {
+        this.mapContext.includePoints({
+            padding: [10],
+            points: [{
+                latitude: 39.91,
+                longitude: 106.40,
+            }, {
+                latitude: 41,
+                longitude: 120,
+            }],
+            success: function (res) {
+                console.log(res)
+            },
+            fail: function (err) {
+                    
+            }
+        })
+    }
+});
+
+```

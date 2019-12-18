@@ -2,7 +2,7 @@
 title: swan.getAvailableAudioSources
 header: develop
 nav: api
-sidebar: swan.getAvailableAudioSources
+sidebar: recorder_swan-getAvailableAudioSources
 ---
 
 
@@ -11,6 +11,10 @@ sidebar: swan.getAvailableAudioSources
 > 基础库3.80.2开始支持，低版本需做兼容处理
 
 **解释**：获取当前支持的音频输入源
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getAvailableAudioSources.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -43,8 +47,22 @@ sidebar: swan.getAvailableAudioSources
 |voice_recognition |同 mic，适用于语音识别，仅限 Android|
 
 
+**图片示例**
 
-**示例**：
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getAvailableAudioSources.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 <a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
@@ -55,17 +73,13 @@ Page({
     getAvailableAudioSources() {
         swan.getAvailableAudioSources({
             success: res => {
-	            console.log('当前支持的音频输入源:', res.audioSources);
-		    },
-		    fail: err => {
-		        console.log('错误码：' + err.errCode);
-		        console.log('错误信息：' + err.errMsg);
-		    }
-		});
+                console.log('当前支持的音频输入源:', res.audioSources);
+            },
+            fail: err => {
+                console.log('错误码：' + err.errCode);
+                console.log('错误信息：' + err.errMsg);
+            }
+        });
     }
-});
+})
 ```
-
-
-
-

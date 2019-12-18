@@ -21,10 +21,10 @@ sidebar: sjs_statement
 if (表达式) 语句;
 
 if (表达式)
-  语句;
+    语句;
 
 if (表达式) {
-  代码块;
+    代码块;
 }
 
 
@@ -34,26 +34,26 @@ if (表达式) 语句;
 else 语句;
 
 if (表达式)
-  语句;
+    语句;
 else
-  语句;
+    语句;
 
 if (表达式) {
-  代码块;
+    代码块;
 } else {
-  代码块;
+    代码块;
 }
 
 // if ... else if ... else ...
 
 if (表达式) {
-  代码块;
+    代码块;
 } else if (表达式) {
-  代码块;
+    代码块;
 } else if (表达式) {
-  代码块;
+    代码块;
 } else {
-  代码块;
+    代码块;
 }
 ```
 
@@ -63,38 +63,38 @@ if (表达式) {
 
 ```js
 switch (表达式) {
-  case 变量:
-    语句;
-  case 数字:
-    语句;
-    break;
-  case 字符串:
-    语句;
-  default:
-    语句;
+    case 变量:
+        语句;
+    case 数字:
+        语句;
+        break;
+    case 字符串:
+        语句;
+    default:
+        语句;
 }
 ```
 
 - default 分支可以省略不写。
 - case 关键词后面只能使用：变量，数字，字符串。
 
-**示例代码：**
+**代码示例**
 
 ```js
 var exp = 10;
 
 switch ( exp ) {
 case "10":
-  console.log("string 10");
-  break;
+    console.log("string 10");
+    break;
 case 10:
-  console.log("number 10");
-  break;
+    console.log("number 10");
+    break;
 case exp:
-  console.log("var exp");
-  break;
+    console.log("var exp");
+    break;
 default:
-  console.log("default");
+    console.log("default");
 }
 ```
 
@@ -110,21 +110,21 @@ number 10
 
 ```js
 for (语句; 语句; 语句)
-  语句;
+    语句;
 
 for (语句; 语句; 语句) {
-  代码块;
+    代码块;
 }
 ```
 
 - 支持使用 break，continue 关键词。
 
-**示例代码：**
+**代码示例**
 
 ```js
 for (var i = 0; i < 3; ++i) {
-  console.log(i);
-  if( i >= 1) break;
+    console.log(i);
+    if( i >= 1) break;
 }
 ```
 
@@ -141,14 +141,14 @@ for (var i = 0; i < 3; ++i) {
 
 ```js
 while (表达式)
-  语句;
+    语句;
 
 while (表达式){
-  代码块;
+    代码块;
 }
 
 do {
-  代码块;
+    代码块;
 } while (表达式)
 ```
 

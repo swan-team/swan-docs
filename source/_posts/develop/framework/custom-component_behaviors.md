@@ -12,48 +12,48 @@ sidebar: custom-component_behaviors
 * 每个组件可以引用多个 behavior 。 同时 该behavior 也可以引用其它 behavior 。
 * **behavior 需要使用 Behavior() 构造器定义。**
 
-**<div class="notice">示例代码</div>**
+**代码示例**
 <a href="swanide://fragment/31f1513649db8443c74478888587a5081545884054821" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // my-behavior.js
 module.exports = Behavior({
-  behaviors: [],
-  properties: {
-    myBehaviorProperty: {
-      type: String,
-      value: 'behavior'
-    }
+    behaviors: [],
+    properties: {
+        myBehaviorProperty: {
+            type: String,
+            value: 'behavior'
+        }
   },
   data: {
-    myBehaviorData: {}
+      myBehaviorData: {}
   },
   attached: function(){},
   methods: {
-    myBehaviorMethod: function(){}
+      myBehaviorMethod: function(){}
   }
 });
 ```
 
 组件引用时，需在 behaviors 定义段中将它们逐个列出。
-
+**代码示例**
 ```js
 // my-component.js
 var myBehavior = require('my-behavior')
 Component({
-  behaviors: [myBehavior],
-  properties: {
-    myProperty: {
-      type: String,
-      value: 'component'
-    }
+    behaviors: [myBehavior],
+    properties: {
+        myProperty: {
+            type: String,
+            value: 'component'
+        }
   },
   data: {
-    myData: {}
+      myData: {}
   },
   attached: function(){},
   methods: {
-    myMethod: function(){}
+      myMethod: function(){}
   }
 });
 ```
@@ -77,12 +77,12 @@ Component({
 
 自定义组件可以通过引用内置的 behavior 来获得内置组件的一些行为。
 
-**<div class="notice">示例代码</div>**
+**代码示例**
 <a href="swanide://fragment/cfa1a5be4668bd92477696d55c1f84ba1545309188870" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Component({
-  behaviors: ['swan://form-field']
+    behaviors: ['swan://form-field']
 });
 ```
 
@@ -107,16 +107,16 @@ form 组件可以识别这些自定义组件，并在 submit 事件中返回组�
 
 未使用这个定义段时， selectComponent 将默认返回自定义组件的 this 。使用这个定义段时，将以这个定义段的函数返回值代替。
 
-**<div class="notice">示例代码</div>**
+**代码示例**
 <a href="swanide://fragment/693b56d555bf6f4478f6628cdd4d9e791545310017177" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // 自定义组件的js文件
 Component({
-  behaviors: ['swan://component-export'],
-  export() {
-    return { componentField: 'componentValue' }
-  }
+    behaviors: ['swan://component-export'],
+    export() {
+        return { componentField: 'componentValue' }
+    }
 });
 ```
 

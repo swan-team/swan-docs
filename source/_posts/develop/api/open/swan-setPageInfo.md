@@ -5,12 +5,17 @@ nav: api
 sidebar: swan-setPageInfo
 ---
 配置页面基础信息接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
+
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
  
->建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数。
+>建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数，详情参见下面的代码示例二。
 
-**解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。
+**解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。其中title和image字段也有助于用户添加页面收藏的模板展现和回访体验（用户可以在小程序菜单中收藏当前页面，并通过百度App"我的-常用功能-收藏"回访已收藏的页面）。
+
+**百度APP中扫码体验：**
+
+请<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中" target="_self">在开发者工具中</a>，单击“预览”，输入您的APPID，单击“WEB预览”，百度APP中扫码体验。
 
 **方法参数**：Object object
 
@@ -51,16 +56,15 @@ sidebar: swan-setPageInfo
 |uv |String|否| 页面的点击量（去重用户）|
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
+**图片示例**
 
-**说明**
-1、releaseData、articleTitle、image、video 、visit 内容用于宿主 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
-2、title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在宿主APP信息流中的标题展示。
-3、当前页面包含视频信息时 video 为必填字段，url、duration、image为 video 的必填参数；如当前页面不包含视频信息，可不填写。
-4、当前页面包含焦点图或者正文图片 image 为必填字段。
-5、当前页面能够统计到用户分发、互动和时长等数据时，visit字段建议填写。开发者可根据页面实际统计的情况完善pv、uv、sessionDuration、likes、comments、collects、shares、followers字段，若页面不包含以上字段时，可不填写。
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/setPageInfo1.png">
+    </div>    
+</div>
 
-
-**示例**：
+**代码示例 1**：
 
 <a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -104,4 +108,48 @@ Page({
     }
 });
 ```
+**代码示例 2**：
+
+<a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+**在 js 文件中**
+
+```js
+Page({
+    onLoad(query) {
+        // 当请求依赖于 query 参数时，先从 onLoad 生命周期中取出 query
+        this.setData({
+            articleID: query.id
+        });
+    },
+    onShow() {
+        const articleID = this.getData('articleID');
+        swan.request({
+            url: `https://example.com/api/article_info?id=${articleID}`,
+            success: res => {
+                swan.setPageInfo({
+                    title: res.title,
+                    keywords: res.keywords,
+                    description: res.description,
+                    articleTitle: res.articleTitle,
+                    releaseDate: res.releaseDate,
+                    image: res.image,
+                    video: res.video
+                });
+            },
+            fail: err => {
+                // 异常处理
+            }
+        });
+    }
+});
+```
+
+**Bug & Tip**
+
+1. releaseData、articleTitle、image、video 、visit 内容用于宿主 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
+2. title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在宿主APP信息流中的标题展示。
+3. 当前页面包含视频信息时 video 为必填字段，url、duration、image为 video 的必填参数；如当前页面不包含视频信息，可不填写。
+4. 当前页面包含焦点图或者正文图片 image 为必填字段。
+5. 当前页面能够统计到用户分发、互动和时长等数据时，visit字段建议填写。开发者可根据页面实际统计的情况完善pv、uv、sessionDuration、likes、comments、collects、shares、followers字段，若页面不包含以上字段时，可不填写。
 

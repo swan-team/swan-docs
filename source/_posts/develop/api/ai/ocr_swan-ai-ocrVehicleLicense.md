@@ -9,6 +9,10 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 **解释**：对机动车行驶证正本所有关键字段进行识别。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_ocrVehicleLicense.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -51,28 +55,45 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 |---|---|---|---|
 |words | String | 识别结果字符串 |
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrVehicleLicense.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrVehicleLicense.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
 
 <a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrVehicleLicense({
-                image, // 暂不支持识别网络图片
-                detect_direction: true,
-                accuracy: normal
-                success: res => {
-                    console.log('ocrVehicleLicense res', res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrVehicleLicense err', err);
-                }
-            });
-        }
-    })
+    ocrVehicleLicense() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrVehicleLicense({
+                    image, // 暂不支持识别网络图片
+                    detect_direction: true,
+                    accuracy: normal
+                    success: res => {
+                        console.log('ocrVehicleLicense res', res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrVehicleLicense err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

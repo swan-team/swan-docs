@@ -23,7 +23,7 @@ sidebar: swan-onError
 **Object error**
 错误信息，包含堆栈。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,10 +37,11 @@ sidebar: swan-onError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例 1**：
 
  
-* 示例一：在生命周期的onError中使用 
+在生命周期的onError中使用  
+
 <a href="swanide://fragment/7d5fb8de42baef8e46627d5e1a027d8e1572848925501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -50,7 +51,7 @@ App({
 
     },
     onError(err) {
-        console.log(err);
+        console.log('catch error');
         swan.showModal({
             title: '',
             content: JSON.stringify(err)
@@ -59,8 +60,10 @@ App({
 });
 
 ```
+**代码示例 2**
 
-* 示例二：等同于示例一的另一种写法 
+等同于示例一的另一种写法 
+
 <a href="swanide://fragment/3b777b5572d06daebc52320221400de11572848996819" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -79,8 +82,10 @@ App({
 });
 ```
 
-* 示例三：可根据开发者的业务逻辑调整用法 
-<a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**代码示例 3**
+
+可根据开发者的业务逻辑调整用法 
+<a href="swanide://fragment/8efbf176816348c943901a2e541563271573098386086" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({

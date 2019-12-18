@@ -11,6 +11,10 @@ sidebar: swan-navigateToSmartProgram
 
 **解释**： 打开另一个小程序。
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_navigateToSmartProgram.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -25,9 +29,24 @@ sidebar: swan-navigateToSmartProgram
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/08bcf5aff52ed378f39c8112eb3d4a051559044193460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/navigateToSmartProgram.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
+**代码示例1: 打开正式版小程序**：
+
+<a href="swanide://fragment/dabf74367a3e2de2b4a43bf251368a371575358057825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -44,6 +63,37 @@ Page({
     navigateToSmartProgram() {
         swan.navigateToSmartProgram({
             appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c', // 要打开的小程序 App Key
+            path: 'pages/openShare/openShare', // 打开的页面路径，如果为空则打开首页
+            success: res => {
+                console.log('navigateToSmartProgram success', res);
+            },
+            fail: err => {
+                console.log('navigateToSmartProgram fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2: 打开开发版小程序（携带参数）**：
+
+<a href="swanide://fragment/03ed9b0a7c5afe2c856bd37d3ec73cf21575358502435" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="navigateToSmartProgram">navigateToSmartProgram</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    navigateToSmartProgram() {
+        swan.navigateToSmartProgram({
+            appKey: '4fecoAqgCIUtzIyA4FAPgoyrc4oUc25c_dev15736', // 要打开的小程序 App Key，开发版appkey可在开发者工具中预览获取
             path: 'pages/openShare/openShare?k=v', // 打开的页面路径，如果为空则打开首页
             extraData: {
                 foo: 'baidu'
@@ -58,14 +108,6 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
-
 #### 错误码
 * Andriod
 

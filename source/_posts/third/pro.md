@@ -228,80 +228,92 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 
 ### 8、获取小程序基础信息
-接口调用请求说明
 
 ```
 GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOKEN
 ```
 
-#### 参数说明:
+**公共请求参数** 
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token	|string|	是	|授权小程序的接口调用凭据
+| 参数         | 类型   | 是否必填 | 描述                     | 示例值 |
+| ------------ | ------ | -------- | ------------------------ | ------ |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
+
+**请求参数** 
+
+| 参数 | 类型 | 是否必填 | 描述 | 示例值 |
+| ---- | ---- | -------- | ---- | ------ |
+|      |      |          |      |        |
+
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+
+| 参数名                                 | 类型   | 描述                                                         |
+| -------------------------------------- | ------ | ------------------------------------------------------------ |
+| app\_id                                | int    | 小程序的appid                                                |
+| app\_name                              | string | 小程序的名称                                                 |
+| app_key                                | string | 小程序的key                                                  |
+| app\_desc                              | string | 小程序的介绍内容                                             |
+| photo\_addr                            | string | 小程序图标                                                   |
+| qualification                          | object | 小程序账号对应的主体信息                                     |
+| qualification.name                     | string | 主体名称                                                     |
+| qualification.type                     | int    | 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放 |
+| qualification.satus                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
+| qualification.ad\_type                 | int    | 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 |
+| qualification.ad_status                | int    | 高级认证状态 <br>1：通过 <br>3：失败                         |
+| category                               | array  | 小程序类目信息                                               |
+| category.category\_id                  | int    | 类目id                                                       |
+| category.category\_name                | string | 类目名称                                                     |
+| category.reason                        | string | 审核失败原因                                                 |
+| category.audit\_status                 | int    | 类目审核状态 <br>1：审核中 <br>2：审核成功 <br>3：审核失败   |
+| category.parent                        | object | 父类目                                                       |
+| category.category\_id                  | int    | 父类目id                                                     |
+| category.category\_name                | int    | 父类目名称                                                   |
+| category.category\_desc                | int    | 父类目描述                                                   |
+| audit_info                             | object | 基本信息审核状态 包括名称，图标，介绍内容的审核状态 只有审核中和审核失败会展示 |
+| audit\_info.audit\_app\_name\_status   | int    | 小程序名称审核状态 <br>1：审核中 <br>3：审核失败             |
+| audit\_info.audit\_app\_name           | int    | 小程序名称审核值                                             |
+| audit\_info.audit\_app\_name\_reason   | int    | 小程序名称审核失败原因                                       |
+| audit\_info.audit\_app\_desc\_status   | int    | 小程序介绍内容审核状态                                       |
+| audit\_info.audit\_app\_desc           | int    | 小程序介绍内容审核值                                         |
+| audit\_info.audit\_app\_desc\_reason   | int    | 小程序介绍内容失败原因                                       |
+| audit\_info.audit\_photo\_addr\_status | int    | 小程序头像审核状态                                           |
+| audit\_info.audit\_photo\_addr         | int    | 小程序头像审核值                                             |
+| audit\_info.audit\_photo\_addr\_reason | int    | 小程序头像审核失败原因                                       |
+| modify\_count                          | object | 小程序基本信息修改次数信息                                   |
+| modify\_count.name\_modify\_used       | int    | 小程序名称已修改次数                                         |
+| modify\_count.name\_modify\_quota      | int    | 小程序名称总共的可修改次数                                   |
+| modify\_count.signature\_modify\_used  | int    | 小程序简介已修改次数                                         |
+| modify\_count.signature\_modify\_quota | int    | 小程序简介总共的可修改次数                                   |
+| modify\_count.image\_modify\_used      | int    | 小程序头像已修改总次数                                       |
+| modify\_count.image\_modify\_quota     | int    | 小程序头像总共的可修改次数                                   |
+| modify\_count.category\_modify\_used   | int    | 小程序类目已修改次数                                         |
+| modify\_count.category\_modify\_quota  | int    | 小程序类目总共的可修改次数                                   |
+| auth_info                              | array  | 小程序权限集合信息                                           |
+| auth_info.scope_name                   | string | 权限名称                                                     |
+| auth_info.type                         | int    | 权限类型(0:小程序纬度权限 1:账号纬度权限)                    |
+| min\_swan\_version                     | string | 开发者工具最低版本                                           |
+| min\_swan\_version                     | string | 开发者工具最低版本                                           |
+| status                                 | int    | 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线 |
+| web\_status                            | int    | 小程序的web化开关状态 <br> 0:未开启 <br>1:开启 <br>2:关闭    |
+
+**请求示例** 
+
+```shell
+curl -X GET \
+  'http://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+```
 
 
-#### 返回值说明:
 
-参数名 | 类型 |描述
------ |-----| -----
-app\_id |int |	小程序的appid
-app\_name |	string |	小程序的名称
-app_key |	string | 小程序的key 
-app\_desc |	string |	小程序的介绍内容
-photo\_addr |	string	| 小程序图标
-qualification	 | object	| 小程序账号对应的主体信息
-qualification.name	 | string	| 主体名称
-qualification.type	 | int	| 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放
-qualification.satus	 | int	| 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败
-qualification.ad\_type	 | int	| 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 
-qualification.ad_status	 | int	| 高级认证状态 <br>1：通过 <br>3：失败
-category	| array	| 小程序类目信息
-category.category\_id	|int	| 类目id
-category.category\_name	|string	| 类目名称
-category.reason	|string	| 审核失败原因
-category.audit\_status	|int	| 类目审核状态 <br>1：审核中 <br>2：审核成功 <br>3：审核失败
-category.parent |object	| 父类目
-category.category\_id |int	| 父类目id
-category.category\_name |int	| 父类目名称
-category.category\_desc |int	| 父类目描述
-audit_info| object|基本信息审核状态 包括名称，图标，介绍内容的审核状态 只有审核中和审核失败会展示
-audit\_info.audit\_app\_name\_status | int |小程序名称审核状态 <br>1：审核中 <br>3：审核失败
-audit\_info.audit\_app\_name | int |小程序名称审核值
-audit\_info.audit\_app\_name\_reason | int |小程序名称审核失败原因
-audit\_info.audit\_app\_desc\_status | int |小程序介绍内容审核状态
-audit\_info.audit\_app\_desc | int |小程序介绍内容审核值
-audit\_info.audit\_app\_desc\_reason | int |小程序介绍内容失败原因
-audit\_info.audit\_photo\_addr\_status | int |小程序头像审核状态
-audit\_info.audit\_photo\_addr | int |小程序头像审核值
-audit\_info.audit\_photo\_addr\_reason | int |小程序头像审核失败原因
-modify\_count |object | 小程序基本信息修改次数信息
-modify\_count.name\_modify\_used |int | 小程序名称已修改次数
-modify\_count.name\_modify\_quota | int | 小程序名称总共的可修改次数
-modify\_count.signature\_modify\_used | int | 小程序简介已修改次数
-modify\_count.signature\_modify\_quota | int | 小程序简介总共的可修改次数
-modify\_count.image\_modify\_used | int | 小程序头像已修改总次数
-modify\_count.image\_modify\_quota | int | 小程序头像总共的可修改次数
-modify\_count.category\_modify\_used | int | 小程序类目已修改次数
-modify\_count.category\_modify\_quota | int | 小程序类目总共的可修改次数
-auth_info|array|小程序权限集合信息
-auth_info.scope_name|string|权限名称
-auth_info.type|int|权限类型(0:小程序纬度权限 1:账号纬度权限)
-min\_swan\_version	|string	|开发者工具最低版本
-min\_swan\_version	|string	|开发者工具最低版本
-status	|int	| 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线
-web\_status |int | 小程序的web化开关状态 <br> 0:未开启 <br>1:开启 <br>2:关闭
- 
-
-
-#### 错误情况下:
-
-字段名 | 类型 | 描述 
------ |-----| ------
-errno |	int |	错误码
-msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
-
-#### 返回值示例:
+**响应示例** 
 
 ```json
 {
@@ -375,6 +387,8 @@ msg	 |string|	错误描述信息，用来帮助理解和解决发生的错误
     }
 }
 ```
+
+
 
 
 

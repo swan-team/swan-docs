@@ -2,11 +2,29 @@
 title: canvas 
 header: develop
 nav: api
-sidebar: show_canvas
+sidebar: canvas
 ---
 
 
 **解释**：canvas 画布，可使用 JS 操作 canvas 上下文，发出指令，进行绘制。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/createCanvasContext.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 **SWAN模板写法示例**：
 
@@ -16,9 +34,11 @@ sidebar: show_canvas
 
 **JS写法示例**：
 
+<a href="swanide://fragment/5a48405eb904cfe0231782d70f94ef3e1573708931657" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
         CanvasContext.setFillStyle('#ff0000');
         CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
@@ -36,7 +56,7 @@ Page({
 
 ```js
 Page({
-    onReady： function () {
+    onReady: function () {
         const CanvasContext = this.createCanvasContext('myCanvas');
 	}
 });
@@ -56,7 +76,6 @@ const CanvasContext = swan.createCanvasContext('myCanvas');
 
 ```js
 CanvasContext.setFillStyle('#ff0000');
-
 CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
 CanvasContext.fill();
 ```

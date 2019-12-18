@@ -17,7 +17,7 @@ sidebar: websocket_SocketTask
 **方法参数**：无
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: websocket_SocketTask
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/34c47f3104b2a70210d786e5bb9ce3731572997244307" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -44,7 +44,7 @@ Page({
             url: 'wss://echo.websocket.org',
             header: {},
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);

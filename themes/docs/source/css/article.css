@@ -881,3 +881,8 @@ article thead tr {
     height: 180px;
     margin: 0;
 }
+
+.scan-code-container {
+    text-align: center;    
+    width: 180px;   
+}

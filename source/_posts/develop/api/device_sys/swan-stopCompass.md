@@ -4,11 +4,15 @@ header: develop
 nav: api
 sidebar: swan-stopCompass
 ---
- 
 
- 
+
+
 
 **解释**：停止监听罗盘数据。
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getCompass.png"  class="demo-qrcode-image" />
 
 **方法参数**：Object object
 
@@ -20,7 +24,21 @@ sidebar: swan-stopCompass
 |fail  |  Function |   否 | |  接口调用失败的回调函数|
 |complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/stopCompass.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/dd5f2caff98f590d42027517729532851569479416199" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

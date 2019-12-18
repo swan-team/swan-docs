@@ -2,19 +2,80 @@
 title: ARCameraContext
 header: develop
 nav: api
-sidebar: media_arcameracontext_ARCameraContext
+sidebar: arcameracontext_ARCameraContext
 ---
 
  
 **解释**：swan.createARCameraContext 的返回值。
- 
-**示例**：
 
-<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**百度APP中扫码体验：**
 
-```html
-<ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
-</ar-camera>
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContext.png"  class="demo-qrcode-image" />
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ar-camera.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/7252adaa401a613c9f359713a920d48d1574494178977" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    data: {
+        src: ''
+    },
+    onShow() {
+        const cameraContext = swan.createCameraContext();
+        this.cameraContext = cameraContext
+        swan.showModal({
+            title: '这是ARCameraContext创建的实例对象',
+            content: JSON.stringify(cameraContext)
+        })
+    },
+    takePhoto() {
+        this.cameraContext.takePhoto({
+            quality: 'high',
+            success: res => {
+                this.setData({
+                    src: res.tempImagePath
+                });
+            }
+        });
+    },
+    startRecord() {
+        this.cameraContext.startRecord({
+            success: res => {
+                swan.showToast({
+                    title: 'startRecord'
+                });
+            }
+        });
+    },
+    stopRecord() {
+        this.cameraContext.stopRecord({
+            success: res => {
+                swan.showModal({
+                    title: '提示',
+                    content: res.tempVideoPath
+                });
+                this.setData({
+                    videoSrc: res.tempVideoPath
+                });
+            }
+        });
+    }
+});
 ```
-> 其它代码过长，建议直接<a href="swanide://fragment/c6b6e92b5ef4bc9276cfbc99fddf3dba1557733966512" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
+
 

@@ -16,7 +16,7 @@ sidebar: websocket_swan-onSocketError
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: websocket_swan-onSocketError
     </div>     
 </div>
 
-**示例**：
+**代码示例**
 
 <a href="swanide://fragment/da307c17be7e754db3914cce326cdbc51572996762746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -43,7 +43,7 @@ Page({
             swan.showModal({
                 title: '监听到webSocket连接出错，请检查！',
                 content: JSON.stringify(res)
-            })
+            });
             console.log('WebSocket连接打开出错，请检查！', res);
         });
 

@@ -10,7 +10,7 @@ sidebar: open
 
 **百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/file.png"  class="demo-qrcode-image" />
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_openDocument.png"  class="demo-qrcode-image" />
 
 
 **方法参数**：Object object
@@ -25,18 +25,23 @@ sidebar: open
 |fail  |Function  |  否 | | 接口调用失败的回调函数|
 |complete   | Function   | 否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/dc177b0d57c63576a0052df0bf2c36361569427170503" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/opendocument.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
-* 在 swan 文件中
+**代码示例**
 
-```html
-<view class="wrap">
-    <button type="primary" bindtap="openDocument">openDocument</button>
-</view>
-```
-
+<a href="swanide://fragment/8ac31cf0028bdeb66b5f7d9ecd83ec271573630425994" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 js 文件中
 
 ```js
@@ -63,13 +68,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
-```
 #### 错误码
 
 * Andriod

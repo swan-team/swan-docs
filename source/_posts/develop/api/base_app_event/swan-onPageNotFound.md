@@ -2,7 +2,7 @@
 title: swan.onPageNotFound
 header: develop
 nav: api
-sidebar: swan.onPageNotFound
+sidebar: swan-onPageNotFound
 ---
 
 
@@ -25,7 +25,7 @@ sidebar: swan.onPageNotFound
 |query|Object|打开不存在页面的 query 参数|
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,9 +39,9 @@ sidebar: swan.onPageNotFound
     </div>     
 </div>
 
-**代码示例**：
+**代码示例 1**：
 
-* 示例一：在生命周期的onPageNotFound中使用 
+在生命周期的onPageNotFound中使用 
 <a href="swanide://fragment/1e8c3ffbb08f5f2ad67a325f4e4f8c231572839598490" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -56,7 +56,7 @@ App({
             title: '',
             content: JSON.stringify(res)
         });
-        // 如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
+        // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
         swan.navigateTo({
             url: '/home/home'
         });
@@ -65,7 +65,8 @@ App({
 
 ```
 
-* 示例二：等同于示例一的另一种写法 
+**代码示例 2**
+等同于示例一的另一种写法 
 <a href="swanide://fragment/7d29139d4769344ee69353e82515a0151572839669563" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -78,9 +79,7 @@ App({
                 title: '',
                 content: JSON.stringify(res)
             });
-            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
-            // Do something
-            // 页面不存在时，默认跳转到首页
+            // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
             swan.navigateTo({
                 url: '/home/home'
             });
@@ -90,7 +89,8 @@ App({
 
 ```
 
-* 示例三：可根据开发者的业务逻辑调整用法 
+**代码示例 3**
+可根据开发者的业务逻辑调整用法 
 <a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
@@ -101,14 +101,12 @@ Page({
             url: '/path/to/otherPage'
         });
         swan.onPageNotFound(function(res) {
-            console.log('onPageNotFound success',res);
+            console.log(res);
             swan.showModal({
                 title: '',
                 content: JSON.stringify(res)
             });
-            // 如果将要跳转到的页面属于 tabbar 的某一页面，请使用 swan.switchTab 进行跳转
-            // Do something
-            // 页面不存在时，默认跳转到首页
+            // 页面不存在时，默认跳转到首页，如果是 tabbar 页面，请使用 swan.switchTab 进行跳转
             swan.navigateTo({
                 url: '/home/home',
                 success: res => {
@@ -124,6 +122,7 @@ Page({
 
 ```
 
-**说明:**
+**Bug & Tip**
+
 - 开发者可以在回调中进行页面重定向。
-- 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用swan.onPageNotFound取消监听，否则会出现监听多次的情况
+- 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用[swan.offPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-offPageNotFound/)取消监听，否则会出现监听多次的情况

@@ -11,30 +11,36 @@ sidebar: function_api
 
 如`showToast`：
 
+**代码示例**
+
 ```js
 swan.showToast({
-	title: '我是标题'
+    title: '我是标题'
 });
 ```
 也有很多挂载在 Page 对象与 SWAN 上的方法，如 createCanvasContext，在 SWAN 对象与 Page 对象上均有。所以，你可以这样用：
 
+**代码示例**
+
 ```js
 Page({
-	data: {},
-	onLoad: function () {
-		this.createCanvasContext();
-	}
+    data: {},
+    onLoad: function () {
+	this.createCanvasContext();
+    }
 });
 ```
 
 也可以这样用：
 
+**代码示例**
+
 ```js
 Page({
-	data: {},
-	onLoad: function () {
-		swan.createCanvasContext();
-	}
+    data: {},
+    onLoad: function () {
+	swan.createCanvasContext();
+    }
 });
 ```
 

@@ -42,26 +42,69 @@ sidebar:  classify_swan-ai-objectDetectIdentify
 |height|  Number| 表示定位位置的长方形的高度。|
 
 
-**示例**：
+**图片示例**
 
-<a href="swanide://fragment/20502601a7541449683704fcfb93e0491559034111209" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/objectDetectIdentify.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - 裁剪类需求**：
+
+<a href="swanide://fragment/893b006eaaebeec3deb75dfda46386461573996982449" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-  swan.chooseImage({
-    success: res => {
-      let image = res.tempFilePaths[0];
-      swan.ai.objectDetectIdentify({
-        image,
-        success: res => {
-          console.log('objectDetectIdentify res', res.result);
-        },
-        fail: err => {
-          console.log('objectDetectIdentify fail', err);
-        }
-      });
-    }
-  })
+  objectDetectIdentify() {
+      swan.chooseImage({
+          success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.objectDetectIdentify({
+              image,
+              with_face: 1,
+              success: res => {
+                console.log('objectDetectIdentify res', res.result);
+              },
+              fail: err => {
+                console.log('objectDetectIdentify fail', err);
+              }
+            });
+          }
+      })
+  }
+});
+```
+
+**代码示例1 - 检索/识别类需求**：
+
+<a href="swanide://fragment/60962c9455805a780253e718238d0c731575194352151" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+  objectDetectIdentify() {
+      swan.chooseImage({
+          success: res => {
+            let image = res.tempFilePaths[0];
+            swan.ai.objectDetectIdentify({
+              image,
+              with_face: 0,
+              success: res => {
+                console.log('objectDetectIdentify res', res.result);
+              },
+              fail: err => {
+                console.log('objectDetectIdentify fail', err);
+              }
+            });
+          }
+      })
+  }
 });
 ```
 

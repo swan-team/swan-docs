@@ -25,7 +25,7 @@ sidebar: websocket_SocketTask-close
 |fail  |Function  |  否 || 接口调用失败的回调函数|
 |complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,31 +39,42 @@ sidebar: websocket_SocketTask-close
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**
 
-<a href="swanide://fragment/50264d121d923997bdef399eb6c30ffe1572998206666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d1d8bd733fb20844c847e4494e6aeb1a1573406116849" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 Page({
-    onShow() {
+    data: {
+        disabled: false
+    },
+    onTap() {
+        let that = this;
+        that.setData('disabled', true);
         const socketTask = swan.connectSocket({
             url: 'wss://echo.websocket.org',
             header: {},
-            protocols: ['name'],
             success: function (res) {
-                console.log('connectSocket success', res.socketTaskId)
+                console.log('connectSocket success', res.socketTaskId);
             },
             fail: function (err) {
                 console.log('connectSocket fail', err);
             }
         });
-        this.socketTask = socketTask
+        
+        socketTask.onOpen(function (res) {
+            that.socketTaskClose();
+        })
+        this.socketTask = socketTask;
+
     },
     socketTaskClose() {
-       this.socketTask.close({
+        let that = this;
+        this.socketTask.close({
             success: res => {
+                that.setData('disabled', false);
                 console.log('关闭WebSocket成功', res);
                 swan.showToast({
                     title: '关闭WebSocket成功',
@@ -74,6 +85,31 @@ Page({
                 console.log('关闭WebSocket失败', err);
             }
         });
+    }
+});
+
+```
+
+**代码示例2 - 参数全集**
+
+<a href="swanide://fragment/f0c512ef4c7915ac9e7be017b03c75641575448859220" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+this.socketTask.close({
+    code: 1000,
+    reason: '正常关闭',
+    success: res => {
+        that.setData('disabled', false)
+        console.log('关闭WebSocket成功', res);
+        swan.showToast({
+            title: '关闭WebSocket成功',
+            icon: 'none'
+        });
+    },
+    fail: err => {
+        console.log('关闭WebSocket失败', err);
     }
 });
 ```

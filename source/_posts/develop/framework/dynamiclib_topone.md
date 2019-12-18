@@ -12,7 +12,8 @@ topOne是一个由百度小程序官方发布的名为“topOne”的图文组�
 topOne 动态库包含一个名为 top-one 的自定义组件。
 
 #### topOne动态库配置
-###### app.json 文件代码示例：
+
+app.json 文件**代码示例**
 
 ```
 "dynamicLib": {
@@ -23,7 +24,7 @@ topOne 动态库包含一个名为 top-one 的自定义组件。
     }
 },
 ```
-###### 页面 json 文件代码示例：
+页面 json 文件**代码示例**
 在页面的 json 文件中，如下配置来使用此动态库中的叫做 top-one 的自定义组件：
 
 ```
@@ -38,7 +39,7 @@ topOne 动态库包含一个名为 top-one 的自定义组件。
     }
 }
 ```
-###### swan 文件引入代码示例：
+swan 文件引入**代码示例**
 
 ```
 <top-one topOneArticleTitle="{{d.topOneArticleTitle}}"
@@ -46,7 +47,7 @@ topOne 动态库包含一个名为 top-one 的自定义组件。
     topOneUserInfo="{{d.topOneUserInfo}}"
     topOneContentNodes="{{d.topOneContentNodes}}" />
 ```
-###### js 文件中设置数据代码实例：
+js 文件中设置数据**代码示例**
 
 ```
 data: {
@@ -59,13 +60,13 @@ data: {
             info: ['动态库', 'topOne']
         },
         topOneContentNodes: [
-            { type: 'caption', text: '使用topOne动态库' },
-            { type: 'section', text: '它是一个由百度小程序官方发布的动态库。包含一个名为 top-one 的自定义组件。实现了上述功能。' },
-            { type: 'caption', text: 'topone配置图片' },
-            { type: 'section', text: '下面是 topone里配置的图片示例。'},
+            {type: 'caption', text: '使用topOne动态库'},
+            {type: 'section', text: '它是一个由百度小程序官方发布的动态库。包含一个名为 top-one 的自定义组件。实现了上述功能。'},
+            {type: 'caption', text: 'topone配置图片'},
+            {type: 'section', text: '下面是 topone里配置的图片示例。'},
             {type: 'img', src: "https://b.bdstatic.com/searchbox/icms/searchbox/img/toponebigimg.jpg"},
-            { type: 'caption', text: 'topOne配置文字' },
-            { type: 'section', text: 'topOne里可以配置文字。如这是一段文字。是不是很简单？'}
+            {type: 'caption', text: 'topOne配置文字'},
+            {type: 'section', text: 'topOne里可以配置文字。如这是一段文字。是不是很简单？'}
         ]
     }
 });

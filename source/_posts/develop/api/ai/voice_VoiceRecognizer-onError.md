@@ -2,10 +2,14 @@
 title: VoiceRecognizer.onError
 header: develop
 nav: api
-sidebar: voice_VoiceRecognizer_onError
+sidebar: voice_VoiceRecognizer-onError
 ---
 
 **解释**： 识别遇到错误
+
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnError.png"  class="demo-qrcode-image" />
 
 **方法参数**：Function callback
 
@@ -41,3 +45,56 @@ sidebar: voice_VoiceRecognizer_onError
 |4003|	没有匹配的识别结果|
 |4004|	返回结果异常|
 |9000|	未知错误|
+
+
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/VoiceRecognizerOnError.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+* 在 swan 文件中
+
+```html
+<view class="result">{{result}}</view>
+<button type="primary" bindtap="voiceRecognizerStart">点击开始识别语音</button>
+<view>点击开始，不说话即可触发</view>
+```
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        result: ''
+    },
+    voiceRecognizerStart() {
+        const voiceRecognizer = swan.ai.getVoiceRecognizer();
+        voiceRecognizer.onError(res => {
+            console.log('voice onError', res.result);
+            swan.showModal({
+                title: 'onError',
+                content: JSON.stringify(res)
+            })
+        });
+
+        const options = {
+            mode: 'dnn',
+            longSpeech: false
+        };
+
+        voiceRecognizer.start(options);
+    }
+})
+
+```

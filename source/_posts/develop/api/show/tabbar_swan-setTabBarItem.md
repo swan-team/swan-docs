@@ -9,6 +9,10 @@ sidebar: tabbar_swan-setTabBarItem
 
 **解释**：动态设置 tabBar 某一项的内容
 
+**百度APP中扫码体验：**
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_tabBar.png"  class="demo-qrcode-image" />
+
 **方法参数**：Object object
 
 **`object`参数说明**：
@@ -23,27 +27,53 @@ sidebar: tabbar_swan-setTabBarItem
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**示例**：
 
-<a href="swanide://fragment/2030d26a377cc39560eb625d8dd8f2a11569468598586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+**图片示例**
 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/settabbaritem.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
+
+<a href="swanide://fragment/8b445d78cbdabc8066c1dbec707dbefd1574138075367" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-    swan.setTabBarItem({
-        index: 0,
-        text: '文本',
-        iconPath: '/images/API_normal.png',
-        selectedIconPath: '/images/API_selected.png',
-        success: res => {
-            console.log('setTabBarItem success');
-        },
-        fail: err => {
-            console.log('setTabBarItem fail', err);
-        }
-    });
-  
+Page({
+    setTabBarItem() {
+        swan.setTabBarItem({
+            index: 0,
+            text: '替换文本',
+            iconPath: '/images/API_normal.png',
+            selectedIconPath: '/images/API_selected.png',
+            success: function () {
+                console.log('setTabBarItem success');
+            },
+            fail: function (err) {
+                console.log('setTabBarItem fail', err);
+            }
+        });
+    }
+});
 ```
 
 

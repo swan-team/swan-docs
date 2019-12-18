@@ -57,7 +57,7 @@ sidebar: uploadfile
 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -71,29 +71,34 @@ sidebar: uploadfile
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
-<a href="swanide://fragment/f925bd04e9b45916c6450fbb6f22b1cf1572940642903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9600df506a852243740082c960020f241573992659493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-    success: res => {
-        swan.uploadFile({
-            url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-            filePath: res.tempFilePaths[0], // 要上传文件资源的路径
-            name: 'myfile',
-            header: {
-                'content-type': 'application/json'
-            },
-            formData: {
-                'user': 'test'
-            },
+Page({
+    data: { },
+    uploadfile() {
+        swan.chooseImage({
             success: res => {
-                console.log(res.statusCode);
-            },
-            fail: err => {
-                console.log('错误码：' + err.errCode);
-                console.log('错误信息：' + err.errMsg);
+                swan.uploadFile({
+                    url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile',
+                    filePath: res.tempFilePaths[0], // 要上传文件资源的路径
+                    name: 'myfile',
+                    header: {
+                        'content-type': 'application/json'
+                    },
+                    formData: {
+                        'user': 'swan'
+                    },
+                    success: res => {
+                        console.log(res.statusCode);
+                    },
+                    fail: err => {
+                        console.log('错误码：' + err.errCode);
+                        console.log('错误信息：' + err.errMsg);
+                    }
+                });
             }
         });
     }

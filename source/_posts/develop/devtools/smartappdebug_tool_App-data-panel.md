@@ -2,7 +2,7 @@
 title:  AppData panel
 header: develop
 nav: devtools
-sidebar: smartappdebug_tool_AppData-panel
+sidebar: smartappdebug_tool_App-data-panel
 ---
 
 

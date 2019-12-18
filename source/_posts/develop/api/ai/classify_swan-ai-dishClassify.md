@@ -45,26 +45,44 @@ sidebar:  classify_swan-ai-dishClassify
 |probability|	String	|识别结果中每一行的置信度值，0-1。|
 
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/dishClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/537ef56cc65e65914349ddad095f1d021569501070696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.chooseImage({
-  success: res => {
-    let image = res.tempFilePaths[0];
-    swan.ai.dishClassify({
-      image,
-      top_num: 5,
-      filter_threshold: 0.95,
-      success: res => {
-        console.log('dishClassify res', res.result);
-      },
-      fail: err => {
-          console.log('dishClassify res', err);
-        }
-    });
-  }
+Page({
+    dishClassify() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.dishClassify({
+                    image,
+                    top_num: 5,
+                    filter_threshold: 0.95,
+                    success: res => {
+                        console.log('dishClassify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('dishClassify res', err);
+                    }
+                });
+            }
+        });
+    }
 });
 ```
 

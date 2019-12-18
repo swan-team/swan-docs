@@ -2,7 +2,7 @@
 title: swan.requestPolymerPayment
 header: develop
 nav: api
-sidebar: payment_swan.requestPolymerPayment
+sidebar: payment_swan-requestPolymerPayment
 ---
 
 
@@ -43,7 +43,7 @@ sidebar: payment_swan.requestPolymerPayment
 |tpOrderId| 是|商户平台自己记录的订单ID，当支付状态发生变化时，会通过此订单ID通知商户。|
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
-|rsaSign| 是|对`appKey+dealId+tpOrderId+totalAmount`进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId `进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
 |bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  
@@ -56,11 +56,78 @@ sidebar: payment_swan.requestPolymerPayment
 | BDWallet | 百度钱包 |
 | WeChat | 微信支付|
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/requestPolymerPayment.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例1 - 简单支付示例**
+
+<a href="swanide://fragment/b5697fc510e1a409906f471c70467fec1576568451890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+```js
+Page({
+    data: { },
+    requestPolymerPayment(e) {
+        swan.request({
+            url: 'https://mbd.baidu.com/ma/nuomi/createorder',
+            success: res => {
+                console.log(res)
+                res.data.data.dealTitle = '百度小程序Demo支付测试';
+                let data = res.data;
+                if (data.errno !== 0) {
+                    console.log('create order err', data);
+                    return;
+                }
+
+                swan.requestPolymerPayment({
+                    orderInfo: data.data,
+                    bannedChannels: this.getData('bannedChannels'),
+                    success: res =>  {
+                        swan.showToast({
+                            title: '支付成功',
+                            icon: 'success'
+                        });
+                    },
+                    fail: err => {
+                        swan.showToast({
+                            title: err.errMsg,
+                            icon: 'none'
+                        });
+                        console.log('pay fail', err);
+                    }
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '订单创建失败',
+                    icon: 'none'
+                });
+                console.log('create order fail', err);
+            }
+        });
+    }
+});
+
+```
+
+**代码示例2 - 复杂支付示例**
+
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
+// 这里只做字段展示，详细示例请在代码片段中查看
 swan.requestPolymerPayment({
     orderInfo: {
         "dealId": "470193086",
@@ -87,12 +154,6 @@ swan.requestPolymerPayment({
 });
 ```
 
-**说明**：
-
-> * 服务审核未通过会导致调起失败“商品不存在”等错误，需要移步“开发者平台-支付管理”查看服务审核状态；
-* 整个orderInfo 是个 json 对象； 
-* bizInfo  这个键值是一个以字符串形式存放的json对象； 
-* 在调起收银台过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，请认真阅读文档。
 
 #### 错误码
 * Andriod
@@ -108,3 +169,10 @@ swan.requestPolymerPayment({
 |202|解析失败，请检查参数是否正确      |
 |10002|网络请求失败|
 |10005|系统拒绝|
+
+**Bug & Tip**
+
+* 服务审核未通过会导致调起失败“商品不存在”等错误，需要移步“开发者平台-支付管理”查看服务审核状态；
+* 整个orderInfo 是个 json 对象； 
+* bizInfo  这个键值是一个以字符串形式存放的json对象； 
+* 在调起收银台过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，请认真阅读文档。

@@ -57,28 +57,44 @@ sidebar: ocr_swan-ai-ocrDrivingLicense
 |---|---|---|---|
 |words | String | 识别结果字符串 |
 
-**示例**：
+**图片示例**
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrDrivingLicense.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+**代码示例**
 
 <a href="swanide://fragment/208a29298f9a7c31f626328e779e94081569500548249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
-    swan.chooseImage({
-        success: res => {
-            let image = res.tempFilePaths[0];
-            swan.ai.ocrDrivingLicense({
-                image, // 暂不支持识别网络图片
-                detect_direction: true,
-                unified_valid_period: true,
-                success: res => {
-                    console.log('ocrDrivingLicense res',res.words_result);
-                },
-                fail: err => {
-                    console.log('ocrDrivingLicense err', err);
-                }
-            });
-        }
-    })
+    ocrDrivingLicense() {
+        swan.chooseImage({
+            success: res => {
+                let image = res.tempFilePaths[0];
+                swan.ai.ocrDrivingLicense({
+                    image, // 暂不支持识别网络图片
+                    detect_direction: true,
+                    unified_valid_period: true,
+                    success: res => {
+                        console.log('ocrDrivingLicense res',res.words_result);
+                    },
+                    fail: err => {
+                        console.log('ocrDrivingLicense err', err);
+                    }
+                });
+            }
+        })
+    }
 });
 ```
 

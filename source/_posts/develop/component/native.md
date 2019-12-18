@@ -15,6 +15,29 @@ sidebar: native
 
 * 原生组件的层级是最高的，所以页面中的其他组件无论设置 z-index 为多少，都无法盖在原生组件上。后插入的原生组件可以覆盖之前的原生组件。
 * 原生组件无法在 scroll-view、swiper、picker-view、movable-view 中使用。
+
+**代码示例：**
+<a href="swanide://fragment/5922e661e44f0a3f1ee0a36e91cc8e051576054229427" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="title">横向滚动</view>
+    <scroll-view
+        scroll-x
+        class="scroll-view"
+        bind:scrolltoupper="toLeft"
+        bind:scrolltolower="toRight"
+        scroll-left="{= scrollLeft =}"
+        upper-threshold="1"
+        lower-threshold="1"
+        bind:scroll="scroll"
+    >
+        <cover-view class="flex-item demo-text-1"></cover-view>
+    </scroll-view>
+</view>
+```
 * 部分CSS样式无法应用于原生组件，例如：
         无法对原生组件设置 CSS 动画；
         不能在父级节点使用 overflow: hidden 来裁剪原生组件的显示区域。
