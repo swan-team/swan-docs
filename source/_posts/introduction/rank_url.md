@@ -69,7 +69,7 @@ https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 
 **3.智能小程序平台配置 URL 适配关系**
 在【搜索接入】-【自然搜索】-【已有H5资源替换】，当开发者需要对已有 H5资源配置时，可在 URL 适配规则的配置模块完成相应内容的设置，具体步骤如下：
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 1.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/url1.png)
 **第一步：**点击页面中的“新建”按钮后，选择“设置 URL适配规则”进行配置。如对规则不够熟悉，也可以使用第二条“URL适配规则生成工具”来辅助配置。
  ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 2.png)
 **第二步：**在 URL 适配规则的设置页面中，开发者需要填写具体H5 链接表达式和对应的小程序 path（路径） 表达式，并至少提供一对示例链接，用于验证规则准确性。
