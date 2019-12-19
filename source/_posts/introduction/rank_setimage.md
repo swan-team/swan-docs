@@ -12,13 +12,7 @@ sidebar: rank_setimage
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/rank/rank0916.png"> 
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/rank/rank09161.png"> 
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../img/introduction/rank/rank0919.png">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/出图.png">
     </div>     
 </div>
 
