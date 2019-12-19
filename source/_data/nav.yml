@@ -264,7 +264,7 @@
                   -
                     link: /introduction/baijiahao_submit
                     text: 百家号素材提交规范
-                    name: baijiahao_submit                    
+                    name: baijiahao_submit
 
         -
             link: /introduction/tieba
@@ -329,7 +329,7 @@
                   -
                     link: /introduction/type_thridtool
                     text: 第三方客服工具
-                    name: type_thridtool                 
+                    name: type_thridtool
               -
                 link: /introduction/contact_standard
                 text: 运营规范
@@ -453,7 +453,7 @@
             # -
             #   link: /design/component/toptab
             #   text: 栏目选项条
-            #   name: toptab          
+            #   name: toptab
             -
               link: /design/component/bottomtab
               text: 底部标签栏
@@ -494,7 +494,7 @@
               link: /design/component/empty_state
               text: 空态
               name: empty_state
-            
+
     -
       link: /design/story/arzoo
       text: 设计故事
@@ -887,8 +887,8 @@
                 name: dynamiclib_topone
               -
                 link: /develop/framework/echarts
-                text: ECharts 动态库-beta 
-                name: echarts               
+                text: ECharts 动态库-beta
+                name: echarts
         -
           link: /develop/framework/subpackages
           text: 性能
@@ -3577,6 +3577,19 @@
                 link: /develop/devtools/audits
                 text: 体验评分
                 name: audits
+                sidebar:
+                  - link: /develop/devtools/audits_score
+                    text: 评分标准
+                    name: audits_score
+                  - link: /develop/devtools/audits_performance
+                    text: 性能
+                    name: audits_performance
+                  - link: /develop/devtools/audits_experience
+                    text: 体验
+                    name: audits_experience
+                  - link: /develop/devtools/audits_best_practice
+                    text: 最佳实践
+                    name: audits_best_practice
               -
                 link: /develop/devtools/question
                 text: 问题反馈
@@ -3802,13 +3815,13 @@
                     # doc
                     -
                         text: doc
-                    
-                   
+
+
                         sidebar:
                           -
                               text: doc.get
                               name: doc_get
-                              link: /develop/cloud/cloud_database/doc_get 
+                              link: /develop/cloud/cloud_database/doc_get
                           -
                               text: doc.update
                               name: doc_update
@@ -3819,8 +3832,8 @@
                               link: /develop/cloud/cloud_database/doc_set
                           -
                               text: doc.remove
-                              name:  doc 
-                              link: /develop/cloud/cloud_database/doc 
+                              name:  doc
+                              link: /develop/cloud/cloud_database/doc
 
 
 
@@ -3828,7 +3841,7 @@
                     -
                         text: db.command
                         name: command
-                        link: /develop/cloud/cloud_database/command 
+                        link: /develop/cloud/cloud_database/command
                         sidebar:
                           -
                               text: command.eq
@@ -4273,7 +4286,7 @@
       name: appendix
       sidebar:
         -
-          text: FAQ 
+          text: FAQ
           sidebar:
             -
               link: /develop/appendix/framworkfaq
@@ -4305,14 +4318,14 @@
             -
               link: /develop/appendix/error
               text: 错误码
-              name: error    
+              name: error
         -
 
           sidebar:
             -
               link: /develop/appendix/canvas_color
               text: canvas-color
-              name: canvas_color                       
+              name: canvas_color
 # 4
 -
   link: /data/concept
