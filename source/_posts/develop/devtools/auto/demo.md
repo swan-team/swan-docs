@@ -8,12 +8,16 @@ sidebar: demo
 智能小程序自动化 SDK 本身不提供测试框架。这意味着你可以将它与市面上流行的任意 Node.js 测试框架结合使用，以此来达到编写小程序测试用例的目的。接下来将使用 [Jest](https://jestjs.io/) 测试框架来编写一个实际的小程序自动化测试。
 
 ## 完整示例
-以下讲解内容的完整示例可以从 [点击这里](https://b.bdstatic.com/searchbox/icms/searchbox/zip/miniapp/demo-automator-1.0.0.zip) 下载，确保 [运行环境](../quick-start/) 符合要求后，执行以下命令，即可开始在工具中运行自动化测试。
+以下讲解内容的完整示例可以从 [点击这里](https://b.bdstatic.com/searchbox/icms/searchbox/zip/miniapp/demo-automator-1.0.1.zip) 下载，确保 [运行环境](../quick-start/) 符合要求后，执行以下命令，即可开始在工具中运行自动化测试。
 
 ```shell
 npm install
 npm run test
 ```
+
+Tips: 如果在安装`jest`过程中出现下图提示，请点击“安装”。
+
+![安装Xcode命令行工具](https://b.bdstatic.com/searchbox/icms/searchbox/img/install-xcode-commandlinetools.png)
 
 > 接下来，我们分步骤对整个测试用例的编写过程进行介绍。
 

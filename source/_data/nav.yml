@@ -3676,14 +3676,14 @@
                     name: Automator
                     sidebar:
                       -
+                        link: /develop/devtools/auto/automator/launch
+                        text: automator.launch
+                        name: launch
+                      -
                         link: /develop/devtools/auto/automator/connect
                         text: automator.connect
                         name: connect
 
-                      -
-                        link: /develop/devtools/auto/automator/launch
-                        text: automator.launch
-                        name: launch
                   -
                     text: SmartProgram
                     name: SmartProgram
