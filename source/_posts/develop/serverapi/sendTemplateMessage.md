@@ -27,19 +27,24 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 - open_id：百度用户登录唯一标识，详见 [开放接口-登录](https://smartprogram.baidu.com/docs/develop/api/open_log/)
 - formId：页面内form组件的`report-submit`属性为true时返回formid，详见 [form表单](https://smartprogram.baidu.com/docs/develop/component/formlist_form/)
 
-**参数说明：**
+**公共请求参数**:
 
-| 参数名            | 类型      | 是否必须 | 描述                                                                        |
-|----------------|---------|------|-----------------------------------------------------------------------------------|
-| access\_token  | String  | 是    | 详见[接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
-| touser         | String  | 是    | 接收者swan\_id。touser与touser\_openId二选一 （使用方式参考下方规则）                   |
-| touser\_openId | String  | 是    | 接收者open\_id。touser\_openId与touser 二选一（使用方式参考下方规则）                   |
-| template\_id   | String  | 是    | 所需下发消息的模板id，可在开发者后台添加和查看，详见 [使用说明](https://smartprogram.baidu.com/docs/develop/serverapi/useintroduction/)                                                       |
-| data           | Objec   | 是    | \{"keyword1": \{"value": "2018\-09\-06"\},"keyword2": \{"value": "kfc"\}\}为json对象 |
-| page           | String  | 否    | 跳转小程序页面地址 pages/xxx/xxx?f=xxxx                                             |
-| scene\_id      | String  | 是    | 表单和订阅场景下，为 submit 事件带上的 formId；支付场景下，为本次支付的 payId 或 orderId   |
-| scene\_type    | Integer | 是    | 场景id类型，1：表单或订阅；2：百度聚合收银台订单；3:直连支付订单                           |
-| ext            | Object  | 否    | \{"xzh\_id":111,"category\_id":15\}                                              |
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token |string | 是 | access_token，授权小程序的接口调用凭据
+
+**请求参数**:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+template\_id |string |是| 所需下发的模板消息的id
+touser|string|否|接收者swan_id
+touser\_openId|string|否|接收者open_id
+data|json/string|是|{"keyword1": {"value": "2018-09-06"},"keyword2": {"value": "kfc"}}
+page|string|否|点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数，（示例index?foo=bar），该字段不填则模板无跳转。
+scene\_id|string|是|场景id，例如表单id和订单id
+scene\_type|int|是|	场景type，1：表单；2：百度收银台订单；3:直连订单
+ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           |
 
 **touser&touser_openId使用规则说明：**
 
