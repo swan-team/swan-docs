@@ -166,7 +166,20 @@ Touch 对象
 |clientX , clientY|Number|距离屏幕视口左上角距离，横向为 X，纵向为 Y|
 
 
+**代码示例**
 
+```xml
+ <view bind:touchstart="viewtouchstart">viewtouchstart</view>
+```
+
+```javascript
+Page({
+    viewtouchstart: function (event) {
+	    console.log('value is:', event.touches);
+        // 输出 clientX: 44，clientX: 47，pageX: 44, pageY: 47
+    }
+});
+```
 
 
 

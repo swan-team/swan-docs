@@ -38,7 +38,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/detectrisk?access_token=ACCESS_
 
 |名称|类型|描述|
 |---|---|---|
-|errno|	int|错误码 0：正确返回，1：异常返回|
+|errno|	int|错误码 0：正确返回，非0：异常返回|
 |errmsg| string |错误信息|
 |request_id|	string|请求ID，标识一次请求|
 |data|	object| 详细数据，errno为0的情况下才有意义|

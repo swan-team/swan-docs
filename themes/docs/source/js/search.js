@@ -1,31 +1,119 @@
+/**
+ * @file 搜索框事件处理
+ */
+
+var origin = window.location.origin;
+// 请求函数
+var get = function (requestUrl, successFn, failFn) {
+    try {
+        $.ajax({
+            url: requestUrl,
+            dataType: 'json',
+            type: 'GET',
+            success: successFn,
+            fail: failFn
+        });
+    }
+    catch (err) {
+        console.error('ajax运行错误', err);
+    }
+};
+
+var timer;
+var debounce = function (fn, delay) {
+    return function () {
+        var ctx = this;
+        var args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(ctx, args);
+        }, (delay ? delay : 300));
+    };
+};
+
+var navToSearch = function (keywords, tarckTag, scope) {
+    scope = scope || 'devdocs';
+    tarckTag = tarckTag || 'sug跳出点击';
+    // 搜索跳转打点
+    _hmt.push(['_trackEvent', tarckTag, keywords, 'devdocs']);
+    window.open(`${origin}/forum/search?word=${keywords}&scope=${scope}&source=docs`, '_blank');
+};
+
+var navToDocs = function (path, keywords) {
+    _hmt.push(['_trackEvent', 'sug跳出点击', keywords, 'devdocs']);
+    window.open(path, '_blank');
+};
+
+var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
+    var $topSug = $('#top-search-sug');
+    var str = '';
+    docsIsEmpty = docsIsEmpty || false;
+    if (!docsIsEmpty) {
+        _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
+        str += '<div class="top-search-sug-result">';
+        resData.forEach(function (list) {
+            const docList = list.docList || [];
+            str += '<div class="top-search-sug-item">'
+                + `<div class="sug-item-broad-name">${list.boardInfo.name}</div>`
+                + '<ul>';
+            docList.forEach(function (item) {
+                var path = `${origin}${item.path}`;
+                str += '<li>'
+                    + `<div class="sug-item-container" onclick="navToDocs('${path}', '${keywords}')">`
+                    + ` <span class="sug-item-tag">${item.tagInfo.name}</span>`
+                    + '<span class="sug-item-content">'
+                    +     `<p class="sug-item-content-title">${item.title}</p>`;
+                if (item.description) {
+                    str += `<p class="sug-item-content-des">${item.description}</p>`;
+                }
+                str += '</span>'
+                    + '</div>'
+                    + '</li>';
+            });
+            str += '</ul>'
+                + '</div>';
+        });
+        str += '</div>'
+            +  ' <div class="top-search-sug-more">'
+            +  ` <span onclick="navToSearch('${keywords}')">`
+            +  '查看更多 >'
+            +  '</span>'
+            +  '</div>';
+    }
+    else if (docsIsEmpty && !fourmIsEmpty) {
+        _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
+        _hmt.push(['_trackEvent', 'sug无结果', keywords, 'devdocs']);
+        str += '<div class="top-search-sug-docs-empty">'
+            +  `<span onclick="navToSearch('${keywords}', 'sug无结果跳转至社区', 'devforum')">`
+            +  '文档没有相关内容，查看社区搜索结果 >'
+            +  '</span>'
+            +  '</div>';
+    }
+    $topSug.html(str);
+    $topSug.css({
+        display: 'block'
+    });
+};
+
+var getFourmSug = function (keywords) {
+    get(`/forum/api/search_category?word=${keywords}&scope=devforum`, function (res) {
+        if (res.data.length === 0) {
+            renderSearchSug(keywords, [], true, true);
+            return;
+        }
+        renderSearchSug(keywords, [], true, false);
+    });
+};
+
 function searchFunc(searchId, contentId) {
-    var $resultContent = document.getElementById(contentId);
     var $input = document.getElementById(searchId);
+    var $inputPc = document.getElementById('local-search-input-pc');
     if (!$input || !$('#local-search-input').length) {
         return;
     }
-
-    function toggleArticleContent(isShown) {
-        var isToggle = typeof isShown === 'undefined';
-        var resultStatus, articleStatus;
-        if (isToggle) {
-            var currentStatus = $('#article-main-content').css('display');
-            resultStatus = currentStatus;
-            articleStatus = currentStatus === 'block' ? 'none' : 'block';
-        } else {
-            articleStatus = isShown ? 'block' : 'none';
-            resultStatus = isShown ? 'none' : 'block';
-        }
-        $('#article-main-content').css({
-            display: articleStatus
-        });
-        $($resultContent).css({
-            display: resultStatus
-        });
-    }
+    // 原有搜索逻辑不变
     $('#top-search-box').on('click', function (e) {
         if ($(e.target).hasClass('reset-search-btn')) {
-            toggleArticleContent(true);
             $('#top-search-box').removeClass('top-search-box-focus');
             return;
         }
@@ -34,6 +122,7 @@ function searchFunc(searchId, contentId) {
         });
         $(this).addClass('top-search-box-focus');
         $input.focus();
+        _hmt.push(['_trackEvent', '移动端搜索框', '点击']);
     });
 
     $($input).on('blur', function (e) {
@@ -43,23 +132,87 @@ function searchFunc(searchId, contentId) {
         });
     });
 
+    // 保证输入事件结束后，才触发搜索
     var flag = true;
-    $input.addEventListener('compositionstart', function () {
+    $inputPc.addEventListener('compositionstart', function () {
         flag = false;
     });
 
-    $input.addEventListener('compositionend', function () {
+    $inputPc.addEventListener('compositionend', function () {
         flag = true;
     });
-    //阻止回车刷新页面
-    $input.addEventListener('keydown', function (e) {
+
+    $inputPc.addEventListener('input', function (e) {
+        var $this = this;
+        debounce(function () {
+            if (!flag) {
+                return;
+            }
+            var keywords = $this.value.trim();
+            if (keywords.length <= 0) {
+                renderSearchSug('', [], true, true);
+                return;
+            } else {
+                get(`/forum/api/search_category?word=${keywords}&scope=devdocs`, function (res) {
+                    var resData = res.data;
+                    if (resData.length === 0) {
+                        getFourmSug(keywords);
+                        return;
+                    }
+                    renderSearchSug(keywords, resData, false, true);
+                });
+            }
+        }, 500)();
+    });
+
+    $inputPc.addEventListener('blur', function () {
+        setTimeout(() => {
+            $('#top-search-sug').css({
+                display: 'none'
+            });
+        }, 300);
+    });
+
+    $inputPc.addEventListener('focus', function (e) {
+        var keywords = e.target.value;
+        _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
+        $('#top-search-sug').css({
+            display: 'block'
+        });
+        if ($('.top-search-sug-item').length > 0) {
+            _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
+        } else if ($('.top-search-sug-docs-empty').length > 0) {
+            _hmt.push(['_trackEvent', 'sug无结果', keywords, 'devdocs']);
+        }
+    });
+
+    function keyEnter(e) {
         var e = e || event;
+        var keywords = e.target.value;
+        var keywordsFilter = keywords.trim();
         if (e.keyCode === 13) {
             e.returnValue = false;
             e.preventDefault();
-            // 搜索跳转打点
-            _hmt.push(['_trackEvent', 'search', '搜索跳转', e.target.value]);
-            window.open(`${window.location.origin}/forum/search?hmsr=docsSearch&word=${e.target.value}&scope=devdocs`, '_blank');
+            if (!keywords.length) {
+                return;
+            }
+            navToSearch(keywordsFilter, 'sug搜索关键词');
+            $inputPc.blur();
         }
-    })
+    }
+
+    //阻止回车刷新页面
+    $input.addEventListener('keydown', keyEnter);
+    $inputPc.addEventListener('keydown', keyEnter);
+
+    // 搜索图标点击
+    $('#search-btn-pc').on('click', function () {
+        var keywords = $inputPc.value;
+        var keywordsFilter = keywords.trim();
+        if (!keywords) {
+            return;
+        }
+        navToSearch(keywordsFilter, 'sug搜索关键词');
+    });
+
 }

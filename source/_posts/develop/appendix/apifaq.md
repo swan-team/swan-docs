@@ -35,6 +35,29 @@ A:请查看 url 中是否出现了中文，如需要使用中文字体，请对�
 
 A：使用 navigationBarBackgroundColor 无法做到渐变色的效果，可以选择使用透明框，新增返回按钮，然后进行设置。或将navigationStyle 设置成 custom，在全屏页面中制作导航栏，自定义背景色。
 
+<a href="swanide://fragment/1fd85ef9ef1c3c5fcc1434a229399d421576076187805" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+**代码示例**
+
+```
+<canvas canvas-id="myCanvas" class="myCanvas"/>
+</canvas>
+<view>内容</view>
+```
+```
+Page({
+    onReady: function () {
+        const canvasContext = this.createCanvasContext('myCanvas');
+        const grd = canvasContext.createLinearGradient(0, 0, 200, 200);
+        grd.addColorStop(0, 'blue');
+        grd.addColorStop(1, 'red');
+        canvasContext.setFillStyle(grd);
+        canvasContext.fillRect(0, 0, 800, 100);
+        canvasContext.draw();
+    }
+});
+```
+
 #### Q：请问下有关闭小程序这样的 api 吗？ 
 
 A: 暂时没有。
@@ -43,8 +66,6 @@ A: 暂时没有。
 
 A: 不可以。
 
-
-
 #### Q：swan.request 成功后如何刷新页面？
 
 A：当刷新页面指的是想更新部分模块的数据时，可以在接口请求成功后，使用 setData 将获取到的数据进行重置。
@@ -52,8 +73,30 @@ A：当刷新页面指的是想更新部分模块的数据时，可以在接口�
 #### Q：如何在百度小程序里可以同时播放两个音频？
 
 A：可以多次创建 createInnerAudioContext，然后使用 setInnerAudioOption，将设置 mixWithOther 为 true。
+**代码示例**
 
+<a href="swanide://fragment/15df54c5435299edcf3789e9f86d82181576076906415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+```
+// 每个按钮只能点击一次，点击多次则会创建多个音频
+Page({
+    onLoad() {
+
+    },
+    playOne() {
+        const innerAudioContext = swan.createInnerAudioContext();
+        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.autoplay = false;
+        innerAudioContext.play();
+    },
+    playTwo() {
+        const innerAudioContext = swan.createInnerAudioContext();
+        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.autoplay = false;
+        innerAudioContext.play();
+    }
+});
+```
 
 ####  Q：video自动播放的流量提醒出现策略是什么？
 
@@ -97,6 +140,10 @@ A：不支持
 #### Q：小程序组件提供的弹窗能插图片内容吗？
 
 A：不支持，小程序API提供的弹窗暂时都不支持插入图片，可自行写弹层逻辑，注意，自己写的弹层底部的的蒙层是盖不住顶bar(标题栏)。
+
+**代码示例**
+
+> 自行写弹层逻辑可参考[showModal](/develop/api/show/toast_swan-showModal/)中的代码示例三
 
 ####  Q：百度小程序支持导航吗？或是支持调起其它导航APP?
 

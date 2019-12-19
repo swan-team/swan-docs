@@ -19,9 +19,13 @@ sidebar: type_send
 
 使用超级管理员或管理员权限登录开发者后台，点击“设置-开发设置”，下滑至"消息推送"卡片，点击"启用"后，按照要求进行配置。
 
-![图片](../../img/introduction/contact/3.jpg)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81-%E5%9B%BE%E7%89%871.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81-%E5%9B%BE%E7%89%872.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81-%E5%9B%BE%E7%89%873.png)
 
 完成配置后，点击"客服管理“，在”消息推送“卡片点击开启按钮。
+
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81-%E5%9B%BE%E7%89%874.png)
 
 ### **接口调用** 
 

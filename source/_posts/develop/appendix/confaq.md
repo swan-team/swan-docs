@@ -9,6 +9,17 @@ sidebar: confaq
 
 A: H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
+**代码示例：**
+
+<a href="swanide://fragment/547f28b94e391bf484dece2bdc4c1e9b1575830214937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// 在 H5 文件中
+let UA = window.navigator.userAgent;
+var regex = /swan\//;
+console.log( regex.test(UA) );// 若为true，则是在小程序的web-view中打开
+```
+
 #### Q: 在webview 中使用了 cookie，导致存储信息与小程序不能共享的原因是什么？
 
 A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的通信； 
@@ -63,15 +74,80 @@ A：支持。
 
 A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 CSS 设置 height。
 
+**代码示例：**
+
+<a href="swanide://fragment/ec9c378307f6f1ad5c6d8fbcbbebb0201576062412502" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description">纵向滚动</view>
+        <scroll-view
+            scroll-y
+            style="height: 1.66rem;"
+            scroll-into-view="{= toView =}"
+            scroll-top="{= scrollTop =}"
+        >
+            <view id="one" class="color-a">A</view>
+            <view id="two" class="color-b">B</view>
+            <view id="three" class="color-c">C</view>
+        </scroll-view>  
+        <view class="page-section-btns">
+            <view class="scrollToTop" bindtap="scrollToTop">回顶部</view>
+        </view>
+    </view>
+</view>
+
+```
+
+```js
+Page({
+    data: {
+        toView: 'three',
+        scrollTop: 0,
+    },
+    scrollToTop(e) {
+        console.log(e);
+        this.setData({ scrollTop: 0 });
+    }
+});
+```
+
 #### Q：使用两个text组件，组件之间有间隙，在不同手机端偶现，影响部分用户体验的问题该如何解决？
 
 A：如果设置 inline-block 会出现间隙，建议父级元素使用font-size:0，然后子元素再设置 font-size,可以去除 inline-block 元素间间距。
+
+**代码示例：**
+
+<a href="swanide://fragment/33587beb69a085916a1b5c1a133bd3361576056022937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <text class="content" selectable="true" space="ensp">你</text>
+        <text class="content" selectable="true" space="ensp">好</text>
+    </view>
+</view>
+```
+
+```css
+.card-area {
+    font-size: 0
+}
+
+.content {
+    font-size: .16rem
+}
+```
 
 ####  Q：swiper 的面板指示点能自定义样式吗？
 
 A: [参见swiper参数](/develop/component/view_swiper/)，可以去 dot 显示之后，自己定义 dot 样式。
 
+**代码示例：**
+
+> [参见swiper的代码示例三](/develop/component/view_swiper/)
+
 #### Q：小程序使用 webview，分享出去的链接能直接是 webview 对应的 url 而不是小程序的 url 么？
 
 A：小程序页面在进行分享时，如果分享出去的是web view引入的H5 页面，只能是分享的小程序的页面路径，不能是原H5 的页面路径。
-

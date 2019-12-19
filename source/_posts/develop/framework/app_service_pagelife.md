@@ -18,6 +18,30 @@ sidebar: app_service_pagelife
 |----|----|----|
 |query|Object|打开当前页面路径中的参数|
 
+**代码示例**
+
+```js
+// 添加onLoad代理示例
+
+var originPage = Page
+
+function MyPage(config) {
+   this.lifetimeProxy = {
+     onLoad: config.onLoad
+   }
+   config.onLoad = function(options) {
+     // 自定义代码
+     // 公共的初始化代码
+     this.userData = getUserData()
+   }
+  
+  // ...
+
+  originPage(config)
+}
+
+```
+
 ### onShow()
 页面显示/切入前台时触发。
 
