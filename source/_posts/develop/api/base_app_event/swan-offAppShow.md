@@ -7,16 +7,27 @@ sidebar: swan-offAppShow
  
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 取消监听小程序切前台事件。
+**解释**：   取消监听小程序切前台事件。
 
-**百度APP中扫码体验：**
+##  方法参数
+无
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offAppShow.png"  class="demo-qrcode-image" />
+## 代码示例
+
+<a href="swanide://fragment/bb397425fd644712e7949da424c12cdf1573990116771" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offAppShow.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
 
-**方法参数：** 无
 
-**图片示例**
+
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +41,9 @@ sidebar: swan-offAppShow
     </div>     
 </div>
 
-**代码示例**
+###  代码示例  
 
-<a href="swanide://fragment/bb397425fd644712e7949da424c12cdf1573990116771" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 // app.js
@@ -60,3 +71,4 @@ App({
     }
 });
 ```
+

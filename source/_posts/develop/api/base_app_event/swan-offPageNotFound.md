@@ -7,17 +7,28 @@ sidebar: swan-offPageNotFound
  
 > 基础库 3.60.2 开始支持，低版本需做[兼容处理](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)。
 
-**解释：** 取消监听小程序要打开的页面不存在事件。
+**解释**：   取消监听小程序要打开的页面不存在事件。
 
-**百度APP中扫码体验：**
+##  方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offPageNotFound.png"  class="demo-qrcode-image" />
-
-
-**方法参数：** Function callback | 无
+   Function callback | 无
 小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
 
-**图片示例**
+## 代码示例
+
+<a href="swanide://fragment/b71b5ec3e798f27e144351dc870b7f251573989727290" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offPageNotFound.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +42,9 @@ sidebar: swan-offPageNotFound
     </div>     
 </div>
 
-**代码示例**
+###  代码示例  
 
-<a href="swanide://fragment/b71b5ec3e798f27e144351dc870b7f251573989727290" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 // app.js

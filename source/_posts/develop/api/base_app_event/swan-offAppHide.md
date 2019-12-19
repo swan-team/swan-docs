@@ -10,14 +10,24 @@ sidebar: swan-offAppHide
 
 **解释：** 取消监听小程序切后台事件。
 
-**百度APP中扫码体验：**
+##  方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offAppHide.png"  class="demo-qrcode-image" />
+ 无
+## 代码示例
+
+<a href="swanide://fragment/75379c24eb11bd10506a3f14c57a9ea61573990215340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/offAppHide.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
 
-**方法参数：** 无
 
-**图片示例**
+
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +41,9 @@ sidebar: swan-offAppHide
     </div>     
 </div>
 
-**代码示例**
+### 代码示例
 
-<a href="swanide://fragment/75379c24eb11bd10506a3f14c57a9ea61573990215340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 // app.js
@@ -61,3 +71,4 @@ App({
     }
 });
 ```
+
