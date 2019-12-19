@@ -3633,6 +3633,19 @@
                 link: /develop/devtools/audits
                 text: 体验评分
                 name: audits
+                sidebar:
+                  - link: /develop/devtools/audits_score
+                    text: 评分标准
+                    name: audits_score
+                  - link: /develop/devtools/audits_performance
+                    text: 性能
+                    name: audits_performance
+                  - link: /develop/devtools/audits_experience
+                    text: 体验
+                    name: audits_experience
+                  - link: /develop/devtools/audits_best_practice
+                    text: 最佳实践
+                    name: audits_best_practice
               -
                 link: /develop/devtools/question
                 text: 问题反馈
@@ -4542,7 +4555,6 @@
         #       link: /develop/appendix/canvas_color
         #       text: canvas-color
         #       name: canvas_color
-# 4
 -
   link: /data/concept
   text: 数据
