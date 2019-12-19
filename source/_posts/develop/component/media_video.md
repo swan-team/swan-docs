@@ -7,7 +7,7 @@ sidebar: media_video
  
 
 
-**解释**：视频，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
+**解释**：视频，v3.70.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。
 
 
 
@@ -537,5 +537,7 @@ Page({
 ##  Bug & Tip 
 * Tip：相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)
 * Tip：`<video />` 默认宽度 300px、高度 225px。
-
+* Tip：v3.70.0 起 video 支持同层渲染，更多请参考[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)。
+* Tip：同一页面下的video标签不应太多，建议不超过5个，视频列表功能建议使用image列表，选中时替换为video。
+* Tip：避免多个video同时播放，视频预览建议使用gif方案，使用video会降低性能和体验。
 

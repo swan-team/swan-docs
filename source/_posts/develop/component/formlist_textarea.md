@@ -160,7 +160,7 @@ Page({
 |cursor|Number|-1|否|指定focus时的光标位置|-|
 |auto-focus|Boolean|false|否|自动聚焦，调起键盘。| -|
 |confirm-type|String|default|否|设置键盘右下角按钮的文字。|3.70.53<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|confirm-hold|Boolean|false|否|点击键盘右下角按钮时是否保持键盘不收起| 3.125.1<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|confirm-hold|Boolean|false|否|点击键盘右下角按钮时是否保持键盘不收起| 3.130.1<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |focus|Boolean|false|否|获取焦点，调起键盘|-|
 |fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true |-|
 |cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 |-|
