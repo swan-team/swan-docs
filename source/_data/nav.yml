@@ -231,13 +231,17 @@
                     text: robots协议介绍
                     name: rank_robots
                   -
-                    link: /introduction/rank_faq
-                    text: 搜索流量接入FAQ
-                    name: rank_faq
+                    link: /introduction/rank_delete
+                    text: 资源删除功能介绍
+                    name: rank_delete             
                   -
                     link: /introduction/rank_road
                     text: 资源下线退场通路
                     name: rank_road
+                  -
+                    link: /introduction/rank_faq
+                    text: 搜索流量接入FAQ
+                    name: rank_faq                    
               -
                 link: /introduction/OpenCard
                 text: 接入OpenCard
@@ -264,7 +268,7 @@
                   -
                     link: /introduction/baijiahao_submit
                     text: 百家号素材提交规范
-                    name: baijiahao_submit                    
+                    name: baijiahao_submit
 
         -
             link: /introduction/tieba
@@ -329,7 +333,7 @@
                   -
                     link: /introduction/type_thridtool
                     text: 第三方客服工具
-                    name: type_thridtool                 
+                    name: type_thridtool
               -
                 link: /introduction/contact_standard
                 text: 运营规范
@@ -453,7 +457,7 @@
             # -
             #   link: /design/component/toptab
             #   text: 栏目选项条
-            #   name: toptab          
+            #   name: toptab
             -
               link: /design/component/bottomtab
               text: 底部标签栏
@@ -494,7 +498,7 @@
               link: /design/component/empty_state
               text: 空态
               name: empty_state
-            
+
     -
       link: /design/story/arzoo
       text: 设计故事
@@ -887,8 +891,24 @@
                 name: dynamiclib_topone
               -
                 link: /develop/framework/echarts
-                text: ECharts 动态库-beta 
-                name: echarts               
+                text: ECharts 动态库-Beta
+                name: echarts
+              -
+                link: /develop/framework/panoviewer
+                text: panoviewer 动态库-Beta
+                name: panoviewer
+              -
+                link: /develop/framework/vrvideo
+                text: vrvideo 动态库-Beta
+                name: vrvideo
+              -
+                link: /develop/framework/spintileviewer
+                text: spintileviewer 动态库-Beta
+                name: spintileviewer
+              -
+                link: /develop/framework/modelviewer
+                text: modelviewer 动态库-Beta
+                name: modelviewer                                                                
         -
           link: /develop/framework/subpackages
           text: 性能
@@ -1178,7 +1198,34 @@
                       link: /develop/component/ad
                       text: ad 广告
                       name: ad
-
+    # -
+    #   text: 扩展组件
+    #   name: extended
+    #   sidebar:
+    #     -
+    #         sidebar:
+    #           -
+    #             link: /develop/extended/component-content/commentpublish
+    #             text: 半屏内容发布器带服务版
+    #             name: commentpublish
+    #     -
+    #         sidebar:
+    #           -
+    #             link: /develop/extended/component/publish
+    #             text: 全屏内容发布器组件
+    #             name: publish
+    #     -
+    #         sidebar:
+    #           -
+    #             link: /develop/extended/component-content/like
+    #             text: 点赞组件 
+    #             name: like                                
+    #     -
+    #         sidebar:
+    #           -
+    #             link: /develop/extended/component-content/concern
+    #             text: 关注组件
+    #             name: concern           
     -
       text: API
       name: api
@@ -3362,9 +3409,9 @@
                 text: 开发者服务权限说明
                 name: power_exp
               -
-                link: /develop/serverapi/open_risk_power/#detectrisk
+                 
                 text: 风控服务
-                name: open_risk_power
+                 
                 sidebar:
                   -
                     link: /develop/serverapi/open_risk_power
@@ -3374,6 +3421,18 @@
                     link: /develop/serverapi/open_risk_power_detectrisk
                     text: detectrisk
                     name: open_risk_power_detectrisk
+              -               
+                text: 小程序二维码                
+                sidebar:
+                  -
+                    link: /develop/serverapi/get
+                    text: get
+                    name: get
+                  -
+                    link: /develop/serverapi/getunlimited
+                    text: getunlimited
+                    name: getunlimited
+
     -
       text: 工具
       name: devtools
@@ -3574,6 +3633,11 @@
                 link: /develop/devtools/audits
                 text: 体验评分
                 name: audits
+                sidebar:
+                  - link: /develop/devtools/audits_score
+                    text: 评分标准
+                    name: audits_score
+
               -
                 link: /develop/devtools/question
                 text: 问题反馈
@@ -3586,6 +3650,181 @@
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff
+        -
+            link: /develop/devtools/auto
+            text: 小程序自动化
+            name: auto
+            sidebar:
+              -
+                link: /develop/devtools/auto/quick-start
+                text: 快速开始
+                name: quick-start
+              -
+                link: /develop/devtools/auto/demo
+                text: 脚本示例
+                name: demo
+              -
+                link: /develop/devtools/auto/remote
+                text: 真机自动化
+                name: remote
+              -
+                text: API
+                name: API
+                sidebar:
+                  -
+                    text: Automator
+                    name: Automator
+                    sidebar:
+                      -
+                        link: /develop/devtools/auto/automator/launch
+                        text: automator.launch
+                        name: launch
+                      -
+                        link: /develop/devtools/auto/automator/connect
+                        text: automator.connect
+                        name: connect
+
+                  -
+                    text: SmartProgram
+                    name: SmartProgram
+                    sidebar:
+                      -
+                          link: /develop/devtools/auto/smartprogram/pageStack
+                          text: smartProgram.pageStack
+                          name: pageStack
+                      -
+                          link: /develop/devtools/auto/smartprogram/navigateBack
+                          text: smartProgram.navigateBack
+                          name: navigateBack
+                      -
+                          link: /develop/devtools/auto/smartprogram/redirectTo
+                          text: smartProgram.redirectTo
+                          name: redirectTo
+                      -
+                          link: /develop/devtools/auto/smartprogram/navigateTo
+                          text: smartProgram.navigateTo
+                          name: navigateTo
+                      -
+                          link: /develop/devtools/auto/smartprogram/reLaunch
+                          text: smartProgram.reLaunch
+                          name: reLaunch
+                      -
+                          link: /develop/devtools/auto/smartprogram/switchTab
+                          text: smartProgram.switchTab
+                          name: switchTab
+                      -
+                          link: /develop/devtools/auto/smartprogram/currentPage
+                          text: smartProgram.currentPage
+                          name: currentPage
+                      -
+                          link: /develop/devtools/auto/smartprogram/systemInfo
+                          text: smartProgram.systemInfo
+                          name: systemInfo
+                      -
+                          link: /develop/devtools/auto/smartprogram/callSwanMethod
+                          text: smartProgram.callSwanMethod
+                          name: callSwanMethod
+                      -
+                          link: /develop/devtools/auto/smartprogram/login
+                          text: smartProgram.login
+                          name: login
+                      -
+                          link: /develop/devtools/auto/smartprogram/remote
+                          text: smartProgram.remote
+                          name: remote
+                      -
+                          link: /develop/devtools/auto/smartprogram/disconnect
+                          text: smartProgram.disconnect
+                          name: disconnect
+                      -
+                          link: /develop/devtools/auto/smartprogram/close
+                          text: smartProgram.close
+                          name: close
+                  -
+                    text: Page
+                    name: Page
+                    sidebar:
+                      -
+                        link: /develop/devtools/auto/page/path
+                        text: page.path
+                        name: path
+                      -
+                        link: /develop/devtools/auto/page/query
+                        text: page.query
+                        name: query
+                      -
+                        link: /develop/devtools/auto/page/$
+                        text: page.$
+                        name: $
+                      -
+                        link: /develop/devtools/auto/page/$$
+                        text: page.$$
+                        name: $$
+                      -
+                        link: /develop/devtools/auto/page/waitFor
+                        text: page.waitFor
+                        name: waitFor
+                      -
+                        link: /develop/devtools/auto/page/data
+                        text: page.data
+                        name: data
+                      -
+                        link: /develop/devtools/auto/page/size
+                        text: page.size
+                        name: size
+                  -
+                    text: Element
+                    name: Element
+                    sidebar:
+                      -
+                        link: /develop/devtools/auto/element/tagName
+                        text: element.tagName
+                        name: tagName
+                      -
+                        link: /develop/devtools/auto/element/$
+                        text: element.$
+                        name: $
+                      -
+                        link: /develop/devtools/auto/element/$$
+                        text: element.$$
+                        name: $$
+                      -
+                        link: /develop/devtools/auto/element/offset
+                        text: element.offset
+                        name: offset
+                      -
+                        link: /develop/devtools/auto/element/size
+                        text: element.size
+                        name: size
+                      -
+                        link: /develop/devtools/auto/element/text
+                        text: element.text
+                        name: text
+                      -
+                        link: /develop/devtools/auto/element/attribute
+                        text: element.attribute
+                        name: attribute
+                      -
+                        link: /develop/devtools/auto/element/innerHTML
+                        text: element.innerHTML
+                        name: innerHTML
+                      -
+                        link: /develop/devtools/auto/element/outerHTML
+                        text: element.outerHTML
+                        name: outerHTML
+                      -
+                        link: /develop/devtools/auto/element/value
+                        text: element.value
+                        name: value
+                      -
+                        link: /develop/devtools/auto/element/style
+                        text: element.style
+                        name: style
+                      -
+                        link: /develop/devtools/auto/element/tap
+                        text: element.tap
+                        name: tap
+
 
         -
             link: /develop/devtools/history
@@ -3799,13 +4038,13 @@
                     # doc
                     -
                         text: doc
-                    
-                   
+
+
                         sidebar:
                           -
                               text: doc.get
                               name: doc_get
-                              link: /develop/cloud/cloud_database/doc_get 
+                              link: /develop/cloud/cloud_database/doc_get
                           -
                               text: doc.update
                               name: doc_update
@@ -3816,8 +4055,8 @@
                               link: /develop/cloud/cloud_database/doc_set
                           -
                               text: doc.remove
-                              name:  doc 
-                              link: /develop/cloud/cloud_database/doc 
+                              name:  doc
+                              link: /develop/cloud/cloud_database/doc
 
 
 
@@ -3825,7 +4064,7 @@
                     -
                         text: db.command
                         name: command
-                        link: /develop/cloud/cloud_database/command 
+                        link: /develop/cloud/cloud_database/command
                         sidebar:
                           -
                               text: command.eq
@@ -4268,7 +4507,7 @@
       name: appendix
       sidebar:
         -
-          text: FAQ 
+          text: FAQ
           sidebar:
             -
               link: /develop/appendix/framworkfaq
@@ -4300,15 +4539,14 @@
             -
               link: /develop/appendix/error
               text: 错误码
-              name: error    
+              name: error
         # -
 
         #   sidebar:
         #     -
         #       link: /develop/appendix/canvas_color
         #       text: canvas-color
-        #       name: canvas_color                       
-# 4
+        #       name: canvas_color
 -
   link: /data/concept
   text: 数据
@@ -4401,8 +4639,12 @@
             name: performance-point
           -
             link: /data/scene
-            text: 场景值
+            text: 百度 App 场景值
             name: scene
+          -
+            link: /data/host_scene
+            text: 开源宿主场景值
+            name: host_scene           
 # 5
 -
   link: /operations/specification
@@ -4509,9 +4751,9 @@
             text: 智能小程序第三方平台开发者服务协议
             name: thirdparty_agreement
           -
-            link: /operations/thirdparty_low
+            link: /operations/thirdparty_law
             text: 第三方平台服务—开发者授权条款
-            name: thirdparty_low
+            name: thirdparty_law
 
 # 6
 -

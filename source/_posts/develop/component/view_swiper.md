@@ -12,7 +12,7 @@ sidebar: view_swiper
 
 ## 代码示例
 
-<a href="swanide://fragment/bb061f7f3c2efda2156fd9854c6ccb261576119789648" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d0a78f0b155a9d7862518fa2b5db89311576152033767" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -159,10 +159,44 @@ Page({
     }
 });
 ```
+## 属性说明 
 
-## 代码参考
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
+|:---- |: ---- |: ---- |:---- |:---- | :---- | 
+|indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
+|indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色|- |
+|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色|- |
+|autoplay |Boolean  | false | 否 |是否自动切换|- |
+|current|Number |0 | 否 |当前所在页面的 index|- |
+|current-item-id|String|| 否 |当前所在滑块的 item-id，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|interval | Number | 5000 | 否 |自动切换时间间隔，单位ms|- |
+|duration| Number |500 | 否 |滑动动画时长，单位ms|- |
+|circular| Boolean |false | 否 |是否采用衔接滑动|- |
+|vertical | Boolean  | false  | 否 |滑动方向是否为纵向|- |
+|previous-margin|String|`"0px"`| 否 |前边距，可用于露出前一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|next-margin|String|`"0px"`| 否 |后边距，可用于露出后一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|display-multiple-items|Number|1| 否 |同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|bindchange | EventHandle |  | 否 |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
+|bindanimationfinish|EventHandle| | 否 |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-###  代码参考 1：用于实现顶部标签切换 
+###  change 事件 source 返回值 
+
+change事件中的source字段，表示触发change事件的原因，可能值如下：
+
+|值 |说明|
+|:---- |:---- |
+| autoplay | 自动播放导致的swiper切换 |
+| touch | 用户划动导致的swiper切换 |
+| "" | 其他原因将返回空字符串 |
+
+##  Bug & Tip 
+
+* Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
+* Tip：其中只可放置 swiper-item 组件，否则会导致未定义的行为。
+
+## 参考示例
+
+###  参考示例 1：用于实现顶部标签切换 
 
 <a href="swanide://fragment/82da7e569b409a1fa4fb753a010fd35e1575120753274" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -248,7 +282,7 @@ Page({
 }
 ```
 
-###  代码参考 2: 自定义底部切换圆点 
+###  参考示例 2: 自定义底部切换圆点 
 
 <a href="swanide://fragment/74666ea390cd54afd971879d8028578d1575819223978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -325,37 +359,5 @@ Page({
 }
 ```
 
-## 属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明|最低版本|
-|:---- |: ---- |: ---- |:---- |:---- | :---- | 
-|indicator-dots | Boolean  |  false  | 否 |是否显示面板指示点|- |
-|indicator-color| Color  | rgba(0, 0, 0, .3) | 否 |指示点颜色| |
-|indicator-active-color| Color | #333 | 否 |当前选中的指示点颜色| |
-|autoplay |Boolean  | false | 否 |是否自动切换| |
-|current|Number |0 | 否 |当前所在页面的 index| |
-|current-item-id|String|| 否 |当前所在滑块的 item-id，不能与 current 被同时指定|1.11 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|interval | Number | 5000 | 否 |自动切换时间间隔，单位ms|- |
-|duration| Number |500 | 否 |滑动动画时长，单位ms|- |
-|circular| Boolean |false | 否 |是否采用衔接滑动| |
-|vertical | Boolean  | false  | 否 |滑动方向是否为纵向|- |
-|previous-margin|String|`"0px"`| 否 |前边距，可用于露出前一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|next-margin|String|`"0px"`| 否 |后边距，可用于露出后一项的一小部分，支持px和rpx|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|display-multiple-items|Number|1| 否 |同时显示的滑块数量|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|bindchange | EventHandle |  | 否 |current 改变时会触发 change 事件，event.detail = {current: current, source: source}|- |
-|bindanimationfinish|EventHandle| | 否 |动画结束时会触发 animationfinish 事件，event.detail 同上|1.11<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-###  change 事件 source 返回值 
-
-change事件中的source字段，表示触发change事件的原因，可能值如下：
-
-|值 |说明|
-|:---- |:---- |
-| autoplay | 自动播放导致的swiper切换 |
-| touch | 用户划动导致的swiper切换 |
-| "" | 其他原因将返回空字符串 |
-
-##  Bug & Tip 
-
-* Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
-* Tip：其中只可放置 swiper-item 组件，否则会导致未定义的行为。

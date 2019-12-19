@@ -1,11 +1,11 @@
 ---
-title: 扩展组件
+title: 全屏发布器组件
 header: develop
 nav: extended
 sidebar: publish
 ---
 
-## 全屏发布器组件
+
 
 **解释：** 社区全屏发布器组件，不含发布服务，只含有发布界面
 

@@ -14,7 +14,7 @@ sidebar: base_text
 
 ## 代码示例
 
-<a href="swanide://fragment/ca4aca58357bb7128d8ca70bde83fc2c1576147516623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2c45226787aa63a4ab867e04c29795ab1576151294185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -104,7 +104,7 @@ Page({
 });
 
 ```
-## 代码参考
+## 参考示例
 
 ###  图片示例 
 
@@ -120,7 +120,7 @@ Page({
     </div>     
 </div>
 
-###  代码参考 ：
+###  参考示例 ：
 
 <a href="swanide://fragment/c5329d0683b8db558716cd60ed9b5fd51575020767658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -163,8 +163,8 @@ Page({
 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |:---- |: ---- | :---- |:---- |:---- |:--|
-| space | String  | false | 否 |显示连续空格|1.10.1|
-| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4|
+| space | String  | false | 否 |显示连续空格|-|
+| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 ###  space 有效值 
 

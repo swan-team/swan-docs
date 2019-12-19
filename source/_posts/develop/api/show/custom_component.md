@@ -37,9 +37,9 @@ sidebar: custom_component
     </div>     
 </div>
 
-**代码示例**
+**代码示例1**
 
-<a href="swanide://fragment/8654bf82c90fd07869a882a72f8d098e1576497094976" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/4b59fe8b260a04431f3e14e3c24fce421576567107528" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
@@ -59,9 +59,9 @@ Component({
     methods: {
         nextTick() {
             swan.showToast({
-                title: '请在控制台查看打印顺序',
+                title: '在控制台或者sConsole中查看执行顺序',
                 icon: 'none'
-            })
+            });
             this.setData({number: 1}) // 直接在当前同步流程中执行
             console.log(this.data.number);
             swan.nextTick(() => {
@@ -73,4 +73,40 @@ Component({
         }
     }
 });
+```
+
+**代码示例2 - 常用用法**
+
+<a href="swanide://fragment/6ae0107a1be2cf1f80a326a9053cc4a91576554621397" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view>
+    <view>{{name}}</view>
+    <button bindtap="getStorage">点击赋值</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+// 在当前同步流程结束后，下一个时间片执行
+Page({
+    data: {
+        name: 'swan',
+        renderEnd: true
+    },
+    getStorage(){
+        this.setData({
+            name: 'smartApp'
+        }, () => {
+            swan.nextTick(() => {
+                this.data.renderEnd = false; // 在当前同步流程结束后，下一个时间片执行
+                console.log(this.data.renderEnd)
+            });
+        });
+    }
+});
+
 ```

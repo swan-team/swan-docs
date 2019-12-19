@@ -15,7 +15,7 @@ sidebar: formlist_textarea
 
 ## 代码示例
 
-<a href="swanide://fragment/bd554bc3ae408adf45f703a01e39f1ce1576119799004" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c34912d442f03972fc7935686382c0261576151296601" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -40,7 +40,7 @@ sidebar: formlist_textarea
     </div>     
 </div>
 
-###  代码示例1 - 输入区高度自适应 
+###  代码示例 1：输入区高度自适应 
 
  <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -80,7 +80,7 @@ Page({
 
 ```
 
-###  代码示例2 - 出现滚动条 
+###  代码示例 2： 受控聚焦
 
  <a href="swanide://fragment/4d35f3e24c2abccf95c01b962d9724051575985791570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -159,8 +159,8 @@ Page({
 |auto-height|Boolean|false|否|是否自动增高，设置auto-height时，style.height不生效|-|
 |cursor|Number|-1|否|指定focus时的光标位置|-|
 |auto-focus|Boolean|false|否|自动聚焦，调起键盘。| -|
-|confirm-type|String|default|否|设置键盘右下角按钮的文字。|3.70.53|
-|confirm-hold|Boolean|false|否|点击键盘右下角按钮时是否保持键盘不收起| 3.125.1|
+|confirm-type|String|default|否|设置键盘右下角按钮的文字。|3.70.53<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|confirm-hold|Boolean|false|否|点击键盘右下角按钮时是否保持键盘不收起| 3.130.1<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |focus|Boolean|false|否|获取焦点，调起键盘|-|
 |fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true |-|
 |cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 |-|

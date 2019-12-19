@@ -30,7 +30,7 @@ sidebar: log_swan-login
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。<br>用户登录凭证code只能使用一次。|
 
 **图片示例**
 

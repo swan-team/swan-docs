@@ -9,7 +9,7 @@ sidebar: base_rich-text
 
 ## 代码示例
 
-<a href="swanide://fragment/a4dc9bddcce4f883653f856eb535693b1576147481431" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/77f7c2ee47ee79c0943c290d5911282b1576151964047" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -132,111 +132,6 @@ Page({
 ```
 
 
-## 示例参考
-
-###  示例参考 1
-
-
-<a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="rich-text">
-    <view class="renders">
-        <view class="renders_title">通过HTML String渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{htmlSnip}}</view>
-            </scroll-view>
-            <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
-        </view>
-    </view>
-</view>
-```
-
-* 在 js 文件中
-
-```js
-const htmlSnip =
-`<div class="div_class">
-    <h1>Title</h1>
-    <p class="p">
-        Life is&nbsp;<i>like</i>&nbsp;a box of
-        <b>&nbsp;chocolates</b>
-    </p>
-</div>`;
-
-Page({
-    data: {
-        htmlSnip
-    }
-});
-```
-
-
-
-
-###  示例参考 2
-
-
-<a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```html
-<view class="rich-text">
-    <view class="renders">
-        <view class="renders_title">通过节点渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{nodeSnip}}</view>
-            </scroll-view>
-            <rich-text nodes="{{nodes}}" selectable="true">
-            </rich-text>
-        </view>
-    </view>
-</view>
-```
-
-* 在 js 文件中
-
-```js
-const nodeSnip
-=`
-Page({
-  data: {
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 60px; color: #4F99FB;;'
-      },
-      children: [{
-        type: 'text',
-        text: 'You never know what you're gonna get.'
-      }]
-    }]
-  }
-})`;
-
-Page({
-    data: {
-        nodeSnip,
-        nodes: [{
-            name: 'div',
-            attrs: {
-                class: 'div_class',
-                style: 'line-height: 60px; color: #4F99FB;'
-            },
-            children: [{
-                type: 'text',
-                text: 'You never know what you\'re gonna get.'
-            }]
-        }]
-    }
-});
-```
 
 ##  属性说明 
 
@@ -244,7 +139,6 @@ Page({
 |---- | ---- | ---- | ---- |---- |
 | nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String| 
 | selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
-|---- | ---- | ---- |---- | ---- |
 | name | 标签名 | String | 是 | 支持部分受信任的HTML节点 |
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
@@ -329,3 +223,108 @@ Page({
 
 
 
+## 参考示例
+
+###  参考示例 1
+
+
+<a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过HTML String渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{htmlSnip}}</view>
+            </scroll-view>
+            <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+const htmlSnip =
+`<div class="div_class">
+    <h1>Title</h1>
+    <p class="p">
+        Life is&nbsp;<i>like</i>&nbsp;a box of
+        <b>&nbsp;chocolates</b>
+    </p>
+</div>`;
+
+Page({
+    data: {
+        htmlSnip
+    }
+});
+```
+
+
+
+
+###  参考示例 2
+
+
+<a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="rich-text">
+    <view class="renders">
+        <view class="renders_title">通过节点渲染</view>
+        <view class="renders_view">
+            <scroll-view scroll-y>
+                <view class="cont">{{nodeSnip}}</view>
+            </scroll-view>
+            <rich-text nodes="{{nodes}}" selectable="true">
+            </rich-text>
+        </view>
+    </view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+const nodeSnip
+=`
+Page({
+  data: {
+    nodes: [{
+      name: 'div',
+      attrs: {
+        class: 'div_class',
+        style: 'line-height: 60px; color: #4F99FB;;'
+      },
+      children: [{
+        type: 'text',
+        text: 'You never know what you're gonna get.'
+      }]
+    }]
+  }
+})`;
+
+Page({
+    data: {
+        nodeSnip,
+        nodes: [{
+            name: 'div',
+            attrs: {
+                class: 'div_class',
+                style: 'line-height: 60px; color: #4F99FB;'
+            },
+            children: [{
+                type: 'text',
+                text: 'You never know what you\'re gonna get.'
+            }]
+        }]
+    }
+});
+```

@@ -50,7 +50,7 @@ sidebar: media_image
     </div>    
 </div>
 
-###  代码示例1 - 缩放模式  
+###  代码示例 1： 缩放模式  
 
   <a href="swanide://fragment/21139032b621d4c88d848f290fadd0bd1575135550850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -108,7 +108,7 @@ Page({
 });
 ```
 
-###  代码示例2 - 裁剪模式  
+###  代码示例 2： 裁剪模式  
 
   <a href="swanide://fragment/7aa0d436bf859e57db61d570b21878141575135402549" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

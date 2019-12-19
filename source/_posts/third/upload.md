@@ -10,20 +10,20 @@ sidebar: upload
 > 百度第三方服务所有的api中只要涉及图片url的字段，都需要使用这个图片上传接口返回的图片地址，否则会提示图片来源非法，目前只支持bmp、jpeg、jpg、png格式。 
 
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/upload/image 
+ POST https://openapi.baidu.com/file/2.0/smartapp/upload/image 
 ```
 
 **公共请求参数** 
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台Token/授权小程序Token | --     |
 
 **请求参数** 
 
 | 参数          | 类型   | 是否必填 | 描述     | 示例值 |
 | ------------- | ------ | -------- | -------- | ------ |
-| multipartFile | ref    | 否       | 文件     | --     |
+| multipartFile | file    | 是       | 文件     | --     |
 | type          | string | 否       | 图片用途 | --     |
 
 **type 说明**：
@@ -40,16 +40,7 @@ sidebar: upload
 | ----- | ------- | -------- | -------- |
 | errno | integer | 状态码   | 40001    |
 | msg   | string  | 状态描述 | 参数错误 |
-| data  | object  | 响应参数 | --       |
-
-<!-- **响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        | -->
-
-**响应示例** 
-
+| data  | string  | 响应参数 | --       |
 
 
 ```json
