@@ -28,3 +28,13 @@ App({
     globalData: 'SWAN'
 });
 ```
+
+整个小程序只有一个 App 实例，是全部页面共享的。开发者可以通过 getApp 方法获取到全局唯一的 App 示例，获取App上的数据或调用开发者注册在 App 上的函数。
+
+**代码示例**
+
+```js
+// xxx.js
+const appInstance = getApp()
+console.log(appInstance.globalData)
+```
