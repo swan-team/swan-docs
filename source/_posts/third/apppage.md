@@ -157,7 +157,7 @@ curl -X POST\
 
 ## 授权小程序提交审核 
 
-> -- 
+ 
 
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/package/submitaudit 
@@ -301,7 +301,7 @@ curl -X POST \
 
 ## 授权小程序撤销审核 
 
-> -- 
+ 
 
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/package/withdraw 
