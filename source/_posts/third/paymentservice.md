@@ -154,11 +154,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **响应示例**
 
@@ -246,12 +242,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-
+ 
 **响应示例**
 
 ```json
@@ -311,11 +302,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
+ 
 
 **响应示例**
 
@@ -339,12 +326,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/auditstatus
 |--|--|--|--|--|
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**请求参数** 
-
-|参数|类型|是否必填|描述|示例值|
-|--|--|--|--|--|
-|  |  |  |  |
-
+ 
 **公共响应参数** 
 
 |参数|类型|描述|示例值|
@@ -403,11 +385,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
+ 
 
 **响应示例**
 
@@ -463,11 +441,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
+ 
 
 
 
@@ -491,10 +465,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 | ------------ | ------ | -------- | -------------------------------------- |
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**请求参数** 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
+ 
 
 **公共响应参数** 
 

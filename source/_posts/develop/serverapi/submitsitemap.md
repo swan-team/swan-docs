@@ -21,6 +21,7 @@ sidebar: submitsitemap
 |--|--|--|--|--|
 |access_token|string|是|小程序权限校验Token|--|
 **请求参数** 
+
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
 |app_id|integer|否|app_id|--|
@@ -29,16 +30,14 @@ sidebar: submitsitemap
 |type|string|是|类型 1-增量/更新； 0-下线/删除|1|
 |url|string|是|sitemap链接|???|
 **公共响应参数** 
+
 |参数|类型|描述|示例值|
 |--|--|--|--|
 |errno|integer|状态码|40001|
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
-**响应参数** 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-**请求示例** 
+  
+ 
 
 **响应示例** 
 ```json

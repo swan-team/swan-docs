@@ -84,10 +84,6 @@ url\_list |string | 是 | url集合；上传级别上限，0：每天3000条，1
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
-**响应参数** 
-| 参数  | 类型    | 描述     | 示例值   |
-| ----- | ------- | -------- | -------- |
-|  |  |    |     |
 
 **请求示例** 
 
@@ -131,6 +127,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebstatus
 access\_token|string | 是 | 授权小程序的接口调用凭据
 
 **请求参数**
+
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 web\_status |int | 是 | 1:开启 2:关闭
@@ -143,10 +140,7 @@ web\_status |int | 是 | 1:开启 2:关闭
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
-**响应参数** 
-| 参数  | 类型    | 描述     | 示例值   |
-| ----- | ------- | -------- | -------- |
-|  |  |    |     |
+
 
 **请求实例**
 
@@ -181,11 +175,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh
 | ------------- | ------ | -------- | ------------------------ |
 | access\_token | string | 是       | 授权小程序的接口调用凭据 |
 
-**请求参数**
-
-| 参数名 | 类型 | 是否必须 | 描述 |
-| ------ | ---- | -------- | ---- |
-|        |      |          |      |
+ 
 
 **公共响应参数** 
 
@@ -195,11 +185,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
-**响应参数** 
 
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
 
 **请求实例**
 
@@ -245,22 +231,20 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/app/upload
 | ----------- | ------ | -------- | --------------------------------  |
 | access_token   | string | true     | 授权小程序的接口调用凭据                     |
 **请求参数**
+
 | 参数名称    | 类型   | 是否必须 | 说明                                 |
 | ----------- | ------ | -------- | --------------------------------  |
 | robots | file | true | robots.txt 文件，要求文件为 txt 格式，目前支持48k的文件内容检测，请保证robots.txt文件不要过大，目录最长不超过250个字符。 |
 
 **公共响应参数** 
+
 | 参数  | 类型    | 描述     | 示例值   |
 | ----- | ------- | -------- | -------- |
 | errno | int | 状态码   | 40001    |
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | string  | 响应参数 | 文件链接       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 
 **返回值示例**
@@ -296,17 +280,14 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/template/upload
 | robots | file | true | robots.txt 文件，要求文件为 txt 格式，目前支持48k的文件内容检测，请保证robots.txt文件不要过大，目录最长不超过250个字符。 |
 
 **公共响应参数** 
+
 | 参数  | 类型    | 描述     | 示例值   |
 | ----- | ------- | -------- | -------- |
 | errno | int | 状态码   | 40001    |
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | string  | 响应参数 | 文件链接       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **响应示例**
 
@@ -355,6 +336,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add
 | ------------ | ------ | -------- | -------------------------------- |
 | access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
 **请求参数**
+
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
 | chain_name   | string | true     | 4-10个字符，说明子链的功能       |
@@ -370,11 +352,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add
 | msg    | string | 状态信息     |
 | data   | int    | 生成的子链Id |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **返回值示例:**
 
@@ -416,11 +394,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功删除 |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **响应示例**
 
@@ -466,11 +440,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/update
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功更新 |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **返回值示例:**
 
@@ -613,11 +583,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank
 | msg    | string  | 状态信息 |
 | data   | boolean | 是否成功 |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 **响应示例**
 
@@ -658,11 +624,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功 |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 
 
@@ -706,11 +668,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功 |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+ 
 
 
 
@@ -804,6 +762,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |--|--|--|--|--|
 |access_token|string|是|小程序权限校验Token|--|
 **请求参数** 
+
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
 |app_id|int|否|app_id|--|
@@ -818,16 +777,14 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |tags|string|否|资源标签，英文逗号分割，填写越准确详细可能带来更好的分发效果（最多10个，总长度最多100字）|示例：电影,吴亦凡|
 |title|string|是|标题|百度智能小程序，给你全新的智能体验|
 **公共响应参数** 
+
 |参数|类型|描述|示例值|
 |--|--|--|--|
 |errno|int|状态码|40001|
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
-**响应参数** 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-**请求示例** 
+ 
+ 
 
 **响应示例** 
 
@@ -887,7 +844,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |list.status|string|状态|--|
 |list.title|string|标题|--|
 
-**请求示例** 
+ 
 
 **响应示例** 
 
@@ -978,13 +935,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
+ 
 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-
-**请求示例** 
+ 
 
 **响应示例** 
 ```json
@@ -1007,6 +960,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |--|--|--|--|--|
 |access_token|string|是|小程序权限校验Token|--|
 **请求参数** 
+
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
 |app_id|integer|否|app_id|--|
@@ -1015,16 +969,14 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |type|string|是|类型 1-增量/更新； 0-下线/删除|1|
 |url|string|是|sitemap链接|???|
 **公共响应参数** 
+
 |参数|类型|描述|示例值|
 |--|--|--|--|
 |errno|integer|状态码|40001|
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
-**响应参数** 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-**请求示例** 
+ 
+ 
 
 **响应示例** 
 ```json
@@ -1121,13 +1073,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
+ 
 
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-
-**请求示例** 
+ 
 
 **响应示例** 
 

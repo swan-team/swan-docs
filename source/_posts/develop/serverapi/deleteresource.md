@@ -9,6 +9,7 @@ sidebar: deleteresource
 ## 下线物料资源 
 **解释**：删除素材接口，API实时接口提交方式。
 > 若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除，删除后的素材无法重新提交。 
+
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete 
 ```
@@ -34,13 +35,8 @@ sidebar: deleteresource
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
-
-**请求示例** 
+  
+ 
 
 **响应示例** 
 ```json

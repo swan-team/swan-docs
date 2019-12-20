@@ -25,6 +25,7 @@ post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/send
 
 
 **请求参数** 
+
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
 | user_type    | int    | 是       | 1:游客登录 2:百度账号登录              |
@@ -41,11 +42,7 @@ post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/send
 |msg|string|状态描述|参数错误|
 |data|object|响应参数|--|
 
-**响应参数** 
-
-|参数|类型|描述|示例值|
-|--|--|--|--|
-| | | |
+  
 
 
 ```json

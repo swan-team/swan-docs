@@ -41,6 +41,7 @@ grant_type | string | 是| 授权类型，固定字符串："authorization_code"
 }
 ```
 #### 错误情况下:
+
 字段名   | 类型 | 描述
 ------ | -----| ----
 error | string | 错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error
