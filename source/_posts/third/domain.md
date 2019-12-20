@@ -7,7 +7,6 @@ sidebar: domain
 
 ## 设置第三方平台服务器域名 
 > 为授权的小程序配置域名时支持配置子域名，例如第三方登记的服务器域名如为baidu.com，则可以直接将baidu.com及其子域名（如xxx.baidu.com）也配置到授权的小程序中。 
-
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/tp/modifydomain 
 ```
@@ -16,7 +15,6 @@ sidebar: domain
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
 | access_token | string | 是       | 第三方平台Token | --     |
-
 **请求参数** 
 
 | 参数            | 类型   | 是否必填 | 描述                                                         | 示例值 |
@@ -26,7 +24,6 @@ sidebar: domain
 | request_domain  | string | 否       | request合法域名，多个时用,分割，当action参数是get时不需要此字段。 | --     |
 | socket_domain   | string | 否       | socket合法域名，多个时用,分割，当action参数是get时不需要此字段。 | --     |
 | upload_domain   | string | 否       | upload合法域名，多个时用,分割，当action参数是get时不需要此字段。 | --     |
-
 **公共响应参数** 
 
 | 参数  | 类型    | 描述     | 示例值   |
@@ -34,7 +31,6 @@ sidebar: domain
 | errno | integer | 状态码   | 40001    |
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
-
 **响应参数** 
 
 | 参数            | 类型          | 描述             | 示例值 |
@@ -128,11 +124,7 @@ curl -X POST \
 | msg   | string        | 状态描述 | 参数错误 |
 | data  | array[string] | 响应参数 | --       |
 
-<!-- **响应参数** 
 
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        | -->
 
 **请求示例** 
 
