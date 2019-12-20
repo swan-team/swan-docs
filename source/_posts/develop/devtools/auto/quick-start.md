@@ -55,4 +55,4 @@ const automator = require('swan-automator');
 
 最后执行 `node path/to/script` 即可看到输出结果。
 
-关于 SDK 提供的接口，更多详细用法可以参考 [Automator](./automator/connect)、[SmartProgram](./smartprogram/pageStack)、[Page](./page/path)、[Element](./element/tagName)。
+关于 SDK 提供的接口，更多详细用法可以参考 [Automator](../automator/connect/)、[SmartProgram](../smartprogram/pageStack/)、[Page](../page/path/)、[Element](../element/tagName/)。
