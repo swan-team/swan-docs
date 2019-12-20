@@ -27,7 +27,7 @@ sidebar: guide_add
 
 ### 展现策略
 用户点击“关闭”或“关注”后，浮层引导才消失。
-<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/5.mp4"/>
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/5.mp4">
 你的浏览器不支持该视频播放
 </video>
 <p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
@@ -39,7 +39,7 @@ sidebar: guide_add
 
 ### 展现策略
 用户无操作，则5s后自动消失；用户点击菜单，或者切换页面，气泡引导马上消失。
-<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/7.mp4"/>
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/guide_add/7.mp4">
 你的浏览器不支持该视频播放
 </video>
 <p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>

@@ -72,7 +72,7 @@ A：支持。
 
 #### Q： scroll-view 的scroll-top。设置是否是无效的?
 
-A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 CSS 设置 height。
+A：使用竖向滚动时，需要给 &lt;scroll-view&gt; 一个固定高度，通过 CSS 设置 height。
 
 **代码示例：**
 

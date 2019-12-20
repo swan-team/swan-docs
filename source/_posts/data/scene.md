@@ -36,12 +36,12 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |场景|	scene值| 图例|
 |---|---|---|
 |号文章挂载	|11110029|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110029.png"/></div></div>|
-|号动态挂载	|11110030<p>11110031<p>11110032|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110030.png"/></div></div>|
+|号动态挂载	|11110030<p>11110031</p><p>11110032</p>|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110030.png"/></div></div>|
 
 ## 号个人主页	
 |场景|	scene值| 图例|
 |---|---|---|
-|号个人主页	|11410033<p>11410034<p>11410035|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11410034.png"/></div></div>|
+|号个人主页	|11410033<p>11410034</p><p>11410035</p>|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11410034.png"/></div></div>|
 
 ## 我的	
 |场景|	scene值| 图例|

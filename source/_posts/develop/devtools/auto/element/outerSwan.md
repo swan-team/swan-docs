@@ -1,22 +1,22 @@
 ---
-title: element.innerHTML
+title: element.outerSwan
 header: develop
 nav: devtools
-sidebar: innerHTML
+sidebar: outerSwan
 ---
 
-
-**解释**：获取元素 HTML。
+**解释**：同 element.swan，只是会获取到元素本身。
 
 ```ts
-element.innerHTML(): Promise<string>
+element.outerSwan(): Promise<string>
 ```
+
 **示例代码：**
 
 ```js
 automator.launch().then(async smartProgram => {
     const page = await smartProgram.reLaunch('/pages/api/api');
     const element = await page.$('.group-logo');
-    const res = await element.innerHTML();
+    console.log(await element.outerSwan());
 });
 ```
