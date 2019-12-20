@@ -10,15 +10,17 @@ sidebar: typography
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/1-1.png">
-		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z型）</p>
-1. 从左侧开始，视线向右水平移动阅读；
-2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。
+		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z型）
+			1. 从左侧开始，视线向右水平移动阅读；
+			2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。
+		</p>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/1-2.png">
-		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）</p>
-1. 从上至下垂直扫描；
-2. 发现感兴趣的内容，视线从左向右水平移动。
+		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
+			1. 从上至下垂直扫描；
+			2. 发现感兴趣的内容，视线从左向右水平移动。
+		</p>
 	</div>
 </div>
 

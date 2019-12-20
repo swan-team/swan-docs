@@ -17,15 +17,24 @@ automator.connect(options: Object): Promise<SmartProgram>
 |---- | ---- | ---- | ----|----|
 |wsEndpoint| String|是|- |开发者工具 WebSocket 地址|
 
-开发者工具开启自动化功能可以通过命令行调用。
+有两种方式可以启动开发者工具并开启自动化功能。
 
---auto <projectPath>：打开指定项目并开启自动化功能。
+> 1、通过命令行工具并指定自动化参数的方式
 
---auto-port <port>：指定自动化监听端口。
+命令行工具所在位置：
+macOS: `<安装路径>/Contents/MacOS/cli`
+Windows: `<安装路径>/cli.bat`
 
-```js
-cli --auto /Users/username/demo --auto-port 9420
+需要指定的参数如下：
+`--auto <projectPath>`：打开指定项目并开启自动化功能。
+`--auto-port <port>`：指定自动化监听端口。
+
+```shell
+# cliPath 需要替换成命令行工具的完整路径
+cliPath --auto /Users/username/demo --auto-port 9420
 ```
+
+> 2、通过 [automator.launch](./launch/) API。
 
 **示例代码：**
 
