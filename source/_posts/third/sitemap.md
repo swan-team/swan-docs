@@ -57,20 +57,47 @@ Sitemap（即站点地图）就是您⽹站上各⽹⻚的列表。创建并提�
 
 ## 提交sitemap
 
-请求路径:
+**请求路径**
+
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/access/submit/sitemap?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/access/submit/sitemap
 ```
 
-参数说明:
+**公共请求参数**
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token	|string|	是	|第三方平台access_token
+
+**请求参数**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 type |int | 是 | 上传级别 0：周级别，一周左右生效；1：天级别，2~3天生效
 url\_list |string | 是 | url集合；上传级别上限，0：每天3000条，1：每天5000条 多个,分割
 
-返回值示例:
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+|  |  |    |     |
+
+**请求示例** 
+
+```shell
+curl -X POST \
+  'https://openapi.baidu.com/rest/2.0/smartapp/access/submit/sitemap?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC&type=1&url_list=www.baidu.com'
+```
+
+**响应示例**
+
 ```
 {
   "errno": 0,
@@ -78,7 +105,7 @@ url\_list |string | 是 | url集合；上传级别上限，0：每天3000条，1
 }
 ```
 
-错误码说明：
+**错误码说明**
 
 错误码 | 错误描述 | 
 ----- |-----
@@ -91,21 +118,47 @@ url\_list |string | 是 | url集合；上传级别上限，0：每天3000条，1
 
 ## 设置web化开关
 
-决定是否能将小程序sitemap推送到百度搜索，需要在提代码包前进行操作。
+>决定是否能将小程序sitemap推送到百度搜索，需要在提代码包前进行操作。
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebstatus?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebstatus
 ```
 
-参数说明:
+**公共请求参数**
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access\_token|string | 是 | 授权小程序的接口调用凭据
-web\_status |int | 是 | 1:开启 2:关闭
-返回值示例:
 
+**请求参数**
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+web\_status |int | 是 | 1:开启 2:关闭
+
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+|  |  |    |     |
+
+**请求实例**
+
+```shell
+curl -X POST \
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebstatus?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC&web=1'
 ```
+
+
+
+**响应实例**
+```json
 {
   "errno": 0,
   "msg": "success"
@@ -114,22 +167,50 @@ web\_status |int | 是 | 1:开启 2:关闭
 
 ## 小程序熊掌ID绑定
 
-小程序sitemap进入搜索，需要先绑定熊掌ID。此目前只支持绑定当前账户主体对应的熊掌ID。
+> 小程序sitemap进入搜索，需要先绑定熊掌ID。此目前只支持绑定当前账户主体对应的熊掌ID。
 
-接口调用请求说明：
+**接口路径**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh
 ```
 
-参数说明:
+**公共请求参数**
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| ----
-access_token	|string|	是	|授权小程序的接口调用凭据
+| 参数名        | 类型   | 是否必须 | 描述                     |
+| ------------- | ------ | -------- | ------------------------ |
+| access\_token | string | 是       | 授权小程序的接口调用凭据 |
 
-返回值示例:
+**请求参数**
+
+| 参数名 | 类型 | 是否必须 | 描述 |
+| ------ | ---- | -------- | ---- |
+|        |      |          |      |
+
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+**请求实例**
+
+```shell
+curl -X POST \
+  'https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
 ```
+
+**响应示例**
+
+```json
 {
 	"errno": 0,
 	"msg": "success"
@@ -150,28 +231,37 @@ access_token	|string|	是	|授权小程序的接口调用凭据
 
 ### 为小程序提交页面基础信息文件API
 
-为小程序设置页面基础信息，调用成功后即时设置生效。
+> 为小程序设置页面基础信息，调用成功后即时设置生效。
 
 **请求地址**:
 
 ```
-POST https://openapi.baidu.com/file/2.0/smartapp/robots/app/upload?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/file/2.0/smartapp/robots/app/upload
 ```
 
-**参数说明**：
+**公共请求参数**：
 
 | 参数名称    | 类型   | 是否必须 | 说明                                 |
 | ----------- | ------ | -------- | --------------------------------  |
 | access_token   | string | true     | 授权小程序的接口调用凭据                     |
+**请求参数**
+| 参数名称    | 类型   | 是否必须 | 说明                                 |
+| ----------- | ------ | -------- | --------------------------------  |
 | robots | file | true | robots.txt 文件，要求文件为 txt 格式，目前支持48k的文件内容检测，请保证robots.txt文件不要过大，目录最长不超过250个字符。 |
 
-**返回值说明**
+**公共响应参数** 
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | string  | 响应参数 | 文件链接       |
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | string | 状态码   |
-| msg    | string | 状态信息 |
-| data   | string | 文件链接 |
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
 
 **返回值示例**
 
@@ -190,26 +280,35 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/app/upload?access_token=
 **请求地址**:
 
 ```
-POST https://openapi.baidu.com/file/2.0/smartapp/robots/template/upload?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/file/2.0/smartapp/robots/template/upload
 ```
 
-**参数说明**：
+**公共请求参数**：
 
 | 参数名称    | 类型   | 是否必须 | 说明                                 |
 | ----------- | ------ | -------- | --------------------------------  |
-| access_token   | string | true     | 授权第三方平台的接口调用凭据。注意不是小程序授权给第三方平台生成的token |
+| access_token   | string | true     | 授权小程序的接口调用凭据                     |
+**请求参数**
+
+| 参数名称    | 类型   | 是否必须 | 说明                                 |
+| ----------- | ------ | -------- | --------------------------------  |
 | template_id | long | true | 模版id |
 | robots | file | true | robots.txt 文件，要求文件为 txt 格式，目前支持48k的文件内容检测，请保证robots.txt文件不要过大，目录最长不超过250个字符。 |
 
-**返回值说明**
+**公共响应参数** 
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | string  | 响应参数 | 文件链接       |
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | string | 状态码   |
-| msg    | string | 状态信息 |
-| data   | string | 文件链接 |
+**响应参数** 
 
-**返回值示例**
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+**响应示例**
 
 ```json
 {
@@ -247,26 +346,35 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/template/upload?access_t
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add
 ```
 
-**参数说明:**
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
 | access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+**请求参数**
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
 | chain_name   | string | true     | 4-10个字符，说明子链的功能       |
 | chain_desc   | string | true     | 8-16个字符，辅助描述子链的功能   |
 | chain_path   | string | false    | 以“/”开头的子链对应的path路径    |
 | telephone    | string | false    | SA类型的客服电话子链             |
 
-**返回值说明：**
+**公共响应参数**
 
 | 参数名 | 类型   | 描述         |
 | ------ | ------ | ------------ |
 | errno  | string | 状态码       |
 | msg    | string | 状态信息     |
 | data   | int    | 生成的子链Id |
+
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
 
 **返回值示例:**
 
@@ -280,22 +388,27 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add?access_token=ACCES
 
 ### 删除子链
 
-可删除已提交的子链。
+>可删除已提交的子链。
 
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete
 ```
 
-**参数说明:**
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
 | access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+
+**请求参数**
+
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
 | subchain_id  | string | true     | 子链 Id                          |
 
-**返回值说明：**
+**公共响应参数**
 
 | 参数名 | 类型    | 描述         |
 | ------ | ------- | ------------ |
@@ -303,7 +416,13 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete?access_token=AC
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功删除 |
 
-**返回值示例:**
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+**响应示例**
 
 ```json
 {
@@ -320,27 +439,38 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete?access_token=AC
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/update?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/update
 ```
 
-**参数说明:**
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
 | access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+
+**请求参数**
+
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
 | subchain_id  | string | true     | 子链 Id                          |
 | chain_name   | string | true     | 4-10个字符，说明子链的功能       |
 | chain_desc   | string | true     | 8-16个字符，辅助描述子链的功能   |
 | chain_path   | string | false    | 以“/”开头的子链对应的path路径    |
 | telephone    | string | false    | SA类型的客服电话子链             |
 
-**返回值说明：**
+**公共响应参数**
 
 | 参数名 | 类型    | 描述         |
 | ------ | ------- | ------------ |
 | errno  | string  | 状态码       |
 | msg    | string  | 状态信息     |
 | data   | boolean | 是否成功更新 |
+
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
 
 **返回值示例:**
 
@@ -359,23 +489,24 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/update?access_token=AC
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/getall?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/subchain/getall
 ```
 
-**参数说明:**
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
 | access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
 
-**返回值说明：**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | Long   | 状态码   |
-| errMsg | String | 状态信息 |
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | int | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
 
-详细说明：
+**响应参数** 
 
 | 参数名                 | 类型   | 描述                                                         |
 | ---------------------- | ------ | ------------------------------------------------------------ |
@@ -397,8 +528,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/getall?access_token=AC
 | subchain_type          | Long   | 子链类型。1: path类型子链 2:客服电话子链（要求小程序等级为 4 ） |
 | show_status          | Long   | 展示类型。1: 优选 2: 备选。为null代表还未通过审核|
 
-
-返回值示例:
+**响应示例**
 
 ```json
 {
@@ -453,24 +583,29 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/getall?access_token=AC
 
 ### 重排序子链
 
-针对已提交的全部子链，可进行重新排序，并将调整顺序后完整的子链列表通过接口返回。
+> 针对已提交的全部子链，可进行重新排序，并将调整顺序后完整的子链列表通过接口返回。
 
-子链的排序决定了其在小程序卡片中的展示顺序。审核通过的子链将会依照一定规则展示前3条或6条，其余过审子链将作为备选子链。对单卡子链进行排序，每次需要传递所有的子链Id组成的字符串，字符串中的Id顺序代表了子链的排序。
+> 子链的排序决定了其在小程序卡片中的展示顺序。审核通过的子链将会依照一定规则展示前3条或6条，其余过审子链将作为备选子链。对单卡子链进行排序，每次需要传递所有的子链Id组成的字符串，字符串中的Id顺序代表了子链的排序。
 
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank
 ```
 
-**参数说明:**
+**公共请求参数**
 
 | 参数名           | 类型   | 是否必须 | 描述                               |
 | ---------------- | ------ | -------- | ---------------------------------- |
 | access_token     | string | true     | 小程序授权给TP平台生成的调用凭据   |
+
+**请求参数**
+
+| 参数名           | 类型   | 是否必须 | 描述                               |
+| ---------------- | ------ | -------- | ---------------------------------- |
 | subchain_ranklist | string | true     | 子链 Id 字符串，顺序代表了排序位置,使用逗号分割 |
 
-**返回值说明：**
+**公共响应参数**
 
 | 参数名 | 类型    | 描述     |
 | ------ | ------- | -------- |
@@ -478,7 +613,13 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank?access_token=ACCE
 | msg    | string  | 状态信息 |
 | data   | boolean | 是否成功 |
 
-**返回值示例:**
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+**响应示例**
 
 ```json
 {
@@ -494,24 +635,38 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank?access_token=ACCE
 **请求路径:**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop
 ```
 
-**参数说明:**
+**公共请求参数**
 
-| 参数名           | 类型   | 是否必须 | 描述                               |
-| ---------------- | ------ | -------- | ---------------------------------- |
-| access_token     | string | true     | 小程序授权给TP平台生成的调用凭据   |
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
+| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
 
-**返回值说明：**
+**请求参数**
 
-| 参数名 | 类型    | 描述     |
-| ------ | ------- | -------- |
-| errno  | string  | 状态码   |
-| msg    | string  | 状态信息 |
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
+| subchain_id  | string | true     | 子链 Id                          |
+
+**公共响应参数**
+
+| 参数名 | 类型    | 描述         |
+| ------ | ------- | ------------ |
+| errno  | string  | 状态码       |
+| msg    | string  | 状态信息     |
 | data   | boolean | 是否成功 |
 
-**返回值示例:**
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+
+
+**响应示例**
 
 ```json
 {
@@ -523,7 +678,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop?access_token=ACCE
 
 ### 启用子链
 
-针对停用状态下的子链，可执行启用操作。启用后则可恢复子链的分发展现。重新启用子链需经过审核，审核结果推送地址为授权后的**消息与事件接收URL**。
+>针对停用状态下的子链，可执行启用操作。启用后则可恢复子链的分发展现。重新启用子链需经过审核，审核结果推送地址为授权后的**消息与事件接收URL**。
 
 **请求路径:**
 
@@ -531,21 +686,35 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop?access_token=ACCE
 POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=ACCESS_TOKEN
 ```
 
-**参数说明:**
+**公共请求参数**
 
-| 参数名           | 类型   | 是否必须 | 描述                               |
-| ---------------- | ------ | -------- | ---------------------------------- |
-| access_token     | string | true     | 小程序授权给TP平台生成的调用凭据   |
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
+| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
 
-**返回值说明：**
+**请求参数**
 
-| 参数名 | 类型    | 描述     |
-| ------ | ------- | -------- |
-| errno  | string  | 状态码   |
-| msg    | string  | 状态信息 |
+| 参数名       | 类型   | 是否必须 | 描述                             |
+| ------------ | ------ | -------- | -------------------------------- |
+| subchain_id  | string | true     | 子链 Id                          |
+
+**公共响应参数**
+
+| 参数名 | 类型    | 描述         |
+| ------ | ------- | ------------ |
+| errno  | string  | 状态码       |
+| msg    | string  | 状态信息     |
 | data   | boolean | 是否成功 |
 
-**返回值示例:**
+**响应参数** 
+
+| 参数 | 类型 | 描述 | 示例值 |
+| ---- | ---- | ---- | ------ |
+|      |      |      |        |
+
+
+
+**响应示例**
 
 ```json
 {
@@ -624,35 +793,43 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 * **链接文件（sitemap）提交：**适用于大量素材的提交，该方式实效性相对接口方式较低，提交素材后，下一天的0点小程序侧会自动抓取解析物料，存在一定时间差。
 
-## submitresource
-
-**提交/修改素材接口，API实时接口提交方式**
-
->若有资源在小程序内需要提交或资源推送错误需要修改（或更新）的情况，请调用该接口进行资源的提交，该提交方式适用于少量的素材提交，每天有500次调用限制，如果素材量大建议使用sitemap的方式。 
-
-接口调用请求说明:
-
+## 提交物料资源 
+> 若有资源在小程序内需要提交或资源推送错误需要修改（或更新）的情况，请调用该接口进行资源的提交，该提交方式适用于少量的素材提交，每天有500次调用限制，如果素材量大建议使用sitemap的方式。 
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/submitresource 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/submit?access_token=ACCESS_TOKEN
-```
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|access_token|string|是|小程序权限校验Token|--|
+**请求参数** 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|app_id|int|否|app_id|--|
+|body|string|是|消息体，物料的介绍|以小程序粒度推送时，请填写小程序的详细介绍<br>示例：爱说唱是一款基于百度语音技术的智能小程序。即便你对嘻哈音乐一窍不通，只需对它说上几句话，便可智能合成最酷的嘻哈音乐。同时还支持歌词查看和等功能，在线即可完成rap单曲的创作和分享。来吧，让我们在嘻哈的世界肆意妄为，一起Freestyle吧！<br>以图文粒度推送时，请填写内容的正文<br>示例：智能小程序，智能连接人与信息、人与服务、人与万物的开放生态，依托以百度APP为代表的全域流量，通过百度AI开放式赋能，精准连接用户，无需下载安装便可享受智慧超前的使用体验<br>以视频粒度推送时，请填写视频的详细介绍<br>示例：此片是当年为张国荣的参演而度身订造的电影，这也是他的歌唱和演艺事业的高峰时期。由包括人气歌手露云娜、偶像锺保罗等多位明星合演，片中以张国荣为首的角色最为丰富。|
+|ext|string|否|扩展信息（JSON格式，参考附录三）|{"publish_time": "2018年11月1日"}|
+|feed_sub_type|string|否|feed二级分类（参考附录二）|明星八卦（可选有限集合）|
+|feed_type|string|是|feed一级分类（参考附录二）|娱乐（可选有限集合）|
+|images|string|是|封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1|["https://b.bdstatic.com/miniapp/resource/image/demo1.png", "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]|
+|mapp_sub_type|string|是|资源子类型（参考附录一）|1001|
+|mapp_type|string|是|资源类型（参考附录一）|1000|
+|path|string|是|智能小程序落地页链接|/pages/detail/detail?id=100001|
+|tags|string|否|资源标签，英文逗号分割，填写越准确详细可能带来更好的分发效果（最多10个，总长度最多100字）|示例：电影,吴亦凡|
+|title|string|是|标题|百度智能小程序，给你全新的智能体验|
+**公共响应参数** 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+**响应参数** 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+| | | |
+**请求示例** 
 
-### 参数说明:
-| 参数名 | 类型 | 是否必须 | 描述 | 示例 |
-|----- |-----| ------| -----|------|
-| access_token  | string   | 是    | 授权小程序token|       |
-| title         | string   | 是  | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能全英文，最少6个字 | 示例：百度智能小程序，给你全新的智能体验  ||
-| body          | string   | 是 | 消息体，物料的介绍                                           | **以小程序粒度推送时，请填写小程序的详细介绍**   <br>示例：爱说唱是一款基于百度语音技术的智能小程序。即便你对嘻哈音乐一窍不通，只需对它说上几句话，便可智能合成最酷的嘻哈音乐。同时还支持歌词查看和等功能，在线即可完成rap单曲的创作和分享。来吧，让我们在嘻哈的世界肆意妄为，一起Freestyle吧！   **以图文粒度推送时，请填写内容的正文** <br>   示例：智能小程序，智能连接人与信息、人与服务、人与万物的开放生态，依托以百度APP为代表的全域流量，通过百度AI开放式赋能，精准连接用户，无需下载安装便可享受智慧超前的使用体验   **以视频粒度推送时，请填写视频的详细介绍** <br>  示例：此片是当年为张国荣的参演而度身订造的电影，这也是他的歌唱和演艺事业的高峰时期。由包括人气歌手露云娜、偶像锺保罗等多位明星合演，片中以张国荣为首的角色最为丰富。 |
-| path          | string   | 是  | 智能小程序落地页链接                                         | /pages/detail/detail?id=100001                               |
-| images        | string   | 是  | 封面图片链接（JSON格式）（最多3张，单图片最大2M）   建议尺寸：高>=210 & 宽>=375   最小尺寸：高>=146 & 宽>=218 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
-| mapp_type     | string   | 是                       | 资源类型（参考附录一）                                       | 1000                                                         |
-| mapp\_sub\_type | string   | 是                      | 资源子类型（参考附录一）                                     | 1001                                                         |
-| feed\_type     | string   | 否                       | feed一级分类（参考附录二）                                   | 娱乐（可选有限集合）                                         |
-| feed\_sub\_type | string   | 否                          | feed二级分类（参考附录二）                                   | 明星八卦（可选有限集合）                                     |
-| tags          | string   | 否                        | 资源标签，英文逗号分割 ，填写越准确详细可能带来更好的分发效果（最多10个，总长度最多100字） | 示例：电影,吴亦凡                                            |
-| ext           | string   | 部分必填（见附录三）       | 扩展信息（JSON格式，参考附录三）                             | {"publish_time": "2018年11月1日"}                            |
-
-### 返回示例：
+**响应示例** 
 
 ```json
 {
@@ -661,26 +838,58 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/submit?access_t
 　　"data":""
 }
 ```
-## queryresource
-
-接口调用请求说明:
-
-```
- GET https://openapi.baidu.com/rest/2.0/smartapp/access/resource/query?access_token=ACCESS_TOKEN
+## 查询物料资源 
+> 查询物料资源数据 
+``` 
+ GET https://openapi.baidu.com/rest/2.0/smartapp/access/resource/query 
 ```
 
-### 参数说明:
-|参数名 | 类型 | 是否必须 | 描述|示例|
-|----- |-----| ------| -----|------|
-| access_token  | string   | 是      | 授权小程序token|                                                              |                                                    |
-| title         | string   | 否      | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能全英文，最少6个字 | 示例：百度智能小程序，给你全新的智能体验      |
-| status       |  int     | 否     | 0: 全部 1: 审核中 2: 审核失败 3: 投放中 4: 已删除(默认值为0)| 0 |
-|  begin        |  int     |  否    | 开始时间 (默认值前一天0点)  |  1569728735 |
-| end           |  int     |  否      | 结束时间 (默认值今天0点)  |  1569728735|
-| page_no     |  int     |  否     | 页数(分页参数,第几页,默认值(1)  |  1|
-| page_size    |  int     |  否     | 单页展示数据量(分页参数,默认值(10)  |  10|
+**公共请求参数** 
 
-### 返回示例：
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|access_token|string|是|授权小程序Token|--|
+
+**请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|begin|string|是|开始时间 (默认值前一天0点)|1569728735|
+|end|string|是|结束时间 (默认值今天0点)|1569728735|
+|image_type|int|否|image_type|--|
+|page_no|string|是|结束时间 (默认值今天0点)|页数(分页参数,第几页,默认值(1)|
+|page_size|string|是|结束时间 (默认值今天0点)|单页展示数据量(分页参数,默认值(10)|
+|status|string|是|状态（0: 全部 1: 审核中 2: 审核失败 3: 投放中 4: 已删除），默认值为0|0|
+|title|string|是|标题|百度智能小程序，给你全新的智能体验|
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|count|int|数据总量|--|
+|page|int|页数|--|
+|page_size|int|单页数量|--|
+|list|array[object]|数据内容|--|
+|list.app_id|int|小程序id|--|
+|list.audit_time|string|审核时间|--|
+|list.create_time|string|提交时间|--|
+|list.message|string|审核信息|--|
+|list.rid|string|物料id|--|
+|list.source|string|物料来源|--|
+|list.status|string|状态|--|
+|list.title|string|标题|--|
+
+**请求示例** 
+
+**响应示例** 
 
 ```json
 {
@@ -742,26 +951,42 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/submit?access_t
 ```
 
 
-## deleteresource
-
-**删除素材接口，API实时接口提交方式**
-
->若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除，删除后的素材无法重新提交。
-
-接口调用请求说明:
-
+## 下线物料资源 
+> 若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除，删除后的素材无法重新提交。 
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete?access_token=ACCESS_TOKEN
-```
-### 参数说明:
-|参数名 | 类型 | 是否必须 | 描述|示例|
-|----- |-----| ------| -----|------|
-| access_token | string   | 是      | 授权小程序的token      |                                |
-| path         | string   | 是      | 智能小程序内页链接 | /pages/detail/detail?id=100001 |
 
+**公共请求参数** 
 
-### 返回示例
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|access_token|string|是|小程序权限校验Token|--|
 
+**请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|app_id|integer|否|app_id|--|
+|path|string|是|智能小程序内页链接|/pages/detail/detail?id=100001|
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+| | | |
+
+**请求示例** 
+
+**响应示例** 
 ```json
 {   　　
 	"errno":0,   　　
@@ -770,31 +995,45 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete?access_t
 }
 ```
 
-## submitsitemap
-
-**提交链接文件（即Sitemap）接口，链接文件提交方式（即sitemap提交)**
-
-> 1. 需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为单条素材内容。
-2. 提交素材或更新素材，则链接文件的type（即sitemap）选为“1”。
-3. 删除素材或下线素材，则链接文件的type选为“0”。
-4. 每个小程序，最多提交3条sitemap链接，建议一条type为1的sitemap链接，一条type为0的sitemap链接的（即增量/更新的sitemap一个，线下/删除的sitemap一个），若已满3条sitemap，若想添加新的sitemap链接，建议先删除一条sitemap，再进行添加新的sitemap。
-5. 提交sitemap链接方法共两种,两种提交方法任选其一即可：a.通过下方接口提交；b.通过智能小程序开发者平台端提交，提交入口：流量配置-信息流-上传素材-链接文件提交。
-
-接口调用请求说明:
-
+## 提交sitemap 
+> 1.需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为单条素材内容。<br>2.提交素材或更新素材，则链接文件的type（即sitemap）选为“1”。<br>3.删除素材或下线素材，则链接文件的type选为“0”。<br>4.每个小程序，最多提交3条sitemap链接，建议一条type为1的sitemap链接，一条type为0的sitemap链接的（即增量/更新的sitemap一个，线下/删除的sitemap一个），若已满3条sitemap，若想添加新的sitemap链接，建议先删除一条sitemap，再进行添加新的sitemap。<br>5.提交sitemap链接方法共两种,两种提交方法任选其一即可：a.通过下方接口提交；b.通过智能小程序开发者平台端提交，提交入口：流量配置-信息流-上传素材-链接文件提交。 
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/submit
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/submit?access_token=ACCESS_TOKEN
+
+**公共请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|access_token|string|是|小程序权限校验Token|--|
+**请求参数** 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|app_id|integer|否|app_id|--|
+|desc|string|是|描述信息|智能小程序示例|
+|frequency|string|是|更新频率 3-每天 4-每周|3|
+|type|string|是|类型 1-增量/更新； 0-下线/删除|1|
+|url|string|是|sitemap链接|???|
+**公共响应参数** 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+**响应参数** 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+| | | |
+**请求示例** 
+
+**响应示例** 
+```json
+{
+　　"errno":0,
+　　"msg":"success",
+　　"data":""
+}
 ```
-### 参数说明:
-|参数名 | 类型 | 是否必须 | 描述|示例|
-|----- |-----| ------| -----|------|
-| access_token | string   | 是     | 授权小程序的token                  |                |
-| url          | string   | 是     | sitemap链接                    |                |
-| desc         | string   | 是     | 描述信息                       | 智能小程序示例 |
-| type         | int      | 是     | 类型 1-增量/更新； 0-下线/删除 | 1              |
-| frequency    | int      | 是     | 更新频率 3-每天 4-每周         | 3              |
-
-
 **sitemap内容格式**
 
 ```json
@@ -854,34 +1093,43 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/submit?access_to
 	}
 ]
 ```
-### 返回示例：
-```json
-{
-　　"errno":0,
-　　"msg":"success",
-　　"data":""
-}
+
+## 删除sitemap 
+> 若需要删除sitemap文件，请调用该接口，删除的仅为sitemap链接地址，对sitemap中已提交成功的素材无影响。 
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/delete 
 ```
 
-## deletesitemap
+**公共请求参数** 
 
-**删除链接文件（即sitemap）接口，链接文件提交方式（即sitemap提交)**
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|access_token|string|是|小程序权限校验Token|--|
 
-> 若需要删除sitemap文件，请调用该接口，删除的仅为sitemap链接地址，对sitemap中已提交成功的素材无影响。
+**请求参数** 
 
-接口调用请求说明:
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+|app_id|integer|否|app_id|--|
+|url|string|是|sitemap链接|--|
 
-```
-POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/delete?access_token=ACCESS_TOKEN
-```
-### 参数说明:
-|参数名 | 类型 | 是否必须 | 描述|示例|
-|----- |-----| ------| -----|------|
-| access_token | string   | 是     | 权限校验TOKEN |
-| url          | string   | 是     | sitemap链接   |
+**公共响应参数** 
 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
 
-### 返回示例
+**响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+| | | |
+
+**请求示例** 
+
+**响应示例** 
 
 ```json
 {
@@ -1688,4 +1936,4 @@ path字段是素材的唯一标识，将需要修改的素材更新任一字段�
 
 ８. API接口调用失败，提示“Invalid parameter”
 
-注意access_token字段使用GET方法，其他字段使用POST方法form-data提交
+注意access_token字段使用GET方法，其他字段使用POST方法form-data提交/
