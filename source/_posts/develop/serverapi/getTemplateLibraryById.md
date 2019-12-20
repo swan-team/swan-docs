@@ -4,20 +4,56 @@ header: develop
 nav: serverapi
 sidebar: getTemplateLibraryById
 ---
- 
+
+### 获取模板库某个模板标题下关键词库
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/get
+```
+
 **解释**：获取模板库某个模板标题下的关键词库。
-**接口调用请求说明**：
 
+**公共请求参数**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数**
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+id | int | 是 | 模板标题id，可通过接口获取，也可登录小程序后台查看获取
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+字段名 | 类型  | 描述
+----- |-----| -----
+id| string| 模板标题id
+title|string|模板标题
+keyword_count|int| 关键字条数
+keyword_id | int| 关键词id，添加模板时需要
+name |string | 关键词内容
+example |string | 关键词内容对应的示例
+
+**请求实例**
+
+```shell
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/library/get?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&id=wDYzYZVxobJivW9oMpSCpuvACOfJXQIoKUm0PY397Tc'
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget?access_token=ACCESS_TOKEN
-```
 
-**参数说明**
 
-|参数名|	类型|	是否必须|	描述|
-|---|---|---|---|
-|id	|string|	是|	模板库id|
-返回值
+
+**响应示例**:
+
 ```json
 {
     "errno": 0,
@@ -96,3 +132,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget?access_toke
     }
 }
 ```
+
+**错误码说明**：
+
+|错误码 | 错误描述 |
+|----- |-----|
+|2002|参数错误|

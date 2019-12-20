@@ -391,6 +391,7 @@
             this.initList();
             this.initBottomPage();
             this.initInvokeDemo();
+            this.loadEvent();
             // this.initCustom();
         },
         // initHighlight() {
@@ -647,8 +648,6 @@
                 // 更新右侧文章
                 updateArticle($(this), href);
             });
-
-            // 回到顶部
             $('.m-doc-content-layout').on('scroll', debounce(function () {
                 var backTop = $('.m-doc-menu-top');
                 if (ctx.screenHeight > $(this).scrollTop()) {
@@ -657,7 +656,6 @@
                     backTop.addClass('m-doc-menu-top-show');
                 }
             }));
-            
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
             if (this.screenWidth > 768) {
@@ -675,19 +673,6 @@
                     before = after;
                 }, 350));
             }
-            $('.m-doc-menu-top').on('click', function () {
-                var TIME = 500;
-                var scrollWrap = $('.m-doc-content-layout');
-                var scrollTop = scrollWrap.scrollTop();
-                var everyLength = scrollTop / TIME * ctx.frame;
-                function animat () {
-                    scrollWrap.scrollTop(scrollWrap.scrollTop() - everyLength);
-                    if (scrollWrap.scrollTop() !== 0) {
-                        ctx.animation(animat);
-                    }
-                }
-                ctx.animation(animat);
-            });
             $('.m-doc-menu-toc').on('click', function () {
                 if ($(this).hasClass('m-doc-menu-toc-close')) {
                     $(this).removeClass('m-doc-menu-toc-close');
@@ -709,13 +694,48 @@
             win.onpopstate = function (e) {
                 var href = e.state ? e.state : win.location.href;
                 $('.m-doc-sidebar-selected').removeClass('m-doc-sidebar-selected');
-                $('.m-doc-h2-list, .m-doc-h3-list').filter(function() {
+                $('.list-item').filter(function() {
                     return $(this).attr('href').indexOf(href) > -1;
                 }).parent('li').addClass('m-doc-sidebar-selected');
                 ctx.getArticle(href, function() {
                     ctx.scrollToHash();
                 });
             };
+        },
+        // DOM替换需要再次注册的事件
+        loadEvent: function() {
+            var ctx = this;
+            // 回到顶部
+            $('.m-doc-menu-top').on('click', function () {
+                var TIME = 500;
+                var scrollWrap = $('.m-doc-content-layout');
+                var scrollTop = scrollWrap.scrollTop();
+                var everyLength = scrollTop / TIME * ctx.frame;
+                function animat () {
+                    scrollWrap.scrollTop(scrollWrap.scrollTop() - everyLength);
+                    if (scrollWrap.scrollTop() !== 0) {
+                        ctx.animation(animat);
+                    }
+                }
+                ctx.animation(animat);
+            });
+            // 代码片段打点
+            $('.highlight').on('click', function (e) {
+                var codeType = e.currentTarget.classList[1] || 'text';
+                _hmt.push(['_trackEvent', '代码片段', '点击', codeType]);
+            });
+            $('a[title="在开发者工具中预览效果"]').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '开发者工具预览', '点击', href]);
+            });
+            $('.m-doc-menu-feedback').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '问题反馈', '点击', href]);
+            });
+            $('.m-doc-menu-edit').on('click', function (e) {
+                var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '编辑文档', '点击', href]);
+            });
         },
         scrollToHash: function () {
             var _this = this;
@@ -758,6 +778,7 @@
                     ctx.initList();
                     ctx.initBottomPage();
                     ctx.initInvokeDemo();
+                    ctx.loadEvent();
                     if (callback) {
                         win.setTimeout(callback, 100);
                     }

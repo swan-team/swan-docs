@@ -5,6 +5,15 @@ nav: devtools
 sidebar: uplog_tool_normal
 ---
 
+
+### 2.22 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.22.1|2019.12.18|**New**<p>**·** 新增文档搜索窗口;<p>**·** 新增组件编辑，可在在组件面板直接编辑组件属性，样式，事件和查看组件信息;<p>**·** 新增[小程序自动化](http://martprogram.baidu.com/docs/develop/devtools/auto/quick-start/)。<p>**BugFix**<p>**·** 新建小游戏项目删除package.json冗余文件;<p>**·** 小游戏connectSocket连接自签名证书可以成功，和真机/小程序保持一致;<p>**·** canvans添加bdfile文件的路径解析和转换。|
+
+
+
 ### 2.21 版本 
 
 |版本号|更新时间|更新内容|

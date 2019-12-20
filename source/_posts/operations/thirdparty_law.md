@@ -2,7 +2,7 @@
 title: 第三方平台服务—开发者授权条款 
 header: operations
 nav: book
-sidebar: thirdparty_low
+sidebar: thirdparty_law
 ---
 
 

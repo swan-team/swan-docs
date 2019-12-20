@@ -14,30 +14,30 @@ sidebar: commentpublish
 
 |属性名| 类型 | 必填 | 默认值 | 说明 |
 |---|---|---|---|---|
-|show-publish|Boolean|是|false|NA和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
-|content-placeholder|String|否|NA和组件版支持，请输入内容|提示占位文案|
-|module-list|Array|||仅NA版支持，显示模块list，参见[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)|
+|show-publish|Boolean|是|false|NA 和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
+|content-placeholder|String|否|NA 和组件版支持，请输入内容|提示占位文案|
+|module-list|Array|否||仅 NA 版支持，显示模块 list，参见[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)|
 |emoji-path|String|否||仅NA版支持，设置自定义表情配置路径|
-|foucs|Boolean|否|false|仅组件版支持，true代表调起，false则不调起|
+|foucs|Boolean|否|false|仅组件版支持，true 代表调起，false 则不调起|
 |is-upLoad-image|Boolean|否|false|仅组件版支持，是否展示上传图片按钮|
-|request-url|String|is-upLoad-image为true，则必填||仅组件版支持，由于小程序图片预览只能是http或https，所以上传图片需要先上传到服务器|
-|comment-param|Object|是|-|NA和组件版支持，内容评论成功后返回给百度服务测的参数，在点击发表按钮时回传|
-|comment-param.openid|String|是|-|NA和组件版支持，用户身份唯一标识，[获取方法](https://smartapp.baidu.com/docs/develop/api/open/log_Session-Key/)|
-|comment-param.snid|String|是|-|NA和组件版支持，动态id，是动态在开发者侧的唯一标识。不应为空。若此时小程序侧没有对应的标识，则会先创建动态。|
-|comment-param.spid|String|是|-|NA和组件版支持，一级评论id。为空表示对动态评论；不为空表示对评论进行评论。|
-|comment-param.srid|String|是|-|NA和组件版支持，此条评论id|
-|comment-param.title|String|是|-|NA和组件版支持，动态标题|
-|comment-aram.content|String|是|-|NA和组件版支持，动态内容|
-|comment-param.images|Array|否|-|NA和组件版支持，动态图集, json数组, 格式 ["a.jpg","b.jpg"]|
-|comment-param.appkey|String|是||NA和组件版支持，小程序App Key，在小程序管理中心>设置>开发设置中获取|
-|comment-param.path|String|是||NA和组件版支持，用于跳转的schema的path和query的拼接，参考如下：path='/page/a/b?query=q'|
+|request-url|String|is-upLoad-image为true，则必填||仅组件版支持，由于小程序图片预览只能是 http 或 https，所以上传图片需要先上传到服务器|
+|comment-param|Object|是|-|NA 和组件版支持，内容评论成功后返回给百度服务测的参数，在点击发表按钮时回传|
+|comment-param.openid|String|是|-|NA 和组件版支持，用户身份唯一标识，[获取方法](https://smartapp.baidu.com/docs/develop/api/open/log_Session-Key/)|
+|comment-param.snid|String|是|-|NA 和组件版支持，动态id，是动态在开发者侧的唯一标识。不应为空。若此时小程序侧没有对应的标识，则会先创建动态。|
+|comment-param.spid|String|是|-|NA 和组件版支持，一级评论id。为空表示对动态评论；不为空表示对评论进行评论。|
+|comment-param.srid|String|是|-|NA 和组件版支持，此条评论id|
+|comment-param.title|String|是|-|NA 和组件版支持，动态标题|
+|comment-aram.content|String|是|-|NA 和组件版支持，动态内容|
+|comment-param.images|Array|否|-|NA 和组件版支持，动态图集, json 数组, 格式 ["a.jpg","b.jpg"]|
+|comment-param.appkey|String|是||NA 和组件版支持，小程序 App Key，在小程序管理中心>设置>开发设置中获取|
+|comment-param.path|String|是||NA 和组件版支持，用于跳转的 schema 的 path 和 query 的拼接，参考如下：path='/page/a/b?query=q'|
+|bind:fail|EventHandle|||NA版和组件版支持，调用百度服务失败的回调|
 |bind:error|EventHandle|||仅组件版支持，点击按钮时在用户未登录状态下触发的事件|
 |bind:browsemode|EventHandle|||仅组件版支持，当输入框失焦后会触发事件(NA版不支持，降级版支持)|
 |bind:relasecomment|EventHandle|||NA和组件版支持，点击发表按钮时触发的事件。在NA版中相当于success成功回调中status为reply状态|
 |bind:close|EventHandle|||仅NA版支持，点击空白处关掉发布器的回调，相当于NA版success成功回调中status为draft的状态|
 |bind:previewimage|EventHandle|||仅组件版支持，点击输入框中已经上传的图片时触发的事件(NA版不支持，降级版支持)|
-|bind:fail|EventHandle|||仅NA版支持，调起NA版发布器失败的回调函数|
-|bind:complete|EventHandle|||仅NA版支持，NA版发布器接口调用结束的回调函数（调用成功、失败都会执行）|
+
 
 
 **代码示例**
