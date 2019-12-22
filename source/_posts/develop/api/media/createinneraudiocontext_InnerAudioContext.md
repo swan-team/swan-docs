@@ -45,7 +45,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
 |aiff |是|否|
 |caf|是|否|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -156,7 +156,7 @@ Page({
 
 ```
 
-**代码示例2 - 设置obeyMuteSwitch为false**：
+**代码示例2 - 设置obeyMuteSwitch为false，否则用户在系统静音的情况下，会认为api不能播放**：
 
 <a href="swanide://fragment/630e947ea4b925fa576ff51439271a851575218694131" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

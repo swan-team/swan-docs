@@ -15,7 +15,7 @@ sidebar: createanimation_Animation-rotate3d
 
 **参数说明**：同 transform-function rotate3d。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: createanimation_Animation-rotate3d
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/967fb90e26393d8299ea78a8331458af1574215196061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

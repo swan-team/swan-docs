@@ -29,7 +29,7 @@ sidebar: query_NodesRef-boundingClientRect
 |width|Nunber|节点宽度|
 |height|Nunber|节点高度|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +43,7 @@ sidebar: query_NodesRef-boundingClientRect
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/edf1aa51425ccf5e213e181ca267b5211574770246796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -25,7 +25,7 @@ sidebar: query_NodesRef-fields
 |properties  | Array.&lt;string&gt;| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
 |computedStyle  |Array.&lt;string&gt; | []  | |指定样式名列表，返回节点对应样式名的当前值 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: query_NodesRef-fields
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/074e13432730548b49ba90f0fbcb8fac1574492260859" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

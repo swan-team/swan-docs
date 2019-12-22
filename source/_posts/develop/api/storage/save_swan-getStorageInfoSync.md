@@ -19,7 +19,7 @@ sidebar: save_swan-getStorageInfoSync
 
 **方法参数**： 无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,7 +33,7 @@ sidebar: save_swan-getStorageInfoSync
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 

@@ -24,7 +24,7 @@ sidebar: swan-stopCompass
 |fail  |  Function |   否 | |  接口调用失败的回调函数|
 |complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: swan-stopCompass
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/dd5f2caff98f590d42027517729532851569479416199" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

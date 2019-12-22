@@ -31,7 +31,7 @@ sidebar: MapContext-getCenterLocation
 |latitude|Number|纬度|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -45,7 +45,7 @@ sidebar: MapContext-getCenterLocation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/b3313255208a24cb637265f42ea157391573550085624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

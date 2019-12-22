@@ -36,7 +36,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -77,7 +77,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -105,7 +105,7 @@ exports.main = async (event, context) => {
 返回值：Document
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -131,7 +131,7 @@ exports.main = async (event, context) => {
 返回值：Collection
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -171,7 +171,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -204,7 +204,7 @@ exports.main = async (event, context) => {
 返回值：Collection
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -235,7 +235,7 @@ exports.main = async (event, context) => {
 返回值：Collection
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -270,7 +270,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -302,7 +302,7 @@ exports.main = async (event, context) => {
 返回值：Collection
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -338,7 +338,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -373,7 +373,7 @@ exports.main = async (event, context) => {
 返回值：Collection
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 

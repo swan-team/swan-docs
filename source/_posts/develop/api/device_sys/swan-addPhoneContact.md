@@ -56,7 +56,7 @@ sidebar: swan-addPhoneContact
 |fail  |  Function  |  否 | |  接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -70,7 +70,7 @@ sidebar: swan-addPhoneContact
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/453112cac6fd6392b45fac632ebe00c81569483938431" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

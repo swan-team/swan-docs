@@ -12,6 +12,8 @@ sidebar: devjson
 
 ### 配置示例
 
+**代码示例**
+
 ```js
 {
     "navigationBarBackgroundColor": "#ffffff",
@@ -26,7 +28,7 @@ sidebar: devjson
 
 
 |属性|类型|默认值|描述|最低版本|
-|----|----|----|----|
+|----|----|----|----|----|
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 `#000000`| |
 |navigationBarTextStyle|String|white|导航栏标题颜色，有效值 black / white| |
 |navigationBarTitleText|String|--|导航栏标题文字内容| |

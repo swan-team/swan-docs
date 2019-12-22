@@ -42,7 +42,7 @@ sidebar: swan-getNetworkType
 |none|无网络|
 |web_unknown|Web 化无法判断网络环境时类型|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -56,7 +56,7 @@ sidebar: swan-getNetworkType
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6fb983a430aa1864af5650c5b9b54f9d1569478503845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-scale
 
 **参数说明**： 一个参数时，表示在X轴、Y轴同时缩放sx倍数；两个参数时表示在X轴缩放sx倍数，在Y轴缩放sy倍数。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-scale
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/07bb885f4de5eb9cad29e066db3598bd1574216183265" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -33,7 +33,7 @@ sidebar: canvas_swan-canvasToTempFilePath
 |fail	| Function | 否  | |接口调用失败的回调函数 |
 |complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -164,7 +164,7 @@ Page({
 |202|解析失败，请检查参数是否正确      |
  
 
- **Bug & Tip**：
+ **Bug & Tip**
 
 * 在 draw 回调里调用该方法才能保证图片导出成功。
 * 当 x < 0 或者 x > canvase.width 时，x 会被置成0，y 同理。

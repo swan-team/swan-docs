@@ -22,7 +22,7 @@ sidebar: app_service_page_setData
 * 请不要把`data`中任何一项的`value`设为`undefined`，否则将会有一些潜在问题出现；
 * data 的键名必须遵守 camelCase (驼峰式)的命名规范，不得使用 kebab-case (短横线隔开式)规范。
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/99525adbd9f27ac70eac09f08fb32b581560578724171" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml

@@ -46,7 +46,7 @@ sidebar: video_swan-chooseVideo
 |width | 返回选定视频的宽 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,7 +60,7 @@ sidebar: video_swan-chooseVideo
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c82decd60ec2154b7458ded836c3d2c91573651529736" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -103,6 +103,6 @@ Page({
 |1002|用户取消操作|
 |1004|小程序文件目录为空|
 
-**Bug & Tip**：
+**Bug & Tip**
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。

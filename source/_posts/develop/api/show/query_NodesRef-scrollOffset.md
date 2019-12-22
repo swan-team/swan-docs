@@ -23,7 +23,7 @@ sidebar: query_NodesRef-scrollOffset
 |scrollLeft|Nunber|节点水平滚动位置|
 |scrollTop|Nunber|节点竖直滚动位置|
  
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: query_NodesRef-scrollOffset
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/33db2d08cc65630cc939ec8d268bf0481574974671748" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

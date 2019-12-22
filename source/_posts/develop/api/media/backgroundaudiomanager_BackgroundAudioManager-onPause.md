@@ -15,7 +15,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPause
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPause
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/21b51e2e93ae908d5a1fe2255e08cc511573421925921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

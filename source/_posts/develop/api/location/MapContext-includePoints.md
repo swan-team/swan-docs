@@ -34,7 +34,7 @@ sidebar: MapContext-includePoints
 |latitude|String|纬度|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -48,7 +48,7 @@ sidebar: MapContext-includePoints
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/d920818b854d716aa8787795cfd47b561573554788777" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

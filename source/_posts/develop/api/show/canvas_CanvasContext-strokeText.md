@@ -22,7 +22,7 @@ sidebar: canvas_CanvasContext-strokeText
 
 **`maxWidth`参数说明**：需要绘制的最大宽度，可选。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -36,7 +36,7 @@ sidebar: canvas_CanvasContext-strokeText
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/198f840b68c30fd3160e8a3bd11457df1574503509981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

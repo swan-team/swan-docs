@@ -13,7 +13,7 @@ sidebar:  query_SelectorQuery-in
 
 **方法参数**：Component component
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -27,7 +27,7 @@ sidebar:  query_SelectorQuery-in
     </div>
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/89bb87e51057a582a1b9a8826ce393f31575004072494" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -42,7 +42,7 @@ sidebar:  classify_swan-ai-objectDetectIdentify
 |height|  Number| 表示定位位置的长方形的高度。|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

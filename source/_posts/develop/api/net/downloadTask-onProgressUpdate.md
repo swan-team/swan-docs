@@ -23,7 +23,7 @@ sidebar: downloadTask-onProgressUpdate
 |totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
 |totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: downloadTask-onProgressUpdate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
  
 
 <a href="swanide://fragment/bdedce15a8381fc4d56574519696df951572948912995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

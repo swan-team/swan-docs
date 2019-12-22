@@ -17,7 +17,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-play
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-play
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 
 <a href="swanide://fragment/6cdda54dc84f9af03e56e456ed98dbc41573698666408" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

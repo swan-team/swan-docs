@@ -13,7 +13,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-destroy
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -27,7 +27,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-destroy
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/504c1063ac766751147918582186edc51574733738550" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

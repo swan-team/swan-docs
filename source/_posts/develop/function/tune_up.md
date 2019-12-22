@@ -24,10 +24,9 @@ sidebar: tune_up
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |orderInfo| Object | 是 | |订单信息|
-|bannedChannels| StringArray | 否 | | 需要隐藏的支付方式|
 |success |Function  |  否  | | 接口调用成功的回调函数|
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
-|complete  |  Function  |  否  接口调用结束的回调函数（调用成功、失败都会执行）|
+|complete  |  Function  |  否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **orderInfo 参数说明**：
 
@@ -43,16 +42,7 @@ sidebar: tune_up
 |bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  
-
-**bannedChannels 参数说明**：
-
-|channel|说明 |
-|----| ---- |
-| Alipay | 支付宝 |
-| BDWallet | 百度钱包 |
-| WeChat | 微信支付|
-
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 

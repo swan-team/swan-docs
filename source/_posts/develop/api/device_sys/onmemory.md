@@ -30,7 +30,7 @@ TRIM_MEMORY_RUNNING_LOW = 10
 TRIM_MEMORY_RUNNING_CRITICAL = 15
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +44,7 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/d78c8265a509149796a3f556a3db20171575140227666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

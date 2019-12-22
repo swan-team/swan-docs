@@ -50,7 +50,8 @@ sidebar: cloud_deleteFile
 |errMsg| String| 错误信息|
 
 
-**代码示例 **
+**代码示例**
+
 `callback`风格：
 ```js
 swan.cloud.deleteFile({

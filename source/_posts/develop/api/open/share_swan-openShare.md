@@ -32,7 +32,7 @@ sidebar: share_swan-openShare
 
 **返回值说明**：反馈分享结果，成功或失败。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

@@ -20,7 +20,7 @@ sidebar:  liveplayercontext_swan-createLivePlayerContext
 
 **返回值**：livePlayerContext
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,7 +34,7 @@ sidebar:  liveplayercontext_swan-createLivePlayerContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/703092891fd158851d3920c29e31113d1573523316988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

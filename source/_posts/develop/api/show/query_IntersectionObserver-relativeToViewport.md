@@ -24,7 +24,7 @@ sidebar: query_IntersectionObserver-relativeToViewport
 |bottom|number|否| |节点布局区域的下边界|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: query_IntersectionObserver-relativeToViewport
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a07d524b2571998e87a84511c1e920071574305851456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

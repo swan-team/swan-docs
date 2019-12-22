@@ -19,7 +19,7 @@ sidebar: voice_swan-ai-getVoiceRecognizer
 
 **返回值**：voiceRecognizer
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,7 +33,7 @@ sidebar: voice_swan-ai-getVoiceRecognizer
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/2e32098e4419e91a5bf1173f190369021573999089554" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

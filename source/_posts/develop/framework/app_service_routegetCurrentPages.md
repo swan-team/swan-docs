@@ -9,7 +9,7 @@ sidebar: app_service_routegetCurrentPages
 
 **解释**：getCurrentPages 全局函数用于获取当前页面栈的实例，以数组形式按栈的顺序给出，第一个元素为首页，最后一个元素为当前页面。
 
-**代码示例**： 
+**代码示例** 
 
 ```js
 // index.js

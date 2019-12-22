@@ -50,7 +50,7 @@ console.log 方法用于在 console 窗口输出信息。它可以接受多个�
 - `stringify(object)`: 将 object 对象转换为 JSON 字符串，并返回该字符串。
 - `parse(string)`: 将 JSON 字符串转化成对象，并返回该对象。
 
-**代码示例：**
+**代码示例**
 <a href="swanide://fragment/b9a6872f321750087fb2aa6459230cfd1571226160369" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js

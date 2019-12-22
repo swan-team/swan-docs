@@ -18,7 +18,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
 **方法参数**：Function callback
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onPlay
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/7bba223fa1189e84565b3787a7eeab971574003489852" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

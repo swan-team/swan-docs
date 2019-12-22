@@ -14,7 +14,7 @@ sidebar: query_NodesRef
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_boundingClientRect.png" class="demo-qrcode-image" />
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: query_NodesRef
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/992de6cef7a351346c7bb1505dd012131574516295619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

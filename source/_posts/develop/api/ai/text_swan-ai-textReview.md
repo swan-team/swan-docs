@@ -59,7 +59,7 @@ sidebar: text_swan-ai-textReview
 |4 |恶意推广|
 |5 |低俗辱骂|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -73,7 +73,7 @@ sidebar: text_swan-ai-textReview
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

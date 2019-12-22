@@ -16,7 +16,7 @@ sidebar: MapContext-moveToLocation
 **方法参数**：无
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: MapContext-moveToLocation
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8bf2b54ba3c1ab6d4a647b2fd8c6e76b1573557224599" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

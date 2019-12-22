@@ -14,7 +14,7 @@ sidebar: voice_VoiceRecognizer-start
 **方法参数**：Object object
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
