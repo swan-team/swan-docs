@@ -3291,6 +3291,15 @@
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: swan-getSystemRiskInfo
+              -
+
+                text: 订阅
+
+                sidebar:
+                  -
+                    link: /develop/api/open/swan-subscribeService
+                    text: swan.subscribeService
+                    name: swan-subscribeService
         -
             sidebar:
               -
