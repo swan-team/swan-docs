@@ -91,10 +91,10 @@ option = {
 | height | number、string | 可显式指定实例高度，单位为像素。如果传入值为 `null/undefined/'auto'`，则表示自动取实例容器的高度，参见 [echarts.init](https://echarts.apache.org/zh/api.html#echarts.init)。 |
 | dpr | number| 设备像素比，默认取 [`swan.getSystemInfoSync().pixelRatio`](https://smartprogram.baidu.com/docs/develop/api/device_sys/)，参见 [echarts.init](https://echarts.apache.org/zh/api.html#echarts.init)。 |
 | notMerge | boolean | 在更新配置项的时候，是否不跟之前设置的 `option` 合并，参见 [echartsInstance.setOption](https://echarts.apache.org/zh/api.html#echartsInstance.setOption)。 |
-| maps | Object、Array<Object> | 如果是 `Object` 类型，则是包含 `name`（地图名称，相当于 [echarts.registerMap](https://echarts.apache.org/zh/api.html#echarts.registerMap) 接口中的 `mapName`）与 `geoJson`（GeoJson 格式的数据）的对象；如果是数组，则每一项都是包含 `name` 和 `geoJson` 的数组。具体的使用方法参见「地图」的例子。|
+| maps | Object、Array&lt;Object&gt; | 如果是 `Object` 类型，则是包含 `name`（地图名称，相当于 [echarts.registerMap](https://echarts.apache.org/zh/api.html#echarts.registerMap) 接口中的 `mapName`）与 `geoJson`（GeoJson 格式的数据）的对象；如果是数组，则每一项都是包含 `name` 和 `geoJson` 的数组。具体的使用方法参见「地图」的例子。|
 | action | string| 需要触发事件的时候，将这一属性设为 [ECharts 支持的属性名称](https://echarts.apache.org/zh/api.html#action)，参见“事件触发与监听”的例子。|
 | toClear | boolean| 设为 `true` 时，相当于调用 [echartsInstance.clear](https://echarts.apache.org/zh/api.html#echartsInstance.clear)，清空当前实例，会移除实例中所有的组件和图表。|
-| extensions | Array<string>| ECharts 扩展名称，目前只支持[字符云](https://github.com/ecomfe/echarts-wordcloud)（`'wordcloud'`）与[水球图](https://github.com/ecomfe/echarts-liquidfill)（`'liquidfill'`），注意都是小写。使用方法参见「字符云」和「水球图」的例子。 |
+| extensions | Array&lt;string&gt;| ECharts 扩展名称，目前只支持[字符云](https://github.com/ecomfe/echarts-wordcloud)（`'wordcloud'`）与[水球图](https://github.com/ecomfe/echarts-liquidfill)（`'liquidfill'`），注意都是小写。使用方法参见「字符云」和「水球图」的例子。 |
 
 ## 兼容性说明
 
