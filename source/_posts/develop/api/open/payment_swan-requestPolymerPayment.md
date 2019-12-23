@@ -70,12 +70,64 @@ sidebar: payment_swan-requestPolymerPayment
     </div>     
 </div>
 
-**代码示例**
+**代码示例1 - 简单支付示例**
+
+<a href="swanide://fragment/b5697fc510e1a409906f471c70467fec1576568451890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+```js
+Page({
+    data: { },
+    requestPolymerPayment(e) {
+        swan.request({
+            url: 'https://mbd.baidu.com/ma/nuomi/createorder',
+            success: res => {
+                console.log(res)
+                res.data.data.dealTitle = '百度小程序Demo支付测试';
+                let data = res.data;
+                if (data.errno !== 0) {
+                    console.log('create order err', data);
+                    return;
+                }
+
+                swan.requestPolymerPayment({
+                    orderInfo: data.data,
+                    bannedChannels: this.getData('bannedChannels'),
+                    success: res =>  {
+                        swan.showToast({
+                            title: '支付成功',
+                            icon: 'success'
+                        });
+                    },
+                    fail: err => {
+                        swan.showToast({
+                            title: err.errMsg,
+                            icon: 'none'
+                        });
+                        console.log('pay fail', err);
+                    }
+                });
+            },
+            fail: err => {
+                swan.showToast({
+                    title: '订单创建失败',
+                    icon: 'none'
+                });
+                console.log('create order fail', err);
+            }
+        });
+    }
+});
+
+```
+
+**代码示例2 - 复杂支付示例**
 
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ```js
+// 这里只做字段展示，详细示例请在代码片段中查看
 swan.requestPolymerPayment({
     orderInfo: {
         "dealId": "470193086",

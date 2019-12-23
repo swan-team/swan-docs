@@ -279,7 +279,7 @@ open_id| string | 是 |用户openId
 ```json
 
 {
-	"Data":{
+	"Data":[{
 		"CateID": 2, // 2:订单种类-虚拟物品
 		"BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 小程序的appKey
 		"ResourceID": "2221554346520", // 业务方接入的资源唯一ID
@@ -312,7 +312,7 @@ open_id| string | 是 |用户openId
 				}]
 			}
 		}
-	}
+	}]
 }
 
 ```
@@ -340,7 +340,7 @@ open_id| string | 是 |用户openId
 
 ```
 {
-	"Data": {
+	"Data": [{
 		"CateID": 2, // 2:订单种类-虚拟物品
 		"BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 应用ID
 		"ResourceID": "2221554346520", // 业务方接入的资源唯一ID
@@ -373,7 +373,7 @@ open_id| string | 是 |用户openId
 				"OrderType": 1 // 退款订单类型
 			}]
 		}
-	}
+	}]
 }
 ```
 ## 更新售后订单状态接口
@@ -398,7 +398,7 @@ open_id| string | 是 |用户openId
 ```json
 
 {
-	"Data": {
+	"Data": [{
 		"CateID": 2, // 2:订单种类-虚拟物品
 		"BizAPPID": "a392qXwK8L5GDUWhFoC01cKwoy7tmehg", // 小程序的appKey
 		"ResourceID": "2221554346520", // 业务方接入的资源唯一ID
@@ -416,7 +416,7 @@ open_id| string | 是 |用户openId
 				]
 			}
 		}
-	}
+	}]
 }
 
 ```

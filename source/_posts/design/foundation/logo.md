@@ -46,8 +46,7 @@ sidebar: logo
 		<p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">头像图片预留了20%出血区，页面中圆形头像展现完整。</p>
 	</div>
 	<div class="m-doc-custom-examples-error ">
-		<img src="../../../img/design/foundation/logo
-/4-2.png">
+		<img src="../../../img/design/foundation/logo/4-2.png">
 		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">头像图片预留出血区比例过低，导致被前端圆形容器裁切。</p>
 	</div>
 </div>

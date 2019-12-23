@@ -22,8 +22,6 @@ sidebar: formlist_picker
 </div>
 
 
-## 代码示例
-
 ###  图片示例 
 
 <div class="m-doc-custom-examples">
@@ -350,7 +348,7 @@ Page({
 | fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
 | bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
 
-### <div style="font-style: italic"> fields有效值：</div>
+### fields有效值：
 
 | 值 | 说明 |
 | ---- | ---- |
