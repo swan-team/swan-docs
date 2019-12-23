@@ -86,4 +86,4 @@ sidebar: media_ar-camera
 * Tip：同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * Tip：请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
 * Tip：AR 相机支持 iPhone X 及以上机型显示 16：9 的比例；支持 iPhone X 以下机型显示全屏比例。
-* Tip：相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
+* Tip：相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/'>createARCameraContext</a>。
