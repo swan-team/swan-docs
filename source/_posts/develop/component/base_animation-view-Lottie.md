@@ -69,7 +69,7 @@ Page({
         status: '停止'
     },
     onShow(){
-        console.log('手百版本11.3以上才可使用');
+        console.log(' 百度 App版本11.3以上才可使用');
     },
     playLottie() {
         // 切换播放状态

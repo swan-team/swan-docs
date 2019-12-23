@@ -98,7 +98,7 @@ Page({
     4. npm 地址发生了变化，内容全屏发布器请安装 @smt-ui/content-component，在上文中有介绍；
     5. 修复了调不起 NA 版半屏发布器问题；
     6. 配合 NA 原生半屏发布器，将原组件的默认显示状态修改为默认隐藏状态，需要设置 show-publish 属性显示隐藏。
-* Bug：NA 半屏发布器在 IOS 手百版本 11.17 以下发表按钮无法点击。
-* Bug：组件半屏发布器使用的是 textarea，textarea 在 IOS 手百版本 11.17 以下，placeholder 和内容在滑动页面时不跟随页面滑动。textarea 在 Android 手百版本 11.18 以下 placeholder 文案过长溢出。
+* Bug：NA 半屏发布器在 IOS  百度 App版本 11.17 以下发表按钮无法点击。
+* Bug：组件半屏发布器使用的是 textarea，textarea 在 IOS  百度 App版本 11.17 以下，placeholder 和内容在滑动页面时不跟随页面滑动。textarea 在 Android  百度 App版本 11.18 以下 placeholder 文案过长溢出。
 
 

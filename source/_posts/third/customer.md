@@ -22,7 +22,7 @@ sidebar: customer
 
 ## 人脸识别调起二维码
 
-> 调用接口成功后,获得base64编码图片,使用手百扫码后可进入法人人脸识别认证
+> 调用接口成功后,获得base64编码图片,使用 百度 App扫码后可进入法人人脸识别认证
 
 ```
 GET https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen

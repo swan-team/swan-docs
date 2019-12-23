@@ -25,7 +25,7 @@ sidebar: productlaboratory_search
 
 ###  2.  已有H5资源替换  
 
-> 适用场景：适用于论坛站点已被搜索资源平台收录，且近期有点击量的情况。
+**适用场景**：适用于论坛站点已被搜索资源平台收录，且近期有点击量的情况。
 
 需通过正则表达式的方式声明 H5 链接与小程序路径间的对应关系，提交URL适配规则。示例如下：
 
@@ -84,7 +84,8 @@ pages/post-landpage/post-landpage?type=index&tid=1234
 ```
   帖子数据导出  
   
-1）limit 0, 500 => 导出第1-500条；SQL语句如下:
+1）limit 0, 500 => 导出第1-500条；SQL语句如下：
+
 ```
 	select tid from pre_forum_thread where displayorder >= 0 order by tid asc limit 0, 500;
 ```
@@ -93,7 +94,10 @@ pages/post-landpage/post-landpage?type=index&tid=1234
 
 ```
 	select tid from pre_forum_thread where displayorder >= 0 limit 500, 100;
-```	 
+```
+
+
+	 
   板块与帖子数据导出替换    
 
 将对应SQL查询出板块的fid，替换路径 `pages/plate-detail/plate-detail?fid=$fid` 中的fid，并拼接成完整的“路径+参数”后，再提交sitemap；  

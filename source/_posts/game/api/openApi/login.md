@@ -201,13 +201,13 @@ swan.getSwanId({
 
 > 基础库 swan-game.js 1.0.14 版本开始支持。
 
-获取手百登录状态。
+获取 百度 App登录状态。
 
 **返回参数说明：**
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  boolean | 手百登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  boolean |  百度 App登录状态 true: 已登录，false: 未登录  |
 
 **示例：**
 
