@@ -13,7 +13,7 @@ sidebar: lottie
 2. 设计师精彩示例及动效文件，详见 [设计社区](https://www.lottiefiles.com/) 。
 
 示例：
-<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/resource/lottie_demo.mov"/>
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/resource/lottie_demo.mov">
 你的浏览器不支持该视频播放
 </video>
 <p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
