@@ -41,15 +41,15 @@ sidebar: swan-getBatteryInfoSync
 
 **代码示例**
 
-<a href="swanide://fragment/aa9a635b35ca8ed5e8fe3b04bc950e881576120977385" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d8e0193122ed0e8d708f8d0a677000821577106966752" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中
 
 ```js
 let res = swan.getBatteryInfoSync();
 
-// 基础库 3.130.1 之前，无法判断接口是否调用失败
-// 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+// 基础库 3.140.1 之前，无法判断接口是否调用失败
+// 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
 if (!(res instanceof Error)) {
     console.log('当前设备电量值：', res.level);
     console.log('当前设备是否正在充电：', res.isCharging);
@@ -62,5 +62,5 @@ else {
 **Bug & Tip**
 
 * iOS 不可用时，返回值 level 为100， isCharging 为true。
-* 基础库 3.130.1 之前，无法判断接口是否调用失败。
-* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
+* 基础库 3.140.1 之前，无法判断接口是否调用失败。
+* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

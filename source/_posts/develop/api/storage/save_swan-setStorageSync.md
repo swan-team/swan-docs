@@ -35,7 +35,7 @@ sidebar: save_swan-setStorageSync
 
 **代码示例**
 
-<a href="swanide://fragment/dfa5a66bd1ab051b2db102de06627a951576123170767" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5146563edbf8593329266a8976c0b6931577107860591" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -86,8 +86,8 @@ Page({
         }
         let res = swan.setStorageSync(key, this.getData('value'));
 
-        // 基础库 3.130.1 之前，无法判断接口是否调用失败
-        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        // 基础库 3.140.1 之前，无法判断接口是否调用失败
+        // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
         if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
             this.toast('存储成功', 'none');
             this.setData('disabled', false);
@@ -106,8 +106,8 @@ Page({
         }
         let res = swan.getStorageSync(key);
 
-        // 基础库 3.130.1 之前，无法判断接口是否调用失败
-        // 基础库 3.130.1 及以后，通过 instanceof 来判断接口是否调用失败
+        // 基础库 3.140.1 之前，无法判断接口是否调用失败
+        // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
         if (!(res instanceof Error)) {
             console.log('getStorageSync success:', res);
             swan.showModal({
@@ -153,5 +153,5 @@ Page({
 
 **Bug & Tip**
 
-* 基础库 3.130.1 之前，无法判断接口是否调用失败。
-* 基础库 3.130.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
+* 基础库 3.140.1 之前，无法判断接口是否调用失败。
+* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
