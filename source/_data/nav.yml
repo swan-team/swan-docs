@@ -375,6 +375,10 @@
                 text: 论坛小程序开通指引
                 name: productlaboratory
               -
+                link: /introduction/productlaboratory_search
+                text: 自然搜索结果流量开通指引
+                name: productlaboratory_search                
+              -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
                 name: productlaboratory_ad
