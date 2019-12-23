@@ -15,7 +15,6 @@ sidebar: pre_testtool
 
 如下表所示，预检测会对小程序页面执行以下检测策略：
 
-<table style="margin-top: -1000px;">
 <table>
 <tr>
     <td>类别</td> 

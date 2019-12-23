@@ -187,7 +187,7 @@ web-view 网页中支持的接口有：
 
 
 | 接口模块               | 接口说明         | 具体接口  | 备注 | 
-| ----------------- | ---------- |
+| ----| ----|----|----|
 |设备| 拨打电话| <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/">swan.makePhoneCall</a> | | 
 |开放接口| 打开小程序| <a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#navigateToSmartProgram/">swan.navigateToSmartProgram</a> |2.0.18版本开始，支持使用envVersion打开不同版本的小程序| 
 |开放接口| 登录| <a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/">swan.login</a> | | 

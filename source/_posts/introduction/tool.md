@@ -20,4 +20,5 @@ sidebar: tool
 		<!-- <p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">边距过宽，页面元素过于集中。</p> -->
 	</div>
 </div>
+
 ![图片](../../img/introduction/register/11.png)<br/>
