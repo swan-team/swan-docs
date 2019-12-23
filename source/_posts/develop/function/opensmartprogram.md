@@ -18,7 +18,7 @@ URL Scheme是一种 App 间的调起协议。App 内部注册协议后，当用�
 
 ![图片](../../../img/web/opensmartprogram1.png)
 
-
+<table style="margin-top: -750px;">
 <table>
 <tr>
     <td></td>
