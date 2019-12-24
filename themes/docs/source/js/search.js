@@ -39,8 +39,9 @@ var navToSearch = function (keywords, tarckTag, scope) {
     window.open(`${origin}/forum/search?word=${keywords}&scope=${scope}&source=docs`, '_blank');
 };
 
-var navToDocs = function (path, keywords) {
+var navToDocs = function (path, keywords, number) {
     _hmt.push(['_trackEvent', 'sug跳出点击', keywords, 'devdocs']);
+    _hmt.push(['_trackEvent', 'sug跳出点击位置', number, keywords]);
     window.open(path, '_blank');
 };
 
@@ -51,15 +52,20 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
     if (!docsIsEmpty) {
         _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
         str += '<div class="top-search-sug-result">';
+        var listNumber = 0;
         resData.forEach(function (list) {
-            const docList = list.docList || [];
+            var docList = list.docList || [];
+            var listLen = docList.length;
+            listNumber += listLen;
             str += '<div class="top-search-sug-item">'
                 + `<div class="sug-item-broad-name">${list.boardInfo.name}</div>`
                 + '<ul>';
-            docList.forEach(function (item) {
+            docList.forEach(function (item, itemIndex) {
                 var path = `${origin}${item.path}`;
+                // 获取点击sug的位置
+                var number = listNumber - listLen + itemIndex + 1;
                 str += '<li>'
-                    + `<div class="sug-item-container" onclick="navToDocs('${path}', '${keywords}')">`
+                    + `<div class="sug-item-container" onclick="navToDocs('${path}', '${keywords}', ${number})">`
                     + ` <span class="sug-item-tag">${item.tagInfo.name}</span>`
                     + '<span class="sug-item-content">'
                     +     `<p class="sug-item-content-title">${item.title}</p>`;
