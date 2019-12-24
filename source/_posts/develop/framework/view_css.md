@@ -59,6 +59,61 @@ CSS 是描述 SWAN 的样式语言。支持 CSS 的属性。
 <!--在iPhoneX等机型下，该view节点会自动获得一个“padding-bottom:34px”的样式-->
 ```
 
+### 内联样式
+
+内联样式与Web开发一致,且支持动态更新
+
+**代码示例**
+
+```xml
+<view style="color: {{eleColor}}; font-size: {{eleFontsize}}"> swan </view>
+```
+
+```js
+Page({
+    data: {
+        eleColor: 'red',
+        eleFontsize: '48rpx'
+    }
+});
+```
+
+### 选择器权重
+
+权重越高越优先。在优先级相同的情况下，后设置的样式优先级高于先设置的样式。
+
+**代码示例**
+
+<a href="swanide://fragment/cce33f29c0c7ede9cabc2912232320931577177401032" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```css
+view{ 
+    // 权重为 1
+  color: blue
+}
+
+.ele{ 
+    // 权重为 10
+  color: red
+}
+
+#ele{ 
+// 权重为 100
+  color: pink
+}
+
+view#ele{ 
+// 权重为 1 + 100 = 101，优先级最高，元素颜色为orange
+  color: orange
+}
+
+view.ele{ 
+// 权重为 1 + 10 = 11
+  color: green
+}
+```
+
+
 **说明**：
 * 使用时请注意 box-sizing 属性为非默认值的场景；
 * 手机百度客户端版本11.0开始支持iPhoneX，11.0.5开始支持iPhoneXS iPhoneXSMax iPhoneXR。
