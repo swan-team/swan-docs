@@ -40,6 +40,14 @@ sidebar: dev
 <text class="wrap">hello world</text>
 <text Class="wrap">hello world</text>
 ```
+
+一个文件夹可以有两个swan文件
+
+**代码示例**
+
+<a href="swanide://fragment/0c014f956ee234f3d245f1b84f71bb611577174698837" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
 <br/>
 ### 基础数据绑定
 
