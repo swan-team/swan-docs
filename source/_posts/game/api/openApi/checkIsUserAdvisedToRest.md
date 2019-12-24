@@ -6,6 +6,41 @@ categoryName: api
 priority: 01-08
 ---
 
+### swan.getAntiAddiction()
+
+**根据国家政策制定防沉迷接口**
+
+> 基础库 swan-game.js 1.17.0 版本开始支持。
+
+防沉迷接口为响应国家政策，对于游戏玩家做防沉迷逻辑；开发者注册此方法，当触发防沉迷条件时，调用开发者的回调方法，传递防沉迷原因以及信息，通知开发者对于游戏逻辑做防沉迷处理
+
+**事件**: `onAntiAddiction(callback)`
+
+参数：`callback`为触发了防沉迷方法时的回调方法，该方法的参数为：
+
+|属性|类型|描述|
+|-|-|-|
+|state|number|防沉迷错误原因代码|
+|msg|string|具体的管控信息|
+
+`state`的有效值
+
+|值|描述|
+|-|-|
+|10001|需要限制游戏（非法定节假日游戏时间限制1.5小时）|
+|10002|需要限制游戏（法定节假日游戏时间限制3小时）|
+|10003|需要限制游戏（当前时间22:00 - 8:00）|
+
+**示例：**
+
+```js
+let api = swan.getAntiAddiction();
+api.onAntiAddiction(function ({state, msg}) {
+    console.log("state: ", state);
+    console.log("msg: ", msg);
+});
+```
+
 ### swan.checkIsUserAdvisedToRest()
 
 该接口根据用户当天单个游戏累计时间是否超过 5 小时，判断用户是否需要休息；如果累计时间大于等于 5 小时，则建议用户休息。

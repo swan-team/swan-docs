@@ -233,7 +233,7 @@
                   -
                     link: /introduction/rank_delete
                     text: 资源删除功能介绍
-                    name: rank_delete             
+                    name: rank_delete
                   -
                     link: /introduction/rank_road
                     text: 资源下线退场通路
@@ -241,7 +241,7 @@
                   -
                     link: /introduction/rank_faq
                     text: 搜索流量接入FAQ
-                    name: rank_faq                    
+                    name: rank_faq
               -
                 link: /introduction/OpenCard
                 text: 接入OpenCard
@@ -374,6 +374,10 @@
                 link: /introduction/productlaboratory
                 text: 论坛小程序开通指引
                 name: productlaboratory
+              -
+                link: /introduction/productlaboratory_search
+                text: 自然搜索结果流量开通指引
+                name: productlaboratory_search                
               -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
@@ -908,7 +912,7 @@
               -
                 link: /develop/framework/modelviewer
                 text: modelviewer 动态库-Beta
-                name: modelviewer                                                                
+                name: modelviewer
         -
           link: /develop/framework/subpackages
           text: 性能
@@ -1218,14 +1222,14 @@
     #         sidebar:
     #           -
     #             link: /develop/extended/component-content/like
-    #             text: 点赞组件 
-    #             name: like                                
+    #             text: 点赞组件
+    #             name: like
     #     -
     #         sidebar:
     #           -
     #             link: /develop/extended/component-content/concern
     #             text: 关注组件
-    #             name: concern           
+    #             name: concern
     -
       text: API
       name: api
@@ -3409,9 +3413,9 @@
                 text: 开发者服务权限说明
                 name: power_exp
               -
-                 
+
                 text: 风控服务
-                 
+
                 sidebar:
                   -
                     link: /develop/serverapi/open_risk_power
@@ -3421,8 +3425,8 @@
                     link: /develop/serverapi/open_risk_power_detectrisk
                     text: detectrisk
                     name: open_risk_power_detectrisk
-              -               
-                text: 小程序二维码                
+              -
+                text: 小程序二维码
                 sidebar:
                   -
                     link: /develop/serverapi/get
@@ -3805,13 +3809,13 @@
                         text: element.attribute
                         name: attribute
                       -
-                        link: /develop/devtools/auto/element/innerHTML
-                        text: element.innerHTML
-                        name: innerHTML
+                        link: /develop/devtools/auto/element/swan
+                        text: element.swan
+                        name: swan
                       -
-                        link: /develop/devtools/auto/element/outerHTML
-                        text: element.outerHTML
-                        name: outerHTML
+                        link: /develop/devtools/auto/element/outerSwan
+                        text: element.outerSwan
+                        name: outerSwan
                       -
                         link: /develop/devtools/auto/element/value
                         text: element.value
@@ -4644,7 +4648,7 @@
           -
             link: /data/host_scene
             text: 开源宿主场景值
-            name: host_scene           
+            name: host_scene
 # 5
 -
   link: /operations/specification
@@ -4757,12 +4761,12 @@
 
 # 6
 -
-  link: third/create
+  link: /third/create
   text: 第三方平台
   name: third
   nav:
     -
-      link: third/create
+      link: /third/create
       text: 快速入门
       name: book
       sidebar:
@@ -4785,7 +4789,7 @@
               text: 第三方平台发布检测
               name: publication
     -
-      link: third/pro
+      link: /third/pro
       text: 接口说明
       name: book
       sidebar:

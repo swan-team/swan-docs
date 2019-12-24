@@ -186,6 +186,23 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 ```
 <br>
 
+**代码示例 - 错误写法**
+
+json文件看起来同 JavaScript 的对象表达方式十分相似，但是有所不同。
+
+JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时候，忘了给 Key 值加双引号或者是把双引号写成单引号是常见错误。
+```json
+{
+    window: {
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "swan接口功能演示",
+	"backgroundColor": "#eeeeee",
+	"backgroundTextStyle": "light"
+    }
+}
+```
+
 ### tabBar
 
 用于设置客户端底部的tab栏：可通过tabBar设置tab的颜色、个数、位置、背景色等内容。

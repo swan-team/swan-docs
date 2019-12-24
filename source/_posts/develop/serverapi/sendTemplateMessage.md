@@ -24,7 +24,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 **名词解释：**
 
 - swan_id：百度生成的与设备相关的唯一标识，APP卸载重安装不会变，详见 [swanid机制说明](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)
-- open_id：百度用户登录唯一标识，详见 [开放接口-登录](https://smartprogram.baidu.com/docs/develop/api/open_log/)
+- open_id：百度用户登录唯一标识，详见 [开放接口-登录](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/)
 - formId：页面内form组件的`report-submit`属性为true时返回formid，详见 [form表单](https://smartprogram.baidu.com/docs/develop/component/formlist_form/)
 
 **公共请求参数**:
@@ -64,13 +64,13 @@ ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           
 
  - scene_id最后一位是 1 代表登录状态, 最后一位是 0 代表未 登录游客状态
 
- - 通过[swan.isLoginSync](http://smartprogram.baidu.com/docs/develop/api/open_log/#swan-isLoginSync/) API可以判断当前用户是否为 登录状态
+ - 通过[swan.isLoginSync](https://smartprogram.baidu.com/docs/develop/api/open/log_swan-isLoginSync/) API可以判断当前用户是否为 登录状态
 
 3. 如何获取swan\_id & open\_id？
 
- - 获取swan\_id：详见 [swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swan-getSwanId/)
+ - 获取swan\_id：详见 [swan.getSwanId](https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getSwanId/)
 
- - 获取open\_id：详见 [ 登录](https://smartprogram.baidu.com/docs/develop/api/open_log/) 文档中获取登录用户OpenId相关内容
+ - 获取open\_id：详见 [ 登录](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/) 文档中获取登录用户OpenId相关内容
 
 
 ### 模板消息开发流程图：

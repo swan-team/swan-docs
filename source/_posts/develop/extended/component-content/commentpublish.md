@@ -16,7 +16,7 @@ sidebar: commentpublish
 |---|---|---|---|---|
 |show-publish|Boolean|是|false|NA 和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
 |content-placeholder|String|否|NA 和组件版支持，请输入内容|提示占位文案|
-|module-list|Array|否||仅 NA 版支持，显示模块 list，参见[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)|
+|module-list|Array|否||仅 NA 版支持，显示模块 list|
 |emoji-path|String|否||仅NA版支持，设置自定义表情配置路径|
 |foucs|Boolean|否|false|仅组件版支持，true 代表调起，false 则不调起|
 |is-upLoad-image|Boolean|否|false|仅组件版支持，是否展示上传图片按钮|
@@ -38,6 +38,38 @@ sidebar: commentpublish
 |bind:close|EventHandle|||仅NA版支持，点击空白处关掉发布器的回调，相当于NA版success成功回调中status为draft的状态|
 |bind:previewimage|EventHandle|||仅组件版支持，点击输入框中已经上传的图片时触发的事件(NA版不支持，降级版支持)|
 
+*由于此组件对原生NA半屏发布器进行了包装，所以需要透传NA发布器的一些参数，同时会返回一些原生发布器的状态，但部分会有一些差异，本文档中都有描述，如还有疑问也可以参考[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)
+
+**relasecomment返回参数说明**：
+
+|参数名 |类型 | 说明|
+|---- | ---- | ---- |
+| inputValue  | String |正文输入框中的内容，如果获取不到说明NA发布器调起失败|
+| uploadImgUrl  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
+
+
+**moduleList 列表**：
+若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
+如：`moduleList: ['image']` 则只展示图片模块。
+
+|moduleList| 类型 |描述|
+|---|---|---|
+|image|String|图片模块|
+|emoji|String|表情模块|
+
+
+**emojiPath 参数说明**：
+
+开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
+
+自定义表情资源文件夹格式：
+文件夹中包括：`emoji.json` 和所有表情图片资源。外层文件夹名字可以由开发者自由定义，路径配置在 emojiPath 中即可，`emoji.json` 为固定文件名，请开发者按格式创建。表情没有数量和大小限制，但是表情资源会占用包体大小。
+
+![图片](../../../../img/api/community_editor/emoji_path.jpg)
+
+`emoji.json` 格式：
+
+![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
 
 **代码示例**
@@ -98,7 +130,7 @@ Page({
     4. npm 地址发生了变化，内容全屏发布器请安装 @smt-ui/content-component，在上文中有介绍；
     5. 修复了调不起 NA 版半屏发布器问题；
     6. 配合 NA 原生半屏发布器，将原组件的默认显示状态修改为默认隐藏状态，需要设置 show-publish 属性显示隐藏。
-* Bug：NA 半屏发布器在 IOS 手百版本 11.17 以下发表按钮无法点击。
-* Bug：组件半屏发布器使用的是 textarea，textarea 在 IOS 手百版本 11.17 以下，placeholder 和内容在滑动页面时不跟随页面滑动。textarea 在 Android 手百版本 11.18 以下 placeholder 文案过长溢出。
+* Bug：NA 半屏发布器在 IOS  百度 App版本 11.17 以下发表按钮无法点击。
+* Bug：组件半屏发布器使用的是 textarea，textarea 在 IOS  百度 App版本 11.17 以下，placeholder 和内容在滑动页面时不跟随页面滑动。textarea 在 Android  百度 App版本 11.18 以下 placeholder 文案过长溢出。
 
 

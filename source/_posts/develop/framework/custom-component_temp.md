@@ -87,7 +87,7 @@ sidebar: custom-component_temp
 ```
 
 #### slot指令应用
-**<div class="notice">**解释:**
+**解释:**
 在 slot 声明时应用 if 或 for 指令，可以让插槽根据组件数据动态化。
 **代码示例**
 ```xml

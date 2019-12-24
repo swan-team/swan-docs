@@ -207,7 +207,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
- 
+
 **请求示例** 
 
 ```shell
@@ -257,7 +257,7 @@ curl -X POST \
 | errno | integer | 状态码   | 40001    |
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
- 
+
 **请求示例** 
 
 ```shell
@@ -363,9 +363,10 @@ curl -X POST \
 ```
 
  **小程序状态变更推送**
->当小程序暂停服务、重新启用、强制下线时通知TP
+>当小程序暂停服务、重新启用、强制下线、限时整改、流量下线时通知TP
 >暂停服务、重新启用会通知小程序授权基本信息设置权限的TP
 >强制下线会通知小程序授权任意权限的TP
+>限时整改、流量下线会通知小程序开发管理权限的TP
 >推送接收地址为消息与事件接收URL
 
 ```json
@@ -387,7 +388,7 @@ curl -X POST \
 appId |int | 小程序appid
 tpAppId |int | 第三方平台id
 eventTime |string | 事件发生时间
-event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用
+event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用<br>TIME_LIMIT_RECTIFY_NOTIFY 小程序限时整改通知<br>FLOW_CLOSE_NOTIFY 小程序流量下线通知 
 
 > 当 event 为 APP\_FORCE\_OFFLINE 时会多出以下一些内容
 
@@ -396,6 +397,96 @@ event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 
 reason |string | 强制下线原因描述
 offlineReason |int | 强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线<br> 3:基本信息和代码包强制下线
 illegalFields |string | 强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有
+
+## 申请恢复流量下线
+
+> 当小程序涉及违规行为被流量下线后，若具体违规问题可通过热更新方式修改，无需重新提交代码包、基本信息审核时，可在修复问题后通过此API申请恢复流量下线。
+
+```
+POST https://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery
+```
+**公共请求参数** 
+
+| 参数         | 类型   | 是否必填 | 描述            | 示例值 |
+| ------------ | ------ | -------- | --------------- | ------ |
+| access_token | string | 是       | 授权小程序Token | --     |
+
+**请求参数** 
+
+|参数名|	类型|	是否必须|	描述|
+|---|---|---|---|
+|audit_desc|	string|	是| 申请恢复流量下线提交审核描述，字数限制在 1 - 100 之间 |
+
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**请求示例** 
+
+```shell
+curl -X POST \
+  'http://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&audit_desc=%E5%AE%A1%E6%A0%B8%E6%8F%8F%E8%BF%B0%E4%BF%A1%E6%81%AF' \
+```
+
+
+
+**响应示例** 
+
+```json
+{
+    "errno": 0,
+    "msg": "success"
+}
+```
+
+**错误码说明**：
+
+|错误码 | 错误描述 |
+|----- |-----|
+|30007|当前登录账号无操作权限|
+|40028|未查询到主体信息|
+|40032|未查询到线上包或者审核通过的包|
+|40045|小程序状态不正确|
+
+**审核结果推送**
+
+**当审核成功/失败时，百度服务器会向第三方平台方的消息事件接收URL（创建第三方平台时填写）推送相关通知。**
+
+| 参数名    | 类型   | 描述                                                         |
+| --------- | ------ | ------------------------------------------------------------ |
+| appId     | int    | 小程序客户Id                                                 |
+| tpAppId   | int    | 第三方平台appId                                              |
+| event     | string | BASE\_INFO\_OFFLINE\_AUDIT\_SUCCESS:审核通过<br> BASE\_INFO\_OFFLINE\_AUDIT\_FAIL:审核失败 |
+| eventTime | string | 事件发生时间 示例：2019-03-01 10:00:00                       |
+| reason    | string | 失败原因                                                     |
+
+**审核成功事件推送内容**:
+
+```json
+{
+    "appId":15263713,
+    "tpAppId": 14242323,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "FLOW_CLOSE_AUDIT_PASS"
+}
+```
+
+**审核失败事件推送内容**
+
+```json
+{
+    "appId":15263713,
+    "tpAppId": 14242323,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "FLOW_CLOSE_AUDIT_FAIL",
+    "reson":"审核失败原因"
+}
+```
+
 
 ## 二维码
 
@@ -529,7 +620,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion
 | msg   | string  | 状态描述 | 参数错误 |
 | data  | object  | 响应参数 | --       |
 
- 
+
 **请求示例** 
 
 ```shell

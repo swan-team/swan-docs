@@ -937,7 +937,7 @@
     $(doc).ready(function () {
         docs.start();
         try {
-            $('.m-doc-sidebar-selected')[0].scrollIntoView();
+            $('.m-doc-sidebar-selected')[0].scrollIntoView({block: 'center'});
         }
         catch (err) {}
     });

@@ -25,7 +25,7 @@ sidebar: useintroduction
 
 用户通过百度收银台支付后，开发者可以通过收银台「通知支付状态」接口中获取到[orderId](https://smartprogram.baidu.com/docs/develop/function/tune_up_notice/) ，用于发送支付类模板消息。
 
-接入百度收银台流程详见 [百度收银台支付](https://smartprogram.baidu.com/docs/develop/api/open_payment/)
+接入百度收银台流程详见 [百度收银台支付](https://smartprogram.baidu.com/docs/introduction/pay/)
 
 **payId**
 
@@ -35,13 +35,13 @@ sidebar: useintroduction
 
 **formid**
 
-页面内的 [< form/>](https://smartprogram.baidu.com/docs/develop/component/formlist/#form/)组件，当属性`report-submit`为**true**，且属性`report-type`为**defalut**（默认）时，可以声明为需发送表单类消息，此时用户点击按钮提交表单，可以获取用于发送表单消息的表单**formId**
+页面内的 [< form/>](https://smartprogram.baidu.com/docs/develop/component/formlist_form/)组件，当属性`report-submit`为**true**，且属性`report-type`为**defalut**（默认）时，可以声明为需发送表单类消息，此时用户点击按钮提交表单，可以获取用于发送表单消息的表单**formId**
 
 ### 订阅类消息：通过form组件获取订阅 formId
 
 **formid**
 
-页面内的 [< form/>](https://smartprogram.baidu.com/docs/develop/component/formlist/#form/)组件，当属性`report-submit`为**true**，且属性`report-type`为**subscribe**时，可以声明为需发送订阅类消息，此时用户点击按钮，首先弹出授权面板，用户授权成功后可以获取用于发送订阅类消息的订阅**formId**
+页面内的 [< form/>](https://smartprogram.baidu.com/docs/develop/component/formlist_form/)组件，当属性`report-submit`为**true**，且属性`report-type`为**subscribe**时，可以声明为需发送订阅类消息，此时用户点击按钮，首先弹出授权面板，用户授权成功后可以获取用于发送订阅类消息的订阅**formId**
 
 
 ## 步骤三：调用接口下发模板消息

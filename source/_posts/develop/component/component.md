@@ -13,8 +13,8 @@ sidebar: component
 |---- | ---- |
 |<a href="/develop/component/view_view/">view</a>  | 视图容器，相当于 html 中的 div ，可将页面分割为独立的、不同的部分。如果需要使用滚动视图，请使用 [scroll-view](/develop/component/view_scroll-view/)。 |
 |<a href="/develop/component/view_scroll-view/">scroll-view</a>| 可滚动视图区域，可实现横向滚动和竖向滚动。使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。 |
-|<a href="/develop/component/view_swiper/">swiper</a> |滑块视图容器。内部只允许使用<swiper-item>组件描述滑块内容，否则会导致未定义的行为。 |
-|<a href="/develop/component/view_swiper-item/">swiper-item</a> |滑块视图容器子项，仅可放置在<swiper>组件中，宽高自动设置为100%。 |
+|<a href="/develop/component/view_swiper/">swiper</a> |滑块视图容器。内部只允许使用&lt;swiper-item&gt;组件描述滑块内容，否则会导致未定义的行为。 |
+|<a href="/develop/component/view_swiper-item/">swiper-item</a> |滑块视图容器子项，仅可放置在&lt;swiper&gt;组件中，宽高自动设置为100%。 |
 |<a href="/develop/component/view_movable-view/">movable-view</a>|可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。|
 |<a href="/develop/component/view_movable-area/">movable-area</a>|可移动视图区域，movable-view 的可移动区域|
 |<a href="/develop/component/view_cover-view/">cover-view</a>| 文本视图，覆盖在原生组件之上，只支持嵌套cover-view、cover-image组件。|
