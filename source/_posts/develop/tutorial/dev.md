@@ -164,6 +164,46 @@ Page({
 });
 ```
 
+属性值也可以动态的去改变，有所不同的是，属性值必须被包裹在双引号中, 且引号可加可不加
+
+**代码示例**
+
+```xml
+<view data-swan={{test}} bind:tap="viewtap">dataset-test</view>
+// 同<view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
+```
+
+```javascript
+Page({
+    data: {
+        test: 1
+    },
+    viewtap: function (event) {
+	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
+    }
+});
+```
+
+需要注意的是变量名是大小写敏感的，也就是说 {{test}} 和 {{Test}} 是两个不同的变量。
+
+**代码示例**
+
+```xml
+<view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
+```
+
+```javascript
+Page({
+    data: {
+        test: 1,
+        Test: 2
+    },
+    viewtap: function (event) {
+	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
+    }
+});
+```
+
 #### touches
 
 开发者在接收到触摸类事件后，在事件对象上，可以接收到当前停留在屏幕上的触摸点。
