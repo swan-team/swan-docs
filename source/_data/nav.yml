@@ -4368,6 +4368,26 @@
               text: 图文详情页
               name: content-detail
 
+        -
+          text: 功能类库
+          sidebar:
+            -
+              link: /develop/extensions/smt-md5
+              text: smt-md5
+              name: smt-md5
+            -
+              link: /develop/extensions/smt-observer
+              text: smt-observer
+              name:  smt-observer
+            -
+              link: /develop/extensions/smt-swanx
+              text: smt-swanx
+              name: smt-swanx
+            -
+              link: /develop/extensions/smt-mobx
+              text: smt-mobx
+              name:  smt-mobx
+
     -
       text: 功能开发
       name: function
