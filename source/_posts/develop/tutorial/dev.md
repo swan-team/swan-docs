@@ -30,6 +30,16 @@ sidebar: dev
 </view>
 
 ```
+标签可以拥有属性，需要注意的是，swan中的属性是大小写敏感的，也就是说 class 和 Class 在swan中是不同的属性
+
+**代码示例**
+
+<a href="swanide://fragment/f3eb1480251c3c257088cedbf7c727a81577170508891" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<text class="wrap">hello world</text>
+<text Class="wrap">hello world</text>
+```
 <br/>
 ### 基础数据绑定
 
