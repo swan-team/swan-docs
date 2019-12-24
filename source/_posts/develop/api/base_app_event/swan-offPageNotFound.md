@@ -11,8 +11,11 @@ sidebar: swan-offPageNotFound
 
 ##  方法参数
 
-   Function callback | 无
-小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。
+### 参数说明
+
+|属性名|	类型|	默认值|	必填|	说明|
+|----|----|----|----|----| 
+|callback|   Function  | 无||小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。|
 
 ## 代码示例
 
