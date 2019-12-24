@@ -40,11 +40,11 @@ sidebar: commentpublish
 
 *由于此组件对原生NA半屏发布器进行了包装，所以需要透传NA发布器的一些参数，同时会返回一些原生发布器的状态，但部分会有一些差异，本文档中都有描述，如还有疑问也可以参考[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)
 
-**relasecomment返回参数说明**：
+**relasecomment/browsemode/error返回草稿内容说明**：
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
-| inputValue  | String |正文输入框中的内容，如果获取不到说明NA发布器调起失败|
+| inputValue  | String |正文输入框中的内容|
 | uploadImgUrl  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
 
