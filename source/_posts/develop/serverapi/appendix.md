@@ -121,7 +121,7 @@ sidebar: appendix
 |参数名|类型|说明|是否必填|示例|
 |---|---|---|---|---|
 |author_name|	string|	作者名|	否|张三|
-|author_portrait_url	|string	|	作者头像url|否|	`http://www.xxx.baidu.com/author/portrail.jpg`|
+|author_portrait_url	|string	|	作者头像url|否|	`https://www.xxx.baidu.com/author/portrail.jpg`|
 |author_path|	string|	作者落地页链接|		否|/pages/author/author|
 |author_fans_num|	int	|作者粉丝量|	否|	1000|
 |author_publish_num|	int	|作者发文量|	否|1000|
@@ -160,7 +160,7 @@ sidebar: appendix
 { 
  "publish_time":"2019年6月3日”, 
  "video_duration":"03:43",
- "pc_url":"http://v.youku.com/v_show/id_XNDIxNDI4NTE4OA==.html",
+ "pc_url":"https://v.youku.com/v_show/id_XNDIxNDI4NTE4OA==.html",
  "h5_url":"https://m.youku.com/video/id_XNDIxNDI4NTE4OA==.html"
 }
 ```

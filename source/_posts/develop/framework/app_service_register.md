@@ -76,7 +76,7 @@ App({
 |referrerInfo.extraData|Object|	来源小程序传过来的数据。|
 
 **名词解释:**
-- 场景值: 智能小程序被打开时，其来源渠道的标识（例如: 从百度搜索结果打开、从百度信息流打开），开发者可以利用该字段统计小程序在什么场景下被打开，<a href="http://smartprogram.baidu.com/docs/data/scene/" target="_blank">更多场景值</a>；
+- 场景值: 智能小程序被打开时，其来源渠道的标识（例如: 从百度搜索结果打开、从百度信息流打开），开发者可以利用该字段统计小程序在什么场景下被打开，<a href="https://smartprogram.baidu.com/docs/data/scene/" target="_blank">更多场景值</a>；
 - 调起协议: 宿主（例如百度App）用于识别一个小程序被打开时的初始化信息（例如: 小程序的appKey、path、query等），由该类信息构成的一个协议。
 
 

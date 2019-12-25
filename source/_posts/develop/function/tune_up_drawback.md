@@ -79,7 +79,7 @@ sidebar: tune_up_drawback
 * 入参(REQUEST) DEMO：
 
 ```
-http://xxx.tpbusiness.xxx/notifyRefundRes?orderId=800020199&refundBatchId=100058888&refundStatus=1&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
+https:://xxx.tpbusiness.xxx/notifyRefundRes?orderId=800020199&refundBatchId=100058888&refundStatus=1&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 
 * 返回(RESPONSE) DEMO:

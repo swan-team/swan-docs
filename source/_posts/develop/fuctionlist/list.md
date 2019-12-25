@@ -6,7 +6,7 @@ sidebar: list
 ---
  
 
-欢迎使用百度智能小程序，本文档为您提供[快速入门](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](http://smartprogram.baidu.com/docs/develop/component/componetlist/)、[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方平台](https://smartprogram.baidu.com/docs/third/pro/)等详细的文档的介绍。
+欢迎使用百度智能小程序，本文档为您提供[快速入门](https://smartprogram.baidu.com/docs/develop/tutorial/demo/)、[框架](https://smartprogram.baidu.com/docs/develop/framework/app_service/)、[组件](https://smartprogram.baidu.com/docs/develop/component/componetlist/)、[API](https://smartprogram.baidu.com/docs/develop/api/apilist/)、[服务端 API](https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/) 、[工具](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)、[第三方平台](https://smartprogram.baidu.com/docs/third/pro/)等详细的文档的介绍。
 如果您在使用过程中有任何疑问，欢迎及时[反馈](https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp)。
 
 > 对于有其它小程序开发经验的开发者，我们还提供了其它[开发解决方案](https://smartprogram.baidu.com/docs/develop/tutorial/move/)。

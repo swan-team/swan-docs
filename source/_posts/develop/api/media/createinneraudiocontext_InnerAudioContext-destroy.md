@@ -51,7 +51,7 @@ Page({
     },
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.onEnded(() => {
 
@@ -62,7 +62,7 @@ Page({
         // 在实际项目中，若一个页面有两种形式的语音播放，如：一个是播放语音列表里的语音，一个是预听待提交的语音。这两种的onPlay和onEnd回调内部执行的不一样，不可能在onLoad里面用同一个回调,所以需要创建两个innerAudioContext实例对象时，可在当前音频播放结束的onEnd的回调事件里面和音频播放错误onError回调事件里，调用destory方法销毁该实例。
         createInnerAudioContextTask = new Promise((resolve, reject) => {
             const innerAudioContext = swan.createInnerAudioContext();
-            innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+            innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
             innerAudioContext.autoplay = false;
             innerAudioContext.onEnded(() => {
                 innerAudioContext.destroy();

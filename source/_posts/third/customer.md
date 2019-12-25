@@ -56,7 +56,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
 ```
 
 
@@ -109,7 +109,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/auth/paymentCertification
 
 ```shell
 curl -X GET \
-  'http://{{openapiHTTP}}/rest/2.0/smartapp/auth/paymentCertification?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
+  'https://{{openapiHTTP}}/rest/2.0/smartapp/auth/paymentCertification?access_token=45.f1f396c856279f33cd17580c29ffcc8a.3600.1558582178.ZMHOZl6h9xbNoKOOv3trh0g_-m6tAQo-1W3JTSQkkj5RZ9lgfC' \
 ```
 
 
@@ -121,7 +121,7 @@ curl -X GET \
     "errno": 0,
     "msg": "success",
     "data": {
-          "url": "http://auth.baidu.com/thrones/auth/acctcheck?officialid=OFFICIALID&appkey=APPKEY&token=TOKEN",
+          "url": "https://auth.baidu.com/thrones/auth/acctcheck?officialid=OFFICIALID&appkey=APPKEY&token=TOKEN",
     }
 }
 ```

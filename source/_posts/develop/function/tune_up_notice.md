@@ -90,7 +90,7 @@ isConsumed字段参数枚举值如下：
 #### 通知触发条件 
 
 用户支付成功，通过了各项支付后校验之后，会调用此接口，将支付信息同步给业务方。<br />
-> 如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单；业务方接口的耗时要求小于2s。（超过2s会触发平台的超时重试，每2分钟/次，共计200次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）。  <br />
+> 如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单；业务方接口的耗时要求小于2s。（超过2s会触发平台的超时重试，每2分钟/次，共计200次，回调失败订单会保持“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产）。  <br />
 
 #### 业务方服务器通知参数获取 
 
@@ -123,7 +123,7 @@ Java服务推荐参数获取方式：@RequestParam(value="xxx")
 * 入参(REQUEST) DEMO：
 
 ```
-http://xxx.tpbusiness.xxx/SyncPayInfo?userId=149235070&orderId=800020199&unitPrice=800&count=2&totalMoney=1600&payMoney=1200&promoMoney=100&hbMoney=100&hbBalanceMoney=100&giftCardMoney=100&dealId=7423328&payTime=1463037529&promoDetail=&payType=9101&partnerId=1000000003&status=2&tpOrderId=33330020199&returnData=&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
+https://xxx.tpbusiness.xxx/SyncPayInfo?userId=149235070&orderId=800020199&unitPrice=800&count=2&totalMoney=1600&payMoney=1200&promoMoney=100&hbMoney=100&hbBalanceMoney=100&giftCardMoney=100&dealId=7423328&payTime=1463037529&promoDetail=&payType=9101&partnerId=1000000003&status=2&tpOrderId=33330020199&returnData=&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 
 <br />

@@ -39,7 +39,7 @@ sidebar: tune_up
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
 |rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId`进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
-|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
+|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](https://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  
 **代码示例**
