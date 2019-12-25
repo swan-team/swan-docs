@@ -17,7 +17,7 @@ A：当前我们提供方式可以查询到您指定地点的经纬度
 
 * 使用地图拾取器
 
-    1. [百度地图拾取器](http://api.map.baidu.com/lbsapi/getpoint/index.html)：坐标系BD09，不能直接用于小程序，需要开发者转换为GCJ02。后期小程序优化后可以支持该坐标系。      
+    1. [百度地图拾取器](https://api.map.baidu.com/lbsapi/getpoint/index.html)：坐标系BD09，不能直接用于小程序，需要开发者转换为GCJ02。后期小程序优化后可以支持该坐标系。      
 
     2. [腾讯地图拾取器](https://lbs.qq.com/tool/getpoint/)：坐标系GCJ02，可直接使用。
 

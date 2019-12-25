@@ -36,7 +36,7 @@ sidebar: app_service_register
 前台、后台：当用户点击右上角的关闭，或者按了设备的 Home 键离开智能小程序，智能小程序没有直接销毁，而是进入到了后台；当再次进入智能小程序，又会从后台进入前台。
 
 **注意:**
-只有在以下情况小程序才可能会被动销毁，参考[运行机制](http://smartprogram.baidu.com/docs/develop/framework/operating-mechanism/):
+只有在以下情况小程序才可能会被动销毁，参考[运行机制](https://smartprogram.baidu.com/docs/develop/framework/operating-mechanism/):
 - 进入后台超过5分钟；
 - 系统资源占用过高；
 - 打开小程序数量超过系统支持上限(系统按照小程序被打开的先后顺序进行销毁)。
@@ -67,7 +67,7 @@ App({
 
 |字段  |类型  |说明  |
 |---- | ---- | ---- |
-|scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/" target="_blank">场景值</a>，scene值统一由百度小程序场景值管理中心在B端平台统一配置后下发到宿主（例如百度App），调起协议中会携带相应入口的scene值。|
+|scene | String | 打开智能小程序的<a href="https://smartprogram.baidu.com/docs/data/scene/" target="_blank">场景值</a>，scene值统一由百度小程序场景值管理中心在B端平台统一配置后下发到宿主（例如百度App），调起协议中会携带相应入口的scene值。|
 |path|String|打开小程序的路径。|
 |query|Object|打开当前页面路径中的参数。|
 |shareTicket|String|标记转发对象。|

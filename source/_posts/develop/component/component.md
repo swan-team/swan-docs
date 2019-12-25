@@ -44,7 +44,7 @@ sidebar: component
 |<a href="/develop/component/media_image/">image</a>|图片，image 组件默认宽度 300px、高度 225px。|
 |<a href="/develop/component/media_audio/">audio</a>|音频|
 |<a href="/develop/component/media_video/">video</a>|视频，v3.70.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。|
-|<a href="/develop/component/media_camera/">camera</a>|相机，使用该组件需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。|
+|<a href="/develop/component/media_camera/">camera</a>|相机，使用该组件需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。|
 |<a href="/develop/component/media_ar-camera/">ar-camera</a>|AR 相机，在 [DuMixAR 内容开放平台](http://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。|
 |<a href="/develop/component/media_live-player/">live-player</a>|实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。|
 |<a href="/develop/component/map/">map</a>|地图，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。|

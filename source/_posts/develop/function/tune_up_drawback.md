@@ -21,7 +21,7 @@ sidebar: tune_up_drawback
 
 4. 订单状态同步：商家收到通知退款状态回调切严格按照文档提示返回参数，后台订单状态才会同步且显示“已退款”；
 
->如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。 
+>如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。 
 
 ### 通知参数说明 
 

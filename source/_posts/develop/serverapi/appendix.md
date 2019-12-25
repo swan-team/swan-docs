@@ -89,7 +89,7 @@ sidebar: appendix
 |参数名|类型|说明|是否必填|示例|
 |---|---|---|---|---|
 |author_name|	string|	作者名|否|	张三|
-|author_portrait_url|	string|作者头像url|否|`	http://www.xxx.baidu.com/author/portrail.jpg`|
+|author_portrait_url|	string|作者头像url|否|`	https://www.xxx.baidu.com/author/portrail.jpg`|
 |author_path|	string|	作者落地页链接|	否|/pages/author/author|
 |author_fans_num|	int	|作者粉丝量|否|10000|
 |author_auth|	string|	是否认证作者	|否|1-是 0-否 |

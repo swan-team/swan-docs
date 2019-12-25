@@ -18,10 +18,10 @@ sidebar: tune_up_notice
 
 3. 返回值判断：errno为0表示商户已经成功收到支付信息，并妥善处理，errno不为0将认为是同步支付信息失败，当同步支付信息失败时，平台会发起重试，每2分钟/次，共计200次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产；
 
-4. 回调地址服务器部署：如果回调接口部署在阿里云或有网关准入限制，请参考文档[阿里云安全组设置](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。<br />
+4. 回调地址服务器部署：如果回调接口部署在阿里云或有网关准入限制，请参考文档[阿里云安全组设置](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。<br />
 
 
-> * 回调地址配置后要确认服务审核是“审核通过”状态，审核中会导致无法收到回调地址,详见[服务审核注意事项](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_4_rule/appauditrule_v2.md)。
+> * 回调地址配置后要确认服务审核是“审核通过”状态，审核中会导致无法收到回调地址,详见[服务审核注意事项](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_4_rule/appauditrule_v2.md)。
 > * 服务器调用开发者回调接口不成功或开发者返回参数有误，平台会发起重试，每2分钟/次，共计200次，如重试后仍旧无法回调，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产。还请开发者仔细根据文档操作。如有无法核销的“已付款订单，请开发者提供appId、orderId、服务名称、公司名称、问题描述发送至问题反馈邮箱:jiaoyi-ask@baidu.com
 
 
