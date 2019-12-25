@@ -36,7 +36,7 @@ sidebar: productlaboratory_search
 |`https://www.baidu.cc/forum.php` |`https://www.baidu.cc/forum.php => pages/index/index`| 
 |`https://www.baidu.com.cn/forum/`|`https://www.baidu.com.cn/forum/ => pages/index/index` | 
 |`https://www.baidu.cn/bbs/index`|`https://www.baidu.cn/bbs/index => pages/index/index`  | 
-|`http://bbs.baidu.com/ `|`http://bbs.baidu.com => pages/index/index ` | 
+|`https://bbs.baidu.com/ `|`https://bbs.baidu.com => pages/index/index ` | 
 
 
 - 帖子落地页：
@@ -44,8 +44,8 @@ sidebar: productlaboratory_search
 |帖子落地页地址类型 | url适配规则示例 | 
 |---|---|
 |`https://baidu.zjo.com.cn/thread-217387-1-1.html `|`https://baidu.zjo.com.cn/thread-([\d]+)-1-1.html => pages/post-landpage/post-landpage?type=index&tid=${1} `| 
-|`http://www.baidu.cn/bbs/forum.php?mod=viewthread&tid=17388` |`http://www.baidu.cn/bbs/forum.php?mod=viewthread&tid=([\d]+) => pages/post-landpage/post-landpage?type=index&tid=${1}` | 
-|`http://bbs.baidu.com/t96552p1` |`http://bbs.baidu.com/t([\d]+)p1 => pages/post-landpage/post-landpage?type=index&tid=${1}`| 
+|`https://www.baidu.cn/bbs/forum.php?mod=viewthread&tid=17388` |`https://www.baidu.cn/bbs/forum.php?mod=viewthread&tid=([\d]+) => pages/post-landpage/post-landpage?type=index&tid=${1}` | 
+|`https://bbs.baidu.com/t96552p1` |`https://bbs.baidu.com/t([\d]+)p1 => pages/post-landpage/post-landpage?type=index&tid=${1}`| 
 
 
 - 板块落地页：
@@ -53,8 +53,8 @@ sidebar: productlaboratory_search
 |板块落地页地址类型 | url适配规则示例 | 
 |---|---|
 |`https://www.baidu.com.cn/forum/forum-188-1.html` |`https://www.baidu.com.cn/forum/forum-([\d]+)-1.html => pages/plate-detail/plate-detail?fid=${1} `| 
-| `http://www.baidu.cn/bbs/forum.php?mod=forumdisplay&fid=89`|`http://www.baidu.cn/bbs/forum.php?mod=forumdisplay&fid=([\d]+) => pages/plate-detail/plate-detail?fid=${1}`  | 
-|`http://bbs.baidu.com/f2109p1 `|`http://bbs.baidu.com/f([\d]+)p1 => pages/plate-detail/plate-detail?fid=${1}` | 
+| `https://www.baidu.cn/bbs/forum.php?mod=forumdisplay&fid=89`|`https://www.baidu.cn/bbs/forum.php?mod=forumdisplay&fid=([\d]+) => pages/plate-detail/plate-detail?fid=${1}`  | 
+|`https://bbs.baidu.com/f2109p1 `|`https://bbs.baidu.com/f([\d]+)p1 => pages/plate-detail/plate-detail?fid=${1}` | 
 
 
 ###  3.  提交sitemap  

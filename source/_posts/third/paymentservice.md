@@ -94,7 +94,7 @@ GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict
                     {
                         "bankId":0,
                         "bankName":"北京银行",
-                        "logoUrl":"http://e.hiphotos.baidu.com/nuomi/pic/item/adaf2edda3cc7cd926e5c5ff3301213fb90e91c8.jpg"
+                        "logoUrl":"https://e.hiphotos.baidu.com/nuomi/pic/item/adaf2edda3cc7cd926e5c5ff3301213fb90e91c8.jpg"
                     },
             ]
         },

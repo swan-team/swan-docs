@@ -35,7 +35,7 @@ https://spapi.baidu.com/oauth/jscode2sessionkey
 
 | 字段名 | 说明 |
 |--| -- |
-| error | 错误码；关于错误码的详细信息请参考<a href=" http://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
+| error | 错误码；关于错误码的详细信息请参考<a href=" https://developer.baidu.com/wiki/index.php?title=docs/oauth/error ">`"错误码列表"`</a>一节。|
 | error_description |错误描述信息，用来帮助理解和解决发生的错误。|
 
 **图片示例**

@@ -17,7 +17,7 @@ sidebar: whitebook
 
 3）简介及服务类目：与核心功能相符，实时更新，不得含有官网等其他线上相关联系方式。
 
-具体请参考文档：[注册名称规范](http://smartprogram.baidu.com/docs/operations/specification/#1-注册名称规范/)、 [基本信息规范](http://smartprogram.baidu.com/docs/operations/specification/#3-基本信息规范/)
+具体请参考文档：[注册名称规范](https://smartprogram.baidu.com/docs/operations/specification/#1-注册名称规范/)、 [基本信息规范](https://smartprogram.baidu.com/docs/operations/specification/#3-基本信息规范/)
 
 ![图片 1](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%9B%BE%E7%89%871.jpg)
 

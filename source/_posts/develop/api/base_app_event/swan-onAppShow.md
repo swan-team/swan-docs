@@ -22,7 +22,7 @@ function callback
 
 |属性  |类型  |说明  |最低版本|
 |---- | ---- | ---- |---|
-|scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
+|scene | String | 打开智能小程序的<a href="https://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
 |path|String|打开小程序的路径。| |
 |query|Object|打开小程序的query。| |
 |shareTicket|String|标记转发对象。| |

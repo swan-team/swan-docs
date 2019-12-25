@@ -51,7 +51,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&page=1&page_size=50'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&page=1&page_size=50'
 ```
 
 **响应示例** 
@@ -117,7 +117,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/deltemplate
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/template/deltemplate?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&template_id=301'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/deltemplate?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&template_id=301'
 ```
 
 
@@ -175,7 +175,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&page=1&page_size=50'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&page=1&page_size=50'
 ```
 
 **响应示例** 

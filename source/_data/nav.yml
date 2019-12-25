@@ -4357,6 +4357,18 @@
     #               name: limit_components
 
     -
+      text: 扩展能力
+      name: extension
+      sidebar:
+        -
+          text: smartUI模板
+          sidebar:
+            -
+              link: /develop/extension/template/content-detail
+              text: 图文详情页
+              name: content-detail
+
+    -
       text: 功能开发
       name: function
       sidebar:

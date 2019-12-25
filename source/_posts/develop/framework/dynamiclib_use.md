@@ -72,4 +72,4 @@ lib.getData();
 
 * 使用动态库，请确保小程序基础库版本在3.60.2及以上。开发者工具版本在2.4.0及以上。
 * 目前暂不支持开发者自行开发动态库，但任何小程序开发者都可以使用已有动态库。
-* 当前您可使用的动态库功能：[topOne动态库](http://smartprogram.baidu.com/docs/develop/framework/dynamiclib_topone/)。
+* 当前您可使用的动态库功能：[topOne动态库](https://smartprogram.baidu.com/docs/develop/framework/dynamiclib_topone/)。

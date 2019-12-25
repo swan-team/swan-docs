@@ -20,6 +20,6 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm i
-        npm run build
+        npm run build --max-old-space-size=100000000
       env:
         CI: true

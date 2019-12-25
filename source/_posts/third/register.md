@@ -82,7 +82,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |字段名|	类型|	描述|
 |---|---|---|
-|errno|	int|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|errno|	int|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |msg|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 返回值示例
 ```json
@@ -132,7 +132,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error	|string	|错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|error	|string	|错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |error\_description|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 
 ### 4、引导小程序管理员对第三方平台进行授权
@@ -144,7 +144,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 页面地址:
 
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4&type=1&user_id=1asdqwe1eWQ
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=https://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4&type=1&user_id=1asdqwe1eWQ
 ```
 参数说明
 
@@ -361,7 +361,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error|	string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error|	string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error\_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 
 ### 9、通过代创建 API 创建小程序
@@ -490,7 +490,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 
 |字段名	|类型	|描述|
 |---|---|---|
-|error	|string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error	|string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error\_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 
 #### 2、通过授权码换取customer_id

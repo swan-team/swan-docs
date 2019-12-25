@@ -35,7 +35,7 @@ sidebar: type
 | **key**   | **类型**   | **是否必填** | **备注**  | **代码示例**  |
 | ------------------------------------------------------------ | ---------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | author_name  | string  | 否  | 作者名 | 张三   |
-| author_portrait_url   | string  | 否  | 作者头像url  | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url   | string  | 否  | 作者头像url  | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path  | string  | 否  | 作者落地页链接  | /pages/author/author  |
 | author_fans_num | int  | 否  | 作者粉丝量   | 10000  |
 | author_auth  | string  | 否  | 是否认证作者 | 1-是 0-否   示例：1   |
@@ -65,7 +65,7 @@ sidebar: type
 | is_verified  | string  | 否  | 是否大V   | true   |
 | author_level | int  | 否  | 作者等级  | 0为无等级，1为最低，数字越大等级越高 |
 | author_registration_year | string  | 否  | 作者注册年限 | 8（不足一年按照1计算）   |
-| content_items   | JSON array | 否  | 文章结构化内容（提交该字段有助于提升信息流对内容的理解，有益于分发），需要提供正文所有的文字和图片混排内容 按原文正文换行及图片进行item分隔 type为item类型 text-文本 image-图片 例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
+| content_items   | JSON array | 否  | 文章结构化内容（提交该字段有助于提升信息流对内容的理解，有益于分发），需要提供正文所有的文字和图片混排内容 按原文正文换行及图片进行item分隔 type为item类型 text-文本 image-图片 例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<https://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<https://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
 | ip  | string  | 否  | 需引入的热点ip资源名称（如，漫画类，综艺类等）   | 极限挑战 斗破苍穹  |
 
 2）视频型
@@ -93,7 +93,7 @@ sidebar: type
 | ------------------------ | -------- | -------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | author_name  | string   | 否 | 作者名  | 张三   |
 | author_profile  | string   | 否 | 作者简介   | 搞笑视频作者 |
-| author_portrait_url   | string   | 否 | 作者头像url   | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url   | string   | 否 | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path  | string   | 否 | 作者落地页链接   | /pages/author/author  |
 | author_fans_num | int   | 否 | 作者粉丝量 | 1000   |
 | author_publish_num | int   | 否 | 作者视频发布量   | 1000   |
@@ -227,7 +227,7 @@ sidebar: type
 | **key** | **类型** | **是否必填** | **备注**   | **代码示例**  |
 | ------------------- | -------- | ------------------------------------------------------------ | ---------------- | ------------------------------------------------------------ |
 | author_name   | string   | 否  | 作者名  | 张三   |
-| author_portrait_url | string   | 否  | 作者头像url   | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url | string   | 否  | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path   | string   | 否  | 作者落地页链接   | /pages/author/author  |
 | author_fans_num  | int   | 否  | 作者粉丝量 | 10000  |
 | author_auth   | string   | 否  | 是否认证作者  | 1-是 0-否   示例：1   |
@@ -284,11 +284,11 @@ sidebar: type
 | **key**  | **类型** | **是否必填** | **备注** | **代码示例**  |
 | -------------------- | -------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------ |
 | author_name | string   | 否  | 作者名   | 张三   |
-| author_portrait_url  | string   | 否  | 作者头像url | 例如<http://www.xxx.baidu.com/author/portrail.jpg>  |
+| author_portrait_url  | string   | 否  | 作者头像url | 例如<https://www.xxx.baidu.com/author/portrail.jpg>  |
 | author_path | string   | 否  | 作者落地页链接 | /pages/author/author  |
 | author_fans_num   | int   | 否  | 作者粉丝量  | 10000  |
 | author_auth | string   | 否  | 是否认证作者   | 1-是 0-否   示例：1   |
-| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
+| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
 | comment_author_num   | int   | 是  | 讨论人数   问答类型必填该字段 | 30  |
 | publish_time   | string   | **是** | 内容发布时间   | 内容发布时间需在一年以内   示例：2018年9月8日 |
 | img_urls | string   | 否  | 文章所有图片url   | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
@@ -394,7 +394,7 @@ sidebar: type
 | category_3   | string   |  | 商品类别（三级）  | 手机  |
 | brand  | string   |  | 品牌  | `Apple`  |
 | model  | string   |  | 型号  | (A1865) 64GB   |
-| [inventory](http://www.youdao.com/w/inventory/#keyfrom=E2Ctranslation) | int   |  | 库存（动态时时数据） | 10000 |
+| [inventory](https://www.youdao.com/w/inventory/#keyfrom=E2Ctranslation) | int   |  | 库存（动态时时数据） | 10000 |
 | is_failure   | string   |  | 是否失效（已下架/售罄） | 已下架   |
 | high_comment | string   |  | 优质评价内容   | 手机款式漂亮，颜色我很喜欢，系统流畅，功能齐全，物超所值 |
 

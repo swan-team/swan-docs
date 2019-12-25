@@ -15,10 +15,10 @@ sidebar: process
 |----|----|----|----|
 |[pages](#pages)|Array.&lt; string&gt; |是|设置页面路径|
 |[window](#window)|Object|否|设置页面展现|
-|[preloadRule](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
+|[preloadRule](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
 |[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
+|[subPackages](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
@@ -171,7 +171,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 

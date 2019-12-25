@@ -72,8 +72,8 @@ curl -H "application/x-www-form-urlencoded" -X POST -d 'type=1&url_list=/pages/i
 ```php
 <?php
 $urls = array(
-    'http://www.example.com/1.html',
-    'http://www.example.com/2.html',
+    'https://www.example.com/1.html',
+    'https://www.example.com/2.html',
 );
 $data['type'] = 1;
 $data['url_list'] = implode(",", $urls);

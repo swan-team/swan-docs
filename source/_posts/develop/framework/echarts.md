@@ -8,7 +8,7 @@ sidebar: echarts
  
 ### 介绍
 
-ECharts 动态库是智能小程序基于 [ECharts](http://echarts.apache.org/) 实现的图表动态库，提供了图表在小程序中的使用方法。如果在使用中碰到问题，可以在 [Github](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo/issues) 提问。
+ECharts 动态库是智能小程序基于 [ECharts](https://echarts.apache.org/) 实现的图表动态库，提供了图表在小程序中的使用方法。如果在使用中碰到问题，可以在 [Github](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo/issues) 提问。
 
 完整的示例程序参见：[demo](https://github.com/baidu-smart-app/baidu-smart-app-echarts-demo)。
 
