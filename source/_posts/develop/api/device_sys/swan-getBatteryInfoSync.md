@@ -46,21 +46,19 @@ sidebar: swan-getBatteryInfoSync
 * 在 js 文件中
 
 ```js
-let res = swan.getBatteryInfoSync();
-
-// 基础库 3.140.1 之前，无法判断接口是否调用失败
-// 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
-if (!(res instanceof Error)) {
-    console.log('当前设备电量值：', res.level);
-    console.log('当前设备是否正在充电：', res.isCharging);
-}
-else {
-    console.log('getBatteryInfoSync fail', res.errMsg || res.message);
-}
+Page({
+    getBatteryInfoSync() {
+        try {
+            const batteryInfo = swan.getBatteryInfoSync();
+            console.log('当前设备电量值：', batteryInfo.level);
+            console.log('当前设备是否正在充电：', batteryInfo.isCharging);
+        } catch (err) {
+            console.log('getBatteryInfoSync fail', err);
+        }
+    }
+});
 ```
 
 **Bug & Tip**
 
-* iOS 不可用时，返回值 level 为100， isCharging 为true。
-* 基础库 3.140.1 之前，无法判断接口是否调用失败。
-* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
+* iOS 不可用会 mock 返回值 level为100， isCharging 为true。
