@@ -19,8 +19,8 @@ sidebar: toast_swan-showModal
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|title  | String|  是 | | 提示的标题|
-|content |String | 是 | |  提示的内容|
+|title  | String|  否 | | 提示的标题|
+|content |String | 否 | |  提示的内容|
 |showCancel | Boolean|否  | true| 是否显示取消按钮 。|
 |cancelText  |String | 否  |取消|取消按钮的文字，最多 4 个字符。|
 |cancelColor |HexColor|    否  |#000000| 取消按钮的文字颜色。|
@@ -54,22 +54,45 @@ sidebar: toast_swan-showModal
 
 **代码示例1**：
 
-<a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c627d19fa5b2a32d819f3e658edd8d81577331126731" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="container">
+    <view>
+        <view class="card-area">
+            <view class="top-description border-bottom">有标题的modal, 取消显示文字</view>
+            <button bindtap="showModal" type="primary" hover-stop-propagation="true">button</button>
+        </view>
+        <view class="card-area">
+            <view class="top-description border-bottom">无标题的modal</view>
+            <button bindtap="showModalNotitle" type="primary" hover-stop-propagation="true">button</button>
+        </view>
+        <view class="card-area">
+            <view class="top-description border-bottom">无标题无内容的modal</view>
+            <button bindtap="showModalNotitleNocontent" type="primary" hover-stop-propagation="true">button</button>
+        </view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
 ```js
-swan.showModal({
-    title: '标题',
-    content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-    showCancel: false,
-    success: res => {
-        console.log('showModal success', res);
-    },
-    fail: err => {
-        console.log('showModal fail', err);
-    }
-});
+showModal() {
+    swan.showModal({
+        title: '标题',
+        content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+        showCancel: false,
+        success: res => {
+            console.log('showModal success', res);
+        },
+        fail: err => {
+            console.log('showModal fail', err);
+        }
+    });
+}
 
 showModalNotitle() {
     swan.showModal({
@@ -86,6 +109,12 @@ showModalNotitle() {
         }
     });
 }
+showModalNotitleNocontent() {
+     swan.showModal({
+         confirmText: '确定',
+         cancelText: '取消'
+     });
+ }
 ```
 
 **代码示例2 - 开发者可在操作modal后进行业务逻辑**：
