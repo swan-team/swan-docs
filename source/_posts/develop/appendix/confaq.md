@@ -28,7 +28,7 @@ A: web-view 网页与小程序之间不支持除 JSSDK 提供的接口之外的�
 
 
 #### Q: webview 中参入含有中文使用三方自己的约定方式进行编码 iOS 打开后出现白屏的情况该如何处理？
-A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://smartprogram.baidu.com/docs/develop/api/net_request/)。
+A： 避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](https://smartprogram.baidu.com/docs/develop/api/net_request/)。
 
 #### Q: 如何在web-view中使用拨打电话的功能？
 A：如果想在 web-view 使用 JSSDK 提供的接口能力，需要引入 [swanjs](/develop/component/open_web-view/) 包，如下示例：
@@ -72,7 +72,7 @@ A：支持。
 
 #### Q： scroll-view 的scroll-top。设置是否是无效的?
 
-A：使用竖向滚动时，需要给 <scroll-view> 一个固定高度，通过 CSS 设置 height。
+A：使用竖向滚动时，需要给 &lt;scroll-view&gt; 一个固定高度，通过 CSS 设置 height。
 
 **代码示例：**
 

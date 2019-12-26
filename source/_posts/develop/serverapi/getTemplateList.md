@@ -5,18 +5,56 @@ nav: serverapi
 sidebar: getTemplateList
 ---
   
-**解释**：获取帐号下已存在的模板列表。
-**接口调用请求说明**：
-```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist?access_token=ACCESS_TOKEN
-```
-**参数说明**:
+### 获取帐号下已存在的模板列表
 
-|参数名|	类型|	是否必须|	描述|
-|---|---|---|---|
-|offset|	int|	是|	偏移量|
-|count|	int|	是|	数量|
-**返回值**:
+**解释**：获取帐号下已存在的模板列表。
+
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/list
+```
+**公共请求参数:**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数:**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+offset | int | 是 | 用于分页，表示从offset开始，默认值为0
+count | int | 是 | 用于分页，表示拉取count条记录，默认值为0,最大为20
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+字段名 | 类型  | 描述
+----- |-----| -----
+total_count | int| 模板库标题总数
+template_id |string | 模板id,发送小程序模板消息时所需
+title |string | 模板标题
+content |string | 模板内容
+example |string | 模板内容示例
+
+**请求示例**
+
+```shell
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/list?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
+```
+
+
+
+**响应示例:**
+
 ```json
 {
     "errno": 0,

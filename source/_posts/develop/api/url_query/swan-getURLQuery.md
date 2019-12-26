@@ -36,7 +36,6 @@ sidebar: swan-getURLQuery
 <a href="swanide://fragment/dd565f21448c3e95a9471b7f953fed7b1573991326390" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
-
 ```html
 <tabs url-query-name="channel">
     <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />

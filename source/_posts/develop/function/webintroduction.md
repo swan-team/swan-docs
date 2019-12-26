@@ -10,7 +10,7 @@ Web 化是百度小程序包在后台自动转化得到的一个 H5 版本的小
 > 如何接入自然搜索流量请阅读[接入自然搜索结果](https://smartprogram.baidu.com/docs/introduction/rank/)。
 
 
-**Web 化对小程序开发者来说是透明的，开发者几乎不用做额外的适配即可完成转换**（由于H5与客户端天然存在的差异，针对 Web 化的场景，我们仍有一些[开发建议](http://smartprogram.baidu.com/docs/develop/web/proposal/)希望开发者能够关注）。
+**Web 化对小程序开发者来说是透明的，开发者几乎不用做额外的适配即可完成转换**（由于H5与客户端天然存在的差异，针对 Web 化的场景，我们仍有一些[开发建议](https://smartprogram.baidu.com/docs/develop/web/proposal/)希望开发者能够关注）。
 
 ## 关于爬虫抓取
 生成的 Web 化页面会提供给搜索爬虫抓取，从而建立小程序页面索引。爬虫抓取的 UA 中包含 `swan-webapp`，爬虫的抓取方式不仅针对静态的 html 文本，**页面中的动态数据渲染和样式布局等也会对爬虫识别有效信息起到至关重要的作用**。

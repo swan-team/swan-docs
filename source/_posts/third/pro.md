@@ -84,7 +84,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |字段名|	类型|	描述|
 |---|---|---|
-|errno|	int|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|errno|	int|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |msg|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 返回值示例
 ```json
@@ -132,7 +132,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error	|string	|错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|error	|string	|错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 ### 4、引导小程序管理员对第三方平台进行授权
 
@@ -141,7 +141,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 页面地址:
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=https://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
 ```
 参数说明
 
@@ -189,7 +189,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error|	string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error|	string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 ### 7、刷新授权小程序的接口调用凭据
 当在授权小程序的接口调用凭据（access_token）失效时，可用刷新令牌（refresh_token）获取新的令牌。当换取refresh_token后建议保存。
@@ -224,7 +224,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 
 |字段名	|类型	|描述|
 |---|---|---|
-|error	|string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error	|string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 
 ### 8、获取小程序基础信息
@@ -308,7 +308,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
 ```
 
 
@@ -469,7 +469,7 @@ POST数据示例（授权更新通知）
 }
 ```
 
-第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
+第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="https://smartprogram.baidu.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
 
 
 #### 参数说明

@@ -10,10 +10,10 @@ sidebar: productlaboratory_faq
 ## 一、前提条件
 
 
- - 论坛版本：支持Discuz! X3.3及以上；
- -  论坛编码：支持utf-8和gbk两种编码，请安装对应编码的插件；
- -  服务器运行系统：支持linux系统及其衍生系统，如CentOS，不支持Windows系统；
- -  PHP版本：支持PHP版本5.3及以上；
+ - 论坛版本：目前仅支持 Discuz! x3.4；
+ -  论坛编码：支持 utf-8 和 gbk 两种编码，请安装对应编码的插件；
+ -  服务器运行系统：支持 linux 系统及其衍生系统，如 CentOS，不支持 Windows 系统；
+ -  PHP 版本：支持 PHP 版本 5.3 及以上；
 
 ## 二、接入前，数据对接失败如何处理？
  
@@ -149,6 +149,6 @@ set DOMAIN =https://www.******.cn
 ## 六、联系方式
 
 
-- [站长互助专区](http://bbs.zhanzhang.baidu.com/forum-118-1.html)
+- [站长互助专区](https://bbs.zhanzhang.baidu.com/forum-118-1.html)
 - [百度小程序反馈平台](https://smartprogram.baidu.com/forum/)
 

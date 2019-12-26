@@ -71,17 +71,13 @@ sidebar: apppage
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数**
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+  
 
 **请求示例** 
 
 ```shell
 curl -X POST\
-'http://openapi.baidu.com/rest/2.0/smartapp/package/upload?access_token=45.6fe3b83637bcf969ecbd076390aff5be.3600.1574865809.HPiKUxSxNQ-3Fy3JR1wLsECD15bpJHQ-1W3JTSQkkj5RZ9lgfC&template_id=754&ext_json={"extEnable":true, "directCommit":false}&user_version=10.30.0.3&user_desc=模板分包优化提包 case4'
+'https://openapi.baidu.com/rest/2.0/smartapp/package/upload?access_token=45.6fe3b83637bcf969ecbd076390aff5be.3600.1574865809.HPiKUxSxNQ-3Fy3JR1wLsECD15bpJHQ-1W3JTSQkkj5RZ9lgfC&template_id=754&ext_json={"extEnable":true, "directCommit":false}&user_version=10.30.0.3&user_desc=模板分包优化提包 case4'
 ```
 
 **返回值示例** 
@@ -161,7 +157,7 @@ curl -X POST\
 
 ## 授权小程序提交审核 
 
-> -- 
+ 
 
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/package/submitaudit 
@@ -189,17 +185,13 @@ curl -X POST\
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+  
 
 **请求示例** 
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/package/submitaudit?access_token=45.579c53dfadb477d1c8a1c3203174bc1d.3600.1574393061.YaEGtZv0CrUcnG1TBIEKgJdXeNt7v2M-1W3JTSQkkj5RZ9lgfC&package_id=55106&content=TP%E4%BB%A3%E9%80%81%E5%AE%A1%E5%BC%80%E5%8F%91%E5%8C%85&remark=%E4%BB%A3%E6%8F%90%E5%AE%A1' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/package/submitaudit?access_token=45.579c53dfadb477d1c8a1c3203174bc1d.3600.1574393061.YaEGtZv0CrUcnG1TBIEKgJdXeNt7v2M-1W3JTSQkkj5RZ9lgfC&package_id=55106&content=TP%E4%BB%A3%E9%80%81%E5%AE%A1%E5%BC%80%E5%8F%91%E5%8C%85&remark=%E4%BB%A3%E6%8F%90%E5%AE%A1' \
 ```
 
 
@@ -215,14 +207,14 @@ curl -X POST \
 
 ## 授权小程序发布 
 
-> -- 
+ 
 
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/package/release 
 ```
 
 
-公共请求参数** 
+**公共请求参数** 
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
@@ -242,17 +234,13 @@ curl -X POST \
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+  
 
 **请求示例** 
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/package/release?access_token=45.48bd6c92f5a99379664bfa5a32436058.3600.1574997857.ZdsDpFIZGeDtuCQa0_RiUkSfpDKldUw-1W3JTSQkkj5RZ9lgfC&package_id=58210' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/package/release?access_token=45.48bd6c92f5a99379664bfa5a32436058.3600.1574997857.ZdsDpFIZGeDtuCQa0_RiUkSfpDKldUw-1W3JTSQkkj5RZ9lgfC&package_id=58210' \
  
 ```
 
@@ -293,17 +281,13 @@ curl -X POST \
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+  
 
 **请求示例** 
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/package/rollback?access_token=ACCESS_TOKEN&package_id=58210' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/package/rollback?access_token=ACCESS_TOKEN&package_id=58210' \
 ```
 
 **返回值示例** 
@@ -317,7 +301,7 @@ curl -X POST \
 
 ## 授权小程序撤销审核 
 
-> -- 
+ 
 
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/package/withdraw 
@@ -343,17 +327,13 @@ curl -X POST \
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数** 
-
-| 参数 | 类型 | 描述 | 示例值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+  
 
 **请求示例** 
 
 ```shell
 	curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/package/withdraw?access_token=ACCESS_TOKEN%0A&package_id=58210' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/package/withdraw?access_token=ACCESS_TOKEN%0A&package_id=58210' \
 ```
 
 
@@ -384,11 +364,7 @@ curl -X POST \
 | ------------ | ------ | -------- | --------------- | ------ |
 | access_token | string | 是       | 授权小程序Token | --     |
 
-**请求参数** 
-
-| 参数 | 类型 | 是否必填 | 描述 | 示例值 |
-| ---- | ---- | -------- | ---- | ------ |
-| --   | --   | --       | --   | --     |
+  
 
 **公共响应参数** 
 
@@ -436,7 +412,7 @@ curl -X POST \
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/package/get?access_token=45.cf9ab2259dacfd8eccb2b73c65692d68.3600
+  'https://openapi.baidu.com/rest/2.0/smartapp/package/get?access_token=45.cf9ab2259dacfd8eccb2b73c65692d68.3600
   .1575023004.NM0cYIsvz_Fxs-HKtPAfSeV_12pYlio-1W3JTSQkkj5RZ9lgfC' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```

@@ -44,16 +44,24 @@ sidebar: paymentservice
 **请求地址**
 
 ```
-GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict?access_token=ACCESS_TOKEN
+GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict
 ```
 
-**参数说明**
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**返回值说明**
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
 
 | 参数            | 类型 | 说明                                                       |
 | --------------- | ---- | ---------------------------------------------------------- |
@@ -62,7 +70,7 @@ GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict?access_
 | commission_rate | Map  | 佣金比例，小程序固定为千分之六（支付服务 commission_rate） |
 | payment_days    | Map  | 结算周期（支付服务 payment_days）                          |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -86,7 +94,7 @@ GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict?access_
                     {
                         "bankId":0,
                         "bankName":"北京银行",
-                        "logoUrl":"http://e.hiphotos.baidu.com/nuomi/pic/item/adaf2edda3cc7cd926e5c5ff3301213fb90e91c8.jpg"
+                        "logoUrl":"https://e.hiphotos.baidu.com/nuomi/pic/item/adaf2edda3cc7cd926e5c5ff3301213fb90e91c8.jpg"
                     },
             ]
         },
@@ -117,13 +125,18 @@ GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict?access_
 **请求地址**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create
 ```
-**参数说明**
+**公共请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | business_scope      | String | true | 经营范围。营业执照上经营范围，长度 2-2000 个字符                       |
 |business_province| String | true |经营范围所在省。|
 | business_city | String | true |经营范围所在市。|
@@ -133,14 +146,17 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create?access_token
 | id_card_front_url | String | true | 身份证正面地址(必须是我们服务上传生成的图片URL，参见图片上传)                 |
 | id_card_back_url | String | true | 身份证反面地址(必须是我们服务上传生成的图片URL，参见图片上传)               |
 
-**返回值说明**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | string | 状态码   |
-| msg    | string | 状态信息 |
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
 
-**返回值示例**
+ 
+
+**响应示例**
 
 ```json
 {"errno":0,"msg":"success"}
@@ -153,33 +169,39 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create?access_token
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/account/auditstatus?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/account/auditstatus
 ```
 
-**参数说明**
+**公共请求参数** 
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**返回值说明**
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+**响应参数** 
 
 | 参数名               | 类型 | 说明                                                         |
 | :------------------- | :--- | :----------------------------------------------------------- |
-| errno  | string | 状态码。  |
-| msg    | string | 状态信息。 |
 | status               | int | 用户提交的审核信息：0:初始状态；1:编辑中 2:提审 3:未通过 4:审核通过 5:回填过协议id |
 | verify_message | string | 失败原因。                                                    |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
     "errno":0,
     "msg":"success",
     "data":{
-        "status":null,
-        "verify_message":null
+        "status":4,
+        "verify_message":"审核通过"
     }
 }
 ```
@@ -195,27 +217,33 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/account/auditstatus?access_t
 **请求地址**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | tp_public_key    | String | true     | 开发者公钥。参见[**RSA公私钥生成**](<https://smartprogram.baidu.com/docs/develop/function/keygen_v2/>) |
 | pay_notify_url   | String | true     | 支付回调地址。                                               |
 | refund_audit_url | String | true     | 退款审核地址。                                               |
 | refund_succ_url  | String | true     | 退款回调地址。                                               |
 
-**返回值说明**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | string | 状态码   |
-| msg    | string | 状态信息 |
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
 
-**返回值示例**
+ 
+**响应示例**
 
 ```json
 {"errno":0,"msg":"success"}
@@ -232,14 +260,18 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit?access
 **请求地址**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | app_name              | String | true     | 服务名称。支付服务的名称                       |
 | service_phone         | String | true     | 服务电话。                                     |
 | bank_account          | String | true     | 银行账户。银行卡开户名                         |
@@ -262,14 +294,17 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?acces
 | 每日退款上限（元） | 每日发起给用户退款的最大金额。如每日退款上限为10000元，当日退款的总金额则不可以超过10000元，超过10000元则退款失败，次日可以再次发起退款。 |
 | 打款预留（元）     | 自动付款至绑定银行卡时，可以设置预留金额，此部分金额不进行付款，预留金额可以用来给用户进行退款，以防企业资产为0时，不能给用户退款的情况。如预留金额为1000元，T日产生流水1200元，T+1日则付款200 元至绑定银行卡，1000元在企业资产中。打款预留金额可进行修改。 |
 
-**返回值说明**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述     |
-| ------ | ------ | -------- |
-| errno  | string | 状态码   |
-| msg    | string | 状态信息 |
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
 
-**返回值示例**
+ 
+
+**响应示例**
 
 ```json
 {"errno":0,"msg":"success"}
@@ -282,33 +317,41 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create?acces
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/auditstatus?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/auditstatus
 ```
 
-**参数说明**
+**公共请求参数** 
 
-| 参数名       | 类型   | 是否必须 | 描述                                   |
-| ------------ | ------ | -------- | -------------------------------------- |
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**返回值说明**
+ 
+**公共响应参数** 
 
-| 参数名      | 类型   | 描述                                           |
-| ----------- | ------ | ---------------------------------------------- |
-| errno       | string | 状态码。                                       |
-| msg         | string | 状态信息。                                     |
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
 | status      | int    | 开通状态 0：新建 1：审核中 2：审核通过 3：驳回 |
 | fail_reason | int    | 失败原因。                                     |
 
-**返回值示例**
+
+**响应示例**
 
 ```json
 {
     "errno":0,
     "msg":"success",
     "data":{
-        "status":null,
-        "fail_reason":null
+        "status":2,
+        "fail_reason":"审核通过"
     }
 }
 ```
@@ -318,26 +361,33 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/auditstatus?a
 **请求地址**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | app_name         | String | true     | 服务名称。                 |
 | service_phone    | String | true     | 服务电话。                 |
 | pool_cash_pledge | String | true     | 打款预留。提现后的保留金额 |
 
-**返回值说明**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述       |
-| ------ | ------ | ---------- |
-| errno  | string | 状态码。   |
-| msg    | string | 状态信息。 |
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
 
-**返回值示例**
+ 
+
+**响应示例**
 
 ```json
 {"errno":0,"msg":"success"}
@@ -348,11 +398,16 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update?acces
 **请求地址**
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindservice?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindservice
 ```
 
-**参数说明****
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token  | string | true     | access_token，授权小程序的接口|
+
+**请求参数** 
 | 参数名                | 类型   | 是否必须 | 描述                                           |
 | --------------------- | ------ | -------- | ---------------------------------------------- |
 | access_token          | string | true     | access_token，授权小程序的接口调用凭据         |
@@ -378,14 +433,19 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 | 每日退款上限（元） | 每日发起给用户退款的最大金额。如每日退款上限为10000元，当日退款的总金额则不可以超过10000元，超过10000元则退款失败，次日可以再次发起退款。 |
 | 打款预留（元）     | 自动付款至绑定银行卡时，可以设置预留金额，此部分金额不进行付款，预留金额可以用来给用户进行退款，以防企业资产为0时，不能给用户退款的情况。如预留金额为1000元，T日产生流水1200元，T+1日则付款200 元至绑定银行卡，1000元在企业资产中。打款预留金额可进行修改。 |
 
-**返回值说明**
+**公共响应参数** 
 
-| 参数名 | 类型   | 描述       |
-| ------ | ------ | ---------- |
-| errno  | string | 状态码。   |
-| msg    | string | 状态信息。 |
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
 
-**返回值示例**
+ 
+
+
+
+**响应示例**
 
 ```json
 {"errno":0,"msg":"success"}
@@ -396,21 +456,29 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservice?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservice
 ```
 
-**参数说明**
+**公共请求参数** 
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
 | access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 
-**返回值说明**
+ 
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 | 参数名 | 类型   | 描述 |
 | ------ | ------ | ------ |
-| errno  | string | 状态码。 |
-| msg    | string | 状态信息。 |
 | pm_app_id | Long | 服务id。支付服务内部标示 id |
 | app_name              | String | 服务名称。支付服务的名称                       |
 | pm_app_key | String | 服务Key。支付服务内部标示key |
@@ -430,7 +498,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 | open_status | int | 开通状态. 0:新建 1:审核中 2:审核通过 3:驳回 |
 | fail_reason | String | 驳回回执。 |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -506,22 +574,32 @@ POST数据示例 （审核失败）：
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist
 ```
+**公共请求参数** 
 
-**参数说明**
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据                       |
 
+**请求参数**
 | 参数名       | 类型   | 是否必须 | 描述                                                         |
 | ------------ | ------ | -------- | ------------------------------------------------------------ |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据                       |
 | status       | String | true     | 订单状态。 all：全部 、 1：待付款 、 2：已付款 、 3：已消费 、 4：退款中 、 5：已退款 、 6：退款失败 、7：已取消 |
 | start_time   | Long   | true     | 起始时间戳，10位时间戳                                       |
 | end_time     | Long   | true     | 起始时间戳，10位时间戳                                       |
 | current_page | Long   | true     | 当前页数。起始为 1                                           |
 | page_size    | Long   | true     | 分页。每页数量                                               |
 
-**返回值说明**
+**公共响应参数** 
 
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 | 参数名                 | 类型   | 说明                                                         |
 | ---------------------- | :----- | :----------------------------------------------------------- |
 | id                     | string | 百度平台订单ID。                                             |
@@ -538,7 +616,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 | segment_refunded_money | string | 退款金额(分)。                                               |
 | channel                | string | 支付渠道。如：网银支付、微信支付                             |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -593,20 +671,32 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist?acc
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | current_page | Long   | true     | 当前页数。起始为 1。                   |
 | page_size    | Long   | true     | 分页每页数量。                         |
 | start_time   | String | true     | 开始日期。格式如：2019-01-02。         |
 | end_time     | String | true     | 结束日期。格式如： 2019-01-02。        |
 
-**返回值说明**
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 | 参数名称     | 类型   | 说明                                                         |
 | ------------ | ------ | ------------------------------------------------------------ |
@@ -627,7 +717,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | adjust_amount | String | 调整款（元）。如：商家作弊，交易会扣钱，会以调整款的形式。 |
 | others        | String | 其他款项。佣金、返点与营销费用等金额                       |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -692,19 +782,31 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance/incomedetail?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance/incomedetail
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据                   |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                                     |
 | ------------ | ------ | -------- | -------------------------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据                   |
 | current_page | Long   | true     | 当前页数。起始为 1。                                     |
 | page_size    | Long   | true     | 分页每页数量。                                           |
 | start_time   | String | true     | 开始日期。格式如：2019-01-02（该接口只查询某一天的数据） |
 
-**返回值说明**
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 | 参数名称      | 类型   | 说明                                                         |
 | ------------- | ------ | ------------------------------------------------------------ |
@@ -715,7 +817,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | income_amount | String | 验证(成交)总额（元）。                                       |
 | refund_amount | String | 退款总额（元）。                                             |
 
-列表数据说明：
+**data列表详情数据说明**
 
 | 参数名称       | 类型   | 说明                                        |
 | -------------- | ------ | ------------------------------------------- |
@@ -725,7 +827,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | operate_time   | String | 操作时间。格式为 yyyy-MM-dd，如：2019-06-07 |
 | third_order_id | String | 第三方订单号。                              |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -788,20 +890,34 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance/otherdetail?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalance/otherdetail
 ```
 
-**参数说明**
+**公共请求参数** 
 
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+
+**请求参数** 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | current_page | Long   | true     | 当前页数。起始为 1。                   |
 | page_size    | Long   | true     | 分页每页数量。                         |
 | start_time   | String | true     | 开始日期。格式如：2019-01-02。         |
 | end_time     | String | true     | 结束日期。格式如： 2019-01-02。        |
 
-**返回值说明**
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+
 
 | 参数名称              | 类型   | 说明                                                         |
 | --------------------- | ------ | ------------------------------------------------------------ |
@@ -812,7 +928,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | settlement_start_time | String | 账单周期开始时间。格式为 yyyy-MM-dd HH:mm:ss，如：2019-05-21 23:59:59 |
 | total_amount          | String | 入账金额（元）。                                             |
 
-列表数据说明：
+**data收入列表详情数据说明**
 
 | 参数名称       | 类型   | 说明                                                         |
 | -------------- | ------ | ------------------------------------------------------------ |
@@ -822,7 +938,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 | ref_money      | String | 金额（元）。                                               |
 | third_order_id | String | 第三方订单号。                                               |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -861,20 +977,35 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpense?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpense
 ```
 
-**参数说明**
+**公共请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据 |--|
+
+**请求参数** 
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
 | current_page | Long   | true     | 当前页数。起始为 1。                   |
 | page_size    | Long   | true     | 分页每页数量。                         |
 | start_time   | String | true     | 开始日期。格式如：2019-01-02。         |
 | end_time     | String | true     | 结束日期。格式如： 2019-01-02。        |
 
-**返回值说明**
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|integer|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+
 
 | 参数名称      | 类型   | 说明                                   |
 | ------------- | ------ | -------------------------------------- |
@@ -883,8 +1014,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 | expense_money | String | 支出金额（元）。所有支出次数金额的汇总 |
 | total_count   | Long   | 数据总条数。                           |
 
-列表数据说明：
-
+**data支出列表详情说明**
 | 参数名称     | 类型   | 说明                                                         |
 | ------------ | ------ | ------------------------------------------------------------ |
 | money        | String | 金额（元）。当前交易的金额                                   |
@@ -895,7 +1025,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 | pay_status   | String | 支出打款状态。状态包含：待出纳支付、打款中、成功、失败       |
 | task_id      | Long   | 支付凭证 id。用于查询支出打款详情                            |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {
@@ -963,14 +1093,19 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 **请求地址**
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpense/paydetail?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpense/paydetail
 ```
 
-**参数说明**
+**公共请求参数** 
+
+|参数|类型|是否必填|描述|示例值|
+|--|--|--|--|--|
+| access_token | string | true     | access_token，授权小程序的接口调用凭据。 |--|
+
+**请求参数** 
 
 | 参数名       | 类型   | 是否必须 | 描述                                     |
 | ------------ | ------ | -------- | ---------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据。 |
 | task_id      | Long   | true     | 支付凭证 id。                            |
 
 **返回值说明**
@@ -983,7 +1118,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 | receive_user   | String | 收款人姓名。                                       |
 | payment_status | String | 收款状态。状态包含：待出纳支付、打款中、成功、失败 |
 
-**返回值示例**
+**响应示例**
 
 ```json
 {

@@ -114,10 +114,13 @@ swan.checkSession({
 
 >更多登录授权的流程参见： [登录授权流程说明](/game/tutorials/open_api/log/)
 
-**获取 Session Key 的URL地址：**
-```js
- https://openapi.baidu.com/nalogin/getSessionKeyByCode
-```
+**获取 Session Key 的URL地址：**  
+
+https://spapi.baidu.com/oauth/jscode2sessionkey
+
+> 为了让您的智能小程序运行在联盟 App 上,我们对获取 SessionKey 的接口做了升级。新接口可以兼容获取百度内部 App 和百度外部 App 的 SessionKey。
+您只需要将原接口地址 `https://openapi.baidu.com/nalogin/getSessionKeyByCode`更改为`https://spapi.baidu.com/oauth/jscode2sessionkey`,即可让您的智能小程序在其它App上自动实现账号关联。  
+
 **获取Session Key需要的参数：**
 
 | 属性 | 是否必填 | 描述 |
@@ -198,13 +201,13 @@ swan.getSwanId({
 
 > 基础库 swan-game.js 1.0.14 版本开始支持。
 
-获取手百登录状态。
+获取 百度 App登录状态。
 
 **返回参数说明：**
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
-|isLogin  |  boolean | 手百登录状态 true: 已登录，false: 未登录  |
+|isLogin  |  boolean |  百度 App登录状态 true: 已登录，false: 未登录  |
 
 **示例：**
 

@@ -6,7 +6,7 @@ sidebar: videocontext_VideoContext-stop
 ---
 
 
-> 最低支持手百版本 11.16
+> 最低支持基础库版本 3.120.10
 
 **解释**: 停止播放视频
 

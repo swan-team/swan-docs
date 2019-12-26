@@ -9,7 +9,7 @@ sidebar: media_ar-camera
 
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。**ar-camera 组件目前只针对百度 APP 开放使用**。 
 
-**解释**：AR相机，在[DuMixAR内容开放平台](http://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
+**解释**：AR相机，在[DuMixAR内容开放平台](https://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
 
 ## 代码示例
@@ -85,4 +85,5 @@ sidebar: media_ar-camera
 * Tip：ar-camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面。
 * Tip：同一页面只能插入一个 ar-camera 组件。可在新页面中放置ar-camera组件，并使用 <a href='https://smartprogram.baidu.com/docs/develop/api/show_tab/#navigateTo/'>swan.navigate</a>  API（注意应防止用户多次连续点击，否则会导致AR页面多次打开出现卡顿）跳转至该页面。
 * Tip：请勿在 scroll-view、swiper、picker-view、movable-view 中使用 ar-camera 组件。
-* Tip：相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_arcameracontext/#createARCameraContext/'>createARCameraContext</a>。
+* Tip：AR 相机支持 iPhone X 及以上机型显示 16：9 的比例；支持 iPhone X 以下机型显示全屏比例。
+* Tip：相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/'>createARCameraContext</a>。

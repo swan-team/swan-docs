@@ -230,7 +230,7 @@ Page({
 |hover-stay-time|Number | 70  | 否 |手指松开后点击态保留时间，单位毫秒。|- |
 |disabled|Boolean|false| 否 |是否禁用|- |
 |loading|Boolean|false| 否 |名称前是否带有loading图标|- |
-|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="http://smartprogram.baidu.com/docs/introduction/getphonenumber/">获取用户手机号权限申请</a>。|1.12.14	|
+|bindgetphonenumber|Handler| | 否 |获取用户手机号回调。和 open-type 搭配使用， 使用时机：` open-type="getPhoneNumber"`。具体申请方法请见：<a href="https://smartprogram.baidu.com/docs/introduction/getphonenumber/">获取用户手机号权限申请</a>。|1.12.14	<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 | bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|- |
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|- |
 | bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|- |

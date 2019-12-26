@@ -166,26 +166,26 @@ Page({
 |属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
 |---- | ---- | ---- |---- | --- |---- |
 | longitude | Number |  | 是 |gcj02 坐标系中心经度 |- |
-| latitude | Number |  | 是 |gcj02 坐标系中心纬度 | |
+| latitude | Number |  | 是 |gcj02 坐标系中心纬度 |- |
 | scale |  Number | 16 | 否 |缩放级别，取值范围为4-21 |- |
 | markers |	Array.&lt;marker&gt;|   | 否 |标记点 |- |
-| polyline | Array.&lt;polyline&gt; |   | 否 |路线 | |
-| polygons |  Array.&lt;polygon&gt; |   | 否 |多边形（工具暂不支持） | 2.0.13 |
+| polyline | Array.&lt;polyline&gt; |   | 否 |路线 |- |
+| polygons |  Array.&lt;polygon&gt; |   | 否 |多边形（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 | circles |  Array.&lt;circle&gt; |   | 否 |  圆 |- |
-| controls |  Array.&lt;control&gt; |   | 否 |控件 | |
-| include-points |  Array&lt;point&gt; |   | 否 | 缩放视野以包含所有给定的坐标点   | |
-| show-location | Boolean |   | 否 | 显示带有方向的当前定位点 |- |
-| enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13|
-| show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13|
-| enable-overlooking | Boolean |  false |否 | 开启俯视（工具暂不支持） | 2.0.13 |
-| enable-zoom | Boolean | true | 否 |是否支持缩放（工具暂不支持） | 2.0.13 |
-| enable-scroll | Boolean | true | 否 |是否支持拖动（工具暂不支持） | 2.0.13 |
-| enable-rotate | Boolean | false | 否 | 是否支持旋转（工具暂不支持） | 2.0.13|
-| bindmarkertap | EventHandle |  | 否 |点击标记点时触发 | |
+| controls |  Array.&lt;control&gt; |   | 否 |控件 |- |
+| include-points |  Array.&lt;point&gt; |   | 否 | 缩放视野以包含所有给定的坐标点   |- |
+| show-location | Boolean | false | 否 | 显示带有方向的当前定位点 |- |
+| enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-overlooking | Boolean |  false |否 | 开启俯视（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-zoom | Boolean | true | 否 |是否支持缩放（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-scroll | Boolean | true | 否 |是否支持拖动（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-rotate | Boolean | false | 否 | 是否支持旋转（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| bindmarkertap | EventHandle |  | 否 |点击标记点时触发 |- |
 | bindcallouttap |  EventHandle |  | 否 |点击标记点对应的气泡时触发 |- |
-| bindcontroltap | EventHandle |   | 否 |点击控件时触发 | |
+| bindcontroltap | EventHandle |   | 否 |点击控件时触发 | -|
 | bindregionchange | EventHandle |  | 否 |视野发生变化时触发 |- |
-| bindtap | EventHandle |   | 否 |点击地图时触发 | |
+| bindtap | EventHandle |   | 否 |点击地图时触发 |- |
 | bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
 | bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
@@ -195,52 +195,54 @@ Page({
 
 ###  属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明| 
-|:---- |: ---- | :---- |:---- |: --- | 
-| markerId |  Number| | 否 | 标记点id，marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
-| latitude |   Number || 是 | 纬度，浮点数，范围 -90 ~ 90 |
-| longitude |  Number || 是 | 经度，浮点数，范围 -180 ~ 180 |
-| title  |   String | |否    | 标注点名 |
-| zIndex  |  Number | |否    |  显示层级 |
-| iconPath |   String | |是 | 显示的图标，项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
-| rotate |   Number |0| 否 |旋转角度，顺时针旋转的角度，范围 0 ~ 360，默认为 0 |
-| alpha |   Number    | 1|否 | 标注的透明度，默认1，无透明 |
-| width |   Number | |否 | 标注图标宽度，默认为图片实际宽度 |
-| height |   Number | |否 | 标注图标高度，默认为图片实际高度 |
-| callout |   Object || 否 | 自定义标记点上方的气泡窗口，支持的属性见下表，不可识别换行符。 |
-| label |   Object | |否 | 为标记点旁边增加标签，支持的属性见下表，可识别换行符。 |
-| anchor |   Object | |否 | 经纬度在标注图标的锚点，默认底边中点，{x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
+| 属性名 | 说明 | 类型 | 必填 | 备注 | 
+|:---- | :---- |: ---- |:---- | :---- |
+| markerId | 标记点id | Number| 否 | marker点击事件回调会返回此id。建议为每个marker设置Number类型的id，保证更新marker时有更好的性能。 |
+| latitude | 纬度 | Number | 是 | 浮点数，范围 -90 ~ 90 |
+| longitude | 精度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
+| title | 标注点名 | String | 否 | 点击时显示，callout存在时将被忽略 |
+| zIndex | 显示层级 | Number | 否 | |
+| iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持网络路径、本地路径（相对和绝对路径写法），工具暂不支持绝对路径写法 |
+| rotate | 旋转角度 | Number | 否 | 默认为 0，顺时针旋转的角度，范围 0 ~ 360|
+| alpha | 标注的透明度 | Number | 否 | 默认为 1，无透明，范围 0 ~ 1 |
+| width | 标注图标宽度 | Number | 否 | 默认为图片实际宽度 |
+| height | 标注图标高度 | Number | 否 | 默认为图片实际高度 |
+| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，可识别换行符。 |
+| label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
+| anchor | 经纬度在标注图标的锚点 | Object | 否 | 默认底边中点，{x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
 
 ####  callout 属性说明 
 
-| 属性名 | 说明 | 类型  |
-|:---- | :---- |: ---- |
-| content | 文本 | String |
-| color | 文本颜色 | String |
-| fontSize | 文字大小 | Number |
-| borderRadius | callout边框圆角 | Number |
-| bgColor | 背景色 | String |
-| padding | 文本边缘留白 | Number |
-| display | 'BYCLICK':点击显示; 'ALWAYS':常显 | String |
-| textAlign | 文本对齐方式。有效值: left, right, center | String |
+| 属性名 | 说明 | 类型 | 备注 |
+|:---- | :---- |: ---- |: ---- |
+| content | 文本 | String | |
+| color | 文本颜色 | String | 8位十六进制表示，最后2位表示alpha值（可省略）| 
+| fontSize | 文字大小 | Number | |
+| borderWidth | 边框宽度 | Number | |
+| borderColor | 边框颜色 | String | 8位十六进制表示，最后2位表示alpha值（可省略）| 
+| borderRadius | callout边框圆角 | Number | |
+| bgColor | 背景色 | String | 8位十六进制表示，最后2位表示alpha值（可省略）| 
+| padding | 文本边缘留白 | Number | |
+| display | 'BYCLICK':点击显示; 'ALWAYS':常显 | String | 默认为常显 |
+| textAlign | 文本对齐方式。有效值: left, right, center | String | 默认为居中对齐 |
 
 ####  label 属性说明 
 
-| 属性名 | 说明 | 类型  |
-|:---- | :---- | :---- |
-| content | 文本 | String |
-| color  | 文本颜色 | String |
-| fontSize | 文字大小 | Number |
-| x | label的坐标，原点是 marker 对应的经纬度 | Number |
-| y | label的坐标，原点是 marker 对应的经纬度 | Number |
-| borderWidth | 边框宽度 | Number |
-| borderColor | 边框颜色 | String |
-| borderRadius | 边框圆角 | Number |
-| bgColor | 背景色 | String |
-| padding    | 文本边缘留白 | Number |
-| textAlign | 文本对齐方式。有效值: left, right, center | String |
+| 属性名 | 说明 | 类型 | 备注 |
+|:---- | :---- |: ---- |: ---- |
+| content | 文本 | String | |
+| color  | 文本颜色 | String | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| fontSize | 文字大小 | Number | |
+| x | label的坐标，原点是 marker 对应的经纬度 | Number | |
+| y | label的坐标，原点是 marker 对应的经纬度 | Number | |
+| borderWidth | 边框宽度 | Number | |
+| borderColor | 边框颜色 | String | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| borderRadius | 边框圆角 | Number | |
+| bgColor | 背景色 | String | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| padding | 文本边缘留白 | Number | |
+| textAlign | 文本对齐方式。有效值: left, right, center | String | 默认为居中对齐 |
 
-## 示例参考
+## 参考示例
 ###  图片示例 
 
 <div class="m-doc-custom-examples">
@@ -358,12 +360,12 @@ Page({
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | points | 经纬度数组 | Array | 是 | [{latitude: 0, longitude: 0}] |
-| color | 线的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
-| width | 线的宽度 | Number | 否 | - |
+| color | 线的颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| width | 线的宽度 | Number | 否 | |
 | dottedLine | 是否虚线  | Boolean | 否 | 默认false |
-| arrowLine | 带箭头的线 | Boolean | 否 | 默认false，开发者工具暂不支持该属性     |
+| arrowLine | 带箭头的线 | Boolean | 否 | 默认false |
 | arrowIconPath | 更换箭头图标 | String | 否 | 在arrowLine为true时生效 |
-| borderColor | 线的边框颜色 | String | 否 | - |
+| borderColor | 线的边框颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略） |
 | borderWidth | 线的厚度 | Number | 否 | `` |
 
 ## 示例
@@ -435,9 +437,9 @@ Page({
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
 | points | 经纬度数组 | Array |	是 | [{latitude: 0, longitude: 0}]|
-| strokeWidth |	描边的宽度 | Number | 否 ||
-| strokeColor |	描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
-| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA|
+| strokeWidth |	描边的宽度 | Number | 否 | |
+| strokeColor |	描边的颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略） |
 | zIndex | 设置多边形Z轴数值 | Number | 否 | `` |
 
 ## 示例
@@ -513,8 +515,8 @@ Page({
 |---- | ---- | ---- |---- | ---- |
 | latitude | 纬度 | Number | 是 | 浮点数，范围 -90 ~ 90 |
 | longitude | 经度 | Number | 是 | 浮点数，范围 -180 ~ 180 |
-| color | 描边的颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
-| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，后两位表示alpha值，如：#000000AA |
+| color | 描边的颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略） |
+| fillColor | 填充颜色 | String | 否 | 8位十六进制表示，最后2位表示alpha值（可省略）|
 | radius | 半径 | Number | 是 | |
 | strokeWidth | 描边的宽度 | Number | 否 | `` |
 
@@ -581,15 +583,15 @@ Page({
 |---- | ---- | ---- |---- | ---- |
 | controlId | 控件id | Number | 否 | 在控件点击事件回调会返回此id |
 | position | 控件在地图的位置 | Object | 是 | 控件相对地图位置 |
-| iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对智能小程序根目录；也支持临时路径 |
+| iconPath | 显示的图标 | String | 是 | 项目目录下的图片路径，支持网络路径、本地路径（相对和绝对路径写法），工具暂不支持绝对路径写法 |
 | clickable | 是否可点击 | Boolean | 否 | 默认不可点击 |
 
 ###  position 属性说明 
 
 | 属性名 | 说明 | 类型  | 必填  | 备注 |
 |---- | ---- | ---- |---- | ---- |
-| left | 距离地图的左边界多远 | Number | 否 | 默认为0 |
-| top | 距离地图的上边界多远 | Number | 否 | 默认为0 |
+| left | 距离地图的左边界多远 | Number | 否 | 默认为 0 |
+| top | 距离地图的上边界多远 | Number | 否 | 默认为 0 |
 | width | 控件宽度 | Number | 否 | 默认为图片宽度 |
 | height | 控件高度 | Number | 否 | 默认为图片高度 |
 

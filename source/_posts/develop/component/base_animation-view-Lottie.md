@@ -69,7 +69,7 @@ Page({
         status: '停止'
     },
     onShow(){
-        console.log('手百版本11.3以上才可使用');
+        console.log(' 百度 App版本11.3以上才可使用');
     },
     playLottie() {
         // 切换播放状态
@@ -96,7 +96,7 @@ Page({
 |autoplay | Boolean | true	  |否 |动画是否自动播放	|- |
 |action | String  |	  play |否 |动画操作，可取值 play、pause、stop	|- |
 |hidden | Boolean  |  true |否 |是否隐藏动画| -|
-|bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0|
+|bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 ###  action 有效值 
 

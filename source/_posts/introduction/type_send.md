@@ -29,7 +29,7 @@ sidebar: type_send
 
 ### **接口调用** 
 
-小程序[客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)API文档。
+小程序[客服消息](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)API文档。
 
 
 

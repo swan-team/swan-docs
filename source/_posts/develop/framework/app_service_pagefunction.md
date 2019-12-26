@@ -34,7 +34,7 @@ Page({
 
 **代码示例**
 
-<a href="swanide://fragment/231087fc63ccb30eb5f7bffbd9b40af21573190784925" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19863fc91f9ea66d1154820bc01769171577102326931" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // page.js
