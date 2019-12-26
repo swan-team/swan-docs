@@ -90,6 +90,8 @@ ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           
 
 ### 请求示例
 
+**实际请求使用form 不是json**
+
 ```json
     {
     	"touser_openId": "",
