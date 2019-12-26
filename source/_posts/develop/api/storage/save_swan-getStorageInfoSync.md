@@ -15,7 +15,7 @@ sidebar: save_swan-getStorageInfoSync
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getStorageInfo.png" class="demo-qrcode-image" />
 
-<a href="swanide://fragment/442cea61078f7f6be45b83f18adbd1011577107794182" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b1fe8f153acf20d5ede9343adc3a87e71573633711521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **方法参数**： 无
 
@@ -122,15 +122,14 @@ Page({
         });
     },
     getStorageInfo() {
-        let res = swan.getStorageInfoSync();
-
-        // 基础库 3.140.1 之前，无法判断接口是否调用失败
-        // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
-        if (!(res instanceof Error)) {
-            console.log('getStorageInfoSync success', res);
-        }
-        else {
-            console.log('getStorageInfoSync fail', res.message);
+        try {
+            const result = swan.getStorageInfoSync();
+            swan.showModal({
+                title: '',
+                content: JSON.stringify(result.keys) 
+            })
+        } catch (err) {
+            console.log('getStorageInfoSync fail', err);
         }
     },
     hasKey() {
@@ -153,9 +152,5 @@ Page({
 
 |错误码|说明|
 |--|--|
-|1001|执行失败|
+|1001|执行失败  |
 
-**Bug & Tip**
-
-* 基础库 3.140.1 之前，无法判断接口是否调用失败。
-* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

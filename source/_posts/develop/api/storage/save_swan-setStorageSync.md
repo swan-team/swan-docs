@@ -35,7 +35,7 @@ sidebar: save_swan-setStorageSync
 
 **代码示例**
 
-<a href="swanide://fragment/5146563edbf8593329266a8976c0b6931577107860591" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/67afe5dddb614eba763185066b2e60ea1573632298467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -84,18 +84,14 @@ Page({
         if (!key) {
             return;
         }
-        let res = swan.setStorageSync(key, this.getData('value'));
-
-        // 基础库 3.140.1 之前，无法判断接口是否调用失败
-        // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
-        if (!res.errCode || !res.errMsg && !(res instanceof Error)) {
+        try {
+            swan.setStorageSync(key, this.getData('value'));
             this.toast('存储成功', 'none');
             this.setData('disabled', false);
-        }
-        else {
+        } catch (e) {
             swan.showModal({
                 title: '存储失败',
-                content: res.message
+                content: JSON.stringify(e)
             });
         }
     },
@@ -104,19 +100,15 @@ Page({
         if (!key) {
             return;
         }
-        let res = swan.getStorageSync(key);
-
-        // 基础库 3.140.1 之前，无法判断接口是否调用失败
-        // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
-        if (!(res instanceof Error)) {
-            console.log('getStorageSync success:', res);
+        try {
+            const result = swan.getStorageSync(key);
+            console.log('getStorageSync result:', result);
             swan.showModal({
                 title: '数据信息',
-                content: res,
+                content: result,
                 showCancel: false
             });
-        }
-        else {
+        } catch (e) {
             this.toast('找不到key对应的值');
         }
     },
@@ -148,10 +140,7 @@ Page({
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确|
+|202|解析失败，请检查参数是否正确      |
 |1003|超过最大存储文件大小|
 
-**Bug & Tip**
 
-* 基础库 3.140.1 之前，无法判断接口是否调用失败。
-* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
