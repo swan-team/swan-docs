@@ -1203,33 +1203,32 @@
                       text: ad 广告
                       name: ad
     # -
-    #   text: 扩展组件
+    #   text: 扩展功能
     #   name: extended
     #   sidebar:
-    #     -
+    #     -   
+    #         text: 基础组件
     #         sidebar:
     #           -
     #             link: /develop/extended/component-content/commentpublish
     #             text: 半屏内容发布器带服务版
     #             name: commentpublish
-    #     -
-    #         sidebar:
     #           -
     #             link: /develop/extended/component/publish
     #             text: 全屏内容发布器组件
     #             name: publish
-    #     -
-    #         sidebar:
     #           -
     #             link: /develop/extended/component-content/like
     #             text: 点赞组件
     #             name: like
+
     #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/concern
-    #             text: 关注组件
-    #             name: concern
+    #       text: smartUI模板
+    #       sidebar:
+    #         -
+    #           link: /develop/extended/template/content-detail
+    #           text: 图文详情页
+    #           name: content-detail
     -
       text: API
       name: api
