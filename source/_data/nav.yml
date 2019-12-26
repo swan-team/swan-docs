@@ -1229,7 +1229,7 @@
     #           link: /develop/extended/template/content-detail
     #           text: 图文详情页
     #           name: content-detail
-    # -
+    -
       text: API
       name: api
       sidebar:
