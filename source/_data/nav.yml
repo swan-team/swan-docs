@@ -375,6 +375,10 @@
                 text: 论坛小程序开通指引
                 name: productlaboratory
               -
+                link: /introduction/productlaboratory_search
+                text: 自然搜索结果流量开通指引
+                name: productlaboratory_search                
+              -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
                 name: productlaboratory_ad
@@ -4353,6 +4357,18 @@
     #               name: limit_components
 
     -
+      text: 扩展能力
+      name: extension
+      sidebar:
+        -
+          text: smartUI模板
+          sidebar:
+            -
+              link: /develop/extension/template/content-detail
+              text: 图文详情页
+              name: content-detail
+
+    -
       text: 功能开发
       name: function
       sidebar:
@@ -4757,12 +4773,12 @@
 
 # 6
 -
-  link: third/create
+  link: /third/create
   text: 第三方平台
   name: third
   nav:
     -
-      link: third/create
+      link: /third/create
       text: 快速入门
       name: book
       sidebar:
@@ -4785,7 +4801,7 @@
               text: 第三方平台发布检测
               name: publication
     -
-      link: third/pro
+      link: /third/pro
       text: 接口说明
       name: book
       sidebar:

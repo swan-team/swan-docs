@@ -10,7 +10,7 @@ sidebar: audits
 ## 运行环境要求
 
 - 下载并安装 2.23.0 或以上版本的开发者工具。
-    > 下载链接：[windows 64](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
+    > 下载链接：[windows 64](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) / [mac](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
 - 基础库需要使用 2.0.0 及以上版本。
 

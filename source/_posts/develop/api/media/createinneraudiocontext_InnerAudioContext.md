@@ -71,7 +71,7 @@ Page({
     onLoad() {
         //  每次触发就会注册一次回调事件，所以只需把所有回调写在onLoad中即可
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
 
         innerAudioContext.onPlay(res => {
@@ -168,7 +168,7 @@ Page({
     onLoad() {
         //  每次触发就会注册一次回调事件，所以只需把所有回调写在onLoad中即可
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.obeyMuteSwitch = false;
 

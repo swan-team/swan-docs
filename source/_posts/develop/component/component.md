@@ -13,8 +13,8 @@ sidebar: component
 |---- | ---- |
 |<a href="/develop/component/view_view/">view</a>  | 视图容器，相当于 html 中的 div ，可将页面分割为独立的、不同的部分。如果需要使用滚动视图，请使用 [scroll-view](/develop/component/view_scroll-view/)。 |
 |<a href="/develop/component/view_scroll-view/">scroll-view</a>| 可滚动视图区域，可实现横向滚动和竖向滚动。使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。 |
-|<a href="/develop/component/view_swiper/">swiper</a> |滑块视图容器。内部只允许使用<swiper-item>组件描述滑块内容，否则会导致未定义的行为。 |
-|<a href="/develop/component/view_swiper-item/">swiper-item</a> |滑块视图容器子项，仅可放置在<swiper>组件中，宽高自动设置为100%。 |
+|<a href="/develop/component/view_swiper/">swiper</a> |滑块视图容器。内部只允许使用&lt;swiper-item&gt;组件描述滑块内容，否则会导致未定义的行为。 |
+|<a href="/develop/component/view_swiper-item/">swiper-item</a> |滑块视图容器子项，仅可放置在&lt;swiper&gt;组件中，宽高自动设置为100%。 |
 |<a href="/develop/component/view_movable-view/">movable-view</a>|可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。|
 |<a href="/develop/component/view_movable-area/">movable-area</a>|可移动视图区域，movable-view 的可移动区域|
 |<a href="/develop/component/view_cover-view/">cover-view</a>| 文本视图，覆盖在原生组件之上，只支持嵌套cover-view、cover-image组件。|
@@ -44,8 +44,8 @@ sidebar: component
 |<a href="/develop/component/media_image/">image</a>|图片，image 组件默认宽度 300px、高度 225px。|
 |<a href="/develop/component/media_audio/">audio</a>|音频|
 |<a href="/develop/component/media_video/">video</a>|视频，v3.70.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。|
-|<a href="/develop/component/media_camera/">camera</a>|相机，使用该组件需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。|
-|<a href="/develop/component/media_ar-camera/">ar-camera</a>|AR 相机，在 [DuMixAR 内容开放平台](http://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。|
+|<a href="/develop/component/media_camera/">camera</a>|相机，使用该组件需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。|
+|<a href="/develop/component/media_ar-camera/">ar-camera</a>|AR 相机，在 [DuMixAR 内容开放平台](https://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。|
 |<a href="/develop/component/media_live-player/">live-player</a>|实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。|
 |<a href="/develop/component/map/">map</a>|地图，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。|
 |<a href="/develop/component/canvas/">canvas</a>|画布，一个矩形区域，开发者可以在页面上绘制图形。canvas 拥有多种绘制路径、矩形、图形、字符以及添加图像的方法。|

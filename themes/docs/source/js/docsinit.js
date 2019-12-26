@@ -469,14 +469,14 @@
             var $demo = $('img[src= "../../img/demo/demo.png"]');
             var $closest = $demo.closest('div');
             var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
             var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
@@ -937,7 +937,7 @@
     $(doc).ready(function () {
         docs.start();
         try {
-            $('.m-doc-sidebar-selected')[0].scrollIntoView();
+            $('.m-doc-sidebar-selected')[0].scrollIntoView({block: 'center'});
         }
         catch (err) {}
     });

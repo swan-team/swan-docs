@@ -41,10 +41,10 @@ function caseInvoke(scheme) {
         return;
     }
     if (isBox()) {
-        // 手百
+        //  百度 App
         isIOS() ? smartAppIosInvoke(scheme) : smartAppAndroidInvoke(scheme);
     } else {
-        // 非手百
+        // 非 百度 App
         /*eslint-disable fecs-camelcase*/
         var openbox = window.OpenBox({
             url: location.href

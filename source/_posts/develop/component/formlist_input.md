@@ -54,7 +54,6 @@ sidebar: formlist_input
 ###  代码示例2 - 自定义输入控制 ：
 
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
-
 </a>
 
 * 在 swan 文件中

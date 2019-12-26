@@ -44,4 +44,4 @@ Page({
 });
 ```
 
-但是推荐使用第一种方法，可以在当前 Page 上精准查找，避免一些问题。具体方法的挂载，在 [API 章节](http://smartprogram.baidu.com/docs/develop/api/net/) 会有详细介绍。
+但是推荐使用第一种方法，可以在当前 Page 上精准查找，避免一些问题。具体方法的挂载，在 [API 章节](https://smartprogram.baidu.com/docs/develop/api/net/) 会有详细介绍。

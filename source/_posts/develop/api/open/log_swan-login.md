@@ -91,7 +91,7 @@ swan.login({
 });
 ```
 
-**代码示例3: 开发者工具中右上角的登陆态与模拟器中用户的手百登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
+**代码示例3: 开发者工具中右上角的登陆态与模拟器中用户的 百度 App登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
 
 <a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -108,7 +108,7 @@ swan.login({
 Page({
     data: { },
     onLoad() {
-        // 用户首次登陆小程序同步手百登陆态
+        // 用户首次登陆小程序同步 百度 App登陆态
         swan.login({
             success: res => {
                 console.log('login success', res);
@@ -120,7 +120,7 @@ Page({
     },
     onShow() {
         let that = this;
-        // 用户进入小程序检测小程序在手百的登陆态是否有效
+        // 用户进入小程序检测小程序在 百度 App的登陆态是否有效
         swan.checkSession({
             success: function (res) {
                 // 有效，获取用户信息
@@ -138,7 +138,7 @@ Page({
                 });
             },
             fail: function (err) {
-                // 无效，同步手百登陆态
+                // 无效，同步 百度 App登陆态
                 swan.login({
                     success: res => {
                         console.log('login success', res);

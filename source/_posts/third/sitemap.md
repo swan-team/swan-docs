@@ -253,7 +253,7 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/app/upload
 {
     "errno": 0,
     "msg": "success",
-    "data": "http://searchbox.bj.bcebos.com/v1/searchbox/mappconsole/image/20191017/0e51f553-3631-4c45-9cc6-09c4496282d6.txt"
+    "data": "https://searchbox.bj.bcebos.com/v1/searchbox/mappconsole/image/20191017/0e51f553-3631-4c45-9cc6-09c4496282d6.txt"
 }
 ```
 
@@ -295,7 +295,7 @@ POST https://openapi.baidu.com/file/2.0/smartapp/robots/template/upload
 {
     "errno": 0,
     "msg": "success",
-    "data": "http://searchbox.bj.bcebos.com/v1/searchbox/mappconsole/image/20191017/0e51f553-3631-4c45-9cc6-09c4496282d6.txt"
+    "data": "https://searchbox.bj.bcebos.com/v1/searchbox/mappconsole/image/20191017/0e51f553-3631-4c45-9cc6-09c4496282d6.txt"
 }
 ```
 
@@ -1116,7 +1116,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | **key**                  | **类型**   | **是否必填** | **备注**                                                     | **示例**                                                     |
 | ------------------------ | ---------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | author_name              | string     | 否           | 作者名                                                       | 张三                                                         |
-| author_portrait_url      | string     | 否           | 作者头像url                                                  | <http://www.xxx.baidu.com/author/portrail.jpg>               |
+| author_portrait_url      | string     | 否           | 作者头像url                                                  | <https://www.xxx.baidu.com/author/portrail.jpg>               |
 | author_path              | string     | 否           | 作者落地页链接                                               | /pages/author/author                                         |
 | author_fans_num          | int        | 否           | 作者粉丝量                                                   | 10000                                                        |
 | author_auth              | string     | 否           | 是否认证作者                                                 | 1-是 0-否   示例：1                                          |
@@ -1146,7 +1146,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | is_verified              | string     | 否           | 是否大V                                                      | true                                                         |
 | author_level             | int        | 否           | 作者等级                                                     | 0为无等级，1为最低，数字越大等级越高                         |
 | author_registration_year | string     | 否           | 作者注册年限                                                 | 8（不足一年按照1计算）                                       |
-| content_items            | JSON array | 否           | 文章结构化内容，需要提供正文所有的文字和图片混排内容   按原文正文换行及图片进行item分隔   type为item类型 text-文本 image-图片   例如下面的正文区可以拆分为右侧的样例。 | [    {    "type":"text",    "data":"第一段文字"    },    {    "type":"text",    "data":"第二段文字"    },    {    "type":"image",    "data":"<http://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>"    },    {    "type":"text",    "data":"第三段文字"    },    {    "type":"image",    "data":"<http://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>"    },    {    "type":"text",    "data":"第四段文字"    }    ] |
+| content_items            | JSON array | 否           | 文章结构化内容，需要提供正文所有的文字和图片混排内容   按原文正文换行及图片进行item分隔   type为item类型 text-文本 image-图片   例如下面的正文区可以拆分为右侧的样例。 | [    {    "type":"text",    "data":"第一段文字"    },    {    "type":"text",    "data":"第二段文字"    },    {    "type":"image",    "data":"<https://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>"    },    {    "type":"text",    "data":"第三段文字"    },    {    "type":"image",    "data":"<https://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>"    },    {    "type":"text",    "data":"第四段文字"    }    ] |
 | ip                       | string     | 否           | 需引入的热点ip资源名称（如，漫画类，综艺类等）               | 极限挑战    斗破苍穹                                         |
 
 2）视频型
@@ -1174,7 +1174,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | ------------------------ | -------- | -------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | author_name              | string   | 否                         | 作者名                                         | 张三                                                         |
 | author_profile           | string   | 否                         | 作者简介                                       | 搞笑视频作者                                                 |
-| author_portrait_url      | string   | 否                         | 作者头像url                                    | <http://www.xxx.baidu.com/author/portrail.jpg>               |
+| author_portrait_url      | string   | 否                         | 作者头像url                                    | <https://www.xxx.baidu.com/author/portrail.jpg>               |
 | author_path              | string   | 否                         | 作者落地页链接                                 | /pages/author/author                                         |
 | author_fans_num          | int      | 否                         | 作者粉丝量                                     | 1000                                                         |
 | author_publish_num       | int      | 否                         | 作者视频发布量                                 | 1000                                                         |
@@ -1308,7 +1308,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | **key**             | **类型** | **是否必填**                                                 | **备注**         | **示例**                                                     |
 | ------------------- | -------- | ------------------------------------------------------------ | ---------------- | ------------------------------------------------------------ |
 | author_name         | string   | 否                                                           | 作者名           | 张三                                                         |
-| author_portrait_url | string   | 否                                                           | 作者头像url      | <http://www.xxx.baidu.com/author/portrail.jpg>               |
+| author_portrait_url | string   | 否                                                           | 作者头像url      | <https://www.xxx.baidu.com/author/portrail.jpg>               |
 | author_path         | string   | 否                                                           | 作者落地页链接   | /pages/author/author                                         |
 | author_fans_num     | int      | 否                                                           | 作者粉丝量       | 10000                                                        |
 | author_auth         | string   | 否                                                           | 是否认证作者     | 1-是 0-否   示例：1                                          |
@@ -1351,7 +1351,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | title         | string   | **是**       | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能全英文，最少6个字，不大于40个字 | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做       |
 | body          | string   | **是**       | 消息体，为小程序或内容的详细介绍，机器将参考消息体为物料打上相应分发标签 | 内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
-| path          | string   | **是**       | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考手百问答落地页，**feed****要求至少8个答案** | /pages/index/index                                           |
+| path          | string   | **是**       | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考 百度 App问答落地页，**feed****要求至少8个答案** | /pages/index/index                                           |
 | images        | string   | **是**       | 封面图片链接（JSON格式）（问答资源要求3张封图，单图片最大2M），且封图不可重复   建议尺寸：高>=210 & 宽>=375   最小尺寸：高>=146 & 宽>=218 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
 | mapp_type     | string   | **是**       | 资源类型（参考附录一），内容型为1000                         | 内容型固定为1000                                             |
 | mapp_sub_type | string   | **是**       | 资源子类型（参考附录一），图文子类为1001                     | 问答型固定为1009                                             |
@@ -1365,11 +1365,11 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 | **key**              | **类型** | **是否必填** | **备注**                                        | **示例**                                                     |
 | -------------------- | -------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------ |
 | author_name          | string   | 否           | 作者名                                          | 张三                                                         |
-| author_portrait_url  | string   | 否           | 作者头像url                                     | 例如<http://www.xxx.baidu.com/author/portrail.jpg>           |
+| author_portrait_url  | string   | 否           | 作者头像url                                     | 例如<https://www.xxx.baidu.com/author/portrail.jpg>           |
 | author_path          | string   | 否           | 作者落地页链接                                  | /pages/author/author                                         |
 | author_fans_num      | int      | 否           | 作者粉丝量                                      | 10000                                                        |
 | author_auth          | string   | 否           | 是否认证作者                                    | 1-是 0-否   示例：1                                          |
-| comment_portrait_url | array    | 是           | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
+| comment_portrait_url | array    | 是           | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
 | comment_author_num   | int      | 是           | 讨论人数   问答类型必填该字段                   | 30                                                           |
 | publish_time         | string   | **是**       | 内容发布时间                                    | 内容发布时间需在一年以内   示例：2018年9月8日                |
 | img_urls             | string   | 否           | 文章所有图片url                                 | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
@@ -1683,7 +1683,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |参数名|类型|说明|是否必填|示例|
 |---|---|---|---|---|
 |author_name|	string|	作者名|否|	张三|
-|author\_portrait\_url|	string|作者头像url|否|`	http://www.xxx.baidu.com/author/portrail.jpg`|
+|author\_portrait\_url|	string|作者头像url|否|`	https://www.xxx.baidu.com/author/portrail.jpg`|
 |author_path|	string|	作者落地页链接|	否|/pages/author/author|
 |author\_fans\_num|	int	|作者粉丝量|否|10000|
 |author_auth|	string|	是否认证作者	|否|1-是 0-否 |
@@ -1706,7 +1706,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 |参数名|类型|说明|是否必填|示例|
 |---|---|---|---|---|
 |author_name|	string|	作者名|	否|张三|
-|author\_portrait\_url	|string	|	作者头像url|否|`http://www.xxx.baidu.com/author/portrail.jpg`|
+|author\_portrait\_url	|string	|	作者头像url|否|`https://www.xxx.baidu.com/author/portrail.jpg`|
 |author_path|	string|	作者落地页链接|		否|/pages/author/author|
 |author\_fans\_num|	int	|作者粉丝量|	否|	1000|
 |author\_publish\_num|	int	|作者发文量|	否|1000|
