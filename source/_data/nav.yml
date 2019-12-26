@@ -377,7 +377,7 @@
               -
                 link: /introduction/productlaboratory_search
                 text: 自然搜索结果流量开通指引
-                name: productlaboratory_search                
+                name: productlaboratory_search
               -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
@@ -537,6 +537,10 @@
               link: /design/resource/lottie
               text: Lottie动效开源库
               name: lottie
+            -
+              link: /design/resource/animationVideo
+              text: 透明视频AFX
+              name: animationVideo
 
 #3
 -
@@ -1040,6 +1044,21 @@
                     link: /develop/component/base_animation-view-Lottie
                     text:  animation-view Lottie 动画
                     name: base_animation-view-Lottie
+        -
+            sidebar:
+              -
+
+                text: 动画组件
+                name: animation-view
+                sidebar:
+                  -
+                    link: /develop/component/animation-view-Lottie
+                    text: animation-view Lottie 动画
+                    name: animation-view-Lottie
+                  -
+                    link: /develop/component/animation-video
+                    text: animation-video 透明视频动画
+                    name: animation-video
         -
             sidebar:
               -
@@ -1965,7 +1984,32 @@
                       link: /develop/api/media/videocontext_VideoContext-playbackRate
                       text: VideoContext.playbackRate
                       name:  videocontext_VideoContext-playbackRate
+            -
 
+              text: 透明视频组件控制
+
+              sidebar:
+                -
+                  link: /develop/api/media/animationvideo_swan-createAnimationVideo
+                  text: swan.createAnimationVideo
+                  name: animationvideo_swan-createAnimationVideo
+                -
+                  link: /develop/api/media/animationvideo_AnimationVideo
+                  text: AnimationVideo
+                  name: animationvideo_AnimationVideo
+                  sidebar:
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-play
+                      text: AnimationVideo.play
+                      name: animationvideo_AnimationVideo-play
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-pause
+                      text: AnimationVideo.pause
+                      name: animationvideo_AnimationVideo-pause
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-seek
+                      text: AnimationVideo.seek
+                      name: animationvideo_AnimationVideo-seek
             -
 
               text: 直播组件控制
