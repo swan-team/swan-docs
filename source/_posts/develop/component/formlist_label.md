@@ -12,7 +12,7 @@ sidebar: formlist_label
 
 ## 代码示例
 
-<a href="swanide://fragment/d3db37680254c55912ce6b2f6fe889941576151764746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d45e0c0552e807263fd72f5ae90cfece1577360566830" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
