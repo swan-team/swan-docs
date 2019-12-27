@@ -1,5 +1,5 @@
 <div class="m-doc-sidebar-mask"></div>
-<div class="m-doc-sidebar-nav-wrapper">
+<div class="m-doc-sidebar-nav-wrapper" id="m-doc-sidebar">
     <ul>
         <%
             var navLen = nav ? nav.length : 0;
@@ -60,3 +60,8 @@
         <% } %>
     </ul>
 </div>
+<script>
+    if (isIde) {
+        document.getElementById('m-doc-sidebar').style.display = 'none';
+    }
+</script>

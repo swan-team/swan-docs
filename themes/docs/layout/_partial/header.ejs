@@ -1,4 +1,9 @@
-<header>
+<header id="header">
+    <script>
+        if (isIde) {
+            document.getElementById('header').style.display = 'none';
+        }
+    </script>
     <a href="javascript:void(0)" class="m-doc-nav-btn"></a>
     <div class="m-mobile-doc-level1"><%#
         %><% for(var i = 0; i < navs.length; i++) { %><%#
