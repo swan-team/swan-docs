@@ -12,7 +12,7 @@ sidebar: open
 
 ## 代码示例
 
-<a href="swanide://fragment/635e4d803dc33b610fed97bd3d4c1f2e1576151824192" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d660ceb0f0b55526185b4e674a74705d1577360610130" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
