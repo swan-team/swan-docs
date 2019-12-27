@@ -30,7 +30,7 @@ sidebar: swan-subscribeService
 |参数名 |类型 |说明|
 |---- | ---- | ---- |
 |type|String|订阅的操作类型：query（查询订阅）cancel（取消订阅）|
-|form_id|String|对应提交[`form 表单`](/develop/component/formlist_form/)时，bindsubmit 对应的 formId；当传入参数 type 为 cancel 时无此字段|
+|form_id|String|对应提交[`form 表单`](/develop/component/formlist_form/)时返回的 formId；当传入参数 type 为 cancel 时无此字段|
 |update_time|Number|订阅更新时间|
 |app_key|String|小程序唯一标识|
 
