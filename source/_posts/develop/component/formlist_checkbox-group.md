@@ -12,7 +12,7 @@ sidebar: formlist_checkbox-group
 
 ## 代码示例
 
-<a href="swanide://fragment/2b1058487cee67fe530bd34eea2761141576151667501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/25ed2aed48756b51d8ee66247ad0e31c1577360470649" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
