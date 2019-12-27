@@ -4354,8 +4354,49 @@
     #               link: /develop/plugins/limit_components
     #               text: 插件中组件的限制
     #               name: limit_components
-
-
+    -
+      text: 扩展能力
+      name: extensions
+      sidebar:
+        -
+          link: /develop/extensions/component/smt-feed
+          text: smtUI组件
+          sidebar:
+          -
+            link: /develop/extensions/component/info
+            text: smtUI介绍
+            name: info
+          -
+            link: /develop/extensions/component/smt-feed
+            text: smt-feed 信息流
+            name: smt-feed
+          -
+            link: /develop/extensions/component/smt-feed-item
+            text: smt-feed 信息流子项
+            name: smt-feed-item
+          -
+            link: /develop/extensions/component/smt-icon
+            text: smt-icon 图标
+            name: smt-icon
+          -
+            link: /develop/extensions/component/smt-refresh
+            text: smt-refresh 刷新
+            name: smt-refresh
+          -
+            link: /develop/extensions/component/smt-spin
+            text: smt-spin 加载
+            name: smt-spin
+          -
+            link: /develop/extensions/component/smt-page-status
+            text: smt-page-status 页面状态
+            name: smt-page-status
+        -
+            text: smtUI模板
+            sidebar:
+              -
+                link: /develop/extensions/template/content-detail
+                text: 图文详情页
+                name: content-detail
 
     -
       text: 功能开发
