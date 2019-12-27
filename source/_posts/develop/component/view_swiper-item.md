@@ -11,7 +11,7 @@ sidebar: view_swiper-item
 
 ## 代码示例
 
-<a href="swanide://fragment/920d1f9da544cf9908d17f4765066a241576119788404" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5c70c59c82510ef6ee6aeba665d5dbbb1577360676452" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

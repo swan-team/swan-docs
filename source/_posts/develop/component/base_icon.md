@@ -11,7 +11,7 @@ sidebar: base_icon
 
 ## 代码示例
 
-<a href="swanide://fragment/5ce0a6ac564f30b12d4c98e44fe404cd1576151196454" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2862c151ac430c745783b1a1696204b41577360560694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

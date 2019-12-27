@@ -14,7 +14,7 @@ sidebar: media_ar-camera
 
 ## 代码示例
 
-<a href="swanide://fragment/bfd8b5ec6b09bb12e705c54fe480e7191576151630476" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/089865d9da052f492ae2e0ab86bab8601577364090949" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

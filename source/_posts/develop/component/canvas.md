@@ -13,7 +13,7 @@ sidebar: canvas
 
 ## 代码示例
 
-<a href="swanide://fragment/b61e9c4e9287edea3e40f4bb961a56a51576151659489" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/91fbbbb9b45a5dd6728e947edb9915931577360466230" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
