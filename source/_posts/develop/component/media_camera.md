@@ -9,6 +9,29 @@ sidebar: media_camera
 
 **解释**：系统相机，使用该组件需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+|device-position| String | back | 否 | 前置或后置，值为front, back |
+|flash|String| auto | 否 |闪光灯，值为auto, on, off|
+|bindstop|EventHandle|  | 否 |摄像头在非正常终止时触发，如退出后台等情况|
+|binderror|EventHandle| | 否 |用户不允许使用摄像头时触发|
+
+###  device-position 有效值 
+
+| 值 | 说明 |
+|: ---- |: ---- |
+| front | 前置摄像头 |
+| back | 后置摄像头 |
+
+###  flash 有效值 
+
+| 值 | 说明 |
+| :---- |: ---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
 
 ## 代码示例
 
@@ -120,29 +143,7 @@ Page({
 });
 ```
  
-##  属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-|device-position| String | back | 否 | 前置或后置，值为front, back |
-|flash|String| auto | 否 |闪光灯，值为auto, on, off|
-|bindstop|EventHandle|  | 否 |摄像头在非正常终止时触发，如退出后台等情况|
-|binderror|EventHandle| | 否 |用户不允许使用摄像头时触发|
-
-###  device-position 有效值 
-
-| 值 | 说明 |
-|: ---- |: ---- |
-| front | 前置摄像头 |
-| back | 后置摄像头 |
-
-###  flash 有效值 
-
-| 值 | 说明 |
-| :---- |: ---- |
-| auto | 自动闪光灯 |
-| on | 闪光灯开 |
-| off | 闪光灯关 |
 
 ##  Bug & Tip 
 * Tip：camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。

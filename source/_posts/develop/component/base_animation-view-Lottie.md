@@ -9,7 +9,24 @@ sidebar: base_animation-view-Lottie
 
 **解释**：支持 Lottie 动画，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
+##  属性说明 
 
+|属性名 |类型  |默认值  |必填 |说明|最低版本|
+|:---- |: ---- | :--- | :---- |:---- | :---|
+| path | String  |  |是 |动画资源地址，目前只支持绝对路径|- |
+| loop | Boolean  |  false | 否 |动画是否循环播放 | -|
+|autoplay | Boolean | true	  |否 |动画是否自动播放	|- |
+|action | String  |	  play |否 |动画操作，可取值 play、pause、stop	|- |
+|hidden | Boolean  |  true |否 |是否隐藏动画| -|
+|bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+
+###  action 有效值 
+
+| 值 | 说明 |
+|:---- |:---- |
+| play | 播放 |
+| pause | 暂停 |
+| stop | 停止 |
 
 ## 代码示例
 
@@ -87,24 +104,7 @@ Page({
     }
 });
 ```
-##  属性说明 
 
-|属性名 |类型  |默认值  |必填 |说明|最低版本|
-|:---- |: ---- | :--- | :---- |:---- | :---|
-| path | String  |  |是 |动画资源地址，目前只支持绝对路径|- |
-| loop | Boolean  |  false | 否 |动画是否循环播放 | -|
-|autoplay | Boolean | true	  |否 |动画是否自动播放	|- |
-|action | String  |	  play |否 |动画操作，可取值 play、pause、stop	|- |
-|hidden | Boolean  |  true |否 |是否隐藏动画| -|
-|bindended | EventHandle |   | 否 | 当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。）|3.0.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-
-###  action 有效值 
-
-| 值 | 说明 |
-|:---- |:---- |
-| play | 播放 |
-| pause | 暂停 |
-| stop | 停止 |
 
 ##  Bug & Tip 
 

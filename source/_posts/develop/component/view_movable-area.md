@@ -11,6 +11,11 @@ sidebar: view_movable-area
 
 **解释**：`movable-view` 的可移动区域。`movable-area` 必须设置width和height属性，不设置默认为10px。
 
+##  属性说明 
+
+|属性名	|类型	|默认值| 必填 |	说明|
+|:---|:---|:---|:---|
+|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
 ## 代码示例
 
@@ -30,8 +35,4 @@ sidebar: view_movable-area
 ###  代码示例 
 
 参见[movable-view](https://smartprogram.baidu.com/docs/develop/component/view_movable-view/)示例内容。
-##  属性说明 
 
-|属性名	|类型	|默认值| 必填 |	说明|
-|:---|:---|:---|:---|
-|scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|

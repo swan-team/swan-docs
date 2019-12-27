@@ -10,6 +10,33 @@ sidebar: media_audio
 
 **解释**：音频
 
+##  属性说明 
+
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+|id|String||否|audio 组件的唯一标识符|
+|src|String||否|要播放音频的资源地址|
+|loop|Boolean|false|否|是否循环播放|
+|controls|Boolean|false|否|是否显示默认控件|
+|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
+|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
+|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
+|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
+|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
+|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
+|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
+|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
+
+
+###  MediaError.code 
+
+|返回错误码|描述|
+|:---- |:---- |
+|1|获取资源过程被用户终止|
+|2|网络错误|
+|3|当解码时发生错误|
+|4|不支持音频|
 
 ## 代码示例
 
@@ -104,30 +131,3 @@ Page({
 });
 ```
 
-##  属性说明 
-
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-|id|String||否|audio 组件的唯一标识符|
-|src|String||否|要播放音频的资源地址|
-|loop|Boolean|false|否|是否循环播放|
-|controls|Boolean|false|否|是否显示默认控件|
-|poster|String||否|默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效|
-|name|String|未知音频|否|默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效|
-|author|String|未知作者|否|默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效|
-|binderror|EventHandle||否|当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}|
-|bindplay|EventHandle||否|当开始/继续播放时触发play事件，detail = {duration}|
-|bindpause|EventHandle||否|当暂停播放时触发 pause 事件，detail = {duration}|
-|bindtimeupdate|EventHandle||否| 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}|
-|bindended|EventHandle||否|当播放到末尾时触发 ended 事件，detail = {duration}|
-
-
-###  MediaError.code 
-
-|返回错误码|描述|
-|:---- |:---- |
-|1|获取资源过程被用户终止|
-|2|网络错误|
-|3|当解码时发生错误|
-|4|不支持音频|

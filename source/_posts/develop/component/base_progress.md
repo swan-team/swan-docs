@@ -8,6 +8,18 @@ sidebar: base_progress
 
 **解释**：进度条
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+| percent | Float  | | 否 |百分比 0~100 |
+| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
+| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
+| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
+| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
+| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
+| active | Boolean  | false  | 否 |进度条从左往右的动画	|
+| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 
 ## 代码示例
@@ -102,18 +114,6 @@ sidebar: base_progress
 </view>
 ```
 
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-| percent | Float  | | 否 |百分比 0~100 |
-| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
-| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
-| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
-| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
-| active | Boolean  | false  | 否 |进度条从左往右的动画	|
-| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
 
 ## 参考示例
 

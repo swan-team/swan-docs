@@ -7,6 +7,14 @@ sidebar: view_cover-image
 
 **解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- | :---- |:---- |
+| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
+|bindload|	EventHandle| | 否 |图片加载成功时触发|
+|binderror|	EventHandle	| | 否 |图片加载失败时触发|
+
 
 ## 代码示例
 
@@ -57,14 +65,6 @@ Page({
     }
 });
 ```
-
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- | :---- |:---- |
-| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
-|bindload|	EventHandle| | 否 |图片加载成功时触发|
-|binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
 ##  Bug & Tip 
