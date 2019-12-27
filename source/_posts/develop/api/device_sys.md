@@ -350,7 +350,7 @@ Page({
         console.log('request.object.method.OPTIONS', swan.canIUse('request.object.method.OPTIONS'));
 
         // API: ${method} 为 success
-        console.log('ai.imageAudit.success.conclusionType.data.stars.name', swan.canIUse('ai.imageAudit.success.conclusionType.data.stars.name'));
+        console.log('ai.imageAudit.success.data.stars.name', swan.canIUse('ai.imageAudit.success.data.stars.name'));
 
         // API: ${method} 为 callback
         console.log('onAppShow.callback.entryType.user', swan.canIUse('onAppShow.callback.entryType.user'));
