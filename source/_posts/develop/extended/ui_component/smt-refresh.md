@@ -1,7 +1,7 @@
 ---
 title: smt-refresh 刷新
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-refresh
 ---
 

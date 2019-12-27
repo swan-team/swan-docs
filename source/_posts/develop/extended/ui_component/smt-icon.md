@@ -1,7 +1,7 @@
 ---
 title: smt-icon 图标
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-icon
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: smt-feed-item 信息流子项
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-feed-item
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: smt-spin 加载
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-spin
 ---
 
