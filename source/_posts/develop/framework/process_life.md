@@ -75,6 +75,3 @@ app onLaunch
 
 ### 5. setData
 `APP`服务线程触发以上生命周期后，逻辑层一般执行了众多的`setData`，每次`setData`均会使得`App`服务线程向渲染线程传送数据，引起页面的重新渲染。
-
-### 说明
- 每次前台切后台会触发`Page`的`onHide`生命周期函数，后台切前台触发`Page`的`onShow`。
