@@ -1,7 +1,7 @@
 ---
 title: 图文详情页
 header: develop
-nav: extensioned
+nav: extended
 sidebar:  template
 ---
 
