@@ -15,7 +15,7 @@ sidebar: tune_up
 为了帮助开发者调用收银台接口，我们提供了Go语言版本封装了签名&验签、HTTP接口请求等基础功能，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
 
-了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
+了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](https://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
 
 **方法参数**：Object object
 
@@ -32,14 +32,14 @@ sidebar: tune_up
 
 |参数| 必填|说明|
 |----|   ----|---|
-|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装与组装</a>。|
-|appKey| 是|支付能力开通后分配的支付appKey，用以表示应用身份的唯一ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/)。">核心参数获取与组装</a>。|
+|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="https://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装与组装</a>。|
+|appKey| 是|支付能力开通后分配的支付appKey，用以表示应用身份的唯一ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见<a href="https://smartprogram.baidu.com/docs/develop/function/parameter/)。">核心参数获取与组装</a>。|
 |totalAmount|  是|订单金额，单位为人民币分。|
 |tpOrderId| 是|商户平台自己记录的订单ID，当支付状态发生变化时，会通过此订单ID通知商户。|
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
-|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId`进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
-|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
+|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId`进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](https://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  
 **代码示例**

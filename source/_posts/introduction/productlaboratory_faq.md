@@ -149,6 +149,6 @@ set DOMAIN =https://www.******.cn
 ## 六、联系方式
 
 
-- [站长互助专区](http://bbs.zhanzhang.baidu.com/forum-118-1.html)
+- [站长互助专区](https://bbs.zhanzhang.baidu.com/forum-118-1.html)
 - [百度小程序反馈平台](https://smartprogram.baidu.com/forum/)
 

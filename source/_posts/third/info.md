@@ -57,7 +57,7 @@ sidebar: info
 
 ```shell
 curl -X GET \
-  'http://open api.baidu.com/app/category/list?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&category_type=2' 
+  'https://open api.baidu.com/app/category/list?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&category_type=2' 
 ```
 
 
@@ -153,7 +153,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/category/update
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/category/update?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&categorys=[{"sub_category_id":197,"qualis":[{"id":1,"addr":"https://b.bdstatic.com/searchbox/mappconsole/image/20180903/1535970481267095.jpg"}]}]'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/category/update?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&categorys=[{"sub_category_id":197,"qualis":[{"id":1,"addr":"https://b.bdstatic.com/searchbox/mappconsole/image/20180903/1535970481267095.jpg"}]}]'
 ```
 
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 ## 修改小程序icon
 
-> 修改小程序icon会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
+> 修改小程序icon会送审核，审核结果的推送见<a href="https://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
 
 
 ```
@@ -212,7 +212,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
 
 ```shell
 curl -X POST \
-  'http://address_java/app/modifyheadimage?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&image_url=https://b.bdstatic.com/searchbox/mappconsole/image/20181204/9adf15d0-b437-4e30-9f7a-13ffd19a98f0.png' 
+  'https://address_java/app/modifyheadimage?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&image_url=https://b.bdstatic.com/searchbox/mappconsole/image/20181204/9adf15d0-b437-4e30-9f7a-13ffd19a98f0.png' 
 ```
 
 **响应示例** 
@@ -262,7 +262,7 @@ curl -X POST \
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/modifysignature?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&signature=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%8F%8F%E8%BF%B0'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/modifysignature?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&signature=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%8F%8F%E8%BF%B0'
 ```
 
 **响应示例** 
@@ -308,7 +308,7 @@ curl -X POST \
 
 ```shell
 curl -X POST \
-  'http://address_java/app/pause?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC'
+  'https://address_java/app/pause?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC'
 ```
 
 **响应示例** 
@@ -350,7 +350,7 @@ curl -X POST \
 
 ```shell
 curl -X POST \
-  'http://address_java/app/resume?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC' 
+  'https://address_java/app/resume?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC' 
 ```
 
 **响应示例** 
@@ -429,7 +429,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&audit_desc=%E5%AE%A1%E6%A0%B8%E6%8F%8F%E8%BF%B0%E4%BF%A1%E6%81%AF' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&audit_desc=%E5%AE%A1%E6%A0%B8%E6%8F%8F%E8%BF%B0%E4%BF%A1%E6%81%AF' \
 ```
 
 
@@ -537,7 +537,7 @@ msg | string | 错误描述信息，用来帮助理解和解决发生的错误
 
 ## 修改小程序名称
 
-> 修改小程序名称会送审核，审核结果的推送见<a href="http://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
+> 修改小程序名称会送审核，审核结果的推送见<a href="https://smartprogram.baidu.com/docs/third/info/#基本信息审核通知">基本信息审核结果推送。</a>
 
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
@@ -570,7 +570,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/setnickname?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&nick_name=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8D%E7%A7%B0' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC=,45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&nick_name=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8D%E7%A7%B0' \
 ```
 
 
@@ -625,7 +625,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion?version=1.0.0' \
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion?version=1.0.0' \
 ```
 
 **响应示例** 
@@ -683,7 +683,7 @@ curl -X POST \
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/getsupportversion?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/getsupportversion?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC'
 ```
 
 
@@ -839,7 +839,7 @@ curl -X POST \
 |----- |-----|
 |470011 | 修改服务器域名超过限制次数。 |
 |470013 | 至少传递一个要被操作的服务域名类型。|
-|470014 | 域名格式非法，请检查格式，协议目前只支持http:// https:// wss://。|
+|470014 | 域名格式非法，请检查格式，协议目前只支持https:// https:// wss://。|
 |470015 | 被操作的域名不能为空。|
 |470016 | 请求保存的域名不是第三方平台中已设置的小程序域名或子域名。|
 |470017 | 删除的域名在小程序中没有设置过。|
@@ -881,7 +881,7 @@ web_view_domain | string | 否 | 小程序业务域名，多个时用,分割，�
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/modifywebviewdomain?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&web_view_domain=http://www.baidu.com&action=get'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebviewdomain?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&web_view_domain=https://www.baidu.com&action=get'
 ```
 
 **action=get 响应数据**
@@ -908,7 +908,7 @@ curl -X POST \
 | ------ | ------------------------------------------------------------ |
 | 470012 | 修改业务域名超过限制次数                                     |
 | 470013 | 至少传递一个要被操作的服务域名类型                           |
-| 470014 | 域名格式非法，请检查格式，协议目前只支持http:// https:// wss:// |
+| 470014 | 域名格式非法，请检查格式，协议目前只支持https:// https:// wss:// |
 | 470015 | 被操作的域名不能为空                                         |
 | 470016 | 请求保存的域名不是第三方平台中已设置的小程序域名或子域名     |
 | 470017 | 删除的域名在小程序中没有设置过                               |
@@ -957,7 +957,7 @@ curl -X POST \
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/checkname?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC&app_name=appName'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/checkname?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC&app_name=appName'
 ```
 
 **响应示例** 
@@ -1014,7 +1014,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/offline/update?access_token
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/offline/update?access_token=45.a6fa2580056b68d73d0a8ed7e6d42482.3600.1568862387.A0H_1RdLqyGDEcy-lrwC1EjN9An2DRs-1W3JTSQkkj5RZ9lgfC&appName=%E8%81%8A%E8%81%8A%E8%81%8A%E6%B5%8B%E8%AF%95' 
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/offline/update?access_token=45.a6fa2580056b68d73d0a8ed7e6d42482.3600.1568862387.A0H_1RdLqyGDEcy-lrwC1EjN9An2DRs-1W3JTSQkkj5RZ9lgfC&appName=%E8%81%8A%E8%81%8A%E8%81%8A%E6%B5%8B%E8%AF%95' 
 ```
 
 **响应示例** 

@@ -7,10 +7,18 @@ sidebar: view_cover-image
 
 **解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- | :---- |:---- |
+| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
+|bindload|	EventHandle| | 否 |图片加载成功时触发|
+|binderror|	EventHandle	| | 否 |图片加载失败时触发|
+
 
 ## 代码示例
 
-<a href="swanide://fragment/ef901c049df28a34af884269932898ce1576151678883" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/18c13ec5a0ad9d2a3c5d452b18c28fe81577360495546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -57,14 +65,6 @@ Page({
     }
 });
 ```
-
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- | :---- |:---- |
-| src | String | | 否 |图标路径，支持临时路径、网络地址。暂不支持 base64 格式。|
-|bindload|	EventHandle| | 否 |图片加载成功时触发|
-|binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
 ##  Bug & Tip 

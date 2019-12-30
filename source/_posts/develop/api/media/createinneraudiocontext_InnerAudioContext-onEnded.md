@@ -51,7 +51,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-onEnded
 Page({
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.onPlay(res => {
             console.log('onPlay', res);

@@ -5,16 +5,19 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.140 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.140.1|2019.12.11|**Breaking Change**<p>**·**text组件性能优化；<p>**·**新增Android live-player同层context。<p>**BugFix**<p>**·**修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题；<p>**·**修复 textarea 组件第一次 focus 没有返回键盘高度的问题；<p>**·**修复appjs懒加载的白屏问题；<p>**·**修复 开发者工具的san.debug默认必须是true 的问题。|
+
+<!-- |3.140.4|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线；<p>**·**API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。| -->
+
 ## 3.130 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|3.140.1|2019.12.11|<p>**Breaking Change**<p>**·**text组件性能优化；<p>**·**新增Android live-player同层context。<p>**BugFix**<p>**·**修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题；<p>**·**修复 textarea 组件第一次 focus 没有返回键盘高度的问题；<p>**·**修复appjs懒加载的白屏问题；<p>**·**修复 开发者工具的san.debug默认必须是true 的问题。|
-
-## 3.130 版本日志更新
-
-|版本号|更新日期|更新内容|
-|----|----|----|
+|3.130.7|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
 |3.130.3|2019.12.11|**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.130.1|2019.12.04|**New**<p>**·**新增live-player ios同层组件;<p>**·**新增文件系统&request的data参数支持arrayBuffer。<p>**Breaking Change**<p>优化video ios同层事件处理机制。|
 
@@ -23,6 +26,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.125.5|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。|
 |3.125.3|2019.12.11|**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.125.2|2019.12.02|**BugFix**<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复云开发项目中更新记录报错的问题。<p>na textarea 多实例情况调用 focus聚焦失败，ios-textarea支持双绑 <p>修复 ad组件优化视频贴片|
 |3.125.1|2019.11.22|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|
@@ -31,6 +35,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.120.14|2019.12.25|**BugFix**<p>修复百度知道 提问标题样式错乱问题。|
 |3.120.10|2019.12.11|**Breaking Change**<p>canIUse API 、重构组件非兼容上线。<p>**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.120.9|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复 ad组件优化视频贴片|
 |3.120.7|2019.11.25|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|

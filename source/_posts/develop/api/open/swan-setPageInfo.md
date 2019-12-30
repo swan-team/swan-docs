@@ -26,7 +26,7 @@ sidebar: swan-setPageInfo
 |title | String | 是 ||页面标题 |
 |keywords|String|是| |页面关键词，多个关键词之间使用英文逗号“,”隔开|
 |description|String|是| | 页面描述信息|
-|releaseDate|String|否（入宿主APP信息流为必填）| |原始发布时间(年-月-日 时:分:秒 带有前导零）|
+|releaseDate|String|否（如宿主APP信息流为必填）| |原始发布时间(年-月-日 时:分:秒 带有前导零）|
 |articleTitle | String | 否 | | 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
 |image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| |图片线上地址，用于信息流/搜索等流量场景分发、用户收藏后的页面封面显示，展现时有图片可提升用户点击率。开发者可针对一个页面设置最多3张，图片必须为页面内图片。单图片最大2M；封面图尺寸：宽>=375px，高>=250px，图片宽高比例3：2为佳。多张图时，用数组表示。|
 |video|Object/Array|否（页面存在视频情况下必填）| |视频信息，多个视频时，用数组表示|
@@ -80,7 +80,7 @@ Page({
             articleTitle: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！',
             releaseDate: '2019-01-02 12:01:30',
             image: [
-                'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
+                'https://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
                 'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
             ],
             video: [{

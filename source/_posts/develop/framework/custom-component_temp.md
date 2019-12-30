@@ -198,6 +198,17 @@ Page({
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用；
 3. 继承样式，如 font 、 color，会从组件外继承到组件内。
 
+内部样式，可支持多个属性并列。
+**代码示例**
+<a href="swanide://fragment/f30afea82aa283c36afd2c1699127ab81577189634888" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```
+<!-- custom-component自定义组件 -->
+<view class="wrapper wrapperTwo">
+     <view>这里是组件的内部节点</view>
+</view>
+```
+
 ### 外部样式类
 <div class="notice">解释： </div>
 当组件希望接受外部传入的样式类（类似于 view 组件的 hover-class 属性）时，可以在 Component 中用 externalClasses 定义段定义若干个外部样式类。

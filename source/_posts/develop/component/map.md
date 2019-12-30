@@ -8,11 +8,37 @@ sidebar: map
 
 **解释**：地图，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
 
+##  属性说明  
 
+|属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
+|---- | ---- | ---- |---- | --- |---- |
+| longitude | Number |  | 是 |gcj02 坐标系中心经度 |- |
+| latitude | Number |  | 是 |gcj02 坐标系中心纬度 |- |
+| scale |  Number | 16 | 否 |缩放级别，取值范围为4-21 |- |
+| markers |	Array.&lt;marker&gt;|   | 否 |标记点 |- |
+| polyline | Array.&lt;polyline&gt; |   | 否 |路线 |- |
+| polygons |  Array.&lt;polygon&gt; |   | 否 |多边形（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| circles |  Array.&lt;circle&gt; |   | 否 |  圆 |- |
+| controls |  Array.&lt;control&gt; |   | 否 |控件 |- |
+| include-points |  Array.&lt;point&gt; |   | 否 | 缩放视野以包含所有给定的坐标点   |- |
+| show-location | Boolean | false | 否 | 显示带有方向的当前定位点 |- |
+| enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-overlooking | Boolean |  false |否 | 开启俯视（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-zoom | Boolean | true | 否 |是否支持缩放（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-scroll | Boolean | true | 否 |是否支持拖动（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| enable-rotate | Boolean | false | 否 | 是否支持旋转（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| bindmarkertap | EventHandle |  | 否 |点击标记点时触发 |- |
+| bindcallouttap |  EventHandle |  | 否 |点击标记点对应的气泡时触发 |- |
+| bindcontroltap | EventHandle |   | 否 |点击控件时触发 | -|
+| bindregionchange | EventHandle |  | 否 |视野发生变化时触发 |- |
+| bindtap | EventHandle |   | 否 |点击地图时触发 |- |
+| bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
+| bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
 ## 代码示例
 
-<a href="swanide://fragment/28d7f64b2a76664344b44e26aa027ea11576151775605" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e37b0d55c8eabd93730ad804796a0ffe1577360575829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -161,33 +187,7 @@ Page({
 });
 ```
 
-##  属性说明  
 
-|属性名 |类型  |默认值  | 必填 |说明| 最低版本 |
-|---- | ---- | ---- |---- | --- |---- |
-| longitude | Number |  | 是 |gcj02 坐标系中心经度 |- |
-| latitude | Number |  | 是 |gcj02 坐标系中心纬度 |- |
-| scale |  Number | 16 | 否 |缩放级别，取值范围为4-21 |- |
-| markers |	Array.&lt;marker&gt;|   | 否 |标记点 |- |
-| polyline | Array.&lt;polyline&gt; |   | 否 |路线 |- |
-| polygons |  Array.&lt;polygon&gt; |   | 否 |多边形（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| circles |  Array.&lt;circle&gt; |   | 否 |  圆 |- |
-| controls |  Array.&lt;control&gt; |   | 否 |控件 |- |
-| include-points |  Array.&lt;point&gt; |   | 否 | 缩放视野以包含所有给定的坐标点   |- |
-| show-location | Boolean | false | 否 | 显示带有方向的当前定位点 |- |
-| enable-3D | Boolean |  false |否 | 显示3D楼块（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| show-compass | Boolean |  false |否 | 显示指南针（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| enable-overlooking | Boolean |  false |否 | 开启俯视（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| enable-zoom | Boolean | true | 否 |是否支持缩放（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| enable-scroll | Boolean | true | 否 |是否支持拖动（工具暂不支持） | 2.0.13 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| enable-rotate | Boolean | false | 否 | 是否支持旋转（工具暂不支持） | 2.0.13<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-| bindmarkertap | EventHandle |  | 否 |点击标记点时触发 |- |
-| bindcallouttap |  EventHandle |  | 否 |点击标记点对应的气泡时触发 |- |
-| bindcontroltap | EventHandle |   | 否 |点击控件时触发 | -|
-| bindregionchange | EventHandle |  | 否 |视野发生变化时触发 |- |
-| bindtap | EventHandle |   | 否 |点击地图时触发 |- |
-| bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
-| bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
 ## markers
 
@@ -207,7 +207,7 @@ Page({
 | alpha | 标注的透明度 | Number | 否 | 默认为 1，无透明，范围 0 ~ 1 |
 | width | 标注图标宽度 | Number | 否 | 默认为图片实际宽度 |
 | height | 标注图标高度 | Number | 否 | 默认为图片实际高度 |
-| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，不可识别换行符。 |
+| callout | 自定义标记点上方的气泡窗口 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | label | 为标记点旁边增加标签 | Object | 否 | 支持的属性见下表，可识别换行符。 |
 | anchor | 经纬度在标注图标的锚点 | Object | 否 | 默认底边中点，{x, y}，x表示横向(0-1)，y表示竖向(0-1)。{x: .5, y: 1} 表示底边中点 |
 
@@ -430,7 +430,7 @@ Page({
 ```
 
 # polygon
- 解释 ：指定一系列坐标点，根据 points 坐标数据生成闭合多边形<
+ 解释 ：指定一系列坐标点，根据 points 坐标数据生成闭合多边形。
 
 ## 属性说明 
 

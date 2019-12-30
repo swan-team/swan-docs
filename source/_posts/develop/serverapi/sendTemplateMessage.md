@@ -23,7 +23,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 **名词解释：**
 
-- swan_id：百度生成的与设备相关的唯一标识，APP卸载重安装不会变，详见 [swanid机制说明](http://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)
+- swan_id：百度生成的与设备相关的唯一标识，APP卸载重安装不会变，详见 [swanid机制说明](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)
 - open_id：百度用户登录唯一标识，详见 [开放接口-登录](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/)
 - formId：页面内form组件的`report-submit`属性为true时返回formid，详见 [form表单](https://smartprogram.baidu.com/docs/develop/component/formlist_form/)
 
@@ -89,6 +89,8 @@ ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           
 | 6001 | 无 push 权限        |
 
 ### 请求示例
+
+**实际请求使用form 不是json**
 
 ```json
     {

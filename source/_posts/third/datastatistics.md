@@ -89,7 +89,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisusertrend
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisusertrend?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190514&gran=day' 
+  'https://openapi.baidu.com/data/getanalysisusertrend?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190514&gran=day' 
 ```
 
 **响应示例** 
@@ -203,7 +203,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisactivityuser
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisactivityuser?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190514&gran=day'
+  'https://openapi.baidu.com/data/getanalysisactivityuser?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190514&gran=day'
 ```
 
 
@@ -321,7 +321,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisretaineduser
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisretaineduser?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&report_type=count&start_index=0&start_date=20190410&end_date=20190415&gran=day' 
+  'https://openapi.baidu.com/data/getanalysisretaineduser?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&report_type=count&start_index=0&start_date=20190410&end_date=20190415&gran=day' 
 ```
 
 
@@ -505,7 +505,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitattribute
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisvisitattribute?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_date=20190410&end_date=20190415' 
+  'https://openapi.baidu.com/data/getanalysisvisitattribute?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_date=20190410&end_date=20190415' 
 ```
 
 
@@ -683,7 +683,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisregion
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisregion?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415' 
+  'https://openapi.baidu.com/data/getanalysisregion?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415' 
 ```
 
 
@@ -796,7 +796,7 @@ terminal_type 说明：
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisterminal?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&terminal_type=terminal_brand&start_index=0&start_date=20190410&end_date=20190415' 
+  'https://openapi.baidu.com/data/getanalysisterminal?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&terminal_type=terminal_brand&start_index=0&start_date=20190410&end_date=20190415' 
 ```
 
 
@@ -902,7 +902,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitpage
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisvisitpage?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415' 
+  'https://openapi.baidu.com/data/getanalysisvisitpage?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415' 
 ```
 
 
@@ -1024,7 +1024,7 @@ character_type 分类：
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysisvisitcharacter?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&character_type=depth&start_index=0&start_date=20190410&end_date=20190415'
+  'https://openapi.baidu.com/data/getanalysisvisitcharacter?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&character_type=depth&start_index=0&start_date=20190410&end_date=20190415'
 ```
 
 
@@ -1137,7 +1137,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysissource
 
 ```shell
 curl -X POST \
-  'http://openapi.baidu.com/data/getanalysissource?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415'
+  'https://openapi.baidu.com/data/getanalysissource?access_token=45.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&start_index=0&start_date=20190410&end_date=20190415'
 ```
 
 
@@ -1537,7 +1537,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/data/gettpdata
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/data/gettpdata?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&scene=11700000&metrics=tp_day_app_count,tp_week_app_count,tp_month_app_count,tp_day_user_count,tp_week_user_count,tp_month_user_count,tp_day_session_count,tp_week_session_count,tp_month_session_count,tp_day_page_count,tp_activity_degree,tp_session_count_per_person,tp_session_count_per_day,tp_day_share_count,tp_day_feedback_count&start_date  =20190321&end_date=20190328&start_index=&max_result=&start_date%09=20190321' 
+  'https://openapi.baidu.com/rest/2.0/smartapp/data/gettpdata?access_token=42.262dcf08e4ac06bb3fd657741a540d40.2592000.1568538447.YaEGtZv0CrUcnG0OokJV4w-1W3JTSQkkj5RZ9lgfC&scene=11700000&metrics=tp_day_app_count,tp_week_app_count,tp_month_app_count,tp_day_user_count,tp_week_user_count,tp_month_user_count,tp_day_session_count,tp_week_session_count,tp_month_session_count,tp_day_page_count,tp_activity_degree,tp_session_count_per_person,tp_session_count_per_day,tp_day_share_count,tp_day_feedback_count&start_date  =20190321&end_date=20190328&start_index=&max_result=&start_date%09=20190321' 
 ```
 
 
