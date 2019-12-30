@@ -218,7 +218,7 @@ https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-icon/
 https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-refresh/
 https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-spin/
 https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-page-status/
-https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-navigator/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-navigation/
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-detail-pages/
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-feed-page/
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-status-page/
