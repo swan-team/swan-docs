@@ -149,7 +149,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"| |
 |navigationBarTextStyle|String|white|导航栏标题颜色，目前有效值 black/white| |
 |navigationBarTitleText|String| |导航栏标题文字内容| |
-|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
+|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|2.10.34|
 |backgroundColor|HexColor|#ffffff|背景颜色| |
 |backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，有效值 dark/light| |
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新| |
@@ -157,7 +157,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 
 **注意**：
-* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
+* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`基础库版本 2.10.34`开始支持，`iOS`从`基础库 3.0.39`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**
@@ -250,7 +250,7 @@ JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时�
 
 ### requiredBackgroundModes
 
-> 百度App 11.8 及以上版本支持
+> 基础库 3.50.36 及以上版本支持
 
 申明需要后台运行的能力，类型为数组。目前支持以下项目：
 
