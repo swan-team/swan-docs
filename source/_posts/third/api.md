@@ -9,23 +9,46 @@ sidebar: api
 ### 获取帐号下已存在的模板列表
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/list?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/list
 ```
-**参数说明**:
+**公共请求参数**:
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数**:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 offset | int | 是 | 用于分页，表示从offset开始，默认值为0
 count | int | 是 | 用于分页，表示拉取count条记录，默认值为0,最大为20
-**返回值说明**:
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 字段名 | 类型  | 描述
 ----- |-----| -----
 total_count | int| 模板库标题总数
 id |string | 模板标题id（获取模板标题下的关键词库时需要）
 title |string | 模板标题内容
-**返回值示例**:
+**请求实例**
+
+```shell
+curl -X GET \
+  'https://openapi-test.baidu.com/rest/2.0/smartapp/template/library/list?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
+```
+
+
+
+**响应示例**:
+
 ```json
 {
     "errno": 0,
@@ -60,16 +83,29 @@ title |string | 模板标题内容
 ### 获取模板库某个模板标题下关键词库
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/get?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/get
 ```
-**参数说明**:
+**公共请求参数**
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 id | int | 是 | 模板标题id，可通过接口获取，也可登录小程序后台查看获取
 
-**返回值说明**:
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 字段名 | 类型  | 描述
 ----- |-----| -----
@@ -80,7 +116,17 @@ keyword_id | int| 关键词id，添加模板时需要
 name |string | 关键词内容
 example |string | 关键词内容对应的示例
 
-**返回值示例**:
+**请求实例**
+
+```shell
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/library/get?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&id=wDYzYZVxobJivW9oMpSCpuvACOfJXQIoKUm0PY397Tc'
+```
+
+
+
+**响应示例**:
+
 ```json
 {
     "errno": 0,
@@ -162,30 +208,51 @@ example |string | 关键词内容对应的示例
 
 **错误码说明**：
 
-|错误码 | 错误描述 | 
+|错误码 | 错误描述 |
 |----- |-----|
 |2002|参数错误|
 
 ### 组合模板并添加至帐号下的个人模板库
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/add?access_token=ACCESS_TOKEN&id=ID&keyword_id_list=KEYWORD_ID_LIST
+POST https://openapi.baidu.com/rest/2.0/smartapp/template/add
 ```
-**参数说明**:
+**公共请求参数**:
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 id | int | 是 | 模板标题id
 keyword\_id\_list | string | 是 | 模板关键词id列表，如[1,2,3]；
 
-**返回值说明**:
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 字段名 | 类型  | 描述
 ----- |-----| -----
 template_id | string| 添加至帐号下的模板id，发送小程序模板消息时所需 
 
-**返回值示例**:
+**请求示例**
+
+```shell
+curl -X POST \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/add?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&id=BD0016&keyword_id_list=[1,2,3]'
+```
+
+**响应示例**:
+
 ```json
 {
     "errno": 0,
@@ -198,26 +265,37 @@ template_id | string| 添加至帐号下的模板id，发送小程序模板消�
 
 **错误码说明**：
 
-|错误码 | 错误描述 | 
+|错误码 | 错误描述 |
 |----- |-----|
 |2002/30001|参数错误（具体提示见返回值）|
-
-为便于第三方开发者对帐号下已存在的模板进行操作，现提供如下接口：
 
 ### 获取帐号下已存在的模板列表
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/template/list?access_token=ACCESS_TOKEN
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/list
 ```
-**参数说明:**
+**公共请求参数:**
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+
+**请求参数:**
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 offset | int | 是 | 用于分页，表示从offset开始，默认值为0
 count | int | 是 | 用于分页，表示拉取count条记录，默认值为0,最大为20
 
-**返回值说明**:
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
 
 字段名 | 类型  | 描述
 ----- |-----| -----
@@ -227,7 +305,17 @@ title |string | 模板标题
 content |string | 模板内容
 example |string | 模板内容示例
 
-**返回值示例:**
+**请求示例**
+
+```shell
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/list?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
+```
+
+
+
+**响应示例:**
+
 ```json
 {
     "errno": 0,
@@ -253,16 +341,40 @@ example |string | 模板内容示例
 ```
 ### 删除帐号下的某个模板
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/del?access_token=ACCESS_TOKEN?template_id=TEMPLATE_ID
+POST https://openapi.baidu.com/rest/2.0/smartapp/template/del?template_id=TEMPLATE_ID
 ```
-**参数说明**:
+**公共请求参数**:
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据
+
+**请求参数**:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 template_id |string |是| 模板id,发送小程序模板消息时所需
 
-**返回值示例**:
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+ 
+
+**请求参数**
+
+```shell
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/del?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&template_id=e4313219538c4b0262e3a14a0507000e8bd79e9PTPAz'
+```
+
+
+
+**响应示例**:
 
 ```json
 {
@@ -273,19 +385,24 @@ template_id |string |是| 模板id,发送小程序模板消息时所需
 
 **错误码说明**：
 
-|错误码 | 错误描述 | 
+|错误码 | 错误描述 |
 |----- |-----|
 |30001|参数错误（具体提示见返回值）|
 
 ### 推送模板消息
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/sendmessage?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/template/sendmessage
 ```
-**参数说明**:
+**公共请求参数**:
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 access_token |string | 是 | access_token，授权小程序的接口调用凭据
+
+**请求参数**:
+
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
 template\_id |string |是| 所需下发的模板消息的id
 touser|string|否|接收者swan_id
 touser\_openId|string|否|接收者open_id
@@ -310,7 +427,22 @@ ext|json/string|否|{"xzh\_id":111,"category\_id":15}
 + 发送消息时用到的 touser/touser\_openid 必须和 申请 scene\_id 时的 touser/touser\_openid 一一对应， 否则也会导致 scene_id 检验失败。
 
 + 如果通过上面的查验仍然发送消息失败， 请检查 appkey 是否异常。
-**返回值示例**:
+
+**公共响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|errno|int|状态码|40001|
+|msg|string|状态描述|参数错误|
+|data|object|响应参数|--|
+
+**响应参数** 
+
+|参数|类型|描述|示例值|
+|--|--|--|--|
+|msg_key |int |消息id |158|
+
+**响应示例**:
 ```json
 {
 		"errno": 0,

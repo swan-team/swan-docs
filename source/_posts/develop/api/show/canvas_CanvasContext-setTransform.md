@@ -26,7 +26,7 @@ sidebar: canvas_CanvasContext-setTransform
 
 **`translateY`参数说明**：垂直移动  
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: canvas_CanvasContext-setTransform
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/09aed2f95717be5b27b1f6970a5fc5811574530265118" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

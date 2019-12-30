@@ -15,7 +15,7 @@ sidebar: videocontext_VideoContext-exitFullScreen
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: videocontext_VideoContext-exitFullScreen
     </div>     
 </div>
  
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/1be020daed52e503c2048d1b70d5fd881573759781574" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

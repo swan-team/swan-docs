@@ -7,7 +7,7 @@ sidebar: app_service_routestyle
 
 对于路由的触发方式以及页面生命周期函数如下：
 
-** [详见页面生命周期函数](/develop/framework/app_service_pagelife/) **
+**[详见页面生命周期函数](/develop/framework/app_service_pagelife/)**
 
 |路由方式 |触发时机 |路由前页面触发事件 |路由后页面触发事件 |
 |---- | ---- | ---- | ---- |

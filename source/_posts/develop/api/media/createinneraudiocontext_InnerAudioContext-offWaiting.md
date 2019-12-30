@@ -15,7 +15,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offWaiting
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offWaiting
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f103894c07ad661cef935b9bbcbca61b1574736090622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -49,7 +49,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offWaiting
 Page({
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.onWaiting(res => {
             swan.showModal({

@@ -15,11 +15,11 @@ sidebar: canvas_CanvasContext-setTextAlign
 
 **`align `参数说明**： 有效值 'left'、'center'、'right'。 
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/set-text-align.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/dcde4e6cd75f48eb2912d4c7bf321dd21573724302516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

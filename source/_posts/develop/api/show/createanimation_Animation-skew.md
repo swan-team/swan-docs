@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-skew
 
 **参数说明**： 参数范围-180~180；一个参数时， Y 轴坐标不变， X 轴坐标延顺时针倾斜 ax 度；两个参数时，分别在 X 轴倾斜 ax 度，在 Y 轴倾斜 ay 度。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-skew
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/2d9a7e150806a198c9068c8d6ef5af091574217977375" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

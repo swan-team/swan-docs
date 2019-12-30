@@ -22,7 +22,7 @@ sidebar: websocket_SocketTask-onMessage
 |data| String/ArrayBuffer |是| | 服务器返回的消息|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: websocket_SocketTask-onMessage
 </div>
 
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/e29ae16b9805c74e25c1865bdc696b351573408501452" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

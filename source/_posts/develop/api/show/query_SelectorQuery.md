@@ -21,7 +21,7 @@ sidebar: query_SelectorQuery
 |selectViewport  |      | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-selectViewport/">selectorQuery.selectViewport</a>详细介绍 |
 |exec  |  callback  | 参考<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-exec/">selectorQuery.exec</a>详细介绍 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -35,7 +35,7 @@ sidebar: query_SelectorQuery
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4e6bf886d48e2c25066535bdf9e8d9c81574311488897" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

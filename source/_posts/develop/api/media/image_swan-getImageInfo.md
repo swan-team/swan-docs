@@ -35,7 +35,7 @@ sidebar: image_swan-getImageInfo
 |type|String|返回图片的格式 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

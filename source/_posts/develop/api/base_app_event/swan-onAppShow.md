@@ -25,7 +25,7 @@ sidebar: swan-onAppShow
 
 |属性  |类型  |说明  |最低版本|
 |---- | ---- | ---- |---|
-|scene | String | 打开智能小程序的<a href="http://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
+|scene | String | 打开智能小程序的<a href="https://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
 |path|String|打开小程序的路径。| |
 |query|Object|打开小程序的query。| |
 |shareTicket|String|标记转发对象。| |
@@ -48,7 +48,7 @@ sidebar: swan-onAppShow
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -62,7 +62,7 @@ sidebar: swan-onAppShow
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
  
 * 示例一：在onShow中使用 

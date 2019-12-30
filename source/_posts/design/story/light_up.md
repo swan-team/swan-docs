@@ -113,15 +113,13 @@ sidebar: light_up
 ### 拟态涟漪的点击动效
 手速减压功能的核心，是希望用户通过快速点击屏幕释放压力，因此会累计用户点击屏幕次数，并显示数值。但是如果用户点击屏幕后，数值直接变化，而没有其他的反馈，会显得枯燥乏味，缺乏吸引力。
 经过联想设计，减减鸭的点击操作配合了涟漪状的反馈，用户按压屏幕时，页面会跟随手势出发点扩散出阵阵涟漪，就像在大自然中轻触水面，看着层层水波泛起，心中的烦闷也被排解开来。
-<video width="100%" muted autoplay="autoplay" loop="loop"  
-src="../../../img/design/story/light_up/click.mov" >
+<video width="100%" muted autoplay="autoplay" loop="loop" src="../../../img/design/story/light_up/click.mov" >
 你的浏览器不支持该视频播放
 </video>
 
 ### 拟态水波的播放动效
 放松练习功能中音频播放时，背景会缓缓浮现规律的水波动效，节奏与人的呼吸相近。用户在聆听放松指导音频时，可以让自己的情绪随着水波，在一呼一吸中慢慢得到舒缓。
-<video width="100%" muted autoplay="autoplay"  loop="loop"  
-src="../../../img/design/story/light_up/play.mov" >
+<video width="100%" muted autoplay="autoplay"  loop="loop" src="../../../img/design/story/light_up/play.mov" >
 你的浏览器不支持该视频播放
 </video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 

@@ -24,7 +24,7 @@ sidebar: tune_up_rest
 |userId|Integer|是|4188819900|百度用户ID，支付回调中返回| 
 |type|integer|是|固定值：3|标识使用该接口取消订单核销状态|
 |appKey|string|是|MMMzaA	|appKey|
-|rsaSign|string|是| |rsa签名,所有参数参与签名，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|rsaSign|string|是| |rsa签名,所有参数参与签名，详见[签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
 
 <br />
 

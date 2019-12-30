@@ -10,6 +10,8 @@ sidebar: cloud_essentials
 
 下面是一条记录的简单示例。
 
+**代码示例**
+
 ```json
 {
     "_id": "358a732d-bd8d-45a5-bd9c-9874e1a654c4",

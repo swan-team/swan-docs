@@ -22,7 +22,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做 |
 | body | string   | **是** | 消息体，图文内容的介绍，最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 图文的全部正文，示例豆果美食小程序：黄油化开备用，黄油化开后加入糖霜，搅拌均匀，加入蛋清，继续打匀，加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M，JPG或PNG格式） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | 图文型固定为1001   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 例如美食（可选有限集合） |
@@ -35,13 +35,13 @@ sidebar: type
 | **key**   | **类型**   | **是否必填** | **备注**  | **代码示例**  |
 | ------------------------------------------------------------ | ---------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | author_name  | string  | 否  | 作者名 | 张三   |
-| author_portrait_url   | string  | 否  | 作者头像url  | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url   | string  | 否  | 作者头像url  | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path  | string  | 否  | 作者落地页链接  | /pages/author/author  |
 | author_fans_num | int  | 否  | 作者粉丝量   | 10000  |
 | author_auth  | string  | 否  | 是否认证作者 | 1-是 0-否   示例：1   |
 | author_publish_num | string  | 否  | 作者发文量   | 100 |
 | author_ask_num  | int  | 否  | 作者提问量   | 100 |
-| publish_time | string  | **是** | 内容原始发布时间   | 内容原始发布时间需在一年以内   示例：2018年9月8日   |
+| publish_time | string  | **是** | 内容原始发布时间   | 内容原始发布时间需在30天以内   示例：2018年9月8日   |
 | img_urls  | string  | 否  | 文章所有图片url | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
 | channel_id   | int  | 否  | 频道ID | 1000   |
 | channel   | string  | 否  | 频道名称  | 在小程序内所属频道名   示例：萌宠，推荐，最热等  |
@@ -65,7 +65,7 @@ sidebar: type
 | is_verified  | string  | 否  | 是否大V   | true   |
 | author_level | int  | 否  | 作者等级  | 0为无等级，1为最低，数字越大等级越高 |
 | author_registration_year | string  | 否  | 作者注册年限 | 8（不足一年按照1计算）   |
-| content_items   | JSON array | 否  | 文章结构化内容（提交该字段有助于提升信息流对内容的理解，有益于分发），需要提供正文所有的文字和图片混排内容 按原文正文换行及图片进行item分隔 type为item类型 text-文本 image-图片 例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<http://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
+| content_items   | JSON array | 否  | 文章结构化内容（提交该字段有助于提升信息流对内容的理解，有益于分发），需要提供正文所有的文字和图片混排内容 按原文正文换行及图片进行item分隔 type为item类型 text-文本 image-图片 例如下面的正文区可以拆分为右侧的样例。 | [ { "type":"text", "data":"第一段文字" }, { "type":"text", "data":"第二段文字" }, { "type":"image", "data":"<https://qnwww2.autoimg.cn/newsdfs/Qu4748.jpg>" }, { "type":"text", "data":"第三段文字" }, { "type":"image", "data":"<https://qnwww2.autoimg.cn/newsdfs/Nh4020.jpg>" }, { "type":"text", "data":"第四段文字" } ] |
 | ip  | string  | 否  | 需引入的热点ip资源名称（如，漫画类，综艺类等）   | 极限挑战 斗破苍穹  |
 
 2）视频型
@@ -79,7 +79,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 示例小红书小程序：为什么大西洋和太平洋的海水，不会融合在一起？什么原因导致的？ |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）  | 视频的详细介绍，示例小红书小程序：世界之大，可谓无奇不有，虽然现在我们人类的科学技术在不断的进步，关于很多的未解之谜都在逐步的揭开，但是在世界上依然存在着很多的未解之谜，有一些自然现象真的是无法用现有的理论来解释 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），视频子类为1002   | 视频型固定为1002   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 科学（可选有限集合）  |
@@ -93,7 +93,7 @@ sidebar: type
 | ------------------------ | -------- | -------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | author_name  | string   | 否 | 作者名  | 张三   |
 | author_profile  | string   | 否 | 作者简介   | 搞笑视频作者 |
-| author_portrait_url   | string   | 否 | 作者头像url   | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url   | string   | 否 | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path  | string   | 否 | 作者落地页链接   | /pages/author/author  |
 | author_fans_num | int   | 否 | 作者粉丝量 | 1000   |
 | author_publish_num | int   | 否 | 作者视频发布量   | 1000   |
@@ -110,8 +110,8 @@ sidebar: type
 | lead_role | string   | 否 | 主演 | 徐峥 周一围 王传君 谭卓 杨新鸣 |
 | presenter | string   | 否 | 主持人  | 何炅   |
 | guest  | string   | 否 | 嘉宾 | 谢娜   |
-| publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在一年以内   示例：2018年9月8日   |
-| movie_release_time | string   | 电影上映时间   | 否   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
+| publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在三个月以内   示例：2018年9月8日   |
+| movie_release_time | string   |否   |  电影上映时间   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
 | video_duration  | string   | **是**   | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
 | pc_url | string   | **是（和h5_url需填一种）** | 视频PC播放链接   |  |
 | h5_url | string   | **是（和pc_url需填一种）** | 视频H5播放链接   |  |
@@ -149,7 +149,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！ |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** |  封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** |  封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | 直播型固定为1003   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
@@ -176,7 +176,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！ |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**   | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | 音频型固定为1004   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
@@ -214,7 +214,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例大众点评：舌尖上的江南之江浙菜   |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 本地生活的详情页介绍，示例大众点评：江浙菜即浙江菜系，以杭州菜作为代表，是中国传统八大菜系之一，其地山清水秀，产物丰富，佳肴美味，古有谚语曰：“上有天堂，下有苏杭”。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**   | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），本地生活图文子类为1007 | 本地生活型固定为1007  |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
@@ -227,7 +227,7 @@ sidebar: type
 | **key** | **类型** | **是否必填** | **备注**   | **代码示例**  |
 | ------------------- | -------- | ------------------------------------------------------------ | ---------------- | ------------------------------------------------------------ |
 | author_name   | string   | 否  | 作者名  | 张三   |
-| author_portrait_url | string   | 否  | 作者头像url   | <http://www.xxx.baidu.com/author/portrail.jpg>   |
+| author_portrait_url | string   | 否  | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
 | author_path   | string   | 否  | 作者落地页链接   | /pages/author/author  |
 | author_fans_num  | int   | 否  | 作者粉丝量 | 10000  |
 | author_auth   | string   | 否  | 是否认证作者  | 1-是 0-否   示例：1   |
@@ -270,8 +270,8 @@ sidebar: type
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做 |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
-| path | string   | **是** | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考手百问答落地页，**feed****要求至少8个答案** | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146| ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
+| path | string   | **是** | 智能小程序内页链接，落地页要求为一个问题对应多个答案，具体样式参考 百度 App问答落地页，**feed****要求至少8个答案** | /pages/index/index |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | 问答型固定为1009   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 例如美食（可选有限集合） |
@@ -284,11 +284,11 @@ sidebar: type
 | **key**  | **类型** | **是否必填** | **备注** | **代码示例**  |
 | -------------------- | -------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------ |
 | author_name | string   | 否  | 作者名   | 张三   |
-| author_portrait_url  | string   | 否  | 作者头像url | 例如<http://www.xxx.baidu.com/author/portrail.jpg>  |
+| author_portrait_url  | string   | 否  | 作者头像url | 例如<https://www.xxx.baidu.com/author/portrail.jpg>  |
 | author_path | string   | 否  | 作者落地页链接 | /pages/author/author  |
 | author_fans_num   | int   | 否  | 作者粉丝量  | 10000  |
 | author_auth | string   | 否  | 是否认证作者   | 1-是 0-否   示例：1   |
-| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>",<br>"<http://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
+| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
 | comment_author_num   | int   | 是  | 讨论人数   问答类型必填该字段 | 30  |
 | publish_time   | string   | **是** | 内容发布时间   | 内容发布时间需在一年以内   示例：2018年9月8日 |
 | img_urls | string   | 否  | 文章所有图片url   | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
@@ -314,7 +314,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 示例齐天大圣小程序：违章高发地_齐车大圣智能小程序   |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 工具内容的介绍，示例齐天大圣小程序：提供准确、及时的违章高发地信息，方便快捷，安全出行.。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），工具型为3000 | 工具型固定为3000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），依照具体子类型填写  | 根据不同子类型，填写对应的二级类型，例如金融为3001  |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 效率（可选有限集合）  |
@@ -341,7 +341,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例跳一跳小游戏：不一样的跳一跳，比比看，看谁跳的更远。无需下载，立刻玩！ |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 游戏的介绍，示例跳一跳小游戏：我们要指控青蛙或兔子，使它们穿梭在折盒上翻蹦。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），游戏型为4000 | 游戏型固定为4000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），依照具体子类型而定  | 依照具体子类型而定 |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 游戏（可选有限集合）  |
@@ -374,7 +374,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例超值年货节：过年啦，让年货心意比你先到家！妈妈的最爱和爸爸的心头好全都低于5折哦~ |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 商品内容的介绍，示例超值年货节：整合主流电商平台低价好货产品，满足购物消费需求 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146 | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），服务型为2000 | 服务型固定位2000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），商品子类为2003   | 商品型固定位2003   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 服务（可选有限集合）  |
@@ -394,7 +394,7 @@ sidebar: type
 | category_3   | string   |  | 商品类别（三级）  | 手机  |
 | brand  | string   |  | 品牌  | `Apple`  |
 | model  | string   |  | 型号  | (A1865) 64GB   |
-| [inventory](http://www.youdao.com/w/inventory/#keyfrom=E2Ctranslation) | int   |  | 库存（动态时时数据） | 10000 |
+| [inventory](https://www.youdao.com/w/inventory/#keyfrom=E2Ctranslation) | int   |  | 库存（动态时时数据） | 10000 |
 | is_failure   | string   |  | 是否失效（已下架/售罄） | 已下架   |
 | high_comment | string   |  | 优质评价内容   | 手机款式漂亮，颜色我很喜欢，系统流畅，功能齐全，物超所值 |
 
@@ -411,7 +411,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 示例同程艺龙小程序：北京上地CitiGo HOUSE欢寓酒店  |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 酒店的介绍，示例同城艺龙小程序：上地附近最高端实惠的三星酒店，百度、腾讯等科技园员工必选 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），商品型为2000 | 服务型固定为2000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），酒店子类为2001   | 酒店型固定为2001   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 服务（可选有限集合）  |
@@ -444,7 +444,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例携程小程序：上海野生动物园。  |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 景点内容的介绍，示例携程小程序：上海野生动物园，带你亲近自然，感受大熊猫的可爱憨厚 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一）服务型为2000   | 服务型固定为2000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），景点子类为2002   | 景点型固定为2002   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 效率（可选有限集合）  |
@@ -474,7 +474,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例大众点评小程序：舌尖上的江南之江浙菜 |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 美食的介绍，示例大众点评小程序：江浙菜即浙江菜系，以杭州菜作为代表，是中国传统八大菜系之一，其地山清水秀，产物丰富，佳肴美味，古有谚语曰：“上有天堂，下有苏杭”。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），服务型为2000 | 服务型固定为2000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   |  |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 效率（可选有限集合）  |
@@ -504,7 +504,7 @@ sidebar: type
 | title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例AA医生小程序：搜索医生，对症咨询。 |
 | body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例修改为-医疗服务的介绍，示例AA医生小程序：公立医院三甲医生为您服务，每天有XXXX问题被专业医生解答。 |
 | path | string   | **是** | 智能小程序内页链接 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1（有助于降低不可用风险，促进分发）；最低支持尺寸：宽>=218&高>=146  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**  | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
 | mapp_type  | string   | **是** | 资源类型（参考附录一），服务型为2000 | 服务型固定为2000   |
 | mapp_sub_type | string   | **是** | 资源子类型（参考附录一），医疗子类为2005   | 2005   |
 | feed_type  | string   | **是** | feed一级分类（参考附录二）  | 效率（可选有限集合）  |

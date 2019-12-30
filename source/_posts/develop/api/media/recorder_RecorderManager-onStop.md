@@ -24,7 +24,7 @@ sidebar: recorder_RecorderManager-onStop
 |fileSize |Number | 录音文件大小，单位：Byte |3.120.1|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: recorder_RecorderManager-onStop
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

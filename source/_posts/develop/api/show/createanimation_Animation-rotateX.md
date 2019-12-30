@@ -16,7 +16,7 @@ sidebar: createanimation_Animation-rotateX
 
 **参数说明**：deg的范围-180~180，在X轴旋转一个 deg 角度。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-rotateX
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a9fc825b1b35446d0ee687d664d3b1821574215484188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

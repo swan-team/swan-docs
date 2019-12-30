@@ -47,7 +47,7 @@ sidebar: downloadFile
 
 * iOS
 
-|错误码|说明errMsg|
+|错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确  |
 |1001|请求文件超过10M|
@@ -55,7 +55,7 @@ sidebar: downloadFile
 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -152,7 +152,7 @@ Page({
 
 返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。
 
-**Bug & Tip**：
+**Bug & Tip**
 
 * 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
 * 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。

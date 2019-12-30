@@ -15,23 +15,24 @@ sidebar: process
 |----|----|----|----|
 |[pages](#pages)|Array.&lt; string&gt; |是|设置页面路径|
 |[window](#window)|Object|否|设置页面展现|
-|[preloadRule](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
+|[preloadRule](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
 |[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
+|[subPackages](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
-**代码示例**：
+**代码示例**
 
-<a href="swanide://fragment/22c464efe88757d194d6af37db126ddd1572882792148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5ac6441402c040f2c37722872ee29c1e1576047748031" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
 
 ```json
 {
     "pages": [
-	"pages/index/index"
+        "component/component",
+        "api/api"
     ],
     "subPackages": [
         {
@@ -43,7 +44,7 @@ sidebar: process
         }
     ],
     "window": {
-	"navigationBarTitleText": "Demo",
+        "navigationBarTitleText": "Demo",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
         "navigationStyle": "default",
@@ -52,7 +53,8 @@ sidebar: process
         "enablePullDownRefresh": "true",
         "onReachBottomDistance":"50"
     },
-    "preloadRule": {
+    "preloadRule": 
+    {
        "pages/index": {
             "network": "all",
             "packages": ["subpackage"]
@@ -61,13 +63,13 @@ sidebar: process
     "tabBar": {
         "list": [
             {
-                "pagePath": "pages/index/index",
+                "pagePath": "component/component",
                 "text": "首页",
                 "iconPath":"/images/API_normal.png",
                 "selectedIconPath":"/images/API_selected.png"
-	    },
+	        },
             {
-                "pagePath": "pages/detail/detail",
+                "pagePath": "api/api",
                 "text": "详情",
                 "iconPath":"/images/component_normal.png",
                 "selectedIconPath":"/images/component_selected.png"
@@ -91,6 +93,7 @@ sidebar: process
 
 
 <br/>
+
 ### pages
 
 pages 接受一个数组，每一项都是一个字符串，指定 SWAN App 都有哪些页面。每一项代表页面的[路径 + 文件名]，数组第一项代表 SWAN 初始页面。
@@ -121,6 +124,8 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 则需要在 app.json 中书写
 
+**代码示例**
+
 ```json
 {
     "pages":[
@@ -129,6 +134,10 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
     ]
 }
 ```
+
+**提示**：
+* 开发者工具在app.json的pages中填写页面路径可自动生成文件夹。
+
 <br>
 
 ### window
@@ -162,11 +171,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 
-<notice>示例： </notice>
+**代码示例**
 
 ```json
 {
@@ -180,7 +189,26 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 }
 ```
 <br>
+
+**代码示例 - 错误写法**
+
+json文件看起来同 JavaScript 的对象表达方式十分相似，但是有所不同。
+
+JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时候，忘了给 Key 值加双引号或者是把双引号写成单引号是常见错误。
+```json
+{
+    window: {
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "swan接口功能演示",
+	"backgroundColor": "#eeeeee",
+	"backgroundTextStyle": "light"
+    }
+}
+```
+
 ### tabBar
+
 用于设置客户端底部的tab栏：可通过tabBar设置tab的颜色、个数、位置、背景色等内容。
 
 |属性|类型|必填|描述|
@@ -191,7 +219,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |list|Array|是|tab 的列表，列表个数2~5个。 <br>list 接受一个数组，tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：<br>-  pagePath：已在 pages 中定义的页面路径；类型：String；必填项。<br>-  text：tab上显示的文字信息；类型：String；必填项。<br>-  iconPath：图片路径，icon 大小限制为40kb，建议尺寸为 78px*78px，不支持网络图片；类型：String；非必填项。<br>-  selectedIconPath：选中时的图片路径，icon 规格同上；类型：String；非必填项。|
 |selectedColor|HexColor|是|tab 上的文字选中时的颜色。|
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/22c464efe88757d194d6af37db126ddd1572882792148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -227,7 +255,9 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 申明需要后台运行的能力，类型为数组。目前支持以下项目：
 
 audio: 后台音乐播放
-如：
+
+**代码示例**
+
 ```json
 {
     "pages": ["pages/index/index"],
@@ -240,7 +270,8 @@ audio: 后台音乐播放
 
 用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
 
-<notice>示例： </notice>
+**代码示例**
+
 <a href="swanide://fragment/1b50c5342babcda03f71d3d559bca6fc1574152614328" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 ```json
 // app.json

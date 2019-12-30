@@ -22,9 +22,9 @@ sidebar: timer_setInterval
 
 |名称|解释|
 |--|--|
-|number|定时器的编号。这个值可以传递给 <a href="http://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
+|number|定时器的编号。这个值可以传递给 <a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: timer_setInterval
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1**
 
 <a href="swanide://fragment/3a72e862b7e3d92d06fc64432513d1001574042023470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -69,14 +69,33 @@ Page({
     }
 });
 ```
-* 在 css 文件中
 
-```css
-.wrap {
-    padding: 50rpx 30rpx;
-}
+**代码示例2 - 常用作定时器**
 
-.wrap button {
-    margin-bottom: 30rpx;
-}
+<a href="swanide://fragment/4859edf9b411e86a030adc618435db2a1575402921672" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        time: 60
+    },
+    onLoad() {
+        let timer = setInterval(() => {
+            let time = 60;
+            time -= 1;
+            this.setData('time', time);
+            if (time <= 10) {
+                let time = 60 - time;
+                this.setData({
+                    time: '即将超时 0' + time
+                });
+            }
+            if (time <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+});
 ```

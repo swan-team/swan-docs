@@ -25,7 +25,7 @@ const TAG_MAP = {
     'resource': '设计资源',
     'story': '设计故事',
     // 开发
-    'api': 'api',
+    'api': 'API',
     'appendix': '附录',
     'cloud': '云开发',
     'component': '组件',
@@ -41,7 +41,17 @@ const TAG_MAP = {
     'tutorial': '快速入门'
 };
 
+const BOARD_URL_MAP = {
+    'data': '/docs/data/concept/',
+    'design': '/docs/design/overview/introduction/',
+    'develop': '/docs/develop/fuctionlist/list/',
+    'introduction': '/docs/introduction/enter_application/',
+    'operations': '/docs/operations/specification/',
+    'third': '/docs/third/create/'
+};
+
 module.exports = {
     BOARD_MAP,
-    TAG_MAP
+    TAG_MAP,
+    BOARD_URL_MAP
 };

@@ -22,7 +22,7 @@ sidebar: app_service_page_setData
 * 请不要把`data`中任何一项的`value`设为`undefined`，否则将会有一些潜在问题出现；
 * data 的键名必须遵守 camelCase (驼峰式)的命名规范，不得使用 kebab-case (短横线隔开式)规范。
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/99525adbd9f27ac70eac09f08fb32b581560578724171" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
@@ -84,4 +84,72 @@ Page({
         });
     }
 });
+```
+
+连续使用 setData 来改变界面的方法也可以达到动画的效果。这样可以任意地改变界面，但通常会产生较大的延迟或卡顿，甚至导致小程序僵死。此时可以通过将页面的 setData 改为 自定义组件 中的 setData 来提升性能。下面的例子是使用 setData 来实现秒表动画的示例。
+
+**代码示例**
+<a href="swanide://fragment/cf67007a80abff300e2d312e73356ee71577267116005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<view>
+  <stopwatch id="stopwatch" class="stopwatch" />
+  <button class="btn" s-if="{{!started}}" bindtap="start">开始计时</button>
+  <button class="btn" s-if="{{started}}" bindtap="stop">停止计时</button>
+</view>
+```
+
+```js
+const app = getApp()
+
+Page({
+  data: {
+    started: false
+  },
+  start: function() {
+    this.setData({
+      started: true
+    })
+    this.selectComponent('#stopwatch').start()
+  },
+  stop: function() {
+    this.setData({
+      started: false
+    })
+    this.selectComponent('#stopwatch').stop()
+  }
+})
+```
+
+```js
+// 自定义组件中js
+Component({
+  data: {
+    text: '00:00.000'
+  },
+  methods: {
+    start: function() {
+      var convertTimeStampToString = function(ts) {
+        var ms = String(1000 + Math.floor(ts) % 1000).slice(1)
+        var s = String(100 + Math.floor(ts / 1000) % 60).slice(1)
+        var m = Math.floor(ts / 60000)
+        if (m < 10) m = '0' + m
+        return m + ':' + s + '.' + ms
+      }
+      this.setData({
+        text: convertTimeStampToString(0)
+      })
+      var startTime = Date.now()
+      var self = this
+      this._interval = setInterval(function() {
+        self.setData({
+          text: convertTimeStampToString(Date.now() - startTime)
+        })
+      }, 33)
+    },
+    stop: function() {
+      clearInterval(this._interval)
+    }
+  }
+})
 ```

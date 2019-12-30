@@ -68,7 +68,7 @@ sidebar: ocr_swan-ai-ocrIdCard
 |width| Number | 表示识别结果的定位位置的长方形的宽度。|
 |height| Number | 表示识别结果的定位位置的长方形的高度。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

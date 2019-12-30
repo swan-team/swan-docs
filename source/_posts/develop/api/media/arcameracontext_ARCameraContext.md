@@ -12,7 +12,7 @@ sidebar: arcameracontext_ARCameraContext
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContext.png"  class="demo-qrcode-image" />
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -26,7 +26,7 @@ sidebar: arcameracontext_ARCameraContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/7252adaa401a613c9f359713a920d48d1574494178977" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

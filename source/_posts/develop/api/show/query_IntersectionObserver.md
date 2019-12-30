@@ -23,7 +23,7 @@ sidebar: query_IntersectionObserver
 |disconnect|停止监听。回调函数将不再触发|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: query_IntersectionObserver
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f60eb7f2ab1b7fd10e352d0f9157d58b1574304539900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

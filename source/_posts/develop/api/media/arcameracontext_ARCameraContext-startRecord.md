@@ -41,7 +41,7 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
 |---- | ---- | ---- |
 |tempVideoPath  | String | 视频的临时路径 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -55,7 +55,7 @@ sidebar:  arcameracontext_ARCameraContext-startRecord
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/3f6fad0d4e6c3b41fb26e037f51dc3d31574495010676" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

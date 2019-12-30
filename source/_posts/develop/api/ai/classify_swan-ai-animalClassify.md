@@ -41,7 +41,7 @@ sidebar:  classify_swan-ai-animalClassify
 |score|	String|		置信度，示例：0.5321。|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -55,7 +55,7 @@ sidebar:  classify_swan-ai-animalClassify
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/d3a867157469e01d1f6515f27172d4331569501144725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

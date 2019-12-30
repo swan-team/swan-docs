@@ -22,12 +22,12 @@ sidebar: swan-navigateBackSmartProgram
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|extraData | Object | 否 | | 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](http://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
+|extraData | Object | 否 | | 需要返回给上一个小程序的数据，上一个小程序可在 [App.onLaunch()，App.onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 中获取到这份数据。|
 |success | Function |  否  | | 接口调用成功的回调函数|
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -41,7 +41,7 @@ sidebar: swan-navigateBackSmartProgram
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/df2bcb7ca1229b466e859bc1a40c21091559044133015" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

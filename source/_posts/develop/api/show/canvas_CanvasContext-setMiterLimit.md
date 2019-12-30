@@ -20,11 +20,11 @@ sidebar: canvas_CanvasContext-setMiterLimit
 
 **`miterLimit`参数说明：**最大斜接长度  
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setMiterLimit.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4d8cb34c8688d828ba9064e3d9406a231573721300843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -18,7 +18,7 @@ sidebar: canvas_swan-createCanvasContext
 
 **返回值**：canvasContext
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar: canvas_swan-createCanvasContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4ba279752c55a3aebac59c47ef03e18d1574497679593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -26,7 +26,7 @@ sidebar: canvas_CanvasContext-font
 | size | 字体大小 |
 | family | 字体族名，注意确认各平台所支持的字体 。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,7 +37,7 @@ sidebar: canvas_CanvasContext-font
     </div>   
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/7a4e07cf5d732bc485825f880c450dbe1574527882687" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

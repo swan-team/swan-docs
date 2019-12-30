@@ -29,15 +29,15 @@ sidebar: authorize_swan-authorize
 
 |scope|	对应接口|	描述|
 |---|---|---|
-|scope.userInfo|[swan.getUserInfo](http://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/)|	用户信息|
-|scope.userLocation|[swan.getLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](http://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
-|scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](http://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
-|scope.address|	[swan.chooseAddress](http://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/)|	收货地址|
-|scope.invoiceTitle|[swan.chooseInvoiceTitle](http://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
-|scope.record|	[swan.getRecorderManager](http://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
+|scope.userInfo|[swan.getUserInfo](https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/)|	用户信息|
+|scope.userLocation|[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](httpssss://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
+|scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
+|scope.address|	[swan.chooseAddress](https://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/)|	收货地址|
+|scope.invoiceTitle|[swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
+|scope.record|	[swan.getRecorderManager](https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -51,7 +51,7 @@ sidebar: authorize_swan-authorize
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/cb840e582c596d3af960596f7cd45fea1575143796711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -136,7 +136,7 @@ Page({
 |10002|网络请求失败|
 |10004|用户拒绝(user not login)|
 
-**Bug & Tip**：
+**Bug & Tip**
 
 tip：授权操作为异步操作，完成前请不要多次调用。
 

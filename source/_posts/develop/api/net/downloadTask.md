@@ -14,7 +14,7 @@ sidebar: downloadTask
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadTask.png"  class="demo-qrcode-image" />
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: downloadTask
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c77c402000c8ed09238116000c09165c1572947847546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -70,7 +70,7 @@ Page({
 
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 uploadFile 上传文件大小限制为 25M。
 

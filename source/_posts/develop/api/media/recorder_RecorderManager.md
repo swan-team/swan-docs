@@ -14,7 +14,7 @@ sidebar: recorder_RecorderManager
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManager.png"  class="demo-qrcode-image" />
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: recorder_RecorderManager
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/70d4f42e90d9ad149e2dc0226bd82d2c1573410962037" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

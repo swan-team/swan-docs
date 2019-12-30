@@ -17,7 +17,7 @@ sidebar: query_SelectorQuery-selectAll
 
 **返回值**：nodesRef
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: query_SelectorQuery-selectAll
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/ef40dd74ad85f57b7b43cdafb8bf4bd91574490603250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

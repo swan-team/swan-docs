@@ -38,7 +38,7 @@ sidebar: userinfo_swan-getSwanId
 <!-- |swanid_old|string
 |swanid_old_signature |string        -->
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -52,7 +52,7 @@ sidebar: userinfo_swan-getSwanId
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c1dd6988ce7a3e6d91cede5362701c931574144622515" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

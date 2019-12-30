@@ -30,9 +30,9 @@ sidebar: log_swan-login
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
-|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+|code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。<br>用户登录凭证code只能使用一次。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +46,29 @@ sidebar: log_swan-login
     </div>     
 </div>
 
-**代码示例**：
+**代码示例1 获取code**
+
+<a href="swanide://fragment/feb6bbe10081695f109a108abe6313561575445076337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    login() {
+        swan.login({
+            success: res => {
+                console.log('login success', res) // {code: "e4a13af4e6d8c491b701a86682a5bc76NW"}
+            },
+            fail: err => {
+                console.log('login fail', err);
+            }
+        });
+    }
+});
+```
+
+**代码示例2: 详细示例**
 
 <a href="swanide://fragment/f8ba538b4fd2ca1ab1f3ecb326d3981c1560169713308" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 > 详细示例请在开发者工具中查看。
@@ -65,6 +87,68 @@ swan.login({
     },
     fail: err => {
         console.log('login fail', err);
+    }
+});
+```
+
+**代码示例3: 开发者工具中左上角的登陆态与模拟器中用户的百度APP登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
+
+<a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
+
+
+**代码示例4: 联合登陆**
+
+<a href="swanide://fragment/4ea2c9fd20e7a802eb3ed0fcc3f96f081576052720396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 js 文件中
+
+```js
+Page({
+    data: { },
+    onLoad() {
+        // 用户首次登陆小程序，同步百度APP登陆态
+        swan.login({
+            success: res => {
+                console.log('login success', res);
+            },
+            fail: err => {
+                console.log('login fail', err);
+            }
+        });
+    },
+    onShow() {
+        let that = this;
+        // 用户进入小程序检测小程序在百度APP的登陆态是否有效
+        swan.checkSession({
+            success: function (res) {
+                // 有效，获取用户信息
+                swan.getUserInfo({
+                    success: res => {
+                        console.log(res)
+                        let userInfo = res.userInfo;
+                    },
+                    fail: err => {
+                        console.log(err);
+                        swan.showToast({
+                            title: '请先授权'
+                        });
+                    }
+                });
+            },
+            fail: function (err) {
+                // 无效，同步百度APP登陆态
+                swan.login({
+                    success: res => {
+                        console.log('login success', res);
+                    },
+                    fail: err => {
+                        console.log('login fail', err);
+                    }
+                });
+            }
+        });
     }
 });
 ```

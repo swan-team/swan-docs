@@ -25,7 +25,7 @@ sidebar: swan-onPageNotFound
 |query|Object|打开不存在页面的 query 参数|
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -122,7 +122,7 @@ Page({
 
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 - 开发者可以在回调中进行页面重定向。
-- 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用swan.onPageNotFound取消监听，否则会出现监听多次的情况
+- 在除了App.js的其他时机中调用swan.onPageNotFound的话，需要用[swan.offPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-offPageNotFound/)取消监听，否则会出现监听多次的情况

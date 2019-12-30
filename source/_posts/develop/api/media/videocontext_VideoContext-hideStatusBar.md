@@ -16,7 +16,7 @@ sidebar: videocontext_VideoContext-hideStatusBar
 
 **方法参数**：无
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/56fc24cd0778d7afef2ded4d49f0d9f91574006905425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
