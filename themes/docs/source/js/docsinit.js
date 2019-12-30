@@ -657,7 +657,7 @@
             }));
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
-            if (this.screenWidth > 768) {
+            if (this.screenWidth > 768 && !window.isSwanIde) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (after > ctx.screenHeight) {

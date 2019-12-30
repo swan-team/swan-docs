@@ -1,5 +1,10 @@
 <div class="m-doc-sidebar-mask"></div>
 <div class="m-doc-sidebar-nav-wrapper" id="m-doc-sidebar">
+    <script>
+        if (window.isSwanIde) {
+            document.getElementById('m-doc-sidebar').style.display = 'none';
+        }
+    </script>
     <ul>
         <%
             var navLen = nav ? nav.length : 0;
@@ -60,8 +65,3 @@
         <% } %>
     </ul>
 </div>
-<script>
-    if (isIde) {
-        document.getElementById('m-doc-sidebar').style.display = 'none';
-    }
-</script>

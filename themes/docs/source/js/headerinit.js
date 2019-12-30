@@ -115,14 +115,14 @@
             $(doc).on('touchstart', '.m-hp-demo', function () {
                 caseInvoke(_this.scheme);
             });
-            if (this.screenWidth <= 768) {
+            if (this.screenWidth <= 768 && !window.isSwanIde) {
                 var before = $('.m-doc-content-layout').scrollTop();
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (before < after && after > 60) {
-                        $('header').hide()
+                        $('header').hide();
                     } else {
-                        $('header').show()
+                        $('header').show();
                     }
                     before = after;
                 }, 300));

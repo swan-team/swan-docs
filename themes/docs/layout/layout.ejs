@@ -121,7 +121,7 @@
 </head>
 <body>
     <script>
-        var isIde = window && window._swanIde;
+        window.isSwanIde = !(window && window._swanIde);
     </script>
     <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
