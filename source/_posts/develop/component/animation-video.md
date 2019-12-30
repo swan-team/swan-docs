@@ -22,14 +22,6 @@ sidebar: animation-video
 |bindstarted| EventHandle |  |否|动画开始播放的回调| 3.130.10 |
 |bindended| EventHandle |  |否|当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及暂停动画不会触发。）| 3.130.10 |
 
-## 组件 api
-
-组件提供丰富的 api 来控制动画的播放，暂停，跳到指定位置等，详见[swan.createAnimationVideo](https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/)
-
-## 设计方法
-
-动画资源设计方法详见[透明视频AFX](https://smartprogram.baidu.com/docs/design/resource/animationVideo/)
-
 
 ## 代码示例
 
@@ -120,6 +112,15 @@ Page({
 
 
 ```
+
+## 组件 api
+
+组件提供丰富的 api 来控制动画的播放，暂停，跳到指定位置等，详见[swan.createAnimationVideo](https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/)
+
+## 设计方法
+
+动画资源设计方法详见[透明视频AFX](https://smartprogram.baidu.com/docs/design/resource/animationVideo/)
+
 
 ##  Bug & Tip
 
