@@ -1253,13 +1253,25 @@
                 link: /develop/extended/ui_component/smt-page-status
                 text: smt-page-status 页面状态
                 name: smt-page-status
+              -
+                link: /develop/extended/ui_component/smt-navigator
+                text: smt-navigator 自定义导航
+                name: smt-navigator
         -
             text: smtUI模板
             sidebar:
               -
-                link: /develop/extended/template/content-detail
+                link: /develop/extended/template/smt-detail-pages
                 text: 图文详情页
-                name: content-detail              
+                name: smt-detail-pages   
+              -
+                link: /develop/extended/template/smt-feed-page
+                text: 信息流模板
+                name: smt-feed-page  
+              -
+                link: /develop/extended/template/smt-status-page
+                text: 页面状态模板
+                name: smt-status-page          
     -
       text: API
       name: api

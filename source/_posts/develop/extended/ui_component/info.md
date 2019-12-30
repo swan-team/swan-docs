@@ -1,7 +1,7 @@
 ---
 title: smtUI介绍
 header: develop
-nav: extensioned
+nav: extended
 sidebar: info
 ---
 
