@@ -419,7 +419,7 @@
                     }
                 }
             }
-            sidebar.show();
+            // sidebar.show();
             // sidebar定位到当前页面，二级导航下的第一个页面sidebar不滚动
             var wrapperT = sidebar.find('ul').position().top;
             var sidebarSelected = $('.m-doc-sidebar-selected');
@@ -469,14 +469,14 @@
             var $demo = $('img[src= "../../img/demo/demo.png"]');
             var $closest = $demo.closest('div');
             var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
             var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
@@ -573,12 +573,11 @@
                 var tarTop = offsetTop + scrollTop - 30;
                 var diffTop = Math.abs(tarTop - scrollTop);
                 var time = diffTop > 1800 ? 200 : 100;
-                
                 // 修复 当切换的两个元素offsetTop距离一致时 不会触发滚动事件，导航栏高亮不生效
-                if(diffTop === 0) {
-                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time })
+                if (diffTop === 0) {
+                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time});
                 }
-                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time });
+                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time});
             }, 0);
         },
         addEvent: function () {
@@ -658,7 +657,7 @@
             }));
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
-            if (this.screenWidth > 768) {
+            if (this.screenWidth > 768 && !window.isSwanIde) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (after > ctx.screenHeight) {

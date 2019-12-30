@@ -25,7 +25,7 @@ innerAudioContext.onTimeUpdate(callback)
 
 ```js
 const audioCtx = swan.createInnerAudioContext();
-      audioCtx.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+      audioCtx.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
 // 事件监听
 audioCtx.onTimeUpdate(res => {
     console.log('当前信息展示：', JSON.stringify(res));

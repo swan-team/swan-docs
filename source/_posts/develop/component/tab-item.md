@@ -8,25 +8,6 @@ sidebar: tab-item
 
 **解释**：配合 tabs 一起使用，标签栏栏内单个 tab 内容。基础库 3.100.4 版本开始支持。
 
-
-## 代码示例
-
-<a href="swanide://fragment/4e8046f87d1fd5c379e0afbb7dd0ab991576119793306" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-### 扫码体验
-
-参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)二维码内容。
-
-
-###  图片示例 
-
-参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
-
-###  代码示例 
-
-参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
-
-
 ##  属性说明 
 
 |属性 | 类型 | 默认值 | 必填 | 说明 |最低版本|
@@ -42,3 +23,23 @@ sidebar: tab-item
 | :---- | :---- |
 | 'dot' | 徽标类型为圆点 |
 | 'text'| 徽标类型为文字 |
+
+
+## 代码示例
+
+<a href="swanide://fragment/554b5ec0fb2f1b226477a355d32c77a81577363516679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)二维码内容。
+
+
+###  图片示例 
+
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
+
+###  代码示例 
+
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
+
+

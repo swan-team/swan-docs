@@ -31,7 +31,7 @@ priority: 12-01
 
 5. 是否确认注册 AppId 时选择的**“服务类目”**是 **“小游戏”** ？
 确认方式：从智能小程序首页进入“管理中心”，查看对应小游戏的服务类目是否是 “游戏 | xxx”。
-注意左侧大类目必须是游戏。如不是则需要重新[创建小游戏](http://smartprogram.baidu.com/docs/game/introduction/prerare/register_consummate/)。
+注意左侧大类目必须是游戏。如不是则需要重新[创建小游戏](https://smartprogram.baidu.com/docs/game/introduction/prerare/register_consummate/)。
 创建小游戏时，如果仍然需要用之前注册的小游戏名称，会遇到重名问题，此时进入之前注册的小游戏的**设置**，修改其名称为其他名称即可。
 
 6. 查看开发者工具控制台或者真机 sConsole（打开方式见[sConsole文档](https://smartprogram.baidu.com/docs/game/tutorials/devtools/smartappdebug/#sConsole)），是否有 Javascript 运行报错？

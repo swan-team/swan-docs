@@ -22,7 +22,7 @@ sidebar: timer_setInterval
 
 |名称|解释|
 |--|--|
-|number|定时器的编号。这个值可以传递给 <a href="http://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
+|number|定时器的编号。这个值可以传递给 <a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
 
 **图片示例**
 

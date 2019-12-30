@@ -93,7 +93,7 @@ npm install @smt-ui/content-component
     show-publish="{= showPublish =}"
     comment-param="{{commentParam}}"
     is-upLoad-image="true"
-    request-url="http:xxx.xxx.com"
+    request-url="https:xxx.xxx.com"
     bind:browsemode="browseModeEventHandler"
     bind:relasecomment="relaseCommentEventHandler"
     bind:previewimage="previewImageHandler">

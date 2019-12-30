@@ -10,11 +10,25 @@ sidebar: base_text
 
 **解释**：文本元素
 
- 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
+|:---- |: ---- | :---- |:---- |:---- |:--|
+| space | String  | false | 否 |显示连续空格|-|
+| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+
+###  space 有效值 
+
+| 值 | 说明 |
+| :---- |: ---- |
+| ensp | 中文字符空格一半大小 |
+| emsp | 中文字符空格大小 |
+| nbsp | 根据字体设置的空格大小 |
+
 
 ## 代码示例
 
-<a href="swanide://fragment/2c45226787aa63a4ab867e04c29795ab1576151294185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/06b1d76de26d523472f889b9d56dda001577360687075" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -159,20 +173,6 @@ Page({
     }
 });
 ```
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|最低版本|
-|:---- |: ---- | :---- |:---- |:---- |:--|
-| space | String  | false | 否 |显示连续空格|-|
-| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-
-###  space 有效值 
-
-| 值 | 说明 |
-| :---- |: ---- |
-| ensp | 中文字符空格一半大小 |
-| emsp | 中文字符空格大小 |
-| nbsp | 根据字体设置的空格大小 |
 
 ##  Bug & Tip 
 

@@ -58,5 +58,7 @@ Page({
     }
 });
 ```
+
 **Bug & Tip**
+
 * iOS 不可用会 mock 返回值 level为100， isCharging 为true。

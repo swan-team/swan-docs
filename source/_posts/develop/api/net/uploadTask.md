@@ -47,7 +47,7 @@ Page({
     createUploadTask() {
         const uploadTask = swan.uploadFile({
             url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile', 
-            filePath: "http://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
+            filePath: "https://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
             name: 'myfile',
             header: {
                 'content-type': 'application/json'

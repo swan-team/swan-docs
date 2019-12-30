@@ -10,10 +10,15 @@ sidebar: formlist_radio-group
 
 **解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](/develop/component/formlist_radio/) 相同。
 
+##  属性说明 
+
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| :---- |: ---- |: ---- |: ---- |: ---- |
+| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
 
 ## 代码示例
 
-<a href="swanide://fragment/8ad481330fb3c3f5e873d3d4f80155f81576151928561" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/888efc1c79bb58d37aaaedf3ac792b851577360633121" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -159,8 +164,3 @@ sidebar: formlist_radio-group
 }
 ```
 
-##  属性说明 
-
-| 属性名 | 类型 | 默认值 | 必填 | 说明 |
-| :---- |: ---- |: ---- |: ---- |: ---- |
-| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |

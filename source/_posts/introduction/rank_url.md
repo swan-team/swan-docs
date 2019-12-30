@@ -10,10 +10,10 @@ sidebar: rank_url
 **2.URL适配规则该怎么填写？**
 通过正则表达式的方式声明 H5 链接与小程序路径间的对应关系。格式举例：
 
->H5：`http://example.com/detail?id=1`
+>H5：`https://example.com/detail?id=1`
 小程序路径：`/pages/detail/index?id=1`
 这组对应关系可以用以下规则描述：
-`http://example.com/detail?id=([^&]+)=> pages/detail/index?id=${1}`
+`https://example.com/detail?id=([^&]+)=> pages/detail/index?id=${1}`
 
 如上例所示，“=>” 左侧部分为 H5 链接生成的正则表达式，标识了 H5 地址中与小程序参数有对应关系的部分；“=>”右侧部分由小程序路径和参数对组成。参数对中如果某个参数值是左侧匹配到的部分，则其参数值由${左侧匹配项的序号}代替。
 
@@ -118,7 +118,7 @@ URL 适配规则的辅助生成工具，也可以通过规则编辑页面进入�
     2）小程序path参数不能为路径
     小程序path可以带参数，但需注意，参数不可以是一条路径，也不可以是一条H5 url。以下这三类都是不符合规范的：
     xxx.smartapp.cn/parameter_a=/path1/file，
-    xxx.smartapp.cn/parameter=http://xxx.baidu.com/path1/1.html，
+    xxx.smartapp.cn/parameter=https://xxx.baidu.com/path1/1.html，
     xxx.smartapp.cn/parameter=xxx.baidu.com/path1/1.html。
     如需带相关参数，务必清晰表述参数名和参数定义，如dir_name=news。
  - **小程序已下线：**对于整站下线的小程序，适配不予生效。请重新提包之后，等待适配校验生效。

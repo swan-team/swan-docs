@@ -1221,34 +1221,64 @@
                       link: /develop/component/ad
                       text: ad 广告
                       name: ad
-    # -
-    #   text: 扩展组件
-    #   name: extended
-    #   sidebar:
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/commentpublish
-    #             text: 半屏内容发布器带服务版
-    #             name: commentpublish
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component/publish
-    #             text: 全屏内容发布器组件
-    #             name: publish
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/like
-    #             text: 点赞组件
-    #             name: like
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/concern
-    #             text: 关注组件
-    #             name: concern
+    -
+      text: 扩展能力
+ 
+      sidebar:
+        # -   
+        #     text: 基础组件
+        #     sidebar:
+        #       -
+        #         link: /develop/extended/component-content/commentpublish
+        #         text: 半屏内容发布器带服务版
+        #         name: commentpublish
+        #       -
+        #         link: /develop/extended/component/publish
+        #         text: 全屏内容发布器组件
+        #         name: publish
+        #       -
+        #         link: /develop/extended/component-content/like
+        #         text: 点赞组件
+        #         name: like      
+        -
+       
+          text: smtUI组件
+          sidebar:
+              -
+                link: /develop/extended/ui_component/info
+                text: smtUI介绍
+                name: info
+              -
+                link: /develop/extended/ui_component/smt-feed
+                text: smt-feed 信息流
+                name: smt-feed
+              -
+                link: /develop/extended/ui_component/smt-feed-item
+                text: smt-feed 信息流子项
+                name: smt-feed-item
+              -
+                link: /develop/extended/ui_component/smt-icon
+                text: smt-icon 图标
+                name: smt-icon
+              -
+                link: /develop/extended/ui_component/smt-refresh
+                text: smt-refresh 刷新
+                name: smt-refresh
+              -
+                link: /develop/extended/ui_component/smt-spin
+                text: smt-spin 加载
+                name: smt-spin
+              -
+                link: /develop/extended/ui_component/smt-page-status
+                text: smt-page-status 页面状态
+                name: smt-page-status
+        -
+            text: smtUI模板
+            sidebar:
+              -
+                link: /develop/extended/template/content-detail
+                text: 图文详情页
+                name: content-detail              
     -
       text: API
       name: api
@@ -3025,6 +3055,20 @@
                     text: swan.getClipboardData
                     name: swan-getClipboardData
 
+              -
+
+                text: 系统日历中预约活动
+
+                sidebar:
+                  -
+                    link: /develop/api/device_sys/swan-addEventOnCalendar
+                    text: swan.addEventOnCalendar
+                    name: swan-addEventOnCalendar
+                  -
+                    link: /develop/api/device_sys/swan-deleteEventOnCalendar
+                    text: swan.deleteEventOnCalendar
+                    name: swan-deleteEventOnCalendar
+
         -
 
             text: 第三方平台
@@ -4400,17 +4444,6 @@
     #               text: 插件中组件的限制
     #               name: limit_components
 
-    -
-      text: 扩展能力
-      name: extension
-      sidebar:
-        -
-          text: smartUI模板
-          sidebar:
-            -
-              link: /develop/extension/template/content-detail
-              text: 图文详情页
-              name: content-detail
 
     -
       text: 功能开发
