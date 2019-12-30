@@ -10,6 +10,11 @@ sidebar: formlist_radio-group
 
 **解释**：单项选择器组，内部由多个radio组成。代码示例与 [radio](/develop/component/formlist_radio/) 相同。
 
+##  属性说明 
+
+| 属性名 | 类型 | 默认值 | 必填 | 说明 |
+| :---- |: ---- |: ---- |: ---- |: ---- |
+| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |
 
 ## 代码示例
 
@@ -159,8 +164,3 @@ sidebar: formlist_radio-group
 }
 ```
 
-##  属性说明 
-
-| 属性名 | 类型 | 默认值 | 必填 | 说明 |
-| :---- |: ---- |: ---- |: ---- |: ---- |
-| bindchange | EventHandle | &nbsp; | 否 | &lt;radio-group/&gt; 中的选中项发生变化时触发 change 事件，event.detail = {value: 选中项 radio 的 value} |

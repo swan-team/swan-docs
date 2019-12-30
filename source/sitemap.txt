@@ -777,6 +777,14 @@ https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/document/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/storage/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/function/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/cloud-callFunction/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-feed/
+https://smartprogram.baidu.com/docs/develop/extensions/component/info/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-feed-item/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-icon/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-refresh/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-spin/
+https://smartprogram.baidu.com/docs/develop/extensions/component/smt-page-status/
+https://smartprogram.baidu.com/docs/develop/extensions/template/content-detail/
 https://smartprogram.baidu.com/docs/develop/function/navigation/
 https://smartprogram.baidu.com/docs/develop/function/opensmartprogram/
 https://smartprogram.baidu.com/docs/develop/function/webintroduction/

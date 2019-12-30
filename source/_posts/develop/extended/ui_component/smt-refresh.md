@@ -1,11 +1,21 @@
 ---
 title: smt-refresh 刷新
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-refresh
 ---
 
 **解释：** 可用于页面任意区域；使用时需自行添加下拉逻辑改变offset-y参数；smt-feed组件对smt-refresh进行了封装，支持手势交互和api调起刷新。
+
+##  属性说明 
+
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|theme |String |否|-|主题配置，默认浅色；深色主题请指定dark|
+|loadingHgt |Number |否|192px（需转换为设备尺寸）|加载区域高度|
+|offsetY |Number |否|0|垂直移动距离，*建议后续在sjs中使用|
+|status |Number |否|0|加载状态 0: 未开始 1: 加载中 2: 展示话术|
+|text |String |否|建议最多显示18个汉字，超出内容截断|加载成功时的展示话术|
 
 ## 代码示例
 
@@ -77,12 +87,3 @@ async onRefresh() {
 ```
 
 
-##  属性说明 
-
-|属性名 | 类型 | 必填 | 默认值 |说明 |
-|---|---|---|---|---|
-|theme |String |否|-|主题配置，默认浅色；深色主题请指定dark|
-|loadingHgt |Number |否|192px（需转换为设备尺寸）|加载区域高度|
-|offsetY |Number |否|0|垂直移动距离，*建议后续在sjs中使用|
-|status |Number |否|0|加载状态 0: 未开始 1: 加载中 2: 展示话术|
-|text |String |否|建议最多显示18个汉字，超出内容截断|加载成功时的展示话术|

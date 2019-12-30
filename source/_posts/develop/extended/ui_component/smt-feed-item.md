@@ -1,11 +1,21 @@
 ---
 title: smt-feed-item 信息流子项
 header: develop
-nav: extensions
+nav: extensioned
 sidebar: smt-feed-item
 ---
 
 **解释：** 信息流子项，包括左文右图、纯文本、上文下图、多图及视频模式。
+
+
+##  属性说明 
+
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|theme |string |否|default|信息流子项的主题：default是左文右图模式，如不配置content中的images则是纯文本子项；large-image是大图模式；multiple-images是多图模式|
+|content |Object |否|{title: &#39;这个是子项的标题&#39;,infoSource: &#39;百度新闻&#39;,commentsNum: 2,images: []}|信息流子项目的内容，包含标题（title），消息来源（infoSource），评论数（commentsNum），图片路径（images）|
+|video |Object |否|{isVideo: true, time: &#39;05:00&#39;}|是否为视频和视频信息，配置isVideo为true，则显示视频形式（注：在多图模式不生效）|
+|status |String |否|0|阅读状态：0未读，1已读|
 
 ## 代码示例
 
@@ -64,11 +74,3 @@ Page({
 
 
 
-##  属性说明 
-
-|属性名 | 类型 | 必填 | 默认值 |说明 |
-|---|---|---|---|---|
-|theme |string |否|default|信息流子项的主题：default是左文右图模式，如不配置content中的images则是纯文本子项；large-image是大图模式；multiple-images是多图模式|
-|content |Object |否|{title: &#39;这个是子项的标题&#39;,infoSource: &#39;百度新闻&#39;,commentsNum: 2,images: []}|信息流子项目的内容，包含标题（title），消息来源（infoSource），评论数（commentsNum），图片路径（images）|
-|video |Object |否|{isVideo: true, time: &#39;05:00&#39;}|是否为视频和视频信息，配置isVideo为true，则显示视频形式（注：在多图模式不生效）|
-|status |String |否|0|阅读状态：0未读，1已读|
