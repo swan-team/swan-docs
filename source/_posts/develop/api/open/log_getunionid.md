@@ -36,7 +36,7 @@ access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
-openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open_log/)获取
+openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open/log/)获取
 
 
 **返回值说明**
