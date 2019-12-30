@@ -11,7 +11,7 @@ sidebar: tab-item
 
 ## 代码示例
 
-<a href="swanide://fragment/4e8046f87d1fd5c379e0afbb7dd0ab991576119793306" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/554b5ec0fb2f1b226477a355d32c77a81577363516679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

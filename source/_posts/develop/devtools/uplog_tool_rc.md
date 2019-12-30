@@ -5,6 +5,12 @@ nav: devtools
 sidebar: uplog_tool_rc
 ---
 
+### 2.24 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.24.0|2019.12.25|**Change**<p>**·**  编辑器关闭文件后优化为打开最近文件;<p>**·** 编辑器中非编辑器创建文件不进行跳转。 <p>**BugFix**<p>**·** 修复 saveFile/saveFileSync、readFile/readFileSync 传入相对路径和真机处理差异问题；<p>**·** 修复 saveFile/saveFileSync 存储路径上级目录不存在时和真机处理差异问题；<p>**·** 修复 saveFile success 回调不包含savedFilePath字段问题；<p>**·** 修复小游戏编译Buffer模块不支持base64 encoding问题。|
+
 ### 2.23 版本 
 
 |版本号|更新时间|更新内容|

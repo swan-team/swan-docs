@@ -11,7 +11,7 @@ sidebar: view_view
 
 ## 代码示例
 
-<a href="swanide://fragment/f5f39a946d5233ece466d176afbe61a01576152072622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9fb5e294b219f401cec44ae312c7b7ca1577360709295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

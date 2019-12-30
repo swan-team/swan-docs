@@ -43,7 +43,7 @@ sidebar: swan-getEnvInfoSync
 
 **代码示例**
 
-<a href="swanide://fragment/6ff3d4ccb4b7868321c5afa04f24df321577107079176" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/82e11bbc8ad46f16d1358e023478af9e1569478295415" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 * 在 swan 文件中
@@ -71,20 +71,56 @@ sidebar: swan-getEnvInfoSync
 * 在 js 文件中
 
 ```js
-let res = swan.getEnvInfoSync();
-
-// 基础库 3.140.1 之前，无法判断接口是否调用失败
-// 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
-if (!(res instanceof Error)) {
-    console.log('getEnvInfoSync success', res);
-}
-else {
-    console.log('getEnvInfoSync fail', res.message);
-}
+Page({
+    data: {
+        infoList: [{
+            engName: 'appKey',
+            chinaName: 'App Key',
+            value: ''
+        }, {
+            engName: 'appName',
+            chinaName: '小程序名称',
+            value: ''
+        }, {
+            engName: 'lastAppURL',
+            chinaName: '调起协议',
+            value: ''
+        }, {
+            engName: 'sdkVersion',
+            chinaName: '基础库版本',
+            value: ''
+        }, {
+            engName: 'scheme',
+            chinaName: '协议头',
+            value: ''
+        }, {
+            engName: 'env',
+            chinaName: '小程序版本',
+            value: ''
+        }
+    ]},
+    getEnvInfoSync() {
+        try {
+            const res = swan.getEnvInfoSync();
+            console.log(res);
+            this.updateInfoList(res);
+        } catch (e) {
+            console.log('getEnvInfoSync fail', e);
+        }
+    },
+    clearClick() {
+        this.updateInfoList({});
+    },
+    updateInfoList(res) {
+        let infoList = this.getData('infoList');
+        for (let i = 0; i < infoList.length; ++i) {
+            if (res[infoList[i].engName] === '') {
+                infoList[i].value = '暂无';
+            } else {
+                infoList[i].value = res[infoList[i].engName];
+            }
+        }
+        this.setData('infoList', infoList);
+    }
+});
 ```
-
-
-**Bug & Tip**
-
-* 基础库 3.140.1 之前，无法判断接口是否调用失败。
-* 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
