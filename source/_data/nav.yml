@@ -712,7 +712,10 @@
                     text: setData 机制
                     name: app_service_page_setData
               -
-
+                link: /develop/framework/process_life
+                text: 页面生命周期
+                name: app_service_lifecycle
+              -
                 text: 页面路由
                 name: app_service_route
                 sidebar:
