@@ -14,6 +14,10 @@ sidebar: process_life
 1. FCP: First Contentful Paint，即首次有内容的绘制；
 2. FMP: First Meaningful Paint，即首次有意义的绘制；
 
+下列加载时间线屏幕截图直观的介绍了`FCP`与`FMP`的含义：
+
+ ![图片](../../../img/framwork/FMP.jpeg)
+
 ## 首页初次渲染全过程
 ### 1. 初始化
 渲染线程和`App`服务线程同步的进行初始化，在`App`服务线程初始化时收集`App`和`Page`的初始化数据，并且执行`App.onLaunch`回调中的相关逻辑。
