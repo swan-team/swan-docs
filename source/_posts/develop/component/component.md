@@ -24,6 +24,7 @@ sidebar: component
 |<a href="/develop/component/base_progress/">progress</a>|进度条|
 |<a href="/develop/component/base_rich-text/">rich-text</a>|富文本，nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。|
 |<a href="/develop/component/base_animation-view-Lottie/">animation-view</a>|Lottie动画组件，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。|
+|<a href="/develop/component/base_animation-video/">animation-video</a>|为智能小程序提供了将特定视频资源渲染为透明背景动效的能力，可以帮助开发者低成本实现更为沉浸，丰富的动画效果。|
 |<a href="/develop/component/formlist_button/">button</a>|按钮|
 |<a href="/develop/component/formlist_form/">form</a>|表单，将 form 组件内的用户输入的`<switch/> <input/> <checkbox/> <slider/> <radio/> <picker/>`提交。当点击`<form/>`表单中 form-type 为 submit 的 `<button/>`组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。|
 |<a href="/develop/component/formlist_label/">label</a>|表单组件标签，为鼠标用户改进表单的可用性。使用 for 属性找到对应的 id（必须写for），当点击时，就会触发对应的控件。|

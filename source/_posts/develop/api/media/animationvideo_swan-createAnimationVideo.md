@@ -6,7 +6,7 @@ sidebar: animationvideo_swan-createAnimationVideo
 ---
 
 
-**解释**： 创建并返回 animation-video 上下文 `animationVideo` 对象。通过 animationVideoId 跟一个 animation-video 组件绑定，通过它可以操作一个 animation-video 组件。
+**解释**： 创建并返回 animation-video 上下文 `animationVideo` 对象。通过 animationVideoId 跟一个 animation-video 组件绑定，通过它可以操作一个[animation-video](/develop/component/animation-video/) 组件。
 
 **百度APP中扫码体验：**
 

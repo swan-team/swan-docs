@@ -24,7 +24,7 @@ npm i @smt-ui-template/page-feed
 ```
 
 
-2，进入page-feed文件夹，安装所有模板依赖
+2. 进入page-feed文件夹，安装所有模板依赖
 
 ``` 
 npm i 

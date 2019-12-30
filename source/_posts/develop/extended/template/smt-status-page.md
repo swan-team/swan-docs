@@ -24,7 +24,7 @@ npm i @smt-ui-template/page-status
 ```
 
 
-2，进入page-status文件夹，安装所有模板依赖
+2. 进入page-status文件夹，安装所有模板依赖
 
 ``` 
 npm i 
@@ -59,7 +59,7 @@ npm i
 </view>
 ```
 
-3，**可在js中配置不同的theme数据，展示不同的模板状态**：loadingStatus加载中，noWifiStatus无网络，noContent暂无内容。
+3. **可在js中配置不同的theme数据，展示不同的模板状态**：loadingStatus加载中，noWifiStatus无网络，noContent暂无内容。
 
 ## Bug & Tip
 
