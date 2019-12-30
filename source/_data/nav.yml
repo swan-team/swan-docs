@@ -1254,9 +1254,9 @@
                 text: smt-page-status 页面状态
                 name: smt-page-status
               -
-                link: /develop/extended/ui_component/smt-navigator
-                text: smt-navigator 自定义导航
-                name: smt-navigator
+                link: /develop/extended/ui_component/smt-navigation
+                text: smt-navigation 自定义导航
+                name: smt-navigation
         -
             text: smtUI模板
             sidebar:
