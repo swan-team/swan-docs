@@ -157,7 +157,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 
 **注意**：
-* navigationStyle 全局配置`Android`和`iOS`从百度 App版本11.1.0开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
+* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**
@@ -166,8 +166,8 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |顶bar设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|
 |百度 App定义的顶bar|无版本限制|无版本限制|无版本限制| |
-|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效| |
-|顶bar子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
+|顶bar全局透明设置|基础库版本 2.10.34|基础库版本 2.10.34|不生效| |
+|顶bar子页面透明设置|基础库版本 2.10.34|基础库版本 2.10.34|不生效|每个page的json文件可以单独配置navigationStyle|
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">

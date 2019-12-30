@@ -6,7 +6,7 @@ sidebar: swan-setEnableDebug
 ---
  
 
-> 客户端10.12，基础库1.12开始支持,在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
+> 基础库 1.12 开始支持,在工具和真机中的实现有区别，详见 [API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：设置是否打开调试开关，此开关对正式版也能生效。
 

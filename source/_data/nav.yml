@@ -347,7 +347,7 @@
             sidebar:
               -
                 link: /introduction/scancode
-                text: 扫码打开智能小程序
+                text: 扫描二维码打开智能小程序
                 name: scancode
     -
       link: /introduction/getphonenumber

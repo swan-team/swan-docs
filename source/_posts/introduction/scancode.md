@@ -1,5 +1,5 @@
 ---
-title: 扫码打开智能小程序
+title: 扫描二维码打开智能小程序
 header: introduction
 nav: book
 sidebar: scancode
