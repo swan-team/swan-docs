@@ -17,7 +17,7 @@ sidebar: createanimation_Animation-translate
 
 **参数说明**：一个参数时，表示在X轴偏移 tx ，单位 px ；两个参数时，表示在 X 轴偏移 tx ，在 Y 轴偏移 ty ，单位 px 。 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: createanimation_Animation-translate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8056f13727c80924cfc13a7549c6a0591574217300222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

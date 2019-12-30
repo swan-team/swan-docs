@@ -18,6 +18,30 @@ sidebar: app_service_pagelife
 |----|----|----|
 |query|Object|打开当前页面路径中的参数|
 
+**代码示例**
+
+```js
+// 添加onLoad代理示例
+
+var originPage = Page
+
+function MyPage(config) {
+   this.lifetimeProxy = {
+     onLoad: config.onLoad
+   }
+   config.onLoad = function(options) {
+     // 自定义代码
+     // 公共的初始化代码
+     this.userData = getUserData()
+   }
+  
+  // ...
+
+  originPage(config)
+}
+
+```
+
 ### onShow()
 页面显示/切入前台时触发。
 
@@ -36,3 +60,5 @@ sidebar: app_service_pagelife
  <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
+
+更多内容参见[生命周期](https://smartprogram.baidu.com/docs/develop/framework/process_life/)。

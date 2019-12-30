@@ -6,6 +6,9 @@ sidebar: compatibility_api
 ---
  
 一般来说，对于新增的API，开发者可以用以下代码来判断新增API是否支持用户的客户端：
+
+**代码示例**
+
 ```js
 if (swan.createCanvasContext) {
   swan.createCanvasContext()

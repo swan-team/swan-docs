@@ -24,7 +24,7 @@ sidebar: uploadTask-onProgressUpdate
 |totalBytesExpectedToSend   | Number  |预期需要上传的数据总长度，单位 Bytes。|
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +38,7 @@ sidebar: uploadTask-onProgressUpdate
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8399420459bb1f1e3b7a53beb68290a11572945456510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

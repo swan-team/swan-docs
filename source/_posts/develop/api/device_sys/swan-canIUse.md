@@ -29,7 +29,7 @@ sidebar: swan-canIUse
 |${option}  |  组件属性的有效值 |
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

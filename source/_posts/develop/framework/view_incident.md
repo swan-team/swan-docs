@@ -113,7 +113,7 @@ Page({
 #### target
 
 |属性 | 类型  |  说明|
-|---- | ---- |
+|---- | ---- |---- |
 |id | String | 触发事件组件的 id|
 |tagName | String | 触发事件组件的类型|
 |dataset | Object | 触发事件组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](./#dataset) |
@@ -121,7 +121,7 @@ Page({
 #### currentTarget
 
 |属性 | 类型  |  说明|
-|---- | ---- |
+|---- | ---- |---- |
 |id | String | 事件绑定的组件的 id|
 |tagName | String | 事件绑定的组件的类型|
 |dataset | Object | 事件绑定的组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](./#dataset) |
@@ -136,7 +136,7 @@ Page({
 
 #### touch
 |属性 | 类型  |  说明|
-|---- | ---- |
+|---- | ---- |---- |
 |identifier | Number | 触摸点的标识符|
 |clientX, clientY  |  Number | 距离页面可显示区域（屏幕除去导航条）左上角的X轴与Y轴的距离|
 |pageX, pageY |   Number | 距离文档左上角的X轴与Y轴的距离|

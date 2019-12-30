@@ -15,7 +15,7 @@ sidebar:  videocontext_VideoContext-pause
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar:  videocontext_VideoContext-pause
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/cfb92be87d8768c48283ff36f5bf08a31573478775059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

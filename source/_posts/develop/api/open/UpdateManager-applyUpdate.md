@@ -17,7 +17,7 @@ sidebar: UpdateManager-applyUpdate
 
 **方法参数**：无
 
-**代码示例**：
+**代码示例**
 
 [在开发者工具中预览效果](swanide://fragment/65877d62da2f54c951b087ed53ee2dc91573808765114)
 
@@ -64,7 +64,7 @@ Page({
 
 
 
-**Bug & Tip**： 
+**Bug & Tip** 
 
 * 检查更新操作由宿主APP在小程序冷启动时自动触发，不需由开发者主动触发，开发者只需监听检查结果即可。
 * onUpdateReady(callback) 回调结果说明：当宿主APP检查到小程序有新版本，会主动触发下载操作（无需开发者触发），当下载完成后，会通过 onUpdateReady 告知开发者。

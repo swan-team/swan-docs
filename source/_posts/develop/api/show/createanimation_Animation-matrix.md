@@ -16,7 +16,7 @@ sidebar:  createanimation_Animation-matrix
 
 **方法参数**： Number a，Number b，Number c，Number d 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar:  createanimation_Animation-matrix
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c16566dff028c17fbe1454b4bc5ff6c91574218824583" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

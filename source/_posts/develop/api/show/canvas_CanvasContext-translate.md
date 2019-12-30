@@ -17,11 +17,11 @@ sidebar: canvas_CanvasContext-translate
 
 **`y`参数说明**：竖直坐标平移量
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/translate.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/755378a183a45481f8a03347f75519251573723810204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

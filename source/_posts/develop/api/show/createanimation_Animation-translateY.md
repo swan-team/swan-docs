@@ -18,7 +18,7 @@ sidebar: createanimation_Animation-translateY
 **参数说明**：在 Y 轴偏移 ty ，单位 px。 
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

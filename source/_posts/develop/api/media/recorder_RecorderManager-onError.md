@@ -17,7 +17,7 @@ sidebar: recorder_RecorderManager-onError
 **方法参数**：Function callback
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: recorder_RecorderManager-onError
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/3edb048ed65f02d397a539165711d2ee1574002351482" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

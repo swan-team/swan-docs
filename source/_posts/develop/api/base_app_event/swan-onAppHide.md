@@ -18,7 +18,7 @@ sidebar: swan-onAppHide
 小程序切后台事件的回调函数。
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,7 +32,7 @@ sidebar: swan-onAppHide
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 * 示例一：在onHide中使用 
 <a href="swanide://fragment/dd9635306671da7cc68151263cf468b61572852464155" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -12,6 +12,8 @@ sidebar: process
 3、根据框架机制，智能小程序框架在加载完成代码包之后，会启动 pages 中的第一项，并渲染为首次看到的页面;
 4、智能小程序启动后，开始调用 app.js 中预设的生命周期方法。
 
+**代码示例**
+
 ```js
 App({
 	onLaunch: function () {
@@ -25,6 +27,8 @@ App({
 ## 页面
 
 一个智能小程序的页面的构造器如下：
+
+**代码示例**
 
 ```js
 Page({
@@ -98,4 +102,4 @@ Page({
 });
 ```
 
-但是推荐使用第一种方法，可以在当前 Page 上精准查找，避免一些问题。具体方法的挂载，在 [API 章节](http://smartprogram.baidu.com/docs/develop/api/net/) 会有详细介绍。
+但是推荐使用第一种方法，可以在当前 Page 上精准查找，避免一些问题。具体方法的挂载，在 [API 章节](https://smartprogram.baidu.com/docs/develop/api/net/) 会有详细介绍。

@@ -16,7 +16,6 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |
-|src |String |  否 |音频的数据链接，用于直接播放。有效值：m4a, aac, mp3, wav。|
 |startTime |Number | 否 |开始播放的位置（单位：s），默认 0 。|
 |duration |Number |是 |当前音频的长度（单位：s），只有在当前有合法的 src 时返回。 |
 |currentTime |Number | 是 |当前音频的播放位置（单位：s），只有在当前有合法的 src 时返回，时间不取整，保留小数点后 6 位。 |
@@ -25,8 +24,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 |epname |String |否 |专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 |
 |singer |String |否 |歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 |
 |coverImgUrl |String |否 |封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 |
+|src |String |  否 |音频的数据链接，用于直接播放，请在上述属性设置完成后使用该属性。有效值：m4a, aac, mp3, wav。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,7 +40,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/4546806675c2ecbdb645a0f4c51459731573617109560" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -55,7 +55,7 @@ Page({
         backgroundAudioManager.title = '演员';
         backgroundAudioManager.epname = '演员';
         backgroundAudioManager.singer = '薛之谦';
-        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+        backgroundAudioManager.coverImgUrl = 'https://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
 
         backgroundAudioManager.onPlay(res => {
             swan.showToast({
@@ -142,7 +142,7 @@ Page({
         this.backgroundAudioManager = backgroundAudioManager;
     },
     play() {
-        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         this.backgroundAudioManager.play();
     },
     pause() {

@@ -10,7 +10,7 @@ sidebar: custom
 
 * 事件可以是一次button的交互触发，比如用户点击了“购买”按钮；
 * 也可以是一个判断逻辑，比如用户启动了APP，用户进入了A页面，用户离开了A页面。 
-所以，在移动APP的统计与分析过程中，监控、分析事件对于了解和分析用户的APP使用行为具有至关重要的作用。智能小程序为您提供了基础的代码埋点的方式定义自定义事件。如您还有其它埋点需求，请见：<a href="http://smartprogram.baidu.com/docs/data/performance-point/">手工埋点统计</a>。
+所以，在移动APP的统计与分析过程中，监控、分析事件对于了解和分析用户的APP使用行为具有至关重要的作用。智能小程序为您提供了基础的代码埋点的方式定义自定义事件。如您还有其它埋点需求，请见：<a href="https://smartprogram.baidu.com/docs/data/performance-point/">手工埋点统计</a>。
 
 ## 自定义事件埋点
 

@@ -6,7 +6,8 @@ sidebar: swan-getExtConfig
 ---
 
 
->基础库 1.10.8 版本开始支持，需要上传小程序包之后，才能通过API获取自定义数据，小程序包上传流程、数据配置参考：[小程序包管理](https://smartprogram.baidu.com/docs/develop/third/apppage/)。
+>基础库 1.10.8 版本开始支持，需要上传小程序包之后，才能通过API获取自定义数据，小程序包上传流程、数据配置参考：[小程序包管理](https://smartprogram.baidu.com/docs/third/apppage/)。
+
 
 **解释**：获取第三方平台自定义的数据字段。
 
@@ -30,7 +31,7 @@ sidebar: swan-getExtConfig
 |---- | ---- | ---- |
 |extConfig |  Object | 第三方平台自定义的数据 |
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +45,7 @@ sidebar: swan-getExtConfig
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/8193f2d5f3f69834261c1809c72c36071574154522656" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

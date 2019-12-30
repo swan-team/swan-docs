@@ -14,7 +14,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offPlay
 
 **方法参数**：Function callback
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offPlay
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/2cca8e2312f14597549f03baf43155ed1574736388770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -48,7 +48,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offPlay
 Page({
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.onPlay(res => {
             swan.showModal({

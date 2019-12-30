@@ -12,6 +12,8 @@ sidebar: devjson
 
 ### 配置示例
 
+**代码示例**
+
 ```js
 {
     "navigationBarBackgroundColor": "#ffffff",
@@ -26,7 +28,7 @@ sidebar: devjson
 
 
 |属性|类型|默认值|描述|最低版本|
-|----|----|----|----|
+|----|----|----|----|----|----|
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 `#000000`| |
 |navigationBarTextStyle|String|white|导航栏标题颜色，有效值 black / white| |
 |navigationBarTitleText|String|--|导航栏标题文字内容| |
@@ -55,7 +57,7 @@ sidebar: devjson
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 

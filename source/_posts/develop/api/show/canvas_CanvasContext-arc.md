@@ -32,11 +32,11 @@ sidebar: canvas_CanvasContext-arc
 
 **`counterclockwise`参数说明**：可选。指定弧度的方向是逆时针还是顺时针。默认是 false，即顺时针。
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/arc.png)
 
-**代码示例**：
+**代码示例1**：
 
 <a href="swanide://fragment/6e90c6683d0c5676207fd5eefa1c06b71573723566960" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -46,6 +46,38 @@ canvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
 canvasContext.setFillStyle('blue');
 canvasContext.fill();
 canvasContext.draw();
+```
+
+**代码示例2 - counterclockwise为true**：
+
+<a href="swanide://fragment/5013899c76707b170a24409da4792a6f1575363697582" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.arc(100, 75, 50, 2, 2 * Math.PI, true);
+        canvasContext.setFillStyle('blue');
+        canvasContext.fill();
+        canvasContext.draw();
+    }
+});
+```
+
+**代码示例3 - counterclockwise为false**：
+
+<a href="swanide://fragment/044876f82808e355e7bb3b0bd55c35a51575363735429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+Page({
+    onReady: function () {
+        const canvasContext = swan.createCanvasContext('myCanvas');
+        canvasContext.arc(100, 75, 50, 2, 2 * Math.PI, false);
+        canvasContext.setFillStyle('blue');
+        canvasContext.fill();
+        canvasContext.draw();
+    }
+});
 ```
 
 

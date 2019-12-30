@@ -19,7 +19,7 @@ sidebar: canvas_CanvasContext-draw
 
 **`callback`参数说明**：绘制完成后回调 
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/draw1.png)
 
@@ -37,7 +37,7 @@ canvasContext.fillRect(30, 30, 150, 100);
 canvasContext.draw();
 ```
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

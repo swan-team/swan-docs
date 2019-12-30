@@ -13,9 +13,9 @@ sidebar: swan-setPageInfo
 
 **解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。其中title和image字段也有助于用户添加页面收藏的模板展现和回访体验（用户可以在小程序菜单中收藏当前页面，并通过百度App"我的-常用功能-收藏"回访已收藏的页面）。
 
-**在浏览器中扫码体验：**
+**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/setPageInfo.png"  class="demo-qrcode-image" />
+请<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中" target="_self">在开发者工具中</a>，单击“预览”，输入您的APPID，单击“WEB预览”，百度APP中扫码体验。
 
 **方法参数**：Object object
 
@@ -26,7 +26,7 @@ sidebar: swan-setPageInfo
 |title | String | 是 ||页面标题 |
 |keywords|String|是| |页面关键词，多个关键词之间使用英文逗号“,”隔开|
 |description|String|是| | 页面描述信息|
-|releaseDate|String|否（入宿主APP信息流为必填）| |原始发布时间(年-月-日 时:分:秒 带有前导零）|
+|releaseDate|String|否（如宿主APP信息流为必填）| |原始发布时间(年-月-日 时:分:秒 带有前导零）|
 |articleTitle | String | 否 | | 文章(内容)标题(适用于当前页面是图文、视频类的展示形式，文章标题需要准确标识当前文章的主要信息点；至少6个字，不可以全英文。) |
 |image|String/Array|否（页面有焦点图，或者正文有图片时需要设置）| |图片线上地址，用于信息流/搜索等流量场景分发、用户收藏后的页面封面显示，展现时有图片可提升用户点击率。开发者可针对一个页面设置最多3张，图片必须为页面内图片。单图片最大2M；封面图尺寸：宽>=375px，高>=250px，图片宽高比例3：2为佳。多张图时，用数组表示。|
 |video|Object/Array|否（页面存在视频情况下必填）| |视频信息，多个视频时，用数组表示|
@@ -56,18 +56,12 @@ sidebar: swan-setPageInfo
 |uv |String|否| 页面的点击量（去重用户）|
 |sessionDuration |String|否| 页面的用户人均停留时长，以秒为单位。|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/setPageInfo1.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
+    </div>    
 </div>
 
 **代码示例 1**：
@@ -86,7 +80,7 @@ Page({
             articleTitle: '晒元宵节活动红包，爱奇艺60张年卡、600张季卡等你拿！',
             releaseDate: '2019-01-02 12:01:30',
             image: [
-                'http://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
+                'https://c.hiphotos.baidu.com/forum/w%3D480/sign=73c62dda83b1cb133e693d1bed5456da/f33725109313b07e8dee163d02d7912396dd8cfe.jpg',
                 'https://hiphotos.baidu.com/fex/%70%69%63/item/43a7d933c895d143e7b745607ef082025baf07ab.jpg'
             ],
             video: [{
@@ -122,56 +116,31 @@ Page({
 
 ```js
 Page({
-    data: { },
-    onLoad() {
-        this.requestTask = new Promise((resolve, reject) => {
-            const requestHandler = swan.request({
-                url: '开发者服务器地址',
-                header: {
-                    'content-type': 'application/json'
-                },
-                method: 'POST',
-                dataType: 'json',
-                responseType: 'text',
-                data: {
-                    key: 'value'
-                },
-                success: res => {
-                    this.setData('data', res.data);
-                    resolve();
-                },
-                fail: err => {
-                    console.log('错误码：' + err.errCode);
-                    console.log('错误信息：' + err.errMsg);
-                }
-            })
+    onLoad(query) {
+        // 当请求依赖于 query 参数时，先从 onLoad 生命周期中取出 query
+        this.setData({
+            articleID: query.id
         });
     },
     onShow() {
-        this.requestTask.then(requestData => {
-            let res = this.getData('data');
-            swan.setPageInfo({
-                title: res.title,
-                keywords: res.keywords,
-                description: res.description,
-                articleTitle: res.articleTitle,
-                releaseDate: res.releaseDate,
-                image: res.image,
-                video: res.video,
-                visit: res.visit,
-                likes: '75',
-                comments: '13',
-                collects: '23',
-                shares: '8',
-                followers: '35',
-                success: res => {
-                    console.log('setPageInfo success');
-                },
-                fail: err => {
-                    console.log('setPageInfo fail', err);
-                }
-            })
-        })
+        const articleID = this.getData('articleID');
+        swan.request({
+            url: `https://example.com/api/article_info?id=${articleID}`,
+            success: res => {
+                swan.setPageInfo({
+                    title: res.title,
+                    keywords: res.keywords,
+                    description: res.description,
+                    articleTitle: res.articleTitle,
+                    releaseDate: res.releaseDate,
+                    image: res.image,
+                    video: res.video
+                });
+            },
+            fail: err => {
+                // 异常处理
+            }
+        });
     }
 });
 ```

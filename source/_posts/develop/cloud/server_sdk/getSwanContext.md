@@ -19,7 +19,7 @@ SwanContext：
 |ENV|String|云开发环境|
 |SOURCE|String|调用来源|
 
-**使用示例**
+**代码示例**
 
 ``` js
 exports.main = (event, context) => {

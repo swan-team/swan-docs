@@ -16,11 +16,11 @@ sidebar: canvas_CanvasContext-setLineJoin
 
 **`lineJoin`参数说明**：有效值：'bevel'、'round'、'miter'， 线条的结束交点样式。  
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setLineJoin.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/929c9c0021fb686fcb5292575e4369531573721091729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

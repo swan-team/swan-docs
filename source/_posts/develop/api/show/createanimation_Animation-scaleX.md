@@ -17,7 +17,7 @@ sidebar: createanimation_Animation-scaleX
 
 **参数说明**： 在X轴缩放sx倍数
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: createanimation_Animation-scaleX
         <img src=" ">
     </div>     
 </div>
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/6007d96630c306b5c22cb6defe0652b41574216405521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

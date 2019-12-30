@@ -15,11 +15,11 @@ sidebar: canvas_CanvasContext-setStrokeStyle
 
 **方法参数**： [Color](/develop/api/canvas_color/) color
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/setStrokeStyle.png)
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/c3964ad86786dae206f0e453813f5daf1573717657908" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

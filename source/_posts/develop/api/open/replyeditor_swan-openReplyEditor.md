@@ -63,7 +63,7 @@ sidebar: replyeditor_swan-openReplyEditor
 
 ![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -153,6 +153,6 @@ swan.openReplyEditor({
 })
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 - 工具返回的 status 是0，与预期不符，正在修复中

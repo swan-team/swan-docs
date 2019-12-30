@@ -87,7 +87,7 @@ sidebar: custom-component_temp
 ```
 
 #### slot指令应用
-**<div class="notice">**解释:**
+**解释:**
 在 slot 声明时应用 if 或 for 指令，可以让插槽根据组件数据动态化。
 **代码示例**
 ```xml
@@ -197,6 +197,17 @@ Page({
 1. 只可以使用 class 选择器，其他的选择器，请改为 class 选择器实现；
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用；
 3. 继承样式，如 font 、 color，会从组件外继承到组件内。
+
+内部样式，可支持多个属性并列。
+**代码示例**
+<a href="swanide://fragment/f30afea82aa283c36afd2c1699127ab81577189634888" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```
+<!-- custom-component自定义组件 -->
+<view class="wrapper wrapperTwo">
+     <view>这里是组件的内部节点</view>
+</view>
+```
 
 ### 外部样式类
 <div class="notice">解释： </div>

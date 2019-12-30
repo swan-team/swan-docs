@@ -16,7 +16,7 @@ sidebar: show_swan-query_SelectorQuery-exec
 **方法参数**：Function callback
 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: show_swan-query_SelectorQuery-exec
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/f0fc0bcb11a1d36e86fe224d6f2938be1574491317790" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

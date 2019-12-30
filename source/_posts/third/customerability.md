@@ -13,7 +13,7 @@ sidebar: customerability
 
 #### 客服消息入口
 
-1. 开发者在小程序内添加客服功能（参考在[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)）后，用户可在小程序内唤起客服会话页面，给小程序发消息；
+1. 开发者在小程序内添加客服功能（参考在[在页面中使用客服消息](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)）后，用户可在小程序内唤起客服会话页面，给小程序发消息；
 
 2. 已使用过的小程序客服消息会聚合显示在“百度APP-我的-私信”中，用户可以在此处查看历史客服消息，并给小程序客服发消息。
 
@@ -35,9 +35,9 @@ sidebar: customerability
 
 ### 第三方平台的客服功能
 
-在[客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)文档的介绍中，使用客服消息需要配置以下四个参数，第三方平台开通客服权限后，会使用原来的平台设置中的参数进行配置。
+在[客服消息](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api/)文档的介绍中，使用客服消息需要配置以下四个参数，第三方平台开通客服权限后，会使用原来的平台设置中的参数进行配置。
 
->- URL: 开发者用来接收消息的接口 URL。开发者所填写的URL 必须以 http:// 或 https:// 开头，分别支持 80 端口和 443 端口。
+>- URL: 开发者用来接收消息的接口 URL。开发者所填写的URL 必须以 https:// 或 https:// 开头，分别支持 80 端口和 443 端口。
 >- Token: 可由开发者可以任意填写，用作生成签名（该 Token 会和接口 URL 中包含的 Token 进行比对，从而验证安全性）。
 >- EncodingAESKey: 由开发者手动填写或随机生成，将用作消息体加解密密钥。
 >- 消息加解密方式：明文模式（默认）.兼容模式和安全模式。可以选择消息数据格式：XML 格式（默认）或 JSON 格式。
@@ -66,7 +66,7 @@ sidebar: customerability
 
 ### 在页面中使用客服消息
 
-可参考：[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)
+可参考：[在页面中使用客服消息](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF/)
 
 ### 接收客服消息
 
@@ -137,8 +137,8 @@ sidebar: customerability
 
 ### 发送客服消息
 
-本接口应在服务器端调用，用于发送客服消息给用户。
-相关接口可参考：[发送客服消息API](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%8F%91%E9%80%81%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A5%E5%8F%A3/)
+> 本接口应在服务器端调用，用于发送客服消息给用户。
+> 相关接口可参考：[发送客服消息API](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api/#%E5%8F%91%E9%80%81%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A5%E5%8F%A3/)
 
 ##### 请求地址
 
@@ -146,18 +146,32 @@ sidebar: customerability
 post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/sendbytp
 ```
 
-##### 请求参数
+**公共请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
 | access_token | string | 是       | 小程序access_toekn                     |
+**请求参数**
+
+| 参数名       | 类型   | 是否必须 | 描述                                   |
+| ------------ | ------ | -------- | -------------------------------------- |
 | user_type    | int    | 是       | 1:游客登录 2:百度账号登录              |
 | open_id      | string | 是       | 用户的 OpenID                          |
 | msg_type     | string | 是       | 消息类型  text:文本格式 image:图片链接 |
 | content      | string | 是       | 文本消息内容，msg_type ="text" 时必填  |
 | pic_url      | string | 是       | 图片消息，msg_type ="image" 时必填     |
 
-##### 响应数据
+**公共响应参数** 
+
+| 参数  | 类型    | 描述     | 示例值   |
+| ----- | ------- | -------- | -------- |
+| errno | integer | 状态码   | 40001    |
+| msg   | string  | 状态描述 | 参数错误 |
+| data  | object  | 响应参数 | --       |
+
+
+
+**响应数据**
 
 ```json
 {
@@ -175,6 +189,7 @@ post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/sendbytp
 | 30022 | 不合法的 OpenID，请开发者确认 OpenID 是否是其他小程序的 OpenID |      |
 | 90001 | 客服接口下行条数超过上限                                     |      |
 | 90002 | 请确认小程序已开通客服能力                                   |      ||
+
 
 
 

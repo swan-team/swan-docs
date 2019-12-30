@@ -88,7 +88,7 @@ rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9
 完整的请求URL为：
 
 ```
-http://xxx.tpbusiness.xxx/SyncPayInfo?orderId=800020199&tpOrderId=33330020199&status=2&unitPrice=800&count=2&payMoney=1200&promoMoney=100&hbMoney=100&hbBalanceMoney=100&giftCardMoney=100&dealId=7423328&payTime=1463037529&payType=9101&partnerId=1000000003&promoDetail={}&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
+https://xxx.tpbusiness.xxx/SyncPayInfo?orderId=800020199&tpOrderId=33330020199&status=2&unitPrice=800&count=2&payMoney=1200&promoMoney=100&hbMoney=100&hbBalanceMoney=100&giftCardMoney=100&dealId=7423328&payTime=1463037529&payType=9101&partnerId=1000000003&promoDetail={}&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 ##  PHP相关的签名生成的参考代码
 

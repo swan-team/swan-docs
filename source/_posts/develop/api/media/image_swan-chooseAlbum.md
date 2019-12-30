@@ -45,7 +45,7 @@ sidebar: image_swan-chooseAlbum
 |type|文件类型|有效值：photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)； 开发者工具暂不支持|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -110,7 +110,7 @@ Page({
 });
 ```
 
-**Bug & Tip**：
+**Bug & Tip**
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 

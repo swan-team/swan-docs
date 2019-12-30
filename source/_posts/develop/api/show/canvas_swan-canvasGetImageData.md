@@ -38,7 +38,7 @@ sidebar: canvas_swan-canvasGetImageData
 |height|number|图像数据矩形的高度|
 |data|Uint8ClampedArray|图像像素点数据，一维数组，每四项表示一个像素点的rgba|
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -52,7 +52,7 @@ sidebar: canvas_swan-canvasGetImageData
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/b0967f7f06b396397157bb1fa217e4ee1574498382441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

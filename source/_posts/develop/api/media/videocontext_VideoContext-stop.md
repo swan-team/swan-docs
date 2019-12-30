@@ -6,7 +6,7 @@ sidebar: videocontext_VideoContext-stop
 ---
 
 
-> 最低支持手百版本 11.16
+> 最低支持基础库版本 3.120.10
 
 **解释**: 停止播放视频
 
@@ -16,7 +16,7 @@ sidebar: videocontext_VideoContext-stop
 
 **方法参数**：无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,7 +30,7 @@ sidebar: videocontext_VideoContext-stop
     </div>
 </div>
 
-**代码示例**：
+**代码示例**
 <a href="swanide://fragment/29a896daf5efea6c76444ebe4471c82e1574763945881" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

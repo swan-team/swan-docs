@@ -17,7 +17,7 @@ sidebar: swan-offAppHide
 
 **方法参数：** 无
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: swan-offAppHide
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/75379c24eb11bd10506a3f14c57a9ea61573990215340" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

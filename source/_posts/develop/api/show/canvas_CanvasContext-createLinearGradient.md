@@ -23,14 +23,14 @@ sidebar: canvas_CanvasContext-createLinearGradient
 
 **`y1`参数说明**：终点的 y 坐标
 
-**图片示例**：
+**图片示例**
 
 ![图片](../../../../img/api/canvas/createLinearGradient.png)
 
 
-**代码示例**：
+**代码示例**
 
-<a href="swanide://fragment/238707b8b2daafd49e410faa76fed5341573720189510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/883216ba616ba348d103b4a42dfe9e411576354423698" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');

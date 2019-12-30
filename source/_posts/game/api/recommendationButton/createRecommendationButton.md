@@ -24,7 +24,7 @@ priority: 13-01
 swan.createRecommendationButton(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|

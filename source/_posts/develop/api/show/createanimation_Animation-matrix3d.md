@@ -14,7 +14,7 @@ sidebar: createanimation_Animation-matrix3d
 
 **方法参数**： Number a1，Number b1，Number c1，Number d1，Number a2，Number b2，Number c2，Number d2，Number a3，Number b3，Number c3，Number d3，Number a4，Number b4，Number c4，Number d4
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +28,7 @@ sidebar: createanimation_Animation-matrix3d
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/179c20a48d4a919e3e18e95da7fc1a431574230021425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

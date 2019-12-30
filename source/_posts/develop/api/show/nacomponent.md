@@ -9,7 +9,7 @@ sidebar: nacomponent
 
 > 引导组件有统一的策略，若用户未执行过关注操作，则3天内不再出现引导组件；若用户执行过关注操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
-**解释**：支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：<a href="http://smartprogram.baidu.com/docs/design/component/guide_add/">关注小程序引导</a>。
+**解释**：支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：<a href="https://smartprogram.baidu.com/docs/design/component/guide_add/">关注小程序引导</a>。
 
 **百度APP中扫码体验：**
 
@@ -47,7 +47,7 @@ sidebar: nacomponent
 1. 浮层引导(type=bar)
     一直展现：用户点击关闭，浮层引导消失；点击关注按钮可直接关注小程序。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -77,7 +77,7 @@ sidebar: nacomponent
 2. 气泡引导(type=tip)
     引导组件 5s 后自动消失，组件箭头指向小程序菜单。
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">

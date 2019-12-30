@@ -17,7 +17,7 @@ sidebar: canvas_CanvasContext-setLineDashOffset
 
 **`value`参数说明**： 偏移量，初始值为 0 。 
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,7 +31,7 @@ sidebar: canvas_CanvasContext-setLineDashOffset
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/a4a38a8bd21b845f527ac4aac69a57b81574525368679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

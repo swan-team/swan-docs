@@ -15,7 +15,7 @@ sidebar:  liveplayercontext_LivePlayerContext
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/live-player.png"  class="demo-qrcode-image" />
 
-**图片示例**：
+**图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +29,7 @@ sidebar:  liveplayercontext_LivePlayerContext
     </div>     
 </div>
 
-**代码示例**：
+**代码示例**
 
 <a href="swanide://fragment/fde41dba7cc64b655e9e6181024fdd571573522009534" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 

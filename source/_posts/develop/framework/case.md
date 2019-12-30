@@ -29,10 +29,10 @@ sidebar: case
     <td>参考链接</td>          
 <tr>
 <tr>
-    <td rowspan="3"> 页面加载缓慢、打不开<br/>
+    <td rowspan="3"> 页面加载缓慢、打不开<br/></td>
     <td>前端渲染时长较长</td>
     <td>图片存储位置、大小、格式优化</td>
-    <td rowspan="3"> [分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)<br>[性能分析工具](https://smartprogram.baidu.com/docs/develop/framework/performance-analysis-tool/)<br>[性能优化建议](https://smartprogram.baidu.com/docs/develop/framework/performance-tips/)<br>[白屏优化建议](https://smartprogram.baidu.com/docs/develop/framework/whitescreen/)<br/>
+    <td rowspan="3"> [分包加载](https://smartprogram.baidu.com/docs/develop/framework/subpackages/)<br>[性能分析工具](https://smartprogram.baidu.com/docs/develop/framework/performance-analysis-tool/)<br>[性能优化建议](https://smartprogram.baidu.com/docs/develop/framework/performance-tips/)<br>[白屏优化建议](https://smartprogram.baidu.com/docs/develop/framework/whitescreen/)<br/></td>
 </tr>
 <tr>
     <td>包体积大</td>
