@@ -1,22 +1,22 @@
 ---
-title: 生命周期
+title: 页面生命周期
 header: develop
-nav: tutorial
+nav: framework
 sidebar: process_life
 ---
 
-## 原理图：
+## 原理图
 以下内容详细的描述了一个页面被渲染的全过程。
 
- ![图片](../../../img/framwork/framework-01.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/framework-01.png)
 
-**注释：**
+
 1. FCP: First Contentful Paint，即首次有内容的绘制；
 2. FMP: First Meaningful Paint，即首次有意义的绘制；
 
 下列加载时间线屏幕截图直观的介绍了`FCP`与`FMP`的含义：
 
- ![图片](../../../img/framwork/FMP.jpeg)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/FMP.jpeg)
 
 ## 首页初次渲染全过程
 ### 1. 初始化
@@ -75,7 +75,7 @@ app onLaunch
 -> cpnt ready   -> page onReady
 ```
 
-**注释：cpnt 指一个自定义组件。**
+> cpnt 指一个自定义组件。 
 
 ### 5. setData
 `APP`服务线程触发以上生命周期后，逻辑层一般执行了众多的`setData`，每次`setData`均会使得`App`服务线程向渲染线程传送数据，引起页面的重新渲染。
