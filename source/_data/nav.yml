@@ -3011,6 +3011,20 @@
                     text: swan.getClipboardData
                     name: swan-getClipboardData
 
+              -
+
+                text: 系统日历中预约活动
+
+                sidebar:
+                  -
+                    link: /develop/api/device_sys/swan-addEventOnCalendar
+                    text: swan.addEventOnCalendar
+                    name: swan-addEventOnCalendar
+                  -
+                    link: /develop/api/device_sys/swan-deleteEventOnCalendar
+                    text: swan.deleteEventOnCalendar
+                    name: swan-deleteEventOnCalendar
+
         -
 
             text: 第三方平台

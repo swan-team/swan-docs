@@ -251,6 +251,8 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/">swan.makePhoneCall</a>|拨打电话|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/">swan.setClipboardData</a>|设置系统剪贴板的内容|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/">swan.addEventOnCalendar</a>|向系统日历写入一个活动，之后在设定的时间提醒|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/">swan.deleteEventOnCalendar</a>|删除日历上的某个活动|
 
 
 ## 第三方平台
