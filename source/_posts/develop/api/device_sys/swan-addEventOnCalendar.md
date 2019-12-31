@@ -23,7 +23,7 @@ sidebar: swan-addEventOnCalendar
 |title|String|是|-|活动主题信息|
 |startTime|Number|是|-|活动开始时间，单位：毫秒。如：1575017471000 对应为2019-11-29 16:51:11|
 |endTime|Number|是|-|活动结束时间，单位：毫秒。如：1575017471000 对应为2019-11-29 16:51:11|
-|url|String|否|-|回流url，可展示在日历活动信息上|
+|url|String|否|-|回流url，可展示在日历活动信息上。请遵循 [小程序调起 Scheme](/develop/function/opensmartprogram/) 规则进行 url 的拼接|
 |location|String|否|-|活动地点，不填时不进行展示|
 |remindMinutesBefore|Number|否|10|提前多少分钟提醒|
 | success | Function | 否 | - | 接口调用成功的回调函数 |

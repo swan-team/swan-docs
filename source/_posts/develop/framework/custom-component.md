@@ -9,6 +9,7 @@ sidebar: custom-component
 
 
 <div class="notice">解释： </div>一个自定义组件由4个文件 (.swan .css .js .json) 组成, 例如包含自定义组件 `custom` 的项目结构:
+
 ```
 // 包含自定义组件custom的项目结构
 ├── app.js

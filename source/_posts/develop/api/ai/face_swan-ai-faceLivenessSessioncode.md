@@ -29,7 +29,7 @@ sidebar: face_swan-ai-faceLivenessSessioncode
 **success 返回参数说明** 
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |log_id| Number|	唯一的log id，用于问题定位。|
 |error_no| Number|	错误码，错误码为0时，活体检测成功。|
 |error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
