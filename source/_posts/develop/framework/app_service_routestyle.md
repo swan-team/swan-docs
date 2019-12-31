@@ -5,7 +5,7 @@ nav: framework
 sidebar: app_service_routestyle
 ---
 
-对于路由的触发方式以及页面生命周期函数如下：
+对于路由的触发方式以及页面生命周期函数如下： 
 
 ** [详见页面生命周期函数](/develop/framework/app_service_pagelife/) **
 
