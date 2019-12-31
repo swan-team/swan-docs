@@ -1090,7 +1090,7 @@ curl -X POST \
 > 申请手机号权限 
 
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/app/apply/moblieauth
+ POST https://openapi.baidu.com/rest/2.0/smartapp/app/apply/mobileauth
 ```
 
 **请求参数** 
@@ -1138,7 +1138,7 @@ curl -X POST \
 > 取消手机号权限 
 
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/app/cancel/moblieauth
+ POST https://openapi.baidu.com/rest/2.0/smartapp/app/cancel/mobileauth
 ```
 
 **请求参数** 
