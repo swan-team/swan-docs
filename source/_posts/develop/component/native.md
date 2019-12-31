@@ -16,7 +16,7 @@ sidebar: native
 由于原生组件脱离在 web-view 渲染流程外，因此在使用时有以下限制：
 
 * 原生组件的层级是最高的，所以页面中的其他组件无论设置 z-index 为多少，都无法盖在原生组件上。后插入的原生组件可以覆盖之前的原生组件。
-* 原生组件无法在 scroll-view、swiper、picker-view、movable-view 中使用。
+* 原生组件无法在 scroll-view、swiper、picker-view、movable-view 中使用，下面示例为错误写法。
 
 **代码示例：**
 <a href="swanide://fragment/5922e661e44f0a3f1ee0a36e91cc8e051576054229427" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

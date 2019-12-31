@@ -11,7 +11,7 @@ sidebar: log_getunionid
 ### unionid说明
 1. 同一主体下的不同小程序，开发者可以通过unionid实现跨小程序的用户区分。从用户角度看，每个用户在同一主体下的小程序内unionid是唯一的。
 
-2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open_log/)，请妥善处理用户未授权场景。
+2. unionid获取依赖用户登录授权，登录授权过程[授权流程说明](https://smartprogram.baidu.com/docs/develop/api/open/log/)，请妥善处理用户未授权场景。
 
 ### 接口调用请求说明
 ```
@@ -36,7 +36,7 @@ access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
-openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open_log/)获取
+openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open/log/)获取
 
 
 **返回值说明**

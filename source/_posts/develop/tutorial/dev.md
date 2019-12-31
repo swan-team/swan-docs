@@ -30,6 +30,24 @@ sidebar: dev
 </view>
 
 ```
+标签可以拥有属性，需要注意的是，swan中的属性是大小写敏感的，也就是说 class 和 Class 在swan中是不同的属性
+
+**代码示例**
+
+<a href="swanide://fragment/f3eb1480251c3c257088cedbf7c727a81577170508891" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<text class="wrap">hello world</text>
+<text Class="wrap">hello world</text>
+```
+
+一个文件夹可以有两个swan文件
+
+**代码示例**
+
+<a href="swanide://fragment/0c014f956ee234f3d245f1b84f71bb611577174698837" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
 <br/>
 ### 基础数据绑定
 
@@ -148,6 +166,46 @@ Page({
 
 ```javascript
 Page({
+    viewtap: function (event) {
+	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
+    }
+});
+```
+
+属性值也可以动态的去改变，有所不同的是，属性值必须被包裹在双引号中, 且引号可加可不加
+
+**代码示例**
+
+```xml
+<view data-swan={{test}} bind:tap="viewtap">dataset-test</view>
+// 同<view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
+```
+
+```javascript
+Page({
+    data: {
+        test: 1
+    },
+    viewtap: function (event) {
+	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
+    }
+});
+```
+
+需要注意的是变量名是大小写敏感的，也就是说 {{test}} 和 {{Test}} 是两个不同的变量。
+
+**代码示例**
+
+```xml
+<view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
+```
+
+```javascript
+Page({
+    data: {
+        test: 1,
+        Test: 2
+    },
     viewtap: function (event) {
 	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
     }

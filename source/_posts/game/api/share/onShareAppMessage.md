@@ -34,7 +34,7 @@ swan.onShareAppMessage(callback)
 swan.onShareAppMessage(() => {
     return {
         title: 'shareTitle',
-        imageUrl: 'http://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%B0%8F%E6%9C%89%E5%90%8D%E6%B0%94H5.png',
+        imageUrl: 'https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%B0%8F%E6%9C%89%E5%90%8D%E6%B0%94H5.png',
         query: 'key1=1&key2=2&key3=3',
         success: res => {
             console.log('onShareAppMessage share success', JSON.stringify(res));

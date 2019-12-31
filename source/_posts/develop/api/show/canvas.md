@@ -95,4 +95,51 @@ CanvasContext.draw();
 canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 如：`CanvasContext.arc(100, 200, 50, 0, 2 * Math.PI);`命令，就是在`x： 100,y: 200`为圆心处，开始画圆。
 
+我们可以在 canvas 中加上一些事件，来观测它的坐标系。
 
+**代码示例 **：
+
+<a href="swanide://fragment/6d4cbfac520c52f567a53ea773719dbc1577195633921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<canvas canvas-id="myCanvas"
+  style="margin: 5px; border:1px solid #d3d3d3;"
+  bindtouchstart="start"
+  bindtouchmove="move"
+  bindtouchend="end"/>
+<view hidden="{{hidden}}">
+  Coordinates: ({{x}}, {{y}})
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+  data: {
+    x: 0,
+    y: 0,
+    hidden: true
+  },
+  start (e) {
+    this.setData({
+      hidden: false,
+      x: e.touches[0].x,
+      y: e.touches[0].y
+    })
+  },
+  move (e) {
+    this.setData({
+      x: e.touches[0].x,
+      y: e.touches[0].y
+    })
+  },
+  end (e) {
+    this.setData({
+      hidden: true
+    })
+  }
+})
+```

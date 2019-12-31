@@ -35,7 +35,7 @@ sidebar:  classify_swan-ai-objectDetectIdentify
 **result 返回值说明**
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |left|    Number| 表示定位位置的长方形左上顶点的水平坐标。|
 |top|     Number| 表示定位位置的长方形左上顶点的垂直坐标。|
 |width|   Number| 表示定位位置的长方形的宽度。|

@@ -43,6 +43,36 @@ Page({
 });
 ```
 
+import 具有递归的特性。 例如：C 引用 B，B 引用A，在C中可以使用B定义的 template，在B中可以使用A定义的 template ，C也可以使用A定义的template 
+
+**代码示例** 
+<a href="swanide://fragment/4748d42321cc2f7b8fa61024e1053bff1577175849286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<!-- templateA.swan-->
+<template name="A">
+  <text> A template </text>
+</template>
+```
+```xml
+<!-- templateB.swan-->
+<import src="../templateA/templateA.swan"/>
+
+<template name="B">
+  <text> B template </text>
+</template>
+
+<template is="A"/>
+```
+```xml
+<!-- templateC.swan-->
+<import src="../templateB/templateB.swan"/>
+
+<template is="A"/>
+
+<template is="B"/>
+```
+
 ## include
 通过`include`可以将目标模板整个(除了 template)引入到当前的位置，相当于`inline`。
 
