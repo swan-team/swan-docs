@@ -27,6 +27,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/getsessionkeybycode
 access\_token|string | 是 | 授权小程序的接口调用凭据 
 
 **请求参数**
+
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
 code | string | 是| 调用swan.login后获取的code
