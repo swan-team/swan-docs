@@ -28,7 +28,6 @@ https://smartprogram.baidu.com/docs/introduction/auditing_faq/
 https://smartprogram.baidu.com/docs/introduction/auditing_road/
 https://smartprogram.baidu.com/docs/introduction/rank/
 https://smartprogram.baidu.com/docs/introduction/rank_pageinfo/
-https://smartprogram.baidu.com/docs/introduction/rank_id/
 https://smartprogram.baidu.com/docs/introduction/rank_h5/
 https://smartprogram.baidu.com/docs/introduction/rank_single/
 https://smartprogram.baidu.com/docs/introduction/rank_setimage/
@@ -58,9 +57,10 @@ https://smartprogram.baidu.com/docs/introduction/contact_standard/
 https://smartprogram.baidu.com/docs/introduction/scancode/
 https://smartprogram.baidu.com/docs/introduction/getphonenumber/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory/
+https://smartprogram.baidu.com/docs/introduction/productlaboratory_faq/
+https://smartprogram.baidu.com/docs/introduction/examine_faq/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory_search/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory_ad/
-https://smartprogram.baidu.com/docs/introduction/productlaboratory_faq/
 https://smartprogram.baidu.com/docs/design/overview/introduction/
 https://smartprogram.baidu.com/docs/design/principle/easytouse/
 https://smartprogram.baidu.com/docs/design/principle/hierarchical/
@@ -180,7 +180,6 @@ https://smartprogram.baidu.com/docs/develop/component/base_text/
 https://smartprogram.baidu.com/docs/develop/component/base_icon/
 https://smartprogram.baidu.com/docs/develop/component/base_progress/
 https://smartprogram.baidu.com/docs/develop/component/base_rich-text/
-https://smartprogram.baidu.com/docs/develop/component/base_animation-view-Lottie/
 https://smartprogram.baidu.com/docs/develop/component/animation-view-Lottie/
 https://smartprogram.baidu.com/docs/develop/component/animation-video/
 https://smartprogram.baidu.com/docs/develop/component/formlist_button/
