@@ -2276,6 +2276,22 @@
                     link: /develop/api/location/swan-chooseLocation
                     text: swan.chooseLocation
                     name:  swan-chooseLocation
+                  -
+                    link: /develop/api/location/swan-startLocationUpdate
+                    text: swan.startLocationUpdate
+                    name:  swan-startLocationUpdate
+                  -
+                    link: /develop/api/location/swan-onLocationChange
+                    text: swan.onLocationChange
+                    name:  swan-onLocationChange
+                  -
+                    link: /develop/api/location/swan-offLocationChange
+                    text: swan.offLocationChange
+                    name:  swan-offLocationChange
+                  -
+                    link: /develop/api/location/swan-stopLocationUpdate
+                    text: swan.stopLocationUpdate
+                    name:  swan-stopLocationUpdate
 
               -
 
