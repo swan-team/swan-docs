@@ -195,10 +195,6 @@
                     text: 设置页面基础信息
                     name: rank_pageinfo
                   -
-                    link: /introduction/rank_id
-                    text: 绑定熊掌ID
-                    name: rank_id
-                  -
                     link: /introduction/rank_h5
                     text: 关联H5站点
                     name: rank_h5
@@ -375,6 +371,14 @@
                 text: 论坛小程序开通指引
                 name: productlaboratory
               -
+                link: /introduction/productlaboratory_faq
+                text: 论坛小程序开通FAQ
+                name: productlaboratory_faq     
+              -
+                link: /introduction/examine_faq
+                text: 小程序审核失败FAQ
+                name: examine_faq                           
+              -
                 link: /introduction/productlaboratory_search
                 text: 自然搜索结果流量开通指引
                 name: productlaboratory_search
@@ -382,10 +386,7 @@
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
                 name: productlaboratory_ad
-              -
-                link: /introduction/productlaboratory_faq
-                text: 论坛小程序开通FAQ
-                name: productlaboratory_faq
+
 
 
 # 2
@@ -1043,10 +1044,7 @@
                     text:  rich-text 富文本
                     name: base_rich-text
 
-                  -
-                    link: /develop/component/base_animation-view-Lottie
-                    text:  animation-view Lottie 动画
-                    name: base_animation-view-Lottie
+
         -
             sidebar:
               -

@@ -57,7 +57,7 @@ sidebar: productlaboratory_search
 |`https://bbs.baidu.com/f2109p1 `|`https://bbs.baidu.com/f([\d]+)p1 => pages/plate-detail/plate-detail?fid=${1}` | 
 
 
-###  3.  提交sitemap  
+###  3.  提交 sitemap 
 
 **适用场景**：适用于论坛站点未被搜索资源平台收录，或已收录但近期没有点击量的情况
 
@@ -73,33 +73,56 @@ pages/post-landpage/post-landpage?type=index&tid=1234
 
 > 假设数据数据库表的前缀是pre_，开发者可以根据自己表的前缀进行调整成自己的表前缀。
 
-  板块数据导出    
+* 板块数据导出 
 
-1）limit 0, 100 => 导出第1-100条；SQL语句如下:
-```	
-	select fid from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 0, 100;
-```
-2）limit 100, 100 => 导出第100-200条；以此类推，limit 200, 100 SQL语句如下：
-```	
-	select fid from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 100, 100;
-```
-  帖子数据导出  
-  
-1）limit 0, 500 => 导出第1-500条；SQL语句如下：
-
-```
-	select tid from pre_forum_thread where displayorder >= 0 order by tid asc limit 0, 500;
-```
+1. limit 0, 100 => 导出第1-100条；SQL语句如下:
 	
-2）limit 500, 500 => 导出第500-1000条；以此类推，limit 1000, 500 SQL语句如下：
+	**示例一**
+	```	
+	select fid from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 0, 100;
+	``` 
+	
+	**示例二**
 
-```
-	select tid from pre_forum_thread where displayorder >= 0 limit 500, 100;
-```
+	> 注意这种使用sql函数concat拼接，对数据库性能有点影响，建议一次不要导出太多数据
 
+	```	
+	select concat("pages/plate-detail/plate-detail?fid=", fid) from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 0, 100;
+	```	
+2. limit 100, 100 => 导出第100-200条；以此类推，limit 200, 100 SQL语句如下：
+	```	
+	select fid from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 100, 100;
+	```	
+	```	
+	select concat("pages/plate-detail/plate-detail?fid=", fid) from pre_forum_forum where status = 1 and type = 'forum' and displayorder >= 0 order by fid asc limit 100, 100;
+	```	
+* 帖子数据导出 
+  
+1. limit 0, 500 => 导出第1-500条；SQL语句如下:
+	**示例一**
+	```	
+	select tid from pre_forum_thread where displayorder >= 0 order by tid asc limit 0, 500;
+	```	
 
+	**示例二**
+	>注意这种使用sql函数concat拼接，对数据库性能有点影响，建议一次不要导出太多数据。
+	
+	```	
+	select concat("pages/post-landpage/post-landpage?type=index&tid=", tid) from pre_forum_thread where displayorder >= 0 order by tid asc limit 0, 500;
+	```	
+2. limit 500, 500 => 导出第500-1000条；以此类推，limit 1000, 500 SQL语句如下：
+	```	
+	select tid from pre_forum_thread where displayorder >= 0 limit 500, 500;
+	```	
+	```	
+	select concat("pages/post-landpage/post-landpage?type=index&tid=", tid) from pre_forum_thread where displayorder >= 0 order by tid asc limit 500, 500;
+	```	
 	 
   板块与帖子数据导出替换    
 
 将对应SQL查询出板块的fid，替换路径 `pages/plate-detail/plate-detail?fid=$fid` 中的fid，并拼接成完整的“路径+参数”后，再提交sitemap；  
 同理：帖子的tid，替换路径 `pages/post-landpage/post-landpage?type=index&tid=$tid` 中的tid，并拼接成完整的“路径+参数”后，再提交sitemap。
+
+ 
+
+ 

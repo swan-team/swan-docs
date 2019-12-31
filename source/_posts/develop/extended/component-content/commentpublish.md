@@ -1,7 +1,7 @@
 ---
 title: 半屏内容发布器带服务版
 header: develop
-nav: extended
+nav: component-content
 sidebar: commentpublish
 ---
 

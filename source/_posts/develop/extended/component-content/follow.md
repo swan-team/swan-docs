@@ -1,7 +1,7 @@
 ---
 title: 关注组件
 header: develop
-nav: extended
+nav: component-content
 sidebar: follow
 ---
 
