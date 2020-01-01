@@ -87,6 +87,7 @@ https://smartprogram.baidu.com/docs/design/story/light_up/
 https://smartprogram.baidu.com/docs/design/resource/uikit/
 https://smartprogram.baidu.com/docs/design/resource/checklist/
 https://smartprogram.baidu.com/docs/design/resource/lottie/
+https://smartprogram.baidu.com/docs/design/resource/animationVideo/
 https://smartprogram.baidu.com/docs/develop/fuctionlist/list/
 https://smartprogram.baidu.com/docs/develop/tutorial/demo/
 https://smartprogram.baidu.com/docs/develop/tutorial/install/
@@ -114,6 +115,7 @@ https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_pagefunction/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_pagecomponent/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_page_setData/
+https://smartprogram.baidu.com/docs/develop/framework/process_life/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_route/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_routegetCurrentPages/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_routestyle/
@@ -179,6 +181,8 @@ https://smartprogram.baidu.com/docs/develop/component/base_icon/
 https://smartprogram.baidu.com/docs/develop/component/base_progress/
 https://smartprogram.baidu.com/docs/develop/component/base_rich-text/
 https://smartprogram.baidu.com/docs/develop/component/base_animation-view-Lottie/
+https://smartprogram.baidu.com/docs/develop/component/animation-view-Lottie/
+https://smartprogram.baidu.com/docs/develop/component/animation-video/
 https://smartprogram.baidu.com/docs/develop/component/formlist_button/
 https://smartprogram.baidu.com/docs/develop/component/formlist_form/
 https://smartprogram.baidu.com/docs/develop/component/formlist_label/
@@ -368,6 +372,11 @@ https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-hideStatusBar/
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-stop/
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-playbackRate/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-play/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-pause/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-seek/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_LivePlayerContext/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_LivePlayerContext-play/
@@ -564,6 +573,8 @@ https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addPhoneContact/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/
+https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/
+https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/
 https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/
 https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/
 https://smartprogram.baidu.com/docs/develop/api/open/log/
