@@ -62,8 +62,8 @@ AFX是智能小程序提供的一种可支持透明背景的动画播放能力�
 
 
 ### 步骤四：使用“AFX Creator”软件转化为MP4视频
-下载“AFX Creator”软件并进行安装，[下载地址](https://b.bdstatic.com/searchbox/icms/searchbox/zip/AFXCreator.zip)
+下载“AFX Creator”软件并进行安装，[点击下载](https://b.bdstatic.com/searchbox/icms/searchbox/zip/AFXCreator.zip)
 将导出的序列帧文件夹拖拽到此软件中，并将序列帧转化为MP4视频。注意：帧速率设置需与AE中的合成帧速率一致，视频质量为默认值。
 
 ### 步骤五：将生成的MP4视频提供给开发人员
-最后将生成的MP4视频提供给开发人员，由开发人员使用透明视频AFX组件能力进行下一步开发，开发文档说明详见[透明视频AFX](https://smartprogram.baidu.com/docs/develop/component/animation-video/)。
+最后将生成的MP4视频提供给开发人员，由开发人员使用透明视频AFX组件能力进行下一步开发，开发文档说明详见[animation-video 透明视频动画](https://smartprogram.baidu.com/docs/develop/component/animation-video/)。
