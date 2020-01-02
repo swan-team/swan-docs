@@ -11,8 +11,9 @@ sidebar: submitsitemap
 
 **解释**：提交链接文件（即Sitemap）接口，链接文件提交方式（即sitemap提交）。
 > 1.需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为单条素材内容。<br>2.提交素材或更新素材，则链接文件的type（即sitemap）选为“1”。<br>3.删除素材或下线素材，则链接文件的type选为“0”。<br>4.每个小程序，最多提交3条sitemap链接，建议一条type为1的sitemap链接，一条type为0的sitemap链接的（即增量/更新的sitemap一个，线下/删除的sitemap一个），若已满3条sitemap，若想添加新的sitemap链接，建议先删除一条sitemap，再进行添加新的sitemap。<br>5.提交sitemap链接方法共两种,两种提交方法任选其一即可：a.通过下方接口提交；b.通过智能小程序开发者平台端提交，提交入口：流量配置-信息流-上传素材-链接文件提交。 
+
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/submit
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/submitsitemap
 ```
 
 **公共请求参数** 
