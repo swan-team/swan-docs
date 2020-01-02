@@ -1083,7 +1083,7 @@ curl -X POST \
 
 **使用场景demo示例**
 
-![使用场景demo示例](../../img/tp/a5b166a32317553169013ac60.png ''使用场景demo示例'')
+![使用场景demo示例](https://b.bdstatic.com/searchbox/icms/searchbox/img/a5b166a32317553169013ac60.png)
 
 ### 申请手机号权限
 
