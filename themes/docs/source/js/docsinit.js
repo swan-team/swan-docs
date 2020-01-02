@@ -323,7 +323,10 @@
         '/docs/operations/thirdparty_law/': '/docs/operations/thirdparty_law/',
         '/docs/introduction/rank_id/':'/docs/develop/fuctionlist/list/'
     };
-    urlMap[pathname] && location.replace(urlMap[pathname]);
+    if (!window.isSwanIde) {
+        urlMap[pathname] && location.replace(urlMap[pathname]);
+        !pathname.match('\/$') && location.replace(pathname + '/');
+    }
 }(location.pathname);
 
 !function(url) {
