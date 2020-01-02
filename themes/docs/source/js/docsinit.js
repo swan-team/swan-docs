@@ -322,9 +322,9 @@
         '/docs/operations/standard/': '/docs/develop/fuctionlist/list/',
         '/docs/operations/thirdparty_law/': '/docs/develop/fuctionlist/list/'
     };
-    urlMap[pathname] && location.replace(urlMap[pathname]);
-    if (!pathname.match('\/$')) {
-        location.replace(pathname + '/');
+    if (!window.isSwanIde) {
+        urlMap[pathname] && location.replace(urlMap[pathname]);
+        !pathname.match('\/$') && location.replace(pathname + '/');
     }
 }(location.pathname);
 
