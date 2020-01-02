@@ -57,7 +57,12 @@
         <a href="javascript:void(0)" class="m-doc-menu-top m-doc-menu-item"><span>回&nbsp;到顶&nbsp;部</span></a>
     </div>
 </div>
-
+<% if (bottomPage.left || bottomPage.right) { %>
+  <script>
+    var $bottomPage = document.getElementById('m-doc-bottomPage-wrapper');
+    $bottomPage.style.display = 'none';
+  </script>
+<% } %>
 <script>
   if (window.isSwanIde) {
       var $content = document.getElementById('m-doc-content-layout');
@@ -65,7 +70,6 @@
       var $contentWrap = document.getElementById('m-doc-content-wrap');
       var $menuWrapper = document.getElementById('m-doc-menu-wrapper');
       var $license = document.getElementById('m-doc-license');
-      var $bottomPage = document.getElementById('m-doc-bottomPage-wrapper');
       $content.style.left = 0;
       $content.style.top = 0;
       $content.style.paddingTop = 0;
@@ -74,8 +78,5 @@
       $contentWrap.style.maxWidth = '100%';
       $menuWrapper.style.display = 'none';
       $license.style.display = 'none';
-      if ($bottomPage) {
-        $bottomPage.style.display = 'none';
-      }
   }
 </script>
