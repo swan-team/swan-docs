@@ -6,7 +6,7 @@ sidebar: formlist_textarea
 ---
 
 
- 
+
 
 
 **解释**：多行输入框。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
@@ -21,7 +21,7 @@ sidebar: formlist_textarea
 
 |属性名|类型|默认值|必填|说明|
 |----|----|----|----|----|
-|value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|
+|value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)。|
 |disabled|Boolean|false|否|是否禁用|
 |maxlength|Number|140|否|最大输入长度，设置为 -1 的时候不限制最大长度|
 |placeholder|String| |否|输入框为空时占位符|

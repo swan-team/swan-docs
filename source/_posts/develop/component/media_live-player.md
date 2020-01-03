@@ -6,7 +6,7 @@ sidebar: media_live-player
 ---
 
 
-**解释**：实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+**解释**：实时视频播放器（v3.140.1 起支持同层渲染）。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 
 |一级类目|二级类目|
@@ -27,12 +27,12 @@ sidebar: media_live-player
 |muted|Boolean|false| 否 |是否静音|
 |orientation|	String|	vertical| 否 |画面方向，可选值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
 |object-fit|String|contain| 否 |填充模式，可选值:contain、fillCrop|
-|background-mute|Boolean|false| 否 |进入后台时是否静音|
+|background-mute|Boolean|false| 否 |进入后台时是否静音（已废弃，默认退台静音）|
 |min-cache|Number|1| 否 |最小缓冲区，单位s|
 |max-cache|Number|3| 否 |最大缓冲区，单位s|
 |bindstatechange|EventHandle|  | 否 |播放状态变化事件，参考下方状态码表格，detail = {code}|
 |bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
-|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullScreen}。|
+|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullscreen}。|
 
 **orientation 有效值**:
 
@@ -126,16 +126,16 @@ sidebar: media_live-player
 
 ```xml
 <view class="live-play">
-    <live-player id="myLive" 
-                 src="{{src}}" 
+    <live-player id="myLive"
+                 src="{{src}}"
                  autoplay="{{autoplay}}"
                  muted="{{muted}}"
                  orientation="vertical"
-                 object-fit="{{objectFit}}" 
-                 background-mute="{{backgroundMute}}" 
-                 min-cache="{{minCache}}" 
+                 object-fit="{{objectFit}}"
+                 background-mute="{{backgroundMute}}"
+                 min-cache="{{minCache}}"
                  max-cache="{{maxCache}}"
-                 bind:statechange="statechange" 
+                 bind:statechange="statechange"
                  bind:netstatus="netstatus"
                  bindfullscreenchange>
     </live-player>
