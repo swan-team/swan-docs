@@ -3768,10 +3768,10 @@
                 link: /develop/devtools/auto/demo
                 text: 脚本示例
                 name: demo
-              -
-                link: /develop/devtools/auto/remote
-                text: 真机自动化
-                name: remote
+              # -
+              #   link: /develop/devtools/auto/remote
+              #   text: 真机自动化
+              #   name: remote
               -
                 text: API
                 name: API
@@ -3833,10 +3833,10 @@
                           link: /develop/devtools/auto/smartprogram/login
                           text: smartProgram.login
                           name: login
-                      -
-                          link: /develop/devtools/auto/smartprogram/remote
-                          text: smartProgram.remote
-                          name: remote
+                      # -
+                      #     link: /develop/devtools/auto/smartprogram/remote
+                      #     text: smartProgram.remote
+                      #     name: remote
                       -
                           link: /develop/devtools/auto/smartprogram/disconnect
                           text: smartProgram.disconnect
