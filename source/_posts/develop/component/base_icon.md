@@ -7,11 +7,39 @@ sidebar: base_icon
 
 **解释**： 图标
 
+##  属性说明 
 
+|属性名|类型  |默认值  | 必填 |说明|
+|:---- |: ---- | :--- | :---- |:---- | 
+|type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
+|size | Number  |23 | 否 |icon 的大小，单位是 px|
+|color | Color |   | 否 |icon 的颜色，同 css 的 color|
+
+###  type 有效值  
+
+| 值 | 说明 |
+|:---- |: ---- |  
+| success | 成功图标 |
+| info | 消息图标 |
+| warn | 警告图标 |
+| waiting | 等待图标 |
+| success_no_circle | 无圆形边框成功图标 |
+| clear | 删除图标 |
+| search | 搜索图标 |
+| personal | 人物图标 |
+| setting | 设置图标 |
+| top | 回到顶部图标 |
+| close | 关闭图标 |
+| cancel | 取消图标 |
+| download | 下载图标 |
+| checkboxSelected | 复选框选中图标 |
+| radioSelected | 单选框选中图标 |
+| radioUnselect | 单选框未选中图标 |
+| loadingGrey | loading图标 |
 
 ## 代码示例
 
-<a href="swanide://fragment/5ce0a6ac564f30b12d4c98e44fe404cd1576151196454" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2862c151ac430c745783b1a1696204b41577360560694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -81,32 +109,4 @@ Page({
     }
 });
 ```
-##  属性说明 
 
-|属性名|类型  |默认值  | 必填 |说明|
-|:---- |: ---- | :--- | :---- |:---- | 
-|type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
-|size | Number  |23 | 否 |icon 的大小，单位是 px|
-|color | Color |   | 否 |icon 的颜色，同 css 的 color|
-
-###  type 有效值  
-
-| 值 | 说明 |
-|:---- |: ---- |  
-| success | 成功图标 |
-| info | 消息图标 |
-| warn | 警告图标 |
-| waiting | 等待图标 |
-| success_no_circle | 无圆形边框成功图标 |
-| clear | 删除图标 |
-| search | 搜索图标 |
-| personal | 人物图标 |
-| setting | 设置图标 |
-| top | 回到顶部图标 |
-| close | 关闭图标 |
-| cancel | 取消图标 |
-| download | 下载图标 |
-| checkboxSelected | 复选框选中图标 |
-| radioSelected | 单选框选中图标 |
-| radioUnselect | 单选框未选中图标 |
-| loadingGrey | loading图标 |

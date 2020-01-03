@@ -34,7 +34,7 @@ sidebar: face_swan-ai-faceDetect
 **success 返回参数说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |log_id| Number|	唯一的log id，用于问题定位。|
 |error_no| Number|	错误码，错误码为0时，人脸检测成功。|
 |error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
@@ -44,7 +44,7 @@ sidebar: face_swan-ai-faceDetect
 **face_list 参数说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |face_token | string |人脸图片的唯一标识| 
 |location| Object | 人脸在图片中的位置|
 |face_probability| number | 人脸置信度，范围[0~1]，代表这是一张人脸的概率，0最小、1最大。|
@@ -65,7 +65,7 @@ sidebar: face_swan-ai-faceDetect
 **location 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |left| number | 人脸区域离左边界的距离|
 |top| number | 人脸区域离上边界的距离|
 |width| number | 人脸区域的宽度|
@@ -75,7 +75,7 @@ sidebar: face_swan-ai-faceDetect
 **angel 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |yaw| number | 三维旋转之左右旋转角[-90(左), 90(右)]。|
 |pitch| number | 三维旋转之俯仰角度[-90(上), 90(下)]。|
 |roll| number | 平面内旋转角[-180(逆时针), 180(顺时针)]。|
@@ -83,70 +83,70 @@ sidebar: face_swan-ai-faceDetect
 **expression 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string | none:不笑；smile:微笑；laugh:大笑。|
 |probability| number | 表情置信度，范围 [0~1]，0最小、1最大。|
 
 **face_shape 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |square: 正方形；triangle:三角形；oval: 椭圆；heart: 心形；round: 圆形。|
 |probability| number | 置信度，范围 [0~1]，代表这是人脸形状判断正确的概率，0 最小、1 最大。|
 
 **gender 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |male:男性；female:女性。|
 |probability| number | 性别置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
 **glasses 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |none:无眼镜；common:普通眼镜；sun:墨镜。|
 |probability| number |眼镜置信度，范围 [0~1]，0 代表概率最小、1 代表最大。|
 
 **eye_status 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |left_eye| number |左眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 |right_eye| number |右眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 
 **emotion 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |angry:愤怒；disgust:厌恶；fear:恐惧；happy:高兴；sad:伤心；surprise:惊讶；neutral:无情绪。|
 |probability| number |情绪置信度，范围 0~1。|
 
 **race 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |yellow: 黄种人；white: 白种人；black:黑种人；arabs: 阿拉伯人。|
 |probability| number |人种置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
 **face_type 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |type| string |human: 真实人脸； cartoon: 卡通人脸。|
 |probability| number |人脸类型判断正确的置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
 **landmark 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |landmark72| Array |72 个特征点位置 face_field 包含 landmark72 时返回。|
 |landmark150| Array |150 个特征点位置 face_field 包含 landmark150 时返回。|
 
 **quality 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |occlusion| number |人脸各部分遮挡的概率，范围 [0~1]，0 表示完整，1 表示不完整。|
 |blur| number |人脸模糊程度，范围 [0~1]，0 表示清晰，1 表示模糊。|
 |illumination| number |取值范围在 [0~255], 表示脸部区域的光照程度越大表示光照越好。|
@@ -155,7 +155,7 @@ sidebar: face_swan-ai-faceDetect
 **occlusion 返回值说明**
 
 |参数名 | 参数类型 |说明  | 
-|---|---|---|---|
+|---|---|---|
 |left_eye| number |左眼遮挡比例，[0-1]，1 表示完全遮挡。|
 |right_eye| number |右眼遮挡比例，[0-1]，1 表示完全遮挡。|
 |nose| number |鼻子遮挡比例，[0-1]，1 表示完全遮挡。|

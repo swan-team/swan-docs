@@ -263,7 +263,7 @@ open_id| string | 是 |用户openId
 接口调用请求说明:
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/ordercenter/sub/append?access_token=ACCESS_TOKEN
+POST https://openapi.baidu.com/rest/2.0/smartapp/ordercenter/append/sub/info?access_token=ACCESS_TOKEN
 ```
 
 > Data.Ext.SubsOrder.Item参数可填写多个,实现批量导入<br>必须先导入POST中ResourceID参数对应的主订单信息,否则无法导入售后订单信息

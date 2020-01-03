@@ -11,10 +11,38 @@ sidebar: media_ar-camera
 
 **解释**：AR相机，在[DuMixAR内容开放平台](https://dumix.baidu.com/content#/)提交并上线AR项目后（选择“百度App-相机”渠道）获取到AR Key、AR Type，可配置展现。
 
+##  属性说明 
+
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+|key| String |   | 是 |AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
+|type| String |   | 是 |AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
+|flash|String| off | 否 |闪光灯，值为auto, on, off|
+|binderror|EventHandle| | 否 |用户不允许使用摄像头或扫码失败时触发|
+|bindload|EventHandle| | 否 |AR加载成功时触发|
+|bindmessage|EventHandle| | 否 |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
+|bindscancode|EventHandle| | 否 | 扫描识图结束后触发 |
+
+###  type 有效值  
+
+| 值 | 说明 |
+| :---- | :---- |
+| 0 | 2D 跟踪类型 |
+| 5 | SLAM 类型 |
+| 8 | IMU 类型 |
+
+###  flash 有效值  
+
+| 值 | 说明 |
+| :---- | :---- |
+| auto | 自动闪光灯 |
+| on | 闪光灯开 |
+| off | 闪光灯关 |
+
 
 ## 代码示例
 
-<a href="swanide://fragment/bfd8b5ec6b09bb12e705c54fe480e7191576151630476" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/089865d9da052f492ae2e0ab86bab8601577364090949" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -52,33 +80,6 @@ sidebar: media_ar-camera
 ```
 > 其它代码过长，建议直接<a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
 
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-|key| String |   | 是 |AR项目唯一标识，在DuMixAR内容开放平台上传生成AR项目后获取AR Key|
-|type| String |   | 是 |AR相机类型，在DuMixAR内容开放平台上传生成AR项目后获取AR Type：<br>2D 跟踪类型：0；<br>SLAM 类型：5；<br>IMU 类型：8。|
-|flash|String| off | 否 |闪光灯，值为auto, on, off|
-|binderror|EventHandle| | 否 |用户不允许使用摄像头或扫码失败时触发|
-|bindload|EventHandle| | 否 |AR加载成功时触发|
-|bindmessage|EventHandle| | 否 |开发者制作AR项目时可自定义按键，用户点击时会收到事件和数据|
-|bindscancode|EventHandle| | 否 | 扫描识图结束后触发 |
-
-###  type 有效值  
-
-| 值 | 说明 |
-| :---- | :---- |
-| 0 | 2D 跟踪类型 |
-| 5 | SLAM 类型 |
-| 8 | IMU 类型 |
-
-###  flash 有效值  
-
-| 值 | 说明 |
-| :---- | :---- |
-| auto | 自动闪光灯 |
-| on | 闪光灯开 |
-| off | 闪光灯关 |
 
 ##  Bug & Tip 
 

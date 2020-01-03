@@ -1067,3 +1067,234 @@ curl -X POST \
 }
 ```
 
+
+## 申请获取用户手机号
+
+当小程序开发者需要获取用户手机号时，服务商可调用此API代开发者进行申请。申请时，需要说明手机号的具体使用场景，并附上相关交互demo。
+
+**使用场景描述示例**
+
+以购物小程序为例，该小程序主要用于网络购物（请描述业务场景，而不是登录注册）。需要手机号填写联系方式。
+具体步骤如下：
+1、打开小程序，选择要购买的商品，进入商品详情页；
+2、点击购买，提示用户授权获取手机号；
+3、用户点击同意后，授权并进入下一步；如果用户点击不同意，则返回；
+4、点击下一步，进入正常的服务流程。
+
+**使用场景demo示例**
+
+![使用场景demo示例](https://b.bdstatic.com/searchbox/icms/searchbox/img/a5b166a32317553169013ac60.png)
+
+### 申请手机号权限
+
+> 申请手机号权限 
+
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/app/apply/mobileauth
+```
+
+**请求参数** 
+
+| 参数         | 类型   | 是否必填 | 描述                                                         | 示例值                                                       |
+| ----------- | ------ | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| access_token | string | 是       | 授权小程序Token   | --  |
+| reason       | int | 是       | 申请原因<br>(0:"用于登录"<br> 1:"收货联系方式"<br> 2："其他")    | 1  |
+| used_scene   | int | 是       | 使用场景<br>(0:"网络购物"<br> 1:"账号下信息内容同步"<br> 2:"票务预订"<br> 3:"业务办理"<br> 4:"信息查询（如社保、公积金查询"<br> 5:预约") | 1|
+| scene_desc   | string | 是       | 使用场景描述                                                 | "使用场景描述不得超过500字"   |
+| scene_demo   | string | 是       | 使用场景demo(场景实例图片)                                   | "实例图片路径需先调用上传图片接口" |
+
+**公共响应参数** 
+
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | Int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**请求示例** 
+
+
+```shell
+curl -X POST \
+  'http://openapi.baidu.com/rest/2.0/smartapp/app/apply/moblieauth?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC&reason=收货联系方式&used_scene=票务预订&scene_desc=描述&scene_demo=https://mbs1.bdstatic.com/searchbox/mappconsole/image/20191224/62a0575e-2ea8-4d4d-b5a2-3126f3f94eec.png'
+```
+
+**响应示例** 
+
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        
+    }
+}
+```
+
+
+
+## 取消手机号权限
+
+> 取消手机号权限 
+
+``` 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/app/cancel/mobileauth
+```
+
+**请求参数** 
+
+| 参数         | 类型   | 是否必填 | 描述            | 示例值 |
+| ------------ | ------ | -------- | --------------- | ------ |
+| access_token | string | 是       | 授权小程序Token | --     |
+
+**公共响应参数** 
+
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | Int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**请求示例** 
+
+```shell
+curl -X POST \
+  'http://openapi.baidu.com/rest/2.0/smartapp/app/cancel/moblieauth?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+```
+
+**响应示例** 
+
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        
+    }
+}
+```
+
+
+
+
+
+## 查询手机号权限状态
+
+> 查询手机号权限状态 
+
+``` 
+ GET https://openapi.baidu.com/rest/2.0/smartapp/app/get/mobileauthstatus
+```
+
+**请求参数** 
+
+| 参数         | 类型   | 是否必填 | 描述            | 示例值 |
+| ------------ | ------ | -------- | --------------- | ------ |
+| access_token | string | 是       | 授权小程序Token | --     |
+
+**公共响应参数** 
+
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**响应参数** 
+
+| 参数   | 类型   | 描述                                | 示例值 |
+| ------ | ------ | ----------------------------------- | ------ |
+| status | int    | 状态(0:取消 1:待审核 2:拒绝 3:通过) | 1      |
+| reason | string | 失败原因(仅在被拒绝时存在)          |        |
+
+**请求示例** 
+
+```shell
+curl -X GET \
+  'http://openapi.baidu.com/rest/2.0/smartapp/app/cancel/moblieauth?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+```
+
+**响应示例** 
+
+```json
+{
+    "errno": 0,
+    "msg": "success",
+    "data": {
+        "status":1,
+      	"reason":"原因"
+    }
+}
+
+```
+
+
+
+**审核结果推送**
+
+> 当审核成功/失败时，百度服务器会向第三方平台方的消息事件接收URL（创建第三方平台时填写）推送相关通知。
+
+| 参数名    | 类型   | 描述                                                         |
+| --------- | ------ | ------------------------------------------------------------ |
+| appId     | int    | 小程序客户Id                                                 |
+| tpAppId   | int    | 第三方平台appId                                              |
+| event     | string | APPLY\_APP\_MOBILE\_AUTH\_PASS:审核通过<br> APPLY\_APP\_MOBILE\_AUTH\_REJECT:审核拒绝 |
+| eventTime | string | 事件发生时间 示例：2019-03-01 10:00:00                       |
+| reason    | string | 失败原因                                                     |
+
+**审核成功事件推送内容**:
+
+```json
+{
+    "appId":15263713,
+    "tpAppId": 14242323,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APPLY_APP\_MOBILE_AUTH_PASS"
+}
+
+```
+
+**审核失败事件推送内容**
+
+```json
+{
+    "appId":15263713,
+    "tpAppId": 14242323,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APPLY_APP_MOBILE_AUTH_REJECT",
+    "reson":"审核失败原因"
+}
+
+```
+
+
+
+**授权取消事件推送**
+
+> 当主体账号信息发生变更时.会取消当前账号下所有小程序的获取手机号权限
+>
+> 若想要恢复权限,需重新调用申请手机号权限API重新审核
+
+| 参数名    | 类型   | 描述                                           |
+| --------- | ------ | ---------------------------------------------- |
+| appId     | int    | 小程序客户Id                                   |
+| tpAppId   | int    | 第三方平台appId                                |
+| event     | string | APP\_MOBILE\_AUTH\_CANCEL : 获取手机号权限取消 |
+| eventTime | string | 事件发生时间 示例：2019-03-01 10:00:00         |
+| reason    | string | 失败原因(主体信息变更)                         |
+
+**推送内容**:
+
+```json
+{
+    "appId":15263713,
+    "tpAppId": 14242323,
+    "eventTime": "2019-01-14 12:45:10",
+    "event": "APPLY_APP\_MOBILE_AUTH_PASS",
+    "reson":"主体信息变更"
+}
+
+```
+
+
+

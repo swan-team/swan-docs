@@ -72,28 +72,28 @@ data: {
 });
 ```
 ### topOne动态库字段详解
-属性名 |   类型 | 必填 |说明
----|---|---|---|---|---
-topOneArticleTitle |String|是|文章的标题
-topOneArticleInfo | Array|否|文章信息，例如时间，阅读量等，数组每一项为写字符串
-topOneUserInfo | Object|否|用户信息，用户头像，用户名称，用户备注。详情见下文。
-topOneContentNodes | Array|是|文章内容。使用的为rich-text组件。
+|属性名|类型|必填|说明|
+|---|---|---|---|
+|topOneArticleTitle |String|是|文章的标题|
+|topOneArticleInfo | Array|否|文章信息，例如时间，阅读量等，数组每一项为写字符串|
+|topOneUserInfo | Object|否|用户信息，用户头像，用户名称，用户备注。详情见下文。|
+|topOneContentNodes | Array|是|文章内容。使用的为rich-text组件。|
 
 - topOneUserInfo：支持三个属性：photo，name，info。  
 
-属性 |  类型 |类型说明 | 
----|---
-photo | String|图片路径
-name | String|用户姓名信息
-info|Array|其他信息
+|属性 |  类型 |类型说明 |
+|---|---|---|
+|photo | String|图片路径|
+|name | String|用户姓名信息|
+|info|Array|其他信息|
 
 - topOneContentNodes：该属性的值为一个数组，数组每一项包含一个对象。对象支持如下几种格式。
 
-类型 | 取值说明 |
----|---
-标题 | {type: 'caption', text: '标题 content'}
-文章内容 | {type: 'section', text: '文章 content'}
-图片 | {type: 'img', src: 'xxx'}
+|类型|取值说明|
+|---|---|
+|标题 | {type: 'caption', text: '标题 content'}|
+|文章内容 | {type: 'section', text: '文章 content'}|
+|图片 | {type: 'img', src: 'xxx'}|
 
 ### 展示示例
 

@@ -38,7 +38,7 @@ sidebar:  classify_swan-ai-carClassify
 **result 返回值说明**
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |name|	String|	车型名称，示例：宝马x6|
 |score|	Number|	置信度，示例：0.5321|
 |year|	String|	年份|
@@ -46,7 +46,7 @@ sidebar:  classify_swan-ai-carClassify
 **location_result 返回值说明**
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |left|    Number| 左起像素位置|
 |top|     Number| 上起像素位置|
 |width|   Number| 像素宽|

@@ -18,7 +18,7 @@ sidebar: app_service_register
 
 |属性  |类型 | 默认值 | 描述 |触发时机|
 |---- | ---- | ---- | ---- |---- |
-|onLogin | Function || 生命周期函数 -- 监听web小程序登录成功(web小程序独有)| 当小程序初次登录成功后，会触发 onLogin （全局只触发一次）。|
+|onLogin | Function || 生命周期函数 -- 监听 web 态小程序登录成功(web 态小程序独有)| 当小程序初次登录成功后，会触发 onLogin （全局只触发一次）。|
 |onLaunch | Function || 生命周期函数 -- 监听小程序的初始化 。| 当小程序初始化完成时，会触发 onLaunch （全局只触发一次）。|
 |onShow | Function ||生命周期函数 -- 监听小程序的显示 。| 当小程序初始化，或从后台进入前台显示，会触发 onShow 。|
 |onHide | Function || 生命周期函数 -- 监听小程序的隐藏 。| 当小程序从前台进入后台，会触发 onHide。 |
