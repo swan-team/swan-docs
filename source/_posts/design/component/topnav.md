@@ -34,23 +34,24 @@ sidebar: topnav
 顶部导航栏容器默认背景白色，开发者也可以配置相应的颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/component/topnav/3.png"><p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
+		<img src="../../../img/design/component/topnav/3.png">
+        <p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
 iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</p>
 	</div>
 </div>
 
 ### 2. 框架内部导航功能区
 <div class="m-doc-custom-text-image">
- 	<div>
+    <div>
  		<p>当用户处于小程序首页时，此区域不展现任何功能。
  			其他页面下，根据场景展现：
 1. 返回：用于返回上一页面；
 2. 回首页：用于返回小程序首页。
 		</p>
- 	</div>
- 		<div><img src="../../../img/design/component/topnav/4.png">
-		</div>
-	</div>
+    </div>
+    <div>
+        <img src="../../../img/design/component/topnav/4.png">
+    </div>
 </div>	
 
 
@@ -106,7 +107,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 </div>
 
 自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏（navigationBarHeight）高度水平居中对齐。
-技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#%E9%85%8D%E7%BD%AE-app-json-%E6%96%87%E4%BB%B6/)章节。
+技术实现请参考开发文档[全局配置](/develop/tutorial/process/)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -159,6 +160,6 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用黑色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用白色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
 	</div>
 </div>

@@ -18,7 +18,7 @@ sidebar: register_prepare
 ![图片](../../img/introduction/register/8.png)
 
 ## 配置服务器 
-在开发设置页面查看 AppID 和 AppSecret ，配置服务器域名。
+在开发设置页面查看 AppID 和 AppSecret，配置服务器域名。
 
 ![图片](../../img/introduction/register/33.png)
 

@@ -9,7 +9,7 @@ SWAN 可以通过`import`和`include`来引用模板文件。
 ## import
 通过`import`和`template`配合使用，可以将代码分离以及复用。
 
-**示例代码** 
+**代码示例** 
 <a href="swanide://fragment/7877d4d677e59f56fc8986baadc1f0151560740060734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 - 首先，在`person-card.swan`中定义了一个叫`person-card`的`template`：
@@ -43,10 +43,40 @@ Page({
 });
 ```
 
+import 具有递归的特性。 例如：C 引用 B，B 引用A，在C中可以使用B定义的 template，在B中可以使用A定义的 template ，C也可以使用A定义的template 
+
+**代码示例** 
+<a href="swanide://fragment/4748d42321cc2f7b8fa61024e1053bff1577175849286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<!-- templateA.swan-->
+<template name="A">
+  <text> A template </text>
+</template>
+```
+```xml
+<!-- templateB.swan-->
+<import src="../templateA/templateA.swan"/>
+
+<template name="B">
+  <text> B template </text>
+</template>
+
+<template is="A"/>
+```
+```xml
+<!-- templateC.swan-->
+<import src="../templateB/templateB.swan"/>
+
+<template is="A"/>
+
+<template is="B"/>
+```
+
 ## include
 通过`include`可以将目标模板整个(除了 template)引入到当前的位置，相当于`inline`。
 
-**示例代码** 
+**代码示例** 
 <a href="swanide://fragment/079d4ff72c324d30cce884f42f06d2e41560741170023" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
@@ -65,7 +95,7 @@ Page({
  
 include 可以将目标文件除了 `<template/> `外的整个代码引入，相当于是拷贝到 include 位置，如：
 
-**示例代码** 
+**代码示例** 
 <a href="swanide://fragment/c90964e07af04a2995b8bef2646795d61560741223711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml

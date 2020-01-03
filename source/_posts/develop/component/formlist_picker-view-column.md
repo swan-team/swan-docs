@@ -6,22 +6,31 @@ sidebar: formlist_picker-view-column
 ---
  
 
-**解释**：  可嵌页面的滚动选择器子项。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。
+**解释**：可嵌页面的滚动选择器子项。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view.png"  class="demo-qrcode-image" />
+## 代码示例
 
-**示例**：
-<a href="swanide://fragment/3c91ac3d1d08ec0d7e5dd4033498dd311565503521188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8625f259847325d9dc3fd74a91e61e2c1577360625726" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/picker-view.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+###  代码示例 
+<a href="swanide://fragment/90e982e82a72eb9c469080bd3e7477091572919598850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
 ```xml
 <view class="wrap">
     <view class="page-body">
-    <view class="selected-date">{{year}}年{{month}}月{{day}}日{{isDaytime ? "白天" : "夜晚"}}</view>
-    <picker-view  indicator-style ="color: #74fa7d" mask-style="color: #74fa7d" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+    <view class="selected-date">{{year}}年{{month}}月{{day}}日</view>
+    <picker-view  indicator-style ="color: #74fa7d" mask-class="maskStyle" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
         <picker-view-column>
             <view s-for="item in years" class="item">{{item}}年</view>
         </picker-view-column>

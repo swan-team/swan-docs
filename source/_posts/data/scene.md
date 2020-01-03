@@ -1,5 +1,5 @@
 ---
-title: 打点统计方案
+title: 百度 App 场景值
 header: data
 nav: book
 sidebar: scene
@@ -22,6 +22,9 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |语音直达|	10810013|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810013.png"/></div></div>|
 |小程序单卡|	10810014|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810014-1.png"/><img src="../../img/data/scene/scene-10810014-2.png"/><img src="../../img/data/scene/scene-10810014-3.png"/><img src="../../img/data/scene/scene-10810014-4.png"/></div></div>|
 |小程序 Tab|10810083|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-10810083.png"/></div></div>|
+|购物 Tab| 10810022|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-shopping.png"/></div></div>|
+|职位 Tab|10810023|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-job.png"/></div></div>|
+|笔记 Tab|10810024|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-note.png"/></div></div>|
 
 ## 信息流	
 |场景|	scene值| 图例|
@@ -33,12 +36,12 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |场景|	scene值| 图例|
 |---|---|---|
 |号文章挂载	|11110029|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110029.png"/></div></div>|
-|号动态挂载	|11110030<p>11110031<p>11110032|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110030.png"/></div></div>|
+|号动态挂载	|11110030<p>11110031</p><p>11110032</p>|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11110030.png"/></div></div>|
 
 ## 号个人主页	
 |场景|	scene值| 图例|
 |---|---|---|
-|号个人主页	|11410033<p>11410034<p>11410035|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11410034.png"/></div></div>|
+|号个人主页	|11410033<p>11410034</p><p>11410035</p>|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/data/scene/scene-11410034.png"/></div></div>|
 
 ## 我的	
 |场景|	scene值| 图例|
@@ -60,21 +63,27 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |桌面快捷方式|	12300000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：快捷桌面.jpg"/><img src="../../img/introduction/base/基础流量：快捷桌面2.jpg"/></div></div>|
 
 ## 系统多任务	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |系统多任务|	12500000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：系统多任务.jpg"/></div></div>|
 
 ## 消息通知	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |服务消息|	11310021|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：消息通知1-通知栏消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-表单消息.jpg"/><img src="../../img/introduction/base/基础流量：消息通知-个人中心-消息-服务消息-支付消息.jpg"/></div></div>|
+|营销消息|	11310004|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/营销消息样例.jpg"/></div></div>|
+
 
 ## 分享	
+
 |场景|	scene值| 图例|
 |---|---|---|
 |分享|	11600000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/基础流量：分享.jpg"/></div></div>|
 
-## 小程序	
+## 小程序
+	
 |场景|	scene值| 图例|
 |---|---|---|
 |小程序打开小程序|11700000|<div>/</div>|
@@ -114,6 +123,9 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |---|---|---|
 |百度爬虫抓取|WEB|<div>/</div>|
 |默认|NA|<div>/</div>|
+
+
+
 
 **说明**：
 * 智能小程序会被百度爬虫自动抓取，这部分流量的场景值为 WEB 。

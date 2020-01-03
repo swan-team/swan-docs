@@ -23,7 +23,7 @@ userInfoButton.onTap(callback)
 |res.data|string|包括敏感数据在内的完整用户信息的加密数据|
 |res.iv|string|加密算法的初始向量|
 
-`res.userInfo` 对象属性说明：
+`res.userInfo` 对象属性说明
 
 |属性|类型|描述|
 |-|-|-|

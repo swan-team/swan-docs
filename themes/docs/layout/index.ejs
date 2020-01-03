@@ -16,6 +16,29 @@ layout: false
 <%- css('css/footer') %>
 <%- css('css/tooltipster.bundle') %>
 <script type="application/javascript" src="<%- url_for('js/bodymovin.min.js') %>"></script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?0db18a3ce977f2c77edf8e7a00bf159d";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+    
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'https://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 </head>
 
 <body id="home">
@@ -63,7 +86,7 @@ layout: false
             </div>
             <ul class="m-hp-list clearfix">
                 <li class ="m-hp-item">
-                    <a href="/docs/develop/tutorial/codedir/">
+                    <a href="/docs/develop/fuctionlist/list/">
                         <div class= "m-hp-document-icon m-hp-icon"></div>
                     </a>
                     <div class="m-hp-words">
@@ -134,12 +157,12 @@ layout: false
                         </div>
                         <div class="m-hp-desc">   
                             <div>
-                                <a href="http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online">
+                                <a href="https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online">
                                     mac版
                                 </a>
                             </div>
                             <div>
-                                <a href="http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online">
+                                <a href="https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online">
                                     windows64版
                                 </a>
                             </div>
@@ -186,7 +209,7 @@ layout: false
             <div class="m-hp-footer-wrapper">
                 <ul class="m-hp-info-list">
                     <li>
-                        <a href="http://www.baidu.com"> 百度首页</a>
+                        <a href="https://www.baidu.com"> 百度首页</a>
                     </li>
                     <li>
                         <a href="/docs/introduction/register/"> 文档说明</a>
@@ -209,6 +232,10 @@ layout: false
     <%- js('js/tooltipster.bundle.min')%>
     <%- js('js/headerinit')%>
     <%- js('js/index-init') %>
+    <%- js('js/search') %>
+    <script type="text/javascript">
+        searchFunc('local-search-input', 'article-search-result');
+     </script>
     <script type="text/javascript" src="//b.bdstatic.com/searchbox/icms/searchbox/js/common/openjs/shareconfig.min.js?x-bs-version=1.7"></script>
     <script src="//s.bdstatic.com/common/openjs/openBox.js?_v=2016071219"></script>
     <script>

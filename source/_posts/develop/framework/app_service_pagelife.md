@@ -7,16 +7,40 @@ sidebar: app_service_pagelife
 
 
 
-生命周期的触发以及页面的路由方式详见
+ 
 
 ### onLoad(Object query)
 页面加载时触发。一个页面只会调用一次，可以在 onLoad 的参数中获取打开当前页面路径中的参数。
 
 **参数：**
 
-|名称|类型|说明|
+|属性名|类型|说明|
 |----|----|----|
 |query|Object|打开当前页面路径中的参数|
+
+**代码示例**
+
+```js
+// 添加onLoad代理示例
+
+var originPage = Page
+
+function MyPage(config) {
+   this.lifetimeProxy = {
+     onLoad: config.onLoad
+   }
+   config.onLoad = function(options) {
+     // 自定义代码
+     // 公共的初始化代码
+     this.userData = getUserData()
+   }
+  
+  // ...
+
+  originPage(config)
+}
+
+```
 
 ### onShow()
 页面显示/切入前台时触发。
@@ -25,14 +49,16 @@ sidebar: app_service_pagelife
 页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。
 
 ### onHide()
-页面隐藏/切入后台时触发。 如通过调用 [swan.navigateTo](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateTo/) 或底部 tab 切换到其他页面，小程序切入后台等时触发。
+页面隐藏/切入后台时触发。 如通过调用 [swan.navigateTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateTo/) 或底部 tab 切换到其他页面，小程序切入后台等时触发。
 
 ### onUnload()
-页面卸载时触发。如通过调用 [swan.redirectTo](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-redirectTo/) 或 [swan.navigateBack](https://smartprogram.baidu.com/docs/develop/api/show_tab/#swan-navigateBack/) 到其他页面时触发。
+页面卸载时触发。如通过调用 [swan.redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/) 或 [swan.navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/) 到其他页面时触发。
 
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>当页面被卸载时，前端基础库在触发onUnload的同时还触发了 onHide，onHide 共被触发2次。暂不支持页面被卸载时会触发onUnload，同时 onHide 仍会被触发且仅被触发一次。**请提前做好兼容性处理**。</li><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
+ <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>在解析 query 的时候，基础库会使用decodeURIComponent对query的参数值进行一次解码，该功能将在新的版本中下线。</li><li>如页面跳转时传递了 encode 后的值作为参数，为避免发生页面错误，使用时请自行将拿到的值使用decodeURIComponent进行一次decode操作。</li></ul></p>
 </div>
 </div>
+
+更多内容参见[生命周期](https://smartprogram.baidu.com/docs/develop/framework/process_life/)。

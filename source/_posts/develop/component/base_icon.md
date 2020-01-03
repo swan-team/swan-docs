@@ -7,22 +7,18 @@ sidebar: base_icon
 
 **解释**： 图标
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/icon.png"  class="demo-qrcode-image" />
-
-**属性说明**:
+##  属性说明 
 
 |属性名|类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- | ---- |---- |
+|:---- |: ---- | :--- | :---- |:---- | 
 |type |String  | | 是 |生效的值：success, info, warn, waiting, success_no_circle, clear, search, personal, setting, top, close, cancel, download, checkboxSelected, radioSelected, radioUnselect, loadingGrey|
 |size | Number  |23 | 否 |icon 的大小，单位是 px|
 |color | Color |   | 否 |icon 的颜色，同 css 的 color|
 
-**type 有效值**:
+###  type 有效值  
 
 | 值 | 说明 |
-| ---- | ---- |
+|:---- |: ---- |  
 | success | 成功图标 |
 | info | 消息图标 |
 | warn | 警告图标 |
@@ -41,8 +37,34 @@ sidebar: base_icon
 | radioUnselect | 单选框未选中图标 |
 | loadingGrey | loading图标 |
 
-**示例**：
-<a href="swanide://fragment/e2162b6a873dffee7317e9f7ec2375271565503511850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+## 代码示例
+
+<a href="swanide://fragment/2862c151ac430c745783b1a1696204b41577360560694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/icon.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/icon.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+###  代码示例 
+
+
 
 * 在 swan 文件中
 
@@ -87,3 +109,4 @@ Page({
     }
 });
 ```
+

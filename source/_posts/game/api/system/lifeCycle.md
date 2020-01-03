@@ -147,7 +147,7 @@ swan.reload(opts)
 ```js
 swan.reload({
     content: '确认重载小游戏？',
-    success: function (res) {
+    success: res => {
         if (res.confirm) {
             console.log('点击了确定');
         }

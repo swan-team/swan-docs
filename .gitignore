@@ -12,3 +12,4 @@ package-lock.json
 .vscode
 .project
 miniapp_docs_*
+source/sitemap.txt

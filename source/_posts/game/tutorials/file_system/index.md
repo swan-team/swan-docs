@@ -102,7 +102,7 @@ fs.mkdirSync(`${swan.env.USER_DATA_PATH}/my`);
 <br>
 
 ### 文件管理接口
-通过 `swan.getFileSystemManager()` 可以获取全局唯一的文件管理器对象: `fileSystemManager` ，调用 `fileSystemManager` 对象上的方法来实现对文件的操作。
+通过 `swan.getFileSystemManager()` 可以获取全局唯一的文件管理器对象: `fileSystemManager`，调用 `fileSystemManager` 对象上的方法来实现对文件的操作。
 
 ```js
 const fileSystemManager = swan.getFileSystemManager();

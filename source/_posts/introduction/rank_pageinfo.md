@@ -2,7 +2,7 @@
 title: 设置页面基础信息
 header: introduction
 nav: book
-sidebar: rank_page
+sidebar: rank_pageinfo
 ---
 
 
@@ -14,4 +14,4 @@ sidebar: rank_page
 **（2）摘要**：小程序首页、栏目页、分类页的摘要非常重要，因为有可能在搜索结果中直接被用户看到，影响到用户是否选择点击查看详情：
 **（3）Keywords**：小程序开发者给网站某个页面设定的词汇，以便让搜索引擎更好地理解页面价值。keywords代表了小程序主题内容，无论是首页、内页还是栏目页，关键词一般都代表的是当前页面或者栏目内容的主体。开发者根据实际情况设置即可。
 开发者可点击并了解[页面基础信息配置方法](https://smartprogram.baidu.com/docs/develop/api/pageinfo/)
-> 由于每个页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server ，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。
+> 由于每个页面基础信息和页面内容强相关，建议先通过 swan.request 请求开发者 server，由开发者 server 返回相关信息，再通过页面基础信息的 API 设置到页面中。

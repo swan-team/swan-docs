@@ -1,4 +1,4 @@
-/*! iScroll v5.2.0-snapshot ~ (c) 2008-2017 Matteo Spinelli ~ http://cubiq.org/license */
+/*! iScroll v5.2.0-snapshot ~ (c) 2008-2017 Matteo Spinelli ~ https://cubiq.org/license */
 (function (window, document, Math) {
 var rAF = window.requestAnimationFrame	||
 	window.webkitRequestAnimationFrame	||
@@ -431,7 +431,7 @@ IScroll.prototype = {
 		// React to left mouse button only
 		if ( utils.eventType[e.type] != 1 ) {
 		  // for button property
-		  // http://unixpapa.com/js/mouse.html
+		  // https://unixpapa.com/js/mouse.html
 		  var button;
 	    if (!e.which) {
 	      /* IE case */

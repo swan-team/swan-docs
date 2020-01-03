@@ -6,7 +6,7 @@
 fileSystemManager.access(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -26,7 +26,7 @@ fileSystemManager.access(opts)
 
 
 
-`res.errMsg` 的合法值：
+`res.errMsg` 的有效值：
 
 | 值| 描述|
 |-|-|

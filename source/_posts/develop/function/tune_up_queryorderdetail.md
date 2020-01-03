@@ -2,7 +2,7 @@
 title: 支付状态查询
 header: develop
 nav: function
-sidebar: tune_up_queryorderdetail|
+sidebar: tune_up_queryorderdetail
 ---
 
 
@@ -26,7 +26,7 @@ sidebar: tune_up_queryorderdetail|
 |appKey|String|是|MMM4oc，在开发者平台开通支付能力后分配的支付appKey|
 |orderId|Long|是|1920891312,百度平台订单ID|
 |siteId|Long|是|	百度用户ID(通过支付成功回调给业务的userId)，如：2250333905|
-|sign|String|是|RSA签名，基于appKey/appId/orderId/siteId，参数计算，详见[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|sign|String|是|RSA签名，基于appKey/appId/orderId/siteId，参数计算，详见[签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
 
 <br />
 

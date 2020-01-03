@@ -20,7 +20,7 @@ swan.showKeyboard(opts)
 |opts.fail|function| |否|接口调用失败的回调函数|
 |opts.complete|function| |否|接口调用完成的回调函数（接口调用成功、失败都会执行）|
 
-`opts.confirmType` 的合法值：
+`opts.confirmType` 的有效值：
 
 |值|描述|
 |-|-|

@@ -7,38 +7,53 @@ sidebar: media_camera
 
  
 
-**解释**：系统相机
+**解释**：系统相机，使用该组件需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
-
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"  class="demo-qrcode-image" />
-
-**属性说明**：
+##  属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明|
-|---- | ---- | ---- |---- |---- |
+|:---- |: ---- |: ---- |:---- |:---- |
 |device-position| String | back | 否 | 前置或后置，值为front, back |
 |flash|String| auto | 否 |闪光灯，值为auto, on, off|
 |bindstop|EventHandle|  | 否 |摄像头在非正常终止时触发，如退出后台等情况|
 |binderror|EventHandle| | 否 |用户不允许使用摄像头时触发|
 
-**device-position 有效值**:
+###  device-position 有效值 
 
 | 值 | 说明 |
-| ---- | ---- |
+|: ---- |: ---- |
 | front | 前置摄像头 |
 | back | 后置摄像头 |
 
-**flash 有效值**:
+###  flash 有效值 
 
 | 值 | 说明 |
-| ---- | ---- |
+| :---- |: ---- |
 | auto | 自动闪光灯 |
 | on | 闪光灯开 |
 | off | 闪光灯关 |
 
-**示例**：
+## 代码示例
+
+<a href="swanide://fragment/eba87b9439a53b5cfd5afa33a1f765371577360457238" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/camera.gif">
+    </div> 
+</div>
+
+###  代码示例 
 
 <a href="swanide://fragment/e57c71266aac86d6a0f6253f3c0f8de41565512985352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -127,23 +142,12 @@ Page({
     }
 });
 ```
-**图示**
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera01.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/camera02.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
+ 
 
 
-**Bug & Tip**：
-* camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
-* 同一页面只能插入一个 camera 组件。
-* 请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
-* 相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>。
+##  Bug & Tip 
+* Tip：camera 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 cover-view cover-image 覆盖在上面(在基础库3.0.0之前需要先创建camera，再通过的方式方 `s-if="{ {true} }"`可在camera上创建NA组件）。
+* Tip：同一页面只能插入一个 camera 组件。
+* Tip：请勿在 scroll-view、swiper、picker-view、movable-view 中使用 camera 组件。
+* Tip：相关API：<a href='https://smartprogram.baidu.com/docs/develop/api/media_cameracontext/#createCameraContext/'>createCameraContext</a>。
+
