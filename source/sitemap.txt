@@ -696,7 +696,6 @@ https://smartprogram.baidu.com/docs/develop/devtools/diff/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/quick-start/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/demo/
-https://smartprogram.baidu.com/docs/develop/devtools/auto/remote/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/automator/launch/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/automator/connect/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/pageStack/
@@ -709,7 +708,6 @@ https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/currentPa
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/systemInfo/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/callSwanMethod/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/login/
-https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/remote/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/disconnect/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/close/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/page/path/
