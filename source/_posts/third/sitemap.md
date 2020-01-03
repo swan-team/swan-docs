@@ -752,9 +752,11 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 * **链接文件（sitemap）提交：**适用于大量素材的提交，该方式实效性相对接口方式较低，提交素材后，下一天的0点小程序侧会自动抓取解析物料，存在一定时间差。
 
 ## 提交物料资源 
+
 > 若有资源在小程序内需要提交或资源推送错误需要修改（或更新）的情况，请调用该接口进行资源的提交，该提交方式适用于少量的素材提交，每天有500次调用限制，如果素材量大建议使用sitemap的方式。 
+
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/access/submitresource 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/submit 
 ```
 **公共请求参数** 
 
@@ -796,7 +798,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 }
 ```
 ## 查询物料资源 
+
 > 查询物料资源数据 
+
 ``` 
  GET https://openapi.baidu.com/rest/2.0/smartapp/access/resource/query 
 ```
@@ -909,7 +913,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 
 ## 下线物料资源 
+
 > 若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除，删除后的素材无法重新提交。 
+
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete 
 ```
@@ -949,7 +955,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 ```
 
 ## 提交sitemap 
+
 > 1.需要注意sitemap链接的内容格式（sitemap链接打开后，为多个loc链接；每个loc链接打开后，为单条素材内容。<br>2.提交素材或更新素材，则链接文件的type（即sitemap）选为“1”。<br>3.删除素材或下线素材，则链接文件的type选为“0”。<br>4.每个小程序，最多提交3条sitemap链接，建议一条type为1的sitemap链接，一条type为0的sitemap链接的（即增量/更新的sitemap一个，线下/删除的sitemap一个），若已满3条sitemap，若想添加新的sitemap链接，建议先删除一条sitemap，再进行添加新的sitemap。<br>5.提交sitemap链接方法共两种,两种提交方法任选其一即可：a.通过下方接口提交；b.通过智能小程序开发者平台端提交，提交入口：流量配置-信息流-上传素材-链接文件提交。 
+
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/submit
 ```
@@ -1047,7 +1055,9 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 ```
 
 ## 删除sitemap 
+
 > 若需要删除sitemap文件，请调用该接口，删除的仅为sitemap链接地址，对sitemap中已提交成功的素材无影响。 
+
 ``` 
  POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/delete 
 ```
