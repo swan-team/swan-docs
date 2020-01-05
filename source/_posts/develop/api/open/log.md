@@ -26,16 +26,16 @@ sidebar:  log
 
 ![图片](../../../../img/oauth.png)
 
-1、 智能小程序在App内部运行时使用<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#login/">`swan.login()`</a>接口获取Authorization Code;
+1、 智能小程序在App内部运行时使用<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-login/">`swan.login()`</a>接口获取Authorization Code;
 2、 通过 Authorization Code 获取 <a href="https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/">Session Key</a>;
-3、 调用<a href="https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#getUserInfo/">getUserInfo</a>获取用户信息;
+3、 调用<a href="https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/">getUserInfo</a>获取用户信息;
 4、 当用户完成了授权，且授权会话仍处于有效期时，智能小程序不需要每次都进行前两步，而是可以直接进行第三步获取用户信息。
-要判断当前用户的授权会话是否仍处于有效期，可调用<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
+要判断当前用户的授权会话是否仍处于有效期，可调用<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-checkSession/">`checkSession()`</a>方法进行判断，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
 ### 会话密钥Session Key有效性说明
 开发者基于Session Key 进行信息解密过程中，如果突然开始出现解密失败情况，请关注下面几个与 Session Key有关的注意事项。
 
 1、 Session key是具有时效性的，过期的Session Key将无法使用。开发者在 Session Key 失效时，需要通过重新执行登录流程获取有效的Session Key。
-2、 使用<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#checkSession/">`checkSession()`</a>可以校验 Session Key 是否有效，从而避免小程序反复执行登录流程，参考<a href="https://smartprogram.baidu.com/docs /develop/api/open/log/">授权流程图</a>中checkSession()使用。
+2、 使用<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-checkSession/">`checkSession()`</a>可以校验 Session Key 是否有效，从而避免小程序反复执行登录流程，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log/">授权流程图</a>中checkSession()使用。
 3、 智能小程序不会把 Session Key 的有效期告知开发者。我们会根据用户使用小程序的行为对 Session Key 进行续期。用户越频繁使用小程序， Session key 有效期越长。
 

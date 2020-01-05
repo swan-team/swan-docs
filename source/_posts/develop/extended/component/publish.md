@@ -1,7 +1,7 @@
 ---
 title: 全屏发布器组件
 header: develop
-nav: extended
+nav: component
 sidebar: publish
 ---
 

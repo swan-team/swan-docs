@@ -93,5 +93,6 @@ Page({
 </view>
 ```
 **Bug & Tip**
-bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
+
+bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 

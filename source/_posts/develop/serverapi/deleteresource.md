@@ -11,7 +11,7 @@ sidebar: deleteresource
 > 若有资源在小程序内下线或资源推送错误需要删除的情况，请调用该接口进行资源的删除，删除后的素材无法重新提交。 
 
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/access/resource/delete 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/deleteresource
 ```
 
 **公共请求参数** 

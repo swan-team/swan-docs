@@ -1,7 +1,7 @@
 ---
 title: 扩展组件
 header: develop
-nav: extended
+nav: component 
 sidebar: comment-publish
 ---
 

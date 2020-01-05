@@ -195,10 +195,6 @@
                     text: 设置页面基础信息
                     name: rank_pageinfo
                   -
-                    link: /introduction/rank_id
-                    text: 绑定熊掌ID
-                    name: rank_id
-                  -
                     link: /introduction/rank_h5
                     text: 关联H5站点
                     name: rank_h5
@@ -347,7 +343,7 @@
             sidebar:
               -
                 link: /introduction/scancode
-                text: 扫码打开智能小程序
+                text: 扫描二维码打开智能小程序
                 name: scancode
     -
       link: /introduction/getphonenumber
@@ -375,17 +371,22 @@
                 text: 论坛小程序开通指引
                 name: productlaboratory
               -
+                link: /introduction/productlaboratory_faq
+                text: 论坛小程序开通FAQ
+                name: productlaboratory_faq     
+              -
+                link: /introduction/examine_faq
+                text: 小程序审核失败FAQ
+                name: examine_faq                           
+              -
                 link: /introduction/productlaboratory_search
                 text: 自然搜索结果流量开通指引
-                name: productlaboratory_search                
+                name: productlaboratory_search
               -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
                 name: productlaboratory_ad
-              -
-                link: /introduction/productlaboratory_faq
-                text: 论坛小程序开通FAQ
-                name: productlaboratory_faq
+
 
 
 # 2
@@ -537,6 +538,10 @@
               link: /design/resource/lottie
               text: Lottie动效开源库
               name: lottie
+            -
+              link: /design/resource/animationVideo
+              text: 透明视频AFX
+              name: animationVideo
 
 #3
 -
@@ -712,7 +717,10 @@
                     text: setData 机制
                     name: app_service_page_setData
               -
-
+                link: /develop/framework/process_life
+                text: 页面生命周期
+                name: app_service_lifecycle
+              -
                 text: 页面路由
                 name: app_service_route
                 sidebar:
@@ -1036,10 +1044,22 @@
                     text:  rich-text 富文本
                     name: base_rich-text
 
+
+        -
+            sidebar:
+              -
+
+                text: 动画组件
+                name: animation-view
+                sidebar:
                   -
-                    link: /develop/component/base_animation-view-Lottie
-                    text:  animation-view Lottie 动画
-                    name: base_animation-view-Lottie
+                    link: /develop/component/animation-view-Lottie
+                    text: animation-view Lottie 动画
+                    name: animation-view-Lottie
+                  -
+                    link: /develop/component/animation-video
+                    text: animation-video 透明视频动画
+                    name: animation-video
         -
             sidebar:
               -
@@ -2007,7 +2027,32 @@
                       link: /develop/api/media/videocontext_VideoContext-playbackRate
                       text: VideoContext.playbackRate
                       name:  videocontext_VideoContext-playbackRate
+            -
 
+              text: 透明视频组件控制
+
+              sidebar:
+                -
+                  link: /develop/api/media/animationvideo_swan-createAnimationVideo
+                  text: swan.createAnimationVideo
+                  name: animationvideo_swan-createAnimationVideo
+                -
+                  link: /develop/api/media/animationvideo_AnimationVideo
+                  text: AnimationVideo
+                  name: animationvideo_AnimationVideo
+                  sidebar:
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-play
+                      text: AnimationVideo.play
+                      name: animationvideo_AnimationVideo-play
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-pause
+                      text: AnimationVideo.pause
+                      name: animationvideo_AnimationVideo-pause
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-seek
+                      text: AnimationVideo.seek
+                      name: animationvideo_AnimationVideo-seek
             -
 
               text: 直播组件控制
@@ -3022,6 +3067,20 @@
                     link: /develop/api/device_sys/swan-getClipboardData
                     text: swan.getClipboardData
                     name: swan-getClipboardData
+
+              -
+
+                text: 系统日历中预约活动
+
+                sidebar:
+                  -
+                    link: /develop/api/device_sys/swan-addEventOnCalendar
+                    text: swan.addEventOnCalendar
+                    name: swan-addEventOnCalendar
+                  -
+                    link: /develop/api/device_sys/swan-deleteEventOnCalendar
+                    text: swan.deleteEventOnCalendar
+                    name: swan-deleteEventOnCalendar
 
         -
 

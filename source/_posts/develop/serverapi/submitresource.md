@@ -29,7 +29,7 @@ sidebar: submitresource
 |ext|string|否|扩展信息（JSON格式，参考附录三）|{"publish_time": "2018年11月1日"}|
 |feed_sub_type|string|否|feed二级分类（参考附录二）|明星八卦（可选有限集合）|
 |feed_type|string|是|feed一级分类（参考附录二）|娱乐（可选有限集合）|
-|images|string|是|封面图片链接（JSON格式）（最多3张，单图片最大2M） 建议尺寸：宽>=375 & 高>=250；建议比例 宽:高=1.5:1|["https://b.bdstatic.com/miniapp/resource/image/demo1.png", "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]|
+|images|string|是|封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于218px，且高不能低于146px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。**|["https://b.bdstatic.com/miniapp/resource/image/demo1.png", "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]|
 |mapp_sub_type|string|是|资源子类型（参考附录一）|1001|
 |mapp_type|string|是|资源类型（参考附录一）|1000|
 |path|string|是|智能小程序落地页链接|/pages/detail/detail?id=100001|

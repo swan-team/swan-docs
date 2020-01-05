@@ -7,6 +7,12 @@ sidebar: smt-navigation
 
 **解释：** 顶部导航bar可以自定义
 
+##  属性说明 
+
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|backgroundColor |string |否|#fff|导航背景色|
+
 ## 代码示例
 
 <a href="swanide://fragment/3be4d7bcac11266b9481dd018449a7271577692166749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -51,9 +57,5 @@ Page({
 
 
 
-##  属性说明 
 
-|属性名 | 类型 | 必填 | 默认值 |说明 |
-|---|---|---|---|---|
-|backgroundColor |string |否|#fff|导航背景色|
 

@@ -36,7 +36,7 @@ sidebar:  classify_swan-ai-plantClassify
 **result 返回值说明**
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |name| String|	植物名称，示例：吉娃莲。|
 |score	|Number|	置信度，示例：0.5321。|
 

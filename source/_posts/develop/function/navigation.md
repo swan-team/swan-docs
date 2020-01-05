@@ -7,7 +7,7 @@ sidebar: navigation
 
 在智能小程序中，导航跳转是连接两个页面的纽带，由于框架导航实现底层原理的黑盒效应，以及页面容器的场景和类型不同，导致我们在开发小程序过程中，不能清晰的判断页面的一些表现，例如返回图标（客户端绘制的一个左箭头图标，位于顶部导航栏的最左侧，用于返回上一个小程序页面容器）与首页图标（客户端绘制的一个小房子图标，用于打开小程序 app.json 配置的首页）使用场景不明确。
 
-通过对 SWAN 框架进行分析，我们整理了全面的导航原理以及页面跳转后客户端的表现，希望为您的开发带来帮助。
+通过对小程序框架进行分析，我们整理了全面的导航原理以及页面跳转后客户端的表现，希望为您的开发带来帮助。
 
 更多内容参见：[顶部导航栏的UI设计参考文档](https://smartprogram.baidu.com/docs/design/component/topnav/)、[导航路由开发文档](https://smartprogram.baidu.com/docs/develop/api/show_tab/)、[webview组件开发文档](/develop/component/open_web-view/)。
 
@@ -15,15 +15,15 @@ sidebar: navigation
 ## 页面跳转底层原理
 
 智能小程序提供了5种导航方式（[路由方式](/develop/framework/app_service_routestyle/)），即: navigateTo、redirectTo、navigateBack、switchTab、reLaunch，除直接调用API的方式，还可以通过navigator组件绑定属性的方式触发路由跳转（[navigator组件](/develop/component/nav/)）。
-假设从A页面跳转到B页面，针对5种不同的跳转，通过智能小程序分析，客户端和SWAN框架配合如下：
+假设从A页面跳转到B页面，针对5种不同的跳转，通过智能小程序分析，客户端和小程序框架配合如下：
 
 |跳转方式|实现方式|场景|
 |---|---|---|
-|[navigateTo](/develop/component/nav/)|SWAN框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给SWAN框架，并通知框架开始加载开发者代码，紧接着框架实例化一个新的页面并将其推入页面栈中，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
-|[redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/)|SWAN框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给SWAN框架，并通知框架开始加载开发者代码，紧接着框架将页面栈顶的信息更新为待跳转页面的信息，同时创建页面实例，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
-|[navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/)|有两种方式返回上一个页面，一种是主动操作（android物理返回、双端右滑、通过顶bar的返回按钮），此场景下返回时客户端会通知SWAN框架将页面栈顶页弹出；另一种是调用API的方式或者利用navigator组件返回上一页，此场景下是由框架直接通知客户端关闭当前页面容器，客户端关闭成功后通知SWAN框架将页面栈顶页弹出。|可作用于任意页面|
-|[switchTab](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/)|有两种方式进行tab切换，一种是主动操作（在tab页点击另一个tab），客户端会通知SWAN框架对页面栈信息进行更新，另一种是通过API或利用navigator组件通知客户端跳转到某一tab页，客户端跳转完成时通知SWAN框架进行页面栈信息更新。|只能打开 tabBar 页面|
-|[reLaunch](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/)|SWAN框架将页面栈清空，然后利用开发者传入的url重新初始化为第一个页面。|可打开任意页面|
+|[navigateTo](/develop/component/nav/)|小程序框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给小程序框架，并通知框架开始加载开发者代码，紧接着框架实例化一个新的页面并将其推入页面栈中，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
+|[redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-redirectTo/)|小程序框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给小程序框架，并通知框架开始加载开发者代码，紧接着框架将页面栈顶的信息更新为待跳转页面的信息，同时创建页面实例，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
+|[navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-navigateBack/)|有两种方式返回上一个页面，一种是主动操作（android物理返回、双端右滑、通过顶bar的返回按钮），此场景下返回时客户端会通知小程序框架将页面栈顶页弹出；另一种是调用API的方式或者利用navigator组件返回上一页，此场景下是由框架直接通知客户端关闭当前页面容器，客户端关闭成功后通知小程序框架将页面栈顶页弹出。|可作用于任意页面|
+|[switchTab](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-switchTab/)|有两种方式进行tab切换，一种是主动操作（在tab页点击另一个tab），客户端会通知小程序框架对页面栈信息进行更新，另一种是通过API或利用navigator组件通知客户端跳转到某一tab页，客户端跳转完成时通知小程序框架进行页面栈信息更新。|只能打开 tabBar 页面|
+|[reLaunch](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-reLaunch/)|小程序框架将页面栈清空，然后利用开发者传入的url重新初始化为第一个页面。|可打开任意页面|
 
 
 ## 原生小程序页面
@@ -69,12 +69,12 @@ sidebar: navigation
  ![图片](../../../img/function/navi3.gif)
 
 那么问题来了，怎么把点击的链接传到第二个页面呢？
-我们可以在 webview 组件页面使用 jssdk 中 h5 页面跳转到小程序页面的方法 swan.webView.navigateTo，然后再携带一个 url 参数：
+我们可以在 webview 组件页面使用 jssdk 中 h5 页面跳转到小程序页面的方法 小程序.webView.navigateTo，然后再携带一个 url 参数：
 **代码示例**
 ```
 //webview 组件页面javascript
 navigate(url) {
-    swan.webView.navigateTo({url: '../webview/webview?weburl=' + url});
+    小程序.webView.navigateTo({url: '../webview/webview?weburl=' + url});
 }
 ```
 
@@ -95,9 +95,9 @@ Page({
 });
 ```
 
-并赋值给 webview.swan 中的 src 属性：
+并赋值给 webview.小程序 中的 src 属性：
 ```
-// pages/webview/webview.swan
+// pages/webview/webview.小程序
 <web-view src="{{url}}"></web-view>
 ```
 #### 不推荐使用的解决方案
