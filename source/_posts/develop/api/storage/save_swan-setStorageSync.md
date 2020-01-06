@@ -9,17 +9,26 @@ sidebar: save_swan-setStorageSync
  
 **解释**：将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key，会覆盖掉原来该 key 对应的内容。这是一个同步接口。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setStorage.png"  class="demo-qrcode-image" />
+String key, Object/String data
 
-**方法参数**：String key, Object/String data
+ `key`参数说明 ：本地缓存中的指定的 key
 
-**`key`参数说明**：本地缓存中的指定的 key
+ `data`参数说明 ：需要存储的内容
 
-**`data`参数说明**：需要存储的内容
+## 代码示例
 
-**图片示例**
+<a href="swanide://fragment/5146563edbf8593329266a8976c0b6931577107860591" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setStorage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,9 +42,9 @@ sidebar: save_swan-setStorageSync
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/5146563edbf8593329266a8976c0b6931577107860591" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -133,16 +142,16 @@ Page({
 
 
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
@@ -150,7 +159,7 @@ Page({
 |1003|超过最大存储文件大小|
 
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 基础库 3.140.1 之前，无法判断接口是否调用失败。
 * 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

@@ -7,14 +7,21 @@ sidebar: voice_VoiceRecognizer-onStart
 
 **解释**： 引擎准备就绪，可以开始说话
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnStart.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+## 代码示例
 
+ 
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnStart.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,7 +36,7 @@ sidebar: voice_VoiceRecognizer-onStart
 </div>
 
 
-**代码示例 1**：
+### 代码示例 1 ：
 短语音识别（与长语音使用方式一致） - 自动听音 
 
 
@@ -76,7 +83,7 @@ Page({
 
 ```
 
-**代码示例 2**：
+### 代码示例 2 ：
 
 短语音识别 （与长语音使用方式一致）- 自动听音 
 
@@ -123,7 +130,7 @@ Page({
 
 ```
 
-**代码示例 3**：
+### 代码示例 3 ：
 
 短语音识别 - 手动听音 
 

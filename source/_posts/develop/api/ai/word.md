@@ -13,13 +13,12 @@ sidebar: word
 
 **解释**：词法分析，提供分词、词性标注、专名识别三大功能。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,7 +27,7 @@ sidebar: word
 |fail | Function | 否 | | 接口调用失败的回调函数 | 
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明  
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -36,7 +35,7 @@ sidebar: word
 |text | string| 原始单条请求文本| 
 |items | Array| 词汇数组，每个元素对应结果中的一个词。| 
 
-**items 参数说明**：
+### items 参数说明 
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -50,7 +49,16 @@ sidebar: word
 |basic_words | Array| 基本词成分| 
 |loc_details | Array| 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。| 
 
-**图片示例**
+## 代码示例
+
+<a href="swanide://fragment/395274968b17a001c80d19e65418103f1574672851842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -64,9 +72,9 @@ sidebar: word
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/395274968b17a001c80d19e65418103f1574672851842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -142,7 +150,7 @@ Page({
 });
 ```
 
-**返回示例**
+### 返回示例 
 
 ```js
 {

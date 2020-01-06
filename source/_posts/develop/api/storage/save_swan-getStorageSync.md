@@ -9,15 +9,24 @@ sidebar: save_swan-getStorageSync
 
 **解释**：从本地缓存中同步获取指定 key 对应的内容。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setStorage.png"  class="demo-qrcode-image" />
+ String key
 
-**方法参数**： String key
+ `key`参数说明 ： 本地缓存中的指定的 key
 
-**`key`参数说明**： 本地缓存中的指定的 key
+## 代码示例
 
-**图片示例**
+<a href="swanide://fragment/1bcf73184d65cba5ec07275c01d528911577107917948" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_setStorage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +40,9 @@ sidebar: save_swan-getStorageSync
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/1bcf73184d65cba5ec07275c01d528911577107917948" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 swan 文件中
@@ -131,22 +140,22 @@ Page({
 ```
 
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确      |
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 基础库 3.140.1 之前，无法判断接口是否调用失败。
 * 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

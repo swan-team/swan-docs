@@ -6,15 +6,14 @@ sidebar:  audit
 ---
  
 
-**解释**：自定义图像审核。
+**解释** ：自定义图像审核。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png"  class="demo-qrcode-image" />
+## 方法参数 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |默认值 |必填 | 说明|
 |---- | ---- | ---- | ----|----|
@@ -24,7 +23,7 @@ sidebar:  audit
 |fail |   Function|        |  否  |   接口调用失败的回调函数|
 |complete  |  Function  |  |  否|   接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 ：
 
 |参数 | 类型 | 	说明  |
 |---- | ---- | ---- |
@@ -33,7 +32,7 @@ sidebar:  audit
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|
 
-**data 返回值说明**
+### data 返回值说明 
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
@@ -43,14 +42,14 @@ sidebar:  audit
 |words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
 |stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
 
-**stars 返回值说明**
+### stars 返回值说明 
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
 |probability|	Number|	不合规项置信度|
 | name |	String|	姓名|
 
-**conclusion、conclusionType参数说明**：
+### conclusion、conclusionType参数说明 ：
 
 |参数 |说明  |
 |---- | ---- |
@@ -59,7 +58,16 @@ sidebar:  audit
 |3 | 疑似 |
 |4 | 审核失败 |
 
-**图片示例**
+## 代码示例
+
+<a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -73,9 +81,9 @@ sidebar:  audit
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 Page({
@@ -96,7 +104,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例 ：
 ```json
 {
     "log_id": $log_id,

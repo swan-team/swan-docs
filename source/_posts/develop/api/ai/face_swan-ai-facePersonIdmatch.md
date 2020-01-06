@@ -11,14 +11,12 @@ sidebar: face_swan-ai-facePersonIdmatch
 
 **解释**：身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonIdmatch.png"  class="demo-qrcode-image" />
+Object object
 
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,7 +26,18 @@ sidebar: face_swan-ai-facePersonIdmatch
 |fail | Function | 否 | | 接口调用失败的回调函数 | 
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**
+
+
+## 代码示例
+
+<a href="swanide://fragment/53bba74307c3e4069bac51734e28fdd21569501442624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonIdmatch.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -42,9 +51,9 @@ sidebar: face_swan-ai-facePersonIdmatch
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/53bba74307c3e4069bac51734e28fdd21569501442624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 Page({

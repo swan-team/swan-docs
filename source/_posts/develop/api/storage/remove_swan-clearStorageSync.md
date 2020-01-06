@@ -8,13 +8,21 @@ sidebar: remove_swan-clearStorageSync
  
 **解释**：同步清理本地数据缓存。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png"  class="demo-qrcode-image" />
+无
 
-**方法参数**：无
+## 代码示例
 
-**图片示例**
+<a href="swanide://fragment/fd03b254ff72c23f94ee235a6722242a1577107667643" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/storage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +37,9 @@ sidebar: remove_swan-clearStorageSync
 </div>
 
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/fd03b254ff72c23f94ee235a6722242a1577107667643" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 let res = swan.clearStorageSync();
@@ -45,21 +53,21 @@ else {
 }
 
 ```
-#### 错误码
+## 错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确|
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 基础库 3.140.1 之前，无法判断接口是否调用失败。
 * 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

@@ -7,16 +7,16 @@ sidebar:  classify_swan-ai-carClassify
 
 
 
-**解释**：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
+**解释** ：用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。
 
 
-**百度APP中扫码体验：**
+ 
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/carClassify.png"  class="demo-qrcode-image" />
+## 方法参数 
 
-**方法参数**：Object object
+Object object
 
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -26,7 +26,7 @@ sidebar:  classify_swan-ai-carClassify
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 ：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -35,7 +35,7 @@ sidebar:  classify_swan-ai-carClassify
 |result|	Array|	车型识别结果数组|
 |location_result|	Object|	车在图片中的位置信息|
 
-**result 返回值说明**
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -43,7 +43,7 @@ sidebar:  classify_swan-ai-carClassify
 |score|	Number|	置信度，示例：0.5321|
 |year|	String|	年份|
 
-**location_result 返回值说明**
+### location_result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -52,8 +52,16 @@ sidebar:  classify_swan-ai-carClassify
 |width|   Number| 像素宽|
 |height|  Number| 像素高|
 
+## 代码示例
 
-**图片示例**
+<a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/carClassify.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -67,9 +75,9 @@ sidebar:  classify_swan-ai-carClassify
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 Page({
@@ -93,7 +101,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例 ：
 ```json
 {
     "log_id": $log_id,
