@@ -80,11 +80,11 @@ Discuz!小程序模板支持接入百青藤平台广告组件，帮助接入模�
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%90%8E%E8%B4%B4%E7%89%87.jpg">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%89%8D%E8%B4%B4%E7%89%87.jpg">
-    </div>
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/ad1.png">
+    </div>  
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>       
 </div>
 
 ## 复制代码位到Discuz!变现管理页面
