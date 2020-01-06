@@ -1224,7 +1224,7 @@
                       name: ad
     -
       text: 扩展能力
- 
+      name: extended
       sidebar:
         # -   
         #     text: 基础组件
@@ -1243,11 +1243,11 @@
         #         name: like      
         -
        
-          text: smtUI组件
+          text: smart-ui组件
           sidebar:
               -
                 link: /develop/extended/ui_component/info
-                text: smtUI介绍
+                text: smart-ui介绍
                 name: info
               -
                 link: /develop/extended/ui_component/smt-feed
@@ -1255,7 +1255,7 @@
                 name: smt-feed
               -
                 link: /develop/extended/ui_component/smt-feed-item
-                text: smt-feed 信息流子项
+                text: smt-feed-item 信息流子项
                 name: smt-feed-item
               -
                 link: /develop/extended/ui_component/smt-icon
@@ -1278,7 +1278,7 @@
                 text: smt-navigation 自定义导航
                 name: smt-navigation
         -
-            text: smtUI模板
+            text: smart-ui模板
             sidebar:
               -
                 link: /develop/extended/template/smt-detail-pages
