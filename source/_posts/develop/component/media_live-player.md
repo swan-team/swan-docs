@@ -6,14 +6,14 @@ sidebar: media_live-player
 ---
 
 
-**解释**：实时视频播放器，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
+**解释**：实时视频播放器（v3.140.1 起支持同层渲染）。只针对直播答题、直播服务类目开放。需要先通过类目审核，再在小程序管理后台，“设置”-“接口设置”中自助开通该组件权限。
 
 
 |一级类目|二级类目|
 |:--|:--|
 |娱乐|直播、直播答题|
 
-##  属性说明 
+##  属性说明
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |:---- | :---- |: ---- |:---- |:---- |
@@ -23,28 +23,28 @@ sidebar: media_live-player
 |muted|Boolean|false| 否 |是否静音|
 |orientation|	String|	vertical| 否 |画面方向，有效值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
 |object-fit|String|contain| 否 |填充模式，有效值:contain、fillCrop|
-|background-mute|Boolean|false| 否 |进入后台时是否静音|
+|background-mute|Boolean|false| 否 |进入后台时是否静音（已废弃，默认退台静音）|
 |min-cache|Number|1| 否 |最小缓冲区，单位s|
 |max-cache|Number|3| 否 |最大缓冲区，单位s|
 |bindstatechange|EventHandle|  | 否 |播放状态变化事件，参考下方状态码表格，detail = {code}|
 |bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
-|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullScreen}。|
+|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullscreen}。|
 
-###  orientation 有效值 
+###  orientation 有效值
 
 | 值 | 说明 |
 | :---- | :---- |
 | vertical | 垂直方向 |
 | horizontal | 水平方向 |
 
-###  object-fit 有效值 
+###  object-fit 有效值
 
 | 值 | 说明 |
 | :---- | :---- |
 | contain | 包含 |
 | fillCrop | 填充 |
 
-###  主流格式支持  
+###  主流格式支持
 
 |格式|	Android|	IOS|
 |:--|:--|:--|
@@ -61,7 +61,7 @@ sidebar: media_live-player
 |rm|	是	|是|
 |ogg|	是	|是|
 
-###  主流编码格式支持 
+###  主流编码格式支持
 
 |格式|	Android|	IOS|
 |:--|:--|:--|
@@ -72,10 +72,10 @@ sidebar: media_live-player
 |VP8|	是	|否|
 |VP9|	是	|否|
 
-###  状态码  
+###  状态码
 
 |代码  |说明   |
-|:--|:--| 
+|:--|:--|
 |2001|已经连接服务器|
 |2002|已经连接服务器,开始拉流|
 |2003|网络接收到首个视频数据包(IDR)|
@@ -101,10 +101,10 @@ sidebar: media_live-player
 |3005|RTMP 读/写失败|
 
 
-###  网络状态数据  
+###  网络状态数据
 
 |键名  | 说明 |
-|:--|:--| 
+|:--|:--|
 |videoBitrate|当前视频编/码器输出的比特率，单位 kbps|
 |audioBitrate|当前音频编/码器输出的比特率，单位 kbps|
 |videoFPS|当前视频帧率|
@@ -126,7 +126,7 @@ sidebar: media_live-player
 </div>
 
 
-###  图片示例 
+###  图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -137,10 +137,10 @@ sidebar: media_live-player
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-###  代码示例 
+###  代码示例
 
 
 <a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -149,16 +149,16 @@ sidebar: media_live-player
 
 ```xml
 <view class="live-play">
-    <live-player id="myLive" 
-                 src="{{src}}" 
+    <live-player id="myLive"
+                 src="{{src}}"
                  autoplay="{{autoplay}}"
                  muted="{{muted}}"
                  orientation="vertical"
-                 object-fit="{{objectFit}}" 
-                 background-mute="{{backgroundMute}}" 
-                 min-cache="{{minCache}}" 
+                 object-fit="{{objectFit}}"
+                 background-mute="{{backgroundMute}}"
+                 min-cache="{{minCache}}"
                  max-cache="{{maxCache}}"
-                 bind:statechange="statechange" 
+                 bind:statechange="statechange"
                  bind:netstatus="netstatus"
                  bindfullscreenchange>
     </live-player>
@@ -228,6 +228,6 @@ Page({
 
 
 
-##  Bug & Tip 
+##  Bug & Tip
 * Tip：live-player 默认宽度 300px、高度 225px；
 * Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。
