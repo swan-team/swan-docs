@@ -5,7 +5,7 @@ nav: api
 sidebar: swan-subscribeService
 ---
 
-> 基础库 3.150.0 开始支持，低版本需做兼容处理。
+> 基础库 3.150.1 开始支持，低版本需做兼容处理。
 
 **解释**：小程序消息订阅服务：取消订阅和查询订阅；订阅操作详见[`form 表单`](/develop/component/formlist_form/)。
 
