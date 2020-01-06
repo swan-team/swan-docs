@@ -37,7 +37,7 @@ Object object
 |log_id | Number | 日志 ID| 
 |score | number | 与公安小图相似度可能性，用于验证生活照与公安小图是否为同一人，有正常分数时为 [0~100]，推荐阈值 80，超过即判断为同一人。| 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/5d891de85f044848f89a94607f3130931569501369472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

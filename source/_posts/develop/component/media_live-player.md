@@ -114,7 +114,7 @@ sidebar: media_live-player
 |videoWidth|视频画面的宽度|
 |videoHeight|视频画面的高度|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/e457afb81d7a2a3dd33cf5a9f35670551577364196871" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

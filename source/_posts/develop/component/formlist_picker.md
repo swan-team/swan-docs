@@ -89,7 +89,7 @@ sidebar: formlist_picker
 | title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/e65d3e49c437693078e67f57238fbdd91577360624286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

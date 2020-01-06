@@ -37,7 +37,7 @@ Object object
 |code | string |语音验证码，数字形式，3~6 位数字。| 
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/ada1eec5142a8582dfa2c9395a043f411573752628692" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

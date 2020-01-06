@@ -46,7 +46,7 @@ function callback
 |sys|String|其它。|
 
 
-## 代码示例
+## 示例
 
 
 

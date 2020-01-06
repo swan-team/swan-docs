@@ -39,7 +39,7 @@ Object object
 |score	|Number|	置信度，示例：0.5321。|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/2af91115191447b4b93ae469129f7fb91569501181045" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 

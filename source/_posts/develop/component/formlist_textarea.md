@@ -50,7 +50,7 @@ sidebar: formlist_textarea
 | next | 右下角按钮为“下一步”，点击会触发bindconfirm事件 |
 | go | 右下角按钮为“前往”，点击会触发bindconfirm事件 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8a9bcb008fb8027e49c32c4ad644602a1577360690062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

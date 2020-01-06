@@ -21,7 +21,7 @@ Object object
 
 newURLQuery 必须是值为字符串的对象，否则调用 setURLQuery 会抛错。新设置的 URL query 会与当前的 URL query 融合。
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/dd565f21448c3e95a9471b7f953fed7b1573991326390" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -18,7 +18,7 @@ String key, Object/String data
 
  `data`参数说明 ：需要存储的内容
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/5146563edbf8593329266a8976c0b6931577107860591" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

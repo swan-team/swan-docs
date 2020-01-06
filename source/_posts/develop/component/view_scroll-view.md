@@ -28,7 +28,7 @@ sidebar: view_scroll-view
 |bindscroll | EventHandle | | 否 | 滚动时触发， event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY} | |  
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/6b47965d6a966447e4c10226e7c6ee541577361102399" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

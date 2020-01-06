@@ -25,7 +25,7 @@ sidebar: tab-item
 | 'text'| 徽标类型为文字 |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/554b5ec0fb2f1b226477a355d32c77a81577363516679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

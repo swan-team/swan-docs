@@ -30,7 +30,7 @@ Object object
 |---- | ---- | ---- |
 |data   | Object/String/Number/Array | key 对应的内容|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/84384a223a90d8a24ee7754217b4130d1573632783248" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

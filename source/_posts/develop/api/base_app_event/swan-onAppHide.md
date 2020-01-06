@@ -15,7 +15,7 @@ sidebar: swan-onAppHide
 Function callback
 小程序切后台事件的回调函数。
 
-## 代码示例
+## 示例
 
 
 

@@ -22,7 +22,7 @@ callback返回参数说明  ：
 Object error  
 错误信息，包含堆栈。
 
-## 代码示例
+## 示例
 
 
 

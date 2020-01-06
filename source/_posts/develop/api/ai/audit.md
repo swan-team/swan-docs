@@ -58,7 +58,7 @@ Object object
 |3 | 疑似 |
 |4 | 审核失败 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -49,7 +49,7 @@ Object object
 |face_token|string |人脸的唯一标志|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/ae12872d24c04bfd2071e38cbbf2a1aa1569415830853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

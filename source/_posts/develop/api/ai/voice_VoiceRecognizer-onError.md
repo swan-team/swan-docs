@@ -45,7 +45,7 @@ Function callback
 |4004|	返回结果异常|
 |9000|	未知错误|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

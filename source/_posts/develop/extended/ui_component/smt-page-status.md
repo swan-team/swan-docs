@@ -21,7 +21,7 @@ sidebar: smt-page-status
 |btnText |String |否|重新加载|空态&#x2F;缺省页面下，操作按钮的描述文案,建议最多显示4个汉字，超出内容截断|
 
 
-## 代码示例
+## 示例
 
 <a href="" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

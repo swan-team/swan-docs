@@ -39,7 +39,7 @@ Object object
 |score|Number	|置信度，0-1|
 |root|	String|	识别结果的上层标签，有部分钱币、动漫、烟酒等tag无上层标签。|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/c2ab942b5e6b9ac02739a7e70ec298c11569500914210" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

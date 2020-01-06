@@ -38,7 +38,7 @@ Object object
 |name|	String|	动物名称，示例：蒙古马。|
 |score|	String|		置信度，示例：0.5321。|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/d3a867157469e01d1f6515f27172d4331569501144725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

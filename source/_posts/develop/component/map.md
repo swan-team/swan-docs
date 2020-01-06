@@ -36,7 +36,7 @@ sidebar: map
 | bindupdated | EventHandle |   | 否 |在地图渲染更新完成时触发 |- |
 | bindpoitap | EventHandle |   | 否 |点击地图poi点时触发 |- |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/e37b0d55c8eabd93730ad804796a0ffe1577360575829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -15,7 +15,7 @@ sidebar: smt-icon
 |color |String, Array.&lt;String&gt; |||icon的颜色，多色图标支持传入色值的数组|
 |size |Number ||25|icon的尺寸，单位px|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/1151cb408d98313c4e79bb6a62755bfa1577193673206" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

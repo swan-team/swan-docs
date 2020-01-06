@@ -55,7 +55,7 @@ Object object
 |words | String | 识别结果字符串 |
 
 
-## 代码示例
+## 示例
 
  
 <a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -19,7 +19,7 @@ sidebar: voice_swan-ai-getVoiceRecognizer
 
 voiceRecognizer
 
-## 代码示例
+## 示例
 
  
 <a href="swanide://fragment/2e32098e4419e91a5bf1173f190369021573999089554" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

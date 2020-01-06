@@ -12,7 +12,7 @@ sidebar: voice_VoiceRecognizer-start
 
 Object object
 
-## 代码示例
+## 示例
 
  
 

@@ -39,7 +39,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 | touch | 用户划动导致的swiper切换 |
 | "" | 其他原因将返回空字符串 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/5c70c59c82510ef6ee6aeba665d5dbbb1577360676452" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

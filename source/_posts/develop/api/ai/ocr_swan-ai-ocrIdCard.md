@@ -67,7 +67,7 @@ Object object
 |width| Number | 表示识别结果的定位位置的长方形的宽度。|
 |height| Number | 表示识别结果的定位位置的长方形的高度。|
 
-## 代码示例
+## 示例
 
  
 

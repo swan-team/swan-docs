@@ -26,7 +26,7 @@ sidebar: base_text
 | nbsp | 根据字体设置的空格大小 |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/06b1d76de26d523472f889b9d56dda001577360687075" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

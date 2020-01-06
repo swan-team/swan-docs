@@ -13,7 +13,7 @@ sidebar: swan-offError
 ##  方法参数
    无
    
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/54f7a7d7055d5906448ac64a594c6e621573989952662" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

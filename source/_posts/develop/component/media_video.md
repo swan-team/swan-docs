@@ -90,7 +90,7 @@ sidebar: media_video
 |VP9|   是   |否|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/510791e688e8d50ce5362bffb9d672501577360707477" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

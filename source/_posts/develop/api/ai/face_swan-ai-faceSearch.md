@@ -47,7 +47,7 @@ Object object
 |user_info | Array | 注册用户时携带的 user_info|
 |score | number | 用户的匹配得分，推荐阈值 80 分。|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/c5aabb973ce9c3e6ce54d4a547b390711575000496556" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

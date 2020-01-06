@@ -17,7 +17,7 @@ sidebar: save_swan-getStorageInfoSync
 
  无
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/442cea61078f7f6be45b83f18adbd1011577107794182" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

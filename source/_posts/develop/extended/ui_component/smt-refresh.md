@@ -17,7 +17,7 @@ sidebar: smt-refresh
 |status |Number |否|0|加载状态 0: 未开始 1: 加载中 2: 展示话术|
 |text |String |否|建议最多显示18个汉字，超出内容截断|加载成功时的展示话术|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/598510a21b650b89e2e5d13c814dc46c1577192328823" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

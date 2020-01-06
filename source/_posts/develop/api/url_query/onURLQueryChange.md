@@ -26,7 +26,7 @@ Object object
 |oldURLQuery|Object| ||改变前的 URL query |
 
  
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/862ac1772aabc0a8cf065093f7784d021572856346528" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

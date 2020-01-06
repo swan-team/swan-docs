@@ -19,7 +19,7 @@ Function callback
 |result |String | 小程序语音识别完成后的返回内容 |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

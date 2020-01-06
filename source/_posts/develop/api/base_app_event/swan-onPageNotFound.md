@@ -26,7 +26,7 @@ Function callback
 |query|Object|打开不存在页面的 query 参数|
 |isEntryPage|boolean|是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）|
 
-## 代码示例
+## 示例
 
 
 

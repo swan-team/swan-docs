@@ -34,7 +34,7 @@ Object object
 |---- | ---- | ---- |
 |filePath | String | 合成的音频文件的路径，此路径为临时路径且在当次回调中有效|
 
-## 代码示例
+## 示例
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_textToAudio.png" class="demo-qrcode-image" />
@@ -56,7 +56,7 @@ Object object
     </div>     
 </div>
 
-### 代码示例1 
+### 示例1 
 
 <a href="swanide://fragment/b2861370f6a561f81ebeef1dd5861dd51573995603718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

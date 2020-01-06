@@ -42,7 +42,7 @@ Object object
 |height|  Number| 表示定位位置的长方形的高度。|
 
 
-## 代码示例
+## 示例
 
  
 

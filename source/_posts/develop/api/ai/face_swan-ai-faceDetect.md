@@ -161,7 +161,7 @@ Object object
 |right_cheek| number |右脸颊遮挡比例，[0-1]，1 表示完全遮挡。|
 |chin| number |下巴遮挡比例，[0-1]，1 表示完全遮挡。|
 
-## 代码示例
+## 示例
 
  
 <div class='scan-code-container'>

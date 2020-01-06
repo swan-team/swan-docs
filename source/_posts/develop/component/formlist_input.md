@@ -52,7 +52,7 @@ sidebar: formlist_input
 | go |键盘右下角按钮为 “前往” |
 | done |键盘右下角按钮为 “完成” |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8e8ece4c70230c03924783848ac18cd71577360565180" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

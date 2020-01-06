@@ -17,7 +17,7 @@ sidebar: swan-offPageNotFound
 |----|----|----|----|----| 
 |callback|   Function  | 无||小程序要打开的页面不存在事件的回调函数（swan.onPageNotFound的回调方法引用）；当不传参数时，取消该类全部监听事件。|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/b71b5ec3e798f27e144351dc870b7f251573989727290" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

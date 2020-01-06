@@ -33,7 +33,7 @@ Object object
 |currentSize | Number | 当前占用的空间大小, 单位 KB。|
 |limitSize |  Number |  限制的空间大小，单位 KB。|  
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/eec686606577d1cd002b300acd3e88681573633461847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

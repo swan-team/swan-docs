@@ -15,7 +15,7 @@ sidebar: swan-getURLQuery
 ##  方法参数
    无
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/dd565f21448c3e95a9471b7f953fed7b1573991326390" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

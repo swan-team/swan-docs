@@ -59,7 +59,7 @@ Object object
 |4 |恶意推广|
 |5 |低俗辱骂|
 
-## 代码示例
+## 示例
 
  
 <a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

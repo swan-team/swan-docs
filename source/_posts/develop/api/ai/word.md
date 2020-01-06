@@ -49,7 +49,7 @@ Object object
 |basic_words | Array| 基本词成分| 
 |loc_details | Array| 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。| 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/395274968b17a001c80d19e65418103f1574672851842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

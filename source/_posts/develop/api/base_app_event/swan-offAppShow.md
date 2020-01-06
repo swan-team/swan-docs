@@ -12,7 +12,7 @@ sidebar: swan-offAppShow
 ##  方法参数
 无
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/bb397425fd644712e7949da424c12cdf1573990116771" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

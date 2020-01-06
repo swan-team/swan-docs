@@ -28,7 +28,7 @@ sidebar: base_animation-view-Lottie
 | pause | 暂停 |
 | stop | 停止 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/aeaeb76fd22b927e125660e5f2ade00b1577362215935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

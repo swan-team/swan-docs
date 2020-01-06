@@ -52,7 +52,7 @@ Object object
 |width|   Number| 像素宽|
 |height|  Number| 像素高|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/be0c7685562b74f7985c5003740a428d1569501025882" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

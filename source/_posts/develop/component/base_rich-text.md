@@ -82,7 +82,7 @@ sidebar: base_rich-text
 
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/d4acf262801e6eca24f8cb94ce03b9af1577360637718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

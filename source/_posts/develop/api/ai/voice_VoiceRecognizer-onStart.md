@@ -12,7 +12,7 @@ sidebar: voice_VoiceRecognizer-onStart
 
 Function callback
 
-## 代码示例
+## 示例
 
  
 

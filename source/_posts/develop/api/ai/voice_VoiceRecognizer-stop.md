@@ -12,7 +12,7 @@ sidebar: voice_VoiceRecognizer-stop
 
 无
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/7e4fe85cd2c742caf6eb5a17ef826e421573743143847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

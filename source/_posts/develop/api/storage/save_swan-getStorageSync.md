@@ -16,7 +16,7 @@ sidebar: save_swan-getStorageSync
 
  `key`参数说明 ： 本地缓存中的指定的 key
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/1bcf73184d65cba5ec07275c01d528911577107917948" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
