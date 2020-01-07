@@ -22,7 +22,7 @@ sidebar: contact
  
 ## 客服消息入口
 
- 1.	开发者在小程序内添加客服功能（参考[在页面中使用客服消息](http://smartprogram.baidu.com/docs/develop/serverapi/contact_api_page/)）后，用户可在小程序内唤起客服会话页面，给小程序发消息。
+ 1.	开发者在小程序内添加客服功能（参考[在页面中使用客服消息](https://smartprogram.baidu.com/docs/develop/serverapi/contact_api_page/)）后，用户可在小程序内唤起客服会话页面，给小程序发消息。
 
  2.	已使用过的小程序客服消息会聚合显示在“百度APP-我的-私信”中，用户可以在此处查看历史客服消息，并给小程序客服发消息。
 

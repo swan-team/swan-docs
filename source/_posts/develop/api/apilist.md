@@ -58,7 +58,7 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
@@ -194,7 +194,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pagescrollto_swan-pageScrollTo/">swan.pageScrollTo</a>|将页面滚动到目标位置（可以设置滚动动画时长）。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/background_swan-setBackgroundColor/">swan.setBackgroundColor</a>|设置窗口的背景颜色。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/background_swan-setBackgroundTextStyle/">swan.setBackgroundTextStyle</a>|设置窗口下拉背景loading样式|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_onPullDownRefresh/">onPullDownRefresh</a>|详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_onPullDownRefresh/">onPullDownRefresh</a>|详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-startPullDownRefresh/">swan.startPullDownRefresh</a>|开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-stopPullDownRefresh/">swan.stopPullDownRefresh</a>|停止当前页面下拉刷新。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/custom_component/">swan.nextTick</a>|延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）|
@@ -251,6 +251,8 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/">swan.makePhoneCall</a>|拨打电话|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/">swan.setClipboardData</a>|设置系统剪贴板的内容|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/">swan.addEventOnCalendar</a>|向系统日历写入一个活动，之后在设定的时间提醒|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/">swan.deleteEventOnCalendar</a>|删除日历上的某个活动|
 
 
 ## 第三方平台
@@ -273,7 +275,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/">swan.getUserInfo</a>|获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/setting_swan-openSetting/">swan.openSetting</a>|调起客户端智能小程序设置界面，返回用户设置的操作结果。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/setting_swan-getSetting/">swan.getSetting</a>|获取用户的当前设置|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_onShareAppMessage/">onShareAppMessage</a>|详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_onShareAppMessage/">onShareAppMessage</a>|详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-openShare/">swan.openShare</a>|调起分享面板|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-shareFile/">swan.shareFile</a>|支持调起系统分享面板将文件分享到其他App。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/">swan.chooseAddress</a>|调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。|
@@ -298,6 +300,5 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearTimeout</a>|取消由 setTimeout 设置的定时器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅；|
-
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
+|<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。|

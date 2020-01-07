@@ -22,16 +22,16 @@ Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A
 
 ** 生命周期函数详解 **
 
-|当前页面 |路由后页面 |触发的生命周期 |
+|当前页面 |路由后页面 |触发的生命周期 |备注|
 |---- | ---- | ---- | ---- |
-|A|A|Nothing happend|
-|A|B|A.onHide(), B.onLoad(), B.onShow()|
-|A|B（再次打开）| A.onHide(), B.onShow()|
-|C|A|C.onUnload(), A.onShow()|
-|C|B|C.onUnload(), B.onLoad(), B.onShow()|
-|D|B|D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()|
-|D（从转发进入）|A|D.onUnload(), A.onLoad(), A.onShow()|
-|D（从转发进入）|B|D.onUnload(), B.onLoad(), B.onShow()|
+|A|A|Nothing happend| 默认小程序打开时已经触发了A.onLoad,此时没有事件触发|
+|A|B|A.onHide(), B.onLoad(), B.onShow()| 路径A->B，B第一次打开，触发onLoad|
+|A|B（再次打开）| A.onHide(), B.onShow()| 路径A->B->x(任意页面)->B，B再次打开，不再触发onLoad，直接触发onShow|
+|C|A|C.onUnload(), A.onShow()| 路径A->C->A，C页面销毁触发onUnLoad，A第二次打开触发onShow|
+|C|B|C.onUnload(), B.onLoad(), B.onShow()|路径A->C->B，C页面销毁触发onUnLoad，B第一次创建触发onLoad|
+|D|B|D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()|路径A->C->D->B，D和C页面依次销毁触发onUnLoad，B第一次创建触发onLoad|
+|D（从转发进入）|A|D.onUnload(), A.onLoad(), A.onShow()|路径D->A，D页面销毁触发onUnLoad，A第一次创建触发onLoad|
+|D（从转发进入）|B|D.onUnload(), B.onLoad(), B.onShow()|路径D->B，D页面销毁触发onUnLoad，B第一次创建触发onLoad|
 
 **注意**：
 - navigateTo、redirectTo 只能打开非 tabBar 页面；

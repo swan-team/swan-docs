@@ -8,7 +8,7 @@ priority: 01-01
 
 ### 准备开发工具
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
 ### 小游戏项目创建
 

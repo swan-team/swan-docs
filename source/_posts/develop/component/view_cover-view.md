@@ -9,10 +9,16 @@ sidebar: view_cover-view
 
 **解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的文本视图。只支持嵌套cover-view、cover-image组件。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
+##  属性说明 
+
+| 属性 | 类型 | 默认值 | 必填 | 说明 |
+|:------ |:------ |:------ |:------ |:------ |
+| scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
+
 
 ## 代码示例
 
-<a href="swanide://fragment/3a20cabea8f8d7227222ce3ab1cd1a801576151679923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/97788bb33bef37a044972011e5960b561577360497251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -65,9 +71,4 @@ Page({
 });
 ```
 
- ##  属性说明 
-
-| 属性 | 类型 | 默认值 | 必填 | 说明 |
-|:------ |:------ |:------ |:------ |:------ |
-| scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
-
+ 

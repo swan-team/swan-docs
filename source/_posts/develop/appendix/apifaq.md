@@ -17,7 +17,7 @@ A：当前我们提供方式可以查询到您指定地点的经纬度
 
 * 使用地图拾取器
 
-    1. [百度地图拾取器](http://api.map.baidu.com/lbsapi/getpoint/index.html)：坐标系BD09，不能直接用于小程序，需要开发者转换为GCJ02。后期小程序优化后可以支持该坐标系。      
+    1. [百度地图拾取器](https://api.map.baidu.com/lbsapi/getpoint/index.html)：坐标系BD09，不能直接用于小程序，需要开发者转换为GCJ02。后期小程序优化后可以支持该坐标系。      
 
     2. [腾讯地图拾取器](https://lbs.qq.com/tool/getpoint/)：坐标系GCJ02，可直接使用。
 
@@ -26,7 +26,7 @@ A：当前我们提供方式可以查询到您指定地点的经纬度
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？
 
-A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](http://smartprogram.baidu.com/docs/develop/api/net_request/)。
+A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](https://smartprogram.baidu.com/docs/develop/api/net_request/)。
 
 
 
@@ -85,13 +85,13 @@ Page({
     },
     playOne() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.play();
     },
     playTwo() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.play();
     }

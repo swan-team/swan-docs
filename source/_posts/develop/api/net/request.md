@@ -343,7 +343,7 @@ Page({
     data: { },
     request() {
         swan.request({
-            url: 'http://apis.baidu.com/heweather/weather/free?city=beijing',
+            url: 'https://apis.baidu.com/heweather/weather/free?city=beijing',
             method: 'GET', 
             success: res => {
                 console.log('request success', res);

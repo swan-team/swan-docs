@@ -83,3 +83,17 @@ Page({
 
 > 通常情况下，为保证抓取内容相关性和用户体验一致性，**不建议开发者区分 Web 化环境做差异化实现**。
 > Web 化环境标识主要服务于诸如区分环境统计等需求场景。
+
+**代码示例**
+```javascript
+getSystemInfo(e) {
+    swan.getSystemInfo({
+        success: res => {
+            console.log('res', res.platform); // web
+        },
+        fail: err => {
+        
+        }
+    });
+}
+```

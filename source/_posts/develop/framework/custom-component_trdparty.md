@@ -11,7 +11,7 @@ sidebar: custom-component_trdparty
 ## 开发前准备
 
 * 要求开发者具有基础的 node.js 和 npm 相关的知识，同时需要百度开发者工具辅助开发。
-* 下载百度开发者工具。 [Windows 64版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online)  |   [Mac版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)。
+* 下载百度开发者工具。 [Windows 64版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online)  |   [Mac版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)。
 
 ## 使用 npm 包
 

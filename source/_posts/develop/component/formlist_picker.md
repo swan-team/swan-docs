@@ -9,10 +9,89 @@ sidebar: formlist_picker
 
 **解释**：从底部弹起的滚动选择器。现支持五种选择器，通过 mode 来区分，分别是时间选择器、日期选择器、普通选择器、多列选择器以及省市区选择器，默认是普通选择器。
 
- 
+##  属性说明 
+
+|属性|类型|默认值|必填|说明|
+|--- |---|---|---|---|
+|mode|String|selector|否|选择器类型|
+|disabled|Boolean|false|否|是否禁用|
+|bindcancel|EventHandle||否|取消选择或点击遮罩层收起 picker 时触发|
+
+> 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
+
+###  mode的有效值 
+
+|值|说明|
+|---|---|
+|selector|普通选择器|
+|time|时间选择器|
+|date|日期选择器|
+|multiSelector|多列选择器|
+|region|省市区选择器|
+
+### 普通选择器：mode = selector 
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| range | Array &#124;  Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效|
+| range-key | String |  |当 range 是一个 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
+
+
+### <notice>时间选择器：mode = time</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | String  |  |表示选中的时间，格式为 "hh:mm"|
+| start | String  |   |表示有效时间范围的开始，字符串格式为 "hh:mm"|
+| end | String  | |表示有效时间范围的结束，字符串格式为 "hh:mm"|
+|bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+
+### <notice>日期选择器：mode = date</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | String | 当前日期|表示选中的日期，格式为 "YYYY-MM-DD"|
+| start | String |  |表示有效日期范围的开始，字符串格式为 "YYYY-MM-DD"|
+| end | String |  |表示有效日期范围的结束，字符串格式为 "YYYY-MM-DD"|
+| fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
+| bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
+
+### fields有效值：
+
+| 值 | 说明 |
+| ---- | ---- |
+| year | 选择器粒度为年 |
+| month | 选择器粒度为月份 |
+| day | 选择器粒度为天 |
+
+
+### <notice>多列选择器：mode = multiSelector</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| range | 二维 Array &#124; Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
+| range-key | String |  |当 range 是一个二维 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
+| value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
+| bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
+| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
+
+### <notice>省市区选择器：mode = region</notice>
+
+|属性名 |类型  |默认值  |说明|
+|---- | ---- | ---- |---- |
+| value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
+| custom-item | String | |可为每一列的顶部添加一个自定义的项|
+| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
+| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
+
+
 ## 代码示例
 
-<a href="swanide://fragment/4ae98fdfb268ff17520a7573e1107daf1576151249224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e65d3e49c437693078e67f57238fbdd91577360624286" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -298,84 +377,6 @@ Page({
 });
 ```
 
-##  属性说明 
-
-|属性|类型|默认值|必填|说明|
-|--- |---|---|---|---|
-|mode|String|selector|否|选择器类型|
-|disabled|Boolean|false|否|是否禁用|
-|bindcancel|EventHandle||否|取消选择或点击遮罩层收起 picker 时触发|
-
-> 除去上述通用属性外，针对不同的mode，picker组件还提供有其他不同的属性，详细介绍见下。
-
-###  mode的有效值 
-
-|值|说明|
-|---|---|
-|selector|普通选择器|
-|time|时间选择器|
-|date|日期选择器|
-|multiSelector|多列选择器|
-|region|省市区选择器|
-
-### 普通选择器：mode = selector 
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| range | Array &#124;  Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效|
-| range-key | String |  |当 range 是一个 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
-| value | Number | 0 |value 的值表示选择了 range 中的第几个（下标从 0 开始）|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
-
-
-### <notice>时间选择器：mode = time</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | String  |  |表示选中的时间，格式为 "hh:mm"|
-| start | String  |   |表示有效时间范围的开始，字符串格式为 "hh:mm"|
-| end | String  | |表示有效时间范围的结束，字符串格式为 "hh:mm"|
-|bindchange| EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-
-### <notice>日期选择器：mode = date</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | String | 当前日期|表示选中的日期，格式为 "YYYY-MM-DD"|
-| start | String |  |表示有效日期范围的开始，字符串格式为 "YYYY-MM-DD"|
-| end | String |  |表示有效日期范围的结束，字符串格式为 "YYYY-MM-DD"|
-| fields | String | day |有效值 year、 month、 day，表示选择器的粒度|
-| bindchange | EventHandle |   |value 改变时触发 change 事件，event.detail = {value: value}|
-
-### fields有效值：
-
-| 值 | 说明 |
-| ---- | ---- |
-| year | 选择器粒度为年 |
-| month | 选择器粒度为月份 |
-| day | 选择器粒度为天 |
-
-
-### <notice>多列选择器：mode = multiSelector</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| range | 二维 Array &#124; Array.&lt; object&gt;  |[]|mode 为 selector 或 multiSelector 时，range 有效。二维数组，长度表示多少列，数组的每项表示每列的数据，如[["a","b"], ["c","d"]]|
-| range-key | String |  |当 range 是一个二维 Array.&lt; object&gt; 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容|
-| value | Array | [ ] |value 每一项的值表示选择了 range 对应项中的第几个（下标从 0 开始）|
-| bindcolumnchange | EventHandle | |某一列的值改变时触发 columnchange 事件，event.detail = {column: column, value: value}，column 的值表示改变了第几列（下标从0开始），value 的值表示变更值的下标|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value: value}|
-| title | String | | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
-
-### <notice>省市区选择器：mode = region</notice>
-
-|属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
-| value | Array | [] |表示选中的省市区，默认选中每一列的第一个值|
-| custom-item | String | |可为每一列的顶部添加一个自定义的项|
-| bindchange | EventHandle | |value 改变时触发 change 事件，event.detail = {value}， 暂不支持统计用区划代码（code）、邮政编码（postcode）。|
-| title | String |  | 选择器标题（仅安卓有效）默认值为 "设置"; <font color="#4183c4">基础库 3.110.3 及以上废弃</font> |
 
 ##  Bug & Tip 
 

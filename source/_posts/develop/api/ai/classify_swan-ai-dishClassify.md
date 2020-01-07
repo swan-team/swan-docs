@@ -38,7 +38,7 @@ sidebar:  classify_swan-ai-dishClassify
 **result 返回值说明**
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |name|	String|	菜名，示例：鱼香肉丝。|
 |has_calorie|   Boolean|菜品是否含有卡路里。 |
 |calorie|	String|	卡路里，每100g的卡路里含量。|

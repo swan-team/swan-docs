@@ -102,7 +102,7 @@ options = {
 <spintileviewer config="{{ config }}" style="width: 100%; height: 100%; display: block"></spintileviewer>
 ```
 
-参考配置文件url：http://hydreigon-dev.cdn.bcebos.com/demo/assets/panamera_256/external/closed/config.json
+参考配置文件url：https://hydreigon-dev.cdn.bcebos.com/demo/assets/panamera_256/external/closed/config.json
 
 动态库默认仅支持核心的 3D 环物渲染（多视角分级分块）和交互（拖拽缩放），也可以通过设置```defaultui=true```来显示默认的控件，支持PC和移动端的适配，支持功能包括：热点、缩放按钮、复位按钮、全屏按钮、二维码等，配置文件是在无UI配置项的基础上增加了相关字段，一个典型的有UI配置如下：
 
@@ -146,7 +146,7 @@ options = {
         "describe": "正文显示，纯正文情况。测试测试测试测试测试测试测试测试",
         "img": "",
         "title": "超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb超长标题chb",
-        "href": "http://www.baidu.com"
+        "href": "https://www.baidu.com"
       },
       "tip": "车头561564126514651653165"
     },
