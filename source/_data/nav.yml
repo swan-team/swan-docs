@@ -1221,77 +1221,7 @@
                     -
                       link: /develop/component/ad
                       text: ad 广告
-                      name: ad
-    -
-      text: 扩展能力
-      name: extended
-      sidebar:
-        # -   
-        #     text: 基础组件
-        #     sidebar:
-        #       -
-        #         link: /develop/extended/component-content/commentpublish
-        #         text: 半屏内容发布器带服务版
-        #         name: commentpublish
-        #       -
-        #         link: /develop/extended/component/publish
-        #         text: 全屏内容发布器组件
-        #         name: publish
-        #       -
-        #         link: /develop/extended/component-content/like
-        #         text: 点赞组件
-        #         name: like      
-        -
-       
-          text: smart-ui组件
-          sidebar:
-              -
-                link: /develop/extended/ui_component/info
-                text: smart-ui介绍
-                name: info
-              -
-                link: /develop/extended/ui_component/smt-feed
-                text: smt-feed 信息流
-                name: smt-feed
-              -
-                link: /develop/extended/ui_component/smt-feed-item
-                text: smt-feed-item 信息流子项
-                name: smt-feed-item
-              -
-                link: /develop/extended/ui_component/smt-icon
-                text: smt-icon 图标
-                name: smt-icon
-              -
-                link: /develop/extended/ui_component/smt-refresh
-                text: smt-refresh 刷新
-                name: smt-refresh
-              -
-                link: /develop/extended/ui_component/smt-spin
-                text: smt-spin 加载
-                name: smt-spin
-              -
-                link: /develop/extended/ui_component/smt-page-status
-                text: smt-page-status 页面状态
-                name: smt-page-status
-              -
-                link: /develop/extended/ui_component/smt-navigation
-                text: smt-navigation 自定义导航
-                name: smt-navigation
-        -
-            text: smart-ui模板
-            sidebar:
-              -
-                link: /develop/extended/template/smt-detail-pages
-                text: 图文详情页
-                name: smt-detail-pages   
-              -
-                link: /develop/extended/template/smt-feed-page
-                text: 信息流模板
-                name: smt-feed-page  
-              -
-                link: /develop/extended/template/smt-status-page
-                text: 页面状态模板
-                name: smt-status-page          
+                      name: ad 
     -
       text: API
       name: api
@@ -3537,7 +3467,76 @@
                     link: /develop/serverapi/getunlimited
                     text: getunlimited
                     name: getunlimited
-
+    -
+      text: 扩展能力
+      name: extended
+      sidebar:
+        # -   
+        #     text: 基础组件
+        #     sidebar:
+        #       -
+        #         link: /develop/extended/component-content/commentpublish
+        #         text: 半屏内容发布器带服务版
+        #         name: commentpublish
+        #       -
+        #         link: /develop/extended/component/publish
+        #         text: 全屏内容发布器组件
+        #         name: publish
+        #       -
+        #         link: /develop/extended/component-content/like
+        #         text: 点赞组件
+        #         name: like      
+        -
+       
+          text: smart-ui组件
+          sidebar:
+              -
+                link: /develop/extended/ui_component/info
+                text: smart-ui介绍
+                name: info
+              -
+                link: /develop/extended/ui_component/smt-feed
+                text: smt-feed 信息流
+                name: smt-feed
+              -
+                link: /develop/extended/ui_component/smt-feed-item
+                text: smt-feed-item 信息流子项
+                name: smt-feed-item
+              -
+                link: /develop/extended/ui_component/smt-icon
+                text: smt-icon 图标
+                name: smt-icon
+              -
+                link: /develop/extended/ui_component/smt-refresh
+                text: smt-refresh 刷新
+                name: smt-refresh
+              -
+                link: /develop/extended/ui_component/smt-spin
+                text: smt-spin 加载
+                name: smt-spin
+              -
+                link: /develop/extended/ui_component/smt-page-status
+                text: smt-page-status 页面状态
+                name: smt-page-status
+              -
+                link: /develop/extended/ui_component/smt-navigation
+                text: smt-navigation 自定义导航
+                name: smt-navigation
+        -
+            text: smart-ui模板
+            sidebar:
+              -
+                link: /develop/extended/template/smt-detail-pages
+                text: 图文详情页
+                name: smt-detail-pages   
+              -
+                link: /develop/extended/template/smt-feed-page
+                text: 信息流模板
+                name: smt-feed-page  
+              -
+                link: /develop/extended/template/smt-status-page
+                text: 页面状态模板
+                name: smt-status-page     
     -
       text: 工具
       name: devtools

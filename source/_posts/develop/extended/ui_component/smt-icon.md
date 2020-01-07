@@ -12,13 +12,15 @@ sidebar: smt-icon
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
 |name |String |是||icon的英文名称|
-|color |String, Array.&lt;String&gt; |||icon的颜色，多色图标支持传入色值的数组|
-|size |Number ||25|icon的尺寸，单位px|
+|color |String, Array.&lt;String&gt; |否||icon的颜色，多色图标支持传入色值的数组|
+|size |Number |否|25|icon的尺寸，单位px|
+
 
 ## 示例
 
 <a href="swanide://fragment/1151cb408d98313c4e79bb6a62755bfa1577193673206" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+ 
 ### 扫码体验
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-icon.png"  class="demo-qrcode-image" />
@@ -58,3 +60,4 @@ Page({
 
 
 
+ 
