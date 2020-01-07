@@ -1,22 +1,22 @@
 ---
-title: 生命周期
+title: 页面生命周期
 header: develop
-nav: tutorial
+nav: framework
 sidebar: process_life
 ---
 
-## 原理图：
+## 原理图
 以下内容详细的描述了一个页面被渲染的全过程。
 
- ![图片](../../../img/framwork/framework-01.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/framework-01.png)
 
-**注释：**
+
 1. FCP: First Contentful Paint，即首次有内容的绘制；
 2. FMP: First Meaningful Paint，即首次有意义的绘制；
 
 下列加载时间线屏幕截图直观的介绍了`FCP`与`FMP`的含义：
 
- ![图片](../../../img/framwork/FMP.jpeg)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/FMP.jpeg)
 
 ## 首页初次渲染全过程
 ### 1. 初始化
@@ -62,7 +62,7 @@ Page({
 `APP`服务线程将初始化渲染数据派发给渲染线程，渲染进程拿到这些初始化数据后，会初始化页面及自定义组件，最后将所有内容渲染到页面上。
 
 ### 4. firstRender
-渲染线程完成首次渲染后，此时已经可以获取整个页面的所以信息，渲染线程派发`firstRender`消息通知`APP`服务线程。`App`服务线程收到此消息后执行页面和自定义组件相关的生命周期。
+渲染线程完成首次渲染后，此时已经可以获取整个页面的所有信息，渲染线程派发`firstRender`消息通知`APP`服务线程。`App`服务线程收到此消息后执行页面和自定义组件相关的生命周期。
 
 整个生命周期执行顺序如下所示：
 ```js
@@ -75,7 +75,7 @@ app onLaunch
 -> cpnt ready   -> page onReady
 ```
 
-**注释：cpnt 指一个自定义组件。**
+> cpnt 指一个自定义组件。 
 
 ### 5. setData
 `APP`服务线程触发以上生命周期后，逻辑层一般执行了众多的`setData`，每次`setData`均会使得`App`服务线程向渲染线程传送数据，引起页面的重新渲染。

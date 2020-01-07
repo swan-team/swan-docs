@@ -26,7 +26,7 @@ sidebar: open
 
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/d660ceb0f0b55526185b4e674a74705d1577360610130" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

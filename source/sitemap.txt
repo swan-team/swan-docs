@@ -28,7 +28,6 @@ https://smartprogram.baidu.com/docs/introduction/auditing_faq/
 https://smartprogram.baidu.com/docs/introduction/auditing_road/
 https://smartprogram.baidu.com/docs/introduction/rank/
 https://smartprogram.baidu.com/docs/introduction/rank_pageinfo/
-https://smartprogram.baidu.com/docs/introduction/rank_id/
 https://smartprogram.baidu.com/docs/introduction/rank_h5/
 https://smartprogram.baidu.com/docs/introduction/rank_single/
 https://smartprogram.baidu.com/docs/introduction/rank_setimage/
@@ -58,9 +57,10 @@ https://smartprogram.baidu.com/docs/introduction/contact_standard/
 https://smartprogram.baidu.com/docs/introduction/scancode/
 https://smartprogram.baidu.com/docs/introduction/getphonenumber/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory/
+https://smartprogram.baidu.com/docs/introduction/productlaboratory_faq/
+https://smartprogram.baidu.com/docs/introduction/examine_faq/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory_search/
 https://smartprogram.baidu.com/docs/introduction/productlaboratory_ad/
-https://smartprogram.baidu.com/docs/introduction/productlaboratory_faq/
 https://smartprogram.baidu.com/docs/design/overview/introduction/
 https://smartprogram.baidu.com/docs/design/principle/easytouse/
 https://smartprogram.baidu.com/docs/design/principle/hierarchical/
@@ -87,6 +87,7 @@ https://smartprogram.baidu.com/docs/design/story/light_up/
 https://smartprogram.baidu.com/docs/design/resource/uikit/
 https://smartprogram.baidu.com/docs/design/resource/checklist/
 https://smartprogram.baidu.com/docs/design/resource/lottie/
+https://smartprogram.baidu.com/docs/design/resource/animationVideo/
 https://smartprogram.baidu.com/docs/develop/fuctionlist/list/
 https://smartprogram.baidu.com/docs/develop/tutorial/demo/
 https://smartprogram.baidu.com/docs/develop/tutorial/install/
@@ -114,6 +115,7 @@ https://smartprogram.baidu.com/docs/develop/framework/app_service_pagelife/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_pagefunction/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_pagecomponent/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_page_setData/
+https://smartprogram.baidu.com/docs/develop/framework/process_life/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_route/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_routegetCurrentPages/
 https://smartprogram.baidu.com/docs/develop/framework/app_service_routestyle/
@@ -178,7 +180,8 @@ https://smartprogram.baidu.com/docs/develop/component/base_text/
 https://smartprogram.baidu.com/docs/develop/component/base_icon/
 https://smartprogram.baidu.com/docs/develop/component/base_progress/
 https://smartprogram.baidu.com/docs/develop/component/base_rich-text/
-https://smartprogram.baidu.com/docs/develop/component/base_animation-view-Lottie/
+https://smartprogram.baidu.com/docs/develop/component/animation-view-Lottie/
+https://smartprogram.baidu.com/docs/develop/component/animation-video/
 https://smartprogram.baidu.com/docs/develop/component/formlist_button/
 https://smartprogram.baidu.com/docs/develop/component/formlist_form/
 https://smartprogram.baidu.com/docs/develop/component/formlist_label/
@@ -207,6 +210,17 @@ https://smartprogram.baidu.com/docs/develop/component/canvas/
 https://smartprogram.baidu.com/docs/develop/component/open/
 https://smartprogram.baidu.com/docs/develop/component/open_web-view/
 https://smartprogram.baidu.com/docs/develop/component/ad/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/info/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-feed/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-feed-item/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-icon/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-refresh/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-spin/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-page-status/
+https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-navigation/
+https://smartprogram.baidu.com/docs/develop/extended/template/smt-detail-pages/
+https://smartprogram.baidu.com/docs/develop/extended/template/smt-feed-page/
+https://smartprogram.baidu.com/docs/develop/extended/template/smt-status-page/
 https://smartprogram.baidu.com/docs/develop/api/apilist/
 https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/
 https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/
@@ -357,6 +371,11 @@ https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-hideStatusBar/
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-stop/
 https://smartprogram.baidu.com/docs/develop/api/media/videocontext_VideoContext-playbackRate/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-play/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-pause/
+https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_AnimationVideo-seek/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_LivePlayerContext/
 https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_LivePlayerContext-play/
@@ -553,6 +572,8 @@ https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addPhoneContact/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/
 https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/
+https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/
+https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/
 https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/
 https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/
 https://smartprogram.baidu.com/docs/develop/api/open/log/
@@ -675,7 +696,6 @@ https://smartprogram.baidu.com/docs/develop/devtools/diff/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/quick-start/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/demo/
-https://smartprogram.baidu.com/docs/develop/devtools/auto/remote/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/automator/launch/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/automator/connect/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/pageStack/
@@ -688,7 +708,6 @@ https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/currentPa
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/systemInfo/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/callSwanMethod/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/login/
-https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/remote/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/disconnect/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/smartprogram/close/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/page/path/
@@ -777,14 +796,6 @@ https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/document/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/storage/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/function/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/cloud-callFunction/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-feed/
-https://smartprogram.baidu.com/docs/develop/extensions/component/info/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-feed-item/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-icon/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-refresh/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-spin/
-https://smartprogram.baidu.com/docs/develop/extensions/component/smt-page-status/
-https://smartprogram.baidu.com/docs/develop/extensions/template/content-detail/
 https://smartprogram.baidu.com/docs/develop/function/navigation/
 https://smartprogram.baidu.com/docs/develop/function/opensmartprogram/
 https://smartprogram.baidu.com/docs/develop/function/webintroduction/

@@ -24,7 +24,7 @@ sidebar: canvas
 
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/91fbbbb9b45a5dd6728e947edb9915931577360466230" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

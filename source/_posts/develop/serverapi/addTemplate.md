@@ -11,7 +11,7 @@ sidebar: addTemplate
 
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/add
+POST https://openapi.baidu.com/rest/2.0/smartapp/templateadd
 ```
 **公共请求参数**:
 

@@ -226,7 +226,7 @@ Page({
 }
 ```
 
-> 说明
-       1. 需要2.15及其上版本的开发者工具与百度App 11.10及其以上版本
+**Bug&Tip**：
+       1. 需要2.15及其上版本的开发者工具与基础库 3.70.53 及其以上版本
        2. 骨架屏移除的时机由开发者自己掌控。开发者可以在Page内通过调用this.removeSkeleton()移除。
        3. 在调用removeSkeleton方法的时候，需要有兼容逻辑（`this.removeSkeleton && this.removeSkeleton()`）

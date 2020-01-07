@@ -10,13 +10,24 @@ sidebar: createinneraudiocontext_InnerAudioContext-onStop
 
 **解释**：音频停止事件
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextStop.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/85895f7c8bc3e8bad46e9d13a083667a1574011686142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextStop.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +41,9 @@ sidebar: createinneraudiocontext_InnerAudioContext-onStop
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/85895f7c8bc3e8bad46e9d13a083667a1574011686142" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

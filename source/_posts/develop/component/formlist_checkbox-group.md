@@ -16,7 +16,7 @@ sidebar: formlist_checkbox-group
 |:---- | :---- | :---- |:---- |:---- |
 |bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/25ed2aed48756b51d8ee66247ad0e31c1577360470649" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

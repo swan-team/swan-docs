@@ -7,26 +7,25 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 
 
-**解释**：对机动车行驶证正本所有关键字段进行识别。
+**解释** ：对机动车行驶证正本所有关键字段进行识别。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_ocrVehicleLicense.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |image | String | 是   |- | 图像资源地址|
-|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
+|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p>  ·  true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p>  ·   false:不检测旋转角度，默认不检测。|
 |accuracy	 | String   |否 |- | normal 使用快速服务，1200ms左右时延；缺省或其它值使用高精度服务，1600ms左右时延。|
 |success |Function    |否 | |      接口调用成功的回调函数|
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+###  success 返回参数说明 ：
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
@@ -34,7 +33,7 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |
 
-**words_result 返回值说明**
+###  words_result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|---|
@@ -49,13 +48,24 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 | 车辆识别代号 | Object | 车辆识别代号|
 | 车辆类型 | Object | 车辆类型|
 
-**品牌型号、发证日期、使用性质、发动机号码、号牌号码、所有人、住址、注册日期、车辆识别代号、车辆类型 返回值说明**
+###  品牌型号、发证日期、使用性质、发动机号码、号牌号码、所有人、住址、注册日期、车辆识别代号、车辆类型 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|---|
 |words | String | 识别结果字符串 |
 
-**图片示例**
+
+## 示例
+
+ 
+<a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_ocrVehicleLicense.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,10 +79,9 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 
-<a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -97,7 +106,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例  
 ```json
 {
     "log_id": $log_id,

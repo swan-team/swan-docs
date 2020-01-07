@@ -68,7 +68,7 @@ sidebar: ad
 | close | 广告播放结束  |
 | noAd | 无广告返回|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/71fecee6a6447d6dc9bf91c09db728661577364626945" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

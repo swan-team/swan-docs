@@ -41,7 +41,7 @@ sidebar: view_movable-view
 | horizontal | 水平方向 |
 | none | 不可移动 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/652b9c504e4c01204a0257f3119c1f641577360578443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

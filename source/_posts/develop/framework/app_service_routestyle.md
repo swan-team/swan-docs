@@ -18,20 +18,33 @@ sidebar: app_service_routestyle
 |Tab 切换  |调用 API [swan.switchTab](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/) 或使用组件 [`<navigator open-type="switchTab"/>`](/develop/component/nav/) 或用户切换 Tab | | 各种情况参考以下表 |
 |重新启动  |调用 API [swan.reLaunch](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/) 或使用组件 [`<navigator open-type="reLaunch"/>`](/develop/component/nav/) | onUnload | onLoad, onShow |
 
+**代码示例**
+
+<a href="swanide://fragment/5437bf2c6384f30a813c5a336d0442e11577779221377" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 详细示例建议在开发者工具中的控制台查看。
+
+
 Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）：
 
 ** 生命周期函数详解 **
 
-|当前页面 |路由后页面 |触发的生命周期 |
+|当前页面 |路由后页面 |触发的生命周期 |备注|
 |---- | ---- | ---- | ---- |
-|A|A|Nothing happend|
-|A|B|A.onHide(), B.onLoad(), B.onShow()|
-|A|B（再次打开）| A.onHide(), B.onShow()|
-|C|A|C.onUnload(), A.onShow()|
-|C|B|C.onUnload(), B.onLoad(), B.onShow()|
-|D|B|D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()|
-|D（从转发进入）|A|D.onUnload(), A.onLoad(), A.onShow()|
-|D（从转发进入）|B|D.onUnload(), B.onLoad(), B.onShow()|
+|A|A|Nothing happend| 默认小程序打开时已经触发了A.onLoad,此时没有事件触发|
+|A|B|A.onHide(), B.onLoad(), B.onShow()| 路径A->B，B第一次打开，触发onLoad|
+|A|B（再次打开）| A.onHide(), B.onShow()| 路径A->B->x(任意页面)->B，B再次打开，不再触发onLoad，直接触发onShow|
+|C|A|C.onUnload(), A.onShow()| 路径A->C->A，C页面销毁触发onUnLoad，A第二次打开触发onShow|
+|C|B|C.onUnload(), B.onLoad(), B.onShow()|路径A->C->B，C页面销毁触发onUnLoad，B第一次创建触发onLoad|
+|D|B|D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()|路径A->C->D->B，D和C页面依次销毁触发onUnLoad，B第一次创建触发onLoad|
+|D（从转发进入）|A|D.onUnload(), A.onLoad(), A.onShow()|路径D->A，D页面销毁触发onUnLoad，A第一次创建触发onLoad|
+|D（从转发进入）|B|D.onUnload(), B.onLoad(), B.onShow()|路径D->B，D页面销毁触发onUnLoad，B第一次创建触发onLoad|
+
+**代码示例**
+
+<a href="swanide://fragment/587cfc623ceb2b4608e69b31ddb73f801577942344726" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 建议在开发者工具中的控制台查看，工具与真机略有差异，以真机的生命周期为准。
 
 **注意**：
 - navigateTo、redirectTo 只能打开非 tabBar 页面；

@@ -7,7 +7,7 @@ sidebar: animation-video
 
 
 
-**解释**：animation-video 属于前端组件。它为百度小程序提供了将特定视频资源渲染为透明背景动效的能力，可以帮助开发者低成本实现更为沉浸，丰富的动画效果。
+**解释**：animation-video 属于前端组件，为智能小程序提供了将特定视频资源渲染为透明背景动效的能力，可以帮助开发者低成本实现更为沉浸，丰富的动画效果。动画资源设计方法详见[透明视频AFX](https://smartprogram.baidu.com/docs/design/resource/animationVideo/)。animation-video 组件还提供丰富的 api 来控制动画的播放，暂停，跳到指定位置等，详见[swan.createAnimationVideo](https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/)。
 
 ##  属性说明
 
@@ -23,7 +23,7 @@ sidebar: animation-video
 |bindended| EventHandle |  |否|当播放到末尾时触发 ended 事件（自然播放结束会触发回调，循环播放结束及暂停动画不会触发。）| 3.130.10 |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/a71d4303d014dc1a93d480a830e11b131577675842297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -113,13 +113,7 @@ Page({
 
 ```
 
-## 组件 api
 
-组件提供丰富的 api 来控制动画的播放，暂停，跳到指定位置等，详见[swan.createAnimationVideo](https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/)
-
-## 设计方法
-
-动画资源设计方法详见[透明视频AFX](https://smartprogram.baidu.com/docs/design/resource/animationVideo/)
 
 
 ##  Bug & Tip

@@ -8,14 +8,11 @@ sidebar: liveplayercontext_LivePlayerContext-requestFullScreen
 
 **解释**：进入全屏
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_LivePlayerContextRequestFullScreen.png"  class="demo-qrcode-image" />
-
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+## 方法参数
+Object object
+### `object`参数说明 ：
 
 |属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |--|
@@ -25,7 +22,19 @@ sidebar: liveplayercontext_LivePlayerContext-requestFullScreen
 |complete   | Function   |   |否 |接口调用结束的回调函数（调用成功、失败都会执行）。|
 
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_LivePlayerContextRequestFullScreen.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +48,7 @@ sidebar: liveplayercontext_LivePlayerContext-requestFullScreen
     </div>     
 </div>
 
-**代码示例1 正常竖向**
+### 代码示例1 正常竖向 
 
 <a href="swanide://fragment/3223cd7473ef7179320503801fa70f251575545170404" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
@@ -77,7 +86,7 @@ Page({
 });
 ```
 
-**代码示例2 屏幕逆时针90度**
+### 代码示例2 屏幕逆时针90度 
 
 <a href="swanide://fragment/371a6513804f4f52b56188cb1d549c731575545190586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
@@ -114,7 +123,7 @@ Page({
 });
 ```
 
-**代码示例3 屏幕顺时针90度**
+### 代码示例3 屏幕顺时针90度 
 
 <a href="swanide://fragment/6c9fd0702eb3d9e37a8858f0ab0ca44e1575545209352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
