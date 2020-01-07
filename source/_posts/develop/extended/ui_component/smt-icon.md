@@ -7,14 +7,6 @@ sidebar: smt-icon
 
 **解释：** 包括天气、系统设置、互动社交、生活服务、书籍影音、政务服务、交通出行7个行业类别的图标。请扫描示例二维码查看图标全集。
 
-##  属性说明 
-
-|属性名 | 类型 | 必填 | 默认值 |说明 |
-|---|---|---|---|---|
-|name |String |是||icon的英文名称|
-|color |String, Array.&lt;String&gt; |||icon的颜色，多色图标支持传入色值的数组|
-|size |Number ||25|icon的尺寸，单位px|
-
 ## 代码示例
 
 <a href="swanide://fragment/1151cb408d98313c4e79bb6a62755bfa1577193673206" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -57,4 +49,26 @@ Page({
 
 
 
+##  属性说明 
 
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|name |String |是||icon的英文名称|
+|color |String, Array.&lt;String&gt; |否||icon的颜色，多色图标支持传入色值的数组|
+|size |Number |否|25|icon的尺寸，单位px|
+
+##  属性说明 
+
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|name |String |是||icon的英文名称|
+|color |String, Array.&lt;String&gt; |否||icon的颜色，多色图标支持传入色值的数组|
+|size |Number |否|25|icon的尺寸，单位px|
+
+##  属性说明 
+
+|属性名 | 类型 | 必填 | 默认值 |说明 |
+|---|---|---|---|---|
+|name |String |是||icon的英文名称|
+|color |String, Array.&lt;String&gt; |否||icon的颜色，多色图标支持传入色值的数组|
+|size |Number |否|25|icon的尺寸，单位px|
