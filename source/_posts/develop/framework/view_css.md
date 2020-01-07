@@ -116,4 +116,4 @@ view.ele{
 
 **说明**：
 * 使用时请注意 box-sizing 属性为非默认值的场景；
-* 基础库版本 2.0.53 开始支持iPhoneX，2.5.30 开始支持iPhoneXS iPhoneXSMax iPhoneXR。
+* 手机百度客户端版本11.0开始支持iPhoneX，11.0.5开始支持iPhoneXS iPhoneXSMax iPhoneXR。

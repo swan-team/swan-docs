@@ -16,7 +16,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |data|Object|否|组件的内部数据，和 properties 一同用于组件的模板渲染| |
 |methods|Object|否|组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 <a href="/develop/framework/custom-component_cont/">组件事件</a>| |
 |behaviors|Array.&lt;string&gt;|否|类似于mixins和traits的组件间代码复用机制，参见 <a href="/develop/framework/custom-component_behaviors/">behaviors</a>| |
-|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData,参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
+|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |attached|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |ready|Function|否|组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |detached|Function|否|组件生命周期函数，在组件实例被从页面节点树移除时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
