@@ -19,7 +19,7 @@ sidebar: cameracontext_CameraContext
 ### 扫码体验
 
 <div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png"" class="demo-qrcode-image" />
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/camera.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 

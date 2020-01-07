@@ -91,7 +91,6 @@ Page({
 <a href="swanide://fragment/371a6513804f4f52b56188cb1d549c731575545190586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 * 在 swan 文件中
-
 ```xml
 <view class="live-play">
     <live-player id="myLive" src="{{src}}"></live-player>

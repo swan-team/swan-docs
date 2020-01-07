@@ -49,7 +49,6 @@ Object object
 
 
 * 在 swan 文件中
-
 ```html
 
 <view class="live-play">
