@@ -14,9 +14,13 @@ var get = function (requestUrl, successFn, failFn) {
             fail: failFn
         });
     }
-    catch (err) {
-        console.error('ajax运行错误', err);
-    }
+    catch (err) {}
+};
+
+var searchReport = function (keyword, countType) {
+    var requestUrl = '/forum/api/statistics_wordstatisticsadd';
+    var params = 'word=' + keyword + '&source=docs&module=category&countType=' + countType;
+    get(requestUrl + '?' + params);
 };
 
 var timer;
@@ -35,13 +39,16 @@ var navToSearch = function (keywords, tarckTag, scope) {
     scope = scope || 'devdocs';
     tarckTag = tarckTag || 'sug跳出点击';
     // 搜索跳转打点
-    _hmt.push(['_trackEvent', tarckTag, keywords, 'devdocs']);
-    window.open(`${origin}/forum/search?word=${keywords}&scope=${scope}&source=docs`, '_blank');
+    _hmt.push(['_trackEvent', tarckTag]);
+    searchReport(keywords, 'click');
+    var url = origin + '/forum/search?word=' + keywords + '&scope=' + scope + '&source=docs';
+    window.open(url, '_blank');
 };
 
-var navToDocs = function (path, keywords, number) {
-    _hmt.push(['_trackEvent', 'sug跳出点击', keywords, 'devdocs']);
-    _hmt.push(['_trackEvent', 'sug跳出点击位置', number, keywords]);
+var navToDocs = function (path, keywords, number, broadName) {
+    _hmt.push(['_trackEvent', 'sug跳出点击']);
+    searchReport(keywords, 'click');
+    _hmt.push(['_trackEvent', 'sug跳出点击位置', number, broadName]);
     window.open(path, '_blank');
 };
 
@@ -49,8 +56,9 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
     var $topSug = $('#top-search-sug');
     var str = '';
     docsIsEmpty = docsIsEmpty || false;
+    searchReport(keywords, 'query');
+    _hmt.push(['_trackEvent', 'sug展示']);
     if (!docsIsEmpty) {
-        _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
         str += '<div class="top-search-sug-result">';
         var listNumber = 0;
         resData.forEach(function (list) {
@@ -58,19 +66,19 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
             var listLen = docList.length;
             listNumber += listLen;
             str += '<div class="top-search-sug-item">'
-                + `<div class="sug-item-broad-name">${list.boardInfo.name}</div>`
+                + '<div class="sug-item-broad-name">' + list.boardInfo.name + '</div>'
                 + '<ul>';
             docList.forEach(function (item, itemIndex) {
-                var path = `${origin}${item.path}`;
+                var path = origin + item.path;
                 // 获取点击sug的位置
                 var number = listNumber - listLen + itemIndex + 1;
                 str += '<li>'
-                    + `<div class="sug-item-container" onclick="navToDocs('${path}', '${keywords}', ${number})">`
-                    + ` <span class="sug-item-tag">${item.tagInfo.name}</span>`
+                    + '<div class="sug-item-container" onclick="navToDocs(\'' +  path + '\',\'' + keywords + '\', \'' + number + '\',\'' + list.boardInfo.name + '\')">'
+                    + '<span class="sug-item-tag">' + item.tagInfo.name + '</span>'
                     + '<span class="sug-item-content">'
-                    +     `<p class="sug-item-content-title">${item.title}</p>`;
+                    +     '<p class="sug-item-content-title">' + item.title + '</p>';
                 if (item.description) {
-                    str += `<p class="sug-item-content-des">${item.description}</p>`;
+                    str += '<p class="sug-item-content-des">' + item.description + '</p>';
                 }
                 str += '</span>'
                     + '</div>'
@@ -81,16 +89,14 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
         });
         str += '</div>'
             +  ' <div class="top-search-sug-more">'
-            +  ` <span onclick="navToSearch('${keywords}')">`
+            +  '<span onclick="navToSearch(\'' + keywords + '\')">'
             +  '查看更多 >'
             +  '</span>'
             +  '</div>';
     }
     else if (docsIsEmpty && !fourmIsEmpty) {
-        _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
-        _hmt.push(['_trackEvent', 'sug无结果', keywords, 'devdocs']);
         str += '<div class="top-search-sug-docs-empty">'
-            +  `<span onclick="navToSearch('${keywords}', 'sug无结果跳转至社区', 'devforum')">`
+            +  '<span onclick="navToSearch(\'' + keywords + '\', sug无结果跳转至社区, devforum)">'
             +  '文档没有相关内容，查看社区搜索结果 >'
             +  '</span>'
             +  '</div>';
@@ -102,7 +108,7 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
 };
 
 var getFourmSug = function (keywords) {
-    get(`/forum/api/search_category?word=${keywords}&scope=devforum`, function (res) {
+    get('/forum/api/search_category?word=' + keywords + '&scope=devforum', function (res) {
         if (res.data.length === 0) {
             renderSearchSug(keywords, [], true, true);
             return;
@@ -128,7 +134,7 @@ function searchFunc(searchId, contentId) {
         });
         $(this).addClass('top-search-box-focus');
         $input.focus();
-        _hmt.push(['_trackEvent', '移动端搜索框', '点击']);
+        _hmt.push(['_trackEvent', '移动端搜索框点击']);
     });
 
     $($input).on('blur', function (e) {
@@ -159,7 +165,7 @@ function searchFunc(searchId, contentId) {
                 renderSearchSug('', [], true, true);
                 return;
             } else {
-                get(`/forum/api/search_category?word=${keywords}&scope=devdocs`, function (res) {
+                get('/forum/api/search_category?word=' + keywords + '&scope=devdocs', function (res) {
                     var resData = res.data;
                     if (resData.length === 0) {
                         getFourmSug(keywords);
@@ -180,16 +186,18 @@ function searchFunc(searchId, contentId) {
     });
 
     $inputPc.addEventListener('focus', function (e) {
-        var keywords = e.target.value;
-        _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
+        // var keywords = e.target.value;
+        _hmt.push(['_trackEvent', 'PC端搜索框点击']);
         $('#top-search-sug').css({
             display: 'block'
         });
-        if ($('.top-search-sug-item').length > 0) {
-            _hmt.push(['_trackEvent', 'sug关键词', keywords, 'devdocs']);
-        } else if ($('.top-search-sug-docs-empty').length > 0) {
-            _hmt.push(['_trackEvent', 'sug无结果', keywords, 'devdocs']);
-        }
+        // if ($('.top-search-sug-item').length > 0) {
+        //     searchReport(keywords, 'query');
+        //     _hmt.push(['_trackEvent', 'sug展示']);
+        // } else if ($('.top-search-sug-docs-empty').length > 0) {
+        //     searchReport(keywords, 'query');
+        //     _hmt.push(['_trackEvent', 'sug文档无结果，社区有结果']);
+        // }
     });
 
     function keyEnter(e) {
@@ -202,7 +210,7 @@ function searchFunc(searchId, contentId) {
             if (!keywords.length) {
                 return;
             }
-            navToSearch(keywordsFilter, 'sug搜索关键词');
+            navToSearch(keywordsFilter, '搜索框回车&点击触发搜索');
             $inputPc.blur();
         }
     }
@@ -218,7 +226,7 @@ function searchFunc(searchId, contentId) {
         if (!keywords) {
             return;
         }
-        navToSearch(keywordsFilter, 'sug搜索关键词');
+        navToSearch(keywordsFilter, '搜索框回车&点击触发搜索');
     });
 
 }
