@@ -9,8 +9,8 @@ sidebar: swan-subscribeService
 
 **解释**：小程序消息订阅服务：取消订阅和查询订阅；订阅操作详见[`form 表单`](/develop/component/formlist_form/)。
 
-**百度APP中扫码体验：**
-![二维码图片]({{qrCode}})
+<!-- **百度APP中扫码体验：** -->
+
 
 **方法参数**：Object object
 
@@ -18,9 +18,9 @@ sidebar: swan-subscribeService
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
-|templateId|String|是|-|模板消息所用的模板库标题ID，与用[`form 表单`](/develop/component/formlist_form/)订阅时，template-id 对应的值相同|
-|subscribeId|String|是|-|订阅唯一标识，与用[`form 表单`](/develop/component/formlist_form/)订阅时，subscribe-id 对应的值相同|
-|type|String|否|query|订阅的操作类型：query(查询订阅）cancel(取消订阅）|
+|templateId|String|是|-|模板消息所用的模板库标题ID，与使用[`form 表单`](/develop/component/formlist_form/)订阅时，template-id 对应的值相同|
+|subscribeId|String|是|-|订阅唯一标识，与使用[`form 表单`](/develop/component/formlist_form/)订阅时，subscribe-id 对应的值相同|
+|type|String|否|query|订阅的操作类型：query（查询订阅）cancel（取消订阅）|
 | success | Function | 否 | - | 接口调用成功的回调函数 |
 | fail | Function | 否 | - | 接口调用失败的回调函数 |
 | complete | Function | 否 | - | 接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -41,7 +41,7 @@ sidebar: swan-subscribeService
 
 **示例**：
 
-[在开发者工具中预览效果](swanide://fragment/7bd059a6888077474c8b8f350ad073f31577773655669)
+[在开发者工具中预览效果](swanide://fragment/f50bfe3df40b9dbc290c3ea38ab9ea0e1578301879913)
 
 * 在 js 文件中
 
