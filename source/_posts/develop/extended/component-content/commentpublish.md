@@ -48,17 +48,17 @@ sidebar: commentpublish
 | uploadImgUrl  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
 
-**moduleList 列表**：
-若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
-如：`moduleList: ['image']` 则只展示图片模块。
+**module-list 列表**：
+若module-list传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
+如：`module-list: ['image']` 则只展示图片模块。
 
-|moduleList| 类型 |描述|
+|module-list| 类型 |描述|
 |---|---|---|
 |image|String|图片模块|
 |emoji|String|表情模块|
 
 
-**emojiPath 参数说明**：
+**emoji-path 参数说明**：
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 
