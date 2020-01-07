@@ -301,4 +301,4 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
-
+|<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。|
