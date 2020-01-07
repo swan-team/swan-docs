@@ -10,12 +10,21 @@ sidebar: videocontext_VideoContext
 
 **解释**： swan.createVideoContext 的返回值
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png"  class="demo-qrcode-image" />
+## 示例
 
+<a href="swanide://fragment/d1dc373ed75d6ba89e6e40cd981e3a7a1573525726544" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/video.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,8 +38,8 @@ sidebar: videocontext_VideoContext
     </div>     
 </div>
 
-**代码示例**
-<a href="swanide://fragment/d1dc373ed75d6ba89e6e40cd981e3a7a1573525726544" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+### 代码示例 
+
 
 * 在 swan 文件中
 
@@ -80,16 +89,16 @@ Page({
 });
 ```
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确       |
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|

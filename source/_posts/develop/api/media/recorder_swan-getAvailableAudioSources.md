@@ -11,14 +11,10 @@ sidebar: recorder_swan-getAvailableAudioSources
 > 基础库3.80.2开始支持，低版本需做兼容处理
 
 **解释**：获取当前支持的音频输入源
-
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getAvailableAudioSources.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object` 参数说明**：
+ 
+## 方法参数
+Object object
+### `object` 参数说明  
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
@@ -26,15 +22,14 @@ sidebar: recorder_swan-getAvailableAudioSources
 |fail   | Function |   否  |  | 接口调用失败的回调函数|
 |complete  |  Function |   否 |   | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success回调函数**
+### success回调函数 
 
-**方法参数**：Object object
-
+ 
 |参数名 |类型  |说明|
 |---- | ---- |---- |
 |audioSources |Array| 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用 |
 
-**res.audioSources有效值**
+### res.audioSources有效值 
 
 |返回值|说明  |
 |---- | ---- |
@@ -47,7 +42,19 @@ sidebar: recorder_swan-getAvailableAudioSources
 |voice_recognition |同 mic，适用于语音识别，仅限 Android|
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getAvailableAudioSources.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -61,9 +68,9 @@ sidebar: recorder_swan-getAvailableAudioSources
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/ff191a79517d7333e2d0c0e452fdd84a1569392252816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 js 文件中

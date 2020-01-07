@@ -11,13 +11,23 @@ sidebar: createinneraudiocontext_InnerAudioContext-offSeeked
 
 **解释**：取消监听 onSeeked 事件
 
-**百度APP中扫码体验：**
+ 
+ ## 方法参数
+Function callback
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffSeeked.png"  class="demo-qrcode-image" />
+## 示例
 
-**方法参数**：Function callback
+<a href="swanide://fragment/77a60057c2f8ea51da62c108e5161b161574735681765" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffSeeked.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +41,9 @@ sidebar: createinneraudiocontext_InnerAudioContext-offSeeked
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/77a60057c2f8ea51da62c108e5161b161574735681765" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

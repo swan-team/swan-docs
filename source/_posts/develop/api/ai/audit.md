@@ -62,6 +62,8 @@ Object object
 
 <a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>

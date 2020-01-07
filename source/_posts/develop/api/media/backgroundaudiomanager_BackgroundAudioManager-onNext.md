@@ -10,14 +10,25 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onNext
 
 **解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnNext.png"  class="demo-qrcode-image" />
+## 方法参数
 
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/a9c6b4e5aa2b4b7c6416889607407ff91574005094848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnNext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,9 +43,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onNext
 </div>
 
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/a9c6b4e5aa2b4b7c6416889607407ff91574005094848" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

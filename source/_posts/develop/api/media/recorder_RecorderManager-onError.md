@@ -9,15 +9,25 @@ sidebar: recorder_RecorderManager-onError
 
 **解释**： 录音错误事件, 会回调错误信息 。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnError.png"  class="demo-qrcode-image" />
-
-
-**方法参数**：Function callback
+Function callback
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/3edb048ed65f02d397a539165711d2ee1574002351482" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerOnError.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,11 +41,11 @@ sidebar: recorder_RecorderManager-onError
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/3edb048ed65f02d397a539165711d2ee1574002351482" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**在 js 文件中**
+
+ 在 js 文件中 
 
 ```javascript
 Page({

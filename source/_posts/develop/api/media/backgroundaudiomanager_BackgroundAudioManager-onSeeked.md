@@ -9,14 +9,25 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onSeeked
 
 **解释**：监听背景音频完成跳转操作事件，背景音频完成跳转操作事件的回调函数。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnSeeked.png"  class="demo-qrcode-image" />
+## 方法参数
 
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/9a6224313c658e1fb3911b90fb6749841573423783140" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnSeeked.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +41,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onSeeked
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/9a6224313c658e1fb3911b90fb6749841573423783140" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
