@@ -180,6 +180,7 @@ https://smartprogram.baidu.com/docs/develop/component/base_text/
 https://smartprogram.baidu.com/docs/develop/component/base_icon/
 https://smartprogram.baidu.com/docs/develop/component/base_progress/
 https://smartprogram.baidu.com/docs/develop/component/base_rich-text/
+https://smartprogram.baidu.com/docs/develop/component/base_animation-view-Lottie/
 https://smartprogram.baidu.com/docs/develop/component/animation-view-Lottie/
 https://smartprogram.baidu.com/docs/develop/component/animation-video/
 https://smartprogram.baidu.com/docs/develop/component/formlist_button/
