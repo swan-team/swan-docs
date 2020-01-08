@@ -16,7 +16,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |data|Object|否|组件的内部数据，和 properties 一同用于组件的模板渲染| |
 |methods|Object|否|组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 <a href="/develop/framework/custom-component_cont/">组件事件</a>| |
 |behaviors|Array.&lt;string&gt;|否|类似于mixins和traits的组件间代码复用机制，参见 <a href="/develop/framework/custom-component_behaviors/">behaviors</a>| |
-|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData,参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
+|created|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，注意此时不能调用setData，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |attached|Function|否|组件生命周期函数，在组件实例进入页面节点树时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |ready|Function|否|组件生命周期函数，在组件布局完成后执行，此时可以获取节点信息，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
 |detached|Function|否|组件生命周期函数，在组件实例被从页面节点树移除时执行，参见 <a href="/develop/framework/custom-component_lifetimes/">组件生命周期</a>| |
@@ -49,7 +49,7 @@ Component构造器可用于定义组件，调用Component构造器时可以指�
 |groupSetData|Function callback|立刻执行 callback ，其中的多个 setData 之间不会触发界面进行重复绘制|<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">2.10.7</a>|
 
 **代码示例**
-<a href="swanide://fragment/0fef06c66614299980e55bdb56cf34521545277337898" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/884df9ae3ea91de7bd757b98107246541578385171044" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // 自定义组件js

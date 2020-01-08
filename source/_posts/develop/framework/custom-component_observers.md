@@ -13,9 +13,9 @@ sidebar: custom-component_observers
 
 例如，`this.data.sum`永远是 `this.data.numberA`与`this.data.numberB`的和。此时，可以使用数据监听器进行如下实现。
 
-代码片段示例：
-[在开发者工具中预览效果](swanide://fragment/d3f85183f54ec67cc54c1334b40beeca1577099991584)
 **代码示例**
+
+[在开发者工具中预览效果](swanide://fragment/d3f85183f54ec67cc54c1334b40beeca1577099991584)
 
 ```js
 Component({
