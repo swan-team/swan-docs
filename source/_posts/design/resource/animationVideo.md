@@ -38,7 +38,6 @@ AFX 是智能小程序提供的一种可支持透明背景的动画播放能力�
 ### 步骤二：导入合成
 在AE里新建一个合成，将设计完成的动画导入到此合成中，注意：合成帧速率不可大于 60FPS，分辨率不可大于 800x800px，如需较大尺寸，后续可由开发人员根据场景进行等比扩大适配。
 
-
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="https://b.bdstatic.com/miniapp/animation-video-step2.png"><p class="m-doc-custom-examples-text">1. 创建合成文件；
@@ -71,3 +70,4 @@ AFX 是智能小程序提供的一种可支持透明背景的动画播放能力�
 
 ### 步骤五：将生成的MP4视频提供给开发人员
 最后将生成的MP4视频提供给开发人员，由开发人员使用透明视频AFX组件能力进行下一步开发，开发文档说明详见[animation-video 透明视频动画](https://smartprogram.baidu.com/docs/develop/component/animation-video/)
+

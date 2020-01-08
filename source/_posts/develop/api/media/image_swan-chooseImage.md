@@ -9,14 +9,10 @@ sidebar: image_swan-chooseImage
 
 
 **解释**：从本地相册选择图片或使用相机拍照。
-
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseImage.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+ 
+## 方法参数
+Object object
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,14 +25,14 @@ sidebar: image_swan-chooseImage
 
 
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
 |tempFilePaths  | Array.&lt; string&gt;  |图片的本地文件路径列表 。|
 |tempFiles  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
-**tempFiles 对象结构如下:**
+### tempFiles 对象结构如下: 
 
 |字段 | 类型  |说明|
 |---- | ---- | ---- |
@@ -44,7 +40,19 @@ sidebar: image_swan-chooseImage
 |size   | Number | 本地文件大小（单位：B）|
 
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseImage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -58,7 +66,7 @@ sidebar: image_swan-chooseImage
     </div>     
 </div>
 
-**代码示例1 - tempFilePaths**：
+### 代码示例1 - tempFilePaths ：
 
 <a href="swanide://fragment/8ffb1a4177b33946ea0bed99b96071c21575216316424" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -85,7 +93,7 @@ Page({
 });
 ```
 
-**代码示例2 - tempFiles**：
+### 代码示例2 - tempFiles ：
 
 <a href="swanide://fragment/593c7689acbe113cbdbb5e4441dcaa921575216919794" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -116,16 +124,16 @@ Page({
 });
 ```
 
-#### 错误码
+##  错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确   |
 |1002|用户取消操作错误码|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
@@ -134,7 +142,7 @@ Page({
 |1003|用户没有授权百度使用相册|
 |1003|小程序文件目录为空|	
 
-**Bug & Tip**
+## Bug & Tip 
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 

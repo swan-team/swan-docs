@@ -5,18 +5,29 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.150 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.150.1|2020.1.6|**New**<p>新增subscribeService能力。<p>**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
+
 ## 3.140 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.140.10|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
+|3.140.9|2019.12.31|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线；<p>**·**API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
+|3.140.8|2019.12.27|同3.140.1|
 |3.140.1|2019.12.11|**Breaking Change**<p>**·**text组件性能优化；<p>**·**新增Android live-player同层context。<p>**BugFix**<p>**·**修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题；<p>**·**修复 textarea 组件第一次 focus 没有返回键盘高度的问题；<p>**·**修复appjs懒加载的白屏问题；<p>**·**修复 开发者工具的san.debug默认必须是true 的问题。|
 
-<!-- |3.140.4|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线；<p>**·**API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。| -->
+
 
 ## 3.130 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.130.11|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题；<p>**·**修复input设置height auto后不能聚焦输入问题。|
+|3.130.10|2019.12.27|**Breaking Change**<p>透明视频组件优化分辨率，提供播放失败回调。 <p>**Breaking Change**<p>修复paymentAPI支付消息解析客户端返回缺失data的报错的问题。|
 |3.130.7|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
 |3.130.3|2019.12.11|**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.130.1|2019.12.04|**New**<p>**·**新增live-player ios同层组件;<p>**·**新增文件系统&request的data参数支持arrayBuffer。<p>**Breaking Change**<p>优化video ios同层事件处理机制。|
@@ -26,6 +37,8 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.125.8|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题；<p>**·**修复input设置height auto后不能聚焦输入问题。|
+|3.125.6|2019.12.27|**Breaking Change**<p>修复paymentAPI支付消息解析客户端返回缺失data的报错的问题。|
 |3.125.5|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。|
 |3.125.3|2019.12.11|**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.125.2|2019.12.02|**BugFix**<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复云开发项目中更新记录报错的问题。<p>na textarea 多实例情况调用 focus聚焦失败，ios-textarea支持双绑 <p>修复 ad组件优化视频贴片|
@@ -73,6 +86,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.100.23|2020.1.7|
 |3.100.22|2019.12.02|**BugFix**<p>修复 ad组件优化视频贴片<p>|
 |3.100.21|2019.11.18|**BugFix**<p>修复android video 结束前自动暂停的问题。|
 |3.100.17|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|

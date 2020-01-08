@@ -11,6 +11,10 @@ sidebar: app_service_routegetCurrentPages
 
 **代码示例** 
 
+<a href="swanide://fragment/a79428623e5ec684cacf94009c3c1d271578384211646" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 页面切换路径过多，详细示例请在开发者工具中的控制台查看。
+
 ```js
 // index.js
 Page({

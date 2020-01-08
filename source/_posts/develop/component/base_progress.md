@@ -25,7 +25,7 @@ sidebar: base_progress
 | duration | Number | 20 |否 |进度增加1%所需毫秒数|3.150.1|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/9227bb17bf9d9d4b0eb4196972d169131577360630143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

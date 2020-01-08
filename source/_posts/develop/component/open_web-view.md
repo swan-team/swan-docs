@@ -17,7 +17,7 @@ sidebar: open_web-view
 | src | String |  | 是 |webview 指向网页的链接 | -|
 |bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/44fea332fa6dd229b9cce780089be3861576152075519" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

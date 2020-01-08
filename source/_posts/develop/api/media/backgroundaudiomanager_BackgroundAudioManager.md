@@ -7,12 +7,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 
 **解释**：[swan.getBackgroundAudioManager](/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/)的返回值。
 
-**百度APP中扫码体验：**
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManager.png"  class="demo-qrcode-image" />
-
-
-**`backgroundAudioManager`类的属性列表**：
+### `backgroundAudioManager`类的属性列表 ：
 
 |属性 | 类型 |  只读 |说明 |
 |---- | ---- | ---- | ---- |
@@ -26,7 +23,19 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
 |coverImgUrl |String |否 |封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 |
 |src |String |  否 |音频的数据链接，用于直接播放，请在上述属性设置完成后使用该属性。有效值：m4a, aac, mp3, wav。|
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/4546806675c2ecbdb645a0f4c51459731573617109560" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManager.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,9 +49,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/4546806675c2ecbdb645a0f4c51459731573617109560" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

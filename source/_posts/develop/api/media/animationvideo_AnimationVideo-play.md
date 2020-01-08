@@ -9,14 +9,23 @@ sidebar:  animationvideo_AnimationVideo-play
 
 **解释**：播放
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_animation-video.png"  class="demo-qrcode-image" />
+## 方法参数
 
+无
+## 示例
 
-**方法参数**：无
+<a href="swanide://fragment/ab0b71caf387bc59ae9a4190d6a750261578455636683" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_animation-video.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,8 +39,8 @@ sidebar:  animationvideo_AnimationVideo-play
     </div>
 </div>
 
-**代码示例**
-<a href="swanide://fragment/ab0b71caf387bc59ae9a4190d6a750261578455636683" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 代码示例 
 
 
 * 在 swan 文件中

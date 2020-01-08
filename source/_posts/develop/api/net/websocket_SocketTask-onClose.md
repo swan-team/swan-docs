@@ -9,13 +9,25 @@ sidebar: websocket_SocketTask-onClose
 
 **解释**：监听 WebSocket 连接关闭事件。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskOnClose.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+
+<a href="swanide://fragment/3719998274e68270309d9331d12182261573408663337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskOnClose.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +41,9 @@ sidebar: websocket_SocketTask-onClose
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/3719998274e68270309d9331d12182261573408663337" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

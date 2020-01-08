@@ -1,7 +1,7 @@
 ---
 title: smt-spin 加载
 header: develop
-nav: extensioned
+nav: extended
 sidebar: smt-spin
 ---
 
@@ -16,7 +16,7 @@ sidebar: smt-spin
 |textConfig |Array |否|[&#39;点击加载更多&#39;, &#39;正在加载...&#39;, &#39;已经到底啦&#39;, &#39;加载失败 点击重新加载&#39;]|加载状态对应的文案|
 |secureBottom |Boolean |否|true|默认兼容iPhoneX 及以上型号底部安全区，非全屏可关闭|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/25af44248f8aad73b64e274ead38d6151577191316430" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

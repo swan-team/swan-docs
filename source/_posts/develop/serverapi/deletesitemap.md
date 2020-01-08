@@ -13,7 +13,7 @@ sidebar: deletesitemap
 > 若需要删除sitemap文件，请调用该接口，删除的仅为sitemap链接地址，对sitemap中已提交成功的素材无影响。
 
 ``` 
- POST https://openapi.baidu.com/rest/2.0/smartapp/access/sitemap/delete 
+ POST https://openapi.baidu.com/rest/2.0/smartapp/access/deletesitemap 
 ```
 
 **公共请求参数** 

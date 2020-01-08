@@ -20,7 +20,7 @@ sidebar: formlist_picker-view
 | bindchange | EventHandle ||否|当滚动选择，value 改变时触发 change 事件，event.detail = {value: value}；value 为数组，表示 picker-view 内的 picker-view-column 当前选择的是第几项（下标从 0 开始）|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8625f259847325d9dc3fd74a91e61e2c1577360625726" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

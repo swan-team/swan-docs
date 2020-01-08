@@ -9,13 +9,22 @@ sidebar: websocket_swan-onSocketClose
 
 **解释**：监听 WebSocket 关闭。
 
-**百度APP中扫码体验：**
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onSocketClose.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/84ceaad32308575a769b2475b7594b691573403059070" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onSocketClose.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +38,9 @@ sidebar: websocket_swan-onSocketClose
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/84ceaad32308575a769b2475b7594b691573403059070" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 js 文件中

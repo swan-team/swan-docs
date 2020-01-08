@@ -18,7 +18,7 @@ sidebar: formlist_radio
 | disabled | Boolean | false | 否 |是否禁用 |
 | color | Color | #3c76ff| 否 | radio 的颜色，同 CSS 的 color |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/888efc1c79bb58d37aaaedf3ac792b851577360633121" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

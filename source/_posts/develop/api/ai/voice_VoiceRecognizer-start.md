@@ -7,14 +7,21 @@ sidebar: voice_VoiceRecognizer-start
 
 **解释**：  开始
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStart.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
+## 示例
 
+ 
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStart.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,7 +35,7 @@ sidebar: voice_VoiceRecognizer-start
     </div>     
 </div>
 
-**代码示例 1**：
+### 代码示例 1 ：
 
 短语音识别（与长语音使用方式一致） - 自动听音 
 
@@ -72,7 +79,7 @@ Page({
 
 ```
 
-**代码示例 2**：
+### 代码示例 2 ：
 
 短语音识别 （与长语音使用方式一致）- 自动听音 
 
@@ -115,7 +122,7 @@ Page({
 
 ```
 
-**代码示例 3**：
+### 代码示例 3 ：
 
 短语音识别 - 手动听音 
 

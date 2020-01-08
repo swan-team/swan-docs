@@ -19,8 +19,8 @@ sidebar: log_swan-checkSession
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|success |Function  |  否 |  |  用户登录态的回调函数，百度APP版本11.16（不包括11.16）之前会以result的值标识Session Key是否失效|
-|fail  |  Function |   否 |  |  用户非登录态的回调函数，百度APP版本11.16（包括11.16）之后Session Key失效/百度APP未登录会直接走fail回调|
+|success |Function  |  否 |  |  用户登录态的回调函数，基础库版本 3.120.9（不包括 3.120.9）之前会以result的值标识Session Key是否失效|
+|fail  |  Function |   否 |  |  用户非登录态的回调函数，基础库版本 3.120.9（包括 3.120.9）之后Session Key失效/百度APP未登录会直接走fail回调|
 |complete |   Function |   否  |   |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 **图片示例**
@@ -39,7 +39,7 @@ sidebar: log_swan-checkSession
 
 **代码示例 1**：
 
-在百度APP版本11.16（不包括11.16）之前建议按照如下示例使用
+在基础库版本 3.120.9（不包括 3.120.9）之前建议按照如下示例使用
 
 <a href="swanide://fragment/2a052b4283fb1e23d02a69dae170f1331572274389729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -86,7 +86,7 @@ swan.checkSession({
 
 **代码示例 2**：
 
-在百度APP版本11.16（包括11.16）之后建议按照如下示例使用
+在基础库版本 3.120.9（不包括 3.120.9）之后建议按照如下示例使用
 
 <a href="swanide://fragment/3bf18e6a967cec2a94c8ae9ee93d78cd1572274602042" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

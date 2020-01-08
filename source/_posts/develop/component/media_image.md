@@ -40,7 +40,7 @@ sidebar: media_image
 | 裁剪 | bottom left |不缩放图片，只显示图片的左下区域|
 | 裁剪 | bottom right |不缩放图片，只显示图片的右下区域|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/d63336b639f9d6162f4fce202c6fc2661577360562192" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
