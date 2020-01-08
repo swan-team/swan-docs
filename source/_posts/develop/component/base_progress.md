@@ -8,18 +8,21 @@ sidebar: base_progress
 
 **解释**：进度条
 
-##  属性说明 
+##  属性说明
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-| percent | Float  | | 否 |百分比 0~100 |
-| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比|
-| stroke-width | Number/String | 2 | 否 |进度条线的宽度，单位 px|
-| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	|
-| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	|
-| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	|
-| active | Boolean  | false  | 否 |进度条从左往右的动画	|
-| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	|
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
+|:---- |: ---- |: ---- |:---- |:---- | :---|
+| percent | Float  | | 否 |百分比 0~100 | |
+| show-info | Boolean  | false  | 否 |在进度条右侧显示百分比| |
+| stroke-width | Number/String | 2 | 否 |进度条的高度，单位 px| |
+| border-radius | number/string | 0 |否 |圆角大小，单位 px|3.150.1|
+| font-size | number/string | 16 |否 |右侧百分比字体大小，单位 px|3.150.1|
+| color | Color  | #09BB07 | 否 |进度条颜色 （请使用 activeColor）	| |
+| activeColor | Color  | #09BB07 | 否 | 已选择的进度条的颜色	| |
+| backgroundColor |  Color | #E6E6E6 | 否 |未选择的进度条的颜色	| |
+| active | Boolean  | false  | 否 |进度条从左往右的动画	| |
+| active-mode | String  | backwards  | 否 |backwards: 动画从头播；forwards：动画从上次结束点接着播	| |
+| duration | Number | 20 |否 |进度增加1%所需毫秒数|3.150.1|
 
 
 ## 示例
@@ -35,7 +38,7 @@ sidebar: base_progress
 
 
 
-###  图片示例 
+###  图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,14 +49,14 @@ sidebar: base_progress
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 1： 默认样式 
+### 代码示例 1： 默认样式
 
 
 
- 
+
 
 ```html
 <view class="wrap">
@@ -64,11 +67,11 @@ sidebar: base_progress
 </view>
 ```
 
-###  代码示例 2： 显示当前百分比 
+###  代码示例 2： 显示当前百分比
 
 
 
- 
+
 
 ```html
 <view class="wrap">
@@ -84,7 +87,7 @@ sidebar: base_progress
 
 ### 代码示例 3： 自定义样式
 
- 
+
 
 ```html
 <view class="wrap">
@@ -102,7 +105,7 @@ sidebar: base_progress
 
 
 
- 
+
 
 ```html
 <view class="wrap">
@@ -130,15 +133,15 @@ sidebar: base_progress
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 
-### 参考示例：设置圆角progress 
+### 参考示例：设置圆角progress
 
 
 
- 
+
 
 ```html
 <view class="wrap">

@@ -13,10 +13,9 @@ sidebar: custom-component_generic
 
 例如，我们现在来实现一个“选框组”（selectable-group）组件，它其中可以放置单选框（custom-radio）或者复选框（custom-checkbox）。这个组件的 swan 可以这样编写：
 
-代码片段示例：
-[在开发者工具中预览效果](swanide://fragment/bee91460368ae837cdb5407a48902af81567754401729)
-
 **代码示例**
+
+[在开发者工具中预览效果](swanide://fragment/bee91460368ae837cdb5407a48902af81567754401729)
 
 ```html
 <!-- selectable-group.swan -->
