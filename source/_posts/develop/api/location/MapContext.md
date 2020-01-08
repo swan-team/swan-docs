@@ -9,11 +9,19 @@ sidebar: MapContext
 
 **解释**：map 返回值。
 
-**百度APP中扫码体验：**
+ 
+## 示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createMapContext.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/f65cf95759e65c9d01bcf3ce0d70f7981573558407387" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createMapContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -27,9 +35,8 @@ sidebar: MapContext
     </div>     
 </div>
 
-**代码示例**
+### 代码示例  
 
-<a href="swanide://fragment/f65cf95759e65c9d01bcf3ce0d70f7981573558407387" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

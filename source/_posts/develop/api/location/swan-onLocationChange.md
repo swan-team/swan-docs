@@ -7,13 +7,15 @@ sidebar: swan-onLocationChange
 
 **解释**：监听实时地理位置变化事件，需结合`swan.startLocationUpdate`使用
 
-**方法参数**：Function callback
+## 方法参数 
 
-**`callback`参数说明**：
+Function callback
+
+### `callback`参数说明  
 
 实时地理位置变化事件的回调函数
 
-**返回参数说明**：
+### 返回参数说明  
 
 |参数 |说明 |
 |---- |----- |
@@ -33,7 +35,12 @@ sidebar: swan-onLocationChange
 |streetNumber|街道号码|
 |district|区|
 
-**代码示例**：
+## 示例
+
+ 
+ 
+
+### 代码示例  
 
 * 在 js 文件中
 
@@ -48,6 +55,6 @@ Page({
 })
 ```
 
-**Tips**:
+## Bug&Tips  
 
-- 该方法会持续监听地理位置信息的变化，建议在不需要监听地理位置信息变化后，直接调用`swan.stopLocationUpdate`方法取消监听。
+- tip：该方法会持续监听地理位置信息的变化，建议在不需要监听地理位置信息变化后，直接调用`swan.stopLocationUpdate`方法取消监听。
