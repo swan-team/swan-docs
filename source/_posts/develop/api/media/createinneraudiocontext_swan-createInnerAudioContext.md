@@ -12,30 +12,29 @@ sidebar: createinneraudiocontext_swan-createInnerAudioContext
 
 **解释**： 创建并返回内部 audio 上下文 `innerAudioContext` 对象。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
+ 无
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createInnerAudioContext.png"  class="demo-qrcode-image" />
+### 返回值 
 
-**方法参数**： 无
+innerAudioContext
 
-**返回值**：innerAudioContext
 
-#### 错误码
 
-* Andriod
+## 示例
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确 |
-|1001|执行失败|
+<a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* iOS
+### 扫码体验
 
-|错误码|说明|
-|--|--|
-|202|解析失败，请检查参数是否正确     |
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createInnerAudioContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**图片示例**
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -49,9 +48,9 @@ sidebar: createinneraudiocontext_swan-createInnerAudioContext
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -63,3 +62,17 @@ Page({
 });
 ```
 
+##  错误码
+
+### Andriod
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确 |
+|1001|执行失败|
+
+### iOS
+
+|错误码|说明|
+|--|--|
+|202|解析失败，请检查参数是否正确     |

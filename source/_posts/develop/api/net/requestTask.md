@@ -9,13 +9,19 @@ sidebar: requestTask
 
 **解释**：网络请求任务对象
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/requestTask.png"  class="demo-qrcode-image" />
-
-
  
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/2666d8786677778d18177eae7db623d11572938991162" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/requestTask.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +35,9 @@ sidebar: requestTask
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/2666d8786677778d18177eae7db623d11572938991162" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -80,7 +86,7 @@ Page({
 
 ```
 
-**Bug & Tip**
+## Bug & Tip 
 
 *  content-type 默认为 'application/json'；
 *  url 中不能有端口。

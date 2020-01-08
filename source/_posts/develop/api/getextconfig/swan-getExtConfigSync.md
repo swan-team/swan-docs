@@ -56,6 +56,7 @@ try {
 } catch (err) {
     console.log('getExtConfigSync fail', err);
 }
+
 ```
 
 **Bug & Tip**

@@ -9,13 +9,12 @@ sidebar: downloadTask-onProgressUpdate
 
 **解释**：监听下载进度变化
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downTaskOnProgressUpdate.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
-
-**返回参数说明**：
+### 返回参数说明  
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
@@ -23,7 +22,18 @@ sidebar: downloadTask-onProgressUpdate
 |totalBytesWritten   | Number  |已经下载的数据长度，单位 Bytes。|
 |totalBytesExpectedToWrite   | Number  |预期需要下载的数据总长度，单位 Bytes。|
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/bdedce15a8381fc4d56574519696df951572948912995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downTaskOnProgressUpdate.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -37,10 +47,10 @@ sidebar: downloadTask-onProgressUpdate
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
  
 
-<a href="swanide://fragment/bdedce15a8381fc4d56574519696df951572948912995" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

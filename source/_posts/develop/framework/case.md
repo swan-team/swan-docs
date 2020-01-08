@@ -27,7 +27,7 @@ sidebar: case
     <td>问题定位</td>  
     <td>优化措施</td>
     <td>参考链接</td>          
-<tr>
+</tr>
 <tr>
     <td rowspan="3"> 页面加载缓慢、打不开<br/></td>
     <td>前端渲染时长较长</td>

@@ -56,7 +56,6 @@ sidebar: log_swan-isLoginSync
 Page({
     isLoginSync() {
         let res = swan.isLoginSync();
-
         // 基础库 3.140.1 之前，无法判断接口是否调用失败
         // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
         if (!(res instanceof Error)) {

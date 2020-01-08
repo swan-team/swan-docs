@@ -8,10 +8,18 @@ sidebar: view_view
 
 **解释**：视图容器，相当于 html 中的 div ，可将页面分割为独立的、不同的部分。如果需要使用滚动视图，请使用 [scroll-view](/develop/component/view_scroll-view/)。
 
+## 属性说明
 
-## 代码示例
+|属性名 |类型  |默认值  |必填|说明| 
+|:---- |:---- |:---- |:---- |:---- | 
+|hover-class | String  |  none  | 否|指定按下去的样式类。当  hover-class="none"  时，没有点击态效果|
+|hover-stop-propagation| Boolean  | false |否 |指定是否阻止本节点的祖先节点出现点击态|
+|hover-start-time| Number | 50 |否 |按住后出现点击态的时间长度，单位毫秒|
+|hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
-<a href="swanide://fragment/f5f39a946d5233ece466d176afbe61a01576152072622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+## 示例
+
+<a href="swanide://fragment/9fb5e294b219f401cec44ae312c7b7ca1577360709295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -76,14 +84,6 @@ sidebar: view_view
 </view>
 ```
 
-## 属性说明
-
-|属性名 |类型  |默认值  |必填|说明| 
-|:---- |:---- |:---- |:---- |:---- | 
-|hover-class | String  |  none  | 否|指定按下去的样式类。当  hover-class="none"  时，没有点击态效果|
-|hover-stop-propagation| Boolean  | false |否 |指定是否阻止本节点的祖先节点出现点击态|
-|hover-start-time| Number | 50 |否 |按住后出现点击态的时间长度，单位毫秒|
-|hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
 
 ##  Bug&Tip  

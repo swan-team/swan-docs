@@ -10,13 +10,11 @@ sidebar: arcameracontext_ARCameraContext-stopRecord
 
 **解释**：结束录像，成功则返回视频。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
+ Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContextRecord.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明  
 
 |参数 | 类型  |必填  |默认值|说明|
 |---- | ---- | ---- |---|---- |
@@ -26,17 +24,28 @@ sidebar: arcameracontext_ARCameraContext-stopRecord
 
 
 
-**success 返回参数说明**：
+### success 返回参数说明 
 
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |tempVideoPath  | String | 视频的临时路径 |
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_ARCameraContextRecord.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。
-
-**代码示例**
+### 代码示例 
 
 参见[ARCameraContext.startRecord](https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_ARCameraContext-startRecord/)示例内容。

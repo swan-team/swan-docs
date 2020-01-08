@@ -10,9 +10,15 @@ sidebar: formlist_checkbox-group
 
 **解释**：多项选择器组，内部由多个 checkbox 组成
 
-## 代码示例
+##  属性说明 
 
-<a href="swanide://fragment/2b1058487cee67fe530bd34eea2761141576151667501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- | :---- |:---- |:---- |
+|bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|
+
+## 示例
+
+<a href="swanide://fragment/25ed2aed48756b51d8ee66247ad0e31c1577360470649" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -167,8 +173,3 @@ Page({
 </view>
 ```
 
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- | :---- |:---- |:---- |
-|bindchange | EventHandle  | | 否 |`<checkbox-group/>`中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}|

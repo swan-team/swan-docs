@@ -17,7 +17,6 @@ sidebar: UpdateManager-applyUpdate
 
 **方法参数**：无
 
-
 **代码示例**
 
 [在开发者工具中预览效果](swanide://fragment/451d89ad638cc28784d6e7feb85a8f571576035627547)
@@ -69,6 +68,8 @@ Page({
     }
 });
 ```
+
+
 
 **Bug & Tip** 
 

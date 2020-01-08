@@ -9,10 +9,26 @@ sidebar: formlist_switch
 
 **解释**：开关选择器
 
+## 属性说明
 
-## 代码示例
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- |: ---- |: ---- |:---- |:---- |
+|checked| Boolean| false| 否 |是否选中|
+|type| String| switch| 否 |样式，有效值：switch,checkbox|
+|color| Color| #3388ff| 否 |switch 的颜色，同 CSS 的 color|
+|disabled|	Boolean|	false| 否 |	是否禁用|
+|bindchange | EventHandle  | | 否 |checked 改变时触发 change 事件，event.detail={ checked:true}|
 
-<a href="swanide://fragment/c539ec21e60d09c581623f70fc4cc8381576151287717" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+###  type 有效值 
+
+| 值 | 说明 |
+| :---- | :---- |
+| switch | 切换样式 |
+| checkbox | 复选框样式 |
+
+## 示例
+
+<a href="swanide://fragment/362c1b11debadeb7245a075f99702b371577360678240" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -120,22 +136,6 @@ sidebar: formlist_switch
     <switch class="init-switch" type="checkbox"></switch>
 </view>
 ```
-## 属性说明
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---- |
-|checked| Boolean| false| 否 |是否选中|
-|type| String| switch| 否 |样式，有效值：switch,checkbox|
-|color| Color| #3388ff| 否 |switch 的颜色，同 CSS 的 color|
-|disabled|	Boolean|	false| 否 |	是否禁用|
-|bindchange | EventHandle  | | 否 |checked 改变时触发 change 事件，event.detail={ checked:true}|
-
-###  type 有效值 
-
-| 值 | 说明 |
-| :---- | :---- |
-| switch | 切换样式 |
-| checkbox | 复选框样式 |
 
 ##  Bug & Tip 
 Tip：switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。

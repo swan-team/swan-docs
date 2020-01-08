@@ -11,7 +11,7 @@ sidebar: getTemplateList
 
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/template/list
+GET https://openapi.baidu.com/rest/2.0/smartapp/templatelist
 ```
 **公共请求参数:**
 

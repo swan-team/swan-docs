@@ -1,7 +1,7 @@
 ---
 title: 点赞服务版
 header: develop
-nav: extended
+nav: component-content
 sidebar: like
 ---
 

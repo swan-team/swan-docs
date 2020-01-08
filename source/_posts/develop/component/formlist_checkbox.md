@@ -9,10 +9,21 @@ sidebar: formlist_checkbox
 
 **解释**：多项选择器
 
+##  属性说明 
 
-## 代码示例
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- |: ---- |:---- |
+|value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
+|disabled|Boolean| false| 否 | 是否禁用|
+|checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
+|color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
 
-<a href="swanide://fragment/2b1058487cee67fe530bd34eea2761141576151667501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+
+## 示例
+
+<a href="swanide://fragment/25ed2aed48756b51d8ee66247ad0e31c1577360470649" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -53,13 +64,3 @@ sidebar: formlist_checkbox
     </view>
 </view>
 ```
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- |: ---- |:---- |
-|value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
-|disabled|Boolean| false| 否 | 是否禁用|
-|checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|
-|color| Color| #3c76ff | 否 | checkbox 的颜色，同 CSS 的 color|
-
-

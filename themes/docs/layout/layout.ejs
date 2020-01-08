@@ -120,7 +120,9 @@
     </script>
 </head>
 <body>
- 
+    <script>
+        window.isSwanIde = window && window._swanIde;
+    </script>
     <%- partial('_partial/header', {navs: headerNavs, navIndex: headerNavIndex, h1: h1}) %>
     <%- partial('_partial/sidebar', {nav: nav}) %>
     <%- partial('_partial/article', {index: false, post: page, h1: h1, bottomPage: bottomPage, license: license}) %>

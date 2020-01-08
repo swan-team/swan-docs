@@ -9,9 +9,9 @@ sidebar: formlist_picker-view-column
 **解释**：可嵌页面的滚动选择器子项。仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。
 
 
-## 代码示例
+## 示例
 
-<a href="swanide://fragment/b9f6c72162aa226cb1f03b2a212ad2891576151857903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/8625f259847325d9dc3fd74a91e61e2c1577360625726" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 

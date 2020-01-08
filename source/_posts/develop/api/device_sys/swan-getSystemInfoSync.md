@@ -75,7 +75,6 @@ sidebar: swan-getSystemInfoSync
 
 ```js
 let res = swan.getSystemInfoSync();
-
 // 基础库 3.140.1 之前，无法判断接口是否调用失败
 // 基础库 3.140.1 及以后，通过 instanceof 来判断接口是否调用失败
 if (!(res instanceof Error)) {
@@ -84,6 +83,7 @@ if (!(res instanceof Error)) {
 else {
     console.log('getSystemInfoSync fail', res.message);
 }
+
 ```
 
 #### 错误码
@@ -92,10 +92,8 @@ Andriod
 
 |错误码|说明|
 |--|--|
-|202|解析失败，请检查参数是否正确|
-
+|202|解析失败，请检查参数是否正确      |
 
 **Bug & Tip**
-
 * 基础库 3.140.1 之前，无法判断接口是否调用失败。
 * 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。
