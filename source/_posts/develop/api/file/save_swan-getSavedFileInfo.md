@@ -8,7 +8,7 @@ sidebar: save_swan-getSavedFileInfo
  
 
 
-**解释**：获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。
+**解释**：获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 <a href="/develop/api/file/save_swan-getFileInfo/">getFileInfo</a> 接口。
 
  
 ## 方法参数  

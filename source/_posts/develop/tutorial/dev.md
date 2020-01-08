@@ -30,7 +30,7 @@ sidebar: dev
 </view>
 
 ```
-标签可以拥有属性，需要注意的是，swan中的属性是大小写敏感的，也就是说 class 和 Class 在swan中是不同的属性
+标签可以拥有属性，需要注意的是，swan中的属性是大小写敏感的，也就是说 class 和 Class 在swan中是不同的属性。
 
 **代码示例**
 
@@ -41,14 +41,14 @@ sidebar: dev
 <text Class="wrap">hello world</text>
 ```
 
-一个文件夹可以有两个swan文件
+一个文件夹可以有两个swan文件。
 
 **代码示例**
 
 <a href="swanide://fragment/0c014f956ee234f3d245f1b84f71bb611577174698837" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-
 <br/>
+
 ### 基础数据绑定
 
 **代码示例**
