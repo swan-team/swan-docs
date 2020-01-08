@@ -11,13 +11,12 @@ sidebar: image_swan-chooseAlbum
 
 **解释**：打开本地相册，相册内可以同时包含图片和视频。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_chooseAlbum.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,14 +28,14 @@ sidebar: image_swan-chooseAlbum
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明**：
+### success返回参数说明 
 
 |参数  |类型|  说明 |
 |---- | ---- | ---- |
 |tempFilePaths  | Array.&lt;string&gt;  |选择资源(图片或视频)的本地文件路径列表 。|
 |tempFiles  |Array.&lt;object&gt; |选择资源(图片或视频)本地文件列表，每一项是一个 File 对象。|
 
-**tempFiles 对象结构如下:**
+### tempFiles 对象结构如下: 
 
 |字段 | 类型  |说明|
 |---- | ---- | ---- |
@@ -45,7 +44,19 @@ sidebar: image_swan-chooseAlbum
 |type|文件类型|有效值：photo、video|
 |duration|Number|选定视频的时间长度 (单位：s)； 开发者工具暂不支持|
 
-**图片示例**
+## 示例
+
+
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_chooseAlbum.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -59,7 +70,7 @@ sidebar: image_swan-chooseAlbum
     </div>     
 </div>
 
-**代码示例 1 - 打开相册只选择图片或视频**：
+### 代码示例 1 - 打开相册只选择图片或视频 
 
 <a href="swanide://fragment/e0984aa8374449ead4cfb885dbf0ce331569502073433" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -87,7 +98,10 @@ Page({
 });
 ```
 
-**代码示例 2 - 打开相册选择图片和视频**
+### 代码示例 2 - 打开相册选择图片和视频 
+
+<a href="swanide://fragment/a71d4303d014dc1a93d480a830e11b131577675842297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 * 在 js 文件中
 
 ```js
@@ -110,7 +124,7 @@ Page({
 });
 ```
 
-**Bug & Tip**
+## Bug & Tip 
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 

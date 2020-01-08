@@ -11,15 +11,13 @@ sidebar: websocket
 
 **解释**：创建一个 WebSocket 连接。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/connectSocket.png"  class="demo-qrcode-image" />
+## 方法参数
 
+Object object
 
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -32,7 +30,18 @@ sidebar: websocket
 
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/1241b261727079e050c52871830939491572951069253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/connectSocket.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,9 +55,9 @@ sidebar: websocket
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/1241b261727079e050c52871830939491572951069253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -76,9 +85,9 @@ Page({
 });
 ```
 
-#### 错误码
+## 错误码
 
-* Andriod  
+### Andriod  
 
 |错误码|说明|
 |--|--|
@@ -86,7 +95,7 @@ Page({
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
-* iOS 
+### iOS 
 
 |错误码|说明errMsg|
 |--|--|
@@ -98,7 +107,7 @@ Page({
 
 
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 基础库 1.9.4 之前，一个智能小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接。
 * 基础库版本 1.9.4 及以后，支持存在多个 WebSokcet 连接，每次成功调用 swan.connectSocket 会返回一个新的 [SocketTask](https://smartprogram.baidu.com/docs/develop/api/net_websocket/#SocketTask) 。

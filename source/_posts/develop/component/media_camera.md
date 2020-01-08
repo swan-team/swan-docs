@@ -33,7 +33,7 @@ sidebar: media_camera
 | on | 闪光灯开 |
 | off | 闪光灯关 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/eba87b9439a53b5cfd5afa33a1f765371577360457238" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -72,6 +72,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-saveVideoToPhotosAlbum/">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/">swan.createAnimationVideo</a>|创建并返回 animation-video 上下文 animationVideo 对象。通过 animationVideoId 跟一个 animation-video 组件绑定，通过它可以操作一个 [animation-video](/develop/component/animation-video/) 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/cameracontext_swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
@@ -301,4 +302,4 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
-
+|<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。|

@@ -16,7 +16,7 @@ sidebar: view_cover-image
 |binderror|	EventHandle	| | 否 |图片加载失败时触发|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/18c13ec5a0ad9d2a3c5d452b18c28fe81577360495546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

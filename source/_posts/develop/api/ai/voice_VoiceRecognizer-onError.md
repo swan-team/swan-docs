@@ -7,20 +7,19 @@ sidebar: voice_VoiceRecognizer-onError
 
 **解释**： 识别遇到错误
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnError.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
-
-**callback 结果说明**：
+### callback 结果说明 
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |errorCode |String | 错误码 |
 |errorMsg |String | 错误信息 |
 
-**errorCode值说明**：
+### errorCode值说明 
 
 |errorCode|errorMsg|
 |---- | ---- |
@@ -46,8 +45,16 @@ sidebar: voice_VoiceRecognizer-onError
 |4004|	返回结果异常|
 |9000|	未知错误|
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnError.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -61,9 +68,9 @@ sidebar: voice_VoiceRecognizer-onError
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/7d1e8fc4330a304c903d2e9321e5e0151573734651295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 * 在 swan 文件中
 
 ```html

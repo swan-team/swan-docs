@@ -8,15 +8,25 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onEnded
 
 
 **解释**：音频自然播放结束事件
+ 
 
-**百度APP中扫码体验：**
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnEnded.png"  class="demo-qrcode-image" />
+Function callback
 
+## 示例
 
-**方法参数**：Function callback
+<a href="swanide://fragment/47e321650c63f8ee18e44f46957ab7511573422774419" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnEnded.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +40,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onEnded
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/47e321650c63f8ee18e44f46957ab7511573422774419" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

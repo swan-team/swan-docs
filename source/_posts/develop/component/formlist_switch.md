@@ -26,7 +26,7 @@ sidebar: formlist_switch
 | switch | 切换样式 |
 | checkbox | 复选框样式 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/362c1b11debadeb7245a075f99702b371577360678240" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

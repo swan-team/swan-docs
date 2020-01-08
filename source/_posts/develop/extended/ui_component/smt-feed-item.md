@@ -1,7 +1,7 @@
 ---
 title: smt-feed-item 信息流子项
 header: develop
-nav: extensioned
+nav: extended
 sidebar: smt-feed-item
 ---
 
@@ -17,7 +17,7 @@ sidebar: smt-feed-item
 |video |Object |否|{isVideo: true, time: &#39;05:00&#39;}|是否为视频和视频信息，配置isVideo为true，则显示视频形式（注：在多图模式不生效）|
 |status |String |否|0|阅读状态：0未读，1已读|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/afebdafc13cda2201207a3d6721577481577175550244" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

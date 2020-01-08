@@ -10,14 +10,12 @@ sidebar:  classify_swan-ai-logoClassify
 **解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
 
 
-**百度APP中扫码体验：**
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/logoClassify.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,7 +25,7 @@ sidebar:  classify_swan-ai-logoClassify
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 ：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -36,7 +34,7 @@ sidebar:  classify_swan-ai-logoClassify
 |result|	Array|	返回结果数组，每一项为一个识别出的logo。|
 
 
-**result 返回值说明**
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|---|
@@ -45,7 +43,7 @@ sidebar:  classify_swan-ai-logoClassify
 |probability|     Number| 分类结果置信度（0--1.0）|
 |location|	Object|	位置信息（左起像素位置、上起像素位置、像素宽、像素高）|
 
-**location 返回值说明**
+### location 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|---|
@@ -54,8 +52,18 @@ sidebar:  classify_swan-ai-logoClassify
 |width|	Number|	像素宽|
 |height|	Number|	像素高|
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/logoClassify.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,9 +77,9 @@ sidebar:  classify_swan-ai-logoClassify
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 ```js
@@ -96,7 +104,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例 ：
 ```json
 {
     "log_id": $log_id,

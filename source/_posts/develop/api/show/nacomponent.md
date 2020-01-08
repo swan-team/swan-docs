@@ -38,7 +38,7 @@ sidebar: nacomponent
 
 **示例**：
 
-<a href="swanide://fragment/e067d7b02af88008e08fa4bcb26906a51569378513731" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/024ee96a91663454813764f9635b7b331578310871377" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 **展现形式**：
@@ -64,13 +64,7 @@ sidebar: nacomponent
 ```javascript
     swan.showFavoriteGuide({
         type: 'bar',
-        content:'一键关注小程序',
-        success: res => {
-            console.log('关注成功：', res);
-        },
-        fail: err => {
-            console.log('关注失败：', err);
-        }
+        content:'关注小程序'
     })
 ```
 
@@ -93,17 +87,16 @@ sidebar: nacomponent
 ```javascript
 swan.showFavoriteGuide({
     type: 'tip',
-    content:'一键关注小程序',
-    success: res => {
-        console.log('关注成功：', res);
-    },
-    fail: err => {
-        console.log('关注失败：', err);
-    }
+    content: '关注小程序，下次使用更便捷。'
 })
 ```
 
 用户通过引导关注组件“关注小程序”后，可以在百度APP-我的“我的小程序”中看到它。
+
+##   Bug & Tip 
+
+* Bug：浮层引导(type=bar)时，用户点击左侧关闭也会触发此API的success回调。
+
 
 
 

@@ -8,15 +8,27 @@ sidebar: videocontext_VideoContext-showStatusBar
 
 **解释**：显示状态栏，仅在iOS全屏下有效。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextShowStatusBar.png"  class="demo-qrcode-image" />
+## 方法参数
+  无
 
+## 示例
 
-**方法参数**：无
-
-**代码示例**
 <a href="swanide://fragment/a7de73cff4e411bea7533ac41643c47e1574006702541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextShowStatusBar.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+ 
+
+
+### 代码示例 
+
 
 * 在 swan 文件中
 
@@ -47,7 +59,7 @@ Page({
 });
 ```
 
-** bug & Tip**：
+##  Bug & Tip  
 
 * bug：ios13 系统问题暂不支持本 API
 

@@ -8,14 +8,23 @@ sidebar: websocket_SocketTask-onError
  
 
 **解释**：监听 WebSocket 错误。
+ 
+## 方法参数
 
-**百度APP中扫码体验：**
+Function callback
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskOnError.png"  class="demo-qrcode-image" />
+## 示例
 
-**方法参数**：Function callback
+<a href="swanide://fragment/988ec5f9b41c4f603e4358ca69d54b041573407221622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskOnError.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +38,9 @@ sidebar: websocket_SocketTask-onError
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/988ec5f9b41c4f603e4358ca69d54b041573407221622" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

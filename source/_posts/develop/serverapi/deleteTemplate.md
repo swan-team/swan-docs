@@ -10,7 +10,7 @@ sidebar: deleteTemplate
 **解释**：删除帐号下的某个模板。
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/del?template_id=TEMPLATE_ID
+POST https://openapi.baidu.com/rest/2.0/smartapp/templatedel
 ```
 **公共请求参数**:
 

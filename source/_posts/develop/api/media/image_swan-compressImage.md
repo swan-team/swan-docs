@@ -11,13 +11,10 @@ sidebar: image_swan-compressImage
 
 **解释**：压缩图片接口，可选压缩质量
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_compressImage.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+ 
+## 方法参数
+Object object
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,14 +24,26 @@ sidebar: image_swan-compressImage
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
 |complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数  |类型 | 说明|
 |---- | ---- | ---- |
 |tempFilePath |  String | 压缩后图片的临时文件路径示例代码|
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/8feeefde9488bc59c7a25bf521d6028a1574946928289" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_compressImage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -48,9 +57,9 @@ sidebar: image_swan-compressImage
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/8feeefde9488bc59c7a25bf521d6028a1574946928289" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

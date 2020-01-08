@@ -11,6 +11,8 @@ API 在模拟器与真机中的实现差异如下：
 
 |api |  差异| 
 |---|---|
+|[swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) | 部分属性开发者工具暂不支持,详情请看详情页 |
+|[swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) | 部分属性开发者工具暂不支持,详情请看详情页 |
 |[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/) | 开发者工具暂不支持 | 
 |[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
 |[swan.onMemoryWarning](https://smartprogram.baidu.com/docs/develop/api/device_sys/onmemory/) | 通过“模拟操作->内存警告”触发 | 

@@ -17,7 +17,7 @@ sidebar: view_movable-area
 |:---|:---|:---|:---|
 |scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/652b9c504e4c01204a0257f3119c1f641577360578443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

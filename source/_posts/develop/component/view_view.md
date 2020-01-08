@@ -17,7 +17,7 @@ sidebar: view_view
 |hover-start-time| Number | 50 |否 |按住后出现点击态的时间长度，单位毫秒|
 |hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/9fb5e294b219f401cec44ae312c7b7ca1577360709295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

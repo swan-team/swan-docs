@@ -7,15 +7,13 @@ sidebar:  audio
 
  
 
-**解释**：将文本转换为可以播放的 mp3 文件。
+**解释** ：将文本转换为可以播放的 mp3 文件。
 
-**百度APP中扫码体验：**
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_textToAudio.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`data` 参数说明**：
+### `data` 参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -30,13 +28,21 @@ sidebar:  audio
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 
 
 |参数 | 类型 | 说明  |
 |---- | ---- | ---- |
 |filePath | String | 合成的音频文件的路径，此路径为临时路径且在当次回调中有效|
 
-**图片示例**
+## 示例
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_textToAudio.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -50,7 +56,7 @@ sidebar:  audio
     </div>     
 </div>
 
-**代码示例1**
+### 示例1 
 
 <a href="swanide://fragment/b2861370f6a561f81ebeef1dd5861dd51573995603718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -110,7 +116,7 @@ Page({
 });
 ```
 
-**代码示例2 - 普通女声**
+### 代码示例2 - 普通女声 
 
 <a href="swanide://fragment/b33b46eacccd088a86ffb86877a1d6871575453462407" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -144,7 +150,7 @@ Page({
 });
 ```
 
-**代码示例3 - 普通男声**
+### 代码示例3 - 普通男声 
 
 <a href="swanide://fragment/27f0d768b7b334b331da773c506384b01575453531934" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -178,7 +184,7 @@ Page({
 });
 ```
 
-**代码示例4 - 情感合成-度逍遥**
+### 代码示例4 - 情感合成-度逍遥 
 
 <a href="swanide://fragment/3e037a25ac60dafcfd193f7c815e91e21575453579904" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -213,7 +219,7 @@ Page({
 ```
 
 
-**代码示例5 - 情感合成-度丫丫**
+### 代码示例5 - 情感合成-度丫丫 
 
 <a href="swanide://fragment/a957867956c867e21827f4eee84924a01575453615413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -249,6 +255,6 @@ Page({
 
 
 
-### Bug & Tip
+## Bug & Tip
 
  重置 App Secret 会导致此功能无法使用。

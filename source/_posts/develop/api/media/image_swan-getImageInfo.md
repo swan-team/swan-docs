@@ -9,13 +9,10 @@ sidebar: image_swan-getImageInfo
 
 **解释**：获取图片信息
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getImageInfo.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+ 
+## 方法参数
+Object object
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -24,18 +21,30 @@ sidebar: image_swan-getImageInfo
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
 |complete |   Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数  |类型 | 说明|
 |---- | ---- | ---- |
 |width |  Number | 图片宽度（单位：px）|
 |height | Number | 图片高度（单位：px）|
 |path  |  String | 返回图片的本地路径|
-|orientation|String|返回图片的方向：<p>**·** up:默认不变；<p>**·**down：180度旋转；<p>**·**left：逆时针90度旋转；<p>**·**right：顺时针90度旋转；<p>**·** up-mirrored：镜像翻转；<p>**·** down-mirrored：镜像180旋转；<p>**·** left-mirrored：逆时针90度镜像旋转；<p>**·** right-mirrored：顺时针90度镜像旋转。|
+|orientation|String|返回图片的方向：<p> ·  up:默认不变；<p> · down：180度旋转；<p> · left：逆时针90度旋转；<p> · right：顺时针90度旋转；<p> ·  up-mirrored：镜像翻转；<p> ·  down-mirrored：镜像180旋转；<p> ·  left-mirrored：逆时针90度镜像旋转；<p> ·  right-mirrored：顺时针90度镜像旋转。|
 |type|String|返回图片的格式 |
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/a71d4303d014dc1a93d480a830e11b131577675842297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getImageInfo.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -49,7 +58,7 @@ sidebar: image_swan-getImageInfo
     </div>     
 </div>
 
-**代码示例1 - 网络图片**：
+### 代码示例1 - 网络图片 ：
 
 <a href="swanide://fragment/df7f65d3a9291abfa38941fc2fa042b61575221415775" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -72,7 +81,7 @@ Page({
 });
 ```
 
-**代码示例2 - 相对路径图片**：
+### 代码示例2 - 相对路径图片 ：
 
 <a href="swanide://fragment/17400460df9b7e4cc918584d4d6352901575221354113" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -95,7 +104,7 @@ Page({
 });
 ```
 
-**代码示例3 - 临时文件路径**：
+### 代码示例3 - 临时文件路径 ：
 
 <a href="swanide://fragment/9ee1a17ef7f4213500de86206a11e46a1575221590828" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -133,7 +142,7 @@ Page({
 });
 ```
 
-**代码示例4 - 存储文件路径**：
+### 代码示例4 - 存储文件路径 ：
 
 <a href="swanide://fragment/e809b7bda6706cfab69843527b5bc03d1575221754351" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -171,9 +180,9 @@ Page({
 });
 ```
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Andriod
 
 |错误码|说明|
 |--|--|
@@ -181,7 +190,7 @@ Page({
 |202|解析失败，请检查参数是否正确|
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|

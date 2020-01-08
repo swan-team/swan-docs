@@ -22,6 +22,7 @@ sidebar: rank_url
 | H5 地址 | 小程序路径 |
 |-|-|
 | https://example.com/ | pages/home/index |
+
 ```
 // 如果要完全匹配到 url 结尾，例如当 url 后没有 path 时，适配小程序首页 path，url 后要加结束符
 https://example.com/$ => pages/home/index
@@ -30,6 +31,7 @@ https://example.com/$ => pages/home/index
 |H5 地址|小程序路径|
 |--|--|
 | `https://example.com/book?id=1&type=history`| pages/book/index?bookid=1&type=history |
+
 ```
 https://example.com/book?id=([^&]+)&type=([^&]+) => pages/book/index?bookid=${1}&type=${2}
 
@@ -40,6 +42,7 @@ https://example.com/book?id=([\w]+)&type=(.+)$ => pages/book/index?bookid=${1}&t
 |H5 地址 |小程序路径 |
 |-|-|
 | `https://example.com/history/book?id=1` | pages/book/index?bookid=1&type=history |
+
 ```
 // 参数部分序号根据正则匹配的顺序决定
 https://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
@@ -48,6 +51,7 @@ https://example.com/([^\/]+)/book?id=([^&]+) => pages/book/index?bookid=${2}&typ
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/history_type/book?id=1 `| pages/book/index?bookid=1&type=history |
+
 ```
 https://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2}&type=${1}
 ```
@@ -55,6 +59,7 @@ https://example.com/([^\_]+)_type/book?id=([^&]+) => pages/book/index?bookid=${2
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/book/1.html` | pages/book/index?bookid=1&type=history |
+
 ```
 // 两个地址中没有对应项的参数保持不变
 https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=history
@@ -63,27 +68,28 @@ https://example.com/book/([^\.]+).html => pages/book/index?bookid=${1}&type=hist
 | H5 地址 | 小程序路径 |
 |-|-|
 | `https://example.com/book/history2019.html?id=1 `| pages/book?type=history |
+
 ```
 https://example.com/book/([^\d]+)2019.html?id=1 => pages/book?type=${1}
 ```
 
 **3.智能小程序平台配置 URL 适配关系**
 在【搜索接入】-【自然搜索】-【已有H5资源替换】，当开发者需要对已有 H5资源配置时，可在 URL 适配规则的配置模块完成相应内容的设置，具体步骤如下：
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/url1.png)
+![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/url1.png)
 **第一步：**点击页面中的“新建”按钮后，选择“设置 URL适配规则”进行配置。如对规则不够熟悉，也可以使用第二条“URL适配规则生成工具”来辅助配置。
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 2.png)
+![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 2.png)
 **第二步：**在 URL 适配规则的设置页面中，开发者需要填写具体H5 链接表达式和对应的小程序 path（路径） 表达式，并至少提供一对示例链接，用于验证规则准确性。
 开发者可在本页面添加多组规则。
- ![Alt text](../../img/introduction/rank/10.png)
+![Alt text](../../img/introduction/rank/10.png)
 **第三步：**当完成验证并提交后，系统将自动对该规则覆盖的 H5资源进行替换处理（优先对 TOP 流量的 H5资源进行替换）。因此，开发者需要保证对应的小程序页面已完成“页面基础信息”的设置。
- ![Alt text](../../img/introduction/rank/11.png)
+![Alt text](../../img/introduction/rank/11.png)
 **第四步：**返回【已有H5资源替换】，可在下方查看替换进度及适配生效量。
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 3.png)
+![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/图片 3.png)
  
  **4. URL 适配规则 – 生成工具**
 URL 适配规则的辅助生成工具，也可以通过规则编辑页面进入。在规则辅助生成工具的页面中，开发者只需要按照工具的引导，提供 H5 URL 示例和小程序 Path 示例，并根据提示进行校验后，即可生成对应的 URL 适配规则表达式。
- ![Alt text](../../img/introduction/rank/14.png)
- ![Alt text](../../img/introduction/rank/15.png)
+![Alt text](../../img/introduction/rank/14.png)
+![Alt text](../../img/introduction/rank/15.png)
 为方便开发者操作，点击下方的“一键保存至平台”后，规则会直接复制到配置工具中，用户可以按照提示完成新建和提交。也可以选择自主撰写规则后提交。
 
 **5.URL适配规则提交反馈状态详解**

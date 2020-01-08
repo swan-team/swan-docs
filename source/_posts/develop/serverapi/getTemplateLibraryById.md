@@ -8,7 +8,7 @@ sidebar: getTemplateLibraryById
 ### 获取模板库某个模板标题下关键词库
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/template/library/get
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget
 ```
 
 **解释**：获取模板库某个模板标题下的关键词库。

@@ -9,13 +9,12 @@ sidebar: websocket_SocketTask-close
 
 **解释**：关闭 WebSocket 连接
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskClose.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +24,16 @@ sidebar: websocket_SocketTask-close
 |fail  |Function  |  否 || 接口调用失败的回调函数|
 |complete   | Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**
+## 示例
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/socketTaskClose.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +47,7 @@ sidebar: websocket_SocketTask-close
     </div>     
 </div>
 
-**代码示例1**
+### 代码示例1 
 
 <a href="swanide://fragment/d1d8bd733fb20844c847e4494e6aeb1a1573406116849" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -90,7 +98,7 @@ Page({
 
 ```
 
-**代码示例2 - 参数全集**
+### 代码示例2 - 参数全集 
 
 <a href="swanide://fragment/f0c512ef4c7915ac9e7be017b03c75641575448859220" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

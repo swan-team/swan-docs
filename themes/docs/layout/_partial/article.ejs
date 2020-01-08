@@ -69,11 +69,14 @@
       $content.style.left = 0;
       $content.style.top = 0;
       $content.style.paddingTop = 0;
+      $content.style.paddingBottom = '20px';
       $article.style.maxWidth = '100%';
       $contentWrap.style.marginTop = 0;
       $contentWrap.style.maxWidth = '100%';
       $menuWrapper.style.display = 'none';
-      $license.style.display = 'none';
+      if ($license) {
+        $license.style.display = 'none';
+      }
       if ($bottomPage) {
         $bottomPage.style.display = 'none';
       }

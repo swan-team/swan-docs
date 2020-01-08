@@ -103,49 +103,55 @@ imageConf: {
 <a href="swanide://fragment/35e77aafc2ff31ec9a169e4cda4657191574130936339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
-swan.openCommunityEditor({
-    contentPlaceholder: '请输入帖子正文',
-    titlePlaceholder: '请输入标题',
-    moduleList: ['title', 'image', 'emoji', 'target'],
-    imageConf: {
-        maxNum: 3,
-        ratio: 0.5
-    },
-    navBarTitleText: '发布器',
-    navBarTextStyle: 'white',
-    navBarBackgroundColor: '#ffffff',
-    confirmText: '发布',
-    confirmColor: '#3388ff',
-    cancelText: '取消',
-    cancelColor: '#3388ff',
-    targetText: '发布到 话题/吧/板块',
-    emojiPath: '../emojidata',
-    success: function (res) {
-        console.log('openCommunityEditor success', res);
-        // 将图片上传到服务器
-        //  swan.uploadFile({
-        //     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
-        //     filePath: res.tempFilePaths[0], // 要上传文件资源的路径
-        //     name: 'myfile',
-        //     success: function (res) {
-        //         console.log(res.statusCode);
-        //         // 上传成功关闭发布器
-        //         swan.closeCommunityEditor();
-        //     },
-        //     fail: function (err) {
-        //         console.log('错误码：' + err.errCode);
-        //         console.log('错误信息：' + err.errMsg);
-        //     }
-        // });
-        swan.closeCommunityEditor();
-    },
-    fail: function (err) {
-        console.log('openCommunityEditor fail', err);
-        swan.closeCommunityEditor();
-    },
-    complete: function (res) {
-        console.log('openCommunityEditor complete', res);
-    }
-});
+ openCommunityEditorAll() {
+    swan.openCommunityEditor({
+        contentPlaceholder: '请输入帖子正文',
+        titlePlaceholder: '请输入标题',
+        moduleList: ['title', 'image', 'emoji', 'target'],
+        imageConf: {
+            maxNum: 9,
+            ratio: 1
+        },
+        navBarTitleText: '发布帖子',
+        navBarTextStyle: 'black',
+        navBarBackgroundColor: '#ffffff',
+        confirmText: '发布',
+        confirmColor: '#3388ff',
+        cancelText: '取消',
+        cancelColor: '#666666',
+        targetText: '话题/吧/版块',
+        emojiPath: '../../emojidata',
+        success: function (res) {
+            console.log('openCommunityEditor success', res);
+            // 将图片上传到服务器
+            //  swan.uploadFile({
+            //     url: 'https://smartprogram.baidu.com/xxx', // 仅为示例，并非真实的接口地址
+            //     filePath: res.tempFilePaths[0], // 要上传文件资源的路径
+            //     name: 'myfile',
+            //     success: function (res) {
+            //         console.log(res.statusCode);
+            //         // 上传成功关闭发布器
+            //         swan.closeCommunityEditor();
+            //     },
+            //     fail: function (err) {
+            //         console.log('错误码：' + err.errCode);
+            //         console.log('错误信息：' + err.errMsg);
+            //     }
+            // });
+            swan.closeCommunityEditor();
+            swan.showToast({
+                title: '发布成功',
+                icon: 'none'
+            });
+        },
+        fail: function (err) {
+            console.log('openCommunityEditor fail', err);
+            swan.closeCommunityEditor();
+        },
+        complete: function (res) {
+            console.log('openCommunityEditor complete', res);
+        }
+    });
+}
 ```
 

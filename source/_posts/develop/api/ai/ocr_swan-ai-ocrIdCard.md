@@ -10,17 +10,16 @@ sidebar: ocr_swan-ai-ocrIdCard
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
-|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p> **·** true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p> **·**  false:不检测旋转角度，默认不检测。|
+|detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p>  ·  true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p>  ·   false:不检测旋转角度，默认不检测。|
 |id_card_side  |  String  | 否  |- |front：身份证含照片的一面；back：身份证带国徽的一面。|
 |image | String | 是   | | 图片资源地址|
 |detect_risk | Boolean | 否  |- | 是否开启身份证风险类型(身份证复印件、临时身份证、身份证翻拍、修改过的身份证)功能，默认不开启，即：false。有效值:true-开启；false-不开启。|
@@ -29,7 +28,7 @@ sidebar: ocr_swan-ai-ocrIdCard
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success 返回参数说明**：
+### success 返回参数说明  
 
 |参数 | 类型 | 说明  |
 |---- | ---- |---- |
@@ -41,10 +40,10 @@ sidebar: ocr_swan-ai-ocrIdCard
 |words_result_num|  Number  |识别结果数，表示words_result的元素个数。|
 |words_result|	Object	|定位和识别结果|
 
-**words_result 返回值说明**
+### words_result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 | 住址 | Object | 住址|
 | 公民身份号码 | Object | 公民身份号码|
 | 出生 | Object | 出生|
@@ -52,23 +51,33 @@ sidebar: ocr_swan-ai-ocrIdCard
 | 性别 | Object | 性别|
 | 民族 | Object | 民族|
 
-**住址/公民身份号码/出生/姓名/性别/民族 返回值说明**
+### 住址/公民身份号码/出生/姓名/性别/民族 返回值说明 
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |location| Object | 位置信息（坐标0点为左上角）|
 |words| String | 识别结果字符串|
 
-**location 返回值说明**
+ location 返回值说明 
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|---|---|---|
 |left| Number | 表示识别结果的定位位置的长方形左上顶点的水平坐标。|
 |top| Number | 表示识别结果的定位位置的长方形左上顶点的垂直坐标。|
 |width| Number | 表示识别结果的定位位置的长方形的宽度。|
 |height| Number | 表示识别结果的定位位置的长方形的高度。|
 
-**图片示例**
+## 示例
+
+ 
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -82,7 +91,7 @@ sidebar: ocr_swan-ai-ocrIdCard
     </div>     
 </div>
 
-**代码示例1 - 参数属性全开启**：
+### 代码示例1 - 参数属性全开启 ：
 
 <a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -110,7 +119,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例 ：
 ```json
 {
     "log_id": $log_id,
