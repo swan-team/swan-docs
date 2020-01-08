@@ -13,11 +13,11 @@ sidebar: list
 
 ### 具体功能开发介绍
 
-* [web 化开发](http://smartprogram.baidu.com/docs/develop/function/webintroduction/)
-* [支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)
-* [数据缓存](http://smartprogram.baidu.com/docs/develop/api/storage_save/)
-* [导航](http://smartprogram.baidu.com/docs/develop/function/navigation/)
-* [打开小程序](http://smartprogram.baidu.com/docs/develop/function/opensmartprogram/)
+* [web 化开发](https://smartprogram.baidu.com/docs/develop/function/webintroduction/)
+* [支付功能开发](https://smartprogram.baidu.com/docs/develop/function/invoke_process/)
+* [数据缓存](https://smartprogram.baidu.com/docs/develop/api/storage_save/)
+* [导航](https://smartprogram.baidu.com/docs/develop/function/navigation/)
+* [打开小程序](https://smartprogram.baidu.com/docs/develop/function/opensmartprogram/)
 
 ## 架构概述
 
