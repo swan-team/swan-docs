@@ -616,7 +616,6 @@ https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/
 https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/
 https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/
 https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/
-https://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService/
 https://smartprogram.baidu.com/docs/develop/api/errorcode/
 https://smartprogram.baidu.com/docs/develop/serverapi/
 https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/
