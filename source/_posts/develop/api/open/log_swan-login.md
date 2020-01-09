@@ -91,14 +91,14 @@ swan.login({
 });
 ```
 
-**代码示例3: 开发者工具中左上角的登陆态与模拟器中用户的百度APP登陆态不同步，对于某些接口的登陆报错，开发者需要自行调用swan.login**
+**代码示例3: 开发者工具中左上角的登录  态与模拟器中用户的百度APP登录  态不同步，对于某些接口的登录  报错，开发者需要自行调用swan.login**
 
 <a href="swanide://fragment/f6b852fcc216ecaf9c2fb8b3e45c65971575543444468" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 > 组件模版为report-type="default"，需要用此兼容逻辑，详细示例请在开发者工具中查看。
 
 
-**代码示例4: 联合登陆**
+**代码示例4: 联合登录  **
 
 <a href="swanide://fragment/4ea2c9fd20e7a802eb3ed0fcc3f96f081576052720396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -108,7 +108,7 @@ swan.login({
 Page({
     data: { },
     onLoad() {
-        // 用户首次登陆小程序，同步百度APP登陆态
+        // 用户首次登录  小程序，同步百度APP登录  态
         swan.login({
             success: res => {
                 console.log('login success', res);
@@ -120,7 +120,7 @@ Page({
     },
     onShow() {
         let that = this;
-        // 用户进入小程序检测小程序在百度APP的登陆态是否有效
+        // 用户进入小程序检测小程序在百度APP的登录  态是否有效
         swan.checkSession({
             success: function (res) {
                 // 有效，获取用户信息
@@ -138,7 +138,7 @@ Page({
                 });
             },
             fail: function (err) {
-                // 无效，同步百度APP登陆态
+                // 无效，同步百度APP登录  态
                 swan.login({
                     success: res => {
                         console.log('login success', res);

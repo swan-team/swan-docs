@@ -174,7 +174,7 @@ Page({
 ```javascript
 Page({
     onLoad() {
-        // 此组件需要在登陆态下使用
+        // 此组件需要在登录  态下使用
         swan.login()
     },
     formSubmit(e) {
