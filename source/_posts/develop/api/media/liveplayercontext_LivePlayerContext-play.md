@@ -51,7 +51,6 @@ Object object
 
 
 * 在 swan 文件中
-
 ```html
 <view class="live-play">
     <live-player id="myLive" src="{{src}}" autoplay="{{autoplay}}"></live-player>

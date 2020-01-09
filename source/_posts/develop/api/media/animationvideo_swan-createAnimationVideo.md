@@ -20,7 +20,7 @@ animationVideo
 
 ## 示例
 
-<a href="swanide://fragment/a71d4303d014dc1a93d480a830e11b131577675842297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/ab0b71caf387bc59ae9a4190d6a750261578455636683" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -42,6 +42,7 @@ animationVideo
         <img src=" ">
     </div>
 </div>
+
 
 ### 代码示例 
 
@@ -68,7 +69,7 @@ animationVideo
 ```js
 Page({
     data: {
-        path: 'https://b.bdstatic.com/miniapp/animation-video.mp4'
+        path: 'https://efe-h2.cdn.bcebos.com/ceug/resource/res/2020-1/1577964961344/003e2f0dcd81.mp4'
     },
     onLoad() {
         // 创建动画组件实例

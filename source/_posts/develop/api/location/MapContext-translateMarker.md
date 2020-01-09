@@ -8,13 +8,12 @@ sidebar:  MapContext-translateMarker
 
 **解释**：平移 marker，带动画 。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
+ 
+ Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextTranslateMarker.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |---|
@@ -29,7 +28,18 @@ sidebar:  MapContext-translateMarker
 |complete|Function  |  |否 | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**
+## 示例
+
+ <a href="swanide://fragment/daefd8793cdad26d655a6f6a18008cf61573630179945" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextTranslateMarker.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,8 +53,7 @@ sidebar:  MapContext-translateMarker
     </div>     
 </div>
 
-**代码示例**
-
+### 代码示例  
 <a href="swanide://fragment/97e14b4b073aad9f739f9c29753ed84d1573555662733" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中

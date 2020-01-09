@@ -9,13 +9,12 @@ sidebar: MapContext-getScale
 
 **解释**：获取当前地图的缩放级别。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
+ 
+ Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextGetScale.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |---|
@@ -24,14 +23,25 @@ sidebar: MapContext-getScale
 |complete   | Function   |  | 否 |接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数 | 类型 |说明|
 |---- | ---- | ---- |
 |scale|Number|地图的缩放级别 |
  
 
-**图片示例**
+## 示例
+
+ <a href="swanide://fragment/9f39f67280da838ca99d8be3e100008e1573557670114" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_MapContextGetScale.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -45,9 +55,9 @@ sidebar: MapContext-getScale
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/9f39f67280da838ca99d8be3e100008e1573557670114" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 

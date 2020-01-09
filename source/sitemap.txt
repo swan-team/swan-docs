@@ -404,6 +404,10 @@ https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorage
 https://smartprogram.baidu.com/docs/develop/api/storage/remove_swan-clearStorageSync/
 https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/
 https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/
+https://smartprogram.baidu.com/docs/develop/api/location/swan-startLocationUpdate/
+https://smartprogram.baidu.com/docs/develop/api/location/swan-onLocationChange/
+https://smartprogram.baidu.com/docs/develop/api/location/swan-offLocationChange/
+https://smartprogram.baidu.com/docs/develop/api/location/swan-stopLocationUpdate/
 https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/
 https://smartprogram.baidu.com/docs/develop/api/location/swan-createMapContext/
 https://smartprogram.baidu.com/docs/develop/api/location/MapContext/

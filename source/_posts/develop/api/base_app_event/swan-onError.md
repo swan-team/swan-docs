@@ -119,7 +119,6 @@ Page({
                 }
             })
         });
-        console.log(a);
     }
 });
 
