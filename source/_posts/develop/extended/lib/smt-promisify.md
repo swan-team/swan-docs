@@ -1,43 +1,32 @@
 ---
 title: smt-promisify
 header: develop
-nav: extened
+nav: extended
 sidebar: smt-promisify
 ---
 
 
 
-**解释：** `smt-promisify` 用于让 swan API 支持 Promise 方式调用。
-
-小程序种使用三方 npm 包方法，见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm 使用说明</a>
+**解释：** `smt-promisify` 用于让 swan API 支持 Promise 方式调用。小程序种使用三方 npm 包方法，见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm 使用说明</a>。
 
 
-安装：
 
-```sh
-npm i @smt-lib/promisify -S
-
-```
 
 ## 方法参数
 
-### promisifyAll方法
+ 
 
+### promisifyAll方法参数说明：
 
-**解释：** 用于 promisify 全部 API，将 `source` 对象上的所有 API 复制到 `target` 对象上，如果 API 是异步 API （在内置的异步 API 列表中），则将该 API promisify 之后复制到 `target` 对象，如果是非异步 API 会直接复制到 `target` 对象。
+> 用于 promisify 全部 API，将 `source` 对象上的所有 API 复制到 `target` 对象上，如果 API 是异步 API （在内置的异步 API 列表中），则将该 API promisify 之后复制到 `target` 对象，如果是非异步 API 会直接复制到 `target` 对象。
 
-#### 方法参数：
-
-`source: Object, [target: Object]`
-
-#### 参数说明：
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
 | source | Object | 是 | | API 的来源对象 |
 | target | Object | 否 | {} | promisify API 的存放对象 |
 
-#### 返回值
+### 返回值
 
 | 值类型 | 说明 |
 |---|---|
@@ -45,36 +34,35 @@ npm i @smt-lib/promisify -S
 
 
 
-### promisify方法
 
-**解释：** 用于将单个 API 函数 promisify，调用 promisify 后的函数，将返回一个 Promise 对象，这个 Promise 对象的 `resolve` 和 `reject` 状态对应原始 API 函数的 `success` 和 `fail`。同时，原始 API 函数执行的返回值，可以通过执行 promisify 后函数返回的 Promise 对象的 `returnValue` 属性获取。
 
-#### 方法参数：
 
-`apiFn: Function`
 
-#### 参数说明：
+### promisify方法参数说明 
+
+> 用于将单个 API 函数 promisify，调用 promisify 后的函数，将返回一个 Promise 对象，这个 Promise 对象的 `resolve` 和 `reject` 状态对应原始 API 函数的 `success` 和 `fail`。同时，原始 API 函数执行的返回值，可以通过执行 promisify 后函数返回的 Promise 对象的 `returnValue` 属性获取。
+
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
 | apiFn | Function | 是 | | 原始 API 函数 |
 
-#### 返回值
+### 返回值
 
 | 值类型 | 说明 |
 |---|---|
 | Function | 经过 promisify 的 API 函数 |
 
 
-### addAsyncAPIs方法
 
-**解释：** 用于添加额外的 API（名称数组）到内置异步 API 列表。对于宿主特有的 API 或则 swan 新增的 API，可以通过这个方法来设置，需要在 `promisifyAll` 之前调用。
 
-#### 方法参数：
 
-`APINames: Array`
+ 
 
-#### 参数说明：
+### addAsyncAPIs方法参数说明：
+
+> 用于添加额外的 API（名称数组）到内置异步 API 列表。对于宿主特有的 API 或则 swan 新增的 API，可以通过这个方法来设置，需要在 `promisifyAll` 之前调用。
+
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -82,15 +70,15 @@ npm i @smt-lib/promisify -S
 
 
 
-### removeAsyncAPIs方法
 
-**解释：** 用于从内置异步 API 列表移除API（名称数组）。
+ 
 
-#### 方法参数：
+ 
 
-`APINames: Array`
+### removeAsyncAPIs方法参数说明：
 
-#### 参数说明：
+> 用于从内置异步 API 列表移除API（名称数组）。
+
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -115,9 +103,21 @@ npm i @smt-lib/promisify -S
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/ezgif-6-e309dbc67f5d.gif">
-    </div>   
+    </div>  
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>       
 </div>
 
+### 安装 
+
+```sh
+npm i @smt-lib/promisify -S
+
+```
 
 ### 代码示例1 - promisifyAll
 

@@ -321,7 +321,8 @@
         '/docs/operations/list/': '/docs/operations/specification/',
         '/docs/operations/standard/': '/docs/operations/specification/',
         '/docs/operations/thirdparty_law/': '/docs/operations/thirdparty_law/',
-        '/docs/introduction/rank_id/':'/docs/develop/fuctionlist/list/'
+        '/docs/introduction/rank_id/':'/docs/develop/fuctionlist/list/',
+        '/docs/develop/extended/component-content/concern/': '/docs/develop/extended/component-content/follow/'
     };
     if (!window.isSwanIde) {
         urlMap[pathname] && location.replace(urlMap[pathname]);

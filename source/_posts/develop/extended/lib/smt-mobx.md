@@ -7,29 +7,18 @@ sidebar: smt-mobx
 
 
 
-**解释：** 在小程序开发中，总会遇到多页面需要使用同一数据的情况，从而产生了希望引入mobx、redux等数据状态管理框架的诉求。smt-mobx是小程序使用mobx的连接器，帮助开发者在小程序开发中使用mobx。mobx使用的是4.13.1版本。<a href="https://cn.mobx.js.org/" title="mobx官网" target="_self">mobx官网</a>
+**解释：** 在小程序开发中，总会遇到多页面需要使用同一数据的情况，从而产生了希望引入mobx、redux等数据状态管理框架的诉求。smt-mobx是小程序使用mobx的连接器，帮助开发者在小程序开发中使用mobx。mobx使用的是4.13.1版本。<a href="https://cn.mobx.js.org/" title="mobx官网" target="_self">mobx官网</a>，小程序中使用三方npm包方法，见<a href="https://smartapp.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>。
 
 
-
-小程序中使用三方npm包方法，见<a href="https://smartapp.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>
-
-```
-    npm install @smt-lib/mobx
-```
 
 ## 方法参数
 
-### createStoreManager方法
-
-说明：在onLoad或者attached时创建storeManager
 
 
-#### 方法参数：
+### createStoreManager方法参数说明：
 
-`target: Object, options: Object, [throttle: Function]`
+> 在onLoad或者attached时创建storeManager
 
-
-#### 参数说明：
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -38,7 +27,7 @@ sidebar: smt-mobx
 | throttle | Function | 是 | | 可throttle的函数，默认为swan.nextTick|
 
 
-**options参数说明**：
+### options 参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -47,9 +36,9 @@ sidebar: smt-mobx
 |actions|Object/Array|否||修改store状态的动作，当类型为Object时，可以自定义挂载到storeManager上的方法名|
 
 
-**返回值**
+### 返回值 
 
-说明：返回storeManager对象，storeManager对象包括以下方法
+返回storeManager对象，storeManager对象包括以下方法
 
 |名称 |类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -77,11 +66,21 @@ sidebar: smt-mobx
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-lib-mobx.png">
-    </div>   
+    </div> 
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>       
 </div>
 
 
 ### 代码示例
+
+```
+    npm install @smt-lib/mobx
+```
 
 ```
     // store.js

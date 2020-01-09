@@ -7,26 +7,14 @@ sidebar: smt-observer
 
 
 
-**解释：** 在小程序开发中，总会遇到事件监听派发的需求，smt-observer是一个订阅发布器。
+**解释：** 在小程序开发中，总会遇到事件监听派发的需求，smt-observer是一个订阅发布器。eventsEmitter可通过`new EventsEmitter()`创建返回。小程序中使用三方npm包方法，见<a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>。
 
 
-
-小程序中使用三方npm包方法，见<a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>
-
-```
-    npm install @smt-lib/observer
-```
-
-实例化之后，获得eventsEmitter对象，eventsEmitter对象包含以下方法。
-
-```
-    const eventsEmitter = new EventsEmitter();
-```
 
 
 ## 方法参数
 
-** eventsEmitter对象上的方法 **
+###  eventsEmitter对象上的方法  
 
 |名称 |类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -38,14 +26,9 @@ sidebar: smt-observer
 
 
 
-### fireMessage方法
+ 
 
-#### 方法参数：
-
-`message: string`
-
-
-#### 参数说明：
+### fireMessage方法参数说明 
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -54,14 +37,9 @@ sidebar: smt-observer
 
 
 
-### onMessage方法
+ 
 
-#### 方法参数：
-
-`type: string, handler: Function, options: Object`
-
-
-#### 参数说明：
+### onMessage方法参数说明 
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -70,7 +48,7 @@ sidebar: smt-observer
 | options | Object | 是 | | 监听器配置信息|
 
 
-** onMessage方法的options参数 **
+### onMessage方法的options参数  
 
 |参数|类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -80,14 +58,8 @@ sidebar: smt-observer
 
 
 
-### delHandler方法
-
-#### 方法参数：
-
-`type: string, handler: Function`
-
-
-#### 参数说明：
+ 
+ ### delHandler方法参数说明：
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -96,14 +68,8 @@ sidebar: smt-observer
 
 
 
-### merge方法
-
-#### 方法参数：
-
-`eventsEmitter: Object`
-
-
-#### 参数说明：
+ 
+### merge方法参数说明：
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
@@ -129,15 +95,28 @@ sidebar: smt-observer
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-lib-observer.png">
-    </div>   
+    </div>  
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>      
 </div>
+
+### 安装
+
+```
+    npm install @smt-lib/observer
+```
 
 
 ### 代码示例1
 
+
 ```
     // 订阅发布常规用法
-    const eventsEmitter = new EventsEmitter();
+    const eventsEmitter = new EventsEmitter(); 
     let a = 0;
     eventsEmitter.onMessage('addA', message => {
         a += message.num;

@@ -7,41 +7,28 @@ sidebar: smt-swanx
 
 
 
-**解释：** 在小程序开发中，总会遇到多页面需要使用同一数据的情况，swanx是个轻量级数据管理工具，可以帮助开发者解决数据监听，多页面共用数据，子组件轻松获得父组件数据等功能。
+**解释：** 在小程序开发中，总会遇到多页面需要使用同一数据的情况，swanx是个轻量级数据管理工具，可以帮助开发者解决数据监听，多页面共用数据，子组件轻松获得父组件数据等功能。小程序中使用三方npm包方法，见<a href="https://smartapp.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>。
 
-
-
-小程序中使用三方npm包方法，见<a href="https://smartapp.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>
-
-```
-    npm install @smt-lib/swanx
-```
 
 
 ## 方法参数
 
-### createStore方法
+ 
+ 
+###   createStore方法参数说明：
 
+> 创建store，可多页面共用一个，也可以每个页面独立使用自己的store。
 
-说明：创建store，可多页面共用一个，也可以每个页面独立使用自己的store。
-
-#### 方法参数：
-
-`state: Object, fields: Object/Array, [actions: Object/Array]`
-
-#### 参数说明：
-
-
-|属性名 |类型  |必填 | 默认值 |说明|
+|参数 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |state |Object  |  是  | | 数据状态 |
 |fields |Object/Array   | 是  ||需要同步到小程序data上的数据。当类型为Object时，可以自定义挂载到data上的属性名。fields支持制定对象中的子元素，例如: 'a.b'|
 |actions|Object/Array|否||修改store状态的动作，当类型为Object时，可以自定义挂载到storeManager上的方法名|
 
 
-**返回值**
+###  返回值 
 
-说明：返回storeManger对象，storeManger对象包括以下方法
+返回storeManger对象，storeManger对象包括以下方法
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -52,11 +39,7 @@ sidebar: smt-swanx
 
 
 
-** storeManger对象的subscribe方法 **
-
-**方法参数：**
-
-`fields: Object/Array, callback: Function`
+### storeManger对象的subscribe方法参数
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -64,11 +47,7 @@ sidebar: smt-swanx
 |callback|Function|数据变化时的回调函数|
 
 
-** storeManger对象的getState方法 **
-
-**方法参数：**
-
-`key: string`
+### storeManger对象的getState方法参数
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -76,11 +55,7 @@ sidebar: smt-swanx
 
 
 
-** storeManger对象的dispatch方法 **
-
-**方法参数：**
-
-`actionName: string, data: Object/Array/String`
+### storeManger对象的dispatch方法参数 
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -89,18 +64,11 @@ sidebar: smt-swanx
 
 
 
+ 
+###  storeBinding方法参数说明
 
-### storeBinding方法
+> 在onLoad或者attached时，将创建的store和当前上下文绑定
 
-说明：在onLoad或者attached时，将创建的store和当前上下文绑定
-
-
-
-** 方法参数：**
-
-`target: Object, store: Object`
-
-** 参数说明：**
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -109,7 +77,7 @@ sidebar: smt-swanx
 
 
 
-**返回值**
+###  返回值 
 
 |类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -118,17 +86,11 @@ sidebar: smt-swanx
 
 
 
-### connect方法
+ 
 
-说明：使用connect装饰过的组件或者页面，可以更方便的使用父级的store，避免逐层传递公用数据。
-
-
-
-**方法参数：**
-
-`constructor: Object, store: Object`
-
-**参数说明：**
+ 
+### connect方法参数说明 
+> 使用connect装饰过的组件或者页面，可以更方便的使用父级的store，避免逐层传递公用数据。
 
 |名称|类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -136,7 +98,7 @@ sidebar: smt-swanx
 |store|Object | 创建后的store，如果没填则默认使用当前组件的父页面的store|
 
 
-**返回值**
+### 返回值 
 
 |类型   |说明|
 |---- | ---- | ---- | ----|----|
@@ -163,9 +125,20 @@ sidebar: smt-swanx
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-lib-swanx.png">
-    </div>   
+    </div> 
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>    
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>       
 </div>
 
+### 安装
+
+```
+    npm install @smt-lib/swanx
+```
 
 ### 代码示例1
 
