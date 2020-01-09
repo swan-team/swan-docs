@@ -127,7 +127,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/text.png">
+        <img src="https://b.bdstatic.com/miniapp/images/text-search.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
