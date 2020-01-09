@@ -7,13 +7,14 @@ sidebar: page_start
  
 
 在启动页面左下角点击登录按钮，弹出登录页，可以使用百度APP扫码登录开发者工具，开发者工具将使用这个百度帐号的信息进行小程序的开发和调试。
-![图片](../../../img/tool/login.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%B7%A5%E5%85%B701091.png)
 
 ### 项目列表
 
-可以看到已经打开过的小程序、小游戏、代码片段的项目列表
-![图片](../../../img/tool/list.png)
-
+* 在“我的项目”界面可查看已经打开过的小程序、小游戏、代码片段的项目列表
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%B7%A5%E5%85%B701092.png)
+* 在“页面模板”界面可选择您所需要的模板，或查看您近期使用过的模板
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/%E5%B7%A5%E5%85%B701093.png)
 
 ### 新建项目
 
@@ -25,6 +26,8 @@ sidebar: page_start
     3、如果选择一个空目录，会直接创建在该目录下；如果选择一个非空目录，会提示此路径下已存在项目，是否确认覆盖。
 
  ![图片](../../../img/tool/new.png)
+
+### 使用页面模板
 
 ### 搬家工具
 百度开发者工具提供了将微信小程序转换为百度智能小程序的功能，详情参考： https://smartprogram.baidu.com/docs/develop/tutorial/move/

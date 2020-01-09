@@ -15,7 +15,7 @@ sidebar: like
 |is-liked|Boolean|是|false|赞的状态|
 |mode|String|否|icon|按钮模式，有两种选择icon: 仅有图标; mixture: 图标文字结合|
 |icon-type|String|否|hand|图标类型，提供两种，包括hand(默认)和heart|
-|style|String|否|none|仅在mode为mixture时可配置, none:无边框; border:有边框,有边框模式需在深色背景下使用|
+|style|String|否|none|仅在mode为mixture时可配置, none:无边框; border:有边框|
 |like-text|String|否|赞|点赞按钮上的文案，默认为赞|
 |like-num|Number|否|0|点赞数|
 |like-type|Number|否|0|点赞的对象类型，0:代表动态; 1:代表评论|
