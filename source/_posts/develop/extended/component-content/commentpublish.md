@@ -15,7 +15,7 @@ sidebar: commentpublish
 |属性名| 类型 | 必填 | 默认值 | 说明 |
 |---|---|---|---|---|
 |show-publish|Boolean|是|false|NA 和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
-|content-placeholder|String|否|NA 和组件版支持，请输入内容|提示占位文案|
+|content-placeholder|String|否|请输入内容|NA 和组件版支持，提示占位文案|
 |module-list|Array|否||仅 NA 版支持，显示模块 list|
 |emoji-path|String|否||仅NA版支持，设置自定义表情配置路径|
 |foucs|Boolean|否|false|仅组件版支持，true 代表调起，false 则不调起|
