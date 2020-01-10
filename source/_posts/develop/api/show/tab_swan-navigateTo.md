@@ -13,14 +13,14 @@ sidebar: tab_swan-navigateTo
 
 **解释**：保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabbar 页面，使用 swan.navigateBack 可以返回到原页面。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
 
 
-**方法参数**：Object object
+ 方法参数 ：Object object
 
-**`object`参数说明**：
+ `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -29,9 +29,17 @@ sidebar: tab_swan-navigateTo
 |fail  |  Function  |  否  | |  接口调用失败的回调函数|
 |complete  |  Function  |  否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/navigeto.gif">
@@ -44,7 +52,7 @@ sidebar: tab_swan-navigateTo
     </div>     
 </div>
 
-**代码示例1**
+ 代码示例1 
 <a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -68,7 +76,7 @@ Page({
 });
 ```
 
-**代码示例2 - 根据页面栈来判断页面层级**
+ 代码示例2 - 根据页面栈来判断页面层级 
 <a href="swanide://fragment/c6fca5358fe9204946156bbe2264b1941575403962704" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
 * 在 js 文件中
@@ -92,6 +100,6 @@ Page({
 });
 
 ```
-**Bug & Tip**
+ Bug & Tip 
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
  

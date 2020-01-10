@@ -8,12 +8,20 @@ sidebar: canvas
 
 **解释**：canvas 画布，可使用 JS 操作 canvas 上下文，发出指令，进行绘制。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/createCanvasContext.gif">
@@ -26,13 +34,13 @@ sidebar: canvas
     </div>     
 </div>
 
-**SWAN模板写法示例**：
+ SWAN模板写法示例 ：
 
 ```xml
 <canvas canvas-id="myCanvas" />
 ```
 
-**JS写法示例**：
+ JS写法示例 ：
 
 <a href="swanide://fragment/5a48405eb904cfe0231782d70f94ef3e1573708931657" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -50,7 +58,7 @@ Page({
 
 我们来回顾一下，刚刚都执行了哪些指令：
 
-**1、创建绘图上下文**
+ 1、创建绘图上下文 
 
 推荐使用 Page 对象上挂载的`createCanvasContext`方法，进行绘制上下文的创建：
 
@@ -70,7 +78,7 @@ Page({
 const CanvasContext = swan.createCanvasContext('myCanvas');
 ```
 
-**2、发送绘制指令**
+ 2、发送绘制指令 
 
 设置颜色，并画一个圆，填充。
 
@@ -80,7 +88,7 @@ CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
 CanvasContext.fill();
 ```
 
-**3、绘制**
+ 3、绘制 
 执行上面已经发出的指令，进行 canvas 绘制。
 
 ```js
@@ -97,7 +105,7 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 
 我们可以在 canvas 中加上一些事件，来观测它的坐标系。
 
-**代码示例 **：
+ 代码示例  ：
 
 <a href="swanide://fragment/6d4cbfac520c52f567a53ea773719dbc1577195633921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -8,13 +8,13 @@ sidebar: navigationbar_swan-setNavigationBarColor
  
 **解释**：动态设置当前页面导航条的颜色。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src=" https://b.bdstatic.com/miniapp/assets/images/doc_demo/setNavigationBarColor.png"  class="demo-qrcode-image" />
 
-**方法参数**： Object object
+ 方法参数 ： Object object
 
-**`object`参数说明**：
+ `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,14 +25,14 @@ sidebar: navigationbar_swan-setNavigationBarColor
 |fail|    Function |   否  | | 接口调用失败的回调函数|
 |complete|    Function |   否   | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**animation**
+ animation 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 | duration|Number | 否  |0|动画变化时间，单位：毫秒。|
 |timingFunc|String | 否  |linear| 动画变化方式  |
 
-**animation.timingFunc 有效值**
+ animation.timingFunc 有效值 
 
 |值  | 说明|
 | ---- |---- |
@@ -41,15 +41,24 @@ sidebar: navigationbar_swan-setNavigationBarColor
 |easeOut |动画以低速结束。|
 |easeInOut  | 动画以低速开始和结束。|
 
-<!-- **success返回参数说明**：
+<!--  success返回参数说明 ：
 
 |参数名 |类型  |说明|
 |---- | ---- |---- |
 |errMsg | String  |调用结果| -->
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/dcaee8cc80556c6096c0f550d3292da41573018260749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/abortDownloadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/setNavigationBarColor.gif">
@@ -62,7 +71,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
     </div>     
 </div>
 
-**代码示例1**：
+ 代码示例1 ：
 
 <a href="swanide://fragment/dace5658a19b604ff4d62d0c760fb7351574136817988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -103,7 +112,7 @@ Page({
 });
 ```
 
-**代码示例2**：
+ 代码示例2 ：
 
 <a href="swanide://fragment/47a5315cec46d13b001064d0d919933d1575225061501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

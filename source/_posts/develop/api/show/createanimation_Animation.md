@@ -8,7 +8,7 @@ sidebar: createanimation_Animation
  
 **解释**：动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/Animation.png"  class="demo-qrcode-image" />
 
@@ -27,9 +27,17 @@ sidebar: createanimation_Animation
 
 #### 动画队列
 调用动画操作方法后要调用 step() 来表示一组动画完成，可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/createAnimation.gif">
@@ -42,7 +50,7 @@ sidebar: createanimation_Animation
     </div>     
 </div>
 
-**代码示例1 - 动画队列**
+ 代码示例1 - 动画队列 
 
 <a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -72,7 +80,7 @@ Page({
 });
 ```
 
-**代码示例2 - 动画样式设置**
+ 代码示例2 - 动画样式设置 
 
 <a href="swanide://fragment/2fb5684d1d02b0b2b389174ea0a1136b1575537062260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -111,7 +119,7 @@ Page({
 ```
 
 
-**代码示例3 - 动画宽高设置**
+ 代码示例3 - 动画宽高设置 
 
 <a href="swanide://fragment/933d1f771edd2968879fe952d832da341575537199303" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -155,7 +163,7 @@ Page({
 });
 ```
 
-**代码示例5 - 底部弹窗自定义动画（css控制）**
+ 代码示例5 - 底部弹窗自定义动画（css控制） 
 
 <a href="swanide://fragment/93e40bd1926b5672c061e84492503a2a1575816747690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -263,7 +271,7 @@ Page({
 ```
 
 
-**代码示例6 - 底部弹窗自定义动画（API控制）**
+ 代码示例6 - 底部弹窗自定义动画（API控制） 
 
 <a href="swanide://fragment/8a843dcdf2f4e31945b4af996c2e3e381575816832551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -347,7 +355,7 @@ Page({
 });
 ```
 
-**代码示例7 - 弹出菜单特效的实现**
+ 代码示例7 - 弹出菜单特效的实现 
 
 <a href="swanide://fragment/b80823a3c8127277935d521b04b69fe31575826980941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

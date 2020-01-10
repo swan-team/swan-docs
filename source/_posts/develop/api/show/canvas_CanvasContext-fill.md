@@ -9,17 +9,27 @@ sidebar:  canvas_CanvasContext-fill
 
 **解释**：对当前路径中的内容进行填充。默认的填充色为黑色。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
-**方法参数**：无
+ ## 方法参数 
 
-**图片示例**
+无
+## 示例
 
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 ![图片](../../../../img/api/canvas/fill.png)
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/c551260de09c005e80e141a7ad42313e1573722986970" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

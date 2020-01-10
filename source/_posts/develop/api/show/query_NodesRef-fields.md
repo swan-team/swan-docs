@@ -7,13 +7,13 @@ sidebar: query_NodesRef-fields
  
 **解释**： 获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。可指定获取的字段包括：
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_NodesRefFields.png" class="demo-qrcode-image" />
 
-**方法参数**：Object object, Function callback
+ 方法参数 ：Object object, Function callback
 
-**`fields`参数说明**：
+ `fields`参数说明 ：
 
 |参数名| 类型 |必填 |默认值| 说明|
 |---- | ---- | ---- |---|---|
@@ -24,9 +24,17 @@ sidebar: query_NodesRef-fields
 |scrollOffset |boolean |  否  | |是否返回节点的 scrollLeft scrollTop ，节点必须是 scroll-view 或者 viewport |
 |properties  | Array.&lt;string&gt;| []  | |指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， id class style 和事件绑定的属性值不可获取） |
 |computedStyle  |Array.&lt;string&gt; | []  | |指定样式名列表，返回节点对应样式名的当前值 |
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/NodesReffields.gif">
@@ -39,7 +47,7 @@ sidebar: query_NodesRef-fields
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/074e13432730548b49ba90f0fbcb8fac1574492260859" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

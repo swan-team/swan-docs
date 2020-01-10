@@ -7,21 +7,29 @@ sidebar: canvas_CanvasContext-setLineDash
  
 **解释**：设置线条虚线样式的间距和长度。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
-**方法参数**：Array pattern, Number offset
+ 方法参数 ：Array pattern, Number offset
 
-**`pattern`参数说明**：一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 
+ `pattern`参数说明 ：一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 
 
-**`offset`参数说明**：虚线偏移量。
+ `offset`参数说明 ：虚线偏移量。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 ![图片](../../../../img/api/canvas/setLineDash.png)
 
-**代码示例1 - 基础用法**：
+ 代码示例1 - 基础用法 ：
 
 <a href="swanide://fragment/a0f3e795134820d54777817b4240fdbb1573721214224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -35,7 +43,7 @@ canvasContext.stroke();
 canvasContext.draw();
 ```
 
-**代码示例2**：
+ 代码示例2 ：
 
 <a href="swanide://fragment/b763ef43bb64975b9d558ff82517e44a1575365006983" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -9,13 +9,15 @@ sidebar: canvas_swan-canvasPutImageData
 **解释**：将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。
 
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_canvasPutImageData.png"  class="demo-qrcode-image" />
 
-**方法参数**：Object object
+## 方法参数
 
-**`object`参数说明**：
+Object object
+
+ `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,9 +30,18 @@ sidebar: canvas_swan-canvasPutImageData
 |success	| Function | 否  | | 接口调用成功的回调函数 |
 |fail	| Function | 否  | | 接口调用失败的回调函数 |
 |complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/dcaee8cc80556c6096c0f550d3292da41573018260749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/abortDownloadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/canvasPutImageData.gif">
@@ -43,7 +54,7 @@ sidebar: canvas_swan-canvasPutImageData
     </div>     
 </div>
 
-**代码示例**
+ 代码示例 
 
 <a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

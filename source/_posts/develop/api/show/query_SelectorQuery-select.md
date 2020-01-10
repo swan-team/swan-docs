@@ -9,13 +9,13 @@ sidebar: query_SelectorQuery-select
 
 **解释**： 在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_select.png" class="demo-qrcode-image" />
 
-**方法参数**：String selector
+ 方法参数 ：String selector
 
-**返回值**：nodesRef
+ 返回值 ：nodesRef
 
 selector 类似于 CSS 的选择器，但仅支持下列语法。
 
@@ -26,9 +26,18 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 5、多选择器的并集：#a-node, .some-other-nodes
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/dcaee8cc80556c6096c0f550d3292da41573018260749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/abortDownloadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/selectorQuerySelect.gif">
@@ -41,7 +50,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
     </div>     
 </div>
 
-**代码示例1**：
+ 代码示例1 ：
 
 <a href="swanide://fragment/28e00386b1bc7a310edf31e8ce4539dc1574490838253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -85,7 +94,7 @@ Page({
 });
 ```
 
-**代码示例2 - id选择器**：
+ 代码示例2 - id选择器 ：
 
 <a href="swanide://fragment/c6d0f6e8bee090d61ac80e03f654145c1574933820242" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -129,7 +138,7 @@ Page({
 });
 ```
 
-**代码示例3 - 多个class选择器**：
+ 代码示例3 - 多个class选择器 ：
 
 <a href="swanide://fragment/dc0f170837028da340dec35ac2a544861574934507729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -176,7 +185,7 @@ Page({
 });
 ```
 
-**代码示例4 - 后代选择器**：
+ 代码示例4 - 后代选择器 ：
 
 <a href="swanide://fragment/6c91ccb0e424e806c9211b8fbc837d401574934615273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -220,7 +229,7 @@ Page({
 });
 ```
 
-**代码示例5 - 多个选择器**：
+ 代码示例5 - 多个选择器 ：
 
 <a href="swanide://fragment/6c91ccb0e424e806c9211b8fbc837d401574934615273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

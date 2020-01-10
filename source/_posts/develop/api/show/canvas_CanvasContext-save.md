@@ -9,17 +9,27 @@ sidebar: canvas_CanvasContext-save
 
 **解释**：保存当前的绘图上下文。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
-**方法参数**：无
+ ## 方法参数 
 
-**图片示例**
+无
+## 示例
 
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 ![图片](../../../../img/api/canvas/save.png)
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/9710a7359d484b4682e6338a2b4e1bd91573725069024" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

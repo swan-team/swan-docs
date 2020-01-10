@@ -8,17 +8,17 @@ sidebar: query_IntersectionObserver-observe
  
 **解释**：指定目标节点并开始监听相交状态变化情况
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_observe.png" class="demo-qrcode-image" />
 
-**方法参数**：String targetSelector, Function callback
+ 方法参数 ：String targetSelector, Function callback
 
-**`targetSelector`参数说明**：选择器
+ `targetSelector`参数说明 ：选择器
 
-**`callback`参数说明**：监听相交状态变化的回调函数
+ `callback`参数说明 ：监听相交状态变化的回调函数
 
-**回调结果说明**
+ 回调结果说明 
 
 |属性|  类型|  说明|
 |---- | ---- | ---- |
@@ -28,7 +28,7 @@ sidebar: query_IntersectionObserver-observe
 |relativeRect    |Object  |参照区域的边界|
 |time  |  number | 相交检测时的时间戳|
 
-**intersectionRect、boundingClientRect、relativeRect 结构说明**
+ intersectionRect、boundingClientRect、relativeRect 结构说明 
 
 |属性|  类型|  说明|
 |---- | ---- | ---- |
@@ -37,9 +37,17 @@ sidebar: query_IntersectionObserver-observe
 |top| number | 上边界|
 |bottom  |number | 下边界|
 
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/observe.gif">
@@ -52,7 +60,7 @@ sidebar: query_IntersectionObserver-observe
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/9e13f19179f3ff25f0b2ffbbe17e978e1574307679898" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

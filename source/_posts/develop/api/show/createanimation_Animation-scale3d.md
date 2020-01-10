@@ -7,16 +7,24 @@ sidebar:  createanimation_Animation-scale3d
 
 **解释**： 缩放
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scale3d.png"  class="demo-qrcode-image" />
 
-**方法参数**： Number sx，Number sy，Number sz
+ 方法参数 ： Number sx，Number sy，Number sz
 
-**参数说明**： 在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数。
+ 参数说明 ： 在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/scale3d.gif">
@@ -29,7 +37,7 @@ sidebar:  createanimation_Animation-scale3d
     </div>     
 </div>
  
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/a14dbdab55b3b138e98cbd3000e0750c1574216841113" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -9,22 +9,30 @@ sidebar: query_NodesRef-scrollOffset
 
 **解释**： 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_scrollOffset.png"  class="demo-qrcode-image" />
 
-**方法参数**：Function callback
+ 方法参数 ：Function callback
 
-**返回值说明**：
+ 返回值说明 ：
 返回的节点信息中，每个节点的滚动位置用 scrollLeft 、scrollTop 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
 |参数|类型|说明|
 |---|---|---|
 |scrollLeft|Nunber|节点水平滚动位置|
 |scrollTop|Nunber|节点竖直滚动位置|
- 
-**图片示例**
+ ## 示例
 
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/scrolloffset.gif">
@@ -37,7 +45,7 @@ sidebar: query_NodesRef-scrollOffset
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/33db2d08cc65630cc939ec8d268bf0481574974671748" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

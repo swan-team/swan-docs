@@ -8,16 +8,24 @@ sidebar: createanimation_Animation-rotateZ
  
 **解释**：从 Z 轴顺时针旋转一个角度
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateZ.png"  class="demo-qrcode-image" />
 
-**方法参数**：Number deg
+ 方法参数 ：Number deg
 
-**参数说明**：deg的范围-180~180，在Z轴旋转一个 deg 角度。
+ 参数说明 ：deg的范围-180~180，在Z轴旋转一个 deg 角度。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/rotateZ.gif">
@@ -30,7 +38,7 @@ sidebar: createanimation_Animation-rotateZ
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/bbb65118596a39f340f44947d884dbf01574214781024" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

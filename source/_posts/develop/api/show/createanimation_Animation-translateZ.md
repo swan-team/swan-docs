@@ -8,12 +8,20 @@ sidebar: createanimation_Animation-translateZ
  
 **解释**： 对 Z 轴平移
 
-**方法参数**： Number  tz
+ 方法参数 ： Number  tz
 
-**参数说明**： 在 Z 轴偏移 tz ，单位 px。
+ 参数说明 ： 在 Z 轴偏移 tz ，单位 px。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/translateZ.gif">
@@ -26,7 +34,7 @@ sidebar: createanimation_Animation-translateZ
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 
 <a href="swanide://fragment/c9f670823000fa5ceae46e032693f9a11575978462387" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

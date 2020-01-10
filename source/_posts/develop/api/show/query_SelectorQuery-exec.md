@@ -9,15 +9,23 @@ sidebar: show_swan-query_SelectorQuery-exec
 
 **解释**： 执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_SelectorQueryExec.png" class="demo-qrcode-image" />
 
-**方法参数**：Function callback
+ 方法参数 ：Function callback
 
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/selectorQueryExec.gif">
@@ -30,7 +38,7 @@ sidebar: show_swan-query_SelectorQuery-exec
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/f0fc0bcb11a1d36e86fe224d6f2938be1574491317790" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

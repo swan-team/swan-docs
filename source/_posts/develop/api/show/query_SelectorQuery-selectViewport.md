@@ -9,16 +9,25 @@ sidebar: query_SelectorQuery-selectViewport
 
 **解释**： 选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_selectViewport.png"  class="demo-qrcode-image" />
 
-**方法参数**：String selector
+ 方法参数 ：String selector
 
-**返回值**：nodesRef
+ 返回值 ：nodesRef
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/dcaee8cc80556c6096c0f550d3292da41573018260749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/abortDownloadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/selectViewport.gif">
@@ -31,7 +40,7 @@ sidebar: query_SelectorQuery-selectViewport
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/4fdca56adf0b81326bd4f838a5af4da51575002109257" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

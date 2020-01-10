@@ -7,16 +7,24 @@ sidebar: canvas_CanvasContext-setFontSize
  
 **解释**：设置字体的字号。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
-**方法参数**：Number fontSize
+ 方法参数 ：Number fontSize
 
 `fontSize`参数说明：字体的字号 
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/setFontSize.png">
@@ -29,7 +37,7 @@ sidebar: canvas_CanvasContext-setFontSize
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/94b824f65c4ffa7f78b40f0d6f10bd1a1573724116782" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

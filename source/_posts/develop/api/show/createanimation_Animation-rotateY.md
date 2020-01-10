@@ -8,16 +8,24 @@ sidebar:  createanimation_Animation-rotateY
  
 **解释**：从 Y 轴顺时针旋转一个角度
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateY.png"  class="demo-qrcode-image" />
 
-**方法参数**：Number deg
+ 方法参数 ：Number deg
 
-**参数说明**：deg的范围-180~180，在Y轴旋转一个 deg 角度。
+ 参数说明 ：deg的范围-180~180，在Y轴旋转一个 deg 角度。
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/rotateY.gif">
@@ -30,7 +38,7 @@ sidebar:  createanimation_Animation-rotateY
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 <a href="swanide://fragment/029b22bb84ed13c34666162d600f82071574215498426" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
