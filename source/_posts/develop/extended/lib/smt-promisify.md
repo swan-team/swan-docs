@@ -7,7 +7,7 @@ sidebar: smt-promisify
 
 
 
-**解释：** `smt-promisify` 用于让 swan API 支持 Promise 方式调用。小程序种使用三方 npm 包方法，见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm 使用说明</a>。
+**解释：** `smt-promisify` 用于让 swan API 支持 Promise 方式调用。小程序中使用三方 npm 包方法，见 <a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm 使用说明</a>。
 
 
 
