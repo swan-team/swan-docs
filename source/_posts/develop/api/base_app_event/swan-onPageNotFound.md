@@ -103,15 +103,12 @@ App({
 
 ### 代码示例 3：可根据开发者的业务逻辑调整用法  
  
-<a href="swanide://fragment/eba6e1bd8fa9b56e7cb4c8815253db271572847251493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9dd66b53797d223dd32e93f73f6525f91578569957717" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
     data: {},
     onTap() {
-        swan.navigateTo({
-            url: '/path/to/otherPage'
-        });
         swan.onPageNotFound(function(res) {
             console.log(res);
             swan.showModal({
@@ -128,6 +125,9 @@ Page({
                     console.log('navigateTo fail');
                 }
             });
+        });
+        swan.navigateTo({
+            url: '/path/to/otherPage'
         });
     }
 });
