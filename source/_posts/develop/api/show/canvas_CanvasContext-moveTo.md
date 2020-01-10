@@ -10,29 +10,21 @@ sidebar: canvas_CanvasContext-moveTo
 
 **解释**：把路径移动到画布中的指定点，不创建线条。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
- 方法参数 ：Number x, Number y
+**方法参数**：Number x, Number y
 
- `x`参数说明 ：目标位置的 x 坐标
+**`x`参数说明**：目标位置的 x 坐标
 
- `y`参数说明 ：目标位置的 y 坐标
-## 示例
+**`y`参数说明**：目标位置的 y 坐标
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 ![图片](../../../../img/api/canvas/moveTo.png)
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/7026a462f0cedf609a81733d28cb5fd11573723438564" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

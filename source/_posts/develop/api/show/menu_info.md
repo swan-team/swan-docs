@@ -10,13 +10,13 @@ sidebar: menu_info
 
 **解释**：获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getMenuButtonBoundingClientRect.png"  class="demo-qrcode-image" />
 
- 方法参数 ： 无
+**方法参数**： 无
 
- 返回参数说明 ：
+**返回参数说明**：
 
 |参数	|类型	|说明|
 |---|---|---|
@@ -26,17 +26,9 @@ sidebar: menu_info
 |right	|number|	右边界坐标，单位：px|
 |bottom|	number|	下边界坐标，单位：px|
 |left	|number|	左边界坐标，单位：px|
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/getMenuButtonBoundingClientRect.gif">
@@ -49,7 +41,7 @@ sidebar: menu_info
     </div>     
 </div>
 
- 代码示例1 - 属性全集 
+**代码示例1 - 属性全集**
 
 <a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -123,7 +115,7 @@ Page({
 });
 ```
 
- 代码示例2 - 应用场景 
+**代码示例2 - 应用场景**
 
 <a href="swanide://fragment/50a8932d2b9cd6ee093c3b6895f5f3d81576573561180" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -142,7 +134,7 @@ Page({
             statusHeight: 0,  //状态栏高度
             navHeight: 0      //导航栏高度
         },
-    / 
+    /**
      * 获取状态栏|导航栏高度,
      */
     onLoad (){

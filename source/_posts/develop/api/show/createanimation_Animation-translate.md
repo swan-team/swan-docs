@@ -9,24 +9,16 @@ sidebar: createanimation_Animation-translate
 **解释**： 平移变换
 
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/translate.png"  class="demo-qrcode-image" />
 
- 方法参数 ： Number tx，Number ty 
+**方法参数**： Number tx，Number ty 
 
- 参数说明 ：一个参数时，表示在X轴偏移 tx ，单位 px ；两个参数时，表示在 X 轴偏移 tx ，在 Y 轴偏移 ty ，单位 px 。 
-## 示例
+**参数说明**：一个参数时，表示在X轴偏移 tx ，单位 px ；两个参数时，表示在 X 轴偏移 tx ，在 Y 轴偏移 ty ，单位 px 。 
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/translate.gif">
@@ -39,7 +31,7 @@ sidebar: createanimation_Animation-translate
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/8056f13727c80924cfc13a7549c6a0591574217300222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

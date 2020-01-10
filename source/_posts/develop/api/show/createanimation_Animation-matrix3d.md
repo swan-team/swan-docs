@@ -8,22 +8,14 @@ sidebar: createanimation_Animation-matrix3d
  
 **解释**： 3D转换，同[transform-function matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/matrix3d.png"  class="demo-qrcode-image" />
 
- 方法参数 ： Number a1，Number b1，Number c1，Number d1，Number a2，Number b2，Number c2，Number d2，Number a3，Number b3，Number c3，Number d3，Number a4，Number b4，Number c4，Number d4
-## 示例
+**方法参数**： Number a1，Number b1，Number c1，Number d1，Number a2，Number b2，Number c2，Number d2，Number a3，Number b3，Number c3，Number d3，Number a4，Number b4，Number c4，Number d4
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/matrix3d.gif">
@@ -36,7 +28,7 @@ sidebar: createanimation_Animation-matrix3d
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/179c20a48d4a919e3e18e95da7fc1a431574230021425" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

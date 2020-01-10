@@ -9,28 +9,20 @@ sidebar:  toast_swan-hideLoading
 
 **解释**：隐藏 loading 提示框
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_Loading.png"  class="demo-qrcode-image" />
 
- 方法参数 ：Object object
+**方法参数**：Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |success	|function	|	否||接口调用成功的回调函数|
 |fail|	function	|	否	||接口调用失败的回调函数|
 |complete|	function|		否||	接口调用结束的回调函数（调用成功、失败都会执行）|
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/loading.gif">
@@ -43,7 +35,7 @@ sidebar:  toast_swan-hideLoading
     </div>     
 </div>
 
- 代码示例 
+**代码示例**
 <a href="swanide://fragment/6960611628839f267d8df02ca3521a241574135233401" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
@@ -82,7 +74,7 @@ Page({
 
 #### 错误码
 
- Andriod 
+**Andriod**
 
 |错误码|说明|
 |--|--|

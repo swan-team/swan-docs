@@ -8,24 +8,16 @@ sidebar: createanimation_Animation-translate3d
 
 **解释**： 对 X、Y、Z 坐标进行平移变换
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/translate3d.png"  class="demo-qrcode-image" />
 
- 方法参数 ：Number tx，Number ty，Number tz 
+**方法参数**：Number tx，Number ty，Number tz 
 
- 参数说明 ： 在 X 轴偏移 tx ，在 Y 轴偏移 ty ，在 Z 轴偏移 tz，单位 px。
-## 示例
+**参数说明**： 在 X 轴偏移 tx ，在 Y 轴偏移 ty ，在 Z 轴偏移 tz，单位 px。
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/translate3d.gif">
@@ -38,7 +30,7 @@ sidebar: createanimation_Animation-translate3d
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/90dfd1038c8a49c6b92de921d43e555b1574217718126" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

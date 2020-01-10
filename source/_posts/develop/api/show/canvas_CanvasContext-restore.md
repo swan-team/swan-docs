@@ -8,27 +8,17 @@ sidebar:  canvas_CanvasContext-restore
 
 **解释**：恢复之前保存的绘图上下文。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
- ## 方法参数 
+**方法参数**：无
 
-无
-## 示例
+**图片示例**
 
- 
-### 扫码体验
-
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 ![图片](../../../../img/api/canvas/save.png)
 
- 代码示例1 
+**代码示例1**
 
 <a href="swanide://fragment/70610f9f213e41d7d6ff09056c4bcf0c1575434855247" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -47,7 +37,7 @@ canvasContext.draw();
 ```
 
 
-###  图片示例 
+### **图片示例**
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -61,7 +51,7 @@ canvasContext.draw();
     </div>     
 </div>
 
- 代码示例2 
+**代码示例2**
 
 <a href="swanide://fragment/8bdb88bb1a23d69aca4a8c94ad1440031575438792950" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

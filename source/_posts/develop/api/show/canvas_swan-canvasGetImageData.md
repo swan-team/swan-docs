@@ -11,13 +11,13 @@ sidebar: canvas_swan-canvasGetImageData
 
 **解释**：返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，操作组件内 `<canvas>` 组件。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_canvasGetImageData.png"  class="demo-qrcode-image" />
 
- 方法参数 ：Object object
+**方法参数**：Object object
 
- `object`参数说明 ：
+**`object`参数说明**：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -30,24 +30,16 @@ sidebar: canvas_swan-canvasGetImageData
 |fail	| Function | 否  | | 接口调用失败的回调函数 |
 |complete	| Function | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
- success返回参数说明 ：
+**success返回参数说明**：
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |width|number|图像数据矩形的宽度|
 |height|number|图像数据矩形的高度|
 |data|Uint8ClampedArray|图像像素点数据，一维数组，每四项表示一个像素点的rgba|
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/canvasGetImageData.gif">
@@ -60,7 +52,7 @@ sidebar: canvas_swan-canvasGetImageData
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/b0967f7f06b396397157bb1fa217e4ee1574498382441" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

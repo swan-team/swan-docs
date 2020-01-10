@@ -12,15 +12,15 @@ sidebar: query_IntersectionObserver-relativeTo
 
 **解释**：使用选择器指定一个节点，作为参照区域之一。
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_relativeTo.png" class="demo-qrcode-image" />
 
- 方法参数 ：String selector, Object object
+**方法参数**：String selector, Object object
 
- `selector`参数说明: 选择器
+**`selector`参数说明:**选择器
 
- `margins`参数说明: 用来扩展（或收缩）参照节点布局区域的边界
+**`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,17 +28,9 @@ sidebar: query_IntersectionObserver-relativeTo
 |right|number|否| |节点布局区域的右边界|
 |top|number|否| |节点布局区域的上边界|
 |bottom|number|否| |节点布局区域的下边界|
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/relativeTo.gif">
@@ -51,7 +43,7 @@ sidebar: query_IntersectionObserver-relativeTo
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/2ccad5e6c49621ca8494346f4b6b7e161574305549903" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

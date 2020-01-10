@@ -10,37 +10,23 @@ sidebar: canvas_CanvasContext-addColorStop
 
 **解释**：创建一个颜色的渐变点。
 
- 
-## 方法参数 
+**百度APP中扫码体验：**
 
-Number stop, [Color](/develop/api/canvas_color/) color
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
-### `stop`参数说明 
+**方法参数**：Number stop, [Color](/develop/api/canvas_color/) color
 
-表示渐变点在起点和终点中的位置，取值(0-1)。
+**`stop`参数说明**：表示渐变点在起点和终点中的位置，取值(0-1)。
 
-### `color`参数说明
+**`color`参数说明**：渐变点的颜色
 
-渐变点的颜色
-
-## 示例
-
-<a href="swanide://fragment/227ecd832540ade6fe14c8ed77b817451573720334982" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-### 扫码体验
-
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
+**图片示例**
 
 ![图片](../../../../img/api/canvas/addColorStop.png)
 
-### 代码示例 
+**代码示例**
 
-
+<a href="swanide://fragment/227ecd832540ade6fe14c8ed77b817451573720334982" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
@@ -64,7 +50,7 @@ canvasContext.draw();
 
 
 
-##  Bug & Tip 
+ **Bug & Tip**
 
-bug：addColorStop 目前在 Android 有bug。
+addColorStop 目前在 Android 有bug。
 

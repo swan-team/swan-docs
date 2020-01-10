@@ -9,24 +9,16 @@ sidebar: createanimation_Animation-scaleX
  
 **解释**： 缩放 X 轴
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scaleX.png"  class="demo-qrcode-image" />
 
- 方法参数 ： Number sx
+**方法参数**： Number sx
 
- 参数说明 ： 在X轴缩放sx倍数
-## 示例
+**参数说明**： 在X轴缩放sx倍数
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/scaleX.gif">
@@ -38,7 +30,7 @@ sidebar: createanimation_Animation-scaleX
         <img src=" ">
     </div>     
 </div>
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/6007d96630c306b5c22cb6defe0652b41574216405521" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

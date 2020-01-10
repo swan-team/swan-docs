@@ -14,32 +14,29 @@ sidebar: canvas_CanvasContext-arc
 
 **解释**：画一条弧线。
 
- 
-## 方法参数  
+**百度APP中扫码体验：**
 
-|参数名|属性|必填|默认值|说明|
-|----|----|----|---|---|
-| `x`|Number| 是||圆的 x 坐标|
-| `y`|Number|是||圆的 y 坐标|
-| `r`|Number|是||圆的半径|
-| `sAngle`|Number|是||起始弧度，单位弧度（在3点钟方向)|
-|  `eAngle`|Number|是||终止弧度|
-|  `counterclockwise`|Boolean|否| false，即顺时针| 指定弧度的方向是逆时针还是顺时针。|
-## 示例
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
 
- 
+**方法参数**：Number x, Number y, Number r, Number sAngle, Number eAngle, Boolean counterclockwise
 
-### 扫码体验
+**`x`参数说明**：圆的 x 坐标
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
+**`y`参数说明**：圆的 y 坐标
 
-###  图片示例  
+**`r`参数说明**：圆的半径
+
+**`sAngle`参数说明**：起始弧度，单位弧度（在3点钟方向)
+
+**`eAngle`参数说明**：终止弧度
+
+**`counterclockwise`参数说明**：可选。指定弧度的方向是逆时针还是顺时针。默认是 false，即顺时针。
+
+**图片示例**
+
 ![图片](../../../../img/api/canvas/arc.png)
 
-###  代码示例1 ：
+**代码示例1**：
 
 <a href="swanide://fragment/6e90c6683d0c5676207fd5eefa1c06b71573723566960" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -51,7 +48,7 @@ canvasContext.fill();
 canvasContext.draw();
 ```
 
-###  代码示例2 - counterclockwise为true ：
+**代码示例2 - counterclockwise为true**：
 
 <a href="swanide://fragment/5013899c76707b170a24409da4792a6f1575363697582" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -67,7 +64,7 @@ Page({
 });
 ```
 
-###  代码示例3 - counterclockwise为false ：
+**代码示例3 - counterclockwise为false**：
 
 <a href="swanide://fragment/044876f82808e355e7bb3b0bd55c35a51575363735429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

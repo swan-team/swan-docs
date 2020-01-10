@@ -10,25 +10,17 @@ sidebar: createanimation_Animation-scaleY
 **解释**： 缩放 Y 轴
 
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/scaleY.png"  class="demo-qrcode-image" />
 
- 方法参数 ： Number sy
+**方法参数**： Number sy
 
- 参数说明 ： 在Y轴缩放sy倍数
+**参数说明**： 在Y轴缩放sy倍数
 
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/scaleY.gif">
@@ -41,7 +33,7 @@ sidebar: createanimation_Animation-scaleY
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 
 <a href="swanide://fragment/7da5f367de840e80b2a6ea83465cddfb1574216533738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

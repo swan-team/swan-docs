@@ -8,14 +8,14 @@ sidebar: toast_swan-showModal
 
 **解释**：显示模态弹窗
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/modal.png"  class="demo-qrcode-image" />
 
 
- 方法参数 ：Object object
+**方法参数**：Object object
 
- `object`参数说明 ：
+**`object`参数说明**：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -30,24 +30,16 @@ sidebar: toast_swan-showModal
 |fail   | Function  |  否  | |接口调用失败的回调函数|
 |complete   | Function  |  否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
- success返回参数说明 ：
+**success返回参数说明**：
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |confirm |Boolean |为 true 时，表示用户点击了确定按钮 。 |
 |cancel | Boolean |为 true 时，表示用户点击了取消。|
 
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/modal.gif">
@@ -60,7 +52,7 @@ sidebar: toast_swan-showModal
     </div>     
 </div>
 
- 代码示例1 ：
+**代码示例1**：
 
 <a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -96,7 +88,7 @@ showModalNotitle() {
 }
 ```
 
- 代码示例2 - 开发者可在操作modal后进行业务逻辑 ：
+**代码示例2 - 开发者可在操作modal后进行业务逻辑**：
 
 <a href="swanide://fragment/f722c61b2e5961678fbce43a0ce91fae1575137772883" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -122,7 +114,7 @@ Page({
 });
 ```
 
- 代码示例3 - 开发者可自定义一个showModal ：
+**代码示例3 - 开发者可自定义一个showModal**：
 
 <a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

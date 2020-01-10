@@ -9,25 +9,17 @@ sidebar: createanimation_Animation-translateY
  
 **解释**： 对 Y 轴平移
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/translateY.png"  class="demo-qrcode-image" />
 
- 方法参数 ：Number  ty  
+**方法参数**：Number  ty  
 
- 参数说明 ：在 Y 轴偏移 ty ，单位 px。 
+**参数说明**：在 Y 轴偏移 ty ，单位 px。 
 
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/translateY.gif">
@@ -40,7 +32,7 @@ sidebar: createanimation_Animation-translateY
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/e6fdb305fefb7291a5d9635defd630581574217543717" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

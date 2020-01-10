@@ -8,13 +8,13 @@ sidebar: query_IntersectionObserver-relativeToViewport
  
 **解释**：指定页面显示区域作为参照区域之一
 
- 百度APP中扫码体验： 
+**百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_relativeToViewport.png" class="demo-qrcode-image" />
 
- 方法参数 ：Object object
+**方法参数**：Object object
 
- `margins`参数说明: 用来扩展（或收缩）参照节点布局区域的边界
+**`margins`参数说明:**用来扩展（或收缩）参照节点布局区域的边界
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,17 +23,9 @@ sidebar: query_IntersectionObserver-relativeToViewport
 |top|number|否| |节点布局区域的上边界|
 |bottom|number|否| |节点布局区域的下边界|
 
-## 示例
 
- 
-### 扫码体验
+**图片示例**
 
-<div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/relativeToViewport.gif">
@@ -46,7 +38,7 @@ sidebar: query_IntersectionObserver-relativeToViewport
     </div>     
 </div>
 
-### 代码示例 
+**代码示例**
 
 <a href="swanide://fragment/a07d524b2571998e87a84511c1e920071574305851456" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
