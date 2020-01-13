@@ -3184,7 +3184,7 @@
 
               -
 
-                text: 原生全屏内容发布器
+                text: 全屏内容发布器
 
                 sidebar:
                   -
@@ -3197,7 +3197,7 @@
                     name: community_swan-closeCommunityEditor
               -
 
-                text: 原生半屏内容发布器
+                text: 半屏内容发布器
 
                 sidebar:
                   -
