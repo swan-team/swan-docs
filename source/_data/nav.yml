@@ -3799,6 +3799,10 @@
                 text: 命令行工具
                 name: commandtool
               -
+                link: /develop/devtools/components_panel
+                text: 组件面板
+                name: components_panel
+              -
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff

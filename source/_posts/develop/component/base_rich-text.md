@@ -28,11 +28,11 @@ sidebar: base_rich-text
 |text|文本节点|
 
 
-### 受信任的HTML节点及属性。
+### 受信任的HTML节点属性说明 
 
 > 全局支持class和style属性，不支持id属性。
 
-### 属性说明
+ 
 
 |节点 | 属性 |
 |:---- |: ---- |
