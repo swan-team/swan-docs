@@ -10,7 +10,7 @@ sidebar: deleteTemplate
 **解释**：删除帐号下的某个模板。
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/templatedel
+POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel
 ```
 **公共请求参数**:
 
@@ -38,7 +38,8 @@ template_id |string |是| 模板id,发送小程序模板消息时所需
 
 ```shell
 curl -X GET \
-  'https://openapi.baidu.com/rest/2.0/smartapp/template/del?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&template_id=e4313219538c4b0262e3a14a0507000e8bd79e9PTPAz'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel?access_token=24.ee3671b4e41f2704280d5ddbe9a3f94c
+  .3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&template_id=e4313219538c4b0262e3a14a0507000e8bd79e9PTPAz'
 ```
 
 

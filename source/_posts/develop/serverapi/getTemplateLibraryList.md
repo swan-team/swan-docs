@@ -44,7 +44,8 @@ title |string | 模板标题内容
 
 ```shell
 curl -X GET \
-  'https://openapi-test.baidu.com/rest/2.0/smartapp/template/library/list?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
+  'https://openapi-test.baidu.com/rest/2.0/smartapp/template/librarylist?access_token=24
+  .ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
 ```
 
 
