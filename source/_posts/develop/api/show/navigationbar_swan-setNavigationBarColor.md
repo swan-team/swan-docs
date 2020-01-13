@@ -8,10 +8,7 @@ sidebar: navigationbar_swan-setNavigationBarColor
  
 **解释**：动态设置当前页面导航条的颜色。
 
- 百度APP中扫码体验： 
-
-<img src=" "  class="demo-qrcode-image" />
-
+ 
 ## 方法参数 
 
 Object object

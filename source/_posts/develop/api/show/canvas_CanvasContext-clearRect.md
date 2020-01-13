@@ -16,9 +16,9 @@ sidebar: canvas_CanvasContext-clearRect
 |参数名|属性|必填|默认值|说明|
 |----|----|----|---|---|
 | `x`|Number|是||矩形路径左上角的 x 坐标。|
-|`y`|Number||是||矩形路径左上角的 y 坐标。|
-| `width`|Number||是||矩形路径的宽度。|
-| `height`|Number||是||矩形路径的高度。|
+|`y`|Number| 是||矩形路径左上角的 y 坐标。|
+| `width`|Number| 是||矩形路径的宽度。|
+| `height`|Number |是||矩形路径的高度。|
 
 ## 示例
 

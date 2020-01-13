@@ -10,10 +10,7 @@ sidebar: canvas_CanvasContext-measureText
 
 **解释**：测量文本尺寸信息，目前仅返回文本宽度，同步接口。
 
- 百度APP中扫码体验： 
-
-<img src=""  class="demo-qrcode-image" />
-
+ 
 ## 方法参数 
 
 String text：要测量的文本  

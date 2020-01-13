@@ -9,10 +9,7 @@ sidebar:  toast_swan-hideLoading
 
 **解释**：隐藏 loading 提示框
 
- 百度APP中扫码体验： 
-
-<img src=""  class="demo-qrcode-image" />
-
+ 
 ## 方法参数 
 
 Object object

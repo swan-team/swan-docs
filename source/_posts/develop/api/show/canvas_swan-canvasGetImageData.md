@@ -11,10 +11,7 @@ sidebar: canvas_swan-canvasGetImageData
 
 **解释**：返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，操作组件内 `<canvas>` 组件。
 
- 百度APP中扫码体验： 
-
-<img src=""  class="demo-qrcode-image" />
-
+ 
 ## 方法参数 
 
 Object object
