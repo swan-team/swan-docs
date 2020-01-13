@@ -6,22 +6,32 @@ sidebar: canvas_CanvasContext-setTextAlign
 ---
  
 **解释**：用于设置文字的对齐。
+ 
+## 方法参数 
 
-**百度APP中扫码体验：**
+ 
+|属性名 |类型  |必填 | 默认值 |说明|
+|---- | ---- | ---- | ----|----|
+| `align `|String|是|| 有效值 'left'、'center'、'right'。 |
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+## 示例
+<a href="swanide://fragment/dcde4e6cd75f48eb2912d4c7bf321dd21573724302516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**方法参数**：String align
+ 
+### 扫码体验
 
-**`align `参数说明**： 有效值 'left'、'center'、'right'。 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**图片示例**
+###  图片示例  
 
 ![图片](../../../../img/set-text-align.png)
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/dcde4e6cd75f48eb2912d4c7bf321dd21573724302516" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');

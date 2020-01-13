@@ -98,7 +98,7 @@ clearQuery() {
 
 
 ## 错误码
-### Andriod
+### Android
 
 |错误码|说明|
 |--|--|

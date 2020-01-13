@@ -655,6 +655,11 @@ https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-navigation
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-detail-pages/
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-feed-page/
 https://smartprogram.baidu.com/docs/develop/extended/template/smt-status-page/
+https://smartprogram.baidu.com/docs/develop/extended/lib/smt-promisify/
+https://smartprogram.baidu.com/docs/develop/extended/lib/smt-md5/
+https://smartprogram.baidu.com/docs/develop/extended/lib/smt-mobx/
+https://smartprogram.baidu.com/docs/develop/extended/lib/smt-observer/
+https://smartprogram.baidu.com/docs/develop/extended/lib/smt-swanx/
 https://smartprogram.baidu.com/docs/develop/devtools/history/
 https://smartprogram.baidu.com/docs/develop/devtools/page_start/
 https://smartprogram.baidu.com/docs/develop/devtools/page_menu/
@@ -800,6 +805,10 @@ https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/document/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/storage/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/function/
 https://smartprogram.baidu.com/docs/develop/cloud/server_sdk/cloud-callFunction/
+https://smartprogram.baidu.com/docs/develop/extensions/smt-md5/
+https://smartprogram.baidu.com/docs/develop/extensions/smt-observer/
+https://smartprogram.baidu.com/docs/develop/extensions/smt-swanx/
+https://smartprogram.baidu.com/docs/develop/extensions/smt-mobx/
 https://smartprogram.baidu.com/docs/develop/function/navigation/
 https://smartprogram.baidu.com/docs/develop/function/opensmartprogram/
 https://smartprogram.baidu.com/docs/develop/function/webintroduction/

@@ -36,7 +36,7 @@ Object object
 ###  fail 返回参数说明  ：
 
 
-* Andriod
+* Android
 
 |错误码|说明|
 |--|--|

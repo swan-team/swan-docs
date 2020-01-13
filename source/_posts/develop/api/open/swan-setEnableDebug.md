@@ -21,9 +21,9 @@ sidebar: swan-setEnableDebug
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 | enableDebug | Boolean | 是 | | 是否打开调试 |
-|success|	function|		否||	接口调用成功的回调函数，仅支持 Andriod。|
-|fail	|function		|否||	接口调用失败的回调函数，仅支持 Andriod。|
-|complete	|function		|否||	接口调用结束的回调函数（调用成功、失败都会执行），仅支持 Andriod。|
+|success|	function|		否||	接口调用成功的回调函数，仅支持 Android。|
+|fail	|function		|否||	接口调用失败的回调函数，仅支持 Android。|
+|complete	|function		|否||	接口调用结束的回调函数（调用成功、失败都会执行），仅支持 Android。|
 
 **图片示例**
 

@@ -10,14 +10,23 @@ sidebar:  query_IntersectionObserver-disconnect
 
 **解释**：停止监听，回调函数将不再触发。
 
-**百度APP中扫码体验：**
+ 
+ ## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_disconnect.png"  class="demo-qrcode-image" />
+无
+## 示例
 
-**方法参数**：无
 
-**图片示例**
+<a href="swanide://fragment/0f2e97ad1bb513cc9b4a422a74a953e81574764698768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_disconnect.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/disconnect.gif">
@@ -30,9 +39,8 @@ sidebar:  query_IntersectionObserver-disconnect
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/0f2e97ad1bb513cc9b4a422a74a953e81574764698768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

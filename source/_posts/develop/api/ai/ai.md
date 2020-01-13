@@ -21,7 +21,7 @@ sidebar: ai
 
 
 
-* Andriod
+* Android
 
 |错误码|说明|
 |--|--|

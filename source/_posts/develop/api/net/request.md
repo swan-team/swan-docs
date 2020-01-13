@@ -21,7 +21,7 @@ Object object
 |url |String | 是   | |    开发者服务器接口地址| |
 |data  |  Object/String  | 否  | | 请求的参数| |
 |header | Object | 否    | |   设置请求的 header，header 中不能设置 Referer。| |
-|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE/CONNECT(仅 Andriod 支持)。| |
+|method | String | 否  | GET （大写）|有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE/CONNECT(仅 Android 支持)。| |
 |dataType   | String | 否  | json  | 有效值：string,json。 如果设为 json，会尝试对返回的数据做一次 JSON.parse 。| |
 |responseType   | String | 否  | text  | 设置响应的数据类型, 有效值：text、arraybuffer。|1.11.20|
 |success |Function    |否 | |      收到开发者服务成功返回的回调函数。| |
@@ -41,7 +41,7 @@ Object object
 
 ### fail 返回参数说明 ：
 
-* Andriod 
+* Android 
 
 |错误码|说明|
 |--|--|

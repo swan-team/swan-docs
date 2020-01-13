@@ -9,16 +9,23 @@ sidebar: createanimation_Animation-skewX
 
 **解释**： 对 X 轴坐标进行倾斜
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/skewX.png"  class="demo-qrcode-image" />
+Number ax: 参数范围-180~180；Y 轴坐标不变， X 轴坐标延顺时针倾斜 ax 度。
 
-**方法参数**：  Number ax
+## 示例
 
-**参数说明**： 参数范围-180~180；Y 轴坐标不变， X 轴坐标延顺时针倾斜 ax 度。
+<a href="swanide://fragment/d9f9f1321e4992888c975f4a73b53d831574218200049" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
-**图片示例**
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/skewX.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/skewX.gif">
@@ -31,9 +38,9 @@ sidebar: createanimation_Animation-skewX
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/d9f9f1321e4992888c975f4a73b53d831574218200049" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
