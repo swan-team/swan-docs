@@ -9,12 +9,14 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.150.3|2020.1.12|**BugFix**<p>修复百度翻译语音翻译失败的问题。|
 |3.150.1|2020.1.6|**New**<p>新增subscribeService能力。<p>**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
 
 ## 3.140 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.140.11|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.140.10|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
 |3.140.9|2019.12.31|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线；<p>**·**API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
 |3.140.8|2019.12.27|同3.140.1|
@@ -26,6 +28,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.130.12|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.130.11|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题；<p>**·**修复input设置height auto后不能聚焦输入问题。|
 |3.130.10|2019.12.27|**Breaking Change**<p>透明视频组件优化分辨率，提供播放失败回调。 <p>**Breaking Change**<p>修复paymentAPI支付消息解析客户端返回缺失data的报错的问题。|
 |3.130.7|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
