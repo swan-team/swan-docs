@@ -265,7 +265,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | qualification                          | object | 小程序账号对应的主体信息                                     |
 | qualification.name                     | string | 主体名称                                                     |
 | qualification.type                     | int    | 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放 |
-| qualification.satus                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
+| qualification.status                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
 | qualification.ad\_type                 | int    | 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 |
 | qualification.ad_status                | int    | 高级认证状态 <br>1：通过 <br>3：失败                         |
 | category                               | array  | 小程序类目信息                                               |
