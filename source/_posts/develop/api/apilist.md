@@ -121,7 +121,7 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-createCanvasContext//">swan.createCanvasContext</a>|在 Page 中，推荐使用this.createCanvasContext(canvasId)，进行绘图上下文的创建。也可使用swan.createCanvasContext(canvasId)，但使用swan.createCanvasContext(canvasId)进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件组件实例 this，以操作组件内 `<canvas>` 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasPutImageData/">swan.canvasPutImageData</a>|将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasToTempFilePath/">swan.canvasToTempFilePath</a>|把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。在自定义组件下，第二个参数传入组件实例this，以操作组件内`<canvas/>`组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext/">canvasContext</a>|绘图上下文|
