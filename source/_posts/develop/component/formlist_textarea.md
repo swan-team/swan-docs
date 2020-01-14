@@ -30,8 +30,8 @@ sidebar: formlist_textarea
 |fixed|Boolean|false|否|如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true |-|
 |cursor-spacing|Number|0|否|指定光标与键盘的距离，单位 px 。取 textarea 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 |-|
 |show-confirm-bar|Boolean|true|否|是否显示键盘上方带有”完成“按钮那一栏。  |-|
-|selection-start|Number|-1|否|光标起始位置，自动聚集时有效，需与selection-end搭配使用 |-|
-|selection-end|Number|-1|否|光标结束位置，自动聚集时有效，需与selection-start搭配使用|-|
+|selection-start|Number|-1|否|光标起始位置，自动聚焦时有效，需与selection-end搭配使用 |-|
+|selection-end|Number|-1|否|光标结束位置，自动聚焦时有效，需与selection-start搭配使用|-|
 |adjust-position|Boolean|true|否|键盘弹起时，是否自动上推页面| -|
 |bindfocus|EventHandle| |否|输入框聚焦时触发，event.detail = { value, height }，height为键盘高度|-|
 |bindblur|EventHandle| |否|输入框失去焦点时触发，event.detail = {value, cursor}|-|

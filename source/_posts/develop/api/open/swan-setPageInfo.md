@@ -145,7 +145,7 @@ Page({
 });
 ```
 
-**Bug & Tip**
+## Bug & Tip 
 
 1. releaseData、articleTitle、image、video 、visit 内容用于宿主 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
 2. title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在宿主APP信息流中的标题展示。

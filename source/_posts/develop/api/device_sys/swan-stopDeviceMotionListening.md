@@ -11,13 +11,15 @@ sidebar: swan-stopDeviceMotionListening
 
 **解释**：停止监听设备方向的变化。
 
-**百度APP中扫码体验：**
+ 百度APP中扫码体验： 
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_deviceMotion.png"  class="demo-qrcode-image" />
 
-**方法参数**：Object object
+## 方法参数 
 
-**`object`参数说明**：
+Object object
+
+ `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +27,7 @@ sidebar: swan-stopDeviceMotionListening
 |fail  |  Function |   否 | |  接口调用失败的回调函数|
 |complete |   Function |   否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**图片示例**
+ 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +41,7 @@ sidebar: swan-stopDeviceMotionListening
     </div>     
 </div>
 
-**代码示例**
+ 代码示例 
 
 <a href="swanide://fragment/23ea056d902c300fbb5fa59b7dcd2ef31569483021022" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

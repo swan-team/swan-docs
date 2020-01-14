@@ -122,15 +122,15 @@ Page({
 
 **Bug & Tip**
 bug: 和其他API套用会破坏swan.login在页面onShow中的调用频次限制，建议在onShow中单独使用swan.login或在onLoad中套用
-#### 错误码
-* Android
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

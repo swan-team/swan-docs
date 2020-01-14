@@ -10,14 +10,14 @@ sidebar: swan-onAccelerometerChange
 
 **解释**：监听加速度数据，频率依赖 [swan.startAccelerometer](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-startAccelerometer/) 传递的interval，默认 5 次/秒。接口调用后会自动开始监听，可使用 swan.stopAccelerometer 停止监听。
 
-**百度APP中扫码体验**：
+ 百度APP中扫码体验 ：
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getGravity.png"  class="demo-qrcode-image" />
 
 
-**方法参数**：Function callback
+ 方法参数 ：Function callback
 
-**`callback`参数说明**：
+ `callback`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +25,7 @@ sidebar: swan-onAccelerometerChange
 |y |Number |是| |Y 轴|
 |z |Number |是| |Z 轴|
 
-**图片示例**
+ 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,7 +39,7 @@ sidebar: swan-onAccelerometerChange
     </div>     
 </div>
 
-**代码示例**
+ 代码示例 
 
 <a href="swanide://fragment/0ed5fe5e4d0957055cd7669fd83612731569478872196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -71,14 +71,14 @@ sidebar: swan-onAccelerometerChange
     }
 ```
  
-#### 错误码
-* Android
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |1001|执行失败   |
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

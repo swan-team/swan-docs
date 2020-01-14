@@ -92,7 +92,7 @@ Page({
     <button type="primary" open-type="share">openShare</button>
 </view>
 ```
-**Bug & Tip**
+## Bug & Tip 
 
 bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 
