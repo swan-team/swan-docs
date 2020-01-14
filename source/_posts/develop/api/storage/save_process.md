@@ -7,7 +7,7 @@ sidebar: save_process
 
  
 
-每个百度小程序都可以有自己的本地缓存，可以通过相关 API 对本地缓存进行读写和清理，详细的方法请参见[数据存储](https://smartprogram.baidu.com/docs/develop/api/storage_save/)。
+每个百度小程序都可以有自己的本地缓存，可以通过相关 API 对本地缓存进行读写和清理。
 
 **说明：**
 1. 同一个用户，同一个小程序 storage 上限为 10MB。
