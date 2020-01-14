@@ -388,7 +388,7 @@ curl -X POST \
 |appId |int | 小程序appid|
 |tpAppId |int | 第三方平台id|
 |eventTime |string | 事件发生时间|
-|event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停||服务<br>APP\_SERVER\_RESUME 小程序服务启用<br>TIME_LIMIT_RECTIFY_NOTIFY 小程序限时整改通知<br>FLOW_CLOSE_NOTIFY 小程序流量下线通知 |
+|event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用<br>TIME_LIMIT_RECTIFY_NOTIFY 小程序限时整改通知<br>FLOW_CLOSE_NOTIFY 小程序流量下线通知 |
 
 > 当 event 为 APP\_FORCE\_OFFLINE 时会多出以下一些内容
 
