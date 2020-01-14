@@ -9,7 +9,7 @@ sidebar: net_rule
 每个智能小程序需要事先设置一个通讯域名，小程序可以跟指定的域名与进行网络通信。包括普通 HTTPS 请求（request）、上传文件（uploadFile）、下载文件（downloadFile) 和 WebSocket 通信（connectSocket）。
 ## 配置流程
 
-服务器域名请在 “智能小程序后台->设置->开发设置-><a href="https://smartprogram.baidu.com/mappconsole/main/set?tabCur=1">服务器域名</a>” 中进行配置，配置时需要注意：
+服务器域名请在 “<a href="https://smartprogram.baidu.com/mappconsole/main/set?tabCur=1">智能小程序后台</a>->设置->开发设置->服务器域名” 中进行配置，配置时需要注意：
 
 *    域名只支持 https (request、uploadFile、downloadFile) 和 wss (socket) 协议；
 

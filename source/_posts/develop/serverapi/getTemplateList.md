@@ -11,7 +11,7 @@ sidebar: getTemplateList
 
 
 ```
-GET https://openapi.baidu.com/rest/2.0/smartapp/templatelist
+GET https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist
 ```
 **公共请求参数:**
 
@@ -48,7 +48,8 @@ example |string | 模板内容示例
 
 ```shell
 curl -X GET \
-  'https://openapi.baidu.com/rest/2.0/smartapp/template/list?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist?access_token=24.ee3671b4e41f2704280d5ddbe9a3f94c
+  .3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&count=20&offset=2271'
 ```
 
 
