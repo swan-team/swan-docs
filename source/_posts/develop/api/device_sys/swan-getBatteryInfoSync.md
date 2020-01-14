@@ -12,20 +12,34 @@ sidebar: swan-getBatteryInfoSync
 
 **解释**： 获取当前设备电量同步接口，ios系统不可用。
 
- 百度APP中扫码体验： 
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getBatteryInfoSync.png"  class="demo-qrcode-image" />
+无
 
- 方法参数 ：无
-
- 返回值说明 ：
+### 返回值说明  
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |level |string | 设备电量， 范围为1-100|
 |isCharging  | boolean | 设备是否正在充电|
 
- 图片示例 
+## 示例
+
+<a href="swanide://fragment/d8e0193122ed0e8d708f8d0a677000821577106966752" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getBatteryInfoSync.png"  class="demo-qrcode-image" />" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -39,9 +53,9 @@ sidebar: swan-getBatteryInfoSync
     </div>     
 </div>
 
- 代码示例 
+###  代码示例 
 
-<a href="swanide://fragment/d8e0193122ed0e8d708f8d0a677000821577106966752" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 ```js

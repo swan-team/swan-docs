@@ -12,17 +12,28 @@ sidebar: swan-onUserCaptureScreen
 
 **解释**：监听用户主动截屏事件，用户使用系统截屏按键截屏时触发此事件。
 
- 百度APP中扫码体验： 
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onUserCaptureScreen.png"  class="demo-qrcode-image" />
+Function callback
+
+### `callback`参数说明 
+ 无
+## 示例
+
+<a href="swanide://fragment/0ef6b9cc220c17e255b866a422339bfd1574220849773" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onUserCaptureScreen.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
 
- 方法参数 ：Function callback
 
- `callback`参数说明 ：无
 
- 图片示例 
-
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/onUserCaptureScreen.gif">
@@ -35,9 +46,9 @@ sidebar: swan-onUserCaptureScreen
     </div>     
 </div>
 
- 代码示例 
+###  代码示例 
 
-<a href="swanide://fragment/0ef6b9cc220c17e255b866a422339bfd1574220849773" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
