@@ -13,7 +13,7 @@ sidebar: view_movable-view
 ##  属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---|
+|:---|:---|:---|:---|:---|
 | direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
 | inertia | Boolean | false | 否 |movable-view 是否带有惯性|
 |out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|

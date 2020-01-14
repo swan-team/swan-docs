@@ -56,11 +56,11 @@ sidebar: hierarchical
 <div class="m-doc-custom-text-image">
  	<div>
 		启动小程序框架时，加载反馈动画与百度 App 通用加载动画不同，更突出小程序的品牌和特性。
-		
+		<br>
 		此为百度小程序框架通用能力，除 LOGO 和名称调用开发者的小程序信息外，其他视觉动效及交互均由百度小程序框架统一提供，开发者无需进行额外开发。
  	</div>
- 	 	<div><img src="../../../img/design/principle/2-4.png">
-		</div>
+ 	<div>
+		<img src="../../../img/design/principle/2-4.png">
 	</div>
 </div>	
 
