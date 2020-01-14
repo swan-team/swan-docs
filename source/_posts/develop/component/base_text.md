@@ -15,7 +15,7 @@ sidebar: base_text
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |:---- |: ---- | :---- |:---- |:---- |:--|
 | space | String  | false | 否 |显示连续空格|-|
-| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| selectable|Boolean|false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本）| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 ###  space 有效值 
 
@@ -185,20 +185,7 @@ Page({
     }
 });
 ```
-##  属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明|最低版本|
-|:---- |: ---- | :---- |:---- |:---- |:--|
-| space | String  | false | 否 |显示连续空格|-|
-| selectable|Boolean|false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本）| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-
-###  space 有效值 
-
-| 值 | 说明 |
-| :---- |: ---- |
-| ensp | 中文字符空格一半大小 |
-| emsp | 中文字符空格大小 |
-| nbsp | 根据字体设置的空格大小 |
 
 ##  Bug & Tip 
 
