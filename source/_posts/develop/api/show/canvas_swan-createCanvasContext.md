@@ -11,7 +11,7 @@ sidebar: canvas_swan-createCanvasContext
  
 ## 方法参数 
 
-StringcanvasId
+String canvasId
 
 ###  `canvasId`参数说明 ：要获取 canvas 组件的 id。
 
