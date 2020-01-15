@@ -8,16 +8,22 @@ sidebar: createanimation_Animation-rotateX
  
 **解释**：从 X 轴顺时针旋转一个角度
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateX.png"  class="demo-qrcode-image" />
+Number deg,deg的范围-180~180，在X轴旋转一个 deg 角度。
+## 示例
 
-**方法参数**：Number deg
+<a href="swanide://fragment/a9fc825b1b35446d0ee687d664d3b1821574215484188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
-**参数说明**：deg的范围-180~180，在X轴旋转一个 deg 角度。
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotateX.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**图片示例**
-
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/rotateX.gif">
@@ -30,9 +36,9 @@ sidebar: createanimation_Animation-rotateX
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/a9fc825b1b35446d0ee687d664d3b1821574215484188" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

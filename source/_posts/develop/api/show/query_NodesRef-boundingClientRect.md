@@ -10,13 +10,12 @@ sidebar: query_NodesRef-boundingClientRect
 
 **解释**： 添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_boundingClientRect.png" class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
-
-**返回值说明**：
+### 返回值说明  
 
 返回的节点信息中，每个节点的位置用 left、right、top、bottom、width、height 字段描述。如果提供了 callback 回调函数，在执行 selectQuery 的 exec 方法后，节点信息会在 callback 中返回。
 
@@ -28,9 +27,18 @@ sidebar: query_NodesRef-boundingClientRect
 |bottom|Nunber|节点下边界坐标|
 |width|Nunber|节点宽度|
 |height|Nunber|节点高度|
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/edf1aa51425ccf5e213e181ca267b5211574770246796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_boundingClientRect.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/boundingClientRect.gif">
@@ -43,9 +51,9 @@ sidebar: query_NodesRef-boundingClientRect
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/edf1aa51425ccf5e213e181ca267b5211574770246796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

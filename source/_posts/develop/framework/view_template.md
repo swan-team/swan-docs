@@ -50,7 +50,7 @@ is可以动态决定具体需要渲染哪个模板。
 
 **代码示例**
 
-<a href="swanide://fragment/89e7b34421fd91671f51026b6b6acf2b1577173937967" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d097c432563a4d0fc2e7bd4fedc917431578384398434" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <!-- template-demo.swan-->

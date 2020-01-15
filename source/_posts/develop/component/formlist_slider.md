@@ -26,7 +26,7 @@ sidebar: formlist_slider
 |bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
 |bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/e1489d2e2e3d72ba1233556495c382c11577360671451" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

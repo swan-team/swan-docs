@@ -7,23 +7,29 @@ sidebar: query_swan-createIntersectionObserver
  
 
 **解释**： 创建并返回一个 IntersectionObserver 对象实例。在自定义组件中，可以使用 this.createIntersectionObserver([options]) 来代替。
+ 
+## 方法参数 
 
-**百度APP中扫码体验：**
+Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`options`参数说明**：
+###  `options`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |thresholds|Array|否|[0]|一个数值数组，包含所有阈值。|
 |initialRatio|number|否|0|初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。|
 |selectAll|boolean|否|false|是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点（注意：同时选中过多节点将影响渲染性能）|
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
@@ -36,7 +42,7 @@ sidebar: query_swan-createIntersectionObserver
     </div>     
 </div>
 
-**代码示例1**：
+###  代码示例1 ：
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -139,7 +145,7 @@ Page({
   
 ```
 
-**代码示例2 - options为thresholds时**：
+###  代码示例2 - options为thresholds时 ：
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -172,7 +178,7 @@ Page({
 ```
 
 
-**代码示例3 - options为initialRatio时**：
+###  代码示例3 - options为initialRatio时 ：
 
 <a href="swanide://fragment/2c3aea3f1bc1948d0ce69f56fa5acb571574931094969" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -204,7 +210,7 @@ Page({
 });
 ```
 
-**代码示例4 - options为selectAll时**：
+###  代码示例4 - options为selectAll时 ：
 
 <a href="swanide://fragment/cfae8c63d16efcf6a7b4d6b6b2f5d4f71574931774175" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

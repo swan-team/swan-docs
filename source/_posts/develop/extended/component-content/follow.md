@@ -13,7 +13,7 @@ sidebar: follow
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
-|mode|String|否|text|关注按钮模式，有三种选择。icon: 仅有图标; text: 文字版本; mixture: 图表文字结合|
+|mode|String|否|text|关注按钮模式，有三种选择。icon: 仅有图标; text: 文字版本; mixture: 图标文字结合|
 |background-color|String|否|blue|当且仅当mode为text时有以下4种按钮颜色可选:blue; white; opacity; none。当且仅当mode为icon时有以下2种按钮颜色可选:blue; white;|
 |is-followed|Boolean|是|false|关注的状态|
 |follow-text|Array|否|['关注', '已关注']|关注按钮上的文案|

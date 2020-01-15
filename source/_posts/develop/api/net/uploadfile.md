@@ -12,13 +12,11 @@ sidebar: uploadfile
 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。
 
 
-**百度APP中扫码体验：**
+## 方法参数 
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadFile.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -31,16 +29,16 @@ sidebar: uploadfile
 |fail   | Function |   否 || 接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
-**fail 返回值参数说明**：
+### fail 返回值参数说明 ：
 
-* Andriod
+* Android
 
 |错误码|说明|
 |--|--|
@@ -57,7 +55,18 @@ sidebar: uploadfile
 
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/9600df506a852243740082c960020f241573992659493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -71,9 +80,9 @@ sidebar: uploadfile
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/9600df506a852243740082c960020f241573992659493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 Page({
@@ -105,7 +114,7 @@ Page({
 });
 ```
 
-**返回值**：
+ 返回值 ：
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 

@@ -32,7 +32,7 @@ sidebar: swan-scanCode
 |---- | ---- |
 |result| 所扫码的内容 |
 |scanType| 所扫码的类型 |
-|charSet|所扫码的字符集，仅支持 Andriod 系统。|
+|charSet|所扫码的字符集，仅支持 Android 系统。|
 
 **图片示例**
 
@@ -74,7 +74,7 @@ Page({
 
  
 #### 错误码
-* Andriod
+* Android
 
 |错误码|说明|
 |--|--|

@@ -16,7 +16,7 @@ sidebar: formlist_label
 |:-----|:--- |:--- |:--- |:--- |
 |for|String| | 否 |绑定控件的 id|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/d45e0c0552e807263fd72f5ae90cfece1577360566830" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -9,13 +9,13 @@ sidebar: save_swan-getStorage
 
 **解释**：从本地缓存中异步获取指定 key 对应的内容。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getStorage.png"  class="demo-qrcode-image" />
 
-**方法参数**：Object object
+Object object
 
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -24,13 +24,23 @@ sidebar: save_swan-getStorage
 |fail  |  Function  |  否  | |  接口调用失败的回调函数|
 |complete  |  Function   | 否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+### success返回参数说明 ：
 
 |参数 | 类型 |说明|
 |---- | ---- | ---- |
 |data   | Object/String/Number/Array | key 对应的内容|
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/84384a223a90d8a24ee7754217b4130d1573632783248" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getStorage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,12 +54,12 @@ sidebar: save_swan-getStorage
     </div>     
 </div>
 
-**代码示例**
-
-<a href="swanide://fragment/84384a223a90d8a24ee7754217b4130d1573632783248" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+### 代码示例 
 
 
-> 建议先setStorage, 再getStorage
+
+
+> 建议先使用 setStorage， 再使用 getStorage 。
 
 * 在 swan 文件中
 
@@ -147,21 +157,21 @@ Page({
 });
 ```
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Android
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确      |
 
-**Bugs&Tips**
+## Bugs&Tips 
 
 通过swan.getStorage获取一个为设置的key对应值时， 目前会回调success函数并返回空字符串， 该问题会在后续版本修复，请关注公告及文档说明。

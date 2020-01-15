@@ -10,14 +10,25 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onCanplay
 
 **解释**：音频进入可以播放状态，但不保证后面可以流畅播放 。
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnCanplay.png"  class="demo-qrcode-image" />
-
-
-**方法参数**：Function callback
  
-**图片示例**
+## 方法参数
+
+Function callback
+ 
+## 示例
+
+
+<a href="swanide://fragment/be16165a761e6d742056eaf7ddc1d9fd1573699811282" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnCanplay.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +42,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onCanplay
     </div>     
 </div>
 
-**代码示例**
-
-<a href="swanide://fragment/be16165a761e6d742056eaf7ddc1d9fd1573699811282" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+### 代码示例 
 
 * 在 js 文件中
 

@@ -8,16 +8,21 @@ sidebar: createanimation_Animation-skewY
  
 **解释**：对 Y 轴坐标进行倾斜 
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/skewY.png"  class="demo-qrcode-image" />
-
-**方法参数**：Number ay
-
-**参数说明**： 参数范围-180~180；X 轴坐标不变， Y 轴坐标延顺时针倾斜 ay 度。
  
-**图片示例**
+## 方法参数 
 
+Number ay: 参数范围-180~180；X 轴坐标不变， Y 轴坐标延顺时针倾斜 ay 度。
+## 示例
+<a href="swanide://fragment/f72586cc72c18153d42220df8f0394fd1574218409844" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/skewY.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/skewY.gif">
@@ -30,9 +35,9 @@ sidebar: createanimation_Animation-skewY
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/f72586cc72c18153d42220df8f0394fd1574218409844" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

@@ -10,14 +10,22 @@ sidebar:  createanimation_Animation-matrix
  
 **解释**： 同[transform-function matrix](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix)
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src=" https://b.bdstatic.com/miniapp/assets/images/doc_demo/matrix.png"  class="demo-qrcode-image" />
+ Number a，Number b，Number c，Number d 
+## 示例
 
-**方法参数**： Number a，Number b，Number c，Number d 
+<a href="swanide://fragment/c16566dff028c17fbe1454b4bc5ff6c91574218824583" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/matrix.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/matrix.gif">
@@ -30,9 +38,9 @@ sidebar:  createanimation_Animation-matrix
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/c16566dff028c17fbe1454b4bc5ff6c91574218824583" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

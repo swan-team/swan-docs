@@ -9,7 +9,7 @@ sidebar: component
 > 小程序中禁止使用script/link/iframe标签。
 
 
-|组件名称 | 解释 |
+|组件名称 |**解释**|
 |---- | ---- |
 |<a href="/develop/component/view_view/">view</a>  | 视图容器，相当于 html 中的 div ，可将页面分割为独立的、不同的部分。如果需要使用滚动视图，请使用 [scroll-view](/develop/component/view_scroll-view/)。 |
 |<a href="/develop/component/view_scroll-view/">scroll-view</a>| 可滚动视图区域，可实现横向滚动和竖向滚动。使用竖向滚动时，需要给定一个固定高度，可以通过css来设置height。 |

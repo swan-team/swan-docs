@@ -2204,6 +2204,22 @@
                     link: /develop/api/location/swan-chooseLocation
                     text: swan.chooseLocation
                     name:  swan-chooseLocation
+                  -
+                    link: /develop/api/location/swan-startLocationUpdate
+                    text: swan.startLocationUpdate
+                    name:  swan-startLocationUpdate
+                  -
+                    link: /develop/api/location/swan-onLocationChange
+                    text: swan.onLocationChange
+                    name:  swan-onLocationChange
+                  -
+                    link: /develop/api/location/swan-offLocationChange
+                    text: swan.offLocationChange
+                    name:  swan-offLocationChange
+                  -
+                    link: /develop/api/location/swan-stopLocationUpdate
+                    text: swan.stopLocationUpdate
+                    name:  swan-stopLocationUpdate
 
               -
 
@@ -3000,7 +3016,7 @@
 
               -
 
-                text: 系统日历中预约活动
+                text: 在系统日历中新建日程
 
                 sidebar:
                   -
@@ -3168,7 +3184,7 @@
 
               -
 
-                text: 原生全屏内容发布器
+                text: 全屏内容发布器
 
                 sidebar:
                   -
@@ -3181,7 +3197,7 @@
                     name: community_swan-closeCommunityEditor
               -
 
-                text: 原生半屏内容发布器
+                text: 半屏内容发布器
 
                 sidebar:
                   -
@@ -3326,6 +3342,15 @@
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: swan-getSystemRiskInfo
+              # -
+
+              #   text: 订阅
+
+              #   sidebar:
+              #     -
+              #       link: /develop/api/open/swan-subscribeService
+              #       text: swan.subscribeService
+              #       name: swan-subscribeService
         -
             sidebar:
               -
@@ -3536,7 +3561,30 @@
               -
                 link: /develop/extended/template/smt-status-page
                 text: 页面状态模板
-                name: smt-status-page     
+                name: smt-status-page
+        -
+            text: 工具类库
+            sidebar:
+              -
+                link: /develop/extended/lib/smt-promisify
+                text: api promise 化
+                name: smt-promisify 
+              -
+                link: /develop/extended/lib/smt-md5
+                text: md5算法
+                name: smt-md5
+              -
+                link: /develop/extended/lib/smt-mobx
+                text: mobx连接器
+                name: smt-mobx
+              -
+                link: /develop/extended/lib/smt-observer
+                text: 订阅发布器
+                name: smt-observer
+              -
+                link: /develop/extended/lib/smt-swanx
+                text: 数据状态管理
+                name: smt-swanx   
     -
       text: 工具
       name: devtools
@@ -3751,6 +3799,10 @@
                 text: 命令行工具
                 name: commandtool
               -
+                link: /develop/devtools/components_panel
+                text: 组件面板
+                name: components_panel
+              -
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff
@@ -3767,10 +3819,10 @@
                 link: /develop/devtools/auto/demo
                 text: 脚本示例
                 name: demo
-              -
-                link: /develop/devtools/auto/remote
-                text: 真机自动化
-                name: remote
+              # -
+              #   link: /develop/devtools/auto/remote
+              #   text: 真机自动化
+              #   name: remote
               -
                 text: API
                 name: API
@@ -3832,10 +3884,10 @@
                           link: /develop/devtools/auto/smartprogram/login
                           text: smartProgram.login
                           name: login
-                      -
-                          link: /develop/devtools/auto/smartprogram/remote
-                          text: smartProgram.remote
-                          name: remote
+                      # -
+                      #     link: /develop/devtools/auto/smartprogram/remote
+                      #     text: smartProgram.remote
+                      #     name: remote
                       -
                           link: /develop/devtools/auto/smartprogram/disconnect
                           text: smartProgram.disconnect
@@ -4456,6 +4508,26 @@
     #               text: 插件中组件的限制
     #               name: limit_components
 
+
+        # -
+        #   text: 功能类库
+        #   sidebar:
+        #     -
+        #       link: /develop/extensions/smt-md5
+        #       text: smt-md5
+        #       name: smt-md5
+        #     -
+        #       link: /develop/extensions/smt-observer
+        #       text: smt-observer
+        #       name:  smt-observer
+        #     -
+        #       link: /develop/extensions/smt-swanx
+        #       text: smt-swanx
+        #       name: smt-swanx
+        #     -
+        #       link: /develop/extensions/smt-mobx
+        #       text: smt-mobx
+        #       name:  smt-mobx
 
     -
       text: 功能开发

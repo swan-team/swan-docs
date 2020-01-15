@@ -30,7 +30,7 @@ sidebar: smt-feed
 |ext-cls-result-text |externalClass |否|-|加载话术文字class名|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/7b9bf19d0c974d45d9b68fd9fc4429b31577200628346" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

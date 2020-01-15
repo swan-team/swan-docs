@@ -11,7 +11,7 @@ sidebar: addTemplate
 
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/template/add
+POST https://openapi.baidu.com/rest/2.0/smartapp/template/templateadd
 ```
 **公共请求参数**:
 
@@ -44,7 +44,8 @@ template_id | string| 添加至帐号下的模板id，发送小程序模板消�
 
 ```shell
 curl -X POST \
-  'https://openapi.baidu.com/rest/2.0/smartapp/template/add?access_token=45.ee3671b4e41f2704280d5ddbe9a3f94c.3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&id=BD0016&keyword_id_list=[1,2,3]'
+  'https://openapi.baidu.com/rest/2.0/smartapp/template/templateadd?access_token=24.ee3671b4e41f2704280d5ddbe9a3f94c
+  .3600.1556461507.C8Bds396khnu6KDKnqfoUUgZ31K-hBY-gJNc4SsGGjYJrS2RMh&id=BD0016&keyword_id_list=[1,2,3]'
 ```
 
 **响应示例**:

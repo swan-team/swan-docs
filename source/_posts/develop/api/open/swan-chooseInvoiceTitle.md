@@ -91,7 +91,7 @@ page({
 
 ### Bugs & Tips:
 
-- swan.chooseInvoiceTitle自带前置登陆逻辑，不需要单独调用swan.login
+- swan.chooseInvoiceTitle自带前置登录  逻辑，不需要单独调用swan.login
 
 
  

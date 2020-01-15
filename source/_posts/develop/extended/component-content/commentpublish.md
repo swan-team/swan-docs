@@ -15,7 +15,7 @@ sidebar: commentpublish
 |属性名| 类型 | 必填 | 默认值 | 说明 |
 |---|---|---|---|---|
 |show-publish|Boolean|是|false|NA 和组件版支持，半屏发布器默认是隐藏状态，需要通过设置此属性调起，写法：show-publish="{= showPublish =}"|
-|content-placeholder|String|否|NA 和组件版支持，请输入内容|提示占位文案|
+|content-placeholder|String|否|请输入内容|NA 和组件版支持，提示占位文案|
 |module-list|Array|否||仅 NA 版支持，显示模块 list|
 |emoji-path|String|否||仅NA版支持，设置自定义表情配置路径|
 |foucs|Boolean|否|false|仅组件版支持，true 代表调起，false 则不调起|
@@ -48,17 +48,17 @@ sidebar: commentpublish
 | uploadImgUrl  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
 
-**moduleList 列表**：
-若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
-如：`moduleList: ['image']` 则只展示图片模块。
+**module-list 列表**：
+若module-list传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
+如：`module-list: ['image']` 则只展示图片模块。
 
-|moduleList| 类型 |描述|
+|module-list| 类型 |描述|
 |---|---|---|
 |image|String|图片模块|
 |emoji|String|表情模块|
 
 
-**emojiPath 参数说明**：
+**emoji-path 参数说明**：
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 

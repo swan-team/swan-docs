@@ -40,9 +40,8 @@ sidebar: media_ar-camera
 | off | 闪光灯关 |
 
 
-## 代码示例
-
-<a href="swanide://fragment/089865d9da052f492ae2e0ab86bab8601577364090949" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+## 示例
+ 
 
 ### 扫码体验
 

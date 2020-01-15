@@ -69,7 +69,7 @@ sidebar: formlist_button
 
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/672fb16f1f7d00c4c6f7d0342122c9f51577362329156" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

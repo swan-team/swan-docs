@@ -6,16 +6,16 @@ sidebar: formlist_textarea
 ---
 
 
- 
+
 
 
 **解释**：多行输入框。客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，不支持嵌套在其它组件中使用。
 
-##  属性说明 
+##  属性说明
 
 |属性名|类型|默认值|必填|说明|最低支持版本|
 |:----|:----|:----|:----|:----|:----|
-|value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`。|-|
+|value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)|-|
 |disabled|Boolean|false|否|是否禁用|-|
 |maxlength|Number|140|否|最大输入长度，设置为 -1 的时候不限制最大长度|-|
 |placeholder|String| |否|输入框为空时占位符|-|
@@ -39,7 +39,7 @@ sidebar: formlist_textarea
 |bindinput|EventHandle| |否|当键盘输入时，触发 input 事件，event.detail = {value, cursor}， bindinput 处理函数的返回值并不会反映到 textarea 上|-|
 |bindconfirm|EventHandle| |否|点击完成时， 触发 confirm 事件，event.detail = {value: value}|-|
 
-###  confirm-type 有效值 
+###  confirm-type 有效值
 
 | 值 | 说明 |
 |:--- |:--- |
@@ -50,7 +50,7 @@ sidebar: formlist_textarea
 | next | 右下角按钮为“下一步”，点击会触发bindconfirm事件 |
 | go | 右下角按钮为“前往”，点击会触发bindconfirm事件 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8a9bcb008fb8027e49c32c4ad644602a1577360690062" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -63,7 +63,7 @@ sidebar: formlist_textarea
 
 
 
-###  图片示例 
+###  图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -74,10 +74,10 @@ sidebar: formlist_textarea
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-###  代码示例 1：输入区高度自适应 
+###  代码示例 1：输入区高度自适应
 
  <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -130,8 +130,8 @@ Page({
                 maxlength="-1"
                 disabled="{{false}}"
                 auto-focus="{{true}}"
-                placeholder="我会出现滚动条~" 
-                placeholder-class="plh" 
+                placeholder="我会出现滚动条~"
+                placeholder-class="plh"
                 cursor="-1"
                 confirm-type="send"
                 confirm-hold="{{false}}"
@@ -185,7 +185,7 @@ Page({
 ```
 
 
-##  Bug & Tip 
+##  Bug & Tip
 * Tip：textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * Tip：不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
 * Tip：请使用cover-view组件在 textarea 组件上开发遮罩层。

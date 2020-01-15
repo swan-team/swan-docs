@@ -57,7 +57,7 @@ sidebar: nav
 |exit|	退出小程序，target="miniProgram"时生效|	2.5.2|
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/7c46f28ed7079cb877024abd0459b7e21577360590647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

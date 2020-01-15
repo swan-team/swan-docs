@@ -265,7 +265,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | qualification                          | object | 小程序账号对应的主体信息                                     |
 | qualification.name                     | string | 主体名称                                                     |
 | qualification.type                     | int    | 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放 |
-| qualification.satus                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
+| qualification.status                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
 | qualification.ad\_type                 | int    | 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 |
 | qualification.ad_status                | int    | 高级认证状态 <br>1：通过 <br>3：失败                         |
 | category                               | array  | 小程序类目信息                                               |
@@ -299,6 +299,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | auth_info                              | array  | 小程序权限集合信息                                           |
 | auth_info.scope_name                   | string | 权限名称                                                     |
 | auth_info.type                         | int    | 权限类型(0:小程序纬度权限 1:账号纬度权限)                    |
+| annual\_review\_info									| object    |  小程序年审相关信息        |
+| annual\_review\_info.annual_review_status | int | 年审状态  <br>1：正常 <br>2：待年审 <br>3： 年审过期 |
+| annual\_review\_info.annual\_review\_overdue\_time| string | 年审过期时间 |
+| app\_offline\_info                    | object|  小程序强制下线相关信息      |
+| app\_offline\_info.offline\_reason      | int  |     强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线     |
+| app\_offline\_info.illegal\_fields            | string |   强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> 
+appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | status                                 | int    | 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线 |
@@ -324,7 +331,7 @@ curl -X GET \
         "app_name":"小程序",
         "app_key":"1eQayZtM6Vg5C9E3vAgg2IOYjugXqNj2",
         "app_desc":"1531812276",
-        "photo_addr":"[{"cover":"https:\/\/b.bdstatic.com\/searchbox\/mappconsole\/image\/20180416\/1523870283-34303.jpg"}]",
+        "photo_addr": "[{\"cover\": \"https://b.bdstatic.com/searchbox/mappconsole/image/20180416/1523870283-34303.jpg\"}]",
         "qualification":{
             "name":"",
             "type":1,
@@ -381,14 +388,25 @@ curl -X GET \
                 "type":0
             }
         ],
+        "annual_review_info": {
+            "annual_review_status": 2,
+            "annual_review_overdue_time": 1542688104
+        },
+        "app_offline_info": [
+            {
+                "offline_reason": 1,
+                "illegal_fields": "appName"
+            },
+            {
+                "offline_reason": 2
+            }
+        ],
         "min_swan_version":"1.6.17",
         "status":1,
         "web_status":1
     }
 }
 ```
-
-
 
 
 

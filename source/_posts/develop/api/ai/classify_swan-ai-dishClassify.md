@@ -9,13 +9,12 @@ sidebar:  classify_swan-ai-dishClassify
 
 **解释**：用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/dishClassify.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -26,7 +25,7 @@ sidebar:  classify_swan-ai-dishClassify
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 ：
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -35,7 +34,7 @@ sidebar:  classify_swan-ai-dishClassify
 |result|	Array|	菜品识别结果数组|
 
 
-**result 返回值说明**
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -45,7 +44,17 @@ sidebar:  classify_swan-ai-dishClassify
 |probability|	String	|识别结果中每一行的置信度值，0-1。|
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/537ef56cc65e65914349ddad095f1d021569501070696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/dishClassify.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -59,9 +68,9 @@ sidebar:  classify_swan-ai-dishClassify
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/537ef56cc65e65914349ddad095f1d021569501070696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
 Page({
@@ -86,7 +95,7 @@ Page({
 });
 ```
 
-**返回值示例**：
+### 返回值示例 ：
 ```json
 {
     "log_id": $log_id,

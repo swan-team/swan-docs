@@ -37,7 +37,7 @@ sidebar: base_icon
 | radioUnselect | 单选框未选中图标 |
 | loadingGrey | loading图标 |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/2862c151ac430c745783b1a1696204b41577360560694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

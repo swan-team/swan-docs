@@ -16,7 +16,7 @@ sidebar: view_cover-view
 | scroll-top | number | | 否 | 设置顶部滚动偏移量，仅在设置了overflow-y: scroll成为滚动元素后生效 |
 
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/97788bb33bef37a044972011e5960b561577360497251" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

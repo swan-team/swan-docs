@@ -7,33 +7,33 @@ sidebar: formlist_input
 
 **解释**：输入框，v3.105.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。
 
-##  属性说明 
+##  属性说明
 
-|属性名 |类型  |默认值  | 必填 |说明| 
-|:---- | :---- | :---- |:---- |:---- | 
-| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`| |
-| type | String  |text  | 否 |input 的类型| 
-| password | Boolean  | false  | 否 |是否是密码类型| 
-| placeholder | String  |   | 否 |输入框为空时占位符|  
-|placeholder-style| String  |  | 否 | placeholder 的样式| 
-|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|  
-| disabled | Boolean  | false  | 否 |是否禁用|  
-| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|  
-|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|  
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- | :---- |:---- |:---- |
+| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)| |
+| type | String  |text  | 否 |input 的类型|
+| password | Boolean  | false  | 否 |是否是密码类型|
+| placeholder | String  |   | 否 |输入框为空时占位符|
+|placeholder-style| String  |  | 否 | placeholder 的样式|
+|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|
+| disabled | Boolean  | false  | 否 |是否禁用|
+| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|
 | focus |Boolean	  | false | 否 |获取焦点，调起键盘。<br> 开发者工具暂不支持自动获取焦点|
-|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|  
-|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起| 
+|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
+|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
 |cursor	 | Number  |  | 否 |指定 focus 时的光标位置<br>开发者工具暂不支持|
-|selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用| 
-|selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 | 
-|adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 | 
-| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |  
-| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度| 
-|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|  
-| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|  
+|selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用|
+|selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 |
+|adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |
+| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|
+|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|
+| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|
 
 
-###  type 有效值 
+###  type 有效值
 
 |值|说明 |
 |:---- | :---- |
@@ -42,7 +42,7 @@ sidebar: formlist_input
 | idcard |身份证输入键盘 |
 | digit |带小数点的数字键盘 |
 
-###  confirm-type 有效值 
+###  confirm-type 有效值
 
 |值|说明 |
 |:---- | :---- |
@@ -52,7 +52,7 @@ sidebar: formlist_input
 | go |键盘右下角按钮为 “前往” |
 | done |键盘右下角按钮为 “完成” |
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8e8ece4c70230c03924783848ac18cd71577360565180" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -64,7 +64,7 @@ sidebar: formlist_input
 </div>
 
 
-###  图片示例 
+###  图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -75,7 +75,7 @@ sidebar: formlist_input
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 ###  代码示例1 - 基础用法 ：
@@ -111,14 +111,14 @@ sidebar: formlist_input
             <view class="list-item-key-4">自动聚焦</view>
             <view class="list-item-value">
                 <input bindfocus="bindKeyfocus" selection-start="3" placeholder="focus='true'" selection-end="7" focus={{true}} confirm-hold="false" confirm-type="send"/>
-            </view> 
+            </view>
         </view>
 
         <view class="list-area border-bottom">
             <view class="list-item-key-4">控制长度</view>
             <view class="list-item-value">
                 <input cursor='100' bindblur="bindKeyblur"  bindconfirm="bindKeyconfirm" placeholder="maxlength='10'" maxlength="10"/>
-            </view> 
+            </view>
         </view>
 
         <view class="list-area border-bottom">
@@ -132,7 +132,7 @@ sidebar: formlist_input
             <view class="list-item-key-4">带有内容</view>
             <view class="list-item-value">
                 <input value="value='{= value =}'"/>
-            </view> 
+            </view>
         </view>
     </view>
 </view>
@@ -195,14 +195,14 @@ Page({
             <view class="list-item-key-4">文本</view>
             <view class="list-item-value">
                 <input type="text" placeholder="type='text'" />
-            </view> 
+            </view>
         </view>
 
         <view class="list-area border-bottom">
             <view class="list-item-key-4">数字</view>
             <view class="list-item-value">
                 <input type="number" placeholder="type='number'" />
-            </view> 
+            </view>
         </view>
 
         <view class="list-area border-bottom">
@@ -273,16 +273,16 @@ Page({
     <view class="search">
         <view class="search-box">
             <view class="search-icon"></view>
-            <input class="search-input" 
+            <input class="search-input"
                 style="max-width:70%;"
-                type="text" 
-                focus="{{focus}}" 
+                type="text"
+                focus="{{focus}}"
                 placeholder="搜索内容"
-                value="{=value=}" 
-                placeholder-class="searchholder" 
+                value="{=value=}"
+                placeholder-class="searchholder"
                 bindfocus="searchFocus"
-                bindinput="searchInput" 
-                bindconfirm="searchConfirm" 
+                bindinput="searchInput"
+                bindconfirm="searchConfirm"
                 confirm-type="search"
                 bindblur="searchBlur"/>
                 <block s-if="focus">
@@ -302,7 +302,7 @@ Page({
         <view>
             <view class="empty-icon"></view>
             <view class="empty-msg">搜索结果内容</view>
-        </view>   
+        </view>
     </view>
 
     <!-- 搜索无结果 -->
@@ -372,7 +372,7 @@ Page({
 
 
 
-##  Bug & Tip 
+##  Bug & Tip
 
 * Tip：confirm-type 的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持。
 * Tip：input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family。

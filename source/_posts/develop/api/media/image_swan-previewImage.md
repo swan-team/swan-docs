@@ -9,13 +9,11 @@ sidebar: image_swan-previewImage
 
 **解释**： 预览图片。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/previewImage.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+## 方法参数
+Object object
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -27,7 +25,19 @@ sidebar: image_swan-previewImage
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/previewImage.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -41,7 +51,7 @@ sidebar: image_swan-previewImage
     </div>     
 </div>
 
-**代码示例1 - 基本示例**
+### 代码示例1 - 基本示例 
 
 <a href="swanide://fragment/523172fb38fd75a5a2a93081d15d091c1576345594021" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -77,7 +87,7 @@ Page({
 });
 ```
 
-**代码示例2 - images属性**
+### 代码示例2 - images属性 
 
 <a href="swanide://fragment/51954f01c233f0ec9b6ae6b1c66312991576346402909" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -119,7 +129,7 @@ Page({
 });
 ```
 
-**代码示例3 - 多个urls，images属性的使用**
+### 代码示例3 - 多个urls，images属性的使用 
 
 <a href="swanide://fragment/cb85f5f7008a9d446e9ff65fd2fd0df31576346808639" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -165,23 +175,24 @@ Page({
 ```
 
 
-**说明**
 
-* 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
-* 不支持预览本地文件。
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Android
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确 |
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确  |
 
 
+## Bug&Tip
+
+* 开发者工具 1.8.0 current 参数为当前显示图片的索引值。
+* 不支持预览本地文件。

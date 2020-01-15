@@ -38,7 +38,7 @@ sidebar: media_audio
 |3|当解码时发生错误|
 |4|不支持音频|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/8f35dc200c7257726ff144f9fca9f6b91577360450660" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

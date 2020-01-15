@@ -17,7 +17,7 @@ sidebar: view_view
 |hover-start-time| Number | 50 |否 |按住后出现点击态的时间长度，单位毫秒|
 |hover-stay-time| Number |400 | 否|手指松开后点击态保留的时间长度，单位毫秒|
 
-## 代码示例
+## 示例
 
 <a href="swanide://fragment/9fb5e294b219f401cec44ae312c7b7ca1577360709295" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -32,7 +32,7 @@ sidebar: view_view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/view.gif">
+        <img src="https://b.bdstatic.com/miniapp/images/component_view.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -46,17 +46,19 @@ sidebar: view_view
 
 
 ```html
-<view>
-    <view class="title">横向布局</view>
-    <view class="rowlike">
-        <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200" hover-stop-propagation="false">
-            <text>A</text>
-        </view>
-        <view class="color-b">
-            <text>B</text>
-        </view>
-        <view class="color-c">
-            <text>C</text>
+<view class='wrap'>
+    <view class="card-area">
+        <view class="top-description border-bottom">横向布局</view>
+        <view class="rowlike">
+            <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200" hover-stop-propagation="false">
+                <text>A</text>
+            </view>
+            <view class="color-b">
+                <text>B</text>
+            </view>
+            <view class="color-c">
+                <text>C</text>
+            </view>
         </view>
     </view>
 </view>
