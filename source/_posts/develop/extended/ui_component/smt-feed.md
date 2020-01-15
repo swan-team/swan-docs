@@ -1,5 +1,5 @@
 ---
-title: smt-feed 信息流
+title: feed 信息流
 header: develop
 nav: extended
 sidebar: smt-feed

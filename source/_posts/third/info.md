@@ -383,20 +383,20 @@ curl -X POST \
 
 **事件推送内容**
 
-参数名 | 类型  | 描述
------ |-----| -----
-appId |int | 小程序appid
-tpAppId |int | 第三方平台id
-eventTime |string | 事件发生时间
-event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用<br>TIME_LIMIT_RECTIFY_NOTIFY 小程序限时整改通知<br>FLOW_CLOSE_NOTIFY 小程序流量下线通知 
+|参数名 | 类型  | 描述|
+|----- |-----| -----|
+|appId |int | 小程序appid|
+|tpAppId |int | 第三方平台id|
+|eventTime |string | 事件发生时间|
+|event |string | APP\_FORCE\_OFFLINE 小程序强制下线<br>APP\_SERVER\_PAUSE 小程序暂停服务<br>APP\_SERVER\_RESUME 小程序服务启用<br>TIME_LIMIT_RECTIFY_NOTIFY 小程序限时整改通知<br>FLOW_CLOSE_NOTIFY 小程序流量下线通知 |
 
 > 当 event 为 APP\_FORCE\_OFFLINE 时会多出以下一些内容
 
-参数名 | 类型  | 描述
------ |-----| -----
-reason |string | 强制下线原因描述
-offlineReason |int | 强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线<br> 3:基本信息和代码包强制下线
-illegalFields |string | 强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有
+|参数名 | 类型  | 描述|
+|----- |-----| -----|
+|reason |string | 强制下线原因描述|
+|offlineReason |int | 强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线<br> 3:基本信息和代码包强制下线|
+|illegalFields |string | 强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有|
 
 ## 申请恢复流量下线
 

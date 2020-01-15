@@ -37,7 +37,7 @@ sidebar: component
 |<a href="/develop/component/formlist_switch/">switch</a>|开关选择器|
 |<a href="/develop/component/formlist_slider/">slider</a>| 滑动选择器|
 |<a href="/develop/component/formlist_picker-view/">picker-view</a>|可嵌页面的滚动选择器|
-|<a href="/develop/component/formlist_picker-view-column/">picker-view-column</a>|可嵌页面的滚动选择器子项，仅可放置于<picker-view />中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。|
+|<a href="/develop/component/formlist_picker-view-column/">picker-view-column</a>|可嵌页面的滚动选择器子项，仅可放置于`<picker-view />`中，其孩子节点的高度会自动设置成与 picker-view 的选中框的高度一致。|
 |<a href="/develop/component/formlist_picker/">picker</a>|底部弹起的滚动选择器|
 |<a href="/develop/component/nav/">navigator</a>|页面导航，控制小程序的跳转，既可在当前小程序内部进行跳转，也可跳转至其他小程序。|
 |<a href="/develop/component/tabs/">tabs</a>|标签栏，用于让用户在不同的视图中进行切换。|

@@ -121,7 +121,7 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-createCanvasContext//">swan.createCanvasContext</a>|在 Page 中，推荐使用this.createCanvasContext(canvasId)，进行绘图上下文的创建。也可使用swan.createCanvasContext(canvasId)，但使用swan.createCanvasContext(canvasId)进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件组件实例 this，以操作组件内 `<canvas>` 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasPutImageData/">swan.canvasPutImageData</a>|将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasToTempFilePath/">swan.canvasToTempFilePath</a>|把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。在自定义组件下，第二个参数传入组件实例this，以操作组件内`<canvas/>`组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext/">canvasContext</a>|绘图上下文|
@@ -288,7 +288,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#H5%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80%E5%B0%8F%E7%A8%8B%E5%BA%8F/">H5页面打开小程序</a>|H5 页面调起百度智能小程序。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setPageInfo/">swan.setPageInfo</a>|智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaDescription/">swan.setMetaDescription</a>|不推荐使用|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaKeywords/">swan.setMetaKeywords</a>|不推荐使用|
