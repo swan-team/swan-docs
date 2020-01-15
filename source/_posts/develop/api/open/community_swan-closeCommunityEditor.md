@@ -22,7 +22,7 @@ Object object
 |complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 ## 示例
 
-<a href="swanide://fragment/450110734dc6b87a6c9840835756a4e91578986289055" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/61a61af4932a793e8af63c36c4ba1fb11578992643734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -47,9 +47,6 @@ Object object
 </div>
 
 ### 代码示例 
-
-
-
 
 * 在 swan 文件中
 
