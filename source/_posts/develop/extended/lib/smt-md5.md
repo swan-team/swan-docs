@@ -1,5 +1,5 @@
 ---
-title: smt-md5
+title: md5
 header: develop
 nav: extended
 sidebar: smt-md5

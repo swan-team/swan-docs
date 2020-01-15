@@ -1,5 +1,5 @@
 ---
-title: smt-promisify
+title: promisify
 header: develop
 nav: extended
 sidebar: smt-promisify
