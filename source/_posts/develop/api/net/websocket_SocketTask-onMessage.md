@@ -102,6 +102,4 @@ Page({
 
 ```
 
-### bug&tips:
-
-iOS 系统中当 websocket 链接后，重新连接时，可能一直处于 connecting 状态，将在11.10版本修复。
+ 
