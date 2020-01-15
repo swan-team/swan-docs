@@ -1,5 +1,5 @@
 ---
-title: smt-observer
+title: observer
 header: develop
 nav: extended
 sidebar: smt-observer

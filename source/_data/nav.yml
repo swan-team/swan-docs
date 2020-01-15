@@ -3521,31 +3521,31 @@
                 name: info
               -
                 link: /develop/extended/ui_component/smt-feed
-                text: smt-feed 信息流
+                text: feed 信息流
                 name: smt-feed
               -
                 link: /develop/extended/ui_component/smt-feed-item
-                text: smt-feed-item 信息流子项
+                text: feed-item 信息流子项
                 name: smt-feed-item
               -
                 link: /develop/extended/ui_component/smt-icon
-                text: smt-icon 图标
+                text: icon 图标
                 name: smt-icon
               -
                 link: /develop/extended/ui_component/smt-refresh
-                text: smt-refresh 刷新
+                text: refresh 刷新
                 name: smt-refresh
               -
                 link: /develop/extended/ui_component/smt-spin
-                text: smt-spin 加载
+                text: spin 加载
                 name: smt-spin
               -
                 link: /develop/extended/ui_component/smt-page-status
-                text: smt-page-status 页面状态
+                text: page-status 页面状态
                 name: smt-page-status
               -
                 link: /develop/extended/ui_component/smt-navigation
-                text: smt-navigation 自定义导航
+                text: navigation 自定义导航
                 name: smt-navigation
         -
             text: smart-ui模板

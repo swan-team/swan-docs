@@ -1,5 +1,5 @@
 ---
-title: smt-mobx
+title: mobx
 header: develop
 nav: extended
 sidebar: smt-mobx
