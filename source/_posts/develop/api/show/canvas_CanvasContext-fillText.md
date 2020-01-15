@@ -18,7 +18,7 @@ sidebar:  canvas_CanvasContext-fillText
 | `text`|String|是||在画布上输出的文本。|
 | `x`|Number|是|| 绘制文本的左上角 x 坐标位置。|
 | `y`|Number|是||  绘制文本的左上角 y 坐标位置。|
-| `maxWidth` |Number|是||  需要绘制的最大宽度（可选 ）。|
+| `maxWidth` |Number|否||  需要绘制的最大宽度（可选 ）。|
 ## 示例
 
 <a href="swanide://fragment/111d313d772997c85709aaa679ddb9e81573724209338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
