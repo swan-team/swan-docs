@@ -39,16 +39,17 @@ var navToSearch = function (keywords, tarckTag, scope) {
     scope = scope || 'devdocs';
     tarckTag = tarckTag || 'sug跳出点击';
     // 搜索跳转打点
-    _hmt.push(['_trackEvent', tarckTag]);
+    _hmt.push(['_trackEvent', tarckTag, '搜索跳转']);
     searchReport(keywords, 'click');
     var url = origin + '/forum/search?word=' + keywords + '&scope=' + scope + '&source=docs';
     window.open(url, '_blank');
 };
 
 var navToDocs = function (path, keywords, number, broadName) {
-    _hmt.push(['_trackEvent', 'sug跳出点击']);
+    var msg = number > 5 ? '位置大于5' : '位置小于5';
+    _hmt.push(['_trackEvent', 'sug跳出点击', msg]);
     searchReport(keywords, 'click');
-    _hmt.push(['_trackEvent', 'sug跳出点击位置', number, broadName]);
+    _hmt.push(['_trackEvent', 'sug跳出点击位置', number]);
     window.open(path, '_blank');
 };
 
@@ -57,7 +58,7 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
     var str = '';
     docsIsEmpty = docsIsEmpty || false;
     searchReport(keywords, 'query');
-    _hmt.push(['_trackEvent', 'sug展示']);
+    _hmt.push(['_trackEvent', 'sug展示', '展示']);
     if (!docsIsEmpty) {
         str += '<div class="top-search-sug-result">';
         var listNumber = 0;
@@ -96,7 +97,7 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
     }
     else if (docsIsEmpty && !fourmIsEmpty) {
         str += '<div class="top-search-sug-docs-empty">'
-            +  '<span onclick="navToSearch(\'' + keywords + '\', sug无结果跳转至社区, devforum)">'
+            +  '<span onclick="navToSearch(\'' + keywords + '\', "sug无结果跳转至社区", "devforum")">'
             +  '文档没有相关内容，查看社区搜索结果 >'
             +  '</span>'
             +  '</div>';
@@ -134,7 +135,7 @@ function searchFunc(searchId, contentId) {
         });
         $(this).addClass('top-search-box-focus');
         $input.focus();
-        _hmt.push(['_trackEvent', '移动端搜索框点击']);
+        _hmt.push(['_trackEvent', '移动端搜索框', '点击']);
     });
 
     $($input).on('blur', function (e) {
@@ -187,16 +188,16 @@ function searchFunc(searchId, contentId) {
 
     $inputPc.addEventListener('focus', function (e) {
         // var keywords = e.target.value;
-        _hmt.push(['_trackEvent', 'PC端搜索框点击']);
+        _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
         $('#top-search-sug').css({
             display: 'block'
         });
         // if ($('.top-search-sug-item').length > 0) {
         //     searchReport(keywords, 'query');
-        //     _hmt.push(['_trackEvent', 'sug展示']);
+        //     _hmt.push(['_trackEvent', 'sug展示', '展示']);
         // } else if ($('.top-search-sug-docs-empty').length > 0) {
         //     searchReport(keywords, 'query');
-        //     _hmt.push(['_trackEvent', 'sug文档无结果，社区有结果']);
+        //     _hmt.push(['_trackEvent', 'sug文档无结果，社区有结果', '展示']);
         // }
     });
 
