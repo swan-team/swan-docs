@@ -593,7 +593,7 @@
             $('.m-doc-nav-list').on('click', function (e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
 
                 var parent = $(this).parent('li');
                 if (parent.hasClass('m-doc-nav-on')) {
@@ -615,7 +615,7 @@
             $('.m-doc-h1-list').on('click', function (e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
 
                 var parent = $(this).parent('li');
                 parent.hasClass('m-doc-sidebar-on')
@@ -646,7 +646,7 @@
             $('.list-item').on('click', function(e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
                 e.preventDefault();
                 var href = $(this).attr('href');
                 // 更新右侧文章
@@ -725,20 +725,20 @@
             });
             // 代码片段打点
             $('.highlight').on('click', function (e) {
-                var codeType = e.currentTarget.classList[1] || 'text';
-                _hmt.push(['_trackEvent', '代码片段', '点击', codeType]);
+                // var codeType = e.currentTarget.classList[1] || 'text';
+                _hmt.push(['_trackEvent', '代码片段', '点击']);
             });
             $('a[title="在开发者工具中预览效果"]').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '开发者工具预览', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '开发者工具预览', '点击']);
             });
             $('.m-doc-menu-feedback').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '问题反馈', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '问题反馈', '点击']);
             });
             $('.m-doc-menu-edit').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '编辑文档', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '编辑文档', '点击']);
             });
         },
         scrollToHash: function () {
