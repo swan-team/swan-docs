@@ -304,8 +304,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | annual\_review\_info.annual\_review\_overdue\_time| string | 年审过期时间 |
 | app\_offline\_info                    | object|  小程序强制下线相关信息      |
 | app\_offline\_info.offline\_reason      | int  |     强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线     |
-| app\_offline\_info.illegal\_fields            | string |   强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> 
-appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有           |
+| app\_offline\_info.illegal\_fields            | string |   强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | status                                 | int    | 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线 |
