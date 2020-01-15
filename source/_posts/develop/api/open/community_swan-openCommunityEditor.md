@@ -14,11 +14,7 @@ sidebar: community_swan-openCommunityEditor
  
 ## 方法参数 
 
-<<<<<<< HEAD
-Object object
-=======
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/api_communityEditor.png"  class="demo-qrcode-image" />
->>>>>>> bb51807917de9ae0c1d12739d877a58516edd5e8
 
 ### `object`参数说明 
 
@@ -114,9 +110,6 @@ imageConf: {
 </div>
 
 ### 代码示例 
-
-
-
 
 * 在 swan 文件中
 
