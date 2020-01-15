@@ -33,10 +33,10 @@ sidebar: productlaboratory_search
 
 |首页地址类型 | url适配规则示例 | 
 |---|---|
-|`https://www.baidu.cc/forum.php` |`https://www.baidu.cc/forum.php => pages/index/index`| 
-|`https://www.baidu.com.cn/forum/`|`https://www.baidu.com.cn/forum/ => pages/index/index` | 
-|`https://www.baidu.cn/bbs/index`|`https://www.baidu.cn/bbs/index => pages/index/index`  | 
-|`https://bbs.baidu.com/ `|`https://bbs.baidu.com => pages/index/index ` | 
+|`https://www.baidu.cc/forum.php` |`https://www.baidu.cc/forum.php$ => pages/index/index`| 
+|`https://www.baidu.com.cn/forum/`|`https://www.baidu.com.cn/forum/$ => pages/index/index` | 
+|`https://www.baidu.cn/bbs/index`|`https://www.baidu.cn/bbs/index$ => pages/index/index`  | 
+|`https://bbs.baidu.com/ `|`http://bbs.baidu.com/$ => pages/index/index` | 
 
 
 - 帖子落地页：

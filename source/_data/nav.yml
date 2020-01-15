@@ -2324,10 +2324,6 @@
                         text: CanvasContext.createCircularGradient
                         name: canvas_CanvasContext-createCircularGradient
                       -
-                        link: /develop/api/show/canvas_CanvasContext-addColorStop
-                        text: CanvasContext.addColorStop
-                        name: canvas_CanvasContext-addColorStop
-                      -
                         link: /develop/api/show/canvas_CanvasContext-setLineWidth
                         text: CanvasContext.setLineWidth
                         name: canvas_CanvasContext-setLineWidth
@@ -2471,6 +2467,15 @@
                         link: /develop/api/show/canvas_CanvasContext-setTransform
                         text: CanvasContext.setTransform
                         name: canvas_CanvasContext-setTransform
+                  -
+                    link: /develop/api/show/canvas_CanvasGradient
+                    text: CanvasGradient
+                    name: canvas_CanvasGradient
+                    sidebar:   
+                      -
+                        link: /develop/api/show/canvas_CanvasGradient-addColorStop
+                        text: CanvasGradient.addColorStop
+                        name: canvas_CanvasGradient-addColorStop                                         
               -
 
                 text: 交互反馈
