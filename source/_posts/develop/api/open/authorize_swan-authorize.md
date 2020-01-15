@@ -127,6 +127,9 @@ Page({
 
 ##  错误码
 
+> 权限相关的错误码参见[授权接口通用错误码](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)
+
+
 ###  Android
 
 |错误码|说明|

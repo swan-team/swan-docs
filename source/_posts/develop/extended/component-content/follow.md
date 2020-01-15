@@ -1,15 +1,15 @@
 ---
 title: 关注组件
 header: develop
-nav: component-content
+nav: extended
 sidebar: follow
 ---
 
 
 
-**解释：** 内容/用户关注组件。开发者可在小程序内配置关注组件，实现用户对内容和用户的关注，可嵌套在原生组件内，自定义选择组件的样式和动效。
+**解释**：  内容/用户关注组件。开发者可在小程序内配置关注组件，实现用户对内容和用户的关注，可嵌套在原生组件内，自定义选择组件的样式和动效。
 
-**属性说明：**
+## 属性说明 
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
@@ -24,8 +24,26 @@ sidebar: follow
 ## 示例
 <a href="swanide://fragment/6a2a2a4dc684732c95ca871c88acb7f61579074426749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+
 ### 扫码体验
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_follow_follow.png"  class="demo-qrcode-image" />
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_follow_follow.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/follow-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ### 代码示例
 

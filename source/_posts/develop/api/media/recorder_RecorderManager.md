@@ -92,15 +92,12 @@ Page({
 ```
 ##   错误码
 
-
+> 权限相关的错误码参见[授权接口通用错误码](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)
 
 |错误码|说明|
 |--|--|
-|202|参数错误|
-|2002|录音初始化失败|
-|2003|录音机控制状态方法调用时机错误|
-
-
-
+|202|  解析失败，请检查参数是否正确|
+|2002|start fail: init fail 执行start错误，录音初始化失败|
+|2003|  录音机控制状态方法调用时机错误,具体错误信息如下:<br> start fail: recorder is recording   执行start错误,正在录音    <br>  start fail: recorder is paused   执行start错误，录音是暂停状态    <br>  pause fail: recorder is not recording  执行pause错误    <br> resume fail: recorder is not paused   执行resume错误    <br>  stop fail: recorder is not started  执行stop错误 |  
 
 

@@ -1,7 +1,7 @@
 ---
 title: 半屏内容发布器带服务版
 header: develop
-nav: component-content
+nav: extended
 sidebar: commentpublish
 ---
 
@@ -10,7 +10,7 @@ sidebar: commentpublish
 
 **解释：** 支持开发者自定义配置选择原生框架发布器中的模块，此组件带服务版带后端服务，开发者接入各自平台的后端服务，同时自动接入百度互动消息推送。
 
-**属性说明：**
+## 属性说明 
 
 |属性名| 类型 | 必填 | 默认值 | 说明 |
 |---|---|---|---|---|
@@ -40,7 +40,7 @@ sidebar: commentpublish
 
 *由于此组件对原生NA半屏发布器进行了包装，所以需要透传NA发布器的一些参数，同时会返回一些原生发布器的状态，但部分会有一些差异，本文档中都有描述，如还有疑问也可以参考[原生半屏内容发布器文档](https://smartapp.baidu.com/docs/develop/api/open/replyeditor_swan-openReplyEditor/)
 
-**relasecomment/browsemode/error返回草稿内容说明**：
+### relasecomment/browsemode/error返回草稿内容说明 
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -48,7 +48,7 @@ sidebar: commentpublish
 | uploadImgUrl  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
 
 
-**module-list 列表**：
+### module-list 列表 
 若module-list传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
 如：`module-list: ['image']` 则只展示图片模块。
 
@@ -58,7 +58,7 @@ sidebar: commentpublish
 |emoji|String|表情模块|
 
 
-**emoji-path 参数说明**：
+### emoji-path 参数说明 
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 
@@ -73,12 +73,28 @@ sidebar: commentpublish
 
 
 ## 示例
-
 <a href="swanide://fragment/b41acfd314e6ff14805ed581f4decafa1579074454687" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_comment-publisher_comment-publisher.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_comment-publisher_comment-publisher.png"  class="demo-qrcode-image" />
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/comment-publisher-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div> 
+
 
 
 ###  代码示例
@@ -149,7 +165,7 @@ Page({
 });
 ```
 
-**Bug&Tip**
+## Bug&Tip 
 * Tip：对比基础组件中的半屏发布器差异说明
     1. 增加了一个必填属性 comment-param，此属性是百度请求后端时的必传参数，需要在 relasecomment 事件中回传；
     2. 增加了一个 error 事件，点击发表按钮时在用户未登录状态下触发，开发者可在此时处理用户登录相关操作；
