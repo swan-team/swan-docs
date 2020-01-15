@@ -1,5 +1,5 @@
 ---
-title: smt-feed-item 信息流子项
+title: feed-item 信息流子项
 header: develop
 nav: extended
 sidebar: smt-feed-item

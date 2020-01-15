@@ -1,5 +1,5 @@
 ---
-title: smt-refresh 刷新
+title: refresh 刷新
 header: develop
 nav: extended
 sidebar: smt-refresh

@@ -1,5 +1,5 @@
 ---
-title: smt-spin 加载
+title: spin 加载
 header: develop
 nav: extended
 sidebar: smt-spin

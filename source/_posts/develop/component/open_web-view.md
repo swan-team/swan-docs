@@ -198,7 +198,7 @@ web-view 网页中支持的接口有：
 |媒体| 预览图片| <a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-previewImage/">swan.previewImage</a> | |
 |开放接口| 分享 | <a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-openShare/">swan.openShare</a> |需传入当前要分享的小程序的appKey| 
 |地理位置|使用内置地图打开地点|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/">swan.openLocation</a>| | 
-|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation<a>| |
+|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation</a>| |
 |图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>| ||
 
 ###  相关接口3  

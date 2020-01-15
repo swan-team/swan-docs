@@ -1,5 +1,5 @@
 ---
-title: smt-swanx
+title: swanx
 header: develop
 nav: extended
 sidebar: smt-swanx

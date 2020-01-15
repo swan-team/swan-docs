@@ -288,7 +288,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#H5%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80%E5%B0%8F%E7%A8%8B%E5%BA%8F/">H5页面打开小程序</a>|H5 页面调起百度智能小程序。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setPageInfo/">swan.setPageInfo</a>|智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaDescription/">swan.setMetaDescription</a>|不推荐使用|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaKeywords/">swan.setMetaKeywords</a>|不推荐使用|
