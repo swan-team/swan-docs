@@ -72,8 +72,16 @@ sidebar: commentpublish
 ![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
 
-**代码示例**
+## 示例
 
+<a href="swanide://fragment/b41acfd314e6ff14805ed581f4decafa1579074454687" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_comment-publisher_comment-publisher.png"  class="demo-qrcode-image" />
+
+
+###  代码示例
 安装组件：
 ```    
 npm install @smt-ui/content-component
