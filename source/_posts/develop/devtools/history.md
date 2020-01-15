@@ -6,7 +6,7 @@ sidebar: history
 ---
 
 
-### 最新正式版本（2.25.1） 
+### 最新正式版本（2.26.1） 
 
 * 下载链接：[Windows 64](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) /[mac](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)
 
@@ -26,8 +26,9 @@ sidebar: history
 
 |mac|windows|
 |--|--|
+|<a href="https://b.bdstatic.com/miniapp/development_tool/59c39/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.25.1.dmg">2.25.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/0e2ff/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.25.1-x64.exe">2.25.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/73b84/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.24.1.dmg">2.24.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/e6f30/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.24.1-x64.exe">2.24.1</a>|
 |<a href="https://b.bdstatic.com/miniapp/development_tool/392f4/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.23.1.dmg">2.23.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/9f5e9/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.23.1-x64.exe">2.23.1</a>|
-|<a href="https://b.bdstatic.com/miniapp/development_tool/c52c6/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.22.1.dmg">2.22.1</a>|<a href="https://b.bdstatic.com/miniapp/development_tool/c38cb/%E7%99%BE%E5%BA%A6%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-2.22.1-x64.exe">2.22.1</a>|
+
  
 

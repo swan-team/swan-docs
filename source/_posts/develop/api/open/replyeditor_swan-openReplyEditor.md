@@ -11,11 +11,12 @@ sidebar: replyeditor_swan-openReplyEditor
 
 **解释**： 调起半屏内容发布器，并支持开发者配置发布器展示模块。此api版本为单框架，不接入百度服务，即发布的内容无法进入百度app个人主页、无法接入百度互动消息推送。若想自动接入百度服务，请使用[半屏内容发布器带服务版](/develop/extended/component-content/commentpublish/) 。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_openReplyEditor.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -31,7 +32,7 @@ sidebar: replyeditor_swan-openReplyEditor
 
 
 
-**success返回参数说明**：
+### success返回参数说明  
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -40,7 +41,7 @@ sidebar: replyeditor_swan-openReplyEditor
 | content | String | 正文 |
 
 
-**moduleList 列表**：
+###  moduleList 列表  
 若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
 如：`moduleList: ['image']` 则只展示图片模块。
 
@@ -50,11 +51,11 @@ sidebar: replyeditor_swan-openReplyEditor
 |emoji|String|表情模块|
 
 
-**emojiPath 参数说明**：
+###  emojiPath 参数说明  
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 
-自定义表情资源文件夹格式：
+###  自定义表情资源文件夹格式 
 文件夹中包括：`emoji.json` 和所有表情图片资源。外层文件夹名字可以由开发者自由定义，路径配置在 emojiPath 中即可，`emoji.json` 为固定文件名，请开发者按格式创建。表情没有数量和大小限制，但是表情资源会占用包体大小。
 
 ![图片](../../../../img/api/community_editor/emoji_path.jpg)
@@ -62,8 +63,17 @@ sidebar: replyeditor_swan-openReplyEditor
 `emoji.json` 格式：
 
 ![图片](../../../../img/api/community_editor/emoji_json.jpg)
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_openReplyEditor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -77,7 +87,7 @@ sidebar: replyeditor_swan-openReplyEditor
     </div>     
 </div>
 
-**代码示例1 moduleList传emoji并配置自定义图标**：
+###  代码示例1 moduleList传emoji并配置自定义图标 ：
 
 <a href="swanide://fragment/eaa301106c159bbb2ac89a39422b9bd91575198845899" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -115,7 +125,7 @@ swan.openReplyEditor({
 })
 ```
 
-**代码示例2 moduleList传image**：
+###  代码示例2 moduleList传image ：
 
 <a href="swanide://fragment/0592737eb5c241eb4a4bb104f99c22e21575198390943" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

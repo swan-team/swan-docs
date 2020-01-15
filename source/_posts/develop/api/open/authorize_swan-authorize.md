@@ -9,14 +9,12 @@ sidebar: authorize_swan-authorize
 
 **解释**： 提前向用户发起授权请求。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/authorize.png"  class="demo-qrcode-image" />
+Object object
 
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -25,7 +23,7 @@ sidebar: authorize_swan-authorize
 |fail |   Function  |  否 || 接口调用失败的回调函数|
 |complete  |  Function   | 否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**scope 有效值列表**：
+### scope 有效值列表 
 
 |scope|	对应接口|	描述|
 |---|---|---|
@@ -36,8 +34,19 @@ sidebar: authorize_swan-authorize
 |scope.invoiceTitle|[swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
 |scope.record|	[swan.getRecorderManager](https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/cb840e582c596d3af960596f7cd45fea1575143796711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/authorize.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -51,9 +60,9 @@ sidebar: authorize_swan-authorize
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/cb840e582c596d3af960596f7cd45fea1575143796711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

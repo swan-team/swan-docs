@@ -10,16 +10,24 @@ sidebar: UpdateManager
 
 
 **解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/get/)返回值。
+ 
+## 方法参数
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png"  class="demo-qrcode-image" />
-
-**方法参数**：无
-
-**代码示例**
+无
+## 示例
 
 <a href="swanide://fragment/a215f5f8430d830160fc485621797da81575376239973" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 代码示例 
+
+
 
 * 在 swan 文件中
 

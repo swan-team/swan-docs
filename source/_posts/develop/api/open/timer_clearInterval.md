@@ -8,15 +8,25 @@ sidebar: timer_clearInterval
 
 **解释**：取消由 setInterval 设置的定时器。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png"  class="demo-qrcode-image" />
+Number intervalID
 
-**方法参数**：Number intervalID
+ `intervalID`参数说明 ：要取消的定时器的 ID。
+## 示例
 
-**`intervalID`参数说明**：要取消的定时器的 ID。
+<a href="swanide://fragment/06a5732dd6a5c4dfe18937335baadc071574042401827" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +40,9 @@ sidebar: timer_clearInterval
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/06a5732dd6a5c4dfe18937335baadc071574042401827" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

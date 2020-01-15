@@ -11,15 +11,27 @@ sidebar: UpdateManager-applyUpdate
 
 **解释**： 当新版本下载完成，调用该方法会强制当前小程序应用上新版本并重启
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png"  class="demo-qrcode-image" />
+无
 
-**方法参数**：无
-
-**代码示例**
+## 示例
 
 [在开发者工具中预览效果](swanide://fragment/451d89ad638cc28784d6e7feb85a8f571576035627547)
+
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 代码示例 
+
+
+
 
 * 在 swan 文件中
 ```html

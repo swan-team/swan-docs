@@ -11,11 +11,12 @@ sidebar: community_swan-openCommunityEditor
 
 **解释**： 调起原生全屏内容发布器，并支持开发者配置发布器展示模块。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_closeCommunityEditor.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -36,7 +37,7 @@ sidebar: community_swan-openCommunityEditor
 |fail  |  Function  | 否 | |调起失败的回调函数|
 |complete  |  Function  | 否 | |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+###  success返回参数说明 
 
 |参数名 |类型 | 说明|
 |---- | ---- | ---- |
@@ -46,7 +47,7 @@ sidebar: community_swan-openCommunityEditor
 | content | String | 正文 |
 
 
-**moduleList 列表**：
+###  moduleList 列表  
 若moduleList传空数组或不传，则默认展示正文、图片模块、表情模块。若传值，则只展示所传 list 中配置的模块。 
 如：`moduleList: ['image']` 则只展示图片模块。
 
@@ -57,7 +58,7 @@ sidebar: community_swan-openCommunityEditor
 |emoji|String|表情模块|
 |target|String|发布范围模块|
 
-**imageConf 参数说明**：
+###  imageConf 参数说明 
 
 |参数| 类型|描述|
 |---|---|---|
@@ -71,7 +72,7 @@ imageConf: {
 }
 ```
 
-**emojiPath 参数说明**：
+###  emojiPath 参数说明  
 
 开发者在配置 emoji 模块后，可以选择是否使用自定义表情表。若使用自定义表情功能，则将自定义表情的资源文件夹路径传入 emojiPath 字段。若不传 emojiPath 字段则使用默认表情包。
 
@@ -83,8 +84,18 @@ imageConf: {
 ![图片](../../../../img/api/community_editor/emoji_json.jpg)
 
 
+## 示例
+<a href="swanide://fragment/35e77aafc2ff31ec9a169e4cda4657191574130936339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_closeCommunityEditor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -98,9 +109,9 @@ imageConf: {
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/35e77aafc2ff31ec9a169e4cda4657191574130936339" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```js
  openCommunityEditorAll() {
