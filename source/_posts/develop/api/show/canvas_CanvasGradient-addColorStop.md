@@ -1,8 +1,8 @@
 ---
-title: CanvasContext.addColorStop
+title: CanvasGradient.addColorStop
 header: develop
 nav: api
-sidebar: canvas_CanvasContext-addColorStop
+sidebar: canvas_CanvasGradient-addColorStop
 ---
 
  

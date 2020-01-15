@@ -428,7 +428,6 @@ https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setStr
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setShadow/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-createLinearGradient/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-createCircularGradient/
-https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-addColorStop/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineWidth/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineCap/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineJoin/
@@ -465,6 +464,8 @@ https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-restor
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-draw/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-font/
 https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setTransform/
+https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasGradient/
+https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasGradient-addColorStop/
 https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/
 https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/
 https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/

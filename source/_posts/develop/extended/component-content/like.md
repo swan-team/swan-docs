@@ -1,14 +1,14 @@
 ---
 title: 点赞服务版
 header: develop
-nav: component-content
+nav: extended
 sidebar: like
 ---
 
 
-**解释：** 支持将用户对文章/评论的点赞行为同步给百度后端，实现对点赞对象(若此对象的文章/评论是在小程序内用评论组件生产)的消息通知。需要将点赞对象的文章/评论内容一起提交。
+**解释**：  支持将用户对文章/评论的点赞行为同步给百度后端，实现对点赞对象(若此对象的文章/评论是在小程序内用评论组件生产)的消息通知。需要将点赞对象的文章/评论内容一起提交。
 
-**属性说明：**
+## 属性说明 
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
@@ -35,7 +35,25 @@ sidebar: like
 <a href="swanide://fragment/e8a7e2619aac3261b7a58fbb5460ebc41579074491661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_like_like.png"  class="demo-qrcode-image" />
+ 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_like_like.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/like-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ### 代码示例
 
