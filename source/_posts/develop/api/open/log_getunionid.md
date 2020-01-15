@@ -17,29 +17,29 @@ sidebar: log_getunionid
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_TOKEN
 ```
-### 参数说明
+## 方法参数 
 
-**Header 参数**
+### Header 参数 
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
 Content-Type| application/x-www-form-urlencoded | 是 | Http的实体首部字段，浏览器原生form表单。|
 
-**query参数**
+### query参数 
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
 access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)
 
 
-**post参数**
+### post参数 
 
 参数名 | 类型 | 是否必须 | 描述 
 --| --| --|--
 openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open/log/)获取
 
 
-**返回值说明**
+### 返回值说明 
 
 参数名 | 类型 |描述 
 --| --| --|--
@@ -49,13 +49,17 @@ request_id| string | 请求ID，标识一次请求
 data| object | 详细数据，errno为0的情况下才有意义
 
 
-**data字段描述**
+### data字段描述 
 
 参数名 | 类型 | 描述 
 --| --| --|--
 unionid| string | 小程序用户 + 开发者主体维度 唯一的id
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/17bbb40b4856d0a6c59955a3567fe5a51574405159785" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,12 +73,11 @@ unionid| string | 小程序用户 + 开发者主体维度 唯一的id
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/17bbb40b4856d0a6c59955a3567fe5a51574405159785" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中 
-```
+```js
 Page(
     getSessionKey() {
         swan.login({
@@ -124,7 +127,7 @@ Page(
 });
 ```
 
-**返回值示例**
+### 返回值示例 
 ```
 { 
     "data": {

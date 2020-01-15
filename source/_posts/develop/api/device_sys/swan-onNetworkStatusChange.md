@@ -10,21 +10,20 @@ sidebar:  swan-onNetworkStatusChange
 
 **解释**：监听网络状态变化。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onNetworkStatusChange.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Function callback
 
-**方法参数**：Function callback
-
-**`callback`参数说明**：
+### `callback`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |isConnected |Boolean |是| |当前是否有网络连接|
 |networkType| String |是| | 网络类型|
 
-**networkType 有效值**
+### networkType 有效值 
 
 |值   |说明|
 |---- | ---- |
@@ -34,9 +33,21 @@ sidebar:  swan-onNetworkStatusChange
 |4g | 4g 网络|
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/7c0e8595fa15fb27338683115a63df031569478717853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onNetworkStatusChange.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/onNetworkStatusChange.gif">
@@ -49,9 +60,9 @@ sidebar:  swan-onNetworkStatusChange
     </div>     
 </div>
 
-**代码示例**
+###  代码示例 
 
-<a href="swanide://fragment/7c0e8595fa15fb27338683115a63df031569478717853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 js 文件中
@@ -73,15 +84,15 @@ Page({
 
 
  
-#### 错误码
-* Android
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确      |
 |1001|执行失败|
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

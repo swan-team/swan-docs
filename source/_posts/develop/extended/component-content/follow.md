@@ -21,8 +21,13 @@ sidebar: follow
 |toast-text|Array|否|['关注成功', '已取消关注']|toast文案，默认为关注成功、已取消关注|
 |bind:follow|EventHandle|||点击按钮事件|
 
+## 示例
+<a href="swanide://fragment/6a2a2a4dc684732c95ca871c88acb7f61579074426749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**代码示例**
+### 扫码体验
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_follow_follow.png"  class="demo-qrcode-image" />
+
+### 代码示例
 
 安装组件：
 ```    

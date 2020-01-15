@@ -10,14 +10,12 @@ sidebar: swan-navigateToSmartProgram
 > 基础库 1.10.8 版本开始支持。在工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**： 打开另一个小程序。
+ 
+## 方法参数 
 
-**百度APP中扫码体验：**
+Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_navigateToSmartProgram.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,8 +26,17 @@ sidebar: swan-navigateToSmartProgram
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |envVersion	|String	|否|release|	要打开的小程序版本（develop 开发版，trial 体验版）|
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_navigateToSmartProgram.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,7 +51,7 @@ sidebar: swan-navigateToSmartProgram
 </div>
 
 
-**代码示例1: 打开正式版小程序**：
+###  代码示例1: 打开正式版小程序 ：
 
 <a href="swanide://fragment/dabf74367a3e2de2b4a43bf251368a371575358057825" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -75,7 +82,7 @@ Page({
 });
 ```
 
-**代码示例2: 打开开发版小程序（携带参数）**：
+###  代码示例2: 打开开发版小程序（携带参数） ：
 
 <a href="swanide://fragment/03ed9b0a7c5afe2c856bd37d3ec73cf21575358502435" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -108,8 +115,8 @@ Page({
     }
 });
 ```
-#### 错误码
-* Android
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
@@ -119,7 +126,7 @@ Page({
 |501|网络错误|
 |1001|执行失败|
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

@@ -8,14 +8,12 @@ sidebar: userinfo_swan-getUserInfo
  
 **解释**：获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getUserInfo.png"  class="demo-qrcode-image" />
+Object object
 
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -24,7 +22,7 @@ sidebar: userinfo_swan-getUserInfo
 |complete |   Function |   否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**success返回参数说明**：
+### success返回参数说明  
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -33,7 +31,7 @@ sidebar: userinfo_swan-getUserInfo
 |iv | String | 加密算法的初始向量|
 
 
-**userInfo参数说明**：
+### userInfo参数说明  
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -41,7 +39,7 @@ sidebar: userinfo_swan-getUserInfo
 |avatarUrl  | String  |用户头像|
 |gender | Number | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 
-**用户数据解密后字段说明**：
+### 用户数据解密后字段说明  
 
 |参数  |类型|说明 |
 |---- | ---- |---- |
@@ -49,8 +47,17 @@ sidebar: userinfo_swan-getUserInfo
 |headimgurl  | String  |用户头像|
 |sex | String | 性别:值为0时是未知，为1时是男性，为2时是女性。|
 |openid | String | 用户openid|
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getUserInfo.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -64,7 +71,7 @@ sidebar: userinfo_swan-getUserInfo
     </div>     
 </div>
 
-**代码示例1 - API获取用户信息（授权后拿到的信息可提交到服务器保存）**：
+###   代码示例1 - API获取用户信息（授权后拿到的信息可提交到服务器保存） ：
 
 <a href="swanide://fragment/3be63537f1edd6d143ee0333f16f346f1575201970930" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -123,7 +130,7 @@ Page({
 });
 ```
 
-**代码示例2 - open-data组件获取用户信息(与API的区别是用户不需要授权，只能在页面中展示)**：
+###   代码示例2 - open-data组件获取用户信息(与API的区别是用户不需要授权，只能在页面中展示) ：
 
 <a href="swanide://fragment/d84c7124420f7d8767bced690acec10c1575202052676" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -151,7 +158,7 @@ Page({
 </view>
 ```
 
-**代码示例3 - button组件获取用户信息**：
+###   代码示例3 - button组件获取用户信息 ：
 
 <a href="swanide://fragment/8f079b427dd985c2988f2a3b85da73431575205539816" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

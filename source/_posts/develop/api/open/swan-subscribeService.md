@@ -9,12 +9,12 @@ sidebar: swan-subscribeService
 
 **解释**：小程序消息订阅服务：取消订阅和查询订阅；订阅操作详见[`form 表单`](/develop/component/formlist_form/)。
 
-<!-- **百度APP中扫码体验：** -->
 
+## 方法参数 
 
-**方法参数**：Object object
+Object object
 
-**`object` 参数说明**：
+### `object` 参数说明  
 
 |参数名 |类型  |是否必填  |默认值|说明|
 |---- | ---- | ---- |--|---- |
@@ -39,9 +39,20 @@ sidebar: swan-subscribeService
 
 
 
-**示例**：
+## 示例
 
 [在开发者工具中预览效果](swanide://fragment/f50bfe3df40b9dbc290c3ea38ab9ea0e1578301879913)
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 代码示例
+
+
 
 * 在 js 文件中
 

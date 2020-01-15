@@ -10,13 +10,12 @@ sidebar: swan-getSystemInfoSync
 
 **解释**：获取系统信息同步接口
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getSystemInfoSync.png"  class="demo-qrcode-image" />
+无 
 
-**方法参数**：无
-
-**同步返回参数说明**：
+### 同步返回参数说明 
 
 |参数  |说明 |最低版本|
 |---- | ---- |----|
@@ -51,9 +50,21 @@ sidebar: swan-getSystemInfoSync
 |wifiEnabled|Wi-Fi 的系统开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |safeArea|在竖屏正方向下的安全区域|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/19e8320c9c0942291e4db450dbbdb4251577107352196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_getSystemInfoSync.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/getSystemInfoSync.gif">
@@ -66,9 +77,9 @@ sidebar: swan-getSystemInfoSync
     </div>     
 </div>
 
-**代码示例**
+###  代码示例 
 
-<a href="swanide://fragment/19e8320c9c0942291e4db450dbbdb4251577107352196" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 js 文件中
@@ -86,14 +97,14 @@ else {
 
 ```
 
-#### 错误码
+##  错误码
 
-Android
+### Android
 
 |错误码|说明|
 |--|--|
 |202|解析失败，请检查参数是否正确      |
 
-**Bug & Tip**
+ ##  Bug & Tip 
 * 基础库 3.140.1 之前，无法判断接口是否调用失败。
 * 基础库 3.140.1 及以后，接口调用失败时会返回一个标准的`Error`对象，可通过`instanceof`来判断接口是否调用失败。

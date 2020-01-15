@@ -16,14 +16,13 @@ sidebar: payment_swan-requestPolymerPayment
 
 了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](https://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/payment.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -33,7 +32,7 @@ sidebar: payment_swan-requestPolymerPayment
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**orderInfo 参数说明**：
+###  orderInfo 参数说明 
 
 |参数| 必填|说明|
 |----|   ----|---|
@@ -48,15 +47,24 @@ sidebar: payment_swan-requestPolymerPayment
 
  
 
-**bannedChannels 参数说明**：
+###  bannedChannels 参数说明  
 
 |channel|说明 |
 |----| ---- |
 | Alipay | 支付宝 |
 | BDWallet | 百度钱包 |
 | WeChat | 微信支付|
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/payment.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -70,7 +78,7 @@ sidebar: payment_swan-requestPolymerPayment
     </div>     
 </div>
 
-**代码示例1 - 简单支付示例**
+###  代码示例1 - 简单支付示例 
 
 <a href="swanide://fragment/b5697fc510e1a409906f471c70467fec1576568451890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -121,7 +129,7 @@ Page({
 
 ```
 
-**代码示例2 - 复杂支付示例**
+###  代码示例2 - 复杂支付示例 
 
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -155,14 +163,14 @@ swan.requestPolymerPayment({
 ```
 
 
-#### 错误码
-* Android
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |1001|执行失败                                           |
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|
@@ -170,7 +178,7 @@ swan.requestPolymerPayment({
 |10002|网络请求失败|
 |10005|系统拒绝|
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 服务审核未通过会导致调起失败“商品不存在”等错误，需要移步“开发者平台-支付管理”查看服务审核状态；
 * 整个orderInfo 是个 json 对象； 

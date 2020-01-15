@@ -8,15 +8,25 @@ sidebar: timer_clearTimeout
 
 **解释**：取消由 setTimeout 设置的定时器。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png"  class="demo-qrcode-image" />
+Number timeoutID
 
-**方法参数**：Number timeoutID
+ `timeoutID`参数说明 ：要取消的定时器的 ID。
+## 示例
 
-**`timeoutID`参数说明**：要取消的定时器的 ID。
+<a href="swanide://fragment/3b962a13eb39f09ce8e94f6e77ebef4d1574043590740" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +40,9 @@ sidebar: timer_clearTimeout
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/3b962a13eb39f09ce8e94f6e77ebef4d1574043590740" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

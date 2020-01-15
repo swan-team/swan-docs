@@ -30,9 +30,14 @@ sidebar: like
 |bind:error|EventHandle|||点击按钮时在用户未登录状态下触发的事件|
 |bind:success|EventHandle|||点击点赞按钮，在百度服务成功后将状态返回给使用组件者|
 |bind:fail|EventHandle|||点击点赞按钮，在百度服务失败后将状态返回给使用组件者|
+## 示例
 
+<a href="swanide://fragment/e8a7e2619aac3261b7a58fbb5460ebc41579074491661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**代码示例**
+### 扫码体验
+<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_like_like.png"  class="demo-qrcode-image" />
+
+### 代码示例
 
 安装组件：
 ```    

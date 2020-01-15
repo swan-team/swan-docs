@@ -12,7 +12,7 @@ sidebar: base_rich-text
 |属性名 |类型  |默认值  | 必填 |说明| 
 |---- | ---- | ---- | ---- |---- |
 | nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String| 
-| selectable | Boolean | false | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
+| selectable | Boolean | false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本） | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
 | name | 标签名 | String | 是 | 支持部分受信任的HTML节点 |
 | attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
 | children | 子节点列表 | Array | 否 | 结构和nodes一致 |
@@ -214,79 +214,7 @@ Page({
 
 
 
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明| 
-|---- | ---- | ---- | ---- |---- |
-| nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String| 
-| selectable | Boolean | false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本） | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
-| name | 标签名 | String | 是 | 支持部分受信任的HTML节点 |
-| attrs | 属性 | Object | 否 | 支持部分受信任的属性，遵循Pascal命名法 |
-| children | 子节点列表 | Array | 否 | 结构和nodes一致 |
-| text | 文本 | String | 是 | 支持entities |
-
-### nodes
-
-现支持两种节点，通过type来区分，分别是  元素节点  和  文本节点 ，默认是元素节点，在富文本区域里显示的HTML节点。
-
-|值|说明|
-|:---|:---|
-|node|元素节点|
-|text|文本节点|
-
-
-### 受信任的HTML节点及属性。
-
-> 全局支持class和style属性，不支持id属性。
-
-### 属性说明
-
-|节点 | 属性 |
-|:---- |: ---- |
-| a | |
-| abbr |- |
-| b |- |
-| blockquote | |
-| br | |
-| code |- |
-| col | span，width |
-| colgroup | span，width |
-| dd | |
-| del | |
-| div |- |
-| dl |- |
-| dt |- |
-| em | |
-| fieldset |- |
-| h1 |- |
-| h2 |- |
-| h3 |- |
-| h4 |- |
-| h5 |- |
-| h6 |- |
-| hr | |
-| i |- |
-| img | alt，src，height，width |
-| ins |- |
-| label |- |
-| legend |- |
-| li | |
-| ol | start，type |
-| p | |
-| q |- |
-| span |- |
-| strong | |
-| sub |- |
-| sup |- |
-| table | width |
-| tbody |- |
-| td | colspan，height，rowspan，width |
-| tfoot | |
-| th | colspan，height，rowspan，width |
-| thead |- |
-| tr | |
-| ul | - |
-
+ 
 
 
 

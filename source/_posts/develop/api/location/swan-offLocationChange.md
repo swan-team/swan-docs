@@ -11,7 +11,7 @@ sidebar: swan-offLocationChange
 
 Function callback
 
-### `callback`参数说明 ：
+### `callback`参数说明  
 
 实时地理位置变化事件的回调函数
 

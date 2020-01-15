@@ -15,7 +15,7 @@ sidebar: media_audio
 
 |属性名 |类型  |默认值  | 必填 |说明|
 |:---- |: ---- |: ---- |:---- |:---- |
-|id|String||否|audio 组件的唯一标识符|
+|id|String||否|audio 组件的唯一标识符|
 |src|String||否|要播放音频的资源地址|
 |loop|Boolean|false|否|是否循环播放|
 |controls|Boolean|false|否|是否显示默认控件|

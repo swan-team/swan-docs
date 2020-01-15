@@ -10,15 +10,24 @@ sidebar: UpdateManager-onUpdateFailed
 
 **解释**：当新版本下载失败，会进行回调
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png"  class="demo-qrcode-image" />
-
-**方法参数**：Function callback
-
-**代码示例**
+Function callback
+## 示例
 
 [在开发者工具中预览效果](swanide://fragment/503b5e092aa23d3d161ab728f88d7b051575375613317)
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 代码示例  
+
+
 
 * 在 swan 文件中
 ```html

@@ -15,7 +15,7 @@ String targetSelector, Function callback
 
 ###  `targetSelector`参数说明 ：选择器
 
-###  `callback`参数说明 ：监听相交状态变化的回调函数
+###  `callback`参数说明  监听相交状态变化的回调函数
 
 ###  回调结果说明 
 
