@@ -97,7 +97,7 @@ var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
     }
     else if (docsIsEmpty && !fourmIsEmpty) {
         str += '<div class="top-search-sug-docs-empty">'
-            +  '<span onclick="navToSearch(\'' + keywords + '\', "sug无结果跳转至社区", "devforum")">'
+            +  '<span onclick="navToSearch(\'' + keywords + '\', \'' + 'sug无结果跳转至社区' + '\', \'' + 'devforum' + '\')">'
             +  '文档没有相关内容，查看社区搜索结果 >'
             +  '</span>'
             +  '</div>';
@@ -163,7 +163,7 @@ function searchFunc(searchId, contentId) {
             }
             var keywords = $this.value.trim();
             if (keywords.length <= 0) {
-                renderSearchSug('', [], true, true);
+                // renderSearchSug('', [], true, true);
                 return;
             } else {
                 get('/forum/api/search_category?word=' + keywords + '&scope=devdocs', function (res) {
