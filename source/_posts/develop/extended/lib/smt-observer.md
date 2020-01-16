@@ -1,13 +1,13 @@
 ---
-title: observer
+title: event-emitter
 header: develop
 nav: extended
-sidebar: smt-observer
+sidebar: smt-event-emitter
 ---
 
 
 
-**解释：** 在小程序开发中，总会遇到事件监听派发的需求，smt-observer是一个订阅发布器。eventsEmitter可通过`new EventsEmitter()`创建返回。小程序中使用三方npm包方法，见<a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>。
+**解释：** 在小程序开发中，总会遇到事件监听派发的需求，smt-event-emitter是一个订阅发布器。eventsEmitter可通过`new EventsEmitter()`创建返回。小程序中使用三方npm包方法，见<a href="https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/" target="_self" title="npm使用说明">npm使用说明</a>。
 
 
 
@@ -80,7 +80,7 @@ sidebar: smt-observer
 
 ## 代码示例
 
-<a href="swanide://fragment/c2506bf736efea7179833e71ccb7a79a1578403075619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c94a681d05082288b6b552d91a64d2fa1579182923930" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ### 扫码体验
@@ -94,7 +94,7 @@ sidebar: smt-observer
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/swan-lib-observer.png">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/dadc97f4d52ecd1f1bd07eaf7.png">
     </div>  
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -107,7 +107,7 @@ sidebar: smt-observer
 ### 安装
 
 ```
-    npm install @smt-lib/observer
+    npm install @smt-lib/event-emitter
 ```
 
 

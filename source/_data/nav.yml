@@ -3570,11 +3570,11 @@
                 name: smt-promisify 
               -
                 link: /develop/extended/lib/smt-md5
-                text: md5算法
+                text: 加密算法
                 name: smt-md5
               -
                 link: /develop/extended/lib/smt-mobx
-                text: mobx连接器
+                text: swan-mobx连接器
                 name: smt-mobx
               -
                 link: /develop/extended/lib/smt-observer
@@ -3582,7 +3582,7 @@
                 name: smt-observer
               -
                 link: /develop/extended/lib/smt-swanx
-                text: 数据状态管理
+                text: swanx 数据状态管理
                 name: smt-swanx 
         -   
             text: 扩展服务
