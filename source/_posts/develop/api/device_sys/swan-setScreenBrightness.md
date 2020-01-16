@@ -9,14 +9,13 @@ sidebar: swan-setScreenBrightness
 
 **解释**：设置屏幕亮度。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/screenBrightness.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object` 参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -24,9 +23,21 @@ sidebar: swan-setScreenBrightness
 |success| Function  |  否  | |接口调用成功的回调|
 |fail  |  Function  |  否 | | 接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/screenBrightness.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/setScreenBrightness.gif">
@@ -39,9 +50,9 @@ sidebar: swan-setScreenBrightness
     </div>     
 </div>
 
-**代码示例**
+###  代码示例 
 
-<a href="swanide://fragment/2cb53087761bf7f222f520e4780402d61569483519150" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -62,8 +73,8 @@ Page({
 ```
 
  
-#### 错误码
-* Andriod
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
@@ -71,7 +82,7 @@ Page({
 |202|解析失败，请检查参数是否正确|
 |1001|执行失败|
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

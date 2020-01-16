@@ -40,7 +40,7 @@ sidebar: create
 ### 二、主体认证
 服务商资质审核通过后，将自动进入主体认证环节。认证成功后，可进入管理中心创建第三方平台。
 
-具体流程可参考：[主体认证](http://smartprogram.baidu.com/docs/introduction/register/)
+具体流程可参考：[主体认证](https://smartprogram.baidu.com/docs/introduction/register/)
 
 
 >注意：主体认证时所提交的企业信息应当与入驻申请时填写的企业名称保持一致。

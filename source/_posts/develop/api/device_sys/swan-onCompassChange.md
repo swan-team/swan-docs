@@ -13,20 +13,47 @@ sidebar: swan-onCompassChange
 
 **解释**：监听罗盘数据，频率：5次/秒，接口调用后会自动开始监听，可使用swan.stopCompass停止监听。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getCompass.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+### `callback`参数说明  
 
-**`callback`参数说明**：
+|属性名 |类型  |说明|最低支持版本|
+|---- | ---- | ----|----|
+|direction |Number |面对的方向度数| |
+|accuracy| iOS ：	Number<br> Android ：String|精度<br>iOS：表示相对于磁北极的偏差。0 表示设备指向磁北，90 表示指向东，180 表示指向南。<br>Android：枚举值详见下表。|	3.150.1|
 
-|属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
-|direction |Number |是| |面对的方向度数|
+### accuracy 参数说明 
 
-**图片示例**
+> 仅适用于 Android。
 
+|值	|说明|
+|---- | ---- |
+|high	|高精度|
+|medium	|中等精度|
+|low|	低精度|
+|no-contact	|不可信，传感器失去连接|
+|unreliable|	不可信，原因未知|
+|unknow ${value}|	未知的精度枚举值，即该 Android 系统此时返回的表示精度的 value 不是一个标准的精度枚举值。|
+
+ 
+## 示例
+
+<a href="swanide://fragment/dd5f2caff98f590d42027517729532851569479416199" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getCompass.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/onCompassChange.gif">
@@ -39,9 +66,9 @@ sidebar: swan-onCompassChange
     </div>     
 </div>
 
-**代码示例**
+###  代码示例 
 
-<a href="swanide://fragment/dd5f2caff98f590d42027517729532851569479416199" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -76,14 +103,14 @@ Page({
 
 ```
 
-#### 错误码
-* Andriod
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |1001|执行失败    |
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|

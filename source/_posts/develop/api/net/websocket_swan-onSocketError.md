@@ -10,13 +10,23 @@ sidebar: websocket_swan-onSocketError
 
 **解释**：监听 WebSocket 错误
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onSocketError.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/da307c17be7e754db3914cce326cdbc51572996762746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onSocketError.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -30,9 +40,9 @@ sidebar: websocket_swan-onSocketError
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/da307c17be7e754db3914cce326cdbc51572996762746" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -63,15 +73,15 @@ Page({
 
 
  
-#### 错误码
+## 错误码
 
-* Andriod
+### Android
 
 |错误码|说明|
 |--|--|
 |0|error happen    |
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|

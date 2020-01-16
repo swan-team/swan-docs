@@ -3,7 +3,7 @@
     var urlMap = {
         '/docs/design/principle/':'/docs/design/overview/introduction/',
         '/docs/design/component/nav/':'/docs/design/component/topnav/',
-        '/docs/develop/server/power_exp/':'/docs/develop/server/power/#4-投放服务提交素材接口',
+        '/docs/develop/server/power_exp/':'/docs/develop/serverapi/type/',
         '/docs/develop/flow/rank/':'/docs/introduction/rank/',
         '/docs/develop/devtools/uplog/':'/docs/develop/devtools/page_start/',
         '/docs/develop/api/seo/':'/docs/develop/api/open/swan-setPageInfo/',
@@ -49,7 +49,7 @@
         '/docs/design/index/': '/docs/design/principle/easytouse/',  
         '/docs/design/principle/clear/': '/docs/design/principle/hierarchical/',  
         '/docs/design/principle/ease/': '/docs/design/principle/innovation/',  
-        '/docs/design/principle/keynote/': '/docs/develop/fuctionlist/list/',
+        '/docs/design/principle/keynote/': '/docs/design/overview/introduction/',
         '/docs/design/specification/component/': '/docs/design/component/topnav/',
         '/docs/design/specification/': '/docs/design/component/topnav/',
         '/docs/design/specification/layout/': '/docs/design/foundation/layout/',
@@ -103,154 +103,154 @@
         '/docs/develop/api/location_get/': '/docs/develop/api/location/swan-getLocation/',
         '/docs/develop/api/location_map/': '/docs/develop/api/location/swan-createMapContext/',
         '/docs/develop/api/location_open/': '/docs/develop/api/location/swan-openLocation/',
-        '/docs/develop/api/media/': '/docs/develop/api/apilist/',
-        '/docs/develop/api/media_LivePlayerContext/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_arcameracontext/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_backgroundaudiomanager/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_cameraContext/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_createinneraudiocontext/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_image/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_recorder/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_video/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/media_videoContext/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/menu_info/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/net/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/net_request/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/net_rule/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/net_uploadfile/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/net_webSocket/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/nexttick/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/api/media/': '/docs/develop/api/media/image_swan-chooseImage/',
+        '/docs/develop/api/media_LivePlayerContext/': '/docs/develop/api/media/liveplayercontext_LivePlayerContext/',
+        '/docs/develop/api/media_arcameracontext/': '/docs/develop/api/media/arcameracontext_swan-createARCameraContext/',
+        '/docs/develop/api/media_backgroundaudiomanager/': '/docs/develop/api/media/backgroundaudiomanager_BackgroundAudioManager/',
+        '/docs/develop/api/media_cameraContext/': '/docs/develop/api/media/cameracontext_CameraContext/',
+        '/docs/develop/api/media_createinneraudiocontext/': '/docs/develop/api/media/createinneraudiocontext_swan-createInnerAudioContext/',
+        '/docs/develop/api/media_image/': '/docs/develop/api/media/image_swan-chooseImage/',
+        '/docs/develop/api/media_recorder/': '/docs/develop/api/media/recorder_RecorderManager/',
+        '/docs/develop/api/media_video/': '/docs/develop/api/media/videocontext_swan-createVideoContext/',
+        '/docs/develop/api/media_videoContext/': '/docs/develop/api/media/videocontext_VideoContext/',
+        '/docs/develop/api/menu_info/': '/docs/develop/api/show/menu_info/',
+        '/docs/develop/api/net/': '/docs/develop/api/net/net_rule/',
+        '/docs/develop/api/net_request/': '/docs/develop/api/net/request/',
+        '/docs/develop/api/net_rule/': '/docs/develop/api/net/net_rule/',
+        '/docs/develop/api/net_uploadfile/': '/docs/develop/api/net/uploadfile/',
+        '/docs/develop/api/net_webSocket/': '/docs/develop/api/net/websocket/',
+        '/docs/develop/api/nexttick/': '/docs/develop/api/show/custom_component/',
         '/docs/develop/api/open/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_chooseAddress/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_chooseInvoiceTitle0/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_chooseInvoiceTitle1/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_chooseinvoicetitle/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_community/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_feed/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_infomation/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_log/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_login/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_payment/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_preloadsubpackage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_replyeditor/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_riskInfo/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_setting/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_share/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_smartgameprogram/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_smartprogram/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/open_userInfo/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/api/open_chooseAddress/': '/docs/develop/api/open/chooseaddress_swan-chooseAddress/',
+        '/docs/develop/api/open_chooseInvoiceTitle0/': '/docs/develop/api/open/swan-chooseInvoiceTitle/',
+        '/docs/develop/api/open_chooseInvoiceTitle1/': '/docs/develop/api/open/swan-chooseInvoiceTitle/',
+        '/docs/develop/api/open_chooseinvoicetitle/': '/docs/develop/api/open/swan-chooseInvoiceTitle/',
+        '/docs/develop/api/open_community/': '/docs/develop/api/open/community_swan-openCommunityEditor/',
+        '/docs/develop/api/open_feed/': '/docs/develop/api/open/log/',
+        '/docs/develop/api/open_infomation/': '/docs/develop/api/open/swan-setPageInfo/',
+        '/docs/develop/api/open_log/': '/docs/develop/api/open/log_swan-login/',
+        '/docs/develop/api/open_login/': '/docs/develop/api/open/log_swan-login/',
+        '/docs/develop/api/open_payment/': '/docs/develop/api/open/payment_swan-requestPolymerPayment/',
+        '/docs/develop/api/open_preloadsubpackage/': '/docs/develop/api/open/swan-loadSubPackage/',
+        '/docs/develop/api/open_replyeditor/': '/docs/develop/api/open/replyeditor_swan-openReplyEditor/',
+        '/docs/develop/api/open_riskInfo/': '/docs/develop/api/open/swan-getSystemRiskInfo/',
+        '/docs/develop/api/open_setting/': '/docs/develop/api/open/swan-setEnableDebug/',
+        '/docs/develop/api/open_share/': '/docs/develop/api/open/share_onShareAppMessage/',
+        '/docs/develop/api/open_smartgameprogram/': '/docs/develop/api/open/swan-navigateToSmartProgram/',
+        '/docs/develop/api/open_smartprogram/': '/docs/develop/api/open/swan-navigateToSmartProgram/',
+        '/docs/develop/api/open_userInfo/': '/docs/develop/api/open/userinfo_swanid/',
         '/docs/develop/api/protocol/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_background/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_canvas/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_createAnimation/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_navigationbar/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_pageScrollTo/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_pull/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_query/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_tab/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_tabBar/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/show_toast/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/storage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/storage_remove/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/storage_save/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/timer/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/url_query/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/api/webview/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_essentials/database/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_essentials/function/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_essentials/index/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_essentials/storage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_essentials/user/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/cloud_storage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/console_bos/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/console_database/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/console_functions/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/console_overview/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/call_function/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/database_guide/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/function_call_function/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/function_guide/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/quota/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/storage_guide/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/user_auth_guide/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/guide/workspace/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/cloud/server_sdk/function/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/base/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/base_animation-view/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/componet/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/componetlist/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/cover-view/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_button/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_checkbox/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_form/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_input/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_label/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_picker/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_radio/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_slider/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_switch/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/form_textarea/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/formlist/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/list/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/map_circles/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/map_controls/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/map_polyline/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/map_position/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/media/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/movable-area/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/open_open-data/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/scroll-view/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/swiper/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/view/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/component/view_movable-are/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/debug/ideremotetarget/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/debug/remotedebugging/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/debug/remoterelease/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/debug/remotetargettool/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/beta/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/download/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/editor/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/index/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/move/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/page/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/plain/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/projectconfig/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/setting/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/show_dev/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/smartappdebug/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/smartappdebug_function/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/smartappdebug_tool/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/devtools/toolversion/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/apifaq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/confaq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/framworkfaq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/frequently/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/toolfaq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/faq/webfaq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/flow/alading/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/flow/intro/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app-service/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app-service_getCurrentPages/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app-service_life/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app-service_page/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app-service_register/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app_service_getcurrentpages/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/app_service_life/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/canvas/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/client-lib/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/compatibility/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/conf/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/dir/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/index/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/logic/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/api/show/': '/docs/develop/api/show/canvas/',
+        '/docs/develop/api/show_background/': '/docs/develop/api/show/background_swan-setBackgroundColor/',
+        '/docs/develop/api/show_canvas/': '/docs/develop/api/show/canvas/',
+        '/docs/develop/api/show_createAnimation/': '/docs/develop/api/show/createanimation_swan-createAnimation/',
+        '/docs/develop/api/show_navigationbar/': '/docs/develop/api/show/navigationbar_swan-setNavigationBarTitle/',
+        '/docs/develop/api/show_pageScrollTo/': '/docs/develop/api/show/pagescrollto_swan-pageScrollTo/',
+        '/docs/develop/api/show_pull/': '/docs/develop/api/show/pull_swan-startPullDownRefresh/',
+        '/docs/develop/api/show_query/': '/docs/develop/api/show/query_SelectorQuery/',
+        '/docs/develop/api/show_tab/': '/docs/develop/api/show/tab_swan-switchTab/',
+        '/docs/develop/api/show_tabBar/': '/docs/develop/api/show/tabbar_swan-setTabBarBadge/',
+        '/docs/develop/api/show_toast/': '/docs/develop/api/show/toast_swan-showToast/',
+        '/docs/develop/api/storage/': '/docs/develop/api/storage/save_swan-setStorage/',
+        '/docs/develop/api/storage_remove/': '/docs/develop/api/storage/remove_swan-removeStorage/',
+        '/docs/develop/api/storage_save/': '/docs/develop/api/storage/save_process/',
+        '/docs/develop/api/timer/': '/docs/develop/api/open/timer_clearInterval/',
+        '/docs/develop/api/url_query/': '/docs/develop/api/url_query/onURLQueryChange/',
+        '/docs/develop/api/webview/': '/docs/develop/api/open/share_web-view/',
+        '/docs/develop/cloud/cloud_essentials/database/': '/docs/develop/cloud/cloud_database/database/',
+        '/docs/develop/cloud/cloud_essentials/function/': '/docs/develop/cloud/cloud_essentials_function/',
+        '/docs/develop/cloud/cloud_essentials/index/': '/docs/develop/cloud/cloud_essentials/',
+        '/docs/develop/cloud/cloud_essentials/storage/': '/docs/develop/cloud/cloud_essentials_storage/',
+        '/docs/develop/cloud/cloud_essentials/user/': '/docs/develop/cloud/cloud_essentials_user/',
+        '/docs/develop/cloud/cloud_storage/': '/docs/develop/cloud/console_storage/',
+        '/docs/develop/cloud/console_bos/': '/docs/develop/cloud/console/',
+        '/docs/develop/cloud/console_database/': '/docs/develop/cloud/console_data/',
+        '/docs/develop/cloud/console_functions/': '/docs/develop/cloud/console_function/',
+        '/docs/develop/cloud/console_overview/': '/docs/develop/cloud/console/',
+        '/docs/develop/cloud/guide/call_function/': '/docs/develop/cloud/guide/editor/',
+        '/docs/develop/cloud/guide/database_guide/': '/docs/develop/cloud/guide/guide_databasefaq/',
+        '/docs/develop/cloud/guide/function_call_function/': '/docs/develop/cloud/guide/guide_function/',
+        '/docs/develop/cloud/guide/function_guide/': '/docs/develop/cloud/guide/guide_function/',
+        '/docs/develop/cloud/guide/': '/docs/develop/cloud/guide/guide/',
+        '/docs/develop/cloud/guide/quota/': '/docs/develop/cloud/guide/guide_dev/',
+        '/docs/develop/cloud/guide/storage_guide/': '/docs/develop/cloud/guide/editor/',
+        '/docs/develop/cloud/guide/user_auth_guide/': '/docs/develop/cloud/guide/guide_user/',
+        '/docs/develop/cloud/guide/workspace/': '/docs/develop/cloud/guide/guide/',
+        '/docs/develop/cloud/server_sdk/function/': '/docs/develop/cloud/server_sdk/init/',
+        '/docs/develop/component/base/': '/docs/develop/component/animation-view-Lottie/',
+        '/docs/develop/component/base_animation-view/': '/docs/develop/component/animation-view-Lottie/',
+        '/docs/develop/component/componet/': '/docs/develop/component/component/',
+        '/docs/develop/component/componetlist/': '/docs/develop/component/component/',
+        '/docs/develop/component/cover-view/': '/docs/develop/component/view_cover-view/',
+        '/docs/develop/component/form/': '/docs/develop/component/formlist_form/',
+        '/docs/develop/component/form_button/': '/docs/develop/component/formlist_button/',
+        '/docs/develop/component/form_checkbox/': '/docs/develop/component/formlist_checkbox/',
+        '/docs/develop/component/form_form/': '/docs/develop/component/formlist_form/',
+        '/docs/develop/component/form_input/': '/docs/develop/component/formlist_input/',
+        '/docs/develop/component/form_label/': '/docs/develop/component/formlist_label/',
+        '/docs/develop/component/form_picker/': '/docs/develop/component/formlist_picker/',
+        '/docs/develop/component/form_radio/': '/docs/develop/component/formlist_radio/',
+        '/docs/develop/component/form_slider/': '/docs/develop/component/formlist_slider/',
+        '/docs/develop/component/form_switch/': '/docs/develop/component/formlist_switch/',
+        '/docs/develop/component/form_textarea/': '/docs/develop/component/formlist_textarea/',
+        '/docs/develop/component/formlist/': '/docs/develop/component/component/',
+        '/docs/develop/component/list/': '/docs/develop/component/component/',
+        '/docs/develop/component/map_circles/': '/docs/develop/component/map/',
+        '/docs/develop/component/map_controls/': '/docs/develop/component/map/',
+        '/docs/develop/component/map_polyline/': '/docs/develop/component/map/',
+        '/docs/develop/component/map_position/': '/docs/develop/component/map/',
+        '/docs/develop/component/media/': '/docs/develop/component/media_image/',
+        '/docs/develop/component/movable-area/': '/docs/develop/component/view_movable-area/',
+        '/docs/develop/component/open_open-data/': '/docs/develop/component/open/',
+        '/docs/develop/component/scroll-view/': '/docs/develop/component/view_scroll-view/',
+        '/docs/develop/component/swiper/': '/docs/develop/component/view_swiper/',
+        '/docs/develop/component/view/': '/docs/develop/component/view_view/',
+        '/docs/develop/component/view_movable-are/': '/docs/develop/component/view_movable-area/',
+        '/docs/develop/debug/ideremotetarget/': '/docs/develop/devtools/smartappdebug_function_monitor/',
+        '/docs/develop/debug/remotedebugging/': '/docs/develop/devtools/remotedebugging/',
+        '/docs/develop/debug/remoterelease/': '/docs/develop/devtools/remoterelease/',
+        '/docs/develop/debug/remotetargettool/': '/docs/develop/devtools/smartappdebug_tool_Swan-panel/',
+        '/docs/develop/devtools/beta/': '/docs/develop/devtools/uplog_tool_beta/',
+        '/docs/develop/devtools/download/': '/docs/develop/devtools/history/',
+        '/docs/develop/devtools/editor/': '/docs/develop/devtools/page_editor/',
+        '/docs/develop/devtools/index/': '/docs/develop/devtools/history/',
+        '/docs/develop/devtools/move/': '/docs/develop/tutorial/move/',
+        '/docs/develop/devtools/page/': '/docs/develop/devtools/page_start/',
+        '/docs/develop/devtools/plain/': '/docs/develop/devtools/history/',
+        '/docs/develop/devtools/projectconfig/': '/docs/develop/devtools/editor_set/',
+        '/docs/develop/devtools/setting/': '/docs/develop/devtools/set_shortcutkey/',
+        '/docs/develop/devtools/show_dev/': '/docs/develop/devtools/page_start/',
+        '/docs/develop/devtools/smartappdebug/': '/docs/develop/devtools/smartappdebug_function_monitor/',
+        '/docs/develop/devtools/smartappdebug_function/': '/docs/develop/devtools/smartappdebug_function_monitor/',
+        '/docs/develop/devtools/smartappdebug_tool/': '/docs/develop/devtools/smartappdebug_tool_Swan-panel/',
+        '/docs/develop/devtools/toolversion/': '/docs/develop/devtools/uplog_tool_normal/',
+        '/docs/develop/faq/apifaq/': '/docs/develop/appendix/apifaq/',
+        '/docs/develop/faq/confaq/': '/docs/develop/appendix/confaq/',
+        '/docs/develop/faq/framworkfaq/': '/docs/develop/appendix/framworkfaq/',
+        '/docs/develop/faq/frequently/': '/docs/develop/appendix/frequently/',
+        '/docs/develop/faq/toolfaq/': '/docs/develop/appendix/toolfaq/',
+        '/docs/develop/faq/webfaq/': '/docs/develop/appendix/webfaq/',
+        '/docs/develop/flow/alading/': '/docs/introduction/intro/',
+        '/docs/develop/flow/intro/': '/docs/introduction/intro/',
+        '/docs/develop/framework/app-service/': '/docs/develop/framework/app_service/',
+        '/docs/develop/framework/app-service_getCurrentPages/': '/docs/develop/framework/app_service_routegetCurrentPages/',
+        '/docs/develop/framework/app-service_life/': '/docs/develop/framework/app_service_pagelife/',
+        '/docs/develop/framework/app-service_page/': '/docs/develop/framework/app_service_pagefunction/',
+        '/docs/develop/framework/app-service_register/': '/docs/develop/framework/app_service_register/',
+        '/docs/develop/framework/app_service_getcurrentpages/': '/docs/develop/framework/app_service_routegetCurrentPages/',
+        '/docs/develop/framework/app_service_life/': '/docs/develop/framework/app_service_pagelife/',
+        '/docs/develop/framework/canvas/': '/docs/develop/api/show/canvas/',
+        '/docs/develop/framework/client-lib/': '/docs/develop/swan/client-lib/',
+        '/docs/develop/framework/compatibility/': '/docs/develop/swan/compatibility/',
+        '/docs/develop/framework/conf/': '/docs/develop/framework/custom-component/',
+        '/docs/develop/framework/dir/': '/docs/develop/swan/compatibility_diff/',
+        '/docs/develop/framework/index/': '/docs/introduction/enter_application/',
+        '/docs/develop/framework/logic/': '/docs/develop/swan/swanchangelog/',
         '/docs/develop/framework/performance-point/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/router/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/framework/router/': '/docs/develop/framework/app_service_route/',
         '/docs/develop/framework/storage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/view/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/framework/view_Filter/': '/docs/develop/fuctionlist/list/',
+        '/docs/develop/framework/view/': '/docs/develop/framework/view_data/',
+        '/docs/develop/framework/view_Filter/': '/docs/develop/framework/view_filter/',
         '/docs/develop/function/aliyun_v2/': '/docs/develop/fuctionlist/list/',
         '/docs/develop/function/storage/': '/docs/develop/fuctionlist/list/',
         '/docs/develop/plugins/limit_api/': '/docs/develop/fuctionlist/list/',
@@ -258,71 +258,76 @@
         '/docs/develop/plugins/plugins_develop/': '/docs/develop/fuctionlist/list/',
         '/docs/develop/plugins/survey/': '/docs/develop/fuctionlist/list/',
         '/docs/develop/plugins/use/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/oauth/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/oauth_intr/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/oauth_pro/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/power/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/power_api/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/upstream/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/server/web_canonical/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/simple/codedir/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/simple/index/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/swan/shine/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/address/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/api/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/apppage/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/checkname/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/create/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/customer/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/customerability/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/datastatistics/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/deciphering/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/develop/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/domain/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/error/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/info/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/log/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/login/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/module/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/paymentservice/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/pro/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/publication/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/register/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/sitemap/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/third/upload/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/appchangelog/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/compatibility/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_api/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_con/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_css/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_page/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_route/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_start/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/dev_swan/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/faq/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/frame/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/page_conf/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/process_data/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/process_life/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/process_page/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/swanchangelog/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/tutorial/version/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/web/proposal/': '/docs/develop/fuctionlist/list/',
-        '/docs/develop/web/webintroduction/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/access/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/adaccess/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/auditing_info/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/authenticity_charge/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/demo/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/feedput/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/instead/': '/docs/develop/fuctionlist/list/',
-        '/docs/introduction/register/': '/docs/develop/fuctionlist/list/',
-        '/docs/operations/example/': '/docs/develop/fuctionlist/list/',
-        '/docs/operations/list/': '/docs/develop/fuctionlist/list/',
-        '/docs/operations/standard/': '/docs/develop/fuctionlist/list/',
-        '/docs/operations/thirdparty_law/': '/docs/develop/fuctionlist/list/'
+        '/docs/develop/server/oauth/': '/docs/develop/serverapi/power_exp/',
+        '/docs/develop/server/oauth_intr/': '/docs/develop/serverapi/power_exp/',
+        '/docs/develop/server/oauth_pro/': '/docs/develop/serverapi/power_exp/',
+        '/docs/develop/server/power/': '/docs/develop/serverapi/power_exp/',
+        '/docs/develop/server/power_api/': '/docs/develop/serverapi/contact_api_send/',
+        '/docs/develop/server/upstream/': '/docs/develop/serverapi/power_exp/',
+        '/docs/develop/server/web_canonical/': '/docs/develop/serverapi/open_feed/',
+        '/docs/develop/simple/codedir/': '/docs/develop/tutorial/process/',
+        '/docs/develop/simple/index/': '/docs/introduction/enter_application/',
+        '/docs/develop/swan/shine/': '/docs/develop/swan/version/',
+        '/docs/develop/third/address/': '/docs/third/create/',
+        '/docs/develop/third/api/': '/docs/third/api/',
+        '/docs/develop/third/apppage/': '/docs/third/apppage/',
+        '/docs/develop/third/checkname/': '/docs/third/checkname/',
+        '/docs/develop/third/create/': '/docs/third/checkname/',
+        '/docs/develop/third/customer/': '/docs/third/customer/',
+        '/docs/develop/third/customerability/': '/docs/third/customerability/',
+        '/docs/develop/third/datastatistics/': '/docs/third/datastatistics/',
+        '/docs/develop/third/deciphering/': '/docs/third/deciphering/',
+        '/docs/develop/third/develop/': '/docs/third/develop/',
+        '/docs/develop/third/domain/': '/docs/third/domain/',
+        '/docs/develop/third/error/': '/docs/third/error/',
+        '/docs/develop/third/info/': '/docs/third/info/',
+        '/docs/develop/third/log/': '/docs/third/log/',
+        '/docs/develop/third/login/': '/docs/third/login/',
+        '/docs/develop/third/module/': '/docs/third/module/',
+        '/docs/develop/third/paymentservice/': '/docs/third/paymentservice/',
+        '/docs/develop/third/pro/': '/docs/third/pro/',
+        '/docs/develop/third/publication/': '/docs/third/publication/',
+        '/docs/develop/third/register/': '/docs/third/register/',
+        '/docs/develop/third/sitemap/': '/docs/third/sitemap/',
+        '/docs/develop/third/upload/': '/docs/third/upload/',
+        '/docs/develop/tutorial/appchangelog/': '/docs/develop/swan/swanchangelog/',
+        '/docs/develop/tutorial/compatibility/': '/docs/develop/swan/compatibility/',
+        '/docs/develop/tutorial/dev_api/': '/docs/develop/tutorial/function_api/',
+        '/docs/develop/tutorial/dev_con/': '/docs/develop/tutorial/function_component/',
+        '/docs/develop/tutorial/dev_css/': '/docs/develop/tutorial/devcss/',
+        '/docs/develop/tutorial/dev_page/': '/docs/develop/tutorial/function_page/',
+        '/docs/develop/tutorial/dev_route/': '/docs/develop/tutorial/function/',
+        '/docs/develop/tutorial/dev_start/': '/docs/develop/tutorial/startdevelop/',
+        '/docs/develop/tutorial/dev_swan/': '/docs/develop/swan/client-lib/',
+        '/docs/develop/tutorial/faq/': '/docs/develop/appendix/framworkfaq/',
+        '/docs/develop/tutorial/frame/': '/docs/develop/tutorial/frameworkdevelop/',
+        '/docs/develop/tutorial/page_conf/': '/docs/develop/tutorial/function_page/',
+        '/docs/develop/tutorial/process_data/': '/docs/develop/tutorial/process/',
+        '/docs/develop/tutorial/process_life/': '/docs/develop/tutorial/process/',
+        '/docs/develop/tutorial/process_page/': '/docs/develop/tutorial/process/',
+        '/docs/develop/tutorial/swanchangelog/': '/docs/develop/swan/swanchangelog/',
+        '/docs/develop/tutorial/version/': '/docs/develop/swan/version/',
+        '/docs/develop/web/proposal/': '/docs/develop/function/webintroduction/',
+        '/docs/develop/web/webintroduction/': '/docs/develop/function/webintroduction/',
+        '/docs/introduction/access/': '/docs/introduction/accessfeed/',
+        '/docs/introduction/adaccess/': '/docs/introduction/adopen/',
+        '/docs/introduction/auditing_info/': '/docs/introduction/auditinginfo_settled/',
+        '/docs/introduction/authenticity_charge/': '/docs/introduction/baijiahaointroduction/',
+        '/docs/introduction/demo/': '/docs/introduction/enter_application/',
+        '/docs/introduction/feedput/': '/docs/introduction/feed/',
+        '/docs/introduction/instead/': '/docs/introduction/enter_application/',
+        '/docs/introduction/register/': '/docs/introduction/enter_application/',
+        '/docs/operations/example/': '/docs/operations/specification/',
+        '/docs/operations/list/': '/docs/operations/specification/',
+        '/docs/operations/standard/': '/docs/operations/specification/',
+        '/docs/operations/thirdparty_law/': '/docs/operations/thirdparty_law/',
+        '/docs/introduction/rank_id/':'/docs/develop/fuctionlist/list/',
+        '/docs/develop/extended/component-content/concern/': '/docs/develop/extended/component-content/follow/'
     };
-    urlMap[pathname] && location.replace(urlMap[pathname]);
+    if (!window.isSwanIde) {
+        urlMap[pathname] && location.replace(urlMap[pathname]);
+        !pathname.match('\/$') && location.replace(pathname + '/');
+    }
 }(location.pathname);
 
 !function(url) {
@@ -419,7 +424,7 @@
                     }
                 }
             }
-            sidebar.show();
+            // sidebar.show();
             // sidebar定位到当前页面，二级导航下的第一个页面sidebar不滚动
             var wrapperT = sidebar.find('ul').position().top;
             var sidebarSelected = $('.m-doc-sidebar-selected');
@@ -469,14 +474,14 @@
             var $demo = $('img[src= "../../img/demo/demo.png"]');
             var $closest = $demo.closest('div');
             var html1 = '<span style = "text-align: justify; word-break: normal;">请下载百度APP最新版本，扫描下图二维码体验智能小程序。</span>'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener">'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
             + '<img src="../../img/demo/mob.png" alt="图片">'
             + '<img src="../../img/demo/comp.png" alt="图片">';
             var html2 = '<span style = "text-align: justify; word-break: normal;">请<a href = "javascript:;" class = "demo-invoker">点击这里</a>，或扫描下图二维码体验智能小程序。'
-            + '<a href="http://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
+            + '<a href="https://searchbox.bj.bcebos.com/miniapp/miniappdemo/demo.zip" target="_blank" rel="noopener"></span>'
             + '<br>下载小程序示例源码'
             + '</a>'
             + '<br>'
@@ -573,12 +578,11 @@
                 var tarTop = offsetTop + scrollTop - 30;
                 var diffTop = Math.abs(tarTop - scrollTop);
                 var time = diffTop > 1800 ? 200 : 100;
-                
                 // 修复 当切换的两个元素offsetTop距离一致时 不会触发滚动事件，导航栏高亮不生效
-                if(diffTop === 0) {
-                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time })
+                if (diffTop === 0) {
+                    $('.m-doc-content-layout').scrollTo({toT: 0, durTime: time});
                 }
-                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time });
+                $('.m-doc-content-layout').scrollTo({toT: href ? tarTop : 0, durTime: time});
             }, 0);
         },
         addEvent: function () {
@@ -589,7 +593,7 @@
             $('.m-doc-nav-list').on('click', function (e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '一级导航' , '点击', e.currentTarget.innerText]);
 
                 var parent = $(this).parent('li');
                 if (parent.hasClass('m-doc-nav-on')) {
@@ -611,7 +615,7 @@
             $('.m-doc-h1-list').on('click', function (e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '二级导航' , '点击', e.currentTarget.innerText]);
 
                 var parent = $(this).parent('li');
                 parent.hasClass('m-doc-sidebar-on')
@@ -642,7 +646,7 @@
             $('.list-item').on('click', function(e) {
                 var e = e || event;
                 // 导航栏打点统计
-                _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
+                // _hmt.push(['_trackEvent', '三级导航' , '点击', e.currentTarget.innerText]);
                 e.preventDefault();
                 var href = $(this).attr('href');
                 // 更新右侧文章
@@ -658,7 +662,7 @@
             }));
             // 点击右侧sidebar，禁止默认跳转，改为滑动到指定的元素位置
             $('.toc-wrap li a').on('click', ctx._scrollToAnchor);
-            if (this.screenWidth > 768) {
+            if (this.screenWidth > 768 && !window.isSwanIde) {
                 $('.m-doc-content-layout').on('scroll', throttle(function () {
                     var after = $('.m-doc-content-layout').scrollTop();
                     if (after > ctx.screenHeight) {
@@ -721,20 +725,20 @@
             });
             // 代码片段打点
             $('.highlight').on('click', function (e) {
-                var codeType = e.currentTarget.classList[1] || 'text';
-                _hmt.push(['_trackEvent', '代码片段', '点击', codeType]);
+                // var codeType = e.currentTarget.classList[1] || 'text';
+                _hmt.push(['_trackEvent', '代码片段', '点击']);
             });
             $('a[title="在开发者工具中预览效果"]').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '开发者工具预览', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '开发者工具预览', '点击']);
             });
             $('.m-doc-menu-feedback').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '问题反馈', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '问题反馈', '点击']);
             });
             $('.m-doc-menu-edit').on('click', function (e) {
-                var href = e.currentTarget.href;
-                _hmt.push(['_trackEvent', '编辑文档', '点击', href]);
+                // var href = e.currentTarget.href;
+                _hmt.push(['_trackEvent', '编辑文档', '点击']);
             });
         },
         scrollToHash: function () {
@@ -937,7 +941,7 @@
     $(doc).ready(function () {
         docs.start();
         try {
-            $('.m-doc-sidebar-selected')[0].scrollIntoView();
+            $('.m-doc-sidebar-selected')[0].scrollIntoView({block: 'center'});
         }
         catch (err) {}
     });

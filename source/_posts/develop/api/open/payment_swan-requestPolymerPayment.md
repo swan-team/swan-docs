@@ -14,16 +14,15 @@ sidebar: payment_swan-requestPolymerPayment
 为了帮助开发者调用收银台接口，我们提供了Go语言版本封装了签名&验签、HTTP接口请求等基础功能，详见[下载小程序支付demo](https://github.com/baidu-smart-app)。
 
 
-了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](http://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
+了解更多信息，请查看[百度收银台支付开通指引](https://smartprogram.baidu.com/docs/introduction/pay/)、[支付功能开发](https://smartprogram.baidu.com/docs/develop/function/invoke_process/)。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/payment.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -33,30 +32,39 @@ sidebar: payment_swan-requestPolymerPayment
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**orderInfo 参数说明**：
+###  orderInfo 参数说明 
 
 |参数| 必填|说明|
 |----|   ----|---|
-|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装</a>。|
-|appKey| 是|支付能力开通后分配的支付appKey，用以表示应用身份的唯一ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见<a href="http://smartprogram.baidu.com/docs/develop/function/parameter/)。">核心参数获取与组装</a>。|
+|dealId| 是|跳转百度收银台支付必带参数之一，是百度收银台的财务结算凭证，与账号绑定的结算协议一一对应，每笔交易将结算到dealId对应的协议主体。详见<a href="https://smartprogram.baidu.com/docs/develop/function/parameter/">核心参数获取与组装</a>。|
+|appKey| 是|支付能力开通后分配的支付appKey，用以表示应用身份的唯一ID，在应用审核通过后进行分配，一经分配后不会发生更改，来唯一确定一个应用。详见<a href="https://smartprogram.baidu.com/docs/develop/function/parameter/)。">核心参数获取与组装</a>。|
 |totalAmount|  是|订单金额，单位为人民币分。|
 |tpOrderId| 是|商户平台自己记录的订单ID，当支付状态发生变化时，会通过此订单ID通知商户。|
 | dealTitle| 是|订单的名称|
 | signFieldsRange| 是|固定值1|
-|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId `进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
-|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](http://smartprogram.baidu.com/docs/develop/function/parameter/)。|
+|rsaSign| 是|对`appKey+dealId+totalAmount+tpOrderId `进行RSA加密后的签名，防止订单被伪造。签名过程见 [签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)。|
+|bizInfo|  是|订单详细信息，需要是一个可解析为JSON Object的字符串。字段内容见： [bizInfo组装](https://smartprogram.baidu.com/docs/develop/function/parameter/)。|
 
  
 
-**bannedChannels 参数说明**：
+###  bannedChannels 参数说明  
 
 |channel|说明 |
 |----| ---- |
 | Alipay | 支付宝 |
 | BDWallet | 百度钱包 |
 | WeChat | 微信支付|
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/payment.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -70,7 +78,7 @@ sidebar: payment_swan-requestPolymerPayment
     </div>     
 </div>
 
-**代码示例1 - 简单支付示例**
+###  代码示例1 - 简单支付示例 
 
 <a href="swanide://fragment/b5697fc510e1a409906f471c70467fec1576568451890" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -121,7 +129,7 @@ Page({
 
 ```
 
-**代码示例2 - 复杂支付示例**
+###  代码示例2 - 复杂支付示例 
 
 <a href="swanide://fragment/6a8036afe85cc399b5ab4bd478100f771558341867863" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -155,14 +163,14 @@ swan.requestPolymerPayment({
 ```
 
 
-#### 错误码
-* Andriod
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|
 |1001|执行失败                                           |
 
-* iOS
+###  iOS
 
 |错误码|说明|
 |--|--|
@@ -170,7 +178,7 @@ swan.requestPolymerPayment({
 |10002|网络请求失败|
 |10005|系统拒绝|
 
-**Bug & Tip**
+## Bug & Tip 
 
 * 服务审核未通过会导致调起失败“商品不存在”等错误，需要移步“开发者平台-支付管理”查看服务审核状态；
 * 整个orderInfo 是个 json 对象； 

@@ -84,7 +84,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |字段名|	类型|	描述|
 |---|---|---|
-|errno|	int|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|errno|	int|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |msg|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 返回值示例
 ```json
@@ -132,7 +132,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error	|string	|错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
+|error	|string	|错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error 。|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误。|
 ### 4、引导小程序管理员对第三方平台进行授权
 
@@ -141,7 +141,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 页面地址:
 ```
-https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=http://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
+https://smartprogram.baidu.com/mappconsole/tp/authorization?client_id=OdxUiUVpVxH2Ai7G02cIjXGnnnMEUntD&redirect_uri=https://xxx.baidu.com/mappconsole/main/apps&pre_auth_code=c210YXBwMTk4NjM0Mjg1NGFhMTRiMDMyNWQyMGE3ZGE0OWQ1ODE0OWQ1OGM0YzY4
 ```
 参数说明
 
@@ -189,7 +189,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 
 |字段名|	类型|	描述|
 |---|---|---|
-|error|	string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error|	string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 ### 7、刷新授权小程序的接口调用凭据
 当在授权小程序的接口调用凭据（access_token）失效时，可用刷新令牌（refresh_token）获取新的令牌。当换取refresh_token后建议保存。
@@ -224,7 +224,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 
 |字段名	|类型	|描述|
 |---|---|---|
-|error	|string|	错误码；关于错误码的详细信息请参考 http://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
+|error	|string|	错误码；关于错误码的详细信息请参考 https://developer.baidu.com/wiki/index.php?title=docs/oauth/error|
 |error_description|	string|	错误描述信息，用来帮助理解和解决发生的错误|
 
 ### 8、获取小程序基础信息
@@ -265,7 +265,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | qualification                          | object | 小程序账号对应的主体信息                                     |
 | qualification.name                     | string | 主体名称                                                     |
 | qualification.type                     | int    | 主体类型  <br>1：个人 <br>2：企业 <br>3： 政府 <br>4：媒体 <br> 5：其他 <br>个人暂不开放 |
-| qualification.satus                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
+| qualification.status                    | int    | 主体审核状态 <br>1：通过 <br>2：审核中 <br>3：审核失败       |
 | qualification.ad\_type                 | int    | 高级认证类型 <br>-1：其他类型验证<br>0：未做高级认证 <br>1：对公验证 <br>2：活体验证<br>23：法人人脸验证 |
 | qualification.ad_status                | int    | 高级认证状态 <br>1：通过 <br>3：失败                         |
 | category                               | array  | 小程序类目信息                                               |
@@ -299,6 +299,12 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 | auth_info                              | array  | 小程序权限集合信息                                           |
 | auth_info.scope_name                   | string | 权限名称                                                     |
 | auth_info.type                         | int    | 权限类型(0:小程序纬度权限 1:账号纬度权限)                    |
+| annual\_review\_info									| object    |  小程序年审相关信息        |
+| annual\_review\_info.annual_review_status | int | 年审状态  <br>1：正常 <br>2：待年审 <br>3： 年审过期 |
+| annual\_review\_info.annual\_review\_overdue\_time| string | 年审过期时间 |
+| app\_offline\_info                    | object|  小程序强制下线相关信息      |
+| app\_offline\_info.offline\_reason      | int  |     强制下线类型<br> 1:基本信息强制下线 <br>2:小程序代码包强制下线     |
+| app\_offline\_info.illegal\_fields            | string |   强制下线原因 <br> appName:名称 <br> photoAddr:图片 <br> appDesc:简介<br>当有多个时用逗号(,)连接, offlineReason为1或3时才有           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | min\_swan\_version                     | string | 开发者工具最低版本                                           |
 | status                                 | int    | 小程序的状态 <br>-1：代表封禁 <br>1：代表正常 <br>2：代表审核中 <br>4：代表暂停服务<br>5：强制下线 |
@@ -308,7 +314,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=ACCESS_TOK
 
 ```shell
 curl -X GET \
-  'http://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+  'https://openapi.baidu.com/rest/2.0/smartapp/app/info?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
 ```
 
 
@@ -324,7 +330,7 @@ curl -X GET \
         "app_name":"小程序",
         "app_key":"1eQayZtM6Vg5C9E3vAgg2IOYjugXqNj2",
         "app_desc":"1531812276",
-        "photo_addr":"[{"cover":"https:\/\/b.bdstatic.com\/searchbox\/mappconsole\/image\/20180416\/1523870283-34303.jpg"}]",
+        "photo_addr": "[{\"cover\": \"https://b.bdstatic.com/searchbox/mappconsole/image/20180416/1523870283-34303.jpg\"}]",
         "qualification":{
             "name":"",
             "type":1,
@@ -381,14 +387,25 @@ curl -X GET \
                 "type":0
             }
         ],
+        "annual_review_info": {
+            "annual_review_status": 2,
+            "annual_review_overdue_time": 1542688104
+        },
+        "app_offline_info": [
+            {
+                "offline_reason": 1,
+                "illegal_fields": "appName"
+            },
+            {
+                "offline_reason": 2
+            }
+        ],
         "min_swan_version":"1.6.17",
         "status":1,
         "web_status":1
     }
 }
 ```
-
-
 
 
 
@@ -469,7 +486,7 @@ POST数据示例（授权更新通知）
 }
 ```
 
-第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="http://smartprogram.baidu.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
+第三方平台方在收到授权相关通知后也需进行解密，接收到后之后只需直接返回字符串success。为了加强安全性，postdata中的数据将使用服务申请时的加解密key来进行加密，具体请见<a href="https://smartprogram.baidu.com/docs/third/deciphering/">智能小程序第三方平台加密解密技术方案</a>。
 
 
 #### 参数说明

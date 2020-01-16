@@ -11,15 +11,24 @@ sidebar: UpdateManager-onUpdateReady
 
 **解释**：当新版本下载完成，会进行回调。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
-
-**代码示例**
-
+## 示例
 <a href="swanide://fragment/7e11216c88b914ab394f74e952b144d81575375461493" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_getUpdateManager.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 代码示例 
+
+
 
 * 在 swan 文件中
 

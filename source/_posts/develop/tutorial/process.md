@@ -15,10 +15,10 @@ sidebar: process
 |----|----|----|----|
 |[pages](#pages)|Array.&lt; string&gt; |是|设置页面路径|
 |[window](#window)|Object|否|设置页面展现|
-|[preloadRule](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
+|[preloadRule](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#分包预下载规则) |Object |否| 分包预下载规则 |
 |[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
-|[subPackages](http://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
+|[subPackages](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
 |[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
@@ -90,8 +90,6 @@ sidebar: process
     }
 }
 ```
-
-
 <br/>
 
 ### pages
@@ -134,6 +132,10 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
     ]
 }
 ```
+
+**提示**：
+* 开发者工具在app.json的pages中填写页面路径可自动生成文件夹。
+
 <br>
 
 ### window
@@ -145,7 +147,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |navigationBarBackgroundColor|HexColor|#000000|导航栏背景颜色，如 "#000000"| |
 |navigationBarTextStyle|String|white|导航栏标题颜色，目前有效值 black/white| |
 |navigationBarTitleText|String| |导航栏标题文字内容| |
-|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|<a href="https://smartprogram.baidu.com/docs/develop/tutorial/compatibility/">百度 App版本11.1.0</a>|
+|navigationStyle|String|default|导航栏样式，有效值：default(默认样式) custom(自定义导航栏)，只保留右上角胶囊按钮|2.10.34|
 |backgroundColor|HexColor|#ffffff|背景颜色| |
 |backgroundTextStyle|String|dark|下拉背景字体、loading 图的样式，有效值 dark/light| |
 |enablePullDownRefresh|Boolean|false|是否开启下拉刷新| |
@@ -153,7 +155,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 
 **注意**：
-* navigationStyle 全局配置`Android`和`iOS`从百度 App版本11.1.0开始支持, 但子页面配置支持情况`Android`从`百度 App版本11.1`开始支持，`iOS`从`百度 App版本11.2`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
+* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`基础库版本 2.10.34`开始支持，`iOS`从`基础库 3.0.39`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**
@@ -162,12 +164,12 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 |顶bar设置|iOS|Android|WebView组件页面|备注|
 |---|---|---|---|---|
 |百度 App定义的顶bar|无版本限制|无版本限制|无版本限制| |
-|顶bar全局透明设置|百度 App版本>=11.1|百度 App版本>=11.1|不生效| |
-|顶bar子页面透明设置|百度 App版本>=11.2|百度 App版本>=11.1|不生效|每个page的json文件可以单独配置navigationStyle|
+|顶bar全局透明设置|基础库版本 2.10.34|基础库版本 2.10.34|不生效| |
+|顶bar子页面透明设置|基础库版本 2.10.34|基础库版本 2.10.34|不生效|每个page的json文件可以单独配置navigationStyle|
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](http://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
 </div>
 </div>
 
@@ -185,6 +187,23 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 }
 ```
 <br>
+
+**代码示例 - 错误写法**
+
+json文件看起来同 JavaScript 的对象表达方式十分相似，但是有所不同。
+
+JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时候，忘了给 Key 值加双引号或者是把双引号写成单引号是常见错误。
+```json
+{
+    window: {
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "swan接口功能演示",
+	"backgroundColor": "#eeeeee",
+	"backgroundTextStyle": "light"
+    }
+}
+```
 
 ### tabBar
 
@@ -229,7 +248,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 ### requiredBackgroundModes
 
-> 百度App 11.8 及以上版本支持
+> 基础库 3.50.36 及以上版本支持
 
 申明需要后台运行的能力，类型为数组。目前支持以下项目：
 

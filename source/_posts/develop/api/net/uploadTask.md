@@ -8,14 +8,24 @@ sidebar: uploadTask
 
 **解释**：上传任务对象
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadTask.png"  class="demo-qrcode-image" />
-
-**方法参数**：无
+无
 
  
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/uploadTask.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +39,9 @@ sidebar: uploadTask
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/0c1609c7b79f257ae72a8874626354f21572941106808" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -47,7 +57,7 @@ Page({
     createUploadTask() {
         const uploadTask = swan.uploadFile({
             url: 'https://smartprogram.baidu.com/mappconsole/api/checkFile', 
-            filePath: "http://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
+            filePath: "https://127.0.0.1:8199/program/29acd176e8e8fc95c065…e8fc95c065789eddb01303-0/tmp/1572939723264529.png",
             name: 'myfile',
             header: {
                 'content-type': 'application/json'

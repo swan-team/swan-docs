@@ -11,6 +11,15 @@ API 在模拟器与真机中的实现差异如下：
 
 |api |  差异| 
 |---|---|
+|[map 地图 ](https://smartapp.baidu.com/docs/develop/component/map/) | map地图的bindpoitap事件开发者工具暂不支持 |
+|[swan.startLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-startLocationUpdate/) | 开发者工具暂不支持 |
+|[swan.onLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-onLocationChange/) | 开发者工具暂不支持 |
+|[swan.offLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-offLocationChange/) | 开发者工具暂不支持 |
+|[swan.stopLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-stopLocationUpdate/) | 开发者工具暂不支持 |
+|[swan.deleteEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/) | 开发者工具暂不支持 |
+|[swan.addEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/) | 开发者工具暂不支持 |
+|[swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) | 部分属性开发者工具暂不支持,详情请看详情页 |
+|[swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) | 部分属性开发者工具暂不支持,详情请看详情页 |
 |[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/) | 开发者工具暂不支持 | 
 |[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
 |[swan.onMemoryWarning](https://smartprogram.baidu.com/docs/develop/api/device_sys/onmemory/) | 通过“模拟操作->内存警告”触发 | 

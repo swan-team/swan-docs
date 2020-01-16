@@ -8,26 +8,24 @@ sidebar: swan-getLocation
 
 > 在工具和真机中的实现有区别，详见[API 实现差异](/develop/devtools/diff/)。
 
-**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。使用该 API 需通过[获取用户权限设置](http://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](http://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
+**解释**： 获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
+ 
+ Object object
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getLocation.png"  class="demo-qrcode-image" />
-
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
 |type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。wgs84 返回 gps 坐标，gcj02 返回火星坐标，gcj02 比 wgs84更为精确,所以返回可用于传入 swan.openLocation 的坐标|
-|altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps，**会很耗时**，默认没有用 gps。|
+|altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps， 会很耗时 ，默认没有用 gps。|
 |success |Function  |  否 | |  接口调用成功的回调函数，返回内容详见返回参数说明。|
 |fail  |  Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function |   否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success 返回参数说明**：
+### success 返回参数说明 ：
 
 |参数  |说明  |
 |---- | ---- |
@@ -48,7 +46,18 @@ sidebar: swan-getLocation
 |district|区|
 
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getLocation.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -62,7 +71,7 @@ sidebar: swan-getLocation
     </div>     
 </div>
 
-**代码示例1**：
+### 代码示例1  
 
 <a href="swanide://fragment/4f8aa57e40c45c5e6cd624fbc86a0d261569429223720" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -78,14 +87,14 @@ Page({
                 console.log('getLocation success', res)
             },
             fail: err => {
-                console.log('getLocation fail', res)
+                console.log('getLocation fail', err)
             }
         });
     }
 });
 ```
 
-**图片示例**
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -101,7 +110,7 @@ Page({
     </div>     
 </div>
 
-**代码示例2 - 图示可知type属性为gcj02的位置更为精准，建议与swan.openLocation连用**：
+### 代码示例2 - 图示可知type属性为gcj02的位置更为精准，建议与swan.openLocation连用 ：
 
 <a href="swanide://fragment/f1d54cb8696efd08c210dc36c9ec09a91575112912482" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

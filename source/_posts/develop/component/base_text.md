@@ -10,11 +10,25 @@ sidebar: base_text
 
 **解释**：文本元素
 
- 
+##  属性说明 
 
-## 代码示例
+|属性名 |类型  |默认值  | 必填 |说明|最低版本|
+|:---- |: ---- | :---- |:---- |:---- |:--|
+| space | String  | false | 否 |显示连续空格|-|
+| selectable|Boolean|false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本）| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
-<a href="swanide://fragment/2c45226787aa63a4ab867e04c29795ab1576151294185" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+###  space 有效值 
+
+| 值 | 说明 |
+| :---- |: ---- |
+| ensp | 中文字符空格一半大小 |
+| emsp | 中文字符空格大小 |
+| nbsp | 根据字体设置的空格大小 |
+
+
+## 示例
+
+<a href="swanide://fragment/584fca924c6e0b46b8fb4193a4add5fb1577170498889" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -48,7 +62,10 @@ sidebar: base_text
 <view class="wrap">
     <view class="page-section page-section-spacing">
         <view class="text-box">
+            <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本可被选中时需设置此属性为 true -->
             <text selectable="true" space="20">{{text}}</text>
+            <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本可被选中时不用设置此属性 -->
+            <!-- <text space="20">{{text}}</text> -->
         </view>
         <button class="btn" disabled="{{!canAdd}}" type="primary" bind:tap="add">add text</button>
         <button class="btn" disabled="{{!canRemove}}" type="primary" bind:tap="remove">remove text</button>
@@ -110,7 +127,7 @@ Page({
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/text.png">
+        <img src="https://b.bdstatic.com/miniapp/images/text-search.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -122,7 +139,7 @@ Page({
 
 ###  参考示例 ：
 
-<a href="swanide://fragment/c5329d0683b8db558716cd60ed9b5fd51575020767658" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0975d407116406962b9346f8d66d80ce1577170406870" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -135,13 +152,22 @@ Page({
         </view>
         <view class="text">
             <view>
+                <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本可被选中时需设置此属性为 true -->
                 <text class="content" selectable="true" space="ensp">{{text1}}</text>
+                <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本可被选中时不用设置此属性 -->
+                <!-- <text class="content" space="ensp">{{text1}}</text> -->
             </view>
             <view>
+                <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本可被选中时需设置此属性为 true -->
                 <text class="content" selectable="true" space="nbsp">{{text3}}</text>
+                <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本可被选中时不用设置此属性 -->
+                <!-- <text class="content" space="nbsp">{{text3}}</text> -->
             </view>
             <view>
+                <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本可被选中时需设置此属性为 true -->
                 <text class="content" selectable="true" space="emsp">{{text2}}</text>
+                <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本可被选中时不用设置此属性 -->
+                <!-- <text class="content" space="emsp">{{text2}}</text> -->
             </view>
         </viewclass>
     </view>
@@ -159,20 +185,7 @@ Page({
     }
 });
 ```
-##  属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明|最低版本|
-|:---- |: ---- | :---- |:---- |:---- |:--|
-| space | String  | false | 否 |显示连续空格|-|
-| selectable|Boolean|false| 否 |文本是否可选<br> true :可用于文本复制，粘贴，长按搜索等场景。|3.10.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-
-###  space 有效值 
-
-| 值 | 说明 |
-| :---- |: ---- |
-| ensp | 中文字符空格一半大小 |
-| emsp | 中文字符空格大小 |
-| nbsp | 根据字体设置的空格大小 |
 
 ##  Bug & Tip 
 

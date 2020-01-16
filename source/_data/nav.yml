@@ -195,10 +195,6 @@
                     text: 设置页面基础信息
                     name: rank_pageinfo
                   -
-                    link: /introduction/rank_id
-                    text: 绑定熊掌ID
-                    name: rank_id
-                  -
                     link: /introduction/rank_h5
                     text: 关联H5站点
                     name: rank_h5
@@ -226,6 +222,10 @@
                     link: /introduction/rank_api
                     text: 小程序API提交
                     name: rank_api
+                  -
+                    link: /introduction/rank_synchronism
+                    text: 小程序资源自动同步
+                    name: rank_synchronism            
                   -
                     link: /introduction/rank_robots
                     text: robots协议介绍
@@ -347,7 +347,7 @@
             sidebar:
               -
                 link: /introduction/scancode
-                text: 扫码打开智能小程序
+                text: 扫描二维码打开智能小程序
                 name: scancode
     -
       link: /introduction/getphonenumber
@@ -375,13 +375,22 @@
                 text: 论坛小程序开通指引
                 name: productlaboratory
               -
+                link: /introduction/productlaboratory_faq
+                text: 论坛小程序开通FAQ
+                name: productlaboratory_faq     
+              -
+                link: /introduction/examine_faq
+                text: 小程序审核失败FAQ
+                name: examine_faq                           
+              -
+                link: /introduction/productlaboratory_search
+                text: 自然搜索结果流量开通指引
+                name: productlaboratory_search
+              -
                 link: /introduction/productlaboratory_ad
                 text: 广告组件接入指引
                 name: productlaboratory_ad
-              -
-                link: /introduction/productlaboratory_faq
-                text: 论坛小程序开通FAQ
-                name: productlaboratory_faq
+
 
 
 # 2
@@ -533,6 +542,10 @@
               link: /design/resource/lottie
               text: Lottie动效开源库
               name: lottie
+            -
+              link: /design/resource/animationVideo
+              text: 透明视频AFX
+              name: animationVideo
 
 #3
 -
@@ -708,7 +721,10 @@
                     text: setData 机制
                     name: app_service_page_setData
               -
-
+                link: /develop/framework/process_life
+                text: 页面生命周期
+                name: app_service_lifecycle
+              -
                 text: 页面路由
                 name: app_service_route
                 sidebar:
@@ -890,6 +906,10 @@
                 text: topOne动态库
                 name: dynamiclib_topone
               -
+                link: /develop/framework/sitemap
+                text: swan-sitemap 动态库
+                name: sitemap                
+              -
                 link: /develop/framework/echarts
                 text: ECharts 动态库-Beta
                 name: echarts
@@ -1032,10 +1052,22 @@
                     text:  rich-text 富文本
                     name: base_rich-text
 
+
+        -
+            sidebar:
+              -
+
+                text: 动画组件
+                name: animation-view
+                sidebar:
                   -
-                    link: /develop/component/base_animation-view-Lottie
-                    text:  animation-view Lottie 动画
-                    name: base_animation-view-Lottie
+                    link: /develop/component/animation-view-Lottie
+                    text: animation-view Lottie 动画
+                    name: animation-view-Lottie
+                  -
+                    link: /develop/component/animation-video
+                    text: animation-video 透明视频动画
+                    name: animation-video
         -
             sidebar:
               -
@@ -1197,35 +1229,7 @@
                     -
                       link: /develop/component/ad
                       text: ad 广告
-                      name: ad
-    # -
-    #   text: 扩展组件
-    #   name: extended
-    #   sidebar:
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/commentpublish
-    #             text: 半屏内容发布器带服务版
-    #             name: commentpublish
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component/publish
-    #             text: 全屏内容发布器组件
-    #             name: publish
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/like
-    #             text: 点赞组件
-    #             name: like
-    #     -
-    #         sidebar:
-    #           -
-    #             link: /develop/extended/component-content/concern
-    #             text: 关注组件
-    #             name: concern
+                      name: ad 
     -
       text: API
       name: api
@@ -1961,7 +1965,32 @@
                       link: /develop/api/media/videocontext_VideoContext-playbackRate
                       text: VideoContext.playbackRate
                       name:  videocontext_VideoContext-playbackRate
+            -
 
+              text: 透明视频组件控制
+
+              sidebar:
+                -
+                  link: /develop/api/media/animationvideo_swan-createAnimationVideo
+                  text: swan.createAnimationVideo
+                  name: animationvideo_swan-createAnimationVideo
+                -
+                  link: /develop/api/media/animationvideo_AnimationVideo
+                  text: AnimationVideo
+                  name: animationvideo_AnimationVideo
+                  sidebar:
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-play
+                      text: AnimationVideo.play
+                      name: animationvideo_AnimationVideo-play
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-pause
+                      text: AnimationVideo.pause
+                      name: animationvideo_AnimationVideo-pause
+                    -
+                      link: /develop/api/media/animationvideo_AnimationVideo-seek
+                      text: AnimationVideo.seek
+                      name: animationvideo_AnimationVideo-seek
             -
 
               text: 直播组件控制
@@ -2183,6 +2212,22 @@
                     link: /develop/api/location/swan-chooseLocation
                     text: swan.chooseLocation
                     name:  swan-chooseLocation
+                  -
+                    link: /develop/api/location/swan-startLocationUpdate
+                    text: swan.startLocationUpdate
+                    name:  swan-startLocationUpdate
+                  -
+                    link: /develop/api/location/swan-onLocationChange
+                    text: swan.onLocationChange
+                    name:  swan-onLocationChange
+                  -
+                    link: /develop/api/location/swan-offLocationChange
+                    text: swan.offLocationChange
+                    name:  swan-offLocationChange
+                  -
+                    link: /develop/api/location/swan-stopLocationUpdate
+                    text: swan.stopLocationUpdate
+                    name:  swan-stopLocationUpdate
 
               -
 
@@ -2286,10 +2331,6 @@
                         link: /develop/api/show/canvas_CanvasContext-createCircularGradient
                         text: CanvasContext.createCircularGradient
                         name: canvas_CanvasContext-createCircularGradient
-                      -
-                        link: /develop/api/show/canvas_CanvasContext-addColorStop
-                        text: CanvasContext.addColorStop
-                        name: canvas_CanvasContext-addColorStop
                       -
                         link: /develop/api/show/canvas_CanvasContext-setLineWidth
                         text: CanvasContext.setLineWidth
@@ -2434,6 +2475,15 @@
                         link: /develop/api/show/canvas_CanvasContext-setTransform
                         text: CanvasContext.setTransform
                         name: canvas_CanvasContext-setTransform
+                  -
+                    link: /develop/api/show/canvas_CanvasGradient
+                    text: CanvasGradient
+                    name: canvas_CanvasGradient
+                    sidebar:   
+                      -
+                        link: /develop/api/show/canvas_CanvasGradient-addColorStop
+                        text: CanvasGradient.addColorStop
+                        name: canvas_CanvasGradient-addColorStop                                         
               -
 
                 text: 交互反馈
@@ -2977,6 +3027,20 @@
                     text: swan.getClipboardData
                     name: swan-getClipboardData
 
+              -
+
+                text: 在系统日历中新建日程
+
+                sidebar:
+                  -
+                    link: /develop/api/device_sys/swan-addEventOnCalendar
+                    text: swan.addEventOnCalendar
+                    name: swan-addEventOnCalendar
+                  -
+                    link: /develop/api/device_sys/swan-deleteEventOnCalendar
+                    text: swan.deleteEventOnCalendar
+                    name: swan-deleteEventOnCalendar
+
         -
 
             text: 第三方平台
@@ -3133,7 +3197,7 @@
 
               -
 
-                text: 原生全屏内容发布器
+                text: 全屏内容发布器
 
                 sidebar:
                   -
@@ -3146,7 +3210,7 @@
                     name: community_swan-closeCommunityEditor
               -
 
-                text: 原生半屏内容发布器
+                text: 半屏内容发布器
 
                 sidebar:
                   -
@@ -3291,6 +3355,15 @@
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: swan-getSystemRiskInfo
+              # -
+
+              #   text: 订阅
+
+              #   sidebar:
+              #     -
+              #       link: /develop/api/open/swan-subscribeService
+              #       text: swan.subscribeService
+              #       name: swan-subscribeService
         -
             sidebar:
               -
@@ -3432,7 +3505,104 @@
                     link: /develop/serverapi/getunlimited
                     text: getunlimited
                     name: getunlimited
-
+    -
+      text: 扩展能力
+      name: extended
+      sidebar:
+             
+        -
+       
+          text: smart-ui组件
+          sidebar:
+              -
+                link: /develop/extended/ui_component/info
+                text: smart-ui介绍
+                name: info
+              -
+                link: /develop/extended/ui_component/smt-feed
+                text: feed 信息流
+                name: smt-feed
+              -
+                link: /develop/extended/ui_component/smt-feed-item
+                text: feed-item 信息流子项
+                name: smt-feed-item
+              -
+                link: /develop/extended/ui_component/smt-icon
+                text: icon 图标
+                name: smt-icon
+              -
+                link: /develop/extended/ui_component/smt-refresh
+                text: refresh 刷新
+                name: smt-refresh
+              -
+                link: /develop/extended/ui_component/smt-spin
+                text: spin 加载
+                name: smt-spin
+              -
+                link: /develop/extended/ui_component/smt-page-status
+                text: page-status 页面状态
+                name: smt-page-status
+              -
+                link: /develop/extended/ui_component/smt-navigation
+                text: navigation 自定义导航
+                name: smt-navigation
+        -
+            text: smart-ui模板
+            sidebar:
+              -
+                link: /develop/extended/template/smt-detail-pages
+                text: 图文详情页
+                name: smt-detail-pages   
+              -
+                link: /develop/extended/template/smt-feed-page
+                text: 信息流模板
+                name: smt-feed-page  
+              -
+                link: /develop/extended/template/smt-status-page
+                text: 页面状态模板
+                name: smt-status-page
+        -
+            text: 工具类库
+            sidebar:
+              -
+                link: /develop/extended/lib/smt-promisify
+                text: api promise 化
+                name: smt-promisify 
+              -
+                link: /develop/extended/lib/smt-md5
+                text: md5算法
+                name: smt-md5
+              -
+                link: /develop/extended/lib/smt-mobx
+                text: mobx连接器
+                name: smt-mobx
+              -
+                link: /develop/extended/lib/smt-observer
+                text: 订阅发布器
+                name: smt-observer
+              -
+                link: /develop/extended/lib/smt-swanx
+                text: 数据状态管理
+                name: smt-swanx 
+        -   
+            text: 扩展服务
+            sidebar:
+              -
+                link: /develop/extended/component-content/commentpublish
+                text: 半屏内容发布器带服务版
+                name: commentpublish
+              # -
+              #   link: /develop/extended/component/publish
+              #   text: 全屏内容发布器组件
+              #   name: publish
+              -
+                link: /develop/extended/component-content/like
+                text: 点赞组件
+                name: like      
+              -
+                link: /develop/extended/component-content/follow
+                text: 关注组件
+                name: follow                     
     -
       text: 工具
       name: devtools
@@ -3647,6 +3817,10 @@
                 text: 命令行工具
                 name: commandtool
               -
+                link: /develop/devtools/components_panel
+                text: 组件面板
+                name: components_panel
+              -
                 link: /develop/devtools/diff
                 text: API 实现差异
                 name: diff
@@ -3663,10 +3837,10 @@
                 link: /develop/devtools/auto/demo
                 text: 脚本示例
                 name: demo
-              -
-                link: /develop/devtools/auto/remote
-                text: 真机自动化
-                name: remote
+              # -
+              #   link: /develop/devtools/auto/remote
+              #   text: 真机自动化
+              #   name: remote
               -
                 text: API
                 name: API
@@ -3728,10 +3902,10 @@
                           link: /develop/devtools/auto/smartprogram/login
                           text: smartProgram.login
                           name: login
-                      -
-                          link: /develop/devtools/auto/smartprogram/remote
-                          text: smartProgram.remote
-                          name: remote
+                      # -
+                      #     link: /develop/devtools/auto/smartprogram/remote
+                      #     text: smartProgram.remote
+                      #     name: remote
                       -
                           link: /develop/devtools/auto/smartprogram/disconnect
                           text: smartProgram.disconnect
@@ -4351,6 +4525,27 @@
     #               link: /develop/plugins/limit_components
     #               text: 插件中组件的限制
     #               name: limit_components
+
+
+        # -
+        #   text: 功能类库
+        #   sidebar:
+        #     -
+        #       link: /develop/extensions/smt-md5
+        #       text: smt-md5
+        #       name: smt-md5
+        #     -
+        #       link: /develop/extensions/smt-observer
+        #       text: smt-observer
+        #       name:  smt-observer
+        #     -
+        #       link: /develop/extensions/smt-swanx
+        #       text: smt-swanx
+        #       name: smt-swanx
+        #     -
+        #       link: /develop/extensions/smt-mobx
+        #       text: smt-mobx
+        #       name:  smt-mobx
 
     -
       text: 功能开发

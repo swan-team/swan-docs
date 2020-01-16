@@ -7,20 +7,27 @@ sidebar: voice_VoiceRecognizer-onRecognize
 
 **解释**： 有识别结果返回
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnRecognize.png"  class="demo-qrcode-image" />
+Function callback
 
-**方法参数**：Function callback
-
-**callback 结果说明**：
+### callback 结果说明 ：
 
 |属性 | 类型 | 说明 |
 |---- | ---- | ---- |
 |result |String | 小程序语音识别过程中的返回内容 |
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/93c00ae29b0cd0b086a0425ac254853c1573731767284" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerOnRecognize.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -34,9 +41,9 @@ sidebar: voice_VoiceRecognizer-onRecognize
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/93c00ae29b0cd0b086a0425ac254853c1573731767284" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

@@ -7,15 +7,22 @@ sidebar: pull_swan-stopPullDownRefresh
  
 **解释**： 停止当前页面下拉刷新。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png"  class="demo-qrcode-image" />
+无
+## 示例
 
+<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**方法参数**： 无
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pullDownRefresh.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/PullDownRefresh.gif">
@@ -28,9 +35,9 @@ sidebar: pull_swan-stopPullDownRefresh
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/37955e937e5e221c983f1129861c38ae1569476821334" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 
 * 在 js 文件中
@@ -55,14 +62,14 @@ Page({
 
 
 
-#### 错误码
-* Andriod
+##  错误码
+### Android
 
 |错误码|说明|
 |--|--|
 |1001|执行失败   |
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|

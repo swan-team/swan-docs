@@ -8,14 +8,13 @@ sidebar: share_swan-openShare
  
 **解释**： 调起分享面板。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openShare.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,11 +27,22 @@ sidebar: share_swan-openShare
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-**函数返回值**：Boolean result
+###  函数返回值 
+Boolean result
 
-**返回值说明**：反馈分享结果，成功或失败。
+###  返回值说明
+反馈分享结果，成功或失败。
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openShare.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -46,7 +56,7 @@ sidebar: share_swan-openShare
     </div>     
 </div>
 
-**代码示例1 - API调起分享面板**：
+###  代码示例1 - API调起分享面板 ：
 
 <a href="swanide://fragment/bf6d9c5218c3c9a0dc83bab7b1bca04d1559044591619" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -81,7 +91,7 @@ Page({
     }
 });
 ```
-**代码示例2 - 组件调起分享面板**：
+###  代码示例2 - 组件调起分享面板 ：
 
 <a href="swanide://fragment/362c2203c0aa4bfd7f700553fa248fd41575200219753" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -92,6 +102,7 @@ Page({
     <button type="primary" open-type="share">openShare</button>
 </view>
 ```
-**Bug & Tip**
-bug: 百度App Android 客户端 10.13 以下版本，点击分享面板的取消时，不会执行 fail 回调。
+## Bug & Tip 
+
+bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 

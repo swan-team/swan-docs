@@ -9,16 +9,23 @@ sidebar: navigationbar_swan-showNavigationBarLoading
 
 **解释**： 该方法在当前页面显示导航条加载动画。
 
-**百度APP中扫码体验：**
+ 
+ ## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png"  class="demo-qrcode-image" />
+无
 
+## 示例
 
-**方法参数**：无
+<a href="swanide://fragment/072bca954324649b05962f16c9d69de61574136587133" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/navigationBarLoading.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/navigationbarloading.gif">
@@ -31,9 +38,9 @@ sidebar: navigationbar_swan-showNavigationBarLoading
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/072bca954324649b05962f16c9d69de61574136587133" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -60,9 +67,9 @@ Page({
 });
 ```
 
-#### 错误码
+##  错误码
 
-**Andriod**
+### Android 
 
 |错误码|说明|
 |--|--|

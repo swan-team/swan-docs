@@ -10,11 +10,40 @@ sidebar: view_movable-view
 
 **解释**：可移动的视图容器，在页面中可以拖拽滑动。movable-view必须在[movable-area](https://smartprogram.baidu.com/docs/develop/component/view_movable-area/)组件中，并且必须是直接子节点，否则不能移动。
 
+##  属性说明 
 
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---|:---|:---|:---|:---|
+| direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
+| inertia | Boolean | false | 否 |movable-view 是否带有惯性|
+|out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|
+|x	| Number |   | 否 |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
+| y | Number  | | 否 |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
+| damping | Number |20 | 否 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
+| friction | Number |2	  | 否 |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
+| disabled | Boolean |false | 否 |是否禁用   |
+| scale | Boolean |false | 否 |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
+| scale-min | Number |0.5 | 否 |定义缩放倍数最小值   |
+| scale-max | Number |10 | 否 |定义缩放倍数最大值   |
+| scale-value | Number |1 | 否 |定义缩放倍数，取值范围为 0.5 - 10  。 |
+|animation|Boolean|true| 否 |是否使用动画|
+| bindchange | EventHandle | | 否 |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）。|
+| bindscale | EventHandle | | 否 |缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
+| htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
+|vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
 
-## 代码示例
+###  direction 有效值 
 
-<a href="swanide://fragment/487ea807bf4349617037c1c6df6a49c81576151779580" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+| 值 | 说明 |
+|: ---- | :---- |
+| all | 水平方向和垂直方向 |
+| vertical | 垂直方向 |
+| horizontal | 水平方向 |
+| none | 不可移动 |
+
+## 示例
+
+<a href="swanide://fragment/652b9c504e4c01204a0257f3119c1f641577360578443" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -315,36 +344,7 @@ Page({
 });
 ```
 
-##  属性说明 
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- |: ---- |: ---- |:---- |:---|
-| direction | String  | none  | 否 |movable-view 的移动方向，属性值有 all 、 vertical 、 horizontal 、 none |
-| inertia | Boolean | false | 否 |movable-view 是否带有惯性|
-|out-of-bounds| Boolean | false | 否 |超过可移动区域后，movable-view 是否还可以移动。|
-|x	| Number |   | 否 |定义 x 轴方向的偏移，如果 x 的值不在可移动范围内，会自动移动到可移动范围；改变 x 的值会触发动画。|
-| y | Number  | | 否 |定义 y 轴方向的偏移，如果 y 的值不在可移动范围内，会自动移动到可移动范围；改变 y 的值会触发动画。|
-| damping | Number |20 | 否 |阻尼系数，用于控制 x 或 y 改变时的动画和过界回弹的动画，值越大移动越快。|
-| friction | Number |2	  | 否 |摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于 0，否则会被设置成默认值。|
-| disabled | Boolean |false | 否 |是否禁用   |
-| scale | Boolean |false | 否 |是否支持双指缩放，默认缩放手势生效区域是在movable-view内。 |
-| scale-min | Number |0.5 | 否 |定义缩放倍数最小值   |
-| scale-max | Number |10 | 否 |定义缩放倍数最大值   |
-| scale-value | Number |1 | 否 |定义缩放倍数，取值范围为 0.5 - 10  。 |
-|animation|Boolean|true| 否 |是否使用动画|
-| bindchange | EventHandle | | 否 |拖动过程中触发的事件，event.detail = {x: x, y: y, source: source}，其中source表示产生移动的原因，值可为touch（拖动）。|
-| bindscale | EventHandle | | 否 |缩放过程中触发的事件，event.detail = {x: x, y: y, scale: scale} |
-| htouchmove | EventHandle | | 否 |手指初次触摸后发生横向移动，如果catch此事件，则意味着touchmove事件也被catch|
-|vtouchmove| EventHandle | | 否 |手指初次触摸后发生纵向移动，如果catch此事件，则意味着touchmove事件也被catch|
-
-###  direction 有效值 
-
-| 值 | 说明 |
-|: ---- | :---- |
-| all | 水平方向和垂直方向 |
-| vertical | 垂直方向 |
-| horizontal | 水平方向 |
-| none | 不可移动 |
 
 
 ##  Bug & Tip 

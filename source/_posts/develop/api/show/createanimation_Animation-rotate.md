@@ -8,16 +8,21 @@ sidebar: createanimation_Animation-rotate
  
 **解释**：从原点顺时针旋转一个角度
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate.png"  class="demo-qrcode-image" />
+Number deg,deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
+## 示例
 
-**方法参数**：Number deg
+ 
+### 扫码体验
 
-**参数说明**：deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**图片示例**
-
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/rotate.gif">
@@ -30,7 +35,7 @@ sidebar: createanimation_Animation-rotate
     </div>     
 </div>
 
-**代码示例1**
+###  代码示例1 
 
 
 <a href="swanide://fragment/bca91eb49e9480552201776e3b25090b1574215871646" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -68,7 +73,7 @@ Page({
 ```
 
 
-**代码示例2 - 开发者自定义showModal时可用于增加动画效果**：
+###  代码示例2 - 开发者自定义showModal时可用于增加动画效果 ：
 
 <a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 

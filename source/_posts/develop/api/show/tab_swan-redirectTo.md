@@ -8,13 +8,12 @@ sidebar: tab_swan-redirectTo
  
 **解释**：关闭当前页面，跳转到应用内的某个页面。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,9 +22,17 @@ sidebar: tab_swan-redirectTo
 |fail   | Function |   否  | |  接口调用失败的回调函数|
 |complete  |  Function  |  否 | |   接口调用结束的回调函数（调用成功、失败都会执行）|
 
+## 示例
 
-**图片示例**
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/redirectTo.gif">
@@ -38,7 +45,7 @@ sidebar: tab_swan-redirectTo
     </div>     
 </div>
 
-**代码示例 1**
+###  代码示例 1 
 
 <a href="swanide://fragment/441e13e266a3072d50cfe2e1b896f9451574139717336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -69,7 +76,7 @@ Page({
 });
 ```
 
-**代码示例 2 - 多级页面的跳转**
+###  代码示例 2 - 多级页面的跳转 
 
 <a href="swanide://fragment/c24dc8fd5e6e10fcc02f8615b5e09e341575404434832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

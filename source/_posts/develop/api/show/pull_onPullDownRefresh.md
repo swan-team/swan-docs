@@ -8,15 +8,21 @@ sidebar:  pull_onPullDownRefresh
 
 **解释**：页面的事件处理函数，监听用户下拉动作。
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_onPullDownRefresh.png"  class="demo-qrcode-image" />
+详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>
+## 示例
 
+<a href="swanide://fragment/b047393e957357ccc3dc6d83aa99dca31575531088981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
-详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_onPullDownRefresh.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**图片示例**
-
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/onPullDownRefresh.gif">
@@ -29,9 +35,9 @@ sidebar:  pull_onPullDownRefresh
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/b047393e957357ccc3dc6d83aa99dca31575531088981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

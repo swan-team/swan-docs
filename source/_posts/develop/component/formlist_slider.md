@@ -9,9 +9,26 @@ sidebar: formlist_slider
 
 **解释**：滑动选择器
 
-## 代码示例
+##  属性说明 
 
-<a href="swanide://fragment/e6854f5f4706d25302513c0c3f7ffcf01576119786017" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+|属性名 |类型  |默认值  | 必填 |说明|
+|:---- | :---- |: ---- |:---- |:---- |
+| min | Number  | 0  | 否 |最小值|
+| max | Number  |100  | 否 |最大值|
+| step |Number  |1 | 否 |步长，取值必须大于 0，并且可被 (max - min) 整除|
+| disabled | Boolean |false  | 否 |是否禁用|
+| value | Number  |0 | 否 |当前取值|
+| backgroundColor | Color  |#cccccc  | 否 |背景条的颜色|
+| block-size | Number  |24 | 否 |滑块的大小，取值范围为 12 - 28|
+| block-color | Color  |#ffffff | 否 |滑块的颜色|
+| activeColor | Color  |#3c76ff | 否 |已选择的颜色|
+|show-value |Boolean  |false | 否 |是否显示当前 value|
+|bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
+|bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|
+
+## 示例
+
+<a href="swanide://fragment/e1489d2e2e3d72ba1233556495c382c11577360671451" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -126,19 +143,3 @@ sidebar: formlist_slider
 </view>
 ```
 
-##  属性说明 
-
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- |: ---- |:---- |:---- |
-| min | Number  | 0  | 否 |最小值|
-| max | Number  |100  | 否 |最大值|
-| step |Number  |1 | 否 |步长，取值必须大于 0，并且可被 (max - min) 整除|
-| disabled | Boolean |false  | 否 |是否禁用|
-| value | Number  |0 | 否 |当前取值|
-| backgroundColor | Color  |#cccccc  | 否 |背景条的颜色|
-| block-size | Number  |24 | 否 |滑块的大小，取值范围为 12 - 28|
-| block-color | Color  |#ffffff | 否 |滑块的颜色|
-| activeColor | Color  |#3c76ff | 否 |已选择的颜色|
-|show-value |Boolean  |false | 否 |是否显示当前 value|
-|bindchange | EventHandle  | | 否 |完成一次拖动后触发的事件，event.detail = {value: value}|
-|bindchanging |EventHandle |  | 否 |拖动过程中触发的事件，event.detail = {value: value}|

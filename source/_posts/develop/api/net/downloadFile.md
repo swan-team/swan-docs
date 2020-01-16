@@ -10,13 +10,11 @@ sidebar: downloadFile
 **解释**：下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。
 
 
-**百度APP中扫码体验：**
+##  方法参数  
 
-<img src="	https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadFile.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object`参数说明  ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -28,17 +26,17 @@ sidebar: downloadFile
 |filePath| String|否||指定文件下载后存储的路径。|
 
 
-**success 返回参数说明**：
+###  success 返回参数说明  ：
 
 |参数 | 类型 | 说明|
 |---- | ---- | ---- |
 |tempFilePath  |  String  |临时文件路径，下载后的文件会存储到一个临时文件|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 
-**fail 返回参数说明**：
+###  fail 返回参数说明  ：
 
 
-* Andriod
+* Android
 
 |错误码|说明|
 |--|--|
@@ -53,9 +51,16 @@ sidebar: downloadFile
 |1001|请求文件超过10M|
 |1002|无法确定下载文件大小|
 
+## 示例
 
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadFile.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -69,7 +74,7 @@ sidebar: downloadFile
     </div>     
 </div>
 
-**代码示例1**：
+###  代码示例1  ：
  
 
 <a href="swanide://fragment/0bac1c0d10ee17ce6be023aac81a8c381572945831796" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -100,7 +105,7 @@ Page({
 })
 ```
 
-**代码示例2  - 指定下载路径**：
+###  代码示例2  - 指定下载路径  ：
  
 
 <a href="swanide://fragment/3351aaeff8b78f4bdd7800516ab2b1841575215908227" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -148,11 +153,11 @@ Page({
 });
 ```
 
-**返回值**：
+返回值：
 
 返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。
 
-**Bug & Tip**
+##  Bug & Tip  
 
 * 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需再主动调用 swan.saveFile，才能在智能小程序下次启动时访问得到；
 * 请在 header 中指定合理的 Content-Type 字段，以保证客户端正确处理文件类型。

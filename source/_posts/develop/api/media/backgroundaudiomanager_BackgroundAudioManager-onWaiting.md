@@ -8,14 +8,24 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
 
 **解释**：音频加载中事件，当音频因为数据不足，需要停下来加载时会触发 。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnWaiting.png"  class="demo-qrcode-image" />
+Function callback
 
+## 示例
 
-**方法参数**：Function callback
+<a href="swanide://fragment/589a045751e83eb654e932c7adcf70641573424513005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_BackgroundAudioManagerOnWaiting.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -29,9 +39,9 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onWaiting
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/589a045751e83eb654e932c7adcf70641573424513005" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 js 文件中
 
@@ -44,7 +54,7 @@ Page({
         backgroundAudioManager.title = '演员';
         backgroundAudioManager.epname = '演员';
         backgroundAudioManager.singer = '薛之谦';
-        backgroundAudioManager.coverImgUrl = 'http://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
+        backgroundAudioManager.coverImgUrl = 'https://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg';
         backgroundAudioManager.onWaiting(function(res) {
             console.log('backgroundAudioManager.onWaiting', res)
             swan.showModal({
@@ -53,7 +63,7 @@ Page({
             })
         });
         this.backgroundAudioManager = backgroundAudioManager;
-        this.backgroundAudioManager.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        this.backgroundAudioManager.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         this.backgroundAudioManager.play();
     }
 });

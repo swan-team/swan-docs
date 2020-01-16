@@ -10,11 +10,19 @@ sidebar: downloadTask
 
 **解释**：下载任务对象
 
-**百度APP中扫码体验：**
+ 
+## 示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadTask.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/c77c402000c8ed09238116000c09165c1572947847546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/downloadTask.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -28,9 +36,9 @@ sidebar: downloadTask
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/c77c402000c8ed09238116000c09165c1572947847546" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -50,7 +58,7 @@ Page({
                 'content-type': 'application/json'
             },
             success: res => {
-                'content-type': 'application/json'
+                console.log('downloadTask success', res);
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
@@ -70,7 +78,5 @@ Page({
 
 ```
 
-**Bug & Tip**
 
-uploadFile 上传文件大小限制为 25M。
 

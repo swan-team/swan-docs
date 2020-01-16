@@ -1,5 +1,5 @@
 ---
-title: 扫码打开智能小程序
+title: 扫描二维码打开智能小程序
 header: introduction
 nav: book
 sidebar: scancode
@@ -19,7 +19,7 @@ sidebar: scancode
 
 二维码跳转规则
 ---
-**注意：从2018年8月开始，百度App支持二维码规则根据“子路径匹配”。如原有二维码链接为 `http://www.baidu.com/a/123456`，其中123456为业务参数，则可配置规则 `http://www.baidu.com/a/` 实现扫码打开小程序。**
+**注意：从2018年8月开始，百度App支持二维码规则根据“子路径匹配”。如原有二维码链接为 `https://www.baidu.com/a/123456`，其中123456为业务参数，则可配置规则 `https://www.baidu.com/a/` 实现扫码打开小程序。**
 
 百度App扫码将按以下匹配规则控制跳转：
 * 二维码链接的协议、域名与已配置的二维码规则一致。
@@ -30,7 +30,7 @@ sidebar: scancode
 
 |后台已配置的二维码规则|线下二维码完整链接|错误原因|
 |----|----|----|
-|`http://www.baidu.com/a/b`	|`https://www.baidu.com/a/b ` |协议不一致|
+|`https://www.baidu.com/a/b`	|`https://www.baidu.com/a/b ` |协议不一致|
 |`https://www.baidu.com/a/b	`|`https://www.m.baidu.com/a/b`	|域名不一致|
 |`https://www.baidu.com/a/b?id=123`	|`https://www.baidu.com/a/b?id=132`	|参数不满足前缀匹配|
 |`https://www.baidu.com/a/b`	|`https://www.baidu.com/a/bc`	|不属于子路径|
@@ -51,7 +51,7 @@ sidebar: scancode
 
 2、填写二维码规则，设置开发者需要填写需要跳转小程序的二维码规则：
   &ensp; &ensp;&ensp;&ensp; · 二维码规则的域名须通过ICP备案的验证。
-  &ensp; &ensp;&ensp;&ensp; · 支持 http、https、ftp 开头的链接（如：`http://www.baidu.com`、`https://www.baidu.com/mp/`、`https://www.baidu.com/mp?id=123`）。
+  &ensp; &ensp;&ensp;&ensp; · 支持 http、https、ftp 开头的链接（如：`https://www.baidu.com`、`https://www.baidu.com/mp/`、`https://www.baidu.com/mp?id=123`）。
   &ensp; &ensp;&ensp;&ensp; · 一个小程序帐号可配置不多于10个二维码前缀规则。
   ![图片](../../img/introduction/scancode/scancode-03.png)
 3、校验文件：

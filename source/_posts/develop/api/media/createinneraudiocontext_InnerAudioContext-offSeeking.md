@@ -11,13 +11,23 @@ sidebar: createinneraudiocontext_InnerAudioContext-offSeeking
 
 **解释**：取消监听 onSeeking 事件
 
-**百度APP中扫码体验：**
+ 
+ ## 方法参数
+Function callback
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffSeeking.png"  class="demo-qrcode-image" />
+## 示例
 
-**方法参数**：Function callback
+<a href="swanide://fragment/098280a7aa066a235d3c303848795dc61574735821779" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_InnerAudioContextOffSeeking.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -31,9 +41,9 @@ sidebar: createinneraudiocontext_InnerAudioContext-offSeeking
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/098280a7aa066a235d3c303848795dc61574735821779" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -52,7 +62,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-offSeeking
 Page({
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.onPlay(res => {
             swan.showModal({

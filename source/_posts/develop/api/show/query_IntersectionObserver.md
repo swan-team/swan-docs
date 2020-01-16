@@ -9,11 +9,8 @@ sidebar: query_IntersectionObserver
 
 **解释**： IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。
 
-**百度APP中扫码体验：**
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
-
-**`IntersectionObserver`对象的方法列表**：
+ `IntersectionObserver`对象的方法列表 ：
 
 |方法 |说明|
 |---- | ---- | ---- |
@@ -22,9 +19,18 @@ sidebar: query_IntersectionObserver
 |observe|指定目标节点并开始监听相交状态变化情况|
 |disconnect|停止监听。回调函数将不再触发|
 
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/f60eb7f2ab1b7fd10e352d0f9157d58b1574304539900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_intersectionObserver.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
@@ -37,9 +43,9 @@ sidebar: query_IntersectionObserver
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/f60eb7f2ab1b7fd10e352d0f9157d58b1574304539900" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

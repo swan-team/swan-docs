@@ -12,7 +12,7 @@ SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
 双向绑定的数据需包裹在`{=  =}`中。
 
 **例如**：
-组件 <a href="/develop/component/view_scroll-view//">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
+组件 <a href="/develop/component/view_scroll-view/">scroll-view</a> 中，scroll-top 和 scroll-left的使用方法分别为：
 * `scroll-top="{= scrollTop =}"`
 * `scroll-left="{= scrollLeft =}"`
 

@@ -9,13 +9,10 @@ sidebar: video_swan-chooseVideo
 
 **解释**： 拍摄视频或从手机相册中选视频，返回视频的临时文件路径。
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png"  class="demo-qrcode-image" />  
-
-**方法参数**：Object object
-
-**`object`参数说明**：
+ 
+## 方法参数
+Object object
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|最低版本|
 |---- | ---- | ---- | ----|----|----|
@@ -27,14 +24,14 @@ sidebar: video_swan-chooseVideo
 |fail  |  Function |   否 || 接口调用失败的回调函数|-|
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|-|
 
-**camera参数说明**：
+### camera参数说明 
 
 |参数名|参数类型|说明|
 |---|---|---|
 |back|String|默认拉起后置摄像头|
 |front|String|默认拉起前置摄像头|
 
-**success返回参数说明**：
+### success返回参数说明 
 
 
 |参数  |  说明 |
@@ -46,7 +43,19 @@ sidebar: video_swan-chooseVideo
 |width | 返回选定视频的宽 |
 
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/c82decd60ec2154b7458ded836c3d2c91573651529736" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseVideo.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+ 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -60,9 +69,9 @@ sidebar: video_swan-chooseVideo
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/c82decd60ec2154b7458ded836c3d2c91573651529736" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 ```javascript
 Page({
@@ -86,16 +95,16 @@ Page({
 ```
 
 
-#### 错误码
+## 错误码
 
-* Andriod
+### Android
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 |1002|用户取消操作|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|
@@ -103,6 +112,6 @@ Page({
 |1002|用户取消操作|
 |1004|小程序文件目录为空|
 
-**Bug & Tip**
+## Bug & Tip 
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。

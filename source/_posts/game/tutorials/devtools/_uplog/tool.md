@@ -2,13 +2,13 @@
 
 #### 开发工具下载
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
 #### v2.4.2
 **New Feature**
 - 调用swan.login、swan.authorize、swan.getUserInfo三个API时，会在工具调试器中展示**接口使用规范**提示以及相关文档链接，方便用户查看这些接口最新的使用规范。
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）
 
 
 #### v2.2.3
@@ -22,7 +22,7 @@
 - 修复了发布小游戏 ESOCKETTIMEOUT 问题
 - 修复小游戏欢迎页的项目 icon 不展示
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.3&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.3&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.3&type=online)）
 
 #### v2.2.2
 **Bug Fixed**
@@ -33,7 +33,7 @@
 - 修复了发布小游戏 ESOCKETTIMEOUT 问题
 - 修复了打开含 node_modules 的小游戏项目，编译会卡住的问题
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.2&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.2&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.2&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.2&type=online)）
 
 
 #### v2.2.1
@@ -44,7 +44,7 @@
 - 修复小游戏键盘问题
 - 修复小游戏项目切换登录状态问题
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.1&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.1&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.1&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.1&type=online)）
 
 #### v2.2.0
 **New Feature**
@@ -53,14 +53,14 @@
 - 支持 worker 功能
 - 保证交叉换量组件不报错（同广告组件）
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.0&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.0&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=2.2.0&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=2.2.0&type=online)）
 
 #### v1.15.3
 **Bug Fixed**
 - 修复了引用 swan-game-adapter 导致 onShow 方法使用失败问题。
 - 兼容调试基础库 1.4.1 禁用 eval 的问题。
 
-下载地址：（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）
+下载地址：（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&version=1.15.3&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&version=1.15.3&type=online)）
 
 #### v1.15.2
 **Bug Fixed**

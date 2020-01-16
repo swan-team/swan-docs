@@ -40,7 +40,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-objectDetectIdentify/"> swan.ai.objectDetectIdentify</a>|用户向服务请求检测图像中的主体位置。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-carClassify/">swan.ai.carClassify</a>|用于检测一张车辆图片的具体车型，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的车辆品牌及型号、颜色及年份、位置信息。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-dishClassify/">swan.ai.dishClassify</a>|用于菜品识别，即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_wan-ai-logoClassify/">swan.ai.logoClassify</a>|用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-logoClassify/">swan.ai.logoClassify</a>|用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-animalClassify/">swan.ai.animalClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出动物识别结果。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/classify_swan-ai-plantClassify/">swan.ai.plantClassify</a>|该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/voice_swan-ai-getVoiceRecognizer/">swan.ai.getVoiceRecognizer</a>|获取全局唯一的语音识别器voiceRecognizer。|
@@ -58,7 +58,7 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
@@ -72,6 +72,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-chooseVideo/">swan.chooseVideo</a>|拍摄视频或从手机相册中选视频，返回视频的临时文件路径。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/video_swan-saveVideoToPhotosAlbum/">swan.saveVideoToPhotosAlbum</a>|保存视频到系统相册。需要用户授权。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/">swan.createVideoContext</a>|创建并返回 video 上下文 videoContext 对象。通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/animationvideo_swan-createAnimationVideo/">swan.createAnimationVideo</a>|创建并返回 animation-video 上下文 animationVideo 对象。通过 animationVideoId 跟一个 animation-video 组件绑定，通过它可以操作一个 [animation-video](/develop/component/animation-video/) 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/liveplayercontext_swan-createLivePlayerContext/">swan.createLivePlayerContext</a>|操作对应的 <live-player/> 组件。 创建并返回 live-player 上下文 LivePlayerContext 对象。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/cameracontext_swan-createCameraContext/">swan.createCameraContext</a>|创建并返回 camera 上下文 cameraContext对象，cameraContext 与页面的 camera 组件绑定，一个页面只能有一个 camera，通过它可以操作对应的组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/arcameracontext_swan-createARCameraContext/">swan.createARCameraContext</a>|创建并返回 ar-camera 上下文 ARCameraContext对象，ARCameraContext 与页面的 ar-camera 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。|
@@ -120,52 +121,52 @@ sidebar: apilist
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-createCanvasContext//">swan.createCanvasContext</a>|在 Page 中，推荐使用this.createCanvasContext(canvasId)，进行绘图上下文的创建。也可使用swan.createCanvasContext(canvasId)，但使用swan.createCanvasContext(canvasId)进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件组件实例 this，以操作组件内 `<canvas>` 组件。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasPutImageData/">swan.canvasPutImageData</a>|将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasToTempFilePath/">swan.canvasToTempFilePath</a>|把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。在自定义组件下，第二个参数传入组件实例this，以操作组件内`<canvas/>`组件。|
-|<a href="https://smartprogram.baidu.com/docss/develop/api/show/canvas_CanvasContext/">canvasContext</a>|绘图上下文|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext/">canvasContext</a>|绘图上下文|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setFillStyle/">canvasContext.setFillStyle</a>|设置填充色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setStrokeStyle/">canvasContext.setStrokeStyle</a>|设置边框颜色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setShadow/">canvasContext.setShadow</a>|设置阴影样式。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-createLinearGradient/">canvasContext.createLinearGradient</a>|创建一个线性的渐变颜色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-createCircularGradient">canvasContext.createCircularGradient</a>|创建一个圆形的渐变颜色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-addColorStop">canvasContext.addColorStop</a>|创建一个颜色的渐变点。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setLineWidth/">canvasContext.setLineWidth</a>|设置线条的宽度。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setLineCap/">canvasContext.setLineCap</a>|设置线条的端点样式。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setLineJoin/">canvasContext.setLineJoin</a>|设置线条的交点样式。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setLineDash/">canvasContext.setLineDash</a>|设置线条的宽度。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setMiterLimit/">canvasContext.setMiterLimit</a>|设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离，当 setLineJoin() 为 miter 时才有效，超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-rect/">canvasContext.rect</a>|创建一个矩形。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-fillRect/">canvasContext.fillRect</a>|填充一个矩形。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-strokeRect/">canvasContext.strokeRect</a>|画一个矩形(非填充)。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-clearRect/">canvasContext.clearRect</a>|清除画布上在该矩形区域内的内容。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-fill/">canvasContext.fill</a>|对当前路径中的内容进行填充。默认的填充色为黑色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-stroke/">canvasContext.stroke</a>|画出当前路径的边框。默认颜色为黑色。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-beginPath/">canvasContext.beginPath</a>|开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-closePath/">canvasContext.closePath</a>|关闭一个路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-moveTo/">canvasContext.moveTo</a>|把路径移动到画布中的指定点，不创建线条。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-lineTo/">canvasContext.lineTo</a>|lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-arc/">canvasContext.arc</a>|画一条弧线。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-scale/">canvasContext.scale</a>|在调用scale方法后，之后创建的路径其横纵坐标会被缩放。多次调用scale，倍数会相乘。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-rotate/">canvasContext.rotate</a>|以原点为中心，原点可以用 translate 方法修改。顺时针旋转当前坐标轴。多次调用 rotate，旋转的角度会叠加。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-translate/">canvasContext.translate</a>|对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-clip/">canvasContext.clip</a>|clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setFontSize/">canvasContext.setFontSize</a>|设置字体的字号。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-fillText/">canvasContext.fillText</a>|在画布上绘制被填充的文本。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setTextAlign/">canvasContext.setTextAlign</a>|用于设置文字的对齐。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setTextBaseline/">canvasContext.setTextBaseline</a>|用于设置文字的水平对齐。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-drawImage/">canvasContext.drawImage</a>|绘制图像到画布。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setGlobalAlpha/">canvasContext.setGlobalAlpha</a>|设置全局画笔透明度。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-measureText/">canvasContext.measureText</a>|测量文本尺寸信息，目前仅返回文本宽度，同步接口。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-strokeText/">canvasContext.strokeText</a>|给定的 (x, y) 位置绘制文本描边的方法。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>|设置虚线偏移量的属性。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>|创建三次方贝塞尔曲线路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-quadraticCurveTot/">canvasContext.quadraticCurveTo</a>|创建二次贝塞尔曲线路径。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-save/">canvasContext.save</a>|保存当前的绘图上下文。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-restore/">canvasContext.restore</a>|恢复之前保存的绘图上下文。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-draw/">canvasContext.draw</a>|将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-font/">canvasContext.font</a>|设置当前字体样式的属性。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_canvasContext-setTransform/">canvasContext.setTransform</a>|使用矩阵重新设置（覆盖）当前变换的方法。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setStrokeStyle/">canvasContext.setStrokeStyle</a>|设置边框颜色。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setShadow/">canvasContext.setShadow</a>|设置阴影样式。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-createLinearGradient/">canvasContext.createLinearGradient</a>|创建一个线性的渐变颜色。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-createCircularGradient/">canvasContext.createCircularGradient</a>|创建一个圆形的渐变颜色。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-addColorStop/">canvasContext.addColorStop</a>|创建一个颜色的渐变点。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineWidth/">canvasContext.setLineWidth</a>|设置线条的宽度。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineCap/">canvasContext.setLineCap</a>|设置线条的端点样式。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineJoin/">canvasContext.setLineJoin</a>|设置线条的交点样式。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineDash/">canvasContext.setLineDash</a>|设置线条的宽度。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setMiterLimit/">canvasContext.setMiterLimit</a>|设置最大斜接长度，斜接长度指的是在两条线交汇处内角和外角之间的距离，当 setLineJoin() 为 miter 时才有效，超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-rect/">canvasContext.rect</a>|创建一个矩形。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-fillRect/">canvasContext.fillRect</a>|填充一个矩形。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-strokeRect/">canvasContext.strokeRect</a>|画一个矩形(非填充)。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-clearRect/">canvasContext.clearRect</a>|清除画布上在该矩形区域内的内容。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-fill/">canvasContext.fill</a>|对当前路径中的内容进行填充。默认的填充色为黑色。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-stroke/">canvasContext.stroke</a>|画出当前路径的边框。默认颜色为黑色。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-beginPath/">canvasContext.beginPath</a>|开始创建一个路径，需要调用 fill 或者 stroke 才会使用路径进行填充或描边。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-closePath/">canvasContext.closePath</a>|关闭一个路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-moveTo/">canvasContext.moveTo</a>|把路径移动到画布中的指定点，不创建线条。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-lineTo/">canvasContext.lineTo</a>|lineTo 方法增加一个新点，然后创建一条从上次指定点到目标点的线。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-arc/">canvasContext.arc</a>|画一条弧线。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-scale/">canvasContext.scale</a>|在调用scale方法后，之后创建的路径其横纵坐标会被缩放。多次调用scale，倍数会相乘。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-rotate/">canvasContext.rotate</a>|以原点为中心，原点可以用 translate 方法修改。顺时针旋转当前坐标轴。多次调用 rotate，旋转的角度会叠加。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-translate/">canvasContext.translate</a>|对当前坐标系的原点 (0, 0) 进行变换，默认的坐标系原点为页面左上角。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-clip/">canvasContext.clip</a>|clip() 方法从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 “restore()” 方法）。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setFontSize/">canvasContext.setFontSize</a>|设置字体的字号。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-fillText/">canvasContext.fillText</a>|在画布上绘制被填充的文本。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setTextAlign/">canvasContext.setTextAlign</a>|用于设置文字的对齐。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setTextBaseline/">canvasContext.setTextBaseline</a>|用于设置文字的水平对齐。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-drawImage/">canvasContext.drawImage</a>|绘制图像到画布。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setGlobalAlpha/">canvasContext.setGlobalAlpha</a>|设置全局画笔透明度。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-measureText/">canvasContext.measureText</a>|测量文本尺寸信息，目前仅返回文本宽度，同步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-strokeText/">canvasContext.strokeText</a>|给定的 (x, y) 位置绘制文本描边的方法。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setLineDashOffset/">canvasContext.setLineDashOffset</a>|设置虚线偏移量的属性。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-bezierCurveTo/">canvasContext.bezierCurveTo</a>|创建三次方贝塞尔曲线路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-quadraticCurveTo/">canvasContext.quadraticCurveTo</a>|创建二次贝塞尔曲线路径。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-save/">canvasContext.save</a>|保存当前的绘图上下文。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-restore/">canvasContext.restore</a>|恢复之前保存的绘图上下文。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-draw/">canvasContext.draw</a>|将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-font/">canvasContext.font</a>|设置当前字体样式的属性。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_CanvasContext-setTransform/">canvasContext.setTransform</a>|使用矩阵重新设置（覆盖）当前变换的方法。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/">swan.showToast</a>|显示消息提示框|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/">swan.showLoading</a>|显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/">swan.hideToast</a>|隐藏消息提示框|
@@ -190,11 +191,11 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/">swan.navigateBack</a>|关闭当前页面，返回上一页面或多级页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/">swan.reLaunch</a>|关闭所有页面，打开到应用内的某个页面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/createanimation_swan-createAnimation/">swan.createAnimation</a>|创建一个动画实例 animation|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/createanimation_animation/">animation</a>|动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/createanimation_Animation/">animation</a>|动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pagescrollto_swan-pageScrollTo/">swan.pageScrollTo</a>|将页面滚动到目标位置（可以设置滚动动画时长）。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/background_swan-setBackgroundColor/">swan.setBackgroundColor</a>|设置窗口的背景颜色。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/background_swan-setBackgroundTextStyle/">swan.setBackgroundTextStyle</a>|设置窗口下拉背景loading样式|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_onPullDownRefresh/">onPullDownRefresh</a>|详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_onPullDownRefresh/">onPullDownRefresh</a>|详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-startPullDownRefresh/">swan.startPullDownRefresh</a>|开始下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-stopPullDownRefresh/">swan.stopPullDownRefresh</a>|停止当前页面下拉刷新。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/custom_component/">swan.nextTick</a>|延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）|
@@ -206,16 +207,16 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_IntersectionObserver-observe/">IntersectionObserver.observe</a>|指定目标节点并开始监听相交状态变化情况|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_IntersectionObserver-disconnect/">IntersectionObserver.disconnect</a>|停止监听。回调函数将不再触发|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_swan-createSelectorQuery">swan.createSelectorQuery</a>|返回一个 SelectorQuery 对象实例。可以在这个实例上使用 select 等方法选择节点，并使用 boundingClientRect 等方法选择需要查询的信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery/">selectorQuery</a>||
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery-in/">selectorQuery.in</a>|将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery-select/">selectorQuery.select</a>|在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery-selectAll/">selectorQuery.selectAll</a>|在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery-selectViewport/">selectorQuery.selectViewport</a>|选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_selectorQuery-exec/">selectorQuery.exec</a>|执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_nodesRef/">nodesRef</a>|节点信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_nodesRef-boundingClientRect/">nodesRef.boundingClientRect</a>|添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_nodesRef-scrollOffset/">nodesRef.scrollOffset</a>| 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_nodesRef-fields/">nodesRef.fields</a>|获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery/">selectorQuery</a>|选择器|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-in/">selectorQuery.in</a>|将选择器的选取范围更改为自定义组件 component 内（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-select/">selectorQuery.select</a>|在当前页面下选择第一个匹配选择器 selector 的节点，返回一个 NodesRef 对象实例，可以用于获取节点信息。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-selectAll/">selectorQuery.selectAll</a>|在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-selectViewport/">selectorQuery.selectViewport</a>|选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个NodesRef对象实例。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_SelectorQuery-exec/">selectorQuery.exec</a>|执行所有的请求，请求结果按请求次序构成数组，在 callback 的第一个参数中返回。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_NodesRef/">nodesRef</a>|节点信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_NodesRef-boundingClientRect/">nodesRef.boundingClientRect</a>|添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于 DOM 的 getBoundingClientRect。返回值是 nodesRef 对应的 selectorQuery。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_NodesRef-scrollOffset/">nodesRef.scrollOffset</a>| 添加节点的滚动位置查询请求，以像素为单位。节点必须是 scroll-view 或者 viewport 。返回值是 nodesRef 对应的 selectorQuery 。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/show/query_NodesRef-fields/">nodesRef.fields</a>|获取节点的相关信息，需要获取的字段在 fields 中指定。返回值是 nodesRef 对应的 selectorQuery 。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/nacomponent/">swan.showFavoriteGuide</a>|支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：关注小程序引导。|
 
 ## 设备
@@ -251,13 +252,15 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-makePhoneCall/">swan.makePhoneCall</a>|拨打电话|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-setClipboardData/">swan.setClipboardData</a>|设置系统剪贴板的内容|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getClipboardData/">swan.getClipboardData</a>|获取系统剪贴板内容|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/">swan.addEventOnCalendar</a>|向系统日历写入一个活动，之后在设定的时间提醒|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/">swan.deleteEventOnCalendar</a>|删除日历上的某个活动|
 
 
 ## 第三方平台
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docsdevelop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
  
 
@@ -273,7 +276,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/">swan.getUserInfo</a>|获取用户信息，首次使用的用户会弹出授权提示窗，若用户同意，则会返回用户的真实数据；若用户未登录或者拒绝授权，会返回默认用户“百度网友”及默认的头像地址。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/setting_swan-openSetting/">swan.openSetting</a>|调起客户端智能小程序设置界面，返回用户设置的操作结果。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/setting_swan-getSetting/">swan.getSetting</a>|获取用户的当前设置|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_onShareAppMessage/">onShareAppMessage</a>|详情参见<a href="http://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_onShareAppMessage/">onShareAppMessage</a>|详情参见<a href="https://smartprogram.baidu.com/docs/develop/framework/app_service_page/#%E9%A1%B5%E9%9D%A2%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">页面相关事件处理函数</a>。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-openShare/">swan.openShare</a>|调起分享面板|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-shareFile/">swan.shareFile</a>|支持调起系统分享面板将文件分享到其他App。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/">swan.chooseAddress</a>|调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，需要用户授权 scope.address。|
@@ -285,7 +288,6 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/">swan.chooseInvoiceTitle</a>|选择用户的发票抬头，需要用户授权 scope.invoiceTitle。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateToSmartProgram/">swan.navigateToSmartProgram</a>|打开另一个小程序|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-navigateBackSmartProgram/">swan.navigateBackSmartProgram</a>|返回到上一个小程序|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_smartprogram/#H5%E9%A1%B5%E9%9D%A2%E6%89%93%E5%BC%80%E5%B0%8F%E7%A8%8B%E5%BA%8F/">H5页面打开小程序</a>|H5 页面调起百度智能小程序。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setPageInfo/">swan.setPageInfo</a>|智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaDescription/">swan.setMetaDescription</a>|不推荐使用|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-setMetaKeywords/">swan.setMetaKeywords</a>|不推荐使用|
@@ -298,5 +300,5 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearTimeout</a>|取消由 setTimeout 设置的定时器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
-|<a href="http://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
-
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
+<!-- |<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。| -->

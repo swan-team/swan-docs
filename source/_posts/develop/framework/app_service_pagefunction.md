@@ -13,7 +13,7 @@ sidebar: app_service_pagefunction
 
 **代码示例**
 
-<a href="swanide://fragment/fc0587d7ad5ffc1c3c8ad5182c14cc461548069060160" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f98d38475a52642dc24881e1c63bc47b1578383993104" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // page.js
@@ -34,7 +34,7 @@ Page({
 
 **代码示例**
 
-<a href="swanide://fragment/231087fc63ccb30eb5f7bffbd9b40af21573190784925" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/19863fc91f9ea66d1154820bc01769171577102326931" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // page.js
@@ -60,7 +60,7 @@ Page({
 
 **代码示例**
 
-<a href="swanide://fragment/9c275e938b5b6fe4fdb30c1c31b057511573192145081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/d702c48d19da7bf5f3fee2aaaf9788361578384055818" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 // page.js
@@ -110,18 +110,18 @@ Page({
 <a href="swanide://fragment/6b1e6d28c542397d04f5408242ac55a21573032765644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **场景一：分享页面为 tab 页**
-**title 推荐设置为具小程序特色的标题 **
-**content 推荐设置为小程序简介或描述 **
+
+ 
 
 ```js
 Page({
     data: {
-        title: '全球实时财经行情'
+        title: '全球实时财经行情'//推荐设置为具有小程序特色的标题  
     },
     onShareAppMessage() {
         return {
             title: this.data.title,
-            content: '世界很复杂，百度更懂你——小程序简介或详细描述',
+            content: '世界很复杂，百度更懂你——小程序简介或详细描述',//推荐设置为小程序简介或描述  
             imageUrl: 'https://b.bdstatic.com/miniapp/images/bgt_icon.png',
             path: '/index/index',
             success(res) {
@@ -136,14 +136,14 @@ Page({
 ```
 
 **场景二：分享页面为详情落地页**
-**title 推荐设置为详情页title**
-**content 推荐设置为详情页简介**
+ 
+ 
 
 ```js
 Page({
     data: {
         // 实际应用中动态获取
-        title: '美的集团(000333)',
+        title: '美的集团(000333)',//推荐设置为详情页title
         price: '58.2',
         quoteChange: '+1.3%',
         id: '000333'
@@ -158,7 +158,7 @@ Page({
     onShareAppMessage(res) {
         return {
             title: this.data.title + ' 最新报价' + this.data.price,
-            content: '更精简的股票小程序——股票精灵，快来查看热门股票吧',
+            content: '更精简的股票小程序——股票精灵，快来查看热门股票吧',//推荐设置为详情页简介
             imageUrl: 'https://b.bdstatic.com/miniapp/images/bgt_icon.png',
             path: `/stockDetail/stockDetail?id=${this.data.id}`
         }
@@ -167,19 +167,18 @@ Page({
 ```
 
 **场景三：分享页面为资讯落地页**
-**title 推荐设置为文章标题**
-**content 推荐设置为文章第一段**
+ 
 
 ```js
 Page({
     data: {
-        title: '瑞信：予美团“跑赢大市”评级',
+        title: '瑞信：予美团“跑赢大市”评级',//推荐设置为文章标题
         content: [
             // 第一自然段
             '瑞信发布报告称，美团(03690)第三季外送业务同比增长约36%，加上盈利能力的持续改善，期内季绩将强劲增长，预计全年收入可同比增长38%至264亿元人民币，非国际财务报告准则净收益或达4.78亿元人民币。',
             // 第二自然段
             '该行称，尽管受季节性因素影响，第四季成本及补贴费用可能会较高，但预期业务正在稳步发展，期内订单量强劲增长或有助部分抵消季节性负面影响，相信今年全年可实现收支平衡，上调2019年盈利预测，调整后净利润达11亿元人民币。'
-        ]
+        ]//推荐设置为文章第一段
     },
     onLoad(options) {
         this.data.id = options.id || '';

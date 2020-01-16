@@ -10,7 +10,14 @@ sidebar: open_web-view
 
 **解释**：web-view 组件是一个可以用来承载网页的容器，会自动铺满整个智能小程序页面。
 
-## 代码示例
+##  属性说明 
+
+| 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
+| :--- |: ------ | :---- | :---- |:---- |:---- |
+| src | String |  | 是 |webview 指向网页的链接 | -|
+|bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+
+## 示例
 
 <a href="swanide://fragment/44fea332fa6dd229b9cce780089be3861576152075519" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -174,12 +181,7 @@ swan.webView.postMessage({data: {foo: 'bar'} })
 swan.webView.getEnv(function(res) {console.log(res.smartprogram) // true })
 ```
 
-##  属性说明 
 
-| 属性名 | 类型     | 默认值  |必填| 说明 | 最低版本              |
-| :--- |: ------ | :---- | :---- |:---- |:---- |
-| src | String |  | 是 |webview 指向网页的链接 | -|
-|bindmessage|EventHandler| | 否 |网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data }|1.12.0<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 
 ###  相关接口2  
 
@@ -196,7 +198,7 @@ web-view 网页中支持的接口有：
 |媒体| 预览图片| <a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-previewImage/">swan.previewImage</a> | |
 |开放接口| 分享 | <a href="https://smartprogram.baidu.com/docs/develop/api/open/share_swan-openShare/">swan.openShare</a> |需传入当前要分享的小程序的appKey| 
 |地理位置|使用内置地图打开地点|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/">swan.openLocation</a>| | 
-|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation<a>| |
+|地理位置|获取地理位置|<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation</a>| |
 |图像接口|拍照或上传|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>| ||
 
 ###  相关接口3  

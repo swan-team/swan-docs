@@ -8,12 +8,9 @@ sidebar: createinneraudiocontext_InnerAudioContext
 
 
 **解释**： swan.createInnerAudioContext 的返回值。
-
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createInnerAudioContext.png"  class="demo-qrcode-image" />
-
-**属性列表**：
+ 
+## 方法参数
+ 
 
 |方法 | 参数 | 必填 |说明 |
 |:---|:---|:---|:---|
@@ -28,7 +25,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
 |volume |Number |否 |音量，范围 0~1。 |
 
 
-**支持格式**:
+### 支持格式 :
 
 |格式	|iOS|	Android|
 |:---|:---|:---|
@@ -45,7 +42,18 @@ sidebar: createinneraudiocontext_InnerAudioContext
 |aiff |是|否|
 |caf|是|否|
 
-**图片示例**
+## 示例
+
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_createInnerAudioContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -59,7 +67,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
     </div>     
 </div>
 
-**代码示例1**：
+### 代码示例1 ：
 
 <a href="swanide://fragment/6e677e1f5a5cf14b7a4d56369ae6d49b1569417414184" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -71,7 +79,7 @@ Page({
     onLoad() {
         //  每次触发就会注册一次回调事件，所以只需把所有回调写在onLoad中即可
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
 
         innerAudioContext.onPlay(res => {
@@ -156,7 +164,7 @@ Page({
 
 ```
 
-**代码示例2 - 设置obeyMuteSwitch为false，否则用户在系统静音的情况下，会认为api不能播放**：
+### 代码示例2 - 设置obeyMuteSwitch为false，否则用户在系统静音的情况下，会认为api不能播放 ：
 
 <a href="swanide://fragment/630e947ea4b925fa576ff51439271a851575218694131" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -168,7 +176,7 @@ Page({
     onLoad() {
         //  每次触发就会注册一次回调事件，所以只需把所有回调写在onLoad中即可
         const innerAudioContext = swan.createInnerAudioContext();
-        innerAudioContext.src = 'http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
+        innerAudioContext.src = 'https://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3';
         innerAudioContext.autoplay = false;
         innerAudioContext.obeyMuteSwitch = false;
 

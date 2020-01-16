@@ -10,24 +10,29 @@ sidebar: canvas_CanvasContext-measureText
 
 **解释**：测量文本尺寸信息，目前仅返回文本宽度，同步接口。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_measureText.png"  class="demo-qrcode-image" />
+String text：要测量的文本  
 
-**方法参数**：String text
-
-**`text`参数说明**：要测量的文本  
-
-**返回**：
+### 返回值
 
 返回 TextMetrics 对象，结构如下：
 
 | 参数名 | 类型 | 说明 |
 |---- | ---- | ---- |
 | width | Number | 文本的宽度 |
+## 示例
+<a href="swanide://fragment/15efae9ad9cf32fc8ba7991ca3a877f51574271401532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_measureText.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/measureText.gif">
@@ -40,9 +45,9 @@ sidebar: canvas_CanvasContext-measureText
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/15efae9ad9cf32fc8ba7991ca3a877f51574271401532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -77,14 +82,14 @@ Page({
     }
 });
 ```
-#### 错误码
-* Andriod
+##  错误码
+### Android
 
 |错误码|说明|
 |--|--|
 |201|解析失败，请检查调起协议是否合法|
 
-* iOS
+### iOS
 
 |错误码|说明|
 |--|--|

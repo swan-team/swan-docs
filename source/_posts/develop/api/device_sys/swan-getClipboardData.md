@@ -9,13 +9,12 @@ sidebar: swan-getClipboardData
 
 **解释**：获取系统剪贴板内容
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/clipboardData.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object` 参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |---- | ---- | ---- | ----|----|
@@ -23,13 +22,27 @@ sidebar: swan-getClipboardData
 |fail  |  Function |   否 | | 接口调用失败的回调函数|
 |complete  |  Function |   否  | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+### success返回参数说明  
 
 |参数名 |类型  |说明|
 |---- | ---- | ---- |
 |data   | String | 剪贴板的内容|
 
-**图片示例**
+## 示例
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/clipboardData.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -43,7 +56,7 @@ sidebar: swan-getClipboardData
     </div>     
 </div>
 
-**代码示例1**：
+### 代码示例1 ：
 
 <a href="swanide://fragment/4c450f850d7cbc51e124ccb8eeb2e9da1574215012467" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -71,7 +84,7 @@ Page({
 });
 ```
 
-**代码示例2**：
+### 代码示例2 ：
 
 <a href="swanide://fragment/de4e9dfd7aebdc2f056b590d607663bd1575143435273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -114,8 +127,8 @@ Page({
 ```
 
 
-#### 错误码
-* Andriod
+##  错误码
+###  Android
 
 |错误码|说明|
 |--|--|

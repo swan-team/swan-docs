@@ -14,7 +14,7 @@ sidebar: custom-component_temp
 在组件模板中可以提供一个 `<slot>` 节点，用于承载组件引用时提供的子节点。
 
 **代码示例**
-<a href="swanide://fragment/b0b4a27eaefc267dccc91533a557e9631545209935964" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2f9e341159539941e2c5ca6efe8022901578384723623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <!-- 组件内部模板 -->
@@ -51,7 +51,7 @@ sidebar: custom-component_temp
 在组件的视图模板中可以通过 slot 声明一个插槽的位置，其位置的内容可以由外层组件或者页面定义。
 
 **代码示例**
-<a href="swanide://fragment/7bffb3f2f34acb6871f987a5c087d92a1545214125462" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/9224ecf60000b5ebaa5617dc796b4ea01578384779638" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <!-- 组件中的定义 -->
@@ -101,7 +101,7 @@ sidebar: custom-component_temp
 插入 slot 部分的内容，其数据环境为声明时的环境。
 
 **代码示例**
-<a href="swanide://fragment/349d0aa5c7ae0c3606c5e66d606bcf991545215122954" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cbbd50cbb74f64cfad4d5ada7b7fba041578384852492" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <!-- custom-component自定义组件 -->
@@ -147,7 +147,7 @@ Page({
 scoped slot 通常用于组件的视图部分期望由 外部传入视图结构，渲染过程使用组件内部数据。
 
 **代码示例**
-<a href="swanide://fragment/a94d00a5cd009be940d7a1785552e8351545218613573" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5e80a0cb75229f0fd1704255f47960ab1578384891595" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```xml
 <!-- custom-component自定义组件 -->
@@ -190,13 +190,24 @@ Page({
 ### 组件样式
 
 **代码示例**
-<a href="swanide://fragment/b762787047ff293286e5fc5d3b3ff6461545219481937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7488f11d337fa16d9ce41bfc05b678c31578384952767" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 组件的样式，可以在组件的 css 文件中编写，并且只对当前组件内节点生效。使用时，需要注意以下几点：
 
 1. 只可以使用 class 选择器，其他的选择器，请改为 class 选择器实现；
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用；
 3. 继承样式，如 font 、 color，会从组件外继承到组件内。
+
+内部样式，可支持多个属性并列。
+**代码示例**
+<a href="swanide://fragment/7da984325b66d5e6f8d85d53a004ab081578385001988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```
+<!-- custom-component自定义组件 -->
+<view class="wrapper wrapperTwo">
+     <view>这里是组件的内部节点</view>
+</view>
+```
 
 ### 外部样式类
 <div class="notice">解释： </div>
@@ -206,7 +217,7 @@ Page({
 **注意：在同一个节点上使用普通样式类和外部样式类时，请避免出现两个类的优先级是未定义的情况。**
 
 **代码示例**
-<a href="swanide://fragment/19a321c848e5a4d3bd2a1a1eeca0798c1545220350648" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/43117d103194c692608133457f5e55a81578385052225" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 /* 组件 custom-component.js */
@@ -239,7 +250,7 @@ Component({
 > 小程序基础库版本 1.13.29 开始支持。
 
 **代码示例**
-<a href="swanide://fragment/e192b342c1812c4a2ba1ef827afd429e1545276312298" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cd76518d74f16d684f3d7e38d437cf0b1578385088131" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 /* 组件 custom-component.js */

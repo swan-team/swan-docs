@@ -10,19 +10,16 @@ sidebar: videocontext_VideoContext-requestFullScreen
 
 **解释**：按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。
 
-**百度APP中扫码体验：**
-
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextRequestFullScreen.png"  class="demo-qrcode-image" />
-
-**方法参数**：Object object
-
-**object 参数说明**：
+ 
+## 方法参数
+Object object
+### object 参数说明  
 
 |参数名	|类型	|是否必填	|默认值	|说明|
 |---|---|---|---|---|
 |direction|object|否|当前方向|角度，有效值为0，90，-90|
 
-**direction 有效值**
+### direction 有效值 
 
 | 值 | 说明 |
 | ---- | ---- |
@@ -30,7 +27,19 @@ sidebar: videocontext_VideoContext-requestFullScreen
 | 90 | 屏幕顺时针90度 |
 | -90 | 屏幕逆时针90度 |
 
-**图片示例**
+## 示例
+
+<a href="swanide://fragment/c9568967cece545edaf1edefa52d71c11573479259203" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VideoContextRequestFullScreen.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -44,9 +53,9 @@ sidebar: videocontext_VideoContext-requestFullScreen
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/c9568967cece545edaf1edefa52d71c11573479259203" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

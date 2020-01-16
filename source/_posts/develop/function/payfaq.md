@@ -65,7 +65,7 @@ sidebar: payfaq
 （5）	检查签名是否按照文档要求操作生成；
 
 （6）	最后自行验证看是否可以验证成功。
-详见[调起百度收银台](http://smartprogram.baidu.com/docs/develop/function/tune_up/#%E8%B0%83%E8%B5%B7%E7%99%BE%E5%BA%A6%E6%94%B6%E9%93%B6%E5%8F%B0/)、[签名与验签](http://smartprogram.baidu.com/docs/develop/function/sign_v2/)、[密钥生成](http://smartprogram.baidu.com/docs/develop/function/keygen_v2/)。
+详见[调起百度收银台](https://smartprogram.baidu.com/docs/develop/function/tune_up/#%E8%B0%83%E8%B5%B7%E7%99%BE%E5%BA%A6%E6%94%B6%E9%93%B6%E5%8F%B0/)、[签名与验签](https://smartprogram.baidu.com/docs/develop/function/sign_v2/)、[密钥生成](https://smartprogram.baidu.com/docs/develop/function/keygen_v2/)。
 
 > 在调起收银台过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，请认真阅读文档。
 
@@ -77,12 +77,12 @@ sidebar: payfaq
 
 2.订单显示已付款为什么“企业资产”没有变化？
 
-首先已消费的订单金额才会流转至“企业资产”，开发者在用户支付后需要对订单进行核销才会更新订单状态为已消费，即完成通知支付状态参数返回，详见[通知支付状态](http://smartprogram.baidu.com/docs/develop/function/tune_up/#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%8A%B6%E6%80%81/)。  
+首先已消费的订单金额才会流转至“企业资产”，开发者在用户支付后需要对订单进行核销才会更新订单状态为已消费，即完成通知支付状态参数返回，详见[通知支付状态](https://smartprogram.baidu.com/docs/develop/function/tune_up/#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%8A%B6%E6%80%81/)。  
 > 平台佣金实时扣取，最小单位：分，如付款金额为0.01会导致支付款项全部扣为佣金，订单已消费也没有资金可以流入“企业资产”，故“企业资产”资金不会变化。建议开发者测试过程中，支付最小金额不低于0.1元并支付2笔（包含两笔）以上相同金额订单。
 
 3.为什么订单一直是“已付款”状态？
 
-开发者需要严格按照[通知支付状态](http://smartprogram.baidu.com/docs/develop/function/tune_up/#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%8A%B6%E6%80%81/)
+开发者需要严格按照[通知支付状态](https://smartprogram.baidu.com/docs/develop/function/tune_up/#%E9%80%9A%E7%9F%A5%E6%94%AF%E4%BB%98%E7%8A%B6%E6%80%81/)
 完成对订单的核销，如服务器调用开发者回调接口不成功或开发者返回参数有误连续三次，订单会锁定“已付款”状态，无法核销，导致订单金额无法顺利进入企业资产。还请开发者仔细根据文档操作。如有无法核销的“已付款订单，请开发者提供appId、orderId、服务名称、公司名称、问题描述发送至问题反馈邮箱，jiaoyi-ask@baidu.com。
 
 4.为什么订单已消费，财务列表还未显示这比订单？
@@ -121,11 +121,11 @@ sidebar: payfaq
 
 1.申请退款报错怎么办？
 
-首先确认报错信息，根据信息可以直接定位问题的可直接进行处理（如提示签名错误，可直接核对签名，计算过程是否准确，是否Urlencode等）；直接提示无法解决问题的，检查订单状态，如为已核销，需要取消核销后再发起退款，详见[申请退款](http://smartprogram.baidu.com/docs/develop/function/tune_up/#%E7%94%B3%E8%AF%B7%E9%80%80%E6%AC%BE/)。
+首先确认报错信息，根据信息可以直接定位问题的可直接进行处理（如提示签名错误，可直接核对签名，计算过程是否准确，是否Urlencode等）；直接提示无法解决问题的，检查订单状态，如为已核销，需要取消核销后再发起退款，详见[申请退款](https://smartprogram.baidu.com/docs/develop/function/tune_up/#%E7%94%B3%E8%AF%B7%E9%80%80%E6%AC%BE/)。
 
 2.退款审核返回参数后为什么会审核失败？
 
-返回参数中“refundPayMoney”值以分为单位，且不能加小数点，如不严格按照文档提示操作，会导致退款审核失败。详见[请求业务方退款审核](http://smartprogram.baidu.com/docs/develop/function/tune_up/#%E8%AF%B7%E6%B1%82%E4%B8%9A%E5%8A%A1%E6%96%B9%E9%80%80%E6%AC%BE%E5%AE%A1%E6%A0%B8/)
+返回参数中“refundPayMoney”值以分为单位，且不能加小数点，如不严格按照文档提示操作，会导致退款审核失败。详见[请求业务方退款审核](https://smartprogram.baidu.com/docs/develop/function/tune_up/#%E8%AF%B7%E6%B1%82%E4%B8%9A%E5%8A%A1%E6%96%B9%E9%80%80%E6%AC%BE%E5%AE%A1%E6%A0%B8/)
 
 3.为什么在申请退款/退款审核返回参数后没有收到服务器请求/通知？
 
@@ -133,6 +133,6 @@ sidebar: payfaq
 
 ##   签名验签和密钥生成 
 
-详见[签名与验签](/develop/function/sign_v2/)、[密钥生成](http://smartprogram.baidu.com/docs/develop/function/keygen_v2/)。
+详见[签名与验签](/develop/function/sign_v2/)、[密钥生成](https://smartprogram.baidu.com/docs/develop/function/keygen_v2/)。
 
 > 在签名和验签过程中，如开发者在任何一个环节没有严格按照文档要求操作均会导致此“签名错误”，开发者请认真阅读文档。

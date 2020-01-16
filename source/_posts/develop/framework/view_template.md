@@ -46,3 +46,25 @@ Page({
     }
 });
 ```
+is可以动态决定具体需要渲染哪个模板。
+
+**代码示例**
+
+<a href="swanide://fragment/d097c432563a4d0fc2e7bd4fedc917431578384398434" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+<!-- template-demo.swan-->
+<template name="odd">
+   <view> odd </view>
+</template>
+
+
+<template name="even">
+   <view> even </view>
+</template>
+
+
+<block s-for="{{[1, 2, 3, 4, 5]}}">
+   <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
+```

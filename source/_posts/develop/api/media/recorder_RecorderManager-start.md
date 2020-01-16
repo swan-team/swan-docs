@@ -9,14 +9,12 @@ sidebar: recorder_RecorderManager-start
 
 **解释**： 开始录音
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerStart.png"  class="demo-qrcode-image" /> 
+Object object 
 
-
-**方法参数**：Object object 
-
-**options 参数说明**：
+### options 参数说明  
 
 |参数名 | 类型 | 必填 | 默认值|说明 |
 |---- | ---- | ---- | ---|---- |
@@ -25,7 +23,7 @@ sidebar: recorder_RecorderManager-start
 |numberOfChannels |Number |否 | |录音通道数，有效值: 1,2。 |
 |encodeBitRate |Number |否 | |编码码率，有效值见下表格。 |
 |format |String |否 | |音频格式，支持切有效值 aac/pcm。 |
-|audioSource |string  |  否 | auto|  指定录音的音频输入源，可通过 [swan.getAvailableAudioSources](#swan-getAvailableAudioSources)() 获取当前可用的音频源; 基础库3.80.2开始支持|
+|audioSource |string  |  否 | auto|  指定录音的音频输入源，可通过 [swan.getAvailableAudioSources](https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getAvailableAudioSources/)() 获取当前可用的音频源; 基础库3.80.2开始支持|
 
 其中，采样率和码率有一定要求，具体有效值如下：
 
@@ -36,7 +34,19 @@ sidebar: recorder_RecorderManager-start
 |44100| 64000 ~ 320000|
 
 
-**图片示例**
+## 示例
+
+ 
+
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_RecorderManagerStart.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -50,11 +60,11 @@ sidebar: recorder_RecorderManager-start
     </div>     
 </div>
 
-**代码示例1 format为aac**：
+### 代码示例1 format为aac ：
 
 <a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**在 js 文件中**
+ 在 js 文件中 
 
 ```javascript
 Page({
@@ -73,11 +83,11 @@ Page({
 });
 ```
 
-**代码示例2 指定录音的音频输入源**：
+### 代码示例2 指定录音的音频输入源 ：
 
 <a href="swanide://fragment/ff452321703d4b008cef28d2c889de4a1575218133212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**在 js 文件中**
+ 在 js 文件中 
 
 ```javascript
 Page({
