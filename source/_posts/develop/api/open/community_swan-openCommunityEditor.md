@@ -15,6 +15,7 @@ sidebar: community_swan-openCommunityEditor
 ## 方法参数 
 
 Object object
+ 
 
 ### `object`参数说明 
 
@@ -236,4 +237,3 @@ Page({
     }
 });
 ```
-

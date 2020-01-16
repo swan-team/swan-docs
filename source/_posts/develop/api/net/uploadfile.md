@@ -118,7 +118,9 @@ Page({
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
+ ##  Bug & Tip 
 
+uploadFile 上传文件大小限制为 25M。
  
 
 

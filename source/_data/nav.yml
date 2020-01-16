@@ -2324,10 +2324,6 @@
                         text: CanvasContext.createCircularGradient
                         name: canvas_CanvasContext-createCircularGradient
                       -
-                        link: /develop/api/show/canvas_CanvasContext-addColorStop
-                        text: CanvasContext.addColorStop
-                        name: canvas_CanvasContext-addColorStop
-                      -
                         link: /develop/api/show/canvas_CanvasContext-setLineWidth
                         text: CanvasContext.setLineWidth
                         name: canvas_CanvasContext-setLineWidth
@@ -2471,6 +2467,15 @@
                         link: /develop/api/show/canvas_CanvasContext-setTransform
                         text: CanvasContext.setTransform
                         name: canvas_CanvasContext-setTransform
+                  -
+                    link: /develop/api/show/canvas_CanvasGradient
+                    text: CanvasGradient
+                    name: canvas_CanvasGradient
+                    sidebar:   
+                      -
+                        link: /develop/api/show/canvas_CanvasGradient-addColorStop
+                        text: CanvasGradient.addColorStop
+                        name: canvas_CanvasGradient-addColorStop                                         
               -
 
                 text: 交互反馈
@@ -3496,21 +3501,7 @@
       text: 扩展能力
       name: extended
       sidebar:
-        # -   
-        #     text: 基础组件
-        #     sidebar:
-        #       -
-        #         link: /develop/extended/component-content/commentpublish
-        #         text: 半屏内容发布器带服务版
-        #         name: commentpublish
-        #       -
-        #         link: /develop/extended/component/publish
-        #         text: 全屏内容发布器组件
-        #         name: publish
-        #       -
-        #         link: /develop/extended/component-content/like
-        #         text: 点赞组件
-        #         name: like      
+             
         -
        
           text: smart-ui组件
@@ -3584,7 +3575,26 @@
               -
                 link: /develop/extended/lib/smt-swanx
                 text: 数据状态管理
-                name: smt-swanx   
+                name: smt-swanx 
+        -   
+            text: 扩展服务
+            sidebar:
+              -
+                link: /develop/extended/component-content/commentpublish
+                text: 半屏内容发布器带服务版
+                name: commentpublish
+              # -
+              #   link: /develop/extended/component/publish
+              #   text: 全屏内容发布器组件
+              #   name: publish
+              -
+                link: /develop/extended/component-content/like
+                text: 点赞组件
+                name: like      
+              -
+                link: /develop/extended/component-content/follow
+                text: 关注组件
+                name: follow                     
     -
       text: 工具
       name: devtools
