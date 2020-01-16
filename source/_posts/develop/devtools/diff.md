@@ -12,7 +12,6 @@ API 在模拟器与真机中的实现差异如下：
 |api |  差异| 
 |---|---|
 |[map 地图 ](https://smartapp.baidu.com/docs/develop/component/map/) | map地图的bindpoitap事件开发者工具暂不支持 |
-|[swan.subscribeService](http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService/) | 开发者工具暂不支持 |
 |[swan.startLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-startLocationUpdate/) | 开发者工具暂不支持 |
 |[swan.onLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-onLocationChange/) | 开发者工具暂不支持 |
 |[swan.offLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-offLocationChange/) | 开发者工具暂不支持 |
