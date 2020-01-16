@@ -87,7 +87,7 @@ Page({
                 console.log('getLocation success', res)
             },
             fail: err => {
-                console.log('getLocation fail', res)
+                console.log('getLocation fail', err)
             }
         });
     }
