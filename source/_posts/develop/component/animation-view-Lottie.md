@@ -7,7 +7,7 @@ sidebar: base_animation-view-Lottie
 
 
 
-**解释**：支持 Lottie 动画，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+**解释**：仅支持 Lottie 动画的客户端[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制，动画资源地址可到[lottie的官方库](https://github.com/airbnb/lottie-web)进行查询。
 
 ##  属性说明
 
@@ -30,7 +30,7 @@ sidebar: base_animation-view-Lottie
 
 ## 示例
 
-<a href="swanide://fragment/aeaeb76fd22b927e125660e5f2ade00b1577362215935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/773e8370ff783eb66df9666b9cfb39741579144901388" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -60,47 +60,41 @@ sidebar: base_animation-view-Lottie
 * 在 swan 文件中
 
 ```html
-<view class="container">
-    <view class="animation-content hide">
-        <view class="animation-info">
-            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" bind:ended="end" path="{{path}}">
-            </animation-view>
-        </view>
-        <view class="button-content">
-            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}lottie动画</button>
-        </view>
+<view class="wrap">
+    <view class="card-area">
+        <animation-view class="controls" path="{{path}}" loop="{{loop}}" autoplay="{{autoplay}}" action="{{action}}" hidden="{{hidden}}" bindended="lottieEnd">
+        </animation-view>
+        <button bindtap="playLottie" type="primary">{{status}}lottie动画</button>
     </view>
 </view>
-
 ```
 * 在 js 文件中
 
 ```javascript
 Page({
     data: {
-        action: 'play',
-        hidden: false,
-        path: '/anims/lottie_example.json',
+        path: '/anims/lottie_example_one.json',
         loop: true,
         autoplay: true,
-        status: '停止'
+        action: 'play',
+        hidden: false,
+        status: '暂停'
     },
-    onShow(){
+    onShow() {
         console.log(' 百度 App版本11.3以上才可使用');
     },
     playLottie() {
         // 切换播放状态
         let action = this.data.action;
         action = action === 'pause' ? 'play' : 'pause';
-        let status = action === 'pause' ? '播放' : '停止';
-
+        let status = action === 'pause' ? '播放' : '暂停';
         this.setData({
             action,
             status
         });
     },
-    end() {
-        console.log('播放结束,设置不循环播放才能再次触发');
+    lottieEnd() {
+        console.log('自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。');
     }
 });
 ```
