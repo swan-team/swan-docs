@@ -16,7 +16,7 @@ String videoId
 
 ### 返回值 
 
-videoContext
+VideoContext
 
 ## 示例
 

@@ -16,7 +16,7 @@ String selector
 
 ### 返回值 
 
-nodesRef
+NodesRef
 
 selector 类似于 CSS 的选择器，但仅支持下列语法。
 

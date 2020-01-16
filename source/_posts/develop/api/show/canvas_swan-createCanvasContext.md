@@ -16,7 +16,7 @@ String canvasId
 ###  `canvasId`参数说明 ：要获取 canvas 组件的 id。
 
 ###  返回值 
-canvasContext
+CanvasContext
 ## 示例
 
  

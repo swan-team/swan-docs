@@ -17,7 +17,7 @@ sidebar: swan-getUpdateManager
 
 无
 
- 返回值 ：[updateManager](https://smartprogram.baidu.com/docs/develop/api/open/UpdateManager/)
+ 返回值 ：[UpdateManager](https://smartprogram.baidu.com/docs/develop/api/open/UpdateManager/)
 ## 示例
 
 <a href="swanide://fragment/a215f5f8430d830160fc485621797da81575376239973" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

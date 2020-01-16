@@ -15,7 +15,7 @@ Object object
 
 ### 返回值 
 
-animation
+Animation
 
 ### `object`参数说明  
 

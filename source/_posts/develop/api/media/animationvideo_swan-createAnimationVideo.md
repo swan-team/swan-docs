@@ -16,7 +16,7 @@ String animationVideoId
 
 ### 返回值 
 
-animationVideo
+AnimationVideo
 
 ## 示例
 

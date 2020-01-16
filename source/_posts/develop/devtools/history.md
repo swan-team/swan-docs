@@ -13,7 +13,7 @@ sidebar: history
 
 * [正式版更新日志](https://smartprogram.baidu.com/docs/develop/devtools/uplog_tool_normal/)
 
-### 最新 rc 版本（2.26.0-rc）
+### 最新 rc 版本（2.27.0-rc）
 
 > 包含大的新增特性，修复缺陷问题，通过内部测试的稳定版本。电脑本地可以同时安装rc版本和正式版本的工具，两种版本可独立自动更新。
 

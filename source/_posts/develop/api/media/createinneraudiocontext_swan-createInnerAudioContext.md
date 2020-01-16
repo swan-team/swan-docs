@@ -18,7 +18,7 @@ sidebar: createinneraudiocontext_swan-createInnerAudioContext
 
 ### 返回值 
 
-innerAudioContext
+InnerAudioContext
 
 
 

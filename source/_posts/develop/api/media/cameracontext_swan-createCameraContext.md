@@ -17,7 +17,7 @@ sidebar: cameracontext_swan-createCameraContext
 
 ### 返回值 
 
-cameraContext
+CameraContext
 
 ## 示例
 

@@ -35,6 +35,7 @@ https://smartprogram.baidu.com/docs/introduction/rank_data/
 https://smartprogram.baidu.com/docs/introduction/rank_url/
 https://smartprogram.baidu.com/docs/introduction/rank_sitemap/
 https://smartprogram.baidu.com/docs/introduction/rank_api/
+https://smartprogram.baidu.com/docs/introduction/rank_synchronism/
 https://smartprogram.baidu.com/docs/introduction/rank_robots/
 https://smartprogram.baidu.com/docs/introduction/rank_delete/
 https://smartprogram.baidu.com/docs/introduction/rank_road/
@@ -153,6 +154,7 @@ https://smartprogram.baidu.com/docs/develop/framework/custom-component_extend/
 https://smartprogram.baidu.com/docs/develop/framework/custom-component_trdparty/
 https://smartprogram.baidu.com/docs/develop/framework/dynamiclib_use/
 https://smartprogram.baidu.com/docs/develop/framework/dynamiclib_topone/
+https://smartprogram.baidu.com/docs/develop/framework/sitemap/
 https://smartprogram.baidu.com/docs/develop/framework/echarts/
 https://smartprogram.baidu.com/docs/develop/framework/panoviewer/
 https://smartprogram.baidu.com/docs/develop/framework/vrvideo/

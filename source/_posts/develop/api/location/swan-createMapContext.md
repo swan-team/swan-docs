@@ -14,7 +14,7 @@ String mapId
 
 ### `mapId`参数说明 ：要获取 map 组件的 id。
 
-### 返回值 ：mapContext
+### 返回值 ：MapContext
 
 
 ## 示例
