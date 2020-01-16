@@ -661,6 +661,9 @@ https://smartprogram.baidu.com/docs/develop/extended/lib/smt-md5/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-mobx/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-observer/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-swanx/
+https://smartprogram.baidu.com/docs/develop/extended/component-content/commentpublish/
+https://smartprogram.baidu.com/docs/develop/extended/component-content/like/
+https://smartprogram.baidu.com/docs/develop/extended/component-content/follow/
 https://smartprogram.baidu.com/docs/develop/devtools/history/
 https://smartprogram.baidu.com/docs/develop/devtools/page_start/
 https://smartprogram.baidu.com/docs/develop/devtools/page_menu/

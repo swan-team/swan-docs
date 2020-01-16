@@ -223,6 +223,10 @@
                     text: 小程序API提交
                     name: rank_api
                   -
+                    link: /introduction/rank_synchronism
+                    text: 小程序资源自动同步
+                    name: rank_synchronism            
+                  -
                     link: /introduction/rank_robots
                     text: robots协议介绍
                     name: rank_robots
@@ -901,6 +905,10 @@
                 link: /develop/framework/dynamiclib_topone
                 text: topOne动态库
                 name: dynamiclib_topone
+              -
+                link: /develop/framework/sitemap
+                text: swan-sitemap 动态库
+                name: sitemap                
               -
                 link: /develop/framework/echarts
                 text: ECharts 动态库-Beta
