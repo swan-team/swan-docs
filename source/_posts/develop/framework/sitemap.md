@@ -9,7 +9,8 @@ sidebar: sitemap
 
 ## 介绍 
 
-swan-sitemap 动态库是百度小程序官方发布的用于生成小程序索引页（加链接）的动态库组件，开发者可以在小程序项目中引用 swan-sitemap 动态库，并通过 swan-sitemap-list 组件高效的开发出符合搜索收录规范的小程序索引页。
+swan-sitemap 动态库是百度小程序官方发布的用于生成[小程序索引页](https://smartprogram.baidu.com/docs/introduction/rank_synchronism/)的动态库组件，开发者可以在小程序项目中引用 swan-sitemap 动态库，并通过 swan-sitemap-list 组件高效的开发出符合搜索收录规范的小程序索引页。
+
 ## 使用方法 
 
 1. 在项目中声明引用 swan-sitemap 动态库 
@@ -27,7 +28,7 @@ swan-sitemap 动态库是百度小程序官方发布的用于生成小程序索�
 2. 创建一个索引页页面，并在页面中声明引用 swan-sitemap-list 组件 
     动态库中的组件与其他自定义组件类似，都需要在 page 中使用。所以首先需要创建一个 page，page 路径可自定义，推荐路径为 swan-sitemap/index（即在小程序项目根目录创建 swan-sitemap 文件夹，并在文件夹下创建 index.js、index.swan、index.css、index.json 页面文件)。
 
-    索引页上线后，需要在 （这里需要补充B端配置的步骤）中提交最终的索引页路径。
+    索引页上线后，需要在开发者平台提交最终的索引页路径，具体提交步骤见文档[小程序资源自动同步](https://smartprogram.baidu.com/docs/introduction/rank_synchronism)。
 
     页面中引用动态库组件的方式是：在页面的 json 配置的 usingComponents 字段中声明组件引用。具体格式在[使用动态库](https://smartprogram.baidu.com/docs/develop/framework/dynamiclib_use/)文档中查看。
     ```json
