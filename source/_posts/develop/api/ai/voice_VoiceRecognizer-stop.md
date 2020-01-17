@@ -14,7 +14,7 @@ sidebar: voice_VoiceRecognizer-stop
 
 ## 示例
 
-<a href="swanide://fragment/7e4fe85cd2c742caf6eb5a17ef826e421573743143847" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/451d6aafbe2dda7fe528dcc93594e6b91579243446563" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStop.png" class="demo-qrcode-image" />
