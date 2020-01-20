@@ -78,12 +78,12 @@ Page({
 ### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |0|error happen    |
 
 ### iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 ||Status error,current + 当前状态|
 ||Excedding max concurrency + 设置的最大并发数|
