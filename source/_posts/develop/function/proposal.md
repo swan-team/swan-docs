@@ -17,7 +17,7 @@ sidebar: proposal
 ### 页面跳转
 小程序提供了两种页面跳转的方式
 - [navigator 组件](/develop/component/nav/)
-- [导航 API ](https://smartprogram.baidu.com/docs/develop/api/show_tab/)，包括 navigateTo、redirectTo、switchTab、navigateBack、reLaunch
+- [导航 API ](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/)，包括 navigateTo、redirectTo、switchTab、navigateBack、reLaunch
 如果两种方式都能满足使用场景，**建议使用 [navigator 组件](/develop/component/nav/) 实现相应的导航功能，以便更好的被搜索引擎理解**。
 
 
@@ -79,7 +79,7 @@ Page({
 
 
 ### 如何在运行时识别 Web 化环境
-在代码中，可以通过 API [getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/) 判断是否为 Web 化 环境。Web 化环境下，调用 `swan.getSystemInfo() `得到的系统信息中，`platform` 值为`"web"`。
+在代码中，可以通过 API [getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 判断是否为 Web 化 环境。Web 化环境下，调用 `swan.getSystemInfo() `得到的系统信息中，`platform` 值为`"web"`。
 
 > 通常情况下，为保证抓取内容相关性和用户体验一致性，**不建议开发者区分 Web 化环境做差异化实现**。
 > Web 化环境标识主要服务于诸如区分环境统计等需求场景。

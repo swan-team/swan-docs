@@ -114,7 +114,7 @@ sidebar: specification
 
 #### 5.3 iOS虚拟支付行为
 
-在苹果（Apple）iOS 系统下，百度智能小程序不可提供虚拟物品的购买支付，包括不限于开通视频会员、支付阅读章节小说、发帖付费置顶、视频课程、在线付费问答等，不应展示支付功能如展示开通VIP、订阅课程内容、含有价格标签等，也不得引导至外部网页、二维码、添加社交账号、APP来实现支付功能。您可使用 [getSystemInfo](https://smartapp.baidu.com/docs/develop/api/device_sys/#getSystemInfo) 接口判断系统类型（安卓/IOS）和百度APP版本号等信息，完成相关业务逻辑适配。
+在苹果（Apple）iOS 系统下，百度智能小程序不可提供虚拟物品的购买支付，包括不限于开通视频会员、支付阅读章节小说、发帖付费置顶、视频课程、在线付费问答等，不应展示支付功能如展示开通VIP、订阅课程内容、含有价格标签等，也不得引导至外部网页、二维码、添加社交账号、APP来实现支付功能。您可使用 [getSystemInfo](https://smartapp.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfo) 接口判断系统类型（安卓/IOS）和百度APP版本号等信息，完成相关业务逻辑适配。
 
 **处罚规则：**一经发现将进行下线小程序代码包，情节严重者如主体下出现多次或多个小程序违规将进行主体拉黑。
 

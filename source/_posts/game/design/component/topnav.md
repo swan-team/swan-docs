@@ -86,7 +86,7 @@ iOS 状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 
 使用自定义导航栏前，请了解透明框架的[页面布局](../../foundation/layout)基础，此时原生顶部导航栏中的容器、框架内部导航功能区、页面标题均不展示，开发者可自定义当前页面的顶部导航栏。
 
-我们建议，在使用自定义导航栏时，通过系统信息接口 [getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync) 获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
+我们建议，在使用自定义导航栏时，通过系统信息接口 [getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync) 获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -106,7 +106,7 @@ iOS 状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 </div>
 
 自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏高度一致（iOS 为 44pt，Android 为 38pt）。
-技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process_page/#window)章节。
+技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#window)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -119,7 +119,7 @@ iOS 状态栏会随着顶部导航栏元素和容器背景自动改变。</p>
 	</div>
 </div>
 
-<!--开发者也能便利地通过系统信息接口[getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得原生顶部状态栏的高度(navigationBarHeight），更方便地使自定义导航栏的元素与原生导航栏对齐。-->
+<!--开发者也能便利地通过系统信息接口[getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得原生顶部状态栏的高度(navigationBarHeight），更方便地使自定义导航栏的元素与原生导航栏对齐。-->
 
 ## 个性定制
 

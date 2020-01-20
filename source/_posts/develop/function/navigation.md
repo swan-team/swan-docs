@@ -9,7 +9,7 @@ sidebar: navigation
 
 通过对小程序框架进行分析，我们整理了全面的导航原理以及页面跳转后客户端的表现，希望为您的开发带来帮助。
 
-更多内容参见：[顶部导航栏的UI设计参考文档](https://smartprogram.baidu.com/docs/design/component/topnav/)、[导航路由开发文档](https://smartprogram.baidu.com/docs/develop/api/show_tab/)、[webview组件开发文档](/develop/component/open_web-view/)。
+更多内容参见：[顶部导航栏的UI设计参考文档](https://smartprogram.baidu.com/docs/design/component/topnav/)、[导航路由开发文档](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/)、[webview组件开发文档](/develop/component/open_web-view/)。
 
 
 ## 页面跳转底层原理

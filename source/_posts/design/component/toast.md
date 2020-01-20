@@ -7,7 +7,7 @@ sidebar: toast
 
 反馈提示Toast用于向用户提示某种行为的轻量结果反馈。它既不会阻塞用户后续行为，也不要求用户响应操作，在同步用户展现信息一定时间（可配，建议不超过7s）后便自动消失。在连续反馈场景，新的反馈提示会被优先展现。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showToast/" target="_blank">showToast</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/#swan-showToast/" target="_blank">showToast</a>。
 
 智能小程序提供图文Toast（1）和纯文Toast（2），开发者可自定义配置提示内容。
 <div class="m-doc-custom-examples">

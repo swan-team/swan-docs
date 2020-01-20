@@ -1841,7 +1841,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 ## **常见问题**
 1. **access_token不合法**
 
-常见异常原因: 小程序密钥(client_secret)在开发者平台有改动，但未同步到获取access_token的接口。(获取access_token : [接口文档](https://smartprogram.baidu.com/docs/develop/server/power/#开发者服务权限说明) )
+常见异常原因: 小程序密钥(client_secret)在开发者平台有改动，但未同步到获取access_token的接口。(获取access_token : [接口文档](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/#开发者服务权限说明) )
 
 2. API接口调用失败，提示“Invalid parameter”。
 

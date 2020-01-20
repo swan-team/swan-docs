@@ -26,7 +26,7 @@ Page({
 **说明**：
 * 需要在`app.json`的`window`选项中开启 `enablePullDownRefresh`；
 * 如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`；
-* 当处理完数据刷新后，[`swan.stopPullDownRefresh`](https://smartprogram.baidu.com/docs/develop/api/show_pull/#swan-stopPullDownRefresh/)可以停止当前页面的下拉刷新。
+* 当处理完数据刷新后，[`swan.stopPullDownRefresh`](https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-startPullDownRefresh/#swan-stopPullDownRefresh/)可以停止当前页面的下拉刷新。
 
 
 ### onReachBottom

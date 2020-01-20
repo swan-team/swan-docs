@@ -40,7 +40,7 @@ API 在模拟器与真机中的实现差异如下：
 |[swan.addEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/) | 降级支持 |
 |[swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) | 部分属性开发者工具暂不支持,详情请看详情页 |
 |[swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) | 部分属性开发者工具暂不支持,详情请看详情页 |
-|[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/) | 降级支持 | 
+|[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-compressImage/) | 降级支持 | 
 |[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
 |[swan.onMemoryWarning](https://smartprogram.baidu.com/docs/develop/api/device_sys/onmemory/) | 通过“模拟操作->内存警告”触发 | 
 |[swan.onNetworkStatusChange](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onNetworkStatusChange/) | 通过“模拟操作->网络”切换网络触发 | 
@@ -58,5 +58,5 @@ API 在模拟器与真机中的实现差异如下：
 |[swan.setEnableDebug](https://smartprogram.baidu.com/docs/develop/api/open/swan-setEnableDebug/)|降级支持|
 |[swan.showFavoriteGuide](https://smartprogram.baidu.com/docs/develop/api/show/nacomponent/)| 为方便开发者开发和调试，该api在开发工具中并未使用引导组件的统一[策略](https://smartapp.baidu.com/docs/develop/api/show/nacomponent/)。|
 |[swan.setInnerAudioOption](https://smartprogram.baidu.com/docs/develop/api/media/createinneraudiocontext_swan-setInnerAudioOption/)|降级支持| 
-|[swan.ai.getVoiceRecognizer](https://smartprogram.baidu.com/docs/develop/api/ai_voice/#swan-ai-getVoiceRecognizer/)|降级支持| 
-|[swan.shareFile](https://smartprogram.baidu.com/docs/develop/api/open_share/#swan-shareFile)|降级支持| 
+|[swan.ai.getVoiceRecognizer](https://smartprogram.baidu.com/docs/develop/api/ai/voice_swan-ai-getVoiceRecognizer/#swan-ai-getVoiceRecognizer/)|降级支持| 
+|[swan.shareFile](https://smartprogram.baidu.com/docs/develop/api/open/share_onShareAppMessage/#swan-shareFile)|降级支持| 

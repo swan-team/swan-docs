@@ -127,7 +127,7 @@ Page({
 |dataset | Object | 事件绑定的组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](./#dataset) |
 
 #### detail
-是自定义事件所携带的数据，具体详见[组件](https://smartprogram.baidu.com/docs/develop/component/componetlist/)定义中各个事件的定义。
+是自定义事件所携带的数据，具体详见[组件](https://smartprogram.baidu.com/docs/develop/component/component/)定义中各个事件的定义。
 
 #### dataset
 在组件的事件被触发时，也可以传递自定义的数据。
