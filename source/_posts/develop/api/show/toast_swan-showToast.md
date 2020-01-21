@@ -29,7 +29,7 @@ Object object
 ###  icon有效值 
 
 |有效值 |说明  |
-|---- | ---- |
+:-|:-
 |success | 显示成功图标，此时 title 文本最多显示 7 个汉字长度。默认值 |
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
@@ -248,19 +248,27 @@ Page({
 ### Android
 
 |错误码|说明|
+<<<<<<< HEAD
 |:--|:--|
+=======
+:-|:-
+>>>>>>> 6283ff69d4502f0ba1497c85db481a9b4fb8a1fd
 |202|解析失败，请检查参数是否正确      |
 |302|找不到调起协议对应端能力方法|
 
 ### iOS
 
 |错误码|说明|
+<<<<<<< HEAD
 |:--|:--|
+=======
+:-|:-
+>>>>>>> 6283ff69d4502f0ba1497c85db481a9b4fb8a1fd
 |202|解析失败，请检查参数是否正确      |
 
 
 ## Bug&Tip  
 
-* [swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个。
-* swan.showToast 应与 [swan.hideToast](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/) 配对使用。
+* Tip：[swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个。
+* Tip：swan.showToast 应与 [swan.hideToast](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/) 配对使用。
 

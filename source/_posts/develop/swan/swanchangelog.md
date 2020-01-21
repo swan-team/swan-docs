@@ -71,7 +71,7 @@ sidebar: swanchangelog
 |3.110.15|2019.11.11|**BugFix**<p>**·**修复scroll-view或scroll-veiw父节点绑定catchtouchmove后scoll-veiw不能滚动的问题；<p>**·**修复安卓同层textarea auto-height的默认高度问题；<p>**·**修复ios视频播放时圆角不生效的问题。|
 |3.110.14|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
 |3.110.9|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
-|3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。|
+|3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-compressImage/">swan.compressImage</a>。|
 
 
 ## 3.105 版本日志更新

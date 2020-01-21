@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: uploadfile
 ---
-请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 
 
 

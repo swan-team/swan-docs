@@ -11,7 +11,7 @@ sidebar: authorize_list
 |---|---|
 |[swan.getUserInfo](https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/)|	用户信息|
 |[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
-|[swan.saveImageToPhotosAlbum](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
+|[swan.saveImageToPhotosAlbum](https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-saveImageToPhotosAlbum/)|保存到相册|
 |	[swan.chooseAddress](https://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/)|	收货地址|
 |[swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
 |	[swan.getRecorderManager](https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|

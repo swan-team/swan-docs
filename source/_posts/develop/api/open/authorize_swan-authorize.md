@@ -29,7 +29,7 @@ Object object
 |---|---|---|
 |scope.userInfo|[swan.getUserInfo](https://smartprogram.baidu.com/docs/develop/api/open/userinfo_swan-getUserInfo/)|	用户信息|
 |scope.userLocation|[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/), [swan.chooseLocation](httpssss://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/)|地理位置|
-|scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/)|保存到相册|
+|scope.writePhotosAlbum	|[swan.saveImageToPhotosAlbum](https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-saveImageToPhotosAlbum/)|保存到相册|
 |scope.address|	[swan.chooseAddress](https://smartprogram.baidu.com/docs/develop/api/open/chooseaddress_swan-chooseAddress/)|	收货地址|
 |scope.invoiceTitle|[swan.chooseInvoiceTitle](https://smartprogram.baidu.com/docs/develop/api/open/swan-chooseInvoiceTitle/)	|发票抬头|
 |scope.record|	[swan.getRecorderManager](https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/)|	录音功能|

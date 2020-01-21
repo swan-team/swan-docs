@@ -9,7 +9,7 @@ sidebar: UpdateManager
 
 
 
-**解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/get/)返回值。
+**解释**：管理更新，[swan.getUpdateManager](https://smartprogram.baidu.com/docs/develop/api/open/swan-getUpdateManager/)返回值。
  
 ## 方法参数
 

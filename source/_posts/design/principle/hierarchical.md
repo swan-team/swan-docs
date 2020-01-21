@@ -89,19 +89,19 @@ sidebar: hierarchical
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">多选 Checkbox</p>
- 		<a href="../../../../docs/develop/component/form_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">单选 Radio</p>
- 		<a href="../../../../docs/develop/component/form_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">开关 Switch</p>
-		<a href="../../../../docs/develop/component/form_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
+		<a href="../../../../docs/develop/component/formlist_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">滑动选择条 Slider</p>
- 		<a href="../../../../docs/develop/component/form_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
 	</div>
 </div>
 
