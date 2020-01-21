@@ -18,7 +18,7 @@ Object object
 ### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 | enableDebug | Boolean | 是 | | 是否打开调试 |
 |success|	function|		否||	接口调用成功的回调函数，仅支持 Android。|
 |fail	|function		|否||	接口调用失败的回调函数，仅支持 Android。|

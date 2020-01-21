@@ -19,7 +19,7 @@ Function callback
 ### `callback`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 |isConnected |Boolean |是| |当前是否有网络连接|
 |networkType| String |是| | 网络类型|
 

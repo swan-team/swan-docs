@@ -15,7 +15,7 @@ Object object
 ###  `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 |color |HexColor | 否| |tab 上的文字默认颜色|
 |selectedColor |HexColor | 否| |tab 上的文字选中时的颜色|
 |backgroundColor |HexColor | 否| | tab 的背景色|

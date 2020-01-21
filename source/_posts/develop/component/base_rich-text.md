@@ -10,7 +10,7 @@ sidebar: base_rich-text
 ##  属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明| 
-|---- | ---- | ---- | ---- |---- |
+|:---- |: ---- | :---- | :---- |:---- |
 | nodes | Array &#124; String  | [] | 否 |节点列表 / HTML String| 
 | selectable | Boolean | false（基础库3.150.1以前版本）<br>true（基础库3.150.1及以后版本） | 否 |富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景。<font color="#4183c4">百度 APP 11.10 以上</font>|
 | name | 标签名 | String | 是 | 支持部分受信任的HTML节点 |

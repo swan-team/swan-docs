@@ -17,7 +17,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 |image | String | 是   |- | 图像资源地址|
 |detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的选装方向和旋转角度。<p>  ·  true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p>  ·   false:不检测旋转角度，默认不检测。|
 |accuracy	 | String   |否 |- | normal 使用快速服务，1200ms左右时延；缺省或其它值使用高精度服务，1600ms左右时延。|
@@ -28,7 +28,7 @@ Object object
 ###  success 返回参数说明 ：
 
 |参数 | 类型 | 说明  |
-|---- | ---- | ---- |
+|:---- |: ---- | :---- |
 |log_id | Number |唯一的log id，用于问题定位。|
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |

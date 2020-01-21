@@ -19,7 +19,7 @@ Object object
 ### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 |sendBackgroundColor   | String  |  否  | #3388ff |发布按钮填充颜色，支持#333 和#333333 两种写法|
 |sendTextColor  |  String  | 否 | #FFFFFF |发表按钮颜色，支持#333 和#333333 两种写法|
 |sendText  |  Object  | 否 | 发表 | 发表的显示文案|

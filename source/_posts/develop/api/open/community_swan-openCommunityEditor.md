@@ -20,7 +20,7 @@ Object object
 ### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 |contentPlaceholder   | String  |  否  | 请输入正文 |正文默认占位符|
 |titlePlaceholder  |  String  | 否 | 请输入标题 |标题默认占位文符|
 |moduleList  |  Array  | 否 | |显示模块list|

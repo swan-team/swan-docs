@@ -11,7 +11,7 @@ sidebar: canvas_CanvasContext-setTextAlign
 
  
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |: ---- | :---- |: ----|:----|
 | `align `|String|是|| 有效值 'left'、'center'、'right'。 |
 
 ## 示例

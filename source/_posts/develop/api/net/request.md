@@ -33,7 +33,7 @@ Object object
 
 
 |参数 | 类型 | 说明  |
-|---- | ---- | ---- |
+|:---- |: ---- | :---- |
 |data  |  Object/String  | 开发者服务器返回的数据|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 |header | Object | 开发者服务器返回的 HTTP Response Header|
