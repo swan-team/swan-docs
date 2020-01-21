@@ -45,7 +45,7 @@ sidebar: cardticket
 
 ## 前提条件
 1.	已完成[开发者入驻和小程序创建](https://smartprogram.baidu.com/docs/introduction/enter_application/)；
-2.	已使用百度官方提供的[登录能力](https://smartprogram.baidu.com/docs/develop/api/open_log/)；
+2.	已使用百度官方提供的[登录能力](https://smartprogram.baidu.com/docs/develop/api/open/log_swan-login/)；
 3.	开发者业务有优惠券功能，具备发券-核销能力。百度智能小程序仅作为平台投放、券的统一展示、集中管理。如，个人中心有我的优惠券/礼券/卡券等，用户可查看可使用。
 
 

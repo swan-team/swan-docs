@@ -75,7 +75,7 @@ sidebar: layout
 </div>
 
 全面屏手机的刘海高度等同于系统状态栏的高度。
-通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
+通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">

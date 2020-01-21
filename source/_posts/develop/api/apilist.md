@@ -51,19 +51,19 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-facePersonIdmatch/">swan.ai.facePersonIdmatch</a>|身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceLivenessSessioncode/">swan.ai.faceLivenessSessioncode</a>|H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/word/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
-<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。| -->
-<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai_face/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。| -->
+<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceDetect/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。| -->
+<!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceDetect/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。| -->
 
 ## 媒体
 
 |API 名称|解释|
 |--|--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-previewImage/">swan.previewImage</a>|预览图片|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-previewImage/">swan.previewImage</a>|预览图片|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-compressImage/">swan.compressImage</a>|压缩图片接口|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-saveImageToPhotosAlbum/">swan.saveImageToPhotosAlbum</a>|保存图片到系统相册，需要用户授权。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-chooseAlbum/">swan.chooseAlbum</a>|打开本地相册，相册内可以同时包含图片和视频。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getRecorderManager/">swan.getRecorderManager</a>|获取全局唯一的录音管理器recorderManager。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/recorder_swan-getAvailableAudioSources//">swan.getAvailableAudioSources</a>|获取当前支持的音频输入源|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/backgroundaudiomanager_swan-getBackgroundAudioManager/">swan.getBackgroundAudioManager</a>|获取全局唯一的背景音频管理器 backgroundAudioManager。|
@@ -94,7 +94,7 @@ sidebar: apilist
 
 |API 名称|解释|
 |--|--|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/storage_save/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_process/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorageSync/">swan.getStorageSync</a>|从本地缓存中同步获取指定 key 对应的内容。|
@@ -300,5 +300,5 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearTimeout</a>|取消由 setTimeout 设置的定时器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
 <!-- |<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。| -->

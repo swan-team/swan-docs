@@ -40,7 +40,7 @@ sidebar: create
 ### 二、主体认证
 服务商资质审核通过后，将自动进入主体认证环节。认证成功后，可进入管理中心创建第三方平台。
 
-具体流程可参考：[主体认证](https://smartprogram.baidu.com/docs/introduction/register/)
+具体流程可参考：[主体认证](https://smartprogram.baidu.com/docs/introduction/enter_application/)
 
 
 >注意：主体认证时所提交的企业信息应当与入驻申请时填写的企业名称保持一致。
@@ -91,7 +91,7 @@ sidebar: create
 
 ![全网发布](../../img/tp/dfb.png)
 
-在您点击全网发布后，百度将会对您所选的平台权限集所对应能力的实现情况进行自动化检测，请确保您已经使用授权测试小程序验证相关能力。具体检测机制可参考：[第三方平台发布检测](https://smartprogram.baidu.com/docs/develop/third/develop/)。
+在您点击全网发布后，百度将会对您所选的平台权限集所对应能力的实现情况进行自动化检测，请确保您已经使用授权测试小程序验证相关能力。具体检测机制可参考：[第三方平台发布检测](https://smartprogram.baidu.com/docs/third/develop/)。
 
 #### 3.平台基本信息审核
 在您通过权限集能力检测后，百度将会对您的平台基本信息进行人工审核，请您耐心等待审核结果。

@@ -8,7 +8,7 @@ sidebar: dialog
 综上，请谨慎使用提示框，因为它们会分散用户的注意力，并且打断用户的任务路径。
 
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showModal/" target="_blank">showModal</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/#swan-showModal/" target="_blank">showModal</a>。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">

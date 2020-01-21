@@ -26,7 +26,7 @@ A：当前我们提供方式可以查询到您指定地点的经纬度
 
 ####  Q: request 请求在 iOS 端会进入 fail 回调函数的原因有哪些？
 
-A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](https://smartprogram.baidu.com/docs/develop/api/net_request/)。
+A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](https://smartprogram.baidu.com/docs/develop/api/net/request/)。
 
 
 
