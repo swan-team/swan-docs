@@ -3371,7 +3371,6 @@
                 text: 错误码
                 name: errorcode
     -
-      link: /develop/serverapi
       text: 服务端 API
       name: serverapi
       sidebar:
@@ -4653,7 +4652,6 @@
             name: error_code
 
     -
-      link: /develop/swan
       text: 基础库版本信息
       name: swan
       sidebar:
