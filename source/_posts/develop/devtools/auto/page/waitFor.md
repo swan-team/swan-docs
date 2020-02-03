@@ -15,7 +15,7 @@ page.waitFor(condition: string | number | Function): Promise<void>
 **参数说明：**
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |condition| String/Number/Function|是|- |等待条件|
 
 - 如果条件是 string 类型，那么该参数会被当成选择器，当该选择器选中元素个数不为零时，结束等待。

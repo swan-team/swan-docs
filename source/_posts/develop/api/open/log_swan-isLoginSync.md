@@ -19,7 +19,7 @@ sidebar: log_swan-isLoginSync
 ### 返回参数说明  
 
 |参数 | 类型 | 说明|
-|---- | ---- | ---- |
+|:---- | :---- | :---- | 
 |isLogin  |  Boolean | 宿主 App登录状态 true: 已登录，false: 未登录  |
 ## 示例
 

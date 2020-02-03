@@ -18,7 +18,7 @@ Object object
 ### `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |appKey | String | 是 | | 要打开的小程序App Key（使用线上版appkey和envVersion配合使用）|
 |path | String | 否 | | 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数中可以获取到 query 数据。|
 |extraData | Object | 否 | | 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。|

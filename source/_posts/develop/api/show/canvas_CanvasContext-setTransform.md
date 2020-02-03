@@ -12,7 +12,7 @@ sidebar: canvas_CanvasContext-setTransform
 
  
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 | `scaleX`|Number|是|| 水平缩放  | 
 | `scaleY`|Number|是||  垂直缩放| 
 |  `skewX`|Number|是||  水平倾斜  |  

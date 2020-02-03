@@ -18,7 +18,7 @@ Object object
 ### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |detect_direction |Boolean | 否   | | 是否检测图像旋转，可检验图像的旋转方向和旋转角度。<p>  ·  true：检测旋转角度并矫正识别。针对摆放情况不可控制的情况建议本参数置为true；<p>  ·   false:不检测旋转角度，默认不检测。|
 |id_card_side  |  String  | 否  |- |front：身份证含照片的一面；back：身份证带国徽的一面。|
 |image | String | 是   | | 图片资源地址|
@@ -31,7 +31,7 @@ Object object
 ### success 返回参数说明  
 
 |参数 | 类型 | 说明  |
-|---- | ---- |---- |
+|:---- |:---- |:---- |
 |direction|	Number |图像方向，当 detect_direction=true 时存在。-1: 未定义，0: 正向，1: 逆时针90度，2: 逆时针180度，3: 逆时针270度。|
 |image_status  |  String  |normal-识别正常；reversed_side-身份证正反面颠倒；non_idcard-上传的图片中不包含身份证；blurred-身份证模糊；other_type_card-其他类型证照；over_exposure-身份证关键字段反光或过曝；unknown-未知状态。|
 |risk_type |String | 输入参数 detect_risk = true 时，则返回该字段识别身份证类型: normal-正常身份证；copy-复印件；temporary-临时身份证；screen-翻拍；unknown-其他未知情况。|

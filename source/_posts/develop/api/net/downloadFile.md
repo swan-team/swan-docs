@@ -17,7 +17,7 @@ Object object
 ###  `object`参数说明  ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |url |String | 是 || 下载资源的 url|
 |header | Object  |否 || HTTP 请求 Header，header 中不能设置 Referer|
 |success |Function |   否  | | 下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}|
@@ -29,7 +29,7 @@ Object object
 ###  success 返回参数说明  ：
 
 |参数 | 类型 | 说明|
-|---- | ---- | ---- |
+|:---- | :---- | :---- | 
 |tempFilePath  |  String  |临时文件路径，下载后的文件会存储到一个临时文件|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 

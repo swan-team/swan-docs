@@ -15,7 +15,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |count  | Number | 否 |9| 最多可以选择的图片张数 。|
 |sizeType  |Array.&lt;string&gt;  | 否 || original 原图，compressed 压缩图，默认二者都有。|
 |sourceType | Array.&lt;string&gt;  |否 | |  album 从相册选图，camera 使用相机，默认二者都有。|

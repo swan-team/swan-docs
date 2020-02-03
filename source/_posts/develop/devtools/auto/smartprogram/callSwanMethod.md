@@ -14,7 +14,7 @@ smartProgram.callSwanMethod(method: string, ...args: any[]): Promise<any>
 **参数说明：**
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |method| String|是|- |需要调用的方法名|
 |...args| Array|否|- |方法参数|
 

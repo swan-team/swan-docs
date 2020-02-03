@@ -21,7 +21,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |photoFilePath |String | 否  | | 头像本地文件路径|
 |nickName |String | 否  | |昵称|
 |lastName |String | 否  | |姓氏|

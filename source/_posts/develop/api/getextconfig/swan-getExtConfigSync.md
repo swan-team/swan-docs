@@ -20,7 +20,7 @@ sidebar: swan-getExtConfigSync
 ### 返回说明  
 
 |参数 | 类型 | 说明|
-|---- | ---- | ---- |
+|:---- | :---- | :---- | 
 |extConfig |  Object | 第三方平台自定义的数据 |
 
 若接口调用失败，会抛出一个标准的`Error`对象。

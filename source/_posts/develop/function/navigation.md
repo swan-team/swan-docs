@@ -20,10 +20,10 @@ sidebar: navigation
 |跳转方式|实现方式|场景|
 |---|---|---|
 |[navigateTo](/develop/component/nav/)|小程序框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给小程序框架，并通知框架开始加载开发者代码，紧接着框架实例化一个新的页面并将其推入页面栈中，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
-|[redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-redirectTo/)|小程序框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给小程序框架，并通知框架开始加载开发者代码，紧接着框架将页面栈顶的信息更新为待跳转页面的信息，同时创建页面实例，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
-|[navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-navigateBack/)|有两种方式返回上一个页面，一种是主动操作（android物理返回、双端右滑、通过顶bar的返回按钮），此场景下返回时客户端会通知小程序框架将页面栈顶页弹出；另一种是调用API的方式或者利用navigator组件返回上一页，此场景下是由框架直接通知客户端关闭当前页面容器，客户端关闭成功后通知小程序框架将页面栈顶页弹出。|可作用于任意页面|
-|[switchTab](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-switchTab/)|有两种方式进行tab切换，一种是主动操作（在tab页点击另一个tab），客户端会通知小程序框架对页面栈信息进行更新，另一种是通过API或利用navigator组件通知客户端跳转到某一tab页，客户端跳转完成时通知小程序框架进行页面栈信息更新。|只能打开 tabBar 页面|
-|[reLaunch](https://smartprogram.baidu.com/docs/develop/api/show/tab_小程序-reLaunch/)|小程序框架将页面栈清空，然后利用开发者传入的url重新初始化为第一个页面。|可打开任意页面|
+|[redirectTo](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-redirectTo/)|小程序框架携带开发者参数，通知客户端打开一个新的页面容器，客户端打开后将相关参数回传给小程序框架，并通知框架开始加载开发者代码，紧接着框架将页面栈顶的信息更新为待跳转页面的信息，同时创建页面实例，然后利用初始数据进行初始化页面渲染。|只能打开非 tabBar 页面|
+|[navigateBack](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-navigateBack/)|有两种方式返回上一个页面，一种是主动操作（android物理返回、双端右滑、通过顶bar的返回按钮），此场景下返回时客户端会通知小程序框架将页面栈顶页弹出；另一种是调用API的方式或者利用navigator组件返回上一页，此场景下是由框架直接通知客户端关闭当前页面容器，客户端关闭成功后通知小程序框架将页面栈顶页弹出。|可作用于任意页面|
+|[switchTab](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-switchTab/)|有两种方式进行tab切换，一种是主动操作（在tab页点击另一个tab），客户端会通知小程序框架对页面栈信息进行更新，另一种是通过API或利用navigator组件通知客户端跳转到某一tab页，客户端跳转完成时通知小程序框架进行页面栈信息更新。|只能打开 tabBar 页面|
+|[reLaunch](https://smartprogram.baidu.com/docs/develop/api/show/tab_swan-reLaunch/)|小程序框架将页面栈清空，然后利用开发者传入的url重新初始化为第一个页面。|可打开任意页面|
 
 
 ## 原生小程序页面

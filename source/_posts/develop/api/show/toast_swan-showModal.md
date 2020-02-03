@@ -17,7 +17,7 @@ Object object
 ### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |: ---- | :---- |: ----|:----|
+|:---- |:---- |:---- |:----|:----|
 |title  | String|  是 | | 提示的标题|
 |content |String | 是 | |  提示的内容|
 |showCancel | Boolean|否  | true| 是否显示取消按钮 。|

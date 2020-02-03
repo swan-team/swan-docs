@@ -20,8 +20,8 @@ Object object
 
 ###  Object参数说明  
 
-|属性名 |类型  |默认值 |必填|说明|
-|---|---|---|---|---|
+|属性名|	类型|	默认值|	必填|	说明|
+|:---- | :---- | :---- | :---- | :---- | 
 |newURLQuery|Object| ||改变后的 URL query |
 |oldURLQuery|Object| ||改变前的 URL query |
 

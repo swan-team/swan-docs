@@ -17,7 +17,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|最低支持版本|
-|---- | ---- | ---- | ----|----|----|
+|:---- | :---- | :---- | :---- | :---- |  :---- | 
 |url |String | 是   | |    开发者服务器接口地址| |
 |data  |  Object/String  | 否  | | 请求的参数| |
 |header | Object | 否    | |   设置请求的 header，header 中不能设置 Referer。| |
@@ -33,7 +33,7 @@ Object object
 
 
 |参数 | 类型 | 说明  |
-|:---- |: ---- | :---- |
+|:---- |:---- |:---- |
 |data  |  Object/String  | 开发者服务器返回的数据|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码|
 |header | Object | 开发者服务器返回的 HTTP Response Header|
