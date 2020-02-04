@@ -9,9 +9,8 @@
   "scripts": {
     "prebuild": "npm install && hexo --safe && node make-sitemap.js",
     "prestart": "npm install && hexo --safe",
-    "copy": "cp -r source/_posts output/miniappdocs/sourcedocs/ && cp -r source/_data/nav.yml output/miniappdocs/sourcedocs/",
     "start": "node make-sitemap.js && npx hexo server",
-    "build": "npx hexo clean && NODE_OPTIONS=--max-old-space-size=4096 npx hexo generate && npm run copy"
+    "build": "npx hexo clean && NODE_OPTIONS=--max-old-space-size=4096 npx hexo generate"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.2",
