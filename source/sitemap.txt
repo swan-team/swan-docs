@@ -620,7 +620,6 @@ https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/
 https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/
 https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/
 https://smartprogram.baidu.com/docs/develop/api/errorcode/
-https://smartprogram.baidu.com/docs/develop/serverapi/
 https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/
 https://smartprogram.baidu.com/docs/develop/serverapi/submitresource/
 https://smartprogram.baidu.com/docs/develop/serverapi/deleteresource/
@@ -832,7 +831,6 @@ https://smartprogram.baidu.com/docs/develop/function/tune_up_orderBill/
 https://smartprogram.baidu.com/docs/develop/function/tune_up_capitaBill/
 https://smartprogram.baidu.com/docs/develop/function/payfaq/
 https://smartprogram.baidu.com/docs/develop/function/error_code/
-https://smartprogram.baidu.com/docs/develop/swan/
 https://smartprogram.baidu.com/docs/develop/swan/client-lib/
 https://smartprogram.baidu.com/docs/develop/swan/version/
 https://smartprogram.baidu.com/docs/develop/swan/swanchangelog/
