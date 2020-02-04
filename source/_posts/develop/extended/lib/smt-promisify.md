@@ -66,7 +66,7 @@ sidebar: smt-promisify
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
-| APINames | Array.<string> | 是 | | 需要添加到内置异步 API 列表的 API 名称数组 |
+| APINames | Array.`<string>` | 是 | | 需要添加到内置异步 API 列表的 API 名称数组 |
 
 
 
@@ -82,7 +82,7 @@ sidebar: smt-promisify
 
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
-| APINames | Array.<string> | 是 | | 需要从内置异步 API 列表移除的 API 名称数组 |
+| APINames | Array.`<string>`| 是 | | 需要从内置异步 API 列表移除的 API 名称数组 |
 
 
 
