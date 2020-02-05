@@ -194,7 +194,7 @@ Page({
 });
 ```
 **Tips**
-Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能，分享数据抓取小程序标题、小程序简介、小程序头像。
+Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能，分享数据会优先使用setPageInfo中设置的页面标题和描述信息，其次使用小程序标题、小程序简介、小程序头像，再其次会使用默认智能小程序文案作为兜底，所以推荐开发者优先使用setPageInfo完善页面信息。
 
 **分享渠道及字段说明图示**
 ![动态及微信好友示例](https://b.bdstatic.com/miniapp/images/dongtai.png)

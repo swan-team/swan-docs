@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: swan-setPageInfo
 ---
-配置页面基础信息接口，目前仅支持 Web 化使用，推荐使用 setPageInfo 。
+配置页面基础信息接口，目前在 Web 化代码和收藏里会被使用，推荐使用 setPageInfo；小程序页面被收藏时，会用到setPageInfo中设置的页面标题。
 
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
