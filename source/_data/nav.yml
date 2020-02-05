@@ -3585,7 +3585,7 @@
                 name: smt-swanx 
               -
                 link: /develop/extended/lib/bdparse
-                text: bdparse富文本解析器
+                text: bdparse 富文本解析器
                 name: bdparse
         -   
             text: 扩展服务
