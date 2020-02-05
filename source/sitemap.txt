@@ -620,7 +620,6 @@ https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/
 https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/
 https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/
 https://smartprogram.baidu.com/docs/develop/api/errorcode/
-https://smartprogram.baidu.com/docs/develop/serverapi/serverapilist/
 https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/
 https://smartprogram.baidu.com/docs/develop/serverapi/submitresource/
 https://smartprogram.baidu.com/docs/develop/serverapi/deleteresource/
@@ -663,6 +662,7 @@ https://smartprogram.baidu.com/docs/develop/extended/lib/smt-md5/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-mobx/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-observer/
 https://smartprogram.baidu.com/docs/develop/extended/lib/smt-swanx/
+https://smartprogram.baidu.com/docs/develop/extended/lib/bdparse/
 https://smartprogram.baidu.com/docs/develop/extended/component-content/commentpublish/
 https://smartprogram.baidu.com/docs/develop/extended/component-content/like/
 https://smartprogram.baidu.com/docs/develop/extended/component-content/follow/
