@@ -1,17 +1,19 @@
 ---
 title: bdparse
 header: develop
-nav: extensions
+nav: extended
 sidebar: bdparse
 ---
 
-**解释：** 百度小程序富文本解析工具bdParse，改造自wxparse，支持html转换成百度小程序富文本节点。
-感谢`郑州腾石建站`贡献当前组件，如有问题可联系`郑州腾石建站(2863868475@qq.com)`，也可以访问<a href="https://gitee.com/sootou/bdparse">当前组件的git仓库原始地址</a>
+> 本组件为开发者贡献组件，详情访问<a href="https://gitee.com/sootou/bdparse">当前组件的git仓库原始地址</a>。
+
+**解释：** 智能小程序富文本解析工具bdParse，改造自wxparse，支持html转换成智能小程序富文本节点。
+
 
 ##  属性说明
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
-|---|---|---|---|---|
+|:---|:---|:---|:---|:---|
 |raw|String |是|''|需要转换展现的原始内容|
 |format|String |否|'html'|需要转换内容的原始格式，可选有：'html', 'markdown'|
 |padding|Number|否|5|渲然出来界面的左右留白(px为单位)|
