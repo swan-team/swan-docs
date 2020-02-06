@@ -25,3 +25,25 @@ sidebar: FileSystemManager-getSavedFileList
 |:----|:----|:----|
 |fileList|Array|文件数组|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    getSavedFileList() {
+        this.fs.getSavedFileList({
+            success: res => {
+                console.log('getSavedFileList success', res);
+            },
+            fail: err => {
+                console.log('getSavedFileList fail', err)
+            }
+        });
+    }
+});
+```

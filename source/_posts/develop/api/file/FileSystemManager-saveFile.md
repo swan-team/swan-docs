@@ -27,3 +27,27 @@ sidebar: FileSystemManager-saveFile
 |:----|:----|:----|
 |savedFilePath|String|存储后的文件路径|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    saveFile() {
+        this.fs.saveFile({
+            tempFilePath: '/usr/temp.txt', // 仅为示例，实际上请传真实临时路径地址，如 swan.downloadFile 的 tempFilePath 返回参数
+            filePath: `${swan.env.USER_DATA_PATH}/`,
+            success: res => {
+                console.log('saveFile success', res);
+            },
+            fail: err => {
+                console.log('saveFile fail', err)
+            }
+        });
+    }
+});
+```

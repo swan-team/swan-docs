@@ -26,3 +26,26 @@ sidebar: FileSystemManager-readdir
 |files|Array|指定目录下的文件列表|
 |files[].fileItem|String|文件列表里的文件项，存储着路径|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    readdir() {
+        this.fs.readdir({
+            dirPath: `${swan.env.USER_DATA_PATH}/readdir`,
+            success: res => {
+                console.log('readdir success', res);
+            },
+            fail: err => {
+                console.log('readdir fail', err)
+            }
+        });
+    }
+});
+```

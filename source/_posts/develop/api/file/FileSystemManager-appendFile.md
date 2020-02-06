@@ -33,3 +33,28 @@ sidebar: FileSystemManager-appendFile
 |utf-8/utf8||
 |latin1/binary|ISO-8859-1 的别名|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    appendFile() {
+        this.fs.appendFile({
+            filePath: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            data: 'appendFile',
+            success: res => {
+                console.log('appendFile success', res);
+            },
+            fail: err => {
+                console.log('appendFile fail', err)
+            }
+        });
+    }
+});
+```
+
