@@ -92,10 +92,13 @@ swan.navigateTo({
 ```
 即将要跳转的页面是动态库`dynamicLibName`中的`pages/index/index`页面。
 
+
+
 **说明:**
 
 1.启动页面的`dynamicLibName`必须为线上动态库的名字，不能为别名；
 2.路由跳转url中的`dynamicLibName`可以为线上动态库的名字，也可以为别名，优先当做别名处理；
+3.`dynamicLibPath`字段为使用的动态库中配置的页面；
 3.使用的动态库需在小程序app.json中的`dynamicLib`字段中配置；
 4.支持跳转到动态库页面的API为: swan.navigateTo、swan.reLaunch、swan.redirectTo、swan.navigateToSmartProgram。
 
