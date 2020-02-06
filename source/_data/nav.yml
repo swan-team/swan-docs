@@ -4781,28 +4781,27 @@
             text: 错误码
             name: error_code
         -
-          link: /develop/function/file_system
+
           text: 文件系统
-          name: file_system
+       
           sidebar:
           -
-            link: /develop/function/file_system/#文件类型
+
             text: 文件类型
-            name:  文件类型
+
             sidebar:
             -
-              link: /develop/function/file_system/#代码包文件
+              link: /develop/function/file_system_package
               text: 代码包文件
-              name:  代码包文件
+              name: file_system_package
             -
-              link: /develop/function/file_system/#本地文件
+              link: /develop/function/file_system_local
               text: 本地文件
-              name:  本地文件
+              name: file_system_local
             -
-              link: /develop/function/file_system/#读写权限
+              link: /develop/function/file_system
               text: 读写权限
-              name:  读写权限
-
+              name: file_system
     -
       text: 基础库版本信息
       name: swan
