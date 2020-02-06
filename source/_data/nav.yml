@@ -2136,131 +2136,131 @@
                     text: swan.openDocument
                     name: open
               -
-                link: /develop/api/file/file_system
+                
                 text: 文件系统
                 name: file_system
                 sidebar:
                   -
-                    link: /develop/api/file/file_system/#swan-getFileSystemManager
+                    link: /develop/api/file/swan-getFileSystemManager
                     text: swan.getFileSystemManager
-                    name: file_system_swan-getFileSystemManager
+                    name: swan-getFileSystemManager
                   -
-                    link: /develop/api/file/file_system/#FileSystemManager
+                    link: /develop/api/file/FileSystemManager
                     text: FileSystemManager
-                    name: file_system_FileSystemManager
+                    name:  FileSystemManager
                     sidebar:
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-access
+                        link: /develop/api/file/FileSystemManager-access
                         text: FileSystemManager.access
-                        name: file_system_FileSystemManager-access
+                        name: FileSystemManager-access
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-accessSync
+                        link: /develop/api/file/FileSystemManager-accessSync
                         text: FileSystemManager.accessSync
-                        name: file_system_FileSystemManager-accessSync
+                        name: FileSystemManager-accessSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-appendFile
+                        link: /develop/api/file/FileSystemManager-appendFile
                         text: FileSystemManager.appendFile
-                        name: file_system_FileSystemManager-appendFile
+                        name: FileSystemManager-appendFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-appendFileSync
+                        link: /develop/api/file/FileSystemManager-appendFileSync
                         text: FileSystemManager.appendFileSync
-                        name: file_system_FileSystemManager-appendFileSync
+                        name: FileSystemManager-appendFileSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-copyFile
+                        link: /develop/api/file/FileSystemManager-copyFile
                         text: FileSystemManager.copyFile
-                        name: file_system_FileSystemManager-copyFile
+                        name: FileSystemManager-copyFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-copyFileSync
+                        link: /develop/api/file/FileSystemManager-copyFileSync
                         text: FileSystemManager.copyFileSync
-                        name: file_system_FileSystemManager-copyFileSync
+                        name: FileSystemManager-copyFileSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-getFileInfo
+                        link: /develop/api/file/FileSystemManager-getFileInfo
                         text: FileSystemManager.getFileInfo
-                        name: file_system_FileSystemManager-getFileInfo
+                        name:  FileSystemManager-getFileInfo
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-getSavedFileList
+                        link: /develop/api/file/FileSystemManager-getSavedFileList
                         text: FileSystemManager.getSavedFileList
-                        name: file_system_FileSystemManager-getSavedFileList
+                        name:  FileSystemManager-getSavedFileList
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-mkdir
+                        link: /develop/api/file/FileSystemManager-mkdir
                         text: FileSystemManager.mkdir
-                        name: file_system_FileSystemManager-mkdir
+                        name:  FileSystemManager-mkdir
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-mkdirSync
+                        link: /develop/api/file/FileSystemManager-mkdirSync
                         text: FileSystemManager.mkdirSync
-                        name: file_system_FileSystemManager-mkdirSync
+                        name:  FileSystemManager-mkdirSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-readdir
+                        link: /develop/api/file/FileSystemManager-readdir
                         text: FileSystemManager.readdir
-                        name: file_system_FileSystemManager-readdir
+                        name:  FileSystemManager-readdir
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-readdirSync
+                        link: /develop/api/file/FileSystemManager-readdirSync
                         text: FileSystemManager.readdirSync
-                        name: file_system_FileSystemManager-readdirSync
+                        name:  FileSystemManager-readdirSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-readFile
+                        link: /develop/api/file/FileSystemManager-readFile
                         text: FileSystemManager.readFile
-                        name: file_system_FileSystemManager-readFile
+                        name:  FileSystemManager-readFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-readFileSync
+                        link: /develop/api/file/FileSystemManager-readFileSync
                         text: FileSystemManager.readFileSync
-                        name: file_system_FileSystemManager-readFileSync
+                        name:  FileSystemManager-readFileSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-removeSavedFile
+                        link: /develop/api/file/FileSystemManager-removeSavedFile
                         text: FileSystemManager.removeSavedFile
-                        name: file_system_FileSystemManager-removeSavedFile
+                        name:  FileSystemManager-removeSavedFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-rename
+                        link: /develop/api/file/FileSystemManager-rename
                         text: FileSystemManager.rename
-                        name: file_system_FileSystemManager-rename
+                        name:  FileSystemManager-rename
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-renameSync
+                        link: /develop/api/file/FileSystemManager-renameSync
                         text: FileSystemManager.renameSync
-                        name: file_system_FileSystemManager-renameSync
+                        name:  FileSystemManager-renameSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-rmdir
+                        link: /develop/api/file/FileSystemManager-rmdir
                         text: FileSystemManager.rmdir
-                        name: file_system_FileSystemManager-rmdir
+                        name:  FileSystemManager-rmdir
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-rmdirSync
+                        link: /develop/api/file/FileSystemManager-rmdirSync
                         text: FileSystemManager.rmdirSync
-                        name: file_system_FileSystemManager-rmdirSync
+                        name:  FileSystemManager-rmdirSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-saveFile
+                        link: /develop/api/file/FileSystemManager-saveFile
                         text: FileSystemManager.saveFile
-                        name: file_system_FileSystemManager-saveFile
+                        name:  FileSystemManager-saveFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-saveFileSync
+                        link: /develop/api/file/FileSystemManager-saveFileSync
                         text: FileSystemManager.saveFileSync
-                        name: file_system_FileSystemManager-saveFileSync
+                        name:  FileSystemManager-saveFileSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-stat
+                        link: /develop/api/file/FileSystemManager-stat
                         text: FileSystemManager.stat
-                        name: file_system_FileSystemManager-stat
+                        name:  FileSystemManager-stat
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-statSync
+                        link: /develop/api/file/FileSystemManager-statSync
                         text: FileSystemManager.statSync
-                        name: file_system_FileSystemManager-statSync
+                        name:  FileSystemManager-statSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-unlink
+                        link: /develop/api/file/FileSystemManager-unlink
                         text: FileSystemManager.unlink
-                        name: file_system_FileSystemManager-unlink
+                        name:  FileSystemManager-unlink
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-unlinkSync
+                        link: /develop/api/file/FileSystemManager-unlinkSync
                         text: FileSystemManager.unlinkSync
-                        name: file_system_FileSystemManager-unlinkSync
+                        name:  FileSystemManager-unlinkSync
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-unzip
+                        link: /develop/api/file/FileSystemManager-unzip
                         text: FileSystemManager.unzip
-                        name: file_system_FileSystemManager-unzip
+                        name:  FileSystemManager-unzip
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-writeFile
+                        link: /develop/api/file/FileSystemManager-writeFile
                         text: FileSystemManager.writeFile
-                        name: file_system_FileSystemManager-writeFile
+                        name:  FileSystemManager-writeFile
                       -
-                        link: /develop/api/file/file_system/#FileSystemManager-writeFileSync
+                        link: /develop/api/file/FileSystemManager-writeFileSync
                         text: FileSystemManager.writeFileSync
-                        name: file_system_FileSystemManager-writeFileSync
+                        name:  FileSystemManager-writeFileSync
         -
 
             text: 数据存储
@@ -4788,20 +4788,20 @@
           -
             link: /develop/function/file_system/#文件类型
             text: 文件类型
-            name: file_system_文件类型
+            name:  文件类型
             sidebar:
             -
               link: /develop/function/file_system/#代码包文件
               text: 代码包文件
-              name: file_system_代码包文件
+              name:  代码包文件
             -
               link: /develop/function/file_system/#本地文件
               text: 本地文件
-              name: file_system_本地文件
+              name:  本地文件
             -
               link: /develop/function/file_system/#读写权限
               text: 读写权限
-              name: file_system_读写权限
+              name:  读写权限
 
     -
       text: 基础库版本信息
