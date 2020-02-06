@@ -10,12 +10,12 @@ sidebar: tieba
 1.	首先需要确保要投放的智能小程序为已上线状态，否则将无法投放；
 2.	在“申请分享白名单”模块先接入“贴吧分享SDK”后点击“提交申请”按钮。
  
-![图片](../../img/introduction/tieba/tieba1.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction13%E8%B4%B4%E5%90%A7%E6%8E%A5%E5%85%A51.png)
 
-3、审核通过后，在“投放吧设置”模块点击“去投放”按钮
-![图片](../../img/introduction/tieba/tieba2.png) 
+3. 审核通过后，在“投放吧设置”模块点击“去投放”按钮
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction14%E8%B4%B4%E5%90%A7%E6%8E%A8%E5%B9%BF2.png) 
 
-4、所选投放吧应与小程序所提供的服务内容相符合，否则将无法审核通过，最多可选20个。
+1. 所选投放吧应与小程序所提供的服务内容相符合，否则将无法审核通过，最多可选20个。
 ![图片](../../img/introduction/tieba/tieba3.png) 
 
 ### 审核通过将在对应贴吧中展示，入口参考如下

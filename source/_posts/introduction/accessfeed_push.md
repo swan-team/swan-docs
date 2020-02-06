@@ -34,7 +34,7 @@ sidebar: accessfeed_push
 
 
 
-![图片](../../img/introduction/auditing/图6.png) 
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction9.png) 
 
 
 
