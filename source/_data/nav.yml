@@ -3825,7 +3825,7 @@
                 name: components_panel
               -
                 link: /develop/devtools/diff
-                text: API 实现差异
+                text: 模拟器实现差异 
                 name: diff
         -
             link: /develop/devtools/auto

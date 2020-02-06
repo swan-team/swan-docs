@@ -1,5 +1,5 @@
 ---
-title: 模拟器与真机的实现差异
+title: 模拟器实现差异
 header: develop
 nav: devtools
 sidebar: diff
