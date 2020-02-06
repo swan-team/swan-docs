@@ -393,6 +393,7 @@ https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileList/
 https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileInfo/
 https://smartprogram.baidu.com/docs/develop/api/file/remove/
 https://smartprogram.baidu.com/docs/develop/api/file/open/
+https://smartprogram.baidu.com/docs/develop/api/file/file_system/
 https://smartprogram.baidu.com/docs/develop/api/storage/save_process/
 https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorage/
 https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/
@@ -832,6 +833,7 @@ https://smartprogram.baidu.com/docs/develop/function/tune_up_orderBill/
 https://smartprogram.baidu.com/docs/develop/function/tune_up_capitaBill/
 https://smartprogram.baidu.com/docs/develop/function/payfaq/
 https://smartprogram.baidu.com/docs/develop/function/error_code/
+https://smartprogram.baidu.com/docs/develop/function/file_system/
 https://smartprogram.baidu.com/docs/develop/swan/client-lib/
 https://smartprogram.baidu.com/docs/develop/swan/version/
 https://smartprogram.baidu.com/docs/develop/swan/swanchangelog/
