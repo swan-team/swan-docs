@@ -92,8 +92,6 @@ swan.navigateTo({
 ```
 即将要跳转的页面是动态库`dynamicLibName`中的`pages/index/index`页面。
 
-
-
 **说明:**
 
 1.启动页面的`dynamicLibName`必须为线上动态库的名字，不能为别名；
