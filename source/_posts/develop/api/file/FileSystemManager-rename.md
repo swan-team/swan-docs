@@ -21,3 +21,28 @@ sidebar: FileSystemManager-rename
 |fail|Function|否|-|接口调用失败的回调函数|
 |complete|Function|否|-|接口调用结束的回调函数（调用成功、失败都会执行）|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    rename() {
+        this.fs.rename({
+            oldPath: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            newPath: `${swan.env.USER_DATA_PATH}/rename/demo.txt`,
+            encoding: 'utf8',
+            success: res => {
+                console.log('rename success', res);
+            },
+            fail: err => {
+                console.log('rename fail', err)
+            }
+        });
+    }
+});
+```

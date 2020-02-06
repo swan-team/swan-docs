@@ -17,3 +17,26 @@ sidebar: FileSystemManager-mkdirSync
 
 若接口调用失败，会抛出一个标准的`Error`对象
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    mkdirSync() {
+        try {
+            let result = this.fs.mkdirSync(
+                `${swan.env.USER_DATA_PATH}/mkdirSyc`
+            );
+            console.log('mkdirSync success', result);
+        }
+        catch (err) {
+            console.log('mkdirSync fail', err);
+        }
+    }
+});
+```

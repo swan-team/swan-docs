@@ -33,3 +33,27 @@ sidebar: FileSystemManager-writeFile
 |utf-8/utf8||
 |latin1/binary|ISO-8859-1 的别名|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    writeFile() {
+        this.fs.writeFile({
+            filePath: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            data: 'writeFile',
+            success: res => {
+                console.log('writeFile success', res);
+            },
+            fail: err => {
+                console.log('writeFile fail', err)
+            }
+        });
+    }
+});
+```

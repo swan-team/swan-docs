@@ -15,3 +15,27 @@ sidebar: FileSystemManager-renameSync
 
 若接口调用失败，会抛出一个标准的`Error`对象
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    renameSync() {
+        try {
+            let result = this.fs.renameSync(
+                `${swan.env.USER_DATA_PATH}/demo.txt`,
+                `${swan.env.USER_DATA_PATH}/renameSync/demo.txt`
+            );
+            console.log('renameSync success', result);
+        }
+        catch (err) {
+            console.log('renameSync fail', err);
+        }
+    }
+});
+```

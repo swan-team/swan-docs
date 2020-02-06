@@ -37,3 +37,26 @@ sidebar: FileSystemManager-stat
 |isDirectory|Function|判断当前文件是否一个目录，返回 boolean 值|
 |isFile|Function|判断当前文件是否一个普通文件，返回 boolean 值|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    stat() {
+        this.fs.stat({
+            path: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            success: res => {
+                console.log('stat success', res);
+            },
+            fail: err => {
+                console.log('stat fail', err)
+            }
+        });
+    }
+});
+```

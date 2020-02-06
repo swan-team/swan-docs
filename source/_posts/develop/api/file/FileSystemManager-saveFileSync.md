@@ -21,3 +21,27 @@ sidebar: FileSystemManager-saveFileSync
 
 若接口调用失败，会抛出一个标准的`Error`对象
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    saveFileSync() {
+        try {
+            let result = this.fs.saveFileSync(
+                '/usr/temp.txt', // 仅为示例，实际上请传真实临时路径地址，如 swan.downloadFile 的 tempFilePath 返回参数
+                `${swan.env.USER_DATA_PATH}/`
+            );
+            console.log('saveFileSync success', result);
+        }
+        catch (err) {
+            console.log('saveFileSync fail', err);
+        }
+    }
+});
+```

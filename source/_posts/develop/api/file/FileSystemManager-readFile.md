@@ -38,3 +38,27 @@ sidebar: FileSystemManager-readFile
 |:----|:----|:----|
 |data|string/ArrayBuffer|读取结果|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    readFile() {
+        this.fs.readFile({
+            filePath: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            encoding: 'utf8',
+            success: res => {
+                console.log('readFile success', res);
+            },
+            fail: err => {
+                console.log('readFile fail', err)
+            }
+        });
+    }
+});
+```

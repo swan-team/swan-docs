@@ -16,3 +16,26 @@ sidebar: FileSystemManager-rmdirSync
 
 若接口调用失败，会抛出一个标准的`Error`对象
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    rmdirSync() {
+        try {
+            let result = this.fs.rmdirSync(
+                `${swan.env.USER_DATA_PATH}/rmdirSync`
+            );
+            console.log('rmdirSync success', result);
+        }
+        catch (err) {
+            console.log('rmdirSync fail', err);
+        }
+    }
+});
+```

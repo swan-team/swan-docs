@@ -28,3 +28,28 @@ sidebar: FileSystemManager-writeFileSync
 |latin1/binary|ISO-8859-1 的别名|
 
 若接口调用失败，会抛出一个标准的`Error`对象
+
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    writeFileSync() {
+        try {
+            let result = this.fs.writeFileSync(
+                `${swan.env.USER_DATA_PATH}/demo.txt`,
+                'writeFileSync'
+            );
+            console.log('writeFileSync success', result);
+        }
+        catch (err) {
+            console.log('writeFileSync fail', err);
+        }
+    }
+});
+```

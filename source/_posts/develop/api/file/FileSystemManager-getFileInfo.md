@@ -26,3 +26,26 @@ sidebar: FileSystemManager-getFileInfo
 |---- | ---- | ---- |
 |size|Number|文件大小，以字节为单位|
 
+###  代码示例 
+
+* 在 js 文件中
+
+```js
+Page({
+    onLoad() {
+        const fs = swan.getFileSystemManager();
+        this.fs = fs;
+    },
+    getFileInfo() {
+        this.fs.getFileInfo({
+            filePath: `${swan.env.USER_DATA_PATH}/demo.txt`,
+            success: res => {
+                console.log('getFileInfo success', res);
+            },
+            fail: err => {
+                console.log('getFileInfo fail', err)
+            }
+        });
+    }
+});
+```
