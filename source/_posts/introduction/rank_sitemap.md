@@ -40,7 +40,7 @@ Sitemap 示例:
 **4.如何提交Sitemap？**
 
 进入【自然搜索】-【小程序新资源提交】-【天级收录/周级收录】里提交上传 Sitemap资源，点击上传文件即可进行提交。
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/1.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206sitemap1.png)
 
 • 天级别收录（供高时效性内容使用）：预计2-3天完成提交资源的收录，但每日数量配额少，且会根据上周总体配额使用情况和资源质量情况动态进行调节。上传的文件仅支持txt，每次上传不能超过10mb。
 • 周级别收录（供通用内容使用）：预计2-3周完成提交资源的收录，当前每日可提交5W 条，文件仅支持txt，每次上传文件不能超过10mb。
@@ -48,8 +48,8 @@ Sitemap 示例:
 **5.如何得知 Sitemap 资源的收录索引情况**
 
 开发者可在天级/周级收录tab下查看资源提交记录及索引资源量，点击查看详情，可查看资源未索引原因。
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/2.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206sitemap2.png)
  
  开发者也可在【搜索接入】-【自然搜索】-【数据概况】中，查看小程序在搜索中的流量概况、点展统计、流量关键词以及索引概况。
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/3.png)
- ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/4.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206sitemap3.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206sitemap4.png)

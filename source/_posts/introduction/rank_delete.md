@@ -19,11 +19,11 @@ sidebar: rank_delete
 
 1. 进入搜索接入-自然搜索，点击资源删除；
 
-    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/5.png)
+    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206rankdelete1.png)
 
 2. 点击选择文件，上传需要删除的资源文件；
 
-    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/2.png)
+    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206rankdelete2.png)
 
 3. 将需要删除的资源path路径，每⾏一条，使用txt格式，每个文件最多允许1000个path路径，且需小于10MB，可下载查看文件示例；例如：
 
@@ -43,4 +43,4 @@ sidebar: rank_delete
 
 4. 成功提交文件后按钮将置灰，每天最多可提交一次，可在下方表格中查看处理状态、时间并下载已识别path。
 
-    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/4.png)
+    ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/0206rankdelete4.png)
