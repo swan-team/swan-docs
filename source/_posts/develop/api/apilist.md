@@ -88,7 +88,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileInfo/">swan.getSavedFileInfo</a>|获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 getFileInfo 接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/remove/">swan.removeSavedFile</a>|删除本地存储的文件|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/open/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。|
-
+｜<a href="https://smartprogram.baidu.com/docs/develop/api/file/open/">swan.openDocument</a>|新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx（只支持 Android ）。
 
 ## 数据存储
 
@@ -301,4 +301,3 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setInterval/">setInterval</a>|设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_setTimeout/">setTimeout</a>|设定一个定时器，在定时到期以后执行注册的回调函数。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/#swan-getSystemRiskInfo">swan.getSystemRiskInfo</a>|获取用于得到风控信息的加密信息对象。|
-<!-- |<a href="http://smartprogram.baidu.com/docs/develop/api/open/swan-subscribeService">swan.subscribeService</a>|小程序消息订阅服务：取消订阅和查询订阅。| -->

@@ -11,7 +11,7 @@ sidebar: swanchangelog
 |----|----|----|
 |3.150.5|2020.1.15|**BugFix**<p>**·**修复安卓4g下切换视频src一直处于loading问题；<p>**·**修复ios12 canvas垃圾回收问题。|
 |3.150.3|2020.1.12|**BugFix**<p>修复百度翻译语音翻译失败的问题。|
-|3.150.1|2020.1.6|**New**<p>新增subscribeService能力。<p>**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
+|3.150.1|2020.1.6|**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
 
 ## 3.140 版本日志更新
 
