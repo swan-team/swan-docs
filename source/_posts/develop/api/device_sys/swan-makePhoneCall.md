@@ -11,7 +11,6 @@ sidebar: swan-makePhoneCall
 
 **解释**：拨打电话
 
- 
 ## 方法参数 
 
 Object object
@@ -20,13 +19,14 @@ Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
-|phoneNumber |String | 是  | | 需要拨打的电话号码|
+|phoneNumber | String | 是  | | 需要拨打的电话号码|
 |success| Function  |  否  | | 接口调用成功的回调|
 |fail  |  Function  |  否 | | 接口调用失败的回调函数|
 |complete  |  Function |   否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
+
 ## 示例
 
-<a href="swanide://fragment/9cf5e060c76b0c2d9160335b815d2ccf1569484502200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/23c19e36b684e173b54a541c4d5903eb1581073398204" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -34,8 +34,6 @@ Object object
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/makePhoneCall.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
-
-
 
 
 ### 图片示例
@@ -51,15 +49,20 @@ Object object
     </div>     
 </div>
 
-###  代码示例 
-
-
+###  代码示例1 - 模拟拨号盘用法
 
 * 在 swan 文件中
 
 ```html
 <view class="card-area">
     <input bind:input="phoneNumberInput" class="input border-bottom" type="number" placeholder="请输入电话号码"/>
+    <!-- 加区号的号码照如下形式输入均可正常识别拨号，其中()和-建议使用英文符号，因为已知ios系统不识别中文符号：
+    0313-xxxx xxxx
+    (0313)xxxx xxxx
+    0313xxxx xxxx
+    0313 xxxx xxxx -->
+
+    <!-- 可输入英文，这里会根据九键键盘自动转换成对应的数字进行拨号，例：TUV/WXYZ/JKL 对应 895 -->
     <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打</button>
 </view>
 ```
@@ -69,8 +72,11 @@ Object object
 ```js
 Page({
     data: {
-        phoneNumber: '133 *222'
-    }
+        phoneNumber: ''
+    },
+    phoneNumberInput(e) {
+        this.setData('phoneNumber', e.detail.value);
+    },
     makePhoneCall() {
         swan.makePhoneCall({
             phoneNumber: this.data.phoneNumber,
@@ -87,7 +93,36 @@ Page({
         });
     }
 });
-``` 
+```
+
+###  代码示例2 - 常见用法
+
+<a href="swanide://fragment/a314ce9e33beeb7c887a91999f202d3a1581071905278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打商家电话</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    makePhoneCall(e) {
+        swan.makePhoneCall({
+            phoneNumber: '157XXXX8026',
+            fail: err => {
+                swan.showModal({
+                    title: '拨打失败',
+                    content: '请稍后再试',
+                    showCancel: false
+                });
+            }
+        });
+    }
+});
+```
 
 ##  错误码
 
