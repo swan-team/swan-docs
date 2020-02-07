@@ -255,6 +255,10 @@
                 text: 百家号流量说明
                 name: baijiahaointroduction
               -
+                link: /introduction/baijiahaoexample
+                text: 百家号成功接入案例
+                name: baijiahaoexample               
+              -
                 link: /introduction/baijiahao
                 text: 接入百家号流量
                 name: baijiahao

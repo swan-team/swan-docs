@@ -43,6 +43,7 @@ https://smartprogram.baidu.com/docs/introduction/rank_faq/
 https://smartprogram.baidu.com/docs/introduction/OpenCard/
 https://smartprogram.baidu.com/docs/introduction/baijiahao/
 https://smartprogram.baidu.com/docs/introduction/baijiahaointroduction/
+https://smartprogram.baidu.com/docs/introduction/baijiahaoexample/
 https://smartprogram.baidu.com/docs/introduction/baijiahao_audit/
 https://smartprogram.baidu.com/docs/introduction/baijiahao_submit/
 https://smartprogram.baidu.com/docs/introduction/tieba/
