@@ -49,7 +49,7 @@ Object object
     </div>     
 </div>
 
-###  代码示例1 - 模拟拨号盘用法
+###  代码示例一 - 模拟拨号盘用法
 
 * 在 swan 文件中
 
@@ -61,7 +61,6 @@ Object object
     (0313)xxxx xxxx
     0313xxxx xxxx
     0313 xxxx xxxx -->
-
     <!-- 可输入英文，这里会根据九键键盘自动转换成对应的数字进行拨号，例：TUV/WXYZ/JKL 对应 895 -->
     <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打</button>
 </view>
@@ -80,7 +79,7 @@ Page({
     makePhoneCall() {
         swan.makePhoneCall({
             phoneNumber: this.data.phoneNumber,
-            success: () => {
+            success: res => {
                 console.log('makePhoneCall success');
             },
             fail: err => {
@@ -95,9 +94,9 @@ Page({
 });
 ```
 
-###  代码示例2 - 常见用法
+###  代码示例二 - 常见用法
 
-<a href="swanide://fragment/a314ce9e33beeb7c887a91999f202d3a1581071905278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/780c402ea405a77fbd4d120ac6b231c71581074652148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -112,6 +111,10 @@ Page({
     makePhoneCall(e) {
         swan.makePhoneCall({
             phoneNumber: '157XXXX8026',
+            // phoneNumber: '0313-xxxx xxxx',
+            // phoneNumber: '(0313)xxxx xxxx',
+            // phoneNumber: '0313xxxx xxxx',
+            // phoneNumber: 'txk0bkt', // 8950258
             fail: err => {
                 swan.showModal({
                     title: '拨打失败',
@@ -139,4 +142,4 @@ Page({
 
 |错误码|说明|
 |:--|:--|
-|202|解析失败，请检查参数是否正确      |
+|202|解析失败，请检查参数是否正确|
