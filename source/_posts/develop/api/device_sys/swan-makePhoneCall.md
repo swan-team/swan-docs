@@ -96,7 +96,7 @@ Page({
 
 ###  代码示例二 - 常见用法
 
-<a href="swanide://fragment/780c402ea405a77fbd4d120ac6b231c71581074652148" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e2752d6bc240e6c465960c5aeefe12da1581076166683" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
