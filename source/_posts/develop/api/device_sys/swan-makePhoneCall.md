@@ -94,6 +94,39 @@ Page({
 });
 ```
 
+###  代码示例二 - 常见用法
+
+<a href="swanide://fragment/e2752d6bc240e6c465960c5aeefe12da1581076166683" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打商家电话</button>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    makePhoneCall(e) {
+        swan.makePhoneCall({
+            phoneNumber: '157XXXX8026',
+            // phoneNumber: '0313-xxxx xxxx',
+            // phoneNumber: '(0313)xxxx xxxx',
+            // phoneNumber: '0313xxxx xxxx',
+            // phoneNumber: 'txk0bkt', // 8950258
+            fail: err => {
+                swan.showModal({
+                    title: '拨打失败',
+                    content: '请稍后再试',
+                    showCancel: false
+                });
+            }
+        });
+    }
+});
+```
+
 ##  错误码
 
 ###  Android
