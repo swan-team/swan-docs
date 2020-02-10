@@ -68,7 +68,7 @@ Object object
 
 ### 代码示例1 - 裁剪类需求 ：
 
-<a href="swanide://fragment/893b006eaaebeec3deb75dfda46386461573996982449" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/482e5109ad1a667facd1442fdfdddd141581334240025" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -76,16 +76,26 @@ Page({
       swan.chooseImage({
           success: res => {
             let image = res.tempFilePaths[0];
-            swan.ai.objectDetectIdentify({
-              image,
-              with_face: 1,
-              success: res => {
-                console.log('objectDetectIdentify res', res.result);
-              },
-              fail: err => {
-                console.log('objectDetectIdentify fail', err);
-              }
-            });
+            // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+            let host = swan.getSystemInfoSync().host;
+            if (host === 'baiduboxapp') {
+              swan.ai.objectDetectIdentify({
+                image,
+                with_face: 1,
+                success: res => {
+                  console.log('objectDetectIdentify res', res.result);
+                },
+                fail: err => {
+                  console.log('objectDetectIdentify fail', err);
+                }
+              });
+            }
+            else {
+                swan.showToast({
+                    title: '此api目前仅可在百度App上使用',
+                    icon: 'none'
+                });
+            }
           }
       })
   }
@@ -94,7 +104,7 @@ Page({
 
 ### 代码示例2 - 检索/识别类需求 ：
 
-<a href="swanide://fragment/60962c9455805a780253e718238d0c731575194352151" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c4c5d4772f211c062ddc1042a1a286cb1581334370805" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -102,16 +112,26 @@ Page({
       swan.chooseImage({
           success: res => {
             let image = res.tempFilePaths[0];
-            swan.ai.objectDetectIdentify({
-              image,
-              with_face: 0,
-              success: res => {
-                console.log('objectDetectIdentify res', res.result);
-              },
-              fail: err => {
-                console.log('objectDetectIdentify fail', err);
-              }
-            });
+            // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+            let host = swan.getSystemInfoSync().host;
+            if (host === 'baiduboxapp') {
+              swan.ai.objectDetectIdentify({
+                image,
+                with_face: 0,
+                success: res => {
+                  console.log('objectDetectIdentify res', res.result);
+                },
+                fail: err => {
+                  console.log('objectDetectIdentify fail', err);
+                }
+              });
+            }
+            else {
+                swan.showToast({
+                    title: '此api目前仅可在百度App上使用',
+                    icon: 'none'
+                });
+            }
           }
       })
   }

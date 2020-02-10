@@ -23,7 +23,7 @@ Object object
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明 ：
+### success 返回参数说明 :
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
@@ -64,23 +64,31 @@ Object object
 
 ### 代码示例 
 
-
-
 ```js
 Page({
     advancedGeneralIdentify() {
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.advancedGeneralIdentify({
-                    image, // 暂不支持识别网络图片
-                    success: res => {
-                        console.log('advancedGeneralIdentify res', res.result);
-                    },
-                    fail: err => {
-                        console.log('advancedGeneralIdentify err', err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.advancedGeneralIdentify({
+                        image, // 暂不支持识别网络图片
+                        success: res => {
+                            console.log('advancedGeneralIdentify res', res.result);
+                        },
+                        fail: err => {
+                            console.log('advancedGeneralIdentify err', err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }
