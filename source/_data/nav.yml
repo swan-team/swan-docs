@@ -4710,7 +4710,7 @@
             name: proposal
 
         -
-          link: /develop/function/pay
+          link: /introduction/pay
           text: 支付功能开发
           name: pay
           sidebar:
