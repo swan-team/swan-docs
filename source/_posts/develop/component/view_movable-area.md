@@ -14,7 +14,7 @@ sidebar: view_movable-area
 ##  属性说明 
 
 |属性名	|类型	|默认值| 必填 |	说明|
-|:---|:---|:---|:---|
+|:---|:---|:---|:---|:---|
 |scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
 ## 示例
