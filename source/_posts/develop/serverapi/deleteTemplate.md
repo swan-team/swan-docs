@@ -14,15 +14,15 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/templatedel
 ```
 **公共请求参数**:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token |string | 是 | access_token，授权小程序的接口调用凭据
+|参数名 | 类型 | 是否必须 | 描述|
+|----- |-----| ------| -----|
+|access_token |string | 是 | access_token，授权小程序的接口调用凭据|
 
 **请求参数**:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-template_id |string |是| 模板id,发送小程序模板消息时所需
+|参数名 | 类型 | 是否必须 | 描述|
+|----- |-----| ------| -----|
+|template_id |string |是| 模板id,发送小程序模板消息时所需|
 
 **公共响应参数** 
 
