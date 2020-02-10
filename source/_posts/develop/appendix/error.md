@@ -10,7 +10,7 @@ sidebar: error
 API对入参进行特殊校验时，如果校验失败会报如下错误码：
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 | `setNavigationBarColor`|验证 frontColor 是否为黑色和白色|
 |`showModal`|验证 confirmText 和 cancelText 的长度|
 | `showActionSheet`|验证 itemList 的长度|

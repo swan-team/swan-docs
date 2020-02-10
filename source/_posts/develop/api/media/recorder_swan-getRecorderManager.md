@@ -15,7 +15,7 @@ sidebar: recorder_swan-getRecorderManager
 
 ### 返回值 
 
-recorderManager
+RecorderManager
 
 
 

@@ -10,7 +10,7 @@ rc 版本下载链接：[Windows 64](https://smartprogram.baidu.com/mappconsole/
 
 查看<a href="https://smartprogram.baidu.com/docs/develop/devtools/history/">历史版本</a>信息。
 
-> <a href="https://smartprogram.baidu.com/docs/develop/faq/frequently/#工具">安装过程中碰到的问题</a>。
+> <a href="https://smartprogram.baidu.com/docs/develop/appendix/frequently/#工具">安装过程中碰到的问题</a>。
 
 使用百度开发者工具调试，开发者可以完成智能小程序的 API 和页面的开发调试、智能小程序预览和发布等功能。
 
@@ -26,7 +26,7 @@ rc 版本下载链接：[Windows 64](https://smartprogram.baidu.com/mappconsole/
 |--|--|
 |项目名称|请使用英文为项目自定义命名。|
 |项目目录|**·**请新建或选择一个空的文件夹；<br>**·**如选择一个非空的文件夹，则会在该文件夹下自动生成一个与项目名称相同的文件夹。|
-|AppID|**·**如果您未注册 AppID，请选择默认的"使用测试号体验智能小程序";<br>**·**当您完成<a href="https://smartprogram.baidu.com/docs/introduction/register/">智能小程序账号注册</a>之后，则选择"填写APPID"并填写对应的 AppID。|
+|AppID|**·**如果您未注册 AppID，请选择默认的"使用测试号体验智能小程序";<br>**·**当您完成<a href="https://smartprogram.baidu.com/docs/introduction/enter_application/">智能小程序账号注册</a>之后，则选择"填写APPID"并填写对应的 AppID。|
 
 3. 模拟器登录
 

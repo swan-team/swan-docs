@@ -18,7 +18,7 @@ sidebar: createinneraudiocontext_swan-createInnerAudioContext
 
 ### 返回值 
 
-innerAudioContext
+InnerAudioContext
 
 
 
@@ -64,15 +64,15 @@ Page({
 
 ##  错误码
 
-### Andriod
+### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
 
 ### iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确     |

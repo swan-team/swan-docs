@@ -31,7 +31,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
-access_token |string | 是 | access_token，授权小程序的接口调用凭据
+access_token |string | 是 | [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)，授权小程序的接口调用凭据
 
 **请求参数**:
 

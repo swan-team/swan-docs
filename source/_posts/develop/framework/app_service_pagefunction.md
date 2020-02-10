@@ -26,7 +26,7 @@ Page({
 **说明**：
 * 需要在`app.json`的`window`选项中开启 `enablePullDownRefresh`；
 * 如果需要单个页面支持下拉刷新，可以直接在页面目录下的 json 配置文件中开启`enablePullDownRefresh`；
-* 当处理完数据刷新后，[`swan.stopPullDownRefresh`](https://smartprogram.baidu.com/docs/develop/api/show_pull/#swan-stopPullDownRefresh/)可以停止当前页面的下拉刷新。
+* 当处理完数据刷新后，[`swan.stopPullDownRefresh`](https://smartprogram.baidu.com/docs/develop/api/show/pull_swan-startPullDownRefresh/#swan-stopPullDownRefresh/)可以停止当前页面的下拉刷新。
 
 
 ### onReachBottom
@@ -110,18 +110,18 @@ Page({
 <a href="swanide://fragment/6b1e6d28c542397d04f5408242ac55a21573032765644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 **场景一：分享页面为 tab 页**
-**title 推荐设置为具小程序特色的标题 **
-**content 推荐设置为小程序简介或描述 **
+
+ 
 
 ```js
 Page({
     data: {
-        title: '全球实时财经行情'
+        title: '全球实时财经行情'//推荐设置为具有小程序特色的标题  
     },
     onShareAppMessage() {
         return {
             title: this.data.title,
-            content: '世界很复杂，百度更懂你——小程序简介或详细描述',
+            content: '世界很复杂，百度更懂你——小程序简介或详细描述',//推荐设置为小程序简介或描述  
             imageUrl: 'https://b.bdstatic.com/miniapp/images/bgt_icon.png',
             path: '/index/index',
             success(res) {
@@ -136,14 +136,14 @@ Page({
 ```
 
 **场景二：分享页面为详情落地页**
-**title 推荐设置为详情页title**
-**content 推荐设置为详情页简介**
+ 
+ 
 
 ```js
 Page({
     data: {
         // 实际应用中动态获取
-        title: '美的集团(000333)',
+        title: '美的集团(000333)',//推荐设置为详情页title
         price: '58.2',
         quoteChange: '+1.3%',
         id: '000333'
@@ -158,7 +158,7 @@ Page({
     onShareAppMessage(res) {
         return {
             title: this.data.title + ' 最新报价' + this.data.price,
-            content: '更精简的股票小程序——股票精灵，快来查看热门股票吧',
+            content: '更精简的股票小程序——股票精灵，快来查看热门股票吧',//推荐设置为详情页简介
             imageUrl: 'https://b.bdstatic.com/miniapp/images/bgt_icon.png',
             path: `/stockDetail/stockDetail?id=${this.data.id}`
         }
@@ -167,19 +167,18 @@ Page({
 ```
 
 **场景三：分享页面为资讯落地页**
-**title 推荐设置为文章标题**
-**content 推荐设置为文章第一段**
+ 
 
 ```js
 Page({
     data: {
-        title: '瑞信：予美团“跑赢大市”评级',
+        title: '瑞信：予美团“跑赢大市”评级',//推荐设置为文章标题
         content: [
             // 第一自然段
             '瑞信发布报告称，美团(03690)第三季外送业务同比增长约36%，加上盈利能力的持续改善，期内季绩将强劲增长，预计全年收入可同比增长38%至264亿元人民币，非国际财务报告准则净收益或达4.78亿元人民币。',
             // 第二自然段
             '该行称，尽管受季节性因素影响，第四季成本及补贴费用可能会较高，但预期业务正在稳步发展，期内订单量强劲增长或有助部分抵消季节性负面影响，相信今年全年可实现收支平衡，上调2019年盈利预测，调整后净利润达11亿元人民币。'
-        ]
+        ]//推荐设置为文章第一段
     },
     onLoad(options) {
         this.data.id = options.id || '';
@@ -195,7 +194,7 @@ Page({
 });
 ```
 **Tips**
-Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能，分享数据抓取小程序标题、小程序简介、小程序头像。
+Page 中没有定义 onShareAppMessage 函数也可以正常调起分享功能，分享数据会优先使用setPageInfo中设置的页面标题和描述信息，其次使用小程序标题、小程序简介、小程序头像，再其次会使用默认智能小程序文案作为兜底，所以推荐开发者优先使用setPageInfo完善页面信息。
 
 **分享渠道及字段说明图示**
 ![动态及微信好友示例](https://b.bdstatic.com/miniapp/images/dongtai.png)

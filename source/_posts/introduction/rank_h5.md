@@ -16,7 +16,7 @@ sidebar: rank_h5
 
 请在【搜索接入】>【自然搜索】>【H5资源替换】>【关联H5站】中关联H5站点。
 
-![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/rank01.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/1.png)
 
 您可在小程序当前主体所关联的站点中进行选择（需为同一主域），如下图，勾选想要关联的站点，点击确定即可。
 

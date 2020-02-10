@@ -9,13 +9,17 @@ sidebar:  createanimation_Animation-scaleZ
  
 **解释**： 缩放 Z 轴
 
-**方法参数**：Number sz 
+## 方法参数 
 
-**参数说明**： 在Z轴缩放sz倍数
+Number sz , 在Z轴缩放sz倍数
 
+## 示例
 
-**图片示例**
+ 
+<a href="swanide://fragment/0eb6eb94ba768e31adaa5792d2f016801575978296674" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+ 
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/scaleZ.gif">
@@ -28,10 +32,10 @@ sidebar:  createanimation_Animation-scaleZ
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
 
-<a href="swanide://fragment/0eb6eb94ba768e31adaa5792d2f016801575978296674" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

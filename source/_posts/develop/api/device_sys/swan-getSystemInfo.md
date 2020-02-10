@@ -12,22 +12,21 @@ sidebar: swan-getSystemInfo
 
 **解释**：获取系统信息
 
-**百度APP中扫码体验：**
+ 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png"  class="demo-qrcode-image" />
+## 方法参数 
 
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object` 参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |success |Function  |  否|| 接口调用成功的回调|
 |fail   | Function |   否  | |接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-**success返回参数说明**：
+###   success返回参数说明 
 
 |参数  |说明 |最低版本|
 |---- | ---- |
@@ -61,9 +60,21 @@ sidebar: swan-getSystemInfo
 |locationEnabled|地理位置的系统开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |wifiEnabled|Wi-Fi 的系统开关|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
 |safeArea|在竖屏正方向下的安全区域|安卓最低支持基础库版本3.110.3； ios最低支持版本3.110.3； 开发者工具暂不支持 |
+## 示例
 
-**图片示例**
+ 
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+
+
+
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/getSystemInfo.gif">
@@ -76,7 +87,7 @@ sidebar: swan-getSystemInfo
     </div>     
 </div>
 
-**代码示例1 - 属性全集**：
+###  代码示例1 - 属性全集 ：
 
 <a href="swanide://fragment/4de8b62e859105b558003e89dc6254791575397907738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
@@ -203,7 +214,7 @@ Page({
     }
 });
 ```
-**代码示例2: 开发者一般在模拟顶部导航栏时用到statusBarHeight属性**：
+###  代码示例2: 开发者一般在模拟顶部导航栏时用到statusBarHeight属性 ：
 
 <a href="swanide://fragment/bb980f42a3ee6fdb9edefdf9e528f0091575115252606" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -242,7 +253,7 @@ swan.getSystemInfo({
 });
 ```
 
-**代码示例3: safeArea属性**：
+###  代码示例3: safeArea属性 ：
 
 <a href="swanide://fragment/6f572c0011b79291f0f7f9b1ac47ed201575399890385" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -282,7 +293,7 @@ Page({
 });
 ```
 
-**代码示例4: 适配iphoneX等机型**：
+###  代码示例4: 适配iphoneX等机型 ：
 
 或参见百度通用[iphoneX适配](https://smartprogram.baidu.com/docs/develop/framework/view_css/)
 
@@ -318,11 +329,11 @@ Page({
 
 
 
-#### 错误码
-Andriod
+##  错误码
+### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |201|解析失败，请检查调起协议是否合法|
 |202|解析失败，请检查参数是否正确|
 |402|安全性检查：访问控制校验失败|

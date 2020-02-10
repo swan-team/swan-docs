@@ -18,9 +18,9 @@ sidebar: cardticket
 1. 使用百度官方提供的登录能力；
 
 	相关开发文档：
-	* 登录能力：[登录](https://smartprogram.baidu.com/docs/develop/api/open_log/)
+	* 登录能力：[登录](https://smartprogram.baidu.com/docs/develop/api/open/log_swan-login/)
 	* 获取用户设备标识-swanid：[swanid机制说明](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/)
-	* 获取手机号能力：表单组件-[button](https://smartprogram.baidu.com/docs/develop/component/formlist/#button/) -bindgetphonenumber 
+	* 获取手机号能力：表单组件-[button](https://smartprogram.baidu.com/docs/develop/component/component/#button/) -bindgetphonenumber 
 
 2. 开发者业务有优惠券功能，具备发券-核销能力。百度智能小程序仅作为平台投放、券的统一展示、集中管理。
      

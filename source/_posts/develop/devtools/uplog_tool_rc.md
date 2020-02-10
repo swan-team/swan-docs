@@ -5,6 +5,18 @@ nav: devtools
 sidebar: uplog_tool_rc
 ---
 
+### 2.27 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.27.0|2020.1.19|**New**<p>**·** 编辑器面板支持打开文件拖动调整次序；<p>**·** 体验评分顶部浮动bar支持点击切换到对应详细信息位置；<p>**·** 体验评分支持 js 异常捕获 promise 的异步错误；<p>**·** 新增全局node检测和支持自动安装node到工具中。<p>**BugFix**<p>**·** 修复由于项目信息不全，编译预览/发布报错提示概率的问题；<p>**·** 修复调试时的样式问题；<p>**·** 修复编辑器文件通过提示保存后内容展示错误的问题；<p>**·** 修复设置了 NODE_OPTIONS 环境变量时编译不可用的问题。|
+
+### 2.26 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|
+|2.26.0|2020.1.9|**New**<p> 支持连续定位的能力。<p>**Change**<p>**·** 订阅消息能力升级；<p>**·** 优化模板展示效果；<p>**·** 优化swan文件中xml标签节点的无赋值属性处理。<p>**BugFix**<p>**·** 修复体验评分图片缓存评分项判断 header 内 cache-control、etag、last-modified 错误的问题；<p>**·** 修复微信小游戏迁移项目sourcemap错误问题。|
+
 ### 2.25 版本 
 
 |版本号|更新时间|更新内容|
@@ -82,7 +94,7 @@ sidebar: uplog_tool_rc
 
 |版本号|更新时间|更新内容|
 |--|--|
-| 2.14.0 | 2019.10.17 |**New**<p>**·** 项目名称可动态修改；<p>**·** 压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。<p>**Change**<p>更新添加到我的小程序引导。<p>**BugFix**<p>**·** 修复工具改版预览缩小二维码，偶现预览扫描失败，加载缓慢等问题；<p>**·** 修复发布弹窗加载时，提示信息隐藏的问题。| 
+| 2.14.0 | 2019.10.17 |**New**<p>**·** 项目名称可动态修改；<p>**·** 压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-compressImage/">swan.compressImage</a>。<p>**Change**<p>更新添加到我的小程序引导。<p>**BugFix**<p>**·** 修复工具改版预览缩小二维码，偶现预览扫描失败，加载缓慢等问题；<p>**·** 修复发布弹窗加载时，提示信息隐藏的问题。| 
 
 ### 2.13 版本 
 

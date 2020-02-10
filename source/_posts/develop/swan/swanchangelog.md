@@ -9,12 +9,16 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
-|3.150.1|2020.1.6|**New**<p>新增subscribeService能力。<p>**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
+|3.150.5|2020.1.15|**BugFix**<p>**·**修复安卓4g下切换视频src一直处于loading问题；<p>**·**修复ios12 canvas垃圾回收问题。|
+|3.150.3|2020.1.12|**BugFix**<p>修复百度翻译语音翻译失败的问题。|
+|3.150.1|2020.1.6|**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
 
 ## 3.140 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.140.13|2020.1.15|**BugFix**<p>**·**修复安卓4g下切换视频src一直处于loading问题；<p>**·**修复ios12 canvas垃圾回收问题。|
+|3.140.11|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.140.10|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题。|
 |3.140.9|2019.12.31|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线；<p>**·**API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
 |3.140.8|2019.12.27|同3.140.1|
@@ -26,6 +30,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.130.12|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.130.11|2020.1.7|**BugFix**<p>**·**修复 showToast image设置失败问题；<p>**·**修复swan.after 设置fail失败问题；<p>**·**修复同时改变视频src和宽高时视频不切换问题；<p>**·**修复textarea特定情况下左上角出现小黑点问题；<p>**·**修复input设置height auto后不能聚焦输入问题。|
 |3.130.10|2019.12.27|**Breaking Change**<p>透明视频组件优化分辨率，提供播放失败回调。 <p>**Breaking Change**<p>修复paymentAPI支付消息解析客户端返回缺失data的报错的问题。|
 |3.130.7|2019.12.25|**Breaking Change**<p>**·**canIUse API 非兼容上线；<p>**·**canIUse 组件部分非兼容性上线。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
@@ -66,7 +71,7 @@ sidebar: swanchangelog
 |3.110.15|2019.11.11|**BugFix**<p>**·**修复scroll-view或scroll-veiw父节点绑定catchtouchmove后scoll-veiw不能滚动的问题；<p>**·**修复安卓同层textarea auto-height的默认高度问题；<p>**·**修复ios视频播放时圆角不生效的问题。|
 |3.110.14|2019.10.31|**BugFix**<p>**·**修复 Android 同层 volume 为 0 但 muted 不为 true 情况时的样式同步问题;<p>**·**修复 ios 下 input 光标抖动问题;<p>**·**修复非首次加载小程序直接调起时，appShow path query 不是当前页面的问题;<p>**·**修复开发者代码异常不抛错的bug。|
 |3.110.9|2019.10.21|**Breaking Change**<p>**·**修复onPageNotFound方法中参数与文档不符的问题；<p>**·**修复navigateTo跳转query中带有https时缺少一个斜杠的问题；<p>**·**修复滑动页面触发longpress问题。|
-|3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/">swan.compressImage</a>。|
+|3.110.3|2019.10.14|**New**<p>新增压缩图片API <a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-compressImage/">swan.compressImage</a>。|
 
 
 ## 3.105 版本日志更新

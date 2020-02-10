@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: websocket
 ---
-请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 
 
 
@@ -20,7 +20,7 @@ Object object
 ### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |url| String | 是 | | 开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。|
 |header| Object | 否 | | HTTP Header，Header 中不能设置 Referer。|
 |protocols| StringArray | 否 | |子协议数组|
@@ -87,10 +87,10 @@ Page({
 
 ## 错误码
 
-### Andriod  
+### Android  
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |302|找不到调起协议对应端能力方法|
 |202|解析失败，请检查参数是否正确 |
 |1001|执行失败|
@@ -98,7 +98,7 @@ Page({
 ### iOS 
 
 |错误码|说明errMsg|
-|--|--|
+|:--|:--|
 |4|参数有误 |
 |7|安全校验失败|
 |errorCode为1|超过设置的最大task数量|

@@ -12,7 +12,7 @@ sidebar: formlist_checkbox
 ##  属性说明 
 
 |属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- |: ---- |:---- |
+|:---- |:---- |:---- |:---- |:---- |
 |value | String  | | 否 |`<checkbox/>`标识，选中时触发`<checkbox-group/>`的 change 事件，并携带`<checkbox/>`的 value|
 |disabled|Boolean| false| 否 | 是否禁用|
 |checked|Boolean | false| 否 |当前是否选中，可用来设置默认选中|

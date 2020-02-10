@@ -11,16 +11,15 @@ sidebar: background_swan-setBackgroundColor
 
 **解释**：设置窗口的背景颜色。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |backgroundColor |String | 否| | 需设置的背景窗口颜色，支持十六进制颜色值。11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |backgroundColorTop |String | 否| - | 需设置的顶部背景窗口颜色，支持十六进制颜色值，仅ios有效。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |backgroundColorBottom |String  |  否| - |需设置的底部背景窗口颜色，支持十六进制颜色值，仅ios有效。11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
@@ -28,7 +27,17 @@ sidebar: background_swan-setBackgroundColor
 |fail  |  Function |   否  | | 接口调用失败的回调函数| 
 |complete   | Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|  
 
-**图片示例**
+## 示例
+
+ 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_setBackgroundColor.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -42,7 +51,7 @@ sidebar: background_swan-setBackgroundColor
     </div>     
 </div>
 
-**代码示例1 - backgroundColor：#000000**：
+### 代码示例1 - backgroundColor：#000000 ：
 
 <a href="swanide://fragment/66f332965704ae69bbdcaefe3db158fa1575139212532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -82,7 +91,8 @@ Page({
     }
 });
 ```
-**图片示例**
+
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -96,7 +106,7 @@ Page({
     </div>     
 </div>
 
-**代码示例2 - backgroundColorTop：#FFC0CB**：
+### 代码示例2 - backgroundColorTop：#FFC0CB ：
 
 <a href="swanide://fragment/78fa2cb4a9f355eb08b78ce9ad2cf41d1575139455048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -117,7 +127,7 @@ Page({
     }
 });
 ```
-**图片示例**
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -131,7 +141,7 @@ Page({
     </div>     
 </div>
 
-**代码示例3 - backgroundColorBottom：#7B68EE**：
+### 代码示例3 - backgroundColorBottom：#7B68EE ：
 
 <a href="swanide://fragment/b748d492aae0dcbcd9fe4aa8b0dea4251575139563423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -153,16 +163,16 @@ Page({
 });
 ```
 
-#### 错误码
-* Andriod
+##  错误码
+### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确      |
 |1001|执行失败|
 
-* iOS
+### iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确      |

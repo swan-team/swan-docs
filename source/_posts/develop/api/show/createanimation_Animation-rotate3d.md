@@ -7,16 +7,26 @@ sidebar: createanimation_Animation-rotate3d
  
 **解释**：从 X 轴顺时针旋转一个角度
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate3d.png"  class="demo-qrcode-image" />
+Number x，Number y，Number z，Number deg
 
-**方法参数**：Number x，Number y，Number z，Number deg
+### 参数说明 
 
-**参数说明**：同 transform-function rotate3d。
+同 transform-function rotate3d。
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/967fb90e26393d8299ea78a8331458af1574215196061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/rotate3d.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/rotate3d.gif">
@@ -29,9 +39,9 @@ sidebar: createanimation_Animation-rotate3d
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/967fb90e26393d8299ea78a8331458af1574215196061" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

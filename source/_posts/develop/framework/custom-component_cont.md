@@ -63,26 +63,48 @@ Component({
 ```
 
 **代码示例**
-<a href="swanide://fragment/e5621e1c241dd7b47f2bc844277117b81545308225206" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+<a href="swanide://fragment/c9e4f0cdb75fadf693ad2be32be4182d1578990218734" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```xml
+/* 组件child页面 */
+<button bindtap="onTap">点击这个按钮将触发 myevent 事件</button>
+```
 ```js
-/* 组件逻辑 */
+/* 组件child逻辑 */
 Component({
     properties: {},
     methods: {
         onTap: function() {
             var myEventDetail = {} // detail对象，提供给事件监听函数
-            this.triggerEvent('myevent', myEventDetail);
+            var myEventOption = {bubbles:true} // 触发事件的选项
+            this.triggerEvent('myevent', myEventDetail,myEventOption);
         }
     }
 });
 ```
 ```js
-/* 页面逻辑 */
+/* 使用该组件的页面 */
+<child bindmyevent="listener"></child>
+```
+```js
+/* 使用该组件的逻辑 */
 Page({
-    onMyEvent: function (e) {}
+    listener: function (e) {
+        console.log(e);
+    }
 })
 ```
+
+触发事件的选项包括：
+
+|选项名 |  类型 | 是否必填 | 默认值 | 描述 | 
+|---|---|---|---|---|
+|bubbles | Boolean | 否 | false | 事件是否冒泡 | 
+|capturePhase | Bollean | 否 | false | 事件是否拥有捕获阶段 | 
+
 **注意**：
 - 对于 triggerEvent 方法，在基础库版本 2.0.3 之前（不包含2.0.3）只支持传递类型为object的数据，从 2.0.3 开始支持传递其它数据类型（不包括function和undefined），其它低版本请做好<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容</a>。
 - 对于很多UI组件库需要实现组件间关系，实际上组件间通信同样可以满足此需求。（之前组件间通信无法在存在 slot 环境使用，我们将于基础版本库 3.110.14 修复此问题）[详细内容](https://smartprogram.baidu.com/forum/topic/show/71953)
+- 通过triggerEvent方式触发的自定义事件，只能在拥有父子关系的组件之间传播。
+- 只能触发绑定在组件自身标签上的事件监听方法。

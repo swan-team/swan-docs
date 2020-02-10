@@ -13,7 +13,7 @@ sidebar: publish
 **属性说明**
 
 |属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
+|:--- |:---|:---|:---|:---|
 |title | String |  '' | 发布器进入后，标题栏展示的默认标题 |
 |title-place-holder| String | '' | 发布器中的标题placeholder |
 |title-limit | Number | 20 | 标题的最大字数限制 |

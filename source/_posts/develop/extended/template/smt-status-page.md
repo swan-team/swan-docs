@@ -6,6 +6,7 @@ sidebar:  template
 ---
 
 **解释**: 页面状态模板，可通过配置theme主题选择不同的页面状态：loadingStatus加载中，noWifiStatus无网络，noContent暂无内容。
+## 示例
 
 ### 扫码体验
 

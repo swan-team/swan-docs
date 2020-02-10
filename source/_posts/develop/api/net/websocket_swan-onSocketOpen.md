@@ -14,14 +14,14 @@ sidebar: websocket_swan-onSocketOpen
 
 Function callback
 
- `callback`参数说明 ：WebSocket 连接打开事件的回调函数。
+ `callback`参数说明  WebSocket 连接打开事件的回调函数。
 
 `callback`方法参数：Object res
 
 ### `res`参数说明：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |header| Object | 是| |连接成功的 HTTP 响应 Header。|
 
 

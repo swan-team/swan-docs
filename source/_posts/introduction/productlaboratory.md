@@ -32,14 +32,14 @@ sidebar: productlaboratory
 产品实验室 >Discuz! 论坛目前采用申请制，请填写用于开通 Discuz! 论坛服务的域名信息，百度会对您所填写的域名信息进行审核，审核通过后即可使用 Discuz! 论坛的相关服务（目前仅支持以 https 开头的域名）。
 >说明：由于目前 Discuz! 论坛仍处于内测阶段，未全面放开，因此，可能会出现审核时间较长的情况。申请后请您耐心等待审核结果，我们将按照开发者的申请先后顺序，分批审核。
 
-![图片](../../img/introduction/discuz/1.jpg)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction15.png)
 
 ## 开通使用 Discuz! 论坛
 
 
 点击“立即使用”按钮，进入 Discuz!论坛小程序介绍页，阅读用户协议后并勾选，点击“立即开通”，并根据页面提示操作。
 
-![图片](../../img/introduction/discuz/2.jpg)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction16.png)
 
 ## Discuz! 数据对接流程
 
@@ -62,9 +62,9 @@ sidebar: productlaboratory
 
 ![图片](../../img/introduction/discuz/3.jpg)
 
-1.3. 在“百度小程序”中填写完数据后返回Discuz!论坛开通页，填写论坛域名和App Secret（**注意：两端填写的域名和App Secret需完全一致**），点击<确认开通>按钮，若数据对接成功，即可进入Discuz!小程序管理页面。若数据对接失败，请按报错提示进行错误排查。
+1.3  在“百度小程序”中填写完数据后返回Discuz!论坛开通页，填写论坛域名和App Secret（**注意：两端填写的域名和App Secret需完全一致**），点击<确认开通>按钮，若数据对接成功，即可进入Discuz!小程序管理页面。若数据对接失败，请按报错提示进行错误排查。
 
-![图片](../../img/introduction/discuz/4.jpg)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction17.png)
 
 ## 提交小程序审核
  
@@ -73,7 +73,7 @@ sidebar: productlaboratory
 
 **注意：只要<小手机>上有数据展示，就表示对接成功。若无数据展示，请将问题反馈到开发者社区或者联系官方运营人员排查问题。**
 
-![图片](../../img/introduction/discuz/5.jpg)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction18.png)
 
 审核通过后，在页面点击<发布上线>按钮，即可将小程序发布到线上。届时，在百度App搜索论坛名称即可找到对接的小程序。（搜索结果将在24小时内生效）
 

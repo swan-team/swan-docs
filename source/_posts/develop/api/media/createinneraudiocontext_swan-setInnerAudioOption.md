@@ -18,7 +18,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |mixWithOther |Boolean | 否 | false |设置是否与其他音频混播。 11.3 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |success  | Function |否 | | 接口调用成功的回调函数| 
 |fail  | Function |否|| 接口调用失败的回调函数| 
@@ -124,14 +124,14 @@ Page({
 
 ##  错误码
 
-### Andriod
+### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |1001|执行失败  |
 
 ### iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确      |

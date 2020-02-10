@@ -14,7 +14,7 @@ automator.connect(options: Object): Promise<SmartProgram>
 **`options`参数说明：**
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |wsEndpoint| String|是|- |开发者工具 WebSocket 地址|
 
 有两种方式可以启动开发者工具并开启自动化功能。

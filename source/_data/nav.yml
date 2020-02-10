@@ -223,6 +223,10 @@
                     text: 小程序API提交
                     name: rank_api
                   -
+                    link: /introduction/rank_synchronism
+                    text: 小程序资源自动同步
+                    name: rank_synchronism            
+                  -
                     link: /introduction/rank_robots
                     text: robots协议介绍
                     name: rank_robots
@@ -250,6 +254,10 @@
                 link: /introduction/baijiahaointroduction
                 text: 百家号流量说明
                 name: baijiahaointroduction
+              -
+                link: /introduction/baijiahaoexample
+                text: 百家号成功接入案例
+                name: baijiahaoexample               
               -
                 link: /introduction/baijiahao
                 text: 接入百家号流量
@@ -459,10 +467,10 @@
               link: /design/component/topnav
               text: 顶部导航栏
               name: topnav
-            # -
-            #   link: /design/component/toptab
-            #   text: 栏目选项条
-            #   name: toptab
+            -
+              link: /design/component/toptab
+              text: 栏目选项条
+              name: toptab
             -
               link: /design/component/bottomtab
               text: 底部标签栏
@@ -901,6 +909,10 @@
                 link: /develop/framework/dynamiclib_topone
                 text: topOne动态库
                 name: dynamiclib_topone
+              -
+                link: /develop/framework/sitemap
+                text: swan-sitemap 动态库
+                name: sitemap                
               -
                 link: /develop/framework/echarts
                 text: ECharts 动态库-Beta
@@ -2127,6 +2139,132 @@
                     link: /develop/api/file/open
                     text: swan.openDocument
                     name: open
+              -
+                
+                text: 文件系统
+                name: file_system
+                sidebar:
+                  -
+                    link: /develop/api/file/swan-getFileSystemManager
+                    text: swan.getFileSystemManager
+                    name: swan-getFileSystemManager
+                  -
+                    link: /develop/api/file/FileSystemManager
+                    text: FileSystemManager
+                    name:  FileSystemManager
+                    sidebar:
+                      -
+                        link: /develop/api/file/FileSystemManager-access
+                        text: FileSystemManager.access
+                        name: FileSystemManager-access
+                      -
+                        link: /develop/api/file/FileSystemManager-accessSync
+                        text: FileSystemManager.accessSync
+                        name: FileSystemManager-accessSync
+                      -
+                        link: /develop/api/file/FileSystemManager-appendFile
+                        text: FileSystemManager.appendFile
+                        name: FileSystemManager-appendFile
+                      -
+                        link: /develop/api/file/FileSystemManager-appendFileSync
+                        text: FileSystemManager.appendFileSync
+                        name: FileSystemManager-appendFileSync
+                      -
+                        link: /develop/api/file/FileSystemManager-copyFile
+                        text: FileSystemManager.copyFile
+                        name: FileSystemManager-copyFile
+                      -
+                        link: /develop/api/file/FileSystemManager-copyFileSync
+                        text: FileSystemManager.copyFileSync
+                        name: FileSystemManager-copyFileSync
+                      -
+                        link: /develop/api/file/FileSystemManager-getFileInfo
+                        text: FileSystemManager.getFileInfo
+                        name:  FileSystemManager-getFileInfo
+                      -
+                        link: /develop/api/file/FileSystemManager-getSavedFileList
+                        text: FileSystemManager.getSavedFileList
+                        name:  FileSystemManager-getSavedFileList
+                      -
+                        link: /develop/api/file/FileSystemManager-mkdir
+                        text: FileSystemManager.mkdir
+                        name:  FileSystemManager-mkdir
+                      -
+                        link: /develop/api/file/FileSystemManager-mkdirSync
+                        text: FileSystemManager.mkdirSync
+                        name:  FileSystemManager-mkdirSync
+                      -
+                        link: /develop/api/file/FileSystemManager-readdir
+                        text: FileSystemManager.readdir
+                        name:  FileSystemManager-readdir
+                      -
+                        link: /develop/api/file/FileSystemManager-readdirSync
+                        text: FileSystemManager.readdirSync
+                        name:  FileSystemManager-readdirSync
+                      -
+                        link: /develop/api/file/FileSystemManager-readFile
+                        text: FileSystemManager.readFile
+                        name:  FileSystemManager-readFile
+                      -
+                        link: /develop/api/file/FileSystemManager-readFileSync
+                        text: FileSystemManager.readFileSync
+                        name:  FileSystemManager-readFileSync
+                      -
+                        link: /develop/api/file/FileSystemManager-removeSavedFile
+                        text: FileSystemManager.removeSavedFile
+                        name:  FileSystemManager-removeSavedFile
+                      -
+                        link: /develop/api/file/FileSystemManager-rename
+                        text: FileSystemManager.rename
+                        name:  FileSystemManager-rename
+                      -
+                        link: /develop/api/file/FileSystemManager-renameSync
+                        text: FileSystemManager.renameSync
+                        name:  FileSystemManager-renameSync
+                      -
+                        link: /develop/api/file/FileSystemManager-rmdir
+                        text: FileSystemManager.rmdir
+                        name:  FileSystemManager-rmdir
+                      -
+                        link: /develop/api/file/FileSystemManager-rmdirSync
+                        text: FileSystemManager.rmdirSync
+                        name:  FileSystemManager-rmdirSync
+                      -
+                        link: /develop/api/file/FileSystemManager-saveFile
+                        text: FileSystemManager.saveFile
+                        name:  FileSystemManager-saveFile
+                      -
+                        link: /develop/api/file/FileSystemManager-saveFileSync
+                        text: FileSystemManager.saveFileSync
+                        name:  FileSystemManager-saveFileSync
+                      -
+                        link: /develop/api/file/FileSystemManager-stat
+                        text: FileSystemManager.stat
+                        name:  FileSystemManager-stat
+                      -
+                        link: /develop/api/file/FileSystemManager-statSync
+                        text: FileSystemManager.statSync
+                        name:  FileSystemManager-statSync
+                      -
+                        link: /develop/api/file/FileSystemManager-unlink
+                        text: FileSystemManager.unlink
+                        name:  FileSystemManager-unlink
+                      -
+                        link: /develop/api/file/FileSystemManager-unlinkSync
+                        text: FileSystemManager.unlinkSync
+                        name:  FileSystemManager-unlinkSync
+                      -
+                        link: /develop/api/file/FileSystemManager-unzip
+                        text: FileSystemManager.unzip
+                        name:  FileSystemManager-unzip
+                      -
+                        link: /develop/api/file/FileSystemManager-writeFile
+                        text: FileSystemManager.writeFile
+                        name:  FileSystemManager-writeFile
+                      -
+                        link: /develop/api/file/FileSystemManager-writeFileSync
+                        text: FileSystemManager.writeFileSync
+                        name:  FileSystemManager-writeFileSync
         -
 
             text: 数据存储
@@ -2324,10 +2462,6 @@
                         text: CanvasContext.createCircularGradient
                         name: canvas_CanvasContext-createCircularGradient
                       -
-                        link: /develop/api/show/canvas_CanvasContext-addColorStop
-                        text: CanvasContext.addColorStop
-                        name: canvas_CanvasContext-addColorStop
-                      -
                         link: /develop/api/show/canvas_CanvasContext-setLineWidth
                         text: CanvasContext.setLineWidth
                         name: canvas_CanvasContext-setLineWidth
@@ -2471,6 +2605,15 @@
                         link: /develop/api/show/canvas_CanvasContext-setTransform
                         text: CanvasContext.setTransform
                         name: canvas_CanvasContext-setTransform
+                  -
+                    link: /develop/api/show/canvas_CanvasGradient
+                    text: CanvasGradient
+                    name: canvas_CanvasGradient
+                    sidebar:   
+                      -
+                        link: /develop/api/show/canvas_CanvasGradient-addColorStop
+                        text: CanvasGradient.addColorStop
+                        name: canvas_CanvasGradient-addColorStop                                         
               -
 
                 text: 交互反馈
@@ -3184,7 +3327,7 @@
 
               -
 
-                text: 原生全屏内容发布器
+                text: 全屏内容发布器
 
                 sidebar:
                   -
@@ -3197,7 +3340,7 @@
                     name: community_swan-closeCommunityEditor
               -
 
-                text: 原生半屏内容发布器
+                text: 半屏内容发布器
 
                 sidebar:
                   -
@@ -3342,15 +3485,15 @@
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: swan-getSystemRiskInfo
-              -
+              # -
 
-                text: 订阅
+              #   text: 订阅
 
-                sidebar:
-                  -
-                    link: /develop/api/open/swan-subscribeService
-                    text: swan.subscribeService
-                    name: swan-subscribeService
+              #   sidebar:
+              #     -
+              #       link: /develop/api/open/swan-subscribeService
+              #       text: swan.subscribeService
+              #       name: swan-subscribeService
         -
             sidebar:
               -
@@ -3358,7 +3501,6 @@
                 text: 错误码
                 name: errorcode
     -
-      link: /develop/serverapi
       text: 服务端 API
       name: serverapi
       sidebar:
@@ -3496,21 +3638,7 @@
       text: 扩展能力
       name: extended
       sidebar:
-        # -   
-        #     text: 基础组件
-        #     sidebar:
-        #       -
-        #         link: /develop/extended/component-content/commentpublish
-        #         text: 半屏内容发布器带服务版
-        #         name: commentpublish
-        #       -
-        #         link: /develop/extended/component/publish
-        #         text: 全屏内容发布器组件
-        #         name: publish
-        #       -
-        #         link: /develop/extended/component-content/like
-        #         text: 点赞组件
-        #         name: like      
+             
         -
        
           text: smart-ui组件
@@ -3521,31 +3649,31 @@
                 name: info
               -
                 link: /develop/extended/ui_component/smt-feed
-                text: smt-feed 信息流
+                text: feed 信息流
                 name: smt-feed
               -
                 link: /develop/extended/ui_component/smt-feed-item
-                text: smt-feed-item 信息流子项
+                text: feed-item 信息流子项
                 name: smt-feed-item
               -
                 link: /develop/extended/ui_component/smt-icon
-                text: smt-icon 图标
+                text: icon 图标
                 name: smt-icon
               -
                 link: /develop/extended/ui_component/smt-refresh
-                text: smt-refresh 刷新
+                text: refresh 刷新
                 name: smt-refresh
               -
                 link: /develop/extended/ui_component/smt-spin
-                text: smt-spin 加载
+                text: spin 加载
                 name: smt-spin
               -
                 link: /develop/extended/ui_component/smt-page-status
-                text: smt-page-status 页面状态
+                text: page-status 页面状态
                 name: smt-page-status
               -
                 link: /develop/extended/ui_component/smt-navigation
-                text: smt-navigation 自定义导航
+                text: navigation 自定义导航
                 name: smt-navigation
         -
             text: smart-ui模板
@@ -3561,7 +3689,53 @@
               -
                 link: /develop/extended/template/smt-status-page
                 text: 页面状态模板
-                name: smt-status-page     
+                name: smt-status-page
+        -
+            text: 工具类库
+            sidebar:
+              -
+                link: /develop/extended/lib/smt-promisify
+                text: api promise 化
+                name: smt-promisify 
+              -
+                link: /develop/extended/lib/smt-md5
+                text: 加密算法
+                name: smt-md5
+              -
+                link: /develop/extended/lib/smt-mobx
+                text: swan-mobx连接器
+                name: smt-mobx
+              -
+                link: /develop/extended/lib/smt-observer
+                text: 订阅发布器
+                name: smt-observer
+              -
+                link: /develop/extended/lib/smt-swanx
+                text: swanx 数据状态管理
+                name: smt-swanx 
+              -
+                link: /develop/extended/lib/bdparse
+                text: bdparse 富文本解析器
+                name: bdparse
+        -   
+            text: 扩展服务
+            sidebar:
+              -
+                link: /develop/extended/component-content/commentpublish
+                text: 半屏内容发布器带服务版
+                name: commentpublish
+              # -
+              #   link: /develop/extended/component/publish
+              #   text: 全屏内容发布器组件
+              #   name: publish
+              -
+                link: /develop/extended/component-content/like
+                text: 点赞组件
+                name: like      
+              -
+                link: /develop/extended/component-content/follow
+                text: 关注组件
+                name: follow                     
     -
       text: 工具
       name: devtools
@@ -3781,7 +3955,7 @@
                 name: components_panel
               -
                 link: /develop/devtools/diff
-                text: API 实现差异
+                text: 模拟器实现差异 
                 name: diff
         -
             link: /develop/devtools/auto
@@ -4486,6 +4660,26 @@
     #               name: limit_components
 
 
+        # -
+        #   text: 功能类库
+        #   sidebar:
+        #     -
+        #       link: /develop/extensions/smt-md5
+        #       text: smt-md5
+        #       name: smt-md5
+        #     -
+        #       link: /develop/extensions/smt-observer
+        #       text: smt-observer
+        #       name:  smt-observer
+        #     -
+        #       link: /develop/extensions/smt-swanx
+        #       text: smt-swanx
+        #       name: smt-swanx
+        #     -
+        #       link: /develop/extensions/smt-mobx
+        #       text: smt-mobx
+        #       name:  smt-mobx
+
     -
       text: 功能开发
       name: function
@@ -4590,9 +4784,29 @@
             link: /develop/function/error_code
             text: 错误码
             name: error_code
+        -
 
+          text: 文件系统
+       
+          sidebar:
+          -
+
+            text: 文件类型
+
+            sidebar:
+            -
+              link: /develop/function/file_system_package
+              text: 代码包文件
+              name: file_system_package
+            -
+              link: /develop/function/file_system_local
+              text: 本地文件
+              name: file_system_local
+            -
+              link: /develop/function/file_system
+              text: 读写权限
+              name: file_system
     -
-      link: /develop/swan
       text: 基础库版本信息
       name: swan
       sidebar:

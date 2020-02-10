@@ -7,7 +7,7 @@ sidebar: type_thirdtool
  
 第三方客服工具由百度推广平台接入，在开发者后台配置后，可以使用第三方客服工具进行客服消息回复。
 
-### 配置流程：：
+### 配置流程： 
 
 1. 使用超级管理员权限登录开发者后台，点击“客服管理-第三方客服工具-去配置"，即开始第三方客服工具配置流程。
 
@@ -20,10 +20,10 @@ sidebar: type_thirdtool
 
 4. 在已经授权的客服工具账号里，选择一个与小程序进行绑定。
 
-![图片](../../img/introduction/contact/contact1.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/customer11.png)
 
 ![图片](../../img/introduction/contact/contact2.png)
 
-![图片](../../img/introduction/contact/contact3.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/customer12.png)
  
 

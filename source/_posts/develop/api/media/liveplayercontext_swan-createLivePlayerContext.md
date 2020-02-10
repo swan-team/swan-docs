@@ -18,7 +18,8 @@ sidebar:  liveplayercontext_swan-createLivePlayerContext
 
 要获取 live-player 组件的 id。
 
-### 返回值 ：livePlayerContext
+### 返回值 
+LivePlayerContext
 
 ## 示例
 <a href="swanide://fragment/703092891fd158851d3920c29e31113d1573523316988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -32,7 +32,7 @@ sidebar: open_risk_power
 
  
 ### 使用说明
-建议开发者在自身业务的关键环节增加风险判断，比如拆红包环节、领取优惠券环节、拉新环节、生单环节等，针对高作弊风险用户做特殊逻辑处理。风控服务API在使用前，需开发者先通过小程序的[swan-getSystemRiskInfo](https://smartprogram.baidu.com/docs/develop/api/open_riskInfo/#swan-getSystemRiskInfo)接口获取风控核心参数xtoken。
+建议开发者在自身业务的关键环节增加风险判断，比如拆红包环节、领取优惠券环节、拉新环节、生单环节等，针对高作弊风险用户做特殊逻辑处理。风控服务API在使用前，需开发者先通过小程序的[swan-getSystemRiskInfo](https://smartprogram.baidu.com/docs/develop/api/open/swan-getSystemRiskInfo/#swan-getSystemRiskInfo)接口获取风控核心参数xtoken。
 >- 为了保证服务质量，希望开发者尽可能传递完整detectrisk接口参数。
 >- 切勿针对xtoken做缓存处理等，确保每次请求均通过swan-getSystemRiskInfo实时获取。
 

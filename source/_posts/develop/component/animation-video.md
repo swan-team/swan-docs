@@ -30,7 +30,7 @@ sidebar: animation-video
 ### 扫码体验
 
 <div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_animation-video.png" class="demo-qrcode-image" />
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/animation-video.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
@@ -118,7 +118,7 @@ Page({
 
 ##  Bug & Tip
 
-* Tip：为避免出现画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
-* Tip：因为最终动画渲染在页面上实际上是一个canvas，可通过 canvas-style 控制它的 css 样式，例如，支持响应式可以设置 canvas-style ="width:100%;"。
+* Tip：为避免出现画面被拉伸的情况，建议将 animation-video 组件的长宽比设置的与动画长宽比一致。
+* Tip：因为最终动画渲染在页面上实际上是一个 canvas，可通过 canvas-style 控制它的 css 样式，例如，支持响应式可以设置 canvas-style ="width:100%;"。
 * Tip：path可以写本地相对路径，也可以写远程路径，如果是远程路径，注意 response header 里面需要设置 Access-Control-Allow-Origin 防止跨域问题。
 * Tip：如果视频资源过大，用户网络状态差的情况下，可以通过API [swan.downloadFile](https://smartprogram.baidu.com/docs/develop/api/net/downloadFile/) 将文件下载到本地，提前将视频资源缓存起来。

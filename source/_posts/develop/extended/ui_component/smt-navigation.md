@@ -1,5 +1,5 @@
 ---
-title: smt-navigation 顶部导航bar
+title: navigation 顶部导航bar
 header: develop
 nav: extended
 sidebar: smt-navigation

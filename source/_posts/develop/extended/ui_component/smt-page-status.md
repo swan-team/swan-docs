@@ -1,5 +1,5 @@
 ---
-title: smt-page-status 页面状态组件
+title: page-status 页面状态组件
 header: develop
 nav: extended
 sidebar: smt-page-status

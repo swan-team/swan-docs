@@ -24,8 +24,8 @@ sidebar: formlist_input
 |confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
 |confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
 |cursor	 | Number  |  | 否 |指定 focus 时的光标位置<br>开发者工具暂不支持|
-|selection-start | Number | -1 | 否 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用|
-|selection-end | Number | -1 | 否 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 |
+|selection-start | Number | -1 | 否 | 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用|
+|selection-end | Number | -1 | 否 | 光标结束位置，自动聚焦时有效，需与 selection-start 搭配使用 |
 |adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |
 | bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |
 | bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|

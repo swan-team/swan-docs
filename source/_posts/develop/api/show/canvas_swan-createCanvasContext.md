@@ -8,18 +8,28 @@ sidebar: canvas_swan-createCanvasContext
  
 **解释**：在 Page 中，推荐使用`this.createCanvasContext(canvasId)`，进行绘图上下文的创建。也可使用`swan.createCanvasContext(canvasId)`，但使用`swan.createCanvasContext(canvasId)`进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+String canvasId
 
-**方法参数**：String canvasId
+###  `canvasId`参数说明 ：要获取 canvas 组件的 id。
 
-**`canvasId`参数说明**：要获取 canvas 组件的 id。
+###  返回值 
+CanvasContext
+## 示例
 
-**返回值**：canvasContext
+ 
+<a href="swanide://fragment/4ba279752c55a3aebac59c47ef03e18d1574497679593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
-**图片示例**
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/createCanvasContext.gif">
@@ -32,9 +42,9 @@ sidebar: canvas_swan-createCanvasContext
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/4ba279752c55a3aebac59c47ef03e18d1574497679593" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

@@ -1,19 +1,19 @@
 ---
 title: 关注组件
 header: develop
-nav: component-content
+nav: extended
 sidebar: follow
 ---
 
 
 
-**解释：** 内容/用户关注组件。开发者可在小程序内配置关注组件，实现用户对内容和用户的关注，可嵌套在原生组件内，自定义选择组件的样式和动效。
+**解释**：  内容/用户关注组件。开发者可在小程序内配置关注组件，实现用户对内容和用户的关注，可嵌套在原生组件内，自定义选择组件的样式和动效。
 
-**属性说明：**
+## 属性说明 
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
-|mode|String|否|text|关注按钮模式，有三种选择。icon: 仅有图标; text: 文字版本; mixture: 图表文字结合|
+|mode|String|否|text|关注按钮模式，有三种选择。icon: 仅有图标; text: 文字版本; mixture: 图标文字结合|
 |background-color|String|否|blue|当且仅当mode为text时有以下4种按钮颜色可选:blue; white; opacity; none。当且仅当mode为icon时有以下2种按钮颜色可选:blue; white;|
 |is-followed|Boolean|是|false|关注的状态|
 |follow-text|Array|否|['关注', '已关注']|关注按钮上的文案|
@@ -21,8 +21,31 @@ sidebar: follow
 |toast-text|Array|否|['关注成功', '已取消关注']|toast文案，默认为关注成功、已取消关注|
 |bind:follow|EventHandle|||点击按钮事件|
 
+## 示例
+<a href="swanide://fragment/6a2a2a4dc684732c95ca871c88acb7f61579074426749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**代码示例**
+
+### 扫码体验
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_follow_follow.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/follow-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+### 代码示例
 
 安装组件：
 ```    

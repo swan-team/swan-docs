@@ -7,7 +7,7 @@ sidebar: base_animation-view-Lottie
 
 
 
-**解释**：支持 Lottie 动画，客户端创建的[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制。
+**解释**：仅支持 Lottie 动画的客户端[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制，动画资源地址可到[lottie的官方库](https://github.com/airbnb/lottie-web)进行查询。
 
 ##  属性说明
 
@@ -30,7 +30,7 @@ sidebar: base_animation-view-Lottie
 
 ## 示例
 
-<a href="swanide://fragment/aeaeb76fd22b927e125660e5f2ade00b1577362215935" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/773e8370ff783eb66df9666b9cfb39741579144901388" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -54,21 +54,68 @@ sidebar: base_animation-view-Lottie
     </div>
 </div>
 
-###  代码示例
+###  代码示例1 - 动画资源地址在本地，path为相对路径
 
 
 * 在 swan 文件中
 
 ```html
-<view class="container">
-    <view class="animation-content hide">
-        <view class="animation-info">
-            <animation-view id="myAnim" action="{{action}}" loop="{{loop}}" hidden="{{hidden}}" class="controls hide" autoplay="{{autoplay}}" bind:ended="end" path="{{path}}">
+<view class="wrap">
+    <view class="card-area">
+        <animation-view class="controls" path="{{path}}" loop="{{loop}}" autoplay="{{autoplay}}" action="{{action}}" hidden="{{hidden}}" bindended="lottieEnd">
+        </animation-view>
+        <button bindtap="playLottie" type="primary">{{status}}lottie动画</button>
+    </view>
+</view>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        path: '/anims/lottie_example_one.json',
+        loop: true,
+        autoplay: true,
+        action: 'play',
+        hidden: false,
+        status: '暂停'
+    },
+    onShow() {
+        console.log(' 百度 App版本11.3以上才可使用');
+    },
+    playLottie() {
+        // 切换播放状态
+        let action = this.data.action;
+        action = action === 'pause' ? 'play' : 'pause';
+        let status = action === 'pause' ? '播放' : '暂停';
+        this.setData({
+            action,
+            status
+        });
+    },
+    lottieEnd() {
+        console.log('自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。');
+    }
+});
+```
+
+
+###  代码示例2 - 动画资源地址在服务器上存放
+
+> 此种使用方式建议在真机查看完整效果，注意path属性仅可在组件初始化时传入，不支持用setData方法后续动态传入。
+
+<a href="swanide://fragment/91ca60efd6f0a977bfba5c315083a57a1579157854484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view class="wrap">
+    <view class="card-area">
+        <view class="animation-view-area">
+            <animation-view s-if="{{shouldShow}}" class="controls" path="{{path}}" loop="{{loop}}" autoplay="{{autoplay}}" action="{{action}}" hidden="{{hidden}}" bindended="lottieEnd">
             </animation-view>
         </view>
-        <view class="button-content">
-            <button bind:tap="playLottie" class="toggle-animation" type="primary" hover-stop-propagation="true">{{status}}lottie动画</button>
-        </view>
+        <button bindtap="playLottie" type="primary">{{status}}lottie动画</button>
     </view>
 </view>
 
@@ -78,29 +125,42 @@ sidebar: base_animation-view-Lottie
 ```javascript
 Page({
     data: {
-        action: 'play',
-        hidden: false,
-        path: '/anims/lottie_example.json',
+        path: '',
         loop: true,
         autoplay: true,
-        status: '停止'
+        action: 'play',
+        hidden: false,
+        status: '暂停',
+        shouldShow: ''
     },
-    onShow(){
+    onShow() {
         console.log(' 百度 App版本11.3以上才可使用');
+        swan.downloadFile({
+            url: 'https://b.bdstatic.com/miniapp/images/lottie_example_one.json',
+            header: {
+                'content-type': 'application/json'
+            },
+            success: res => {
+                const filePath = res.tempFilePath;
+                this.setData({
+                    shouldShow: true,
+                    path: filePath
+                });
+            }
+        });
     },
     playLottie() {
         // 切换播放状态
         let action = this.data.action;
         action = action === 'pause' ? 'play' : 'pause';
-        let status = action === 'pause' ? '播放' : '停止';
-
+        let status = action === 'pause' ? '播放' : '暂停';
         this.setData({
             action,
             status
         });
     },
-    end() {
-        console.log('播放结束,设置不循环播放才能再次触发');
+    lottieEnd() {
+        console.log('自然播放结束会触发回调，循环播放结束及手动停止动画不会触发。');
     }
 });
 ```
@@ -110,4 +170,4 @@ Page({
 * Tip：animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。
 * Tip：animation-view组件不支持原生组件嵌套。
 * Tip：为避免出现iOS中画面被拉伸的情况，建议将animation-view组件的长宽比设置的与动画长宽比一致。
-* Tip：path暂不支持远程路径，原因是端上暂不支持解析远程路径的 json 文件, 如果不想将 json 文件放在小程序包内，可以通过API [swan.downloadFile](https://smartprogram.baidu.com/docs/develop/api/net/downloadFile/)将文件下载到本地。
+* Tip：path暂不支持远程路径，原因是端上暂不支持解析远程路径的 json 文件, 如果不想将 json 文件放在小程序包内，可以通过API [swan.downloadFile](https://smartprogram.baidu.com/docs/develop/api/net/downloadFile/)将文件下载到本地，具体可参考上方代码示例2。

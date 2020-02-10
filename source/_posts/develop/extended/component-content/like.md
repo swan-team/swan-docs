@@ -1,21 +1,21 @@
 ---
 title: 点赞服务版
 header: develop
-nav: component-content
+nav: extended
 sidebar: like
 ---
 
 
-**解释：** 支持将用户对文章/评论的点赞行为同步给百度后端，实现对点赞对象(若此对象的文章/评论是在小程序内用评论组件生产)的消息通知。需要将点赞对象的文章/评论内容一起提交。
+**解释**：  支持将用户对文章/评论的点赞行为同步给百度后端，实现对点赞对象(若此对象的文章/评论是在小程序内用评论组件生产)的消息通知。需要将点赞对象的文章/评论内容一起提交。
 
-**属性说明：**
+## 属性说明 
 
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
 |is-liked|Boolean|是|false|赞的状态|
 |mode|String|否|icon|按钮模式，有两种选择icon: 仅有图标; mixture: 图标文字结合|
 |icon-type|String|否|hand|图标类型，提供两种，包括hand(默认)和heart|
-|style|String|否|none|仅在mode为mixture时可配置, none:无边框; border:有边框,有边框模式需在深色背景下使用|
+|style|String|否|none|仅在mode为mixture时可配置, none:无边框; border:有边框|
 |like-text|String|否|赞|点赞按钮上的文案，默认为赞|
 |like-num|Number|否|0|点赞数|
 |like-type|Number|否|0|点赞的对象类型，0:代表动态; 1:代表评论|
@@ -25,14 +25,37 @@ sidebar: like
 |like-param.srid|String|是||评论id。不为空，表示对评论进行点赞。若小程序侧没有 srid 对应的标识，则认为此时对主题进行点赞。|
 |like-param.appkey|String|是||小程序App Key，在小程序管理中心>设置>开发设置中获取|
 |animation-type|Number|否|1|点赞动效形式，0:无动效；1:轻动效；2:强动效|
-|is-show-toast|Boolean|否|true|点赞后的结果反馈是否弹出toast提示|
+|is-show-toast|Boolean|否|false|点赞后的结果反馈是否弹出toast提示|
 |toast-text|Array|否|['已点赞', '已取消']|toast文案，默认为已点赞、已取消|
 |bind:error|EventHandle|||点击按钮时在用户未登录状态下触发的事件|
 |bind:success|EventHandle|||点击点赞按钮，在百度服务成功后将状态返回给使用组件者|
 |bind:fail|EventHandle|||点击点赞按钮，在百度服务失败后将状态返回给使用组件者|
+## 示例
 
+<a href="swanide://fragment/e8a7e2619aac3261b7a58fbb5460ebc41579074491661" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**代码示例**
+### 扫码体验
+ 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/subPackages_extensionsPackage_like_like.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/like-demo.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+### 代码示例
 
 安装组件：
 ```    

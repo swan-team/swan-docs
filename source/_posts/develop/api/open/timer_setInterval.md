@@ -8,23 +8,31 @@ sidebar: timer_setInterval
 
 **解释**：设定一个定时器，按照指定的周期（以毫秒计）来执行注册的回调函数。
 
-**百度APP中扫码体验：**
+ 
+## 方法参数
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png"  class="demo-qrcode-image" />
+Function callback, Number delay
 
-**方法参数**：Function callback, Number delay
+ `callback`参数说明 ：回调函数
 
-**`callback`参数说明**：回调函数
+ `delay`参数说明 ： 执行回调函数之间的时间间隔，单位 ms。 
 
-**`delay`参数说明**： 执行回调函数之间的时间间隔，单位 ms。 
-
-**返回值**：
+### 返回值  
 
 |名称|解释|
 |--|--|
 |number|定时器的编号。这个值可以传递给 <a href="https://smartprogram.baidu.com/docs/develop/api/open/timer_clearTimeout/">clearInterval </a>来取消该定时。|
+## 示例
 
-**图片示例**
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
+
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -38,7 +46,7 @@ sidebar: timer_setInterval
     </div>     
 </div>
 
-**代码示例1**
+###  代码示例1 
 
 <a href="swanide://fragment/3a72e862b7e3d92d06fc64432513d1001574042023470" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -70,7 +78,7 @@ Page({
 });
 ```
 
-**代码示例2 - 常用作定时器**
+###  代码示例2 - 常用作定时器 
 
 <a href="swanide://fragment/4859edf9b411e86a030adc618435db2a1575402921672" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

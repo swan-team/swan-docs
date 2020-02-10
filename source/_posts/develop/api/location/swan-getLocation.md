@@ -18,7 +18,7 @@ sidebar: swan-getLocation
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |type   | String | 否  |wgs84 |   返回 gps 坐标，可选 gcj02 。wgs84 返回 gps 坐标，gcj02 返回火星坐标，gcj02 比 wgs84更为精确,所以返回可用于传入 swan.openLocation 的坐标|
 |altitude   | Boolean | 否  | | 传入 true 会返回高度信息，获取高度需要较高精度且需要打开 gps， 会很耗时 ，默认没有用 gps。|
 |success |Function  |  否 | |  接口调用成功的回调函数，返回内容详见返回参数说明。|
@@ -87,7 +87,7 @@ Page({
                 console.log('getLocation success', res)
             },
             fail: err => {
-                console.log('getLocation fail', res)
+                console.log('getLocation fail', err)
             }
         });
     }

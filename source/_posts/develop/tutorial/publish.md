@@ -9,7 +9,7 @@ sidebar: publish
 
 ### 开发者工具调试
 
-> 具体调试方法请参考<a href="https://smartprogram.baidu.com/docs/develop/devtools/smartappdebug_function/">调试</a>章节。
+> 具体调试方法请参考<a href="https://smartprogram.baidu.com/docs/develop/devtools/smartappdebug_function_monitor/">调试</a>章节。
 
 ### Chrome 浏览器调试
 

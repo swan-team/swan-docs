@@ -21,7 +21,7 @@ function callback
 ###  Object res  返回的对象信息 
 
 |属性  |类型  |说明  |最低版本|
-|---- | ---- | ---- |---|
+|:---- | :---- | :---- |:---|
 |scene | String | 打开智能小程序的<a href="https://smartprogram.baidu.com/docs/data/scene/">场景值</a> | |
 |path|String|打开小程序的路径。| |
 |query|Object|打开小程序的query。| |
@@ -33,14 +33,14 @@ function callback
 ###  referrerInfo 的结构 
 
 |属性|类型|说明|
-|---- | ---- | ---- |
+|:---- | :---- | :---- | 
 |appId|String|来源小程序的 appKey。|  
 |extraData|Object|来源小程序传过来的数据|  
 
 ###  entryType 的取值说明 
 
-|属性值|类型|说明|
-|----|----|----|
+|属性|类型|说明|
+|:---- | :---- | :---- | 
 |user|String|表示通过home前后台切换或解锁屏幕等方式调起。|
 |schema|String|表示通过协议调起。|
 |sys|String|其它。|

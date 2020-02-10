@@ -6,7 +6,7 @@ sidebar: animationvideo_AnimationVideo
 ---
 
 
-**解释**： swan.createAnimationVideo 的返回值
+**解释**： swan.createAnimationVideo 的返回值，相关组件[animation-video](/develop/component/animation-video/) 。
 
  
 ## 示例

@@ -7,23 +7,28 @@ sidebar: canvas_CanvasContext-strokeText
  
 
 **解释**：给定的 (x, y) 位置绘制文本描边的方法。
+ 
+## 方法参数 
 
-**百度APP中扫码体验：**
+ 
+|属性名 |类型  |必填 | 默认值 |说明|
+|:---- |:---- |:---- |:----|:----|
+| `text`|String|是||要绘制的文本|
+| `x`|Number|是||文本起始点的 x 轴坐标|
+| `y`|Number|是||文本起始点的 y 轴坐标|
+| `maxWidth`|Number|是||需要绘制的最大宽度，可选。|
+## 示例
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png"  class="demo-qrcode-image" />
+<a href="swanide://fragment/198f840b68c30fd3160e8a3bd11457df1574503509981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-**方法参数**：String text, Number x, Number y, Number maxWidth
+### 扫码体验
 
-**`text`参数说明**：要绘制的文本
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createCanvasContext.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
 
-**`x`参数说明**：文本起始点的 x 轴坐标
-
-**`y`参数说明**：文本起始点的 y 轴坐标
-
-**`maxWidth`参数说明**：需要绘制的最大宽度，可选。
-
-**图片示例**
-
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/strokeText.png">
@@ -36,9 +41,9 @@ sidebar: canvas_CanvasContext-strokeText
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/198f840b68c30fd3160e8a3bd11457df1574503509981" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

@@ -24,7 +24,7 @@ sidebar: rank_single
 **4.智能小程序单卡子链配置方式：**
 如下图路径：登录百度智能小程序开发者后台 > 流量配置 > 小程序单卡 > 添加子链，按提示操作审核通过后即可上线展示给用户。
 
-![图片](../../img/introduction/rank/rank_single2.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/图1.png)
 
 **5.智能小程序单卡子链配置注意事项：**
 

@@ -58,7 +58,7 @@ Page({
                 'content-type': 'application/json'
             },
             success: res => {
-                'content-type': 'application/json'
+                console.log('downloadTask success', res);
             },
             fail: err => {
                 console.log('错误码：' + err.errCode);
@@ -78,7 +78,5 @@ Page({
 
 ```
 
- Bug & Tip 
 
-uploadFile 上传文件大小限制为 25M。
 

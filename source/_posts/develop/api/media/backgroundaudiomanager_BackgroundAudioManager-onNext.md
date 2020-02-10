@@ -8,7 +8,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-onNext
 
 
 
-**解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Andriod。
+**解释**：监听用户在系统音乐播放面板点击下一曲事件，仅支持 Android。
 
  
 

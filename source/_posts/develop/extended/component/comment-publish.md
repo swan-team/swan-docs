@@ -13,7 +13,7 @@ sidebar: comment-publish
 **属性说明**
 
 |属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
+|:--- |:---|:---|:---|:---|
 |contentPlaceholder | String | 请输入内容 | 内容提示占位文案 |
 |moduleList | Array |  | 显示模块list |
 |emojiPath | String |  |设置自定义表情配置路径（NA版支持，降级版不支持）|

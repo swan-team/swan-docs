@@ -4,7 +4,7 @@ header: develop
 nav: api
 sidebar: uploadfile
 ---
-请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net_rule/)进行开发。
+请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 
 
 
@@ -19,7 +19,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |url |String | 是  | |开发者服务器 url|
 |filePath  |  String | 是 || 要上传文件资源的路径|
 |name  |  String | 是 | | 文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容。|
@@ -32,16 +32,16 @@ Object object
 ### success返回参数说明 ：
 
 |参数 | 类型 | 说明|
-|---- | ---- | ---- |
+|:---- | :---- | :---- | 
 |data   | String  |开发者服务器返回的数据。|
 |statusCode | Number | 开发者服务器返回的 HTTP 状态码。|
 
 ### fail 返回值参数说明 ：
 
-* Andriod
+* Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |201|解析失败，请检查调起协议是否合法   |
 |202|解析失败，请检查参数是否正确|
 |1001|执行失败|
@@ -49,7 +49,7 @@ Object object
 * iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确  |
 |1|解析失败，请检查参数是否正确|
 
@@ -118,7 +118,9 @@ Page({
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。
 
+ ##  Bug & Tip 
 
+uploadFile 上传文件大小限制为 25M。
  
 
 

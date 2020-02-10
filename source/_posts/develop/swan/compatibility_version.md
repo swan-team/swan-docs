@@ -9,8 +9,6 @@ sidebar: compatibility_version
 
 在上线小程序之前，您可根据业务需要，设置最低基础库版本。
 
-> 一个百度 App 版本对应多个基础库版本，具体映射关系详见[版本分布](https://smartprogram.baidu.com/docs/develop/swan/version/)。
-
 * 初次发布小程序包
 
   如您初次发布小程序包，在选择最低基础库版本后，该基础库版本及基础库更高版本所对应的百度 App 使用者，将可正常使用您的小程序；低版本使用者，则会收到升级百度 App 的提示。

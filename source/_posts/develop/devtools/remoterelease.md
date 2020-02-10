@@ -49,7 +49,7 @@ sidebar: remoterelease
 真机调试的渲染页面分为俩个，手机上的页面和电脑上的镜像页面，都是真机调试的页面，以手机上渲染的页面为准。因为电脑的镜像页面，没办法渲染Native的组件，如底部的Tabbar、map等等组件。建议电脑上的镜像页面，仅仅作为调试页面结构和CSS使用。
 
 #### iOS如何真机上调试？
-iOS暂时不支持真机调试，建议使用 [远程调试](https://smartprogram.baidu.com/docs/develop/debug/remotedebugging/) 。
+iOS暂时不支持真机调试，建议使用 [远程调试](https://smartprogram.baidu.com/docs/develop/devtools/remotedebugging/) 。
 
 #### 其他真机调试相关问题或者建议？
 真机调试相关的问题，可以联系客服微信：`wx2swan-helper`，验证信息 `真机调试`。

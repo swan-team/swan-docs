@@ -93,6 +93,16 @@ App 多次触发 onShow 事件，获得的场景值可能有所不同。如，�
 |---|---|---|
 |扫码|	11800000|<div class="show-scene-container"><span class="show-scene-btn">查看</span><div class="img-container"><img src="../../img/introduction/base/二维码.jpg"/></div></div>|
 
+## 商业广告
+
+|场景|	scene值| 图例|
+|---|---|---|
+|闪投|	11010018|	/|
+|品专|	11010019|	/|
+|品牌|	11010072|	/|
+|原生|	11010020|	/|
+|凤巢|	11010061|	/|
+
 ## 贴吧小程序	
 |场景|	scene值| 图例|
 |---|---|---|

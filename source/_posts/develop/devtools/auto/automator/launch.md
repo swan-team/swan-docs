@@ -14,7 +14,7 @@ automator.launch(options: Object): Promise<SmartProgram>
 **`options`参数说明：**
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |projectPath| String|是|- |项目绝对路径|
 |cliPath| String|否|- |开发者工具命令行工具绝对路径，安装时使用默认安装路径的情况下无须指定|
 |timeout| Number|否|40 * 1000|启动最长等待时间（ms）|

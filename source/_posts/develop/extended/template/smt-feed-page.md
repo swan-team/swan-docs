@@ -7,6 +7,8 @@ sidebar:  template
 
 **解释**：信息流模板：包含下拉刷新、加载、多种信息流子项（纯文本、左文右图、大图、多图及视频模式）。
 
+## 示例
+
 ### 扫码体验
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-feed-page.png"  class="demo-qrcode-image" />

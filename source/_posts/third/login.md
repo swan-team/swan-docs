@@ -8,7 +8,7 @@ sidebar: login
 
 ## 登录接口
 
-> 第三方平台代替小程序实现登录功能请参考<a href="https://smartprogram.baidu.com/docs/develop/api/open_log/#swan-login"> 小程序登录 </a> 。除了下述部分以外，其他接口的功能与小程序实现方式一致。
+> 第三方平台代替小程序实现登录功能请参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-login/#swan-login"> 小程序登录 </a> 。除了下述部分以外，其他接口的功能与小程序实现方式一致。
 
 > code换取session_key
 

@@ -155,7 +155,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 
 **注意**：
-* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`基础库版本 2.10.34`开始支持，`iOS`从`基础库 3.0.39`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
+* navigationStyle 全局配置`Android`和`iOS`从基础库版本 2.10.34 开始支持, 但子页面配置支持情况`Android`从`基础库版本 2.10.34`开始支持，`iOS`从`基础库 3.0.39`开始支持, 做低版本兼容时，通过 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfo">swan.getSystemInfo</a> 或者 <a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync">swan.getSystemInfoSync</a> 获取百度 App版本号进行兼容判断，具体见下表；
 * 无其它特殊说明，请使用`canIUse`或者`SWAN基础库版本`进行兼容判断。
 
 **navigationStyle配置**

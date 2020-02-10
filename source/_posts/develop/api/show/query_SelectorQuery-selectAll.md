@@ -9,16 +9,25 @@ sidebar: query_SelectorQuery-selectAll
 
 **解释**： 在当前页面下选择匹配选择器 selector 的节点，返回一个 NodesRef 对象实例。 与 selectorQuery.select(selector) 不同的是，它选择所有匹配选择器的节点。
 
-**百度APP中扫码体验：**
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_selectAll.png" class="demo-qrcode-image" />
+String selector
 
-**方法参数**：String selector
+### 返回值 
 
-**返回值**：nodesRef
+NodesRef
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/ef40dd74ad85f57b7b43cdafb8bf4bd91574490603250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+### 扫码体验
+
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_selectAll.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/selectorQuerySelectAll.gif">
@@ -31,9 +40,9 @@ sidebar: query_SelectorQuery-selectAll
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/ef40dd74ad85f57b7b43cdafb8bf4bd91574490603250" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 

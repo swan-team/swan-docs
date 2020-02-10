@@ -18,7 +18,7 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |image|	String|是| - |图像资源地址|
 |custom_lib	|Boolean	|否|	-|是否只检索用户子库，true则只检索用户子库，false(默认)为检索底库+用户子库。|
 |success |Function    |否 | |      接口调用成功的回调函数|
@@ -37,7 +37,7 @@ Object object
 ### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|:---|:---|:---|:---|
 |type|     Number| type=0 为1千种高优商标识别结果；type=1 为2万类logo库的结果；其它type为自定义logo库结果。|
 |name|     String| 识别的品牌名称|
 |probability|     Number| 分类结果置信度（0--1.0）|
@@ -46,7 +46,7 @@ Object object
 ### location 返回值说明 
 
 |参数名 | 参数类型 |说明  |
-|---|---|---|---|
+|:---|:---|:---|:---|
 |left|	Number|	左起像素位置|
 |top|		Number|	上起像素位置|
 |width|	Number|	像素宽|

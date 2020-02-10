@@ -8,16 +8,15 @@ sidebar:  toast_swan-showToast
 
 **解释**：显示消息提示框
 
-**百度APP中扫码体验：**
+ 
+## 方法参数 
 
-<img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_Toast.png"  class="demo-qrcode-image" />
+Object object
 
-**方法参数**：Object object
-
-**`object`参数说明**：
+###  `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|---- | ---- | ---- | ----|----|
+|:---- |:---- |:---- |:----|:----|
 |title  | String | 是  | | 提示的内容 |
 |icon | String | 否  | success|图标，有效值` "success"、"loading"、"none"`。 |
 |image  |  String | 否 | | 自定义图标的本地路径，image 的优先级高于 icon |
@@ -27,16 +26,25 @@ sidebar:  toast_swan-showToast
 |complete   | Function |   否| |  接口调用结束的回调函数（调用成功、失败都会执行）|
 |mask|Boolean|否|false|是否显示透明蒙层，防止触摸穿透。|
 
-**icon有效值**
+###  icon有效值 
 
 |有效值 |说明  |
-|---- | ---- |
+|:-|:-|
 |success | 显示成功图标，此时 title 文本最多显示 7 个汉字长度。默认值 |
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
+## 示例
 
-**图片示例**
+<a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
+### 扫码体验
 
+<div class='scan-code-container'>
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_Toast.png" class="demo-qrcode-image" />
+    <font color=#777 12px>请使用百度APP扫码</font>
+</div>
+
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/showToast.gif">
@@ -49,9 +57,9 @@ sidebar:  toast_swan-showToast
     </div>     
 </div>
 
-**代码示例**
+### 代码示例 
 
-<a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 
 * 在 swan 文件中
 
@@ -124,7 +132,7 @@ Page({
 });
 ```
 
-**代码示例2 - 开发者可自定义showToast样式**
+### 代码示例2 - 开发者可自定义showToast样式 
 
 <a href="swanide://fragment/392bbc1fb46cce63621c37aac706635e1575824847831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -186,7 +194,7 @@ Page({
 })
 ```
 
-**代码示例3 - showModal和showToast是否可共存**
+### 代码示例3 - showModal和showToast是否可共存 
 
 <a href="swanide://fragment/2a833f9c7f164efca05ade83ff9869de1576559710455" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -234,25 +242,25 @@ Page({
 });
 ```
 
-**Bug&Tip**：
-
-* [swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个
-* swan.showToast 应与 [swan.hideToast](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/) 配对使用
 
 
-#### 错误码
-* Andriod
+##   错误码
+### Android
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确      |
 |302|找不到调起协议对应端能力方法|
 
-* iOS
+### iOS
 
 |错误码|说明|
-|--|--|
+|:--|:--|
 |202|解析失败，请检查参数是否正确      |
 
 
-   
+## Bug&Tip  
+
+* Tip：[swan.showLoading](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showLoading/) 和 swan.showToast 同时只能显示一个。
+* Tip：swan.showToast 应与 [swan.hideToast](https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-hideToast/) 配对使用。
+
