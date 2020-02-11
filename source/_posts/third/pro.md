@@ -70,7 +70,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 参数说明
 
 |参数名	|类型|	是否必须|	描述|
-|---|---|---|
+|---|---|---|---|
 |client_id|	string|	是|	第三方平台Key	 |
 |ticket	|string	|是|	第三方平台服务器推送的 ticket，此 ticket 会定时推送，具体请见“1、 推送ticket协议”。|
 返回值说明
@@ -80,6 +80,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 |access_token|	string|	第三方平台access_token|
 |expires_in	|int|	凭证有效时间，单位：秒|
 |scope|	string|	拥有的权限说明|
+
 错误情况下:
 
 |字段名|	类型|	描述|
@@ -417,10 +418,10 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/auth/retrieve/authorizationcode
 ```
 
 ##### 参数说明:
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token	|string |是 | 第三方平台access_token
-app_id | int | 是 | 小程序app_id
+|参数名 | 类型 | 是否必须 | 描述|
+|----- |-----| ------| -----|
+|access_token	|string |是 | 第三方平台access_token|
+|app_id | int | 是 | 小程序app_id|
 
 ##### 返回值说明:
 
@@ -442,9 +443,9 @@ app_id | int | 是 | 小程序app_id
 ```
 
 ##### 错误码表
-错误码 | 错误描述 | 
------ |-----
-50032| 没有授权关系，请检查
+|错误码 | 错误描述 | 
+|----- |-----|
+|50032| 没有授权关系，请检查|
 
 ### 10、推送授权相关通知
 当小程序对第三方平台进行授权、取消授权、更新授权后，百度服务器会向第三方平台方的授权事件接收URL（创建第三方平台时填写）推送相关通知。

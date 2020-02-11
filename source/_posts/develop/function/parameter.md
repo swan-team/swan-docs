@@ -1,10 +1,10 @@
-
 ---
 title: 核心参数获取与组装
 header: develop
 nav: function
 sidebar: parameter
 ---
+
 ## 核心参数获取 
 
 ### 参数解释
