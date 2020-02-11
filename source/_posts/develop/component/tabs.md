@@ -50,27 +50,23 @@ sidebar: tabs
     </div>     
 </div>
 
-###  代码示例 1 ：普通标签栏组件
-
-<a href="swanide://fragment/ffdd42b9621602c7a89cdfa7e4cfab7b1566986567638" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+###  代码示例 1 ：默认样式(普通标签栏)
 
 * 在 swan 文件中
 
 ```html
-<tabs
-    tabs-background-color="#3388ff"
-    tabs-underline-color = "#fff"
-    tabs-inactive-text-color="#fff"
-    tabs-active-text-color="#fff"
-    bindtabchange="onTabClick"
-    active-name="{{activeName}}">
-    <tab-item
-        s-for="tab in tabs"
-        badge-type="{{tab.badgeType}}"
-        badge-text="{{tab.badgeText}}"
-        name="{{tab.name}}"
-        label="{{tab.label}}" />
-</tabs>
+<view class="card-area">
+    <view class="top-description border-bottom">默认样式</view>
+    <tabs 
+        class="border-bottom"
+        active-name="{{activeName}}" 
+        bindtabchange="tabsOne">
+        <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
+    </tabs>
+    <view class="intro">
+        <view>标签{{content}}内容展示区</view>
+    </view>
+</view>
 ```
 
 * 在 js 文件中
@@ -79,33 +75,303 @@ sidebar: tabs
 Page({
     data: {
         tabs: [{
-            name: 'beijing',
-            label: '北京',
-            badgeType: 'dot'
-        },
-        {
-            name: 'shanghai',
-            label: '上海' ,
-            badgeType: 'text'
-            badgeText: '66'
-        },
-        {
-            name: 'guangzhou',
-            label: '广州'
-        }]
+            name: '一',
+            label: '标签一'
+        }, {
+            name: '二',
+            label: '标签二'
+        }, {
+            name: '三',
+            label: '标签三'
+        }],
+        content: '一',
     },
-    onTabClick(e) {
+    tabsOne(e) {
         console.log(e.detail.name);
         this.setData({
-            activeName: e.detail.name,
-        });
+            content: e.detail.name,
+            activeName: e.detail.name
+        })
     }
 });
 ```
 
-###  代码示例 2 ：可寻址标签栏组件
+###  代码示例 2 ：可横滑展示
 
-<a href="swanide://fragment/794216313384422b8dbf901aed3240441574300960227" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>可横滑显示</view>
+        <view>max-tab-item-amount='7'</view>
+    </view>
+    <tabs 
+        url-query-name="two" 
+        max-tab-item-amount='5' 
+        class="border-bottom" 
+        bindtabchange="tabsTwo">
+        <tab-item s-for="tab in tabsTwo" name="{{tab.name}}" label="{{tab.label}}" />
+    </tabs>
+    <view class="intro">
+        <view>标签{{contentTwo}}内容展示区</view>
+    </view>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+
+Page({
+    data: {
+        tabsTwo: [{
+            name: '一',
+            label: '标签一'
+        }, {
+            name: '二',
+            label: '标签二'
+        }, {
+            name: '三',
+            label: '标签三'
+        }, {
+            name: '四',
+            label: '标签四'
+        }, {
+            name: '五',
+            label: '标签五'
+        }, {
+            name: '六',
+            label: '标签六'
+        }, {
+            name: '七',
+            label: '标签七'
+        }],
+        contentTwo: '一'
+    },
+    tabsTwo(e) {
+        console.log(e.detail.name);
+        this.setData({
+            contentTwo: e.detail.name
+        })
+    }
+});
+
+```
+
+###  代码示例 3 ：自定义样式
+
+
+* 在 swan 文件中
+
+```html
+
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>自定义样式</view>
+    </view>
+    <tabs 
+        url-query-name="three" 
+        class="border-bottom"
+        tabs-background-color="#3388ff"
+        tabs-underline-color = "#fff"
+        tabs-inactive-text-color="#fff"
+        tabs-active-text-color="#fff"
+        bindtabchange="tabsThree"
+        >
+        <tab-item s-for="tab in tabsThree" 
+                  name="{{tab.name}}" 
+                  label="{{tab.label}}" />
+    </tabs>
+    <view class="intro">
+        <view>标签{{contentThree}}内容展示区</view>
+    </view>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+
+Page({
+    data: {
+        tabsThree: [{
+            name: '一',
+            label: '标签一',
+        }, {
+            name: '二',
+            label: '标签二',
+        }, {
+            name: '三',
+            label: '标签三'
+        }],
+        contentThree: '一'
+    },
+    tabsThree(e) {
+        console.log(e.detail.name);
+        this.setData({
+            contentThree: e.detail.name
+        })
+    }
+});
+
+```
+
+###  代码示例 4 ：显示徽标
+
+
+* 在 swan 文件中
+
+```html
+
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>显示徽标</view>
+    </view>
+    <tabs url-query-name="four" class="border-bottom" bindtabchange="tabsFour">
+        <tab-item 
+            badge-type="{{tab.badgeType}}"
+            badge-text="{{tab.badgeText}}"
+            s-for="tab in tabsFour" 
+            name="{{tab.name}}" 
+            label="{{tab.label}}" />
+    </tabs>
+    <view class="intro">
+        <view>标签{{contentFour}}内容展示区</view>
+    </view> 
+</view> 
+
+```
+
+* 在 js 文件中
+
+```js
+
+Page({
+    data: {
+        tabsFour: [{
+            name: '一',
+            label: '标签一',
+            badgeType: 'text',
+            badgeText: '99+'
+        }, {
+            name: '二',
+            label: '标签二',
+            badgeType: 'dot'
+        }, {
+            name: '三',
+            label: '标签三'
+        }],
+        contentFour: '一'
+    },
+    tabsFour(e) {
+        console.log(e.detail.name);
+        this.setData({
+            contentFour: e.detail.name
+        })
+    }
+});
+
+```
+
+###  代码示例 5 ：跳转寻址
+
+* 旧页面:
+
+* 在 swan 文件中
+
+```html
+
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>支持寻址</view>
+    </view>
+    <button type="primary" bind:tap="enterNewTabsPage">进入页面并定位到标签二</button>
+</view>
+
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        tabsFour: [{
+            name: '一',
+            label: '标签一',
+            badgeType: 'text',
+            badgeText: '99+'
+        }, {
+            name: '二',
+            label: '标签二',
+            badgeType: 'dot'
+        }, {
+            name: '三',
+            label: '标签三'
+        }],
+        contentFour: '一'
+    },
+    enterNewTabsPage() {
+        swan.navigateTo({
+            url: "/newTabs/newTabs?position=二"
+        });
+    }
+});
+
+```
+
+* 新页面:
+
+* 在 swan 文件中
+
+```html
+
+<tabs url-query-name="position" class="border-bottom">
+    <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
+</tabs>
+
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        tabs: [{
+            name: '一',
+            label: '标签一'
+        }, {
+            name: '二',
+            label: '标签二'
+        }, {
+            name: '三',
+            label: '标签三'
+        }],
+        content: '一'
+    },
+    onLoad(query) {
+        console.log(query);
+        swan.setURLQuery(query);
+        this.setData({
+            content: query.position
+        });
+    },
+    onURLQueryChange({newURLQuery, oldURLQuery}) {
+        console.log(oldURLQuery, newURLQuery);
+        this.setData({
+            content: `${newURLQuery.position}`
+        });
+    }
+});
+
+```
+
+
+###  代码示例 6 ：可寻址标签栏
 
 
 * 在 swan 文件中
@@ -174,3 +440,7 @@ Page({
 
  相关链接 ：
 [onURLQueryChange](https://smartprogram.baidu.com/docs/develop/api/url_query/onURLQueryChange/)
+
+##  Bug & Tip 
+
+* Bug：页面中有多个tab组件时，已知徽标会错位，css里全局设置 *{box-sizing: content-box;} 做兼容。
