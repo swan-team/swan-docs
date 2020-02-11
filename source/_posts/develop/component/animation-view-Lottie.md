@@ -44,7 +44,7 @@ sidebar: base_animation-view-Lottie
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/animation-view.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/lottie.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

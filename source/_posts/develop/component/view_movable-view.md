@@ -58,7 +58,7 @@ sidebar: view_movable-view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/movable-view.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/movable-view.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

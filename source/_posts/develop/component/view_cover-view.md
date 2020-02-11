@@ -31,7 +31,7 @@ sidebar: view_cover-view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/cover-view.png">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/cover-view.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src="">

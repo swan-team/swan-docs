@@ -43,7 +43,7 @@ sidebar: base_text
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/text.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/text.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

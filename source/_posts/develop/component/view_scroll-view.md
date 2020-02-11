@@ -43,7 +43,7 @@ sidebar: view_scroll-view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src=" https://b.bdstatic.com/miniapp/images/scroll-view.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/scroll-view.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

@@ -86,10 +86,10 @@ sidebar: formlist_button
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/button.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/button.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src=" ">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/button-contact.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

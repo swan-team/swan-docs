@@ -52,7 +52,7 @@ sidebar: base_icon
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/icon.jpeg">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/icon.jpeg">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
