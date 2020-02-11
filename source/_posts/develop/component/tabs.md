@@ -27,16 +27,12 @@ sidebar: tabs
 <a href="swanide://fragment/554b5ec0fb2f1b226477a355d32c77a81577363516679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
-* 普通标签栏组件
+
 <div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/normalTabs.png" class="demo-qrcode-image" />
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/tabs.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
-* 可寻址标签栏组件
-<div>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/urlTabs.png" class="demo-qrcode-image" />
-    <font color=#777 12px>请使用百度APP扫码</font>
-</div>
+
 普通标签栏组件与可寻址标签栏组件的区别是：可寻址标签栏组件在标签栏 tab 切换时，该页面的 uri 参数会同步变化；反之，跳转某页面 uri 时，指定标签栏栏绑定的参数值也会打开该值对应的 tab 页。由于这种绑定关系的存在，相比于普通标签栏栏，可寻址标签栏栏更利于搜索引擎收录。 建议开发者尽量使用可寻址标签栏栏组件实现页面主标签栏栏功能 。例如：主页的多频道切换。
 
 标签栏组件的使用需要通过 tabs 和 [tab-item](https://smartprogram.baidu.com/docs/develop/component/tab-item/) 组件配合实现。
@@ -44,7 +40,7 @@ sidebar: tabs
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/normalTabs.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/tabs.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -106,20 +102,6 @@ Page({
     }
 });
 ```
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/tabUrls1.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ###  代码示例 2 ：可寻址标签栏组件
 

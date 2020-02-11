@@ -101,204 +101,6 @@ sidebar: media_video
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/controls.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-###  代码示例1 - controls  
-
-<a href="swanide://fragment/1d10a86e191b4738516ec73594f6cdd51574846726432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="wrap">
-    <view class="video-wrap">
-        <video style="width: 100%;"
-               id="myVideo"
-               src="{{src}}"
-               controls="{{controls}}"
-               >
-        </video>
-    </view>
-    <button hover-class="hover" type="primary" bindtap="controls">显示默认播放控件</button>   
-</view>
-```
-
-* 在 js 文件中
-
-```javascript
-Page({
-    data: {
-        src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
-        controls: true
-    },
-    controls() {
-        this.setData({
-            controls: !this.data.controls
-        });
-    }
-})
-```
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/video-title.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div> 
-</div>
-
-###  代码示例2 - title  
-
-<a href="swanide://fragment/687b1ab6bd713b0fa80553503515d6651574851958216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="wrap">
-    <view class="video-wrap">
-        <video style="width: 100%;"
-               id="myVideo"
-               src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
-               title="全屏title">
-        </video>
-    </view>
-</view>
-```
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/direction.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div> 
-</div>
-
-###  代码示例3 - direction  
-
-<a href="swanide://fragment/5a3e88566c4579b2b373ea6b1f4f7a631574853407212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="wrap">
-    <view class="video-wrap">
-        <video style="width: 100%;"
-               id="myVideo"
-               src="{{src}}"
-               direction="{{direction}}"
-               >
-        </video>
-    </view>
-    <button data-direction='0' type="primary" bindtap="changeFullScreen">正常竖向</button>
-     <button data-direction='90' type="primary" bindtap="changeFullScreen">屏幕顺时针90度</button>
-      <button data-direction='-90' type="primary" bindtap="changeFullScreen" >屏幕逆时针90度</button>
-</view>
-```
-
-* 在 js 文件中
-
-```js
-Page({
-    data: {
-        src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
-        direction: 0
-    },
-    changeFullScreen(e) {
-        this.setData('direction', +e.target.dataset.direction);
-    }
-});
-```
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/showProgress.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-###  代码示例4 - show-progress  
-
-<a href="swanide://fragment/6d40cf6c497c6eecf9f044a4ff9ff0901574854124112" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="wrap">
-    <view class="video-wrap">
-        <video style="width: 100%;"
-               id="myVideo"
-               src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
-               show-progress="{{true}}">
-        </video>
-    </view>
-</view>
-```
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/showNoWIfiTip.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-###  代码示例5 - show-no-wifi-tip  
-
-<a href="swanide://fragment/f29d4f8d9d6884709607949f354aa7b91574854980912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
-* 在 swan 文件中
-
-```xml
-<view class="wrap">
-    <view class="video-wrap">
-        <video style="width: 100%;"
-               id="myVideo"
-               src="{{src}}"
-               show-no-wifi-tip="{{true}}"
-               >
-        </video>
-    </view>
-</view>
-```
-
 ###  图片示例 
 
 <div class="m-doc-custom-examples">
@@ -313,7 +115,7 @@ Page({
     </div>     
 </div>
 
-###  整体代码示例  
+###  代码示例1
 
 <a href="swanide://fragment/cf193e3b46933a9c48cdf78994ca79cf1574845335256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -531,6 +333,203 @@ Page({
         });
     }
 });
+```
+
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/controls.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+###  代码示例2 - controls  
+
+<a href="swanide://fragment/1d10a86e191b4738516ec73594f6cdd51574846726432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="video-wrap">
+        <video style="width: 100%;"
+               id="myVideo"
+               src="{{src}}"
+               controls="{{controls}}"
+               >
+        </video>
+    </view>
+    <button hover-class="hover" type="primary" bindtap="controls">显示默认播放控件</button>   
+</view>
+```
+
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
+        controls: true
+    },
+    controls() {
+        this.setData({
+            controls: !this.data.controls
+        });
+    }
+})
+```
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/video-title.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+</div>
+
+###  代码示例3 - title  
+
+<a href="swanide://fragment/687b1ab6bd713b0fa80553503515d6651574851958216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="video-wrap">
+        <video style="width: 100%;"
+               id="myVideo"
+               src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
+               title="全屏title">
+        </video>
+    </view>
+</view>
+```
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/direction.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div> 
+</div>
+
+###  代码示例4 - direction  
+
+<a href="swanide://fragment/5a3e88566c4579b2b373ea6b1f4f7a631574853407212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="video-wrap">
+        <video style="width: 100%;"
+               id="myVideo"
+               src="{{src}}"
+               direction="{{direction}}"
+               >
+        </video>
+    </view>
+    <button data-direction='0' type="primary" bindtap="changeFullScreen">正常竖向</button>
+     <button data-direction='90' type="primary" bindtap="changeFullScreen">屏幕顺时针90度</button>
+      <button data-direction='-90' type="primary" bindtap="changeFullScreen" >屏幕逆时针90度</button>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+Page({
+    data: {
+        src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
+        direction: 0
+    },
+    changeFullScreen(e) {
+        this.setData('direction', +e.target.dataset.direction);
+    }
+});
+```
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/showProgress.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+###  代码示例5 - show-progress  
+
+<a href="swanide://fragment/6d40cf6c497c6eecf9f044a4ff9ff0901574854124112" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="video-wrap">
+        <video style="width: 100%;"
+               id="myVideo"
+               src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
+               show-progress="{{true}}">
+        </video>
+    </view>
+</view>
+```
+
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/showNoWIfiTip.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+###  代码示例6 - show-no-wifi-tip  
+
+<a href="swanide://fragment/f29d4f8d9d6884709607949f354aa7b91574854980912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="video-wrap">
+        <video style="width: 100%;"
+               id="myVideo"
+               src="{{src}}"
+               show-no-wifi-tip="{{true}}"
+               >
+        </video>
+    </view>
+</view>
 ```
 
 

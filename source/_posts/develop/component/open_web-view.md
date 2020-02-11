@@ -34,7 +34,7 @@ sidebar: open_web-view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/web-view.jpeg">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/webview.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

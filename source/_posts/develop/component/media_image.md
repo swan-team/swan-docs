@@ -56,28 +56,14 @@ sidebar: media_image
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image1.png">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/image1.jpeg">
     </div>
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image3.png">
-    </div>              
-</div>
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image4.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image5.png">
-    </div>   
-</div>
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/image2.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div> 
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/image2.png">
     </div>    
+    <div class="m-doc-custom-examples-correct">
+        <img src="">
+    </div>          
 </div>
 
 ###  代码示例 1： 缩放模式  

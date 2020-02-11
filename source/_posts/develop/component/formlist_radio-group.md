@@ -31,7 +31,7 @@ sidebar: formlist_radio-group
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/radio.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/radio.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

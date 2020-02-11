@@ -42,7 +42,7 @@ sidebar: base_progress
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/progress.jpeg">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/progress.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

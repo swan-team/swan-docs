@@ -32,7 +32,7 @@ sidebar: view_cover-image
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/cover-image.png">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/cover-image.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src="">

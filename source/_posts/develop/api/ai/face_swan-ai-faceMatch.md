@@ -51,7 +51,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/ae12872d24c04bfd2071e38cbbf2a1aa1569415830853" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0c3aa8fb2214fce7ec54e01c8fd091ef1581336553712" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceMatch.png" class="demo-qrcode-image" />
@@ -79,28 +79,38 @@ Object object
 ```js
 Page({
     faceMatch() {
-        swan.ai.faceMatch({
-            data: [{
-                    "image": "https://www.downloadImage.com/xxxx.jpg",
-                    "image_type": "URL",
-                    "face_type": "LIVE",
-                    "quality_control": "LOW",
-                    "liveness_control": "HIGH"
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.ai.faceMatch({
+                data: [{
+                        "image": "https://www.downloadImage.com/xxxx.jpg",
+                        "image_type": "URL",
+                        "face_type": "LIVE",
+                        "quality_control": "LOW",
+                        "liveness_control": "HIGH"
+                    },
+                    {
+                        "image": "https://www.downloadImage.com/xxxx.jpg",
+                        "image_type": "URL",
+                        "face_type": "IDCARD",
+                        "quality_control": "LOW",
+                        "liveness_control": "HIGH"
+                }],
+                success: res => {
+                    console.log('res');
                 },
-                {
-                    "image": "https://www.downloadImage.com/xxxx.jpg",
-                    "image_type": "URL",
-                    "face_type": "IDCARD",
-                    "quality_control": "LOW",
-                    "liveness_control": "HIGH"
-            }],
-            success: res => {
-                console.log('res');
-            },
-            fail: err => {
-                console.log('err');
-            }
-        });
+                fail: err => {
+                    console.log('err');
+                }
+            });
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 });
 ```

@@ -848,7 +848,6 @@ https://smartprogram.baidu.com/docs/develop/function/navigation/
 https://smartprogram.baidu.com/docs/develop/function/opensmartprogram/
 https://smartprogram.baidu.com/docs/develop/function/webintroduction/
 https://smartprogram.baidu.com/docs/develop/function/proposal/
-https://smartprogram.baidu.com/docs/develop/function/pay/
 https://smartprogram.baidu.com/docs/develop/function/invoke_process/
 https://smartprogram.baidu.com/docs/develop/function/parameter/
 https://smartprogram.baidu.com/docs/develop/function/sign_v2/
