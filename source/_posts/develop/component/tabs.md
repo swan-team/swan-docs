@@ -381,6 +381,8 @@ Page({
 <tabs url-query-name="city">
     <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
 </tabs>
+<!-- 查看页面uri变化 -->
+<view class="wrap">{{content}}</view>
 ```
 
 * 在 js 文件中
@@ -399,32 +401,26 @@ Page({
         {
             name: 'guangzhou',
             label: '广州'
+        }, 
+        {
+            name: 'shenzhen',
+            label: '深圳'
         }, {
-	    name: 'shenzhen',
-	    label: '深圳'
-	}, {
-	    name: 'xiamen',
-	    label: '厦门'
-	}, {
-	    name: 'haerbin',
-	    label: '哈尔滨'
-	}]
-    },
-    onLoad(query) {
-        if (query.city) {
-            // 如果页面加载的时候，query是预期的，则不需要调用 swan.setURLQuery
-            // 请求页面数据
-        }
-        else {
-            swan.setURLQuery({
-                city: 'shanghai'
-            });
-        }
+            name: 'xiamen',
+            label: '厦门'
+        }, {
+            name: 'haerbin',
+            label: '哈尔滨'
+        }],
+        content: 'beijing'
     },
     // 监听函数，点击切换 tabs 组件或者调用 swan.setURLQuery 时，url 发生变化自动触发
     onURLQueryChange({newURLQuery, oldURLQuery}) {
         console.log(newURLQuery, oldURLQuery)
-	// 此时tab切换，刷新tabs下方视图数据
+        this.setData({
+            content: `${oldURLQuery.city || 'beijing'} To ${newURLQuery.city}`
+        })
+	    // 此时tab切换，刷新tabs下方视图数据
     }
 });
 
