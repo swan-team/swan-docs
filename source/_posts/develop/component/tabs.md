@@ -426,7 +426,6 @@ Page({
 
 ```
 
-
 > active-name 和 url-query-name 不要搭配在一起使用：
 * 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
 * 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name
