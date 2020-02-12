@@ -153,3 +153,16 @@ Component({
   }
 })
 ```
+逻辑层在设置数据后可执行函数。
+
+**代码示例**
+
+```js
+
+this.setData({
+    text: 'Set some data for updating view.'
+}, function() {
+    // this is setData callback
+})
+
+```
