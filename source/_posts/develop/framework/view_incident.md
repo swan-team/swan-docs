@@ -81,7 +81,7 @@ Page({
 捕获阶段是位于冒泡阶段之前，在捕获阶段中，事件到达节点的顺序与冒泡阶段恰好相反。
 在捕获阶段监听的方式是采用`capture-bind`、`capture-catch`关键字，后者将中断捕获阶段和取消冒泡阶段。
 
-**代码示例**
+**代码示例：capture-bind**
 ```xml
 <view id="wrap" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
     wrap
@@ -92,6 +92,18 @@ Page({
 ```
 **效果**：
 - 用户单击 text 会先后调用 handleTap2、handleTap4、handleTap3、handleTap1。
+
+**代码示例：capture-catch**
+```xml
+<view id="wrap" bind:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
+    wrap
+    <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+        text
+    </view>
+</view>
+```
+**效果**：
+- 用户单击 text 只会调用 handleTap2。
 
 ### 事件对象
 
@@ -109,7 +121,40 @@ Page({
 |touches |  Array   | 触摸事件类型存在，存放当前停留在屏幕中的触摸点信息的数组，touch 详细属性参见 [touch](./#touch) |
 |changedTouches |  Array   | 触摸事件类型存在，存放当前变化的触摸点信息的数组, changedTouch [changedTouch](./#changedTouch)  |
 
-下面是事件对象的属性为属性值集合时的详细信息。
+###  代码示例 ：
+
+<a href="swanide://fragment/1b0c5cee172837ce9047684e6d9d57351581435223974" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```html
+<view id="outer" catchtap="handleTap">
+    <view id="inner">点击我</view>
+</view>
+```
+
+* 在 js 文件中
+
+```js
+
+Page({
+    handleTap: function(e) {
+        console.log(e);
+        // e.type == “tap”
+        // e.timeStamp == 1542
+        // e.detail == {x: 270, y: 63}
+        // e.touches == [{identifier: 0, pageX: 270, pageY: 63, clientX: 270, clientY: 63}]
+        // e.changedTouches == [{identifier: 0, pageX: 270, pageY: 63, clientX: 270, clientY: 63}]
+        // 当点击inner节点时
+        // e.target 是inner view组件
+        // e.currentTarget 是绑定了handleTap的outer view组件
+    }
+})
+
+```
+
+下面是事件对象的属性为属性值集合时的详细信息。这里需要注意的是target和currentTarget的区别,currentTarget为当前事件所绑定的组件，而target则是触发该事件的源头组件。
+
 #### target
 
 |属性 | 类型  |  说明|
