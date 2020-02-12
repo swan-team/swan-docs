@@ -165,6 +165,10 @@
                     link: /introduction/auditinginfo_vertical
                     text: 分垂类素材提交规范
                     name: auditinginfo_vertical
+                  -
+                    link: /introduction/whitebook2
+                    text: 百度信息流落地页体验白皮书 2.0
+                    name: whitebook2
               -
                 link: /introduction/auditing_faq
                 text: 信息流流量接入FAQ
