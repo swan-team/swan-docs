@@ -321,11 +321,12 @@
         '/docs/operations/list/': '/docs/operations/specification/',
         '/docs/operations/standard/': '/docs/operations/specification/',
         '/docs/introduction/rank_id/':'/docs/develop/fuctionlist/list/',
-        '/docs/develop/extended/component-content/concern/': '/docs/develop/extended/component-content/follow/'
+        '/docs/develop/extended/component-content/concern/': '/docs/develop/extended/component-content/follow/',
+        '/docs/introduction/register/index.html': '/docs/introduction/enter_application/'
     };
     if (!window.isSwanIde) {
         urlMap[pathname] && location.replace(urlMap[pathname]);
-        !pathname.match('\/$') && location.replace(pathname + '/');
+        !pathname.match('\/$') && !pathname.match('\.html$') && location.replace(pathname + '/');
     }
 }(location.pathname);
 
