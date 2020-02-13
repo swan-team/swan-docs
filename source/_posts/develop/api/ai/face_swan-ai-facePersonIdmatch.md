@@ -30,7 +30,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/53bba74307c3e4069bac51734e28fdd21569501442624" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/51ce25edcee87fd358b613451ec7030d1581337050829" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonIdmatch.png" class="demo-qrcode-image" />
@@ -58,16 +58,26 @@ Object object
 ```js
 Page({
     facePersonIdmatch() {
-        swan.ai.facePersonIdmatch({
-            id_card_number: '',
-            name: '',
-            success: res => {
-                console.log('success', res);
-            },
-            fail: err => {
-                console.log('fail', err);
-            }
-        });
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.ai.facePersonIdmatch({
+                id_card_number: '',
+                name: '',
+                success: res => {
+                    console.log('success', res);
+                },
+                fail: err => {
+                    console.log('fail', err);
+                }
+            });
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 });
 ```

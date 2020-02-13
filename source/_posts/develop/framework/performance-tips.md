@@ -68,6 +68,20 @@ JSON描述文件可以通过[jsonminify](https://www.cleancss.com/json-minify/)�
 setData方法是开发者通过逻辑层向视图层发送数据的方法。每一次 setData 的调用，都会触发一次通信，而每一次的通信都会消耗一定的系统资源，因此，开发者在使用 setData 需要注意以下几点：
 
 1. 不要过于频繁调用setData，应考虑将多次setData合并成一次setData调用。
+    
+    * **未优化情况下的做法**：
+    **代码示例**
+    ```javascript
+    this.setData({ a: 1 })
+    this.setData({ b: 2 })
+    ```
+
+    * **优化后的做法**:
+    **代码示例**
+    ```javascript
+    this.setData({ a: 1, b: 2 })
+    ```
+
 2. 不在视图层使用的数据不要通过setData传输。
 3. 不在页面不可见之后使用setData.
 4. 不建议在更新数据结构当中的某一子项的时候将整个数据结构放到setData方法中，可以通过优化setData的key值来实现。

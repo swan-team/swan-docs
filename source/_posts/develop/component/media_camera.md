@@ -51,6 +51,12 @@ sidebar: media_camera
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/camera.gif">
     </div> 
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>  
 </div>
 
 ###  代码示例 

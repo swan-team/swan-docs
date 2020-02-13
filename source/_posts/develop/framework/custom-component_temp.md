@@ -273,33 +273,4 @@ Component({
 }
 ```
 
-### 覆盖样式：（废弃）
-<font style="color: red">
 
-> 此规范与 BEM 规范相冲突，近期将重新设计此部分内容，请不要使用以下方式覆盖样式，除此之外也不要使用 `swan-tagName` 的方式覆盖样式。
-
-> 如果您已经使用了此方式，请尽快使用其他替代方案进行兼容处理。
-
-</font>
-
-自定义组件会给每个样式前面加上前缀，前缀的类型为:用户定义的自定组件名字 + "__"。
-例如：
-
-```json
-// JSON 文件里引用
-{
-    "usingComponents": {
-        "custom": "/components/custom/custom"
-    }
-}
-// /components/custom/custom的样式
-.cus { color: red; }
-
-```
-
-那么 custom的样式会转变为
-
-```
-.custom__cus { color: red; }
-```
-所以当新样式的优先级高于加了前缀的样式时，才能覆盖。

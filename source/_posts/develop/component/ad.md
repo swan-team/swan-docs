@@ -83,7 +83,7 @@ sidebar: ad
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src=" https://b.bdstatic.com/searchbox/icms/searchbox/img/ad.jpg">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/ad.png">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

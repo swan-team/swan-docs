@@ -43,7 +43,7 @@ sidebar: formlist_switch
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/switch.jpeg">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/switch.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

@@ -32,7 +32,7 @@ sidebar: view_view
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/component_view.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/view.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

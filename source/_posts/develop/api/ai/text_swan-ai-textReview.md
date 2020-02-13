@@ -10,7 +10,6 @@ sidebar: text_swan-ai-textReview
 **解释**：运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。
 
 
- 
 
 ## 方法参数
 
@@ -62,7 +61,7 @@ Object object
 ## 示例
 
  
-<a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/54968a2300bdceb92aa80c0e3f8bdbac1581328359072" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/textReview.png" class="demo-qrcode-image" />
@@ -90,15 +89,25 @@ Object object
 ```js
 Page({
     textReview() {
-        swan.ai.textReview({
-            content: '',
-            success: res => {
-              console.log('textReview res', res.result.spam); // 0 表示审核通过
-            },
-            fail: err => {
-              console.log('textReview err', err);
-            }
-      })
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.ai.textReview({
+                content: '',
+                success: res => {
+                  console.log('textReview res', res.result.spam); // 0 表示审核通过
+                },
+                fail: err => {
+                  console.log('textReview err', err);
+                }
+            })
+        }
+        else {
+          swan.showToast({
+              title: '此api目前仅可在百度App上使用',
+              icon: 'none'
+          });
+        }
     }
 });
 ```

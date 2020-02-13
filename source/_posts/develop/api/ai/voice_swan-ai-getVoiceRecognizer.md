@@ -48,5 +48,15 @@ voiceRecognizer
 
 
 ```js
-const voiceRecognizer = swan.ai.getVoiceRecognizer();
+// AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+let host = swan.getSystemInfoSync().host;
+if (host === 'baiduboxapp') {
+    const voiceRecognizer = swan.ai.getVoiceRecognizer();
+}
+else {
+    swan.showToast({
+        title: '此api目前仅可在百度App上使用',
+        icon: 'none'
+    });
+}
 ```

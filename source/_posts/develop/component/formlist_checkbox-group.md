@@ -33,7 +33,7 @@ sidebar: formlist_checkbox-group
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/checkbox.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/checkbox.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

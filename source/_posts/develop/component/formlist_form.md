@@ -60,7 +60,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/form.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/form.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

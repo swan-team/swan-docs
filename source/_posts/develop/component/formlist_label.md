@@ -32,7 +32,7 @@ sidebar: formlist_label
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/label.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/label.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

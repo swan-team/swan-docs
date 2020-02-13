@@ -55,7 +55,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/swiper.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/swiper.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

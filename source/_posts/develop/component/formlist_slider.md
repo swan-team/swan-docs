@@ -42,7 +42,7 @@ sidebar: formlist_slider
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/slider.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/slider.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

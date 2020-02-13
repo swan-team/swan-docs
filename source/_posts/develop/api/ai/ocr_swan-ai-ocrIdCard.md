@@ -91,9 +91,9 @@ Object object
     </div>     
 </div>
 
-### 代码示例1 - 参数属性全开启 ：
+### 代码示例：
 
-<a href="swanide://fragment/df2dc68bac6877259e9dc9f36e977b0a1558353838222" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/569e42bfc9ef31011422c3d3a246164b1581326963923" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -101,18 +101,28 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.ocrIdCard({
-                    detect_direction: true,
-                    id_card_side: 'front',
-                    image, // 暂不支持识别网络图片
-                    detect_risk: true,
-                    success: res => {
-                        console.log('ocrIdCard res', res.words_result);
-                    },
-                    fail: err => {
-                        console.log('ocrIdCard err', err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.ocrIdCard({
+                        detect_direction: true,
+                        id_card_side: 'front',
+                        image, // 暂不支持识别网络图片
+                        detect_risk: true,
+                        success: res => {
+                            console.log('ocrIdCard res', res.words_result);
+                        },
+                        fail: err => {
+                            console.log('ocrIdCard err', err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }
