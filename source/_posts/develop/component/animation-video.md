@@ -39,7 +39,7 @@ sidebar: animation-video
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/play.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/animation-video.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
@@ -55,22 +55,24 @@ sidebar: animation-video
 * 在 swan 文件中
 
 ```html
-<view class="container">
-   <animation-video
-        id ="myAnimationVideo"
-        path = "{{path}}"
-        bindstarted = "started"
-        bindended = "ended"
-        loop = "{{loop}}"
-        resource-width="800"
-        resource-height="400"
-        canvas-style ="width: 100%"
-    >
-    </animation-video>
-
-    <button class="btn" type="primary" bindtap="play">播放动画</button>
-    <button class="btn" type="primary" bindtap="pause">暂停动画</button>
-    <button class="btn" type="primary" bindtap="seek">跳转到2s</button>
+<view class="wrap">
+    <view class="card-area">
+        <view class="video-area">
+            <animation-video
+                id ="myAnimationVideo"
+                path="{{path}}"
+                loop="{{loop}}"
+                resource-width="800"
+                resource-height="400"
+                canvas-style="width:200px;height:200px"
+                autoplay="{{autoplay}}"
+                bindstarted="started"
+                bindended="ended"
+            ></animation-video>
+        </view>
+        <button class="btn" type="primary" bindtap="changeStatus">{{status}}动画</button>
+        <button class="btn" type="primary" bindtap="seek">跳转到动画2S处</button>
+    </view>
 </view>
 
 ```
@@ -79,38 +81,43 @@ sidebar: animation-video
 ```javascript
 Page({
     data: {
-        loop: false,
-        path: 'https://efe-h2.cdn.bcebos.com/ceug/resource/res/2020-1/1577964961344/003e2f0dcd81.mp4'
+        loop: true,
+        path: 'https://efe-h2.cdn.bcebos.com/ceug/resource/res/2020-1/1577964961344/003e2f0dcd81.mp4',
+        status: '暂停',
+        autoplay: true
     },
     onLoad() {
         // 创建动画组件实例
         this.myAnimationVideo = swan.createAnimationVideo('myAnimationVideo');
     },
-
-    play() {
-        // 动画播放
-        this.myAnimationVideo.play();
+    changeStatus() {
+        let action = this.data.status;
+        let status = action  === '暂停' ? '播放' : '暂停';
+        status === '暂停' ? this.myAnimationVideo.play() : this.myAnimationVideo.pause();
+        this.setData({status});
     },
-    pause() {
-        // 动画暂停
-        this.myAnimationVideo.pause();
-    },
-
     seek() {
-        // 动画跳转到 2 s
         this.myAnimationVideo.seek(2);
     },
-
     started() {
         console.log('动画开始播放');
     },
-
     ended() {
         console.log('动画结束播放');
     }
 });
+```
 
+* 在 css 文件中
 
+```css
+.video-area {
+    height: 2.18rem;
+    background: #343434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 ```
 
 

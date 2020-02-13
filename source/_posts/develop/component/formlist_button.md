@@ -272,3 +272,31 @@ Page({
 });
 ```
 
+### 代码示例 5：hover-stop-propagation属性
+
+<a href="swanide://fragment/cfafb425898e7b2e95bca2b6e98a18371581516515058" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+* 在 swan 文件中
+
+```xml
+<view class="wrap">
+    <view class="card-area" hover-class="hover">
+        <button type="primary" hover-stop-propagation='true'>
+            按钮
+        </button>
+    </view>
+</view>
+```
+
+* 在 css 文件中
+
+```css
+.hover {
+    opacity: .2;
+}
+
+.card-area {
+    background-color: #5B9FFF;
+}
+```
+

@@ -108,6 +108,46 @@ hello swan
 - 只能引用`.sjs`文件模块。
 - `sjs`模块均为单例，`sjs`模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个`sjs`模块对象。
 - 如果一个`sjs`模块在定义之后，一直没有被引用，则该模块不会被解析与运行。
+- 在 sjs 模块中引用其他 sjs 文件模块，可以使用 require 函数。
+
+**代码示例**
+<a href="swanide://fragment/bdb548875bd22d07e221c451fc3e760d1581523581407" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+```xml
+<import-sjs src="./../tools.sjs" module="logic"></import-sjs>
+```
+
+```js
+// pages/utils.sjs中编写SJS逻辑
+
+var foo = "hello world";
+var bar = function (d) {
+  return d;
+}
+module.exports = {
+  FOO: foo,
+  bar: bar,
+};
+module.exports.msg = "some msg";
+```
+
+```js
+var tools = require("utils.sjs");
+
+console.log(tools.FOO);
+console.log(tools.bar("tools.sjs"));
+console.log(tools.msg);
+```
+
+- 页面显示结果
+
+```
+hello world
+tools.sjs
+some msg
+```
+
 
 **2.作为SJS代码容器**
 
