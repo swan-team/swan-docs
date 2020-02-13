@@ -13,7 +13,7 @@ fileSystemManager.appendFileSync(path, data, encoding)
 |data|string/ArrayBuffer||是|要追加的文本或二进制数据|
 |encoding|string|`utf-8`||指定写入文件的字符编码|
 
-`encoding` 的合法值:
+`encoding` 的有效值:
 
 |值|描述|
 |-|-|

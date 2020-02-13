@@ -1,221 +1,233 @@
-function searchFunc(path, searchId, contentId) {
-    $.ajax({
-        url: path,
-        dataType: 'json',
-        success: function (datas) {
-            // remove gamedoc
-            datas = datas.filter(function(item) {
-                    return item.url.indexOf('/docs/game/') === -1;
-                });
-            var $resultContent = document.getElementById(contentId);
-            var $input = document.getElementById(searchId);
-            if (!$input || !$('#local-search-input').length) {
-                return;
-            }
-            function toggleArticleContent(isShown) {
-                var isToggle = typeof isShown === 'undefined';
-                var resultStatus, articleStatus;
-                if (isToggle) {
-                    var currentStatus = $('#article-main-content').css('display');
-                    resultStatus = currentStatus;
-                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
-                } else {
-                    articleStatus = isShown ? 'block' : 'none';
-                    resultStatus = isShown ? 'none' : 'block';
+/**
+ * @file 搜索框事件处理
+ */
+
+var origin = window.location.origin;
+// 请求函数
+var get = function (requestUrl, successFn, failFn) {
+    try {
+        $.ajax({
+            url: requestUrl,
+            dataType: 'json',
+            type: 'GET',
+            success: successFn,
+            fail: failFn
+        });
+    }
+    catch (err) {}
+};
+
+var searchReport = function (keyword, countType) {
+    var requestUrl = '/forum/api/statistics_wordstatisticsadd';
+    var params = 'word=' + keyword + '&source=docs&module=category&countType=' + countType;
+    get(requestUrl + '?' + params);
+};
+
+var timer;
+var debounce = function (fn, delay) {
+    return function () {
+        var ctx = this;
+        var args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(ctx, args);
+        }, (delay ? delay : 300));
+    };
+};
+
+var navToSearch = function (keywords, tarckTag, scope) {
+    scope = scope || 'devdocs';
+    tarckTag = tarckTag || 'sug跳出点击';
+    // 搜索跳转打点
+    _hmt.push(['_trackEvent', tarckTag, '搜索跳转']);
+    searchReport(keywords, 'click');
+    var url = origin + '/forum/search?word=' + keywords + '&scope=' + scope + '&source=docs';
+    window.open(url, '_blank');
+};
+
+var navToDocs = function (path, keywords, number, broadName) {
+    var msg = number > 5 ? '位置大于5' : '位置小于5';
+    _hmt.push(['_trackEvent', 'sug跳出点击', msg]);
+    searchReport(keywords, 'click');
+    _hmt.push(['_trackEvent', 'sug跳出点击位置', number]);
+    window.open(path, '_blank');
+};
+
+var renderSearchSug = function (keywords, resData, docsIsEmpty, fourmIsEmpty) {
+    var $topSug = $('#top-search-sug');
+    var str = '';
+    docsIsEmpty = docsIsEmpty || false;
+    searchReport(keywords, 'query');
+    _hmt.push(['_trackEvent', 'sug展示', '展示']);
+    if (!docsIsEmpty) {
+        str += '<div class="top-search-sug-result">';
+        var listNumber = 0;
+        resData.forEach(function (list) {
+            var docList = list.docList || [];
+            var listLen = docList.length;
+            listNumber += listLen;
+            str += '<div class="top-search-sug-item">'
+                + '<div class="sug-item-broad-name">' + list.boardInfo.name + '</div>'
+                + '<ul>';
+            docList.forEach(function (item, itemIndex) {
+                var path = origin + item.path;
+                // 获取点击sug的位置
+                var number = listNumber - listLen + itemIndex + 1;
+                str += '<li>'
+                    + '<div class="sug-item-container" onclick="navToDocs(\'' +  path + '\',\'' + keywords + '\', \'' + number + '\',\'' + list.boardInfo.name + '\')">'
+                    + '<span class="sug-item-tag">' + item.tagInfo.name + '</span>'
+                    + '<span class="sug-item-content">'
+                    +     '<p class="sug-item-content-title">' + item.title + '</p>';
+                if (item.description) {
+                    str += '<p class="sug-item-content-des">' + item.description + '</p>';
                 }
-                $('#article-main-content').css({
-                    display: articleStatus
-                });
-                $($resultContent).css({
-                    display: resultStatus
-                });
-            }
-            function toggleArticleContent(isShown) {
-                var isToggle = typeof isShown === 'undefined';
-                var resultStatus, articleStatus;
-                if (isToggle) {
-                    var currentStatus = $('#article-main-content').css('display');
-                    resultStatus = currentStatus;
-                    articleStatus = currentStatus === 'block' ? 'none' : 'block';
-                } else {
-                    articleStatus = isShown ? 'block' : 'none';
-                    resultStatus = isShown ? 'none' : 'block';
-                }
-                $('#article-main-content').css({
-                    display: articleStatus
-                });
-                $($resultContent).css({
-                    display: resultStatus
-                });
-            }
-            $('#top-search-box').on('click', function (e) {
-                if($(e.target).hasClass('reset-search-btn')) {
-                    toggleArticleContent(true);
-                    $('#top-search-box').removeClass('top-search-box-focus');
-                   return; 
-                }
-                $(this).addClass('top-search-box-focus');
-                $input.focus();
+                str += '</span>'
+                    + '</div>'
+                    + '</li>';
             });
-
-            $($input).on('blur', function () {
-                $(this).val() || $('#top-search-box').removeClass('top-search-box-focus');
-            });
-
-            var flag = true;
-            $input.addEventListener('compositionstart', function () {
-                flag = false;
-            });
-
-            $input.addEventListener('compositionend', function () {
-                flag = true;
-            });
-            //阻止回车刷新页面
-            $input.addEventListener('keydown', function(e){
-                var e = e || event;
-                if (e.keyCode === 13) {
-                    e.returnValue = false; 
-                    e.preventDefault();
-                }
-            })
-
-            var timer;
-            $input.addEventListener('input', function () {
-                var $this = this;
-                // 1s内再次输入，则清除打点
-                clearTimeout(timer);
-
-                // 搜索打点，当input停止输入超过1s且input中存在value时上报一次
-                timer = setTimeout(function() {
-                    // 打点上报
-                    if ($this.value.trim().length) {
-                        _hmt.push(['_trackEvent', 'search', '搜索查询']);
-                    }
-                }, 1000);
-                setTimeout(function () {
-                    if (!flag) {
-                        return;
-                    }
-                    var str = '<ul class="search-result-list">';
-                    var keywords = $this.value.trim().toLowerCase().split(/\s+/);
-                    var matchCount = 0;
-                    $resultContent.innerHTML = '';
-                    if ($this.value.trim().length <= 0) {
-                        toggleArticleContent(true);
-                        return;
-                    }
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        if (!data.title || data.title.trim() === '') {
-                            // data.title = 'Untitled';
-                            return false;
-                        }
-                        var data_title = data.title.trim().toLowerCase();
-                        var content = data.content || '';
-                        var data_content = content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty contents
-                        if (data.isNav) {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                if (index_title < 0) {
-                                    isMatch = false;
-                                }
-                                else {
-                                    // isMatch = true;
-                                    if (index_title < 0) {
-                                        index_title = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_title;
-                                    }
-                                }
-                            });
-                        }
-                        else if (data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        } else {
-                            isMatch = false;
-                        }
-                        if (isMatch) {
-                            matchCount++;
-                            data_url = data_url.endsWith('/') ? data_url : (data_url + '/');
-                            str += '<li><h3><a href="javascript:void(0);" onclick=handleResultAClick("' + data_url + '","' + keywords + '") class="search-result-title">' + data_title + '</a></h3>';
-                            var content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
-                            // 面包屑数据
-                            var data_breadcrumb = data.breadCrumbs.map(item => {
-                                let [title, url] = item.split(',');
-                                url = url.endsWith('/') ? url : (url + '/');
-                                return '<span class="breadcrumb_item"><a href="/docs' + url + '" target="_blank">' + title + '</a><span class="arrow-right">&gt;</span></span>';
-                            }).join('');
-                            if (first_occur >= 0) {
-                                var match_content = content && this.replaceMarkdown(content);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var reg = new RegExp(keyword, 'gi');
-                                    match_content = match_content.replace(reg, function (str) {
-                                        return '<em class="search-keyword">' + str + '</em>';
-                                    })
-                                });
-
-                                str += '<p class="search-result">' + match_content + '</p>';
-                                str += '<div class="search-result-bread-crumb">' + data_breadcrumb + '</div>';
-                            }
-                            str += '</li>';
-                        }
-                    });
-                    str += '</ul>';
-                    var title = matchCount ? '<h1>找到<em>' + keywords + '</em>相关内容' + matchCount + '个</h1>' : '<h1 class="empty-title">没有找到<em>' + keywords + '</em>相关内容</h1>';
-                    str = title + str;
-                    toggleArticleContent(false);
-                    $resultContent.innerHTML = str;
-                }, 0);
-            });
-
-        }
+            str += '</ul>'
+                + '</div>';
+        });
+        str += '</div>'
+            +  ' <div class="top-search-sug-more">'
+            +  '<span onclick="navToSearch(\'' + keywords + '\')">'
+            +  '查看更多 >'
+            +  '</span>'
+            +  '</div>';
+    }
+    else if (docsIsEmpty && !fourmIsEmpty) {
+        str += '<div class="top-search-sug-docs-empty">'
+            +  '<span onclick="navToSearch(\'' + keywords + '\', \'' + 'sug无结果跳转至社区' + '\', \'' + 'devforum' + '\')">'
+            +  '文档没有相关内容，查看社区搜索结果 >'
+            +  '</span>'
+            +  '</div>';
+    }
+    $topSug.html(str);
+    $topSug.css({
+        display: 'block'
     });
-}
-// 处理点击结果，keywords高亮展示
-function handleResultAClick (url, keywords) {
-    if (!keywords.length) {
+};
+
+var getFourmSug = function (keywords) {
+    get('/forum/api/search_category?word=' + keywords + '&scope=devforum', function (res) {
+        if (res.data.length === 0) {
+            renderSearchSug(keywords, [], true, true);
+            return;
+        }
+        renderSearchSug(keywords, [], true, false);
+    });
+};
+
+function searchFunc(searchId, contentId) {
+    var $input = document.getElementById(searchId);
+    var $inputPc = document.getElementById('local-search-input-pc');
+    if (!$input || !$('#local-search-input').length) {
         return;
     }
-    window.localStorage.setItem('keywords', keywords);
-    window.open(url);
-}
-// 替换当前匹配的markdown内容，取第一句话
-function replaceMarkdown(str) {
-    str = str.replace(/(\r\n|\n)/g, '')                          // 全局匹配换行                                               //全局匹配换行
-    .replace(/\s/g, '')                                          // 全局匹配空字符
-    .replace(/(<\w+?)\s(?:\s*\w*?\s*=\s*'.+?')*?\s*?(>)/g, '$1$2') // 去除标签属性
-    .replace(/\!\[[\s\S]*?\]\([\s\S]*?\)/g, '')                  // 全局匹配图片
-    .replace(/\[[\s\S]*?\]\([\s\S]*?\)/g, '')                    // 全局匹配连接
-    .replace(/(\*)(.*?)(\*)/g, '')                               // 全局匹配强调
-    .replace(/`{1,2}[^`](.*?)`{1,2}/g, '')                       // 全局匹配内联代码块
-    .replace(/```([\s\S]*?)```[\s]*/g, '')                       // 全局匹配代码块
-    .replace(/[\s]*[-\*\+]+(.*)/g, '')                           // 全局匹配无序列表
-    .replace(/[\s]*[0-9]+\.(.*)/g, '')                           // 全局匹配有序列表
-    .replace(/(\|-{1,})+\|/g, '')                                // 全局匹配表格内容
-    .replace(/(\|.*?)+/g, '')                                    // 全局匹配表头内容
-    .replace(/(#+)/g, '')                                        // 全局匹配标题
-    .replace(/(>+)/g, '');                                        // 全局匹配摘要
-    const firstPeriodIndex = str.indexOf('。') + 1;
-    return str.slice(0, firstPeriodIndex ? firstPeriodIndex : str.length);
+    // 原有搜索逻辑不变
+    $('#top-search-box').on('click', function (e) {
+        if ($(e.target).hasClass('reset-search-btn')) {
+            $('#top-search-box').removeClass('top-search-box-focus');
+            return;
+        }
+        $('.m-doc-level1').css({
+            'display': 'none'
+        });
+        $(this).addClass('top-search-box-focus');
+        $input.focus();
+        _hmt.push(['_trackEvent', '移动端搜索框', '点击']);
+    });
+
+    $($input).on('blur', function (e) {
+        $('#top-search-box').removeClass('top-search-box-focus');
+        $('.m-doc-level1').css({
+            'display': 'block'
+        });
+    });
+
+    // 保证输入事件结束后，才触发搜索
+    var flag = true;
+    $inputPc.addEventListener('compositionstart', function () {
+        flag = false;
+    });
+
+    $inputPc.addEventListener('compositionend', function () {
+        flag = true;
+    });
+
+    $inputPc.addEventListener('input', function (e) {
+        var $this = this;
+        debounce(function () {
+            if (!flag) {
+                return;
+            }
+            var keywords = $this.value.trim();
+            if (keywords.length <= 0) {
+                // renderSearchSug('', [], true, true);
+                return;
+            } else {
+                get('/forum/api/search_category?word=' + keywords + '&scope=devdocs', function (res) {
+                    var resData = res.data;
+                    if (resData.length === 0) {
+                        getFourmSug(keywords);
+                        return;
+                    }
+                    renderSearchSug(keywords, resData, false, true);
+                });
+            }
+        }, 500)();
+    });
+
+    $inputPc.addEventListener('blur', function () {
+        setTimeout(() => {
+            $('#top-search-sug').css({
+                display: 'none'
+            });
+        }, 300);
+    });
+
+    $inputPc.addEventListener('focus', function (e) {
+        // var keywords = e.target.value;
+        _hmt.push(['_trackEvent', 'PC端搜索框', '点击']);
+        $('#top-search-sug').css({
+            display: 'block'
+        });
+        // if ($('.top-search-sug-item').length > 0) {
+        //     searchReport(keywords, 'query');
+        //     _hmt.push(['_trackEvent', 'sug展示', '展示']);
+        // } else if ($('.top-search-sug-docs-empty').length > 0) {
+        //     searchReport(keywords, 'query');
+        //     _hmt.push(['_trackEvent', 'sug文档无结果，社区有结果', '展示']);
+        // }
+    });
+
+    function keyEnter(e) {
+        var e = e || event;
+        var keywords = e.target.value;
+        var keywordsFilter = keywords.trim();
+        if (e.keyCode === 13) {
+            e.returnValue = false;
+            e.preventDefault();
+            if (!keywords.length) {
+                return;
+            }
+            navToSearch(keywordsFilter, '搜索框回车&点击触发搜索');
+            $inputPc.blur();
+        }
+    }
+
+    //阻止回车刷新页面
+    $input.addEventListener('keydown', keyEnter);
+    $inputPc.addEventListener('keydown', keyEnter);
+
+    // 搜索图标点击
+    $('#search-btn-pc').on('click', function () {
+        var keywords = $inputPc.value;
+        var keywordsFilter = keywords.trim();
+        if (!keywords) {
+            return;
+        }
+        navToSearch(keywordsFilter, '搜索框回车&点击触发搜索');
+    });
+
 }

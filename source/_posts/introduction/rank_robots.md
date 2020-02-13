@@ -37,7 +37,7 @@ sidebar: rank_robots
 
 |举例 | 用法 | 
 |---|---|
-|禁止所有搜索引擎访问小程序中的任何部分</p> | `User-agent: Disallow: / `| 
+|禁止所有搜索引擎访问小程序中的任何部分 | `User-agent: Disallow: / `| 
 | 允许所有的robot访问| `User-agent: * Allow: / ` | 
 | 仅禁止Baiduspider访问您的小程序| `User-agent: Baiduspider Disallow: / ` | 
 |仅允许Baiduspider访问您的小程序 |  `User-agent: Baiduspider Allow: / User-agent:* Disallow: /` | 

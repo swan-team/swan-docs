@@ -38,7 +38,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 const path = require('path')
@@ -63,7 +63,7 @@ exports.main = async (event, context) => {
 ```
 
 
-## cloud.ownloadFile
+## cloud.downloadFile
 下载云存储文件
 
 
@@ -92,7 +92,7 @@ reject 参数：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -135,7 +135,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -189,7 +189,7 @@ reject 结果：
 |message|String|错误信息|
 
 
-**使用示例**
+**代码示例**
 ``` js
 const cloud = require('swan-server-sdk')
 

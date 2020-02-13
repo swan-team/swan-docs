@@ -1,7 +1,7 @@
 ---
 title: 扩展组件
 header: develop
-nav: extended
+nav: component 
 sidebar: comment-publish
 ---
 
@@ -10,10 +10,10 @@ sidebar: comment-publish
 **解释：** 社区半屏发布器组件
 
 
-**属性说明：**
+**属性说明**
 
 |属性名 |类型  |默认值  |说明|
-|---- | ---- | ---- |---- |
+|:--- |:---|:---|:---|:---|
 |contentPlaceholder | String | 请输入内容 | 内容提示占位文案 |
 |moduleList | Array |  | 显示模块list |
 |emojiPath | String |  |设置自定义表情配置路径（NA版支持，降级版不支持）|
@@ -24,7 +24,7 @@ sidebar: comment-publish
 |bind:relaseComment | EventHandle |  | 点击发表按钮时触发的事件 |
 |bind:previewImage | EventHandle |  | 点击输入框中已经上传的图片时触发的事件(NA版不支持，降级版支持) |
 
-**示例代码：**
+**代码示例**
 
 <a href="swanide://fragment/0f4da3bed2865dd1fc596bd7119a947f1567665768064" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

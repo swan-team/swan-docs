@@ -11,7 +11,7 @@ sidebar: guide
 
 一个智能小程序最多可以创建 2 个环境，建议的实践为创建一个开发测试环境和一个线上生产环境。利用环境间数据隔离的特性，在日常开发时使用开发测试环境，正式发布的版本使用线上生产环境，这样可以在开发调试智能小程序的同时保证生产环境数据的稳定性。
 
-初始化云开发 SDK 时，可以指定使用哪个环境，参见 [swan.cloud.init](/develop/cloud/cloud_init)。在云函数中初始化 SDK 时，如果没有指定环境 ID，则会默认使用该函数当前所处的环境。
+初始化云开发 SDK 时，可以指定使用哪个环境，参见 [swan.cloud.init](https://smartprogram.baidu.com/docs/develop/cloud/cloud_init/)。在云函数中初始化 SDK 时，如果没有指定环境 ID，则会默认使用该函数当前所处的环境。
 
  
 

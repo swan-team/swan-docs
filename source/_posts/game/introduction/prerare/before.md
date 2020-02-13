@@ -27,10 +27,10 @@ priority: 01-04
 
 #### 开发工具
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
  ![图片](/img/game/introduction/prerare/newadd05.png)
 
 #### 配置服务器
-在开发设置页面查看 AppID 和 AppSecret ，配置服务器域名。
+在开发设置页面查看 AppID 和 AppSecret，配置服务器域名。
  ![图片](/img/game/introduction/prerare/newadd06.png)

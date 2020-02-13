@@ -10,7 +10,7 @@ sidebar: move
 * 搬家工具：针对曾经开发过微信小程序的开发者，帮助您把微信小程序的部分代码迁移到百度智能小程序上。
 * 框架开发：支持 Taro、Mpvue、WePY、Okam 四种不同的框架，只写一套代码，通过编译即可生成在不同端（微信/百度/支付宝/字节跳动小程序、H5、React-Native 等）运行的代码。
 
-> 为了更好的了解开发者的需求，帮助您减少不必要的工作量，我们邀请您填写<a href="https://smartprogram.baidu.com/docs/html/third_party/acess-wenjuan/#/wenjuan/">智能小程序接入技术问卷调查</a>。
+
 
 
 ## 搬家工具
@@ -29,7 +29,7 @@ sidebar: move
 
 #### NPM
 执行以下操作，在[NPM官网](https://www.npmjs.com/package/wx2swan)获取工具：
-1. 全局按照个命令行工具： `npm install -g wx2swan`;
+1. 全局安装命令行工具： `npm install -g wx2swan`;
 2. 执行命令： `wx2swan wxmp`  wxmp 是微信小程序的目录;
 3. 查看生成目录的 log；
 
@@ -43,7 +43,7 @@ log
 4. 根据开发者工具报错以及转换 log 进行二次开发。
 
 #### 百度开发者工具入口
-除了上面 NPM 的方式使用搬家工具，您还可以在在百度开发者工具里进入搬家工具：
+除了上面 NPM 的方式使用搬家工具，您还可以在百度开发者工具里进入搬家工具：
 1. **登录开发者工具。**
 2. 在欢迎页中选择“搬家”，进行转换。
 ![图片](../../../img/tool/move.png)

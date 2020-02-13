@@ -11,6 +11,8 @@ sidebar: function_component
 
 如：使用 slider 组件
 
+**代码示例**
+
 ```xml
 <slider min="200" max="1500" value="{{switchDuration}}"></slider>
 ```
@@ -19,14 +21,17 @@ sidebar: function_component
 
 也可以在 slider 组件上绑定事件，在相应的组件事件发生时，得到回调与组件信息：
 
+**代码示例**
+
 ```xml
 <slider min="200" max="1500" value="{{switchDuration}}" bind:change="changeSlider"></slider>
 ```
 
 ```js
 Page({
-	changeSwitchDuration: function () {
-	    console.log('changeSwitchDuration');
-	}
+    changeSlider: function () {
+        console.log('changeSwitchDuration');
+    }
 });
 ```
+

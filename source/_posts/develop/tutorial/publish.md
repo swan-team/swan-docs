@@ -7,10 +7,32 @@ sidebar: publish
 
 ## 调试
 
+### 开发者工具调试
 
-> 具体调试方法请参考<a href="https://smartprogram.baidu.com/docs/develop/devtools/smartappdebug_function/">调试</a>章节。
+> 具体调试方法请参考<a href="https://smartprogram.baidu.com/docs/develop/devtools/smartappdebug_function_monitor/">调试</a>章节。
 
+### Chrome 浏览器调试
 
+> 对于正在开发中或者审核中的小程序，可使用 Chrome 进行 inspect 调试。
+
+**调试方法**：
+
+1. adb 连接手机至电脑，打开 chrome 浏览器，打开 chrome://inspect 。
+2. 打开需调试的小程序，单击“关于”，进入“启动 Inspect 页面”。
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/2020010.png">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/202002.png">
+    </div>   
+</div>
+
+3. Inspect 分为强化启动和普通启动。您可根据需要选择不同的启动方式，对小程序进行调试。
+
+    * 强化启动：重启小程序
+    * 普通启动：热启动
 
 ## 预览
 

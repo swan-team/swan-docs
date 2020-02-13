@@ -30,16 +30,14 @@ header {
         }
     }
     .m-doc-level1 {
-        padding-left: 95px;
-        margin-left: 280px;
+        margin-left: 250px;
+        padding-left: 2.535vw;
         overflow: hidden;
         ul {
-            max-width: 1195px;
-            margin: 0 auto;
             display: block;
             li {
                 display: inline-block;
-                padding: 0 30px;
+                padding: 0 1.55vw;
                 position: relative;
                 text-align: center;
                 a {
@@ -151,7 +149,6 @@ header .m-doc-level1 ul li {
     display: inline-block;
     position: relative;
     text-align: center;
-    padding: 0 30px;
 }
 
 header .m-doc-level1 ul .m-doc-header-nav-selected {
@@ -167,7 +164,7 @@ header .m-doc-level1 ul .m-doc-header-nav-selected a {
 }
 header .m-doc-item a,
 header .m-doc-level1 ul li a {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     cursor: pointer;
     line-height: 16px;
@@ -179,19 +176,27 @@ header .m-doc-level1 ul li a {
     display: none;
 }
 
+.top-search-box {
+    display: none;
+}
+
 /**社区样式start***/
+
+header .m-doc-other {
+    position: absolute;
+    right: 4.535%;
+    display: flex;
+}
+
 header .m-doc-item {
     font-size: 14px;
-    position: absolute;
-    right: 10px;
     top: 0;
-    padding: 0 20px;
+    right: 9.8%;
+    padding: 0 1.17vw;
     background: #000;
     z-index:9;
 }
-header .m-doc-service-market {
-    right: 80px;
-}
+
 header .m-doc-item a {
     font-size: 14px;
     color: #fff;
@@ -214,19 +219,265 @@ header a {
     text-decoration: none;
 }
 
+/* 新增搜索框 */
+
+.top-search-wapper {
+    position: absolute;
+    margin-left: 460px;
+    left: 24.635%;
+    line-height: 1;
+    outline: none;
+    width: 22.53%;
+    box-sizing: border-box;
+    height: 34px;
+    top: 13px;
+    padding-right: 34px;
+    background-color:rgba(255, 255, 255, .2);
+    border-radius: 3px;
+    z-index: 999;
+}
+.top-search-wapper #local-search-input {
+    display: block;
+}
+
+.top-search-wapper .search-btn,
+.reset-search-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    border: none;
+    outline: 0;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: initial;
+}
+.top-search-wapper .search-btn {
+    right: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px 12px 8px 8px;
+    top: 0;
+    cursor: pointer;
+}
+
+/* 搜索sug start */
+.top-search-sug {
+    margin-left: 460px;
+    position: absolute;
+    left: 24.635%;
+    width: 35.56%;
+    background-color: #fff;
+    top: 51px;
+    z-index: 999;
+    box-shadow: 0 1px 5px 0 rgba(6, 0, 1, .1);
+
+    &-result {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    &-item {
+        width: 100%;
+    }
+
+    &-item ul li {
+        width: 100%;
+
+        & :hover {
+            background-color:#e6e6e6;
+            cursor: pointer;
+        }
+
+        a {
+            display: flex;
+            justify-content: start;
+            text-decoration: none;
+            padding: 12px 31px 12px 16px;
+        }
+    }
+}
+
+.sug-item-container {
+    display: inline-block;
+    display: flex;
+    justify-content: start;
+    padding: 12px 31px 12px 16px;
+    cursor: pointer;
+}
+
+.sug-item-broad-name {
+    padding: 0 31px 0 16px;
+    height: 44px;
+    line-height: 44px;
+    color: #999;
+    font-size: 14px;
+    background-color: #f0f0f0;
+}
+
+.sug-item-tag {
+    color: #999;
+    border-right: 1px solid #ccc;
+    padding-right: 12px;
+    width: 20.4%;
+    word-wrap: break-word;
+    word-break: normal;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.sug-item-content {
+    padding-left: 12px;
+    max-width: 79.6%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+    font-size: 14px;
+    box-sizing: border-box;
+
+    &-title {
+        line-height: 24px;
+    }
+    &-des {
+        font-size: 12px;
+        line-height: 20px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        width: 100%;
+
+        &-empty {
+            display: none;
+        }
+    }
+
+    span {
+        color: #3388FF;
+    }
+}
+
+.top-search-sug-more {
+    color: #666;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+
+    span {
+        display: inline-block;
+        padding: 0 31px 0 16px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #666;
+    }
+
+    & :hover {
+        background-color:#f0f0f0;
+    }
+}
+
+.top-search-sug-docs-empty {
+    text-align: center;
+    line-height: 72px;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 10px 0;
+
+    span {
+        width: 100%;
+        height: 72px;
+        display: inline-block;
+        color: #666;
+    }
+
+    & :hover {
+        background-color:#e6e6e6;
+        cursor: pointer;
+    }
+}
+
+.search-btn-pc:hover {
+    cursor: pointer;
+}
+
+#local-search-input-pc {
+    width: 100%;
+    border: none;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1;
+    outline: none;
+    padding: 7px 0;
+    background: transparent;
+    color: #fff;
+    padding-left: 16px;
+}
+
+#local-search-input-pc:-moz-placeholder {
+    color: #999;
+}
+#local-search-input-pc:-ms-input-placeholder {
+    color: #999;
+}
+
+.top-search-wapper .search-btn-pc {
+    top: 16px;
+    left: 3px;
+
+}
+
+/* 搜索sug&PC搜索 end */
+
+@media only screen and (max-width: 1248px) {
+    .top-search-wapper {
+        display: none;
+    }
+
+    .top-search-sug {
+        display: none;
+    }
+
+    .top-search-box {
+        display: block;
+    }
+}
+
 /* header 移动端适配 */
 @media only screen and (max-width: 768px) {
     header {
-        padding: 0 40px;
+        padding: 0 20px 0 40px;
         position: fixed;
         top: 0;
         left: 0;
         background: #000;
     }
 
-    .top-search-box {
+    #top-search-box {
         margin-right: 87px;
+        right: 20px;
     }
+
+    #local-search-input-pc {
+        display: none;
+    }
+
+    header .m-doc-level1  {
+        display: none;
+        opacity: 0;
+    }
+
     .top-search-box-focus {
         width: calc(~"100% - 80px") !important;
         left: 40px;
@@ -267,7 +518,7 @@ header a {
     .m-mobile-doc-level1 {
         float: right;
         display: block;
-        width: 50px;
+        width: 87px;
         text-align: center;
         position: relative;
     }
@@ -284,39 +535,46 @@ header a {
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected {
         color: #000;
-        /* background-color: #181818 */
+        // background-color: #181818;
+    }
+    .m-mobile-level1-list-show .m-mobile-level1-selected {
+        background-color: #181818;
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected span,
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
         color: #fff;
-        vertical-align: middle;
+        // vertical-align: middle;
         display: inline-block;
     }
     .m-mobile-doc-level1 .m-mobile-level1-selected img {
-        width: 15px;
-        height: 15px;
+        width: 9px;
+        height: 6px;
         margin-left: 6px;
-    }
-    .m-mobile-level1-list-show .m-mobile-level1-selected img{
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
+    }
+    .m-mobile-level1-list-show .m-mobile-level1-selected img{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
     .m-mobile-doc-level1 ul {
         z-index: 10000;
         display: none;
         position: absolute;
-        top: 62px;
-        right: -20px;
-        background: #000;
+        // top: 62px;
+        // right: -20px;
+        background: #181818;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     }
     .m-mobile-level1-list-show ul {
         display: block;
-        width: 240px;
+        width: 87px;
     }
     .m-mobile-level1-list-show ul li {
         text-align: center;
         display: block;
+        line-height: 44px;
+        padding: 0 20px;
     }
     .m-mobile-level1-list-show ul li:hover {
         background-color: #181818;
@@ -326,6 +584,9 @@ header a {
     }
     .m-mobile-doc-level1 ul .m-doc-header-nav-selected {
         background: #181818;
+    }
+    .m-mobile-level1-list-show ul .m-doc-header-nav-selected a {
+        color:#3388FF !important;
     }
     .m-mobile-doc-level1 ul li a {
         color: #fff;
@@ -370,7 +631,7 @@ header a {
 }
 @media only screen and (min-width: 1590px) {
     header .m-doc-level1 {
-        padding: 0;
+        // padding: 0;
     }
 }
 
@@ -444,7 +705,6 @@ header a {
     padding: 10px 0;
     background: transparent;
 }
-
 
 #local-search-input::-webkit-input-placeholder {
     color: #999;

@@ -10,9 +10,9 @@ sidebar: tune_up_examine
 
 ### 使用场景 
 
-1、当用户的某个订单申请了退款后，百度收银台会主动调用业务方的退款审核地址（开发者平台注册的退款审核地址）询问订单是否可退。
+当用户的某个订单申请了退款后，百度收银台会主动调用业务方的退款审核地址（开发者平台注册的退款审核地址）询问订单是否可退。
 
-2、用户支付成功后，百度收银台通过通知业务方支付成功接口通知业务方，业务方反馈给百度收银台的字符不是合法json或者解析出来的errno不为0时，系统会自动发起退款，此时百度收银台也会调用业务方的退款审核接口询问业务方订单是否可以退款。
+
 
 
 ### 接口注意事项 
@@ -73,7 +73,7 @@ auditStatus枚举值说明如下：
 
 
 
-**auditStatus重要性：**为必传参数（不传会认为接口返回出错），用来标识第三方的退款审核结果，平台根据审核结果执行退款或置为不可退款，若auditStatus=3，百度收银台会视为审核结果不确定，会继续重试（重试频率：每5min一次），目前重试次数&重试期限不做限制（直到业务方返回审核通过或不通过等审核终态才结束重试）。
+**auditStatus重要性：** 为必传参数（不传会认为接口返回出错），用来标识第三方的退款审核结果，平台根据审核结果执行退款或置为不可退款，若auditStatus=3，百度收银台会视为审核结果不确定，会继续重试（重试频率：每5min一次），目前重试次数&重试期限不做限制（直到业务方返回审核通过或不通过等审核终态才结束重试）。
 >业务方返回auditStatus=3，退款审核结果不确定，收银台不会给用户退款，可能会影响用户退款体验。
 
 
@@ -115,7 +115,7 @@ auditStatus枚举值说明如下：
 * 入参(REQUEST) DEMO：
 
 ```
-http://xxx.tpbusiness.xxx/refundAudit?orderId=800020199&refundBatchId=100003588&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
+https://xxx.tpbusiness.xxx/refundAudit?orderId=800020199&refundBatchId=100003588&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 
 * 返回(RESPONSE) DEMO:

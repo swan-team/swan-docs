@@ -20,7 +20,7 @@ sidebar: app_service_page
 |onReady | Function | 页面的生命周期函数 -- 监听页面初次渲染完成 |
 |onHide | Function | 页面的生命周期函数 -- 监听页面隐藏 |
 |onUnload | Function | 页面的生命周期函数 -- 监听页面卸载 |
-|onForceReLaunch|Function|页面的生命周期函数 -- 监听页面重启，单击右上角菜单栏<sup>注</sup>的重启按钮时触发|
+|onForceReLaunch|Function|页面的生命周期函数 -- 监听页面重启，单击右上角菜单栏的重启按钮时触发|
 |onPullDownRefresh | Function | 页面的事件处理函数 -- 监听用户下拉动作 |
 |onReachBottom | Function | 页面的事件处理函数 -- 上拉触底事件的处理函数 |
 |onShareAppMessage | Function | 页面的事件处理函数 -- 用户点击右上角转发 |
@@ -30,9 +30,10 @@ sidebar: app_service_page
 |其他 | Any | 开发者可以添加任意的函数或数据到 object 参数中 |
 
 **名词解释:**
-- 菜单栏: 页面右上角胶囊中三个点的图标，点击会弹出菜单面板(包含: 分享、评价、重启小程序等功能)。
 
-**示例代码**
+菜单栏: 页面右上角获取菜单按钮（右上角胶囊按钮）中三个点的图标，点击会弹出菜单面板(包含: 分享、评价、重启小程序等功能)。
+
+**代码示例**
 
 ```js
 // page.js

@@ -8,7 +8,7 @@ sidebar: topnav
 顶部导航栏始终固定在屏幕顶部，不随页面滚动隐藏。
 智能小程序会自动继承小程序首页顶部导航栏的配置，但每个页面均可配置其顶部导航栏。即同一智能小程序中，不但可同时存在原生顶部导航栏和自定义导航栏，也可为每个页面定制不同的样式。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_navigationbar/" target="_blank">导航栏</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show/navigationbar_swan-setNavigationBarTitle/" target="_blank">导航栏</a>。
 
 
 ## 原生顶部导航栏
@@ -34,23 +34,24 @@ sidebar: topnav
 顶部导航栏容器默认背景白色，开发者也可以配置相应的颜色。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/component/topnav/3.png"><p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
+		<img src="../../../img/design/component/topnav/3.png">
+        <p class="m-doc-custom-examples-text">普通手机（1）和iPhone X（2）的页面布局都从顶部导航栏窗口底部开始。
 iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</p>
 	</div>
 </div>
 
 ### 2. 框架内部导航功能区
 <div class="m-doc-custom-text-image">
- 	<div>
+    <div>
  		<p>当用户处于小程序首页时，此区域不展现任何功能。
  			其他页面下，根据场景展现：
 1. 返回：用于返回上一页面；
 2. 回首页：用于返回小程序首页。
 		</p>
- 	</div>
- 		<div><img src="../../../img/design/component/topnav/4.png">
-		</div>
-	</div>
+    </div>
+    <div>
+        <img src="../../../img/design/component/topnav/4.png">
+    </div>
 </div>	
 
 
@@ -86,7 +87,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 
 使用自定义导航栏前，请了解透明框架的[页面布局](https://smartprogram.baidu.com/docs/design/foundation/layout/)基础，此时原生顶部导航栏中的容器、框架内部导航功能区、页面标题均不展示，开发者可自定义当前页面的顶部导航栏。
 
-我们建议，在使用自定义导航栏时，通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
+我们建议，在使用自定义导航栏时，通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并为系统状态栏配置与自定义导航栏背景一致的颜色。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -106,7 +107,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 </div>
 
 自定义导航栏的元素建议与控制功能区对齐，且与原生顶部导航栏（navigationBarHeight）高度水平居中对齐。
-技术实现请参考开发文档[全局配置](https://smartprogram.baidu.com/docs/develop/tutorial/process/#%E9%85%8D%E7%BD%AE-app-json-%E6%96%87%E4%BB%B6/)章节。
+技术实现请参考开发文档[全局配置](/develop/tutorial/process/)章节。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -119,7 +120,7 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 	</div>
 </div>
 
-<!--开发者也能便利地通过系统信息接口[getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得原生顶部状态栏的高度(navigationBarHeight），更方便地使自定义导航栏的元素与原生导航栏对齐。-->
+<!--开发者也能便利地通过系统信息接口[getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得原生顶部状态栏的高度(navigationBarHeight），更方便地使自定义导航栏的元素与原生导航栏对齐。-->
 
 ## 个性定制
 
@@ -159,6 +160,6 @@ iOS状态栏会随着顶部导航栏元素和容器背景自动改变颜色。</
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/topnav/13-2.png">
-		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用黑色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
+		<p class="m-doc-custom-examples-title">错误</p><p class="m-doc-custom-examples-text">使用白色元素时，背景配色应避免使用高饱和度或较深的颜色。</p>
 	</div>
 </div>

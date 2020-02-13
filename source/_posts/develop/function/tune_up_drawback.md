@@ -21,7 +21,7 @@ sidebar: tune_up_drawback
 
 4. 订单状态同步：商家收到通知退款状态回调切严格按照文档提示返回参数，后台订单状态才会同步且显示“已退款”；
 
->如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](http://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。 
+>如未收到回调请求，请检查服务器网关是否有准入限制，如有限制参照[阿里云安全组设置](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/aliyun_v2.md)中的IP地址设置白名单。 
 
 ### 通知参数说明 
 
@@ -79,7 +79,7 @@ sidebar: tune_up_drawback
 * 入参(REQUEST) DEMO：
 
 ```
-http://xxx.tpbusiness.xxx/notifyRefundRes?orderId=800020199&refundBatchId=100058888&refundStatus=1&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
+https:://xxx.tpbusiness.xxx/notifyRefundRes?orderId=800020199&refundBatchId=100058888&refundStatus=1&rsaSign=Gzu1RT2toJSDthcLPG1ZWROI3jzvxFtO7yCPUqMT3L7cmnARncm5IIIQ6x+7S/02zWxr5FC9945WFSurO9kepVbU7YS6Lh9SEVQhvTO0YKG7TlLFTpH3Ik7JeHQalAKXYe/jNREDpHmTF9Jrq/wABeZGYXJn1M75A37h9zUt+kw=
 ```
 
 * 返回(RESPONSE) DEMO:

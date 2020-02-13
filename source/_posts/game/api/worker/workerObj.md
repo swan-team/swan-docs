@@ -19,7 +19,7 @@ priority: 20-02
  [Worker.terminate()](/game/api/worker/workerObj/#terminate)
 结束当前 Worker 线程。仅限在主线程的 Worker 实例对象上调用。
 
- **示例**
+ **代码示例**
 运行以下代码需先进行基础配置，详细请查阅 [多线程 Worker](/game/tutorials/worker/worker/) 文档了解基础知识和配置方法
 
  ```js
@@ -54,7 +54,7 @@ worker.onMessage(callback)
 |-|-|-|
 |res|Any|主线程/Worker 线程向当前线程发送的消息|
 
- **示例**
+ **代码示例**
 
  ```js
 // worker 线程中
@@ -89,7 +89,7 @@ worker.onMessage(opts)
 |-|-|-|-|
 |opts|Any|是|需要发送的消息|
 
- **示例**
+ **代码示例**
 
  ```js
 // worker 线程中

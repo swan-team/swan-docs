@@ -19,7 +19,7 @@ var context = canvas.getContext('2d');
 context.rect(10, 10, 200, 100)
 context.fill();
 ```
-如果填充的是一个未闭合路径，则会使用 [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule) ，从路径结束点到开始点填充路径。如下示例，将一个 S 形路径用黑色描边显示，用红色填充。
+如果填充的是一个未闭合路径，则会使用 [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，从路径结束点到开始点填充路径。如下示例，将一个 S 形路径用黑色描边显示，用红色填充。
 
 ![图片](/img/game/canvas/fill-002.png)
 

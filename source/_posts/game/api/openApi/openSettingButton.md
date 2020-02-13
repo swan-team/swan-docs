@@ -40,14 +40,14 @@ swan.createOpenSettingButton(opts)
 |opts.image|string||否|设置按钮的背景图片，当 type 为 'image' 时有效|
 |opts.style|Object||否|自定义按钮的样式|
 
-`opts.type` 的合法值：
+`opts.type` 的有效值：
 
 |值|描述|
 |-|-|
 |text|设置文本按钮|
 |image|只设置背景图片的按钮，背景图片大小会自动拉伸到与按钮相同|
 
-`opts.style` 对象的合法值：
+`opts.style` 对象的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -67,7 +67,7 @@ swan.createOpenSettingButton(opts)
 |hidden|boolean| `false` |否|是否隐藏|
 |opacity|number| |否|透明度|
 
-`style.textAlign` 的合法值：
+`style.textAlign` 的有效值：
 
 |值|描述|
 |-|-|

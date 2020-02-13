@@ -8,13 +8,13 @@ sidebar: accessfeed_publish
 
 
 
-![图片](../../img/introduction/auditing/图2.png) 
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction7.png) 
 
 当您的小程序尚未发布上线时，“素材资料提交”按钮将置灰，您的小程序发布上线后，该按钮即被点亮，如下图
 
 
 
-![图片](../../img/introduction/auditing/图3.png) 
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction8.png) 
 
 
 

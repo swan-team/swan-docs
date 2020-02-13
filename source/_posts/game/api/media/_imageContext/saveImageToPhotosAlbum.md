@@ -8,7 +8,7 @@
 swan.saveImageToPhotosAlbum(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|
@@ -23,10 +23,10 @@ swan.saveImageToPhotosAlbum(opts)
 ```js
 swan.saveImageToPhotosAlbum({
     filePath: '/xxx/xxx.jpg',
-    success: function (res) {
+    success: res => {
         console.log(res);
     },
-    fail: function (err) {
+    fail: err => {
         console.log('错误码：' + err.errCode);
         console.log('错误信息：' + err.errMsg);
     }

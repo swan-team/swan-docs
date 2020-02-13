@@ -5,7 +5,7 @@
 ```js
 fileSystemManager.appendFile(opts)
 ```
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -16,7 +16,7 @@ fileSystemManager.appendFile(opts)
 |opts.success|function| |否|成功回调函数|
 |opts.fail|function| |否|失败回调函数|
 |opts.complete|function| |否|接口调用完成的回调函数（接口成功、失败都会执行）|
-`encoding` 的合法值:
+`encoding` 的有效值:
 
 |值|描述|
 |-|-|
@@ -35,7 +35,7 @@ fileSystemManager.appendFile(opts)
 |res.errMsg|string|报错信息 |
 
 
-`res.errMsg` 的合法值：
+`res.errMsg` 的有效值：
 
 | 值                                     | 描述
 |-|-|
