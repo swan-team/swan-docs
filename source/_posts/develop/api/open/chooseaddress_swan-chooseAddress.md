@@ -23,8 +23,8 @@ Object object
 
  success返回参数说明 ：
 
-|参数名 |类型 | 说明|最低版本
-|---- | ---- | ---- |
+|参数名 |类型 | 说明|最低版本|
+|---- | ---- | ---- |---- |
 |userName|String |  收货人姓名| |
 |postalCode  |String|  邮编| |
 |provinceCode|	String|	国标收货地址第一级地址国家码|最低支持版本 3.90.4 |

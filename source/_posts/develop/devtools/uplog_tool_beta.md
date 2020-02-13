@@ -11,35 +11,35 @@ sidebar: uplog_tool_beta
 ### 2.10 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.10.0|2019.9.5|**New**<p>**·**优化swan.request首次加载速度，修复多次重定向的问题；<p>**·**小程序预览/发布增加包体积优化建议链接。<p>**BugFix**<p>**·**修复小游戏downloadFile错误提示问题；<p>**·**编辑器修复auto rename tag 注释问题。|
+|2.10.0|2019.9.5|**New**<p>**·** 优化swan.request首次加载速度，修复多次重定向的问题；<p>**·** 小程序预览/发布增加包体积优化建议链接。<p>**BugFix**<p>**·** 修复小游戏downloadFile错误提示问题；<p>**·** 编辑器修复auto rename tag 注释问题。|
 
 
 ### 2.9 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.9.0|2019.8.29|**New**<p>新增小程序自定义半屏发布器。<p>**Change**<p>**·**与登录强相关授权 逻辑优化。<p>**BugFix**<p>**·**getlocation与端diff修复；<p>**·**修复swan.recommendProducts使用问题；<p>**·**修复webview组件使用navigateTo参数中带参数的url参数丢失的问题。|
+|2.9.0|2019.8.29|**New**<p>新增小程序自定义半屏发布器。<p>**Change**<p>**·** 与登录强相关授权 逻辑优化。<p>**BugFix**<p>**·** getlocation与端diff修复；<p>**·** 修复swan.recommendProducts使用问题；<p>**·** 修复webview组件使用navigateTo参数中带参数的url参数丢失的问题。|
 
 ### 2.8 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.8.0|2019.8.22|**New**<p>**·**编辑器支持用户直接编辑三方框架文件；<p>**·**支持自定义预处理命令<p>**Change**<p>现有swan.request请求referer中的域名：由 smartapp.baidu.com 变更为 smartapps.cn。<p>**BugFix**<p>修复编译自动保存问题。|
+|2.8.0|2019.8.22|**New**<p>**·** 编辑器支持用户直接编辑三方框架文件；<p>**·** 支持自定义预处理命令<p>**Change**<p>现有swan.request请求referer中的域名：由 smartapp.baidu.com 变更为 smartapps.cn。<p>**BugFix**<p>修复编译自动保存问题。|
 
 ### 2.7 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.7.0|2019.8.15|**New**<p>工具关闭时增加未保存文件提示。<p>**Change**<p>**·**toolbar按钮去掉置灰态，增加鉴权引导；<p>**·**优化登录弹窗框，项目信息框样式；<p>**·**优化编辑器内存使用，提升工具与编辑器打开速度，减少工具内存占用；<p>**·**模拟器独立窗口样式优化。<p>**BugFix**<p>**·**修复自定义导航情况下iphoneX刘海儿偏移问题；<p>**·**修复swan.canvasToTempFilePath生成图片失败问题；<p>**·**修复视频全屏胶囊按钮依然存在问题。|
+|2.7.0|2019.8.15|**New**<p>工具关闭时增加未保存文件提示。<p>**Change**<p>**·** toolbar按钮去掉置灰态，增加鉴权引导；<p>**·** 优化登录弹窗框，项目信息框样式；<p>**·** 优化编辑器内存使用，提升工具与编辑器打开速度，减少工具内存占用；<p>**·** 模拟器独立窗口样式优化。<p>**BugFix**<p>**·** 修复自定义导航情况下iphoneX刘海儿偏移问题；<p>**·** 修复swan.canvasToTempFilePath生成图片失败问题；<p>**·** 修复视频全屏胶囊按钮依然存在问题。|
 
 ### 2.6 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.6.0|2019.8.8|**New**<p>增加新机型 iphone XR && iphone XS MAX。<p>**Change**<p>**·**调试面板顺序固定为 Console、Network、Sources、Security、Appdata、Audits、Sensor、Storage、Swan Element；<p>**·**预览时自动运行体验评分。|
+|2.6.0|2019.8.8|**New**<p>增加新机型 iphone XR && iphone XS MAX。<p>**Change**<p>**·** 调试面板顺序固定为 Console、Network、Sources、Security、Appdata、Audits、Sensor、Storage、Swan Element；<p>**·** 预览时自动运行体验评分。|
 
 
 ### 2.5 版本 
 |版本号|更新时间|更新内容|
 |--|--|--|
 |2.5.1|2019.8.2|**BugFix**<p>修复Windows自定义安装路径问题。|
-|2.5.0|2019.8.1|**New**<p>**·**项目信息添加图片压缩开关；<p>**·**预览添加使用体验评分弹窗引导提示；<p>**·**Windows 支持自定义安装路径；<p>**·**工具栏增加云测试入口。<p>**Change**<p>**·**欢迎页启动页交互体验优化；<p>**·**编辑器改为只 watch 开发者打开的文件夹。<p>**BugFix**<p>删除 project.swan.json 中的基础库版本配置。|
+|2.5.0|2019.8.1|**New**<p>**·** 项目信息添加图片压缩开关；<p>**·** 预览添加使用体验评分弹窗引导提示；<p>**·** Windows 支持自定义安装路径；<p>**·** 工具栏增加云测试入口。<p>**Change**<p>**·** 欢迎页启动页交互体验优化；<p>**·** 编辑器改为只 watch 开发者打开的文件夹。<p>**BugFix**<p>删除 project.swan.json 中的基础库版本配置。|
 
 ### 2.4 版本 
 |版本号|更新时间|更新内容|

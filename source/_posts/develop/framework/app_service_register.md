@@ -18,13 +18,13 @@ sidebar: app_service_register
 
 |属性  |类型 | 默认值 | 描述 |触发时机|
 |---- | ---- | ---- | ---- |---- |
+|其他 | Any || 开发者可以添加任意的函数或者数据到 Object 参数中, 用 this 可以访问。| ||
 |onLogin | Function || 生命周期函数 -- 监听 web 态小程序登录成功(web 态小程序独有)| 当小程序初次登录成功后，会触发 onLogin （全局只触发一次）。|
 |onLaunch | Function || 生命周期函数 -- 监听小程序的初始化 。| 当小程序初始化完成时，会触发 onLaunch （全局只触发一次）。|
 |onShow | Function ||生命周期函数 -- 监听小程序的显示 。| 当小程序初始化，或从后台进入前台显示，会触发 onShow 。|
 |onHide | Function || 生命周期函数 -- 监听小程序的隐藏 。| 当小程序从前台进入后台，会触发 onHide。 |
 |onError|	Function||错误监听函数。|	小程序发生脚本错误，或者 api 调用失败时触发，会带上错误信息。|
 |onPageNotFound|Function||页面不存在监听函数。|	小程序要打开的页面不存在时触发，会带上页面信息回调该函数。|
-|其他 | Any || 开发者可以添加任意的函数或者数据到 Object 参数中, 用 this 可以访问。| ||
 
 
 **onLogin生命周期解释**
@@ -83,7 +83,7 @@ App({
 ### onShow(Object object)
 小程序启动，或从后台进入前台显示时触发。也可以使用 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppShow/) 绑定监听。
 
-**参数：**与 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppShow/) 一致
+**参数：** 与 [swan.onAppShow](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppShow/) 一致
 
 ### onHide()
 小程序从前台进入后台时触发。也可以使用 [swan.onAppHide](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onAppHide/) 绑定监听。
@@ -91,12 +91,12 @@ App({
 ### onError(Object object)
 小程序发生脚本错误或 API 调用报错时触发。也可以使用 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/) 绑定监听。
 
-**参数：**与 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/) 一致
+**参数：** 与 [swan.onError](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onError/) 一致
 
 ### onPageNotFound(Object object)
 小程序要打开的页面不存在时触发。也可以使用 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 绑定监听。注意事项请参考 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/)。
 
-**参数：**与 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 一致
+**参数：** 与 [swan.onPageNotFound](https://smartprogram.baidu.com/docs/develop/api/base_app_event/swan-onPageNotFound/) 一致
 
 **代码示例**
 ```js
