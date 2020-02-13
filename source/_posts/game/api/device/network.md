@@ -11,7 +11,7 @@ priority: 14-01
 
 ## 附录
 
-**networkType 的合法值**
+**networkType 的有效值**
 
 `Object` 类型的对象：
 

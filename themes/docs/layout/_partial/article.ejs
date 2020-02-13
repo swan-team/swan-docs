@@ -1,7 +1,7 @@
-<div class="m-doc-content-layout">
-    <div class="m-doc-content-wrap">
+<div class="m-doc-content-layout" id="m-doc-content-layout">
+    <div class="m-doc-content-wrap" id="m-doc-content-wrap">
         <div id="article-main-content">
-            <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+            <article id="article" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
                   <h1><%= h1%></h1>
                   <div class="article-inner">
                     <div class="article-entry" itemprop="articleBody">
@@ -21,7 +21,7 @@
                       <a class="question-text" href="https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp">反馈建议</a>
                   </div> -->
                   <% if (bottomPage.left || bottomPage.right) { %>
-                    <div class="m-doc-bottomPage-wrapper clearfix">
+                    <div class="m-doc-bottomPage-wrapper clearfix" id="m-doc-bottomPage-wrapper">
                       <% if (bottomPage.left) { %>
                         <a href="/docs<%= bottomPage.left.link %>/" class="m-doc-bottomPage-left"><%= bottomPage.left.text %></a>
                       <% } %>
@@ -40,7 +40,7 @@
         <article id="article-search-result" class="article-search-result"></article>
     </div>
     <% if (license && license.link && license.name) { %>
-      <div class="m-doc-license">
+      <div class="m-doc-license" id="m-doc-license">
         <div class="m-doc-license-content">
           <p>版权声明：
           <a href="<%= license.link %>" target="_blank" rel="license noopener noreferrer">
@@ -50,10 +50,35 @@
         </div>
       </div>
     <% } %>
-    <div class="m-doc-menu-wrapper">
+    <div class="m-doc-menu-wrapper" id="m-doc-menu-wrapper">
         <a href="javascript:void(0)" class="m-doc-menu-toc"></a>
         <a target="_blank" href="https://github.com/swan-team/swan-docs/tree/master/source/<%= post.source %>" class="m-doc-menu-edit m-doc-menu-item"><span>编&nbsp;辑文&nbsp;档</span></a>
-        <a target="_blank" href="https://zhiqiu.baidu.com/imcswebchat/chat/html/message.html?id=797&token=8cvemmp5o16moo61t5t0h06hagggkffl&domainID=smartapp" class="m-doc-menu-feedback m-doc-menu-item"><span>反&nbsp;馈帮&nbsp;助</span></a>
+        <a target="_blank" href="https://smartprogram.baidu.com/forum/topic/add?hmsr=faceback&boardId=1&tagId=8&docsLink=https://smartprogram.baidu.com/docs/<%= post.path %>" class="m-doc-menu-feedback m-doc-menu-item"><span>反&nbsp;馈帮&nbsp;助</span></a>
         <a href="javascript:void(0)" class="m-doc-menu-top m-doc-menu-item"><span>回&nbsp;到顶&nbsp;部</span></a>
     </div>
 </div>
+
+<script>
+  if (window.isSwanIde) {
+      var $content = document.getElementById('m-doc-content-layout');
+      var $article = document.getElementById('article');
+      var $contentWrap = document.getElementById('m-doc-content-wrap');
+      var $menuWrapper = document.getElementById('m-doc-menu-wrapper');
+      var $license = document.getElementById('m-doc-license');
+      var $bottomPage = document.getElementById('m-doc-bottomPage-wrapper');
+      $content.style.left = 0;
+      $content.style.top = 0;
+      $content.style.paddingTop = 0;
+      $content.style.paddingBottom = '20px';
+      $article.style.maxWidth = '100%';
+      $contentWrap.style.marginTop = 0;
+      $contentWrap.style.maxWidth = '100%';
+      $menuWrapper.style.display = 'none';
+      if ($license) {
+        $license.style.display = 'none';
+      }
+      if ($bottomPage) {
+        $bottomPage.style.display = 'none';
+      }
+  }
+</script>

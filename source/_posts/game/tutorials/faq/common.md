@@ -31,7 +31,7 @@ priority: 12-01
 
 5. 是否确认注册 AppId 时选择的**“服务类目”**是 **“小游戏”** ？
 确认方式：从智能小程序首页进入“管理中心”，查看对应小游戏的服务类目是否是 “游戏 | xxx”。
-注意左侧大类目必须是游戏。如不是则需要重新[创建小游戏](http://smartprogram.baidu.com/docs/game/introduction/prerare/register_consummate/)。
+注意左侧大类目必须是游戏。如不是则需要重新[创建小游戏](https://smartprogram.baidu.com/docs/game/introduction/prerare/register_consummate/)。
 创建小游戏时，如果仍然需要用之前注册的小游戏名称，会遇到重名问题，此时进入之前注册的小游戏的**设置**，修改其名称为其他名称即可。
 
 6. 查看开发者工具控制台或者真机 sConsole（打开方式见[sConsole文档](https://smartprogram.baidu.com/docs/game/tutorials/devtools/smartappdebug/#sConsole)），是否有 Javascript 运行报错？
@@ -42,7 +42,7 @@ priority: 12-01
 #### 开发者工具
 
 Q：开发者工具一直显示在编译，看不到日志？
-A：点击右上角 “更多功能” -> “编译日志” ，查看是否编译错误。
+A：点击右上角 “更多功能” -> “编译日志”，查看是否编译错误。
 
 Q：使用 socket 连接必须使用 wss 吗？
 A：开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名。
@@ -93,7 +93,7 @@ A：请详细阅读广告 API 参数说明中提到的[流量主开通指导文�
 Q：在真机无法调起百度收银台支付？
 A：需要确认签名是否正确，请详细阅读 `requestPolymerPayment`API 中提到的的[签名与验签文档](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_2_base/sign_v2.md)。
 
-Q：在真机调起支付后，在点击付款的时候提示签名错误 ，验签一直不通过？
+Q：在真机调起支付后，在点击付款的时候提示签名错误，验签一直不通过？
 A：确认选择的公钥是否是平台公钥。从百度电商开放平台后台能看到两个公钥，一个是开发者公钥，另一个是平台公钥，验签需要用平台公钥。参见[百度电商开发平台核心参数获取](https://dianshang.baidu.com/platform/doclist/index.html#!/doc/nuomiplus_1_guide/mini_program_cashier/parameter.md)。
 此外，其他环节也可能导致验签错误，请认真阅读 [`requestPolymerPayment`](/game/api/openApi/requestPolymerPayment/#swan-requestPolymerPayment) 中涉及到的文档。
 

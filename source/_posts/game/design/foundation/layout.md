@@ -99,7 +99,7 @@ priority: 02-01
 </div>
 
 一般来说，全面屏安卓手机的刘海高度=系统状态栏高度，全面屏 iPhone 刘海高度为 44pt。
-通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
+通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），并在布局全面屏手机的页面时，增加这一高度。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/game/design/foundation/layout/10-1.png">
@@ -140,7 +140,7 @@ priority: 02-01
 </div>
 
 当开发者未使用底部标签栏组件，而是自主开发底部栏（如购物栏，评论栏），需注意此区域不可布局可操作元素，避免误操作。
-可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/#适配样式">.view_css</a>适配全面屏 iPhone，把底部横条颜色适配为与底部栏一致。
+可以调用小程序提供的<a href="https://smartprogram.baidu.com/docs/develop/framework/view_css/#适配样式">.view_css</a>适配全面屏 iPhone，把底部横条颜色适配为与底部栏一致。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="/img/game/design/foundation/layout/14-1.png">

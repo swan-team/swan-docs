@@ -12,7 +12,7 @@ priority: 05-01
 swan.getStorage(opts)
 ```
 
-**opts 对象属性说明：**
+**opts 对象属性说明**
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|
@@ -44,7 +44,7 @@ const data = {
 swan.setStorageSync(key, data);
 swan.getStorage({
     key,
-    success: function (res) {
+    success: res => {
         console.log('接口执行成功', res.data);
     },
     fail: function () {

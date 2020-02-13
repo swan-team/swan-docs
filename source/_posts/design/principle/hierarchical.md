@@ -51,15 +51,16 @@ sidebar: hierarchical
 ## 反馈力度强弱适度
 
 在用户使用小程序时，会出现需要等待的场景。用户的耐心有限，为避免让用户面对一个静止的屏幕等待未知的结果，需要对当前状态及时反馈，告知用户当前小程序仍在正常运作，以此降低用户使用过程中等待的焦虑感。
-<br></br>
+<br>
 ### 框架启动加载
 <div class="m-doc-custom-text-image">
- 	<div>启动小程序框架时，加载反馈动画与百度 App 通用加载动画不同，更突出小程序的品牌和特性。
-
-此为百度小程序框架通用能力，除 LOGO 和名称调用开发者的小程序信息外，其他视觉动效及交互均由百度小程序框架统一提供，开发者无需进行额外开发。
+ 	<div>
+		启动小程序框架时，加载反馈动画与百度 App 通用加载动画不同，更突出小程序的品牌和特性。
+		<br>
+		此为百度小程序框架通用能力，除 LOGO 和名称调用开发者的小程序信息外，其他视觉动效及交互均由百度小程序框架统一提供，开发者无需进行额外开发。
  	</div>
- 	 	<div><img src="../../../img/design/principle/2-4.png">
-		</div>
+ 	<div>
+		<img src="../../../img/design/principle/2-4.png">
 	</div>
 </div>	
 
@@ -88,19 +89,19 @@ sidebar: hierarchical
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">多选 Checkbox</p>
- 		<a href="../../../../docs/develop/component/form_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">单选 Radio</p>
- 		<a href="../../../../docs/develop/component/form_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">开关 Switch</p>
-		<a href="../../../../docs/develop/component/form_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
+		<a href="../../../../docs/develop/component/formlist_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">滑动选择条 Slider</p>
- 		<a href="../../../../docs/develop/component/form_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
+ 		<a href="../../../../docs/develop/component/formlist_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
 	</div>
 </div>
 

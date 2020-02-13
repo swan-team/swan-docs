@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+      <loc>https://smartprogram.baidu.com/docs/sitemap.txt</loc>
+    </sitemap>
+    <sitemap>
+      <loc>https://smartprogram.baidu.com/docs/sitemap_forum.txt</loc>
+    </sitemap>
+  </sitemapindex>

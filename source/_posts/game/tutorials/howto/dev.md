@@ -8,7 +8,7 @@ priority: 01-01
 
 ### 准备开发工具
 
-下载最新版开发者工具（[Windows 64 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](http://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
+下载最新版开发者工具（[Windows 64 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=windows&type=online) | [Mac 版下载地址](https://smartprogram.baidu.com/mappconsole/api/devDownload?system=mac&type=online)）进行代码的开发和上传。
 
 ### 小游戏项目创建
 
@@ -23,7 +23,7 @@ priority: 01-01
 - AppID 是你的小游戏独有的编号，如果没有的话可以点击下方的**注册**来获取，或者点击 **小游戏** 来体验无 AppID 模式，但是部分功能（关于权限的操作、预览等功能）会受限。
 
 ### 目录结构
-经过一个自动的编译之后我们便得到了一个项目模版。并且，进入到开发者工具中可以看到已经为您创建好的文件的目录。
+经过一个自动的编译之后我们便得到了一个项目模板。并且，进入到开发者工具中可以看到已经为您创建好的文件的目录。
 其中两个必要的文件为：
 1. game.js 小游戏的入口文件。
 2. game.json 小游戏相关配置文件，详细配置内容参见[配置](/game/tutorials/howto/dev/#配置)。
@@ -42,7 +42,7 @@ priority: 01-01
 |networkTimeout|Object| |否|网络请求的超时时间，单位：毫秒|
 |subpackages|array.<`Object`\>| |否|分包结构配置|
 
-`networkTimeout` 的合法值：
+`networkTimeout` 的有效值：
 
 |属性|类型|默认值|是否必填|描述|
 |-|-|-|-|-|-|
@@ -280,7 +280,7 @@ swan.showModal({
     content: '这是一个模态弹窗',
     cancelColor: '#ff0000',
     confirmColor: '#fff000',
-    success: function (res) {
+    success: res => {
         if (res.confirm) {
             console.log('点击了确定');
         } else if (res.cancel) {
@@ -299,7 +299,7 @@ swan.showToast({
 
 ### 真机预览
 
-如果想在真机运行体验，我们在登陆账号并填写了对应的正确 AppID 的情况下，开发者工具上部会有`预览`按钮，点击按钮产生二维码，通过手机百度扫描二维码便可以进行真机预览。
+如果想在真机运行体验，我们在登录账号并填写了对应的正确 AppID 的情况下，开发者工具上部会有`预览`按钮，点击按钮产生二维码，通过手机百度扫描二维码便可以进行真机预览。
 
 ![](/img/game/tutorials/preview.png)
 
@@ -317,3 +317,18 @@ ctx.fillRect(0, 0, 0, 0);
 ### 日志查看
 
 iOS 和 Android 的日志查看均可使用 sConsole 调试工具查看，详见[ sConsole 教程 ](/game/tutorials/devtools/smartappdebug/#sConsole)。
+
+
+### 测试号
+
+测试号是一个特殊的小游戏的 AppID，开发者可以使用此 AppID 来开发和体验小游戏。
+
+在 2.19.0 以上版本的百度开发者工具中，进入新建项目界面，在填写 AppID 下面可以点击使用测试号，即可自动开通测试号权限并将测试号填写到 AppID 输入框。
+
+![图片](../../../../img/tutorial/testapp/game-create.png)
+
+测试号在使用上有一些功能上的限制，比如不支持发布等能力，以及不支持支付、手机号等权限的获取。
+
+![图片](../../../../img/tutorial/testapp/game-main.png)
+
+

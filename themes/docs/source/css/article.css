@@ -7,13 +7,13 @@
     right: 0;
     bottom: 0;
     left: 280px;
-    top: 0;
+    top: 60px;
     overflow: auto;
     background-color: #fafafa;
 }
 
 .m-doc-content-wrap {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     padding: 0 80px;
     min-height: calc(100vh - 150px);
 }
@@ -763,7 +763,7 @@ article thead tr {
 
     .m-doc-content-wrap {
         max-width: 1195px;
-        margin: 60px auto 0 auto;
+        margin: 0 auto;
     }
 
     article {
@@ -880,4 +880,9 @@ article thead tr {
     width: 180px;
     height: 180px;
     margin: 0;
+}
+
+.scan-code-container {
+    text-align: center;    
+    width: 180px;   
 }

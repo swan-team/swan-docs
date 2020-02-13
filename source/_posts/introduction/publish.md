@@ -13,4 +13,4 @@ sidebar: publish
 
 #### 在开发者后台可点击“发布”按钮完成小程序上线发布操作。
 
-![图片](../../img/introduction/register/16.png)
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction6.png)

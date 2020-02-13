@@ -34,13 +34,13 @@ sidebar: accessfeed_push
 
 
 
-![图片](../../img/introduction/auditing/图6.png) 
+![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction9.png) 
 
 
 
 **方式1-链接文件提交（sitemap提交）**
 
-提交原理说明：资源Sitemap是小程序结构化资源url列表。开发者需要将小程序落地页信息按[信息流素材审核规范](https://smartprogram.baidu.com/docs/introduction/auditing_info/)整理成标题、正文 、图片等结构化信息；百度Spider会根据上次更新时间、更新频率等信息对资源数据进行提取，经过审核最终投放到feed中进行分发，为小程序带来巨大的流量。 
+提交原理说明：资源Sitemap是小程序结构化资源url列表。开发者需要将小程序落地页信息按[信息流素材审核规范](https://smartprogram.baidu.com/docs/introduction/auditinginfo_settled/)整理成标题、正文 、图片等结构化信息；百度Spider会根据上次更新时间、更新频率等信息对资源数据进行提取，经过审核最终投放到feed中进行分发，为小程序带来巨大的流量。 
 
  
 
@@ -88,9 +88,9 @@ sidebar: accessfeed_push
 
 
 
-**详情请参考开发者文档内容**
+**详情请参考[开发者文档](/develop/serverapi/submitresource/)内容**
 
-https://smartprogram.baidu.com/docs/develop/serverapi/open_feed/#submitresource/
+ 
 
  
 

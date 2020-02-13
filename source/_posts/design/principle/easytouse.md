@@ -80,5 +80,3 @@ sidebar: easytouse
 		<img src="../../../img/design/principle/1-9-2.png"><p class="m-doc-custom-examples-text">例：百度火车票小程序，在搜索城市时，跟随用户输入提供关键词进行联想。</p>
 	</div>
 </div>
-</div>
-

@@ -11,14 +11,16 @@ sidebar: typography
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/1-1.png">
 		<p class="m-doc-custom-examples-text">认真沉浸阅读（Z型）
-1. 从左侧开始，视线向右水平移动阅读；
-2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。</p>
+			1. 从左侧开始，视线向右水平移动阅读；
+			2. 视线下移至最左侧，重复第1步，从上往下逐行阅读。
+		</p>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/1-2.png">
 		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
-1. 从上至下垂直扫描；
-2. 发现感兴趣的内容，视线从左向右水平移动。</p>
+			1. 从上至下垂直扫描；
+			2. 发现感兴趣的内容，视线从左向右水平移动。
+		</p>
 	</div>
 </div>
 
@@ -67,7 +69,7 @@ sidebar: typography
 
 ## 颜色
 建议按使用场景定义文本颜色，常用场景文本颜色建议如下：
-1. 主要信息#000000，次要信息#333333，辅助信息使用#666666，附属信息使用#CCCCCC。
+1. 主要信息#000000，次要信息#333333，辅助信息使用#999999，附属信息使用#CCCCCC。
 
 <div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/7.png"></div>

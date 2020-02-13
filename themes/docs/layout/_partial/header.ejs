@@ -1,9 +1,14 @@
-<header>
+<header id="header">
+    <script>
+        if (window.isSwanIde) {
+            document.getElementById('header').style.display = 'none';
+        }
+    </script>
     <a href="javascript:void(0)" class="m-doc-nav-btn"></a>
     <div class="m-mobile-doc-level1"><%#
         %><% for(var i = 0; i < navs.length; i++) { %><%#
             %><% if(i === navIndex) { %><%#
-                %><div class="m-mobile-level1-selected"><span><%- navs[i].text %></span><img src="<%- url_for('img/level1_arrow.png') %>"/></div><%#
+                %><div class="m-mobile-level1-selected"><span><%- navs[i].text %></span><img src="<%- url_for('img/nav_arrow.png') %>"/></div><%#
                 %><ul><%#
                     %><% for(var i = 0; i < navs.length; i++) {%><%#
                         *%><li <% if(i === navIndex) { %> class="m-doc-header-nav-selected" <% } %>><%#
@@ -26,13 +31,22 @@
             </a>
         </div>
     </div>
-    <div class="m-doc-service-market m-doc-item">
-        <a href="https://smartprogram.baidu.com/developer/servicemarket.html" target="_blank">服务市场</a>
-    </div>
-    <div class="m-doc-forum m-doc-item">
-        <a href="https://smartprogram.baidu.com/forum/" target="_blank">社区</a>
+    <div class="m-doc-other">
+        <div class="m-doc-service-market m-doc-item">
+            <a href="https://smartprogram.baidu.com/developer/servicemarket.html" target="_blank">服务市场</a>
+        </div>
+        <div class="m-doc-forum m-doc-item" id="m-doc-forum">
+            <a href="https://smartprogram.baidu.com/forum?hmsr=docsnav" target="_blank">社区</a>
+        </div>
     </div>
 
     <%- partial('./header-nav', {}) -%>
     <%- partial('./search') -%>
 </header>
+
+<script type="text/javascript">
+    var $forumLink = document.getElementById('m-doc-forum');
+    if (window && $forumLink) {
+        $forumLink.innerHTML = `<a href="${window.location.origin}/forum?hmsr=docsnav" target="_blank">社区</a>`
+    }
+</script>

@@ -47,7 +47,7 @@ swan.getLocation(opts)
 |res.errCode|string|报错码|
 |res.errMsg|string|报错信息 |
 
-res.errMsg 合法值
+res.errMsg 有效值
 
 |errCode|errMsg|描述|
 |-|-|-|

@@ -40,7 +40,7 @@ sidebar: whitescreen
 小程序框架自身也在不断更新，所支持的能力也在不断更新和扩充。同样，开发者也会对小程序自身也会进行版本更新。这里就涉及到了兼容性问题。小程序框架版本修复Bug记录和版本兼容性，请参考以下连接了解和主动规避：
 1. 语法支持性：[运行环境](https://smartprogram.baidu.com/docs/develop/framework/operating-environment/)
 2. 版本兼容性：[兼容性说明](https://smartprogram.baidu.com/docs/develop/swan/compatibility/)
-3. 框架更新日志及修复问题说明：[历史更新日志](https://smartprogram.baidu.com/docs/develop/tutorial/swanchangelog/)
+3. 框架更新日志及修复问题说明：[历史更新日志](https://smartprogram.baidu.com/docs/develop/swan/swanchangelog/)
 
 ###  优化性能和体验
 已有启动性能数据，平均数据和80分位数据较快不一定能保证白屏率就低，白屏case大概率发生在性能的长尾数据中。
@@ -54,13 +54,13 @@ sidebar: whitescreen
     ```
     swan.request({
         url: 'https://www.baidu.com/keyData',
-        success(res) {
+        success: res => {
             this.setData({
                 keyData: res
             });
             swan.request({
                 url: 'https://www.baidu.com/nonKeyData',
-                success(res) {}
+                success: res => {}
             });
         }
     })

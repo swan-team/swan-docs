@@ -7,10 +7,10 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "prebuild": "npm install && hexo --safe",
+    "prebuild": "npm install && hexo --safe && node make-sitemap.js",
     "prestart": "npm install && hexo --safe",
-    "start": "npx hexo server",
-    "build": "npx hexo clean && npx hexo generate"
+    "start": "node make-sitemap.js && npx hexo server",
+    "build": "npx hexo clean && NODE_OPTIONS=--max-old-space-size=4096 npx hexo generate"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.2",

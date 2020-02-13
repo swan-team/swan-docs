@@ -1,5 +1,5 @@
 ---
-title: 打点统计方案
+title: 手工埋点统计
 header: data
 nav: book
 sidebar: performance-point
@@ -24,7 +24,7 @@ App({
                 uid: self.globalData.uuid
                   // that.globalData.uuid为用户的唯一标识，详见"uuid的统计逻辑"。
             },
-            success: function (res) {
+            success: res => {
                 self.globalData.data = res.data;
                 // 此处为网络请求，加入 callback 确保在 Page.onLoad 之前返回。
                 self.globalData.callBackArr.forEach(callBack => {
@@ -87,7 +87,7 @@ Page({
 ## 用户唯一标识
 
 uuid 是用户唯一标识，使用示例中提供的方法，生成uuid作为用户唯一标识的统一策略，每次进入到小程序后进行一次有效的存储，在统计中直接取出使用。
-**示例**：
+**代码示例**
 ```js
 App({
     onShow() {

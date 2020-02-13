@@ -6,7 +6,7 @@ sidebar: button
 ---
 按钮允许用户点击，并触发对应的操作。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/formlist/#button/" target="_blank">button</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/component/#button/" target="_blank">button</a>。
 
 ## 大按钮
 大按钮高度固定为88px，圆角大小固定8px。
@@ -93,5 +93,5 @@ sidebar: button
 例如：我们建议悬浮按钮“回到顶部”策略：默认及上滑时不显示，下拉渐显，无操作500ms渐隐。
 因为页面默认展现及用户上滑以浏览内容的情况，应以用户阅读为优先，不应显示遮挡内容；而用户下拉往上翻内容时，提供快捷“回到顶部”的操作更为合适。
 
-<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/button/8.mov"/>你的浏览器不支持该视频播放</video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/button/8.mov">你的浏览器不支持该视频播放</video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 

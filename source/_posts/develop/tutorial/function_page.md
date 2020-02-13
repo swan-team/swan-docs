@@ -26,40 +26,41 @@ Page() 函数用来注册一个页面。接受一个 object 参数，其指定�
 |onError|Function|错误监听函数|
 |其他|不限|开发者可以添加任意的函数或数据到 object 参数中，在页面的函数中用 this 可以访问|
 
-<notice>示例：</notice>
+**代码示例**
+
 ```js
 Page({
-	data: {
-		name: 'swan'
-	},
-	onLoad: function () {
+    data: {
+	name: 'swan'
+    },
+    onLoad: function () {
 
-	},
-	onReady: function() {
-    	// Do something when page ready.
-	},
-	onShow: function() {
-		// Do something when page show.
-	},
-	onHide: function() {
-		// Do something when page hide.
-	},
-	onUnload: function() {
-		// Do something when page close.
-	},
-	onPullDownRefresh: function() {
-		// Do something when pull down.
-	},
-	onReachBottom: function() {
-		// Do something when page reach bottom.
-	},
-	onShareAppMessage: function () {
-		// return custom share data when user share.
-	},
-	onURLQueryChange: function() {
-		// Do something when url query change.
-	}
+    },
+    onReady: function() {
+        // Do something when page ready.
+    },
+    onShow: function() {
+	// Do something when page show.
+    },
+    onHide: function() {
+	// Do something when page hide.
+    },
+    onUnload: function() {
+	// Do something when page close.
+    },
+    onPullDownRefresh: function() {
+	// Do something when pull down.
+    },
+    onReachBottom: function() {
+	// Do something when page reach bottom.
+    },
+    onShareAppMessage: function () {
+	// return custom share data when user share.
+    },
+    onURLQueryChange: function() {
+	// Do something when url query change.
+    }
 });
 ```
 
-智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data ，进行组合渲染。
+智能小程序框架，会将同页面的 .swan 文件与 .js 中定义的 Page 对象中的 data，进行组合渲染。
