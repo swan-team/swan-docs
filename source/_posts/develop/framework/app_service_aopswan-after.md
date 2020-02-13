@@ -17,7 +17,7 @@ sidebar: app_service_aopswan-after
 |[key] | String | |否 |要拦截的API的名称 |
 |[value] | Object / Function | |否 |拦截之后的处理器(如果为function，则默认在returning阶段调用) |
 
-** 可拦截的所有方法 **
+**可拦截的所有方法**
 
 参见API文档，API中所有swan调用的均可以拦截
 
