@@ -3958,7 +3958,7 @@
                 text: 模拟器实现差异 
                 name: diff
         -
-            link: /develop/devtools/auto
+            link: /develop/devtools/auto/quick-start
             text: 小程序自动化
             name: auto
             sidebar:
