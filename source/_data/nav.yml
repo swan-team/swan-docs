@@ -4,6 +4,7 @@
   text: 介绍
   nickname: 小程序介绍
   name: introduction
+  showSubNav: true
   nav:
     -
       link: /introduction/enter_application
@@ -555,6 +556,7 @@
 -
   link: /develop/fuctionlist/list
   text: 开发
+  showSubNav: true
   name: develop
   license:
     name: 创作共用-署名-禁止演绎
@@ -672,6 +674,7 @@
       link: /develop/framework/app_service_register
       text: 框架
       name: framework
+      close: true
       sidebar:
         -
             link: /develop/framework/app_service
@@ -983,6 +986,7 @@
     -
       text: 组件
       name: component
+      close: true
       sidebar:
         -
             sidebar:
@@ -1237,6 +1241,7 @@
     -
       text: API
       name: api
+      close: true
       sidebar:
         -
             sidebar:
@@ -3739,6 +3744,7 @@
     -
       text: 工具
       name: devtools
+      close: true
       sidebar:
         -
             sidebar:
@@ -4163,6 +4169,7 @@
     -
       text: 云开发
       name: cloud
+      close: true
       sidebar:
         -
           text: 介绍
