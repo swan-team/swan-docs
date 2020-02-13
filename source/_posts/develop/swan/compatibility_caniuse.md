@@ -13,7 +13,7 @@ sidebar: compatibility_caniuse
 ```js
 swan.showModal({
   success: function(res) {
-    if (swan.canIUse('showModal.cancel')) {
+    if (swan.canIUse('showModal.success.cancel')) {
       console.log(res.cancel)
     }
   }
