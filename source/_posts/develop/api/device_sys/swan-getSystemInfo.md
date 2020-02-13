@@ -29,7 +29,7 @@ Object object
 ###   success返回参数说明 
 
 |参数  |说明 |最低版本|
-|---- | ---- |
+|---- | ---- |---- |
 |brand  | 手机品牌 | |
 |model |  手机型号   | |
 |pixelRatio | 设备像素比  | |

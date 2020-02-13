@@ -24,14 +24,14 @@ sidebar: cloud_init
 |functions|String|是| |云函数默认环境配置|
 |storage|String|是| |云存储默认环境配置|
 
-**代码示例1 **
+**代码示例1**
 ```js
 swan.cloud.init({
   env: 'test-env'
 })
 ```
 
-**代码示例2 **
+**代码示例2**
 ```js
 swan.cloud.init({
   env: {
