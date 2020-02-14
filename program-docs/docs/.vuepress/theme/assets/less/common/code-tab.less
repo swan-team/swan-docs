@@ -1,0 +1,116 @@
+@import './color.less';
+@import './params.less';
+
+.code-tab {
+    margin: 24px 0;
+    &-head {
+        border-bottom: 1px solid @border-gray2;
+        position: relative;
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: @bg-white1;
+            border-radius: 8px 8px 0 0;
+            li {
+                list-style: none;
+                cursor: pointer;
+                height: 52px;
+                padding: 0 24px;
+                span {
+                    display: inline-block;
+                    line-height: 50px;
+                    height: 50px;
+                    font-size: 14px;
+                    color: @font-black4;
+                }
+            }
+        }
+
+        &-active {
+            span {
+                color: @font-default !important;
+                border-bottom: 2px solid @border-black1;
+            } 
+        }
+
+        &-icons {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            height: 52px;
+            top: 0;
+            align-items: center;
+        }
+    }
+
+    &-content {
+        position: relative;
+        // margin: 0;
+        pre {
+            margin: 0 !important;
+        }
+        &-icons {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            height: 52px;
+            top: 0;
+            align-items: center;
+
+            &-move {
+                top: -48px;
+                right: 40px;
+            }
+        }
+    }
+
+    &-icons {
+        &-copy {
+            position: relative;
+            &-msg {
+                position: absolute;
+                white-space: nowrap;
+                font-size: 14px;
+                color: @font-white1;
+                // top: -200%;
+                // left: -280%;
+                top: -180%;
+                left: -200%;
+                background: @bg-black1;
+                opacity: .7;
+                line-height: 30px;
+                padding: 0 14px;
+                border-radius: 15px;
+                z-index: 10000;
+            }
+            &-msg:before {
+                content:'';
+                width: 0;
+                height: 0;
+                border-top: 6px solid @bg-black1;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                position: absolute;
+                top: 30px;
+                // left: 50px;
+                left: 45%;
+            }
+            img {
+                width: 18px;
+                height: 18px;
+                border: none;
+                margin-top: 0;
+                cursor: pointer;   
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-max-width) {
+    .code-tab {
+        &-icons {
+            display: none;
+        }
+    }
+}
