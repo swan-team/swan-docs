@@ -37,4 +37,4 @@ sidebar: ai
 |1001|请求失败|
 
 ## Bug&Tip
-* 目前AI能力只能在百度宿主中使用，且暂时无法用caniuse来判断可用性，建议开发者使用getSystemInfoSync获取宿主名称作为临时方案来判断，在每个AI示例中包含了这种判断方式。长期来讲，所有宿主都会支持AI能力，也应该用caniuse判断，以上为临时折中方案。
+* 目前AI能力只能在百度宿主中使用，可使用 [swan.canIUse](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-canIUse/) 来判断可用性。
