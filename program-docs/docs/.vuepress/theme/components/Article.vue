@@ -42,7 +42,7 @@ export default {
             return this.$page.frontmatter.title;
         },
         gitLink() {
-            const prefixPath = 'https://github.com/swan-team/swan-docs/tree/master/program-docs/';
+            const prefixPath = 'https://github.com/swan-team/swan-docs/tree/master/program-docs/docs/';
             return `${prefixPath}${this.$page.relativePath}`;
         }
     },
