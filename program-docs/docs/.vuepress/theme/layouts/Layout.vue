@@ -91,7 +91,6 @@ import {
     getInitHeaderIndex,
     getInitSubIndex
 } from '../utils/get-init-data';
-import {userDevice} from '../utils/get-device';
 import {findLink} from '../utils/link-loader';
 import 'prismjs/themes/prism.css';
 import '../assets/less/common/custom.css';
@@ -129,19 +128,6 @@ export default {
             e.stopPropagation();
             $(e.currentTarget).hide();
         });
-
-        // 对齐线上，分设备展示
-        if (userDevice.isPc) {
-            $('.ispc').show();
-        } else if (userDevice.isBox) {
-            $('.isbox').show();
-            $('.ispc').hide();
-            $('.ismobile').hide();
-        } else {
-            $('.ismobile').show();
-            $('.ispc').hide();
-            $('.isbox').hide();
-        }
     },
     destroyed() {
         $(window).off('scroll', this.setScrollTop);
