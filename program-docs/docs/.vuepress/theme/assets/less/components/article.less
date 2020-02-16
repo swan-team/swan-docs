@@ -1,0 +1,102 @@
+@import '../common/color.less';
+
+.article {
+    font-family: PingFangSC-Regular;
+    &-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 58px 0;
+        h1 {
+            font-size: 30px;
+            color: @font-default;
+            font-family: "PingFangSC-Medium";
+            font-weight: normal;
+            display: inline-block;
+            min-width: 243px;
+            margin: 0;
+        }
+        &-bg {
+            position: absolute;
+            height: 18px;
+            left: 0;
+            top: 20px;
+            width: 263px;
+            z-index: -10;
+            border-radius: 1px;
+            opacity: .4;
+            background-image: linear-gradient(270deg, @bg-white 0%, @bg-blue 100%);
+        }
+
+        &-menu {
+            display: inline-flex;
+            height: 30px;
+            padding-left: 50px;
+            margin-top: 8px;
+            position: relative;
+            img {
+                height: 30px;
+                width: 44px;
+                border: none !important;
+                margin-top: 0 !important;
+                padding: 0;
+                line-height: 30px;
+            }
+
+            &-edit {
+                position: relative;
+                &-msg {
+                    position: absolute;
+                    white-space: nowrap;
+                    font-size: 14px;
+                    color: @font-white1;
+                    top: -40px;
+                    left: -20px;
+                    background: @bg-black1;
+                    opacity: .7;
+                    line-height: 30px;
+                    padding: 0 14px;
+                    border-radius: 15px;
+                }
+                &-msg:before {
+                    content:'';
+                    width: 0;
+                    height: 0;
+                    border-top: 6px solid @bg-black1;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    position: absolute;
+                    top: 30px;
+                    left: 35px;
+                }
+            }
+        }
+    }
+
+    .show-scene-btn {
+        color: @href-color;
+    }
+
+    .show-scene-btn:hover {
+        cursor: pointer;
+    }
+
+    .img-container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #ccc;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+        img {
+            max-height: 80%;
+            max-width: 80%;
+            margin-top: 0;
+        }
+    }
+}

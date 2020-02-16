@@ -1,0 +1,36 @@
+@import '../common/color.less';
+@import '../common/params.less';
+
+.m-doc-sidebar {
+    background-color: @bg-white1;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: calc(100vh - 60px);
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.page-container-sidebar {
+    width: 280px;
+    &-fixed {
+        position: fixed;
+        top: 0;
+    }
+    &-top {
+        min-height: calc(100vh - 60px);
+        top: 60px;
+    }
+
+}
+
+@media screen and (max-width: @mobile-max-width) {
+    .page-container-sidebar {
+        position: fixed;
+        z-index: 1000;
+    }
+}
