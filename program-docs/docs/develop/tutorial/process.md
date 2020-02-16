@@ -127,8 +127,8 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 ```json
 {
     "pages":[
-	"pages/index/index",
-	"pages/detail/detail"
+        "pages/index/index",
+        "pages/detail/detail"
     ]
 }
 ```
@@ -178,11 +178,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 ```json
 {
     "window": {
-	"navigationBarBackgroundColor": "#ffffff",
-	"navigationBarTextStyle": "black",
-	"navigationBarTitleText": "swan接口功能演示",
-	"backgroundColor": "#eeeeee",
-	"backgroundTextStyle": "light"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "swan接口功能演示",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
     }
 }
 ```
@@ -196,11 +196,11 @@ JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时�
 ```json
 {
     window: {
-	"navigationBarBackgroundColor": "#ffffff",
-	"navigationBarTextStyle": "black",
-	"navigationBarTitleText": "swan接口功能演示",
-	"backgroundColor": "#eeeeee",
-	"backgroundTextStyle": "light"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "swan接口功能演示",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
     }
 }
 ```
@@ -373,4 +373,17 @@ pages/index/index?id=123
 |connectSocket|	number|	否|	60000|	swan.connectSocket 的超时时间，单位：毫秒。|
 |uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
 |downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
+
+**代码示例**
+
+```json
+
+"networkTimeout": {
+    "request": 30000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+}
+
+```
 
