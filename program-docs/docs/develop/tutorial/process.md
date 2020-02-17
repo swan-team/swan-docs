@@ -169,7 +169,7 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
- <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
+ <p class="m-doc-custom-examples-title">适配提示</p><p class="m-doc-custom-examples-text">原生顶bar高度=状态栏高度（statusBarHeight）+顶部导航栏高度（navigationBarHeight）；可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。这块文档的展示在页面上有问题，需要排查下，我测试了下单独的md展示是没有问题的！！</p>
 </div>
 </div>
 
