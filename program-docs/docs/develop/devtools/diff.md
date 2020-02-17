@@ -38,10 +38,10 @@ sidebar: diff
 |[VoiceRecognizer.onFinish](https://smartapp.baidu.com/docs/develop/api/ai/voice_VoiceRecognizer-onFinish/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
 |[VoiceRecognizer.onError](https://smartapp.baidu.com/docs/develop/api/ai/voice_VoiceRecognizer-onError/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
 |[VoiceRecognizer.onRecognize](https://smartapp.baidu.com/docs/develop/api/ai/voice_VoiceRecognizer-onRecognize/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
-|[swan.startLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-startLocationUpdate/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
-|[swan.onLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-onLocationChange/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
-|[swan.offLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-offLocationChange/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
-|[swan.stopLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-stopLocationUpdate/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
+|[swan.startLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-startLocationUpdate/) | 通过“模拟操作->更改sensor面板的返回数据” |
+|[swan.onLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-onLocationChange/) | 通过“模拟操作->返回sensor面板数据” |
+|[swan.offLocationChange](https://smartapp.baidu.com/docs/develop/api/location/swan-offLocationChange/) | 通过“模拟操作->返回sensor面板数据” |
+|[swan.stopLocationUpdate](https://smartapp.baidu.com/docs/develop/api/location/swan-stopLocationUpdate/) | 通过“模拟操作->更改sensor面板的返回数据” |
 |[swan.deleteEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-deleteEventOnCalendar/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
 |[swan.addEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
 |[swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) | 部分属性开发者工具暂不支持,详情请看详情页 |
