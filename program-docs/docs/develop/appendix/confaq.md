@@ -70,6 +70,10 @@ A: cover-view 为原生组件，原生组件为系统提供的控件不支持单
 
 A：支持。
 
+**代码示例：**
+
+<a href="swanide://fragment/3dab70c9071d3190ece2545855a679e11581869060662" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 #### Q： scroll-view 的scroll-top。设置是否是无效的?
 
 A：使用竖向滚动时，需要给 &lt;scroll-view&gt; 一个固定高度，通过 CSS 设置 height。

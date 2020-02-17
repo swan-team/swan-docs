@@ -92,7 +92,7 @@ sidebar: media_video
 
 ## 示例
 
-<a href="swanide://fragment/510791e688e8d50ce5362bffb9d672501577360707477" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f2abd403bac011d5226a5bcb01dc9d691581647230548" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -117,8 +117,6 @@ sidebar: media_video
 
 ###  代码示例1
 
-<a href="swanide://fragment/cf193e3b46933a9c48cdf78994ca79cf1574845335256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
 * 在 swan 文件中
 
 ```xml
@@ -128,7 +126,6 @@ sidebar: media_video
                id="myVideo"
                src="{{src}}"
                initial-time="{{initialTime}}"
-               duration="48"
                controls="{{controls}}"
                autoplay="{{false}}"
                loop="{{false}}"
