@@ -3,6 +3,7 @@ title: radio-group 单项选择器组
 header: develop
 nav: component
 sidebar: formlist_radio-group
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/radio/radio
 ---
 
 
@@ -27,20 +28,7 @@ sidebar: formlist_radio-group
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/radio.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例1 - 默认样式 
 
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

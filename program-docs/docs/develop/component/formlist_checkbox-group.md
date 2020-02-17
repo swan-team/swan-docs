@@ -3,6 +3,7 @@ title: checkbox-group 多项选择器组
 header: develop
 nav: component
 sidebar: formlist_checkbox-group
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
 ---
 
 
@@ -29,19 +30,7 @@ sidebar: formlist_checkbox-group
 
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/checkbox.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 - 默认样式 
 

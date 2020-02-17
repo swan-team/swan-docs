@@ -3,6 +3,7 @@ title: swan.addEventOnCalendar
 header: develop
 nav: api
 sidebar: swan-addEventOnCalendar
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/calendar/calendar
 ---
 
 
@@ -48,21 +49,7 @@ Object object
 
 
 
-
-### 图片示例
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/eventOnCalendar.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>  
-</div>
+ 
 
 ###  代码示例 
 

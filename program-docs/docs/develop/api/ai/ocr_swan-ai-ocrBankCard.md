@@ -3,6 +3,7 @@ title: swan.ai.ocrBankCard
 header: develop
 nav: api
 sidebar: ocr_swan-ai-ocrBankCard
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/ocrBankCard/ocrBankCard
 ---
 
  
@@ -40,7 +41,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/e4049df2498a67bc35436694b4505bd81581327527167" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1e8e28ffd4bb694c9c9b006da1b3f31c1569500427353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrBankCard.png" class="demo-qrcode-image" />
@@ -48,19 +49,7 @@ Object object
 </div>
 
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/ocrBankCard.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 
@@ -73,25 +62,15 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-                let host = swan.getSystemInfoSync().host;
-                if (host === 'baiduboxapp') {
-                    swan.ai.ocrBankCard({
-                        image, // 暂不支持识别网络图片
-                        success: res => {
-                            console.log('ocrBankCard res', res.result);
-                        }，
-                        fail: err => {
-                            console.log('ocrBankCard err', err);
-                        }
-                    });
-                }
-                else {
-                    swan.showToast({
-                        title: '此api目前仅可在百度App上使用',
-                        icon: 'none'
-                    });
-                }
+                swan.ai.ocrBankCard({
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('ocrBankCard res', res.result);
+                    }，
+                    fail: err => {
+                        console.log('ocrBankCard err', err);
+                    }
+                });
             }
         })
     }

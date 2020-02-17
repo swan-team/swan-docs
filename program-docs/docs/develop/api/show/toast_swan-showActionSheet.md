@@ -3,6 +3,7 @@ title: swan.showActionSheet
 header: develop
 nav: api
 sidebar: toast_swan-showActionSheet
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showActionSheet/showActionSheet
 ---
 
  
@@ -41,18 +42,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/showAction.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 

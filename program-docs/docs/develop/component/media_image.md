@@ -3,6 +3,7 @@ title: image 图片
 header: develop
 nav: component
 sidebar: media_image
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/image/image
 ---
 
 
@@ -52,19 +53,6 @@ sidebar: media_image
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/image1.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/image2.png">
-    </div>    
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>          
-</div>
 
 ###  代码示例 1： 缩放模式  
 

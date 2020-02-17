@@ -3,6 +3,7 @@ title:  swan.onMemoryWarning
 header: develop
 nav: api
 sidebar:  onmemory
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onMemoryWarning/onMemoryWarning
 ---
 
  
@@ -43,20 +44,7 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 
 
 
-### 图片示例
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onMemoryWarning.jpg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

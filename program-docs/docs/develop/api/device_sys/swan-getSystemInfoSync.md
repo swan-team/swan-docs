@@ -3,6 +3,7 @@ title:  swan.getSystemInfoSync
 header: develop
 nav: api
 sidebar: swan-getSystemInfoSync
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getSystemInfo/getSystemInfo
 ---
 
 
@@ -63,19 +64,7 @@ sidebar: swan-getSystemInfoSync
 
 
 
-
-### 图片示例
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getSystemInfoSync.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

@@ -3,6 +3,7 @@ title: open-data 开放数据
 header: develop
 nav: component
 sidebar: open
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/open-data/open-data
 ---
 
 
@@ -38,19 +39,7 @@ sidebar: open
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="../../../img/component/open-data.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
+ 
 
 ###  代码示例 
 

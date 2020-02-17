@@ -3,6 +3,7 @@ title: swan.getBatteryInfo
 header: develop
 nav: api
 sidebar: swan-getBatteryInfo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getBatteryInfo/getBatteryInfo
 ---
 
 
@@ -46,20 +47,7 @@ Object object
 
 
 
-### 图片示例
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getBatteryInfo.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

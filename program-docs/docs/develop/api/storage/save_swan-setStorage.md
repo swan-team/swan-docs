@@ -3,6 +3,7 @@ title: swan.setStorage
 header: develop
 nav: api
 sidebar:  save_swan-setStorage
+weburl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
 ---
 
 
@@ -35,21 +36,12 @@ Object object
 </div>
 
 
-### 图片示例 
+ 
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/storage.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+### 代码示例 
 
-### 代码示例 1:
+
+
 
 * 在 swan 文件中
 
@@ -147,120 +139,6 @@ Page({
 });
 
 ```
-
-### 代码示例 2: 利用本地缓存提前渲染界面
-
-> 业务场景：我们实现的小程序首页是展示一堆商品的列表。数据渲染的方式一般是在页面onLoad回调之后通过swan.request向服务器发起一个请求去拉取列表数据，在success回调中把数据通过setData渲染到界面上，如下代码所示。
-
-* 在 js 文件中
-
-```js
-Page({
-    onLoad: function() {
-        var that = this
-        swan.request({
-            url: 'xxxx',
-            success: function (res) {
-                if (res.statusCode === 200) {
-                    that.setData({
-                        list: res.data.list
-                    })
-                }
-            }
-        })
-    }
-})
-```
-
-> 在请求到数据前，我们避免页面白屏的方式一般是把之前的请求成功请求存在本地缓存里，在onLoad发起请求前，先检查是否有缓存过列表，如果有的话直接渲染界面，然后等到swan.request的success回调之后再覆盖本地缓存重新渲染新的列表，如下代码所示。
-
-* 在 js 文件中
-
-```js
-Page({
-    onLoad: function() {
-        var that = this
-        var list =swan.getStorageSync("list")
-        if (list) { // 本地如果有缓存列表，提前渲染
-            that.setData({
-                list: list
-            })
-        }
-        swan.request({
-            url: 'xxxx',
-            success: function (res) {
-                if (res.statusCode === 200) {
-                    list = res.data.list
-                    that.setData({ // 再次渲染列表
-                        list: list
-                    })
-                    swan.setStorageSync("list",list) // 覆盖缓存数据
-                }
-            }
-        })
-    }
-})
-```
-
-### 代码示例 3: Session Key在小程序中是有实效性的,可以利用本地缓存的能力来持久化存储Session Key。
-
-* 在 js 文件中
-
-```js
-var app = getApp();
-
-Page({
-    onLoad: function() {
-        // 调用 swan.login 获取 Authorization Code
-        swan.login({
-            success: function(res) {
-                // 拿到Code后去自己服务器换取自己的登录凭证
-                swan.request({
-                    url: 'https://spapi.baidu.com/oauth/jscode2sessionkey',
-                    data: { code: res.code },
-                    success: function(res) {
-                        var data = res.data;
-                        // 把 SessionId 和过期时间放在内存中的全局对象和本地缓存里边
-                        app.globalData.sessionKey =data.sessionKey;
-                        swan.setStorageSync('SESSIONKEY', data.sessionKey);
-                        // 假设登录态保持2天
-                        var expiredTime = +new Date() + 2*24*60*60*1000;
-                        app.globalData.expiredTime = expiredTime;
-                        swan.setStorageSync('EXPIREDTIME', expiredTime);
-                    }
-                })
-            }
-        })
-    }
-})
-```
-
-### 代码示例 4: 利用本地缓存恢复用户登录态Session Key
-
-* 在 js 文件中
-
-```js
-// app.js
-App({
-    onLaunch: function(options) {
-        var sessionKey = swan.getStorageSync('SESSIONKEY');
-        var expiredTime = swan.getStorageSync('EXPIREDTIME');
-        var now = +new Date();
-        if (now - expiredTime <= 2*24*60*60*1000) {
-            this.globalData.sessionKey = sessionKey;
-            this.globalData.expiredTime = expiredTime;
-        }
-    },
-    globalData: {
-        sessionKey: null,
-        expiredTime: 0
-    }
-})
-```
-
-
-
-
 ##  错误码
 
 ### Android

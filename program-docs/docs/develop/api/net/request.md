@@ -3,6 +3,7 @@ title: swan.request
 header: develop
 nav: api
 sidebar: request
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/request/request
 ---
 
  
@@ -71,19 +72,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/request.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例1 - post的header['content-type'] 为 application/json ：
  
@@ -593,41 +582,6 @@ Page({
     }
 });
 ```
-
-### 代码示例13 - 防止用户快速点击,多次请求（加锁） ：
-
-* 在 js 文件中
-
-```js
-var hasClick = false;
-
-Page({
-    tap: function() {
-        if (hasClick) {
-            return;
-        }
-        hasClick = true;
-        swan.showLoading()
-        swan.request({
-            url: 'xxx',
-            method: 'POST',
-            header: { 'content-type':'application/json' },
-            data: { },
-            success: function (res) {
-                console.log(res.data);
-            },
-            fail: function (res) {
-                swan.showToast({ title: '系统错误' });
-            },
-            complete: function (res) {
-                swan.hideLoading()
-                hasClick = false
-            }
-        })
-    }
-})
-```
-
  返回值 ：
 
 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。

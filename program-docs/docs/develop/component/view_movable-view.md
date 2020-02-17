@@ -3,6 +3,7 @@ title: movable-view 可移动视图容器
 header: develop
 nav: component
 sidebar: view_movable-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/movable-view/movable-view
 ---
 
  
@@ -53,20 +54,7 @@ sidebar: view_movable-view
 </div>
 
 
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/movable-view.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 1： movable-view区域小于movable-area  
 

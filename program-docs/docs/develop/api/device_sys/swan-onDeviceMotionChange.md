@@ -3,6 +3,7 @@ title: swan.onDeviceMotionChange
 header: develop
 nav: api
 sidebar: swan-onDeviceMotionChange
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/deviceMotion/deviceMotion
 ---
 
 
@@ -36,21 +37,7 @@ Function callback
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
-
-
-### 图片示例
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/onDeviceMotionChange.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

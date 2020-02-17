@@ -56,9 +56,9 @@ Object object
     </div>     
 </div>
 
-### 代码示例1
+### 示例1 
 
-<a href="swanide://fragment/8b103798c72dc03660be813f0750abcb1581328592134" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b2861370f6a561f81ebeef1dd5861dd51573995603718" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 js 文件中 
 
@@ -93,35 +93,25 @@ Page({
         let sizeIndex = this.getData('sizeIndex');
         let countIndex = this.getData('countIndex');
         let perIndex = this.getData('perIndex');
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.textToAudio({
-                tex,
-                ctp: '1',
-                lan: 'zn',
-                spd: JSON.stringify(this.data.sourceArray[sourceIndex]),
-                pit: JSON.stringify(this.data.sizeArray[sizeIndex]),
-                vol: JSON.stringify(this.data.countArray[countIndex]),
-                per: JSON.stringify(this.data.perArray[perIndex]),
-                success: res => {
-                    console.log('ai.textToAudio success', res);
-                    swan.showToast({
-                        title: '合成成功',
-                        icon: 'none'
-                    });
-                },
-                fail: err => {
-                    console.log('ai.textToAudio fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.textToAudio({
+            tex,
+            ctp: '1',
+            lan: 'zn',
+            spd: JSON.stringify(this.data.sourceArray[sourceIndex]),
+            pit: JSON.stringify(this.data.sizeArray[sizeIndex]),
+            vol: JSON.stringify(this.data.countArray[countIndex]),
+            per: JSON.stringify(this.data.perArray[perIndex]),
+            success: res => {
+                console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```
@@ -137,35 +127,25 @@ Page({
     data: {
     },
     textToAudio(){
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.textToAudio({
-                tex: 'hello，这是一段测试语音合成的文字',
-                ctp: '1',
-                lan: 'zh',
-                spd: '5',
-                pit: '5',
-                vol: '5',
-                per: '0',
-                success: res => {
-                    console.log('ai.textToAudio success', res);
-                    swan.showToast({
-                        title: '合成成功',
-                        icon: 'none'
-                    });
-                },
-                fail: err => {
-                    console.log('ai.textToAudio fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.textToAudio({
+            tex: 'hello，这是一段测试语音合成的文字',
+            ctp: '1',
+            lan: 'zh',
+            spd: '5',
+            pit: '5',
+            vol: '5',
+            per: '0',
+            success: res => {
+                console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```
@@ -181,35 +161,25 @@ Page({
     data: {
     },
     textToAudio(){
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.textToAudio({
-                tex: 'hello，这是一段测试语音合成的文字',
-                ctp: '1',
-                lan: 'zh',
-                spd: '5',
-                pit: '5',
-                vol: '5',
-                per: '1',
-                success: res => {
-                    console.log('ai.textToAudio success', res);
-                    swan.showToast({
-                        title: '合成成功',
-                        icon: 'none'
-                    });
-                },
-                fail: err => {
-                    console.log('ai.textToAudio fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.textToAudio({
+            tex: 'hello，这是一段测试语音合成的文字',
+            ctp: '1',
+            lan: 'zh',
+            spd: '5',
+            pit: '5',
+            vol: '5',
+            per: '1',
+            success: res => {
+                console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```
@@ -225,35 +195,25 @@ Page({
     data: {
     },
     textToAudio(){
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.textToAudio({
-                tex: 'hello，这是一段测试语音合成的文字',
-                ctp: '1',
-                lan: 'zh',
-                spd: '5',
-                pit: '5',
-                vol: '5',
-                per: '3',
-                success: res => {
-                    console.log('ai.textToAudio success', res);
-                    swan.showToast({
-                        title: '合成成功',
-                        icon: 'none'
-                    });
-                },
-                fail: err => {
-                    console.log('ai.textToAudio fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.textToAudio({
+            tex: 'hello，这是一段测试语音合成的文字',
+            ctp: '1',
+            lan: 'zh',
+            spd: '5',
+            pit: '5',
+            vol: '5',
+            per: '3',
+            success: res => {
+                console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```
@@ -270,35 +230,25 @@ Page({
     data: {
     },
     textToAudio(){
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.textToAudio({
-                tex: 'hello，这是一段测试语音合成的文字',
-                ctp: '1',
-                lan: 'zh',
-                spd: '5',
-                pit: '5',
-                vol: '5',
-                per: '4',
-                success: res => {
-                    console.log('ai.textToAudio success', res);
-                    swan.showToast({
-                        title: '合成成功',
-                        icon: 'none'
-                    });
-                },
-                fail: err => {
-                    console.log('ai.textToAudio fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.textToAudio({
+            tex: 'hello，这是一段测试语音合成的文字',
+            ctp: '1',
+            lan: 'zh',
+            spd: '5',
+            pit: '5',
+            vol: '5',
+            per: '4',
+            success: res => {
+                console.log('ai.textToAudio success', res);
+                swan.showToast({
+                    title: '合成成功',
+                    icon: 'none'
+                });
+            },
+            fail: err => {
+                console.log('ai.textToAudio fail', err);
+            }
+        });
     }
 });
 ```

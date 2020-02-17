@@ -3,6 +3,7 @@ title: picker-view 滚动选择器
 header: develop
 nav: component
 sidebar: formlist_picker-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker-view/picker-view
 ---
  
 
@@ -32,86 +33,13 @@ sidebar: formlist_picker-view
 </div>
 
 
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/picker-view.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 
-* 在 swan 文件中
 
-```xml
-<view class="wrap">
-    <view class="page-body">
-    <view class="selected-date">{{year}}年{{month}}月{{day}}日</view>
-    <picker-view  indicator-style ="color: #74fa7d" mask-class="maskStyle" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
-        <picker-view-column>
-            <view s-for="item in years" class="item">{{item}}年</view>
-        </picker-view-column>
-        <picker-view-column>
-            <view s-for="item in months" class="item">{{item}}月</view>
-        </picker-view-column>
-        <picker-view-column>
-            <view s-for="item in days" class="item">{{item}}日</view>
-        </picker-view-column>
-    </picker-view>
-  </view>
-</view>
-```
+参见[picker-view-column](https://smartprogram.baidu.com/docs/develop/component/formlist_picker-view-column/)示例内容。
 
-* 在 js 文件中
-
-```js
-const date = new Date()
-const years = []
-const months = []
-const days = []
-
-for (let i = 1990; i <= date.getFullYear(); i++) {
-    years.push(i)
-}
-
-for (let i = 1; i <= 12; i++) {
-    months.push(i)
-}
-
-for (let i = 1; i <= 31; i++) {
-    days.push(i)
-}
-
-Page({
-    data: {
-        years,
-        year: date.getFullYear(),
-        months,
-        month: 2,
-        days,
-        day: 2,
-        value: [9999, 1, 1],
-        isDaytime: true,
-    },
-    bindChange(e) {
-        const val = e.detail.value
-        this.setData({
-            year: this.data.years[val[0]],
-            month: this.data.months[val[1]],
-            day: this.data.days[val[2]],
-            isDaytime: !val[3]
-        })
-    }
-});
-```
 
 
 ##  Bug & Tip 

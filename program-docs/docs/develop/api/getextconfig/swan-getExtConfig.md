@@ -3,6 +3,7 @@ title: swan.getExtConfig
 header: develop
 nav: api
 sidebar: swan-getExtConfig
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getExtConfig/getExtConfig
 ---
 
 
@@ -43,20 +44,7 @@ Object object
 </div>
 
 
-###  代码示例 
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getExtConfig1.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 

@@ -3,6 +3,7 @@ title: picker 底部弹起的滚动选择器
 header: develop
 nav: component
 sidebar: formlist_picker
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker/picker
 ---
 
 
@@ -101,19 +102,7 @@ sidebar: formlist_picker
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/picker.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 1：普通选择器 
 

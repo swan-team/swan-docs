@@ -3,6 +3,7 @@ title: form 表单
 header: develop
 nav: component
 sidebar: formlist_form
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/form/form
 ---
 
  
@@ -56,19 +57,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/form.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 : 普通表单 
 

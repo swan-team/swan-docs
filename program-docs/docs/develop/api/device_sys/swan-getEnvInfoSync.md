@@ -3,6 +3,7 @@ title: swan.getEnvInfoSync
 header: develop
 nav: api
 sidebar: swan-getEnvInfoSync
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getEnvInfoSync/getEnvInfoSync
 ---
  
 > 基础库 2.0.28 版本开始支持。
@@ -40,20 +41,7 @@ sidebar: swan-getEnvInfoSync
 
 
 
-### 图片示例
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getEnvInfoSync.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

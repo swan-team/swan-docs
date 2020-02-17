@@ -3,6 +3,7 @@ title: swan.ai.facePersonVerify
 header: develop
 nav: api
 sidebar: face_swan-ai-facePersonVerify
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/facePersonVerify/facePersonVerify
 ---
 
  
@@ -39,26 +40,14 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/fe52a7993df790b5b6692f320850f4351581336925738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/5d891de85f044848f89a94607f3130931569501369472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/facePersonVerify.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/facePersonVerify.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 
@@ -67,30 +56,20 @@ Object object
 ```js
 Page({
     facePersonVerify() {
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.facePersonVerify({
-                image: 'https://www.downloadImage.com/xxxx.jpg',
-                image_type: 'URL',
-                quality_control: 'NONE',
-                liveness_control: 'NONE',
-                id_card_number: '',
-                name: '',
-                success: res => {
-                    console.log('success', res);
-                },
-                fail: err => {
-                    console.log('fail', err);
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.facePersonVerify({
+            image: 'https://www.downloadImage.com/xxxx.jpg',
+            image_type: 'URL',
+            quality_control: 'NONE',
+            liveness_control: 'NONE',
+            id_card_number: '',
+            name: '',
+            success: res => {
+                console.log('success', res);
+            },
+            fail: err => {
+                console.log('fail', err);
+            }
+        });
     }
 });
 ```

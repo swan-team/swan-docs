@@ -51,7 +51,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/0836eff5dd3c158d445dea1df539f8f41581337325305" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/395274968b17a001c80d19e65418103f1574672851842" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_nlpLexerCustom.png" class="demo-qrcode-image" />
@@ -127,35 +127,25 @@ Page({
     nlpLexerCustom() {
         const text = this.getData('content');
         let that = this;
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.ai.nlpLexerCustom({
-                text,
-                success(res) {
-                    console.log('ai.nlpLexerCustom success', res);
-                    that.setData({
-                        'result': res.items,
-                        'sucResult': true
-                    })
-                },
-                fail(err) {
-                    console.log('ai.nlpLexerCustom fail', err);
-                    that.setData({
-                        'sucResult': false
-                    })
-                },
-                complete() {
-                    that.setData('hasResult', true)
-                }
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        swan.ai.nlpLexerCustom({
+            text,
+            success(res) {
+                console.log('ai.nlpLexerCustom success', res);
+                that.setData({
+                    'result': res.items,
+                    'sucResult': true
+                })
+            },
+            fail(err) {
+                console.log('ai.nlpLexerCustom fail', err);
+                that.setData({
+                    'sucResult': false
+                })
+            },
+            complete() {
+                that.setData('hasResult', true)
+            }
+        });
     }
 });
 ```

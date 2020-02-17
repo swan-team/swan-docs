@@ -3,6 +3,7 @@ title: cover-view 文本视图
 header: develop
 nav: component
 sidebar: view_cover-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
 ---
 
 
@@ -27,19 +28,7 @@ sidebar: view_cover-view
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/cover-view.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="">
-    </div>
-</div>
+ 
 
 ###  代码示例 ：文本视图
 

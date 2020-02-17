@@ -3,6 +3,7 @@ title: ad 广告
 header: develop
 nav: component
 sidebar: ad
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/ad/ad
 ---
 
  
@@ -79,19 +80,7 @@ sidebar: ad
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/ad.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ###  代码示例 1 :横幅类型
 

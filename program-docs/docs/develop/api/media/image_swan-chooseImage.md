@@ -3,6 +3,7 @@ title: swan.chooseImage
 header: develop
 nav: api
 sidebar: image_swan-chooseImage
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/chooseImage/chooseImage
 ---
 
 
@@ -51,20 +52,6 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/chooseImage2.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ### 代码示例1 - tempFilePaths ：
 

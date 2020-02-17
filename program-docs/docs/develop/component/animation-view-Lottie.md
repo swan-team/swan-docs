@@ -3,6 +3,7 @@ title: animation-view Lottie 动画
 header: develop
 nav: component
 sidebar: base_animation-view-Lottie
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
 ---
 
 
@@ -40,19 +41,7 @@ sidebar: base_animation-view-Lottie
 </div>
 
 
-###  图片示例
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/lottie.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-</div>
+ 
 
 ###  代码示例1 - 动画资源地址在本地，path为相对路径
 

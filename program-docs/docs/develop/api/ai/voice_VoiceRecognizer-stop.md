@@ -14,7 +14,7 @@ sidebar: voice_VoiceRecognizer-stop
 
 ## 示例
 
-<a href="swanide://fragment/ce41dccf650950cc3526c0df6a066e701581342635293" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/451d6aafbe2dda7fe528dcc93594e6b91579243446563" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStop.png" class="demo-qrcode-image" />
@@ -54,49 +54,30 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            swan.showToast({
-                title: '开始识别',
-                icon: 'none'
-            });
-            const voiceRecognizer = swan.ai.getVoiceRecognizer();
-            voiceRecognizer.onRecognize(res => {
-                console.log('voice recognize', res.result);
-                this.setData('result', res.result);
-            });
-            
-            const options = {
-                mode: 'dnn',
-                // mode: 'touch',
-                longSpeech: true
-            };
+        swan.showToast({
+            title: '开始识别',
+            icon: 'none'
+        });
+        const voiceRecognizer = swan.ai.getVoiceRecognizer();
+        voiceRecognizer.onRecognize(res => {
+            console.log('voice recognize', res.result);
+            this.setData('result', res.result);
+        });
+        
+        const options = {
+            mode: 'dnn',
+            // mode: 'touch',
+            longSpeech: true
+        };
 
-            voiceRecognizer.start(options);
-            this.voiceRecognizer = voiceRecognize;
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        voiceRecognizer.start(options);
+        this.voiceRecognizer = voiceRecognize;
     },
     voiceRecognizerStop() {
-        let host = swan.getSystemInfoSync().host;
-        if (host === 'baiduboxapp') {
-            this.voiceRecognizer.stop();
-            swan.showToast({
-                title: '已停止识别'
-            });
-        }
-        else {
-            swan.showToast({
-                title: '此api目前仅可在百度App上使用',
-                icon: 'none'
-            });
-        }
+        this.voiceRecognizer.stop();
+        swan.showToast({
+            title: '已停止识别'
+        });
     }
 })
 

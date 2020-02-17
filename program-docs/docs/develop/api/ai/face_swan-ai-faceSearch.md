@@ -49,7 +49,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/b8fa80aadd72bf5634d3e05f9e3689b41581336772492" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/c5aabb973ce9c3e6ce54d4a547b390711575000496556" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceSearch.png" class="demo-qrcode-image" />
@@ -84,32 +84,22 @@ Page({
                 // let imageLeft = res.tempFilePaths[1];
                 // let imageMid = res.tempFilePaths[2];
                 // let imageRight = res.tempFilePaths[3];
-                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-                let host = swan.getSystemInfoSync().host;
-                if (host === 'baiduboxapp') {
-                    swan.ai.faceSearch({
-                        image,
-                        image_type: 'BASE64',
-                        group_id_list: 'imageLeft,imageMid,imageRight',
-                        quality_control: 'NONE',
-                        liveness_control: 'NONE',
-                        face_type: 'LIVE',
-                        user_id: 'xxxxxx',
-                        max_user_num: 20,
-                        success: res => {
-                            console.log(res);
-                        },
-                        fail: err => {
-                            console.log(err);
-                        }
-                    });
-                }
-                else {
-                    swan.showToast({
-                        title: '此api目前仅可在百度App上使用',
-                        icon: 'none'
-                    });
-                }
+                swan.ai.faceSearch({
+                    image,
+                    image_type: 'BASE64',
+                    group_id_list: 'imageLeft,imageMid,imageRight',
+                    quality_control: 'NONE',
+                    liveness_control: 'NONE',
+                    face_type: 'LIVE',
+                    user_id: 'xxxxxx',
+                    max_user_num: 20,
+                    success: res => {
+                        console.log(res);
+                    },
+                    fail: err => {
+                        console.log(err);
+                    }
+                });
             }
         });
     }

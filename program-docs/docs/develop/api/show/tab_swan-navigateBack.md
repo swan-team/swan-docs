@@ -3,6 +3,7 @@ title: swan.navigateBack
 header: develop
 nav: api
 sidebar: tab_swan-navigateBack
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
 
  
@@ -33,18 +34,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/navigeto.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 1
 <a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
