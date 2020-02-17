@@ -17,7 +17,9 @@ sidebar: sjs_datatype
 - date：日期
 - regexp：正则
 
-## 语法
+## Number
+
+**语法**
 
 number 包括两种数值：整数，小数。
 
@@ -131,12 +133,17 @@ console.log(13 === o.const_var);
 **属性**
 
 - constructor：返回字符串 "Object"。
-- console.log("Object" === {k: "1",v: "2"}.constructor)
+
+**代码示例**
+```js
+console.log("Object" === {k: "1",v: "2"}.constructor)
+```
 
 **方法**
 
 - toString：返回字符串 "[object Object]"。
-- function
+
+## function
 
 **语法**
 function 支持以下的定义方式：

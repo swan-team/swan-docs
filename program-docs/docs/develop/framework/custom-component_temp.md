@@ -198,7 +198,6 @@ Page({
 2. 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用；
 3. 继承样式，如 font 、 color，会从组件外继承到组件内。
 
-内部样式，可支持多个属性并列。
 **代码示例**
 <a href="swanide://fragment/7da984325b66d5e6f8d85d53a004ab081578385001988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -243,6 +242,16 @@ Component({
     color: red;
 }
 ```
+
+同时，可以支持指定多个对应的 class 。
+
+**代码示例**
+
+```xml
+<!-- 使用组件的页面或者组件 -->
+<my-component my-class="red-text bg-color" />
+```
+
 
 ### 全局样式类
 <div class="notice">解释： </div>
