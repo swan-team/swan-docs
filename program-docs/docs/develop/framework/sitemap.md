@@ -92,7 +92,7 @@ swan-sitemap 动态库是百度小程序官方发布的用于生成[小程序索
             }
         });
     ```
-sswan-sitemap-list 组件字段详解 
+swan-sitemap-list 组件字段详解 
 
 |属性名 | 类型 | 是否必填 | 说明 | 
 |---|---|---|---|

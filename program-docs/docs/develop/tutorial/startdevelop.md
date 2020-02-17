@@ -18,7 +18,7 @@ sidebar: startdevelop
 
 ## 开发小程序
 
-> 以在“智能小程序示例”中增加快速入门教学视频为例。
+> 已在“智能小程序示例”中增加快速入门教学视频为例。
 
 #### 1. 参考文档中 [video](/develop/component/media_video/) 组件的内容，分别更新[.swan文件](/develop/tutorial/dev/)、[.js文件](/develop/tutorial/devjs/)。
 
