@@ -3,6 +3,7 @@ title: scroll-view 可滚动视图区域
 header: develop
 nav: component
 sidebar: view_scroll-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/scroll-view/scroll-view
 ---
 
 
@@ -39,20 +40,7 @@ sidebar: view_scroll-view
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/scroll-view.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例 1：纵向滚动  
 
  

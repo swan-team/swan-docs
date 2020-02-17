@@ -3,6 +3,7 @@ title: view 视图容器
 header: develop
 nav: component
 sidebar: view_view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 
 
@@ -28,19 +29,7 @@ sidebar: view_view
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/view.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1： 横向布局  
 

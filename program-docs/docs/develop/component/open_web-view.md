@@ -3,6 +3,7 @@ title: web-view 网页容器
 header: develop
 nav: component
 sidebar: open_web-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/webview/webview
 ---
 
 
@@ -30,19 +31,7 @@ sidebar: open_web-view
 
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/webview.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 ：
 

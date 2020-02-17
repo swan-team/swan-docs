@@ -3,6 +3,7 @@ title: navigator 页面导航
 header: develop
 nav: component
 sidebar: nav
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/navigator/navigator
 ---
 
  
@@ -70,19 +71,7 @@ sidebar: nav
 
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/navigator1.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/navigator2.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 
 

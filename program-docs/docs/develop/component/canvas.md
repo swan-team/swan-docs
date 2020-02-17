@@ -3,6 +3,7 @@ title: canvas 画布
 header: develop
 nav: component
 sidebar: canvas
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/canvas/canvas
 ---
 
  
@@ -36,19 +37,7 @@ sidebar: canvas
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/canvas.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 
 

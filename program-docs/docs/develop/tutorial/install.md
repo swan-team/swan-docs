@@ -25,8 +25,8 @@ rc 版本下载链接：[Windows 64](https://smartprogram.baidu.com/mappconsole/
 |名称|内容说明|
 |--|--|
 |项目名称|请使用英文为项目自定义命名。|
-|项目目录|**·**请新建或选择一个空的文件夹；<br>**·**如选择一个非空的文件夹，则会在该文件夹下自动生成一个与项目名称相同的文件夹。|
-|AppID|**·**如果您未注册 AppID，请选择默认的"使用测试号体验智能小程序";<br>**·**当您完成<a href="https://smartprogram.baidu.com/docs/introduction/enter_application/">智能小程序账号注册</a>之后，则选择"填写APPID"并填写对应的 AppID。|
+|项目目录|**·** 请新建或选择一个空的文件夹；<br>**·** 如选择一个非空的文件夹，则会在该文件夹下自动生成一个与项目名称相同的文件夹。|
+|AppID|**·** 如果您未注册 AppID，请选择默认的"使用测试号体验智能小程序";<br>**·** 当您完成<a href="https://smartprogram.baidu.com/docs/introduction/enter_application/">智能小程序账号注册</a>之后，则选择"填写APPID"并填写对应的 AppID。|
 
 3. 模拟器登录
 

@@ -3,6 +3,7 @@ title: icon 图标
 header: develop
 nav: component
 sidebar: base_icon
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/icon/icon
 ---
 
 **解释**： 图标
@@ -48,19 +49,7 @@ sidebar: base_icon
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/icon.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 
 

@@ -3,6 +3,7 @@ title: swiper-item 滑块视图容器子项
 header: develop
 nav: component
 sidebar: view_swiper-item
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/swiper/swiper
 ---
  
 
@@ -26,10 +27,7 @@ sidebar: view_swiper-item
 </div>
 
 
-###  图片示例 
-
-参见[swiper](https://smartprogram.baidu.com/docs/develop/component/view_swiper/)示例内容。
-
+ 
 ###  代码示例 
 
 参见[swiper](https://smartprogram.baidu.com/docs/develop/component/view_swiper/)示例内容。

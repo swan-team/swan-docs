@@ -15,15 +15,15 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget
 
 **公共请求参数**
 
-|参数名 | 类型 | 是否必须 | 描述|
-|----- |-----| ------| -----|
-|access_token |string | 是 | access_token，授权小程序的接口调用凭据 |
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+access_token |string | 是 | access_token，授权小程序的接口调用凭据 
 
 **请求参数**
 
-|参数名 | 类型 | 是否必须 | 描述|
-|----- |-----| ------| -----|
-|id | int | 是 | 模板标题id，可通过接口获取，也可登录小程序后台查看获取|
+参数名 | 类型 | 是否必须 | 描述
+----- |-----| ------| -----
+id | int | 是 | 模板标题id，可通过接口获取，也可登录小程序后台查看获取
 
 **公共响应参数** 
 
@@ -35,14 +35,14 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget
 
 **响应参数** 
 
-|字段名 | 类型  | 描述|
-|----- |-----| -----|
-|id| string| 模板标题id|
-|title|string|模板标题|
-|keyword_count|int| 关键字条数|
-|keyword_id | int| 关键词id，添加模板时需要|
-|name |string | 关键词内容|
-|example |string | 关键词内容对应的示例|
+字段名 | 类型  | 描述
+----- |-----| -----
+id| string| 模板标题id
+title|string|模板标题
+keyword_count|int| 关键字条数
+keyword_id | int| 关键词id，添加模板时需要
+name |string | 关键词内容
+example |string | 关键词内容对应的示例
 
 **请求实例**
 

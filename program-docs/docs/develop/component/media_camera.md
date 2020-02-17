@@ -3,6 +3,7 @@ title: camera 相机
 header: develop
 nav: component
 sidebar: media_camera
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/camera/camera
 ---
 
  
@@ -45,19 +46,7 @@ sidebar: media_camera
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/camera.gif">
-    </div> 
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>  
-</div>
+ 
 
 ###  代码示例 
 

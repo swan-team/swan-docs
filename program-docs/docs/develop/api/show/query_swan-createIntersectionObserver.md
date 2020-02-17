@@ -3,6 +3,7 @@ title: swan.createIntersectionObserver
 header: develop
 nav: api
 sidebar: query_swan-createIntersectionObserver 
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/IntersectionObserver/IntersectionObserver
 ---
  
 
@@ -29,20 +30,9 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/createIntersectionObserver.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
-###  代码示例1 ：
+###  代码示例1  
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

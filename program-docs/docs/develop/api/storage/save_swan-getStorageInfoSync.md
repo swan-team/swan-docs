@@ -3,6 +3,7 @@ title: swan.getStorageInfoSync
 header: develop
 nav: api
 sidebar: save_swan-getStorageInfoSync
+weburl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
 ---
 
 
@@ -28,19 +29,7 @@ sidebar: save_swan-getStorageInfoSync
 </div>
 
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getStorageInfo.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 

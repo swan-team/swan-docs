@@ -3,6 +3,7 @@ title: 原生组件
 header: develop
 nav: component
 sidebar: native
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 **概念**：原生组件是由客户端创建的原生组件。
 
@@ -50,7 +51,7 @@ sidebar: native
 
 ## 同层渲染
 
-同层渲染是为了解决原生组件的层级问题，在支持同层渲染后，原生组件与其它组件可以随意叠加，有关层级的限制将不再存在。**当前 video, input 组件已支持同层渲染**。
+同层渲染是为了解决原生组件的层级问题，在支持同层渲染后，原生组件与其它组件可以随意叠加，有关层级的限制将不再存在。** 当前 video, input 组件已支持同层渲染 **。
 
 在同层渲染模式下：
 

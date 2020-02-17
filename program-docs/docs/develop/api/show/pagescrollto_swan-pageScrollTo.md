@@ -3,6 +3,7 @@ title: swan.pageScrollTo
 header: develop
 nav: api
 sidebar: pagescrollto_swan-pageScrollTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pageScrollTo/pageScrollTo
 ---
 
  
@@ -32,19 +33,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/pageScrollTo.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例1 - 页面滚动到顶部  
 
 <a href="swanide://fragment/25ef2f9fbdaaa9271329c02d7dafe8cc1575223153548" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

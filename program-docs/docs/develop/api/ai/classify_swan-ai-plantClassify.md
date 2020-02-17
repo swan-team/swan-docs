@@ -3,6 +3,7 @@ title: swan.ai.plantClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-plantClassify
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/plantClassify/plantClassify
 ---
 
   
@@ -41,7 +42,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/b1bb08a3758ab15024f1af2148d41d2c1581335626529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/2af91115191447b4b93ae469129f7fb91569501181045" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/plantClassify.png" class="demo-qrcode-image" />
@@ -49,19 +50,7 @@ Object object
 </div>
 
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/plantClassify.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 
@@ -73,25 +62,15 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-                let host = swan.getSystemInfoSync().host;
-                if (host === 'baiduboxapp') {
-                    swan.ai.plantClassify({
-                        image,
-                        success: res => {
-                            console.log('plantClassify res', res.result);
-                        },
-                        fail: err => {
-                            console.log('plantClassify err', err);
-                        }
-                    });
-                }
-                else {
-                    swan.showToast({
-                        title: '此api目前仅可在百度App上使用',
-                        icon: 'none'
-                    });
-                }
+                swan.ai.plantClassify({
+                    image,
+                    success: res => {
+                        console.log('plantClassify res', res.result);
+                    },
+                    fail: err => {
+                        console.log('plantClassify err', err);
+                    }
+                });
             }
         });
     }

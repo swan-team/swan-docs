@@ -3,6 +3,7 @@ title: slider 滑动选择器
 header: develop
 nav: component
 sidebar: formlist_slider
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/slider/slider
 ---
 
  
@@ -38,20 +39,7 @@ sidebar: formlist_slider
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/slider.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例1 - 默认样式 
 
 <a href="swanide://fragment/588aacb801bd077789e11c6834513f441575544226353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

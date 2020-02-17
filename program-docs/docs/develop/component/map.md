@@ -3,6 +3,7 @@ title: map 地图
 header: develop
 nav: component
 sidebar: map
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/map/map
 ---
  
 
@@ -45,20 +46,6 @@ sidebar: map
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/map.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/map.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
 </div>
 
 ###  代码示例 ：地图
@@ -672,6 +659,21 @@ Page({
     }
 });
 ```
+###  图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/map.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
+
 
 ###  代码示例 - 错误用法：原生组件设置border无效，也不可用cover-view覆盖为圆角 ：
 

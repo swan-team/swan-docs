@@ -3,6 +3,7 @@ title: textarea 多行输入框
 header: develop
 nav: component
 sidebar: formlist_textarea
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/textarea
 ---
 
 
@@ -63,19 +64,7 @@ sidebar: formlist_textarea
 
 
 
-###  图片示例
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/textarea.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-</div>
+ 
 
 ###  代码示例 1：输入区高度自适应
 

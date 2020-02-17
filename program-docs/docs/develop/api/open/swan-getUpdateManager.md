@@ -3,6 +3,7 @@ title: swan.getUpdateManager
 header: develop
 nav: api
 sidebar: swan-getUpdateManager
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getUpdateManager/getUpdateManager
 ---
 
  
@@ -29,19 +30,7 @@ sidebar: swan-getUpdateManager
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/getUpdateManager.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
+      
 </div>
 
 ### 代码示例 

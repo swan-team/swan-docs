@@ -3,6 +3,7 @@ title: swan.openReplyEditor
 header: develop
 nav: api
 sidebar: replyeditor_swan-openReplyEditor
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/openReplyEditor/openReplyEditor
 ---
 
  
@@ -72,20 +73,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/openReplyEditor1.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 moduleList传emoji并配置自定义图标 ：
 

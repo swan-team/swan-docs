@@ -3,6 +3,7 @@ title: swan.removeStorageSync
 header: develop
 nav: api
 sidebar: remove_swan-removeStorageSync
+weburl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
 ---
 
 
@@ -27,19 +28,7 @@ String key
 </div>
 
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/removekey.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 

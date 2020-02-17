@@ -3,6 +3,7 @@ title: audio 音频
 header: develop
 nav: component
 sidebar: media_audio
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/audio/audio
 ---
 
 
@@ -49,21 +50,7 @@ sidebar: media_audio
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/audio.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例 
 
 <a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

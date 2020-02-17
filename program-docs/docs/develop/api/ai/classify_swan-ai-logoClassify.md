@@ -3,6 +3,7 @@ title: swan.ai.logoClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-logoClassify
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/logoClassify/logoClassify
 ---
 
   
@@ -54,7 +55,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/ef85d60db823f65d8a8bde35b613b4271581335376758" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/f9b7a262adee84b71a9140ad8dab1d691569501111413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/logoClassify.png" class="demo-qrcode-image" />
@@ -63,48 +64,29 @@ Object object
 
 
 
-### 图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/logoClassify.jpeg">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
+
+
+
 
 ```js
 Page({
     logoClassify() {
         swan.chooseImage({
             success: res => {
-                let image = res.tempFilePaths[0];
-                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
-                let host = swan.getSystemInfoSync().host;
-                if (host === 'baiduboxapp') {
-                    swan.ai.logoClassify({
-                        image,
-                        custom_lib: false,
-                        success: res => {
-                            console.log('dishClassify res', res.result);
-                        },
-                        fail: err => {
-                            console.log('dishClassify err', err);
-                        }
-                    });
-                }
-                else {
-                    swan.showToast({
-                        title: '此api目前仅可在百度App上使用',
-                        icon: 'none'
-                    });
-                }
+              let image = res.tempFilePaths[0];
+              swan.ai.logoClassify({
+                  image,
+                  custom_lib: false,
+                  success: res => {
+                    console.log('dishClassify res', res.result);
+                  },
+                  fail: err => {
+                    console.log('dishClassify err', err);
+                  }
+              });
             }
         });
     }

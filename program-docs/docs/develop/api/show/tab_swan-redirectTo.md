@@ -3,6 +3,7 @@ title: swan.redirectTo
 header: develop
 nav: api
 sidebar: tab_swan-redirectTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
  
  
@@ -32,18 +33,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/redirectTo.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例 1 
 

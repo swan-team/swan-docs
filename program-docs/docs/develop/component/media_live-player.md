@@ -3,6 +3,7 @@ title: live-player 实时视频播放器
 header: develop
 nav: component
 sidebar: media_live-player
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/live-player/live-player
 ---
 
 
@@ -126,20 +127,7 @@ sidebar: media_live-player
 </div>
 
 
-###  图片示例
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/live-player.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-</div>
-
+ 
 ###  代码示例
 
 

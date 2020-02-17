@@ -3,6 +3,7 @@ title: switch 开关选择器
 header: develop
 nav: component
 sidebar: formlist_switch
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/switch/switch
 ---
 
  
@@ -39,19 +40,7 @@ sidebar: formlist_switch
 
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/switch.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 - 默认样式 
 

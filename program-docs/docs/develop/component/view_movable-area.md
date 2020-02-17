@@ -3,6 +3,7 @@ title: movable-area 可移动视图区域
 header: develop
 nav: component
 sidebar: view_movable-area
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
 ---
  
 
@@ -14,7 +15,7 @@ sidebar: view_movable-area
 ##  属性说明 
 
 |属性名	|类型	|默认值| 必填 |	说明|
-|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|
 |scale-area	|Boolean|	false| 否 |	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area 。|
 
 ## 示例
@@ -28,9 +29,6 @@ sidebar: view_movable-area
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例 
-
-参见[movable-view](https://smartprogram.baidu.com/docs/develop/component/view_movable-view/)示例内容。
 
 ###  代码示例 
 

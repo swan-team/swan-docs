@@ -28,7 +28,7 @@ Number position
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/seek.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/AnimationVideo-seek.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

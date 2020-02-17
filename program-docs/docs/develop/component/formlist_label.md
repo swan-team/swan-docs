@@ -3,6 +3,7 @@ title: label 表单组件标签
 header: develop
 nav: component
 sidebar: formlist_label
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/label/label
 ---
 
 
@@ -28,20 +29,7 @@ sidebar: formlist_label
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/label.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例1 - label用for标识表单组件 ：
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -28,7 +28,7 @@ sidebar:  videocontext_VideoContext-pause
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/pause.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/AnimationVideo-pause.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">

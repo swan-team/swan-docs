@@ -3,6 +3,7 @@ title: swan.setTabBarBadge
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarBadge
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
 ---
  
 **解释**：为 tabBar 某一项的右上角添加文本。
@@ -33,18 +34,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/tabbarbadge.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ### 代码示例 
 

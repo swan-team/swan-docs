@@ -3,6 +3,7 @@ title: swan.setClipboardData
 header: develop
 nav: api
 sidebar: swan-setClipboardData
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/clipboardData/clipboardData
 ---
 
  
@@ -34,20 +35,7 @@ Object object
 </div>
 
 
-
-
-### 图片示例
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/setClipboardData.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
+ 
 
 ###  代码示例1 ：
 

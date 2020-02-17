@@ -3,6 +3,7 @@ title: swiper 滑块视图容器
 header: develop
 nav: component
 sidebar: view_swiper
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/swiper/swiper
 ---
 
 
@@ -51,20 +52,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 </div>
 
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/swiper.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
+ 
 ###  代码示例 ：滑块滑动
 
 
