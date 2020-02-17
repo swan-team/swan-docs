@@ -127,8 +127,8 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 ```json
 {
     "pages":[
-	"pages/index/index",
-	"pages/detail/detail"
+        "pages/index/index",
+        "pages/detail/detail"
     ]
 }
 ```
@@ -178,11 +178,11 @@ SWAN 中新增或减少页面的话，需要在 pages 中进行配置。
 ```json
 {
     "window": {
-	"navigationBarBackgroundColor": "#ffffff",
-	"navigationBarTextStyle": "black",
-	"navigationBarTitleText": "swan接口功能演示",
-	"backgroundColor": "#eeeeee",
-	"backgroundTextStyle": "light"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "swan接口功能演示",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
     }
 }
 ```
@@ -196,11 +196,11 @@ JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时�
 ```json
 {
     window: {
-	"navigationBarBackgroundColor": "#ffffff",
-	"navigationBarTextStyle": "black",
-	"navigationBarTitleText": "swan接口功能演示",
-	"backgroundColor": "#eeeeee",
-	"backgroundTextStyle": "light"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "swan接口功能演示",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
     }
 }
 ```
@@ -244,6 +244,65 @@ JSON的Key必须包裹在一个双引号中，在实践中，编写 JSON 的时�
         "selectedColor": "#6495ED"
     }
 }
+```
+- 自定义tabbar
+
+**代码示例**
+
+<a href="swanide://fragment/856bf21941915909e30407b6dceb58f51581652182529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```html
+<view class="wrap">
+    <view class="contentLast">
+        <view class="icon-bg border-top border-bottom {{color}}">
+            <view class="icon-item" data-index="index4" bindtap="setTabBarStyle">
+                <image class="image" src="{{isActive4 == 'index4' ? 'https://b.bdstatic.com/searchbox/icms/searchbox/images/index-inverse-active.png' : 'https://b.bdstatic.com/searchbox/icms/searchbox/images/index-inverse-ash.png'}}" ></image>
+                <view class="{{isActive4 == 'index4' ? 'imageNameColor' : 'imageNameColorAsh'}}">首页</view>
+            </view>
+            <view class="icon-item" data-index="tinyVideo4" bindtap="setTabBarStyle">
+                <image class="image" src="{{isActive4 == 'tinyVideo4' ? 'https://b.bdstatic.com/searchbox/icms/searchbox/images/video-inverse-active.png' : 'https://b.bdstatic.com/searchbox/icms/searchbox/images/video-inverse-ash.png'}}" ></image>
+                <view class="{{isActive4 == 'tinyVideo4' ? 'imageNameColor' : 'imageNameColorAsh'}}">小视频</view>
+            </view>
+            <view class="icon-item" data-index="centre4" bindtap="setTabBarStyle">
+                <image class="image" src="{{isActive4 == 'centre4' ? 'https://b.bdstatic.com/searchbox/icms/searchbox/images/centre-inverse-active.png' : 'https://b.bdstatic.com/searchbox/icms/searchbox/images/centre-inverse-ash.png'}}"></image>
+                <view class="{{isActive4 == 'centre4' ? 'imageNameColor' : 'imageNameColorAsh'}}">个人中心</view>
+            </view>
+        </view>
+    </view>
+</view>
+```
+
+```js
+Page({
+    data: {
+        color: 'firstTab',
+        isActive: 'index1',
+        isActive2: 'index2',
+        isActive3: 'index3',
+        isActive4: 'index4'
+    },
+    setTabBarStyle(e) {
+        this.setData('isActive4', e.currentTarget.dataset.index);
+        e.currentTarget.dataset.index === 'index4'
+        ? this.setData({
+            'color': 'firstTab'
+        })
+        : '';
+
+        console.log(this.data.color);
+        e.currentTarget.dataset.index === 'tinyVideo4'
+        ? this.setData({
+            'color': 'secondTab'
+        })
+        : '';
+
+        e.currentTarget.dataset.index === 'centre4'
+        ? this.setData({
+            'color': 'thirdTab'
+        })
+        : '';
+    }
+});
 ```
 
 ### requiredBackgroundModes
@@ -314,4 +373,17 @@ pages/index/index?id=123
 |connectSocket|	number|	否|	60000|	swan.connectSocket 的超时时间，单位：毫秒。|
 |uploadFile	|number|	否|	60000|	swan.uploadFile 的超时时间，单位：毫秒。|
 |downloadFile|	number|	否|	60000	|swan.downloadFile 的超时时间，单位：毫秒。|
+
+**代码示例**
+
+```json
+
+"networkTimeout": {
+    "request": 30000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+}
+
+```
 

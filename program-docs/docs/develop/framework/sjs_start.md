@@ -185,6 +185,11 @@ swan-sjs
 hello swan
 ```
 
+**sjs实际应用代码示例**
+
+<a href="swanide://fragment/5544652d8eaea84a05d0a9c345fc813a1581664726472" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
 **注意**
 
 - 引用sjs模块时务必使用`.sjs`文件后缀。

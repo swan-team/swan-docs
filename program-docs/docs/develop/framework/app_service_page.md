@@ -82,8 +82,40 @@ Page({
     customData: {}
 });
 ```
+- 在页面中使用 behaviors
 
+页面可以引用 behaviors 。 behaviors 可以用来让多个页面有相同的数据字段和方法。
 
+**代码示例**
+
+```js
+
+// my-behavior.js
+module.exports = Behavior({
+  data: {
+    sharedText: 'data shared between pages.'
+  },
+  methods: {
+    sharedMethod: function() {
+      this.data.sharedText === 'data shared between pages.'
+    }
+  }
+})
+
+```
+
+```js
+
+// page-a.js
+var myBehavior = require('./my-behavior.js')
+Page({
+  behaviors: [myBehavior],
+  onLoad: function() {
+    this.data.sharedText === 'data shared between pages.'
+  }
+})
+
+```
 
 
 

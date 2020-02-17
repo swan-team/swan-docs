@@ -29,8 +29,6 @@ A：当前我们提供方式可以查询到您指定地点的经纬度
 A:请查看 url 中是否出现了中文，如需要使用中文字体，请对中文字符进行 [encodeURIComponent](https://smartprogram.baidu.com/docs/develop/api/net/request/)。
 
 
-
-
 #### Q：小程序页面头部可否支持渐变色？
 
 A：使用 navigationBarBackgroundColor 无法做到渐变色的效果，可以选择使用透明框，新增返回按钮，然后进行设置。或将navigationStyle 设置成 custom，在全屏页面中制作导航栏，自定义背景色。
@@ -39,12 +37,12 @@ A：使用 navigationBarBackgroundColor 无法做到渐变色的效果，可以�
 
 **代码示例**
 
-```
+```html
 <canvas canvas-id="myCanvas" class="myCanvas"/>
 </canvas>
 <view>内容</view>
 ```
-```
+```js
 Page({
     onReady: function () {
         const canvasContext = this.createCanvasContext('myCanvas');
@@ -60,7 +58,15 @@ Page({
 
 #### Q：请问下有关闭小程序这样的 api 吗？ 
 
-A: 暂时没有。
+A: 暂时没有，可以通过组件进行关闭当前小程序的操作。
+
+**代码示例**
+
+```html
+<button type="primary">
+	<navigator target="miniProgram" open-type="exit">退出当前小程序</navigator>
+</button>
+```
 
 #### Q：tabBar 下按钮是否可以直接拨打电话？
 
