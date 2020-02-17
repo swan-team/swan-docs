@@ -10,6 +10,7 @@
                 @input="getSearchSugList"
                 @focus="sendFocusReport"
                 @blur="searchInputBlur"
+                @keyup.enter="navToSearch"
                 v-model="searchWord">
                 <img
                 class="doc-header-search-box-icon"

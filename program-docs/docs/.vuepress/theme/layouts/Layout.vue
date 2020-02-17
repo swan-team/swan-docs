@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <!-- 头部 -->
-        <div class="header-container">
+        <div v-if="!isSwanIde" class="header-container">
             <!-- 头部导航 -->
             <doc-header class="header-nav"
             @targetNavItem="changeHeaderNavItem"
@@ -45,14 +45,20 @@
         :class="{
             'page-container': true,
             'page-container-top' : subNavIsShow,
-            'page-container-right': iframeSrc
+            'page-container-right': iframeSrc,
+            'page-container-ide': isSwanIde
         }">
             <div class="page-container-content">
                 <!-- 内容文章 -->
                 <doc-article class="page-container-content-article"></doc-article>
                 <div class="page-container-content-bottom">
                     <!-- 底部导航 -->
-                    <bottom-nav id="bottom" class="page-container-bottom-nav" :bottom-nav-items="bottomNav"></bottom-nav>
+                    <bottom-nav
+                    id="bottom"
+                    class="page-container-bottom-nav"
+                    :bottom-nav-items="bottomNav"
+                    v-if="!isSwanIde"
+                    ></bottom-nav>
                     <!-- 页脚 -->
                     <doc-footer :license="license"></doc-footer>
                 </div>
@@ -60,11 +66,11 @@
         </div>
 
         <!-- 全局右侧 -->
-        <global-menu :iframe-src="iframeSrc"></global-menu>
+        <global-menu v-if="!isSwanIde" :iframe-src="iframeSrc"></global-menu>
 
         <!-- 移动端导航列表 -->
         <mobile-head-list
-        v-if="mobileNavOpen"
+        v-if="mobileNavOpen && !isSwanIde"
         @targetNavItem="changeMobileHeadNavItem"
         :header-nav-items="headerNav"
         :active-index="headerNavIndex"></mobile-head-list>
@@ -111,10 +117,14 @@ export default {
         return {
             mobileNavOpen: false,
             mobileSidebarShow: false,
-            scrollTop: 0
+            scrollTop: 0,
+            isSwanIde: false
         };
     },
     mounted() {
+        // 判断是否为开发者工具
+        this.isSwanIde = window && window._swanIde;
+        
         // 监听滚动事件
         $(window).on('scroll', this.setScrollTop);
 
@@ -209,7 +219,7 @@ export default {
             return {left, right};
         },
         sidebarIsShow() {
-            return !this.mobileNavOpen;
+            return !this.mobileNavOpen && !this.isSwanIde;
         },
         // 导航是否固定定位
         fixedNav() {
