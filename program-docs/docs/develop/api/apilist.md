@@ -10,7 +10,7 @@ sidebar: apilist
 ## 网络
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/net/request/">swan.request</a>|发起网络请求|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/net/uploadfile/">swan.uploadFile</a>|将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 content-type 为 multipart/form-data 如页面通过 swan.chooseImage 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/net/downloadFile/">swan.downloadFile</a>|下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。|
@@ -28,7 +28,7 @@ sidebar: apilist
 ## AI
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrIdCard/">swan.ai.ocrIdCard</a>|用户向服务请求识别身份证，身份证识别包括正面和背面。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrBankCard/">swan.ai.ocrBankCard</a>|识别银行卡并返回卡号、发卡行和卡片类型。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/ocr_swan-ai-ocrDrivingLicense/">swan.ai.ocrDrivingLicense</a>|对机动车驾驶证所有关键字段进行识别。|
@@ -57,7 +57,7 @@ sidebar: apilist
 ## 媒体
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/">swan.chooseImage</a>|从本地相册选择图片或使用相机拍照。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-previewImage/">swan.previewImage</a>|预览图片|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/media/image_swan-chooseImage/#swan-getImageInfo/">swan.getImageInfo</a>|获取图片信息|
@@ -81,7 +81,7 @@ sidebar: apilist
 ## 文件
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-saveFile/">swan.saveFile</a>|保存文件到本地|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getFileInfo/">swan.getFileInfo</a>|获取文件信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/file/save_swan-getSavedFileList/">swan.getSavedFileList</a>|获取本地已保存的文件列表|
@@ -93,7 +93,7 @@ sidebar: apilist
 ## 数据存储
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_process/#swan-setStorage/">swan.setStorage</a>|将数据存储在本地缓存指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个异步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-setStorageSync/">swan.setStorageSync</a>|将数据存储在本地缓存中指定的 key 中。如果之前存在同名 key ，会覆盖掉原来该 key 对应的内容。这是一个同步接口。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/storage/save_swan-getStorage/">swan.getStorage</a>|从本地缓存中异步获取指定 key 对应的内容。|
@@ -109,7 +109,7 @@ sidebar: apilist
 ## 位置
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/">swan.getLocation</a>|获取当前的地理位置、速度。当用户离开智能小程序后，此接口无法调用。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-chooseLocation/">swan.chooseLocation</a>| 打开地图选择位置。需要用户授权 scope.userLocation。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/location/swan-openLocation/">swan.openLocation</a>|使用宿主 App 内置地图查看位置。|
@@ -119,7 +119,7 @@ sidebar: apilist
 ## 界面
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-createCanvasContext//">swan.createCanvasContext</a>|在 Page 中，推荐使用this.createCanvasContext(canvasId)，进行绘图上下文的创建。也可使用swan.createCanvasContext(canvasId)，但使用swan.createCanvasContext(canvasId)进行创建时，并非在执行所在的 Page 对象中使用 canvasId 进行查找，而是在用户当前可视的 Page 中使用 canvasId 进行查找。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasGetImageData/">swan.canvasGetImageData</a>|返回一个数组，用来描述 canvas 区域隐含的像素数据。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/show/canvas_swan-canvasPutImageData/">swan.canvasPutImageData</a>|将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。|
@@ -222,7 +222,7 @@ sidebar: apilist
 ## 设备
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/">swan.getSystemInfo</a>|获取系统信息|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/">swan.getSystemInfoSync</a>|获取系统信息同步接口|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getEnvInfoSync/">swan.getEnvInfoSync</a>|获取运行环境信息同步接口|
@@ -259,7 +259,7 @@ sidebar: apilist
 ## 第三方平台
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
  
@@ -267,7 +267,7 @@ sidebar: apilist
 ## 开放接口
 
 |API 名称|解释|
-|--|--|
+|:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-login/">swan.login</a>|调用接口 swan.login 获取 Authorization Code，智能小程序可以使用swan.login()接口获取Authorization Code。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-checkSession/">swan.checkSession</a>|通过上述接口获得的用户登录态拥有一定的时效性，用户越久未使用智能小程序，用户登录态越有可能失效；反之如果用户一直在使用智能小程序，则用户登录态一直保持有效。具体时效逻辑由宿主维护，对开发者透明。开发者可以调用 swan.checkSession 接口 检测当前用户登录态是否有效，登录态过期后开发者可以再调用 swan.login 获取新的用户登录态。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_swan-isLoginSync/">swan.isLoginSync</a>|宿主 App登录状态|

@@ -3,7 +3,6 @@ title: 组件列表
 header: develop
 nav: component
 sidebar: component
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 
 

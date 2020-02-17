@@ -571,23 +571,27 @@
       link: /develop/tutorial/demo
       text: 快速入门
       name: tutorial
+      close: true
       sidebar:
         -
+            text: 开发前准备
             sidebar:
-              -
-                link: /develop/tutorial/demo
-                text: 体验智能小程序
-                name: demo
               -
                 link: /develop/tutorial/install
                 text: 安装开发者工具
                 name: install
               -
+                link: /develop/tutorial/testapp
+                text: 测试号使用
+                name: testapp                
+        -
+            text: 小程序开发
+            sidebar:  
+              -
                 link: /develop/tutorial/startdevelop
                 text: 开发智能小程序
-                name: startdevelop
+                name: startdevelop                          
               -
-
                 text: 全局配置
                 name: process
                 sidebar:
@@ -641,39 +645,25 @@
                       link: /develop/tutorial/function_api
                       text: API
                       name: function_api
+        -
+            text: 小程序发布
+            sidebar:                       
               -
                 link: /develop/tutorial/publish
                 text: 调试预览发布
                 name: publish
-                # sidebar:
-                #     -
-                #       link: /develop/tutorial/publish/#调试
-                #       text: 调试
-                #       name: publish_调试
-                #     -
-                #       link: /develop/tutorial/publish/#预览
-                #       text: 预览
-                #       name: publish_预览
-                #     -
-                #       link: /develop/tutorial/publish/#发布
-                #       text: 发布
-                #       name: publish_发布
+        -
+            text: 小程序开发解决方案
+            sidebar:                 
               -
-                text: 开发解决方案
+                link: /develop/tutorial/move
+                text: 搬家工具
                 name: move
-                sidebar:
-                    -
-                      link: /develop/tutorial/move
-                      text: 搬家工具
-                      name: move
-                    -
-                      link: /develop/tutorial/frameworkdevelop
-                      text: 框架开发
-                      name: frameworkdevelop
               -
-                link: /develop/tutorial/testapp
-                text: 测试号
-                name: testapp
+                link: /develop/tutorial/frameworkdevelop
+                text: 框架开发
+                name: frameworkdevelop
+
     -
       link: /develop/framework/app_service_register
       text: 框架
@@ -3471,158 +3461,152 @@
               #       link: /develop/api/open/swan-subscribeService
               #       text: swan.subscribeService
               #       name: swan-subscribeService
+
         -
-            sidebar:
-              -
-                link: /develop/api/errorcode
-                text: 错误码
-                name: errorcode
+          link: /develop/api/errorcode
+          text: 错误码
+          name: errorcode
     -
       text: 服务端 API
       name: serverapi
+      link: /develop/serverapi/serverapilist
+      close: true
       sidebar:
         -
+          text: 信息流资源
           sidebar:
               -
                 link: /develop/serverapi/open_feed
-                text: 信息流资源
-                name: open_feed
-                sidebar:
-
-                  -
-                    link: /develop/serverapi/open_feed
-                    text: 信息流物料提交简介
-                    name: open_feed_信息流物料提交简介
-                  -
-                    link: /develop/serverapi/submitresource
-                    text: submitresource
-                    name:  submitresource
-                  -
-                    link: /develop/serverapi/deleteresource
-                    text: deleteresource
-                    name:  deleteresource
-                  -
-                    link: /develop/serverapi/submitsitemap
-                    text: submitsitemap
-                    name:  submitsitemap
-                  -
-                    link: /develop/serverapi/deletesitemap
-                    text: deletesitemap
-                    name: deletesitemap
-                  -
-                    link: /develop/serverapi/type
-                    text: 信息流物料投放具体字段
-                    name: type
-                  -
-                    link: /develop/serverapi/appendix
-                    text: 信息流字段附录
-                    name: appendix
-                  -
-                    link: /develop/serverapi/faq
-                    text: 常见问题
-                    name: faq
+                text: 信息流物料提交简介
+                name: open_feed_信息流物料提交简介
+              -
+                link: /develop/serverapi/submitresource
+                text: submitresource
+                name:  submitresource
+              -
+                link: /develop/serverapi/deleteresource
+                text: deleteresource
+                name:  deleteresource
+              -
+                link: /develop/serverapi/submitsitemap
+                text: submitsitemap
+                name:  submitsitemap
+              -
+                link: /develop/serverapi/deletesitemap
+                text: deletesitemap
+                name: deletesitemap
+              -
+                link: /develop/serverapi/type
+                text: 信息流物料投放具体字段
+                name: type
+              -
+                link: /develop/serverapi/appendix
+                text: 信息流字段附录
+                name: appendix
+              -
+                link: /develop/serverapi/faq
+                text: 常见问题
+                name: faq
+        -
+          link: /develop/serverapi/open_infomation
+          text: 模板消息
+          name: open_infomation
+          sidebar:
               -
                 link: /develop/serverapi/open_infomation
-                text: 模板消息
+                text: 模板消息介绍
                 name: open_infomation
-                sidebar:
-                  -
-                    link: /develop/serverapi/open_infomation
-                    text: 模板消息介绍
-                    name: open_infomation
-                  -
-                    link: /develop/serverapi/useintroduction
-                    text: 模板消息使用说明
-                    name: useintroduction
-                  -
-                    link: /develop/serverapi/sendintroduction
-                    text: 模板消息下发条件
-                    name: sendintroduction
-                  -
-                    link: /develop/serverapi/getTemplateLibraryList
-                    text: getTemplateLibraryList
-                    name: getTemplateLibraryList
-                  -
-                    link: /develop/serverapi/getTemplateLibraryById
-                    text: getTemplateLibraryById
-                    name: getTemplateLibraryById
-                  -
-                    link: /develop/serverapi/addTemplate
-                    text: addTemplate
-                    name: addTemplate
-                  -
-                    link: /develop/serverapi/getTemplateList
-                    text: getTemplateList
-                    name: getTemplateList
-                  -
-                    link: /develop/serverapi/deleteTemplate
-                    text: deleteTemplate
-                    name: deleteTemplate
-                  -
-                    link: /develop/serverapi/sendTemplateMessage
-                    text: sendTemplateMessage
-                    name: sendTemplateMessage
               -
+                link: /develop/serverapi/useintroduction
+                text: 模板消息使用说明
+                name: useintroduction
+              -
+                link: /develop/serverapi/sendintroduction
+                text: 模板消息下发条件
+                name: sendintroduction
+              -
+                link: /develop/serverapi/getTemplateLibraryList
+                text: getTemplateLibraryList
+                name: getTemplateLibraryList
+              -
+                link: /develop/serverapi/getTemplateLibraryById
+                text: getTemplateLibraryById
+                name: getTemplateLibraryById
+              -
+                link: /develop/serverapi/addTemplate
+                text: addTemplate
+                name: addTemplate
+              -
+                link: /develop/serverapi/getTemplateList
+                text: getTemplateList
+                name: getTemplateList
+              -
+                link: /develop/serverapi/deleteTemplate
+                text: deleteTemplate
+                name: deleteTemplate
+              -
+                link: /develop/serverapi/sendTemplateMessage
+                text: sendTemplateMessage
+                name: sendTemplateMessage
+        -
 
-                text: 客服消息
-                name: serverapi
-                sidebar:
-                  -
-                    link: /develop/serverapi/contact_api
-                    text: 消息推送介绍
-                    name: contact_api
-                  -
-                    link: /develop/serverapi/contact_api_page
-                    text: 在页面中使用客服消息
-                    name: contact_api_page
-                  -
-                    link: /develop/serverapi/contact_api_background
-                    text: 后台接入消息服务
-                    name: contact_api_background
-                  -
-                    link: /develop/serverapi/contact_api_send
-                    text: 发送客服消息接口
-                    name: contact_api_send
+          text: 客服消息
+          name: serverapi
+          sidebar:
               -
-                link: /develop/serverapi/power_exp
-                text: 开发者服务权限说明
-                name: power_exp
+                link: /develop/serverapi/contact_api
+                text: 消息推送介绍
+                name: contact_api
               -
-
-                text: 风控服务
-
-                sidebar:
-                  -
-                    link: /develop/serverapi/open_risk_power
-                    text: 功能介绍
-                    name: open_risk_power
-                  -
-                    link: /develop/serverapi/open_risk_power_detectrisk
-                    text: detectrisk
-                    name: open_risk_power_detectrisk
+                link: /develop/serverapi/contact_api_page
+                text: 在页面中使用客服消息
+                name: contact_api_page
               -
-                text: 小程序二维码
-                sidebar:
-                  -
-                    link: /develop/serverapi/get
-                    text: get
-                    name: get
-                  -
-                    link: /develop/serverapi/getunlimited
-                    text: getunlimited
-                    name: getunlimited
+                link: /develop/serverapi/contact_api_background
+                text: 后台接入消息服务
+                name: contact_api_background
+              -
+                link: /develop/serverapi/contact_api_send
+                text: 发送客服消息接口
+                name: contact_api_send
+        -
+          text: 风控服务
+          sidebar:
+              -
+                link: /develop/serverapi/open_risk_power
+                text: 功能介绍
+                name: open_risk_power
+              -
+                link: /develop/serverapi/open_risk_power_detectrisk
+                text: detectrisk
+                name: open_risk_power_detectrisk
+        -
+          text: 小程序二维码
+          sidebar:
+              -
+                link: /develop/serverapi/get
+                text: get
+                name: get
+              -
+                link: /develop/serverapi/getunlimited
+                text: getunlimited
+                name: getunlimited
+        -
+          link: /develop/serverapi/power_exp
+          text: 开发者服务权限说明
+          name: power_exp                
     -
       text: 扩展能力
       name: extended
-      sidebar:
-             
+      link: /develop/extended/extendedlist
+      close: true
+      sidebar:      
         -
-       
-          text: smart-ui组件
+          text: smart-ui 组件
           sidebar:
               -
                 link: /develop/extended/ui_component/info
-                text: smart-ui介绍
+                text: smart-ui 介绍
                 name: info
               -
                 link: /develop/extended/ui_component/smt-feed
@@ -3653,7 +3637,7 @@
                 text: navigation 自定义导航
                 name: smt-navigation
         -
-            text: smart-ui模板
+            text: smart-ui 模板
             sidebar:
               -
                 link: /develop/extended/template/smt-detail-pages
@@ -3672,27 +3656,27 @@
             sidebar:
               -
                 link: /develop/extended/lib/smt-promisify
-                text: api promise 化
+                text: promisify 
                 name: smt-promisify 
               -
                 link: /develop/extended/lib/smt-md5
-                text: 加密算法
+                text: md5
                 name: smt-md5
               -
                 link: /develop/extended/lib/smt-mobx
-                text: swan-mobx连接器
+                text: mobx
                 name: smt-mobx
               -
                 link: /develop/extended/lib/smt-observer
-                text: 订阅发布器
+                text: event-emitter
                 name: smt-observer
               -
                 link: /develop/extended/lib/smt-swanx
-                text: swanx 数据状态管理
+                text: swanx  
                 name: smt-swanx 
               -
                 link: /develop/extended/lib/bdparse
-                text: bdparse 富文本解析器
+                text: bdparse 
                 name: bdparse
         -   
             text: 扩展服务
@@ -3716,93 +3700,82 @@
     -
       text: 工具
       name: devtools
+      link: /develop/devtools/history
       close: true
       sidebar:
         -
-            sidebar:
+          name: page
+          text: 工具界面
+          sidebar:
               -
-                link: /develop/devtools/history
-                text: 版本下载
-                name: history
+                link: /develop/devtools/page_start
+                text: 启动页
+                name: page_start
               -
-
-                name: page
-                text: 界面
-                sidebar:
-                  -
-                    link: /develop/devtools/page_start
-                    text: 启动页
-                    name: page_start
-                  -
-                    link: /develop/devtools/page_menu
-                    text: 菜单栏
-                    name: page_menu
-                  -
-                    link: /develop/devtools/page_tool
-                    text: 工具栏
-                    name: page_tool
-                  -
-                    link: /develop/devtools/page_monitor
-                    text: 模拟器
-                    name: page_monitor
-                  -
-                    link: /develop/devtools/page_editor
-                    text: 编辑器
-                    name: page_editor
-                  -
-                    link: /develop/devtools/page_debug
-                    text: 调试器
-                    name: page_debug
+                link: /develop/devtools/page_menu
+                text: 菜单栏
+                name: page_menu
+              -
+                link: /develop/devtools/page_tool
+                text: 工具栏
+                name: page_tool
+              -
+                link: /develop/devtools/page_monitor
+                text: 模拟器
+                name: page_monitor
+              -
+                link: /develop/devtools/page_editor
+                text: 编辑器
+                name: page_editor
+              -
+                link: /develop/devtools/page_debug
+                text: 调试器
+                name: page_debug
         -
-            sidebar:
-              -
-
-                name: setting
-                text: 设置
-                sidebar:
-                  -
-                    link: /develop/devtools/set_shortcutkey
-                    text: 快捷键设置
-                    name: set_shortcutkey
-                  -
-                    link: /develop/devtools/set_edit
-                    text: 编辑设置
-                    name: set_edit
-                  -
-                    link: /develop/devtools/set_proxy
-                    text: 代理设置
-                    name: set_proxy
-                  -
-                    link: /develop/devtools/set_outlook
-                    text: 外观设置
-                    name: set_outlook
+          name: setting
+          text: 设置
+          sidebar:
+            -
+              link: /develop/devtools/set_shortcutkey
+              text: 快捷键设置
+              name: set_shortcutkey
+            -
+              link: /develop/devtools/set_edit
+              text: 编辑设置
+              name: set_edit
+            -
+              link: /develop/devtools/set_proxy
+              text: 代理设置
+              name: set_proxy
+            -
+              link: /develop/devtools/set_outlook
+              text: 外观设置
+              name: set_outlook
         -
-            sidebar:
-              -
 
-                name: editor
-                text: 代码编辑
-                sidebar:
-                  -
-                    link: /develop/devtools/editor_file
-                    text: 文件
-                    name: editor_file
-                  -
-                    link: /develop/devtools/editor_rpx
-                    text: 转换px为rpx
-                    name: editor_rpx
-                  -
-                    link: /develop/devtools/editor_git
-                    text: Git 状态展示
-                    name: editor_git
-                  -
-                    link: /develop/devtools/editor_debug
-                    text: 代码调试
-                    name: editor_debug
-                  -
-                    link: /develop/devtools/editor_set
-                    text: 项目配置文件
-                    name: editor_set
+          name: editor
+          text: 代码编辑
+          sidebar:
+            -
+              link: /develop/devtools/editor_file
+              text: 文件
+              name: editor_file
+            -
+              link: /develop/devtools/editor_rpx
+              text: 转换px为rpx
+              name: editor_rpx
+            -
+              link: /develop/devtools/editor_git
+              text: Git 状态展示
+              name: editor_git
+            -
+              link: /develop/devtools/editor_debug
+              text: 代码调试
+              name: editor_debug
+            -
+              link: /develop/devtools/editor_set
+              text: 项目配置文件
+              name: editor_set
         -
             link: /develop/devtools/smartappdebug_function
             text: 小程序调试
@@ -4141,16 +4114,13 @@
     -
       text: 云开发
       name: cloud
+      link: /develop/cloud/cloud_info
       close: true
       sidebar:
         -
           text: 介绍
           name: smartapp_cloud_document
           sidebar:
-            -
-                text: 云开发介绍
-                name: cloud_info
-                link: /develop/cloud/cloud_info
             -
                 text: 快速上手
                 name: cloud_start
@@ -4197,39 +4167,34 @@
                     name: console_function
                     link: /develop/cloud/console_function
         -
-
+          text: 开发指南
+          name: guide
           sidebar:
               -
-                text: 开发指南
+                text: 编辑器中的云函数操作
+                name: cloud_function_guide_editor
+                link: /develop/cloud/guide/editor
+              -
+                text: 环境
                 name: guide
+                link: /develop/cloud/guide/guide
+              -
+                text: 云函数开发指南
+                name: guide_function
+                link: /develop/cloud/guide/guide_function
 
-                sidebar:
-
-                  -
-                    text: 编辑器中的云函数操作
-                    name: cloud_function_guide_editor
-                    link: /develop/cloud/guide/editor
-                  -
-                    text: 环境
-                    name: guide
-                    link: /develop/cloud/guide/guide
-                  -
-                    text: 云函数开发指南
-                    name: guide_function
-                    link: /develop/cloud/guide/guide_function
-
-                  -
-                    text: 数据库开发常见问题
-                    name:  guide_databasefaq
-                    link: /develop/cloud/guide/guide_databasefaq
-                  -
-                    text: 用户集成相关问题
-                    name:  guide_user
-                    link: /develop/cloud/guide/guide_user
-                  -
-                    text: 云开发配额
-                    name: guide_dev
-                    link: /develop/cloud/guide/guide_dev
+              -
+                text: 数据库开发常见问题
+                name:  guide_databasefaq
+                link: /develop/cloud/guide/guide_databasefaq
+              -
+                text: 用户集成相关问题
+                name:  guide_user
+                link: /develop/cloud/guide/guide_user
+              -
+                text: 云开发配额
+                name: guide_dev
+                link: /develop/cloud/guide/guide_dev
         -
             text: 小程序端 API 文档
             name: /develop/cloud/cloud_init
@@ -4662,19 +4627,16 @@
     -
       text: 功能开发
       name: function
+      close: true
       sidebar:
         -
-          sidebar:
-          -
-            link: /develop/function/navigation
-            text: 导航
-            name: navigation
+          link: /develop/function/navigation
+          text: 小程序导航
+          name: navigation
         -
-          sidebar:
-          -
-            link: /develop/function/opensmartprogram
-            text: 打开小程序
-            name: opensmartprogram
+          link: /develop/function/opensmartprogram
+          text: 打开小程序
+          name: opensmartprogram
         -
           link: /develop/function/webintroduction
           text: Web 化开发
@@ -4787,47 +4749,41 @@
               name: file_system
     -
       text: 基础库版本信息
-      name: swan
+      close: true
       sidebar:
         -
+          link: /develop/swan/version
+          text: 版本分布
+          name: version   
+        -
+          link: /develop/swan/swanchangelog
+          text: 历史更新日志
+          name: swanchangelog
+        -
+          link: /develop/swan/compatibility
+          text: 兼容性说明
+          name: compatibility
           sidebar:
             -
-              link: /develop/swan/client-lib
-              text: 基础库
-              name: client-lib
+              link: /develop/swan/compatibility_compare
+              text: 版本号比较
+              name: compatibility_compare
             -
-              link: /develop/swan/version
-              text: 版本分布
-              name: version
+              link: /develop/swan/compatibility_api
+              text: API存在判断
+              name: compatibility_api
             -
-              link: /develop/swan/swanchangelog
-              text: 历史更新日志
-              name: swanchangelog
+              link: /develop/swan/compatibility_caniuse
+              text: canIUse
+              name: compatibility_caniuse
             -
-              link: /develop/swan/compatibility
-              text: 兼容性说明
-              name: compatibility
-              sidebar:
-              -
-                link: /develop/swan/compatibility_compare
-                text: 版本号比较
-                name: compatibility_compare
-              -
-                link: /develop/swan/compatibility_api
-                text: API存在判断
-                name: compatibility_api
-              -
-                link: /develop/swan/compatibility_caniuse
-                text: canIUse
-                name: compatibility_caniuse
-              -
-                link: /develop/swan/compatibility_diff
-                text: Android 与 iOS 差异
-                name: compatibility_diff
-              -
-                link: /develop/swan/compatibility_version
-                text: 基础库最低版本设置
-                name: compatibility_version
+              link: /develop/swan/compatibility_diff
+              text: Android 与 iOS 差异
+              name: compatibility_diff
+            -
+              link: /develop/swan/compatibility_version
+              text: 基础库最低版本设置
+              name: compatibility_version
 
     -
       text: 附录
@@ -4861,12 +4817,9 @@
               text: 其它常见问题
               name: frequently
         -
-
-          sidebar:
-            -
-              link: /develop/appendix/error
-              text: 错误码
-              name: error
+          link: /develop/appendix/error
+          text: 错误码
+          name: error
         # -
 
         #   sidebar:

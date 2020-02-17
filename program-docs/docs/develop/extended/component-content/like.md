@@ -1,5 +1,5 @@
 ---
-title: 点赞服务版
+title: 点赞组件
 header: develop
 nav: extended
 sidebar: like
