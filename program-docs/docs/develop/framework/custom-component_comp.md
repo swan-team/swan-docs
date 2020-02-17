@@ -116,6 +116,44 @@ Component({
     }
 });
 ```
+使用 Component 构造器来构造页面的一个好处是可以使用 behaviors 来提取所有页面中公用的代码段。例如，在所有页面被创建和销毁时都要执行同一段代码，就可以把这段代码提取到 behaviors 中。
+
+**代码示例**
+<a href="swanide://fragment/01345089b6cffb000ed1e9aeb9604f751581935236837" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// behavior.js
+module.exports = Behavior({
+    attached: function() {
+        // 页面创建时执行
+        console.info('Page loaded!')
+    },
+    detached: function() {
+        // 页面销毁时执行
+        console.info('Page unloaded!')
+    }
+})
+```
+
+```js
+// 自定义组件 A
+var pageCommonBehavior = require('../behavior.js')
+Component({
+    behaviors: [pageCommonBehavior],
+    data: { /* ... */ },
+    methods: { /* ... */ },
+})
+```
+
+```js
+// 自定义组件 B
+var pageCommonBehavior = require('../behavior.js')
+Component({
+    behaviors: [pageCommonBehavior],
+    data: { /* ... */ },
+    methods: { /* ... */ },
+})
+```
 
 **说明**：
 - 使用 this.data 可以获取内部数据和属性值，但不要直接修改它们，应使用 setData 修改；

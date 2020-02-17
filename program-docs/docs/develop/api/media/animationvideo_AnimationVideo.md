@@ -24,7 +24,7 @@ sidebar: animationvideo_AnimationVideo
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/play.gif">
+        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/animation-video.gif">
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
