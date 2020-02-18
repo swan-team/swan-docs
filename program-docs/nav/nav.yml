@@ -2497,6 +2497,10 @@
                         link: /develop/api/show/canvas_CanvasContext-rotate
                         text: CanvasContext.rotate
                         name: canvas_CanvasContext-rotate
+                      # -
+                      #   link: /develop/api/show/canvas_CanvasContext-transform
+                      #   text: CanvasContext.transform
+                      #   name: canvas_CanvasContext-transform                     
                       -
                         link: /develop/api/show/canvas_CanvasContext-translate
                         text: CanvasContext.translate

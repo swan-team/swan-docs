@@ -14,11 +14,12 @@ sidebar: canvas_CanvasContext-setTransform
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
 | `scaleX`|Number|是|| 水平缩放  | 
-| `scaleY`|Number|是||  垂直缩放| 
-|  `skewX`|Number|是||  水平倾斜  |  
+|  `skewX`|Number|是||  水平倾斜  | 
 | `skewY`|Number|是|| 垂直倾斜  | 
+| `scaleY`|Number|是||  垂直缩放| 
 | `translateX`|Number|是|| 水平移动  | 
 | `translateY`|Number|是|| 垂直移动  | 
+
 ## 示例
 
 <a href="swanide://fragment/09aed2f95717be5b27b1f6970a5fc5811574530265118" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
