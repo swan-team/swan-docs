@@ -3,7 +3,7 @@ title: swan.chooseAlbum
 header: develop
 nav: api
 sidebar: image_swan-chooseAlbum
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/chooseAlbum/chooseAlbum
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/chooseAlbum/chooseAlbum
 ---
 
 

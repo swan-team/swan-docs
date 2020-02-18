@@ -3,7 +3,7 @@ title: swan.clearStorageSync
 header: develop
 nav: api
 sidebar: remove_swan-clearStorageSync
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
 ---
 
  

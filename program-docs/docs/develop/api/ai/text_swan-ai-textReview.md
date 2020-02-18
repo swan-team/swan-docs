@@ -3,7 +3,7 @@ title: swan.ai.textReview
 header: develop
 nav: api
 sidebar: text_swan-ai-textReview
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/textReview/textReview
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/textReview/textReview
 ---
 
 

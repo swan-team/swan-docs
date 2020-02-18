@@ -3,7 +3,7 @@ title: swan.getUserInfo
 header: develop
 nav: api
 sidebar: userinfo_swan-getUserInfo
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getUserInfo/getUserInfo
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getUserInfo/getUserInfo
 ---
 
  

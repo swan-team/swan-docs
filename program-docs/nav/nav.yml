@@ -1188,10 +1188,6 @@
               link: /develop/component/open_web-view
               text: web-view 网页容器
               name: open_web-view
-        -
-          text: 广告
-          name: ad
-          sidebar:
             -
               link: /develop/component/ad
               text: ad 广告

@@ -3,7 +3,7 @@ title: swan.connectSocket
 header: develop
 nav: api
 sidebar: websocket
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/webSocket/webSocket
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/webSocket/webSocket
 ---
 请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 

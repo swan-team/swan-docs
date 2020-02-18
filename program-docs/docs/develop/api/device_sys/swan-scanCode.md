@@ -3,7 +3,7 @@ title: swan.scanCode
 header: develop
 nav: api
 sidebar: swan-scanCode
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/scanCode/scanCode
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/scanCode/scanCode
 ---
 
 

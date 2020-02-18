@@ -3,7 +3,7 @@ title: swan.setStorage
 header: develop
 nav: api
 sidebar:  save_swan-setStorage
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
 ---
 
 

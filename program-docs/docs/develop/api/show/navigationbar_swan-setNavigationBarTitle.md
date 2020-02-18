@@ -3,7 +3,7 @@ title:  swan.setNavigationBarTitle
 header: develop
 nav: api
 sidebar: navigationbar_swan-setNavigationBarTitle
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setNavigationBarTitle/setNavigationBarTitle
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setNavigationBarTitle/setNavigationBarTitle
 ---
  
 

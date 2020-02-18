@@ -3,7 +3,7 @@ title:  swan.createAnimation
 header: develop
 nav: api
 sidebar:  createanimation_swan-createAnimation
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createAnimation/createAnimation
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createAnimation/createAnimation
 ---
  
 

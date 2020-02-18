@@ -3,7 +3,7 @@ title: swan.downloadFile
 header: develop
 nav: api
 sidebar: downloadFile
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/downloadFile/downloadFile
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/downloadFile/downloadFile
 ---
 
 

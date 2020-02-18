@@ -3,7 +3,7 @@ title: swan.authorize
 header: develop
 nav: api
 sidebar: authorize_swan-authorize
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/authorize/authorize
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/authorize/authorize
 ---
  
  

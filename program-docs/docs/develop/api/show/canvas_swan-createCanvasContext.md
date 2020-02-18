@@ -3,7 +3,7 @@ title: swan.createCanvasContext
 header: develop
 nav: api
 sidebar: canvas_swan-createCanvasContext
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createCanvasContext/createCanvasContext
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createCanvasContext/createCanvasContext
 ---
 
  
