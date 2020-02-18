@@ -662,7 +662,7 @@
                 name: frameworkdevelop
 
     -
-      link: /develop/framework/app_service_register
+      link: /develop/framework/app_service
       text: 框架
       name: framework
       close: true

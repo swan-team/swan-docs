@@ -3,7 +3,7 @@ title: open-data 开放数据
 header: develop
 nav: component
 sidebar: open
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/open-data/open-data
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/open-data/open-data
 ---
 
 

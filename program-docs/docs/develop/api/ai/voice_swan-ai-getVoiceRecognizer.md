@@ -3,7 +3,7 @@ title: swan.ai.getVoiceRecognizer
 header: develop
 nav: api
 sidebar: voice_swan-ai-getVoiceRecognizer
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getVoiceManager/getVoiceManager
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getVoiceManager/getVoiceManager
 ---
 
 

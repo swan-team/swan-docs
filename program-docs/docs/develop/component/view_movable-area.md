@@ -3,7 +3,7 @@ title: movable-area 可移动视图区域
 header: develop
 nav: component
 sidebar: view_movable-area
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
 ---
  
 

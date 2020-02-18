@@ -3,7 +3,7 @@ title: swiper 滑块视图容器
 header: develop
 nav: component
 sidebar: view_swiper
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/swiper/swiper
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/swiper/swiper
 ---
 
 

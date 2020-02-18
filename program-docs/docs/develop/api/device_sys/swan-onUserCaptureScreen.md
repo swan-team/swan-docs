@@ -3,7 +3,7 @@ title: swan.onUserCaptureScreen
 header: develop
 nav: api
 sidebar: swan-onUserCaptureScreen
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onUserCaptureScreen/onUserCaptureScreen
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onUserCaptureScreen/onUserCaptureScreen
 ---
 
 

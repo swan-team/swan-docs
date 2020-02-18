@@ -3,7 +3,7 @@ title: textarea 多行输入框
 header: develop
 nav: component
 sidebar: formlist_textarea
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/textarea
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/textarea
 ---
 
 
