@@ -3,7 +3,7 @@ title: feed-item 信息流子项
 header: develop
 nav: extended
 sidebar: smt-feed-item
-webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-feed-item/smt-feed-item
+# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-feed-item/smt-feed-item
 ---
 
 **解释：** 信息流子项，包括左文右图、纯文本、上文下图、多图及视频模式。

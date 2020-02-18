@@ -3,7 +3,7 @@ title: spin 加载
 header: develop
 nav: extended
 sidebar: smt-spin
-webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-spin/smt-spin
+# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-spin/smt-spin
 ---
 
 **解释：** 加载组件，可用于全屏和半屏。用于展示加载状态，点击加载、正在加载、加载完成、重新加载四种状态。

@@ -3,7 +3,7 @@ title: 关注组件
 header: develop
 nav: extended
 sidebar: follow
-webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
+# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
 ---
 
 

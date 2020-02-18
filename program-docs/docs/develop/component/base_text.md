@@ -3,7 +3,7 @@ title: text 文本
 header: develop
 nav: component
 sidebar: base_text
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/text/text
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/text/text
 ---
 
 

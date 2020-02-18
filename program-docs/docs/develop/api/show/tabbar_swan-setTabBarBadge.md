@@ -3,7 +3,7 @@ title: swan.setTabBarBadge
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarBadge
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
 ---
  
 **解释**：为 tabBar 某一项的右上角添加文本。
