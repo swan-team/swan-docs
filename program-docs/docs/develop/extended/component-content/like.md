@@ -3,6 +3,7 @@ title: 点赞组件
 header: develop
 nav: extended
 sidebar: like
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/like/like
 ---
 
 

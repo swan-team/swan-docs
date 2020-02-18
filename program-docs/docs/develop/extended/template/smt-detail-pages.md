@@ -3,6 +3,7 @@ title: 图文详情页
 header: develop
 nav: extended
 sidebar:  template
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-detail-pages/smt-detail-pages
 ---
 
 **解释**：图文详情页模板。你可以加载含有图片、文本、引用、标题等形式的内容。同时，图文详情页模板内置了回到顶端按钮与关注/取消关注按钮，支持点击作者跳转与图片查看器。图文详情页通常用来展示文章、帖子等内容的详情。  
