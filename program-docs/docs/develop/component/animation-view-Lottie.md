@@ -3,7 +3,7 @@ title: animation-view Lottie 动画
 header: develop
 nav: component
 sidebar: base_animation-view-Lottie
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
 ---
 
 

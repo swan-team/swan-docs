@@ -3,7 +3,7 @@ title: animation-video 透明视频动画
 header: develop
 nav: component
 sidebar: animation-video
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-video/animation-video
 ---
 
 

@@ -3,7 +3,7 @@ title: button 按钮
 header: develop
 nav: component
 sidebar: formlist_button
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/button/button
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/button/button
 ---
 
 

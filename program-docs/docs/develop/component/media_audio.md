@@ -3,7 +3,7 @@ title: audio 音频
 header: develop
 nav: component
 sidebar: media_audio
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/audio/audio
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/audio/audio
 ---
 
 
