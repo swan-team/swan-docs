@@ -3,7 +3,7 @@ title: video 视频
 header: develop
 nav: component
 sidebar: media_video
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/video/video
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/video/video
 ---
  
 

@@ -3,7 +3,7 @@ title: cover-view 文本视图
 header: develop
 nav: component
 sidebar: view_cover-view
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
 ---
 
 

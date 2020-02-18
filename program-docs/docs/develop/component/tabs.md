@@ -3,7 +3,7 @@ title: tabs 标签栏
 header: develop
 nav: component
 sidebar: tabs
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
 ---
 
 
