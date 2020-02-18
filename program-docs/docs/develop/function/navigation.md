@@ -74,7 +74,7 @@ sidebar: navigation
 ```
 //webview 组件页面javascript
 navigate(url) {
-    小程序.webView.navigateTo({url: '../webview/webview?# webUrl=' + url});
+    小程序.webView.navigateTo({url: '../webview/webview?webUrl=' + url});
 }
 ```
 
@@ -86,10 +86,10 @@ Page({
     data: {
     url:''
     },
-    // 监听页面加载,获取H5页面传递过来的# webUrl
+    // 监听页面加载,获取H5页面传递过来的webUrl
     onLoad: function (options) {
     this.setData({
-      url: options.# webUrl 
+      url: options.webUrl 
     });
   }
 });

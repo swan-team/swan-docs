@@ -3,7 +3,7 @@ title: movable-view 可移动视图容器
 header: develop
 nav: component
 sidebar: view_movable-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/movable-view/movable-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/movable-view/movable-view
 ---
 
  

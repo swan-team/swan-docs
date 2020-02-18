@@ -3,7 +3,7 @@ title: image 图片
 header: develop
 nav: component
 sidebar: media_image
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/image/image
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/image/image
 ---
 
 

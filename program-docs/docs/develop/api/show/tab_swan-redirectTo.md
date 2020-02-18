@@ -3,7 +3,7 @@ title: swan.redirectTo
 header: develop
 nav: api
 sidebar: tab_swan-redirectTo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
  
  

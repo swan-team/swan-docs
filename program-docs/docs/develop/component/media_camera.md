@@ -3,7 +3,7 @@ title: camera 相机
 header: develop
 nav: component
 sidebar: media_camera
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/camera/camera
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/camera/camera
 ---
 
  

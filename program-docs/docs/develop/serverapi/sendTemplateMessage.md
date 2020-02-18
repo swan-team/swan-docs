@@ -3,7 +3,7 @@ title: sendTemplateMessage
 header: develop
 nav: serverapi
 sidebar: sendTemplateMessage
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/templateMessage/templateMessage
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/templateMessage/templateMessage
 ---
  
 

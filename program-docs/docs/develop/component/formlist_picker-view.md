@@ -3,7 +3,7 @@ title: picker-view 滚动选择器
 header: develop
 nav: component
 sidebar: formlist_picker-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker-view/picker-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker-view/picker-view
 ---
  
 

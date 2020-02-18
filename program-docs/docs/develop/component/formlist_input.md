@@ -3,7 +3,7 @@ title: input 输入框
 header: develop
 nav: component
 sidebar: formlist_input
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/input
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/input
 ---
 
 **解释**：输入框，v3.105.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。

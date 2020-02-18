@@ -3,7 +3,7 @@ title: swan.saveVideoToPhotosAlbum
 header: develop
 nav: api
 sidebar: video_swan-saveVideoToPhotosAlbum
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/saveVideoToPhotosAlbum/saveVideoToPhotosAlbum
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/saveVideoToPhotosAlbum/saveVideoToPhotosAlbum
 ---
 
 

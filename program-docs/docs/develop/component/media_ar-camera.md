@@ -3,7 +3,7 @@ title: ar-camera AR相机
 header: develop
 nav: component
 sidebar: media_ar-camera
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/ar-camera/ar-camera
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/ar-camera/ar-camera
 ---
 
  

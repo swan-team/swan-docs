@@ -3,7 +3,7 @@ title: swan.onNetworkStatusChange
 header: develop
 nav: api
 sidebar:  swan-onNetworkStatusChange
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onNetworkStatusChange/onNetworkStatusChange
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onNetworkStatusChange/onNetworkStatusChange
 ---
  
 

@@ -3,7 +3,7 @@ title: swan.showActionSheet
 header: develop
 nav: api
 sidebar: toast_swan-showActionSheet
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showActionSheet/showActionSheet
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showActionSheet/showActionSheet
 ---
 
  

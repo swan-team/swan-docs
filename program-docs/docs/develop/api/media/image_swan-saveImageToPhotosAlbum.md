@@ -3,7 +3,7 @@ title: swan.saveImageToPhotosAlbum
 header: develop
 nav: api
 sidebar: image_swan-saveImageToPhotosAlbum
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/saveImageToPhotosAlbum/saveImageToPhotosAlbum
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/saveImageToPhotosAlbum/saveImageToPhotosAlbum
 ---
 
 

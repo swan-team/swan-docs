@@ -3,7 +3,7 @@ title: swan.onAccelerometerChange
 header: develop
 nav: api
 sidebar: swan-onAccelerometerChange
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getAccelerometer/getAccelerometer
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getAccelerometer/getAccelerometer
 ---
 
 

@@ -3,7 +3,7 @@ title: swan.request
 header: develop
 nav: api
 sidebar: request
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/request/request
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/request/request
 ---
 
  

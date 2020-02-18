@@ -3,7 +3,7 @@ title: 原生组件
 header: develop
 nav: component
 sidebar: native
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 **概念**：原生组件是由客户端创建的原生组件。
 

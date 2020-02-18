@@ -3,7 +3,7 @@ title: swan.ai.imageAudit
 header: develop
 nav: api
 sidebar:  audit
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/imageAudit/imageAudit
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/imageAudit/imageAudit
 ---
  
 

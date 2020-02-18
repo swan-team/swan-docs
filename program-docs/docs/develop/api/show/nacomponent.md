@@ -3,7 +3,7 @@ title:  swan.showFavoriteGuide
 header: develop
 nav: api
 sidebar: nacomponent
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showFavoriteGuide/showFavoriteGuide
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showFavoriteGuide/showFavoriteGuide
 ---
 
   

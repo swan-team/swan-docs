@@ -3,7 +3,7 @@ title: swan.stopPullDownRefresh
 header: develop
 nav: api
 sidebar: pull_swan-stopPullDownRefresh
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
 ---
  
 **解释**： 停止当前页面下拉刷新。

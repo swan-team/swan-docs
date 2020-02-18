@@ -3,7 +3,7 @@ title: swan.showNavigationBarLoading
 header: develop
 nav: api
 sidebar: navigationbar_swan-showNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
 ---
  
  

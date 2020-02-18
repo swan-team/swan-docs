@@ -3,7 +3,7 @@ title: swan.makePhoneCall
 header: develop
 nav: api
 sidebar: swan-makePhoneCall
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/makePhoneCall/makePhoneCall
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/makePhoneCall/makePhoneCall
 ---
 
  
