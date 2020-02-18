@@ -323,30 +323,28 @@
       name: book
       sidebar:
         -
-            sidebar:
-              -
-                link: /introduction/contact
-                text: 客服功能介绍
-                name: contact
-              -
-                text: 客服功能支持的接入类型
-                sidebar:
-                  -
-                    link: /introduction/type_send
-                    text: 消息推送
-                    name: type_send
-                  -
-                    link: /introduction/type_tool
-                    text: 小程序客服工具
-                    name: type_tool
-                  -
-                    link: /introduction/type_thridtool
-                    text: 第三方客服工具
-                    name: type_thridtool
-              -
-                link: /introduction/contact_standard
-                text: 运营规范
-                name: contact_standard
+          link: /introduction/contact
+          text: 客服功能介绍
+          name: contact
+        -
+          text: 客服功能支持的接入类型
+          sidebar:
+            -
+              link: /introduction/type_send
+              text: 消息推送
+              name: type_send
+            -
+              link: /introduction/type_tool
+              text: 小程序客服工具
+              name: type_tool
+            -
+              link: /introduction/type_thridtool
+              text: 第三方客服工具
+              name: type_thridtool
+        -
+          link: /introduction/contact_standard
+          text: 运营规范
+          name: contact_standard
     -
       link: /introduction/scancode
       text: 扫码打开智能小程序
@@ -571,7 +569,6 @@
       link: /develop/tutorial/demo
       text: 快速入门
       name: tutorial
-      close: true
       sidebar:
         -
             text: 开发前准备
@@ -3549,7 +3546,6 @@
                 text: sendTemplateMessage
                 name: sendTemplateMessage
         -
-
           text: 客服消息
           name: serverapi
           sidebar:
@@ -3599,7 +3595,6 @@
       text: 扩展能力
       name: extended
       link: /develop/extended/extendedlist
-      close: true
       sidebar:      
         -
           text: smart-ui 组件
@@ -4627,7 +4622,6 @@
     -
       text: 功能开发
       name: function
-      close: true
       sidebar:
         -
           link: /develop/function/navigation
@@ -4749,7 +4743,6 @@
               name: file_system
     -
       text: 基础库版本信息
-      close: true
       sidebar:
         -
           link: /develop/swan/version

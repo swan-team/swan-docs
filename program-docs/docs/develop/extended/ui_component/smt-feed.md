@@ -110,6 +110,6 @@ async scrollToLower() {
 
 ## Bug&Tip
 
-* 和scroll-view一样，信息流组件作为局部滚动组件，必须在它的父级或本身指定高度
-* 当同时启用下拉刷新和上滑加载且请求不稳定时，可使用CancelToken取消先前的请求
+* Tip：和scroll-view一样，信息流组件作为局部滚动组件，必须在它的父级或本身指定高度。
+* Tip：当同时启用下拉刷新和上滑加载且请求不稳定时，可使用CancelToken取消先前的请求。
 
