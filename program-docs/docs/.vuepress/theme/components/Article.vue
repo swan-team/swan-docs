@@ -13,6 +13,7 @@
                         <a class="article-title-menu-edit"
                             :href="gitLink"
                             target="_blank"
+                            @mousedown="navToEdit"
                             @mouseover="setEditActive"
                             @mouseout="outEditActive">
                             <img v-if="editActive" src="../assets/images/edit-active.png" >
@@ -31,6 +32,7 @@
 </style>
 
 <script>
+/* globals _hmt */
 export default {
     data() {
         return {
@@ -52,6 +54,9 @@ export default {
         },
         outEditActive() {
             this.editActive = false;
+        },
+        navToEdit() {
+            _hmt.push(['_trackEvent', '编辑文档', '点击']);
         }
     }
 }
