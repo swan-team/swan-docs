@@ -674,7 +674,7 @@
             sidebar:
               -
                 link: /develop/framework/app_service
-                text: 方法说明
+                text: 逻辑层方法说明
                 name: app_service
               -
 

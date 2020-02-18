@@ -1,5 +1,5 @@
 ---
-title: 逻辑层
+title: 逻辑层方法说明
 header: develop
 nav: framework
 sidebar: app_service
