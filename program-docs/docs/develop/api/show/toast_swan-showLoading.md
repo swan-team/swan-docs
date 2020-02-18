@@ -3,6 +3,7 @@ title: swan.showLoading
 header: develop
 nav: api
 sidebar:  toast_swan-showLoading
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/toast/toast
 ---
 
 **解释**：显示 loading 提示框, 需主动调用 hideLoading 才能关闭提示框。

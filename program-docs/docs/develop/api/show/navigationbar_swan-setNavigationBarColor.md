@@ -3,7 +3,7 @@ title: swan.setNavigationBarColor
 header: develop
 nav: api
 sidebar: navigationbar_swan-setNavigationBarColor
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setNavigationBarColor/setNavigationBarColor
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setNavigationBarColor/setNavigationBarColor
 ---
 
  

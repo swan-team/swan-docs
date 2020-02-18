@@ -3,7 +3,7 @@ title: swan.hideNavigationBarLoading
 header: develop
 nav: api
 sidebar:  navigationbar_swan-hideNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
 ---
 
 

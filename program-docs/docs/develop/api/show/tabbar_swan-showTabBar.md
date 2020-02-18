@@ -3,7 +3,7 @@ title: swan.showTabBar
 header: develop
 nav: api
 sidebar: tabbar_swan-showTabBar
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
 ---
  
 **解释**：显示 tabBar

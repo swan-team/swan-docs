@@ -3,6 +3,7 @@ title: onPullDownRefresh
 header: develop
 nav: api
 sidebar:  pull_onPullDownRefresh
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
 ---
 
 

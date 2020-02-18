@@ -3,6 +3,7 @@ title: swan.reLaunch
 header: develop
 nav: api
 sidebar: tab_swan-reLaunch
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
  
  

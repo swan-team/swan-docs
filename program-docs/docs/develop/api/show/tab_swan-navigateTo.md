@@ -3,7 +3,7 @@ title: swan.navigateTo
 header: develop
 nav: api
 sidebar: tab_swan-navigateTo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
 
 > * 以下 5 个 API 都有与之功能一致的 [navigator 组件](/develop/component/nav/) 声明方式。

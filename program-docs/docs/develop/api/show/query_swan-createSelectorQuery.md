@@ -3,7 +3,7 @@ title: swan.createSelectorQuery
 header: develop
 nav: api
 sidebar: query_swan-createSelectorQuery
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createSelectorQuery/createSelectorQuery
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createSelectorQuery/createSelectorQuery
 ---
  
 

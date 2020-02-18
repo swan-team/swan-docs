@@ -3,6 +3,7 @@ title: navigation 顶部导航bar
 header: develop
 nav: extended
 sidebar: smt-navigation
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-navigation/smt-navigation
 ---
 
 **解释：** 顶部导航bar可以自定义

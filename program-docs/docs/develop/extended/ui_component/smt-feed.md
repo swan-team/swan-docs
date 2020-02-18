@@ -3,6 +3,7 @@ title: feed 信息流
 header: develop
 nav: extended
 sidebar: smt-feed
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-feed/smt-feed
 ---
 
 **解释：** 信息流组件，可配置下拉刷新、列表加载、上滑加载功能，适用于列表信息展示，并可放置在页面的任何部分；组件包含手势下拉以及api调用两种使用方式

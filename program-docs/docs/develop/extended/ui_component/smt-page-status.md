@@ -3,6 +3,7 @@ title: page-status 页面状态组件
 header: develop
 nav: extended
 sidebar: smt-page-status
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-page-status/smt-page-status
 ---
 
 **解释：** 页面状态组件，可用于全屏和半屏。用于展示页面加载，页面异常-有操作、页面异常-无操作三种页面状态。
