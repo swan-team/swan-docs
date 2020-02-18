@@ -37,7 +37,7 @@ Object object
 |scope.camera|	[camera](/develop/component/media_camera/)|	摄像头|
 ## 示例
 
-<a href="swanide://fragment/cb840e582c596d3af960596f7cd45fea1575143796711" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/424a2b1d013aecc479afff71b95d0e3b1581936492541" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -46,11 +46,8 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
 
 ### 代码示例 
-
-
 
 * 在 swan 文件中
 
@@ -92,20 +89,21 @@ Page({
     },
     btnClick(e) {
         let scope = e.currentTarget.id;
-        console.log('scope', scope);
         swan.authorize({
             scope,
             success: res => {
                 swan.showToast({
-                    title: '授权成功'
+                    title: '已成功授权',
+                    icon: 'none'
                 });
             },
             fail: err => {
-                swan.openSetting({});
-                swan.showToast({
-                    title: '授权失败'
-                });
-                console.log('authorize fail', err);
+                if (err.errCode === 10003) {
+                    swan.showToast({
+                        title: '你已拒绝授权申请',
+                        icon: 'none'
+                    });
+                }
             }
         });
     }

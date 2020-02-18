@@ -32,7 +32,7 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 
 ## 示例
 
-<a href="swanide://fragment/d78c8265a509149796a3f556a3db20171575140227666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1295c87444ec27f3acbc84e5616687441581940355771" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -42,14 +42,20 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
 </div>
 
 
-
-
- 
-
 ###  代码示例 
 
+* 在 swan 文件中
 
-
+```html
+<view class="container">
+    <view class="card-area">
+        <view class="display-area">
+            <view class="tip-week">当前设备内存信息监听中</view>
+            <view class="result-area-default">{{data}}</view>
+        </view>
+    </view>
+</view>
+```
 
 * 在 js 文件中
 
