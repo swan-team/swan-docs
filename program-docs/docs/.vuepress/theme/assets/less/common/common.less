@@ -2,11 +2,15 @@
 @import './color.less';
 @import './params.less';
 
+body {
+    font-family: @font-body;
+}
+
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: "PingFangSC-Regular";
 }
+
 body,
 blockquote,
 p,
@@ -58,6 +62,9 @@ article {
 
             p {
                 margin: 0;
+                white-space: normal;
+                word-wrap: break-word;
+                word-break: normal;
             }
 
 
@@ -88,7 +95,6 @@ article {
 
     h3 {
         font-size: 18px;
-        font-family: "PingFangSC-Regular";
         letter-spacing: 0;
         margin: 48px 0 32px 0;
         // margin: 0;
@@ -120,6 +126,7 @@ article {
         word-wrap: break-word;
         max-width: 100%;
         box-sizing: border-box;
+        font-family: @font-code;
     }
 
     .task-list {
