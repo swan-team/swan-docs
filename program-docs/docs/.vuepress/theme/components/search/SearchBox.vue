@@ -120,15 +120,16 @@ export default {
             }).catch(() =>{});
         },
         sendFocusReport(param) {
+            // 点击搜索框次数埋点
+            const device = param === 'mobile' ? '移动端' : 'PC端';
+            _hmt.push(['_trackEvent', `${device}头部搜索框点击`, '点击']);
+            
             if (this.searchWord && this.searchWord.trim().length > 0) {
                 if (this.sugItems && this.sugItems.length > 0) {
                     this.searchSugShow = true;
                     return;
                 }
                 this.getSearchSugList();
-                // 点击搜索框次数埋点
-                const device = param === 'mobile' ? '移动端' : 'PC端';
-                _hmt.push(['_trackEvent', `${device}头部搜索框点击`, '点击']);
             }
         },
         searchInputBlur() {

@@ -249,7 +249,7 @@ export default {
         changeHeaderNavItem(index) {
             this.sidebarScrollToTop();
 
-            _hmt.push(['_trackEvent', '头部二级导航', '点击']);
+            _hmt.push(['_trackEvent', '头部一级导航', '点击']);
         },
         changeSubNavItem(index) {
             this.sidebarScrollToTop();

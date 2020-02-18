@@ -20,6 +20,7 @@
 </style>
 
 <script>
+/* globals _hmt */
 export default {
     props: {
         activeName: {
@@ -58,6 +59,7 @@ export default {
         },
         copyCode() {
             this.showCopyMsg = true;
+            _hmt.push(['_trackEvent', '复制代码', '点击']);
             this.$emit('copy');
         }
     }
