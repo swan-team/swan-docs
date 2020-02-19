@@ -30,7 +30,7 @@ Object object
 ###   success返回参数说明 
 
 |参数  |说明 |最低版本|
-|---- | ---- |
+|---- | ---- |---- |
 |brand  | 手机品牌 | |
 |model |  手机型号   | |
 |pixelRatio | 设备像素比  | |
@@ -72,7 +72,18 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
+### 图片示例
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getSystemInfo.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
  
 
 ###  代码示例1 - 属性全集 ：

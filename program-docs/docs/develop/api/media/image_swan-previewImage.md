@@ -37,7 +37,21 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
+### 图片示例 
  
+ 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/previewImage.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 ### 代码示例1 - 基本示例 
 
 <a href="swanide://fragment/523172fb38fd75a5a2a93081d15d091c1576345594021" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -21,39 +21,36 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/getunionid?access_token=ACCESS_
 
 ### Header 参数 
 
-参数名 | 类型 | 是否必须 | 描述 
---| --| --|--
-Content-Type| application/x-www-form-urlencoded | 是 | Http的实体首部字段，浏览器原生form表单。|
+|参数名 | 类型 | 是否必须 | 描述 |
+|:----- |:-----|:------|:-----|
+|Content-Type| application/x-www-form-urlencoded | 是 | Http的实体首部字段，浏览器原生form表单。|
 
 ### query参数 
 
-参数名 | 类型 | 是否必须 | 描述 
---| --| --|--
-access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)
-
+|参数名 | 类型 | 是否必须 | 描述 |
+|:----- |:-----| :------| :-----|
+|access_token| string | 是 | [接口调用凭证](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)|
 
 ### post参数 
 
-参数名 | 类型 | 是否必须 | 描述 
---| --| --|--
-openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open/log/)获取
-
+|参数名 | 类型 | 是否必须 | 描述 |
+|:----- |:-----| :------| :-----|
+|openid| string | 是 | 用户openid, 需要经过用户[登录授权过程](https://smartprogram.baidu.com/docs/develop/api/open/log/)获取|
 
 ### 返回值说明 
 
-参数名 | 类型 |描述 
---| --| --|--
-errno| int | 错误码 0：正确返回，1：异常返回
-errmsg| string | 错误信息
-request_id| string | 请求ID，标识一次请求
-data| object | 详细数据，errno为0的情况下才有意义
-
+|参数名 | 类型 |描述 |
+|:----- |:-----| :------| :-----|
+|errno| int | 错误码 0：正确返回，1：异常返回|
+|errmsg| string | 错误信息|
+|request_id| string | 请求ID，标识一次请求|
+|data| object | 详细数据，errno为0的情况下才有意义|
 
 ### data字段描述 
 
-参数名 | 类型 | 描述 
---| --| --|--
-unionid| string | 小程序用户 + 开发者主体维度 唯一的id
+|参数名 | 类型 | 描述 |
+|:----- |:-----| :------| :-----|
+|unionid| string | 小程序用户 + 开发者主体维度 唯一的id|
 
 ## 示例
 

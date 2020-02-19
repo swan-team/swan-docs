@@ -20,7 +20,7 @@ Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
-|phoneNumber | String | 是  | | 需要拨打的电话号码|
+|phoneNumber | String | 是  | | 需要拨打的电话号码<br> **·** 号码格式为：“区号-xxxx xxxx”或“(区号)xxxx xxxx”或“区号xxxx xxxx”或“区号 xxxx xxxx”，其中“()”和“-”请使用英文符号。<br> **·** 可输入英文，将根据九键键盘自动转换成对应的数字进行拨号，例：TUV/WXYZ/JKL 对应号码为 895。|
 |success| Function  |  否  | | 接口调用成功的回调|
 |fail  |  Function  |  否 | | 接口调用失败的回调函数|
 |complete  |  Function |   否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -36,7 +36,18 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
+### 图片示例
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/makePhoneCall.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
  
 
 ###  代码示例一 - 模拟拨号盘用法
@@ -46,12 +57,6 @@ Object object
 ```html
 <view class="card-area">
     <input bind:input="phoneNumberInput" class="input border-bottom" type="number" placeholder="请输入电话号码"/>
-    <!-- 加区号的号码照如下形式输入均可正常识别拨号，其中()和-建议使用英文符号，因为已知ios系统不识别中文符号：
-    0313-xxxx xxxx
-    (0313)xxxx xxxx
-    0313xxxx xxxx
-    0313 xxxx xxxx -->
-    <!-- 可输入英文，这里会根据九键键盘自动转换成对应的数字进行拨号，例：TUV/WXYZ/JKL 对应 895 -->
     <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">拨打</button>
 </view>
 ```
@@ -101,10 +106,6 @@ Page({
     makePhoneCall(e) {
         swan.makePhoneCall({
             phoneNumber: '157XXXX8026',
-            // phoneNumber: '0313-xxxx xxxx',
-            // phoneNumber: '(0313)xxxx xxxx',
-            // phoneNumber: '0313xxxx xxxx',
-            // phoneNumber: 'txk0bkt', // 8950258
             fail: err => {
                 swan.showModal({
                     title: '拨打失败',

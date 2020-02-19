@@ -25,7 +25,7 @@ Object object
  success返回参数说明 ：
 
 |参数名 |类型 | 说明|最低版本
-|---- | ---- | ---- |
+|---- | ---- | ---- |---- |
 |userName|String |  收货人姓名| |
 |postalCode  |String|  邮编| |
 |provinceCode|	String|	国标收货地址第一级地址国家码|最低支持版本 3.90.4 |
@@ -48,7 +48,18 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+###  图片示例  
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/chooseAddress.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div> 
 
 ###  代码示例1 - 用户允许授权情况下 ：
 
