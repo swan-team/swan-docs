@@ -58,6 +58,12 @@ Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A
 |D（从转发进入）|A     | D.onUnload(), A.onLoad(), A.onShow() |
 |D（从转发进入）|B     | D.onUnload(), B.onLoad(), B.onShow() |
 
+**代码示例**
+
+<a href="swanide://fragment/587cfc623ceb2b4608e69b31ddb73f801577942344726" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+> 建议在开发者工具中的控制台查看，工具与真机略有差异，以真机的生命周期为准。
+
 **说明**:
 * navigateTo, redirectTo 只能打开非 tabBar 页面。
 * switchTab 只能打开 tabBar 页面。
