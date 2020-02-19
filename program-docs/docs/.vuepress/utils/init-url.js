@@ -6,7 +6,7 @@
 !(function (url) {
     // 放置被删除的页面映射
     var urlMap = {
-        // '/docs/develop/cloud/cloud_info/': '/docs/develop/cloud/cloud_essentials/'
+        // 例 '/docs/design/principle/':'/docs/design/overview/introduction/'
     };
     if (!window._swanIde) {
         urlMap[url] && location.replace(urlMap[url]);
