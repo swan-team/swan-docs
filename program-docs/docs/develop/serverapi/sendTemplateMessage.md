@@ -7,14 +7,14 @@ sidebar: sendTemplateMessage
 ---
  
 
-**解释：**推送模板消息
+**解释**：推送模板消息
 
-**百度APP中扫码体验：**
+**百度APP中扫码体验**:
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/templateMessage.png"  class="demo-qrcode-image" />
 
 
-**接口调用请求说明：**请提前在开发者平台创建消息模板。用`application/x-www-form-urlencoded`方式提交数据。
+**接口调用请求说明**:请提前在开发者平台创建消息模板。用`application/x-www-form-urlencoded`方式提交数据。
 
 ```
 POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCESS_TOKEN
@@ -22,7 +22,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 ```
 
 
-**名词解释：**
+**名词解释**:
 
 - swan_id：百度生成的与设备相关的唯一标识，APP卸载重安装不会变，详见 [swanid机制说明](https://smartprogram.baidu.com/docs/develop/api/open_userinfo/#swanid%E6%9C%BA%E5%88%B6%E8%AF%B4%E6%98%8E/)
 - open_id：百度用户登录唯一标识，详见 [开放接口-登录](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/)
@@ -30,14 +30,14 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/send?access_token=ACCE
 
 **公共请求参数**:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
+|参数名 | 类型 | 是否必须 | 描述|
+|:----- |:-----| :------|: -----|
 access_token |string | 是 | [access_token](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)，授权小程序的接口调用凭据
 
 **请求参数**:
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
+|参数名 | 类型 | 是否必须 | 描述|
+|:----- |:-----|: ------| :-----|
 template\_id |string |是| 所需下发的模板消息的id
 touser|string|否|接收者swan_id
 touser\_openId|string|否|接收者open_id
@@ -47,7 +47,7 @@ scene\_id|string|是|场景id，例如表单id和订单id
 scene\_type|int|是|	场景type，1：表单；2：百度收银台订单；3:直连订单
 ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           |
 
-**touser&touser_openId使用规则说明：**
+**touser&touser_openId使用规则说明**:
 
 - 百度登录用户使用touser_openId，游客用户使用touser（参考Q&A：怎么判断当前用户是游客状态还是 登录状态）
 

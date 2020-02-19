@@ -15,16 +15,16 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist
 ```
 **公共请求参数:**
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-access_token |string | 是 | access_token，授权小程序的接口调用凭据 
+|参数名 | 类型 | 是否必须 | 描述|
+|:----- |:-----| :------| :-----|
+|access_token |string | 是 | access_token，授权小程序的接口调用凭据 |
 
 **请求参数:**
 
-参数名 | 类型 | 是否必须 | 描述
------ |-----| ------| -----
-offset | int | 是 | 用于分页，表示从offset开始，默认值为0
-count | int | 是 | 用于分页，表示拉取count条记录，默认值为0,最大为20
+|参数名 | 类型 | 是否必须 | 描述|
+|:----- |:-----| :------| :-----|
+|offset | int | 是 | 用于分页，表示从offset开始，默认值为0|
+|count | int | 是 | 用于分页，表示拉取count条记录，默认值为0,最大为20|
 
 **公共响应参数** 
 
