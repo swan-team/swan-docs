@@ -60,8 +60,7 @@ Object object
 |4 | 审核失败 |
 
 ## 示例
-
-<a href="swanide://fragment/038a4f0beff4db724501bc094bed2a5c1569387972291" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/dad4ef8a2b7b08c8219fd3f68493d2531581328967355" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -69,27 +68,43 @@ Object object
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
-
- 
-
+### 图片示例 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/imageAudit.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 ### 代码示例 
-
-
-
 ```js
 Page({
     swan.chooseImage({
         success: res => {
             let image = res.tempFilePaths[0];
-            swan.ai.imageAudit({
-                image, // 暂不支持识别网络图片
-                success: res => {
-                    console.log('imageAudit res', res.conclusionType);
-                },
-                fail: err => {
-                    console.log('imageAudit err', err); 
-                }
-            });
+            // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+            let host = swan.getSystemInfoSync().host;
+            if (host === 'baiduboxapp') {
+                swan.ai.imageAudit({
+                    image, // 暂不支持识别网络图片
+                    success: res => {
+                        console.log('imageAudit res', res.conclusionType);
+                    },
+                    fail: err => {
+                        console.log('imageAudit err', err); 
+                    }
+                });
+            }
+            else {
+                swan.showToast({
+                    title: '此api目前仅可在百度App上使用',
+                    icon: 'none'
+                });
+            }
         }
     })
 });

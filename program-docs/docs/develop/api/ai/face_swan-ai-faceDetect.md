@@ -170,11 +170,23 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/faceDetect.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ### 代码示例1 - image_type为BASE64 ：
 
-<a href="swanide://fragment/fc4fb555f1a72d086ef4698de4c0a8b01569415643600" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/2d93817d410106e6dacd115f6ed7371f1581335960483" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -182,28 +194,39 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.faceDetect({
-                    image,
-                    image_type: 'BASE64',
-                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
-                    max_face_num: '1',
-                    face_type: 'LIVE',
-                    success: res => {
-                        console.log(res.face_list);
-                },
-                fail: err => {
-                        console.log( err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.faceDetect({
+                        image,
+                        image_type: 'BASE64',
+                        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                        max_face_num: '1',
+                        face_type: 'LIVE',
+                        success: res => {
+                            console.log(res.face_list);
+                    },
+                    fail: err => {
+                            console.log( err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }
 });
 ```
 
+
 ### 代码示例2 - image_type为URL ：
 
-<a href="swanide://fragment/b0ecedcb1fcb245aeb82adc06eb57c191575196761907" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/897805f25da5beaa201706da529350a81581336153319" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -211,19 +234,29 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.faceDetect({
-                    image:'https://b.bdstatic.com/miniapp/image/faceDetect.png',
-                    image_type: 'URL',
-                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
-                    max_face_num: '1',
-                    face_type: 'LIVE',
-                    success: res => {
-                        console.log(res.face_list);
-                    },
-                    fail: err => {
-                            console.log( err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.faceDetect({
+                        image:'https://b.bdstatic.com/miniapp/image/faceDetect.png',
+                        image_type: 'URL',
+                        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                        max_face_num: '1',
+                        face_type: 'LIVE',
+                        success: res => {
+                            console.log(res.face_list);
+                        },
+                        fail: err => {
+                                console.log( err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }
@@ -232,7 +265,7 @@ Page({
 
 ### 代码示例3 - image_type为FACE_TOKEN: ：
 
-<a href="swanide://fragment/b9d0ec89d4f2c17d896234f0a8a9d4d51575196922700" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/7eb0d825660b5e76bc252054b6d1d5fc1581336234919" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ```js
 Page({
@@ -240,19 +273,29 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.faceDetect({
-                    image:'4160b708a826b18de95fe5c9a098a436', //可由之前图片检测的返回值中获得
-                    image_type: 'FACE_TOKEN',
-                    face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
-                    max_face_num: '1',
-                    face_type: 'LIVE',
-                    success: res => {
-                        console.log(res.face_list);
-                    },
-                    fail: err => {
-                            console.log( err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.faceDetect({
+                        image:'4160b708a826b18de95fe5c9a098a436', //可由之前图片检测的返回值中获得
+                        image_type: 'FACE_TOKEN',
+                        face_field: 'age,beauty,angle,expression,face_shape,gender,glasses,eye_status,race,quality',
+                        max_face_num: '1',
+                        face_type: 'LIVE',
+                        success: res => {
+                            console.log(res.face_list);
+                        },
+                        fail: err => {
+                                console.log( err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }

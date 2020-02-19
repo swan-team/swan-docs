@@ -39,7 +39,7 @@ Object object
 
 短语音识别（与长语音使用方式一致） - 自动听音 
 
-<a href="swanide://fragment/8684b30fe9e56affafe11a8da47c9b421573730973671" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/cf22801f51f507488f841c69bd723bb81581343288048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 
@@ -55,28 +55,34 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-        swan.showToast({
-            title: '开始识别',
-            icon: 'none'
-        });
-        const voiceRecognizer = swan.ai.getVoiceRecognizer();
-
-        voiceRecognizer.onRecognize(res => {
-            console.log('voice recognize', res.result);
-            this.setData('result', res.result);
-        });
-        
-        const options = {
-            mode: 'dnn',
-            // longSpeech: true
-            longSpeech: false
-
-        };
-
-        voiceRecognizer.start(options);
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.showToast({
+                title: '开始识别',
+                icon: 'none'
+            });
+            const voiceRecognizer = swan.ai.getVoiceRecognizer();
+            voiceRecognizer.onRecognize(res => {
+                console.log('voice recognize', res.result);
+                this.setData('result', res.result);
+            });
+            
+            const options = {
+                mode: 'dnn',
+                // longSpeech: true
+                longSpeech: false
+            };
+            voiceRecognizer.start(options);
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 })
-
 ```
 
 ### 代码示例 2 ：
@@ -84,7 +90,8 @@ Page({
 短语音识别 （与长语音使用方式一致）- 自动听音 
 
 
-<a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/e235ecbaa6bb8a609ace00674328319c1581343370002" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 * 在 swan 文件中
 
 ```html
@@ -99,27 +106,33 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-        swan.showToast({
-            title: '开始识别',
-            icon: 'none'
-        });
-        const voiceRecognizer = swan.ai.getVoiceRecognizer();
-
-        voiceRecognizer.onFinish(res => {
-            console.log('voice onFinish', res.result);
-            this.setData('result', res.result);
-        });
-
-        const options = {
-            mode: 'dnn',
-            // longSpeech: true
-            longSpeech: false
-        };
-
-        voiceRecognizer.start(options);
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.showToast({
+                title: '开始识别',
+                icon: 'none'
+            });
+            const voiceRecognizer = swan.ai.getVoiceRecognizer();
+            voiceRecognizer.onFinish(res => {
+                console.log('voice onFinish', res.result);
+                this.setData('result', res.result);
+            });
+            const options = {
+                mode: 'dnn',
+                // longSpeech: true
+                longSpeech: false
+            };
+            voiceRecognizer.start(options);
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 })
-
 ```
 
 ### 代码示例 3 ：
@@ -127,7 +140,7 @@ Page({
 短语音识别 - 手动听音 
 
 
-<a href="swanide://fragment/10c7cb67d731d71da77b176a205ae3d11573731084892" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/aa65d723211d73439bb7316f8bc607e21581343434551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 * 在 swan 文件中
 
 ```html
@@ -142,23 +155,30 @@ Page({
         result: ''
     },
     voiceRecognizerStart() {
-        swan.showToast({
-            title: '开始识别',
-            icon: 'none'
-        });
-        const voiceRecognizer = swan.ai.getVoiceRecognizer();
-        voiceRecognizer.onRecognize(res => {
-            console.log('voice recognize', res.result);
-            this.setData('result', res.result);
-        });
-
-        const options = {
-            mode: 'touch',
-            longSpeech: false
-        };
-
-        voiceRecognizer.start(options);
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.showToast({
+                title: '开始识别',
+                icon: 'none'
+            });
+            const voiceRecognizer = swan.ai.getVoiceRecognizer();
+            voiceRecognizer.onRecognize(res => {
+                console.log('voice recognize', res.result);
+                this.setData('result', res.result);
+            });
+            const options = {
+                mode: 'touch',
+                longSpeech: false
+            };
+            voiceRecognizer.start(options);
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 })
-
 ```

@@ -63,30 +63,50 @@ Object object
 ## 示例
 
  
-<a href="swanide://fragment/60faa6b5815bf2dc3b790e8e00aa84c01569387889957" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/54968a2300bdceb92aa80c0e3f8bdbac1581328359072" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/textReview.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/textReview.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
+
 ### 代码示例 
-
-
 
 ```js
 Page({
     textReview() {
-        swan.ai.textReview({
-            content: '',
-            success: res => {
-              console.log('textReview res', res.result.spam); // 0 表示审核通过
-            },
-            fail: err => {
-              console.log('textReview err', err);
-            }
-      })
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.ai.textReview({
+                content: '',
+                success: res => {
+                  console.log('textReview res', res.result.spam); // 0 表示审核通过
+                },
+                fail: err => {
+                  console.log('textReview err', err);
+                }
+            })
+        }
+        else {
+          swan.showToast({
+              title: '此api目前仅可在百度App上使用',
+              icon: 'none'
+          });
+        }
     }
 });
 ```

@@ -39,7 +39,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/ada1eec5142a8582dfa2c9395a043f411573752628692" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/1c0c43d75fdf3d9a941e91ddcbb774bf1581337202128" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_faceLivenessSessioncode.png" class="demo-qrcode-image" />
@@ -62,27 +62,34 @@ Object object
 
 ### 代码示例 
 
-
-
 ```js
 Page({
     faceLivenessSessioncode() {
-        swan.ai.faceLivenessSessioncode({
-            appid: 'xxx', // 百度云创建应用时的唯一标识 ID
-            success(res) {
-                console.log('ai.faceLivenessSessioncode success', res);
-                swan.showModal({
-                    title: '五分钟内语音验证码会失效',
-                    content: 'session_id为' + JSON.stringify(res.result.session_id)+ '，语音校验码为' + JSON.stringify(res.result.code)
-                });
-            },
-            fail(err) {
-                console.log('ai.faceLivenessSessioncode fail', err);
-            }
-        });
+        // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+        let host = swan.getSystemInfoSync().host;
+        if (host === 'baiduboxapp') {
+            swan.ai.faceLivenessSessioncode({
+                appid: 'xxx', // 百度云创建应用时的唯一标识 ID
+                success(res) {
+                    console.log('ai.faceLivenessSessioncode success', res);
+                    swan.showModal({
+                        title: '五分钟内语音验证码会失效',
+                        content: 'session_id为' + JSON.stringify(res.result.session_id)+ '，语音校验码为' + JSON.stringify(res.result.code)
+                    });
+                },
+                fail(err) {
+                    console.log('ai.faceLivenessSessioncode fail', err);
+                }
+            });
+        }
+        else {
+            swan.showToast({
+                title: '此api目前仅可在百度App上使用',
+                icon: 'none'
+            });
+        }
     }
 });
-
 ```
 
 ### 返回示例 

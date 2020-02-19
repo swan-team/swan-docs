@@ -30,12 +30,31 @@ voiceRecognizer
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer2.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer3.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer.gif">
+    </div>     
+</div>
 
 ### 代码示例 
 
-
-
 ```js
-const voiceRecognizer = swan.ai.getVoiceRecognizer();
+// AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+let host = swan.getSystemInfoSync().host;
+if (host === 'baiduboxapp') {
+    const voiceRecognizer = swan.ai.getVoiceRecognizer();
+}
+else {
+    swan.showToast({
+        title: '此api目前仅可在百度App上使用',
+        icon: 'none'
+    });
+}
 ```

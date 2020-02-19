@@ -47,18 +47,28 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/537ef56cc65e65914349ddad095f1d021569501070696" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/453f594ab27847c3f7ab5d663f41c46b1581334891190" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/dishClassify.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例 
+
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/dishClassify.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div> 
 
 ### 代码示例 
-
-
 
 ```js
 Page({
@@ -66,22 +76,33 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.dishClassify({
-                    image,
-                    top_num: 5,
-                    filter_threshold: 0.95,
-                    success: res => {
-                        console.log('dishClassify res', res.result);
-                    },
-                    fail: err => {
-                        console.log('dishClassify res', err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.dishClassify({
+                        image,
+                        top_num: 5,
+                        filter_threshold: 0.95,
+                        success: res => {
+                            console.log('dishClassify res', res.result);
+                        },
+                        fail: err => {
+                            console.log('dishClassify res', err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         });
     }
 });
 ```
+
 
 ### 返回值示例 ：
 ```json

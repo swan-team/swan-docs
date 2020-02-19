@@ -59,17 +59,27 @@ Object object
 ## 示例
 
  
-<a href="swanide://fragment/3e9a8f4c2f24fc11673d070ec25bd7d41569500638249" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/0a5cfee4dcbf3a6259d593f65af375791581328164814" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_ocrVehicleLicense.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例 
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrVehicleLicense.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/ocrVehicleLicense.jpeg">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div> 
 
 ### 代码示例 
-
 
 
 ```js
@@ -78,17 +88,27 @@ Page({
         swan.chooseImage({
             success: res => {
                 let image = res.tempFilePaths[0];
-                swan.ai.ocrVehicleLicense({
-                    image, // 暂不支持识别网络图片
-                    detect_direction: true,
-                    accuracy: normal
-                    success: res => {
-                        console.log('ocrVehicleLicense res', res.words_result);
-                    },
-                    fail: err => {
-                        console.log('ocrVehicleLicense err', err);
-                    }
-                });
+                // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
+                let host = swan.getSystemInfoSync().host;
+                if (host === 'baiduboxapp') {
+                    swan.ai.ocrVehicleLicense({
+                        image, // 暂不支持识别网络图片
+                        detect_direction: true,
+                        accuracy: normal
+                        success: res => {
+                            console.log('ocrVehicleLicense res', res.words_result);
+                        },
+                        fail: err => {
+                            console.log('ocrVehicleLicense err', err);
+                        }
+                    });
+                }
+                else {
+                    swan.showToast({
+                        title: '此api目前仅可在百度App上使用',
+                        icon: 'none'
+                    });
+                }
             }
         })
     }
