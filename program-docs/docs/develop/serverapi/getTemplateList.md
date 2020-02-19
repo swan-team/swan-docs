@@ -36,13 +36,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/templatelist
 
 **响应参数** 
 
-字段名 | 类型  | 描述
------ |-----| -----
-total_count | int| 模板库标题总数
-template_id |string | 模板id,发送小程序模板消息时所需
-title |string | 模板标题
-content |string | 模板内容
-example |string | 模板内容示例
+|字段名 | 类型  | 描述|
+|----- |-----| -----|
+|total_count | int| 模板库标题总数|
+|template_id |string | 模板id,发送小程序模板消息时所需|
+|title |string | 模板标题|
+|content |string | 模板内容|
+|example |string | 模板内容示例|
 
 **请求示例**
 

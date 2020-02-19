@@ -30,6 +30,10 @@ sidebar: formlist_radio
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
+###  图片示例 
+ 
+参见[radio-group](https://smartprogram.baidu.com/docs/develop/component/formlist_radio-group/)示例内容。
+ 
  
 ###  代码示例 
 

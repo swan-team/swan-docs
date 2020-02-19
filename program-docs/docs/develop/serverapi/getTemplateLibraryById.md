@@ -35,14 +35,14 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/libraryget
 
 **响应参数** 
 
-字段名 | 类型  | 描述
------ |-----| -----
-id| string| 模板标题id
-title|string|模板标题
-keyword_count|int| 关键字条数
-keyword_id | int| 关键词id，添加模板时需要
-name |string | 关键词内容
-example |string | 关键词内容对应的示例
+|字段名 | 类型  | 描述|
+|----- |-----| -----|
+|id| string| 模板标题id|
+|title|string|模板标题|
+|keyword_count|int| 关键字条数|
+|keyword_id | int| 关键词id，添加模板时需要|
+|name |string | 关键词内容|
+|example |string | 关键词内容对应的示例|
 
 **请求实例**
 

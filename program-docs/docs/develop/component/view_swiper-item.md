@@ -26,7 +26,8 @@ sidebar: view_swiper-item
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
+###  图片示例 
+参见[swiper](https://smartprogram.baidu.com/docs/develop/component/view_swiper/)示例内容。
  
 ###  代码示例 
 

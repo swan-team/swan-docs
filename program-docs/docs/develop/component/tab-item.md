@@ -34,7 +34,8 @@ sidebar: tab-item
 
 参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)二维码内容。
 
-
+###  图片示例 
+参见[tabs](https://smartprogram.baidu.com/docs/develop/component/tabs/)示例内容。
  
 ###  代码示例 
 
