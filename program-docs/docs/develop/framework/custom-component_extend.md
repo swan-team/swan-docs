@@ -82,3 +82,84 @@ Component({
 
 简单概括，definitionFilter 函数可以理解为当 A 使用了 B 时，A 声明就会调用 B 的 definitionFilter 函数并传入 A 的定义对象让 B 去过滤。此时如果 B 还使用了 C 和 D，那么 B 可以自行决定要不要调用 C 和 D 的 definitionFilter 函数去过滤 A 的定义对象。
 
+## 真实案例
+下面利用扩展简单实现自定义组件的计算属性功能:
+
+**代码示例**
+<a href="swanide://fragment/bddd008a6896cad4e61e8ef266300b141582160313202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+```js
+// behavior1.js
+module.exports = Behavior({
+  lifetimes: {
+    created() {
+      this._originalSetData = this.setData // 原始 setData
+      this.setData = this._setData // 封装后的 setData
+    }
+  },
+  definitionFilter(defFields) {
+    const computed = defFields.computed || {}
+    const computedKeys = Object.keys(computed)
+    const computedCache = {}
+
+    // 计算 computed
+    const calcComputed = (scope, insertToData) => {
+      const needUpdate = {}
+      const data = defFields.data = defFields.data || {}
+
+      for (let key of computedKeys) {
+        const value = computed[key].call(scope) // 计算新值
+        if (computedCache[key] !== value) needUpdate[key] = computedCache[key] = value
+        if (insertToData) data[key] = needUpdate[key] // 直接插入到 data 中，初始化时才需要的操作
+      }
+
+      return needUpdate
+    }
+
+    // 重写 setData 方法
+    defFields.methods = defFields.methods || {}
+    defFields.methods._setData = function (data, callback) {
+      const originalSetData = this._originalSetData // 原始 setData
+      originalSetData.call(this, data, callback) // 做 data 的 setData
+      const needUpdate = calcComputed(this) // 计算 computed
+      originalSetData.call(this, needUpdate) // 做 computed 的 setData
+    }
+
+    // 初始化 computed
+    calcComputed(defFields, true) // 计算 computed
+  }
+})
+```
+
+
+```js
+// 在组件js中
+const beh = require('./behavior1.js')
+Component({
+  behaviors: [beh],
+  data: {
+    a: 0,
+  },
+  computed: {
+    b() {
+      return this.data.a + 100
+    },
+  },
+  methods: {
+    onTap() {
+      this._originalSetData({
+        a: ++this.data.a,
+      })
+    }
+  }
+})
+```
+
+
+```xml
+<!-- 在组件swan中 -->
+<view>data: {{a}}</view>
+<view>computed: {{b}}</view>
+<button bindtap="onTap">click</button>
+```
+
