@@ -141,7 +141,7 @@ Page({
 </view>
 ```
 
-#### scoped 插槽
+#### slot 插槽
 <div class="notice">解释： </div>
 如果 slot 声明中包含 s-bind 或 1 个以上 var- 数据前缀声明，该 slot 为 scoped slot。scoped slot 具有独立的 数据环境。
 scoped slot 通常用于组件的视图部分期望由 外部传入视图结构，渲染过程使用组件内部数据。
