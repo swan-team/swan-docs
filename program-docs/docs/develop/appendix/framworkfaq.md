@@ -50,6 +50,30 @@ body{
 
 A：端能力的 root 参数为 string 类型，只能配置一个。但是可以通过 app.json 中的 preloadRule 配置多个子包。
 
+**代码示例:**
+
+```js
+{
+    "pages": ["pages/index"],
+    "subPackages": [
+        {
+            "root": "sub1",
+            "pages": ["index"],
+        },
+        {
+            "name": "hello",
+            "root": "path/to",
+            "pages": ["index"]
+        }]
+    ],
+    "preloadRule": {
+        "pages/index": {
+            "network": "all",
+            "packages": ["hello", "sub1"]
+        }
+    }
+}
+```
 #### Q：引用angelia-swan报错的原因有哪些？
 
 A：大致原因分为几类：
