@@ -1,5 +1,5 @@
 <template>
-    <div class="m-doc-sidebar">
+    <div class="m-doc-sidebar" id="doc-sidebar">
         <!-- <div class="m-doc-sidebar-nav-wrapper"> -->
             <ul :class="`m-doc-sidebar-menu-0`"
                 v-for="(menuItem, index) in sidebarNavItems"
@@ -7,7 +7,7 @@
                 <sidebar-tree
                     :model="menuItem"
                     :menu-index="menuIndex"
-                    :init-child-close="close"
+                    :init-child-close="initChildClose(index)"
                     @changeSidebarItem="sidebarItemHandle">
                 </sidebar-tree>
             </ul>
@@ -21,9 +21,10 @@
 
 <script>
 import SidebarTree from './SidebarTree';
-// import {
-//     getInitSubIndex
-// } from '../utils/get-init-data';
+import {
+    getInitSubIndex
+} from '../utils/get-init-data';
+import $ from 'jquery';
 
 export default {
     props: {
@@ -43,14 +44,32 @@ export default {
             menuIndex: 1
         };
     },
-    // computed: {
-    //     sidebarItemIndex() {
-    //         return getInitSubIndex(this.sidebarNavItems, this.$route.path);
-    //     }
-    // },
+    mounted() {
+        // 导航初始定位
+        setTimeout(() => {
+            const selectedNav = $('.router-link-active')[0];
+            if (selectedNav) {
+                const top = selectedNav.getBoundingClientRect().top - 190;
+                const sidebar = document.getElementById('sidebar');
+                sidebar.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                });
+            }
+        }, 200);
+    },
+    computed: {
+        sidebarItemIndex() {
+            return getInitSubIndex(this.sidebarNavItems, this.$route.path);
+        }
+    },
     methods: {
         sidebarItemHandle() {
             this.$emit('sidebarItemHandle');
+        },
+        initChildClose(index) {
+            return this.close
+                && index !== this.sidebarItemIndex;
         }
     }
 };

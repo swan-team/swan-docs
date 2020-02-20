@@ -9,6 +9,12 @@ body {
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow: auto;
+}
+
+* {
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body,
@@ -29,6 +35,7 @@ a {
 .ispc {
     display: block;
 }
+
 .ismobile,
 .isbox {
     display: none;
@@ -38,9 +45,6 @@ a {
     display: none;
 }
 
-body::-webkit-scrollbar {
-    width: 0 !important
-}
 
 article {
     font-size: 14px;
@@ -123,7 +127,6 @@ article {
         padding: 0 8px;
         border-radius: 8px;
         margin: 0 5px;
-        word-wrap: break-word;
         max-width: 100%;
         box-sizing: border-box;
         font-family: @font-code;
@@ -238,7 +241,6 @@ article blockquote > :last-child {
     min-height: calc(100vh - 60px);
     overflow-y: auto;
     transform: inherit;
-    overflow: hidden;
 
     &-content {
         width: 100%;

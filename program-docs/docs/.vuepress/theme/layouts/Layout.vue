@@ -128,6 +128,9 @@ export default {
         // 监听滚动事件
         $(window).on('scroll', this.setScrollTop);
 
+        // 初始获取scrollTop，避免初始加载侧边栏fixed定位失效
+        this.setScrollTop();
+
         // 对齐线上，给md中的元素绑定事件 todo: 改成自定义组件 @wulinfei
         $('.show-scene-btn').on('click', function (e) {
             $(e.currentTarget).next().css({
@@ -149,7 +152,8 @@ export default {
         },
         subNavIndex() {
             if (this.subNavIsShow) {
-                return getInitSubIndex(this.subNav, this.$route.path);
+                const subIndex = getInitSubIndex(this.subNav, this.$route.path);
+                return subIndex >= 0 ? subIndex : 0;
             }
             return 0;
         },
