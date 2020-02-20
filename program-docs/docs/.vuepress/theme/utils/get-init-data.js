@@ -94,6 +94,6 @@ export const getInitSubIndex = (subList, link) => {
         return -1;
     });
     const initSubIndex = subIndexArr.filter(item => item > -1);
-    return initSubIndex[0] || 0;
+    return initSubIndex[0] || -1;
 };
 

@@ -53,7 +53,7 @@
         },
         data() {
             return {
-                openStatus: true,
+                openStatus: false,
                 activeIndex: 0
             };
         },
@@ -106,7 +106,7 @@
                 }
             },
             changeSidebarItem() {
-                _hmt.push(['_trackEvent', '侧边二级及已下导航', '点击']);
+                _hmt.push(['_trackEvent', '侧边二级及以下导航', '点击']);
 
                 this.$emit('changeSidebarItem');
             }
