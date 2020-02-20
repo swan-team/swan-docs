@@ -63,9 +63,6 @@ sidebar: devjson
  
  
  
- 
- 可通过 [swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 或者 [swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) 获取。</p>
-</div>
-</div>
+
 
 
