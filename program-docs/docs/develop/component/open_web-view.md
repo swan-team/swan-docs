@@ -98,7 +98,8 @@ var regex = /swan\//;
 console.log( regex.test(UA) );// 若为true，则是在小程序的web-view中打开
 
 ```
-###  代码示例4 - 原生页面与H5页面之间的跳转刷新： 
+
+### 代码示例4 - 原生页面与H5页面之间的跳转刷新： 
 <a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 detail.swan 文件中

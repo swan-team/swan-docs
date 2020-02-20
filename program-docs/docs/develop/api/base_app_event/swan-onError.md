@@ -26,7 +26,7 @@ Object error
 
 
 
-### 扫码体验
+###  扫码体验
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/onError.png" class="demo-qrcode-image" />
@@ -34,7 +34,7 @@ Object error
 </div>
 
 
-###  图片示例  
+###   图片示例  
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -48,7 +48,7 @@ Object error
     </div>     
 </div>
 
-###  代码示例 1：在生命周期的onError中使用 
+###   代码示例 1：在生命周期的onError中使用 
 
  
  
@@ -71,6 +71,7 @@ App({
 });
 
 ```
+
 ###  代码示例 2：等同于示例一的另一种写法   
 
 
@@ -93,7 +94,7 @@ App({
 });
 ```
 
-###  代码示例 3：可根据开发者的业务逻辑调整用法 
+###   代码示例 3：可根据开发者的业务逻辑调整用法 
 
 
 <a href="swanide://fragment/8efbf176816348c943901a2e541563271573098386086" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

@@ -291,7 +291,8 @@ Page({
     }
 });
 ```
-###  代码示例 8: 可悬浮菜单 
+
+### 代码示例 8: 可悬浮菜单 
 
 <a href="swanide://fragment/7dabfdd44f01d9546c2f5b7b8c92fe1d1576139863438" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

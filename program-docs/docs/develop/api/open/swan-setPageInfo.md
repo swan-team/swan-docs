@@ -114,7 +114,8 @@ Page({
     }
 });
 ```
-###   代码示例 2 ：
+
+###  代码示例 2 ：
 
 <a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

@@ -14,7 +14,7 @@ sidebar: chooseaddress_swan-chooseAddress
 
 Object object
 
-### `object`参数说明 
+###  `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -41,14 +41,14 @@ Object object
 |nationalCode|	String	|收货地址国家码| ||
 ## 示例
 
-### 扫码体验
+###  扫码体验
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/chooseAddress.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
+###   图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/chooseAddress.gif">
@@ -61,7 +61,7 @@ Object object
     </div>     
 </div> 
 
-###  代码示例1 - 用户允许授权情况下 ：
+###   代码示例1 - 用户允许授权情况下 ：
 
 <a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -89,6 +89,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例2 - 用户在拒绝了一次授权情况下，仍可访问此api ：
 
 <a href="swanide://fragment/5d1a82023678a73b86f305e73aad9ebe1558336758577" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

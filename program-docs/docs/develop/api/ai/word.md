@@ -18,7 +18,7 @@ sidebar: word
 
 Object object
 
-### `object`参数说明 
+###  `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -27,7 +27,7 @@ Object object
 |fail | Function | 否 | | 接口调用失败的回调函数 | 
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明  
+###  success 返回参数说明  
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -35,7 +35,7 @@ Object object
 |text | string| 原始单条请求文本| 
 |items | Array| 词汇数组，每个元素对应结果中的一个词。| 
 
-### items 参数说明 
+###  items 参数说明 
 
 |参数名 | 参数类型 | 说明 |  
 |---|---|---|
@@ -58,7 +58,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+###  图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -72,7 +72,7 @@ Object object
     </div>     
 </div>
 
-### 代码示例 
+###  代码示例 
 
 
 
@@ -159,6 +159,7 @@ Page({
     }
 });
 ```
+
 ### 返回示例 
 ```js
 {

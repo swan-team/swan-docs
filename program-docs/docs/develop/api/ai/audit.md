@@ -68,6 +68,7 @@ Object object
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/imageAudit.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
+
 ### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -80,6 +81,7 @@ Object object
         <img src=" ">
     </div>     
 </div>
+
 ### 代码示例 
 ```js
 Page({

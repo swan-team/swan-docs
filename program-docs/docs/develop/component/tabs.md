@@ -18,14 +18,17 @@ sidebar: tabs
 |bindtabchange| EventHandle |  |否 |tab 被点击的回调，可以在e.detail.name中取到当前点击的tab-item对应name值|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 ## 示例
 <a href="swanide://fragment/554b5ec0fb2f1b226477a355d32c77a81577363516679" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
 ### 扫码体验
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/tabs.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
+
 普通标签栏组件与可寻址标签栏组件的区别是：可寻址标签栏组件在标签栏 tab 切换时，该页面的 uri 参数会同步变化；反之，跳转某页面 uri 时，指定标签栏栏绑定的参数值也会打开该值对应的 tab 页。由于这种绑定关系的存在，相比于普通标签栏栏，可寻址标签栏栏更利于搜索引擎收录。 建议开发者尽量使用可寻址标签栏栏组件实现页面主标签栏栏功能 。例如：主页的多频道切换。
 标签栏组件的使用需要通过 tabs 和 [tab-item](https://smartprogram.baidu.com/docs/develop/component/tab-item/) 组件配合实现。
-###  图片示例 
+
+### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/tabs.gif">
@@ -34,6 +37,8 @@ sidebar: tabs
         <img src=" ">
     </div>     
 </div>
+
+
 ###  代码示例 1 ：普通标签栏（默认样式）
 * 在 swan 文件中
 ```html
@@ -75,6 +80,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例 2 ：可横滑展示
 * 在 swan 文件中
 ```html
@@ -131,6 +137,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例 3 ：自定义样式
 * 在 swan 文件中
 ```html
@@ -180,6 +187,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例 4 ：显示徽标
 * 在 swan 文件中
 ```html
@@ -227,6 +235,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例 5 ：跳转寻址
 * 旧页面:
 * 在 swan 文件中
@@ -302,6 +311,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例 6 ：可寻址标签栏用法
 * 在 swan 文件中
 ```html
@@ -314,6 +324,7 @@ Page({
 <view class="wrap">{{content}}</view>
 ```
 * 在 js 文件中
+```js  
         {
             name: 'guangzhou',
             label: '广州'
@@ -340,10 +351,13 @@ Page({
     }
 });
 ```
+
 > active-name 和 url-query-name 不要搭配在一起使用：
-* 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
-* 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name
+> * 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
+> * 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name
+
  相关链接 ：
 [onURLQueryChange](https://smartprogram.baidu.com/docs/develop/api/url_query/onURLQueryChange/)
+
 ##  Bug & Tip 
 * Bug：页面中有多个tab组件时，已知徽标会错位，css里全局设置 *{box-sizing: content-box;} 做兼容。

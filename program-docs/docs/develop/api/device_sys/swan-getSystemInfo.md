@@ -19,7 +19,7 @@ sidebar: swan-getSystemInfo
 
 Object object
 
-###  `object` 参数说明  
+###   `object` 参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -27,7 +27,7 @@ Object object
 |fail   | Function |   否  | |接口调用失败的回调函数|
 |complete  |  Function |   否 | | 接口调用结束的回调函数（调用成功、失败都会执行）|
 
-###   success返回参数说明 
+###    success返回参数说明 
 
 |参数  |说明 |最低版本|
 |---- | ---- |---- |
@@ -65,14 +65,14 @@ Object object
 
  
 
-### 扫码体验
+###  扫码体验
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/getSystemInfo.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+###  图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/getSystemInfo.gif">
@@ -86,7 +86,7 @@ Object object
 </div>
  
 
-###  代码示例1 - 属性全集 ：
+###   代码示例1 - 属性全集 ：
 
 <a href="swanide://fragment/4de8b62e859105b558003e89dc6254791575397907738" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果 </a>
 
@@ -213,6 +213,7 @@ Page({
     }
 });
 ```
+
 ###  代码示例2: 开发者一般在模拟顶部导航栏时用到statusBarHeight属性 ：
 
 <a href="swanide://fragment/bb980f42a3ee6fdb9edefdf9e528f0091575115252606" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -252,7 +253,7 @@ swan.getSystemInfo({
 });
 ```
 
-###  代码示例3: safeArea属性 ：
+###   代码示例3: safeArea属性 ：
 
 <a href="swanide://fragment/6f572c0011b79291f0f7f9b1ac47ed201575399890385" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -292,7 +293,7 @@ Page({
 });
 ```
 
-###  代码示例4: 适配iphoneX等机型 ：
+###   代码示例4: 适配iphoneX等机型 ：
 
 或参见百度通用[iphoneX适配](https://smartprogram.baidu.com/docs/develop/framework/view_css/)
 
@@ -329,7 +330,7 @@ Page({
 
 
 ##  错误码
-### Android
+###  Android
 
 |错误码|说明|
 |:--|:--|

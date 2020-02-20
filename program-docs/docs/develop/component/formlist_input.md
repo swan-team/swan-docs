@@ -218,6 +218,7 @@ Page({
     </view>
 </view>
 ```
+
 ### 代码示例4 - bindinput实时获取input输入值 ：
 
 <a href="swanide://fragment/aef77cb4643dcca1cec67fcf0feac9741575287321184" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
@@ -249,7 +250,8 @@ Page({
     }
 });
 ```
-### 代码示例5 - input做业务搜索框 ：
+
+###代码示例5 - input做业务搜索框 ：
 
 <a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>

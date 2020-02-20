@@ -78,6 +78,7 @@ sidebar: cardticket
 	"msg": ""
 }
 ```
+
 ### 选择适用色值
  ![图片](../../../img/api/card_ticket/card2.png)
 目前百度智能小程序提供包括以上17种色值供开发者使用。
@@ -103,7 +104,7 @@ sidebar: cardticket
 | B170   |    #CCCCCC   | 
 
 
-### 创建优惠券广告图（选填）
+###  创建优惠券广告图（选填）
 **接口描述**:创建优惠券广告图，当前最多可配置一张
 **接口地址**:`https://openapi.baidu.com/file/2.0/smartapp/coupon/banner/create`
 **请求方式**：`POST`
@@ -140,7 +141,7 @@ sidebar: cardticket
 }
 ```
 
-### 删除优惠券广告图
+###  删除优惠券广告图
 **接口描述**:删除一条优惠券广告图
 **接口地址**:`https://openapi.baidu.com/rest/2.0/smartapp/coupon/banner/delete`
 **请求方式**：`POST`
@@ -163,7 +164,7 @@ sidebar: cardticket
 }
 ```
 
-### 优惠券广告图列表
+###  优惠券广告图列表
 **接口描述**: 获取优惠券广告图列表
 **接口地址**:`https://openapi.baidu.com/rest/2.0/smartapp/coupon/banner/list`
 **请求方式**：`GET`
