@@ -1045,18 +1045,6 @@
               text:  rich-text 富文本
               name: base_rich-text
         -
-          text: 动画组件
-          name: animation-view
-          sidebar:
-            -
-              link: /develop/component/animation-view-Lottie
-              text: animation-view Lottie 动画
-              name: animation-view-Lottie
-            -
-              link: /develop/component/animation-video
-              text: animation-video 透明视频动画
-              name: animation-video
-        -
           text: 表单组件
           name: formlist_button
           sidebar:
@@ -1160,6 +1148,14 @@
                 link: /develop/component/media_live-player
                 text: live-player 实时视频播放器
                 name: media_live-player
+              -
+                link: /develop/component/animation-view-Lottie
+                text: animation-view Lottie 动画
+                name: animation-view-Lottie
+              -
+                link: /develop/component/animation-video
+                text: animation-video 透明视频动画
+                name: animation-video                
         -
           text: 地图
           name: map
