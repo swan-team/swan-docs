@@ -9,7 +9,7 @@ sidebar: uplog_tool_rc
 
 |版本号|更新时间|更新内容|
 |--|--|--|
-|2.29.0|2020.2.20|**New**<p>**·** getRealNameInfo 增加 error,errno；<p>**·** 用户新建项目时，cli模块加载状态导致报错，新增loading加载和5s超时提示。<p>**BugFix**<p>**·** 修复showtoast后下半屏无法点击问题；<p>**·** 修复小游戏 swan.login 方法不触发回调问题以及 getLocation 不弹出授权页问题。|
+|2.29.0|2020.2.20|**New**<p>**·** getRealNameInfo 增加 error,errno；<p>**·** 用户新建项目时，cli模块加载状态导致报错，新增loading加载和5s超时提示;<p>**·** 提示用户目录下依赖未安装。<p>**BugFix**<p>**·** 修复showtoast后下半屏无法点击问题；<p>**·** 修复小游戏 swan.login 方法不触发回调问题以及 getLocation 不弹出授权页问题。|
 	
 ### 2.28 版本 
 
