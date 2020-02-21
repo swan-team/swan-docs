@@ -5,6 +5,8 @@ nav: api
 sidebar: swan-onLocationChange
 ---
 
+> 基础库 3.150.1 版本开始支持。
+
 **解释**：监听实时地理位置变化事件，需结合`swan.startLocationUpdate`使用
 
 ## 方法参数 
