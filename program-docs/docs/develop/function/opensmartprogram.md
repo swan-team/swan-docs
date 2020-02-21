@@ -182,7 +182,7 @@ swanInvoke功能：
 
 H5 运行时，通过 window.navigator.userAgent 获取浏览器 userAgent。当 userAgent 字符串中包含小程序标识：‘swan/’时，则说明当前环境为小程序 web-view。
 
- **代码示例**
+**代码示例**
 ```
     // 在 H5 文件中
     let UA = window.navigator.userAgent;
