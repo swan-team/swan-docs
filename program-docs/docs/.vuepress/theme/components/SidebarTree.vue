@@ -106,8 +106,6 @@
                 }
             },
             changeSidebarItem() {
-                _hmt.push(['_trackEvent', '侧边二级及以下导航', '点击']);
-
                 this.$emit('changeSidebarItem');
             }
         }
