@@ -741,7 +741,6 @@ https://smartprogram.baidu.com/docs/develop/devtools/question/
 https://smartprogram.baidu.com/docs/develop/devtools/commandtool/
 https://smartprogram.baidu.com/docs/develop/devtools/components_panel/
 https://smartprogram.baidu.com/docs/develop/devtools/diff/
-https://smartprogram.baidu.com/docs/develop/devtools/auto/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/quick-start/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/demo/
 https://smartprogram.baidu.com/docs/develop/devtools/auto/automator/launch/
