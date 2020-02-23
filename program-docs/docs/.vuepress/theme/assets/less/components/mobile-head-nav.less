@@ -1,0 +1,30 @@
+@import '../common/color.less';
+
+.mobile-header-nav {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 1000;
+    height: 100vh;
+    background-color: @bg-white;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            line-height: 60px;
+            :hover {
+                background-color: @border-gray3;
+            }
+            a {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: @font-black5;
+            }
+        }
+    }
+
+    &-item-active {
+        background-color: @border-gray3;
+    }
+}

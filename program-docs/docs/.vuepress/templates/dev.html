@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title></title>
+        <script>
+        /* eslint-disable */
+        var _hmt = _hmt || [];
+        /* eslint-disable */
+        (function () {
+            // 百度统计脚本
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?0db18a3ce977f2c77edf8e7a00bf159d';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+        <script>
+        // 链接自动推送
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+        </script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+        // 开发环境,将/docs/映射到开发主页 todo: 将文档主页迁移
+        (function (url) {
+            var urlMap = {
+                '/docs/': '/docs/develop/fuctionlist/list/'
+            };
+            urlMap[url] && location.replace(urlMap[url]);
+        })(location.pathname);
+        </script>
+    </body>
+</html>
