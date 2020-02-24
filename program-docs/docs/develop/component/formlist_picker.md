@@ -124,7 +124,7 @@ sidebar: formlist_picker
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         arrIndex: 0,
@@ -163,7 +163,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         time: '12:12'
@@ -206,7 +206,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         dateDay: '2018-01-05',
@@ -246,7 +246,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         multiIndex: [0, 0, 0],
@@ -346,7 +346,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         regionData: ['全部', '全部', '全部'],

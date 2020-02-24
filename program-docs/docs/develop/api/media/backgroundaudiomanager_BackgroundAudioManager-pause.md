@@ -48,7 +48,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-pause
 
 * 在 js 文件中
 
-```javascript
+```js
 
 Page({
     onShow() {

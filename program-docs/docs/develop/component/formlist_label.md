@@ -52,7 +52,7 @@ sidebar: formlist_label
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         radioItems: [
@@ -83,7 +83,7 @@ Page({
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         checkboxItems: [

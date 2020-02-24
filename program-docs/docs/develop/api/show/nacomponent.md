@@ -70,7 +70,7 @@ Object object
 
 ### 代码示例 1 
 
-```javascript
+```js
     swan.showFavoriteGuide({
         type: 'bar',
         content:'关注小程序'
@@ -94,7 +94,7 @@ Object object
 
 ### 代码示例 2 
 
-```javascript
+```js
 swan.showFavoriteGuide({
     type: 'tip',
     content: '关注小程序，下次使用更便捷。'

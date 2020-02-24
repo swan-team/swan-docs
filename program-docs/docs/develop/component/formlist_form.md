@@ -115,7 +115,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {},
     formSubmit: function(e) {
@@ -160,7 +160,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     onLoad() {
         // 此组件需要在登录  态下使用
@@ -198,7 +198,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         access_token: ''

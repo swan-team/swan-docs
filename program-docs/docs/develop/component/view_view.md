@@ -3,7 +3,7 @@ title: view 视图容器
 header: develop
 nav: component
 sidebar: view_view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 
 
@@ -34,7 +34,8 @@ sidebar: view_view
 ###  代码示例1： 横向布局  
 
 
-```html
+:::codeTab
+```swan
 <view class='wrap'>
     <view class="card-area">
         <view class="top-description border-bottom">横向布局</view>
@@ -52,11 +53,13 @@ sidebar: view_view
     </view>
 </view>
 ```
+:::
 
 ###  代码示例2： 纵向布局  
 
 
-```html
+:::codeTab
+```swan
 <view class='wrap'>
     <view class="card-area">
         <view class="top-description border-bottom">纵向布局</view>
@@ -74,7 +77,7 @@ sidebar: view_view
     </view>
 </view>
 ```
-
+:::
 
 
 ##  Bug&Tip  

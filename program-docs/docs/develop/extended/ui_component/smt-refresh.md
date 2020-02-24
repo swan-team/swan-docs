@@ -57,7 +57,7 @@ sidebar: smt-refresh
 
 * 在 js 文件中
 
-```javascript
+```js
 async onRefresh() {
     console.log('触发 onRefresh');
     const refresh = await selComponent(this, '.pull-down-refresh');

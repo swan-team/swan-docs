@@ -57,11 +57,15 @@ sidebar: ad
 ### bindstatus 事件触发
 触发时机:事件触发在视频贴片的情况下
 返回参数如下
-``` javascript
+
+:::codeTab
+``` js
  statusFunc(e) {
     // e = {status:''}  具体如下
  }
+
 ```
+:::
 |属性|说明|
 |:---- | :---- | 
 | videoend | 视频结束， 触发时机：1、如果有广告返回，广告播放结束。2、如果无广告返回|
@@ -84,88 +88,94 @@ sidebar: ad
 
 ###  代码示例 1 :横幅类型
 
-
-```html
+:::codeTab
+```swan
 <div class="ad-container">
     <ad appid="a764cad8" apid="6511101" type="banner"></ad>
 </div>
 ```
-
+:::
 
 >* 从百青藤获取的代码，是`<ad></ad>`标签组件，把这段代码，嵌入到页面中你需要展现广告的位置处，然后给他一些样式就可以，样式控制只能到`<ad>`这一层，内部的展示效果对小程序的开发者来说没有权限。
 >* banner样式的背景色默认透明，建议开发者自定义背景色。通过（`div style="background-color: #fff"`）自行定义。其中`#fff`代表白色，可以根据广告场景自行修改参数。
 
 ###  代码示例 2 ：信息流小图类型
 
-
-```html
+:::codeTab
+```swan
 <div class="ad-container">
     <ad appid="b2f8234f" apid="6315886" type="feed"></ad>
 </div>
 
 ```
-
+:::
 ###  代码示例 3 ：信息流三图类型
 
 
-```html
+:::codeTab
+```swan
 <div class="ad-container">
         <ad appid="f9acb760" apid="6010857" type="feed"></ad>
 </div>
 
 ```
-
+:::
 ###  代码示例 4 ：信息流左图类型
 
 
-```html
+:::codeTab
+```swan
 <div class="ad-container">
     <ad appid="b2f8234f" apid="6315886" type="feed"></ad>
 </div>
 
 ```
-
+:::
 ###  代码示例 5 ：信息流右图类型
 
 
-```html
+:::codeTab
+```swan
 <div class="ad-container">
     <ad appid="b91addc9" apid="6011084" type="feed"></ad>
 </div>
 
 ```
-
+:::
 ###  代码示例 6 ：信息流视频类型
 
 
-```html
+:::codeTab
+```swan
 <div class="ad-container">
     <ad appid="a764cad8" apid="6537379" type="feed"></ad>
 </div>
 
 ```
-
+:::
 
 ###  代码示例 7 ：前贴片类型
 
 
-```html
+:::codeTab
+```swan
 <video src="">
     <ad appid="b2f8234f" apid="6315886" type="pre-roll"></ad>
 </video>
 
 ```
-
+:::
 ###  代码示例 8 ：后贴片类型
 
 
-```html
+:::codeTab
+```swan
 <video src="">
     <ad appid="b2f8234f" apid="6315886" type="post-roll"></ad>
 </video>
 
 ```
-
+:::
 
 ##   Bug & Tip 
 

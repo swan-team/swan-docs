@@ -128,7 +128,7 @@ sidebar: formlist_input
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         inputValue: '',
@@ -241,7 +241,7 @@ Page({
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     bindKeyInput: function (e) {
         this.setData({
@@ -307,7 +307,7 @@ Page({
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         value: '',

@@ -3,7 +3,7 @@ title: animation-view Lottie 动画
 header: develop
 nav: component
 sidebar: base_animation-view-Lottie
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
 ---
 
 
@@ -46,9 +46,10 @@ sidebar: base_animation-view-Lottie
 ###  代码示例1 - 动画资源地址在本地，path为相对路径
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <animation-view class="controls" path="{{path}}" loop="{{loop}}" autoplay="{{autoplay}}" action="{{action}}" hidden="{{hidden}}" bindended="lottieEnd">
@@ -57,9 +58,9 @@ sidebar: base_animation-view-Lottie
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         path: '/anims/lottie_example_one.json',
@@ -87,7 +88,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ###  代码示例2 - 动画资源地址在服务器上存放
 
@@ -95,9 +96,10 @@ Page({
 
 <a href="swanide://fragment/91ca60efd6f0a977bfba5c315083a57a1579157854484" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="animation-view-area">
@@ -109,9 +111,9 @@ Page({
 </view>
 
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         path: '',
@@ -153,7 +155,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  Bug & Tip
 
 * Tip：animation-view组件的位置信息、padding值以path里传的json文件里的left、top、padding值为准。

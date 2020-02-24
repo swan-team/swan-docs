@@ -73,7 +73,7 @@ sidebar: createinneraudiocontext_InnerAudioContext
 
 * 在 js 文件中
 
-```javascript
+```js
 
 Page({
     onLoad() {
@@ -170,7 +170,7 @@ Page({
 
 * 在 js 文件中
 
-```javascript
+```js
 
 Page({
     onLoad() {

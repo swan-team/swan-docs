@@ -81,7 +81,7 @@ sidebar: formlist_textarea
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         height: 1,
@@ -143,7 +143,7 @@ Page({
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         height: 1,

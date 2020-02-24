@@ -3,7 +3,7 @@ title: animation-video 透明视频动画
 header: develop
 nav: component
 sidebar: animation-video
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-video/animation-video
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-video/animation-video
 ---
 
 
@@ -40,10 +40,10 @@ sidebar: animation-video
 
 ###  代码示例
 
+ 
 
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="video-area">
@@ -64,9 +64,9 @@ sidebar: animation-video
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         loop: true,
@@ -96,7 +96,7 @@ Page({
 });
 ```
 
-* 在 css 文件中
+ 
 ```css
 .video-area {
     height: 2.18rem;
@@ -106,7 +106,7 @@ Page({
     justify-content: center;
 }
 ```
-
+:::
 
 ##  Bug & Tip
 

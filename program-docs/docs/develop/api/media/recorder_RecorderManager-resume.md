@@ -45,7 +45,7 @@ sidebar: recorder_RecorderManager-resume
 
  在 js 文件中 
 
-```javascript
+```js
 Page({
     RecorderManagerStart() {
         const recorderManager = swan.getRecorderManager()

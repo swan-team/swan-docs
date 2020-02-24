@@ -196,7 +196,7 @@ sidebar: media_video
  
 * 在 js 文件中
  
-```javascript
+```js
  
 Page({
     data: {
@@ -364,7 +364,7 @@ Page({
  
 * 在 js 文件中
  
-```javascript
+```js
 Page({
     data: {
         src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',

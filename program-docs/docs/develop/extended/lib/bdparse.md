@@ -62,7 +62,7 @@ npm install @smt-lib/bdparse
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         raw:[

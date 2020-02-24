@@ -68,7 +68,7 @@ sidebar: smt-feed
 
 * 在 js 文件中
 
-```javascript
+```js
 async onRefresh() {
     const refresh = await selComponent(this, '.pull-down-refresh');
     const {data: list} = await fetchData();

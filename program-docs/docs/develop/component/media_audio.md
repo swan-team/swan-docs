@@ -76,7 +76,7 @@ sidebar: media_audio
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         poster: 'https://c.hiphotos.baidu.com/super/pic/item/8b13632762d0f703e34c0f6304fa513d2797c597.jpg',

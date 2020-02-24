@@ -56,9 +56,10 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 ###  代码示例 ：滑块滑动
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title"></view>
     <view class="swiper-wrap">
@@ -118,7 +119,7 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -176,7 +177,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  Bug & Tip 
 
 * Tip：如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则会导致 setData 被重复调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起的。
@@ -188,9 +189,10 @@ Page({
 
 <a href="swanide://fragment/82da7e569b409a1fa4fb753a010fd35e1575120753274" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container"> 
     <!-- 顶部导航 -->
     <view class="swiper-tab">
@@ -214,7 +216,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -241,9 +243,9 @@ Page({
 })
 ```
 
-* 在 css 文件中 
+ 
 
-```js
+```css
 .swiper-tab {
     display: flex;
     flex-direction: row;
@@ -269,14 +271,15 @@ Page({
     padding-bottom: 2px
 }
 ```
-
+:::
 ###  参考示例 2: 自定义底部切换圆点 
 
 <a href="swanide://fragment/74666ea390cd54afd971879d8028578d1575819223978" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="swiper-wrap">
     <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
         <swiper-item s-for="{{slider}}">
@@ -290,8 +293,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
-
+ 
 ```js
 Page({
     data: {
@@ -312,9 +314,9 @@ Page({
 })
 ```
 
-* 在 css 文件中 
+  
 
-```js
+```css
 .swiper-wrap{
     position: relative;
 }
@@ -346,6 +348,6 @@ Page({
     background: #38f;
 }
 ```
-
+:::
 
 

@@ -3,7 +3,7 @@ title: icon 图标
 header: develop
 nav: component
 sidebar: base_icon
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/icon/icon
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/icon/icon
 ---
 
 **解释**： 图标
@@ -55,9 +55,10 @@ sidebar: base_icon
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">默认样式</view>
     <view class="group">
@@ -78,7 +79,7 @@ sidebar: base_icon
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -98,4 +99,4 @@ Page({
     }
 });
 ```
-
+:::

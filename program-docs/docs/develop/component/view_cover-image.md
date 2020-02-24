@@ -3,7 +3,7 @@ title: cover-image 图片视图
 header: develop
 nav: component
 sidebar: view_cover-image
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-image/cover-image
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-image/cover-image
 ---
 
 **解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 
@@ -34,9 +34,10 @@ sidebar: view_cover-image
 ###  代码示例 ：图片视图
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <map id="myMap" style="width: 100%" longitude="{{longitude}}" atitude="{{latitude}}">
     <cover-image class="cover-image"
         src="https://b.bdstatic.com/miniapp/image/cover-image.png">
@@ -44,7 +45,7 @@ sidebar: view_cover-image
 </map>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -54,7 +55,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ##  Bug & Tip 
 

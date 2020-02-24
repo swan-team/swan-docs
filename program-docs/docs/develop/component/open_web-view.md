@@ -163,7 +163,7 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.20.js"></script>
 ```
 
-```javascript
+```js
 // javascript
 swan.webView.navigateTo({url: '/pages/detail/index'});
 swan.webView.postMessage({data: 'foo'})
@@ -197,7 +197,7 @@ web-view 网页中支持的接口有：
 
 代码示例：
 
-```javascript
+```js
 Page({
     onShareAppMessage(options) {
         console.log(options.webViewUrl);

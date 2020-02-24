@@ -35,7 +35,7 @@ name 属性，定义了模板的名字。`<template>`内定义代码片段，如
 <template is="person-card" data="{{{...person}}}" />
 ```
 
-```javascript
+```js
 // template-demo.js
 Page({
     data: {

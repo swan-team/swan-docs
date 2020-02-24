@@ -11,7 +11,7 @@ app.js 中存放全局的 JavaScript 逻辑；更多内容参见[生命周期](h
 
 **代码示例**
 
-```javascript
+```js
 App({
     onLaunch: function () {
         console.log('SWAN launch');

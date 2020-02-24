@@ -60,7 +60,7 @@ sidebar: canvas
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {},
     onReady() {
@@ -142,7 +142,7 @@ Page({
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         timer: ''
