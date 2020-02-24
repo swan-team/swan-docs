@@ -16,17 +16,16 @@ ul[class*="m-doc-sidebar-"] {
             box-sizing: border-box;
             cursor: pointer;
             position: relative;
-            font-size: 14px;
             display: flex;
             align-items: center;
-            margin: 1px 0;
+            margin: 2px 0;
         }
 
         .icon {
             widows: 16px;
             height: 16px;
             position: absolute;
-            left: 250px;
+            left: 240px;
         }
 
         .sidebar-item-open {
@@ -40,22 +39,15 @@ ul[class*="m-doc-sidebar-"] {
         >span {
             line-height: 52px;
             padding: 0 10px;
-            >a {
+            font-size: 16px !important;
+            font-weight: bold;
+            >a,
+            >span {
                 padding-left: 22px;
                 color: @font-default;
                 width: 100%;
                 box-sizing: border-box;
             }
-            >span {
-                padding-left: 22px;
-                color: @font-default;
-                width: 100%;
-            }
-
-            >img {
-                // padding-right: 20px;
-            }
-
             >.router-link-active {
                 background-color: @bg-gray3;
                 border-radius: 8px;
@@ -72,52 +64,52 @@ ul[class*="m-doc-sidebar-"] {
         >span {
             padding: 0 10px;
             line-height: 40px;
-            >a {
-                padding-left: 36px;
+            font-size: 14px;
+            >a,
+            >span {
+                padding-left: 22px;
                 color: @font-default;
                 width: 100%;
                 display: block;
-            }
-            >span {
-                padding-left: 36px;
-                color: @font-default;
-                width: 100%;
             }
             >img {
                 margin-right: 20px;
             }
         }
-        >.m-doc-sidebar-item-active {
-            font-weight: bolder;
+        .m-doc-sidebar-item-active {
+            >a {
+                font-weight: bolder;
+                background-color: @bg-gray3;
+                border-radius: 8px;
+            }
         }
-        >.m-doc-sidebar-item-active:before {
-            content: '';
-            display: block;
-            width: 4px;
-            height: 4px;
-            background: @bg-black1;
-            border-radius: 50%;
-            position: absolute;
-            left: 35px;
-            top: 17.5px;
-        }
+        // >.m-doc-sidebar-item-active:before {
+        //     background: @font-black1;
+        // }
+        // >span:before {
+        //     content: '';
+        //     display: block;
+        //     width: 4px;
+        //     height: 4px;
+        //     background: @font-black2;
+        //     border-radius: 50%;
+        //     position: absolute;
+        //     left: 35px;
+        //     top: 17.5px;
+        // }
     }
 }
 
 .m-doc-sidebar-menu-2,
 .m-doc-sidebar-menu-3 {
     >li {
-        line-height: 40px;
         box-sizing: border-box;
         >span {
             padding: 0 10px;
-            >a {
-                padding-left: 35px;
-                color: @font-black2;
-                width: 100%;
-            }
-            >span {
-                padding-left: 35px;
+            font-size: 14px;
+            >a,
+            span {
+                padding-left: 38px;
                 color: @font-black2;
                 width: 100%;
             }
@@ -137,25 +129,40 @@ ul[class*="m-doc-sidebar-"] {
 
 .m-doc-sidebar-menu-2 {
     >li {
+        // line-height: 40px;
         >span {
-            >a {
-                padding-left: 42px;
-            }
+            >a,
             >span {
-                padding-left: 42px;
+                padding-left: 38px;
+                line-height: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
             }
         }
     }
 }
 
 .m-doc-sidebar-menu-3 {
-    >li {
-        >span {
-            >a {
-                padding-left: 56px;
+    li {
+        span {
+            a {
+                padding-left: 51px;
+                // min-height: 36px;
+                line-height: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                // padding-right: 10px;
+                // display: flex;
+                // align-items: center;
             }
-            >span {
-                padding-left: 56px;
+            span {
+                padding-left: 51px;
+                line-height: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px;
             }
         }
     }

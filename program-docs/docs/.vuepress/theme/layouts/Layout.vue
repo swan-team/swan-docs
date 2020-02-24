@@ -66,7 +66,7 @@
         </div>
 
         <!-- 全局右侧 -->
-        <global-menu v-if="!isSwanIde" :iframe-src="iframeSrc"></global-menu>
+        <global-menu v-if="!isSwanIde" :iframe-src="iframeSrc" :simulatorFixed="fixedNav"></global-menu>
 
         <!-- 移动端导航列表 -->
         <mobile-head-list

@@ -1,6 +1,6 @@
 <template>
     <div class="global-menu">
-        <div v-if="iframeSrc" class="global-menu-simulator">
+        <div v-if="iframeSrc" :class="{'global-menu-simulator': true, 'global-menu-simulator-fixed': simulatorFixed}">
             <web-simulator :iframe-src="iframeSrc"></web-simulator>
         </div>
         <div :class="{'global-menu-botton': true, 'global-menu-botton-webview' : iframeSrc}">
@@ -31,6 +31,9 @@ export default {
     props: {
         iframeSrc: {
             'type': String
+        },
+        simulatorFixed: {
+            'type': Boolean
         }
     },
     data() {

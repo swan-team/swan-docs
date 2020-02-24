@@ -53,8 +53,7 @@
         },
         data() {
             return {
-                openStatus: false,
-                activeIndex: 0
+                openStatus: false
             };
         },
         mounted() {
@@ -79,12 +78,7 @@
                 return this.menuIndex + 1;
             },
             isSelected() {
-                const selfInfoArr = [{link: this.model.link, text: this.model.link}];
-                const selfSidebarArr = this.hasChild ? this.model.sidebar : [];
-                const itemList = [...selfInfoArr, ...selfSidebarArr];
-                const childList = getNavList(itemList);
-                const childIsActive = childList.filter(child => this.$route.path === child.link);
-                return childIsActive.length > 0;
+                return this.$route.path === this.model.link;
             },
             itemLink() {
                 return findLink(this.model);
