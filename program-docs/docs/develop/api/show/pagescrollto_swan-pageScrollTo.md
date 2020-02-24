@@ -3,7 +3,7 @@ title: swan.pageScrollTo
 header: develop
 nav: api
 sidebar: pagescrollto_swan-pageScrollTo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pageScrollTo/pageScrollTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pageScrollTo/pageScrollTo
 ---
 
  
@@ -51,9 +51,10 @@ Object object
 
 <a href="swanide://fragment/25ef2f9fbdaaa9271329c02d7dafe8cc1575223153548" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container">
   <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
    <view class="swan-security-padding-bottom flex-button">
@@ -62,7 +63,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -80,14 +81,15 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 - 页面滚动到底部  
 
 <a href="swanide://fragment/0e4af77bf4d678bb744766e5faca641b1575223056610" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container">
   <image class="image" src="https://b.bdstatic.com/miniapp/images/longImage.png"></image>
    <view class="swan-security-padding-bottom flex-button">
@@ -96,7 +98,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 
@@ -121,6 +123,7 @@ Page({
 });
 
 ```
+:::
 ##  错误码
 
 ###  Android

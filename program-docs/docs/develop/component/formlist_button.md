@@ -3,7 +3,7 @@ title: button 按钮
 header: develop
 nav: component
 sidebar: formlist_button
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/button/button
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/button/button
 ---
 
 
@@ -88,9 +88,10 @@ sidebar: formlist_button
 
 <a href="swanide://fragment/d6a8f368b9c384ecaf68843d8b1ee8b31575284322744" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -111,14 +112,16 @@ sidebar: formlist_button
     </view>
 </view>
 ```
+:::
 
 ### 代码示例 2 ： 不同颜色按钮
 
 <a href="swanide://fragment/97707988b4d68082a98a0c625afe81c41575284526768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -155,14 +158,14 @@ sidebar: formlist_button
     </view>
 </view>
 ```
-
+:::
 ### 代码示例 3： 不同类型按钮
 
 <a href="swanide://fragment/405701fd348d68f9b8362718c38bff841575285086623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -189,14 +192,15 @@ sidebar: formlist_button
     </view>
 </view>
 ```
-
+:::
 ### 代码示例 4：不同功能按钮
 
 <a href="swanide://fragment/614656b7ead0489475b392a03a06f2471575285746664" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -240,8 +244,7 @@ sidebar: formlist_button
     </view>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -259,12 +262,13 @@ Page({
     }
 });
 ```
-
+:::
 ### 代码示例 5：hover-stop-propagation属性
 <a href="swanide://fragment/cfafb425898e7b2e95bca2b6e98a18371581516515058" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area" hover-class="hover">
         <button type="primary" hover-stop-propagation='true'>
@@ -273,7 +277,7 @@ Page({
     </view>
 </view>
 ```
-* 在 css 文件中
+ 
 ```css
 .hover {
     opacity: .2;
@@ -282,3 +286,4 @@ Page({
     background-color: #5B9FFF;
 }
 ```
+:::

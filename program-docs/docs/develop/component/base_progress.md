@@ -3,7 +3,7 @@ title: progress 进度条
 header: develop
 nav: component
 sidebar: base_progress
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/progress/progress
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/progress/progress
 ---
 
 
@@ -47,7 +47,8 @@ sidebar: base_progress
 
 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">默认样式</view>
@@ -55,14 +56,15 @@ sidebar: base_progress
     </view>
 </view>
 ```
-
+:::
 ###  代码示例 2： 显示当前百分比
 
 
 
 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -73,12 +75,13 @@ sidebar: base_progress
     </view>
 </view>
 ```
-
+:::
 ### 代码示例 3： 自定义样式
 
 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -89,14 +92,15 @@ sidebar: base_progress
     </view>
 </view>
 ```
-
+:::
 ### 代码示例 4： 显示动画
 
 
 
 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">显示动画</view>
@@ -105,7 +109,7 @@ sidebar: base_progress
     </view>
 </view>
 ```
-
+:::
 
 ## 参考示例
 
@@ -132,13 +136,14 @@ sidebar: base_progress
 
 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <progress class="progress" percent="60" activeColor="#3c76ff" stroke-width="10" active />
 </view>
 ```
 
-* 在 css 文件中
+ 
 
 ```css
 .wrap {
@@ -150,3 +155,4 @@ sidebar: base_progress
 }
 ```
 
+:::

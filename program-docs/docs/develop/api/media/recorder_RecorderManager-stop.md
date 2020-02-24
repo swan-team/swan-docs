@@ -46,7 +46,7 @@ sidebar: recorder_RecorderManager-stop
 
  在 js 文件中 
 
-```javascript
+```js
 Page({
     start() {
         const recorderManager = swan.getRecorderManager()

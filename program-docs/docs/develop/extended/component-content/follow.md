@@ -3,7 +3,7 @@ title: 关注组件
 header: develop
 nav: extended
 sidebar: follow
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
 ---
 
 
@@ -32,19 +32,7 @@ sidebar: follow
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/follow-demo.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ### 代码示例
 
@@ -54,6 +42,7 @@ npm install @smt-ui/content-component
 ```
 
 在 页面json 文件中：
+:::codeTab
 ```
 {
     "navigationBarTitleText": "标题",
@@ -62,10 +51,10 @@ npm install @smt-ui/content-component
     }
 }
 ```
-
-在 swan 文件中：
-
-```
+:::
+ 
+:::codeTab
+```swan
 <view>关注</view>
 <view class="con-demo">
     <c-follow
@@ -119,7 +108,7 @@ npm install @smt-ui/content-component
 </view>
 ```
 
-在 js 文件中：
+ 
 
 ```
 Page({
@@ -160,7 +149,7 @@ Page({
 ```
 
 
-在 css 文件中：
+ 
 ```
 .con-demo {
     display: flex;
@@ -171,4 +160,4 @@ Page({
     height: 50px;
 }
 ```
-
+:::

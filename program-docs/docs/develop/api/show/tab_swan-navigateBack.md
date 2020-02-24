@@ -51,27 +51,14 @@ Object object
 ###  代码示例 1
 <a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 index.swan 文件中
+* 在 index 文件中
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
 </view>
 ```
-
-* 在 detail.swan 文件中
-
-```html
-<view class="wrap">
-    <view class="page-top">
-        <view class="page-top-text">{{id}}</view>
-    </view>
-    <button bind:tap="navigateBack" type="primary" hover-stop-propagation="true">返回上一页</button> 
-</view> 
-```
-
-* 在 index.js 文件中
-
 ```js
 Page({
     data: { },
@@ -82,7 +69,20 @@ Page({
     }
 });
 ```
-* 在 detail.js 文件中
+:::
+* 在 detail 文件中
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="page-top">
+        <view class="page-top-text">{{id}}</view>
+    </view>
+    <button bind:tap="navigateBack" type="primary" hover-stop-propagation="true">返回上一页</button> 
+</view> 
+```
+
+
 
 ```js
 Page({
@@ -101,17 +101,17 @@ Page({
     }
 });
 ```
-
+:::
 ###   代码示例2 - 从小程序原生页面返回到 H5 页面，并需要刷新： 
 <a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 detail.swan 文件中
+* 在 detail 文件中
 
-```html
+:::codeTab
+```swan
 <web-view src="{{url}}"></web-view>
 ```
-
-* 在 detail.js 文件中
+ 
 
 ```js
 Page({
@@ -127,8 +127,8 @@ Page({
     }
 });
 ```
-
-* 在 index.js 文件中
+:::
+* 在 index 文件中
 
 ```js
 Page({
@@ -140,5 +140,5 @@ Page({
     }
 });
 ```
-
+:::
 

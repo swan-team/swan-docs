@@ -116,7 +116,7 @@ Object object
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         content: '百度是一家高科技公司',

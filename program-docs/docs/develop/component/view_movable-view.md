@@ -59,9 +59,10 @@ sidebar: view_movable-view
 ###  代码示例 1： movable-view区域小于movable-area  
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -75,7 +76,7 @@ sidebar: view_movable-view
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -91,14 +92,15 @@ Page({
     }
 });
 ```
-
+:::
 ### 代码示例 2：movable-view区域大于movable-area 
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -113,7 +115,7 @@ Page({
 
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -123,14 +125,15 @@ Page({
     },
 });
 ```
-
+:::
 ### 代码示例 3：只可以横向移动
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         只可以横向移动
@@ -140,8 +143,7 @@ Page({
     </movable-area>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -151,14 +153,15 @@ Page({
     },
 });
 ```
-
+:::
 ### 代码示例 4：只可以纵向移动
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         只可以纵向移动
@@ -169,7 +172,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -179,14 +182,15 @@ Page({
     },
 });
 ```
-
+:::
 ### 代码示例 5： 可超出边界
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
    <view class="card-area">
         <view class="top-description border-bottom">
@@ -200,7 +204,7 @@ Page({
 
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -210,14 +214,15 @@ Page({
     },
 });
 ```
-
+:::
 ### 代码示例 6： 带有惯性
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -230,7 +235,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -240,14 +245,15 @@ Page({
     },
 });
 ```
-
+:::
 ### 代码示例 7： 可放缩
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -263,7 +269,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -291,14 +297,15 @@ Page({
     }
 });
 ```
-
+:::
 ### 代码示例 8: 可悬浮菜单 
 
 <a href="swanide://fragment/7dabfdd44f01d9546c2f5b7b8c92fe1d1576139863438" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <movable-area style="height: {{height}}px; width: {{width}}px; background-color: #f5f5f5">
         <movable-view x="{=x=}" y="{=y=}" direction="all" animation="false" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4">
@@ -308,7 +315,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -332,7 +339,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 

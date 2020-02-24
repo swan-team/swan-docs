@@ -75,9 +75,10 @@ Object object
 
 <a href="swanide://fragment/dace5658a19b604ff4d62d0c760fb7351574136817988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -89,7 +90,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -111,13 +112,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 ：
 
 <a href="swanide://fragment/47a5315cec46d13b001064d0d919933d1575225061501" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     setNavigationBarColor() {
@@ -138,7 +138,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  错误码
 
 ###  Android

@@ -3,7 +3,7 @@ title: cover-view 文本视图
 header: develop
 nav: component
 sidebar: view_cover-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-view/cover-view
 ---
 
 
@@ -34,8 +34,9 @@ sidebar: view_cover-view
 
 
 
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <map id="myMap"
      longitude="{{longitude}}"
      latitude="{{latitude}}">
@@ -50,7 +51,7 @@ sidebar: view_cover-view
     </cover-view>
 </map>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -59,5 +60,5 @@ Page({
     }
 });
 ```
-
+:::
  

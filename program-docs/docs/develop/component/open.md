@@ -3,7 +3,6 @@ title: open-data 开放数据
 header: develop
 nav: component
 sidebar: open
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/open-data/open-data
 ---
 
 
@@ -45,9 +44,10 @@ sidebar: open
 
 <a href="swanide://fragment/e98cfa76e01e4b38ab712a7942c6b32b1565510599988" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="open-data">
     <view class="avatar">
         <open-data class="avatar-img" type="userAvatarUrl"></open-data>
@@ -68,5 +68,5 @@ sidebar: open
     </view>
 </view>
 ```
-
+:::
 

@@ -5,6 +5,8 @@ nav: api
 sidebar: swan-startLocationUpdate
 ---
 
+> 基础库 3.150.1 版本开始支持。
+
 **解释**：开启小程序进入前台时接收位置消息
 
 ## 方法参数 

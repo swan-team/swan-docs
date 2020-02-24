@@ -3,7 +3,7 @@ title: canvas 画布
 header: develop
 nav: component
 sidebar: canvas
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/canvas/canvas
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/canvas/canvas
 ---
 
  
@@ -41,11 +41,10 @@ sidebar: canvas
 
 ###  代码示例1 
 
+ 
 
-
-* 在 swan 文件中
-
-```xml
+:::codeTab
+```swan
 <view class="canvas-view">
     <canvas 
         canvas-id="myCanvas" 
@@ -58,9 +57,9 @@ sidebar: canvas
 
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {},
     onReady() {
@@ -109,7 +108,7 @@ Page({
 });
 ```
 
-* 在 css 文件中
+ 
 
 ```css
 .canvas-view {
@@ -124,14 +123,15 @@ Page({
   background-color: #fff;
 }
 ```
-
+:::
 ###  代码示例2 
 
 <a href="swanide://fragment/7f8700d9c2619093aac34548612fa3f91575828644802" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="circlePostion">
         <canvas class="circle" canvas-id="mycanvas"></canvas>
@@ -140,9 +140,9 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         timer: ''
@@ -210,7 +210,7 @@ Page({
     },
 })
 ```
-
+:::
 
 ##  Bug & Tip 
 

@@ -3,7 +3,7 @@ title: slider 滑动选择器
 header: develop
 nav: component
 sidebar: formlist_slider
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/slider/slider
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/slider/slider
 ---
 
  
@@ -44,20 +44,22 @@ sidebar: formlist_slider
 
 <a href="swanide://fragment/588aacb801bd077789e11c6834513f441575544226353" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">默认样式</view>
     <slider class="slider" min="0" max="1500" value="200" step="30" bind:change="sliderChange" disabled="false"></slider>
 </view>
 ```
-
+:::
 ###  代码示例2 - 显示当前取值 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>显示当前取值</view>
@@ -66,12 +68,13 @@ sidebar: formlist_slider
     <slider class="slider" min="0" max="200" value="30" show-value step="30" bind:change="sliderChange" disabled="false"></slider>
 </view>
 ```
-
+:::
 ###  代码示例3 - 自定义最大/最小值 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义最大/最小值</view>
@@ -80,12 +83,12 @@ sidebar: formlist_slider
     <slider class="slider" min="200" max="1500" value="400"  show-value step="30" bind:change="sliderChange" disabled="false"></slider>
 </view>
 ```
-
+:::
 ###  代码示例4 - 自定义步长 
 
-* 在 swan 文件中
-
-```xml
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义步长</view>
@@ -94,14 +97,15 @@ sidebar: formlist_slider
     <slider class="slider" min="0" max="1500" value="200" step="30" bind:change="sliderChange" disabled="false"></slider>
 </view>
 ```
-
+:::
 ### 代码示例5 - 自定义滑块样式 
 
 <a href="swanide://fragment/adb53cc13556fb8e4277c02396c9b8791575544431665" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -112,14 +116,16 @@ sidebar: formlist_slider
     </view>
 </view>
 ```
+:::
 
 ### 代码示例6 - 自定义进度条样式 
 
 <a href="swanide://fragment/03cd862f718cdbf42381e9eb48abcb691576152025499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -131,3 +137,4 @@ sidebar: formlist_slider
 </view>
 ```
 
+:::

@@ -29,7 +29,7 @@ SWAN 模板中的动态数据，都从逻辑层 Page 中 data 对象来。
 <!-- 被渲染成: Hello My SWAN App -->
 ```
 
-```javascript
+```js
 // data-demo.js
 Page({
     data: {
@@ -47,7 +47,7 @@ Page({
 <view class="c-{{className}}">属性绑定</view>
 ```
 
-```javascript
+```js
 // attr-demo.js
 Page({
     data: {
@@ -67,7 +67,7 @@ Page({
 <view s-if="flag">如果为flag为true，你看得到我。</view>
 ```
 
-```javascript
+```js
 // condition-demo.js
 Page({
     data: {
@@ -176,7 +176,7 @@ SWAN 模板 提供了丰富的表达式类型支持，让使用者在编写视�
 <template is="age-card" data="{{ {...person} }}" />
 
 ```
-```javascript
+```js
 // template-demo.js
 Page({
     data: {

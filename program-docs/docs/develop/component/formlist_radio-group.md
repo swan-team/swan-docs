@@ -3,7 +3,7 @@ title: radio-group 单项选择器组
 header: develop
 nav: component
 sidebar: formlist_radio-group
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/radio/radio
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/radio/radio
 ---
 
 
@@ -33,9 +33,10 @@ sidebar: formlist_radio-group
 
 <a href="swanide://fragment/6e21eb27622b96b353930a5f18234e061565503524059" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">默认样式</view>
     <view class="radio">
@@ -46,12 +47,14 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
+:::
 
 ###  代码示例2 - 列表展示 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">列表展示</view>
     <view class="radio-area">
@@ -63,12 +66,13 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
-
+:::
 ###  代码示例3 - 包含禁用选项 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>包含禁用选项</view>
@@ -85,12 +89,13 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
-
+:::
 ###  代码示例4 - 默认不选中 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>默认不选中</view>
@@ -104,12 +109,13 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
-
+:::
 ###  代码示例5 - 自定义颜色 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义颜色</view>
@@ -123,15 +129,16 @@ sidebar: formlist_radio-group
     </view>
 </view>
 ```
-
+:::
 
 ### 代码示例 6: 改变小程序原生组件大小,拿radio举例，其他组件也适用 
 
 <a href="swanide://fragment/e1e1a4c5c8688c310eb539033f72b3d51576135418767" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">改变小程序原生组件大小</view>
@@ -144,7 +151,7 @@ sidebar: formlist_radio-group
 </view>
 ```
 
-* 在 css 文件中
+ 
 
 ```css
 .radioSmall {
@@ -152,3 +159,4 @@ sidebar: formlist_radio-group
 }
 ```
 
+:::

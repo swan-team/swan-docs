@@ -1,9 +1,9 @@
 ---
-title: navigation 顶部导航bar
+title: navigation 自定义导航
 header: develop
 nav: extended
 sidebar: smt-navigation
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-navigation/smt-navigation
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-navigation/smt-navigation
 ---
 
 **解释：** 顶部导航bar可以自定义
@@ -32,9 +32,10 @@ sidebar: smt-navigation
 
 ###  代码示例
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <smt-navigation>
     <view>
         <text>{{title}}</text>
@@ -43,10 +44,9 @@ sidebar: smt-navigation
 </smt-navigation>
 ```
 
+ 
 
-* 在 js 文件中
-
-```javascript
+```js
 Page({
     data: {
         title: '主标题',
@@ -54,7 +54,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 

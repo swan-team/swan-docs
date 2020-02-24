@@ -338,7 +338,7 @@ audio: 后台音乐播放
     ]
 }
 ```
-```javascript
+```js
 swan.request({
     url: 'https://m.baidu.com',
     usePrefetchCache: true,
@@ -358,7 +358,7 @@ swan.request({
 }
 ```
 打开小程序的协议中，也需要携带此参数：
-```javascript
+```js
 pages/index/index?id=123
 ```
 这样，再次使用request发起请求时，就可以利用上prefetches中的配置。

@@ -55,16 +55,16 @@ Object object
 
 
 
+ 
 
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -84,7 +84,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ##  错误码
 

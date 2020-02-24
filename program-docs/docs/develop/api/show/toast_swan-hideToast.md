@@ -47,9 +47,10 @@ Object object
 ### 代码示例 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container">
     <view class="card-area">
         <button bindtap="showToast" type="primary" hover-stop-propagation="true">swan.showToast</button> 
@@ -58,7 +59,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 showToast() {
@@ -71,6 +72,7 @@ hideToast() {
     swan.hideToast();
 }
 ```
+:::
 ##  错误码
 ### Android 
 

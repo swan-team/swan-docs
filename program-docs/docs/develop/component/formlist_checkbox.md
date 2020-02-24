@@ -3,7 +3,7 @@ title: checkbox 多项选择器
 header: develop
 nav: component
 sidebar: formlist_checkbox
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
 ---
 
  
@@ -39,9 +39,9 @@ sidebar: formlist_checkbox
 
 <a href="swanide://fragment/19b41700694c662e8dae6dd6a9d676c91572917630510" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">默认样式</view>
     <view class="checkbox-group">
@@ -52,3 +52,4 @@ sidebar: formlist_checkbox
     </view>
 </view>
 ```
+:::

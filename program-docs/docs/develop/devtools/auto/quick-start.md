@@ -32,7 +32,7 @@ npm i swan-automator --save-dev
 ## 使用
 引入 SDK 编写控制脚本，参考以下示例：
 
-```javascript
+```js
 const automator = require('swan-automator');
 
 (async () => {

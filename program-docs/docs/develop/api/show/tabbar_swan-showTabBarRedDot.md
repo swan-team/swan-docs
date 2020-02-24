@@ -49,19 +49,16 @@ Object object
 
 ### 代码示例 
 
+ 
 
-
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
     <button type="primary" bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
 </view>
 ```
-
-* 在 js 文件中
-
+ 
 ```js
 Page({
     showTabBarRedDot() {
@@ -82,6 +79,7 @@ Page({
     }
 });
 ```
+:::
 ## 错误码
 
 ### Android 

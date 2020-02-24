@@ -55,7 +55,7 @@ Function callback
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     onLoad() {
         const innerAudioContext = swan.createInnerAudioContext();

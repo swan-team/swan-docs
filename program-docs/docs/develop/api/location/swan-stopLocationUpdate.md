@@ -5,6 +5,8 @@ nav: api
 sidebar: swan-stopLocationUpdate
 ---
 
+> 基础库 3.150.1 版本开始支持。
+
 **解释**：关闭监听实时位置变化
 
 ## 方法参数 

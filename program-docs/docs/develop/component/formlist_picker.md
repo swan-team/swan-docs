@@ -3,7 +3,7 @@ title: picker 底部弹起的滚动选择器
 header: develop
 nav: component
 sidebar: formlist_picker
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker/picker
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker/picker
 ---
 
 
@@ -108,9 +108,10 @@ sidebar: formlist_picker
 
 <a href="swanide://fragment/c16ae3b84a6ac40fefd4ddb0db99f3ce1572872865725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">普通选择</view>
     <view class="section">
@@ -122,9 +123,9 @@ sidebar: formlist_picker
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         arrIndex: 0,
@@ -142,14 +143,15 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 2：时间选择器 
 
 <a href="swanide://fragment/6d81c7bad0496d09ca8ffe7981c5c3bf1572872978396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">时间选择</view>
     <view class="section">
@@ -161,9 +163,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         time: '12:12'
@@ -182,7 +184,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 
@@ -190,9 +192,10 @@ Page({
 
 <a href="swanide://fragment/0f83f4c4024d8c279589f5bb594515b51572873363338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">日期选择</view>
     <view class="section date-section">
@@ -204,9 +207,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         dateDay: '2018-01-05',
@@ -225,14 +228,14 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 4 ：多列选择器
 
 <a href="swanide://fragment/6521d8dc859cdee233d6e68b00a2b1301572873475056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">多列选择器</view>
     <view class="section date-section">
@@ -244,9 +247,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         multiIndex: [0, 0, 0],
@@ -324,15 +327,16 @@ Page({
     }
 });
 ```
-
+:::
 
 ###  代码示例 5 ：地区选择器
 
 <a href="swanide://fragment/26a9c93186196d102d032ebcbfcf6df41572873584926" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">地区选择</view>
     <view class="section">
@@ -344,9 +348,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         regionData: ['全部', '全部', '全部'],
@@ -365,7 +369,7 @@ Page({
     },
 });
 ```
-
+:::
 
 ##  Bug & Tip 
 

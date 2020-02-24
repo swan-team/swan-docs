@@ -3,7 +3,7 @@ title: form 表单
 header: develop
 nav: component
 sidebar: formlist_form
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/form/form
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/form/form
 ---
 
  
@@ -63,9 +63,8 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
 
  
 
-* 在 swan 文件中
-
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <form bindsubmit="formSubmit"
         bindreset="formReset">
@@ -113,9 +112,9 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
     </form>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {},
     formSubmit: function(e) {
@@ -131,17 +130,17 @@ Page({
 });
 
 ```
-
+:::
 
 ## 参考示例
 
 ###  参考示例 1: 模板类型表单 
 
 <a href="swanide://fragment/0cf7c53906fff54ad2a10034cdfb8ef21575461381127" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
 
-* 在 swan 文件中
-
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <form report-submit="{{true}}" report-type="subscribe" template-id="BD0003" subscribe-id="8026" bindsubmit="formSubmit"
         bindreset="formReset">
@@ -158,9 +157,9 @@ Page({
     </form>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     onLoad() {
         // 此组件需要在登录  态下使用
@@ -176,14 +175,16 @@ Page({
     }
 });
 ```
+:::
 
 ###  参考示例 2:获取 getTemplateLibraryList 示例  
 
 <a href="swanide://fragment/d422d409d3a0257de70e9007b96871bc1575446314278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">点击获取Access Token</view>
@@ -196,9 +197,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         access_token: ''
@@ -238,4 +239,4 @@ Page({
     }
 });
 ```
-
+:::

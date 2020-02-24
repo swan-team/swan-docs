@@ -3,7 +3,7 @@ title: textarea 多行输入框
 header: develop
 nav: component
 sidebar: formlist_textarea
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/textarea
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/textarea
 ---
 
 
@@ -70,18 +70,19 @@ sidebar: formlist_textarea
 
  <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="description">输入区高度自适应</view>
     <textarea auto-height maxlength="-1" bindinput="bindInput"/>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         height: 1,
@@ -105,14 +106,15 @@ Page({
 });
 
 ```
-
+:::
 ###  代码示例 2： 受控聚焦
 
  <a href="swanide://fragment/4d35f3e24c2abccf95c01b962d9724051575985791570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="description">受控聚焦</view>
     <textarea style="height: 3em"
@@ -141,9 +143,9 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         height: 1,
@@ -172,7 +174,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ##  Bug & Tip
 * Tip：textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。

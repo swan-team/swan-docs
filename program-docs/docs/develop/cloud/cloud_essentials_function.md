@@ -16,4 +16,21 @@ sidebar: cloud_essentials_function
 * 响应速度快。借助百度智能云容器技术，提供ms级别的响应能力，用户对资源调度和函数启动过程基本无感知。
 * 扩展能力强。根据业务并发量所需快速扩展资源，在高并发下依然能保障服务的可用性。
 
- 
+
+比如我们如下定义一个云函数，命名为 add ，功能是将传入的两个参数 a 和 b 相加：
+
+**代码示例**
+```
+const cloud = require('swan-server-sdk');
+exports.main = (event, context) => {
+    let { a, b} = event
+    let { OPENID, APPID } = cloud.getSwanContext()
+    let sum = a + b
+
+    return {
+        OPENID,
+        APPID,
+        sum
+    }
+}
+```
