@@ -1,0 +1,191 @@
+@import '../common/color.less';
+@import '../common/params.less';
+
+ul[class*="m-doc-sidebar-"] {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    li {
+        word-break: break-word;
+        width: 100%;
+        box-sizing: border-box;
+
+
+        span {
+            width: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin: 1px 0;
+        }
+
+        .icon {
+            widows: 16px;
+            height: 16px;
+            position: absolute;
+            left: 250px;
+        }
+
+        .sidebar-item-open {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.m-doc-sidebar-menu-0 {
+    >li {
+        >span {
+            line-height: 52px;
+            padding: 0 10px;
+            >a {
+                padding-left: 22px;
+                color: @font-default;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            >span {
+                padding-left: 22px;
+                color: @font-default;
+                width: 100%;
+            }
+
+            >img {
+                // padding-right: 20px;
+            }
+
+            >.router-link-active {
+                background-color: @bg-gray3;
+                border-radius: 8px;
+                color: @font-default;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+.m-doc-sidebar-menu-1 {
+    >li {
+        position: relative;
+        >span {
+            padding: 0 10px;
+            line-height: 40px;
+            >a {
+                padding-left: 36px;
+                color: @font-default;
+                width: 100%;
+                display: block;
+            }
+            >span {
+                padding-left: 36px;
+                color: @font-default;
+                width: 100%;
+            }
+            >img {
+                margin-right: 20px;
+            }
+        }
+        >.m-doc-sidebar-item-active {
+            font-weight: bolder;
+        }
+        >.m-doc-sidebar-item-active:before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: @bg-black1;
+            border-radius: 50%;
+            position: absolute;
+            left: 35px;
+            top: 17.5px;
+        }
+    }
+}
+
+.m-doc-sidebar-menu-2,
+.m-doc-sidebar-menu-3 {
+    >li {
+        line-height: 40px;
+        box-sizing: border-box;
+        >span {
+            padding: 0 10px;
+            >a {
+                padding-left: 35px;
+                color: @font-black2;
+                width: 100%;
+            }
+            >span {
+                padding-left: 35px;
+                color: @font-black2;
+                width: 100%;
+            }
+            >img {
+                margin-right: 20px;
+            }
+        }
+
+        .router-link-active {
+            background-color: @bg-gray3;
+            border-radius: 8px;
+            color: @font-default;
+            font-weight: bolder;
+        }
+    }
+}
+
+.m-doc-sidebar-menu-2 {
+    >li {
+        >span {
+            >a {
+                padding-left: 42px;
+            }
+            >span {
+                padding-left: 42px;
+            }
+        }
+    }
+}
+
+.m-doc-sidebar-menu-3 {
+    >li {
+        >span {
+            >a {
+                padding-left: 56px;
+            }
+            >span {
+                padding-left: 56px;
+            }
+        }
+    }
+}
+
+ul[class*="m-doc-sidebar-menu-"] {
+    >li {
+        >span>span:hover {
+            background-color: @bg-gray3;
+            border-radius: 8px;
+            color: @font-default;
+        }
+        >span>a:hover {
+            background-color: @bg-gray3;
+            border-radius: 8px;
+            color: @font-default;
+        }
+    }
+}
+
+/* 移动适配 */
+@media screen and (max-width: @mobile-max-width) {
+    ul[class*="m-doc-sidebar-"] {
+        li {
+            .icon {
+                widows: 16px;
+                height: 16px;
+                position: absolute;
+                left: calc(100vw - 35px);
+            }
+        }
+    }
+}

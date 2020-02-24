@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 智能小程序文档
+title: 百度智能小程序文档
 subtitle:
 description:
 keywords:
@@ -12,7 +12,7 @@ language:
 timezone:
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
 url: https://smartprogram.baidu.com
 root: /docs/
 permalink: :title/
@@ -52,7 +52,7 @@ tag_map:
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
+## https://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
@@ -97,3 +97,8 @@ neat_js:
 # Markdown Include
 include_markdown:
   dir: source/_posts
+
+# marked config
+# smartypants 配置项决定了是否使用“智能”排版标点符号来表示引号和短划线。
+marked: 
+  smartypants: false

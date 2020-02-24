@@ -1,0 +1,63 @@
+@import '../common/color.less';
+@import '../common/params.less';
+
+.sub-nav {
+    width: 100%;
+    &-container {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        background-color: @bg-white;
+        border-bottom: 1px solid @bg-white3;
+        overflow-x: auto;
+        ul {
+            display: flex;
+            max-width: @pc-max-width;
+            overflow-x: auto;
+            height: 60px;
+            margin: 0 auto;
+
+            li {
+                padding: 0 20px;
+                height: 57px;
+                display: flex;
+                a {
+                    height: 57px;
+                    color: @font-black2;
+                    white-space: nowrap;
+                    line-height: 57px;
+                    font-weight: normal;
+                    font-size: 14px;
+                }
+                :hover {
+                    color: @font-default;
+                }
+            }
+        }
+    }
+
+    &-item-active {
+        border-bottom: 3px solid @border-black1;
+        color: @font-default !important;
+    }
+
+    &-fixed {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: @mobile-max-width) {
+    .sub-nav {
+        display: none;
+        &-fixed {
+            position: static;
+            z-index: 0;
+        }
+
+        &-show {
+            display: block;
+        }
+    }
+}
