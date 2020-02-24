@@ -3,7 +3,7 @@ title: image 图片
 header: develop
 nav: component
 sidebar: media_image
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/image/image
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/image/image
 ---
 
 
@@ -58,9 +58,10 @@ sidebar: media_image
 
   <a href="swanide://fragment/21139032b621d4c88d848f290fadd0bd1575135550850" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -79,7 +80,7 @@ sidebar: media_image
         </scroll-view>
 </view>
 ```
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -111,14 +112,15 @@ Page({
     },
 });
 ```
-
+:::
 ###  代码示例 2： 裁剪模式  
 
   <a href="swanide://fragment/7aa0d436bf859e57db61d570b21878141575135402549" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -137,7 +139,7 @@ Page({
         </scroll-view>
 </view>
 ```
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -184,17 +186,18 @@ Page({
     },
   });
 ```
-
+:::
 ### 代码示例3 - 可放动图  
 
   <a href="swanide://fragment/a1ee4d3565a01e332c54460933b1c8ca1575135782389" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <image src='https://b.bdstatic.com/miniapp/images/radio.gif'/>
 ```
-
+:::
 
 
 ##  Bug & Tip 

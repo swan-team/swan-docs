@@ -3,7 +3,7 @@ title: web-view 网页容器
 header: develop
 nav: component
 sidebar: open_web-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/webview/webview
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/webview/webview
 ---
 
 
@@ -37,15 +37,16 @@ sidebar: open_web-view
 
 <a href="swanide://fragment/5701757f175fd484c4f3b3a666d4a5301575189086529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中：
+ 
 
-```xml
+:::codeTab
+```swan
 <view>
     <web-view src="{{src}}"></web-view>
 </view>
 
 ```
-* 在 js 文件中：
+ 
 
 ```js
 Page({
@@ -58,20 +59,21 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 - 在特定时机接受到H5传递参数的函数 ：
 
 <a href="swanide://fragment/6b417033a876fc19c589c7cdb875c9181575189212200" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中：
+ 
 
-```xml
+:::codeTab
+```swan
 <view>
     <web-view src="{{src}}"></web-view>
 </view>
 
 ```
-* 在 js 文件中：
+ 
 
 ```js
 Page({
@@ -84,13 +86,13 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例3 - 如何判断 H5 页面是否在小程序 web-view 打开 ：
 
 <a href="swanide://fragment/547f28b94e391bf484dece2bdc4c1e9b1575830214937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 H5 文件中：
-
+ 
+:::codeTab
 ```js
 
 let UA = window.navigator.userAgent;
@@ -98,17 +100,17 @@ var regex = /swan\//;
 console.log( regex.test(UA) );// 若为true，则是在小程序的web-view中打开
 
 ```
-
+:::
 ### 代码示例4 - 原生页面与H5页面之间的跳转刷新： 
 <a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 detail.swan 文件中
-
-```html
+* 在 detail文件中
+:::codeTab
+```swan
 <web-view src="{{url}}"></web-view>
 ```
 
-* 在 detail.js 文件中
+ 
 
 ```js
 Page({
@@ -124,9 +126,9 @@ Page({
     }
 });
 ```
-
-* 在 index.js 文件中
-
+:::
+* 在 index 文件中
+:::codeTab
 ```js
 Page({
     data: { },
@@ -137,7 +139,7 @@ Page({
     }
 });
 ```
-
+:::
 ## 相关接口介绍
 
 ###  相关接口1  
@@ -158,7 +160,8 @@ web-view 网页中可使用 JSSDK 提供的接口返回智能小程序页面。 
 
 ###  代码示例 
 
-```xml
+:::codeTab
+```swan
 <!-- html -->
 <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.20.js"></script>
 ```
@@ -170,7 +173,7 @@ swan.webView.postMessage({data: 'foo'})
 swan.webView.postMessage({data: {foo: 'bar'} })
 swan.webView.getEnv(function(res) {console.log(res.smartprogram) // true })
 ```
-
+:::
 
 
 ###  相关接口2  
@@ -196,7 +199,7 @@ web-view 网页中支持的接口有：
 用户分享时可获取当前web-view的URL，即在onShareAppMessage回调中返回webViewUrl参数。
 
 代码示例：
-
+:::codeTab
 ```js
 Page({
     onShareAppMessage(options) {
@@ -204,7 +207,7 @@ Page({
     }
 })
 ```
-
+:::
 
 
 ### 使用 web-view 打开限定域名内的网页

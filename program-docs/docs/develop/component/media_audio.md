@@ -3,7 +3,7 @@ title: audio 音频
 header: develop
 nav: component
 sidebar: media_audio
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/audio/audio
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/audio/audio
 ---
 
 
@@ -55,9 +55,10 @@ sidebar: media_audio
 
 <a href="swanide://fragment/cef8f1aa7935d28b4621c35df1f6e2c61565503498770" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <audio poster="{{poster}}" 
     name="{{name}}" 
     loop="false" 
@@ -73,8 +74,7 @@ sidebar: media_audio
 >
 </audio>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -117,4 +117,4 @@ Page({
     }
 });
 ```
-
+:::

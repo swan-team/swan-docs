@@ -3,7 +3,7 @@ title: label 表单组件标签
 header: develop
 nav: component
 sidebar: formlist_label
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/label/label
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/label/label
 ---
 
 
@@ -34,9 +34,8 @@ sidebar: formlist_label
 
 <a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-``` xml
+:::codeTab
+```swan
 <view class="card-area">
         <view class="top-description border-bottom">label用for标识表单组件</view>
         <radio-group class="group">
@@ -50,7 +49,7 @@ sidebar: formlist_label
     </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -62,12 +61,11 @@ Page({
     }
 });
 ```
-
+::: 
 ###  代码示例2 - 表单组件在label内 ：
 
-* 在 swan 文件中
-
-``` xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">表单组件在label内</view>
     <checkbox-group class="group">
@@ -81,7 +79,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -93,12 +91,12 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例3 - label内有多个选项时，选中第一个 ：
 
-* 在 swan 文件中
-
-``` xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">label内有多个选项时，选中第一个</view>
     <label class="label-3">         
@@ -117,14 +115,14 @@ Page({
     </label>
 </view>
 ```
+:::
 
 ###  代码示例4 - label可控制热区 ：
 
 <a href="swanide://fragment/72a27b52f27e27f779ceb251dd2666ae1575131264690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-``` xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description">控制热区为整行</view>
@@ -143,8 +141,7 @@ Page({
     </view>
 </view>
 ```
-
-* 在 css 文件中
+ 
 
 ```css
 .wrap {
@@ -157,4 +154,4 @@ Page({
 }
 ```
 
-
+:::

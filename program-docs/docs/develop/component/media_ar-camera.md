@@ -3,7 +3,6 @@ title: ar-camera AR相机
 header: develop
 nav: component
 sidebar: media_ar-camera
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/ar-camera/ar-camera
 ---
 
  
@@ -62,10 +61,12 @@ sidebar: media_ar-camera
 
 * 在 swan 文件中
 
-```html
+:::codeTab
+```swan
 <ar-camera ar-key="10298931" ar-type="5" flash="{{flashState}}" class="camera" bindload="loadCameraSuccess" bindmessage="message" binderror="error">
 </ar-camera>
 ```
+:::
 > 其它代码过长，建议直接<a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>。
 
 

@@ -3,7 +3,7 @@ title: checkbox-group 多项选择器组
 header: develop
 nav: component
 sidebar: formlist_checkbox-group
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
 ---
 
 
@@ -36,9 +36,10 @@ sidebar: formlist_checkbox-group
 
 <a href="swanide://fragment/aaacfd95fdcd62bd6cade29e143a74ed1572917879202" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">默认样式</view>
     <checkbox-group name="checkbox">
@@ -51,12 +52,13 @@ sidebar: formlist_checkbox-group
     </checkbox-group>
 </view>
 ```
-
+:::
 ###  代码示例2 - 列表展示 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">列表展示</view>
     <checkbox-group bindchange="checkboxChange">
@@ -67,7 +69,7 @@ sidebar: formlist_checkbox-group
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -90,12 +92,13 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例3 - 包含禁用选项 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>包含禁用选项</view>
@@ -119,12 +122,13 @@ Page({
     </checkbox-group>
 </view>
 ```
-
+:::
 ###  代码示例4 - 默认不选中 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>默认不选中</view>
@@ -140,12 +144,13 @@ Page({
     </checkbox-group>
 </view>
 ```
-
+:::
 ###  代码示例5 - 自定义颜色 
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义颜色</view>
@@ -161,4 +166,4 @@ Page({
     </checkbox-group>
 </view>
 ```
-
+:::
