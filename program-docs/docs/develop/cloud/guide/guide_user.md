@@ -12,6 +12,13 @@ sidebar: guide_user
 ### 如何获取用户的 openid 或 swanid 信息？
 在云函数中，可以从函数的 `context` 参数中获取到。已登录的用户可以得到 openid，未登录的用户可以得到 swanid。注意：如果是从云函数中调用另一个云函数，将不会包含用户信息。
 
+**代码示例**
+```
+exports.main = (event, context) => {
+  let { OPENID, APPID } = cloud.getSwanContext() // 这里获取到的 openId 和 appId 是可信的
+}
+```
+
 ### 如果用户在使用智能小程序时，先未登录，后来登录，对应到云开发中是几个用户 ID？
 两个。今后会提供用户合并的功能。
 
