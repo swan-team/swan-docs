@@ -13,10 +13,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/page
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-status-page.png"  class="demo-qrcode-image" />
 
-### 图片示例
-
-<div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct"><img src="https://b.bdstatic.com/miniapp/images/smt-status-page.gif"></div></div>
-
+ 
 ### 使用方法
 
 1. 在小程序根目录下执行如下命令行，引入页面模板。
