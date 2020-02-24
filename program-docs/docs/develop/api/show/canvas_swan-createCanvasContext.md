@@ -48,9 +48,10 @@ CanvasContext
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container"> 
   <view>
       <view class="card-area">
@@ -72,8 +73,7 @@ CanvasContext
 </view>
 ```
 
-
-* 在 js 文件中
+ 
 
 ```js
 const canvas = require('./canvas.js');
@@ -111,8 +111,10 @@ Page({
 });
 
 ```
+:::
 * 在 canvas.js 文件中
 
+:::codeTab
 ```js
 const canvas = {};
 
@@ -396,6 +398,6 @@ canvas.setMiterLimit = function (context) {
 
 module.exports = canvas;
 ```
-
+:::
 
 

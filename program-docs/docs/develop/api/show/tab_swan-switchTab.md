@@ -3,7 +3,7 @@ title: swan.switchTab
 header: develop
 nav: api
 sidebar: tab_swan-switchTab
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
 
   
@@ -49,17 +49,14 @@ Object object
 
 ###  代码示例 
 
-
-
-* 在 swan 文件中
-
-```html
+ 
+:::codeTab
+```swan
 <view class="wrap">    
     <button bind:tap="switchTab" type="primary" hover-stop-propagation="true">跳转到API Tab页</button>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -77,4 +74,4 @@ Page({
     }
 });
 ```
-
+:::

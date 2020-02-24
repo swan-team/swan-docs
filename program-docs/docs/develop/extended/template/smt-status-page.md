@@ -3,7 +3,7 @@ title: 页面状态模板
 header: develop
 nav: extended
 sidebar:  template
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-status-page/smt-status-page
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-status-page/smt-status-page
 ---
 
 **解释**: 页面状态模板，可通过配置theme主题选择不同的页面状态：loadingStatus加载中，noWifiStatus无网络，noContent暂无内容。
@@ -33,7 +33,8 @@ npm i
 ```
 
 ### 代码示例
-``` html
+:::codeTab
+```swan
 <view class="card-panel">
     <smt-page-status
         s-if="{{theme == 'loadingStatus'}}"
@@ -60,7 +61,7 @@ npm i
     </smt-page-status>
 </view>
 ```
-
+:::
 3. **可在js中配置不同的theme数据，展示不同的模板状态**：loadingStatus加载中，noWifiStatus无网络，noContent暂无内容。
 
 ## Bug & Tip

@@ -55,9 +55,8 @@ Object object
 
 <a href="swanide://fragment/66f332965704ae69bbdcaefe3db158fa1575139212532" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```js
+:::codeTab
+```swan
 <view class="container">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -73,8 +72,7 @@ Object object
 </view>
 ```
 
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -91,7 +89,7 @@ Page({
     }
 });
 ```
-
+:::
 ### 图片示例 
 
 <div class="m-doc-custom-examples">
@@ -110,8 +108,7 @@ Page({
 
 <a href="swanide://fragment/78fa2cb4a9f355eb08b78ce9ad2cf41d1575139455048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     setBackgroundColor() {
@@ -127,7 +124,7 @@ Page({
     }
 });
 ```
-
+:::
 ### 图片示例 
 
 <div class="m-doc-custom-examples">
@@ -146,8 +143,7 @@ Page({
 
 <a href="swanide://fragment/b748d492aae0dcbcd9fe4aa8b0dea4251575139563423" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     setBackgroundColor() {
@@ -163,7 +159,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  错误码
 ### Android
 

@@ -104,15 +104,17 @@ sidebar: commentpublish
 npm install @smt-ui/content-component
 ```
 在 页面json 文件中：
-```
+:::codeTab
+```json
 {
     "usingComponents": {
         "c-comment-publisher": "@smt-ui/content-component/src/comment-publisher"
     }
 }
 ```
-在 swan 文件中：
-```
+:::
+:::codeTab
+```swan
 <view class="btn-comment" bind:tap="clickComment">点击评论</view>
 <c-comment-publisher
     show-publish="{= showPublish =}"
@@ -125,8 +127,8 @@ npm install @smt-ui/content-component
     bind:previewimage="previewImageHandler">
 </c-comment-publisher>
 ```
-在 js 文件中：
-```
+ 
+```js
 // 测试用例
 const getSrid = () => {
     let openid = '';
@@ -165,7 +167,7 @@ Page({
     }
 });
 ```
-
+:::
 ## Bug&Tip 
 * Tip：对比基础组件中的半屏发布器差异说明
     1. 增加了一个必填属性 comment-param，此属性是百度请求后端时的必传参数，需要在 relasecomment 事件中回传；

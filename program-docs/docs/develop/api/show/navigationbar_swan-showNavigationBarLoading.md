@@ -3,7 +3,7 @@ title: swan.showNavigationBarLoading
 header: develop
 nav: api
 sidebar: navigationbar_swan-showNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
 ---
  
  
@@ -44,9 +44,10 @@ sidebar: navigationbar_swan-showNavigationBarLoading
 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button bind:tap="showNavigationBarLoading" type="primary" hover-stop-propagation="true">显示加载动画</button>
 
@@ -54,7 +55,7 @@ sidebar: navigationbar_swan-showNavigationBarLoading
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -68,7 +69,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  错误码
 
 ### Android 

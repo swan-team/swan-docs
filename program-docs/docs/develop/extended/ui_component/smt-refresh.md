@@ -36,9 +36,10 @@ sidebar: smt-refresh
 
 ###  代码示例
 
-* 在 swan 文件中
 
-```html
+
+:::codeTab
+```swan
 <!-- 刷新：不包含手势交互，需通过改变offset-y和status自定义交互 -->
 <smt-refresh status="{{status}}" offset-y="{{offsetY}}" text="为您推荐xx条更新"></smt-refresh>
 
@@ -55,7 +56,6 @@ sidebar: smt-refresh
 ```
 
 
-* 在 js 文件中
 
 ```js
 async onRefresh() {
@@ -76,8 +76,7 @@ async onRefresh() {
 }
 ```
 
-
-* 在 css 文件中
+ 
 
 ```css
 .smt-feed {
@@ -86,5 +85,5 @@ async onRefresh() {
     background-color: #fff;
 }
 ```
-
+:::
 

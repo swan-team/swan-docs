@@ -3,7 +3,7 @@ title: swan.showModal
 header: develop
 nav: api
 sidebar: toast_swan-showModal
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/modal/modal
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/modal/modal
 ---
  
 
@@ -64,8 +64,7 @@ Object object
 
 <a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 swan.showModal({
     title: '标题',
@@ -95,13 +94,12 @@ showModalNotitle() {
     });
 }
 ```
-
+:::
 ### 代码示例2 - 开发者可在操作modal后进行业务逻辑  
 
 <a href="swanide://fragment/f722c61b2e5961678fbce43a0ce91fae1575137772883" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     showModal() {
@@ -121,14 +119,13 @@ Page({
     }
 });
 ```
-
+::: 
 ### 代码示例3 - 开发者可自定义一个showModal  
 
 <a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button type="primary" bindtap="showModal" data-statu="open">点我打开自定义弹窗</button>  
     <!--mask-->  
@@ -151,7 +148,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -212,7 +209,7 @@ Page({
     }
 })
 ```
-
+:::
             
 
 

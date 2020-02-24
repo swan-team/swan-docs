@@ -3,7 +3,7 @@ title: swan.hideNavigationBarLoading
 header: develop
 nav: api
 sidebar:  navigationbar_swan-hideNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
 ---
 
 
@@ -40,19 +40,17 @@ sidebar:  navigationbar_swan-hideNavigationBarLoading
 
 ### 代码示例 
 
+ 
 
-
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button bind:tap="showNavigationBarLoading" type="primary" hover-stop-propagation="true">显示加载动画</button>
 
     <button bind:tap="hideNavigationBarLoading" type="primary" hover-stop-propagation="true">隐藏加载动画</button>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -66,6 +64,7 @@ Page({
     }
 });
 ```
+:::
 ##  错误码
 
 ### Android 

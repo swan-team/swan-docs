@@ -3,7 +3,7 @@ title: swan.redirectTo
 header: develop
 nav: api
 sidebar: tab_swan-redirectTo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
  
  
@@ -50,15 +50,16 @@ Object object
 
 <a href="swanide://fragment/441e13e266a3072d50cfe2e1b896f9451574139717336" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button bind:tap="redirectTo" type="primary" hover-stop-propagation="true">在当前页面打开</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -76,13 +77,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 2 - 多级页面的跳转 
 
 <a href="swanide://fragment/c24dc8fd5e6e10fcc02f8615b5e09e341575404434832" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     data: { },
@@ -99,5 +99,5 @@ Page({
     }
 });
 ```
-
+:::
 

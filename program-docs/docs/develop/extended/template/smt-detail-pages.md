@@ -3,7 +3,7 @@ title: 图文详情页
 header: develop
 nav: extended
 sidebar:  template
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-detail-pages/smt-detail-pages
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-detail-pages/smt-detail-pages
 ---
 
 **解释**：图文详情页模板。你可以加载含有图片、文本、引用、标题等形式的内容。同时，图文详情页模板内置了回到顶端按钮与关注/取消关注按钮，支持点击作者跳转与图片查看器。图文详情页通常用来展示文章、帖子等内容的详情。  
@@ -14,9 +14,7 @@ sidebar:  template
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-detail-pages.png"  class="demo-qrcode-image" />
 
-### 图片示例
 
-<div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct"><img src="https://b.bdstatic.com/miniapp/images/page_detail.gif"></div></div>
 
 ### 使用方法
 
@@ -26,7 +24,9 @@ sidebar:  template
 npm i @smt-ui-template/page-content-detail
 ```
 ### 代码示例
-``` html
+
+:::codeTab
+```swan
 <view class="wrap">
     <view s-if="!showPageStatus" class="content-header" ></view>
     <scroll-view scroll-y scroll-top="{=scrollTop=}" s-if="!showPageStatus" class="content-container {{isPhoneX ? 'content-container-ipx' : ''}}" bindscroll="onPageScroll" bindtouchmove="scrollPage" bindtouchstart="touchstart">
@@ -54,10 +54,12 @@ npm i @smt-ui-template/page-content-detail
     </scroll-view>
 </view>
 ```
+:::
 2. 获取数据：获取文章详情、页面跳转、关注/取消关注。
 
-    * 获取内容详情所需要的数据，请修改为相关的请求地址参数
-    ```js
+* 获取内容详情所需要的数据，请修改为相关的请求地址参数
+:::codeTab
+```js
         getArticleDetail(articleId, cb) {
         let params = {
             url: '',
@@ -66,15 +68,23 @@ npm i @smt-ui-template/page-content-detail
                 articleId
             },
        ...     
-    ```
-    * 点击用户事件处理，通常是跳转到用户详情页
-    ```js
+```
+:::
+
+* 点击用户事件处理，通常是跳转到用户详情页
+  
+:::codeTab
+```js
         swan.navigateTo({
             url: `/user-detail/user-detail?userId=${userId}`
         });
-    ```
-    * 发送 关注/取消关注 请求，请修改为相关的请求地址参数
-    ```js
+```
+
+::: 
+* 发送 关注/取消关注 请求，请修改为相关的请求地址参数
+
+:::codeTab
+```js
         tapfollow(e) {
             ...
             let params = {
@@ -85,8 +95,8 @@ npm i @smt-ui-template/page-content-detail
                 },
             ...
         }
-    ```
-
+```
+:::
 ## Bug & Tip
 
 * Tip：模板中使用的是测试数据，你需要从接口中获取真实的数据。

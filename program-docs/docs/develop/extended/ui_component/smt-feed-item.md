@@ -3,7 +3,7 @@ title: feed-item 信息流子项
 header: develop
 nav: extended
 sidebar: smt-feed-item
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-feed-item/smt-feed-item
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-feed-item/smt-feed-item
 ---
 
 **解释：** 信息流子项，包括左文右图、纯文本、上文下图、多图及视频模式。
@@ -36,9 +36,10 @@ sidebar: smt-feed-item
 
 ###  代码示例
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <smt-feed-item 
     theme="{{theme}}"
     content="{{content}}" 
@@ -48,9 +49,7 @@ sidebar: smt-feed-item
 </smt-feed-item>
 ```
 
-
-* 在 js 文件中
-
+ 
 ```js
 Page({ 
 
@@ -71,7 +70,7 @@ Page({
 });
 
 ```
-
+:::
 
 
 

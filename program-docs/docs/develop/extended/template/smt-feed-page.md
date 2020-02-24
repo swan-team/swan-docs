@@ -34,7 +34,8 @@ npm i
 ```
 
 ### 代码示例
-``` html
+:::codeTab
+```swan
 <smt-feed
     s-if="!showPageStatus"
     class="smt-feed pull-down-refresh"
@@ -67,7 +68,7 @@ npm i
 </smt-page-status>
 
 ```
-
+:::
 ## Bug & Tip
 
 * Tip：模板中使用的是测试数据，你需要从接口中获取真实的数据。

@@ -3,7 +3,7 @@ title: page-status 页面状态组件
 header: develop
 nav: extended
 sidebar: smt-page-status
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-page-status/smt-page-status
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-page-status/smt-page-status
 ---
 
 **解释：** 页面状态组件，可用于全屏和半屏。用于展示页面加载，页面异常-有操作、页面异常-无操作三种页面状态。
@@ -30,29 +30,20 @@ sidebar: smt-page-status
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-page-status.png"  class="demo-qrcode-image" />
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/smt-page-status.gif">
-    </div>  
-</div>
-
+ 
 ###  代码示例
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <smt-page-status 
     class="content"
     loading="{{loading}}"
     title="网络不给力，请稍后再试" >
 </smt-page-status>
 ```
-
-
-* 在 js 文件中
-
+ 
 ```js
 Page({
     data: {
@@ -68,9 +59,7 @@ Page({
     }
 });
 ```
-
-
-* 在 css 文件中
+ 
 
 ```css
 .content {
@@ -78,5 +67,5 @@ Page({
     height: 100vh;
 }
 ```
-
+:::
 

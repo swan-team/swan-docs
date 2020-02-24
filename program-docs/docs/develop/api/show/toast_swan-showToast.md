@@ -3,7 +3,7 @@ title: swan.showToast
 header: develop
 nav: api
 sidebar:  toast_swan-showToast
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/toast/toast
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/toast/toast
 ---
  
 
@@ -62,10 +62,10 @@ Object object
 ### 代码示例 
 
 
+ 
 
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="container">
     <view>
         <view class="card-area"> 
@@ -133,23 +133,21 @@ Page({
     }
 });
 ```
-
+:::
 ### 代码示例2 - 开发者可自定义showToast样式 
 
 <a href="swanide://fragment/392bbc1fb46cce63621c37aac706635e1575824847831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+ 
 
-* 在 swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button type="primary" bindtap="clickbtn"> 点击 </button>
     <view animation="{{animationData}}" class="toast-view" s-if="{{showModalStatus}}">要显示的内容
     </view>
 </view>
 ```
-
-* 在 js 文件中
-
+ 
 ```js
 Page({
     data: {
@@ -195,14 +193,15 @@ Page({
     },  
 })
 ```
-
+:::
 ### 代码示例3 - showModal和showToast是否可共存 
 
 <a href="swanide://fragment/2a833f9c7f164efca05ade83ff9869de1576559710455" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="container">
     <view>
         <view class="card-area"> 
@@ -214,7 +213,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -243,7 +242,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 ##   错误码

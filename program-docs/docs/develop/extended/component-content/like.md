@@ -63,6 +63,7 @@ sidebar: like
 npm install @smt-ui/content-component
 ```
 在 页面json 文件中：
+:::codeTab
 ```
 {
     "navigationBarTitleText": "标题",
@@ -71,7 +72,9 @@ npm install @smt-ui/content-component
     }
 }
 ```
+:::
 在 swan 文件中：
+:::codeTab
 ```
 <view>点赞：仅图标</view>
 <view class="like-demo">
@@ -133,7 +136,7 @@ npm install @smt-ui/content-component
     </c-like>
 </view>
 ```
-在 js 文件中：
+ 
 ```
 Page({
     data: {
@@ -148,7 +151,7 @@ Page({
     }
 });
 ```
-在 css 文件中：
+ 
 ```
 .like-demo{
     display: flex;
@@ -160,3 +163,4 @@ Page({
     margin: 0 10px; 
 }
 ```
+:::
