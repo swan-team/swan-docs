@@ -64,7 +64,7 @@ sidebar: smt-event-emitter
 | 参数 | 类型  | 必填 | 默认值 |说明|
 | ---- | ---- | ---- | ----|----|
 | type | string | 是 | | 监听类型，如果传入*则清除所有监听 |
-| handler | Function | 是 | | 希望删除的回调函数 |
+| handler | Function | 否 | 该 type 下的所有回调函数 | 希望删除的回调函数 |
 
 
 
