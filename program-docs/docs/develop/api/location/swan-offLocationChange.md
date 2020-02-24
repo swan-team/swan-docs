@@ -5,6 +5,8 @@ nav: api
 sidebar: swan-offLocationChange
 ---
 
+> 基础库 3.150.1 版本开始支持。
+
 **解释**：取消监听实时地理位置变化事件
 
 ## 方法参数 
