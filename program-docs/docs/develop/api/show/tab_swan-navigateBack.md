@@ -3,7 +3,7 @@ title: swan.navigateBack
 header: develop
 nav: api
 sidebar: tab_swan-navigateBack
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
 ---
 
  

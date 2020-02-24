@@ -3,7 +3,7 @@ title: swan.showTabBarRedDot
 header: develop
 nav: api
 sidebar: tabbar_swan-showTabBarRedDot
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
 ---
  
 
