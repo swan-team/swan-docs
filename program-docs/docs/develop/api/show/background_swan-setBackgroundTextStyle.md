@@ -52,15 +52,15 @@ Object object
 
 
 
-* 在 swan 文件中
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button data-set="{{textStyle}}" bind:tap="setBackgroundTextStyle" hover-stop-propagation="true" type='primary'>点击切换loading样式为：{{textStyle}}</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -92,7 +92,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 ##  错误码

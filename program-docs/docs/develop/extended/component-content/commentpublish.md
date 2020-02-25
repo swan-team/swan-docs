@@ -23,7 +23,7 @@ sidebar: commentpublish
 |is-upLoad-image|Boolean|否|false|仅组件版支持，是否展示上传图片按钮|
 |request-url|String|is-upLoad-image为true，则必填||仅组件版支持，由于小程序图片预览只能是 http 或 https，所以上传图片需要先上传到服务器|
 |comment-param|Object|是|-|NA 和组件版支持，内容评论成功后返回给百度服务测的参数，在点击发表按钮时回传|
-|comment-param.openid|String|是|-|NA 和组件版支持，用户身份唯一标识，[获取方法](https://smartapp.baidu.com/docs/develop/api/open/log_Session-Key/)|
+|comment-param.openid|String|是|-|NA 和组件版支持，用户身份唯一标识，[获取方法](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/)|
 |comment-param.snid|String|是|-|NA 和组件版支持，动态id，是动态在开发者侧的唯一标识。不应为空。若此时小程序侧没有对应的标识，则会先创建动态。|
 |comment-param.spid|String|是/否|-|NA 和组件版支持，一级评论id。当对评论进行评论时为必填项，不传表示对动态评论。|
 |comment-param.srid|String|是|-|NA 和组件版支持，此条评论id|

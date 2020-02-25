@@ -59,7 +59,7 @@ sidebar: media_ar-camera
 
 <a href="swanide://fragment/88816aa54768ab457f54bb55804c6f301565512329940" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
 :::codeTab
 ```swan

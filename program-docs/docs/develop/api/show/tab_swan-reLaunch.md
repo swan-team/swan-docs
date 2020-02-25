@@ -39,7 +39,6 @@ Object object
 
 <a href="swanide://fragment/846aafb088c8a69de62456103660db2f1574139934370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
 
 :::codeTab
 ```swan
