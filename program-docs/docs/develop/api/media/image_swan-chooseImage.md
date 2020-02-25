@@ -28,17 +28,17 @@ Object object
 
 ### success返回参数说明 ：
 
-|参数  |类型|  说明 |
-|---- | ---- | ---- |
-|tempFilePaths  | Array.&lt; string&gt;  |图片的本地文件路径列表 。|
-|tempFiles  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|
+|参数  |类型|  说明 | Web 态说明|
+|---- | ---- | ---- | ---- |
+|tempFilePaths  | Array.&lt; string&gt;  |图片的本地文件路径列表 。| Web 态值为浏览器所支持的 blob URL 数组，形如 `["blob:https://xxx"]`|
+|tempFiles  | Array.&lt;object&gt; |图片的本地文件列表，每一项是一个 File 对象。|  - |
 
 ### tempFiles 对象结构如下: 
 
-|字段 | 类型  |说明|
-|---- | ---- | ---- |
-|path  |  String  |本地文件路径|
-|size   | Number | 本地文件大小（单位：B）|
+|字段 | 类型  |说明 |  Web 态说明|
+|---- | ---- | ---- | ---- |
+|path  |  String  |本地文件路径| Web 态值为浏览器所支持的 blob URL 数组，示例 `"blob:https://9zs64x.smartapps.cn/52f855e3-2d9d-49b5-aeb4-96534135f0a9"`|
+|size   | Number | 本地文件大小（单位：B）| - |
 
 
 ## 示例
@@ -147,3 +147,5 @@ Page({
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
+## 小程序 Web 态 Tip
+文件的临时路径仅在浏览器关闭前有效。受浏览器限制，在Web 态无法使用 swan.saveFile 在本地持久保存文件。
