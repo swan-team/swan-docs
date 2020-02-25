@@ -66,7 +66,7 @@
         </div>
 
         <!-- 全局右侧 -->
-        <global-menu v-if="!isSwanIde" :iframe-src="iframeSrc"></global-menu>
+        <global-menu v-if="!isSwanIde" :iframe-src="iframeSrc" :simulatorFixed="fixedNav"></global-menu>
 
         <!-- 移动端导航列表 -->
         <mobile-head-list
@@ -277,6 +277,7 @@ export default {
         // 移动端侧导航点击
         sidebarItemHandle() {
             this.mobileSidebarShow = false;
+            _hmt.push(['_trackEvent', '侧边二级及以下导航', '点击']);
         },
         getScrollTop() {
             return window.pageYOffset
