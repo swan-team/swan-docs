@@ -43,7 +43,7 @@ npm install @smt-ui/content-component
 
 在 页面json 文件中：
 :::codeTab
-```
+```json
 {
     "navigationBarTitleText": "标题",
     "usingComponents": {
@@ -110,7 +110,7 @@ npm install @smt-ui/content-component
 
  
 
-```
+```js
 Page({
     data: {
         isFollowed: true,
@@ -150,7 +150,7 @@ Page({
 
 
  
-```
+```css
 .con-demo {
     display: flex;
     height: 80px;
