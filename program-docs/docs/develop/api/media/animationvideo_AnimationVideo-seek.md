@@ -40,9 +40,6 @@ Number position
 
 ### 代码示例 
 
- 
-
-
 * 在 swan 文件中
 
 ```html
