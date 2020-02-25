@@ -23,6 +23,22 @@ sidebar: app_service_registergetapp
 var appInstance = getApp();
 console.log(appInstance.globalData); // This is global data
 ```
+
+若以上写法不能获取到全局实例，建议按照以下写法。
+
+**代码示例**
+
+```js
+Page({
+    data: {
+        appData: getApp().globalData
+    },
+    onShow() {
+        console.log(this.data.appData);
+    }
+)}
+```
+
 <div class="m-doc-custom-examples">
 <div class="m-doc-custom-examples-warning">
     <p class="m-doc-custom-examples-title">注意</p><p class="m-doc-custom-examples-text"><ul><li>App() 必须在 app.js 中注册，且不能注册多个；</li><li>不要在 App() 内的函数中调用 getApp() 函数，可以通过 this 获取 app 实例；</li><li>不要在 onLaunch 中调用 getCurrentPages() ，因为此时 page 还没有生成。</li></ul></p>
