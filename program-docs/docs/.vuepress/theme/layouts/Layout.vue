@@ -51,6 +51,8 @@
             <div class="page-container-content">
                 <!-- 内容文章 -->
                 <doc-article class="page-container-content-article"></doc-article>
+                <!-- 相关链接 -->
+                <relative-link></relative-link>
                 <div class="page-container-content-bottom">
                     <!-- 底部导航 -->
                     <bottom-nav
@@ -92,6 +94,7 @@ import Article from '../components/Article.vue';
 import MobileHeadNav from '../components/MobileHeadNav.vue';
 import GlobalMenu from '../components/GlobalMenu.vue';
 import Footer from '../components/Footer.vue';
+import RelativeLink from '../components/RelativeLink.vue';
 import {
     getNavOrderList,
     getInitHeaderIndex,
@@ -111,7 +114,8 @@ export default {
         'doc-article': Article,
         'mobile-head-list': MobileHeadNav,
         'global-menu': GlobalMenu,
-        'doc-footer': Footer
+        'doc-footer': Footer,
+        'relative-link': RelativeLink
     },
     data() {
         return {
@@ -252,12 +256,10 @@ export default {
         },
         changeHeaderNavItem(index) {
             this.sidebarScrollToTop();
-
             _hmt.push(['_trackEvent', '头部一级导航', '点击']);
         },
         changeSubNavItem(index) {
             this.sidebarScrollToTop();
-
             _hmt.push(['_trackEvent', '头部二级导航', '点击']);
         },
         // 移动端头部展示的导航点击

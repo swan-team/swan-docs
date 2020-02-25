@@ -5,5 +5,7 @@
 
 export const Url = {
     searchSugUrl: '/forum/api/search_category',
-    searchReportUrl: '/forum/api/statistics_wordstatisticsadd'
+    searchReportUrl: '/forum/api/statistics_wordstatisticsadd',
+    searchRelativeUrl: '/forum/api/search_docrelation',
+    relativeReportUrl: '/forum/api/statistics_urlstatisticsadd'
 };
