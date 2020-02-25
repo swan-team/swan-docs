@@ -87,7 +87,7 @@ String targetSelector, Function callback
 </view>
 ```
 
-```javascript
+```js
 Page({
     data: {
         data: ''

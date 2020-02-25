@@ -166,7 +166,7 @@ Page({
 
 ### 代码示例3 - post的header中携带cookie ：
  
-<a href="swanide://fragment/9f33e070432787925131f55e8cdbad0d1576323297996" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/6fe5d66691671e00b45ff75b2af7a35d1582534192210" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 swan 文件中
 

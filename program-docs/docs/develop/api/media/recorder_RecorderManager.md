@@ -43,7 +43,7 @@ sidebar: recorder_RecorderManager
 
  在 js 文件中 
 
-```javascript
+```js
 Page({
     onShow() {
         const recorderManager = swan.getRecorderManager()

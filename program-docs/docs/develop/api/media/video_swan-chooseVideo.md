@@ -74,7 +74,7 @@ Object object
 
 
 
-```javascript
+```js
 Page({
     chooseVideo() {
         swan.chooseVideo({

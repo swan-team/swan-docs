@@ -3,6 +3,7 @@ title: video 视频
 header: develop
 nav: component
 sidebar: media_video
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/video/video
 ---
  
  
@@ -111,9 +112,9 @@ sidebar: media_video
  
 <a href="swanide://fragment/cf193e3b46933a9c48cdf78994ca79cf1574845335256" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -194,9 +195,9 @@ sidebar: media_video
 </view>
 ```
  
-* 在 js 文件中
  
-```javascript
+ 
+```js
  
 Page({
     data: {
@@ -326,7 +327,7 @@ Page({
     }
 });
 ```
- 
+::: 
  
 ###  图片示例 
  
@@ -346,9 +347,10 @@ Page({
  
 <a href="swanide://fragment/1d10a86e191b4738516ec73594f6cdd51574846726432" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -362,9 +364,9 @@ Page({
 </view>
 ```
  
-* 在 js 文件中
  
-```javascript
+ 
+```js
 Page({
     data: {
         src: 'https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4',
@@ -377,7 +379,7 @@ Page({
     }
 })
 ```
- 
+::: 
 ###  图片示例 
  
 <div class="m-doc-custom-examples">
@@ -396,9 +398,10 @@ Page({
  
 <a href="swanide://fragment/687b1ab6bd713b0fa80553503515d6651574851958216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -409,7 +412,7 @@ Page({
     </view>
 </view>
 ```
- 
+::: 
 ###  图片示例 
  
 <div class="m-doc-custom-examples">
@@ -428,9 +431,10 @@ Page({
  
 <a href="swanide://fragment/5a3e88566c4579b2b373ea6b1f4f7a631574853407212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -446,7 +450,7 @@ Page({
 </view>
 ```
  
-* 在 js 文件中
+ 
  
 ```js
 Page({
@@ -459,7 +463,7 @@ Page({
     }
 });
 ```
-
+:::
 ### 图片示例 
  
 <div class="m-doc-custom-examples">
@@ -478,9 +482,10 @@ Page({
  
 <a href="swanide://fragment/6d40cf6c497c6eecf9f044a4ff9ff0901574854124112" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -491,7 +496,7 @@ Page({
     </view>
 </view>
 ```
- 
+:::
 ###  图片示例 
  
 <div class="m-doc-custom-examples">
@@ -510,9 +515,10 @@ Page({
  
 <a href="swanide://fragment/f29d4f8d9d6884709607949f354aa7b91574854980912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
-* 在 swan 文件中
  
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="video-wrap">
         <video style="width: 100%;"
@@ -524,7 +530,7 @@ Page({
     </view>
 </view>
 ```
- 
+::: 
  
 ##  Bug & Tip 
 * Tip：相关API：[createVideoContex](https://smartprogram.baidu.com/docs/develop/api/media/videocontext_swan-createVideoContext/)

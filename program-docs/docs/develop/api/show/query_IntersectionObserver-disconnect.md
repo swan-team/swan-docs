@@ -83,7 +83,7 @@ sidebar:  query_IntersectionObserver-disconnect
 </view>
 ```
 
-```javascript
+```js
 Page({
     data: {
         data: ''

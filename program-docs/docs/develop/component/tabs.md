@@ -3,6 +3,7 @@ title: tabs 标签栏
 header: develop
 nav: component
 sidebar: tabs
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
 ---
 **解释**：标签栏，用于让用户在不同的视图中进行切换。基础库 3.100.4 版本开始支持。
 ##  属性说明 
@@ -28,20 +29,11 @@ sidebar: tabs
 普通标签栏组件与可寻址标签栏组件的区别是：可寻址标签栏组件在标签栏 tab 切换时，该页面的 uri 参数会同步变化；反之，跳转某页面 uri 时，指定标签栏栏绑定的参数值也会打开该值对应的 tab 页。由于这种绑定关系的存在，相比于普通标签栏栏，可寻址标签栏栏更利于搜索引擎收录。 建议开发者尽量使用可寻址标签栏栏组件实现页面主标签栏栏功能 。例如：主页的多频道切换。
 标签栏组件的使用需要通过 tabs 和 [tab-item](https://smartprogram.baidu.com/docs/develop/component/tab-item/) 组件配合实现。
 
-### 图片示例 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/images/tabs.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-
+ 
 ###  代码示例 1 ：普通标签栏（默认样式）
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">默认样式</view>
     <tabs 
@@ -55,7 +47,7 @@ sidebar: tabs
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -80,10 +72,11 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 2 ：可横滑展示
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>可横滑显示</view>
@@ -101,7 +94,7 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -137,10 +130,11 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 3 ：自定义样式
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义样式</view>
@@ -163,7 +157,7 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -187,10 +181,11 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 4 ：显示徽标
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>显示徽标</view>
@@ -208,7 +203,7 @@ Page({
     </view> 
 </view> 
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -235,11 +230,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 5 ：跳转寻址
 * 旧页面:
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>支持寻址</view>
@@ -247,7 +243,7 @@ Page({
     <button type="primary" bind:tap="enterNewTabsPage">进入页面并定位到标签二</button>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -273,14 +269,16 @@ Page({
     }
 });
 ```
+:::
 * 新页面:
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <tabs url-query-name="position" class="border-bottom">
     <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
 </tabs>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -311,10 +309,11 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 6 ：可寻址标签栏用法
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <!-- 指定 url-query-name 后，通过修改url来控制当前选中的tab，无需指定 active-name -->
 <!-- 虽然 bindtabchange 依旧会生效，但是直接使用 onURLQueryChange 是更好的做法 -->
 <tabs url-query-name="city">
@@ -323,7 +322,7 @@ Page({
 <!-- 查看页面uri变化 -->
 <view class="wrap">{{content}}</view>
 ```
-* 在 js 文件中
+ 
 ```js  
         {
             name: 'guangzhou',
@@ -351,7 +350,7 @@ Page({
     }
 });
 ```
-
+:::
 > active-name 和 url-query-name 不要搭配在一起使用：
 > * 如果开发者需要的只是一个普通的顶部标签栏组件，可以通过 active-name 配合 bindtabchange 来控制当前选中tab-item；
 > * 如果开发者需要的是可以修改页面 url 的顶部标签栏组件，只需指定url-query-name，无需设置 active-name

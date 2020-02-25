@@ -3,7 +3,7 @@ title: switch 开关选择器
 header: develop
 nav: component
 sidebar: formlist_switch
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/switch/switch
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/switch/switch
 ---
 
  
@@ -46,8 +46,9 @@ sidebar: formlist_switch
 
 <a href="swanide://fragment/acd75f1f1c4ecb2e83e4af8f7cb6cd661565508713613" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">默认样式</view>
     <switch class="init-switch" checked disabled="false"></switch>
@@ -56,11 +57,12 @@ sidebar: formlist_switch
     <text class="switch-text">已关闭</text>
 </view>
 ```
-
+:::
 ###  代码示例2 - 列表展示 
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">列表展示</view>
     <view class="item-scroll border-bottom">
@@ -73,11 +75,12 @@ sidebar: formlist_switch
     </view>
 </view>
 ```
-
+:::
 ###  代码示例3 - 包含禁用选项 
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>包含禁用选项</view>
@@ -93,11 +96,12 @@ sidebar: formlist_switch
     </view>
 </view>
 ```
-
+:::
 ###  代码示例4 - 自定义颜色 
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>自定义颜色</view>
@@ -113,18 +117,19 @@ sidebar: formlist_switch
     </view>
 </view>
 ```
-
+:::
 ###  代码示例5 type='switch'/ type='checkbox'的对比 
 
 <a href="swanide://fragment/f80fd7e081b4ba5e200cd5837705a5af1575544028129" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <switch class="init-switch" type="switch" checked disabled="false"></switch>
     <switch class="init-switch" type="checkbox"></switch>
 </view>
 ```
-
+:::
 ##  Bug & Tip 
 Tip：switch 类型切换时在 IOS 自带振动反馈，可在系统设置 -声音与触感 -系统触感反馈中关闭。

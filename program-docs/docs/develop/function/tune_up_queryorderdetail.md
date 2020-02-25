@@ -32,7 +32,7 @@ sidebar: tune_up_queryorderdetail
 
 **数据请求Demo**
 
-```javascript
+```js
 
 https://dianshang.baidu.com/platform/entity/openapi/queryorderdetail?appKey=MMM4oc&appId=10026&siteId=3747777038&orderId=1920891312&sign=TR%2FITwQxgJ7ZWfHOmhdijEMvOxcuzR5Z7SrcOtaFmNo%2FTVBachkwPP7jMnp5vPga9p3FCVGzzDLhdTrrDz%2BT0IMDd00YW4Uc1UobCE0q3roKpE2Yz05gt%2FJmNgvjghr%2FP9pv12PWg2BL2F5voxLj%2BHclo42tggRY1CaBGmJ41iE%3D
 
@@ -42,7 +42,7 @@ https://dianshang.baidu.com/platform/entity/openapi/queryorderdetail?appKey=MMM4
 
 **数据返回 Demo**
 
-```javascript
+```js
 {
     "errno": 0,
     "errmsg": "成功",

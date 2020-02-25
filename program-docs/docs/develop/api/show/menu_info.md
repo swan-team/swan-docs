@@ -3,7 +3,7 @@ title: swan.getMenuButtonBoundingClientRect
 header: develop
 nav: api
 sidebar: menu_info
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getMenuButtonBoundingClientRect/getMenuButtonBoundingClientRect
+webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getMenuButtonBoundingClientRect/getMenuButtonBoundingClientRect
 ---
 
 
@@ -36,27 +36,15 @@ sidebar: menu_info
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/getMenuButtonBoundingClientRect.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
  
 
 ###  代码示例1 - 属性全集 
 
 <a href="swanide://fragment/b7950613332a792d444e4e4842d063291569477029937" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
+ 
+:::codeTab
+```swan
 <view class="container">
     <view class="card-area">  
         <view class="list-area border-bottom" s-for="item in infoList">
@@ -67,8 +55,7 @@ sidebar: menu_info
     </view>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -123,19 +110,18 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 - 应用场景 
 
 <a href="swanide://fragment/50a8932d2b9cd6ee093c3b6895f5f3d81576573561180" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
+ 
+:::codeTab
+```swan
 <view class="status-height" style="height:{{ statusHeight }}px">状态栏</view>
 <view class="nav-height"  style="height:{{ navHeight }}px">导航栏</view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -164,3 +150,4 @@ Page({
 });
 
 ```
+:::

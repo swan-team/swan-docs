@@ -48,9 +48,10 @@ Object object
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="message">
         <text s-if="appear">小球出现</text>
@@ -70,7 +71,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -98,7 +99,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+ 
 
 ```css
 .wrap {
@@ -146,13 +147,12 @@ Page({
 }
   
 ```
-
+:::
 ###  代码示例2 - options为thresholds时 ：
 
 <a href="swanide://fragment/b82b0e3dd9bff9173965078c876d6bd01574304101063" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+:::codeTab
 ```js
 Page({
     data: {
@@ -178,13 +178,13 @@ Page({
     }
 });
 ```
-
+:::
 
 ###  代码示例3 - options为initialRatio时 ：
 
 <a href="swanide://fragment/2c3aea3f1bc1948d0ce69f56fa5acb571574931094969" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
+:::codeTab
 
 ```js
 Page({
@@ -211,12 +211,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例4 - options为selectAll时 ：
 
 <a href="swanide://fragment/cfae8c63d16efcf6a7b4d6b6b2f5d4f71574931774175" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中
+:::codeTab
 
 ```js
 Page({
@@ -239,3 +239,4 @@ Page({
     }
 });
 ```
+:::

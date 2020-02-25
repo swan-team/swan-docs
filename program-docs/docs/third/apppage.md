@@ -1,5 +1,5 @@
 ---
-title: 启动流程与能力
+title: 小程序包管理
 header: third
 nav: third
 sidebar: apppage

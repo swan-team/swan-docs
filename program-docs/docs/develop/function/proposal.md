@@ -31,7 +31,7 @@ sidebar: proposal
 
 **错误**的实现方式如下：
 **代码示例**
-```javascript
+```js
 // article.js 在文章页的实现片段：
 function goToAuthorPage() {
     // 从server请求作者信息
@@ -56,7 +56,7 @@ Page({
 
 **推荐**的实现方式是：
 **代码示例**
-```javascript
+```js
 // article.js 在文章页的实现片段：
 function goToAuthorPage() {
     // 跳转到作者页
@@ -85,7 +85,7 @@ Page({
 > Web 化环境标识主要服务于诸如区分环境统计等需求场景。
 
 **代码示例**
-```javascript
+```js
 getSystemInfo(e) {
     swan.getSystemInfo({
         success: res => {

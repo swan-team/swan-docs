@@ -3,7 +3,7 @@ title: scroll-view 可滚动视图区域
 header: develop
 nav: component
 sidebar: view_scroll-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/scroll-view/scroll-view
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/scroll-view/scroll-view
 ---
 
 
@@ -45,9 +45,10 @@ sidebar: view_scroll-view
 
  
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">纵向滚动</view>
     <scroll-view
@@ -75,7 +76,7 @@ sidebar: view_scroll-view
 </view>
 
 ```
-* 在 js 文件中
+ 
 
 ```js
 const order = ['one', 'two', 'three'];
@@ -130,14 +131,15 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例 2：横向滚动 
 
  
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="title">横向滚动</view>
     <scroll-view
@@ -157,7 +159,7 @@ Page({
 </view>
 
 ```
-* 在 js 文件中
+ 
 
 ```js
 const order = ['one', 'two', 'three'];
@@ -187,7 +189,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  Bug & Tip 
 
 * Tip：请勿在 scroll-view 中使用 textarea、map、canvas、video 组件；更多请看[原生组件说明](https://smartprogram.baidu.com/docs/develop/component/native/)。
@@ -202,8 +204,9 @@ Page({
 
 ###  参考示例 1： 横向滚动套纵向滚动常用业务场景  
 <a href="swanide://fragment/b8dd91b985ad471daeb43f8b79d7bc011575813000917" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-* 在 swan 文件中
-```html
+ 
+:::codeTab
+```swan
 <view class="wrap">
      <view class="card-area">
         <view class="top-description border-bottom">推荐列表</view>
@@ -221,13 +224,13 @@ Page({
     </view>
 </view>
 ```
-
+:::
 ###  参考示例 2: 隐藏scroll-view的滚动条 
 
 <a href="swanide://fragment/31ddeb76caca2583eba8b86df7dbf54a1575871524499" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 css 文件中
-
+ 
+:::codeTab
 ```css
 /* 添加此属性隐藏scroll-view的滚动条 */
 ::-webkit-scrollbar {
@@ -236,14 +239,15 @@ Page({
     color: transparent;
 }
 ```
-
+:::
 ###  参考示例 3: 竖向锚点示例
 
 <a href="swanide://fragment/6ee800a0957e3701c72c6c4ccff649d41576571802737" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class='scroll-box' style='height:{{ht}}px;'>
     <scroll-view scroll-y class='menu-tab' scroll-into-view="{{toView}}" scroll-with-animation="true">
         <view s-for="{{tabList}}" s-key="">
@@ -264,7 +268,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 var app = getApp();
@@ -358,6 +362,6 @@ Page({
     }
 })
 ```
-
+:::
 
 

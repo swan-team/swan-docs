@@ -3,7 +3,7 @@ title: live-player 实时视频播放器
 header: develop
 nav: component
 sidebar: media_live-player
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/live-player/live-player
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/live-player/live-player
 ---
 
 
@@ -133,9 +133,9 @@ sidebar: media_live-player
 
 <a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
+ 
+:::codeTab
+```swan
 <view class="live-play">
     <live-player id="myLive"
                  src="{{src}}"
@@ -159,7 +159,7 @@ sidebar: media_live-player
     </div>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 Page({
     data: {
@@ -213,7 +213,7 @@ Page({
     },
 });
 ```
-
+:::
 
 
 ##  Bug & Tip

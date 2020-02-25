@@ -3,7 +3,7 @@ title: 关注组件
 header: develop
 nav: extended
 sidebar: follow
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
+webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
 ---
 
 
@@ -15,7 +15,7 @@ sidebar: follow
 |属性名 | 类型 | 必填 | 默认值 |说明 |
 |---|---|---|---|---|
 |mode|String|否|text|关注按钮模式，有三种选择。icon: 仅有图标; text: 文字版本; mixture: 图标文字结合|
-|background-color|String|否|blue|当且仅当mode为text时有以下4种按钮颜色可选:blue; white; opacity; none。当且仅当mode为icon时有以下2种按钮颜色可选:blue; white;|
+|background-color|String|否|blue|mode为mixture时不支持自定义背景色，默认背景为蓝色；当且仅当mode为text时有以下4种按钮颜色可选:blue; white; opacity; none。当且仅当mode为icon时有以下2种按钮颜色可选:blue; white;|
 |is-followed|Boolean|是|false|关注的状态|
 |follow-text|Array|否|['关注', '已关注']|关注按钮上的文案|
 |is-show-toast|Boolean|否|true|关注后的结果反馈是否弹出toast提示|
@@ -23,7 +23,7 @@ sidebar: follow
 |bind:follow|EventHandle|||点击按钮事件|
 
 ## 示例
-<a href="swanide://fragment/6a2a2a4dc684732c95ca871c88acb7f61579074426749" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/b3b6335ac334d35a41e7fc0c457ea82f1582530427831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 
 ### 扫码体验
@@ -32,19 +32,7 @@ sidebar: follow
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
 
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/follow-demo.png">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ### 代码示例
 
@@ -54,6 +42,7 @@ npm install @smt-ui/content-component
 ```
 
 在 页面json 文件中：
+:::codeTab
 ```
 {
     "navigationBarTitleText": "标题",
@@ -62,10 +51,10 @@ npm install @smt-ui/content-component
     }
 }
 ```
-
-在 swan 文件中：
-
-```
+:::
+ 
+:::codeTab
+```swan
 <view>关注</view>
 <view class="con-demo">
     <c-follow
@@ -119,7 +108,7 @@ npm install @smt-ui/content-component
 </view>
 ```
 
-在 js 文件中：
+ 
 
 ```
 Page({
@@ -160,7 +149,7 @@ Page({
 ```
 
 
-在 css 文件中：
+ 
 ```
 .con-demo {
     display: flex;
@@ -171,4 +160,4 @@ Page({
     height: 50px;
 }
 ```
-
+:::

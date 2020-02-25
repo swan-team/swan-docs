@@ -54,7 +54,7 @@ sidebar: createinneraudiocontext_InnerAudioContext-destroy
 
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         disabled: true

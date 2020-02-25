@@ -55,15 +55,15 @@ Object object
 ###  代码示例1 
 <a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```html
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <button bind:tap="navigateTo" type="primary" hover-stop-propagation="true">跳转新页面</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -75,12 +75,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 - 根据页面栈来判断页面层级 
 <a href="swanide://fragment/c6fca5358fe9204946156bbe2264b1941575403962704" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 js 文件中
-
+ 
+:::codeTab
 ```js
 // 目标页面
 Page({
@@ -100,6 +100,7 @@ Page({
 });
 
 ```
+:::
 ## Bug & Tip 
 jssdk 在 web-view 中使用 swan.navigateTo 接口跳转 success、fail、complete 回调函数不显示。
  

@@ -3,7 +3,7 @@ title: input 输入框
 header: develop
 nav: component
 sidebar: formlist_input
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/input
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/input
 ---
 
 **解释**：输入框，v3.105.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。
@@ -72,9 +72,10 @@ sidebar: formlist_input
 <a href="swanide://fragment/06c050eeb63c8b030a17e943866a8c6c1575286848934" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 
 <view class="wrap">
     <view class="card-area">
@@ -83,15 +84,16 @@ sidebar: formlist_input
     </view>
 </view>
 ```
-
+:::
 ###  代码示例2 - 自定义输入控制 ：
 
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 
 <view class="wrap">
     <view class="card-area">
@@ -126,9 +128,9 @@ sidebar: formlist_input
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         inputValue: '',
@@ -167,15 +169,17 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例3 - type 有效值 ：
 
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 
 <view class="wrap">
     <view class="card-area">
@@ -218,15 +222,16 @@ Page({
     </view>
 </view>
 ```
-
+:::
 ### 代码示例4 - bindinput实时获取input输入值 ：
 
 <a href="swanide://fragment/aef77cb4643dcca1cec67fcf0feac9741575287321184" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description">
@@ -239,9 +244,9 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     bindKeyInput: function (e) {
         this.setData({
@@ -250,15 +255,17 @@ Page({
     }
 });
 ```
+:::
 
-###代码示例5 - input做业务搜索框 ：
+### 代码示例5 - input做业务搜索框 ：
 
 <a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <!-- 搜索框 -->
     <view class="search">
@@ -305,9 +312,9 @@ Page({
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         value: '',
@@ -360,7 +367,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 ##  Bug & Tip

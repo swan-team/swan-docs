@@ -60,7 +60,7 @@ sidebar: dev
 </view>
 ```
 
-```javascript
+```js
 // xxx.js
 Page({
     data: {
@@ -82,7 +82,7 @@ Page({
     </view>
 </view>
 ```
-```javascript
+```js
 Page({
     data: {
 	persons: [
@@ -105,7 +105,7 @@ Page({
 <view s-else>Other</view>
 ```
 
-```javascript
+```js
 Page({
     data: {
 	is4G: true,
@@ -129,7 +129,7 @@ Page({
 </view>
 ```
 
-```javascript
+```js
 Page({
     loadMore: function () {
 	console.log('加载更多被点击');
@@ -165,7 +165,7 @@ Page({
 <view data-swan="1" bind:tap="viewtap">dataset-test</view>
 ```
 
-```javascript
+```js
 Page({
     viewtap: function (event) {
 	console.log('value is:', event.currentTarget.dataset.swan);// 输出1
@@ -182,7 +182,7 @@ Page({
 // 同<view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
 ```
 
-```javascript
+```js
 Page({
     data: {
         test: 1
@@ -201,7 +201,7 @@ Page({
 <view data-swan="{{test}}" bind:tap="viewtap">dataset-test</view>
 ```
 
-```javascript
+```js
 Page({
     data: {
         test: 1,
@@ -231,7 +231,7 @@ Touch 对象
  <view bind:touchstart="viewtouchstart">viewtouchstart</view>
 ```
 
-```javascript
+```js
 Page({
     viewtouchstart: function (event) {
 	    console.log('value is:', event.touches);

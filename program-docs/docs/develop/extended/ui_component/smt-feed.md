@@ -49,9 +49,10 @@ sidebar: smt-feed
 
 ###  代码示例
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <!-- 手势下拉刷新 & 触底加载 -->
 <smt-feed
     class="smt-feed pull-down-refresh"
@@ -65,10 +66,9 @@ sidebar: smt-feed
 </smt-feed>
 ```
 
+ 
 
-* 在 js 文件中
-
-```javascript
+```js
 async onRefresh() {
     const refresh = await selComponent(this, '.pull-down-refresh');
     const {data: list} = await fetchData();
@@ -98,8 +98,7 @@ async scrollToLower() {
 }
 ```
 
-
-* 在 css 文件中
+ 
 
 ```css
 .smt-feed {
@@ -108,7 +107,7 @@ async scrollToLower() {
 }
 ```
 
-
+:::
 ## Bug&Tip
 
 * Tip：和scroll-view一样，信息流组件作为局部滚动组件，必须在它的父级或本身指定高度。

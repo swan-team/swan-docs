@@ -37,8 +37,9 @@ sidebar: formlist_picker-view
 
 ###  代码示例 
 
-* 在 swan 文件中
-```xml
+ 
+:::codeTab
+```swan
 <view class="wrap">
     <view class="page-body">
     <view class="selected-date">{{year}}年{{month}}月{{day}}日</view>
@@ -56,7 +57,7 @@ sidebar: formlist_picker-view
   </view>
 </view>
 ```
-* 在 js 文件中
+ 
 ```js
 const date = new Date()
 const years = []
@@ -93,7 +94,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  Bug & Tip 
 
 Tip：其中只可放置`<picker-view-column/>`组件，其他节点不会显示。

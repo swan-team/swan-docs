@@ -3,7 +3,7 @@ title: map 地图
 header: develop
 nav: component
 sidebar: map
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/map/map
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/map/map
 ---
  
 
@@ -64,10 +64,10 @@ sidebar: map
 
 ###  代码示例 ：地图
 
+ 
 
-* 在 swan 文件中
-
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -98,7 +98,7 @@ sidebar: map
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -201,7 +201,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 ## markers
@@ -277,9 +277,10 @@ Page({
 <a href="swanide://fragment/16a9806ccc835e31e5a7a4183f78435c1574840582474" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -292,7 +293,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -365,7 +366,7 @@ Page({
     }
 });
 ```
-
+:::
 
 # polyline
 **解释**：指定一系列坐标点，从数组第一项连线至最后一项。
@@ -404,9 +405,10 @@ Page({
 <a href="swanide://fragment/831a5302b414013067743cb6286084171574841164008" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -417,7 +419,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -443,7 +445,7 @@ Page({
     }
 });
 ```
-
+:::
 # polygon
 **解释**：指定一系列坐标点，根据 points 坐标数据生成闭合多边形。
 
@@ -478,9 +480,10 @@ Page({
 <a href="swanide://fragment/be2a2d5636c7a7421f64cd4e2c79ed301574841928160" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -490,8 +493,7 @@ Page({
     </map>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -520,7 +522,7 @@ Page({
     }
 });
 ```
-
+:::
 # circle
 **解释**：在地图上显示圆
 
@@ -555,9 +557,10 @@ Page({
 <a href="swanide://fragment/6129297d298e20dc7e0b3f6d56ca24f01574842777356" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -568,7 +571,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -587,7 +590,7 @@ Page({
     }
 });
 ```
-
+:::
 # control
 
 **解释**：在地图上显示控件，控件不随着地图移动。
@@ -631,9 +634,10 @@ Page({
 <a href="swanide://fragment/5e5072a1342f5d576e57ffab2ac469d81574843304198" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <map
         style="width: 100%; height: 300px;"
@@ -646,7 +650,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -673,7 +677,7 @@ Page({
     }
 });
 ```
- 
+::: 
 
 
 ###  代码示例 - 错误用法：原生组件设置border无效，也不可用cover-view覆盖为圆角 ：
@@ -681,9 +685,10 @@ Page({
 <a href="swanide://fragment/23aba8b527f1ab7a948aed29e14dc1251576052042133" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
         </a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <view class="wrap">
     <cover-view class="card-area">
         <map
@@ -694,7 +699,7 @@ Page({
 </view>
 ```
 
-* 在 css 文件中
+ 
 
 ```js
 .card-area { 
@@ -702,7 +707,7 @@ Page({
     height: 2.18rem;
 }
 ```
-
+:::
 ##  Bug & Tip 
 
 * Tip：地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。

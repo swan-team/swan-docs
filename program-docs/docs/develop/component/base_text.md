@@ -3,7 +3,7 @@ title: text 文本
 header: develop
 nav: component
 sidebar: base_text
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/text/text
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/text/text
 ---
 
 
@@ -45,9 +45,10 @@ sidebar: base_text
 ###  代码示例：
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="page-section page-section-spacing">
         <view class="text-box">
@@ -62,7 +63,7 @@ sidebar: base_text
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 const texts = [
@@ -110,6 +111,9 @@ Page({
 });
 
 ```
+
+:::
+
 ## 参考示例
 
 ###  图片示例 
@@ -130,9 +134,10 @@ Page({
 
 <a href="swanide://fragment/0975d407116406962b9346f8d66d80ce1577170406870" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
@@ -163,7 +168,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -174,7 +179,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ##  Bug & Tip 
 

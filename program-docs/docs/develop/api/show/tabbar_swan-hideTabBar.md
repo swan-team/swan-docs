@@ -48,16 +48,17 @@ Object object
 
 <a href="swanide://fragment/5aa2f4593413e51fd723d5effc62d8221574138247912" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="wrap">      
     <button type="primary" bindtap="showTabBar">showTabBar</button>
     <button type="primary" bindtap="hideTabBar">hideTabBar</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -88,7 +89,7 @@ Page({
     }
 });
 ```
-
+:::
 ##  错误码
 
 ###  Android

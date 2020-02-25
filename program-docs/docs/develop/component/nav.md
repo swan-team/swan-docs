@@ -3,7 +3,7 @@ title: navigator 页面导航
 header: develop
 nav: component
 sidebar: nav
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/navigator/navigator
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/navigator/navigator
 ---
 
  
@@ -77,9 +77,10 @@ sidebar: nav
 
 <a href="swanide://fragment/9999477aff1012b1f8d10125c245360f1565511678971" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="card-area">
     <button type="primary">
 	<navigator target="self" open-type="navigate" url="/pages/detail/detail?id=新页面,点击左上角返回回到之前页面" hover-class="navigator-hover" hover-stop-propagation="true">
@@ -116,7 +117,7 @@ sidebar: nav
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -132,18 +133,19 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 
 
 <a href="swanide://fragment/665a831e40430f98f90b77e1bb90db7e1575878989152" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 detail.swan 文件中
+* 在 detail 文件中
 
-```html
+:::codeTab
+```swan
 <web-view src="{{url}}"></web-view>
 ```
 
-* 在 detail.js 文件中
+ 
 
 ```js
 Page({
@@ -159,10 +161,11 @@ Page({
     }
 });
 ```
+:::
+* 在 index 文件中
 
-* 在 index.swan 文件中
-
-```html
+:::codeTab
+```swan
 <view class="wrap">
     <button type="primary">
         <navigator target="self" open-type="navigate" url="/detail/detail?webViewUrl=https://smartprogram.baidu.com&Math.radom()" hover-class="navigator-hover" hover-stop-propagation="true">
@@ -171,12 +174,14 @@ Page({
     </button>
 </view>
 ```
-
+:::
 ###  说明 :
 `navigator-hover` 默认为:
+:::codeTab
 ```css
 {
     background-color: rgba(0, 0, 0, 0.1);
     opacity: 0.7;
 }
 ```
+:::

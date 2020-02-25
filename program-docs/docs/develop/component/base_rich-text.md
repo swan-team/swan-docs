@@ -3,7 +3,7 @@ title: rich-text 富文本
 header: develop
 nav: component
 sidebar: base_rich-text
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/rich-text/rich-text
+webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/rich-text/rich-text
 ---
 
 **解释**： 富文本，nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
@@ -100,9 +100,10 @@ sidebar: base_rich-text
 ###  代码示例 
 
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="rich-text">
     <view class="renders">
         <view class="renders_title">通过HTML String渲染</view>
@@ -137,7 +138,7 @@ sidebar: base_rich-text
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 const htmlSnip =
@@ -200,7 +201,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
  
@@ -228,9 +229,10 @@ Page({
 
 <a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="rich-text">
     <view class="renders">
         <view class="renders_title">通过HTML String渲染</view>
@@ -244,7 +246,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 const htmlSnip =
@@ -262,7 +264,7 @@ Page({
     }
 });
 ```
-
+:::
 
 
 
@@ -271,9 +273,10 @@ Page({
 
 <a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```html
+:::codeTab
+```swan
 <view class="rich-text">
     <view class="renders">
         <view class="renders_title">通过节点渲染</view>
@@ -287,8 +290,7 @@ Page({
     </view>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 const nodeSnip
@@ -326,3 +328,4 @@ Page({
     }
 });
 ```
+:::

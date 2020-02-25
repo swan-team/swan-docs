@@ -101,7 +101,7 @@ swanInvoke功能：
 
     像其他javascript库一样，在html中用script标签引入。
     **代码示例**
-    ```javascript
+    ```js
     <!DOCTYPE html>
     <html>
     <head>

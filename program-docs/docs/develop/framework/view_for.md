@@ -22,7 +22,7 @@ sidebar: view_for
 </view>
 ```
 
-```javascript
+```js
 // for-demo.js
 Page({
     data: {

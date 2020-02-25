@@ -3,7 +3,6 @@ title: camera 相机
 header: develop
 nav: component
 sidebar: media_camera
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/camera/camera
 ---
 
  
@@ -52,9 +51,10 @@ sidebar: media_camera
 
 <a href="swanide://fragment/e57c71266aac86d6a0f6253f3c0f8de41565512985352" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+ 
 
-```xml
+:::codeTab
+```swan
 <div class="camera">
     <camera device-position="{{device}}" 
             flash="off" 
@@ -73,9 +73,9 @@ sidebar: media_camera
 
 ```
 
-* 在 js 文件中
+ 
 
-```javascript
+```js
 Page({
     data: {
         src: '',
@@ -137,7 +137,7 @@ Page({
     }
 });
 ```
- 
+::: 
 
 
 ##  Bug & Tip 

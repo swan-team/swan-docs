@@ -49,7 +49,7 @@ sidebar: backgroundaudiomanager_BackgroundAudioManager-play
 
 * 在 js 文件中
 
-```javascript
+```js
 
 Page({
     onLoad() {

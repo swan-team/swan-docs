@@ -60,7 +60,7 @@ Number position
 ```
 * 在 js 文件中
 
-```javascript
+```js
 Page({
     data: {
         path: 'https://efe-h2.cdn.bcebos.com/ceug/resource/res/2020-1/1577964961344/003e2f0dcd81.mp4'
