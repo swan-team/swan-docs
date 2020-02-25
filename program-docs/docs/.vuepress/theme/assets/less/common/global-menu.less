@@ -8,10 +8,16 @@
         position: absolute;
         width: 340px;
         height: 702px;
-        transform: scale(0.824);
-        position: fixed;
+        transform: scale(.824);
         right: calc(2vw - 30px);
-        top: 80px;
+        top: 100px;
+        // position: fixed;
+
+        &-fixed {
+            position: fixed;
+            top: 40px;
+        }
+
     }
 
     .web-simulator {
@@ -27,18 +33,6 @@
             width: 320px;
             height: 569px;
             position: relative;
-
-            // &-mask {
-            //     position: absolute;
-            //     top: 20px;
-            //     width: 100%;
-            //     height: 50px;
-            //     background-color: @bg-gray4;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     font-size: .17rem;
-            // }
 
             &-status {
                 display: inline-block;
@@ -123,5 +117,25 @@
 @media screen and (max-width: @mobile-max-width) {
     .global-menu-simulator {
        display: none;
+    }
+}
+
+@media screen and (max-height: 899px) {
+    .global-menu {
+        &-simulator {
+            // transform: scale(0.75);
+            transform: scale(.712);
+            top: 40px;
+            right: calc(2vw - 47px);
+
+            &-fixed {
+                top: -20px
+            }
+        }
+
+        &-botton-webview {
+            top: 590px;
+            // top: 640px;
+        }
     }
 }

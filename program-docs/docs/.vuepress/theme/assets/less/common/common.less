@@ -9,7 +9,7 @@ body {
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    overflow: auto;
+    overflow-y: scroll !important;
 }
 
 * {
@@ -328,5 +328,11 @@ article blockquote > :last-child {
             position: fixed;
             overflow: auto;
         }
+    }
+}
+
+@media screen and (max-height: 899px) {
+    .page-container-right {
+        width: calc(98vw - 530px);
     }
 }
