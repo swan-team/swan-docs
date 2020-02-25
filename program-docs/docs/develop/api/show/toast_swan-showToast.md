@@ -84,7 +84,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({

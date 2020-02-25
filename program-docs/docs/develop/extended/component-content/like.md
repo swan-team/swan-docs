@@ -21,7 +21,7 @@ sidebar: like
 |like-num|Number|否|0|点赞数|
 |like-type|Number|否|0|点赞的对象类型，0:代表动态; 1:代表评论|
 |like-param|Object|是||点赞服务需要的必要参数|
-|like-param.openid|String|是||用户身份唯一标识，[获取方法](https://smartapp.baidu.com/docs/develop/api/open/log_Session-Key/)|
+|like-param.openid|String|是||用户身份唯一标识，[获取方法](https://smartprogram.baidu.com/docs/develop/api/open/log_Session-Key/)|
 |like-param.snid|String|是||动态id,在开发者侧的唯一标识。当为空，默认开发者将数据托管在宿主，小程序侧创建动态后返回唯一标识给开发者。|
 |like-param.srid|String|是||评论id。不为空，表示对评论进行点赞。若小程序侧没有 srid 对应的标识，则认为此时对主题进行点赞。|
 |like-param.appkey|String|是||小程序App Key，在小程序管理中心>设置>开发设置中获取|
