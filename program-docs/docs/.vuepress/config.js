@@ -19,6 +19,7 @@ module.exports = {
     port: 4000,
     dest: 'output/miniappdocs-program',
     cache: false,
+    shouldPrefetch: () => false,
     themeConfig: {
         navData: navLoader.navData,
         nav: {
