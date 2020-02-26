@@ -34,7 +34,7 @@
                     text: 主体信息填写
                     name: register_addbodyinfo
               -
-                link: /introduction/authenticity
+
                 text: 真实性认证
                 name: authenticity
                 sidebar:
