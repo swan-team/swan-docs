@@ -37,8 +37,19 @@
     }
 
     &-item-active {
-        border-bottom: 3px solid @border-black1;
+        // border-bottom: 3px solid @border-black1;
         color: @font-default !important;
+    }
+
+    &-item-active:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: @border-black1;
+        border-radius: 1.5px;
+        max-width: 56px;
+        margin: 0 auto;
     }
 
     &-fixed {
