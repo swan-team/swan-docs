@@ -43,11 +43,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/addPathAndKeywords
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数**
-
-| 字段名      | 类型 | 描述           |
-| ----------- | ---- | -------------- |
-|  |   |  |
+  
 
 **请求实例**
 
@@ -97,11 +93,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/updatePathAndKeywords
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数**
-
-| 字段名      | 类型 | 描述           |
-| ----------- | ---- | -------------- |
-|  |   |  |
+  
 
 **请求实例**
 
@@ -147,11 +139,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/deletePath
 | msg   | string | 状态描述 | 参数错误 |
 | data  | object | 响应参数 | --       |
 
-**响应参数**
-
-| 字段名      | 类型 | 描述           |
-| ----------- | ---- | -------------- |
-|  |   |  |
+  
 
 **请求实例**
 
