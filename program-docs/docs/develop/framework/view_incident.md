@@ -115,11 +115,11 @@ Page({
 |---- | ---- |---- |
 |type  |  String | 事件的类型|
 |timeStamp |  Integer | 事件触发的时间戳（毫秒）|
-|target | Object | 触发事件的组件的属性值集合，详细属性参见 [target](./#target) |
-|currentTarget |  Object | 当前组件的一些属性值集合，详细属性参见 [currentTarget](./#currentTarget) |
-|detail | Object | 自定义事件对象属性列表，详细属性参见 [detail](./#detail)|
-|touches |  Array   | 触摸事件类型存在，存放当前停留在屏幕中的触摸点信息的数组，touch 详细属性参见 [touch](./#touch) |
-|changedTouches |  Array   | 触摸事件类型存在，存放当前变化的触摸点信息的数组, changedTouch [changedTouch](./#changedTouch)  |
+|target | Object | 触发事件的组件的属性值集合，详细属性参见 [target](#target) |
+|currentTarget |  Object | 当前组件的一些属性值集合，详细属性参见 [currentTarget](#currentTarget) |
+|detail | Object | 自定义事件对象属性列表，详细属性参见 [detail](#detail)|
+|touches |  Array   | 触摸事件类型存在，存放当前停留在屏幕中的触摸点信息的数组，touch 详细属性参见 [touch](#touch) |
+|changedTouches |  Array   | 触摸事件类型存在，存放当前变化的触摸点信息的数组, changedTouch [changedTouch](#changedTouch)  |
 
 ###  代码示例 ：
 
@@ -161,7 +161,7 @@ Page({
 |---- | ---- |---- |
 |id | String | 触发事件组件的 id|
 |tagName | String | 触发事件组件的类型|
-|dataset | Object | 触发事件组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](./#dataset) |
+|dataset | Object | 触发事件组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](#dataset) |
 
 #### currentTarget
 
@@ -169,7 +169,7 @@ Page({
 |---- | ---- |---- |
 |id | String | 事件绑定的组件的 id|
 |tagName | String | 事件绑定的组件的类型|
-|dataset | Object | 事件绑定的组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](./#dataset) |
+|dataset | Object | 事件绑定的组件上由data-开头的自定义属性组成的集合,详细属性参见 [dataset](#dataset) |
 
 #### detail
 是自定义事件所携带的数据，具体详见[组件](https://smartprogram.baidu.com/docs/develop/component/component/)定义中各个事件的定义。

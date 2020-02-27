@@ -27,7 +27,6 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "markdown-it-task-checkbox": "^1.0.6",
-    "strip-ansi": "^6.0.0",
     "vue-clipboard2": "^0.3.1",
     "vuepress": "^1.2.0",
     "vuepress-plugin-container": "^2.1.2",

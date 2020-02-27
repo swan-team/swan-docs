@@ -261,7 +261,7 @@ sidebar: apilist
 |API 名称|解释|
 |:--|:--|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>|获取第三方平台自定义的数据字段。|
-|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/">swan.getExtConfigSync</a>|[swan.getExtConfig](./#getExtConfig)的同步版本。|
+|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfigSync/">swan.getExtConfigSync</a>|<a href="https://smartprogram.baidu.com/docs/develop/api/getextconfig/swan-getExtConfig/">swan.getExtConfig</a>的同步版本。|
  
 
 ## 开放接口
