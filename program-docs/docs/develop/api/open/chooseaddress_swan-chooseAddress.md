@@ -121,4 +121,7 @@ Page({
     }
 });
 ```
+
+## Web 态 Tips：
+Web 态暂不支持 chooseAdress API 功能。在 Web 态会做打开百度 App 的降级处理。
  
