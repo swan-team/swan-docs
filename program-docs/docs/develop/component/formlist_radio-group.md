@@ -3,7 +3,7 @@ title: radio-group 单项选择器组
 header: develop
 nav: component
 sidebar: formlist_radio-group
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/radio/radio
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/radio/radio
 ---
 
 

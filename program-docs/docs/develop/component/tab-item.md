@@ -3,7 +3,7 @@ title: tab-item 标签栏子项
 header: develop
 nav: component
 sidebar: tab-item
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
 ---
 
 
