@@ -34,7 +34,7 @@
                     text: 主体信息填写
                     name: register_addbodyinfo
               -
-                link: /introduction/authenticity
+
                 text: 真实性认证
                 name: authenticity
                 sidebar:
@@ -150,7 +150,7 @@
                     name: accessfeed_monitor
 
               -
-                link: /introduction/auditinginfo_settled
+
                 text: 信息流审核规范
                 name: auditinginfo_settled
                 sidebar:

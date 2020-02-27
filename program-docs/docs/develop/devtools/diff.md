@@ -46,7 +46,7 @@ sidebar: diff
 |[swan.addEventOnCalendar](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-addEventOnCalendar/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 |
 |[swan.getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) | 部分属性开发者工具暂不支持,详情请看详情页 |
 |[swan.getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfoSync/) | 部分属性开发者工具暂不支持,详情请看详情页 |
-|[swan.compressImage](https://smartprogram.baidu.com/docs/develop/api/media_image/#swan-compressImage/) | 降级支持，开发者工具控制台会给出提示，请使用真机调试 | 
+|[swan.FileSystemManager](https://smartapp.baidu.com/docs/develop/api/file/swan-getFileSystemManager/) | 降级支持，若访问小程序源代码中的资源,开发者工具暂时只支持媒体文件(音频,视频,图片等),若访问小程序源代码中的文件夹,不支持空文件夹 | 
 |[swan.getLocation](https://smartprogram.baidu.com/docs/develop/api/location/swan-getLocation/) | 工具暂不支持返回wgs84坐标系 | 
 |[swan.onMemoryWarning](https://smartprogram.baidu.com/docs/develop/api/device_sys/onmemory/) | 通过“模拟操作->内存警告”触发 | 
 |[swan.onNetworkStatusChange](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-onNetworkStatusChange/) | 通过“模拟操作->网络”切换网络触发 | 
