@@ -147,3 +147,7 @@ Page({
 
 文件的临时路径，在智能小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 swan.saveFile，在智能小程序下次启动时才能访问得到。
 
+<!-- ## 小程序 Web 态 Tip
+1. 在 Web 态内，chooseImage 返回字段 tempFilePaths 数组的元素值为浏览器所支持的 blob URL，blob URL 的格式为 `blob:http://XXX`，比如值可能为 `"blob:https://9zs64x.smartapps.cn/52f855e3-2d9d-49b5-aeb4-96534135f0a9"`。
+
+2. 文件的临时路径仅在浏览器关闭前有效。受浏览器限制，无法使用 swan.saveFile 在本地持久保存文件。 -->
