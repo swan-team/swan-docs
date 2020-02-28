@@ -21,6 +21,7 @@ sidebar: register_addbodyinfo
 
 ![图片](../../img/introduction/register/p8.png)
 
- **审核通过**：将直接进入到小程序开发者后台。    
+
+ **审核通过**：将直接进入到小程序开发者后台创建小程序，[完善基本信息](https://smartprogram.baidu.com/docs/introduction/register_consummate/)也可以进行[真实性认证](https://smartprogram.baidu.com/docs/introduction/authenticity/)。
  **审核被拒绝**：请参考拒绝原因点击返回修改后重新提交主体认证信息，如有疑问请咨询客服。
     ![图片](../../img/introduction/register/1.6.png)

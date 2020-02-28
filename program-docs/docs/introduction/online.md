@@ -5,6 +5,9 @@ nav: book
 sidebar: online
 ---
 
+代码包审核会对小程序体验、功能、内容与名称、类目的相关性等维度进行审核，具体审核规则请参考[平台运营规范](https://smartprogram.baidu.com/docs/operations/specification/)
+
+> 提交审核前需确保服务类目审核通过，否则小程序将无法提交代码包。
 
 1. 当开发完成后可从开发者工具中点击发布上传代码包。
 
