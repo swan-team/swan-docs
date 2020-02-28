@@ -3,7 +3,7 @@ title: swan.openLocation
 header: develop
 nav: api
 sidebar: swan-openLocation
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/openLocation/openLocation
+# webUrl: https://qft12m.smartapps.cn/api/openLocation/openLocation
 ---
 
 **解释**：使用宿主 App 内置地图查看位置。

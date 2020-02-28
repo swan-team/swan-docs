@@ -3,7 +3,7 @@ title:  swan.onMemoryWarning
 header: develop
 nav: api
 sidebar:  onmemory
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onMemoryWarning/onMemoryWarning
+# webUrl: https://qft12m.smartapps.cn/api/onMemoryWarning/onMemoryWarning
 ---
 
  

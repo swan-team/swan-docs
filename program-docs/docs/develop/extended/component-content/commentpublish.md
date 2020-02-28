@@ -3,7 +3,7 @@ title: 半屏内容发布器带服务版
 header: develop
 nav: extended
 sidebar: commentpublish
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/comment-publisher/comment-publisher
+# webUrl: https://qft12m.smartapps.cn/extensions/component/comment-publisher/comment-publisher
 ---
 
 

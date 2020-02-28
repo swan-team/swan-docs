@@ -3,7 +3,7 @@ title: swan.onDeviceMotionChange
 header: develop
 nav: api
 sidebar: swan-onDeviceMotionChange
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/deviceMotion/deviceMotion
+# webUrl: https://qft12m.smartapps.cn/api/deviceMotion/deviceMotion
 ---
 
 

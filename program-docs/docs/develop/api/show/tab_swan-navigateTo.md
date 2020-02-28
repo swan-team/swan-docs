@@ -3,7 +3,7 @@ title: swan.navigateTo
 header: develop
 nav: api
 sidebar: tab_swan-navigateTo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
 ---
 
 > * 以下 5 个 API 都有与之功能一致的 [navigator 组件](/develop/component/nav/) 声明方式。
@@ -39,20 +39,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/navigeto.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-###  代码示例1 
+###  代码示例
 <a href="swanide://fragment/0d35934b50b1749bc787786f3cd140241574138803752" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
  
@@ -76,7 +63,11 @@ Page({
 });
 ```
 :::
-###  代码示例2 - 根据页面栈来判断页面层级 
+
+
+## 参考示例
+
+###  参考示例 - 根据页面栈来判断页面层级 
 <a href="swanide://fragment/c6fca5358fe9204946156bbe2264b1941575403962704" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
  

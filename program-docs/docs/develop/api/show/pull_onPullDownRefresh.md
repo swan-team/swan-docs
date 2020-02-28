@@ -3,7 +3,7 @@ title: onPullDownRefresh
 header: develop
 nav: api
 sidebar:  pull_onPullDownRefresh
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
+# webUrl: https://qft12m.smartapps.cn/api/pullDownRefresh/pullDownRefresh
 ---
 
 
@@ -23,7 +23,19 @@ sidebar:  pull_onPullDownRefresh
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+
+###  图片示例  
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/images/onPullDownRefresh.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ### 代码示例 
 

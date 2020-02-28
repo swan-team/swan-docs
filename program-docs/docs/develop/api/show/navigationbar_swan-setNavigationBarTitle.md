@@ -3,7 +3,7 @@ title:  swan.setNavigationBarTitle
 header: develop
 nav: api
 sidebar: navigationbar_swan-setNavigationBarTitle
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setNavigationBarTitle/setNavigationBarTitle
+webUrl: https://qft12m.smartapps.cn/api/setNavigationBarTitle/setNavigationBarTitle
 ---
  
 
@@ -35,30 +35,14 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/setnavigationbartitle.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
- 
-
 ###  代码示例 
 
-
- 
 :::codeTab
 ```swan
 <view class="container">
     <view class="card-area">
         <input bind:input="titleInput" class="input border-bottom" type="text" placeholder="请输入页面标题并点击设置即可"/>
-        <button bind:tap="setNavigationBarTitle" type="primary" hover-stop-propagation="true">设置框架标题</button>
+        <button bind:tap="setNavigationBarTitle" type="primary" hover-stop-propagation="true">设置</button>
     </view>
 </view>
 ```

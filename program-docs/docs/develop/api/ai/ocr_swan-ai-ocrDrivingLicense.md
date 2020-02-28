@@ -3,7 +3,7 @@ title: swan.ai.ocrDrivingLicense
 header: develop
 nav: api
 sidebar: ocr_swan-ai-ocrDrivingLicense
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/ocrDrivingLicense/ocrDrivingLicense
+# webUrl: https://qft12m.smartapps.cn/api/ocrDrivingLicense/ocrDrivingLicense
 ---
 
   

@@ -3,7 +3,7 @@ title: swan.ai.faceDetect
 header: develop
 nav: api
 sidebar: face_swan-ai-faceDetect
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/faceDetect/faceDetect
+# webUrl: https://qft12m.smartapps.cn/api/faceDetect/faceDetect
 ---
 
 

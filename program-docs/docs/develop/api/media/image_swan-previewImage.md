@@ -3,7 +3,7 @@ title: swan.previewImage
 header: develop
 nav: api
 sidebar: image_swan-previewImage
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/previewImage/previewImage
+# webUrl: https://qft12m.smartapps.cn/api/previewImage/previewImage
 ---
 
 

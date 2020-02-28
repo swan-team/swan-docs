@@ -3,7 +3,7 @@ title: SelectorQuery
 header: develop
 nav: api
 sidebar: query_SelectorQuery
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createSelectorQuery/createSelectorQuery
+# webUrl: https://qft12m.smartapps.cn/api/createSelectorQuery/createSelectorQuery
 ---
  
 **解释**： 选择器
@@ -29,7 +29,18 @@ webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createSelectorQ
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+### 图片示例
+<div class="m-doc-custom-examples">
+    <div class="m-doc-custom-examples-correct">
+        <img src="https://b.bdstatic.com/miniapp/image/createSelectorQuery.gif">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>
+    <div class="m-doc-custom-examples-correct">
+        <img src=" ">
+    </div>     
+</div>
 
 ### 代码示例 
 

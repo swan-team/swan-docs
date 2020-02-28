@@ -3,7 +3,7 @@ title: swan.vibrateLong
 header: develop
 nav: api
 sidebar: swan-vibrateLong
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/vibrate/vibrate
+# webUrl: https://qft12m.smartapps.cn/api/vibrate/vibrate
 ---
 
 

@@ -3,7 +3,7 @@ title: form 表单
 header: develop
 nav: component
 sidebar: formlist_form
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/form/form
+webUrl: https://qft12m.smartapps.cn/component/form/form
 ---
 
  

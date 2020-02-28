@@ -3,7 +3,7 @@ title: view 视图容器
 header: develop
 nav: component
 sidebar: view_view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
+webUrl: https://qft12m.smartapps.cn/component/view/view
 ---
 
 
@@ -29,7 +29,7 @@ sidebar: view_view
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
+
 
 ###  代码示例1： 横向布局  
 
