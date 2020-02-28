@@ -22,7 +22,7 @@ Object object
 |title |String  |  否  | | 分享标题|
 |content |String  |  否 || 分享内容|
 |imageUrl |String  |  否  | | 分享图标|
-|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|
+|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。如果 path 中的参数包含中文字符，需通过 encodeURIComponent 对中文字符进行编码。|
 |success |Function  |  否  | | 接口调用成功的回调函数|
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -104,5 +104,10 @@ Page({
 ```
 ## Bug & Tip 
 
-bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
+- tip: 如果入参 path 中的参数包含中文字符，需要通过 encodeURIComponent 对中文字符进行编码，举例：
+
+```js
+let path = '/a/b?key=' + encodeURIComponent('中文');
+```
+- bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 
