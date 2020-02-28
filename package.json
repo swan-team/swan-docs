@@ -8,7 +8,7 @@
     "prebuild": "npm i",
     "predev:program": "npm i",
     "prebuild:program": "npm i",
-    "dev:game": "cd game-docs && npm run dev",
+    "dev:game": "cd game-docs && npm start",
     "build:game": "cd game-docs && npm run build",
     "dev:program": "vuepress dev program-docs/docs --no-cache",
     "build:program": "vuepress build program-docs/docs --no-cache",
