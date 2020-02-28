@@ -104,6 +104,10 @@ Page({
 ```
 ## Bug & Tip 
 
-- tip: 如果入参 path 中的参数包含中文字符，需要通过 encodeURIComponent 对中文字符进行编码。 
+- tip: 如果入参 path 中的参数包含中文字符，需要通过 encodeURIComponent 对中文字符进行编码，举例：
+
+```js
+let path = '/a/b?key=' + encodeURIComponent('中文');
+```
 - bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 
