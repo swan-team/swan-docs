@@ -3,7 +3,7 @@ title: swan.switchTab
 header: develop
 nav: api
 sidebar: tab_swan-switchTab
-webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
+# webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
 ---
 
   
