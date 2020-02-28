@@ -3,7 +3,7 @@ title: swan.setTabBarBadge
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarBadge
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/api/tabBar/tabBar
 ---
  
 **解释**：为 tabBar 某一项的右上角添加文本。
@@ -34,51 +34,25 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/tabbarbadge.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
 
 ### 代码示例 
 
  
 
 :::codeTab
-```swan
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarBadge">setTabBarBadge</button>
-    <button type="primary" bindtap="removeTabBarBadge">removeTabBarBadge</button>
-</view>
-```
-
- 
 
 ```js
 Page({
-    setTabBarBadge() {
-        swan.setTabBarBadge({
-            index: 0,
-            text: '文本'
-        });
-    },
-    removeTabBarBadge() {
-        swan.removeTabBarBadge({
-            index: 0,
-            success: function () {
-                console.log('removeTabBarBadge success');
-            },
-            fail: function (err) {
-                console.log('removeTabBarBadge fail', err);
-            }
-        });
+    onTabItemTap(item) {
+        console.log(item.index);
+        if(item.index == 1){
+            swan.setTabBarBadge({
+                index: item.index,
+                text: '8'
+            });
+        }
+        console.log(item.pagePath);
+        console.log(item.text);
     }
 });
 ```

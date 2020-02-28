@@ -3,7 +3,7 @@ title: swan.ai.logoClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-logoClassify
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/logoClassify/logoClassify
+# webUrl: https://qft12m.smartapps.cn/api/logoClassify/logoClassify
 ---
 
   

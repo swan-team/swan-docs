@@ -237,7 +237,7 @@ export default {
             const isSimulator = this.$page.frontmatter.webUrl;
             // 测试参数
             const params = 'fr=docWeb';
-            // const isSimulator = 'https://qft12m.smartapps.cn/subPackages/apiPackage/pages/modal/modal';
+            // const isSimulator = 'https://qft12m.smartapps.cn/api/modal/modal';
             return isSimulator ? `${isSimulator}?${params}` : '';
         },
         // 版权声明

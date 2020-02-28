@@ -3,7 +3,7 @@ title: swan.getRecorderManager
 header: develop
 nav: api
 sidebar: recorder_swan-getRecorderManager
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getRecorderManager/getRecorderManager
+# webUrl: https://qft12m.smartapps.cn/api/getRecorderManager/getRecorderManager
 ---
 
 

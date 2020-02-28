@@ -3,7 +3,7 @@ title: swan.stopPullDownRefresh
 header: develop
 nav: api
 sidebar: pull_swan-stopPullDownRefresh
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
+# webUrl: https://qft12m.smartapps.cn/api/pullDownRefresh/pullDownRefresh
 ---
  
 **解释**： 停止当前页面下拉刷新。
@@ -30,6 +30,15 @@ sidebar: pull_swan-stopPullDownRefresh
 
 
 :::codeTab
+
+```swan
+<view class="card-area">
+    <view class="page-info">下拉页面/点击按钮即可刷新</view>
+    <button bind:tap="startPullDownRefresh" disabled="{{disabled}}" hover-stop-propagation="true" type='primary'>开始刷新</button>
+    <button bind:tap="stopPullDownRefresh" hover-stop-propagation="true" type='primary'>停止刷新</button>
+</view>
+```
+
 ```js
 Page({
     startPullDownRefresh() {

@@ -3,7 +3,7 @@ title: swan.setTabBarItem
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarItem
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/api/tabBar/tabBar
 ---
 
  
@@ -38,7 +38,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
+<!-- ###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/settabbaritem.gif">
@@ -49,7 +49,7 @@ Object object
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>     
-</div>
+</div> -->
 
 ### 代码示例 
 
@@ -58,19 +58,22 @@ Object object
  
 
 :::codeTab
-```swan
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
-</view>
-```
 
  
 
 ```js
 Page({
-    setTabBarItem() {
+    onTabItemTap(item) {
+        console.log(item.index);
+        if(item.index == 1){
+            setTabBarItem(item.index)
+        }
+        console.log(item.pagePath);
+        console.log(item.text);
+    }
+    setTabBarItem(index) {
         swan.setTabBarItem({
-            index: 0,
+            index: index,
             text: '替换文本',
             iconPath: '/images/API_normal.png',
             selectedIconPath: '/images/API_selected.png',

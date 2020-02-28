@@ -3,7 +3,7 @@ title:  swan.createAnimation
 header: develop
 nav: api
 sidebar:  createanimation_swan-createAnimation
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/createAnimation/createAnimation
+# webUrl: https://qft12m.smartapps.cn/api/createAnimation/createAnimation
 ---
  
 
@@ -46,20 +46,6 @@ Animation
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_createAnimation.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例
-  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/createAnimation.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
 </div>
  
 

@@ -3,7 +3,7 @@ title: swan.showModal
 header: develop
 nav: api
 sidebar: toast_swan-showModal
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/modal/modal
+webUrl: https://qft12m.smartapps.cn/api/modal/modal
 ---
  
 
@@ -39,6 +39,7 @@ Object object
 
 ## 示例
 
+<a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
  
 ### 扫码体验
 
@@ -47,55 +48,92 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/modal.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-### 代码示例1  
-
-<a href="swanide://fragment/35d07dce512008b2cd12cc231e86b0f41569463801299" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
+### 代码示例1 - 默认样式:
 
 :::codeTab
+
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">默认样式</view>
+    <button bindtap="primary" type="primary" hover-stop-propagation="true">默认模态弹窗</button>
+</view>
+```
+
 ```js
-swan.showModal({
-    title: '标题',
-    content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-    showCancel: false,
-    success: res => {
-        console.log('showModal success', res);
-    },
-    fail: err => {
-        console.log('showModal fail', err);
+Page({
+    primary() {
+        swan.showModal({
+            title: '提示标题',
+            content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+            showCancel: true,
+            cancelText: '辅助操作',
+            confirmText: '主要操作'
+        });
     }
 });
-
-showModalNotitle() {
-    swan.showModal({
-        content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
-        confirmText: '确定',
-        confirmColor: '色值',
-        cancelText: '取消',
-        cancelColor: '确定',
-        success: res => {
-            console.log('showModal success', res);
-        },
-        fail: err => {
-            console.log('showModal fail', err);
-        }
-    });
-}
 ```
 :::
-### 代码示例2 - 开发者可在操作modal后进行业务逻辑  
+
+### 代码示例2 - 无标题、单操作:
+
+:::codeTab
+
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">设置无标题，单操作按钮</view>
+    <button bindtap="showModalNotitle" type="primary" hover-stop-propagation="true">无标题模态弹窗</button>
+</view>
+```
+
+```js
+Page({
+    showModalNotitle() {
+        swan.showModal({
+            content: '提示内容、告知状态、信息和解决方法，可以折行',
+            showCancel: false,
+            confirmText: '我知道了'
+        });
+    }
+});
+```
+:::
+
+### 代码示例3 - 自定义选项颜色:
+
+:::codeTab
+
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>自定义选项颜色</view>
+        <view>
+            confirmColor=“#000000”
+            cancelColor=“#999999”
+        </view>
+    </view>
+    <button bindtap="showModalColor" type="primary" hover-stop-propagation="true">自定义选项颜色的模态弹窗</button>
+</view>
+```
+
+```js
+Page({
+    showModalColor() {
+        swan.showModal({
+            title: '提示标题',
+            content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
+            showCancel: true,
+            confirmText: '操作',
+            cancelText: '警示操作',
+            cancelColor: '#FF0000'
+        });
+    }
+});
+```
+:::
+
+## 参考示例
+
+### 参考示例1 - 开发者可在操作modal后进行业务逻辑  
 
 <a href="swanide://fragment/f722c61b2e5961678fbce43a0ce91fae1575137772883" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -120,7 +158,7 @@ Page({
 });
 ```
 ::: 
-### 代码示例3 - 开发者可自定义一个showModal  
+### 参考示例2 - 开发者可自定义一个showModal  
 
 <a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
@@ -210,10 +248,7 @@ Page({
 })
 ```
 :::
-            
 
-
-                                      
 ## 错误码
 ### Android
 

@@ -3,7 +3,7 @@ title: swan.openSetting
 header: develop
 nav: api
 sidebar: setting_swan-openSetting
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/openSetting/openSetting
+# webUrl: https://qft12m.smartapps.cn/api/openSetting/openSetting
 ---
  
 

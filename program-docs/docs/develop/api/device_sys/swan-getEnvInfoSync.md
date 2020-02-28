@@ -3,7 +3,7 @@ title: swan.getEnvInfoSync
 header: develop
 nav: api
 sidebar: swan-getEnvInfoSync
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getEnvInfoSync/getEnvInfoSync
+# webUrl: https://qft12m.smartapps.cn/api/getEnvInfoSync/getEnvInfoSync
 ---
  
 > 基础库 2.0.28 版本开始支持。

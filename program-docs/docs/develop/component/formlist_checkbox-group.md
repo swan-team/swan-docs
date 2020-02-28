@@ -3,7 +3,7 @@ title: checkbox-group 多项选择器组
 header: develop
 nav: component
 sidebar: formlist_checkbox-group
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/checkbox/checkbox
+webUrl: https://qft12m.smartapps.cn/component/checkbox/checkbox
 ---
 
 

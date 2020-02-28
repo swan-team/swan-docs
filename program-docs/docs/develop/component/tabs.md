@@ -3,7 +3,7 @@ title: tabs 标签栏
 header: develop
 nav: component
 sidebar: tabs
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
+webUrl: https://qft12m.smartapps.cn/component/tabs/tabs
 ---
 **解释**：标签栏，用于让用户在不同的视图中进行切换。基础库 3.100.4 版本开始支持。
 ##  属性说明 

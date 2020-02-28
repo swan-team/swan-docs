@@ -3,7 +3,7 @@ title: swan.hideLoading
 header: develop
 nav: api
 sidebar:  toast_swan-hideLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/toast/toast
+# webUrl: https://qft12m.smartapps.cn/api/toast/toast
 ---
 
  

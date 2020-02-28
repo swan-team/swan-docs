@@ -3,7 +3,7 @@ title: swan.switchTab
 header: develop
 nav: api
 sidebar: tab_swan-switchTab
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
 ---
 
   
@@ -32,19 +32,6 @@ Object object
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_navigateTo.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/switchtab.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
 </div>
 
 ###  代码示例 

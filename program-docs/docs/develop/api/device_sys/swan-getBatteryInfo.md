@@ -3,7 +3,7 @@ title: swan.getBatteryInfo
 header: develop
 nav: api
 sidebar: swan-getBatteryInfo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getBatteryInfo/getBatteryInfo
+# webUrl: https://qft12m.smartapps.cn/api/getBatteryInfo/getBatteryInfo
 ---
 
 

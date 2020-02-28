@@ -3,7 +3,7 @@ title:  swan.getSystemInfoSync
 header: develop
 nav: api
 sidebar: swan-getSystemInfoSync
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getSystemInfo/getSystemInfo
+# webUrl: https://qft12m.smartapps.cn/api/getSystemInfo/getSystemInfo
 ---
 
 

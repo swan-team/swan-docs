@@ -3,7 +3,7 @@ title: swan.requestPolymerPayment
 header: develop
 nav: api
 sidebar: payment_swan-requestPolymerPayment
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/payment/payment
+# webUrl: https://qft12m.smartapps.cn/api/payment/payment
 ---
 
 

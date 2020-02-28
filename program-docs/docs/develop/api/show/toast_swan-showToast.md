@@ -3,13 +3,13 @@ title: swan.showToast
 header: develop
 nav: api
 sidebar:  toast_swan-showToast
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/toast/toast
+webUrl: https://qft12m.smartapps.cn/api/toast/toast
 ---
  
 
 **解释**：显示消息提示框
 
- 
+
 ## 方法参数 
 
 Object object
@@ -46,88 +46,143 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/showToast.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
- 
-
 ###  代码示例1 - 默认样式
 
 :::codeTab
 ```swan
-<view class="container">
-    <view>
-        <view class="card-area"> 
-            <button data-title="success" data-icon="success" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出成功toast</button>   
-        </view>
-        <view class="card-area">   
-            <button data-title="loading" data-icon="loading" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出loading toast</button>   
-        </view>
-        <view class="card-area">      
-            <button data-title="none" data-icon="none" bindtap="tapHandle" type="primary" hover-stop-propagation="true">点击弹出无图标toast</button>   
-        </view>
-        <view class="card-area">
-            <button bindtap="tapHandleDuration" type="primary" hover-stop-propagation="true">点击弹出延时toast  {{num}}</button>   
-        </view>
-    </view>
+<view class="card-area">
+    <view class="top-description border-bottom">默认样式</view>
+    <button bindtap="showToast" type="primary" hover-stop-propagation="true">默认toast</button>   
 </view>
 ```
 
- 
+```js
+Page({
+    showToast() {
+        swan.showToast({
+            title: '默认toast',
+            mask: false,
+            success: res => {
+                this.setData({'disabled': false});
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        });
+    }
+});
+```
+
+###  代码示例2 - 无图标toast
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>设置不显示图标</view>
+        <view>icon: 'none'</view>
+    </view>
+    <button bindtap="showToastIcon" type="primary" hover-stop-propagation="true">无图标toast</button>
+</view>
+```
 
 ```js
 Page({
-    data: {
-        num: 5
-    },
-    tapHandle(e) {
-        this.toast(e.currentTarget.dataset.title, e.currentTarget.dataset.icon);
-    },
-    toast(title, icon) {
+    showToastIcon() {
         swan.showToast({
-            title, 
-            icon,
-            mask: false, // 此属性设置为true不能打断toast
-            success: res => {
-                console.log('showToast success', res);
-            },
-            fail: err => {
-                console.log('showToast fail', err);
-            }
-        })
-    },
-    tapHandleDuration() {
-        let that = this;
-        swan.showToast({
-            title: '延时5s', 
+            title: '单行最多十四个文字单行最多十四个文字',
             icon: 'none',
             mask: false,
-            duration: 5000,
             success: res => {
-                console.log('showToast success', res);
-                let num = 5;
-                let interval = setInterval(function() {
-                    num = num - 1;
-                    that.setData({num: num});
-                    if(num === 0) {
-                        clearInterval(interval);
-                    }
-                }, 1000);
-                console.log('num', num);
+                this.setData({'disabled': false});
             },
             fail: err => {
                 console.log('showToast fail', err);
             }
-        })
+        });
+    }
+});
+```
+
+###  代码示例3 - 显示loading图标
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>设置显示loading图标</view>
+        <view>icon: 'none'</view>
+    </view>
+    <button bindtap="showToastLoading" type="primary" hover-stop-propagation="true">loading toast</button>
+</view>
+```
+
+```js
+Page({
+    showToastLoading() {
+        swan.showToast({
+            mask: true,
+            title: '正在加载...',
+            icon: 'loading',
+            mask: false,
+            success: res => {
+                this.setData({'disabled': false});
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        });
+    }
+});
+```
+
+###  代码示例4 - 延迟5000毫秒的toast
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>设置延迟时间</view>
+        <view>duration: 5000</view>
+    </view>
+    <button bindtap="showToastDuration" type="primary" hover-stop-propagation="true">延迟5000毫秒的toast</button>
+</view>
+```
+
+```js
+Page({
+    showToastDuration() {
+        swan.showToast({
+            duration: 5000,
+            title: '5000毫秒后隐藏',
+            icon: 'none',
+            mask: false,
+            success: res => {
+                this.setData({'disabled': false});
+            },
+            fail: err => {
+                console.log('showToast fail', err);
+            }
+        });
+    }
+});
+```
+
+###  代码示例5 - 隐藏toast
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">隐藏toast</view>
+    <button bindtap="hideToast" type="primary" disabled="{{disabled}}" hover-stop-propagation="true">隐藏toast</button>
+</view>
+```
+
+```js
+Page({
+    hideToast() {
+        swan.hideToast();
+        swan.hideLoading();
     }
 });
 ```

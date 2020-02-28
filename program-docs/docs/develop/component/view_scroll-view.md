@@ -3,7 +3,7 @@ title: scroll-view 可滚动视图区域
 header: develop
 nav: component
 sidebar: view_scroll-view
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/scroll-view/scroll-view
+webUrl: https://qft12m.smartapps.cn/component/scroll-view/scroll-view
 ---
 
 

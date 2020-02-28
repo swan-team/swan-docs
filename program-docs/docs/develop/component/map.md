@@ -3,7 +3,7 @@ title: map 地图
 header: develop
 nav: component
 sidebar: map
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/map/map
+webUrl: https://qft12m.smartapps.cn/component/map/map
 ---
  
 

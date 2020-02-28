@@ -3,7 +3,7 @@ title: swan.setBackgroundColor
 header: develop
 nav: api
 sidebar: background_swan-setBackgroundColor
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setBackgroundColor/setBackgroundColor
+# webUrl: https://qft12m.smartapps.cn/api/setBackgroundColor/setBackgroundColor
 ---
 
  

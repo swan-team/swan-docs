@@ -3,7 +3,7 @@ title: swan.openDocument
 header: develop
 nav: api
 sidebar: open
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/file/file
+# webUrl: https://qft12m.smartapps.cn/api/file/file
 ---
 
 
