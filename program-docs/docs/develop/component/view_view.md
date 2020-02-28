@@ -3,7 +3,7 @@ title: view 视图容器
 header: develop
 nav: component
 sidebar: view_view
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/view/view
 ---
 
 

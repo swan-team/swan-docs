@@ -34,6 +34,7 @@ Object object
 |success | 显示成功图标，此时 title 文本最多显示 7 个汉字长度。默认值 |
 |loading |显示加载图标，此时 title 文本最多显示 7 个汉字长度。|
 |none |不显示图标，此时 title 文本最多可显示两行。  |
+
 ## 示例
 
 <a href="swanide://fragment/6ab6a7ea0d57b42271c6d6817f0707c01574132977216" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -59,10 +60,7 @@ Object object
 </div>
  
 
-### 代码示例 
-
-
- 
+###  代码示例1 - 默认样式
 
 :::codeTab
 ```swan
@@ -133,8 +131,11 @@ Page({
     }
 });
 ```
+
+## 参考示例
+
 :::
-### 代码示例2 - 开发者可自定义showToast样式 
+### 参考示例1 - 开发者可自定义showToast样式 
 
 <a href="swanide://fragment/392bbc1fb46cce63621c37aac706635e1575824847831" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
  
@@ -194,7 +195,7 @@ Page({
 })
 ```
 :::
-### 代码示例3 - showModal和showToast是否可共存 
+### 参考示例2 - showModal和showToast是否可共存 
 
 <a href="swanide://fragment/2a833f9c7f164efca05ade83ff9869de1576559710455" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

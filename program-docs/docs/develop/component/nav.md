@@ -3,7 +3,7 @@ title: navigator 页面导航
 header: develop
 nav: component
 sidebar: nav
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/navigator/navigator
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/navigator/navigator
 ---
 
  

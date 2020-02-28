@@ -3,7 +3,7 @@ title: picker 底部弹起的滚动选择器
 header: develop
 nav: component
 sidebar: formlist_picker
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker/picker
+# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/picker/picker
 ---
 
 
