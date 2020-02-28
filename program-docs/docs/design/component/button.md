@@ -1,12 +1,12 @@
 ---
-title: 按钮组件
+title: 按钮
 header: design
-nav: component
+nav: foundation
 sidebar: button
 ---
 按钮允许用户点击，并触发对应的操作。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/component/component/#button/" target="_blank">button</a>。
+开发文档说明详见<a href="/develop/component/formlist_button/" target="_blank"> button </a>。
 
 ## 大按钮
 大按钮高度固定为88px，圆角大小固定8px。
@@ -29,7 +29,7 @@ sidebar: button
 
 ## 悬浮按钮
 开发者可以在智能小程序页面放置悬浮按钮，为了减少对内容遮挡和用户阅读体验的影响，我们建议使用88px的悬浮按钮。
-在[视觉组件库](../../resource/uikit/)中，我们提供了悬浮按钮示例源文件，开发者也可以根据需要，替换悬浮按钮的功能及图标。
+在[视觉资源下载](../../resource/uikit/)中，我们提供了悬浮按钮示例源文件，开发者也可以根据需要，替换悬浮按钮的功能及图标。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
 		<img src="../../../img/design/component/button/3.png">
@@ -93,5 +93,5 @@ sidebar: button
 例如：我们建议悬浮按钮“回到顶部”策略：默认及上滑时不显示，下拉渐显，无操作500ms渐隐。
 因为页面默认展现及用户上滑以浏览内容的情况，应以用户阅读为优先，不应显示遮挡内容；而用户下拉往上翻内容时，提供快捷“回到顶部”的操作更为合适。
 
-<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/button/8.mov">你的浏览器不支持该视频播放</video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/component/button/8.mov"/>你的浏览器不支持该视频播放</video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 

@@ -1,12 +1,12 @@
 ---
-title: 操作菜单
+title: 底部操作菜单
 header: design
-nav: component
+nav: foundation
 sidebar: actionsheet
 ---
 操作菜单用于显示用户操作某个控件时，出现选项列表。
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/#swan-showActionSheet/" target="_blank">showActionSheet</a>。
+开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show_toast/#swan-showActionSheet/" target="_blank"> showActionSheet </a>。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
@@ -27,7 +27,7 @@ sidebar: actionsheet
 </div>
 
 ### 操作选项
-支持配置1-6项操作，操作文案建议精简表达，控制在10个中文字符内，用户应该通过操作文案能够快速理解选项的含义。操作文案使用规范请参见[措辞](../../foundation/writing)章节。
+支持配置1-6项操作，操作文案建议精简表达，控制在10个中文字符内，用户应该通过操作文案能够快速理解选项的含义。操作文案使用规范请参见 [措辞](../../foundation/writing) 章节。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/component/actionsheet/3-1.png">

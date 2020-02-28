@@ -1,7 +1,7 @@
 ---
-title: 列表组件
+title: 列表
 header: design
-nav: component
+nav: foundation
 sidebar: list
 ---
 
@@ -13,3 +13,5 @@ sidebar: list
 		<img src="../../../img/design/component/list/1.png">
 	</div>
 </div>
+
+> 你可直接使用智能小程序相关体验资产。（[下载设计资源](https://smartprogram.baidu.com/docs/design/resource/uikit/) | [查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/template/smt-feed-page/)）
