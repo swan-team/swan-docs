@@ -3,9 +3,8 @@ title: swan.reLaunch
 header: develop
 nav: api
 sidebar: tab_swan-reLaunch
-webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
+# webUrl: https://qft12m.smartapps.cn/api/navigateTo/navigateTo
 ---
- 
  
 
 **解释**：关闭所有页面，打开到应用内的某个页面。

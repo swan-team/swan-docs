@@ -3,7 +3,7 @@ title: swan.pageScrollTo
 header: develop
 nav: api
 sidebar: pagescrollto_swan-pageScrollTo
-webUrl: https://qft12m.smartapps.cn/api/pageScrollTo/pageScrollTo
+# webUrl: https://qft12m.smartapps.cn/api/pageScrollTo/pageScrollTo
 ---
 
  

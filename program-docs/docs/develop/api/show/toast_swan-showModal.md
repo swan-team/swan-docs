@@ -3,7 +3,7 @@ title: swan.showModal
 header: develop
 nav: api
 sidebar: toast_swan-showModal
-webUrl: https://qft12m.smartapps.cn/api/modal/modal
+# webUrl: https://qft12m.smartapps.cn/api/modal/modal
 ---
  
 
