@@ -8,6 +8,7 @@ sidebar: setting_swan-openSetting
  
 
 **解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。swan.openSetting 可打开的控制面板权限详见[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)。
+**Web 态说明** Web 态暂不支持用户主动切换授权开关，接口调用会进入失败回调（fail）。
 
  
 
@@ -78,7 +79,16 @@ Page({
     },
 
     openSetting() {
-        swan.openSetting({});
+        swan.openSetting({
+            success: res => {
+                // 正常的业务逻辑
+            },
+            fail: res => {
+                if (res.errMsg == 'web化API不支持openSetting') {
+                    // Web 态兼容处理
+                }
+            }
+        });
     }
 });
 ```
@@ -113,15 +123,25 @@ Page({
 ##  错误码
 ###  Android
 
-|错误码|说明|
+|错误码（errCode）|说明|
 |:--|:--|
 |201|解析失败，请检查调起协议是否合法|
 |1001|执行失败|
 
 ###  iOS
 
-|错误码|说明|
+|错误码（errCode）|说明|
 |:--|:--|
 |202|解析失败，请检查参数是否正确      |
+
+###  Web 态
+
+|错误码（errCode）|说明|
+|:--|:--|
+|1001|不支持|
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|web化API不支持openSetting|string|不支持|
 
 

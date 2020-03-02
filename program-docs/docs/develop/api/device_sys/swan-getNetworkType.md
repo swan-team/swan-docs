@@ -31,15 +31,15 @@ Object object
 
  networkType有效值说明 ：
 
-| 值 | 说明 |
-|----|----|
-|wifi|wifi 网络|
-|2g|2g 网络|
-|3g|3g 网络|
-|4g|4g 网络|
-|unknown|Android 下不常见的网络类型|
-|none|无网络|
-|web_unknown|Web 化无法判断网络环境时类型|
+| 值 | 说明 | Web 态说明|
+|----|----|----|
+|wifi|wifi 网络|wifi 网络 |
+|2g|2g 网络|2g 网络 |
+|3g|3g 网络|3g 网络 |
+|4g|4g 网络|4g 网络 |
+|unknown|Android 和 Web 态下不常见的网络类型|由于各个三方浏览器对于 W3C 规范实现情况不同，所以目前在 Web 态中会存在返回 unknown 的情况（比如 iOS 目前不支持），unknown 并非代表网络异常，建议提示用户确认网络状态后按正常网络情况处理|
+|none|无网络|无网络|
+
 ## 示例
 
 <a href="swanide://fragment/6fb983a430aa1864af5650c5b9b54f9d1569478503845" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -78,6 +78,10 @@ Page({
         swan.getNetworkType({
             success: res => {
                 this.setData('networkType', res.networkType);
+                if (res.networkType === 'unknown') {
+                    // 建议提示用户确认网络状态
+                }
+                // 网络正常的业务逻辑
             },
             fail: err => {
                 swan.showToast({
