@@ -32,6 +32,17 @@ sidebar: setting_swan-getSetting
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
 
+### Web 态authSetting说明：
+|参数  |类型|说明 |
+|---- | ---- |---- |
+|scope.userLocation|boolean|返回三方浏览器提供的位置权限信息|
+|scope.userInfo|boolean|固定返回 true|
+|scope.address|boolean|固定返回 true|
+|scope.invoiceTitle|boolean|固定返回 true|
+|scope.writePhotosAlbum|boolean|固定返回 true|
+|scope.camera|boolean|固定返回 true|
+|scope.record|boolean|固定返回 true|
+
 **图片示例**
 
 <div class="m-doc-custom-examples">

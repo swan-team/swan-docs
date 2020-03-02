@@ -32,15 +32,17 @@ sidebar: swan-getNetworkType
 
 **networkType有效值说明**：
 
-| 值 | 说明 |
-|----|----|
-|wifi|wifi 网络|
-|2g|2g 网络|
-|3g|3g 网络|
-|4g|4g 网络|
-|unknown|Android 下不常见的网络类型|
-|none|无网络|
-|web_unknown|Web 化无法判断网络环境时类型|
+| 值 | 说明 | Web 态说明 |
+|----|----| |
+|wifi|wifi 网络| |
+|2g|2g 网络| |
+|3g|3g 网络| |
+|4g|4g 网络| |
+|unknown|Android 和 Web 态 下不常见的网络类型|由于各个三方浏览器对于 W3C 规范实现情况不同，所以目前在 Web 态中会存在返回 unknown 的情况（比如 iOS 目前不支持），需开发者做适配 |
+|none|无网络|<br>|
+
+
+ 
 
 **图片示例**
 

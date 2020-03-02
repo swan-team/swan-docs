@@ -9,6 +9,7 @@ sidebar:  swan-onNetworkStatusChange
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听网络状态变化。
+**Web 态说明:** 由于各个浏览器对于 W3C 规范实现情况不同，所以目前在 Web 态中会存在网络状态变化的情况下回调函数不执行的情况（比如iOS目前不支持）。
 
 **百度APP中扫码体验：**
 
@@ -34,6 +35,8 @@ sidebar:  swan-onNetworkStatusChange
 |4g | 4g 网络|
 |none  |  无网络|
 |unknown |Android 下不常见的网络类型|
+
+
 
 **图片示例**
 

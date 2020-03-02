@@ -8,6 +8,8 @@ sidebar: setting_swan-openSetting
 
 **解释**： 调起客户端智能小程序设置界面，返回用户设置的操作结果。swan.openSetting 可打开的控制面板权限详见[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)。
 
+**Web 态说明**：由于目前 Web 态还暂不支持发票抬头收货地址相关功能并且地理位置、录音功能和摄像头等使用权限三方浏览器会做相关的权限信息校验，框架无法在用户无感知的情况下改变地理位置、录音功能和摄像头的使用权限，所以目前 Web 态暂不支持 openSetting 的功能，开发者调用此方法 Web 态会调用开发者配置的 fail 回调并注入 {errCode: 1001, errMsg: "web化API不支持openSetting"} 参数。
+
 **百度APP中扫码体验：**
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/openSetting.png"  class="demo-qrcode-image" />
@@ -29,6 +31,8 @@ sidebar: setting_swan-openSetting
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
+
+
 
 **图片示例**
 

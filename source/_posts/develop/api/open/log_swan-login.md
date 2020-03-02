@@ -8,6 +8,11 @@ sidebar: log_swan-login
 
 **解释**： 调用接口 swan.login 获取 **Authorization Code**，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
+**Web 态说明:**
+**初次登录：**Web 态在小程序未登录状态下登录的需要跳转到百度提供的授权登录页，在授权登录页面授权登录成功后会跳回调用登录的原小程序页面，由于登录的跳转问题导致无法还原小程序页面跳转登录页面前的运行时环境，所以配置登录成功失败回调（success、fail、complete）无法执行，为了回调无法执行 code 无法给到开发者的问题，Web 态在 app 上增加了独有的 onLogin 生命周期([详见生命周期](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/))，小程序初次登录成功后框架执行开发者配置的 onLogin 钩子函数并注入 code 参数。
+
+**登录态下再登录：**和端内一致会调用开发者配置的相应回调并注入相应的参数。
+
 
 **百度APP中扫码体验：**
 
@@ -31,6 +36,8 @@ sidebar: log_swan-login
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |code|String|用户登录凭证（有效期十分钟）,开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息。|
+
+#
 
 **图片示例**
 
