@@ -45,6 +45,12 @@ module.exports = {
             defaultTitle: '',
             before: info => `<CodeTab>${info}`,
             after: '</CodeTab>'
+        }],
+        ['vuepress-plugin-container', {
+            type: 'qrcode',
+            defaultTitle: '',
+            before: info => `<QRCode ${info}>`,
+            after: '</QRCode>'
         }]
     ],
     patterns: [],
