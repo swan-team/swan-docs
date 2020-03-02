@@ -3,7 +3,7 @@ title: swan.getBackgroundAudioManager
 header: develop
 nav: api
 sidebar: backgroundaudiomanager_swan-getBackgroundAudioManager
-# webUrl: https://qft12m.smartapps.cn/api/getBackgroundAudioManager/getBackgroundAudioManager
+# webUrl: https://qft12m.smartapps.cn/swan-api/getBackgroundAudioManager/getBackgroundAudioManager
 ---
 
 

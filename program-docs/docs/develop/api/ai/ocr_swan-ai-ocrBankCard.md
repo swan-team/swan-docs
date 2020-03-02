@@ -3,7 +3,7 @@ title: swan.ai.ocrBankCard
 header: develop
 nav: api
 sidebar: ocr_swan-ai-ocrBankCard
-# webUrl: https://qft12m.smartapps.cn/api/ocrBankCard/ocrBankCard
+# webUrl: https://qft12m.smartapps.cn/swan-api/ocrBankCard/ocrBankCard
 ---
 
  

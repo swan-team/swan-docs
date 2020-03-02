@@ -3,7 +3,7 @@ title: IntersectionObserver
 header: develop
 nav: api
 sidebar: query_IntersectionObserver
-# webUrl: https://qft12m.smartapps.cn/api/IntersectionObserver/IntersectionObserver
+webUrl: https://qft12m.smartapps.cn/swan-api/intersection-observer/intersection-observer
 ---
  
  

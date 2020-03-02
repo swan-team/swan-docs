@@ -3,9 +3,9 @@ title:  swan.setNavigationBarTitle
 header: develop
 nav: api
 sidebar: navigationbar_swan-setNavigationBarTitle
-# webUrl: https://qft12m.smartapps.cn/api/setNavigationBarTitle/setNavigationBarTitle
+webUrl: https://qft12m.smartapps.cn/swan-api/set-navigation-bar-title/set-navigation-bar-title
 ---
- 
+
 
 **解释**：动态设置当前页面的标题。
 

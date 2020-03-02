@@ -3,7 +3,7 @@ title: swan.chooseLocation
 header: develop
 nav: api
 sidebar: swan-chooseLocation
-# webUrl: https://qft12m.smartapps.cn/api/chooseLocation/chooseLocation
+# webUrl: https://qft12m.smartapps.cn/swan-api/chooseLocation/chooseLocation
 ---
 
 

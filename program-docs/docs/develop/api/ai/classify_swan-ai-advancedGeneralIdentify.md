@@ -3,7 +3,7 @@ title: swan.ai.advancedGeneralIdentify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-advancedGeneralIdentify
-# webUrl: https://qft12m.smartapps.cn/api/advancedGeneralIdentify/advancedGeneralIdentify
+# webUrl: https://qft12m.smartapps.cn/swan-api/advancedGeneralIdentify/advancedGeneralIdentify
 ---
 
 

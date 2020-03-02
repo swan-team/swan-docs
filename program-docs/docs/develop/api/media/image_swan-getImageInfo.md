@@ -3,7 +3,7 @@ title: swan.getImageInfo
 header: develop
 nav: api
 sidebar: image_swan-getImageInfo
-# webUrl: https://qft12m.smartapps.cn/api/getImageInfo/getImageInfo
+# webUrl: https://qft12m.smartapps.cn/swan-api/getImageInfo/getImageInfo
 ---
 
   

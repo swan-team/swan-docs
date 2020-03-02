@@ -3,7 +3,7 @@ title: swan.setClipboardData
 header: develop
 nav: api
 sidebar: swan-setClipboardData
-# webUrl: https://qft12m.smartapps.cn/api/clipboardData/clipboardData
+# webUrl: https://qft12m.smartapps.cn/swan-api/clipboardData/clipboardData
 ---
 
  

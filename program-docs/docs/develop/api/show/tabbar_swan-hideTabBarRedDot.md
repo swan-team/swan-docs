@@ -3,7 +3,7 @@ title: swan.hideTabBarRedDot
 header: develop
 nav: api
 sidebar:  tabbar_swan-hideTabBarRedDot
-# webUrl: https://qft12m.smartapps.cn/api/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/swan-api/tab-bar/tab-bar
 ---
  
 **解释**：隐藏 tabBar 某一项的右上角的红点

@@ -3,7 +3,7 @@ title: swan.chooseImage
 header: develop
 nav: api
 sidebar: image_swan-chooseImage
-# webUrl: https://qft12m.smartapps.cn/api/chooseImage/chooseImage
+# webUrl: https://qft12m.smartapps.cn/swan-api/chooseImage/chooseImage
 ---
 
 

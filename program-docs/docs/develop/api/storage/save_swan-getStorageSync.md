@@ -3,7 +3,7 @@ title: swan.getStorageSync
 header: develop
 nav: api
 sidebar: save_swan-getStorageSync
-# webUrl: https://qft12m.smartapps.cn/api/storage/storage
+# webUrl: https://qft12m.smartapps.cn/swan-api/storage/storage
 ---
 
  

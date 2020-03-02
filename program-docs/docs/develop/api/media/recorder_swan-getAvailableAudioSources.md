@@ -3,7 +3,7 @@ title: swan.getAvailableAudioSources
 header: develop
 nav: api
 sidebar: recorder_swan-getAvailableAudioSources
-# webUrl: https://qft12m.smartapps.cn/api/getAvailableAudioSources/getAvailableAudioSources
+# webUrl: https://qft12m.smartapps.cn/swan-api/getAvailableAudioSources/getAvailableAudioSources
 ---
 
 

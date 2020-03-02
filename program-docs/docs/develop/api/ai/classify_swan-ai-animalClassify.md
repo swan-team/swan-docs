@@ -3,7 +3,7 @@ title: swan.ai.animalClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-animalClassify
-# webUrl: https://qft12m.smartapps.cn/api/animalClassify/animalClassify
+# webUrl: https://qft12m.smartapps.cn/swan-api/animalClassify/animalClassify
 ---
 
  

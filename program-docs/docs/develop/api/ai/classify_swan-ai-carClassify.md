@@ -3,7 +3,7 @@ title: swan.ai.carClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-carClassify
-# webUrl: https://qft12m.smartapps.cn/api/carClassify/carClassify
+# webUrl: https://qft12m.smartapps.cn/swan-api/carClassify/carClassify
 ---
 
 

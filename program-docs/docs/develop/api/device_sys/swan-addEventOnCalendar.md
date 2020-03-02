@@ -3,7 +3,7 @@ title: swan.addEventOnCalendar
 header: develop
 nav: api
 sidebar: swan-addEventOnCalendar
-# webUrl: https://qft12m.smartapps.cn/api/calendar/calendar
+# webUrl: https://qft12m.smartapps.cn/swan-api/calendar/calendar
 ---
 
 

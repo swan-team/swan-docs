@@ -3,7 +3,7 @@ title: swan.openReplyEditor
 header: develop
 nav: api
 sidebar: replyeditor_swan-openReplyEditor
-# webUrl: https://qft12m.smartapps.cn/api/openReplyEditor/openReplyEditor
+# webUrl: https://qft12m.smartapps.cn/swan-api/openReplyEditor/openReplyEditor
 ---
 
  

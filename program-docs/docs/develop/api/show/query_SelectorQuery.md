@@ -3,7 +3,7 @@ title: SelectorQuery
 header: develop
 nav: api
 sidebar: query_SelectorQuery
-# webUrl: https://qft12m.smartapps.cn/api/createSelectorQuery/createSelectorQuery
+# webUrl: https://qft12m.smartapps.cn/swan-api/createSelectorQuery/createSelectorQuery
 ---
  
 **解释**： 选择器
