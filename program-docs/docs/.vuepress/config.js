@@ -20,8 +20,11 @@ module.exports = {
     dest: 'output/miniappdocs-program',
     cache: false,
     shouldPrefetch: () => false,
+    extraWatchFiles: [
+        '../nav/nav.yml'
+    ],
     themeConfig: {
-        navData: navLoader.navData,
+        navData: navLoader.getNavData(),
         nav: {
             navOther: [
                 {text: '服务市场', link: 'https://smartprogram.baidu.com/developer/servicemarket.html'}
