@@ -6,11 +6,11 @@ sidebar: image_swan-getImageInfo
 # webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getImageInfo/getImageInfo
 ---
 
-  
+
 
 **解释**：获取图片信息
 
- 
+
 ## 方法参数
 Object object
 ### `object`参数说明 ：
@@ -44,8 +44,8 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
- 
+### 图片示例
+
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/getImageInfo.gif">
@@ -55,8 +55,8 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
-</div> 
+    </div>
+</div>
 
 ### 代码示例1 - 网络图片 ：
 
@@ -117,7 +117,7 @@ Page({
         let that = this;
         swan.chooseImage({
             count: 1,
-            sizeType: ['original', 'compressed'], 
+            sizeType: ['original', 'compressed'],
             sourceType: ['camera'],
             success: res => {
                 console.log(res.tempFilePaths);
@@ -155,7 +155,7 @@ Page({
         let that = this;
         swan.chooseImage({
             count: 1,
-            sizeType: ['original', 'compressed'], 
+            sizeType: ['original', 'compressed'],
             sourceType: ['album'],
             success: res => {
                 console.log(res.tempFilePaths);
