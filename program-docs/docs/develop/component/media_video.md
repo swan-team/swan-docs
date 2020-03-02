@@ -27,17 +27,17 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/video/vid
 |direction|Number|  |否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度。| 3.90.29<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
 |show-progress| Boolean|    true|否| 若不设置，宽度大于240时才会显示。|-|-|
 |show-fullscreen-btn|   Boolean|    true|否| 是否显示全屏按钮|-|-|
-|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|-|设置为 true 后 Web 态不生效|
+|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|-|此属性对 Web 态不生效|
 |danmu-list|    Array.&lt;object&gt;|       |否|弹幕列表|-|-|
-|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|-|设置为 true 后 Web 态不生效|
+|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|-|此属性对 Web 态不生效|
 |enable-danmu   |Boolean    |false  |否|是否展示弹幕，只在初始化时有效，不能动态变更。|-|-|
 |show-play-btn| Boolean |true|否|    是否显示视频底部控制栏的播放按钮|-|-|
 |show-center-play-btn|  Boolean |true   |否|是否显示视频中间的播放按钮|-|Web 态下，中间播放按钮暂不支持隐藏，设置为 false 不生效|
-|show-mute-btn|Boolean|false|否|是否显示静音按钮。|3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层。| 3.100.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 。| 3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势。| 3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停。|3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
+|show-mute-btn|Boolean|false|否|是否显示静音按钮。|3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|Web 态下，静音按钮暂不支持隐藏，设置为 false 不生效|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层。| 3.100.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 。| 3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势。| 3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停。|3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|-|-|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|-|-|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|-|-|
@@ -561,4 +561,4 @@ Page({
 * 在 OPPO 手机下的百度 APP，会出现小窗播放。
 
 **解决方案：**
-Web 态针对不同浏览器做了尽可能的修复，以解决此问题。已修复的包括微信、QQ 和 百度 APP。但由于浏览器种类众多，有可能存在我们暂未覆盖到的情况。如仍遇到上述问题，请您将案例反馈给我们，我们将统一记录并反馈进展。
+Web 态针对不同浏览器做了尽可能的修复，以解决此问题。已修复的包括 QQ、Android 微信、QQ 浏览器等基于 X5 内核的平台，百度 APP。但由于浏览器种类众多，有可能存在我们暂未覆盖到的情况。如仍遇到上述问题，请您将案例反馈给我们，我们将统一记录并反馈进展。
