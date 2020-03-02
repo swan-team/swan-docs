@@ -33,7 +33,7 @@ Object object
 |---- | ---- | ---- |
 |type|String|订阅的操作类型：query（查询订阅）cancel（取消订阅）|
 |form_id|String|对应提交[`form 表单`](/develop/component/formlist_form/)时返回的 formId。当传入参数 type 为 query 时有此字段|
-|status|Number|订阅状态；1 表示已订阅，0 表示已取消订阅。当传入参数 type 为 query 时有此字段|
+|status|Number|订阅状态；1 表示已订阅，0 表示已取消订阅，-1 表示未找到此订阅。当传入参数 type 为 query 时或 type 为 cancel 且未找到此订阅时有此字段|
 |update_time|Number|订阅更新时间|
 |app_key|String|小程序唯一标识|
 
@@ -43,12 +43,12 @@ Object object
 
 [在开发者工具中预览效果](swanide://fragment/f50bfe3df40b9dbc290c3ea38ab9ea0e1578301879913)
 
-### 扫码体验
+<!-- ### 扫码体验
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div>
+</div> -->
 
 ### 代码示例
 
