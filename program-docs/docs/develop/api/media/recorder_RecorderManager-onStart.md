@@ -9,10 +9,10 @@ sidebar: recorder_RecorderManager-onStart
 
 
 
-**解释**： 录音开始事件
+**解释**： 录音开始事件。Web 态下不会触发该类事件。
 
- 
-## 方法参数 
+
+## 方法参数
 
 Function callback
 
@@ -27,7 +27,7 @@ Function callback
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 
 <div class="m-doc-custom-examples">
@@ -39,14 +39,14 @@ Function callback
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({

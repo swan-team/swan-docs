@@ -8,9 +8,9 @@ sidebar: recorder_RecorderManager-pause
 
 
 
-**解释**： 暂停录音
+**解释**： 暂停录音。Web 态下该方法不起任何作用。
 
- 
+
 
 ## 方法参数
   无
@@ -26,7 +26,7 @@ sidebar: recorder_RecorderManager-pause
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 
 <div class="m-doc-custom-examples">
@@ -38,14 +38,14 @@ sidebar: recorder_RecorderManager-pause
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({
