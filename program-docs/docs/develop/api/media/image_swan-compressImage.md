@@ -5,13 +5,15 @@ nav: api
 sidebar: image_swan-compressImage
 ---
 
- 
+
 
 > 基础库 3.110.3开始支持，低版本需做兼容处理。在工具和真机中的实现有区别，详见[API 实现差异](/develop/devtools/diff/)。
 
 **解释**：压缩图片接口，可选压缩质量
 
- 
+**Web 态说明**：该 API 在 Web 态暂不支持，使用前请判断是否存在。
+
+
 ## 方法参数
 Object object
 ### `object`参数说明 ：
@@ -42,7 +44,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 
 <div class="m-doc-custom-examples">
@@ -54,10 +56,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 
 
