@@ -3,7 +3,7 @@ title: swan.getUpdateManager
 header: develop
 nav: api
 sidebar: swan-getUpdateManager
-# webUrl: https://qft12m.smartapps.cn/api/getUpdateManager/getUpdateManager
+# webUrl: https://qft12m.smartapps.cn/swan-api/getUpdateManager/getUpdateManager
 ---
 
  

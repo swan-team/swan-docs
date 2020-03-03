@@ -3,7 +3,7 @@ title:  swan.ai.dishClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-dishClassify
-# webUrl: https://qft12m.smartapps.cn/api/dishClassify/dishClassify
+# webUrl: https://qft12m.smartapps.cn/swan-api/dishClassify/dishClassify
 ---
 
  

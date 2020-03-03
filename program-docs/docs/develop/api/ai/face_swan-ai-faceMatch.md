@@ -3,7 +3,7 @@ title: swan.ai.faceMatch
 header: develop
 nav: api
 sidebar: face_swan-ai-faceMatch
-# webUrl: https://qft12m.smartapps.cn/api/faceMatch/faceMatch
+# webUrl: https://qft12m.smartapps.cn/swan-api/faceMatch/faceMatch
 ---
 
  

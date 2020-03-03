@@ -3,7 +3,7 @@ title: swan.getNetworkType
 header: develop
 nav: api
 sidebar: swan-getNetworkType
-# webUrl: https://qft12m.smartapps.cn/api/getNetworkType/getNetworkType
+# webUrl: https://qft12m.smartapps.cn/swan-api/getNetworkType/getNetworkType
 ---
 
 

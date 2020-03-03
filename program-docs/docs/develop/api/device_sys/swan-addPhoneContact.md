@@ -3,7 +3,7 @@ title: swan.addPhoneContact
 header: develop
 nav: api
 sidebar: swan-addPhoneContact
-# webUrl: https://qft12m.smartapps.cn/api/addPhoneContact/addPhoneContact
+# webUrl: https://qft12m.smartapps.cn/swan-api/addPhoneContact/addPhoneContact
 ---
 
  

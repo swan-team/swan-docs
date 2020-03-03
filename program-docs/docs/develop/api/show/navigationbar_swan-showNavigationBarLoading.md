@@ -3,7 +3,7 @@ title: swan.showNavigationBarLoading
 header: develop
 nav: api
 sidebar: navigationbar_swan-showNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/api/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/swan-api/navigation-bar-loading/navigation-bar-loading
 ---
 
 **解释**： 该方法在当前页面显示导航条加载动画。

@@ -3,7 +3,7 @@ title: swan.getMenuButtonBoundingClientRect
 header: develop
 nav: api
 sidebar: menu_info
-# webUrl: https://qft12m.smartapps.cn/api/getMenuButtonBoundingClientRect/getMenuButtonBoundingClientRect
+webUrl: https://qft12m.smartapps.cn/swan-api/get-menu-button-bounding-client-rect/get-menu-button-bounding-client-rect
 ---
 
 

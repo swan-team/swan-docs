@@ -3,7 +3,7 @@ title: swan.uploadFile
 header: develop
 nav: api
 sidebar: uploadfile
-# webUrl: https://qft12m.smartapps.cn/api/uploadFile/uploadFile
+# webUrl: https://qft12m.smartapps.cn/swan-api/uploadFile/uploadFile
 ---
 请参考[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)进行开发。
 

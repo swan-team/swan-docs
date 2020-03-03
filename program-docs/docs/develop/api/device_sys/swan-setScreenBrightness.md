@@ -3,7 +3,7 @@ title: swan.setScreenBrightness
 header: develop
 nav: api
 sidebar: swan-setScreenBrightness
-# webUrl: https://qft12m.smartapps.cn/api/screenBrightness/screenBrightness
+# webUrl: https://qft12m.smartapps.cn/swan-api/screenBrightness/screenBrightness
 ---
 
  

@@ -3,7 +3,7 @@ title: swan.ai.plantClassify
 header: develop
 nav: api
 sidebar:  classify_swan-ai-plantClassify
-# webUrl: https://qft12m.smartapps.cn/api/plantClassify/plantClassify
+# webUrl: https://qft12m.smartapps.cn/swan-api/plantClassify/plantClassify
 ---
 
   

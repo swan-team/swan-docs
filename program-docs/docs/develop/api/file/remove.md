@@ -3,7 +3,7 @@ title: swan.removeSavedFile
 header: develop
 nav: api
 sidebar:  remove
-# webUrl: https://qft12m.smartapps.cn/api/file/file
+# webUrl: https://qft12m.smartapps.cn/swan-api/file/file
 ---
 
  

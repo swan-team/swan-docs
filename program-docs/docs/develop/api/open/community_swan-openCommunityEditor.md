@@ -3,7 +3,7 @@ title: swan.openCommunityEditor
 header: develop
 nav: api
 sidebar: community_swan-openCommunityEditor
-# webUrl: https://qft12m.smartapps.cn/api/communityEditor/communityEditor
+# webUrl: https://qft12m.smartapps.cn/swan-api/communityEditor/communityEditor
 ---
 
  

@@ -3,7 +3,7 @@ title: swan.setTabBarStyle
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarStyle
-# webUrl: https://qft12m.smartapps.cn/api/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/swan-api/tab-bar/tab-bar
 ---
 
  

@@ -3,7 +3,7 @@ title: swan.ai.facePersonIdmatch
 header: develop
 nav: api
 sidebar: face_swan-ai-facePersonIdmatch
-# webUrl: https://qft12m.smartapps.cn/api/facePersonIdmatch/facePersonIdmatch
+# webUrl: https://qft12m.smartapps.cn/swan-api/facePersonIdmatch/facePersonIdmatch
 ---
 
  

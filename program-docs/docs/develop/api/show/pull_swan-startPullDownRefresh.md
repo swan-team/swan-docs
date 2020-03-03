@@ -3,7 +3,7 @@ title: swan.startPullDownRefresh
 header: develop
 nav: api
 sidebar: pull_swan-startPullDownRefresh
-# webUrl: https://qft12m.smartapps.cn/api/pullDownRefresh/pullDownRefresh
+# webUrl: https://qft12m.smartapps.cn/swan-api/pullDownRefresh/pullDownRefresh
 ---
  
  

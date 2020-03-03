@@ -3,7 +3,7 @@ title: swan.getSavedFileInfo
 header: develop
 nav: api
 sidebar: save_swan-getSavedFileInfo
-# webUrl: https://qft12m.smartapps.cn/api/file/file
+# webUrl: https://qft12m.smartapps.cn/swan-api/file/file
 ---
 
  

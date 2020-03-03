@@ -3,7 +3,7 @@ title: swan.ai.facePersonVerify
 header: develop
 nav: api
 sidebar: face_swan-ai-facePersonVerify
-# webUrl: https://qft12m.smartapps.cn/api/facePersonVerify/facePersonVerify
+# webUrl: https://qft12m.smartapps.cn/swan-api/facePersonVerify/facePersonVerify
 ---
 
  

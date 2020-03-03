@@ -3,7 +3,7 @@ title: swan.onCompassChange
 header: develop
 nav: api
 sidebar: swan-onCompassChange
-# webUrl: https://qft12m.smartapps.cn/api/getCompass/getCompass
+# webUrl: https://qft12m.smartapps.cn/swan-api/getCompass/getCompass
 ---
 
 
