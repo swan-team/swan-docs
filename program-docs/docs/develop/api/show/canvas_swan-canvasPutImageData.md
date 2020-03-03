@@ -4,30 +4,28 @@ header: develop
 nav: api
 sidebar: canvas_swan-canvasPutImageData
 ---
-
+ 
 
 **解释**：将像素数据绘制到画布的方法。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 `<canvas>` 组件。
 
-**Web 态说明**：由于 Web 态遵循浏览器对 W3C 标准的实现程度，在 W3C 规范中，putImageData 方法的入参中的 width、height、data 需要遵循 data.length === 4 * width * height 的关系，否则会进入 fail 回调。但是在百度 APP 内的小程序环境下，客户端不会校验 data 的大小。为了避免 Web 态运行异常，请尽量保证入参符合标准。
-（如果你是如 **代码示例** 所示的用法，通过 canvasGetImageData 获取 data 并传入 putImageData，则只需要保证 width 和 height 与 canvasGetImageData 中的 width 和 height 一致即可）
-
+ 
 ## 方法参数
 
 Object object
 
-###  `object`参数说明
+###  `object`参数说明  
 
-| 属性名    | 类型               | 必填  | 默认值 | 说明                                             | Web 态说明                       |
-|:---------|:------------------|:-----|:-------|:------------------------------------------------|:--------------------------------|
-| canvasId | String            | 是   |        | 画布标识，传入 `<canvas> `组件的 canvas-id 属性。   |                                 |
-| x        | Number            | 是   |        | 将要被提取的图像数据矩形区域的左上角横坐标            |                                 |
-| y        | Number            | 是   |        | 将要被提取的图像数据矩形区域的左上角纵坐标            |                                 |
-| width    | Number            | 是   |        | 将要被提取的图像数据矩形区域的宽度                   |                                 |
-| height   | Number            | 是   |        | 将要被提取的图像数据矩形区域的高度                   |                                 |
-| data     | Uint8ClampedArray | 是   |        | 图像像素点数据，一维数组，每四项表示一个像素点的 rgba | 数组长度必须为 4 * width * height |
-| success  | Function          | 否   |        | 接口调用成功的回调函数                             |                                 |
-| fail     | Function          | 否   |        | 接口调用失败的回调函数                             |                                 |
-| complete | Function          | 否   |        | 接口调用结束的回调函数（调用成功、失败都会执行）      |                                 |
+|属性名 |类型  |必填 | 默认值 |说明|
+|:---- |:---- |:---- |:----|:----|
+|canvasId	| String | 是  | | 画布标识，传入 `<canvas> `组件的 canvas-id 属性。|
+|x	| Number | 是  | |将要被提取的图像数据矩形区域的左上角横坐标 |
+|y	| Number | 是  | |将要被提取的图像数据矩形区域的左上角纵坐标 |
+|width	| Number | 是  | | 将要被提取的图像数据矩形区域的宽度|
+|height	| Number | 是  | | 将要被提取的图像数据矩形区域的高度 |
+|data	| Uint8ClampedArray | 是  | | 图像像素点数据，一维数组，每四项表示一个像素点的 rgba |
+|success	| Function | 否  | | 接口调用成功的回调函数 |
+|fail	| Function | 否  | | 接口调用失败的回调函数 |
+|complete	| Function | 否  | |接口调用结束的回调函数（调用成功、失败都会执行）|
 ## 示例
 <a href="swanide://fragment/8a3f848b498ceb702128591867e00d631558353320644" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -38,7 +36,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例
+###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/canvasPutImageData.gif">
@@ -48,10 +46,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
-### 代码示例
+### 代码示例 
 
 
 
@@ -74,7 +72,7 @@ Page({
         CanvasContext.setFillStyle('#0f0f0f');
         CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
         CanvasContext.fill();
-
+        
         CanvasContext.beginPath();
         CanvasContext.setStrokeStyle('#0000ff');
         CanvasContext.moveTo(90, 70);
@@ -82,7 +80,7 @@ Page({
         CanvasContext.lineTo(90, 80);
         CanvasContext.closePath();
         CanvasContext.stroke();
-
+        
         CanvasContext.beginPath();
         CanvasContext.setStrokeStyle('#0000ff');
         CanvasContext.moveTo(130, 70);
@@ -90,7 +88,7 @@ Page({
         CanvasContext.lineTo(130, 80);
         CanvasContext.closePath();
         CanvasContext.stroke();
-
+        
         CanvasContext.beginPath();
         CanvasContext.setFillStyle('#00ff00');
         CanvasContext.arc(100, 100, 20, 0, 1 * Math.PI);
@@ -102,11 +100,11 @@ Page({
         CanvasContext.setStrokeStyle('#00ff00');
         CanvasContext.bezierCurveTo(100, 25, 75, 25, 50, 50);
         CanvasContext.stroke();
-
+        
         CanvasContext.moveTo(100, 50);
         CanvasContext.quadraticCurveTo(75, 25, 50, 50);
         CanvasContext.stroke();
-
+        
         CanvasContext.draw();
     },
     canvasPutImageData() {
