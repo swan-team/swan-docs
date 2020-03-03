@@ -84,7 +84,7 @@ Page({
                 // 正常的业务逻辑
             },
             fail: res => {
-                if (res.errMsg == 'web化API不支持openSetting') {
+                if (res.errMsg == 'web API not support openSetting') {
                     // Web 态兼容处理
                 }
             }
@@ -142,6 +142,6 @@ Page({
 
 |错误信息（errMsg）|类型|说明|
 |:--|:--|:--|
-|web化API不支持openSetting|string|不支持|
+|web API not support openSetting|string|不支持|
 
 

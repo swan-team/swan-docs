@@ -10,6 +10,7 @@ sidebar: share_swan-shareFile
 >  在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。基础库3.80.2开始支持，低版本需做兼容处理。
 
 **解释**：支持调起系统分享面板将文件分享到其他App。
+**Web 态说明**：Web 态小程序暂不支持，接口调用会进入失败回调（fail）。
 
  
 ## 方法参数 
@@ -75,6 +76,9 @@ Page({
                         });
                     },
                     fail: err => {
+                        if (err.errMsg === 'web API not support shareFile') {
+                            // 适配 Web 态小程序
+                        }
                         swan.showModal({
                             title: '分享失败',
                             content: JSON.stringify(err)
@@ -140,6 +144,9 @@ Page({
                         });
                     },
                     fail: err => {
+                        if (err.errMsg === 'web API not support shareFile') {
+                            // 适配 Web 态小程序
+                        }
                         swan.showModal({
                             title: '分享失败',
                             content: JSON.stringify(err)
