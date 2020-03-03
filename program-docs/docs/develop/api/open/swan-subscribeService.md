@@ -43,12 +43,12 @@ Object object
 
 [在开发者工具中预览效果](swanide://fragment/f50bfe3df40b9dbc290c3ea38ab9ea0e1578301879913)
 
-<!-- ### 扫码体验
+### 扫码体验
 
 <div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_timer.png" class="demo-qrcode-image" />
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_subscribeService.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div> -->
+</div>
 
 ### 代码示例
 
