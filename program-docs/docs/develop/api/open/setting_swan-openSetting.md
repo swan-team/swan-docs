@@ -84,9 +84,7 @@ Page({
                 // 正常的业务逻辑
             },
             fail: res => {
-                if (res.errMsg == 'web API not support openSetting') {
-                    // Web 态兼容处理
-                }
+                // 异常逻辑
             }
         });
     }
