@@ -8,7 +8,7 @@ sidebar: share_swan-openShare
  
  
 **解释**： 调起分享面板。
-
+**Web 态说明**：Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时，调用 openShare 会弹出引导浮层引导用户通过平台的分享能力进行分享；在非上述环境时会弹出分享面板提示用户复制链接并分享。
  
 
 ## 方法参数 
@@ -17,15 +17,15 @@ Object object
 
 ### `object`参数说明 
 
-|属性名 |类型  |必填 | 默认值 |说明|
-|:---- |:---- |:---- |:----|:----|
-|title |String  |  否  | | 分享标题|
-|content |String  |  否 || 分享内容|
-|imageUrl |String  |  否  | | 分享图标|
-|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|
-|success |Function  |  否  | | 接口调用成功的回调函数|
-|fail   | Function  |  否  | | 接口调用失败的回调函数|
-|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）|
+|属性名 |类型  |必填 | 默认值 |说明| Web 态说明|
+|:---- |:---- |:---- |:----|:----|:----|
+|title |String  |  否  | | 分享标题|暂不支持|
+|content |String  |  否 || 分享内容|暂不支持|
+|imageUrl |String  |  否  | | 分享图标|暂不支持|
+|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时配置的分享path不生效，此时分享path为当前页面的路径|
+|success |Function  |  否  | | 接口调用成功的回调函数||
+|fail   | Function  |  否  | | 接口调用失败的回调函数||
+|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）||
 
 
 ###  函数返回值 
@@ -33,6 +33,19 @@ Boolean result
 
 ###  返回值说明
 反馈分享结果，成功或失败。
+
+
+##  fail 返回值参数说明
+
+###  Web 态
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|url copy fail|string| 分享链接复制到剪切板失败 |
+|share canceled|string| 取消分享面板 |
+|sharing guide canceled|string|取消分享引导弹层|
+
+
 ## 示例
 
 ### 扫码体验
@@ -102,6 +115,9 @@ Page({
     <button type="primary" open-type="share">openShare</button>
 </view>
 ```
+
+
+
 ## Bug & Tip 
 
 bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。

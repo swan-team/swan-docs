@@ -10,7 +10,7 @@ sidebar:  swan-onNetworkStatusChange
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听网络状态变化。
-
+**Web 态说明:** 由于各个浏览器对于 W3C 规范实现存在差异，所以在某些 Web 态环境下（比如 iOS 的 Web 态）会存在网络状态变化时 onNetworkStatusChange 回调函数不执行的情况。
  
 
 ## 方法参数 
@@ -70,6 +70,10 @@ Page({
         let self = this;
         swan.getNetworkType({
             success: res => {
+                if (res.networkType === 'unknown') {
+                    // 建议提示用户确认网络状态
+                }
+                // 网络正常的业务逻辑
                 self.setData('networkType', res.networkType);
             }
         });
