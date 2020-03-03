@@ -10,7 +10,7 @@ sidebar: recorder_RecorderManager-onInterruptionEnd
 
 
 **解释**： 录音中断结束事件。在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。
-**Web 态说明**： Web 态下该事件不会触发。
+**Web 态说明**： Web 态环境不支持录音相关功能，该事件不会触发。
 
 
 ## 方法参数

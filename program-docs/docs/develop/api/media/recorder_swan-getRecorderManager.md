@@ -9,6 +9,7 @@ sidebar: recorder_swan-getRecorderManager
 
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
+**Web 态说明**： 由于浏览器兼容性问题，在 Web 态环境下不支持录音相关功能，调用录音管理器各方法均不会生效。因此，不建议在 Web 态下使用该 API。
 
 ## 方法参数
 
@@ -58,7 +59,3 @@ Page({
     }
 });
 ```
-
-## Bug & Tip
-
-1. 由于浏览器兼容性差异问题，在Web 态下不支持录音功能，返回 RecorderManager 各项功能将不会生效，因此，不建议在Web 态下使用该 API。

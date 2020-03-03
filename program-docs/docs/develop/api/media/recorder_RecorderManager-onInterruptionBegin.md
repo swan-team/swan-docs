@@ -10,7 +10,7 @@ sidebar: recorder_RecorderManager-onInterruptionBegin
 
 
 **解释**： 录音因为受到系统占用而被中断开始事件。以下场景会触发此事件：电话响铃、接听电话。此事件触发后，录音会被暂停。pause 事件在此事件后触发。
-**Web 态说明**： Web 态下该事件不会触发。
+**Web 态说明**： Web 态环境不支持录音相关功能，该事件不会触发。
 
 
 ## 方法参数

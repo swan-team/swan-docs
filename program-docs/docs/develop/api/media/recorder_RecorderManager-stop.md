@@ -7,7 +7,7 @@ sidebar: recorder_RecorderManager-stop
 
 
 **解释**： 停止录音。
-**Web 态说明**： Web 态下该方法不起任何作用。
+**Web 态说明**： Web 态环境不支持录音相关功能，该方法不会生效。
 
 
 
