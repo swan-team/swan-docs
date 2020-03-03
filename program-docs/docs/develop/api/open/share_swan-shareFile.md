@@ -25,6 +25,16 @@ Object object
 |success |Function  |  否 | | 接口调用成功的回调|
 |fail   | Function |   否  | |接口调用失败的回调函数|
 |complete  |  Function |   否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+##  fail 返回值参数说明
+
+###  Web 态
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|swan.openSetting is not supported in web|string |不支持此能力 |
+
 ## 示例
 
 ### 扫码体验
@@ -76,9 +86,6 @@ Page({
                         });
                     },
                     fail: err => {
-                        if (err.errMsg === 'web API not support shareFile') {
-                            // 适配 Web 态小程序
-                        }
                         swan.showModal({
                             title: '分享失败',
                             content: JSON.stringify(err)
@@ -144,9 +151,6 @@ Page({
                         });
                     },
                     fail: err => {
-                        if (err.errMsg === 'web API not support shareFile') {
-                            // 适配 Web 态小程序
-                        }
                         swan.showModal({
                             title: '分享失败',
                             content: JSON.stringify(err)

@@ -8,7 +8,7 @@ sidebar: share_swan-openShare
  
  
 **解释**： 调起分享面板。
-**Web 态说明**：Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时，调用 openShare 会弹出引导层引导用户通过平台的分享能力进行分享；在非以上环境时会弹出分享面板把分享链接复制到剪切板内，用户需自行到社交软件进行分享链接。
+**Web 态说明**：Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时，调用 openShare 会弹出引导浮层引导用户通过平台的分享能力进行分享；在非上述环境时会弹出分享面板提示用户复制链接并分享。
  
 
 ## 方法参数 
@@ -33,6 +33,19 @@ Boolean result
 
 ###  返回值说明
 反馈分享结果，成功或失败。
+
+
+##  fail 返回值参数说明
+
+###  Web 态
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|url copy fail|string| 分享链接复制到剪切板失败 |
+|share canceled|string| 取消分享面板 |
+|sharing guide canceled|string|取消分享引导弹层|
+
+
 ## 示例
 
 ### 扫码体验
@@ -78,24 +91,12 @@ Page({
             path: '/pages/openShare/openShare?key=value',
             imageUrl: 'https://smartprogram.baidu.com/docs/img/logo_new.png',
             success: res => {
-                if (res.result === 'url copy success') {
-                    // Web 态小程序运行在浏览器环境中，用户把分享链接成功复制到了剪切板，用户可能会去其他社交软件进行分享链接
-                }
                 swan.showToast({
                     title: '分享成功'
                 });
                 console.log('openShare success', res);
             },
             fail: err => {
-                if (err.errMsg === 'url copy fail') {
-                    // Web 态小程序分享链接复制到剪切板失败
-                }
-                if (err.errMsg === 'sharing guide canceled') {
-                    // Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内，用户主动点击取消分享引导弹层。此时用户可能已经通过平台能力进行了分享，也可能并没有分享
-                }
-                if (err.errMsg === 'share canceled') {
-                    // Web 态小程序运行在浏览器环境中，用户主动点击了取消分享面板
-                }
                 console.log('openShare fail', err);
             }
         });
@@ -114,15 +115,7 @@ Page({
     <button type="primary" open-type="share">openShare</button>
 </view>
 ```
-##  错误信息
 
-###  Web 态
-
-|错误信息（errMsg）|类型|说明|
-|:--|:--|:--|
-|url copy fail|string| 分享链接复制到剪切板失败 |
-|share canceled|string| 取消分享面板 |
-|sharing guide canceled|string|取消分享引导弹层|
 
 
 ## Bug & Tip 

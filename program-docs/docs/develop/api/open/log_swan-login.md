@@ -10,7 +10,7 @@ sidebar: log_swan-login
 **解释**： 调用接口 swan.login 获取  Authorization Code ，智能小程序可以使用`swan.login()`接口获取Authorization Code。
 
 **Web 态说明:**
-**初次登录：** Web 态在小程序未登录状态下登录时，会跳转到百度提供的授权登录页，登录成功后再跳回原小程序页面。该跳转过程会导致无法恢复原小程序页面的上下文，所以 swan.login 的回调（success、fail、complete）无法执行，从而开发者无法获取到 code。为了解决上述问题，Web 态在 app 实例上增加了 Web 态才会触发（百度 APP 内小程序不会触发）的 [onLogin 生命周期](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/))，开发者可以通过该生命周期获取到 code 值。
+**初次登录：** Web 态在小程序未登录状态下登录时，会跳转到百度提供的授权登录页，登录成功后再跳回原小程序页面。该跳转过程会导致无法恢复原小程序页面的上下文，所以 swan.login 的回调（success、fail、complete）无法执行，从而开发者无法获取到 code。为了解决上述问题，开发者需要在 App 示例上额外增加一个 [onLogin 生命周期](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/)，用于在 Web 态下获取 code 值。具体见下面代码示例1
 **登录态下再登录：** Web 态和端内行为一致。
 
 ## 方法参数 
@@ -81,6 +81,7 @@ App({
     // onLogin在百度 APP 端内小程序内永远不会执行，只有在 Web 态的小程序初次登录成功后才会执行
     onLogin(e) {
         console.log('login success', e) // {code: "e4a13af4e6d8c491b701a86682a5bc76NW"}
+        // 使用 code 换取 session_key 等信息
     }
 });
 ```

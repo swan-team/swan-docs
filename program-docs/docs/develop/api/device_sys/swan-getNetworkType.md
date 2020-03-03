@@ -37,7 +37,7 @@ Object object
 |2g|2g 网络| |
 |3g|3g 网络| |
 |4g|4g 网络| |
-|unknown|Android 和 Web 态下不常见的网络类型|由于各个三方浏览器对于 W3C 规范实现情况不同，所以目前在 Web 态中会存在返回 unknown 的情况（比如 iOS 目前不支持），unknown 并非代表网络异常，建议提示用户确认网络状态后按正常网络情况处理|
+|unknown|Android 和 Web 态下不常见的网络类型|由于浏览器对于 W3C 规范的实现差异，在 Web 态中可能返回 unknown（如 iOS Web 态），并非代表网络异常，请勿在返回值为 unknown 时当作网络异常处理。建议提示用户确认网络状态后按正常网络情况处理|
 |none|无网络||
 
 ## 示例
