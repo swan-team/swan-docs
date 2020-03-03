@@ -23,21 +23,21 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/video/vid
 |muted|Boolean|false|否|是否静音播放|-|-|
 |objectFit|String|contain|否|当视频大小与 video 容器大小不一致时，视频的表现形式。contain ：包含，fill ：填充，cover ：覆盖|-|-|
 |poster|String|  |否|视频封面的图片网络资源地址，支持云文件ID。|3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|-|
-|page-gesture|  Boolean|    false|否|    在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|-| 设置为 true 后 Web 态不生效|
+|page-gesture|  Boolean|    false|否|    在非全屏模式下，是否开启使用手势调节亮度与音量，兼容vslide-gesture属性。|-| 此属性对 Web 态不生效|
 |direction|Number|  |否|按设置的视频全屏方向进入全屏。不指定视频全屏方向时则根据设备方向判断全屏方向。0：正常竖向，90：屏幕顺时针90度，-90：屏幕逆时针90度。| 3.90.29<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
 |show-progress| Boolean|    true|否| 若不设置，宽度大于240时才会显示。|-|-|
 |show-fullscreen-btn|   Boolean|    true|否| 是否显示全屏按钮|-|-|
-|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|-|设置为 true 后 Web 态不生效|
+|enable-progress-gesture|   Boolean |true|否|    是否开启使用手势控制进度|-|此属性对 Web 态不生效|
 |danmu-list|    Array.&lt;object&gt;|       |否|弹幕列表|-|-|
-|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|-|设置为 true 后 Web 态不生效|
+|danmu-btn| Boolean|    false|否|    是否显示弹幕按钮，只在初始化时有效，不能动态变更。|-|此属性对 Web 态不生效|
 |enable-danmu   |Boolean    |false  |否|是否展示弹幕，只在初始化时有效，不能动态变更。|-|-|
 |show-play-btn| Boolean |true|否|    是否显示视频底部控制栏的播放按钮|-|-|
-|show-center-play-btn|  Boolean |true   |否|是否显示视频中间的播放按钮|-|Web 态目前是矩形中间大按钮，暂不支持隐藏，设置为 false 时，不生效|
-|show-mute-btn|Boolean|false|否|是否显示静音按钮。|3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层。| 3.100.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 。| 3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势。| 3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
-|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停。|3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|暂不支持|
+|show-center-play-btn|  Boolean |true   |否|是否显示视频中间的播放按钮|-|Web 态下，中间播放按钮暂不支持隐藏，设置为 false 不生效|
+|show-mute-btn|Boolean|false|否|是否显示静音按钮。|3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|Web 态下，静音按钮暂不支持隐藏，设置为 false 不生效|
+|show-no-wifi-tip|Boolean|true|否|非wifi环境下是否显示继续播放浮层。| 3.100.4 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|vslide-gesture|Boolean|false|否|非全屏模式下，是否开启亮度与音量调节手势，兼容 page-gesture 属性 。| 3.120.2 <p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|vslide-gesture-in-fullscreen|Boolean|true|否|全屏模式下，是否开启亮度与音量调节手势。| 3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
+|enable-play-gesture|Boolean|false|否|是否开启播放手势，即双击切换播放/暂停。|3.120.2<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|此属性对 Web 态不生效|
 |bindplay|EventHandle| |否|当开始播放时触发 play 事件|-|-|
 |bindpause|EventHandle|  |否|当暂停播放时触发 pause 事件|-|-|
 |bindended|EventHandle|  |否|当播放到末尾时触发 ended 事件|-|-|
@@ -544,21 +544,21 @@ Page({
 ### Tip1：在部分浏览器下，视频无法自动播放的解决方案
 **案例分析：**
 出于用户体验、节省流量等原因，iOS 的 Safari、版本号 66 及以上的 Chrome、以及大部分国产移动浏览器禁止视频在非静音状态下自动播放。因此，Web 态**针对 video 组件中 autoplay 属性设置为 true 后**做了如下处理：
-* 对于 QQ、Android 微信、 QQ 浏览器等基于 X5 内核的平台，Web 态提供了提供一个播放按钮供用户点击触发播放。
-* 对于非 X5 内核平台，Web 态设置了静音以使得 video 能自动播放，并展示了”取消静音”按钮供用户开启声音。
+* 对于 QQ、Android 微信、 QQ 浏览器等基于 X5 内核的平台，Web 态下设置的 autoplay = true 不生效，页面进入时，视频组件上显示播放按钮供用户主动点击触发播放。
+* 对于其他非 X5 内核的平台，为保证页面进入时可自动播放，会默认关闭声音播放，并显示“取消静音”按钮，供用户主动开启声音。
 
 由于浏览器种类众多，如出现自动播放相关新问题，请将案例反馈给我们，我们将统一记录并反馈进展。
 
 ### Tip2：视频类资源地址必须有文件扩展名（即文件后缀）
 由于浏览器无法解析资源格式。因此对于视频类资源，应在地址中通过后缀名显式声明资源格式，否则可能会导致视频无法正常播放：
-* Web 态 video 组件目前支持 mp4、mov、m4v、ogg、m3u8 等格式，参见上述上述“主流格式支持”小节。
-* Web 态 video 组件的 **src 属性值如果没有文件扩展名，视频会被按照 mp4 格式来进行解码播放**。
+* Web 态 video 组件目前支持 mp4、mov、m4v、ogg、m3u8 等格式，参见上述“主流格式支持”小节。
+* 当 video 组件的 **src 属性值没有文件扩展名，视频会被按照 mp4 格式来进行解码播放**。
 
 ### Tip3：在部分浏览器下，视频播放器会遮挡其他页面元素 / 小窗播放问题的解决方案
 **案例分析：**
-微信、手机百度、UC 等浏览器实现了自身的播放器控件，劫持了默认内核提供的播放器样式和逻辑，从而使得基于 H5 video 实现的 Web 态 video 组件出现了以下问题：
+微信、百度 APP、UC 等浏览器实现了自身的播放器控件，劫持了默认内核提供的播放器样式和逻辑，从而使得基于 H5 video 实现的 Web 态 video 组件出现了以下问题：
 * 在 Android 系统的微信平台、百度 APP 和 UC 等国产移动浏览器下，Video 组件的播放器会覆盖到页面其他内容之上，且无法通过 z-index 控制层级，从而导致一些交互失效（比如无法上下滑动触发切换视频）。
-* 在 OPPO 手机下的手机百度，会出现小窗播放。
+* 在 OPPO 手机下的百度 APP，会出现小窗播放。
 
 **解决方案：**
-Web 态针对不同浏览器开启了相对合适的播放模式，以解决上述案例中的问题。但由于浏览器种类众多，有可能存在我们暂未覆盖到的或者该浏览器不支持内核播放模式切换的情况，此时仍然会出现此类问题。如出现上述情况，请您将案例反馈给我们，我们将统一记录并反馈进展。
+Web 态针对不同浏览器做了尽可能的修复，以解决此问题。已修复的包括 QQ、Android 微信、QQ 浏览器等基于 X5 内核的平台，百度 APP。但由于浏览器种类众多，有可能存在我们暂未覆盖到的情况。如仍遇到上述问题，请您将案例反馈给我们，我们将统一记录并反馈进展。
