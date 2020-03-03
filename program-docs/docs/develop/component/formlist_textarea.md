@@ -14,7 +14,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/textarea/
 
 ##  属性说明
 
-|属性名|类型|默认值|必填|说明|最低支持版本|Web 态说明
+|属性名|类型|默认值|必填|说明|最低支持版本|Web 态说明|
 |:----|:----|:----|:----|:----|:----|:----|
 |value|String| |否|输入框的内容，若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)|-|-|
 |disabled|Boolean|false|否|是否禁用|-|-|

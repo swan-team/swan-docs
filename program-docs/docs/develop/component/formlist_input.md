@@ -12,7 +12,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/inp
 
 |属性名 |类型  |默认值  | 必填 |说明|Web 态说明|
 |:---- | :---- | :---- |:---- |:---- |:---- |
-| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)| |-|
+| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)|-|
 | type | String  |text  | 否 |input 的类型|-|
 | password | Boolean  | false  | 否 |是否是密码类型|-|
 | placeholder | String  |   | 否 |输入框为空时占位符|-|
