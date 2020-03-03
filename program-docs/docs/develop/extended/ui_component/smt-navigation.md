@@ -22,17 +22,9 @@ webUrl: https://qft12m.smartapps.cn/extensions/component/smt-navigation/smt-navi
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-navigation.png"  class="demo-qrcode-image" />
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/smt-navigation.gif">
-    </div>  
-</div>
 
 ###  代码示例
 
- 
 
 :::codeTab
 ```swan
