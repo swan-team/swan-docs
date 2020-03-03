@@ -7,7 +7,8 @@ sidebar: recorder_RecorderManager-onError
 
 
 
-**解释**： 录音错误事件, 会回调错误信息。Web 态下不会触发该类事件。
+**解释**： 录音错误事件, 会回调错误信息。
+**Web 态说明**： Web 态下该事件不会触发。
 
 
 ## 方法参数

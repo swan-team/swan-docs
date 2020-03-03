@@ -7,7 +7,8 @@ sidebar: recorder_RecorderManager-start
 
 
 
-**解释**： 开始录音。Web 态下该方法不起任何作用。
+**解释**： 开始录音。
+**Web 态说明**： Web 态下该方法不起任何作用。
 
 
 ## 方法参数

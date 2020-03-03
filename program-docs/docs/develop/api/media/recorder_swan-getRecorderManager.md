@@ -61,4 +61,4 @@ Page({
 
 ## Bug & Tip
 
-1. 由于浏览器兼容性差异问题，在Web 态下不支持录音功能，返回RecorderManager各项功能将不会生效，因此，不建议在Web 态下使用该API。
+1. 由于浏览器兼容性差异问题，在Web 态下不支持录音功能，返回 RecorderManager 各项功能将不会生效，因此，不建议在Web 态下使用该 API。

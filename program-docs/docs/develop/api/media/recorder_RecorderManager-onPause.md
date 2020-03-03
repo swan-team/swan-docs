@@ -8,7 +8,8 @@ sidebar: recorder_RecorderManager-onPause
 
 
 
-**解释**： 监听录音暂停事件。Web 态下不会触发该类事件。
+**解释**： 监听录音暂停事件。
+**Web 态说明**： Web 态下该事件不会触发。
 
 
 

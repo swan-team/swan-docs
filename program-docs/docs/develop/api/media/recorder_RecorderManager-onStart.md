@@ -9,7 +9,8 @@ sidebar: recorder_RecorderManager-onStart
 
 
 
-**解释**： 录音开始事件。Web 态下不会触发该类事件。
+**解释**： 录音开始事件。
+**Web 态说明**： Web 态下该事件不会触发。
 
 
 ## 方法参数
