@@ -5,6 +5,13 @@ nav: devtools
 sidebar: uplog_tool_normal
 ---
 
+### 2.30 版本 
+
+|版本号|更新时间|更新内容|
+|--|--|--|
+|2.30.1|2020.3.4|**New**<p>**·**  小程序web预览 新增二维码过期时间；<p>**·** 增加压缩图片的功能。<p>**BugFix**<p>**·** 修复删除文件后打开相关diff类型tab编辑区空白问题；<p>**·** 修复新建云开发模板问题；<p>**·** swan.showFavoriteGuide引导组件体验优化；<p>**·** 增加swan.request、swan.uploadfile、swan.downloadfile重定向域名校验。|
+	
+
 
 ### 2.29 版本 
 
