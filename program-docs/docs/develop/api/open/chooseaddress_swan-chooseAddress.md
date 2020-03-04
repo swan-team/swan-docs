@@ -5,16 +5,16 @@ nav: api
 sidebar: chooseaddress_swan-chooseAddress
 # webUrl: https://qft12m.smartapps.cn/swan-api/chooseAddress/chooseAddress
 ---
-
+ 
 
 **解释**： 调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
-
-## 方法参数
+ 
+## 方法参数 
 
 Object object
 
-###  `object`参数说明
+###  `object`参数说明 
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -39,10 +39,6 @@ Object object
 |detailInfo|  String|  详细收货地址信息| |
 |telNumber|   String|  收货人手机号码| |
 |nationalCode|	String	|收货地址国家码| ||
-
-## Web 态说明
-Web 态暂不支持 chooseAddress API 功能。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
-
 ## 示例
 
 ###  扫码体验
@@ -52,7 +48,7 @@ Web 态暂不支持 chooseAddress API 功能。在 Web 态会做 **打开百度 
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###   图片示例
+###   图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/chooseAddress.gif">
@@ -62,8 +58,8 @@ Web 态暂不支持 chooseAddress API 功能。在 Web 态会做 **打开百度 
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
-</div>
+    </div>     
+</div> 
 
 ###   代码示例1 - 用户允许授权情况下 ：
 
@@ -125,4 +121,4 @@ Page({
     }
 });
 ```
-
+ 
