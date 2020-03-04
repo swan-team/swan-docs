@@ -11,7 +11,6 @@ sidebar: arcameracontext_swan-createARCameraContext
 > 基础库 3.15.104 开始支持，低版本需做兼容处理。 目前只针对百度 APP 开放使用。 
 
 **解释**：创建并返回 ar-camera 上下文 `ARCameraContext`对象，ARCameraContext 与页面的 <a href='/develop/component/media_ar-camera/'>ar-camera</a> 组件绑定，一个页面只能有一个 ar-camera，通过它可以操作对应的组件。使用该 API 需使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
-**Web 态说明**：Web 态暂不支持 AR 相机功能。createARCameraContext 返回的 ARCameraContext 系列方法，在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
  
 ## 方法参数

@@ -65,14 +65,14 @@ webUrl: https://qft12m.smartapps.cn/component/input/input
 </div>
 
 
- 
+
 
 ###  代码示例1 - 基础用法 ：
 
 <a href="swanide://fragment/06c050eeb63c8b030a17e943866a8c6c1575286848934" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -90,7 +90,7 @@ webUrl: https://qft12m.smartapps.cn/component/input/input
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -128,7 +128,7 @@ webUrl: https://qft12m.smartapps.cn/component/input/input
     </view>
 </view>
 ```
- 
+
 
 ```js
 Page({
@@ -176,7 +176,7 @@ Page({
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -228,7 +228,7 @@ Page({
 <a href="swanide://fragment/aef77cb4643dcca1cec67fcf0feac9741575287321184" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -244,7 +244,7 @@ Page({
 </view>
 ```
 
- 
+
 
 ```js
 Page({
@@ -262,7 +262,7 @@ Page({
 <a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -312,7 +312,7 @@ Page({
     </view>
 </view>
 ```
- 
+
 
 ```js
 Page({
@@ -379,3 +379,4 @@ Page({
 * Bug：在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
 * Tip：暂不支持 bindinput 处理函数直接 return 一个字符串。
 * Tip：v3.105.0 起 input 支持同层渲染，更多请参考[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)。
+
