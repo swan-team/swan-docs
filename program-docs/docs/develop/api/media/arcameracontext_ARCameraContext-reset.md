@@ -9,8 +9,8 @@ sidebar: arcameracontext_ARCameraContext-reset
  
 
 **解释**：重置相机
+**Web 态说明**：Web 态暂不支持 AR 相机相关方法。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。 
 
- 
 ## 方法参数 
 
 Object object
