@@ -10,6 +10,7 @@ sidebar: swan-setURLQuery
 > 基础库 3.100.6 开始支持，低版本需做[兼容处理](/develop/swan/compatibility/)。
 
 **解释**：   设置当前页面的 URL query。
+
 <!-- 如果调用 swan.setURLQuery 导致 URL query 更新，则会同步地调用当前页面的 onURLQueryChange，并引起带有 url-query-name 属性的 [tabs](/develop/component/nav/#tabs/) 组件更新视图。 -->
 
 
