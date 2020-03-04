@@ -41,7 +41,7 @@ webUrl: https://qft12m.smartapps.cn/extensions/component/follow/follow
 npm install @smt-ui/content-component
 ```
 
-在 页面json 文件中：
+ 
 :::codeTab
 ```json
 {

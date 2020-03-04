@@ -62,7 +62,7 @@ sidebar: like
 ```    
 npm install @smt-ui/content-component
 ```
-在 页面json 文件中：
+ 
 :::codeTab
 ```json
 {
@@ -73,7 +73,7 @@ npm install @smt-ui/content-component
 }
 ```
 :::
-在 swan 文件中：
+ 
 :::codeTab
 ```swan
 <view>点赞：仅图标</view>
