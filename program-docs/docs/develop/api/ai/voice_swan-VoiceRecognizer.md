@@ -7,13 +7,15 @@ sidebar: voice_swan-VoiceRecognizer
 
 
 **解释**：语音识别
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。调用该对象上的方法时，Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
+
 
 ## 方法参数
 
 Object object
 
 
-### object 参数说明 
+### object 参数说明
 
 |属性名 |类型  |默认值 |必填|说明|
 |---- | ---- | ---- |---- |---- |
@@ -37,7 +39,7 @@ Object object
 
 ## 示例
 
- 
+
 <a href="swanide://fragment/d17a7dd720a33f268064ab9abd665b321581337654130" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
@@ -45,7 +47,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -56,10 +58,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/getVoiceRecognizer.gif">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 
 
