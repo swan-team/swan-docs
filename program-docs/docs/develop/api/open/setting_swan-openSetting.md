@@ -140,6 +140,6 @@ Page({
 
 |错误信息（errMsg）|类型|说明|
 |:--|:--|:--|
-|web API not support openSetting|string|不支持|
+|API swan.openSetting is not supported in web|string|不支持|
 
 
