@@ -23,11 +23,11 @@ sidebar: layout
 
 ## 透明框架布局适配
 当开发者使用小程序的原生顶部导航栏时，开发者只需要在顶部导航栏下方开始布局页面即可。
-智能小程序在百度App v11.1及以上版本，可以[自定义顶部导航栏](../../component/topnav/#自定义顶部导航栏)，使其只保留框架控制功能区，后文简称为“透明框架”。
+智能小程序在百度APP v11.1及以上版本，可以[自定义顶部导航栏](/design/component/topnav/#自定义顶部导航栏)，使其只保留框架控制功能区，后文简称为“透明框架”。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/2.png"><p class="m-doc-custom-examples-text">1. 默认框架，使用小程序顶部导航栏；
-		2. 透明框架。</p>
+		1. 透明框架。</p>
 	</div>
 </div>
 
@@ -75,7 +75,7 @@ sidebar: layout
 </div>
 
 全面屏手机的刘海高度等同于系统状态栏的高度。
-通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
+通过系统信息接口[getSystemInfoSync](https://smartprogram.baidu.com/docs/develop/api/device_sys/#getSystemInfoSync)获得系统状态栏的高度（statusBarHeight），在全面屏手机页面布局中增加系统状态栏的高度。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -100,7 +100,7 @@ sidebar: layout
 </div>
 
 当开发者未使用底部标签栏组件，而是自主开发底部栏（如购物栏，评论栏），需注意此区域不可布局可操作元素，避免误操作。
-可以调用小程序提供的<a href="https://smartprogram.baidu.com/docs/develop/framework/view_css/#适配样式">.view_css</a>适配全面屏iPhone，把底部横条颜色适配为与底部栏一致。
+可以调用小程序提供的<a href="http://smartprogram.baidu.com/docs/develop/framework/view_css/#适配样式">.view_css</a>适配全面屏iPhone，把底部横条颜色适配为与底部栏一致。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/layout/14-1.png">

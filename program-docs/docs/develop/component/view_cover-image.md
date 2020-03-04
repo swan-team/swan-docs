@@ -3,7 +3,7 @@ title: cover-image 图片视图
 header: develop
 nav: component
 sidebar: view_cover-image
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/cover-image/cover-image
+webUrl: https://qft12m.smartapps.cn/component/cover-image/cover-image
 ---
 
 **解释**：覆盖在<a href="https://smartprogram.baidu.com/docs/develop/component/native/">原生组件</a>之上的图片视图（与 cover-view 相比，仅支持图片）,支持嵌套在 <a href="/develop/component/view_cover-view/">cover-view</a> 里。 

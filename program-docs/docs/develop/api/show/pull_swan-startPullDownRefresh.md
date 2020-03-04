@@ -3,7 +3,7 @@ title: swan.startPullDownRefresh
 header: develop
 nav: api
 sidebar: pull_swan-startPullDownRefresh
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pullDownRefresh/pullDownRefresh
+# webUrl: https://qft12m.smartapps.cn/swan-api/pullDownRefresh/pullDownRefresh
 ---
  
  
@@ -32,14 +32,20 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
- 
-
 ### 代码示例 
 
 
 
 :::codeTab
+
+```swan
+<view class="card-area">
+    <view class="page-info">下拉页面/点击按钮即可刷新</view>
+    <button bind:tap="startPullDownRefresh" disabled="{{disabled}}" hover-stop-propagation="true" type='primary'>开始刷新</button>
+    <button bind:tap="stopPullDownRefresh" hover-stop-propagation="true" type='primary'>停止刷新</button>
+</view>
+```
+
 ```js
 Page({
     startPullDownRefresh() {

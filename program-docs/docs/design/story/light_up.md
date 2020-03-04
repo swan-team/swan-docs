@@ -4,8 +4,10 @@ header: design
 nav: story
 sidebar: light_up
 ---
+
 “减减鸭”是一款为用户分析压力情况，并帮助用户调节心情、减轻压力的工具类小程序。它运用小程序组件和小程序设计原则，创造了轻松愉悦且易于理解的体验风格。
 本文将从信息架构、阅读体验、色彩系统、LOGO设计、动效设计5个层面介绍这款智能小程序的设计过程。
+
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/1.png">
@@ -19,14 +21,14 @@ sidebar: light_up
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/2.png"><p class="m-doc-custom-examples-text">1. 1字形架构
-2. 减减鸭首页</p>
+		1. 减减鸭首页</p>
 	</div>
 </div>
 
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/3.png"><p class="m-doc-custom-examples-text">1. 首页
-2. 功能模块</p>
+		1. 功能模块</p>
 	</div>
 </div>
 
@@ -38,11 +40,13 @@ sidebar: light_up
 <div class="m-doc-custom-text-image">
  	<div>
  	    <p>减减鸭首页没有延用移动端产品首页传统的“banner大图& 功能列表”模式，采用了更新颖的布局方式：
-<ol>
-<li>突出主体：使用插画风格头图与同色背景，增强背景区域整体感，让用户视线聚焦在前层的主体内容上；</li>
-<li>明确层次：压力指数测试功能入口使用强化按钮展示（1）。按钮嵌入在插画头图中，高明度的配色使按钮与背景对比鲜明，层次清晰；</li>
-<li>充分传达：手速减压与放松练习两创新功能入口，使用面积较大的卡片展示（2），以承载功能介绍文案及配图。</li></ol></p>
- 	</div>
+      		<ol>
+         		<li>突出主体：使用插画风格头图与同色背景，增强背景区域整体感，让用户视线聚焦在前层的主体内容上；</li>
+         		<li>明确层次：压力指数测试功能入口使用强化按钮展示（1）。按钮嵌入在插画头图中，高明度的配色使按钮与背景对比鲜明，层次清晰；</li>
+         		<li>充分传达：手速减压与放松练习两创新功能入口，使用面积较大的卡片展示（2），以承载功能介绍文案及配图。</li>
+			</ol>
+		</p>
+	</div>
  	<div>
  		<img src="../../../img/design/story/light_up/4.png">
 	</div>
@@ -56,26 +60,26 @@ sidebar: light_up
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/5.png"><p class="m-doc-custom-examples-text">1. 压力指数测试
-2. 手速减压
-3. 放松练习</p>
+		2. 手速减压
+		3. 放松练习</p>
 	</div>
 </div>
 
-### 组件运用
+ ### 组件运用
 
 减减鸭应用了多个小程序组件，并根据功能场景进行了定制，本节以音频播放器为例讲解。
+
 放松练习功能中使用了小程序音频播放器组件，用于放松指导语的播放。为契合放松减压的应用场景，播放器隐藏了常见的容器形态，与插画背景融为一体，仅保留了播放控制按钮，最大程度地营造场景沉浸感。
 小程序音频播放器支持锁屏播放，用户可以在放松的状态中聆听放松指导语直至结束，不必担心设备锁屏中断进程。
 
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/6.png"><p class="m-doc-custom-examples-text">1. 音频播放状态
-2. 音频暂停状态</p>
+		2. 音频暂停状态</p>
 	</div>
 </div>
 
 ## 色彩系统
-
 ### 配色风格
 减减鸭采用舒缓镇定的文艺清新色彩搭配，希望传递给用户温暖、包容、安逸的感受；辅助色选用了一定饱和度、明度范围内的草绿色与橙黄色。
 
@@ -91,7 +95,7 @@ sidebar: light_up
 <div class="m-doc-custom-img">
 	<div >
 		<img src="../../../img/design/story/light_up/8.png"><p class="m-doc-custom-examples-text">1. 黑色导航
-2. 白色导航</p>
+   		2. 白色导航</p>
 	</div>
 </div>
 
@@ -113,13 +117,13 @@ sidebar: light_up
 ### 拟态涟漪的点击动效
 手速减压功能的核心，是希望用户通过快速点击屏幕释放压力，因此会累计用户点击屏幕次数，并显示数值。但是如果用户点击屏幕后，数值直接变化，而没有其他的反馈，会显得枯燥乏味，缺乏吸引力。
 经过联想设计，减减鸭的点击操作配合了涟漪状的反馈，用户按压屏幕时，页面会跟随手势出发点扩散出阵阵涟漪，就像在大自然中轻触水面，看着层层水波泛起，心中的烦闷也被排解开来。
-<video width="100%" muted autoplay="autoplay" loop="loop" src="../../../img/design/story/light_up/click.mov" >
+<video width="100%" muted autoplay="autoplay" loop="loop"  src="../../../img/design/story/light_up/click.mov" >
 你的浏览器不支持该视频播放
 </video>
 
 ### 拟态水波的播放动效
 放松练习功能中音频播放时，背景会缓缓浮现规律的水波动效，节奏与人的呼吸相近。用户在聆听放松指导音频时，可以让自己的情绪随着水波，在一呼一吸中慢慢得到舒缓。
-<video width="100%" muted autoplay="autoplay"  loop="loop" src="../../../img/design/story/light_up/play.mov" >
+<video width="100%" muted autoplay="autoplay"  loop="loop"  src="../../../img/design/story/light_up/play.mov" >
 你的浏览器不支持该视频播放
 </video><p class="m-doc-custom-examples-text">温馨提示：如果你的浏览器无法正常播放，请尝试Chrome浏览器。</p>
 
@@ -128,4 +132,4 @@ sidebar: light_up
 以上是智能小程序“减减鸭”的设计思考，更多细节设计可使用百度APP扫描下图二维码进行体验。
 <div class="m-doc-custom-examples-correct ispc"><img src="../../../img/design/principle/innovation/4-1.png"></div>
 <div class="m-doc-custom-examples-correct ismobile"><img src="../../../img/design/principle/innovation/4-2.png"></div>
-<div class="m-doc-custom-examples-correct isbox"><img src="../../../img/design/principle/innovation/4-3.png"></div>
+<div class="m-doc-custom-examples-correct isbox"><img src="../../../img/design/principle/innovation/4-3.png"></div>  

@@ -3,7 +3,7 @@ title: switch 开关选择器
 header: develop
 nav: component
 sidebar: formlist_switch
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/switch/switch
+webUrl: https://qft12m.smartapps.cn/component/switch/switch
 ---
 
  

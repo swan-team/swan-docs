@@ -75,7 +75,7 @@ const allListData = getAllListData();
 
 
 module.exports = {
-    navData: getNavData(),
+    getNavData,
     breadCrumbsData: allListData.resultBreadCrumbs,
     navList: allListData.navList
 };

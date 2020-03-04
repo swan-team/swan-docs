@@ -3,13 +3,13 @@ title: tabs 标签栏
 header: develop
 nav: component
 sidebar: tabs
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/tabs/tabs
+webUrl: https://qft12m.smartapps.cn/component/tabs/tabs
 ---
 **解释**：标签栏，用于让用户在不同的视图中进行切换。基础库 3.100.4 版本开始支持。
 ##  属性说明 
 |属性名 |类型  |默认值  | 必填 |说明|最低版本|
 |:---- |: ---- |: ---- |:---- |:---- |:---- |
-|tabs-background-color|→String|→'#fff'| 否 |tabs 背景色,必须填写十六进制颜色|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|tabs-background-color|String|'#fff'| 否 |tabs 背景色,必须填写十六进制颜色|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |tabs-active-text-color| String |'#000'  |否 |tabs 激活 tab-item 文字颜色|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |tabs-inactive-text-color| String | '#666' |否 |tabs 非激活 tab-item 文字颜色|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |tabs-underline-color| String | '#333' |否 |tabs 激活 tab-item 下划线颜色|3.100.4<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|

@@ -3,7 +3,7 @@ title: swan.getSwanId
 header: develop
 nav: api
 sidebar: userinfo_swan-getSwanId
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getSwanId/getSwanId
+# webUrl: https://qft12m.smartapps.cn/swan-api/getSwanId/getSwanId
 ---
 
  

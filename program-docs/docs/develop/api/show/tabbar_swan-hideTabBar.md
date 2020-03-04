@@ -3,7 +3,7 @@ title: swan.hideTabBar
 header: develop
 nav: api
 sidebar: tabbar_swan-hideTabBar
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+# webUrl: https://qft12m.smartapps.cn/swan-api/tabBar/tabBar
 ---
  
 **解释**：隐藏 tabBar

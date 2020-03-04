@@ -3,7 +3,7 @@ title: ad 广告
 header: develop
 nav: component
 sidebar: ad
-# webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/ad/ad
+# webUrl: https://qft12m.smartapps.cn/component/ad/ad
 ---
 
  

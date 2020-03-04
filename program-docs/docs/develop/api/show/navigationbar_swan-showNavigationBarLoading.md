@@ -3,15 +3,12 @@ title: swan.showNavigationBarLoading
 header: develop
 nav: api
 sidebar: navigationbar_swan-showNavigationBarLoading
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigationBarLoading/navigationBarLoading
+webUrl: https://qft12m.smartapps.cn/swan-api/navigation-bar-loading/navigation-bar-loading
 ---
- 
- 
 
 **解释**： 该方法在当前页面显示导航条加载动画。
 
- 
- ## 方法参数 
+## 方法参数 
 
 无
 
@@ -26,25 +23,7 @@ sidebar: navigationbar_swan-showNavigationBarLoading
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
- 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/navigationbarloading.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
 ### 代码示例 
-
-
-
- 
 
 :::codeTab
 ```swan
@@ -54,8 +33,6 @@ sidebar: navigationbar_swan-showNavigationBarLoading
     <button bind:tap="hideNavigationBarLoading" type="primary" hover-stop-propagation="true">隐藏加载动画</button>
 </view>
 ```
-
- 
 
 ```js
 Page({

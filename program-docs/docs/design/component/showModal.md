@@ -1,14 +1,14 @@
 ---
-title: 提示框
+title: 模态对话框
 header: design
-nav: component
-sidebar: dialog
+nav: foundation
+sidebar: showModal
 ---
 提示框用于同步用户重要信息，并要求用户对此进行确认，或执行特定操作以决策下一步骤。作为模态组件，提示框出现时，蒙层覆盖原界面，以聚焦用户注意力于提示框上，原页面功能均无法使用；除非用户对其进行操作，提示框并不会自动消失。
 综上，请谨慎使用提示框，因为它们会分散用户的注意力，并且打断用户的任务路径。
 
 
-开发文档说明详见<a href="https://smartprogram.baidu.com/docs/develop/api/show/toast_swan-showToast/#swan-showModal/" target="_blank">showModal</a>。
+开发文档说明详见<a href="/develop/api/show/toast_swan-showModal/" target="_blank"> showModal </a>。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-error ">
@@ -19,7 +19,7 @@ sidebar: dialog
 ## 元素解构
 智能小程序提供统一提示框，开发者可以配置其标题、内容及操作按钮的数量（1-2个）和按钮文字颜色。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-error ">
+	<div class="m-doc-custom-examples-error">
 		<img src="../../../img/design/component/dialog/2.png">
 		<p class="m-doc-custom-examples-text">1.容器
 2.标题（可选，可配）

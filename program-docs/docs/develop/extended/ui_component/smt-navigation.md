@@ -3,7 +3,7 @@ title: navigation 自定义导航
 header: develop
 nav: extended
 sidebar: smt-navigation
-webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-navigation/smt-navigation
+webUrl: https://qft12m.smartapps.cn/extensions/component/smt-navigation/smt-navigation
 ---
 
 **解释：** 顶部导航bar可以自定义
@@ -22,17 +22,9 @@ webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/page
 
 <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/smt-navigation.png"  class="demo-qrcode-image" />
 
-###  图片示例 
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/images/smt-navigation.gif">
-    </div>  
-</div>
 
 ###  代码示例
 
- 
 
 :::codeTab
 ```swan
