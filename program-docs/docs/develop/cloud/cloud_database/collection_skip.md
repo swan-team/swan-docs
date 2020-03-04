@@ -11,7 +11,7 @@ sidebar: collection_skip
 
 该方法的传入参数为必填参数，参数类型为数字类型，用来指定查询返回结果开始的序列。
 
-**代码示例**
+**代码示例1**
 
 ```js
 swan.cloud.init({
@@ -28,9 +28,30 @@ db.collection('users')
         console.warn(err);
     });
 ```
-下面是在云函数端获取一个集合所有记录的例子，因为有最多一次取 100 条的限制，因此很可能一个请求无法取出所有数据，需要分批次取：
+获取第二页的用户信息，假设一页 10 条，现在要取第 2 页，则可以指定 skip 10 条记录
 
 **代码示例2**
+
+```js
+swan.cloud.init({
+    env: 'envId'
+});
+const db = swan.cloud.database();
+db.collection('users')
+    .skip(10)  // 跳过结果集中的前 10 条，从第 11 条开始返回
+    .limit(10) // 限制返回数量为 10 条
+    .get()
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => {
+        console.warn(err);
+    });
+```
+
+下面是在云函数端获取一个集合所有记录的例子，因为有最多一次取 100 条的限制，因此很可能一个请求无法取出所有数据，需要分批次取：
+
+**代码示例3**
 
 ```js
 const cloud = require('swan-server-sdk')
@@ -58,4 +79,3 @@ exports.main = async (event, context) => {
   })
 }
 ```
-
