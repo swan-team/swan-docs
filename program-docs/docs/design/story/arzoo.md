@@ -16,14 +16,12 @@ sidebar: arzoo
 ### 多维度匹配用户诉求
 长隆AR动物园的产品目标是让用户体验小程序的AR能力，主要功能为：AR识图、AR虚拟现实、AR导航。因此，操作流程的设计需要结合游览动物园的真实场景，让用户从看、找、逛 3种维度体验智能小程序的AR能力。
 
-1. [看]  通过动物科普+虚拟现实能力还原动物模型，对动物产生立体认知，吸引用户去园区看真实的动物；
-2. [找] 使用地图的AR导航能力链接线上/线下科普场景，最终通过AR虚拟现实能力了解动物，虚拟互动；
-3. [逛] 通过园区科普展板，使用AR识图+虚拟现实能力与动物轻松互动，强化认知。
+#### 1. [看]  通过动物科普+虚拟现实能力还原动物模型，对动物产生立体认知，吸引用户去园区看真实的动物；
+#### 2. [找] 使用地图的AR导航能力链接线上/线下科普场景，最终通过AR虚拟现实能力了解动物，虚拟互动；
+#### 3. [逛] 通过园区科普展板，使用AR识图+虚拟现实能力与动物轻松互动，强化认知。
 
 <div class="m-doc-custom-examples-correct">
-	<img src="../../../img/design/story/arzoo/2.png"><p class="m-doc-custom-examples-text">1. 查看动物；
-		2. 查看地图；
-	3. 观赏动物。</p>
+	<img src="../../../img/design/story/arzoo/2.png"><p class="m-doc-custom-examples-text"> 场景示例：查看动物（1）-> 查看地图（2） -> 观赏动物（3）</p>
 </div>
 <div class="m-doc-custom-examples-correct">
 	<img src="../../../img/design/story/arzoo/3.png"><p class="m-doc-custom-examples-text">体验维度结构图</p>
@@ -31,15 +29,16 @@ sidebar: arzoo
 
 ### 选择合适的信息架构
 为了更好的将产品目标与用户的诉求维度匹配，对长隆AR动物园的核心内容进行3个维度的划分：
-1. [看]  AR动物集合，为方便用户快速浏览和体验，将动物集合设置在首页；
-2. [找]  园区AR地图，查看地图属于用户主动触发需求，放在第二tab；
-3. [逛]  AR智能相机，作为小程序特色功能放置在TAB中间位置以强化展示。
+#### 1. [看]  AR动物集合，为方便用户快速浏览和体验，将动物集合设置在首页；
+#### 2. [找]  园区AR地图，查看地图属于用户主动触发需求，放在第二tab；
+#### 3. [逛]  AR智能相机，作为小程序特色功能放置在TAB中间位置以强化展示。
 
 小程序要同时满足不同维度的用户诉求，功能入口需为并列关系。因此小程序信息架构采用“底TAB + 流式布局”的倒T型结构，方便用户能够在不同诉求间切换，快速体验智能小程序的AR能力。
-	<div class="m-doc-custom-examples-correct">
+
+<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/story/arzoo/4.png"><p class="m-doc-custom-examples-text">1.T字形架构；
 2.长隆AR动物园。</p>
-	</div>
+</div>
 
 ## 使用流程
 ### 铺设流畅的使用流程
@@ -86,10 +85,11 @@ AR科普（动物详情）页使用 scroll-view 组件的横向滑动属性，�
 
 ### 色彩系统运用
 长隆动物园首页共有30张动物卡片，设计师希望每张卡片代表一种动物，让每个动物有其独特的性格色彩。同时，考虑到页面色彩的统一性，我们建立了色环，选取同一色彩明度、饱和度的色环范围。运用了视觉设计中的对比、亲密性原则，使用丰富且规律的色彩，让页面更加生动有趣。
-	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/story/arzoo/10.png">
+
+<div class="m-doc-custom-examples-correct"><img src="../../../img/design/story/arzoo/10.png">
 	</div>
 	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/story/arzoo/11.png"><p class="m-doc-custom-examples-text">AR动物的色彩运用</p>
-	</div>
+</div>
 
 ## 打造有识别度的LOGO
 小程序设计Logo时，注意长隆动物园LOGO需要在智能小程序圆形轮廓展现，设计切图时按照圆形参考线，预留固定的出血量以确保LOGO的可识别性。
@@ -109,8 +109,7 @@ AR入口根据动物的图片特点动态变化，设计情感化的呼吸动效
 <video muted autoplay="autoplay" loop="loop" src="../../../img/design/story/arzoo/13.mp4" width="40%" >
 你的浏览器不支持该视频播放
 </video>
-<p class="m-doc-custom-examples-text">呼吸动效示例
-温馨提示：如果你的浏览器无法正常播放，请换用Chrome浏览器。</p>
+<p class="m-doc-custom-examples-text">呼吸动效示例（温馨提示：如果你的浏览器无法正常播放，请换用Chrome浏览器。）</p>
 
 
 ## 总结

@@ -428,8 +428,25 @@
           text: 重创新
           name: innovation
     -
+      link: /design/whitebook/how_to_login
+      text: 核心体验白皮书
+      name: whitebook
+      sidebar:
+        -
+          link: /design/whitebook/how_to_login
+          text: 如何使用小程序登录能力
+          name: howtologin
+        -
+          link: /design/whitebook/how_to_guide_add
+          text: 如何吸引用户关注
+          name: howtoguideadd
+        -
+          link: /design/whitebook/how_to_improve_browsing_experience
+          text: 如何提升小程序浏览体验
+          name: howtoimprovebrowsingexperience  
+    -
       link: /design/foundation/layout
-      text: 设计规范
+      text: 设计指南
       name: foundation
       sidebar:
         -
@@ -450,25 +467,16 @@
           name: detailPages
         -
           link: /design/foundation/logo
-          text: 头像输出
+          text: LOGO输出
           name: logo
         -
           link: /design/foundation/writing
           text: 措辞
           name: writing
-    -
-      link: /design/component/topnav
-      text: 常用组件
-      name: component
-      sidebar:
         -
           link: /design/component/topnav
           text: 顶部导航栏
           name: topnav
-        -
-          link: /design/component/toptab
-          text: 栏目选项条
-          name: toptab
         -
           link: /design/component/bottomtab
           text: 底部标签栏
@@ -486,20 +494,16 @@
           text: 列表
           name: list
         -
-          link: /design/component/input
-          text: 输入
-          name: input
-        -
           link: /design/component/toast
-          text: 反馈提示
+          text: 消息提示框
           name: toast
         -
-          link: /design/component/dialog
-          text: 提示框
-          name: dialog
+          link: /design/component/showModal
+          text: 模态对话框
+          name: showModal
         -
           link: /design/component/actionsheet
-          text: 操作菜单
+          text: 底部操作菜单
           name: actionsheet
         -
           link: /design/component/guide_add
@@ -509,13 +513,32 @@
           link: /design/component/empty_state
           text: 空态
           name: empty_state
-
+        -
+          link: /design/resource/lottie
+          text: Lottie 动画
+          name: lottie
+        -
+          link: /design/resource/animationVideo
+          text: AFX 透明视频
+          name: animationVideo
+    -
+      link: /design/resource/uikit
+      text: 设计资源
+      name: resource
+      sidebar:
+        -
+          link: /design/resource/uikit
+          text: 视觉资源下载
+          name: uikit
+        -
+          link: /design/resource/checklist
+          text: 设计走查表
+          name: checklist  
     -
       link: /design/story/arzoo
       text: 设计故事
       name: story
       sidebar:
- 
         -
           link: /design/story/arzoo
           text: 长隆AR动物园
@@ -523,29 +546,7 @@
         -
           link: /design/story/light_up
           text: 减减鸭
-          name: light_up
-    -
-      link: /design/resource/uikit
-      text: 设计资源
-      name: resource
-      sidebar:
-
-        -
-          link: /design/resource/uikit
-          text: 视觉组件库
-          name: uikit
-        -
-          link: /design/resource/checklist
-          text: 设计走查表
-          name: checklist
-        -
-          link: /design/resource/lottie
-          text: Lottie动效开源库
-          name: lottie
-        -
-          link: /design/resource/animationVideo
-          text: 透明视频AFX
-          name: animationVideo
+          name: light_up                      
 
 #3
 -
@@ -3438,15 +3439,15 @@
                     link: /develop/api/open/swan-getSystemRiskInfo
                     text: swan.getSystemRiskInfo
                     name: swan-getSystemRiskInfo
-              # -
+              -
 
-              #   text: 订阅
+                text: 订阅
 
-              #   sidebar:
-              #     -
-              #       link: /develop/api/open/swan-subscribeService
-              #       text: swan.subscribeService
-              #       name: swan-subscribeService
+                sidebar:
+                  -
+                    link: /develop/api/open/swan-subscribeService
+                    text: swan.subscribeService
+                    name: swan-subscribeService
 
         -
           link: /develop/api/errorcode

@@ -3,7 +3,7 @@ title: slider 滑动选择器
 header: develop
 nav: component
 sidebar: formlist_slider
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/slider/slider
+webUrl: https://qft12m.smartapps.cn/component/slider/slider
 ---
 
  

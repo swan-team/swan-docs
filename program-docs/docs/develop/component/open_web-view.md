@@ -3,7 +3,7 @@ title: web-view 网页容器
 header: develop
 nav: component
 sidebar: open_web-view
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/webview/webview
+webUrl: https://qft12m.smartapps.cn/component/webview/webview
 ---
 
 

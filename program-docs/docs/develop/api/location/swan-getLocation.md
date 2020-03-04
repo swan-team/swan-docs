@@ -3,7 +3,7 @@ title: swan.getLocation
 header: develop
 nav: api
 sidebar: swan-getLocation
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getLocation/getLocation
+# webUrl: https://qft12m.smartapps.cn/swan-api/getLocation/getLocation
 ---
  
 

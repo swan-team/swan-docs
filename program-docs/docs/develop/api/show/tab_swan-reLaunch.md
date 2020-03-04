@@ -3,9 +3,8 @@ title: swan.reLaunch
 header: develop
 nav: api
 sidebar: tab_swan-reLaunch
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+webUrl: https://qft12m.smartapps.cn/swan-api/navigate-to/navigate-to
 ---
- 
  
 
 **解释**：关闭所有页面，打开到应用内的某个页面。
@@ -38,7 +37,7 @@ Object object
 </div>
 
  
-###  代码示例1 - 关闭所有页面，打开到应用内的某个页面 
+###  代码示例
 
 <a href="swanide://fragment/846aafb088c8a69de62456103660db2f1574139934370" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -67,7 +66,10 @@ Page({
 });
 ```
 :::
-### 代码示例 2 - 多级页面的跳转 
+
+## 参考示例
+
+###  参考示例 - 多级页面的跳转 
 
 <a href="swanide://fragment/4936d6e83b8de1c04966e9b8f744e48a1575404793406" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

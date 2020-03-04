@@ -3,7 +3,7 @@ title: icon 图标
 header: develop
 nav: component
 sidebar: base_icon
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/icon/icon
+webUrl: https://qft12m.smartapps.cn/component/icon/icon
 ---
 
 **解释**： 图标

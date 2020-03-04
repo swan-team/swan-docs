@@ -38,6 +38,7 @@ sidebar: detailPages
 2. 视频：宽度为760px，宽高比16:9。</p>
 </div>
 
+> 你可直接使用智能小程序相关体验资产。（[下载设计资源](https://smartprogram.baidu.com/docs/design/resource/uikit/) | [查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/template/smt-detail-pages/)）
 
 ## 动态详情页
 动态详情页一般由正文、多媒体组成。

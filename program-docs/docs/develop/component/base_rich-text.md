@@ -3,7 +3,7 @@ title: rich-text 富文本
 header: develop
 nav: component
 sidebar: base_rich-text
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/rich-text/rich-text
+webUrl: https://qft12m.smartapps.cn/component/rich-text/rich-text
 ---
 
 **解释**： 富文本，nodes 属性推荐使用 Array 类型，由于组件会将 String 类型转换为 Array 类型，因而性能会有所下降。
@@ -94,13 +94,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/rich-text
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-
- 
-
 ###  代码示例 
-
-
- 
 
 :::codeTab
 ```swan

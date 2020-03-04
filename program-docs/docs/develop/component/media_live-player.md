@@ -3,7 +3,7 @@ title: live-player 实时视频播放器
 header: develop
 nav: component
 sidebar: media_live-player
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/live-player/live-player
+webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 ---
 
 

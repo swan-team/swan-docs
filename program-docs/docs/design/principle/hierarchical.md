@@ -4,11 +4,12 @@ header: design
 nav: principle
 sidebar: hierarchical
 ---
+
 移动设备屏幕尺寸相对小，一屏展现的信息非常有限。设计小程序时，请注意在页面展现时突出一个重点，帮助用户快速理解，避免页面上出现其它与用户的决策和操作无关的干扰因素，降低筛选信息的难度。
 
 ## 信息设计重点明确
 
-设计界面信息时，请注意根据内容的重要程度设计其层级主次，以帮助用户更简单地获取所需要的信息和做出判断。可以通过更大的字体、更重的文字体量、更明显的颜色等为内容赋予更强的展现，详见[布局排版](../../foundation/layout)。
+设计界面信息时，请注意根据内容的重要程度设计其层级主次，以帮助用户更简单地获取所需要的信息和做出判断。可以通过更大的字体、更重的文字体量、更明显的颜色等为内容赋予更强的展现。（[了解更多](../../foundation/layout)）
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -35,7 +36,7 @@ sidebar: hierarchical
 </div>
 
 ## 功能操作主次分明
-当希望对用户的下一步功能操作进行引导时，应为推荐的主操作按钮设计更明显的样式。详见[按钮](../../component/button)。
+当希望对用户的下一步功能操作进行引导时，应为推荐的主操作按钮设计更明显的样式。（[了解更多](../../component/button)）
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -51,11 +52,13 @@ sidebar: hierarchical
 ## 反馈力度强弱适度
 
 在用户使用小程序时，会出现需要等待的场景。用户的耐心有限，为避免让用户面对一个静止的屏幕等待未知的结果，需要对当前状态及时反馈，告知用户当前小程序仍在正常运作，以此降低用户使用过程中等待的焦虑感。
-<br>
-### 框架启动加载
+<br></br>
+
+### 1. 框架启动加载
+
 <div class="m-doc-custom-text-image">
  	<div>
-		启动小程序框架时，加载反馈动画与百度 App 通用加载动画不同，更突出小程序的品牌和特性。
+		启动小程序框架时，加载反馈动画与百度 APP 通用加载动画不同，更突出小程序的品牌和特性。
 		<br>
 		此为百度小程序框架通用能力，除 LOGO 和名称调用开发者的小程序信息外，其他视觉动效及交互均由百度小程序框架统一提供，开发者无需进行额外开发。
  	</div>
@@ -64,7 +67,8 @@ sidebar: hierarchical
 	</div>
 </div>	
 
-### 全局加载反馈
+
+### 2. 全局加载反馈
 百度小程序提供通用加载的组件，也可以由开发者自己根据品牌定义加载样式。但此时无法明确告知具体加载位置和进度，**自行设计时请注意设计加载动画，避免页面静止从而引起用户焦虑**。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -75,61 +79,64 @@ sidebar: hierarchical
 	</div>
 </div>
 
-### 下拉加载反馈
-百度小程序提供通用的下拉加载组件，使用此组件后，当用户下拉页面至一定高度时，可以触发当前页面的整体刷新。
+> 你可直接使用智能小程序相关体验资产。（[下载设计资源](https://smartprogram.baidu.com/docs/design/resource/uikit/) | [查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-page-status/)）
+### 3. 下拉刷新反馈
+百度小程序提供通用的下拉刷新组件，使用此组件后，当用户下拉页面至一定高度时，可以触发当前页面的整体刷新。
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
  		<img src="../../../img/design/principle/2-6.png">
 	</div>
 </div>
 
-### 用户选项反馈
-用于反馈用户操作页面内选项的状态，详见[选择](../../component/selection)。
+> 你可直接使用智能小程序相关体验资产。（[查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/ui_component/smt-refresh/)）
+
+
+
+### 4. 用户选项反馈
+用于反馈用户操作页面内选项的状态。（[了解更多](../../component/selection)）
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">多选 Checkbox</p>
- 		<a href="../../../../docs/develop/component/formlist_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
+ 		<a href="../../../../docs/develop/component/form_checkbox/"><img src="../../../img/design/principle/2-7-1.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">单选 Radio</p>
- 		<a href="../../../../docs/develop/component/formlist_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
+ 		<a href="../../../../docs/develop/component/form_radio/"><img src="../../../img/design/principle/2-7-2.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<p class="m-doc-custom-examples-text">开关 Switch</p>
-		<a href="../../../../docs/develop/component/formlist_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
+		<a href="../../../../docs/develop/component/form_switch/"><img src="../../../img/design/principle/2-7-3.png"></a>
 	</div>
 	<div class="m-doc-custom-examples-error ">
 		<p class="m-doc-custom-examples-text">滑动选择条 Slider</p>
- 		<a href="../../../../docs/develop/component/formlist_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
+ 		<a href="../../../../docs/develop/component/form_slider/"><img src="../../../img/design/principle/2-7-4.png"></a>
 	</div>
 </div>
 
 当选择项较多时，可以使用浮层选择器承载内容。
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct">
- 		<img src="../../../img/design/principle/2-8.png">
+	<div class="m-doc-custom-examples-correct"><img src="../../../img/design/principle/2-8.png">
 		<p class="m-doc-custom-examples-text">1.单列选择器
 			2.时间选择器
 			3.日期选择器</p>
 	</div>
-</div>
+</div> 
 
-### 操作结果反馈
+## 操作结果反馈
 同一时间只显示一个反馈提示，并且应该根据不同的场景和反馈需要的强弱程度选择不同样式。
 <br>
 
-#### 反馈提示 Toast
-不打断用户流程，会自动消失，适用于轻量级的提示，详见[反馈提示](../../component/toast)。
+### 1.  消息提示框
+不打断用户流程，会自动消失，适用于轻量级的提示。（[了解更多](../../component/toast)）
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文Toast 适用于操作成功反馈。
-		2.纯文Toast 适用于情况说明和提醒。</p>
-	</div>
+	<img src="../../../img/design/principle/2-9.png"><p class="m-doc-custom-examples-text">1.图文Toast 适用于操作成功反馈。
+		2.纯文Toast 适用于情况说明和提醒。</p></div>
 </div>
 
-#### 提示框 Dialog
-作为模态组件，会打断用户路径并分散用户的注意，请谨慎使用，详见[提示框](../../component/dialog)。
+### 2. 模态对话框
+作为模态组件，会打断用户路径并分散用户的注意，请谨慎使用。（[了解更多](../../component/showModal)）
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
  		<img src="../../../img/design/principle/2-10.png"><p class="m-doc-custom-examples-text">1.单按钮提示框 用于重要信息周知。
@@ -137,10 +144,9 @@ sidebar: hierarchical
 	</div>
 </div>
 
-#### 全屏结果页
+### 3. 全屏结果页
 在任务流程的最后一环，且结果反馈比较重要时，可使用全屏结果页向用户明确操作结果，并引导下一步操作。
-开发者可以根据场景需求自行开发，设计资源的[视觉组件库](../../resource/uikit/)中也放置了基础视觉源文件，供快速开发使用。
-
+开发者可以根据场景需求自行开发，[视觉资源下载](../../resource/uikit/)也放置了基础视觉源文件，供快速开发使用。
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
@@ -148,3 +154,5 @@ sidebar: hierarchical
  		2.出错或内容为空（示例）</p>
 	</div>
 </div>
+
+> 你可直接使用智能小程序相关体验资产。（[下载设计资源](https://smartprogram.baidu.com/docs/design/resource/uikit/) | [查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/template/smt-status-page/)）

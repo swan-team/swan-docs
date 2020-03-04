@@ -30,7 +30,7 @@ sidebar: scancode
 
 |后台已配置的二维码规则|线下二维码完整链接|错误原因|
 |----|----|----|
-|`https://www.baidu.com/a/b`	|`https://www.baidu.com/a/b ` |协议不一致|
+|`http://www.baidu.com/a/b`	|`https://www.baidu.com/a/b ` |协议不一致|
 |`https://www.baidu.com/a/b	`|`https://www.m.baidu.com/a/b`	|域名不一致|
 |`https://www.baidu.com/a/b?id=123`	|`https://www.baidu.com/a/b?id=132`	|参数不满足前缀匹配|
 |`https://www.baidu.com/a/b`	|`https://www.baidu.com/a/bc`	|不属于子路径|

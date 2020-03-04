@@ -3,7 +3,7 @@ title: swan.navigateBack
 header: develop
 nav: api
 sidebar: tab_swan-navigateBack
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/navigateTo/navigateTo
+# webUrl: https://qft12m.smartapps.cn/swan-api/navigateTo/navigateTo
 ---
 
  
@@ -48,7 +48,7 @@ Object object
 </div>
  
 
-###  代码示例 1
+###  代码示例
 <a href="swanide://fragment/e42d209071bcae91b9b3c04888763cfd1574139008383" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 index 文件中
@@ -102,7 +102,11 @@ Page({
 });
 ```
 :::
-###   代码示例2 - 从小程序原生页面返回到 H5 页面，并需要刷新： 
+
+## 参考示例
+
+###  参考示例 - 从小程序原生页面返回到 H5 页面，并需要刷新： 
+
 <a href="swanide://fragment/285b2bcaa6e473ea04d92ae23f2f73ff1575878402143" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 * 在 detail 文件中

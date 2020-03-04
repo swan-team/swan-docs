@@ -3,7 +3,7 @@ title: label 表单组件标签
 header: develop
 nav: component
 sidebar: formlist_label
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/label/label
+webUrl: https://qft12m.smartapps.cn/component/label/label
 ---
 
 

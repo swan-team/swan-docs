@@ -3,14 +3,11 @@ title: swan.showActionSheet
 header: develop
 nav: api
 sidebar: toast_swan-showActionSheet
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/showActionSheet/showActionSheet
+webUrl: https://qft12m.smartapps.cn/swan-api/show-action-sheet/show-action-sheet
 ---
-
- 
 
 **解释**：​显示操作菜单
 
- 
 ## 方法参数 
 
 Object object
@@ -42,50 +39,137 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/showAction.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
-### 代码示例 
-
- 
+### 代码示例 1 - 基础用法
 
 :::codeTab
 ```swan
-<view class="wrap">
-    <button bind:tap="showActionSheet" class="button" type="primary" hover-stop-propagation="true">弹出action sheet</button> 
+<view class="card-area">
+    <view class="top-description border-bottom">基础用法</view>
+    <button bind:tap="showActionSheet" type="primary" hover-stop-propagation="true">普通操作菜单</button> 
 </view>
 ```
-
- 
 
 ```js
 Page({
     showActionSheet() {
         swan.showActionSheet({
             itemList: ['选项一', '选项二', '选项三', '选项四'],
-            itemColor: '#333',
             success: res => {
                 console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
-            },
-            fail: err => {
-                console.log('showActionSheet fail', err);
             }
         });
     }
 });
 ```
 :::
+
+### 代码示例 2 - 自定义按钮字体颜色
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">
+        <view>自定义按钮字体颜色</view>
+        <view>itemColor: '#00BC89'</view>
+    </view>
+    <button bind:tap="showActionSheetCustom" type="primary" hover-stop-propagation="true">自定义按钮颜色的操作菜单</button> 
+</view>
+```
+
+```js
+Page({
+    showActionSheetCustom() {
+        swan.showActionSheet({
+            itemList: ['选项一', '选项二', '选项三', '选项四'],
+            itemColor: '#00BC89',
+            success: res => {
+                console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
+            }
+        });
+    }
+});
+```
+
+### 代码示例 3 - 按钮数量最多
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">按钮数量最多</view>
+    <button bind:tap="showActionSheetMore" type="primary" hover-stop-propagation="true">6个按钮的操作菜单</button> 
+</view>
+```
+
+```js
+Page({
+    showActionSheetMore() {
+        swan.showActionSheet({
+            itemList: ['选项一', '选项二', '选项三', '选项四', '选项五', '选项六'],
+            success: res => {
+                console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
+            }
+        });
+    }
+});
+```
+
+### 代码示例 4 - 按钮数量最少
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">按钮数量最少</view>
+    <button bind:tap="showActionSheetLess" type="primary" hover-stop-propagation="true">1个按钮的操作菜单</button> 
+</view>
+```
+
+```js
+Page({
+    showActionSheetLess() {
+        swan.showActionSheet({
+            itemList: ['选项一'],
+            success: res => {
+                console.log('用户点击了第' + (res.tapIndex + 1) + '个按钮');
+            }
+        });
+    }
+});
+```
+
+### 代码示例 5 - 带有操作结果提示
+
+:::codeTab
+```swan
+<view class="card-area">
+    <view class="top-description border-bottom">带有操作结果提示</view>
+    <button bind:tap="showActionSheetResult" type="primary" hover-stop-propagation="true">带有操作结果提示的操作菜单</button> 
+</view>
+```
+
+```js
+Page({
+    showActionSheetResult() {
+        swan.showActionSheet({
+            itemList: ['选项一', '选项二', '选项三', '选项四'],
+            success: res => {
+                swan.showModal({
+                    title: '操作成功',
+                    content: '用户点击了第' + (res.tapIndex + 1) + '个按钮',
+                    showCancel: false
+                });
+            },
+            fail: err => {
+                swan.showModal({
+                    title: '操作取消',
+                    content: '用户关闭了操作菜单',
+                    showCancel: false
+                });
+            }
+        });
+    }
+});
+```
+
 ##  错误码
 ### Android
 

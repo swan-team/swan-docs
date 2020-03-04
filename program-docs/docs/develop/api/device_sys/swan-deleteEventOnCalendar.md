@@ -3,7 +3,7 @@ title: swan.deleteEventOnCalendar
 header: develop
 nav: api
 sidebar: swan-deleteEventOnCalendar
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/calendar/calendar
+# webUrl: https://qft12m.smartapps.cn/swan-api/calendar/calendar
 ---
 
 

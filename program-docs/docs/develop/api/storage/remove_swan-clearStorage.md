@@ -3,7 +3,7 @@ title: swan.clearStorage
 header: develop
 nav: api
 sidebar: remove_swan-clearStorage
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
+# webUrl: https://qft12m.smartapps.cn/swan-api/storage/storage
 ---
 
 

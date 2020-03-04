@@ -3,7 +3,7 @@ title: swan.getSystemInfo
 header: develop
 nav: api
 sidebar: swan-getSystemInfo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getSystemInfo/getSystemInfo
+# webUrl: https://qft12m.smartapps.cn/swan-api/getSystemInfo/getSystemInfo
 ---
 
 
