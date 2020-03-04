@@ -8,9 +8,9 @@ sidebar: open
 
 
 **解释**：新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx。
+**Web 态说明**： Web 态环境只支持打开 pdf 格式文档，对于其他文档格式调用该方法会失败。
 
- 
-## 方法参数  
+## 方法参数
 
 Object object
 
@@ -35,7 +35,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/opendocument.gif">
@@ -45,10 +45,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
-</div> 
+    </div>
+</div>
 
-###  代码示例 
+###  代码示例
 
 
 * 在 js 文件中
