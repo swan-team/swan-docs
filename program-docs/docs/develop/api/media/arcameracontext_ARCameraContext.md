@@ -7,6 +7,7 @@ sidebar: arcameracontext_ARCameraContext
 
  
 **解释**：swan.createARCameraContext 的返回值。
+**Web 态说明**：Web 态暂不支持 AR 相机功能。调用 ARCameraContext 相关方法，在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
  
 ## 示例

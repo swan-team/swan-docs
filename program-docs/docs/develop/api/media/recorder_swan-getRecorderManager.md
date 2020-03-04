@@ -9,12 +9,13 @@ sidebar: recorder_swan-getRecorderManager
 
 
 **解释**： 获取全局唯一的录音管理器`recorderManager`。使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
- 
-## 方法参数 
+**Web 态说明**： 由于浏览器兼容性问题，在 Web 态环境下不支持录音相关功能，调用录音管理器各方法均不会生效。
+
+## 方法参数
 
  无
 
-### 返回值 
+### 返回值
 
 RecorderManager
 
@@ -31,7 +32,7 @@ RecorderManager
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/RecorderManager.gif">
@@ -41,10 +42,10 @@ RecorderManager
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
-</div> 
+    </div>
+</div>
 
-### 代码示例 
+### 代码示例
 
 
 
@@ -58,5 +59,3 @@ Page({
     }
 });
 ```
-
-

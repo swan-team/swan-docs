@@ -10,6 +10,7 @@ sidebar: share_swan-shareFile
 >  在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。基础库3.80.2开始支持，低版本需做兼容处理。
 
 **解释**：支持调起系统分享面板将文件分享到其他App。
+**Web 态说明**：Web 态小程序暂不支持，接口调用会进入失败回调（fail）。
 
  
 ## 方法参数 
@@ -24,6 +25,16 @@ Object object
 |success |Function  |  否 | | 接口调用成功的回调|
 |fail   | Function |   否  | |接口调用失败的回调函数|
 |complete  |  Function |   否 |  |接口调用结束的回调函数（调用成功、失败都会执行）|
+
+
+##  fail 返回值参数说明
+
+###  Web 态
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|swan.openSetting is not supported in web|string |不支持此能力 |
+
 ## 示例
 
 ### 扫码体验

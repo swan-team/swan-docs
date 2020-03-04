@@ -53,7 +53,7 @@ export default {
                 const sidebar = document.getElementById('sidebar');
                 sidebar.scrollTo({
                     top,
-                    behavior: 'smooth'
+                    behavior: 'auto'
                 });
             }
         }, 200);

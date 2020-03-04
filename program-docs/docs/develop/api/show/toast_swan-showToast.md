@@ -111,7 +111,7 @@ Page({
 <view class="card-area">
     <view class="top-description border-bottom">
         <view>设置显示loading图标</view>
-        <view>icon: 'none'</view>
+        <view>icon: 'loading'</view>
     </view>
     <button bindtap="showToastLoading" type="primary" hover-stop-propagation="true">loading toast</button>
 </view>
