@@ -30,6 +30,32 @@ Object object
 |参数  |类型|说明 |
 |---- | ---- |---- |
 |authSetting|Object|用户授权结果，其中 key 为 scope 值，value 为 Bool 值，表示用户是否允许授权。|
+
+
+##  错误码
+###  Android
+
+|错误码（errCode）|说明|
+|:--|:--|
+|201|解析失败，请检查调起协议是否合法|
+|1001|执行失败|
+
+###  iOS
+
+|错误码（errCode）|说明|
+|:--|:--|
+|202|解析失败，请检查参数是否正确      |
+
+###  Web 态
+
+|错误码（errCode）|说明|
+|:--|:--|
+|1001|不支持|
+
+|错误信息（errMsg）|类型|说明|
+|:--|:--|:--|
+|API swan.openSetting is not supported in web|string|不支持|
+
 ## 示例
 
 ### 扫码体验
@@ -118,28 +144,6 @@ Page({
 });
 ```
 
-##  错误码
-###  Android
 
-|错误码（errCode）|说明|
-|:--|:--|
-|201|解析失败，请检查调起协议是否合法|
-|1001|执行失败|
-
-###  iOS
-
-|错误码（errCode）|说明|
-|:--|:--|
-|202|解析失败，请检查参数是否正确      |
-
-###  Web 态
-
-|错误码（errCode）|说明|
-|:--|:--|
-|1001|不支持|
-
-|错误信息（errMsg）|类型|说明|
-|:--|:--|:--|
-|API swan.openSetting is not supported in web|string|不支持|
 
 

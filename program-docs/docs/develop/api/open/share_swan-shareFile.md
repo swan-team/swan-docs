@@ -33,7 +33,7 @@ Object object
 
 |错误信息（errMsg）|类型|说明|
 |:--|:--|:--|
-|swan.openSetting is not supported in web|string |不支持此能力 |
+|swan.shareFile is not supported in web|string |不支持此能力 |
 
 ## 示例
 
