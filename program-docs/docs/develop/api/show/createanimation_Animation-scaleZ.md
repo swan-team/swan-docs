@@ -37,9 +37,9 @@ Number sz , 在Z轴缩放sz倍数
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="animation-element-wrapper">
         <view class="animation-element" animation="{{animation}}"></view>
@@ -51,7 +51,7 @@ Number sz , 在Z轴缩放sz倍数
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -75,3 +75,4 @@ Page({
     }
 });
 ```
+:::

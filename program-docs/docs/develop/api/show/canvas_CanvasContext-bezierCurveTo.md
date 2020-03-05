@@ -44,6 +44,7 @@ sidebar:  canvas_CanvasContext-bezierCurveTo
 
 <a href="swanide://fragment/f54afefdc128050accdc18a9e52296911573724955575" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
@@ -55,11 +56,13 @@ canvasContext.stroke();
 
 canvasContext.draw();
 ```
+:::
 
 ###  代码示例2 曲线起始点/控制点/终止点 
 
 <a href="swanide://fragment/f5f979aa61812c9be7871b0f53e4fea01575452224950" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -107,5 +110,5 @@ Page({
     }
 });
 ```
-
+:::
 

@@ -42,9 +42,9 @@ Function callback
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="card-area">
         <movable-area>
@@ -57,7 +57,7 @@ Function callback
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -72,7 +72,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+ 
 
 ```css
 movable-view {
@@ -92,3 +92,4 @@ movable-area {
     overflow: hidden;
 }
 ```
+:::

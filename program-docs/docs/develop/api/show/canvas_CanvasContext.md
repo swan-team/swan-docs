@@ -40,9 +40,9 @@ sidebar: canvas_CanvasContext
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="page-body">
     <view class="page-section">
@@ -58,7 +58,7 @@ sidebar: canvas_CanvasContext
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 const canvas = require('./canvas.js');
@@ -95,7 +95,7 @@ Page({
     }
 });
 ```
-* 在 css 文件中
+ 
 
 ```css
 .wrap {
@@ -125,7 +125,10 @@ Page({
 }
   
 ```
-* 在 canvas.js 文件中
+:::
+* 在 canvas 文件中
+
+:::codeTab
 ```js
 const canvas = {};
 
@@ -410,4 +413,4 @@ canvas.setMiterLimit = function (context) {
 module.exports = canvas;
 
 ```
-
+:::

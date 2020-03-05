@@ -32,7 +32,7 @@ sidebar: canvas_CanvasContext-setTextAlign
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -53,6 +53,6 @@ canvasContext.fillText('textAlign=right', 150, 100);
 
 canvasContext.draw();
 ```
-
+:::
 
 

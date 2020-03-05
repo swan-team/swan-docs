@@ -44,13 +44,13 @@ Number value
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <canvas canvas-id="myCanvas" class="myCanvas"/>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -70,4 +70,4 @@ Page({
     }
 });
 ```
-
+:::

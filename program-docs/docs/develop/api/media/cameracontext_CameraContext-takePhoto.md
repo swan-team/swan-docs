@@ -8,7 +8,6 @@ sidebar: cameracontext_CameraContext-takePhoto
 
 
 **解释**：拍照，可指定质量，成功则返回图片。
-**Web 态说明**：Web 态暂不支持 CameraContext 相关方法，在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
  
 ## 方法参数 

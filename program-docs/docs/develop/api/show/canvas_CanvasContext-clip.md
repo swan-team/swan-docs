@@ -43,7 +43,7 @@ sidebar:  canvas_CanvasContext-clip
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 Page({
     onShow () {
@@ -58,4 +58,4 @@ Page({
     }
 });
 ```
-
+:::

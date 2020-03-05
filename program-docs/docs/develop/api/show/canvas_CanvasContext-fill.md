@@ -29,7 +29,7 @@ sidebar:  canvas_CanvasContext-fill
 ### 代码示例 
 
 <a href="swanide://fragment/c551260de09c005e80e141a7ad42313e1573722986970" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.moveTo(100, 100);
@@ -38,5 +38,5 @@ canvasContext.lineTo(10, 10);
 canvasContext.fill();
 canvasContext.draw();
 ```
-
+:::
 

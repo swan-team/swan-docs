@@ -40,9 +40,9 @@ Number deg,deg的范围-180~180，在X轴旋转一个 deg 角度。
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="animation-element-wrapper">
         <view class="animation-element" animation="{{animation}}"></view>
@@ -53,7 +53,7 @@ Number deg,deg的范围-180~180，在X轴旋转一个 deg 角度。
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -71,3 +71,4 @@ Page({
     }
 });
 ```
+:::

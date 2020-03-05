@@ -29,29 +29,33 @@ sidebar: canvas_CanvasContext-setFillStyle
 
 ### 代码示例 
 
-
+:::codeTab
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
 canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
+:::
 
  代码示例 - 使用十六进制函数 
 
 <a href="swanide://fragment/bb52dcf222fe5df30affb383be4929521576350576252" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('#ffff00');
 canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
+:::
 
  代码示例 - 使用rgba()函数 
 
 <a href="swanide://fragment/91a77100a84ba784a001322bcfceebd31576350857189" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');
 const lineRGB = '255,255,0';
@@ -60,5 +64,6 @@ canvasContext.setFillStyle(`rgba(${lineRGB}, ${opacity})`);
 canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
+:::
 
 

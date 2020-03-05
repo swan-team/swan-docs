@@ -47,7 +47,7 @@ sidebar: canvas_CanvasContext-setTransform
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -65,3 +65,4 @@ Page({
     }
 });
 ```
+:::

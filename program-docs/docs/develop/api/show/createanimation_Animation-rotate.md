@@ -40,9 +40,9 @@ Number deg,deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
 
 <a href="swanide://fragment/bca91eb49e9480552201776e3b25090b1574215871646" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="animation-element-wrapper">
         <view class="animation-element" animation="{{animation}}"></view>
@@ -53,7 +53,7 @@ Number deg,deg的范围-180~180，从原点顺时针旋转一个 deg 角度。
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -71,15 +71,15 @@ Page({
     }
 });
 ```
-
+:::
 
 ###  代码示例2 - 开发者自定义showModal时可用于增加动画效果 ：
 
 <a href="swanide://fragment/61795a5776be2b566d76fca046f33c941575822870950" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <button type="primary" bindtap="showModal" data-statu="open">点我打开自定义弹窗</button>  
     <!--mask-->  
@@ -102,7 +102,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -163,3 +163,4 @@ Page({
     }
 })
 ```
+:::

@@ -45,7 +45,8 @@ String value ：符合 CSS font 示例的 DOMString 字符串，至少需要提�
 ### 代码示例 
 
 
-
+:::codeTab
+ 
 ```js
 Page({
     onReady: function () {
@@ -59,5 +60,5 @@ Page({
     }
 });
 ```
-
+:::
 

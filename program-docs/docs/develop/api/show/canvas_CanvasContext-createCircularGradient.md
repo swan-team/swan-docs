@@ -35,7 +35,7 @@ Number x，Number y，Number z
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -49,6 +49,6 @@ canvasContext.setFillStyle(grd);
 canvasContext.fillRect(30, 30, 150, 80);
 canvasContext.draw();
 ```
-
+:::
 
 

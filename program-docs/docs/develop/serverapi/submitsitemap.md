@@ -29,7 +29,8 @@ sidebar: submitsitemap
 |desc|string|是|描述信息|智能小程序示例|
 |frequency|string|是|更新频率 3-每天 4-每周|3|
 |type|string|是|类型 1-增量/更新； 0-下线/删除|1|
-|url|string|是|sitemap链接|???|
+|url|string|是|sitemap链接|path|
+
 **公共响应参数** 
 
 |参数|类型|描述|示例值|
