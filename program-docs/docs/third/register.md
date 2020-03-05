@@ -75,7 +75,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |字段名|	类型|	描述|
 |---|---|---|
-|access\_token|	string|	第三方平台access\_token|
+|access\_token|	string|	第三方平台的接口调用凭据|
 |expires\_in	|int|	凭证有效时间，单位：秒|
 |scope|	string|	拥有的权限说明|
 错误情况下:
@@ -110,7 +110,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 |参数名	|类型	|是否必须|	描述|
 |---|---|---|---|
-|access\_token|	string|	是|第三方平台access\_token，可参考"2、 获取第三方平台access\_token"|
+|access\_token|	string|	是|第三方平台的接口调用凭据 |
 返回值说明
 
 |字段名|	类型|	描述|
@@ -339,7 +339,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 
 |参数名|	类型|	是否必须|	描述|
 |---|---|---|---|
-| access\_token |	string|	是|	第三方平台access\_token|
+| access\_token |	string|	是|	第三方平台的接口调用凭据|
 |code|	string|	是	|授权码|
 |grant\_type|	string	|是|	固定字符串：app\_to\_tp\_authorization\_code|
 返回值说明
@@ -378,7 +378,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/createbytp?access_token=ACC
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
-access\_token|string | 是 | 第三方平台的token
+access\_token|string | 是 | 第三方平台的接口调用凭据
 create_authorization_code |string | 是 | 代创建授权码
 app\_name |string | 是 | 小程序名称
 app\_desc |string | 是 | 小程序描述
@@ -465,7 +465,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 
 |参数名	|类型	|是否必须|	描述|
 |---|---|---|---|
-|access\_token	|string	|是	|第三方平台access\_token|
+|access\_token	|string	|是	|第三方平台的接口调用凭据|
 |refresh\_token|	string|	是|	接口调用凭据刷新令牌，有效期10年，使用后失效|
 |grant\_type	|string|	是	|固定字符串： app\_to\_tp\_refresh\_token|
 
@@ -529,7 +529,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/auth/tp/authcodetoapp?access_tok
 
 参数名 | 类型 | 是否必须 | 描述
 ----- |-----| ------| -----
-access\_token |string | 是 | 第三方平台的access\_token
+access\_token |string | 是 | 第三方平台的接口调用凭据
 authorization\_code|string|是|代注册或代创建授权码
 
 返回值说明:
