@@ -1,17 +1,17 @@
 ---
-title: web 化开发建议
+title: web 态开发建议
 header: develop
 nav: function
 sidebar: proposal
 ---
 ### 页面基础信息
 
-[页面基础信息](https://smartprogram.baidu.com/docs/introduction/rank/#%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/) 通过 `swan.setPageInfo() `设置。在 Web 化环境下，页面基础信息会通过 meta 标签插入页面 head 中。
+[页面基础信息](https://smartprogram.baidu.com/docs/introduction/rank/#%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF/) 通过 `swan.setPageInfo() `设置。在 Web 态环境下，页面基础信息会通过 meta 标签插入页面 head 中。
 恰当的页面基础信息可以帮助爬虫更精准的理解页面内容。
 
 **页面基础信息的设置应与页面本身的内容相关**。比如：贴吧的一篇贴子详情页，应该以贴子的标题作为页面标题而不是使用“百度贴吧”这样的标题。
 
-> 这里的页面标题与小程序页面 json 配置中设置的`navigationBarTitleText`不同，`navigationBarTitleText`仅用于页面顶部展示；页面基础信息中的 title 不会在页面中展示，而是在 Web 化的 title 标签中。
+> 这里的页面标题与小程序页面 json 配置中设置的`navigationBarTitleText`不同，`navigationBarTitleText`仅用于页面顶部展示；页面基础信息中的 title 不会在页面中展示，而是在 Web 态的 title 标签中。
 
 
 ### 页面跳转
@@ -78,11 +78,11 @@ Page({
 
 
 
-### 如何在运行时识别 Web 化环境
-在代码中，可以通过 API [getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 判断是否为 Web 化 环境。Web 化环境下，调用 `swan.getSystemInfo() `得到的系统信息中，`platform` 值为`"web"`。
+### 如何在运行时识别 Web 态环境
+在代码中，可以通过 API [getSystemInfo](https://smartprogram.baidu.com/docs/develop/api/device_sys/swan-getSystemInfo/) 判断是否为 Web 态 环境。Web 态环境下，调用 `swan.getSystemInfo() `得到的系统信息中，`platform` 值为`"web"`。
 
-> 通常情况下，为保证抓取内容相关性和用户体验一致性，**不建议开发者区分 Web 化环境做差异化实现**。
-> Web 化环境标识主要服务于诸如区分环境统计等需求场景。
+> 通常情况下，为保证抓取内容相关性和用户体验一致性，**不建议开发者区分 Web 态环境做差异化实现**。
+> Web 态环境标识主要服务于诸如区分环境统计等需求场景。
 
 **代码示例**
 ```js

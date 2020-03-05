@@ -4,22 +4,22 @@ header: develop
 nav: api
 sidebar: swan-setPageInfo
 ---
-配置页面基础信息接口，目前在 Web 化代码和收藏里会被使用，推荐使用 setPageInfo；小程序页面被收藏时，会用到setPageInfo中设置的页面标题。
+配置页面基础信息接口，目前在 Web 态代码和收藏里会被使用，推荐使用 setPageInfo；小程序页面被收藏时，会用到setPageInfo中设置的页面标题。
 
 > setMetaDescription/setMetaKeywords/setDocumentTitle 已停止维护。
 
- 
+
 >建议在 Page 的 onShow 生命周期中使用。由于onShow 生命周期会在用户前进后退时触发，若数据来自 onLoad 等其他生命周期，建议使用变量形式存储并在 onShow 中调用 setPageInfo 函数，详情参见下面的代码示例二。
 
 **解释**：智能小程序可接入百度搜索和宿主 App 信息流，swan.setPageInfo 负责为小程序设置各类页面基础信息，包括标题、关键字、页面描述以及图片信息、视频信息等。开发者为智能小程序设置完备的页面基础信息，有助于智能小程序在搜索引擎和信息流中得到更加有效的展示和分发。其中title和image字段也有助于用户添加页面收藏的模板展现和回访体验（用户可以在小程序菜单中收藏当前页面，并通过百度App"我的-常用功能-收藏"回访已收藏的页面）。
 
 
 
-## 方法参数 
+## 方法参数
 
 Object object
 
-### `object`参数说明 
+### `object`参数说明
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -40,7 +40,7 @@ Object object
 |fail|Function|否| |接口调用失败的回调函数|
 |complete|Function|否| |接口调用结束的回调函数（调用成功、失败都会执行） |
 
- video 参数说明 
+ video 参数说明
 
 |参数名 | 类型 | 必填 | 说明 |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Object object
 |duration|String|是| 视频时长(单位为秒)	|
 |image|String|是|视频封面图	|
 
- visit 参数说明 
+ visit 参数说明
 
 |参数名 | 类型 | 必填 | 说明 |
 |---|---|---|---|
@@ -61,20 +61,20 @@ Object object
 
 请<a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中" target="_self">在开发者工具中</a>，单击“预览”，输入您的APPID，单击“WEB预览”，百度APP中扫码体验。
 
-###  图片示例  
+###  图片示例
 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/setPageInfo1.png">
-    </div>    
+    </div>
 </div>
 
 ###   代码示例 1 ：
 
 <a href="swanide://fragment/77076cb84baae5c32c01c014830348a01559045869146" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({
@@ -119,7 +119,7 @@ Page({
 
 <a href="swanide://fragment/bf43efd15ae91588292ba1286286db1d1574349912843" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({
@@ -152,7 +152,7 @@ Page({
 });
 ```
 
-## Bug & Tip 
+## Bug & Tip
 
 1. releaseData、articleTitle、image、video 、visit 内容用于宿主 APP 信息流抓取收录分发，并有助于搜索准确理解页面内容。
 2. title字段搜索抓取用于当前页面，articleTitle 字段用于当前页面在宿主APP信息流中的标题展示。
