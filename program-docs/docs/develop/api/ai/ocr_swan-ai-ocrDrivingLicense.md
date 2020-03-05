@@ -6,11 +6,12 @@ sidebar: ocr_swan-ai-ocrDrivingLicense
 # webUrl: https://qft12m.smartapps.cn/swan-api/ocrDrivingLicense/ocrDrivingLicense
 ---
 
-  
+
 
 **解释**：对机动车驾驶证所有关键字段进行识别。
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
- 
+
 ## 方法参数
 
 Object object
@@ -27,7 +28,7 @@ Object object
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-### success 返回参数说明 
+### success 返回参数说明
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -35,7 +36,7 @@ Object object
 | words_result_num  |  Number  |识别结果数，表示 words_result 的元素个数。 |
 |words_result |  Object  | 识别结果 |
 
-### words_result 返回值说明 
+### words_result 返回值说明
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -50,7 +51,7 @@ Object object
 | 性别 | Object | 性别|
 | 初次领证日期 | Object | 初次领证日期|
 
-### 证号/有效期限/准驾车型/有效起始日期/住址/姓名/国籍/出生日期/性别/初次领证日期 返回值说明 
+### 证号/有效期限/准驾车型/有效起始日期/住址/姓名/国籍/出生日期/性别/初次领证日期 返回值说明
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -66,7 +67,7 @@ Object object
 </div>
 
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/ocrDrivingLicense.jpeg">
@@ -76,11 +77,11 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
- 
 
-### 代码示例 
+
+### 代码示例
 
 ```js
 Page({

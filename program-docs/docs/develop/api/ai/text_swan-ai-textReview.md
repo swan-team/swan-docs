@@ -9,9 +9,9 @@ sidebar: text_swan-ai-textReview
 
 
 **解释**：运用业界领先的深度学习技术，判断一段文本内容是否符合网络发文规范，实现自动化、智能化的文本审核。
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
 
- 
 
 ## 方法参数
 
@@ -26,14 +26,14 @@ Object object
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明 
+### success 返回参数说明
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
 |log_id | Number |唯一的log id，用于问题定位。|
 |result| Object| 审核结果详情 |
 
-### result 返回参数说明 
+### result 返回参数说明
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -42,7 +42,7 @@ Object object
 |review | Array | 待人工复审的类别列表与详情 |
 |pass |  Array  | 审核通过的类别列表与详情 |
 
-### reject/pass/review 返回值说明 
+### reject/pass/review 返回值说明
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -62,7 +62,7 @@ Object object
 
 ## 示例
 
- 
+
 <a href="swanide://fragment/54968a2300bdceb92aa80c0e3f8bdbac1581328359072" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
@@ -70,7 +70,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/textReview.gif">
@@ -80,10 +80,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 ```js
 Page({

@@ -6,13 +6,14 @@ sidebar:  classify_swan-ai-plantClassify
 # webUrl: https://qft12m.smartapps.cn/swan-api/plantClassify/plantClassify
 ---
 
-  
+
 
 **解释**：该请求用于识别一张图片，即对于输入的一张图片（可正常解码，且长宽比较合适），输出植物识别结果。
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
 
- 
-## 方法参数 
+
+## 方法参数
 
 Object object
 
@@ -25,14 +26,14 @@ Object object
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明 
+### success 返回参数说明
 
 |参数 |类型 | 说明  |
 |---- | ---- | ---- |
 |log_id|	Number|	唯一的log id，用于问题定位。|
 |result| Array|	识别结果数组|
 
-### result 返回值说明 
+### result 返回值说明
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -42,14 +43,14 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/b1bb08a3758ab15024f1af2148d41d2c1581335626529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a> 
+<a href="swanide://fragment/b1bb08a3758ab15024f1af2148d41d2c1581335626529" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/plantClassify.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/plantClassify.jpeg">
@@ -59,11 +60,11 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
- 
 
-### 代码示例 
+
+### 代码示例
 
 ```js
 Page({
