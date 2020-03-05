@@ -11,8 +11,9 @@ sidebar: face_swan-ai-faceDetect
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
 **解释**：人脸检测，检测图片中的人脸并标记出相应的信息位置，同时可以展示出人脸的关键信息和属性信息，比如年龄，性别等。使用本功能需要小程序开发者后台登录超级管理员账号，点击[云平台付费链接](https://ai.baidu.com/ai-doc/FACE/Bk37c1m1n)开通云账号付费功能。
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
- 
+
 ## 方法参数
 
 Object object
@@ -20,19 +21,19 @@ Object object
 ### `object`参数说明 ：
 
 |属性名 |类型  |必填 | 默认值 |说明|
-|:---- |:---- |:---- |:----|:----| 
-|image | string | 是 | | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 | 
-|image_type | string | 是 | | 图片类型。有效值：<br>  **·** BASE64: 图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>  **·** URL : 图片的 URL 地址(可能由于网络等原因导致下载图片时间过长)；<br>  **·** FACE_TOKEN : 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 | 
-|face_field | string | 否 | | 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 | 
+|:---- |:---- |:---- |:----|:----|
+|image | string | 是 | | 图片信息(总数据大小应小于 10M)，图片上传方式根据 image_type 来判断。 |
+|image_type | string | 是 | | 图片类型。有效值：<br>  **·** BASE64: 图片的 base64 值，base64 编码后的图片数据，编码后的图片大小不超过 2M；<br>  **·** URL : 图片的 URL 地址(可能由于网络等原因导致下载图片时间过长)；<br>  **·** FACE_TOKEN : 人脸图片的唯一标识，调用人脸检测接口时，会为每个人脸图片赋予一个唯一的 FACE_TOKEN，同一张图片多次检测得到的 FACE_TOKEN 是同一个。 |
+|face_field | string | 否 | | 包括 age,beauty,expression,face_shape,gender,glasses,landmark,<br>race,quality,eye_status,emotion,face_type 信息，逗号分隔。<br>默认只返回 face_token、人脸框、概率和旋转角度。 |
 |max_face_num | string | 否 | 1| 最多处理人脸的数目，默认值为 1，仅检测图片中面积最大的那个人脸；最大值 10，检测图片中面积最大的几张人脸。 |
-|face_type | string | 否 |LIVE| 人脸的类型。有效值：<br>  **·** LIVE 表示生活照 ：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>  **·** IDCARD 表示身份证芯片照 ：二代身份证内置芯片中的人像照片；<br>  **·** WATERMARK 表示带水印证件照 ：一般为带水印的小图，如公安网小图；<br>  **·** CERT 表示证件照片 ：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 | 
-|success | Function | 否 | | 接口调用成功后的回调函数 | 
-|fail | Function | 否 ||接口调用失败的回调函数 | 
+|face_type | string | 否 |LIVE| 人脸的类型。有效值：<br>  **·** LIVE 表示生活照 ：通常为手机、相机拍摄的人像图片、或从网络获取的人像图片等；<br>  **·** IDCARD 表示身份证芯片照 ：二代身份证内置芯片中的人像照片；<br>  **·** WATERMARK 表示带水印证件照 ：一般为带水印的小图，如公安网小图；<br>  **·** CERT 表示证件照片 ：如拍摄的身份证、工卡、护照、学生证等证件图片；默认 LIVE。 |
+|success | Function | 否 | | 接口调用成功后的回调函数 |
+|fail | Function | 否 ||接口调用失败的回调函数 |
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明 
+### success 返回参数说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |log_id| Number|	唯一的log id，用于问题定位。|
 |error_no| Number|	错误码，错误码为0时，人脸检测成功。|
@@ -40,14 +41,14 @@ Object object
 |face_num | Number |检测到图片中的人脸数量|
 |face_list| Array | 人脸信息列表|
 
-### face_list 参数说明 
+### face_list 参数说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
-|face_token | string |人脸图片的唯一标识| 
+|face_token | string |人脸图片的唯一标识|
 |location| Object | 人脸在图片中的位置|
 |face_probability| number | 人脸置信度，范围[0~1]，代表这是一张人脸的概率，0最小、1最大。|
-|angel|Object | 人脸旋转角度参数| 
+|angel|Object | 人脸旋转角度参数|
 |age|number|年龄，当 face_field 包含 age 时返回。|
 |beauty|number|美丑打分，范围 [0-100]，越大表示越美，当 face_fields 包含 beauty 时返回。|
 |expression|Object|表情，当 face_field 包含 expression 时返回。|
@@ -61,9 +62,9 @@ Object object
 |landmark|Object|4 个关键点位置，左眼中心、右眼中心、鼻尖、嘴中心。face_field 包含 landmark 时返回。|
 |quality|Object|人脸质量信息，face_field 包含 quality 时返回。|
 
-### location 返回值说明 
+### location 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |left| number | 人脸区域离左边界的距离|
 |top| number | 人脸区域离上边界的距离|
@@ -71,89 +72,89 @@ Object object
 |height| number | 人脸区域的高度|
 |rotation| number |人脸框相对于竖直方向的顺时针旋转角，[-180,180]。|
 
-### angel 返回值说明 
+### angel 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |yaw| number | 三维旋转之左右旋转角[-90(左), 90(右)]。|
 |pitch| number | 三维旋转之俯仰角度[-90(上), 90(下)]。|
 |roll| number | 平面内旋转角[-180(逆时针), 180(顺时针)]。|
 
-### expression 返回值说明 
+### expression 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string | none:不笑；smile:微笑；laugh:大笑。|
 |probability| number | 表情置信度，范围 [0~1]，0最小、1最大。|
 
-### face_shape 返回值说明 
+### face_shape 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |square: 正方形；triangle:三角形；oval: 椭圆；heart: 心形；round: 圆形。|
 |probability| number | 置信度，范围 [0~1]，代表这是人脸形状判断正确的概率，0 最小、1 最大。|
 
-### gender 返回值说明 
+### gender 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |male:男性；female:女性。|
 |probability| number | 性别置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-### glasses 返回值说明 
+### glasses 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |none:无眼镜；common:普通眼镜；sun:墨镜。|
 |probability| number |眼镜置信度，范围 [0~1]，0 代表概率最小、1 代表最大。|
 
-### eye_status 返回值说明 
+### eye_status 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |left_eye| number |左眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 |right_eye| number |右眼状态 [0,1] 取值，越接近 0 闭合的可能性越大。|
 
-### emotion 返回值说明 
+### emotion 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |angry:愤怒；disgust:厌恶；fear:恐惧；happy:高兴；sad:伤心；surprise:惊讶；neutral:无情绪。|
 |probability| number |情绪置信度，范围 0~1。|
 
-### race 返回值说明 
+### race 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |yellow: 黄种人；white: 白种人；black:黑种人；arabs: 阿拉伯人。|
 |probability| number |人种置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-### face_type 返回值说明 
+### face_type 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |type| string |human: 真实人脸； cartoon: 卡通人脸。|
 |probability| number |人脸类型判断正确的置信度，范围[0~1]，0 代表概率最小、1 代表最大。|
 
-### landmark 返回值说明 
+### landmark 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |landmark72| Array |72 个特征点位置 face_field 包含 landmark72 时返回。|
 |landmark150| Array |150 个特征点位置 face_field 包含 landmark150 时返回。|
 
-### quality 返回值说明 
+### quality 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |occlusion| number |人脸各部分遮挡的概率，范围 [0~1]，0 表示完整，1 表示不完整。|
 |blur| number |人脸模糊程度，范围 [0~1]，0 表示清晰，1 表示模糊。|
 |illumination| number |取值范围在 [0~255], 表示脸部区域的光照程度越大表示光照越好。|
 |completeness| number |人脸完整度，0 或 1, 0 为人脸溢出图像边界，1 为人脸都在图像边界内。|
 
-### occlusion 返回值说明 
+### occlusion 返回值说明
 
-|参数名 | 参数类型 |说明  | 
+|参数名 | 参数类型 |说明  |
 |---|---|---|
 |left_eye| number |左眼遮挡比例，[0-1]，1 表示完全遮挡。|
 |right_eye| number |右眼遮挡比例，[0-1]，1 表示完全遮挡。|
@@ -164,13 +165,13 @@ Object object
 
 ## 示例
 
- 
+
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/faceDetect.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -181,7 +182,7 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 ### 代码示例1 - image_type为BASE64 ：
@@ -302,7 +303,7 @@ Page({
 });
 ```
 
-### 返回值示例 
+### 返回值示例
 
 ```js
 {	

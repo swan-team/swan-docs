@@ -6,22 +6,23 @@ sidebar: voice_VoiceRecognizer-start
 ---
 
 **解释**：  开始
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。调用 VoiceRecognizer 对象上的方法时，Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
- 
+
 ## 方法参数
 
 Object object
 
 ## 示例
 
- 
+
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/fragment_VoiceRecognizerStart.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -32,12 +33,12 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 ### 代码示例 1 ：
 
-短语音识别（与长语音使用方式一致） - 自动听音 
+短语音识别（与长语音使用方式一致） - 自动听音
 
 <a href="swanide://fragment/cf22801f51f507488f841c69bd723bb81581343288048" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -87,7 +88,7 @@ Page({
 
 ### 代码示例 2 ：
 
-短语音识别 （与长语音使用方式一致）- 自动听音 
+短语音识别 （与长语音使用方式一致）- 自动听音
 
 
 <a href="swanide://fragment/e235ecbaa6bb8a609ace00674328319c1581343370002" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
@@ -137,7 +138,7 @@ Page({
 
 ### 代码示例 3 ：
 
-短语音识别 - 手动听音 
+短语音识别 - 手动听音
 
 
 <a href="swanide://fragment/aa65d723211d73439bb7316f8bc607e21581343434551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>

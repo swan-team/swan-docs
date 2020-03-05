@@ -5,15 +5,17 @@ nav: api
 sidebar:  audio
 ---
 
- 
+
 
 **解释** ：将文本转换为可以播放的 mp3 文件。
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
+
 
 ## 方法参数
 
 Object object
 
-### `data` 参数说明 
+### `data` 参数说明
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -28,7 +30,7 @@ Object object
 |fail |   Function|    否  | |     接口调用失败的回调函数|
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明 
+### success 返回参数说明
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -42,7 +44,7 @@ Object object
 </div>
 
 
-### 图片示例 
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -53,14 +55,14 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 ### 代码示例1
 
 <a href="swanide://fragment/8b103798c72dc03660be813f0750abcb1581328592134" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中 
+* 在 js 文件中
 
 ```js
 Page({
@@ -126,9 +128,9 @@ Page({
 });
 ```
 
-### 代码示例2 - 普通女声 
+### 代码示例2 - 普通女声
 <a href="swanide://fragment/b33b46eacccd088a86ffb86877a1d6871575453462407" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-* 在 js 文件中 
+* 在 js 文件中
 ```js
 Page({
     data: {
@@ -167,9 +169,9 @@ Page({
 });
 ```
 
-### 代码示例3 - 普通男声 
+### 代码示例3 - 普通男声
 <a href="swanide://fragment/27f0d768b7b334b331da773c506384b01575453531934" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-* 在 js 文件中 
+* 在 js 文件中
 ```js
 Page({
     data: {
@@ -208,11 +210,11 @@ Page({
 });
 ```
 
-### 代码示例4 - 情感合成-度逍遥 
+### 代码示例4 - 情感合成-度逍遥
 
 <a href="swanide://fragment/3e037a25ac60dafcfd193f7c815e91e21575453579904" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中 
+* 在 js 文件中
 
 ```js
 Page({
@@ -254,11 +256,11 @@ Page({
 
 
 
-### 代码示例5 - 情感合成-度丫丫 
+### 代码示例5 - 情感合成-度丫丫
 
 <a href="swanide://fragment/a957867956c867e21827f4eee84924a01575453615413" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 js 文件中 
+* 在 js 文件中
 
 ```js
 Page({

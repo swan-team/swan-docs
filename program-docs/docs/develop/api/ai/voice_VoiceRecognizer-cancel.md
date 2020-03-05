@@ -6,14 +6,15 @@ sidebar: voice_VoiceRecognizer-cancel
 ---
 
 **解释**： 取消
- 
+**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。调用 VoiceRecognizer 对象上的方法时，Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
+
 ## 方法参数
 
 无
 
 ## 示例
 
- 
+
 <a href="swanide://fragment/98f0e3af32eb5fbc80fb451d93abf2f51581342064706" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
@@ -22,7 +23,7 @@ sidebar: voice_VoiceRecognizer-cancel
 </div>
 
 
-### 图片示例 
+### 图片示例
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -33,10 +34,10 @@ sidebar: voice_VoiceRecognizer-cancel
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-### 代码示例 
+### 代码示例
 
 
 
