@@ -56,9 +56,9 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 
 <a href="swanide://fragment/28e00386b1bc7a310edf31e8ce4539dc1574490838253" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="container">
     <view class="card-area">
         <movable-area>
@@ -74,7 +74,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -95,14 +95,14 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 - id选择器  
 
 <a href="swanide://fragment/c6d0f6e8bee090d61ac80e03f654145c1574933820242" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="container">
     <view class="card-area">
         <movable-area>
@@ -118,7 +118,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -139,14 +139,14 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例3 - 多个class选择器  
 
 <a href="swanide://fragment/dc0f170837028da340dec35ac2a544861574934507729" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="container">
     <view class="card-area">
         <movable-area>
@@ -165,7 +165,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -186,14 +186,14 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例4 - 后代选择器 
 
 <a href="swanide://fragment/6c91ccb0e424e806c9211b8fbc837d401574934615273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="container">
     <view class="card-area">
         <movable-area>
@@ -209,7 +209,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -230,14 +230,14 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例5 - 多个选择器 
 
 <a href="swanide://fragment/6c91ccb0e424e806c9211b8fbc837d401574934615273" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="container">
     <view class="card-area">
         <movable-area>
@@ -256,7 +256,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -277,3 +277,4 @@ Page({
     }
 });
 ```
+:::

@@ -50,9 +50,9 @@ Object object
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <scroll-view class="scroll-view" scroll-y>
     <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
         <text class="notice">向下滚动让小球出现</text>
@@ -64,8 +64,7 @@ Object object
 </scroll-view>
 ```
 
-* 在 js 文件中
-
+ 
 ```js
 Page({
     data: { },
@@ -84,3 +83,4 @@ Page({
     }
 });
 ```
+:::
