@@ -51,15 +51,15 @@ sidebar: createanimation_Animation
 
 <a href="swanide://fragment/c1cd19f4bd6c53b0c272aa1d2bce10481557729887965" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -76,20 +76,21 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例2 - 动画样式设置 
 
 <a href="swanide://fragment/2fb5684d1d02b0b2b389174ea0a1136b1575537062260" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -114,21 +115,21 @@ Page({
     }
 });
 ```
-
+:::
 
 ###  代码示例3 - 动画宽高设置 
 
 <a href="swanide://fragment/933d1f771edd2968879fe952d832da341575537199303" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -159,14 +160,15 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例5 - 底部弹窗自定义动画（css控制） 
 
 <a href="swanide://fragment/93e40bd1926b5672c061e84492503a2a1575816747690" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <button bindtap='showshadow' type="primary">点击显示底部弹框</button>
  
 <view class='content {{click? "showContent": "hideContent"}} {{option? "open": "close"}}' hover-stop-propagation='true'>
@@ -178,7 +180,7 @@ Page({
 
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -213,7 +215,7 @@ Page({
 });
 ```
 
-* 在 css 文件中
+ 
 
 ```css
 .content {
@@ -266,15 +268,15 @@ Page({
   animation: slideContentDown 0.5s ease-in both;
 }
 ```
-
+:::
 
 ###  代码示例6 - 底部弹窗自定义动画（API控制） 
 
 <a href="swanide://fragment/8a843dcdf2f4e31945b4af996c2e3e381575816832551" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <button bindtap='showshadow' type="primary">点击显示底部弹框</button>
     <!-- 遮罩层 -->
@@ -288,7 +290,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -351,14 +353,15 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例7 - 弹出菜单特效的实现 
 
 <a href="swanide://fragment/b80823a3c8127277935d521b04b69fe31575826980941" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view>
     <image src="/images/ai.png" class="img" animation="{{animFavor}}"></image>
     <image src="/images/basecontent.png" class="img" animation="{{animShare}}"></image>
@@ -367,7 +370,7 @@ Page({
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -449,7 +452,7 @@ Page({
     }
 })
 ```
-
+:::
 
 
 

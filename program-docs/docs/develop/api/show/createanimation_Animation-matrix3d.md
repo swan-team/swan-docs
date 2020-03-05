@@ -40,9 +40,9 @@ Number a1，Number b1，Number c1，Number d1，Number a2，Number b2，Number c
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="animation-element-wrapper">
         <view class="animation-element" animation="{{animation}}"></view>
@@ -53,7 +53,7 @@ Number a1，Number b1，Number c1，Number d1，Number a2，Number b2，Number c
     </view>
 </view>
 ```
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -86,5 +86,5 @@ Page({
 });
 ```
  
-
+:::
 

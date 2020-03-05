@@ -53,15 +53,15 @@ Animation
 
 <a href="swanide://fragment/2b99313e6124854e7ffe54d1e1ee320a1575536093402" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -79,20 +79,20 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例2 -  timingFunction 为 ease 
 
 <a href="swanide://fragment/e466434396978ea4a228da5272a6a0b11575533878659" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -114,20 +114,21 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例3 -  timingFunction 为 ease-in 
 
 <a href="swanide://fragment/b63fc78554c902435c7b32a40a08bdf31575534055060" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -150,20 +151,20 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例4 -  timingFunction 为 ease-in-out 
 
 <a href="swanide://fragment/f34ed45f470671beb1732d8729581a3a1575534121123" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -186,20 +187,20 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例5 -  timingFunction 为 ease-out 
 
 <a href="swanide://fragment/4b8aed636df950a084cf88bde89de77d1575534170504" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -222,20 +223,20 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例6 -  timingFunction 为 step-start 
 
 <a href="swanide://fragment/279aa3563aef02de8fa928a6f08d95661575534229419" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -258,20 +259,20 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例7 -  timingFunction 为 step-end 
 
 <a href="swanide://fragment/2df316195a9893a4ebc2e46d844778b01575534267520" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="anim" bindtap="startToAnimate" animation="{{animationData}}"></view>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -294,6 +295,6 @@ Page({
     }
 });
 ```
-
+:::
 
 

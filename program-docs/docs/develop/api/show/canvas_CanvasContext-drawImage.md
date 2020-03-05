@@ -55,14 +55,14 @@ sidebar: canvas_CanvasContext-drawImage
 
 <a href="swanide://fragment/5f642a5821d97a419580f6661c537d8f1574501379932" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan 
 <canvas canvas-id="myCanvas" class="myCanvas"/>
 <button type="primary" bindtap="drawImage">点击上传</button>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -77,11 +77,14 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例2 - 把用户正方形图片绘制成圆形 
 
 <a href="swanide://fragment/508b22fc05c8149337e96553fd3ad1971575437603927" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+:::codeTab
 
+ 
 ```js
 Page({
     data: { },
@@ -95,5 +98,5 @@ Page({
     }
 })
 ```
-
+:::
 

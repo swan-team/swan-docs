@@ -38,6 +38,7 @@ sidebar: canvas_CanvasContext-setGlobalAlpha
 
 <a href="swanide://fragment/7b723e7a8cbe1cbe81d495f2d1d9d8d81573724568446" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -51,6 +52,7 @@ canvasContext.fillRect(100, 100, 150, 100);
 
 canvasContext.draw();
 ```
+:::
 
 ###  代码示例2 - 同时设置多个透明度，透明度高的图形显示会高于透明度低的图形 ：
 
