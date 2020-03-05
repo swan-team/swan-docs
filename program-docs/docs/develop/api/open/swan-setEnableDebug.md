@@ -3,7 +3,7 @@ title: swan.setEnableDebug
 header: develop
 nav: api
 sidebar: swan-setEnableDebug
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/setEnableDebug/setEnableDebug
+# webUrl: https://qft12m.smartapps.cn/swan-api/setEnableDebug/setEnableDebug
 ---
  
 

@@ -3,32 +3,32 @@ title: swan.openShare
 header: develop
 nav: api
 sidebar: share_swan-openShare
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/openShare/openShare
+# webUrl: https://qft12m.smartapps.cn/swan-api/openShare/openShare
 ---
- 
- 
+
+
 **解释**： 调起分享面板。
 **Web 态说明**：Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时，调用 openShare 会弹出引导浮层引导用户通过平台的分享能力进行分享；在非上述环境时会弹出分享面板提示用户复制链接并分享。
- 
 
-## 方法参数 
+
+## 方法参数
 
 Object object
 
-### `object`参数说明 
+### `object`参数说明
 
-|属性名 |类型  |必填 | 默认值 |说明| Web 态说明|
-|:---- |:---- |:---- |:----|:----|:----|
-|title |String  |  否  | | 分享标题|暂不支持|
-|content |String  |  否 || 分享内容|暂不支持|
-|imageUrl |String  |  否  | | 分享图标|暂不支持|
-|path |String  |  否  | | 页面 path，必须是以 / 开头的完整路径。|Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时配置的分享path不生效，此时分享path为当前页面的路径|
-|success |Function  |  否  | | 接口调用成功的回调函数||
-|fail   | Function  |  否  | | 接口调用失败的回调函数||
-|complete  |  Function  |  否 | |  接口调用结束的回调函数（调用成功、失败都会执行）||
+| 属性名    | 类型      | 必填  | 默认值 | 说明                                                                                                        | Web 态说明                                                                                     |
+|:---------|:---------|:-----|:-------|:-----------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| title    | String   | 否   |        | 分享标题                                                                                                    | 暂不支持                                                                                        |
+| content  | String   | 否   |        | 分享内容                                                                                                    | 暂不支持                                                                                        |
+| imageUrl | String   | 否   |        | 分享图标                                                                                                    | 暂不支持                                                                                        |
+| path     | String   | 否   |        | 页面 path，必须是以 / 开头的完整路径。如果 path 中的参数包含中文字符，需通过 encodeURIComponent 对中文字符进行编码。  | Web 态小程序运行在微信、QQ、QQ空间、微博、百度 Hi 内时配置的分享path不生效，此时分享path为当前页面的路径 |
+| success  | Function | 否   |        | 接口调用成功的回调函数                                                                                        |                                                                                                |
+| fail     | Function | 否   |        | 接口调用失败的回调函数                                                                                        |                                                                                                |
+| complete | Function | 否   |        | 接口调用结束的回调函数（调用成功、失败都会执行）                                                                 |                                                                                                |
 
 
-###  函数返回值 
+###  函数返回值
 Boolean result
 
 ###  返回值说明
@@ -55,7 +55,7 @@ Boolean result
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
+###  图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/openShare.gif">
@@ -65,8 +65,8 @@ Boolean result
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
-</div> 
+    </div>
+</div>
 
 ###  代码示例1 - API调起分享面板 ：
 
@@ -118,7 +118,12 @@ Page({
 
 
 
-## Bug & Tip 
+## Bug & Tip
 
-bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
+- tip: 如果入参 path 中的参数包含中文字符，需要通过 encodeURIComponent 对中文字符进行编码，举例：
+
+```js
+let path = '/a/b?key=' + encodeURIComponent('中文');
+```
+- bug: 基础库 1.13.43 版本 Android 手机中，点击分享面板的取消时，不会执行 fail 回调。
 

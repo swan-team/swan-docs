@@ -3,10 +3,8 @@ title: animation-view Lottie 动画
 header: develop
 nav: component
 sidebar: base_animation-view-Lottie
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/animation-view/animation-view
+webUrl: https://qft12m.smartapps.cn/component/animation-view/animation-view
 ---
-
-
 
 **解释**：仅支持 Lottie 动画的客户端[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)，使用时请注意相关限制，动画资源地址可到[lottie的官方库](https://github.com/airbnb/lottie-web)进行查询。
 

@@ -3,7 +3,7 @@ title: swan.hideTabBarRedDot
 header: develop
 nav: api
 sidebar:  tabbar_swan-hideTabBarRedDot
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/swan-api/tab-bar/tab-bar
 ---
  
 **解释**：隐藏 tabBar 某一项的右上角的红点
@@ -32,49 +32,29 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/tabbarreddot.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
-</div>
-
 ### 代码示例 
 
  
 
 :::codeTab
-```swan
-<view class="wrap">
-    <button type="primary" bindtap="showTabBarRedDot">showTabBarRedDot</button>
-    <button type="primary" bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
-</view>
-```
- 
 
 ```js
 Page({
-    showTabBarRedDot() {
-        swan.showTabBarRedDot({
-            index: 0
-        });
-    },
-    hideTabBarRedDot() {
-        swan.hideTabBarRedDot({
-            index: 0,
-            success: function () {
-                console.log('hideTabBarRedDot success');
-            },
-            fail: function (err) {
-                console.log('hideTabBarRedDot fail', err);
-            }
-        });
+    onTabItemTap(item) {
+        console.log(item.index);
+        if(item.index !== 2){
+            swan.hideTabBarRedDot({
+                index: item.index,
+                success: function () {
+                    console.log('hideTabBarRedDot success');
+                },
+                fail: function (err) {
+                    console.log('hideTabBarRedDot fail', err);
+                }
+            });
+        }
+        console.log(item.pagePath);
+        console.log(item.text);
     }
 });
 ```

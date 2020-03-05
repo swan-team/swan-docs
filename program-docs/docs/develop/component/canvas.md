@@ -3,7 +3,7 @@ title: canvas 画布
 header: develop
 nav: component
 sidebar: canvas
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/canvas/canvas
+webUrl: https://qft12m.smartapps.cn/component/canvas/canvas
 ---
 
  

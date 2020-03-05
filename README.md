@@ -4,7 +4,7 @@
 ### 开启本地预览
 进入 swan-docs，终端执行 `npm start`;
 
-终端看到`Hexo is running at http://localhost:4000/docs/. Press Ctrl+C to stop.` 提示，启动成功。
+终端看到`VuePress dev server listening at http://localhost:4000/docs/` 提示，启动成功。
 
 访问 http://localhost:4000/docs/introduction/register/ 开始编辑（path与线上一致）。
 

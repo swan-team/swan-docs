@@ -16,9 +16,9 @@ sidebar: typography
 	</div>
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/foundation/typography/1-2.png">
-		<p class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
-			1. 从上至下垂直扫描；
-			2. 发现感兴趣的内容，视线从左向右水平移动。</p>
+		<div class="m-doc-custom-examples-text">快速扫视浏览（锯齿型）
+            1. 从上至下垂直扫描；
+            2. 发现感兴趣的内容，视线从左向右水平移动。</div>
 	</div>
 </div>
 

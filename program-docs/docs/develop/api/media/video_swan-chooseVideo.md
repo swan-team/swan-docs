@@ -3,7 +3,7 @@ title: swan.chooseVideo
 header: develop
 nav: api
 sidebar: video_swan-chooseVideo
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/chooseVideo/chooseVideo
+# webUrl: https://qft12m.smartapps.cn/swan-api/chooseVideo/chooseVideo
 ---
 
 

@@ -3,7 +3,7 @@ title: swan.pageScrollTo
 header: develop
 nav: api
 sidebar: pagescrollto_swan-pageScrollTo
-webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/pageScrollTo/pageScrollTo
+webUrl: https://qft12m.smartapps.cn/swan-api/page-scroll-to/page-scroll-to
 ---
 
  
@@ -31,19 +31,6 @@ Object object
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/pages_PageScrollTo.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
-</div>
-
-###  图片示例  
-<div class="m-doc-custom-examples">
-    <div class="m-doc-custom-examples-correct">
-        <img src="https://b.bdstatic.com/miniapp/image/pageScrollTo.gif">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>
-    <div class="m-doc-custom-examples-correct">
-        <img src=" ">
-    </div>     
 </div>
 
  

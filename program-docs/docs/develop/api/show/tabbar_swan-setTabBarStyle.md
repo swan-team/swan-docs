@@ -3,7 +3,7 @@ title: swan.setTabBarStyle
 header: develop
 nav: api
 sidebar: tabbar_swan-setTabBarStyle
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/tabBar/tabBar
+webUrl: https://qft12m.smartapps.cn/swan-api/tab-bar/tab-bar
 ---
 
  
@@ -35,7 +35,7 @@ Object object
 </div>
 
  
-###  图片示例  
+<!-- ###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/image/settabbarstyle.gif">
@@ -46,22 +46,56 @@ Object object
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
     </div>     
-</div>
+</div> -->
 
-###  代码示例1 borderStyle为black  
+###  代码示例1 动态设置
+
+<a href="swanide://fragment/44d27e9d57b8848544201181fe547cb01574137906215" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+
+
+
+:::codeTab
+
+```js
+Page({
+    onTabItemTap(item) {
+        console.log(item.index);
+        if(item.index == 0){
+            setTabBarStyle('#FFFFBD')
+        }
+        else if(item.index == 1){
+            setTabBarStyle('#FFFFBE')
+        }
+        else {
+            setTabBarStyle('#FFFFBF')
+        }
+    }
+
+    setTabBarStyle(bg) {
+        swan.setTabBarStyle({
+            color: '#000',// black
+            selectedColor: '#FF0000',// red
+            backgroundColor: bg,
+            borderStyle: 'black',
+            success: function () {
+                console.log('setTabBarStyle success');
+            },
+            fail: function (err) {
+                console.log('setTabBarStyle fail', err);
+            }
+        });
+    }
+});
+```
+:::
+
+###  代码示例2 borderStyle为black  
 
 <a href="swanide://fragment/44d27e9d57b8848544201181fe547cb01574137906215" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
  
 
 :::codeTab
-```swan
-<view class="wrap">
-    <button type="primary" bindtap="setTabBarStyle">setTabBarStyle</button>
-</view>
-```
-
- 
 
 ```js
 Page({
@@ -82,7 +116,7 @@ Page({
 });
 ```
 :::
-###  代码示例2 borderStyle为white  
+###  代码示例3 borderStyle为white  
 
 <a href="swanide://fragment/ee7e3b2a98030b55a1ffeffab686c1af1575222167942" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -116,7 +150,7 @@ Page({
 });
 ```
 :::
-###  代码示例3 tab的默认样式可在app.json中设置 
+###  代码示例4 tab的默认样式可在app.json中设置 
 
 <a href="swanide://fragment/83b4592e80ddef1a73baa0ed7b7ab67a1575222614596" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 

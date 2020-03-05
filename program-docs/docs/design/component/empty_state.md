@@ -1,7 +1,7 @@
 ---
 title: 空态
 header: design
-nav: component
+nav: foundation
 sidebar: empty_state
 ---
 
@@ -33,6 +33,7 @@ sidebar: empty_state
 	</div>
 </div>
 
+> 你可直接使用智能小程序相关体验资产。（[下载设计资源](https://smartprogram.baidu.com/docs/design/resource/uikit/) | [查看开发文档](https://smartprogram.baidu.com/docs/develop/extended/template/smt-status-page/)）
 
 ## 图标
 一般使用功能型静态图标，根据页面功能，直接传达场景语义。

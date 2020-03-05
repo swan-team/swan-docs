@@ -3,35 +3,35 @@ title: input 输入框
 header: develop
 nav: component
 sidebar: formlist_input
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/input
+webUrl: https://qft12m.smartapps.cn/component/input/input
 ---
 
 **解释**：输入框，v3.105.0 开始支持[同层渲染](https://smartprogram.baidu.com/docs/develop/component/native/)。
 
 ##  属性说明
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- | :---- |:---- |:---- |
-| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)| |
-| type | String  |text  | 否 |input 的类型|
-| password | Boolean  | false  | 否 |是否是密码类型|
-| placeholder | String  |   | 否 |输入框为空时占位符|
-|placeholder-style| String  |  | 否 | placeholder 的样式|
-|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|
-| disabled | Boolean  | false  | 否 |是否禁用|
-| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|
-|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|
-| focus |Boolean	  | false | 否 |获取焦点，调起键盘。<br> 开发者工具暂不支持自动获取焦点|
-|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|
-|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|
-|cursor	 | Number  |  | 否 |指定 focus 时的光标位置<br>开发者工具暂不支持|
-|selection-start | Number | -1 | 否 | 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用|
-|selection-end | Number | -1 | 否 | 光标结束位置，自动聚焦时有效，需与 selection-start 搭配使用 |
-|adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |
-| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |
-| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|
-|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|
-| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|
+|属性名 |类型  |默认值  | 必填 |说明|Web 态说明|
+|:---- | :---- | :---- |:---- |:---- |:---- |
+| value | String  | | 否 |输入框的初始内容。若要动态设置输入框内容，需设置 `value="{= value =}"`(注: 若要取键盘输入后的value请通过bindinput获取)|-|
+| type | String  |text  | 否 |input 的类型|-|
+| password | Boolean  | false  | 否 |是否是密码类型|-|
+| placeholder | String  |   | 否 |输入框为空时占位符|-|
+|placeholder-style| String  |  | 否 | placeholder 的样式|-|
+|placeholder-class |  String |input-placeholder  | 否 |placeholder 的样式类|-|
+| disabled | Boolean  | false  | 否 |是否禁用|-|
+| maxlength | Number  | 140 | 否 |最大输入长度，设置为 -1 的时候不限制最大长度|-|
+|cursor-spacing |Number	  |0  | 否 |指定光标与键盘的距离，单位 px。 当键盘弹出时， 如果需要页面上滑才能完整显示input组件, 那么此时光标与键盘的距离为设定的cursor-spacing值； 如果input组件处于屏幕上方，键盘弹出时不会挡住input， 则忽略该属性。|受限于设备系统，暂不支持|
+| focus |Boolean	  | false | 否 |获取焦点，调起键盘。<br> 开发者工具暂不支持自动获取焦点|-|
+|confirm-type|String  | done | 否 |设置键盘右下角按钮的文字|暂不支持|
+|confirm-hold | Boolean  | false | 否 |点击键盘右下角按钮时是否保持键盘不收起|-|
+|cursor	 | Number  |  | 否 |指定 focus 时的光标位置<br>开发者工具暂不支持|-|
+|selection-start | Number | -1 | 否 | 光标起始位置，自动聚焦时有效，需与 selection-end 搭配使用|-|
+|selection-end | Number | -1 | 否 | 光标结束位置，自动聚焦时有效，需与 selection-start 搭配使用 |-|
+|adjust-position | Boolean | true | 否 | 键盘弹起时，是否自动上推页面 |-|
+| bindinput | EventHandle  |   | 否 |当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode为键值。 |-|
+| bindfocus | EventHandle  |  | 否 |输入框聚焦时触发，event.detail = {value: value, height: height}, height为键盘高度|-|
+|bindblur	|EventHandle	  | | 否 |输入框失去焦点时触发，event.detail = {value: value}|-|
+| bindconfirm |EventHandle	  |  | 否 |点击完成按钮时触发，event.detail = {value: value}|-|
 
 
 ###  type 有效值
@@ -65,14 +65,14 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/inp
 </div>
 
 
- 
+
 
 ###  代码示例1 - 基础用法 ：
 
 <a href="swanide://fragment/06c050eeb63c8b030a17e943866a8c6c1575286848934" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -90,7 +90,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/inp
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -128,7 +128,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/input/inp
     </view>
 </view>
 ```
- 
+
 
 ```js
 Page({
@@ -176,7 +176,7 @@ Page({
 <a href="swanide://fragment/fc1fbbb8468b3234cf05e50ba0d7c4831575286992595" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -228,7 +228,7 @@ Page({
 <a href="swanide://fragment/aef77cb4643dcca1cec67fcf0feac9741575287321184" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -244,7 +244,7 @@ Page({
 </view>
 ```
 
- 
+
 
 ```js
 Page({
@@ -262,7 +262,7 @@ Page({
 <a href="swanide://fragment/c917bbec61dcc59cbb58b5571a1f3cdb1575190961501" title="在开发者工具中预览效果" target="_blank">在开发者工具中预览效果
 </a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -312,7 +312,7 @@ Page({
     </view>
 </view>
 ```
- 
+
 
 ```js
 Page({
@@ -379,3 +379,4 @@ Page({
 * Bug：在 iOS 端键盘弹起时会出现组件 bindtap 不生效的问题（部分场景，如：IM 聊天场景中的固定在页面底部的文本框与发送按钮），建议先使用 bindtouchstart 代替 bindtap。
 * Tip：暂不支持 bindinput 处理函数直接 return 一个字符串。
 * Tip：v3.105.0 起 input 支持同层渲染，更多请参考[原生组件](https://smartprogram.baidu.com/docs/develop/component/native/)。
+

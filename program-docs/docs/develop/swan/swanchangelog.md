@@ -5,20 +5,29 @@ nav: swan
 sidebar: swanchangelog
 ---
 
+## 3.160 版本日志更新
+
+|版本号|更新日期|更新内容|
+|----|----|----|
+|3.160.3|2020.3.3|**Breaking Change**<p>**·** canIUse API 增加对系统的区分；<p>**·** android 端增加截屏分享功能；<p>**·** chooseInvoiceTitle、chooseAddress可通过button调用。<p>**BugFix**<p>**·** 修复swan.openShare 手百不再弹出 toast 的问题；<p>**·** 修复scrollview或scrollview父节点绑定catchtouchmove后scrollview不能纵向滚动的问题；<p>**·** 修复swan.reqeust、swan.downloadFile、swan.uploadFile 接口未对请求域名重定向后地址进行协议和域名的合法性校验的问题，合法性校验参考依据：[使用注意事项](https://smartprogram.baidu.com/docs/develop/api/net/net_rule/)。|
+
+
 ## 3.150 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.150.9|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。<p>**BugFix**<p>**·** 修复swan.openShare 手百不再弹出 toast 的问题；<p>**·** 修复scrollview或scrollview父节点绑定catchtouchmove后scrollview不能纵向滚动的问题。|
 |3.150.5|2020.1.15|**BugFix**<p>**·** 修复安卓4g下切换视频src一直处于loading问题；<p>**·** 修复ios12 canvas垃圾回收问题。|
 |3.150.3|2020.1.12|**BugFix**<p>修复百度翻译语音翻译失败的问题。|
-|3.150.1|2020.1.6|**Breaking Change**<p>text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·** 修复 showToast image设置失败问题；<p>**·** 修复swan.after 设置fail失败问题；<p>**·** 修复同时改变视频src和宽高时视频不切换问题；<p>**·** 修复textarea特定情况下左上角出现小黑点问题。|
+|3.150.1|2020.1.6|**Breaking Change**<p> text 和 rich-text 组件 selectable 属性默认值修改为 true。<p>**BugFix**<p>**·** 修复 showToast image设置失败问题；<p>**·** 修复swan.after 设置fail失败问题；<p>**·** 修复同时改变视频src和宽高时视频不切换问题；<p>**·** 修复textarea特定情况下左上角出现小黑点问题。|
 
 ## 3.140 版本日志更新
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.140.15|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。<p>**BugFix**<p>**·** 修复swan.openShare 手百不再弹出 toast 的问题；<p>**·** 修复scrollview或scrollview父节点绑定catchtouchmove后scrollview不能纵向滚动的问题。|
 |3.140.13|2020.1.15|**BugFix**<p>**·** 修复安卓4g下切换视频src一直处于loading问题；<p>**·** 修复ios12 canvas垃圾回收问题。|
-|3.140.11|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
+|3.140.11|2020.1.10|**BugFix**<p> 支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.140.10|2020.1.7|**BugFix**<p>**·** 修复 showToast image设置失败问题；<p>**·** 修复swan.after 设置fail失败问题；<p>**·** 修复同时改变视频src和宽高时视频不切换问题；<p>**·** 修复textarea特定情况下左上角出现小黑点问题。|
 |3.140.9|2019.12.31|**Breaking Change**<p>**·** canIUse API 非兼容上线；<p>**·** canIUse 组件部分非兼容性上线；<p>**·** API 报错信息优化。<p>**BugFix**<p>修复slave资源并行加载引起SJS失效 的问题。|
 |3.140.8|2019.12.27|同3.140.1|
@@ -30,6 +39,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.130.13|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。<p>**BugFix**<p>**·** 修复swan.openShare 手百不再弹出 toast 的问题；<p>**·** 修复scrollview或scrollview父节点绑定catchtouchmove后scrollview不能纵向滚动的问题。|
 |3.130.12|2020.1.10|**BugFix**<p>支持bdfile协议路径，修复多实例创建垃圾回收问题。|
 |3.130.11|2020.1.7|**BugFix**<p>**·** 修复 showToast image设置失败问题；<p>**·** 修复swan.after 设置fail失败问题；<p>**·** 修复同时改变视频src和宽高时视频不切换问题；<p>**·** 修复textarea特定情况下左上角出现小黑点问题；<p>**·** 修复input设置height auto后不能聚焦输入问题。|
 |3.130.10|2019.12.27|**Breaking Change**<p>透明视频组件优化分辨率，提供播放失败回调。 <p>**Breaking Change**<p>修复paymentAPI支付消息解析客户端返回缺失data的报错的问题。|
@@ -53,6 +63,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.120.16|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。|
 |3.120.14|2019.12.25|**BugFix**<p>修复百度知道 提问标题样式错乱问题。|
 |3.120.10|2019.12.11|**Breaking Change**<p>canIUse API 、重构组件非兼容上线。<p>**BugFix**<p>修复在 App/Page 生命周期onShow 中异步调用登录API出现重复调起登录页的问题。|
 |3.120.9|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复 ad组件优化视频贴片|
@@ -64,6 +75,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.110.24|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。|
 |3.110.23|2019.12.11|**Breaking Change**<p>canIUse API 、重构组件非兼容上线。|
 |3.110.22|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复自定义组件存在循环引用,或者ID被错误设置重复时,调用triggerEvent引发工具崩溃的问题。<p>修复 ad组件优化视频贴片|
 |3.110.21|2019.11.25|**BugFix**<p>修复开发者工具点击右上角分享控制台报错的问题。|
@@ -78,6 +90,7 @@ sidebar: swanchangelog
 
 |版本号|更新日期|更新内容|
 |----|----|----|
+|3.105.29|2020.3.3|**Breaking Change**<p> canIUse API 增加对系统的区分。|
 |3.105.27|2019.12.02|**BugFix**<p>修复云开发项目中更新记录报错的问题。<p>修复 ad组件优化视频贴片<p>**Breaking Change**<p>canIUse API 重构|
 |3.105.25|2019.11.18|**BugFix**<p>**·** 修复切换视频src后起始播放时间不对问题;<p>**·** 修复android video 结束前自动暂停的问题;<p>**·** 修复相机 insert 未结束就调用 update 的问题。|
 |3.105.22|2019.11.11|**BugFix**<p>修复ios视频播放时圆角不生效的问题。|
@@ -324,6 +337,7 @@ sidebar: swanchangelog
 |2.0.12|2018.10.31|**Breaking Change** <p>**·** 分包预下载功能优化； <p>**·** 组件生命周期析构移除监听器。<p> **BugFix** <p>**·** 修复自定义组件引用其他自定义组件小概率失败的问题；<p>**·**  修复生命周期onLaunch,onShow参数值path,query,scene,refereInfo等缺失的问题；<p>**·** 修复配置 shareUrl 后分享到个人中心无法打开的问题； <p>**·** 修复同步 API 调用导致的重复打点问题；<p>**·** 修复 cover-view 组件设置 display: inline-block 不生效的问题。|
 |2.0.3|2018.10.24|**New**<p>**·** 新增分包预下载;<p>**·** 自定义组件triggerEvent方法新增detail字段;<p>**·** 分享自定义链接白名单更新;<p>**·** button、checkbox、audio、radio、label、switch、navigator、webview、video、live-player 组件对开发者传入的字段进行校验。<p>**Breaking Change** <p>**·** 自定义组件扁平化改造;<p>**·**  botton组件中使用boxjs代替swan获取userinfo；<p>**·** getPhoneNumber从swan中移除；<p>**·** 小程序语音API；<p>**·** 更改API名称、属性名称；<p>**·** canvas、form、icon、image、picker-view、picker、scroll-view、view、ar-camera、camera、movable-area、movable-view、progress、slider、text 组件对开发者传入的字段进行矫正。<p> **BugFix** <p>**·** 修复picker安卓中不设置默认值省市区无效问题；<p>**·** 修复image组件动态改变mode属性，样式没有跟着变化的问题;<p>**·** 修复自定义组件selectquery实例上下文中的component字段缺失问题;<p>**·** 修复自定义组件中使用selectquery不能通过class选择dom的问题;<p>**·** 修复原生组件设置边框后，hide 属性不生效的问题;<p>**·** IntersectionObserver.disconnect 工具报错;<p>**·** 自定义组件中使用 IntersectionObserver 不能通过 class 选择 dom 的问题;<p>**·** 修复自定义组件传参为false时，不会更改组件内该属性值问题。|
 |2.0.2|2018.10.22|**New**<p>**·**  分享 ICON 优化；<p>**·**  button组件支持调起客服；<p>**·**  getImageInfo 支持相对路径和网络图片。|
+
 <!-- <p>**·**  新增 API getVoiceManger； -->
 
 ## 1.13 版本日志更新

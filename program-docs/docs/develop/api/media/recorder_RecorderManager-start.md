@@ -1,5 +1,5 @@
 ---
-title: RecorderManager.start 
+title: RecorderManager.start
 header: develop
 nav: api
 sidebar: recorder_RecorderManager-start
@@ -7,14 +7,15 @@ sidebar: recorder_RecorderManager-start
 
 
 
-**解释**： 开始录音
+**解释**： 开始录音。
+**Web 态说明**： Web 态环境不支持录音相关功能，该方法不会生效。
 
- 
+
 ## 方法参数
 
-Object object 
+Object object
 
-### options 参数说明  
+### options 参数说明
 
 |参数名 | 类型 | 必填 | 默认值|说明 |
 |---- | ---- | ---- | ---|---- |
@@ -36,7 +37,7 @@ Object object
 
 ## 示例
 
- 
+
 
 ### 扫码体验
 
@@ -45,7 +46,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 
 
 <div class="m-doc-custom-examples">
@@ -57,14 +58,14 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
 ### 代码示例1 format为aac ：
 
 <a href="swanide://fragment/a495c8fcde49fe7cdb108088854cb7011573652992453" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({
@@ -87,7 +88,7 @@ Page({
 
 <a href="swanide://fragment/ff452321703d4b008cef28d2c889de4a1575218133212" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 在 js 文件中 
+ 在 js 文件中
 
 ```js
 Page({

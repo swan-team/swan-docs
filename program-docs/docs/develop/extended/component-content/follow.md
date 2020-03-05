@@ -3,7 +3,7 @@ title: 关注组件
 header: develop
 nav: extended
 sidebar: follow
-webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/follow/follow
+webUrl: https://qft12m.smartapps.cn/extensions/component/follow/follow
 ---
 
 
@@ -41,7 +41,7 @@ webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/page
 npm install @smt-ui/content-component
 ```
 
-在 页面json 文件中：
+ 
 :::codeTab
 ```json
 {

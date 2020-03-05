@@ -3,7 +3,7 @@ title: refresh 刷新
 header: develop
 nav: extended
 sidebar: smt-refresh
-# webUrl: https://qft12m.smartapps.cn/subPackages/extensionsPackage/component/pages/smt-refresh/smt-refresh
+# webUrl: https://qft12m.smartapps.cn/extensions/component/smt-refresh/smt-refresh
 ---
 
 **解释：** 可用于页面任意区域；使用时需自行添加下拉逻辑改变offset-y参数；smt-feed组件对smt-refresh进行了封装，支持手势交互和api调起刷新。

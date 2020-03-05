@@ -26,7 +26,7 @@ sidebar: easytouse
 	</div>
 </div>
 
-除标题文字外，每个页面的顶部导航栏样式均可进行自定义。**自定义时需注意信息的可读性**，详见[顶部导航栏](../../component/topnav/)。
+除标题文字外，每个页面的顶部导航栏样式均可进行自定义，**自定义时需注意信息的可读性**。（[了解更多](../../component/topnav/)）
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/principle/1-3-1.png">
@@ -46,7 +46,7 @@ sidebar: easytouse
 <div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct"><img src="../../../img/design/principle/1-4.png">
 </div></div>
 
-标签栏个数、标签栏背景色、选项的图标和文字外均可进行自定义，**自定义时请注意信息可读性**，详见[底部标签栏](../../component/bottomtab)。
+标签栏个数、标签栏背景色、选项的图标和文字外均可进行自定义，**自定义时请注意信息可读性**。（[了解更多](../../component/bottomtab)）
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
 		<img src="../../../img/design/principle/1-5-1.png">
@@ -80,3 +80,5 @@ sidebar: easytouse
 		<img src="../../../img/design/principle/1-9-2.png"><p class="m-doc-custom-examples-text">例：百度火车票小程序，在搜索城市时，跟随用户输入提供关键词进行联想。</p>
 	</div>
 </div>
+</div>
+

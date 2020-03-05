@@ -3,7 +3,7 @@ title: swan.getExtConfig
 header: develop
 nav: api
 sidebar: swan-getExtConfig
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/getExtConfig/getExtConfig
+# webUrl: https://qft12m.smartapps.cn/swan-api/getExtConfig/getExtConfig
 ---
 
 

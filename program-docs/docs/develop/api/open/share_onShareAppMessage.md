@@ -3,7 +3,7 @@ title: onShareAppMessage
 header: develop
 nav: api
 sidebar: share_onShareAppMessage
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/onShareAppMessage/onShareAppMessage
+# webUrl: https://qft12m.smartapps.cn/swan-api/onShareAppMessage/onShareAppMessage
 ---
 
 **解释**：页面的事件处理函数，用户点击右上角转发。

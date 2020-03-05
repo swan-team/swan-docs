@@ -3,7 +3,7 @@ title: progress 进度条
 header: develop
 nav: component
 sidebar: base_progress
-webUrl: https://qft12m.smartapps.cn/subPackages/componentPackage/pages/progress/progress
+webUrl: https://qft12m.smartapps.cn/component/progress/progress
 ---
 
 

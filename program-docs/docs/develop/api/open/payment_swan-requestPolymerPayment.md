@@ -3,7 +3,7 @@ title: swan.requestPolymerPayment
 header: develop
 nav: api
 sidebar: payment_swan-requestPolymerPayment
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/payment/payment
+# webUrl: https://qft12m.smartapps.cn/swan-api/payment/payment
 ---
 
 
@@ -28,7 +28,6 @@ Object object
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
 |orderInfo| Object | 是 | |订单信息|
-|bannedChannels| StringArray | 否 | | 需要隐藏的支付方式|
 |success |Function  |  否  | | 接口调用成功的回调函数|
 |fail   | Function  |  否  | | 接口调用失败的回调函数|
 |complete  |  Function  |  否 || 接口调用结束的回调函数（调用成功、失败都会执行）|
@@ -48,13 +47,6 @@ Object object
 
  
 
-###  bannedChannels 参数说明  
-
-|channel|说明 |
-|----| ---- |
-| Alipay | 支付宝 |
-| BDWallet | 百度钱包 |
-| WeChat | 微信支付|
 ## 示例
 
 ### 扫码体验

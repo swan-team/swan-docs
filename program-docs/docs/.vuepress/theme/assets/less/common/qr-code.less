@@ -1,0 +1,54 @@
+@import './color.less';
+@import './params.less';
+
+.qr-code {
+    margin: 10px 0;
+    &-image {
+        width: 140px;
+        height: 160px;
+        background-color: @bg-white1;
+        padding-top: 10px;
+        border-radius: 8px;
+        &-content {
+            margin: 0 auto;
+            width: 120px;
+            position: relative;
+            img {
+                border: none;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                margin: 0;
+                padding: 0;
+                top: 50%;
+                left: 50%;
+                margin-top: -20px;
+                margin-left: -20px;
+            }
+        }
+        &-text {
+            text-align: center;
+            color: @font-black2;
+        }
+    }
+
+    &-text {
+        line-height: 24px;
+        display: none;
+        margin-bottom: 20px;
+
+        &-botton {
+            color: @href-color;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-max-width) {
+    .qr-code {
+
+        &-text {
+            display: block;
+        }
+    }
+}

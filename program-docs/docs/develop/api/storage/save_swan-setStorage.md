@@ -3,7 +3,7 @@ title: swan.setStorage
 header: develop
 nav: api
 sidebar:  save_swan-setStorage
-# webUrl: https://qft12m.smartapps.cn/subPackages/apiPackage/pages/storage/storage
+# webUrl: https://qft12m.smartapps.cn/swan-api/storage/storage
 ---
 
 
@@ -229,7 +229,7 @@ Page({
 })
 ```
 
-###代码示例 4: 利用本地缓存恢复用户登录态Session Key
+### 代码示例 4: 利用本地缓存恢复用户登录态Session Key
 * 在 js 文件中
 ```js
 // app.js
