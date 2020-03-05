@@ -33,12 +33,12 @@ sidebar:  canvas_CanvasContext-fillRect
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
 canvasContext.fillRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
-
+:::
 

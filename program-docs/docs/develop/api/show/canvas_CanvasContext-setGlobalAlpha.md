@@ -56,6 +56,7 @@ canvasContext.draw();
 
 <a href="swanide://fragment/aa6015053952a9739f0166c25fe5ffac1575363466348" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -72,6 +73,6 @@ Page({
     }
 });
 ```
-
+:::
 <!-- ![图片](../../../img/api/canvas/global-alpha.png) -->
 

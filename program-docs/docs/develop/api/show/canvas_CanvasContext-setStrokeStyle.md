@@ -30,12 +30,12 @@ sidebar: canvas_CanvasContext-setStrokeStyle
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');
 canvasContext.setStrokeStyle('blue');
 canvasContext.strokeRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
-
+:::
 

@@ -30,7 +30,7 @@ Number rotate ：旋转角度，以弧度计(degrees * Math.PI/180；degrees范�
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -42,6 +42,6 @@ canvasContext.strokeRect(100, 10, 150, 100);
 
 canvasContext.draw();
 ```
-
+:::
 
 

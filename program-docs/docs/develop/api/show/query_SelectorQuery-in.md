@@ -38,7 +38,7 @@ Component component
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 // 自定义组件逻辑 (custom.js)
 Component({
@@ -65,4 +65,4 @@ Component({
     }
 });
 ```
-
+:::

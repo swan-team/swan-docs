@@ -38,7 +38,7 @@ sidebar: arcameracontext_ARCameraContext
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 Page({
     data: {
@@ -86,5 +86,5 @@ Page({
     }
 });
 ```
-
+:::
 

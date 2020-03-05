@@ -62,7 +62,7 @@ Object object
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 // AI系列的api有宿主使用限制,只可在百度App中使用,建议使用时加一层判断防止代码报未知错误
 let host = swan.getSystemInfoSync().host;
@@ -93,7 +93,7 @@ else {
     });
 }
 ```
-
+:::
 
 ## Bug & Tip
 

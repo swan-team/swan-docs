@@ -37,7 +37,7 @@ Number fontSize：字体的字号
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -52,3 +52,4 @@ canvasContext.fillText('50', 90, 90);
 
 canvasContext.draw();
 ```
+:::

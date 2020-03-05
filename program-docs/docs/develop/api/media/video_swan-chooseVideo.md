@@ -73,7 +73,7 @@ Object object
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 Page({
     chooseVideo() {
@@ -94,7 +94,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ## 错误码
 

@@ -40,7 +40,7 @@ sidebar: remove_swan-clearStorageSync
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 let res = swan.clearStorageSync();
 // 基础库 3.140.1 之前，无法判断接口是否调用失败
@@ -53,6 +53,7 @@ else {
 }
 
 ```
+:::
 ## 错误码
 
 ### Android

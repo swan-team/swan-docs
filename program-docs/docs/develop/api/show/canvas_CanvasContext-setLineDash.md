@@ -32,6 +32,7 @@ sidebar: canvas_CanvasContext-setLineDash
 
 <a href="swanide://fragment/a0f3e795134820d54777817b4240fdbb1573721214224" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setLineDash([10, 20], 5);
@@ -41,11 +42,12 @@ canvasContext.lineTo(400, 100);
 canvasContext.stroke();
 canvasContext.draw();
 ```
-
+:::
 ###  代码示例2 
 
 <a href="swanide://fragment/b763ef43bb64975b9d558ff82517e44a1575365006983" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     data : { },
@@ -65,5 +67,5 @@ Page({
     }
 });
 ```
-
+:::
 

@@ -57,9 +57,9 @@ Object object
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <canvas canvas-id="canvas1"></canvas>
     <canvas canvas-id="canvas2"></canvas>
@@ -67,7 +67,7 @@ Object object
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -141,14 +141,13 @@ Page({
     }
 });
 ```
-* 在 css 文件中
-
+ 
 ```css
 .wrap {
     padding: 50rpx 30rpx;
 }
 ```
-
+:::
 
 ##  错误码
 ### Android

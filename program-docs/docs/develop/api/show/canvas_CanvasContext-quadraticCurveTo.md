@@ -34,6 +34,7 @@ sidebar:  canvas_CanvasContext-quadraticCurveTo
 
 <a href="swanide://fragment/d2d5ff700bbf4feba2a4bf925e0c8d151573725024694" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 // Draw quadratic curve
@@ -45,11 +46,12 @@ canvasContext.stroke();
 
 canvasContext.draw();
 ```
-
+:::
 ###  代码示例2 
 
 <a href="swanide://fragment/6e73fcc749e65bb89a9d52f036dc2b381575452070798" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -92,6 +94,6 @@ Page({
     }
 });
 ```
-
+:::
 
 

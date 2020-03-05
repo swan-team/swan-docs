@@ -64,16 +64,15 @@ Object object
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <canvas canvas-id="canvas"></canvas>
     <button type="primary" bindtap="canvasGetImageData">canvasGetImageData</button>
 </view>
 ```
-
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -129,7 +128,7 @@ Page({
     }
 });
 ```
-
+:::
 ## 错误码
 ###  Android
 

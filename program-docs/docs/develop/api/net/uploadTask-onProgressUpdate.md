@@ -51,7 +51,7 @@ Function callback
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 
 Page({
@@ -97,3 +97,4 @@ Page({
 });
 
 ```
+:::
