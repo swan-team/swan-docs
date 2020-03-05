@@ -16,20 +16,20 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 
 ##  属性说明
 
-|属性名 |类型  |默认值  | 必填 |说明|
-|:---- | :---- |: ---- |:---- |:---- |
-|id|String| | 是 |live-player 属性的唯一标志符|
-|src|String|  | 是 |音视频地址。目前仅支持 m3u8 格式|
-|autoplay|Boolean|false| 否 |自动播放|
-|muted|Boolean|false| 否 |是否静音|
-|orientation|	String|	vertical| 否 |画面方向，有效值有 vertical，horizontal，目前仅支持安卓端使用该属性。|
-|object-fit|String|contain| 否 |填充模式，有效值:contain、fillCrop|
-|background-mute|Boolean|false| 否 |进入后台时是否静音（已废弃，默认退台静音）|
-|min-cache|Number|1| 否 |最小缓冲区，单位s|
-|max-cache|Number|3| 否 |最大缓冲区，单位s|
-|bindstatechange|EventHandle|  | 否 |播放状态变化事件，参考下方状态码表格，detail = {code}|
+|属性名 |类型  |默认值  | 必填 |说明|Web 态说明|
+|:---- | :---- |: ---- |:---- |:---- |:---- |
+|id|String| | 是 |live-player 属性的唯一标志符|-|
+|src|String|  | 是 |音视频地址。目前仅支持 m3u8 格式|-|
+|autoplay|Boolean|false| 否 |自动播放|存在浏览器兼容问题，详见下方 Web 态 Tip1|
+|muted|Boolean|false| 否 |是否静音|-|-|
+|orientation|	String|	vertical| 否 |画面方向，有效值有 vertical，horizontal，目前仅支持安卓端使用该属性。|此属性对 Web 态不生效|
+|object-fit|String|contain| 否 |填充模式，有效值:contain、fillCrop|-|-|
+|background-mute|Boolean|false| 否 |进入后台时是否静音（已废弃，默认退台静音）|默认退台静音，设置为 false 后不生效 |
+|min-cache|Number|1| 否 |最小缓冲区，单位s|此属性对 Web 态不生效|
+|max-cache|Number|3| 否 |最大缓冲区，单位s|此属性对 Web 态不生效|
+|bindstatechange|EventHandle|  | 否 |播放状态变化事件，参考下方状态码表格，detail = {code}|-|
 |bindnetstatus|EventHandle|  | 否 |网络状态变化通知，参考下方网络状态数据表格，detail = {info}|
-|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullscreen}。|
+|bindfullscreenchange|	EventHandle	| |	否 |全屏变化事件，detail = {direction, fullscreen}。|-|
 
 ###  orientation 有效值
 
@@ -47,20 +47,20 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 
 ###  主流格式支持
 
-|格式|	Android|	IOS|
-|:--|:--|:--|
-|mp4|	是	|是|
-|mov|	是	|是|
-|m4v|	是	|是|
-|3gp|	是	|是|
-|avi|	是	|是|
-|m3u8|	是	|是|
-|webm|	是|	否|
-|flv	|	是	|是|
-|mkv|	是	|是|
-|rmvb|是	|是|
-|rm|	是	|是|
-|ogg|	是	|是|
+|格式|	Android|	IOS|	Web 态|
+|:--|:--|:--|:--|
+|mp4|	是	|是|是|
+|mov|	是	|是|是|
+|m4v|	是	|是|是|
+|3gp|	是	|是|否|
+|avi|	是	|是|否|
+|m3u8|	是	|是|是|
+|webm|	是|	否|否|
+|flv	|	是	|是|否|
+|mkv|	是	|是|否|
+|rmvb|是	|是|否|
+|rm|	是	|是|否|
+|ogg|	是	|是|是|
 
 ###  主流编码格式支持
 
@@ -75,31 +75,31 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 
 ###  状态码
 
-|代码  |说明   |
+|代码  |说明   |Web 态说明|
 |:--|:--|
-|2001|已经连接服务器|
-|2002|已经连接服务器,开始拉流|
-|2003|网络接收到首个视频数据包(IDR)|
-|2004|视频播放开始|
-|2005|视频播放进度|
-|2006|视频播放结束|
-|2007|视频播放Loading|
-|2008|解码器启动|
-|2009|视频分辨率改变|
-|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|
-|-2302|获取加速拉流地址失败|
-|2101|当前视频帧解码失败|
-|2102|当前音频帧解码失败|
-|2103|网络断连, 已启动自动重连|
-|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|
-|2105|当前视频播放出现卡顿|
-|2106|硬解启动失败，采用软解|
-|2107|当前视频帧不连续，可能丢帧|
-|2108|当前流硬解第一个I帧失败，SDK自动切软解|
-|3001|RTMP -DNS解析失败|
-|3002|RTMP服务器连接失败|
-|3003|RTMP服务器握手失败|
-|3005|RTMP 读/写失败|
+|2001|已经连接服务器|暂不支持|
+|2002|已经连接服务器,开始拉流|-|
+|2003|网络接收到首个视频数据包(IDR)|-|
+|2004|视频播放开始|-|
+|2005|视频播放进度|-|
+|2006|视频播放结束|-|
+|2007|视频播放Loading|-|
+|2008|解码器启动|暂不支持|
+|2009|视频分辨率改变|暂不支持|
+|-2301|网络断连，且经多次重连抢救无效，更多重试请自行重启播放|-|
+|-2302|获取加速拉流地址失败|暂不支持|
+|2101|当前视频帧解码失败|-|
+|2102|当前音频帧解码失败|暂不支持|
+|2103|网络断连, 已启动自动重连|暂不支持|
+|2104|网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀|-|
+|2105|当前视频播放出现卡顿|-|
+|2106|硬解启动失败，采用软解|暂不支持|
+|2107|当前视频帧不连续，可能丢帧|暂不支持|
+|2108|当前流硬解第一个I帧失败，SDK自动切软解|暂不支持|
+|3001|RTMP -DNS解析失败|暂不支持|
+|3002|RTMP服务器连接失败|暂不支持|
+|3003|RTMP服务器握手失败|暂不支持|
+|3005|RTMP 读/写失败|暂不支持|
 
 
 ###  网络状态数据
@@ -127,13 +127,13 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 </div>
 
 
- 
+
 ###  代码示例
 
 
 <a href="swanide://fragment/6edf51acedfd01e651364c04f64329651565503516666" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 
+
 :::codeTab
 ```swan
 <view class="live-play">
@@ -159,7 +159,7 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
     </div>
 </view>
 ```
- 
+
 ```js
 Page({
     data: {
@@ -219,3 +219,27 @@ Page({
 ##  Bug & Tip
 * Tip：live-player 默认宽度 300px、高度 225px；
 * Tip：从基础库版本1.12.0开始支持事件捕获、冒泡。
+
+## Web 态 Tip
+
+### Tip1：在部分浏览器下，视频资源无法自动播放的解决方案
+**案例分析：**
+出于用户体验、节省流量等原因，iOS 的 Safari、版本号 66 及以上的 Chrome、以及大部分国产移动浏览器禁止视频在非静音状态下自动播放。因此，Web 态**针对 live-player 组件中 autoplay 属性设置为 true 后**做了如下处理：
+* 对于 QQ、Android 微信、 QQ 浏览器等基于 X5 内核的平台，Web 态下设置的 autoplay = true 不生效，页面进入时，播放器上显示播放按钮供用户主动点击触发播放。
+* 对于其他非 X5 内核的平台，为保证页面进入时可自动播放，会默认关闭声音播放，并显示“取消静音”按钮，供用户主动开启声音。
+
+由于浏览器种类众多，如出现自动播放相关新问题，请将案例反馈给我们，我们将统一记录并反馈进展。
+
+### Tip2：视频类资源地址必须有文件扩展名（即文件后缀）
+由于浏览器无法解析资源格式。因此对于视频类资源，应在地址中通过后缀名显式声明资源格式，否则可能会导致视频无法正常播放：
+* Web 态 live-player 组件目前支持 mp4、mov、m4v、ogg、m3u8 等格式，参见上述“主流格式支持”小节。
+* 当 live-player 组件的 **src 属性值没有文件扩展名，视频资源会被按照 mp4 格式来进行解码播放**。
+
+### Tip3：在部分浏览器下，实时视频播放器会遮挡其他页面元素 / 小窗播放问题的解决方案
+**案例分析：**
+微信、百度 APP、UC 等浏览器实现了自身的播放器控件，劫持了默认内核提供的播放器样式和逻辑，从而使得基于 H5 video 实现的 Web 态 live-player 组件出现了以下问题：
+* 在 Android 系统的微信平台、百度 APP 和 UC 等国产移动浏览器下，live-player 组件的播放器会覆盖到页面其他内容之上，且无法通过 z-index 控制层级，从而导致一些交互失效（比如无法上下滑动触发切换视频）。
+* 在 OPPO 手机下的百度 APP，会出现小窗播放。
+
+**解决方案：**
+Web 态针对不同浏览器做了尽可能的修复，以解决此问题。已修复的包括 QQ、Android 微信、QQ 浏览器等基于 X5 内核的平台，百度 APP。但由于浏览器种类众多，有可能存在我们暂未覆盖到的情况。如仍遇到上述问题，请您将案例反馈给我们，我们将统一记录并反馈进展。

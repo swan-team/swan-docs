@@ -51,6 +51,7 @@ sidebar: apilist
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-facePersonIdmatch/">swan.ai.facePersonIdmatch</a>|身份证和名字对比，验证用户输入的身份证号码和姓名是否匹配，用于判断用户信息是否真实。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceLivenessSessioncode/">swan.ai.faceLivenessSessioncode</a>|H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。|
 |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/word/">swan.ai.nlpLexerCustom</a>|词法分析，提供分词、词性标注、专名识别三大功能。|
+
 <!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceDetect/#swan-ai-faceVerify/">swan.ai.faceVerify</a>|在线活体检测，基于单张图片，判断图片中的人脸是否为二次翻拍。| -->
 <!-- |<a href="https://smartprogram.baidu.com/docs/develop/api/ai/face_swan-ai-faceDetect/#swan-ai-faceLivenessVerify/">swan.ai.faceLivenessVerify</a>|H5活体检测-视频活体检测，录制并上传的视频，会在云端进行随机抽帧分析，并得出最终的活体检测分数。| -->
 

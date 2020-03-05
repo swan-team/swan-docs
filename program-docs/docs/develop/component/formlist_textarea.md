@@ -64,13 +64,13 @@ webUrl: https://qft12m.smartapps.cn/component/textarea/textarea
 
 
 
- 
+
 
 ###  代码示例 1：输入区高度自适应
 
  <a href="swanide://fragment/f8d28d8c07536e7651ac3993b84afb741575401349267" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -80,7 +80,7 @@ webUrl: https://qft12m.smartapps.cn/component/textarea/textarea
 </view>
 ```
 
- 
+
 
 ```js
 Page({
@@ -111,7 +111,7 @@ Page({
 
  <a href="swanide://fragment/4d35f3e24c2abccf95c01b962d9724051575985791570" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
- 
+
 
 :::codeTab
 ```swan
@@ -143,7 +143,7 @@ Page({
 </view>
 ```
 
- 
+
 
 ```js
 Page({
@@ -180,4 +180,5 @@ Page({
 * Tip：textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
 * Tip：不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
 * Tip：请使用cover-view组件在 textarea 组件上开发遮罩层。
+
 

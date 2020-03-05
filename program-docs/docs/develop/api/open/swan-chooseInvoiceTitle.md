@@ -35,6 +35,7 @@ Object object
 |telephone|   String|  手机号码|
 |bankName|    String|  银行名称|
 |bankAccount| String|  银行账号|
+
 <!-- |errMsg|  String|  接口调用结果| -->
 ## 示例
 

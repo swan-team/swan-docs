@@ -25,6 +25,7 @@ selector 类似于 CSS 的选择器，但仅支持下列语法。
 3、子元素选择器：.the-parent > .the-child
 4、后代选择器：.the-ancestor .the-descendant
 5、多选择器的并集：#a-node, .some-other-nodes
+
 <!-- 跨自定义组件的后代选择器：.the-ancestor >>> .the-descendant -->
 
 ## 示例
