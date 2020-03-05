@@ -9,10 +9,9 @@ sidebar: ocr_swan-ai-ocrVehicleLicense
 
 
 **解释** ：对机动车行驶证正本所有关键字段进行识别。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
-
-## 方法参数
+ 
+## 方法参数 
 
 Object object
 
@@ -35,7 +34,7 @@ Object object
 | words_result_num  |  Number  |识别结果数，表示words_result的元素个数。 |
 |words_result |  Object  | 识别结果 |
 
-###  words_result 返回值说明
+###  words_result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -50,7 +49,7 @@ Object object
 | 车辆识别代号 | Object | 车辆识别代号|
 | 车辆类型 | Object | 车辆类型|
 
-###  品牌型号、发证日期、使用性质、发动机号码、号牌号码、所有人、住址、注册日期、车辆识别代号、车辆类型 返回值说明
+###  品牌型号、发证日期、使用性质、发动机号码、号牌号码、所有人、住址、注册日期、车辆识别代号、车辆类型 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -59,7 +58,7 @@ Object object
 
 ## 示例
 
-
+ 
 <a href="swanide://fragment/0a5cfee4dcbf3a6259d593f65af375791581328164814" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
@@ -67,7 +66,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/ocrVehicleLicense.gif">
@@ -77,10 +76,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
-</div>
+    </div>     
+</div> 
 
-### 代码示例
+### 代码示例 
 
 
 ```js
@@ -116,7 +115,7 @@ Page({
 });
 ```
 
-### 返回值示例
+### 返回值示例  
 ```json
 {
     "log_id": $log_id,

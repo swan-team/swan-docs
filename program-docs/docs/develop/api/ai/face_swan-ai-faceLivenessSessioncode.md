@@ -5,16 +5,15 @@ nav: api
 sidebar: face_swan-ai-faceLivenessSessioncode
 ---
 
-
+ 
 
 >基础库 3.20.11 开始支持，低版本需做兼容处理。
 
 **解释** ：H5活体检测-语音校验码，为防止用户提交非当前操作的视频，在录制视频时，随机分配一个数字，用户需要读出这个数字，在后续识别时校验，以判断视频是否为现场录制。使用本功能需要小程序开发者后台登录超级管理员账号，点击[云平台付费链接](https://ai.baidu.com/ai-doc/FACE/Bk37c1m1n)开通云账号付费功能。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
+ 
 
-
-## 方法参数
+## 方法参数 
 
 Object object
 
@@ -22,20 +21,20 @@ Object object
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
-|appid | string| 是 | |百度云创建应用时的唯一标识 ID |
-|success | Function | 否 | | 接口调用成功后的回调函数 |
-|fail | Function | 否 | | 接口调用失败的回调函数 |
+|appid | string| 是 | |百度云创建应用时的唯一标识 ID | 
+|success | Function | 否 | | 接口调用成功后的回调函数 | 
+|fail | Function | 否 | | 接口调用失败的回调函数 | 
 |complete|	Function|	否	| |接口调用结束的回调函数（调用成功、失败都会执行）|
 
-### success 返回参数说明
+### success 返回参数说明  
 
-|参数名 | 参数类型 |说明  |
+|参数名 | 参数类型 |说明  | 
 |---|---|---|
 |log_id| Number|	唯一的log id，用于问题定位。|
 |error_no| Number|	错误码，错误码为0时，活体检测成功。|
 |error_msg| String|	错误描述信息，帮助理解和解决发生的错误。|
-|session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。|
-|code | string |语音验证码，数字形式，3~6 位数字。|
+|session_id | string |语音校验码会话 ID，有效期 5 分钟，请提示用户在五分钟内完成全部操作。| 
+|code | string |语音验证码，数字形式，3~6 位数字。| 
 
 
 ## 示例
@@ -47,7 +46,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -58,10 +57,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
-### 代码示例
+### 代码示例 
 
 ```js
 Page({
@@ -93,7 +92,7 @@ Page({
 });
 ```
 
-### 返回示例
+### 返回示例 
 ```js
 {
 	"err_no": 0,

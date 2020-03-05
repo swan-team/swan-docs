@@ -1,15 +1,14 @@
 ---
-title: VoiceRecognizer.onFinish
+title: VoiceRecognizer.onFinish 
 header: develop
 nav: api
 sidebar: voice_VoiceRecognizer-onFinish
 ---
 
-**解释**： 识别完成
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。VoiceRecognizer 对象上的该事件不会被触发。
+**解释**： 识别完成 
 
-
-## 方法参数
+ 
+## 方法参数 
 
 Function callback
 
@@ -29,7 +28,7 @@ Function callback
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -40,10 +39,10 @@ Function callback
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
-### 代码示例
+### 代码示例 
 
 
 * 在 swan 文件中

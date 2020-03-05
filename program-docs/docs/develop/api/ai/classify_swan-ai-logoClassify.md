@@ -6,14 +6,13 @@ sidebar:  classify_swan-ai-logoClassify
 # webUrl: https://qft12m.smartapps.cn/swan-api/logoClassify/logoClassify
 ---
 
-
+  
 
 **解释**：用于检测和识别图片中的品牌 LOGO 信息。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片中 LOGO 的名称、位置和置信度。 当效果欠佳时，可以建立子库（在控制台创建应用并申请建库）并通过调用 logo 入口接口完成自定义 logo 入库，提高识别效果。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
 
 
-## 方法参数
+## 方法参数 
 
 Object object
 
@@ -36,7 +35,7 @@ Object object
 |result|	Array|	返回结果数组，每一项为一个识别出的logo。|
 
 
-### result 返回值说明
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -45,7 +44,7 @@ Object object
 |probability|     Number| 分类结果置信度（0--1.0）|
 |location|	Object|	位置信息（左起像素位置、上起像素位置、像素宽、像素高）|
 
-### location 返回值说明
+### location 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -63,7 +62,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/logoClassify.jpeg">
@@ -73,12 +72,12 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
+ 
 
-
-### 代码示例
+### 代码示例 
 
 
 ```js

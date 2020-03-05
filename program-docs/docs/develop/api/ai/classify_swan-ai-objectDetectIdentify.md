@@ -5,14 +5,13 @@ nav: api
 sidebar:  classify_swan-ai-objectDetectIdentify
 ---
 
-
+ 
 
 **解释**：用户向服务请求检测图像中的主体位置。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
+ 
 
-
-## 方法参数
+## 方法参数 
 
 Object object
 
@@ -33,7 +32,7 @@ Object object
 |log_id|Number|	唯一的log id，用于问题定位。|
 |result|	Object|	裁剪结果|
 
-### result 返回值说明
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -45,7 +44,7 @@ Object object
 
 ## 示例
 
-
+ 
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/objectDetectIdentify.png" class="demo-qrcode-image" />
@@ -53,7 +52,7 @@ Object object
 </div>
 
 
-### 图片示例
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -64,7 +63,7 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
 ### 代码示例1 - 裁剪类需求 ：

@@ -6,12 +6,11 @@ sidebar: ocr_swan-ai-ocrBankCard
 # webUrl: https://qft12m.smartapps.cn/swan-api/ocrBankCard/ocrBankCard
 ---
 
-
+ 
 
 **解释**：识别银行卡并返回卡号、发卡行和卡片类型。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
-
+ 
 ## 方法参数
 
 Object object
@@ -32,7 +31,7 @@ Object object
 |log_id | Number |请求标识码，随机数，唯一。|
 |result | Object |返回结果|
 
-### result 返回值说明
+### result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |:---|:---|:---|:---|
@@ -49,7 +48,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/ocrBankCard.gif">
@@ -59,11 +58,11 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
+ 
 
-
-### 代码示例
+### 代码示例 
 
 ```js
 Page({

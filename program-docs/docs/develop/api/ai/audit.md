@@ -5,14 +5,13 @@ nav: api
 sidebar:  audit
 # webUrl: https://qft12m.smartapps.cn/swan-api/imageAudit/imageAudit
 ---
-
+ 
 
 **解释** ：自定义图像审核。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
+ 
 
-
-## 方法参数
+## 方法参数 
 Object object
 
 ### `object`参数说明 ：
@@ -34,7 +33,7 @@ Object object
 |conclusionType|	Number|	审核结果标识，成功才返回，失败不返回。|
 |data|	Array|		审核项详细信息，响应成功并且conclusion为疑似或不合规时才返回，响应失败或conclusion为合规是不返回。|
 
-### data 返回值说明
+### data 返回值说明 
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -44,7 +43,7 @@ Object object
 |words|	String|		审核不通过敏感词，仅在敏感词审核不通过时存在。|
 |stars|	Array|	政治人物列表数组，仅在政治人物审核不通过时存在。|
 
-### stars 返回值说明
+### stars 返回值说明 
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -70,7 +69,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例
+### 图片示例 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/imageAudit.gif">
@@ -80,10 +79,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
-### 代码示例
+### 代码示例 
 ```js
 Page({
     swan.chooseImage({

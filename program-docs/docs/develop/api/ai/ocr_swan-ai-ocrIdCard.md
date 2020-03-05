@@ -9,13 +9,13 @@ sidebar: ocr_swan-ai-ocrIdCard
 
 
 **解释**：用户向服务请求识别身份证，身份证识别包括正面和背面。
-**Web 态说明**：受宿主环境限制，Web 态暂不支持 AI 能力相关接口。在 Web 态会做 **打开百度 App 对应小程序页面** 的降级处理。
 
+ 
 ## 方法参数
 
 Object object
 
-### `object`参数说明
+### `object`参数说明  
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -28,7 +28,7 @@ Object object
 |complete  |  Function  |  否   | |    接口调用结束的回调函数（调用成功、失败都会执行）|
 
 
-### success 返回参数说明
+### success 返回参数说明  
 
 |参数 | 类型 | 说明  |
 |:---- |:---- |:---- |
@@ -40,7 +40,7 @@ Object object
 |words_result_num|  Number  |识别结果数，表示words_result的元素个数。|
 |words_result|	Object	|定位和识别结果|
 
-### words_result 返回值说明
+### words_result 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -51,14 +51,14 @@ Object object
 | 性别 | Object | 性别|
 | 民族 | Object | 民族|
 
-### 住址/公民身份号码/出生/姓名/性别/民族 返回值说明
+### 住址/公民身份号码/出生/姓名/性别/民族 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
 |location| Object | 位置信息（坐标0点为左上角）|
 |words| String | 识别结果字符串|
 
- location 返回值说明
+ location 返回值说明 
 
 |参数名 | 参数类型 |说明  |
 |---|---|---|
@@ -69,7 +69,7 @@ Object object
 
 ## 示例
 
-
+ 
 
 <div class='scan-code-container'>
     <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/ocrIdCard.png" class="demo-qrcode-image" />
@@ -77,7 +77,7 @@ Object object
 </div>
 
 
-### 图片示例
+### 图片示例 
 
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -88,7 +88,7 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>
+    </div>     
 </div>
 
 ### 代码示例：
