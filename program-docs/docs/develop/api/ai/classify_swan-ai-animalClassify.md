@@ -44,7 +44,7 @@ Object object
 <a href="swanide://fragment/bd1c08bc549d1c07b1597bfe60b464ca1581335485586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 <div class='scan-code-container'>
-    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/advancedGeneralIdentify.png" class="demo-qrcode-image" />
+    <img src="https://b.bdstatic.com/miniapp/assets/images/doc_demo/api_animalClassify.png" class="demo-qrcode-image" />
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
