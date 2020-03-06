@@ -6,18 +6,19 @@ sidebar:  onmemory
 # webUrl: https://qft12m.smartapps.cn/swan-api/onMemoryWarning/onMemoryWarning
 ---
 
- 
+
 
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
+**Web 态说明**： Web 态环境不支持监听内存情形，该事件不会触发。
 
- 
-## 方法参数 
+
+## 方法参数
 
 Function callback
 
-### `callback`参数说明  
+### `callback`参数说明
 
 |属性名 |类型  |必填 | 默认值 |说明|
 |:---- |:---- |:---- |:----|:----|
@@ -51,10 +52,10 @@ TRIM_MEMORY_RUNNING_CRITICAL = 15
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-###  代码示例 
+###  代码示例
 
 * 在 swan 文件中
 
@@ -92,7 +93,7 @@ Page({
 });
 ```
 
- 
+
 ##  错误码
 ###  Android
 
