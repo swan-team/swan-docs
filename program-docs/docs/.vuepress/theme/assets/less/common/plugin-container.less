@@ -1,0 +1,169 @@
+@import './color.less';
+
+/* bug/tip 组件 start */
+
+.errorTip,
+.infoTip {
+    display: flex;
+    margin: 15px 0;
+
+    ul,
+    li,
+    p {
+        margin: 0;
+        // padding: 0;
+    }
+
+    li, 
+    p {
+        padding: 0;
+        line-height: 24px;
+    }
+
+    .custom-block-title {
+        margin-right: 12px;
+        margin-top: 2px;
+        width: 36px;
+        line-height: 21px;
+        padding: 0 8px;
+        font-size: 12px;
+        display: inline-flex;
+        border-radius: 10px;
+        height: 21px;
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        box-sizing: border-box;
+    }
+}
+
+.errorTip {
+    .custom-block-title {
+        border: .8px solid @tip-error;
+        color: @tip-error;
+    }
+}
+
+.infoTip {
+    .custom-block-title {
+        border: .8px solid @tip-info;
+        color: @tip-info;
+    }
+}
+
+/* bug/tip 组件 end */
+
+/* 在开发者工具中打开 start */
+
+.open-ide {
+
+    display: inline-block;
+    font-weight: normal;
+
+    &-loading {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        margin-left: -120px;
+        width: 240px;
+        height: 100px;
+        background-color: @bg-white;
+        border: 1px solid @border-gray1;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px 0 rgba(6,0,1,.1);
+        z-index: 9999;
+
+        &-title,
+        &-ask {
+            text-align: center;
+        }
+
+        &-ask {
+            color: @font-black2;
+
+            a {
+                text-decoration: underline;
+                color: @font-black2;
+            }
+        }
+    }
+
+    &-button {
+        &-link {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 14px;
+            background-color: @bg-white1;
+            display: inline-block;
+            text-align: center;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: normal;
+            vertical-align: middle;
+            color: @font-black2;
+
+            &:before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                display: inline-block;
+                margin-right: 6px;
+                background-image: url(../../images/tool.png);
+                background-size: 100% 100%;
+                vertical-align: middle;
+            }
+
+            &:hover {
+                color: @href-color;
+                &:before {
+                    background-image: url(../../images/tool-hover.png);
+                }
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .open-ide {
+        margin-left: 24px;
+    }
+}
+
+/* 在开发者工具中打开 end */
+
+/* 设计指南start */
+.design {
+    width: 100%;
+    max-height: 345px;
+    border: 1px solid @border-gray2;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 0 20px;
+    .custom-block-title {
+        &:before {
+            content: '';
+            height: 20px;
+            width: 3px;
+            background-color: @bg-black1;
+            display: inline-block;
+            margin-right: 14px;
+            vertical-align: middle;
+        }
+        display: inline-block;
+        color: @font-default;
+        font-weight: bold;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 15px 0 15px -20px;
+    }
+}
+/* 设计指南end */

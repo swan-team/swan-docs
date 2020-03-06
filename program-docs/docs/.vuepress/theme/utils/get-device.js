@@ -3,25 +3,16 @@
  * @author wulinfei
  */
 
-const userAgentInfo = navigator.userAgent;
-
 export const isPc = () => {
     const reg = /Android|webOS|iPhone|SymbianOS|Windows Phone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    return !(reg.test(userAgentInfo));
+    return !(reg.test(navigator.userAgent));
 };
 
 export const isIOS = () => {
     const reg = /webOS|iPhone|iPad|iPod/i;
-    return reg.test(userAgentInfo);
+    return reg.test(navigator.userAgent);
 };
 
 export const isBox = () => {
-    return / baiduboxapp\//i.test(userAgentInfo);
+    return / baiduboxapp\//i.test(navigator.userAgent);
 };
-
-export const userDevice = {
-    isPc: isPc(),
-    isIOS: isIOS(),
-    isBox: isBox()
-};
-
