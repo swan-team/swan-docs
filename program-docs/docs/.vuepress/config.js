@@ -7,6 +7,7 @@ const router = require('./plugins/router.js');
 const navLoader = require('./utils/nav-loader');
 const preWrapper = require('./plugins/code-pre-wapper');
 const search = require('./plugins/gen-search');
+const container = require('./plugins/container');
 const path = require('path');
 
 module.exports = {
@@ -39,19 +40,8 @@ module.exports = {
     plugins: [
         router,
         search,
-        ['vuepress-plugin-smooth-scroll', false],
-        ['vuepress-plugin-container', {
-            type: 'codeTab',
-            defaultTitle: '',
-            before: info => `<CodeTab>${info}`,
-            after: '</CodeTab>'
-        }],
-        ['vuepress-plugin-container', {
-            type: 'qrcode',
-            defaultTitle: '',
-            before: info => `<QRCode ${info}>`,
-            after: '</QRCode>'
-        }]
+        container,
+        ['vuepress-plugin-smooth-scroll', false]
     ],
     patterns: [],
     extendMarkdown: md => {
