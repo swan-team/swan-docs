@@ -17,7 +17,7 @@ sidebar: formlist_form
 |:-----|:---- |:---- |:----|:----|:----|
 |report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |report-type| String  | 'default' | 否 |模板消息的类型，report-submit 为 true 时填写有效。<br>取值：default 或 subscribe。|3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|template-id| String/Array.<string\> |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="https://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取。<br>当参数类型为 Array 时，可传递1~3个模板库标题ID，超出3个时只能展示前3个模板消息。|3.105.3(String 类型)<br>3.170.1(Array 类型)<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|template-id| String/Array.<string\> |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="https://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取。<br>当参数类型为 Array 时，可传递1~3个模板库标题ID。|3.105.3(String 类型)<br>3.170.1(Array 类型)<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |subscribe-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息时所使用的唯一标识符，内容由开发者自定义，用来标识订阅场景<br>注意：同一用户在同一 subscribe-id 下的多次授权不累积下发权限，只能下发一条。若要订阅多条，需要不同 subscribe-id |3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}`, 当report-type 为 subscribe 时，status 和 message 中返回用户授权具体信息。| - |
 | bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|- |
@@ -33,7 +33,7 @@ sidebar: formlist_form
 
 ### report-type 为 subscribe 时，event.detail.formId 说明
 
-当 template-id 为 String 时（基础库 3.105.3 开始支持），event.detail 的 formId 为 String，即此 template-id 所对应的的 formId。举例如下：
+1. 当 template-id 为 String 时（基础库 3.105.3 开始支持），event.detail 的 formId 为 String，即此 template-id 所对应的的 formId。举例如下：
 * 在 swan 文件中
 ```swan
 <form report-submit="true" report-type="subscribe" template-id="BD0001" subscribe-id="1234" bindsubmit="formSubmit">
@@ -51,7 +51,7 @@ Page({
     }
 });
 ```
-当 template-id 为 Array 时（基础库 3.170.1 开始支持），event.detail 的 formId 为 Object，其中对象的 key 为 template-id，value 为其对应的 formId。举例如下：
+2. 当 template-id 为 Array 时（基础库 3.170.1 开始支持），event.detail 的 formId 为 Object，其中对象的 key 为 template-id，value 为其对应的 formId。举例如下：
 * 在 swan 文件中
 ```swan
 <form report-submit="true" report-type="subscribe" template-id="{{templateId}}" subscribe-id="1235" bindsubmit="formSubmit">
@@ -72,6 +72,51 @@ Page({
     }
 });
 ```
+
+如果 Array 中的 template-id 超过三个，返回的 formId 为空字符串，举例如下：
+* 在 swan 文件中
+```swan
+<form report-submit="true" report-type="subscribe" template-id="{{templateId}}" subscribe-id="1236" bindsubmit="formSubmit">
+        <button formType="submit" type="primary">template-id 超过三个</button>
+    </view>
+</form>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        templateId: ['BD0001', 'BD0002', 'BD0003', 'BD0004']
+    },
+    formSubmit(e) {
+        // 此时 formId 为 ''
+        console.log(e.detail.formId);
+    }
+});
+```
+
+如果 Array 中有重复的 template-id，重复的 template-id 对应的 formId 只返回一次，举例如下：
+* 在 swan 文件中
+```swan
+<form report-submit="true" report-type="subscribe" template-id="{{templateId}}" subscribe-id="1237" bindsubmit="formSubmit">
+        <button formType="submit" type="primary">有重复的 template-id</button>
+    </view>
+</form>
+```
+* 在 js 文件中
+
+```javascript
+Page({
+    data: {
+        templateId: ['BD0001', 'BD0001', 'BD0002']
+    },
+    formSubmit(e) {
+        // 此时 formId 为 {'BD0001': 'BD0001-formId', 'BD0002': 'BD0002-formId'}（非真实数据）
+        console.log(e.detail.formId);
+    }
+});
+```
+
 注意：在提交 form 表单时，将会弹出模板消息授权弹窗，用户授权后才能在 event.detail 中获取被授权模板消息的 formId。
 
 ###  report-type 为 subscribe 时，status 和 message 具体值 
