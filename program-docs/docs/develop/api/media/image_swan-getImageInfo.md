@@ -35,7 +35,7 @@ Object object
 
 ## 示例
 
-<a href="swanide://fragment/a71d4303d014dc1a93d480a830e11b131577675842297" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/adccc60620108bf8f4bc3e139524ae501583677404967" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
