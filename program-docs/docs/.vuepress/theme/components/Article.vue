@@ -2,10 +2,8 @@
     <div>
         <article class="article">
             <div class="article-title" v-if="title">
-                <h1>
-                    {{title}}
-                    <span class="article-title-bg"></span>
-                </h1>
+                <h1>{{title}}</h1>
+                <span class="article-title-bg"></span>
                 <div class="article-title-menu">
                     <!-- 编辑文档&hover冒泡 -->
                     <div class="article-title-menu-edit">
