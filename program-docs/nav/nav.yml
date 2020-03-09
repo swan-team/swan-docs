@@ -21,7 +21,7 @@
                 text: 登录注册
                 name: enter_application
               -
-                link: /introduction/register_choosebodystyle
+
                 text: 主体认证
                 name: register_choosebodystyle
                 sidebar:
