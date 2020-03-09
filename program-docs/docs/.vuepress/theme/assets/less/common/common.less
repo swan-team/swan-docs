@@ -31,6 +31,9 @@ li {
 a {
     text-decoration: none;
     color: @href-color;
+    &:hover {
+        color: @href-active-color;
+    }
 }
 
 .ispc {
@@ -59,6 +62,7 @@ article {
         margin-inline-end: 0;
         padding-inline-start: 20px;
         padding-inline-end: 20px;
+        color: @font-black1;
 
         li {
             display: list-item;
@@ -88,21 +92,29 @@ article {
 
     h1 {
         margin: 0;
-        margin: 58px 0;
+        margin: 48px 0 36px 0;
         font-size: 30px;
         line-height: 30px;
+        font-weight: 600px;
     }
 
     h2 {
-        font-size: 25px;
-        margin: 80px 0 48px 0;
+        font-size: 24px;
+        margin: 36px 0 24px 0;
+        font-weight: 600;
     }
 
     h3 {
         font-size: 18px;
         letter-spacing: 0;
-        margin: 48px 0 32px 0;
-        // margin: 0;
+        margin: 24px 0 16px 0;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 14px;
+        margin: 16px 0;
     }
 
     h1,
@@ -111,6 +123,7 @@ article {
     h4,
     h5,
     h6 {
+        color: @font-default;
         >code {
             font-family: @font-body;
             margin: 0;
@@ -123,7 +136,9 @@ article {
         font-size: 14px;
         color: @font-default;
         line-height: 24px;
-        margin: 15px 0;
+        margin: 10px 0;
+        font-weight: 400;
+        color: @font-black1;
     }
 
     .scan-code-container {
@@ -210,15 +225,8 @@ article blockquote {
 
     p {
         color: @font-black2;
+        margin: 0;
     }
-}
-
-article blockquote > :first-child {
-    margin-top: 0;
-}
-
-article blockquote > :last-child {
-    margin-bottom: 0;
 }
 
 /* blockquote end */
