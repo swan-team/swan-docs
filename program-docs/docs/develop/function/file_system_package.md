@@ -5,7 +5,7 @@ nav: function
 sidebar: file_system_package
 ---
 
-文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口，为开发者提供了更加完善的能力来支撑小程序中复杂的文件目录结构和文件读写操作。通过 [swan.getFileSystemManager](/develop/api/file/file_system/#FileSystemManager/)来获取全局全局唯一的文件系统管理器，所有文件系统的管理操作通过 [FileSystemManager](/develop/api/file/file_system/#FileSystemManager/) 来调用。
+文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口，为开发者提供了更加完善的能力来支撑小程序中复杂的文件目录结构和文件读写操作。通过 [swan.getFileSystemManager](/develop/api/file/file_system/#FileSystemManager/)来获取全局唯一的文件系统管理器，所有文件系统的管理操作通过 [FileSystemManager](/develop/api/file/file_system/#FileSystemManager/) 来调用。
 
 
 
