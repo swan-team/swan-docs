@@ -51,7 +51,7 @@ GET  https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/dict
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **公共响应参数** 
 
@@ -131,7 +131,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/account/create
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -176,7 +176,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/account/auditstatus
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **公共响应参数** 
 
@@ -224,7 +224,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/developconfig/submit
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -268,7 +268,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/create
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -326,7 +326,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/auditstatus
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
  
 **公共响应参数** 
@@ -370,7 +370,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/update
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -408,13 +408,12 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/updatebindse
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token  | string | true     | access_token，授权小程序的接口|
+| access_token  | string | true     | 授权小程序的接口调用凭据|
 
 **请求参数** 
 
 | 参数名                | 类型   | 是否必须 | 描述                                           |
 | --------------------- | ------ | -------- | ---------------------------------------------- |
-| access_token          | string | true     | access_token，授权小程序的接口调用凭据         |
 | app_name              | String | true     | 服务名称。支付服务的名称                       |
 | service_phone         | String | true     | 服务电话。                                     |
 | bank_account          | String | true     | 银行账户。银行卡开户名                         |
@@ -467,7 +466,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/getbindservic
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
  
 
@@ -584,7 +583,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/orderlist
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据                       |
+| access_token | string | true     | 授权小程序的接口调用凭据                       |
 
 **请求参数**
 
@@ -684,7 +683,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -796,7 +795,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据                   |
+| access_token | string | true     | 授权小程序的接口调用凭据                   |
 
 **请求参数** 
 
@@ -905,7 +904,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financebalanc
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数** 
 
@@ -993,7 +992,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据 |--|
+| access_token | string | true     | 授权小程序的接口调用凭据 |--|
 
 **请求参数** 
 
@@ -1110,7 +1109,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/pay/paymentservice/financeexpens
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-| access_token | string | true     | access_token，授权小程序的接口调用凭据。 |--|
+| access_token | string | true     | 授权小程序的接口调用凭据。 |--|
 
 **请求参数** 
 

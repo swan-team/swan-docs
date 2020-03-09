@@ -14,7 +14,7 @@ sidebar: domain
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 **请求参数** 
 
 | 参数            | 类型   | 是否必填 | 描述                                                         | 示例值 |
@@ -107,7 +107,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -183,7 +183,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/download/domaincer
 
 |参数名 | 类型 | 是否必须 | 描述|
 |----- |-----| ------| -----|
-|access_token | string | 是 | 第三方平台调用凭证|
+|access_token | string | 是 | 第三方平台的接口调用凭据 |
 
 **正确情况下返回文件的字节流，响应 header 中包含**
 
