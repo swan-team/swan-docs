@@ -1,19 +1,16 @@
 @import '../common/color.less';
 .bottom-nav {
     position: relative;
-    margin-top: 120px;
+    margin-top: 80px;
     font-weight: normal;
     height: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 
     &-left,
     &-right {
         white-space: nowrap;
         position: absolute;
         bottom: 0;
-        :hover {
-            background-color: @bg-gray3;
-        }
 
         a {
             border-radius: 16px;
@@ -32,6 +29,10 @@
             img {
                 width: 9px;
                 height: 9px;
+            }
+            &:hover {
+                background-color: @bg-gray3;
+                color: @font-black2;
             }
         }
     }

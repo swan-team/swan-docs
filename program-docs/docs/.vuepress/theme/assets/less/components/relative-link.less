@@ -5,7 +5,8 @@
     &-title {
         font-size: 24px;
         color: @font-default;
-        margin: 32px 0;
+        margin: 34px 0 24px 0;
+        font-weight: 500;
     }
 
     &-list {
@@ -21,16 +22,19 @@
                     height: 3px;
                     margin-top: -1.5px;
                     border-radius: 50%;
-                    background-color: @relative-color;
+                    background-color: @href-color;
                     margin-right: 10px;
                     vertical-align: middle;
                 }
                 a {
-                    color: @relative-color;
+                    color: @href-color;
                     cursor: pointer;
                 }
                 a:hover {
-                    color: @href-color;
+                    color: @href-active-color;
+                    &:before {
+                        background-color: @href-active-color;
+                    }
                 }
             }
         }
