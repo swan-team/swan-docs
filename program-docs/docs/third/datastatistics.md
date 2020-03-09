@@ -45,7 +45,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisusertrend
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -156,7 +156,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisactivityuser
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -277,7 +277,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisretaineduser
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -466,7 +466,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitattribute
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -641,7 +641,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisregion
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -742,7 +742,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisterminal
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -855,7 +855,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitpage
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -974,7 +974,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysisvisitcharacter
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -1093,7 +1093,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/data/getanalysissource
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -1497,13 +1497,13 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/data/gettpdata
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 
 | 参数名      | 类型   | 是否必须 | 描述                                     |
 | ----------- | ------ | -------- | ---------------------------------------- |
-| scene       | int    | 是       | 小程序来源ID (场景值)                    |
+| scene       | int    | 否       | 小程序来源ID (场景值) 。不传则查询所有场景,场景值参数参考:[百度 App 场景值](https://smartprogram.baidu.com/docs/data/scene/)                   |
 | metrics     | string | 是       | 指标以逗号分隔                           |
 | start\_date | string | 是       | 起始时间戳,格式如 20190321               |
 | end\_date   | string | 是       | 结束时间戳,格式如 20190325               |

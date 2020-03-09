@@ -59,7 +59,7 @@ post 数据示例：
 |CreateTime|	时间戳|
 |MsgType|	固定为ticket|
 |Event|	固定为push|
-### 2、 获取第三方平台access_token
+### 2、 获取第三方平台的接口调用凭据access_token
 
 第三方平台 access_token 是第三方平台的接口调用凭据，也叫做令牌（access_token）。每个令牌是有效期一个月，且令牌的调用次数有限，请第三方平台做好令牌的管理，在令牌过期之前进行刷新。
 
@@ -77,7 +77,7 @@ GET https://openapi.baidu.com/public/2.0/smartapp/auth/tp/token?client_id=OdxUiU
 
 |字段名|	类型|	描述|
 |---|---|---|
-|access_token|	string|	第三方平台access_token|
+|access_token|	string|	第三方平台的接口调用凭据|
 |expires_in	|int|	凭证有效时间，单位：秒|
 |scope|	string|	拥有的权限说明|
 
@@ -111,7 +111,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/tp/createpreauthcode?access_toke
 
 |参数名	|类型	|是否必须|	描述|
 |---|---|---|---|
-|access_token|	string|	是|第三方平台access_token，可参考"2、 获取第三方平台access_token"|
+|access_token|	string|	是| 第三方平台的接口调用凭据 |
 返回值说明
 
 |字段名|	类型|	描述|
@@ -168,7 +168,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&cod
 
 |参数名|	类型|	是否必须|	描述|
 |---|---|---|---|
-|access_token|	string|	是|	第三方平台access_token|
+|access_token|	string|	是|	第三方平台的接口调用凭据|
 |code|	string|	是	|授权码|
 |grant_type|	string	|是|	固定字符串：app_to_tp_authorization_code|
 返回值说明
@@ -203,7 +203,7 @@ GET https://openapi.baidu.com/rest/2.0/oauth/token?access_token=ACCESS_TOKEN&ref
 
 |参数名	|类型	|是否必须|	描述|
 |---|---|---|---|
-|access_token	|string	|是	|第三方平台access_token|
+|access_token	|string	|是	|第三方平台的接口调用凭据|
 |refresh_token|	string|	是|	接口调用凭据刷新令牌，有效期10年，使用后失效|
 |grant_type	|string|	是	|固定字符串： app_to_tp_refresh_token|
 返回值说明
@@ -420,7 +420,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/auth/retrieve/authorizationcode
 ##### 参数说明:
 |参数名 | 类型 | 是否必须 | 描述|
 |----- |-----| ------| -----|
-|access_token	|string |是 | 第三方平台access_token|
+|access_token	|string |是 | 第三方平台的接口调用凭据|
 |app_id | int | 是 | 小程序app_id|
 
 ##### 返回值说明:

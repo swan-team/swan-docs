@@ -76,7 +76,7 @@ webUrl: https://qft12m.smartapps.cn/component/live-player/live-player
 ###  状态码
 
 |代码  |说明   |Web 态说明|
-|:--|:--|
+|:--|:--|:--|
 |2001|已经连接服务器|暂不支持|
 |2002|已经连接服务器,开始拉流|-|
 |2003|网络接收到首个视频数据包(IDR)|-|
