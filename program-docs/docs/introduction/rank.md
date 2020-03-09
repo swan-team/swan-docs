@@ -14,7 +14,7 @@ sidebar: rank
 ![Alt text](../../img/flow/rank/1555413108354.png)
 
 **搜索流量接入流程图**
- ![Alt text](../../img/flow/rank/1555413083846.png)
+ ![Alt text](https://b.bdstatic.com/searchbox/icms/searchbox/img/替换图片.png)
 
 
 
