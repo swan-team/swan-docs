@@ -2,12 +2,12 @@
 .table-wrap {
     width: 100%;
     overflow: auto;
+    margin: 24px 0;
 }
 
 table {
     // border-collapse: separate;
     border-spacing: 0;
-    margin: 24px 0;
     font-size: 14px;
     width: 100%;
     border-spacing: 0;
@@ -52,7 +52,20 @@ th {
 
 thead {
     background-color: @bg-white1;
-    // font-weight: bolder;
     color: @font-black2;
     white-space: nowrap;
+    tr {
+        th {
+            font-weight: 500;
+            color: @font-black2;
+        }
+    }
+}
+
+tbody {
+    tr {
+        th {
+            color: @font-black1;
+        }
+    }
 }
