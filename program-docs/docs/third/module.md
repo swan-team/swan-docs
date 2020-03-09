@@ -16,7 +16,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatelist
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -92,7 +92,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/deltemplate
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -144,7 +144,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/template/gettemplatedraftlist
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -216,7 +216,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/template/addtotemplate
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 第三方平台Token | --     |
+| access_token | string | 是       | 第三方平台的接口调用凭据 | --     |
 
 **请求参数** 
 

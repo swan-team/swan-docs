@@ -17,7 +17,7 @@ sidebar: info
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -108,7 +108,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/category/update
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -191,7 +191,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifyheadimage
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -242,7 +242,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -290,7 +290,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
  
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
  
 
@@ -409,7 +409,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/appflow/applyRecovery
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -501,7 +501,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/app/qrcode
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数**
 
@@ -546,7 +546,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setnickname
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -604,7 +604,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/setsupportversion
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -659,7 +659,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
   
 
@@ -771,7 +771,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifydomain
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -859,7 +859,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/modifywebviewdomain
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数**
 
@@ -923,7 +923,7 @@ curl -X POST \
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|授权小程序Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 **请求参数** 
 
 |参数|类型|是否必填|描述|示例值|
@@ -985,7 +985,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/offline/update?access_token
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **请求参数** 
 
@@ -1097,7 +1097,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述                                                         | 示例值                                                       |
 | ----------- | ------ | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| access_token | string | 是       | 授权小程序Token   | --  |
+| access_token | string | 是       | 授权小程序的接口调用凭据   | --  |
 | reason       | int | 是       | 申请原因<br>(0:"用于登录"<br> 1:"收货联系方式"<br> 2："其他")    | 1  |
 | used_scene   | int | 是       | 使用场景<br>(0:"网络购物"<br> 1:"账号下信息内容同步"<br> 2:"票务预订"<br> 3:"业务办理"<br> 4:"信息查询（如社保、公积金查询"<br> 5:预约") | 1|
 | scene_desc   | string | 是       | 使用场景描述                                                 | "使用场景描述不得超过500字"   |
@@ -1145,7 +1145,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **公共响应参数** 
 
@@ -1190,7 +1190,7 @@ curl -X POST \
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
 **公共响应参数** 
 

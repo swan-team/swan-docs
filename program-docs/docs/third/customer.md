@@ -32,7 +32,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/auth/faceauthen
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
   
 
@@ -87,7 +87,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/auth/paymentCertification
 
 | 参数         | 类型   | 是否必填 | 描述            | 示例值 |
 | ------------ | ------ | -------- | --------------- | ------ |
-| access_token | string | 是       | 授权小程序Token | --     |
+| access_token | string | 是       | 授权小程序的接口调用凭据 | --     |
 
   
 

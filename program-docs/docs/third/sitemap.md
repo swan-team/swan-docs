@@ -67,7 +67,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/submit/sitemap
 
 |参数名 | 类型 | 是否必须 | 描述|
 |----- |-----| ------| -----|
-|access_token	|string|	是	|第三方平台access_token|
+|access_token	|string|	是	|第三方平台的接口调用凭据|
 
 **请求参数**
 
@@ -334,7 +334,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/add
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 **请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
@@ -378,7 +378,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/delete
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数**
 
@@ -420,7 +420,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/update
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数**
 
@@ -466,7 +466,7 @@ GET https://openapi.baidu.com/rest/2.0/smartapp/subchain/getall
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **公共响应参数** 
 
@@ -567,7 +567,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/rank
 
 | 参数名           | 类型   | 是否必须 | 描述                               |
 | ---------------- | ------ | -------- | ---------------------------------- |
-| access_token     | string | true     | 小程序授权给TP平台生成的调用凭据   |
+| access_token     | string | true     | 授权小程序的接口调用凭据   |
 
 **请求参数**
 
@@ -608,7 +608,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/stop
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数**
 
@@ -652,7 +652,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 | 参数名       | 类型   | 是否必须 | 描述                             |
 | ------------ | ------ | -------- | -------------------------------- |
-| access_token | string | true     | 小程序授权给TP平台生成的调用凭据 |
+| access_token | string | true     | 授权小程序的接口调用凭据 |
 
 **请求参数**
 
@@ -762,7 +762,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|小程序权限校验Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 **请求参数** 
 
 |参数|类型|是否必填|描述|示例值|
@@ -809,7 +809,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|授权小程序Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 
 **请求参数** 
 
@@ -924,7 +924,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|小程序权限校验Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 
 **请求参数** 
 
@@ -966,7 +966,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|小程序权限校验Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 **请求参数** 
 
 |参数|类型|是否必填|描述|示例值|
@@ -1066,7 +1066,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/subchain/restart?access_token=A
 
 |参数|类型|是否必填|描述|示例值|
 |--|--|--|--|--|
-|access_token|string|是|小程序权限校验Token|--|
+|access_token|string|是|授权小程序的接口调用凭据|--|
 
 **请求参数** 
 
