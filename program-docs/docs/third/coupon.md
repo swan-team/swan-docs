@@ -33,7 +33,7 @@ sidebar: coupon
 
 # 百度卡券
 小程序为开发者提供接入百度卡券的免费接口，接入后可在百度多种运营资源进行投放，同时发放的优惠券统一进入用户的「卡券包」查看和管理，并引导用户直达商家小程序浏览及购买商品。
- ![图片](../../img/tp/1.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_1.png)
 
 ## 前提条件
 1.	已完成[开发者入驻和小程序创建](https://smartprogram.baidu.com/docs/introduction/enter_application/)；
@@ -43,7 +43,7 @@ sidebar: coupon
 
 # 1. 创建卡券
 #### 开发步骤
- ![图片](../../img/tp/2.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_2.png)
 ##### 明确卡券ID与Code码的区别
 
 创建卡券成功后获取百度分配的卡券ID，一个卡券ID代表一类卡券，包含相应库存数量的Code码。
@@ -53,11 +53,11 @@ sidebar: coupon
 
 
 #### 字段示意图
- ![图片](../../img/tp/3.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_3.png)
 
 ## 1.1 步骤一：选取卡券背景色
 目前百度提供包括以上16种色值供开发者使用，选择适用的背景色，将背景色名称（如B010）填入color字段。
- ![图片](../../img/tp/4.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_4.png)
 
 |背景色名称 | 背景色值 | 
 |---|---|
@@ -89,10 +89,10 @@ POST JSON请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/tp/creat
 ```
 ##### 请求参数
 
-参数|说明
----|:--:
-access_token |调用接口凭证
-POST数据|Json数据
+|参数|说明|
+|---|:--:|
+|access_token |授权小程序access_token|
+|POST数据|Json数据|
 
 ##### POST数据示例
 
@@ -234,7 +234,7 @@ POST数据|Json数据
 
 ##### 接口地址
 ```
-    POST FORM请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/tp/code/batch/upload?access_token=ACCESS_TOKEN
+    POST FORM请求 https://openapi.baidu.com/rest/2.0/smartapp/v1.0/coupon/tp/batch/upload?access_token=ACCESS_TOKEN
 ```
 
 ##### 请求参数
@@ -266,10 +266,10 @@ POST数据|Json数据
 ```
 ##### 请求参数
 
-参数|说明
----|:--:
-access_token |调用接口凭证
-POST数据|Json数据
+|参数|说明|
+|---|:--:|
+|access_token |授权小程序access_token|
+|POST数据|Json数据|
 
 
 ##### POST数据示例
@@ -311,10 +311,10 @@ POST数据|Json数据
 ```
 ##### 请求参数
 
-参数|说明
----|:--:
-access_token |调用接口凭证
-POST数据|Json数据
+|参数|说明|
+|---|:--:|
+|access_token |授权小程序access_token|
+|POST数据|Json数据|
 
 ##### POST数据示例
 ```JSON
@@ -454,7 +454,7 @@ POST数据|Json数据
 
 开发者收到百度的领券推送后，需开发部分：为用户下发真实优惠券，保证用户在开发者的小程序内正常用券。
 
- ![图片](../../img/tp/5.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_5.png)
 
 开发者须知：本期只支持json数据格式输出。
 
@@ -509,11 +509,11 @@ POST数据|Json数据
 
 开发者须知：正常情况下，开发者会在用户领券后，先收到百度的领券事件推送（异步通知）；但高并发的领券场景下，推送可能会存在延迟，作为互补方案，当用户从该路径去使用券时，开发者也需要及时获取领券结果，保证用户正常用券。
 
- ![图片](../../img/tp/6.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_6.png)
 
 ##### 接口调用说明
 
- ![图片](../../img/tp/7.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_7.png)
 
 涉及开发者端+Server开发：
 1）端开发：开发者需在卡券详情页点击立即使用跳转的页面上，通过 [onShow()](https://smartprogram.baidu.com/docs/develop/framework/app_service_register/) 获取当前页面路径中的**coupon**参数；
@@ -551,7 +551,7 @@ onShow(event) {
 
 用户用券环节在开发者小程序内完成，开发者服务器核销掉该卡券后，需调用核销同步接口，同步至百度服务器。
 ##### 接口调用说明
- ![图片](../../img/tp/8.png)
+ ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/tp_coupon_8.png)
 
 ##### 接口请求说明
 ```
