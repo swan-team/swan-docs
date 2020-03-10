@@ -4,7 +4,7 @@
 ### 开启本地预览
 进入 swan-docs，终端执行 `npm start`;
 
-终端看到`Hexo is running at http://localhost:4000/docs/. Press Ctrl+C to stop.` 提示，启动成功。
+终端看到`VuePress dev server listening at http://localhost:4000/docs/` 提示，启动成功。
 
 访问 http://localhost:4000/docs/introduction/register/ 开始编辑（path与线上一致）。
 
@@ -12,7 +12,8 @@
 编辑器打开模块，找到你要编辑的文档所在文件夹，修改刷新浏览器即可看到修改。
 
 #### 新增文档
-如果是新增文档，去到`source/_data/nav.yml`新增一份配置（nav.yml配置说明见编写规范）。然后到对应的目录下建立一个.md。
+如果是新增文档，去到`program-docs/nav/nav.yml`新增一份配置（nav.yml配置说明见编写规范）。
+然后到对应的目录下(`program-docs/docs/`)建立一个.md。
 
 ## 编写规范
 ### 导航配置

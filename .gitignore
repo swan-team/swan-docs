@@ -13,3 +13,4 @@ package-lock.json
 .project
 miniapp_docs_*
 source/sitemap.txt
+fis-conf.js
