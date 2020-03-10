@@ -76,67 +76,67 @@ sidebar: type
 
 | **key** | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 示例小红书小程序：为什么大西洋和太平洋的海水，不会融合在一起？什么原因导致的？ |
-| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）  | 视频的详细介绍，示例小红书小程序：世界之大，可谓无奇不有，虽然现在我们人类的科学技术在不断的进步，关于很多的未解之谜都在逐步的揭开，但是在世界上依然存在着很多的未解之谜，有一些自然现象真的是无法用现有的理论来解释 |
-| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
-| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
-| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），视频子类为1002   | 视频型固定为1002   |
-| feed_type  | string   | **是** | feed一级分类（参考附录二）  | 科学（可选有限集合）  |
-| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | 科学（可选有限集合）  |
-| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例：组件,接口,API   |
+| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| {"title":"示例小红书小程序：为什么大西洋和太平洋的海水，不会融合在一起？什么原因导致的？"} |
+| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）  | {"body":"视频的详细介绍，示例小红书小程序：世界之大，可谓无奇不有，虽然现在我们人类的科学技术在不断的进步，关于很多的未解之谜都在逐步的揭开，但是在世界上依然存在着很多的未解之谜，有一些自然现象真的是无法用现有的理论来解释"} |
+| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | {"path":"/pages/index/index"} |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | {"images":"["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]"} |
+| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | {"mapp_type":"内容型固定为1000"}  |
+| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），视频子类为1002   | {"mapp_sub_type":"视频型固定为1002"}  |
+| feed_type  | string   | **是** | feed一级分类（参考附录二）  | {"feed_type":"科学（可选有限集合）"}  |
+| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | {"feed_sub_type":"科学（可选有限集合）"}  |
+| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {"tags":"示例：组件,接口,API"}   |
 | ext  | string   | 见下表 | 扩展信息（JSON格式，参考下方拓展字段）  | {"desc": "智能小程序官方示例","version": "10.7.1"}  |
 
 拓展字段
 
 | **key**   | **类型** | **是否必填**   | **备注**   | **代码示例**  |
 | ------------------------ | -------- | -------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| author_name  | string   | 否 | 作者名  | 张三   |
-| author_profile  | string   | 否 | 作者简介   | 搞笑视频作者 |
-| author_portrait_url   | string   | 否 | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
-| author_path  | string   | 否 | 作者落地页链接   | /pages/author/author  |
-| author_fans_num | int   | 否 | 作者粉丝量 | 1000   |
-| author_publish_num | int   | 否 | 作者视频发布量   | 1000   |
-| author _video_views   | int   | 否 | 作者发布视频浏览量  | 1000   |
-| author_followers_num  | int   | 否 | 作者关注量 | 10000  |
-| author_like_num | int   | 否 | 作者页累计点赞量 | 1000   |
-| author_collect_num | int   | 否 | 作者页累计收藏量 | 10000  |
-| author_ask_num  | int   | 否 | 作者提问量 | 100 |
-| author_auth  | int   | 否 | 是否认证作者  | 1-是 0-否   示例：1   |
-| author_level | int   | 否 | 作者等级   | 0为无等级，1为最低，数字越大等级越高 |
-| is_verified  | string   | 否 | 是否大V | true   |
-| video_title  | string   | 否 | 片名 | 我不是药神   |
-| director  | string   | 否 | 导演 | 徐峥   |
-| lead_role | string   | 否 | 主演 | 徐峥 周一围 王传君 谭卓 杨新鸣 |
-| presenter | string   | 否 | 主持人  | 何炅   |
-| guest  | string   | 否 | 嘉宾 | 谢娜   |
-| publish_time | string   | **是**   | 内容原始发布时间 | 内容原始发布时间需在三个月以内   示例：2018年9月8日   |
-| movie_release_time | string   |否   |  电影上映时间   | 电影上映时的时间，建议填写，   示例：2018年9月8日   |
-| video_duration  | string   | **是**   | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
-| pc_url | string   | **是（和h5_url需填一种）** | 视频PC播放链接   |  |
-| h5_url | string   | **是（和pc_url需填一种）** | 视频H5播放链接   |  |
-| update_time  | string   | 否 | 更新时间   | 2018年9月10日 15:36:20   |
-| channel_id   | int   | 否 | 频道ID  | 1002   |
-| video_profile   | string   | 否 | 视频简介   | 如：XXXX是最火的综艺  |
-| channel   | string   | 否 | 频道名称   | 在小程序内所属的频道名称，例如视频，最热、推荐   |
-| is_pay | string   | 否 | 是否付费   | 付费   |
-| play_num  | int   | 否 | 播放次数   | 1000   |
-| publish_year | string   | 否 | 发行年份   | 2018年 |
-| area   | string   | 否 | 地区 | 北京   |
-| video_status | string   | 否 | 视频状态   | 正在热映  |
-| score  | string   | 否 | 评分 | 9.3 |
-| like_num  | int   | 否 | 点赞量  | 1000   |
-| comment_num  | int   | 否 | 评论量  | 1000   |
-| collect_num  | int   | 否 | 收藏量  | 1000   |
-| dislike_num  | int   | 否 | 踩数 | 1000   |
-| share_num | int   | 否 | 转发量  | 1000   |
-| comment   | string   | 否 | 优质评论内容  | “你敢保证你一辈子不得病？”纯粹、直接、有力！常常感叹：电影只能是电影。但每看到这样的佳作，又感慨：电影不只是电影！由衷的希望这部电影大卖！成为话题！成为榜样！成为国产电影最该有的可能。 |
-| is_exclusive | string   | 否 | 是否独播   | 是1，否0   示例：1 |
-| is_quality   | string   | 否 | 是否精品内容  | 小程序内优质或者热门的内容，是为1，否为0，例如1  |
-| is_interactive  | string   | 否 | 是否高互动内容   | 顶/评论/收藏/分享任一互动数据在100以上的攻略资源，是为1，否为0，例如0 |
-| author_registration_year | string   | 否 | 作者注册年限  | 8（不足一年按照1计算）   |
-| img_urls  | string   | 否 | 视频内多张图片url（至少3张）   JSON格式  | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>",   "<https://b.bdstatic.com/miniapp/resource/image/headImg.png>",   "<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
-| ip  | string   | 否 | 需引入的热点ip资源名称（如，漫画类，综艺类等） | 极限挑战 斗破苍穹  |
+| author_name  | string   | 否 | 作者名  | {“author_name”:”张三"}   |
+| author_profile  | string   | 否 | 作者简介   | {“author_profile”:”搞笑视频作者"} |
+| author_portrait_url   | string   | 否 | 作者头像url   | {“author_portrait_url”:”<https://www.xxx.baidu.com/author/portrail.jpg>"}   |
+| author_path  | string   | 否 | 作者落地页链接   | {“author_path”:”/pages/author/author"}  |
+| author_fans_num | int   | 否 | 作者粉丝量 | {“author_fans_num”:1000}   |
+| author_publish_num | int   | 否 | 作者视频发布量   | {“author_publish_num”:1000}   |
+| author _video_views   | int   | 否 | 作者发布视频浏览量  | {“author _video_views”:1000}   |
+| author_followers_num  | int   | 否 | 作者关注量 | {“author_followers_num”:10000}  |
+| author_like_num | int   | 否 | 作者页累计点赞量 | {“author_like_num”:1000}   |
+| author_collect_num | int   | 否 | 作者页累计收藏量 | {“author_collect_num”:10000}  |
+| author_ask_num  | int   | 否 | 作者提问量 | {“author_ask_num”:100} |
+| author_auth  | int   | 否 | 是否认证作者  | {“author_auth”:1-是 0-否   示例：1}   |
+| author_level | int   | 否 | 作者等级   | {“author_level”:0为无等级，1为最低，数字越大等级越高} |
+| is_verified  | string   | 否 | 是否大V | {“is_verified”:”true"}  |
+| video_title  | string   | 否 | 片名 | {“video_title”:”我不是药神"}  |
+| director  | string   | 否 | 导演 | {“director”:”徐峥"}   |
+| lead_role | string   | 否 | 主演 | {“lead_role”:”徐峥 周一围 王传君 谭卓 杨新鸣"} |
+| presenter | string   | 否 | 主持人  | {“presenter”:”何炅"}   |
+| guest  | string   | 否 | 嘉宾 | {“guest”:”谢娜"}   |
+| publish_time | string   | **是**   | 内容原始发布时间 | {“publish_time”:”内容原始发布时间需在三个月以内   示例：2018年9月8日"}   |
+| movie_release_time | string   |否   |  电影上映时间   | {“movie_release_time”:”电影上映时的时间，建议填写，   示例：2018年9月8日"}   |
+| video_duration  | string   | **是**   | 视频时长   | {“video_duration”:”按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20"}  |
+| pc_url | string   | **是（和h5_url需填一种）** | {“pc_url”:”视频PC播放链接"}   |  |
+| h5_url | string   | **是（和pc_url需填一种）** | {“h5_url”:”视频H5播放链接"}   |  |
+| update_time  | string   | 否 | 更新时间   | {“update_time”:”2018年9月10日 15:36:20"}   |
+| channel_id   | int   | 否 | 频道ID  | {“channel_id”:1002}   |
+| video_profile   | string   | 否 | 视频简介   | {“video_profile”:”如：XXXX是最火的综艺"}  |
+| channel   | string   | 否 | 频道名称   | {“channel”:”在小程序内所属的频道名称，例如视频，最热、推荐"}   |
+| is_pay | string   | 否 | 是否付费   | {“is_pay”:”付费"}   |
+| play_num  | int   | 否 | 播放次数   | {“play_num”:1000}   |
+| publish_year | string   | 否 | 发行年份   | {“publish_year”:”2018年"} |
+| area   | string   | 否 | 地区 | {“area”:”北京"}   |
+| video_status | string   | 否 | 视频状态   | {“video_status”:”正在热映"}  |
+| score  | string   | 否 | 评分 | {“score”:”9.3"} |
+| like_num  | int   | 否 | 点赞量  | {“like_num”:1000}   |
+| comment_num  | int   | 否 | 评论量  | {“comment_num”:1000}   |
+| collect_num  | int   | 否 | 收藏量  | {“collect_num”:1000}   |
+| dislike_num  | int   | 否 | 踩数 | {“dislike_num”:1000}   |
+| share_num | int   | 否 | 转发量  | {“share_num”:1000}   |
+| comment   | string   | 否 | 优质评论内容  | {“comment”:”“你敢保证你一辈子不得病？”纯粹、直接、有力！常常感叹：电影只能是电影。但每看到这样的佳作，又感慨：电影不只是电影！由衷的希望这部电影大卖！成为话题！成为榜样！成为国产电影最该有的可能。"} |
+| is_exclusive | string   | 否 | 是否独播   | {“is_exclusive”:”是1，否0   示例：1"} |
+| is_quality   | string   | 否 | 是否精品内容  | {“is_quality”:”小程序内优质或者热门的内容，是为1，否为0，例如1"}  |
+| is_interactive  | string   | 否 | 是否高互动内容   | {“is_interactive”:”顶/评论/收藏/分享任一互动数据在100以上的攻略资源，是为1，否为0，例如0"} |
+| author_registration_year | string   | 否 | 作者注册年限  | {“author_registration_year”:”8（不足一年按照1计算）"}   |
+| img_urls  | string   | 否 | 视频内多张图片url（至少3张）   JSON格式  | {“img_urls”:”["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>",   "<https://b.bdstatic.com/miniapp/resource/image/headImg.png>",   "<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"]"} |
+| ip  | string   | 否 | 需引入的热点ip资源名称（如，漫画类，综艺类等） | {“ip”:”极限挑战 斗破苍穹"}  |
 
 3）直播型
 
@@ -146,26 +146,26 @@ sidebar: type
 
 | **key** | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！ |
-| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| 直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。 |
-| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
-| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
-| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | 直播型固定为1003   |
-| feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
-| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | 美食节目（可选有限集合） |
-| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例：组件,接口,API   |
+| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {"title":"示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！"} |
+| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符）| {"body":"直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。"} |
+| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | {"path":"/pages/index/index"} |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | {"images":"["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]"} |
+| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | {"mapp_type":"内容型固定为1000"}   |
+| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | {"mapp_sub_type":"直播型固定为1003"}  |
+| feed_type  | string   | **是** | feed一级分类（参考附录二）  | {"feed_type":"美食（可选有限集合）"}  |
+| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | {"feed_sub_type":"美食节目（可选有限集合）"} |
+| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {"tags":"示例：组件,接口,API"}   |
 | ext  | string   | 见下表 | 扩展信息（JSON格式，参考下方拓展字段）  | {"desc": "智能小程序官方示例","version": "10.7.1"}  |
 
 拓展字段
 
 | **key**   | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------ | -------- | ------------ | ------------------------------------------ | ------------------ |
-| source_name  | string   | **是** | 主播昵称  | 张三   |
-| living_type  | string   | **是** | 直播状态  | online/offline  |
-| publish_time | int   | **是** | 开播时间  | 10位时间戳，示例： |
-| end_time  | int   | **是** | 关播时间  | 10位时间戳，示例： |
-| session_id   | string   | **是** | 场次（请将session_id加入path拼接规则当中） | 场次 id   |
+| source_name  | string   | **是** | 主播昵称  | {“source_name”:”张三"}   |
+| living_type  | string   | **是** | 直播状态  | {“living_type”:”online/offline"}  |
+| publish_time | int   | **是** | 开播时间  | {“publish_time”:10位时间戳，示例：} |
+| end_time  | int   | **是** | 关播时间  | {“end_time”:10位时间戳，示例：} |
+| session_id   | string   | **是** | {“session_id”:”场次（请将session_id加入path拼接规则当中） | 场次 id"}  |
 
 4）音频
 
@@ -173,35 +173,35 @@ sidebar: type
 
 | **key** | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！ |
-| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。 |
-| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
-| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
-| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | 音频型固定为1004   |
-| feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
-| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | 美食节目（可选有限集合） |
-| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例：组件,接口,API   |
+| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“title”:”示例斗鱼直播：户外主播宁波小老哥：《恋爱厨房》和小姐姐一起做饭，心动的感觉！"} |
+| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“body”:”直播内容的介绍，示例斗鱼直播：这里有美食，有音乐，还有漂亮贤惠的小姐姐。跟着《恋爱厨房》一起感受美食的魅力。"} |
+| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | {“path”:”/pages/index/index"} |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | {“images”:”["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]"} |
+| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | {“mapp_type”:”内容型固定为1000"}   |
+| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），直播子类为1003   | {“mapp_sub_type”:”音频型固定为1004"}   |
+| feed_type  | string   | **是** | feed一级分类（参考附录二）  | {“feed_type”:”美食（可选有限集合）"}  |
+| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | {“feed_sub_type”:”美食节目（可选有限集合）"} |
+| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“tags”:”示例：组件,接口,API"}   |
 | ext  | string   | 见下表 | 扩展信息（JSON格式，参考下方拓展字段）  | {"desc": "智能小程序官方示例","version": "10.7.1"}  |
 
 拓展字段
 
 | **key** | **类型**   | **备注** | **是否必填** | **代码示例**  |
 | ---------------------- | ---------- | -------------------- | ------------ | ------------------------------------------------------------ |
-| author_name   | string  | 专辑作者名  | 是  | 徐佳   |
-| album_name | string  | 专辑名   | 是  | 晓说2018  |
-| album_type | string  | 专辑一级分类   | 是  | 开发者平台自有一级分类，例如 历史 |
-| album_sub_type   | string  | 专辑二级分类   | 是  | 开发者平台自有二级分类，例如 名人传  |
-| album_update_type   | string  | 专辑更新方式   | 是  | 2代表无规律更新、1代表有规律更新、0代表无更新   例如：0   |
-| album_update_frequency | int  | 专辑更新频率   | 是  | 单位：天。   例如：2   ａ．若更新方式字段传“无更新”，则专辑更新频率传0；ｂ．若更新方式字段传“有规律更新”则专辑更新字段传N（Ｎ为天数）；ｃ．若更新方式字段传“无规律更新”，专辑频率传0 |
-| **publish_time** | **string** | **内容原始发布时间** | 是  | **内容原始发布时间需在一年以内**   **示例：****2018****年9月8日** |
-| album_publish_time  | string  | 专辑发布时间   | 是  | 内容原始发布时间需在一年以内  ，要求为时间戳格式，例如：1553529600 |
-| album_update_time   | string  | 专辑更新时间   | 是  | 最新专辑的更新时间，要求为时间戳格式，例如：1553529600 |
-| chapter_publish_time   | string  | 单章发布时间   | 是  | 内容原始发布时间需在一年以内   要求为时间戳格式，例如：1553529600 |
-| chapter_update_time | string  | 单章更新时间   | 是  | 最新单章的更新时间，要求为时间戳格式，例如：1553529600 |
-| chapter_name  | string  | 单章名   | 是  | 单章的名称，例如 高晓松聊历史  |
-| chapter_num   | int  | 章节号   | 是  | 章节所对应的序号，例如 5 |
-| audio_duration   | string  | 音频时长 | 是  | 按照00:00:00格式填写  |
+| author_name   | string  | 专辑作者名  | 是  | {“author_name”:”徐佳"}   |
+| album_name | string  | 专辑名   | 是  | {“album_name”:”晓说2018"}  |
+| album_type | string  | 专辑一级分类   | 是  | {“album_type”:”开发者平台自有一级分类，例如 历史"} |
+| album_sub_type   | string  | 专辑二级分类   | 是  | {“album_sub_type”:”开发者平台自有二级分类，例如 名人传"}  |
+| album_update_type   | string  | 专辑更新方式   | 是  | {“album_update_type”:”2代表无规律更新、1代表有规律更新、0代表无更新   例如：0"}   |
+| album_update_frequency | int  | 专辑更新频率   | 是  | {“album_update_frequency”:单位：天。   例如：2   ａ．若更新方式字段传“无更新”，则专辑更新频率传0；ｂ．若更新方式字段传“有规律更新”则专辑更新字段传N（Ｎ为天数）；ｃ．若更新方式字段传“无规律更新”，专辑频率传0} |
+| **publish_time** | **string** | **内容原始发布时间** | 是  | {“publish_time”:”**内容原始发布时间需在一年以内**   **示例：****2018****年9月8日"}** |
+| album_publish_time  | string  | 专辑发布时间   | 是  | {“album_publish_time”:”内容原始发布时间需在一年以内  ，要求为时间戳格式，例如：1553529600"} |
+| album_update_time   | string  | 专辑更新时间   | 是  | {“album_update_time”:”最新专辑的更新时间，要求为时间戳格式，例如：1553529600"} |
+| chapter_publish_time   | string  | 单章发布时间   | 是  | {“chapter_publish_time”:”内容原始发布时间需在一年以内   要求为时间戳格式，例如：1553529600"} |
+| chapter_update_time | string  | 单章更新时间   | 是  | {“chapter_update_time”:”最新单章的更新时间，要求为时间戳格式，例如：1553529600"} |
+| chapter_name  | string  | 单章名   | 是  | {“chapter_name”:”单章的名称，例如 高晓松聊历史"}  |
+| chapter_num   | int  | 章节号   | 是  | {“end_time”:章节所对应的序号，例如 5} |
+| audio_duration   | string  | 音频时长 | 是  | {“audio_duration”:”按照00:00:00格式填写"}  |
 
 5）本地生活
 

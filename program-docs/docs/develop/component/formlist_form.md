@@ -17,7 +17,7 @@ webUrl: https://qft12m.smartapps.cn/component/form/form
 |:-----|:---- |:---- |:----|:----|:----|
 |report-submit|Boolean| false | 否 |是否返回formId用于发送<a href="https://smartprogram.baidu.com/docs/develop/serverapi/open_infomation/">模板消息</a> （工具上formId为`''`，请在真机上测试）。|1.12<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |report-type| String  | 'default' | 否 |模板消息的类型，report-submit为true时填写有效。<br>取值：default或subscribe。|3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
-|template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID，可通过<a href="https://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取|3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+|template-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息所用的模板库标题ID(例如：BD0001)，可通过<a href="https://smartprogram.baidu.com/docs/develop/serverapi/getTemplateLibraryList/">getTemplateLibraryList</a>获取，或在“开发者平台-运营中心-模板消息-模板库”浏览查找所需id|3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |subscribe-id| String  |  | 否 |report-type 为 subscribe 时必填，发送订阅类模板消息时所使用的唯一标识符，内容由开发者自定义，用来标识订阅场景<br>注意：同一用户在同一 subscribe-id 下的多次授权不累积下发权限，只能下发一条。若要订阅多条，需要不同 subscribe-id |3.105.3<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 | bindsubmit | EventHandle | | 否 | 携带 form 中的数据触发 submit 事件，`event.detail = {value : {'name': 'value'}, formId: '', message: '', status: ''}`,当report-type 为 subscribe 时，status 和message 中返回用户授权具体信息| -|
 | bindreset | EventHandle  |  | 否 |表单重置时会触发 reset 事件|- |
