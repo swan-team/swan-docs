@@ -43,7 +43,7 @@ touser|string|否|接收者swan_id
 touser\_openId|string|否|接收者open_id
 data|json/string|是|{"keyword1": {"value": "2018-09-06"},"keyword2": {"value": "kfc"}}
 page|string|否|点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数，（示例index?foo=bar），该字段不填则模板无跳转。
-scene\_id|string|是|场景id，例如表单id和订单id
+scene\_id|string|是|场景id，例如表单id、 [orderId或payId](https://smartprogram.baidu.com/docs/develop/serverapi/useintroduction/)
 scene\_type|int|是|	场景type，1：表单；2：百度收银台订单；3:直连订单
 ext|json/string|否|{"xzh\_id":111,"category\_id":15}                           |
 
