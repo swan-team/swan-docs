@@ -49,9 +49,9 @@ String text：要测量的文本
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view>在此输入文本信息</view>
     <input class="ipt" bindinput="keyInput"></input>
@@ -59,7 +59,7 @@ String text：要测量的文本
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -82,6 +82,7 @@ Page({
     }
 });
 ```
+:::
 ##  错误码
 ### Android
 

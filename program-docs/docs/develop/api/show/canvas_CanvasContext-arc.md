@@ -43,6 +43,7 @@ sidebar: canvas_CanvasContext-arc
 
 <a href="swanide://fragment/6e90c6683d0c5676207fd5eefa1c06b71573723566960" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -50,7 +51,7 @@ canvasContext.setFillStyle('blue');
 canvasContext.fill();
 canvasContext.draw();
 ```
-
+:::
 ###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -68,6 +69,7 @@ canvasContext.draw();
 
 <a href="swanide://fragment/146311dc8328aa9991ca70ec0830dffd1581263986723" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady() {
@@ -91,11 +93,12 @@ Page({
     }
 });
 ```
-
+:::
 ###  代码示例3 - counterclockwise为true ：
 
 <a href="swanide://fragment/5013899c76707b170a24409da4792a6f1575363697582" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -107,11 +110,13 @@ Page({
     }
 });
 ```
+:::
 
 ###  代码示例4 - counterclockwise为false ：
 
 <a href="swanide://fragment/044876f82808e355e7bb3b0bd55c35a51575363735429" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -123,6 +128,6 @@ Page({
     }
 });
 ```
-
+:::
 
 

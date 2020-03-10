@@ -150,7 +150,7 @@ post https://openapi.baidu.com/rest/2.0/smartapp/message/custom/sendbytp
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | 是       | 小程序access_toekn                     |
+| access_token | string | 是       | 授权小程序的接口调用凭据                     |
 **请求参数**
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |

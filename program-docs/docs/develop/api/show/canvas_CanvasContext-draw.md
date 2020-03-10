@@ -34,6 +34,7 @@ sidebar: canvas_CanvasContext-draw
 
 <a href="swanide://fragment/408aa17bb845b0a6d87ee5b5a13dc26e1574532413473" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
@@ -43,7 +44,7 @@ canvasContext.setFillStyle('red');
 canvasContext.fillRect(30, 30, 150, 100);
 canvasContext.draw();
 ```
- 
+::: 
 ###  图片示例  
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
@@ -62,6 +63,7 @@ canvasContext.draw();
 
 <a href="swanide://fragment/c644a427f48dbe93e232dabea0b3bc701574933246460" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -75,7 +77,7 @@ Page({
     }
 });
 ```
-
+:::
 
 ##  错误码
 ###  Android

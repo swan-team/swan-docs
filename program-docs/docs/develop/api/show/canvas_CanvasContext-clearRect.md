@@ -37,7 +37,7 @@ sidebar: canvas_CanvasContext-clearRect
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.setFillStyle('blue');
@@ -47,7 +47,7 @@ canvasContext.fillRect(150, 0, 150, 200);
 canvasContext.clearRect(30, 30, 150, 75);
 canvasContext.draw();
 ```
-
+:::
 
 
 

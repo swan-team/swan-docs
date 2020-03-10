@@ -29,6 +29,7 @@ sidebar:  canvas_CanvasContext-restore
 
 <a href="swanide://fragment/70610f9f213e41d7d6ff09056c4bcf0c1575434855247" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 // 保存默认填充样式
@@ -42,7 +43,7 @@ canvasContext.fillRect(50, 50, 150, 100);
 
 canvasContext.draw();
 ```
-
+:::
 
 ###  图片示例 
 
@@ -62,6 +63,7 @@ canvasContext.draw();
 
 <a href="swanide://fragment/8bdb88bb1a23d69aca4a8c94ad1440031575438792950" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
 ```js
 Page({
     onLoad() {
@@ -85,6 +87,6 @@ Page({
     }
 });
 ```
-
+:::
 
 

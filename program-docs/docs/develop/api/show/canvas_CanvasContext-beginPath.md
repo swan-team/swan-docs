@@ -34,7 +34,7 @@ sidebar: canvas_CanvasContext-beginPath
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.rect(10, 10, 100, 30);
@@ -49,5 +49,5 @@ canvasContext.setFillStyle('green');
 canvasContext.fill();
 canvasContext.draw();
 ```
-
+:::
 

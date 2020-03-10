@@ -46,7 +46,8 @@ sidebar:  canvas_CanvasContext-fillText
 ### 代码示例 
 
 
-
+:::codeTab
+ 
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -56,4 +57,4 @@ canvasContext.fillText('World', 100, 100);
 
 canvasContext.draw();
 ```
-
+:::

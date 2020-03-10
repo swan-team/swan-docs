@@ -36,7 +36,7 @@ sidebar: canvas_CanvasContext-rect
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.rect(30, 30, 150, 75);
@@ -44,6 +44,6 @@ canvasContext.setFillStyle('blue');
 canvasContext.fill();
 canvasContext.draw();
 ```
-
+:::
 
 

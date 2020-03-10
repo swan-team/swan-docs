@@ -34,7 +34,7 @@ sidebar: canvas_CanvasContext-moveTo
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.moveTo(10, 10);
@@ -44,6 +44,6 @@ canvasContext.lineTo(100, 100);
 canvasContext.stroke();
 canvasContext.draw();
 ```
-
+:::
 
 

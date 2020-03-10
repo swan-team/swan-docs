@@ -32,16 +32,15 @@ sidebar: canvas
     </div>     
 </div>
 
-### SWAN模板写法示例 ：
-
-```xml
-<canvas canvas-id="myCanvas" />
-```
-
-### JS写法示例 ：
+### 代码示例
 
 <a href="swanide://fragment/5a48405eb904cfe0231782d70f94ef3e1573708931657" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
+:::codeTab
+```swan
+<canvas canvas-id="myCanvas" />
+```
+ 
 ```js
 Page({
     onReady: function () {
@@ -53,13 +52,14 @@ Page({
     }
 });
 ```
+:::
 
 我们来回顾一下，刚刚都执行了哪些指令：
 
  1、创建绘图上下文 
 
 推荐使用 Page 对象上挂载的`createCanvasContext`方法，进行绘制上下文的创建：
-
+:::codeTab
 ```js
 Page({
     onReady: function () {
@@ -68,31 +68,32 @@ Page({
 });
 
 ```
+:::
 
 当然，也可以使用 SWAN 上挂载的`createCanvasContext`方法。
 如下，我们调用 SWAN 的接口`createCanvasContext`创建了一个绘制上下文（但请注意，使用 SWAN 上挂载的`createCanvasContext`，会在当前用户可见的 Page 中寻找`canvas`）。
-
+:::codeTab
 ```js
 const CanvasContext = swan.createCanvasContext('myCanvas');
 ```
-
+:::
  2、发送绘制指令 
 
 设置颜色，并画一个圆，填充。
-
+:::codeTab
 ```js
 CanvasContext.setFillStyle('#ff0000');
 CanvasContext.arc(100, 100, 50, 0, 2 * Math.PI);
 CanvasContext.fill();
 ```
-
+:::
  3、绘制 
 执行上面已经发出的指令，进行 canvas 绘制。
-
+:::codeTab
 ```js
 CanvasContext.draw();
 ```
-
+:::
 
 
 ## 坐标系
@@ -107,9 +108,8 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 
 <a href="swanide://fragment/6d4cbfac520c52f567a53ea773719dbc1577195633921" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
-* 在 swan 文件中
-
-```xml
+:::codeTab
+```swan
 <canvas canvas-id="myCanvas"
   style="margin: 5px; border:1px solid #d3d3d3;"
   bindtouchstart="start"
@@ -120,8 +120,7 @@ canvas 坐标系，以左上角为(0, 0)，横轴为 x，纵轴为 y。
 </view>
 ```
 
-* 在 js 文件中
-
+ 
 ```js
 Page({
   data: {
@@ -149,3 +148,4 @@ Page({
   }
 })
 ```
+:::

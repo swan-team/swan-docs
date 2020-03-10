@@ -41,7 +41,7 @@ sidebar: uploadTask-abort
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 
 Page({
@@ -93,3 +93,4 @@ Page({
 
 
 ```
+:::

@@ -41,7 +41,7 @@ StringtextBaseline
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -66,6 +66,6 @@ canvasContext.fillText('normal', 200, 75);
 
 canvasContext.draw();
 ```
-
+:::
 
 

@@ -153,7 +153,7 @@ exports.main = async (event, context) => {
 |MultiPolygon|多边形集合|
 
 
-**代码示例**
+**代码示例1 - Point**
 ``` js
 const cloud = require('swan-server-sdk')
 
@@ -165,6 +165,29 @@ exports.main = async (event, context) => {
     return await db.collection('poiList').add({
         name: '天安门',
         location: Geo.Point(116.4074, 39.9042)
+    })
+  } catch(err) {
+      console.log(err)
+  }
+}
+```
+
+**代码示例2 - LineString**
+``` js
+const cloud = require('swan-server-sdk')
+
+exports.main = async (event, context) => {
+  cloud.init(context)
+  const db = cloud.database()
+  const Geo = db.Geo
+  try {
+    return await db.collection('poiList').add({
+        name: '天安门',
+        location: Geo.LineString([
+          Geo.Point(113, 23),
+          Geo.Point(120, 50),
+          // ... 可选更多点
+        ])
     })
   } catch(err) {
       console.log(err)
@@ -226,7 +249,44 @@ exports.main = async (event, context) => {
 
 RegExp
 
-**代码示例**
+**代码示例1**
+
+``` js
+const cloud = require('swan-server-sdk')
+exports.main = async (event, context) => {
+  cloud.init(context)
+  const db = cloud.database()
+  try {
+      return await db.collection('articles').where({
+        title: /miniprogram/i,
+    })
+  } catch(err) {
+    console.log(err)
+  }
+}
+```
+
+**代码示例2**
+
+``` js
+const cloud = require('swan-server-sdk')
+exports.main = async (event, context) => {
+  cloud.init(context)
+  const db = cloud.database()
+  try {
+      return await db.collection('articles').where({
+        title: db.RegExp({
+            regexp: '^baidu',
+            options: 'i',
+        }),
+    })
+  } catch(err) {
+    console.log(err)
+  }
+}
+```
+
+**代码示例3**
 
 ``` js
 const cloud = require('swan-server-sdk')

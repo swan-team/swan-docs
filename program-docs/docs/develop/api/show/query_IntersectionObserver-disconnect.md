@@ -42,9 +42,9 @@ sidebar:  query_IntersectionObserver-disconnect
 ### 代码示例 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <scroll-view class="scroll-view" scroll-y>
         <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
@@ -106,3 +106,4 @@ Page({
     }
 });
 ```
+:::

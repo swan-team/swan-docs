@@ -39,7 +39,7 @@ sidebar: canvas_CanvasContext-createLinearGradient
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = this.createCanvasContext('myCanvas');
 
@@ -53,4 +53,4 @@ canvasContext.setFillStyle(grd);
 canvasContext.fillRect(30, 30, 150, 80);
 canvasContext.draw();
 ```
-
+:::

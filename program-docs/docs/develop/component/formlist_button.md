@@ -30,6 +30,8 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 | bindgetuserinfo |EventHandler |   | 否 |用户点击该按钮时，会返回获取到的用户信息，从返回参数的 detail 中获取到的值，和 swan.getUserInfo 一样的。和 open-type 搭配使用， 使用时机： `open-type="getUserInfo"`。|- |
 |bindopensetting|Handler| | 否 |		在打开授权设置页后回调，使用时机：`open-type="openSetting"`。|- |
 | bindcontact | Handler | | 否 |		客服消息回调，使用时机：open-type="contact"。如果需要使用该功能，请发送邮件至 smartprogram_support@baidu.com 咨询详细情况。|- |
+| bindchooseAddress |EventHandler |   | 否 |用户点击该按钮时，调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址，从返回参数的 detail 中获取，和 swan.chooseAddress 一样的。和 open-type 搭配使用， 使用时机： `open-type="chooseAddress"`。|3.160.3	<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
+| bindchooseInvoiceTitle |EventHandler |   | 否 |用户点击该按钮时，选择用户的发票抬头，和 swan.chooseInvoiceTitle 一样的。和 open-type 搭配使用， 使用时机： `open-type="chooseInvoiceTitle"`。|3.160.3	<p>低版本请做<a href="https://smartprogram.baidu.com/docs/develop/swan/compatibility/">兼容性处理</a>|
 |contact|Handler||否|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|- |
 
 
@@ -65,6 +67,8 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 | getUserInfo |获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息，参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_userdata/">用户数据的签名验证和加解密</a>对用户数据进行处理。|
 | getPhoneNumber |获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息：<br>detail.errMsg 值为`"getPhoneNumber:ok"` 时代表用户信息获取成功；<br>detail.errMsg 值为`"getPhoneNumber:fail auth deny"`时代表用户信息获取失败。<br>参考<a href="https://smartprogram.baidu.com/docs/develop/api/open/log_userdata/">用户数据的签名验证和加解密</a>对用户数据进行处理获得用户手机号。<br>用户手机号信息解密后数据示例：{"mobile":"15000000000"}<br>1. 非个人开发者可申请；<br>2. 审核通过后，进入小程序首页,在左侧导航栏单击“设置>开发设置”。下拉页面，在“获取用户手机号权限申请”中单击“申请开通”。|
 |openSetting|	打开授权设置页|
+| chooseAddress |获取用户信息，可以从 bindchooseAddress 回调中获取到用户选择的地址信息|
+| chooseInvoiceTitle |获取用户信息，可以从 bindchooseInvoiceTitle 回调中获取到用户选择发票抬头信息|
 |contact|打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从bindcontact回调中获得具体信息。|
 
 
@@ -72,7 +76,7 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 
 ## 示例
 
-<a href="swanide://fragment/672fb16f1f7d00c4c6f7d0342122c9f51577362329156" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/21f220e97105882eb064c2e318a1b07e1583136075647" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
 ### 扫码体验
 
@@ -195,7 +199,7 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 :::
 ### 代码示例 4：不同功能按钮
 
-<a href="swanide://fragment/614656b7ead0489475b392a03a06f2471575285746664" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+<a href="swanide://fragment/37cade6f9abe86ecba7931217aee4ddb1580818934165" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
  
 
@@ -242,6 +246,22 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
             contact
         </button>
     </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='chooseInvoiceTitle'
+        </view>
+        <button open-type='chooseInvoiceTitle' type="primary" bindchooseInvoiceTitle="chooseInvoiceTitle">
+            chooseInvoiceTitle
+        </button>
+    </view>
+    <view class="card-area">
+         <view class="top-description border-bottom">
+            open-type='chooseAddress'
+        </view>
+        <button open-type='chooseAddress' type="primary" bindchooseAddress="chooseAddress">
+            chooseAddress
+        </button>
+    </view>
 </view>
 ```
  
@@ -259,7 +279,13 @@ Page({
     },
     contact(e) {
         console.log(e)
-    }
+    },
+    chooseInvoiceTitle(e) {
+        console.log(e)
+    },
+    chooseAddress(e) {
+        console.log(e)
+    }	    }
 });
 ```
 :::

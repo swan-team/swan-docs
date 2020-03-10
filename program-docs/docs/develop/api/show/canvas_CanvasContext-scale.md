@@ -32,7 +32,7 @@ sidebar: canvas_CanvasContext-scale
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 
@@ -44,5 +44,5 @@ canvasContext.strokeRect(10, 10, 25, 15);
 
 canvasContext.draw();
 ```
-
+:::
 

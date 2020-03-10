@@ -33,7 +33,7 @@ StringlineCap
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 const canvasContext = swan.createCanvasContext('myCanvas');
 canvasContext.beginPath();
@@ -64,5 +64,5 @@ canvasContext.stroke();
 
 canvasContext.draw();
 ```
-
+:::
 

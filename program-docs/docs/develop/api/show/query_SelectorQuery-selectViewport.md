@@ -45,15 +45,15 @@ NodesRef
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <button bindtap="selectViewport" type="primary" class="flex-button">滑动界面并点击获取窗口可视区域信息</button>
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -76,7 +76,7 @@ Page({
 });
 ```
 
-* 在 css 文件中
+ 
 
 ```css
 .wrap {
@@ -91,3 +91,4 @@ Page({
     width: 90%;
 }
 ```
+:::

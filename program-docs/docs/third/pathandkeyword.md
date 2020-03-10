@@ -24,7 +24,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/addPathAndKeywords
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | 是       | access_token，授权小程序的接口调用凭据 |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
 
 **请求参数**:
 
@@ -73,7 +73,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/updatePathAndKeywords
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | 是       | access_token，授权小程序的接口调用凭据 |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
 
 **请求参数**:
 
@@ -123,7 +123,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/deletePath
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | 是       | access_token，授权小程序的接口调用凭据 |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
 
 **请求参数**:
 
@@ -168,7 +168,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/app/path/getPathInfo
 
 | 参数名       | 类型   | 是否必须 | 描述                                   |
 | ------------ | ------ | -------- | -------------------------------------- |
-| access_token | string | 是       | access_token，授权小程序的接口调用凭据 |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
 
 **请求参数**:
 

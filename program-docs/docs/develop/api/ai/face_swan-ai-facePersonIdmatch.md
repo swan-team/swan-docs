@@ -56,7 +56,7 @@ Object object
 ### 代码示例
 
 
-
+:::codeTab
 ```js
 Page({
     facePersonIdmatch() {
@@ -83,3 +83,4 @@ Page({
     }
 });
 ```
+:::

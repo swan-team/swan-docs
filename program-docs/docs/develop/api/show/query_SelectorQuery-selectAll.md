@@ -44,9 +44,9 @@ NodesRef
 
 
 
-* 在 swan 文件中
+:::codeTab
 
-```html
+``` swan
 <view class="wrap">
     <view class="card-area">
         <movable-area>
@@ -80,7 +80,7 @@ NodesRef
 </view>
 ```
 
-* 在 js 文件中
+ 
 
 ```js
 Page({
@@ -101,3 +101,4 @@ Page({
     }
 });
 ```
+:::

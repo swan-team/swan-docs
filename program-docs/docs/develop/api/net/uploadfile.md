@@ -84,7 +84,7 @@ Object object
 ### 代码示例 
 
 
-
+:::codeTab
 ```js
 Page({
     data: { },
@@ -114,7 +114,7 @@ Page({
     }
 });
 ```
-
+:::
  返回值 ：
 
 返回一个`uploadTask`对象，通过`uploadTask`，可监听上传进度变化事件，以及取消上传任务。

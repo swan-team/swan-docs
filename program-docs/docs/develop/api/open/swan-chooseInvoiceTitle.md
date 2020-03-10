@@ -7,7 +7,7 @@ sidebar: swan-chooseInvoiceTitle
 ---
  
 
-> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。
+> 在工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)。此 API 日后将被废弃，建议使用 [button](/develop/component/formlist_button/) 组件实现相关功能。
 
 **解释**： 选择用户的发票抬头，使用该 API 需通过[获取用户权限设置](https://smartprogram.baidu.com/docs/develop/api/open/authorize_set/)申请授权后方可对用户发起授权申请，可在[需授权接口列表](https://smartprogram.baidu.com/docs/develop/api/open/authorize_list/)中查看相关错误码信息。
 
