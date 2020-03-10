@@ -125,6 +125,33 @@ Page({
     },
 });
 ```
+
+```css
+movable-area {
+    width: 3.88rem;
+    height: 2.18rem;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0;
+    border-radius: .05rem;
+}
+
+movable-view {
+   
+    background-color: #5B9FFF;
+    color: #fff;
+    border-radius: .05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bigger-area {
+    width: 4.8rem;
+    height: 2.8rem;
+}
+```
 :::
 ### 代码示例 3：只可以横向移动
 
@@ -298,7 +325,19 @@ Page({
 });
 ```
 :::
-### 代码示例 8: 可悬浮菜单 
+
+##  Bug & Tip 
+
+* Tip：movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
+* Tip：movable-view 默认为绝对定位，top 和 left 属性为 0px。
+* Tip：当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
+* Tip：当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
+* Tip：movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。
+
+
+## 参考示例
+
+###  参考示例 1：可悬浮菜单
 
 <a href="swanide://fragment/7dabfdd44f01d9546c2f5b7b8c92fe1d1576139863438" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -340,13 +379,3 @@ Page({
 });
 ```
 :::
-
-
-
-##  Bug & Tip 
-
-* Tip：movable-view 必须设置 width 和 height 属性，不设置默认为 10px。
-* Tip：movable-view 默认为绝对定位，top 和 left 属性为 0px。
-* Tip：当 movable-view 小于 movable-area 时，movable-view 的移动范围是在 movable-area 内。
-* Tip：当 movable-view 大于 movable-area 时，movable-view 的移动范围必须包含 movable-area（x 轴方向和 y 轴方向分开考虑）。
-* Tip：movable-view 必须在组件中，并且必须是直接子节点，否则不能移动。

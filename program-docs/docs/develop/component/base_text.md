@@ -50,15 +50,15 @@ webUrl: https://qft12m.smartapps.cn/component/text/text
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="page-section page-section-spacing">
+    <view class="card-area">
         <view class="text-box">
             <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本可被选中时需设置此属性为 true -->
             <text selectable="true" space="20">{{text}}</text>
             <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本可被选中时不用设置此属性 -->
             <!-- <text space="20">{{text}}</text> -->
         </view>
-        <button class="btn" disabled="{{!canAdd}}" type="primary" bind:tap="add">add text</button>
-        <button class="btn" disabled="{{!canRemove}}" type="primary" bind:tap="remove">remove text</button>
+        <button disabled="{{!canAdd}}" type="primary" bind:tap="add">增加一行文本</button>
+        <button disabled="{{!canRemove}}" type="primary" bind:tap="remove">移除一行文本</button>
     </view>
 </view>
 ```
@@ -70,8 +70,6 @@ const texts = [
     '百度智能小程序',
     '生态共建',
     '持续为开发者拓展更多的百度内、外的流量资源',
-    '百亿广告分成',
-    '通过把广告组件嵌入到小程序里得到广告收益',
     '十亿创新基金',
     '为创新类小程序提升流量及曝光',
     '......'
@@ -83,35 +81,31 @@ Page({
         text: '这是一段文字',
         canAdd: true,
         canRemove: false,
-        extraLine : [],
+        extraLine: []
     },
     add() {
-        extraLine.push(texts[extraLine.length % 12]);
+        extraLine.push(texts[extraLine.length % 6]);
         this.setData({
             text: extraLine.join('\n'),
-            canAdd: extraLine.length < 12,
+            canAdd: extraLine.length < 6,
             canRemove: extraLine.length > 0
-        })
+        });
     },
     remove() {
         if (extraLine.length > 0) {
             extraLine.pop();
             this.setData({
                 text: extraLine.join('\n'),
-                canAdd: extraLine.length < 12,
-                canRemove: extraLine.length > 0,
-            })
+                canAdd: extraLine.length < 6,
+                canRemove: extraLine.length > 0
+            });
         }
         else {
-            this.setData({
-                text: 'end'
-            })
+            this.setData({text: 'end'});
         }
     }
 });
-
 ```
-
 :::
 
 ## 参考示例

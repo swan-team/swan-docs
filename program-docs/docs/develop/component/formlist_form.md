@@ -98,7 +98,7 @@ status 为 Number 类型，message 为 String类型，当用户永久拒绝授�
         </view>
         <view class="card-area">
             <view class="top-description border-bottom">滑块选择器</view>
-            <slider class='slider' activeColor="#3388FF" block-size="20" name="slider"></slider>
+            <slider class="slider" activeColor="#3388FF" block-size="20" name="slider"></slider>
         </view>
         <view class="card-area">
             <view class="top-description border-bottom">输入框</view>
@@ -177,7 +177,7 @@ Page({
 ```
 :::
 
-###  参考示例 2:获取 getTemplateLibraryList 示例  
+###  参考示例 2: 获取 getTemplateLibraryList 示例  
 
 <a href="swanide://fragment/d422d409d3a0257de70e9007b96871bc1575446314278" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
@@ -197,7 +197,7 @@ Page({
     </view>
 </view>
 ```
- 
+
 
 ```js
 Page({

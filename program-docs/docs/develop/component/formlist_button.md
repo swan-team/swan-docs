@@ -88,10 +88,7 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 
  
 
-###  代码示例 1 ：不同大小按钮
-
-<a href="swanide://fragment/d6a8f368b9c384ecaf68843d8b1ee8b31575284322744" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
+###  代码示例 1 ：主要按钮
  
 
 :::codeTab
@@ -99,97 +96,198 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
-            size='mini'
+            <view>主要按钮</view>
+            <view>primary</view>
         </view>
-        <button type="primary" size="mini">
-            按钮
+        <button type="primary" plain="false">
+            主按钮 normal
         </button>
-    </view>
-
-    <view class="card-area">
-        <view class="top-description border-bottom">
-            size='default'
-        </view>
-        <button type="primary" size='default'>
-            按钮
-        </button>
-    </view>
-</view>
-```
-:::
-
-### 代码示例 2 ： 不同颜色按钮
-
-<a href="swanide://fragment/97707988b4d68082a98a0c625afe81c41575284526768" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
-
-:::codeTab
-```swan
-<view class="wrap">
-    <view class="card-area">
-        <view class="top-description border-bottom">
-            type='primary'
-        </view>
-        <button type="primary">
-            非禁用态
+        <button type="primary" loading>
+            主按钮 loading
         </button>
         <button type="primary" disabled>
-            禁用态
-        </button>
-    </view>
-    <view class="card-area">
-        <view class="top-description border-bottom">
-            type='default'
-        </view>
-        <button type="default">
-            非禁用态
-        </button>
-        <button type="default"  disabled>
-            禁用态
-        </button>
-    </view>
-    <view class="card-area">
-        <view class="top-description border-bottom">
-            type='warn'
-        </view>
-        <button type="warn">
-            非禁用态
-        </button>
-        <button type="warn"  disabled>
-            禁用态
+            主按钮 disabled
         </button>
     </view>
 </view>
 ```
 :::
-### 代码示例 3： 不同类型按钮
 
-<a href="swanide://fragment/405701fd348d68f9b8362718c38bff841575285086623" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
+### 代码示例 2 ： 次要按钮
 
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>次要按钮</view>
+            <view>default</view>
+        </view>
+        <button type="default" plain="false">
+            次按钮 normal
+        </button>
+        <button type="default" loading>
+            次按钮 loading
+        </button>
+        <button type="default" disabled>
+            次按钮 disabled
+        </button>
+    </view>
+</view>
+```
+:::
+### 代码示例 3： 警示按钮
  
 :::codeTab
 ```swan
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">
-            form-type='submit/reset'
+            <view>警示按钮</view>
+            <view>warn</view>
+        </view>
+        <button type="warn">
+            警示按钮 normal
+        </button>
+        <button type="warn" loading>
+            警示按钮 loading
+        </button>
+        <button type="warn" disabled>
+            警示按钮 disabled
+        </button>
+    </view>
+</view>
+```
+:::
+
+### 代码示例 4： 小尺寸按钮
+ 
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>小尺寸按钮</view>
+            <view>size='mini'</view>
+        </view>
+        <button type="primary" size="mini">
+            按钮 
+        </button>
+        <button type="default" size="mini">
+            按钮 
+        </button>
+        <button type="warn" size="mini">
+            按钮 
+        </button>
+    </view>
+</view>
+```
+:::
+
+### 代码示例 5： 自定义点击态
+ 
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            自定义点击态
+        </view>
+        <button type="primary" hover-class="none" bind:tap="tap">
+            无点击态
+        </button>
+        <button type="primary" hover-start-time="1000">
+            点击态延迟出现
+        </button>
+        <button type="primary" hover-stay-time="2000">
+            点击态延迟消失
+        </button>
+    </view>
+</view>
+```
+```js
+Page({
+    tap() {
+        swan.showToast({
+            title: '已点击',
+            icon: 'none'
+        });
+    }
+});
+```
+
+:::
+
+
+### 代码示例 6：绑定开放能力
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area" s-if="{{!isWeb}}">
+        <view class="top-description border-bottom">
+            绑定开放能力
+        </view>
+       <view>
+            <button type="primary" class="middle-btn" open-type="share">触发用户分享</button>
+            <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+            <button type="primary" class="middle-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取用户手机号</button>
+            <button type="primary" class="middle-btn" open-type="openSetting" bindopensetting="openSetting">打开授权设置页</button>
+            <button type="primary" class="middle-btn" contact open-type="contact" bindopensetting="contact">打开客服对话</button>
+            <button type="primary" class="middle-btn" open-type="chooseInvoiceTitle" bindchooseInvoiceTitle="chooseInvoiceTitle">选择用户发票抬头</button>
+            <button type="primary" class="middle-btn" open-type="chooseAddress" bindchooseAddress="chooseAddress">选择用户收货地址</button>
+       </view>
+    </view>
+</view>
+```
+```js
+Page({
+    getUserInfo(e) {
+        console.log('用户信息:', e);
+    },
+    openSetting(e) {
+        console.log('用户设置:', e);
+    },
+    getPhoneNumber(e) {
+        console.log('用户手机号:', e);
+    },
+    contact(e) {
+        console.log('用户面板:', e);
+    },
+    chooseInvoiceTitle(e) {
+        console.log('发票抬头:', e);
+    },
+    chooseAddress(e) {
+        console.log('收货地址:', e);
+    }
+});
+```
+:::
+
+### 代码示例 7： 不同类型按钮
+ 
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            form-type="submit/reset"
         </view>
         <form bindsubmit="submit" bindreset="reset">
-            <button form-type="submit" type="primary" size='mini'>
+            <button form-type="submit" type="primary">
                 提交
             </button>
-            <button form-type="reset" size='mini'>
+            <button form-type="reset">
                 重置
             </button>
         </form>
     </view>
     <view class="card-area">
         <view class="top-description border-bottom">
-            form-type='buttonclick'
+            form-type="buttonclick"
         </view>
         <form>
-            <button form-type="buttonclick" bindtap="buttonclick" type="primary" size='default'>
+            <button form-type="buttonclick" bindtap="buttonclick" type="primary" size="default">
                 普通点击
             </button>
         </form>
@@ -197,99 +295,8 @@ webUrl: https://qft12m.smartapps.cn/component/button/button
 </view>
 ```
 :::
-### 代码示例 4：不同功能按钮
 
-<a href="swanide://fragment/37cade6f9abe86ecba7931217aee4ddb1580818934165" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
-
-:::codeTab
-```swan
-<view class="wrap">
-    <view class="card-area">
-        <view class="top-description border-bottom">
-            open-type='share'
-        </view>
-        <button open-type='share' type="primary">
-            share
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='getUserInfo'
-        </view>
-        <button open-type='getUserInfo' type="primary" bindgetuserinfo="getUserInfo">
-            getUserInfo
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='getPhoneNumber'
-        </view>
-        <button open-type='getPhoneNumber' type="primary" bindgetphonenumber="getphonenumber">
-            getPhoneNumber
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='openSetting'
-        </view>
-        <button open-type='openSetting' type="primary" bindopensetting="openSetting">
-            openSetting
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='contact'
-        </view>
-        <button open-type='contact' type="primary" bindcontact="contact">
-            contact
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='chooseInvoiceTitle'
-        </view>
-        <button open-type='chooseInvoiceTitle' type="primary" bindchooseInvoiceTitle="chooseInvoiceTitle">
-            chooseInvoiceTitle
-        </button>
-    </view>
-    <view class="card-area">
-         <view class="top-description border-bottom">
-            open-type='chooseAddress'
-        </view>
-        <button open-type='chooseAddress' type="primary" bindchooseAddress="chooseAddress">
-            chooseAddress
-        </button>
-    </view>
-</view>
-```
- 
-
-```js
-Page({
-    getphonenumber(e) {
-        console.log(e)
-    },
-    getUserInfo(e){
-        console.log(e)
-    },
-    opensetting(e) {
-        console.log(e)
-    },
-    contact(e) {
-        console.log(e)
-    },
-    chooseInvoiceTitle(e) {
-        console.log(e)
-    },
-    chooseAddress(e) {
-        console.log(e)
-    }	    }
-});
-```
-:::
-### 代码示例 5：hover-stop-propagation属性
+### 代码示例 8：hover-stop-propagation属性
 <a href="swanide://fragment/cfafb425898e7b2e95bca2b6e98a18371581516515058" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
 
  

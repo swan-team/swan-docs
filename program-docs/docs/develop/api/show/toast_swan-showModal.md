@@ -66,8 +66,8 @@ Page({
             title: '提示标题',
             content: '提示内容、告知状态、信息和解决方法，描述尽量控制在两行内',
             showCancel: true,
-            cancelText: '辅助操作',
-            confirmText: '主要操作'
+            cancelText: '取消',
+            confirmText: '确定'
         });
     }
 });
@@ -91,7 +91,7 @@ Page({
         swan.showModal({
             content: '提示内容、告知状态、信息和解决方法，可以折行',
             showCancel: false,
-            confirmText: '我知道了'
+            confirmText: '确定'
         });
     }
 });

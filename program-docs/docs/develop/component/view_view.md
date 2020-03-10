@@ -36,11 +36,15 @@ webUrl: https://qft12m.smartapps.cn/component/view/view
 
 :::codeTab
 ```swan
-<view class='wrap'>
+<view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">横向布局</view>
         <view class="rowlike">
-            <view class="color-a" hover-class="hover" hover-start-time="100" hover-stay-time="200" hover-stop-propagation="false">
+            <view class="color-a"
+                  hover-class="hover"
+                  hover-stop-propagation="false"
+                  hover-start-time="100"
+                  hover-stay-time="200">
                 <text>A</text>
             </view>
             <view class="color-b">
@@ -52,6 +56,38 @@ webUrl: https://qft12m.smartapps.cn/component/view/view
         </view>
     </view>
 </view>
+```
+```css
+.rowlike {
+    margin: .2rem .57rem;
+    display: flex;
+}
+
+.rowlike view {
+    flex: 1;
+    text-align: center;
+    font-size: .16rem;
+    color: #FFF;
+    width: .91rem;
+    height: 1.22rem;
+    line-height: 1.22rem;
+}
+
+.color-a {
+    background-color: #5B9FFF;
+}
+
+.color-b {
+    background-color: #85B8FF;
+}
+
+.color-c {
+    background-color: #ADCFFF;
+}
+
+.hover {
+    opacity: .2;
+}
 ```
 :::
 
@@ -76,6 +112,34 @@ webUrl: https://qft12m.smartapps.cn/component/view/view
         </view>
     </view>
 </view>
+```
+```css
+.collike {
+    margin: .2rem .68rem;
+    flex-direction: column;
+}
+
+.collike view {
+    height: 1.07rem;
+    width: 2.5rem;
+    line-height: 1.07rem;
+    flex: 1;
+    text-align: center;
+    font-size: .16rem;
+    color: #FFF;
+}
+.color-a {
+    background-color: #5B9FFF;
+}
+.color-b {
+    background-color: #85B8FF;
+}
+.color-c {
+    background-color: #ADCFFF;
+}
+.hover {
+    opacity: .2;
+}
 ```
 :::
 

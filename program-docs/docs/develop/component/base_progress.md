@@ -71,7 +71,8 @@ webUrl: https://qft12m.smartapps.cn/component/progress/progress
             <view>显示当前百分比</view>
             <view>show-info</view>
         </view>
-        <progress class="progress" percent="40" activeColor="#3c76ff" show-info active />
+        <!-- 请调试基础版本为3.150.1以上查看 font-size="13" 的效果 -->
+        <progress class="progress" percent="40" font-size="13" activeColor="#3c76ff" show-info active />
     </view>
 </view>
 ```
@@ -88,9 +89,20 @@ webUrl: https://qft12m.smartapps.cn/component/progress/progress
             <view>自定义样式</view>
             <view>stroke-width="7" activeColor="#00BC89"</view>
         </view>
-        <progress class="progress" percent="60" activeColor="#00BC89" stroke-width="7" active />
+        <!-- 基础版本为3.150.1以上外层圆角用属性设置，以下用css设置 -->
+        <progress class="progress" percent="60" border-radius="90" activeColor="#00BC89" stroke-width="7" active />
     </view>
 </view>
+```
+
+```css
+.progress {
+    margin: .35rem .23rem;
+}
+.progress-bar, // 外层圆角设置
+.progress-inner-bar {
+    border-radius: 30rpx;
+}
 ```
 :::
 ### 代码示例 4： 显示动画
@@ -104,8 +116,8 @@ webUrl: https://qft12m.smartapps.cn/component/progress/progress
 <view class="wrap">
     <view class="card-area">
         <view class="top-description border-bottom">显示动画</view>
-        <progress class="progress" percent="70" color="#38f" active active-mode='backwards'/>
-        <progress class="progress" percent="80" color="#38f" active active-mode='forwards'/>
+        <progress class="progress" duration="10" percent="70" color="#38f" active active-mode="backwards"/>
+        <progress class="progress" percent="80" color="#38f" active active-mode="forwards"/>
     </view>
 </view>
 ```

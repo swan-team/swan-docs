@@ -38,11 +38,18 @@ webUrl: https://qft12m.smartapps.cn/component/cover-image/cover-image
 
 :::codeTab
 ```swan
-<map id="myMap" style="width: 100%" longitude="{{longitude}}" atitude="{{latitude}}">
-    <cover-image class="cover-image"
-        src="https://b.bdstatic.com/miniapp/image/cover-image.png">
-    </cover-image>
-</map>
+<view class="wrap">
+    <view class="card-area">
+        <map
+        class="map"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}">
+            <cover-image class="cover-image"
+            src="https://b.bdstatic.com/miniapp/image/cover-image.png">
+            </cover-image>
+        </map>
+    </view>
+</view>
 ```
 
  
@@ -54,6 +61,19 @@ Page({
         longitude: '116.274040'
     }
 });
+```
+
+```css
+.map { 
+    width: 100%;
+    height: 2.67rem;
+}
+
+.cover-image {
+    width: 1.93rem;
+    height: .89rem;
+    margin: 25% 25%;
+}
 ```
 :::
 

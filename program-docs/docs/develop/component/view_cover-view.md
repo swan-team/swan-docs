@@ -37,19 +37,19 @@ webUrl: https://qft12m.smartapps.cn/component/cover-view/cover-view
  
 :::codeTab
 ```swan
-<map id="myMap"
-     longitude="{{longitude}}"
-     latitude="{{latitude}}">
-    <cover-view class="cover-view">
-        <cover-view class="container">
-            <cover-view class="flex-wrp" style="flex-direction:row;">
-              <cover-view class="flex-item demo-text-1"></cover-view>
-              <cover-view class="flex-item demo-text-2"></cover-view>
-              <cover-view class="flex-item demo-text-3"></cover-view>
+<view class="wrap">
+    <view class="card-area">
+        <map class="map"
+            longitude="{{longitude}}"
+            latitude="{{latitude}}">
+            <cover-view class="cover-view">
+                <cover-view class="flex-item demo-text-1"></cover-view>
+                <cover-view class="flex-item demo-text-2"></cover-view>
+                <cover-view class="flex-item demo-text-3"></cover-view>
             </cover-view>
-        </cover-view>
-    </cover-view>
-</map>
+        </map>
+    </view>
+</view>
 ```
  
 ```js
@@ -59,6 +59,43 @@ Page({
         longitude: '116.274040'
     }
 });
+```
+
+```css
+.map {
+    width: 100%;
+    height: 2.67rem;
+    border-radius: 8px;
+}
+
+.cover-view {
+    opacity: .7;
+    position: relative;
+    margin: 22% 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item {
+    width: .64rem;
+    height: .89rem;
+}
+
+.demo-text-1 {
+    background: #6895FF;
+}
+
+.demo-text-2 {
+    background: #8FB1FF;
+}
+
+.demo-text-3 {
+    background: #C3D1FF;
+}
+
+.card-area {
+    height: 2.66rem;
+}
 ```
 :::
  

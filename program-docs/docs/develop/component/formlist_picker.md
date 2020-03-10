@@ -106,20 +106,22 @@ webUrl: https://qft12m.smartapps.cn/component/picker/picker
 
 ###  代码示例 1：普通选择器 
 
-<a href="swanide://fragment/c16ae3b84a6ac40fefd4ddb0db99f3ce1572872865725" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
 
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">普通选择</view>
-    <view class="section">
-        <picker mode="selector" value="{{arrIndex}}" range="{{selector}}" bind:change="selectorChange"  bind:cancel="cancel">
-            <view class="picker">
-                <text class='chooseItem'>当前选择:</text>{{selector[arrIndex]}}
-            </view>
-        </picker>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>普通选择器</view>
+            <view>mode='selector'</view>
+        </view>
+        <view class="section" hover-class="section-active">
+            <picker mode="selector" value="{{arrIndex}}" range="{{selector}}" bind:change="selectorChange">
+                <view class="picker">
+                    <text class='chooseItem'>请选择:</text>{{selector[arrIndex]}}
+                </view>
+            </picker>
+        </view>
     </view>
 </view>
 ```
@@ -128,38 +130,34 @@ webUrl: https://qft12m.smartapps.cn/component/picker/picker
 ```js
 Page({
     data: {
-        arrIndex: 0,
-        selector: ['React', 'Vue', 'AngularJS']
+        selector: ['选项一', '选项二', '选项三'],
+        arrIndex: 0
     },
     selectorChange(e) {
         console.log('picker-selector changed，值为', e.detail.value);
         this.setData('arrIndex', e.detail.value);
-    },
-    cancel() {
-        swan.showToast({
-            title: '用户取消选择',
-            icon: 'none'
-        });
     }
 });
 ```
 :::
 ###  代码示例 2：时间选择器 
 
-<a href="swanide://fragment/6d81c7bad0496d09ca8ffe7981c5c3bf1572872978396" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
 
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">时间选择</view>
-    <view class="section">
-        <picker mode="time" value="{{time}}" start="1:01" end="22:59" bind:change="timeChange" disabled="false" bind:cancel="cancel">
-            <view class="picker">
-                <text class='chooseItem'>当前选择:</text>{{time}}
-            </view>
-        </picker>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>时间选择器</view>
+            <view>mode='time'</view>
+        </view>
+        <view class="section" hover-class="section-active">
+            <picker mode="time" value="{{time}}" start="1:01" end="22:59" bind:change="timeChange" disabled="false">
+                <view class="picker">
+                    <text class='chooseItem'>请选择时间:</text>{{time}}
+                </view>
+            </picker>
+        </view>
     </view>
 </view>
 ```
@@ -175,12 +173,6 @@ Page({
         this.setData(
             'time', e.detail.value
         );
-    },
-    cancel() {
-        swan.showToast({
-            title: '用户取消选择',
-            icon: 'none'
-        });
     }
 });
 ```
@@ -190,20 +182,21 @@ Page({
 
 ###  代码示例 3 ：日期选择器
 
-<a href="swanide://fragment/0f83f4c4024d8c279589f5bb594515b51572873363338" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
-
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">日期选择</view>
-    <view class="section date-section">
-        <picker mode="date" value="{{dateDay}}" bind:change="dateChangeDay" fields="day" bind:cancel="cancel">
-            <view>
-                <text class='chooseItem'>当前选择:</text>{{dateDay}}
-            </view>
-        </picker>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>日期选择器</view>
+            <view>mode='date'</view>
+        </view>
+        <view class="section date-section" hover-class="section-active">
+            <picker mode="date" value="{{dateDay}}" bind:change="dateChangeDay" fields="day">
+                <view>
+                    <text class='chooseItem'>请选择日期:</text>{{dateDay}}
+                </view>
+            </picker>
+        </view>
     </view>
 </view>
 ```
@@ -212,38 +205,35 @@ Page({
 ```js
 Page({
     data: {
-        dateDay: '2018-01-05',
+        dateDay: '2018-01-05'
     },
     dateChangeDay(e) {
         console.log('picker-date changed，值为', e.detail.value);
         this.setData(
             'dateDay', e.detail.value
         );
-    },
-    cancel() {
-        swan.showToast({
-            title: '用户取消选择',
-            icon: 'none'
-        });
     }
 });
 ```
 :::
 ###  代码示例 4 ：多列选择器
 
-<a href="swanide://fragment/6521d8dc859cdee233d6e68b00a2b1301572873475056" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
  
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">多列选择器</view>
-    <view class="section date-section">
-        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" title="多列选择器">
-            <view class="picker">
-                <text class='chooseItem'>当前选择:</text>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
-            </view>
-        </picker>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>多列选择器</view>
+            <view>mode='multiSelector'</view>
+        </view>
+        <view class="section date-section" hover-class="section-active">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" title="多列选择器">
+                <view class="picker">
+                    <text class='chooseItem'>请选择:</text>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}
+                </view>
+            </picker>
+        </view>
     </view>
 </view>
 ```
@@ -261,7 +251,6 @@ Page({
             'multiIndex', e.detail.value
         );
     },
-
     bindMultiPickerColumnChange: function (e) {
         console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
         var data = {
@@ -329,22 +318,23 @@ Page({
 ```
 :::
 
-###  代码示例 5 ：地区选择器
-
-<a href="swanide://fragment/26a9c93186196d102d032ebcbfcf6df41572873584926" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
+###  代码示例 5 ：省市区选择器
 
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">地区选择</view>
-    <view class="section">
-        <picker mode="region" bind:change="regionChange" custom-item="{{customItem}}" title="地区选择器" bind:cancel="cancel">
-            <view class="picker">
-                <text class='chooseItem'>当前选择:</text>{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
-            </view>
-        </picker>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>省市区选择器</view>
+            <view>mode='region'</view>
+        </view>
+        <view class="section" hover-class="section-active">
+            <picker mode="region" bind:change="regionChange" custom-item="{{customItem}}" title="地区选择器">
+                <view class="picker">
+                    <text class='chooseItem'>请选择地区:</text>{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
+                </view>
+            </picker>
+        </view>
     </view>
 </view>
 ```
@@ -353,20 +343,77 @@ Page({
 ```js
 Page({
     data: {
-        regionData: ['全部', '全部', '全部'],
+        regionData: ['全部', '全部', '全部']
     },
     regionChange(e) {
         this.setData(
             'regionData', e.detail.value
         );
         console.log('picker-time changed，值为', e.detail.value);
+    }
+});
+```
+:::
+
+###  代码示例 6 ：设置禁用
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>设置禁用</view>
+            <view>disabled</view>
+        </view>
+        <view class="section" hover-class="section-active">
+            <picker mode="selector" class="disabled" value="{{arrIndex}}" disabled range="{{selector}}">
+                <view class="picker">
+                    <text class='chooseItem'>请选择:</text>{{selector[arrIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+```
+:::
+
+###  代码示例 7：取消选择时触发提示
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>取消选择时触发提示</view>
+            <view>bindcancel</view>
+        </view>
+        <view class="section" hover-class="section-active">
+            <picker mode="selector" value="{{arrIndex}}" range="{{selector}}" bind:change="selectorChange"  bind:cancel="cancel">
+                <view class="picker">
+                    <text class='chooseItem'>请选择:</text>{{selector[arrIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+```
+
+```js
+Page({
+    data: {
+        arrIndex: 0,
+        selector: ['选项一', '选项二', '选项三']
+    },
+    selectorChange(e) {
+        console.log('picker-selector changed，值为', e.detail.value);
+        this.setData('arrIndex', e.detail.value);
     },
     cancel() {
         swan.showToast({
             title: '用户取消选择',
             icon: 'none'
         });
-    },
+    }
 });
 ```
 :::

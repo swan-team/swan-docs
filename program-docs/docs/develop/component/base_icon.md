@@ -51,36 +51,21 @@ webUrl: https://qft12m.smartapps.cn/component/icon/icon
 
  
 
-###  代码示例 
-
-
-
- 
-
+### 代码示例 1： 自定义icon类型
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">默认样式</view>
-    <view class="group">
-        <view>
-            <icon s-for="type in types.smallDefault" type="{{type}}" class="small-default" />
+    <view class="card-area">
+        <view class="top-description border-bottom">自定义icon类型</view>
+        <view class="icon-area">
+            <view class="icon-item" s-for="type in types.smallDefault">
+                <icon type="{{type}}"/>
+                <view class="icon-text"> {{type}}</view>
+            </view>
         </view>
-    </view>
-
-    <view class="title">尺寸选择</view>
-    <view class="group choose">
-        <icon s-for="size in sizes" type="success" size="{{size}}" class="icon-size" />
-    </view>
-
-    <view class="title">颜色选择</view>
-    <view class="group choose">
-        <icon s-for="color in colors" type="success" size="40" color="{{color}}" class="icon-color" />
     </view>
 </view>
 ```
-
- 
-
 ```js
 Page({
     data: {
@@ -89,14 +74,131 @@ Page({
             'success_no_circle', 'clear', 'search', 'personal',
             'setting', 'top', 'close', 'cancel', 'download',
             'checkboxSelected', 'radioSelected', 'radioUnselect']
-        },
+        }
+    }
+});
+```
+
+```css
+.icon-area {
+    margin-top: .15rem;
+}
+
+.icon-item {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: .8rem;
+    height: .95rem;
+    margin: .07rem;
+}
+
+.icon-text {
+    margin-top: .15rem;
+    width: .8rem;
+    word-break: break-all;
+}
+```
+:::
+
+### 代码示例 2： 自定义icon大小
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">自定义icon大小</view>
+        <view class="icon-area">
+            <view s-for="size in sizes" class="icon-item">
+                <icon type="success" size="{{size}}"/>
+                <view class="icon-text">{{size}}px</view>
+            </view>
+        </view>
+    </view>
+</view>
+```
+
+```js
+Page({
+    data: {
         colors: [
             '#333', '#666', '#999', '#3C76FF', '#F7534F'
-        ],
+        ]
+    }
+});
+```
+
+```css
+.icon-area {
+    margin-top: .15rem;
+}
+
+.icon-item {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: .8rem;
+    height: .95rem;
+    margin: .07rem;
+}
+
+.icon-text {
+    margin-top: .15rem;
+    width: .8rem;
+    word-break: break-all;
+}
+```
+:::
+
+
+### 代码示例 3： 自定义icon颜色
+
+:::codeTab
+```swan
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">自定义icon颜色</view>
+        <view class="icon-area">
+            <view class="icon-item" s-for="color in colors">
+                <icon type="success" size="25" color="{{color}}" class="icon-color" />
+                <view class="icon-text">{{color}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+```
+
+```js
+Page({
+    data: {
         sizes: [
             40, 35, 30, 25
         ]
     }
 });
+```
+
+```css
+.icon-area {
+    margin-top: .15rem;
+}
+
+.icon-item {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: .8rem;
+    height: .95rem;
+    margin: .07rem;
+}
+
+.icon-text {
+    margin-top: .15rem;
+    width: .8rem;
+    word-break: break-all;
+}
 ```
 :::

@@ -50,31 +50,31 @@ webUrl: https://qft12m.smartapps.cn/component/scroll-view/scroll-view
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">纵向滚动</view>
-    <scroll-view
-        scroll-y
-        class="scroll-view"
-        scroll-into-view="{= toView =}"
-        scroll-with-animation="true"
-        bind:scrolltoupper="upper"
-        bind:scrolltolower="lower"
-        upper-threshold="1"
-        scroll-top="{= scrollTop =}"
-        lower-threshold="1"
-        bind:scroll="myscroll"
-        enable-back-to-top="true"
-    >
-        <view id="one" class="color-a">A</view>
-        <view id="two" class="color-b">B</view>
-        <view id="three"  class="color-c">C</view>
-    </scroll-view>
-    <view class="page-section-btns">
-        <view class="next" bindtap="tap">下一页</view>
-        <view bindtap="tapMove">滚动</view>
-        <view class="scrollToTop" bindtap="scrollToTop">回顶部</view>
+    <view class="card-area">
+        <view class="top-description">纵向滚动</view>
+        <scroll-view
+            class="scroll-view"
+            scroll-y
+            upper-threshold="1"
+            lower-threshold="1"
+            scroll-top="{= scrollTop =}"
+            scroll-into-view="{= scrollIntoView =}"
+            scroll-with-animation="true"
+            enable-back-to-top="true"
+            bindscrolltoupper="upper"
+            bindscrolltolower="lower"
+            bindscroll="scroll">
+            <view id="one" class="color-a">A</view>
+            <view id="two" class="color-b">B</view>
+            <view id="three"  class="color-c">C</view>
+        </scroll-view>  
+        <view class="page-section-btns">
+            <view class="next" bindtap="tap">下一页</view>
+            <view bindtap="tapMove">滚动</view>
+            <view class="scrollToTop" bindtap="scrollToTop">回顶部</view>
+        </view>
     </view>
 </view>
-
 ```
  
 
@@ -82,8 +82,9 @@ webUrl: https://qft12m.smartapps.cn/component/scroll-view/scroll-view
 const order = ['one', 'two', 'three'];
 Page({
     data: {
-        toView: 'one',
+        scrollIntoView: 'one',
         scrollTop: 0,
+        scrollLeft: 0
     },
     upper() {
         swan.showToast({
@@ -100,12 +101,12 @@ Page({
     },
 
     scroll(e) {
-        console.log('获取滚动事件的详细信息e.detail：');
-        console.dir(e.detail);
+        console.log('获取滚动事件的详细信息e.detail：', e.detail);
         this.setData({
             scrollTop: e.detail.scrollTop
         })
     },
+
     scrollToTop(e) {
         console.log(e);
         this.setData({
@@ -114,11 +115,11 @@ Page({
     },
     tap(e) {
         for (let i = 0; i < order.length; ++i) {
-            if (order[i] === this.data.toView) {
+            if (order[i] === this.data.scrollIntoView) {
                 const next = (i + 1) % order.length;
                 this.setData({
-                    toView: order[next],
-                    scrollTop: next * 200,
+                    scrollIntoView: order[next],
+                    scrollTop: next * 500,
                 });
                 break;
             }
@@ -141,31 +142,31 @@ Page({
 :::codeTab
 ```swan
 <view class="wrap">
-    <view class="title">横向滚动</view>
-    <scroll-view
-        scroll-x
-        class="scroll-view"
-        bind:scrolltoupper="toLeft"
-        bind:scrolltolower="toRight"
-        scroll-left="{= scrollLeft =}"
-        upper-threshold="1"
-        lower-threshold="1"
-        bind:scroll="scroll"
-    >
-        <view id="four" class="color-a row-view">A</view>
-        <view id="five" class="color-b row-view">B</view>
-        <view id="six" class="color-c row-view">C</view>
-    </scroll-view>
+    <view class="card-area">
+        <view class="top-description">横向滚动</view>
+        <scroll-view
+            class="scroll-view"
+            scroll-x
+            bindscrolltoupper="toLeft"
+            bindscrolltolower="toRight"
+            scroll-left="{= scrollLeft =}"
+            upper-threshold="1"
+            lower-threshold="1"
+            bindscroll="scroll">
+            <view id="four" class="color-a row-view">A</view>
+            <view id="five" class="color-b row-view">B</view>
+            <view id="six" class="color-c row-view">C</view>
+        </scroll-view>
+    </view>
 </view>
 
 ```
  
 
 ```js
-const order = ['one', 'two', 'three'];
 Page({
     data: {
-        scrollLeft: 'five'
+        scrollLeft: 0
     },
 
     toLeft() {

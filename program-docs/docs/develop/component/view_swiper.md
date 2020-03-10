@@ -60,66 +60,77 @@ change事件中的source字段，表示触发change事件的原因，可能值�
 
 :::codeTab
 ```swan
+<custom chineseName="滑块视图容器" engName="swiper"></custom>
 <view class="wrap">
-    <view class="title"></view>
-    <view class="swiper-wrap">
+    <view class="card-area">
         <swiper 
+            class="swiper"
+            indicator-dots="{{switchIndicateStatus}}" 
             indicator-color="rgba(0,0,0,0.30)"
             indicator-active-color="#fff"
-            duration="{{switchDuration}}"
-            interval="{{autoPlayInterval}}"
             autoplay="{{switchAutoPlayStatus}}"
-            indicator-dots="{{switchIndicateStatus}}" 
-            vertical="false"
-            circular="true"
             current="0"
-            current-item-id="0"
+            current-item-id="0"        
+            interval="{{autoPlayInterval}}"
+            duration="{{switchDuration}}"
+            circular="true"
+            vertical="{{switchVerticalStatus}}"
             previous-margin="0px"
             next-margin="0px"
             display-multiple-items="1"
             bind:change="swiperChange"
-            bind:animationfinish="animationfinish"
-        >
-            <block s-for="item in items">
-                <swiper-item class="{{item.className}}">
-                    <view class="item">{{item.value}}</view>
-                </swiper-item>
-            </block>
+            bind:animationfinish="animationfinish">
+            <swiper-item s-for="item in items"
+                        item-id="{{itemId}}"
+                        class="{{item.className}}">
+                <view class="item">{{item.value}}</view>
+            </swiper-item>
         </swiper>
+
+        <view class="item-scroll border-bottom">
+            <text class="switch-text-before">指示点</text>
+            <switch class="init-switch" 
+                    checked="{{switchIndicateStatus}}"
+                    bind:change="switchIndicate">
+            </switch>
+        </view>
+
+        <view class="item-scroll border-bottom">
+            <text class="switch-text-before">自动切换</text>
+            <switch checked="{{switchAutoPlayStatus}}" bind:change="switchAutoPlay" class="init-switch"></switch>
+        </view>
+
+        <view class="item-scroll">
+            <text class="switch-text-before">纵向滑动</text>
+            <switch checked="{{switchVerticalStatus}}" bind:change="switchVertical" class="init-switch"></switch>
+        </view>
     </view>
-
-    <view class="switch-wrap">
-        <view>
-            <text>指示器</text>
-            <switch checked="{{switchIndicateStatus}}" bind:change="switchIndicate" class="switch"></switch>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>滑块切换时长</view>
+            <view>{{switchDuration}}ms</view>
         </view>
-        <view>
-            <text>自动播放</text>
-            <switch checked="{{switchAutoPlayStatus}}" bind:change="switchAutoPlay" class="switch"></switch>
-        </view>
+        <slider class="slider" 
+                min="300" 
+                max="1500" 
+                value="{{switchDuration}}"
+                bind:change="changeSwitchDuration">
+        </slider>
     </view>
-
-    <view class="slider-wrap">
-        <view>
-            <view class="slider-title-time">
-                <text class="slider-title">幻灯片切换时长</text>
-                <text class="slider-time">{{switchDuration}}ms</text>
-            </view>
-            <slider min="300" max="1500" value="{{switchDuration}}"  bind:change="changeSwitchDuration"></slider>
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <view>自动切换时间间隔</view>
+            <view>{{autoPlayInterval}}ms</view>
         </view>
-
-        <view>
-            <view class="slider-title-time">
-                <text class="slider-title">自动播放间隔时长</text>
-                <text class="slider-time">{{autoPlayInterval}}ms</text>
-            </view>
-            <slider min="1000" max="5000" value="{{autoPlayInterval}}" bind:change="changeAutoPlayInterval"></slider>
-        </view>
+        <slider class="slider" 
+                min="1000" 
+                max="5000" 
+                value="{{autoPlayInterval}}"
+                bind:change="changeAutoPlayInterval">
+        </slider>
     </view>
 </view>
 ```
-
- 
 
 ```js
 Page({
@@ -136,25 +147,28 @@ Page({
                 value: 'C'
             }
         ],
-        imgUrls: [
-            'https://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-            'https://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-            'https://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-            'https://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-        ],
         current: 0,
+        itemId: 0,
         switchIndicateStatus: true,
         switchAutoPlayStatus: false,
+        switchVerticalStatus: false,
         switchDuration: 500,
         autoPlayInterval: 2000
     },
-    
     swiperChange(e) {
         console.log('swiperChange:', e.detail);
+        this.setData({
+            itemId: e.detail.current
+        });
     },
     switchIndicate() {
         this.setData({
             switchIndicateStatus: !this.getData('switchIndicateStatus')
+        });
+    },
+    switchVertical() {
+        this.setData({
+            switchVerticalStatus: !this.getData('switchVerticalStatus')
         });
     },
     switchAutoPlay() {
@@ -177,6 +191,55 @@ Page({
     }
 });
 ```
+
+```css
+.swiper {
+    height: 2.18rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.item {
+    width: 100%;
+    height: 2.18rem;
+    font-size: .18rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2.18rem;
+}
+
+.slider {
+    margin: .3rem .23rem;
+}
+
+.switch-text-before {
+    margin-top: .17rem;
+}
+
+.init-switch {
+    vertical-align: middle;
+    margin: .14rem 0 .14rem .17rem;
+}
+
+.color-a {
+    background-color: #5B9FFF;
+}
+
+.color-b {
+    background-color: #85B8FF;
+}
+
+.color-c {
+    background-color: #ADCFFF;
+}
+
+.switch {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+```
+
 :::
 ##  Bug & Tip 
 

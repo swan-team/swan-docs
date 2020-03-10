@@ -32,11 +32,10 @@ webUrl: https://qft12m.smartapps.cn/component/label/label
  
 ###  代码示例1 - label用for标识表单组件 ：
 
-<a href="swanide://fragment/e57d56f1f8440367f2980cafcbf112f91565503515586" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
 :::codeTab
 ```swan
-<view class="card-area">
+<view class="wrap">
+    <view class="card-area">
         <view class="top-description border-bottom">label用for标识表单组件</view>
         <radio-group class="group">
             <view class="label-2 {{index === 0 ? 'label-first': ''}}" s-for="item, index in radioItems">
@@ -47,6 +46,7 @@ webUrl: https://qft12m.smartapps.cn/component/label/label
             </view>
         </radio-group>
     </view>
+</view>
 ```
 
  

@@ -94,162 +94,36 @@ webUrl: https://qft12m.smartapps.cn/component/rich-text/rich-text
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-###  代码示例 
+###  代码示例 1: 通过HTML String渲染
 
 :::codeTab
 ```swan
-<view class="rich-text">
-    <view class="renders">
-        <view class="renders_title">通过HTML String渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{htmlSnip}}</view>
-            </scroll-view>
-            <button type="primary" bind:tap="renderHtml">渲染HTML</button>
-            <block s-if="{{renderedByHtml}}">
-                <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本不可被选中时不用设置此属性 -->
-                <rich-text nodes="{{htmlSnip}}"></rich-text>
-                <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本不可被选中时需设置此属性为 false -->
-                <!-- <rich-text selectable="false" nodes="{{htmlSnip}}"></rich-text> -->    
-            </block>
-        </view>
-    </view>
-    <view class="renders">
-        <view class="renders_title">通过节点渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{nodeSnip}}</view>
-            </scroll-view>
-            <button type="primary" bind:tap="renderNode">渲染Node</button>
-            <block s-if="{{renderedByNode}}" style="margin-bottom:.5rem;">
-                <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本不可被选中时不用设置此属性 -->
-                <rich-text nodes="{{nodes}}"></rich-text>
-                <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本不可被选中时需设置此属性为 false -->
-                <!-- <rich-text selectable="false" nodes="{{nodes}}"></rich-text> -->
-            </block>
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">通过HTML String渲染</view>
+        <view class="description">代码示例</view>
+        <scroll-view scroll-y>
+            <view class="cont border-bottom">{{htmlSnip}}</view>
+        </scroll-view>
+        <view class="description">渲染效果</view>
+        <view class='rich-text'>
+            <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本不可被选中时不用设置此属性 -->
+            <rich-text nodes="{{htmlSnip}}"></rich-text>
+            <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本不可被选中时需设置此属性为 false -->
+            <!-- <rich-text selectable="false" nodes="{{htmlSnip}}"></rich-text> -->
         </view>
     </view>
 </view>
 ```
 
- 
-
 ```js
-const htmlSnip =
-`<div class="div_class">
-    <h1>Title</h1>
-    <p class="p">
-        Life is&nbsp;<i>like</i>&nbsp;a box of
-        <b>&nbsp;chocolates</b>
-    </p>
-</div>`;
-const nodeSnip =
-`Page({
-    data: {
-        nodes: [{
-            name: 'div',
-            attrs: {
-                class: 'div_class',
-                style: 'line-height: 60px; color: #4F99FB;'
-            },
-            children: [{
-                type: 'text',
-                text: 'You never know what you're gonna get.'
-            }]
-        }]
-    }
-})`;
-
-Page({
-    data: {
-        htmlSnip,
-        nodeSnip,
-        renderedByHtml: false,
-        renderedByNode: false,
-        nodes: [{
-            name: 'div',
-            attrs: {
-                class: 'div_class',
-                style: 'line-height: 60px; color: #4F99FB;'
-            },
-            children: [{
-                type: 'text',
-                text: 'You never know what you\'re gonna get.'
-            }]
-        }]
-    },
-    renderHtml() {
-        this.setData({
-            renderedByHtml: true
-        });
-    },
-    renderNode() {
-        this.setData({
-            renderedByNode: true
-        });
-    },
-    enterCode(e) {
-      this.setData({
-          htmlSnip: e.detail.value
-      });
-    }
-});
-```
-:::
-
-
- 
-
-
-
-##  Bug & Tip 
-
-* Tip：单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
-* Tip：支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
-* Tip：nodes 不推荐使用 String 类型，性能会有所下降。
-* Tip：rich-text 组件内屏蔽所有节点的事件。
-* Tip：attrs 属性不支持 id，支持 class。
-* Tip：name 属性大小写不敏感。
-* Tip：如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
-* Tip：img 标签仅支持网络图片。
-* Tip：如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。
-
-
-
-## 参考示例
-
-###  参考示例 1
-
-
-<a href="swanide://fragment/88908bd935f1b4cbc68da29488cec1f71574937264448" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
-
-:::codeTab
-```swan
-<view class="rich-text">
-    <view class="renders">
-        <view class="renders_title">通过HTML String渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{htmlSnip}}</view>
-            </scroll-view>
-            <rich-text nodes="{{htmlSnip}}" selectable="true"></rich-text>
-        </view>
-    </view>
-</view>
-```
-
- 
-
-```js
-const htmlSnip =
-`<div class="div_class">
-    <h1>Title</h1>
-    <p class="p">
-        Life is&nbsp;<i>like</i>&nbsp;a box of
-        <b>&nbsp;chocolates</b>
-    </p>
+const htmlSnip
+=`<div class="div_class">
+  <h1>Title</h1>
+  <p class="p">
+    Life is&nbsp;<i>like</i>&nbsp;a box of
+    <b>&nbsp;chocolates</b>
+  </p>
 </div>`;
 
 Page({
@@ -260,30 +134,28 @@ Page({
 ```
 :::
 
-
-
-###  参考示例 2
-
-
-<a href="swanide://fragment/f317171bbd03629d899ca3aac3022e541574937336081" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-
- 
+###  代码示例 2: 通过节点渲染
 
 :::codeTab
 ```swan
-<view class="rich-text">
-    <view class="renders">
-        <view class="renders_title">通过节点渲染</view>
-        <view class="renders_view">
-            <scroll-view scroll-y>
-                <view class="cont">{{nodeSnip}}</view>
-            </scroll-view>
-            <rich-text nodes="{{nodes}}" selectable="true">
-            </rich-text>
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">通过节点渲染</view>
+        <view class="description">代码示例</view>
+        <scroll-view scroll-y>
+            <view class="cont border-bottom">{{nodeSnip}}</view>
+        </scroll-view>
+        <view class="description">渲染效果</view>
+        <view class='rich-text'>
+            <!-- 基础库 3.150.1 以前的版本，selectable 属性默认为 false，期望文本不可被选中时不用设置此属性 -->
+            <rich-text nodes="{{nodes}}"></rich-text>
+            <!-- 基础库 3.150.1 及以后版本，selectable 属性默认为 true，期望文本不可被选中时需设置此属性为 false -->
+            <!-- <rich-text selectable="false" nodes="{{nodes}}"></rich-text> -->
         </view>
     </view>
 </view>
 ```
+
  
 
 ```js
@@ -323,3 +195,16 @@ Page({
 });
 ```
 :::
+
+
+##  Bug & Tip 
+
+* Tip：单击此处，查看将<a href="https://gitee.com/sootou/bdparse">富文本字符串转成 json 格式</a>的具体方法。
+* Tip：支持默认事件，包括：tap、touchstart、touchmove、touchcancel、touchend和longtap。
+* Tip：nodes 不推荐使用 String 类型，性能会有所下降。
+* Tip：rich-text 组件内屏蔽所有节点的事件。
+* Tip：attrs 属性不支持 id，支持 class。
+* Tip：name 属性大小写不敏感。
+* Tip：如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。
+* Tip：img 标签仅支持网络图片。
+* Tip：如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 swan 样式对 rich-text 中的 class 生效。

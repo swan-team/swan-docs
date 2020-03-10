@@ -56,7 +56,7 @@ sidebar:  howtoguideadd
 <img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/yindao3-1.png">
 
 <div class="m-doc-custom-examples">
-	<div class="m-doc-custom-examples-correct"><img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/yindao3-1-1.png"><p class="m-doc-custom-examples-text">示例：1. 沉浸式顶部导航栏效果（幸运日历盒）；2. 原生顶部导航栏效果（TA说）。</p>
+	<div class="m-doc-custom-examples-correct"><img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/yindao3-2.png"><p class="m-doc-custom-examples-text">示例：1. 沉浸式顶部导航栏效果（幸运日历盒）；2. 原生顶部导航栏效果（TA说）。</p>
 	</div>
 </div>
 
