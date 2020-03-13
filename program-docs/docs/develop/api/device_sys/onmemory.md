@@ -11,7 +11,7 @@ sidebar:  onmemory
 > 工具和真机中的实现有区别，详见[API 实现差异](https://smartapp.baidu.com/docs/develop/devtools/diff/)
 
 **解释**：监听内存不足的告警事件，Android 下有告警等级划分，只有 LOW 和 CRITICAL 会回调开发者；iOS 无等级划分。
-**Web 态说明**： Web 态环境不支持监听内存情形，该事件不会触发。
+**Web 态说明**： 由于浏览器内无法监听内存，在 Web 态该事件不会被触发。
 
 
 ## 方法参数
