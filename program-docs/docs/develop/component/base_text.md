@@ -180,4 +180,4 @@ Page({
 * Tip：除了文本节点以外的其他节点都无法长按选中，支持复制，但不支持剪切。
 * Tip：各个操作系统的空格标准并不一致。
 * Tip：`<text/>`组件内只支持`<text/>`嵌套，注意被嵌套的text绑定事件无法触发。
-
+* Tip：基础库大于3.160.6时，space和selectable属性暂不支持通过 `space="{{value}}"`或`selectable="{{value}}"`这种值绑定的方式赋值，建议通过字面量方式赋值，例如`space="nbsp"`和`selectable="false"`。

@@ -17,6 +17,8 @@ sidebar: guide_add
 </div>
 
 ## 浮层引导
+> 注：该样式将于2020年4月初下线，如需引导关注，可选择气泡引导样式。
+
 浮层引导的展现力度比气泡引导更强，它固定展现在页面的底部，用户在组件上能直接进行“关注”操作。引导内容暂不支持开发者自定义。
 <div class="m-doc-custom-examples"><div class="m-doc-custom-examples-correct"><img src="../../../img/design/component/guide_add/3.png">
 		<p class="m-doc-custom-examples-text">1. 关闭按钮：点击后，浮层引导消失；

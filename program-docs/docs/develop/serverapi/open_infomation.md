@@ -101,7 +101,7 @@ sidebar: open_infomation
 
 <div class="m-doc-custom-examples">
 	<div class="m-doc-custom-examples-correct">
-		<img src="../../../img/api/information/4-1.jpg">
+		<img src="https://b.bdstatic.com/searchbox/icms/searchbox/img/%E7%94%BB%E6%9D%BF.png">
 		<!-- <p class="m-doc-custom-examples-title">正确</p><p class="m-doc-custom-examples-text">内容左右边距应至少34px(17pt)。</p> -->
 	</div>
 	<div class="m-doc-custom-examples-error ">

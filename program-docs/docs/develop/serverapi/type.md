@@ -112,7 +112,7 @@ sidebar: type
 | guest  | string   | 否 | 嘉宾 | {“guest”:”谢娜"}   |
 | publish_time | string   | **是**   | 内容原始发布时间 | {“publish_time”:”内容原始发布时间需在三个月以内   示例：2018年9月8日"}   |
 | movie_release_time | string   |否   |  电影上映时间   | {“movie_release_time”:”电影上映时的时间，建议填写，   示例：2018年9月8日"}   |
-| video_duration  | string   | **是**   | 视频时长   | {“video_duration”:”按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20"}  |
+| video_duration  | string   | **是**   | 视频时长，小时需要换算成分钟，例如1小时1分20秒，要写成61:20   | {“video_duration”:”按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20"}  |
 | pc_url | string   | **是（和h5_url需填一种）** | {“pc_url”:”视频PC播放链接"}   |  |
 | h5_url | string   | **是（和pc_url需填一种）** | {“h5_url”:”视频H5播放链接"}   |  |
 | update_time  | string   | 否 | 更新时间   | {“update_time”:”2018年9月10日 15:36:20"}   |
@@ -211,54 +211,54 @@ sidebar: type
 
 | **key** | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例大众点评：舌尖上的江南之江浙菜   |
-| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 本地生活的详情页介绍，示例大众点评：江浙菜即浙江菜系，以杭州菜作为代表，是中国传统八大菜系之一，其地山清水秀，产物丰富，佳肴美味，古有谚语曰：“上有天堂，下有苏杭”。 |
-| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | /pages/index/index |
-| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"] |
-| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
-| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），本地生活图文子类为1007 | 本地生活型固定为1007  |
-| feed_type  | string   | **是** | feed一级分类（参考附录二）  | 美食（可选有限集合）  |
-| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | 苏菜（可选有限集合）  |
-| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例：组件,接口,API   |
+| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“title”:”示例大众点评：舌尖上的江南之江浙菜"}   |
+| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“body”:”本地生活的详情页介绍，示例大众点评：江浙菜即浙江菜系，以杭州菜作为代表，是中国传统八大菜系之一，其地山清水秀，产物丰富，佳肴美味，古有谚语曰：“上有天堂，下有苏杭”。"} |
+| path | string   | **是** | 智能小程序内页链接，最长不能超194字符 | {“path”:”/pages/index/index |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | {“images”:”["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"]"} |
+| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | {“mapp_type”:”内容型固定为1000"}   |
+| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），本地生活图文子类为1007 | {“mapp_sub_type”:”本地生活型固定为1007"}  |
+| feed_type  | string   | **是** | feed一级分类（参考附录二）  | {“feed_type”:”美食（可选有限集合）"}  |
+| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | {“feed_sub_type”:”苏菜（可选有限集合）"}  |
+| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“tags”:”示例：组件,接口,API"}   |
 | ext  | string   | 见下表 | 扩展信息（JSON格式，参考下方拓展字段）  | {"desc": "智能小程序官方示例","version": "10.7.1"}  |
 
 拓展字段
 
 | **key** | **类型** | **是否必填** | **备注**   | **代码示例**  |
 | ------------------- | -------- | ------------------------------------------------------------ | ---------------- | ------------------------------------------------------------ |
-| author_name   | string   | 否  | 作者名  | 张三   |
-| author_portrait_url | string   | 否  | 作者头像url   | <https://www.xxx.baidu.com/author/portrail.jpg>   |
-| author_path   | string   | 否  | 作者落地页链接   | /pages/author/author  |
-| author_fans_num  | int   | 否  | 作者粉丝量 | 10000  |
-| author_auth   | string   | 否  | 是否认证作者  | 1-是 0-否   示例：1   |
-| author_publish_num  | string   | 否  | 作者发文量 | 100 |
-| publish_time  | string   | **是** | 内容原始发布时间 | 2018年9月8日 |
-| img_urls   | string   | 否  | 文章所有图片url  | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
-| channel_id | int   | 否  | 频道ID  | 1000   |
-| channel | string   | 否  | 频道名称   | 在小程序内所属频道名   示例：萌宠 |
-| content_heat  | string   | **是** | 内容热度   | 98.5   |
-| page_view  | int   | **是** | 内容浏览量 | 1000   |
-| like_num   | int   | **是** | 内容点赞量 | 1000   |
-| comment_num   | int   | **是** | 内容评论量 | 1000   |
-| collect_num   | int   | **是** | 内容收藏量 | 1000   |
-| share_num  | int   | **是** | 内容转发量 | 1000   |
-| video_duration   | string   | 是（当资源为视频时，该字段必填）  | 视频时长   | 按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20  |
-| pc_url  | string   | 是（当资源为视频时，和h5链接必填一种）  | 视频PC链接 |  |
-| h5_url  | string   | 是（当资源为视频时，和pc链接必填一种）  | 视频H5链接 |  |
-| store_name | string   | 是（如一篇文章有多个店铺，可不填写） | 商铺名称   | 商铺名称， case：火烧云  |
-| store_province   | string   | 是（如一篇文章有多个店铺，不属于一个省，可不填写）  | 商铺所在省 | 商铺信息：省 case：北京  |
-| store_city | string   | 是（如一篇文章有多个店铺，不属于一个市，可不填写）  | 商铺所在市 | 商铺信息：市 case： 北京 |
-| store_area | string   | 是（如一篇文章有多个店铺，不属于一个区，可不填写）  | 商铺所在区 | 商铺信息：区 case：海淀  |
-| store_district   | string   | 是（如一篇文章有多个店铺，不属于一个商圈，可不填写）   | 商铺所在商圈  | 商铺信息：商圈 case：中关村 |
-| store_type | string   | 是（如一篇文章有多个店铺，不属于一个一级类别，可不填写）  | 商铺一级类别  | 商铺一级类别： case：美食   |
-| store_sub_type   | string   | 是（如一篇文章有多个店铺，不属于一个二级类别，可不填写）  | 商铺二级类别  | 商铺二级类别： case：日料   |
-| store_star | string   | 是（如一篇文章有多个店铺，可不填写） | 商铺星级   | 商铺星级：5星   |
-| taste_rate | string   | 否（如一篇文章有多个店铺，可不填写） | 口味评分   | 口味：7.9 |
-| enviroment_rate  | string   | 否（如一篇文章有多个店铺，可不填写） | 环境评分   | 环境：8.5 |
-| service_rate  | string   | 否（如一篇文章有多个店铺，可不填写） | 服务评分   | 服务：7.9 |
-| leaderboard_rank | int   | 是（如一篇文章有多个店铺，可不填写） | 排行榜名次 | 排行榜名次：1   |
-| ave_price  | int   | 是（如一篇文章有多个店铺，不属于一个人均消费价格段，可不填写） | 人均价格   | 人均价格：200   |
-| high_comment  | string   | 否  | 优质评价内容  | 手机款式漂亮，颜色我很喜欢，系统流畅，功能齐全，物超所值  |
+| author_name   | string   | 否  | 作者名  | {“author_name”:”张三"}   |
+| author_portrait_url | string   | 否  | 作者头像url   | {“author_portrait_url”:”<https://www.xxx.baidu.com/author/portrail.jpg>"}   |
+| author_path   | string   | 否  | 作者落地页链接   | {“author_path”:”/pages/author/author"}  |
+| author_fans_num  | int   | 否  | 作者粉丝量 | {“author_fans_num”:10000}  |
+| author_auth   | string   | 否  | 是否认证作者  | {“author_auth”:”1-是 0-否   示例：1"}   |
+| author_publish_num  | string   | 否  | 作者发文量 | {“author_publish_num”:”100"} |
+| publish_time  | string   | **是** | 内容原始发布时间 | {“publish_time”:”2018年9月8日"} |
+| img_urls   | string   | 否  | 文章所有图片url  | {“img_urls”:”["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"]"} |
+| channel_id | int   | 否  | 频道ID  | {“channel_id”:1000}   |
+| channel | string   | 否  | 频道名称   | {“channel”:”在小程序内所属频道名   示例：萌宠"} |
+| content_heat  | string   | **是** | 内容热度   | {“content_heat”:”98.5"}   |
+| page_view  | int   | **是** | 内容浏览量 | {“page_view”:1000}   |
+| like_num   | int   | **是** | 内容点赞量 | {“like_num”:1000}   |
+| comment_num   | int   | **是** | 内容评论量 | {“comment_num”:1000}   |
+| collect_num   | int   | **是** | 内容收藏量 | {“collect_num”:1000}   |
+| share_num  | int   | **是** | 内容转发量 | {“share_num”:1000}   |
+| video_duration   | string   | 是（当资源为视频时，该字段必填）  | 视频时长，小时需要换算成分钟，例如1小时1分20秒，要写成61:20   | {“video_duration”:”按照以下格式填写（超过一小时：61:20；分钟：01:20；秒：00:20"}  |
+| pc_url  | string   | 是（当资源为视频时，和h5链接必填一种）  | {“pc_url”:”视频PC链接"} |  |
+| h5_url  | string   | 是（当资源为视频时，和pc链接必填一种）  | {“h5_url”:”视频H5链接"} |  |
+| store_name | string   | 是（如一篇文章有多个店铺，可不填写） | 商铺名称   | {“store_name”:”商铺名称， case：火烧云"}  |
+| store_province   | string   | 是（如一篇文章有多个店铺，不属于一个省，可不填写）  | 商铺所在省 | {“store_province”:”商铺信息：省 case：北京"}  |
+| store_city | string   | 是（如一篇文章有多个店铺，不属于一个市，可不填写）  | 商铺所在市 | {“store_city”:”商铺信息：市 case： 北京"} |
+| store_area | string   | 是（如一篇文章有多个店铺，不属于一个区，可不填写）  | 商铺所在区 | {“store_area”:”商铺信息：区 case：海淀"}  |
+| store_district   | string   | 是（如一篇文章有多个店铺，不属于一个商圈，可不填写）   | 商铺所在商圈  | {“store_district”:”商铺信息：商圈 case：中关村"} |
+| store_type | string   | 是（如一篇文章有多个店铺，不属于一个一级类别，可不填写）  | 商铺一级类别  | {“store_type”:”商铺一级类别： case：美食"}   |
+| store_sub_type   | string   | 是（如一篇文章有多个店铺，不属于一个二级类别，可不填写）  | 商铺二级类别  | {“store_sub_type”:”商铺二级类别： case：日料"}   |
+| store_star | string   | 是（如一篇文章有多个店铺，可不填写） | 商铺星级   | {“store_star”:”商铺星级：5星"}   |
+| taste_rate | string   | 否（如一篇文章有多个店铺，可不填写） | 口味评分   | {“taste_rate”:”口味：7.9"} |
+| enviroment_rate  | string   | 否（如一篇文章有多个店铺，可不填写） | 环境评分   | {“enviroment_rate”:”环境：8.5"} |
+| service_rate  | string   | 否（如一篇文章有多个店铺，可不填写） | 服务评分   | {“service_rate”:”服务：7.9"} |
+| leaderboard_rank | int   | 是（如一篇文章有多个店铺，可不填写） | 排行榜名次 | {“leaderboard_rank”:排行榜名次：1}   |
+| ave_price  | int   | 是（如一篇文章有多个店铺，不属于一个人均消费价格段，可不填写） | 人均价格   | {“ave_price”:人均价格：200}   |
+| high_comment  | string   | 否  | 优质评价内容  | {“high_comment”:”手机款式漂亮，颜色我很喜欢，系统流畅，功能齐全，物超所值"}  |
 
 6）问答
 
@@ -268,40 +268,40 @@ sidebar: type
 
 | **key** | **类型** | **是否必填** | **备注**  | **代码示例**  |
 | ------------- | -------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做 |
-| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜... |
-| path | string   | **是** | 智能小程序内页链接，最长不能超194字符，落地页要求为一个问题对应多个答案，具体样式参考 百度 App问答落地页，**feed****要求至少8个答案** | /pages/index/index |
-| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | ["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“] |
-| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | 内容型固定为1000   |
-| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | 问答型固定为1009   |
-| feed_type  | string   | **是** | feed一级分类（参考附录二）  | 例如美食（可选有限集合） |
-| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | 例如甜品（可选有限集合） |
-| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | 示例：甜甜圈,糕点,鲍师傅,酥饼  |
+| title   | string   | **是** | 在信息流中分发的展示标题，需要描述完整，能够明确表示小程序或内容的主要信息点，不能为纯外文，最少6个字符，最多40字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“title”:”示例豆果美食小程序：超经典的蔓越莓曲奇饼干，在家也能做"} |
+| body | string   | **是** | 最多2000字符（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“body”:”内容的正文简介，示例豆果美食小程序：黄油化开备用,黄油化开后加入糖霜，搅拌均匀。,加入蛋清，继续打匀。,加入切碎的蔓越莓，继续搅拌。蔓越莓放多少根据自己的喜..."} |
+| path | string   | **是** | 智能小程序内页链接，最长不能超194字符，落地页要求为一个问题对应多个答案，具体样式参考 百度 App问答落地页，**feed****要求至少8个答案** | {“path”:”/pages/index/index"} |
+| images  | string   | **是** | 封面图片链接，要求必须是JSON格式，最多3张，单图片最大不能超2M，只支持JPG或PNG格式（jpeg不支持），尺寸要求：宽不能低于372px，且高不能低于248px。**重要提示：图片尺寸越大、清晰度越高、宽高比越接近3:2，越有助于降低不可用风险，促进分发。** | {“images”:”["https://b.bdstatic.com/miniapp/resource/image/demo1.png",   "https://b.bdstatic.com/miniapp/resource/image/demo2.png"   "https://b.bdstatic.com/miniapp/resource/image/demo3.png“]"} |
+| mapp_type  | string   | **是** | 资源类型（参考附录一），内容型为1000 | {“mapp_type”:”内容型固定为1000"}   |
+| mapp_sub_type | string   | **是** | 资源子类型（参考附录一），图文子类为1001   | {“mapp_sub_type”:”问答型固定为1009"}   |
+| feed_type  | string   | **是** | feed一级分类（参考附录二）  | {“feed_type”:”例如美食（可选有限集合）"} |
+| feed_sub_type | string   | **是** | feed二级分类（参考附录二）  | {“feed_sub_type”:”例如甜品（可选有限集合）"} |
+| tags | string   | 否  | 资源标签，每个标签间用英文逗号分割 ，填写准确详细有助于提升分发效果，最多可填10个，但同资源下所有标签的字符数总和不能超过100（每个汉字、外文字母、阿拉伯数字、标点符号、空格等均算1字符） | {“tags”:”示例：甜甜圈,糕点,鲍师傅,酥饼"}  |
 | ext  | string   | 见下表 | 扩展信息（JSON格式，参考下方拓展字段）  | {"desc": "智能小程序官方示例","version": "10.7.1"}  |
 
 拓展字段
 
 | **key**  | **类型** | **是否必填** | **备注** | **代码示例**  |
 | -------------------- | -------- | ------------ | ----------------------------------------------- | ------------------------------------------------------------ |
-| author_name | string   | 否  | 作者名   | 张三   |
-| author_portrait_url  | string   | 否  | 作者头像url | 例如<https://www.xxx.baidu.com/author/portrail.jpg>  |
-| author_path | string   | 否  | 作者落地页链接 | /pages/author/author  |
-| author_fans_num   | int   | 否  | 作者粉丝量  | 10000  |
-| author_auth | string   | 否  | 是否认证作者   | 1-是 0-否   示例：1   |
-| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | ["<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>"]110*110 |
-| comment_author_num   | int   | 是  | 讨论人数   问答类型必填该字段 | 30  |
-| publish_time   | string   | **是** | 内容发布时间   | 内容发布时间需在一年以内   示例：2018年9月8日 |
-| img_urls | string   | 否  | 文章所有图片url   | ["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"] |
-| channel_id  | int   | 否  | 频道ID   | 1000   |
-| channel  | string   | 否  | 频道名称 | 在小程序内所属频道名   示例：萌宠 |
-| like_num | int   | 否  | 点赞量   | 1000   |
-| comment_num | int   | 否  | 评论量   | 例如1001  |
-| dislike_num | int   | 否  | 踩数  | 1000   |
-| collect_num | int   | 否  | 收藏量   | 1000   |
-| share_num   | int   | 否  | 转发量   | 1000   |
-| topic | string   | 否  | 话题名   | 减肥日记  |
-| comment  | string   | 否  | 优质评论内容   | 智能连接人与信息、人与服务、人与万物的开放生态   |
-| topic_path  | string   | 否  | 话题落地页链接 | /pages/topic/topic |
+| author_name | string   | 否  | 作者名   | {“author_name”:”张三"}   |
+| author_portrait_url  | string   | 否  | 作者头像url | {“author_portrait_url”:”例如<https://www.xxx.baidu.com/author/portrail.jpg>"}  |
+| author_path | string   | 否  | 作者落地页链接 | {“author_path”:”/pages/author/author"}  |
+| author_fans_num   | int   | 否  | 作者粉丝量  | {“author_fans_num”:10000}  |
+| author_auth | string   | 否  | 是否认证作者   | {“author_auth”:”1-是 0-否   示例：1"}   |
+| comment_portrait_url | array | 是  | 讨论人头像URL   问答类型资源该字段必填，固定4条 | {“comment_portrait_url”:”["<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>",<br>"<https://www.xxx.baidu.com/author/portrail.jpg>"]110*110"} |
+| comment_author_num   | int   | 是  | 讨论人数   问答类型必填该字段 | {“comment_author_num”:30}  |
+| publish_time   | string   | **是** | 内容发布时间   | {“publish_time”:”内容发布时间需在一年以内   示例：2018年9月8日"} |
+| img_urls | string   | 否  | 文章所有图片url   | {“img_urls”:”["<https://b.bdstatic.com/miniapp/resource/image/headImg.png>"]"} |
+| channel_id  | int   | 否  | 频道ID   | {“channel_id”:1000}   |
+| channel  | string   | 否  | 频道名称 | {“channel”:”在小程序内所属频道名   示例：萌宠"} |
+| like_num | int   | 否  | 点赞量   | {“like_num”:1000}   |
+| comment_num | int   | 否  | 评论量   | {“comment_num”:例如1001}  |
+| dislike_num | int   | 否  | 踩数  | {“dislike_num”:1000}   |
+| collect_num | int   | 否  | 收藏量   | {“collect_num”:1000}   |
+| share_num   | int   | 否  | 转发量   | {“share_num”:1000}   |
+| topic | string   | 否  | 话题名   | {“topic”:”减肥日记"}  |
+| comment  | string   | 否  | 优质评论内容   | {“comment”:”智能连接人与信息、人与服务、人与万物的开放生态"}   |
+| topic_path  | string   | 否  | 话题落地页链接 | {“topic_path”:”/pages/topic/topic"} |
 
 ### 2.工具型
 

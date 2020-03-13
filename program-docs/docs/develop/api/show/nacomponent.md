@@ -11,7 +11,7 @@ webUrl: https://qft12m.smartapps.cn/swan-api/show-favorite-guide/show-favorite-g
 > 引导组件有统一的策略，若用户未执行过关注操作，则3天内不再出现引导组件；若用户执行过关注操作，则引导组件对该用户将不再出现。最低支持版本 3.20.4 。工具和真机中的实现有区别，详见[API 实现差异](https://smartprogram.baidu.com/docs/develop/devtools/diff/)。
 
 **解释**：支持在小程序内调起关注小程序引导组件，引导用户关注小程序。引导组件设计文档详见：<a href="https://smartprogram.baidu.com/docs/design/component/guide_add/">关注小程序引导</a>。
-
+**注**：浮层引导样式（type=bar）将于2020年4月初下线，如需引导关注，请选择气泡引导样式（type=tip）
  
 ## 方法参数
 

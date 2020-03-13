@@ -1,11 +1,11 @@
 <template>
     <div class="qr-code">
-        <div class="qr-code-text">
+        <div class="qr-code-text" v-if="!isPc">
             请<span class="qr-code-text-botton" @click="clickHandle">点击这里</span>预览效果，或扫描下图二维码
         </div>
         <div class="qr-code-image">
             <div class="qr-code-image-content">
-                <qr-code-vue :value="url" :size="size" level="H"></qr-code-vue>
+                <qr-code-vue :value="value" :size="size" level="H"></qr-code-vue>
                 <img src="../assets/images/qrcode-logo.png" alt="百度智能小程序">
             </div>
             <div class="qr-code-image-text">
@@ -21,6 +21,10 @@
 
 <script>
 import QrcodeVue from 'qrcode.vue';
+import Qs from 'qs';
+import {isPc} from '../utils/get-device';
+
+let invokeParams = {};
 
 export default {
     components: {
@@ -33,41 +37,59 @@ export default {
     },
     data() {
         return {
-            size: 120
+            size: 120,
+            isPc: true
         };
+    },
+    mounted() {
+        this.isPc = isPc();
+    },
+    computed: {
+        value() {
+            const {
+                prefix: urlPrefix,
+                query: urlQuery
+            } = this.parseUrl(this.url);
+
+            const {
+                prefix: purePath,
+                query: pathQuery
+            } = this.parseUrl(urlQuery.path);
+
+            const pathQueryWithFr = {...pathQuery, fr: 'docs'};
+            const finalPathString = this.stringifyQuery(purePath, pathQueryWithFr);
+
+            Object.assign(invokeParams, {
+                appKey: urlQuery.appKey,
+                path: purePath,
+                query: pathQueryWithFr
+            });
+
+            return this.stringifyQuery(urlPrefix, {
+                ...urlQuery,
+                path: finalPathString
+            });
+        }
     },
     methods: {
         // 解析传入的url
-        parseUrl() {
-            const url = this.url.slice(this.url.indexOf('?') + 1);
-            return this.parseQuery(url);
-        },
-        // 解析参数为Object形式
-        parseQuery(queryString = '') {
-            return queryString.split('&').reduce((acc, cur) => {
-                const [key, value] = cur.split('=');
-                acc[key] = value;
-                return acc;
-            }, {});
-        },
-        // 解析path和path后带的参数
-        parsePathWithQuery(pathWithQuery) {
-            pathWithQuery = decodeURIComponent(pathWithQuery);
-            const [path, queryString] = pathWithQuery.split('?');
+        parseUrl(url) {
+            const [prefix, queryString] = url.split('?');
             return {
-                path,
-                query: this.parseQuery(queryString)
+                prefix,
+                query: Qs.parse(queryString)
             };
         },
+        stringifyQuery(path, query) {
+            return `${path}?${Qs.stringify(query)}`;
+        },
         clickHandle() {
-            const urlInfo = this.parseUrl();
-            const {path, query} = this.parsePathWithQuery(urlInfo.path);
             // H5打开小程序
             window.swanInvoke({
-                appKey: urlInfo.appKey,
-                path,
+                appKey: invokeParams.appKey,
+                path: invokeParams.path,
                 query: {
-                    ...query,
+                    ...invokeParams.query,
                     fr: 'docs'
                 }
             });

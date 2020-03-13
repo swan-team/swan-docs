@@ -14,3 +14,11 @@ sidebar: publish
 发布上线小程序后，您可以查看文档中流量的相关介绍进行流量配置与功能介绍，帮助丰富小程序功能与流量获取渠道。
 
 ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction6.png)
+
+
+## FAQ
+
+#### Q:小程序审核通过就自动发布吗？
+
+
+A:您好，目前小程序审核通过后不会自动发布，需要开发者在开发者管理平台的开发管理中进行发布。

@@ -23,7 +23,7 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/access/submitsitemap/api?access
 |----- |-----| ------| ----- | ----|
 |access_token	|string|	是	|权限校验Token，获取方式见[开发者服务权限说明](https://smartprogram.baidu.com/docs/develop/serverapi/power_exp/)。|
 |type |int | 是 | 通过TYPE字段选择上传接口。<br>**·** 0：周级提交，一周左右生效；<br>**·** 1：天级提交，2~3天生效；<br>**·** 2：小时级提交，1小时内生效| 0|
-|url\_list |string  | 是 | 小程序path集合，多个path用逗号分隔。<br>**·** 天级提交配额根据提交活跃度和资源质量进行调节，具体以平台显示为准；<br>**·** 周级提交配额每日上限为5W条，每次提交上限为3000条。|/pages/index1?id=1,/pages/index2|
+|url\_list |string  | 是 | 小程序path集合，多个path用逗号分隔。<br>**·** 天级与周级提交配额根据提交活跃度和资源质量进行调节，具体以平台显示为准。|/pages/index1?id=1,/pages/index2|
 
 
 #### **提交代码示例**

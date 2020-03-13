@@ -24,3 +24,22 @@ sidebar: online
 3. 代码包审核通过。
     ![图片](https://b.bdstatic.com/searchbox/icms/searchbox/img/introduction5.png)
 
+
+
+## FAQ
+
+#### Q: 提包后被驳回，原因是名称宽泛，要求提交商标权，但我并没有该名称的商标材料怎么办？ 
+
+A：当前您所使用的智能小程序名称，建议命名为品牌词、服务地域/服务特色、产品功能的形式等组合，如“长隆AR动物园”、“ 上海迪士尼乐园”等，如无法提供商标权，您的名称可能将无法使用。
+
+ 
+
+#### Q: 审核被拒，原因显示智能小程序简介不规范？ 
+
+A：简介中不可出现违规词，并且简介要与智能小程序相符，详情请参考智能小程序运营规范<https://smartprogram.baidu.com/docs/operations/specification/>
+
+ 
+
+#### Q: 审核被拒绝，提示小程序基础库版本设置过低，请问该如何操作？ 
+
+A：建议您提升最低基础库版本，详情可以参考与客户端版本映射关系<https://smartprogram.baidu.com/docs/develop/tutorial/shine/>

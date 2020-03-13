@@ -8,6 +8,7 @@ sidebar: log
 
 |更新日期| 更新内容|
 |-----|-----|
+|2020.3.22|**New** <br> **·**<a href="https://smartprogram.baidu.com/docs/third/sitemap/#自然搜索结果">自然搜索结果:点展统计信息与页面流量信息数据接口</a>|
 |2020.1.7|**New** <br> **·**<a href="https://smartprogram.baidu.com/docs/third/info/#申请获取用户手机号">申请获取用户手机号权限、取消获取手机号权限、查询申请状态接口</a>|
 |2019.12.23 |**New** <br> **·**<a href="https://smartprogram.baidu.com/docs/third/info/#申请恢复流量下线">限时增改、流量下线推送，申请恢复流量下线接口</a> |
 |2019.9.16 |**New** <br> **·**<a href="https://smartprogram.baidu.com/docs/third/sitemap/#小程序单卡配置">小程序单卡配置</a>|

@@ -37,13 +37,7 @@ sidebar: sitemap
 #### 第四步：小程序发布上线
 小程序上线后才能被自然搜索收录，具体发布上线流程可参考：[小程序包管理](https://smartprogram.baidu.com/docs/third/apppage/)
 
-#### 第五步：绑定熊掌ID
-绑定熊掌ID后才可提交Sitemap从而被百度收录并获取流量。第三方可通过API代授权小程序绑定当前超管账号的熊掌ID，或引导开发者自行前往开发者平台绑定已有的其他熊掌ID。
-
-* 绑定当前超管账号熊掌ID可参考：[绑定熊掌ID API](https://smartprogram.baidu.com/docs/third/sitemap/#小程序熊掌ID绑定)
-* 绑定其他熊掌ID则需要引导开发者前往小程序开发者平台进行操作：[绑定熊掌ID操作指南](https://smartprogram.baidu.com/docs/introduction/rank/#%E7%BB%91%E5%AE%9A%E7%86%8A%E6%8E%8CID/)
-
-#### 第六步：提交sitemap
+#### 第五步：提交sitemap
 Sitemap（即站点地图）就是您⽹站上各⽹⻚的列表。创建并提交 Sitemap 有助于百度发现并了解您⽹站上的所有⽹⻚。您还可以使⽤ Sitemap 提供有关您⽹站的其他信息，如上次更新⽇期、Sitemap ⽂件的更新频率等，供百度 Spider 参考。
 
 百度对已提交的数据，不保证⼀定会抓取及索引所有⽹址。但是，我们会使⽤ Sitemap 中的数据来了解⽹站的结构等信息，这样可以帮助我们改进抓取策略，并在⽇后能更好地对⽹站进⾏抓取。
@@ -159,14 +153,15 @@ curl -X POST \
 }
 ```
 
-## 小程序熊掌ID绑定
+## 自然搜索结果
 
-> 小程序sitemap进入搜索，需要先绑定熊掌ID。此目前只支持绑定当前账户主体对应的熊掌ID。
+### 点展统计信息
 
-**接口路径**
+为了便于第三方服务商更好地掌握其授权小程序在自然搜索中的曝光及转化情况，现提供如下接口，以支持第三方服务商获取相关数据。
+>点展统计信息包括该小程序在自然搜索中的点击量、展现量和点展比。
 
 ```
-POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh
+GET https://openapi.baidu.com/rest/2.0/smartapp/promotion/sitmap/getanalysisctr
 ```
 
 **公共请求参数**
@@ -177,38 +172,218 @@ POST https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh
 
  
 
-**公共响应参数** 
+**请求参数**
 
-| 参数  | 类型    | 描述     | 示例值   |
-| ----- | ------- | -------- | -------- |
-| errno | int | 状态码   | 40001    |
-| msg   | string  | 状态描述 | 参数错误 |
-| data  | object  | 响应参数 | --       |
+| 参数名    | 类型 | 是否必须 | 描述                                                 |
+| --------- | ---- | -------- | ---------------------------------------------------- |
+| time_span | int  | 是       | 时间区间。可取值1、7、30，分别代表 1 天、7 天、30 天 |
 
+**公共响应参数**
 
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**响应参数**
+
+| 字段名                        | 类型   | 描述                           |
+| ----------------------------- | ------ | ------------------------------ |
+| total_click_count             | int    | 累计点击量。                   |
+| total_display_count           | int    | 累计展现量。                   |
+| click_display_ratio           | int    | 点展比。                       |
+| traffic_data                  | list   | 日期纬度的点击与展示列表详情。 |
+| traffic_data.date             | string | 日期。                         |
+| traffic_data.click_count      | int    | 点击量。                       |
+| traffic_data.display_count    | int    | 展现量。                       |
+| traffic_data.click_view_ratio | string | 点展比(%), 保留两位小数。      |
 
 **请求实例**
 
-```shell
-curl -X POST \
-  'https://openapi.baidu.com/rest/2.0/smartapp/promotion/bind/xzh?access_token=45.8456925a1fa1ed237f64114d2bfa3890.3600.1559561689.Cckr3yEJVH4X5JJnZmgfNX4wo_ej3y4-1W3JTSQkkj5RZ9lgfC'
+```
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/promotion/sitemap/getanalysisctr?access_token=45.d5399ff94657c24e05541e9083cb6a5b.3600.1582805648.XK9_OHvhaMiG9JYKYV3hqQ9fNQ8e-qsN6gz8WG1fqJ8ZR5Q&time_span=1' 
+```
+
+**响应示例**:
+
+```json
+{
+    "errno":0,
+    "msg":"success",
+    "data":{
+        "total_click_count":100,
+        "total_display_count":100,
+        "click_display_ratio":"100.00%",
+        "traffic_data":[
+            {
+                "date":"2020-01-01",
+                "click_count":100,
+                "display_count":100,
+                "click_view_ratio":"100.00%"
+            }
+        ]
+    }
+}
+```
+<br>
+
+### 页面流量信息
+
+第三方服务商可调用该接口，查看其授权小程序在自然搜索中的流量来源，据此优化和完善小程序信息并在搜索中获取更多流量。
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/promotion/topquery/info
+```
+
+**公共请求参数**:
+
+| 参数名       | 类型   | 是否必须 | 描述                                   |
+| ------------ | ------ | -------- | -------------------------------------- |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
+
+**请求参数**:
+
+| 参数名    | 类型 | 是否必须 | 描述                                                 |
+| --------- | ---- | -------- | ---------------------------------------------------- |
+| time_span | int  | 是       | 时间区间。可取值1、7、30，分别代表 1 天、7 天、30 天 |
+| page_num  | int  | 是       | 分页页数。                                           |
+| page_size | int  | 是       | 分页大小。最大值为100                                |
+
+**公共响应参数**
+
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**响应参数**
+
+| 字段名               | 类型   | 描述                           |
+| -------------------- | ------ | ------------------------------ |
+| total_click_count    | int    | 累计点击量。                   |
+| total_display_count  | int    | 累计展现量。                   |
+| rate                 | string | 点展比(%), 保留两位小数。      |
+| detail               | list   | 日期纬度的点击与展示列表详情。 |
+| detail.path          | string | path路径。                     |
+| detail.web_url       | string | web化url地址。                 |
+| detail.click_count   | int    | 点击量。                       |
+| detail.display_count | int    | 展现量。                       |
+| detail.rate          | string | 点展比(%), 保留两位小数。      |
+
+**请求实例**
+
+``` 
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/promotion/topquery/info?access_token=45.d5399ff94657c24e05541e9083cb6a5b.3600.1582805648.XK9_OHvhaMiG9JYKYV3hqQ9fNQ8e-qsN6gz8WG1fqJ8ZR5Q&time_span=1&page_num=1&page_size=10' 
 ```
 
 **响应示例**
 
 ```json
 {
-	"errno": 0,
-	"msg": "success"
+    "errno":0,
+        "msg":"success",
+        "data":{
+            "total_click_count":15,
+            "total_display_count":20,
+            "rate":"75.00%",
+            "detail":[
+                {
+                    "path":"/path/one",
+                    "web_url":"https://baidu.com/path/one",
+                    "click_count":5,
+                    "display_count":10,
+                    "rate":"50.00%"
+                },
+                {
+                    "path":"/path/two",
+                    "web_url":"https://baidu.com/path/two",
+                    "click_count":10,
+                    "display_count":10,
+                    "rate":"100.00%"
+                }
+            ],
+            "total_num":1
+        }
 }
 ```
-错误码表
 
-|错误码 | 错误描述 | 
-|----- |-----|
-|50033 | 主体资质没有审核通过，请先通过主体资质审核|
-|50034 | 熊掌ID尚未审核通过|
-|50036	| 主体未绑定熊掌ID，请先在开发者平台进行绑定|
+### 页面流量关键词信息
+第三方服务商可调用该接口，查询其授权小程序的具体页面在自然搜索中的关键词来源，据此优化和完善小程序信息并在搜索中获取更多流量。
+
+```
+GET https://openapi.baidu.com/rest/2.0/smartapp/promotion/topquery/keyword
+```
+
+**公共请求参数**:
+
+| 参数名       | 类型   | 是否必须 | 描述                                   |
+| ------------ | ------ | -------- | -------------------------------------- |
+| access_token | string | 是       | 授权小程序的接口调用凭据 |
+
+**请求参数**:
+
+| 参数名    | 类型   | 是否必须 | 描述                                                     |
+| --------- | ------ | -------- | -------------------------------------------------------- |
+| web_url   | string | 是       | 页面地址。来自于 /promotion/topquery/info 接口返回的数据 |
+| time_span | int    | 是       | 时间区间。可取值1、7、30，分别代表 1 天、7 天、30 天     |
+| page_num  | int    | 是       | 分页页数。                                               |
+| page_size | int    | 是       | 分页大小。最大值为100                                    |
+
+**公共响应参数**
+
+| 参数  | 类型   | 描述     | 示例值   |
+| ----- | ------ | -------- | -------- |
+| errno | int    | 状态码   | 40001    |
+| msg   | string | 状态描述 | 参数错误 |
+| data  | object | 响应参数 | --       |
+
+**响应参数**
+
+| 字段名               | 类型   | 描述                                |
+| -------------------- | ------ | ----------------------------------- |
+| detail               | list   | 该url下面查询词的点击与展现信息列表 |
+| detail.query         | string | 查询的单词名称。                    |
+| detail.click_count   | int    | 点击量。                            |
+| detail.display_count | int    | 展现量。                            |
+| detail.rate          | string | 点展比(%), 保留两位小数。           |
+
+**请求实例**
+
+```
+curl -X GET \
+  'https://openapi.baidu.com/rest/2.0/smartapp/promotion/topquery/keyword?access_token=45.d5399ff94657c24e05541e9083cb6a5b.3600.1582805648.XK9_OHvhaMiG9JYKYV3hqQ9fNQ8e-qsN6gz8WG1fqJ8ZR5Q&web_url=https://baidu.com/weburl?time_span=1&page_num=1&page_size=10' 
+```
+
+**响应示例**:
+
+```json
+{
+    "errno":0,
+    "msg":"success",
+    "data":{
+        "detail":[
+            {
+                "query":"word one",
+                "click_count":5,
+                "display_count":10,
+                "rate":"50.00%"
+            },
+            {
+                "query":"word two",
+                "click_count":10,
+                "display_count":10,
+                "rate":"100.00%"
+            }
+        ],
+        "total_num":1
+    }
+}
+```
+
 
 ## 配置页面基础信息
 

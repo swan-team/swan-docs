@@ -15,5 +15,8 @@ sidebar: enter_application
 
    ![1582703758848](https://b.bdstatic.com/searchbox/icms/searchbox/img/02272.png)
 
+## FAQ
 
+#### Q：港澳台身份证及手机号码能提交百度小程序吗？
 
+A：暂时还不支持港澳台身份证及手机号码。
