@@ -38,7 +38,7 @@ sidebar: net_rule
 
     * 其格式固定为{域名}/{appKey}/{version}/page-frame.html 。
     
-    * 其中域名由原来的 https://smartapp.baidu.com更改为 https://smartapps.cn 。
+    * 自V3.170.0起，其中域名由原来的 https://smartapp.baidu.com更改为 https://smartapps.cn 。
     
     * 其中 {appkey} 为小程序的 appkey。
 
