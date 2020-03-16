@@ -6,13 +6,13 @@ sidebar:  remove
 # webUrl: https://qft12m.smartapps.cn/swan-api/file/file
 ---
 
- 
+
 
 
 **解释**：删除本地存储的文件
- 
+**Web 态说明**： 受浏览器限制，Web 态不支持文件系统相关功能，调用该方法会执行失败回调函数。
 
-## 方法参数  
+## 方法参数
 
 Object object
 
@@ -37,7 +37,7 @@ Object object
     <font color=#777 12px>请使用百度APP扫码</font>
 </div>
 
-### 图片示例 
+### 图片示例
 <div class="m-doc-custom-examples">
     <div class="m-doc-custom-examples-correct">
         <img src="https://b.bdstatic.com/miniapp/images/removeSavedFile.gif">
@@ -47,10 +47,10 @@ Object object
     </div>
     <div class="m-doc-custom-examples-correct">
         <img src=" ">
-    </div>     
+    </div>
 </div>
 
-###  代码示例 
+###  代码示例
 
 
 
