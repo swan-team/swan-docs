@@ -25,7 +25,7 @@ sidebar: app_service_register
 |属性  |类型 | 默认值 | 描述 |触发时机| Web 态说明 |
 |---- | ---- | ---- | ---- | ---- | ---- |
 |其他 | Any || 开发者可以添加任意的函数或者数据到 Object 参数中, 用 this 可以访问。| |||
-|onLogin | Function || 生命周期函数 -- 监听 web 态小程序登录成功(web 态小程序独有)| 当小程序初次登录成功后，会触发 onLogin （全局只触发一次）。||
+|onLogin | Function || 生命周期函数 -- 监听 Web 态小程序登录成功( Web 态小程序独有)| 当小程序初次登录成功后，会触发 onLogin （全局只触发一次）。| 仅在 Web 态小程序中有效，百度 APP 端内小程序此生命周期不会触发|
 |onLaunch | Function || 生命周期函数 -- 监听小程序的初始化 。| 当小程序初始化完成时，会触发 onLaunch （全局只触发一次）。||
 |onShow | Function ||生命周期函数 -- 监听小程序的显示 。| 当小程序初始化，或从后台进入前台显示，会触发 onShow 。|仅在小程序初始化时触发|
 |onHide | Function || 生命周期函数 -- 监听小程序的隐藏 。| 当小程序从前台进入后台，会触发 onHide。 |暂不支持|
@@ -34,9 +34,9 @@ sidebar: app_service_register
 
 
 **onLogin生命周期解释**
-- app的onLogin生命周期是web小程序独有的且只有第一次登录成功后触发，百度App端的小程序没有此生命周期。
-- web小程序设计onLogin生命周期的原因：web小程序的登录不是在小程序内部页面进行的，是需要跳转登录页面进行登录，所以小程序未登录状态下进行swan.login的调用会进入登录页面进行登录所以会导致小程序的运行时环境会销毁，所以登录成功后开发者设置的success回调无法进行，所以需要设计一个时机（onLogin生命周期）把登录成功后的code给到开发者。
-- 注意onLogin生命周期的触发时机在onLaunch之前，当时页面的dom还未ready。
+- App 的 onLogin 生命周期是 Web 态小程序独有的且只有第一次登录成功后触发，百度 APP 端的小程序不会触发此生命周期。
+- Web 态小程序设计 onLogin 生命周期的原因：Web 态小程序的登录不是在小程序内部页面进行的，是需要跳转登录页面进行登录，所以小程序未登录状态下进行 swan.login 的调用会进入登录页面进行登录所以会导致小程序的运行时环境会销毁，所以登录成功后开发者设置的 success 回调无法进行，所以需要设计一个时机（ onLogin 生命周期）把登录成功后的 code 给到开发者。
+- 注意 onLogin 生命周期的触发时机在 onLaunch 之前，当时页面的 dom 还未 ready。
 
 **名词解释:**
 前台、后台：当用户点击右上角的关闭，或者按了设备的 Home 键离开智能小程序，智能小程序没有直接销毁，而是进入到了后台；当再次进入智能小程序，又会从后台进入前台。
@@ -52,6 +52,9 @@ sidebar: app_service_register
 ```js
 // app.js
 App({
+    onLogin(e) {
+        // 使用 e.code 换取 session_key
+    },
     onLaunch(options) {
         // Do something initial when launch.
     },
