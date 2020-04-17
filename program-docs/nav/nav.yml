@@ -922,34 +922,30 @@
                 text: modelviewer 动态库-Beta
                 name: modelviewer
         -
-          link: /develop/framework/subpackages
+          link: /develop/performance/performance-tips
           text: 性能
-          name: subpackages
+          name: performance-tips
           sidebar:
             -
-              link: /develop/framework/subpackages
-              text: 分包加载
-              name: subpackages
-            -
-              link: /develop/framework/performance-analysis-tool
-              text: 性能分析工具
-              name: performance-analysis-tool
-            -
-              link: /develop/framework/performance-tips
+              link: /develop/performance/performance-tips
               text: 性能优化建议
               name: performance-tips
             -
-              link: /develop/framework/http
-              text: http请求失败说明
-              name: http
-            -
-              link: /develop/framework/whitescreen
+              link: /develop/performance/whitescreen
               text: 白屏优化建议
               name: whitescreen
             -
-              link: /develop/framework/case
-              text: 案例介绍
-              name: case
+              link: /develop/performance/subpackages
+              text: 分包加载
+              name: subpackages
+            -
+              link: /develop/performance/performance-analysis-tool
+              text: 性能分析工具
+              name: performance-analysis-tool
+            -
+              link: /develop/performance/http
+              text: http请求失败说明
+              name: http
         -
           link: /develop/framework/operating-environment
           text: 运行时

@@ -19,7 +19,6 @@ sidebar: process
 |[tabBar](#tabBar)|Object|	否|	底部 tab 栏的表现|
 |[requiredBackgroundModes](#requiredBackgroundModes)|string[]|否|需要在后台使用的能力，如「音乐播放」|
 |[subPackages](https://smartprogram.baidu.com/docs/develop/framework/subpackages/#普通分包)| Array.&lt; object&gt; |否|	分包结构配置|
-|[prefetches](#prefetches)|Object Array|	否| 预请求的配置列表|
 |[networkTimeout](#networkTimeout)|Object|否|网络超时|
 
 
@@ -81,7 +80,6 @@ sidebar: process
         "selectedColor": "#6495ED"
     },
     "requiredBackgroundModes": ["audio"],
-    "prefetches": ["https://m.baidu.com", "https://m.baidu.com?query=${query}"],
     "networkTimeout": {
         "request": 30000,
         "connectSocket": 10000,
@@ -322,46 +320,6 @@ audio: 后台音乐播放
 }
 ```
 注：在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。
-
-### prefetches
-
-用于设置预请求的所有url的列表，该部分URL，会在进入小程序后自动发起请求(优于开发者代码加载)。当开发者再次发起request请求时可以增加cache参数，如果配置的prefetch请求已返回，则会直接返回请求结果，如果配置的prefetch请求还未返回，则当次request会继续之前未发送完成的request请求。
-
-**代码示例**
-
-<a href="swanide://fragment/1b50c5342babcda03f71d3d559bca6fc1574152614328" title="在开发者工具中预览效果" target="_self">在开发者工具中预览效果</a>
-```json
-// app.json
-{
-    prefetches: [
-        'https://m.baidu.com'
-    ]
-}
-```
-```js
-swan.request({
-    url: 'https://m.baidu.com',
-    usePrefetchCache: true,
-    success: res => {
-        console.log('缓存结果:', res);
-    }
-});
-```
-<notice>注意： </notice>
-配置项中可以增加变量，且该变量只能来自于打开小程序的调起协议中的query。如：
-```json
-// app.json
-{
-    prefetches: [
-        'https://m.baidu.com?id=${id}'
-    ]
-}
-```
-打开小程序的协议中，也需要携带此参数：
-```js
-pages/index/index?id=123
-```
-这样，再次使用request发起请求时，就可以利用上prefetches中的配置。
 
 ### networkTimeout
 

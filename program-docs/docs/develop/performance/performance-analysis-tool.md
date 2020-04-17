@@ -9,7 +9,8 @@ sidebar: performance-analysis-tool
 
 我们提供了性能面板让开发者了解智能小程序的性能。开发者可以在开发版智能小程序下打开性能面板，打开方法：进入开发版智能小程序，进入右上角更多按钮，点击「性能窗口开关」。
 
-![Alt text](../../../img/performance-analysis-tool.png)
+<img src="../../../img/performance-analysis-tool.png" style="width: 30%"/>
+
 
 ### 性能面板指标说明
 
