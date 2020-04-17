@@ -1,0 +1,361 @@
+@import './table.less';
+@import './color.less';
+@import './params.less';
+@import './plugin-container.less';
+
+body {
+    font-family: @font-body;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-y: scroll !important;
+}
+
+* {
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,
+blockquote,
+p,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: @href-color;
+    &:hover {
+        color: @href-active-color;
+    }
+}
+
+.ispc {
+    display: block;
+}
+
+.ismobile,
+.isbox {
+    display: none;
+}
+
+.icon.outbound {
+    display: none;
+}
+
+
+article {
+    font-size: 14px;
+    line-height: 24px;
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+        color: @font-black1;
+
+        li {
+            display: list-item;
+            list-style: disc;
+            padding: 5px 0;
+
+            p {
+                margin: 0;
+                white-space: normal;
+                word-wrap: break-word;
+                word-break: normal;
+            }
+
+
+            ul li {
+                list-style: circle;
+            }
+        }
+    }
+    ol {
+        margin: 0;
+        padding-inline-start: 20px;
+        li {
+            list-style: decimal;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        margin: 48px 0 36px 0;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 600px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 36px 0 24px 0;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 18px;
+        letter-spacing: 0;
+        margin: 24px 0 16px 0;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 14px;
+        margin: 16px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: @font-default;
+        >code {
+            font-family: @font-body;
+            margin: 0;
+            padding: 0;
+            border-radius: none;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: @font-default;
+        line-height: 24px;
+        margin: 10px 0;
+        font-weight: 400;
+        color: @font-black1;
+    }
+
+    .scan-code-container {
+        text-align: center;
+        width: 140px;
+
+        img {
+            margin-top: 0;
+        }
+    }
+
+    code {
+        // background: #F0F1F2;
+        display: inline-block;
+        line-height: 24px;
+        padding: 0 8px;
+        border-radius: 8px;
+        margin: 0 5px;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-family: @font-code;
+    }
+
+    .task-list {
+        &-item {
+            list-style: none;
+        }
+    }
+
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+.header-anchor {
+    display: none;
+}
+
+/* code start */
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+    background: @bg-white1;
+    font-size: 14px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    code {
+        background: @bg-white1;
+        padding: 0;
+        margin: 0;
+    }
+    background: @bg-white1;
+    color: @font-black1;
+    max-height: 345px;
+    overflow: auto;
+}
+
+pre[class*="language-"] {
+    padding: 2em;
+}
+
+.code-tab-content {
+    margin: 24px 0;
+}
+
+.code-tab-details {
+    > .code-tab-content {
+        margin: 0 !important;
+    }
+}
+/* code end */
+
+/* blockquote start */
+
+article blockquote {
+    color: @font-black2;
+    border-left: 2px solid @bg-blue;
+    padding: 10px 15px;
+    background: rgba(51, 136, 255, .08);
+
+    p {
+        color: @font-black2;
+        margin: 0;
+    }
+}
+
+/* blockquote end */
+
+/* 二维码示例图片 start */
+.demo-qrcode-image {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    background-color: #F7F8F9;
+    border: none !important;
+    border-radius: 8px;
+}
+
+
+/* 二维码示例图片 end */
+
+
+/* 页面布局 start */
+.header-container {
+    width: 100%;
+    z-index: 999;
+}
+.page-container {
+    position: absolute;
+    left: 280px;
+    width: calc(98vw - 368px);
+    max-width: 1540px;
+    top: 60px;
+    padding-left: 4%;
+    padding-right: 2vw;
+    // padding-right: 168px;
+    box-sizing: border-box;
+    display: flex;
+    min-height: calc(100vh - 60px);
+    overflow-y: auto;
+    transform: inherit;
+
+    &-content {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+    }
+
+    &-right {
+        width: calc(98vw - 560px);
+    }
+    &-content-article {
+        width: 100%;
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border: 1px solid @border-gray1;
+            box-sizing: border-box;
+        }
+    }
+
+    &-top {
+        top: 120px;
+    }
+
+    &-ide {
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/* 页面布局 end */
+
+
+/* 移动适配 */
+@media screen and (max-width: @mobile-max-width) {
+    .page-container {
+        left: 0;
+        width: 100%;
+        padding: 0 17px;
+        word-wrap: break-word; 
+        
+        &-top {
+            top: 60px;
+        }
+
+        &-ide {
+            top: 0;
+        }
+    }
+    .global-menu {
+        display: none;
+    }
+    .article-title-menu {
+        display: none;
+    }
+    .page-container-sidebar {
+        display: none;
+
+        &-mobile-show {
+            display: block;
+            width: 100%;
+            padding-top: 0;
+            z-index: 100;
+        }
+    }
+
+    .header-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .page-container-sidebar {
+        padding-bottom: 160px;
+        position: fixed;
+        top: 60px;
+        &-top {
+            min-height: calc(100vh - 120px);
+            top: 120px;
+            position: fixed;
+            overflow: auto;
+        }
+    }
+}
+
+@media screen and (max-height: 899px) and (min-width: @mobile-max-width) {
+    .page-container-right {
+        width: calc(98vw - 530px);
+    }
+}
