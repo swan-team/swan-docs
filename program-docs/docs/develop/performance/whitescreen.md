@@ -9,7 +9,7 @@ sidebar: whitescreen
 ## 白屏检测说明
 **白屏定义**：用户触发页面打开后，间隔一定时间后仍然没有任何页面绘制，则认定为白屏。
 
-**白屏检测原理**：从用户点击小程序入口开始计算时间，6s后进行截图分析。当截图为空白页面或只有背景色，则记为一次白屏。请注意：此统计规则在2019年9月6日发生变更，变更前为从小程序页面框架创建时开始计时。
+**白屏检测原理**：从用户点击小程序入口开始计算时间，6s后进行截图分析。当截图为空白页面或只有背景色，则记为一次白屏。
 
 **白屏监控范围**：仅针对小程序进入时的首个页面进行检测。
 
@@ -51,26 +51,27 @@ sidebar: whitescreen
 针对一次请求返回的数据过多的情况，可以从两个角度来优化：1 、非关键数据延迟请求，2、非关键数据延迟渲染
 非关键数据延迟请求：
 
-    ```
-    swan.request({
-        url: 'https://www.baidu.com/keyData',
-        success: res => {
-            this.setData({
-                keyData: res
-            });
-            swan.request({
-                url: 'https://www.baidu.com/nonKeyData',
-                success: res => {}
-            });
-        }
-    })
-```
-    非关键数据延迟渲染
-    ```
-        this.setData({keyData}, () => {
-            this.setData({nonKeyData});
+```js
+swan.request({
+    url: 'https://www.baidu.com/keyData',
+    success: res => {
+        this.setData({
+            keyData: res
         });
-    ```
+        swan.request({
+            url: 'https://www.baidu.com/nonKeyData',
+            success: res => {}
+        });
+    }
+})
+```
+
+非关键数据延迟渲染
+```js
+this.setData({keyData}, () => {
+    this.setData({nonKeyData});
+});
+```
 3. 增加过渡态提示：
 页面加载时，可以使用Loading组件等形式进行提示，给用户一个提示，提升用户体验。
 4. 使用骨架屏：
